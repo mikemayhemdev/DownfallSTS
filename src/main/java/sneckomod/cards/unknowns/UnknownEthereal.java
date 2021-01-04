@@ -1,3 +1,4 @@
+/*
 package sneckomod.cards.unknowns;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -22,3 +23,5 @@ public class UnknownEthereal extends AbstractUnknownCard {
         return AbstractUnknownCard.unknownEtherealReplacements;
     }
 }
+
+*/

@@ -17,7 +17,7 @@ public class CleanCode extends AbstractBronzeCard {
     public CleanCode() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+      //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

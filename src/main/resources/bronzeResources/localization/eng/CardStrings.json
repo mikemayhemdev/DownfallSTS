@@ -520,8 +520,8 @@
   },
   "bronze:SpaghettiCode": {
     "NAME": "Spaghetti Code",
-    "DESCRIPTION": "Until the Sequence is full, choose 1 of 2 random cards to bronze:Encode. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Until the Sequence is full, choose 1 of 2 random cards to bronze:Encode."
+    "DESCRIPTION": "Until the Sequence is full, choose 1 of 3 random cards to bronze:Encode. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Until the Sequence is full, choose 1 of 3 random cards to bronze:Encode."
   },
   "bronze:Assembly": {
     "NAME": "Assembly",

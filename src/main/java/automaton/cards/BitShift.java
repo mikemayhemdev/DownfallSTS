@@ -22,7 +22,7 @@ public class BitShift extends AbstractBronzeCard {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         exhaust = true;
         baseMagicNumber = magicNumber = 1;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+     //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

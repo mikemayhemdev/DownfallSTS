@@ -15,7 +15,7 @@ public class UnknownStrike extends AbstractUnknownCard {
 
     @Override
     public Predicate<AbstractCard> myNeeds() {
-        return c -> c.hasTag(CardTags.STRIKE);
+        return c -> c.hasTag(CardTags.STRIKE) && c.rarity != CardRarity.BASIC;
     }
 
     @Override

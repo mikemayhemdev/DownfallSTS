@@ -258,10 +258,12 @@ public class SneckoMod implements
         }
         for (AbstractCard.CardColor p : AbstractCard.CardColor.values()) {
             if (p != AbstractCard.CardColor.COLORLESS && p != AbstractCard.CardColor.CURSE && p != TheSnecko.Enums.SNECKO_CYAN) {
-                UnknownClass q = new UnknownClass(p);
-                unknownClasses.add(q);
-                AbstractUnknownCard.unknownClassReplacements.add(new ArrayList<>());
-                BaseMod.addCard(q);
+                if (p != AbstractCard.CardColor.COLORLESS) {
+                    UnknownClass q = new UnknownClass(p);
+                    unknownClasses.add(q);
+                    AbstractUnknownCard.unknownClassReplacements.add(new ArrayList<>());
+                    BaseMod.addCard(q);
+                }
             }
         }
     }
@@ -363,8 +365,22 @@ public class SneckoMod implements
             if (c.type == AbstractCard.CardType.STATUS && !(c.hasTag(AutomatonMod.GOOD_STATUS))) {
                 statuses.add(c);
             }
+            if (c.color == AbstractCard.CardColor.COLORLESS && c.rarity != AbstractCard.CardRarity.SPECIAL){
+                AbstractUnknownCard.unknownColorlessReplacements.add(c.cardID);
+            }
         }
 
+        if (SneckoMod.validColors.size() == 0){
+            SneckoMod.resetUnknownsLists();
+        }
+    }
+
+    public static void resetUnknownsLists(){
+        validColors.clear();
+        for (AbstractPlayer p : CardCrawlGame.characterManager.getAllCharacters()) {
+            validColors.add(p.getCardColor());
+        }
+        updateAllUnknownReplacements();
     }
 
     @Override
@@ -442,6 +458,8 @@ public class SneckoMod implements
 
     public static void updateAllUnknownReplacements() {
 
+        //TODO - Ban any unknowns from the cardpool if their list size = 0
+
         ArrayList<Predicate<AbstractCard>> predList = new ArrayList<>();
         ArrayList<ArrayList<String>> listList = new ArrayList<>();
 
@@ -457,7 +475,7 @@ public class SneckoMod implements
         addToLists(new UnknownCommonAttack(), predList, listList);
         addToLists(new UnknownCommonSkill(), predList, listList);
         addToLists(new UnknownDexterity(), predList, listList);
-        addToLists(new UnknownEthereal(), predList, listList);
+       // addToLists(new UnknownEthereal(), predList, listList);
         addToLists(new UnknownExhaust(), predList, listList);
         addToLists(new UnknownRareAttack(), predList, listList);
         addToLists(new UnknownRarePower(), predList, listList);
@@ -470,6 +488,8 @@ public class SneckoMod implements
         addToLists(new UnknownVulnerable(), predList, listList);
         addToLists(new UnknownWeak(), predList, listList);
         addToLists(new UnknownX(), predList, listList);
+        addToLists(new UnknownDraw(), predList, listList);
+
         for (AbstractUnknownCard q : SneckoMod.unknownClasses) {
             addToLists(q, predList, listList);
         }

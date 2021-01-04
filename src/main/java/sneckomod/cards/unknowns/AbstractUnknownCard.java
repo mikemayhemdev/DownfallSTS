@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import sneckomod.SneckoMod;
+import sneckomod.TheSnecko;
 import sneckomod.cards.AbstractSneckoCard;
 
 import java.util.ArrayList;
@@ -51,7 +52,6 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
     public static ArrayList<String> unknownCommonAttackReplacements = new ArrayList<>();
     public static ArrayList<String> unknownCommonSkillReplacements = new ArrayList<>();
     public static ArrayList<String> unknownDexterityReplacements = new ArrayList<>();
-    public static ArrayList<String> unknownEtherealReplacements = new ArrayList<>();
     public static ArrayList<String> unknownExhaustReplacements = new ArrayList<>();
     public static ArrayList<String> unknownRareAttackReplacements = new ArrayList<>();
     public static ArrayList<String> unknownRarePowerReplacements = new ArrayList<>();
@@ -64,13 +64,15 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
     public static ArrayList<String> unknownVulnerableReplacements = new ArrayList<>();
     public static ArrayList<String> unknownWeakReplacements = new ArrayList<>();
     public static ArrayList<String> unknownXCostReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownDrawReplacements = new ArrayList<>();
+    // public static ArrayList<String> unknownEtherealReplacements = new ArrayList<>();
 
     @Override
     public void update() {
         super.update();
         if (hb.hovered) {
             if (rotationTimer <= 0F) {
-                rotationTimer = 0.25F;
+                rotationTimer = 0.5F;
                 if (myList().size() == 0) {
                     cardsToPreview = CardLibrary.cards.get("Madness");
                 } else {
@@ -116,7 +118,13 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
             if (!c.isSeen)
                 UnlockTracker.markCardAsSeen(c.cardID);
             AbstractCard q = c.makeCopy();
-            validCard = !c.hasTag(CardTags.STARTER_STRIKE) && !c.hasTag(CardTags.STARTER_DEFEND) && c.type != CardType.STATUS && c.color != CardColor.CURSE && c.type != CardType.CURSE && c.rarity != CardRarity.SPECIAL && c.color != AbstractDungeon.player.getCardColor() && !c.hasTag(SneckoMod.BANNEDFORSNECKO);
+            validCard = !c.hasTag(CardTags.STARTER_STRIKE) && !c.hasTag(CardTags.STARTER_DEFEND) && c.type != CardType.STATUS && c.color != CardColor.CURSE && c.type != CardType.CURSE && c.rarity != CardRarity.SPECIAL && !c.hasTag(SneckoMod.BANNEDFORSNECKO);
+
+            if (AbstractDungeon.player != null && validCard){
+                validCard = c.color != AbstractDungeon.player.getCardColor();
+            } else if (AbstractDungeon.player == null && validCard){
+                validCard = c.color != TheSnecko.Enums.SNECKO_CYAN;
+            }
 
             for (Predicate<AbstractCard> funkyPredicate : funkyPredicates) {
                 if (funkyPredicate.test(q) && (SneckoMod.pureSneckoMode || SneckoMod.validColors.contains(q.color))) {

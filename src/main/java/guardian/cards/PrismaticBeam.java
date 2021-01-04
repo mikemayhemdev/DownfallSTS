@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.vfx.SmallLaserEffectColored;
+import sneckomod.SneckoMod;
 
 
 public class PrismaticBeam extends AbstractGuardianCard {
@@ -62,6 +63,7 @@ public class PrismaticBeam extends AbstractGuardianCard {
         loadGemMisc();
         
         tags.add(AbstractCard.CardTags.HEALING);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     @Override

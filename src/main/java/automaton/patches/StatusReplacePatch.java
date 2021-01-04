@@ -2,14 +2,17 @@ package automaton.patches;
 
 import automaton.AutomatonMod;
 import automaton.relics.BronzeIdol;
+import basemod.devcommands.unlock.Unlock;
 import charbosses.cards.AbstractBossCard;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 @SpirePatch(
         clz = AbstractCard.class,
@@ -38,4 +41,5 @@ public class StatusReplacePatch {
         return SpireReturn.Continue();
 
     }
+
 }

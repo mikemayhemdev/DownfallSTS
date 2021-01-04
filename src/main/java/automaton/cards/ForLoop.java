@@ -14,7 +14,7 @@ public class ForLoop extends AbstractBronzeCard {
 
     public ForLoop() {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+     //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
         exhaust = true;
     }
 

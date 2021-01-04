@@ -2,11 +2,14 @@ package sneckomod.cards.unknowns;
 
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.Keyword;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import javassist.*;
 import javassist.expr.ExprEditor;
 import javassist.expr.NewExpr;
+import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
@@ -21,6 +24,23 @@ public class UnknownVulnerable extends AbstractUnknownCard {
 
     public boolean useCheck(AbstractCard card) {
         bruh = false;
+
+
+        Keyword keywordString = CardCrawlGame.languagePack.getKeywordString("Game Dictionary").VULNERABLE;
+
+        for (int i = 0; i < keywordString.NAMES.length; i++) {
+            if (!bruh){
+                String key = keywordString.NAMES[i];
+                key = key.toLowerCase();
+                String test = card.rawDescription.toLowerCase();
+                bruh = (test.contains(" " + key + " ") || test.contains(" " + key + ",") || test.contains(" " + key + ".") || test.contains(" " + key + "。"));
+             //   SlimeboundMod.logger.info("Strength U checks: keywordString: " + keywordString);
+             //   SlimeboundMod.logger.info("Strength U checks: key: " + key);
+              //  SlimeboundMod.logger.info("Strength U checks: test: " + test);
+             //   SlimeboundMod.logger.info("bruh " + bruh);
+            }
+        }
+        /*
         try {
             ClassPool pool = Loader.getClassPool();
             CtClass ctClass = pool.get(card.getClass().getName());
@@ -56,6 +76,7 @@ public class UnknownVulnerable extends AbstractUnknownCard {
         } catch (NotFoundException | CannotCompileException e) {
             e.printStackTrace();
         }
+        */
         return bruh;
     }
 

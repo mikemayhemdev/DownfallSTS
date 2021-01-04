@@ -4,6 +4,7 @@ import champ.ChampMod;
 import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class DefensiveShout extends AbstractChampCard {
@@ -27,7 +28,11 @@ public class DefensiveShout extends AbstractChampCard {
         techique();
         defenseOpen();
         applyToSelf(new CounterPower(magicNumber));
-        if (upgraded) atb(new DrawCardAction(1));
+        if (upgraded) upgradeAction(p,m);
+    }
+
+    public void upgradeAction(AbstractPlayer p, AbstractMonster m){
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
     }
 
     public void upp() {

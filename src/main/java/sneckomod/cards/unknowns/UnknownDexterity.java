@@ -2,6 +2,8 @@ package sneckomod.cards.unknowns;
 
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.Keyword;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import javassist.*;
@@ -21,6 +23,20 @@ public class UnknownDexterity extends AbstractUnknownCard {
 
     public boolean useCheck(AbstractCard card) {
         bruh = false;
+
+        Keyword keywordString = CardCrawlGame.languagePack.getKeywordString("Game Dictionary").DEXTERITY;
+        for (int i = 0; i < keywordString.NAMES.length; i++) {
+            if (!bruh){
+                String key = keywordString.NAMES[i];
+                key = key.toLowerCase();
+                String test = card.rawDescription.toLowerCase();
+                bruh = (test.contains(" " + key + " ") || test.contains(" " + key + ",") || test.contains(" " + key + ".") || test.contains(" " + key + "。"));
+            }
+        }
+        //SlimeboundMod.logger.info("Strength U checks: keywordString: " + keywordString);
+        //SlimeboundMod.logger.info("Strength U checks: key: " + key);
+        //SlimeboundMod.logger.info("bruh " + bruh);
+        /*
         try {
             ClassPool pool = Loader.getClassPool();
             CtClass ctClass = pool.get(card.getClass().getName());
@@ -56,6 +72,7 @@ public class UnknownDexterity extends AbstractUnknownCard {
         } catch (NotFoundException | CannotCompileException e) {
             e.printStackTrace();
         }
+        */
         return bruh;
     }
 

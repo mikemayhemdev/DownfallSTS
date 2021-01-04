@@ -48,6 +48,10 @@ public class UnknownClass extends AbstractUnknownCard {
                 return "UnknownSlimeBoss";
             case "HEXA_GHOST_PURPLE":
                 return "UnknownHexaghost";
+            case "THE_CHAMP_GRAY":
+                return "UnknownChamp";
+            case "THE_BRONZE_AUTOMATON":
+                return "UnknownAutomaton";
             default:
                 return "UnknownModded";
         }
@@ -80,7 +84,6 @@ public class UnknownClass extends AbstractUnknownCard {
             }
         }
         return null;
-        //TODO - Just return the cards of this class.
     }
 }
 
