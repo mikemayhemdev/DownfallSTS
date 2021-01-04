@@ -11,9 +11,7 @@ import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -263,7 +261,7 @@ public class SneckoMod implements
 
     public static AbstractCard getRandomStatus() {
         Collections.shuffle(statuses, AbstractDungeon.cardRandomRng.random);
-        return statuses.get(0);
+        return statuses.get(0).makeCopy();
     }
 
     @Override
@@ -448,17 +446,17 @@ public class SneckoMod implements
             if (c.type == AbstractCard.CardType.STATUS && !(c.hasTag(AutomatonMod.GOOD_STATUS))) {
                 statuses.add(c);
             }
-            if (c.color == AbstractCard.CardColor.COLORLESS && c.rarity != AbstractCard.CardRarity.SPECIAL){
+            if (c.color == AbstractCard.CardColor.COLORLESS && c.rarity != AbstractCard.CardRarity.SPECIAL) {
                 AbstractUnknownCard.unknownColorlessReplacements.add(c.cardID);
             }
         }
 
-        if (SneckoMod.validColors.size() == 0){
+        if (SneckoMod.validColors.size() == 0) {
             SneckoMod.resetUnknownsLists();
         }
     }
 
-    public static void resetUnknownsLists(){
+    public static void resetUnknownsLists() {
         validColors.clear();
         for (AbstractPlayer p : CardCrawlGame.characterManager.getAllCharacters()) {
             validColors.add(p.getCardColor());
@@ -558,7 +556,7 @@ public class SneckoMod implements
         addToLists(new UnknownCommonAttack(), predList, listList);
         addToLists(new UnknownCommonSkill(), predList, listList);
         addToLists(new UnknownDexterity(), predList, listList);
-       // addToLists(new UnknownEthereal(), predList, listList);
+        // addToLists(new UnknownEthereal(), predList, listList);
         addToLists(new UnknownExhaust(), predList, listList);
         addToLists(new UnknownRareAttack(), predList, listList);
         addToLists(new UnknownRarePower(), predList, listList);
