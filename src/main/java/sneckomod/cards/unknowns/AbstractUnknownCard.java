@@ -1,12 +1,11 @@
 package sneckomod.cards.unknowns;
 
-import champ.ChampMod;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.colorless.Madness;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
@@ -128,9 +127,9 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
             AbstractCard q = c.makeCopy();
             validCard = !c.hasTag(CardTags.STARTER_STRIKE) && !c.hasTag(CardTags.STARTER_DEFEND) && c.type != CardType.STATUS && c.color != CardColor.CURSE && c.type != CardType.CURSE && c.rarity != CardRarity.SPECIAL && !c.hasTag(SneckoMod.BANNEDFORSNECKO);
 
-            if (AbstractDungeon.player != null && validCard){
+            if (AbstractDungeon.player != null && validCard) {
                 validCard = c.color != AbstractDungeon.player.getCardColor();
-            } else if (AbstractDungeon.player == null && validCard){
+            } else if (AbstractDungeon.player == null && validCard) {
                 validCard = c.color != TheSnecko.Enums.SNECKO_CYAN;
             }
 
@@ -167,7 +166,11 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         AbstractPlayer p = AbstractDungeon.player;
 
         AbstractCard cUnknown;
-        cUnknown = CardLibrary.cards.get(myList().get(AbstractDungeon.cardRng.random(0, myList().size() - 1))).makeStatEquivalentCopy();
+        if (myList().isEmpty()) {
+            cUnknown = new Madness();
+        } else {
+            cUnknown = CardLibrary.cards.get(myList().get(AbstractDungeon.cardRng.random(0, myList().size() - 1))).makeStatEquivalentCopy();
+        }
 
         if (this.upgraded) cUnknown.upgrade();
         if (cUnknown != null) {
