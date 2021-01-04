@@ -22,6 +22,11 @@ public class UnknownEthereal extends AbstractUnknownCard {
     public ArrayList<String> myList() {
         return AbstractUnknownCard.unknownEtherealReplacements;
     }
+
+        @Override
+    public TextureAtlas.AtlasRegion getOverBannerTex() {
+        return SneckoMod.overBannerEthereal;
+    }
 }
 
 */

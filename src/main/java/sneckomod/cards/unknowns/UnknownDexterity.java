@@ -1,5 +1,7 @@
 package sneckomod.cards.unknowns;
 
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -9,6 +11,7 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import javassist.*;
 import javassist.expr.ExprEditor;
 import javassist.expr.NewExpr;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
@@ -84,5 +87,10 @@ public class UnknownDexterity extends AbstractUnknownCard {
     @Override
     public ArrayList<String> myList() {
         return AbstractUnknownCard.unknownDexterityReplacements;
+    }
+
+    @Override
+    public TextureAtlas.AtlasRegion getOverBannerTex() {
+        return SneckoMod.overBannerDex;
     }
 }

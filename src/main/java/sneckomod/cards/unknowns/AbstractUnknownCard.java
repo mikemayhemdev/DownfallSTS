@@ -1,6 +1,9 @@
 package sneckomod.cards.unknowns;
 
+import champ.ChampMod;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -12,6 +15,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
 import sneckomod.cards.AbstractSneckoCard;
+import sneckomod.patches.UnknownExtraUiPatch;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
@@ -34,6 +38,10 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         super(id, img, -2, type, rarity, CardTarget.NONE);
         tags.add(CardTags.HEALING);
         purgeOnUse = true;
+    }
+
+    public TextureAtlas.AtlasRegion getOverBannerTex() {
+        return SneckoMod.overBannerAnything;
     }
 
     private float rotationTimer;
@@ -165,8 +173,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         if (cUnknown != null) {
             p.hand.removeCard(this);
             p.drawPile.removeCard(this);
-            if (cUnknown.cardsToPreview == null)
-                cUnknown.cardsToPreview = this.makeStatEquivalentCopy();
+            UnknownExtraUiPatch.parentCard.set(cUnknown, this);
             AbstractDungeon.player.drawPile.addToRandomSpot(cUnknown);
         }
     }
@@ -182,8 +189,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
             p.limbo.removeCard(this);
             p.hand.removeCard(this);
             p.drawPile.removeCard(this);
-            if (cUnknown.cardsToPreview == null)
-                cUnknown.cardsToPreview = this.makeStatEquivalentCopy();
+            UnknownExtraUiPatch.parentCard.set(cUnknown, this);
             AbstractDungeon.player.hand.addToTop(cUnknown);
         }
     }

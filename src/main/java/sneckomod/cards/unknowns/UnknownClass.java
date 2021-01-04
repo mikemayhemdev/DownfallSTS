@@ -1,6 +1,8 @@
 
 package sneckomod.cards.unknowns;
 
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -79,11 +81,36 @@ public class UnknownClass extends AbstractUnknownCard {
     @Override
     public ArrayList<String> myList() {
         for (int i = 0; i < SneckoMod.unknownClasses.size(); i++) {
-            if (SneckoMod.unknownClasses.get(i).myColor== myColor) {
+            if (SneckoMod.unknownClasses.get(i).myColor == myColor) {
                 return AbstractUnknownCard.unknownClassReplacements.get(i);
             }
         }
         return null;
+    }
+
+    @Override
+    public TextureAtlas.AtlasRegion getOverBannerTex() {
+        switch (myColor.name()) {
+            case "RED":
+                return SneckoMod.overBannerIronclad;
+            case "GREEN":
+                return SneckoMod.overBannerSilent;
+            case "BLUE":
+                return SneckoMod.overBannerDefect;
+            case "PURPLE":
+                return SneckoMod.overBannerWatcher;
+            case "SLIMEBOUND":
+                return SneckoMod.overBannerSlime;
+            case "GUARDIAN":
+                return SneckoMod.overBannerGuardian;
+            case "GHOST_GREEN":
+                return SneckoMod.overBannerHexa;
+            case "CHAMP_GRAY":
+                return SneckoMod.overBannerChamp;
+            case "BRONZE_AUTOMATON":
+                return SneckoMod.overBannerAuto;
+        }
+        return SneckoMod.overBannerModded;
     }
 }
 

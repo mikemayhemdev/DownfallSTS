@@ -1,5 +1,7 @@
 package sneckomod.cards.unknowns;
 
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,6 +14,7 @@ import javassist.*;
 import javassist.expr.ExprEditor;
 import javassist.expr.NewExpr;
 import slimebound.SlimeboundMod;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
@@ -87,4 +90,10 @@ public class UnknownStrength extends AbstractUnknownCard {
     public ArrayList<String> myList() {
         return AbstractUnknownCard.unknownStrengthReplacements;
     }
+
+    @Override
+    public TextureAtlas.AtlasRegion getOverBannerTex() {
+        return SneckoMod.overBannerStrength;
+    }
+
 }

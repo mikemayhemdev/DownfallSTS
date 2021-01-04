@@ -1,6 +1,9 @@
 package sneckomod.cards.unknowns;
 
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
@@ -20,5 +23,10 @@ public class Unknown0Cost extends AbstractUnknownCard {
     @Override
     public ArrayList<String> myList() {
         return AbstractUnknownCard.unknown0CostReplacements;
+    }
+
+    @Override
+    public TextureAtlas.AtlasRegion getOverBannerTex() {
+        return SneckoMod.overBanner0;
     }
 }

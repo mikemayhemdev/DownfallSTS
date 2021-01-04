@@ -1,6 +1,7 @@
 package sneckomod;
 
 import automaton.AutomatonMod;
+import automaton.util.TextureLoader;
 import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import basemod.abstracts.CustomSavable;
@@ -10,6 +11,9 @@ import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -100,6 +104,46 @@ public class SneckoMod implements
     public static boolean pureSneckoMode = false;
 
     public static boolean openedStarterScreen = true;
+
+    public static TextureAtlas.AtlasRegion overBannerAll;
+    public static TextureAtlas.AtlasRegion overBanner0;
+    public static TextureAtlas.AtlasRegion overBanner1;
+    public static TextureAtlas.AtlasRegion overBanner2;
+    public static TextureAtlas.AtlasRegion overBanner3;
+    public static TextureAtlas.AtlasRegion overBannerAuto;
+    public static TextureAtlas.AtlasRegion overBannerWoke;
+    public static TextureAtlas.AtlasRegion overBannerBlock;
+    public static TextureAtlas.AtlasRegion overBannerChamp;
+    public static TextureAtlas.AtlasRegion overBannerCollector;
+    public static TextureAtlas.AtlasRegion overBannerColorless;
+    public static TextureAtlas.AtlasRegion overBannerCommonA;
+    public static TextureAtlas.AtlasRegion overBannerCommonS;
+    public static TextureAtlas.AtlasRegion overBannerDefect;
+    public static TextureAtlas.AtlasRegion overBannerDex;
+    public static TextureAtlas.AtlasRegion overBannerDonuDeca;
+    public static TextureAtlas.AtlasRegion overBannerDraw;
+    public static TextureAtlas.AtlasRegion overBannerEthereal;
+    public static TextureAtlas.AtlasRegion overBannerExhaust;
+    public static TextureAtlas.AtlasRegion overBannerGuardian;
+    public static TextureAtlas.AtlasRegion overBannerHexa;
+    public static TextureAtlas.AtlasRegion overBannerIronclad;
+    public static TextureAtlas.AtlasRegion overBannerModded;
+    public static TextureAtlas.AtlasRegion overBannerRareA;
+    public static TextureAtlas.AtlasRegion overBannerRareP;
+    public static TextureAtlas.AtlasRegion overBannerRareS;
+    public static TextureAtlas.AtlasRegion overBannerSilent;
+    public static TextureAtlas.AtlasRegion overBannerSlime;
+    public static TextureAtlas.AtlasRegion overBannerStrength;
+    public static TextureAtlas.AtlasRegion overBannerStrike;
+    public static TextureAtlas.AtlasRegion overBannerTime;
+    public static TextureAtlas.AtlasRegion overBannerUncommonA;
+    public static TextureAtlas.AtlasRegion overBannerUncommonP;
+    public static TextureAtlas.AtlasRegion overBannerUncommonS;
+    public static TextureAtlas.AtlasRegion overBannerAnything;
+    public static TextureAtlas.AtlasRegion overBannerVuln;
+    public static TextureAtlas.AtlasRegion overBannerWatcher;
+    public static TextureAtlas.AtlasRegion overBannerWeak;
+    public static TextureAtlas.AtlasRegion overBannerX;
 
     private static String modID;
     private static ArrayList<AbstractCard> statuses = new ArrayList<>();
@@ -314,6 +358,45 @@ public class SneckoMod implements
 
     public void receivePostInitialize() {
         addPotions();
+
+        overBannerAll = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbanner.png");
+        overBanner0 = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/0cost.png");
+        overBanner1 = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/1cost.png");
+        overBanner2 = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/2cost.png");
+        overBanner3 = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/3cost.png");
+        overBannerX = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/xcost.png");
+        overBannerAuto = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/automaton.png");
+        overBannerWoke = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/awakenedone.png");
+        overBannerBlock = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/block.png");
+        overBannerChamp = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/champ.png");
+        overBannerCollector = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/collector.png");
+        overBannerCommonA = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/commonAttack.png");
+        overBannerCommonS = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/commonSkill.png");
+        overBannerDefect = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/defect.png");
+        overBannerDex = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/dexterity.png");
+        overBannerDonuDeca = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/donudeca.png");
+        overBannerDraw = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/draw.png");
+        overBannerEthereal = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/ethereal.png");
+        overBannerExhaust = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/exhaust.png");
+        overBannerGuardian = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/guardian.png");
+        overBannerHexa = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/hexaghost.png");
+        overBannerIronclad = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/ironclad.png");
+        overBannerModded = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/modded.png");
+        overBannerRareA = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/rareAttack.png");
+        overBannerRareP = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/rarePower.png");
+        overBannerRareS = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/rareSkill.png");
+        overBannerSilent = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/silent.png");
+        overBannerSlime = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/slimeboss.png");
+        overBannerStrength = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/strength.png");
+        overBannerStrike = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/strike.png");
+        overBannerTime = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/timeeater.png");
+        overBannerUncommonA = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/uncommonAttack.png");
+        overBannerUncommonP = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/uncommonPower.png");
+        overBannerUncommonS = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/uncommonSkill.png");
+        overBannerAnything = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/unknown.png");
+        overBannerVuln = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/vulnerable.png");
+        overBannerWatcher = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/watcher.png");
+        overBannerWeak = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/weak.png");
 
         BaseMod.addEvent(new AddEventParams.Builder(D8.ID, sneckomod.events.D8.class) //Event ID//
                 //Event Character//
