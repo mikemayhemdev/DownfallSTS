@@ -1079,7 +1079,7 @@ public class downfallMod implements
                 SneckoMod.openedStarterScreen = true;
             }
         }
-        if (SneckoMod.choosingCharacters > -1 && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+        if (SneckoMod.choosingCharacters > -1 && SneckoMod.choosingCharacters <= 2 && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             SneckoMod.colorChoices.removeCard(c);
             SneckoMod.validColors.add(c.color);
