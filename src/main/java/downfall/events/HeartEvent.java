@@ -35,6 +35,7 @@ import downfall.vfx.CustomAnimatedNPC;
 import downfall.vfx.TopLevelInfiniteSpeechBubble;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import slimebound.patches.SlimeboundEnum;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
@@ -130,7 +131,7 @@ public class HeartEvent extends AbstractEvent {
     }
 
     private boolean shouldSkipNeowDialog() {
-        if (Settings.seedSet && !Settings.isTrial && !Settings.isDailyRun && hasPlayedRun(AbstractDungeon.player.chosenClass)) {
+        if (Settings.seedSet && !Settings.isTrial && !Settings.isDailyRun) {
             return false;
         } else {
             return !Settings.isStandardRun();
@@ -400,8 +401,13 @@ public class HeartEvent extends AbstractEvent {
         this.talk(TEXT[MathUtils.random(4, 6)]);
         this.rewards.add(new HeartReward(true));
         this.rewards.add(new HeartReward(false));
-        this.roomEventText.clearRemainingOptions();
-        this.roomEventText.updateDialogOption(0, OPTIONS[5]);
+        this.roomEventText.removeDialogOption(0);
+        if (hasPlayedRun(AbstractDungeon.player.chosenClass)) {
+            this.roomEventText.addDialogOption(OPTIONS[5]);
+        }
+        else {
+            this.roomEventText.addDialogOption(OPTIONS[6], true);
+        }
         this.roomEventText.addDialogOption(((HeartReward) this.rewards.get(1)).optionLabel);
         this.screenNum = 3;
     }
