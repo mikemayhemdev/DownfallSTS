@@ -522,9 +522,10 @@ public class SneckoMod implements
 
     public static void addToLists(AbstractUnknownCard c, ArrayList<Predicate<AbstractCard>> predList, ArrayList<ArrayList<String>> listList) {
         predList.add(c.myNeeds());
-        if (c.myList() != null)
+        if (c.myList() != null && predList.indexOf(c.myNeeds()) < 22) {
             c.myList().clear();
-        listList.add(c.myList());
+            listList.add(c.myList());
+        }
     }
 
     public static void updateAllUnknownReplacements() {
@@ -533,8 +534,6 @@ public class SneckoMod implements
 
         ArrayList<Predicate<AbstractCard>> predList = new ArrayList<>();
         ArrayList<ArrayList<String>> listList = new ArrayList<>();
-
-        AbstractUnknownCard c;
 
         addToLists(new Unknown(), predList, listList);
         addToLists(new Unknown0Cost(), predList, listList);
