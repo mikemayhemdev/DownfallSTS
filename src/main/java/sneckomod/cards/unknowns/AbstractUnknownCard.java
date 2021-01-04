@@ -5,7 +5,6 @@ import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -14,7 +13,6 @@ import sneckomod.SneckoMod;
 import sneckomod.cards.AbstractSneckoCard;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.function.Predicate;
 
 
@@ -48,7 +46,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
     public static ArrayList<String> unknown2CostReplacements = new ArrayList<>();
     public static ArrayList<String> unknown3CostReplacements = new ArrayList<>();
     public static ArrayList<String> unknownBlockReplacements = new ArrayList<>();
-    public static ArrayList<String> unknownClassReplacements = new ArrayList<>();
+    public static ArrayList<ArrayList<String>> unknownClassReplacements = new ArrayList<>();
     public static ArrayList<String> unknownColorlessReplacements = new ArrayList<>();
     public static ArrayList<String> unknownCommonAttackReplacements = new ArrayList<>();
     public static ArrayList<String> unknownCommonSkillReplacements = new ArrayList<>();
@@ -70,15 +68,15 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
     @Override
     public void update() {
         super.update();
-        if (hb.hovered){
-            if (rotationTimer <= 0F){
+        if (hb.hovered) {
+            if (rotationTimer <= 0F) {
                 rotationTimer = 0.25F;
                 if (myList().size() == 0) {
                     cardsToPreview = CardLibrary.cards.get("Madness");
                 } else {
                     cardsToPreview = CardLibrary.cards.get(myList().get(previewIndex));
                 }
-                if (previewIndex == myList().size() - 1){
+                if (previewIndex == myList().size() - 1) {
                     previewIndex = 0;
                 } else {
                     previewIndex++;
@@ -117,7 +115,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
     public abstract ArrayList<String> myList();
 
-    public static void updateReplacements(ArrayList<Predicate<AbstractCard>> funkyPredicates, ArrayList<ArrayList<String>> funkyLists){
+    public static void updateReplacements(ArrayList<Predicate<AbstractCard>> funkyPredicates, ArrayList<ArrayList<String>> funkyLists) {
         boolean validCard;
 
         for (AbstractCard c : CardLibrary.getAllCards()) {
@@ -128,7 +126,14 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
             for (Predicate<AbstractCard> funkyPredicate : funkyPredicates) {
                 if (funkyPredicate.test(q) && (SneckoMod.pureSneckoMode || SneckoMod.validColors.contains(q.color))) {
-                    if (validCard) funkyLists.get(funkyPredicates.indexOf(funkyPredicate)).add(c.cardID);
+                    if (validCard) {
+                        System.out.println("WE ARE HERE!");
+                        ArrayList<String> s = funkyLists.get(funkyPredicates.indexOf(funkyPredicate));
+                        if (s == null) {
+                            s = new ArrayList<>();
+                        }
+                        s.add(c.cardID);
+                    }
                 }
             }
         }

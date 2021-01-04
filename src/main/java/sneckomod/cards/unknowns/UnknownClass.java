@@ -1,11 +1,11 @@
 
 package sneckomod.cards.unknowns;
 
-import basemod.BaseMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import downfall.util.CardIgnore;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
@@ -74,7 +74,12 @@ public class UnknownClass extends AbstractUnknownCard {
 
     @Override
     public ArrayList<String> myList() {
-        return AbstractUnknownCard.unknownClassReplacements;
+        for (int i = 0; i < SneckoMod.unknownClasses.size(); i++) {
+            if (SneckoMod.unknownClasses.get(i).myColor== myColor) {
+                return AbstractUnknownCard.unknownClassReplacements.get(i);
+            }
+        }
+        return null;
         //TODO - Just return the cards of this class.
     }
 }

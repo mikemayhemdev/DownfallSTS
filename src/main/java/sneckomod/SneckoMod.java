@@ -24,8 +24,6 @@ import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.exordium.Sssserpent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.unlock.AbstractUnlock;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.cards.OctoChoiceCard;
 import downfall.downfallMod;
 import downfall.events.Serpent_Evil;
@@ -35,11 +33,6 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import slimebound.potions.SlimedPotion;
-import slimebound.potions.SlimyTonguePotion;
-import slimebound.potions.SpawnSlimePotion;
-import slimebound.potions.ThreeZeroPotion;
-import slimebound.relics.StickyStick;
 import sneckomod.cards.*;
 import sneckomod.cards.unknowns.*;
 import sneckomod.events.BackToBasicsSnecko;
@@ -103,6 +96,7 @@ public class SneckoMod implements
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags BANNEDFORSNECKO;
 
     public static ArrayList<AbstractCard.CardColor> validColors = new ArrayList<>();
+    public static ArrayList<UnknownClass> unknownClasses = new ArrayList<>();
     public static boolean pureSneckoMode = false;
 
     public static boolean openedStarterScreen = true;
@@ -264,10 +258,10 @@ public class SneckoMod implements
         }
         for (AbstractCard.CardColor p : AbstractCard.CardColor.values()) {
             if (p != AbstractCard.CardColor.COLORLESS && p != AbstractCard.CardColor.CURSE && p != TheSnecko.Enums.SNECKO_CYAN) {
-                AbstractUnknownCard q = new UnknownClass(p);
-                //TODO figure this part out.
+                UnknownClass q = new UnknownClass(p);
+                unknownClasses.add(q);
+                AbstractUnknownCard.unknownClassReplacements.add(new ArrayList<>());
                 BaseMod.addCard(q);
-
             }
         }
     }
@@ -441,12 +435,12 @@ public class SneckoMod implements
         SneckoMod.updateAllUnknownReplacements();
     }
 
-    public static void addToLists(AbstractUnknownCard c, ArrayList<Predicate<AbstractCard>> predList, ArrayList<ArrayList<String>> listList){
+    public static void addToLists(AbstractUnknownCard c, ArrayList<Predicate<AbstractCard>> predList, ArrayList<ArrayList<String>> listList) {
         predList.add(c.myNeeds());
         listList.add(c.myList());
     }
 
-    public static void updateAllUnknownReplacements(){
+    public static void updateAllUnknownReplacements() {
 
         ArrayList<Predicate<AbstractCard>> predList = new ArrayList<>();
         ArrayList<ArrayList<String>> listList = new ArrayList<>();
@@ -476,7 +470,10 @@ public class SneckoMod implements
         addToLists(new UnknownVulnerable(), predList, listList);
         addToLists(new UnknownWeak(), predList, listList);
         addToLists(new UnknownX(), predList, listList);
+        for (AbstractUnknownCard q : SneckoMod.unknownClasses) {
+            addToLists(q, predList, listList);
+        }
 
-        AbstractUnknownCard.updateReplacements(predList,listList);
+        AbstractUnknownCard.updateReplacements(predList, listList);
     }
 }
