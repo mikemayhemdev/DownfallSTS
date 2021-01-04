@@ -27,6 +27,7 @@ import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
 import downfall.monsters.NeowBossFinal;
 import downfall.vfx.NeowBossRezEffect;
+import downfall.vfx.combat.FakeDeathScene;
 import slimebound.SlimeboundMod;
 
 import java.util.Collections;
@@ -48,6 +49,7 @@ public class NeowReturnAction extends AbstractGameAction {
         AbstractDungeon.nextRoom = node;
         AbstractDungeon.closeCurrentScreen();
         AbstractDungeon.nextRoomTransitionStart();
+        AbstractDungeon.fadeIn();
         AbstractDungeon.getCurrRoom().cannotLose = false;
         this.isDone = true;
     }

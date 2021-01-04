@@ -32,6 +32,7 @@ import downfall.downfallMod;
 import downfall.powers.EndOfTurnStrengthDex;
 import downfall.powers.NeowInvulnerablePower;
 import downfall.powers.neowpowers.*;
+import downfall.vfx.combat.FakeDeathScene;
 import guardian.vfx.SmallLaserEffectColored;
 import slimebound.SlimeboundMod;
 
@@ -109,6 +110,7 @@ public class NeowBossFinal extends AbstractMonster {
         //Initialize the boss list with the four
 
 
+        if (AbstractDungeon.isPlayerInDungeon()) AbstractDungeon.scene = new FakeDeathScene();
     }
 
     public void curses() {

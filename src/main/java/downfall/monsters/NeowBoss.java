@@ -2,6 +2,7 @@ package downfall.monsters;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.CharBossIronclad;
+import charbosses.powers.general.EnemyPoisonPower;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -257,7 +258,19 @@ public class NeowBoss extends AbstractMonster {
             case 6:
                 playSfx();
             {
-                for (int i = 0; i < 5; i++) {
+                for (int i = 0; i < 10; i++) {
+                    AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+                }
+
+                AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        AbstractDungeon.fadeOut();
+                        isDone = true;
+                    }
+                });
+
+                for (int i = 0; i < 10; i++) {
                     AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
                 }
 
