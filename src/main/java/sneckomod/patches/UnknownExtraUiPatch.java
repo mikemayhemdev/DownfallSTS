@@ -1,5 +1,6 @@
 package sneckomod.patches;
 
+import champ.ChampMod;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -31,6 +32,10 @@ public class UnknownExtraUiPatch {
         private static void renderHelper(SpriteBatch sb, TextureAtlas.AtlasRegion img, float drawX, float drawY, AbstractCard C) {
             Color color = Color.WHITE.cpy();
             color.a = C.transparency; // i wish i'd come up with this earlier. makes things so much less ugly
+            if (img == null) {
+                System.out.println("HELP!");
+                img = ChampMod.UIAtlas.findRegion("crown");
+            }
             sb.draw(img, drawX + img.offsetX - (float) img.originalWidth / 2.0F, drawY + img.offsetY - (float) img.originalHeight / 2.0F, (float) img.originalWidth / 2.0F - img.offsetX, (float) img.originalHeight / 2.0F - img.offsetY, (float) img.packedWidth, (float) img.packedHeight, C.drawScale * Settings.scale, C.drawScale * Settings.scale, C.angle);
         }
     }
