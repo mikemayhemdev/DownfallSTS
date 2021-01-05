@@ -85,39 +85,39 @@
   "bronze:HardenedForm": {
     "NAME": "Hardened Form",
     "DESCRIPTIONS": [
-      "Whenever you #yCompile, gain #b",
+      "Whenever you create a Function, gain #b",
       " #yBlock."
     ]
   },
   "bronze:Hardcode": {
     "NAME": "Hardcoding",
     "DESCRIPTIONS": [
-      "Next time you #yCompile a Function, it goes into your deck instead of your hand.",
+      "Next time you create a Function, it goes into your deck instead of your hand.",
       "The next #b",
-      " times you #yCompile a Function, it goes into your deck instead of your hand."
+      " times you create a Function, it goes into your deck instead of your hand."
     ]
   },
   "bronze:Verify": {
     "NAME": "Sentient Form",
     "DESCRIPTIONS": [
-      "After you play or #yCompile a Function, increase all numbers on it by #b",
+      "After you play or create a Function, increase all numbers on it by #b",
       "."
     ]
   },
   "bronze:FreeFunction": {
     "NAME": "Free Function",
     "DESCRIPTIONS": [
-      "The next Function you #yCompile costs #b0.",
+      "The next Function you create costs #b0.",
       "The next #b",
-      " Functions you #yCompile cost #b0."
+      " Functions you create cost #b0."
     ]
   },
   "bronze:CleanCode": {
     "NAME": "Clean Code",
     "DESCRIPTIONS": [
-      "Remove all negative #yCompile effects from cards in the Sequence. Lasts #b1 more Compiles.",
-      "Remove all negative #yCompile effects from cards in the Sequence. Lasts #b",
-      " Compiles."
+      "Remove all negative #yCompile effects from cards in the Sequence. Lasts for #b1 more Function.",
+      "Remove all negative #yCompile effects from cards in the Sequence. Lasts for #b",
+      " Functions."
     ]
   },
   "bronze:CopyPaste": {

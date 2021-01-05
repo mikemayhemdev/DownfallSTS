@@ -9,9 +9,9 @@
   "bronze:CleanCodePotion": {
     "NAME": "Alchyrical Elixir",
     "DESCRIPTIONS": [
-      "Remove all negative Compile effects from the next Function you Compile.  Reduce its cost to 0 until played.",
+      "Remove all negative Compile effects from the next Function you create.  Reduce its cost to 0 until played.",
       "Remove all negative Compile effects from the next #b",
-      " Functions you Compile.  Reduce their cost to 0 until played."
+      " Functions you create.  Reduce their cost to 0 until played."
     ]
   },
   "bronze:BurnAndBuffPotion": {
@@ -27,8 +27,8 @@
     "DESCRIPTIONS": [
       "Until the Sequence is full, choose 1 of 3 random cards to Encode.",
       "Until the Sequence is full, choose 1 of 3 random cards to Encode. Add #b",
-      " copy of the compiled Function to your hand.",
-      " copies of the compiled Function to your hand."
+      " copy of the created Function to your hand.",
+      " copies of the created Function to your hand."
     ]
   }
 }
