@@ -58,7 +58,8 @@ public class MuddleRandomCardAction extends AbstractGameAction {
                     card = myCardList.remove(AbstractDungeon.cardRandomRng.random(myCardList.size() - 1));
                 }
 
-                addToTop(new MuddleAction(card, modifiedCost));
+                if (card != null)
+                    addToTop(new MuddleAction(card, modifiedCost));
             }
         }
     }
