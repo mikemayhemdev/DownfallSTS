@@ -86,6 +86,7 @@ public class LockInCampfireEffect extends com.megacrit.cardcrawl.vfx.AbstractGam
                         c2 = CardLibrary.getCard(Madness.ID).makeCopy();
                     }
 
+                    if (c.upgraded) c2.upgrade();
                     cg.addToBottom(c2);
                     UnknownExtraUiPatch.parentCard.set(c2, (AbstractUnknownCard)c);
 
