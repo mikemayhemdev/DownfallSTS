@@ -50,26 +50,26 @@ public class CardExtraUiPatch {
                         FontHelper.renderRotatedText(sb, FontHelper.cardEnergyFont_L, String.valueOf(x), __instance.current_x, __instance.current_y, -133.0F * __instance.drawScale * Settings.scale, 133 * __instance.drawScale * Settings.scale, __instance.angle, false, Color.WHITE.cpy());
                     }
                 }
-                //Opener / Technique / Finisher draws
-                if (__instance.hasTag(ChampMod.OPENER)) {
-                    if (__instance instanceof StanceDance || __instance instanceof Taunt) {
-                        renderHelper(sb, openerall, __instance.current_x, __instance.current_y, __instance);
-                    } else if (__instance.hasTag(ChampMod.OPENERBERSERKER)) {
-                        renderHelper(sb, openerR, __instance.current_x, __instance.current_y, __instance);
-                    } else {
-                        renderHelper(sb, openerB, __instance.current_x, __instance.current_y, __instance);
-                    }
+            }
+            //Opener / Technique / Finisher draws
+            if (__instance.hasTag(ChampMod.OPENER)) {
+                if (__instance instanceof StanceDance || __instance instanceof Taunt) {
+                    renderHelper(sb, openerall, __instance.current_x, __instance.current_y, __instance);
+                } else if (__instance.hasTag(ChampMod.OPENERBERSERKER)) {
+                    renderHelper(sb, openerR, __instance.current_x, __instance.current_y, __instance);
+                } else {
+                    renderHelper(sb, openerB, __instance.current_x, __instance.current_y, __instance);
+                }
 
-                    FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
-                }
-                if (__instance.hasTag(ChampMod.TECHNIQUE)) {
-                    FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
-                    renderHelper(sb, crown, __instance.current_x, __instance.current_y, __instance);
-                }
-                if (__instance.hasTag(ChampMod.FINISHER)) {
-                    FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
-                    renderHelper(sb, finisher, __instance.current_x, __instance.current_y, __instance);
-                }
+                FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
+            }
+            if (__instance.hasTag(ChampMod.TECHNIQUE)) {
+                FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
+                renderHelper(sb, crown, __instance.current_x, __instance.current_y, __instance);
+            }
+            if (__instance.hasTag(ChampMod.FINISHER)) {
+                FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
+                renderHelper(sb, finisher, __instance.current_x, __instance.current_y, __instance);
             }
         }
 

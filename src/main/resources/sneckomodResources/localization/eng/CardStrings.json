@@ -256,7 +256,7 @@
   },
   "sneckomod:RainOfDice": {
     "NAME": "Rain of Dice",
-    "DESCRIPTION": "Deal !qqq! - !D! damage to a random enemy 2 - !M! times. NL sneckomod:Muddle the next 2 - !M! cards you draw."
+    "DESCRIPTION": "Deal !qqq! - !D! damage to a random enemy 2 - !M! times."
   },
   "sneckomod:DiceCrush": {
     "NAME": "Dice Crush",
