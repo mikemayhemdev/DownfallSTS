@@ -196,7 +196,7 @@ public class NeowBoss extends AbstractMonster {
         AbstractDungeon.getCurrRoom().playBgmInstantly("BOSS_ENDING");
 
 
-            AbstractDungeon.getCurrRoom().cannotLose = true;
+           // AbstractDungeon.getCurrRoom().cannotLose = true;
             playSfx();
             for (int i = 0; i < 5; i++) {
                 AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
@@ -255,34 +255,6 @@ public class NeowBoss extends AbstractMonster {
                 }
                 AbstractDungeon.actionManager.addToBottom(new HealAction(minion, this, 10));
                 break;
-            case 6:
-                playSfx();
-            {
-                for (int i = 0; i < 10; i++) {
-                    AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-                }
-
-                AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-                    @Override
-                    public void update() {
-                        AbstractDungeon.fadeOut();
-                        isDone = true;
-                    }
-                });
-
-                for (int i = 0; i < 10; i++) {
-                    AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-                }
-
-                AbstractDungeon.actionManager.addToBottom(new NeowReturnAction(this));
-
-                AbstractCharBoss.boss = null;
-                minion = null;
-                movingBack = true;
-                moveTimer = 2F;
-                isRezzing = false;
-            }
-            break;
         }
 
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
@@ -314,12 +286,11 @@ public class NeowBoss extends AbstractMonster {
 
 
     public void switchIntentToSelfRez() {
-        if (!backInTheFight) {
-            SlimeboundMod.logger.info("Neow switching to Self Rez intent");
-            setMove((byte) 6, Intent.SLEEP);
-            createIntent();
-            minion = null;
-            backInTheFight = true;
+
+        if (!isEscaping) {
+            CardCrawlGame.music.fadeOutBGM();
+            CardCrawlGame.music.fadeOutTempBGM();
+            escape();
         }
 
     }
@@ -334,7 +305,6 @@ public class NeowBoss extends AbstractMonster {
         }
     }
 
-
     protected void getMove(int num) {
 
         if (turnNum == 0) {
@@ -348,7 +318,6 @@ public class NeowBoss extends AbstractMonster {
             turnNum = 0;
         }
     }
-
 }
 
 

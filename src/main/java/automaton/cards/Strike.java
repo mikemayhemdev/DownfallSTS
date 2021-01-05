@@ -16,7 +16,7 @@ public class Strike extends AbstractBronzeCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SMASH);
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
     }
 
     @Override

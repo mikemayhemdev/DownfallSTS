@@ -1,4 +1,4 @@
-/*
+
 package downfall.patches;
 
 import com.evacipated.cardcrawl.modthespire.lib.*;
@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.map.MapRoomNode;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.ui.buttons.ProceedButton;
+import downfall.monsters.NeowBossFinal;
 import javassist.CtBehavior;
 
 @SpirePatch(
@@ -27,17 +28,17 @@ public class EndingDoubleFightPatch {
             if (EvilModeCharacterSelect.evilMode && AbstractDungeon.id.equals("TheEnding")) {
                 if (!inTrueFight) {
                     inTrueFight = true;
-
+                    goToNeowBoss(__instance);
                 }
             }
         }
     }
 
-    private void goToNeowBoss(ProceedButton __instance) {
-        //Set boss key/ info correctly to the new neow fight
+    private static void goToNeowBoss(ProceedButton __instance) {
+        AbstractDungeon.bossKey = NeowBossFinal.ID;
         CardCrawlGame.music.fadeOutBGM();
         CardCrawlGame.music.fadeOutTempBGM();
-        MapRoomNode node = new MapRoomNode(-1, 15);
+        MapRoomNode node = new MapRoomNode(-1, 5);
         node.room = new MonsterRoomBoss();
         AbstractDungeon.nextRoom = node;
         AbstractDungeon.closeCurrentScreen();
@@ -53,4 +54,3 @@ public class EndingDoubleFightPatch {
         }
     }
 }
-*/

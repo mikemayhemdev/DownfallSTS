@@ -312,7 +312,7 @@ public class SneckoMod implements
     public void receiveSetUnlocks() {
 
         downfallMod.registerUnlockSuite(
-                Cheat.ID,
+                Memorize.ID,
                 PureSnecko.ID,
                 Rotation.ID,
 
