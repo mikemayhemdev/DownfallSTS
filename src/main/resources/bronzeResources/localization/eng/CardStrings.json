@@ -641,7 +641,7 @@
   },
   "bronze:FullRelease": {
     "NAME": "Full Release",
-    "DESCRIPTION": "bronze:Compile - Function becomes a Power which actives its effects at the start of each turn.",
+    "DESCRIPTION": "bronze:Compile - Function becomes a Power which activates its effects at the start of each turn.",
     "EXTENDED_DESCRIPTION": [
       "full",
       "Release"

@@ -20,7 +20,7 @@ public class RecursiveStrike extends AbstractBronzeCard {
     private static final int DAMAGE = 6;
 
     public RecursiveStrike() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = 2;
         thisEncodes();
