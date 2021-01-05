@@ -62,17 +62,23 @@ public class FunctionCard extends AbstractBronzeCard {
         return false; // Madness code!
     }
 
+    public boolean triplicateCheck() {
+        String cardIDBase = cards().get(0).cardID;
+        return cards().stream().allMatch(c-> c.cardID.equals(cardIDBase)) && cards().get(0).hasTriplicate();
+    }
+
     @Override
     public void doNothingSpecificInParticular() {
         if (textPrefix.equals("")) {
             this.name = "function()"; //TODO: localize?
         } else if (isPerfect()) {
             this.name = "Perfection()"; //TODO: localize
+        } else if (triplicateCheck()) {
+            this.name = cards().get(0).getTriplicate();
         } else {
             this.name = textPrefix + "()";
         }
         super.doNothingSpecificInParticular();
-
     }
 
     @SpireOverride
@@ -83,8 +89,8 @@ public class FunctionCard extends AbstractBronzeCard {
         ReflectionHacks.setPrivate(this, AbstractCard.class, "renderColor", blah);
     }
 
-    public ArrayList<AbstractCard> cards() {
-        ArrayList<AbstractCard> mCardList = new ArrayList<>();
+    public ArrayList<AbstractBronzeCard> cards() {
+        ArrayList<AbstractBronzeCard> mCardList = new ArrayList<>();
         for (AbstractCardModifier m : CardModifierManager.getModifiers(this, CardEffectsCardMod.ID)) {
             if (m instanceof CardEffectsCardMod) {
                 mCardList.add(((CardEffectsCardMod) m).stored());

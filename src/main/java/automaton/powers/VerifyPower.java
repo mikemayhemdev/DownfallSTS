@@ -20,9 +20,11 @@ public class VerifyPower extends AbstractAutomatonPower implements OnCompilePowe
     @Override
     public void onAfterCardPlayed(AbstractCard function) {
         if (function instanceof FunctionCard) {
-            for (AbstractCardModifier m : CardModifierManager.getModifiers(function, CardEffectsCardMod.ID)) {
-                if (m instanceof CardEffectsCardMod) { // always true
-                    ((CardEffectsCardMod) m).stored().fineTune();
+            for (int i = 0; i < amount; i++) {
+                for (AbstractCardModifier m : CardModifierManager.getModifiers(function, CardEffectsCardMod.ID)) {
+                    if (m instanceof CardEffectsCardMod) { // always true
+                        ((CardEffectsCardMod) m).stored().fineTune();
+                    }
                 }
             }
             function.superFlash();
@@ -32,9 +34,11 @@ public class VerifyPower extends AbstractAutomatonPower implements OnCompilePowe
     @Override
     public void receiveCompile(AbstractCard function, boolean forGameplay) {
         if (function instanceof FunctionCard && forGameplay) {
-            for (AbstractCardModifier m : CardModifierManager.getModifiers(function, CardEffectsCardMod.ID)) {
-                if (m instanceof CardEffectsCardMod) { // always true
-                    ((CardEffectsCardMod) m).stored().fineTune();
+            for (int i = 0; i < amount; i++) {
+                for (AbstractCardModifier m : CardModifierManager.getModifiers(function, CardEffectsCardMod.ID)) {
+                    if (m instanceof CardEffectsCardMod) { // always true
+                        ((CardEffectsCardMod) m).stored().fineTune();
+                    }
                 }
             }
             function.superFlash();

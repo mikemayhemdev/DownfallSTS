@@ -1,6 +1,7 @@
 package downfall.events;
 
 
+import basemod.devcommands.unlock.Unlock;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
@@ -8,6 +9,7 @@ import com.megacrit.cardcrawl.blights.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -33,6 +35,8 @@ import downfall.vfx.CustomAnimatedNPC;
 import downfall.vfx.TopLevelInfiniteSpeechBubble;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import slimebound.patches.SlimeboundEnum;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -134,6 +138,10 @@ public class HeartEvent extends AbstractEvent {
         }
     }
 
+    public boolean hasPlayedRun(AbstractPlayer.PlayerClass p) {
+        return UnlockTracker.getCurrentProgress(p) > 0 || UnlockTracker.getUnlockLevel(p) > 0;
+    }
+
     public void update() {
         super.update();
 
@@ -153,15 +161,13 @@ public class HeartEvent extends AbstractEvent {
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
         }
 
-        Iterator var4 = this.rewards.iterator();
-
-        while (var4.hasNext()) {
-            HeartReward r = (HeartReward) var4.next();
+        for (HeartReward r : this.rewards) {
             r.update();
         }
 
         if (!this.setPhaseToEvent) {
             AbstractDungeon.getCurrRoom().phase = RoomPhase.EVENT;
+            downfallMod.readyToDoThing = true;
             this.setPhaseToEvent = true;
         }
 
@@ -378,10 +384,7 @@ public class HeartEvent extends AbstractEvent {
                 }
             }
 
-            Iterator var11 = sealedGroup.group.iterator();
-
-            while (var11.hasNext()) {
-                AbstractCard c = (AbstractCard) var11.next();
+            for (AbstractCard c : sealedGroup.group) {
                 UnlockTracker.markCardAsSeen(c.cardID);
             }
 
@@ -398,8 +401,13 @@ public class HeartEvent extends AbstractEvent {
         this.talk(TEXT[MathUtils.random(4, 6)]);
         this.rewards.add(new HeartReward(true));
         this.rewards.add(new HeartReward(false));
-        this.roomEventText.clearRemainingOptions();
-        this.roomEventText.updateDialogOption(0, OPTIONS[5]);
+        this.roomEventText.removeDialogOption(0);
+        if (hasPlayedRun(AbstractDungeon.player.chosenClass)) {
+            this.roomEventText.addDialogOption(OPTIONS[5]);
+        }
+        else {
+            this.roomEventText.addDialogOption(OPTIONS[6], true);
+        }
         this.roomEventText.addDialogOption(((HeartReward) this.rewards.get(1)).optionLabel);
         this.screenNum = 3;
     }
@@ -424,10 +432,8 @@ public class HeartEvent extends AbstractEvent {
     }
 
     private void dismissBubble() {
-        Iterator var1 = AbstractDungeon.effectList.iterator();
 
-        while (var1.hasNext()) {
-            AbstractGameEffect e = (AbstractGameEffect) var1.next();
+        for (AbstractGameEffect e : AbstractDungeon.effectList) {
             if (e instanceof InfiniteSpeechBubble) {
                 ((InfiniteSpeechBubble) e).dismiss();
             }

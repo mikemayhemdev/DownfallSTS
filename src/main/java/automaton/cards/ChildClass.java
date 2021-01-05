@@ -15,7 +15,7 @@ public class ChildClass extends AbstractBronzeCard {
     public ChildClass() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         thisEncodes();
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+       // this.tags.add(SneckoMod.BANNEDFORSNECKO);
         baseBlock = 3;
     }
 

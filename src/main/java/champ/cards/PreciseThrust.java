@@ -2,7 +2,9 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.actions.ModifyDamageAndBlockAction;
+import champ.actions.PreciseThrustAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.watcher.WallopAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -12,33 +14,48 @@ public class PreciseThrust extends AbstractChampCard {
 
     //stupid intellij stuff attack, self_and_enemy, uncommon
 
-    private static final int DAMAGE = 4;
-    private static final int BLOCK = 4;
-    private static final int MAGIC = 2;
-    private static final int UPG_MAGIC = 2;
+    private static final int DAMAGE = 7;
+    private static final int BLOCK = 7;
 
     public PreciseThrust() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBOGLADIATOR);
+        tags.add(ChampMod.COMBODEFENSIVE);
+        tags.add(ChampMod.COMBOBERSERKER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        blck();
-        if (gcombo())
-            atb(new ModifyDamageAndBlockAction(uuid, magicNumber));
+        if (dcombo()) {
+            blck();
+        }
+        if (bcombo()){
+            dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        }
+
+    }
+
+    @Override
+    public void applyPowers() {
+        rawDescription = UPGRADE_DESCRIPTION;
+        if (bcombo()) rawDescription += "[#5ebf2a]";
+        else rawDescription += "*";
+        rawDescription += EXTENDED_DESCRIPTION[0];
+        if (dcombo()) rawDescription += "[#5ebf2a]";
+        else rawDescription += "*";
+        rawDescription += EXTENDED_DESCRIPTION[1];
+        initializeDescription();
     }
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = gcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = dcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        upgradeDamage(2);
+        upgradeBlock(2);
     }
 }

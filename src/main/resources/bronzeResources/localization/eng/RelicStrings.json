@@ -3,7 +3,7 @@
     "NAME": "Bronze Core",
     "FLAVOR": "Replace once every 50,000 years.",
     "DESCRIPTIONS": [
-      "The first Function you #yCompile each combat costs #b1 less the turn it is #yCompiled."
+      "The first Function you create each combat costs #b1 less the turn it is created."
     ]
   },
   "bronze:ProtectiveGoggles": {
@@ -31,7 +31,7 @@
     "NAME": "Mallet",
     "FLAVOR": "That's it! I'm gettin me mallet!",
     "DESCRIPTIONS": [
-      "At the start of combat, add 2 copies of Fine Tuning+ to your hand."
+      "Every time you play #b3 Functions in a single turn, gain #b1 #yStrength and #b1 #yDexterity."
     ]
   },
   "bronze:SilverBullet": {
@@ -67,7 +67,7 @@
     "FLAVOR": "Changelog: Improved user experience.",
     "DESCRIPTIONS": [
       "Replaces",
-      ".[] NL The first #b3 #yFunctions you #yCompile each combat cost #b1 less the turn they are #yCompiled."
+      ".[] NL The first #b3 #yFunctions you create each combat cost #b1 less the turn they are created."
     ]
   },
   "bronze:BottledCode": {
@@ -89,7 +89,7 @@
   },
   "bronze:BronzeIdol": {
     "NAME": "Bronze Idol",
-    "FLAVOR": "Flavor",
+    "FLAVOR": "An ancient, weaponised antivirus - who knows who made it, and why?",
     "DESCRIPTIONS": [
       "#yStatus cards may now be played for useful effects."
     ]

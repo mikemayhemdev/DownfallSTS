@@ -54,6 +54,15 @@ public class ShipIt extends AbstractBronzeCard {
             }
         }
 
+        var1 = AbstractDungeon.player.exhaustPile.group.iterator();
+
+        while (var1.hasNext()) {
+            c = (AbstractCard) var1.next();
+            if (c.type == CardType.STATUS) {
+                ++count;
+            }
+        }
+
         return count;
     }
 

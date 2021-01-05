@@ -141,6 +141,10 @@ public abstract class AbstractBronzeCard extends CustomCard {
         // Called before the effects of cards are added to the Function. Use this if a card modifies its statistics as a Compile effect. Don't put these on action queue.
     }
 
+    public void onCompileFirst(AbstractCard function, boolean forGameplay) {
+        // Called after all CardEffectsCardMods are played, but before onCompile effects. This should not be used often.
+    }
+
     public void onCompile(AbstractCard function, boolean forGameplay) {
         // Called when the function is about to be created. Watch out, onCompile() is called in order of insertion.
     }
@@ -163,6 +167,14 @@ public abstract class AbstractBronzeCard extends CustomCard {
 
     public String getBonusChar() {
         return String.valueOf(NAME.charAt(0));
+    }
+
+    public boolean hasTriplicate() {
+        return false;
+    }
+
+    public String getTriplicate() {
+        return EXTENDED_DESCRIPTION[2];
     }
 
     public String getSpecialCompileText() {
@@ -331,6 +343,10 @@ public abstract class AbstractBronzeCard extends CustomCard {
     @Override
     public AbstractCard makeStatEquivalentCopy() {
         AbstractCard r = super.makeStatEquivalentCopy();
+        if (r instanceof AbstractBronzeCard) {
+            ((AbstractBronzeCard) r).baseAuto = this.baseAuto;
+            ((AbstractBronzeCard) r).auto = this.auto;
+        }
         if (!this.doSpecialCompileStuff && r instanceof AbstractBronzeCard) {
             ((AbstractBronzeCard) r).doSpecialCompileStuff = false;
             if (r.rawDescription.contains(" NL bronze:Compile")) {

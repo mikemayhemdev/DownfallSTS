@@ -47,7 +47,7 @@ public class DivideAndConquerConquer extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
 
-        this.baseDamage = originalDamage = 8;
+        this.baseDamage = originalDamage = 10;
         this.magicNumber = this.baseMagicNumber = 2;
 
 

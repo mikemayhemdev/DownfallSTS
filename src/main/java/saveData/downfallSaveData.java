@@ -1,5 +1,7 @@
 package saveData;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
+
 import java.util.ArrayList;
 
 //gotta put anything you wanna save in here
@@ -27,4 +29,6 @@ public class downfallSaveData {
     public String ACT_1_BOSS_SLAIN = "";
     public String ACT_2_BOSS_SLAIN = "";
     public String ACT_3_BOSS_SLAIN = "";
+
+    public ArrayList<AbstractCard.CardColor> VALID_COLORS = new ArrayList<>();
 }

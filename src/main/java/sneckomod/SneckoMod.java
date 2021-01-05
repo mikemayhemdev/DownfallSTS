@@ -1,36 +1,41 @@
 package sneckomod;
 
 import automaton.AutomatonMod;
+import automaton.util.TextureLoader;
 import basemod.BaseMod;
+import basemod.abstracts.CustomCard;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.colorless.Madness;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.exordium.Sssserpent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.unlock.AbstractUnlock;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.cards.OctoChoiceCard;
 import downfall.downfallMod;
 import downfall.events.Serpent_Evil;
 import downfall.util.CardIgnore;
+import expansioncontent.patches.CenterGridCardSelectScreen;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
 import sneckomod.cards.*;
-import sneckomod.cards.unknowns.UnknownClass;
-import sneckomod.cards.unknowns.UnknownColorless;
-import sneckomod.cards.unknowns.UnknownDexterity;
-import sneckomod.cards.unknowns.UnknownStrength;
+import sneckomod.cards.unknowns.*;
 import sneckomod.events.BackToBasicsSnecko;
 import sneckomod.events.D8;
 import sneckomod.events.Serpent_Snecko;
@@ -64,7 +69,8 @@ public class SneckoMod implements
         //EditKeywordsSubscriber,
         SetUnlocksSubscriber,
         EditCharactersSubscriber,
-        PostInitializeSubscriber {
+        PostInitializeSubscriber,
+        StartGameSubscriber {
     public static final String SHOULDER1 = "sneckomodResources/images/char/shoulder.png";
     public static final String SHOULDER2 = "sneckomodResources/images/char/shoulderR.png";
     public static final String CORPSE = "sneckomodResources/images/char/corpse.png";
@@ -88,6 +94,52 @@ public class SneckoMod implements
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags RNG;
     @SpireEnum
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags BANNEDFORSNECKO;
+
+    public static ArrayList<AbstractCard.CardColor> validColors = new ArrayList<>();
+    public static ArrayList<UnknownClass> unknownClasses = new ArrayList<>();
+    public static boolean pureSneckoMode = false;
+
+    public static boolean openedStarterScreen = true;
+
+    public static TextureAtlas.AtlasRegion overBannerAll;
+    public static TextureAtlas.AtlasRegion overBanner0;
+    public static TextureAtlas.AtlasRegion overBanner1;
+    public static TextureAtlas.AtlasRegion overBanner2;
+    public static TextureAtlas.AtlasRegion overBanner3;
+    public static TextureAtlas.AtlasRegion overBannerAuto;
+    public static TextureAtlas.AtlasRegion overBannerWoke;
+    public static TextureAtlas.AtlasRegion overBannerBlock;
+    public static TextureAtlas.AtlasRegion overBannerChamp;
+    public static TextureAtlas.AtlasRegion overBannerCollector;
+    public static TextureAtlas.AtlasRegion overBannerColorless;
+    public static TextureAtlas.AtlasRegion overBannerCommonA;
+    public static TextureAtlas.AtlasRegion overBannerCommonS;
+    public static TextureAtlas.AtlasRegion overBannerDefect;
+    public static TextureAtlas.AtlasRegion overBannerDex;
+    public static TextureAtlas.AtlasRegion overBannerDonuDeca;
+    public static TextureAtlas.AtlasRegion overBannerDraw;
+    public static TextureAtlas.AtlasRegion overBannerEthereal;
+    public static TextureAtlas.AtlasRegion overBannerExhaust;
+    public static TextureAtlas.AtlasRegion overBannerGuardian;
+    public static TextureAtlas.AtlasRegion overBannerHexa;
+    public static TextureAtlas.AtlasRegion overBannerIronclad;
+    public static TextureAtlas.AtlasRegion overBannerModded;
+    public static TextureAtlas.AtlasRegion overBannerRareA;
+    public static TextureAtlas.AtlasRegion overBannerRareP;
+    public static TextureAtlas.AtlasRegion overBannerRareS;
+    public static TextureAtlas.AtlasRegion overBannerSilent;
+    public static TextureAtlas.AtlasRegion overBannerSlime;
+    public static TextureAtlas.AtlasRegion overBannerStrength;
+    public static TextureAtlas.AtlasRegion overBannerStrike;
+    public static TextureAtlas.AtlasRegion overBannerTime;
+    public static TextureAtlas.AtlasRegion overBannerUncommonA;
+    public static TextureAtlas.AtlasRegion overBannerUncommonP;
+    public static TextureAtlas.AtlasRegion overBannerUncommonS;
+    public static TextureAtlas.AtlasRegion overBannerAnything;
+    public static TextureAtlas.AtlasRegion overBannerVuln;
+    public static TextureAtlas.AtlasRegion overBannerWatcher;
+    public static TextureAtlas.AtlasRegion overBannerWeak;
+    public static TextureAtlas.AtlasRegion overBannerX;
 
     private static String modID;
     private static ArrayList<AbstractCard> statuses = new ArrayList<>();
@@ -189,25 +241,25 @@ public class SneckoMod implements
 
     public static AbstractCard getOffClassCard() {
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
-        possList.removeIf(c -> (c.color == TheSnecko.Enums.SNECKO_CYAN || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.type == STATUS || c.hasTag(AbstractCard.CardTags.HEALING) || c.hasTag(BANNEDFORSNECKO)));
+        possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color == TheSnecko.Enums.SNECKO_CYAN || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.type == STATUS || c.hasTag(AbstractCard.CardTags.HEALING) || c.hasTag(BANNEDFORSNECKO));
         return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
     }
 
     public static AbstractCard getOffClassCardMatchingPredicate(Predicate<AbstractCard> q) {
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
-        possList.removeIf(c -> (c.color == TheSnecko.Enums.SNECKO_CYAN || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.type == STATUS || !q.test(c) || c.hasTag(AbstractCard.CardTags.HEALING) || c.hasTag(BANNEDFORSNECKO)));
+        possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color == TheSnecko.Enums.SNECKO_CYAN || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.type == STATUS || !q.test(c) || c.hasTag(AbstractCard.CardTags.HEALING) || c.hasTag(BANNEDFORSNECKO));
         return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
     }
 
     public static AbstractCard getSpecificClassCard(AbstractCard.CardColor color) {
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
-        possList.removeIf(c -> c.color != color || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.type == STATUS || c.rarity == AbstractCard.CardRarity.SPECIAL || c.hasTag(AbstractCard.CardTags.HEALING) || c.hasTag(BANNEDFORSNECKO));
+        possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color != color || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.type == STATUS || c.rarity == AbstractCard.CardRarity.SPECIAL || c.hasTag(AbstractCard.CardTags.HEALING) || c.hasTag(BANNEDFORSNECKO));
         return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
     }
 
     public static AbstractCard getRandomStatus() {
         Collections.shuffle(statuses, AbstractDungeon.cardRandomRng.random);
-        return statuses.get(0);
+        return statuses.get(0).makeCopy();
     }
 
     @Override
@@ -232,6 +284,8 @@ public class SneckoMod implements
         BaseMod.addRelicToCustomPool(new sneckomod.relics.D8(), TheSnecko.Enums.SNECKO_CYAN);
         BaseMod.registerBottleRelic(BottledD8Patch.inD8, new sneckomod.relics.D8());
         BaseMod.addRelic(new BabySnecko(), RelicType.SHARED);
+        BaseMod.addRelicToCustomPool(new SneckoCommon(), TheSnecko.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new SneckoBoss(), TheSnecko.Enums.SNECKO_CYAN);
     }
 
     @Override
@@ -244,8 +298,12 @@ public class SneckoMod implements
         }
         for (AbstractCard.CardColor p : AbstractCard.CardColor.values()) {
             if (p != AbstractCard.CardColor.COLORLESS && p != AbstractCard.CardColor.CURSE && p != TheSnecko.Enums.SNECKO_CYAN) {
-                AbstractCard q = new UnknownClass(p);
-                BaseMod.addCard(q);
+                if (p != AbstractCard.CardColor.COLORLESS) {
+                    UnknownClass q = new UnknownClass(p);
+                    unknownClasses.add(q);
+                    AbstractUnknownCard.unknownClassReplacements.add(new ArrayList<>());
+                    BaseMod.addCard(q);
+                }
             }
         }
     }
@@ -253,50 +311,29 @@ public class SneckoMod implements
     @Override
     public void receiveSetUnlocks() {
 
-        unlocks0 = new CustomUnlockBundle(
-                Cheat.ID, PureSnecko.ID, Rotation.ID
+        downfallMod.registerUnlockSuite(
+                Cheat.ID,
+                PureSnecko.ID,
+                Rotation.ID,
+
+                UnknownColorless.ID,
+                UnknownStrength.ID,
+                UnknownDexterity.ID,
+
+                MixItUp.ID,
+                Transmogrify.ID,
+                GlitteringGambit.ID,
+
+                RareBoosterPack.ID,
+                SleevedAce.ID,
+                CleanMud.ID,
+
+                SuperSneckoEye.ID,
+                SneckoTalon.ID,
+                BlankCard.ID,
+
+                TheSnecko.Enums.THE_SNECKO
         );
-        UnlockTracker.addCard(Cheat.ID);
-        UnlockTracker.addCard(PureSnecko.ID);
-        UnlockTracker.addCard(Rotation.ID);
-
-        unlocks1 = new CustomUnlockBundle(
-                UnknownColorless.ID, UnknownStrength.ID, UnknownDexterity.ID
-        );
-        UnlockTracker.addCard(UnknownColorless.ID);
-        UnlockTracker.addCard(UnknownStrength.ID);
-        UnlockTracker.addCard(UnknownDexterity.ID);
-
-        unlocks2 = new CustomUnlockBundle(
-                MixItUp.ID, Transmogrify.ID, GlitteringGambit.ID
-        );
-        UnlockTracker.addCard(MixItUp.ID);
-        UnlockTracker.addCard(Transmogrify.ID);
-        UnlockTracker.addCard(GlitteringGambit.ID);
-
-        unlocks3 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                RareBoosterPack.ID, SleevedAce.ID, CleanMud.ID
-        );
-        UnlockTracker.addRelic(RareBoosterPack.ID);
-        UnlockTracker.addRelic(SleevedAce.ID);
-        UnlockTracker.addRelic(CleanMud.ID);
-
-        unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                SuperSneckoEye.ID, SneckoTalon.ID, BlankCard.ID
-        );
-        UnlockTracker.addRelic(SuperSneckoEye.ID);
-        UnlockTracker.addRelic(SneckoTalon.ID);
-        UnlockTracker.addRelic(BlankCard.ID);
-
-        BaseMod.addUnlockBundle(unlocks0, TheSnecko.Enums.THE_SNECKO, 0);
-
-        BaseMod.addUnlockBundle(unlocks1, TheSnecko.Enums.THE_SNECKO, 1);
-
-        BaseMod.addUnlockBundle(unlocks2, TheSnecko.Enums.THE_SNECKO, 2);
-
-        BaseMod.addUnlockBundle(unlocks3, TheSnecko.Enums.THE_SNECKO, 3);
-
-        BaseMod.addUnlockBundle(unlocks4, TheSnecko.Enums.THE_SNECKO, 4);
 
     }
 
@@ -307,10 +344,55 @@ public class SneckoMod implements
         BaseMod.addPotion(DiceRollPotion.class, Color.CYAN, Color.WHITE, Color.BLACK, DiceRollPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
         BaseMod.addPotion(OffclassReductionPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, OffclassReductionPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
 
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(MuddlingPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(CheatPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(DiceRollPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(OffclassReductionPotion.POTION_ID);
+        }
     }
 
     public void receivePostInitialize() {
         addPotions();
+
+        overBannerAll = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbanner.png");
+        overBanner0 = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/0cost.png");
+        overBanner1 = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/1cost.png");
+        overBanner2 = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/2cost.png");
+        overBanner3 = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/3cost.png");
+        overBannerX = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/xcost.png");
+        overBannerAuto = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/automaton.png");
+        overBannerWoke = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/awakenedone.png");
+        overBannerBlock = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/block.png");
+        overBannerChamp = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/champ.png");
+        overBannerCollector = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/collector.png");
+        overBannerCommonA = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/commonAttack.png");
+        overBannerCommonS = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/commonSkill.png");
+        overBannerDefect = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/defect.png");
+        overBannerDex = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/dexterity.png");
+        overBannerDonuDeca = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/donudeca.png");
+        overBannerDraw = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/draw.png");
+        overBannerEthereal = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/ethereal.png");
+        overBannerExhaust = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/exhaust.png");
+        overBannerGuardian = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/guardian.png");
+        overBannerHexa = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/hexaghost.png");
+        overBannerIronclad = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/ironclad.png");
+        overBannerModded = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/modded.png");
+        overBannerRareA = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/rareAttack.png");
+        overBannerRareP = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/rarePower.png");
+        overBannerRareS = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/rareSkill.png");
+        overBannerSilent = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/silent.png");
+        overBannerSlime = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/slimeboss.png");
+        overBannerStrength = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/strength.png");
+        overBannerStrike = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/strike.png");
+        overBannerTime = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/timeeater.png");
+        overBannerUncommonA = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/uncommonAttack.png");
+        overBannerUncommonP = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/uncommonPower.png");
+        overBannerUncommonS = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/uncommonSkill.png");
+        overBannerAnything = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/unknown.png");
+        overBannerVuln = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/vulnerable.png");
+        overBannerWatcher = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/watcher.png");
+        overBannerWeak = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/weak.png");
 
         BaseMod.addEvent(new AddEventParams.Builder(D8.ID, sneckomod.events.D8.class) //Event ID//
                 //Event Character//
@@ -362,6 +444,126 @@ public class SneckoMod implements
             if (c.type == AbstractCard.CardType.STATUS && !(c.hasTag(AutomatonMod.GOOD_STATUS))) {
                 statuses.add(c);
             }
+            if (c.color == AbstractCard.CardColor.COLORLESS && c.rarity != AbstractCard.CardRarity.SPECIAL) {
+                AbstractUnknownCard.unknownColorlessReplacements.add(c.cardID);
+            }
         }
+
+        if (SneckoMod.validColors.size() == 0) {
+            SneckoMod.resetUnknownsLists();
+        }
+    }
+
+    public static void resetUnknownsLists() {
+        validColors.clear();
+        for (AbstractPlayer p : CardCrawlGame.characterManager.getAllCharacters()) {
+            validColors.add(p.getCardColor());
+        }
+        updateAllUnknownReplacements();
+    }
+
+    @Override
+    public void receiveStartGame() {
+        if (!CardCrawlGame.loadingSave) {
+            openedStarterScreen = false;
+        }
+        validColors = new ArrayList<>();
+    }
+
+    public static int choosingCharacters = -1;
+
+    public static CardGroup colorChoices;
+
+    public static String getClassFromColor(AbstractCard.CardColor c) {
+        for (AbstractPlayer p : CardCrawlGame.characterManager.getAllCharacters()) {
+            if (p.getCardColor() == c) {
+                return p.getLocalizedCharacterName();
+            }
+        }
+        return c.name().toLowerCase();
+    }
+
+    public static void dualClassChoice() {
+        colorChoices.shuffle();
+        CardGroup charChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        charChoices.addToTop(colorChoices.getTopCard());
+        charChoices.addToTop(colorChoices.getNCardFromTop(1));
+        AbstractDungeon.gridSelectScreen.open(charChoices, 1, false, "Choose.");
+    }
+
+    public static AbstractCard playerStartCardForEventFromColor(AbstractCard.CardColor c) {
+        for (AbstractPlayer p : CardCrawlGame.characterManager.getAllCharacters()) {
+            if (p.getCardColor() == c) {
+                return p.getStartCardForEvent();
+            }
+        }
+        return new Madness();
+    }
+
+    public static void findAWayToTriggerThisAtGameStart() {
+        if (AbstractDungeon.player instanceof TheSnecko && !pureSneckoMode) {
+            validColors.clear();
+            choosingCharacters = 0;
+            colorChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+            for (AbstractCard.CardColor r : AbstractCard.CardColor.values()) {
+                if (r != AbstractCard.CardColor.CURSE && r != AbstractDungeon.player.getCardColor() && r != AbstractCard.CardColor.COLORLESS) {
+                    String s = getClassFromColor(r);
+                    AbstractCard q = playerStartCardForEventFromColor(r);
+                    CustomCard c = new OctoChoiceCard("UNVERIFIED", s + " Cards", "bronzeResources/images/cards/BuggyMess.png", "Unknown cards can become " + s + " cards this run.", r, q.type);
+
+                    c.portrait = q.portrait;
+                    colorChoices.addToTop(c);
+                }
+            }
+            CenterGridCardSelectScreen.centerGridSelect = true;
+            dualClassChoice();
+        }
+    }
+
+    public static void addToLists(AbstractUnknownCard c, ArrayList<Predicate<AbstractCard>> predList, ArrayList<ArrayList<String>> listList) {
+        predList.add(c.myNeeds());
+        if (c.myList() != null && predList.indexOf(c.myNeeds()) < 22) {
+            c.myList().clear();
+            listList.add(c.myList());
+        }
+    }
+
+    public static void updateAllUnknownReplacements() {
+
+        //TODO - Ban any unknowns from the cardpool if their list size = 0
+
+        ArrayList<Predicate<AbstractCard>> predList = new ArrayList<>();
+        ArrayList<ArrayList<String>> listList = new ArrayList<>();
+
+        addToLists(new Unknown(), predList, listList);
+        addToLists(new Unknown0Cost(), predList, listList);
+        addToLists(new Unknown1Cost(), predList, listList);
+        addToLists(new Unknown2Cost(), predList, listList);
+        addToLists(new Unknown3Cost(), predList, listList);
+        addToLists(new UnknownBlock(), predList, listList);
+        addToLists(new UnknownColorless(), predList, listList);
+        addToLists(new UnknownCommonAttack(), predList, listList);
+        addToLists(new UnknownCommonSkill(), predList, listList);
+        addToLists(new UnknownDexterity(), predList, listList);
+        // addToLists(new UnknownEthereal(), predList, listList);
+        addToLists(new UnknownExhaust(), predList, listList);
+        addToLists(new UnknownRareAttack(), predList, listList);
+        addToLists(new UnknownRarePower(), predList, listList);
+        addToLists(new UnknownRareSkill(), predList, listList);
+        addToLists(new UnknownStrength(), predList, listList);
+        addToLists(new UnknownStrike(), predList, listList);
+        addToLists(new UnknownUncommonAttack(), predList, listList);
+        addToLists(new UnknownUncommonSkill(), predList, listList);
+        addToLists(new UnknownUncommonPower(), predList, listList);
+        addToLists(new UnknownVulnerable(), predList, listList);
+        addToLists(new UnknownWeak(), predList, listList);
+        addToLists(new UnknownX(), predList, listList);
+        addToLists(new UnknownDraw(), predList, listList);
+
+        for (AbstractUnknownCard q : SneckoMod.unknownClasses) {
+            addToLists(q, predList, listList);
+        }
+
+        AbstractUnknownCard.updateReplacements(predList, listList);
     }
 }

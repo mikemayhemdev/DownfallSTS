@@ -38,7 +38,7 @@ public class MuddlingPotion extends CustomPotion {
     public void use(AbstractCreature target) {
         if (AbstractDungeon.player.hand.size() > 0) {
 
-            AbstractDungeon.actionManager.addToBottom(new MuddleRandomCardAction(2, true));
+            AbstractDungeon.actionManager.addToBottom(new MuddleRandomCardAction(potency, true));
 
         }
 

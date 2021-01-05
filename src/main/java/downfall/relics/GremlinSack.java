@@ -29,20 +29,23 @@ public class GremlinSack extends CustomRelic {
     @Override
     public void onTrigger() {
         sackCards = new ArrayList<>();
-        if (AbstractDungeon.player != null) {
-            if (AbstractDungeon.player.getStartCardForEvent() != null) {
-                sackCards.add(AbstractDungeon.player.getStartCardForEvent().makeStatEquivalentCopy());
+        if (AbstractDungeon.isPlayerInDungeon()) {
+            if (AbstractDungeon.player != null) {
+                if (AbstractDungeon.player.getStartCardForEvent() != null) {
+                    sackCards.add(AbstractDungeon.player.getStartCardForEvent().makeStatEquivalentCopy());
+                }
+                //TODO - Does this need to be seeded?
+                sackCards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.COMMON).makeCopy());
+                sackCards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.UNCOMMON).makeCopy());
+                sackCards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE).makeCopy());
+                sackCards.add(AbstractDungeon.returnColorlessCard(AbstractCard.CardRarity.UNCOMMON).makeCopy());
+                sackCards.add(AbstractDungeon.returnRandomCurse());
+
+                this.description = getUpdatedDescription();
+                this.tips.clear();
+                this.tips.add(new PowerTip(this.name, this.description));
+
             }
-            //TODO - Does this need to be seeded?
-            sackCards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.COMMON).makeCopy());
-            sackCards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.UNCOMMON).makeCopy());
-            sackCards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE).makeCopy());
-            sackCards.add(AbstractDungeon.returnColorlessCard(AbstractCard.CardRarity.UNCOMMON).makeCopy());
-            sackCards.add(AbstractDungeon.returnRandomCurse());
-
-            this.description = getUpdatedDescription(); this.tips.clear();
-            this.tips.add(new PowerTip(this.name, this.description));
-
         }
     }
 
@@ -55,11 +58,11 @@ public class GremlinSack extends CustomRelic {
     @Override
     public String getUpdatedDescription() {
         if (AbstractDungeon.player != null) {
-           // //SlimeboundMod.logger.info("passed player check");
+            // //SlimeboundMod.logger.info("passed player check");
             if (sackCards != null) {
-              //  //SlimeboundMod.logger.info("passed null check - " + sackCards.size());
-                if (sackCards.size() >=5) {
-                 //   //SlimeboundMod.logger.info("passed count check - " + sackCards.size());
+                //  //SlimeboundMod.logger.info("passed null check - " + sackCards.size());
+                if (sackCards.size() >= 5) {
+                    //   //SlimeboundMod.logger.info("passed count check - " + sackCards.size());
                     String fullDesc = DESCRIPTIONS[0];
                     fullDesc = fullDesc + DESCRIPTIONS[2] + sackCards.get(0).name + " NL ";
                     fullDesc = fullDesc + DESCRIPTIONS[3] + sackCards.get(1).name + " NL ";

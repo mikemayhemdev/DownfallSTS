@@ -20,7 +20,7 @@
     "DESCRIPTION": "Ethereal. Unplayable. NL When drawn, add Ethereal to all cards in your hand."
   },
   "downfall:Malfunctioning": {
-    "NAME": "Malfunctioning",
+    "NAME": "Flawed",
     "DESCRIPTION": "Ethereal. NL At the end of your turn, transform all cards in hand into random Status cards. NL Exhaust."
   }
 }

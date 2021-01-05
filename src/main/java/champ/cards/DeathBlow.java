@@ -1,11 +1,8 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.powers.ResolvePower;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static champ.ChampMod.fatigue;
@@ -25,14 +22,16 @@ public class DeathBlow extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         isMultiDamage = true;
-        tags.add(ChampMod.TECHNIQUE);
+       // tags.add(ChampMod.TECHNIQUE);
         myHpLossCost = MAGIC;
+        tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
+       // techique();
         allDmg(AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         fatigue(magicNumber);
+        finisher();
     }
 
     public void upp() {

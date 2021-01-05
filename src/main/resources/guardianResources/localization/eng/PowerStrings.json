@@ -131,15 +131,15 @@
     "NAME": "Mode Shift",
     "DESCRIPTIONS": [
       "When you lose #b",
-      " HP, gain #b10 #yBlock, enter #yDefensive #yMode for 2 turns, and increase the amount required to trigger this effect again by 10."
+      " HP, gain #b10 #yBlock, enter #yDefensive #yMode for 2 rounds, and increase the amount required to trigger this effect again by 10."
     ]
   },
   "Guardian:ExhaustStatusesPower": {
     "NAME": "Repulse",
     "DESCRIPTIONS": [
-      "#yExhaust the first #yStatus or #yCurse card drawn each turn.",
-      "#yExhaust the first #b",
-      " #yStatus or #yCurse cards drawn each turn."
+      "When you draw the first #yStatus or #yCurse card each turn, #yExhaust it and draw a card.",
+      "When you draw the first #b",
+      " #yStatus or #yCurse cards each turn, #yExhaust them and draw a card."
     ]
   },
   "Guardian:RevengePower": {
@@ -199,9 +199,9 @@
   "Guardian:DontLeaveDefensiveModePower": {
     "NAME": "Defensive Mode",
     "DESCRIPTIONS": [
-      "You will exit #yDefensive #yMode at the start of your next turn.",
+      "You will exit #yDefensive #yMode at the end of this combat round.",
       "#yDefensive #yMode will be active for #b",
-      " more turns."
+      " more rounds."
     ]
   }
 }

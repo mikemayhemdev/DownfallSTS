@@ -1,12 +1,10 @@
 package champ.cards;
 
-import champ.ChampMod;
 import champ.powers.NoBlockNextTurnPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.NoBlockPower;
 
 public class ShieldThrow extends AbstractChampCard {
 
@@ -16,7 +14,7 @@ public class ShieldThrow extends AbstractChampCard {
 
     public ShieldThrow() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-      //  tags.add(ChampMod.FINISHER);
+        //  tags.add(ChampMod.FINISHER);
         baseBlock = block = 9;
     }
 
@@ -31,7 +29,7 @@ public class ShieldThrow extends AbstractChampCard {
         if (!dcombo()) {
             applyToSelf(new NoBlockNextTurnPower(1));
         }
-      //  finisher();
+        //  finisher();
     }
 
     @Override

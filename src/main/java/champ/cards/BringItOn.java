@@ -2,8 +2,11 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.powers.CounterPower;
+import champ.stances.AbstractChampStance;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 
 public class BringItOn extends AbstractChampCard {
 
@@ -19,6 +22,13 @@ public class BringItOn extends AbstractChampCard {
         baseBlock = 10;
         //exhaust = true;
         tags.add(ChampMod.FINISHER);
+    }
+
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if ((AbstractDungeon.player.stance instanceof NeutralStance))
+            return false;
+        return super.canUse(p, m);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

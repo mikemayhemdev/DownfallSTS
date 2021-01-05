@@ -43,8 +43,8 @@ public class BanditIOUAction extends AbstractGameAction {
         this.p = p;
         this.m = m;
 
-        if (m == null) //SlimeboundMod.logger.info("Bandit Cutscene has a null monster!!");
-        this.duration = 13F;
+        //if (m == null) //SlimeboundMod.logger.info("Bandit Cutscene has a null monster!!");
+            this.duration = 13F;
     }
 
     public void dealDamage(int damage){
@@ -57,7 +57,7 @@ public class BanditIOUAction extends AbstractGameAction {
             m.tint.changeColor(Color.WHITE.cpy());
             m.damage(info);
         }
-        
+
         if (currentPower != null){
             applyPower();
             currentPower = null;
@@ -77,7 +77,7 @@ public class BanditIOUAction extends AbstractGameAction {
         }
 
     }
-    
+
     public void applyPower(){
         if (!m.isDeadOrEscaped()) {
             if (m.hasPower("Artifact")) {
@@ -124,7 +124,7 @@ public class BanditIOUAction extends AbstractGameAction {
             effect.bearLandY = this.m.drawY;
 
             AbstractDungeon.effectsQueue.add(effect);
-            
+
         } else {
             if (shouldDamage) {
                 dealDamage(currentDamage);

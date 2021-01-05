@@ -1,5 +1,7 @@
 package charbosses.bosses.Ironclad;
 
+import champ.ChampChar;
+import champ.ChampMod;
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
@@ -16,6 +18,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
+import com.megacrit.cardcrawl.actions.animations.ShoutAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
@@ -65,29 +68,32 @@ public class CharBossIronclad extends AbstractCharBoss {
         } else
             switch (AbstractDungeon.actNum) {
                 case 1:
+                    AbstractDungeon.lastCombatMetricKey = "ArchetypeAct1Statuses";
                     archetype = new ArchetypeAct1StatusesNewAge();
                     break;
                 case 2:
+                    AbstractDungeon.lastCombatMetricKey = "ArchetypeAct2MushroomsNewAge";
                     archetype = new ArchetypeAct2MushroomsNewAge();
                     break;
                 case 3:
+                    AbstractDungeon.lastCombatMetricKey = "ArchetypeAct3BlockNewAge";
                     archetype = new ArchetypeAct3BlockNewAge();
                     break;
                 case 4: {
 
                     //SlimeboundMod.logger.info("Ironclad spawned at Archetype " + NeowBoss.Rezzes);
                     switch (NeowBoss.Rezzes) {
-                        case 1:
+                        case 0:
                             archetype = new ArchetypeAct1StatusesNewAge();
                             break;
-                        case 2:
+                        case 1:
                             archetype = new ArchetypeAct2MushroomsNewAge();
                             break;
-                        case 3:
+                        case 2:
                             archetype = new ArchetypeAct3BlockNewAge();
                             break;
                         default:
-                            archetype = new ArchetypeAct3BlockNewAge();
+                            archetype = new ArchetypeAct1StatusesNewAge();
                             break;
                     }
                     break;
@@ -126,6 +132,15 @@ public class CharBossIronclad extends AbstractCharBoss {
     @Override
     public void takeTurn() {
         super.takeTurn();
+        if (AbstractDungeon.player instanceof ChampChar && AbstractDungeon.actNum == 1) {
+            if (!ChampMod.talked1 && !ChampMod.talked2) {
+                AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, CardCrawlGame.languagePack.getEventString("champ:ChampTalk").DESCRIPTIONS[0], 1.0F, 2.0F));
+                ChampMod.talked1 = true;
+            } else if (!ChampMod.talked2) {
+                AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, CardCrawlGame.languagePack.getEventString("champ:ChampTalk").DESCRIPTIONS[1], 1.0F, 2.0F));
+                ChampMod.talked2 = true;
+            }
+        }
     }
 
     @Override

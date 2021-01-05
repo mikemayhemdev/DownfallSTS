@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package downfall.vfx;
 
 import charbosses.bosses.AbstractCharBoss;
@@ -123,8 +118,8 @@ public class BanditIOUEffect extends AbstractGameEffect {
         this.romeo.skeleton.setY(this.pointyStartY);
 
         //SlimeboundMod.logger.info(IntroDialog);
-        //SlimeboundMod.logger.info(BearDialog);
-        //SlimeboundMod.logger.info(OutroDialog);
+       // SlimeboundMod.logger.info(BearDialog);
+       // SlimeboundMod.logger.info(OutroDialog);
     }
 
 

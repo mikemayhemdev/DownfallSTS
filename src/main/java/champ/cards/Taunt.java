@@ -3,7 +3,6 @@ package champ.cards;
 import champ.ChampMod;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
-import champ.stances.GladiatorStance;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.actions.OctoChoiceAction;
@@ -36,7 +35,6 @@ public class Taunt extends AbstractChampCard implements OctopusCard {
             ArrayList<String> validStances = new ArrayList<>();
 
             if (!(p.stance instanceof DefensiveStance)) validStances.add(DefensiveStance.STANCE_ID);
-            if (!(p.stance instanceof GladiatorStance)) validStances.add(GladiatorStance.STANCE_ID);
             if (!(p.stance instanceof BerserkerStance)) validStances.add(BerserkerStance.STANCE_ID);
 
             Collections.shuffle(validStances);
@@ -44,9 +42,6 @@ public class Taunt extends AbstractChampCard implements OctopusCard {
             switch (validStances.get(0)) {
                 case DefensiveStance.STANCE_ID:
                     defenseOpen();
-                    break;
-                case GladiatorStance.STANCE_ID:
-                    gladOpen();
                     break;
                 case BerserkerStance.STANCE_ID:
                     berserkOpen();
@@ -63,7 +58,6 @@ public class Taunt extends AbstractChampCard implements OctopusCard {
         StanceDance c = new StanceDance();
         cardList.add(new OctoChoiceCard("octo:OctoBerserk", this.name, ChampMod.makeCardPath("OctoStanceBerserker.png"), c.EXTENDED_DESCRIPTION[0]));
         cardList.add(new OctoChoiceCard("octo:OctoDefense", this.name, ChampMod.makeCardPath("OctoStanceDefensive.png"), c.EXTENDED_DESCRIPTION[1]));
-        cardList.add(new OctoChoiceCard("octo:OctoGladiat", this.name, ChampMod.makeCardPath("OctoStanceGladiator.png"), c.EXTENDED_DESCRIPTION[2]));
         return cardList;
     }
 
@@ -74,9 +68,6 @@ public class Taunt extends AbstractChampCard implements OctopusCard {
                 break;
             case "octo:OctoDefense":
                 defenseOpen();
-                break;
-            case "octo:OctoGladiat":
-                gladOpen();
                 break;
         }
     }

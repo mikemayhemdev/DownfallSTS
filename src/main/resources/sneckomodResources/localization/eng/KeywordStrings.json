@@ -7,13 +7,6 @@
     "DESCRIPTION": "Snekproof cards aren't affected by #yConfusion and cannot be #yMuddled."
   },
   {
-    "PROPER_NAME": "Unknown",
-    "NAMES": [
-      "unknown"
-    ],
-    "DESCRIPTION": "At the start of combat, Unknown cards transform into other random cards from ANY other class that satisfy certain constraints."
-  },
-  {
     "PROPER_NAME": "Muddle",
     "NAMES": [
       "muddle",

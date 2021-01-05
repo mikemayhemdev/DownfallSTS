@@ -1,34 +1,33 @@
 package downfall.patches;
 
+import automaton.AutomatonChar;
+import champ.ChampChar;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.relics.Ectoplasm;
+import downfall.cards.curses.*;
 import downfall.downfallMod;
 import downfall.relics.Hecktoplasm;
 import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.cards.*;
 import expansioncontent.relics.StudyCardRelic;
-import downfall.cards.curses.Aged;
 import guardian.characters.GuardianCharacter;
 import guardian.potions.BlockOnCardUsePotion;
 import guardian.relics.BottledAnomaly;
 import guardian.relics.GemstoneGun;
 import guardian.relics.PocketSentry;
-import downfall.cards.curses.Icky;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.potions.ThreeZeroPotion;
 import slimebound.relics.PreparedRelic;
 import slimebound.relics.StickyStick;
-import downfall.cards.curses.Bewildered;
 import sneckomod.potions.MuddlingPotion;
 import sneckomod.relics.BlankCard;
 import sneckomod.relics.SneckoTalon;
 import sneckomod.relics.SuperSneckoEye;
 import theHexaghost.TheHexaghost;
-import downfall.cards.curses.Haunted;
-import theHexaghost.potions.BurningPotion;
+import theHexaghost.potions.SoulburnPotion;
 import theHexaghost.relics.BolsterEngine;
 import theHexaghost.relics.CandleOfCauterizing;
 import theHexaghost.relics.Sixitude;
@@ -78,6 +77,8 @@ public class BanSharedContentPatch {
                 AbstractDungeon.curseCardPool.removeCard(Icky.ID);
                 AbstractDungeon.curseCardPool.removeCard(Bewildered.ID);
                 AbstractDungeon.curseCardPool.removeCard(Haunted.ID);
+                AbstractDungeon.curseCardPool.removeCard(PrideStandard.ID);
+                AbstractDungeon.curseCardPool.removeCard(Malfunctioning.ID);
             } else {
                 if (AbstractDungeon.player instanceof SlimeboundCharacter) {
                     AbstractDungeon.colorlessCardPool.removeCard(PrepareCrush.ID);
@@ -93,6 +94,17 @@ public class BanSharedContentPatch {
                     AbstractDungeon.colorlessCardPool.removeCard(ChargeUp.ID);
                     AbstractDungeon.colorlessCardPool.removeCard(GuardianWhirl.ID);
                     AbstractDungeon.colorlessCardPool.removeCard(DefensiveMode.ID);
+                    AbstractDungeon.colorlessCardPool.removeCard(BronzeBeam.ID);
+                }
+                if (AbstractDungeon.player instanceof ChampChar || RandomCardWithTagAction.champLocked()) {
+                    AbstractDungeon.colorlessCardPool.removeCard(FaceSlap.ID);
+                    AbstractDungeon.colorlessCardPool.removeCard(DefensiveStance.ID);
+                    AbstractDungeon.colorlessCardPool.removeCard(LastStand.ID);
+                }
+                if (AbstractDungeon.player instanceof AutomatonChar || RandomCardWithTagAction.autoLocked()) {
+                    AbstractDungeon.colorlessCardPool.removeCard(Flail.ID);
+                    AbstractDungeon.colorlessCardPool.removeCard(BronzeBeam.ID);
+                    AbstractDungeon.colorlessCardPool.removeCard(HyperBeam.ID);
                 }
             }
         }
@@ -138,12 +150,14 @@ public class BanSharedContentPatch {
     public static class PotionPatch {
 
         public static void Postfix(AbstractPlayer.PlayerClass chosenClass) {
-            if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_colorlessCards) {
-                PotionHelper.potions.remove(BurningPotion.POTION_ID);
+
+            if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_potions) {
+                PotionHelper.potions.remove(SoulburnPotion.POTION_ID);
                 PotionHelper.potions.remove(MuddlingPotion.POTION_ID);
                 PotionHelper.potions.remove(ThreeZeroPotion.POTION_ID);
                 PotionHelper.potions.remove(BlockOnCardUsePotion.POTION_ID);
             }
+
         }
     }
 }

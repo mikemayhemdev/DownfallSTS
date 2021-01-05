@@ -202,11 +202,11 @@
     "NAME": "Shining Light",
     "DESCRIPTIONS": [
       "You find a shimmering #ymass #yof #ylight encompassing the center of the room. NL NL Its ~warm~ ~glow~ and ~enchanting~ ~patterns~ cause your stomach to turn, but you know this light carries an immense power.",
-      "As you walk through the light, you grimace as it is absorbed into you. NL It's #r@scorching@ #r@hot@ ! You feel no pain, and though you are newly #binvigorated, the haunting memory of this disgusting warmth will stay with you for a long time to come.",
+      "As you walk through the light, you grimace as it is absorbed into you. NL It's #r@scorching@ #r@hot@ ! You feel no pain, and though you are newly #binvigorated, the haunting memory of this disgusting warmth will leave you scarred.",
       "You walk around it, wondering what could have been."
     ],
     "OPTIONS": [
-      "[Enter] #gUpgrade #g3 #grandom #gcards. #rBecome #rCursed #r- #rRegret.",
+      "[Enter] #gUpgrade #g3 #grandom #gcards. #rBecome #rCursed #r- #rFlawed.",
       "[Leave]",
       "[Locked] Requires: Upgradeable Cards"
     ]
@@ -374,7 +374,7 @@
     "OPTIONS": [
       "[Punch] #gGain #g85 #gSouls. #rLose #r",
       " #rHP.",
-      "[Rob] #gObtain #ga #gRelic. #rBecome #rCursed #r- #rShame."
+      "[Rob] #gObtain #ga #gRelic. #rBecome #rCursed #r- #rPride."
     ]
   },
   "downfall:Beggar": {
@@ -603,8 +603,8 @@
       "Only you should hold this power. You shatter the shrine into pieces. NL A dark wail echoes all around you, and you can feel the Shrine's #p~cursed~ #p~magic~ seep into your bones."    ],
     "OPTIONS": [
       "[Desecrate] #gDuplicate #g2 #gcards. #rCursed #r- #rRandom.",
-      "[Desecrate] #gRemove #g2 #gcards. #rCursed #r- #rRandom.",
-      "[Desecrate] #gTransform #g2 #gcards. #rCursed #r- #rRandom.",
+      "[Desecrate] #gRemove #g3 #gcards. #rCursed #r- #rRandom.",
+      "[Desecrate] #gTransform #g3 #gcards. #rCursed #r- #rRandom.",
       "[Desecrate] #gUpgrade #g2 #gcards. #rCursed #r- #rRandom."
     ]
   }

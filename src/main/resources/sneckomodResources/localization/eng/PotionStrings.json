@@ -11,7 +11,8 @@
     "NAME": "Liquid Luck",
     "DESCRIPTIONS": [
       "This turn, cards that choose a random number for their effect choose the maximum possible number.",
-      "For 2 turns, cards that choose a random number for their effect choose the maximum possible number."
+      "For #b",
+      " turns, cards that choose a random number for their effect choose the maximum possible number."
     ]
   },
   "sneckomod:MuddlingPotion": {

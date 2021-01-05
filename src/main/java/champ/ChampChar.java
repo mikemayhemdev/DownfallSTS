@@ -8,7 +8,6 @@ import champ.cards.Taunt;
 import champ.relics.ChampionCrown;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
-import champ.stances.GladiatorStance;
 import champ.stances.UltimateStance;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -26,7 +25,6 @@ import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 
@@ -162,15 +160,6 @@ public class ChampChar extends CustomPlayer {
                 this.stateData.setMix("HitDefensive", "IdleDefensive", 0.5F);
                 this.state.setAnimation(0, "IdleDefensive", true);
                 currentIdle = "IdleDefensive";
-                break;
-            }
-            case GladiatorStance
-                    .STANCE_ID: {
-                //SlimeboundMod.logger.info("Found Gladiator Stance");
-                this.stateData.setMix(currentIdle, "IdleGladiator", 0.5F);
-                this.stateData.setMix("HitGladiator", "IdleGladiator", 0.5F);
-                this.state.setAnimation(0, "IdleGladiator", true);
-                currentIdle = "IdleGladiator";
                 break;
             }
             case BerserkerStance

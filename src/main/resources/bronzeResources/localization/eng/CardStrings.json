@@ -136,7 +136,8 @@
   },
   "bronze:RecursiveStrike": {
     "NAME": "Recursive Strike",
-    "DESCRIPTION": "Deal !D! damage !bauto! times. π NL At the start of your turn, if this is in the Sequence, increase its damage by !M!.",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL bronze:Compile - bronze:Encode !M! copies of *Strike.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. NL bronze:Compile - bronze:Encode !M! copies of *Strike+.",
     "EXTENDED_DESCRIPTION": [
       "recursive",
       "Recur"
@@ -277,7 +278,7 @@
   },
   "bronze:Fortify": {
     "NAME": "Fortify",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL bronze:Compile - Gain !M! Dexterity.",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Gain !M! Dexterity.",
     "EXTENDED_DESCRIPTION": [
       "solid",
       "Fortress"
@@ -479,8 +480,8 @@
   },
   "bronze:Verify": {
     "NAME": "Sentient Form",
-    "DESCRIPTION": "After you play or bronze:Compile a Function, increase all numbers on it by 1.",
-    "UPGRADE_DESCRIPTION": "Innate. NL After you play or bronze:Compile a Function, increase all numbers on it by 1."
+    "DESCRIPTION": "After you play or create a Function, increase all numbers on it by 1.",
+    "UPGRADE_DESCRIPTION": "Innate. NL After you play or create a Function, increase all numbers on it by 1."
   },
   "bronze:BronzeHeatsink": {
     "NAME": "Bronze Heatsink",
@@ -489,7 +490,7 @@
   },
   "bronze:HardenedForm": {
     "NAME": "Summon Orb",
-    "DESCRIPTION": "Whenever you bronze:Compile, gain !M! Block and deal !M! damage to a random enemy."
+    "DESCRIPTION": "Whenever you create a Function, gain !M! Block and deal !M! damage to a random enemy."
   },
   "bronze:CopyPaste": {
     "NAME": "Copy Paste",
@@ -503,8 +504,8 @@
   },
   "bronze:Repulsor": {
     "NAME": "Repulsor",
-    "DESCRIPTION": "Exhaust the first Status or Curse card you draw each turn.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Exhaust the first Status or Curse card you draw each turn."
+    "DESCRIPTION": "When you draw the first Status or Curse card each turn, Exhaust it and draw a card.",
+    "UPGRADE_DESCRIPTION": "Innate. When you draw the first Status or Curse card each turn, Exhaust it and draw a card."
   },
   "bronze:Debug": {
     "NAME": "Debug",
@@ -516,16 +517,16 @@
   },
   "bronze:Hardcode": {
     "NAME": "Hardcode",
-    "DESCRIPTION": "Fleeting. NL The next Function you bronze:Compile goes into your deck permanently instead of your hand."
+    "DESCRIPTION": "Fleeting. NL The next Function you create goes into your deck permanently instead of your hand."
   },
   "bronze:SpaghettiCode": {
     "NAME": "Spaghetti Code",
-    "DESCRIPTION": "Until the Sequence is full, choose 1 of 2 random cards to bronze:Encode. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Until the Sequence is full, choose 1 of 2 random cards to bronze:Encode."
+    "DESCRIPTION": "Until the Sequence is full, choose 1 of 3 random cards to bronze:Encode. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Until the Sequence is full, choose 1 of 3 random cards to bronze:Encode."
   },
   "bronze:Assembly": {
     "NAME": "Assembly",
-    "DESCRIPTION": "Scry !M!. NL bronze:Encode all cards with bronze:Encode discarded."
+    "DESCRIPTION": "Scry !M!. NL bronze:Encode all cards with bronze:Encode discarded. NL Exhaust."
   },
   "bronze:FineTuning": {
     "NAME": "Fine Tuning",
@@ -534,7 +535,7 @@
   },
   "bronze:CleanCode": {
     "NAME": "Clean Code",
-    "DESCRIPTION": "Remove all negative bronze:Compile effects from cards in the Sequence. NL Lasts for the next !M! *Compiles."
+    "DESCRIPTION": "Remove all negative bronze:Compile effects from cards in the Sequence. NL Lasts for the next !M! Functions created."
   },
   "bronze:BranchBlock": {
     "NAME": "Branch: Block",
@@ -578,13 +579,13 @@
     "DESCRIPTION": "Deal !B! Block."
   },
   "bronze:TinkerersToolbox": {
-    "NAME": "Tinkerer's Toolbox",
+    "NAME": "Dev Tools",
     "DESCRIPTION": "Retain. NL Choose between *Debug, *Batch and *Decompile. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Choose between *Debug, *Batch and *Decompile."
   },
   "bronze:Refactor": {
     "NAME": "Refactor",
-    "DESCRIPTION": "Scry !M!. NL Gain !B! Block for each Status card discarded."
+    "DESCRIPTION": "Scry !M!. NL Gain !B! Block for each Status card discarded. NL Exhaust any others discarded."
   },
   "bronze:Turbo": {
     "NAME": "Turbo",
@@ -615,10 +616,35 @@
   },
   "bronze:ThunderWave": {
     "NAME": "Thunder Wave",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for each Function bronze:Compiled this combat.",
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each Function created this combat.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " times.)"
+    ]
+  },
+  "bronze:AlphaBuild": {
+    "NAME": "Early Access",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Beta Build.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Beta Build.",
+    "EXTENDED_DESCRIPTION": [
+      "rough",
+      "Alpha"
+    ]
+  },
+  "bronze:BetaBuild": {
+    "NAME": "Beta Build",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Full Release.",
+    "EXTENDED_DESCRIPTION": [
+      "early",
+      "Beta"
+    ]
+  },
+  "bronze:FullRelease": {
+    "NAME": "Full Release",
+    "DESCRIPTION": "bronze:Compile - Function becomes a Power which activates its effects at the start of each turn.",
+    "EXTENDED_DESCRIPTION": [
+      "full",
+      "Release"
     ]
   }
 }

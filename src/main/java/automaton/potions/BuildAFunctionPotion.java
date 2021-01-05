@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import com.megacrit.cardcrawl.relics.SacredBark;
 import downfall.util.SelectCardsCenteredAction;
 
 import java.util.ArrayList;
@@ -31,8 +30,12 @@ public class BuildAFunctionPotion extends CustomPotion {
 
     public void initializeData() {
         this.potency = getPotency();
-        if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic(SacredBark.ID)) {
-            this.description = potionStrings.DESCRIPTIONS[1];
+        if (AbstractDungeon.player != null && potency > 1) {
+            if (potency > 2) {
+                this.description = potionStrings.DESCRIPTIONS[1] + (potency - 1) + potionStrings.DESCRIPTIONS[3];
+            } else {
+                this.description = potionStrings.DESCRIPTIONS[1] + (potency - 1) + potionStrings.DESCRIPTIONS[2];
+            }
         } else {
             this.description = potionStrings.DESCRIPTIONS[0];
         }
@@ -42,13 +45,13 @@ public class BuildAFunctionPotion extends CustomPotion {
 
     public void use(AbstractCreature target) {
         for (int i = 0; i < (FunctionHelper.max - FunctionHelper.held.size()); i++) {
-            ArrayList<AbstractCard> cardsList = SpaghettiCode.getRandomEncodeChoices(3);
+            ArrayList<AbstractCard> cardsList = SpaghettiCode.getRandomEncodeChoices();
             addToBot(new SelectCardsCenteredAction(cardsList, 1, "Choose a Card to Encode.", (cards) -> {
-                AbstractDungeon.actionManager.addToTop(new AddToFuncAction(cards.get(0), null));
+                AbstractDungeon.actionManager.addToTop(new AddToFuncAction(cards.get(0), null));  //TODO Hardcoded string!
             }));
         }
-        if (AbstractDungeon.player.hasRelic(SacredBark.ID)) {
-            FunctionHelper.doExtraNonSpecificCopy = true;
+        if (potency > 1) {
+            FunctionHelper.doExtraNonSpecificCopy = potency - 1;
         }
     }
 

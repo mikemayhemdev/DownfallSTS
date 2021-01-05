@@ -28,16 +28,15 @@ public class FlashCut extends AbstractChampCard {
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.OPENER);
         tags.add(CardTags.STRIKE);
-        this.tags.add(ChampMod.OPENERGLADIATOR);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gladOpen();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         if (dcombo()) applyToSelf(new CounterPower(magicNumber));
         if (dcombo()) blck();
+        defenseOpen();
     }
 
     @Override

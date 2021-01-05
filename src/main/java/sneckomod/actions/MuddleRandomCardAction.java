@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 
 public class MuddleRandomCardAction extends AbstractGameAction {
@@ -39,13 +38,24 @@ public class MuddleRandomCardAction extends AbstractGameAction {
             if (!myCardList.isEmpty()) {
                 AbstractCard card = null;
                 if (onlyHighest) {
-                    myCardList.sort((AbstractCard z1, AbstractCard z2) -> Integer.compare(z2.costForTurn, z1.costForTurn));
-
-                    card = myCardList.remove(0);
-
+                    int highestCostFound = 0;
+                    for (AbstractCard r : myCardList) {
+                        if (r.costForTurn > highestCostFound) {
+                            highestCostFound = r.costForTurn;
+                        }
+                    }
+                    ArrayList<AbstractCard> highestCostCards = new ArrayList<>();
+                    for (AbstractCard r : myCardList) {
+                        if (r.costForTurn == highestCostFound) {
+                            highestCostCards.add(r);
+                        }
+                    }
+                    if (!highestCostCards.isEmpty()) {
+                        card = highestCostCards.get(AbstractDungeon.cardRandomRng.random(highestCostCards.size() - 1));
+                        myCardList.remove(card);
+                    }
                 } else {
                     card = myCardList.remove(AbstractDungeon.cardRandomRng.random(myCardList.size() - 1));
-
                 }
 
                 addToTop(new MuddleAction(card, modifiedCost));

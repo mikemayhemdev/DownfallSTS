@@ -103,6 +103,8 @@ public class DefensiveMode extends AbstractStance {
                 ((DefensiveModeBooster) p).onLeave();
             }
         }
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DontLeaveDefensiveModePower.POWER_ID));
+
     }
 
     public void stopIdleSfx() {
@@ -113,15 +115,22 @@ public class DefensiveMode extends AbstractStance {
     }
 
     public void atStartOfTurn() {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 8));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 10));
 
-        if (AbstractDungeon.player.getPower(DontLeaveDefensiveModePower.POWER_ID).amount > 1) {
-            AbstractDungeon.player.getPower(DontLeaveDefensiveModePower.POWER_ID).flash();
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, DontLeaveDefensiveModePower.POWER_ID, 1));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DontLeaveDefensiveModePower.POWER_ID));
-        }  }
+
+    }
+
+    public void onEndOfRound() {
+        if (AbstractDungeon.player.hasPower(DontLeaveDefensiveModePower.POWER_ID)) {
+            if (AbstractDungeon.player.getPower(DontLeaveDefensiveModePower.POWER_ID).amount > 1) {
+                AbstractDungeon.player.getPower(DontLeaveDefensiveModePower.POWER_ID).flash();
+                AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, DontLeaveDefensiveModePower.POWER_ID, 1));
+            } else {
+                AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DontLeaveDefensiveModePower.POWER_ID));
+            }
+        }
+    }
 
     @Override
     public void updateDescription() {

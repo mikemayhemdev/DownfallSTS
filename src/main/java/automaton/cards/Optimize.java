@@ -17,7 +17,7 @@ public class Optimize extends AbstractBronzeCard {
     public Optimize() {
         super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+      //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

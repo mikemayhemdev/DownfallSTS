@@ -29,7 +29,8 @@
       "[Skip]",
       "[Leave]",
       "Choose 10 cards to add to your deck.",
-      "[ #gEnemies #gin #gyour #gnext #gthree #gcombats #gflee #gin #gterror ]"
+      "[ #gEnemies #gin #gyour #gnext #gthree #gcombats #gflee #gin #gterror ]",
+      "[ Locked - Can't be chosen on the first run ]"
     ]
   },
   "downfall:Unlock": {
@@ -215,6 +216,13 @@
       "~Arise...~",
       "~Fight~ ~once~ ~more...~",
       "~The~ ~cycle~ ~must~ ~end...~"
+    ]
+  },
+  "downfall:NeowBossFinal": {
+    "NAMES": [
+      "Neow"
+    ],
+    "TEXT": [
     ]
   }
 }
