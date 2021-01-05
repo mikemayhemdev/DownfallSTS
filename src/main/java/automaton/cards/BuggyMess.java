@@ -13,7 +13,7 @@ public class BuggyMess extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, uncommon
 
     public BuggyMess() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         thisEncodes();
         baseMagicNumber = magicNumber = 1;
     }
