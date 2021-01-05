@@ -38,5 +38,13 @@
       "Challenge Mode - Pure Snecko",
       "Unknown cards can be from any class. Recommended for experienced Snecko players."
     ]
+  },
+  "sneckomod:LockInBonfireOptions": {
+    "TEXT": [
+      "Identify",
+      "Lock an Unknown into a permanent card.",
+      "Requires an Unknown card.",
+      "Select a card to add to your deck, removing its Unknown."
+    ]
   }
 }
