@@ -136,7 +136,8 @@
   },
   "bronze:RecursiveStrike": {
     "NAME": "Recursive Strike",
-    "DESCRIPTION": "Deal !D! damage !bauto! times. π NL At the start of your turn, if this is in the Sequence, increase its damage by !M!.",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL bronze:Compile - bronze:Encode !M! copies of *Strike.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. NL bronze:Compile - bronze:Encode !M! copies of *Strike+.",
     "EXTENDED_DESCRIPTION": [
       "recursive",
       "Recur"
