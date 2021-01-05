@@ -622,7 +622,7 @@
     ]
   },
   "bronze:AlphaBuild": {
-    "NAME": "Rough Prototype",
+    "NAME": "Early Access",
     "DESCRIPTION": "Deal !D! damage. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Beta Build.",
     "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Beta Build.",
     "EXTENDED_DESCRIPTION": [

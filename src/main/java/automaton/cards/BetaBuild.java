@@ -21,7 +21,7 @@ public class BetaBuild extends AbstractBronzeCard {
     private static final int BLOCK = 15;
 
     public BetaBuild() {
-        super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = 1;
         thisEncodes();
