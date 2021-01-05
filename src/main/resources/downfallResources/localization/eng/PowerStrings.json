@@ -42,7 +42,7 @@
   "downfall:PoisonResist": {
     "NAME": "Poison Resistance",
     "DESCRIPTIONS": [
-      "#yPoison triggers at the end of your turn. Before triggering Poison, for each [E] available, spend it to remove #b10 #yPoison."
+      "#yPoison triggers at the end of your turn. At the end of your turn, spend all remaining [E] to remove 10 #yPoison per [E] spent."
     ]
   },
   "downfall:InverseBias": {
