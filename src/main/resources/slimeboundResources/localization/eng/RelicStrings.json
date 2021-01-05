@@ -10,7 +10,8 @@
     "NAME": "Black Heart of Goo",
     "FLAVOR": "The Secret of the Ooze.",
     "DESCRIPTIONS": [
-      "Whenever you #yslimeboundmod:Consume, heal 2 HP."
+      "Replaces ",
+      ".[] NL Whenever you #yslimeboundmod:Consume, heal 2 HP."
     ]
   },
   "Slimebound:SlimedTailRelic": {

@@ -15,6 +15,7 @@ import guardian.vfx.SocketGemEffect;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 import sneckomod.patches.UnknownExtraUiPatch;
+import sneckomod.relics.SuperSneckoSoul;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -43,9 +44,14 @@ public class LockInCampfireOption extends AbstractCampfireOption {
             }
         }
 
+
         this.usable = active;
         if (active) {
-            this.description = DESCRIPTIONS[1];
+            if (AbstractDungeon.player.hasRelic(SuperSneckoSoul.ID)) {
+                this.description = DESCRIPTIONS[4];
+            } else {
+                this.description = DESCRIPTIONS[1];
+            }
             this.img = ImageMaster.loadImage("sneckomodResources/images/ui/lockincampfire.png");
         } else {
             this.description = DESCRIPTIONS[2];
@@ -57,7 +63,8 @@ public class LockInCampfireOption extends AbstractCampfireOption {
     public void useOption() {
         if (this.usable) {
             AbstractDungeon.effectList.add(new LockInCampfireEffect());
-
+            this.usable = false;
+            this.img = ImageMaster.loadImage("sneckomodResources/images/ui/lockincampfiredisabled.png");
         }
     }
 

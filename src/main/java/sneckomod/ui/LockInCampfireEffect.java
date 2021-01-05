@@ -20,13 +20,16 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 /*     */ import com.megacrit.cardcrawl.relics.AbstractRelic;
 /*     */ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
-/*     */ import com.megacrit.cardcrawl.rooms.RestRoom;
+/*     */ import com.megacrit.cardcrawl.rooms.CampfireUI;
+import com.megacrit.cardcrawl.rooms.RestRoom;
 /*     */ import com.megacrit.cardcrawl.screens.select.GridCardSelectScreen;
 /*     */ import com.megacrit.cardcrawl.ui.buttons.ProceedButton;
 /*     */ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import guardian.GuardianMod;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 import sneckomod.patches.UnknownExtraUiPatch;
+import sneckomod.relics.SuperSneckoSoul;
 /*     */ import java.util.ArrayList;
 
 public class LockInCampfireEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
@@ -99,10 +102,16 @@ public class LockInCampfireEffect extends com.megacrit.cardcrawl.vfx.AbstractGam
             this.isDone = true;
             if (com.megacrit.cardcrawl.rooms.CampfireUI.hidden) {
                 com.megacrit.cardcrawl.rooms.AbstractRoom.waitTimer = 0.0F;
-                AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
+                if (AbstractDungeon.player.hasRelic(SuperSneckoSoul.ID)){
+
+                    ((RestRoom) AbstractDungeon.getCurrRoom()).campfireUI.reopen();
+                } else {
+                    AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
+                }
                 ((RestRoom) AbstractDungeon.getCurrRoom()).cutFireSound();
             }
         }
+
     }
 
 

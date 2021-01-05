@@ -286,5 +286,12 @@
   "sneckomod:UnendingSupply": {
     "NAME": "Unending Supply",
     "DESCRIPTION": "At the start of each turn, add a random sneckomod:Offclass card to your hand and sneckomod:Muddle it."
+  },
+  "sneckomod:Memorize": {
+    "NAME": "Memorize",
+    "DESCRIPTION": "sneckomod:Snekproof. Fleeting. Retain. Can't be upgraded. NL Choose a card in hand which started *Unknown. NL Permanently add it to your deck, removing its *Unknown.",
+    "EXTENDED_DESCRIPTION": [
+      " to Memorize."
+    ]
   }
 }

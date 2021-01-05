@@ -44,7 +44,8 @@
       "Identify",
       "Lock an Unknown into a permanent card.",
       "Requires an Unknown card.",
-      "Select a card to add to your deck, removing its Unknown."
+      "Select a card to add to your deck, removing its Unknown.",
+      "[Free Action] Lock an Unknown into a permanent card."
     ]
   }
 }
