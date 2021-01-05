@@ -1,9 +1,12 @@
 package slimebound.cards;
 
 
+import basemod.BaseMod;
+import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.actions.OctoChoiceAction;
@@ -32,6 +35,11 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
     public String[] NAMES = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").NAMES;
     public String[] TEXT = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").TEXT;
 
+    private float rotationTimer;
+    private int previewIndex;
+    private ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
+
+
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         NAME = cardStrings.NAME;
@@ -43,6 +51,25 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = 0;
         this.exhaust = true;
+
+
+            cardList.add(new OctoChoiceCard("Slimebound:SplotBruiser",
+                    CardCrawlGame.languagePack.getOrbString("Slimebound:AttackSlime").NAME,
+                    SlimeboundMod.getResourcePath("cards/splitBruiser.png"),
+                    TEXT[20] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:bruiser_slime").replaceAll("#b","").replaceAll("#y","")));
+            cardList.add(new OctoChoiceCard("Slimebound:SplotGuerilla",
+                    CardCrawlGame.languagePack.getOrbString("Slimebound:PoisonSlime").NAME,
+                    SlimeboundMod.getResourcePath(IMG_PATH),
+                    TEXT[21] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:guerilla_slime").replaceAll("#b","").replaceAll("#y","")));
+            cardList.add(new OctoChoiceCard("Slimebound:SplotMire",
+                    CardCrawlGame.languagePack.getOrbString("Slimebound:SlimingSlime").NAME,
+                    SlimeboundMod.getResourcePath("cards/splitMire.png"),
+                    TEXT[22] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:mire_slime").replaceAll("#b","").replaceAll("#y","")));
+            cardList.add(new OctoChoiceCard("Slimebound:SplotLeeching",
+                    CardCrawlGame.languagePack.getOrbString("Slimebound:ShieldSlime").NAME,
+                    SlimeboundMod.getResourcePath("cards/splitLeeching.png"),
+                    TEXT[23] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:leeching_slime").replaceAll("#b","").replaceAll("#y","")));
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -80,15 +107,17 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {
-        ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
+        ArrayList<OctoChoiceCard> realList = new ArrayList<>();
+
         if (this.baseMagicNumber != 1)
-            cardList.add(new OctoChoiceCard("Slimebound:SplotBruiser", CardCrawlGame.languagePack.getOrbString("Slimebound:AttackSlime").NAME, SlimeboundMod.getResourcePath("cards/splitBruiser.png"), TEXT[20]));
+            realList.add(cardList.get(0));
         if (this.baseMagicNumber != 2)
-            cardList.add(new OctoChoiceCard("Slimebound:SplotGuerilla", CardCrawlGame.languagePack.getOrbString("Slimebound:PoisonSlime").NAME, SlimeboundMod.getResourcePath(IMG_PATH), TEXT[21]));
+            realList.add(cardList.get(1));
         if (this.baseMagicNumber != 3)
-            cardList.add(new OctoChoiceCard("Slimebound:SplotMire", CardCrawlGame.languagePack.getOrbString("Slimebound:SlimingSlime").NAME, SlimeboundMod.getResourcePath("cards/splitMire.png"), TEXT[22]));
+            realList.add(cardList.get(2));
         if (this.baseMagicNumber != 4)
-            cardList.add(new OctoChoiceCard("Slimebound:SplotLeeching", CardCrawlGame.languagePack.getOrbString("Slimebound:ShieldSlime").NAME, SlimeboundMod.getResourcePath("cards/splitLeeching.png"), TEXT[23]));
+            realList.add(cardList.get(3));
+
         return cardList;
 
     }
@@ -139,6 +168,36 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
             rawDescription = UPGRADED_DESCRIPTION;
             initializeDescription();
         }
+    }
+
+
+
+    @Override
+    public void update() {
+        super.update();
+        if (hb.hovered) {
+            if (rotationTimer <= 0F) {
+                rotationTimer = 2F;
+                if (cardList.size() == 0) {
+                    cardsToPreview = CardLibrary.cards.get("Madness");
+                } else {
+                    cardsToPreview = cardList.get(previewIndex);
+                }
+                if (previewIndex == cardList.size() - 1) {
+                    previewIndex = 0;
+                } else {
+                    previewIndex++;
+                }
+            } else {
+                rotationTimer -= Gdx.graphics.getDeltaTime();
+            }
+        }
+    }
+
+    @Override
+    public void unhover() {
+        super.unhover();
+        cardsToPreview = null;
     }
 }
 
