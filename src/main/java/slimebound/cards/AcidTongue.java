@@ -39,7 +39,7 @@ public class AcidTongue extends AbstractSlimeboundCard {
         this.magicNumber = this.baseMagicNumber = 2;
 
 
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+     //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -20,7 +20,7 @@ public class RapidStrikes extends AbstractChampCard {
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
         // tags.add(ChampMod.FINISHER);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+      //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

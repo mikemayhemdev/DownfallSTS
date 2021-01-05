@@ -42,7 +42,7 @@
   "downfall:PoisonResist": {
     "NAME": "Poison Resistance",
     "DESCRIPTIONS": [
-      "#yPoison triggers at the end of your turn. Before triggering Poison, for each [E] available, spend it to remove #b10 #yPoison."
+      "#yPoison triggers at the end of your turn. At the end of your turn, spend all remaining [E] to remove 10 #yPoison per [E] spent."
     ]
   },
   "downfall:InverseBias": {
@@ -54,7 +54,7 @@
   "downfall:NeowBuff": {
     "NAME": "Neow's Vigor",
     "DESCRIPTIONS": [
-      "Gains #b1 #yStrength and #yDexterity at the end of the round."
+      "Gains #b2 #yStrength at the end of the round."
     ]
   },
   "downfall:WatcherCripplePower": {
@@ -137,7 +137,7 @@
   "downfall:NeowHighlyToxic": {
     "NAME": "Warning: Highly Toxic",
     "DESCRIPTIONS": [
-      "Neow applies #b10 #yPoison to your per turn. You have #yPoison #yProtection."
+      "Neow applies #b10 #yPoison to you per turn. You have #yPoison #yProtection."
     ]
   },
   "downfall:NeowSeeingDouble": {

@@ -94,6 +94,7 @@ public class BanSharedContentPatch {
                     AbstractDungeon.colorlessCardPool.removeCard(ChargeUp.ID);
                     AbstractDungeon.colorlessCardPool.removeCard(GuardianWhirl.ID);
                     AbstractDungeon.colorlessCardPool.removeCard(DefensiveMode.ID);
+                    AbstractDungeon.colorlessCardPool.removeCard(BronzeBeam.ID);
                 }
                 if (AbstractDungeon.player instanceof ChampChar || RandomCardWithTagAction.champLocked()) {
                     AbstractDungeon.colorlessCardPool.removeCard(FaceSlap.ID);

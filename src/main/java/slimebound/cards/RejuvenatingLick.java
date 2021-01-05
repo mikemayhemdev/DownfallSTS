@@ -82,8 +82,13 @@ public class RejuvenatingLick extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Lick()));
 
-        if (upgraded) addToBot(new DrawCardAction(1));
+        if (upgraded)upgradeAction(p,m);
 
+    }
+
+
+    public void upgradeAction(AbstractPlayer p, AbstractMonster m){
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
     }
 
     public AbstractCard makeCopy() {

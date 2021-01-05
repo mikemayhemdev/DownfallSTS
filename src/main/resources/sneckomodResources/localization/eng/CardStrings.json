@@ -234,6 +234,10 @@
     "NAME": "???",
     "DESCRIPTION": "*Unknown Strength Card."
   },
+  "sneckomod:UnknownDraw": {
+    "NAME": "???",
+    "DESCRIPTION": "*Unknown Draw Card."
+  },
   "sneckomod:UnknownDexterity": {
     "NAME": "???",
     "DESCRIPTION": "*Unknown Dexterity Card."

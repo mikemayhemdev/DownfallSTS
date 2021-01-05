@@ -62,7 +62,6 @@ public class Lick extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new LickEffect(m.hb.cX, m.hb.cY, 0.6F, new Color(GREEN)), 0.1F));
 
 
-        //if (upgraded) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
     }
 
     public AbstractCard makeCopy() {

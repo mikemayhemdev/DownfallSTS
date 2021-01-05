@@ -8,7 +8,6 @@ Event Override patches, and other things that only appear during Evil Runs.
 
  */
 
-import automaton.AutomatonChar;
 import automaton.AutomatonMod;
 import automaton.EasyInfoDisplayPanel;
 import automaton.SuperTip;
@@ -33,10 +32,7 @@ import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import champ.ChampChar;
 import champ.ChampMod;
-import champ.cards.BerserkerStyle;
-import champ.cards.DefensiveStyle;
 import champ.cards.ModFinisher;
-import champ.cards.ViciousMockery;
 import champ.powers.LastStandModPower;
 import champ.relics.ChampStancesModRelic;
 import champ.util.TechniqueMod;
@@ -50,7 +46,6 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.brashmonkey.spriter.Player;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
@@ -84,13 +79,14 @@ import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.custom.CustomMod;
+import com.megacrit.cardcrawl.screens.runHistory.RunHistoryPath;
+import com.megacrit.cardcrawl.screens.runHistory.RunHistoryScreen;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
-import downfall.actions.NeowRezAction;
 import downfall.cardmods.EtherealMod;
 import downfall.cards.KnowingSkullWish;
 import downfall.cards.curses.*;
@@ -114,13 +110,9 @@ import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 import guardian.GuardianMod;
 import guardian.cards.ExploitGems;
-import guardian.patches.GuardianEnum;
 import guardian.relics.PickAxe;
 import slimebound.SlimeboundMod;
-import slimebound.characters.SlimeboundCharacter;
-import slimebound.patches.SlimeboundEnum;
 import sneckomod.SneckoMod;
-import sneckomod.TheSnecko;
 import sneckomod.cards.unknowns.*;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
@@ -129,7 +121,10 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Properties;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
@@ -1011,9 +1006,9 @@ public class downfallMod implements
 
         BaseMod.addPotion(CursedFountainPotion.class, Color.PURPLE, Color.MAROON, Color.BLACK, CursedFountainPotion.POTION_ID);
 
-            if (Loader.isModLoaded("widepotions")) {
-                WidePotionsMod.whitelistSimplePotion(CursedFountainPotion.POTION_ID);
-            }
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(CursedFountainPotion.POTION_ID);
+        }
 
     }
 
@@ -1086,15 +1081,17 @@ public class downfallMod implements
                 SneckoMod.openedStarterScreen = true;
             }
         }
-        if (SneckoMod.choosingCharacters > -1 && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+        if (SneckoMod.choosingCharacters > -1 && SneckoMod.choosingCharacters <= 2 && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             SneckoMod.colorChoices.removeCard(c);
             SneckoMod.validColors.add(c.color);
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             if (SneckoMod.choosingCharacters == 2) {
+                SneckoMod.choosingCharacters = 3;
                 CenterGridCardSelectScreen.centerGridSelect = false;
                 AbstractDungeon.commonCardPool.group.removeIf(ii -> ii instanceof UnknownClass && !SneckoMod.validColors.contains(ii.color));
-            } else {
+                SneckoMod.updateAllUnknownReplacements();
+            } else if (SneckoMod.choosingCharacters < 2) {
                 SneckoMod.choosingCharacters += 1;
                 SneckoMod.dualClassChoice();
             }

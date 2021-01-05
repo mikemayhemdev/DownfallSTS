@@ -550,7 +550,7 @@ public static void saveData() {
                 Orbwalk.ID,
                 FierceBash.ID,
 
-                Gem_Yellow.ID,
+                ChargeUp.ID,
                 GemFire.ID,
                 GemFinder.ID,
 

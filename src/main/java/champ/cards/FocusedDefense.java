@@ -13,7 +13,7 @@ public class FocusedDefense extends AbstractChampCard {
     //stupid intellij stuff skill, self, common
 
     public FocusedDefense() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERDEFENSIVE);
         baseBlock = 10;

@@ -20,8 +20,21 @@ public class SpaghettiCode extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, rare
 
     public SpaghettiCode() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
+    }
+
+    public static AbstractCard getRandomEncodeWithCost(int cost) {
+        ArrayList<AbstractCard> eligibleCardsList = new ArrayList<>();
+        for (AbstractCard c : CardLibrary.getAllCards()) {
+            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL) {
+                if (c.cost == cost) {
+                    eligibleCardsList.add(c.makeCopy());
+                }
+            }
+        }
+        AbstractCard qCardGet = eligibleCardsList.get(AbstractDungeon.cardRandomRng.random(0, eligibleCardsList.size() - 1));
+        return qCardGet.makeCopy();
     }
 
     public static AbstractCard getRandomEncode() {
@@ -35,23 +48,18 @@ public class SpaghettiCode extends AbstractBronzeCard {
         return qCardGet.makeCopy();
     }
 
-    public static ArrayList<AbstractCard> getRandomEncodeChoices(int amount) {
+    public static ArrayList<AbstractCard> getRandomEncodeChoices() {
         ArrayList<AbstractCard> eligibleCardsList = new ArrayList<>();
-        for (AbstractCard c : CardLibrary.getAllCards()) {
-            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL) {
-                eligibleCardsList.add(c.makeCopy());
-            }
-        }
-        ArrayList<AbstractCard> selectedCards = new ArrayList<>();
-        for (int i = 0; i < amount; i++) {
-            selectedCards.add(eligibleCardsList.remove(AbstractDungeon.cardRandomRng.random(0, eligibleCardsList.size() - 1)));
-        }
-        return selectedCards;
+
+        eligibleCardsList.add(getRandomEncodeWithCost(0).makeCopy());
+        eligibleCardsList.add(getRandomEncodeWithCost(1).makeCopy());
+        eligibleCardsList.add(getRandomEncodeWithCost(2).makeCopy());
+        return eligibleCardsList;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < (FunctionHelper.max - FunctionHelper.held.size()); i++) {
-            ArrayList<AbstractCard> cardsList = getRandomEncodeChoices(2);
+            ArrayList<AbstractCard> cardsList = getRandomEncodeChoices();
             addToBot(new SelectCardsCenteredAction(cardsList, 1, "Choose a Card to Encode.", (cards) -> { //TODO: Needs localization
                 addToTop(new AddToFuncAction(cards.get(0), null));
             }));
@@ -59,8 +67,6 @@ public class SpaghettiCode extends AbstractBronzeCard {
     }
 
     public void upp() {
-        exhaust = false;
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeBaseCost(1);
     }
 }

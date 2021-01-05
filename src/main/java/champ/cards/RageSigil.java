@@ -12,10 +12,9 @@ public class RageSigil extends AbstractChampCard {
     //stupid intellij stuff skill, self, common
 
     public RageSigil() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         tags.add(ChampMod.TECHNIQUE);
         // tags.add(ChampMod.OPENER);
-        this.block = this.baseBlock = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -25,6 +24,7 @@ public class RageSigil extends AbstractChampCard {
     }
 
     public void upp() {
+        this.block = this.baseBlock = 3;
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

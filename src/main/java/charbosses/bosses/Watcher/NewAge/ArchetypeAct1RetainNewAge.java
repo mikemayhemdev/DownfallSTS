@@ -57,9 +57,7 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
                     //Turn 1
                     addToList(cardsList, new EnWallop(), extraUpgrades);
                     addToList(cardsList, new EnHalt(), false);
-                    theVeryImportantPerseverence = new EnPerseverance();
-                    theVeryImportantPerseverence.newPrio = 1;
-                    addToList(cardsList, theVeryImportantPerseverence, true);
+                    addToList(cardsList, new EnDefendPurple(), true);
                     theVeryImportantSandsOfTime = new EnSandsOfTime();
                     theVeryImportantSandsOfTime.newPrio = 1;
                     addToList(cardsList, theVeryImportantSandsOfTime, false);
@@ -69,7 +67,6 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
                 case 1:
                     //Turn 2
                     theVeryImportantSandsOfTime.lockIntentValues = false;
-                    theVeryImportantPerseverence.lockIntentValues = false;
                     addToList(cardsList, new EnTalkToTheHand(), false);
                     addToList(cardsList, new EnHalt(), false);
                     addToList(cardsList, new EnCrushJoints(), false);
@@ -78,17 +75,14 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
                 case 2:
                     //Turn 3
                     theVeryImportantSandsOfTime.lockIntentValues = false;
-                    theVeryImportantPerseverence.lockIntentValues = false;
                     addToList(cardsList, new EnPanacea(), extraUpgrades);
                     addToList(cardsList, new EnFasting(), false);
                     addToList(cardsList, new EnClumsy(), true);
                     turn++;
                     break;
                 case 3:
-                    theVeryImportantPerseverence.newPrio = -2;
                     theVeryImportantSandsOfTime.newPrio = -1;
                     theVeryImportantSandsOfTime.lockIntentValues = false;
-                    theVeryImportantPerseverence.lockIntentValues = false;
                     addToList(cardsList, new EnHalt(), false);
                     addToList(cardsList, new EnRegret(), false);
                     addToList(cardsList, new EnParasite(), false);
@@ -101,7 +95,7 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
                 case 0:
                     addToList(cardsList, new EnHalt(), false);
                     addToList(cardsList, new EnCrushJoints(), false);
-                    addToList(cardsList, new EnPerseverance(9), true);
+                    addToList(cardsList, new EnDefendPurple(), true);
                     turn++;
                     break;
                 case 1:

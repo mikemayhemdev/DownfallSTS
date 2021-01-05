@@ -63,10 +63,7 @@ public class Repulse extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.isInnate = true;
-            this.rawDescription = UPGRADED_DESCRIPTION;
-
-            this.updateDescription();
+            upgradeBaseCost(1);
         }
     }
 

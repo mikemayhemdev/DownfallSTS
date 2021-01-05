@@ -18,7 +18,7 @@ public class Separator extends AbstractBronzeCard {
     public Separator() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         thisEncodes();
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
         tags.add(AutomatonMod.ADDS_NO_CARDTEXT);
     }
 

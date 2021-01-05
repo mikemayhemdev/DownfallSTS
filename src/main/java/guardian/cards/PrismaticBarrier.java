@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
+import sneckomod.SneckoMod;
 
 public class PrismaticBarrier extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("PrismaticBarrier");
@@ -50,6 +51,7 @@ public class PrismaticBarrier extends AbstractGuardianCard {
         loadGemMisc();
 
         tags.add(AbstractCard.CardTags.HEALING);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
