@@ -343,6 +343,10 @@ public abstract class AbstractBronzeCard extends CustomCard {
     @Override
     public AbstractCard makeStatEquivalentCopy() {
         AbstractCard r = super.makeStatEquivalentCopy();
+        if (r instanceof AbstractBronzeCard) {
+            ((AbstractBronzeCard) r).baseAuto = this.baseAuto;
+            ((AbstractBronzeCard) r).auto = this.auto;
+        }
         if (!this.doSpecialCompileStuff && r instanceof AbstractBronzeCard) {
             ((AbstractBronzeCard) r).doSpecialCompileStuff = false;
             if (r.rawDescription.contains(" NL bronze:Compile")) {

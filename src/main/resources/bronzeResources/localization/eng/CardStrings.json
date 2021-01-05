@@ -136,7 +136,8 @@
   },
   "bronze:RecursiveStrike": {
     "NAME": "Recursive Strike",
-    "DESCRIPTION": "Deal !D! damage !bauto! times. π NL At the start of your turn, if this is in the Sequence, increase its damage by !M!.",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL bronze:Compile - bronze:Encode !M! copies of *Strike.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. NL bronze:Compile - bronze:Encode !M! copies of *Strike+.",
     "EXTENDED_DESCRIPTION": [
       "recursive",
       "Recur"
@@ -622,7 +623,7 @@
     ]
   },
   "bronze:AlphaBuild": {
-    "NAME": "Rough Prototype",
+    "NAME": "Early Access",
     "DESCRIPTION": "Deal !D! damage. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Beta Build.",
     "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Beta Build.",
     "EXTENDED_DESCRIPTION": [
@@ -640,7 +641,7 @@
   },
   "bronze:FullRelease": {
     "NAME": "Full Release",
-    "DESCRIPTION": "bronze:Compile - Function becomes a Power which actives its effects at the start of each turn.",
+    "DESCRIPTION": "bronze:Compile - Function becomes a Power which activates its effects at the start of each turn.",
     "EXTENDED_DESCRIPTION": [
       "full",
       "Release"
