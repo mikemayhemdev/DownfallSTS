@@ -1074,27 +1074,7 @@ public class downfallMod implements
         }
 
         //Snecko mod run start choosing stuff
-        if (!SneckoMod.openedStarterScreen) {
-            if (CardCrawlGame.isInARun() && downfallMod.readyToDoThing) {
-                SneckoMod.findAWayToTriggerThisAtGameStart();
-                SneckoMod.openedStarterScreen = true;
-            }
-        }
-        if (SneckoMod.choosingCharacters > -1 && SneckoMod.choosingCharacters <= 2 && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-            SneckoMod.colorChoices.removeCard(c);
-            SneckoMod.validColors.add(c.color);
-            AbstractDungeon.gridSelectScreen.selectedCards.clear();
-            if (SneckoMod.choosingCharacters == 2) {
-                SneckoMod.choosingCharacters = 3;
-                CenterGridCardSelectScreen.centerGridSelect = false;
-                AbstractDungeon.commonCardPool.group.removeIf(ii -> ii instanceof UnknownClass && !SneckoMod.validColors.contains(ii.color));
-                SneckoMod.updateAllUnknownReplacements();
-            } else if (SneckoMod.choosingCharacters < 2) {
-                SneckoMod.choosingCharacters += 1;
-                SneckoMod.dualClassChoice();
-            }
-        }
+        SneckoMod.importantStuff();
     }
 
     private void resetBossList() {

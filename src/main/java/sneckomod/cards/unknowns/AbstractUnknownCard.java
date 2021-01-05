@@ -39,6 +39,12 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         purgeOnUse = true;
     }
 
+    public AbstractUnknownCard(final String id, final String img, final CardType type, final CardRarity rarity, CardColor color) {
+        super(id, img, -2, type, rarity, CardTarget.NONE, color);
+        tags.add(CardTags.HEALING);
+        purgeOnUse = true;
+    }
+
     public TextureAtlas.AtlasRegion getOverBannerTex() {
         return SneckoMod.overBannerAnything;
     }
@@ -133,10 +139,10 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
                 validCard = c.color != TheSnecko.Enums.SNECKO_CYAN;
             }
 
-            for (Predicate<AbstractCard> funkyPredicate : funkyPredicates) {
-                if (funkyPredicate.test(q) && (SneckoMod.pureSneckoMode || SneckoMod.validColors.contains(q.color))) {
+            for (int i = 0; i < funkyPredicates.size(); i++) {
+                Predicate<AbstractCard> funkyPredicate = funkyPredicates.get(i);
+                if (funkyPredicate.test(q) && (SneckoMod.pureSneckoMode || SneckoMod.validColors.contains(q.color) || i >= 22)) {
                     if (validCard) {
-                        System.out.println("WE ARE HERE!");
                         ArrayList<String> s = funkyLists.get(funkyPredicates.indexOf(funkyPredicate));
                         if (s == null) {
                             s = new ArrayList<>();
@@ -145,6 +151,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
                     }
                 }
             }
+
         }
 
     }
