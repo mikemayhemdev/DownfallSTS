@@ -226,7 +226,12 @@ public class NeowBoss extends AbstractMonster {
         }
 
 
-
+    @Override
+    public void renderHealth(SpriteBatch sb) {
+        if (!halfDead) {
+            super.renderHealth(sb);
+        }
+    }
 
     public void takeTurn() {
         switch (this.nextMove) {
