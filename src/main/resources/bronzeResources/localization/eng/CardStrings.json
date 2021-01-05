@@ -278,7 +278,7 @@
   },
   "bronze:Fortify": {
     "NAME": "Fortify",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL bronze:Compile - Gain !M! Dexterity.",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Gain !M! Dexterity.",
     "EXTENDED_DESCRIPTION": [
       "solid",
       "Fortress"

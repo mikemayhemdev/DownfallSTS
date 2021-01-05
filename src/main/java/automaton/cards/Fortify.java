@@ -13,7 +13,7 @@ public class Fortify extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 8;
 
     public Fortify() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
@@ -23,9 +23,7 @@ public class Fortify extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < magicNumber; i++) {
-            dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        }
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
     }
 
     @Override
