@@ -50,7 +50,8 @@
       "Allow Standard runs to encounter Colorless Boss Cards from Downfall.",
       "Allow Standard characters to play Downfall runs, and Villains to play in Standard runs.",
       "Allow Standard runs to encounter Downfall Curse cards.",
-      "Downfall runs use traditional Map layout - fire before boss, not at start."
+      "Downfall runs use traditional Map layout - fire before boss, not at start.",
+      "Unlock all locked cards and relics for Downfall characters (requires game restart)"
     ]
   },
   "downfall:EnergyPanelTip": {

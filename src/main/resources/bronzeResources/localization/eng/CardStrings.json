@@ -288,12 +288,13 @@
     "NAME": "Bronze Orb",
     "DESCRIPTION": "Innate. NL Deal !D! damage. NL Gain !B! Block. NL bronze:Encode a random card with bronze:Encode in your draw pile. NL Exhaust."
   },
-  "bronze:SearingBeam": {
-    "NAME": "Searing Beam",
-    "DESCRIPTION": "Deal !D! damage. π NL Can be Upgraded any number of times.",
+  "bronze:Virus": {
+    "NAME": "Virus",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - bronze:Insert !M! copies of this card.",
     "EXTENDED_DESCRIPTION": [
-      "searing",
-      "Sear"
+      "viral",
+      "Virus",
+      "bronze:Insert !M! copies of Virus."
     ]
   },
   "bronze:Backtrace": {

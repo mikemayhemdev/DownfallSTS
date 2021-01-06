@@ -217,7 +217,7 @@ public class downfallMod implements
         configDefault.setProperty(PROP_CARD_SHARING, "TRUE");
         configDefault.setProperty(PROP_CHAR_CROSSOVER, "FALSE");
         configDefault.setProperty(PROP_NORMAL_MAP, "FALSE");
-//        configDefault.setProperty(PROP_UNLOCK_ALL, "FALSE");
+        configDefault.setProperty(PROP_UNLOCK_ALL, "FALSE");
 
 
         loadConfigData();
@@ -505,6 +505,15 @@ public class downfallMod implements
             saveData();
         });
 
+        ModLabeledToggleButton unlockAllBtn = new ModLabeledToggleButton(configStrings.TEXT[7],
+                350.0f, 300, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                unlockEverything, settingsPanel, (label) -> {
+        }, (button) -> {
+            unlockEverything = button.enabled;
+            saveData();
+        });
+
+
         settingsPanel.addUIElement(contentSharingBtnCurses);
         settingsPanel.addUIElement(contentSharingBtnEvents);
         settingsPanel.addUIElement(contentSharingBtnPotions);
@@ -512,6 +521,7 @@ public class downfallMod implements
         settingsPanel.addUIElement(contentSharingBtnColorless);
         settingsPanel.addUIElement(characterCrossoverBtn);
         settingsPanel.addUIElement(normalMapBtn);
+        settingsPanel.addUIElement(unlockAllBtn);
 
         BaseMod.registerModBadge(badgeTexture, "downfall", "Downfall Team", "A very evil Expansion.", settingsPanel);
 
@@ -527,7 +537,7 @@ public class downfallMod implements
             contentSharing_potions = config.getBool(PROP_POTION_SHARING);
             contentSharing_colorlessCards = config.getBool(PROP_CARD_SHARING);
             crossoverCharacters = config.getBool(PROP_CHAR_CROSSOVER);
-//            unlockEverything = config.getBool(PROP_UNLOCK_ALL);
+            unlockEverything = config.getBool(PROP_UNLOCK_ALL);
         } catch (Exception e) {
             e.printStackTrace();
             clearData();
@@ -1380,7 +1390,7 @@ public class downfallMod implements
         BaseMod.addUnlockBundle(currentBundle, player, index);
 
 
-        if (UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index + 1) {
+        if (downfallMod.unlockEverything || UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index + 1) {
 
             UnlockTracker.unlockCard(card1);
             UnlockTracker.unlockCard(card2);
@@ -1403,11 +1413,14 @@ public class downfallMod implements
         BaseMod.addUnlockBundle(currentBundle, player, index);
 
 
-        if (UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index + 1) {
+        if (downfallMod.unlockEverything || UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index + 1) {
 
             UnlockTracker.lockedRelics.remove(relic1);
             UnlockTracker.lockedRelics.remove(relic2);
             UnlockTracker.lockedRelics.remove(relic3);
+            UnlockTracker.markRelicAsSeen(relic1);
+            UnlockTracker.markRelicAsSeen(relic2);
+            UnlockTracker.markRelicAsSeen(relic3);
         }
     }
 

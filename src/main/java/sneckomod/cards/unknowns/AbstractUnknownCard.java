@@ -211,5 +211,5 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         UnknownExtraUiPatch.parentCard.set(cUnknown, this);
         AbstractDungeon.player.hand.addToTop(cUnknown);
     }
-    
+
 }
