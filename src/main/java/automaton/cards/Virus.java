@@ -25,6 +25,7 @@ public class Virus extends AbstractBronzeCard {
         baseDamage = DAMAGE;
         cardsToPreview = new MinorBeam();
         exhaust = true;
+        selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
