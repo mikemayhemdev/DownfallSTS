@@ -60,6 +60,7 @@ public class EnragedBash extends AbstractChampCard {
     }
 
     public void upp() {
+        upgradeMagicNumber(1);
         this.rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

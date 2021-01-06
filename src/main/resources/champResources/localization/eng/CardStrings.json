@@ -276,12 +276,12 @@
   },
   "champ:EnragedBash": {
     "NAME": "Enraged Bash",
-    "DESCRIPTION": "Deal !D! damage. NL champ:Fatigue !M!. NL *Berserker champ:Combo: This card hits an additional time this combat.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. NL champ:Fatigue !M!. NL *Berserker champ:Combo: This card hits an additional time this combat."
+    "DESCRIPTION": "Deal !D! damage. NL champ:Fatigue 5. NL *Berserker champ:Combo: This card hits an additional time this combat.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. NL champ:Fatigue 5. NL *Berserker champ:Combo: This card hits an additional time this combat."
   },
   "champ:VampiricStrike": {
-    "NAME": "Super Strike",
-    "DESCRIPTION": "Deal !D! damage !M! times. Heal HP equal to unblocked damage. NL Exhaust."
+    "NAME": "Clobber",
+    "DESCRIPTION": "Deal !D! damage. *Berserker champ:Combo: NL Gain [E] . NL *Defensive champ:Combo: Gain Block equal to unblocked damage dealt."
   },
   "champ:AdrenalArmor": {
     "NAME": "Adrenal Armor",
