@@ -22,7 +22,6 @@ public class Deprecate extends AbstractBronzeCard {
         baseMagicNumber = magicNumber = MAGIC;
         thisEncodes();
         tags.add(AutomatonMod.BAD_COMPILE);
-        baseAuto = auto = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -34,7 +33,7 @@ public class Deprecate extends AbstractBronzeCard {
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay){
-            applyToSelf(new WeakPower(AbstractDungeon.player,auto, false));
+            applyToSelf(new WeakPower(AbstractDungeon.player,1, false));
         }
     }
 
