@@ -93,15 +93,7 @@ public class NeowGainMinionPowersAction extends AbstractGameAction {
                         }
                         case "downfall:Defect": {
                             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new UnbiasedCognition(owner)));
-                            int num = 0;
-                            for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
-                                if (c.type == AbstractCard.CardType.POWER) {
-                                    num++;
-                                }
-                            }
-                            if (num > 0) {
-                                addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, num), num));
-                            }
+
                             break;
                         }
                         case "downfall:Watcher": {

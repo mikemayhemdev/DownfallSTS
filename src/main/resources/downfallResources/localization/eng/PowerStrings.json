@@ -155,7 +155,7 @@
   "downfall:NeowUnbiasedCognition": {
     "NAME": "Unbiased Cognition",
     "DESCRIPTIONS": [
-      "Neow has #b1 additional #yStrength for every #yPower card you play or have played this combat."
+      "Neow gains #b1 #yStrength for every #yPower card you play."
     ]
   },
   "downfall:NeowUnbridledRage": {
