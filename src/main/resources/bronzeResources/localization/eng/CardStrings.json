@@ -290,8 +290,8 @@
   },
   "bronze:Virus": {
     "NAME": "Virus",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Transform all cards in hand into *Minor *Beam. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL Transform all cards in hand into *Minor *Beam+. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Transform all cards in hand into *Minor *Beam.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL Transform all cards in hand into *Minor *Beam+."
   },
   "bronze:Backtrace": {
     "NAME": "Backtrace",
