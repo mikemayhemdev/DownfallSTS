@@ -64,7 +64,7 @@ public class ShieldSpikes extends AbstractGuardianCard {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseThornsPower(p, this.magicNumber), this.magicNumber));
         } else {
-            brace(5);
+            brace(8);
         }
     }
 

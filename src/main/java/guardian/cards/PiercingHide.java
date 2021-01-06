@@ -28,7 +28,7 @@ public class PiercingHide extends AbstractGuardianCard {
     private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int BLOCK = 5;
+    private static final int BLOCK = 7;
     private static final int UPGRADE_BLOCK = 2;
     private static final int THORNS = 2;
     private static final int UPGRADE_THORNS = 1;
