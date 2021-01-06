@@ -73,7 +73,7 @@
     "NAME": "Power Armor",
     "FLAVOR": "Bought used.",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain [E] . NL Your maximum #yFatigue and #yCounter is #b30. NL Reduce your maximum hand size by #b2."
+      "At the start of your turn, gain [E] . NL Your maximum #yFatigue and #yCounter is #b20."
     ]
   },
   "champ:SignatureFinisher": {
