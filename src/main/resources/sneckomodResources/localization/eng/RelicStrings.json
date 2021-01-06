@@ -3,7 +3,7 @@
     "NAME": "Snecko Soul",
     "FLAVOR": "0...3...2...2...1",
     "DESCRIPTIONS": [
-      "Whenever you add a #yUnknown card into your deck, increase your Max HP by #b1."
+      "You may Identify #yUnknown cards at Rest Sites."
     ]
   },
   "sneckomod:SuperSneckoSoul": {

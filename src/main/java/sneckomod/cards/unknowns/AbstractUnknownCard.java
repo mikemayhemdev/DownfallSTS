@@ -89,12 +89,15 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
                 if (myList().size() == 0) {
                     cardsToPreview = CardLibrary.cards.get("Madness");
                 } else {
-                    cardsToPreview = CardLibrary.cards.get(myList().get(previewIndex));
+                    cardsToPreview = CardLibrary.cards.get(myList().get(previewIndex)).makeCopy();
                 }
                 if (previewIndex == myList().size() - 1) {
                     previewIndex = 0;
                 } else {
                     previewIndex++;
+                }
+                if (upgraded) {
+                    cardsToPreview.upgrade();
                 }
             } else {
                 rotationTimer -= Gdx.graphics.getDeltaTime();
@@ -103,11 +106,13 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
     }
 
     public void upgrade() {
-        upgradeName();
-        String[] funky = rawDescription.split(unknownUpgrade[0]);
-        funky[1] = unknownUpgrade[1] + funky[1];
-        rawDescription = String.join(unknownUpgrade[0], funky);
-        initializeDescription();
+        if (!upgraded) {
+            upgradeName();
+            String[] funky = rawDescription.split(unknownUpgrade[0]);
+            funky[1] = unknownUpgrade[1] + funky[1];
+            rawDescription = String.join(unknownUpgrade[0], funky);
+            initializeDescription();
+        }
     }
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
