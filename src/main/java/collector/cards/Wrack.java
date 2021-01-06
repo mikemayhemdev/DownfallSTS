@@ -33,7 +33,7 @@ public class Wrack extends AbstractCollectorCard {
             } else if (po.ID.equals(CollectorMod.Afflictions.get(4))){
                 atb(new ApplyPowerAction(m,p, new BurnPower(m,po.amount)));
             }  else if (po.ID.equals(CollectorMod.Afflictions.get(5))){
-                atb(new ApplyPowerAction(m,p, new SoulSnare(po.amount)));
+                atb(new ApplyPowerAction(m,p, new SoulSnare(po.amount,m)));
             }
         }
     }

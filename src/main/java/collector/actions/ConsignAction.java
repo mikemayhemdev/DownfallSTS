@@ -28,7 +28,7 @@ public class ConsignAction extends AbstractGameAction {
                 healAmount += target.lastDamageTaken;
             }
             if (healAmount > 0) {
-                addToBot(new ApplyPowerAction(target,AbstractDungeon.player,new SoulSnare(healAmount)));
+                addToBot(new ApplyPowerAction(target,AbstractDungeon.player,new SoulSnare(healAmount,target)));
             }
 
             if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {

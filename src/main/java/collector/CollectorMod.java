@@ -188,7 +188,7 @@ public class CollectorMod implements
             } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(4))) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new BurnPower(target, 8)));
             } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(5))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new SoulSnare(2)));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new SoulSnare(2,target)));
             }
         } else {
             if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(0))) {
@@ -202,7 +202,7 @@ public class CollectorMod implements
             } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(4))) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new BurnPower(target, 11)));
             } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(5))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new SoulSnare(4)));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new SoulSnare(4,target)));
             }
         }
     }

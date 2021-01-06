@@ -19,8 +19,12 @@ public class Contemplate extends AbstractCollectorCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> possCardsList = new ArrayList<>();
         CollectorCollection.combatCollection.shuffle();
-        for (int i = 0; i < 3; i++) {
-            possCardsList.add(CollectorCollection.combatCollection.group.get(i));
+        if (CollectorCollection.combatCollection.group.size() >= 3) {
+            for (int i = 0; i < 3; i++) {
+                possCardsList.add(CollectorCollection.combatCollection.group.get(i));
+            }
+        } else {
+            possCardsList.addAll(CollectorCollection.combatCollection.group);
         }
         atb(new SelectCardsAction(possCardsList, 1, "Choose.", (cards) -> {
             if (upgraded){

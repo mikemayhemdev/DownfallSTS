@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
 
@@ -39,8 +40,18 @@ public class Omen extends AbstractPower implements CloneablePowerInterface {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.ATTACK) {
+        if (card.type == AbstractCard.CardType.ATTACK && action.target != null) {
             if (!action.target.isDying && action.target.currentHealth > 0 && !action.target.isEscaping) {
+                if (action.target.hasPower(CollectorMod.Afflictions.get(0)) && action.target.hasPower(CollectorMod.Afflictions.get(1)) &&
+                        action.target.hasPower(CollectorMod.Afflictions.get(2)) && action.target.hasPower(CollectorMod.Afflictions.get(3)) &&
+                        action.target.hasPower(CollectorMod.Afflictions.get(4)) && action.target.hasPower(CollectorMod.Afflictions.get(5))
+                ) {
+                    addToBot(new VFXAction(new CollectorCurseEffect(action.target.drawX, action.target.drawY)));
+                    addToBot(new LoseHPAction(action.target, action.target, amount));
+                }
+            }
+        } else if( card.type == AbstractCard.CardType.ATTACK){
+            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters){
                 if (action.target.hasPower(CollectorMod.Afflictions.get(0)) && action.target.hasPower(CollectorMod.Afflictions.get(1)) &&
                         action.target.hasPower(CollectorMod.Afflictions.get(2)) && action.target.hasPower(CollectorMod.Afflictions.get(3)) &&
                         action.target.hasPower(CollectorMod.Afflictions.get(4)) && action.target.hasPower(CollectorMod.Afflictions.get(5))

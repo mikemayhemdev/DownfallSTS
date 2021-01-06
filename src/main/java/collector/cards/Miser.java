@@ -7,7 +7,7 @@ public class Miser extends AbstractCollectorCard {
     public final static String ID = makeID("Miser");
 
     public Miser() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 5;
         magicNumber = baseMagicNumber = 1;
     }
@@ -19,6 +19,6 @@ public class Miser extends AbstractCollectorCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeBaseCost(1);
     }
 }

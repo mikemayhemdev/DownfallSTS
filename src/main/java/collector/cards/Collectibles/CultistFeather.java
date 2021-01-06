@@ -12,7 +12,7 @@ public class CultistFeather extends AbstractCollectibleCard {
         super(ID, 0, CardType.POWER, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseDamage = 13;
         baseBlock = 1;
-        baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 1;
         this.exhaust = true;
     }
 
