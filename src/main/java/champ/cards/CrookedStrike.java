@@ -33,8 +33,8 @@ public class CrookedStrike extends AbstractChampCard {
                 dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
                 dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
             }
-            finisher();
         }
+        finisher();
     }
 
     public void upp() {
