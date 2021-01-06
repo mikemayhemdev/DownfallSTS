@@ -62,17 +62,18 @@ public class HighlightCards {
         sb.draw(img, drawX + img.offsetX - (float) img.originalWidth / 2.0F, drawY + img.offsetY - (float) img.originalHeight / 2.0F, (float) img.originalWidth / 2.0F - img.offsetX, (float) img.originalHeight / 2.0F - img.offsetY, (float) img.packedWidth, (float) img.packedHeight, C.drawScale * Settings.scale, C.drawScale * Settings.scale, C.angle);
     }
 
-    //Overly complicated validation method to check when to draw the double card effect
     private static boolean zeroCostChecker(AbstractCard c) {
         if (AbstractDungeon.player != null && AbstractDungeon.getCurrMapNode() != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) { //This should stop the DoubleImage from rendering if the player has Echo stacks remaining in the card selection screen
-            return (AbstractCharBoss.boss != null && AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct1ShivsNewAge && c.cost == 0 && !(c instanceof AbstractBossCard));
+            return (AbstractDungeon.lastCombatMetricKey.equals("downfall:Silent") && AbstractDungeon.actNum == 1 &&
+                    !(c instanceof AbstractBossCard) && (c.freeToPlayOnce || c.costForTurn == 0));
         }
         return false;
     }
 
     private static boolean powerChecker(AbstractCard c) {
         if (AbstractDungeon.player != null && AbstractDungeon.getCurrMapNode() != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) { //This should stop the DoubleImage from rendering if the player has Echo stacks remaining in the card selection screen
-            return (AbstractCharBoss.boss != null && AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct3OrbsNewAge && c.type == AbstractCard.CardType.POWER && !(c instanceof AbstractBossCard));
+            return (AbstractDungeon.lastCombatMetricKey.equals("downfall:Defect") && AbstractDungeon.actNum == 3 &&
+                    !(c instanceof AbstractBossCard) && c.type == AbstractCard.CardType.POWER);
         }
         return false;
     }

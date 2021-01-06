@@ -1,7 +1,6 @@
 package charbosses.bosses.Silent.NewAge;
 
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.bosses.Silent.ArchetypeBaseSilent;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnShiv;

@@ -83,10 +83,11 @@
     ]
   },
   "bronze:HardenedForm": {
-    "NAME": "Hardened Form",
+    "NAME": "Summon Orb",
     "DESCRIPTIONS": [
       "Whenever you create a Function, gain #b",
-      " #yBlock."
+      " #yBlock and deal #b",
+      " damage to a random enemy."
     ]
   },
   "bronze:Hardcode": {
