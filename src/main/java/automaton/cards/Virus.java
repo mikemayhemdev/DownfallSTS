@@ -23,7 +23,6 @@ public class Virus extends AbstractBronzeCard {
     public Virus() {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        thisEncodes();
         cardsToPreview = new MinorBeam();
         exhaust = true;
     }
