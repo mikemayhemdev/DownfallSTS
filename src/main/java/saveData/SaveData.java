@@ -53,7 +53,7 @@ public class SaveData {
     private static boolean encounteredCleric;
 
     private static ArrayList<String> myVillains;
-    public static ArrayList<AbstractCard> collectiontosave = new ArrayList<>();
+    public static ArrayList<CardSave> collectiontosave = new ArrayList<>();
     private static int merchantHealth;
     private static int merchantStrength;
     private static int merchantSouls;
@@ -83,7 +83,10 @@ public class SaveData {
             consumedBlue = AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player);
             killedCleric = Cleric_Evil.heDead;
             encounteredCleric = Cleric_Evil.encountered;
-            collectiontosave = CollectorCollection.collection.group;
+            collectiontosave = new ArrayList<>();
+            for (AbstractCard c : CollectorCollection.collection.group) {
+                collectiontosave.add(new CardSave(c.cardID, c.timesUpgraded, c.misc));
+            }
             myVillains = downfallMod.possEncounterList;
 
             merchantHealth = FleeingMerchant.CURRENT_HP;
@@ -182,7 +185,6 @@ public class SaveData {
                 act1BossSlain = data.ACT_1_BOSS_SLAIN;
                 act2BossSlain = data.ACT_2_BOSS_SLAIN;
                 act3BossSlain = data.ACT_3_BOSS_SLAIN;
-
                 collectiontosave = data.SAVED_COLLECTION;
 
                 saveLogger.info("Loaded downfall save data successfully.");
@@ -241,7 +243,9 @@ public class SaveData {
             downfallMod.Act2BossFaced = act2BossSlain;
             downfallMod.Act3BossFaced = act3BossSlain;
 
-            CollectorCollection.collection.group = collectiontosave;
+            for (CardSave c : collectiontosave) {
+                CollectorCollection.collection.addToTop(CardLibrary.getCopy(c));
+            }
 
             saveLogger.info("Save loaded.");
             //Anything that triggers on load goes here
