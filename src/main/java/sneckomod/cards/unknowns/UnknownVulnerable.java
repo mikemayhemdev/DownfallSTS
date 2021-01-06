@@ -22,7 +22,7 @@ public class UnknownVulnerable extends AbstractUnknownCard {
     public static boolean bruh = false;
 
     public UnknownVulnerable() {
-        super(ID, CardType.SKILL, CardRarity.COMMON);
+        super(ID, CardType.SKILL, CardRarity.UNCOMMON);
     }
 
     public boolean useCheck(AbstractCard card) {

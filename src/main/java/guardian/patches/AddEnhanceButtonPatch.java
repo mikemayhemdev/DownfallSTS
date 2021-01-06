@@ -13,6 +13,7 @@ import guardian.ui.FindGemsOption;
 import javassist.CtBehavior;
 import sneckomod.TheSnecko;
 import sneckomod.relics.SneckoSoul;
+import sneckomod.relics.SuperSneckoSoul;
 import sneckomod.ui.LockInCampfireOption;
 
 import java.util.ArrayList;
@@ -40,7 +41,7 @@ public class AddEnhanceButtonPatch {
             }
 
 
-            if (AbstractDungeon.player.hasRelic(SneckoSoul.ID)) {
+            if (AbstractDungeon.player.hasRelic(SuperSneckoSoul.ID) || AbstractDungeon.player.hasRelic(SneckoSoul.ID)) {
                 ___buttons.add(new LockInCampfireOption());
             }
         }
