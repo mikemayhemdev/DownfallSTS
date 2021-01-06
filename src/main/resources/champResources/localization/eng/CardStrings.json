@@ -329,7 +329,7 @@
   },
   "champ:ArenaPreparation": {
     "NAME": "Arena Preparation",
-    "DESCRIPTION": "champ:Fatigue 5. NL Add !M! random champ:Techniques into your hand. NL They gain Retain. NL Exhaust."
+    "DESCRIPTION": "Add !M! random champ:Techniques into your hand. NL They gain Retain. NL Exhaust."
   },
   "champ:EndlessRage": {
     "NAME": "Endless Rage",
