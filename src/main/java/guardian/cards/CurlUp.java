@@ -48,7 +48,7 @@ public class CurlUp extends AbstractGuardianCard {
         this.baseBlock = BLOCK;
         this.multihit = MULTICOUNT;
         this.socketCount = SOCKETS;
-        baseMagicNumber = magicNumber = 5;
+        baseMagicNumber = magicNumber = 7;
         updateDescription();
         loadGemMisc();
     }

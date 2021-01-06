@@ -230,7 +230,7 @@
   },
   "Guardian:RollAttack": {
     "NAME": "Roll Attack",
-    "DESCRIPTION": "Deal !D! damage. NL If in guardianmod:Defensive_Mode, affects ALL enemies. Otherwise, guardianmod:Brace 5."
+    "DESCRIPTION": "Deal !D! damage. NL If in guardianmod:Defensive_Mode, affects ALL enemies. Otherwise, guardianmod:Brace 8."
   },
   "Guardian:GemFire": {
     "NAME": "Gem Cannon",
@@ -251,7 +251,7 @@
   },
   "Guardian:ShieldSpikes": {
     "NAME": "Shield Spikes",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! temporary Thorns if in guardianmod:Defensive_Mode. Otherwise, guardianmod:Brace 5."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! temporary Thorns if in guardianmod:Defensive_Mode. Otherwise, guardianmod:Brace 8."
   },
   "Guardian:PrismaticBeam": {
     "NAME": "Prismatic Spray",
