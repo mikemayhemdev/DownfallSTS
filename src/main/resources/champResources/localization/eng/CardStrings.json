@@ -149,7 +149,7 @@
     "DESCRIPTION": "Gain !B! Block. NL If your Block is broken this turn, gain !B! Block next turn."
   },
   "champ:ShieldSlam": {
-    "NAME": "Precise Finisher",
+    "NAME": "Moment of Truth",
     "DESCRIPTION": "Retain.",
     "UPGRADE_DESCRIPTION": "Retain. NL Draw 1 card."
   },
