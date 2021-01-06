@@ -250,15 +250,17 @@ public class NeowBoss extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new NeowRezAction(this));
                 break;
             case 5:
-                AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.6F));
-                AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(minion.hb.cX, minion.hb.cY, this.hb.cX + EYE1_X, this.hb.cY + EYE1_Y, Color.GOLD), 0.25F));
-                //AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo) this.damage.get(0), AbstractGameAction.AttackEffect.FIRE, false, true));
-                //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 1), 1));
+                if (minion != null) {
+                    AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.6F));
+                    AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(minion.hb.cX, minion.hb.cY, this.hb.cX + EYE1_X, this.hb.cY + EYE1_Y, Color.GOLD), 0.25F));
+                    //AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo) this.damage.get(0), AbstractGameAction.AttackEffect.FIRE, false, true));
+                    //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 1), 1));
 
-                if (!minion.hasPower(EndOfTurnStrengthDex.POWER_ID)) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, minion, new StrengthPower(minion, 2), 2));
+                    if (!minion.hasPower(EndOfTurnStrengthDex.POWER_ID)) {
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, minion, new StrengthPower(minion, 2), 2));
+                    }
+                    AbstractDungeon.actionManager.addToBottom(new HealAction(minion, this, 10));
                 }
-                AbstractDungeon.actionManager.addToBottom(new HealAction(minion, this, 10));
                 break;
         }
 
@@ -312,15 +314,23 @@ public class NeowBoss extends AbstractMonster {
 
     protected void getMove(int num) {
 
-        if (turnNum == 0) {
-            this.setMove((byte) 5, Intent.BUFF);
-            // halfDead = true;
-            turnNum = 1;
-        }
-        else {
-            this.setMove((byte) 3, Intent.DEBUFF);
-            // halfDead = true;
-            turnNum = 0;
+        if (minion == null){
+            if (Rezzes >= 3) {
+                switchIntentToSelfRez();
+            } else {
+                switchToRez();
+            }
+        } else {
+            if (turnNum == 0) {
+                this.setMove((byte) 5, Intent.BUFF);
+                // halfDead = true;
+                turnNum = 1;
+            }
+            else {
+                this.setMove((byte) 3, Intent.DEBUFF);
+                // halfDead = true;
+                turnNum = 0;
+            }
         }
     }
 }

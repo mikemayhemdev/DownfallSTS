@@ -1055,15 +1055,16 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
 
         if (NeowBoss.neowboss != null) {
-
-            SlimeboundMod.logger.info("Archetype act num: " + chosenArchetype.actNum);
-            NeowBoss.neowboss.minion = null;
-            if (chosenArchetype.actNum == 3){
-                SlimeboundMod.logger.info("Boss instructing Neow to Self Rez");
-                NeowBoss.neowboss.switchIntentToSelfRez();
-            } else {
-                SlimeboundMod.logger.info("Boss instructing Neow to Rez");
-                NeowBoss.neowboss.switchToRez();
+            if (NeowBoss.neowboss.minion == this) {
+                SlimeboundMod.logger.info("Archetype act num: " + chosenArchetype.actNum);
+                NeowBoss.neowboss.minion = null;
+                if (chosenArchetype.actNum == 3) {
+                    SlimeboundMod.logger.info("Boss instructing Neow to Self Rez");
+                    NeowBoss.neowboss.switchIntentToSelfRez();
+                } else {
+                    SlimeboundMod.logger.info("Boss instructing Neow to Rez");
+                    NeowBoss.neowboss.switchToRez();
+                }
             }
         }
 

@@ -19,6 +19,7 @@ public class TripleStrike extends AbstractChampCard {
     public TripleStrike() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        exhaust = true;
         AbstractCard r = new Strike();
         r.updateCost(-999);
         CardModifierManager.addModifier(r, new TechniqueMod());
