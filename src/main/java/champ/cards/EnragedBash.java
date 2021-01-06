@@ -7,10 +7,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import javax.swing.colorchooser.DefaultColorSelectionModel;
-
-import java.util.Random;
-
 import static champ.ChampMod.fatigue;
 
 public class EnragedBash extends AbstractChampCard {
@@ -19,7 +15,7 @@ public class EnragedBash extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 5;
     private static final int MAGIC = 1;
 
     public EnragedBash() {
@@ -27,7 +23,7 @@ public class EnragedBash extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
        // baseCool = cool = 2;
-        myHpLossCost = 4;
+        myHpLossCost = 5;
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
     }
@@ -55,7 +51,7 @@ public class EnragedBash extends AbstractChampCard {
         if (bcombo())
             atb(new ModifyDamageAndMagicAction(uuid, 1));
 
-        fatigue(4);
+        fatigue(5);
     }
 
     @Override
@@ -64,8 +60,7 @@ public class EnragedBash extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
-            this.rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+        this.rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }
