@@ -132,12 +132,13 @@ public class CharBossIronclad extends AbstractCharBoss {
     @Override
     public void takeTurn() {
         super.takeTurn();
+        String[] DESCRIPTIONS = CardCrawlGame.languagePack.getEventString("champ:ChampTalk").DESCRIPTIONS;
         if (AbstractDungeon.player instanceof ChampChar && AbstractDungeon.actNum == 1) {
             if (!ChampMod.talked1 && !ChampMod.talked2) {
-                AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, CardCrawlGame.languagePack.getEventString("champ:ChampTalk").DESCRIPTIONS[0], 1.0F, 2.0F));
+                AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, DESCRIPTIONS[0], 1.0F, 2.0F));
                 ChampMod.talked1 = true;
             } else if (!ChampMod.talked2) {
-                AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, CardCrawlGame.languagePack.getEventString("champ:ChampTalk").DESCRIPTIONS[1], 1.0F, 2.0F));
+                AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, DESCRIPTIONS[1], 1.0F, 2.0F));
                 ChampMod.talked2 = true;
             }
         }
