@@ -1,8 +1,10 @@
 package champ.cards;
 
+import basemod.helpers.CardModifierManager;
 import champ.powers.UltimateFormPower;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
+import champ.util.TechniqueMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -20,6 +22,7 @@ public class UltimateStance extends AbstractChampCard {
     public UltimateStance() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        CardModifierManager.addModifier(this, new TechniqueMod());
     }
 
     @Override
