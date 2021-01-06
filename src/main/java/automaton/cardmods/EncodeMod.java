@@ -1,6 +1,7 @@
 package automaton.cardmods;
 
 import automaton.AutomatonMod;
+import automaton.AutomatonTextHelper;
 import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
@@ -13,14 +14,7 @@ public class EncodeMod extends BronzeCardMod {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        if (card.rawDescription.contains(" NL bronze:Compile")) {//TODO:Localize
-            String[] splitText = card.rawDescription.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));//TODO:Localize
-            String compileText = splitText[1] + splitText[2];
-            return splitText[0] + " NL bronze:Encode." + compileText; //TODO: Localize
-        } else if (card.rawDescription.contains("bronze:Compile")) { //TODO: Localize
-            return "bronze:Encode. NL " + card.rawDescription; // TODO: Localize
-        }
-        return rawDescription + " NL bronze:Encode."; //TODO: Localize
+        return AutomatonTextHelper.insertEncodeTextBeforeCompile(rawDescription);
     }
 
     @Override
