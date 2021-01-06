@@ -187,7 +187,6 @@ public class SaveData {
                 act1BossSlain = data.ACT_1_BOSS_SLAIN;
                 act2BossSlain = data.ACT_2_BOSS_SLAIN;
                 act3BossSlain = data.ACT_3_BOSS_SLAIN;
-
                 collectiontosave = data.SAVED_COLLECTION;
 
                 saveLogger.info("Loaded downfall save data successfully.");
