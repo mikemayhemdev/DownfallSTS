@@ -185,27 +185,31 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         }
 
         if (this.upgraded) cUnknown.upgrade();
-        if (cUnknown != null) {
-            p.hand.removeCard(this);
-            p.drawPile.removeCard(this);
-            UnknownExtraUiPatch.parentCard.set(cUnknown, this);
-            AbstractDungeon.player.drawPile.addToRandomSpot(cUnknown);
-        }
+
+        p.hand.removeCard(this);
+        p.drawPile.removeCard(this);
+        UnknownExtraUiPatch.parentCard.set(cUnknown, this);
+        AbstractDungeon.player.drawPile.addToRandomSpot(cUnknown);
+
     }
 
     public void replaceUnknownFromHand() {
         AbstractPlayer p = AbstractDungeon.player;
 
         AbstractCard cUnknown;
-        cUnknown = CardLibrary.cards.get(myList().get(AbstractDungeon.cardRng.random(0, myList().size() - 1))).makeStatEquivalentCopy();
+        if (myList().size() > 0) {
+            cUnknown = CardLibrary.cards.get(myList().get(AbstractDungeon.cardRng.random(0, myList().size() - 1))).makeStatEquivalentCopy();
+        } else {
+            cUnknown = new Madness();
+        }
 
         if (this.upgraded) cUnknown.upgrade();
-        if (cUnknown != null) {
-            p.limbo.removeCard(this);
-            p.hand.removeCard(this);
-            p.drawPile.removeCard(this);
-            UnknownExtraUiPatch.parentCard.set(cUnknown, this);
-            AbstractDungeon.player.hand.addToTop(cUnknown);
-        }
+
+        p.limbo.removeCard(this);
+        p.hand.removeCard(this);
+        p.drawPile.removeCard(this);
+        UnknownExtraUiPatch.parentCard.set(cUnknown, this);
+        AbstractDungeon.player.hand.addToTop(cUnknown);
     }
+    
 }

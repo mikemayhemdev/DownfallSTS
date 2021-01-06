@@ -33,6 +33,6 @@ public class VampiricStrike extends AbstractChampCard {
 
 
     public void upp() {
-        upgradeBaseCost(3);
+        upgradeDamage(3);
     }
 }
