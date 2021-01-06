@@ -177,7 +177,7 @@ public abstract class AbstractChampCard extends CustomCard {
         atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
     }
 
-    private void makeInHand(AbstractCard c, int i) {
+    public void makeInHand(AbstractCard c, int i) {
         atb(new MakeTempCardInHandAction(c, i));
     }
 

@@ -444,5 +444,10 @@
     "EXTENDED_DESCRIPTION": [
       "I am not in a Stance."
     ]
+  },
+  "champ:TripleStrike": {
+    "NAME": "Triple Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Add 2 *Strikes into your hand. They cost 0 and have champ:Technique. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add 2 Upgraded *Strikes into your hand. They cost 0 and have champ:Technique. NL Exhaust."
   }
 }
