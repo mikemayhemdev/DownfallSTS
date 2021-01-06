@@ -56,15 +56,15 @@ public class ChampTextHelper {
         }
     }
 
-    public static void colorCombos(AbstractChampCard card) {
+    public static void colorCombos(AbstractChampCard card, boolean resetColors) {
         if (card.rawDescription.contains("*Berserker champ:Combo:")) {
-            if (AbstractChampCard.bcombo()) {
-                String[] including_delim = card.rawDescription.split(String.format(WITH_DELIMITER, "*Berserker champ:Combo:"));
+            if (AbstractChampCard.bcombo() && !resetColors) {
+                String[] including_delim = card.rawDescription.split(String.format(WITH_DELIMITER, "\\*Berserker champ:Combo:"));
                 including_delim[1] = including_delim[1].replace("\\*", THIS_EFFECT_WILL_ACTIVATE_COLOR);
                 card.rawDescription = including_delim[0] + including_delim[1] + including_delim[2];
             }
-        } else if (card.rawDescription.contains(THIS_EFFECT_WILL_ACTIVATE_COLOR + "Berserker champ:Combo:")) {
-            if (!AbstractChampCard.bcombo()) {
+        } else if (card.rawDescription.contains(THIS_EFFECT_WILL_ACTIVATE_COLOR + "Berserker champ:Combo:") ) {
+            if (!AbstractChampCard.bcombo() || resetColors) {
                 String[] including_delim = card.rawDescription.split(String.format(WITH_DELIMITER, (THIS_EFFECT_WILL_ACTIVATE_COLOR + "Berserker champ:Combo:")));
                 including_delim[1] = including_delim[1].replace(THIS_EFFECT_WILL_ACTIVATE_COLOR, "\\*");
                 card.rawDescription = including_delim[0] + including_delim[1] + including_delim[2];
@@ -72,13 +72,13 @@ public class ChampTextHelper {
         }
 
         if (card.rawDescription.contains("*Defensive champ:Combo:")) {
-            if (AbstractChampCard.dcombo()) {
-                String[] including_delim = card.rawDescription.split(String.format(WITH_DELIMITER, "*Defensive champ:Combo:"));
+            if (AbstractChampCard.dcombo() && !resetColors) {
+                String[] including_delim = card.rawDescription.split(String.format(WITH_DELIMITER, "\\*Defensive champ:Combo:"));
                 including_delim[1] = including_delim[1].replace("\\*", THIS_EFFECT_WILL_ACTIVATE_COLOR);
                 card.rawDescription = including_delim[0] + including_delim[1] + including_delim[2];
             }
         } else if (card.rawDescription.contains(THIS_EFFECT_WILL_ACTIVATE_COLOR + "Berserker champ:Combo:")) {
-            if (!AbstractChampCard.dcombo()) {
+            if (!AbstractChampCard.dcombo() || resetColors) {
                 String[] including_delim = card.rawDescription.split(String.format(WITH_DELIMITER, (THIS_EFFECT_WILL_ACTIVATE_COLOR + "Defensive champ:Combo:")));
                 including_delim[1] = including_delim[1].replace(THIS_EFFECT_WILL_ACTIVATE_COLOR, "\\*");
                 card.rawDescription = including_delim[0] + including_delim[1] + including_delim[2];
