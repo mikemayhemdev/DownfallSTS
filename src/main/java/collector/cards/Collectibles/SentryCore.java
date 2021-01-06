@@ -9,7 +9,7 @@ public class SentryCore extends AbstractCollectibleCard {
 
     public SentryCore() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
-        baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 1;
         this.exhaust = true;
     }
 

@@ -9,9 +9,8 @@ public class JarWormTooth extends AbstractCollectibleCard {
 
     public JarWormTooth() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
-        baseDamage = 1;
-        baseBlock = 2;
-        baseMagicNumber = 1;
+        block = baseBlock = 2;
+        magicNumber = baseMagicNumber = 1;
         this.exhaust = true;
     }
 

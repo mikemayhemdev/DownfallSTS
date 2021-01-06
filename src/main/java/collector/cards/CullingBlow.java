@@ -15,7 +15,7 @@ public class CullingBlow extends AbstractCollectorCard {
     public CullingBlow() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 10;
-        baseMagicNumber = 13;
+        magicNumber = baseMagicNumber = 13;
         isMultiDamage = true;
     }
 

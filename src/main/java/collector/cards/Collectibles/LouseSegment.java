@@ -10,7 +10,7 @@ public class LouseSegment extends AbstractCollectibleCard {
     public LouseSegment() {
         super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         baseDamage = 1;
-        baseBlock = 8;
+        block = baseBlock = 8;
         baseMagicNumber = 1;
         this.retain = true;
     }

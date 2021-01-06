@@ -8,9 +8,7 @@ public class CurledHorns extends AbstractCollectibleCard {
 
     public CurledHorns() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
-        baseDamage = 1;
-        baseBlock = 4;
-        baseMagicNumber = 0;
+        block = baseBlock = 4;
         this.exhaust = true;
     }
 

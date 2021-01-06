@@ -11,9 +11,7 @@ public class DefectCore extends AbstractCollectibleCard {
 
     public DefectCore() {
         super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
-        baseDamage = 1;
-        baseBlock = 4;
-        baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 1;
     }
 
     @Override

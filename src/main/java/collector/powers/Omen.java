@@ -27,7 +27,7 @@ public class Omen extends AbstractPower implements CloneablePowerInterface {
         this.amount = amount;
         this.type = AbstractPower.PowerType.BUFF;
         this.isTurnBased = false;
-        this.loadRegion("constricted");
+        this.loadRegion("wraithForm");
 
         this.updateDescription();
     }

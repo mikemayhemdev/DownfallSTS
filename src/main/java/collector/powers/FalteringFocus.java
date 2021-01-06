@@ -22,7 +22,7 @@ public class FalteringFocus extends AbstractPower {
         this.owner = owner;
         this.amount = 0;
         this.description = DESCRIPTIONS[0];
-        this.loadRegion("closeUp");
+        this.loadRegion("mantra");
     }
 
     @Override

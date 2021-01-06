@@ -9,9 +9,8 @@ public class VialofOoze extends AbstractCollectibleCard {
 
     public VialofOoze() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY);
-        baseDamage = 1;
-        baseBlock = 2;
-        baseMagicNumber = 2;
+        block = baseBlock = 2;
+        magicNumber = baseMagicNumber = 2;
         this.exhaust = true;
     }
 

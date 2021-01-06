@@ -21,7 +21,7 @@ public class ChaoticFlux extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
         this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
-        this.loadRegion("closeUp");
+        this.loadRegion("loop");
     }
 
     @Override

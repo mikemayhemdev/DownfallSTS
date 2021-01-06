@@ -8,10 +8,7 @@ public class Bargain extends AbstractCollectorCard {
     public final static String ID = makeID("Bargain");
 
     public Bargain() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 10;
-        baseMagicNumber = 13;
-        isMultiDamage = true;
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     @Override

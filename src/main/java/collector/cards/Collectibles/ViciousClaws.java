@@ -9,9 +9,7 @@ public class ViciousClaws extends AbstractCollectibleCard {
 
     public ViciousClaws() {
         super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
-        baseDamage = 1;
-        baseBlock = 1;
-        baseMagicNumber = 0;
+       damage= baseDamage = 1;
         this.exhaust = true;
     }
 

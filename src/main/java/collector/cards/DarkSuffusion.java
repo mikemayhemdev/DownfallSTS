@@ -10,8 +10,7 @@ public class DarkSuffusion extends AbstractCollectorCard {
 
     public DarkSuffusion() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
-        baseBlock = 5;
-        baseMagicNumber = 3;
+        magicNumber = baseMagicNumber = 3;
     }
 
     @Override

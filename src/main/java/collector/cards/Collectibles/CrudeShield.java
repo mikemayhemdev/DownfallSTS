@@ -8,9 +8,7 @@ public class CrudeShield extends AbstractCollectibleCard {
 
     public CrudeShield() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
-        baseDamage = 1;
-        baseBlock = 1;
-        baseMagicNumber = 0;
+        block = baseBlock = 1;
         this.exhaust = true;
     }
 

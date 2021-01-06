@@ -11,9 +11,7 @@ public class StrangeFungus extends AbstractCollectibleCard {
 
     public StrangeFungus() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY);
-        baseDamage = 1;
-        baseBlock = 1;
-        baseMagicNumber = 1;
+        magicNumber =  baseMagicNumber = 1;
         this.exhaust = true;
     }
 

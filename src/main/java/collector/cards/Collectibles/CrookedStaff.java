@@ -8,9 +8,7 @@ public class CrookedStaff extends AbstractCollectibleCard {
 
     public CrookedStaff () {
         super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
-        baseDamage = 1;
-        baseBlock = 8;
-        baseMagicNumber = 3;
+        magicNumber = baseMagicNumber = 3;
     }
 
     @Override

@@ -23,7 +23,7 @@ public class MysticCharge extends TwoAmountPower {
         this.amount = power;
         this.amount2 = time;
         this.description = DESCRIPTIONS[0];
-        this.loadRegion("closeUp");
+        this.loadRegion("vigor");
         isTurnBased = true;
     }
 

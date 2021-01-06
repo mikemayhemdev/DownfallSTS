@@ -4,6 +4,7 @@ import collector.CollectorCollection;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.ArrayList;
@@ -12,7 +13,6 @@ public class Contemplate extends AbstractCollectorCard {
     public final static String ID = makeID("Contemplate");
     public Contemplate() {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
-        baseBlock = 5;
     }
 
     @Override
@@ -23,13 +23,16 @@ public class Contemplate extends AbstractCollectorCard {
             possCardsList.add(CollectorCollection.combatCollection.group.get(i));
         }
         atb(new SelectCardsAction(possCardsList, 1, "Choose.", (cards) -> {
-            CollectorCollection.combatCollection.moveToHand(cards.get(0));
+            if (upgraded){
+                cards.get(0).upgrade();
+            }
+            CollectorCollection.combatCollection.removeCard(cards.get(0));
+            AbstractDungeon.player.hand.addToTop(cards.get(0));
         }));
     }
 
     @Override
     public void upp() {
-        upgradeBlock(3);
         this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
         initializeDescription();
     }

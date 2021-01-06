@@ -11,10 +11,7 @@ public class GremlinPoker extends AbstractCollectibleCard {
 
     public GremlinPoker() {
         super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
-        baseDamage = 3;
-        baseBlock = 3;
-        baseMagicNumber = 0;
-
+        damage = baseDamage = 3;
     }
 
     @Override

@@ -13,9 +13,6 @@ public class SilentTrophy extends AbstractCollectibleCard {
     public static AbstractCard s;
     public SilentTrophy() {
         super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
-        baseDamage = 1;
-        baseBlock = 1;
-        baseMagicNumber = 0;
         this.exhaust = true;
         s = (new Shiv()).makeCopy();
         s.upgrade();

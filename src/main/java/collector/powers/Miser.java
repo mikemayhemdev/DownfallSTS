@@ -25,6 +25,7 @@ public class Miser extends AbstractPower {
         this.amount = amount;
         this.type = AbstractPower.PowerType.BUFF;
         isTurnBased = false;
+        this.loadRegion("retain");
         this.description = DESCRIPTIONS[0] + this.amount;
     }
 
@@ -39,7 +40,7 @@ public class Miser extends AbstractPower {
 
             while (var2.hasNext()) {
                 AbstractCard c = (AbstractCard) var2.next();
-                if (!c.isEthereal && !(c.cost > amount)) {
+                if (!c.isEthereal && (c.cost < amount)) {
                     c.retain = true;
                 }
             }

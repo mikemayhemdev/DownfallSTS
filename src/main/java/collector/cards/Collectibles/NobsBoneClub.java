@@ -9,9 +9,7 @@ public class NobsBoneClub extends AbstractCollectibleCard {
 
     public NobsBoneClub() {
         super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
-        baseDamage = 13;
-        baseBlock = 1;
-        baseMagicNumber = 0;
+        damage = baseDamage = 13;
         this.exhaust = true;
     }
 

@@ -10,8 +10,7 @@ public class Fever extends AbstractCollectorCard {
 
     public Fever() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
-        baseBlock = 5;
-        baseMagicNumber = 8;
+        magicNumber = baseMagicNumber = 8;
     }
 
     @Override

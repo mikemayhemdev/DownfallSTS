@@ -7,3 +7,5 @@ pom.xml
 .classpath
 
 .project
+pom.xml.example
+*.example

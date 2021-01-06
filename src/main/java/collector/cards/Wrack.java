@@ -17,8 +17,6 @@ public class Wrack extends AbstractCollectorCard {
 
     public Wrack() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
-        baseBlock = 5;
-        baseMagicNumber = 3;
     }
 
     @Override

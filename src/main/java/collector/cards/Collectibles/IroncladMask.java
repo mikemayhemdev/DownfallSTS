@@ -10,9 +10,7 @@ public class IroncladMask extends AbstractCollectibleCard {
 
     public IroncladMask() {
         super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
-        baseDamage = 10;
-        baseBlock = 1;
-        baseMagicNumber = 0;
+      damage = baseDamage = 10;
         this.exhaust = true;
     }
 

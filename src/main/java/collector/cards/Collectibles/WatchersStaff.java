@@ -16,9 +16,7 @@ public class WatchersStaff extends AbstractCollectibleCard {
 
     public WatchersStaff() {
         super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
-        baseDamage = 1;
-        baseBlock = 4;
-        baseMagicNumber = 1;
+       magicNumber = baseMagicNumber = 1;
         this.retain = true;
     }
 

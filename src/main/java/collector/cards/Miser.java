@@ -9,7 +9,7 @@ public class Miser extends AbstractCollectorCard {
     public Miser() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 5;
-        baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 1;
     }
 
     @Override

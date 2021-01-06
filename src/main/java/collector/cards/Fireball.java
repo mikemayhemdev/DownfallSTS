@@ -14,7 +14,7 @@ public class Fireball extends AbstractCollectorCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 10;
         isMultiDamage = true;
-        BaseCollectorSecondDamage = 16;
+        CollectorSecondDamage = BaseCollectorSecondDamage = 16;
 
     }
 

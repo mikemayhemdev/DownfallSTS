@@ -44,6 +44,7 @@ public class CollectorCollection {
         cardsList.put(GremlinTsundere.ID, new ViciousClaws());
         cardsList.put(CharBossWatcher.ID, new WatchersStaff());
         collection = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        combatCollection = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         collection.addToBottom(new LuckyWick());
         collection.addToBottom(new LuckyWick());
         collection.addToBottom(new LuckyWick());

@@ -36,7 +36,7 @@
   "collector:Miser": {
     "NAME": "Miser",
     "DESCRIPTIONS": [
-      "#Retain cards that cost less then #b"
+      "#yRetain cards that cost less then #b"
     ]
   }
 }

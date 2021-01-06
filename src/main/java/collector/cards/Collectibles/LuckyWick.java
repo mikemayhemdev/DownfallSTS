@@ -10,9 +10,9 @@ public class LuckyWick extends AbstractCollectibleCard {
 
     public LuckyWick() {
         super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
-        baseDamage = 1;
-        baseBlock = 1;
-        baseMagicNumber = 0;
+        damage = baseDamage = 1;
+       block = baseBlock = 1;
+        magicNumber = baseMagicNumber = 0;
         this.exhaust = true;
     }
 

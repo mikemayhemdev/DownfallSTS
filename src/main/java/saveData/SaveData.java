@@ -1,14 +1,15 @@
 package saveData;
 
+import collector.CollectorCollection;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.saveAndContinue.SaveAndContinue;
 import com.megacrit.cardcrawl.saveAndContinue.SaveFile;
 import downfall.downfallMod;
 import downfall.events.Cleric_Evil;
-import downfall.events.WomanInBlue_Evil;
 import downfall.monsters.FleeingMerchant;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
@@ -37,6 +38,7 @@ public class SaveData {
     public static final String ACT_1_BOSS_SLAIN = "ACT_1_BOSS_SLAIN";
     public static final String ACT_2_BOSS_SLAIN = "ACT_2_BOSS_SLAIN";
     public static final String ACT_3_BOSS_SLAIN = "ACT_3_BOSS_SLAIN";
+    public static final String SAVED_COLLECTION = "SAVED_COLLECTION";
 
     private static Logger saveLogger = LogManager.getLogger("downfallSaveData");
     //data is stored here in addition to the actual location
@@ -51,7 +53,7 @@ public class SaveData {
     private static boolean encounteredCleric;
 
     private static ArrayList<String> myVillains;
-
+    public static ArrayList<AbstractCard> collectiontosave = new ArrayList<>();
     private static int merchantHealth;
     private static int merchantStrength;
     private static int merchantSouls;
@@ -79,10 +81,9 @@ public class SaveData {
             consumedRed = AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player);
             consumedGreen = AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player);
             consumedBlue = AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player);
-
             killedCleric = Cleric_Evil.heDead;
             encounteredCleric = Cleric_Evil.encountered;
-
+            collectiontosave = CollectorCollection.collection.group;
             myVillains = downfallMod.possEncounterList;
 
             merchantHealth = FleeingMerchant.CURRENT_HP;
@@ -132,6 +133,7 @@ public class SaveData {
             params.put(ACT_1_BOSS_SLAIN, act1BossSlain);
             params.put(ACT_2_BOSS_SLAIN, act2BossSlain);
             params.put(ACT_3_BOSS_SLAIN, act3BossSlain);
+            params.put(SAVED_COLLECTION, collectiontosave);
         }
 
         private static class Locator extends SpireInsertLocator {
@@ -180,6 +182,8 @@ public class SaveData {
                 act1BossSlain = data.ACT_1_BOSS_SLAIN;
                 act2BossSlain = data.ACT_2_BOSS_SLAIN;
                 act3BossSlain = data.ACT_3_BOSS_SLAIN;
+
+                collectiontosave = data.SAVED_COLLECTION;
 
                 saveLogger.info("Loaded downfall save data successfully.");
             } catch (Exception e) {
@@ -236,6 +240,8 @@ public class SaveData {
             downfallMod.Act1BossFaced = act1BossSlain;
             downfallMod.Act2BossFaced = act2BossSlain;
             downfallMod.Act3BossFaced = act3BossSlain;
+
+            CollectorCollection.collection.group = collectiontosave;
 
             saveLogger.info("Save loaded.");
             //Anything that triggers on load goes here

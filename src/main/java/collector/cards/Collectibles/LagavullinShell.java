@@ -9,7 +9,7 @@ public class LagavullinShell extends AbstractCollectibleCard {
     public LagavullinShell() {
         super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         baseDamage = 1;
-        baseBlock = 10;
+        block = baseBlock = 10;
         baseMagicNumber = 0;
         this.exhaust = true;
     }
