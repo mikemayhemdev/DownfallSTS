@@ -30,10 +30,12 @@ public class Virus extends AbstractBronzeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, LIGHTNING);
         for (AbstractCard c:AbstractDungeon.player.hand.group){
-            atb(new ExhaustSpecificCardAction(c,AbstractDungeon.player.hand));
-            AbstractCard c2 = new MinorBeam();
-            if (upgraded)c2.upgrade();
-            atb(new MakeTempCardInHandAction(c2));
+            if (c != this) {
+                atb(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
+                AbstractCard c2 = new MinorBeam();
+                if (upgraded) c2.upgrade();
+                atb(new MakeTempCardInHandAction(c2));
+            }
         }
     }
 
