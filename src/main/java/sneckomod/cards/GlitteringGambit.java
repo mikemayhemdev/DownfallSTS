@@ -13,7 +13,7 @@ public class GlitteringGambit extends AbstractSneckoCard {
     //stupid intellij stuff SKILL, SELF, RARE
 
     private static final int MAGIC = -10;
-    private static final int UPG_MAGIC = 5;
+    private static final int UPG_MAGIC = 10;
 
     public GlitteringGambit() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
