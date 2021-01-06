@@ -224,7 +224,7 @@
   },
   "champ:CrookedStrike": {
     "NAME": "Crooked Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Enemy loses 1 Strength this turn for every 5 champ:Fatigue you have."
+    "DESCRIPTION": "Deal !D! damage. NL Hits three times if *Fatigue is 30 or higher."
   },
     "champ:RapidStrikes": {
     "NAME": "Rapid Strikes",

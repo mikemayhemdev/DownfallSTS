@@ -44,7 +44,7 @@
       " NL [fist_icon] : Gain ",
       " NL [fist_icon] : Clear champ:Fatigue.",
       " NL [fist_icon] : All Bonuses.",
-      "You have #b1 #yStrength for every #b5 Fatigue. At the end of combat, heal HP equal to your Fatigue.",
+      "You have #b1 #yStrength for every #b10 Fatigue. At the end of combat, heal HP equal to your Fatigue.",
       "Technique",
       "If you are in a #yStance, trigger its Technique bonus.",
       "Finisher",
