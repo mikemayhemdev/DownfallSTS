@@ -290,12 +290,8 @@
   },
   "bronze:Virus": {
     "NAME": "Virus",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - bronze:Insert !M! copies of this card.",
-    "EXTENDED_DESCRIPTION": [
-      "viral",
-      "Virus",
-      "bronze:Insert !M! copies of Virus."
-    ]
+    "DESCRIPTION": "Deal !D! damage. NL Transform all cards in hand into *Minor *Beam. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Transform all cards in hand into *Minor *Beam+. NL Exhaust."
   },
   "bronze:Backtrace": {
     "NAME": "Backtrace",
