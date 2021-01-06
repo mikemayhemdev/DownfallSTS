@@ -22,6 +22,9 @@ import slimebound.characters.SlimeboundCharacter;
 import slimebound.potions.ThreeZeroPotion;
 import slimebound.relics.PreparedRelic;
 import slimebound.relics.StickyStick;
+import sneckomod.SneckoMod;
+import sneckomod.TheSnecko;
+import sneckomod.cards.unknowns.UnknownClass;
 import sneckomod.potions.MuddlingPotion;
 import sneckomod.relics.BlankCard;
 import sneckomod.relics.SneckoTalon;
@@ -107,6 +110,12 @@ public class BanSharedContentPatch {
                     AbstractDungeon.colorlessCardPool.removeCard(HyperBeam.ID);
                 }
             }
+
+            if (AbstractDungeon.player instanceof TheSnecko) {
+                if (SneckoMod.validColors != null && !SneckoMod.pureSneckoMode) {
+                    AbstractDungeon.commonCardPool.group.removeIf(c -> c instanceof UnknownClass && !SneckoMod.validColors.contains(((UnknownClass) c).myColor));
+                }
+            }
         }
     }
 
@@ -134,30 +143,24 @@ public class BanSharedContentPatch {
             }
             if (EvilModeCharacterSelect.evilMode) {
                 AbstractDungeon.relicsToRemoveOnStart.add(Ectoplasm.ID);
-            }
-            else {
+            } else {
                 AbstractDungeon.relicsToRemoveOnStart.add(Hecktoplasm.ID);
             }
         }
     }
-
-
 
     @SpirePatch(
             clz = PotionHelper.class,
             method = "initialize"
     )
     public static class PotionPatch {
-
         public static void Postfix(AbstractPlayer.PlayerClass chosenClass) {
-
             if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_potions) {
                 PotionHelper.potions.remove(SoulburnPotion.POTION_ID);
                 PotionHelper.potions.remove(MuddlingPotion.POTION_ID);
                 PotionHelper.potions.remove(ThreeZeroPotion.POTION_ID);
                 PotionHelper.potions.remove(BlockOnCardUsePotion.POTION_ID);
             }
-
         }
     }
 }

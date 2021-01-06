@@ -15,6 +15,7 @@ import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.colorless.Madness;
@@ -455,6 +456,9 @@ public class SneckoMod implements
     }
 
     public static void resetUnknownsLists() {
+        for (int i = 0; i < 10; i++) {
+            System.out.println("CLEARING UNKNOWN LISTS!!!");
+        }
         validColors.clear();
         for (AbstractPlayer p : CardCrawlGame.characterManager.getAllCharacters()) {
             validColors.add(p.getCardColor());
