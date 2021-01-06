@@ -149,8 +149,9 @@
     "DESCRIPTION": "Gain !B! Block. NL If your Block is broken this turn, gain !B! Block next turn."
   },
   "champ:ShieldSlam": {
-    "NAME": "Shield Slam",
-    "DESCRIPTION": "Can only be played if you have at least 20 Block. NL Deal !D! damage."
+    "NAME": "Precise Finisher",
+    "DESCRIPTION": "Retain.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Draw 1 card."
   },
   "champ:EnchantShield": {
     "NAME": "Enchant Shield",
