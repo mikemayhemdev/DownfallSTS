@@ -15,7 +15,7 @@ public class downfallSaveData {
     public boolean KILLED_CLERIC = false;
     public boolean ENCOUNTERED_CLERIC = false;
 
-    public ArrayList<AbstractCard> SAVED_COLLECTION = new ArrayList<>();
+    public ArrayList<CardSave> SAVED_COLLECTION = new ArrayList<>();
 
     public ArrayList<String> UPCOMING_BOSSES = new ArrayList<>();
 
