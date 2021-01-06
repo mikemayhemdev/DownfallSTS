@@ -4,6 +4,7 @@ import basemod.abstracts.CustomCard;
 import basemod.helpers.TooltipInfo;
 import champ.ChampChar;
 import champ.ChampMod;
+import champ.ChampTextHelper;
 import champ.powers.CalledShotPower;
 import champ.relics.SignatureFinisher;
 import champ.stances.AbstractChampStance;
@@ -46,9 +47,9 @@ public abstract class AbstractChampCard extends CustomCard {
     public boolean upgradedCool;
     public boolean isCoolModified;
     public int myHpLossCost;
-    protected String DESCRIPTION;
-    protected String UPGRADE_DESCRIPTION;
-    protected String[] EXTENDED_DESCRIPTION;
+    public String DESCRIPTION;
+    public String UPGRADE_DESCRIPTION;
+    public String[] EXTENDED_DESCRIPTION;
     private boolean reInitDescription = true;
 
 
@@ -299,46 +300,8 @@ public abstract class AbstractChampCard extends CustomCard {
 
     @Override
     public void initializeDescription() {
-        String prefixTech = "";
-        String prefixFin = "";
-        if (this.hasTag(TECHNIQUE)) {
-            prefixTech = ChampChar.characterStrings.TEXT[29];
-            if (AbstractDungeon.player != null) {
-                if (AbstractDungeon.player.stance instanceof DefensiveStance) {
-                    prefixTech = ChampChar.characterStrings.TEXT[31];
-                    prefixTech = prefixTech + DefensiveStance.amount();
-                    prefixTech = prefixTech + ChampChar.characterStrings.TEXT[53];
-                } else if (AbstractDungeon.player.stance instanceof BerserkerStance) {
-                    prefixTech = ChampChar.characterStrings.TEXT[32];
-                    prefixTech = prefixTech + BerserkerStance.amount();
-                    prefixTech = prefixTech + ChampChar.characterStrings.TEXT[52];
-                } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
-                    prefixTech = ChampChar.characterStrings.TEXT[33];
-                }
-            }
-            if (upgraded && this.UPGRADE_DESCRIPTION != null) {
-                this.rawDescription = prefixTech + UPGRADE_DESCRIPTION;
-            } else {
-                this.rawDescription = prefixTech + DESCRIPTION;
-            }
-        }
-        if (this.hasTag(FINISHER)) {
-            prefixFin = ChampChar.characterStrings.TEXT[34];
-            if (AbstractDungeon.player != null) {
-                if (AbstractDungeon.player.stance instanceof DefensiveStance) {
-                    prefixFin = ChampChar.characterStrings.TEXT[36] + DefensiveStance.finisherAmount() + ChampChar.characterStrings.TEXT[57];
-                } else if (AbstractDungeon.player.stance instanceof BerserkerStance) {
-                    prefixFin = ChampChar.characterStrings.TEXT[37];
-                } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
-                    prefixFin = ChampChar.characterStrings.TEXT[38];
-                }
-            }
-            if (upgraded && this.UPGRADE_DESCRIPTION != null) {
-                this.rawDescription = prefixTech + UPGRADE_DESCRIPTION + prefixFin;
-            } else {
-                this.rawDescription = prefixTech + DESCRIPTION + prefixFin;
-            }
-        }
+        ChampTextHelper.calculateTagText(this);
+        ChampTextHelper.colorCombos(this);
         super.initializeDescription();
     }
 

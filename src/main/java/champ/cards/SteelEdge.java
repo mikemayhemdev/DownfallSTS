@@ -32,23 +32,6 @@ public class SteelEdge extends AbstractChampCard {
         return super.canUse(p, m);
     }
 
-    @Override
-    public void applyPowers() {
-        rawDescription = "";
-        if (bcombo()) rawDescription += "[#5ebf2a]";
-        else rawDescription += "*";
-        rawDescription += EXTENDED_DESCRIPTION[0];
-        if (dcombo()) rawDescription += "[#5ebf2a]";
-        else rawDescription += "*";
-        rawDescription += EXTENDED_DESCRIPTION[1];
-        initializeDescription();
-    }
-
-    @Override
-    public void onMoveToDiscard() {
-        rawDescription = DESCRIPTION;
-        initializeDescription();
-    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new EasyXCostAction(this, (effect, params) -> {
