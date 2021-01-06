@@ -54,7 +54,11 @@ public class ModeShiftPower extends AbstractGuardianPower {
         if (this.amount <= 0) {
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, BLOCKONTRIGGER));
             AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveMode.STANCE_ID));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DontLeaveDefensiveModePower(AbstractDungeon.player, 2), 2));
+
+            int turns;
+            if (AbstractDungeon.actionManager.turnHasEnded) turns = 2;
+            else turns = 1;
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DontLeaveDefensiveModePower(AbstractDungeon.player, turns), turns));
             this.activations++;
             this.amount += STARTINGAMOUNT + (AMOUNTGAINPERACTIVATION * activations);
             updateDescription();

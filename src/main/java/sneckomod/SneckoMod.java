@@ -312,7 +312,7 @@ public class SneckoMod implements
     public void receiveSetUnlocks() {
 
         downfallMod.registerUnlockSuite(
-                Cheat.ID,
+                Memorize.ID,
                 PureSnecko.ID,
                 Rotation.ID,
 
@@ -522,7 +522,7 @@ public class SneckoMod implements
 
     public static void addToLists(AbstractUnknownCard c, ArrayList<Predicate<AbstractCard>> predList, ArrayList<ArrayList<String>> listList) {
         predList.add(c.myNeeds());
-        if (c.myList() != null && predList.indexOf(c.myNeeds()) < 22) {
+        if (c.myList() != null) {
             c.myList().clear();
             listList.add(c.myList());
         }
@@ -565,5 +565,30 @@ public class SneckoMod implements
         }
 
         AbstractUnknownCard.updateReplacements(predList, listList);
+    }
+
+    public static void importantStuff() {
+        if (!SneckoMod.openedStarterScreen) {
+            if (CardCrawlGame.isInARun() && downfallMod.readyToDoThing) {
+                SneckoMod.findAWayToTriggerThisAtGameStart();
+                SneckoMod.openedStarterScreen = true;
+            }
+        }
+        if (SneckoMod.choosingCharacters > -1 && SneckoMod.choosingCharacters <= 2 && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            SneckoMod.colorChoices.removeCard(c);
+            SneckoMod.validColors.add(c.color);
+            AbstractDungeon.gridSelectScreen.selectedCards.clear();
+            if (SneckoMod.choosingCharacters == 2) {
+                SneckoMod.choosingCharacters = 3;
+                CenterGridCardSelectScreen.centerGridSelect = false;
+                SneckoMod.updateAllUnknownReplacements();
+                AbstractDungeon.commonCardPool.group.removeIf(ii -> ii instanceof UnknownClass && !SneckoMod.validColors.contains(ii.color));
+                AbstractDungeon.srcCommonCardPool.group.removeIf(ii -> ii instanceof UnknownClass && !SneckoMod.validColors.contains(ii.color));
+            } else if (SneckoMod.choosingCharacters < 2) {
+                SneckoMod.choosingCharacters += 1;
+                SneckoMod.dualClassChoice();
+            }
+        }
     }
 }

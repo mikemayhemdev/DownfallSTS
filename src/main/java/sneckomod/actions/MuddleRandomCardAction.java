@@ -50,14 +50,16 @@ public class MuddleRandomCardAction extends AbstractGameAction {
                             highestCostCards.add(r);
                         }
                     }
-                    card = highestCostCards.get(AbstractDungeon.cardRandomRng.random(highestCostCards.size() - 1));
-                    myCardList.remove(card);
+                    if (!highestCostCards.isEmpty()) {
+                        card = highestCostCards.get(AbstractDungeon.cardRandomRng.random(highestCostCards.size() - 1));
+                        myCardList.remove(card);
+                    }
                 } else {
                     card = myCardList.remove(AbstractDungeon.cardRandomRng.random(myCardList.size() - 1));
-
                 }
 
-                addToTop(new MuddleAction(card, modifiedCost));
+                if (card != null)
+                    addToTop(new MuddleAction(card, modifiedCost));
             }
         }
     }

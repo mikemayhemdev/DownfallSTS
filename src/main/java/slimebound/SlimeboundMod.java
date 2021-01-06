@@ -116,6 +116,8 @@ public class SlimeboundMod implements OnCardUseSubscriber,
     public static boolean disabledStrikeVFX = false;
     public static SpawnedSlime mostRecentSlime;
     public static boolean foughtSlimeBoss;
+    public static Color placeholderColor = new Color(64F / 255F, 200F / 255F, 64F / 255F, 1);
+
 
     @SpireEnum
     public static AbstractCard.CardTags LICK;

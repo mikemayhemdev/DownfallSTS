@@ -79,8 +79,6 @@ import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.custom.CustomMod;
-import com.megacrit.cardcrawl.screens.runHistory.RunHistoryPath;
-import com.megacrit.cardcrawl.screens.runHistory.RunHistoryScreen;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
@@ -98,6 +96,7 @@ import downfall.events.shrines_evil.TransmogrifierEvil;
 import downfall.events.shrines_evil.UpgradeShrineEvil;
 import downfall.monsters.*;
 import downfall.patches.DailyModeEvilPatch;
+import downfall.patches.EndingDoubleFightPatch;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.patches.ui.topPanel.GoldToSoulPatches;
@@ -1075,27 +1074,7 @@ public class downfallMod implements
         }
 
         //Snecko mod run start choosing stuff
-        if (!SneckoMod.openedStarterScreen) {
-            if (CardCrawlGame.isInARun() && downfallMod.readyToDoThing) {
-                SneckoMod.findAWayToTriggerThisAtGameStart();
-                SneckoMod.openedStarterScreen = true;
-            }
-        }
-        if (SneckoMod.choosingCharacters > -1 && SneckoMod.choosingCharacters <= 2 && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-            SneckoMod.colorChoices.removeCard(c);
-            SneckoMod.validColors.add(c.color);
-            AbstractDungeon.gridSelectScreen.selectedCards.clear();
-            if (SneckoMod.choosingCharacters == 2) {
-                SneckoMod.choosingCharacters = 3;
-                CenterGridCardSelectScreen.centerGridSelect = false;
-                AbstractDungeon.commonCardPool.group.removeIf(ii -> ii instanceof UnknownClass && !SneckoMod.validColors.contains(ii.color));
-                SneckoMod.updateAllUnknownReplacements();
-            } else if (SneckoMod.choosingCharacters < 2) {
-                SneckoMod.choosingCharacters += 1;
-                SneckoMod.dualClassChoice();
-            }
-        }
+        SneckoMod.importantStuff();
     }
 
     private void resetBossList() {
@@ -1120,6 +1099,7 @@ public class downfallMod implements
             AddBustKeyButtonPatches.KeyFields.bustedEmerald.set(AbstractDungeon.player, false);
             AddBustKeyButtonPatches.KeyFields.bustedRuby.set(AbstractDungeon.player, false);
             AddBustKeyButtonPatches.KeyFields.bustedSapphire.set(AbstractDungeon.player, false);
+            EndingDoubleFightPatch.inTrueFight = false;
         }
     }
 

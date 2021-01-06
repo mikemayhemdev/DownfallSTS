@@ -278,7 +278,7 @@
   },
   "bronze:Fortify": {
     "NAME": "Fortify",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL bronze:Compile - Gain !M! Dexterity.",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Gain !M! Dexterity.",
     "EXTENDED_DESCRIPTION": [
       "solid",
       "Fortress"
@@ -480,8 +480,8 @@
   },
   "bronze:Verify": {
     "NAME": "Sentient Form",
-    "DESCRIPTION": "After you play or bronze:Compile a Function, increase all numbers on it by 1.",
-    "UPGRADE_DESCRIPTION": "Innate. NL After you play or bronze:Compile a Function, increase all numbers on it by 1."
+    "DESCRIPTION": "Whenever you bronze:Encode a card, increase all numbers on it by 1.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you bronze:Encode a card, increase all numbers on it by 1."
   },
   "bronze:BronzeHeatsink": {
     "NAME": "Bronze Heatsink",
@@ -490,7 +490,7 @@
   },
   "bronze:HardenedForm": {
     "NAME": "Summon Orb",
-    "DESCRIPTION": "Whenever you bronze:Compile, gain !M! Block and deal !M! damage to a random enemy."
+    "DESCRIPTION": "Whenever you create a Function, gain !M! Block and deal !M! damage to a random enemy."
   },
   "bronze:CopyPaste": {
     "NAME": "Copy Paste",
@@ -517,7 +517,7 @@
   },
   "bronze:Hardcode": {
     "NAME": "Hardcode",
-    "DESCRIPTION": "Fleeting. NL The next Function you bronze:Compile goes into your deck permanently instead of your hand."
+    "DESCRIPTION": "Fleeting. NL The next Function you create goes into your deck permanently instead of your hand."
   },
   "bronze:SpaghettiCode": {
     "NAME": "Spaghetti Code",
@@ -535,7 +535,7 @@
   },
   "bronze:CleanCode": {
     "NAME": "Clean Code",
-    "DESCRIPTION": "Remove all negative bronze:Compile effects from cards in the Sequence. NL Lasts for the next !M! *Compiles."
+    "DESCRIPTION": "Remove all negative bronze:Compile effects from cards in the Sequence. NL Lasts for the next !M! Functions created."
   },
   "bronze:BranchBlock": {
     "NAME": "Branch: Block",
@@ -616,7 +616,7 @@
   },
   "bronze:ThunderWave": {
     "NAME": "Thunder Wave",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for each Function bronze:Compiled this combat.",
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each Function created this combat.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " times.)"

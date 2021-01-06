@@ -1,7 +1,9 @@
 package champ.patches;
 
 import champ.ChampMod;
-import champ.cards.*;
+import champ.cards.AbstractChampCard;
+import champ.cards.StanceDance;
+import champ.cards.Taunt;
 import champ.stances.BerserkerStance;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -32,8 +34,8 @@ public class CardExtraUiPatch {
     public static class SecondEnergyRenderPatch {
         @SpirePostfixPatch
         public static void patch(AbstractCard __instance, SpriteBatch sb) {
-            if (__instance instanceof AbstractChampCard) {
-                if (CardCrawlGame.isInARun()) {
+            if (CardCrawlGame.isInARun()) {
+                if (__instance instanceof AbstractChampCard) {
                     if (((AbstractChampCard) __instance).myHpLossCost > 0) { // Berserker draw stuff.
                         FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
                         renderHelper(sb, healthBlob, __instance.current_x, __instance.current_y, __instance);
@@ -47,29 +49,27 @@ public class CardExtraUiPatch {
                         int x = BerserkerStance.amount();
                         FontHelper.renderRotatedText(sb, FontHelper.cardEnergyFont_L, String.valueOf(x), __instance.current_x, __instance.current_y, -133.0F * __instance.drawScale * Settings.scale, 133 * __instance.drawScale * Settings.scale, __instance.angle, false, Color.WHITE.cpy());
                     }
-                    //Opener / Technique / Finisher draws
-                    if (__instance.hasTag(ChampMod.OPENER)) {
-                        if (__instance instanceof StanceDance || __instance instanceof Taunt){
-                            renderHelper(sb, openerall, __instance.current_x, __instance.current_y, __instance);
-                        }
-                        else if (__instance.hasTag(ChampMod.OPENERBERSERKER)){
-                            renderHelper(sb, openerR, __instance.current_x, __instance.current_y, __instance);
-                        }
-                        else {
-                            renderHelper(sb, openerB, __instance.current_x, __instance.current_y, __instance);
-                        }
-
-                        FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
-                    }
-                    if (__instance.hasTag(ChampMod.TECHNIQUE)) {
-                        FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
-                        renderHelper(sb, crown, __instance.current_x, __instance.current_y, __instance);
-                    }
-                    if (__instance.hasTag(ChampMod.FINISHER)) {
-                        FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
-                        renderHelper(sb, finisher, __instance.current_x, __instance.current_y, __instance);
-                    }
                 }
+            }
+            //Opener / Technique / Finisher draws
+            if (__instance.hasTag(ChampMod.OPENER)) {
+                if (__instance instanceof StanceDance || __instance instanceof Taunt) {
+                    renderHelper(sb, openerall, __instance.current_x, __instance.current_y, __instance);
+                } else if (__instance.hasTag(ChampMod.OPENERBERSERKER)) {
+                    renderHelper(sb, openerR, __instance.current_x, __instance.current_y, __instance);
+                } else {
+                    renderHelper(sb, openerB, __instance.current_x, __instance.current_y, __instance);
+                }
+
+                FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
+            }
+            if (__instance.hasTag(ChampMod.TECHNIQUE)) {
+                FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
+                renderHelper(sb, crown, __instance.current_x, __instance.current_y, __instance);
+            }
+            if (__instance.hasTag(ChampMod.FINISHER)) {
+                FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
+                renderHelper(sb, finisher, __instance.current_x, __instance.current_y, __instance);
             }
         }
 

@@ -57,7 +57,6 @@ public class RainOfDice extends AbstractSneckoCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new NoApplyRandomDamageAction(AbstractDungeon.getMonsters().getRandomMonster(true), silly, damage, getRandomNum(2, magicNumber, this), AbstractGameAction.AttackEffect.BLUNT_LIGHT, this));
-        applyToSelf(new MuddleDrawnCardsPower(getRandomNum(2, magicNumber, this)));
     }
 
     public void upgrade() {
