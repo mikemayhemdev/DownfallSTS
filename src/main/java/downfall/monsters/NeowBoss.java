@@ -103,7 +103,6 @@ public class NeowBoss extends AbstractMonster {
         this.baseDrawX = drawX;
 
 
-
         if (AbstractDungeon.ascensionLevel >= 9) {
             setHp(650);
         } else {
@@ -172,7 +171,7 @@ public class NeowBoss extends AbstractMonster {
         }
     }
 
-    public void curses(){
+    public void curses() {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new HeartMegaDebuffEffect()));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(downfallMod.getRandomDownfallCurse().makeStatEquivalentCopy(), 1, true, false, false, (float) Settings.WIDTH * 0.2F, (float) Settings.HEIGHT / 2.0F));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(downfallMod.getRandomDownfallCurse().makeStatEquivalentCopy(), 1, true, false, false, (float) Settings.WIDTH * 0.35F, (float) Settings.HEIGHT / 2.0F));
@@ -196,34 +195,34 @@ public class NeowBoss extends AbstractMonster {
         AbstractDungeon.getCurrRoom().playBgmInstantly("BOSS_ENDING");
 
 
-           // AbstractDungeon.getCurrRoom().cannotLose = true;
-            playSfx();
-            for (int i = 0; i < 5; i++) {
-                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-            }
-
-            curses();
-
-            for (int i = 0; i < 10; i++) {
-                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-            }
-            AbstractDungeon.actionManager.addToBottom(new NeowRezAction(NeowBoss.neowboss));
-            AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-                @Override
-                public void update() { // Clears and resets Function Helper -- this part being bound to Action Queue makes some weird stuff.
-                    minion.endTurnStartTurn();
-                    isDone = true;
-                }
-            });
-            AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    currentHealth = 0;
-                    halfDead = true;
-                }
-            });
+        // AbstractDungeon.getCurrRoom().cannotLose = true;
+        playSfx();
+        for (int i = 0; i < 5; i++) {
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
         }
+
+        curses();
+
+        for (int i = 0; i < 10; i++) {
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+        }
+        AbstractDungeon.actionManager.addToBottom(new NeowRezAction(NeowBoss.neowboss));
+        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+            @Override
+            public void update() { // Clears and resets Function Helper -- this part being bound to Action Queue makes some weird stuff.
+                minion.endTurnStartTurn();
+                isDone = true;
+            }
+        });
+        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                currentHealth = 0;
+                halfDead = true;
+            }
+        });
+    }
 
 
     @Override
@@ -235,15 +234,19 @@ public class NeowBoss extends AbstractMonster {
 
     public void takeTurn() {
         switch (this.nextMove) {
-            case 3:
+            case 3: {
+                if (minion != null) {
+                    AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.6F));
+                    AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this.hb.cX + EYE1_X, this.hb.cY + EYE1_Y, Color.RED), 0.25F));
 
-                AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.6F));
-                AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this.hb.cX + EYE1_X, this.hb.cY + EYE1_Y, Color.RED), 0.25F));
-
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new VulnerablePower(AbstractDungeon.player, 1, true), 1));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 1, true), 1));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new FrailPower(AbstractDungeon.player, 1, true), 1));
-                break;
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new VulnerablePower(AbstractDungeon.player, 1, true), 1));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 1, true), 1));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new FrailPower(AbstractDungeon.player, 1, true), 1));
+                } else {
+                    escape();
+                }
+            }
+            break;
             case 4:
                 playSfx();
                 //if(this.hasPower(NeowInvulnerablePower.POWER_ID))  this.halfDead = true;
@@ -260,6 +263,8 @@ public class NeowBoss extends AbstractMonster {
                         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, minion, new StrengthPower(minion, 2), 2));
                     }
                     AbstractDungeon.actionManager.addToBottom(new HealAction(minion, this, 10));
+                } else {
+                    escape();
                 }
                 break;
         }
@@ -314,7 +319,7 @@ public class NeowBoss extends AbstractMonster {
 
     protected void getMove(int num) {
 
-        if (minion == null){
+        if (minion == null) {
             if (Rezzes >= 3) {
                 switchIntentToSelfRez();
             } else {
@@ -325,8 +330,7 @@ public class NeowBoss extends AbstractMonster {
                 this.setMove((byte) 5, Intent.BUFF);
                 // halfDead = true;
                 turnNum = 1;
-            }
-            else {
+            } else {
                 this.setMove((byte) 3, Intent.DEBUFF);
                 // halfDead = true;
                 turnNum = 0;
