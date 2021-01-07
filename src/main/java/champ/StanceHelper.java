@@ -2,7 +2,10 @@ package champ;
 
 import basemod.BaseMod;
 import champ.patches.SymbolDescriptionPatch;
-import champ.stances.*;
+import champ.stances.AbstractChampStance;
+import champ.stances.BerserkerStance;
+import champ.stances.DefensiveStance;
+import champ.stances.UltimateStance;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Vector2;
@@ -12,6 +15,7 @@ import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import downfall.downfallMod;
 
 public class StanceHelper {
 
@@ -85,85 +89,87 @@ public class StanceHelper {
     }
 
     public static void render(SpriteBatch sb) {
-        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT)
-            if (hitboxStance != null) {
-                if (getStanceName() != null) {
-                    TipHelperChamp1.renderGenericTip(dx1.x, dx1.y,
-                            ChampChar.characterStrings.TEXT[23],
-                            getStanceName());
+        if (!downfallMod.champDisableStanceHelper) {
+            if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT)
+                if (hitboxStance != null) {
+                    if (getStanceName() != null) {
+                        TipHelperChamp1.renderGenericTip(dx1.x, dx1.y,
+                                ChampChar.characterStrings.TEXT[23],
+                                getStanceName());
 
-                    TipHelperChamp1.render(sb);
-                    if (hitboxStance.hovered && AbstractDungeon.player.stance instanceof AbstractChampStance) {
-                        if ((float) InputHelper.mX < 1400.0F * Settings.scale) {
-                            TipHelper.renderGenericTip(
-                                    (float) InputHelper.mX + 60.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
-                                    BaseMod.getKeywordTitle(((AbstractChampStance) AbstractDungeon.player.stance).getKeywordString()),
-                                    BaseMod.getKeywordDescription(((AbstractChampStance) AbstractDungeon.player.stance).getKeywordString()));
-                        } else {
-                            TipHelper.renderGenericTip((float) InputHelper.mX - 350.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
-                                    BaseMod.getKeywordTitle(((AbstractChampStance) AbstractDungeon.player.stance).getKeywordString()),
-                                    BaseMod.getKeywordDescription(((AbstractChampStance) AbstractDungeon.player.stance).getKeywordString()));
-                        }
-                    }
-
-                    TipHelperChamp2.renderGenericTip(dx2.x, dx2.y,
-                            ChampChar.characterStrings.TEXT[8],
-                            getStanceTechnique());
-
-                    TipHelperChamp2.render(sb);
-                    if (hitboxTechnique.hovered && AbstractDungeon.player.stance instanceof AbstractChampStance) {
-                        String t = "ERROR";
-                        String d = "ERROR2";
-                        if (AbstractDungeon.player.stance instanceof DefensiveStance) {
-                            t = BaseMod.getKeywordTitle("champ:counter");
-                            d = BaseMod.getKeywordDescription("champ:counter");
-                        } else if (AbstractDungeon.player.stance instanceof BerserkerStance) {
-                            t = BaseMod.getKeywordTitle("champ:fatigue");
-                            d = BaseMod.getKeywordDescription("champ:fatigue");
-                        }
-                        if (!t.equals("ERROR")) {
+                        TipHelperChamp1.render(sb);
+                        if (hitboxStance.hovered && AbstractDungeon.player.stance instanceof AbstractChampStance) {
                             if ((float) InputHelper.mX < 1400.0F * Settings.scale) {
                                 TipHelper.renderGenericTip(
                                         (float) InputHelper.mX + 60.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
-                                        t,
-                                        d);
+                                        BaseMod.getKeywordTitle(((AbstractChampStance) AbstractDungeon.player.stance).getKeywordString()),
+                                        BaseMod.getKeywordDescription(((AbstractChampStance) AbstractDungeon.player.stance).getKeywordString()));
                             } else {
                                 TipHelper.renderGenericTip((float) InputHelper.mX - 350.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
-                                        t, d);
+                                        BaseMod.getKeywordTitle(((AbstractChampStance) AbstractDungeon.player.stance).getKeywordString()),
+                                        BaseMod.getKeywordDescription(((AbstractChampStance) AbstractDungeon.player.stance).getKeywordString()));
                             }
                         }
-                    }
 
-                    TipHelperChamp3.renderGenericTip(dx3.x, dx3.y,
-                            ChampChar.characterStrings.TEXT[9],
-                            getStanceFinisher());
+                        TipHelperChamp2.renderGenericTip(dx2.x, dx2.y,
+                                ChampChar.characterStrings.TEXT[8],
+                                getStanceTechnique());
 
-                    TipHelperChamp3.render(sb);
-                    if (hitboxFinisher.hovered && AbstractDungeon.player.stance instanceof AbstractChampStance) {
-                        String t = "ERROR";
-                        String d = "ERROR2";
-                        if (AbstractDungeon.player.stance instanceof BerserkerStance) {
-                            t = BaseMod.getKeywordTitle("champ:fatigue");
-                            d = BaseMod.getKeywordDescription("champ:fatigue");
-                        }
-                        if (!t.equals("ERROR")) {
-                            if ((float) InputHelper.mX < 1400.0F * Settings.scale) {
-                                TipHelper.renderGenericTip(
-                                        (float) InputHelper.mX + 60.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
-                                        t,
-                                        d);
-                            } else {
-                                TipHelper.renderGenericTip((float) InputHelper.mX - 350.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
-                                        t, d);
+                        TipHelperChamp2.render(sb);
+                        if (hitboxTechnique.hovered && AbstractDungeon.player.stance instanceof AbstractChampStance) {
+                            String t = "ERROR";
+                            String d = "ERROR2";
+                            if (AbstractDungeon.player.stance instanceof DefensiveStance) {
+                                t = BaseMod.getKeywordTitle("champ:counter");
+                                d = BaseMod.getKeywordDescription("champ:counter");
+                            } else if (AbstractDungeon.player.stance instanceof BerserkerStance) {
+                                t = BaseMod.getKeywordTitle("champ:fatigue");
+                                d = BaseMod.getKeywordDescription("champ:fatigue");
+                            }
+                            if (!t.equals("ERROR")) {
+                                if ((float) InputHelper.mX < 1400.0F * Settings.scale) {
+                                    TipHelper.renderGenericTip(
+                                            (float) InputHelper.mX + 60.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
+                                            t,
+                                            d);
+                                } else {
+                                    TipHelper.renderGenericTip((float) InputHelper.mX - 350.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
+                                            t, d);
+                                }
                             }
                         }
-                    }
 
-                    // Icons in front of the thing are here.
-                    renderHelper(sb, SymbolDescriptionPatch.ICONCROWN, Settings.scale * 310F, Settings.scale * 810F);
-                    renderHelper(sb, SymbolDescriptionPatch.ICONFIST, Settings.scale * 310F, Settings.scale * 710F);
+                        TipHelperChamp3.renderGenericTip(dx3.x, dx3.y,
+                                ChampChar.characterStrings.TEXT[9],
+                                getStanceFinisher());
+
+                        TipHelperChamp3.render(sb);
+                        if (hitboxFinisher.hovered && AbstractDungeon.player.stance instanceof AbstractChampStance) {
+                            String t = "ERROR";
+                            String d = "ERROR2";
+                            if (AbstractDungeon.player.stance instanceof BerserkerStance) {
+                                t = BaseMod.getKeywordTitle("champ:fatigue");
+                                d = BaseMod.getKeywordDescription("champ:fatigue");
+                            }
+                            if (!t.equals("ERROR")) {
+                                if ((float) InputHelper.mX < 1400.0F * Settings.scale) {
+                                    TipHelper.renderGenericTip(
+                                            (float) InputHelper.mX + 60.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
+                                            t,
+                                            d);
+                                } else {
+                                    TipHelper.renderGenericTip((float) InputHelper.mX - 350.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
+                                            t, d);
+                                }
+                            }
+                        }
+
+                        // Icons in front of the thing are here.
+                        renderHelper(sb, SymbolDescriptionPatch.ICONCROWN, Settings.scale * 310F, Settings.scale * 810F);
+                        renderHelper(sb, SymbolDescriptionPatch.ICONFIST, Settings.scale * 310F, Settings.scale * 710F);
+                    }
                 }
-            }
+        }
     }
 
     private static void renderHelper(SpriteBatch sb, TextureAtlas.AtlasRegion img, float drawX, float drawY) {

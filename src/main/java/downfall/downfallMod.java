@@ -170,6 +170,7 @@ public class downfallMod implements
     public static boolean crossoverCharacters = true;
     public static boolean unlockEverything = false;
     public static boolean normalMapLayout = false;
+    public static boolean champDisableStanceHelper = false;
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
     public static final String PROP_RELIC_SHARING = "contentSharing_relics";
@@ -180,6 +181,7 @@ public class downfallMod implements
     public static final String PROP_CHAR_CROSSOVER = "crossover_characters";
     public static final String PROP_UNLOCK_ALL = "unlockEverything";
     public static final String PROP_NORMAL_MAP = "normalMapLayout";
+    public static final String PROP_CHAMP_PRO = "champDisableStanceHelper";
 
     public static String Act1BossFaced = downfallMod.makeID("Ironclad");
     public static String Act2BossFaced = downfallMod.makeID("Silent");
@@ -218,6 +220,7 @@ public class downfallMod implements
         configDefault.setProperty(PROP_CHAR_CROSSOVER, "FALSE");
         configDefault.setProperty(PROP_NORMAL_MAP, "FALSE");
         configDefault.setProperty(PROP_UNLOCK_ALL, "FALSE");
+        configDefault.setProperty(PROP_CHAMP_PRO, "FALSE");
 
 
         loadConfigData();
@@ -273,6 +276,7 @@ public class downfallMod implements
             config.setBool(PROP_NORMAL_MAP, normalMapLayout);
 
             config.setBool(PROP_UNLOCK_ALL, unlockEverything);
+            config.setBool(PROP_CHAMP_PRO, champDisableStanceHelper);
             config.save();
             GoldenIdol_Evil.save();
         } catch (IOException e) {
@@ -505,8 +509,17 @@ public class downfallMod implements
             saveData();
         });
 
-        ModLabeledToggleButton unlockAllBtn = new ModLabeledToggleButton(configStrings.TEXT[7],
+        ModLabeledToggleButton champProConfig = new ModLabeledToggleButton(configStrings.TEXT[8],
                 350.0f, 300, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                champDisableStanceHelper, settingsPanel, (label) -> {
+        }, (button) -> {
+            champDisableStanceHelper = button.enabled;
+            saveData();
+        });
+
+
+        ModLabeledToggleButton unlockAllBtn = new ModLabeledToggleButton(configStrings.TEXT[7],
+                350.0f, 250, Settings.CREAM_COLOR, FontHelper.charDescFont,
                 unlockEverything, settingsPanel, (label) -> {
         }, (button) -> {
             unlockEverything = button.enabled;
@@ -521,6 +534,7 @@ public class downfallMod implements
         settingsPanel.addUIElement(contentSharingBtnColorless);
         settingsPanel.addUIElement(characterCrossoverBtn);
         settingsPanel.addUIElement(normalMapBtn);
+        settingsPanel.addUIElement(champProConfig);
         settingsPanel.addUIElement(unlockAllBtn);
 
         BaseMod.registerModBadge(badgeTexture, "downfall", "Downfall Team", "A very evil Expansion.", settingsPanel);
@@ -537,6 +551,7 @@ public class downfallMod implements
             contentSharing_potions = config.getBool(PROP_POTION_SHARING);
             contentSharing_colorlessCards = config.getBool(PROP_CARD_SHARING);
             crossoverCharacters = config.getBool(PROP_CHAR_CROSSOVER);
+            champDisableStanceHelper = config.getBool(PROP_CHAMP_PRO);
             unlockEverything = config.getBool(PROP_UNLOCK_ALL);
         } catch (Exception e) {
             e.printStackTrace();

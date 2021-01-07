@@ -51,7 +51,8 @@
       "Allow Standard characters to play Downfall runs, and Villains to play in Standard runs.",
       "Allow Standard runs to encounter Downfall Curse cards.",
       "Downfall runs use traditional Map layout - fire before boss, not at start.",
-      "Unlock all locked cards and relics for Downfall characters (requires game restart)"
+      "Unlock all locked cards and relics for Downfall characters (requires game restart)",
+      "Disable Champ's Stance Helper - for experienced Champions"
     ]
   },
   "downfall:EnergyPanelTip": {

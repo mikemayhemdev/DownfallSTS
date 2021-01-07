@@ -1,23 +1,16 @@
 package expansioncontent.cards;
 
-import automaton.AutomatonChar;
-import champ.ChampChar;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.actions.OctoChoiceAction;
-import downfall.cards.OctoChoiceCard;
-import downfall.util.OctopusCard;
-import expansioncontent.cards.deprecated.*;
+import downfall.util.SelectCardsCenteredAction;
 import expansioncontent.expansionContentMod;
-import guardian.patches.GuardianEnum;
-import slimebound.patches.SlimeboundEnum;
-import theHexaghost.TheHexaghost;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class QuickStudy extends AbstractExpansionCard {
 
@@ -28,20 +21,35 @@ public class QuickStudy extends AbstractExpansionCard {
     //stupid intellij stuff SKILL, SELF, RARE
 
     public QuickStudy() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
-       // atb(new OctoChoiceAction(m, this));
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        ArrayList<AbstractCard> selectionsList = new ArrayList<>();
+        ArrayList<AbstractCard> allStudyCardsList = new ArrayList<>();
+        for (AbstractCard q : CardLibrary.getAllCards()) {
+            if (q.hasTag(expansionContentMod.STUDY)) {
+                if (upgraded) q.upgrade();
+                allStudyCardsList.add(q);
+            }
+        }
+        Collections.shuffle(allStudyCardsList);
+        for (int i = 0; i < 3; i++) {
+            selectionsList.add(allStudyCardsList.get(i));
+        }
+        atb(new SelectCardsCenteredAction(selectionsList, 1, EXTENDED_DESCRIPTION[0], (cards) -> {
+            cards.get(0).setCostForTurn(0);
+            addToTop(new MakeTempCardInHandAction(cards.get(0), true));
+        }));
     }
 
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }
