@@ -139,17 +139,17 @@
   "Guardian:PackageShapes": {
     "NAME": "Package: Shapes",
     "DESCRIPTION": "Add a *Time *Bomb, *Spiker *Protocol, and *Repulsor to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a *Time *Bomb, *Spiker *Protocol, and *Repulsor to your hand, Upgrade them. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Add a *Time *Bomb, *Spiker *Protocol, and *Repulsor to your hand and Upgrade them. NL Exhaust."
   },
   "Guardian:PackageDonuDeca": {
     "NAME": "Package: Ancients",
     "DESCRIPTION": "Add an *Ancient *Attack, *Ancient *Power, and *Ancient *Construct to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an *Ancient *Attack, *Ancient *Power, and *Ancient *Construct to your hand, Upgrade them. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Add an *Ancient *Attack, *Ancient *Power, and *Ancient *Construct to your hand and Upgrade them. NL Exhaust."
   },
   "Guardian:PackageSphere": {
     "NAME": "Package: Spheric",
     "DESCRIPTION": "Add a *Spheric *Shield, *Harden, and *Floating *Orbs to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a *Spheric *Shield, *Harden, and *Floating *Orbs to your hand, Upgrade them. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Add a *Spheric *Shield, *Harden, and *Floating *Orbs to your hand and Upgrade them. NL Exhaust."
   },
   "Guardian:PackageSentry": {
     "NAME": "Package: Sentry",
@@ -159,17 +159,17 @@
   "Guardian:PackageWalker": {
     "NAME": "Package: Orbwalker",
     "DESCRIPTION": "Add an *Orbwalk, *Walker *Claw, and *Incinerate to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an *Orbwalk, *Walker *Claw, and *Incinerate to your hand, Upgrade them. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Add an *Orbwalk, *Walker *Claw, and *Incinerate to your hand and Upgrade them. NL Exhaust."
   },
   "Guardian:PackageAutomaton": {
     "NAME": "Package: Bronze",
     "DESCRIPTION": "Add a *Hyper *Beam, *Orb *Beam, and *Bronze *Armor to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a *Hyper *Beam, *Orb *Beam, and *Bronze *Armor to your hand, Upgrade them. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Add a *Hyper *Beam, *Orb *Beam, and *Bronze *Armor to your hand and Upgrade them. NL Exhaust."
   },
   "Guardian:PackageDefect": {
     "NAME": "Package: Defect",
     "DESCRIPTION": "Add a *Reroute, *Preprogram, and *Time *Capacitor to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a *Reroute, *Preprogram, and *Time *Capacitor to your hand, Upgrade them. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Add a *Reroute, *Preprogram, and *Time *Capacitor to your hand and Upgrade them. NL Exhaust."
   },
   "Guardian:Planning": {
     "NAME": "Planning",
@@ -398,12 +398,12 @@
   "Guardian:PackageConstruct": {
     "NAME": "Package: Construct",
     "DESCRIPTION": "Add a Hammer Down, Omega Cannon, and Mode Shift to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a Hammer Down, Omega Cannon, and Mode Shift to your hand, Upgrade them. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Add a Hammer Down, Omega Cannon, and Mode Shift to your hand and Upgrade them. NL Exhaust."
   },
   "Guardian:PackageMass": {
     "NAME": "Package: Mass",
     "DESCRIPTION": "Add a Mass of Spikes, Mass of Bombs, and Group Slam to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a Mass of Spikes, Mass of Bombs, and Group Slam to your hand, Upgrade them. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Add a Mass of Spikes, Mass of Bombs, and Group Slam to your hand and Upgrade them. NL Exhaust."
   },
   "Guardian:MassOfThorns": {
     "NAME": "Mass Of Spikes",
