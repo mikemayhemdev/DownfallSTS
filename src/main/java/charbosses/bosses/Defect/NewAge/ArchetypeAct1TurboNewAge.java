@@ -83,7 +83,6 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
                     looped = true;
                     break;
             }
-
         } else {
             switch (turn) {
                 case 0:
