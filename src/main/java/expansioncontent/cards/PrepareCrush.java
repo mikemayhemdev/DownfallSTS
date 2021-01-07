@@ -19,12 +19,12 @@ public class PrepareCrush extends AbstractExpansionCard {
     public final static String ID = makeID("PrepareCrush");
 
 
-    private static final int BLOCK = 16;
+    private static final int BLOCK = 10;
     private static final int UPGRADE_BLOCK = 4;
     private static final int MAGIC = 3;
 
     public PrepareCrush() {
-        super(ID, 3, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
 
         tags.add(expansionContentMod.STUDY_SLIMEBOSS);
         tags.add(expansionContentMod.STUDY);
