@@ -5,9 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import slimebound.actions.SlimeSpawnAction;
 import slimebound.characters.SlimeboundCharacter;
-import slimebound.orbs.ShieldSlime;
 
 public class TarBlob extends CustomRelic {
     public static final String ID = "Slimebound:TarBlob";
@@ -20,6 +18,16 @@ public class TarBlob extends CustomRelic {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.BOSS, LandingSound.MAGICAL);
         this.largeImg = ImageMaster.loadImage(slimebound.SlimeboundMod.getResourcePath(IMG_PATH_LARGE));
+    }
+
+    @Override
+    public void onEquip() {
+        AbstractDungeon.player.energy.energyMaster++;
+    }
+
+    @Override
+    public void onUnequip() {
+        AbstractDungeon.player.energy.energyMaster--;
     }
 
     public void atBattleStartPreDraw() {
