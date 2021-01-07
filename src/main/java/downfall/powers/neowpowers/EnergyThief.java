@@ -46,9 +46,7 @@ public class EnergyThief extends AbstractPower {
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new VoidCard().makeStatEquivalentCopy(), 1, true, false, false, (float) Settings.WIDTH * 0.35F, (float) Settings.HEIGHT / 2.0F));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new VoidCard().makeStatEquivalentCopy(), 1, true, false, false, (float) Settings.WIDTH * 0.65F, (float) Settings.HEIGHT / 2.0F));
-
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new VoidCard().makeStatEquivalentCopy(), 1, true, false, false, (float) Settings.WIDTH * 0.5F, (float) Settings.HEIGHT / 2.0F));
     }
 
     @Override
