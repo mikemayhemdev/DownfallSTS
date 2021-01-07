@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 import java.util.ArrayList;
@@ -34,7 +35,10 @@ public class EnNeutralize extends AbstractBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, this.magicNumber + 1, true), this.magicNumber + 1));
+        if (p.hasPower(WeakPower.POWER_ID))
+            this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, this.magicNumber, true), this.magicNumber));
+        else
+            this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, this.magicNumber + 1, true), this.magicNumber + 1));
     }
 
     @Override
