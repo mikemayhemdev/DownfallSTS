@@ -1,4 +1,4 @@
-package expansioncontent.cards;
+package expansioncontent.cards.deprecated;
 
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
+import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
 
 

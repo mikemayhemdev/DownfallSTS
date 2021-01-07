@@ -1,4 +1,4 @@
-package expansioncontent.cards;
+package expansioncontent.cards.deprecated;
 
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
 import slimebound.vfx.SearEffect;
 import theHexaghost.powers.BurnPower;

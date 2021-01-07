@@ -1,10 +1,11 @@
-package expansioncontent.cards;
+package expansioncontent.cards.deprecated;
 
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
 import slimebound.actions.TriggerStartOfTurnEffectsAction;
 

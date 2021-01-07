@@ -1,30 +1,30 @@
-package expansioncontent.cards;
+package expansioncontent.cards.deprecated;
 
 
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.SlowPower;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
+import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
-import expansioncontent.powers.AwakenedOnePower;
 
 
-public class DarkVoid extends AbstractExpansionCard {
-    public final static String ID = makeID("DarkVoid");
+public class TimeRipple extends AbstractExpansionCard {
+    public final static String ID = makeID("TimeRipple");
 
-    private static final int DAMAGE = 12;
-    private static final int UPGRADE_DAMAGE = 4;
+    private static final int DAMAGE = 18;
+    private static final int UPGRADE_DAMAGE = 6;
 
-    public DarkVoid() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+    public TimeRipple() {
+        super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
 
-        tags.add(expansionContentMod.STUDY_AWAKENEDONE);
+        tags.add(expansionContentMod.STUDY_TIMEEATER);
         tags.add(expansionContentMod.STUDY);
-
+        this.magicNumber = this.baseMagicNumber = 1;
         baseDamage = DAMAGE;
         this.isMultiDamage = true;
         this.exhaust = true;
@@ -32,23 +32,21 @@ public class DarkVoid extends AbstractExpansionCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        atb(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, new Color(0.1F, 0.0F, 0.2F, 1.0F), ShockWaveEffect.ShockWaveType.CHAOTIC), 0.3F));
-        atb(new com.megacrit.cardcrawl.actions.utility.SFXAction("ATTACK_HEAVY"));
+        atb(new com.megacrit.cardcrawl.actions.animations.VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Settings.BLUE_TEXT_COLOR, ShockWaveEffect.ShockWaveType.CHAOTIC), 0.5F));
         atb(new com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
-
-
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flash();
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                 if ((!monster.isDead) && (!monster.isDying)) {
 
-                    atb(new ApplyPowerAction(monster, p, new AwakenedOnePower(monster, p, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
+                    atb(new ApplyPowerAction(monster, p, new SlowPower(monster, this.magicNumber), 10 * this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
 
                 }
 
             }
         }
+
 
     }
 
@@ -60,3 +58,4 @@ public class DarkVoid extends AbstractExpansionCard {
     }
 
 }
+

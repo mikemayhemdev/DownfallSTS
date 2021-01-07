@@ -12,6 +12,7 @@ import downfall.downfallMod;
 import downfall.relics.Hecktoplasm;
 import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.cards.*;
+import expansioncontent.cards.deprecated.*;
 import expansioncontent.relics.StudyCardRelic;
 import guardian.characters.GuardianCharacter;
 import guardian.potions.BlockOnCardUsePotion;

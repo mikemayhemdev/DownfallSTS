@@ -1,4 +1,4 @@
-package expansioncontent.cards;
+package expansioncontent.cards.deprecated;
 
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;

@@ -1,4 +1,4 @@
-package expansioncontent.cards;
+package expansioncontent.cards.deprecated;
 
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
+import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
 
 public class Flail extends AbstractExpansionCard {
