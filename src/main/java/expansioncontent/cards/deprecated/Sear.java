@@ -7,12 +7,13 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
 import slimebound.vfx.SearEffect;
 import theHexaghost.powers.BurnPower;
 
-
+@CardIgnore
 public class Sear extends AbstractExpansionCard {
     public final static String ID = makeID("Sear");
 

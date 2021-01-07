@@ -9,10 +9,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.SlowPower;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
+import downfall.util.CardIgnore;
 import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
 
-
+@CardIgnore
 public class TimeRipple extends AbstractExpansionCard {
     public final static String ID = makeID("TimeRipple");
 

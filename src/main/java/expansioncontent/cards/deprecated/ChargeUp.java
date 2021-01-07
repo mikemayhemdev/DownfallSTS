@@ -6,9 +6,12 @@ import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
+import downfall.util.CardIgnore;
+import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
 import slimebound.powers.NextTurnGainStrengthPower;
 
+@CardIgnore
 public class ChargeUp extends AbstractExpansionCard {
     public final static String ID = makeID("ChargeUp");
 

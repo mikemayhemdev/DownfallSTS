@@ -297,23 +297,11 @@ public abstract class AbstractChampCard extends CustomCard {
         }
     }
 
-    @Override
-    public void applyPowers() {
-        super.applyPowers();
-        //ChampTextHelper.colorCombos(this, false);
-        //initializeDescription();
-    }
 
     @Override
     public void initializeDescription() {
         ChampTextHelper.calculateTagText(this);
         super.initializeDescription();
-    }
-
-    @Override
-    public void onMoveToDiscard() {
-        //ChampTextHelper.colorCombos(this, true);
-        //initializeDescription();
     }
 
     @Override

@@ -5,11 +5,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
 import slimebound.actions.TriggerStartOfTurnEffectsAction;
 
-
+@CardIgnore
 public class ManipulateTime extends AbstractExpansionCard {
     public final static String ID = makeID("ManipulateTime");
 
