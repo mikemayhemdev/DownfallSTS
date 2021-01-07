@@ -72,7 +72,7 @@ public class CurlUp extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(3);
             upgradeBlock(3);
 
             this.updateDescription();
