@@ -98,7 +98,7 @@ public class ArtOfSlimeWar extends AbstractImageEvent {
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                         CardCrawlGame.screenShake.mildRumble(5.0F);
                         this.screenNum = 1;
-                        this.imageEventText.updateDialogOption(0, OPTIONS[3], CardLibrary.getCopy("Slimebound:Icky"));
+                        this.imageEventText.updateDialogOption(0, OPTIONS[3], new Icky());
                         this.imageEventText.updateDialogOption(1, OPTIONS[4] + this.damage + OPTIONS[5]);
                         this.imageEventText.removeDialogOption(2);
                         this.imageEventText.setDialogOption(OPTIONS[6] + this.maxHpLoss + OPTIONS[7]);
