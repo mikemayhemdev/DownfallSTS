@@ -25,7 +25,7 @@ public class MuddleRandomCardAction extends AbstractGameAction {
     public MuddleRandomCardAction(int i, boolean highest, boolean no3s) {
         amount = i;
         onlyHighest = highest;
-        no3s = modifiedCost;
+        modifiedCost = no3s;
     }
 
 
