@@ -340,8 +340,8 @@
   },
   "Guardian:Gem_Blue": {
     "NAME": "Sapphire",
-    "DESCRIPTION": "guardianmod:Gem. NL guardianmod:Brace 2.",
-    "UPGRADE_DESCRIPTION": "guardianmod:Brace 2."
+    "DESCRIPTION": "guardianmod:Gem. NL guardianmod:Brace 3.",
+    "UPGRADE_DESCRIPTION": "guardianmod:Brace 3."
   },
   "Guardian:Gem_Fragmented": {
     "NAME": "Fragmented Gem",
