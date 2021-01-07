@@ -25,18 +25,20 @@
     "DESCRIPTIONS": [
       "A menacing structure lies before you.  Most would never dare approach it, but you know its purpose, and know it can be of great use. NL You enter the chamber, and prepare to make a #rsacrifice...",
       "Paying a piece of your very soul, you acquire the seal - one more step in the path to your ultimate power.",
-      "Weighing your options, you decide against making a sacrifice in the Seal Chamber.  You'll need everything you have to complete your journey."
+      "Weighing your options, you decide against making a sacrifice in the Seal Chamber.  You'll need everything you have to complete your journey.",
+      "These Seals shall prove most useful in the battles to come."
     ],
     "OPTIONS": [
       "[Offer] #rLose ",
       " HP. #gGain #gFirst #gSeal.",
-      " Gold. #gGain #gSecond #gSeal.",
+      " #ySouls. #gGain #gSecond #gSeal.",
       ". #gGain #gThird #gSeal.",
       ". #gGain #gFourth #gSeal.",
       "[Locked] Requires more Gold.",
       "[Locked] Requires a Common Card.",
       "[Locked] Requires a Potion.",
-      "[Leave]"
+      "[Leave]",
+      "[Locked] Offering made."
     ]
   },
   "hexamod:HexaFalling": {

@@ -10,7 +10,7 @@ public class ShadowStrike extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ENEMY, SPECIAL
 
-    private static final int DAMAGE = 14;
+    private static final int DAMAGE = 16;
     private static final int UPG_DAMAGE = 4;
 
     public ShadowStrike() {
