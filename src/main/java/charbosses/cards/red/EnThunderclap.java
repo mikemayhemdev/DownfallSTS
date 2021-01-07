@@ -38,7 +38,7 @@ public class EnThunderclap extends AbstractBossCard {
         this.addToBot(new VFXAction(new LightningEffect(p.drawX, p.drawY), 0.05F));
 
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.LIGHTNING));
-        this.addToBot(new ApplyPowerAction(p, m, new VulnerablePower(p, this.magicNumber, false), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, m, new VulnerablePower(p, this.magicNumber + 1, false), this.magicNumber + 1));
         if (!p.hasPower(ArtifactPower.POWER_ID)) {
             if (AbstractCharBoss.boss.hasRelic(CBR_ChampionsBelt.ID)) {
                 AbstractCharBoss.boss.getRelic(CBR_ChampionsBelt.ID).onTrigger();

@@ -29,7 +29,7 @@ public class EnClothesline extends AbstractBossCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, this.magicNumber, false), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, this.magicNumber + 1, false), this.magicNumber + 1));
     }
 
     public void upgrade() {

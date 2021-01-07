@@ -38,7 +38,7 @@ public class EnLegSweep extends AbstractBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, this.magicNumber, false), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, this.magicNumber + 1, false), this.magicNumber + 1));
         this.addToBot(new GainBlockAction(m, m, this.block));
     }
 

@@ -33,7 +33,7 @@ public class EnIntimidate extends AbstractBossCard {
     public EnIntimidate() {
         super(ID, cardStrings.NAME, "red/skill/intimidate", 0, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY, AbstractMonster.Intent.DEBUFF);
         this.exhaust = true;
-        this.baseMagicNumber = 1;
+        this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
     }
 
@@ -41,7 +41,7 @@ public class EnIntimidate extends AbstractBossCard {
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new SFXAction("INTIMIDATE"));
         this.addToBot(new VFXAction(p, new IntimidateEffect(m.hb.cX, m.hb.cY), 1.0F));
-        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, this.magicNumber + 1, false), this.magicNumber + 1, true, AbstractGameAction.AttackEffect.NONE));
  }
 
     @Override

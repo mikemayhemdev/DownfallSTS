@@ -33,7 +33,7 @@ public class EnNeutralize extends AbstractBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, this.magicNumber, true), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, this.magicNumber + 1, true), this.magicNumber + 1));
     }
 
     @Override
