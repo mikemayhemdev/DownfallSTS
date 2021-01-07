@@ -1,6 +1,8 @@
 package expansioncontent.cards;
 
 
+import automaton.AutomatonChar;
+import champ.ChampChar;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -36,9 +38,11 @@ public class StudyTheSpire extends AbstractExpansionCard {
         ArrayList<AbstractPower> powers = new ArrayList<>();
 
         if (upgraded) {
+            if (!AbstractDungeon.player.chosenClass.equals(AutomatonChar.Enums.THE_AUTOMATON))
             powers.add(new StudyAutomatonPowerUpgraded(p, p, this.magicNumber));
             powers.add(new StudyAwakenedPowerUpgraded(p, p, this.magicNumber));
             powers.add(new StudyShapesPowerUpgraded(p, p, this.magicNumber));
+            if (!AbstractDungeon.player.chosenClass.equals(ChampChar.Enums.THE_CHAMP))
             powers.add(new StudyChampPowerUpgraded(p, p, this.magicNumber));
             powers.add(new StudyCollectorPowerUpgraded(p, p, this.magicNumber));
             if (!AbstractDungeon.player.chosenClass.equals(GuardianEnum.GUARDIAN))
@@ -49,9 +53,11 @@ public class StudyTheSpire extends AbstractExpansionCard {
             if (!AbstractDungeon.player.chosenClass.equals(SlimeboundEnum.SLIMEBOUND))
                 powers.add(new StudySlimeBossPowerUpgraded(p, p, this.magicNumber));
         } else {
+            if (!AbstractDungeon.player.chosenClass.equals(AutomatonChar.Enums.THE_AUTOMATON))
             powers.add(new StudyAutomatonPower(p, p, this.magicNumber));
             powers.add(new StudyAwakenedPower(p, p, this.magicNumber));
             powers.add(new StudyShapesPower(p, p, this.magicNumber));
+            if (!AbstractDungeon.player.chosenClass.equals(ChampChar.Enums.THE_CHAMP))
             powers.add(new StudyChampPower(p, p, this.magicNumber));
             powers.add(new StudyCollectorPower(p, p, this.magicNumber));
             if (!AbstractDungeon.player.chosenClass.equals(GuardianEnum.GUARDIAN))

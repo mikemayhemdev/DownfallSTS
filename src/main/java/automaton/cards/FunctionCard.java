@@ -70,9 +70,9 @@ public class FunctionCard extends AbstractBronzeCard {
     @Override
     public void doNothingSpecificInParticular() {
         if (textPrefix.equals("")) {
-            this.name = "function()"; //TODO: localize?
+            this.name = "function()";
         } else if (isPerfect()) {
-            this.name = "Perfection()"; //TODO: localize
+            this.name = "Perfection()";
         } else if (triplicateCheck()) {
             this.name = cards().get(0).getTriplicate();
         } else {

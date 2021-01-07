@@ -25,7 +25,6 @@ public class GutPunch extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.OPENER);
-        myHpLossCost = 0;
         tags.add(ChampMod.OPENERBERSERKER);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
@@ -49,15 +48,6 @@ public class GutPunch extends AbstractChampCard {
         // myHpLossCost++;
     }
 
-    @Override
-    public void applyPowers() {
-        super.applyPowers();
-        if (dcombo()) {
-            myHpLossCost = magicNumber;
-        } else {
-            myHpLossCost = 0;
-        }
-    }
 
     @Override
     public void triggerOnGlowCheck() {

@@ -40,6 +40,8 @@ public abstract class AbstractExpansionCard extends CustomCard {
         EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
         initializeTitle();
         initializeDescription();
+        setFrame();
+        tags.add(CardTags.HEALING);
     }
 
     public AbstractExpansionCard(final String id, final String img, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
@@ -53,6 +55,8 @@ public abstract class AbstractExpansionCard extends CustomCard {
         EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
         initializeTitle();
         initializeDescription();
+        setFrame();
+        tags.add(CardTags.HEALING);
     }
 
     public AbstractExpansionCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
@@ -66,6 +70,19 @@ public abstract class AbstractExpansionCard extends CustomCard {
         EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
         initializeTitle();
         initializeDescription();
+        setFrame();
+        tags.add(CardTags.HEALING);
+    }
+
+    public void setFrame(){
+        if (this.type == CardType.ATTACK){
+            this.setBackgroundTexture("expansionContentResources/images/512/bg_attack_evil.png", "expansionContentResources/images/1024/bg_attack_evil.png");
+        } else
+        if (this.type == CardType.SKILL){
+            this.setBackgroundTexture("expansionContentResources/images/512/bg_skill_evil.png", "expansionContentResources/images/1024/bg_skill_evil.png");
+        } else {
+            this.setBackgroundTexture("expansionContentResources/images/512/bg_power_evil.png", "expansionContentResources/images/1024/bg_power_evil.png");
+        }
     }
 
     private static String getCorrectPlaceholderImage(String id) {
