@@ -16,6 +16,7 @@ import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
 import charbosses.cards.red.EnBodySlam;
 import charbosses.core.EnemyEnergyManager;
+import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.orbs.EnemyDark;
 import charbosses.orbs.EnemyEmptyOrbSlot;
 import charbosses.relics.AbstractCharbossRelic;
@@ -517,7 +518,15 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 //- Fuck!! Bullseye. That needs to set a new boolean in AbstractEnemyOrb that adds a +50% to the numerical prediction.
                 //That should be all.
 
-
+                //Step 1 - add a channelsOrbsAmount to AbstractCharBossCard.
+                //Step 2 - Check against it in this iteration
+                if (c.channelsOrbsAmt > 0) {
+                    for (int q = 0; q < c.channelsOrbsAmt; q++) {
+                        if (AbstractCharBoss.boss.orbs.get(q) instanceof AbstractEnemyOrb) {
+                            ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(q)).evokeOverride = true;
+                        }
+                    }
+                }
 
 
 
