@@ -35,10 +35,9 @@ public class AddCopyPower extends AbstractPower implements NonStackablePower {
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
-        this.updateDescription();
-
         this.held = held;
 
+        this.updateDescription();
     }
 
     @Override
@@ -49,7 +48,11 @@ public class AddCopyPower extends AbstractPower implements NonStackablePower {
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + held.name + DESCRIPTIONS[1];
+        if (held == null) {
+            description = "???";
+        } else {
+            description = DESCRIPTIONS[0] + held.name + DESCRIPTIONS[1];
+        }
     }
 
 }
