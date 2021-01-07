@@ -68,5 +68,13 @@
       "Add ",
       " into your hand at the start of your next turn."
     ]
+  },
+  "expansioncontent:PretendHexWheelPower": {
+    "NAME": "Hexaburn",
+    "DESCRIPTIONS": [
+      "In #b",
+      " turns, deal #b6 damage to a random enemy #b6 times.",
+      "At the end of your turn, deal #b6 damage to a random enemy #b6 times."
+    ]
   }
 }

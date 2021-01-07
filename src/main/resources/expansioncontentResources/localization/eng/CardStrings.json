@@ -15,9 +15,8 @@
     "DESCRIPTION": "expansioncontent:Boss - Guardian. NL Enter guardianmod:Defensive_Mode, which lasts for !M! rounds."
   },
   "expansioncontent:Hexaburn": {
-    "NAME": "Ghost Inferno",
-    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Lose 6 HP. NL Deal !D! damage a random enemy 6 times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Deal !D! damage a random enemy 6 times. NL Exhaust."
+    "NAME": "Hexaburn",
+    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL In 5 turns, deal 6 damage to a random enemy 6 times."
   },
   "expansioncontent:Sear": {
     "NAME": "Greater Sear",
