@@ -3,10 +3,11 @@ package expansioncontent.cards.deprecated;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 import expansioncontent.actions.CorruptAction;
 import expansioncontent.cards.AbstractExpansionCard;
 
-
+@CardIgnore
 public class Corrupt extends AbstractExpansionCard {
     public final static String ID = makeID("Corrupt");
 

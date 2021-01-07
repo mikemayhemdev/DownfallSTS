@@ -9,11 +9,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
+import downfall.util.CardIgnore;
 import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
 import guardian.powers.DontLeaveDefensiveModePower;
 
-
+@CardIgnore
 public class DefensiveMode extends AbstractExpansionCard {
     public final static String ID = makeID("DefensiveMode");
 

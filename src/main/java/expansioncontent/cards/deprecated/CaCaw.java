@@ -9,10 +9,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.city.Byrd;
 import com.megacrit.cardcrawl.powers.RitualPower;
 import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
+import downfall.util.CardIgnore;
 import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
 
-
+@CardIgnore
 public class CaCaw extends AbstractExpansionCard {
     public final static String ID = makeID("CaCaw");
 

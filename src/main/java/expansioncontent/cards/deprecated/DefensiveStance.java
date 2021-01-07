@@ -6,9 +6,11 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.MetallicizePower;
+import downfall.util.CardIgnore;
 import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
 
+@CardIgnore
 public class DefensiveStance extends AbstractExpansionCard {
     public final static String ID = makeID("DefensiveStance");
 

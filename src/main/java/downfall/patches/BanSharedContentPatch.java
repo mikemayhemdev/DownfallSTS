@@ -46,35 +46,16 @@ public class BanSharedContentPatch {
         public static void Postfix(AbstractDungeon __instance) {
             if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_colorlessCards) {
                 AbstractDungeon.colorlessCardPool.removeCard(AwakenDeath.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(BronzeBeam.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(CaCaw.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(ChargeUp.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(Chronoboost.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(Collect.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(Corrupt.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(DarkVoid.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(DashGenerateEvil.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(DecasProtection.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(DefensiveMode.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(DefensiveStance.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(DonusPower.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(FaceSlap.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(Flail.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(SuperHexaguard.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(GoopSpray.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(GuardianWhirl.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(Hexaburn.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(HyperBeam.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(LastStand.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(ManipulateTime.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(PolyBeam.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(PrepareCrush.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(QuickStudy.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(Sear.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(SlimeTackle.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(StudyTheSpire.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(TimeRipple.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(Torchfire.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(YouAreMine.ID);
 
                 AbstractDungeon.curseCardPool.removeCard(Aged.ID);
@@ -86,28 +67,17 @@ public class BanSharedContentPatch {
             } else {
                 if (AbstractDungeon.player instanceof SlimeboundCharacter) {
                     AbstractDungeon.colorlessCardPool.removeCard(PrepareCrush.ID);
-                    AbstractDungeon.colorlessCardPool.removeCard(SlimeTackle.ID);
-                    AbstractDungeon.colorlessCardPool.removeCard(GoopSpray.ID);
                 }
                 if (AbstractDungeon.player instanceof TheHexaghost || RandomCardWithTagAction.hexaLocked()) {
-                    AbstractDungeon.colorlessCardPool.removeCard(SuperHexaguard.ID);
-                    AbstractDungeon.colorlessCardPool.removeCard(Sear.ID);
                     AbstractDungeon.colorlessCardPool.removeCard(Hexaburn.ID);
                 }
                 if (AbstractDungeon.player instanceof GuardianCharacter || RandomCardWithTagAction.guardianLocked()) {
-                    AbstractDungeon.colorlessCardPool.removeCard(ChargeUp.ID);
                     AbstractDungeon.colorlessCardPool.removeCard(GuardianWhirl.ID);
-                    AbstractDungeon.colorlessCardPool.removeCard(DefensiveMode.ID);
-                    AbstractDungeon.colorlessCardPool.removeCard(BronzeBeam.ID);
                 }
                 if (AbstractDungeon.player instanceof ChampChar || RandomCardWithTagAction.champLocked()) {
-                    AbstractDungeon.colorlessCardPool.removeCard(FaceSlap.ID);
-                    AbstractDungeon.colorlessCardPool.removeCard(DefensiveStance.ID);
                     AbstractDungeon.colorlessCardPool.removeCard(LastStand.ID);
                 }
                 if (AbstractDungeon.player instanceof AutomatonChar || RandomCardWithTagAction.autoLocked()) {
-                    AbstractDungeon.colorlessCardPool.removeCard(Flail.ID);
-                    AbstractDungeon.colorlessCardPool.removeCard(BronzeBeam.ID);
                     AbstractDungeon.colorlessCardPool.removeCard(HyperBeam.ID);
                 }
             }
