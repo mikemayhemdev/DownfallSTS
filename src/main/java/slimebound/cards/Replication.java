@@ -1,16 +1,17 @@
 package slimebound.cards;
 
 
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
-import slimebound.actions.CopyCardAction;
 import slimebound.patches.AbstractCardEnum;
 
 
@@ -38,16 +39,17 @@ public class Replication extends AbstractSlimeboundCard {
 
     public Replication() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-
-
         this.exhaust = true;
-
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-
-        AbstractDungeon.actionManager.addToBottom(new CopyCardAction(p));
+        addToBot(new SelectCardsInHandAction(upgraded ? cardStrings.EXTENDED_DESCRIPTION[0] : cardStrings.EXTENDED_DESCRIPTION[1], (cards) -> {
+            if (upgraded) {
+                addToTop(new MakeTempCardInHandAction(cards.get(0).makeStatEquivalentCopy()));
+            } else {
+                addToTop(new MakeTempCardInDrawPileAction(cards.get(0).makeStatEquivalentCopy(), 1, false, true));
+            }
+        }));
     }
 
     public AbstractCard makeCopy() {
@@ -57,9 +59,8 @@ public class Replication extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
-
-
+            rawDescription = UPGRADED_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

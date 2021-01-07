@@ -24,7 +24,12 @@
   },
   "Slimebound:Replication": {
     "NAME": "Replication",
-    "DESCRIPTION": "Choose a card in your hand. Add a copy of that card to your hand. NL Exhaust."
+    "DESCRIPTION": "Choose a card in your hand. NL Put a copy of that card on top of your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a card in your hand. NL Add a copy of it into your hand. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to add a copy into your hand.",
+      "Choose a card to put a copy on top of your draw pile."
+    ]
   },
   "Slimebound:Overexert": {
     "NAME": "Overexert",
@@ -342,7 +347,6 @@
     "NAME": "One-Two Combo",
     "DESCRIPTION": "Deal !D! damage. NL When you slimeboundmod:Split, return this from the discard pile to your hand.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command. NL When you slimeboundmod:Split, return this from the discard pile to your hand."
-
   },
   "Slimebound:ForwardTackle": {
     "NAME": "Forward Tackle",
