@@ -120,13 +120,13 @@
   },
   "Guardian:SentryBeam": {
     "NAME": "Sentry Blast",
-    "DESCRIPTION": "Deal !D! damage. NL Place a Sentry Wave into guardianmod:Stasis. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Place a Sentry Wave+ into guardianmod:Stasis. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Place a *Sentry *Wave into guardianmod:Stasis. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Place a *Sentry *Wave+ into guardianmod:Stasis. NL Exhaust."
   },
   "Guardian:SentryWave": {
     "NAME": "Sentry Wave",
-    "DESCRIPTION": "Apply !M! Weak. NL Place a Sentry Beam into guardianmod:Stasis. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak. NL guardianmod:Brace 2. NL Place a Sentry Beam+ into guardianmod:Stasis. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak. NL Place a *Sentry *Blast into guardianmod:Stasis. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak. NL guardianmod:Brace 2. NL Place a *Sentry *Blast+ into guardianmod:Stasis. NL Exhaust."
   },
   "Guardian:CompilePackage": {
     "NAME": "Compile Package",

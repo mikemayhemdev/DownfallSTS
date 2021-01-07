@@ -49,7 +49,7 @@ public abstract class AbstractChampCard extends CustomCard {
     public String DESCRIPTION;
     public String UPGRADE_DESCRIPTION;
     public String[] EXTENDED_DESCRIPTION;
-    private boolean reInitDescription = true;
+    public boolean reInitDescription = true;
 
 
     public AbstractChampCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
@@ -298,15 +298,22 @@ public abstract class AbstractChampCard extends CustomCard {
     }
 
     @Override
+    public void applyPowers() {
+        super.applyPowers();
+        //ChampTextHelper.colorCombos(this, false);
+        //initializeDescription();
+    }
+
+    @Override
     public void initializeDescription() {
         ChampTextHelper.calculateTagText(this);
-        //ChampTextHelper.colorCombos(this, false);
         super.initializeDescription();
     }
 
     @Override
     public void onMoveToDiscard() {
         //ChampTextHelper.colorCombos(this, true);
+        //initializeDescription();
     }
 
     @Override
