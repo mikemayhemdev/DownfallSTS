@@ -290,7 +290,7 @@
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Divide & Conquer",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies for each Slime. NL slimeboundmod:Absorb all Slimes. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each Slime. NL slimeboundmod:Absorb all Slimes. NL Exhaust."
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "Serve & Protect",

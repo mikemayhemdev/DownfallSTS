@@ -589,7 +589,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
             // AbstractDungeon.actionManager.addToBottom(new VFXAction(new DoubleSlimeParticle(AbstractDungeon.player)));
             if (p instanceof SlimeboundCharacter) {
                 SlimeboundCharacter hero = (SlimeboundCharacter) p;
-                hero.setRenderscale(1F);
+                hero.setRenderscale(hero.renderscale);
             }
             p.hb_x = p.hb_x - (100 * Settings.scale);
             p.drawX = p.drawX + (100 * Settings.scale);
