@@ -30,6 +30,7 @@ public class EnShockwave extends AbstractBossCard {
         this.exhaust = true;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
+        artifactConsumedIfPlayed = 2;
     }
 
     @Override

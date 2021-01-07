@@ -23,6 +23,7 @@ import charbosses.cards.purple.EnFlyingSleeves;
 import charbosses.cards.purple.EnPerseverance;
 import charbosses.cards.purple.EnSandsOfTime;
 import charbosses.cards.purple.EnWish;
+import charbosses.cards.red.EnBodySlam;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
 import charbosses.orbs.EnemyDark;
@@ -33,6 +34,7 @@ import charbosses.powers.WatcherCripplePower;
 import charbosses.relics.AbstractCharbossRelic;
 import charbosses.relics.CBR_LizardTail;
 import charbosses.relics.CBR_MagicFlower;
+import charbosses.relics.CBR_Shuriken;
 import charbosses.stances.AbstractEnemyStance;
 import charbosses.stances.EnNeutralStance;
 import charbosses.ui.EnemyEnergyPanel;
@@ -57,9 +59,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.IntangiblePower;
-import com.megacrit.cardcrawl.powers.MinionPower;
+import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.RunicDome;
 import com.megacrit.cardcrawl.relics.SlaversCollar;
@@ -436,8 +436,110 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     }
 
 
+    public void preApplyIntentCalculations(){
+        boolean hasShuriken = hasRelic(CBR_Shuriken.ID);
+        int attackCount = 0;
+        int artifactCount = 0;
+
+        if (AbstractDungeon.player.hasPower(ArtifactPower.POWER_ID)){
+            artifactCount = AbstractDungeon.player.getPower(ArtifactPower.POWER_ID).amount;
+        }
+
+        //Reset all custom modifiers back to 0
+        for (AbstractCard c:hand.group){
+            ((AbstractBossCard)c).manualCustomDamageModifier = 0;
+            ((AbstractBossCard)c).manualCustomDamageModifierMult = 1;
+        }
+
+        for (int i = 0; i < hand.size(); i++) {
+            AbstractBossCard c = (AbstractBossCard) hand.group.get(i);
+
+            SlimeboundMod.logger.info("intent calcs: " + c.name);
+            if (!c.lockIntentValues) {
+                SlimeboundMod.logger.info(c.name + " not locked, calculating.");
+
+                //Artifact Checks - calculates if any Artifact will be left
+                if (c.artifactConsumedIfPlayed > 0) {
+                    artifactCount -= c.artifactConsumedIfPlayed;
+                }
+
+                //Vulnerable Check - knows to check if any Artifact will be left
+                if (c.vulnGeneratedIfPlayed > 0) {
+                    if (artifactCount <= 0) {
+                        for (int j = i + 1; j < hand.size(); j++) {
+                            AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
+                            c2.manualCustomVulnModifier = true;
+                        }
+                    }
+                }
+
+                //Shuriken Checks for Act 1 Silent
+                if (hasShuriken) {
+                    SlimeboundMod.logger.info("has shuriken");
+                    if (c.type == AbstractCard.CardType.ATTACK) {
+                        SlimeboundMod.logger.info(c.name + " is an attack.");
+                        attackCount++;
+                        if (attackCount == 3) {
+                            SlimeboundMod.logger.info(c.name + " is 3rd attack.");
+                            for (int j = i + 1; j < hand.size(); j++) {
+                                AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
+                                SlimeboundMod.logger.info(c2.name + " is gaining damage.");
+                                c2.manualCustomDamageModifier += 1;
+                            }
+                            attackCount = 0;
+                        }
+                    }
+                }
+
+                //Strength check for Wish in Act 2 Watcher, Act 2 Defect's Reprogram
+                if (c.strengthGeneratedIfPlayed > 0) {
+                    for (int j = i + 1; j < hand.size(); j++) {
+                        AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
+                        c2.manualCustomDamageModifier += c.strengthGeneratedIfPlayed;
+                    }
+                }
+
+                //Block checks for Act 3 Ironclad's Body Slams
+                if (c.block > 0) {
+                    for (int j = i + 1; j < hand.size(); j++) {
+                        AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
+                        if (c2 instanceof EnBodySlam) {
+                            c2.manualCustomDamageModifier += c.block;
+                        }
+                    }
+                }
+
+                //Minion block checks for Act 3 Ironclad's Body Slams
+                if (c instanceof EnBodySlam) {
+                    if (hasPower(BarricadePower.POWER_ID)){
+                        c.manualCustomDamageModifier += 10;
+                    }
+                }
+
+                //Divinity Check for Act 2 Watcher
+                if (c.damageMultGeneratedIfPlayed > 1) {
+                    for (int j = i + 1; j < hand.size(); j++) {
+                        AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
+                        c2.manualCustomDamageModifierMult = c.damageMultGeneratedIfPlayed;
+                    }
+                }
+
+                //TODO - integrate Orb intents into this same system
+                //TODO - Sadistic Nature for Act 3 Silent
+
+            }
+        }
+        for (AbstractCard c:hand.group){
+            ((AbstractBossCard)c).createIntent();
+        }
+
+    }
+
     public void applyPowers() {
         super.applyPowers();
+
+      preApplyIntentCalculations();
+
         this.hand.applyPowers();
         /*
         this.drawPile.genPreview();

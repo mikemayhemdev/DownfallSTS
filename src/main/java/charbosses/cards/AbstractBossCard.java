@@ -64,6 +64,15 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     public boolean showIntent = false;
     public int energyGeneratedIfPlayed = 0;
+    public int strengthGeneratedIfPlayed = 0;
+    public int damageMultGeneratedIfPlayed = 1;
+    public int focusGeneratedIfPlayed = 0;
+    public int vulnGeneratedIfPlayed = 0;
+    public int artifactConsumedIfPlayed = 0;
+    public boolean vulnCalculated = false;
+    public int blockGeneratedIfPlayed = 0;
+    public int clawDamageGeneratedIfPlayed = 0;
+
     public static final String[] TEXT;
 
     public int newPrio = 0;
@@ -71,6 +80,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     public int manualCustomDamageModifier = 0;
     public float manualCustomDamageModifierMult = 1;
     public boolean manualCustomVulnModifier = false;
+    //TODO - Does Vuln get actually calculated anywhere?  this variable does not appear to be referenced
 
 
     private static final float INTENT_HB_W = 64.0F * Settings.scale;

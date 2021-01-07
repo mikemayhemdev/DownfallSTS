@@ -26,6 +26,7 @@ public class EnReprogram extends AbstractBossCard {
         super("Reprogram", cardStrings.NAME, "blue/skill/reprogram", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.UNCOMMON, CardTarget.NONE, AbstractMonster.Intent.BUFF);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
+        strengthGeneratedIfPlayed = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

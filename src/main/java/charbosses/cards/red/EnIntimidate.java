@@ -35,6 +35,7 @@ public class EnIntimidate extends AbstractBossCard {
         this.exhaust = true;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
+        artifactConsumedIfPlayed = 1;
     }
 
     @Override

@@ -26,6 +26,9 @@ public class EnBouncingFlask extends AbstractBossCard {
         super(ID, EnBouncingFlask.cardStrings.NAME, "green/skill/bouncing_flask", 2, EnBouncingFlask.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.STRONG_DEBUFF);
         this.baseMagicNumber = 4;
         this.magicNumber = this.baseMagicNumber;
+        artifactConsumedIfPlayed = 3;
+        if (upgraded)
+            artifactConsumedIfPlayed = 4;
     }
 
     @Override

@@ -84,15 +84,9 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                 case 2:
                     //Turn 3
                     addToList(cardsList, new EnReprogram(), false);
-                    AbstractBossCard c5 = new EnSwiftStrike();
-                    c5.manualCustomDamageModifier = 2;
-                    addToList(cardsList, c5, false);
-                    AbstractBossCard c6 = new EnRebound();
-                    c6.manualCustomDamageModifier = 2;
-                    addToList(cardsList, c6, false);
-                    c = new EnClaw(cB.clawsPlayed * 2);
-                    c.manualCustomDamageModifier = 2;
-                    addToList(cardsList, c, extraUpgrades);
+                    addToList(cardsList, new EnSwiftStrike(), false);
+                    addToList(cardsList, new EnRebound(), false);
+                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), extraUpgrades);
                     //Kunai Proc
                     turn++;
                     break;
@@ -136,23 +130,15 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                     //Turn 3
                     addToList(cardsList, new EnHyperbeam(), false);
                     addToList(cardsList, new EnChargeBattery(), false);
-                    AbstractBossCard c3 = new EnRebound();
                     addToList(cardsList, new EnShame(), false);
-                    c3.manualCustomDamageModifier = 4;
-                    addToList(cardsList, c3, false);
+                    addToList(cardsList,  new EnRebound(), false);
                     turn++;
                     break;
                 case 2:
                     addToList(cardsList, new EnReprogram(), false);
-                    AbstractBossCard c4 = new EnClaw(cB.clawsPlayed * 2);
-                    c4.manualCustomDamageModifier = 2;
-                    addToList(cardsList, c4, true);
-                    c4 = new EnDefendBlue();
-                    c4.manualCustomDamageModifier = 2;
-                    addToList(cardsList, c4, false);
-                    c4 = new EnSwiftStrike();
-                    c4.manualCustomDamageModifier = 2;
-                    addToList(cardsList, c4, false);
+                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), true);
+                    addToList(cardsList,  new EnDefendBlue(), false);
+                    addToList(cardsList, new EnSwiftStrike(), false);
                     //Kunai Proc
                     turn = 0;
                     break;

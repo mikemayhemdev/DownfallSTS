@@ -78,10 +78,7 @@ public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
                     break;
                 case 1:
                     addToList(cardsList, new EnFlameBarrier());
-                    AbstractCard c = new EnBodySlam();
-                    if (AbstractCharBoss.boss.hasPower(BarricadePower.POWER_ID)) ((EnBodySlam) c).manualCustomDamageModifier += 10;
-                    ((EnBodySlam) c).manualCustomDamageModifier += 12;
-                    addToList(cardsList, c);
+                    addToList(cardsList, new EnBodySlam());
                     addToList(cardsList, new EnClumsy());
                     turn++;
                     break;
@@ -93,9 +90,7 @@ public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
                     break;
                 case 3:
                     addToList(cardsList, new EnMetallicize(), extraUpgrades);
-                    c = new EnBodySlam();
-                    if (AbstractCharBoss.boss.hasPower(BarricadePower.POWER_ID)) ((EnBodySlam) c).manualCustomDamageModifier += 10;
-                    addToList(cardsList, c);
+                    addToList(cardsList, new EnBodySlam());
                     addToList(cardsList, new EnDecay());
                     turn++;
                     break;
@@ -108,14 +103,7 @@ public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
                 case 5:
                     addToList(cardsList, new EnMetallicize());
                     addToList(cardsList, new EnGhostlyArmor(), extraUpgrades);
-                    c = new EnBodySlam();
-                    if (AbstractCharBoss.boss.hasPower(BarricadePower.POWER_ID)) ((EnBodySlam) c).manualCustomDamageModifier += 10;
-                    if (extraUpgrades) {
-                        ((EnBodySlam) c).manualCustomDamageModifier += 13;
-                    } else {
-                        ((EnBodySlam) c).manualCustomDamageModifier += 10;
-                    }
-                    addToList(cardsList, c);
+                    addToList(cardsList, new EnBodySlam());
                     turn = 0;
                     looped = true;
                     break;
@@ -125,35 +113,19 @@ public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
                 case 0:
                     addToList(cardsList, new EnPowerThrough());
                     addToList(cardsList, new EnSecondWind());
-                    AbstractCard c = new EnBodySlam();
-                    if (AbstractCharBoss.boss.hasPower(BarricadePower.POWER_ID)) ((EnBodySlam) c).manualCustomDamageModifier += 10;
-
-                    ((EnBodySlam) c).manualCustomDamageModifier += 25;
-                    addToList(cardsList, c, true);
+                    addToList(cardsList, new EnBodySlam(), true);
                     turn++;
                     break;
                 case 1:
                     addToList(cardsList, new EnFlameBarrier());
                     addToList(cardsList, new EnBodySlam());
-                    c = new EnBodySlam();
-                    if (AbstractCharBoss.boss.hasPower(BarricadePower.POWER_ID)) ((EnBodySlam) c).manualCustomDamageModifier += 10;
-
-                    ((EnBodySlam) c).manualCustomDamageModifier += 12;
-                    addToList(cardsList, c);
+                    addToList(cardsList, new EnDecay());
                     turn++;
                     break;
                 case 2:
                     addToList(cardsList, new EnGhostlyArmor(), extraUpgrades);
                     addToList(cardsList, new EnEntrench());
-                    c = new EnBodySlam();
-                    if (AbstractCharBoss.boss.hasPower(BarricadePower.POWER_ID)) ((EnBodySlam) c).manualCustomDamageModifier += 10;
-
-                    if (extraUpgrades) {
-                        ((EnBodySlam) c).manualCustomDamageModifier += 20;
-                    } else {
-                        ((EnBodySlam) c).manualCustomDamageModifier += 26;
-                    }
-                    addToList(cardsList, c);
+                    addToList(cardsList, new EnBodySlam());
                     turn++;
                     turn = 0;
                     break;

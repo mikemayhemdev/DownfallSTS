@@ -32,6 +32,10 @@ public class EnBash extends AbstractBossCard {
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(downfallMod.CHARBOSS_SETUP);
+        artifactConsumedIfPlayed = 1;
+        if (AbstractCharBoss.boss.hasRelic(CBR_ChampionsBelt.ID)){
+            artifactConsumedIfPlayed = 2;
+        }
     }
 
     @Override

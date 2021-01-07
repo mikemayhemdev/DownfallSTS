@@ -72,7 +72,7 @@ public class NeowBoss extends AbstractMonster {
 
     private int turnNum = 0;
 
-    private boolean isRezzing;
+    public boolean isRezzing;
     public boolean offscreen;
     private boolean movingOffscreen;
     private boolean movingBack;
@@ -187,7 +187,7 @@ public class NeowBoss extends AbstractMonster {
         super.usePreBattleAction();
         //  AbstractDungeon.getCurrRoom().cannotLose = true;
         AbstractCharBoss.boss = null;
-        isRezzing = false;
+        isRezzing = true;
         offscreen = false;
         movingOffscreen = false;
         movingBack = false;
@@ -227,9 +227,7 @@ public class NeowBoss extends AbstractMonster {
 
     @Override
     public void renderHealth(SpriteBatch sb) {
-        if (!halfDead) {
-            super.renderHealth(sb);
-        }
+
     }
 
     public void takeTurn() {
@@ -247,11 +245,12 @@ public class NeowBoss extends AbstractMonster {
                 }
             }
             break;
-            case 4:
+            case 4: {
                 playSfx();
                 //if(this.hasPower(NeowInvulnerablePower.POWER_ID))  this.halfDead = true;
                 AbstractDungeon.actionManager.addToBottom(new NeowRezAction(this));
                 break;
+            }
             case 5:
                 if (minion != null) {
                     AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.6F));
@@ -289,22 +288,20 @@ public class NeowBoss extends AbstractMonster {
     }
 
     public void switchToRez() {
-        SlimeboundMod.logger.info("Neow switching to Rez intent");
-        this.setMove((byte) 4, Intent.MAGIC);
-        createIntent();
-        minion = null;
-
+        if (!isRezzing) {
+            this.setMove((byte) 4, Intent.MAGIC);
+            isRezzing = true;
+            createIntent();
+        }
     }
 
 
     public void switchIntentToSelfRez() {
-
         if (!isEscaping) {
             CardCrawlGame.music.fadeOutBGM();
             CardCrawlGame.music.fadeOutTempBGM();
             escape();
         }
-
     }
 
     public void moveForRez() {
@@ -318,23 +315,17 @@ public class NeowBoss extends AbstractMonster {
     }
 
     protected void getMove(int num) {
-
-        if (minion == null) {
-            if (Rezzes >= 3) {
-                switchIntentToSelfRez();
-            } else {
-                switchToRez();
-            }
+        if (isRezzing){
+            this.setMove((byte) 4, Intent.MAGIC);
+        }
+        else if (turnNum == 0) {
+            this.setMove((byte) 5, Intent.BUFF);
+            // halfDead = true;
+            turnNum = 1;
         } else {
-            if (turnNum == 0) {
-                this.setMove((byte) 5, Intent.BUFF);
-                // halfDead = true;
-                turnNum = 1;
-            } else {
-                this.setMove((byte) 3, Intent.DEBUFF);
-                // halfDead = true;
-                turnNum = 0;
-            }
+            this.setMove((byte) 3, Intent.DEBUFF);
+            // halfDead = true;
+            turnNum = 0;
         }
     }
 }

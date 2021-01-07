@@ -26,6 +26,7 @@ public class EnCripplingCloud extends AbstractBossCard {
         this.baseMagicNumber = 5;
         this.magicNumber = this.baseMagicNumber;
         exhaust = true;
+        artifactConsumedIfPlayed = 2;
     }
 
     @Override

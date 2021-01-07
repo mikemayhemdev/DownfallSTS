@@ -28,6 +28,7 @@ public class EnNeutralize extends AbstractBossCard {
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         this.magicValue = 3;
+        artifactConsumedIfPlayed = 1;
     }
 
     @Override

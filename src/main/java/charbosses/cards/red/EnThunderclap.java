@@ -31,6 +31,7 @@ public class EnThunderclap extends AbstractBossCard {
         super(ID, cardStrings.NAME, "red/attack/thunder_clap", 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ALL_ENEMY, AbstractMonster.Intent.ATTACK_DEBUFF);
         this.baseDamage = 4;
         baseMagicNumber = magicNumber = 1;
+        artifactConsumedIfPlayed = 1;
     }
 
     @Override

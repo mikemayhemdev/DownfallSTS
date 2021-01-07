@@ -27,6 +27,8 @@ public class EnWish extends AbstractBossCard {
         super(ID, cardStrings.NAME, "purple/skill/wish", 3, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.PURPLE, CardRarity.RARE, CardTarget.NONE, AbstractMonster.Intent.BUFF);
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
+        strengthGeneratedIfPlayed = 3;
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

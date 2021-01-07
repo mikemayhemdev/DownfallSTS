@@ -25,6 +25,7 @@ public class EnClothesline extends AbstractBossCard {
         this.baseDamage = 12;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
+        artifactConsumedIfPlayed = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

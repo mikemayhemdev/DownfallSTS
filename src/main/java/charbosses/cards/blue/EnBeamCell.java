@@ -26,6 +26,7 @@ public class EnBeamCell extends AbstractBossCard {
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         this.baseDamage = 3;
+        artifactConsumedIfPlayed = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

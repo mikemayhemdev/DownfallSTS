@@ -22,6 +22,7 @@ public class EnUppercut extends AbstractBossCard {
         this.baseDamage = 13;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
+        artifactConsumedIfPlayed = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
