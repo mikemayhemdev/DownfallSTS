@@ -1,9 +1,10 @@
-package expansioncontent.cards;
+package expansioncontent.cards.deprecated;
 
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.actions.CorruptAction;
+import expansioncontent.cards.AbstractExpansionCard;
 
 
 public class Corrupt extends AbstractExpansionCard {
