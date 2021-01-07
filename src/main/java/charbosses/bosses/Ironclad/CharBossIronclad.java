@@ -9,7 +9,6 @@ import charbosses.bosses.Ironclad.NewAge.ArchetypeAct1StatusesNewAge;
 import charbosses.bosses.Ironclad.NewAge.ArchetypeAct2MushroomsNewAge;
 import charbosses.bosses.Ironclad.NewAge.ArchetypeAct3BlockNewAge;
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.anticards.ShieldSmash;
 import charbosses.cards.red.EnBodySlam;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.monsters.*;

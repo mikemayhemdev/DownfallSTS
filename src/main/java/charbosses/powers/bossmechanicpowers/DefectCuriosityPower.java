@@ -1,4 +1,4 @@
-package charbosses.powers;
+package charbosses.powers.bossmechanicpowers;
 
 import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;

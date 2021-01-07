@@ -3,7 +3,7 @@
 // (powered by Fernflower decompiler)
 //
 
-package charbosses.powers;
+package charbosses.powers.bossmechanicpowers;
 
 import charbosses.actions.unique.EnemyChangeStanceAction;
 import charbosses.bosses.AbstractCharBoss;
@@ -35,7 +35,7 @@ public class WatcherAngryPower extends AbstractPower {
         this.ID = POWER_ID;
         this.owner = owner;
         this.updateDescription();
-        this.loadRegion("anger");
+        loadRegion("curiosity");
     }
 
     public void updateDescription() {

@@ -3,15 +3,10 @@ package charbosses.bosses.Defect.NewAge;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.bosses.Defect.CharBossDefect;
-import charbosses.cards.AbstractBossCard;
 import charbosses.cards.blue.*;
 import charbosses.cards.colorless.EnBlind;
-import charbosses.cards.colorless.EnPanicButton;
-import charbosses.cards.colorless.EnSwiftStrike;
-import charbosses.cards.curses.EnClumsy;
-import charbosses.cards.curses.EnShame;
 import charbosses.orbs.AbstractEnemyOrb;
-import charbosses.powers.DefectCuriosityPower;
+import charbosses.powers.bossmechanicpowers.DefectCuriosityPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -28,8 +23,6 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
 
     public ArchetypeAct3OrbsNewAge() {
         super("DF_ARCHETYPE_ORBS", "Orbs");
-        bossMechanicName = bossMechanicString.DIALOG[16];
-        bossMechanicDesc = bossMechanicString.DIALOG[17];
 
         maxHPModifier += 350;
         actNum = 3;

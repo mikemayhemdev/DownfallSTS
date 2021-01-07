@@ -11,6 +11,7 @@ import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnMalfunctioning;
 import charbosses.cards.curses.EnShame;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
+import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
@@ -29,8 +30,6 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
 
     public ArchetypeAct2ClawNewAge() {
         super("DF_ARCHETYPE_CLAW", "Claw");
-        bossMechanicName = bossMechanicString.DIALOG[2];
-        bossMechanicDesc = bossMechanicString.DIALOG[3];
 
         maxHPModifier += 140;
         actNum = 2;
@@ -40,7 +39,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
     public void addedPreBattle() {
         super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ConstructPower(p, p, 1), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DefectAncientConstructPower(p, 1), 1));
         AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new BronzeOrbWhoReallyLikesDefectForSomeReason(-450, 250, 0), true));
         AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new BronzeOrbWhoReallyLikesDefectForSomeReason(-600, 0, 1), true));
 

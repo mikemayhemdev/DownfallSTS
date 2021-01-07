@@ -3,7 +3,7 @@
 // (powered by Fernflower decompiler)
 //
 
-package charbosses.powers;
+package charbosses.powers.bossmechanicpowers;
 
 import charbosses.cards.AbstractBossCard;
 import charbosses.powers.cardpowers.EnemyAccuracyPower;
@@ -31,7 +31,7 @@ public class WatcherDivinityPower extends AbstractPower {
         this.owner = owner;
         this.amount = 0;
         this.updateDescription();
-        this.loadRegion("time");
+        loadRegion("curiosity");
         this.type = PowerType.BUFF;
     }
 

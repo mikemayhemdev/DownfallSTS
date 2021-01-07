@@ -1,21 +1,17 @@
 package charbosses.bosses.Watcher.NewAge;
 
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.bosses.Watcher.ArchetypeBaseWatcher;
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.blue.EnDefendBlue;
 import charbosses.cards.purple.*;
-import charbosses.powers.WatcherCripplePower;
+import charbosses.powers.bossmechanicpowers.WatcherCripplePower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.Watcher;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
 
@@ -24,9 +20,6 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
 
     public ArchetypeAct2CalmNewAge() {
         super("WA_ARCHETYPE_CALM", "Calm");
-        bossMechanicName = bossMechanicString.DIALOG[4];
-        bossMechanicDesc = bossMechanicString.DIALOG[5];
-
         maxHPModifier += 198;
         actNum = 2;
     }

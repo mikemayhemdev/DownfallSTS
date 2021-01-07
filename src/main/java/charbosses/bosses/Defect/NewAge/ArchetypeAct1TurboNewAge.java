@@ -1,12 +1,18 @@
 package charbosses.bosses.Defect.NewAge;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.blue.*;
 import charbosses.cards.curses.EnAged;
 import charbosses.cards.curses.EnShame;
+import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
+import charbosses.powers.bossmechanicpowers.DefectVoidPower;
 import charbosses.relics.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import guardian.powers.ConstructPower;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
@@ -15,12 +21,16 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
 
     public ArchetypeAct1TurboNewAge() {
         super("DF_ARCHETYPE_STREAMLINE", "Streamline");
-        bossMechanicName = bossMechanicString.DIALOG[0];
-        bossMechanicDesc = bossMechanicString.DIALOG[1];
-
         maxHPModifier += 150;
         actNum = 1;
         SlimeboundMod.logger.info("Archetype act num: " + actNum);
+    }
+
+    @Override
+    public void addedPreBattle() {
+        super.addedPreBattle();
+        AbstractCreature p = AbstractCharBoss.boss;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DefectVoidPower(p)));
     }
 
     private int steamBarrierCasts;

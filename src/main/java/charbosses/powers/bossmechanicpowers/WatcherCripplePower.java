@@ -3,7 +3,7 @@
 // (powered by Fernflower decompiler)
 //
 
-package charbosses.powers;
+package charbosses.powers.bossmechanicpowers;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Watcher.CharBossWatcher;
@@ -32,7 +32,7 @@ public class WatcherCripplePower extends AbstractPower {
         this.owner = owner;
         this.amount = newAmount;
         this.updateDescription();
-        this.loadRegion("anger");
+        loadRegion("curiosity");
     }
 
     public void updateDescription() {

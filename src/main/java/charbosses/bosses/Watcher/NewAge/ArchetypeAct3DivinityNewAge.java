@@ -5,13 +5,10 @@ import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnBlind;
 import charbosses.cards.colorless.EnGoodInstincts;
-import charbosses.cards.colorless.EnPanacea;
-import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnNormality;
-import charbosses.cards.curses.EnRegret;
 import charbosses.cards.curses.EnShame;
 import charbosses.cards.purple.*;
-import charbosses.powers.WatcherDivinityPower;
+import charbosses.powers.bossmechanicpowers.WatcherDivinityPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -27,8 +24,6 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
 
     public ArchetypeAct3DivinityNewAge() {
         super("WA_ARCHETYPE_DIVINITY", "Divinity");
-        bossMechanicName = bossMechanicString.DIALOG[22];
-        bossMechanicDesc = bossMechanicString.DIALOG[23];
 
         maxHPModifier += 398;
         actNum = 3;

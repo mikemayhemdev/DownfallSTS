@@ -7,10 +7,6 @@ import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct3OrbsNewAge;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
-import charbosses.powers.DefectCuriosityPower;
-import com.esotericsoftware.spine.AnimationState;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -20,8 +16,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbBlue;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
-import guardian.powers.ConstructPower;
-import slimebound.SlimeboundMod;
 
 public class CharBossDefect extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Defect");

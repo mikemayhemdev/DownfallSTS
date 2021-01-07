@@ -1,5 +1,6 @@
 package charbosses.bosses.Silent.NewAge;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Silent.ArchetypeBaseSilent;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnSadisticNature;
@@ -7,6 +8,8 @@ import charbosses.cards.colorless.EnShiv;
 import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnRegret;
 import charbosses.cards.green.*;
+import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
+import charbosses.powers.bossmechanicpowers.SilentShivTimeEaterPower;
 import charbosses.powers.general.PoisonProtectionPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -20,8 +23,6 @@ public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
 
     public ArchetypeAct3PoisonNewAge() {
         super("SI_POISON_ARCHETYPE", "Poison");
-        bossMechanicName = bossMechanicString.DIALOG[14];
-        bossMechanicDesc = bossMechanicString.DIALOG[15];
 
         maxHPModifier += 350;
         actNum = 3;
@@ -32,6 +33,7 @@ public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
         super.addedPreBattle();
         AbstractCreature p = AbstractDungeon.player;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PoisonProtectionPower(p)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, new SilentPoisonPower(AbstractCharBoss.boss)));
 
     }
 

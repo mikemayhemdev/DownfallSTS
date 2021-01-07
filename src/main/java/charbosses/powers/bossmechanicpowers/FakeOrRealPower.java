@@ -1,4 +1,4 @@
-package charbosses.powers;
+package charbosses.powers.bossmechanicpowers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import charbosses.bosses.AbstractCharBoss;
@@ -16,8 +16,6 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.combat.SmokeBlurEffect;
-import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
 import downfall.downfallMod;
 import theHexaghost.util.TextureLoader;
 

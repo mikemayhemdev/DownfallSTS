@@ -9,6 +9,7 @@ import charbosses.cards.curses.EnShame;
 import charbosses.cards.red.*;
 import charbosses.cards.status.EnWound;
 import charbosses.monsters.Fortification;
+import charbosses.powers.bossmechanicpowers.IroncladFortificationPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
@@ -25,8 +26,6 @@ public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
 
     public ArchetypeAct3BlockNewAge() {
         super("IC_BLOCK_ARCHETYPE", "Block");
-        bossMechanicName = bossMechanicString.DIALOG[12];
-        bossMechanicDesc = bossMechanicString.DIALOG[13];
 
         maxHPModifier += 250;
         actNum = 3;
@@ -36,6 +35,7 @@ public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
     public void addedPreBattle() {
         super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IroncladFortificationPower(p)));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BarricadePower(p)));
         AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new Fortification(), true));
 

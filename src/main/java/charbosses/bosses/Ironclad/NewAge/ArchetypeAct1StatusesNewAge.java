@@ -1,5 +1,6 @@
 package charbosses.bosses.Ironclad.NewAge;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.colorless.EnDramaticEntrance;
 import charbosses.cards.curses.EnClumsy;
@@ -9,8 +10,12 @@ import charbosses.cards.red.*;
 import charbosses.cards.status.EnBurn;
 import charbosses.cards.status.EnDazed;
 import charbosses.cards.status.EnWound;
+import charbosses.powers.bossmechanicpowers.DefectVoidPower;
+import charbosses.powers.bossmechanicpowers.IroncladStatusPower;
 import charbosses.relics.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
@@ -24,11 +29,16 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
 
     public ArchetypeAct1StatusesNewAge() {
         super("IC_STATUS_ARCHETYPE", "Status");
-        bossMechanicName = bossMechanicString.DIALOG[24];
-        bossMechanicDesc = bossMechanicString.DIALOG[25];
 
         maxHPModifier += 70;
         actNum = 1;
+    }
+
+    @Override
+    public void addedPreBattle() {
+        super.addedPreBattle();
+        AbstractCreature p = AbstractCharBoss.boss;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IroncladStatusPower(p)));
     }
 
     public void initialize() {

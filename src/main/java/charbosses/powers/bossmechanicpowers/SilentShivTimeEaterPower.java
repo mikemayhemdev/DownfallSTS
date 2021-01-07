@@ -3,7 +3,7 @@
 // (powered by Fernflower decompiler)
 //
 
-package charbosses.powers;
+package charbosses.powers.bossmechanicpowers;
 
 import charbosses.actions.common.EnemyMakeTempCardInHandAction;
 import charbosses.bosses.AbstractCharBoss;
@@ -25,19 +25,19 @@ import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.TimeWarpTurnEndEffect;
 import java.util.Iterator;
 
-public class ShivTimeEaterPower extends AbstractPower {
-    public static final String POWER_ID = "downfall:ShivTimeEaterPower";
+public class SilentShivTimeEaterPower extends AbstractPower {
+    public static final String POWER_ID = "downfall:SilentShivTimeEaterPower";
     private static final PowerStrings powerStrings;
     public static final String NAME;
     public static final String[] DESC;
 
-    public ShivTimeEaterPower(AbstractCreature owner) {
+    public SilentShivTimeEaterPower(AbstractCreature owner) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = 0;
         this.updateDescription();
-        this.loadRegion("time");
+        loadRegion("curiosity");
         this.type = PowerType.BUFF;
     }
 
