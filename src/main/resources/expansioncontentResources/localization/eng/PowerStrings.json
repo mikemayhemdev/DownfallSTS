@@ -8,7 +8,7 @@
       "Gain a random #yUpgraded #yBoss card at the start of next turn. NL It costs #b0 until played.",
       "Gain a random #yUpgradedAutomaton card at the start of your next #b"
     ]
-  }
+  },
   "expansioncontent:AwakenedOnePower": {
     "NAME": "Dark Ritual",
     "DESCRIPTIONS": [
@@ -60,6 +60,13 @@
       "#yPoly #yBeam+ will be played at the start of your next turn. ",
       "#yPoly #yBeam+ will be played at the start of your next #b",
       " turns."
+    ]
+  },
+  "expansioncontent:AddCopyPower": {
+    "NAME": "Potency",
+    "DESCRIPTIONS": [
+      "Add ",
+      " into your hand at the start of your next turn."
     ]
   }
 }

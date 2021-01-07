@@ -5,7 +5,10 @@
   },
   "expansioncontent:GuardianWhirl": {
     "NAME": "Guardian Whirl",
-    "DESCRIPTION": "expansioncontent:Boss - Guardian. NL Deal !D! damage to ALL enemies 4 times. NL Exhaust."
+    "DESCRIPTION": "expansioncontent:Boss - Guardian. NL Can only be played if you have at least 20 Block. NL Deal !D! damage to ALL enemies 4 times. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "I do not have enough Block."
+    ]
   },
   "expansioncontent:DefensiveMode": {
     "NAME": "Defensive Mode",
@@ -97,9 +100,12 @@
     "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Ancients. NL Gain 1 Dexterity and 1 Artifact. NL Add a random Power card to your hand. It costs 0 this turn. NL Exhaust."
   },
   "expansioncontent:PolyBeam": {
-    "NAME": "Twin Beam",
-    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. NL Deal !D! damage twice to a random enemy at the start of your next turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Exhaust."
+    "NAME": "Donu Beam",
+    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. NL Next turn, add a *Deca *Shield into your hand. NL Exhaust."
+  },
+  "expansioncontent:DecaShield": {
+    "NAME": "Deca Shield",
+    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Gain !B! Block. NL Next turn, add a *Donu *Beam with Ethereal into your hand. NL Exhaust."
   },
   "expansioncontent:PrepareCrush": {
     "NAME": "Prepare Crush",

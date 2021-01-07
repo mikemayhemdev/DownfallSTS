@@ -39,6 +39,15 @@ public class GuardianWhirl extends AbstractExpansionCard {
 
     }
 
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if (p.currentBlock < 20) {
+            cantUseMessage = EXTENDED_DESCRIPTION[0];
+            return false;
+        }
+        return super.canUse(p, m);
+    }
+
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
