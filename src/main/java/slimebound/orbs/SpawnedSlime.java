@@ -316,9 +316,6 @@ public abstract class SpawnedSlime
                 //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new GreedRespawnPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new SplitGreed()));
 
-            } else {
-                if (AbstractDungeon.player.hasPower(DuplicatedFormNoHealPower.POWER_ID))
-                    AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, AbstractDungeon.player.getPower(DuplicatedFormNoHealPower.POWER_ID), 4));
             }
         }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
