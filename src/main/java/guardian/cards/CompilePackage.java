@@ -27,7 +27,7 @@ public class CompilePackage extends AbstractGuardianCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     //TUNING CONSTANTS
     private static final int SOCKETS = 0;

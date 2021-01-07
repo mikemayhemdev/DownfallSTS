@@ -91,17 +91,17 @@ public class PackageConstruct extends AbstractGuardianCard {
         tmp = new ModeShift();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-        tmp.modifyCostForCombat(-1);
+      //  tmp.modifyCostForCombat(-1);
 
         tmp = new OmegaCannon();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-        tmp.modifyCostForCombat(-1);
+      //  tmp.modifyCostForCombat(-1);
 
         tmp = new HammerDown();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-        tmp.modifyCostForCombat(-1);
+      //  tmp.modifyCostForCombat(-1);
 
         AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect((AbstractCard) derp.get(0), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
         AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect((AbstractCard) derp.get(1), (float) Settings.WIDTH * .75F, (float) Settings.HEIGHT / 2.0F));
