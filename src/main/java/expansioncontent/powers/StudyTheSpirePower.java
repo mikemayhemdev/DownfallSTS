@@ -51,10 +51,19 @@ public class StudyTheSpirePower extends AbstractPower implements NonStackablePow
     }
 
     public void updateDescription() {
-        if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0];
-        } else {
-            this.description = (DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
+        if (upgraded) {
+            if (this.amount == 1) {
+                this.description = DESCRIPTIONS[3];
+            } else {
+                this.description = (DESCRIPTIONS[4] + this.amount + DESCRIPTIONS[2]);
+            }
+        }
+        else {
+            if (this.amount == 1) {
+                this.description = DESCRIPTIONS[0];
+            } else {
+                this.description = (DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
+            }
         }
     }
 

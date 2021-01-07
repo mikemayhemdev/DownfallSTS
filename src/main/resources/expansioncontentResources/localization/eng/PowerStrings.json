@@ -1,153 +1,19 @@
 {
-  "expansioncontent:StudyAutomatonPower": {
-    "NAME": "Study Automaton",
+  "expansioncontent:StudyTheSpirePower": {
+    "NAME": "Study The Spire",
     "DESCRIPTIONS": [
-      "Gain a random Automaton card at the start of next turn. NL It costs #b0 until played.",
+      "Gain a random #yBoss card at the start of next turn. NL It costs #b0 until played.",
       "Gain a random Automaton card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
+      " turns. NL They cost #b0 until played.",
+      "Gain a random #yUpgraded #yBoss card at the start of next turn. NL It costs #b0 until played.",
+      "Gain a random #yUpgradedAutomaton card at the start of your next #b"
     ]
-  },
-  "expansioncontent:StudyAutomatonPowerUpgraded": {
-    "NAME": "Study Automaton+",
-    "DESCRIPTIONS": [
-      "Gain a random #yUpgraded Automaton card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random #yUpgraded Automaton card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyAwakenedPower": {
-    "NAME": "Study Awakened One",
-    "DESCRIPTIONS": [
-      "Gain a random Awakened One card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random Awakened One card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyAwakenedPowerUpgraded": {
-    "NAME": "Study Awakened One+",
-    "DESCRIPTIONS": [
-      "Gain a random #yUpgraded Awakened One card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random #yUpgraded Awakened One card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
+  }
   "expansioncontent:AwakenedOnePower": {
     "NAME": "Dark Ritual",
     "DESCRIPTIONS": [
       "Gain #b",
       " #yStrength if this enemy does not attack on its turn."
-    ]
-  },
-  "expansioncontent:StudyChampPower": {
-    "NAME": "Study Champ",
-    "DESCRIPTIONS": [
-      "Gain a random Champ card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random Champ card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyChampPowerUpgraded": {
-    "NAME": "Study Champ+",
-    "DESCRIPTIONS": [
-      "Gain a random #yUpgraded Champ card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random #yUpgraded Champ card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyCollectorPower": {
-    "NAME": "Study Collector",
-    "DESCRIPTIONS": [
-      "Gain a random Collector card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random Collector card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyCollectorPowerUpgraded": {
-    "NAME": "Study Collector+",
-    "DESCRIPTIONS": [
-      "Gain a random #yUpgraded Collector card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random #yUpgraded Collector card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyGuardianPower": {
-    "NAME": "Study Guardian",
-    "DESCRIPTIONS": [
-      "Gain a random Guardian card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random Guardian card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyGuardianPowerUpgraded": {
-    "NAME": "Study Guardian+",
-    "DESCRIPTIONS": [
-      "Gain a random #yUpgraded Guardian card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random #yUpgraded Guardian card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyHexaghostPower": {
-    "NAME": "Study Hexaghost",
-    "DESCRIPTIONS": [
-      "Gain a random Hexaghost card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random Hexaghost card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyHexaghostPowerUpgraded": {
-    "NAME": "Study Hexaghost+",
-    "DESCRIPTIONS": [
-      "Gain a random #yUpgraded Hexaghost card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random #yUpgraded Hexaghost card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyShapesPower": {
-    "NAME": "Study Donu & Deca",
-    "DESCRIPTIONS": [
-      "Gain a random Donu & Deca card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random Donu & Deca card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyShapesPowerUpgraded": {
-    "NAME": "Study Donu & Deca+",
-    "DESCRIPTIONS": [
-      "Gain a random #yUpgraded Donu & Deca card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random #yUpgraded Donu & Deca card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyTimeEaterPower": {
-    "NAME": "Study Time Eater",
-    "DESCRIPTIONS": [
-      "Gain a random Time Eater card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random Time Eater card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudyTimeEaterPowerUpgraded": {
-    "NAME": "Study Time Eater+",
-    "DESCRIPTIONS": [
-      "Gain a random #yUpgraded Time Eater card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random #yUpgraded Time Eater card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudySlimeBossPower": {
-    "NAME": "Study Slime Boss",
-    "DESCRIPTIONS": [
-      "Gain a random Slime Boss card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random Slime Boss card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
-    ]
-  },
-  "expansioncontent:StudySlimeBossPowerUpgraded": {
-    "NAME": "Study Slime Boss+",
-    "DESCRIPTIONS": [
-      "Gain a random #yUpgraded Slime Boss card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random #yUpgraded Slime Boss card at the start of your next #b",
-      " turns. NL They cost #b0 until played."
     ]
   },
   "expansioncontent:AwakenDeathPower": {
