@@ -126,7 +126,7 @@
   "Slimebound:Repurpose": {
     "NAME": "Repurpose",
     "DESCRIPTION": "slimeboundmod:Absorb - Split into a random slimeboundmod:Specialist Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorb - Split into a random slimeboundmod:Specialist Slime. NL Command. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorb - Split into a random slimeboundmod:Specialist Slime. NL slimeboundmod:Command. NL Exhaust."
   },
   "Slimebound:RollThrough": {
     "NAME": "Roll Through",
