@@ -20,7 +20,7 @@
   "Slimebound:SamplingLick": {
     "NAME": "Sampling Lick",
     "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL Gain !B! Block. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop NL Gain !B! Block. NL Draw a card. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL Gain !B! Block. NL Draw a card. NL Exhaust."
   },
   "Slimebound:Replication": {
     "NAME": "Replication",
