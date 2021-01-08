@@ -5,6 +5,7 @@ import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.blue.*;
 import charbosses.cards.curses.EnAged;
 import charbosses.cards.curses.EnShame;
+import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
 import charbosses.powers.bossmechanicpowers.DefectVoidPower;
 import charbosses.relics.*;
@@ -18,6 +19,8 @@ import slimebound.SlimeboundMod;
 import java.util.ArrayList;
 
 public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
+
+    int darkOrbsChanneled = 0;
 
     public ArchetypeAct1TurboNewAge() {
         super("DF_ARCHETYPE_STREAMLINE", "Streamline");
@@ -56,6 +59,7 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
                 case 0:
                     addToList(cardsList, new EnBuffer(), false);
                     addToList(cardsList, new EnDoomAndGloom(), extraUpgrades);
+                    darkOrbsChanneled += 1;
                     addToList(cardsList, new EnShame(), false);
                     turn++;
                     break;
@@ -87,6 +91,10 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
             switch (turn) {
                 case 0:
                     addToList(cardsList, new EnDoomAndGloom(), extraUpgrades);
+                    darkOrbsChanneled += 1;
+                    if (darkOrbsChanneled > 3 && AbstractCharBoss.boss.orbs.get(0) instanceof AbstractEnemyOrb) {
+                        ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeOverride = true;
+                    }
                     addToList(cardsList, new EnDefendBlue(), extraUpgrades);
                     addToList(cardsList, new EnShame(), false);
                     turn++;
@@ -115,6 +123,7 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
     @Override
     public void initializeBonusRelic() {
         addRelic(new CBR_SymbioticVirus());
+        darkOrbsChanneled += 1;
     }
 
 }

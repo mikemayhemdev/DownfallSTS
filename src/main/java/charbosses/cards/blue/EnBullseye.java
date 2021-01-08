@@ -1,6 +1,8 @@
 package charbosses.cards.blue;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
+import charbosses.orbs.AbstractEnemyOrb;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -10,6 +12,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.LockOnPower;
 
 public class EnBullseye extends AbstractBossCard {
@@ -29,6 +32,18 @@ public class EnBullseye extends AbstractBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                for (AbstractOrb o : AbstractCharBoss.boss.orbs) {
+                    if (o instanceof AbstractEnemyOrb) {
+                        ((AbstractEnemyOrb) o).pretendLockOn = false;
+                        o.applyFocus();
+                    }
+                }
+            }
+        });
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         this.addToBot(new ApplyPowerAction(p, m, new LockOnPower(p, this.magicNumber), this.magicNumber));
     }
