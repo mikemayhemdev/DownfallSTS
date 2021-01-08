@@ -20,7 +20,7 @@ public class PrepareCrush extends AbstractExpansionCard {
 
 
     private static final int BLOCK = 10;
-    private static final int UPGRADE_BLOCK = 4;
+    private static final int UPGRADE_BLOCK = 5;
     private static final int MAGIC = 3;
 
     public PrepareCrush() {

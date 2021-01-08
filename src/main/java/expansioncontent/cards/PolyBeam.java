@@ -16,8 +16,8 @@ import expansioncontent.powers.AddCopyPower;
 public class PolyBeam extends AbstractExpansionCard {
     public final static String ID = makeID("PolyBeam");
 
-    private static final int DAMAGE = 8;
-    private static final int UPGRADE_DAMAGE = 2;
+    private static final int DAMAGE = 9;
+    private static final int UPGRADE_DAMAGE = 3;
 
     public PolyBeam(boolean noHover) {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
