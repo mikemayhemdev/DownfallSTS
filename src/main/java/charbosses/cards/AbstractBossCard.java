@@ -73,6 +73,8 @@ public abstract class AbstractBossCard extends AbstractCard {
     public int blockGeneratedIfPlayed = 0;
     public int clawDamageGeneratedIfPlayed = 0;
 
+    public int channelsOrbsAmt = 0;
+
     public static final String[] TEXT;
 
     public int newPrio = 0;

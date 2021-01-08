@@ -16,6 +16,7 @@ import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
 import charbosses.cards.red.EnBodySlam;
 import charbosses.core.EnemyEnergyManager;
+import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.orbs.EnemyDark;
 import charbosses.orbs.EnemyEmptyOrbSlot;
 import charbosses.relics.AbstractCharbossRelic;
@@ -503,7 +504,32 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                     }
                 }
 
-                //TODO - integrate Orb intents into this same system
+                //Vex's Orb Calc Playground
+                //What needs to be done here?
+                //AbstractEnemyOrb evokeOverride, evokeMult and pretendFocus are all OK to use.
+                //The only issue is that since Defect went New Age, the hardcoded fixes were gone.
+                //This is a better way to implement em.
+                //Looks like the previous implementations of this thing use new variables in AbstractBossCard that determine what toggles they need to do.
+                //In our case, what are the offending effects?
+                //- Any channel effect needs to set evokeOverride on the AbstractBossOrb it will replace, if it does so.
+                //- Any Focus changing effect needs to temporarily set pretendFocus on the AbstractBossOrbs. UNLESS they are going to be Evoked before the Focus change occurs (I hope that doesn't happen)
+                //- Any manual Evoke effect needs to set evokeOverride and evokeMult if applicable on the AbstractBossOrb it evokes.
+                //- THEN, if it was a manual Evoke, the following cards need to know that there will be an open orb slot, so they don't incorrectly show another orb being evoked.
+                //- Fuck!! Bullseye. That needs to set a new boolean in AbstractEnemyOrb that adds a +50% to the numerical prediction.
+                //That should be all.
+
+                //Step 1 - add a channelsOrbsAmount to AbstractCharBossCard.
+                //Step 2 - Check against it in this iteration
+                if (c.channelsOrbsAmt > 0) {
+                    for (int q = 0; q < c.channelsOrbsAmt; q++) {
+                        if (AbstractCharBoss.boss.orbs.get(q) instanceof AbstractEnemyOrb) {
+                            ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(q)).evokeOverride = true;
+                        }
+                    }
+                }
+
+
+
                 //TODO - Sadistic Nature for Act 3 Silent
 
             }

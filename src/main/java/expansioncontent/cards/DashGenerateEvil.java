@@ -23,7 +23,7 @@ public class DashGenerateEvil extends AbstractExpansionCard {
 
     public DashGenerateEvil() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-
+        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_heart.png", "expansioncontentResources/images/1024/bg_boss_heart.png");
         baseBlock = BLOCK;
         baseDamage = DAMAGE;
         this.exhaust = true;

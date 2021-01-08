@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import downfall.downfallMod;
 import expansioncontent.expansionContentMod;
+import expansioncontent.patches.CardColorEnumPatch;
 
 import java.util.ArrayList;
 
@@ -31,7 +32,7 @@ public abstract class AbstractExpansionCard extends CustomCard {
 
     public AbstractExpansionCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(id),
-                cost, "ERROR", type, CardColor.COLORLESS, rarity, target);
+                cost, "ERROR", type, CardColorEnumPatch.CardColorPatch.BOSS_CARD, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
         name = NAME = cardStrings.NAME;
         originalName = NAME;

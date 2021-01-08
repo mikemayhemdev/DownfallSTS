@@ -16,6 +16,7 @@ public class GuardianWhirl extends AbstractExpansionCard {
 
     public GuardianWhirl() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_guardian.png", "expansioncontentResources/images/1024/bg_boss_guardian.png");
 
         tags.add(expansionContentMod.STUDY_GUARDIAN);
         tags.add(expansionContentMod.STUDY);
@@ -37,6 +38,15 @@ public class GuardianWhirl extends AbstractExpansionCard {
             //atb(new WaitAction(0.1f));
         }
 
+    }
+
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if (p.currentBlock < 20) {
+            cantUseMessage = EXTENDED_DESCRIPTION[0];
+            return false;
+        }
+        return super.canUse(p, m);
     }
 
     public void upgrade() {

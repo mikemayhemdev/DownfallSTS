@@ -16,27 +16,19 @@ public class Chronoboost extends AbstractExpansionCard {
 
     public Chronoboost() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-
         tags.add(expansionContentMod.STUDY_TIMEEATER);
         tags.add(expansionContentMod.STUDY);
-
+        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_timeeater.png", "expansioncontentResources/images/1024/bg_boss_timeeater.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        if (upgraded) {
-            atb(new ApplyPowerAction(p, p, new ChronoBoostPlusPower(p, p, 1), 1));
-        } else {
             atb(new ApplyPowerAction(p, p, new ChronoBoostPower(p, p, 1), 1));
-        }
-
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBaseCost(1);
         }
     }
 
