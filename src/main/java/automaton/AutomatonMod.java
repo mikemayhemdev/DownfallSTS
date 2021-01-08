@@ -339,6 +339,7 @@ public class AutomatonMod implements
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         FunctionHelper.doStuff = false;
+        FunctionHelper.functionsCompiledThisCombat = 0;
         if (FunctionHelper.held != null) {
             FunctionHelper.held.clear();
         }
