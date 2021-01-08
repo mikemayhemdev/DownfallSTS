@@ -5,7 +5,8 @@
       " Upgraded ",
       "At the start of combat, Unknown cards transform into other random cards from the chosen classes that satisfy certain constraints.",
       " NL Chosen classes:",
-      "At the start of combat, Unknown cards transform into other random cards from ANY other class (other than basic Strikes and Defends) that satisfy certain constraints."
+      "At the start of combat, Unknown cards transform into other random cards from ANY other class (other than basic Strikes and Defends) that satisfy certain constraints.",
+      "At the start of combat, Unknown cards transform into other random cards from other classes (other than basic Strikes and Defends) that satisfy certain constraints."
     ]
   },
   "sneckomod:UnknownClass": {
