@@ -3,6 +3,7 @@ package charbosses.bosses.Defect.NewAge;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.bosses.Defect.CharBossDefect;
+import charbosses.cards.AbstractBossCard;
 import charbosses.cards.blue.*;
 import charbosses.cards.colorless.EnBlind;
 import charbosses.orbs.AbstractEnemyOrb;
@@ -101,21 +102,15 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     // Dark Lightning
                     addToList(cardsList, new EnMulticast(2));
                     // Evokes Dark
-                    cB.orbsAsEn().get(1).evokeOverride = true;
-                    cB.orbsAsEn().get(1).evokeMult = 2;
+                    cB.orbsAsEn().get(2).evokeOverride = true;
+                    cB.orbsAsEn().get(2).evokeMult = 2;
                     // Lightning
                     turn++;
                     break;
                 case 2:
                     //Turn 3
                     //Lightning
-                    addToList(cardsList, new EnBullseye(), true); // NOOOOOOOOOOOOOO
-                    for (AbstractOrb o : AbstractCharBoss.boss.orbs) {
-                        if (o instanceof AbstractEnemyOrb) {
-                            ((AbstractEnemyOrb) o).pretendLockOn = true;
-                            o.applyFocus();
-                        }
-                    }
+                    addToList(cardsList, new EnBarrage(), true); // Bullseye was here, but Bullseye is a cursed thing
                     addToList(cardsList, new EnColdSnap());
                     //Lightning Frost
                     addToList(cardsList, new EnLeap());
@@ -125,6 +120,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     //Turn 4
                     //Lightning Frost
                     addToList(cardsList, new EnStorm(), false);
+                    AbstractBossCard.fakeStormPower = true;
                     addToList(cardsList, new EnDefragment(), true);
                     increasePretendFocus(2);
                     //Lightning Frost Lightning
@@ -139,13 +135,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     //Lightning Frost Lightning
                     addToList(cardsList, new EnLeap());
                     addToList(cardsList, new EnChargeBattery());
-                    addToList(cardsList, new EnBullseye(), false); // NOOOOO.. also Bullseye goes from upgraded to not-upgraded!?
-                    for (AbstractOrb o : AbstractCharBoss.boss.orbs) {
-                        if (o instanceof AbstractEnemyOrb) {
-                            ((AbstractEnemyOrb) o).pretendLockOn = true;
-                            o.applyFocus();
-                        }
-                    }
+                    addToList(cardsList, new EnBarrage(), true); //Vex replaced Bullseye with Barrage+ here.
                     turn++;
                     break;
                 case 1:

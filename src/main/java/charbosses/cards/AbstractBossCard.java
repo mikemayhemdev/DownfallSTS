@@ -73,10 +73,6 @@ public abstract class AbstractBossCard extends AbstractCard {
     public int blockGeneratedIfPlayed = 0;
     public int clawDamageGeneratedIfPlayed = 0;
 
-    public int channelsOrbsAmt = 0;
-    public int addFocusAmt = 0;
-    public int evokeOrbAmt = 0;
-
     public static final String[] TEXT;
 
     public int newPrio = 0;
@@ -84,6 +80,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     public int manualCustomDamageModifier = 0;
     public float manualCustomDamageModifierMult = 1;
     public boolean manualCustomVulnModifier = false;
+    public static boolean fakeStormPower = false;
     //TODO - Does Vuln get actually calculated anywhere?  this variable does not appear to be referenced
 
 
@@ -859,7 +856,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     public boolean alwaysDisplayText = false;
 
     public String overrideIntentText() {
-        if (this.type == CardType.POWER && owner.hasPower(EnemyStormPower.POWER_ID)) {
+        if (this.type == CardType.POWER && (owner.hasPower(EnemyStormPower.POWER_ID) || fakeStormPower)) {
             return "(" + ( 3 + AbstractEnemyOrb.masterPretendFocus + getFocusAmountSafe()) + ")";
         }
         if (this.isMultiDamage) {
