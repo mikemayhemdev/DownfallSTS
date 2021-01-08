@@ -80,29 +80,54 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
         if (!looped) {
             switch (turn) {
                 case 0:
+                    // No Orbs
                     addToList(cardsList, new EnRainbow());
                     addToList(cardsList, new EnReinforcedBody(), extraUpgrades);
                     addToList(cardsList, new EnChargeBattery());
+                    // Lightning Frost Dark
                     turn++;
                     break;
                 case 1:
                     //Turn 2
+                    // Lightning Frost Dark
                     addToList(cardsList, new EnZap(), true);
+                    //Evokes Lightning
+                    cB.orbs.get(0).evokeOverride = true;
+                    // Frost Dark Lightning
                     addToList(cardsList, new EnDualcast());
+                    // Evokes Frost
+                    cB.orbs.get(1).evokeOverride = true;
+                    cB.orbs.get(1).evokeMult = 2;
+                    // Dark Lightning
                     addToList(cardsList, new EnMulticast(2));
+                    // Evokes Dark
+                    cB.orbs.get(1).evokeOverride = true;
+                    cB.orbs.get(1).evokeMult = 2;
+                    // Lightning
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnBullseye(), true);
+                    //Turn 3
+                    //Lightning
+                    addToList(cardsList, new EnBullseye(), true); // NOOOOOOOOOOOOOO
+                    for (AbstractOrb o : AbstractCharBoss.boss.orbs) {
+                        if (o instanceof AbstractEnemyOrb) {
+                            ((AbstractEnemyOrb) o).pretendLockOn = true;
+                            o.applyFocus();
+                        }
+                    }
                     addToList(cardsList, new EnColdSnap());
+                    //Lightning Frost
                     addToList(cardsList, new EnLeap());
                     turn++;
                     break;
                 case 3:
                     //Turn 4
+                    //Lightning Frost
                     addToList(cardsList, new EnStorm(), false);
                     addToList(cardsList, new EnDefragment(), true);
                     increasePretendFocus(2);
+                    //Lightning Frost Lightning
                     addToList(cardsList, new EnBlind(), extraUpgrades);
                     turn = 0;
                     looped = true;
@@ -111,20 +136,39 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
         } else {
             switch (turn) {
                 case 0:
+                    //Lightning Frost Lightning
                     addToList(cardsList, new EnLeap());
                     addToList(cardsList, new EnChargeBattery());
-                    addToList(cardsList, new EnBullseye(), false);
+                    addToList(cardsList, new EnBullseye(), false); // NOOOOO.. also Bullseye goes from upgraded to not-upgraded!?
+                    for (AbstractOrb o : AbstractCharBoss.boss.orbs) {
+                        if (o instanceof AbstractEnemyOrb) {
+                            ((AbstractEnemyOrb) o).pretendLockOn = true;
+                            o.applyFocus();
+                        }
+                    }
                     turn++;
                     break;
                 case 1:
+                    //Lightning Frost Lightning
                     addToList(cardsList, new EnBlind(), true);
                     addToList(cardsList, new EnDualcast());
+                    //Evokes Lightning
+                    cB.orbs.get(0).evokeOverride = true;
+                    cB.orbs.get(0).evokeMult = 2;
+                    //Lightning Frost
                     addToList(cardsList, new EnMulticast(3));
+                    // Evokes Frost!
+                    cB.orbs.get(1).evokeOverride = true;
+                    cB.orbs.get(1).evokeMult = 3;
+                    // Lightning
                     turn++;
                     break;
                 case 2:
+                    // Lightning
                     addToList(cardsList, new EnColdSnap(), false);
+                    //Lightning Frost
                     addToList(cardsList, new EnZap(), true);
+                    // Lightning Frost Lightning. Perfect loop!
                     addToList(cardsList, new EnReinforcedBody(), extraUpgrades);
                     turn = 0;
                     looped = true;
