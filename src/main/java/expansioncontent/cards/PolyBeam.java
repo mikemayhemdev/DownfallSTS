@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -26,7 +27,11 @@ public class PolyBeam extends AbstractExpansionCard {
         tags.add(expansionContentMod.STUDY);
         baseDamage = DAMAGE;
         this.exhaust = true;
-        if (!noHover) cardsToPreview = new DecaShield(true);
+        if (!noHover) {
+            AbstractCard q = new DecaShield(true);
+            if (upgraded) q.upgrade();
+            cardsToPreview = q;
+        }
     }
 
     public PolyBeam() {

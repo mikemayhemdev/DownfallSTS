@@ -24,6 +24,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.city.Champ;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
@@ -297,6 +298,17 @@ public abstract class AbstractChampCard extends CustomCard {
         }
     }
 
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        ChampTextHelper.colorCombos(this, false);
+    }
+
+    @Override
+    public void onMoveToDiscard() {
+        super.onMoveToDiscard();
+        ChampTextHelper.colorCombos(this, true);
+    }
 
     @Override
     public void initializeDescription() {
