@@ -299,7 +299,7 @@
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "Serve & Protect",
-    "DESCRIPTION": "Gain !B! Block and 1 bronze:Blur each Slime. NL slimeboundmod:Absorb all Slimes. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block and 1 bronze:Blur for each Slime. NL slimeboundmod:Absorb all Slimes. NL Exhaust."
   },
   "Slimebound:SplitBruiser": {
     "NAME": "Split: Bruiser",
