@@ -179,7 +179,7 @@
   "Slimebound:ItLooksTasty": {
     "NAME": "It Looks Tasty",
     "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Add a *Lick to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Add a *Lick to your hand."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Add a *Lick+ to your hand."
   },
   "Slimebound:AcidTongue": {
     "NAME": "Spreading Slime",
