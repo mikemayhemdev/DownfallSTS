@@ -49,7 +49,9 @@ public class PretendHexWheelPower extends AbstractPower implements NonStackableP
                     public void update() {
                         isDone = true;
                         AbstractMonster m = AbstractDungeon.getRandomMonster();
-                        addToTop(new DamageAction(m, new DamageInfo(owner, 6, DamageInfo.DamageType.THORNS), AttackEffect.FIRE));
+                        if (m != null && !m.halfDead) {
+                            addToTop(new DamageAction(m, new DamageInfo(owner, 6, DamageInfo.DamageType.THORNS), AttackEffect.FIRE));
+                        }
                     }
                 });
             }
