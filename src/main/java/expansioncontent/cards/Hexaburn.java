@@ -16,16 +16,17 @@ public class Hexaburn extends AbstractExpansionCard {
 
         tags.add(expansionContentMod.STUDY_HEXAGHOST);
         tags.add(expansionContentMod.STUDY);
+        baseMagicNumber = magicNumber = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new PretendHexWheelPower(5));
+        applyToSelf(new PretendHexWheelPower(magicNumber));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeMagicNumber(-2);
         }
     }
 

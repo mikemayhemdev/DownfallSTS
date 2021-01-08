@@ -71,14 +71,14 @@ public class expansionContentMod implements
     public static boolean teleportToWheelTime = false;
     private static String modID;
 
-    public static Color BOSS_CARD_COLOR = new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1); //TODO: Change color
+    public static Color BOSS_CARD_COLOR = new Color(0.5F, 0F, 0F, 1);
 
     public expansionContentMod() {
         BaseMod.subscribe(this);
 
         modID = "expansioncontent";
 
-        BaseMod.addColor(CardColorEnumPatch.CardColorPatch.BOSS_CARD,
+        BaseMod.addColor(CardColorEnumPatch.CardColorPatch.BOSS,
                 BOSS_CARD_COLOR, BOSS_CARD_COLOR, BOSS_CARD_COLOR, BOSS_CARD_COLOR, BOSS_CARD_COLOR, BOSS_CARD_COLOR, BOSS_CARD_COLOR,
                 "champResources/images/512/bg_attack_colorless.png", "champResources/images/512/bg_skill_colorless.png",
                 "champResources/images/512/bg_power_colorless.png", "champResources/images/512/card_champ_orb.png",

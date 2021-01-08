@@ -22,7 +22,7 @@ public class QuickStudy extends AbstractExpansionCard {
 
     public QuickStudy() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_heart.png", "expansioncontentResources/images/1024/bg_boss_heart.png");
+        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_skill.png", "expansioncontentResources/images/1024/bg_boss_skill.png");
         this.exhaust = true;
     }
 

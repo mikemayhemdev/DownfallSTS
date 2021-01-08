@@ -1,26 +1,18 @@
 {
   "expansioncontent:GuardianWhirl": {
     "NAME": "Guardian Whirl",
-    "DESCRIPTION": "expansioncontent:Boss - Guardian. NL Can only be played if you have at least 20 Block. NL Deal !D! damage to ALL enemies 4 times. NL Exhaust.",
+    "DESCRIPTION": "expansioncontent:Boss - Guardian. NL Requires 20 Block. NL Deal !D! damage to ALL enemies 4 times. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "I do not have enough Block."
     ]
   },
   "expansioncontent:Hexaburn": {
     "NAME": "Hexaburn",
-    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL In 5 turns, deal 6 damage to a random enemy 6 times."
+    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL In !M! turns, deal 6 damage to a random enemy 6 times."
   },
   "expansioncontent:InvincibleStrength": {
-    "NAME": "Invincible Strength",
-    "DESCRIPTION": "expansioncontent:Boss - Corrupt Heart. NL Gain 10 Invincible. NL If you already had Invincible, it lasts another turn instead."
-  },
-  "expansioncontent:Sear": {
-    "NAME": "Greater Sear",
-    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Deal !D! damage. NL Apply !M! hexamod:Soulburn. NL Exhaust."
-  },
-  "expansioncontent:SuperHexaguard": {
-    "NAME": "Ghost Guard",
-    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. Ethereal. hexamod:Afterlife. NL Gain !B! Block. NL Draw 1 card."
+    "NAME": "Invincible",
+    "DESCRIPTION": "expansioncontent:Boss - Corrupt Heart. NL Gain 10 expansioncontent:Invincible. NL If you already had expansioncontent:Invincible, it lasts another turn instead."
   },
   "expansioncontent:HyperBeam": {
     "NAME": "Automa-Beam",
@@ -42,7 +34,7 @@
   "expansioncontent:Chronoboost": {
     "NAME": "Chrono-Boost",
     "DESCRIPTION": "expansioncontent:Boss - Time Eater. NL Gain 1 Strength for every 12th card you play.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Time Eater. NL Gain 1 Strength for every 9th card you play."
+    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Time Eater. NL Gain 1 Strength. NL Gain 1 Strength for every 12th card you play."
   },
   "expansioncontent:PolyBeam": {
     "NAME": "Donu Beam",
@@ -71,8 +63,8 @@
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "The Evil Within",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a random Colorless expansioncontent:Boss card to your hand. It costs 0 until played. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a random Upgraded Colorless expansioncontent:Boss card to your hand. It costs 0 until played. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a random expansioncontent:Boss card to your hand. It costs 0 until played. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a random Upgraded expansioncontent:Boss card to your hand. It costs 0 until played. NL Exhaust."
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "Knowing Skull",

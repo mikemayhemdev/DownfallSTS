@@ -78,6 +78,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
     public static ArrayList<String> unknownWeakReplacements = new ArrayList<>();
     public static ArrayList<String> unknownXCostReplacements = new ArrayList<>();
     public static ArrayList<String> unknownDrawReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownBossReplacements = new ArrayList<>();
     // public static ArrayList<String> unknownEtherealReplacements = new ArrayList<>();
 
     @Override
@@ -146,7 +147,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
             for (int i = 0; i < funkyPredicates.size(); i++) {
                 Predicate<AbstractCard> funkyPredicate = funkyPredicates.get(i);
-                if (funkyPredicate.test(q) && (SneckoMod.pureSneckoMode || SneckoMod.validColors.contains(q.color) || i >= 22)) {
+                if (funkyPredicate.test(q) && (SneckoMod.pureSneckoMode || SneckoMod.validColors.contains(q.color) || i >= 23)) {
                     if (validCard) {
                         ArrayList<String> s = funkyLists.get(funkyPredicates.indexOf(funkyPredicate));
                         if (s == null) {

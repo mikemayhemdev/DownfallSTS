@@ -7,25 +7,25 @@ import sneckomod.SneckoMod;
 import java.util.ArrayList;
 import java.util.function.Predicate;
 
-public class UnknownColorless extends AbstractUnknownCard {
-    public final static String ID = makeID("UnknownColorless");
+public class UnknownBoss extends AbstractUnknownCard {
+    public final static String ID = makeID("UnknownBoss");
 
-    public UnknownColorless() {
-        super(ID, CardType.SKILL, CardRarity.UNCOMMON);
+    public UnknownBoss() {
+        super(ID, CardType.SKILL, CardRarity.RARE);
     }
 
     @Override
     public Predicate<AbstractCard> myNeeds() {
-        return c -> c.color == CardColor.COLORLESS;
+        return c -> c.color == CardColor.RED;
     }
 
     @Override
     public ArrayList<String> myList() {
-        return AbstractUnknownCard.unknownColorlessReplacements;
+        return AbstractUnknownCard.unknownBossReplacements;
     }
 
     @Override
     public TextureAtlas.AtlasRegion getOverBannerTex() {
-        return SneckoMod.overBannerColorless;
+        return SneckoMod.overBannerBoss;
     }
 }

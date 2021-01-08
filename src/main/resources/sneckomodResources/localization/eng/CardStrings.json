@@ -294,5 +294,9 @@
     "EXTENDED_DESCRIPTION": [
       " to Memorize."
     ]
+  },
+  "sneckomod:UnknownBoss": {
+    "NAME": "???",
+    "DESCRIPTION": "*Unknown Boss card."
   }
 }

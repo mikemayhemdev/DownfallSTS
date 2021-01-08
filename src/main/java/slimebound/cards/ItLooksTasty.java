@@ -82,6 +82,7 @@ public class ItLooksTasty extends AbstractSlimeboundCard {
             upgradeName();
 
             upgradeDamage(2);
+            cardsToPreview.upgrade();
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
 

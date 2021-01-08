@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 import com.megacrit.cardcrawl.orbs.Plasma;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
+import com.megacrit.cardcrawl.powers.LockOnPower;
 
 import java.util.ArrayList;
 
@@ -24,6 +25,7 @@ public abstract class AbstractEnemyOrb extends AbstractOrb {
 
     public boolean showValues = true;
     public boolean evokeOverride = false;
+    public boolean pretendLockOn = false;
     public int evokeMult = 0;
     public int pretendFocus = 0;
 
@@ -95,16 +97,17 @@ public abstract class AbstractEnemyOrb extends AbstractOrb {
             this.passiveAmount = this.basePassiveAmount + pretendFocus;
             this.evokeAmount = this.baseEvokeAmount + pretendFocus;
         }
+        applyLockOn();
     }
 
     //TODO: Make work
     public void applyLockOn() {
-        if (AbstractDungeon.player.hasPower("Lockon")) {
-            if (this.ID.equals("Lightning")) {
+        if (AbstractDungeon.player.hasPower(LockOnPower.POWER_ID) || pretendLockOn) {
+            if (this.ID.equals(EnemyLightning.ORB_ID)) {
                 this.passiveAmount = Math.max(0, (int) Math.floor(this.passiveAmount * 1.5));
                 this.evokeAmount = Math.max(0, (int) Math.floor(this.evokeAmount * 1.5));
             }
-            if (this.ID.equals("Dark")) {
+            if (this.ID.equals(EnemyDark.ORB_ID)) {
                 this.evokeAmount = Math.max(0, (int) Math.floor(this.evokeAmount * 1.5));
             }
         }

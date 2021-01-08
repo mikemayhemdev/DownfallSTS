@@ -1,5 +1,6 @@
 package charbosses.cards.blue;
 
+import charbosses.bosses.Defect.NewAge.ArchetypeAct3OrbsNewAge;
 import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -34,6 +35,13 @@ public class EnHyperbeam extends AbstractBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                ArchetypeAct3OrbsNewAge.resetPretendFocus();
+                isDone = true;
+            }
+        });
         this.addToBot(new SFXAction("ATTACK_HEAVY"));
         this.addToBot(new VFXAction(p, new MindblastEffect(m.dialogX, m.dialogY, m.flipHorizontal), 0.1F));
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE));

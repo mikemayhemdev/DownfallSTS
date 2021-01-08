@@ -32,7 +32,7 @@ public abstract class AbstractExpansionCard extends CustomCard {
 
     public AbstractExpansionCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(id),
-                cost, "ERROR", type, CardColorEnumPatch.CardColorPatch.BOSS_CARD, rarity, target);
+                cost, "ERROR", type, CardColorEnumPatch.CardColorPatch.BOSS, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
         name = NAME = cardStrings.NAME;
         originalName = NAME;

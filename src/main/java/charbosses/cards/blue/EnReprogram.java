@@ -1,5 +1,6 @@
 package charbosses.cards.blue;
 
+import charbosses.bosses.Defect.NewAge.ArchetypeAct3OrbsNewAge;
 import charbosses.cards.AbstractBossCard;
 import charbosses.powers.cardpowers.EnemyReboundPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -30,6 +31,13 @@ public class EnReprogram extends AbstractBossCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                ArchetypeAct3OrbsNewAge.resetPretendFocus();
+                isDone = true;
+            }
+        });
         this.addToBot(new ApplyPowerAction(m, m, new FocusPower(p, -this.magicNumber), -this.magicNumber));
         this.addToBot(new ApplyPowerAction(m, m, new StrengthPower(p, 1), 1));
         this.addToBot(new ApplyPowerAction(m, m, new DexterityPower(p, 1), 1));

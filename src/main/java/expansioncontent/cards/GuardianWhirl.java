@@ -12,7 +12,7 @@ public class GuardianWhirl extends AbstractExpansionCard {
     public final static String ID = makeID("GuardianWhirl");
 
     private static final int DAMAGE = 4;
-    private static final int UPGRADE_DAMAGE = 1;
+    private static final int UPGRADE_DAMAGE = 2;
 
     public GuardianWhirl() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);

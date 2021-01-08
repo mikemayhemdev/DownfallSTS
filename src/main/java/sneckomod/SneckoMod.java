@@ -29,6 +29,7 @@ import downfall.cards.OctoChoiceCard;
 import downfall.downfallMod;
 import downfall.events.Serpent_Evil;
 import downfall.util.CardIgnore;
+import expansioncontent.patches.CardColorEnumPatch;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 import javassist.CtClass;
 import javassist.Modifier;
@@ -140,6 +141,7 @@ public class SneckoMod implements
     public static TextureAtlas.AtlasRegion overBannerWatcher;
     public static TextureAtlas.AtlasRegion overBannerWeak;
     public static TextureAtlas.AtlasRegion overBannerX;
+    public static TextureAtlas.AtlasRegion overBannerBoss;
 
     private static String modID;
     private static ArrayList<AbstractCard> statuses = new ArrayList<>();
@@ -297,13 +299,11 @@ public class SneckoMod implements
             throw new RuntimeException(e);
         }
         for (AbstractCard.CardColor p : AbstractCard.CardColor.values()) {
-            if (p != AbstractCard.CardColor.COLORLESS && p != AbstractCard.CardColor.CURSE && p != TheSnecko.Enums.SNECKO_CYAN) {
-                if (p != AbstractCard.CardColor.COLORLESS) {
-                    UnknownClass q = new UnknownClass(p);
-                    unknownClasses.add(q);
-                    AbstractUnknownCard.unknownClassReplacements.add(new ArrayList<>());
-                    BaseMod.addCard(q);
-                }
+            if (p != AbstractCard.CardColor.COLORLESS && p != AbstractCard.CardColor.CURSE && p != TheSnecko.Enums.SNECKO_CYAN && p != CardColorEnumPatch.CardColorPatch.BOSS) {
+                UnknownClass q = new UnknownClass(p);
+                unknownClasses.add(q);
+                AbstractUnknownCard.unknownClassReplacements.add(new ArrayList<>());
+                BaseMod.addCard(q);
             }
         }
     }
@@ -393,6 +393,7 @@ public class SneckoMod implements
         overBannerVuln = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/vulnerable.png");
         overBannerWatcher = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/watcher.png");
         overBannerWeak = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/weak.png");
+        overBannerBoss = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/boss.png");
 
         BaseMod.addEvent(new AddEventParams.Builder(D8.ID, sneckomod.events.D8.class) //Event ID//
                 //Event Character//

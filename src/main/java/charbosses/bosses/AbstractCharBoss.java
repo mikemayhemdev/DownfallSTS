@@ -60,6 +60,7 @@ import downfall.monsters.NeowBoss;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 
@@ -416,19 +417,19 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     }
 
 
-    public void preApplyIntentCalculations(){
+    public void preApplyIntentCalculations() {
         boolean hasShuriken = hasRelic(CBR_Shuriken.ID);
         int attackCount = 0;
         int artifactCount = 0;
 
-        if (AbstractDungeon.player.hasPower(ArtifactPower.POWER_ID)){
+        if (AbstractDungeon.player.hasPower(ArtifactPower.POWER_ID)) {
             artifactCount = AbstractDungeon.player.getPower(ArtifactPower.POWER_ID).amount;
         }
 
         //Reset all custom modifiers back to 0
-        for (AbstractCard c:hand.group){
-            ((AbstractBossCard)c).manualCustomDamageModifier = 0;
-            ((AbstractBossCard)c).manualCustomDamageModifierMult = 1;
+        for (AbstractCard c : hand.group) {
+            ((AbstractBossCard) c).manualCustomDamageModifier = 0;
+            ((AbstractBossCard) c).manualCustomDamageModifierMult = 1;
         }
 
         for (int i = 0; i < hand.size(); i++) {
@@ -491,7 +492,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
                 //Minion block checks for Act 3 Ironclad's Body Slams
                 if (c instanceof EnBodySlam) {
-                    if (hasPower(BarricadePower.POWER_ID)){
+                    if (hasPower(BarricadePower.POWER_ID)) {
                         c.manualCustomDamageModifier += 10;
                     }
                 }
@@ -504,38 +505,12 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                     }
                 }
 
-                //Vex's Orb Calc Playground
-                //What needs to be done here?
-                //AbstractEnemyOrb evokeOverride, evokeMult and pretendFocus are all OK to use.
-                //The only issue is that since Defect went New Age, the hardcoded fixes were gone.
-                //This is a better way to implement em.
-                //Looks like the previous implementations of this thing use new variables in AbstractBossCard that determine what toggles they need to do.
-                //In our case, what are the offending effects?
-                //- Any channel effect needs to set evokeOverride on the AbstractBossOrb it will replace, if it does so.
-                //- Any Focus changing effect needs to temporarily set pretendFocus on the AbstractBossOrbs. UNLESS they are going to be Evoked before the Focus change occurs (I hope that doesn't happen)
-                //- Any manual Evoke effect needs to set evokeOverride and evokeMult if applicable on the AbstractBossOrb it evokes.
-                //- THEN, if it was a manual Evoke, the following cards need to know that there will be an open orb slot, so they don't incorrectly show another orb being evoked.
-                //- Fuck!! Bullseye. That needs to set a new boolean in AbstractEnemyOrb that adds a +50% to the numerical prediction.
-                //That should be all.
-
-                //Step 1 - add a channelsOrbsAmount to AbstractCharBossCard.
-                //Step 2 - Check against it in this iteration
-                if (c.channelsOrbsAmt > 0) {
-                    for (int q = 0; q < c.channelsOrbsAmt; q++) {
-                        if (AbstractCharBoss.boss.orbs.get(q) instanceof AbstractEnemyOrb) {
-                            ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(q)).evokeOverride = true;
-                        }
-                    }
-                }
-
-
-
                 //TODO - Sadistic Nature for Act 3 Silent
 
             }
         }
-        for (AbstractCard c:hand.group){
-            ((AbstractBossCard)c).createIntent();
+        for (AbstractCard c : hand.group) {
+            ((AbstractBossCard) c).createIntent();
         }
 
     }
@@ -543,7 +518,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void applyPowers() {
         super.applyPowers();
 
-      preApplyIntentCalculations();
+        preApplyIntentCalculations();
 
         this.hand.applyPowers();
         /*
@@ -1418,7 +1393,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void evokeOrb() {
         if (!this.orbs.isEmpty() && !(this.orbs.get(0) instanceof EnemyEmptyOrbSlot)) {
             this.orbs.get(0).onEvoke();
-            final AbstractOrb orbSlot = new EnemyEmptyOrbSlot();
+            final AbstractEnemyOrb orbSlot = new EnemyEmptyOrbSlot();
             for (int i = 1; i < this.orbs.size(); ++i) {
                 Collections.swap(this.orbs, i, i - 1);
             }
@@ -1427,6 +1402,16 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 this.orbs.get(i).setSlot(i, this.maxOrbs);
             }
         }
+    }
+
+    public ArrayList<AbstractEnemyOrb> orbsAsEn() {
+        ArrayList<AbstractEnemyOrb> orbies = new ArrayList<AbstractEnemyOrb>();
+        for (AbstractOrb o : orbs) {
+            if (o instanceof AbstractEnemyOrb) {
+                orbies.add((AbstractEnemyOrb)o);
+            }
+        }
+        return orbies;
     }
 
     public void evokeNewestOrb() {
@@ -1443,7 +1428,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
     public void removeNextOrb() {
         if (!this.orbs.isEmpty() && !(this.orbs.get(0) instanceof EnemyEmptyOrbSlot)) {
-            final AbstractOrb orbSlot = new EnemyEmptyOrbSlot(this.orbs.get(0).cX, this.orbs.get(0).cY);
+            final AbstractEnemyOrb orbSlot = new EnemyEmptyOrbSlot(this.orbs.get(0).cX, this.orbs.get(0).cY);
             for (int i = 1; i < this.orbs.size(); ++i) {
                 Collections.swap(this.orbs, i, i - 1);
             }
@@ -1485,34 +1470,32 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             AbstractDungeon.effectList.add(new ThoughtBubble(this.dialogX, this.dialogY, 3.0f, AbstractPlayer.MSG[4], true));
             return;
         }
-        if (this.maxOrbs > 0) {
-            if (this.hasRelic("Dark Core") && !(orbToSet instanceof EnemyDark)) {
-                orbToSet = new EnemyDark();
+        if (this.hasRelic("Dark Core") && !(orbToSet instanceof EnemyDark)) {
+            orbToSet = new EnemyDark();
+        }
+        int index = -1;
+        for (int i = 0; i < this.orbs.size(); ++i) {
+            if (this.orbs.get(i) instanceof EnemyEmptyOrbSlot) {
+                index = i;
+                break;
             }
-            int index = -1;
-            for (int i = 0; i < this.orbs.size(); ++i) {
-                if (this.orbs.get(i) instanceof EnemyEmptyOrbSlot) {
-                    index = i;
-                    break;
-                }
+        }
+        if (index != -1) {
+            orbToSet.cX = this.orbs.get(index).cX;
+            orbToSet.cY = this.orbs.get(index).cY;
+            this.orbs.set(index, orbToSet);
+            this.orbs.get(index).setSlot(index, this.maxOrbs);
+            orbToSet.playChannelSFX();
+            for (final AbstractPower p : this.powers) {
+                p.onChannel(orbToSet);
             }
-            if (index != -1) {
-                orbToSet.cX = this.orbs.get(index).cX;
-                orbToSet.cY = this.orbs.get(index).cY;
-                this.orbs.set(index, orbToSet);
-                this.orbs.get(index).setSlot(index, this.maxOrbs);
-                orbToSet.playChannelSFX();
-                for (final AbstractPower p : this.powers) {
-                    p.onChannel(orbToSet);
-                }
-                AbstractDungeon.actionManager.orbsChanneledThisCombat.add(orbToSet);
-                AbstractDungeon.actionManager.orbsChanneledThisTurn.add(orbToSet);
-                orbToSet.applyFocus();
-            } else {
-                AbstractDungeon.actionManager.addToTop(new EnemyChannelAction(orbToSet));
-                AbstractDungeon.actionManager.addToTop(new EnemyEvokeOrbAction(1));
-                AbstractDungeon.actionManager.addToTop(new EnemyAnimateOrbAction(1));
-            }
+            AbstractDungeon.actionManager.orbsChanneledThisCombat.add(orbToSet);
+            AbstractDungeon.actionManager.orbsChanneledThisTurn.add(orbToSet);
+            orbToSet.applyFocus();
+        } else {
+            AbstractDungeon.actionManager.addToTop(new EnemyChannelAction(orbToSet));
+            AbstractDungeon.actionManager.addToTop(new EnemyEvokeOrbAction(1));
+            AbstractDungeon.actionManager.addToTop(new EnemyAnimateOrbAction(1));
         }
     }
 
