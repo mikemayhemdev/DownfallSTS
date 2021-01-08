@@ -5,6 +5,7 @@ import basemod.ModPanel;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
+import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
@@ -354,6 +355,8 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addRelicToCustomPool(new GreedOozeRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new SelfDamagePreventRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new TarBlob(), AbstractCardEnum.SLIMEBOUND);
+        BaseMod.addRelic(new StickyStick(), RelicType.SHARED);
+        BaseMod.addRelic(new PreparedRelic(), RelicType.SHARED);
 
 
     }
