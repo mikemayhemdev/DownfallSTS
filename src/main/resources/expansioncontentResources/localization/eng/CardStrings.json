@@ -71,8 +71,8 @@
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "The Evil Within",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a random Colorless expansioncontent:Boss card to your hand. It costs 0 until played. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a random Upgraded Colorless expansioncontent:Boss card to your hand. It costs 0 until played. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a random expansioncontent:Boss card to your hand. It costs 0 until played. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a random Upgraded expansioncontent:Boss card to your hand. It costs 0 until played. NL Exhaust."
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "Knowing Skull",
