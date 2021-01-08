@@ -136,7 +136,7 @@
   "downfall:NeowEnergyThief": {
     "NAME": "Energy Thief",
     "DESCRIPTIONS": [
-      "When Neow adds #rCurses to your draw pile, she also adds 2 #yVoid #yStatus cards."
+      "When Neow adds #rCurses to your draw pile, she also adds 1 #yVoid #yStatus card."
     ]
   },
   "downfall:DefectAncientConstructPower": {
