@@ -16,7 +16,7 @@ public class StudyTheSpire extends AbstractExpansionCard {
     public StudyTheSpire() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
-        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_heart.png", "expansioncontentResources/images/1024/bg_boss_heart.png");
+        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_power.png", "expansioncontentResources/images/1024/bg_boss_power.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
