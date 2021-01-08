@@ -92,17 +92,17 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     // Lightning Frost Dark
                     addToList(cardsList, new EnZap(), true);
                     //Evokes Lightning
-                    cB.orbs.get(0).evokeOverride = true;
+                    cB.orbsAsEn().get(0).evokeOverride = true;
                     // Frost Dark Lightning
                     addToList(cardsList, new EnDualcast());
                     // Evokes Frost
-                    cB.orbs.get(1).evokeOverride = true;
-                    cB.orbs.get(1).evokeMult = 2;
+                    cB.orbsAsEn().get(1).evokeOverride = true;
+                    cB.orbsAsEn().get(1).evokeMult = 2;
                     // Dark Lightning
                     addToList(cardsList, new EnMulticast(2));
                     // Evokes Dark
-                    cB.orbs.get(1).evokeOverride = true;
-                    cB.orbs.get(1).evokeMult = 2;
+                    cB.orbsAsEn().get(1).evokeOverride = true;
+                    cB.orbsAsEn().get(1).evokeMult = 2;
                     // Lightning
                     turn++;
                     break;
@@ -153,13 +153,13 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     addToList(cardsList, new EnBlind(), true);
                     addToList(cardsList, new EnDualcast());
                     //Evokes Lightning
-                    cB.orbs.get(0).evokeOverride = true;
-                    cB.orbs.get(0).evokeMult = 2;
+                    cB.orbsAsEn().get(0).evokeOverride = true;
+                    cB.orbsAsEn().get(0).evokeMult = 2;
                     //Lightning Frost
                     addToList(cardsList, new EnMulticast(3));
                     // Evokes Frost!
-                    cB.orbs.get(1).evokeOverride = true;
-                    cB.orbs.get(1).evokeMult = 3;
+                    cB.orbsAsEn().get(1).evokeOverride = true;
+                    cB.orbsAsEn().get(1).evokeMult = 3;
                     // Lightning
                     turn++;
                     break;

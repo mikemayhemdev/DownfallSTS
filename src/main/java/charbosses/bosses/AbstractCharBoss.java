@@ -60,6 +60,7 @@ import downfall.monsters.NeowBoss;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 
@@ -70,7 +71,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
     public ArrayList<AbstractCharbossRelic> relics;
     public AbstractStance stance;
-    public ArrayList<AbstractEnemyOrb> orbs;
+    public ArrayList<AbstractOrb> orbs;
     public int maxOrbs;
     public int masterMaxOrbs;
     public int masterHandSize;
@@ -127,7 +128,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.gameHandSize = 3;
         this.masterMaxOrbs = this.maxOrbs = 0;
         this.stance = new EnNeutralStance();
-        this.orbs = new ArrayList<AbstractEnemyOrb>();
+        this.orbs = new ArrayList<AbstractOrb>();
         this.relics = new ArrayList<AbstractCharbossRelic>();
     }
 
@@ -1403,6 +1404,16 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
     }
 
+    public ArrayList<AbstractEnemyOrb> orbsAsEn() {
+        ArrayList<AbstractEnemyOrb> orbies = new ArrayList<AbstractEnemyOrb>();
+        for (AbstractOrb o : orbs) {
+            if (o instanceof AbstractEnemyOrb) {
+                orbies.add((AbstractEnemyOrb)o);
+            }
+        }
+        return orbies;
+    }
+
     public void evokeNewestOrb() {
         if (!this.orbs.isEmpty() && !(this.orbs.get(this.orbs.size() - 1) instanceof EnemyEmptyOrbSlot)) {
             this.orbs.get(this.orbs.size() - 1).onEvoke();
@@ -1454,7 +1465,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         return orbCount;
     }
 
-    public void channelOrb(AbstractEnemyOrb orbToSet) {
+    public void channelOrb(AbstractOrb orbToSet) {
         if (this.maxOrbs <= 0) {
             AbstractDungeon.effectList.add(new ThoughtBubble(this.dialogX, this.dialogY, 3.0f, AbstractPlayer.MSG[4], true));
             return;
