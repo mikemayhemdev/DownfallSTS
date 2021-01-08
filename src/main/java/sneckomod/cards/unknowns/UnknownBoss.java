@@ -2,6 +2,7 @@ package sneckomod.cards.unknowns;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import expansioncontent.expansionContentMod;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ public class UnknownBoss extends AbstractUnknownCard {
 
     @Override
     public Predicate<AbstractCard> myNeeds() {
-        return c -> c.color == CardColor.RED;
+        return c -> c.hasTag(expansionContentMod.STUDY);
     }
 
     @Override
