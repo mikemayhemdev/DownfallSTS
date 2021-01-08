@@ -15,6 +15,7 @@ public class DecaShield extends AbstractExpansionCard {
 
     public DecaShield(boolean noHover) {
         super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_donudeca.png", "expansioncontentResources/images/1024/bg_boss_donudeca.png");
         baseBlock = 14;
         isEthereal = true;
         this.exhaust = true;

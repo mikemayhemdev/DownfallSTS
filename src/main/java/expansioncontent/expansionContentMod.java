@@ -14,6 +14,8 @@ import basemod.helpers.RelicType;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.PostUpdateSubscriber;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -23,6 +25,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.ui.campfire.WheelSpinButton;
 import downfall.util.CardIgnore;
+import expansioncontent.patches.CardColorEnumPatch;
 import expansioncontent.relics.StudyCardRelic;
 import expansioncontent.util.CardFilter;
 import javassist.CtClass;
@@ -68,11 +71,19 @@ public class expansionContentMod implements
     public static boolean teleportToWheelTime = false;
     private static String modID;
 
+    public static Color BOSS_CARD_COLOR = new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1); //TODO: Change color
+
     public expansionContentMod() {
         BaseMod.subscribe(this);
 
         modID = "expansioncontent";
 
+        BaseMod.addColor(CardColorEnumPatch.CardColorPatch.BOSS_CARD,
+                BOSS_CARD_COLOR, BOSS_CARD_COLOR, BOSS_CARD_COLOR, BOSS_CARD_COLOR, BOSS_CARD_COLOR, BOSS_CARD_COLOR, BOSS_CARD_COLOR,
+                "champResources/images/512/bg_attack_colorless.png", "champResources/images/512/bg_skill_colorless.png",
+                "champResources/images/512/bg_power_colorless.png", "champResources/images/512/card_champ_orb.png",
+                "champResources/images/1024/bg_attack_colorless.png", "champResources/images/1024/bg_skill_colorless.png",
+                "champResources/images/1024/bg_power_colorless.png","champResources/images/1024/card_champ_orb.png");
     }
 
     public static String makeCardPath(String resourcePath) {

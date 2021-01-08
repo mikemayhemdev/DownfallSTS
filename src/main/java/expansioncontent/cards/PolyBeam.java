@@ -21,6 +21,7 @@ public class PolyBeam extends AbstractExpansionCard {
 
     public PolyBeam(boolean noHover) {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_donudeca.png", "expansioncontentResources/images/1024/bg_boss_donudeca.png");
         tags.add(expansionContentMod.STUDY_SHAPES);
         tags.add(expansionContentMod.STUDY);
         baseDamage = DAMAGE;

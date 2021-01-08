@@ -76,5 +76,15 @@
       " turns, deal #b6 damage to a random enemy #b6 times.",
       "At the end of your turn, deal #b6 damage to a random enemy #b6 times."
     ]
+  },
+  "expansioncontent:VexVinciblePower": {
+    "NAME": "Invincible",
+    "DESCRIPTIONS": [
+      "Caps all damage and HP loss taken to #b",
+      " in a turn. Removed after activation.",
+      "Caps all damage and HP loss taken to #b",
+      " in a turn. Removed after #b",
+      " activations."
+    ]
   }
 }

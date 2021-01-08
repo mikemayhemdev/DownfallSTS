@@ -16,10 +16,9 @@ public class AwakenDeath extends AbstractExpansionCard {
 
     public AwakenDeath() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-
         tags.add(expansionContentMod.STUDY_AWAKENEDONE);
         tags.add(expansionContentMod.STUDY);
-
+        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_awakenedone.png", "expansioncontentResources/images/1024/bg_boss_awakenedone.png");
         baseMagicNumber = magicNumber = MAGIC;
     }
 
