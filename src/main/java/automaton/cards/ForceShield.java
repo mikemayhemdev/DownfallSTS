@@ -1,7 +1,9 @@
 package automaton.cards;
 
+import automaton.FunctionHelper;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -15,7 +17,10 @@ public class ForceShield extends AbstractBronzeCard {
     private static final int UPG_BLOCK = 4;
 
     public ForceShield() {
-        super(ID, 4, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        //This fix should only apply in cases where the card is generated mid-combat
+        //Energy cost isn't green because card isn't updated, but couldn't
+        //find easy way to update it as soon as it is initialized
+        super(ID, 4 - FunctionHelper.functionsCompiledThisCombat, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
     }
 

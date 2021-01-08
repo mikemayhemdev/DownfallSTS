@@ -522,7 +522,7 @@
     "OPTIONS": [
       "[Don the Red Mask] #gUpgrade #gBandit #gContract.",
       "[Locked] Requires: Red Mask & Bandit Contract.",
-      "[Bash] #rLose #r",
+      "[Bash] #rLose ",
       ". #gObtain #gRed #gMask.",
       "[Locked] Requires an Attack.",
       "[Leave]"

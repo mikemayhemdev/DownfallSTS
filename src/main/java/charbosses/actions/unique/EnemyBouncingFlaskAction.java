@@ -40,7 +40,7 @@ public class EnemyBouncingFlaskAction extends AbstractGameAction {
             }
 
             if (this.target.currentHealth > 0) {// 53
-                this.addToTop(new ApplyPowerAction(this.target, AbstractDungeon.player, new EnemyPoisonPower(this.target, source, this.amount), this.amount, true, AttackEffect.POISON));// 54
+                this.addToTop(new ApplyPowerAction(this.target, this.source, new EnemyPoisonPower(this.target, source, this.amount), this.amount, true, AttackEffect.POISON));// 54
                 this.addToTop(new WaitAction(0.1F));// 62
             }
 

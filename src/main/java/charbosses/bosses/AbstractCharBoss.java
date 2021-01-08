@@ -510,7 +510,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
         for (AbstractCard c : hand.group) {
-            ((AbstractBossCard) c).createIntent();
+            if (!((AbstractBossCard) c).bossDarkened) {
+                ((AbstractBossCard) c).createIntent();
+            }
         }
 
     }
