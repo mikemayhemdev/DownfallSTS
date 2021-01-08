@@ -564,6 +564,7 @@ public class SneckoMod implements
         addToLists(new UnknownWeak(), predList, listList);
         addToLists(new UnknownX(), predList, listList);
         addToLists(new UnknownDraw(), predList, listList);
+        addToLists(new UnknownBoss(), predList, listList);
 
         for (AbstractUnknownCard q : SneckoMod.unknownClasses) {
             addToLists(q, predList, listList);
