@@ -36,7 +36,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
 
     }
 
-    private void increasePretendFocus(int amount) {
+    public static void increasePretendFocus(int amount) {
         for (AbstractOrb o : AbstractCharBoss.boss.orbs) {
             if (o instanceof AbstractEnemyOrb) {
                 ((AbstractEnemyOrb) o).pretendFocus += amount;

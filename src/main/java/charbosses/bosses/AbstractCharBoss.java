@@ -11,6 +11,7 @@ import charbosses.actions.util.CharbossDoNextCardAction;
 import charbosses.actions.util.CharbossMakePlayAction;
 import charbosses.actions.util.CharbossTurnstartDrawAction;
 import charbosses.actions.util.DelayedActionAction;
+import charbosses.bosses.Defect.NewAge.ArchetypeAct3OrbsNewAge;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
@@ -527,6 +528,25 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                         }
                     }
                 }
+                //Step 3 - add a addFocusAmount to AbstractCharBossCard.
+                //Step 4 - Check against it in this iteration
+                if (c.addFocusAmt > 0) {
+                    ArchetypeAct3OrbsNewAge.increasePretendFocus(c.addFocusAmt);
+                }
+                //NOTE: Any card with addFocusAmt over 0 needs to manually ArchetypeAct3OrbsNewAge.resetPretendFocus after being played!!!
+                //Step 4 - add an evokeOrbAmt to AbstractCharBossCard.
+                //Since no cards evoke more than 1 Orb at a time, but rather Evoke the first orb X times (checks 3 times for Fusion+), only one number is needed.
+                //Step 5 - Check against it in this iteration
+                //This is where it gets tougher.
+                if (c.evokeOrbAmt > 0) {
+                    if (AbstractCharBoss.boss.orbs.get(0) instanceof AbstractEnemyOrb) {
+                        ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeOverride = true;
+                        ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeMult = c.evokeOrbAmt;
+                    }
+                }
+
+                //This is madnesss
+
 
 
 

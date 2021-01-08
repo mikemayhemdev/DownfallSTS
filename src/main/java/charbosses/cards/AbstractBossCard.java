@@ -74,6 +74,8 @@ public abstract class AbstractBossCard extends AbstractCard {
     public int clawDamageGeneratedIfPlayed = 0;
 
     public int channelsOrbsAmt = 0;
+    public int addFocusAmt = 0;
+    public int evokeOrbAmt = 0;
 
     public static final String[] TEXT;
 
