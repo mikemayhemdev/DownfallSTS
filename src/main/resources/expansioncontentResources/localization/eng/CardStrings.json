@@ -11,7 +11,7 @@
     "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL In 5 turns, deal 6 damage to a random enemy 6 times."
   },
   "expansioncontent:InvincibleStrength": {
-    "NAME": "Invincible Strength",
+    "NAME": "Invincible",
     "DESCRIPTION": "expansioncontent:Boss - Corrupt Heart. NL Gain 10 Invincible. NL If you already had Invincible, it lasts another turn instead."
   },
   "expansioncontent:Sear": {

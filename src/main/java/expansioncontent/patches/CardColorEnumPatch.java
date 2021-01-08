@@ -8,11 +8,11 @@ public class CardColorEnumPatch {
 	
 	public static class CardColorPatch {
 		@SpireEnum
-		public static CardColor BOSS_CARD;
+		public static CardColor BOSS;
 	}
 	
 	public static class LibColorPatch {
 		@SpireEnum
-		public static LibraryType BOSS_CARD;
+		public static LibraryType BOSS;
 	}
 }
