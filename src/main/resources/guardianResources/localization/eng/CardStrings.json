@@ -278,7 +278,7 @@
   },
   "Guardian:RefractedBeam": {
     "NAME": "Refracted Beam",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Decrease the number of times this card hits by 2 this combat. NL Can be upgraded any number of times."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Decrease the number of times this card hits by 1 this combat. NL Can be upgraded any number of times."
   },
   "Guardian:MultiBeam": {
     "NAME": "Multi-Beam",
@@ -379,8 +379,8 @@
   },
   "Guardian:StasisEngine": {
     "NAME": "Stasis Engine",
-    "DESCRIPTION": "For every 3rd 0-cost card you play, gain [E] and draw a card.",
-    "UPGRADE_DESCRIPTION": "Innate. NL For every 3rd 0-cost card you play, gain [E] and draw a card."
+    "DESCRIPTION": "When you play the 3rd 0-cost card in a single turn, gain [E] and draw a card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL When you play the 3rd 0-cost card in a single turn, gain [E] and draw a card."
   },
   "Guardian:HammerDown": {
     "NAME": "Hammer Down",
@@ -422,5 +422,10 @@
     "NAME": "Gemstone Gun",
     "DESCRIPTION": "Retain.",
     "UPGRADE_DESCRIPTION": " NL Exhaust."
+  },
+  "Guardian:BodySlam": {
+    "NAME": "Body Slam",
+    "DESCRIPTION": "Deal damage equal to your Block.",
+    "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)"
   }
 }

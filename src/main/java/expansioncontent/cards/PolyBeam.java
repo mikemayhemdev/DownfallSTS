@@ -38,12 +38,13 @@ public class PolyBeam extends AbstractExpansionCard {
         atb(new VFXAction(new SmallLaserEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY), 0.3F));
         atb(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
         atb(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
-        applyToSelf(new AddCopyPower(1, new DecaShield()));
+        applyToSelf(new AddCopyPower(1, cardsToPreview.makeStatEquivalentCopy()));
 
     }
 
     public void upgrade() {
         if (!upgraded) {
+            cardsToPreview.upgrade();
             upgradeName();
             upgradeDamage(UPGRADE_DAMAGE);
         }

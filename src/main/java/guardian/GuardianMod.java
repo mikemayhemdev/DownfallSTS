@@ -662,6 +662,7 @@ public static void saveData() {
         BaseMod.addCard(new Clone());
         BaseMod.addCard(new Recover());
         BaseMod.addCard(new Planning());
+        BaseMod.addCard(new BodySlam());
         BaseMod.addCard(new Emergency());
         BaseMod.addCard(new GemFinder());
         BaseMod.addCard(new FastForward());

@@ -22,6 +22,7 @@ public class DecaShield extends AbstractExpansionCard {
         if (!noHover) {
             AbstractCard q = new PolyBeam(true);
             CardModifierManager.addModifier(q, new EtherealMod());
+            if (upgraded) q.upgrade();
             cardsToPreview = q;
         }
     }
@@ -33,6 +34,7 @@ public class DecaShield extends AbstractExpansionCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         AbstractCard q = new PolyBeam();
+        if (upgraded) q.upgrade();
         CardModifierManager.addModifier(q, new EtherealMod());
         applyToSelf(new AddCopyPower(1, q));
     }

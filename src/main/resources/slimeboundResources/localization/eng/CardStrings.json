@@ -211,24 +211,23 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Return 2 random 0-cost Exhausted cards to your hand."
   },
   "Slimebound:FinishingTackle": {
-    "NAME": "Finishing Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. slimeboundmod:Consume - Gain !B! Block."
+    "NAME": "Opening Tackle",
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. slimeboundmod:Consume - Apply !M! Vulnerable."
   },
   "Slimebound:LivingWall": {
     "NAME": "Living Wall",
     "DESCRIPTION": "Gain !B! Block. NL Apply !SlimeboundSlimed! slimeboundmod:Goop to attackers this turn."
   },
   "Slimebound:ComboTackle": {
-    "NAME": "Combo Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Draw a card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Draw !M! cards."
+    "NAME": "Spear Tackle",
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Draw !M! cards."
   },
   "Slimebound:Tackle": {
     "NAME": "Tackle",
     "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself."
   },
   "Slimebound:GoopTackle": {
-    "NAME": "Opening Tackle",
+    "NAME": "Combo Tackle",
     "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Add a random slimeboundmod:Tackle card to your hand. It costs 0 this turn.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Add a random Upgraded slimeboundmod:Tackle card to your hand. It costs 0 this turn."
   },
@@ -256,7 +255,7 @@
   },
   "Slimebound:GoopSpray": {
     "NAME": "Goop Spray",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop and !M! Vulnerable to ALL enemies."
+    "DESCRIPTION": "Gain !B! Block. NL Apply !SlimeboundSlimed! slimeboundmod:Goop and !M! Weak to ALL enemies."
   },
   "Slimebound:MassFeed": {
     "NAME": "Mass Feed",
