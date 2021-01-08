@@ -48,7 +48,7 @@ public class WorldOfGoopSlimebound extends AbstractImageEvent {
 
         this.imageEventText.setDialogOption(OPTIONS[0]);
 
-        if (this.goldLoss <= AbstractDungeon.player.gold) {
+        if (this.gold <= AbstractDungeon.player.gold) {
             this.imageEventText.setDialogOption( OPTIONS[1], new GreedOozeRelic());
         } else {
             this.imageEventText.setDialogOption( OPTIONS[3], true);
