@@ -10,7 +10,7 @@
     "NAME": "Black Knight's Helm",
     "FLAVOR": "Only a flesh wound.",
     "DESCRIPTIONS": [
-      "The first time you enter each Stance each combat: NL #bDefensive: Gain 1 Dexterity. NL #rBerserker: Gain 1 Strength."
+      "The first time you enter each Stance each combat: NL #bDefensive: Gain 2 Dexterity, Lose 1 Strength. NL #rBerserker: Gain 2 Strength, Lose 1 Dexterity."
     ]
   },
   "champ:Barbells": {
