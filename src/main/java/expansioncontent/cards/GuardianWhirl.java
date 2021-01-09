@@ -42,7 +42,7 @@ public class GuardianWhirl extends AbstractExpansionCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (p.currentBlock < 20) {
+        if (p.currentBlock < 10) {
             cantUseMessage = EXTENDED_DESCRIPTION[0];
             return false;
         }
