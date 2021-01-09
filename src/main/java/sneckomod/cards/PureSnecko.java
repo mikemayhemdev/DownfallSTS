@@ -1,6 +1,5 @@
 package sneckomod.cards;
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
@@ -18,7 +17,7 @@ public class PureSnecko extends AbstractSneckoCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-       // if (upgraded) atb(new DrawCardAction(1));
+        // if (upgraded) atb(new DrawCardAction(1));
         atb(new PureSneckoAction(p, upgraded));
     }
 

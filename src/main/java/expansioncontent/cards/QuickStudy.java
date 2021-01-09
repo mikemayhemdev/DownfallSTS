@@ -4,19 +4,15 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.actions.OctoChoiceAction;
-import downfall.cards.OctoChoiceCard;
-import downfall.util.OctopusCard;
+import downfall.util.SelectCardsCenteredAction;
 import expansioncontent.expansionContentMod;
-import guardian.patches.GuardianEnum;
-import slimebound.patches.SlimeboundEnum;
-import theHexaghost.TheHexaghost;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
-public class QuickStudy extends AbstractExpansionCard implements OctopusCard {
+public class QuickStudy extends AbstractExpansionCard {
 
     public final static String ID = makeID("QuickStudy");
     public String[] NAMES = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").NAMES;
@@ -25,114 +21,36 @@ public class QuickStudy extends AbstractExpansionCard implements OctopusCard {
     //stupid intellij stuff SKILL, SELF, RARE
 
     public QuickStudy() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_skill.png", "expansioncontentResources/images/1024/bg_boss_skill.png");
         this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new OctoChoiceAction(this));
-    }
-
-    public ArrayList<OctoChoiceCard> choiceList() {
-        ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
-        if (AbstractDungeon.player.chosenClass != GuardianEnum.GUARDIAN)
-            cardList.add(new OctoChoiceCard(expansionContentMod.makeID("0"), NAMES[3], expansionContentMod.makeCardPath("QuickGuardian.png"), TEXT[3], new DefensiveMode(), new ChargeUp(), new GuardianWhirl()));
-        if (AbstractDungeon.player.chosenClass != TheHexaghost.Enums.THE_SPIRIT)
-            cardList.add(new OctoChoiceCard(expansionContentMod.makeID("1"), NAMES[4], expansionContentMod.makeCardPath("QuickHexa.png"), TEXT[4], new Hexaburn(), new SuperHexaguard(), new Sear()));
-        if (AbstractDungeon.player.chosenClass != SlimeboundEnum.SLIMEBOUND)
-            cardList.add(new OctoChoiceCard(expansionContentMod.makeID("2"), NAMES[5], expansionContentMod.makeCardPath("QuickSlime.png"), TEXT[5], new PrepareCrush(), new SlimeTackle(), new GoopSpray()));
-        cardList.add(new OctoChoiceCard(expansionContentMod.makeID("3"), NAMES[6], expansionContentMod.makeCardPath("QuickAutomaton.png"), TEXT[6], new BronzeBeam(), new HyperBeam(), new Flail()));
-        cardList.add(new OctoChoiceCard(expansionContentMod.makeID("4"), NAMES[7], expansionContentMod.makeCardPath("QuickChamp.png"), TEXT[7], new FaceSlap(), new LastStand(), new DefensiveStance()));
-        cardList.add(new OctoChoiceCard(expansionContentMod.makeID("5"), NAMES[8], expansionContentMod.makeCardPath("QuickCollector.png"), TEXT[8], new Collect(), new Torchfire(), new YouAreMine()));
-        cardList.add(new OctoChoiceCard(expansionContentMod.makeID("6"), NAMES[9], expansionContentMod.makeCardPath("QuickTimeEater.png"), TEXT[9], new ManipulateTime(), new TimeRipple(), new Chronoboost()));
-        cardList.add(new OctoChoiceCard(expansionContentMod.makeID("7"), NAMES[10], expansionContentMod.makeCardPath("QuickAwakened.png"), TEXT[10], new CaCaw(), new AwakenDeath(), new DarkVoid()));
-        cardList.add(new OctoChoiceCard(expansionContentMod.makeID("8"), NAMES[11], expansionContentMod.makeCardPath("QuickAncients.png"), TEXT[11], new DonusPower(), new DecasProtection(), new PolyBeam()));
-        ArrayList<OctoChoiceCard> realList = new ArrayList<>();
+        ArrayList<AbstractCard> selectionsList = new ArrayList<>();
+        ArrayList<AbstractCard> allStudyCardsList = new ArrayList<>();
+        for (AbstractCard q : CardLibrary.getAllCards()) {
+            if (q.hasTag(expansionContentMod.STUDY)) {
+                if (upgraded) q.upgrade();
+                allStudyCardsList.add(q);
+            }
+        }
+        Collections.shuffle(allStudyCardsList);
         for (int i = 0; i < 3; i++) {
-            realList.add(cardList.remove(AbstractDungeon.cardRandomRng.random(cardList.size() - 1)));
+            selectionsList.add(allStudyCardsList.get(i));
         }
-        return realList;
+        atb(new SelectCardsCenteredAction(selectionsList, 1, EXTENDED_DESCRIPTION[0], (cards) -> {
+            cards.get(0).setCostForTurn(0);
+            addToTop(new MakeTempCardInHandAction(cards.get(0), true));
+        }));
     }
 
-    public void doChoiceStuff(OctoChoiceCard card) {
-        AbstractCard q;
-        AbstractCard r;
-        AbstractCard z;
-        switch (card.cardID) {
-            case "expansioncontent:0": {
-                q = new ChargeUp();
-                r = new GuardianWhirl();
-                z = new DefensiveMode();
-                break;
-            }
-            case "expansioncontent:1": {
-                q = new Hexaburn();
-                r = new SuperHexaguard();
-                z = new Sear();
-                break;
-            }
-            case "expansioncontent:2": {
-                q = new PrepareCrush();
-                r = new GoopSpray();
-                z = new SlimeTackle();
-                break;
-            }
-            case "expansioncontent:3": {
-                q = new BronzeBeam();
-                r = new HyperBeam();
-                z = new Flail();
-                break;
-            }
-            case "expansioncontent:4": {
-                q = new DefensiveStance();
-                r = new FaceSlap();
-                z = new LastStand();
-                break;
-            }
-            case "expansioncontent:5": {
-                q = new Torchfire();
-                r = new Collect();
-                z = new YouAreMine();
-                break;
-            }
-            case "expansioncontent:6": {
-                q = new TimeRipple();
-                r = new Chronoboost();
-                z = new ManipulateTime();
-                break;
-            }
-            case "expansioncontent:7": {
-                q = new DarkVoid();
-                r = new CaCaw();
-                z = new AwakenDeath();
-                break;
-            }
-            case "expansioncontent:8": {
-                q = new DonusPower();
-                r = new DecasProtection();
-                z = new PolyBeam();
-                break;
-            }
-            default:{
-                q = new DonusPower();
-                r = new DecasProtection();
-                z = new PolyBeam();
-                break;
-            }
-
-        }
-        q.freeToPlayOnce = true;
-        r.freeToPlayOnce = true;
-       z.freeToPlayOnce = true;
-        atb(new MakeTempCardInHandAction(q));
-        atb(new MakeTempCardInHandAction(r));
-        atb(new MakeTempCardInHandAction(z));
-    }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

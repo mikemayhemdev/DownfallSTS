@@ -12,8 +12,8 @@ public class GlitteringGambit extends AbstractSneckoCard {
 
     //stupid intellij stuff SKILL, SELF, RARE
 
-    private static final int MAGIC = 85;
-    private static final int UPG_MAGIC = 15;
+    private static final int MAGIC = -10;
+    private static final int UPG_MAGIC = 10;
 
     public GlitteringGambit() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
@@ -25,7 +25,7 @@ public class GlitteringGambit extends AbstractSneckoCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new ChangeGoldAction((int)Math.ceil(AbstractDungeon.player.gold *(getRandomNum(magicNumber, 130, this) - 100)*0.01f)));
+        atb(new ChangeGoldAction((int) Math.ceil((getRandomNum(magicNumber, 30, this)))));
     }
 
     public void upgrade() {

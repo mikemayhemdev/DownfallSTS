@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.PotionSlot;
-import sneckomod.SneckoMod;
 
 public class MixItUp extends AbstractSneckoCard {
 
@@ -23,7 +22,7 @@ public class MixItUp extends AbstractSneckoCard {
         baseDamage = DAMAGE;
         exhaust = true;
         tags.add(CardTags.HEALING);
-       // tags.add(SneckoMod.RNG);
+        // tags.add(SneckoMod.RNG);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

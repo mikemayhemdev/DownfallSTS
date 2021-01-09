@@ -25,8 +25,8 @@ public class EctoCoolerPotion extends CustomPotion {
 
     public void initializeData() {
         this.potency = getPotency();
-        if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic("SacredBark")) {
-            this.description = potionStrings.DESCRIPTIONS[1];
+        if (AbstractDungeon.player != null && potency > 1) {
+            this.description = potionStrings.DESCRIPTIONS[1] + this.potency + DESCRIPTIONS[2];
         } else {
             this.description = potionStrings.DESCRIPTIONS[0];
         }

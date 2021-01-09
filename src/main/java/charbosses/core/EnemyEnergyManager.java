@@ -13,7 +13,6 @@ public class EnemyEnergyManager extends EnergyManager {
 
     public EnemyEnergyManager(int e) {
         super(e);
-        // TODO Auto-generated constructor stub
     }
 
     public void prep() {
@@ -22,24 +21,26 @@ public class EnemyEnergyManager extends EnergyManager {
     }
 
     public void recharge() {
-        if (AbstractCharBoss.boss.hasRelic("Art of War")) {
+        if (AbstractCharBoss.boss != null) {
+            if (AbstractCharBoss.boss.hasRelic("Art of War")) {
                 AbstractCharBoss.boss.getRelic("Art of War").onTrigger();
-        }
-        if (AbstractCharBoss.boss.hasRelic("Ice Cream")) {
-            if (EnemyEnergyPanel.totalCount > 0) {
-                AbstractCharBoss.boss.getRelic("Ice Cream").flash();
-                AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractCharBoss.boss, AbstractCharBoss.boss.getRelic("Ice Cream")));
             }
-            EnemyEnergyPanel.addEnergy(this.energy);
-        } else if (AbstractCharBoss.boss.hasPower("Conserve")) {
-            if (EnemyEnergyPanel.totalCount > 0) {
-                AbstractDungeon.actionManager.addToTop(new ReducePowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, "Conserve", 1));
+            if (AbstractCharBoss.boss.hasRelic("Ice Cream")) {
+                if (EnemyEnergyPanel.totalCount > 0) {
+                    AbstractCharBoss.boss.getRelic("Ice Cream").flash();
+                    AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractCharBoss.boss, AbstractCharBoss.boss.getRelic("Ice Cream")));
+                }
+                EnemyEnergyPanel.addEnergy(this.energy);
+            } else if (AbstractCharBoss.boss.hasPower("Conserve")) {
+                if (EnemyEnergyPanel.totalCount > 0) {
+                    AbstractDungeon.actionManager.addToTop(new ReducePowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, "Conserve", 1));
+                }
+                EnemyEnergyPanel.addEnergy(this.energy);
+            } else {
+                EnemyEnergyPanel.setEnergy(this.energy);
             }
-            EnemyEnergyPanel.addEnergy(this.energy);
-        } else {
-            EnemyEnergyPanel.setEnergy(this.energy);
-        }
 
+        }
 
     }
 

@@ -12,7 +12,7 @@ public class BacktrackSmack extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ENEMY, COMMON
 
-    private static final int DAMAGE = 11;
+    private static final int DAMAGE = 12;
     private static final int UPG_DAMAGE = 3;
 
     public BacktrackSmack() {

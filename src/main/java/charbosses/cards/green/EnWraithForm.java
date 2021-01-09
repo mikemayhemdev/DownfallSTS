@@ -1,6 +1,7 @@
 package charbosses.cards.green;
 
 import charbosses.cards.AbstractBossCard;
+import charbosses.powers.BossIntangiblePower;
 import charbosses.powers.cardpowers.EnemyWraithFormPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -30,7 +31,7 @@ public class EnWraithForm extends AbstractBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(m, m, new IntangiblePower(m, magicNumber), magicNumber));
+        this.addToBot(new ApplyPowerAction(m, m, new BossIntangiblePower(m, magicNumber), magicNumber));
         addToBot(new ApplyPowerAction(m, m, new EnemyWraithFormPower(m, -1), -1));
     }
 

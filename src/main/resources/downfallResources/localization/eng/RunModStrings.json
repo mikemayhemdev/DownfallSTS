@@ -34,5 +34,13 @@
   "downfall:Enraging": {
     "NAME": "Last Stand",
     "DESCRIPTION": "All enemies gain Strength and cleanse debuffs on their next turn when reduced to 50% HP."
+  },
+  "downfall:Analytical": {
+    "NAME": "Analytical",
+    "DESCRIPTION": "At the start of each turn, add a random card with Encode to your hand and give it Ethereal. Basic Strikes and Defends Encode."
+  },
+  "downfall:StatusAbuse": {
+    "NAME": "Inflicted",
+    "DESCRIPTION": "Start with a Makeshift Battery, Donu's Washers, Deca's Washers, a Medical Kit, and a Bronze Idol. All other Relics are replaced with Circlets."
   }
 }

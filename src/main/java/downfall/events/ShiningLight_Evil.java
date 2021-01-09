@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import downfall.cards.curses.Malfunctioning;
 
 import java.util.*;
 
@@ -44,7 +45,7 @@ public class ShiningLight_Evil extends AbstractImageEvent {
         this.screen = CUR_SCREEN.INTRO;
 
         if (AbstractDungeon.player.masterDeck.hasUpgradableCards()) {
-            this.imageEventText.setDialogOption(OPTIONS[0], new Regret());
+            this.imageEventText.setDialogOption(OPTIONS[0], new Malfunctioning());
         } else {
             this.imageEventText.setDialogOption(OPTIONS[2], true);
         }
@@ -67,7 +68,7 @@ public class ShiningLight_Evil extends AbstractImageEvent {
                     this.imageEventText.removeDialogOption(1);
                     this.imageEventText.updateDialogOption(0, OPTIONS[1]);
                     this.screen = CUR_SCREEN.COMPLETE;
-                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Regret(), (float) Settings.WIDTH * .5F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Malfunctioning(), (float) Settings.WIDTH * .5F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
 
                     this.upgradeCards();
                 } else {

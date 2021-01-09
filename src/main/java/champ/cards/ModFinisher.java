@@ -15,7 +15,7 @@ public class ModFinisher extends AbstractChampCard {
     private static final int UPG_DAMAGE = 3;
 
     public ModFinisher() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = DAMAGE;
         this.selfRetain = true;
         tags.add(CardTags.STRIKE);

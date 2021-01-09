@@ -1,6 +1,5 @@
 package champ.cards;
 
-import champ.ChampMod;
 import champ.powers.EntangleNextTurnPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -20,11 +19,11 @@ public class SwordThrow extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-       // tags.add(ChampMod.TECHNIQUE);
+        // tags.add(ChampMod.TECHNIQUE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-     //   techique();
+        //   techique();
         for (int i = 0; i < magicNumber; i++) dmg(m, AbstractGameAction.AttackEffect.SMASH);
         if (!bcombo()) applyToSelf(new EntangleNextTurnPower(1));
     }

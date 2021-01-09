@@ -2,14 +2,11 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.actions.LariatAction;
-import champ.stances.AbstractChampStance;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import downfall.actions.PerformXAction;
-import slimebound.SlimeboundMod;
 
 public class Lariat extends AbstractChampCard {
 

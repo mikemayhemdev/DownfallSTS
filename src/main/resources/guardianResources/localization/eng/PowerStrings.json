@@ -64,9 +64,8 @@
   "Guardian:ConstructModePower": {
     "NAME": "Construction Mode",
     "DESCRIPTIONS": [
-      "You will not be able to play #yAttacks next turn.",
-      "You will not be able to play #yAttacks next  #b",
-      " turns."
+      "At the start of each turn, if you have Buffer, gain #b",
+      " Strength."
     ]
   },
   "Guardian:MultiBoostPower": {
@@ -132,16 +131,15 @@
     "NAME": "Mode Shift",
     "DESCRIPTIONS": [
       "When you lose #b",
-      " HP, gain #b10 #yBlock, then enter #yDefensive #yMode.",
-      "#yMode #yShift already activated this turn."
+      " HP, gain #b10 #yBlock, enter #yDefensive #yMode until next turn, and increase the amount required to trigger this effect again by 10."
     ]
   },
   "Guardian:ExhaustStatusesPower": {
     "NAME": "Repulse",
     "DESCRIPTIONS": [
-      "#yExhaust the first #yStatus or #yCurse card drawn each turn.",
-      "#yExhaust the first #b",
-      " #yStatus or #yCurse cards drawn each turn."
+      "When you draw the first #yStatus or #yCurse card each turn, #yExhaust it and draw a card.",
+      "When you draw the first #b",
+      " #yStatus or #yCurse cards each turn, #yExhaust them and draw a card."
     ]
   },
   "Guardian:RevengePower": {
@@ -158,7 +156,7 @@
       " [E] and draw #b",
       " card",
       " cards",
-      " whenever you play 3 0-cost cards in a single turn."
+      " whenever you play the 3rd 0-cost card in a single turn."
     ]
   },
   "Guardian:EnergizedGuardianPower": {
@@ -199,11 +197,11 @@
     ]
   },
   "Guardian:DontLeaveDefensiveModePower": {
-    "NAME": "Entrenched",
+    "NAME": "Defensive Mode",
     "DESCRIPTIONS": [
-      "At the start of your next turn, don't leave #yDefensive #yMode.",
-      "At the start of your next #b",
-      " turns, don't leave #yDefensive #yMode."
+      "You will exit #yDefensive #yMode at the end of this combat round.",
+      "#yDefensive #yMode will be active for #b",
+      " more rounds."
     ]
   }
 }

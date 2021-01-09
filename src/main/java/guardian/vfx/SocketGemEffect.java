@@ -111,15 +111,6 @@ public class SocketGemEffect extends AbstractGameEffect {
             this.gemSelect = true;
             GuardianMod.gridScreenForGems = true;
             AbstractDungeon.gridSelectScreen.open(gemCards, 1, TEXT[3], false, false, true, false);
-
-            /*  TODO - Relics that do "on Gem Socket" can go here
-            var1 = AbstractDungeon.player.relics.iterator();
-
-            while(var1.hasNext()) {
-                AbstractRelic r = (AbstractRelic)var1.next();
-                r.onSmith();
-            }
-            */
         }
 
         if (this.duration < 0.0F) {

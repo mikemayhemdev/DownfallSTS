@@ -11,6 +11,10 @@ import guardian.relics.PickAxe;
 import guardian.ui.EnhanceBonfireOption;
 import guardian.ui.FindGemsOption;
 import javassist.CtBehavior;
+import sneckomod.TheSnecko;
+import sneckomod.relics.SneckoSoul;
+import sneckomod.relics.SuperSneckoSoul;
+import sneckomod.ui.LockInCampfireOption;
 
 import java.util.ArrayList;
 
@@ -34,6 +38,11 @@ public class AddEnhanceButtonPatch {
                 boolean relicActive;
                 relicActive = AbstractDungeon.player.getRelic(PickAxe.ID).counter != -2;
                 ___buttons.add(new FindGemsOption(relicActive));
+            }
+
+
+            if (AbstractDungeon.player.hasRelic(SuperSneckoSoul.ID) || AbstractDungeon.player.hasRelic(SneckoSoul.ID)) {
+                ___buttons.add(new LockInCampfireOption());
             }
         }
     }

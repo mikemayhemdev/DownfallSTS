@@ -1,0 +1,13 @@
+{
+  "bronze:SpecificCardReward": {
+    "TEXT": [
+      "Add ",
+      " to your deck"
+    ]
+  },
+  "bronze:UnplayableMod": {
+    "TEXT": [
+      "Unplayable. NL "
+    ]
+  }
+}

@@ -2,13 +2,17 @@
   "sneckomod:Unknown": {
     "TEXT": [
       "Unknown",
-      " Upgraded "
+      " Upgraded ",
+      "At the start of combat, Unknown cards transform into other random cards from the chosen classes that satisfy certain constraints.",
+      " NL Chosen classes:",
+      "At the start of combat, Unknown cards transform into other random cards from ANY other class (other than basic Strikes and Defends) that satisfy certain constraints.",
+      "At the start of combat, Unknown cards transform into other random cards from other classes (other than basic Strikes and Defends) that satisfy certain constraints."
     ]
   },
   "sneckomod:UnknownClass": {
     "TEXT": [
       "???",
-      "sneckomod:Unknown ",
+      "*Unknown ",
       " Card.",
       "Character",
       "The ",
@@ -28,6 +32,21 @@
   "sneckomod:ExhaustMod": {
     "TEXT": [
       " NL Exhaust."
+    ]
+  },
+  "sneckomod:ChallengeMode": {
+    "TEXT": [
+      "Challenge Mode - Pure Snecko",
+      "Unknown cards can be from any class. Recommended for experienced Snecko players."
+    ]
+  },
+  "sneckomod:LockInBonfireOptions": {
+    "TEXT": [
+      "Identify",
+      "Lock an Unknown into a permanent card.",
+      "Requires an Unknown card.",
+      "Select a card to add to your deck, removing its Unknown.",
+      "[Free Action] Lock an Unknown into a permanent card."
     ]
   }
 }

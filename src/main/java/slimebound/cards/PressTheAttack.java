@@ -42,7 +42,7 @@ public class PressTheAttack extends AbstractSlimeboundCard {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        this.baseDamage = 8;
+        this.baseDamage = 9;
 
 
     }
@@ -56,6 +56,7 @@ public class PressTheAttack extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         if (m.hasPower(SlimedPower.POWER_ID)) {
             addToBot(new CommandAction());
+            if (upgraded) addToBot(new CommandAction());
         }
 
 
@@ -71,7 +72,9 @@ public class PressTheAttack extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(3);
+            //upgradeDamage(1);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 }

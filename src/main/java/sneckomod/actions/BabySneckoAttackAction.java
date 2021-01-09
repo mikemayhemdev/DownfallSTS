@@ -5,14 +5,12 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.GainGoldTextEffect;
-import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import sneckomod.relics.BabySnecko;
-import sneckomod.vfx.LoseGoldTextEffect;
 
 public class BabySneckoAttackAction extends AbstractGameAction {
     AbstractMonster m;
     BabySnecko b;
+
     public BabySneckoAttackAction(AbstractMonster m, BabySnecko b) {
         this.m = m;
         this.b = b;

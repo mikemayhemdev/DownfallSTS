@@ -37,7 +37,7 @@ public class Float extends AbstractHexaCard implements OctopusCard {
         return cardList;
     }
 
-    public void doChoiceStuff(OctoChoiceCard card) {
+    public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
         switch (card.cardID) {
             case "octo:OctoAdvance":
                 atb(new AdvanceAction(false));
@@ -55,7 +55,7 @@ public class Float extends AbstractHexaCard implements OctopusCard {
         atb(new AnimateHopAction(p));
         atb(new DrawCardAction(1));
         if (upgraded) {
-            atb(new OctoChoiceAction(this));
+            atb(new OctoChoiceAction(m, this));
         } else {
             atb(new AdvanceAction(false));
         }

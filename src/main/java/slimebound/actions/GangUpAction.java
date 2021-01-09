@@ -62,20 +62,20 @@ public class GangUpAction extends AbstractGameAction {
                 return;
             }
             if (currentAmount > 0) {
-                //SlimeboundMod.logger.info("Losing HP" + this.currentAmount);
+                ////SlimeboundMod.logger.info("Losing HP" + this.currentAmount);
 
 
                 if (AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND) {
                     SlimeboundMod.disabledStrikeVFX = true;
                 }
-                //SlimeboundMod.logger.info("No buffer, proceeding");
+                ////SlimeboundMod.logger.info("No buffer, proceeding");
                 AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, currentAmount, DamageInfo.DamageType.HP_LOSS));
 
 
                 //AbstractDungeon.player.damageFlash = true;
                 //AbstractDungeon.player.damageFlashFrames = 4;
 
-                //SlimeboundMod.logger.info("Reducing max HP");
+                ////SlimeboundMod.logger.info("Reducing max HP");
                 int MaxHPActuallyLost = 3;
                 if (AbstractDungeon.player.maxHealth <= 3) {
                     MaxHPActuallyLost = AbstractDungeon.player.maxHealth - 1;

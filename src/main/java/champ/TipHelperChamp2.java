@@ -7,9 +7,7 @@ package champ;
 
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
-import champ.stances.GladiatorStance;
 import champ.stances.UltimateStance;
-import champ.util.TextureLoader;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -117,7 +115,6 @@ public class TipHelperChamp2 {
             if (rememberedCard != null) {
                 if (rememberedCard.hasTag(ChampMod.TECHNIQUE)) {
                     if (AbstractDungeon.player.stance instanceof UltimateStance ||
-                            AbstractDungeon.player.stance instanceof GladiatorStance ||
                             AbstractDungeon.player.stance instanceof BerserkerStance ||
                             AbstractDungeon.player.stance instanceof DefensiveStance
                     ) {

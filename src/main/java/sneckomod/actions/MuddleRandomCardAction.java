@@ -1,23 +1,17 @@
 package sneckomod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
-import guardian.cards.PackageShapes;
-import sneckomod.SneckoMod;
-import sneckomod.powers.MudshieldPower;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 
 public class MuddleRandomCardAction extends AbstractGameAction {
 
     private boolean onlyHighest = false;
 
+    private boolean modifiedCost = false;
 
     public MuddleRandomCardAction(int i) {
         this(i, false);
@@ -28,9 +22,14 @@ public class MuddleRandomCardAction extends AbstractGameAction {
         onlyHighest = highest;
     }
 
+    public MuddleRandomCardAction(int i, boolean highest, boolean no3s) {
+        amount = i;
+        onlyHighest = highest;
+        modifiedCost = no3s;
+    }
 
 
-        public void update() {
+    public void update() {
         isDone = true;
         ArrayList<AbstractCard> myCardList = new ArrayList<>(AbstractDungeon.player.hand.group);
 
@@ -39,24 +38,28 @@ public class MuddleRandomCardAction extends AbstractGameAction {
             if (!myCardList.isEmpty()) {
                 AbstractCard card = null;
                 if (onlyHighest) {
-
-                    Collections.shuffle(myCardList, AbstractDungeon.cardRandomRng.random);
-                    myCardList.sort((AbstractCard z1, AbstractCard z2) -> {
-                        if (z1.cost < z2.cost)
-                            return 1;
-                        if (z1.cost > z2.cost)
-                            return -1;
-                        return 0;
-                    });
-
-                    card = myCardList.remove(0);
-
+                    int highestCostFound = 0;
+                    for (AbstractCard r : myCardList) {
+                        if (r.costForTurn > highestCostFound) {
+                            highestCostFound = r.costForTurn;
+                        }
+                    }
+                    ArrayList<AbstractCard> highestCostCards = new ArrayList<>();
+                    for (AbstractCard r : myCardList) {
+                        if (r.costForTurn == highestCostFound) {
+                            highestCostCards.add(r);
+                        }
+                    }
+                    if (!highestCostCards.isEmpty()) {
+                        card = highestCostCards.get(AbstractDungeon.cardRandomRng.random(highestCostCards.size() - 1));
+                        myCardList.remove(card);
+                    }
                 } else {
                     card = myCardList.remove(AbstractDungeon.cardRandomRng.random(myCardList.size() - 1));
-
                 }
 
-                addToTop(new MuddleAction(card));
+                if (card != null)
+                    addToTop(new MuddleAction(card, modifiedCost));
             }
         }
     }

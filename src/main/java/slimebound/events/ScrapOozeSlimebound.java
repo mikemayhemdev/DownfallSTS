@@ -67,7 +67,7 @@ public class ScrapOozeSlimebound extends AbstractImageEvent {
 
 
         if (this.relicOffered != null) {
-            this.imageEventText.setDialogOption(OPTIONSALT[0] + this.relicOffered.name + OPTIONSALT[1]);
+            this.imageEventText.setDialogOption(OPTIONSALT[0] + this.relicOffered.name + OPTIONSALT[1], new ScrapOozeRelic());
         } else {
             this.imageEventText.setDialogOption(OPTIONSALT[4], true);
         }

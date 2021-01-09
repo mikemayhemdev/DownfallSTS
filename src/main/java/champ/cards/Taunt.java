@@ -1,21 +1,13 @@
 package champ.cards;
 
-import basemod.helpers.CardModifierManager;
 import champ.ChampMod;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
-import champ.stances.GladiatorStance;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.stances.NeutralStance;
 import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
-import downfall.util.EtherealMod;
 import downfall.util.OctopusCard;
-import sneckomod.util.ExhaustMod;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -43,7 +35,6 @@ public class Taunt extends AbstractChampCard implements OctopusCard {
             ArrayList<String> validStances = new ArrayList<>();
 
             if (!(p.stance instanceof DefensiveStance)) validStances.add(DefensiveStance.STANCE_ID);
-            if (!(p.stance instanceof GladiatorStance)) validStances.add(GladiatorStance.STANCE_ID);
             if (!(p.stance instanceof BerserkerStance)) validStances.add(BerserkerStance.STANCE_ID);
 
             Collections.shuffle(validStances);
@@ -52,15 +43,12 @@ public class Taunt extends AbstractChampCard implements OctopusCard {
                 case DefensiveStance.STANCE_ID:
                     defenseOpen();
                     break;
-                case GladiatorStance.STANCE_ID:
-                    gladOpen();
-                    break;
                 case BerserkerStance.STANCE_ID:
                     berserkOpen();
                     break;
             }
         } else {
-            atb(new OctoChoiceAction(this));
+            atb(new OctoChoiceAction(m, this));
         }
 
     }
@@ -70,20 +58,16 @@ public class Taunt extends AbstractChampCard implements OctopusCard {
         StanceDance c = new StanceDance();
         cardList.add(new OctoChoiceCard("octo:OctoBerserk", this.name, ChampMod.makeCardPath("OctoStanceBerserker.png"), c.EXTENDED_DESCRIPTION[0]));
         cardList.add(new OctoChoiceCard("octo:OctoDefense", this.name, ChampMod.makeCardPath("OctoStanceDefensive.png"), c.EXTENDED_DESCRIPTION[1]));
-        cardList.add(new OctoChoiceCard("octo:OctoGladiat", this.name, ChampMod.makeCardPath("OctoStanceGladiator.png"), c.EXTENDED_DESCRIPTION[2]));
         return cardList;
     }
 
-    public void doChoiceStuff(OctoChoiceCard card) {
+    public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
         switch (card.cardID) {
             case "octo:OctoBerserk":
                 berserkOpen();
                 break;
             case "octo:OctoDefense":
                 defenseOpen();
-                break;
-            case "octo:OctoGladiat":
-                gladOpen();
                 break;
         }
     }

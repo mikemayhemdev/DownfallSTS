@@ -22,7 +22,7 @@ public class EnSadisticNature extends AbstractBossCard {
 
     public EnSadisticNature() {
         super(ID, cardStrings.NAME, "colorless/power/sadistic_nature", 0, cardStrings.DESCRIPTION, CardType.POWER, CardColor.COLORLESS, CardRarity.RARE, CardTarget.SELF, AbstractMonster.Intent.BUFF);
-        this.baseMagicNumber = 3;
+        this.baseMagicNumber = 5;
         this.magicNumber = this.baseMagicNumber;
     }
 
@@ -33,7 +33,7 @@ public class EnSadisticNature extends AbstractBossCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(1);
+            this.upgradeMagicNumber(2);
         }
 
     }

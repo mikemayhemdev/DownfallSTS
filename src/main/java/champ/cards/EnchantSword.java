@@ -1,12 +1,10 @@
 package champ.cards;
 
-import champ.ChampMod;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class EnchantSword extends AbstractChampCard {
 
@@ -31,8 +29,8 @@ public class EnchantSword extends AbstractChampCard {
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean canUse = false;
-        for (AbstractCard c:p.hand.group){
-            if (c.baseDamage > 0){
+        for (AbstractCard c : p.hand.group) {
+            if (c.baseDamage > 0) {
                 canUse = true;
                 break;
             }

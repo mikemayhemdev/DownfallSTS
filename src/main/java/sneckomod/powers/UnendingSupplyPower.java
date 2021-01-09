@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import sneckomod.SneckoMod;
-import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
 public class UnendingSupplyPower extends AbstractPower implements CloneablePowerInterface {
@@ -44,11 +43,13 @@ public class UnendingSupplyPower extends AbstractPower implements CloneablePower
 
             for (int i = 0; i < this.amount; ++i) {// 29
                 AbstractCard card = SneckoMod.getOffClassCard();
-                int newCost = AbstractDungeon.cardRandomRng.random(3);// 33
-                if (card.cost != newCost) {// 34
-                    card.cost = newCost;// 35
-                    card.costForTurn = card.cost;// 36
-                    card.isCostModified = true;// 37
+                if (card.cost >= 0) {
+                    int newCost = AbstractDungeon.cardRandomRng.random(3);// 33
+                    if (card.cost != newCost) {// 34
+                        card.cost = newCost;// 35
+                        card.costForTurn = card.cost;// 36
+                        card.isCostModified = true;// 37
+                    }
                 }
 
                 card.freeToPlayOnce = false;// 39

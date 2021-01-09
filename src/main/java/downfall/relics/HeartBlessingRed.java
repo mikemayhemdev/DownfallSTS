@@ -32,13 +32,4 @@ public class HeartBlessingRed extends CustomRelic {
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
     }
 
-    @Override
-    public void atBattleStartPreDraw() {
-        if (AbstractDungeon.actNum == 3 && AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss) {
-            flash();
-            addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            if(AbstractCharBoss.boss != null)
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(AbstractCharBoss.boss.anticard().makeCopy()));
-        }
-    }
 }

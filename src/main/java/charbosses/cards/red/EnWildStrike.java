@@ -5,8 +5,11 @@ import charbosses.cards.AbstractBossCard;
 import charbosses.cards.status.EnWound;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -33,7 +36,8 @@ public class EnWildStrike extends AbstractBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-     //   this.addToBot(new EnemyMakeTempCardInDrawPileAction(new EnWound(), 1, true, true));
+        this.addToBot(new MakeTempCardInDiscardAction(new Wound(), 1));
+        //don't need to create in enemy deck, will be added manually
     }
 
     @Override

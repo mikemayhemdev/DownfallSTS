@@ -257,7 +257,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        SlimeboundMod.logger.info(this.screen);
+        //SlimeboundMod.logger.info(this.screen);
 
         switch (this.screen) {
             case INTRO:
@@ -299,7 +299,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
                     } else {
 
                         this.screen = GremlinWheelGame_Evil.CUR_SCREEN.FIGHT;
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
                         MonsterGroup monsters = new MonsterGroup(new GremlinThief(-400F, 0F));
                         monsters.add(new GremlinNob(0F, 0F));
                         AbstractDungeon.getCurrRoom().monsters = monsters;

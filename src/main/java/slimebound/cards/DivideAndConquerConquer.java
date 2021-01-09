@@ -24,7 +24,7 @@ public class DivideAndConquerConquer extends AbstractSlimeboundCard {
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
     public static String UPGRADED_DESCRIPTION;
@@ -47,11 +47,12 @@ public class DivideAndConquerConquer extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
 
-        this.baseDamage = originalDamage = 8;
+        this.baseDamage = originalDamage = 10;
         this.magicNumber = this.baseMagicNumber = 2;
 
 
         this.exhaust = true;
+        this.selfRetain = true;
 
     }
 

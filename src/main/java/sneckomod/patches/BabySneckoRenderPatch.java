@@ -3,11 +3,7 @@ package sneckomod.patches;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.powers.ConfusionPower;
-import sneckomod.SneckoMod;
 import sneckomod.relics.BabySnecko;
 
 @SpirePatch(
@@ -19,8 +15,8 @@ import sneckomod.relics.BabySnecko;
 public class BabySneckoRenderPatch {
     @SpirePostfixPatch
     public static void Postfix(AbstractPlayer __instance, SpriteBatch sb) {
-        if (__instance.hasRelic(BabySnecko.ID)){
-            BabySnecko baby = (BabySnecko)__instance.getRelic(BabySnecko.ID);
+        if (__instance.hasRelic(BabySnecko.ID)) {
+            BabySnecko baby = (BabySnecko) __instance.getRelic(BabySnecko.ID);
             baby.renderBaby(sb);
         }
 

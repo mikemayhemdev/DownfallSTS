@@ -26,9 +26,9 @@ public class StasisStrike extends AbstractGuardianCard {
     private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int DAMAGE = 4;
-    private static final int UPGRADE_BONUS = 3;
-    private static final int SOCKETS = 1;
+    private static final int DAMAGE = 8;
+    private static final int UPGRADE_BONUS = 2;
+    private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
 
@@ -46,7 +46,7 @@ public class StasisStrike extends AbstractGuardianCard {
 
         this.baseDamage = DAMAGE;
         this.tags.add(AbstractCard.CardTags.STRIKE);
-
+        baseMagicNumber = magicNumber = 3;
         this.socketCount = SOCKETS;
         this.tags.add(GuardianMod.SELFSTASIS);
         updateDescription();
@@ -68,7 +68,8 @@ public class StasisStrike extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_BONUS);
+            upgradeBlock(2);
+            upgradeMagicNumber(1);
         }
     }
 

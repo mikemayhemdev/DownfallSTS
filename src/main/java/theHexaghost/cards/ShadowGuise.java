@@ -9,7 +9,7 @@ public class ShadowGuise extends AbstractHexaCard {
 
     //stupid intellij stuff SKILL, SELF, SPECIAL
 
-    private static final int BLOCK = 12;
+    private static final int BLOCK = 14;
     private static final int UPG_BLOCK = 4;
 
     public ShadowGuise() {

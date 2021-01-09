@@ -25,7 +25,7 @@ public class Recover extends AbstractGuardianCard {
     private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int CARDS = 1;
+    private static final int CARDS = 3;
     private static final int UPGRADEBLOCK = 3;
     private static final int BLOCK = 5;
     private static final int SOCKETS = 0;
@@ -53,15 +53,14 @@ public class Recover extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-
+        brace(magicNumber);
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
                 if (AbstractDungeon.player.discardPile.size() > 0) {
-                    AbstractDungeon.actionManager.addToTop(new DiscardPileToStasisAction(magicNumber));
+                    AbstractDungeon.actionManager.addToTop(new DiscardPileToStasisAction(1));
                 }
             }
         });
@@ -77,6 +76,7 @@ public class Recover extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeBlock(UPGRADEBLOCK);
+            upgradeMagicNumber(1);
         }
     }
 

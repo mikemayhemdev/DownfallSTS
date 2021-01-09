@@ -15,8 +15,6 @@ public class CBR_OddMushroom extends AbstractCharbossRelic {
         super(new OddMushroom());
     }
 
-    //TODO - Make Odd Mushroom work
-
     @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];

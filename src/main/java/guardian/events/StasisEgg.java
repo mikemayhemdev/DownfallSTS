@@ -8,7 +8,6 @@ package guardian.events;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.curses.Pain;
-import com.megacrit.cardcrawl.cards.curses.Regret;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -17,7 +16,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import guardian.GuardianMod;
-import guardian.cards.Aged;
+import downfall.cards.curses.Aged;
 import guardian.ui.RelicPreviewButton;
 
 public class StasisEgg extends AbstractImageEvent {

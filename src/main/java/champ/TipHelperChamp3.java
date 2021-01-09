@@ -8,7 +8,6 @@ package champ;
 import champ.powers.CalledShotPower;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
-import champ.stances.GladiatorStance;
 import champ.stances.UltimateStance;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -97,11 +96,10 @@ public class TipHelperChamp3 {
             if (rememberedCard != null) {
                 if (rememberedCard.hasTag(ChampMod.FINISHER)) {
                     if ((AbstractDungeon.player.stance instanceof BerserkerStance ||
-                            AbstractDungeon.player.stance instanceof DefensiveStance || AbstractDungeon.player.stance instanceof GladiatorStance || AbstractDungeon.player.stance instanceof UltimateStance) &&
+                            AbstractDungeon.player.stance instanceof DefensiveStance || AbstractDungeon.player.stance instanceof UltimateStance) &&
                             !AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)
                     ) {
                         currentColor = new Color(0.5F, TipHelperChamp2.greenValue, 0.5F, 1F);
-                        //TODO: End Turn Button flashing
                     }
                 }
             }

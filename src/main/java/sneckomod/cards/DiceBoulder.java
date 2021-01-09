@@ -79,7 +79,7 @@ public class DiceBoulder extends AbstractSneckoCard {
     public void upgrade() {
         this.upgradeDamage(4);// 49
         upgradeMagicNumber(8);
-        if (baseMagicNumber > baseDamage){
+        if (baseMagicNumber > baseDamage) {
             baseMagicNumber = baseDamage;
             magicNumber = baseMagicNumber;
         }

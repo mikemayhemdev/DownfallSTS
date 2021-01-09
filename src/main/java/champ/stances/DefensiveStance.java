@@ -3,7 +3,7 @@ package champ.stances;
 import champ.ChampChar;
 import champ.ChampMod;
 import champ.powers.CounterPower;
-import champ.powers.FocusedDefPower;
+import champ.powers.DefensiveStylePower;
 import champ.relics.DefensiveTrainingManual;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -39,29 +39,37 @@ public class DefensiveStance extends AbstractChampStance {
 
     @Override
     public void updateDescription() {
-        this.description = ChampChar.characterStrings.TEXT[8] + ": " + ChampChar.characterStrings.TEXT[12] + DefensiveStance.amount() + ChampChar.characterStrings.TEXT[47] + " NL " + ChampChar.characterStrings.TEXT[9] + ": " + ChampChar.characterStrings.TEXT[13];
+        this.description = ChampChar.characterStrings.TEXT[8] + ": " + ChampChar.characterStrings.TEXT[12] + DefensiveStance.amount() + ChampChar.characterStrings.TEXT[47] + " NL " + ChampChar.characterStrings.TEXT[9] + ": " + ChampChar.characterStrings.TEXT[12] + finisherAmount() + ChampChar.characterStrings.TEXT[56];
     }
 
     public static int amount() {
-        int x = AbstractDungeon.player.hasRelic(DefensiveTrainingManual.ID) ? 7 : 4;
-        if (AbstractDungeon.player.hasPower(FocusedDefPower.POWER_ID)) {
-            x += AbstractDungeon.player.getPower(FocusedDefPower.POWER_ID).amount;
+        int x = 4;
+        if (AbstractDungeon.player.hasPower(DefensiveStylePower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(DefensiveStylePower.POWER_ID).amount;
+        }
+        return x;
+    }
+
+    public static int finisherAmount() {
+        int x = 12;
+        if (AbstractDungeon.player.hasRelic(DefensiveTrainingManual.ID)) {
+            x += 8;
         }
         return x;
     }
 
     @Override
     public void technique() {
-        int x = AbstractDungeon.player.hasRelic(DefensiveTrainingManual.ID) ? 7 : 4;
-        if (AbstractDungeon.player.hasPower(FocusedDefPower.POWER_ID)) {
-            x += AbstractDungeon.player.getPower(FocusedDefPower.POWER_ID).amount;
+        int x = 4;
+        if (AbstractDungeon.player.hasPower(DefensiveStylePower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(DefensiveStylePower.POWER_ID).amount;
         }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(x), x));
     }
 
     @Override
     public void finisher() {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, 12));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, finisherAmount()));
     }
 
 

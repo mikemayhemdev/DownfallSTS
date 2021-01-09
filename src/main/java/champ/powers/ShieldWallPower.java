@@ -40,7 +40,7 @@ public class ShieldWallPower extends AbstractPower implements CloneablePowerInte
     @Override
     public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
         flash();
-        this.addToTop(new ApplyPowerAction(owner, owner, new CounterPower(amount * AbstractDungeon.player.hand.size()), amount * AbstractDungeon.player.hand.size()));
+        this.addToTop(new ApplyPowerAction(owner, owner, new CounterPower(amount) , amount));
     }
 
     @Override

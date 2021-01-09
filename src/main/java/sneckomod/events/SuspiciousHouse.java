@@ -1,25 +1,14 @@
 package sneckomod.events;
 
 
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
-import com.megacrit.cardcrawl.cards.curses.Pain;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import sneckomod.SneckoMod;
-import sneckomod.cards.Bewildered;
-import sneckomod.cards.unknowns.AbstractUnknownCard;
+import downfall.cards.curses.Bewildered;
 import sneckomod.relics.BabySnecko;
-
-import java.util.ArrayList;
-import java.util.Collections;
 
 public class SuspiciousHouse extends AbstractImageEvent {
     public static final String ID = "sneckomod:SuspiciousHouse";

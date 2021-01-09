@@ -1,10 +1,8 @@
 package champ.cards;
 
-import champ.ChampChar;
 import champ.ChampMod;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class ShieldSlam extends AbstractChampCard {
@@ -13,30 +11,21 @@ public class ShieldSlam extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, rare
 
-    private static final int DAMAGE = 10;
-    private static final int UPG_DAMAGE = 4;
-
     public ShieldSlam() {
-        super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
-        tags.add(ChampMod.TECHNIQUE);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        selfRetain = true;
+        tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
-    }
-
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (p.currentBlock >= 20) {
-            return super.canUse(p, m);
+        if (upgraded) {
+            atb(new DrawCardAction(1));
         }
-        cantUseMessage = ChampChar.characterStrings.TEXT[44];
-        return false;
+        finisher();
     }
 
     public void upp() {
-        upgradeDamage(UPG_DAMAGE);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

@@ -13,10 +13,9 @@ import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
-import com.megacrit.cardcrawl.orbs.Plasma;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
+import com.megacrit.cardcrawl.powers.LockOnPower;
 
 import java.util.ArrayList;
 
@@ -24,6 +23,7 @@ public abstract class AbstractEnemyOrb extends AbstractOrb {
 
     public boolean showValues = true;
     public boolean evokeOverride = false;
+    public boolean pretendLockOn = false;
     public int evokeMult = 0;
     public int pretendFocus = 0;
 
@@ -42,10 +42,10 @@ public abstract class AbstractEnemyOrb extends AbstractOrb {
     public void update() {
         this.hb.update();// 96
         if (this.hb.hovered) {
-            if ((float)InputHelper.mX < 1400.0F * Settings.scale) {// 1040
-                TipHelper.renderGenericTip((float)InputHelper.mX + 60.0F * Settings.scale, (float)InputHelper.mY - 50.0F * Settings.scale, name, description);// 1041
+            if ((float) InputHelper.mX < 1400.0F * Settings.scale) {// 1040
+                TipHelper.renderGenericTip((float) InputHelper.mX + 60.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale, name, description);// 1041
             } else {
-                TipHelper.renderGenericTip((float)InputHelper.mX - 350.0F * Settings.scale, (float)InputHelper.mY - 50.0F * Settings.scale, name, description);// 1047
+                TipHelper.renderGenericTip((float) InputHelper.mX - 350.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale, name, description);// 1047
             }
         }
 
@@ -86,15 +86,27 @@ public abstract class AbstractEnemyOrb extends AbstractOrb {
     }
 
     public void applyFocus() {
-        if (AbstractCharBoss.boss.hasPower(FocusPower.POWER_ID)){
-
+        if (AbstractCharBoss.boss.hasPower(FocusPower.POWER_ID)) {
             AbstractPower power = AbstractCharBoss.boss.getPower(FocusPower.POWER_ID);
             this.passiveAmount = Math.max(0, this.basePassiveAmount + power.amount + pretendFocus);
             this.evokeAmount = Math.max(0, this.baseEvokeAmount + power.amount + pretendFocus);
-        }
-        else {
+        } else {
             this.passiveAmount = this.basePassiveAmount + pretendFocus;
             this.evokeAmount = this.baseEvokeAmount + pretendFocus;
+        }
+    }
+
+    // This is insanity! I'm swapping out Bullseye for now
+    public void applyLockOn() {
+        if (AbstractDungeon.player.hasPower(LockOnPower.POWER_ID) || pretendLockOn) {
+            if (this instanceof EnemyEmptyOrbSlot) return;
+            if (this.ID.equals(EnemyLightning.ORB_ID)) {
+                this.passiveAmount = Math.max(0, (int) Math.floor(this.passiveAmount * 1.5));
+                this.evokeAmount = Math.max(0, (int) Math.floor(this.evokeAmount * 1.5));
+            }
+            if (this.ID.equals(EnemyDark.ORB_ID)) {
+                this.evokeAmount = Math.max(0, (int) Math.floor(this.evokeAmount * 1.5));
+            }
         }
     }
 
@@ -102,7 +114,7 @@ public abstract class AbstractEnemyOrb extends AbstractOrb {
     protected void renderText(SpriteBatch sb) {
         if (!(this instanceof EnemyEmptyOrbSlot) && showValues) {
             if (this.showEvokeValue || evokeOverride) {
-                FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L,  evokeMult > 0 ? (Integer.toString(this.evokeAmount) + "x" + Integer.toString(evokeMult)) : Integer.toString(this.evokeAmount), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET, new Color(0.2F, 1.0F, 1.0F, this.c.a), this.fontScale);
+                FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, evokeMult > 0 ? (Integer.toString(this.evokeAmount) + "x" + Integer.toString(evokeMult)) : Integer.toString(this.evokeAmount), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET, new Color(0.2F, 1.0F, 1.0F, this.c.a), this.fontScale);
             } else {
                 FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.passiveAmount), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET, this.c, this.fontScale);
             }

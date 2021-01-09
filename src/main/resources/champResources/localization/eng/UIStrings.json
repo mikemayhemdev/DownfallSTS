@@ -16,8 +16,8 @@
   },
   "champ:OpenerMod": {
     "TEXT": [
-      "Enter champ:Berserker NL ",
-      "Enter champ:Defensive NL ",
+      " NL Enter champ:Berserker.",
+      " NL Enter champ:Defensive.",
       "Enter champ:Gladiator NL "
     ]
   },

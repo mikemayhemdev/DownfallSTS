@@ -116,8 +116,8 @@
   },
   "expansioncontent:StudyTheSpire": {
     "NAME": "Study the Spire",
-    "DESCRIPTION": "Add a random Colorless expansioncontent:Boss card to your hand at the start of your next !M! turns. It costs 0 until played.",
-    "UPGRADE_DESCRIPTION": "Add a random Upgraded Colorless expansioncontent:Boss card to your hand at the start of your next !M! turns. It costs 0 until played."
+    "DESCRIPTION": "Add a random expansioncontent:Boss card to your hand at the start of your next !M! turns. It costs 0 until played.",
+    "UPGRADE_DESCRIPTION": "Add a random Upgraded expansioncontent:Boss card to your hand at the start of your next !M! turns. It costs 0 until played."
   },
   "expansioncontent:QuickStudy": {
     "NAME": "Quick Study",
@@ -126,13 +126,13 @@
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "The Evil Within",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a random Colorless expansioncontent:Boss to your hand. It costs 0 until played. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a random Upgraded Colorless expansioncontent:Boss to your hand. It costs 0 until played. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a random expansioncontent:Boss to your hand. It costs 0 until played. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a random Upgraded expansioncontent:Boss to your hand. It costs 0 until played. NL Exhaust."
   },
   "expansioncontent:Corrupt": {
     "NAME": "Corrupt",
-    "DESCRIPTION": "Exhaust 1 card. Replace it with a random Colorless expansioncontent:Boss card that costs 1 less. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Exhaust 1 card. Replace it with a random Upgraded Colorless expansioncontent:Boss card that costs 1 less. NL Exhaust."
+    "DESCRIPTION": "Exhaust 1 card. Replace it with a random expansioncontent:Boss card that costs 1 less. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Exhaust 1 card. Replace it with a random Upgraded expansioncontent:Boss card that costs 1 less. NL Exhaust."
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "KnowingSkull",

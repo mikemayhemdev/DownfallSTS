@@ -30,7 +30,7 @@ public class GuardianWhirl extends AbstractGuardianCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardStrings cardStrings;
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int DAMAGE = 4;
 
     //TUNING CONSTANTS
@@ -66,7 +66,7 @@ public class GuardianWhirl extends AbstractGuardianCard {
 
         //this.sockets.add(GuardianMod.socketTypes.RED);
 
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+       // this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.magicNumber = this.baseMagicNumber = MULTICOUNT;
         this.isMultiDamage = true;
         this.socketCount = SOCKETS;

@@ -28,13 +28,13 @@ public class BronzeSlime
 
 
     public void updateDescription() {
-        this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1] + (this.debuffAmount + this.debuffBonusAmount) + this.descriptions[2];
+        this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1] + (this.debuffAmount) + this.descriptions[2];
     }
 
 
     public void activateEffectUnique() {
 
-        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_LIGHT, this, false, false, false, 0, true, this.debuffAmount + this.debuffBonusAmount, false));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_LIGHT, this, false, false, false, 0, true, this.debuffAmount, false));
 
     }
 

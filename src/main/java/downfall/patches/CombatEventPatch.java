@@ -30,7 +30,9 @@ public class CombatEventPatch {
                                 "currentRoom.event instanceof downfall.events.Colosseum_Evil || " +
                                 "currentRoom.event instanceof champ.events.Colosseum_Evil_Champ || " +
                                 "currentRoom.event instanceof champ.events.MinorLeagueArena || " +
-                                "currentRoom.event instanceof downfall.events.MindBloom_Evil;");
+                                "currentRoom.event instanceof downfall.events.MindBloom_Evil || " +
+                                "currentRoom.event instanceof automaton.events.ShapeFactory || " +
+                                "currentRoom.event instanceof automaton.events.AncientFactory;");
                     }
                 } catch (NotFoundException e) {
                     SlimeboundMod.logger.error("Combat proceed button patch broken.", e);

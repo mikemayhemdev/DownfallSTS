@@ -1,6 +1,9 @@
 package charbosses.cards.green;
 
 import charbosses.cards.AbstractBossCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.unique.DoublePoisonAction;
 import com.megacrit.cardcrawl.actions.unique.TriplePoisonAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import charbosses.powers.general.EnemyPoisonPower;
+import com.megacrit.cardcrawl.powers.PoisonPower;
 
 import java.util.ArrayList;
 
@@ -25,26 +29,35 @@ public class EnCatalyst extends AbstractBossCard {
     public EnCatalyst() {
         super(ID, EnCatalyst.cardStrings.NAME, "green/skill/catalyst", 1, EnCatalyst.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.STRONG_DEBUFF);
         exhaust = true;
-    }
-
-    @Override
-    public int getPriority(ArrayList<AbstractCard> hand) {
-        if (AbstractDungeon.player != null){
-            if (AbstractDungeon.player.hasPower(EnemyPoisonPower.POWER_ID)){
-                if(AbstractDungeon.player.getPower(EnemyPoisonPower.POWER_ID).amount > 20)
-                return 100;
-            }
-        }
-        return -100;
+        artifactConsumedIfPlayed = 1;
     }
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
+
         if (!this.upgraded) {// 32
-            this.addToBot(new DoublePoisonAction(p, m));// 33
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    if (p.hasPower(EnemyPoisonPower.POWER_ID)) {
+                        this.addToTop(new ApplyPowerAction(p, m, new EnemyPoisonPower(p, m, p.getPower(EnemyPoisonPower.POWER_ID).amount), p.getPower(EnemyPoisonPower.POWER_ID).amount));
+                    }
+                    isDone = true;
+                }
+            });
         } else {
-            this.addToBot(new TriplePoisonAction(p, m));// 35
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    if (p.hasPower(EnemyPoisonPower.POWER_ID)) {
+                        this.addToTop(new ApplyPowerAction(p, m, new EnemyPoisonPower(p, m, p.getPower(EnemyPoisonPower.POWER_ID).amount * 2), p.getPower(EnemyPoisonPower.POWER_ID).amount * 2));
+                    }
+                    isDone = true;
+                }
+            });
         }
+
+
     }
 
     @Override

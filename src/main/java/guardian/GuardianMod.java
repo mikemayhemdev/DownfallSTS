@@ -1,5 +1,8 @@
 package guardian;
 
+import automaton.AutomatonChar;
+import automaton.cards.*;
+import automaton.relics.*;
 import basemod.BaseMod;
 import basemod.ModPanel;
 import basemod.ReflectionHacks;
@@ -8,12 +11,16 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import champ.ChampChar;
+import champ.events.BackToBasicsChamp;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -21,6 +28,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
+import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
 import com.megacrit.cardcrawl.events.shrines.PurificationShrine;
 import com.megacrit.cardcrawl.events.shrines.Transmogrifier;
@@ -34,8 +42,12 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
+import downfall.cards.curses.Aged;
 import downfall.downfallMod;
+import downfall.potions.CursedFountainPotion;
 import guardian.cards.*;
+import guardian.cards.BronzeArmor;
+import guardian.cards.BronzeOrb;
 import guardian.characters.GuardianCharacter;
 import guardian.events.StasisEgg;
 import guardian.events.*;
@@ -55,6 +67,7 @@ import guardian.powers.zzz.MultiBoostPower;
 import guardian.relics.*;
 import guardian.rewards.GemReward;
 import guardian.rewards.GemRewardAllRarities;
+import guardian.stances.DefensiveMode;
 import guardian.ui.EnhanceBonfireOption;
 import guardian.vfx.SocketGemEffect;
 import org.apache.logging.log4j.LogManager;
@@ -76,7 +89,8 @@ public class GuardianMod implements PostDrawSubscriber,
         EditRelicsSubscriber,
         EditCardsSubscriber,
         PostBattleSubscriber,
-        AddAudioSubscriber
+        AddAudioSubscriber,
+        OnPlayerLoseBlockSubscriber
         //basemod.interfaces.EditKeywordsSubscriber
         //EditStringsSubscriber
 {
@@ -122,7 +136,7 @@ public class GuardianMod implements PostDrawSubscriber,
 
     private static String modID;
 
-    //public static BronzeOrb bronzeOrbInPlay;
+    //public static BronzeOrbWhoReallyLikesDefectForSomeReason bronzeOrbInPlay;
 
     @SpireEnum
     public static AbstractCard.CardTags GEM;
@@ -143,7 +157,7 @@ public class GuardianMod implements PostDrawSubscriber,
     @SpireEnum
     public static AbstractCard.CardTags VOLATILE;
 
-    //TODO - Unlock bundles
+
     private ModPanel settingsPanel;
     private CustomUnlockBundle unlocks0;
     private CustomUnlockBundle unlocks1;
@@ -277,7 +291,6 @@ public class GuardianMod implements PostDrawSubscriber,
         return retVal;
     }
 
-
     public static CardGroup getGemCards() {
         CardGroup retVal = new CardGroup(CardGroup.CardGroupType.MASTER_DECK);
 
@@ -406,7 +419,8 @@ public class GuardianMod implements PostDrawSubscriber,
     }
 
     public static boolean canSpawnStasisOrb() {
-        if (AbstractDungeon.player.hasEmptyOrb() || (AbstractDungeon.player.masterMaxOrbs == 0 && AbstractDungeon.player.maxOrbs == 0)) return true;
+        if (AbstractDungeon.player.hasEmptyOrb() || (AbstractDungeon.player.masterMaxOrbs == 0 && AbstractDungeon.player.maxOrbs == 0))
+            return true;
 
         for (AbstractOrb o : AbstractDungeon.player.orbs) {
             if (!(o instanceof StasisOrb)) {
@@ -439,6 +453,15 @@ public class GuardianMod implements PostDrawSubscriber,
         }
         return false;
 
+    }
+
+    @Override
+    public int receiveOnPlayerLoseBlock(int i) {
+        if (AbstractDungeon.player.stance instanceof DefensiveMode) {
+            return 0;
+        } else {
+            return i;
+        }
     }
 
     public void receiveEditCharacters() {
@@ -522,54 +545,31 @@ public static void saveData() {
     @Override
     public void receiveSetUnlocks() {
 
+        downfallMod.registerUnlockSuite(
+                GatlingBeam.ID,
+                Orbwalk.ID,
+                FierceBash.ID,
 
-        unlocks0 = new CustomUnlockBundle(
-                GatlingBeam.ID, Orbwalk.ID, FierceBash.ID
+                ChargeUp.ID,
+                GemFire.ID,
+                GemFinder.ID,
+
+                StasisEngine.ID,
+                FuturePlans.ID,
+                CompilePackage.ID,
+
+                StasisUpgradeRelic.ID,
+                DefensiveModeMoreBlock.ID,
+                StasisCodex.ID,
+
+                GemstoneGun.ID,
+                PocketSentry.ID,
+                BottledAnomaly.ID,
+
+                GuardianEnum.GUARDIAN
         );
-        UnlockTracker.addCard(GatlingBeam.ID);
-        UnlockTracker.addCard(Orbwalk.ID);
-        UnlockTracker.addCard(FierceBash.ID);
-
-        unlocks1 = new CustomUnlockBundle(
-                Gem_Yellow.ID, GemFire.ID, GemFinder.ID
-        );
-        UnlockTracker.addCard(Gem_Yellow.ID);
-        UnlockTracker.addCard(GemFire.ID);
-        UnlockTracker.addCard(GemFinder.ID);
-
-        unlocks2 = new CustomUnlockBundle(
-                FuturePlans.ID, StasisEngine.ID, CompilePackage.ID
-        );
-        UnlockTracker.addCard(StasisEngine.ID);
-        UnlockTracker.addCard(FuturePlans.ID);
-        UnlockTracker.addCard(CompilePackage.ID);
-
-        unlocks3 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                StasisUpgradeRelic.ID, DefensiveModeMoreBlock.ID, StasisCodex.ID
-        );
-        UnlockTracker.addRelic(StasisUpgradeRelic.ID);
-        UnlockTracker.addRelic(DefensiveModeMoreBlock.ID);
-        UnlockTracker.addRelic(StasisCodex.ID);
-
-        unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                GemstoneGun.ID, PocketSentry.ID, BottledAnomaly.ID
-        );
-
-        UnlockTracker.addRelic(GemstoneGun.ID);
-        UnlockTracker.addRelic(PocketSentry.ID);
-        UnlockTracker.addRelic(BottledAnomaly.ID);
-
-        BaseMod.addUnlockBundle(unlocks0, GuardianEnum.GUARDIAN, 0);
-
-        BaseMod.addUnlockBundle(unlocks1, GuardianEnum.GUARDIAN, 1);
-
-        BaseMod.addUnlockBundle(unlocks2, GuardianEnum.GUARDIAN, 2);
-
-        BaseMod.addUnlockBundle(unlocks3, GuardianEnum.GUARDIAN, 3);
-
-        BaseMod.addUnlockBundle(unlocks4, GuardianEnum.GUARDIAN, 4);
-
     }
+
 
     public void clearUnlockBundles() {
 
@@ -592,7 +592,7 @@ public static void saveData() {
 
     public void receiveEditRelics() {
 
-        //TODO - Relics here
+
         BaseMod.addRelicToCustomPool(new ModeShifter(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new ModeShifterPlus(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new BottledStasis(), AbstractCardEnum.GUARDIAN);
@@ -615,12 +615,11 @@ public static void saveData() {
 
     public void receiveEditCards() {
 
-        //TODO - Dynamic Variables here
+
         BaseMod.addDynamicVariable(new MultihitVariable());
         BaseMod.addDynamicVariable(new SecondaryMagicVariable());
 
 
-        //TODO - Cards here
         BaseMod.addCard(new Strike_Guardian());
         BaseMod.addCard(new Defend_Guardian());
         BaseMod.addCard(new ChargeUp());
@@ -663,6 +662,7 @@ public static void saveData() {
         BaseMod.addCard(new Clone());
         BaseMod.addCard(new Recover());
         BaseMod.addCard(new Planning());
+        BaseMod.addCard(new BodySlam());
         BaseMod.addCard(new Emergency());
         BaseMod.addCard(new GemFinder());
         BaseMod.addCard(new FastForward());
@@ -672,7 +672,7 @@ public static void saveData() {
         BaseMod.addCard(new StasisField());
         BaseMod.addCard(new StasisStrike());
         BaseMod.addCard(new ConstructionForm());
-       // BaseMod.addCard(new WeakpointTargeting());
+        // BaseMod.addCard(new WeakpointTargeting());
         BaseMod.addCard(new GemFire());
         BaseMod.addCard(new RollAttack());
         BaseMod.addCard(new Reroute());
@@ -706,7 +706,6 @@ public static void saveData() {
         BaseMod.addCard(new StasisEngine());
         BaseMod.addCard(new Gem_Purple());
 
-        BaseMod.addCard(new Aged());
 
         //CONSTRUCT cross-mod
         /*
@@ -971,6 +970,16 @@ public static void saveData() {
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 
+
+        BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsGuardian.ID, BackToBasicsGuardian.class) //Event ID//
+                //Event Character//
+                .playerClass(GuardianEnum.GUARDIAN)
+                //Existing Event to Override//
+                .overrideEvent(BackToBasics.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
         //BaseMod.addEvent(GemMine.ID, GemMine.class, Exordium.ID);
         //BaseMod.addEvent(StasisEgg.ID, StasisEgg.class, TheBeyond.ID);
         //BaseMod.addEvent(BackToBasicsSnecko.ID, BackToBasicsSnecko.class, TheCity.ID);
@@ -1049,6 +1058,12 @@ public static void saveData() {
         BaseMod.addPotion(DefensiveModePotion.class, Color.ROYAL, Color.TEAL, Color.BLUE, DefensiveModePotion.POTION_ID, GuardianEnum.GUARDIAN);
         BaseMod.addPotion(StasisDiscoveryPotion.class, Color.GOLDENROD, Color.GOLD, Color.YELLOW, StasisDiscoveryPotion.POTION_ID, GuardianEnum.GUARDIAN);
 
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(BlockOnCardUsePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(AcceleratePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(DefensiveModePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(StasisDiscoveryPotion.POTION_ID);
+        }
     }
 
     public boolean receivePreMonsterTurn(AbstractMonster abstractMonster) {
@@ -1071,6 +1086,7 @@ public static void saveData() {
                 ExhaustStatusesPower e = (ExhaustStatusesPower) AbstractDungeon.player.getPower(ExhaustStatusesPower.POWER_ID);
                 if (e.usedThisTurn < e.amount) {
                     AbstractDungeon.actionManager.addToBottom(new ExhaustSpecificCardAction(abstractCard, AbstractDungeon.player.hand));
+                    AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
                     e.usedThisTurn++;
                     e.flash();
                 }

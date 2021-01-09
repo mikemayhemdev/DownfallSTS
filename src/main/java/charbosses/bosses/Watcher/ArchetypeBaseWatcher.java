@@ -15,6 +15,11 @@ public class ArchetypeBaseWatcher extends AbstractBossDeckArchetype {
     }
 
     @Override
+    public void addedPreBattle() {
+        super.addedPreBattle();
+    }
+
+    @Override
     public void initializeBonusRelic() {
 
     }

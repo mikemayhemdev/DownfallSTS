@@ -75,7 +75,7 @@ public class ResolvePower extends AbstractPower implements CloneablePowerInterfa
 
     public void equivStrCheck() {
         if (adjustStrength) {
-            int x = amount / 5;
+            int x = amount / 10;
             if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
                 owner.getPower(StrengthPower.POWER_ID).amount += x - strengthGrantedByResolve;
                 if (owner.getPower(StrengthPower.POWER_ID).amount == 0)

@@ -50,6 +50,7 @@ public class Gem_White extends AbstractGuardianCard {
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = WHITE;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(CardTags.HEALING);
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Quartz.png"));
     }
 

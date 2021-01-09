@@ -1,0 +1,62 @@
+
+redshroom.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+yandere/Ground
+  rotate: false
+  xy: 1, 135
+  size: 124, 40
+  orig: 124, 40
+  offset: 0, 0
+  index: -1
+yandere/Stem
+  rotate: false
+  xy: 127, 170
+  size: 52, 70
+  orig: 52, 70
+  offset: 0, 0
+  index: -1
+yandere/Teeth
+  rotate: false
+  xy: 127, 135
+  size: 110, 33
+  orig: 110, 33
+  offset: 0, 0
+  index: -1
+yandere/Cap
+  rotate: false
+  xy: 1, 1
+  size: 131, 132
+  orig: 131, 132
+  offset: 0, 0
+  index: -1
+yandere/WhiteR
+  rotate: false
+  xy: 239, 1
+  size: 15, 19
+  orig: 15, 19
+  offset: 0, 0
+  index: -1
+yandere/WhiteL
+  rotate: false
+  xy: 181, 170
+  size: 21, 20
+  orig: 21, 20
+  offset: 0, 0
+  index: -1
+yandere/PupilR
+  rotate: false
+  xy: 1, 242
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: -1
+yandere/PupilL
+  rotate: false
+  xy: 239, 22
+  size: 12, 19
+  orig: 12, 19
+  offset: 0, 0
+  index: -1

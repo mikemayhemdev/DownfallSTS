@@ -49,7 +49,7 @@ public class HexSlime
 
     public void updateDescription() {
 
-        this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1] + this.passiveAmount + this.descriptions[2];
+        this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1] + 3 + this.descriptions[2];
     }
 
     @Override
@@ -59,7 +59,7 @@ public class HexSlime
 
 
     public void activateEffectUnique() {
-        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.FIRE, this, false, false, false, 3 + this.debuffBonusAmount, false, 0, false, false, false, true, true));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.FIRE, this, false, false, false, 3, false, 0, false, false, false, true, true));
 
 
     }

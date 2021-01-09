@@ -44,18 +44,16 @@ public class WorldOfGoopSlimebound extends AbstractImageEvent {
         this.screen = WorldOfGoopSlimebound.CurScreen.INTRO;
         this.damage = 11;
         this.gold = 75;
-        if (AbstractDungeon.ascensionLevel >= 15) {
-            this.goldLoss = AbstractDungeon.miscRng.random(35, 75);
+
+
+        this.imageEventText.setDialogOption(OPTIONS[0]);
+
+        if (this.gold <= AbstractDungeon.player.gold) {
+            this.imageEventText.setDialogOption( OPTIONS[1], new GreedOozeRelic());
         } else {
-            this.goldLoss = AbstractDungeon.miscRng.random(20, 50);
-        }
+            this.imageEventText.setDialogOption( OPTIONS[3], true);
 
-        if (this.goldLoss > AbstractDungeon.player.gold) {
-            this.goldLoss = AbstractDungeon.player.gold;
         }
-
-        this.imageEventText.updateDialogOption(0, OPTIONS[0]);
-        this.imageEventText.updateDialogOption(1, OPTIONS[1]);
     }
 
     public void onEnterRoom() {
@@ -83,7 +81,7 @@ public class WorldOfGoopSlimebound extends AbstractImageEvent {
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[2]);
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f, RelicLibrary.getRelic(GreedOozeRelic.ID).makeCopy());
-
+                        AbstractDungeon.player.loseGold(this.gold);
                         this.screen = WorldOfGoopSlimebound.CurScreen.RESULT;
                         return;
                     default:

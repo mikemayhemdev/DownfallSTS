@@ -19,8 +19,8 @@ import sneckomod.SneckoMod;
 import java.util.ArrayList;
 
 public class NopeAction extends AbstractGameAction {
-    private AbstractPlayer p;
     private static final String[] EXTENDED_DESCRIPTION = CardCrawlGame.languagePack.getCardStrings(SneckoMod.makeID("Nope")).EXTENDED_DESCRIPTION;
+    private AbstractPlayer p;
 
     public NopeAction() {
         this.actionType = ActionType.CARD_MANIPULATION;// 22

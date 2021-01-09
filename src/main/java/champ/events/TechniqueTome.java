@@ -12,24 +12,18 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.curses.Pain;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.relics.WarpedTongs;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
-import downfall.relics.BrokenWingStatue;
-import downfall.relics.ShatteredFragment;
-import guardian.GuardianMod;
-import guardian.cards.AbstractGuardianCard;
+import downfall.cards.curses.Haunted;
+import downfall.cards.curses.PrideStandard;
 import slimebound.SlimeboundMod;
-import sneckomod.util.ExhaustMod;
 
 import java.util.Iterator;
 
@@ -84,7 +78,13 @@ public class TechniqueTome extends AbstractImageEvent {
                 this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
             }
             this.hpCost = this.hpCost * 2;
-            this.imageEventText.updateDialogOption(0, OPTIONS[0] + this.hpCost + OPTIONS[1]);
+            if (this.hpCost > 20) {
+
+                this.imageEventText.updateDialogOption(0, OPTIONS[5], new PrideStandard());
+            } else {
+
+                this.imageEventText.updateDialogOption(0, OPTIONS[0] + this.hpCost + OPTIONS[1]);
+            }
 
         }
 
@@ -96,8 +96,12 @@ public class TechniqueTome extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         this.pickCard = true;
-                        AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, this.hpCost));
-                        AbstractDungeon.effectList.add(new FlashAtkImgEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AbstractGameAction.AttackEffect.POISON));
+                        if (this.hpCost > 20){
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new PrideStandard(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
+                        } else {
+                            AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, this.hpCost));
+                            AbstractDungeon.effectList.add(new FlashAtkImgEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AbstractGameAction.AttackEffect.POISON));
+                        }
                         AbstractDungeon.gridSelectScreen.open(getNonTechniqueCards(), 1, OPTIONS[4], false, false, false, false);
 
                         return;
@@ -134,7 +138,7 @@ public class TechniqueTome extends AbstractImageEvent {
                 retVal.group.add(c);
             }
         }
-        SlimeboundMod.logger.info("Non Technique card count: " + retVal.group.size());
+        //SlimeboundMod.logger.info("Non Technique card count: " + retVal.group.size());
         return retVal;
     }
 }

@@ -139,7 +139,7 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                 this.waitTimer -= Gdx.graphics.getDeltaTime();
                 if (this.waitTimer < 0.0F) {
                     this.waitTimer = 0.0F;
-                    SlimeboundMod.logger.info("Complete screen being set");
+                    //SlimeboundMod.logger.info("Complete screen being set");
                     this.screen = CUR_SCREEN.COMPLETE;
                     GenericEventDialog.show();
                     this.imageEventText.updateBodyText(MSG_3);
@@ -308,7 +308,7 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
             case COMPLETE:
                 switch (buttonPressed) {
                     case 0:
-                        SlimeboundMod.logger.info("case default opening map");
+                        //SlimeboundMod.logger.info("case default opening map");
                         this.openMap();
                         return;
 
@@ -320,7 +320,7 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                         this.imageEventText.removeDialogOption(1);
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         this.imageEventText.setDialogOption(OPTIONS[4]);
-                        SlimeboundMod.logger.info("case intro opening rule explanation");
+                        //SlimeboundMod.logger.info("case intro opening rule explanation");
                         this.screen = GremlinMatchGame_Evil.CUR_SCREEN.RULE_EXPLANATION;
                         return;
                 }
@@ -333,25 +333,28 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                         GenericEventDialog.hide();
                         this.screen = CUR_SCREEN.PLAY;
                         this.threatened = false;
-                        SlimeboundMod.logger.info("case rule explanation opening cards");
+                        //SlimeboundMod.logger.info("case rule explanation opening cards");
                         this.placeCards();
                         return;
                     case 1:
                         if (!this.threatened) {
                             this.screen = CUR_SCREEN.RULE_EXPLANATION;
                             this.imageEventText.updateBodyText(MSG_4);
-                            SlimeboundMod.logger.info("threatened");
-                            this.imageEventText.updateDialogOption(1, OPTIONS[5]);
+                            //SlimeboundMod.logger.info("threatened");
+                            imageEventText.removeDialogOption(1);
+                            this.imageEventText.setDialogOption(OPTIONS[5],  new GremlinSack());
                             this.threatened = true;
                             return;
                         } else {
                             this.screen = CUR_SCREEN.FIGHT;
-                            SlimeboundMod.logger.info("fight");
+                            //SlimeboundMod.logger.info("fight");
                             MonsterGroup monsters = new MonsterGroup(new GremlinFat(-400F, 0F));
                             monsters.add(new GremlinNob(0F, 0F));
                             AbstractDungeon.getCurrRoom().monsters = monsters;
                             AbstractDungeon.getCurrRoom().rewards.clear();
-                            AbstractDungeon.getCurrRoom().addRelicToRewards(new GremlinSack());
+                            GremlinSack r = new GremlinSack();
+                            r.onTrigger();
+                            AbstractDungeon.getCurrRoom().addRelicToRewards(r);
                             AbstractDungeon.getCurrRoom().addGoldToRewards(100);
 
                             AbstractDungeon.getCurrRoom().eliteTrigger = true;

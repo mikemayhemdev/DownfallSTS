@@ -52,7 +52,7 @@ public class SpawnBronzeOrbAction extends AbstractGameAction {
             AbstractPlayerWithMinions player = (AbstractPlayerWithMinions) playerIn;
             int summonCount = player.minions.monsters.size();
             if (summonCount == 0) {
-                GuardianMod.bronzeOrbInPlay = new BronzeOrb(-850, 300);
+                GuardianMod.bronzeOrbInPlay = new BronzeOrbWhoReallyLikesDefectForSomeReason(-850, 300);
 
                 if (powerToAdd != null){
                     addPower(powerToAdd, powerAmount, powerAmount2);

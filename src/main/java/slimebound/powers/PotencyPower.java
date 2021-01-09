@@ -49,37 +49,11 @@ public class PotencyPower extends AbstractPower {
 
 
     public void updateDescription() {
-
-
         this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 
-
     }
 
 
-    public void onInitialApplication() {
-
-
-        for (AbstractOrb o : AbstractDungeon.player.orbs) {
-            if (o instanceof SpawnedSlime) {
-                SpawnedSlime s = (SpawnedSlime) o;
-                s.applyFocus();
-            }
-        }
-    }
-
-
-    public void stackPower(int stackAmount) {
-        super.stackPower(stackAmount);
-
-        for (AbstractOrb o : AbstractDungeon.player.orbs) {
-            if (o instanceof SpawnedSlime) {
-                SpawnedSlime s = (SpawnedSlime) o;
-                s.applyFocus();
-            }
-        }
-
-    }
 }
 
 

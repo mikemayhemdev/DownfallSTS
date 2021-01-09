@@ -28,7 +28,7 @@ public class AdrenalArmor extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-      //  if (upgraded) techique();
+        //  if (upgraded) techique();
         blck();
         fatigue(magicNumber);
         if (bcombo() && !this.purgeOnUse) {

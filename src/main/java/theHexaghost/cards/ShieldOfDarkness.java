@@ -14,7 +14,7 @@ public class ShieldOfDarkness extends AbstractHexaCard {
 
     //stupid intellij stuff SKILL, SELF, COMMON
 
-    private static final int BLOCK = 10;
+    private static final int BLOCK = 12;
     private static final int UPG_BLOCK = 4;
 
     public ShieldOfDarkness() {

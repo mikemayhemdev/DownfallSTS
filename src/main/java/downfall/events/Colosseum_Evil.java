@@ -56,7 +56,7 @@ public class Colosseum_Evil extends AbstractImageEvent {
                     case 0:
                         this.screen = CurScreen.FIGHT;
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2] + DESCRIPTIONS[3]);
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
                         AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Colosseum Nobs");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.RARE);
@@ -71,7 +71,7 @@ public class Colosseum_Evil extends AbstractImageEvent {
                     case 1:
                         this.screen = CurScreen.FIGHT;
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2] + DESCRIPTIONS[4]);
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
                         downfallMod.overrideBossDifficulty = true;
                         String s = downfallMod.possEncounterList.get(AbstractDungeon.cardRandomRng.random(downfallMod.possEncounterList.size()-1));
                         switch (s) {

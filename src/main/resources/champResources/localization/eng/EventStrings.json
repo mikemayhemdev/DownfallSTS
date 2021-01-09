@@ -1,4 +1,14 @@
 {
+  "champ:ChampTalk": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "YOU WANT THIS BELT BACK?",
+      "COME AND GET IT!"
+    ],
+    "OPTIONS": [
+      ""
+    ]
+  },
   "champ:Colosseum": {
     "NAME": "The Colosseum",
     "DESCRIPTIONS": [
@@ -43,7 +53,8 @@
       " #rHP.",
       "[Leave]",
       "[Locked] Requires a non-Technique Card.",
-      "Choose a card to gain Technique."
+      "Choose a card to gain Technique.",
+      "[Read] Choose a card to gain #gTechnique. #rBecome #rCursed #r- #rPride."
     ]
   },
   "champ:Gym": {
@@ -82,7 +93,7 @@
   "champ:BackToBasics": {
     "NAME": "",
     "DESCRIPTIONS": [
-      "The best solution is often the simplest one."
+      "Skill and assurance form an invincible combination."
     ],
     "OPTIONS": [
       "[Intuition] #gAdd #gTechnique to all #gStrikes and #gDefends.",

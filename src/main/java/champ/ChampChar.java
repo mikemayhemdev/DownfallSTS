@@ -8,7 +8,6 @@ import champ.cards.Taunt;
 import champ.relics.ChampionCrown;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
-import champ.stances.GladiatorStance;
 import champ.stances.UltimateStance;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -26,7 +25,6 @@ import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 
@@ -52,7 +50,7 @@ public class ChampChar extends CustomPlayer {
 
     private static String currentIdle = "Idle";
 
-    public float renderscale = 1.0F;
+    public float renderscale = 1.2F;
 
     public float stanceSwitchAnimTimer = 0.0F;
     private ArrayList<String> stanceSwitchQueue = new ArrayList<>();
@@ -89,7 +87,7 @@ public class ChampChar extends CustomPlayer {
                 SHOULDER1,
                 SHOULDER2,
                 CORPSE,
-                getLoadout(), -15.0F, -30.0F, 450.0F, 450.0F, new EnergyManager(3));
+                getLoadout(), -15.0F, -30.0F, 250.0F, 300.0F, new EnergyManager(3));
 
         this.reloadAnimation();
 
@@ -140,7 +138,7 @@ public class ChampChar extends CustomPlayer {
 
     private void tickStanceVisualTimer(){
         if (stanceSwitchQueue.size() > 0) {
-           // SlimeboundMod.logger.info("stance queue is ticking");
+           // //SlimeboundMod.logger.info("stance queue is ticking");
             stanceSwitchAnimTimer = stanceSwitchAnimTimer - Gdx.graphics.getDeltaTime();
             if (stanceSwitchAnimTimer <= 0F) {
                 switchStanceVisualGo(stanceSwitchQueue.get(0));
@@ -153,7 +151,7 @@ public class ChampChar extends CustomPlayer {
     }
 
     public void switchStanceVisualGo(String ID) {
-     //   SlimeboundMod.logger.info("stance queue has ordered a visual for " + ID);
+     //   //SlimeboundMod.logger.info("stance queue has ordered a visual for " + ID);
 
         switch (ID) {
             case DefensiveStance
@@ -162,15 +160,6 @@ public class ChampChar extends CustomPlayer {
                 this.stateData.setMix("HitDefensive", "IdleDefensive", 0.5F);
                 this.state.setAnimation(0, "IdleDefensive", true);
                 currentIdle = "IdleDefensive";
-                break;
-            }
-            case GladiatorStance
-                    .STANCE_ID: {
-                SlimeboundMod.logger.info("Found Gladiator Stance");
-                this.stateData.setMix(currentIdle, "IdleGladiator", 0.5F);
-                this.stateData.setMix("HitGladiator", "IdleGladiator", 0.5F);
-                this.state.setAnimation(0, "IdleGladiator", true);
-                currentIdle = "IdleGladiator";
                 break;
             }
             case BerserkerStance

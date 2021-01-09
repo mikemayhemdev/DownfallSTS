@@ -8,6 +8,7 @@ package charbosses.powers.general;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.unique.PoisonLoseHpAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
@@ -18,6 +19,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.AbstractPower.PowerType;
 import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 public class EnemyPoisonPower extends AbstractPower {
@@ -48,11 +50,7 @@ public class EnemyPoisonPower extends AbstractPower {
     }
 
     public void updateDescription() {
-        if (this.owner != null && !this.owner.isPlayer) {
-            this.description = DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[1];
-        } else {
             this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        }
     }
 
     @Override
@@ -60,30 +58,25 @@ public class EnemyPoisonPower extends AbstractPower {
         if (isPlayer) {
             if (AbstractDungeon.getCurrRoom().phase == RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
 
-                if (this.owner.hasPower(PoisonProtectionPower.POWER_ID)) {
+                int remainingPoison = amount;
+                while (remainingPoison > 0 && EnergyPanel.totalCount > 0){
+                       remainingPoison -= 10;
+                       AbstractDungeon.player.energy.use(1);
+                       stackPower(-10);
+                    AbstractDungeon.player.getPower(PoisonProtectionPower.POWER_ID).flashWithoutSound();
+                }
+                if (amount > 0) {
                     this.flashWithoutSound();
-                    this.addToBot(new DamageAction(this.owner, new DamageInfo(this.owner, this.amount), AttackEffect.POISON));
-                    this.addToBot(new ReducePowerAction(this.owner, this.owner, this, this.amount / 2));
+                    this.addToBot(new PoisonLoseHpAction(this.owner, this.source, this.amount, AttackEffect.POISON));
+                    this.addToBot(new ReducePowerAction(this.owner, this.owner, this, -1));
                 } else {
-                    // this.addToBot(new PoisonLoseHpAction(this.owner, this.source, this.amount, AttackEffect.POISON));
+                    this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
                 }
             }
+
         }
     }
 
-    public void atStartOfTurn() {
-        if (AbstractDungeon.getCurrRoom().phase == RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-
-            if (this.owner.hasPower(PoisonProtectionPower.POWER_ID)){
-               // this.addToBot(new DamageAction(this.owner, new DamageInfo(this.owner, this.amount), AttackEffect.POISON));
-            } else {
-                this.flashWithoutSound();
-                this.addToBot(new PoisonLoseHpAction(this.owner, this.source, this.amount, AttackEffect.POISON));
-                this.addToBot(new ReducePowerAction(this.owner, this.owner, this, -1));
-            }
-        }
-
-    }
 
     static {
         powerStrings = CardCrawlGame.languagePack.getPowerStrings("Poison");

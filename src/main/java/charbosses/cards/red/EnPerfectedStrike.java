@@ -71,10 +71,10 @@ public class EnPerfectedStrike extends AbstractBossCard {
 
     /*
     @Override
-    public void applyPowers() {
+    public void genPreview() {
         final int realBaseDamage = this.baseDamage;
         this.baseDamage += this.magicNumber * countCards();
-        super.applyPowers();
+        super.genPreview();
         this.baseDamage = realBaseDamage;
         this.isDamageModified = (this.damage != this.baseDamage);
     }

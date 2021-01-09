@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.actions.MuddleAction;
 import sneckomod.actions.NoApplyRandomDamageAction;
 
 public class WideSting extends AbstractSneckoCard {
@@ -65,7 +64,7 @@ public class WideSting extends AbstractSneckoCard {
                 for (AbstractCard q : p.hand.group) {
                     if (q.color != AbstractDungeon.player.getCardColor()) {
                         atb(new UpgradeSpecificCardAction(q));
-                     //  atb(new MuddleAction(q));
+                        //  atb(new MuddleAction(q));
                     }
                 }
             }
