@@ -39,15 +39,15 @@ public class FunctionHelper {
 
     public static final float BG_X = 150f * Settings.scale;
     public static final float BG_Y = 700f * Settings.scale;
-    public static final float HEIGHT_SEQUENCE = 700f * Settings.yScale;
+    public static final float HEIGHT_SEQUENCE = 800f * Settings.yScale;
     public static final float HEIGHT_SPOT = 700f * Settings.yScale;
     public static final float HEIGHT_FUNCTION = 820f * Settings.yScale;
 
     public static final Vector2[] cardPositions = {
-            new Vector2(210f * Settings.xScale, HEIGHT_SEQUENCE),
-            new Vector2(285f * Settings.xScale, HEIGHT_SEQUENCE),
-            new Vector2(360f * Settings.xScale, HEIGHT_SEQUENCE),
-            new Vector2(435f * Settings.xScale, HEIGHT_SEQUENCE)
+            new Vector2(218f * Settings.xScale, HEIGHT_SEQUENCE),
+            new Vector2(293f * Settings.xScale, HEIGHT_SEQUENCE),
+            new Vector2(368f * Settings.xScale, HEIGHT_SEQUENCE),
+            new Vector2(443f * Settings.xScale, HEIGHT_SEQUENCE)
     };
 
     public static final Vector2[] floaterStartPositions = {
@@ -242,10 +242,9 @@ public class FunctionHelper {
             sb.draw(bg, BG_X, BG_Y, 0, 0, bg.getWidth() * Settings.scale, bg.getHeight() * Settings.scale, 1, 1, 0, 0, 0, bg.getWidth(), bg.getHeight(), false, false);
         }
         for (int i = 0; i < max; i++) {
+            sb.draw(sequenceSlot, floaterStartPositions[i].x, floaterStartPositions[i].y + bobEffects[i].y, 0, 0, sequenceSlot.getWidth() * Settings.scale, sequenceSlot.getHeight() * Settings.scale, 1, 1, 0, 0, 0, sequenceSlot.getWidth(), sequenceSlot.getHeight(), false, false);
             if (held.size() - 1 >= i) {
                 held.group.get(i).render(sb);
-            } else {
-                sb.draw(sequenceSlot, floaterStartPositions[i].x, floaterStartPositions[i].y + bobEffects[i].y, 0, 0, sequenceSlot.getWidth() * Settings.scale, sequenceSlot.getHeight() * Settings.scale, 1, 1, 0, 0, 0, sequenceSlot.getWidth(), sequenceSlot.getHeight(), false, false);
             }
         }
         if (secretStorage != null) {
@@ -257,7 +256,9 @@ public class FunctionHelper {
         for (BobEffect b : bobEffects) {
             b.update();
         }
-        for (AbstractCard c : held.group) {
+        for (int i = 0; i < held.size(); i++) {
+            AbstractCard c = held.group.get(i);
+            c.target_y = cardPositions[i].y + bobEffects[i].y;
             c.update();
             c.updateHoverLogic();
         }
