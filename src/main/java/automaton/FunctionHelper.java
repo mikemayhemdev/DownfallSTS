@@ -54,7 +54,7 @@ public class FunctionHelper {
             new Vector2(177F * Settings.xScale, HEIGHT_SPOT),
             new Vector2(252f * Settings.xScale, HEIGHT_SPOT),
             new Vector2(327f * Settings.xScale, HEIGHT_SPOT),
-            new Vector2(412f * Settings.xScale, HEIGHT_SPOT)
+            new Vector2(402f * Settings.xScale, HEIGHT_SPOT)
     };
 
     public static BobEffect[] bobEffects = {
