@@ -26,7 +26,7 @@ public class Sear extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBurn(5);
+            upgradeBurn(6);
         }
     }
 }

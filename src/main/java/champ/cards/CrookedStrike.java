@@ -29,7 +29,7 @@ public class CrookedStrike extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         if (AbstractDungeon.player.hasPower(ResolvePower.POWER_ID)) {
-            if (AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount >= 30) {
+            if (AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount >= 20) {
                 dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
                 dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
             }
@@ -45,7 +45,7 @@ public class CrookedStrike extends AbstractChampCard {
     @Override
     public void triggerOnGlowCheck() {
         if (AbstractDungeon.player.hasPower(ResolvePower.POWER_ID)) {
-            if (AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount >= 30) {
+            if (AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount >= 20) {
                 glowColor = GOLD_BORDER_GLOW_COLOR;
                 return;
             }

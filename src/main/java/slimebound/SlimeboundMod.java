@@ -328,21 +328,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
     }
 
-    public void clearUnlockBundles() {
-        BaseMod.removeUnlockBundle(SlimeboundEnum.SLIMEBOUND, 0);
-        BaseMod.removeUnlockBundle(SlimeboundEnum.SLIMEBOUND, 1);
-        BaseMod.removeUnlockBundle(SlimeboundEnum.SLIMEBOUND, 2);
-        BaseMod.removeUnlockBundle(SlimeboundEnum.SLIMEBOUND, 3);
-        BaseMod.removeUnlockBundle(SlimeboundEnum.SLIMEBOUND, 4);
-        receiveSetUnlocks();
-    }
-
-    public void printEnemies() {
-        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-            logger.info(monster.name + " HP " + monster.currentHealth);
-        }
-    }
-
     public void receiveEditRelics() {
         BaseMod.addRelicToCustomPool(new AbsorbEndCombat(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new AbsorbEndCombatUpgraded(), AbstractCardEnum.SLIMEBOUND);
@@ -357,7 +342,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addRelicToCustomPool(new TarBlob(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelic(new StickyStick(), RelicType.SHARED);
         BaseMod.addRelic(new PreparedRelic(), RelicType.SHARED);
-
 
     }
 
@@ -467,117 +451,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addCard(new ForwardTackle());
         BaseMod.addCard(new TagTeam());
         BaseMod.addCard(new RallyTheTroops());
-
-
-    }
-
-    public void unlockEverything() {
-
-        UnlockTracker.unlockCard(Strike_Slimebound.ID);
-        UnlockTracker.unlockCard(Defend_Slimebound.ID);
-        //UnlockTracker.unlockCard(BronzeBeam.ID);
-        UnlockTracker.unlockCard(LevelUp.ID);
-        UnlockTracker.unlockCard(Tackle.ID);
-        UnlockTracker.unlockCard(Schlurp.ID);
-        UnlockTracker.unlockCard(Icky.ID);
-        UnlockTracker.unlockCard(SplitBruiser.ID);
-        UnlockTracker.unlockCard(SplitLeeching.ID);
-        UnlockTracker.unlockCard(SplitAcid.ID);
-        UnlockTracker.unlockCard(SplitLicking.ID);
-        UnlockTracker.unlockCard(ProtectTheBoss.ID);
-        //UnlockTracker.unlockCard(zzzAbsorbAll.ID);
-        UnlockTracker.unlockCard(Overexert.ID);
-        UnlockTracker.unlockCard(Split.ID);
-        //UnlockTracker.unlockCard(SuperSplit.ID);
-        UnlockTracker.unlockCard(LeadByExample.ID);
-        UnlockTracker.unlockCard(SlimeTap.ID);
-        UnlockTracker.unlockCard(Nibble.ID);
-        UnlockTracker.unlockCard(RainOfGoop.ID);
-        UnlockTracker.unlockCard(Teamwork.ID);
-        UnlockTracker.unlockCard(SlimeBarrage.ID);
-        UnlockTracker.unlockCard(SlimeBrawl.ID);
-        //UnlockTracker.unlockCard(zzzMaxSlimes.ID);
-        UnlockTracker.unlockCard(SelfFormingGoo.ID);
-        UnlockTracker.unlockCard(SlimeSpikes.ID);
-        UnlockTracker.unlockCard(GoopArmor.ID);
-        UnlockTracker.unlockCard(MassRepurpose.ID);
-        UnlockTracker.unlockCard(DouseInSlime.ID);
-        UnlockTracker.unlockCard(Chomp.ID);
-        UnlockTracker.unlockCard(BestDefense.ID);
-        UnlockTracker.unlockCard(OozeBath.ID);
-        UnlockTracker.unlockCard(MinionMaster.ID);
-        // UnlockTracker.unlockCard(zzzSoTasty.ID);
-        UnlockTracker.unlockCard(LivingWall.ID);
-
-        UnlockTracker.unlockCard(LeechingTouch.ID);
-        UnlockTracker.unlockCard(DuplicatedForm.ID);
-        UnlockTracker.unlockCard(FeelOurPain.ID);
-        UnlockTracker.unlockCard(Dissolve.ID);
-        UnlockTracker.unlockCard(RollThrough.ID);
-        UnlockTracker.unlockCard(CorrosiveSpit.ID);
-        UnlockTracker.unlockCard(SamplingLick.ID);
-        UnlockTracker.unlockCard(Recycling.ID);
-        UnlockTracker.unlockCard(GrowthPunch.ID);
-        UnlockTracker.unlockCard(Recollect.ID);
-        UnlockTracker.unlockCard(FormOfPuddle.ID);
-        UnlockTracker.unlockCard(Gluttony.ID);
-        UnlockTracker.unlockCard(Lick.ID);
-        UnlockTracker.unlockCard(MegaLick.ID);
-
-        UnlockTracker.unlockCard(PressTheAttack.ID);
-        //UnlockTracker.unlockCard(SoulSicken.ID);
-        // UnlockTracker.unlockCard(zzzFocusedLick.ID);
-        UnlockTracker.unlockCard(HauntingLick.ID);
-        //UnlockTracker.unlockCard(AcidGelatin.ID);
-        UnlockTracker.unlockCard(RejuvenatingLick.ID);
-        UnlockTracker.unlockCard(Replication.ID);
-
-        UnlockTracker.unlockCard(CheckThePlaybook.ID);
-        UnlockTracker.unlockCard(FinishingTackle.ID);
-        //UnlockTracker.unlockCard(zzzSlimepotheosis.ID);
-        UnlockTracker.unlockCard(TongueLash.ID);
-        //UnlockTracker.unlockCard(PoisonLick.ID);
-        UnlockTracker.unlockCard(ItLooksTasty.ID);
-        UnlockTracker.unlockCard(AcidTongue.ID);
-        //UnlockTracker.unlockCard(TendrilStrike.ID);
-        UnlockTracker.unlockCard(WasteNot.ID);
-        UnlockTracker.unlockCard(HungryTackle.ID);
-        //UnlockTracker.unlockCard(VenomTackle.ID);
-        UnlockTracker.unlockCard(GoopTackle.ID);
-        UnlockTracker.unlockCard(FlameTackle.ID);
-        UnlockTracker.unlockCard(GoopSpray.ID);
-        UnlockTracker.unlockCard(ComboTackle.ID);
-        UnlockTracker.unlockCard(Grow.ID);
-        UnlockTracker.unlockCard(Prepare.ID);
-        UnlockTracker.unlockCard(MassFeed.ID);
-        UnlockTracker.unlockCard(ViciousTackle.ID);
-        UnlockTracker.unlockCard(LeechEnergy.ID);
-        UnlockTracker.unlockCard(LeechLife.ID);
-        UnlockTracker.unlockCard(Equalize.ID);
-
-        UnlockTracker.unlockCard(DisruptingSlam.ID);
-        UnlockTracker.unlockCard(PrepareCrush.ID);
-        UnlockTracker.unlockCard(Repurpose.ID);
-
-        UnlockTracker.unlockCard(ServeAndProtectProtect.ID);
-        UnlockTracker.unlockCard(ServeAndProtect.ID);
-        UnlockTracker.unlockCard(ServeAndProtectServe.ID);
-        UnlockTracker.unlockCard(DivideAndConquerDivide.ID);
-
-        UnlockTracker.unlockCard(DivideAndConquerConquer.ID);
-        UnlockTracker.unlockCard(DivideAndConquer.ID);
-
-        UnlockTracker.unlockCard(SplitSpecialist.ID);
-        UnlockTracker.unlockCard(Darklings.ID);
-        UnlockTracker.unlockCard(SlimeSlap.ID);
-        UnlockTracker.unlockCard(OneTwoCombo.ID);
-        UnlockTracker.unlockCard(ForwardTackle.ID);
-        UnlockTracker.unlockCard(TagTeam.ID);
-        UnlockTracker.unlockCard(RallyTheTroops.ID);
-
-        //UnlockTracker.addScore(SlimeboundEnum.SLIMEBOUND, 1000000);
-
-        clearUnlockBundles();
 
 
     }
@@ -712,15 +585,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
         //BaseMod.addEvent(WorldOfGoopSlimebound.ID, WorldOfGoopSlimebound.class, Exordium.ID);
 
-    }
-
-    public void refreshPotions() {
-        BaseMod.removePotion(ThreeZeroPotion.POTION_ID);
-        BaseMod.removePotion(SlimedPotion.POTION_ID);
-        BaseMod.removePotion(SpawnSlimePotion.POTION_ID);
-        BaseMod.removePotion(SlimyTonguePotion.POTION_ID);
-
-        addPotions();
     }
 
     public void addPotions() {

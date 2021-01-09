@@ -224,7 +224,7 @@
   },
   "champ:CrookedStrike": {
     "NAME": "Crooked Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Hits three times if *Fatigue is 30 or higher."
+    "DESCRIPTION": "Deal !D! damage. NL Hits three times if *Fatigue is 20 or higher."
   },
     "champ:RapidStrikes": {
     "NAME": "Rapid Strikes",

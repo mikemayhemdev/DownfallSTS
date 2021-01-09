@@ -507,7 +507,7 @@
   "bronze:Repulsor": {
     "NAME": "Repulsor",
     "DESCRIPTION": "When you draw the first Status or Curse card each turn, Exhaust it and draw a card.",
-    "UPGRADE_DESCRIPTION": "Innate. When you draw the first Status or Curse card each turn, Exhaust it and draw a card."
+    "UPGRADE_DESCRIPTION": "Innate. NL When you draw the first Status or Curse card each turn, Exhaust it and draw a card."
   },
   "bronze:Debug": {
     "NAME": "Debug",

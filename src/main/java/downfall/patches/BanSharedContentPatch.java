@@ -98,7 +98,7 @@ public class BanSharedContentPatch {
     public static class RelicPatch {
 
         public static void Prefix(AbstractDungeon __instance) {
-            if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_colorlessCards) {
+            if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_relics) {
                 AbstractDungeon.relicsToRemoveOnStart.add(GemstoneGun.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(PocketSentry.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(BottledAnomaly.ID);

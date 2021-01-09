@@ -36,7 +36,7 @@ public class QuickStudy extends AbstractExpansionCard {
         if (allStudyCardsList.size() == 0) {
             for (AbstractCard q : CardLibrary.getAllCards()) {
                 if (q.hasTag(expansionContentMod.STUDY)) {
-                    allStudyCardsList.add(q);
+                    allStudyCardsList.add(q.makeCopy());
                 }
             }
             for (AbstractCard q : allStudyCardsList) {

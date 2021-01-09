@@ -27,7 +27,7 @@ public class UltimateStance extends AbstractChampCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
+        if (AbstractDungeon.player.stance.ID.equals(champ.stances.UltimateStance.STANCE_ID) ||AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
             return super.canUse(p, m);
         }
         cantUseMessage = EXTENDED_DESCRIPTION[0];
