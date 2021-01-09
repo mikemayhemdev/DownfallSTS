@@ -125,7 +125,7 @@ public class FunctionHelper {
         for (AbstractCard c : held.group) {
             if (c instanceof AbstractBronzeCard) {
                 if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
-                    ((AbstractBronzeCard) c).onCompilePreCardEffectEmbed(forGameplay); // Terminator, Constructor, Chosen Strike
+                    ((AbstractBronzeCard) c).onCompilePreCardEffectEmbed(forGameplay); // Separator, Constructor, Chosen Strike
                 }
             }
         }

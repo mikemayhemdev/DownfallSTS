@@ -110,12 +110,12 @@
       "Iterate"
     ]
   },
-  "bronze:Terminator": {
-    "NAME": "Terminator",
-    "DESCRIPTION": "Deal !D! damage. π NL When bronze:Encoded, if this is in the last slot, increase its damage by !M!.",
+  "bronze:Separator": {
+    "NAME": "Separator",
+    "DESCRIPTION": "Deal !D! damage. π NL When bronze:Encoded, if this not in the first or last slot, increase its damage by !M!.",
     "EXTENDED_DESCRIPTION": [
-      "sad",
-      "End"
+      "split",
+      "Child"
     ]
   },
   "bronze:Overheat": {
@@ -221,6 +221,11 @@
     "DESCRIPTION": "Choose a card in the Sequence to return to your hand. NL It gains Retain. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Choose a card in the Sequence to return to your hand. NL It gains Retain."
   },
+  "bronze:ByteShift": {
+    "NAME": "Byte Shift",
+    "DESCRIPTION": "Return all cards in the Sequence to your hand. NL They gain Retain. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Return all cards in the Sequence to your hand. NL They gain Retain. NL Exhaust."
+  },
   "bronze:Batch": {
     "NAME": "Batch",
     "DESCRIPTION": "Create a Function immediately out of the cards in the Sequence. NL Exhaust.",
@@ -235,12 +240,12 @@
       "Greatness"
     ]
   },
-  "bronze:Separator": {
-    "NAME": "Separator",
-    "DESCRIPTION": "bronze:Compile - If this is not the first or last card in the Sequence, Function gains 'Play this again'.",
+  "bronze:Terminator": {
+    "NAME": "Terminator",
+    "DESCRIPTION": "bronze:Compile - If this is the last card in the Sequence, Function gains 'Play this again'.",
     "EXTENDED_DESCRIPTION": [
-      "split",
-      "Child"
+      "sad",
+      "End"
     ]
   },
   "bronze:Overload": {
@@ -577,8 +582,8 @@
   },
   "bronze:TinkerersToolbox": {
     "NAME": "Dev Tools",
-    "DESCRIPTION": "Retain. NL Choose between *Debug, *Batch and *Decompile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Choose between *Debug, *Batch and *Decompile."
+    "DESCRIPTION": "Retain. NL Choose between *Debug, *Batch, *Decompile, and *Byte *Shift. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Choose between *Debug, *Batch, *Decompile, and *Byte *Shift."
   },
   "bronze:Refactor": {
     "NAME": "Refactor",

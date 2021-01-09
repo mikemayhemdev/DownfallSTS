@@ -34,6 +34,6 @@ public class Fortify extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeBaseCost(1);
     }
 }

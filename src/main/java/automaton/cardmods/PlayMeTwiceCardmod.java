@@ -1,9 +1,7 @@
 package automaton.cardmods;
 
 import automaton.actions.RepeatCardAction;
-import automaton.cards.Separator;
 import basemod.abstracts.AbstractCardModifier;
-import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;

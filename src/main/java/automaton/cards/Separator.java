@@ -1,46 +1,42 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
-import automaton.cardmods.PlayMeTwiceCardmod;
-import basemod.helpers.CardModifierManager;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
 
 public class Separator extends AbstractBronzeCard {
 
     public final static String ID = makeID("Separator");
 
-    //stupid intellij stuff skill, self, common
+    //stupid intellij stuff attack, enemy, common
 
+    private static final int DAMAGE = 5;
+    private static final int UPG_DAMAGE = 2;
 
     public Separator() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = DAMAGE;
         thisEncodes();
-        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
-        tags.add(AutomatonMod.ADDS_NO_CARDTEXT);
+        tags.add(AutomatonMod.SPECIAL_COMPILE_TEXT);
+    }
+
+    @Override
+    public void onInput() {
+        if (!firstCard() && !lastCard()) {
+            baseDamage += magicNumber;
+            damage += magicNumber;
+            superFlash();
+        }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-    }
-
-    @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        if (!firstCard() && !lastCard()) {
-            CardModifierManager.addModifier(function, new PlayMeTwiceCardmod());
-        }
-    }
-
-    @Override
-    public String getSpecialCompileText() {
-        if (!firstCard() && !lastCard()) {
-            return " - Function gains 'Play this again'.";
-        }
-        return "";
+        dmg(m, AbstractGameAction.AttackEffect.LIGHTNING);
     }
 
     public void upp() {
-       upgradeBaseCost(0);
+        upgradeDamage(UPG_DAMAGE);
+        upgradeMagicNumber(UPG_DAMAGE);
     }
 }
