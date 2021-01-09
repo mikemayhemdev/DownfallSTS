@@ -58,7 +58,7 @@ public class SpaghettiCode extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < (FunctionHelper.max - FunctionHelper.held.size()); i++) {
+        for (int i = 0; i < (FunctionHelper.max() - FunctionHelper.held.size()); i++) {
             ArrayList<AbstractCard> cardsList = getRandomEncodeChoices();
             addToBot(new SelectCardsCenteredAction(cardsList, 1, "Choose a Card to Encode.", (cards) -> { //TODO: Needs localization
                 addToTop(new AddToFuncAction(cards.get(0), null));

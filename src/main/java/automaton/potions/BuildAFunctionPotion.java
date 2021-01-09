@@ -44,7 +44,7 @@ public class BuildAFunctionPotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
-        for (int i = 0; i < (FunctionHelper.max - FunctionHelper.held.size()); i++) {
+        for (int i = 0; i < (FunctionHelper.max() - FunctionHelper.held.size()); i++) {
             ArrayList<AbstractCard> cardsList = SpaghettiCode.getRandomEncodeChoices();
             addToBot(new SelectCardsCenteredAction(cardsList, 1, "Choose a Card to Encode.", (cards) -> {
                 AbstractDungeon.actionManager.addToTop(new AddToFuncAction(cards.get(0), null));  //TODO Hardcoded string!
