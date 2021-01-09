@@ -22,7 +22,7 @@
   "champ:FocusedBerPower": {
     "NAME": "Focused: Berserker",
     "DESCRIPTIONS": [
-      "At the end of your turn, if you have at least #b15 #yFatigue, deal #b",
+      "At the end of your turn, if you have at least #b20 #yFatigue, deal #b",
       " damage to ALL enemies."
     ]
   },
