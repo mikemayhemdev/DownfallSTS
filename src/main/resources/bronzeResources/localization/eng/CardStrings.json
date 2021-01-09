@@ -112,7 +112,7 @@
   },
   "bronze:Separator": {
     "NAME": "Separator",
-    "DESCRIPTION": "Deal !D! damage. π NL When bronze:Encoded, if this not in the first or last slot, increase its damage by !M!.",
+    "DESCRIPTION": "Deal !D! damage. π NL When bronze:Encoded, if this is not in the first or last slot, increase its damage by !M!.",
     "EXTENDED_DESCRIPTION": [
       "split",
       "Child"
