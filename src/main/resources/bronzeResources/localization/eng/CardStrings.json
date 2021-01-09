@@ -587,7 +587,7 @@
   },
   "bronze:Refactor": {
     "NAME": "Refactor",
-    "DESCRIPTION": "Scry !M!. NL Gain !B! Block for each Status card discarded. NL Exhaust any others discarded."
+    "DESCRIPTION": "Scry !M!. NL Exhaust all cards discarded. NL Gain !B! Block for each Status card exhausted."
   },
   "bronze:Turbo": {
     "NAME": "Turbo",
