@@ -36,7 +36,9 @@ public class DecaShield extends AbstractExpansionCard {
         AbstractCard q = new PolyBeam();
         if (upgraded) q.upgrade();
         CardModifierManager.addModifier(q, new EtherealMod());
-        applyToSelf(new AddCopyPower(1, q));
+        applyToSelf(new AddCopyPower(1, q,
+                expansionContentMod.getModID() + "Resources/images/powers/Donu84.png",
+                expansionContentMod.getModID() + "Resources/images/powers/Donu32.png"));
     }
 
     public void upgrade() {

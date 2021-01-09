@@ -19,18 +19,19 @@ public class AddCopyPower extends AbstractPower implements NonStackablePower {
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/darkRitual84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/darkRitual32.png");
-
     private AbstractCard held;
 
-    public AddCopyPower(int amount, AbstractCard held) {
+    public AddCopyPower(int amount, AbstractCard held, String text84, String text32) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
         this.type = PowerType.BUFF;
         this.isTurnBased = true;
+
+
+        Texture tex84 = TextureLoader.getTexture(text84);
+        Texture tex32 = TextureLoader.getTexture(text32);
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);

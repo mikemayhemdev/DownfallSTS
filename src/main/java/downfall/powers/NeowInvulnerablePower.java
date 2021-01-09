@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.combat.HealEffect;
 import downfall.actions.NeowRezAction;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
@@ -47,7 +48,9 @@ public class NeowInvulnerablePower extends AbstractPower {
     @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         super.onAfterUseCard(card, action);
-            this.owner.heal(amount, true);
+            this.owner.heal(amount);
+        AbstractDungeon.effectsQueue.add(new HealEffect(owner.hb.cX - owner.animX, owner.hb.cY, 2));
+
 
     }
 

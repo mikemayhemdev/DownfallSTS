@@ -306,7 +306,7 @@
   },
   "champ:Encircle": {
     "NAME": "Encircle",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL champ:Fatigue 2. NL *Berserker champ:Combo: Play this twice. "
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL *Berserker champ:Combo: Play this twice. "
   },
   "champ:LastStand": {
     "NAME": "Last Stand",

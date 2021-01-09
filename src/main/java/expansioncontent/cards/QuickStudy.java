@@ -1,5 +1,6 @@
 package expansioncontent.cards;
 
+import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -20,27 +21,50 @@ public class QuickStudy extends AbstractExpansionCard {
 
     //stupid intellij stuff SKILL, SELF, RARE
 
+    public static ArrayList<AbstractCard> allStudyCardsList = new ArrayList<>();
+    public static ArrayList<AbstractCard> allStudyCardsListUpgraded = new ArrayList<>();
+
+    private float rotationTimer;
+    private int previewIndex;
+
     public QuickStudy() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_skill.png", "expansioncontentResources/images/1024/bg_boss_skill.png");
         this.exhaust = true;
+
+
+        if (allStudyCardsList.size() == 0) {
+            for (AbstractCard q : CardLibrary.getAllCards()) {
+                if (q.hasTag(expansionContentMod.STUDY)) {
+                    allStudyCardsList.add(q);
+                }
+            }
+            for (AbstractCard q : allStudyCardsList) {
+                q.setCostForTurn(0);
+                allStudyCardsListUpgraded.add(q.makeCopy());
+            }
+            for (AbstractCard q : allStudyCardsListUpgraded) {
+                q.setCostForTurn(0);
+                q.upgrade();
+            }
+        }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> selectionsList = new ArrayList<>();
-        ArrayList<AbstractCard> allStudyCardsList = new ArrayList<>();
-        for (AbstractCard q : CardLibrary.getAllCards()) {
-            if (q.hasTag(expansionContentMod.STUDY)) {
-                if (upgraded) q.upgrade();
-                allStudyCardsList.add(q);
+        if (upgraded) {
+            Collections.shuffle(allStudyCardsList);
+            for (int i = 0; i < 3; i++) {
+                selectionsList.add(allStudyCardsListUpgraded.get(i).makeStatEquivalentCopy());
+            }
+        } else {
+            Collections.shuffle(allStudyCardsListUpgraded);
+            for (int i = 0; i < 3; i++) {
+                selectionsList.add(allStudyCardsList.get(i).makeStatEquivalentCopy());
             }
         }
-        Collections.shuffle(allStudyCardsList);
-        for (int i = 0; i < 3; i++) {
-            selectionsList.add(allStudyCardsList.get(i));
-        }
+
         atb(new SelectCardsCenteredAction(selectionsList, 1, EXTENDED_DESCRIPTION[0], (cards) -> {
-            cards.get(0).setCostForTurn(0);
             addToTop(new MakeTempCardInHandAction(cards.get(0), true));
         }));
     }
@@ -52,5 +76,50 @@ public class QuickStudy extends AbstractExpansionCard {
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
+    }
+
+
+
+    @Override
+    public void update() {
+        super.update();
+        if (hb.hovered) {
+            if (rotationTimer <= 0F) {
+                if (!upgraded) {
+                    rotationTimer = 2F;
+                    if (allStudyCardsList.size() == 0) {
+                        cardsToPreview = CardLibrary.cards.get("Madness");
+                    } else {
+                        cardsToPreview = allStudyCardsList.get(previewIndex);
+                    }
+                    if (previewIndex == allStudyCardsList.size() - 1) {
+                        previewIndex = 0;
+                    } else {
+                        previewIndex++;
+                    }
+                } else {
+
+                    rotationTimer = 2F;
+                    if (allStudyCardsListUpgraded.size() == 0) {
+                        cardsToPreview = CardLibrary.cards.get("Madness");
+                    } else {
+                        cardsToPreview = allStudyCardsListUpgraded.get(previewIndex);
+                    }
+                    if (previewIndex == allStudyCardsListUpgraded.size() - 1) {
+                        previewIndex = 0;
+                    } else {
+                        previewIndex++;
+                    }
+                }
+            } else {
+                rotationTimer -= Gdx.graphics.getDeltaTime();
+            }
+        }
+    }
+
+    @Override
+    public void unhover() {
+        super.unhover();
+        cardsToPreview = null;
     }
 }
