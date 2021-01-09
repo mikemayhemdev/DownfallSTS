@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import downfall.downfallMod;
 import theHexaghost.HexaMod;
 import downfall.cards.curses.Haunted;
 
@@ -98,6 +99,7 @@ public class WanderingSpecter extends AbstractImageEvent {
                             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect((CardLibrary.getCurse().makeStatEquivalentCopy()), (float) (Settings.WIDTH * .75F * ((i / curseCount))), (float) (Settings.HEIGHT / 2)));// 73
                         }
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), rtog);// 83
+                        downfallMod.removeAnyRelicFromPools(rtog.relicId);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[1]);
                         this.imageEventText.setDialogOption(OPTIONS[5]);

@@ -1474,4 +1474,17 @@ public class downfallMod implements
     public void receiveRender(SpriteBatch sb) {
         SuperTip.render(sb, EasyInfoDisplayPanel.RENDER_TIMING.TIMING_RENDERSUBSCRIBER);
     }
+
+    public static void removeAnyRelicFromPools(String relicID){
+        if (AbstractDungeon.shopRelicPool.contains(relicID))
+        AbstractDungeon.shopRelicPool.remove(relicID);
+        if (AbstractDungeon.rareRelicPool.contains(relicID))
+            AbstractDungeon.rareRelicPool.remove(relicID);
+        if (AbstractDungeon.uncommonRelicPool.contains(relicID))
+            AbstractDungeon.uncommonRelicPool.remove(relicID);
+        if (AbstractDungeon.bossRelicPool.contains(relicID))
+            AbstractDungeon.bossRelicPool.remove(relicID);
+        if (AbstractDungeon.commonRelicPool.contains(relicID))
+            AbstractDungeon.commonRelicPool.remove(relicID);
+    }
 }
