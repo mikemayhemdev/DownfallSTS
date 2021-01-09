@@ -1,11 +1,8 @@
 package downfall.monsters;
 
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Ironclad.CharBossIronclad;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
@@ -26,18 +23,14 @@ import com.megacrit.cardcrawl.vfx.combat.HeartMegaDebuffEffect;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import downfall.actions.NeowGainMinionPowersAction;
-import downfall.actions.NeowReturnAction;
-import downfall.actions.NeowRezAction;
 import downfall.downfallMod;
-import downfall.powers.EndOfTurnStrengthDex;
 import downfall.powers.NeowInvulnerablePower;
-import downfall.powers.neowpowers.*;
+import downfall.powers.neowpowers.BlasphemersDemise;
+import downfall.powers.neowpowers.EnergyThief;
+import downfall.powers.neowpowers.FeedingFrenzy;
+import downfall.powers.neowpowers.SeeingDoubleProduct;
 import downfall.vfx.combat.FakeDeathScene;
 import guardian.vfx.SmallLaserEffectColored;
-import slimebound.SlimeboundMod;
-
-import java.util.ArrayList;
-import java.util.Iterator;
 
 public class NeowBossFinal extends AbstractMonster {
 
@@ -321,21 +314,6 @@ public class NeowBossFinal extends AbstractMonster {
     }
 
     @Override
-    public void renderHealth(SpriteBatch sb) {
-        if (!foggy() && !halfDead) {
-            super.renderHealth(sb);
-        }
-    }
-
-    @Override
-    public void renderPowerTips(SpriteBatch sb) {
-        if (!foggy()) {
-            super.renderPowerTips(sb);
-        }
-    }
-
-
-    @Override
     public void renderTip(SpriteBatch sb) {
         if (!foggy()) {
             super.renderTip(sb);
@@ -347,6 +325,13 @@ public class NeowBossFinal extends AbstractMonster {
     protected void renderName(SpriteBatch sb) {
         if (!foggy()) {
             SpireSuper.call(sb);
+        }
+    }
+
+    @SpireOverride
+    protected void renderPowerIcons(SpriteBatch sb, float x, float y) {
+        if (!foggy() && !halfDead) {
+            SpireSuper.call(sb, x, y);
         }
     }
 }

@@ -49,6 +49,7 @@ public class ConstructionForm extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        isEthereal = true;
 
         tags.add(BaseModCardTags.FORM);
     }
@@ -68,7 +69,9 @@ public class ConstructionForm extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_TURNS);
+            isEthereal = false;
+            rawDescription = UPGRADED_DESCRIPTION;
+            initializeDescription();
         }
     }
 
