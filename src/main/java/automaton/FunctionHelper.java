@@ -5,6 +5,7 @@ import automaton.cards.AbstractBronzeCard;
 import automaton.cards.ForceShield;
 import automaton.cards.FunctionCard;
 import automaton.powers.*;
+import automaton.relics.ElectromagneticCoil;
 import automaton.relics.OnCompileRelic;
 import automaton.util.TextureLoader;
 import basemod.helpers.CardModifierManager;
@@ -26,7 +27,13 @@ import java.util.HashMap;
 
 public class FunctionHelper {
     public static CardGroup held;
-    public static int max = 3;
+    public static int max() {
+        int max = 3;
+        if (AbstractDungeon.player.hasRelic(ElectromagneticCoil.ID)) {
+            max = 4;
+        }
+        return max;
+    }
 
     public static int functionsCompiledThisCombat = 0;
 
@@ -119,7 +126,7 @@ public class FunctionHelper {
         if (c instanceof AbstractBronzeCard) {
             ((AbstractBronzeCard) c).onInput();
         }
-        if (held.size() == max) {
+        if (held.size() == max()) {
             output();
         }
         secretStorage = makeFunction(false);
@@ -236,12 +243,12 @@ public class FunctionHelper {
 
     public static void render(SpriteBatch sb) {
         sb.setColor(Color.WHITE.cpy());
-        if (max == 4) {
+        if (max() == 4) {
             sb.draw(bg_4card, BG_X, BG_Y, 0, 0, bg_4card.getWidth() * Settings.scale, bg_4card.getHeight() * Settings.scale, 1, 1, 0, 0, 0, bg_4card.getWidth(), bg_4card.getHeight(), false, false);
         } else {
             sb.draw(bg, BG_X, BG_Y, 0, 0, bg.getWidth() * Settings.scale, bg.getHeight() * Settings.scale, 1, 1, 0, 0, 0, bg.getWidth(), bg.getHeight(), false, false);
         }
-        for (int i = 0; i < max; i++) {
+        for (int i = 0; i < max(); i++) {
             sb.draw(sequenceSlot, floaterStartPositions[i].x, floaterStartPositions[i].y + bobEffects[i].y, 0, 0, sequenceSlot.getWidth() * Settings.scale, sequenceSlot.getHeight() * Settings.scale, 1, 1, 0, 0, 0, sequenceSlot.getWidth(), sequenceSlot.getHeight(), false, false);
             if (held.size() - 1 >= i) {
                 held.group.get(i).render(sb);
@@ -265,8 +272,8 @@ public class FunctionHelper {
         if (secretStorage != null) {
             secretStorage.update();
             secretStorage.updateHoverLogic();
-            float x = (max == 3 ? funcPositions[0].x : funcPositions[1].x);
-            float y = (max == 3 ? funcPositions[0].y : funcPositions[1].y);
+            float x = (max() == 3 ? funcPositions[0].x : funcPositions[1].x);
+            float y = (max() == 3 ? funcPositions[0].y : funcPositions[1].y);
             secretStorage.target_x = x;
             secretStorage.current_x = x;
             secretStorage.target_y = y;

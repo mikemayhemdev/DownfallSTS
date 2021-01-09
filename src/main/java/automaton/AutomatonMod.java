@@ -347,13 +347,6 @@ public class AutomatonMod implements
             FunctionHelper.held.clear();
             FunctionHelper.genPreview();
         }
-        if (CardCrawlGame.loadingSave) {
-            if (AbstractDungeon.player.hasRelic(ElectromagneticCoil.ID)) {
-                FunctionHelper.max += 1;
-            }
-        } else {
-            FunctionHelper.max = 3;
-        }
     }
 
     public static CardGroup getRareCards() {

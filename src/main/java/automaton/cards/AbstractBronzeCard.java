@@ -333,7 +333,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
     }
 
     boolean lastCard() {
-        return position == FunctionHelper.max - 1;
+        return position == FunctionHelper.max() - 1;
     }
 
     boolean firstCard() {
