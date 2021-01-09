@@ -24,6 +24,9 @@ import com.megacrit.cardcrawl.vfx.SpeechBubble;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import downfall.relics.HeartBlessingBlue;
+import downfall.relics.HeartBlessingGreen;
+import downfall.relics.HeartBlessingRed;
 import downfall.vfx.NeowBossRezEffect;
 import slimebound.SlimeboundMod;
 
@@ -42,33 +45,37 @@ public class NeowRezAction extends AbstractGameAction {
         this.instructedMove = false;
     }
 
+    public void rezSpeech(){
+        switch (owner.Rezzes) {
+            case 0: {
+                AbstractDungeon.effectList.add(new SpeechBubble(Settings.WIDTH * 0.85F, Settings.HEIGHT / 2F, 2.0F, CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowBoss")).TEXT[0], false));
+                CardCrawlGame.sound.play("VO_NEOW_2A");
+                break;
+            }
+
+            case 1: {
+                AbstractDungeon.effectList.add(new SpeechBubble(Settings.WIDTH * 0.85F, Settings.HEIGHT / 2F, 2.0F, CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowBoss")).TEXT[1], false));
+
+                CardCrawlGame.sound.play("VO_NEOW_3B");
+                break;
+            }
+            case 2: {
+                AbstractDungeon.effectList.add(new SpeechBubble(Settings.WIDTH * 0.85F, Settings.HEIGHT / 2F, 2.0F, CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowBoss")).TEXT[2], false));
+
+                CardCrawlGame.sound.play("VO_NEOW_1A");
+                break;
+            }
+        }
+    }
+
+
     @Override
     public void update() {
         if (!this.instructedMove) {
             owner.moveForRez();
             this.instructedMove = true;
-            switch (owner.Rezzes) {
-                case 1: {
-                    AbstractDungeon.effectList.add(new SpeechBubble(Settings.WIDTH * 0.85F, Settings.HEIGHT / 2F, 2.0F, CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowBoss")).TEXT[0], false));
-
-                    CardCrawlGame.sound.play("VO_NEOW_2A");
-                    break;
-                }
-
-                case 2: {
-                    AbstractDungeon.effectList.add(new SpeechBubble(Settings.WIDTH * 0.85F, Settings.HEIGHT / 2F, 2.0F, CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowBoss")).TEXT[1], false));
-
-                    CardCrawlGame.sound.play("VO_NEOW_3B");
-                    break;
-                }
-                case 3: {
-                    AbstractDungeon.effectList.add(new SpeechBubble(Settings.WIDTH * 0.85F, Settings.HEIGHT / 2F, 2.0F, CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowBoss")).TEXT[2], false));
-
-                    CardCrawlGame.sound.play("VO_NEOW_1A");
-                    break;
-                }
+            rezSpeech();
             }
-        }
         this.duration -= Gdx.graphics.getDeltaTime();
         if (this.duration <= 1.5F && !rezInit) {
             this.rezInit = true;
@@ -79,17 +86,18 @@ public class NeowRezAction extends AbstractGameAction {
             } else {
                 //Collections.shuffle(owner.bossesToRez);
                 name = owner.bossesToRez.get(0);
+                owner.bossesRezzed.add(name);
                 owner.bossesToRez.remove(0);
             }
-            SlimeboundMod.logger.info("Neow rezzing: " + name);
+            //SlimeboundMod.logger.info("Neow rezzing: " + name);
             rezBoss(name);
-            SlimeboundMod.logger.info("Neow rezzed: " + cB.name);
+            //SlimeboundMod.logger.info("Neow rezzed: " + cB.name);
             owner.minion = cB;
             cB.tint.color = new Color(.5F, .5F, 1F, 0F);
             cB.tint.changeColor(Color.WHITE.cpy(), 2F);
             AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.CYAN, true));
             AbstractDungeon.effectsQueue.add(new IntenseZoomEffect(cB.hb.cX, cB.hb.cY, false));
-            rezVFX = new NeowBossRezEffect(cB.hb.cX, cB.hb.cY);
+            rezVFX = new NeowBossRezEffect(cB.hb.cX - 100F, cB.hb.cY);
             AbstractDungeon.effectsQueue.add(rezVFX);
 
             AbstractDungeon.getCurrRoom().monsters.add(cB);
@@ -110,15 +118,13 @@ public class NeowRezAction extends AbstractGameAction {
 
         if (this.duration <= 0F) {
             cB.init();
-            owner.Rezzes++;
-            if (owner.Rezzes == 4) {
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cB.anticard().makeCopy()));
-                //AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cB.anticard().makeCopy()));
-                //AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cB.anticard().makeCopy()));
-            }
+            NeowBoss.Rezzes++;
+            owner.isRezzing = false;
             cB.showHealthBar();
 
             rezVFX.end();
+            cB.chosenArchetype.addedPreBattle();
+           // cB.usePreBattleAction();
             this.isDone = true;
         }
     }

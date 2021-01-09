@@ -32,24 +32,24 @@ public class GladiatorsBookOfMartialProwess extends CustomRelic {
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if (c.hasTag(OPENER)){
+        if (c.hasTag(OPENER)) {
             hasPlayedOpener = true;
         }
-        if (c.hasTag(TECHNIQUE)){
+        if (c.hasTag(TECHNIQUE)) {
             hasPlayedTechnique = true;
         }
-        if (c.hasTag(FINISHER)){
+        if (c.hasTag(FINISHER)) {
             hasPlayedFinisher = true;
         }
-        if (c.rawDescription.contains("champ:Gladiator champ:Combo")){
+        if (c.hasTag(COMBO)) {
             hasPlayedCombo = true;
         }
-        if (hasPlayedFinisher && hasPlayedCombo && hasPlayedTechnique && hasPlayedOpener){
-            if (AbstractDungeon.cardRng.randomBoolean()) {
-                addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
-            } else {
-                addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, 1), 1));
-            }
+        if (hasPlayedFinisher && hasPlayedCombo && hasPlayedTechnique && hasPlayedOpener) {
+
+            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
+
+            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, 1), 1));
+
             hasPlayedOpener = false;
             hasPlayedTechnique = false;
             hasPlayedFinisher = false;

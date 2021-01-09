@@ -13,18 +13,16 @@ public class GladiatorStyle extends AbstractChampCard {
 
     public GladiatorStyle() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.tags.add(ChampMod.OPENER);
-        this.tags.add(ChampMod.OPENERGLADIATOR);
+       // this.tags.add(ChampMod.OPENER);
+        baseMagicNumber = magicNumber = 2;
+       // this.tags.add(ChampMod.OPENERGLADIATOR);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gladOpen();
-        applyToSelf(new GladiatorStylePower(3));
+        applyToSelf(new GladiatorStylePower(magicNumber));
     }
 
     public void upp() {
-        isInnate = true;
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeMagicNumber(1);
     }
 }

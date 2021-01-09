@@ -363,6 +363,4 @@ public class GoldToSoulPatches {
         }
     }
     */
-
-    //TODO: Make work on load
 }

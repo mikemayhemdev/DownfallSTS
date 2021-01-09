@@ -8,7 +8,6 @@ package slimebound.events;
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,7 +19,7 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import slimebound.cards.CheckThePlaybook;
-import slimebound.cards.Icky;
+import downfall.cards.curses.Icky;
 import slimebound.cards.Tackle;
 
 import java.util.Iterator;
@@ -99,7 +98,7 @@ public class ArtOfSlimeWar extends AbstractImageEvent {
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                         CardCrawlGame.screenShake.mildRumble(5.0F);
                         this.screenNum = 1;
-                        this.imageEventText.updateDialogOption(0, OPTIONS[3], CardLibrary.getCopy("Slimebound:Icky"));
+                        this.imageEventText.updateDialogOption(0, OPTIONS[3], new Icky());
                         this.imageEventText.updateDialogOption(1, OPTIONS[4] + this.damage + OPTIONS[5]);
                         this.imageEventText.removeDialogOption(2);
                         this.imageEventText.setDialogOption(OPTIONS[6] + this.maxHpLoss + OPTIONS[7]);

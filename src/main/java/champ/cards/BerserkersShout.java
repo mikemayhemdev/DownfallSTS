@@ -3,7 +3,10 @@ package champ.cards;
 import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static champ.ChampMod.fatigue;
 
 public class BerserkersShout extends AbstractChampCard {
 
@@ -11,7 +14,7 @@ public class BerserkersShout extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 6;
     private static final int UPG_MAGIC = 3;
 
     public BerserkersShout() {
@@ -20,15 +23,22 @@ public class BerserkersShout extends AbstractChampCard {
         tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERBERSERKER);
+        myHpLossCost = magicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
         berserkOpen();
         fatigue(magicNumber);
+        if (upgraded) upgradeAction(p,m);
+    }
+
+    public void upgradeAction(AbstractPlayer p, AbstractMonster m){
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

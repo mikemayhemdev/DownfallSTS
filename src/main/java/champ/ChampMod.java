@@ -1,11 +1,11 @@
 package champ;
 
 import basemod.BaseMod;
-import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import champ.actions.FatigueHpLossAction;
 import champ.cards.*;
 import champ.events.*;
 import champ.monsters.BlackKnight;
@@ -14,15 +14,16 @@ import champ.potions.OpenerPotion;
 import champ.potions.TechPotion;
 import champ.potions.UltimateStancePotion;
 import champ.powers.CounterPower;
+import champ.powers.ResolvePower;
 import champ.relics.*;
 import champ.stances.AbstractChampStance;
 import champ.util.CardFilter;
-import downfall.util.CardIgnore;
 import champ.util.CoolVariable;
 import champ.util.TextureLoader;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -32,14 +33,15 @@ import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.city.Colosseum;
 import com.megacrit.cardcrawl.events.city.TheLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import com.megacrit.cardcrawl.unlock.AbstractUnlock;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.downfallMod;
+import downfall.util.CardIgnore;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -92,8 +94,6 @@ public class ChampMod implements
     @SpireEnum
     public static AbstractCard.CardTags OPENERDEFENSIVE;
     @SpireEnum
-    public static AbstractCard.CardTags OPENERGLADIATOR;
-    @SpireEnum
     public static AbstractCard.CardTags OPENERBERSERKER;
     @SpireEnum
     public static AbstractCard.CardTags FINISHER;
@@ -104,19 +104,18 @@ public class ChampMod implements
     @SpireEnum
     public static AbstractCard.CardTags COMBODEFENSIVE;
     @SpireEnum
-    public static AbstractCard.CardTags COMBOGLADIATOR;
-    @SpireEnum
     public static AbstractCard.CardTags COMBOBERSERKER;
 
     private static String modID = "champ";
     public static int finishersThisTurn = 0;
     public static int finishersThisCombat = 0;
     public static int techniquesThisTurn = 0;
-    private CustomUnlockBundle unlocks0;
-    private CustomUnlockBundle unlocks1;
-    private CustomUnlockBundle unlocks2;
-    private CustomUnlockBundle unlocks3;
-    private CustomUnlockBundle unlocks4;
+    public static boolean talked1 = false;
+    public static boolean talked2 = false;
+
+    public static boolean enteredDefensiveThisTurn;
+    public static boolean enteredBerserkerThisTurn;
+    public static boolean enteredGladiatorThisTurn;
 
     public static final TextureAtlas UIAtlas = new TextureAtlas();
     public static Texture heartOrb;
@@ -274,6 +273,12 @@ public class ChampMod implements
         BaseMod.addPotion(TechPotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, TechPotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
         BaseMod.addPotion(UltimateStancePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, UltimateStancePotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
 
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(CounterstrikePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(OpenerPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(TechPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(UltimateStancePotion.POTION_ID);
+        }
     }
 
     @Override
@@ -282,55 +287,37 @@ public class ChampMod implements
         finishersThisCombat = 0;
         techniquesThisTurn = 0;
         StanceHelper.init();
+        enteredBerserkerThisTurn = false;
+        enteredDefensiveThisTurn = false;
+        enteredGladiatorThisTurn = false;
     }
 
     @Override
     public void receiveSetUnlocks() {
 
-        unlocks0 = new CustomUnlockBundle(
-                Aggression.ID, Balance.ID, Control.ID
+        downfallMod.registerUnlockSuite(
+                BerserkerStyle.ID,
+                ViciousMockery.ID,
+                DefensiveStyle.ID,
+
+                RageSigil.ID,
+                ShieldSigil.ID,
+                SwordSigil.ID,
+
+                EnchantShield.ID,
+                EnchantSword.ID,
+                EnchantCrown.ID,
+
+                SignatureFinisher.ID,
+                PowerArmor.ID,
+                SpectersHand.ID,
+
+                DuelingGlove.ID,
+                Barbells.ID,
+                DeflectingBracers.ID,
+
+                ChampChar.Enums.THE_CHAMP
         );
-        UnlockTracker.addCard(Aggression.ID);
-        UnlockTracker.addCard(Balance.ID);
-        UnlockTracker.addCard(Control.ID);
-
-        unlocks1 = new CustomUnlockBundle(
-                RageSigil.ID, ShieldSigil.ID, SwordSigil.ID
-        );
-        UnlockTracker.addCard(RageSigil.ID);
-        UnlockTracker.addCard(ShieldSigil.ID);
-        UnlockTracker.addCard(SwordSigil.ID);
-
-        unlocks2 = new CustomUnlockBundle(
-                EnchantShield.ID, EnchantSword.ID, EnchantCrown.ID
-        );
-        UnlockTracker.addCard(EnchantShield.ID);
-        UnlockTracker.addCard(EnchantSword.ID);
-        UnlockTracker.addCard(EnchantCrown.ID);
-
-        unlocks3 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                SignatureFinisher.ID, PowerArmor.ID, SpectersHand.ID
-        );
-        UnlockTracker.addRelic(SignatureFinisher.ID);
-        UnlockTracker.addRelic(PowerArmor.ID);
-        UnlockTracker.addRelic(SpectersHand.ID);
-
-        unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                DuelingGlove.ID, Barbells.ID, DeflectingBracers.ID
-        );
-        UnlockTracker.addRelic(DuelingGlove.ID);
-        UnlockTracker.addRelic(Barbells.ID);
-        UnlockTracker.addRelic(DeflectingBracers.ID);
-
-        BaseMod.addUnlockBundle(unlocks0, ChampChar.Enums.THE_CHAMP, 0);
-
-        BaseMod.addUnlockBundle(unlocks1, ChampChar.Enums.THE_CHAMP, 1);
-
-        BaseMod.addUnlockBundle(unlocks2, ChampChar.Enums.THE_CHAMP, 2);
-
-        BaseMod.addUnlockBundle(unlocks3, ChampChar.Enums.THE_CHAMP, 3);
-
-        BaseMod.addUnlockBundle(unlocks4, ChampChar.Enums.THE_CHAMP, 4);
 
     }
 
@@ -425,12 +412,26 @@ public class ChampMod implements
                 .create());
                 */
 
+
+        BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsChamp.ID, BackToBasicsChamp.class) //Event ID//
+                //Event Character//
+                .playerClass(ChampChar.Enums.THE_CHAMP)
+                //Existing Event to Override//
+                .overrideEvent(BackToBasics.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
+
     }
 
     @Override
     public boolean receivePreMonsterTurn(AbstractMonster abstractMonster) {
         finishersThisTurn = 0;
         techniquesThisTurn = 0;
+        enteredBerserkerThisTurn = false;
+        enteredDefensiveThisTurn = false;
+        enteredGladiatorThisTurn = false;
         return true;
     }
 
@@ -460,7 +461,7 @@ public class ChampMod implements
     public int receiveOnPlayerLoseBlock(int i) {
         if (AbstractDungeon.player.hasRelic(DeflectingBracers.ID)) {
             AbstractDungeon.player.getRelic(DeflectingBracers.ID).flash();
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(i), i));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(AbstractDungeon.player.currentBlock), AbstractDungeon.player.currentBlock));
         }
         return i;
     }
@@ -475,21 +476,53 @@ public class ChampMod implements
         }
     }
 
-    public static void updateTechniquesInCombat(){
-        for (AbstractCard c: AbstractDungeon.player.drawPile.group){
+    public static void updateTechniquesInCombat() {
+        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
             if (c.hasTag(TECHNIQUE)) c.initializeDescription();
         }
-        for (AbstractCard c: AbstractDungeon.player.discardPile.group){
+        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
             if (c.hasTag(TECHNIQUE)) c.initializeDescription();
         }
-        for (AbstractCard c: AbstractDungeon.player.hand.group){
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
             if (c.hasTag(TECHNIQUE)) c.initializeDescription();
         }
-        for (AbstractCard c: AbstractDungeon.player.exhaustPile.group){
+        for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
             if (c.hasTag(TECHNIQUE)) c.initializeDescription();
         }
-        for (AbstractCard c: AbstractDungeon.player.limbo.group){
+        for (AbstractCard c : AbstractDungeon.player.limbo.group) {
             if (c.hasTag(TECHNIQUE)) c.initializeDescription();
         }
+    }
+
+    public static int fatigue(int begone) {
+
+        int y = AbstractDungeon.player.currentHealth;
+        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                int x = Math.min(begone, AbstractDungeon.player.currentHealth - 1);
+                if (AbstractDungeon.player.hasRelic(PowerArmor.ID) && AbstractDungeon.player.hasPower(ResolvePower.POWER_ID)) {
+                    if (x + AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount > PowerArmor.CAP_RESOLVE_ETC) {
+                        x = PowerArmor.CAP_RESOLVE_ETC - AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount;
+                    }
+                }
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(x), x));
+                AbstractDungeon.actionManager.addToTop(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, x));
+            }
+        });
+
+        /*atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (y - AbstractDungeon.player.currentHealth > 0) {
+                    att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(y - AbstractDungeon.player.currentHealth), y - AbstractDungeon.player.currentHealth));
+                }
+            }
+        });
+        */ //This unused method makes it so the player only gains Resolve equal to lost HP. Fixes some breakable things, but also unfun.
+
+        return Math.min(begone, AbstractDungeon.player.currentHealth - 1);
     }
 }

@@ -21,6 +21,12 @@ public class EnPerseverance extends AbstractBossCard {
         this.selfRetain = true;
     }
 
+    public EnPerseverance(int preBlock){
+        this();
+        this.baseBlock += preBlock;
+        this.block = this.baseBlock;
+    }
+
     public void onRetained() {
         this.upgradeBlock(this.magicNumber);
     }

@@ -2,21 +2,17 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
-import champ.stances.DefensiveStance;
-import champ.util.OnTechniqueSubscriber;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.stances.AbstractStance;
-import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
-public class FocusedDefPower extends AbstractPower implements CloneablePowerInterface, OnTechniqueSubscriber {
+public class FocusedDefPower extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = ChampMod.makeID("FocusedDefPower");
 
@@ -41,14 +37,14 @@ public class FocusedDefPower extends AbstractPower implements CloneablePowerInte
     }
 
     @Override
-    public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
-        if (!newStance.ID.equals(DefensiveStance.STANCE_ID))
-            addToBot(new RemoveSpecificPowerAction(owner, owner, this));
-    }
-
-    @Override
-    public void onTechnique() {
-        flash();
+    public void atEndOfTurn(boolean isPlayer) {
+        if (AbstractDungeon.player.hasPower(CounterPower.POWER_ID)) {
+            if (AbstractDungeon.player.getPower(CounterPower.POWER_ID).amount >= 15) {
+                flash();
+                addToBot(new GainBlockAction(owner, amount));
+            }
+        }
+        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
     @Override
@@ -56,18 +52,6 @@ public class FocusedDefPower extends AbstractPower implements CloneablePowerInte
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
-
-    @Override
-    public void stackPower(int stackAmount) {
-        super.stackPower(stackAmount);
-        ChampMod.updateTechniquesInCombat();
-    }
-
-    @Override
-    public void onInitialApplication() {
-        super.onInitialApplication();
-        ChampMod.updateTechniquesInCombat();
-    }
     @Override
     public AbstractPower makeCopy() {
         return new FocusedDefPower(amount);

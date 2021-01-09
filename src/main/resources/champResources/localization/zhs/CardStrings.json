@@ -318,7 +318,7 @@
   "champ:SteelEdge": {
     "NAME": "剑锋",
     "DESCRIPTION": "champ:狂战 champ:连段 ： 造成 !D! 点伤害X次。 NL champ:防守 champ:连段 ： 获得 !B! 点 格挡 X次。 NL champ:角斗 champ:连段 ： 抽X张牌并获得X [E] 。",
-    "UPGRADE_DESCRIPTION": "champ:狂战 champ:连段 ： 造成 !D! 点伤害X+1次。 NL champ:防守 champ:连段 ： 获得 !B! 点 格挡 X+1次。 NL champ:角斗 champ:连段 ： 抽X+1张牌并获得X+1 [E] 。"
+    "UPGRADE_DESCRIPTION": "champ:狂战 champ:连段 ： 造成 !D! 点伤害X次。 NL champ:防守 champ:连段 ： 获得 !B! 点 格挡 1次。 NL champ:角斗 champ:连段 ： 抽X+1张牌并获得X [E] 。"
   },
   "champ:Improvising": {
     "NAME": "触类旁通",

@@ -56,7 +56,7 @@ public class HeatCrushEffect extends AbstractGameEffect {
         } else if (this.duration < 0.2F) {// 53
             if (!this.impactHook) {// 54
                 this.impactHook = true;// 55
-                AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.RED));// 56
+                AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.RED.cpy()));// 56
                 CardCrawlGame.screenShake.shake(ShakeIntensity.HIGH, ShakeDur.MED, true);// 57
             }
 

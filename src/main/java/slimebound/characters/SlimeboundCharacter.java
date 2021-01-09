@@ -246,7 +246,7 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo(NAME, DESCRIPTION, 60, 60, 3, 99, 5, this,
+        return new CharSelectInfo(NAME, DESCRIPTION, 65, 65, 3, 99, 5, this,
 
                 getStartingRelics(), getStartingDeck(), false);
     }

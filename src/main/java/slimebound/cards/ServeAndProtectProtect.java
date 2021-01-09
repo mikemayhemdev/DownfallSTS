@@ -23,7 +23,7 @@ public class ServeAndProtectProtect extends AbstractSlimeboundCard {
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
     public static String UPGRADED_DESCRIPTION;
@@ -39,9 +39,10 @@ public class ServeAndProtectProtect extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
 
-        this.baseBlock = 6;
+        this.baseBlock = 8;
         this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust = true;
+        this.selfRetain = true;
     }
 
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {

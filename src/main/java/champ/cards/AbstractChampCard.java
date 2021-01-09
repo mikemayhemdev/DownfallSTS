@@ -1,83 +1,56 @@
 package champ.cards;
 
 import basemod.abstracts.CustomCard;
-import basemod.helpers.CardModifierManager;
 import basemod.helpers.TooltipInfo;
 import champ.ChampChar;
 import champ.ChampMod;
-import champ.actions.FatigueHpLossAction;
+import champ.ChampTextHelper;
 import champ.powers.CalledShotPower;
-import champ.powers.FocusedBerPower;
-import champ.powers.FocusedDefPower;
-import champ.powers.ResolvePower;
-import champ.relics.DefensiveTrainingManual;
 import champ.relics.SignatureFinisher;
-import champ.stances.*;
+import champ.stances.AbstractChampStance;
+import champ.stances.BerserkerStance;
+import champ.stances.DefensiveStance;
+import champ.stances.UltimateStance;
+import champ.util.OnFinisherSubscriber;
 import champ.util.OnOpenerSubscriber;
 import com.badlogic.gdx.Gdx;
-import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
-import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.city.Champ;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import slimebound.SlimeboundMod;
 
-import java.security.Signature;
 import java.util.ArrayList;
 import java.util.List;
 
 import static champ.ChampMod.*;
-import static com.badlogic.gdx.graphics.Color.RED;
 
 
 public abstract class AbstractChampCard extends CustomCard {
 
     protected final CardStrings cardStrings;
     protected final String NAME;
-    protected String DESCRIPTION;
-    protected String UPGRADE_DESCRIPTION;
-    protected String[] EXTENDED_DESCRIPTION;
-
     public int cool;
     public int baseCool;
     public boolean upgradedCool;
     public boolean isCoolModified;
-
     public int myHpLossCost;
-
-    private boolean reInitDescription = true;
-
-    public void resetAttributes() {
-        super.resetAttributes();
-        cool = baseCool;
-        isCoolModified = false;
-    }
-
-    public void displayUpgrades() {
-        super.displayUpgrades();
-        if (upgradedCool) {
-            cool = baseCool;
-            isCoolModified = true;
-        }
-    }
-
-    void upgradeCool(int amount) {
-        baseCool += amount;
-        cool = baseCool;
-        upgradedCool = true;
-    }
+    public String DESCRIPTION;
+    public String UPGRADE_DESCRIPTION;
+    public String[] EXTENDED_DESCRIPTION;
+    public boolean reInitDescription = true;
 
 
     public AbstractChampCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
@@ -124,43 +97,26 @@ public abstract class AbstractChampCard extends CustomCard {
         return getModID() + ":" + blah;
     }
 
-    public static boolean gcombo() {
-        return (AbstractDungeon.player.stance.ID.equals(GladiatorStance.STANCE_ID) || (AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)));
-    }
-
     public static boolean bcombo() {
-        return (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID) || (AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)));
+        return (enteredBerserkerThisTurn || AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID) || (AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)));
     }
 
     public static boolean dcombo() {
-        return (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || (AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)));
+        return (enteredDefensiveThisTurn || AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || (AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)));
     }
 
-    public int fatigue(int begone) {
+    public void displayUpgrades() {
+        super.displayUpgrades();
+        if (upgradedCool) {
+            cool = baseCool;
+            isCoolModified = true;
+        }
+    }
 
-        int y = AbstractDungeon.player.currentHealth;
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                int x = Math.min(begone, AbstractDungeon.player.currentHealth - 1);
-                att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(x), x));
-                att(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, x));
-            }
-        });
-
-        /*atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (y - AbstractDungeon.player.currentHealth > 0) {
-                    att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(y - AbstractDungeon.player.currentHealth), y - AbstractDungeon.player.currentHealth));
-                }
-            }
-        });
-        */ //This unused method makes it so the player only gains Resolve equal to lost HP. Fixes some breakable things, but also unfun.
-
-        return Math.min(begone, AbstractDungeon.player.currentHealth - 1);
+    void upgradeCool(int amount) {
+        baseCool += amount;
+        cool = baseCool;
+        upgradedCool = true;
     }
 
     @Override
@@ -175,9 +131,6 @@ public abstract class AbstractChampCard extends CustomCard {
     @Override
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tips = new ArrayList<>();
-        if (this.rawDescription.contains("champ:Fatigue") && !this.rawDescription.contains("champ:Resolve")) {
-            tips.add(new TooltipInfo(ResolvePower.NAME, ChampChar.characterStrings.TEXT[39]));
-        }
         if (this.rawDescription.contains("[crown_icon]") && !this.rawDescription.contains("champ:Technique")) {
             tips.add(new TooltipInfo(ChampChar.characterStrings.TEXT[40], ChampChar.characterStrings.TEXT[41]));
         }
@@ -187,10 +140,11 @@ public abstract class AbstractChampCard extends CustomCard {
         return tips;
     }
 
+
     @Override
     public void triggerOnGlowCheck() {
         if (this.hasTag(FINISHER)) {
-            this.glowColor = AbstractDungeon.player.stance instanceof AbstractChampStance ? RED : BLUE_BORDER_GLOW_COLOR;
+            this.glowColor = AbstractDungeon.player.stance instanceof AbstractChampStance ? Color.RED.cpy() : BLUE_BORDER_GLOW_COLOR;
         }
     }
 
@@ -224,7 +178,7 @@ public abstract class AbstractChampCard extends CustomCard {
         atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
     }
 
-    private void makeInHand(AbstractCard c, int i) {
+    public void makeInHand(AbstractCard c, int i) {
         atb(new MakeTempCardInHandAction(c, i));
     }
 
@@ -281,41 +235,30 @@ public abstract class AbstractChampCard extends CustomCard {
         triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
     }
 
-    public void gladOpen() {
-        gladiatorStance();
-        triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
-    }
-
     public void defenseOpen() {
         defensiveStance();
         triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
     }
 
     protected void berserkerStance() {
-        SlimeboundMod.logger.info("Switching to Berserker (Abstract)");
+        //SlimeboundMod.logger.info("Switching to Berserker (Abstract)");
         if (!(AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)))
             atb(new ChangeStanceAction(BerserkerStance.STANCE_ID));
     }
 
-    protected void gladiatorStance() {
-        SlimeboundMod.logger.info("Switching to Gladiator (Abstract)");
-        if (!(AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)))
-            atb(new ChangeStanceAction(GladiatorStance.STANCE_ID));
-    }
-
     protected void defensiveStance() {
-        SlimeboundMod.logger.info("Switching to Defensive (Abstract)");
+        //SlimeboundMod.logger.info("Switching to Defensive (Abstract)");
         if (!(AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)))
             atb(new ChangeStanceAction(DefensiveStance.STANCE_ID));
     }
 
     protected void ultimateStance() {
-        SlimeboundMod.logger.info("Switching to THE ULTIMATE STANCE!!! (Abstract)");
+        //SlimeboundMod.logger.info("Switching to THE ULTIMATE STANCE!!! (Abstract)");
         atb(new ChangeStanceAction(UltimateStance.STANCE_ID));
     }
 
     public void exitStance() {
-        SlimeboundMod.logger.info("Switching to Neutral (Abstract)");
+        //SlimeboundMod.logger.info("Switching to Neutral (Abstract)");
         atb(new ChangeStanceAction(NeutralStance.STANCE_ID));
     }
 
@@ -346,95 +289,31 @@ public abstract class AbstractChampCard extends CustomCard {
             if (leaveStance) {
                 exitStance();
             }
-            boolean endTurn = true;
             ((AbstractChampStance) AbstractDungeon.player.stance).fisher();
-            if (AbstractDungeon.player.stance instanceof UltimateStance) {
-                endTurn = false;
-            }
-            if (endTurn) {
-                if (AbstractDungeon.player.hasRelic(SignatureFinisher.ID)) {
-                    SignatureFinisher s = (SignatureFinisher) AbstractDungeon.player.getRelic(SignatureFinisher.ID);
-                    if (s.card.uuid == this.uuid) {
-                        s.flash();
-                        endTurn = false;
-                    }
+            for (AbstractPower p : AbstractDungeon.player.powers) {
+                if (p instanceof OnFinisherSubscriber) {
+                    ((OnFinisherSubscriber) p).onFinisher();
                 }
             }
-            if (endTurn) {
-                if (AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)) {
-                    AbstractDungeon.player.getPower(CalledShotPower.POWER_ID).onSpecificTrigger();
-                    endTurn = false;
-                }
-            }
-            if (endTurn) addToBot(new PressEndTurnButtonAction());
-
-
         }
     }
 
     @Override
+    public void applyPowers() {
+        super.applyPowers();
+        ChampTextHelper.colorCombos(this, false);
+    }
+
+    @Override
+    public void onMoveToDiscard() {
+        super.onMoveToDiscard();
+        ChampTextHelper.colorCombos(this, true);
+    }
+
+    @Override
     public void initializeDescription() {
-        String prefixTech = "";
-        String prefixFin = "";
-        if (this.hasTag(TECHNIQUE)) {
-            prefixTech = ChampChar.characterStrings.TEXT[29];
-            if (AbstractDungeon.player != null) {
-                if (AbstractDungeon.player.stance instanceof DefensiveStance) {
-                    prefixTech = ChampChar.characterStrings.TEXT[31];
-                    prefixTech = prefixTech + DefensiveStance.amount();
-                    prefixTech = prefixTech + ChampChar.characterStrings.TEXT[53];
-                } else if (AbstractDungeon.player.stance instanceof GladiatorStance) {
-                    if (GladiatorStance.amount() == 1){
-                        prefixTech = ChampChar.characterStrings.TEXT[30];
-                    } else {
-                        prefixTech = ChampChar.characterStrings.TEXT[50];
-                        prefixTech = prefixTech + GladiatorStance.amount();
-                        prefixTech = prefixTech + ChampChar.characterStrings.TEXT[51];
-                    }
-                } else if (AbstractDungeon.player.stance instanceof BerserkerStance) {
-                    prefixTech = ChampChar.characterStrings.TEXT[32];
-                    prefixTech = prefixTech + 3;
-                    if (AbstractDungeon.player.hasPower(FocusedBerPower.POWER_ID)){
-
-                        prefixTech = prefixTech + ChampChar.characterStrings.TEXT[54];
-                        prefixTech = prefixTech + AbstractDungeon.player.getPower(FocusedBerPower.POWER_ID).amount;
-                        prefixTech = prefixTech + ChampChar.characterStrings.TEXT[52];
-                    } else {
-                        prefixTech = prefixTech + ChampChar.characterStrings.TEXT[52];
-                    }
-
-                } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
-                    prefixTech = ChampChar.characterStrings.TEXT[33];
-                }
-            }
-            if (upgraded && this.UPGRADE_DESCRIPTION != null) {
-                this.rawDescription = prefixTech + UPGRADE_DESCRIPTION;
-            } else {
-                this.rawDescription = prefixTech + DESCRIPTION;
-            }
-        }
-        if (this.hasTag(FINISHER)) {
-            prefixFin = ChampChar.characterStrings.TEXT[34];
-            if (AbstractDungeon.player != null) {
-                if (AbstractDungeon.player.stance instanceof DefensiveStance) {
-                    prefixFin = ChampChar.characterStrings.TEXT[36];
-                } else if (AbstractDungeon.player.stance instanceof GladiatorStance) {
-                    prefixFin = ChampChar.characterStrings.TEXT[35];
-                } else if (AbstractDungeon.player.stance instanceof BerserkerStance) {
-                    prefixFin = ChampChar.characterStrings.TEXT[37];
-
-                } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
-                    prefixFin = ChampChar.characterStrings.TEXT[38];
-                }
-            }
-            if (upgraded && this.UPGRADE_DESCRIPTION != null) {
-                this.rawDescription = prefixTech + prefixFin + UPGRADE_DESCRIPTION;
-            } else {
-                this.rawDescription = prefixTech + prefixFin + DESCRIPTION;
-            }
-        }
+        ChampTextHelper.calculateTagText(this);
         super.initializeDescription();
-
     }
 
     @Override

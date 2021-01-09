@@ -3,6 +3,7 @@ package champ.stances;
 import champ.ChampChar;
 import champ.ChampMod;
 import champ.actions.FatigueHpLossAction;
+import champ.cards.AbstractChampCard;
 import champ.powers.ResolvePower;
 import champ.util.OnTechniqueSubscriber;
 import com.badlogic.gdx.graphics.Color;
@@ -33,80 +34,16 @@ public abstract class AbstractChampStance extends AbstractStance {
 
     @Override
     public void updateAnimation() {
-        /*
-        if (!(AbstractDungeon.player instanceof ChampChar)) {
-            if (!Settings.DISABLE_EFFECTS) {
 
-                this.particleTimer -= Gdx.graphics.getDeltaTime();
-                if (this.particleTimer < 0.0F) {
-                    this.particleTimer = 0.04F;
-                    AbstractDungeon.effectsQueue.add(new DefensiveModeStanceParticleEffect());
-                }
-            }
-
-
-            this.particleTimer2 -= Gdx.graphics.getDeltaTime();
-            if (this.particleTimer2 < 0.0F) {
-                this.particleTimer2 = MathUtils.random(0.45F, 0.55F);
-                AbstractDungeon.effectsQueue.add(new StanceAuraEffect("DefensiveMode"));
-            }
-        }
-        */
     }
-
-    public int fatigue(int begone) {
-
-        int y = AbstractDungeon.player.currentHealth;
-        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                int x = Math.min(begone, AbstractDungeon.player.currentHealth - 1);
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(x), x));
-                AbstractDungeon.actionManager.addToTop(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, x));
-            }
-        });
-
-        /*atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (y - AbstractDungeon.player.currentHealth > 0) {
-                    att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(y - AbstractDungeon.player.currentHealth), y - AbstractDungeon.player.currentHealth));
-                }
-            }
-        });
-        */ //This unused method makes it so the player only gains Resolve equal to lost HP. Fixes some breakable things, but also unfun.
-
-        return Math.min(begone, AbstractDungeon.player.currentHealth - 1);
-    }
-
 
     @Override
     public void onEnterStance() {
-        /*
-             if (sfxId != -1L) {
-                  stopIdleSfx();
-             }
-             */
 
         CardCrawlGame.sound.play("GUARDIAN_ROLL_UP");
 
-        /*
-        if (!(AbstractDungeon.player instanceof ChampChar)) {
-//             CardCrawlGame.sound.play("STANCE_ENTER_CALM");
-            sfxId = CardCrawlGame.sound.playAndLoop(GuardianMod.makeID("STANCE_LOOP_Defensive_Mode"));
-        }
-        */
-
         AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new IntenseZoomEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, false), 0.05F, true));
         AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.DARK_GRAY, true));
-
-        if (AbstractDungeon.player instanceof ChampChar) {
-            SlimeboundMod.logger.info("Switchin stances to: " + this.ID);
-            //((ChampChar) AbstractDungeon.player).switchStanceVisual(this.ID);
-        }
-
     }
 
     @Override

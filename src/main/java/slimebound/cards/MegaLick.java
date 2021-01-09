@@ -76,13 +76,16 @@ public class MegaLick extends AbstractSlimeboundCard {
 
                 }
             }
-            if (upgraded)   AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
         }
-
+        if (upgraded)upgradeAction(p,m);
 
     }
 
+
+    public void upgradeAction(AbstractPlayer p, AbstractMonster m){
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+    }
     public AbstractCard makeCopy() {
 
         return new MegaLick();

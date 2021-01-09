@@ -19,13 +19,13 @@ public class PrepareCrush extends AbstractExpansionCard {
     public final static String ID = makeID("PrepareCrush");
 
 
-    private static final int BLOCK = 16;
-    private static final int UPGRADE_BLOCK = 4;
-    private static final int MAGIC = 2;
-    private static final int UPGRADE_MAGIC = 1;
+    private static final int BLOCK = 10;
+    private static final int UPGRADE_BLOCK = 5;
+    private static final int MAGIC = 3;
 
     public PrepareCrush() {
-        super(ID, 3, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_slime.png", "expansioncontentResources/images/1024/bg_boss_slime.png");
 
         tags.add(expansionContentMod.STUDY_SLIMEBOSS);
         tags.add(expansionContentMod.STUDY);
@@ -54,7 +54,6 @@ public class PrepareCrush extends AbstractExpansionCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_BLOCK);
-            upgradeMagicNumber(UPGRADE_MAGIC);
         }
     }
 

@@ -1,6 +1,7 @@
 package slimebound.cards;
 
 
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -41,10 +42,12 @@ public class Schlurp extends AbstractSlimeboundCard {
 
         this.magicNumber = this.baseMagicNumber = 2;
         this.cardsToPreview = new Lick();
+        baseBlock = block = 6;
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
 
         for (int i = 0; i < this.magicNumber; i++) {
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Lick()));

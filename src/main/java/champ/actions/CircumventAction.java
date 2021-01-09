@@ -15,15 +15,9 @@ import java.util.ArrayList;
 
 public class CircumventAction extends AbstractGameAction {
 
-    public CircumventAction() {
-
-    }
-
     public void update() {
         if (AbstractDungeon.player.hasPower(CounterPower.POWER_ID)) {
-
-            addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player.getPower(CounterPower.POWER_ID).amount));
-
+            addToTop(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player.getPower(CounterPower.POWER_ID).amount));
         }
 
         this.isDone = true;

@@ -1,8 +1,12 @@
 package charbosses.bosses;
 
+import charbosses.BossMechanicDisplayPanel;
 import charbosses.relics.AbstractCharbossRelic;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.MonsterStrings;
 import downfall.downfallMod;
+import downfall.monsters.NeowBoss;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -10,6 +14,15 @@ import java.util.ArrayList;
 
 public abstract class AbstractBossDeckArchetype {
     public static final Logger logger = LogManager.getLogger(downfallMod.class.getName());
+
+    public static MonsterStrings bossMechanicString = CardCrawlGame.languagePack.getMonsterStrings("downfall:BossMechanics");
+
+    public String bossMechanicName;
+    public String bossMechanicDesc;
+
+    public int maxHPModifier;
+    public int actNum;
+
     /*
 
     /// WEIGHT CONSTANTS ///
@@ -71,6 +84,10 @@ public abstract class AbstractBossDeckArchetype {
     public boolean upgradeAllAttacks = false;
     */
 
+    public void addedPreBattle(){
+        initializeBossPanel();
+    }
+
     public abstract void initializeBonusRelic();
 
     public boolean looped = false;
@@ -85,11 +102,19 @@ public abstract class AbstractBossDeckArchetype {
         c.add(q);
     }
 
+    public void initializeBossPanel(){
+        if (bossMechanicDesc != null) {
+            BossMechanicDisplayPanel.mechanicName = bossMechanicName;
+            BossMechanicDisplayPanel.mechanicDesc = bossMechanicDesc;
+        }
+    }
+
     public void addToList(ArrayList<AbstractCard> c, AbstractCard q) {
         addToList(c, q, false);
     }
 
     public AbstractBossDeckArchetype(String id, String loggerClassName, String loggerArchetypeName) {
+
         /*
         this.ID = id;
         this.allCards = new ArrayList<AbstractBossCard>();
@@ -323,7 +348,7 @@ public abstract class AbstractBossDeckArchetype {
         Collections.shuffle(this.curseCards);
 
         if (boss.hasRelic("Omamori")) {
-            SlimeboundMod.logger.info("detected boss has Omamori");
+            //SlimeboundMod.logger.info("detected boss has Omamori");
             CBR_Omamori oma = (CBR_Omamori) boss.getRelic("Omamori");
             if (oma.counter > 0) {
                 logger.info(loggerSource + " tried to add a " + this.curseCards.get(0).name + ", but Omamori blocked it.");
@@ -445,7 +470,7 @@ public abstract class AbstractBossDeckArchetype {
         } else if (rarityRoll >= rarityRange[4] && rarityRoll <= rarityRange[5] && validRarities[2]) {
             rarity = CardRarity.RARE;
         } else {
-            //If no rarities were valid, mark it as Special, which will return a single Shiv (TODO replace this with Madness)
+            //If no rarities were valid, mark it as Special, which will return a single Shiv /Madness/ThisIsNoLongerUsedAtAll
             rarity = CardRarity.SPECIAL;
         }
 

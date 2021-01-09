@@ -17,17 +17,17 @@ public class PowerArmor extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("PowerArmor.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("PowerArmor.png"));
 
+    public static final int CAP_RESOLVE_ETC = 20;
+
     public PowerArmor() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
     public void onEquip() {
         ++AbstractDungeon.player.energy.energyMaster;
-        BaseMod.MAX_HAND_SIZE -= 2;
     }
 
     public void onUnequip() {
-        BaseMod.MAX_HAND_SIZE += 2;
         --AbstractDungeon.player.energy.energyMaster;
     }
 

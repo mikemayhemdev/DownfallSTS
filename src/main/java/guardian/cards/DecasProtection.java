@@ -50,7 +50,7 @@ public class DecasProtection extends AbstractGuardianCard {
 
         AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.POWER).makeCopy();
 
-        c.modifyCostForCombat(-1);
+        if (upgraded) c.modifyCostForCombat(-1);
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction(c, true));
 
 
@@ -63,7 +63,8 @@ public class DecasProtection extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 

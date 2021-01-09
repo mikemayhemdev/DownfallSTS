@@ -59,7 +59,7 @@ public class SlimeSpawnProjectileDeath extends AbstractGameEffect {
             this.mute = mute;
 
 
-            //SlimeboundMod.logger.info("Slime spawn projectile firing");
+            ////SlimeboundMod.logger.info("Slime spawn projectile firing");
 
             this.sX = srcX;
             // if (!this.mute) CardCrawlGame.sound.playA("SLIME_SPLIT", 0.3f);
@@ -118,11 +118,11 @@ public class SlimeSpawnProjectileDeath extends AbstractGameEffect {
 
     public void render(SpriteBatch sb) {
         if (this.cX > Settings.WIDTH * 0.15F) {
-            //SlimeboundMod.logger.info("Projectile C's: " + this.cX + " " + Settings.WIDTH * 0.25F);
+            ////SlimeboundMod.logger.info("Projectile C's: " + this.cX + " " + Settings.WIDTH * 0.25F);
             sb.setColor(Color.BLACK);
             sb.draw(img, this.cX - (float) (img.getWidth() / 2), this.cY - (float) (img.getHeight() / 2) + this.yOffset, (float) img.getWidth() / 2.0F, (float) img.getHeight() / 2.0F, (float) img.getWidth(), (float) img.getHeight(), this.scale, this.scale, this.rotation, 0, 0, 30, 29, false, false);
             sb.setColor(this.projectileColor);
-            //SlimeboundMod.logger.info("Projectile color: " + this.projectileColor);
+            ////SlimeboundMod.logger.info("Projectile color: " + this.projectileColor);
             sb.draw(img, this.cX - (float) (img.getWidth() / 2), this.cY - (float) (img.getHeight() / 2) + this.yOffset, (float) img.getWidth() / 2.0F, (float) img.getHeight() / 2.0F, (float) img.getWidth(), (float) img.getHeight(), this.scale, this.scale, this.rotation, 0, 0, 30, 29, false, false);
             //sb.draw(img, this.cX - (float)(img.getWidth() / 2), this.cY - (float)(img.getHeight() / 2) + this.yOffset, (float)img.getWidth() / 2.0F, (float)img.getHeight() / 2.0F, (float)img.getWidth(), (float)img.getHeight(), this.scale, this.scale, this.rotation, 0, 0, 38, 38, false, false);
 

@@ -10,11 +10,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.stances.AbstractStance;
-import theHexaghost.HexaMod;
+import com.megacrit.cardcrawl.stances.*;
 import theHexaghost.util.TextureLoader;
-
-import java.util.ArrayList;
 
 public class DancingMasterPower extends AbstractPower implements CloneablePowerInterface {
 
@@ -40,30 +37,34 @@ public class DancingMasterPower extends AbstractPower implements CloneablePowerI
         this.updateDescription();
     }
 
-    private ArrayList<String> stancesEnteredThisTurn = new ArrayList<>();
+    private int stanceChangesThisTurn = 0;
     private boolean usedYet = false;
 
     @Override
     public void atStartOfTurn() {
-        stancesEnteredThisTurn.clear();
+        stanceChangesThisTurn = 0;
         usedYet = false;
+        updateDescription();
     }
 
     @Override
     public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
-        if (!stancesEnteredThisTurn.contains(newStance.ID))
-            stancesEnteredThisTurn.add(newStance.ID);
-        if (stancesEnteredThisTurn.size() == 3 && !usedYet) {
-            flash();
-            addToBot(new GainEnergyAction(amount));
-            addToBot(new DrawCardAction(2));
-            usedYet = true;
+        if (!newStance.ID.equals(NeutralStance.STANCE_ID)) {
+            stanceChangesThisTurn++;
+            if (stanceChangesThisTurn == 3 && !usedYet) {
+                flash();
+                addToBot(new GainEnergyAction(amount));
+                addToBot(new DrawCardAction(2));
+                usedYet = true;
+            }
         }
+        updateDescription();
     }
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + stancesEnteredThisTurn.toString();
+        int x = 3 - stanceChangesThisTurn;
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + (usedYet ? DESCRIPTIONS[3] :  x + DESCRIPTIONS[2]);
     }
 
     @Override

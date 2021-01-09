@@ -4,7 +4,6 @@ import champ.ChampMod;
 import champ.actions.CircumventAction;
 import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -21,18 +20,18 @@ public class Circumvent extends AbstractChampCard {
     public Circumvent() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
-        tags.add(ChampMod.TECHNIQUE);
+        // tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
+        //  techique();
         blck();
-        if (upgraded) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(3), 3));
+        if (upgraded)
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(3), 3));
         if (dcombo()) {
             addToBot(new CircumventAction());
-
         }
     }
 
@@ -42,6 +41,7 @@ public class Circumvent extends AbstractChampCard {
     }
 
     public void upp() {
+        tags.add(ChampMod.TECHNIQUE);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

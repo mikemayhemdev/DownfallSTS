@@ -22,6 +22,11 @@ public class EnGeneticAlgorithm extends AbstractBossCard {
         this.exhaust = true;
     }
 
+    public EnGeneticAlgorithm(int preBlock){
+        this();
+        this.baseBlock = preBlock;
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
       //  this.addToBot(new IncreaseMiscBuglessAction(this.uuid, this.misc, this.magicNumber));
         this.addToBot(new GainBlockAction(m, m, this.block));

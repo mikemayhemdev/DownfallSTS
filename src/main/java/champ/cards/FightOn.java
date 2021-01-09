@@ -1,3 +1,4 @@
+/*
 package champ.cards;
 
 import champ.powers.ResolvePower;
@@ -14,10 +15,11 @@ public class FightOn extends AbstractChampCard {
     //stupid intellij stuff skill, self, uncommon
 
     public FightOn() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         FleetingField.fleeting.set(this, true);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(CardTags.HEALING);
+        baseMagicNumber = magicNumber = 30;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,23 +35,22 @@ public class FightOn extends AbstractChampCard {
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         if (p.hasPower(ResolvePower.POWER_ID)) {
-            if (p.getPower(ResolvePower.POWER_ID).amount >= 30) {
+            if (p.getPower(ResolvePower.POWER_ID).amount >= magicNumber) {
                 return super.canUse(p, m);
             }
         }
-        cantUseMessage = "I don't have enough Resolve yet.";
-        return false;
-    }
-
-    @Override
-    public boolean canUpgrade() {
+        cantUseMessage = "I have not Fatigued enough health..."; //TODO: Localize string
         return false;
     }
 
     @Override
     public void upgrade() {
+        upgradeName();
+        upgradeMagicNumber(-20);
     }
 
     public void upp() {
     }
 }
+
+ */

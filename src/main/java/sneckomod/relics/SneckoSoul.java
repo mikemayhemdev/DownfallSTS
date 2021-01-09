@@ -18,13 +18,6 @@ public class SneckoSoul extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
     }
 
-    @Override
-    public void onObtainCard(AbstractCard c) {
-        if (c instanceof AbstractUnknownCard) {
-            AbstractDungeon.player.increaseMaxHp(1, false);
-        }
-    }
-
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }

@@ -1,15 +1,22 @@
 package guardian.cards;
 
 
+import automaton.cards.Batch;
+import automaton.cards.Debug;
+import automaton.cards.Decompile;
+import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.actions.CompilePackageAction;
 import guardian.patches.AbstractCardEnum;
+
+import java.util.ArrayList;
 
 public class CompilePackage extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("CompilePackage");
@@ -20,7 +27,7 @@ public class CompilePackage extends AbstractGuardianCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     //TUNING CONSTANTS
     private static final int SOCKETS = 0;
@@ -28,6 +35,10 @@ public class CompilePackage extends AbstractGuardianCard {
     public static String UPGRADED_DESCRIPTION;
 
     //END TUNING CONSTANTS
+
+    private float rotationTimer;
+    private int previewIndex;
+    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -43,6 +54,14 @@ public class CompilePackage extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+
+        cardsList.add(new PackageDefect());
+        cardsList.add(new PackageWalker());
+        cardsList.add(new PackageSphere());
+        cardsList.add(new PackageShapes());
+        cardsList.add(new PackageSentry());
+        cardsList.add(new PackageDonuDeca());
+        cardsList.add(new PackageAutomaton());
 
     }
 
@@ -76,6 +95,35 @@ public class CompilePackage extends AbstractGuardianCard {
             }
         }
         this.initializeDescription();
+    }
+
+
+    @Override
+    public void update() {
+        super.update();
+        if (hb.hovered) {
+            if (rotationTimer <= 0F) {
+                rotationTimer = 2F;
+                if (cardsList.size() == 0) {
+                    cardsToPreview = CardLibrary.cards.get("Madness");
+                } else {
+                    cardsToPreview = cardsList.get(previewIndex);
+                }
+                if (previewIndex == cardsList.size() - 1) {
+                    previewIndex = 0;
+                } else {
+                    previewIndex++;
+                }
+            } else {
+                rotationTimer -= Gdx.graphics.getDeltaTime();
+            }
+        }
+    }
+
+    @Override
+    public void unhover() {
+        super.unhover();
+        cardsToPreview = null;
     }
 }
 

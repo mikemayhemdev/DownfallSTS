@@ -21,7 +21,7 @@ public class Prepare extends AbstractSlimeboundCard {
     public static final String DESCRIPTION;
     public static final String IMG_PATH = "cards/prepare.png";
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
     private static final int COST = 2;
@@ -39,7 +39,7 @@ public class Prepare extends AbstractSlimeboundCard {
     public Prepare() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        this.baseBlock = 8;
+        this.baseBlock = 10;
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 2;
     }
@@ -60,7 +60,7 @@ public class Prepare extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.upgradeBlock(3);
+            this.upgradeBlock(5);
         }
     }
 }

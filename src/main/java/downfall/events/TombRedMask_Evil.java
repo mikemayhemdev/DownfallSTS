@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.RedMask;
@@ -54,7 +55,7 @@ public class TombRedMask_Evil extends AbstractImageEvent {
 
         if (cards.size() > 0){
             this.attack = cards.get(AbstractDungeon.cardRng.random(cards.size() - 1));
-            this.imageEventText.setDialogOption(OPTIONS[2] + this.attack.name + OPTIONS[3]);
+            this.imageEventText.setDialogOption(OPTIONS[2] +  FontHelper.colorString(this.attack.name, "r") + OPTIONS[3]);
         } else {
             this.imageEventText.setDialogOption(OPTIONS[4], true);
         }

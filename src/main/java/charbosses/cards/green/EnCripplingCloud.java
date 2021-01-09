@@ -23,9 +23,10 @@ public class EnCripplingCloud extends AbstractBossCard {
 
     public EnCripplingCloud() {
         super(ID, EnCripplingCloud.cardStrings.NAME, "green/skill/crippling_poison", 2, EnCripplingCloud.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.STRONG_DEBUFF);
-        this.baseMagicNumber = 4;
+        this.baseMagicNumber = 5;
         this.magicNumber = this.baseMagicNumber;
         exhaust = true;
+        artifactConsumedIfPlayed = 2;
     }
 
     @Override
@@ -36,7 +37,7 @@ public class EnCripplingCloud extends AbstractBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(p, m, new EnemyPoisonPower(p, m, this.magicNumber), this.magicNumber));
-        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, 2, false), 2));
+        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, 3, false), 3));
     }
 
     @Override

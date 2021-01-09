@@ -23,7 +23,7 @@ public class AcceleratePotion extends CustomPotion {
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
     public AcceleratePotion() {
-        super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.M, PotionColor.STEROID);
+        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.M, PotionColor.STEROID);
         this.isThrown = false;
         this.targetRequired = false;
         this.labOutlineColor = GuardianCharacter.cardRenderColor;
@@ -32,11 +32,8 @@ public class AcceleratePotion extends CustomPotion {
 
     public void initializeData() {
         this.potency = getPotency();
-        if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic("SacredBark")) {
-            this.description = potionStrings.DESCRIPTIONS[1];
-        } else {
-            this.description = potionStrings.DESCRIPTIONS[0];
-        }
+        this.description = potionStrings.DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1];
+
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
         this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("guardianmod:accelerate")), GameDictionary.keywords.get("guardianmod:accelerate")));

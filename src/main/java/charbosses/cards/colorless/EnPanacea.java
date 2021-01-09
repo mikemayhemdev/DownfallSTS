@@ -39,10 +39,6 @@ public class EnPanacea extends AbstractBossCard {
 
     }
 
-    @Override
-    public int getPriority(ArrayList<AbstractCard> hand) {
-        return 20;
-    }
 
     public AbstractCard makeCopy() {
         return new EnPanacea();

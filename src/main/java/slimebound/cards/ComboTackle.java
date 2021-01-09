@@ -41,9 +41,9 @@ public class ComboTackle extends AbstractSlimeboundCard {
     public ComboTackle() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.TACKLE);
-        this.baseDamage = 12;
+        this.baseDamage = 11;
         this.baseSelfDamage = this.selfDamage = 3;
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -58,8 +58,6 @@ public class ComboTackle extends AbstractSlimeboundCard {
             upgradeName();
             upgradeDamage(2);
             upgradeMagicNumber(1);
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
         }
     }
 }

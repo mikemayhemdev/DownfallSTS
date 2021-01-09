@@ -3,7 +3,7 @@
     "NAME": "Snecko Soul",
     "FLAVOR": "0...3...2...2...1",
     "DESCRIPTIONS": [
-      "Whenever you add a #ysneckomod:Unknown card into your deck, increase your Max HP by #b1."
+      "You may Identify #yUnknown cards at Rest Sites."
     ]
   },
   "sneckomod:SuperSneckoSoul": {
@@ -11,12 +11,12 @@
     "FLAVOR": "3120231321230320",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] NL Upon pickup, increase your Max HP by #b2 for each #ysneckomod:Unknown card in your deck."
+      ".[] NL Using Identify at Rest Sites is now a Free Action."
     ]
   },
   "sneckomod:CleanMud": {
     "NAME": "Snake-Charmer's Flute",
-    "FLAVOR": "You're an oxy-moron!",
+    "FLAVOR": "Sssssss...",
     "DESCRIPTIONS": [
       "#ysneckomod:Muddled cards can't cost #b3."
     ]
@@ -46,7 +46,7 @@
     "NAME": "Rare Booster Box",
     "FLAVOR": "Mint condition.",
     "DESCRIPTIONS": [
-      "Upon pickup, obtain a #ysneckomod:Unknown #yRare card of each card type."
+      "Upon pickup, obtain a #yUnknown #yRare card of each card type."
     ]
   },
   "sneckomod:SleevedAce": {
@@ -60,7 +60,7 @@
     "NAME": "Unknown Egg",
     "FLAVOR": "What will hatch? Pay $1000 to see.",
     "DESCRIPTIONS": [
-      "#ysneckomod:Unknown cards in card rewards are #yUpgraded."
+      "#yUnknown cards in card rewards are #yUpgraded."
     ]
   },
   "sneckomod:SuperSneckoEye": {
@@ -98,7 +98,26 @@
     "NAME": "Young Snecko",
     "FLAVOR": "Bewilderingly adorable.",
     "DESCRIPTIONS": [
-      "Deals 5 damage to a random enemy at the start of your turn."
+      "Deals #b5 damage to a random enemy at the start of your turn."
+    ]
+  },
+  "sneckomod:SneckoCommon": {
+    "NAME": "Seal of Approval",
+    "FLAVOR": "I'm The Ironclad and this is my favorite Relic in the Spire.  -Merchant Advertising Pamphlet",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose #b1 of #b3 #yUnknown Character cards to add to your deck. All future Unknown Character cards found will be of this character.",
+      "All Unknown Character cards found will be ",
+      " cards."
+    ]
+  },
+  "sneckomod:SneckoBoss": {
+    "NAME": "Lucky Horseshoe",
+    "FLAVOR": "Make your own luck.",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose #b1 of #b3 #yUnknown Character cards. Add #b5 copies of it to your deck. All combats drop an additional card reward of the chosen character's cards.",
+      "Upon pickup, obtain #b5 #yUnknown ",
+      " cards. All combats drop an additional ",
+      " card reward."
     ]
   }
 }

@@ -53,6 +53,7 @@ public class Gem_Red extends AbstractGuardianCard {
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = RED;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(CardTags.HEALING);
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Ruby.png"));
     }
 

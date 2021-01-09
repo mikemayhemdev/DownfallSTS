@@ -1,9 +1,10 @@
 package champ.cards;
 
-import champ.ChampMod;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class EnchantSword extends AbstractChampCard {
 
@@ -14,25 +15,32 @@ public class EnchantSword extends AbstractChampCard {
     public EnchantSword() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
-        tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBOBERSERKER);
+        magicNumber = baseMagicNumber = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) techique();
-        exhaust = true;
-        applyToSelf(new StrengthPower(p, 2));
-        if (bcombo()) exhaust = false;
+
+        atb(new SelectCardsInHandAction(1, CardCrawlGame.languagePack.getUIString("champ:EnchantUI").TEXT[1], c -> c.baseDamage > 0, (cards) -> {
+            cards.get(0).baseDamage += magicNumber;
+
+        }));
     }
 
     @Override
-    public void triggerOnGlowCheck() {
-        glowColor = (bcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        boolean canUse = false;
+        for (AbstractCard c : p.hand.group) {
+            if (c.baseDamage > 0) {
+                canUse = true;
+                break;
+            }
+        }
+        if (!canUse) return false;
+        return super.canUse(p, m);
     }
 
     public void upp() {
-        tags.add(ChampMod.TECHNIQUE);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        //  tags.add(ChampMod.TECHNIQUE);
+        upgradeBaseCost(0);
     }
 }

@@ -39,7 +39,7 @@ public class Gluttony extends AbstractSlimeboundCard {
 
         this.cardsToPreview = new Lick();
 
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

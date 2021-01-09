@@ -23,7 +23,7 @@ public class EnNoxiousFumes extends AbstractBossCard {
 
     public EnNoxiousFumes() {
         super(ID, EnNoxiousFumes.cardStrings.NAME, "green/power/noxious_fumes", 1, EnNoxiousFumes.cardStrings.DESCRIPTION, CardType.POWER, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
     }
 
     @Override

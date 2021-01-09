@@ -46,7 +46,7 @@ public class GiftsFromTheDeadPowerPlus extends AbstractPower implements Cloneabl
     @Override
     public void onExhaust(AbstractCard card) {
         if (card.isEthereal) {
-            addToBot(new ApplyPowerAction(owner, owner, new DrawCardNextTurnPower(owner, amount), amount));
+          //  addToBot(new ApplyPowerAction(owner, owner, new DrawCardNextTurnPower(owner, amount), amount));
 //            addToBot(new GainEnergyAction(amount));
             addToBot(new ApplyPowerAction(owner, owner, new EnergizedPower(owner, amount), amount));
         }
@@ -61,13 +61,6 @@ public class GiftsFromTheDeadPowerPlus extends AbstractPower implements Cloneabl
                 sb.append("[E] ");
             }
             sb.append(DESCRIPTIONS[1]);
-            sb.append(amount);
-            if (amount == 1){
-                sb.append(DESCRIPTIONS[3]);
-            } else {
-                sb.append(DESCRIPTIONS[2]);
-            }
-            sb.append(DESCRIPTIONS[4]);
 
 
         this.description = sb.toString();

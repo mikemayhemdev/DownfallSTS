@@ -15,6 +15,7 @@ public class BottledStasisPatch {
     public static SpireField<Boolean> inBottledStasis = new SpireField<>(() -> false);
     public static SpireField<Boolean> inStasisEgg = new SpireField<>(() -> false);
     public static SpireField<Boolean> inBottledAnomaly = new SpireField<>(() -> false);
+    public static SpireField<Boolean> inBottledCode = new SpireField<>(() -> false);
 
     @SpirePatch(
             clz = AbstractCard.class,
@@ -25,6 +26,7 @@ public class BottledStasisPatch {
             inBottledStasis.set(__result, inBottledStasis.get(__instance));
             inStasisEgg.set(__result, inStasisEgg.get(__instance));
             inBottledAnomaly.set(__result, inBottledAnomaly.get(__instance));
+            inBottledCode.set(__result, inBottledCode.get(__instance));
             if (__instance instanceof AbstractGuardianCard) {
 
                 ((AbstractGuardianCard) __result).socketCount = ((AbstractGuardianCard) __instance).socketCount;

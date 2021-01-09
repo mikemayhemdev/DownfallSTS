@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import com.megacrit.cardcrawl.relics.SacredBark;
 
 
 public class TechPotion extends CustomPotion {
@@ -45,7 +44,7 @@ public class TechPotion extends CustomPotion {
     }
 
     public int getPotency(int ascensionLevel) {
-        return 3;
+        return 5;
     }
 }
 

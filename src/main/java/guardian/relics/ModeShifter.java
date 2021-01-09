@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import guardian.GuardianMod;
+import guardian.actions.BraceAction;
 import guardian.powers.ModeShiftPower;
 
 public class ModeShifter extends CustomRelic {
@@ -24,9 +25,10 @@ public class ModeShifter extends CustomRelic {
         return this.DESCRIPTIONS[0];
     }
 
-    public void atBattleStartPreDraw() {
-        this.flash();
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ModeShiftPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
+    @Override
+    public void atTurnStart() {
+        super.atTurnStart();
+        AbstractDungeon.actionManager.addToBottom(new BraceAction(2));
     }
 
     @Override

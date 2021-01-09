@@ -26,11 +26,12 @@ public class EnBeamCell extends AbstractBossCard {
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         this.baseDamage = 3;
+        artifactConsumedIfPlayed = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE));// 44
-        this.addToBot(new ApplyPowerAction(p, m, new VulnerablePower(p, this.magicNumber, true), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));// 38
+        this.addToBot(new ApplyPowerAction(p, m, new VulnerablePower(p, this.magicNumber + 1, true), this.magicNumber + 1, true, AbstractGameAction.AttackEffect.NONE));// 38
     }
 
     public void upgrade() {

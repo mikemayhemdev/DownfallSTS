@@ -3,6 +3,7 @@ package slimebound.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -45,17 +46,25 @@ public class TagTeam extends AbstractSlimeboundCard {
     public TagTeam() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         baseDamage = 12;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
+        if (upgraded){
+            SlimeboundMod.spawnSpecialistSlime();
+        } else {
+            SlimeboundMod.spawnNormalSlime();
+        }
+        addToBot(new WaitAction(0.1F));
+        addToBot(new WaitAction(0.1F));
+        addToBot(new WaitAction(0.1F));
+
         for (int i = 0; i < this.magicNumber; i++) {
             addToBot(new CommandAction());
         }
-
 
         checkMinionMaster();
     }
@@ -67,8 +76,10 @@ public class TagTeam extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(3);
+            //upgradeDamage(2);
             upgradeMagicNumber(1);
+            rawDescription = UPGRADED_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

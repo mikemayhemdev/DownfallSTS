@@ -1,23 +1,23 @@
 {
   "Guardian:ModeShifter": {
-    "NAME": "Mode Shifter",
+    "NAME": "Bronze Gear",
     "FLAVOR": "Protection where you need it most.",
     "DESCRIPTIONS": [
-      "When you lose #b10 HP, enter #yguardianmod:Defensive_Mode and gain #b10 #yBlock, which will not be removed at the start of your next turn."
+      "At the start of your turn, #yBrace 2."
     ]
   },
   "Guardian:ModeShifterPlus": {
     "NAME": "Guardian Gear",
     "FLAVOR": "Replace every 3,000 floors.",
     "DESCRIPTIONS": [
-      "Replaces #rMode #rShifter. NL Begin each combat in #yguardianmod:Defensive_Mode, which persists for #b5 turns."
+      "Replaces #rMode #rShifter. NL Begin each combat in #yguardianmod:Defensive_Mode, which persists for #b3 turns."
     ]
   },
   "Guardian:DefensiveModeMoreBlock": {
     "NAME": "Baalor's Lordly Plate",
     "FLAVOR": "One can never have enough armor.",
     "DESCRIPTIONS": [
-      "When you use a card while in #yguardianmod:Defensive_Mode, gain #b1 more Block."
+      "Whenever you #yguardianmod:Brace, reduce Mode Shift's counter by 1."
     ]
   },
   "Guardian:guardianmod:GemCopier": {
@@ -43,7 +43,7 @@
     ]
   },
   "Guardian:StasisCodex": {
-    "NAME": "Construct Pilot's Codex",
+    "NAME": "Pilot's Codex",
     "FLAVOR": "Designs and diagrams of the Spire's earliest manually-driven prototypes, by Master Pilot David.",
     "DESCRIPTIONS": [
       "If you end your turn with no cards in #yguardianmod:Stasis, choose #b1 of #b3 cards to place into #yguardianmod:Stasis."
@@ -98,7 +98,7 @@
     ]
   },
   "Guardian:PickAxe": {
-    "NAME": "Rhapsody Co. Mining Pick",
+    "NAME": "Pick of Rhapsody",
     "FLAVOR": "With as many gemstones that litter the Spire, it is hard to imagine anyone so unlucky to have needed this Pick to aid them.",
     "DESCRIPTIONS": [
       "You can now #gMine for #b2 #yguardianmod:Gems at Rest Sites (up to #b3 times)."

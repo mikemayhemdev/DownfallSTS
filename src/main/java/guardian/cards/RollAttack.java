@@ -27,7 +27,7 @@ public class RollAttack extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 2;
-    private static final int DAMAGE = 14;
+    private static final int DAMAGE = 16;
 
     //TUNING CONSTANTS
     private static final int UPGRADE_DAMAGE = 4;
@@ -61,12 +61,13 @@ public class RollAttack extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        if (p.stance instanceof DefensiveMode) {
+            if (p.stance instanceof DefensiveMode) {
             //this.isMultiDamage = true;
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         } else {
             //this.isMultiDamage = false;
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+            brace(8);
         }
         this.useGems(p, m);
     }

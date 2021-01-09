@@ -15,7 +15,7 @@ import guardian.GuardianMod;
 import java.util.ArrayList;
 
 public class UpgradeShrineGuardian extends AbstractImageEvent {
-    public static final String ID = "Guardian:UpgradeShrine";
+    public static final String ID = "Guardian:UpgradeShrineEvil";
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;

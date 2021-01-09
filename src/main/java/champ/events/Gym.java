@@ -6,13 +6,8 @@ import champ.ChampMod;
 import champ.relics.LiftRelic;
 import champ.util.OpenerModBerserker;
 import champ.util.OpenerModDefensive;
-import champ.util.OpenerModGladiator;
-import champ.util.TechniqueMod;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,10 +15,6 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
-import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
-import downfall.relics.BrokenWingStatue;
-import downfall.relics.ShatteredFragment;
-import slimebound.SlimeboundMod;
 
 import java.util.Iterator;
 
@@ -69,9 +60,6 @@ public class Gym extends AbstractImageEvent {
         if (this.pickCard && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             switch (stance){
-                case GLADIATOR:
-                    CardModifierManager.addModifier(c, new OpenerModGladiator());
-                    break;
                 case DEFENSIVE:
                     CardModifierManager.addModifier(c, new OpenerModDefensive());
                     break;
@@ -108,7 +96,6 @@ public class Gym extends AbstractImageEvent {
                        // this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[5]);
-                        this.imageEventText.setDialogOption(OPTIONS[6]);
                         this.imageEventText.setDialogOption(OPTIONS[7]);
                         this.screen = CurScreen.STANCECHOICE;
                         return;
@@ -133,11 +120,6 @@ public class Gym extends AbstractImageEvent {
                         return;
                     case 1:
                         this.pickCard = true;
-                        stance = StanceChosen.GLADIATOR;
-                        AbstractDungeon.gridSelectScreen.open(getNonOpenerCards(), 1, OPTIONS[6], false, false, false, false);
-                        return;
-                    case 2:
-                        this.pickCard = true;
                         stance = StanceChosen.BERSERKER;
                         AbstractDungeon.gridSelectScreen.open(getNonOpenerCards(), 1, OPTIONS[7], false, false, false, false);
                         return;
@@ -160,7 +142,7 @@ public class Gym extends AbstractImageEvent {
                 retVal.group.add(c);
             }
         }
-      //  SlimeboundMod.logger.info("Non Opener card count: " + retVal.group.size());
+      //  //SlimeboundMod.logger.info("Non Opener card count: " + retVal.group.size());
         return retVal;
     }
 

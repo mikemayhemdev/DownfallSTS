@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
-import theHexaghost.cards.Haunted;
+import downfall.cards.curses.Haunted;
 
 public class Mausoleum_Evil extends AbstractImageEvent {
     public static final String ID = "downfall:Mausoleum";

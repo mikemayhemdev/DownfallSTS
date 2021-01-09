@@ -27,6 +27,13 @@ public class EnStorm extends AbstractBossCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                AbstractBossCard.fakeStormPower = false;
+            }
+        });
         this.addToBot(new ApplyPowerAction(m, m, new EnemyStormPower(m, this.magicNumber), this.magicNumber));
     }
 

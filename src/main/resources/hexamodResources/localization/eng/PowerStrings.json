@@ -104,7 +104,7 @@
     ]
   },
   "hexamod:GiftsFromTheDeadPower": {
-    "NAME": "Ghostly Gifts",
+    "NAME": "Gifted Cards",
     "DESCRIPTIONS": [
       "Whenever an #yEthereal card is #yExhausted, draw ",
       " cards",
@@ -113,12 +113,9 @@
     ]
   },
   "hexamod:GiftsFromTheDeadPowerPlus": {
-    "NAME": "Ghostly Gifts+",
+    "NAME": "Gifted Energy",
     "DESCRIPTIONS": [
       "Whenever an #yEthereal card is #yExhausted, gain ",
-      " and draw ",
-      " cards",
-      " card",
       " next turn."
     ]
   },
@@ -130,10 +127,10 @@
     ]
   },
   "hexamod:HexalevelPower": {
-    "NAME": "Hexalevel",
+    "NAME": "Infernal Form",
     "DESCRIPTIONS": [
       "At the start of your turn, gain #b",
-      " #yEnhance."
+      " #yIntensity."
     ]
   },
   "hexamod:LoseEnhanceInTurnsPower": {
@@ -146,7 +143,7 @@
     ]
   },
   "hexamod:ParanormalFormPower": {
-    "NAME": "Paranormal Form",
+    "NAME": "Poltergeist",
     "DESCRIPTIONS": [
       "Whenever you play an #yEthereal card, deal #b",
       " damage to a random enemy."
@@ -155,10 +152,12 @@
   "hexamod:PastPower": {
     "NAME": "Devil's Dance",
     "DESCRIPTIONS": [
-      "The first time you #yRetract each turn, gain ",
-      " and draw #b",
-      " card.",
-      " cards."
+      "The first #b",
+      " time ",
+      " times ",
+      "you #yRetract each turn, gain [E] and draw 1 card. NL Retracted #b",
+      " time this turn.",
+      " times this turn."
     ]
   },
   "hexamod:PotionPostCombatPower": {

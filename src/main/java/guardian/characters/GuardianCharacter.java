@@ -1,6 +1,9 @@
 package guardian.characters;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
+import guardian.powers.ModeShiftPower;
 import reskinContent.reskinContent;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
@@ -162,6 +165,13 @@ public class GuardianCharacter extends CustomPlayer {
     }
     */
 
+    @Override
+    public void preBattlePrep() {
+        super.preBattlePrep();
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ModeShiftPower(AbstractDungeon.player, AbstractDungeon.player, 20), 20));
+
+    }
+
     public void switchToOffensiveMode() {
         if (!inShattered) {
             if (inDefensive) {
@@ -227,8 +237,7 @@ public class GuardianCharacter extends CustomPlayer {
     }
 
     public ArrayList<String> getStartingDeck() {
-        ArrayList<String> retVal = new ArrayList();
-        //TODO - Starting deck goes here
+        ArrayList<String> retVal = new ArrayList<>();
 
         retVal.add(Strike_Guardian.ID);
         retVal.add(Strike_Guardian.ID);

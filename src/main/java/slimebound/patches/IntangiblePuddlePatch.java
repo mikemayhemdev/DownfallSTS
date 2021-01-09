@@ -11,14 +11,14 @@ public class IntangiblePuddlePatch {
 
     @SpirePostfixPatch
     public static void Postfix(IntangiblePlayerPower obj) {
-        //SlimeboundMod.logger.info("Intangible patch hit." + obj.amount);
+        ////SlimeboundMod.logger.info("Intangible patch hit." + obj.amount);
 
         if (obj.amount == 1) {
-            //SlimeboundMod.logger.info("Intangible patch hit. intangible is 0");
+            ////SlimeboundMod.logger.info("Intangible patch hit. intangible is 0");
 
 
             if (AbstractDungeon.player instanceof SlimeboundCharacter) {
-                //SlimeboundMod.logger.info("Intangible patch hit. removing puddle");
+                ////SlimeboundMod.logger.info("Intangible patch hit. removing puddle");
                 ((SlimeboundCharacter) AbstractDungeon.player).removePuddleForm();
             }
         }

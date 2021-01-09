@@ -1,6 +1,7 @@
 package slimebound.cards;
 
 
+import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -31,7 +32,7 @@ public class DivideAndConquerDivide extends AbstractSlimeboundCard {
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
     public static String UPGRADED_DESCRIPTION;
@@ -55,7 +56,7 @@ public class DivideAndConquerDivide extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
         this.exhaust = true;
-        this.baseMagicNumber = this.magicNumber = 2;
+        this.baseMagicNumber = this.magicNumber = 1;
         this.selfRetain = true;
 
     }
@@ -78,24 +79,27 @@ public class DivideAndConquerDivide extends AbstractSlimeboundCard {
 
         this.addToBot(new CommandAction());
         */
+        if (upgraded) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, 1), 1));
 
         int slimecount = 0;
 
         for (AbstractOrb o : p.orbs) {
-
             if (o instanceof SpawnedSlime) {
                 slimecount++;
             }
-
         }
 
-        slimecount *= this.magicNumber;
+        //slimecount *= this.magicNumber;
+        if (slimecount > 0) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, slimecount), slimecount));
+        }
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, slimecount), slimecount));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseStrengthPower(p, slimecount), slimecount));
 
-
-
+        for (AbstractOrb o : p.orbs) {
+            if (o instanceof SpawnedSlime) {
+                AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
+            }
+        }
     }
 
     public AbstractCard makeCopy() {
@@ -109,7 +113,8 @@ public class DivideAndConquerDivide extends AbstractSlimeboundCard {
         if (!this.upgraded) {
 
             upgradeName();
-            upgradeMagicNumber(1);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
         }
 

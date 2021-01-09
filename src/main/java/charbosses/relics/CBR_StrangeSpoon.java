@@ -15,8 +15,6 @@ public class CBR_StrangeSpoon extends AbstractCharbossRelic {
         return this.DESCRIPTIONS[0];
     }
 
-    // TODO - Patch to make Strange Spoon work
-
     @Override
     public AbstractRelic makeCopy() {
         return new CBR_StrangeSpoon();

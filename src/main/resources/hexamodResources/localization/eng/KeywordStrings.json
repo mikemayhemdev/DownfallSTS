@@ -75,5 +75,26 @@
       "afterlife"
     ],
     "DESCRIPTION": "If this card is Exhausted, its effects activate."
+  },
+  {
+    "PROPER_NAME": "Crushing",
+    "NAMES": [
+      "crushing"
+    ],
+    "DESCRIPTION": "#yGhostflame. #yIgnites when #b2 #ySkills are played while #yActive. #yIgnition: When #yIgnited, deal #b4 damage to a random enemy twice."
+  },
+  {
+    "PROPER_NAME": "Bolstering",
+    "NAMES": [
+      "bolstering"
+    ],
+    "DESCRIPTION": "#yGhostflame. #yIgnites when a #yPower is played while #yActive. #yIgnition: When #yIgnited, gain #b4 #yBlock and #b1 #yStrength."
+  },
+  {
+    "PROPER_NAME": "Searing",
+    "NAMES": [
+      "searing"
+    ],
+    "DESCRIPTION": "#yGhostflame. #yIgnites when #b2 #yAttacks are played while #yActive. #yIgnition: When #yIgnited, apply #b4 #ySoulburn to a random enemy."
   }
 ]

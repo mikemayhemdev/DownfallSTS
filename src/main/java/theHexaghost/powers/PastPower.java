@@ -19,7 +19,7 @@ public class PastPower extends AbstractPower implements CloneablePowerInterface,
 
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Past84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Past32.png");
-    public boolean activated = false;
+    public int activation_count = 0;
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
@@ -41,17 +41,19 @@ public class PastPower extends AbstractPower implements CloneablePowerInterface,
 
     @Override
     public void atStartOfTurnPostDraw() {
-        activated = false;
+        activation_count = 0;
+        updateDescription();
     }
 
     @Override
     public void onRetract() {
-        if (!activated) {
+        if (activation_count < amount) {
             this.flash();
-            addToBot(new GainEnergyAction(amount));
-            addToBot(new DrawCardAction(amount));
-            activated = true;
+            addToBot(new GainEnergyAction(1));
+            addToBot(new DrawCardAction(1));
         }
+        activation_count++;
+        updateDescription();
     }
 
     @Override
@@ -59,13 +61,16 @@ public class PastPower extends AbstractPower implements CloneablePowerInterface,
         StringBuilder sb = new StringBuilder();
         sb.append(DESCRIPTIONS[0]);
 
-        for (int i = 0; i < this.amount; ++i) {
-            sb.append("[E] ");
-        }
         if (amount == 1)
-            sb.append(DESCRIPTIONS[1]).append(amount).append(DESCRIPTIONS[2]);
+            sb.append("").append(DESCRIPTIONS[1]);
         else
-            sb.append(DESCRIPTIONS[1]).append(amount).append(DESCRIPTIONS[2]);
+            sb.append(amount).append(DESCRIPTIONS[2]);
+        sb.append(DESCRIPTIONS[3]).append(activation_count);
+        if (activation_count == 1)
+            sb.append(DESCRIPTIONS[4]);
+        else
+            sb.append(DESCRIPTIONS[5]);
+
         this.description = sb.toString();
     }
 

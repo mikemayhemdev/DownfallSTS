@@ -15,13 +15,12 @@ public class ImprovisedAttack extends AbstractSneckoCard {
 
     private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 3;
+    public static AbstractCard storage;
 
     public ImprovisedAttack() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
     }
-
-    public static AbstractCard storage;
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_LIGHT);

@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ThornsPower;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.DontLeaveDefensiveModePower;
@@ -30,12 +31,12 @@ public class Harden extends AbstractGuardianCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
-    private static final int COST = 2;
+    private static final int COST = 1;
 
 
     //TUNING CONSTANTS
-    private static final int BLOCK = 8;
-    private static final int THORNS = 1;
+    private static final int BLOCK = 14;
+    private static final int THORNS = 2;
     private static final int UPGRADE_BLOCK = 4;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
@@ -64,14 +65,22 @@ public class Harden extends AbstractGuardianCard {
         //this.sockets.add(GuardianMod.socketTypes.RED);
     }
 
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if (p.stance instanceof DefensiveMode) {
+            return super.canUse(p, m);
+        } else {
+            return false;
+        }
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
+        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));
+
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveMode.STANCE_ID));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
-        if (upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DontLeaveDefensiveModePower(p, 1), 1));
-        }
+
         this.useGems(p, m);
     }
 
@@ -83,8 +92,7 @@ public class Harden extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_BLOCK);
-            rawDescription = UPGRADED_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(1);
         }
     }
 
