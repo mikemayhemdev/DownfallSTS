@@ -25,6 +25,7 @@ import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.Pair;
 import basemod.abstracts.CustomUnlockBundle;
+import basemod.devcommands.unlock.Unlock;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
@@ -1430,12 +1431,24 @@ public class downfallMod implements
 
         if (downfallMod.unlockEverything || UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index + 1) {
 
-            UnlockTracker.lockedRelics.remove(relic1);
-            UnlockTracker.lockedRelics.remove(relic2);
-            UnlockTracker.lockedRelics.remove(relic3);
+            SlimeboundMod.logger.info("Relic trigger: " + relic1 + " " + UnlockTracker.lockedRelics.contains(relic1) + " " + UnlockTracker.isRelicLocked(relic1) + " " + UnlockTracker.isRelicSeen(relic1));
+            SlimeboundMod.logger.info("Relic trigger: " + relic2 + " " + UnlockTracker.lockedRelics.contains(relic2) + " " + UnlockTracker.isRelicLocked(relic2) + " " + UnlockTracker.isRelicSeen(relic3));
+            SlimeboundMod.logger.info("Relic trigger: " + relic3 + " " + UnlockTracker.lockedRelics.contains(relic3) + " " + UnlockTracker.isRelicLocked(relic3) + " " + UnlockTracker.isRelicSeen(relic3));
+            while (UnlockTracker.lockedRelics.contains(relic1)) {
+                UnlockTracker.lockedRelics.remove(relic1);
+            }
+            while (UnlockTracker.lockedRelics.contains(relic2)) {
+                UnlockTracker.lockedRelics.remove(relic2);
+            }
+            while (UnlockTracker.lockedRelics.contains(relic3)) {
+                UnlockTracker.lockedRelics.remove(relic3);
+            }
             UnlockTracker.markRelicAsSeen(relic1);
             UnlockTracker.markRelicAsSeen(relic2);
             UnlockTracker.markRelicAsSeen(relic3);
+            SlimeboundMod.logger.info("Relic trigger: " + relic1 + " " + UnlockTracker.lockedRelics.contains(relic1) + " " + UnlockTracker.isRelicLocked(relic1) + " " + UnlockTracker.isRelicSeen(relic1));
+            SlimeboundMod.logger.info("Relic trigger: " + relic2 + " " + UnlockTracker.lockedRelics.contains(relic2) + " " + UnlockTracker.isRelicLocked(relic2) + " " + UnlockTracker.isRelicSeen(relic3));
+            SlimeboundMod.logger.info("Relic trigger: " + relic3 + " " + UnlockTracker.lockedRelics.contains(relic3) + " " + UnlockTracker.isRelicLocked(relic3) + " " + UnlockTracker.isRelicSeen(relic3));
         }
     }
 
