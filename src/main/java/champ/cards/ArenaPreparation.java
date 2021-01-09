@@ -12,8 +12,6 @@ import downfall.cardmods.RetainCardMod;
 
 import java.util.ArrayList;
 
-import static champ.ChampMod.fatigue;
-
 public class ArenaPreparation extends AbstractChampCard {
 
     public final static String ID = makeID("ArenaPreparation");
@@ -36,10 +34,10 @@ public class ArenaPreparation extends AbstractChampCard {
                     qCardList.add(t);
             }
             AbstractCard c = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1)).makeStatEquivalentCopy();
+            c.isSeen = true;
             UnlockTracker.markCardAsSeen(c.cardID);
-            AbstractCard q = c.makeStatEquivalentCopy();
-            CardModifierManager.addModifier(q, new RetainCardMod());
-            makeInHand(q);
+            CardModifierManager.addModifier(c, new RetainCardMod());
+            makeInHand(c);
         }
     }
 
