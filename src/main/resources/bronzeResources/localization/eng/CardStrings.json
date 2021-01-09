@@ -347,7 +347,7 @@
   },
   "bronze:MaxOutput": {
     "NAME": "Max Output",
-    "DESCRIPTION": "At the start of your turn, draw 1 additional card and bronze:Insert 1 *Dazed."
+    "DESCRIPTION": "Draw !M! cards. NL At the start of each turn, draw 1 additional card and bronze:Insert 1 *Dazed."
   },
   "bronze:Mutator": {
     "NAME": "Mutator",
@@ -487,7 +487,7 @@
   },
   "bronze:HardenedForm": {
     "NAME": "Summon Orb",
-    "DESCRIPTION": "Whenever you create a Function, gain !M! Block and deal !M! damage to a random enemy."
+    "DESCRIPTION": "Whenever you create or play a Function, gain !M! Block and deal !M! damage to a random enemy."
   },
   "bronze:CopyPaste": {
     "NAME": "Copy Paste",

@@ -1,5 +1,6 @@
 package automaton.powers;
 
+import automaton.cards.FunctionCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -21,11 +22,25 @@ public class HardenedFormPower extends AbstractAutomatonPower implements OnCompi
     @Override
     public void receiveCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
-            flash();
-            addToBot(new GainBlockAction(owner, amount));
-            addToBot(new DamageRandomEnemyAction(new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.LIGHTNING)); // TODO: real orb VFX
+            onSpecificTrigger();
         }
     }
+
+    @Override
+    public void onSpecificTrigger() {
+        flash();
+        addToBot(new GainBlockAction(owner, amount));
+        addToBot(new DamageRandomEnemyAction(new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.LIGHTNING)); // TODO: real orb VFX
+
+    }
+
+    @Override
+    public void onAfterCardPlayed(AbstractCard function) {
+        if (function instanceof FunctionCard) {
+            onSpecificTrigger();
+        }
+    }
+
 
     @Override
     public void updateDescription() {
