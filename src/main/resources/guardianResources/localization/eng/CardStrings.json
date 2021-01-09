@@ -116,7 +116,7 @@
   },
   "Guardian:Harden": {
     "NAME": "Harden",
-    "DESCRIPTION": "Must be in *Defensive *Mode. NL Exit *Defensive *Mode. NL Gain !B! Block and !M! Thorns."
+    "DESCRIPTION": "Must be in *Defensive *Mode. NL Gain !B! Block and !M! Thorns."
   },
   "Guardian:SentryBeam": {
     "NAME": "Sentry Blast",
