@@ -97,7 +97,6 @@ public class SealChamber extends AbstractImageEvent {
     protected void buttonEffect(int buttonPressed) {
         switch (this.screen) {
             case INTRO:
-                this.imageEventText.clearAllDialogs();
                 switch (buttonPressed) {
                     case 0:
                         AbstractDungeon.player.damage(new DamageInfo((AbstractCreature) null, this.hpLoss, DamageInfo.DamageType.HP_LOSS));
