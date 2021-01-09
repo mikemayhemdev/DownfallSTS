@@ -18,9 +18,11 @@ public class EnGarde extends AbstractChampCard {
     public EnGarde() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 8;
+        tags.add(ChampMod.TECHNIQUE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        techique();
         blck();
         applyToSelf(new EnGardePower(block));
     }

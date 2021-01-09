@@ -13,7 +13,7 @@ public class DefensiveShout extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 8;
+    private static final int MAGIC = 5;
     private static final int UPG_MAGIC = 4;
 
     public DefensiveShout() {

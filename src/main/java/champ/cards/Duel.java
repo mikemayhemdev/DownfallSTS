@@ -23,10 +23,11 @@ public class Duel extends AbstractChampCard {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
+        tags.add(ChampMod.TECHNIQUE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) techique();
+        techique();
         blck();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         if (monsterList().size() == 1 && !this.purgeOnUse) {
@@ -47,10 +48,7 @@ public class Duel extends AbstractChampCard {
     }
 
     public void upp() {
-        tags.add(ChampMod.TECHNIQUE);
-        upgradeDamage(1);
-        upgradeBlock(1);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeDamage(3);
+        upgradeBlock(3);
     }
 }

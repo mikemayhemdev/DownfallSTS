@@ -18,9 +18,11 @@ public class FocusedBerserking extends AbstractChampCard {
         tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERBERSERKER);
         baseDamage = 10;
+        tags.add(ChampMod.TECHNIQUE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        techique();
         berserkOpen();
         applyToSelf(new FocusedBerPower(damage));
     }

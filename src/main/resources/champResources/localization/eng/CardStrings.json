@@ -108,7 +108,7 @@
   },
   "champ:GutPunch": {
     "NAME": "Gut Punch",
-    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage. NL Gain !B! Block. NL *Defensive champ:Combo: Gain [E] ."
+    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage. NL *Defensive champ:Combo: Gain [E] and !B! Block."
   },
   "champ:FanOfKnives": {
     "NAME": "Fan of Knives",
@@ -133,7 +133,7 @@
   "champ:Circumvent": {
     "NAME": "Circumvent",
     "DESCRIPTION": "Gain !B! Block. NL *Defensive champ:Combo: Gain Block equal to your champ:Counter.",
-    "UPGRADE_DESCRIPTION": "Gain 3 champ:Counter. NL Gain !B! Block. NL *Defensive champ:Combo: Gain Block equal to your champ:Counter."
+    "UPGRADE_DESCRIPTION": "Gain !M! champ:Counter. NL Gain !B! Block. NL *Defensive champ:Combo: Gain Block equal to your champ:Counter."
   },
   "champ:SkillfulDodge": {
     "NAME": "Skillful Dodge",
@@ -228,8 +228,7 @@
   },
     "champ:RapidStrikes": {
     "NAME": "Rapid Strikes",
-    "DESCRIPTION": "Deal !D! damage two times. NL Deal !D! damage an additional time for each champ:Technique used this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage three times. NL Deal !D! damage an additional time for each champ:Technique used this turn.",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Deal !D! damage an additional time for each champ:Technique used this turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " time.)",
@@ -285,8 +284,8 @@
   },
   "champ:AdrenalArmor": {
     "NAME": "Adrenal Armor",
-    "DESCRIPTION": "Gain !B! Block. NL champ:Fatigue !M!. NL *Berserker champ:Combo: Play this twice.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL champ:Fatigue !M!. NL *Berserker champ:Combo: Play this twice."
+    "DESCRIPTION": "Gain !B! Block. NL *Berserker champ:Combo: Play this twice.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL *Berserker champ:Combo: Play this twice."
   },
   "champ:HeartStrike": {
     "NAME": "Finish Him",
