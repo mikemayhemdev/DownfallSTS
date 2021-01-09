@@ -20,6 +20,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.vfx.BobEffect;
 
 import java.util.HashMap;
 
@@ -38,7 +39,8 @@ public class FunctionHelper {
 
     public static final float BG_X = 150f * Settings.scale;
     public static final float BG_Y = 700f * Settings.scale;
-    public static final float HEIGHT_SEQUENCE = 768f * Settings.yScale;
+    public static final float HEIGHT_SEQUENCE = 700f * Settings.yScale;
+    public static final float HEIGHT_SPOT = 700f * Settings.yScale;
     public static final float HEIGHT_FUNCTION = 820f * Settings.yScale;
 
     public static final Vector2[] cardPositions = {
@@ -48,13 +50,28 @@ public class FunctionHelper {
             new Vector2(435f * Settings.xScale, HEIGHT_SEQUENCE)
     };
 
+    public static final Vector2[] floaterStartPositions = {
+            new Vector2(177F * Settings.xScale, HEIGHT_SPOT),
+            new Vector2(252f * Settings.xScale, HEIGHT_SPOT),
+            new Vector2(327f * Settings.xScale, HEIGHT_SPOT),
+            new Vector2(412f * Settings.xScale, HEIGHT_SPOT)
+    };
+
+    public static BobEffect[] bobEffects = {
+            new BobEffect(),
+            new BobEffect(),
+            new BobEffect(),
+            new BobEffect()
+    };
+
     public static final Vector2[] funcPositions = {
             new Vector2(480f * Settings.xScale, HEIGHT_FUNCTION),
             new Vector2(560f * Settings.xScale, HEIGHT_FUNCTION)
     };
 
-    public static final Texture bg = TextureLoader.getTexture("bronzeResources/images/ui/sequenceframe.png");
-    public static final Texture bg_4card = TextureLoader.getTexture("bronzeResources/images/ui/sequenceframe4cards.png");
+    private static final Texture bg = TextureLoader.getTexture("bronzeResources/images/ui/sequenceframe.png");
+    private static final Texture bg_4card = TextureLoader.getTexture("bronzeResources/images/ui/sequenceframe4cards.png");
+    private static final Texture sequenceSlot = TextureLoader.getTexture("bronzeResources/images/ui/sequenceSlot.png");
 
     public static final String WITH_DELIMITER = "((?<=%1$s)|(?=%1$s))"; //Magic code from madness land of RegEx.
 
@@ -224,8 +241,12 @@ public class FunctionHelper {
         } else {
             sb.draw(bg, BG_X, BG_Y, 0, 0, bg.getWidth() * Settings.scale, bg.getHeight() * Settings.scale, 1, 1, 0, 0, 0, bg.getWidth(), bg.getHeight(), false, false);
         }
-        for (AbstractCard c : held.group) {
-            c.render(sb);
+        for (int i = 0; i < max; i++) {
+            if (held.size() - 1 >= i) {
+                held.group.get(i).render(sb);
+            } else {
+                sb.draw(sequenceSlot, floaterStartPositions[i].x, floaterStartPositions[i].y + bobEffects[i].y, 0, 0, sequenceSlot.getWidth() * Settings.scale, sequenceSlot.getHeight() * Settings.scale, 1, 1, 0, 0, 0, sequenceSlot.getWidth(), sequenceSlot.getHeight(), false, false);
+            }
         }
         if (secretStorage != null) {
             secretStorage.render(sb);
@@ -233,6 +254,9 @@ public class FunctionHelper {
     }
 
     public static void update() {
+        for (BobEffect b : bobEffects) {
+            b.update();
+        }
         for (AbstractCard c : held.group) {
             c.update();
             c.updateHoverLogic();
