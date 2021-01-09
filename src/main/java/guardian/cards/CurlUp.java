@@ -25,7 +25,7 @@ public class CurlUp extends AbstractGuardianCard {
     private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int BLOCK = 9;
+    private static final int BLOCK = 10;
     private static final int UPGRADE_BONUS = 3;
     private static final int MULTICOUNT = 0;
     private static final int SOCKETS = 1;
@@ -48,7 +48,7 @@ public class CurlUp extends AbstractGuardianCard {
         this.baseBlock = BLOCK;
         this.multihit = MULTICOUNT;
         this.socketCount = SOCKETS;
-        baseMagicNumber = magicNumber = 7;
+        baseMagicNumber = magicNumber = 10;
         updateDescription();
         loadGemMisc();
     }
