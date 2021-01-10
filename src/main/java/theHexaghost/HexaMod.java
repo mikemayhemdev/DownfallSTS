@@ -37,12 +37,14 @@ import theHexaghost.cards.*;
 import theHexaghost.events.*;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.BolsteringGhostflame;
-import theHexaghost.potions.SoulburnPotion;
 import theHexaghost.potions.DoubleChargePotion;
 import theHexaghost.potions.EctoCoolerPotion;
 import theHexaghost.potions.InfernoChargePotion;
+import theHexaghost.potions.SoulburnPotion;
 import theHexaghost.relics.*;
-import theHexaghost.util.*;
+import theHexaghost.util.BurnVariable;
+import theHexaghost.util.CardFilter;
+import theHexaghost.util.TextureLoader;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -106,7 +108,6 @@ public class HexaMod implements
                 ATTACK_S_ART, SKILL_S_ART, POWER_S_ART, CARD_ENERGY_S,
                 ATTACK_L_ART, SKILL_L_ART, POWER_L_ART,
                 CARD_ENERGY_L, TEXT_ENERGY);
-
 
 
     }
@@ -182,9 +183,9 @@ public class HexaMod implements
             System.out.println(classInfo.getClassName());
             AbstractCard card = (AbstractCard) Loader.getClassPool().getClassLoader().loadClass(cls.getName()).newInstance();
             BaseMod.addCard(card);
-           // if (cls.hasAnnotation(CardNoSeen.class)) {
-           //     UnlockTracker.hardUnlockOverride(card.cardID);
-           // }
+            // if (cls.hasAnnotation(CardNoSeen.class)) {
+            //     UnlockTracker.hardUnlockOverride(card.cardID);
+            // }
         }
     }
 
@@ -234,7 +235,7 @@ public class HexaMod implements
     public void addPotions() {
 
         BaseMod.addPotion(EctoCoolerPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, EctoCoolerPotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
-        BaseMod.addPotion(SoulburnPotion.class,  Color.GRAY, Color.GRAY, Color.BLACK, SoulburnPotion.POTION_ID);
+        BaseMod.addPotion(SoulburnPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, SoulburnPotion.POTION_ID);
         BaseMod.addPotion(DoubleChargePotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, DoubleChargePotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
         BaseMod.addPotion(InfernoChargePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, InfernoChargePotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
 
@@ -398,6 +399,7 @@ public class HexaMod implements
                 .bonusCondition(HexaMod::canGetCurseRelic)
                 //Only in Evil if content sharing is disabled
                 .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
+                .bonusCondition(() -> (AbstractDungeon.cardRandomRng.random(0, 2) == 2))
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(SealChamber.ID, SealChamber.class) //Event ID//
