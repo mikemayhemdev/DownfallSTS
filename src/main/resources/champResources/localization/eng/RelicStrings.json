@@ -80,9 +80,9 @@
     "NAME": "Signature Finisher",
     "FLAVOR": "And now, it's time for my ULTIMATE MOVE!",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a #yFinisher. This #yFinisher never causes your turn to end or your #yStance to be exited.",
+      "Upon pickup, choose a #yFinisher. This #yFinisher costs 0 and never causes your #yStance to be exited.",
       "Choose a card for ",
-      " never causes your turn to end or your #yStance to be exited."
+      " costs 0 and never causes your #yStance to be exited."
     ]
   },
   "champ:SpectersHand": {
