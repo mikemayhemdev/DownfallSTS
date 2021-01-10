@@ -97,7 +97,7 @@ public class TheSnecko extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(NAMES[0], TEXT[0],
-                90, 90, 0, 99, 5, this, getStartingRelics(),
+                90, 90, 2, 99, 5, this, getStartingRelics(),
                 getStartingDeck(), false);
     }
 
