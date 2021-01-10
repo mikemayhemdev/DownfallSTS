@@ -59,7 +59,9 @@ public class FakeOrRealPower extends AbstractPower implements CloneablePowerInte
                 }
                 addToTop(new RemoveSpecificPowerAction(q, q, this.ID));
             }
-            ((CharBossSilent) AbstractCharBoss.boss).foggy = false;
+            if (AbstractCharBoss.boss != null) {
+                ((CharBossSilent) AbstractCharBoss.boss).foggy = false;
+            }
         }
         return damageAmount;
     }

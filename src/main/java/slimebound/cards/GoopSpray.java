@@ -4,6 +4,7 @@ package slimebound.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -54,6 +55,8 @@ public class GoopSpray extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
 
 
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {

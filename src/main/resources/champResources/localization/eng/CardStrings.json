@@ -117,7 +117,7 @@
   },
   "champ:Devastate": {
     "NAME": "Devastate",
-    "DESCRIPTION": "Deal !D! damage. NL Increase the damage this card deals by !M! permanently. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Costs 1 less [E] for each Finisher played this combat."
   },
   "champ:Control": {
     "NAME": "Control",

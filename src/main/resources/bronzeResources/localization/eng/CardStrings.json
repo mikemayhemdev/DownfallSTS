@@ -312,7 +312,7 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL The next time you bronze:Encode a card, bronze:Encode a copy of it."
   },
   "bronze:FollowUp": {
-    "NAME": "Follow Up",
+    "NAME": "Follow Through",
     "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL If the last played card was a Function, play this again."
   },
   "bronze:ChosenStrike": {

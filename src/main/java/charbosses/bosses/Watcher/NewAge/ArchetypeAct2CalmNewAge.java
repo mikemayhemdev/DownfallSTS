@@ -100,7 +100,7 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
                     break;
                 case 5:
                     addToList(cardsList, new EnEmptyBody(), false);  //not used
-                    addToList(cardsList, new EnDevaForm(), false);  //removed
+                    addToList(cardsList, new EnWishPlated(), false);  //removed
                     addToList(cardsList, new EnConsecrate(), true);
                     turn=0;
                     looped = true;
@@ -111,28 +111,28 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
         } else {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnConsecrate(), true);
-                    addToList(cardsList, new EnWaveOfTheHand(), false);
                     addToList(cardsList, new EnVigilance(), extraUpgrades);
+                    addToList(cardsList, new EnConsecrate(), true);
+                    addToList(cardsList, new EnDefendPurple(), false);
                     AbstractCharBoss.boss.powerhouseTurn = false;
                     turn++;
                     break;
                 case 1:
-                    addToList(cardsList, new EnStrikePurple(), false);
                     addToList(cardsList, new EnFollowUp(), extraUpgrades);
-                    addToList(cardsList, new EnDefendPurple(), false);
+                    addToList(cardsList, new EnFlyingSleeves(), true);
+                    addToList(cardsList, new EnStrikePurple(), false);
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnFlyingSleeves(), true);
+                    addToList(cardsList, new EnWaveOfTheHand(), false);
                     addToList(cardsList, new EnDefendPurple(), false);
                     addToList(cardsList, new EnWallop(), true);
                     turn++;
                     break;
                 case 3:
+                    addToList(cardsList, new EnEmptyBody(), false);
                     addToList(cardsList, new EnRagnarok(), false);
                     addToList(cardsList, new EnDefendPurple(), true);
-                    addToList(cardsList, new EnEmptyBody(), false);
                     AbstractCharBoss.boss.powerhouseTurn = true;
                     turn = 0;
                     break;
