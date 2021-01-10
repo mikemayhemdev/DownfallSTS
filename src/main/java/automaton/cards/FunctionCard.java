@@ -48,13 +48,13 @@ public class FunctionCard extends AbstractBronzeCard {
         for (AbstractCard q : cards()) {
             if (x == 0 && q instanceof Constructor) {
                 x++;
-            } else if (x == 1 && q instanceof Terminator) {
+            } else if (x == 1 && q instanceof Separator) {
                 x++;
-            } else if (x == 2 && (q instanceof Separator)) {
+            } else if (x == 2 && (q instanceof Terminator)) {
                 return true;
-            } else if (x == 2 && q instanceof Terminator && AbstractDungeon.player != null && AbstractDungeon.player.hasRelic(ElectromagneticCoil.ID)) {
+            } else if (x == 2 && q instanceof Separator && AbstractDungeon.player != null && AbstractDungeon.player.hasRelic(ElectromagneticCoil.ID)) {
                 x++;
-            } else if (x == 3 && q instanceof Separator) {
+            } else if (x == 3 && q instanceof Terminator) {
                 return true;
             }
         }
