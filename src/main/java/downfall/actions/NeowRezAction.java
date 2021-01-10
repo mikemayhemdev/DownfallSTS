@@ -100,7 +100,7 @@ public class NeowRezAction extends AbstractGameAction {
             rezVFX = new NeowBossRezEffect(cB.hb.cX - 100F, cB.hb.cY);
             AbstractDungeon.effectsQueue.add(rezVFX);
 
-            AbstractDungeon.getCurrRoom().monsters.add(cB);
+            AbstractDungeon.getCurrRoom().monsters.addMonster(0, cB);
 
             if (ModHelper.isModEnabled("Lethality")) {
                 this.addToBot(new ApplyPowerAction(cB, cB, new StrengthPower(cB, 3), 3));
