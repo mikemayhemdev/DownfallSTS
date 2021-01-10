@@ -25,12 +25,21 @@ public class BitShift extends AbstractBronzeCard {
      //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if (FunctionHelper.isSequenceEmpty()) {
+            cantUseMessage = masterUI.TEXT[3];
+            return false;
+        }
+        return super.canUse(p, m);
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> c = new ArrayList<>();
         for (AbstractCard r : FunctionHelper.held.group) {
             c.add(r.makeStatEquivalentCopy());
         }
-        atb(new SelectCardsAction(c, 1, "Choose.", (cards) -> { //TODO: Localize
+        atb(new SelectCardsAction(c, 1, masterUI.TEXT[0], (cards) -> {
             att(new AbstractGameAction() {
                 @Override
                 public void update() {

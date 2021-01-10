@@ -153,7 +153,10 @@
   "hexamod:GiftsFromTheDead": {
     "NAME": "Gifts From Beyond",
     "DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Whenever an Ethereal card is Exhausted, gain [E] next turn.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Whenever an Ethereal card is Exhausted, gain [E] and draw 1 card next turn."
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Whenever an Ethereal card is Exhausted, gain [E] and draw 1 card next turn.",
+    "EXTENDED_DESCRIPTION": [
+      "These spirits are too powerful to invoke directly."
+    ]
   },
   "hexamod:Ghostwalk": {
     "NAME": "Ghostwalk",

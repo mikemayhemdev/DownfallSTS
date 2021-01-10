@@ -28,7 +28,7 @@ public class ClassDefault extends AbstractBronzeCard {
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         if (FunctionHelper.isSequenceEmpty()) {
-            cantUseMessage = "ERR: SEQUENCE_EMPTY"; //TODO: Localize
+            cantUseMessage = masterUI.TEXT[3];
             return false;
         }
         return super.canUse(p, m);

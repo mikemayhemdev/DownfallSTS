@@ -5,6 +5,7 @@ import basemod.abstracts.CustomSavable;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
@@ -61,7 +62,7 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<String> {
                     }
                 }
             }
-            AbstractDungeon.gridSelectScreen.open(c, 1, false, "Choose."); //TODO: Localize
+            AbstractDungeon.gridSelectScreen.open(c, 1, false, CardCrawlGame.languagePack.getUIString("bronze:MiscStrings").TEXT[8]);
         }
     }
 

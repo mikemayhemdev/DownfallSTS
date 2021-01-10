@@ -2,12 +2,14 @@ package automaton;
 
 import automaton.cards.AbstractBronzeCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.UIStrings;
 
 import static automaton.FunctionHelper.WITH_DELIMITER;
 
 public class AutomatonTextHelper {
-    //LONG OVERDUE!
-    //TODO: Some localization, but hey, at least it's all centralized here
+
+    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("bronze:AutoTextHelper");
 
     private static String getDynamicValue(AbstractCard card, char key) {
         switch (key) {
@@ -53,11 +55,11 @@ public class AutomatonTextHelper {
 
     public static String getInSequenceDescription(AbstractCard card) {
         String x = card.rawDescription;
-        if (card.rawDescription.contains(" NL bronze:Compile")) {
-            String[] splitText = x.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
+        if (card.rawDescription.contains(uiStrings.TEXT[0])) {
+            String[] splitText = x.split(String.format(WITH_DELIMITER, uiStrings.TEXT[0]));
             String compileText = splitText[1] + splitText[2];
             x = x.replace(compileText, "");
-        } else if (card.rawDescription.contains("bronze:Compile")) {
+        } else if (card.rawDescription.contains(uiStrings.TEXT[1])) {
             return ""; // It's over!! If you only have Compile effects, you're gone!!!!!
         } // IT NEVER ENDS!!!!!
         if (card.rawDescription.contains(" π")) {
@@ -70,8 +72,8 @@ public class AutomatonTextHelper {
             String compileText = splitText[0] + splitText[1];
             x = x.replace(compileText, "");
         } // And for non-Function-relevant text before the main card effects.
-        if (card.rawDescription.contains(" NL bronze:Encode.")) {
-            x = x.replace(" NL bronze:Encode.", "");
+        if (card.rawDescription.contains(uiStrings.TEXT[2])) {
+            x = x.replace(uiStrings.TEXT[2], "");
         }
         if (x.contains("!D!")) {
             x = x.replaceAll("!D!", getDynamicValue(card, 'D'));
@@ -89,23 +91,22 @@ public class AutomatonTextHelper {
     }
 
     public static String insertEncodeTextBeforeCompile(String rawDescription) {
-        if (rawDescription.contains(" NL bronze:Compile")) {//TODO:Localize
-            String[] splitText = rawDescription.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));//TODO:Localize
+        if (rawDescription.contains(uiStrings.TEXT[0])) {
+            String[] splitText = rawDescription.split(String.format(WITH_DELIMITER, uiStrings.TEXT[0]));
             String compileText = splitText[1] + splitText[2];
-            return splitText[0] + " NL bronze:Encode." + compileText; //TODO: Localize
-        } else if (rawDescription.contains("bronze:Compile")) { //TODO: Localize
-            return "bronze:Encode. NL " + rawDescription; // TODO: Localize
+            return splitText[0] + uiStrings.TEXT[2] + compileText;
+        } else if (rawDescription.contains(uiStrings.TEXT[1])) {
+            return uiStrings.TEXT[3] + rawDescription;
         }
-        return rawDescription + " NL bronze:Encode."; //TODO: Localize
+        return rawDescription + uiStrings.TEXT[0];
     }
 
     public static String cleanAllCompileText(String s) {
-        if (s.contains(" NL bronze:Compile")) {
-            String[] splitText = s.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
+        if (s.contains(uiStrings.TEXT[0])) {
+            String[] splitText = s.split(String.format(WITH_DELIMITER, uiStrings.TEXT[0]));
             String compileText = splitText[1] + splitText[2];
-             return s.replaceAll(compileText, "");
-        }
-        else if (s.contains("bronze:Compile")) {
+            return s.replaceAll(compileText, "");
+        } else if (s.contains(uiStrings.TEXT[1])) {
             return "";
         }
         return s;

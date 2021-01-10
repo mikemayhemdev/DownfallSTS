@@ -39,7 +39,7 @@ public class FightOn extends AbstractChampCard {
                 return super.canUse(p, m);
             }
         }
-        cantUseMessage = "I have not Fatigued enough health..."; //TODO: Localize string
+        cantUseMessage = "I have not Fatigued enough health...";
         return false;
     }
 

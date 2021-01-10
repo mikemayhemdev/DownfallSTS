@@ -36,7 +36,7 @@ public class TinkerersToolbox extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new SelectCardsCenteredAction(cardsList, 1, "Choose.", (cards) -> addToTop(new MakeTempCardInHandAction(cards.get(0).makeCopy(), true)))); //TODO: Localize
+        addToBot(new SelectCardsCenteredAction(cardsList, 1, masterUI.TEXT[8], (cards) -> addToTop(new MakeTempCardInHandAction(cards.get(0).makeCopy(), true))));
     }
 
     public void upp() {

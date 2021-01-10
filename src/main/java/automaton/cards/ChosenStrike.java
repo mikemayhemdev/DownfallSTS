@@ -33,7 +33,7 @@ public class ChosenStrike extends AbstractBronzeCard {
 
     @Override
     public String getSpecialCompileText() {
-        return " - Increase #yChosen #yStrike's damage by #b" + magicNumber + " permanently.";  //TODO - Hardcoded string
+        return masterUI.TEXT[1] + magicNumber + masterUI.TEXT[2];
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
