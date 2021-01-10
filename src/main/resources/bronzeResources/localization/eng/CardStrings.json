@@ -25,7 +25,7 @@
   },
   "bronze:DonuBeam": {
     "NAME": "Donu Beam",
-    "DESCRIPTION": "Deal !D! damage twice. NL bronze:Compile - Gain !M! Strength and lose 1 Dexterity.",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL bronze:Compile - Gain !M! Strength and lose !bauto! Dexterity.",
     "EXTENDED_DESCRIPTION": [
       "smooth",
       "Blast"
