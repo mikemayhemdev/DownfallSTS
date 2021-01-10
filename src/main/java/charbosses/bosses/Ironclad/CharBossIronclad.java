@@ -30,6 +30,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BarricadePower;
+import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
@@ -177,7 +178,7 @@ public class CharBossIronclad extends AbstractCharBoss {
 
         downfallMod.saveBossFight(CharBossIronclad.ID);
 
-        if (NeowBoss.neowboss != null){
+        if (hasPower(MinionPower.POWER_ID)){
             for (AbstractMonster m:AbstractDungeon.getCurrRoom().monsters.monsters){
                 if (m instanceof Fortification || m instanceof MushroomPurple || m instanceof MushroomRed || m instanceof MushroomWhite){
                     AbstractDungeon.actionManager.addToBottom(new InstantKillAction(m));

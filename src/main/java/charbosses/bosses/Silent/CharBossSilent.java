@@ -24,6 +24,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbGreen;
 import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
 import downfall.downfallMod;
@@ -90,7 +91,7 @@ public class CharBossSilent extends AbstractCharBoss {
                             archetype = new ArchetypeAct3PoisonNewAge();
                             break;
                         default:
-                            archetype = new ArchetypeAct1ShivsNewAge();
+                            archetype = new ArchetypeAct2MirrorImageNewAge();
                             break;
                     }
                     break;
@@ -172,7 +173,7 @@ public class CharBossSilent extends AbstractCharBoss {
 
         downfallMod.saveBossFight(CharBossSilent.ID);
 
-        if (NeowBoss.neowboss != null){
+        if (hasPower(MinionPower.POWER_ID)){
             for (AbstractMonster m:AbstractDungeon.getCurrRoom().monsters.monsters){
                 if (m instanceof MirrorImageSilent){
                     AbstractDungeon.actionManager.addToBottom(new InstantKillAction(m));
