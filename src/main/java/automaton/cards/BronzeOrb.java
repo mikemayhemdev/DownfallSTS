@@ -20,10 +20,10 @@ public class BronzeOrb extends AbstractBronzeCard {
     //stupid intellij stuff attack, enemy, uncommon
 
     private static final int DAMAGE = 6;
-    private static final int UPG_DAMAGE = 2;
+    private static final int UPG_DAMAGE = 3;
 
     private static final int BLOCK = 6;
-    private static final int UPG_BLOCK = 2;
+    private static final int UPG_BLOCK = 3;
 
     public BronzeOrb() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
