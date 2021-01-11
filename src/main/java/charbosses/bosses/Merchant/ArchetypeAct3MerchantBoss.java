@@ -1,16 +1,21 @@
 package charbosses.bosses.Merchant;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.colorless.*;
 import charbosses.cards.curses.EnWrithe;
 import charbosses.cards.green.*;
 import charbosses.cards.purple.*;
 import charbosses.cards.red.EnInflame;
+import charbosses.powers.bossmechanicpowers.IroncladStatusPower;
+import charbosses.powers.bossmechanicpowers.MerchantStrengthPower;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_FaceTrader;
 import charbosses.relics.EventRelics.CBR_Falling;
 import charbosses.relics.EventRelics.CBR_Mausoleum;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import charbosses.relics.*;
 
@@ -45,6 +50,15 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
 
 
     }
+
+
+    @Override
+    public void addedPreBattle() {
+        super.addedPreBattle();
+        AbstractCreature p = AbstractCharBoss.boss;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MerchantStrengthPower(p)));
+    }
+
 
     @Override
     public ArrayList<AbstractCard> getThisTurnCards() {

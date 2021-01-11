@@ -25,6 +25,7 @@ import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.Pair;
 import basemod.abstracts.CustomUnlockBundle;
+import basemod.devcommands.unlock.Unlock;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
@@ -79,8 +80,6 @@ import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.custom.CustomMod;
-import com.megacrit.cardcrawl.screens.runHistory.RunHistoryPath;
-import com.megacrit.cardcrawl.screens.runHistory.RunHistoryScreen;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
@@ -98,6 +97,7 @@ import downfall.events.shrines_evil.TransmogrifierEvil;
 import downfall.events.shrines_evil.UpgradeShrineEvil;
 import downfall.monsters.*;
 import downfall.patches.DailyModeEvilPatch;
+import downfall.patches.EndingDoubleFightPatch;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.patches.ui.topPanel.GoldToSoulPatches;
@@ -171,6 +171,7 @@ public class downfallMod implements
     public static boolean crossoverCharacters = true;
     public static boolean unlockEverything = false;
     public static boolean normalMapLayout = false;
+    public static boolean champDisableStanceHelper = false;
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
     public static final String PROP_RELIC_SHARING = "contentSharing_relics";
@@ -181,6 +182,7 @@ public class downfallMod implements
     public static final String PROP_CHAR_CROSSOVER = "crossover_characters";
     public static final String PROP_UNLOCK_ALL = "unlockEverything";
     public static final String PROP_NORMAL_MAP = "normalMapLayout";
+    public static final String PROP_CHAMP_PRO = "champDisableStanceHelper";
 
     public static String Act1BossFaced = downfallMod.makeID("Ironclad");
     public static String Act2BossFaced = downfallMod.makeID("Silent");
@@ -218,7 +220,8 @@ public class downfallMod implements
         configDefault.setProperty(PROP_CARD_SHARING, "TRUE");
         configDefault.setProperty(PROP_CHAR_CROSSOVER, "FALSE");
         configDefault.setProperty(PROP_NORMAL_MAP, "FALSE");
-//        configDefault.setProperty(PROP_UNLOCK_ALL, "FALSE");
+        configDefault.setProperty(PROP_UNLOCK_ALL, "FALSE");
+        configDefault.setProperty(PROP_CHAMP_PRO, "FALSE");
 
 
         loadConfigData();
@@ -274,6 +277,7 @@ public class downfallMod implements
             config.setBool(PROP_NORMAL_MAP, normalMapLayout);
 
             config.setBool(PROP_UNLOCK_ALL, unlockEverything);
+            config.setBool(PROP_CHAMP_PRO, champDisableStanceHelper);
             config.save();
             GoldenIdol_Evil.save();
         } catch (IOException e) {
@@ -506,6 +510,24 @@ public class downfallMod implements
             saveData();
         });
 
+        ModLabeledToggleButton champProConfig = new ModLabeledToggleButton(configStrings.TEXT[8],
+                350.0f, 300, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                champDisableStanceHelper, settingsPanel, (label) -> {
+        }, (button) -> {
+            champDisableStanceHelper = button.enabled;
+            saveData();
+        });
+
+
+        ModLabeledToggleButton unlockAllBtn = new ModLabeledToggleButton(configStrings.TEXT[7],
+                350.0f, 250, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                unlockEverything, settingsPanel, (label) -> {
+        }, (button) -> {
+            unlockEverything = button.enabled;
+            saveData();
+        });
+
+
         settingsPanel.addUIElement(contentSharingBtnCurses);
         settingsPanel.addUIElement(contentSharingBtnEvents);
         settingsPanel.addUIElement(contentSharingBtnPotions);
@@ -513,6 +535,8 @@ public class downfallMod implements
         settingsPanel.addUIElement(contentSharingBtnColorless);
         settingsPanel.addUIElement(characterCrossoverBtn);
         settingsPanel.addUIElement(normalMapBtn);
+        settingsPanel.addUIElement(champProConfig);
+        settingsPanel.addUIElement(unlockAllBtn);
 
         BaseMod.registerModBadge(badgeTexture, "downfall", "Downfall Team", "A very evil Expansion.", settingsPanel);
 
@@ -528,7 +552,8 @@ public class downfallMod implements
             contentSharing_potions = config.getBool(PROP_POTION_SHARING);
             contentSharing_colorlessCards = config.getBool(PROP_CARD_SHARING);
             crossoverCharacters = config.getBool(PROP_CHAR_CROSSOVER);
-//            unlockEverything = config.getBool(PROP_UNLOCK_ALL);
+            champDisableStanceHelper = config.getBool(PROP_CHAMP_PRO);
+            unlockEverything = config.getBool(PROP_UNLOCK_ALL);
         } catch (Exception e) {
             e.printStackTrace();
             clearData();
@@ -1075,27 +1100,7 @@ public class downfallMod implements
         }
 
         //Snecko mod run start choosing stuff
-        if (!SneckoMod.openedStarterScreen) {
-            if (CardCrawlGame.isInARun() && downfallMod.readyToDoThing) {
-                SneckoMod.findAWayToTriggerThisAtGameStart();
-                SneckoMod.openedStarterScreen = true;
-            }
-        }
-        if (SneckoMod.choosingCharacters > -1 && SneckoMod.choosingCharacters <= 2 && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-            SneckoMod.colorChoices.removeCard(c);
-            SneckoMod.validColors.add(c.color);
-            AbstractDungeon.gridSelectScreen.selectedCards.clear();
-            if (SneckoMod.choosingCharacters == 2) {
-                SneckoMod.choosingCharacters = 3;
-                CenterGridCardSelectScreen.centerGridSelect = false;
-                AbstractDungeon.commonCardPool.group.removeIf(ii -> ii instanceof UnknownClass && !SneckoMod.validColors.contains(ii.color));
-                SneckoMod.updateAllUnknownReplacements();
-            } else if (SneckoMod.choosingCharacters < 2) {
-                SneckoMod.choosingCharacters += 1;
-                SneckoMod.dualClassChoice();
-            }
-        }
+        SneckoMod.importantStuff();
     }
 
     private void resetBossList() {
@@ -1120,6 +1125,7 @@ public class downfallMod implements
             AddBustKeyButtonPatches.KeyFields.bustedEmerald.set(AbstractDungeon.player, false);
             AddBustKeyButtonPatches.KeyFields.bustedRuby.set(AbstractDungeon.player, false);
             AddBustKeyButtonPatches.KeyFields.bustedSapphire.set(AbstractDungeon.player, false);
+            EndingDoubleFightPatch.inTrueFight = false;
         }
     }
 
@@ -1400,7 +1406,7 @@ public class downfallMod implements
         BaseMod.addUnlockBundle(currentBundle, player, index);
 
 
-        if (UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index + 1) {
+        if (downfallMod.unlockEverything || UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index + 1) {
 
             UnlockTracker.unlockCard(card1);
             UnlockTracker.unlockCard(card2);
@@ -1423,11 +1429,26 @@ public class downfallMod implements
         BaseMod.addUnlockBundle(currentBundle, player, index);
 
 
-        if (UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index + 1) {
+        if (downfallMod.unlockEverything || UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index + 1) {
 
-            UnlockTracker.lockedRelics.remove(relic1);
-            UnlockTracker.lockedRelics.remove(relic2);
-            UnlockTracker.lockedRelics.remove(relic3);
+            SlimeboundMod.logger.info("Relic trigger: " + relic1 + " " + UnlockTracker.lockedRelics.contains(relic1) + " " + UnlockTracker.isRelicLocked(relic1) + " " + UnlockTracker.isRelicSeen(relic1));
+            SlimeboundMod.logger.info("Relic trigger: " + relic2 + " " + UnlockTracker.lockedRelics.contains(relic2) + " " + UnlockTracker.isRelicLocked(relic2) + " " + UnlockTracker.isRelicSeen(relic3));
+            SlimeboundMod.logger.info("Relic trigger: " + relic3 + " " + UnlockTracker.lockedRelics.contains(relic3) + " " + UnlockTracker.isRelicLocked(relic3) + " " + UnlockTracker.isRelicSeen(relic3));
+            while (UnlockTracker.lockedRelics.contains(relic1)) {
+                UnlockTracker.lockedRelics.remove(relic1);
+            }
+            while (UnlockTracker.lockedRelics.contains(relic2)) {
+                UnlockTracker.lockedRelics.remove(relic2);
+            }
+            while (UnlockTracker.lockedRelics.contains(relic3)) {
+                UnlockTracker.lockedRelics.remove(relic3);
+            }
+            UnlockTracker.markRelicAsSeen(relic1);
+            UnlockTracker.markRelicAsSeen(relic2);
+            UnlockTracker.markRelicAsSeen(relic3);
+            SlimeboundMod.logger.info("Relic trigger: " + relic1 + " " + UnlockTracker.lockedRelics.contains(relic1) + " " + UnlockTracker.isRelicLocked(relic1) + " " + UnlockTracker.isRelicSeen(relic1));
+            SlimeboundMod.logger.info("Relic trigger: " + relic2 + " " + UnlockTracker.lockedRelics.contains(relic2) + " " + UnlockTracker.isRelicLocked(relic2) + " " + UnlockTracker.isRelicSeen(relic3));
+            SlimeboundMod.logger.info("Relic trigger: " + relic3 + " " + UnlockTracker.lockedRelics.contains(relic3) + " " + UnlockTracker.isRelicLocked(relic3) + " " + UnlockTracker.isRelicSeen(relic3));
         }
     }
 
@@ -1452,5 +1473,18 @@ public class downfallMod implements
     @Override
     public void receiveRender(SpriteBatch sb) {
         SuperTip.render(sb, EasyInfoDisplayPanel.RENDER_TIMING.TIMING_RENDERSUBSCRIBER);
+    }
+
+    public static void removeAnyRelicFromPools(String relicID){
+        if (AbstractDungeon.shopRelicPool.contains(relicID))
+        AbstractDungeon.shopRelicPool.remove(relicID);
+        if (AbstractDungeon.rareRelicPool.contains(relicID))
+            AbstractDungeon.rareRelicPool.remove(relicID);
+        if (AbstractDungeon.uncommonRelicPool.contains(relicID))
+            AbstractDungeon.uncommonRelicPool.remove(relicID);
+        if (AbstractDungeon.bossRelicPool.contains(relicID))
+            AbstractDungeon.bossRelicPool.remove(relicID);
+        if (AbstractDungeon.commonRelicPool.contains(relicID))
+            AbstractDungeon.commonRelicPool.remove(relicID);
     }
 }

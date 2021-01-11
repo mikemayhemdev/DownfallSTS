@@ -81,6 +81,7 @@ public class EnemyMakeTempCardInHandAction extends AbstractGameAction {
         if (this.amount > 0) {
             this.addToTop(new WaitAction(0.8f));
         }
+        AbstractCharBoss.boss.preApplyIntentCalculations();
         //AbstractDungeon.actionManager.addToBottom(new CharbossSortHandAction());
         this.isDone = true;
     }

@@ -1,6 +1,7 @@
 package automaton.cards;
 
 import automaton.AutomatonChar;
+import automaton.AutomatonTextHelper;
 import automaton.FunctionHelper;
 import automaton.cardmods.EncodeMod;
 import basemod.ReflectionHacks;
@@ -16,6 +17,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -25,7 +27,6 @@ import java.util.ArrayList;
 
 import static automaton.AutomatonMod.getModID;
 import static automaton.AutomatonMod.makeCardPath;
-import static automaton.FunctionHelper.WITH_DELIMITER;
 
 public abstract class AbstractBronzeCard extends CustomCard {
 
@@ -45,6 +46,8 @@ public abstract class AbstractBronzeCard extends CustomCard {
     protected String UPGRADE_DESCRIPTION;
     protected String[] EXTENDED_DESCRIPTION;
     private AbstractCard functionPreviewCard;
+
+    protected static final UIStrings masterUI = CardCrawlGame.languagePack.getUIString("bronze:MiscStrings");
 
     public AbstractBronzeCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),
@@ -333,31 +336,26 @@ public abstract class AbstractBronzeCard extends CustomCard {
     }
 
     boolean lastCard() {
-        return position == FunctionHelper.max - 1;
+        return position == FunctionHelper.max() - 1;
     }
 
     boolean firstCard() {
         return position == 0;
     }
 
+    public void turnOffCompileStuff() {
+        this.doSpecialCompileStuff = false;
+        this.rawDescription = AutomatonTextHelper.cleanAllCompileText(this.rawDescription);
+        this.initializeDescription();
+    }
+
     @Override
     public AbstractCard makeStatEquivalentCopy() {
         AbstractCard r = super.makeStatEquivalentCopy();
-        if (r instanceof AbstractBronzeCard) {
-            ((AbstractBronzeCard) r).baseAuto = this.baseAuto;
-            ((AbstractBronzeCard) r).auto = this.auto;
-        }
-        if (!this.doSpecialCompileStuff && r instanceof AbstractBronzeCard) {
-            ((AbstractBronzeCard) r).doSpecialCompileStuff = false;
-            if (r.rawDescription.contains(" NL bronze:Compile")) {
-                String[] splitText = r.rawDescription.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
-                String compileText = splitText[1] + splitText[2];
-                r.rawDescription = r.rawDescription.replaceAll(compileText, "");
-            } //I will make this good soon
-            else if (r.rawDescription.contains("bronze:Compile")) {
-                r.rawDescription = ""; // It's over!! If you only have Compile effects, you're gone!!!!!
-            }
-            r.initializeDescription();
+        ((AbstractBronzeCard) r).baseAuto = this.baseAuto;
+        ((AbstractBronzeCard) r).auto = this.auto;
+        if (!this.doSpecialCompileStuff) {
+            ((AbstractBronzeCard) r).turnOffCompileStuff();
         }
         return r;
     }

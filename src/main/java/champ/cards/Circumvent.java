@@ -23,13 +23,14 @@ public class Circumvent extends AbstractChampCard {
         // tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
+        baseMagicNumber = magicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         //  techique();
         blck();
         if (upgraded)
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(3), 3));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(magicNumber), magicNumber));
         if (dcombo()) {
             addToBot(new CircumventAction());
         }
@@ -41,7 +42,7 @@ public class Circumvent extends AbstractChampCard {
     }
 
     public void upp() {
-        tags.add(ChampMod.TECHNIQUE);
+        //tags.add(ChampMod.TECHNIQUE);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

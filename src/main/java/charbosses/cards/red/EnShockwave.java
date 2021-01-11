@@ -30,12 +30,13 @@ public class EnShockwave extends AbstractBossCard {
         this.exhaust = true;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
+        artifactConsumedIfPlayed = 2;
     }
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-        this.addToBot(new ApplyPowerAction(p, m, new VulnerablePower(p, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, this.magicNumber + 1, false), this.magicNumber + 1, true, AbstractGameAction.AttackEffect.NONE));
+        this.addToBot(new ApplyPowerAction(p, m, new VulnerablePower(p, this.magicNumber + 1, false), this.magicNumber + 1, true, AbstractGameAction.AttackEffect.NONE));
     }
 
     @Override

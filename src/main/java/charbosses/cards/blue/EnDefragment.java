@@ -27,6 +27,7 @@ public class EnDefragment extends AbstractBossCard {
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         alwaysDisplayText = true;
+        focusGeneratedIfPlayed = magicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -44,6 +45,7 @@ public class EnDefragment extends AbstractBossCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeMagicNumber(1);
+            focusGeneratedIfPlayed = magicNumber;
         }
 
     }

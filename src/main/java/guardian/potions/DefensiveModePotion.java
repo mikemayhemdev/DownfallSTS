@@ -35,9 +35,9 @@ public class DefensiveModePotion extends CustomPotion {
     public void initializeData() {
         this.potency = getPotency();
         if (potency > 1){
-            this.description = (DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1]);
-        } else {
             this.description = (DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[2]);
+        } else {
+            this.description = (DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1]);
         }
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
@@ -49,7 +49,6 @@ public class DefensiveModePotion extends CustomPotion {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, 10));
         AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveMode.STANCE_ID));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DontLeaveDefensiveModePower(AbstractDungeon.player, potency), potency));
-
     }
 
 

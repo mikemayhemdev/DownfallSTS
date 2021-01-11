@@ -24,6 +24,7 @@ public class EnDeadlyPoison extends AbstractBossCard {
         super(ID, EnDeadlyPoison.cardStrings.NAME, "green/skill/deadly_poison", 1, EnDeadlyPoison.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.DEBUFF);
         this.baseMagicNumber = 6;
         this.magicNumber = this.baseMagicNumber;
+        artifactConsumedIfPlayed = 1;
     }
 
     @Override

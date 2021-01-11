@@ -7,7 +7,45 @@
   },
   "bronze:UnplayableMod": {
     "TEXT": [
-      "Unplayable. NL "
+      "Unplayable. NL ",
+      "ERR_NULL_PTR"
+    ]
+  },
+  "bronze:EncodeAndShuffleMod": {
+    "TEXT": [
+      " NL bronze:Encode, then add a copy of this into your discard pile."
+    ]
+  },
+  "bronze:DoublePlayModifier": {
+    "TEXT": [
+      " NL Play this again."
+    ]
+  },
+  "bronze:MiscStrings": {
+    "TEXT": [
+      "Choose a card to return to your hand. It gains Retain.",
+      " - Increase #yChosen #yStrike's damage by #b",
+      " permanently.",
+      "ERR: SEQUENCE_EMPTY",
+      " - Add a copy of #yInfinite #yLoop to your hand with #b",
+      " more damage.",
+      "Choose a card to Mutate.",
+      "Choose a Card to Encode.",
+      "Choose a card."
+    ]
+  },
+  "bronze:AutoTextHelper": {
+    "TEXT": [
+      " NL bronze:Compile",
+      "bronze:Compile",
+      " NL bronze:Encode.",
+      "bronze:Encode. NL "
+    ]
+  },
+  "bronze:CompileDisplayPanel": {
+    "TEXT": [
+      "When Compiled:",
+      "bronze:Compile"
     ]
   }
 }

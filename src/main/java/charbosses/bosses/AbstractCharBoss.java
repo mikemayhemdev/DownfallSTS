@@ -11,28 +11,17 @@ import charbosses.actions.util.CharbossDoNextCardAction;
 import charbosses.actions.util.CharbossMakePlayAction;
 import charbosses.actions.util.CharbossTurnstartDrawAction;
 import charbosses.actions.util.DelayedActionAction;
-import charbosses.actions.utility.DestroyAntiCardsAction;
-import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
 import charbosses.bosses.Merchant.CharBossMerchant;
-import charbosses.bosses.Silent.NewAge.ArchetypeAct1ShivsNewAge;
-import charbosses.bosses.Watcher.NewAge.ArchetypeAct1RetainNewAge;
-import charbosses.bosses.Watcher.NewAge.ArchetypeAct2CalmNewAge;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
-import charbosses.cards.purple.EnFlyingSleeves;
-import charbosses.cards.purple.EnPerseverance;
-import charbosses.cards.purple.EnSandsOfTime;
-import charbosses.cards.purple.EnWish;
+import charbosses.cards.red.EnBodySlam;
 import charbosses.core.EnemyEnergyManager;
-import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
+import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.orbs.EnemyDark;
 import charbosses.orbs.EnemyEmptyOrbSlot;
-import charbosses.powers.ShivTimeEaterPower;
-import charbosses.powers.WatcherAngryPower;
-import charbosses.powers.WatcherCripplePower;
 import charbosses.relics.AbstractCharbossRelic;
 import charbosses.relics.CBR_LizardTail;
-import charbosses.relics.CBR_MagicFlower;
+import charbosses.relics.CBR_Shuriken;
 import charbosses.stances.AbstractEnemyStance;
 import charbosses.stances.EnNeutralStance;
 import charbosses.ui.EnemyEnergyPanel;
@@ -40,26 +29,19 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
-import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.IntangiblePower;
-import com.megacrit.cardcrawl.powers.MinionPower;
+import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.RunicDome;
 import com.megacrit.cardcrawl.relics.SlaversCollar;
@@ -75,13 +57,12 @@ import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
-import guardian.powers.ConstructPower;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Iterator;
 
 public abstract class AbstractCharBoss extends AbstractMonster {
 
@@ -244,7 +225,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
 
 
-        if (NeowBoss.neowboss != null) {
+        if (hasPower(MinionPower.POWER_ID)) {
             if (NeowBoss.neowboss.minion != this) {
                 playMusic();
             }
@@ -436,8 +417,111 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     }
 
 
+    public void preApplyIntentCalculations() {
+        boolean hasShuriken = hasRelic(CBR_Shuriken.ID);
+        int attackCount = 0;
+        int artifactCount = 0;
+
+        if (AbstractDungeon.player.hasPower(ArtifactPower.POWER_ID)) {
+            artifactCount = AbstractDungeon.player.getPower(ArtifactPower.POWER_ID).amount;
+        }
+
+        //Reset all custom modifiers back to 0
+        for (AbstractCard c : hand.group) {
+            ((AbstractBossCard) c).manualCustomDamageModifier = 0;
+            ((AbstractBossCard) c).manualCustomDamageModifierMult = 1;
+        }
+
+        for (int i = 0; i < hand.size(); i++) {
+            AbstractBossCard c = (AbstractBossCard) hand.group.get(i);
+
+            SlimeboundMod.logger.info("intent calcs: " + c.name);
+            if (!c.lockIntentValues) {
+                SlimeboundMod.logger.info(c.name + " not locked, calculating.");
+
+                //Artifact Checks - calculates if any Artifact will be left
+                if (c.artifactConsumedIfPlayed > 0) {
+                    artifactCount -= c.artifactConsumedIfPlayed;
+                }
+
+                //Vulnerable Check - knows to check if any Artifact will be left
+                if (c.vulnGeneratedIfPlayed > 0) {
+                    if (artifactCount <= 0) {
+                        for (int j = i + 1; j < hand.size(); j++) {
+                            AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
+                            c2.manualCustomVulnModifier = true;
+                        }
+                    }
+                }
+
+                //Shuriken Checks for Act 1 Silent
+                if (hasShuriken) {
+                    SlimeboundMod.logger.info("has shuriken");
+                    if (c.type == AbstractCard.CardType.ATTACK) {
+                        SlimeboundMod.logger.info(c.name + " is an attack.");
+                        attackCount++;
+                        if (attackCount == 3) {
+                            SlimeboundMod.logger.info(c.name + " is 3rd attack.");
+                            for (int j = i + 1; j < hand.size(); j++) {
+                                AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
+                                SlimeboundMod.logger.info(c2.name + " is gaining damage.");
+                                c2.manualCustomDamageModifier += 1;
+                            }
+                            attackCount = 0;
+                        }
+                    }
+                }
+
+                //Strength check for Wish in Act 2 Watcher, Act 2 Defect's Reprogram
+                if (c.strengthGeneratedIfPlayed > 0) {
+                    for (int j = i + 1; j < hand.size(); j++) {
+                        AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
+                        c2.manualCustomDamageModifier += c.strengthGeneratedIfPlayed;
+                    }
+                }
+
+                //Block checks for Act 3 Ironclad's Body Slams
+                if (c.block > 0) {
+                    for (int j = i + 1; j < hand.size(); j++) {
+                        AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
+                        if (c2 instanceof EnBodySlam) {
+                            c2.manualCustomDamageModifier += c.block;
+                        }
+                    }
+                }
+
+                //Minion block checks for Act 3 Ironclad's Body Slams
+                if (c instanceof EnBodySlam) {
+                    if (hasPower(BarricadePower.POWER_ID)) {
+                        c.manualCustomDamageModifier += 10;
+                    }
+                }
+
+                //Divinity Check for Act 2 Watcher
+                if (c.damageMultGeneratedIfPlayed > 1) {
+                    for (int j = i + 1; j < hand.size(); j++) {
+                        AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
+                        c2.manualCustomDamageModifierMult = c.damageMultGeneratedIfPlayed;
+                    }
+                }
+
+                //TODO - Sadistic Nature for Act 3 Silent
+
+            }
+        }
+        for (AbstractCard c : hand.group) {
+            if (!((AbstractBossCard) c).bossDarkened) {
+                ((AbstractBossCard) c).createIntent();
+            }
+        }
+
+    }
+
     public void applyPowers() {
         super.applyPowers();
+
+        preApplyIntentCalculations();
+
         this.hand.applyPowers();
         /*
         this.drawPile.genPreview();
@@ -1038,7 +1122,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             useFastShakeAnimation(5.0F);
             CardCrawlGame.screenShake.rumble(4.0F);
             if (!(this instanceof CharBossMerchant)) {
-                if (NeowBoss.neowboss != null) {
+                if (hasPower(MinionPower.POWER_ID)) {
                     if (NeowBoss.neowboss.minion == null) {
                         if (Settings.FAST_MODE) {
                             this.deathTimer += 0.7F;
@@ -1054,16 +1138,17 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
         }
 
-        if (NeowBoss.neowboss != null) {
-
-            SlimeboundMod.logger.info("Archetype act num: " + chosenArchetype.actNum);
-            NeowBoss.neowboss.minion = null;
-            if (chosenArchetype.actNum == 3){
-                SlimeboundMod.logger.info("Boss instructing Neow to Self Rez");
-                NeowBoss.neowboss.switchIntentToSelfRez();
-            } else {
-                SlimeboundMod.logger.info("Boss instructing Neow to Rez");
-                NeowBoss.neowboss.switchToRez();
+        if (hasPower(MinionPower.POWER_ID)) {
+            if (NeowBoss.neowboss.minion == this) {
+                SlimeboundMod.logger.info("Archetype act num: " + chosenArchetype.actNum);
+                NeowBoss.neowboss.minion = null;
+                if (chosenArchetype.actNum == 3) {
+                    SlimeboundMod.logger.info("Boss instructing Neow to Self Rez");
+                    NeowBoss.neowboss.switchIntentToSelfRez();
+                } else {
+                    SlimeboundMod.logger.info("Boss instructing Neow to Rez");
+                    NeowBoss.neowboss.switchToRez();
+                }
             }
         }
 
@@ -1310,7 +1395,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void evokeOrb() {
         if (!this.orbs.isEmpty() && !(this.orbs.get(0) instanceof EnemyEmptyOrbSlot)) {
             this.orbs.get(0).onEvoke();
-            final AbstractOrb orbSlot = new EnemyEmptyOrbSlot();
+            final AbstractEnemyOrb orbSlot = new EnemyEmptyOrbSlot();
             for (int i = 1; i < this.orbs.size(); ++i) {
                 Collections.swap(this.orbs, i, i - 1);
             }
@@ -1319,6 +1404,16 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 this.orbs.get(i).setSlot(i, this.maxOrbs);
             }
         }
+    }
+
+    public ArrayList<AbstractEnemyOrb> orbsAsEn() {
+        ArrayList<AbstractEnemyOrb> orbies = new ArrayList<AbstractEnemyOrb>();
+        for (AbstractOrb o : orbs) {
+            if (o instanceof AbstractEnemyOrb) {
+                orbies.add((AbstractEnemyOrb)o);
+            }
+        }
+        return orbies;
     }
 
     public void evokeNewestOrb() {
@@ -1335,7 +1430,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
     public void removeNextOrb() {
         if (!this.orbs.isEmpty() && !(this.orbs.get(0) instanceof EnemyEmptyOrbSlot)) {
-            final AbstractOrb orbSlot = new EnemyEmptyOrbSlot(this.orbs.get(0).cX, this.orbs.get(0).cY);
+            final AbstractEnemyOrb orbSlot = new EnemyEmptyOrbSlot(this.orbs.get(0).cX, this.orbs.get(0).cY);
             for (int i = 1; i < this.orbs.size(); ++i) {
                 Collections.swap(this.orbs, i, i - 1);
             }
@@ -1377,34 +1472,32 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             AbstractDungeon.effectList.add(new ThoughtBubble(this.dialogX, this.dialogY, 3.0f, AbstractPlayer.MSG[4], true));
             return;
         }
-        if (this.maxOrbs > 0) {
-            if (this.hasRelic("Dark Core") && !(orbToSet instanceof EnemyDark)) {
-                orbToSet = new EnemyDark();
+        if (this.hasRelic("Dark Core") && !(orbToSet instanceof EnemyDark)) {
+            orbToSet = new EnemyDark();
+        }
+        int index = -1;
+        for (int i = 0; i < this.orbs.size(); ++i) {
+            if (this.orbs.get(i) instanceof EnemyEmptyOrbSlot) {
+                index = i;
+                break;
             }
-            int index = -1;
-            for (int i = 0; i < this.orbs.size(); ++i) {
-                if (this.orbs.get(i) instanceof EnemyEmptyOrbSlot) {
-                    index = i;
-                    break;
-                }
+        }
+        if (index != -1) {
+            orbToSet.cX = this.orbs.get(index).cX;
+            orbToSet.cY = this.orbs.get(index).cY;
+            this.orbs.set(index, orbToSet);
+            this.orbs.get(index).setSlot(index, this.maxOrbs);
+            orbToSet.playChannelSFX();
+            for (final AbstractPower p : this.powers) {
+                p.onChannel(orbToSet);
             }
-            if (index != -1) {
-                orbToSet.cX = this.orbs.get(index).cX;
-                orbToSet.cY = this.orbs.get(index).cY;
-                this.orbs.set(index, orbToSet);
-                this.orbs.get(index).setSlot(index, this.maxOrbs);
-                orbToSet.playChannelSFX();
-                for (final AbstractPower p : this.powers) {
-                    p.onChannel(orbToSet);
-                }
-                AbstractDungeon.actionManager.orbsChanneledThisCombat.add(orbToSet);
-                AbstractDungeon.actionManager.orbsChanneledThisTurn.add(orbToSet);
-                orbToSet.applyFocus();
-            } else {
-                AbstractDungeon.actionManager.addToTop(new EnemyChannelAction(orbToSet));
-                AbstractDungeon.actionManager.addToTop(new EnemyEvokeOrbAction(1));
-                AbstractDungeon.actionManager.addToTop(new EnemyAnimateOrbAction(1));
-            }
+            AbstractDungeon.actionManager.orbsChanneledThisCombat.add(orbToSet);
+            AbstractDungeon.actionManager.orbsChanneledThisTurn.add(orbToSet);
+            orbToSet.applyFocus();
+        } else {
+            AbstractDungeon.actionManager.addToTop(new EnemyChannelAction(orbToSet));
+            AbstractDungeon.actionManager.addToTop(new EnemyEvokeOrbAction(1));
+            AbstractDungeon.actionManager.addToTop(new EnemyAnimateOrbAction(1));
         }
     }
 

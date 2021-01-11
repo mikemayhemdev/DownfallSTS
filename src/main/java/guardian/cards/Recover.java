@@ -26,7 +26,7 @@ public class Recover extends AbstractGuardianCard {
 
     //TUNING CONSTANTS
     private static final int CARDS = 3;
-    private static final int UPGRADEBLOCK = 2;
+    private static final int UPGRADEBLOCK = 3;
     private static final int BLOCK = 5;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;

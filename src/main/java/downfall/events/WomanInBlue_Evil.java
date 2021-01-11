@@ -93,6 +93,7 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
                                     break;
                             }
                             AbstractDungeon.getCurrRoom().addRelicToRewards(possRelics.get(0));
+                            downfallMod.removeAnyRelicFromPools(possRelics.get(0).relicId);
                         }
 
                         AbstractDungeon.getCurrRoom().addGoldToRewards(100);

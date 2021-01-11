@@ -7,10 +7,10 @@
     "DESCRIPTION": "You may only play #b1 #yBoss card in a turn."
   },
   {
-    "PROPER_NAME": "Ghostflames",
+    "PROPER_NAME": "Invincible",
     "NAMES": [
-      "ghostflames"
+      "invincible"
     ],
-    "DESCRIPTION": "Ghostflames provide additional benefits each turn if their Ignition requirements are met during that turn."
+    "DESCRIPTION": "You cannot lose more than a given amount of HP in a single turn. NL At the end of any round in which Invincible prevented HP loss, remove it."
   }
 ]

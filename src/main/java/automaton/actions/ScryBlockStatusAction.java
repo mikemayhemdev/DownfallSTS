@@ -62,9 +62,9 @@ public class ScryBlockStatusAction extends AbstractGameAction {
                     AbstractDungeon.player.drawPile.moveToDiscardPile(c);
                     if (c.type == AbstractCard.CardType.STATUS) {
                         addToBot(new GainBlockAction(AbstractDungeon.player, blockPerCard));
-                    } else {
-                        addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile));
                     }
+                    addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile));
+
                 }
 
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();

@@ -2,7 +2,9 @@ package charbosses.cards.blue;
 
 import charbosses.actions.orb.EnemyChannelAction;
 import charbosses.actions.unique.EnemyDarkImpulseAction;
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
+import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.orbs.EnemyDark;
 import charbosses.orbs.EnemyFrost;
 import charbosses.orbs.EnemyLightning;
@@ -17,6 +19,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.Dark;
 import com.megacrit.cardcrawl.orbs.Frost;
 import com.megacrit.cardcrawl.orbs.Lightning;
+import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.vfx.RainbowCardEffect;
 
 import java.util.ArrayList;
@@ -30,6 +33,7 @@ public class EnRainbow extends AbstractBossCard {
         this.showEvokeValue = true;
         this.showEvokeOrbCount = 3;
         this.exhaust = true;
+        alwaysDisplayText = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -37,6 +41,18 @@ public class EnRainbow extends AbstractBossCard {
         this.addToBot(new EnemyChannelAction(new EnemyLightning()));
         this.addToBot(new EnemyChannelAction(new EnemyFrost()));
         this.addToBot(new EnemyChannelAction(new EnemyDark()));
+    }
+
+    public static int getFocusAmountSafe() {
+        if (AbstractCharBoss.boss.hasPower(FocusPower.POWER_ID)) {
+            return AbstractCharBoss.boss.getPower(FocusPower.POWER_ID).amount;
+        }
+        return 0;
+    }
+
+    @Override
+    public String overrideIntentText() {
+        return "(" + ( 3 + AbstractEnemyOrb.masterPretendFocus + getFocusAmountSafe()) + ")";
     }
 
     public void upgrade() {

@@ -39,6 +39,12 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         purgeOnUse = true;
     }
 
+    public AbstractUnknownCard(final String id, final String img, final CardType type, final CardRarity rarity, CardColor color) {
+        super(id, img, -2, type, rarity, CardTarget.NONE, color);
+        tags.add(CardTags.HEALING);
+        purgeOnUse = true;
+    }
+
     public TextureAtlas.AtlasRegion getOverBannerTex() {
         return SneckoMod.overBannerAnything;
     }
@@ -72,6 +78,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
     public static ArrayList<String> unknownWeakReplacements = new ArrayList<>();
     public static ArrayList<String> unknownXCostReplacements = new ArrayList<>();
     public static ArrayList<String> unknownDrawReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownBossReplacements = new ArrayList<>();
     // public static ArrayList<String> unknownEtherealReplacements = new ArrayList<>();
 
     @Override
@@ -83,12 +90,15 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
                 if (myList().size() == 0) {
                     cardsToPreview = CardLibrary.cards.get("Madness");
                 } else {
-                    cardsToPreview = CardLibrary.cards.get(myList().get(previewIndex));
+                    cardsToPreview = CardLibrary.cards.get(myList().get(previewIndex)).makeCopy();
                 }
                 if (previewIndex == myList().size() - 1) {
                     previewIndex = 0;
                 } else {
                     previewIndex++;
+                }
+                if (upgraded) {
+                    cardsToPreview.upgrade();
                 }
             } else {
                 rotationTimer -= Gdx.graphics.getDeltaTime();
@@ -97,11 +107,13 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
     }
 
     public void upgrade() {
-        upgradeName();
-        String[] funky = rawDescription.split(unknownUpgrade[0]);
-        funky[1] = unknownUpgrade[1] + funky[1];
-        rawDescription = String.join(unknownUpgrade[0], funky);
-        initializeDescription();
+        if (!upgraded) {
+            upgradeName();
+            String[] funky = rawDescription.split(unknownUpgrade[0]);
+            funky[1] = unknownUpgrade[1] + funky[1];
+            rawDescription = String.join(unknownUpgrade[0], funky);
+            initializeDescription();
+        }
     }
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
@@ -133,10 +145,10 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
                 validCard = c.color != TheSnecko.Enums.SNECKO_CYAN;
             }
 
-            for (Predicate<AbstractCard> funkyPredicate : funkyPredicates) {
-                if (funkyPredicate.test(q) && (SneckoMod.pureSneckoMode || SneckoMod.validColors.contains(q.color))) {
+            for (int i = 0; i < funkyPredicates.size(); i++) {
+                Predicate<AbstractCard> funkyPredicate = funkyPredicates.get(i);
+                if (funkyPredicate.test(q) && (SneckoMod.pureSneckoMode || SneckoMod.validColors.contains(q.color) || i > 22)) {
                     if (validCard) {
-                        System.out.println("WE ARE HERE!");
                         ArrayList<String> s = funkyLists.get(funkyPredicates.indexOf(funkyPredicate));
                         if (s == null) {
                             s = new ArrayList<>();
@@ -145,6 +157,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
                     }
                 }
             }
+
         }
 
     }
@@ -173,27 +186,31 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         }
 
         if (this.upgraded) cUnknown.upgrade();
-        if (cUnknown != null) {
-            p.hand.removeCard(this);
-            p.drawPile.removeCard(this);
-            UnknownExtraUiPatch.parentCard.set(cUnknown, this);
-            AbstractDungeon.player.drawPile.addToRandomSpot(cUnknown);
-        }
+
+        p.hand.removeCard(this);
+        p.drawPile.removeCard(this);
+        UnknownExtraUiPatch.parentCard.set(cUnknown, this);
+        AbstractDungeon.player.drawPile.addToRandomSpot(cUnknown);
+
     }
 
     public void replaceUnknownFromHand() {
         AbstractPlayer p = AbstractDungeon.player;
 
         AbstractCard cUnknown;
-        cUnknown = CardLibrary.cards.get(myList().get(AbstractDungeon.cardRng.random(0, myList().size() - 1))).makeStatEquivalentCopy();
+        if (myList().size() > 0) {
+            cUnknown = CardLibrary.cards.get(myList().get(AbstractDungeon.cardRng.random(0, myList().size() - 1))).makeStatEquivalentCopy();
+        } else {
+            cUnknown = new Madness();
+        }
 
         if (this.upgraded) cUnknown.upgrade();
-        if (cUnknown != null) {
-            p.limbo.removeCard(this);
-            p.hand.removeCard(this);
-            p.drawPile.removeCard(this);
-            UnknownExtraUiPatch.parentCard.set(cUnknown, this);
-            AbstractDungeon.player.hand.addToTop(cUnknown);
-        }
+
+        p.limbo.removeCard(this);
+        p.hand.removeCard(this);
+        p.drawPile.removeCard(this);
+        UnknownExtraUiPatch.parentCard.set(cUnknown, this);
+        AbstractDungeon.player.hand.addToTop(cUnknown);
     }
+
 }

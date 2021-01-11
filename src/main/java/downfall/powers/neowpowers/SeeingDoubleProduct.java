@@ -41,8 +41,11 @@ public class SeeingDoubleProduct extends AbstractPower {
 
     @Override
     public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
-        addToBot(new ReducePowerAction(owner, owner, this, 1));
-        return 0;
+        if (info.type == DamageInfo.DamageType.NORMAL && info.owner != null) {
+            addToBot(new ReducePowerAction(owner, owner, this, 1));
+            return 0;
+        }
+        return damageAmount;
     }
 
     @Override

@@ -10,7 +10,7 @@
     "NAME": "Black Knight's Helm",
     "FLAVOR": "Only a flesh wound.",
     "DESCRIPTIONS": [
-      "The first time you enter each Stance each combat: NL #bDefensive: Gain 1 Dexterity. NL #rBerserker: Gain 1 Strength."
+      "The first time you enter each Stance each combat: NL #bDefensive: Gain 2 Dexterity, Lose 1 Strength. NL #rBerserker: Gain 2 Strength, Lose 1 Dexterity."
     ]
   },
   "champ:Barbells": {
@@ -73,16 +73,16 @@
     "NAME": "Power Armor",
     "FLAVOR": "Bought used.",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain [E] . NL Your maximum #yFatigue and #yCounter is #b30. NL Reduce your maximum hand size by #b2."
+      "At the start of your turn, gain [E] . NL Your maximum #yFatigue and #yCounter is #b20."
     ]
   },
   "champ:SignatureFinisher": {
     "NAME": "Signature Finisher",
     "FLAVOR": "And now, it's time for my ULTIMATE MOVE!",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a #yFinisher. This #yFinisher never causes your turn to end or your #yStance to be exited.",
+      "Upon pickup, choose a #yFinisher. This #yFinisher costs 0 and never causes your #yStance to be exited.",
       "Choose a card for ",
-      " never causes your turn to end or your #yStance to be exited."
+      " costs 0 and never causes your #yStance to be exited."
     ]
   },
   "champ:SpectersHand": {

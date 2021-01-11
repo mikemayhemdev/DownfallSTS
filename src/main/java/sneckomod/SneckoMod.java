@@ -29,11 +29,13 @@ import downfall.cards.OctoChoiceCard;
 import downfall.downfallMod;
 import downfall.events.Serpent_Evil;
 import downfall.util.CardIgnore;
+import expansioncontent.patches.CardColorEnumPatch;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import slimebound.SlimeboundMod;
 import sneckomod.cards.*;
 import sneckomod.cards.unknowns.*;
 import sneckomod.events.BackToBasicsSnecko;
@@ -140,6 +142,7 @@ public class SneckoMod implements
     public static TextureAtlas.AtlasRegion overBannerWatcher;
     public static TextureAtlas.AtlasRegion overBannerWeak;
     public static TextureAtlas.AtlasRegion overBannerX;
+    public static TextureAtlas.AtlasRegion overBannerBoss;
 
     private static String modID;
     private static ArrayList<AbstractCard> statuses = new ArrayList<>();
@@ -297,13 +300,11 @@ public class SneckoMod implements
             throw new RuntimeException(e);
         }
         for (AbstractCard.CardColor p : AbstractCard.CardColor.values()) {
-            if (p != AbstractCard.CardColor.COLORLESS && p != AbstractCard.CardColor.CURSE && p != TheSnecko.Enums.SNECKO_CYAN) {
-                if (p != AbstractCard.CardColor.COLORLESS) {
-                    UnknownClass q = new UnknownClass(p);
-                    unknownClasses.add(q);
-                    AbstractUnknownCard.unknownClassReplacements.add(new ArrayList<>());
-                    BaseMod.addCard(q);
-                }
+            if (p != AbstractCard.CardColor.COLORLESS && p != AbstractCard.CardColor.CURSE && p != TheSnecko.Enums.SNECKO_CYAN && p != CardColorEnumPatch.CardColorPatch.BOSS) {
+                UnknownClass q = new UnknownClass(p);
+                unknownClasses.add(q);
+                AbstractUnknownCard.unknownClassReplacements.add(new ArrayList<>());
+                BaseMod.addCard(q);
             }
         }
     }
@@ -312,7 +313,7 @@ public class SneckoMod implements
     public void receiveSetUnlocks() {
 
         downfallMod.registerUnlockSuite(
-                Cheat.ID,
+                Memorize.ID,
                 PureSnecko.ID,
                 Rotation.ID,
 
@@ -393,6 +394,7 @@ public class SneckoMod implements
         overBannerVuln = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/vulnerable.png");
         overBannerWatcher = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/watcher.png");
         overBannerWeak = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/weak.png");
+        overBannerBoss = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/boss.png");
 
         BaseMod.addEvent(new AddEventParams.Builder(D8.ID, sneckomod.events.D8.class) //Event ID//
                 //Event Character//
@@ -455,9 +457,13 @@ public class SneckoMod implements
     }
 
     public static void resetUnknownsLists() {
+        for (int i = 0; i < 10; i++) {
+            System.out.println("CLEARING UNKNOWN LISTS!!!");
+        }
         validColors.clear();
-        for (AbstractPlayer p : CardCrawlGame.characterManager.getAllCharacters()) {
-            validColors.add(p.getCardColor());
+        for (AbstractCard.CardColor c : AbstractCard.CardColor.values()) {
+            if (c != AbstractCard.CardColor.CURSE && c != AbstractCard.CardColor.COLORLESS)
+                validColors.add(c);
         }
         updateAllUnknownReplacements();
     }
@@ -506,7 +512,7 @@ public class SneckoMod implements
             choosingCharacters = 0;
             colorChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for (AbstractCard.CardColor r : AbstractCard.CardColor.values()) {
-                if (r != AbstractCard.CardColor.CURSE && r != AbstractDungeon.player.getCardColor() && r != AbstractCard.CardColor.COLORLESS) {
+                if (r != AbstractCard.CardColor.CURSE && r != AbstractDungeon.player.getCardColor() && r != AbstractCard.CardColor.COLORLESS && r != CardColorEnumPatch.CardColorPatch.BOSS) {
                     String s = getClassFromColor(r);
                     AbstractCard q = playerStartCardForEventFromColor(r);
                     CustomCard c = new OctoChoiceCard("UNVERIFIED", s + " Cards", "bronzeResources/images/cards/BuggyMess.png", "Unknown cards can become " + s + " cards this run.", r, q.type);
@@ -522,7 +528,7 @@ public class SneckoMod implements
 
     public static void addToLists(AbstractUnknownCard c, ArrayList<Predicate<AbstractCard>> predList, ArrayList<ArrayList<String>> listList) {
         predList.add(c.myNeeds());
-        if (c.myList() != null && predList.indexOf(c.myNeeds()) < 22) {
+        if (c.myList() != null) {
             c.myList().clear();
             listList.add(c.myList());
         }
@@ -535,35 +541,61 @@ public class SneckoMod implements
         ArrayList<Predicate<AbstractCard>> predList = new ArrayList<>();
         ArrayList<ArrayList<String>> listList = new ArrayList<>();
 
-        addToLists(new Unknown(), predList, listList);
+        addToLists(new Unknown(), predList, listList); // 0
         addToLists(new Unknown0Cost(), predList, listList);
         addToLists(new Unknown1Cost(), predList, listList);
         addToLists(new Unknown2Cost(), predList, listList);
         addToLists(new Unknown3Cost(), predList, listList);
-        addToLists(new UnknownBlock(), predList, listList);
-        addToLists(new UnknownColorless(), predList, listList);
+        addToLists(new UnknownBlock(), predList, listList); // 5
         addToLists(new UnknownCommonAttack(), predList, listList);
         addToLists(new UnknownCommonSkill(), predList, listList);
         addToLists(new UnknownDexterity(), predList, listList);
         // addToLists(new UnknownEthereal(), predList, listList);
         addToLists(new UnknownExhaust(), predList, listList);
-        addToLists(new UnknownRareAttack(), predList, listList);
+        addToLists(new UnknownRareAttack(), predList, listList); // 10
         addToLists(new UnknownRarePower(), predList, listList);
         addToLists(new UnknownRareSkill(), predList, listList);
         addToLists(new UnknownStrength(), predList, listList);
         addToLists(new UnknownStrike(), predList, listList);
-        addToLists(new UnknownUncommonAttack(), predList, listList);
+        addToLists(new UnknownUncommonAttack(), predList, listList); // 15
         addToLists(new UnknownUncommonSkill(), predList, listList);
         addToLists(new UnknownUncommonPower(), predList, listList);
         addToLists(new UnknownVulnerable(), predList, listList);
         addToLists(new UnknownWeak(), predList, listList);
-        addToLists(new UnknownX(), predList, listList);
+        addToLists(new UnknownX(), predList, listList);  // 20
         addToLists(new UnknownDraw(), predList, listList);
+        addToLists(new UnknownBoss(), predList, listList); // 22
 
         for (AbstractUnknownCard q : SneckoMod.unknownClasses) {
             addToLists(q, predList, listList);
         }
+        addToLists(new UnknownColorless(), predList, listList);
 
         AbstractUnknownCard.updateReplacements(predList, listList);
+    }
+
+    public static void importantStuff() {
+        if (!SneckoMod.openedStarterScreen) {
+            if (CardCrawlGame.isInARun() && downfallMod.readyToDoThing) {
+                SneckoMod.findAWayToTriggerThisAtGameStart();
+                SneckoMod.openedStarterScreen = true;
+            }
+        }
+        if (SneckoMod.choosingCharacters > -1 && SneckoMod.choosingCharacters <= 2 && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            SneckoMod.colorChoices.removeCard(c);
+            SneckoMod.validColors.add(c.color);
+            AbstractDungeon.gridSelectScreen.selectedCards.clear();
+            if (SneckoMod.choosingCharacters == 2) {
+                SneckoMod.choosingCharacters = 3;
+                CenterGridCardSelectScreen.centerGridSelect = false;
+                SneckoMod.updateAllUnknownReplacements();
+                AbstractDungeon.commonCardPool.group.removeIf(ii -> ii instanceof UnknownClass && !SneckoMod.validColors.contains(ii.color));
+                AbstractDungeon.srcCommonCardPool.group.removeIf(ii -> ii instanceof UnknownClass && !SneckoMod.validColors.contains(ii.color));
+            } else if (SneckoMod.choosingCharacters < 2) {
+                SneckoMod.choosingCharacters += 1;
+                SneckoMod.dualClassChoice();
+            }
+        }
     }
 }

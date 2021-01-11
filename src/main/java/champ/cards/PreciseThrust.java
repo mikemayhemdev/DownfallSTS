@@ -38,20 +38,8 @@ public class PreciseThrust extends AbstractChampCard {
     }
 
     @Override
-    public void applyPowers() {
-        rawDescription = UPGRADE_DESCRIPTION;
-        if (bcombo()) rawDescription += "[#5ebf2a]";
-        else rawDescription += "*";
-        rawDescription += EXTENDED_DESCRIPTION[0];
-        if (dcombo()) rawDescription += "[#5ebf2a]";
-        else rawDescription += "*";
-        rawDescription += EXTENDED_DESCRIPTION[1];
-        initializeDescription();
-    }
-
-    @Override
     public void triggerOnGlowCheck() {
-        glowColor = dcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = (bcombo() || dcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

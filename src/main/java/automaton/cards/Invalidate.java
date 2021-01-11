@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -19,7 +20,7 @@ public class Invalidate extends AbstractBronzeCard {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL);
         baseMagicNumber = magicNumber = MAGIC;
         thisEncodes();
-        baseAuto = auto = 1;
+        tags.add(AutomatonMod.BAD_COMPILE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -31,7 +32,7 @@ public class Invalidate extends AbstractBronzeCard {
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay){
-            applyToSelf(new VulnerablePower(AbstractDungeon.player,auto, false));
+            applyToSelf(new VulnerablePower(AbstractDungeon.player,1, false));
         }
     }
 

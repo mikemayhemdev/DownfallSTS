@@ -32,12 +32,16 @@ public class EnBash extends AbstractBossCard {
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(downfallMod.CHARBOSS_SETUP);
+        artifactConsumedIfPlayed = 1;
+        if (AbstractCharBoss.boss.hasRelic(CBR_ChampionsBelt.ID)){
+            artifactConsumedIfPlayed = 2;
+        }
     }
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        this.addToBot(new ApplyPowerAction(p, m, new VulnerablePower(p, this.magicNumber, false), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, m, new VulnerablePower(p, this.magicNumber + 1, false), this.magicNumber + 1));
         if (!p.hasPower(ArtifactPower.POWER_ID)){
             if (AbstractCharBoss.boss.hasRelic(CBR_ChampionsBelt.ID)){
                 AbstractCharBoss.boss.getRelic(CBR_ChampionsBelt.ID).onTrigger();

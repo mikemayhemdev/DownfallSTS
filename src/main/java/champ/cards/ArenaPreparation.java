@@ -12,8 +12,6 @@ import downfall.cardmods.RetainCardMod;
 
 import java.util.ArrayList;
 
-import static champ.ChampMod.fatigue;
-
 public class ArenaPreparation extends AbstractChampCard {
 
     public final static String ID = makeID("ArenaPreparation");
@@ -22,7 +20,6 @@ public class ArenaPreparation extends AbstractChampCard {
 
     public ArenaPreparation() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        myHpLossCost = 5;
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
         tags.add(ChampMod.TECHNIQUE);
@@ -30,16 +27,16 @@ public class ArenaPreparation extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
-        fatigue(myHpLossCost);
         for (int i = 0; i < magicNumber; i++) {
             ArrayList<AbstractCard> qCardList = new ArrayList<AbstractCard>();
             for (AbstractCard t : CardLibrary.getAllCards()) {
-                if (!UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.TECHNIQUE) && !(t.hasTag(CardTags.HEALING)))
+                if (!(t.cardID.equals(this.cardID)) && !UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.TECHNIQUE) && !(t.hasTag(CardTags.HEALING)))
                     qCardList.add(t);
             }
             AbstractCard c = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1)).makeStatEquivalentCopy();
-            CardModifierManager.addModifier(c, new RetainCardMod());
+            c.isSeen = true;
             UnlockTracker.markCardAsSeen(c.cardID);
+            CardModifierManager.addModifier(c, new RetainCardMod());
             makeInHand(c);
         }
     }

@@ -25,15 +25,18 @@ import javassist.expr.FieldAccess;
 import javassist.expr.MethodCall;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import slimebound.SlimeboundMod;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class FlipMap {
     public static final Logger logger = LogManager.getLogger(FlipMap.class.getName());
+
+    private static final HashSet<String> invalidActs;
+    static {
+        invalidActs = new HashSet<>();
+        invalidActs.add("paleoftheancients:PaleOfTheAncients");
+        invalidActs.add("infinite-spire:TheVoid");
+    }
 
     @SpirePatch(
             clz = AbstractDungeon.class,
@@ -50,17 +53,16 @@ public class FlipMap {
                 locator = Locator.class
         )
         public static void flipflipflipflipflip() {
-            if (downfallMod.normalMapLayout) {
-                if (EvilModeCharacterSelect.evilMode) {
+            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
+                if (downfallMod.normalMapLayout) {
                     if (!AbstractDungeon.id.equals(TheEnding.ID)) {
 
                         flipCampfire();
                     }
                     flip(AbstractDungeon.map);
-                }
-            } else {
-                if (EvilModeCharacterSelect.evilMode)
+                } else {
                     flip(AbstractDungeon.map);
+                }
             }
         }
 
@@ -159,7 +161,7 @@ public class FlipMap {
     public static class EliteRoomPatch {
         @SpirePrefixPatch
         public static SpireReturn<Boolean> Prefix(MapRoomNode n, AbstractRoom roomToBeSet) {
-            if (EvilModeCharacterSelect.evilMode) {
+            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
                 List<Class<? extends AbstractRoom>> applicableRooms = Arrays.asList(RestRoom.class, MonsterRoomElite.class);
                 List<Class<RestRoom>> applicableRooms2 = Collections.singletonList(RestRoom.class);
 
@@ -181,7 +183,7 @@ public class FlipMap {
     public static class FixMapGenProbelms {
         @SpirePostfixPatch
         public static ArrayList<ArrayList<MapRoomNode>> patch(ArrayList<ArrayList<MapRoomNode>> __result, Random rng, ArrayList<ArrayList<MapRoomNode>> map, ArrayList<AbstractRoom> roomList) {
-            if (EvilModeCharacterSelect.evilMode) {
+            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
                 for (int i = 0; i < __result.size(); i++) {
                     for(MapRoomNode mn : __result.get(i)) {
                         if(mn.room instanceof ShopRoom) {
@@ -225,7 +227,7 @@ public class FlipMap {
     public static class FixNoRestEmeraldElite {
         @SpireInsertPatch(locator = Locator.class, localvars = {"chosenNode"})
         public static void patch(MapRoomNode chosenNode) {
-            if (AbstractDungeon.actNum == 3 && EvilModeCharacterSelect.evilMode) {
+            if (AbstractDungeon.actNum == 3 && EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
                 if(!hasRestSite(chosenNode)) {
                     ArrayList<MapRoomNode> cN = getConnectedNodes(chosenNode);
                     logger.info("Found and fixed emerald elite without campfire.");
@@ -278,7 +280,7 @@ public class FlipMap {
         }
 
         public static int isValidFirstNode(MapRoomNode n) {
-            if (EvilModeCharacterSelect.evilMode) {
+            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
                 if (n.y == FlipMap.EverythingIsWrong.startY) {
                     return 0;
                 } else if (n.y == 0) {
@@ -315,7 +317,7 @@ public class FlipMap {
 
         @SpirePostfixPatch
         public static void upYouGo(MapRoomNode __instance, int x, int y) {
-            if (EvilModeCharacterSelect.evilMode) {
+            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
                 __instance.offsetY += EVIL_ADJUST;
             }
         }
@@ -334,7 +336,7 @@ public class FlipMap {
                 localvars = {"tmpDY", "tmpSY"}
         )
         public static void boop(MapEdge __instance, int srcX, int srcY, float srcOffsetX, float srcOffsetY, int dstX, int dstY, float dstOffsetX, float dstOffsetY, boolean isBoss, @ByRef float[] tmpSY, @ByRef float[] tmpDY) {
-            if (EvilModeCharacterSelect.evilMode) {
+            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
                 tmpDY[0] += bop;
                 tmpSY[0] += bop;
             }
@@ -361,7 +363,7 @@ public class FlipMap {
                 localvars = {"targetOffsetY"}
         )
         public static void doot(DungeonMapScreen __instance, boolean scrolly, float ___mapScrollUpperLimit, @ByRef float[] targetOffsetY) {
-            if (EvilModeCharacterSelect.evilMode) {
+            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
                 if (scrolly) {
                     WhyDoYouNotPayAnyRealAttentionToTheVariables.lower = targetOffsetY[0] + ADJUST;
                     WhyDoYouNotPayAnyRealAttentionToTheVariables.upper = targetOffsetY[0] = DungeonMapScreen.offsetY + MORE_ADJUST;
@@ -397,7 +399,7 @@ public class FlipMap {
 
         @SpirePrefixPatch
         public static SpireReturn<?> WellThenIHaveToDoItMyself(DungeonMapScreen __instance, float ___targetOffsetY, @ByRef float[] ___scrollWaitTimer) {
-            if (EvilModeCharacterSelect.evilMode) {
+            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
                 ___scrollWaitTimer[0] -= Gdx.graphics.getDeltaTime();
                 if (___scrollWaitTimer[0] < 0.0F) {
                     DungeonMapScreen.offsetY = MathUtils.lerp(DungeonMapScreen.offsetY, ___targetOffsetY, Gdx.graphics.getDeltaTime() * 12.0F);
@@ -462,7 +464,7 @@ public class FlipMap {
         public static int compatibleGetARealY(MapRoomNode mmmmmm) {
             if (Loader.isModLoaded("actlikeit")) {
                 return MapCompatiblity.actLikeItCheck();
-            } else if (EvilModeCharacterSelect.evilMode) {
+            } else if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
                 if (mmmmmm.y == 0)
                     return AbstractDungeon.id.equals(TheEnding.ID) ? 2 : 14;
                 return 0;
@@ -471,7 +473,7 @@ public class FlipMap {
         }
 
         public static int getARealY(MapRoomNode mmmmmm) {
-            if (EvilModeCharacterSelect.evilMode) {
+            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
                 if (mmmmmm.y == 0)
                     return AbstractDungeon.id.equals(TheEnding.ID) ? 2 : 14;
                 return 0;

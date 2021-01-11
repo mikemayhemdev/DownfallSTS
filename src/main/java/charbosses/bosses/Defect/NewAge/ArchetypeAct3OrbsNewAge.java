@@ -6,12 +6,8 @@ import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.blue.*;
 import charbosses.cards.colorless.EnBlind;
-import charbosses.cards.colorless.EnPanicButton;
-import charbosses.cards.colorless.EnSwiftStrike;
-import charbosses.cards.curses.EnClumsy;
-import charbosses.cards.curses.EnShame;
 import charbosses.orbs.AbstractEnemyOrb;
-import charbosses.powers.DefectCuriosityPower;
+import charbosses.powers.bossmechanicpowers.DefectCuriosityPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -28,8 +24,6 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
 
     public ArchetypeAct3OrbsNewAge() {
         super("DF_ARCHETYPE_ORBS", "Orbs");
-        bossMechanicName = bossMechanicString.DIALOG[16];
-        bossMechanicDesc = bossMechanicString.DIALOG[17];
 
         maxHPModifier += 350;
         actNum = 3;
@@ -43,7 +37,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
 
     }
 
-    private void increasePretendFocus(int amount) {
+    public static void increasePretendFocus(int amount) {
         for (AbstractOrb o : AbstractCharBoss.boss.orbs) {
             if (o instanceof AbstractEnemyOrb) {
                 ((AbstractEnemyOrb) o).pretendFocus += amount;
@@ -87,29 +81,49 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
         if (!looped) {
             switch (turn) {
                 case 0:
+                    // No Orbs
                     addToList(cardsList, new EnRainbow());
                     addToList(cardsList, new EnReinforcedBody(), extraUpgrades);
                     addToList(cardsList, new EnChargeBattery());
+                    // Lightning Frost Dark
                     turn++;
                     break;
                 case 1:
                     //Turn 2
+                    // Lightning Frost Dark
                     addToList(cardsList, new EnZap(), true);
+                    //Evokes Lightning
+                    cB.orbsAsEn().get(0).evokeOverride = true;
+                    // Frost Dark Lightning
                     addToList(cardsList, new EnDualcast());
+                    // Evokes Frost
+                    cB.orbsAsEn().get(1).evokeOverride = true;
+                    cB.orbsAsEn().get(1).evokeMult = 2;
+                    // Dark Lightning
                     addToList(cardsList, new EnMulticast(2));
+                    // Evokes Dark
+                    cB.orbsAsEn().get(2).evokeOverride = true;
+                    cB.orbsAsEn().get(2).evokeMult = 2;
+                    // Lightning
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnBullseye(), true);
+                    //Turn 3
+                    //Lightning
+                    addToList(cardsList, new EnBarrage(), true); // Bullseye was here, but Bullseye is a cursed thing
                     addToList(cardsList, new EnColdSnap());
+                    //Lightning Frost
                     addToList(cardsList, new EnLeap());
                     turn++;
                     break;
                 case 3:
                     //Turn 4
+                    //Lightning Frost
                     addToList(cardsList, new EnStorm(), false);
+                    AbstractBossCard.fakeStormPower = true;
                     addToList(cardsList, new EnDefragment(), true);
                     increasePretendFocus(2);
+                    //Lightning Frost Lightning
                     addToList(cardsList, new EnBlind(), extraUpgrades);
                     turn = 0;
                     looped = true;
@@ -118,20 +132,33 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
         } else {
             switch (turn) {
                 case 0:
+                    //Lightning Frost Lightning
                     addToList(cardsList, new EnLeap());
                     addToList(cardsList, new EnChargeBattery());
-                    addToList(cardsList, new EnBullseye(), false);
+                    addToList(cardsList, new EnBarrage(), true); //Vex replaced Bullseye with Barrage+ here.
                     turn++;
                     break;
                 case 1:
+                    //Lightning Frost Lightning
                     addToList(cardsList, new EnBlind(), true);
                     addToList(cardsList, new EnDualcast());
+                    //Evokes Lightning
+                    cB.orbsAsEn().get(0).evokeOverride = true;
+                    cB.orbsAsEn().get(0).evokeMult = 2;
+                    //Lightning Frost
                     addToList(cardsList, new EnMulticast(3));
+                    // Evokes Frost!
+                    cB.orbsAsEn().get(1).evokeOverride = true;
+                    cB.orbsAsEn().get(1).evokeMult = 3;
+                    // Lightning
                     turn++;
                     break;
                 case 2:
+                    // Lightning
                     addToList(cardsList, new EnColdSnap(), false);
+                    //Lightning Frost
                     addToList(cardsList, new EnZap(), true);
+                    // Lightning Frost Lightning. Perfect loop!
                     addToList(cardsList, new EnReinforcedBody(), extraUpgrades);
                     turn = 0;
                     looped = true;

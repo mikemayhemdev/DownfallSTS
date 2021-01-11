@@ -20,14 +20,6 @@ public class TinkerersToolbox extends AbstractBronzeCard {
 
     //stupid intellij stuff skill, self, rare
 
-    public static AbstractCard constPrev1 = new Debug();
-    public static AbstractCard constPrev2 = new Batch();
-    public static AbstractCard constPrev3 = new Decompile();
-
-    public AbstractCard prev1 = null;
-    public AbstractCard prev2 = null;
-    public AbstractCard prev3 = null;
-
     private float rotationTimer;
     private int previewIndex;
     private ArrayList<AbstractCard> cardsList = new ArrayList<>();
@@ -40,10 +32,11 @@ public class TinkerersToolbox extends AbstractBronzeCard {
         cardsList.add(new Debug());
         cardsList.add(new Batch());
         cardsList.add(new Decompile());
+        cardsList.add(new ByteShift());
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new SelectCardsCenteredAction(cardsList, 1, "Choose.", (cards) -> addToTop(new MakeTempCardInHandAction(cards.get(0).makeCopy(), true)))); //TODO: Localize
+        addToBot(new SelectCardsCenteredAction(cardsList, 1, masterUI.TEXT[8], (cards) -> addToTop(new MakeTempCardInHandAction(cards.get(0).makeCopy(), true))));
     }
 
     public void upp() {

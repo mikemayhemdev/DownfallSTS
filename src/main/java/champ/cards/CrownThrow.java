@@ -1,8 +1,12 @@
 package champ.cards;
 
+import basemod.helpers.VfxBuilder;
 import champ.powers.BoomerangPower;
+import champ.util.TextureLoader;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class CrownThrow extends AbstractChampCard {
@@ -21,7 +25,11 @@ public class CrownThrow extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        // TODO: Do a throw vfx. First you throw a crown...
+        // First you throw a crown...
+        AbstractDungeon.effectList.add(new VfxBuilder(TextureLoader.getTexture("champResources/images/relics/ChampionCrown.png"), p.hb.x + p.hb.width, p.hb.cY, 1.5F)
+                .moveX(p.hb.x + p.hb.width, Settings.WIDTH + (128 * Settings.scale))
+                .rotate(-300F)
+                .build());
         if (this.costForTurn != 0 && !freeToPlayOnce) {
             applyToSelf(new BoomerangPower(this));
         }

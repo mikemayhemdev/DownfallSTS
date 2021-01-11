@@ -25,7 +25,7 @@ public class UnplayableMod extends BronzeCardMod {
 
     @Override
     public boolean canPlayCard(AbstractCard card) {
-        card.cantUseMessage = "ERR_NULL_PTR"; //TODO: Localize
+        card.cantUseMessage = CardCrawlGame.languagePack.getUIString(AutomatonMod.makeID("UnplayableMod")).TEXT[1];
         return false;
     }
 

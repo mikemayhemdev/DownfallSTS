@@ -1,6 +1,5 @@
 package sneckomod.cards.unknowns;
 
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import sneckomod.SneckoMod;
@@ -12,7 +11,7 @@ public class UnknownColorless extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownColorless");
 
     public UnknownColorless() {
-        super(ID, CardType.SKILL, CardRarity.RARE);
+        super(ID, CardType.SKILL, CardRarity.UNCOMMON);
     }
 
     @Override

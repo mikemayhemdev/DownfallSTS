@@ -109,16 +109,16 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
     public ArrayList<OctoChoiceCard> choiceList() {
         ArrayList<OctoChoiceCard> realList = new ArrayList<>();
 
-        if (this.baseMagicNumber != 1)
+        if (baseMagicNumber != 1)
             realList.add(cardList.get(0));
-        if (this.baseMagicNumber != 2)
+        if (baseMagicNumber != 2)
             realList.add(cardList.get(1));
-        if (this.baseMagicNumber != 3)
+        if (baseMagicNumber != 3)
             realList.add(cardList.get(2));
-        if (this.baseMagicNumber != 4)
+        if (baseMagicNumber != 4)
             realList.add(cardList.get(3));
 
-        return cardList;
+        return realList;
 
     }
 
@@ -134,14 +134,14 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
                 updateMagic(2);
                 break;
             }
-            case "Slimebound:SplotLeeching": {
-                addToBot(new SlimeSpawnAction(new ShieldSlime(), false, true));
-                updateMagic(4);
-                break;
-            }
             case "Slimebound:SplotMire": {
                 addToBot(new SlimeSpawnAction(new SlimingSlime(), false, true));
                 updateMagic(3);
+                break;
+            }
+            case "Slimebound:SplotLeeching": {
+                addToBot(new SlimeSpawnAction(new ShieldSlime(), false, true));
+                updateMagic(4);
                 break;
             }
 

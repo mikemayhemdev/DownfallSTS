@@ -51,14 +51,4 @@ public class SuperSneckoSoul extends CustomRelic {
         return DESCRIPTIONS[0] + sb.toString() + DESCRIPTIONS[1];
     }
 
-    @Override
-    public void onEquip() {
-        int i = 0;
-        for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
-            if (q instanceof AbstractUnknownCard) {
-                i += 2;
-            }
-        }
-        AbstractDungeon.player.increaseMaxHp(i, true);
-    }
 }

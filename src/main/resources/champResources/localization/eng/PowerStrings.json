@@ -9,7 +9,7 @@
   "champ:ResolvePower": {
     "NAME": "Fatigue",
     "DESCRIPTIONS": [
-      "You have #b1 #yStrength for every #b5 Fatigue. At the end of combat, restore your Fatigued HP."
+      "You have #b1 #yStrength for every #b10 Fatigue. At the end of combat, restore your Fatigued HP."
     ]
   },
   "champ:FocusedDefPower": {
@@ -22,7 +22,7 @@
   "champ:FocusedBerPower": {
     "NAME": "Focused: Berserker",
     "DESCRIPTIONS": [
-      "At the end of your turn, if you have at least #b15 #yFatigue, deal #b",
+      "At the end of your turn, if you have at least #b20 #yFatigue, deal #b",
       " damage to ALL enemies."
     ]
   },

@@ -34,6 +34,6 @@ public class Boost extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeBlock(2);
+        upgradeBaseCost(1);
     }
 }

@@ -73,7 +73,7 @@
   },
   "champ:FocusedBerserking": {
     "NAME": "Focus: Berserker",
-    "DESCRIPTION": "Enter champ:Berserker. NL If you end this turn with at least 15 champ:Fatigue, deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Enter champ:Berserker. NL If you end this turn with at least 20 champ:Fatigue, deal !D! damage to ALL enemies."
   },
   "champ:SetATrap": {
     "NAME": "Set A Trap",
@@ -108,7 +108,7 @@
   },
   "champ:GutPunch": {
     "NAME": "Gut Punch",
-    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage. NL Gain !B! Block. NL *Defensive champ:Combo: Gain [E] ."
+    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage. NL *Defensive champ:Combo: Gain [E] and !B! Block."
   },
   "champ:FanOfKnives": {
     "NAME": "Fan of Knives",
@@ -117,7 +117,7 @@
   },
   "champ:Devastate": {
     "NAME": "Devastate",
-    "DESCRIPTION": "Deal !D! damage. NL Increase the damage this card deals by !M! permanently. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Costs 1 less [E] for each Finisher played this combat."
   },
   "champ:Control": {
     "NAME": "Control",
@@ -133,7 +133,7 @@
   "champ:Circumvent": {
     "NAME": "Circumvent",
     "DESCRIPTION": "Gain !B! Block. NL *Defensive champ:Combo: Gain Block equal to your champ:Counter.",
-    "UPGRADE_DESCRIPTION": "Gain 3 champ:Counter. NL Gain !B! Block. NL *Defensive champ:Combo: Gain Block equal to your champ:Counter."
+    "UPGRADE_DESCRIPTION": "Gain !M! champ:Counter. NL Gain !B! Block. NL *Defensive champ:Combo: Gain Block equal to your champ:Counter."
   },
   "champ:SkillfulDodge": {
     "NAME": "Skillful Dodge",
@@ -149,8 +149,9 @@
     "DESCRIPTION": "Gain !B! Block. NL If your Block is broken this turn, gain !B! Block next turn."
   },
   "champ:ShieldSlam": {
-    "NAME": "Shield Slam",
-    "DESCRIPTION": "Can only be played if you have at least 20 Block. NL Deal !D! damage."
+    "NAME": "Moment of Truth",
+    "DESCRIPTION": "Retain.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Draw 1 card."
   },
   "champ:EnchantShield": {
     "NAME": "Enchant Shield",
@@ -204,9 +205,9 @@
   },
   "champ:ViciousMockery": {
     "NAME": "Vicious Mockery",
-    "DESCRIPTION": "If any enemy is debuffed: NL *Berserker champ:Combo: Gain !M! temporary Strength. NL *Defensive champ:Combo: Gain !M! temporary  Dexterity.",
+    "DESCRIPTION": "*Berserker champ:Combo: Gain !M! temporary Strength. NL *Defensive champ:Combo: Gain !M! temporary  Dexterity.",
     "EXTENDED_DESCRIPTION": [
-      "If the enemy is debuffed: NL ",
+      "",
       "Berserker champ:Combo: Gain !M! temporary Strength. NL ",
       "Defensive champ:Combo: Gain !M! temporary Dexterity. NL Exhaust.",
       "Defensive champ:Combo: Gain !M! temporary Dexterity."
@@ -223,12 +224,11 @@
   },
   "champ:CrookedStrike": {
     "NAME": "Crooked Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Enemy loses 1 Strength this turn for every 5 champ:Fatigue you have."
+    "DESCRIPTION": "Deal !D! damage. NL Hits three times if *Fatigue is 20 or higher."
   },
     "champ:RapidStrikes": {
     "NAME": "Rapid Strikes",
-    "DESCRIPTION": "Deal !D! damage two times. NL Deal !D! damage an additional time for each champ:Technique used this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage three times. NL Deal !D! damage an additional time for each champ:Technique used this turn.",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Deal !D! damage an additional time for each champ:Technique used this turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " time.)",
@@ -275,17 +275,17 @@
   },
   "champ:EnragedBash": {
     "NAME": "Enraged Bash",
-    "DESCRIPTION": "Deal !D! damage. NL champ:Fatigue 4. NL *Berserker champ:Combo: This card hits an additional time this combat.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. NL champ:Fatigue 4. NL *Berserker champ:Combo: This card hits an additional time this combat."
+    "DESCRIPTION": "Deal !D! damage. NL champ:Fatigue 5. NL *Berserker champ:Combo: This card hits an additional time this combat.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. NL champ:Fatigue 5. NL *Berserker champ:Combo: This card hits an additional time this combat."
   },
   "champ:VampiricStrike": {
-    "NAME": "Vampiric Lash",
-    "DESCRIPTION": "Deal !D! damage !M! times. Heal HP equal to unblocked damage. NL Exhaust."
+    "NAME": "Clobber",
+    "DESCRIPTION": "Deal !D! damage. *Berserker champ:Combo: NL Gain [E] . NL *Defensive champ:Combo: Gain Block equal to unblocked damage dealt."
   },
   "champ:AdrenalArmor": {
     "NAME": "Adrenal Armor",
-    "DESCRIPTION": "Gain !B! Block. NL champ:Fatigue !M!. NL *Berserker champ:Combo: Play this twice.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL champ:Fatigue !M!. NL *Berserker champ:Combo: Play this twice."
+    "DESCRIPTION": "Gain !B! Block. NL *Berserker champ:Combo: Play this twice.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL *Berserker champ:Combo: Play this twice."
   },
   "champ:HeartStrike": {
     "NAME": "Finish Him",
@@ -305,7 +305,7 @@
   },
   "champ:Encircle": {
     "NAME": "Encircle",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL champ:Fatigue 2. NL *Berserker champ:Combo: Play this twice. "
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL *Berserker champ:Combo: Play this twice. "
   },
   "champ:LastStand": {
     "NAME": "Last Stand",
@@ -329,7 +329,7 @@
   },
   "champ:ArenaPreparation": {
     "NAME": "Arena Preparation",
-    "DESCRIPTION": "champ:Fatigue 5. NL Add !M! random champ:Techniques into your hand. NL They gain Retain. NL Exhaust."
+    "DESCRIPTION": "Add !M! random champ:Techniques into your hand. NL They gain Retain. NL Exhaust."
   },
   "champ:EndlessRage": {
     "NAME": "Endless Rage",
@@ -443,5 +443,10 @@
     "EXTENDED_DESCRIPTION": [
       "I am not in a Stance."
     ]
+  },
+  "champ:TripleStrike": {
+    "NAME": "Triple Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Add 2 *Strikes into your hand. They cost 0 and have champ:Technique. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add 2 Upgraded *Strikes into your hand. They cost 0 and have champ:Technique. NL Exhaust."
   }
 }

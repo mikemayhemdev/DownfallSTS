@@ -10,7 +10,10 @@ import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnDecay;
 import charbosses.cards.green.*;
 import charbosses.cards.purple.EnFlyingSleeves;
+import charbosses.powers.bossmechanicpowers.IroncladStatusPower;
+import charbosses.powers.bossmechanicpowers.SilentMirrorImagePower;
 import charbosses.relics.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -21,8 +24,6 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
 
     public ArchetypeAct2MirrorImageNewAge() {
         super("SI_MIRROR_ARCHETYPE", "Mirror");
-        bossMechanicName = bossMechanicString.DIALOG[10];
-        bossMechanicDesc = bossMechanicString.DIALOG[11];
 
         maxHPModifier += 220;
         actNum = 2;
@@ -32,6 +33,8 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
     public void addedPreBattle() {
         super.addedPreBattle();
         CharBossSilent p = (CharBossSilent) AbstractCharBoss.boss;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SilentMirrorImagePower(p)));
+
         p.spawnImage(false);
     }
 

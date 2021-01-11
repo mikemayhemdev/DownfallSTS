@@ -47,6 +47,7 @@ public class RecursiveStrike extends AbstractBronzeCard {
 
     public void upp() {
         cardsToPreview.upgrade();
+        upgradeDamage(3);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

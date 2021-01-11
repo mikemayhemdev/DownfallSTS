@@ -9,7 +9,6 @@ import charbosses.bosses.Ironclad.NewAge.ArchetypeAct1StatusesNewAge;
 import charbosses.bosses.Ironclad.NewAge.ArchetypeAct2MushroomsNewAge;
 import charbosses.bosses.Ironclad.NewAge.ArchetypeAct3BlockNewAge;
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.anticards.ShieldSmash;
 import charbosses.cards.red.EnBodySlam;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.monsters.*;
@@ -31,6 +30,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BarricadePower;
+import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
@@ -132,12 +132,13 @@ public class CharBossIronclad extends AbstractCharBoss {
     @Override
     public void takeTurn() {
         super.takeTurn();
+        String[] DESCRIPTIONS = CardCrawlGame.languagePack.getEventString("champ:ChampTalk").DESCRIPTIONS;
         if (AbstractDungeon.player instanceof ChampChar && AbstractDungeon.actNum == 1) {
             if (!ChampMod.talked1 && !ChampMod.talked2) {
-                AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, CardCrawlGame.languagePack.getEventString("champ:ChampTalk").DESCRIPTIONS[0], 1.0F, 2.0F));
+                AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, DESCRIPTIONS[0], 1.0F, 2.0F));
                 ChampMod.talked1 = true;
             } else if (!ChampMod.talked2) {
-                AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, CardCrawlGame.languagePack.getEventString("champ:ChampTalk").DESCRIPTIONS[1], 1.0F, 2.0F));
+                AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, DESCRIPTIONS[1], 1.0F, 2.0F));
                 ChampMod.talked2 = true;
             }
         }
@@ -177,7 +178,7 @@ public class CharBossIronclad extends AbstractCharBoss {
 
         downfallMod.saveBossFight(CharBossIronclad.ID);
 
-        if (NeowBoss.neowboss != null){
+        if (hasPower(MinionPower.POWER_ID)){
             for (AbstractMonster m:AbstractDungeon.getCurrRoom().monsters.monsters){
                 if (m instanceof Fortification || m instanceof MushroomPurple || m instanceof MushroomRed || m instanceof MushroomWhite){
                     AbstractDungeon.actionManager.addToBottom(new InstantKillAction(m));

@@ -35,7 +35,7 @@ public class Harden extends AbstractGuardianCard {
 
 
     //TUNING CONSTANTS
-    private static final int BLOCK = 14;
+    private static final int BLOCK = 12;
     private static final int THORNS = 2;
     private static final int UPGRADE_BLOCK = 4;
     private static final int SOCKETS = 0;
@@ -76,7 +76,7 @@ public class Harden extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));
+        //AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));
 
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));

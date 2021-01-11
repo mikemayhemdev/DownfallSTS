@@ -10,7 +10,8 @@
     "NAME": "Black Heart of Goo",
     "FLAVOR": "The Secret of the Ooze.",
     "DESCRIPTIONS": [
-      "Whenever you #yslimeboundmod:Consume, heal 2 HP."
+      "Replaces ",
+      ".[] NL Whenever you #yslimeboundmod:Consume, heal 2 HP."
     ]
   },
   "Slimebound:SlimedTailRelic": {
@@ -55,7 +56,7 @@
     "NAME": "Slime Soup",
     "FLAVOR": "Tastes awful, but incredibly healthy.",
     "DESCRIPTIONS": [
-      "When you enter a Rest Site, begin the next combat with a #yPrepare card that costs #b0 for your first turn."
+      "When you enter a Rest Site, begin the next combat with a #yPrepare card that costs #b0."
     ]
   },
   "Slimebound:AggressiveSlimeRelic": {

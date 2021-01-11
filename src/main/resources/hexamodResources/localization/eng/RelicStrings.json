@@ -18,7 +18,7 @@
     "FLAVOR": "Let’s see if we can do... better.",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] NL The first time you #yIgnite a Ghostflame each turn, gain [E] and #b3 #yBlock."
+      ".[] NL The first time you #yIgnite a Ghostflame each turn, gain [E] ."
     ]
   },
   "hexamod:IceCube": {
@@ -32,7 +32,7 @@
     "NAME": "Thermal Stone",
     "FLAVOR": "A fire would liven this thing up!",
     "DESCRIPTIONS": [
-      "If #yhexamod:Soulburn detonates, heal #b2 HP at the end of combat."
+      "If #yhexamod:Soulburn detonates, heal #b4 HP at the end of combat."
     ]
   },
   "hexamod:RecyclingMachine": {

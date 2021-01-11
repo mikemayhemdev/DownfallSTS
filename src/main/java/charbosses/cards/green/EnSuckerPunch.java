@@ -28,12 +28,13 @@ public class EnSuckerPunch extends AbstractBossCard {
         super(ID, EnSuckerPunch.cardStrings.NAME, "green/attack/sucker_punch", 1, EnSuckerPunch.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_DEBUFF);
         this.baseDamage = 8;
         this.baseMagicNumber = magicNumber = 1;
+        artifactConsumedIfPlayed = 1;
     }
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, magicNumber, true), magicNumber));
+        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, magicNumber + 1, true), magicNumber + 1));
     }
 
     @Override

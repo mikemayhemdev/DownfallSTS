@@ -23,7 +23,7 @@ public class UnknownDraw extends AbstractUnknownCard {
     public static boolean bruh = false;
 
     public UnknownDraw() {
-        super(ID, CardType.SKILL, CardRarity.UNCOMMON);
+        super(ID, CardType.SKILL, CardRarity.COMMON);
     }
 
     public boolean useCheck(AbstractCard card) {

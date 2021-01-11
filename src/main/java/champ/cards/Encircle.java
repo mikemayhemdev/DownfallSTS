@@ -23,7 +23,6 @@ public class Encircle extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-        myHpLossCost = 2;
         //  tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
@@ -36,7 +35,6 @@ public class Encircle extends AbstractChampCard {
             atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
 
-        fatigue(2);
         if (bcombo() && !this.purgeOnUse) {
             AbstractCard r = this;
             atb(new AbstractGameAction() {

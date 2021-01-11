@@ -2,8 +2,12 @@ package automaton;
 
 import automaton.cards.AbstractBronzeCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.UIStrings;
 
 public class CompileDisplayPanel extends EasyInfoDisplayPanel {
+
+    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("bronze:CompileDisplayPanel");
 
     public CompileDisplayPanel() {
         super(600, 900, 200);
@@ -11,7 +15,7 @@ public class CompileDisplayPanel extends EasyInfoDisplayPanel {
 
     @Override
     public String getTitle() {
-        return "When Compiled:";
+        return uiStrings.TEXT[0];
     }
 
     @Override
@@ -20,12 +24,12 @@ public class CompileDisplayPanel extends EasyInfoDisplayPanel {
         StringBuilder s = new StringBuilder();
         if (FunctionHelper.held != null && FunctionHelper.doStuff)
             for (AbstractCard card : FunctionHelper.held.group) {
-                if (card.rawDescription.contains("bronze:Compile")) { //TODO: Change to tag?
+                if (card.rawDescription.contains(uiStrings.TEXT[1])) {
                     String x = ((AbstractBronzeCard) card).getSpecialCompileText();
                     if (!x.equals("")) {
                         flip = true;
                         s.append(((AbstractBronzeCard) card).getSpecialCompileText());
-                        s.append(" NL ");
+                        s.append(" NL "); //?
                     }
                 }
             }

@@ -4,11 +4,13 @@ import champ.ChampMod;
 import champ.powers.CalledShotPower;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
+import champ.stances.UltimateStance;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 public class CalledShot extends AbstractChampCard {
 
@@ -27,7 +29,7 @@ public class CalledShot extends AbstractChampCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
+        if (AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID) ||AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
             return super.canUse(p, m);
         }
         cantUseMessage = EXTENDED_DESCRIPTION[3];
@@ -50,31 +52,15 @@ public class CalledShot extends AbstractChampCard {
 
 
     @Override
-    public void applyPowers() {
-        rawDescription = "";
-        if (bcombo()) rawDescription += "[#5ebf2a]";
-        else rawDescription += "*";
-        if (upgraded) {
-            rawDescription += EXTENDED_DESCRIPTION[1];
-        }
-        else {
-            rawDescription += EXTENDED_DESCRIPTION[0];
-        }
-        if (dcombo()) rawDescription += "[#5ebf2a]";
-        else rawDescription += "*";
-        rawDescription += EXTENDED_DESCRIPTION[2];
-        initializeDescription();
-    }
-
-    @Override
     public void triggerOnGlowCheck() {
-        glowColor = dcombo() || bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = (dcombo() || bcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {
         rawDescription = UPGRADE_DESCRIPTION;
         upgradeMagicNumber(1);
         initializeDescription();
+        tags.add(SneckoMod.BANNEDFORSNECKO);
 
     }
 }

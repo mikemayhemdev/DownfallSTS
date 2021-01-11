@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.actions.OctoChoiceAction;
-import downfall.util.OctopusCard;
 import downfall.downfallMod;
+import downfall.util.OctopusCard;
 import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
 import sneckomod.actions.ChangeGoldAction;
@@ -27,7 +27,7 @@ public class KnowingSkullWish extends AbstractExpansionCard implements OctopusCa
     //stupid intellij stuff SKILL, SELF, RARE
 
     public KnowingSkullWish() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         isEthereal = true;
         exhaust = true;
     }

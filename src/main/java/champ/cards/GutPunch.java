@@ -23,41 +23,30 @@ public class GutPunch extends AbstractChampCard {
     public GutPunch() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC;
+        baseBlock = 5;
         tags.add(ChampMod.OPENER);
-        myHpLossCost = 0;
         tags.add(ChampMod.OPENERBERSERKER);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
-        baseBlock = block = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         berserkOpen();
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        blck();
         //  fatigue(2);
         if (dcombo()) {
             // exhaust = true;
             atb(new GainEnergyAction(1));
+            blck();
         }
     }
 
     public void upp() {
-        upgradeDamage(2);
-        upgradeBlock(2);
+        upgradeDamage(3);
+        upgradeBlock(3);
         // myHpLossCost++;
     }
 
-    @Override
-    public void applyPowers() {
-        super.applyPowers();
-        if (dcombo()) {
-            myHpLossCost = magicNumber;
-        } else {
-            myHpLossCost = 0;
-        }
-    }
 
     @Override
     public void triggerOnGlowCheck() {

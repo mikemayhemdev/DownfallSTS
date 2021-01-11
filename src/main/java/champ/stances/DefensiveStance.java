@@ -60,7 +60,7 @@ public class DefensiveStance extends AbstractChampStance {
 
     @Override
     public void technique() {
-        int x = 4;
+        int x = 5;
         if (AbstractDungeon.player.hasPower(DefensiveStylePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(DefensiveStylePower.POWER_ID).amount;
         }

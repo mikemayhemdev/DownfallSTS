@@ -571,25 +571,6 @@ public static void saveData() {
     }
 
 
-    public void clearUnlockBundles() {
-
-        //TODO - Part of unlocks
-
-        BaseMod.removeUnlockBundle(GuardianEnum.GUARDIAN, 0);
-        BaseMod.removeUnlockBundle(GuardianEnum.GUARDIAN, 1);
-        BaseMod.removeUnlockBundle(GuardianEnum.GUARDIAN, 2);
-        BaseMod.removeUnlockBundle(GuardianEnum.GUARDIAN, 3);
-        BaseMod.removeUnlockBundle(GuardianEnum.GUARDIAN, 4);
-        receiveSetUnlocks();
-
-    }
-
-    public void printEnemies() {
-        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-            logger.info(monster.name + " HP " + monster.currentHealth);
-        }
-    }
-
     public void receiveEditRelics() {
 
 
@@ -662,6 +643,7 @@ public static void saveData() {
         BaseMod.addCard(new Clone());
         BaseMod.addCard(new Recover());
         BaseMod.addCard(new Planning());
+        BaseMod.addCard(new BodySlam());
         BaseMod.addCard(new Emergency());
         BaseMod.addCard(new GemFinder());
         BaseMod.addCard(new FastForward());

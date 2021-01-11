@@ -16,7 +16,7 @@ public class CrookedStrike extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 9;
     private static final int UPG_DAMAGE = 3;
 
     public CrookedStrike() {
@@ -27,22 +27,29 @@ public class CrookedStrike extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (AbstractDungeon.player.hasPower(ResolvePower.POWER_ID)) {
-                    int x = p.getPower(ResolvePower.POWER_ID).amount / 5;
-                    att(new ApplyPowerAction(m, p, new GainStrengthPower(m, x), x));
-                    att(new ApplyPowerAction(m, p, new StrengthPower(m, -x), -x));
-                }
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        if (AbstractDungeon.player.hasPower(ResolvePower.POWER_ID)) {
+            if (AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount >= 20) {
+                dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
+                dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
             }
-        });
+        }
         finisher();
     }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(3);
+    }
+
+
+    @Override
+    public void triggerOnGlowCheck() {
+        if (AbstractDungeon.player.hasPower(ResolvePower.POWER_ID)) {
+            if (AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount >= 20) {
+                glowColor = GOLD_BORDER_GLOW_COLOR;
+                return;
+            }
+        }
+        glowColor = BLUE_BORDER_GLOW_COLOR;
     }
 }

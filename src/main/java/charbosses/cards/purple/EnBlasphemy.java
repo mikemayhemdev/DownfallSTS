@@ -24,6 +24,7 @@ public class EnBlasphemy extends AbstractBossCard {
         super("Blasphemy", cardStrings.NAME, "purple/skill/blasphemy", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.PURPLE, CardRarity.RARE, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.exhaust = true;
         this.energyGeneratedIfPlayed = 3;
+        damageMultGeneratedIfPlayed = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

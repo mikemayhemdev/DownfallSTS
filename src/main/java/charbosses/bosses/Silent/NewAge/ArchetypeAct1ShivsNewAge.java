@@ -1,14 +1,13 @@
 package charbosses.bosses.Silent.NewAge;
 
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.bosses.Silent.ArchetypeBaseSilent;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnShiv;
 import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnDecay;
 import charbosses.cards.green.*;
-import charbosses.powers.ShivTimeEaterPower;
+import charbosses.powers.bossmechanicpowers.SilentShivTimeEaterPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -21,10 +20,8 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
 
     public ArchetypeAct1ShivsNewAge() {
         super("SI_SHIV_ARCHETYPE", "Shivs");
-        bossMechanicName = bossMechanicString.DIALOG[6];
-        bossMechanicDesc = bossMechanicString.DIALOG[7];
 
-        maxHPModifier += 80;
+        maxHPModifier += 100;
         actNum = 1;
     }
 
@@ -32,7 +29,7 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
     public void addedPreBattle() {
         super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ShivTimeEaterPower(p)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SilentShivTimeEaterPower(p)));
     }
 
     public void initialize() {

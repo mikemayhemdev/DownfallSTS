@@ -61,39 +61,6 @@
     "DIALOG": [
     ]
   },
-  "downfall:BossMechanics": {
-    "MOVES": [
-    ],
-    "NAME": "",
-    "DIALOG": [
-      "Energy Thief",
-      "Whenever Defect generates a Void, it goes to the top of your draw pile.",
-      "Ancient Construct",
-      "Begins the fight with 2 Bronze Orb minions. NL Gains 1 Artifact each turn if it did not already have Artifact.",
-      "Blasphemer's Demise",
-      "Watcher is debuffed with Fall from Grace. NL When Fall from Grace triggers, it is reset and can be triggered again.",
-      "Bag of Knives",
-      "Whenever you play a 0-cost card, if Silent has less than 7 cards in hand, she gains a Shiv.",
-      "Unbridled Rage",
-      "When Watcher is reduced to 50% HP, she enters Wrath permanently. NL Watcher's Wrath increases damage dealt and received by 50% instead of 100%.",
-      "Seeing Double",
-      "A mirror image of Silent is masking her real location. Attacking the mirror removes it from combat for the turn.",
-      "Bastion",
-      "Ironclad begins the fight with a Fortification, which will grant him Block each turn. NL When the Fortification has been destroyed, Ironclad loses Barricade and all Block, but gains 5 Strength per turn.",
-      "Warning: Highly Toxic",
-      "Poison applied to you triggers at the end of your turn. NL Before triggering Poison, for each [E] available, spend it to remove 10 Poison.",
-      "Unbiased Cognition",
-      "Whenever you play a Power, Defect gains 1 Focus.",
-      "Feeding Frenzy",
-      "Ironclad's Reaper does not Exhaust and targets ALL Mushrooms. NL When Ironclad kills a Mushroom, he gains 1 Strength and heals 20 HP.",
-      "Soul Stealer",
-      "Merchant still has the Strength it earned from Soul Steal this run, and gains an equal amount of Dexterity.",
-      "Fleeting Faith",
-      "Watcher gains 1 Mantra whenever you play a card. NL Watcher loses 5 Mantra at the start of her turn. NL Watcher's Divinity Stance is permanent.",
-      "Synchronize",
-      "Whenever Ironclad generates a status card, a duplicate is added into your discard pile."
-    ]
-  },
   "downfall:MushroomRed": {
     "MOVES": [
     ],

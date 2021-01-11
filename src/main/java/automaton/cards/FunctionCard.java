@@ -54,8 +54,7 @@ public class FunctionCard extends AbstractBronzeCard {
                 return true;
             } else if (x == 2 && q instanceof Separator && AbstractDungeon.player != null && AbstractDungeon.player.hasRelic(ElectromagneticCoil.ID)) {
                 x++;
-            }
-            else if (x == 3 && q instanceof Terminator) {
+            } else if (x == 3 && q instanceof Terminator) {
                 return true;
             }
         }
@@ -64,15 +63,15 @@ public class FunctionCard extends AbstractBronzeCard {
 
     public boolean triplicateCheck() {
         String cardIDBase = cards().get(0).cardID;
-        return cards().stream().allMatch(c-> c.cardID.equals(cardIDBase)) && cards().get(0).hasTriplicate();
+        return cards().stream().allMatch(c -> c.cardID.equals(cardIDBase)) && cards().get(0).hasTriplicate();
     }
 
     @Override
     public void doNothingSpecificInParticular() {
         if (textPrefix.equals("")) {
-            this.name = "function()"; //TODO: localize?
+            this.name = "function()";
         } else if (isPerfect()) {
-            this.name = "Perfection()"; //TODO: localize
+            this.name = "Perfection()";
         } else if (triplicateCheck()) {
             this.name = cards().get(0).getTriplicate();
         } else {
@@ -114,6 +113,10 @@ public class FunctionCard extends AbstractBronzeCard {
     @Override
     public boolean canUpgrade() {
         return false;
+    }
+
+    @Override
+    public void upgrade() {
     }
 
     //Welcome to the tough part

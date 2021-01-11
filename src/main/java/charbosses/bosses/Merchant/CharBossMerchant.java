@@ -21,8 +21,6 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
@@ -36,7 +34,7 @@ public class CharBossMerchant extends AbstractCharBoss {
 
     private BobEffect bob = new BobEffect();
     private Color tempColor = new Color();
-    private Color glowColor = new Color(2F,2F,2F, 2F);
+    private Color glowColor = new Color(2F, 2F, 2F, 2F);
 
     private TextureAtlas atlasGlow;
     private Skeleton skeletonGlow;
@@ -59,7 +57,7 @@ public class CharBossMerchant extends AbstractCharBoss {
     public CharBossMerchant() {
         super(NAME, ID, 400, 0f, -40f, 200.0f, 190.0f, null, 0.0f, 0.0f, PlayerClass.IRONCLAD);
 
-        if (downfallMod.tempAscensionHack){
+        if (downfallMod.tempAscensionHack) {
             downfallMod.tempAscensionHack = false;
             AbstractDungeon.ascensionLevel = downfallMod.tempAscensionOriginalValue;
             downfallMod.tempAscensionOriginalValue = 0;
@@ -104,7 +102,7 @@ public class CharBossMerchant extends AbstractCharBoss {
         super.usePreBattleAction();
         this.tint.color = new Color(.5F, .5F, 1F, 0F);
         this.rezTimer = 5F;
-      //  AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(AbstractDungeon.returnRandomRelic(AbstractRelic.RelicTier.SHOP)));
+        //  AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(AbstractDungeon.returnRandomRelic(AbstractRelic.RelicTier.SHOP)));
 
     }
 
@@ -145,8 +143,8 @@ public class CharBossMerchant extends AbstractCharBoss {
 
     }
 
-    public void updateGlow(){
-        if (!this.curveUp){
+    public void updateGlow() {
+        if (!this.curveUp) {
             this.curveDuration -= Gdx.graphics.getDeltaTime();
             if (this.curveDuration < 0.0F) {
                 this.curveUp = true;
@@ -159,7 +157,7 @@ public class CharBossMerchant extends AbstractCharBoss {
         }
 
 
-        this.curveAlpha = Interpolation.pow2.apply(0.5F,1F, this.curveDuration / 1F);
+        this.curveAlpha = Interpolation.pow2.apply(0.5F, 1F, this.curveDuration / 1F);
 
         this.skeletonGlow.setColor(new Color(this.glowColor.r * this.curveAlpha, this.glowColor.g * this.curveAlpha, this.glowColor.b * this.curveAlpha, this.glowColor.a * this.curveAlpha));
         //this.skeletonGlow.setColor(glowColor);
@@ -171,7 +169,7 @@ public class CharBossMerchant extends AbstractCharBoss {
         this.skeletonGlow.setFlip(this.flipHorizontal, this.flipVertical);
     }
 
-    public void renderGlow(SpriteBatch sb){
+    public void renderGlow(SpriteBatch sb) {
         sb.end();
         CardCrawlGame.psb.begin();
         sr.draw(CardCrawlGame.psb, this.skeletonGlow);
@@ -195,26 +193,22 @@ public class CharBossMerchant extends AbstractCharBoss {
         this.bob.update();
         updateGlow();
         super.update();
-        if (this.rezTimer <= 0F){
+        if (this.rezTimer <= 0F) {
             this.rezVFX.end();
-
-            chosenArchetype.bossMechanicName = AbstractBossDeckArchetype.bossMechanicString.DIALOG[20];
-            chosenArchetype.bossMechanicDesc = AbstractBossDeckArchetype.bossMechanicString.DIALOG[21];
-            chosenArchetype.initializeBossPanel();
         } else {
             this.rezTimer -= Gdx.graphics.getDeltaTime();
-            if (!this.startVFX && rezTimer <= 2F){
+            if (!this.startVFX && rezTimer <= 2F) {
                 this.startVFX = true;
                 this.tint.changeColor(Color.WHITE.cpy(), 2F);
                 AbstractDungeon.effectsQueue.add(new IntenseZoomEffect(this.hb.cX, this.hb.cY, false));
                 rezVFX = new NeowBossRezEffect(this.hb.cX, this.hb.cY);
                 AbstractDungeon.effectsQueue.add(rezVFX);
             }
-            if (rezTimer > 2F){
+            if (rezTimer > 2F) {
                 this.tint.color = new Color(.5F, .5F, 1F, 0F);
             }
         }
-        if (!this.neowSpoke){
+        if (!this.neowSpoke) {
             this.neowSpoke = true;
             String line;
             if (FleeingMerchant.DEAD) {

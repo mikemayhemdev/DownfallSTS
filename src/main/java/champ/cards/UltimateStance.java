@@ -1,8 +1,10 @@
 package champ.cards;
 
+import basemod.helpers.CardModifierManager;
 import champ.powers.UltimateFormPower;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
+import champ.util.TechniqueMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -20,11 +22,12 @@ public class UltimateStance extends AbstractChampCard {
     public UltimateStance() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        CardModifierManager.addModifier(this, new TechniqueMod());
     }
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
+        if (AbstractDungeon.player.stance.ID.equals(champ.stances.UltimateStance.STANCE_ID) ||AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
             return super.canUse(p, m);
         }
         cantUseMessage = EXTENDED_DESCRIPTION[0];

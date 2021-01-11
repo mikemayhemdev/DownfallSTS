@@ -1,6 +1,6 @@
 package automaton;
 
-import automaton.cards.Terminator;
+import automaton.cards.Separator;
 import automaton.cards.*;
 import automaton.cards.goodstatus.*;
 import automaton.events.*;
@@ -18,14 +18,6 @@ import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import champ.ChampChar;
-import champ.cards.*;
-import champ.potions.CounterstrikePotion;
-import champ.potions.OpenerPotion;
-import champ.potions.TechPotion;
-import champ.potions.UltimateStancePotion;
-import champ.relics.*;
-import charbosses.BossMechanicDisplayPanel;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
@@ -41,8 +33,6 @@ import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.unlock.AbstractUnlock;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.cardmods.EtherealMod;
 import downfall.cardmods.ExhaustMod;
 import downfall.downfallMod;
@@ -339,6 +329,7 @@ public class AutomatonMod implements
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         FunctionHelper.doStuff = false;
+        FunctionHelper.functionsCompiledThisCombat = 0;
         if (FunctionHelper.held != null) {
             FunctionHelper.held.clear();
         }
@@ -351,17 +342,10 @@ public class AutomatonMod implements
         EasyInfoDisplayPanel.specialDisplays.clear();
         compileDisplayPanel = new CompileDisplayPanel();
         EasyInfoDisplayPanel.specialDisplays.add(compileDisplayPanel);
-        EasyInfoDisplayPanel.specialDisplays.add(new BossMechanicDisplayPanel());
+       // EasyInfoDisplayPanel.specialDisplays.add(new BossMechanicDisplayPanel());
         if (FunctionHelper.held != null) {
             FunctionHelper.held.clear();
             FunctionHelper.genPreview();
-        }
-        if (CardCrawlGame.loadingSave) {
-            if (AbstractDungeon.player.hasRelic(ElectromagneticCoil.ID)) {
-                FunctionHelper.max += 1;
-            }
-        } else {
-            FunctionHelper.max = 3;
         }
     }
 

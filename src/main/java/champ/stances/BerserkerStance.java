@@ -46,7 +46,7 @@ public class BerserkerStance extends AbstractChampStance {
     }
 
     public static int amount() {
-        int x = 3;
+        int x = 5;
         if (AbstractDungeon.player.hasPower(BerserkerStylePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(BerserkerStylePower.POWER_ID).amount;
         }

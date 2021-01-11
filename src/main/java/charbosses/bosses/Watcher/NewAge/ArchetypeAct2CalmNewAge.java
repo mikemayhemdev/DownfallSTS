@@ -1,21 +1,17 @@
 package charbosses.bosses.Watcher.NewAge;
 
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.bosses.Watcher.ArchetypeBaseWatcher;
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.blue.EnDefendBlue;
 import charbosses.cards.purple.*;
-import charbosses.powers.WatcherCripplePower;
+import charbosses.powers.bossmechanicpowers.WatcherCripplePower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.Watcher;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
 
@@ -24,9 +20,6 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
 
     public ArchetypeAct2CalmNewAge() {
         super("WA_ARCHETYPE_CALM", "Calm");
-        bossMechanicName = bossMechanicString.DIALOG[4];
-        bossMechanicDesc = bossMechanicString.DIALOG[5];
-
         maxHPModifier += 198;
         actNum = 2;
     }
@@ -96,8 +89,6 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
                 case 4:
                     theVeryImportantBlasphemy.newPrio = -2;
                     theVeryImportantFlyingSleeves.newPrio = 0;
-                    theVeryImportantFlyingSleeves.manualCustomDamageModifier = 3;
-                    theVeryImportantFlyingSleeves.manualCustomDamageModifierMult = 3;
                     theVeryImportantFlyingSleeves.lockIntentValues = false;
                     AbstractBossCard c = new EnWish();
                     c.newPrio = -1;
@@ -109,7 +100,7 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
                     break;
                 case 5:
                     addToList(cardsList, new EnEmptyBody(), false);  //not used
-                    addToList(cardsList, new EnDevaForm(), false);  //removed
+                    addToList(cardsList, new EnWishPlated(), false);  //removed
                     addToList(cardsList, new EnConsecrate(), true);
                     turn=0;
                     looped = true;
@@ -120,28 +111,28 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
         } else {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnConsecrate(), true);
-                    addToList(cardsList, new EnWaveOfTheHand(), false);
                     addToList(cardsList, new EnVigilance(), extraUpgrades);
+                    addToList(cardsList, new EnConsecrate(), true);
+                    addToList(cardsList, new EnDefendPurple(), false);
                     AbstractCharBoss.boss.powerhouseTurn = false;
                     turn++;
                     break;
                 case 1:
-                    addToList(cardsList, new EnStrikePurple(), false);
                     addToList(cardsList, new EnFollowUp(), extraUpgrades);
-                    addToList(cardsList, new EnDefendPurple(), false);
+                    addToList(cardsList, new EnFlyingSleeves(), true);
+                    addToList(cardsList, new EnStrikePurple(), false);
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnFlyingSleeves(), true);
+                    addToList(cardsList, new EnWaveOfTheHand(), false);
                     addToList(cardsList, new EnDefendPurple(), false);
                     addToList(cardsList, new EnWallop(), true);
                     turn++;
                     break;
                 case 3:
+                    addToList(cardsList, new EnEmptyBody(), false);
                     addToList(cardsList, new EnRagnarok(), false);
                     addToList(cardsList, new EnDefendPurple(), true);
-                    addToList(cardsList, new EnEmptyBody(), false);
                     AbstractCharBoss.boss.powerhouseTurn = true;
                     turn = 0;
                     break;

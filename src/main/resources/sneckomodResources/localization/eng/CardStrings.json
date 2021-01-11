@@ -256,7 +256,7 @@
   },
   "sneckomod:RainOfDice": {
     "NAME": "Rain of Dice",
-    "DESCRIPTION": "Deal !qqq! - !D! damage to a random enemy 2 - !M! times. NL sneckomod:Muddle the next 2 - !M! cards you draw."
+    "DESCRIPTION": "Deal !qqq! - !D! damage to a random enemy 2 - !M! times."
   },
   "sneckomod:DiceCrush": {
     "NAME": "Dice Crush",
@@ -286,5 +286,17 @@
   "sneckomod:UnendingSupply": {
     "NAME": "Unending Supply",
     "DESCRIPTION": "At the start of each turn, add a random sneckomod:Offclass card to your hand and sneckomod:Muddle it."
+  },
+  "sneckomod:Memorize": {
+    "NAME": "Memorize",
+    "DESCRIPTION": "sneckomod:Snekproof. Fleeting. NL Choose a card in hand which started *Unknown. NL Permanently add it to your deck, removing its *Unknown.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. Fleeting. Retain. NL Choose a card in hand which started *Unknown. NL Permanently add it to your deck, removing its *Unknown.",
+    "EXTENDED_DESCRIPTION": [
+      " to Memorize."
+    ]
+  },
+  "sneckomod:UnknownBoss": {
+    "NAME": "???",
+    "DESCRIPTION": "*Unknown Boss card."
   }
 }

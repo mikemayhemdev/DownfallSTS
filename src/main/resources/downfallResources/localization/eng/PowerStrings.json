@@ -45,61 +45,30 @@
       "#yPoison triggers at the end of your turn. At the end of your turn, spend all remaining [E] to remove 10 #yPoison per [E] spent."
     ]
   },
-  "downfall:InverseBias": {
-    "NAME": "Recovering",
-    "DESCRIPTIONS": [
-      "Gains #b2 #yFocus at the end of each turn."
-    ]
-  },
   "downfall:NeowBuff": {
     "NAME": "Neow's Vigor",
     "DESCRIPTIONS": [
       "Gains #b2 #yStrength at the end of the round."
     ]
   },
+  "downfall:WatcherAngryPower": {
+    "NAME": "Unbridled Rage",
+    "DESCRIPTIONS": [
+      "When Watcher is reduced to #b50% HP, she enters Wrath permanently. NL Watcher's Wrath increases damage dealt and received by #b50% instead of #b100%."
+    ]
+  },
+  "downfall:NeowUnbridledRage": {
+    "NAME": "Unbridled Rage",
+    "DESCRIPTIONS": [
+      "While Neow is below #b50% Max HP, she gains #b6 #yStrength."
+    ]
+  },
   "downfall:WatcherCripplePower": {
-    "NAME": "Fall from Grace",
+    "NAME": "Blasphemer's Demise",
     "DESCRIPTIONS": [
       "When Watcher loses #b",
       " more HP, apply #b-4 #yStrength to her when she next enters #yDivinity or plays #yRagnarok.",
       "Watcher will lose #b4 #yStrength when she next enters #yDivinity or plays #yRagnarok."
-    ]
-  },
-  "downfall:ShivTimeEaterPower": {
-    "NAME": "Time to Die",
-    "DESCRIPTIONS": [
-      "Whenever you play a cost #b0 card, if Silent has less than #b7 cards in hand, she gains a #yShiv."
-      ]
-  },
-  "downfall:WatcherAngryPower": {
-    "NAME": "Boiling Wrath",
-    "DESCRIPTIONS": [
-      "When Watcher is reduced to #b50% HP, she enters #rWrath permanently."
-      ]
-  },
-  "downfall:DefectCuriosity": {
-    "NAME": "Neural Network",
-    "DESCRIPTIONS": [
-      "Whenever you play a #yPower card, gains #b",
-      " #yFocus."
-    ]
-  },
-  "downfall:WatcherDivinityPower": {
-    "NAME": "Faith Eater",
-    "DESCRIPTIONS": [
-      "Whenever you play a card, gains #b1 #yMantra. Loses #b5 #yMantra per turn. NL Watcher's #yDivinity #yStance is permanent."
-    ]
-  },
-  "downfall:NeowBagOfKnives": {
-    "NAME": "Bag of Knives",
-    "DESCRIPTIONS": [
-      "Whenever you play a cost #b0 card, Neow gains #y1 Strength."
-    ]
-  },
-  "downfall:NeowBastion": {
-    "NAME": "Bastion",
-    "DESCRIPTIONS": [
-      "Neow has #yBarricade and gains #b10 #yBlock at the start of each turn."
     ]
   },
   "downfall:NeowBlasphemersDemise": {
@@ -110,16 +79,10 @@
       "Neow is crippled and will not gain additional #yStrength during her next Buff turn."
     ]
   },
-  "downfall:NeowEnergyThief": {
-    "NAME": "Energy Thief",
+  "downfall:WatcherDivinityPower": {
+    "NAME": "Fleeting Faith",
     "DESCRIPTIONS": [
-      "When Neow adds #rCurses to your draw pile, she also adds 2 #yVoid #yStatus cards."
-    ]
-  },
-  "downfall:NeowFeedingFrenzy": {
-    "NAME": "Feeding Frenzy",
-    "DESCRIPTIONS": [
-      "Neow heals HP whenever she deals any unblocked damage."
+      "Watcher gains #b1 Mantra whenever you play a card. NL Watcher loses #b5 Mantra at the start of her turn. NL Watcher's Divinity Stance is permanent."
     ]
   },
   "downfall:NeowFleetingFaith": {
@@ -128,16 +91,22 @@
       "Whenever you play a card, Neow gains #b1 #yMantra. Neow loses #b5 #yMantra per turn."
     ]
   },
-  "downfall:NeowMantra": {
-    "NAME": "Mantra",
+  "downfall:SilentShivTimeEaterPower": {
+    "NAME": "Bag of Knives",
     "DESCRIPTIONS": [
-      "When Neow has #b10 #yMantra, she converts #b10 #yMantra into #b10 #yStrength."
+      "Whenever you play a #b0 cost card, if Silent has less than #b7 cards in hand, she gains a #yShiv."
+      ]
+  },
+  "downfall:NeowBagOfKnives": {
+    "NAME": "Bag of Knives",
+    "DESCRIPTIONS": [
+      "Whenever you play a #b0 cost card, Neow gains #y1 Strength."
     ]
   },
-  "downfall:NeowHighlyToxic": {
-    "NAME": "Warning: Highly Toxic",
+  "downfall:SilentMirrorImagePower": {
+    "NAME": "Seeing Double",
     "DESCRIPTIONS": [
-      "Neow applies #b10 #yPoison to you per turn. You have #yPoison #yProtection."
+      "A mirror image of Silent is masking her real location. Attacking the mirror removes it from combat for the turn."
     ]
   },
   "downfall:NeowSeeingDouble": {
@@ -146,28 +115,101 @@
       "The first #yAttack used each turn against Neow deals #b0 damage."
     ]
   },
-  "downfall:NeowSyncronize": {
-    "NAME": "Synchronize",
+  "downfall:SilentPoisonPower": {
+    "NAME": "Warning: Highly Toxic",
     "DESCRIPTIONS": [
-      "Neow adds a random #yStatus card to your discard pile every turn."
+      "You have #yPoison #yResistance to combat Silent's #yPoison effects."
     ]
   },
-  "downfall:NeowUnbiasedCognition": {
-    "NAME": "Unbiased Cognition",
+  "downfall:NeowHighlyToxic": {
+    "NAME": "Warning: Highly Toxic",
     "DESCRIPTIONS": [
-      "Neow has #b1 additional #yStrength for every #yPower card you play or have played this combat."
+      "Neow applies #b10 #yPoison to you per turn. You have #yPoison #yResistance."
     ]
   },
-  "downfall:NeowUnbridledRage": {
-    "NAME": "Unbridled Rage",
+  "downfall:DefectVoidPower": {
+    "NAME": "Energy Thief",
     "DESCRIPTIONS": [
-      "While Neow is below #b50% Max HP, she gains #b6 #yStrength."
+      "Whenever Defect generates a Void, it goes to the top of your draw pile."
+    ]
+  },
+  "downfall:NeowEnergyThief": {
+    "NAME": "Energy Thief",
+    "DESCRIPTIONS": [
+      "When Neow adds #rCurses to your draw pile, she also adds 1 #yVoid #yStatus card."
+    ]
+  },
+  "downfall:DefectAncientConstructPower": {
+    "NAME": "Ancient Construct",
+    "DESCRIPTIONS": [
+      "Begins the fight with 2 Bronze Orb minions. NL Gains 1 Artifact each turn if it did not already have Artifact."
     ]
   },
   "downfall:NeowAncientConstruct": {
     "NAME": "Ancient Construct",
     "DESCRIPTIONS": [
       "Neow gains #b3 #yArtifact at the start of your turn if she has no #yArtifact."
+    ]
+  },
+  "downfall:DefectCuriosity": {
+    "NAME": "Unbiased Cognition",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yPower card, gains #b",
+      " #yFocus."
+    ]
+  },
+  "downfall:NeowUnbiasedCognition": {
+    "NAME": "Unbiased Cognition",
+    "DESCRIPTIONS": [
+      "Neow gains #b1 #yStrength for every #yPower card you play."
+    ]
+  },
+  "downfall:IroncladStatusPower": {
+    "NAME": "Synchronize",
+    "DESCRIPTIONS": [
+      "Whenever Ironclad generates a status card, a duplicate is added into your discard pile."
+    ]
+  },
+  "downfall:NeowSyncronize": {
+    "NAME": "Synchronize",
+    "DESCRIPTIONS": [
+      "Neow adds a random #yStatus card to your discard pile every turn."
+    ]
+  },
+  "downfall:IroncladMushroomPower": {
+    "NAME": "Feeding Frenzy",
+    "DESCRIPTIONS": [
+      "Ironclad's Reaper does not Exhaust and targets ALL Mushrooms. NL When Ironclad kills a Mushroom, he gains #b1 Strength and heals #b20 HP."
+    ]
+  },
+  "downfall:NeowFeedingFrenzy": {
+    "NAME": "Feeding Frenzy",
+    "DESCRIPTIONS": [
+      "Neow heals HP whenever she deals any unblocked damage."
+    ]
+  },
+  "downfall:IroncladFortificationPower": {
+    "NAME": "Bastion",
+    "DESCRIPTIONS": [
+      "Ironclad begins the fight with a Fortification, which will grant him #b10 Block each turn. NL When the Fortification has been destroyed, Ironclad loses Barricade and all Block, but gains #b5 Strength per turn."
+    ]
+  },
+  "downfall:NeowBastion": {
+    "NAME": "Bastion",
+    "DESCRIPTIONS": [
+      "Neow has #yBarricade and gains #b10 #yBlock at the start of each turn."
+    ]
+  },
+  "downfall:MerchantStrengthPower": {
+    "NAME": "Soul Stealer",
+    "DESCRIPTIONS": [
+      "Merchant still has the Strength it earned from Soul Steal this run, and gains an equal amount of Dexterity."
+    ]
+  },
+  "downfall:NeowMantra": {
+    "NAME": "Mantra",
+    "DESCRIPTIONS": [
+      "When Neow has #b10 #yMantra, she converts #b10 #yMantra into #b10 #yStrength."
     ]
   },
   "downfall:NeowSeeingDoubleProduct": {

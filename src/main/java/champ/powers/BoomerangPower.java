@@ -1,5 +1,6 @@
 package champ.powers;
 
+import basemod.helpers.VfxBuilder;
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
 import com.badlogic.gdx.graphics.Texture;
@@ -45,6 +46,10 @@ public class BoomerangPower extends AbstractPower implements CloneablePowerInter
     public void atStartOfTurnPostDraw() {
         flash();
         stored.freeToPlayOnce = true;
+        AbstractDungeon.effectList.add(new VfxBuilder(champ.util.TextureLoader.getTexture("champResources/images/relics/ChampionCrown.png"), 0, owner.hb.cY,0.75F)
+                .moveX(0, owner.hb.cX)
+                .rotate(300F)
+                .build());
         // Then it flies back!
         addToBot(new AbstractGameAction() {
             public void update() {

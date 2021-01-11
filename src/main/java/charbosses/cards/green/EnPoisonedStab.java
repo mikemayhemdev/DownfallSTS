@@ -28,6 +28,7 @@ public class EnPoisonedStab extends AbstractBossCard {
         this.baseMagicNumber = 4;
         this.magicNumber = this.baseMagicNumber;
         this.magicValue = 2;
+        artifactConsumedIfPlayed = 1;
     }
 
     @Override

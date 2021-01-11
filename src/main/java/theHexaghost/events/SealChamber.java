@@ -44,6 +44,8 @@ public class SealChamber extends AbstractImageEvent {
     private AbstractPotion potionOption;
     private AbstractCard cardOption;
 
+    private boolean used;
+
     public SealChamber() {
         super(NAME, DESCRIPTIONS[0], "hexamodResources/images/events/sealChamber.png");
         this.screen = CurScreen.INTRO;
@@ -95,47 +97,54 @@ public class SealChamber extends AbstractImageEvent {
     protected void buttonEffect(int buttonPressed) {
         switch (this.screen) {
             case INTRO:
-                this.imageEventText.clearAllDialogs();
                 switch (buttonPressed) {
                     case 0:
                         AbstractDungeon.player.damage(new DamageInfo((AbstractCreature) null, this.hpLoss, DamageInfo.DamageType.HP_LOSS));
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new FirstSeal(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[8]);
+                        this.imageEventText.updateDialogOption(0, OPTIONS[9], true);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
-                        this.screen = CurScreen.END;
+                        this.screen = CurScreen.INTRO;
+                        used = true;
                         return;
                     case 1:
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldLoss));
                         AbstractDungeon.player.loseGold(this.goldLoss);
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new SecondSeal(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[8]);
+                        this.imageEventText.updateDialogOption(1, OPTIONS[9], true);
+
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
-                        this.screen = CurScreen.END;
+                        this.screen = CurScreen.INTRO;
+                        used = true;
                         return;
                     case 2:
                         AbstractDungeon.topLevelEffects.add(new com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect(this.cardOption, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
                         AbstractDungeon.player.masterDeck.removeCard(this.cardOption);
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new ThirdSeal(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[8]);
+                        this.imageEventText.updateDialogOption(2, OPTIONS[9], true);
+
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
-                        this.screen = CurScreen.END;
+                        this.screen = CurScreen.INTRO;
+                        used = true;
                         return;
                     case 3:
                         AbstractDungeon.player.removePotion(this.potionOption);
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new FourthSeal(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[8]);
+                        this.imageEventText.updateDialogOption(3, OPTIONS[9], true);
+
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
-                        this.screen = CurScreen.END;
+                        this.screen = CurScreen.INTRO;
+                        used = true;
                         return;
                     case 4:
                         this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[8]);
-                        this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         this.screen = CurScreen.END;
+                        this.imageEventText.setDialogOption(OPTIONS[8]);
+                        if (!used) {
+                            this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
+                        } else {
+
+                            this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
+                        }
                         return;
                 }
             case END:

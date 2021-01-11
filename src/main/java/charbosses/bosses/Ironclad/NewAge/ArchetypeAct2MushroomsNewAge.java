@@ -8,8 +8,12 @@ import charbosses.cards.curses.EnDecay;
 import charbosses.cards.curses.EnHaunted;
 import charbosses.cards.curses.EnInjury;
 import charbosses.cards.red.*;
+import charbosses.powers.bossmechanicpowers.DefectVoidPower;
+import charbosses.powers.bossmechanicpowers.IroncladMushroomPower;
 import charbosses.relics.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.BarricadePower;
 
@@ -19,12 +23,18 @@ public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
 
     public ArchetypeAct2MushroomsNewAge() {
         super("IC_MUSHROOM_ARCHETYPE", "Mushroom");
-        bossMechanicName = bossMechanicString.DIALOG[18];
-        bossMechanicDesc = bossMechanicString.DIALOG[19];
 
         maxHPModifier += 200;
         actNum = 2;
     }
+
+    @Override
+    public void addedPreBattle() {
+        super.addedPreBattle();
+        AbstractCreature p = AbstractCharBoss.boss;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IroncladMushroomPower(p)));
+    }
+
 
     public void initialize() {
 
