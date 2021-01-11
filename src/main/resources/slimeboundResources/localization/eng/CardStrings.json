@@ -342,7 +342,6 @@
     "NAME": "One-Two Combo",
     "DESCRIPTION": "Deal !D! damage. NL When you slimeboundmod:Split, return this from the discard pile to your hand.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command. NL When you slimeboundmod:Split, return this from the discard pile to your hand."
-
   },
   "Slimebound:ForwardTackle": {
     "NAME": "Forward Tackle",

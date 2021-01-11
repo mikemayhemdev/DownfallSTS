@@ -4,14 +4,20 @@
     "DESCRIPTIONS": [
       "这片地区似乎是尖塔的 #p墓地 。正当你小心翼翼地穿过时，一个奇怪的微弱 ~鬼影~ 使你停下脚步。 它伸出一只手来，似乎在提供某种 #r交易 。",
       "这个 #b幽灵般的存在 触碰了你的肩膀，你立即 @倒下@ 了。 NL NL 之后你在塔内的一片空地上醒来，脚边放着一个 #g宝物 。 你离开时，感到被， ~怪异~ ~的目光~ 注视着...",
-      "你摇了摇头， #b鬼影 吃力地看了你最后一眼，继续它 ~无休止的~ ~漫步。~ 你也继续了你的旅程。 "
+      "你摇了摇头， #b鬼影 吃力地看了你最后一眼，继续它 ~无休止的~ ~漫步。~ 你也继续了你的旅程。 ",
+	  "You take the strange #ygolden box, and feel a #pdarkness flow through you as you open it. Inside, you find a useful weapon!",
+      "You take the pulsating, steadily @BEATING@ box, and feel it @FLOW@ into your arm. A foul #pnausea pulses through you, but you feel stronger for it...",
+      "As soon as you clasp the artifact from the figure, #pdarkness envelops the room. The specter speaks to once more, his words appearing in your head without you ever hearing them. NL NL #p'A #pwise #pchoice. #pWhat #pdo #pyou #psay #pto #panother #pdeal, #pfriend? #pTake #pas #pmany #pas #pyou #plike...'"
     ],
     "OPTIONS": [
-      "[接受] 获得 ",
-      "。 #r被诅咒- #r闹鬼。",
+      "[接受] #g获得一件诅咒遗物。 #r获得1-4张诅咒-随机。 ",
+      "[换取力量] #g获得一张随机稀有牌。 #r被诅咒-随机。",
       "[拒绝]",
       "[离开]",
-      "[锁定]"
+      "[锁定]",
+	  "[换取生命] #g获得5点最大生命。 #r被诅咒-随机。",
+      "[换取灵魂] #g获得100灵魂。 #r被诅咒-随机。",
+      "[锁定] 交易完成。"
     ]
   },
   "hexamod:SealChamber": {
@@ -62,6 +68,16 @@
       "[完成]",
       "[离开]",
       "[锁定] 还不能离开。"
+    ]
+  },
+    "hexamod:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Spirit is the sword - and experience, the sharpening stone."
+    ],
+    "OPTIONS": [
+      "[Wistfulness] #gAdd #gEthereal to all #gStrikes and #gDefends.",
+      "[Locked] Requires a Strike or Defend."
     ]
   }
 }

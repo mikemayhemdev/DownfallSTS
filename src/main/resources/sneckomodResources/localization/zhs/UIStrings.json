@@ -2,7 +2,10 @@
   "sneckomod:Unknown": {
     "TEXT": [
       "未知",
-      " 已 升级 的"
+      " 已 升级 的",
+	  "战斗开始时未知牌将根据情况变化成其他随机牌。",
+      " NL 选择角色：",
+      "战斗开始时未知牌将根据情况变化成其他角色的牌（基础打击防御除外）。"
     ]
   },
   "sneckomod:UnknownClass": {
@@ -28,6 +31,21 @@
   "sneckomod:ExhaustMod": {
     "TEXT": [
       " NL 消耗 。"
+    ]
+  },
+  
+  "sneckomod:ChallengeMode": {
+    "TEXT": [
+      "挑战模式 - 紫色异蛇",
+      "未知牌将为任意角色。异蛇才子专用。"
+    ]
+  },
+  "sneckomod:LockInBonfireOptions": {
+    "TEXT": [
+      "明晰",
+      "将未知牌变为特定的牌",
+      "需要一张未知牌",
+      "选择一张牌加入你的牌组并移除未知"
     ]
   }
 }

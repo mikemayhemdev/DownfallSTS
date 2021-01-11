@@ -7,13 +7,6 @@
     "DESCRIPTION": "不受 #y混乱 和 #y混淆 影响。"
   },
   {
-    "PROPER_NAME": "未知",
-    "NAMES": [
-      "未知"
-    ],
-    "DESCRIPTION": "每场战斗开始时，未知牌将根据条件变为其他角色的随机牌。"
-  },
-  {
     "PROPER_NAME": "混淆",
     "NAMES": [
       "混淆"

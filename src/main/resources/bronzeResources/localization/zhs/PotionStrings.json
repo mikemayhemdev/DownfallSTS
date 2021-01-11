@@ -1,30 +1,34 @@
 {
-  "champ:OpenerPotion": {
-    "NAME": "策略药水",
+  "bronze:FreeFunctionsPotion": {
+    "NAME": "Machine Oil",
     "DESCRIPTIONS": [
-      "从 #b3 张 #ychamp:起手牌 中选择 #b1 张加入手牌（每种 #y姿态 各一张）。它的耗能本回合为 #b0 。",
-      "从 #b3 张已 #y升级 的 #ychamp:起手牌 中选择 #b1 张加入手牌（每种 #y姿态 各一张）。 它的耗能本回合为 #b0 。"
+      "Increase all numbers on cards in the Sequence by #b",
+      "."
     ]
   },
-  "champ:TechniquePotion": {
-    "NAME": "瓶装技术",
+  "bronze:CleanCodePotion": {
+    "NAME": "Alchyrical Elixir",
     "DESCRIPTIONS": [
-      "#y战术 #b",
-      " 次。"
+      "Remove all negative Compile effects from the next Function you create.  Reduce its cost to 0 until played.",
+      "Remove all negative Compile effects from the next #b",
+      " Functions you create.  Reduce their cost to 0 until played."
     ]
   },
-  "champ:UltimateStancePotion": {
-    "NAME": "奇异精炼",
+  "bronze:BurnAndBuffPotion": {
+    "NAME": "Vexing Draught",
     "DESCRIPTIONS": [
-      "进入 #y终极姿态 #b",
-      " 回合。"
+      "Gain #b",
+      " Strength and #b",
+      " Dexterity. NL Add two Burn+ Status cards to your draw pile."
     ]
   },
-  "champ:CounterPotion": {
-    "NAME": "锐利特酿",
+  "bronze:BuildAFunctionPotion": {
+    "NAME": "Kio's Clever Concoction",
     "DESCRIPTIONS": [
-      "获得 #b",
-      " 层 #y反击 。"
+      "Until the Sequence is full, choose 1 of 3 random cards to Encode.",
+      "Until the Sequence is full, choose 1 of 3 random cards to Encode. Add #b",
+      " copy of the created Function to your hand.",
+      " copies of the created Function to your hand."
     ]
   }
 }

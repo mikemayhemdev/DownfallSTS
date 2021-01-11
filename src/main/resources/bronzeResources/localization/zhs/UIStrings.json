@@ -1,29 +1,13 @@
 {
-  "champ:SealCommonReward": {
+  "bronze:SpecificCardReward": {
     "TEXT": [
-      "Add a Common card to your deck"
+      "Add ",
+      " to your deck"
     ]
   },
-  "champ:SealSealReward": {
+  "bronze:UnplayableMod": {
     "TEXT": [
-      "Add a Seal to your deck"
-    ]
-  },
-  "champ:TechniqueMod": {
-    "TEXT": [
-      " champ:技术 。 NL "
-    ]
-  },
-  "champ:OpenerMod": {
-    "TEXT": [
-      " champ:狂战 champ:起手 。 NL ",
-      " champ:防守 champ:起手 。 NL ",
-      " champ:角斗 champ:起手 。 NL "
-    ]
-  },
-  "champ:RetainCardMod": {
-    "TEXT": [
-      "保留 。 NL "
+      "Unplayable. NL "
     ]
   }
 }

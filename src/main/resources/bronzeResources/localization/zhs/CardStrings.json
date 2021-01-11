@@ -1,379 +1,650 @@
 {
-  "champ:Strike": {
-    "NAME": "打击",
-    "DESCRIPTION": "造成 !D! 点伤害。"
-  },
-  "champ:Defend": {
-    "NAME": "防御",
-    "DESCRIPTION": "获得 !B! 点 格挡 。"
-  },
-  "champ:Taunt": {
-    "NAME": "激将",
-    "DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL champ:起手 - 进入 随机一种 姿态 。",
-    "UPGRADE_DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL champ:起手式 - 选择一种 姿态 。"
-  },
-  "champ:Execute": {
-    "NAME": "处决",
-    "DESCRIPTION": "造成 !D! 点伤害 !cool! 次。 NL champ:疲劳 !M! 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 !cool! 次。 NL champ:疲劳 !M! 。"
-  },
-  "champ:StanceDance": {
-    "NAME": "姿态之舞",
-    "DESCRIPTION": "champ:起手式 - 选择一种 姿态 。",
-    "UPGRADE_DESCRIPTION": "抽 1 张牌。 NL champ:起手式 - 选择一种 姿态 。",
+  "bronze:DazingPulse": {
+    "NAME": "Dazing Pulse",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block NL bronze:Compile - bronze:Insert !M! *Dazed.",
     "EXTENDED_DESCRIPTION": [
-      "champ:狂战 champ:起手 。",
-      "champ:防守 champ:起手 。",
-      "champ:角斗 champ:起手 。"
+      "dazing",
+      "Pulse"
     ]
   },
-  "champ:GladiatorsShout": {
-    "NAME": "角斗怒吼",
-    "DESCRIPTION": "champ:角斗 champ:起手 。 NL 抽 1 张牌。",
-    "UPGRADE_DESCRIPTION": "champ:角斗 champ:起手 。 NL 抽 2 张牌。"
-  },
-  "champ:SwordSigil": {
-    "NAME": "剑纹",
-    "DESCRIPTION": "champ:角斗 champ:连段 ：重复 !M! 次并 消耗 。"
-  },
-  "champ:FocusedGladiator": {
-    "NAME": "角斗士",
-    "DESCRIPTION": "champ:角斗 champ:起手 。 NL 直到你退出 champ:角斗 前， champ:连段 将额外抽一张牌。"
-  },
-  "champ:FaceSlap": {
-    "NAME": "打脸",
-    "DESCRIPTION": "champ:角斗 champ:起手 。 NL 造成 !D! 点伤害。 NL champ:狂战 champ:连段 ：给予 !M! 层 易伤 。"
-  },
-  "champ:FlashCut": {
-    "NAME": "拔刀打击",
-    "DESCRIPTION": "champ:角斗 champ:起手 。 NL 造成 !D! 点伤害。 NL champ:防守 champ:连段 ：获得 !M! 层 champ:反击 。"
-  },
-  "champ:Balance": {
-    "NAME": "平衡",
-    "DESCRIPTION": "champ:防守 或 champ:角斗 champ:起手 。 NL 将一张所选 姿态 的 champ:连段 牌加入手牌。",
-    "UPGRADE_DESCRIPTION": "champ:防守 或 champ:角斗 champ:起手。 NL 将一张已 升级 的所选 姿态 的 champ:连段 牌加入手牌。",
+  "bronze:Spike": {
+    "NAME": "Spike",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Gain !M! Thorns.",
     "EXTENDED_DESCRIPTION": [
-      "champ:防守 champ:起手 。 NL 将一张随机 champ:防守 牌加入手牌。",
-      "champ:角斗 champ:起手 。 NL 将一张随机 champ:角斗 牌加入手牌。",
-      "champ:防守 champ:起手 。 NL 将一张随机已 升级 的 champ:防守 牌加入手牌。",
-      "champ:角斗 champ:起手 。 NL 将一张随机已 升级 的 champ:角斗 牌加入手牌。"
+      "spiky",
+      "Spike"
     ]
   },
-  "champ:DefensiveShout": {
-    "NAME": "防卫嘲讽",
-    "DESCRIPTION": "champ:防守 champ:起手 。 NL 获得 !M! 层 champ:反击 。"
-  },
-  "champ:ShieldSigil": {
-    "NAME": "防守印记",
-    "DESCRIPTION": "champ:防守 champ:连段 ：重复 !M! 次并 消耗 。"
-  },
-  "champ:FocusedDefense": {
-    "NAME": "防反家",
-    "DESCRIPTION": "champ:防守 champ:起手 。 NL 直到你退出 champ:防守 前， champ:战术 将额外获得3层 champ:反击 。"
-  },
-  "champ:FocusedBerserking": {
-    "NAME": "狂战士",
-    "DESCRIPTION": "champ:狂战 champ:起手 。 NL 直到你退出 champ:狂战 前， champ:战术 将额外获得2点 champ:决心 。"
-  },
-  "champ:Riposte": {
-    "NAME": "弹反",
-    "DESCRIPTION": "champ:防守 champ:起手 。 NL champ:角斗 champ:连段 ：丢弃所有攻击牌。每丢弃一张，获得 !M! 层 champ:反击 。",
-    "UPGRADE_DESCRIPTION": "champ:防守 champ:起手 。 NL 获得 !M! 层 champ:反击 。 NL champ:角斗 champ:连段 ：丢弃所有攻击牌。每丢弃一张，获得 !M! 层 champ:反击 。"
-  },
-  "champ:Backstep": {
-    "NAME": "后撤",
-    "DESCRIPTION": "champ:防守 champ:起手 。 NL 获得 !B! 点 格挡 。 NL champ:狂战 champ:连段 ：获得 champ:决心 层数两倍的 格挡 。",
-    "EXTENDED_DESCRIPTION": [" NL （获得 !B! 点 格挡 。）"]
-  },
-  "champ:Aggression": {
-    "NAME": "侵略",
-    "DESCRIPTION": "champ:狂战 或 champ:角斗 champ:起手 。 NL 将一张所选 姿态 的 champ:连段 牌加入手牌。",
-    "UPGRADE_DESCRIPTION": "champ:狂战 或 champ:角斗 champ:起手 。 NL 将一张已 升级 的所选 姿态 的 champ:连段 牌加入手牌。",
+  "bronze:Explode": {
+    "NAME": "Explode",
+    "DESCRIPTION": "bronze:Insert a *Burn. NL bronze:Compile - ALL enemies lose !M! HP.",
     "EXTENDED_DESCRIPTION": [
-      "champ:狂战 champ:起手 。 NL 将一张随机 champ:狂战 牌加入手牌。",
-      "champ:角斗 champ:起手 。 NL 将一张随机 champ:角斗 牌加入手牌。",
-      "champ:狂战 champ:起手 。 NL 将一张随机已 升级 的 champ:狂战 牌加入手牌。",
-      "champ:角斗 champ:起手 。 NL 将一张随机已 升级 的 champ:角斗 牌加入手牌。"
+      "unstable",
+      "Bomb"
     ]
   },
-  "champ:BerserkersShout": {
-    "NAME": "怒吼",
-    "DESCRIPTION": "champ:狂战 champ:起手 。 NL champ:疲劳 !M! 。"
-  },
-  "champ:RageSigil": {
-    "NAME": "愤怒印记",
-    "DESCRIPTION": "champ:狂战 champ:连段 ：重复 !M! 次并 消耗 。"
-  },
-  "champ:GutPunch": {
-    "NAME": "腹拳",
-    "DESCRIPTION": "champ:狂战 champ:起手 。 NL 造成 !D! 点伤害两次。 NL champ:疲劳 2。 NL champ:防守 champ:连段 ：获得 !M! 点 champ:决心 并 消耗 。"
-  },
-  "champ:FanOfKnives": {
-    "NAME": "刀阵",
-    "DESCRIPTION": "champ:狂战 champ:起手 。 NL 对所有敌人造成 !D! 点伤害。 NL champ:角斗 champ:连段 ：手牌中如果有 champ:战术 牌，重复一次。",
-    "UPGRADE_DESCRIPTION": "champ:狂战 champ:起手 。 NL 对所有敌人造成 !D! 点伤害。 NL champ:角斗 champ:连段 ：手牌中如果有 champ:战术 牌，重复两次。"
-  },
-  "champ:Devastate": {
-    "NAME": "坏灭",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果处于 姿态 ，本局这张牌的伤害提高 !M! 点并 消耗 。"
-  },
-  "champ:Control": {
-    "NAME": "控制",
-    "DESCRIPTION": "champ:防守 或 champ:狂战 champ:起手 。 NL 将一张所选 姿态 的 champ:连段 牌加入手牌。",
-    "UPGRADE_DESCRIPTION": "champ:防守 或 champ:狂战 champ:起手 。 NL 将一张已 升级 的所选 姿态 的 champ:连段 牌加入手牌。",
+  "bronze:DonuBeam": {
+    "NAME": "Donu Beam",
+    "DESCRIPTION": "Deal !D! damage twice. NL bronze:Compile - Gain !M! Strength and lose 1 Dexterity.",
     "EXTENDED_DESCRIPTION": [
-      "champ:防守 champ:起手 。 NL 将一张随机 champ:防守 牌加入手牌。",
-      "champ:狂战 champ:起手 。 NL 将一张随机 champ:狂战 牌加入手牌。",
-      "champ:防守 champ:起手 。 NL 将一张随机已 升级 的 champ:防守 牌加入手牌。",
-      "champ:狂战 champ:起手 。 NL 将一张随机已 升级 的 champ:狂战 牌加入手牌。"
+      "smooth",
+      "Blast"
     ]
   },
-  "champ:Circumvent": {
-    "NAME": "规避",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL champ:防守 champ:连段 ：获得 champ:反击 层数的 格挡 。",
-    "UPGRADE_DESCRIPTION": "获得3层 champ:反击 。 NL 获得 !B! 点 格挡 。 NL champ:防守 champ:连段 ：获得 champ:反击 层数的 格挡 。"
-  },
-  "champ:SkillfulDodge": {
-    "NAME": "精巧闪避",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。 NL champ:防守 champ:连段 ：本场战斗这张牌的 格挡 和 champ:反击 获得提高 !cool! 。"
-  },
-  "champ:TornadoPunch": {
-    "NAME": "飓风拳",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:防守 champ:连段 ：每打中一名敌人，获得 !M! 层 champ:反击 。",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:防守 champ:连段 ：每打中一名敌人，获得 !M! 层 champ:反击 。"
-  },
-  "champ:EnGarde": {
-    "NAME": "待命",
-    "DESCRIPTION": "champ:防守 champ:连段 ：翻倍你的 champ:反击 。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 层 champ:反击 。 NL champ:防守 champ:连段 ：翻倍你的 champ:反击 。"
-  },
-  "champ:ShieldSlam": {
-    "NAME": "盾牌猛击",
-    "DESCRIPTION": "有至少20点 格挡 时才能被打出。 NL 造成 !D! 点伤害。"
-  },
-  "champ:EnchantShield": {
-    "NAME": "整备装甲",
-    "DESCRIPTION": "获得2点 敏捷 。 NL 不处于 champ:防守 时 消耗。",
-    "UPGRADE_DESCRIPTION": "获得2点 敏捷 。 NL 不处于 champ:防守 时 消耗。"
-  },
-  "champ:BringItOn": {
-    "NAME": "全力以赴",
-    "DESCRIPTION": " 获得 !B! 点格挡。 NL 获得 !M! 层 champ:反击 。 NL 消耗 。"
-  },
-  "champ:ShieldThrow": {
-    "NAME": "爆甲",
-    "DESCRIPTION": " 获得 !B! 点 格挡 。 NL 造成你当前 格挡 值的伤害。 NL 除非 champ:防守 champ:连段 ：下回合不能获得 格挡 。",
-    "UPGRADE_DESCRIPTION": " NL （造成 !D! 点伤害。）"
-  },
-  "champ:FalseCounter": {
-    "NAME": "伪反",
-    "DESCRIPTION": "获得 !M! 层 champ:反击 。 NL 下次触发 champ:反击 时，失去一半 champ:反击 而不是移除。"
-  },
-  "champ:IronFortress": {
-    "NAME": "钢铁要塞",
-    "DESCRIPTION": "每当你进入 姿态 时，获得 !M! 点 格挡 和 !M! 层 champ:反击 。"
-  },
-  "champ:Lariat": {
-    "NAME": "套索",
-    "DESCRIPTION": "重复X次。 NL 获得 !B! 点 格挡 。 champ:Technique",
-    "UPGRADE_DESCRIPTION": "获得 [E] 。NL 重复X次。 NL 获得 !B! 点 格挡 。 champ:Technique"
-  },
-  "champ:HoldFirm": {
-    "NAME": "固守",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 格挡 在 !M! 个回合开始时不会移除。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 格挡 在 !M! 个回合开始时不会移除。"
-  },
-  "champ:ShieldWall": {
-    "NAME": "盾墙",
-    "DESCRIPTION": "你的回合结束时每有一张牌，获得 !M! 层 champ:反击 。"
-  },
-  "champ:Haymaker": {
-    "NAME": "刺拳",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予2层 虚弱 。 NL champ:角斗 champ:连段 ：给予2层 易伤 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予2层 虚弱 。 NL champ:角斗 champ:连段 ：给予2层 易伤 。"
-  },
-  "champ:ViciousMockery": {
-    "NAME": "毒舌",
-    "DESCRIPTION": "champ:角斗 champ:连段 ：如果敌人的意图是攻击，获得 !M! 点 敏捷 。"
-  },
-  "champ:PreciseThrust": {
-    "NAME": "精准冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL champ:角斗 champ:连段 ：本场战斗其伤害和 格挡 获得提高 !M! 。"
-  },
-  "champ:CrookedStrike": {
-    "NAME": "蛇形打击",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 手牌中每有一张牌，敌人本回合失去1点 力量 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 造成 !D! 点伤害。 NL 手牌中每有一张牌，敌人本回合失去1点 力量 。 NL 消耗 。 NL 不处于 champ:角斗 时 消耗 。"
-  },
-  "champ:RapidStrikes": {
-    "NAME": "连续打击",
-    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 本回合每打出过一张 champ:战术 牌再重复一次。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害三次。 NL 本回合每打出过一张 champ:战术 牌再重复一次。",
-	"EXTENDED_DESCRIPTION": [
-      " NL （攻击 ",
-      " 次）",
-      " 次）"
+  "bronze:DecaBeam": {
+    "NAME": "Deca Shield",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! Plated Armor and bronze:Insert !bauto! *Dazed.",
+    "EXTENDED_DESCRIPTION": [
+      "jagged",
+      "Barrier"
     ]
   },
-  "champ:EnchantSword": {
-    "NAME": "强化剑刃",
-    "DESCRIPTION": "获得2点 力量 。 NL 不处于 champ:狂战 时 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得2点 力量 。 NL 不处于 champ:狂战 时 消耗 。"
-  },
-  "champ:BladeFlurry": {
-    "NAME": "剑刃乱舞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 手牌中每有一张 champ:战术 牌重复一次。 NL champ:角斗 champ:连段 ：再重复 !M! 次。"
-  },
-  "champ:SwordThrow": {
-    "NAME": "投掷剑刃",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 除非 champ:狂战 champ:连段 ：下回合不能打出攻击牌。"
-  },
-  "champ:MurderStrike": {
-    "NAME": "刽子打击",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 打出 champ:战术 牌时如果这张牌耗能不为0，本场战斗这张牌的耗能减少1并提高 !M! 点伤害。 NL 消耗 。"
-  },
-  "champ:HeavySlash": {
-    "NAME": "大师斩击",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 你的牌组每有一张已 升级 的牌伤害提高 !M! 。"
-  },
-  "champ:CheapShot": {
-    "NAME": "偷袭",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 如果敌人的意图是强化或负面效果且不是首领， 击晕 敌人。"
-  },
-  "champ:RisingSlash": {
-    "NAME": "狂烈打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果本场战斗中打出的上一张牌是 champ:战术 牌，打出两次"
-  },
-  "champ:Shatter": {
-    "NAME": "粉碎",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:狂战 champ:连段 ：移除敌人的 格挡 再造成伤害。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL champ:狂战 champ:连段 ：移除敌人的 格挡 和 人工制品 再造成伤害。"
-  },
-  "champ:EnragedBash": {
-    "NAME": "怒斩",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:疲劳 !M! 。 NL champ:狂战 champ:连段 ：本场战斗中这张牌的伤害和 champ:疲劳 提高 !cool! 点。"
-  },
-  "champ:VampiricStrike": {
-    "NAME": "饮血打击",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 回复未被 格挡 伤害 的生命。 NL 消耗 。"
-  },
-  "champ:AdrenalArmor": {
-    "NAME": "振奋装甲",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL champ:疲劳 !M! 。 NL champ:狂战 champ:连段 ：打出两次。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL champ:疲劳 !M! 。 NL champ:狂战 champ:连段 ：打出两次。"
-  },
-  "champ:HeartStrike": {
-    "NAME": "穿心攻击",
-    "DESCRIPTION": " 造成你当前 champ:决心 层数的伤害。 NL 消耗 。",
-	"EXTENDED_DESCRIPTION": [
-      " NL （造成 !D! 点 伤害。）"
+  "bronze:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "simple",
+      "Strike"
     ]
   },
-  "champ:FinalRevenge": {
-    "NAME": "复仇",
-    "DESCRIPTION": " 造成你已失去生命的伤害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 造成你已失去生命的伤害。 NL 不处于 champ:狂战 时 消耗 。"
-  },
-  "champ:CrownThrow": {
-    "NAME": "投掷王冠",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 抽 !M! 张牌 。 NL 除非 champ:角斗 champ:连段 ：下回合少抽 3 张牌。"
-  },
-  "champ:FightOn": {
-    "NAME": "越战越勇",
-    "DESCRIPTION": "即逝 。 NL 不能被 升级 。 NL 只能在你拥有至少30点 champ:决心 时才能被打出。 NL 获得5点最大生命。"
-  },
-  "champ:Encircle": {
-    "NAME": "包围",
-    "DESCRIPTION": "对随机一名敌人造成 !D! 点伤害 !M! 次。 NL champ:疲劳 2。 NL champ:狂战 champ:连段 ： 打出两次。"
-  },
-  "champ:LastStand": {
-    "NAME": "最后一战",
-    "DESCRIPTION": " 只能在半血以下才能被打出。 NL 移除所有负面效果。 NL 获得6点 力量 。"
-  },
-  "champ:RecklessLeap": {
-    "NAME": "无谋跃斩",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:疲劳 5。 NL 获得 !M! 点 champ:决心 。 NL 消耗 。"
-  },
-  "champ:IgnorePain": {
-    "NAME": "无视伤痛",
-    "DESCRIPTION": "下回合开始前你的生命将不会减少。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留 。 champ:战术 。 NL 下回合开始前你的生命将不会减少。 NL 消耗 。"
-  },
-  "champ:DeathBlow": {
-    "NAME": "绝地反击",
-    "DESCRIPTION": "champ:疲劳 !M! 。 NL 对所有敌人造成已失去生命一半的伤害。",
-	"EXTENDED_DESCRIPTION": [
-      " NL （造成 !D! 点伤害）"
+  "bronze:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block.",
+    "EXTENDED_DESCRIPTION": [
+      "basic",
+      "Defend"
     ]
   },
-  "champ:ArenaPreparation": {
-    "NAME": "重整战场",
-    "DESCRIPTION": "champ:疲劳 5。 NL 将 !M! 张带有 保留 的随机 champ:战术 牌加入你的手牌。 NL 消耗 。"
+  "bronze:FunctionCard": {
+    "NAME": "()",
+    "DESCRIPTION": ""
   },
-  "champ:EndlessRage": {
-    "NAME": "无穷愤火",
-    "DESCRIPTION": "每当你在你的回合失去生命时，获得1点 champ:决心 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 每当你在你的回合失去生命时，获得1点 champ:决心 。"
+  "bronze:Goto": {
+    "NAME": "Goto",
+    "DESCRIPTION": "Draw !M! card. NL bronze:Compile - Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL bronze:Compile - Draw !M! cards.",
+    "EXTENDED_DESCRIPTION": [
+      "running",
+      "Sprint"
+    ]
   },
-  "champ:SteelEdge": {
-    "NAME": "剑锋",
-    "DESCRIPTION": "champ:狂战 champ:连段 ： 造成 !D! 点伤害X次。 NL champ:防守 champ:连段 ： 获得 !B! 点 格挡 X次。 NL champ:角斗 champ:连段 ： 抽X张牌并获得X [E] 。",
-    "UPGRADE_DESCRIPTION": "champ:狂战 champ:连段 ： 造成 !D! 点伤害X+1次。 NL champ:防守 champ:连段 ： 获得 !B! 点 格挡 X+1次。 NL champ:角斗 champ:连段 ： 抽X+1张牌并获得X+1 [E] 。"
+  "bronze:Replicate": {
+    "NAME": "Replicate",
+    "DESCRIPTION": "Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "copying",
+      "Copy"
+    ]
   },
-  "champ:Improvising": {
-    "NAME": "触类旁通",
-    "DESCRIPTION": "每回合第一次打出 champ:连段 牌时，返回手牌。 NL 它直到打出前费用为0。"
+  "bronze:Branch": {
+    "NAME": "Branch",
+    "DESCRIPTION": "Choose - Deal !D! damage or gain !B! Block. NL bronze:Encode the option not chosen. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Branch: Attack",
+      "Deal !D! damage.",
+      "Branch: Block",
+      "Gain !B! Block."
+    ]
   },
-  "champ:CalledShot": {
-    "NAME": "宣告",
-    "DESCRIPTION": "你打出的下 !M! 张 champ:终结技 将不会退出 姿态 或结束你的回合。",
-	"UPGRADE_DESCRIPTION": "你打出的下 !M! 张 champ:终结技 将不会退出 姿态 或结束你的回合。"
+  "bronze:DelayedSlice": {
+    "NAME": "Delayed Slice",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - ALL enemies lose !M! HP.",
+    "EXTENDED_DESCRIPTION": [
+      "delayed",
+      "Slice"
+    ]
   },
-  "champ:PerfectedStrike": {
-    "NAME": "完美打击",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 你每有一张名字中有 打击 的牌，伤害+ !M! 。"
+  "bronze:WhirlingStrike": {
+    "NAME": "Piercing Shot",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies.",
+    "EXTENDED_DESCRIPTION": [
+      "piercing",
+      "Shot"
+    ]
   },
-  "champ:PerfectForm": {
-    "NAME": "完美形态",
-    "DESCRIPTION": "接下来的 !M! 个回合，进入 champ:终极 。"
+  "bronze:Iterate": {
+    "NAME": "Iterate",
+    "DESCRIPTION": "Deal !D! damage !M! times.",
+    "EXTENDED_DESCRIPTION": [
+      "parsed",
+      "Iterate"
+    ]
   },
-  "champ:Duel": {
-    "NAME": "决斗",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 如果只有一名敌人，打出两次。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 如果只有一名敌人，打出两次。"
+  "bronze:Terminator": {
+    "NAME": "Terminator",
+    "DESCRIPTION": "Deal !D! damage. π NL When bronze:Encoded, if this is in the last slot, increase its damage by !M!.",
+    "EXTENDED_DESCRIPTION": [
+      "sad",
+      "End"
+    ]
   },
-  "champ:DancingMaster": {
-    "NAME": "战技大师",
-    "DESCRIPTION": "如果你在一回合内进入了三种不同的姿态，获得 [E] 并抽2张牌。",
-    "UPGRADE_DESCRIPTION": "如果你在一回合内进入了三种不同的姿态，获得 [E] [E] 并抽2张牌。"
+  "bronze:Overheat": {
+    "NAME": "Overheat",
+    "DESCRIPTION": "Take !M! damage. NL Deal !D! damage. NL bronze:Compile - bronze:Insert a *Burn+.",
+    "EXTENDED_DESCRIPTION": [
+      "heated",
+      "Burn"
+    ]
   },
-  "champ:StrikeOfGenius": {
-    "NAME": "打击天才",
-    "DESCRIPTION": "在你的回合开始时，将随机一张 champ:起手式 牌加入你的手牌。 NL 它直到打出前的耗能为0。",
-    "UPGRADE_DESCRIPTION": "在你的回合开始时，将随机一张已 升级 的 champ:起手式 加入你的手牌。 NL 它直到打出前的耗能为0。"
+  "bronze:CutThrough": {
+    "NAME": "Cut Through",
+    "DESCRIPTION": "Deal !D! damage. NL Scry !M!. NL bronze:Compile - Draw !bauto! card.",
+    "EXTENDED_DESCRIPTION": [
+      "cutting",
+      "Cut"
+    ]
   },
-  "champ:DefensiveStyle": {
-    "NAME": "防守战法",
-    "DESCRIPTION": "champ:防守 champ:起手 。 NL 如果你的回合开始时处于 champ:防守 ，获得5点 格挡 和 champ:反击 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL champ:防守 champ:起手 。 NL 如果你的回合开始时处于 champ:防守 ，获得5点 格挡 和 champ:反击 。"
+  "bronze:RecursiveStrike": {
+    "NAME": "Recursive Strike",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL bronze:Compile - bronze:Encode !M! copies of *Strike.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. NL bronze:Compile - bronze:Encode !M! copies of *Strike+.",
+    "EXTENDED_DESCRIPTION": [
+      "recursive",
+      "Recur"
+    ]
   },
-  "champ:GladiatorStyle": {
-    "NAME": "角斗战法",
-    "DESCRIPTION": "champ:角斗 champ:起手 。 NL 如果你的回合开始时处于 champ:角斗 ，获得3点 guardianmod:临时 力量 和 敏捷 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL champ:角斗 champ:起手 。 NL 如果你的回合开始时处于 champ:角斗 ，获得3点 guardianmod:临时 力量 和 敏捷 。"
+  "bronze:DarkDash": {
+    "NAME": "Dark Dash",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Compile - bronze:Insert a *Void.",
+    "EXTENDED_DESCRIPTION": [
+      "dark",
+      "Dash"
+    ]
   },
-  "champ:BerserkerStyle": {
-    "NAME": "狂暴战法",
-    "DESCRIPTION": "champ:狂战 champ:起手 。 NL 如果你的回合开始时处于 champ:狂战 ， champ:疲劳 2 并获得 [E] 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL champ:狂战 champ:起手 。 NL 如果你的回合开始时处于 champ:狂战 ， champ:疲劳 2 并获得 [E] 。"
+  "bronze:OilSpill": {
+    "NAME": "Oil Spill",
+    "DESCRIPTION": "Deal !D! damage and apply !M! Poison. NL bronze:Compile - bronze:Insert a *Slimed.",
+    "EXTENDED_DESCRIPTION": [
+      "oily",
+      "Spill"
+    ]
   },
-  "champ:EnchantCrown": {
-    "NAME": "附魔金冠",
-    "DESCRIPTION": "接下来的3个回合开始时获得 [E] 。 NL 不处于 champ:角斗 时 消耗 。",
-    "UPGRADE_DESCRIPTION": "接下来的3个回合开始时获得 [E] 。 NL 不处于 champ:角斗 时 消耗 。"
+  "bronze:WildBeam": {
+    "NAME": "Wild Beam",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - bronze:Insert a *Wound.",
+    "EXTENDED_DESCRIPTION": [
+      "wild",
+      "Beam"
+    ]
   },
-  "champ:ModFinisherStrike": {
-    "NAME": "终结打击",
-    "DESCRIPTION": "保留 。 NL champ:终结技 。 NL 造成 !D! 点伤害。"
+  "bronze:Frontload": {
+    "NAME": "Frontload",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Function gains Retain.",
+    "EXTENDED_DESCRIPTION": [
+      "sturdy",
+      "Wall"
+    ]
+  },
+  "bronze:DelayedGuard": {
+    "NAME": "Delayed Guard",
+    "DESCRIPTION": "Next turn, gain !B! Block.",
+    "EXTENDED_DESCRIPTION": [
+      "delayed",
+      "Guard"
+    ]
+  },
+  "bronze:Shield": {
+    "NAME": "Sticky Shield",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Insert a *Slimed.",
+    "EXTENDED_DESCRIPTION": [
+      "sticky",
+      "Shield"
+    ]
+  },
+  "bronze:Deprecate": {
+    "NAME": "Deprecate",
+    "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL bronze:Compile - Gain !bauto! Weak.",
+    "EXTENDED_DESCRIPTION": [
+      "old",
+      "Insult"
+    ]
+  },
+  "bronze:Invalidate": {
+    "NAME": "Invalidate",
+    "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies. NL bronze:Compile - Gain !bauto! Vulnerable.",
+    "EXTENDED_DESCRIPTION": [
+      "invalid",
+      "Error"
+    ]
+  },
+  "bronze:Shell": {
+    "NAME": "Shell",
+    "DESCRIPTION": "Gain !M! bronze:Blur.",
+    "UPGRADE_DESCRIPTION": "Gain !M! bronze:Blur. NL bronze:Compile - Gain !M! bronze:Blur.",
+    "EXTENDED_DESCRIPTION": [
+      "curling",
+      "Shell"
+    ]
+  },
+  "bronze:BitShift": {
+    "NAME": "Bit Shift",
+    "DESCRIPTION": "Choose a card in the Sequence to return to your hand. NL It gains Retain. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a card in the Sequence to return to your hand. NL It gains Retain."
+  },
+  "bronze:Batch": {
+    "NAME": "Batch",
+    "DESCRIPTION": "Create a Function immediately out of the cards in the Sequence. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Create a Function immediately out of the cards in the Sequence."
+  },
+  "bronze:Constructor": {
+    "NAME": "Constructor",
+    "DESCRIPTION": "Gain !B! Block. π NL When bronze:Encoded, if this is the first card, increase its Block by !M!.",
+    "EXTENDED_DESCRIPTION": [
+      "build",
+      "Sadness",
+      "Greatness"
+    ]
+  },
+  "bronze:Separator": {
+    "NAME": "Separator",
+    "DESCRIPTION": "bronze:Compile - If this is not the first or last card in the Sequence, Function gains 'Play this again'.",
+    "EXTENDED_DESCRIPTION": [
+      "split",
+      "Child"
+    ]
+  },
+  "bronze:Overload": {
+    "NAME": "Overload",
+    "DESCRIPTION": "Play a copy of each card in the Sequence. They do not Encode. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Play a copy of each card in the Sequence. They do not Encode."
+  },
+  "bronze:GetLatest": {
+    "NAME": "Get Latest",
+    "DESCRIPTION": "Add a random card with bronze:Encode to your hand. NL It costs 0. NL Exhaust."
+  },
+  "bronze:Flail": {
+    "NAME": "Flail",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies !bauto! times. NL bronze:Compile - Gain !M! Artifact.",
+    "EXTENDED_DESCRIPTION": [
+      "flailing",
+      "Flail"
+    ]
+  },
+  "bronze:DigitalCarnage": {
+    "NAME": "Digital Carnage",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Function gains Ethereal.",
+    "EXTENDED_DESCRIPTION": [
+      "digital",
+      "Carnage"
+    ]
+  },
+  "bronze:NullPointer": {
+    "NAME": "Null Pointer",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL bronze:Compile - Function gains Unplayable.",
+    "EXTENDED_DESCRIPTION": [
+      "null",
+      "Pointer"
+    ]
+  },
+  "bronze:Fortify": {
+    "NAME": "Fortify",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Gain !M! Dexterity.",
+    "EXTENDED_DESCRIPTION": [
+      "solid",
+      "Fortress"
+    ]
+  },
+  "bronze:BronzeOrb": {
+    "NAME": "Bronze Orb",
+    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Gain !B! Block. NL bronze:Encode a random card with bronze:Encode in your draw pile. NL Exhaust."
+  },
+  "bronze:SearingBeam": {
+    "NAME": "Searing Beam",
+    "DESCRIPTION": "Deal !D! damage. π NL Can be Upgraded any number of times.",
+    "EXTENDED_DESCRIPTION": [
+      "searing",
+      "Sear"
+    ]
+  },
+  "bronze:Backtrace": {
+    "NAME": "Backtrace",
+    "DESCRIPTION": "Innate. NL \u00A0 Deal !D! damage. NL bronze:Compile - Function gains Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "sneaky",
+      "Trace"
+    ]
+  },
+  "bronze:CloningBeam": {
+    "NAME": "Merge Conflict",
+    "DESCRIPTION": "Deal !D! damage. NL The next time you bronze:Encode a card, bronze:Encode a copy of it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL The next time you bronze:Encode a card, bronze:Encode a copy of it."
+  },
+  "bronze:FollowUp": {
+    "NAME": "Follow Up",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL If the last played card was a Function, play this again."
+  },
+  "bronze:ChosenStrike": {
+    "NAME": "Cultist Strike",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Increase this card's damage by !M! permanently.",
+    "EXTENDED_DESCRIPTION": [
+      "cultist",
+      "Caw"
+    ]
+  },
+  "bronze:ClassDefault": {
+    "NAME": "Class Default",
+    "DESCRIPTION": "Add a copy of the first card in the current Sequence to the next !M! Sequences automatically.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Add a copy of the first card in the current Sequence to the next !M! Sequences automatically."
+  },
+  "bronze:ItsAFeature": {
+    "NAME": "It's a Feature",
+    "DESCRIPTION": "Whenever you draw a Curse or Status card, gain 1 Temporary Strength and Dexterity.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you draw a Curse or Status card, gain 1 Temporary Strength and Dexterity."
+  },
+  "bronze:MinorBeam": {
+    "NAME": "Minor Beam",
+    "DESCRIPTION": "Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "minor",
+      "Scratch"
+    ]
+  },
+  "bronze:InfiniteBeams": {
+    "NAME": "Infinite Beams",
+    "DESCRIPTION": "At the start of each turn, add a *Minor *Beam to your hand.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, add a *Minor *Beam+ to your hand."
+  },
+  "bronze:Optimize": {
+    "NAME": "Optimize",
+    "DESCRIPTION": "Upgrade the next !M! cards you bronze:Encode that can be upgraded."
+  },
+  "bronze:MaxOutput": {
+    "NAME": "Max Output",
+    "DESCRIPTION": "At the start of your turn, draw 1 additional card and bronze:Insert 1 *Dazed."
+  },
+  "bronze:Mutator": {
+    "NAME": "Mutator",
+    "DESCRIPTION": "Gain 1 Strength. NL Transform a Status in your hand into a copy of this.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain 1 Strength. NL Transform a Status in your hand into a copy of this."
+  },
+  "bronze:Allocate": {
+    "NAME": "Allocate",
+    "DESCRIPTION": "Gain [E] for each Status in your draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Gain ",
+      " [E] .)"
+    ]
+  },
+  "bronze:Decompile": {
+    "NAME": "Decompile",
+    "DESCRIPTION": "Exhaust all cards in the Sequence. Gain [E] and draw a card for each card Exhausted. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Exhaust all cards in the Sequence. Gain [E] and draw a card for each card Exhausted. NL Exhaust."
+  },
+  "bronze:ChildClass": {
+    "NAME": "Invoke",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain [E] equal to the total cost of cards in the Sequence.",
+    "EXTENDED_DESCRIPTION": [
+      "invoked",
+      "Energy"
+    ]
+  },
+  "bronze:Repair": {
+    "NAME": "Repair",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Heal !M! HP.",
+    "EXTENDED_DESCRIPTION": [
+      "tinkers",
+      "Wrench"
+    ]
+  },
+  "bronze:Boost": {
+    "NAME": "Boost",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! Strength.",
+    "EXTENDED_DESCRIPTION": [
+      "boosted",
+      "Boost"
+    ]
+  },
+  "bronze:Safeguard": {
+    "NAME": "Safeguard",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! Frail.",
+    "EXTENDED_DESCRIPTION": [
+      "safe",
+      "Guard"
+    ]
+  },
+  "bronze:BronzeArmor": {
+    "NAME": "Bronze Armor",
+    "DESCRIPTION": "Gain !bauto! Artifact. NL bronze:Compile - ALL enemies gain !M! Artifact.",
+    "EXTENDED_DESCRIPTION": [
+      "bronze",
+      "Armor"
+    ]
+  },
+  "bronze:ForLoop": {
+    "NAME": "For Loop",
+    "DESCRIPTION": "The next card you bronze:Encode causes X additional copies to also be bronze:Encoded. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL The next card you bronze:Encode causes X additional copies to also be bronze:Encoded. NL Exhaust."
+  },
+  "bronze:Philosophize": {
+    "NAME": "Philosophize",
+    "DESCRIPTION": "Gain !bauto! Strength. NL bronze:Compile - ALL enemies gain !M! Strength.",
+    "EXTENDED_DESCRIPTION": [
+      "smart",
+      "Idea"
+    ]
+  },
+  "bronze:Return": {
+    "NAME": "Return",
+    "DESCRIPTION": "Gain [E] and draw 1 additional card at the start of your next X turns. NL Gain [E] . NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] and draw 1 additional card at the start of your next X turns. NL Gain [E] ."
+  },
+  "bronze:ForceShield": {
+    "NAME": "Force Shield",
+    "DESCRIPTION": "Costs 1 less [E] for each Function created this combat. NL Gain !B! Block."
+  },
+  "bronze:Format": {
+    "NAME": "Format",
+    "DESCRIPTION": "bronze:Encode X copies of *Fragment. NL Gain [E] . NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "bronze:Encode X+1 copies of *Fragment. NL Gain [E] . NL Exhaust."
+  },
+  "bronze:FormatEncoded": {
+    "NAME": "Fragment",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block.",
+    "EXTENDED_DESCRIPTION": [
+      "clean",
+      "Fragment"
+    ]
+  },
+  "bronze:BurnOut": {
+    "NAME": "Burn Out",
+    "DESCRIPTION": "Deal !D! damage to a random enemy for ALL of your Status cards, then Exhaust them. NL bronze:Insert 3 *Burns.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Hits ",
+      " times.)"
+    ]
+  },
+  "bronze:ShipIt": {
+    "NAME": "Ship It",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL of your Status cards."
+  },
+  "bronze:Break": {
+    "NAME": "Break",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - bronze:Insert !M! random Status cards.",
+    "EXTENDED_DESCRIPTION": [
+      "broken",
+      "Smash"
+    ]
+  },
+  "bronze:InfiniteLoop": {
+    "NAME": "Infinite Loop",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a copy of this into your hand and increase its damage by !M!.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL bronze:Compile - Add a copy of this into your hand and increase its damage by !M!.",
+    "EXTENDED_DESCRIPTION": [
+      "infinite",
+      "Loop"
+    ]
+  },
+  "bronze:Library": {
+    "NAME": "Library",
+    "DESCRIPTION": "At the start of your turn, add a random card with bronze:Encode to your hand. NL It costs 0."
+  },
+  "bronze:Verify": {
+    "NAME": "Sentient Form",
+    "DESCRIPTION": "After you play or create a Function, increase all numbers on it by 1.",
+    "UPGRADE_DESCRIPTION": "Innate. NL After you play or create a Function, increase all numbers on it by 1."
+  },
+  "bronze:BronzeHeatsink": {
+    "NAME": "Bronze Heatsink",
+    "DESCRIPTION": "Whenever you play a Function, draw a card.",
+    "UPGRADE_DESCRIPTION": "Whenever you play a Function, draw 2 cards."
+  },
+  "bronze:HardenedForm": {
+    "NAME": "Summon Orb",
+    "DESCRIPTION": "Whenever you create a Function, gain !M! Block and deal !M! damage to a random enemy."
+  },
+  "bronze:CopyPaste": {
+    "NAME": "Copy Paste",
+    "DESCRIPTION": "This turn, your next Function is played twice.",
+    "UPGRADE_DESCRIPTION": "Retain. NL This turn, your next Function is played twice."
+  },
+  "bronze:LegacyCode": {
+    "NAME": "Legacy Code",
+    "DESCRIPTION": "Retain. NL Put !M! card from your discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Put !M! cards from your discard pile into your hand."
+  },
+  "bronze:Repulsor": {
+    "NAME": "Repulsor",
+    "DESCRIPTION": "When you draw the first Status or Curse card each turn, Exhaust it and draw a card.",
+    "UPGRADE_DESCRIPTION": "Innate. When you draw the first Status or Curse card each turn, Exhaust it and draw a card."
+  },
+  "bronze:Debug": {
+    "NAME": "Debug",
+    "DESCRIPTION": "Remove all negative bronze:Compile effects from the cards in the Sequence. NL Exhaust."
+  },
+  "bronze:HyperBeam": {
+    "NAME": "HYPER BEAM",
+    "DESCRIPTION": "Retain. NL Deal !D! damage to ALL enemies. NL Skip your next turn. NL When Retained, lower its cost by 1 this combat."
+  },
+  "bronze:Hardcode": {
+    "NAME": "Hardcode",
+    "DESCRIPTION": "Fleeting. NL The next Function you create goes into your deck permanently instead of your hand."
+  },
+  "bronze:SpaghettiCode": {
+    "NAME": "Spaghetti Code",
+    "DESCRIPTION": "Until the Sequence is full, choose 1 of 3 random cards to bronze:Encode. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Until the Sequence is full, choose 1 of 3 random cards to bronze:Encode."
+  },
+  "bronze:Assembly": {
+    "NAME": "Assembly",
+    "DESCRIPTION": "Scry !M!. NL bronze:Encode all cards with bronze:Encode discarded. NL Exhaust."
+  },
+  "bronze:FineTuning": {
+    "NAME": "Fine Tuning",
+    "DESCRIPTION": "Increase all numbers on cards in the Sequence by !M!. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Increase all numbers on cards in the Sequence by !M!. NL Exhaust."
+  },
+  "bronze:CleanCode": {
+    "NAME": "Clean Code",
+    "DESCRIPTION": "Remove all negative bronze:Compile effects from cards in the Sequence. NL Lasts for the next !M! Functions created."
+  },
+  "bronze:BranchBlock": {
+    "NAME": "Branch: Block",
+    "DESCRIPTION": "Gain !B! Block.",
+    "EXTENDED_DESCRIPTION": [
+      "forked",
+      "Branch"
+    ]
+  },
+  "bronze:BranchHit": {
+    "NAME": "Branch: Attack",
+    "DESCRIPTION": "Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "forked",
+      "Branch"
+    ]
+  },
+  "bronze:Ignite": {
+    "NAME": "Ignite",
+    "DESCRIPTION": "Apply !M! hexamod:Soulburn. NL At the end of your turn, take 2 damage.",
+    "UPGRADE_DESCRIPTION": "Apply !M! hexamod:Soulburn. NL At the end of your turn, take 4 damage."
+  },
+  "bronze:IntoTheVoid": {
+    "NAME": "Into the Void",
+    "DESCRIPTION": "Ethereal. NL Enemy loses !M! Strength this turn. NL Whenever this card is drawn, lose 1 Energy. NL Exhaust."
+  },
+  "bronze:Lubricant": {
+    "NAME": "Lubricant",
+    "DESCRIPTION": "Draw !M! cards. NL Exhaust."
+  },
+  "bronze:GrievousWound": {
+    "NAME": "Grievous Wound",
+    "DESCRIPTION": "Apply !M! Vulnerable."
+  },
+  "bronze:Daze": {
+    "NAME": "Daze",
+    "DESCRIPTION": "Ethereal. NL Apply !M! Weak. NL Exhaust."
+  },
+  "bronze:UnknownStatus": {
+    "NAME": "Perplex",
+    "DESCRIPTION": "Deal !B! Block."
+  },
+  "bronze:TinkerersToolbox": {
+    "NAME": "Dev Tools",
+    "DESCRIPTION": "Retain. NL Choose between *Debug, *Batch and *Decompile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Choose between *Debug, *Batch and *Decompile."
+  },
+  "bronze:Refactor": {
+    "NAME": "Refactor",
+    "DESCRIPTION": "Scry !M!. NL Gain !B! Block for each Status card discarded. NL Exhaust any others discarded."
+  },
+  "bronze:Turbo": {
+    "NAME": "Turbo",
+    "DESCRIPTION": "Gain [E] [E] . NL bronze:Insert a *Void.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain [E] [E] . NL bronze:Insert a *Void."
+  },
+  "bronze:BugBarrage": {
+    "NAME": "Bug Barrage",
+    "DESCRIPTION": "Add 1 *Wound to your hand. NL Deal !D! damage for each Status card in hand.",
+    "UPGRADE_DESCRIPTION": "Add !M! *Wounds to your hand. NL Deal !D! damage for each Status card in hand.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Hits ",
+      " times.)"
+    ]
+  },
+  "bronze:BuggyMess": {
+    "NAME": "Buggy Mess",
+    "DESCRIPTION": "bronze:Insert random Status. NL Gain !M! [E] .",
+    "EXTENDED_DESCRIPTION": [
+      "buggy",
+      "Mess"
+    ]
+  },
+  "bronze:FindAndReplace": {
+    "NAME": "Find and Replace",
+    "DESCRIPTION": "Put a card from your draw or discard pile into your hand. NL Add a Dazed where it was.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Put a card from your draw or discard pile into your hand. NL Add a Dazed where it was."
+  },
+  "bronze:ThunderWave": {
+    "NAME": "Thunder Wave",
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each Function created this combat.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Hits ",
+      " times.)"
+    ]
+  },
+  "bronze:AlphaBuild": {
+    "NAME": "Early Access",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Beta Build.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Beta Build.",
+    "EXTENDED_DESCRIPTION": [
+      "rough",
+      "Alpha"
+    ]
+  },
+  "bronze:BetaBuild": {
+    "NAME": "Beta Build",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Full Release.",
+    "EXTENDED_DESCRIPTION": [
+      "early",
+      "Beta"
+    ]
+  },
+  "bronze:FullRelease": {
+    "NAME": "Full Release",
+    "DESCRIPTION": "bronze:Compile - Function becomes a Power which activates its effects at the start of each turn.",
+    "EXTENDED_DESCRIPTION": [
+      "full",
+      "Release"
+    ]
   }
 }

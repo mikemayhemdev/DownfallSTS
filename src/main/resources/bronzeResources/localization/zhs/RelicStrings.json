@@ -1,110 +1,104 @@
 {
-  "champ:ChampionCrown": {
-    "NAME": "冠军金冠",
-    "FLAVOR": "你是冠军！",
+  "bronze:BronzeCore": {
+    "NAME": "Bronze Core",
+    "FLAVOR": "Replace once every 50,000 years.",
     "DESCRIPTIONS": [
-      " #y起手式 时如果不处于 #y姿态 中，将随机一张手牌本回合的耗能降低 #b1 。"
+      "The first Function you create each combat costs #b1 less the turn it is created."
     ]
   },
-  "champ:BlackKnightHelmet": {
-    "NAME": "黑骑头盔",
-    "FLAVOR": "只受到一点擦伤。",
+  "bronze:ProtectiveGoggles": {
+    "NAME": "Protective Goggles",
+    "FLAVOR": "Look closely.",
     "DESCRIPTIONS": [
-      "每场战斗第一次进入每种 #y姿态 时： NL #b防卫 -获得2点敏捷并失去1点力量。 NL #y角斗 -获得1点敏捷和力量。 NL #r狂战 -获得2点力量并失去1点敏捷。"
+      "If you end your turn with no cards in the #ySequence, gain #b4 #yBlock."
     ]
   },
-  "champ:Barbells": {
-    "NAME": "哑铃",
-    "FLAVOR": "Flavor.",
+  "bronze:DecasWashers": {
+    "NAME": "Deca's Washers",
+    "FLAVOR": "It is unclear why Deca collects these.",
     "DESCRIPTIONS": [
-      "每当你进入 #y休息处 ，如果你至少有 #b3 张未 #y升级 的牌，随机 #y升级 牌组中的一张牌。"
+      "At the start of each combat, draw #b3 additional cards and add a #yDazed into your draw pile."
     ]
   },
-  "champ:BerserkersGuideToSlaughter": {
-    "NAME": "狂战指南",
-    "FLAVOR": "Flavor.",
+  "bronze:Timepiece": {
+    "NAME": "Timepiece",
+    "FLAVOR": "From his collection of identical clocks.",
     "DESCRIPTIONS": [
-      "阻止每场战斗前10点生命损失。"
+      "All Functions you #yCompile gain #yRetain."
     ]
   },
-  "champ:ChampionCrownUpgraded": {
-    "NAME": "终极王冠",
-    "FLAVOR": "Flavor.",
+  "bronze:Mallet": {
+    "NAME": "Mallet",
+    "FLAVOR": "That's it! I'm gettin me mallet!",
     "DESCRIPTIONS": [
-      "每场战斗开始时进入 #y终极 并持续 #b2 回合 。"
+      "Every time you play #b3 Functions in a single turn, gain #b1 #yStrength and #b1 #yDexterity."
     ]
   },
-  "champ:DefensiveTrainingManual": {
-    "NAME": "防御训练手册",
-    "FLAVOR": "Flavor.",
+  "bronze:SilverBullet": {
+    "NAME": "Silver Bullet",
+    "FLAVOR": "Spirewolves are long gone.",
     "DESCRIPTIONS": [
-      " #y防卫 中的 #y技术 将额外获得 #b3 层 #y反击 。"
+      "Start each combat with a #yPiercing #yShot in the #ySequence."
     ]
   },
-  "champ:DeflectingBracers": {
-    "NAME": "偏折护腕",
-    "FLAVOR": "Flavor.",
+  "bronze:MakeshiftBattery": {
+    "NAME": "Makeshift Battery",
+    "FLAVOR": "It's an 8.99 volt.",
     "DESCRIPTIONS": [
-      "敌人的回合结束是，你获得你剩余格挡数的 #y反击 。"
+      "Gain [E] and add a random #yStatus card into your discard pile at the start of your turn."
     ]
   },
-  "champ:DuelingGlove": {
-    "NAME": "决斗手套",
-    "FLAVOR": "Flavor.",
+  "bronze:CableSpool": {
+    "NAME": "Cable Spool",
+    "FLAVOR": "Tangled...",
     "DESCRIPTIONS": [
-      "打出单体攻击牌后，如果敌人没有 #y易伤 ，给予 #b1 层 #y易伤 。"
+      "Add a copy of the first card you play with #yEncode each combat to the Sequence."
     ]
   },
-  "champ:FightingForDummies": {
-    "NAME": "格斗假人",
-    "FLAVOR": "Flavor.",
+  "bronze:ElectromagneticCoil": {
+    "NAME": "Electromagnetic Coil",
+    "FLAVOR": "An inefficient but entertaining power source.",
     "DESCRIPTIONS": [
-      "你的回合结束时没有处于 #y姿态 ，获得 #b6 点 #y格挡 。"
+      "Functions are now made up of #b4 cards."
     ]
   },
-  "champ:GladiatorsBookOfMartialProwess": {
-    "NAME": "角斗技法",
-    "FLAVOR": "Flavor.",
+  "bronze:PlatinumCore": {
+    "NAME": "Platinum Core",
+    "FLAVOR": "Changelog: Improved user experience.",
     "DESCRIPTIONS": [
-      "每当你一回合内打出 #y起手 、 #y技术 、 #y连段 和 #y终结技 ，随机获得 #b1 点 #y力量 或 #y敏捷 。"
+      "Replaces",
+      ".[] NL The first #b3 #yFunctions you create each combat cost #b1 less the turn they are created."
     ]
   },
-  "champ:PowerArmor": {
-    "NAME": "力量铠甲",
-    "FLAVOR": "Flavor.",
+  "bronze:BottledCode": {
+    "NAME": "Bottled Code",
+    "FLAVOR": "Actually, I have code for that exact thing...",
     "DESCRIPTIONS": [
-      "每回合开始时获得 [E] 。 NL 你的最大 #y决心 、 #y反击 为 #b15 ， #y手牌上限 为 #b8 。"
+      "Upon pickup, choose a card with #yEncode. Start each combat with this card in the #ySequence.",
+      "Choose a card for ",
+      "Start each combat with ",
+      " in the #ySequence."
     ]
   },
-  "champ:SignatureFinisher": {
-    "NAME": "终结者",
-    "FLAVOR": "Flavor.",
+  "bronze:DonusWashers": {
+    "NAME": "Donu's Washers",
+    "FLAVOR": "It is rather clear why Donu collects these.",
     "DESCRIPTIONS": [
-      "拾起时，选择一张 #y终结技 牌。这张牌将不会结束你的回合并退出 #y姿态 。",
-      "选一张牌 ",
-      "不会结束你的回合并退出姿态。"
+      "At the start of combat, gain [E] [E] and add #b1 #yVoid into your draw pile."
     ]
   },
-  "champ:SpectersHand": {
-    "NAME": "幽灵之手",
-    "FLAVOR": "Flavor.",
+  "bronze:BronzeIdol": {
+    "NAME": "Bronze Idol",
+    "FLAVOR": "An ancient, weaponised antivirus - who knows who made it, and why?",
     "DESCRIPTIONS": [
-      "每当你不处于 #y姿态 打出一张 #y技术 ，将一张0耗能带 #y消耗 的打击或防御加入你的手牌。"
+      "#yStatus cards may now be played for useful effects."
     ]
   },
-  "champ:LiftRelic": {
-    "NAME": "内在力量",
-    "FLAVOR": "Flavor.",
+  "bronze:VexRelic": {
+    "NAME": "Paradox Artifact",
+    "FLAVOR": "You've never seen a stress test like this before.",
     "DESCRIPTIONS": [
-      "每场战斗开始时获得 #b",
-      " 点 #y力量 。"
-    ]
-  },
-  "champ:ChampStancesModRelic": {
-    "NAME": "新晋者",
-    "FLAVOR": "Flavor.",
-    "DESCRIPTIONS": [
-      "每场战斗开始时，进入随机一种第一勇士 #y姿态 。"
+      "At the start of combat, #yCompile a random Function. Give it #yRetain."
     ]
   }
 }

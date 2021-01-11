@@ -1,191 +1,137 @@
 {
-  "champ:CounterPower": {
-    "NAME": "反击",
+  "bronze:Cloning": {
+    "NAME": "Merge",
     "DESCRIPTIONS": [
-      "下次你受到 #y攻击 伤害时，反击 #b",
-      " 点伤害。"
+      "The next time you add a card to the Sequence, add an extra copy of it.",
+      "The next time you add a card to the Sequence, add #b",
+      " extra copies of it."
     ]
   },
-  "champ:ResolvePower": {
-    "NAME": "决心",
+  "bronze:Default": {
+    "NAME": "Class Default",
     "DESCRIPTIONS": [
-      "每有 #b5 层时你拥有 #b1 点 #y力量 。战斗结束时，回复 #y决心 层数的生命。"
+      "Add a copy of ",
+      " to the next Sequence.",
+      " to the next #b",
+      " Sequences."
     ]
   },
-  "champ:FocusedGladPower": {
-    "NAME": "角斗士",
+  "bronze:Feature": {
+    "NAME": "It's A Feature",
     "DESCRIPTIONS": [
-      "直到你退出 #y角斗 前， #y技术 将额外抽 #b",
-      " 张牌。",
-      " 张牌。"
+      "Whenever you draw a #rCurse or #yStatus card, gain #b",
+      " temporary #yStrength and #b",
+      " temporary #yDexterity."
     ]
   },
-  "champ:FocusedDefPower": {
-    "NAME": "防反家",
+  "bronze:InfiniteBeams": {
+    "NAME": "Infinite Beams",
     "DESCRIPTIONS": [
-      "直到你退出 #y防卫 前， #y技术 将额外获得 #b",
-      " 层 #y反击 。"
+      "At the start of your turn, add #b1 #yMinor #yBeam into your hand.",
+      "At the start of your turn, add #b1 #yMinor #yBeam+ into your hand.",
+      "At the start of your turn, add #b",
+      " #yMinor #yBeams into your hand.",
+      "At the start of your turn, add #b",
+      " #yMinor #yBeam+s into your hand."
     ]
   },
-  "champ:FocusedBerPower": {
-    "NAME": "狂战士",
+  "bronze:Optimize": {
+    "NAME": "Optimized",
     "DESCRIPTIONS": [
-      "直到你退出 #y狂战 前， #y技术 将额外获得 #b",
-      " 点 #y决心 。"
+      "#yUpgrade the next card you #yEncode that can be #yUpgraded.",
+      "#yUpgrade the next #b",
+      " cards you #yEncode that can be #yUpgraded."
     ]
   },
-  "champ:EnchantedShieldPower": {
-    "NAME": "Enchanted Shield",
+  "bronze:MaxOutput": {
+    "NAME": "Max Output",
     "DESCRIPTIONS": [
-      "阻止本回合下一次生命损失。",
-      "阻止本回合下 #b",
-      " 次生命损失。"
+      "Draw #b1 additional card and add #b1 #yDazed into your draw pile each turn.",
+      "Draw #b",
+      " additional cards and add #b",
+      " #yDazed into your draw pile each turn."
     ]
   },
-  "champ:ShieldWallPower": {
-    "NAME": "盾墙",
+  "bronze:Return": {
+    "NAME": "Returning",
     "DESCRIPTIONS": [
-      "在你的回合结束时，每有一张手牌获得 #b",
-      " 层 #y反击 。"
+      "At the start of your next turn, gain [E] and draw #b1 card.",
+      "At the start of your next #b",
+      " turns, gain [E] and draw #b1 card."
     ]
   },
-  "champ:EntangleNextTurnPower": {
-    "NAME": "投掷剑刃",
+  "bronze:Library": {
+    "NAME": "Library",
     "DESCRIPTIONS": [
-      "下回合你不能打出 #y攻击牌 。",
-      "下 #b",
-      " 个回合你不能打出 #y攻击牌 。"
+      "At the start of your turn, add a random card with #yEncode to your hand. NL It costs #b0.",
+      "At the start of your turn, add #b",
+      " random cards with #yEncode to your hand. NL They cost #b0."
     ]
   },
-  "champ:DrawLessNextTurnPower": {
-    "NAME": "投掷王冠",
+  "bronze:LibraryMod": {
+    "NAME": "External Library",
     "DESCRIPTIONS": [
-      "下回合少抽 #b",
-      " 张牌。",
-      " 张牌。"
+      "At the start of your turn, add a random card with #yEncode to your hand and give it Ethereal."
     ]
   },
-  "champ:PushThroughPower": {
-    "NAME": "无视伤痛",
+  "bronze:BronzeHeatsink": {
+    "NAME": "Bronze Heatsink",
     "DESCRIPTIONS": [
-      "本回合你不会失去生命。",
-      "接下俩的 #b",
-      " 回合内你不会失去生命。"
+      "Whenever you play a #yFunction, draw #b1 card.",
+      "Whenever you play a #yFunction, draw #b",
+      " cards."
     ]
   },
-  "champ:WorseRupturePower": {
-    "NAME": "无穷愤火",
+  "bronze:HardenedForm": {
+    "NAME": "Hardened Form",
     "DESCRIPTIONS": [
-      "每当你在你的回合失去生命时，获得 #b",
-      " 点 #y决心 。"
+      "Whenever you create a Function, gain #b",
+      " #yBlock."
     ]
   },
-  "champ:ImprovisingPower": {
-    "NAME": "触类旁通",
+  "bronze:Hardcode": {
+    "NAME": "Hardcoding",
     "DESCRIPTIONS": [
-      "每回合第一次打出 #y连段 牌时如果不处于对应的 #y姿态 ，返回手牌且直到打出前耗能为0。还有 #b",
-      " 次。",
-      "每回合第 #b",
-      " 次打出 #y连段 牌时如果不处于对应的 #y姿态 ，返回手牌且直到打出前耗能为0。还有 #b"
+      "Next time you create a Function, it goes into your deck instead of your hand.",
+      "The next #b",
+      " times you create a Function, it goes into your deck instead of your hand."
     ]
   },
-  "champ:CalledShotPower": {
-    "NAME": "宣告",
+  "bronze:Verify": {
+    "NAME": "Sentient Form",
     "DESCRIPTIONS": [
-      "你打出的下一张 #y终结技 将不会退出 #y姿态 或结束你的回合。",
-      "你打出的下 #b",
-      " 张 #y终结技 将不会退出 #y姿态 或结束你的回合。"
+      "After you play or create a Function, increase all numbers on it by #b",
+      "."
     ]
   },
-  "champ:DancingMasterPower": {
-    "NAME": "战技大师",
+  "bronze:FreeFunction": {
+    "NAME": "Free Function",
     "DESCRIPTIONS": [
-      "每当你在一回合内进入过三张不同的姿态，获得 #b",
-      " [E] 并抽 #b2 张牌。本回合进入过："
+      "The next Function you create costs #b0.",
+      "The next #b",
+      " Functions you create cost #b0."
     ]
   },
-  "champ:StrikeOfGeniusPower": {
-    "NAME": "打击天才",
+  "bronze:CleanCode": {
+    "NAME": "Clean Code",
     "DESCRIPTIONS": [
-      "在你的回合开始时，将随机一张 #y起手牌 加入你的手牌。它直到打出前的耗能为0。",
-      "在你的回合开始时，将随机 #b",
-      " 张 #y起手牌 加入你的手牌。它直到打出前的耗能为0。"
+      "Remove all negative #yCompile effects from cards in the Sequence. Lasts for #b1 more Function.",
+      "Remove all negative #yCompile effects from cards in the Sequence. Lasts for #b",
+      " Functions."
     ]
   },
-  "champ:StrikeOfGeniusUpgradedPower": {
-    "NAME": "打击天才+",
+  "bronze:CopyPaste": {
+    "NAME": "Copy Paste",
     "DESCRIPTIONS": [
-      "在你的回合开始时，将随机一张已 #y升级 的 #y起手牌 加入你的手牌。它直到打出前的耗能为0。",
-      "在你的回合开始时，将随机 #b",
-      " 张已 #y升级 的 #y起手牌 加入你的手牌。它直到打出前的耗能为0。"
+      "Your next Function is played twice this turn.",
+      "Your next #b",
+      " Functions are played twice this turn."
     ]
   },
-  "champ:DefensiveStylePower": {
-    "NAME": "防守战法",
+  "bronze:FullRelease": {
+    "NAME": "Full Release",
     "DESCRIPTIONS": [
-      "如果你的回合开始时处于 #y防守 ，获得 #b",
-      " 点 #y格挡 和 #b",
-      " 层 #y反击 。"
-    ]
-  },
-  "champ:GladiatorStylePower": {
-    "NAME": "角斗战法",
-    "DESCRIPTIONS": [
-      "如果你的回合开始时处于 #y角斗 ，获得 #b",
-      " 点 #y临时力量 和 #y敏捷 。"
-    ]
-  },
-  "champ:BerserkerStylePower": {
-    "NAME": "狂暴战法",
-    "DESCRIPTIONS": [
-      "如果你的回合开始时处于 #y狂战 ， #y疲劳 #b",
-      " 并获得 [E] 。"
-    ]
-  },
-  "champ:FalseCounterPower": {
-    "NAME": "伪反",
-    "DESCRIPTIONS": [
-      "下次触发 #y反击 时，失去一半 #y反击 而不是移除。",
-      "下 #b",
-      " 次触发 #y反击 时，失去一半 #y反击 而不是移除。"
-    ]
-  },
-  "champ:EnergizedDurationPower": {
-    "NAME": "附魔金冠",
-    "DESCRIPTIONS": [
-      "下一回合开始时获得 [E] 。",
-      "下 #b",
-      " 个回合开始时获得 [E] 。"
-    ]
-  },
-  "champ:IronFortressPower": {
-    "NAME": "钢铁要塞",
-    "DESCRIPTIONS": [
-      "每当你进入 #y姿态 时，获得 #b",
-      " 点 #y格挡 和 #y反击 。"
-    ]
-  },
-  "champ:LastStandMod": {
-    "NAME": "最后一战",
-    "DESCRIPTIONS": [
-      "每回合开始时，如果生命低于一半，清除所有负面效果并获得 ",
-      " 点力量。"
-    ]
-  },
-  "champ:NoBlockNextTurnPower": {
-    "NAME": "爆甲",
-    "DESCRIPTIONS": [
-      "你的下个回合不能获得格挡。",
-      "你的下 #b",
-      " 个回合不能获得格挡。"
-    ]
-  },
-  "champ:UltimateStancePower": {
-    "NAME": "终结",
-    "DESCRIPTIONS": [
-      "终极姿态将在本回合结束。",
-      "终极姿态将再持续 #b",
-      " 个回合。"
+      "At the start of your turn, NL "
     ]
   }
 }
