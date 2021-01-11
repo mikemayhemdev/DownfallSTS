@@ -73,34 +73,24 @@ public class Colosseum_Evil extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2] + DESCRIPTIONS[4]);
                         SlimeboundMod.logger.info("fight");
                         downfallMod.overrideBossDifficulty = true;
-                        String s = downfallMod.possEncounterList.get(AbstractDungeon.cardRandomRng.random(downfallMod.possEncounterList.size()-1));
-                        switch (s) {
-                            case "downfall:CharBossIronclad":
-                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:CharBossIronclad");
-                                AbstractDungeon.lastCombatMetricKey = "downfall:CharBossIronclad";
-//                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()});
-                                break;
-                            case "downfall:CharBossSilent":
-                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:CharBossSilent");
-                                AbstractDungeon.lastCombatMetricKey = "downfall:CharBossSilent";
-//                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()});
-                                break;
-                            case "downfall:CharBossDefect":
-                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:CharBossDefect");
-                                AbstractDungeon.lastCombatMetricKey = "downfall:CharBossDefect";
-//                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()});
-                                break;
-                            case "downfall:CharBossWatcher":
-                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:CharBossWatcher");
-                                AbstractDungeon.lastCombatMetricKey = "downfall:CharBossWatcher";
-//                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()});
-                                break;
-                            default:
-                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:CharBossIronclad");
-                                AbstractDungeon.lastCombatMetricKey = "downfall:CharBossIronclad";
-//                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()});
-                                break;
+                        String s = downfallMod.possEncounterList.get(AbstractDungeon.cardRandomRng.random(downfallMod.possEncounterList.size() - 1));
+
+                        if (s.equals(CharBossIronclad.ID)) {
+
+                            AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(CharBossIronclad.ID);
+                            AbstractDungeon.lastCombatMetricKey = CharBossIronclad.ID;
+                        } else if (s.equals(CharBossSilent.ID)) {
+                            AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(CharBossSilent.ID);
+                            AbstractDungeon.lastCombatMetricKey = CharBossSilent.ID;
+                        } else if (s.equals(CharBossDefect.ID)) {
+                            AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(CharBossDefect.ID);
+                            AbstractDungeon.lastCombatMetricKey = CharBossDefect.ID;
+                        } else if (s.equals(CharBossWatcher.finishedSetup)) {
+
+                            AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(CharBossWatcher.ID);
+                            AbstractDungeon.lastCombatMetricKey = CharBossWatcher.ID;
                         }
+
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.RARE);
                         AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.UNCOMMON);
@@ -121,7 +111,7 @@ public class Colosseum_Evil extends AbstractImageEvent {
             case FIGHT:
                 switch (buttonPressed) {
                     case 0:
-                        if (AbstractDungeon.getCurrRoom().eliteTrigger){
+                        if (AbstractDungeon.getCurrRoom().eliteTrigger) {
                             this.enterCombatFromImage();
                             break;
                         } else {

@@ -2,6 +2,7 @@ package downfall.patches;
 
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.exordium.Mushrooms;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
@@ -23,22 +24,17 @@ import java.util.ArrayList;
 
 
 public class NeowBlessingPatch {
-    @SpirePatch(
-            clz = CustomModeScreen.class,
-            method = "addNonDailyMods"
-    )
-    public static class CustomModeScreenPatch {
-        @SpirePrefixPatch
-        public static SpireReturn<Void> Prefix(CustomModeScreen _instance,CustomTrial trial, ArrayList<String> modIds) {
-            for (String modId : modIds) {
-                if(modId.equals(ExchangeController.ID)){
-                    trial.setShouldKeepStarterRelic(false);
-                }
-            }
 
+    @SpirePatch(
+            clz = CardCrawlGame.class,
+            method = "loadPlayerSave"
+    )
+    public static class CardCrawlGamePatch {
+        @SpireInsertPatch(rloc = 39)
+        public static SpireReturn<Void> Insert(CardCrawlGame _instance,AbstractPlayer p) {
+            p.potionSlots = 0;
             return SpireReturn.Continue();
         }
     }
-
 
 }

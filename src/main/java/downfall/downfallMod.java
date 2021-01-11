@@ -56,6 +56,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.GoldenIdol;
+import com.megacrit.cardcrawl.relics.NeowsLament;
 import com.megacrit.cardcrawl.relics.VelvetChoker;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.custom.CustomMod;
@@ -149,9 +150,9 @@ public class downfallMod implements
     public static final String PROP_CHAR_CROSSOVER = "crossover_characters";
     public static final String PROP_UNLOCK_ALL = "unlockEverything";
 
-    public static String Act1BossFaced = CharBossIronclad.ID;
-    public static String Act2BossFaced = CharBossSilent.ID;
-    public static String Act3BossFaced = CharBossDefect.ID;
+    public static String Act1BossFaced = downfallMod.makeID("Ironclad");
+    public static String Act2BossFaced = downfallMod.makeID("Silent");
+    public static String Act3BossFaced = downfallMod.makeID("Defect");
 
     @SpireEnum
     public static AbstractCard.CardTags CHARBOSS_ATTACK;
@@ -1002,6 +1003,7 @@ public class downfallMod implements
         l.add(new CustomMod(Improvised.ID, "g", true));
         l.add(new CustomMod(EvilRun.ID, "b", false));
         l.add(new CustomMod(ExchangeController.ID, "r", true));
+        l.add(new CustomMod(Lament.ID, "g", true));
     }
 
     @Override
@@ -1031,6 +1033,11 @@ public class downfallMod implements
 
         if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ExchangeController.ID)) || ModHelper.isModEnabled(ExchangeController.ID)) {
             RelicLibrary.getRelic(NeowBlessing.ID).makeCopy().instantObtain();
+
+        }
+
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Lament.ID)) || ModHelper.isModEnabled(Lament.ID)) {
+            RelicLibrary.getRelic(NeowsLament.ID).makeCopy().instantObtain();
 
         }
 

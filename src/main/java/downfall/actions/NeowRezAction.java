@@ -74,7 +74,7 @@ public class NeowRezAction extends AbstractGameAction {
             this.rezInit = true;
             String name;
             if (owner.bossesToRez.size() == 0) {
-                name = "downfall:CharBossIronclad";
+                name = CharBossIronclad.ID;
                 SlimeboundMod.logger.info("WARNING: Neow had no bosses to rez.  Spawning an Ironclad by default.");
             } else {
                 //Collections.shuffle(owner.bossesToRez);
