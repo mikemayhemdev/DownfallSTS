@@ -242,44 +242,67 @@ public class FunctionHelper {
     }
 
     public static void render(SpriteBatch sb) {
-        sb.setColor(Color.WHITE.cpy());
-        if (max() == 4) {
-            sb.draw(bg_4card, BG_X, BG_Y, 0, 0, bg_4card.getWidth() * Settings.scale, bg_4card.getHeight() * Settings.scale, 1, 1, 0, 0, 0, bg_4card.getWidth(), bg_4card.getHeight(), false, false);
-        } else {
-            sb.draw(bg, BG_X, BG_Y, 0, 0, bg.getWidth() * Settings.scale, bg.getHeight() * Settings.scale, 1, 1, 0, 0, 0, bg.getWidth(), bg.getHeight(), false, false);
-        }
-        for (int i = 0; i < max(); i++) {
-            sb.draw(sequenceSlot, floaterStartPositions[i].x, floaterStartPositions[i].y + bobEffects[i].y, 0, 0, sequenceSlot.getWidth() * Settings.scale, sequenceSlot.getHeight() * Settings.scale, 1, 1, 0, 0, 0, sequenceSlot.getWidth(), sequenceSlot.getHeight(), false, false);
-            if (held.size() - 1 >= i) {
-                held.group.get(i).render(sb);
+        if (doStuff) {
+            sb.setColor(Color.WHITE.cpy());
+            if (max() == 4) {
+                sb.draw(bg_4card, BG_X, BG_Y, 0, 0, bg_4card.getWidth() * Settings.scale, bg_4card.getHeight() * Settings.scale, 1, 1, 0, 0, 0, bg_4card.getWidth(), bg_4card.getHeight(), false, false);
+            } else {
+                sb.draw(bg, BG_X, BG_Y, 0, 0, bg.getWidth() * Settings.scale, bg.getHeight() * Settings.scale, 1, 1, 0, 0, 0, bg.getWidth(), bg.getHeight(), false, false);
             }
-        }
-        if (secretStorage != null) {
-            secretStorage.render(sb);
+            for (int i = 0; i < max(); i++) {
+                sb.draw(sequenceSlot, floaterStartPositions[i].x, floaterStartPositions[i].y + bobEffects[i].y, 0, 0, sequenceSlot.getWidth() * Settings.scale, sequenceSlot.getHeight() * Settings.scale, 1, 1, 0, 0, 0, sequenceSlot.getWidth(), sequenceSlot.getHeight(), false, false);
+                if (held.size() - 1 >= i) {
+                    held.group.get(i).render(sb);
+                }
+            }
+            if (secretStorage != null) {
+                secretStorage.render(sb);
+            }
         }
     }
 
     public static void update() {
-        for (BobEffect b : bobEffects) {
-            b.update();
+        //Ugly hack to ensure bleeding through to future runs never happens
+        if (!doStuff) {
+            if (AbstractDungeon.player != null || held.size() > 0) {
+                if (AbstractDungeon.player instanceof AutomatonChar) {
+                    doStuff = true;
+                }
+            }
+        } else {
+            if (AbstractDungeon.player == null) {
+                doStuff = false;
+            } else {
+                if (!(AbstractDungeon.player instanceof AutomatonChar)){
+                    if (held.size() == 0){
+                        doStuff = false;
+                    }
+                }
+            }
         }
-        for (int i = 0; i < held.size(); i++) {
-            AbstractCard c = held.group.get(i);
-            c.target_y = cardPositions[i].y + bobEffects[i].y;
-            c.update();
-            c.updateHoverLogic();
-        }
-        if (secretStorage != null) {
-            secretStorage.update();
-            secretStorage.updateHoverLogic();
-            float x = (max() == 3 ? funcPositions[0].x : funcPositions[1].x);
-            float y = (max() == 3 ? funcPositions[0].y : funcPositions[1].y);
-            secretStorage.target_x = x;
-            secretStorage.current_x = x;
-            secretStorage.target_y = y;
-            secretStorage.current_y = y;
-            secretStorage.targetDrawScale = FUNC_CARD_SIZE;
-            secretStorage.drawScale = FUNC_CARD_SIZE;
+
+        if (doStuff) {
+            for (BobEffect b : bobEffects) {
+                b.update();
+            }
+            for (int i = 0; i < held.size(); i++) {
+                AbstractCard c = held.group.get(i);
+                c.target_y = cardPositions[i].y + bobEffects[i].y;
+                c.update();
+                c.updateHoverLogic();
+            }
+            if (secretStorage != null) {
+                secretStorage.update();
+                secretStorage.updateHoverLogic();
+                float x = (max() == 3 ? funcPositions[0].x : funcPositions[1].x);
+                float y = (max() == 3 ? funcPositions[0].y : funcPositions[1].y);
+                secretStorage.target_x = x;
+                secretStorage.current_x = x;
+                secretStorage.target_y = y;
+                secretStorage.current_y = y;
+                secretStorage.targetDrawScale = FUNC_CARD_SIZE;
+                secretStorage.drawScale = FUNC_CARD_SIZE;
+            }
         }
     }
 }
