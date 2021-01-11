@@ -14,39 +14,39 @@
   },
   "sneckomod:TailWhip": {
     "NAME": "Tail Whip",
-    "DESCRIPTION": "Deal !D! damage. NL Apply 0 - !M! Weak. NL Apply 0 - !M! Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! - 2 Weak. NL Apply !M! - 2 Vulnerable."
   },
   "sneckomod:UnknownCommonAttack": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Common Attack Card."
+    "DESCRIPTION": "*Unknown Common Attack Card."
   },
   "sneckomod:UnknownCommonSkill": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Common Skill Card."
+    "DESCRIPTION": "*Unknown Common Skill Card."
   },
   "sneckomod:UnknownUncommonAttack": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Uncommon Attack Card."
+    "DESCRIPTION": "*Unknown Uncommon Attack Card."
   },
   "sneckomod:UnknownUncommonSkill": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Uncommon Skill Card."
+    "DESCRIPTION": "*Unknown Uncommon Skill Card."
   },
   "sneckomod:UnknownUncommonPower": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Uncommon Power Card."
+    "DESCRIPTION": "*Unknown Uncommon Power Card."
   },
   "sneckomod:UnknownRareAttack": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Rare Attack Card."
+    "DESCRIPTION": "*Unknown Rare Attack Card."
   },
   "sneckomod:UnknownRareSkill": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Rare Skill Card."
+    "DESCRIPTION": "*Unknown Rare Skill Card."
   },
   "sneckomod:UnknownRarePower": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Rare Power Card."
+    "DESCRIPTION": "*Unknown Rare Power Card."
   },
   "sneckomod:SoulDraw": {
     "NAME": "Soul Draw",
@@ -58,10 +58,6 @@
     "DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand.",
     "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. NL Draw 1 card."
   },
-  "sneckomod:PerplexingStare": {
-    "NAME": "Perplexing Stare",
-    "DESCRIPTION": "ALL enemies gain between -3 and !M! Strength."
-  },
   "sneckomod:SnekBeam": {
     "NAME": "Snek Beam",
     "DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unknown cards in your deck. NL Exhaust.",
@@ -72,7 +68,7 @@
   },
   "sneckomod:UnknownStrike": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Strike Card."
+    "DESCRIPTION": "*Unknown Strike Card."
   },
   "sneckomod:Nope": {
     "NAME": "Nope",
@@ -84,47 +80,47 @@
   },
   "sneckomod:UnknownClass": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown YouShouldNeverSeeThis-ReportToDev Card."
+    "DESCRIPTION": "*Unknown YouShouldNeverSeeThis-ReportToDev Card."
   },
   "sneckomod:UnknownInnate": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Innate Card."
+    "DESCRIPTION": "*Unknown Innate Card."
   },
   "sneckomod:Unknown": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Card."
+    "DESCRIPTION": "*Unknown Card."
   },
   "sneckomod:Unknown0Cost": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown 0 Cost Card."
+    "DESCRIPTION": "*Unknown 0 Cost Card."
   },
   "sneckomod:Unknown1Cost": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown 1 Cost Card."
+    "DESCRIPTION": "*Unknown 1 Cost Card."
   },
   "sneckomod:Unknown2Cost": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown 2 Cost Card."
+    "DESCRIPTION": "*Unknown 2 Cost Card."
   },
   "sneckomod:Unknown3Cost": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown 3 Cost Card."
+    "DESCRIPTION": "*Unknown 3 Cost Card."
   },
   "sneckomod:UnknownX": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown X Cost Card."
+    "DESCRIPTION": "*Unknown X Cost Card."
   },
   "sneckomod:UnknownEthereal": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Ethereal Card."
+    "DESCRIPTION": "*Unknown Ethereal Card."
   },
   "sneckomod:UnknownBlock": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Block Card."
+    "DESCRIPTION": "*Unknown Block Card."
   },
   "sneckomod:UnknownExhaust": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Exhaust Card."
+    "DESCRIPTION": "*Unknown Exhaust Card."
   },
   "sneckomod:SoulCleanse": {
     "NAME": "Soul Cleanse",
@@ -199,7 +195,7 @@
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "Glittering Gambit",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Set your *Gold to !M! % - 120 % of its current amount. NL Exhaust."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Gain !M! - 30 *Gold. NL Exhaust."
   },
   "sneckomod:Transmogrify": {
     "NAME": "Transmogrify",
@@ -224,7 +220,7 @@
   },
   "sneckomod:DiceBlock": {
     "NAME": "Dice Block",
-    "DESCRIPTION": "Gain !M! - !B! Block. NL Maximum Block is increased by 1 for each sneckomod:Unknown card you started combat with."
+    "DESCRIPTION": "Gain !M! - !B! Block. NL Maximum Block is increased by 1 for each *Unknown card you started combat with."
   },
   "sneckomod:MixItUp": {
     "NAME": "Mix It Up!",
@@ -232,35 +228,39 @@
   },
   "sneckomod:MorePower": {
     "NAME": "More Power!",
-    "DESCRIPTION": "Obtain an additional Upgraded sneckomod:Unknown card reward at the end of combat."
+    "DESCRIPTION": "Obtain an additional Upgraded *Unknown card reward at the end of combat."
   },
   "sneckomod:UnknownStrength": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Strength Card."
+    "DESCRIPTION": "*Unknown Strength Card."
+  },
+  "sneckomod:UnknownDraw": {
+    "NAME": "???",
+    "DESCRIPTION": "*Unknown Draw Card."
   },
   "sneckomod:UnknownDexterity": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Dexterity Card."
+    "DESCRIPTION": "*Unknown Dexterity Card."
   },
   "sneckomod:UnknownWeak": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Weak Card."
+    "DESCRIPTION": "*Unknown Weak Card."
   },
   "sneckomod:UnknownVulnerable": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Vulnerable Card."
+    "DESCRIPTION": "*Unknown Vulnerable Card."
   },
   "sneckomod:UnknownColorless": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Colorless Card."
+    "DESCRIPTION": "*Unknown Colorless Card."
   },
   "sneckomod:RainOfDice": {
     "NAME": "Rain of Dice",
-    "DESCRIPTION": "Deal !qqq! - !D! damage to a random enemy 2 - !M! times. NL sneckomod:Muddle the next 2 - !M! cards you draw."
+    "DESCRIPTION": "Deal !qqq! - !D! damage to a random enemy 2 - !M! times."
   },
   "sneckomod:DiceCrush": {
     "NAME": "Dice Crush",
-    "DESCRIPTION": "Deal !M! - !D! damage. NL Maximum damage is increased by 1 for each sneckomod:Unknown card you started combat with."
+    "DESCRIPTION": "Deal !M! - !D! damage. NL Maximum damage is increased by 1 for each *Unknown card you started combat with."
   },
   "sneckomod:SnakeSap": {
     "NAME": "Snake Sap",
@@ -283,8 +283,20 @@
     "NAME": "Wide Sting",
     "DESCRIPTION": "Deal !M! - !D! damage to ALL enemies. NL Upgrade all sneckomod:Offclass cards in your hand."
   },
-  "sneckomod:Bewildered": {
-    "NAME": "Bewildered",
-    "DESCRIPTION": "When you play another card, sneckomod:Muddle your hand, then discard this. NL Exhaust."
+  "sneckomod:UnendingSupply": {
+    "NAME": "Unending Supply",
+    "DESCRIPTION": "At the start of each turn, add a random sneckomod:Offclass card to your hand and sneckomod:Muddle it."
+  },
+  "sneckomod:Memorize": {
+    "NAME": "Memorize",
+    "DESCRIPTION": "sneckomod:Snekproof. Fleeting. NL Choose a card in hand which started *Unknown. NL Permanently add it to your deck, removing its *Unknown.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. Fleeting. Retain. NL Choose a card in hand which started *Unknown. NL Permanently add it to your deck, removing its *Unknown.",
+    "EXTENDED_DESCRIPTION": [
+      " to Memorize."
+    ]
+  },
+  "sneckomod:UnknownBoss": {
+    "NAME": "???",
+    "DESCRIPTION": "*Unknown Boss card."
   }
 }

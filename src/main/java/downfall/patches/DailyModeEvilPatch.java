@@ -45,8 +45,8 @@ public class DailyModeEvilPatch {
                 char_x += center_mod_offset_x;
             }
             //Uncomment to re-randomize dailies whenever you enter the screen.
-            long todaySeed = MathUtils.random(0, TimeHelper.daySince1970());
-            ModHelper.setTodaysMods(todaySeed, __result.todaysChar.chosenClass);// 315
+           // long todaySeed = MathUtils.random(0, TimeHelper.daySince1970());
+           // ModHelper.setTodaysMods(todaySeed, __result.todaysChar.chosenClass);// 315
         }
     }
 

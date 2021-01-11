@@ -1,0 +1,110 @@
+{
+  "champ:ChampionCrown": {
+    "NAME": "Champion's Crown",
+    "FLAVOR": "A WINNER IS YOU!",
+    "DESCRIPTIONS": [
+      "When you enter a #yStance while not in one, reduce the cost of a random card in your hand by #b1 this turn."
+    ]
+  },
+  "champ:BlackKnightHelmet": {
+    "NAME": "Black Knight's Helm",
+    "FLAVOR": "Only a flesh wound.",
+    "DESCRIPTIONS": [
+      "The first time you enter each Stance each combat: NL #bDefensive: Gain 2 Dexterity, Lose 1 Strength. NL #rBerserker: Gain 2 Strength, Lose 1 Dexterity."
+    ]
+  },
+  "champ:Barbells": {
+    "NAME": "Barbell",
+    "FLAVOR": "1000 reps? Psh. I can do 1001.",
+    "DESCRIPTIONS": [
+      "Whenever you enter a Rest Site, if you have at least #b10 non-Upgraded cards in your deck, #yUpgrade one at random."
+    ]
+  },
+  "champ:BerserkersGuideToSlaughter": {
+    "NAME": "Berserker's Guide",
+    "FLAVOR": "The text is illegible.",
+    "DESCRIPTIONS": [
+      "Prevent the first #b10 HP you lose on your turn each combat."
+    ]
+  },
+  "champ:ChampionCrownUpgraded": {
+    "NAME": "Victorious Crown",
+    "FLAVOR": "Conglaturation!! You are the greatest winner.",
+    "DESCRIPTIONS": [
+      "Replaces #rChampion's #rCrown. NL Start each combat in #yUltimate #yStance, which lasts for #b2 turns."
+    ]
+  },
+  "champ:DefensiveTrainingManual": {
+    "NAME": "Defensive Thesis",
+    "FLAVOR": "Pro tip: Don't get hit.",
+    "DESCRIPTIONS": [
+      "Defensive Stance's #yFinisher #yBonus grants #b8 more #yBlock."
+    ]
+  },
+  "champ:DeflectingBracers": {
+    "NAME": "Deflecting Bracers",
+    "FLAVOR": "If you thought blocking was good then...",
+    "DESCRIPTIONS": [
+      "At the end of the enemy round, gain #yCounter equal to your remaining Block."
+    ]
+  },
+  "champ:DuelingGlove": {
+    "NAME": "Dueling Glove",
+    "FLAVOR": "Count from ten...",
+    "DESCRIPTIONS": [
+      "After using a single-target Attack, if the target has no #yVulnerable, apply #b1 #yVulnerable."
+    ]
+  },
+  "champ:FightingForDummies": {
+    "NAME": "Fighting for Dummies",
+    "FLAVOR": "Step 1. Defeat the enemy",
+    "DESCRIPTIONS": [
+      "If you end your turn while in no #yStance, gain #b6 #yBlock."
+    ]
+  },
+  "champ:GladiatorsBookOfMartialProwess": {
+    "NAME": "Gladiators Manual",
+    "FLAVOR": "Try everything - something will stick.",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yTechnique, a #yCombo, a #yFinisher, and enter a #yStance in the same turn, gain #b1 #yStrength and #yDexterity."
+    ]
+  },
+  "champ:PowerArmor": {
+    "NAME": "Power Armor",
+    "FLAVOR": "Bought used.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain [E] . NL Your maximum #yFatigue and #yCounter is #b20."
+    ]
+  },
+  "champ:SignatureFinisher": {
+    "NAME": "Signature Finisher",
+    "FLAVOR": "And now, it's time for my ULTIMATE MOVE!",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose a #yFinisher. This #yFinisher costs 0 and never causes your #yStance to be exited.",
+      "Choose a card for ",
+      " costs 0 and never causes your #yStance to be exited."
+    ]
+  },
+  "champ:SpectersHand": {
+    "NAME": "Spectre's Hand",
+    "FLAVOR": "Some victories stay with you.",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yTechnique while not in a #yStance, add a #yStrike or #yDefend to your hand. It costs #b0 and has #yExhaust."
+    ]
+  },
+  "champ:LiftRelic": {
+    "NAME": "Inner Strength",
+    "FLAVOR": "It's about the gigantic sword in your heart.",
+    "DESCRIPTIONS": [
+      "Start each combat with #b",
+      " #yStrength."
+    ]
+  },
+  "champ:ChampStancesModRelic": {
+    "NAME": "New Challenger",
+    "FLAVOR": "Can you take the crown?",
+    "DESCRIPTIONS": [
+      "Start each combat in a random Champ #yStance."
+    ]
+  }
+}

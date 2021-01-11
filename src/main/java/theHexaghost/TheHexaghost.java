@@ -66,6 +66,8 @@ public class TheHexaghost extends CustomPlayer {
     public float renderscale = 1.0F;
     public float renderscale2 = 1.0F;
 
+    public static AbstractGhostflame startingFlame;
+
     private String atlasURL = "reskinContent/img/HexaghostMod/animation/Hexaghost_original.atlas";
     private String jsonURL = "reskinContent/img/HexaghostMod/animation/Hexaghost_original.json";
 
@@ -120,6 +122,7 @@ public class TheHexaghost extends CustomPlayer {
 
 
     }
+
 
     public static Color oscillarator() {
         oscillatingFader += Gdx.graphics.getRawDeltaTime() / 2;
@@ -316,5 +319,12 @@ public class TheHexaghost extends CustomPlayer {
         @SpireEnum(name = "HEXA_GHOST_PURPLE")
         @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
+    }
+
+    @Override
+    public void applyStartOfTurnPowers() {
+        startingFlame = activeGhostFlame;
+        super.applyStartOfTurnPowers();
+
     }
 }

@@ -1,6 +1,5 @@
 package charbosses.cards;
 
-import charbosses.actions.common.EnemyDrawCardAction;
 import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -10,7 +9,6 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 
@@ -42,8 +40,9 @@ public class EnemyCardGroup extends CardGroup {
 
     public void moveToDiscardPile(final AbstractCard c) {
         this.resetCardBeforeMoving(c);
-        c.darken(false);
-        this.owner.discardPile.addToTop(c);
+        //c.darken(false);
+        System.out.printf(c.name + " DARKEN-CANCELED");
+        //this.owner.discardPile.addToTop(c);
         this.owner.onCardDrawOrDiscard();
     }
 
@@ -57,7 +56,7 @@ public class EnemyCardGroup extends CardGroup {
         c.triggerOnExhaust();
         this.resetCardBeforeMoving(c);
         AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
-        this.owner.exhaustPile.addToTop(c);
+        //this.owner.exhaustPile.addToTop(c);
         this.owner.onCardDrawOrDiscard();
     }
 
@@ -92,17 +91,19 @@ public class EnemyCardGroup extends CardGroup {
 
     public void moveToDeck(final AbstractCard c, final boolean randomSpot) {
         this.resetCardBeforeMoving(c);
+        /*
         if (randomSpot)
             this.owner.drawPile.addToRandomSpot(c);
         else {
-            SlimeboundMod.logger.info("adding card to top");
+            //SlimeboundMod.logger.info("adding card to top");
             this.owner.drawPile.addToTop(c);
         }
+        */
     }
 
     public void moveToBottomOfDeck(final AbstractCard c) {
         this.resetCardBeforeMoving(c);
-        this.owner.drawPile.addToBottom(c);
+        //this.owner.drawPile.addToBottom(c);
     }
 
     private void resetCardBeforeMoving(final AbstractCard c) {
@@ -138,7 +139,7 @@ public class EnemyCardGroup extends CardGroup {
             this.addToTop(c);
         }
         if (placeOnTop.size() > AbstractDungeon.player.masterHandSize) {
-            AbstractDungeon.actionManager.addToTurnStart(new EnemyDrawCardAction(AbstractCharBoss.boss, placeOnTop.size() - AbstractCharBoss.boss.masterHandSize));
+            //AbstractDungeon.actionManager.addToTurnStart(new EnemyDrawCardAction(AbstractCharBoss.boss, placeOnTop.size() - AbstractCharBoss.boss.masterHandSize));
         }
         placeOnTop.clear();
     }

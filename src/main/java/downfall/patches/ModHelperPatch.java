@@ -20,9 +20,11 @@ public class ModHelperPatch {
         myMapD.put(Hexed.ID, new Hexed());
         myMapS.put(Improvised.ID, new Improvised());
         myMapG.put(Jewelcrafting.ID, new Jewelcrafting());
+        myMapG.put(Lament.ID, new Lament());
         myMapD.put(WorldOfGoo.ID, new WorldOfGoo());
         myMapD.put(ExchangeController.ID, new ExchangeController());
-        myMapS.put(Lament.ID, new Lament());
+        myMapS.put(ChampStances.ID, new ChampStances());
+        myMapD.put(Enraging.ID, new Enraging());
         ReflectionHacks.setPrivateStatic(ModHelper.class, "starterMods", myMapS);
         ReflectionHacks.setPrivateStatic(ModHelper.class, "genericMods", myMapG);
         ReflectionHacks.setPrivateStatic(ModHelper.class, "difficultyMods", myMapD);

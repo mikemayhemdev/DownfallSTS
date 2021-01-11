@@ -53,7 +53,7 @@
     "DESCRIPTION": "Gain !M! hexamod:Intensity."
   },
   "hexamod:HexaLevel": {
-    "NAME": "Hexa-Level",
+    "NAME": "Infernal Form",
     "DESCRIPTION": "At the start of your turn, gain !M! hexamod:Intensity.",
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! hexamod:Intensity."
   },
@@ -73,8 +73,7 @@
   },
   "hexamod:GhostOfSpirePresent": {
     "NAME": "Here and Now",
-    "DESCRIPTION": "At the start of each turn, gain !M! Strength. NL Lose this Strength when you hexamod:Advance or hexamod:Retract.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of each turn, gain !M! Strength. NL Lose this Strength when you hexamod:Advance or hexamod:Retract."
+    "DESCRIPTION": "If you start and end your turn with the same Ghostflame active, gain !M! Strength."
   },
   "hexamod:HauntingEcho": {
     "NAME": "Haunting Echo",
@@ -83,18 +82,18 @@
   },
   "hexamod:CrushingStance": {
     "NAME": "Crush",
-    "DESCRIPTION": "Deal !D! damage twice. NL Replace the hexamod:Active Ghostflame with a Crushing Ghostflame. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage twice. NL Replace the hexamod:Active Ghostflame with a hexamod:Crushing Ghostflame. NL Exhaust."
   },
   "hexamod:EmpoweringStance": {
     "NAME": "Empower",
-    "DESCRIPTION": "Gain !B! Block and !M! Strength. NL Replace the hexamod:Active Ghostflame with a Bolstering Ghostflame."
+    "DESCRIPTION": "Gain !B! Block and !M! Strength. NL Replace the hexamod:Active Ghostflame with a hexamod:Bolstering Ghostflame."
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Worthy Sacrifice",
     "DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand.",
     "UPGRADE_DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand. NL It costs 1 less.",
     "EXTENDED_DESCRIPTION": [
-      "to Exhaust for Necessary Sacrifice."
+      "to Exhaust for Worthy Sacrifice."
     ]
   },
   "hexamod:TimeOfNeed": {
@@ -108,10 +107,6 @@
   "hexamod:ShieldOfDarkness": {
     "NAME": "Shield of Night",
     "DESCRIPTION": "If the hexamod:Active Ghostflame is not hexamod:Ignited, gain [E] . NL Gain !B! Block."
-  },
-  "hexamod:GhostlyFlex": {
-    "NAME": "Ghostly Flex",
-    "DESCRIPTION": "Gain 2 guardianmod:Momentary Strength and 2 guardianmod:Momentary Dexterity for each hexamod:Ignited Ghostflame."
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "Bright Ritual",
@@ -148,15 +143,20 @@
   "hexamod:RecurringNightmare": {
     "NAME": "Nightmare Vision",
     "DESCRIPTION": "Put an Ethereal card from your exhaust pile into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Put an Ethereal card from your exhaust pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Put 2 Ethereal cards from your exhaust pile into your hand. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "Choose an Ethereal card to return to your hand."
+      "Choose an Ethereal card to return to your hand.",
+      "Choose ",
+      " Ethereal cards to return to your hand."
     ]
   },
   "hexamod:GiftsFromTheDead": {
     "NAME": "Gifts From Beyond",
-    "DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Whenever an Ethereal card is Exhausted, draw 1 card next turn.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Whenever an Ethereal card is Exhausted, gain [E] and draw 1 card next turn."
+    "DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Whenever an Ethereal card is Exhausted, gain [E] next turn.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Whenever an Ethereal card is Exhausted, gain [E] and draw 1 card next turn.",
+    "EXTENDED_DESCRIPTION": [
+      "These spirits are too powerful to invoke directly."
+    ]
   },
   "hexamod:Ghostwalk": {
     "NAME": "Ghostwalk",
@@ -171,7 +171,7 @@
     "DESCRIPTION": "Ethereal. NL Gain !M! Dexterity and lose 1 Strength."
   },
   "hexamod:ParanormalForm": {
-    "NAME": "Paranormal Form",
+    "NAME": "Poltergeist",
     "DESCRIPTION": "Ethereal. NL Whenever you play an Ethereal card, deal !M! damage to a random enemy."
   },
   "hexamod:UnleashSpirits": {
@@ -263,8 +263,8 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Rain of Embers",
-    "DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn to a random enemy X times.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn to a random enemy X+1 times."
+    "DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn to a random enemy X times. NL If X is 3 or more, apply 1 Weak and Vulnerable to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn to a random enemy X times. NL If X is 3 or more, apply 2 Weak and Vulnerable to ALL enemies."
   },
   "hexamod:VolcanoVisage": {
     "NAME": "Volcano Visage",
@@ -276,7 +276,7 @@
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "Flames from Beyond",
-    "DESCRIPTION": "Unplayable. NL Ethereal, hexamod:Afterlife. NL Apply !burny! hexamod:Soulburn to ALL enemies at the start of your next turn.",
+    "DESCRIPTION": "Unplayable. NL Ethereal, hexamod:Afterlife. NL Apply !burny! hexamod:Soulburn to ALL enemies.",
     "EXTENDED_DESCRIPTION": ["It's too hot to touch!"]
   },
   "hexamod:PhantomFireball": {
@@ -309,11 +309,6 @@
     "NAME": "Dynamic Blow",
     "DESCRIPTION": "Ethereal. NL If the hexamod:Active Ghostflame is hexamod:Ignited, apply !burny! hexamod:Soulburn. If not, deal !D! damage."
   },
-  "hexamod:SpiritOfFire": {
-    "NAME": "Spirit of Fire",
-    "DESCRIPTION": "Ethereal. NL Gain [E] for each hexamod:Ignited Ghostflame.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] for each hexamod:Ignited Ghostflame. NL Draw 1 card."
-  },
   "hexamod:Again": {
     "NAME": "Again!",
     "DESCRIPTION": "hexamod:Force-Ignite the hexamod:Active Ghostflame. NL Do not hexamod:Advance at the end of this turn."
@@ -345,7 +340,7 @@
   },
   "hexamod:FifthSeal": {
     "NAME": "Sixth Seal",
-    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional Seal card reward."
+    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional non-Sixth Seal card reward."
   },
   "hexamod:SixthSeal": {
     "NAME": "Fifth Seal",
@@ -355,10 +350,6 @@
     "NAME": "Living Bomb",
     "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL The next time the target's hexamod:Soulburn detonates, it affects ALL enemies. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL The next time the target's hexamod:Soulburn detonates, it affects ALL enemies."
-  },
-  "hexamod:Haunted": {
-    "NAME": "Haunted",
-    "DESCRIPTION": "Ethereal. Unplayable. NL When drawn, add Ethereal to all cards in your hand."
   },
   "hexamod:CouncilsJustice": {
     "NAME": "Council's Justice",

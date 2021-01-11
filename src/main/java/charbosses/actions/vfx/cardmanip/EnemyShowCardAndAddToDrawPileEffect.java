@@ -43,13 +43,7 @@ public class EnemyShowCardAndAddToDrawPileEffect extends AbstractGameEffect {
             this.card.upgrade();
         }
         CardCrawlGame.sound.play("CARD_OBTAIN");
-        if (toBottom) {
-            AbstractCharBoss.boss.drawPile.addToBottom(this.card);
-        } else if (randomSpot) {
-            AbstractCharBoss.boss.drawPile.addToRandomSpot(this.card);
-        } else {
-            AbstractCharBoss.boss.drawPile.addToTop(this.card);
-        }
+
     }
 
     public EnemyShowCardAndAddToDrawPileEffect(final AbstractCard srcCard, final float x, final float y, final boolean randomSpot, final boolean cardOffset) {
@@ -71,13 +65,6 @@ public class EnemyShowCardAndAddToDrawPileEffect extends AbstractGameEffect {
         AbstractDungeon.effectsQueue.add(new CardPoofEffect(this.card.target_x, this.card.target_y));
         this.card.drawScale = 0.01f;
         this.card.targetDrawScale = 1.0f;
-        if (toBottom) {
-            AbstractCharBoss.boss.drawPile.addToBottom(srcCard);
-        } else if (randomSpot) {
-            AbstractCharBoss.boss.drawPile.addToRandomSpot(srcCard);
-        } else {
-            AbstractCharBoss.boss.drawPile.addToTop(srcCard);
-        }
     }
 
     private void identifySpawnLocation(final float x, final float y) {

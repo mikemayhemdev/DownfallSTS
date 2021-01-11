@@ -28,12 +28,12 @@ public class HyperBeam_Guardian extends AbstractGuardianCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardStrings cardStrings;
-    private static final int COST = 4;
+    private static final int COST = 3;
 
     //TUNING CONSTANTS
-    private static final int DAMAGE = 40;
-    private static final int UPGRADE_DAMAGE = 10;
-    private static final int STRENGTHMULTIPLIER = 3;
+    private static final int DAMAGE = 36;
+    private static final int UPGRADE_DAMAGE = 4;
+    private static final int STRENGTHMULTIPLIER = 4;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
@@ -56,7 +56,7 @@ public class HyperBeam_Guardian extends AbstractGuardianCard {
 
         this.tags.add(GuardianMod.BEAM);
         this.isMultiDamage = true;
-        this.magicNumber = this.baseMagicNumber = STRENGTHMULTIPLIER;
+        this.magicNumber = this.baseMagicNumber = 2;
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
@@ -103,6 +103,7 @@ public class HyperBeam_Guardian extends AbstractGuardianCard {
 
             upgradeName();
             upgradeDamage(UPGRADE_DAMAGE);
+            upgradeMagicNumber(2);
 
         }
     }

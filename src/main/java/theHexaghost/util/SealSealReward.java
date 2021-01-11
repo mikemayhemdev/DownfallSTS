@@ -1,6 +1,5 @@
 package theHexaghost.util;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -8,14 +7,16 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.*;
-import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
-import com.megacrit.cardcrawl.helpers.input.InputHelper;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.Hitbox;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import com.megacrit.cardcrawl.vfx.RewardGlowEffect;
 import theHexaghost.HexaMod;
 import theHexaghost.cards.seals.AbstractSealCard;
+import theHexaghost.cards.seals.FifthSeal;
+import theHexaghost.cards.seals.SixthSeal;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -54,28 +55,22 @@ public class SealSealReward extends RewardItem {
         }
 
         this.text = TEXT[0];
-        Iterator var2 = this.cards.iterator();
 
-        while (true) {
-            while (var2.hasNext()) {
-                AbstractCard c = (AbstractCard) var2.next();
-                if (c.type == AbstractCard.CardType.ATTACK && AbstractDungeon.player.hasRelic("Molten Egg 2")) {
-                    c.upgrade();
-                } else if (c.type == AbstractCard.CardType.SKILL && AbstractDungeon.player.hasRelic("Toxic Egg 2")) {
-                    c.upgrade();
-                } else if (c.type == AbstractCard.CardType.POWER && AbstractDungeon.player.hasRelic("Frozen Egg 2")) {
-                    c.upgrade();
-                }
+        for (AbstractCard c : this.cards) {
+            if (c.type == AbstractCard.CardType.ATTACK && AbstractDungeon.player.hasRelic("Molten Egg 2")) {
+                c.upgrade();
+            } else if (c.type == AbstractCard.CardType.SKILL && AbstractDungeon.player.hasRelic("Toxic Egg 2")) {
+                c.upgrade();
+            } else if (c.type == AbstractCard.CardType.POWER && AbstractDungeon.player.hasRelic("Frozen Egg 2")) {
+                c.upgrade();
             }
-
-            return;
         }
     }
 
     public static AbstractCard getRandomSeal() {
         ArrayList<AbstractCard> list = new ArrayList<>();// 1201
         for (AbstractCard c : CardLibrary.getAllCards()) {
-            if (c instanceof AbstractSealCard)
+            if (c instanceof AbstractSealCard && !c.cardID.equals(FifthSeal.ID))
                 list.add(c);
         }
         return list.get(cardRandomRng.random(list.size() - 1));// 1217
@@ -88,63 +83,6 @@ public class SealSealReward extends RewardItem {
             }
         }
         return false;
-    }
-
-    public void update() {
-        if (this.flashTimer > 0.0F) {
-            this.flashTimer -= Gdx.graphics.getDeltaTime();
-            if (this.flashTimer < 0.0F) {
-                this.flashTimer = 0.0F;
-            }
-        }
-
-        this.hb.update();
-        if (this.effects.size() == 0) {
-            this.effects.add(new RewardGlowEffect(this.hb.cX, this.hb.cY));
-        }
-
-        Iterator i = this.effects.iterator();
-
-        while (i.hasNext()) {
-            AbstractGameEffect e = (AbstractGameEffect) i.next();
-            e.update();
-            if (e.isDone) {
-                i.remove();
-            }
-        }
-
-        if (this.hb.hovered) {
-            switch (this.type) {
-                case POTION:
-                    if (!AbstractDungeon.topPanel.potionCombine) {
-                        TipHelper.renderGenericTip(360.0F * Settings.scale, (float) InputHelper.mY, this.potion.name, this.potion.description);
-                    }
-            }
-        }
-
-        if (this.relicLink != null) {
-            this.relicLink.redText = this.hb.hovered;
-        }
-
-        if (this.hb.justHovered) {
-            CardCrawlGame.sound.play("UI_HOVER");
-        }
-
-        if (this.hb.hovered && InputHelper.justClickedLeft && !this.isDone) {
-            CardCrawlGame.sound.playA("UI_CLICK_1", 0.1F);
-            this.hb.clickStarted = true;
-        }
-
-        if (this.hb.hovered && CInputActionSet.select.isJustPressed() && !this.isDone) {
-            this.hb.clicked = true;
-            CardCrawlGame.sound.playA("UI_CLICK_1", 0.1F);
-        }
-
-        if (this.hb.clicked) {
-            this.hb.clicked = false;
-            this.isDone = true;
-        }
-
     }
 
     @Override

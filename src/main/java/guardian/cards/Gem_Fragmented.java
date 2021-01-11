@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
+import sneckomod.SneckoMod;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.FRAGMENTED;
@@ -20,7 +21,7 @@ public class Gem_Fragmented extends AbstractGuardianCard {
     public static final String NAME;
     public static final String IMG_PATH = "cards/gemFrag.png";
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
     private static final int COST = 0;
@@ -47,6 +48,8 @@ public class Gem_Fragmented extends AbstractGuardianCard {
 
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = FRAGMENTED;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(CardTags.HEALING);
         this.cardsToPreview = new CrystalShiv();
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Fragmented_Gem.png"));
     }

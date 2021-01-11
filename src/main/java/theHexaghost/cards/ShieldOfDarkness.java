@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 
@@ -13,12 +14,13 @@ public class ShieldOfDarkness extends AbstractHexaCard {
 
     //stupid intellij stuff SKILL, SELF, COMMON
 
-    private static final int BLOCK = 10;
+    private static final int BLOCK = 12;
     private static final int UPG_BLOCK = 4;
 
     public ShieldOfDarkness() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

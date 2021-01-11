@@ -8,9 +8,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import downfall.actions.WaitForEscapeAction;
 import downfall.downfallMod;
-
-import java.util.Iterator;
 
 public class HeartsMalice extends CustomRelic {
 
@@ -40,6 +39,8 @@ public class HeartsMalice extends CustomRelic {
 
             this.flash();
 
+            //AbstractDungeon.actionManager.actions.removeIf((act)->act instanceof DrawCardAction); Works, but may cause issues if somehow not all enemies flee.
+            AbstractDungeon.actionManager.addToTop(new WaitForEscapeAction()); //This works better.
             for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 AbstractDungeon.actionManager.addToTop(new EscapeAction(m));
             }

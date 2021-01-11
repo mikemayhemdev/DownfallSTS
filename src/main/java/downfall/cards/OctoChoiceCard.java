@@ -7,9 +7,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theHexaghost.util.CardIgnore;
+import downfall.util.CardIgnore;
 
-@CardIgnore
 public class OctoChoiceCard extends CustomCard {
     private static final int COST = -2;
     private String IMG = null;
@@ -22,10 +21,29 @@ public class OctoChoiceCard extends CustomCard {
     private AbstractCard prev2;
     private AbstractCard prev3;
 
+    public OctoChoiceCard(String id, String name, String IMG, String description, int dmg, int blk, CardType type) {
+        super(id, name, IMG, COST, description, type, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.NONE);
+        this.IMG = IMG;
+        baseDamage = dmg;
+        baseBlock = blk;
+    }
+
     public OctoChoiceCard(String id, String name, String IMG, String description) {
         super(id, name, IMG, COST, description, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.NONE);
         this.IMG = IMG;
     }
+
+    public OctoChoiceCard(String id, String name, String IMG, String description, CardColor color) {
+        super(id, name, IMG, COST, description, CardType.SKILL, color, CardRarity.SPECIAL, CardTarget.NONE);
+        this.IMG = IMG;
+    }
+
+    public OctoChoiceCard(String id, String name, String IMG, String description, CardColor color, CardType type) {
+        super(id, name, IMG, COST, description, type, color, CardRarity.SPECIAL, CardTarget.NONE);
+        this.IMG = IMG;
+    }
+
+    // Future Vex will benefit greatly by making it so there's not 100,000 constructors here...
 
     public OctoChoiceCard(String id, String name, String IMG, String description, AbstractCard prev1, AbstractCard prev2, AbstractCard prev3) {
         super(id, name, IMG, COST, description, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.NONE);

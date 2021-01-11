@@ -11,11 +11,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import downfall.util.EtherealMod;
+import downfall.cardmods.EtherealMod;
 import sneckomod.SneckoMod;
 import sneckomod.cards.SoulRoll;
-import sneckomod.util.ExhaustMod;
-import theHexaghost.HexaMod;
+import downfall.cardmods.ExhaustMod;
 import theHexaghost.util.TextureLoader;
 
 public class UnlimitedRollsPower extends AbstractPower implements CloneablePowerInterface, NonStackablePower {
@@ -24,12 +23,10 @@ public class UnlimitedRollsPower extends AbstractPower implements CloneablePower
 
     private static final Texture tex84 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/Rolls84.png");
     private static final Texture tex32 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/Rolls32.png");
-
-    private boolean bruh;
-
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+    private boolean bruh;
 
     public UnlimitedRollsPower() {
         this.name = NAME;

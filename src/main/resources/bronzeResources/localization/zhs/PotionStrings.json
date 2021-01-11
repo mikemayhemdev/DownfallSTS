@@ -1,0 +1,34 @@
+{
+  "bronze:FreeFunctionsPotion": {
+    "NAME": "Machine Oil",
+    "DESCRIPTIONS": [
+      "Increase all numbers on cards in the Sequence by #b",
+      "."
+    ]
+  },
+  "bronze:CleanCodePotion": {
+    "NAME": "Alchyrical Elixir",
+    "DESCRIPTIONS": [
+      "Remove all negative Compile effects from the next Function you create.  Reduce its cost to 0 until played.",
+      "Remove all negative Compile effects from the next #b",
+      " Functions you create.  Reduce their cost to 0 until played."
+    ]
+  },
+  "bronze:BurnAndBuffPotion": {
+    "NAME": "Vexing Draught",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " Strength and #b",
+      " Dexterity. NL Add two Burn+ Status cards to your draw pile."
+    ]
+  },
+  "bronze:BuildAFunctionPotion": {
+    "NAME": "Kio's Clever Concoction",
+    "DESCRIPTIONS": [
+      "Until the Sequence is full, choose 1 of 3 random cards to Encode.",
+      "Until the Sequence is full, choose 1 of 3 random cards to Encode. Add #b",
+      " copy of the created Function to your hand.",
+      " copies of the created Function to your hand."
+    ]
+  }
+}

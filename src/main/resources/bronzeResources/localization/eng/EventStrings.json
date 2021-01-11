@@ -1,0 +1,73 @@
+{
+  "bronze:ShapeFactory": {
+    "NAME": "Drone Factory",
+    "DESCRIPTIONS": [
+      "You stumble upon one of the Exordium's run-down drone factory - surprisingly, the controls are still working. If you power up and dismantle some of these shape-like machines, you could inherit some of their weapons.",
+      "None of these drones have what you require."
+    ],
+    "OPTIONS": [
+      "[Fight Spiker] #gGain #gSpike.",
+      "[Fight Repulsor] #gGain #gDazing #gPulse.",
+      "[Fight Exploder] #gGain #gExplode.",
+      "[Leave]",
+      "[Begin Combat]",
+      "[Also Fight Spiker] #gGain #gSpike.",
+      "[Also Fight Repulsor] #gGain #gDazing #gPulse.",
+      "[Also Fight Exploder] #gGain #gExplode."
+    ]
+  },
+  "bronze:AncientFactory": {
+    "NAME": "Ancient Factory",
+    "DESCRIPTIONS": [
+      "As you continue your tireless descent, you have come across the ~original~ factory. You remember being here for your own assembly, when you met the ~Maker~ for the first time. NL Each one of the ancient constructs they created is as #yperfect as yourself. There are parts from the old prototypes that could be of use to you, but it will require activating them.",
+      "Even for unfinished prototypes, they are still formidable - no need for unnecessary risks."
+    ],
+    "OPTIONS": [
+      "[Fight Donu Prototype] #gGain #gDonu #gBeam.",
+      "[Fight Deca Prototype] #gGain #gDeca #gShield.",
+      "[Fight Both] #gGain #gBoth #gCards.",
+      "[Leave]"
+    ]
+  },
+  "bronze:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "There is no strength without unity."
+    ],
+    "OPTIONS": [
+      "[Unification] All #gStrikes and #gDefends gain #gEncode.",
+      "[Locked] Requires a Strike or Defend."
+    ]
+  },
+  "bronze:AccursedBlacksmith": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "You decide to put the forge to use and... NL #y@CLANG@ #y@CLAAANG@ #y@CLANG!@ NL ...power up your arsenal with new upgrades and servos."
+    ],
+    "OPTIONS": [
+      "[Tinker] #gUpgrade #g3 #gRandom #gCards #gwith #gEncode.",
+      "[Locked] Requires an unupgraded card with Encode."
+    ]
+  },
+  "bronze:CrystalForge": {
+    "NAME": "Grim Forge",
+    "DESCRIPTIONS": [
+      "Through secret passages known only to the Constructs of the Spire, you enter a chamber designed for maintenance and repairs on Automaton models. The tools available here will be of certain use to you.",
+      "With the magic tongs, you carefully embed a weapon directly into your core. @#y*Bzzzt!*@ Seems like coding yourself is not as easy as you thought.",
+      "Using the enchanted anvil, you smash a precious piece of equipment into pieces, just to forge them into a burst of pure energy. It ~merges~ ~into~ ~your~ ~form,~ filling you with warmth and strength.",
+      "The Forge's ability to transmute matter is put to use immediately as you toss in an unneeded piece of equipment. Some moments later, the material dissolves and compresses into a new enhancement for your armor.",
+      "You escape through the same secret passage you came in, leaving the Grim Forge behind you. Your journey continues towards the Dawn awaiting at the top of the Spire.",
+      "Choose a card to Remove."
+    ],
+    "OPTIONS": [
+      "[Craft] #gGain #gBottled #gCode. #rLose #r10 #rMax #rHP.",
+      "[Transmute] #rRemove a Card. Gain a random #gCard #gwith #gEncode.",
+      "[Reforge] #rRemove a #yRare Card. #gGain #g10 #gMax #gHP #gand #gHeal #gto #gfull.",
+      "[Locked] Already used.",
+      "[Leave]",
+      "[Locked] Requires a card with Encode.",
+      "[Locked] Requires a Rare card.",
+      "Choose a card to remove."
+    ]
+  }
+}

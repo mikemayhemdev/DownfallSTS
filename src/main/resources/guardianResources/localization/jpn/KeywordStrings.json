@@ -1,0 +1,63 @@
+[
+  {
+    "NAMES": [
+      "socket",
+      "sockets",
+      "socketed"
+    ],
+    "PROPER_NAME": "Socket",
+    "DESCRIPTION": "Gems can be placed into this Socket at a Rest Site to combine the Gem's effect with this card's effect."
+  },
+  {
+    "NAMES": [
+      "stasis"
+    ],
+    "PROPER_NAME": "Stasis",
+    "DESCRIPTION": "A card in #yStasis gains a turn counter equal to its cost plus #b1. NL Turn counter is reduced by #b1 at the start of your turn. NL When the counter reaches #b0, it is returned to your hand and costs #b0 until played."
+  },
+  {
+    "NAMES": [
+      "gem",
+      "gems"
+    ],
+    "PROPER_NAME": "Gem",
+    "DESCRIPTION": "#yGems can be placed into #ySockets in cards at a Rest Site. Cannot be #yUpgraded."
+  },
+  {
+    "PROPER_NAME": "Defensive Mode",
+    "NAMES": [
+      "defensive mode",
+      "defensive_mode"
+    ],
+    "DESCRIPTION": "While in #yDefensive #yMode, you have #b3 #yThorns and gain #b2 #yBlock when you play a card. Exit this #yStance at the start of your next turn."
+  },
+  {
+    "NAMES": [
+      "accelerate"
+    ],
+    "PROPER_NAME": "Accelerate",
+    "DESCRIPTION": "Reduce the turn counter of the right-most card in #yStasis by #b1. If the card's turn counter is now #b0, return it to your hand. It costs #b0 until played."
+  },
+  {
+    "NAMES": [
+      "package",
+      "packages"
+    ],
+    "PROPER_NAME": "Package",
+    "DESCRIPTION": "0-cost #yExhausting #ySkill that generates three cards inspired by a chosen Construct of the Spire, and reduces their cost by #b1 for this combat."
+  },
+  {
+    "NAMES": [
+      "volatile"
+    ],
+    "PROPER_NAME": "Volatile",
+    "DESCRIPTION": "When this card leaves #yStasis, #yExhaust it instead of returning it to your hand."
+  },
+  {
+    "NAMES": [
+      "tick"
+    ],
+    "PROPER_NAME": "Tick",
+    "DESCRIPTION": "This effect is triggered whenever this card's turn counter is reduced while in #yStasis."
+  }
+]

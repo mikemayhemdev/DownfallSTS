@@ -26,6 +26,7 @@ public class EnEmptyBody extends AbstractBossCard {
         super(ID, cardStrings.NAME, "purple/skill/empty_body", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.PURPLE, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
         this.baseBlock = 7;
         this.tags.add(CardTags.EMPTY);
+        this.energyGeneratedIfPlayed = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

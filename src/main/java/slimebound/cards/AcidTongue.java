@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.AcidTonguePowerUpgraded;
+import sneckomod.SneckoMod;
 
 
 public class AcidTongue extends AbstractSlimeboundCard {
@@ -22,7 +23,7 @@ public class AcidTongue extends AbstractSlimeboundCard {
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 1;
+    private static final int COST = 2;
     public static String UPGRADED_DESCRIPTION;
     private static int upgradedamount = 1;
 
@@ -35,9 +36,10 @@ public class AcidTongue extends AbstractSlimeboundCard {
 
     public AcidTongue() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber = 2;
 
 
+     //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -54,9 +56,7 @@ public class AcidTongue extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
-            this.isInnate = true;
+            upgradeMagicNumber(1);
 
 
         }

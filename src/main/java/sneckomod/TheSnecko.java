@@ -1,10 +1,7 @@
 package sneckomod;
 
-import com.megacrit.cardcrawl.helpers.*;
-import reskinContent.reskinContent;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
@@ -16,16 +13,18 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ModHelper;
+import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import slimebound.SlimeboundMod;
+import reskinContent.reskinContent;
 import sneckomod.cards.Defend;
 import sneckomod.cards.SnekBite;
 import sneckomod.cards.Strike;
 import sneckomod.cards.TailWhip;
-import sneckomod.cards.unknowns.Unknown;
-import sneckomod.cards.unknowns.UnknownCommonAttack;
-import sneckomod.cards.unknowns.UnknownCommonSkill;
+import sneckomod.cards.unknowns.*;
 import sneckomod.relics.SneckoSoul;
 
 import java.util.ArrayList;
@@ -57,13 +56,13 @@ public class TheSnecko extends CustomPlayer {
     public TheSnecko(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "sneckomodResources/images/char/orb/vfx.png", (String)null, (String)null);
 
-        if(!reskinContent.sneckoReskinAnimation) {
+        if (!reskinContent.sneckoReskinAnimation) {
             initializeClass(null,
                     SHOULDER1,
                     SHOULDER2,
                     CORPSE,
                     getLoadout(), 10.0F, -20.0F, 300.0F, 300.0F, new EnergyManager(3));
-        }else {
+        } else {
             initializeClass(null,
                     "reskinContent/img/SneckoMod/shoulder2.png",
                     "reskinContent/img/SneckoMod/shoulder.png",
@@ -78,9 +77,9 @@ public class TheSnecko extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if(reskinContent.sneckoReskinAnimation && reskinContent.sneckoReskinUnlock){
+        if (reskinContent.sneckoReskinAnimation && reskinContent.sneckoReskinUnlock) {
             loadAnimation("reskinContent/img/SneckoMod/animation/Snecko_waifu.atlas", "reskinContent/img/SneckoMod/animation/Snecko_waifu.json", renderscale);
-        }else {
+        } else {
             loadAnimation("sneckomodResources/images/char/skeleton.atlas", "sneckomodResources/images/char/skeleton.json", renderscale);
         }
 
@@ -98,7 +97,7 @@ public class TheSnecko extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(NAMES[0], TEXT[0],
-                90, 90, 0, 99, 5, this, getStartingRelics(),
+                90, 90, 2, 99, 5, this, getStartingRelics(),
                 getStartingDeck(), false);
     }
 
@@ -223,6 +222,7 @@ public class TheSnecko extends CustomPlayer {
         return ImageMaster.loadImage(SneckoMod.getModID() + "Resources/images/charSelect/leaderboard.png");
     }
     */
+
 
     @Override
     public String getSpireHeartText() {

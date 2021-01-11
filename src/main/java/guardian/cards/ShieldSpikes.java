@@ -28,7 +28,7 @@ public class ShieldSpikes extends AbstractGuardianCard {
 
     //TUNING CONSTANTS
     private static final int BLOCK = 12;
-    private static final int UPGRADE_BLOCK = 2;
+    private static final int UPGRADE_BLOCK = 3;
     private static final int THORNS = 4;
     private static final int UPGRADE_THORNS = 2;
     private static final int SOCKETS = 0;
@@ -63,6 +63,8 @@ public class ShieldSpikes extends AbstractGuardianCard {
         if (p.stance instanceof DefensiveMode) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseThornsPower(p, this.magicNumber), this.magicNumber));
+        } else {
+            brace(8);
         }
     }
 

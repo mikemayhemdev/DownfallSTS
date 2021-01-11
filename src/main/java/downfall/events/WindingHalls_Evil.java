@@ -6,11 +6,14 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.events.GenericEventDialog;
+import com.megacrit.cardcrawl.events.beyond.MysteriousSphere;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.ShopRoom;
 import com.megacrit.cardcrawl.rooms.TreasureRoom;
 import downfall.rooms.HeartShopRoom;
+import slimebound.SlimeboundMod;
+import slimebound.events.DarklingsSlimebound;
 
 public class WindingHalls_Evil extends AbstractImageEvent {
     public static final String ID = "downfall:WindingHalls";
@@ -35,12 +38,30 @@ public class WindingHalls_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screenNum) {
+        switch (this.screenNum) {
             case 0:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
                         this.imageEventText.clearAllDialogs();
+                        boolean hackery = false;
+                        boolean hackery2 = false;
+                        if (AbstractDungeon.eventList.contains(DarklingsSlimebound.ID)) {
+                            AbstractDungeon.eventList.remove(DarklingsSlimebound.ID);
+                            hackery = true;
+                            //SlimeboundMod.logger.info("Hacked away darklings");
+                        }
+                        if (AbstractDungeon.eventList.contains(MysteriousSphere.ID)) {
+                            AbstractDungeon.eventList.remove(MysteriousSphere.ID);
+                            hackery2 = true;
+                            //SlimeboundMod.logger.info("Hacked away orb walkers");
+                        }
                         AbstractDungeon.getCurrRoom().onPlayerEntry();
+                        if (hackery){
+                            AbstractDungeon.eventList.add(DarklingsSlimebound.ID);
+                        }
+                        if (hackery2) {
+                            AbstractDungeon.eventList.add(MysteriousSphere.ID);
+                        }
                         return;
                     case 1:
                         AbstractDungeon.getCurrRoom().clearEvent();

@@ -1,0 +1,30 @@
+{
+  "hexamod:BurningPotion": {
+    "NAME": "화염병",
+    "DESCRIPTIONS": [
+      "#y화상 #b",
+      " 적용시킵니다."
+    ]
+  },
+  "hexamod:DoubleChargePotion": {
+    "NAME": "가연성 액체",
+    "DESCRIPTIONS": [
+      "#y활성화된 유령불꽃을 ",
+      " 번 #y강제점화 시킵니다."
+    ]
+  },
+  "hexamod:EctoCoolerPotion": {
+    "NAME": "유령 냉각음료",
+    "DESCRIPTIONS": [
+      "손 안에 무작위 #y휘발성 카드 #b3 장 중 #b1 장 선택하여 추가합니다. 이번 차례동안 비용은 #b0 입니다.",
+      "손 안에 무작위 #y휘발성 카드 #b3 장 중 #b1 장 선택하여 #b2 개 복사본을 추가합니다. 이번 차례동안 비용은 #b0 입니다."
+    ]
+  },
+  "hexamod:InfernoChargePotion": {
+    "NAME": "지옥불 포션",
+    "DESCRIPTIONS": [
+      "지옥불 유령불꽃을 #y점화합니다.",
+      "지옥불 유령불꽃을 두 차례 #y점화합니다."
+    ]
+  }
+}

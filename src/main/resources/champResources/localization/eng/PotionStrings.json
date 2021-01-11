@@ -1,0 +1,32 @@
+{
+  "champ:OpenerPotion": {
+    "NAME": "Strategy Potion",
+    "DESCRIPTIONS": [
+      "Choose #b1 of #b2 cards which Enter a #yStance to add to your hand (one for each #yStance). It costs #b0 this turn.",
+      " Add #b",
+      " copy of it to your hand.",
+      " copies of it to your hand."
+    ]
+  },
+  "champ:TechniquePotion": {
+    "NAME": "Bottled Technique",
+    "DESCRIPTIONS": [
+      "#yTechnique #b",
+      " times."
+    ]
+  },
+  "champ:UltimateStancePotion": {
+    "NAME": "Substance Of Questionable Legality",
+    "DESCRIPTIONS": [
+      "Enter #yUltimate #yStance for #b",
+      " turns."
+    ]
+  },
+  "champ:CounterPotion": {
+    "NAME": "Brew of Sharpness",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yCounter."
+    ]
+  }
+}

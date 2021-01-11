@@ -3,6 +3,7 @@ package slimebound.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -43,9 +44,9 @@ public class CommandOnPlayPower extends AbstractPower implements CloneablePowerI
         flash();
         AbstractOrb o = SlimeboundMod.getLeadingSlime();
         if (o != null) {
-            for(int i =0;i<this.amount;i++)
             addToBot(new TrigggerSpecificSlimeAttackAction(o));
         }
+        addToBot(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, this, 1));
     }
 
     public void atEndOfTurn(boolean isPlayer) {

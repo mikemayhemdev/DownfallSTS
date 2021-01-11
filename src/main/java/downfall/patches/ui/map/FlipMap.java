@@ -12,25 +12,32 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.TheEnding;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.map.*;
+import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.*;
 import com.megacrit.cardcrawl.screens.DungeonMapScreen;
 import com.megacrit.cardcrawl.ui.buttons.DynamicBanner;
+import downfall.downfallMod;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.actlikeit.MapCompatiblity;
 import javassist.*;
 import javassist.expr.ExprEditor;
 import javassist.expr.FieldAccess;
 import javassist.expr.MethodCall;
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.mapRng;
+import java.util.*;
 
 public class FlipMap {
+    public static final Logger logger = LogManager.getLogger(FlipMap.class.getName());
+
+    private static final HashSet<String> invalidActs;
+    static {
+        invalidActs = new HashSet<>();
+        invalidActs.add("paleoftheancients:PaleOfTheAncients");
+        invalidActs.add("infinite-spire:TheVoid");
+    }
+
     @SpirePatch(
             clz = AbstractDungeon.class,
             method = "generateMap"
@@ -46,16 +53,18 @@ public class FlipMap {
                 locator = Locator.class
         )
         public static void flipflipflipflipflip() {
-            if (EvilModeCharacterSelect.evilMode) {
-                if (!AbstractDungeon.id.equals(TheEnding.ID)) {
+            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
+                if (downfallMod.normalMapLayout) {
+                    if (!AbstractDungeon.id.equals(TheEnding.ID)) {
 
-                    flipCampfire();
+                        flipCampfire();
+                    }
+                    flip(AbstractDungeon.map);
+                } else {
+                    flip(AbstractDungeon.map);
                 }
-                flip(AbstractDungeon.map);
             }
-
         }
-
 
         private static void flipCampfire() {
             ArrayList<ArrayList<MapRoomNode>> map = AbstractDungeon.map;
@@ -89,6 +98,7 @@ public class FlipMap {
                     for (MapEdge e : n.getEdges())
                         if (!edgeArrayContains(edges, e)) {
                             if (e.dstY >= 0 && e.dstY < map.size())
+
                                 edges.add(new MapNodeData(e, n, map.get(e.dstY).get(e.dstX)));
                         }
 
@@ -151,11 +161,11 @@ public class FlipMap {
     public static class EliteRoomPatch {
         @SpirePrefixPatch
         public static SpireReturn<Boolean> Prefix(MapRoomNode n, AbstractRoom roomToBeSet) {
-            if (EvilModeCharacterSelect.evilMode) {
-                java.util.List<Class<? extends AbstractRoom>> applicableRooms = Arrays.asList(RestRoom.class, MonsterRoomElite.class);
+            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
+                List<Class<? extends AbstractRoom>> applicableRooms = Arrays.asList(RestRoom.class, MonsterRoomElite.class);
                 List<Class<RestRoom>> applicableRooms2 = Collections.singletonList(RestRoom.class);
 
-                if (n.y >= 11 && applicableRooms.contains(roomToBeSet.getClass())) {
+                if (n.y >= 10 && applicableRooms.contains(roomToBeSet.getClass())) {
                     return SpireReturn.Return(false);
                 }
 
@@ -169,6 +179,97 @@ public class FlipMap {
         }
     }
 
+    @SpirePatch(clz = RoomTypeAssigner.class, method = "distributeRoomsAcrossMap")
+    public static class FixMapGenProbelms {
+        @SpirePostfixPatch
+        public static ArrayList<ArrayList<MapRoomNode>> patch(ArrayList<ArrayList<MapRoomNode>> __result, Random rng, ArrayList<ArrayList<MapRoomNode>> map, ArrayList<AbstractRoom> roomList) {
+            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
+                for (int i = 0; i < __result.size(); i++) {
+                    for(MapRoomNode mn : __result.get(i)) {
+                        if(mn.room instanceof ShopRoom) {
+                            for (MapRoomNode mn2 : mn.getParents()) {
+                                if(mn2.room instanceof ShopRoom) {
+                                    logger.info("Found consecutive shops: " + mn2.toString());
+                                    //Switch with monster or event room node from somewhere on the map
+                                    if(replaceSustainableSwitchRoom(__result, mn2, mn2.y) || replaceSustainableSwitchRoom(__result, mn2, mn2.y+1) || replaceSustainableSwitchRoom(__result, mn2, mn2.y-1)) {
+                                        break;
+                                    } else {
+                                        logger.error("Tried fixing consecutive shops but no applicable rooms have been found.");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return __result;
+        }
+    }
+
+    private static boolean replaceSustainableSwitchRoom(ArrayList<ArrayList<MapRoomNode>> __result, MapRoomNode mn2, int floor) {
+        for(MapRoomNode sibling : __result.get(floor)) {
+            if(!(sibling.room instanceof ShopRoom) && sibling.room != null && notConnectedToShops(sibling)) {
+                logger.info("Switching rooms: "+mn2.toString()+"      with      "+sibling.toString());
+                AbstractRoom tmp = sibling.room;
+                sibling.room = mn2.room;
+                mn2.room = tmp;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean notConnectedToShops(MapRoomNode mn) {
+        return getConnectedNodes(mn).stream().noneMatch(m -> m.room instanceof ShopRoom) && mn.getParents().stream().noneMatch(m -> m.room instanceof ShopRoom);
+    }
+
+    @SpirePatch(clz = EmeraldElite.class, method = "alternate")
+    public static class FixNoRestEmeraldElite {
+        @SpireInsertPatch(locator = Locator.class, localvars = {"chosenNode"})
+        public static void patch(MapRoomNode chosenNode) {
+            if (AbstractDungeon.actNum == 3 && EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
+                if(!hasRestSite(chosenNode)) {
+                    ArrayList<MapRoomNode> cN = getConnectedNodes(chosenNode);
+                    logger.info("Found and fixed emerald elite without campfire.");
+                    if(!cN.isEmpty()) {
+                        for(MapRoomNode n : cN) {
+                            if(!(n.room instanceof TreasureRoom)) {
+                                n.room = new RestRoom();
+                                return;
+                            }
+                        }
+                        getConnectedNodes(cN.get(0)).stream().findAny().ifPresent( m -> m.room = new RestRoom());
+                    }
+                }
+            }
+        }
+
+        private static boolean hasRestSite(MapRoomNode origin) {
+            ArrayList<MapRoomNode> cN = getConnectedNodes(origin);
+            return cN.stream().anyMatch(mn -> mn.room instanceof RestRoom || hasRestSite(mn));
+        }
+
+        private static class Locator extends SpireInsertLocator {
+            public int[] Locate(CtBehavior ctBehavior) throws Exception {
+                Matcher finalMatcher = new Matcher.MethodCallMatcher(Logger.class, "info");
+                return LineFinder.findInOrder(ctBehavior, finalMatcher);
+            }
+        }
+    }
+
+    private static ArrayList<MapRoomNode> getConnectedNodes(MapRoomNode origin) {
+        ArrayList<MapRoomNode> retVal = new ArrayList<>();
+        for(MapEdge mn : origin.getEdges()) {
+            if(AbstractDungeon.map.size() >= mn.dstY && mn.dstY >= 0 && AbstractDungeon.map.get(mn.dstY).size() >= mn.dstX) {
+                MapRoomNode cN = AbstractDungeon.map.get(mn.dstY).get(mn.dstX);
+                if (cN != null) {
+                    retVal.add(cN);
+                }
+            }
+        }
+        return retVal;
+    }
+
     @SpirePatch(
             clz = MapRoomNode.class,
             method = "update"
@@ -179,7 +280,7 @@ public class FlipMap {
         }
 
         public static int isValidFirstNode(MapRoomNode n) {
-            if (EvilModeCharacterSelect.evilMode) {
+            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
                 if (n.y == FlipMap.EverythingIsWrong.startY) {
                     return 0;
                 } else if (n.y == 0) {
@@ -216,7 +317,7 @@ public class FlipMap {
 
         @SpirePostfixPatch
         public static void upYouGo(MapRoomNode __instance, int x, int y) {
-            if (EvilModeCharacterSelect.evilMode) {
+            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
                 __instance.offsetY += EVIL_ADJUST;
             }
         }
@@ -235,7 +336,7 @@ public class FlipMap {
                 localvars = {"tmpDY", "tmpSY"}
         )
         public static void boop(MapEdge __instance, int srcX, int srcY, float srcOffsetX, float srcOffsetY, int dstX, int dstY, float dstOffsetX, float dstOffsetY, boolean isBoss, @ByRef float[] tmpSY, @ByRef float[] tmpDY) {
-            if (EvilModeCharacterSelect.evilMode) {
+            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
                 tmpDY[0] += bop;
                 tmpSY[0] += bop;
             }
@@ -262,7 +363,7 @@ public class FlipMap {
                 localvars = {"targetOffsetY"}
         )
         public static void doot(DungeonMapScreen __instance, boolean scrolly, float ___mapScrollUpperLimit, @ByRef float[] targetOffsetY) {
-            if (EvilModeCharacterSelect.evilMode) {
+            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
                 if (scrolly) {
                     WhyDoYouNotPayAnyRealAttentionToTheVariables.lower = targetOffsetY[0] + ADJUST;
                     WhyDoYouNotPayAnyRealAttentionToTheVariables.upper = targetOffsetY[0] = DungeonMapScreen.offsetY + MORE_ADJUST;
@@ -271,7 +372,11 @@ public class FlipMap {
                     if (!AbstractDungeon.firstRoomChosen) {
                         targetOffsetY[0] = DungeonMapScreen.offsetY = ___mapScrollUpperLimit;
                     }
-
+                    /*else
+                    {
+                        targetOffsetY[0] += MORE_ADJUST;
+                        DungeonMapScreen.offsetY += MORE_ADJUST;
+                    }*/
                 }
             }
         }
@@ -294,7 +399,7 @@ public class FlipMap {
 
         @SpirePrefixPatch
         public static SpireReturn<?> WellThenIHaveToDoItMyself(DungeonMapScreen __instance, float ___targetOffsetY, @ByRef float[] ___scrollWaitTimer) {
-            if (EvilModeCharacterSelect.evilMode) {
+            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
                 ___scrollWaitTimer[0] -= Gdx.graphics.getDeltaTime();
                 if (___scrollWaitTimer[0] < 0.0F) {
                     DungeonMapScreen.offsetY = MathUtils.lerp(DungeonMapScreen.offsetY, ___targetOffsetY, Gdx.graphics.getDeltaTime() * 12.0F);
@@ -334,7 +439,7 @@ public class FlipMap {
             }
         }
 
-
+        //i don't really need to separate this but I'm doing it anyways
         private static class BossVisitifier extends ExprEditor {
             private int count = 0;
 
@@ -359,7 +464,7 @@ public class FlipMap {
         public static int compatibleGetARealY(MapRoomNode mmmmmm) {
             if (Loader.isModLoaded("actlikeit")) {
                 return MapCompatiblity.actLikeItCheck();
-            } else if (EvilModeCharacterSelect.evilMode) {
+            } else if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
                 if (mmmmmm.y == 0)
                     return AbstractDungeon.id.equals(TheEnding.ID) ? 2 : 14;
                 return 0;
@@ -368,7 +473,7 @@ public class FlipMap {
         }
 
         public static int getARealY(MapRoomNode mmmmmm) {
-            if (EvilModeCharacterSelect.evilMode) {
+            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
                 if (mmmmmm.y == 0)
                     return AbstractDungeon.id.equals(TheEnding.ID) ? 2 : 14;
                 return 0;

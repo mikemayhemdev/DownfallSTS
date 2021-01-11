@@ -53,5 +53,33 @@
       "Let's teach 'em a lesson.",
       "Teach 'em all the way!"
     ]
+  },
+  "downfall:Fortification": {
+    "MOVES": [
+    ],
+    "NAME": "Fortification",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomRed": {
+    "MOVES": [
+    ],
+    "NAME": "Porcini",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomPurple": {
+    "MOVES": [
+    ],
+    "NAME": "Actarius",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomWhite": {
+    "MOVES": [
+    ],
+    "NAME": "Puffball",
+    "DIALOG": [
+    ]
   }
 }

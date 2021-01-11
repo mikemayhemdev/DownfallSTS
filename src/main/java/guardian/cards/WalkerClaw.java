@@ -27,11 +27,12 @@ public class WalkerClaw extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 2;
-    private static final int DAMAGE = 14;
+    private static final int DAMAGE = 15;
 
     //TUNING CONSTANTS
-    private static final int UPGRADE_BONUS = 2;
-    private static final int SOCKETS = 0;
+    private static final int UPGRADE_BONUS = 3;
+    private static final int STRENGTHMULTIPLIER = 2;
+    private static final int SOCKETS = 1;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
@@ -50,7 +51,7 @@ public class WalkerClaw extends AbstractGuardianCard {
 
         this.baseDamage = DAMAGE;
 
-        this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 2;
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
@@ -59,8 +60,9 @@ public class WalkerClaw extends AbstractGuardianCard {
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
         super.calculateModifiedCardDamage(player, mo, tmp);
         int bonus = 0;
+
         if (player.hasPower(StrengthPower.POWER_ID)) {
-            bonus = player.getPower(StrengthPower.POWER_ID).amount;
+            bonus = player.getPower(StrengthPower.POWER_ID).amount * (this.magicNumber - 1);
         }
         return tmp + bonus;
 
@@ -83,12 +85,7 @@ public class WalkerClaw extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
-
-            if (this.socketCount < 4) {
-                this.socketCount++;
-                this.saveGemMisc();
-            }
-            this.updateDescription();
+            upgradeMagicNumber(1);
         }
 
 

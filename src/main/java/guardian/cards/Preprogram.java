@@ -26,7 +26,7 @@ public class Preprogram extends AbstractGuardianCard {
 
     //TUNING CONSTANTS
     private static final int COUNT = 4;
-    private static final int UPGRADECOUNT = 2;
+    private static final int UPGRADECOUNT = 3;
     private static final int SOCKETS = 1;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;

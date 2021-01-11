@@ -13,7 +13,7 @@ public class GhostLash extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ENEMY, COMMON
 
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 3;
 
     public GhostLash() {
@@ -24,14 +24,8 @@ public class GhostLash extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (hasEthereal())
-                    addToTop(new DamageAction(m, makeInfo(), AttackEffect.SLASH_HEAVY));
-            }
-        });
+        if (hasEthereal())
+            addToTop(new DamageAction(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY));
     }
 
     private boolean hasEthereal() {

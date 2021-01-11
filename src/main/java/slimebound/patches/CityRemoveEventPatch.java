@@ -50,7 +50,7 @@ public class CityRemoveEventPatch {
         }
 
 
-        //SlimeboundMod.logger.info("Removed Hunted event from pool.");
+        ////SlimeboundMod.logger.info("Removed Hunted event from pool.");
 
     }
 }*/

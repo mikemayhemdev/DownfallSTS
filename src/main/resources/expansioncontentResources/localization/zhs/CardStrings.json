@@ -88,17 +88,17 @@
   },
   "expansioncontent:DonusPower": {
     "NAME": "甜圈力量",
-    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 力量 。 NL 将一张随机攻击牌加入你的手牌。 它的耗能本回合变为0. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 力量 和 人工制品 。 NL 将一张随机攻击牌加入你的手牌。 它的耗能本回合变为0. NL 消耗 。"
+    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 力量 。 NL 将一张随机攻击牌加入你的手牌。 NL 它的耗能本回合为0。 NL 消耗 。",
+	"UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 力量 和 人工制品 。 NL 将一张随机攻击牌加入你的手牌。 NL 它的耗能本回合为0。 NL 消耗 。"
   },
   "expansioncontent:DecasProtection": {
     "NAME": "八体保护",
-    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 敏捷 。 NL 将一张随机能力牌加入你的手牌。 它的耗能本回合变为0. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 敏捷 和 人工制品 。 NL 将一张随机能力牌加入你的手牌。 它的耗能本回合变为0. NL 消耗 。"
+    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 敏捷 。 NL 将一张随机能力牌加入你的手牌。 NL 它的耗能本回合为0。 NL 消耗 。",
+	"UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 敏捷 和 人工制品 。 NL 将一张随机能力牌加入你的手牌。 NL 它的耗能本回合为0。 NL 消耗 。"
   },
   "expansioncontent:PolyBeam": {
     "NAME": "双重射线",
-    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 造成 !D! 点伤害两次。 NL 你的下一回合造成 !D! 点伤害两次。 NL 消耗 。",
+    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 造成 !D! 点伤害两次。 NL 下一回合对随机敌人造成 !D! 点伤害两次。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 造成 !D! 点伤害两次。 NL 消耗 。"
   },
   "expansioncontent:PrepareCrush": {
@@ -116,8 +116,8 @@
   },
   "expansioncontent:StudyTheSpire": {
     "NAME": "研究尖塔",
-    "DESCRIPTION": "接下来 !M! 回合，每回合开始时获得1张随机无色 expansioncontent:首领 牌。它直到打出前耗能为0。",
-    "UPGRADE_DESCRIPTION": "接下来 !M! 回合，每回合开始时获得1张已 升级 的随机无色 expansioncontent:首领 牌。它直到打出前耗能为0。"
+    "DESCRIPTION": "接下来 !M! 回合，每回合开始时获得1张随机无色 expansioncontent:首领 牌。他们直到打出前耗能为0。",
+    "UPGRADE_DESCRIPTION": "接下来 !M! 回合，每回合开始时获得1张已 升级 的随机无色 expansioncontent:首领 牌。他们直到打出前耗能为0。"
   },
   "expansioncontent:QuickStudy": {
     "NAME": "快速学习",
@@ -140,7 +140,7 @@
   },
   "expansioncontent:ShieldSmash": {
     "NAME": "破甲",
-    "DESCRIPTION": "保留 。 NL 移除敌人的 格挡 。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL 移除敌人的 格挡 并使其失去2点 敏捷 。 NL 消耗 。"
   },
   "expansioncontent:Antidote": {
     "NAME": "解毒剂",
@@ -148,7 +148,7 @@
   },
   "expansioncontent:Debug": {
     "NAME": "核心崩损",
-    "DESCRIPTION": "保留 。 NL 移除敌人的充能球。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL 敌人失去 10 点 集中 ，并在接下来的5回合每回合获得2点 集中 。 NL 消耗 。"
   },
   "expansioncontent:PeaceOut": {
     "NAME": "暗黑低语",

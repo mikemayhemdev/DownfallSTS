@@ -1,6 +1,9 @@
 package downfall.events;
 
 
+import automaton.AutomatonChar;
+import basemod.ReflectionHacks;
+import champ.ChampChar;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
@@ -12,7 +15,11 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.monsters.city.BronzeAutomaton;
+import com.megacrit.cardcrawl.monsters.city.Champ;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic.RelicTier;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
@@ -48,7 +55,7 @@ public class MindBloom_Evil extends AbstractImageEvent {
         super(NAME, DESCRIPTIONSALT[0], "images/events/mindBloom.jpg");
         this.screen = CurScreen.INTRO;
 
-        if (AbstractDungeon.player instanceof SlimeboundCharacter || AbstractDungeon.player instanceof TheHexaghost || AbstractDungeon.player instanceof GuardianCharacter || AbstractDungeon.player instanceof TheSnecko){
+        if (AbstractDungeon.player instanceof SlimeboundCharacter || AbstractDungeon.player instanceof TheHexaghost || AbstractDungeon.player instanceof GuardianCharacter || AbstractDungeon.player instanceof TheSnecko || AbstractDungeon.player instanceof ChampChar || AbstractDungeon.player instanceof AutomatonChar){
             this.imageEventText.setDialogOption(OPTIONSALT[0]);
         } else {
             this.imageEventText.setDialogOption(OPTIONS[0]);   //original Mind Bloom if you are not a villain
@@ -75,7 +82,6 @@ public class MindBloom_Evil extends AbstractImageEvent {
                     case 0:
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
                         this.screen = CurScreen.FIGHT;
-                        CardCrawlGame.music.playTempBgmInstantly("MINDBLOOM", true);
                         if (AbstractDungeon.player instanceof SlimeboundCharacter){
                             AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Slime Boss");
                         } else
@@ -86,6 +92,21 @@ public class MindBloom_Evil extends AbstractImageEvent {
                         if (AbstractDungeon.player instanceof TheHexaghost){
 
                             AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Hexaghost");
+                        } else
+                        if (AbstractDungeon.player instanceof ChampChar){
+                            AbstractMonster m = new Champ();
+                            m.maxHealth = Math.round(m.maxHealth * .6F);
+                            m.currentHealth = m.maxHealth;
+                            m.powers.add(new StrengthPower(m,-3));
+                            AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
+                        } else
+                        if (AbstractDungeon.player instanceof AutomatonChar){
+                            AbstractMonster m = new BronzeAutomaton();
+                            m.maxHealth = Math.round(m.maxHealth * .6F);
+                            m.currentHealth = m.maxHealth;
+                            ReflectionHacks.setPrivate(m, BronzeAutomaton.class, "firstTurn", false);
+                            m.powers.add(new StrengthPower(m,-3));
+                            AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
                         } else
                         if (AbstractDungeon.player instanceof TheSnecko){
 
@@ -110,7 +131,9 @@ public class MindBloom_Evil extends AbstractImageEvent {
 
                         AbstractDungeon.getCurrRoom().addRelicToRewards(RelicTier.RARE);
                         this.enterCombatFromImage();
-                        AbstractDungeon.lastCombatMetricKey = "Mind Bloom Boss Battle";
+                        CardCrawlGame.music.fadeOutBGM();
+                        CardCrawlGame.music.fadeOutTempBGM();
+                        CardCrawlGame.music.playTempBgmInstantly("MINDBLOOM", true);
                         break;
                     case 1:
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[2]);
@@ -118,15 +141,13 @@ public class MindBloom_Evil extends AbstractImageEvent {
                         int effectCount = 0;
                         List<String> upgradedCards = new ArrayList();
                         List<String> obtainedRelic = new ArrayList();
-                        Iterator var11 = AbstractDungeon.player.masterDeck.group.iterator();
 
-                        while(var11.hasNext()) {
-                            AbstractCard c = (AbstractCard)var11.next();
+                        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
                             if (c.canUpgrade()) {
                                 ++effectCount;
                                 if (effectCount <= 20) {
-                                    float x = MathUtils.random(0.1F, 0.9F) * (float)Settings.WIDTH;
-                                    float y = MathUtils.random(0.2F, 0.8F) * (float)Settings.HEIGHT;
+                                    float x = MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH;
+                                    float y = MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT;
                                     AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), x, y));
                                     AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect(x, y));
                                 }
@@ -140,6 +161,8 @@ public class MindBloom_Evil extends AbstractImageEvent {
                         AbstractDungeon.player.loseRelic(HeartBlessingRed.ID);
                         AbstractDungeon.player.loseRelic(HeartBlessingBlue.ID);
                         AbstractDungeon.player.loseRelic(HeartBlessingGreen.ID);
+
+                        AbstractDungeon.player.decreaseMaxHealth(10);
 
                         this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         break;

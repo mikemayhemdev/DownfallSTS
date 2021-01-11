@@ -13,8 +13,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
+import com.megacrit.cardcrawl.events.city.Colosseum;
+import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import guardian.GuardianMod;
 import guardian.relics.PickAxe;
@@ -43,8 +46,8 @@ public class GemMine extends AbstractImageEvent {
         DIALOG_LEAVE = DESCRIPTIONS[2];
         DIALOG_START = DESCRIPTIONS[0];
         DIALOG_LEAVEWITHGEM = DESCRIPTIONS[3];
-        DIALOG_LOOT = DESCRIPTIONS[3];
-        DIALOG_MINEPICK = DESCRIPTIONS[3];
+        DIALOG_LOOT = DESCRIPTIONS[4];
+        DIALOG_MINEPICK = DESCRIPTIONS[5];
     }
 
     private int screenNum = 0;
@@ -67,7 +70,7 @@ public class GemMine extends AbstractImageEvent {
                 this.imageEventText.setDialogOption(OPTIONS[4]);
             }
         } else {
-            this.imageEventText.setDialogOption(OPTIONS[3]);
+            this.imageEventText.setDialogOption(OPTIONS[3], new PickAxe());
 
         }
         this.imageEventText.setDialogOption(OPTIONS[0] + this.damage + OPTIONS[1]);
@@ -102,9 +105,14 @@ public class GemMine extends AbstractImageEvent {
                             }
                             this.tookGems = true;
                         } else {
+
+                            this.screenNum = 0;
+                            AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Gremlin Gang");
+                            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMBAT;
+                            AbstractDungeon.getCurrRoom().rewards.clear();
+                            AbstractDungeon.getCurrRoom().rewardAllowed = false;
+                            enterCombatFromImage();
                             this.imageEventText.updateBodyText(DIALOG_LOOT);
-                            AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), new guardian.relics.PickAxe());
-                            AbstractDungeon.commonRelicPool.remove(PickAxe.ID);
                             this.imageEventText.updateDialogOption(0, OPTIONS[4], false);
 
                         }
@@ -139,5 +147,18 @@ public class GemMine extends AbstractImageEvent {
                 break;
         }
 
+    }
+
+    public void reopen() {
+        if (this.screenNum != 1) {
+            AbstractDungeon.resetPlayer();
+            AbstractDungeon.player.drawX = (com.megacrit.cardcrawl.core.Settings.WIDTH * 0.25F);
+            AbstractDungeon.player.preBattlePrep();
+            if (!AbstractDungeon.player.hasRelic(PickAxe.ID)) {
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), new guardian.relics.PickAxe());
+                AbstractDungeon.commonRelicPool.remove(PickAxe.ID);
+            }
+            enterImageFromCombat();
+        }
     }
 }

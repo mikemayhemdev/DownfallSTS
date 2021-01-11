@@ -15,6 +15,7 @@ public class ImprovisedAttack extends AbstractSneckoCard {
 
     private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 3;
+    public static AbstractCard storage;
 
     public ImprovisedAttack() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
@@ -25,7 +26,13 @@ public class ImprovisedAttack extends AbstractSneckoCard {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         AbstractCard q = SneckoMod.getOffClassCardMatchingPredicate(c -> c.type == CardType.ATTACK);
         makeInHand(q);
-        atb(new MuddleAction(q));
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                addToTop(new MuddleAction(storage));
+            }
+        });
     }
 
     public void upgrade() {

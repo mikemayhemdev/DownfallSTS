@@ -28,18 +28,19 @@ public class SneckoTalon extends CustomRelic {
                 isDone = true;
                 int x = 0;
                 for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                    if (q.cost > x)
-                        x = q.cost;
+                    if (q.costForTurn > x)
+                        x = q.costForTurn;
                 }
                 ArrayList<AbstractCard> possCardsList = new ArrayList<>();
                 for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                    if (q.cost == x)
+                    if (q.costForTurn == x)
                         possCardsList.add(q);
                 }
                 if (!possCardsList.isEmpty()) {
                     flash();
                     AbstractCard q = possCardsList.get(AbstractDungeon.cardRandomRng.random(possCardsList.size() - 1));
-                    q.modifyCostForCombat(-1);
+                    q.setCostForTurn(q.costForTurn - 1);
+                    q.isCostModifiedForTurn = true;
                     q.superFlash();
                 }
             }

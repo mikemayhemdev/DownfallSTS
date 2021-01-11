@@ -1,5 +1,6 @@
 package sneckomod.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -14,6 +15,7 @@ public class ImprovisedGuard extends AbstractSneckoCard {
 
     private static final int BLOCK = 7;
     private static final int UPG_BLOCK = 3;
+    public static AbstractCard storage;
 
     public ImprovisedGuard() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
@@ -24,7 +26,13 @@ public class ImprovisedGuard extends AbstractSneckoCard {
         blck();
         AbstractCard q = SneckoMod.getOffClassCardMatchingPredicate(c -> c.type == CardType.SKILL);
         makeInHand(q);
-        atb(new MuddleAction(q));
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                addToTop(new MuddleAction(storage));
+            }
+        });
     }
 
     public void upgrade() {

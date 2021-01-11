@@ -27,12 +27,11 @@ public class FierceBash extends AbstractGuardianCard implements InStasisCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 3;
-    private static final int DAMAGE = 20;
+    private static final int DAMAGE = 18;
 
     //TUNING CONSTANTS
-    private static final int UPGRADE_BONUS = 4;
+    private static final int UPGRADE_BONUS = 10;
     private static final int DAMAGEPERTURNINSTASIS = 3;
-    private static final int UPGRADE_DAMAGEPERTURNINSTASIS = 1;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
@@ -82,7 +81,6 @@ public class FierceBash extends AbstractGuardianCard implements InStasisCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
-            upgradeMagicNumber(UPGRADE_DAMAGEPERTURNINSTASIS);
         }
     }
 

@@ -1,7 +1,6 @@
 package charbosses.relics;
 
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
@@ -11,8 +10,6 @@ import com.megacrit.cardcrawl.relics.CursedKey;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.TreasureRoom;
 import downfall.downfallMod;
-
-import java.util.ArrayList;
 
 public class CBR_CursedKey extends AbstractCharbossRelic {
     public static final String ID = "CursedKey";
@@ -56,19 +53,6 @@ public class CBR_CursedKey extends AbstractCharbossRelic {
     public void onEquip() {
         final EnergyManager energy = AbstractCharBoss.boss.energy;
         ++energy.energyMaster;
-
-    }
-
-    @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify, int actIndex) {
-        AbstractCharBoss.boss.chosenArchetype.addRandomCurse(AbstractCharBoss.boss, "Cursed Key");
-        this.numCurses++;
-        if (actIndex > 1) {
-            AbstractCharBoss.boss.chosenArchetype.addRandomCurse(AbstractCharBoss.boss, "Cursed Key");
-            this.numCurses++;
-        }
-
-        this.updateDescription(null);
 
     }
 

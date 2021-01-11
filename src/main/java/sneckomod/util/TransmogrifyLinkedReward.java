@@ -17,12 +17,10 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TransmogrifyLinkedReward extends RewardItem
-{
+public class TransmogrifyLinkedReward extends RewardItem {
     public List<RewardItem> relicLinks = new ArrayList<>();
 
-    public TransmogrifyLinkedReward(RewardItem original)
-    {
+    public TransmogrifyLinkedReward(RewardItem original) {
         type = original.type;
         outlineImg = original.outlineImg;
         img = original.img;
@@ -46,15 +44,13 @@ public class TransmogrifyLinkedReward extends RewardItem
         redText = original.redText;
     }
 
-    public TransmogrifyLinkedReward(TransmogrifyLinkedReward setRelicLink, AbstractRelic relic)
-    {
+    public TransmogrifyLinkedReward(TransmogrifyLinkedReward setRelicLink, AbstractRelic relic) {
         super(relic);
 
         addRelicLink(setRelicLink);
     }
 
-    public void addRelicLink(TransmogrifyLinkedReward setRelicLink)
-    {
+    public void addRelicLink(TransmogrifyLinkedReward setRelicLink) {
         if (!relicLinks.contains(setRelicLink)) {
             relicLinks.add(setRelicLink);
         }
@@ -63,8 +59,7 @@ public class TransmogrifyLinkedReward extends RewardItem
         }
     }
 
-    private boolean isFirst()
-    {
+    private boolean isFirst() {
         //if (AbstractDungeon.getCurrRoom().rewards.indexOf(this) > AbstractDungeon.getCurrRoom().rewards.indexOf(relicLink)) {
         int thisIndexOf = AbstractDungeon.getCurrRoom().rewards.indexOf(this);
         for (RewardItem link : relicLinks) {
@@ -76,8 +71,7 @@ public class TransmogrifyLinkedReward extends RewardItem
     }
 
     @Override
-    public boolean claimReward()
-    {
+    public boolean claimReward() {
         boolean ret;
         if (type == RewardType.SAPPHIRE_KEY) {
             if (!ignoreReward) {
@@ -97,8 +91,7 @@ public class TransmogrifyLinkedReward extends RewardItem
     }
 
     @Override
-    public void update()
-    {
+    public void update() {
         super.update();
 
         if (isFirst()) {
@@ -116,8 +109,7 @@ public class TransmogrifyLinkedReward extends RewardItem
     }
 
     @Override
-    public void render(SpriteBatch sb)
-    {
+    public void render(SpriteBatch sb) {
         super.render(sb);
 
         if (!relicLinks.isEmpty() && type != RewardType.SAPPHIRE_KEY) {
@@ -160,8 +152,7 @@ public class TransmogrifyLinkedReward extends RewardItem
     }
 
     @SpireOverride
-    protected void renderRelicLink(SpriteBatch sb)
-    {
+    protected void renderRelicLink(SpriteBatch sb) {
         SpireSuper.call(sb);
     }
 }

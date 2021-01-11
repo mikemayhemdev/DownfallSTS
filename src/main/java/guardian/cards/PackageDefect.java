@@ -91,17 +91,17 @@ public class PackageDefect extends AbstractGuardianCard {
         tmp = new Reroute();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-        tmp.modifyCostForCombat(-1);
+      //  tmp.modifyCostForCombat(-1);
 
         tmp = new Preprogram();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-        tmp.modifyCostForCombat(-1);
+       // tmp.modifyCostForCombat(-1);
 
         tmp = new TimeCapacitor();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-        tmp.modifyCostForCombat(-1);
+      //  tmp.modifyCostForCombat(-1);
 
         AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect((AbstractCard) derp.get(0), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
         AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect((AbstractCard) derp.get(1), (float) Settings.WIDTH * .75F, (float) Settings.HEIGHT / 2.0F));

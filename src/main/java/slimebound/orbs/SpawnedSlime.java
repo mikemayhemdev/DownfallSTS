@@ -11,6 +11,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.*;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -30,6 +31,8 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
+import slimebound.cards.SplitGreed;
+import slimebound.cards.SplitScrap;
 import slimebound.powers.*;
 import slimebound.vfx.*;
 import reskinContent.reskinContent;
@@ -279,10 +282,8 @@ public abstract class SpawnedSlime
         super.applyFocus();
         AbstractPower power = AbstractDungeon.player.getPower(PotencyPower.POWER_ID);
         int bonus = 0;
-        if ((this instanceof ShieldSlime || this instanceof ProtectorSlime || this instanceof BronzeSlime || this instanceof SlimingSlime) && AbstractDungeon.player.hasPower(BuffSecondarySlimeEffectsPower.POWER_ID))
-            this.debuffBonusAmount += AbstractDungeon.player.getPower(BuffSecondarySlimeEffectsPower.POWER_ID).amount;
-        if (this instanceof TorchHeadSlime && AbstractDungeon.player.hasPower(PotencyPower.POWER_ID))
-            bonus = AbstractDungeon.player.getPower(PotencyPower.POWER_ID).amount;
+        if (this instanceof TorchHeadSlime && AbstractDungeon.player.hasPower(StrengthPower.POWER_ID))
+            bonus = AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
 
 
         if (power != null) {
@@ -304,25 +305,17 @@ public abstract class SpawnedSlime
         //AbstractDungeon.effectsQueue.add(new FireBurstParticleEffect(this.cX, this.cY));
     }
 
-    public void applySecondaryBonus(int StrAmount) {
-
-        this.debuffBonusAmount += StrAmount;
-        updateDescription();
-        //AbstractDungeon.effectsQueue.add(new FireBurstParticleEffect(this.cX, this.cY));
-    }
 
 
     public void onEvoke() {
         if (!noEvokeBonus) {
             if (this instanceof ScrapOozeSlime) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ScrapRespawnPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
-
+              //  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ScrapRespawnPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new SplitScrap()));
             } else if (this instanceof GreedOozeSlime) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new GreedRespawnPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
+                //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new GreedRespawnPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new SplitGreed()));
 
-            } else {
-                if (AbstractDungeon.player.hasPower(DuplicatedFormNoHealPower.POWER_ID))
-                    AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, AbstractDungeon.player.getPower(DuplicatedFormNoHealPower.POWER_ID), 4));
             }
         }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
@@ -336,7 +329,7 @@ public abstract class SpawnedSlime
         if (!this.deathVFXplayed) {
             if (!this.noEvokeSound) {
                 CardCrawlGame.sound.playA("SLIME_SPLIT", 0.2f);
-                SlimeboundMod.logger.info("playing death sound");
+                //SlimeboundMod.logger.info("playing death sound");
             }
 
             AbstractDungeon.effectsQueue.add(new SlimeSpawnProjectileDeath(this.hb.cX, this.hb.cY, null, AbstractDungeon.player, 1.4F, this.projectileColor, !this.noEvokeSound));

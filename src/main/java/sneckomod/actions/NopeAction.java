@@ -6,25 +6,21 @@
 package sneckomod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.monsters.city.Snecko;
 import slimebound.actions.MakeTempCardInHandActionReduceCost;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
 
 public class NopeAction extends AbstractGameAction {
-    private AbstractPlayer p;
     private static final String[] EXTENDED_DESCRIPTION = CardCrawlGame.languagePack.getCardStrings(SneckoMod.makeID("Nope")).EXTENDED_DESCRIPTION;
+    private AbstractPlayer p;
 
     public NopeAction() {
         this.actionType = ActionType.CARD_MANIPULATION;// 22
@@ -44,7 +40,18 @@ public class NopeAction extends AbstractGameAction {
             if (this.p.hand.group.size() == 1) {// 78
                 AbstractCard c = p.hand.getTopCard();
                 p.hand.moveToExhaustPile(c);
-                AbstractCard card = AbstractDungeon.returnTrulyRandomCardInCombat(c.type);
+                AbstractCard.CardType q = c.type;
+                AbstractCard card = new Shiv();
+                if (q == AbstractCard.CardType.CURSE) {
+                    card = CardLibrary.getCurse().makeCopy();
+                } else if (q == AbstractCard.CardType.STATUS) {
+                    ArrayList<AbstractCard> qList = new ArrayList<>();
+                    for (AbstractCard r : CardLibrary.getAllCards()) {
+                        if (r.type == AbstractCard.CardType.STATUS) qList.add(r.makeCopy());
+                    }
+                    card = qList.get(AbstractDungeon.cardRandomRng.random(qList.size() - 1));
+                } else
+                    card = AbstractDungeon.returnTrulyRandomCardInCombat(c.type);
                 this.addToBot(new MakeTempCardInHandActionReduceCost(card));// 34
 
                 this.isDone = true;// 82
@@ -55,9 +62,9 @@ public class NopeAction extends AbstractGameAction {
             for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
                 p.hand.moveToExhaustPile(c);
                 AbstractCard card = null;
-                if (c.type == AbstractCard.CardType.CURSE){
+                if (c.type == AbstractCard.CardType.CURSE) {
                     card = AbstractDungeon.returnRandomCurse();
-                } else  if (c.type == AbstractCard.CardType.STATUS) {
+                } else if (c.type == AbstractCard.CardType.STATUS) {
                     card = SneckoMod.getRandomStatus().makeCopy();
                 } else {
                     card = AbstractDungeon.returnTrulyRandomCardInCombat(c.type);

@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.vfx.SmallLaserEffectColored;
+import sneckomod.SneckoMod;
 
 
 public class CrystalBeam extends AbstractGuardianCard {
@@ -29,8 +30,8 @@ public class CrystalBeam extends AbstractGuardianCard {
     private static final int DAMAGE = 10;
 
     //TUNING CONSTANTS
-    private static final int DAMAGEPERGEM = 1;
-    private static final int UPGRADE_DAMAGEPERGEM = 1;
+    private static final int UPGRADE_BONUS = 4;
+    private static final int DAMAGEPERGEM = 2;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
@@ -57,6 +58,7 @@ public class CrystalBeam extends AbstractGuardianCard {
         updateDescription();
         loadGemMisc();
 
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
     }
 
@@ -117,7 +119,7 @@ public class CrystalBeam extends AbstractGuardianCard {
         if (!this.upgraded) {
 
             upgradeName();
-            upgradeMagicNumber(UPGRADE_DAMAGEPERGEM);
+            upgradeDamage(UPGRADE_BONUS);
 
         }
 

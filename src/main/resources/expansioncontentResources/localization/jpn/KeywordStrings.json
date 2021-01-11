@@ -1,0 +1,16 @@
+[
+  {
+    "PROPER_NAME": "Boss",
+    "NAMES": [
+      "boss"
+    ],
+    "DESCRIPTION": "You may only play #b1 #yBoss card in a turn."
+  },
+  {
+    "PROPER_NAME": "Ghostflames",
+    "NAMES": [
+      "ghostflames"
+    ],
+    "DESCRIPTION": "Ghostflames provide additional benefits each turn if their Ignition requirements are met during that turn."
+  }
+]

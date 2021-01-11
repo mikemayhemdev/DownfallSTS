@@ -48,7 +48,7 @@ public class Colosseum_Evil extends AbstractImageEvent {
                 this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                 this.imageEventText.clearAllDialogs();
                 this.imageEventText.setDialogOption(OPTIONS[0]);
-                this.imageEventText.setDialogOption(OPTIONS[1]);  //TODO - re enable this when boss death is fixed // FIXED! and enabled
+                this.imageEventText.setDialogOption(OPTIONS[1]);
                 this.imageEventText.setDialogOption(OPTIONS[2]);
                 return;
             case INTRO:
@@ -56,7 +56,7 @@ public class Colosseum_Evil extends AbstractImageEvent {
                     case 0:
                         this.screen = CurScreen.FIGHT;
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2] + DESCRIPTIONS[3]);
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
                         AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Colosseum Nobs");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.RARE);
@@ -71,26 +71,36 @@ public class Colosseum_Evil extends AbstractImageEvent {
                     case 1:
                         this.screen = CurScreen.FIGHT;
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2] + DESCRIPTIONS[4]);
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
                         downfallMod.overrideBossDifficulty = true;
-                        String s = downfallMod.possEncounterList.get(AbstractDungeon.cardRandomRng.random(downfallMod.possEncounterList.size() - 1));
-
-                        if (s.equals(CharBossIronclad.ID)) {
-
-                            AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(CharBossIronclad.ID);
-                            AbstractDungeon.lastCombatMetricKey = CharBossIronclad.ID;
-                        } else if (s.equals(CharBossSilent.ID)) {
-                            AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(CharBossSilent.ID);
-                            AbstractDungeon.lastCombatMetricKey = CharBossSilent.ID;
-                        } else if (s.equals(CharBossDefect.ID)) {
-                            AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(CharBossDefect.ID);
-                            AbstractDungeon.lastCombatMetricKey = CharBossDefect.ID;
-                        } else if (s.equals(CharBossWatcher.finishedSetup)) {
-
-                            AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(CharBossWatcher.ID);
-                            AbstractDungeon.lastCombatMetricKey = CharBossWatcher.ID;
+                        String s = downfallMod.possEncounterList.get(AbstractDungeon.cardRandomRng.random(downfallMod.possEncounterList.size()-1));
+                        switch (s) {
+                            case "downfall:Ironclad":
+                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossIronclad.ID);
+                                AbstractDungeon.lastCombatMetricKey = CharBossIronclad.ID;
+//                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()});
+                                break;
+                            case "downfall:Silent":
+                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossSilent.ID);
+                                AbstractDungeon.lastCombatMetricKey = CharBossSilent.ID;
+//                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()});
+                                break;
+                            case "downfall:Defect":
+                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossDefect.ID);
+                                AbstractDungeon.lastCombatMetricKey = CharBossDefect.ID;
+//                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()});
+                                break;
+                            case "downfall:Watcher":
+                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossWatcher.ID);
+                                AbstractDungeon.lastCombatMetricKey = CharBossWatcher.ID;
+//                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()});
+                                break;
+                            default:
+                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossIronclad.ID);
+                                AbstractDungeon.lastCombatMetricKey = CharBossIronclad.ID;
+//                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()});
+                                break;
                         }
-
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.RARE);
                         AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.UNCOMMON);
@@ -111,7 +121,7 @@ public class Colosseum_Evil extends AbstractImageEvent {
             case FIGHT:
                 switch (buttonPressed) {
                     case 0:
-                        if (AbstractDungeon.getCurrRoom().eliteTrigger) {
+                        if (AbstractDungeon.getCurrRoom().eliteTrigger){
                             this.enterCombatFromImage();
                             break;
                         } else {

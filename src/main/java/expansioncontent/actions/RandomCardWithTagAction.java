@@ -1,6 +1,9 @@
 package expansioncontent.actions;
 
 
+import automaton.AutomatonChar;
+import champ.ChampChar;
+import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -54,6 +57,14 @@ public class RandomCardWithTagAction extends AbstractGameAction {
         return UnlockTracker.isCharacterLocked(TheHexaghost.ID);
     }
 
+    public static boolean champLocked() {
+        return UnlockTracker.isCharacterLocked(ChampChar.ID);
+    }
+
+    public static boolean autoLocked() {
+        return UnlockTracker.isCharacterLocked(AutomatonChar.ID);
+    }
+
     public void update() {
 
         ArrayList<String> tmp = new ArrayList<>();
@@ -66,7 +77,12 @@ public class RandomCardWithTagAction extends AbstractGameAction {
                     && (!(c.getValue().hasTag(expansionContentMod.STUDY_GUARDIAN)
                     && (AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN || guardianLocked())))
                     && (!(c.getValue().hasTag(expansionContentMod.STUDY_HEXAGHOST)
-                    && (AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT || hexaLocked())))) {
+                    && (AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT || hexaLocked())))
+                    && (!(c.getValue().hasTag(expansionContentMod.STUDY_CHAMP)
+                    && (AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP || champLocked())))
+                    && (!(c.getValue().hasTag(expansionContentMod.STUDY_AUTOMATON)
+                    && (AbstractDungeon.player.chosenClass == AutomatonChar.Enums.THE_AUTOMATON || autoLocked())))
+            ) {
                 tmp.add(c.getKey());
             }
         }

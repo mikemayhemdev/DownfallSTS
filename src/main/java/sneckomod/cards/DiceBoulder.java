@@ -4,10 +4,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.CardIgnore;
 import sneckomod.actions.NoApplyRandomDamageAction;
 
-@CardIgnore
 public class DiceBoulder extends AbstractSneckoCard {
 
     public final static String ID = makeID("DiceBoulder");
@@ -17,11 +15,10 @@ public class DiceBoulder extends AbstractSneckoCard {
     private static final int DAMAGE = 30;
     private static final int MAGIC = 1;
 
-    public DiceBoulder(int eugene) {
+    public DiceBoulder() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-        timesUpgraded = eugene;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -29,18 +26,44 @@ public class DiceBoulder extends AbstractSneckoCard {
     }
 
     @Override
+    public void applyPowers() {
+        int maxDamage = baseDamage;
+        baseDamage = baseMagicNumber;
+        super.applyPowers();
+
+        magicNumber = damage; // magic number holds the first condition's modified damage, so !M! will work
+        isMagicNumberModified = isDamageModified;
+
+        baseDamage = maxDamage;
+        super.applyPowers();
+
+        // just-in-case-but-this-should-be-impossible code
+        if (magicNumber > damage)
+        {
+            magicNumber = damage;
+            isMagicNumberModified = magicNumber != baseMagicNumber;
+        }
+    }
+
+    @Override
     public void calculateCardDamage(final AbstractMonster mo) {
-        int CURRENT_MAGIC_NUMBER = baseMagicNumber;
-        int CURRENT_DMG = baseDamage;
-        baseDamage = CURRENT_MAGIC_NUMBER;
+        int maxDamage = baseDamage;
+        baseDamage = baseMagicNumber;
         super.calculateCardDamage(mo); // takes baseDamage and applies things like Strength or Pen Nib to set damage
 
         magicNumber = damage; // magic number holds the first condition's modified damage, so !M! will work
-        isMagicNumberModified = magicNumber != baseMagicNumber;
+        isMagicNumberModified = isDamageModified;
 
         // repeat so damage holds the second condition's damage
-        baseDamage = CURRENT_DMG;
+        baseDamage = maxDamage;
         super.calculateCardDamage(mo);
+
+        // just-in-case-but-this-should-be-impossible code
+        if (magicNumber > damage)
+        {
+            magicNumber = damage;
+            isMagicNumberModified = magicNumber != baseMagicNumber;
+        }
     }
 
     @Override
@@ -50,13 +73,13 @@ public class DiceBoulder extends AbstractSneckoCard {
 
     @Override
     public AbstractCard makeCopy() {
-        return new DiceBoulder(this.timesUpgraded);
+        return new DiceBoulder();
     }
 
     public void upgrade() {
         this.upgradeDamage(4);// 49
         upgradeMagicNumber(8);
-        if (baseMagicNumber > baseDamage){
+        if (baseMagicNumber > baseDamage) {
             baseMagicNumber = baseDamage;
             magicNumber = baseMagicNumber;
         }

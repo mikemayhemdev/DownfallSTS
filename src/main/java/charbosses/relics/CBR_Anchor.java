@@ -1,6 +1,7 @@
 package charbosses.relics;
 
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.bosses.Silent.NewAge.ArchetypeAct2MirrorImageNewAge;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -22,8 +23,16 @@ public class CBR_Anchor extends AbstractCharbossRelic {
     @Override
     public void atBattleStart() {
         this.flash();
-        this.addToBot(new RelicAboveCreatureAction(AbstractCharBoss.boss, this));
-        this.addToBot(new GainBlockAction(AbstractCharBoss.boss, AbstractCharBoss.boss, 10));
+        if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2MirrorImageNewAge) {
+            //Reveals the true Silent otherwise
+            AbstractCharBoss.boss.addBlock(10);
+        } else {
+            this.addToBot(new RelicAboveCreatureAction(AbstractCharBoss.boss, this));
+            this.addToBot(new GainBlockAction(AbstractCharBoss.boss, AbstractCharBoss.boss, 10));
+
+        }
+
+
         this.grayscale = true;
     }
 

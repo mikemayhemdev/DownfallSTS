@@ -337,7 +337,7 @@ public class GoldToSoulPatches {
         }
     }
 
-    //Disabled this as it caused a crash with Unknown generation.  @TODO fix later.
+    //Disabled this as it caused a crash with Unknown generation. MAY want to look at this later.
     /*
     downfall.patches.ui.topPanel.GoldToSoulPatches$PleaseChange.patch(GoldToSoulPatches.java:345) ~[downfall.jar:?]
     at com.megacrit.cardcrawl.cards.colorless.HandOfGreed.makeCopy(HandOfGreed.java:48) ~[?:?]
@@ -363,6 +363,4 @@ public class GoldToSoulPatches {
         }
     }
     */
-
-    //TODO: Make work on load
 }

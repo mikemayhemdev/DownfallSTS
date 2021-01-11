@@ -6,7 +6,7 @@
       "absorbed"
     ],
     "PROPER_NAME": "Absorb",
-    "DESCRIPTION": "Manually recombine with your leading #ySlime, returning the Max HP it took upon #ySplitting and gaining 1 #yStrength."
+    "DESCRIPTION": "Manually recombine with your leading #ySlime, granting you 1 #yStrength."
   },
   {
     "NAMES": [
@@ -14,7 +14,7 @@
       "splitting"
     ],
     "PROPER_NAME": "Split",
-    "DESCRIPTION": "Lose #b4 HP and spawn a #ySlime minion, who attacks at the start of each turn. While the #ySlime is alive, your Max HP is reduced by #b4. NL NL If you have no empty slots, your oldest Slime is automatically #yAbsorbed to make room, granting you 1 #yStrength."
+    "DESCRIPTION": "Spawn a #ySlime minion, who attacks at the start of each turn. NL NL If you have no empty slots, your oldest Slime is automatically #yAbsorbed to make room, granting you 1 #yStrength."
   },
   {
     "NAMES": [
@@ -45,7 +45,7 @@
       "torchhead_slime"
     ],
     "PROPER_NAME": "Torch Head Slime",
-    "DESCRIPTION": "Attacks for #b6 each turn. Gains twice the normal benefit from #yPotency."
+    "DESCRIPTION": "Attacks for #b6 each turn. Gains damage from your #yStrength."
   },
   {
     "NAMES": [
@@ -75,7 +75,7 @@
       "leeching"
     ],
     "PROPER_NAME": "Leeching Slime",
-    "DESCRIPTION": "Attacks for #b2 and grants you #b2 #yBlock each turn."
+    "DESCRIPTION": "Attacks for #b1 and grants you #b3 #yBlock each turn."
   },
   {
     "NAMES": [
@@ -120,7 +120,7 @@
       "ghostflame_slime"
     ],
     "PROPER_NAME": "Ghostflame Slime",
-    "DESCRIPTION": "Attacks for #b3 and applies #b3 #yBurn each turn."
+    "DESCRIPTION": "Attacks for #b3 and applies #b3 #ySoulburn each turn."
   },
   {
     "NAMES": [
@@ -198,5 +198,13 @@
     ],
     "PROPER_NAME": "Consume",
     "DESCRIPTION": "Bonus effect which activates when an #yAttack is used on an enemy who has #yGoop."
+  },
+  {
+    "NAMES": [
+      "specialist",
+      "specialist"
+    ],
+    "PROPER_NAME": "Specialist",
+    "DESCRIPTION": "A unique slime with a more powerful effect than normal slimes."
   }
 ]

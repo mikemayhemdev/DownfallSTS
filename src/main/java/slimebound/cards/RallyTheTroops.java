@@ -36,20 +36,19 @@ public class RallyTheTroops extends AbstractSlimeboundCard {
     public RallyTheTroops() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         baseDamage = 7;
-        exhaust = true;
+        this.baseMagicNumber = this.magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.LIGHTNING));
-        addToBot(new ApplyPowerAction(p, p, new CommandOnPlayPower(1), 1));
+        addToBot(new ApplyPowerAction(p, p, new CommandOnPlayPower(magicNumber), magicNumber));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            exhaust = false;
-            rawDescription = UPGRADED_DESCRIPTION;
-            initializeDescription();
+            upgradeDamage(2);
+            upgradeMagicNumber(1);
         }
     }
 }

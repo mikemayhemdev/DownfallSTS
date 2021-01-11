@@ -2,21 +2,21 @@
   "downfall:FairyPotion": {
     "NAME": "Fairy Potion",
     "DESCRIPTIONS": [
-      "Heals to 30% of Max HP instead of dying, removing this effect.",
+      "Heals to #b30% of Max HP instead of dying, removing this effect.",
       "Ha! Fairy Potion, jerk!"
     ]
   },
   "downfall:SoulSteal": {
     "NAME": "Soul Stealer",
     "DESCRIPTIONS": [
-      "Has stolen ",
+      "Has stolen #b",
       " of your Souls."
     ]
   },
   "downfall:NeowInvulnerable": {
     "NAME": "God of Life",
     "DESCRIPTIONS": [
-      "Cannot be killed.  Ends your turn and retreats to recover when reduced to 0 HP."
+      "Heals #b2 HP whenever you play a card."
     ]
   },
   "downfall:TransformDrawnCardsPower": {
@@ -30,7 +30,7 @@
   "downfall:TotemInvulnerable": {
     "NAME": "Living Wall",
     "DESCRIPTIONS": [
-      "Cannot die unless all other Heads are at 1 HP.  Dies if any other Head dies."
+      "Cannot die unless all other Heads are at #b1 HP.  Dies if any other Head dies."
     ]
   },
   "downfall:ExhaustCardsPower": {
@@ -42,7 +42,180 @@
   "downfall:PoisonResist": {
     "NAME": "Poison Resistance",
     "DESCRIPTIONS": [
-      "Poison does not bypass your Block, triggers at the end of your turn, and loses half its stack."
+      "#yPoison triggers at the end of your turn. At the end of your turn, spend all remaining [E] to remove 10 #yPoison per [E] spent."
+    ]
+  },
+  "downfall:NeowBuff": {
+    "NAME": "Neow's Vigor",
+    "DESCRIPTIONS": [
+      "Gains #b2 #yStrength at the end of the round."
+    ]
+  },
+  "downfall:WatcherAngryPower": {
+    "NAME": "Unbridled Rage",
+    "DESCRIPTIONS": [
+      "When Watcher is reduced to #b50% HP, she enters Wrath permanently. NL Watcher's Wrath increases damage dealt and received by #b50% instead of #b100%."
+    ]
+  },
+  "downfall:NeowUnbridledRage": {
+    "NAME": "Unbridled Rage",
+    "DESCRIPTIONS": [
+      "While Neow is below #b50% Max HP, she gains #b6 #yStrength."
+    ]
+  },
+  "downfall:WatcherCripplePower": {
+    "NAME": "Blasphemer's Demise",
+    "DESCRIPTIONS": [
+      "When Watcher loses #b",
+      " more HP, apply #b-4 #yStrength to her when she next enters #yDivinity or plays #yRagnarok.",
+      "Watcher will lose #b4 #yStrength when she next enters #yDivinity or plays #yRagnarok."
+    ]
+  },
+  "downfall:NeowBlasphemersDemise": {
+    "NAME": "Blasphemers Demise",
+    "DESCRIPTIONS": [
+      "When Neow loses #b",
+      " more HP, she will be stopped from gaining #b10 #yStrength the next turn she uses a Buff.",
+      "Neow is crippled and will not gain additional #yStrength during her next Buff turn."
+    ]
+  },
+  "downfall:WatcherDivinityPower": {
+    "NAME": "Fleeting Faith",
+    "DESCRIPTIONS": [
+      "Watcher gains #b1 Mantra whenever you play a card. NL Watcher loses #b5 Mantra at the start of her turn. NL Watcher's Divinity Stance is permanent."
+    ]
+  },
+  "downfall:NeowFleetingFaith": {
+    "NAME": "Fleeting Faith",
+    "DESCRIPTIONS": [
+      "Whenever you play a card, Neow gains #b1 #yMantra. Neow loses #b5 #yMantra per turn."
+    ]
+  },
+  "downfall:SilentShivTimeEaterPower": {
+    "NAME": "Bag of Knives",
+    "DESCRIPTIONS": [
+      "Whenever you play a #b0 cost card, if Silent has less than #b7 cards in hand, she gains a #yShiv."
+      ]
+  },
+  "downfall:NeowBagOfKnives": {
+    "NAME": "Bag of Knives",
+    "DESCRIPTIONS": [
+      "Whenever you play a #b0 cost card, Neow gains #y1 Strength."
+    ]
+  },
+  "downfall:SilentMirrorImagePower": {
+    "NAME": "Seeing Double",
+    "DESCRIPTIONS": [
+      "A mirror image of Silent is masking her real location. Attacking the mirror removes it from combat for the turn."
+    ]
+  },
+  "downfall:NeowSeeingDouble": {
+    "NAME": "Seeing Double",
+    "DESCRIPTIONS": [
+      "The first #yAttack used each turn against Neow deals #b0 damage."
+    ]
+  },
+  "downfall:SilentPoisonPower": {
+    "NAME": "Warning: Highly Toxic",
+    "DESCRIPTIONS": [
+      "You have #yPoison #yResistance to combat Silent's #yPoison effects."
+    ]
+  },
+  "downfall:NeowHighlyToxic": {
+    "NAME": "Warning: Highly Toxic",
+    "DESCRIPTIONS": [
+      "Neow applies #b10 #yPoison to you per turn. You have #yPoison #yResistance."
+    ]
+  },
+  "downfall:DefectVoidPower": {
+    "NAME": "Energy Thief",
+    "DESCRIPTIONS": [
+      "Whenever Defect generates a Void, it goes to the top of your draw pile."
+    ]
+  },
+  "downfall:NeowEnergyThief": {
+    "NAME": "Energy Thief",
+    "DESCRIPTIONS": [
+      "When Neow adds #rCurses to your draw pile, she also adds 1 #yVoid #yStatus card."
+    ]
+  },
+  "downfall:DefectAncientConstructPower": {
+    "NAME": "Ancient Construct",
+    "DESCRIPTIONS": [
+      "Begins the fight with 2 Bronze Orb minions. NL Gains 1 Artifact each turn if it did not already have Artifact."
+    ]
+  },
+  "downfall:NeowAncientConstruct": {
+    "NAME": "Ancient Construct",
+    "DESCRIPTIONS": [
+      "Neow gains #b3 #yArtifact at the start of your turn if she has no #yArtifact."
+    ]
+  },
+  "downfall:DefectCuriosity": {
+    "NAME": "Unbiased Cognition",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yPower card, gains #b",
+      " #yFocus."
+    ]
+  },
+  "downfall:NeowUnbiasedCognition": {
+    "NAME": "Unbiased Cognition",
+    "DESCRIPTIONS": [
+      "Neow gains #b1 #yStrength for every #yPower card you play."
+    ]
+  },
+  "downfall:IroncladStatusPower": {
+    "NAME": "Synchronize",
+    "DESCRIPTIONS": [
+      "Whenever Ironclad generates a status card, a duplicate is added into your discard pile."
+    ]
+  },
+  "downfall:NeowSyncronize": {
+    "NAME": "Synchronize",
+    "DESCRIPTIONS": [
+      "Neow adds a random #yStatus card to your discard pile every turn."
+    ]
+  },
+  "downfall:IroncladMushroomPower": {
+    "NAME": "Feeding Frenzy",
+    "DESCRIPTIONS": [
+      "Ironclad's Reaper does not Exhaust and targets ALL Mushrooms. NL When Ironclad kills a Mushroom, he gains #b1 Strength and heals #b20 HP."
+    ]
+  },
+  "downfall:NeowFeedingFrenzy": {
+    "NAME": "Feeding Frenzy",
+    "DESCRIPTIONS": [
+      "Neow heals HP whenever she deals any unblocked damage."
+    ]
+  },
+  "downfall:IroncladFortificationPower": {
+    "NAME": "Bastion",
+    "DESCRIPTIONS": [
+      "Ironclad begins the fight with a Fortification, which will grant him #b10 Block each turn. NL When the Fortification has been destroyed, Ironclad loses Barricade and all Block, but gains #b5 Strength per turn."
+    ]
+  },
+  "downfall:NeowBastion": {
+    "NAME": "Bastion",
+    "DESCRIPTIONS": [
+      "Neow has #yBarricade and gains #b10 #yBlock at the start of each turn."
+    ]
+  },
+  "downfall:MerchantStrengthPower": {
+    "NAME": "Soul Stealer",
+    "DESCRIPTIONS": [
+      "Merchant still has the Strength it earned from Soul Steal this run, and gains an equal amount of Dexterity."
+    ]
+  },
+  "downfall:NeowMantra": {
+    "NAME": "Mantra",
+    "DESCRIPTIONS": [
+      "When Neow has #b10 #yMantra, she converts #b10 #yMantra into #b10 #yStrength."
+    ]
+  },
+  "downfall:NeowSeeingDoubleProduct": {
+    "NAME": "???",
+    "DESCRIPTIONS": [
+      "Your next #yAttack used against Neow deals #b0 damage this turn."
     ]
   }
 }

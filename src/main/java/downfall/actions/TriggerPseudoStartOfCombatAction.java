@@ -3,6 +3,7 @@ package downfall.actions;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.relics.AbstractCharbossRelic;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import downfall.monsters.NeowBoss;
 
 public class TriggerPseudoStartOfCombatAction extends AbstractGameAction {
     private AbstractCharBoss cB;
@@ -21,6 +22,10 @@ public class TriggerPseudoStartOfCombatAction extends AbstractGameAction {
         for (AbstractCharbossRelic r : cB.relics) {
             r.atBattleStart();
         }
+        if (NeowBoss.neowboss.Rezzes == 1){
+            cB.energy.recharge();
+        }
+
         isDone = true;
     }
 }

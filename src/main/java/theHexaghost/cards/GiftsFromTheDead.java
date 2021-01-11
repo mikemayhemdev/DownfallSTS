@@ -1,9 +1,7 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theHexaghost.powers.ApplyBurnAtTurnStartOncePower;
 import theHexaghost.powers.GiftsFromTheDeadPower;
 import theHexaghost.powers.GiftsFromTheDeadPowerPlus;
 
@@ -23,17 +21,19 @@ public class GiftsFromTheDead extends AbstractHexaCard {
 
     }
 
-
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        cantUseMessage = "It's too hot to touch!";
+        cantUseMessage = EXTENDED_DESCRIPTION[0];
         return false;
     }
 
     @Override
     public void triggerOnExhaust() {
+
         applyToSelf(new GiftsFromTheDeadPowerPlus(1));
-        if (upgraded) applyToSelf(new GiftsFromTheDeadPower(1));
+
+        if (!upgraded) applyToSelf(new GiftsFromTheDeadPower(1));
+
     }
 
     public void upgrade() {

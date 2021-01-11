@@ -488,8 +488,8 @@
   "Slimebound:BuffSecondarySlimeEffectsPower": {
     "NAME": "从者大师",
     "DESCRIPTIONS": [
-      "当你命令时，变为命令 #b2 次。",
-      "当你命令时，变为命令 #b",
+      "每当你打出 #y命令 牌时，再 #y命令 #b1 次。",
+      "每当你打出 #y命令 牌时，再 #y命令 #b",
 	  " 次。"
     ]
   },

@@ -27,7 +27,7 @@ public class EnTheBomb extends AbstractBossCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(m, m, new EnemyTheBombPower(m, 3, this.magicNumber), 3));
+        this.addToBot(new ApplyPowerAction(m, m, new EnemyTheBombPower(m, 3, this.magicNumber), 2));
     }
 
     @Override

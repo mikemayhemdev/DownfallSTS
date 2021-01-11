@@ -123,9 +123,9 @@
   "Guardian:ConstructPower": {
     "NAME": "先古建造",
     "DESCRIPTIONS": [
-      "如果回合开始时你没有 人工制品 获得 ",
-      " 层 人工制品 并失去 ",
-      " [E] 。"
+      "如果回合开始时你没有 #y人工制品 获得 ",
+      " 层 #y人工制品 ",
+      " 。"
     ]
   },
   "Guardian:ModeShiftPower": {

@@ -12,6 +12,7 @@ import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.TackleBuffPower;
 import slimebound.powers.TackleModifyDamagePower;
+import sneckomod.SneckoMod;
 
 
 public class BestDefense extends AbstractSlimeboundCard {
@@ -35,8 +36,9 @@ public class BestDefense extends AbstractSlimeboundCard {
 
     public BestDefense() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 5;
 
+       // this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

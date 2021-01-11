@@ -25,6 +25,7 @@ public class EnemyInfiniteBladesPower extends AbstractPower {
         this.loadRegion("infiniteBlades");
     }
 
+    /*
     @Override
     public void atStartOfTurnPostDraw() {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
@@ -32,6 +33,7 @@ public class EnemyInfiniteBladesPower extends AbstractPower {
             this.addToBot(new EnemyMakeTempCardInHandAction(new EnShiv(), this.amount, false));
         }
     }
+    */
 
     @Override
     public void stackPower(final int stackAmount) {

@@ -25,6 +25,11 @@ public class EnSandsOfTime extends AbstractBossCard {
         this.selfRetain = true;
     }
 
+    public EnSandsOfTime(int costReduce){
+        this();
+        modifyCostForCombat(-costReduce);
+    }
+
     @Override
     public int getPriority(ArrayList<AbstractCard> hand) {
         return 0;

@@ -3,7 +3,7 @@
     "NAME": "涅奥的祝福",
     "FLAVOR": "放下你的怒火。像尖塔一样坚韧不屈。",
     "DESCRIPTIONS": [
-      "替换初始遗物。拾起时，获得 #b100 最大生命。每一阶段开始时获得 #b100 点最大生命。 NL 失去所有药水栏位，每回合开始时少抽 #b2 张牌。每回合开始时失去 ",
+      "替换初始遗物。拾起时，获得 #b100 最大生命，失去所有药水栏位且无法获得。每一阶段开始时获得 #b100 点最大生命。 NL 每回合开始时少抽 #b2 张牌并失去 ",
 	  " 。"
     ]
   },
@@ -11,8 +11,7 @@
     "NAME": "涅奥的祝福",
     "FLAVOR": "放下你的怒火。像尖塔一样坚韧不屈。",
     "DESCRIPTIONS": [
-      "拾起时，获得 #b100 最大生命。每一阶段开始时获得 #b100 点最大生命。 NL 失去所有药水栏位。 NL 每回合开始时少抽 #b1 张牌。每回合开始时失去 [E] 。Boss敌人的最大生命减少 #b",
-      "% (每次触发减少10%)"
+      "拾起时，获得 #b100 最大生命，失去所有药水栏位且无法获得。每一阶段开始时获得 #b100 点最大生命。 NL 每回合开始时少抽 #b1 张牌并失去 [E] 。"
     ]
   },
   "downfall:CoffeeDripper": {
@@ -276,10 +275,10 @@
     ]
   },
   "downfall:PleadingVagrant": {
-      "NAME": "事件: Pleading Vagrant",
-    "FLAVOR": "Got anything for me friend? Please... maybe some #yCoin?",
+      "NAME": "事件: 浪汉的恳求",
+    "FLAVOR": "能给我点儿什么吗，朋友？ 求求你了……一点 #y小钱 就好？",
     "DESCRIPTIONS": [
-      "Boss robbed the Vagrants, gaining a Shame curse and "
+      "Boss抢劫了流浪汉，被 #p诅咒-羞耻 并 "
     ]
   },
   "downfall:Mushroom": {
@@ -445,21 +444,21 @@
     "NAME": "红宝石心脏的祝福",
     "FLAVOR": "腐化之心很强大。它很欣慰。",
     "DESCRIPTIONS": [
-      "每场战斗开始时获得 #b1 点 #y力量 。 NL 在深处boss战时，获得一张特别的牌。"
+      "每场战斗开始时获得 #b1 点 #y力量 。 NL 在深处boss战时，获得一张特别的牌。（祝福不重复给牌）"
     ]
   },
   "downfall:HeartBlessingBlue": {
     "NAME": "蓝宝石心脏的祝福",
     "FLAVOR": "心脏很欣慰。",
     "DESCRIPTIONS": [
-      "拾起时，将你的最大生命值提升 #b10 。 NL 在深处boss战时，获得一张特别的牌。"
+      "拾起时，将你的最大生命值提升 #b10 。 NL 在深处boss战时，获得一张特别的牌。（祝福不重复给牌）"
     ]
   },
   "downfall:HeartBlessingGreen": {
     "NAME": "绿宝石心脏的祝福",
     "FLAVOR": "心脏就是一切。",
     "DESCRIPTIONS": [
-      "每场战斗开始时获得 #b1 点 #y敏捷 。 NL 在深处boss战时，获得一张特别的牌。"
+      "每场战斗开始时获得 #b1 点 #y敏捷 。 NL 在深处boss战时，获得一张特别的牌。（祝福不重复给牌）"
     ]
   },
   "downfall:TeleportStone": {
@@ -491,6 +490,13 @@
       "心脏的腐化四处蔓延 - 即使珍贵的宠物也不能幸免。",
       "腐化送货员",
       "心脏的卡牌、遗物和药水不再会卖光，并且所有商品打折 #b20% 。"
+    ]
+  },
+  "downfall:Hecktoplasm": {
+    "NAME": "Hecktoplasm",
+    "FLAVOR": "This blob of slime seems to pulse with the energy of hundreds of souls. No wonder no one wanted it.",
+    "DESCRIPTIONS": [
+      "You can no longer gain #ySouls. Breaking Keys costs no #ySouls. Gain [E] at the start of your turn."
     ]
   }
 }

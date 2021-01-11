@@ -1,6 +1,5 @@
 package charbosses.actions.common;
 
-import charbosses.actions.util.CharbossSortHandAction;
 import charbosses.actions.vfx.cardmanip.EnemyShowCardAndAddToDiscardEffect;
 import charbosses.actions.vfx.cardmanip.EnemyShowCardAndAddToHandEffect;
 import charbosses.bosses.AbstractCharBoss;
@@ -82,7 +81,8 @@ public class EnemyMakeTempCardInHandAction extends AbstractGameAction {
         if (this.amount > 0) {
             this.addToTop(new WaitAction(0.8f));
         }
-        AbstractDungeon.actionManager.addToBottom(new CharbossSortHandAction());
+        AbstractCharBoss.boss.preApplyIntentCalculations();
+        //AbstractDungeon.actionManager.addToBottom(new CharbossSortHandAction());
         this.isDone = true;
     }
 

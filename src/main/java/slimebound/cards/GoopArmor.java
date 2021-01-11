@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.GoopArmorPower;
+import sneckomod.SneckoMod;
 
 
 public class GoopArmor extends AbstractSlimeboundCard {
@@ -38,6 +39,7 @@ public class GoopArmor extends AbstractSlimeboundCard {
         this.magicNumber = this.baseMagicNumber = 3;
 
 
+      //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

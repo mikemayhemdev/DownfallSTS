@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
+import sneckomod.SneckoMod;
 
 public class PrismaticBarrier extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("PrismaticBarrier");
@@ -23,10 +24,10 @@ public class PrismaticBarrier extends AbstractGuardianCard {
     private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int BLOCK = 4;
-    private static final int UPGRADE_BONUS = 0;
+    private static final int BLOCK = 2;
+    private static final int UPGRADE_BONUS = 2;
     private static final int MULTICOUNT = 1;
-    private static final int SOCKETS = 2;
+    private static final int SOCKETS = 3;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
 
@@ -50,10 +51,12 @@ public class PrismaticBarrier extends AbstractGuardianCard {
         loadGemMisc();
 
         tags.add(AbstractCard.CardTags.HEALING);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
+      //  AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         for (int i = 0; i < this.multihit; i++) {
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         }
@@ -68,13 +71,8 @@ public class PrismaticBarrier extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeBlock(UPGRADE_BONUS);
 
-
-            if (this.socketCount < 4) {
-                this.socketCount++;
-                this.saveGemMisc();
-            }
-            this.updateDescription();
         }
     }
 

@@ -1,10 +1,13 @@
 package guardian.cards;
 
+import automaton.FunctionHelper;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -13,7 +16,10 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import guardian.GuardianMod;
+import guardian.actions.BraceAction;
 import guardian.powers.BeamBuffPower;
+import guardian.powers.ModeShiftPower;
+import guardian.relics.DefensiveModeMoreBlock;
 
 import java.util.ArrayList;
 
@@ -124,6 +130,9 @@ public abstract class AbstractGuardianCard extends CustomCard {
                     case YELLOW:
                         savedSockets.add(10);
                         break;
+                    case LIGHTBLUE:
+                        savedSockets.add(11);
+                        break;
                 }
             }
         }
@@ -176,6 +185,9 @@ public abstract class AbstractGuardianCard extends CustomCard {
                     case 10:
                         sockets.add(GuardianMod.socketTypes.YELLOW);
                         break;
+                    case 11:
+                        sockets.add(GuardianMod.socketTypes.LIGHTBLUE);
+                        break;
                 }
             }
         }
@@ -189,6 +201,17 @@ public abstract class AbstractGuardianCard extends CustomCard {
         if (this.hasTag(GuardianMod.STASISGLOW)) this.tags.remove(GuardianMod.STASISGLOW);
 
         GuardianMod.logger.info("New card played: " + this.name + " misc = " + this.misc);
+    }
+
+    public static void brace(int modeShiftValue) {
+        if (!AbstractDungeon.player.hasPower(ModeShiftPower.POWER_ID)){
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ModeShiftPower(AbstractDungeon.player, AbstractDungeon.player, 20), 20));
+        }
+        if (AbstractDungeon.player.hasRelic(DefensiveModeMoreBlock.ID)){
+            modeShiftValue += 1;
+        }
+        AbstractDungeon.actionManager.addToBottom(new BraceAction(modeShiftValue));
+
     }
 
     public void saveGemMisc() {
@@ -237,6 +260,9 @@ public abstract class AbstractGuardianCard extends CustomCard {
                                 break;
                             case YELLOW:
                                 gemindex = 10;
+                                break;
+                            case LIGHTBLUE:
+                                gemindex = 11;
                                 break;
                         }
                         this.misc += 10 + gemindex;
@@ -313,6 +339,9 @@ public abstract class AbstractGuardianCard extends CustomCard {
                         case "20":
                             sockets.add(GuardianMod.socketTypes.YELLOW);
                             break;
+                        case "21":
+                            sockets.add(GuardianMod.socketTypes.LIGHTBLUE);
+                            break;
                         default:
                             sockets.add(GuardianMod.socketTypes.RED);
                             break;
@@ -351,6 +380,9 @@ public abstract class AbstractGuardianCard extends CustomCard {
                     break;
                 case GREEN:
                     Gem_Green.gemEffect(p, m);
+                    break;
+                case LIGHTBLUE:
+                    Gem_Lightblue.gemEffect(p, m);
                     break;
                 case ORANGE:
                     Gem_Orange.gemEffect(p, m);
@@ -396,6 +428,9 @@ public abstract class AbstractGuardianCard extends CustomCard {
                         break;
                     case GREEN:
                         addedDesc = addedDesc + Gem_Green.UPGRADED_DESCRIPTION;
+                        break;
+                    case LIGHTBLUE:
+                        addedDesc = addedDesc + Gem_Lightblue.UPGRADED_DESCRIPTION;
                         break;
                     case ORANGE:
                         addedDesc = addedDesc + Gem_Orange.UPGRADED_DESCRIPTION;
@@ -540,6 +575,14 @@ public abstract class AbstractGuardianCard extends CustomCard {
                             else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(11);
                             else socketTexture = GuardianMod.socketTextures4.get(11);
                             //    GuardianMod.logger.info("texture is " + socketTexture);
+                            break;
+                        case LIGHTBLUE:
+                            // GuardianMod.logger.info("case BLUE");
+                            if (i == 0) socketTexture = GuardianMod.socketTextures.get(12);
+                            else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(12);
+                            else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(12);
+                            else socketTexture = GuardianMod.socketTextures4.get(12);
+                            // GuardianMod.logger.info("texture is " + socketTexture);
                             break;
                     }
 

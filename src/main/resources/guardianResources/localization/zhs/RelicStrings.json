@@ -94,7 +94,7 @@
     "NAME": "冷却液",
     "FLAVOR": "有公害，不要随便丢弃",
     "DESCRIPTIONS": [
-      "当一张牌触发 #yguardianmod:滴答 时, #y提高 回合计数器 2 点。"
+      "每场战斗开始时获得 #b2 个 #yguardianmod:凝滞 栏位。当一张牌触发 #yguardianmod:滴答 时, #y提高 回合计数器 2 点。"
     ]
   },
   "Guardian:PickAxe": {

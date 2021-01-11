@@ -4,7 +4,6 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,7 +12,6 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
-import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
 public class MuddleDrawnCardsPower extends TwoAmountPower implements CloneablePowerInterface {
@@ -61,7 +59,7 @@ public class MuddleDrawnCardsPower extends TwoAmountPower implements CloneablePo
         if (amount == 1)
             description = DESCRIPTIONS[0];
         else
-            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2] + Math.max(0,this.amount2) + DESCRIPTIONS[3];
+            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2] + Math.max(0, this.amount2) + DESCRIPTIONS[3];
     }
 
     @Override

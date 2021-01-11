@@ -8,7 +8,6 @@ package guardian.events;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.curses.Pain;
-import com.megacrit.cardcrawl.cards.curses.Regret;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -17,7 +16,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import guardian.GuardianMod;
-import guardian.cards.Aged;
+import downfall.cards.curses.Aged;
 import guardian.ui.RelicPreviewButton;
 
 public class StasisEgg extends AbstractImageEvent {
@@ -72,7 +71,7 @@ public class StasisEgg extends AbstractImageEvent {
                     case 0:
                         this.imageEventText.updateBodyText(DIALOG_USE);
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), new guardian.relics.StasisEgg());
-                        AbstractCard card = new Pain();
+                        AbstractCard card = new Aged();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);
@@ -82,7 +81,7 @@ public class StasisEgg extends AbstractImageEvent {
                     case 1:
                         this.imageEventText.updateBodyText(DIALOG_SMASH);
                         AbstractDungeon.player.increaseMaxHp(this.maxHP, false);
-                        AbstractCard card2 = new Regret();
+                        AbstractCard card2 = new Pain();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card2, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
 
 

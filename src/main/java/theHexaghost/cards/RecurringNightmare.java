@@ -13,16 +13,18 @@ public class RecurringNightmare extends AbstractHexaCard {
     public RecurringNightmare() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
+        baseMagicNumber = magicNumber = 1;
+        tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new RecurringNightmareAction());
+        atb(new RecurringNightmareAction(magicNumber));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            exhaust = false;
+            upgradeMagicNumber(1);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

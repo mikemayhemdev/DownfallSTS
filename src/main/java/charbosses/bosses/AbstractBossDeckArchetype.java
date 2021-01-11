@@ -1,25 +1,29 @@
 package charbosses.bosses;
 
-import charbosses.cards.AbstractBossCard;
-import charbosses.cards.colorless.EnShiv;
-import charbosses.cards.curses.*;
-import charbosses.relics.*;
-import charbosses.relics.EventRelics.*;
+import charbosses.BossMechanicDisplayPanel;
+import charbosses.relics.AbstractCharbossRelic;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.MonsterStrings;
 import downfall.downfallMod;
+import downfall.monsters.NeowBoss;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public abstract class AbstractBossDeckArchetype {
     public static final Logger logger = LogManager.getLogger(downfallMod.class.getName());
+
+    public static MonsterStrings bossMechanicString = CardCrawlGame.languagePack.getMonsterStrings("downfall:BossMechanics");
+
+    public String bossMechanicName;
+    public String bossMechanicDesc;
+
+    public int maxHPModifier;
+    public int actNum;
+
+    /*
 
     /// WEIGHT CONSTANTS ///
 
@@ -70,18 +74,48 @@ public abstract class AbstractBossDeckArchetype {
     private AbstractCharbossRelic[] signatureRelicPerAct;
     private ArrayList<String> blacklistedRelics;
     private ArrayList<String> blacklistedCards;
+    */
 
     private AbstractCharBoss currentBoss;
 
+    /*
     public boolean upgradeAllPowers = false;
     public boolean upgradeAllSkills = false;
     public boolean upgradeAllAttacks = false;
+    */
+
+    public void addedPreBattle(){
+        initializeBossPanel();
+    }
 
     public abstract void initializeBonusRelic();
 
+    public boolean looped = false;
+    public int turn = 0;
 
+    public ArrayList<AbstractCard> getThisTurnCards() {
+        return new ArrayList<>();
+    }
+
+    public void addToList(ArrayList<AbstractCard> c, AbstractCard q, boolean upgraded) {
+        if (upgraded) q.upgrade();
+        c.add(q);
+    }
+
+    public void initializeBossPanel(){
+        if (bossMechanicDesc != null) {
+            BossMechanicDisplayPanel.mechanicName = bossMechanicName;
+            BossMechanicDisplayPanel.mechanicDesc = bossMechanicDesc;
+        }
+    }
+
+    public void addToList(ArrayList<AbstractCard> c, AbstractCard q) {
+        addToList(c, q, false);
+    }
 
     public AbstractBossDeckArchetype(String id, String loggerClassName, String loggerArchetypeName) {
+
+        /*
         this.ID = id;
         this.allCards = new ArrayList<AbstractBossCard>();
         this.starterCards = new ArrayList<AbstractBossCard>();
@@ -102,10 +136,12 @@ public abstract class AbstractBossDeckArchetype {
         this.energyRelicPool = new ArrayList<AbstractCharbossRelic>();
         this.bossNonEnergyRelicPool = new ArrayList<AbstractCharbossRelic>();
         this.cards = new ArrayList<AbstractBossCard>();
+        */
 
 
     }
 
+    /*
     private void initializeGlobalEventRelics() {
         //Global Events
 
@@ -147,7 +183,6 @@ public abstract class AbstractBossDeckArchetype {
         //No Cursed Book - Nilry's Codex is probably bad for the boss, Necronomicon too powerful, so it'd have to be Enchridon every time
         //No Forgotten Altar, Bloody Altar doesn't do much
         //No Knowing Skull until a suite of colorless cards is made (maybe never)
-        //TODO - Nloth
         this.globalEventPoolAct2.add(new CBR_OldBeggar());
         this.globalEventPoolAct2.add(new CBR_PleadingVagrant());
         this.globalEventPoolAct2.add(new CBR_Colosseum());
@@ -178,10 +213,12 @@ public abstract class AbstractBossDeckArchetype {
         AbstractCharBoss.boss.masterDeck.addToTop(c.makeStatEquivalentCopy());
     }
 
+*/
     public void addRelic(AbstractCharbossRelic r) {
         r.instantObtain(AbstractCharBoss.boss);
 
     }
+    /*
 
     private void initializeRelics() {
 
@@ -290,11 +327,14 @@ public abstract class AbstractBossDeckArchetype {
         this.curseCards.add(new EnShame());
         this.curseCards.add(new EnPain());
     }
+    */
 
     public void initialize() {
         //Overwritten in each Archetype Base
     }
 
+
+    /*
     protected void blacklistCard(String id) {
         this.blacklistedCards.add(id);
     }
@@ -308,7 +348,7 @@ public abstract class AbstractBossDeckArchetype {
         Collections.shuffle(this.curseCards);
 
         if (boss.hasRelic("Omamori")) {
-            SlimeboundMod.logger.info("detected boss has Omamori");
+            //SlimeboundMod.logger.info("detected boss has Omamori");
             CBR_Omamori oma = (CBR_Omamori) boss.getRelic("Omamori");
             if (oma.counter > 0) {
                 logger.info(loggerSource + " tried to add a " + this.curseCards.get(0).name + ", but Omamori blocked it.");
@@ -322,6 +362,7 @@ public abstract class AbstractBossDeckArchetype {
         return this.curseCards.get(0).name;
 
     }
+
 
     protected void addCardToList(AbstractBossCard c, CardBenefitType type) {
         switch (type) {
@@ -343,6 +384,7 @@ public abstract class AbstractBossDeckArchetype {
             default:
         }
     }
+
 
     protected void addRelicToList(AbstractCharbossRelic r, CardBenefitType type) {
         switch (type) {
@@ -367,6 +409,7 @@ public abstract class AbstractBossDeckArchetype {
             default:
         }
     }
+
 
     protected void addToStarterDeck(AbstractBossCard c) {
         this.starterCards.add(c);
@@ -427,7 +470,7 @@ public abstract class AbstractBossDeckArchetype {
         } else if (rarityRoll >= rarityRange[4] && rarityRoll <= rarityRange[5] && validRarities[2]) {
             rarity = CardRarity.RARE;
         } else {
-            //If no rarities were valid, mark it as Special, which will return a single Shiv (TODO replace this with Madness)
+            //If no rarities were valid, mark it as Special, which will return a single Shiv /Madness/ThisIsNoLongerUsedAtAll
             rarity = CardRarity.SPECIAL;
         }
 
@@ -1045,4 +1088,5 @@ public abstract class AbstractBossDeckArchetype {
         CardBenefitType() {
         }
     }
+    */
 }

@@ -20,8 +20,9 @@
     ],
     "OPTIONS": [
       "[Gather Gold] #gGain #g75 #gGold.",
-      "[Recruit] #gGain #yGreed #yOoze.",
-      "[Leave]"
+      "[Recruit] #rLose #r75 #rGold. #gGain #yGreed #yOoze.",
+      "[Leave]",
+      "[Locked] Requires 75 Souls."
     ]
   },
   "Slimebound:SlimeTalk": {
@@ -84,9 +85,21 @@
       "After a short conversation, these fellow slimes are on your side as well - guarding for intruders. They can leave their post for a little while to assist you."
     ],
     "OPTIONS": [
-      "[Recruit] #gObtain #gDarklings.",
+      "[Recruit] #gObtain #gDarklings. #rLose ",
       "[Fight]",
-      "[Leave]"
+      "[Leave]",
+      ".",
+      "[Locked] Requires a Rare card."
+    ]
+  },
+  "Slimebound:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "When one sheep leads the way, all the rest follow."
+    ],
+    "OPTIONS": [
+      "[Inspiration] #gAdd #gCommand to all #gStrikes and #gDefends.",
+      "[Locked] Requires a Strike or Defend."
     ]
   }
 }

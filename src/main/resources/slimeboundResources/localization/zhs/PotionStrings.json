@@ -16,8 +16,8 @@
   "Slimebound:SpawnSlimePotion": {
     "NAME": "瓶中军团",
     "DESCRIPTIONS": [
-      "获得直到你有 #b3 个史莱姆栏位。 NL 不失去生命生成1个 #y水蛭 #y污泥 和 #y游击 史莱姆。",
-      "获得直到你有 #b6 个史莱姆栏位。 NL 不失去生命生成2个 #y水蛭 #y污泥 和 #y游击 史莱姆。"
+      "分裂 #b",
+      " 只随机史莱姆。（包括专家）"
     ]
   },
   "Slimebound:ThreeZeroPotion": {
