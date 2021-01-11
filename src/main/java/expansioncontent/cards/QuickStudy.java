@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.SelectCardsCenteredAction;
@@ -53,12 +54,12 @@ public class QuickStudy extends AbstractExpansionCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> selectionsList = new ArrayList<>();
         if (upgraded) {
-            Collections.shuffle(allStudyCardsList);
+            Collections.shuffle(allStudyCardsListUpgraded, AbstractDungeon.cardRandomRng.random);
             for (int i = 0; i < 3; i++) {
                 selectionsList.add(allStudyCardsListUpgraded.get(i).makeStatEquivalentCopy());
             }
         } else {
-            Collections.shuffle(allStudyCardsListUpgraded);
+            Collections.shuffle(allStudyCardsList, AbstractDungeon.cardRandomRng.random);
             for (int i = 0; i < 3; i++) {
                 selectionsList.add(allStudyCardsList.get(i).makeStatEquivalentCopy());
             }
@@ -77,7 +78,6 @@ public class QuickStudy extends AbstractExpansionCard {
             initializeDescription();
         }
     }
-
 
 
     @Override
