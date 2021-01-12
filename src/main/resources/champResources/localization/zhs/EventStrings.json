@@ -1,4 +1,14 @@
 {
+  "champ:ChampTalk": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "你想拿回这条腰带？",
+      "有本事过来拿啊！"
+    ],
+    "OPTIONS": [
+      ""
+    ]
+  },
   "champ:Colosseum": {
     "NAME": "竞技场",
     "DESCRIPTIONS": [

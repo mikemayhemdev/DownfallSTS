@@ -8,14 +8,6 @@
     ],
     "DESCRIPTION": "如果你处于某个 #y姿态 ，触发该 #y姿态 的 #y战术奖励 。"
   },
-    {
-    "PROPER_NAME": "起手式",
-    "NAMES": [
-      "起手式",
-	  "起手"
-    ],
-    "DESCRIPTION": "切换 #y姿态 。"
-  },
   {
     "PROPER_NAME": "连段",
     "NAMES": [
@@ -41,14 +33,6 @@
     "DESCRIPTION": "下次你受到 #y攻击 伤害时，对攻击者造成层数的伤害并移除。"
   },
   {
-    "PROPER_NAME": "决心",
-    "NAMES": [
-      "决心",
-      "fatigue"
-    ],
-    "DESCRIPTION": "每有 #b5 层 #y决心 拥有 #b1 点 #y力量 。战斗结束时，回复 #y决心 层数等量的生命。"
-  },
-  {
     "PROPER_NAME": "防守",
     "NAMES": [
       "防守"
@@ -70,7 +54,7 @@
     "DESCRIPTION": "#y姿态 ： #y战术 -抽 #b1 张牌。 NL #y终结技 -下回合抽 #b1 张牌并获得 [E] 。"
   },
   {
-    "PROPER_NAME": "终极姿态",
+    "PROPER_NAME": "终极",
     "NAMES": [
       "终极"
     ],

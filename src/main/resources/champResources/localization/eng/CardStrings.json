@@ -207,7 +207,7 @@
     "NAME": "Vicious Mockery",
     "DESCRIPTION": "*Berserker champ:Combo: Gain !M! temporary Strength. NL *Defensive champ:Combo: Gain !M! temporary  Dexterity.",
     "EXTENDED_DESCRIPTION": [
-      "",
+      "Berserker champ:Combo: Gain !M! temporary Strength. NL Exhaust.",
       "Berserker champ:Combo: Gain !M! temporary Strength. NL ",
       "Defensive champ:Combo: Gain !M! temporary Dexterity. NL Exhaust.",
       "Defensive champ:Combo: Gain !M! temporary Dexterity."
@@ -359,7 +359,8 @@
       "Berserker champ:Combo: Gain [E] [E] [E] , then Exhaust this. NL ",
       "Defensive champ:Combo: Draw !M! cards.",
       "A poor time for that move."
-    ]},
+    ]
+	},
   "champ:PerfectedStrike": {
     "NAME": "Perfected Strike",
     "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your cards containing \"Strike\"."
