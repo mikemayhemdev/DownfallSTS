@@ -72,7 +72,7 @@ public class BitShift extends AbstractBronzeCard {
     }
 
     public void upp() {
-        exhaust = false;
+        selfRetain = true;
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }
