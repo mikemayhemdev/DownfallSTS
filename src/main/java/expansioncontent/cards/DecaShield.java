@@ -43,8 +43,11 @@ public class DecaShield extends AbstractExpansionCard {
 
     public void upgrade() {
         if (!upgraded) {
+            cardsToPreview.upgrade();
             upgradeName();
             upgradeBlock(4);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }
