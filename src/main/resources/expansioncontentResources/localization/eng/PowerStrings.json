@@ -3,10 +3,11 @@
     "NAME": "Study The Spire",
     "DESCRIPTIONS": [
       "Gain a random #yBoss card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random Automaton card at the start of your next #b",
+      "Gain a random #yBoss card at the start of the next #b",
       " turns. NL They cost #b0 until played.",
       "Gain a random #yUpgraded #yBoss card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random #yUpgradedAutomaton card at the start of your next #b"
+      "Gain a random #yUpgraded #yBoss card at the start of the next #b",
+      " turns. NL They cost #b0 until played."
     ]
   },
   "expansioncontent:AwakenedOnePower": {

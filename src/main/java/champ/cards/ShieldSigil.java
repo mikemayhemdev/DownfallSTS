@@ -3,6 +3,7 @@ package champ.cards;
 import champ.ChampMod;
 import champ.stances.BerserkerStance;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class ShieldSigil extends AbstractChampCard {
@@ -31,7 +32,7 @@ public class ShieldSigil extends AbstractChampCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        if (bcombo()) {
+        if (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
             this.myHpLossCost = BerserkerStance.amount() * magicNumber;
         } else {
             this.myHpLossCost = 0;

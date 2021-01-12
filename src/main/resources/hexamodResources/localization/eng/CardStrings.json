@@ -37,8 +37,8 @@
   },
   "hexamod:SkipABeat": {
     "NAME": "Skip a Beat",
-    "DESCRIPTION": "hexamod:Advance. NL hexamod:Force-Ignite the next Ghostflame. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "hexamod:Advance. NL hexamod:Force-Ignite the next Ghostflame."
+    "DESCRIPTION": "hexamod:Force-Ignite the next Ghostflame. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "hexamod:Force-Ignite the next Ghostflame."
   },
   "hexamod:CatchUp": {
     "NAME": "Catch Up",
@@ -302,8 +302,8 @@
   },
   "hexamod:ApocalypseNow": {
     "NAME": "Apocalypse Now",
-    "DESCRIPTION": "Ethereal. NL Lose 6 HP. NL Gain [E] [E] . NL The Inferno Ghostflame becomes hexamod:Active. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Lose 6 HP. NL Gain [E] [E] [E] . NL The Inferno Ghostflame becomes hexamod:Active. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Gain [E] [E] . NL The Inferno Ghostflame becomes hexamod:Active. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] [E] [E] . NL The Inferno Ghostflame becomes hexamod:Active. NL Exhaust."
   },
   "hexamod:DynamicBlow": {
     "NAME": "Dynamic Blow",

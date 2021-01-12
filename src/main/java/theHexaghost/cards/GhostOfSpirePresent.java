@@ -15,7 +15,7 @@ public class GhostOfSpirePresent extends AbstractHexaCard {
     private static final int MAGIC = 1;
 
     public GhostOfSpirePresent() {
-        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
@@ -28,7 +28,7 @@ public class GhostOfSpirePresent extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeMagicNumber(1);
         }
     }
 }

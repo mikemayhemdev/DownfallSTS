@@ -61,8 +61,8 @@
   },
   "bronze:Goto": {
     "NAME": "Goto",
-    "DESCRIPTION": "Draw !M! card. NL bronze:Compile - Draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL bronze:Compile - Draw !M! cards.",
+    "DESCRIPTION": "Draw !M! card. NL bronze:Compile - Next turn, draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL bronze:Compile - Next turn, draw !M! cards.",
     "EXTENDED_DESCRIPTION": [
       "running",
       "Sprint"
@@ -219,7 +219,7 @@
   "bronze:BitShift": {
     "NAME": "Bit Shift",
     "DESCRIPTION": "Choose a card in the Sequence to return to your hand. NL It gains Retain. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a card in the Sequence to return to your hand. NL It gains Retain."
+    "UPGRADE_DESCRIPTION": "Retain. NL Choose a card in the Sequence to return to your hand. NL It gains Retain. NL Exhaust."
   },
   "bronze:ByteShift": {
     "NAME": "Byte Shift",
