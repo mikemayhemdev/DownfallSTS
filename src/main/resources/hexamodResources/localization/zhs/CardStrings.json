@@ -82,11 +82,11 @@
   },
   "hexamod:CrushingStance": {
     "NAME": "撞击",
-    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 将 hexamod:激活 的鬼火替换为 碾压鬼火 。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 将 hexamod:激活 的鬼火替换为 hexamod:碾压 鬼火 。 NL 消耗 。"
   },
   "hexamod:EmpoweringStance": {
     "NAME": "高热",
-    "DESCRIPTION": "获得 !B! 点 格挡 和 !M! 点 力量 。 NL 将 hexamod:激活 的鬼火替换为 高热鬼火 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 和 !M! 点 力量 。 NL 将 hexamod:激活 的鬼火替换为 hexamod:高热 鬼火 。"
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "牺牲",
