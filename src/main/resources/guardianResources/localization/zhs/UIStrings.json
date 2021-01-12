@@ -25,5 +25,10 @@
       "获得两颗随机宝石。",
       "镐已损毁。"
     ]
+  },
+    "Guardian:BraceMod": {
+    "TEXT": [
+      " NL guardianmod:提防 2。"
+    ]
   }
 }

@@ -68,5 +68,26 @@
       "阴世"
     ],
     "DESCRIPTION": "被 #y消耗 时触发效果。"
+  },
+    {
+    "PROPER_NAME": "碾压",
+    "NAMES": [
+      "碾压"
+    ],
+    "DESCRIPTION": "#y鬼火 。 #y激活时 打出 #b2 张 #y技能牌 #g点燃 。 #y点燃时 :对随机一名敌人造成 #b4 点伤害两次。"
+  },
+  {
+    "PROPER_NAME": "高热",
+    "NAMES": [
+      "高热"
+    ],
+    "DESCRIPTION": "#y鬼火 。 #y激活时 打出 #b1 张 #y能力牌 #g点燃 。 #y点燃时 :获得 #b4 点 #y格挡 和 #b1 点 #y力量 。"
+  },
+  {
+    "PROPER_NAME": "灼热",
+    "NAMES": [
+      "灼热"
+    ],
+    "DESCRIPTION": "#y鬼火 。 #y激活时 打出 #b2 张 #y攻击牌 #g点燃 。 #y点燃时 :给予随机一名敌人 #b4 层 #y灼魂 。"
   }
 ]

@@ -67,10 +67,4 @@ public class TinkerersToolbox extends AbstractBronzeCard {
             }
         }
     }
-
-    @Override
-    public void unhover() {
-        super.unhover();
-        cardsToPreview = null;
-    }
 }

@@ -202,12 +202,12 @@
  },
  "Slimebound:HungryTackle": {
   "NAME": "饥饿冲撞",
-  "DESCRIPTION": "造成 !D! 点伤害。受到 !SlimeboundSelfharm! 点伤害。 NL 随机将1张已 消耗 的0费牌加入手牌。",
-  "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。受到 !SlimeboundSelfharm! 点伤害。 NL 随机将2张已 消耗 的0费牌加入手牌。"
+  "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机将1张已 消耗 的0费牌加入手牌。",
+  "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机将2张已 消耗 的0费牌加入手牌。"
  },
  "Slimebound:FinishingTackle": {
   "NAME": "最终冲撞",
-  "DESCRIPTION": "造成 !D! 点伤害。受到 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:消耗黏液 -获得 !B! 点 格挡 。"
+  "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:消耗黏液 -获得 !B! 点 格挡 。"
  },
  "Slimebound:LivingWall": {
   "NAME": "活体墙壁",
@@ -215,17 +215,17 @@
  },
  "Slimebound:ComboTackle": {
   "NAME": "连续冲撞",
-  "DESCRIPTION": "造成 !D! 点伤害。受到 !SlimeboundSelfharm! 点伤害。 NL 抽 1 张牌。",
-  "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。受到 !SlimeboundSelfharm! 点伤害。 NL 抽 !M! 张牌。"
+  "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 抽 1 张牌。",
+  "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 抽 !M! 张牌。"
  },
  "Slimebound:Tackle": {
   "NAME": "冲撞",
-  "DESCRIPTION": "造成 !D! 点伤害。受到 !SlimeboundSelfharm! 点伤害。"
+  "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。"
  },
  "Slimebound:GoopTackle": {
   "NAME": "开幕冲撞",
-  "DESCRIPTION": "造成 !D! 点伤害。受到 !SlimeboundSelfharm! 点伤害。 NL 随机将1张 slimeboundmod:冲撞 牌加入你的手牌。它的耗能本回合为0。",
-  "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。受到 !SlimeboundSelfharm! 点伤害。 NL 随机将1张已 升级 的 slimeboundmod:冲撞 牌加入你的手牌。它的耗能本回合为0。"
+  "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机将1张 slimeboundmod:冲撞 牌加入你的手牌。它的耗能本回合为0。",
+  "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机将1张已 升级 的 slimeboundmod:冲撞 牌加入你的手牌。它的耗能本回合为0。"
  },
  "Slimebound:CorrosiveSpit": {
   "NAME": "腐蚀喷吐",
@@ -242,7 +242,7 @@
  },
  "Slimebound:FlameTackle": {
   "NAME": "烈焰冲撞",
-  "DESCRIPTION": "造成 !D! 点伤害。受到 !SlimeboundSelfharm! 点伤害。 NL 本场战斗中 slimeboundmod:冲撞 牌的伤害增加 !M! 。"
+  "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 本场战斗中 slimeboundmod:冲撞 牌的伤害增加 !M! 。"
  },
  "Slimebound:RainOfGoop": {
   "NAME": "黏液雨",
@@ -259,8 +259,8 @@
  },
  "Slimebound:ViciousTackle": {
   "NAME": "狂暴冲撞",
-  "DESCRIPTION": "造成 !D! 点伤害。受到 !SlimeboundSelfharm! 点伤害。 NL 本次 slimeboundmod:黏液 产生的额外伤害翻倍。",
-  "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。受到 !SlimeboundSelfharm! 点伤害。 NL 本次 slimeboundmod:黏液 产生的额外伤害和回复翻倍。"
+  "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 本次 slimeboundmod:黏液 产生的额外伤害翻倍。",
+  "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 本次 slimeboundmod:黏液 产生的额外伤害和回复翻倍。"
  },
  "Slimebound:LeechEnergy": {
   "NAME": "吸取能量",
@@ -345,8 +345,8 @@
   },
    "Slimebound:ForwardTackle": {
    "NAME": "进军冲撞",
-   "DESCRIPTION": "造成 !D! 点伤害。受到 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:命令 两次。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。受到 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:命令 三次。"
+   "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:命令 两次。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:命令 三次。"
   },
     "Slimebound:TagTeam": {
     "NAME": "搭档",

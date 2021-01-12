@@ -34,5 +34,13 @@
   "downfall:Enraging": {
     "NAME": "最后一战",
     "DESCRIPTION": "所有敌人如果在回合开始时半血以下，清除所有负面效果并获得力量。"
+  },
+    "downfall:Analytical": {
+    "NAME": "Analytical",
+    "DESCRIPTION": "每回合开始时， add a random card with Encode to your hand and give it Ethereal. Basic Strikes and Defends Encode."
+  },
+  "downfall:StatusAbuse": {
+    "NAME": "Inflicted",
+    "DESCRIPTION": "Start with a Makeshift Battery, Donu's Washers, Deca's Washers, a Medical Kit, and a Bronze Idol. All other Relics are replaced with Circlets."
   }
 }

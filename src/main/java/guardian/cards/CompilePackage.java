@@ -119,12 +119,6 @@ public class CompilePackage extends AbstractGuardianCard {
             }
         }
     }
-
-    @Override
-    public void unhover() {
-        super.unhover();
-        cardsToPreview = null;
-    }
 }
 
 

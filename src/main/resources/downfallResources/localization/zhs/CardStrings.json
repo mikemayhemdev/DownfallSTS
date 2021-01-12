@@ -1,1 +1,26 @@
-{}
+{
+  "downfall:SummonMushrooms": {
+    "NAME": "真菌环绕",
+    "DESCRIPTION": "杀死所有蘑菇。 NL 召唤两个蘑菇。"
+  },
+  "downfall:Aged": {
+    "NAME": "岁月",
+    "DESCRIPTION": "不能被打出 。 虚无 。 NL 你的回合结束时，将一张 *虚空 加入你的抽牌堆顶部。"
+  },
+  "downfall:Bewildered": {
+    "NAME": "困惑",
+    "DESCRIPTION": "每当你打出其他牌， sneckomod:混淆 你的手牌并将这张牌丢弃。 NL 消耗 。"
+  },
+  "downfall:Icky": {
+    "NAME": "黏液缠身",
+    "DESCRIPTION": "将一张 *黏液 加入手牌。 NL 消耗 。"
+  },
+  "downfall:Haunted": {
+    "NAME": "闹鬼",
+    "DESCRIPTION": "虚无 。 不能被打出 。 NL 抽到时，将你的手牌加入 虚无 。"
+  },
+  "downfall:Malfunctioning": {
+    "NAME": "纰漏",
+    "DESCRIPTION": "虚无 。 NL 你的回合结束时，将手牌变化为随机状态牌。 NL 消耗 。"
+  }
+}

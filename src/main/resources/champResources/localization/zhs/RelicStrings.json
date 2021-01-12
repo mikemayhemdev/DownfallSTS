@@ -3,98 +3,98 @@
     "NAME": "冠军金冠",
     "FLAVOR": "你是冠军！",
     "DESCRIPTIONS": [
-      " #y起手式 时如果不处于 #y姿态 中，将随机一张手牌本回合的耗能降低 #b1 。"
+      "如果不处于 #y姿态 中时进入 #y姿态 ，将随机一张手牌本回合的耗能降低 #b1 。"
     ]
   },
   "champ:BlackKnightHelmet": {
     "NAME": "黑骑头盔",
     "FLAVOR": "只受到一点擦伤。",
     "DESCRIPTIONS": [
-      "每场战斗第一次进入每种 #y姿态 时： NL #b防卫 -获得2点敏捷并失去1点力量。 NL #y角斗 -获得1点敏捷和力量。 NL #r狂战 -获得2点力量并失去1点敏捷。"
+      "每场战斗第一次进入每种 #y姿态 时： NL #b防卫 -获得2点敏捷并失去1点力量。 NL #r狂战 -获得2点力量并失去1点敏捷。"
     ]
   },
   "champ:Barbells": {
     "NAME": "哑铃",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "1000 下？切，我还能做 1001 下。",
     "DESCRIPTIONS": [
       "每当你进入 #y休息处 ，如果你至少有 #b10 张未 #y升级 的牌，随机 #y升级 牌组中的一张牌。"
     ]
   },
   "champ:BerserkersGuideToSlaughter": {
     "NAME": "狂战指南",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "文字难以辨认。",
     "DESCRIPTIONS": [
       "阻止每场战斗前10点生命损失。"
     ]
   },
   "champ:ChampionCrownUpgraded": {
     "NAME": "终极王冠",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "恭喜！！你是最大的赢家。",
     "DESCRIPTIONS": [
-      "每场战斗开始时进入 #y终极 并持续 #b2 回合 。"
+      "替换 #r冠军金冠 。 NL 每场战斗开始时进入 #y终极 并持续 #b2 回合 。"
     ]
   },
   "champ:DefensiveTrainingManual": {
     "NAME": "防御训练手册",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "专业提示：不要被打到。",
     "DESCRIPTIONS": [
-      " #y防卫 中的 #y技术 将额外获得 #b3 层 #y反击 。"
+      " #y防守 中的 #y终结技奖励 额外获得 #b8 点 格挡 。"
     ]
   },
   "champ:DeflectingBracers": {
     "NAME": "偏折护腕",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "如果你觉得格挡很好的话……",
     "DESCRIPTIONS": [
-      "敌人的回合结束是，你获得你剩余格挡数的 #y反击 。"
+      "敌人的回合结束时，你获得你剩余格挡数的 #y反击 。"
     ]
   },
   "champ:DuelingGlove": {
     "NAME": "决斗手套",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "从十开始数……",
     "DESCRIPTIONS": [
       "打出单体攻击牌后，如果敌人没有 #y易伤 ，给予 #b1 层 #y易伤 。"
     ]
   },
   "champ:FightingForDummies": {
     "NAME": "格斗假人",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "第一步，打败敌人",
     "DESCRIPTIONS": [
       "你的回合结束时没有处于 #y姿态 ，获得 #b6 点 #y格挡 。"
     ]
   },
   "champ:GladiatorsBookOfMartialProwess": {
     "NAME": "角斗技法",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "凡事都要先试试 - 即使有时没能成功。",
     "DESCRIPTIONS": [
       "每当你一回合内打出 #y起手 、 #y技术 、 #y连段 和 #y终结技 ，随机获得 #b1 点 #y力量 或 #y敏捷 。"
     ]
   },
   "champ:PowerArmor": {
     "NAME": "力量铠甲",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "买来的。",
     "DESCRIPTIONS": [
-      "每回合开始时获得 [E] 。 NL 你的最大 #y决心 、 #y反击 为 #b15 ， #y手牌上限 为 #b8 。"
+      "每回合开始时获得 [E] 。 NL 你的最大 #y反击 和 #y疲劳 为 #b20 。"
     ]
   },
   "champ:SignatureFinisher": {
     "NAME": "终结者",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "是时候该使出我的终结一击了。",
     "DESCRIPTIONS": [
-      "拾起时，选择一张 #y终结技 牌。这张牌将不会结束你的回合并退出 #y姿态 。",
+      "拾起时，选择一张 #y终结技 牌。这张牌费用为0且不会结束你的回合。",
       "选一张牌 ",
       "不会结束你的回合并退出姿态。"
     ]
   },
   "champ:SpectersHand": {
     "NAME": "幽灵之手",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "有些胜利与你同在。",
     "DESCRIPTIONS": [
-      "每当你不处于 #y姿态 打出一张 #y技术 ，将一张0耗能带 #y消耗 的打击或防御加入你的手牌。"
+      "每当你不处于 #y姿态 打出一张 #y战术 ，将一张0耗能带 #y消耗 的打击或防御加入你的手牌。"
     ]
   },
   "champ:LiftRelic": {
     "NAME": "内在力量",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "是关于你心中那把巨大的剑。",
     "DESCRIPTIONS": [
       "每场战斗开始时获得 #b",
       " 点 #y力量 。"
@@ -102,7 +102,7 @@
   },
   "champ:ChampStancesModRelic": {
     "NAME": "新晋者",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "你能拿走金冠吗？",
     "DESCRIPTIONS": [
       "每场战斗开始时，进入随机一种第一勇士 #y姿态 。"
     ]

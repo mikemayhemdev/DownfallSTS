@@ -83,10 +83,11 @@
     ]
   },
   "bronze:HardenedForm": {
-    "NAME": "Hardened Form",
+    "NAME": "Summon Orb",
     "DESCRIPTIONS": [
-      "Whenever you create a Function, gain #b",
-      " #yBlock."
+      "Whenever you create or play a Function, gain #b",
+      " #yBlock and deal #b",
+      " damage to a random enemy."
     ]
   },
   "bronze:Hardcode": {
@@ -100,7 +101,7 @@
   "bronze:Verify": {
     "NAME": "Sentient Form",
     "DESCRIPTIONS": [
-      "After you play or create a Function, increase all numbers on it by #b",
+      "Whenever you #yEncode a card, increase all numbers on it by #b",
       "."
     ]
   },

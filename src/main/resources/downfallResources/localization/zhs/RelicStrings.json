@@ -380,9 +380,13 @@
     "FLAVOR": "You were no match for the Gremlin and his bodyguard.",
     "DESCRIPTIONS": [
       "拾起时，将下列牌加入你的牌组： ",
-      "一张初始牌",
-      "， 随机普通、罕见、稀有、罕见无色和诅咒牌各一张。",
-      "， 随机普通、罕见、稀有牌各一张还有两张诅咒牌。"
+      "拾起时，将6张对对碰牌加入你的牌组。",
+      "#g（初始牌） ",
+      "#g（普通牌） ",
+      "#b（罕见牌） ",
+      "#y（稀有牌） ",
+      "#b（无色牌） ",
+      "#r（诅咒牌） "
     ]
   },
   "downfall:GremlinWheel": {
@@ -478,6 +482,13 @@
       "这个遗物的效果已经耗尽。"
     ]
   },
+    "downfall:Hecktoplasm": {
+    "NAME": "幽魂外质",
+    "FLAVOR": "这团黏液似乎伴随着数百个灵魂的能量脉动。难怪没人想要。",
+    "DESCRIPTIONS": [
+      "你将不能获得 #y灵魂 。打破宝石将不消耗 #y灵魂 。每回合开始时获得 [E] 。"
+    ]
+  },
   "downfall:replacements": {
     "NAME": "",
     "FLAVOR": "",
@@ -492,11 +503,11 @@
       "心脏的卡牌、遗物和药水不再会卖光，并且所有商品打折 #b20% 。"
     ]
   },
-  "downfall:Hecktoplasm": {
-    "NAME": "Hecktoplasm",
-    "FLAVOR": "This blob of slime seems to pulse with the energy of hundreds of souls. No wonder no one wanted it.",
+  "downfall:LizardTail": {
+    "NAME": "真蜥蜴尾巴",
+    "FLAVOR": "在战斗中可以用来骗过敌人的假尾巴。",
     "DESCRIPTIONS": [
-      "You can no longer gain #ySouls. Breaking Keys costs no #ySouls. Gain [E] at the start of your turn."
+      "当你要被杀死时，免死并回复到最大生命值的 #b100% （仅能起效一次）。"
     ]
   }
 }

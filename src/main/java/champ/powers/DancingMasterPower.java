@@ -64,7 +64,7 @@ public class DancingMasterPower extends AbstractPower implements CloneablePowerI
     @Override
     public void updateDescription() {
         int x = 3 - stanceChangesThisTurn;
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + (usedYet ? DESCRIPTIONS[3] :  x + DESCRIPTIONS[2]);
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + (usedYet ? DESCRIPTIONS[3] : DESCRIPTIONS[4] + x + DESCRIPTIONS[2]);
     }
 
     @Override

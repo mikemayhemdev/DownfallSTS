@@ -28,9 +28,9 @@
   },
   "champ:EnchantUI": {
     "TEXT": [
-      "Choose a card to cost 0.",
-      "Choose a card to increase damage.",
-      "Choose a card to increase Block."
+      "选择一张牌耗能变为0",
+      "选择一张牌提高伤害",
+      "选择一张牌提高格挡"
     ]
   }
 }

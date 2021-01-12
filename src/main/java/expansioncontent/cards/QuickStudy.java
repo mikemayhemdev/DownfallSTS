@@ -116,10 +116,4 @@ public class QuickStudy extends AbstractExpansionCard {
             }
         }
     }
-
-    @Override
-    public void unhover() {
-        super.unhover();
-        cardsToPreview = null;
-    }
 }
