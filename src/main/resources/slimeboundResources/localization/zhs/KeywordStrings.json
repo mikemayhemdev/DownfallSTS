@@ -35,63 +35,91 @@
   },
   {
     "NAMES": [
-      "火炬头史莱姆"
+      "火炬头史莱姆",
+      "torchhead slime",
+      "torchhead_slime"
     ],
     "PROPERNAME": "火炬头史莱姆",
     "DESCRIPTION": "发动攻击时造成 #b6 点伤害， #y潜力 对其影响翻倍。"
   },
   {
     "NAMES": [
-      "好斗史莱姆"
+      "好斗史莱姆",
+      "bruiser slime",
+      "bruiser_slime",
+      "bruiser slimes",
+      "bruiser_slimes",
+      "bruiser"
     ],
     "PROPERNAME": "好斗史莱姆",
     "DESCRIPTION": "发动攻击时造成 #b5 点伤害。"
   },
   {
     "NAMES": [
-      "邪教徒史莱姆"
+      "邪教徒史莱姆",
+	  "cultist slime",
+      "cultist_slime"
     ],
     "PROPERNAME": "邪教徒史莱姆",
     "DESCRIPTION": "发动攻击时造成 #b6 点伤害，提升自身伤害 #b1 点。"
   },
   {
     "NAMES": [
-      "水蛭史莱姆"
+      "水蛭史莱姆",
+	  "leeching slime",
+      "leeching_slime",
+      "leeching slimes",
+      "leeching_slimes",
+      "leeching"
     ],
     "PROPERNAME": "水蛭史莱姆",
     "DESCRIPTION": "发动攻击时造成 #b2 点伤害，并给予你 #b2 点 #y格挡 。"
   },
     {
     "NAMES": [
-      "游击史莱姆"
+      "游击史莱姆",
+	  "guerilla slime",
+      "guerilla_slime",
+      "guerilla slimes",
+      "guerilla_slimes",
+      "guerilla"
     ],
     "PROPER_NAME": "游击史莱姆",
     "DESCRIPTION": "对所有敌人造成 #b3 点伤害。"
   },
   {
     "NAMES": [
-      "污泥史莱姆"
+      "污泥史莱姆",
+	  "mire slime",
+      "mire_slime",
+      "mire slimes",
+      "mire_slimes",
+      "mire"
     ],
     "PROPERNAME": "污泥史莱姆",
     "DESCRIPTION": "发动攻击时造成 #b2 点伤害，并给予敌人 #b2 层 #y黏液。"
   },
   {
     "NAMES": [
-      "青铜史莱姆"
+      "青铜史莱姆",
+	  "bronze slime",
+      "bronze_slime"
     ],
     "PROPERNAME": "青铜史莱姆",
     "DESCRIPTION": "发动攻击时造成 #b4 点伤害，并给予你 #b4 点 #y格挡 。"
   },
   {
     "NAMES": [
-      "舔舐"
+      "舔舔"
     ],
     "PROPERNAME": "舔舔",
     "DESCRIPTION": "给予 #y黏液 的0耗能牌，带有各种额外效果。"
   },
   {
     "NAMES": [
-      "鬼火史莱姆"
+      "鬼火史莱姆",
+	  "ghostflame slime",
+      "ghostflame_slime"
     ],
     "PROPERNAME": "鬼火史莱姆",
     "DESCRIPTION": "每回合攻击造成 #b3 点伤害并给予 #b3 层 #y灼伤 。"
@@ -126,35 +154,45 @@
   },
     {
     "NAMES": [
-      "保护史莱姆"
+      "保护史莱姆",
+	  "protector slime",
+      "protector_slime"
     ],
     "PROPER_NAME": "保护史莱姆",
     "DESCRIPTION": "攻击造成 #b2 点伤害并给予你 #b6 点 #y格挡 。"
   },
   {
     "NAMES": [
-      "嘲讽史莱姆"
+      "嘲讽史莱姆",
+	  "insulting slime",
+      "insulting_slime"
     ],
     "PROPER_NAME": "嘲讽史莱姆",
     "DESCRIPTION": "攻击造成 #b4 点伤害并给予 #b1 层 #y易伤 。"
   }, 
   {
     "NAMES": [
-      "小黑史莱姆"
+      "小黑史莱姆",
+	  "darkling slime",
+      "darkling_slime"
     ],
     "PROPER_NAME": "小黑史莱姆",
     "DESCRIPTION": "攻击造成 #b4 点伤害。命令时，其他小黑史莱姆也会攻击。"
   },
   {
     "NAMES": [
-      "先古史莱姆"
+      "先古史莱姆",
+	  "ancient slime",
+      "ancient_slime"
     ],
     "PROPER_NAME": "先古史莱姆",
     "DESCRIPTION": "攻击造成 #b3 点伤害并使你抽 #b1 张牌。"
   },
   {
     "NAMES": [
-      "时间史莱姆"
+      "时间史莱姆",
+	  "time slime",
+      "time_slime"
     ],
     "PROPER_NAME": "时间史莱姆",
     "DESCRIPTION": "攻击造成 #b4 点伤害并给予 #b1 层 #y虚弱 。"
@@ -169,7 +207,8 @@
     {
     "NAMES": [
       "专家史莱姆",
-      "专家史莱姆"
+	  "specialist",
+      "specialist"
     ],
     "PROPER_NAME": "专家史莱姆",
     "DESCRIPTION": "比普通史莱姆有着更加强大且独特的史莱姆。"

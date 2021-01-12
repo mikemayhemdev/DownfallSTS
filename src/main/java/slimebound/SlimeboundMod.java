@@ -241,6 +241,9 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         return modID;
     }
 
+    public static String makeID(String id) {
+        return modID + ":" + id;
+    }
 
     public static void checkForEndGoopCardVFX() {
         boolean noGoop = true;

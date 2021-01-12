@@ -113,5 +113,15 @@
     "OPTIONS": [
       ""
     ]
+  },
+    "Guardian:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "If you are a peg, endure the knocking; if you are a mallet, strike."
+    ],
+    "OPTIONS": [
+      "[Endurance] #gAdd #gBrace #g2 to all #gStrikes and #gDefends.",
+      "[Locked] Requires a Strike or Defend."
+    ]
   }
 }

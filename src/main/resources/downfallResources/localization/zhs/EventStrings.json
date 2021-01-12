@@ -367,11 +367,13 @@
   "downfall:Vagrant": {
     "NAME": "流浪汉的恳求",
     "DESCRIPTIONS": [
-      "你杀死了这个人并收割了他的灵魂。身后的人群中传来一阵 ~骚动~ 。 NL “他杀了勃艮第！” 一个人喊道。更多与那人一样的瘾君子向你逼近。NL NL 你逃脱了，身上带着一些 #r抓痕 和 #r咬痕 。"
-    ],
+      "你杀死了这个人并收割了他的灵魂。身后的人群中传来一阵 ~骚动~ 。 NL “他杀了勃艮第！” 一个人喊道。更多与那人一样的瘾君子向你逼近。NL NL 你逃脱了，身上带着一些 #r抓痕 和 #r咬痕 。",
+	  "You snatch the precious #yrelic from his clutches and walk away. NL From behind you hear, NL \"Have you no shame? ~HAVE~ ~YOU~ ~NO~ ~SHAAAAAME?!\"~ NL You have #pabsolutely #pno #pshame. It is an honor to be robbed by an Overlord of the Spire!"    
+	],
     "OPTIONS": [
       "[一拳过去] #g获得85灵魂。 #r失去 #r",
-      " #r生命。"
+      " #r生命。",
+	  "[Rob] #gObtain #ga #gRelic. #rBecome #rCursed #r- #rPride."
     ]
   },
   "downfall:Beggar": {
@@ -424,7 +426,8 @@
       "[继续]",
       "[收下匕首] #g获得 #g仪式匕首。",
       "[涂油] #g升级 #g仪式匕首。",
-      "[献祭] #r用 仪式匕首+ #r杀死邪教徒。"
+      "[献祭] #r用 仪式匕首+ #r杀死邪教徒。",
+	  "[赞美] #g获得众多奖励。"
     ]
   },
   "downfall:Colosseum": {
@@ -471,7 +474,9 @@
     "OPTIONS": [
       "[献上灵魂] #r失去 #r",
       " #r灵魂。 #g获得 #g",
-      " #g点最大生命并回满血。"
+      " #g点最大生命并回满血。",
+	  "[锁定] 需要 ",
+      " 灵魂。"
     ]
   },
   "downfall:SensoryStone": {
@@ -589,6 +594,17 @@
       "[攻击] #b???",
       "[睡眠]",
       "[走向门前]"
+    ]
+  },
+  "downfall:EvilShrines": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Only you should hold this power. You shatter the shrine into pieces. NL A dark wail echoes all around you, and you can feel the Shrine's #p~cursed~ #p~magic~ seep into your bones."    ],
+    "OPTIONS": [
+      "[Desecrate] #gDuplicate #g2 #gcards. #rCursed #r- #rRandom.",
+      "[Desecrate] #gRemove #g3 #gcards. #rCursed #r- #rRandom.",
+      "[Desecrate] #gTransform #g3 #gcards. #rCursed #r- #rRandom.",
+      "[Desecrate] #gUpgrade #g2 #gcards. #rCursed #r- #rRandom."
     ]
   }
 }

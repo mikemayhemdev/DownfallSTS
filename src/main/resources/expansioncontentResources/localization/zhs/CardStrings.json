@@ -1,118 +1,52 @@
 {
-  "expansioncontent:ChargeUp": {
-    "NAME": "充能",
-    "DESCRIPTION": "expansioncontent:首领 - 守护者。 NL 下一回合获得 !B! 点 格挡 和 !M! 点 力量 。 NL 消耗 。"
-  },
   "expansioncontent:GuardianWhirl": {
     "NAME": "守护者旋风",
-    "DESCRIPTION": "expansioncontent:首领 - 守护者。 NL 对所有敌人造成 !D! 点伤害 4 次。 NL 消耗 。"
-  },
-  "expansioncontent:DefensiveMode": {
-    "NAME": "防御模式",
-    "DESCRIPTION": "expansioncontent:首领 - 守护者。 NL 获得 !B! 点 格挡 。 NL 进入 guardianmod:防御模式 。"
+    "DESCRIPTION": "expansioncontent:首领 - 守护者。 NL 格挡 不少于10点才能被打出。 NL 对所有敌人造成 !D! 点伤害 4 次。 NL 消耗 。",
+	"EXTENDED_DESCRIPTION": [
+      "我的格挡不够。"
+    ]
   },
   "expansioncontent:Hexaburn": {
     "NAME": "幽灵地狱",
-    "DESCRIPTION": "expansioncontent:首领 - 六火亡魂。 NL 失去 6 点生命。 NL 对随机一名敌人造成 !D! 点伤害 6 次。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 六火亡魂。 NL 对随机一名敌人造成 !D! 点伤害 6 次。 NL 消耗 。"
+    "DESCRIPTION": "expansioncontent:首领 - 六火亡魂。 NL 在 !M! 回合后，对随机一名敌人造成 !D! 点伤害 6 次。 NL 消耗 。"
   },
-  "expansioncontent:Sear": {
-    "NAME": "大灼热",
-    "DESCRIPTION": "expansioncontent:首领 - 六火亡魂。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 hexamod:灼魂 。 NL 消耗 。"
-  },
-  "expansioncontent:SuperHexaguard": {
-    "NAME": "幽灵护盾",
-    "DESCRIPTION": "expansioncontent:首领 - 六火亡魂。 虚无 。 NL hexamod:阴世 。获得 !B! 点 格挡 。 NL 抽一张牌。"
+   "expansioncontent:InvincibleStrength": {
+    "NAME": "坚不可摧",
+    "DESCRIPTION": "expansioncontent:首领 - 腐化之心 。 NL 获得 10 层 expansioncontent:坚不可摧 。 NL 如果你已有 expansioncontent:坚不可摧 ，额外生效一回合。"
   },
   "expansioncontent:HyperBeam": {
     "NAME": "超能射线",
     "DESCRIPTION": "expansioncontent:首领 - 机械人偶。 NL 对所有敌人造成 !D! 点伤害。 NL 下一回合，失去 [E] 。 NL 消耗 。"
-  },
-  "expansioncontent:Flail": {
-    "NAME": "链枷",
-    "DESCRIPTION": "expansioncontent:首领 - 机械人偶。 NL 对所有敌人造成 !D! 点伤害两次。 NL 获得 !M! 层 人工制品。 NL 消耗 。"
-  },
-  "expansioncontent:BronzeBeam": {
-    "NAME": "铜球支援",
-    "DESCRIPTION": "expansioncontent:首领 - 机械人偶。 NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 消耗 。"
-  },
-  "expansioncontent:DefensiveStance": {
-    "NAME": "防御态势",
-    "DESCRIPTION": "expansioncontent:首领 - 第一勇士。 NL 获得 !B! 点 格挡 。 NL 每回合结束时获得 !M! 点 格挡 。"
-  },
-  "expansioncontent:FaceSlap": {
-    "NAME": "打脸",
-    "DESCRIPTION": "expansioncontent:首领 - 第一勇士。 NL 移除所有 格挡 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL 消耗 。"
   },
   "expansioncontent:LastStand": {
     "NAME": "最后一战",
     "DESCRIPTION": "expansioncontent:首领 - 第一勇士。 NL 移除所有负面效果。 NL 获得 1 点 力量 。 NL 如果你半血以下，获得 2 点 力量 。",
     "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 第一勇士。 NL 移除所有负面效果。 NL 获得 1 点 力量 。 NL 如果你半血以下，回复 !M! 点生命并获得 2 点 力量 。"
   },
-  "expansioncontent:Collect": {
-    "NAME": "收藏家",
-    "DESCRIPTION": "expansioncontent:首领 - 收藏家。 NL 获得 !B! 点 格挡 。 NL 获得 1 点 力量 和 敏捷 。"
-  },
   "expansioncontent:YouAreMine": {
     "NAME": "你是我的了！",
     "DESCRIPTION": "expansioncontent:首领 - 收藏家。 NL 移除所有 格挡 ，给予所有敌人 !M! 层 虚弱 和 易伤 。 NL 消耗 。"
   },
-  "expansioncontent:Torchfire": {
-    "NAME": "火炬头",
-    "DESCRIPTION": "expansioncontent:首领 - 收藏家。 NL 造成 !D! 点伤害。敌人每有一种负面效果，伤害提高 !M! 。 NL 消耗 。"
-  },
-  "expansioncontent:CaCaw": {
-    "NAME": "咔咔！",
-    "DESCRIPTION": "expansioncontent:首领 - 觉醒者。 NL 每回合开始时获得 !M! 点 力量 。"
-  },
-  "expansioncontent:DarkVoid": {
-    "NAME": "黑暗虚空",
-    "DESCRIPTION": "expansioncontent:首领 - 觉醒者。 NL 对所有敌人造成 !D! 点伤害。下一次敌人不攻击时，获得 1 点 力量 。 NL 消耗 。"
-  },
   "expansioncontent:AwakenDeath": {
     "NAME": "觉醒",
-    "DESCRIPTION": "expansioncontent:首领 - 觉醒者。 NL 你将要死亡时，免死并回复 !M! 生命。"
-  },
-  "expansioncontent:TimeRipple": {
-    "NAME": "时间纹波",
-    "DESCRIPTION": "expansioncontent:首领 - 时间吞噬者。 NL 对所有敌人造成 !D! 点伤害并给予缓慢。 NL 消耗 。"
+    "DESCRIPTION": "expansioncontent:首领 - 觉醒者。 NL 获得 1点 力量 。 NL 你将要死亡时，免死并回复 !M! 生命。"
   },
   "expansioncontent:Chronoboost": {
     "NAME": "时空加速",
     "DESCRIPTION": "expansioncontent:首领 - 时间吞噬者。 NL 每打出12张牌，获得 2 点 力量 。",
     "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 时间吞噬者。 NL 每打出9张牌，获得 2 点 力量 。"
   },
-  "expansioncontent:ManipulateTime": {
-    "NAME": "操控时间",
-    "DESCRIPTION": "expansioncontent:首领 - 时间吞噬者。 NL 获得 !B! 点 格挡 。 NL 触发所有你的回合开始时的效果。 NL 消耗 。"
-  },
-  "expansioncontent:DonusPower": {
-    "NAME": "甜圈力量",
-    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 力量 。 NL 将一张随机攻击牌加入你的手牌。 NL 它的耗能本回合为0。 NL 消耗 。",
-	"UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 力量 和 人工制品 。 NL 将一张随机攻击牌加入你的手牌。 NL 它的耗能本回合为0。 NL 消耗 。"
-  },
-  "expansioncontent:DecasProtection": {
-    "NAME": "八体保护",
-    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 敏捷 。 NL 将一张随机能力牌加入你的手牌。 NL 它的耗能本回合为0。 NL 消耗 。",
-	"UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 敏捷 和 人工制品 。 NL 将一张随机能力牌加入你的手牌。 NL 它的耗能本回合为0。 NL 消耗 。"
-  },
   "expansioncontent:PolyBeam": {
-    "NAME": "双重射线",
-    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 造成 !D! 点伤害两次。 NL 下一回合对随机敌人造成 !D! 点伤害两次。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 造成 !D! 点伤害两次。 NL 消耗 。"
+    "NAME": "甜圈爆破",
+    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 造成 !D! 点伤害两次。 NL 下一回合将一张 *八体护盾 加入手牌。 NL 消耗 。"
+  },
+    "expansioncontent:DecaShield": {
+    "NAME": "八体护盾",
+    "DESCRIPTION": "虚无 。 NL expansioncontent:首领 - 先古造物。 NL 获得 !B! 点 格挡 。 NL 下一回合将一张带有 虚无 的 *八体射线 加入手牌 。 NL 消耗 。"
   },
   "expansioncontent:PrepareCrush": {
     "NAME": "准备：猛撞",
     "DESCRIPTION": "expansioncontent:首领 - 史莱姆。 NL 获得 !B! 点 格挡 。 NL 你的下一回合，获得 [E] [E] [E] 并将一张 *史莱姆撞击 加入你的手牌。 NL 消耗 。"
-  },
-  "expansioncontent:GoopSpray": {
-    "NAME": "黏液喷射",
-    "DESCRIPTION": "expansioncontent:首领 - 史莱姆。 NL 给予所有敌人 !M! 层 slimeboundmod:黏液 和 2 层 易伤 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 史莱姆。 NL 给予所有敌人 !M! 层 slimeboundmod:黏液 和 3 层 易伤 。 NL 消耗 。"
-  },
-  "expansioncontent:SlimeTackle": {
-    "NAME": "史莱姆撞击",
-    "DESCRIPTION": "expansioncontent:首领 - 史莱姆。 NL 造成 !D! 点伤害，受到 3 点伤害。 NL 消耗 。"
   },
   "expansioncontent:StudyTheSpire": {
     "NAME": "研究尖塔",
@@ -122,36 +56,18 @@
   "expansioncontent:QuickStudy": {
     "NAME": "快速学习",
     "DESCRIPTION": "从3名boss中选择1名。 NL 获得对应的 expansioncontent:首领 牌。 NL 它们在打出前耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "从3名boss中选择1名。 NL 获得对应的已 升级 的 expansioncontent:首领 牌。 NL 它们在打出前耗能为0。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "从3名boss中选择1名。 NL 获得对应的已 升级 的 expansioncontent:首领 牌。 NL 它们在打出前耗能为0。 NL 消耗 。",
+	 "EXTENDED_DESCRIPTION": [
+      "选择一种首领牌。"
+    ]
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "恶灵附身",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 将随机一张无色 expansioncontent:首领 牌加入你的手牌。它直到打出前耗能为0。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 将随机一已 升级 的张无色 expansioncontent:首领 牌加入你的手牌。它直到打出前耗能为0。 NL 消耗 。"
   },
-  "expansioncontent:Corrupt": {
-    "NAME": "贿赂",
-    "DESCRIPTION": "消耗 1 张牌。 将其替换为一张随机无色 expansioncontent:首领 牌且耗能减少1。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "消耗 1 张牌。 将其替换为一张已 升级 的随机无色 expansioncontent:首领 牌且耗能减少1。 NL 消耗 。"
-  },
-  "expansioncontent:KnowingSkullWish": {
-    "NAME": "许愿",
-    "DESCRIPTION": "虚无 。 NL 选择： *灵魂 、 *成功 或 *来点喝的 。 NL 消耗 。"
-  },
-  "expansioncontent:ShieldSmash": {
-    "NAME": "破甲",
-    "DESCRIPTION": "保留 。 NL 移除敌人的 格挡 并使其失去2点 敏捷 。 NL 消耗 。"
-  },
-  "expansioncontent:Antidote": {
-    "NAME": "解毒剂",
-    "DESCRIPTION": "保留 。 NL 移除所有的 中毒 。 NL 中毒 将能被 格挡 ，且变为在你的回合结束时触发并层数减半。 NL 消耗 。"
-  },
-  "expansioncontent:Debug": {
-    "NAME": "核心崩损",
-    "DESCRIPTION": "保留 。 NL 敌人失去 10 点 集中 ，并在接下来的5回合每回合获得2点 集中 。 NL 消耗 。"
-  },
-  "expansioncontent:PeaceOut": {
-    "NAME": "暗黑低语",
-    "DESCRIPTION": "保留 。 NL 敌人退出当前姿态。 NL 移除敌人的 真言 。 NL 消耗 。"
+    "expansioncontent:KnowingSkullWish": {
+    "NAME": "全知头骨",
+    "DESCRIPTION": "虚无 。 NL 支付生命以许愿灵魂，成功或来点喝的。 NL 消耗 。"
   }
 }

@@ -95,7 +95,8 @@
       "The third time you enter a #yStance each turn, gain #b",
       " [E] and draw #b2 cards. ",
       " remaining.",
-      "Used this turn."
+      "Used this turn.",
+	  ""
     ]
   },
   "champ:StrikeOfGeniusPower": {

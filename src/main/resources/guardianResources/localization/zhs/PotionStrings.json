@@ -2,15 +2,15 @@
   "Guardian:AcceleratePotion": {
     "NAME": "质朴药水",
     "DESCRIPTIONS": [
-      "将所有被凝滞中的牌 #y加速 两次。",
-      "将所有被凝滞中的牌 #y加速 四次。"
+      "将所有被凝滞中的牌 #y加速 #b",
+      "次。"
     ]
   },
     "Guardian:DefensiveModePotion": {
     "NAME": "抛光油",
     "DESCRIPTIONS": [
-      "获得 #b",
-      " 点 #y格挡 并进入 #yguardianmod:防御模式 。"
+      "在 #b",
+      " 回合内处于 #yguardianmod:防御模式 。"
     ]
   },
   "Guardian:BlockOnCardUsePotion": {
