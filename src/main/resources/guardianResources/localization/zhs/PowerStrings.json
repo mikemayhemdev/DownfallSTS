@@ -64,9 +64,8 @@
   "Guardian:ConstructModePower": {
     "NAME": "建造模式",
     "DESCRIPTIONS": [
-      "你不能在下回合打出攻击牌。",
-      "你不能在下 ",
-      " 个回合失去生命或打出攻击牌。"
+      "在每回合开始时，如果你有缓冲，获得 #b",
+      " 点 #y力量 。"
     ]
   },
   "Guardian:MultiBoostPower": {
@@ -141,7 +140,7 @@
     "DESCRIPTIONS": [
       "消耗每回合抽到的前1张状态或诅咒牌。",
       "消耗每回合抽到的前 ",
-      " 张状态或诅咒牌。"
+      " 张状态或诅咒牌并抽1张牌。"
     ]
   },
   "Guardian:RevengePower": {
@@ -200,11 +199,11 @@
     ]
   },
   "Guardian:DontLeaveDefensiveModePower": {
-    "NAME": "盘踞",
+    "NAME": "防御模式",
     "DESCRIPTIONS": [
-      "你的下一回合开始时，不会退出 #y防御模式 。",
-      "你的下 #b",
-      " 个回合开始时，不会退出 #y防御模式 。"
+      "你将在本回合退出 #y防御模式 。",
+      "你将在下 #b",
+      " 个回合后退出 #y防御模式 。"
     ]
   }
 }

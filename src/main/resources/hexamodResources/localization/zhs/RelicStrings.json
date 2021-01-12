@@ -3,14 +3,14 @@
     "NAME": "精神烙印",
     "FLAVOR": "对约束的一道保护。",
     "DESCRIPTIONS": [
-      "每回合第一次 #y点燃 时，获得 #b6 点 #y格挡 。"
+      "每回合第一次 #y点燃 时，获得 #b5 点 #y格挡 。"
     ]
   },
   "hexamod:TheBrokenSeal": {
     "NAME": "破损容器",
     "FLAVOR": "未阻，无限，不灭的力量。",
     "DESCRIPTIONS": [
-      "拾起时，获得 #b10 点最大生命。每场战斗开始时获得 #b2 点 #y力量 、 #y敏捷 和 #yhexamod:热烈 。"
+      "拾起时，回复所有生命并获得 #b10 点最大生命。每场战斗开始时获得 #b2 点 #y力量 、 #y敏捷 和 #yhexamod:热烈 。"
     ]
   },
   "hexamod:UnbrokenSoul": {
@@ -18,7 +18,7 @@
     "FLAVOR": "看看我们能不能做得... 更好。",
     "DESCRIPTIONS": [
       "替换 #r",
-      " 。[]  NL 每回合第一次 #y点燃 时，获得 [E] 和 #b3 点 #y格挡 。"
+      " 。[]  NL 每回合第一次 #y点燃 时，获得 [E] 。"
     ]
   },
   "hexamod:IceCube": {
