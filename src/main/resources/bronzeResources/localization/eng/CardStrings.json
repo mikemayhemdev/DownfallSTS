@@ -515,7 +515,7 @@
   },
   "bronze:HyperBeam": {
     "NAME": "HYPER BEAM",
-    "DESCRIPTION": "Retain. NL Deal !D! damage to ALL enemies. NL Skip your next turn. NL When Retained, lower its cost by 1 this combat."
+    "DESCRIPTION": "Retain. NL Deal !D! damage to ALL enemies. NL Put 5 *Void on top of your draw pile. NL When Retained, lower its cost by 1 this combat."
   },
   "bronze:Hardcode": {
     "NAME": "Hardcode",
