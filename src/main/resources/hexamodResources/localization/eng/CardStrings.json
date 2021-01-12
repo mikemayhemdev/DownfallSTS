@@ -37,8 +37,8 @@
   },
   "hexamod:SkipABeat": {
     "NAME": "Skip a Beat",
-    "DESCRIPTION": "hexamod:Advance. NL hexamod:Force-Ignite the next Ghostflame. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "hexamod:Advance. NL hexamod:Force-Ignite the next Ghostflame."
+    "DESCRIPTION": "hexamod:Force-Ignite the next Ghostflame. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "hexamod:Force-Ignite the next Ghostflame."
   },
   "hexamod:CatchUp": {
     "NAME": "Catch Up",

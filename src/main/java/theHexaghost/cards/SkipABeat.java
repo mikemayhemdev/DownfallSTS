@@ -22,7 +22,6 @@ public class SkipABeat extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new AdvanceAction(false));
         atb(new ExtinguishAction(1));
         atb(new ChargeAction(1));
     }
