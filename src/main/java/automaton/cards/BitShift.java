@@ -1,6 +1,7 @@
 package automaton.cards;
 
 import automaton.FunctionHelper;
+import basemod.BaseMod;
 import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -65,7 +66,11 @@ public class BitShift extends AbstractBronzeCard {
                         FunctionHelper.held.group.get(i).target_x = FunctionHelper.cardPositions[i].x;
                         FunctionHelper.held.group.get(i).target_y = FunctionHelper.cardPositions[i].y;
                     }
-                    p.hand.addToTop(q);
+                    if (p.hand.size() <= BaseMod.MAX_HAND_SIZE) {
+                        p.hand.addToTop(q);
+                    } else {
+                        p.discardPile.addToTop(q);
+                    }
                 }
             });
         }));
