@@ -25,7 +25,7 @@
   },
   "bronze:DonuBeam": {
     "NAME": "Donu Beam",
-    "DESCRIPTION": "Deal !D! damage twice. NL bronze:Compile - Gain !M! Strength and lose 1 Dexterity.",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL bronze:Compile - Gain !M! Strength and lose !bauto! Dexterity.",
     "EXTENDED_DESCRIPTION": [
       "smooth",
       "Blast"
@@ -61,8 +61,8 @@
   },
   "bronze:Goto": {
     "NAME": "Goto",
-    "DESCRIPTION": "Draw !M! card. NL bronze:Compile - Draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL bronze:Compile - Draw !M! cards.",
+    "DESCRIPTION": "Draw !M! card. NL bronze:Compile - Next turn, draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL bronze:Compile - Next turn, draw !M! cards.",
     "EXTENDED_DESCRIPTION": [
       "running",
       "Sprint"
@@ -110,12 +110,12 @@
       "Iterate"
     ]
   },
-  "bronze:Terminator": {
-    "NAME": "Terminator",
-    "DESCRIPTION": "Deal !D! damage. π NL When bronze:Encoded, if this is in the last slot, increase its damage by !M!.",
+  "bronze:Separator": {
+    "NAME": "Separator",
+    "DESCRIPTION": "Deal !D! damage. π NL When bronze:Encoded, if this is not in the first or last slot, increase its damage by !M!.",
     "EXTENDED_DESCRIPTION": [
-      "sad",
-      "End"
+      "split",
+      "Child"
     ]
   },
   "bronze:Overheat": {
@@ -193,7 +193,7 @@
   },
   "bronze:Deprecate": {
     "NAME": "Deprecate",
-    "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL bronze:Compile - Gain !bauto! Weak.",
+    "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL bronze:Compile - Gain Weak.",
     "EXTENDED_DESCRIPTION": [
       "old",
       "Insult"
@@ -201,7 +201,7 @@
   },
   "bronze:Invalidate": {
     "NAME": "Invalidate",
-    "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies. NL bronze:Compile - Gain !bauto! Vulnerable.",
+    "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies. NL bronze:Compile - Gain Vulnerable.",
     "EXTENDED_DESCRIPTION": [
       "invalid",
       "Error"
@@ -219,7 +219,12 @@
   "bronze:BitShift": {
     "NAME": "Bit Shift",
     "DESCRIPTION": "Choose a card in the Sequence to return to your hand. NL It gains Retain. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a card in the Sequence to return to your hand. NL It gains Retain."
+    "UPGRADE_DESCRIPTION": "Retain. NL Choose a card in the Sequence to return to your hand. NL It gains Retain. NL Exhaust."
+  },
+  "bronze:ByteShift": {
+    "NAME": "Byte Shift",
+    "DESCRIPTION": "Return all cards in the Sequence to your hand. NL They gain Retain. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Return all cards in the Sequence to your hand. NL They gain Retain. NL Exhaust."
   },
   "bronze:Batch": {
     "NAME": "Batch",
@@ -235,12 +240,12 @@
       "Greatness"
     ]
   },
-  "bronze:Separator": {
-    "NAME": "Separator",
-    "DESCRIPTION": "bronze:Compile - If this is not the first or last card in the Sequence, Function gains 'Play this again'.",
+  "bronze:Terminator": {
+    "NAME": "Terminator",
+    "DESCRIPTION": "bronze:Compile - If this is the last card in the Sequence, Function gains 'Play this again'.",
     "EXTENDED_DESCRIPTION": [
-      "split",
-      "Child"
+      "sad",
+      "End"
     ]
   },
   "bronze:Overload": {
@@ -288,13 +293,10 @@
     "NAME": "Bronze Orb",
     "DESCRIPTION": "Innate. NL Deal !D! damage. NL Gain !B! Block. NL bronze:Encode a random card with bronze:Encode in your draw pile. NL Exhaust."
   },
-  "bronze:SearingBeam": {
-    "NAME": "Searing Beam",
-    "DESCRIPTION": "Deal !D! damage. π NL Can be Upgraded any number of times.",
-    "EXTENDED_DESCRIPTION": [
-      "searing",
-      "Sear"
-    ]
+  "bronze:Virus": {
+    "NAME": "Virus",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Transform all cards in hand into *Minor *Beam. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL Transform all cards in hand into *Minor *Beam+. NL Exhaust."
   },
   "bronze:Backtrace": {
     "NAME": "Backtrace",
@@ -310,7 +312,7 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL The next time you bronze:Encode a card, bronze:Encode a copy of it."
   },
   "bronze:FollowUp": {
-    "NAME": "Follow Up",
+    "NAME": "Follow Through",
     "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL If the last played card was a Function, play this again."
   },
   "bronze:ChosenStrike": {
@@ -350,7 +352,7 @@
   },
   "bronze:MaxOutput": {
     "NAME": "Max Output",
-    "DESCRIPTION": "At the start of your turn, draw 1 additional card and bronze:Insert 1 *Dazed."
+    "DESCRIPTION": "Draw !M! cards. NL At the start of each turn, draw 1 additional card and bronze:Insert 1 *Dazed."
   },
   "bronze:Mutator": {
     "NAME": "Mutator",
@@ -480,8 +482,8 @@
   },
   "bronze:Verify": {
     "NAME": "Sentient Form",
-    "DESCRIPTION": "After you play or create a Function, increase all numbers on it by 1.",
-    "UPGRADE_DESCRIPTION": "Innate. NL After you play or create a Function, increase all numbers on it by 1."
+    "DESCRIPTION": "Whenever you bronze:Encode a card, increase all numbers on it by 1.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you bronze:Encode a card, increase all numbers on it by 1."
   },
   "bronze:BronzeHeatsink": {
     "NAME": "Bronze Heatsink",
@@ -490,7 +492,7 @@
   },
   "bronze:HardenedForm": {
     "NAME": "Summon Orb",
-    "DESCRIPTION": "Whenever you create a Function, gain !M! Block and deal !M! damage to a random enemy."
+    "DESCRIPTION": "Whenever you create or play a Function, gain !M! Block and deal !M! damage to a random enemy."
   },
   "bronze:CopyPaste": {
     "NAME": "Copy Paste",
@@ -505,7 +507,7 @@
   "bronze:Repulsor": {
     "NAME": "Repulsor",
     "DESCRIPTION": "When you draw the first Status or Curse card each turn, Exhaust it and draw a card.",
-    "UPGRADE_DESCRIPTION": "Innate. When you draw the first Status or Curse card each turn, Exhaust it and draw a card."
+    "UPGRADE_DESCRIPTION": "Innate. NL When you draw the first Status or Curse card each turn, Exhaust it and draw a card."
   },
   "bronze:Debug": {
     "NAME": "Debug",
@@ -580,12 +582,12 @@
   },
   "bronze:TinkerersToolbox": {
     "NAME": "Dev Tools",
-    "DESCRIPTION": "Retain. NL Choose between *Debug, *Batch and *Decompile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Choose between *Debug, *Batch and *Decompile."
+    "DESCRIPTION": "Retain. NL Choose between *Debug, *Batch, *Decompile, and *Byte *Shift. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Choose between *Debug, *Batch, *Decompile, and *Byte *Shift."
   },
   "bronze:Refactor": {
     "NAME": "Refactor",
-    "DESCRIPTION": "Scry !M!. NL Gain !B! Block for each Status card discarded. NL Exhaust any others discarded."
+    "DESCRIPTION": "Scry !M!. NL Exhaust all cards discarded. NL Gain !B! Block for each Status card exhausted."
   },
   "bronze:Turbo": {
     "NAME": "Turbo",

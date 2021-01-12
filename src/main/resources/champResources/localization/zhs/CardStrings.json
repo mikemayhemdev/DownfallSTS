@@ -172,7 +172,7 @@
   "champ:FalseCounter": {
     "NAME": "伪反",
     "DESCRIPTION": "处于 champ:防守 才能被打出。 NL 下次触发 champ:反击 时，只失去一半 champ:反击 。",
-	"UPGRADE_DESCRIPTION": "处于 champ:防守 才能被打出。获得 !M! 层 champ:反击 。 NL 下次触发 champ:反击 时，只失去一半 champ:反击 。",
+	"UPGRADE_DESCRIPTION": "处于 champ:防守 才能被打出。获得 !M! 层 champ:反击 。 NL 下次触发 champ:反击 时，只失去一半 champ:反击 。"
   },
   "champ:IronFortress": {
     "NAME": "钢铁要塞",
@@ -311,7 +311,7 @@
   },
   "champ:RecklessLeap": {
     "NAME": "无谋跃斩",
-    "DESCRIPTION": "处于 champ:狂战 时才能被打出。 NL 造成 !D! 点伤害。 NL champ:疲劳 !M! 。"，
+    "DESCRIPTION": "处于 champ:狂战 时才能被打出。 NL 造成 !D! 点伤害。 NL champ:疲劳 !M! 。",
 	"EXTENDED_DESCRIPTION": [
       "还不是时候。"
     ]

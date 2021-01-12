@@ -74,7 +74,7 @@
   },
   "Guardian:CurlUp": {
     "NAME": "蜷身",
-    "DESCRIPTION": "处于 guardianmod:防御模式 时获得 !B! 点 格挡 。 NL 否则，guardianmod:提防 !M! 。"
+    "DESCRIPTION": "处于 guardianmod:防御模式 时获得 !B! 点 格挡 。 NL 否则， guardianmod:提防 !M! 。"
   },
   "Guardian:TimeBomb": {
     "NAME": "时间炸弹",
