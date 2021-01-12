@@ -25,7 +25,6 @@ public class ApocalypseNow extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new LoseHPAction(p, p, 6));
         atb(new GainEnergyAction(magicNumber));
         atb(new AbstractGameAction() {
             @Override
