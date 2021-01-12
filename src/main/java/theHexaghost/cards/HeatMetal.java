@@ -18,7 +18,7 @@ public class HeatMetal extends AbstractHexaCard {
     private static final int UPG_MAGIC = 6;
 
     public HeatMetal() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
     }
