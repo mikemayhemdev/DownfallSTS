@@ -24,7 +24,7 @@
   "bronze:MiscStrings": {
     "TEXT": [
       "Choose a card to return to your hand. It gains Retain.",
-      " - Increase #yChosen #yStrike's damage by #b",
+      " - Increase #yCultist #yStrike's damage by #b",
       " permanently.",
       "ERR: SEQUENCE_EMPTY",
       " - Add a copy of #yInfinite #yLoop to your hand with #b",
