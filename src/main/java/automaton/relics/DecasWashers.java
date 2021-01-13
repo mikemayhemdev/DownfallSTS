@@ -3,6 +3,7 @@ package automaton.relics;
 import automaton.AutomatonMod;
 import automaton.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
+import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
@@ -21,6 +22,7 @@ public class DecasWashers extends CustomRelic {
 
     public DecasWashers() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        tips.add(new CardPowerTip(new Dazed()));
     }
 
     @Override

@@ -3,7 +3,7 @@
     "NAME": "Bronze Core",
     "FLAVOR": "Replace once every 50,000 years.",
     "DESCRIPTIONS": [
-      "The first Function you create each combat costs #b1 less the turn it is created."
+      "The first #yFunction you create each combat costs #b1 less the turn it is created."
     ]
   },
   "bronze:ProtectiveGoggles": {
@@ -24,7 +24,7 @@
     "NAME": "Timepiece",
     "FLAVOR": "From his collection of identical clocks.",
     "DESCRIPTIONS": [
-      "All Functions you #yCompile gain #yRetain."
+      "All #yFunctions you #yCompile gain #yRetain."
     ]
   },
   "bronze:Mallet": {
@@ -59,7 +59,7 @@
     "NAME": "Electromagnetic Coil",
     "FLAVOR": "An inefficient but entertaining power source.",
     "DESCRIPTIONS": [
-      "Functions are now made up of #b4 cards."
+      "#yFunctions are now made up of #b4 cards."
     ]
   },
   "bronze:PlatinumCore": {
@@ -98,7 +98,7 @@
     "NAME": "Paradox Artifact",
     "FLAVOR": "You've never seen a stress test like this before.",
     "DESCRIPTIONS": [
-      "At the start of combat, #yCompile a random Function. Give it #yRetain."
+      "At the start of combat, #yCompile a random #yFunction. Give it #yRetain."
     ]
   }
 }

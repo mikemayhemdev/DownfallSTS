@@ -5,6 +5,7 @@ import automaton.cards.FineTuning;
 import automaton.cards.FunctionCard;
 import automaton.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
+import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -26,6 +27,9 @@ public class Mallet extends CustomRelic {
 
     public Mallet() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
+        AbstractCard q = new FineTuning();
+        q.upgrade();
+        tips.add(new CardPowerTip(q));
     }
 
     @Override
