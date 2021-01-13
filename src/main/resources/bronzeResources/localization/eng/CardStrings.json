@@ -24,7 +24,7 @@
     ]
   },
   "bronze:DonuBeam": {
-    "NAME": "Donu Beam",
+    "NAME": "Proto-Beam",
     "DESCRIPTION": "Deal !D! damage !M! times. NL bronze:Compile - Gain !M! Strength and lose !bauto! Dexterity.",
     "EXTENDED_DESCRIPTION": [
       "smooth",
@@ -32,7 +32,7 @@
     ]
   },
   "bronze:DecaBeam": {
-    "NAME": "Deca Shield",
+    "NAME": "Proto-Shield",
     "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! Plated Armor and bronze:Insert !bauto! *Dazed.",
     "EXTENDED_DESCRIPTION": [
       "jagged",

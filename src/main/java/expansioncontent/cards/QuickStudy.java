@@ -30,6 +30,7 @@ public class QuickStudy extends AbstractExpansionCard {
                 if (upgraded) {
                     r.upgrade();
                 }
+                r.modifyCostForCombat(-99);
                 myList.add(r);
             }
         }

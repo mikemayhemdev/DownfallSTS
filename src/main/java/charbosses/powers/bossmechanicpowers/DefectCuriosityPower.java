@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 
 
-public class DefectCuriosityPower extends AbstractPower {
+public class DefectCuriosityPower extends AbstractBossMechanicPower {
     public static final String POWER_ID = "downfall:DefectCuriosity";
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;

@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-public class SilentMirrorImagePower extends AbstractPower {
+public class SilentMirrorImagePower extends AbstractBossMechanicPower {
     public static final String POWER_ID = "downfall:SilentMirrorImagePower";
     private static final PowerStrings powerStrings;
     public static final String NAME;

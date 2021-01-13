@@ -50,8 +50,8 @@
     ]
   },
   "hexamod:InflammatoryLetter": {
-    "NAME": "Kindling",
-    "FLAVOR": "Fire makes everything better.",
+    "NAME": "Jar of TOBSCo",
+    "FLAVOR": "A little extra heat makes everything better.",
     "DESCRIPTIONS": [
       "Start each combat with #b1 #yhexamod:Intensity."
     ]

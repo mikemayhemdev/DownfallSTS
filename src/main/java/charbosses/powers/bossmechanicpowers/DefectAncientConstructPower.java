@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 
-public class DefectAncientConstructPower extends AbstractPower {
+public class DefectAncientConstructPower extends AbstractBossMechanicPower {
     public static final String POWER_ID = "downfall:DefectAncientConstructPower";
     private static final PowerStrings powerStrings;
     public static final String NAME;
