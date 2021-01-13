@@ -39,7 +39,7 @@
       "defensive",
       "defensive."
     ],
-    "DESCRIPTION": "#yStance. NL #yTechnique Bonus: Gain #b4 #yCounter. NL #yFinisher Bonus: Gain #b12 #yBlock."
+    "DESCRIPTION": "#yStance. NL #yTechnique Bonus: Gain #b5 #yCounter. NL #yFinisher Bonus: Gain #b12 #yBlock."
   },
   {
     "PROPER_NAME": "Berserker",
@@ -47,7 +47,7 @@
       "berserker",
       "berserker."
     ],
-    "DESCRIPTION": "#yStance.  NL #yTechnique Bonus: #yFatigue #y3. NL #yFinisher Bonus: Lose all #yFatigue and gain that much HP, preserving #yStrength."
+    "DESCRIPTION": "#yStance.  NL #yTechnique Bonus: #yFatigue #y5. NL #yFinisher Bonus: Lose all #yFatigue and gain that much HP, preserving #yStrength."
   },
   {
     "PROPER_NAME": "Gladiator",
