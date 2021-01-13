@@ -55,6 +55,8 @@ public class PolyBeam extends AbstractExpansionCard {
             cardsToPreview.upgrade();
             upgradeName();
             upgradeDamage(UPGRADE_DAMAGE);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

@@ -38,11 +38,13 @@
   },
   "expansioncontent:PolyBeam": {
     "NAME": "Donu Blast",
-    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. NL Next turn, add a *Deca *Shield into your hand. NL Exhaust."
+    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. NL Next turn, add a *Deca *Shield into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. NL Next turn, add a *Deca *Shield+ into your hand. NL Exhaust."
   },
   "expansioncontent:DecaShield": {
     "NAME": "Deca Shield",
-    "DESCRIPTION": "Ethereal. NL expansioncontent:Boss - Ancients. NL Gain !B! Block. NL Next turn, add a *Donu *Beam with Ethereal into your hand. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL expansioncontent:Boss - Ancients. NL Gain !B! Block. NL Next turn, add a *Donu *Beam with Ethereal into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL expansioncontent:Boss - Ancients. NL Gain !B! Block. NL Next turn, add a *Donu *Beam+ with Ethereal into your hand. NL Exhaust."
   },
   "expansioncontent:PrepareCrush": {
     "NAME": "Prepare Crush",

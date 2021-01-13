@@ -4,19 +4,38 @@ package expansioncontent.cards;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
+import expansioncontent.expansionContentMod;
 import expansioncontent.powers.StudyTheSpirePower;
+
+import java.util.ArrayList;
 
 
 public class StudyTheSpire extends AbstractExpansionCard {
     public final static String ID = makeID("StudyTheSpire");
 
+    private ArrayList<AbstractCard> getList() {
+        ArrayList<AbstractCard> myList = new ArrayList<>();
+        for (AbstractCard q : CardLibrary.getAllCards()) {
+            if (q.hasTag(expansionContentMod.STUDY)) {
+                AbstractCard r = q.makeCopy();
+                if (upgraded) {
+                    r.upgrade();
+                }
+                myList.add(r);
+            }
+        }
+        return myList;
+    }
+
     private float rotationTimer;
     private int previewIndex;
+    private ArrayList<AbstractCard> dupeListForPrev = new ArrayList<>();
 
     public StudyTheSpire() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
@@ -34,6 +53,9 @@ public class StudyTheSpire extends AbstractExpansionCard {
         if (!upgraded) {
             upgradeName();
             rawDescription = UPGRADE_DESCRIPTION;
+            for (AbstractCard q : this.dupeListForPrev) {
+                q.upgrade();
+            }
             initializeDescription();
         }
     }
@@ -42,33 +64,21 @@ public class StudyTheSpire extends AbstractExpansionCard {
     @Override
     public void update() {
         super.update();
+        if (dupeListForPrev.isEmpty()) {
+            dupeListForPrev.addAll(getList());
+        }
         if (hb.hovered) {
             if (rotationTimer <= 0F) {
-                if (!upgraded) {
-                    rotationTimer = 2F;
-                    if (QuickStudy.allStudyCardsList.size() == 0) {
-                        cardsToPreview = CardLibrary.cards.get("Madness");
-                    } else {
-                        cardsToPreview = QuickStudy.allStudyCardsList.get(previewIndex);
-                    }
-                    if (previewIndex == QuickStudy.allStudyCardsList.size() - 1) {
-                        previewIndex = 0;
-                    } else {
-                        previewIndex++;
-                    }
+                rotationTimer = 2F;
+                if (dupeListForPrev.size() == 0) {
+                    cardsToPreview = CardLibrary.cards.get("Madness");
                 } else {
-
-                    rotationTimer = 2F;
-                    if (QuickStudy.allStudyCardsListUpgraded.size() == 0) {
-                        cardsToPreview = CardLibrary.cards.get("Madness");
-                    } else {
-                        cardsToPreview = QuickStudy.allStudyCardsListUpgraded.get(previewIndex);
-                    }
-                    if (previewIndex == QuickStudy.allStudyCardsListUpgraded.size() - 1) {
-                        previewIndex = 0;
-                    } else {
-                        previewIndex++;
-                    }
+                    cardsToPreview = dupeListForPrev.get(previewIndex);
+                }
+                if (previewIndex == dupeListForPrev.size() - 1) {
+                    previewIndex = 0;
+                } else {
+                    previewIndex++;
                 }
             } else {
                 rotationTimer -= Gdx.graphics.getDeltaTime();

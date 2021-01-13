@@ -22,47 +22,36 @@ public class QuickStudy extends AbstractExpansionCard {
 
     //stupid intellij stuff SKILL, SELF, RARE
 
-    public static ArrayList<AbstractCard> allStudyCardsList = new ArrayList<>();
-    public static ArrayList<AbstractCard> allStudyCardsListUpgraded = new ArrayList<>();
+    private ArrayList<AbstractCard> getList() {
+        ArrayList<AbstractCard> myList = new ArrayList<>();
+        for (AbstractCard q : CardLibrary.getAllCards()) {
+            if (q.hasTag(expansionContentMod.STUDY)) {
+                AbstractCard r = q.makeCopy();
+                if (upgraded) {
+                    r.upgrade();
+                }
+                myList.add(r);
+            }
+        }
+        return myList;
+    }
 
     private float rotationTimer;
     private int previewIndex;
+    private ArrayList<AbstractCard> dupeListForPrev = new ArrayList<>();
 
     public QuickStudy() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_skill.png", "expansioncontentResources/images/1024/bg_boss_skill.png");
         this.exhaust = true;
-
-
-        if (allStudyCardsList.size() == 0) {
-            for (AbstractCard q : CardLibrary.getAllCards()) {
-                if (q.hasTag(expansionContentMod.STUDY)) {
-                    allStudyCardsList.add(q.makeCopy());
-                }
-            }
-            for (AbstractCard q : allStudyCardsList) {
-                q.setCostForTurn(0);
-                allStudyCardsListUpgraded.add(q.makeCopy());
-            }
-            for (AbstractCard q : allStudyCardsListUpgraded) {
-                q.setCostForTurn(0);
-                q.upgrade();
-            }
-        }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> selectionsList = new ArrayList<>();
-        if (upgraded) {
-            Collections.shuffle(allStudyCardsListUpgraded, AbstractDungeon.cardRandomRng.random);
-            for (int i = 0; i < 3; i++) {
-                selectionsList.add(allStudyCardsListUpgraded.get(i).makeStatEquivalentCopy());
-            }
-        } else {
-            Collections.shuffle(allStudyCardsList, AbstractDungeon.cardRandomRng.random);
-            for (int i = 0; i < 3; i++) {
-                selectionsList.add(allStudyCardsList.get(i).makeStatEquivalentCopy());
-            }
+        ArrayList<AbstractCard> cardsList = getList();
+        Collections.shuffle(cardsList, AbstractDungeon.cardRandomRng.random);
+        for (int i = 0; i < 3; i++) {
+            selectionsList.add(cardsList.get(i));
         }
 
         atb(new SelectCardsCenteredAction(selectionsList, 1, EXTENDED_DESCRIPTION[0], (cards) -> {
@@ -74,6 +63,9 @@ public class QuickStudy extends AbstractExpansionCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            for (AbstractCard q : this.dupeListForPrev) {
+                q.upgrade();
+            }
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
@@ -83,33 +75,21 @@ public class QuickStudy extends AbstractExpansionCard {
     @Override
     public void update() {
         super.update();
+        if (dupeListForPrev.isEmpty()) {
+            dupeListForPrev.addAll(getList());
+        }
         if (hb.hovered) {
             if (rotationTimer <= 0F) {
-                if (!upgraded) {
-                    rotationTimer = 2F;
-                    if (allStudyCardsList.size() == 0) {
-                        cardsToPreview = CardLibrary.cards.get("Madness");
-                    } else {
-                        cardsToPreview = allStudyCardsList.get(previewIndex);
-                    }
-                    if (previewIndex == allStudyCardsList.size() - 1) {
-                        previewIndex = 0;
-                    } else {
-                        previewIndex++;
-                    }
+                rotationTimer = 2F;
+                if (dupeListForPrev.size() == 0) {
+                    cardsToPreview = CardLibrary.cards.get("Madness");
                 } else {
-
-                    rotationTimer = 2F;
-                    if (allStudyCardsListUpgraded.size() == 0) {
-                        cardsToPreview = CardLibrary.cards.get("Madness");
-                    } else {
-                        cardsToPreview = allStudyCardsListUpgraded.get(previewIndex);
-                    }
-                    if (previewIndex == allStudyCardsListUpgraded.size() - 1) {
-                        previewIndex = 0;
-                    } else {
-                        previewIndex++;
-                    }
+                    cardsToPreview = dupeListForPrev.get(previewIndex);
+                }
+                if (previewIndex == dupeListForPrev.size() - 1) {
+                    previewIndex = 0;
+                } else {
+                    previewIndex++;
                 }
             } else {
                 rotationTimer -= Gdx.graphics.getDeltaTime();

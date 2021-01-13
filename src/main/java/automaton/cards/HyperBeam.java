@@ -2,13 +2,14 @@ package automaton.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
-import guardian.powers.StunnedPower;
 
 public class HyperBeam extends AbstractBronzeCard {
 
@@ -22,8 +23,10 @@ public class HyperBeam extends AbstractBronzeCard {
     public HyperBeam() {
         super(ID, 6, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = 5;
         isMultiDamage = true;
         selfRetain = true;
+        cardsToPreview = new VoidCard();
     }
 
     public void onRetained() {
@@ -35,7 +38,7 @@ public class HyperBeam extends AbstractBronzeCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1F));
 
         allDmg(AbstractGameAction.AttackEffect.NONE);
-        applyToSelf(new StunnedPower(p));
+        addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), magicNumber, false, true));
     }
 
     public void upp() {
