@@ -43,13 +43,13 @@
   },
   "Guardian:DonusPower": {
     "NAME": "先古攻击",
-    "DESCRIPTION": "获得 1 点 力量 。 NL 增加一张随机攻击牌到你的手牌。本场战斗这张牌耗能降低 1 。 NL 消耗 。",
+    "DESCRIPTION": "获得 1 点 力量 和 1 层 人工制品 。 NL 增加一张随机攻击牌到你的手牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "获得 1 点 力量 和 1 层 人工制品 。 增加一张随机攻击牌到你的手牌。本场战斗这张牌耗能降低 1 。 NL  消耗 。"
   },
   "Guardian:DecasProtection": {
     "NAME": "先古防御",
-    "DESCRIPTION": "获得 1 敏捷 。 NL 增加一张随机能力牌到你的手牌。本场战斗这张牌耗能降低 1 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 1 点 敏捷 和 1 层 人工制品 。增加一张随机能力牌到你的手牌。本场战斗这张牌耗能降低 1 。 NL  消耗 。"
+    "DESCRIPTION": "\"获得 1 点 敏捷 和 1 层 人工制品 。 NL 增加一张随机能力牌到你的手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 1 点 敏捷 和 1 层 人工制品 。增加一张随机能力牌到你的手牌。 NL  消耗 。"
   },
   "Guardian:FierceBash": {
     "NAME": "猛烈痛击",
@@ -121,7 +121,7 @@
   "Guardian:SentryBeam": {
     "NAME": "哨卫射线",
     "DESCRIPTION": "造成 !D! 点伤害。 NL  guardianmod:凝滞 一张 *哨卫震荡 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL  guardianmod:凝滞 一张的 *哨卫震荡+ 。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL  guardianmod:凝滞 一张 *哨卫震荡+ 。 NL 消耗 。"
   },
   "Guardian:SentryWave": {
     "NAME": "哨卫震荡",
@@ -199,11 +199,11 @@
   },
   "Guardian:StasisField": {
     "NAME": "凝滞屏障",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将这张牌 guardianmod:凝滞 。 NL 当这张牌结束 guardianmod:凝滞 时，这张牌的 格挡 获得提高 !M! 并将耗能变为1."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将这张牌 guardianmod:凝滞 。 NL 当这张牌结束 guardianmod:凝滞 时，这张牌的 格挡 获得提高 !M! 并将耗能变为1"
   },
   "Guardian:StasisStrike": {
     "NAME": "凝滞打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将这张牌 guardianmod:凝滞 。 NL 当这张牌结束 guardianmod:凝滞 时，这张牌的伤害提高 !M! 并将耗能变为1."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将这张牌 guardianmod:凝滞 。 NL 当这张牌结束 guardianmod:凝滞 时，这张牌的伤害提高 !M! 并将耗能变为1"
   },
   "Guardian:FuturePlans": {
     "NAME": "未来计划",
@@ -247,7 +247,7 @@
   },
   "Guardian:PiercingHide": {
   "NAME": "隐秘荆棘",
-  "DESCRIPTION": "获得 !B! 点 格挡 和 !M! 层 guardianmod:临时 荆棘 。 NL 进入 guardianmod:提防 3 。"
+  "DESCRIPTION": "获得 !B! 点 格挡 和 !M! 层 guardianmod:临时 荆棘 。 NL guardianmod:提防 3 。"
 },
   "Guardian:ShieldSpikes": {
     "NAME": "荆棘装甲",
@@ -294,15 +294,15 @@
   },
   "Guardian:EvasiveProtocol": {
     "NAME": "闪避协议",
-    "DESCRIPTION": "处于 guardianmod:防御模式 时拥有 2 点 敏捷 。 NL guardianmod:提防 10 。"
+    "DESCRIPTION": "处于 guardianmod:防御模式 时拥有 !M! 点 敏捷 。 NL guardianmod:提防 10 。"
   },
   "Guardian:SpikerProtocol": {
     "NAME": "荆棘协议",
-    "DESCRIPTION": "处于 guardianmod:防御模式 时拥有 3 层 荆棘 。 NL guardianmod:提防 10 。"
+    "DESCRIPTION": "处于 guardianmod:防御模式 时拥有 !M! 层 荆棘 。 NL guardianmod:提防 10 。"
   },
   "Guardian:ArmoredProtocol": {
     "NAME": "装甲协议",
-    "DESCRIPTION": "每回合在 guardianmod:防御模式 时获得 4 点 格挡 。 NL guardianmod:提防 10 。"
+    "DESCRIPTION": "每回合在 guardianmod:防御模式 时获得 !M! 点 格挡 。 NL guardianmod:提防 10 。"
   },
   "Guardian:TimeSifter": {
     "NAME": "时间沙漏",

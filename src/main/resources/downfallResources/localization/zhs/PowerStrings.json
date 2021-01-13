@@ -142,7 +142,7 @@
   "downfall:DefectAncientConstructPower": {
     "NAME": "先古造物",
     "DESCRIPTIONS": [
-      "战斗开始时对战2个 #y铜制圆球 。 NL 每回合开始时如果没有 #y人工制品 ，获得 1 层 #y人工制品 。"
+      "战斗开始时召唤2个 #y铜制圆球 。 NL 每回合开始时如果没有 #y人工制品 ，获得 1 层 #y人工制品 。"
     ]
   },
   "downfall:NeowAncientConstruct": {
