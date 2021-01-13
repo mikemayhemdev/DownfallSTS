@@ -52,170 +52,170 @@
     ]
   },
   "downfall:WatcherAngryPower": {
-    "NAME": "Unbridled Rage",
+    "NAME": "无遏狂怒",
     "DESCRIPTIONS": [
-      "When Watcher is reduced to #b50% HP, she enters Wrath permanently. NL Watcher's Wrath increases damage dealt and received by #b50% instead of #b100%."
+      "当 #y观者 的生命低于 #b50% 时将永久进入 #y暴怒 。 NL #y观者暴怒 造成和受到的伤害为 #b50% 而不是 #b100% 。"
     ]
   },
   "downfall:NeowUnbridledRage": {
-    "NAME": "Unbridled Rage",
+    "NAME": "无遏狂怒",
     "DESCRIPTIONS": [
-      "While Neow is below #b50% Max HP, she gains #b6 #yStrength."
+      "当 #y涅奥 的生命地狱 #b50% 时，她获得 #b6 点 #y力量 。"
     ]
   },
   "downfall:WatcherCripplePower": {
-    "NAME": "Blasphemer's Demise",
+    "NAME": "渎神者",
     "DESCRIPTIONS": [
-      "When Watcher loses #b",
-      " more HP, apply #b-4 #yStrength to her when she next enters #yDivinity or plays #yRagnarok.",
-      "Watcher will lose #b4 #yStrength when she next enters #yDivinity or plays #yRagnarok."
+      "当 #y观者 再失去 #b",
+      " 生命后，下次她进入 #y神格 或打出 #y诸神之黄昏 后失去 #b4 点 #y力量 。",
+      " #y观者 下次她进入 #y神格 或打出 #y诸神之黄昏 后失去 #b4 点 #y力量 。"
     ]
   },
   "downfall:NeowBlasphemersDemise": {
-    "NAME": "Blasphemers Demise",
+    "NAME": "渎神者",
     "DESCRIPTIONS": [
-      "When Neow loses #b",
-      " more HP, she will be stopped from gaining #b10 #yStrength the next turn she uses a Buff.",
-      "Neow is crippled and will not gain additional #yStrength during her next Buff turn."
+      "当 #y涅奥 再失去 #b",
+      " 生命后，她下回合强化时将不会获得 #b10 点 #y力量 。",
+      " #y涅奥 下回合强化时将不会获得 #b10 点 #y力量 。"
     ]
   },
   "downfall:WatcherDivinityPower": {
-    "NAME": "Fleeting Faith",
+    "NAME": "消逝的信仰",
     "DESCRIPTIONS": [
-      "Watcher gains #b1 Mantra whenever you play a card. NL Watcher loses #b5 Mantra at the start of her turn. NL Watcher's Divinity Stance is permanent."
+      "每当你打出一张牌， #y观者 获得 #b1 层 #p真言 。 NL 每回合开始时 #y观者 失去 #b5 层 #p真言 。 NL #y观者 将不会自动退出。"
     ]
   },
   "downfall:NeowFleetingFaith": {
-    "NAME": "Fleeting Faith",
+    "NAME": "消逝的信仰",
     "DESCRIPTIONS": [
-      "Whenever you play a card, Neow gains #b1 #yMantra. Neow loses #b5 #yMantra per turn."
+      "每当你打出一张牌， #y涅奥 获得 #b1 层 #p真言 。 NL 每回合开始时 #y涅奥 失去 #b5 层 #p真言 。"
     ]
   },
   "downfall:SilentShivTimeEaterPower": {
-    "NAME": "Bag of Knives",
+    "NAME": "小刀袋",
     "DESCRIPTIONS": [
-      "Whenever you play a #b0 cost card, if Silent has less than #b7 cards in hand, she gains a #yShiv."
+      "每当你打出一张 #b0 耗能牌，如果 #y静默猎手 的手牌少于 #b7 张，她将获得一张 #y小刀 。"
       ]
   },
   "downfall:NeowBagOfKnives": {
-    "NAME": "Bag of Knives",
+    "NAME": "小刀袋",
     "DESCRIPTIONS": [
-      "Whenever you play a #b0 cost card, Neow gains #y1 Strength."
+      "每当你打出一张 #b0 耗能牌， #y涅奥 获得 #y1 点 #y力量 。"
     ]
   },
   "downfall:SilentMirrorImagePower": {
-    "NAME": "Seeing Double",
+    "NAME": "复视",
     "DESCRIPTIONS": [
       "A mirror image of Silent is masking her real location. Attacking the mirror removes it from combat for the turn."
     ]
   },
   "downfall:NeowSeeingDouble": {
-    "NAME": "Seeing Double",
+    "NAME": "复视",
     "DESCRIPTIONS": [
-      "The first #yAttack used each turn against Neow deals #b0 damage."
+      "每回合你对 #y涅奥 的第一张 #y攻击牌 将造成 #b0 点 伤害。"
     ]
   },
   "downfall:SilentPoisonPower": {
-    "NAME": "Warning: Highly Toxic",
+    "NAME": "警告：中毒",
     "DESCRIPTIONS": [
-      "You have #yPoison #yResistance to combat Silent's #yPoison effects."
+      "你对 #y静默猎手 的 #y中毒 有一定的 #y抗性 。"
     ]
   },
   "downfall:NeowHighlyToxic": {
-    "NAME": "Warning: Highly Toxic",
+    "NAME": "警告：中毒",
     "DESCRIPTIONS": [
-      "Neow applies #b10 #yPoison to you per turn. You have #yPoison #yResistance."
+      " #y涅奥 每回合给予你 #b10 层 #y中毒 。你对 #y中毒 有一定的 #y抗性 。"
     ]
   },
   "downfall:DefectVoidPower": {
-    "NAME": "Energy Thief",
+    "NAME": "能量窃取",
     "DESCRIPTIONS": [
-      "Whenever Defect generates a Void, it goes to the top of your draw pile."
+      "每当 #y故障机器人 生成 #y虚空 时，其将进入你的抽牌堆顶部。"
     ]
   },
   "downfall:NeowEnergyThief": {
-    "NAME": "Energy Thief",
+    "NAME": "能量窃取",
     "DESCRIPTIONS": [
-      "When Neow adds #rCurses to your draw pile, she also adds 1 #yVoid #yStatus card."
+      "每当 #y涅奥 将 #r诅咒牌 加入你的抽牌堆时，她将同时加入 #b1 张 #y虚空 。"
     ]
   },
   "downfall:DefectAncientConstructPower": {
-    "NAME": "Ancient Construct",
+    "NAME": "先古造物",
     "DESCRIPTIONS": [
-      "Begins the fight with 2 Bronze Orb minions. NL Gains 1 Artifact each turn if it did not already have Artifact."
+      "战斗开始时对战2个 #y铜制圆球 。 NL 每回合开始时如果没有 #y人工制品 ，获得 1 层 #y人工制品 。"
     ]
   },
   "downfall:NeowAncientConstruct": {
-    "NAME": "Ancient Construct",
+    "NAME": "先古造物",
     "DESCRIPTIONS": [
-      "Neow gains #b3 #yArtifact at the start of your turn if she has no #yArtifact."
+      "每回合开始时如果没有 #y人工制品 ，获得 3 层 #y人工制品 。"
     ]
   },
   "downfall:DefectCuriosity": {
-    "NAME": "Unbiased Cognition",
+    "NAME": "偏差认知",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower card, gains #b",
-      " #yFocus."
+      "每当你打出一张 #y能力牌 ， #y故障机器人 获得 #b",
+      " 点 #y集中 。"
     ]
   },
   "downfall:NeowUnbiasedCognition": {
-    "NAME": "Unbiased Cognition",
+    "NAME": "偏差认知",
     "DESCRIPTIONS": [
-      "Neow gains #b1 #yStrength for every #yPower card you play."
+      "每当你打出一张 #y能力牌 ， #y涅奥 获得 #b1 点 #y力量 。"
     ]
   },
   "downfall:IroncladStatusPower": {
-    "NAME": "Synchronize",
+    "NAME": "同步",
     "DESCRIPTIONS": [
-      "Whenever Ironclad generates a status card, a duplicate is added into your discard pile."
+      "每当 #y铁甲战士 生成 #y状态牌 时，将其复制品加入你的弃牌堆。"
     ]
   },
   "downfall:NeowSyncronize": {
-    "NAME": "Synchronize",
+    "NAME": "同步",
     "DESCRIPTIONS": [
-      "Neow adds a random #yStatus card to your discard pile every turn."
+      " #y涅奥 将在每回合加入随机一张 #y状态牌 到你的弃牌堆。"
     ]
   },
   "downfall:IroncladMushroomPower": {
-    "NAME": "Feeding Frenzy",
+    "NAME": "掠食",
     "DESCRIPTIONS": [
-      "Ironclad's Reaper does not Exhaust and targets ALL Mushrooms. NL When Ironclad kills a Mushroom, he gains #b1 Strength and heals #b20 HP."
+      " #y铁甲战士 的 #y死亡收割 将不会消耗且对所有蘑菇生效。 NL 每当铁甲战士击杀一个蘑菇时，他获得 #b1 点 #y力量 并回复 #b20 点生命。"
     ]
   },
   "downfall:NeowFeedingFrenzy": {
-    "NAME": "Feeding Frenzy",
+    "NAME": "掠食",
     "DESCRIPTIONS": [
-      "Neow heals HP whenever she deals any unblocked damage."
+      " #y涅奥 回复其造成的未被格挡伤害的生命。"
     ]
   },
   "downfall:IroncladFortificationPower": {
-    "NAME": "Bastion",
+    "NAME": "堡垒",
     "DESCRIPTIONS": [
       "Ironclad begins the fight with a Fortification, which will grant him #b10 Block each turn. NL When the Fortification has been destroyed, Ironclad loses Barricade and all Block, but gains #b5 Strength per turn."
     ]
   },
   "downfall:NeowBastion": {
-    "NAME": "Bastion",
+    "NAME": "堡垒",
     "DESCRIPTIONS": [
-      "Neow has #yBarricade and gains #b10 #yBlock at the start of each turn."
+      " #y涅奥 拥有 #y壁垒 且在每回合开始时获得 #b10 点 #y格挡 。"
     ]
   },
   "downfall:MerchantStrengthPower": {
-    "NAME": "Soul Stealer",
+    "NAME": "灵魂窃取",
     "DESCRIPTIONS": [
       "Merchant still has the Strength it earned from Soul Steal this run, and gains an equal amount of Dexterity."
     ]
   },
   "downfall:NeowMantra": {
-    "NAME": "Mantra",
+    "NAME": "真言",
     "DESCRIPTIONS": [
-      "When Neow has #b10 #yMantra, she converts #b10 #yMantra into #b10 #yStrength."
+      "每当 #y涅奥 拥有 #b10 层 #y真言 时，将其转换成 #b10 点 #y力量 。"
     ]
   },
   "downfall:NeowSeeingDoubleProduct": {
     "NAME": "???",
     "DESCRIPTIONS": [
-      "Your next #yAttack used against Neow deals #b0 damage this turn."
+      "本回合你的下一张攻击牌对 #y涅奥 造成 #b0 点伤害。"
     ]
   }
 }

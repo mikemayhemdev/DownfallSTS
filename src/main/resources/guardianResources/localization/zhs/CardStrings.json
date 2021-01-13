@@ -225,7 +225,7 @@
   },
   "Guardian:ConstructionForm": {
     "NAME": "建造形态",
-    "DESCRIPTION": "虚无 。NL 获得 !M! 层 guardianmod:缓冲 。 NL 每回合开始时如果你有 guardianmod:缓冲 ，获得1点 力量 。",
+    "DESCRIPTION": "虚无 。 NL 获得 !M! 层 guardianmod:缓冲 。 NL 每回合开始时如果你有 guardianmod:缓冲 ，获得1点 力量 。",
 	"UPGRADE_DESCRIPTION": "获得 !M! 层 guardianmod:缓冲 。 NL 每回合开始时如果你有 guardianmod:缓冲 ，获得1点 力量 。"
   },
   "Guardian:RollAttack": {
@@ -421,7 +421,7 @@
   "Guardian:GemstoneGunCard": {
     "NAME": "宝石枪",
     "DESCRIPTION": "保留 。",
-    "UPGRADE_DESCRIPTION": "NL 消耗 。"
+    "UPGRADE_DESCRIPTION": " NL 消耗 。"
   },
     "Guardian:BodySlam": {
     "NAME": "全身撞击",
