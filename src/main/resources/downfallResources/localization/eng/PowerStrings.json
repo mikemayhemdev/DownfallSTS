@@ -191,7 +191,7 @@
   "downfall:IroncladFortificationPower": {
     "NAME": "Bastion",
     "DESCRIPTIONS": [
-      "Ironclad begins the fight with a Fortification, which will grant him #b10 Block each turn. NL When the Fortification has been destroyed, Ironclad loses Barricade and all Block, but gains #b5 Strength per turn."
+      "Ironclad begins the fight with a Fortification, which will grant him #b10 Block each turn. NL When the Fortification has been destroyed, Ironclad loses Barricade, but gains #b5 Strength per turn."
     ]
   },
   "downfall:NeowBastion": {
