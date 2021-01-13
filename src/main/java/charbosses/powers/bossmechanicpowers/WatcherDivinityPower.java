@@ -19,7 +19,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.TimeWarpTurnEndEffect;
 
-public class WatcherDivinityPower extends AbstractPower {
+public class WatcherDivinityPower extends AbstractBossMechanicPower {
     public static final String POWER_ID = "downfall:WatcherDivinityPower";
     private static final PowerStrings powerStrings;
     public static final String NAME;

@@ -22,7 +22,7 @@ import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import slimebound.SlimeboundMod;
 
-public class WatcherAngryPower extends AbstractPower {
+public class WatcherAngryPower extends AbstractBossMechanicPower {
     public static final String POWER_ID = "downfall:WatcherAngryPower";
     private static final PowerStrings powerStrings;
     public static final String NAME;
