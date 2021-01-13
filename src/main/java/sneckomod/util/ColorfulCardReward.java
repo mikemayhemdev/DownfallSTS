@@ -15,12 +15,13 @@ import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.RewardGlowEffect;
 import downfall.downfallMod;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
 public class ColorfulCardReward extends RewardItem {
-    public static final String ID = downfallMod.makeID("BossCardReward");
+    public static final String ID = downfallMod.makeID("ColorfulCardReward");
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
 
     private float REWARD_TEXT_X = 833.0F * Settings.scale;
@@ -41,7 +42,7 @@ public class ColorfulCardReward extends RewardItem {
             this.cards = getColorfulCards(colorType);
         }
 
-        this.text = TEXT[0];
+        this.text = TEXT[0] + SneckoMod.getClassFromColor(colorType) + TEXT[1];
         for (AbstractCard c : this.cards)
             if (c.type == AbstractCard.CardType.ATTACK && AbstractDungeon.player.hasRelic("Molten Egg 2")) {
                 c.upgrade();

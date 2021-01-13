@@ -82,7 +82,7 @@
   },
   "champ:Backstep": {
     "NAME": "后撤",
-    "DESCRIPTION": "进入 champ:防守 。 NL 获得 !B! 点 格挡 。 NL champ:狂战 champ:连段 ：获得 champ:决心 层数两倍的 格挡 。",
+    "DESCRIPTION": "进入 champ:防守 。 NL 获得 !B! 点 格挡 。 NL champ:狂战 champ:连段 ：获得 champ:疲劳 层数的 格挡 。",
     "EXTENDED_DESCRIPTION": [" NL （获得 !B! 点 格挡 。）"]
   },
   "champ:Aggression": {
@@ -98,8 +98,8 @@
   },
   "champ:BerserkersShout": {
     "NAME": "怒吼",
-    "DESCRIPTION": "champ:狂战 champ:起手 。 NL champ:疲劳 !M! 。",
-	    "UPGRADE_DESCRIPTION": "champ:狂战 champ:起手 。 NL champ:疲劳 !M! 。 NL 抽一张牌。"
+    "DESCRIPTION": "进入 champ:狂战 。 NL champ:疲劳 !M! 。",
+	    "UPGRADE_DESCRIPTION": "进入 champ:狂战 。 NL champ:疲劳 !M! 。 NL 抽一张牌。"
   },
   "champ:RageSigil": {
     "NAME": "战斗计划",
@@ -172,7 +172,10 @@
   "champ:FalseCounter": {
     "NAME": "伪反",
     "DESCRIPTION": "处于 champ:防守 才能被打出。 NL 下次触发 champ:反击 时，只失去一半 champ:反击 。",
-	"UPGRADE_DESCRIPTION": "处于 champ:防守 才能被打出。获得 !M! 层 champ:反击 。 NL 下次触发 champ:反击 时，只失去一半 champ:反击 。"
+	"UPGRADE_DESCRIPTION": "处于 champ:防守 才能被打出。获得 !M! 层 champ:反击 。 NL 下次触发 champ:反击 时，只失去一半 champ:反击 。",
+    "EXTENDED_DESCRIPTION": [
+      "还不是时候。"
+    ]
   },
   "champ:IronFortress": {
     "NAME": "钢铁要塞",
@@ -295,7 +298,7 @@
   },
   "champ:CrownThrow": {
     "NAME": "投掷王冠",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 伤害不为零，下回合返回手牌。 NL 直到打出前的耗能为零。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 如果伤害不为零，下回合返回手牌。 NL 直到打出前的耗能为零。"
   },
   "champ:FightOn": {
     "NAME": "越战越勇",
@@ -363,7 +366,7 @@
     "NAME": "完美打击",
     "DESCRIPTION": " 造成 !D! 点伤害。 NL 你每有一张名字中有 打击 的牌，伤害+ !M! 。"
   },
-  "champ:PerfectForm": {
+  "champ:GladiatorForm": {
     "NAME": "角斗形态",
     "DESCRIPTION": "每当你获得 champ:战术 奖励时，抽一张牌。 NL 每当你获得 champ:终结技 奖励时，下回合获得 [E] 。"
   },
@@ -394,8 +397,8 @@
   },
   "champ:BerserkerStyle": {
     "NAME": "狂暴战法",
-    "DESCRIPTION": "进入 champ:狂战 。 NL hamp:狂战 champ:战术 奖励额外获得 !M! 层 champ:疲劳 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 进入 champ:狂战 。 NL hamp:狂战 champ:战术 奖励额外获得 !M! 层 champ:疲劳 。"
+    "DESCRIPTION": "进入 champ:狂战 。 NL champ:狂战 champ:战术 奖励额外获得 !M! 层 champ:疲劳 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 进入 champ:狂战 。 NL champ:狂战 champ:战术 奖励额外获得 !M! 层 champ:疲劳 。"
   },
     "champ:Riposte": {
     "NAME": "弹反",

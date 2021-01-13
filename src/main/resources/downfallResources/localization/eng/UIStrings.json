@@ -115,6 +115,12 @@
       "Add a Boss Card to your deck"
     ]
   },
+  "downfall:ColorfulCardReward": {
+    "TEXT": [
+      "Add a ",
+      " Card to your deck"
+    ]
+  },
   "downfall:RunHistoryMonsterNames": {
     "TEXT": [
       "Living Wall Heads"

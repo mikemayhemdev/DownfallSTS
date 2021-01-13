@@ -23,12 +23,13 @@
 	  "[fist_icon]",
       "champ:[fist_icon]"
     ],
-    "DESCRIPTION": "打出终结技后如果处于 #y姿态 ，退出姿态并触发 #y终结技奖励 。 #r结束你的回合 。"
+    "DESCRIPTION": "打出终结技后如果处于 #y姿态 ，退出姿态并触发 #y终结技奖励 。"
   },
   {
     "PROPER_NAME": "反击",
     "NAMES": [
-      "反击"
+      "反击",
+      "champ:counter"
     ],
     "DESCRIPTION": "下次你受到 #y攻击 伤害时，对攻击者造成层数的伤害并移除。"
   },
@@ -37,14 +38,14 @@
     "NAMES": [
       "防守"
     ],
-    "DESCRIPTION": "#y姿态 ： NL #y战术 -获得 #b6 层 #y反击 。 NL #y终结技 -获得 #b12 点 #y格挡 。"
+    "DESCRIPTION": "#y姿态 ： NL #y战术 -获得 #b5 层 #y反击 。 NL #y终结技 -获得 #b12 点 #y格挡 。"
   },
   {
     "PROPER_NAME": "狂战",
     "NAMES": [
       "狂战"
     ],
-    "DESCRIPTION": "#y姿态 ： NL #y战术 - #y疲劳 #b3 。 NL #y终结技 -失去所有 #y决心 并回复等量生命（保留 #y力量 ）。"
+    "DESCRIPTION": "#y姿态 ： NL #y战术 - #y疲劳 #b5 。 NL #y终结技 -失去所有 #y决心 并回复等量生命（保留 #y力量 ）。"
   },
   {
     "PROPER_NAME": "角斗",
@@ -63,7 +64,8 @@
   {
     "PROPER_NAME": "疲劳",
     "NAMES": [
-      "疲劳"
+      "疲劳",
+      "champ:fatigue"
     ],
     "DESCRIPTION": "失去生命并获得等量的 #y决心 。"
   }
