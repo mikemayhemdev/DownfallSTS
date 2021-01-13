@@ -15,7 +15,7 @@ import slimebound.powers.CommandOnPlayPower;
 
 
 public class RallyTheTroops extends AbstractSlimeboundCard {
-    public static final String ID = SlimeboundMod.makeID("RallyTheTroops");
+    public static final String ID = "Slimebound:RallyTheTroops";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static final String IMG_PATH = "cards/poisontackle.png";
