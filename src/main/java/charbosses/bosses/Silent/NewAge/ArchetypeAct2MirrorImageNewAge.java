@@ -35,7 +35,7 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
         CharBossSilent p = (CharBossSilent) AbstractCharBoss.boss;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SilentMirrorImagePower(p)));
 
-        p.spawnImage(false);
+      //  p.spawnImage(false);
     }
 
     public void initialize() {

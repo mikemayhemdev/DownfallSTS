@@ -51,7 +51,7 @@ public class Fortification extends AbstractMonster {
         super.die();
         if (AbstractCharBoss.boss != null) {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, BarricadePower.POWER_ID));
-            AbstractDungeon.actionManager.addToBottom(new RemoveAllBlockAction(AbstractCharBoss.boss, AbstractCharBoss.boss));
+            //AbstractDungeon.actionManager.addToBottom(new RemoveAllBlockAction(AbstractCharBoss.boss, AbstractCharBoss.boss));
             this.addToBot(new ApplyPowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, new DemonFormPower(AbstractCharBoss.boss, 5), 5));
 
         }
