@@ -49,7 +49,7 @@ public class NeowInvulnerablePower extends AbstractPower {
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         super.onAfterUseCard(card, action);
             this.owner.heal(amount);
-        AbstractDungeon.effectsQueue.add(new HealEffect(owner.hb.cX - owner.animX, owner.hb.cY, 2));
+        //AbstractDungeon.effectsQueue.add(new HealEffect(owner.hb.cX - owner.animX, owner.hb.cY, 2));
 
 
     }

@@ -108,8 +108,8 @@
     "NAME": "宝石枪",
     "FLAVOR": "砰！砰！砰！嘿，我打中了三个！",
     "DESCRIPTIONS": [
-      "拾起时，选择 #b3 张 #yguardianmod:宝石 牌。 每场战斗开始时，按顺序触发它们的效果。",
-      "每场战斗开始时： NL "
+      "拾起时，选择 #b3 张 #yguardianmod:宝石 牌。 每场战斗开始时，获得一张镶嵌有这些宝石的保留消耗牌。",
+      "选择宝石装入宝石枪"
     ]
   },
   "Guardian:BottledAnomaly": {

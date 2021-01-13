@@ -120,8 +120,8 @@
       "If you are a peg, endure the knocking; if you are a mallet, strike."
     ],
     "OPTIONS": [
-      "[Endurance] #gAdd #gBrace #g2 to all #gStrikes and #gDefends.",
-      "[Locked] Requires a Strike or Defend."
+      "[忍耐] #g将所有的打击和防御加上提防2 。",
+      "[锁定] 需要打击和防御"
     ]
   }
 }

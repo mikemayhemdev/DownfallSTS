@@ -234,6 +234,10 @@
     "NAME": "？？？",
     "DESCRIPTION": "未知力量 牌。"
   },
+  "sneckomod:UnknownDraw": {
+    "NAME": "???",
+    "DESCRIPTION": "*Unknown Draw Card."
+  },
   "sneckomod:UnknownDexterity": {
     "NAME": "？？？",
     "DESCRIPTION": "未知敏捷 牌。"
@@ -282,5 +286,18 @@
   "sneckomod:UnendingSupply": {
     "NAME": "延绵不绝",
     "DESCRIPTION": "每回合开始时，将随机一张 sneckomod:异色 牌加入手牌并 sneckomod:混淆 。"
+  },
+
+  "sneckomod:Memorize": {
+    "NAME": "记忆",
+    "DESCRIPTION": "sneckomod:蛇证 。 即逝 。 NL 选择一张未知牌将其加入你的牌组并移除未知。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 即逝 。 保留。 NL 选择一张未知牌将其加入你的牌组并移除未知。",
+    "EXTENDED_DESCRIPTION": [
+      " 来记忆。"
+    ]
+  },
+  "sneckomod:UnknownBoss": {
+    "NAME": "???",
+    "DESCRIPTION": "*未知 expansioncontent:首领 牌。"
   }
 }

@@ -38,10 +38,8 @@ public class NightmareGuise extends AbstractHexaCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPG_BLOCK);
+            cardsToPreview.upgrade();
             rawDescription = UPGRADE_DESCRIPTION;
-            AbstractCard q = new ShadowGuise();
-            q.upgrade();
-            cardsToPreview = q;
             initializeDescription();
         }
     }

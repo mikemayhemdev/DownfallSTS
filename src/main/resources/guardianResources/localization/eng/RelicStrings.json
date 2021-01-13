@@ -108,7 +108,8 @@
     "NAME": "Gemstone Gun",
     "FLAVOR": "Bang! Bang! Bang! Hey, I matched three!",
     "DESCRIPTIONS": [
-      "Upon pickup, choose #b3 #yguardianmod:Gems. At the start of each combat, gain a card with Retain, Exhaust, and has each chosen Gem socketed."
+      "Upon pickup, choose #b3 #yguardianmod:Gems. At the start of each combat, gain a card with Retain, Exhaust, and has each chosen Gem socketed.",
+      "Choose a Gem to load the Gem Gun."
     ]
   },
   "Guardian:BottledAnomaly": {

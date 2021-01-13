@@ -41,9 +41,7 @@ public class NightmareStrike extends AbstractHexaCard {
             upgradeName();
             upgradeDamage(UPG_DAMAGE);
             rawDescription = UPGRADE_DESCRIPTION;
-            AbstractCard q = new ShadowStrike();
-            q.upgrade();
-            cardsToPreview = q;
+            cardsToPreview.upgrade();
             initializeDescription();
         }
     }

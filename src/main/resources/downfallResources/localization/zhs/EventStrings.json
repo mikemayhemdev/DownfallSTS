@@ -373,7 +373,7 @@
     "OPTIONS": [
       "[一拳过去] #g获得85灵魂。 #r失去 #r",
       " #r生命。",
-	  "[Rob] #gObtain #ga #gRelic. #rBecome #rCursed #r- #rPride."
+	  "[抢劫] #g获得一件遗物。 #r被诅咒-傲慢。"
     ]
   },
   "downfall:Beggar": {
@@ -601,10 +601,10 @@
     "DESCRIPTIONS": [
       "Only you should hold this power. You shatter the shrine into pieces. NL A dark wail echoes all around you, and you can feel the Shrine's #p~cursed~ #p~magic~ seep into your bones."    ],
     "OPTIONS": [
-      "[Desecrate] #gDuplicate #g2 #gcards. #rCursed #r- #rRandom.",
-      "[Desecrate] #gRemove #g3 #gcards. #rCursed #r- #rRandom.",
-      "[Desecrate] #gTransform #g3 #gcards. #rCursed #r- #rRandom.",
-      "[Desecrate] #gUpgrade #g2 #gcards. #rCursed #r- #rRandom."
+      "[亵渎] #g复制2张牌。 #r被随机诅咒 。",
+      "[亵渎] #g移除3张牌。 #r被随机诅咒 。",
+      "[亵渎] #g变化3张牌。 #r被随机诅咒 。",
+      "[亵渎] #g升级2张牌。 #r被随机诅咒 。"
     ]
   }
 }

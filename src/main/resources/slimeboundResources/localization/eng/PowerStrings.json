@@ -501,7 +501,7 @@
     ]
   },
   "Slimebound:CommandOnPlayPower": {
-    "NAME": "Goop Armor",
+    "NAME": "Rallying",
     "DESCRIPTIONS": [
       "The next time you play a card this turn, #yCommand.",
       "The next ",
