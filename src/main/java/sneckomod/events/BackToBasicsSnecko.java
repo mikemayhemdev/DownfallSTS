@@ -19,9 +19,11 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import sneckomod.SneckoMod;
 import sneckomod.cards.Defend;
 import sneckomod.cards.Strike;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
+import sneckomod.cards.unknowns.UnknownClass;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -117,9 +119,18 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
             case INTRO:
                 if (buttonPressed == 0) {
                     ArrayList<AbstractCard> list = new ArrayList<>();
+
                     for (AbstractCard c : CardLibrary.getAllCards()) {
-                        if (c instanceof AbstractUnknownCard)
-                            list.add(c);
+                        if (c instanceof AbstractUnknownCard) {
+                            if (c instanceof UnknownClass) {
+                                UnknownClass cU = (UnknownClass) c;
+                                if (SneckoMod.validColors.contains(cU.myColor)) {
+                                    list.add(c);
+                                }
+                            } else {
+                                list.add(c);
+                            }
+                        }
                     }
 
                     for (AbstractCard c : cardsToRemove) {
@@ -159,19 +170,8 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
     }
 
     private void upgradeStrikeAndDefends() {
-        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
-
-        while (true) {
-            AbstractCard c;
-            do {
-                if (!var1.hasNext()) {
-                    return;
-                }
-
-                c = (AbstractCard) var1.next();
-            } while (!c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) && !c.hasTag(AbstractCard.CardTags.STARTER_DEFEND));
-
-            if (c.canUpgrade()) {
+        for (AbstractCard c: AbstractDungeon.player.masterDeck.group){
+            if (c.canUpgrade() && (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) ) {
                 c.upgrade();
                 this.cardsUpgraded.add(c.cardID);
                 AbstractDungeon.player.bottledCardUpgradeCheck(c);

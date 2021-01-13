@@ -25,7 +25,7 @@ import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.TimeWarpTurnEndEffect;
 import java.util.Iterator;
 
-public class SilentShivTimeEaterPower extends AbstractPower {
+public class SilentShivTimeEaterPower extends AbstractBossMechanicPower {
     public static final String POWER_ID = "downfall:SilentShivTimeEaterPower";
     private static final PowerStrings powerStrings;
     public static final String NAME;

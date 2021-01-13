@@ -118,6 +118,7 @@ import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
@@ -421,6 +422,16 @@ public class downfallMod implements
     public static AbstractCard getRandomDownfallCurse() {
         Collections.shuffle(downfallCurses, AbstractDungeon.cardRandomRng.random);
         return downfallCurses.get(0);
+    }
+
+    public static ArrayList<AbstractCard> getRandomDownfallCurse(int count) {
+        ArrayList<AbstractCard> ac = new ArrayList<>();
+        Collections.shuffle(downfallCurses, AbstractDungeon.cardRandomRng.random);
+
+        for (int i = 0; i < count; i++) {
+            ac.add(downfallCurses.get(i));
+        }
+        return ac;
     }
 
     public void receivePostInitialize() {

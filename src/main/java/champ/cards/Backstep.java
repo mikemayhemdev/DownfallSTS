@@ -29,7 +29,7 @@ public class Backstep extends AbstractChampCard {
         if (bcombo()) {
             if (AbstractDungeon.player.hasPower(ResolvePower.POWER_ID)) {
                 int x = AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount;
-                atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, x * 2));
+                atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, x));
             }
         }
 

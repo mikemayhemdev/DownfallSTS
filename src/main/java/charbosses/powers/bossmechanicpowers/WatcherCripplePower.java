@@ -18,7 +18,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
-public class WatcherCripplePower extends AbstractPower {
+public class WatcherCripplePower extends AbstractBossMechanicPower {
     public static final String POWER_ID = "downfall:WatcherCripplePower";
     private static final PowerStrings powerStrings;
     public static final String NAME;

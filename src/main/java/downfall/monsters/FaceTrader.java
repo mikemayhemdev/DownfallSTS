@@ -32,13 +32,13 @@ public class FaceTrader extends AbstractMonster {
         super(NAME, ID, 100, HB_X, HB_Y, HB_W, HB_H, "downfallResources/images/monsters/facetrader/facetrader.png");
         switch (AbstractDungeon.actNum) {
             case 1:
-                setHp(100);
-                break;
-            case 2:
                 setHp(150);
                 break;
+            case 2:
+                setHp(200);
+                break;
             case 3:
-                setHp(175);
+                setHp(250);
                 break;
         }
 
