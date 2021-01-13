@@ -146,19 +146,8 @@ public class BackToBasicsGuardian extends AbstractImageEvent {
     }
 
     private void upgradeStrikeAndDefends() {
-        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
-
-        while (true) {
-            AbstractCard c;
-            do {
-                if (!var1.hasNext()) {
-                    return;
-                }
-
-                c = (AbstractCard) var1.next();
-            } while (!(c instanceof Strike_Red) && !(c instanceof Defend_Red) && !(c instanceof Strike_Green) && !(c instanceof Defend_Green) && !(c instanceof Strike_Blue) && !(c instanceof Defend_Blue) && !(c instanceof Strike) && !(c instanceof Defend));
-
-            if (c.canUpgrade()) {
+        for (AbstractCard c: AbstractDungeon.player.masterDeck.group){
+            if (c.canUpgrade() && (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) ) {
                 c.upgrade();
                 this.cardsUpgraded.add(c.cardID);
                 AbstractDungeon.player.bottledCardUpgradeCheck(c);

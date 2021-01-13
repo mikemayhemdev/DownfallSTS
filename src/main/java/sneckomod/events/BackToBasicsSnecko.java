@@ -117,6 +117,8 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
             case INTRO:
                 if (buttonPressed == 0) {
                     ArrayList<AbstractCard> list = new ArrayList<>();
+
+                    //TODO - This needs to bounce Class cards
                     for (AbstractCard c : CardLibrary.getAllCards()) {
                         if (c instanceof AbstractUnknownCard)
                             list.add(c);
@@ -159,19 +161,8 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
     }
 
     private void upgradeStrikeAndDefends() {
-        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
-
-        while (true) {
-            AbstractCard c;
-            do {
-                if (!var1.hasNext()) {
-                    return;
-                }
-
-                c = (AbstractCard) var1.next();
-            } while (!c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) && !c.hasTag(AbstractCard.CardTags.STARTER_DEFEND));
-
-            if (c.canUpgrade()) {
+        for (AbstractCard c: AbstractDungeon.player.masterDeck.group){
+            if (c.canUpgrade() && (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) ) {
                 c.upgrade();
                 this.cardsUpgraded.add(c.cardID);
                 AbstractDungeon.player.bottledCardUpgradeCheck(c);
