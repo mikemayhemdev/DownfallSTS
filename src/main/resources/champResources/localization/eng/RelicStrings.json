@@ -45,7 +45,7 @@
     "NAME": "Deflecting Bracers",
     "FLAVOR": "If you thought blocking was good then...",
     "DESCRIPTIONS": [
-      "At the end of the enemy round, gain #yCounter equal to your remaining Block."
+      "At the start of your turn, gain #yCounter equal to the amount of Block lost."
     ]
   },
   "champ:DuelingGlove": {
