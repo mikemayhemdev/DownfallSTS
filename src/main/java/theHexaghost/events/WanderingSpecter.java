@@ -145,7 +145,7 @@ public class WanderingSpecter extends AbstractImageEvent {
                     case 3:
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[3]);
-                        this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
+                        this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         this.screen = CurScreen.END;
                         return;
                 }
