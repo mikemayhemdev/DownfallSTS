@@ -29,13 +29,13 @@ public class MurderStrike extends AbstractChampCard {
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
         super.onPlayCard(c, m);
         if (c.hasTag(ChampMod.TECHNIQUE) && AbstractDungeon.player.hand.group.contains(this)) {
-           // if (cost > 0) {
+            {
                 updateCost(-1);
                 baseDamage += magicNumber;
                 applyPowers();
                 superFlash(Color.RED.cpy());
-           //
-            // }
+
+            }
         }
     }
 
@@ -44,14 +44,14 @@ public class MurderStrike extends AbstractChampCard {
     }
 
     public void upp() {
-        if (this.cost < 10) {
+        if (this.cost < 8) {
             this.upgradeBaseCost(this.cost - 2);
             if (this.cost < 0) {
                 this.cost = 0;
             }
         } else {
-            this.upgradeBaseCost(5);
+            this.upgradeBaseCost(6);
+            this.upgradeDamage(6);
         }
-        this.upgradeDamage(9);
     }
 }
