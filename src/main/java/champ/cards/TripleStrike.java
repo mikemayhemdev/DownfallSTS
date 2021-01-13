@@ -42,9 +42,6 @@ public class TripleStrike extends AbstractChampCard {
         upgradeDamage(UPG_DAMAGE);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
-        AbstractCard r = new Strike();
-        r.upgrade();
-        r.updateCost(-999);
-        CardModifierManager.addModifier(r, new TechniqueMod());
+        cardsToPreview.upgrade();
     }
 }
