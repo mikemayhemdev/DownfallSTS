@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import theHexaghost.powers.ApplyBurnAtTurnStartOncePower;
 import theHexaghost.powers.BurnPower;
 
@@ -20,6 +21,7 @@ public class FlamesFromBeyond extends AbstractHexaCard {
         super(ID, -2, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
         baseBurn = burn = MAGIC;
         isEthereal = true;
+        tags.add(HexaMod.AFTERLIFE);
     }
 
     @Override

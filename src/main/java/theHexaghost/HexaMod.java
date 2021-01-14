@@ -94,7 +94,8 @@ public class HexaMod implements
     private CustomUnlockBundle unlocks3;
     private CustomUnlockBundle unlocks4;
 
-
+    @SpireEnum
+    public static AbstractCard.CardTags AFTERLIFE;
     @SpireEnum
     public static AbstractCard.CardTags GHOSTWHEELCARD;
 

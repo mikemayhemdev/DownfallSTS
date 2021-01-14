@@ -2,6 +2,7 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import theHexaghost.powers.GiftsFromTheDeadPower;
 import theHexaghost.powers.GiftsFromTheDeadPowerPlus;
 
@@ -15,6 +16,7 @@ public class GiftsFromTheDead extends AbstractHexaCard {
         super(ID, -2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         isEthereal = true;
         this.magicNumber = baseMagicNumber = 1;
+        tags.add(HexaMod.AFTERLIFE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

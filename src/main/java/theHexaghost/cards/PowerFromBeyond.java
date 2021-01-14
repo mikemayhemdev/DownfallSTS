@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.powers.EnergizedBluePower;
+import theHexaghost.HexaMod;
 
 public class PowerFromBeyond extends AbstractHexaCard {
 
@@ -19,6 +20,7 @@ public class PowerFromBeyond extends AbstractHexaCard {
         super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;
+        tags.add(HexaMod.AFTERLIFE);
     }
 
     @Override

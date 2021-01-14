@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
+import theHexaghost.HexaMod;
 
 public class SpectersWail extends AbstractHexaCard {
 
@@ -24,6 +25,7 @@ public class SpectersWail extends AbstractHexaCard {
         baseDamage = DAMAGE;
         isEthereal = true;
         isMultiDamage = true;
+        tags.add(HexaMod.AFTERLIFE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
