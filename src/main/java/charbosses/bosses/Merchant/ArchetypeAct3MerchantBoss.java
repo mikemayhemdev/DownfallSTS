@@ -88,7 +88,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
                 case 3:
                     addToList(cardsList, new EnTrip(), true);
                     addToList(cardsList, new EnTheBomb(), true);
-                    addToList(cardsList, new EnHandOfGreed(), true);
+                    addToList(cardsList, new EnSwiftStrike(), true);
                     turn++;
                     break;
                 case 4:
@@ -117,7 +117,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
                 case 2:
                     addToList(cardsList, new EnTheBomb(), true);
                     addToList(cardsList, new EnSwiftStrike(), true);
-                    addToList(cardsList, new EnHandOfGreed(), true);
+                    addToList(cardsList, new EnSwiftStrike(), true);
                     turn = 0;
                     break;
             }
