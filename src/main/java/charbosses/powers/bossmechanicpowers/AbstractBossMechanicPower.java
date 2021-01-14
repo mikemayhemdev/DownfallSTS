@@ -7,6 +7,7 @@ package charbosses.powers.bossmechanicpowers;
 
 import basemod.ReflectionHacks;
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.vfx.QuietGainPowerEffect;
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -31,7 +32,7 @@ public abstract class AbstractBossMechanicPower extends AbstractPower {
         if (firstTurn){
             if (this.timer <= 0F){
                 ArrayList<AbstractGameEffect> effect2 = (ArrayList<AbstractGameEffect>) ReflectionHacks.getPrivate(this, AbstractPower.class, "effect");
-                effect2.add(new GainPowerEffect(this));
+                effect2.add(new QuietGainPowerEffect(this));
                 this.timer = 1F;
                 if (AbstractCharBoss.boss != null) {
                     if (AbstractCharBoss.boss.hb.hovered) {
