@@ -174,11 +174,7 @@ public class NeowBoss extends AbstractMonster {
         }
     }
 
-    public void curses() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new VulnerablePower(AbstractDungeon.player, 2, true), 2));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 2, true), 2));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new FrailPower(AbstractDungeon.player, 2, true), 2));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new HeartMegaDebuffEffect()));
+    public void curses() { AbstractDungeon.actionManager.addToBottom(new VFXAction(new HeartMegaDebuffEffect()));
 
         ArrayList<AbstractCard> ac = downfallMod.getRandomDownfallCurse(4);
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(ac.get(0).makeStatEquivalentCopy(), 1, true, false, false, (float) Settings.WIDTH * 0.2F, (float) Settings.HEIGHT / 2.0F));
@@ -265,10 +261,6 @@ public class NeowBoss extends AbstractMonster {
                     AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(minion.hb.cX, minion.hb.cY, this.hb.cX + EYE1_X, this.hb.cY + EYE1_Y, Color.GOLD), 0.25F));
                     //AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo) this.damage.get(0), AbstractGameAction.AttackEffect.FIRE, false, true));
                     //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 1), 1));
-
-                    if (!minion.hasPower(EndOfTurnStrengthDex.POWER_ID)) {
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, minion, new StrengthPower(minion, 2), 2));
-                    }
                     AbstractDungeon.actionManager.addToBottom(new HealAction(minion, this, 10));
                 } else {
                     escape();
