@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import theHexaghost.HexaMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class GladiatorStylePower extends AbstractPower implements CloneablePowerInterface {
 

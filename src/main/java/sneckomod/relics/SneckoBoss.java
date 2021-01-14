@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.UnknownClass;
 import sneckomod.util.ColorfulCardReward;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class SneckoBoss extends CustomRelic implements CustomSavable<String> {
 

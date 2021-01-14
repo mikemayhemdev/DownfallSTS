@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import theHexaghost.HexaMod;
 import theHexaghost.util.SealCommonReward;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class CommonPostCombatPower extends AbstractPower implements CloneablePowerInterface, RemoveMeBabey {
 

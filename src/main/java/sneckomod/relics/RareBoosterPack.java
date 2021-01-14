@@ -9,7 +9,7 @@ import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.UnknownRareAttack;
 import sneckomod.cards.unknowns.UnknownRarePower;
 import sneckomod.cards.unknowns.UnknownRareSkill;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class RareBoosterPack extends CustomRelic {
 

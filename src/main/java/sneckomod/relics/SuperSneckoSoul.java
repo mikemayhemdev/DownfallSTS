@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class SuperSneckoSoul extends CustomRelic {
 

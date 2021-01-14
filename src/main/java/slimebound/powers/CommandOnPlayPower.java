@@ -14,7 +14,7 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.TrigggerSpecificSlimeAttackAction;
 import slimebound.orbs.SpawnedSlime;
 import theHexaghost.HexaMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class CommandOnPlayPower extends AbstractPower implements CloneablePowerInterface {
 

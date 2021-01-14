@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
 import theHexaghost.HexaMod;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.util.OnChargeSubscriber;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class LivingBombPower extends AbstractPower implements CloneablePowerInterface, OnChargeSubscriber {
 

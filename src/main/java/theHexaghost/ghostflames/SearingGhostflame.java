@@ -15,7 +15,7 @@ import theHexaghost.HexaMod;
 import theHexaghost.powers.BurnPower;
 import theHexaghost.powers.CrispyPower;
 import theHexaghost.powers.EnhancePower;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class SearingGhostflame extends AbstractGhostflame {
 

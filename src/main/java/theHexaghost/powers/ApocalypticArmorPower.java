@@ -14,7 +14,7 @@ import theHexaghost.HexaMod;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.InfernoGhostflame;
 import theHexaghost.util.OnChargeSubscriber;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class ApocalypticArmorPower extends AbstractPower implements OnChargeSubscriber, NonStackablePower {
 

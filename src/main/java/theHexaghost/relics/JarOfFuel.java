@@ -7,7 +7,7 @@ import theHexaghost.HexaMod;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.BolsteringGhostflame;
 import theHexaghost.ghostflames.SearingGhostflame;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 import static theHexaghost.HexaMod.makeRelicOutlinePath;
 import static theHexaghost.HexaMod.makeRelicPath;

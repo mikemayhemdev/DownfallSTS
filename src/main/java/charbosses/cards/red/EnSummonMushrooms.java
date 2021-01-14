@@ -1,6 +1,6 @@
 package charbosses.cards.red;
 
-import champ.util.TextureLoader;
+import downfall.util.TextureLoader;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;

@@ -1,6 +1,6 @@
 package charbosses.relics;
 
-import champ.util.TextureLoader;
+import downfall.util.TextureLoader;
 import charbosses.bosses.AbstractCharBoss;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;

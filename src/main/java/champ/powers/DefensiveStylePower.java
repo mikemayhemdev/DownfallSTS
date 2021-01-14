@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.stances.AbstractStance;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class DefensiveStylePower extends AbstractPower implements CloneablePowerInterface {
 

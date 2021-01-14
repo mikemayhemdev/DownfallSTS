@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import slimebound.SlimeboundMod;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.BurnPower;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class GoopPerTurnPower extends AbstractPower implements CloneablePowerInterface {
 

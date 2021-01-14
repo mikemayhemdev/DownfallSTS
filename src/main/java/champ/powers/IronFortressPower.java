@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import theHexaghost.HexaMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class IronFortressPower extends AbstractPower implements CloneablePowerInterface {
 

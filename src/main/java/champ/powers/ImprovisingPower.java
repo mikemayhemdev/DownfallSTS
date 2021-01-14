@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.patches.NoDiscardField;
 import theHexaghost.HexaMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class ImprovisingPower extends AbstractPower implements CloneablePowerInterface {
 

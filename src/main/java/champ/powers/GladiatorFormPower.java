@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class GladiatorFormPower extends AbstractPower implements CloneablePowerInterface, OnTechniqueSubscriber, OnFinisherSubscriber {
 

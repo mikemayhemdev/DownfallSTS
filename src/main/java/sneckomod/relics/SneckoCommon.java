@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.UnknownClass;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class SneckoCommon extends CustomRelic {
 

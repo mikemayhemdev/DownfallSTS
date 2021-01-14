@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.powers.AbstractPower;import downfall.downfallMod; import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
 import sneckomod.SneckoMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class Syncronize extends AbstractBossMechanicPower {
     public static final String POWER_ID = downfallMod.makeID("NeowSyncronize");
