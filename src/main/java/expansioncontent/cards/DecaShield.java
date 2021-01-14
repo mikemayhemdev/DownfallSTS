@@ -13,6 +13,8 @@ import expansioncontent.powers.AddCopyPower;
 public class DecaShield extends AbstractExpansionCard {
     public final static String ID = makeID("DecaShield");
 
+    public boolean isAPreview;
+
     public DecaShield(boolean noHover) {
         super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_donudeca.png", "expansioncontentResources/images/1024/bg_boss_donudeca.png");
@@ -20,8 +22,9 @@ public class DecaShield extends AbstractExpansionCard {
         isEthereal = true;
         this.exhaust = true;
         if (!noHover) {
-            AbstractCard q = new PolyBeam(true);
+            PolyBeam q = new PolyBeam(true);
             CardModifierManager.addModifier(q, new EtherealMod());
+            q.isAPreview = true;
             if (upgraded) q.upgrade();
             cardsToPreview = q;
         }
@@ -43,7 +46,7 @@ public class DecaShield extends AbstractExpansionCard {
 
     public void upgrade() {
         if (!upgraded) {
-            cardsToPreview.upgrade();
+            if (!isAPreview) cardsToPreview.upgrade();
             upgradeName();
             upgradeBlock(4);
             rawDescription = UPGRADE_DESCRIPTION;
