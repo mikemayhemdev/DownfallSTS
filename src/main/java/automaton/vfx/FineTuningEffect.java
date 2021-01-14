@@ -50,11 +50,11 @@ public class FineTuningEffect extends AbstractGameEffect {
             return;
         }
 
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < 10; i++) {
             com.megacrit.cardcrawl.dungeons.AbstractDungeon.topLevelEffectsQueue.add(new UpgradeShineParticleEffect(x +
 
-                    MathUtils.random(-10.0F, 10.0F) * Settings.scale, y +
-                    MathUtils.random(-10.0F, 10.0F) * Settings.scale));
+                    MathUtils.random(-10.0F, 10.0F) * Settings.scale * scale, y +
+                    MathUtils.random(-10.0F, 10.0F) * Settings.scale * scale));
         }
     }
 
