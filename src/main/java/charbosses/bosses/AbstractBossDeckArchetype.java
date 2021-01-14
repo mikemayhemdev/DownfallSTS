@@ -4,6 +4,7 @@ import charbosses.BossMechanicDisplayPanel;
 import charbosses.relics.AbstractCharbossRelic;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
@@ -113,7 +114,12 @@ public abstract class AbstractBossDeckArchetype {
         addToList(c, q, false);
     }
 
+    private String ID;
+
     public AbstractBossDeckArchetype(String id, String loggerClassName, String loggerArchetypeName) {
+
+        this.ID = id;
+        AbstractDungeon.lastCombatMetricKey = ID;
 
         /*
         this.ID = id;
