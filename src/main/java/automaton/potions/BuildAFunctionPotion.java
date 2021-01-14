@@ -15,6 +15,9 @@ import downfall.util.SelectCardsCenteredAction;
 
 import java.util.ArrayList;
 
+import static automaton.cards.AbstractBronzeCard.masterUI;
+import static automaton.cards.SpaghettiCode.getRandomEncodeChoices;
+
 
 public class BuildAFunctionPotion extends CustomPotion {
     public static final String POTION_ID = "bronze:BuildAFunctionPotion";
@@ -45,9 +48,9 @@ public class BuildAFunctionPotion extends CustomPotion {
 
     public void use(AbstractCreature target) {
         for (int i = 0; i < (FunctionHelper.max() - FunctionHelper.held.size()); i++) {
-            ArrayList<AbstractCard> cardsList = SpaghettiCode.getRandomEncodeChoices();
-            addToBot(new SelectCardsCenteredAction(cardsList, 1, CardCrawlGame.languagePack.getUIString("bronze:MiscStrings").TEXT[7], (cards) -> {
-                AbstractDungeon.actionManager.addToTop(new AddToFuncAction(cards.get(0), null));
+            ArrayList<AbstractCard> cardsList = getRandomEncodeChoices();
+            addToBot(new SelectCardsCenteredAction(cardsList, 1, masterUI.TEXT[7], (cards) -> {
+                addToTop(new AddToFuncAction(cards.get(0), null));
             }));
         }
         if (potency > 1) {
