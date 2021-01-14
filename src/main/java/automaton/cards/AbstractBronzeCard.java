@@ -4,6 +4,7 @@ import automaton.AutomatonChar;
 import automaton.AutomatonTextHelper;
 import automaton.FunctionHelper;
 import automaton.cardmods.EncodeMod;
+import automaton.vfx.FineTuningEffect;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.CardModifierManager;
@@ -123,6 +124,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
     }
 
     public void fineTune() {
+        AbstractDungeon.effectList.add(new FineTuningEffect(this));
         this.baseDamage += 1;
         this.damage += 1;
         this.baseBlock += 1;

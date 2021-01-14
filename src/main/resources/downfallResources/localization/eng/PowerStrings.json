@@ -100,7 +100,7 @@
   "downfall:NeowBagOfKnives": {
     "NAME": "Bag of Knives",
     "DESCRIPTIONS": [
-      "Whenever you play a #b0 cost card, Neow gains #y1 Strength."
+      "Whenever you play a #b0 cost card, take #b4 damage."
     ]
   },
   "downfall:SilentMirrorImagePower": {
@@ -161,7 +161,7 @@
   "downfall:NeowUnbiasedCognition": {
     "NAME": "Unbiased Cognition",
     "DESCRIPTIONS": [
-      "Neow gains #b1 #yStrength for every #yPower card you play."
+      "Neow gains #b2 #yStrength for every #yPower card you play."
     ]
   },
   "downfall:IroncladStatusPower": {
@@ -179,7 +179,7 @@
   "downfall:IroncladMushroomPower": {
     "NAME": "Feeding Frenzy",
     "DESCRIPTIONS": [
-      "Ironclad's Reaper does not Exhaust and targets ALL Mushrooms. NL When Ironclad kills a Mushroom, he gains #b1 Strength and heals #b20 HP."
+      "Ironclad's Reaper does not Exhaust and targets ALL Mushrooms. NL When Ironclad kills a Mushroom, he gains #b1 Strength."
     ]
   },
   "downfall:NeowFeedingFrenzy": {

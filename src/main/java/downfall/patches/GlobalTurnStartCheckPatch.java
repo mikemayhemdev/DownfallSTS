@@ -9,6 +9,7 @@ import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import javassist.CtBehavior;
 
 @SpirePatch(
@@ -28,8 +29,8 @@ public class GlobalTurnStartCheckPatch {
             }
         }
         if (AbstractCharBoss.boss != null) {
-            if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2MirrorImageNewAge) {
-                ((CharBossSilent)AbstractCharBoss.boss).spawnImage(false);
+            if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2MirrorImageNewAge && (AbstractDungeon.lastCombatMetricKey.equals("SI_MIRROR_ARCHETYPE") || AbstractDungeon.actNum == 4)) {
+                ((CharBossSilent) AbstractCharBoss.boss).spawnImage(false);
             }
         }
     }

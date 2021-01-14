@@ -19,7 +19,7 @@ import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.util.OnAdvanceOrRetractSubscriber;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 import java.util.ArrayList;
 

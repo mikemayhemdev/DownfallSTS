@@ -1,7 +1,7 @@
 {
   "downfall:SummonMushrooms": {
     "NAME": "Fungus Among Us",
-    "DESCRIPTION": "Kill all Mushrooms. NL Summon two Mushrooms."
+    "DESCRIPTION": "Kill all Mushrooms. Heal HP equal to their remaining HP. NL Summon two Mushrooms."
   },
   "downfall:Aged": {
     "NAME": "Aged",

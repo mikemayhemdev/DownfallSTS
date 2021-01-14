@@ -22,7 +22,7 @@ import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 import theHexaghost.HexaMod;
 import theHexaghost.relics.IceCube;
 import theHexaghost.relics.SoulConsumer;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 import theHexaghost.vfx.ExplosionSmallEffectGreen;
 
 public class BurnPower extends TwoAmountPower implements CloneablePowerInterface, HealthBarRenderPower {

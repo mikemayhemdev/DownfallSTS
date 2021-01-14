@@ -3,7 +3,7 @@ package automaton.relics;
 import automaton.AutomatonMod;
 import automaton.cards.FineTuning;
 import automaton.cards.FunctionCard;
-import automaton.util.TextureLoader;
+import downfall.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;

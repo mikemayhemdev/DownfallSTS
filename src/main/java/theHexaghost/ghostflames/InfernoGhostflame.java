@@ -15,7 +15,7 @@ import theHexaghost.GhostflameHelper;
 import theHexaghost.actions.AdvanceAction;
 import theHexaghost.actions.ExtinguishAction;
 import theHexaghost.powers.EnhancePower;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 import static theHexaghost.HexaMod.makeUIPath;
 

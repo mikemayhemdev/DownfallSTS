@@ -16,7 +16,7 @@ import downfall.actions.NeowRezAction;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
 import slimebound.SlimeboundMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class NeowInvulnerablePower extends AbstractPower {
     public static final String POWER_ID = downfallMod.makeID("NeowInvulnerable");
@@ -49,7 +49,7 @@ public class NeowInvulnerablePower extends AbstractPower {
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         super.onAfterUseCard(card, action);
             this.owner.heal(amount);
-        AbstractDungeon.effectsQueue.add(new HealEffect(owner.hb.cX - owner.animX, owner.hb.cY, 2));
+        //AbstractDungeon.effectsQueue.add(new HealEffect(owner.hb.cX - owner.animX, owner.hb.cY, 2));
 
 
     }

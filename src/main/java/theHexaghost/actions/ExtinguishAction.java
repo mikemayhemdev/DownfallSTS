@@ -2,15 +2,14 @@ package theHexaghost.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import theHexaghost.GhostflameHelper;
-import theHexaghost.HexaMod;
 import theHexaghost.ghostflames.AbstractGhostflame;
 
 public class ExtinguishAction extends AbstractGameAction {
-    public AbstractGhostflame cuteAnimeGirl;
+    public AbstractGhostflame flameToExtinguish;
     public int bruh = 0;
 
     public ExtinguishAction(AbstractGhostflame flame) {
-        cuteAnimeGirl = flame;
+        flameToExtinguish = flame;
     }
 
     public ExtinguishAction(int i) {
@@ -27,8 +26,8 @@ public class ExtinguishAction extends AbstractGameAction {
             if (i >= GhostflameHelper.hexaGhostFlames.size())
                 i = 0;
             else if (i == 0) i = GhostflameHelper.hexaGhostFlames.size();
-            cuteAnimeGirl = GhostflameHelper.hexaGhostFlames.get(i);
+            flameToExtinguish = GhostflameHelper.hexaGhostFlames.get(i);
         }
-        cuteAnimeGirl.extinguish();
+        flameToExtinguish.extinguish();
     }
 }

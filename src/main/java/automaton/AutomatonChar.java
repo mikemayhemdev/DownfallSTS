@@ -53,7 +53,7 @@ public class AutomatonChar extends CustomPlayer {
                 SHOULDER1,
                 SHOULDER2,
                 CORPSE,
-                getLoadout(), 0.0F, -30.0F, 270.0F, 300.0F, new EnergyManager(3));
+                getLoadout(), 0.0F, -30.0F, 270.0F, 310.0F, new EnergyManager(3));
 
         this.reloadAnimation();
 

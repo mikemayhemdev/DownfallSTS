@@ -19,7 +19,8 @@ public class PolyBeam extends AbstractExpansionCard {
 
     private static final int DAMAGE = 9;
     private static final int UPGRADE_DAMAGE = 3;
-    private boolean noHover;
+
+    public boolean isAPreview;
 
     public PolyBeam(boolean noHover) {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
@@ -28,9 +29,9 @@ public class PolyBeam extends AbstractExpansionCard {
         tags.add(expansionContentMod.STUDY);
         baseDamage = DAMAGE;
         this.exhaust = true;
-        this.noHover = noHover;
         if (!noHover) {
-            AbstractCard q = new DecaShield(true);
+            DecaShield q = new DecaShield(true);
+            q.isAPreview = true;
             if (upgraded) q.upgrade();
             cardsToPreview = q;
         }
@@ -54,7 +55,7 @@ public class PolyBeam extends AbstractExpansionCard {
 
     public void upgrade() {
         if (!upgraded) {
-            if (!this.noHover) cardsToPreview.upgrade();
+            if (!isAPreview) cardsToPreview.upgrade();
             upgradeName();
             upgradeDamage(UPGRADE_DAMAGE);
             rawDescription = UPGRADE_DESCRIPTION;

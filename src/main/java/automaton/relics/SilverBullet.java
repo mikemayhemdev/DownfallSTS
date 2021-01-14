@@ -4,7 +4,7 @@ import automaton.AutomatonMod;
 import automaton.actions.AddToFuncAction;
 import automaton.cards.Replicate;
 import automaton.cards.WhirlingStrike;
-import automaton.util.TextureLoader;
+import downfall.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;

@@ -10,9 +10,8 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import downfall.downfallMod;
-import theHexaghost.util.TextureLoader;
+import com.megacrit.cardcrawl.powers.AbstractPower;import downfall.downfallMod; import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
+import downfall.util.TextureLoader;
 
 public class SeeingDoubleProduct extends AbstractPower {
     public static final String POWER_ID = downfallMod.makeID("NeowSeeingDoubleProduct");

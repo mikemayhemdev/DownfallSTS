@@ -15,7 +15,7 @@ import downfall.cardmods.EtherealMod;
 import sneckomod.SneckoMod;
 import sneckomod.cards.SoulRoll;
 import downfall.cardmods.ExhaustMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class UnlimitedRollsPower extends AbstractPower implements CloneablePowerInterface, NonStackablePower {
 

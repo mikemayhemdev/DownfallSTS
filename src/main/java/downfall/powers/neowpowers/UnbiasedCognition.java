@@ -11,11 +11,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import downfall.downfallMod;
-import theHexaghost.util.TextureLoader;
+import com.megacrit.cardcrawl.powers.StrengthPower;import downfall.downfallMod; import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
+import downfall.util.TextureLoader;
 
-public class UnbiasedCognition extends AbstractPower {
+public class UnbiasedCognition extends AbstractBossMechanicPower {
     public static final String POWER_ID = downfallMod.makeID("NeowUnbiasedCognition");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
@@ -31,7 +30,7 @@ public class UnbiasedCognition extends AbstractPower {
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
-
+        amount = 2;
         this.name = NAME;
 
         this.updateDescription();
@@ -50,7 +49,7 @@ public class UnbiasedCognition extends AbstractPower {
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.POWER && action.target != AbstractCharBoss.boss) {
             flash();
-            addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, 1), 1));
+            addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount), this.amount));
         }
     }
 

@@ -98,7 +98,7 @@ public class AutomatonTextHelper {
         } else if (rawDescription.contains(uiStrings.TEXT[1])) {
             return uiStrings.TEXT[3] + rawDescription;
         }
-        return rawDescription + uiStrings.TEXT[3];
+        return rawDescription + uiStrings.TEXT[2];
     }
 
     public static String cleanAllCompileText(String s) {

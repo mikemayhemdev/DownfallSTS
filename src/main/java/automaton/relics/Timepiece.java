@@ -1,7 +1,7 @@
 package automaton.relics;
 
 import automaton.AutomatonMod;
-import automaton.util.TextureLoader;
+import downfall.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.CardModifierManager;
 import downfall.cardmods.RetainCardMod;

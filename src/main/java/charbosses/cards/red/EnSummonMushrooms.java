@@ -1,6 +1,6 @@
 package charbosses.cards.red;
 
-import champ.util.TextureLoader;
+import downfall.util.TextureLoader;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
@@ -48,10 +48,9 @@ public class EnSummonMushrooms extends AbstractBossCard {
         for (AbstractMonster m2 : AbstractDungeon.getMonsters().monsters) {
             if (!m2.isDead && !m2.isDying && !(m2 instanceof AbstractCharBoss) && !(m2 instanceof NeowBoss)) {
                 this.addToBot(new VFXAction(new BiteEffect(m2.hb.cX, m2.hb.cY - 20.0F * Settings.scale, Color.SCARLET.cpy()), 0.3F));
-
-                this.addToBot(new DamageAction(m2, new DamageInfo(m, 999, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
+                addToBot(new HealAction(m, m, m2.currentHealth));
                 addToBot(new WaitAction(0.1F));
-                addToBot(new HealAction(m, m, 20));
+                this.addToBot(new DamageAction(m2, new DamageInfo(m, m.currentHealth, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
                 addToBot(new WaitAction(0.1F));
                 addToBot(new ApplyPowerAction(m, m, new StrengthPower(m, 1),1));
                 addToBot(new WaitAction(0.1F));

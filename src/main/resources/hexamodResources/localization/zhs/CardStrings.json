@@ -351,5 +351,19 @@
   "hexamod:CouncilsJustice": {
     "NAME": "议会裁决",
     "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗堆中每有一张 *灵体 ，伤害增加 !M! 。 NL 消耗 。"
+  },
+  "hexamod:ForkedFlame": {
+    "NAME": "Forked Flame",
+    "DESCRIPTION": "Deal !D! damage. NL hexamod:Force-Ignite the previous, then the next Ghostflames.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL hexamod:Force-Ignite the previous, then the *Active, then the next Ghostflames."
+  },
+  "hexamod:FlameSwitch": {
+    "NAME": "Bad Omen",
+    "DESCRIPTION": "Ethereal. NL Replace the hexamod:Active Ghostflame with a hexamod:Crushing or hexamod:Bolstering one. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Replace the hexamod:Active Ghostflame with a hexamod:Crushing or hexamod:Bolstering one. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Replace the hexamod:Active Ghostflame with a hexamod:Bolstering Ghostflame",
+      "Replace the hexamod:Active Ghostflame with a hexamod:Crushing Ghostflame"
+    ]
   }
 }

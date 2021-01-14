@@ -4,9 +4,9 @@ import charbosses.BossMechanicDisplayPanel;
 import charbosses.relics.AbstractCharbossRelic;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import downfall.downfallMod;
-import downfall.monsters.NeowBoss;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -84,7 +84,7 @@ public abstract class AbstractBossDeckArchetype {
     public boolean upgradeAllAttacks = false;
     */
 
-    public void addedPreBattle(){
+    public void addedPreBattle() {
         initializeBossPanel();
     }
 
@@ -102,7 +102,7 @@ public abstract class AbstractBossDeckArchetype {
         c.add(q);
     }
 
-    public void initializeBossPanel(){
+    public void initializeBossPanel() {
         if (bossMechanicDesc != null) {
             BossMechanicDisplayPanel.mechanicName = bossMechanicName;
             BossMechanicDisplayPanel.mechanicDesc = bossMechanicDesc;
@@ -113,7 +113,13 @@ public abstract class AbstractBossDeckArchetype {
         addToList(c, q, false);
     }
 
+    private String ID;
+
     public AbstractBossDeckArchetype(String id, String loggerClassName, String loggerArchetypeName) {
+
+        this.ID = id;
+        if (AbstractDungeon.actNum != 4)
+            AbstractDungeon.lastCombatMetricKey = ID;
 
         /*
         this.ID = id;

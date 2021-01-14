@@ -55,7 +55,6 @@ public class SilentShivTimeEaterPower extends AbstractBossMechanicPower {
             if (this.amount == 1) {
                 this.amount = 0;
                 this.flashWithoutSound();
-                this.playApplyPowerSfx();
                // CardCrawlGame.sound.playA("POWER_TIME_WARP", 0.25F);
                // AbstractDungeon.topLevelEffectsQueue.add(new TimeWarpTurnEndEffect());
                 //this.addToBot(new ApplyPowerAction(this.owner, this.owner, new EnemyAccuracyPower(this.owner, 1), 1));

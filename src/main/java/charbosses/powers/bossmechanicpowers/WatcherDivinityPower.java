@@ -35,10 +35,6 @@ public class WatcherDivinityPower extends AbstractBossMechanicPower {
         this.type = PowerType.BUFF;
     }
 
-    public void playApplyPowerSfx() {
-        CardCrawlGame.sound.play("POWER_TIME_WARP", 0.05F);
-    }
-
     @Override
     public void atStartOfTurn() {
         addToBot(new ReducePowerAction(this.owner, this.owner, EnemyMantraPower.POWER_ID, 5));

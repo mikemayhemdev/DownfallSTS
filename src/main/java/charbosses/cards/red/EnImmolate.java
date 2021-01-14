@@ -29,7 +29,7 @@ public class EnImmolate extends AbstractBossCard {
         super(ID, cardStrings.NAME, "red/attack/immolate", 2, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.RARE, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 21;
         this.tags.add(CardTags.STRIKE);
-        this.cardsToPreview = new Wound();
+        this.cardsToPreview = new Burn();
         this.tags.add(downfallMod.CHARBOSS_ATTACK);
     }
 

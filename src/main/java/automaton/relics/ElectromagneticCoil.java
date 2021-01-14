@@ -2,7 +2,7 @@ package automaton.relics;
 
 import automaton.AutomatonMod;
 import automaton.FunctionHelper;
-import automaton.util.TextureLoader;
+import downfall.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.Settings;
