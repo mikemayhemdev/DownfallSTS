@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import downfall.downfallMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class EndOfTurnStrengthDex extends AbstractPower {
     public static final String POWER_ID = downfallMod.makeID("NeowBuff");

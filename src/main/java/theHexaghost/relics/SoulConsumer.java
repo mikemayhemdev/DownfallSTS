@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.BurnPower;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 import static theHexaghost.HexaMod.makeRelicOutlinePath;
 import static theHexaghost.HexaMod.makeRelicPath;

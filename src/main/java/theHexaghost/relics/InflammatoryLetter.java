@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.EnhancePower;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 import static theHexaghost.HexaMod.makeRelicOutlinePath;
 import static theHexaghost.HexaMod.makeRelicPath;

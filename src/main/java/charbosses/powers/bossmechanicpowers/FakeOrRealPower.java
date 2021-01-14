@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.downfallMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class FakeOrRealPower extends AbstractPower implements CloneablePowerInterface, InvisiblePower {
 

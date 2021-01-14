@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import downfall.cardmods.RetainCardMod;
 import sneckomod.SneckoMod;
 import sneckomod.cards.Cheat;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class SleevedAce extends CustomRelic {
 

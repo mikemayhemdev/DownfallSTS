@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.EnhancePower;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 import static theHexaghost.GhostflameHelper.activeGhostFlame;
 

@@ -44,7 +44,7 @@ import theHexaghost.potions.SoulburnPotion;
 import theHexaghost.relics.*;
 import theHexaghost.util.BurnVariable;
 import theHexaghost.util.CardFilter;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 import java.io.File;
 import java.net.URISyntaxException;

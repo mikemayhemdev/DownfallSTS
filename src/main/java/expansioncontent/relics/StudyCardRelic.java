@@ -13,7 +13,7 @@ import expansioncontent.cards.StudyTheSpire;
 import expansioncontent.expansionContentMod;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.vfx.TinyHatParticle;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 import static expansioncontent.expansionContentMod.makeRelicOutlinePath;
 import static expansioncontent.expansionContentMod.makeRelicPath;

@@ -15,7 +15,7 @@ import expansioncontent.expansionContentMod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 
 public class StudyTheSpirePower extends AbstractPower implements NonStackablePower {

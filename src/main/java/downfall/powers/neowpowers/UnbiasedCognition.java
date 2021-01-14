@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;import downfall.downfallMod; import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class UnbiasedCognition extends AbstractBossMechanicPower {
     public static final String POWER_ID = downfallMod.makeID("NeowUnbiasedCognition");

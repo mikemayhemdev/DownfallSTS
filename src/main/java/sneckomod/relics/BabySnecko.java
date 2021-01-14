@@ -10,7 +10,7 @@ import downfall.vfx.CustomAnimatedNPC;
 import slimebound.SlimeboundMod;
 import sneckomod.SneckoMod;
 import sneckomod.actions.BabySneckoAttackAction;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class BabySnecko extends CustomRelic {
 

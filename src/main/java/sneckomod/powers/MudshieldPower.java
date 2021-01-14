@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import sneckomod.SneckoMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class MudshieldPower extends AbstractPower implements CloneablePowerInterface {
 

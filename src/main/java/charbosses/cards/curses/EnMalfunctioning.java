@@ -1,6 +1,6 @@
 package charbosses.cards.curses;
 
-import champ.util.TextureLoader;
+import downfall.util.TextureLoader;
 import charbosses.actions.common.EnemyMakeTempCardInHandAction;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.status.EnSlimed;

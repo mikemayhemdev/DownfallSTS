@@ -1,7 +1,7 @@
 package sneckomod;
 
 import automaton.AutomatonMod;
-import automaton.util.TextureLoader;
+import downfall.util.TextureLoader;
 import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import basemod.abstracts.CustomUnlockBundle;

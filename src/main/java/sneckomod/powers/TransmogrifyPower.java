@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import sneckomod.SneckoMod;
 import sneckomod.util.TransmogrifyLinkedReward;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class TransmogrifyPower extends AbstractPower implements NonStackablePower {
 

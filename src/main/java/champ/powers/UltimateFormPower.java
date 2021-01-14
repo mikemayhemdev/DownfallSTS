@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class UltimateFormPower extends AbstractPower implements CloneablePowerInterface {
 

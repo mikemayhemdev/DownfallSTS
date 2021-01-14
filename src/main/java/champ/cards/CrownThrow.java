@@ -2,7 +2,7 @@ package champ.cards;
 
 import basemod.helpers.VfxBuilder;
 import champ.powers.BoomerangPower;
-import champ.util.TextureLoader;
+import downfall.util.TextureLoader;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;

@@ -6,7 +6,7 @@ import champ.actions.OpenerReduceCostAction;
 import champ.powers.UltimateFormPower;
 import champ.stances.UltimateStance;
 import champ.util.OnOpenerSubscriber;
-import champ.util.TextureLoader;
+import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;

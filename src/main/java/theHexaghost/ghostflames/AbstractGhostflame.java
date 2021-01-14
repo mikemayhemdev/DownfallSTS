@@ -18,7 +18,7 @@ import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
 import theHexaghost.actions.GreenFlameAction;
 import theHexaghost.util.OnChargeSubscriber;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 import theHexaghost.vfx.MyOrb;
 
 import static theHexaghost.GhostflameHelper.activeGhostFlame;

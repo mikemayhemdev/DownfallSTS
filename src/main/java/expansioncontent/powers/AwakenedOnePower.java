@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import expansioncontent.expansionContentMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 
 public class AwakenedOnePower extends AbstractPower {

@@ -7,7 +7,7 @@ import automaton.cards.FunctionCard;
 import automaton.powers.*;
 import automaton.relics.ElectromagneticCoil;
 import automaton.relics.OnCompileRelic;
-import automaton.util.TextureLoader;
+import downfall.util.TextureLoader;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;

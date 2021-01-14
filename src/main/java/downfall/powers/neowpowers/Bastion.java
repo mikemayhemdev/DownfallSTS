@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.powers.BarricadePower;
 import com.megacrit.cardcrawl.powers.MetallicizePower;
 import downfall.downfallMod;
 import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class Bastion extends AbstractBossMechanicPower {
     public static final String POWER_ID = downfallMod.makeID("NeowBastion");

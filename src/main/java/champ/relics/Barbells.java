@@ -2,7 +2,7 @@ package champ.relics;
 
 import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
-import champ.util.TextureLoader;
+import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;

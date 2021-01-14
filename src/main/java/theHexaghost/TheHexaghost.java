@@ -32,7 +32,7 @@ import theHexaghost.cards.Sear;
 import theHexaghost.cards.Strike;
 import theHexaghost.ghostflames.*;
 import theHexaghost.relics.SpiritBrand;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 import theHexaghost.vfx.MyBody;
 
 import java.util.ArrayList;

@@ -1,7 +1,7 @@
 package charbosses.cards.curses;
 
 import basemod.helpers.CardModifierManager;
-import champ.util.TextureLoader;
+import downfall.util.TextureLoader;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import com.badlogic.gdx.graphics.Color;

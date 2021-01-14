@@ -16,7 +16,7 @@ import downfall.actions.NeowRezAction;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
 import slimebound.SlimeboundMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class NeowInvulnerablePower extends AbstractPower {
     public static final String POWER_ID = downfallMod.makeID("NeowInvulnerable");

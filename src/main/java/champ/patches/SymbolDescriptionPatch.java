@@ -1,7 +1,7 @@
 package champ.patches;
 
 import champ.ChampMod;
-import champ.util.TextureLoader;
+import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;

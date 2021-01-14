@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
 import theHexaghost.util.OnRetractSubscriber;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class PastPower extends AbstractPower implements CloneablePowerInterface, OnRetractSubscriber {
 
