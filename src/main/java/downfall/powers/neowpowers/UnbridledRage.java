@@ -6,11 +6,10 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import downfall.downfallMod;
+import com.megacrit.cardcrawl.powers.StrengthPower;import downfall.downfallMod; import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
 import theHexaghost.util.TextureLoader;
 
-public class UnbridledRage extends AbstractPower {
+public class UnbridledRage extends AbstractBossMechanicPower {
     public static final String POWER_ID = downfallMod.makeID("NeowUnbridledRage");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;

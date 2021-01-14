@@ -11,11 +11,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import downfall.downfallMod;
+import com.megacrit.cardcrawl.powers.StrengthPower;import downfall.downfallMod; import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
 import theHexaghost.util.TextureLoader;
 
-public class UnbiasedCognition extends AbstractPower {
+public class UnbiasedCognition extends AbstractBossMechanicPower {
     public static final String POWER_ID = downfallMod.makeID("NeowUnbiasedCognition");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;

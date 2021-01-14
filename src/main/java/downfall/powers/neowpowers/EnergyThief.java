@@ -11,11 +11,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import downfall.downfallMod;
+import com.megacrit.cardcrawl.powers.AbstractPower;import downfall.downfallMod; import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
 import theHexaghost.util.TextureLoader;
 
-public class EnergyThief extends AbstractPower {
+public class EnergyThief extends AbstractBossMechanicPower {
     public static final String POWER_ID = downfallMod.makeID("NeowEnergyThief");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;

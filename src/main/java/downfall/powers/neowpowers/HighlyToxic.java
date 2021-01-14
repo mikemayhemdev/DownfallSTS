@@ -8,11 +8,10 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import downfall.downfallMod;
+import com.megacrit.cardcrawl.powers.AbstractPower;import downfall.downfallMod; import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
 import theHexaghost.util.TextureLoader;
 
-public class HighlyToxic extends AbstractPower {
+public class HighlyToxic extends AbstractBossMechanicPower {
     public static final String POWER_ID = downfallMod.makeID("NeowHighlyToxic");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;

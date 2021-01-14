@@ -10,11 +10,10 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import downfall.downfallMod;
+import com.megacrit.cardcrawl.powers.StrengthPower;import downfall.downfallMod; import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
 import theHexaghost.util.TextureLoader;
 
-public class BlasphemersDemise extends AbstractPower {
+public class BlasphemersDemise extends AbstractBossMechanicPower {
     public static final String POWER_ID = downfallMod.makeID("NeowBlasphemersDemise");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
