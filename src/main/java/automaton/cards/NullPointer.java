@@ -4,9 +4,12 @@ import automaton.AutomatonMod;
 import automaton.cardmods.UnplayableMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.ViceCrushEffect;
 
 public class NullPointer extends AbstractBronzeCard {
 
@@ -29,7 +32,8 @@ public class NullPointer extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.LIGHTNING);
+        atb(new VFXAction(new ViceCrushEffect(m.hb.cX, m.hb.cY), 0.5F));
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         blck();
     }
 
