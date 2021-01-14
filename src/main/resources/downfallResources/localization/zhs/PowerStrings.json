@@ -203,7 +203,7 @@
   "downfall:MerchantStrengthPower": {
     "NAME": "灵魂窃取",
     "DESCRIPTIONS": [
-      "Merchant still has the Strength it earned from Soul Steal this run, and gains an equal amount of Dexterity."
+      " #y商人 仍留有本局灵魂窃取获得的 #y力量 。同时还获得了等量的 #y敏捷 。"
     ]
   },
   "downfall:NeowMantra": {
