@@ -11,6 +11,8 @@ import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.GainPowerEffect;
+import downfall.monsters.NeowBoss;
+import downfall.monsters.NeowBossFinal;
 
 import java.util.ArrayList;
 
@@ -29,6 +31,11 @@ public abstract class AbstractBossMechanicPower extends AbstractPower {
                 this.timer = 1F;
                 if (AbstractCharBoss.boss != null) {
                     if (AbstractCharBoss.boss.hb.hovered) {
+                        firstTurn = false;
+                    }
+                }
+                if (NeowBossFinal.neowboss != null) {
+                    if (NeowBossFinal.neowboss.hb.hovered){
                         firstTurn = false;
                     }
                 }

@@ -30,7 +30,7 @@ public class UnbiasedCognition extends AbstractBossMechanicPower {
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
-
+        amount = 2;
         this.name = NAME;
 
         this.updateDescription();
@@ -49,7 +49,7 @@ public class UnbiasedCognition extends AbstractBossMechanicPower {
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.POWER && action.target != AbstractCharBoss.boss) {
             flash();
-            addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, 1), 1));
+            addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount), this.amount));
         }
     }
 
