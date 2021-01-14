@@ -509,5 +509,12 @@
     "DESCRIPTIONS": [
       "When you would die, heal to #b100% of your Max HP instead (works once)."
     ]
+  },
+  "downfall:TestRelic": {
+    "NAME": "VFX Tester",
+    "FLAVOR": "When it index oobs, you did it.",
+    "DESCRIPTIONS": [
+      "#pRight #pClick: Play the next card."
+    ]
   }
 }
