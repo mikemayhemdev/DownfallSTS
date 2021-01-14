@@ -46,7 +46,6 @@ public class EnReaper extends AbstractBossCard {
                 addToBot(new VampireDamageAction(q, new DamageInfo(m, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
                 //TODO - Technically this won't work if a modded effect has given the mushrooms Block or Buffer or something.  If that ends up being a problem, we'll need a custom action here.
                 if (q.currentHealth <= damage){
-                    addToBot(new HealAction(m, m, 20));
                     addToBot(new WaitAction(0.1F));
                     addToBot(new ApplyPowerAction(m, m, new StrengthPower(m, 1),1));
                 }
