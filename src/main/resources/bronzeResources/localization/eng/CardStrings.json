@@ -613,8 +613,8 @@
   },
   "bronze:FindAndReplace": {
     "NAME": "Find and Replace",
-    "DESCRIPTION": "Put a card from your draw or discard pile into your hand. NL Add a Dazed where it was. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Put a card from your draw or discard pile into your hand. NL Add a Dazed where it was."
+    "DESCRIPTION": "Ethereal. NL Put a card from your draw or discard pile into your hand. NL Add a Dazed where it was. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Put a card from your draw or discard pile into your hand. NL Add a Dazed where it was. NL Exhaust."
   },
   "bronze:ThunderWave": {
     "NAME": "Thunder Wave",
