@@ -179,7 +179,7 @@
   "downfall:IroncladMushroomPower": {
     "NAME": "Feeding Frenzy",
     "DESCRIPTIONS": [
-      "Ironclad's Reaper does not Exhaust and targets ALL Mushrooms. NL When Ironclad kills a Mushroom, he gains #b1 Strength and heals #b20 HP."
+      "Ironclad's Reaper does not Exhaust and targets ALL Mushrooms. NL When Ironclad kills a Mushroom, he gains #b1 Strength."
     ]
   },
   "downfall:NeowFeedingFrenzy": {

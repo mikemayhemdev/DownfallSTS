@@ -24,7 +24,7 @@ public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
     public ArchetypeAct2MushroomsNewAge() {
         super("IC_MUSHROOM_ARCHETYPE", "Mushroom");
 
-        maxHPModifier += 200;
+        maxHPModifier += 160;
         actNum = 2;
     }
 
