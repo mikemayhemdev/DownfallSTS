@@ -43,7 +43,7 @@
   },
   "bronze:MakeshiftBattery": {
     "NAME": "备用电池",
-    "FLAVOR": "足足有8.99伏特。",
+    "FLAVOR": "足足有8。99伏特。",
     "DESCRIPTIONS": [
       "每回合开始时获得 [E] ，将一张随机 #y状态牌 加入弃牌堆。"
     ]
@@ -67,7 +67,7 @@
     "FLAVOR": "更新日志: 提升用户体验。",
     "DESCRIPTIONS": [
       "替换 ",
-      ".[] NL 每场战斗，你生成的前 #b3 张 #y方法 该回合费用降低 #b1 。"
+      "。[] NL 每场战斗，你生成的前 #b3 张 #y方法 该回合费用降低 #b1 。"
     ]
   },
   "bronze:BottledCode": {

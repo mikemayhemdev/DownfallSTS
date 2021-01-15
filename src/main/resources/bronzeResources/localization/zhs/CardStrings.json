@@ -88,7 +88,7 @@
   },
   "bronze:DelayedSlice": {
     "NAME": "延时切割",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 所有敌人失去 !M! 生命。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 所有敌人失去 !M! 点生命。",
     "EXTENDED_DESCRIPTION": [
       "延时",
       "切割"
@@ -193,7 +193,7 @@
   },
   "bronze:Deprecate": {
     "NAME": "屏蔽",
-    "DESCRIPTION": "对所有敌人给予 !M! 层 虚弱 。 NL bronze:编译 - 获得 !bauto! 层 虚弱 。",
+    "DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL bronze:编译 - 获得 !bauto! 层 虚弱 。",
     "EXTENDED_DESCRIPTION": [
       "旧版",
       "羞辱"
@@ -228,7 +228,7 @@
   },
   "bronze:Batch": {
     "NAME": "批处理",
-    "DESCRIPTION": "立即从 *队列 生成一张 *方法 。 NL 消耗。",
+    "DESCRIPTION": "立即从 *队列 生成一张 *方法 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "立即从 *队列 生成一张 *方法 。"
   },
   "bronze:Constructor": {
@@ -250,12 +250,12 @@
   },
   "bronze:Overload": {
     "NAME": "过载",
-    "DESCRIPTION": "打出 *队列 中的牌的复制品。 它们不进行 编码 。 NL 消耗。",
+    "DESCRIPTION": "打出 *队列 中的牌的复制品。 它们不进行 编码 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "打出 *队列 中的牌的复制品。它们不进行 编码 。"
   },
   "bronze:GetLatest": {
     "NAME": "最新素材",
-    "DESCRIPTION": "将一张有 bronze:编码 的随机牌加入手牌。 NL 它费用为0。 NL 消耗。"
+    "DESCRIPTION": "将一张有 bronze:编码 的随机牌加入手牌。 NL 它费用为0。 NL 消耗 。"
   },
   "bronze:Flail": {
     "NAME": "乱斗",
@@ -291,7 +291,7 @@
   },
   "bronze:BronzeOrb": {
     "NAME": "铜制圆球",
-    "DESCRIPTION": " 固有 。 NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL bronze:编码 抽牌堆随机一张可 bronze:编码 的牌。 NL 消耗。"
+    "DESCRIPTION": " 固有 。 NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL bronze:编码 抽牌堆随机一张可 bronze:编码 的牌。 NL 消耗 。"
   },
   "bronze:Virus": {
     "NAME": "病毒",
@@ -427,7 +427,7 @@
   },
   "bronze:Return": {
     "NAME": "返回",
-    "DESCRIPTION": "获得 [E] 。 NL 接下来的X回合开始时，获得 [E] 并抽1张牌。 NL 消耗。",
+    "DESCRIPTION": "获得 [E] 。 NL 接下来的X回合开始时，获得 [E] 并抽1张牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "获得 [E] 。 NL 接下来的X回合开始时，获得 [E] 并抽1张牌。 "
   },
   "bronze:ForceShield": {
@@ -582,7 +582,7 @@
   },
   "bronze:TinkerersToolbox": {
     "NAME": "开发工具",
-    "DESCRIPTION": "保留。 NL 在 *调试 ， *批处理 和 *反编译 中选择加入手牌。 NL 消耗。",
+    "DESCRIPTION": "保留。 NL 在 *调试 ， *批处理 和 *反编译 中选择加入手牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "保留。 NL 在 *调试 ， *批处理 和 *反编译 中选择加入手牌。"
   },
   "bronze:Refactor": {
@@ -605,7 +605,7 @@
   },
   "bronze:BuggyMess": {
     "NAME": "多重错误",
-    "DESCRIPTION": "bronze:插入 随机状态牌 。 NL 获得 !M! [E] 。",
+    "DESCRIPTION": "bronze:插入 随机状态牌 。 NL 获得 [E] 。",
     "EXTENDED_DESCRIPTION": [
       "错误的",
       "混乱"

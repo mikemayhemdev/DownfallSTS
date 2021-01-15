@@ -2,29 +2,35 @@
   {
     "PROPER_NAME": "编码",
     "NAMES": [
-      "编码"
+      "编码",
+      "encode",
+      "encoded"
     ],
-    "DESCRIPTION": "将牌加入 序列 . NL 当序列中有3张牌时, 它们的效果保留，融合成一张新的 能力卡 .费用为最高的融合素材费用."
+    "DESCRIPTION": "将牌加入 序列 。 NL 当序列中有3张牌时, 它们的效果保留，融合成一张新的 能力卡 。费用为最高的融合素材费用。"
   },
   {
     "PROPER_NAME": "编译",
     "NAMES": [
-      "编译"
+      "编译",
+      "compile",
+      "compiled"
     ],
-    "DESCRIPTION": "当该牌进入 序列 时，融合的 能力卡 附加以下效果."
+    "DESCRIPTION": "当该牌进入 序列 时，融合的 能力卡 附加以下效果。"
   },
   {
     "PROPER_NAME": "残影",
     "NAMES": [
-      "残影"
+      "残影",
+      "blur"
     ],
-    "DESCRIPTION": " #y格挡 不会在回合结束时消失."
+    "DESCRIPTION": " #y格挡 不会在回合结束时消失。"
   },
   {
     "PROPER_NAME": "插入",
     "NAMES": [
-      "插入"
+      "插入",
+      "insert"
     ],
-    "DESCRIPTION": "将一张牌加入抽牌堆."
+    "DESCRIPTION": "将一张牌加入抽牌堆。"
   }
 ]

@@ -40,7 +40,7 @@
     "DESCRIPTION": "每回合开始时，将一张带有虚无的随机编码牌加入手牌。基础打击防御带有编码。"
   },
   "downfall:StatusAbuse": {
-    "NAME": "Inflicted",
+    "NAME": "强加",
     "DESCRIPTION": "初始拥有备用电池、甜圈垫片、八体垫片、医疗箱和铜制神像。所有其他遗物将变为头环。"
   }
 }
