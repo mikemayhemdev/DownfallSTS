@@ -215,3 +215,32 @@ Bauble Burst - Same vfx as Wallop, or similar
 
 Gem Cannon - is it too much if we actually fired the Gems!?
 
+Hexaghost
+
+Seals - display the number onscreen like a stamp or something? I'm imagining an I, II, etc popping up somewhere for sure.
+
+Force-Ignite - orange/yellow sparks coming off of the Force-Ignited Ghostflame. will need some refactoring if we do this, as Force Ignite is currently not actually an action
+
+Poltergeist - some kind of ghostly projectile / helper / something, inspired by Summon Orb
+
+Charged Barrage - a barrage of fire, actually lobbed at the enemy
+
+Doomsday - when the power triggers during Ignition, light up the screen edges orange
+
+Rain of Embers - embers fall from the sky
+
+Sixth Seal - card reward has spooky particles coming off it in the rewards screen?
+
+Heat Metal - enemy bursts into green flames when the Soulburn reapplication happens
+
+Ghost Lash - send a swirling ghostly thing at an enemy? Moving like the ghosts in Haunting Echo's art
+
+Ghostflame Wall - green version of flame barrier, if I haven't already done that
+
+Incorporeal - Fade in and out of existence, temporary like Puddle Form
+
+Radiant Flame - this could be another spot for a helper-esque thing.
+
+Unleash Spirits - Same swirling ghost into the enemy effect as Ghost Lash, but for every card?
+
+Searing Wound - Some kind of pain effect
