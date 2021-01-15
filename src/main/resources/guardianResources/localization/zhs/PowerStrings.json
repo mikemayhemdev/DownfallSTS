@@ -17,9 +17,9 @@
   "Guardian:FloatingOrbsPower": {
     "NAME": "浮动圆球",
     "DESCRIPTIONS": [
-      "在你的回合开始时, 增加一张 圆球撞击 在你的手牌中。",
+      "在你的回合开始时, 增加一张 #y圆球撞击 在你的手牌中。",
       "在你的回合开始时，增加 ",
-      " 张 圆球撞击 在你的手牌中。"
+      " 张 #y圆球撞击 在你的手牌中。"
     ]
   },
   "Guardian:OrbwalkPower": {
@@ -32,9 +32,9 @@
   "Guardian:ClonePower": {
     "NAME": "重连",
     "DESCRIPTIONS": [
-      "将打出的下张非消耗攻击或技能牌将凝滞。",
+      "将打出的下张非消耗 #y攻击 或 #y技能 牌将凝滞。",
       "将打出的下 ",
-      " 张非消耗攻击或技能牌将凝滞。"
+      " 张非消耗 #y攻击 或 #y技能 牌将凝滞。"
     ]
   },
   "Guardian:GemFinderPower": {
@@ -42,15 +42,15 @@
     "DESCRIPTIONS": [
       "在战斗结束后，选择一个普通宝石加入你的牌库。",
       "在战斗结束后，选择 ",
-      " 个普通宝石加入你的牌库。"
+      " 个普通 #y宝石 加入你的牌库。"
     ]
   },
   "Guardian:FuturePlansPower": {
     "NAME": "未来计划",
     "DESCRIPTIONS": [
       "在你的回合结束时，选择 #b",
-      " 张牌凝滞。",
-      " 张牌凝滞。"
+      " 张牌 #y凝滞 。",
+      " 张牌 #y凝滞 。"
     ]
   },
   "Guardian:DefenseModePower": {
@@ -93,7 +93,7 @@
   "Guardian:BeamBuffPower": {
     "NAME": "装填",
     "DESCRIPTIONS": [
-      "射线牌额外获得 ",
+      " #y射线 牌额外造成 ",
       " 点伤害。"
     ]
   },
@@ -131,8 +131,7 @@
     "NAME": "模式转换",
     "DESCRIPTIONS": [
       "当你失去 #b",
-      " 点生命时，获得 #b10 点格挡，进入 #y防御模式。 NL 每次启用模式转换时，激活所需的量增加 #b10 。",
-      "模式转换本回合已经激活。"
+      " 点生命时，获得 #b10 点格挡，进入 #y防御模式。 NL 每次启用模式转换时，激活所需的量增加 #b10 。"
     ]
   },
   "Guardian:ExhaustStatusesPower": {
@@ -144,11 +143,10 @@
     ]
   },
   "Guardian:RevengePower": {
-    "NAME": "复仇",
+    "NAME": "复仇协议",
     "DESCRIPTIONS": [
-      "离开 #y防御模式 时，获得 ",
-      " 点防御模式持续回合数的 力量 。 NL 目前将获得",
-      " 点 临时 力量 。"
+      "处于 #y防御模式 时，拥有 #b",
+      " 点 #y力量 。"
     ]
   },
   "Guardian:StasisEnginePower": {
