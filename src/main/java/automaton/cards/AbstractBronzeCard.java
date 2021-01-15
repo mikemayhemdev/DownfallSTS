@@ -183,9 +183,9 @@ public abstract class AbstractBronzeCard extends CustomCard {
     }
 
     public String getSpecialCompileText() {
-        String[] splitText = this.rawDescription.split("bronze:Compile");
+        String[] splitText = this.rawDescription.split(CardCrawlGame.languagePack.getUIString("bronze:AutoTextHelper").TEXT[1]);
         String compileText = splitText[1];
-        return (compileText.replaceAll("bronze:", "#y").replaceAll("!D!", String.valueOf(this.damage)).replaceAll("!B!", String.valueOf(this.block)).replaceAll("!M!", String.valueOf(this.magicNumber)).replaceAll("!bauto!", (String.valueOf(this.auto))).replace("*", "#y"));
+        return (compileText.replaceAll(getModID() + ":", "#y").replaceAll("!D!", String.valueOf(this.damage)).replaceAll("!B!", String.valueOf(this.block)).replaceAll("!M!", String.valueOf(this.magicNumber)).replaceAll("!bauto!", (String.valueOf(this.auto))).replace("*", "#y"));
     }
 
     public abstract void upp();
