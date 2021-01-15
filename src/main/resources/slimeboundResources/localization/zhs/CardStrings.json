@@ -250,7 +250,8 @@
   },
   "Slimebound:RainOfGoop": {
     "NAME": "黏液雨",
-    "DESCRIPTION": "给予随机一名敌人 NL !SlimeboundSlimed! 层 slimeboundmod:黏液 !M! 次。"
+    "DESCRIPTION": "给予随机一名敌人 NL !SlimeboundSlimed! 层 slimeboundmod:黏液 !M! 次。",
+    "UPGRADE_DESCRIPTION": "给予随机一名敌人 NL !SlimeboundSlimed! 层 slimeboundmod:黏液 !M! 次。"
   },
   "Slimebound:GoopSpray": {
     "NAME": "黏液喷射",

@@ -509,5 +509,12 @@
     "DESCRIPTIONS": [
       "当你要被杀死时，免死并回复到最大生命值的 #b100% （仅能起效一次）。"
     ]
+  },
+  "downfall:TestRelic": {
+    "NAME": "VFX Tester",
+    "FLAVOR": "When it index oobs, you did it.",
+    "DESCRIPTIONS": [
+      "#pRight #pClick: Play the next card."
+    ]
   }
 }

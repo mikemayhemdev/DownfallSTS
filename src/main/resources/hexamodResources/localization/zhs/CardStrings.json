@@ -37,8 +37,8 @@
   },
   "hexamod:SkipABeat": {
     "NAME": "空拍",
-    "DESCRIPTION": "hexamod:步进 。 NL hexamod:强制点燃 下一个鬼火。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "hexamod:步进 。 NL hexamod:强制点燃 下一个鬼火。"
+    "DESCRIPTION": "hexamod:强制点燃 下一个鬼火。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "hexamod:强制点燃 下一个鬼火。"
   },
   "hexamod:CatchUp": {
     "NAME": "及时",
@@ -97,7 +97,7 @@
     ]
   },
   "hexamod:TimeOfNeed": {
-    "NAME": "危急时刻",
+    "NAME": "久逢甘露",
     "DESCRIPTION": "保留 。 NL 将随机一张能力牌加入手牌。 NL 它的耗能直到打出前变为0。 NL 消耗 。"
   },
   "hexamod:SwordOfDarkness": {
@@ -152,8 +152,11 @@
   },
   "hexamod:GiftsFromTheDead": {
     "NAME": "深处之礼",
-    "DESCRIPTION": "不能被打出 。 NL 虚无 ， hexamod:阴世 。 NL 每当一张 虚无 牌 消耗 时，抽一张牌。",
-    "UPGRADE_DESCRIPTION": "不能被打出 。 NL 虚无 ， hexamod:阴世 。 NL 每当一张 虚无 牌 消耗 时，下回合获得 [E] 并抽一张牌。"
+    "DESCRIPTION": "不能被打出 。 NL 虚无 ， hexamod:阴世 。 NL 每当一张 虚无 牌 消耗 时，下回合获得 [E]。",
+    "UPGRADE_DESCRIPTION": "不能被打出 。 NL 虚无 ， hexamod:阴世 。 NL 每当一张 虚无 牌 消耗 时，下回合获得 [E] 并抽一张牌。",
+	"EXTENDED_DESCRIPTION": [
+      "这些灵魂太强大了，无法直接召唤。"
+    ]
   },
   "hexamod:Ghostwalk": {
     "NAME": "鬼步",
@@ -173,7 +176,7 @@
   },
   "hexamod:UnleashSpirits": {
     "NAME": "释魂",
-    "DESCRIPTION": "消耗堆中每有一张 虚无 牌，对随机敌人造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "对随机敌人造成 !D! 点伤害，消耗堆中每有一张 虚无 牌重复一次。 NL 消耗 。"
   },
   "hexamod:NightmareStrike": {
     "NAME": "梦魇打击",
@@ -205,7 +208,7 @@
   },
   "hexamod:Incineration": {
     "NAME": "焚化",
-    "DESCRIPTION": "对随机敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 !M! 次。"
+    "DESCRIPTION": "对随机一名敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 !M! 次。"
   },
   "hexamod:Firestarter": {
     "NAME": "点火",
@@ -213,13 +216,13 @@
   },
   "hexamod:SearingWound": {
     "NAME": "灼热伤口",
-    "DESCRIPTION": "所有敌人失去 hexamod:灼魂 层数的生命。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "所有敌人失去 hexamod:灼魂 层数的生命。"
+    "DESCRIPTION": "所有敌人失去其 hexamod:灼魂 层数的生命。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "所有敌人失去其 hexamod:灼魂 层数的生命。"
   },
   "hexamod:ExtraCrispy": {
     "NAME": "清脆",
-    "DESCRIPTION": "每当你给予 hexamod:灼魂 时，额外给予 !M! 层。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 每当你给予 hexamod:灼魂 时，额外给予 !M! 层。"
+    "DESCRIPTION": "每当你卡牌及鬼火给予 hexamod:灼魂 时，额外给予 !M! 层。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每当你卡牌及鬼火给予 hexamod:灼魂 时，额外给予 !M! 层。"
   },
   "hexamod:GhostflameBarrier": {
     "NAME": "亡魂屏障",
@@ -299,8 +302,8 @@
   },
   "hexamod:ApocalypseNow": {
     "NAME": "启示录",
-    "DESCRIPTION": "虚无 。 NL 失去 6 点生命。 NL 获得 [E] [E] 。 NL hexamod:激活 狱焱鬼火。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 失去 6 点生命。 NL 获得 [E] [E] [E] 。 NL hexamod:激活 狱焱鬼火。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。NL 获得 [E] [E] 。 NL hexamod:激活 狱焱鬼火。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 [E] [E] [E] 。 NL hexamod:激活 狱焱鬼火。 NL 消耗 。"
   },
   "hexamod:DynamicBlow": {
     "NAME": "动态攻击",
@@ -308,7 +311,7 @@
   },
   "hexamod:Again": {
     "NAME": "复燃",
-    "DESCRIPTION": "hexamod:强制点燃 已 hexamod:激活 的鬼火。 NL 本回合不能 hexamod:步进 。"
+    "DESCRIPTION": "hexamod:强制点燃 已 hexamod:激活 的鬼火。 NL 本回合结束时不能 hexamod:步进 。"
   },
   "hexamod:RetreatToShadows": {
     "NAME": "无形",
@@ -325,7 +328,7 @@
   },
   "hexamod:SecondSeal": {
     "NAME": "第二容器",
-    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，获得 !M! 个额外的灵魂。"
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，获得 !M! 个额外的金币。"
   },
   "hexamod:ThirdSeal": {
     "NAME": "第三容器",
@@ -353,17 +356,17 @@
     "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗堆中每有一张 *灵体 ，伤害增加 !M! 。 NL 消耗 。"
   },
   "hexamod:ForkedFlame": {
-    "NAME": "Forked Flame",
-    "DESCRIPTION": "Deal !D! damage. NL hexamod:Force-Ignite the previous, then the next Ghostflames.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL hexamod:Force-Ignite the previous, then the *Active, then the next Ghostflames."
+    "NAME": "歧路火焰",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL hexamod:强制点燃 前后的鬼火。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL hexamod:强制点燃 前一个鬼火并 hexamod:激活 ，hexamod:强制点燃 下一个鬼火。"
   },
   "hexamod:FlameSwitch": {
-    "NAME": "Bad Omen",
-    "DESCRIPTION": "Ethereal. NL Replace the hexamod:Active Ghostflame with a hexamod:Crushing or hexamod:Bolstering one. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Replace the hexamod:Active Ghostflame with a hexamod:Crushing or hexamod:Bolstering one. NL Exhaust.",
+    "NAME": "恶兆",
+    "DESCRIPTION": "虚无 。 NL 将 hexamod:激活 的鬼火替换为 hexamod:碾压 或 hexamod:高热 鬼火。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL  NL 将 hexamod:激活 的鬼火替换为 hexamod:碾压 或 hexamod:高热 鬼火。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "Replace the hexamod:Active Ghostflame with a hexamod:Bolstering Ghostflame",
-      "Replace the hexamod:Active Ghostflame with a hexamod:Crushing Ghostflame"
+      "将 hexamod:激活 的鬼火替换为 hexamod:高热 鬼火。",
+      "将 hexamod:激活 的鬼火替换为 hexamod:碾压 鬼火。"
     ]
   }
 }

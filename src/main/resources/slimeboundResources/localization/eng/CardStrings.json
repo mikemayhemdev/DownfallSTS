@@ -250,7 +250,8 @@
   },
   "Slimebound:RainOfGoop": {
     "NAME": "Rain of Goop",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop to a random enemy !M! times."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop to a random enemy !M! times.",
+    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop to a random enemy !M! times."
   },
   "Slimebound:GoopSpray": {
     "NAME": "Goop Spray",
