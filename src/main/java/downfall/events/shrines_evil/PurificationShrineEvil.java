@@ -73,7 +73,7 @@ public class PurificationShrineEvil extends com.megacrit.cardcrawl.events.Abstra
 
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(CardLibrary.getCurse().makeStatEquivalentCopy(), (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT * .75F)));// 66
 
-                AbstractDungeon.player.masterDeck.removeCard((AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(1));
+                AbstractDungeon.player.masterDeck.removeCard((AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(2));
 
             }
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
