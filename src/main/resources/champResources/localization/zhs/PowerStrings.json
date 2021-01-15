@@ -163,7 +163,7 @@
     "NAME": "最后一战",
     "DESCRIPTIONS": [
       "每回合开始时，如果生命低于一半，清除所有负面效果并获得 ",
-      " 点力量。"
+      " 点 #y力量 。"
     ]
   },
     "champ:GladiatorFormPower": {

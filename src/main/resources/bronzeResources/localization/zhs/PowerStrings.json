@@ -1,138 +1,139 @@
 {
   "bronze:Cloning": {
-    "NAME": "Merge",
+    "NAME": "合并",
     "DESCRIPTIONS": [
-      "The next time you add a card to the Sequence, add an extra copy of it.",
-      "The next time you add a card to the Sequence, add #b",
-      " extra copies of it."
+      "下一次将牌加入 #y队列 时， 增加一张复制品到 队列 。",
+      "下一次将牌加入 #y队列 时, 增加 #b",
+      " 张复制品到 #y队列 。"
     ]
   },
   "bronze:Default": {
-    "NAME": "Class Default",
+    "NAME": "默认类",
     "DESCRIPTIONS": [
-      "Add a copy of ",
-      " to the next Sequence.",
-      " to the next #b",
-      " Sequences."
+      "将一张 ",
+      " 的复制品加入到下个队列。",
+      " 的复制品加入到下 #b",
+      " 队列。"
     ]
   },
   "bronze:Feature": {
-    "NAME": "It's A Feature",
+    "NAME": "这是特性",
     "DESCRIPTIONS": [
-      "Whenever you draw a #rCurse or #yStatus card, gain #b",
-      " temporary #yStrength and #b",
-      " temporary #yDexterity."
+      "当你抽到 #r诅咒 或 #y状态牌 时, 获得 #b",
+      " 点 临时 #y力量 和 #b",
+      " 点 临时 #y敏捷 。"
     ]
   },
   "bronze:InfiniteBeams": {
-    "NAME": "Infinite Beams",
+    "NAME": "无尽射线",
     "DESCRIPTIONS": [
-      "At the start of your turn, add #b1 #yMinor #yBeam into your hand.",
-      "At the start of your turn, add #b1 #yMinor #yBeam+ into your hand.",
-      "At the start of your turn, add #b",
-      " #yMinor #yBeams into your hand.",
-      "At the start of your turn, add #b",
-      " #yMinor #yBeam+s into your hand."
+      "在回合开始时, 将 #b1 张 #y微光射线 加入到手牌。",
+      "在回合开始时, 将 #b1 张 #y微光射线+ 加入到手牌。",
+      "在回合开始时, 将 #b",
+      " 张 #y微光射线 加入到手牌。",
+      "在回合开始时, 将 #b",
+      " 张 #y微光射线+ 加入到手牌。"
     ]
   },
   "bronze:Optimize": {
-    "NAME": "Optimized",
+    "NAME": "优化",
     "DESCRIPTIONS": [
-      "#yUpgrade the next card you #yEncode that can be #yUpgraded.",
-      "#yUpgrade the next #b",
-      " cards you #yEncode that can be #yUpgraded."
+      "#y升级 下一张 #y编码 的牌。",
+      "#y升级 下 #b",
+      " 张 #y编码 的牌。"
     ]
   },
   "bronze:MaxOutput": {
-    "NAME": "Max Output",
+    "NAME": "极限功率",
     "DESCRIPTIONS": [
-      "Draw #b1 additional card and add #b1 #yDazed into your draw pile each turn.",
-      "Draw #b",
-      " additional cards and add #b",
-      " #yDazed into your draw pile each turn."
+      "每回合额外抽 #b1 张牌， 每回合将 #b1 张 #y晕眩 加入到抽牌堆。",
+      "每回合额外抽 #b",
+      " 张牌， 每回合将 #b",
+      " #y晕眩 加入到抽牌堆。"
     ]
   },
   "bronze:Return": {
-    "NAME": "Returning",
+    "NAME": "数据整合",
     "DESCRIPTIONS": [
-      "At the start of your next turn, gain [E] and draw #b1 card.",
-      "At the start of your next #b",
-      " turns, gain [E] and draw #b1 card."
+      "在下回合开始时, 获得 [E] 并抽 #b1 张牌。",
+      "在下 #b",
+      " 个回合开始时, 获得 [E] 并抽 #b1 张牌。"
     ]
   },
   "bronze:Library": {
-    "NAME": "Library",
+    "NAME": "数据库",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a random card with #yEncode to your hand. NL It costs #b0.",
-      "At the start of your turn, add #b",
-      " random cards with #yEncode to your hand. NL They cost #b0."
+      "在回合开始时, 将随机一张带有 #y编码 的牌加入手牌。 NL 它的费用为 #b0。",
+      "在回合开始时, 将随机 #b",
+      " 张带有 #y编码 的牌加入手牌。 NL 它们费用为 #b0。"
     ]
   },
   "bronze:LibraryMod": {
-    "NAME": "External Library",
+    "NAME": "外部数据库",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a random card with #yEncode to your hand and give it Ethereal."
+      "在回合开始时, 将一张带有 #y编码 的随机牌加入手牌，使其获得 #y虚无 。"
     ]
   },
   "bronze:BronzeHeatsink": {
-    "NAME": "Bronze Heatsink",
+    "NAME": "铜制散热器",
     "DESCRIPTIONS": [
-      "Whenever you play a #yFunction, draw #b1 card.",
-      "Whenever you play a #yFunction, draw #b",
-      " cards."
+      "当你打出 #y方法 时, 抽 #b1 张牌。",
+      "当你打出 #y方法 时, 抽 #b",
+      " 张牌。"
     ]
   },
   "bronze:HardenedForm": {
-    "NAME": "Summon Orb",
+    "NAME": "召唤铜球",
     "DESCRIPTIONS": [
-      "Whenever you create or play a Function, gain #b",
-      " #yBlock and deal #b",
-      " damage to a random enemy."
+      "每当你生成或打出 #y方法 时，获得 #b",
+      " 点 #y格挡 并对随机敌人造成 #b",
+      " 点伤害。"
     ]
   },
   "bronze:Hardcode": {
-    "NAME": "Hardcoding",
+    "NAME": "硬编码",
     "DESCRIPTIONS": [
-      "Next time you create a Function, it goes into your deck instead of your hand.",
-      "The next #b",
-      " times you create a Function, it goes into your deck instead of your hand."
+      "下一次你生成 #y方法 时将其加入牌组。",
+      "下 #b",
+      " 次你生成 #y方法 时将其加入牌组"
     ]
   },
   "bronze:Verify": {
-    "NAME": "Sentient Form",
+    "NAME": "感知形态",
     "DESCRIPTIONS": [
-      "Whenever you #yEncode a card, increase all numbers on it by #b",
-      "."
+      "每回合第一次生成或抽到 #y方法 时，这张牌的数值提高 #b1 。",
+      "每回合前 #b",
+      " 次生成或抽到 #y方法 时，这张牌的数值提高 #b1 。"
     ]
   },
   "bronze:FreeFunction": {
-    "NAME": "Free Function",
+    "NAME": "自由方法",
     "DESCRIPTIONS": [
-      "The next Function you create costs #b0.",
-      "The next #b",
-      " Functions you create cost #b0."
+      "下一张你生成的 #y方法 耗能为 #b0 。",
+      "下 #b",
+      " 张你生成的 #y方法 耗能为 #b0 。"
     ]
   },
   "bronze:CleanCode": {
-    "NAME": "Clean Code",
+    "NAME": "简明代码",
     "DESCRIPTIONS": [
-      "Remove all negative #yCompile effects from cards in the Sequence. Lasts for #b1 more Function.",
-      "Remove all negative #yCompile effects from cards in the Sequence. Lasts for #b",
-      " Functions."
+      "下 #b1 次生成 *方法 时，移除其中 bronze:编译 的负面效果。",
+      "下 #b",
+      " 次生成 *方法 时，移除其中 bronze:编译 的负面效果。"
     ]
   },
   "bronze:CopyPaste": {
-    "NAME": "Copy Paste",
+    "NAME": "复制粘贴",
     "DESCRIPTIONS": [
-      "Your next Function is played twice this turn.",
-      "Your next #b",
-      " Functions are played twice this turn."
+      "本回合下一张 #y方法 打出两次。",
+      "本回合下 #b",
+      " 张 #y方法 打出两次。"
     ]
   },
   "bronze:FullRelease": {
-    "NAME": "Full Release",
+    "NAME": "完全公开",
     "DESCRIPTIONS": [
-      "At the start of your turn, NL "
+      "每回合开始时， NL "
     ]
   }
 }

@@ -83,7 +83,9 @@
   "champ:Backstep": {
     "NAME": "Backstep",
     "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain Block equal to your champ:Fatigue.",
-    "EXTENDED_DESCRIPTION": [" NL (Grants !B! Block.)"]
+    "EXTENDED_DESCRIPTION": [
+	" NL (Grants !B! Block.)"
+	]
   },
   "champ:Aggression": {
     "NAME": "Aggression",

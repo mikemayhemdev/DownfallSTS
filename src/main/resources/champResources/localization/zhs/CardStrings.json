@@ -143,12 +143,12 @@
   },
   "champ:TornadoPunch": {
     "NAME": "飓风拳",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:防守 champ:连段 ：每打中一名敌人，获得 !M! 层 champ:反击 。",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:防守 champ:连段 ：每打中一名敌人，获得 !M! 层 champ:反击 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:防守 champ:连段 ：每打中一名敌人，获得 !M! 层 champ:反击 和 !B! 点 格挡 。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:防守 champ:连段 ：每打中一名敌人，获得 !M! 层 champ:反击 和 !B! 点 格挡 。"
   },
   "champ:EnGarde": {
     "NAME": "待命",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果你的格挡被打破，下回合获得 !B! 点 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果你的 格挡 被打破，下回合获得 !B! 点 格挡 。"
   },
   "champ:ShieldSlam": {
     "NAME": "决胜时刻",
@@ -230,8 +230,7 @@
   },
   "champ:RapidStrikes": {
     "NAME": "连续打击",
-    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 本回合每打出过一张 champ:战术 牌再重复一次。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害三次。 NL 本回合每打出过一张 champ:战术 牌再重复一次。",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 本回合每打出过一张 champ:战术 牌再重复一次。",
     "EXTENDED_DESCRIPTION": [
       " NL （攻击 ",
       " 次）",
@@ -370,7 +369,7 @@
   },
   "champ:PerfectedStrike": {
     "NAME": "完美打击",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 你每有一张名字中有 打击 的牌，伤害+ !M! 。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 你每有一张名字中有“打击”的牌，伤害+ !M! 。"
   },
   "champ:GladiatorForm": {
     "NAME": "角斗形态",
@@ -445,7 +444,7 @@
     ]
   },
   "champ:FancyFootwork": {
-    "NAME": "Fancy Footwork",
+    "NAME": "花哨步法",
     "DESCRIPTION": "处于 champ:防守 或 champ:狂战 时才能被打出。 NL 进入另外一种姿态。 NL 抽 !M! 张牌。",
     "UPGRADE_DESCRIPTION": "处于 champ:防守 或 champ:狂战 时才能被打出。 NL 进入另外一种姿态。 NL 抽 !M! 张牌。",
     "EXTENDED_DESCRIPTION": [

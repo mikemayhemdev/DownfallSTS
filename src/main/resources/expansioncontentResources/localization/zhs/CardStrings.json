@@ -8,7 +8,7 @@
   },
   "expansioncontent:Hexaburn": {
     "NAME": "幽灵地狱",
-    "DESCRIPTION": "expansioncontent:首领 - 六火亡魂。 NL 在 !M! 回合后，对随机一名敌人造成 !D! 点伤害 6 次。 NL 消耗 。"
+    "DESCRIPTION": "expansioncontent:首领 - 六火亡魂。 NL 在 !M! 回合后，对随机一名敌人造成6点伤害6次。 NL 消耗 。"
   },
    "expansioncontent:InvincibleStrength": {
     "NAME": "坚不可摧",
@@ -57,8 +57,8 @@
   },
   "expansioncontent:QuickStudy": {
     "NAME": "快速学习",
-    "DESCRIPTION": "从3名boss中选择1名。 NL 获得对应的 expansioncontent:首领 牌。 NL 它们在打出前耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "从3名boss中选择1名。 NL 获得对应的已 升级 的 expansioncontent:首领 牌。 NL 它们在打出前耗能为0。 NL 消耗 。",
+    "DESCRIPTION": "从3名首领中选择1名。 NL 获得对应的 expansioncontent:首领 牌。 NL 它们在打出前耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "从3名首领中选择1名。 NL 获得对应的已 升级 的 expansioncontent:首领 牌。 NL 它们在打出前耗能为0。 NL 消耗 。",
 	 "EXTENDED_DESCRIPTION": [
       "选择一种首领牌。"
     ]

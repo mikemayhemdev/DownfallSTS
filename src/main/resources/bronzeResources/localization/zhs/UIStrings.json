@@ -1,51 +1,51 @@
 {
   "bronze:SpecificCardReward": {
     "TEXT": [
-      "Add ",
-      " to your deck"
+      "将 ",
+      " 加入牌组"
     ]
   },
   "bronze:UnplayableMod": {
     "TEXT": [
-      "Unplayable. NL ",
-      "ERR_NULL_PTR"
+      " 不能被打出 。 NL ",
+      " ERR_NULL_PTR "
     ]
   },
   "bronze:EncodeAndShuffleMod": {
     "TEXT": [
-      " NL bronze:Encode, then add a copy of this into your discard pile."
+      " NL bronze:编码 。将这张牌的复制品加入你的弃牌堆"
     ]
   },
   "bronze:DoublePlayModifier": {
     "TEXT": [
-      " NL Play this again."
+      " NL 再打出一次。"
     ]
   },
   "bronze:MiscStrings": {
     "TEXT": [
-      "Choose a card to return to your hand. It gains Retain.",
-      " - Increase #yCultist #yStrike's damage by #b",
-      " permanently.",
-      "ERR: SEQUENCE_EMPTY",
-      " - Add a copy of #yInfinite #yLoop to your hand with #b",
-      " more damage.",
-      "Choose a card to Mutate.",
-      "Choose a Card to Encode.",
-      "Choose a card."
+      "选择一张牌返回手牌，其获得保留",
+      " - 本局游戏提高 #y邪教打击 的伤害 #b",
+      " 点。",
+      "错误：队列为空",
+      " - 将提高 #b",
+      " 点伤害的 #y无限循环 加入手牌。",
+      "选择一张牌变化",
+      "选择一张牌编码",
+      "选择一张牌"
     ]
   },
   "bronze:AutoTextHelper": {
     "TEXT": [
-      " NL bronze:Compile",
-      "bronze:Compile",
-      " NL bronze:Encode.",
-      "bronze:Encode. NL "
+      " NL bronze:编译 ",
+      " bronze:编译 ",
+      " NL bronze:编码 。",
+      " bronze:编码 。 NL "
     ]
   },
   "bronze:CompileDisplayPanel": {
     "TEXT": [
       "When Compiled:",
-      "bronze:Compile"
+      " bronze:编译 "
     ]
   }
 }
