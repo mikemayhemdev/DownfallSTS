@@ -123,8 +123,8 @@ public abstract class AbstractBronzeCard extends CustomCard {
         }
     }
 
-    public void fineTune() {
-        AbstractDungeon.effectList.add(new FineTuningEffect(this));
+    public void fineTune(boolean effects) {
+        if (effects) AbstractDungeon.effectList.add(new FineTuningEffect(this));
         this.baseDamage += 1;
         this.damage += 1;
         this.baseBlock += 1;
