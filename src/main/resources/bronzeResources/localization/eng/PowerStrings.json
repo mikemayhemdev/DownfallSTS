@@ -101,8 +101,9 @@
   "bronze:Verify": {
     "NAME": "Sentient Form",
     "DESCRIPTIONS": [
-      "Whenever you #yEncode a card, increase all numbers on it by #b",
-      "."
+      "The first time you draw or #yCompile a Function each turn, increase all numbers on it by #b1.",
+      "The first #b",
+      " times you draw or #yCompile a Function each turn, increase all numbers on it by #b1."
     ]
   },
   "bronze:FreeFunction": {
