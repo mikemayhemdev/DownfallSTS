@@ -2,6 +2,8 @@ Adrenaline - Dots on the screen forming a pattern
 
 Bouncing Flask - Potion tossing
 
+Blizzard - falling objects from sky
+
 Bludgeon / Sunder - Massive vertical hit impact
 
 Carnage - A bunch of different attacks
@@ -107,6 +109,32 @@ Life Drain - Orangeish temp hp particles swirl from enemy to you
 Reverse Gravity - All enemies flip into the air, upside down, then fall and take impact damage
 
 Shout - Piercing Wail recolor
+
+Animator
+
+Nothing, surprisingly.
+
+The Marked
+
+Chains effect on Banish Resistance power (like Banishing Wave)
+
+Dispel Doubt - Dust on player, could be an alternate smoke bomb type effect
+
+Summon Alyssa's Blade effects - nice glow and a sprite overhead
+
+100% Spire Juice
+
+Cloud of Seagulls - nice visual of seagulls swooping in from over head.  Same movement could be attached to any sprite or effect.
+
+Senshi
+
+Burning Mandela - Nice 'make some projectiles and then launch them' effect for movement.
+
+Moon Twilight Flash - Vertical beam.  Base game idea I think, just a vertical beam.
+
+Sailor Planet Attack - Spawning and rotating of images that float around character for a bit, then attack.  Nice motion framework.
+
+Supersonic Waves - Nice fan pattern with a sound wave visual I think is unique to the mod
 
 Showman
 
