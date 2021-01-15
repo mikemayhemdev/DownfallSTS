@@ -18,21 +18,21 @@
     "NAME": "破烂史莱姆",
     "DESCRIPTION": [
       "回合开始时造成 #b",
-      " 点伤害。 NL 被 #y吸收 后在回合结束时重生。不减少生命上限。"
+      " 点伤害。 NL 被 #y吸收 后可重生。"
     ]
   },
   "Slimebound:GreedOozeSlime": {
     "NAME": "贪婪史莱姆",
     "DESCRIPTION": [
       "回合开始时造成 #b",
-      " 点伤害。 NL 被 #y吸收 后在回合结束时重生。不减少生命上限。"
+      " 点伤害。 NL 被 #y吸收 后可重生。"
     ]
   },
   "Slimebound:TorchHeadSlime": {
     "NAME": "火炬头史莱姆",
     "DESCRIPTION": [
       "回合开始时造成 #b",
-      " 点伤害。 #y潜力 对其影响加倍。"
+      " 点伤害。 #y力量 将增加其伤害。"
     ]
   },
   "Slimebound:CultistSlime": {
@@ -70,7 +70,7 @@
     "DESCRIPTION": [
       "造成 #b",
 	  " 点伤害并给予 #b",
-	  " 层 #y灼伤 。"
+	  " 层 #y灼魂 。"
     ]
   },
   "Slimebound:ChampSlime": {
@@ -113,9 +113,3 @@
     ]
   }
 }
-
-
-
-
-
-

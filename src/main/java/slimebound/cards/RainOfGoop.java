@@ -65,9 +65,6 @@ public class RainOfGoop extends AbstractSlimeboundCard {
 
             upgradeName();
             this.upgradeMagicNumber(2);
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
-
         }
 
     }

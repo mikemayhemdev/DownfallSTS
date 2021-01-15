@@ -40,7 +40,7 @@
       "torchhead_slime"
     ],
     "PROPERNAME": "火炬头史莱姆",
-    "DESCRIPTION": "发动攻击时造成 #b6 点伤害， #y潜力 对其影响翻倍。"
+    "DESCRIPTION": "发动攻击时造成 #b6 点伤害，你的 #y力量 增加其伤害。"
   },
   {
     "NAMES": [
@@ -73,7 +73,7 @@
       "leeching"
     ],
     "PROPERNAME": "水蛭史莱姆",
-    "DESCRIPTION": "发动攻击时造成 #b2 点伤害，并给予你 #b2 点 #y格挡 。"
+    "DESCRIPTION": "发动攻击时造成 #b1 点伤害，并给予你 #b3 点 #y格挡 。"
   },
     {
     "NAMES": [
@@ -122,7 +122,7 @@
       "ghostflame_slime"
     ],
     "PROPERNAME": "鬼火史莱姆",
-    "DESCRIPTION": "每回合攻击造成 #b3 点伤害并给予 #b3 层 #y灼伤 。"
+    "DESCRIPTION": "每回合攻击造成 #b3 点伤害并给予 #b3 层 #y灼魂 。"
   },
   {
     "NAMES": [
@@ -177,7 +177,7 @@
       "darkling_slime"
     ],
     "PROPER_NAME": "小黑史莱姆",
-    "DESCRIPTION": "攻击造成 #b4 点伤害。命令时，其他小黑史莱姆也会攻击。"
+    "DESCRIPTION": "攻击造成 #b3 点伤害。命令时，其他小黑史莱姆也会攻击。"
   },
   {
     "NAMES": [

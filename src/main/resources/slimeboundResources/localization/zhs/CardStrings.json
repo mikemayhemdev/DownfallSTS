@@ -24,7 +24,12 @@
   },
   "Slimebound:Replication": {
     "NAME": "复制",
-    "DESCRIPTION": "选择一张牌，在手牌中加入它的复制品。 NL 消耗 。"
+    "DESCRIPTION": "选择一张牌，在抽牌堆顶部中加入它的复制品。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择一张牌，在抽牌堆顶部中加入它的复制品。 NL 消耗 。",
+	"EXTENDED_DESCRIPTION": [
+      "选择一张牌复制到手牌。",
+      "选择一张牌复制到抽牌堆顶部。"
+    ]
   },
   "Slimebound:Overexert": {
     "NAME": "超负荷",
@@ -92,8 +97,8 @@
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "增殖形态",
+	"DESCRIPTION": "本场战斗中失去 !M! 点生命和 !M! 点生命上限。 NL 每回合你使用的第1张目标为敌人的牌将打出2次。",
     "UPGRADE_DESCRIPTION": "本场战斗中失去 !M! 点生命和 !M! 点生命上限。 NL 每回合获得 [E] ，你使用的第1张目标为敌人的牌将打出2次。",
-    "DESCRIPTION": "本场战斗中失去 !M! 点生命和 !M! 点生命上限。 NL 每回合你使用的第1张目标为敌人的牌将打出2次。",
     "EXTENDED_DESCRIPTION": [
       "需要…… 生命……"
     ]
@@ -112,7 +117,7 @@
   },
   "Slimebound:GrowthPunch": {
     "NAME": "成长拳",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL slimeboundmod:消耗黏液 -这张牌本场战斗的伤害和格挡数值提高 !M! 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL slimeboundmod:消耗黏液 -这张牌本场战斗的数值提高 !M! 。"
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "查找策略",
@@ -169,12 +174,12 @@
   },
   "Slimebound:TongueLash": {
     "NAME": "舌鞭",
-    "DESCRIPTION": "造成 !D! 点伤害。每拥有 1 张名字含 *舔舔 的牌（包括已消耗的），造成额外 !M! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。每张已 消耗 名字含 *舔舔 的牌，造成额外 !M! 点伤害。"
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "垂涎欲滴",
     "DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:消耗黏液 -将1张 *舔舔 加入手牌。 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:消耗黏液 -将1张 *舔舔 加入手牌。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:消耗黏液 -将1张 *舔舔+ 加入手牌。"
   },
   "Slimebound:AcidTongue": {
     "NAME": "黏液蔓延",
@@ -206,24 +211,23 @@
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机将2张已 消耗 的0费牌加入手牌。"
   },
   "Slimebound:FinishingTackle": {
-    "NAME": "最终冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:消耗黏液 -获得 !B! 点 格挡 。"
+    "NAME": "开幕冲撞",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:消耗黏液 -给予 !M! 层 易伤 。"
   },
   "Slimebound:LivingWall": {
     "NAME": "活体墙壁",
     "DESCRIPTION": "获得 !B! 格挡 。 NL 本回合每当你受到攻击，给予攻击者 !SlimeboundSlimed! 层 slimeboundmod:黏液 。"
   },
   "Slimebound:ComboTackle": {
-    "NAME": "连续冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 抽 1 张牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 抽 !M! 张牌。"
+    "NAME": "长矛冲撞",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 抽 !M! 张牌。"
   },
   "Slimebound:Tackle": {
     "NAME": "冲撞",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。"
   },
   "Slimebound:GoopTackle": {
-    "NAME": "开幕冲撞",
+    "NAME": "连续冲撞",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机将1张 slimeboundmod:冲撞 牌加入你的手牌。它的耗能本回合为0。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机将1张已 升级 的 slimeboundmod:冲撞 牌加入你的手牌。它的耗能本回合为0。"
   },
@@ -246,12 +250,11 @@
   },
   "Slimebound:RainOfGoop": {
     "NAME": "黏液雨",
-    "DESCRIPTION": "给予随机一名敌人 NL !SlimeboundSlimed! 层 slimeboundmod:黏液 !M! 次。",
-    "UPGRADE_DESCRIPTION": "给予随机一名敌人 NL !SlimeboundSlimed! 层 slimeboundmod:黏液 !M! 次。"
+    "DESCRIPTION": "给予随机一名敌人 NL !SlimeboundSlimed! 层 slimeboundmod:黏液 !M! 次。"
   },
   "Slimebound:GoopSpray": {
     "NAME": "黏液喷射",
-    "DESCRIPTION": "给予所有敌人 !SlimeboundSlimed! 层 slimeboundmod:黏液 和 !M! 层 易伤 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。给予所有敌人 !SlimeboundSlimed! 层 slimeboundmod:黏液 和 !M! 层 虚弱 。"
   },
   "Slimebound:MassFeed": {
     "NAME": "同质化",
@@ -290,11 +293,11 @@
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "分而治之",
-    "DESCRIPTION": "每有一只史莱姆对所有敌人造成 !D! 点伤害。 NL slimeboundmod:吸收 所有史莱姆。 NL 消耗 。"
+    "DESCRIPTION": "每有一只史莱姆对随机一名敌人造成 !D! 点伤害。 NL slimeboundmod:吸收 所有史莱姆。 NL 消耗 。"
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "召唤保护",
-    "DESCRIPTION": "每有一只史莱姆获得 !B! 点 格挡 和 1 层 bronze:残影 。 NL 消耗 。"
+    "DESCRIPTION": "每有一只史莱姆获得 !B! 点 格挡 和 1 层 bronze:残影 。 NL slimeboundmod:吸收 所有史莱姆。 NL 消耗 。"
   },
   "Slimebound:SplitBruiser": {
     "NAME": "分裂：好斗",
