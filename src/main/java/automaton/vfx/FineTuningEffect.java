@@ -25,19 +25,19 @@ public class FineTuningEffect extends AbstractGameEffect {
         if ((this.duration < 0.6F) && (!this.clang1)) {
             CardCrawlGame.sound.playA("CARD_UPGRADE", 0.1F);
             this.clang1 = true;
-            clank(owningCard.target_x - (80.0F * owningCard.targetDrawScale) * Settings.scale, owningCard.target_y + (0.0F* owningCard.targetDrawScale) * Settings.scale);
+            clank(owningCard.current_x - (80.0F * owningCard.targetDrawScale) * Settings.scale, owningCard.target_y + (0.0F* owningCard.targetDrawScale) * Settings.scale);
             //CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.HIGH, ScreenShake.ShakeDur.SHORT, false);
         }
 
         if ((this.duration < 0.2F) && (!this.clang2)) {
             this.clang2 = true;
-            clank(owningCard.target_x + (90.0F * owningCard.targetDrawScale) * Settings.scale, owningCard.target_y - (110.0F* owningCard.targetDrawScale) * Settings.scale);
+            clank(owningCard.current_x + (90.0F * owningCard.targetDrawScale) * Settings.scale, owningCard.target_y - (110.0F* owningCard.targetDrawScale) * Settings.scale);
             //CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.HIGH, ScreenShake.ShakeDur.SHORT, false);
         }
 
         this.duration -= com.badlogic.gdx.Gdx.graphics.getDeltaTime();
         if (this.duration < 0.0F) {
-            clank(owningCard.target_x + (30.0F * owningCard.targetDrawScale)* Settings.scale, owningCard.target_y + (120.0F* owningCard.targetDrawScale) * Settings.scale);
+            clank(owningCard.current_x + (30.0F * owningCard.targetDrawScale)* Settings.scale, owningCard.target_y + (120.0F* owningCard.targetDrawScale) * Settings.scale);
             this.isDone = true;
             //CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.HIGH, ScreenShake.ShakeDur.SHORT, false);
         }

@@ -34,7 +34,7 @@ public class FreeFunctionsPotion extends CustomPotion {
         for (AbstractCard q : FunctionHelper.held.group) {
             if (q instanceof AbstractBronzeCard) {
                 for (int i = 0; i < potency; i++) {
-                    ((AbstractBronzeCard) q).fineTune();
+                    ((AbstractBronzeCard) q).fineTune(true);
                 }
             }
         }

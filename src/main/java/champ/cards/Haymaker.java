@@ -1,8 +1,11 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.actions.AnimateSuplexAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class Haymaker extends AbstractChampCard {
@@ -23,6 +26,7 @@ public class Haymaker extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new AnimateSuplexAction(m));
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         if (dcombo())
             applyToEnemy(m, autoWeak(m, 2));

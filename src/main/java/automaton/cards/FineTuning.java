@@ -24,7 +24,7 @@ public class FineTuning extends AbstractBronzeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractCard q : FunctionHelper.held.group) {
             if (q instanceof AbstractBronzeCard) {
-                ((AbstractBronzeCard) q).fineTune();
+                ((AbstractBronzeCard) q).fineTune(true);
             }
         }
     }
