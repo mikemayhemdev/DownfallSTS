@@ -195,7 +195,7 @@
     "DESCRIPTION": "Gain 2 Dexterity. NL At the end of each turn, gain !M! champ:Counter."
   },
   "champ:Haymaker": {
-    "NAME": "Haymaker",
+    "NAME": "Piledriver",
     "DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: Apply 2 Vulnerable. NL *Defensive champ:Combo: Apply 2 Weak.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ",
     "EXTENDED_DESCRIPTION": [
