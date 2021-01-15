@@ -1,6 +1,9 @@
 package slimebound.cards;
 
 
+import champ.vfx.SelfSpikesEffect;
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -44,7 +47,8 @@ public class SlimeSpikes extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SelfSpikesEffect(Color.GREEN, 5, true, 0.75F)));
+                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseThornsPower(p, p, this.magicNumber), this.magicNumber));
     }
