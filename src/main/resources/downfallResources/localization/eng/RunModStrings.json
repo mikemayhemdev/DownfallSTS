@@ -36,7 +36,7 @@
     "DESCRIPTION": "All enemies gain Strength and cleanse debuffs on their next turn when reduced to 50% HP."
   },
   "downfall:Analytical": {
-    "NAME": "Analytical",
+    "NAME": "分析",
     "DESCRIPTION": "At the start of each turn, add a random card with Encode to your hand and give it Ethereal. Basic Strikes and Defends Encode."
   },
   "downfall:StatusAbuse": {

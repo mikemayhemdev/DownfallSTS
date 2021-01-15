@@ -29,12 +29,12 @@
   },
   "expansioncontent:AwakenDeath": {
     "NAME": "觉醒",
-    "DESCRIPTION": "expansioncontent:首领 - 觉醒者。 NL 获得 1点 力量 。 NL 你将要死亡时，免死并回复 !M! 生命。"
+    "DESCRIPTION": "expansioncontent:首领 - 觉醒者。 NL 获得 1 点 力量 。 NL 你将要死亡时，免死并回复 !M! 生命。"
   },
   "expansioncontent:Chronoboost": {
     "NAME": "时空加速",
-    "DESCRIPTION": "expansioncontent:首领 - 时间吞噬者。 NL 每打出12张牌，获得 2 点 力量 。",
-    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 时间吞噬者。 NL 每打出9张牌，获得 2 点 力量 。"
+    "DESCRIPTION": "expansioncontent:首领 - 时间吞噬者。 NL 每打出12张牌，获得 1 点 力量 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 时间吞噬者。 NL 获得 1 点 力量 。 NL 每打出12张牌，获得 1 点 力量 。"
   },
   "expansioncontent:PolyBeam": {
     "NAME": "甜圈爆破",
@@ -52,8 +52,8 @@
   },
   "expansioncontent:StudyTheSpire": {
     "NAME": "研究尖塔",
-    "DESCRIPTION": "接下来 !M! 回合，每回合开始时获得1张随机无色 expansioncontent:首领 牌。他们直到打出前耗能为0。",
-    "UPGRADE_DESCRIPTION": "接下来 !M! 回合，每回合开始时获得1张已 升级 的随机无色 expansioncontent:首领 牌。他们直到打出前耗能为0。"
+    "DESCRIPTION": "接下来 !M! 回合，每回合开始时获得1张随机 expansioncontent:首领 牌。他们直到打出前耗能为0。",
+    "UPGRADE_DESCRIPTION": "接下来 !M! 回合，每回合开始时获得1张已 升级 的随机 expansioncontent:首领 牌。他们直到打出前耗能为0。"
   },
   "expansioncontent:QuickStudy": {
     "NAME": "快速学习",
@@ -65,8 +65,8 @@
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "恶灵附身",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 将随机一张无色 expansioncontent:首领 牌加入你的手牌。它直到打出前耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 将随机一已 升级 的张无色 expansioncontent:首领 牌加入你的手牌。它直到打出前耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 将随机一张 expansioncontent:首领 牌加入你的手牌。它直到打出前耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 将随机一已 升级 的张 expansioncontent:首领 牌加入你的手牌。它直到打出前耗能为0。 NL 消耗 。"
   },
     "expansioncontent:KnowingSkullWish": {
     "NAME": "全知头骨",

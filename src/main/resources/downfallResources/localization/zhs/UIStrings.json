@@ -116,6 +116,12 @@
       "将一张首领牌加入牌组"
     ]
   },
+    "downfall:ColorfulCardReward": {
+    "TEXT": [
+      "将一张 ",
+      " 牌加入牌组"
+    ]
+  },
   "downfall:RunHistoryMonsterNames": {
     "TEXT": [
       "活墙壁"

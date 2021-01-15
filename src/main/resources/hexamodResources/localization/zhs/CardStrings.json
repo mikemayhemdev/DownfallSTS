@@ -15,7 +15,7 @@
     "NAME": "浮动",
     "DESCRIPTION": "虚无 。 NL 抽一张牌。 NL hexamod:步进 。",
     "UPGRADE_DESCRIPTION": "虚无 。 NL 抽一张牌。 NL 可选择 hexamod:回退 或 hexamod:步进 。",
-    "EXTENDED_DESCRIPTION": ["hexamod:步进 。","hexamod:回退 。","不动。"]
+    "EXTENDED_DESCRIPTION": [" hexamod:步进 。"," hexamod:回退 。","不动。"]
   },
   "hexamod:AdvancingGuard": {
     "NAME": "进阶防御",
@@ -73,7 +73,7 @@
   },
   "hexamod:GhostOfSpirePresent": {
     "NAME": "此刻",
-    "DESCRIPTION": "如果你开始与结束回合时 hexamod:激活 的 hexamod:鬼火 相同，获得 !M! 点 力量 。"
+    "DESCRIPTION": "如果你开始与结束回合时 hexamod:激活 的鬼火相同，获得 !M! 点 力量 。"
   },
   "hexamod:HauntingEcho": {
     "NAME": "萦绕回声",
@@ -152,7 +152,7 @@
   },
   "hexamod:GiftsFromTheDead": {
     "NAME": "深处之礼",
-    "DESCRIPTION": "不能被打出 。 NL 虚无 ， hexamod:阴世 。 NL 每当一张 虚无 牌 消耗 时，下回合获得 [E]。",
+    "DESCRIPTION": "不能被打出 。 NL 虚无 ， hexamod:阴世 。 NL 每当一张 虚无 牌 消耗 时，下回合获得 [E] 。",
     "UPGRADE_DESCRIPTION": "不能被打出 。 NL 虚无 ， hexamod:阴世 。 NL 每当一张 虚无 牌 消耗 时，下回合获得 [E] 并抽一张牌。",
 	"EXTENDED_DESCRIPTION": [
       "这些灵魂太强大了，无法直接召唤。"
@@ -302,7 +302,7 @@
   },
   "hexamod:ApocalypseNow": {
     "NAME": "启示录",
-    "DESCRIPTION": "虚无 。NL 获得 [E] [E] 。 NL hexamod:激活 狱焱鬼火。 NL 消耗 。",
+    "DESCRIPTION": "虚无 。 NL 获得 [E] [E] 。 NL hexamod:激活 狱焱鬼火。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 [E] [E] [E] 。 NL hexamod:激活 狱焱鬼火。 NL 消耗 。"
   },
   "hexamod:DynamicBlow": {
@@ -358,12 +358,12 @@
   "hexamod:ForkedFlame": {
     "NAME": "歧路火焰",
     "DESCRIPTION": "造成 !D! 点伤害。 NL hexamod:强制点燃 前后的鬼火。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL hexamod:强制点燃 前一个鬼火并 hexamod:激活 ，hexamod:强制点燃 下一个鬼火。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL hexamod:强制点燃 前一个鬼火并 hexamod:激活 ，　hexamod:强制点燃 下一个鬼火。"
   },
   "hexamod:FlameSwitch": {
     "NAME": "恶兆",
     "DESCRIPTION": "虚无 。 NL 将 hexamod:激活 的鬼火替换为 hexamod:碾压 或 hexamod:高热 鬼火。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL  NL 将 hexamod:激活 的鬼火替换为 hexamod:碾压 或 hexamod:高热 鬼火。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 将 hexamod:激活 的鬼火替换为 hexamod:碾压 或 hexamod:高热 鬼火。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "将 hexamod:激活 的鬼火替换为 hexamod:高热 鬼火。",
       "将 hexamod:激活 的鬼火替换为 hexamod:碾压 鬼火。"

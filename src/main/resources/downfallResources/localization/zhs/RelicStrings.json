@@ -448,21 +448,21 @@
     "NAME": "红宝石心脏的祝福",
     "FLAVOR": "腐化之心很强大。它很欣慰。",
     "DESCRIPTIONS": [
-      "每场战斗开始时获得 #b1 点 #y力量 。 NL 在深处boss战时，获得一张特别的牌。（祝福不重复给牌）"
+      "每场战斗开始时获得 #b1 点 #y力量 。"
     ]
   },
   "downfall:HeartBlessingBlue": {
     "NAME": "蓝宝石心脏的祝福",
     "FLAVOR": "心脏很欣慰。",
     "DESCRIPTIONS": [
-      "拾起时，将你的最大生命值提升 #b10 。 NL 在深处boss战时，获得一张特别的牌。（祝福不重复给牌）"
+      "拾起时，将你的最大生命值提升 #b10 。"
     ]
   },
   "downfall:HeartBlessingGreen": {
     "NAME": "绿宝石心脏的祝福",
     "FLAVOR": "心脏就是一切。",
     "DESCRIPTIONS": [
-      "每场战斗开始时获得 #b1 点 #y敏捷 。 NL 在深处boss战时，获得一张特别的牌。（祝福不重复给牌）"
+      "每场战斗开始时获得 #b1 点 #y敏捷 。"
     ]
   },
   "downfall:TeleportStone": {

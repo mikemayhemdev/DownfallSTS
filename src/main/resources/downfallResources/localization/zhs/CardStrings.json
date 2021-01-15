@@ -1,7 +1,7 @@
 {
   "downfall:SummonMushrooms": {
     "NAME": "真菌环绕",
-    "DESCRIPTION": "杀死所有蘑菇。 NL 召唤两个蘑菇。"
+    "DESCRIPTION": "杀死所有蘑菇。 NL 回复他们剩余血量的生命。 NL 召唤两个蘑菇。"
   },
   "downfall:Aged": {
     "NAME": "岁月",

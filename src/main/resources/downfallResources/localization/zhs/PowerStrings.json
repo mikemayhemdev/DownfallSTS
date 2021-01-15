@@ -42,7 +42,7 @@
   "downfall:PoisonResist": {
     "NAME": "抗毒",
     "DESCRIPTIONS": [
-      "中毒现在能被格挡，且在回合结束时触发并层数减半。"
+      " #y中毒 现在能被格挡，且在回合结束时触发并层数减半。"
     ]
   },
   "downfall:NeowBuff": {

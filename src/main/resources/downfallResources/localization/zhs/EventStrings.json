@@ -368,7 +368,7 @@
     "NAME": "流浪汉的恳求",
     "DESCRIPTIONS": [
       "你杀死了这个人并收割了他的灵魂。身后的人群中传来一阵 ~骚动~ 。 NL “他杀了勃艮第！” 一个人喊道。更多与那人一样的瘾君子向你逼近。NL NL 你逃脱了，身上带着一些 #r抓痕 和 #r咬痕 。",
-	  "You snatch the precious #yrelic from his clutches and walk away. NL From behind you hear, NL \"Have you no shame? ~HAVE~ ~YOU~ ~NO~ ~SHAAAAAME?!\"~ NL You have #pabsolutely #pno #pshame. It is an honor to be robbed by an Overlord of the Spire!"    
+	  "你一把抓过他手中珍贵的 #y遗物 转身就走。 NL 身后传来他的声音： NL ~“你不知道什么是羞耻吗？”~ NL 你 #p当然没有羞耻心。 被高塔的霸主抢劫可是你的荣幸！"    
 	],
     "OPTIONS": [
       "[一拳过去] #g获得85灵魂。 #r失去 #r",
@@ -599,7 +599,7 @@
   "downfall:EvilShrines": {
     "NAME": "",
     "DESCRIPTIONS": [
-      "Only you should hold this power. You shatter the shrine into pieces. NL A dark wail echoes all around you, and you can feel the Shrine's #p~cursed~ #p~magic~ seep into your bones."    ],
+      "只有你才有这种力量。你把神龛打碎了。 NL 黑暗的哀号在你周围回荡,感觉神龛 #p~诅咒的魔法~ 正在渗入你的每一块骨头。"    ],
     "OPTIONS": [
       "[亵渎] #g复制2张牌。 #r被随机诅咒 。",
       "[亵渎] #g移除3张牌。 #r被随机诅咒 。",
