@@ -1,6 +1,8 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.vfx.DaggerSprayAnyColorEffect;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -30,15 +32,15 @@ public class FanOfKnives extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new VFXAction(new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
+        atb(new VFXAction(new DaggerSprayAnyColorEffect(AbstractDungeon.getMonsters().shouldFlipVfx(), Color.FIREBRICK), 0.0F));
         allDmg(AbstractGameAction.AttackEffect.NONE);
 
         if (bcombo()) {
-            atb(new VFXAction(new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
+            atb(new VFXAction(new DaggerSprayAnyColorEffect(AbstractDungeon.getMonsters().shouldFlipVfx(), Color.RED), 0.0F));
             allDmg(AbstractGameAction.AttackEffect.NONE);
             if (upgraded) {
 
-                atb(new VFXAction(new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
+                atb(new VFXAction(new DaggerSprayAnyColorEffect(AbstractDungeon.getMonsters().shouldFlipVfx(), Color.SCARLET), 0.0F));
                 allDmg(AbstractGameAction.AttackEffect.NONE);
             }
         }

@@ -63,6 +63,24 @@ public class DaggerThrowAnyColorEffect extends AbstractGameEffect {
         this.forcedAngle = true;
     }
 
+    public DaggerThrowAnyColorEffect(float x, float y, Color clr, float fAngle, boolean flip) {
+        this.img = ImageMaster.DAGGER_STREAK;
+        this.x = x - MathUtils.random(320.0F, 360.0F) - (float)this.img.packedWidth / 2.0F;
+        this.destY = y;
+        this.y = this.destY + MathUtils.random(-25.0F, 25.0F) * Settings.scale - (float)this.img.packedHeight / 2.0F;
+        this.startingDuration = 0.4F;
+        this.duration = 0.4F;
+        this.scale = Settings.scale;
+        this.rotation = fAngle;
+        this.color = clr.cpy();
+        this.forcedAngle = true;
+        if (flip) {
+            this.rotation = fAngle - 180.0F;
+        } else {
+            this.rotation = fAngle;
+        }
+    }
+
     private void playRandomSfX() {
         int roll = MathUtils.random(5);
         switch(roll) {
