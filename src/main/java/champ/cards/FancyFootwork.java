@@ -3,6 +3,8 @@ package champ.cards;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
 import champ.stances.UltimateStance;
+import champ.vfx.StanceDanceEffect;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -33,12 +35,16 @@ public class FancyFootwork extends AbstractChampCard {
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+
         if (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID)) {
             berserkOpen();
         } else if (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
             defenseOpen();
         }
         atb(new DrawCardAction(magicNumber));
+        p.useHopAnimation();
+        atb(new VFXAction(new StanceDanceEffect(p, false, false, true), 0.7F));
+
     }
 
     public void upp() {

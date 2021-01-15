@@ -3,6 +3,8 @@ package champ.cards;
 import champ.ChampMod;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
+import champ.vfx.StanceDanceEffect;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -29,6 +31,7 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         //if (upgraded) techique();
         atb(new OctoChoiceAction(m, this));
+
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {
@@ -67,6 +70,10 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
                 defenseOpen();
                 break;
         }
+
+        AbstractDungeon.player.useJumpAnimation();
+        atb(new VFXAction(new StanceDanceEffect(AbstractDungeon.player, false, true, false), 0.7F));
+
     }
 
     public void upp() {
