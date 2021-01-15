@@ -17,7 +17,7 @@ public class UnknownBoss extends AbstractUnknownCard {
 
     @Override
     public Predicate<AbstractCard> myNeeds() {
-        return c -> c.hasTag(expansionContentMod.STUDY);
+        return c -> c.rarity != CardRarity.SPECIAL && c.hasTag(expansionContentMod.STUDY);
     }
 
     @Override

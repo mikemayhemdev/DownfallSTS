@@ -25,7 +25,7 @@ public class QuickStudy extends AbstractExpansionCard {
     private ArrayList<AbstractCard> getList() {
         ArrayList<AbstractCard> myList = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
-            if (q.hasTag(expansionContentMod.STUDY)) {
+            if (q.rarity != CardRarity.SPECIAL && q.hasTag(expansionContentMod.STUDY)) {
                 AbstractCard r = q.makeCopy();
                 if (upgraded) {
                     r.upgrade();
