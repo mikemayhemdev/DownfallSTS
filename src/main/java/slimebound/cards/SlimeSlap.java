@@ -2,6 +2,7 @@ package slimebound.cards;
 
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,6 +15,7 @@ import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PreventSlimeDecayPower;
 import slimebound.powers.SlimedPower;
+import slimebound.vfx.SlimeSlapEffect;
 
 
 public class SlimeSlap extends AbstractSlimeboundCard {
@@ -47,6 +49,7 @@ public class SlimeSlap extends AbstractSlimeboundCard {
         if (m.hasPower(SlimedPower.POWER_ID)){
             addToBot(new ApplyPowerAction(m, p, new PreventSlimeDecayPower(m, p, 1), 1));
         }
+        addToBot(new VFXAction(new SlimeSlapEffect(m.hb.cX, m.hb.cY), 0.2F));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
     }
 
