@@ -1,12 +1,16 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.vfx.DaggerThrowAnyColorEffect;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.ThrowDaggerEffect;
 
 public class BladeFlurry extends AbstractChampCard {
 
@@ -31,7 +35,12 @@ public class BladeFlurry extends AbstractChampCard {
                 int x = 1;
                 if (upgraded) x++;
                 for (AbstractCard q : p.hand.group) if (q.hasTag(CardTags.STRIKE)) x++;
-                for (int i = 0; i < x; i++) att(new DamageAction(m, makeInfo(), AttackEffect.SLASH_DIAGONAL));
+                for (int i = 0; i < x; i++) {
+                    att(new DamageAction(m, makeInfo(), AttackEffect.NONE));
+                    att(new VFXAction(new DaggerThrowAnyColorEffect(m.hb.cX, m.hb.cY, Color.LIGHT_GRAY, 0F, -30F), 0.0F));
+                    att(new VFXAction(new DaggerThrowAnyColorEffect(m.hb.cX, m.hb.cY, Color.LIGHT_GRAY, 0F, -30F), 0.0F));
+                    att(new VFXAction(new DaggerThrowAnyColorEffect(m.hb.cX, m.hb.cY, Color.LIGHT_GRAY, 0F, -30F), 0.0F));
+                }
             }
         });
         finisher();
