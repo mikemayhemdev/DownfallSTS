@@ -309,7 +309,11 @@
   },
   "champ:LastStand": {
     "NAME": "Last Stand",
-    "DESCRIPTION": "Can only be played if you're under 50% HP. NL Remove all debuffs. NL Gain 6 Strength."
+    "DESCRIPTION": "Can only be played if you're under 50% HP. NL Remove all debuffs. NL Gain 6 Strength.",
+    "EXTENDED_DESCRIPTION": [
+      "~You've~ ~done~ ~it~ ~now...~",
+      "@DEFEAT??@ NL @IMPOSSIBLE!!@"
+    ]
   },
   "champ:RecklessLeap": {
     "NAME": "Reckless Leap",

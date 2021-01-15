@@ -61,7 +61,7 @@
   "champ:DefensiveShout": {
     "NAME": "防卫嘲讽",
     "DESCRIPTION": "进入 champ:防守 。 NL 获得 !M! 层 champ:反击 。",
-	"UPGRADE_DESCRIPTION": "进入 champ:防守 。 NL 获得 !M! 层 champ:反击 。 NL 抽一张牌。"
+    "UPGRADE_DESCRIPTION": "进入 champ:防守 。 NL 获得 !M! 层 champ:反击 。 NL 抽一张牌。"
   },
   "champ:ShieldSigil": {
     "NAME": "防守印记",
@@ -75,7 +75,7 @@
     "NAME": "狂战士",
     "DESCRIPTION": "进入 champ:狂战 。 NL 回合结束时如果你有至少20层 champ:疲劳 ，对所有敌人造成 !D! 点伤害。"
   },
-   "champ:SetATrap": {
+  "champ:SetATrap": {
     "NAME": "布置陷阱",
     "DESCRIPTION": " champ:防守 champ:连段 ：手牌中每有一张攻击牌，获得 !M! 层 champ:反击 。 NL 进入 champ:防守 。",
     "UPGRADE_DESCRIPTION": "获得 !M! 层 champ:反击 。 NL champ:防守 champ:连段 ：手牌中每有一张攻击牌，获得 !M! 层 champ:反击 。 NL 进入 champ:防守 。"
@@ -83,7 +83,9 @@
   "champ:Backstep": {
     "NAME": "后撤",
     "DESCRIPTION": "进入 champ:防守 。 NL 获得 !B! 点 格挡 。 NL champ:狂战 champ:连段 ：获得 champ:疲劳 层数的 格挡 。",
-    "EXTENDED_DESCRIPTION": [" NL （获得 !B! 点 格挡 。）"]
+    "EXTENDED_DESCRIPTION": [
+      " NL （获得 !B! 点 格挡 。）"
+    ]
   },
   "champ:Aggression": {
     "NAME": "侵略",
@@ -99,7 +101,7 @@
   "champ:BerserkersShout": {
     "NAME": "怒吼",
     "DESCRIPTION": "进入 champ:狂战 。 NL champ:疲劳 !M! 。",
-	    "UPGRADE_DESCRIPTION": "进入 champ:狂战 。 NL champ:疲劳 !M! 。 NL 抽一张牌。"
+    "UPGRADE_DESCRIPTION": "进入 champ:狂战 。 NL champ:疲劳 !M! 。 NL 抽一张牌。"
   },
   "champ:RageSigil": {
     "NAME": "战斗计划",
@@ -160,7 +162,7 @@
   "champ:BringItOn": {
     "NAME": "全力以赴",
     "DESCRIPTION": "处于 champ:防守 或 champ:狂战 才能被打出。 NL  获得 !B! 点格挡。 NL 获得 !M! 层 champ:反击 。",
-	"EXTENDED_DESCRIPTION": [
+    "EXTENDED_DESCRIPTION": [
       "我不处于那个姿态。"
     ]
   },
@@ -172,7 +174,7 @@
   "champ:FalseCounter": {
     "NAME": "伪反",
     "DESCRIPTION": "处于 champ:防守 才能被打出。 NL 下次触发 champ:反击 时，只失去一半 champ:反击 。",
-	"UPGRADE_DESCRIPTION": "处于 champ:防守 才能被打出。获得 !M! 层 champ:反击 。 NL 下次触发 champ:反击 时，只失去一半 champ:反击 。",
+    "UPGRADE_DESCRIPTION": "处于 champ:防守 才能被打出。获得 !M! 层 champ:反击 。 NL 下次触发 champ:反击 时，只失去一半 champ:反击 。",
     "EXTENDED_DESCRIPTION": [
       "还不是时候。"
     ]
@@ -198,7 +200,7 @@
     "NAME": "刺拳",
     "DESCRIPTION": "造成 !D! 点伤害。 NL champ:角斗 champ:连段 ：给予2层 易伤 。 NL champ:防守 champ:连段 ：给予 2 层 虚弱 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL ",
-	"EXTENDED_DESCRIPTION": [
+    "EXTENDED_DESCRIPTION": [
       "champ:角斗 champ:连段 ：给予2层 易伤 。 ",
       "champ:防守 champ:连段 ：给予 2 层 虚弱 。"
     ]
@@ -206,7 +208,7 @@
   "champ:ViciousMockery": {
     "NAME": "毒舌",
     "DESCRIPTION": "champ:狂战 champ:连段 ：获得 !M! 点 guardianmod:临时 力量 。 NL champ:防守 champ:连段 ：获得 !M! 点 guardianmod:临时 敏捷 。",
-	 "EXTENDED_DESCRIPTION": [
+    "EXTENDED_DESCRIPTION": [
       "champ:狂战 champ:连段 : 获得 !M! guardianmod:临时 力量 。 NL 消耗 ",
       "champ:狂战 champ:连段 : 获得 !M! guardianmod:临时 力量 。 NL ",
       "champ:防守 champ:连段 : 获得 !M! guardianmod:临时 敏捷 。 NL 消耗 。",
@@ -216,7 +218,7 @@
   "champ:PreciseThrust": {
     "NAME": "精准冲撞",
     "DESCRIPTION": "造成 !D! 点伤害。 NL champ:角斗 champ:连段 ：造成 !D! 点伤害。 NL champ:防守 champ:连段 ：获得 !B! 点 格挡 。",
-	"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL ",
     "EXTENDED_DESCRIPTION": [
       "champ:角斗 champ:连段 ： 造成 !D! 点伤害。 NL ",
       "champ:防守 champ:连段 ： 获得 !B! 点 格挡 。"
@@ -230,7 +232,7 @@
     "NAME": "连续打击",
     "DESCRIPTION": "造成 !D! 点伤害两次。 NL 本回合每打出过一张 champ:战术 牌再重复一次。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害三次。 NL 本回合每打出过一张 champ:战术 牌再重复一次。",
-	"EXTENDED_DESCRIPTION": [
+    "EXTENDED_DESCRIPTION": [
       " NL （攻击 ",
       " 次）",
       " 次）"
@@ -243,7 +245,7 @@
   "champ:BladeFlurry": {
     "NAME": "剑刃乱舞",
     "DESCRIPTION": "手牌中每有一张“打击”牌，造成 !D! 点伤害。",
-	"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 手牌中每有一张“打击”牌，造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 手牌中每有一张“打击”牌，造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       " NL （攻击 ",
       " 次。）"
@@ -277,7 +279,7 @@
   "champ:EnragedBash": {
     "NAME": "怒斩",
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL champ:疲劳 5 。 NL champ:狂战 champ:连段 ：本场战斗中攻击次数加1。",
-	"UPGRADE_DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL champ:疲劳 5 。 NL champ:狂战 champ:连段 ：本场战斗中攻击次数加1。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL champ:疲劳 5 。 NL champ:狂战 champ:连段 ：本场战斗中攻击次数加1。"
   },
   "champ:VampiricStrike": {
     "NAME": "重击",
@@ -291,9 +293,9 @@
   "champ:HeartStrike": {
     "NAME": "穿心攻击",
     "DESCRIPTION": "处于 champ:狂战 时才能被打出。 NL 造成你当前 champ:疲劳 层数的伤害。 ",
-	"EXTENDED_DESCRIPTION": [
+    "EXTENDED_DESCRIPTION": [
       " NL （造成 !D! 点 伤害。）",
-	  "还不是时候。"
+      "还不是时候。"
     ]
   },
   "champ:CrownThrow": {
@@ -310,12 +312,16 @@
   },
   "champ:LastStand": {
     "NAME": "最后一战",
-    "DESCRIPTION": " 只能在半血以下才能被打出。 NL 移除所有负面效果。 NL 获得6点 力量 。"
+    "DESCRIPTION": " 只能在半血以下才能被打出。 NL 移除所有负面效果。 NL 获得6点 力量 。",
+    "EXTENDED_DESCRIPTION": [
+      "~你惹火我了……~",
+      "@败北？@ NL @不可能的！！@ "
+    ]
   },
   "champ:RecklessLeap": {
     "NAME": "无谋跃斩",
     "DESCRIPTION": "处于 champ:狂战 时才能被打出。 NL 造成 !D! 点伤害。 NL champ:疲劳 !M! 。",
-	"EXTENDED_DESCRIPTION": [
+    "EXTENDED_DESCRIPTION": [
       "还不是时候。"
     ]
   },
@@ -339,7 +345,7 @@
   "champ:SteelEdge": {
     "NAME": "剑锋",
     "DESCRIPTION": "champ:狂战 champ:连段 ：造成 !D! 点伤害X次。 NL champ:防守 champ:连段 ：获得 !B! 点 格挡 X次。",
-	"EXTENDED_DESCRIPTION": [
+    "EXTENDED_DESCRIPTION": [
       "champ:狂战 champ:连段 ：造成 !D! 点伤害X次。 NL ",
       "champ:防守 champ:连段 ：获得 !B! 点 格挡 X次。",
       "角斗: 抽1张牌并获得 [E] 。",
@@ -354,8 +360,8 @@
   "champ:CalledShot": {
     "NAME": "宣告",
     "DESCRIPTION": " champ:狂战 champ:连段 ：获得 [E] [E] 并 消耗 。 NL champ:防守 champ:连段 ：抽 !M! 张牌。",
-	"UPGRADE_DESCRIPTION": "champ:狂战 champ:连段 ：获得 [E] [E] [E] 并 消耗 。 NL champ:防守 champ:连段 ：抽 !M! 张牌。",
-	"EXTENDED_DESCRIPTION": [
+    "UPGRADE_DESCRIPTION": "champ:狂战 champ:连段 ：获得 [E] [E] [E] 并 消耗 。 NL champ:防守 champ:连段 ：抽 !M! 张牌。",
+    "EXTENDED_DESCRIPTION": [
       "champ:狂战 champ:连段 ：获得 [E] [E] 并 消耗 。NL ",
       "champ:狂战 champ:连段 ：获得 [E] [E] [E] 并 消耗 。 NL ",
       "champ:防守 champ:连段 ：抽 !M! 张牌。",
@@ -400,11 +406,11 @@
     "DESCRIPTION": "进入 champ:狂战 。 NL champ:狂战 champ:战术 奖励额外获得 !M! 层 champ:疲劳 。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 进入 champ:狂战 。 NL champ:狂战 champ:战术 奖励额外获得 !M! 层 champ:疲劳 。"
   },
-    "champ:Riposte": {
+  "champ:Riposte": {
     "NAME": "弹反",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。"
   },
-    "champ:Endure": {
+  "champ:Endure": {
     "NAME": "忍耐",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 这张牌的 格挡 受 力量 而非 敏捷 影响 。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 这张牌的 格挡 受 力量 影响 。"
@@ -430,7 +436,7 @@
     "NAME": "终结打击",
     "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。"
   },
-    "champ:UltimateStance": {
+  "champ:UltimateStance": {
     "NAME": "终极姿态",
     "DESCRIPTION": "处于 champ:防守 或 champ:狂战 时才能被打出。 NL 在1回合内处于 champ:终极 。",
     "UPGRADE_DESCRIPTION": "处于 champ:防守 或 champ:狂战 时才能被打出。 NL 在 !M! 回合内处于 champ:终极 。",

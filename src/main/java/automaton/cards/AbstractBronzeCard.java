@@ -48,7 +48,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
     protected String[] EXTENDED_DESCRIPTION;
     private AbstractCard functionPreviewCard;
 
-    protected static final UIStrings masterUI = CardCrawlGame.languagePack.getUIString("bronze:MiscStrings");
+    public static final UIStrings masterUI = CardCrawlGame.languagePack.getUIString("bronze:MiscStrings");
 
     public AbstractBronzeCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),

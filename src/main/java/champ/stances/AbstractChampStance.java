@@ -40,10 +40,10 @@ public abstract class AbstractChampStance extends AbstractStance {
     @Override
     public void onEnterStance() {
 
-        CardCrawlGame.sound.play("GUARDIAN_ROLL_UP");
+       // CardCrawlGame.sound.play("GUARDIAN_ROLL_UP");
 
-        AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new IntenseZoomEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, false), 0.05F, true));
-        AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.DARK_GRAY, true));
+        //AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new IntenseZoomEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, false), 0.05F, true));
+        //AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.DARK_GRAY, true));
     }
 
     @Override

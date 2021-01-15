@@ -2,8 +2,12 @@ package champ.cards;
 
 import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
 
 import static champ.ChampMod.fatigue;
 
@@ -28,8 +32,10 @@ public class Execute extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         //finisher();
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+        atb(new VFXAction(new GoldenSlashEffect(m.hb.cX + 30.0F * Settings.scale, m.hb.cY, true), 0.1F));
+        dmg(m, AbstractGameAction.AttackEffect.NONE);
+        atb(new VFXAction(new GoldenSlashEffect(m.hb.cX - 30.0F * Settings.scale, m.hb.cY, true), 0.1F));
+        dmg(m, AbstractGameAction.AttackEffect.NONE);
         fatigue(magicNumber);
         finisher();
     }
