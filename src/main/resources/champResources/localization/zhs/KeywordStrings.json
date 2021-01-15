@@ -29,7 +29,7 @@
     "PROPER_NAME": "反击",
     "NAMES": [
       "反击",
-      "champ:counter"
+      "counter"
     ],
     "DESCRIPTION": "下次你受到 #y攻击 伤害时，对攻击者造成层数的伤害并移除。"
   },
@@ -65,7 +65,7 @@
     "PROPER_NAME": "疲劳",
     "NAMES": [
       "疲劳",
-      "champ:fatigue"
+      "fatigue"
     ],
     "DESCRIPTION": "失去生命并获得等量的 #y决心 。"
   }
