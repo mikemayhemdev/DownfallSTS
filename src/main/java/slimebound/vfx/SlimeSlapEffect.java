@@ -70,7 +70,7 @@ public class SlimeSlapEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffe
             else if (frame == 2){
                 frame = 3;
                 animTimer += 0.15F;  //Slap midway
-                flipX = false;
+                flipX = false;  //Midway through slap, flip the mirror so it renders the other way
             }
             else if (frame == 3){
                 frame = 4;
