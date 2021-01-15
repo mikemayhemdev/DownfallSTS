@@ -35,7 +35,7 @@ public class DaggerThrowAnyColorEffect extends AbstractGameEffect {
         this.scale = Settings.scale;
         this.rotation = MathUtils.random(-3.0F, 3.0F);
         this.color = clr.cpy();
-    }
+}
 
 
     public DaggerThrowAnyColorEffect(float x, float y, Color clr, float fAngleStart, float fAngleEnd) {
@@ -63,7 +63,7 @@ public class DaggerThrowAnyColorEffect extends AbstractGameEffect {
         this.forcedAngle = true;
     }
 
-    public DaggerThrowAnyColorEffect(float x, float y, Color clr, float fAngle, boolean flip) {
+    public DaggerThrowAnyColorEffect(float x, float y, Color clr, float fAngle, boolean flip, boolean behind, boolean mute, float size) {
         this.img = ImageMaster.DAGGER_STREAK;
         this.x = x - MathUtils.random(320.0F, 360.0F) - (float)this.img.packedWidth / 2.0F;
         this.destY = y;
@@ -74,6 +74,9 @@ public class DaggerThrowAnyColorEffect extends AbstractGameEffect {
         this.rotation = fAngle;
         this.color = clr.cpy();
         this.forcedAngle = true;
+        this.renderBehind = behind;
+        playedSound = mute;
+        scale = size;
         if (flip) {
             this.rotation = fAngle - 180.0F;
         } else {
