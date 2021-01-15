@@ -1,34 +1,34 @@
 {
   "bronze:FreeFunctionsPotion": {
-    "NAME": "Machine Oil",
+    "NAME": "机油",
     "DESCRIPTIONS": [
-      "Increase all numbers on cards in the Sequence by #b",
-      "."
+      "提升 #y序列 中的所有牌数值 #b",
+      " 点。"
     ]
   },
   "bronze:CleanCodePotion": {
-    "NAME": "Alchyrical Elixir",
+    "NAME": "碱式制剂",
     "DESCRIPTIONS": [
-      "Remove all negative Compile effects from the next Function you create.  Reduce its cost to #b0 until played.",
-      "Remove all negative Compile effects from the next #b",
-      " Functions you create.  Reduce their cost to #b0 until played."
+      "移除你生成的下一张 #y方法 中的 #y编译 负面效果。其打出前费用为0。",
+      "移除你生成的下 #b",
+      " 张 #y方法 中的 #y编译 负面效果。其打出前费用为0。"
     ]
   },
   "bronze:BurnAndBuffPotion": {
-    "NAME": "Vexing Draught",
+    "NAME": "恼人饮品",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " Strength and #b",
-      " Dexterity. NL Add two #yBurn+ #yStatus cards to your draw pile."
+      "获得 #b",
+      " 点 #y力量 和 #b",
+      " 点 #y敏捷 。 NL 将两张 #y灼伤+ 加入抽牌堆。"
     ]
   },
   "bronze:BuildAFunctionPotion": {
-    "NAME": "Kio's Clever Concoction",
+    "NAME": "Kio快乐水",
     "DESCRIPTIONS": [
-      "Until the Sequence is full, choose #b1 of #b3 random cards to #yEncode.",
-      "Until the Sequence is full, choose #b1 of #b3 random cards to #yEncode. Add #b",
-      " copy of the created Function to your hand.",
-      " copies of the created Function to your hand."
+      "从 #b3 张随机牌中选择 #b1 张 #y编码 直到 #y队列 充满。",
+      "从 #b3 张随机牌中选择 #b1 张 #y编码 直到 #y队列 充满。将 #b",
+      " 张你生成的 #y方法 的复制品加入手牌。",
+      " 张你生成的 #y方法 的复制品加入手牌。"
     ]
   }
 }

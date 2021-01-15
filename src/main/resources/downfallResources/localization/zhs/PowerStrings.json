@@ -42,7 +42,7 @@
   "downfall:PoisonResist": {
     "NAME": "抗毒",
     "DESCRIPTIONS": [
-      "中毒现在能被格挡，且在回合结束时触发并层数减半。"
+      " #y中毒 现在能被格挡，且在回合结束时触发并层数减半。"
     ]
   },
   "downfall:NeowBuff": {
@@ -67,22 +67,22 @@
     "NAME": "渎神者",
     "DESCRIPTIONS": [
       "当 #y观者 再失去 #b",
-      " 生命后，下次她进入 #y神格 或打出 #y诸神之黄昏 后失去 #b4 点 #y力量 。",
-      " #y观者 下次她进入 #y神格 或打出 #y诸神之黄昏 后失去 #b4 点 #y力量 。"
+      " 生命后，下次她将要进入 #y神格 或打出 #y诸神之黄昏 后失去 #b4 点 #y力量 。",
+      " #y观者 下次将要进入 #y神格 或打出 #y诸神之黄昏 后失去 #b4 点 #y力量 。"
     ]
   },
   "downfall:NeowBlasphemersDemise": {
     "NAME": "渎神者",
     "DESCRIPTIONS": [
       "当 #y涅奥 再失去 #b",
-      " 生命后，她下回合强化时将不会获得 #b10 点 #y力量 。",
-      " #y涅奥 下回合强化时将不会获得 #b10 点 #y力量 。"
+      " 生命后，她下回合将要强化时将不会获得 #b10 点 #y力量 。",
+      " #y涅奥 下回合将要强化时将不会获得 #b10 点 #y力量 。"
     ]
   },
   "downfall:WatcherDivinityPower": {
     "NAME": "消逝的信仰",
     "DESCRIPTIONS": [
-      "每当你打出一张牌， #y观者 获得 #b1 层 #p真言 。 NL 每回合开始时 #y观者 失去 #b5 层 #p真言 。 NL #y观者 将不会自动退出。"
+      "每当你打出一张牌， #y观者 获得 #b1 层 #p真言 。 NL 每回合开始时 #y观者 失去 #b5 层 #p真言 。 NL #y观者 将不会自动退出 #y神格 。"
     ]
   },
   "downfall:NeowFleetingFaith": {
@@ -92,21 +92,21 @@
     ]
   },
   "downfall:SilentShivTimeEaterPower": {
-    "NAME": "小刀袋",
+    "NAME": "满包小刀",
     "DESCRIPTIONS": [
       "每当你打出一张 #b0 耗能牌，如果 #y静默猎手 的手牌少于 #b7 张，她将获得一张 #y小刀 。"
       ]
   },
   "downfall:NeowBagOfKnives": {
-    "NAME": "小刀袋",
+    "NAME": "满包小刀",
     "DESCRIPTIONS": [
-      "每当你打出一张 #b0 耗能牌， #y涅奥 获得 #y1 点 #y力量 。"
+      "每当你打出一张 #b0 耗能牌， 受到 #y4 点伤害。"
     ]
   },
   "downfall:SilentMirrorImagePower": {
     "NAME": "复视",
     "DESCRIPTIONS": [
-      "A mirror image of Silent is masking her real location. Attacking the mirror removes it from combat for the turn."
+      "一个 #y静默猎手 的 #y残影 隐蔽了她的真实位置。攻击 #y残影 则其将在本回合消失。"
     ]
   },
   "downfall:NeowSeeingDouble": {
@@ -191,7 +191,7 @@
   "downfall:IroncladFortificationPower": {
     "NAME": "堡垒",
     "DESCRIPTIONS": [
-      "Ironclad begins the fight with a Fortification, which will grant him #b10 Block each turn. NL When the Fortification has been destroyed, Ironclad loses Barricade and all Block, but gains #b5 Strength per turn."
+      " #y铁甲战士 构筑了 #y堡垒 。每回合 #y堡垒 将给予他 #b10 点 #y格挡 。NL 当 #y堡垒 被摧毁时， #y铁甲战士 失去 #y壁垒 以及所有 #y格挡 ，但每回合将会获得 #b5 点 #y力量 。"
     ]
   },
   "downfall:NeowBastion": {
@@ -203,7 +203,7 @@
   "downfall:MerchantStrengthPower": {
     "NAME": "灵魂窃取",
     "DESCRIPTIONS": [
-      "Merchant still has the Strength it earned from Soul Steal this run, and gains an equal amount of Dexterity."
+      " #y商人 仍留有本局灵魂窃取获得的 #y力量 。同时还获得了等量的 #y敏捷 。"
     ]
   },
   "downfall:NeowMantra": {

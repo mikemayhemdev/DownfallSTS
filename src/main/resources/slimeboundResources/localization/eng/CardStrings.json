@@ -97,8 +97,8 @@
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "Duplicated Form",
+	"DESCRIPTION": "Lose !M! HP and !M! Max HP this combat. NL The first card you play each turn that targets enemies is played twice.",
     "UPGRADE_DESCRIPTION": "Lose !M! HP and !M! Max HP this combat. NL Gain [E] each turn. NL The first card you play each turn that targets enemies is played twice.",
-    "DESCRIPTION": "Lose !M! HP and !M! Max HP this combat. NL The first card you play each turn that targets enemies is played twice.",
     "EXTENDED_DESCRIPTION": [
       "Need... Health..."
     ]

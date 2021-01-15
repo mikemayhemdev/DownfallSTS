@@ -1,104 +1,104 @@
 {
   "bronze:BronzeCore": {
-    "NAME": "Bronze Core",
-    "FLAVOR": "Replace once every 50,000 years.",
+    "NAME": "铜制核心",
+    "FLAVOR": "每50,000年一换。",
     "DESCRIPTIONS": [
-      "The first Function you create each combat costs #b1 less the turn it is created."
+      "每场战斗你生成的第一张 #y方法 在该回合费用减少 #b1 。"
     ]
   },
   "bronze:ProtectiveGoggles": {
-    "NAME": "Protective Goggles",
-    "FLAVOR": "Look closely.",
+    "NAME": "护目镜",
+    "FLAVOR": "仔细观察。",
     "DESCRIPTIONS": [
-      "If you end your turn with no cards in the #ySequence, gain #b4 #yBlock."
+      "回合结束时如果 #y队列 里没有牌，获得 #b4 点 #y格挡 。"
     ]
   },
   "bronze:DecasWashers": {
-    "NAME": "Deca's Washers",
-    "FLAVOR": "It is unclear why Deca collects these.",
+    "NAME": "八体垫片",
+    "FLAVOR": "真不知道八体为何收藏这些。",
     "DESCRIPTIONS": [
-      "At the start of each combat, draw #b3 additional cards and add a #yDazed into your draw pile."
+      "每场战斗开始时，抽 #b3 张牌并将一张 #y晕眩 加入抽牌堆。"
     ]
   },
   "bronze:Timepiece": {
-    "NAME": "Timepiece",
-    "FLAVOR": "From his collection of identical clocks.",
+    "NAME": "怀表",
+    "FLAVOR": "他的众多钟表收藏之一。",
     "DESCRIPTIONS": [
-      "All Functions you #yCompile gain #yRetain."
+      "你 #y编译 的所有 #y方法 获得 #y保留 。"
     ]
   },
   "bronze:Mallet": {
-    "NAME": "Mallet",
-    "FLAVOR": "That's it! I'm gettin me mallet!",
+    "NAME": "铁锤",
+    "FLAVOR": "就是这么炫! 举起我的小铁锤!",
     "DESCRIPTIONS": [
-      "At the start of each combat, add #b2 copies of #yFine #yTuning+ to your hand."
+      "每场战斗开始时，将两张 #y性能调整 加入你的手牌。"
     ]
   },
   "bronze:SilverBullet": {
-    "NAME": "Silver Bullet",
-    "FLAVOR": "Spirewolves are long gone.",
+    "NAME": "银色子弹",
+    "FLAVOR": "尖塔里的狼都绝迹了。",
     "DESCRIPTIONS": [
-      "Start each combat with a #yPiercing #yShot in the #ySequence."
+      "每场战斗开始时，将一张 #y穿透射击 加入 #y队列。"
     ]
   },
   "bronze:MakeshiftBattery": {
-    "NAME": "Makeshift Battery",
-    "FLAVOR": "It's an 8.99 volt.",
+    "NAME": "备用电池",
+    "FLAVOR": "足足有8。99伏特。",
     "DESCRIPTIONS": [
-      "Gain [E] and add a random #yStatus card into your discard pile at the start of your turn."
+      "每回合开始时获得 [E] ，将一张随机 #y状态牌 加入弃牌堆。"
     ]
   },
   "bronze:CableSpool": {
-    "NAME": "Cable Spool",
-    "FLAVOR": "Tangled...",
+    "NAME": "电缆线轴",
+    "FLAVOR": "缠绕起来的一团……",
     "DESCRIPTIONS": [
-      "Add a copy of the first card you play with #yEncode each combat to the Sequence."
+      "每场战斗的打出的第一张 #y编码 牌，将其复制品加入手牌。"
     ]
   },
   "bronze:ElectromagneticCoil": {
-    "NAME": "Electromagnetic Coil",
-    "FLAVOR": "An inefficient but entertaining power source.",
+    "NAME": "电磁线圈",
+    "FLAVOR": "效率低下但有趣的能源装置。",
     "DESCRIPTIONS": [
-      "Functions are now made up of #b4 cards."
+      " #y方法 现在由 #b4 张牌组成。"
     ]
   },
   "bronze:PlatinumCore": {
-    "NAME": "Platinum Core",
-    "FLAVOR": "Changelog: Improved user experience.",
+    "NAME": "铂金核心",
+    "FLAVOR": "更新日志: 提升用户体验。",
     "DESCRIPTIONS": [
-      "Replaces",
-      ".[] NL The first #b3 #yFunctions you create each combat cost #b1 less the turn they are created."
+      "替换 ",
+      "。[] NL 每场战斗，你生成的前 #b3 张 #y方法 该回合费用降低 #b1 。"
     ]
   },
   "bronze:BottledCode": {
-    "NAME": "Bottled Code",
-    "FLAVOR": "Actually, I have code for that exact thing...",
+    "NAME": "瓶装代码",
+    "FLAVOR": "实际上,这确实是我编码的。。。",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a card with #yEncode. Start each combat with this card in the #ySequence.",
-      "Choose a card for ",
-      "Start each combat with ",
-      " in the #ySequence."
+      "拾起时，选择一张牌获得 #y编码 。 每场战斗开始时，这张牌加入 #y队列。",
+      "选择一张牌 ",
+      "每场战斗开始时 ",
+      " 进入 #y队列 。"
     ]
   },
   "bronze:DonusWashers": {
-    "NAME": "Donu's Washers",
-    "FLAVOR": "It is rather clear why Donu collects these.",
+    "NAME": "甜圈垫片",
+    "FLAVOR": "这显然是甜甜圈的藏品。",
     "DESCRIPTIONS": [
-      "At the start of combat, gain [E] [E] and add #b1 #yVoid into your draw pile."
+      "每场战斗开始时, 获得 [E] [E] 。将 #b1 张 #y虚空 加入到抽牌堆。"
     ]
   },
   "bronze:BronzeIdol": {
-    "NAME": "Bronze Idol",
-    "FLAVOR": "An ancient, weaponised antivirus - who knows who made it, and why?",
+    "NAME": "铜制神像",
+    "FLAVOR": "一种古老的，武器化的抗病毒程序 - 无人知晓其生成者和目的",
     "DESCRIPTIONS": [
-      "#yStatus cards may now be played for useful effects."
+      "#y状态牌 在打出时会触发正面效果。"
     ]
   },
   "bronze:VexRelic": {
-    "NAME": "Paradox Artifact",
-    "FLAVOR": "You've never seen a stress test like this before.",
+    "NAME": "悖论制品",
+    "FLAVOR": "你从未见过如此意义不明的人工制品。",
     "DESCRIPTIONS": [
-      "At the start of combat, #yCompile a random Function. Give it #yRetain."
+      "每场战斗开始时, #y编译 随机一张 #y方法 。其获得 #y保留 。"
     ]
   }
 }

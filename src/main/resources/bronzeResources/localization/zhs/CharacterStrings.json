@@ -1,13 +1,13 @@
 {
   "bronze:theAutomaton": {
     "NAMES": [
-      "The Automaton",
-      "the Automaton"
+      "铜制机械人偶",
+      "铜制机械人偶"
     ],
     "TEXT": [
-      "The City's mechanical guardian. NL Adapts to any combat situation.",
-      "NL ALL WEAPONS -> 100%",
-      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~bronze~ ~one,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~"
+      "守卫城市的机械体。 NL 自适应各类战斗情况。",
+      "NL 全武器充能 -> 100%",
+      "在灯光昏暗的街道上巡视，你遇到几个戴着兜帽的人，他们正在进行某种黑暗的仪式。 当你靠近他们时，它们怪异地向你转过身来。 其中最高的一个露出尖牙，向你伸出一只长长的苍白的手。 NL ~\"加入~ ~我们~ ~铜制~ ~家伙,~ ~一起~ ~感受~ ~尖塔~ ~生命~ ~的~ ~温度~ ~吧。\"~"
     ]
   }
 }

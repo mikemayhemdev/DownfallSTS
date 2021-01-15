@@ -5,9 +5,9 @@
       "这片地区似乎是尖塔的 #p墓地 。正当你小心翼翼地穿过时，一个奇怪的微弱 ~鬼影~ 使你停下脚步。 它伸出一只手来，似乎在提供某种 #r交易 。",
       "这个 #b幽灵般的存在 触碰了你的肩膀，你立即 @倒下@ 了。 NL NL 之后你在塔内的一片空地上醒来，脚边放着一个 #g宝物 。 你离开时，感到被， ~怪异~ ~的目光~ 注视着...",
       "你摇了摇头， #b鬼影 吃力地看了你最后一眼，继续它 ~无休止的~ ~漫步。~ 你也继续了你的旅程。 ",
-	  "You take the strange #ygolden box, and feel a #pdarkness flow through you as you open it. Inside, you find a useful weapon!",
-      "You take the pulsating, steadily @BEATING@ box, and feel it @FLOW@ into your arm. A foul #pnausea pulses through you, but you feel stronger for it...",
-      "As soon as you clasp the artifact from the figure, #pdarkness envelops the room. The specter speaks to once more, his words appearing in your head without you ever hearing them. NL NL #p'A #pwise #pchoice. #pWhat #pdo #pyou #psay #pto #panother #pdeal, #pfriend? #pTake #pas #pmany #pas #pyou #plike...'"
+	  "你接过一个 #y金光闪闪 的盒子，打开时感觉有一股 #p黑暗的力量 从身边传过。向其中定睛一看，是一件趁手的武器！",
+      "你接过一个 @跃动@ 着的盒子，感觉似乎要 @流入@ 你的手臂一般。一股 #p邪恶 的气息在身体中涌动，但是你觉得你变强了……",
+      "从神像上扣下遗物时， #p黑暗的力量 充满了整个房间。幽灵再一次对你说话，一种你从未听过的话语出现在你的脑海里。 NL NL #p“一个明智的选择。再来笔交易怎么样，我的朋友？这里的东西随便拿走……”"
     ],
     "OPTIONS": [
       "[接受] #g获得一件诅咒遗物。 #r获得1-4张诅咒-随机。 ",
@@ -25,7 +25,8 @@
     "DESCRIPTIONS": [
       "一个恐怖的建筑在你面前。大多数人都不敢接近它，但你知道它的目的，也知道它有很大的用处。 NL 你进入房间准备献祭……",
       "献上了你灵魂的一部分，获得了容器 - 在通往终极力量的道路上又前进了一步。",
-      "权衡你的选择，你决定不在密封室献祭。你自己会在旅途中得到想要的一切。"
+      "权衡你的选择，你决定不在密封室献祭。你自己会在旅途中得到想要的一切。",
+	  "这些容器应该在以后能用上。"
     ],
     "OPTIONS": [
       "[献上] #r失去 ",
@@ -36,14 +37,15 @@
       "[锁定] 需要更多的金币。",
       "[锁定] 需要一张普通牌。",
       "[锁定] 需要一瓶药水。",
-      "[离开]"
+      "[离开]",
+	  "[锁定] 需要贡品"
     ]
   },
   "hexamod:HexaFalling": {
     "NAME": "六火坠落",
     "DESCRIPTIONS": [
       "你，突然不受引力束缚，平稳地 ~飘落~ 在地。",
-      "TODO..."
+      "内心毫无波动……"
     ],
     "OPTIONS": [
       "[漂浮] #r什么都不失去……",
@@ -73,11 +75,11 @@
     "hexamod:BackToBasics": {
     "NAME": "",
     "DESCRIPTIONS": [
-      "Spirit is the sword - and experience, the sharpening stone."
+      "精神是剑，经验是磨刀石。"
     ],
     "OPTIONS": [
-      "[Wistfulness] #gAdd #gEthereal to all #gStrikes and #gDefends.",
-      "[Locked] Requires a Strike or Defend."
+      "[渴望] #g将打击和防御加上虚无",
+      "[锁定] 需要打击和防御"
     ]
   }
 }

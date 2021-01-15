@@ -1,58 +1,58 @@
 {
   "bronze:DazingPulse": {
-    "NAME": "Dazing Pulse",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block NL bronze:Compile - bronze:Insert !M! *Dazed.",
+    "NAME": "晕眩反冲",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL bronze:编译 - bronze:插入 !M! 张 *晕眩 。",
     "EXTENDED_DESCRIPTION": [
-      "dazing",
-      "Pulse"
+      "晕眩",
+      "脉冲"
     ]
   },
   "bronze:Spike": {
-    "NAME": "Spike",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Gain !M! Thorns.",
+    "NAME": "护体尖刺",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 获得 !M! 层 荆棘 。",
     "EXTENDED_DESCRIPTION": [
-      "spiky",
-      "Spike"
+      "尖刺",
+      "突起"
     ]
   },
   "bronze:Explode": {
-    "NAME": "Explode",
-    "DESCRIPTION": "bronze:Insert a *Burn. NL bronze:Compile - ALL enemies lose !M! HP.",
+    "NAME": "爆炸",
+    "DESCRIPTION": " bronze:插入 *灼伤 。 NL bronze:编译 - 对所有敌人失去 !M! 点生命。",
     "EXTENDED_DESCRIPTION": [
-      "unstable",
-      "Bomb"
+      "不稳定的",
+      "爆炸"
     ]
   },
   "bronze:DonuBeam": {
-    "NAME": "Donu Beam",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL bronze:Compile - Gain !M! Strength and lose !bauto! Dexterity.",
+    "NAME": "甜圈激光",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL bronze:编译 - 获得 !M! 力量 并 失去 !bauto! 敏捷 。",
     "EXTENDED_DESCRIPTION": [
-      "smooth",
-      "Blast"
+      "平滑",
+      "爆裂"
     ]
   },
   "bronze:DecaBeam": {
-    "NAME": "Deca Shield",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! Plated Armor and bronze:Insert !bauto! *Dazed.",
+    "NAME": "八体护盾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 - 获得 !M! 层 多层护甲 并 bronze:插入 !bauto! 张 *晕眩 。",
     "EXTENDED_DESCRIPTION": [
-      "jagged",
-      "Barrier"
+      "锯齿",
+      "屏障"
     ]
   },
   "bronze:Strike": {
-    "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage.",
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
-      "simple",
-      "Strike"
+      "简易",
+      "打击"
     ]
   },
   "bronze:Defend": {
-    "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block.",
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点格挡。",
     "EXTENDED_DESCRIPTION": [
-      "basic",
-      "Defend"
+      "基础",
+      "防御"
     ]
   },
   "bronze:FunctionCard": {
@@ -60,593 +60,593 @@
     "DESCRIPTION": ""
   },
   "bronze:Goto": {
-    "NAME": "Goto",
-    "DESCRIPTION": "Draw !M! card. NL bronze:Compile - Next turn, draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL bronze:Compile - Next turn, draw !M! cards.",
+    "NAME": "跳转",
+    "DESCRIPTION": "抽 !M! 张牌。 NL bronze:编译 - 下回合抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL bronze:编译 - 下回合抽 !M! 张牌。",
     "EXTENDED_DESCRIPTION": [
-      "running",
-      "Sprint"
+      "奔跑",
+      "冲刺"
     ]
   },
   "bronze:Replicate": {
-    "NAME": "Replicate",
-    "DESCRIPTION": "Deal !D! damage.",
+    "NAME": "复制爪",
+    "DESCRIPTION": "造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
-      "copying",
-      "Copy"
+      "重复",
+      "拷贝"
     ]
   },
   "bronze:Branch": {
-    "NAME": "Branch",
-    "DESCRIPTION": "Choose - Deal !D! damage or gain !B! Block. NL bronze:Encode the option not chosen. NL Exhaust.",
+    "NAME": "分流",
+    "DESCRIPTION": "选择 - 造成 !D! 点伤害 或 获得 !B! 点 格挡 。 NL bronze:编码 待选择。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "Branch: Attack",
-      "Deal !D! damage.",
-      "Branch: Block",
-      "Gain !B! Block."
+      "分流: 攻击",
+      "造成 !D! 点伤害。",
+      "分流: 格挡",
+      "获得 !B! 点 格挡 。"
     ]
   },
   "bronze:DelayedSlice": {
-    "NAME": "Delayed Slice",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - ALL enemies lose !M! HP.",
+    "NAME": "延时切割",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 所有敌人失去 !M! 点生命。",
     "EXTENDED_DESCRIPTION": [
-      "delayed",
-      "Slice"
+      "延时",
+      "切割"
     ]
   },
   "bronze:WhirlingStrike": {
-    "NAME": "Piercing Shot",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies.",
+    "NAME": "穿透射击",
+    "DESCRIPTION": "对全体敌人造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
-      "piercing",
-      "Shot"
+      "穿透",
+      "射击"
     ]
   },
   "bronze:Iterate": {
-    "NAME": "Iterate",
-    "DESCRIPTION": "Deal !D! damage !M! times.",
+    "NAME": "迭代",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。",
     "EXTENDED_DESCRIPTION": [
-      "parsed",
-      "Iterate"
+      "解析",
+      "迭代"
     ]
   },
   "bronze:Separator": {
-    "NAME": "Separator",
-    "DESCRIPTION": "Deal !D! damage. π NL When bronze:Encoded, if this is not in the first or last slot, increase its damage by !M!.",
+    "NAME": "分离器",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 当 bronze:编码 时，如果不在最前后槽位，提高 !M! 点伤害。",
     "EXTENDED_DESCRIPTION": [
-      "split",
-      "Child"
+      "分离",
+      "子项"
     ]
   },
   "bronze:Overheat": {
-    "NAME": "Overheat",
-    "DESCRIPTION": "Take !M! damage. NL Deal !D! damage. NL bronze:Compile - bronze:Insert a *Burn+.",
+    "NAME": "过热",
+    "DESCRIPTION": "受到 !M! 点伤害。 NL 造成 !D! 点伤害。 NL bronze:编译 - bronze:插入 *灼伤+ 。",
     "EXTENDED_DESCRIPTION": [
-      "heated",
-      "Burn"
+      "高温",
+      "灼伤"
     ]
   },
   "bronze:CutThrough": {
-    "NAME": "Cut Through",
-    "DESCRIPTION": "Deal !D! damage. NL Scry !M!. NL bronze:Compile - Draw !bauto! card.",
+    "NAME": "斩断命运",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 预见 !M! 。 NL bronze:编译 - 抽 !bauto! 张牌。",
     "EXTENDED_DESCRIPTION": [
-      "cutting",
-      "Cut"
+      "斩断",
+      "切割"
     ]
   },
   "bronze:RecursiveStrike": {
-    "NAME": "Recursive Strike",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL bronze:Compile - bronze:Encode !M! copies of *Strike.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. NL bronze:Compile - bronze:Encode !M! copies of *Strike+.",
+    "NAME": "递归打击",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL bronze:编译 - bronze:编码 !M! 张 *打击 的复制。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL bronze:编译 - bronze:编码 !M! 张 *打击+ 的复制。",
     "EXTENDED_DESCRIPTION": [
-      "recursive",
-      "Recur"
+      "递归",
+      "循环"
     ]
   },
   "bronze:DarkDash": {
-    "NAME": "Dark Dash",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Compile - bronze:Insert a *Void.",
+    "NAME": "暗影冲击",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 造成 !D! 点伤害。 NL bronze:编译 - bronze:插入 *虚空 。",
     "EXTENDED_DESCRIPTION": [
-      "dark",
-      "Dash"
+      "暗影",
+      "冲击"
     ]
   },
   "bronze:OilSpill": {
-    "NAME": "Oil Spill",
-    "DESCRIPTION": "Deal !D! damage and apply !M! Poison. NL bronze:Compile - bronze:Insert a *Slimed.",
+    "NAME": "机油溢出",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 中毒 。 NL bronze:编译 - bronze:插入 *黏液 。",
     "EXTENDED_DESCRIPTION": [
-      "oily",
-      "Spill"
+      "机油",
+      "溢出"
     ]
   },
   "bronze:WildBeam": {
-    "NAME": "Wild Beam",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - bronze:Insert a *Wound.",
+    "NAME": "狂野射线",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - bronze:插入 *伤口 。",
     "EXTENDED_DESCRIPTION": [
-      "wild",
-      "Beam"
+      "狂野",
+      "射线"
     ]
   },
   "bronze:Frontload": {
-    "NAME": "Frontload",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Function gains Retain.",
+    "NAME": "预载",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 - *方法 获得 保留 。",
     "EXTENDED_DESCRIPTION": [
-      "sturdy",
-      "Wall"
+      "坚固",
+      "防护"
     ]
   },
   "bronze:DelayedGuard": {
-    "NAME": "Delayed Guard",
-    "DESCRIPTION": "Next turn, gain !B! Block.",
+    "NAME": "缓时防护",
+    "DESCRIPTION": "下回合, 获得 !B! 点 格挡 。",
     "EXTENDED_DESCRIPTION": [
-      "delayed",
-      "Guard"
+      "延缓",
+      "防卫"
     ]
   },
   "bronze:Shield": {
-    "NAME": "Sticky Shield",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Insert a *Slimed.",
+    "NAME": "黏性护盾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:插入 *黏液 。",
     "EXTENDED_DESCRIPTION": [
-      "sticky",
-      "Shield"
+      "黏黏",
+      "护盾"
     ]
   },
   "bronze:Deprecate": {
-    "NAME": "Deprecate",
-    "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL bronze:Compile - Gain Weak.",
+    "NAME": "屏蔽",
+    "DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL bronze:编译 - 获得 !bauto! 层 虚弱 。",
     "EXTENDED_DESCRIPTION": [
-      "old",
-      "Insult"
+      "旧版",
+      "羞辱"
     ]
   },
   "bronze:Invalidate": {
-    "NAME": "Invalidate",
-    "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies. NL bronze:Compile - Gain Vulnerable.",
+    "NAME": "无效化",
+    "DESCRIPTION": "对所有敌人给予 !M! 层 易伤 。 NL bronze:编译 - 获得 !bauto! 层 易伤 。",
     "EXTENDED_DESCRIPTION": [
-      "invalid",
-      "Error"
+      "无效",
+      "错误"
     ]
   },
   "bronze:Shell": {
-    "NAME": "Shell",
-    "DESCRIPTION": "Gain !M! bronze:Blur.",
-    "UPGRADE_DESCRIPTION": "Gain !M! bronze:Blur. NL bronze:Compile - Gain !M! bronze:Blur.",
+    "NAME": "外壳",
+    "DESCRIPTION": "获得 !M! bronze:残影 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! bronze:残影 。 NL bronze:编译 - 获得 !M! bronze:残影 。",
     "EXTENDED_DESCRIPTION": [
-      "curling",
-      "Shell"
+      "卷缩",
+      "护盾"
     ]
   },
   "bronze:BitShift": {
-    "NAME": "Bit Shift",
-    "DESCRIPTION": "Choose a card in the Sequence to return to your hand. NL It gains Retain. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Choose a card in the Sequence to return to your hand. NL It gains Retain. NL Exhaust."
+    "NAME": "位元位移",
+    "DESCRIPTION": "将 *队列 中的一张牌返回手牌。 NL 其获得 保留 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 将 *队列 中的一张牌返回手牌。 NL 其获得 保留 。 NL 消耗 。"
   },
   "bronze:ByteShift": {
-    "NAME": "Byte Shift",
-    "DESCRIPTION": "Return all cards in the Sequence to your hand. NL They gain Retain. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Return all cards in the Sequence to your hand. NL They gain Retain. NL Exhaust."
+    "NAME": "字节位移",
+    "DESCRIPTION": "将 *队列 的所有牌返回手牌。 NL 他们获得 保留 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 将 *队列 的所有牌返回手牌。 NL 他们获得 保留 。 NL 消耗 。"
   },
   "bronze:Batch": {
-    "NAME": "Batch",
-    "DESCRIPTION": "Create a Function immediately out of the cards in the Sequence. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Create a Function immediately out of the cards in the Sequence."
+    "NAME": "批处理",
+    "DESCRIPTION": "立即从 *队列 生成一张 *方法 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "立即从 *队列 生成一张 *方法 。"
   },
   "bronze:Constructor": {
-    "NAME": "Constructor",
-    "DESCRIPTION": "Gain !B! Block. π NL When bronze:Encoded, if this is the first card, increase its Block by !M!.",
+    "NAME": "构造器",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 当 bronze:编码，如果在第一个槽位, 提升 格挡 !M! 点。",
     "EXTENDED_DESCRIPTION": [
-      "build",
-      "Sadness",
-      "Greatness"
+      "构造",
+      "失落",
+      "伟大"
     ]
   },
   "bronze:Terminator": {
-    "NAME": "Terminator",
-    "DESCRIPTION": "bronze:Compile - If this is the last card in the Sequence, Function gains 'Play this again'.",
+    "NAME": "终止",
+    "DESCRIPTION": "bronze:编译 - 如果在 *队列 最后， *方法 获得再打出一次。",
     "EXTENDED_DESCRIPTION": [
-      "sad",
-      "End"
+      "哭泣",
+      "终结"
     ]
   },
   "bronze:Overload": {
-    "NAME": "Overload",
-    "DESCRIPTION": "Play a copy of each card in the Sequence. They do not Encode. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Play a copy of each card in the Sequence. They do not Encode."
+    "NAME": "过载",
+    "DESCRIPTION": "打出 *队列 中的牌的复制品。 它们不进行 编码 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "打出 *队列 中的牌的复制品。它们不进行 编码 。"
   },
   "bronze:GetLatest": {
-    "NAME": "Get Latest",
-    "DESCRIPTION": "Add a random card with bronze:Encode to your hand. NL It costs 0. NL Exhaust."
+    "NAME": "最新素材",
+    "DESCRIPTION": "将一张有 bronze:编码 的随机牌加入手牌。 NL 它费用为0。 NL 消耗 。"
   },
   "bronze:Flail": {
-    "NAME": "Flail",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies !bauto! times. NL bronze:Compile - Gain !M! Artifact.",
+    "NAME": "乱斗",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 !bauto! 次。 NL bronze:编译 - 获得 !M! 层 人工制品 。",
     "EXTENDED_DESCRIPTION": [
-      "flailing",
-      "Flail"
+      "狂乱",
+      "链枷"
     ]
   },
   "bronze:DigitalCarnage": {
-    "NAME": "Digital Carnage",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Function gains Ethereal.",
+    "NAME": "数码残杀",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - *方法 获得 虚无 。",
     "EXTENDED_DESCRIPTION": [
-      "digital",
-      "Carnage"
+      "数码",
+      "残杀"
     ]
   },
   "bronze:NullPointer": {
-    "NAME": "Null Pointer",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL bronze:Compile - Function gains Unplayable.",
+    "NAME": "空指针",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL bronze:编译 - *方法 获得 不能被打出 。",
     "EXTENDED_DESCRIPTION": [
-      "null",
-      "Pointer"
+      "无效",
+      "指针"
     ]
   },
   "bronze:Fortify": {
-    "NAME": "Fortify",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Gain !M! Dexterity.",
+    "NAME": "强化",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 获得 !M! 敏捷 。",
     "EXTENDED_DESCRIPTION": [
-      "solid",
-      "Fortress"
+      "固化",
+      "巩固"
     ]
   },
   "bronze:BronzeOrb": {
-    "NAME": "Bronze Orb",
-    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Gain !B! Block. NL bronze:Encode a random card with bronze:Encode in your draw pile. NL Exhaust."
+    "NAME": "铜制圆球",
+    "DESCRIPTION": " 固有 。 NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL bronze:编码 抽牌堆随机一张可 bronze:编码 的牌。 NL 消耗 。"
   },
   "bronze:Virus": {
-    "NAME": "Virus",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Transform all cards in hand into *Minor *Beam. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL Transform all cards in hand into *Minor *Beam+. NL Exhaust."
+    "NAME": "病毒",
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 将所有手牌变为 *微光射线 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 将所有手牌变为 *微光射线+ 。 NL 消耗 。"
   },
   "bronze:Backtrace": {
-    "NAME": "Backtrace",
-    "DESCRIPTION": "Innate. NL \u00A0 Deal !D! damage. NL bronze:Compile - Function gains Exhaust.",
+    "NAME": "回溯",
+    "DESCRIPTION": " 固有 。 NL 造成 !D! 点伤害。 NL bronze:编译 - *方法 获得 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "sneaky",
-      "Trace"
+      "暗中",
+      "追溯"
     ]
   },
   "bronze:CloningBeam": {
-    "NAME": "Merge Conflict",
-    "DESCRIPTION": "Deal !D! damage. NL The next time you bronze:Encode a card, bronze:Encode a copy of it. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL The next time you bronze:Encode a card, bronze:Encode a copy of it."
+    "NAME": "和并冲击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 下一次 bronze:编码 时， bronze:编码 这张牌的复制品。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 下一次 bronze:编码 时， bronze:编码 这张牌的复制品。"
   },
   "bronze:FollowUp": {
-    "NAME": "Follow Through",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL If the last played card was a Function, play this again."
+    "NAME": "数据追踪",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 如果打出的上一张是 *方法, 再打出一次 。"
   },
   "bronze:ChosenStrike": {
-    "NAME": "Cultist Strike",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Increase this card's damage by !M! permanently.",
+    "NAME": "异教打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 本局游戏这张牌的伤害提升 !M! 点。",
     "EXTENDED_DESCRIPTION": [
-      "cultist",
-      "Caw"
+      "异教",
+      "咔咔"
     ]
   },
   "bronze:ClassDefault": {
-    "NAME": "Class Default",
-    "DESCRIPTION": "Add a copy of the first card in the current Sequence to the next !M! Sequences automatically.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Add a copy of the first card in the current Sequence to the next !M! Sequences automatically."
+    "NAME": "默认类",
+    "DESCRIPTION": "将当前 *队列 中的第一张牌，自动加入到下 !M! 个 *队列 中。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 将当前 *队列 中的第一张牌，自动加入到下 !M! 个 *队列 中。"
   },
   "bronze:ItsAFeature": {
-    "NAME": "It's a Feature",
-    "DESCRIPTION": "Whenever you draw a Curse or Status card, gain 1 Temporary Strength and Dexterity.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you draw a Curse or Status card, gain 1 Temporary Strength and Dexterity."
+    "NAME": "这是特性",
+    "DESCRIPTION": "当你抽到诅咒或状态牌 时, 获得 1 guardianmod:临时 力量 和 敏捷 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 当你抽到诅咒或状态牌 时, 获得 1 guardianmod:临时 力量 和 敏捷 。"
   },
   "bronze:MinorBeam": {
-    "NAME": "Minor Beam",
-    "DESCRIPTION": "Deal !D! damage.",
+    "NAME": "微光射线",
+    "DESCRIPTION": "造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
-      "minor",
-      "Scratch"
+      "微弱",
+      "刮擦"
     ]
   },
   "bronze:InfiniteBeams": {
-    "NAME": "Infinite Beams",
-    "DESCRIPTION": "At the start of each turn, add a *Minor *Beam to your hand.",
-    "UPGRADE_DESCRIPTION": "At the start of each turn, add a *Minor *Beam+ to your hand."
+    "NAME": "无尽射线",
+    "DESCRIPTION": "每回合开始时, 将一张 *微光射线 加入到手牌。",
+    "UPGRADE_DESCRIPTION": "每回合开始时, 将一张 *微光射线+ 加入到手牌。"
   },
   "bronze:Optimize": {
-    "NAME": "Optimize",
-    "DESCRIPTION": "Upgrade the next !M! cards you bronze:Encode that can be upgraded."
+    "NAME": "优化",
+    "DESCRIPTION": " 升级 下 !M! 张 bronze:编码 的牌。"
   },
   "bronze:MaxOutput": {
-    "NAME": "Max Output",
-    "DESCRIPTION": "Draw !M! cards. NL At the start of each turn, draw 1 additional card and bronze:Insert 1 *Dazed."
+    "NAME": "极限功率",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 每回合额外抽1张牌，每回合 bronze:插入 *晕眩 。"
   },
   "bronze:Mutator": {
-    "NAME": "Mutator",
-    "DESCRIPTION": "Gain 1 Strength. NL Transform a Status in your hand into a copy of this.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain 1 Strength. NL Transform a Status in your hand into a copy of this."
+    "NAME": "赋值",
+    "DESCRIPTION": "获得 1 点 力量 。 NL 将手牌中的一张 *状态牌 变成本牌的复制品。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得 1 点 力量 。 NL 将手牌中的一张 *状态牌 变成本牌的复制品。"
   },
   "bronze:Allocate": {
-    "NAME": "Allocate",
-    "DESCRIPTION": "Gain [E] for each Status in your draw pile.",
+    "NAME": "分配",
+    "DESCRIPTION": "抽牌堆每有一张 *状态牌 ，获得 [E] 。",
     "EXTENDED_DESCRIPTION": [
-      " NL (Gain ",
-      " [E] .)"
+      " NL （获得 ",
+      " [E] ）"
     ]
   },
   "bronze:Decompile": {
-    "NAME": "Decompile",
-    "DESCRIPTION": "Exhaust all cards in the Sequence. Gain [E] and draw a card for each card Exhausted. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Exhaust all cards in the Sequence. Gain [E] and draw a card for each card Exhausted. NL Exhaust."
+    "NAME": "反编译",
+    "DESCRIPTION": " 消耗 *队列 中的牌。每 消耗 一张牌获得 [E] 并抽一张牌 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 消耗 *队列 中的牌。每 消耗 一张牌获得 [E] 并抽一张牌 。 NL 消耗 。"
   },
   "bronze:ChildClass": {
-    "NAME": "Invoke",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain [E] equal to the total cost of cards in the Sequence.",
+    "NAME": "援引",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 - 获得 *队列 中耗能总和的 [E] 。",
     "EXTENDED_DESCRIPTION": [
-      "invoked",
-      "Energy"
+      "援引",
+      "能量"
     ]
   },
   "bronze:Repair": {
-    "NAME": "Repair",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Heal !M! HP.",
+    "NAME": "维修",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 - 回复 !M! 点生命。",
     "EXTENDED_DESCRIPTION": [
-      "tinkers",
-      "Wrench"
+      "修补",
+      "扳手"
     ]
   },
   "bronze:Boost": {
-    "NAME": "Boost",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! Strength.",
+    "NAME": "蓄能增压",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 - 获得 !M! 力量 。",
     "EXTENDED_DESCRIPTION": [
-      "boosted",
-      "Boost"
+      "升压",
+      "强化"
     ]
   },
   "bronze:Safeguard": {
-    "NAME": "Safeguard",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! Frail.",
+    "NAME": "安全卫士",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 - 获得 !M! 层 脆弱 。",
     "EXTENDED_DESCRIPTION": [
-      "safe",
-      "Guard"
+      "防护",
+      "格挡"
     ]
   },
   "bronze:BronzeArmor": {
-    "NAME": "Bronze Armor",
-    "DESCRIPTION": "Gain !bauto! Artifact. NL bronze:Compile - ALL enemies gain !M! Artifact.",
+    "NAME": "铜制铠甲",
+    "DESCRIPTION": "获得 !bauto! 层 人工制品 。 NL bronze:编译 - 所有敌人获得 !M! 层 人工制品 。",
     "EXTENDED_DESCRIPTION": [
-      "bronze",
-      "Armor"
+      "铜制",
+      "铠甲"
     ]
   },
   "bronze:ForLoop": {
-    "NAME": "For Loop",
-    "DESCRIPTION": "The next card you bronze:Encode causes X additional copies to also be bronze:Encoded. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL The next card you bronze:Encode causes X additional copies to also be bronze:Encoded. NL Exhaust."
+    "NAME": "循环",
+    "DESCRIPTION": "下一张牌 bronze:编码 时， X 张这张牌的复制品也 bronze:编码。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL The 下一张牌 bronze:编码 时，X张这张牌的复制品也 bronze:编码。 NL 消耗 。"
   },
   "bronze:Philosophize": {
-    "NAME": "Philosophize",
-    "DESCRIPTION": "Gain !bauto! Strength. NL bronze:Compile - ALL enemies gain !M! Strength.",
+    "NAME": "哲学思想",
+    "DESCRIPTION": "获得 !bauto! 力量 。 NL bronze:编译 - 所有敌人获得 !M! 点 力量 。",
     "EXTENDED_DESCRIPTION": [
-      "smart",
-      "Idea"
+      "智能",
+      "想法"
     ]
   },
   "bronze:Return": {
-    "NAME": "Return",
-    "DESCRIPTION": "Gain [E] and draw 1 additional card at the start of your next X turns. NL Gain [E] . NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain [E] and draw 1 additional card at the start of your next X turns. NL Gain [E] ."
+    "NAME": "返回",
+    "DESCRIPTION": "获得 [E] 。 NL 接下来的X回合开始时，获得 [E] 并抽1张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] 。 NL 接下来的X回合开始时，获得 [E] 并抽1张牌。 "
   },
   "bronze:ForceShield": {
-    "NAME": "Force Shield",
-    "DESCRIPTION": "Costs 1 less [E] for each Function created this combat. NL Gain !B! Block."
+    "NAME": "力场护盾",
+    "DESCRIPTION": "本场战斗每生成一张 *方法 ，本牌费用减1。 NL 获得 !B! 点 格挡 。"
   },
   "bronze:Format": {
-    "NAME": "Format",
-    "DESCRIPTION": "bronze:Encode X copies of *Fragment. NL Gain [E] . NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "bronze:Encode X+1 copies of *Fragment. NL Gain [E] . NL Exhaust."
+    "NAME": "格式化",
+    "DESCRIPTION": " bronze:编码 X 张 *碎片 。 NL 获得 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "bronze:编码 X+1 张 *碎片 。 NL 获得 [E] 。 NL 消耗 。"
   },
-  "bronze:FormatEncoded": {
-    "NAME": "Fragment",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block.",
+  "bronze:FormatEncode": {
+    "NAME": "碎片",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。",
     "EXTENDED_DESCRIPTION": [
-      "clean",
-      "Fragment"
+      "简洁",
+      "碎片"
     ]
   },
   "bronze:BurnOut": {
-    "NAME": "Burn Out",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for ALL of your Status cards, then Exhaust them. NL bronze:Insert 3 *Burns.",
+    "NAME": "燃烧殆尽",
+    "DESCRIPTION": " 消耗 所有状态牌。 每消耗一张 *状态牌 对随机一名敌人造成 !D! 点伤害。 NL bronze:插入 3张 *灼伤 。",
     "EXTENDED_DESCRIPTION": [
-      " NL (Hits ",
-      " times.)"
+      " NL （攻击 ",
+      " 次。）"
     ]
   },
   "bronze:ShipIt": {
-    "NAME": "Ship It",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL of your Status cards."
+    "NAME": "废能转换",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一张 *状态牌 造成 !M! 点额外伤害。"
   },
   "bronze:Break": {
-    "NAME": "Break",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - bronze:Insert !M! random Status cards.",
+    "NAME": "打断",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - bronze:插入 !M! 张随机状态牌 。",
     "EXTENDED_DESCRIPTION": [
-      "broken",
-      "Smash"
+      "打断",
+      "粉碎"
     ]
   },
   "bronze:InfiniteLoop": {
-    "NAME": "Infinite Loop",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a copy of this into your hand and increase its damage by !M!.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL bronze:Compile - Add a copy of this into your hand and increase its damage by !M!.",
+    "NAME": "无限循环",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 将一张本牌的复制品加入到手牌，它提升 !M! 点伤害。",
+    "UPGRADE_DESCRIPTION": "保留。 NL 造成 !D! 点伤害。 NL bronze:编译 - 将一张本牌的复制品加入到手牌，它提升 !M! 点伤害。",
     "EXTENDED_DESCRIPTION": [
-      "infinite",
-      "Loop"
+      "无限",
+      "循环"
     ]
   },
   "bronze:Library": {
-    "NAME": "Library",
-    "DESCRIPTION": "At the start of your turn, add a random card with bronze:Encode to your hand. NL It costs 0."
+    "NAME": "数据库",
+    "DESCRIPTION": "回合开始时, 将随机一张带有 bronze:编码 的牌加入手牌。 NL 它的费用为0。"
   },
   "bronze:Verify": {
-    "NAME": "Sentient Form",
-    "DESCRIPTION": "Whenever you bronze:Encode a card, increase all numbers on it by 1.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you bronze:Encode a card, increase all numbers on it by 1."
+    "NAME": "感知形态",
+    "DESCRIPTION": "虚无 。 NL 每回合第一次生成或抽到 *方法 时，这张牌的数值提高1。",
+    "UPGRADE_DESCRIPTION": "每回合第一次生成或抽到 *方法 时，这张牌的数值提高1。"
   },
   "bronze:BronzeHeatsink": {
-    "NAME": "Bronze Heatsink",
-    "DESCRIPTION": "Whenever you play a Function, draw a card.",
-    "UPGRADE_DESCRIPTION": "Whenever you play a Function, draw 2 cards."
+    "NAME": "铜制散热器",
+    "DESCRIPTION": "当你打出 *方法 时, 抽1张牌。",
+    "UPGRADE_DESCRIPTION": "当你打出 *方法 时, 抽2张牌。"
   },
   "bronze:HardenedForm": {
-    "NAME": "Summon Orb",
-    "DESCRIPTION": "Whenever you create or play a Function, gain !M! Block and deal !M! damage to a random enemy."
+    "NAME": "圆球召唤",
+    "DESCRIPTION": "每当你生成或打出 *方法 时, 获得 !M! 点 格挡 并对随机敌人造成 !M! 点伤害。"
   },
   "bronze:CopyPaste": {
-    "NAME": "Copy Paste",
-    "DESCRIPTION": "This turn, your next Function is played twice.",
-    "UPGRADE_DESCRIPTION": "Retain. NL This turn, your next Function is played twice."
+    "NAME": "复制粘贴",
+    "DESCRIPTION": "本回合下一张 *方法 打出两次。",
+    "UPGRADE_DESCRIPTION": "保留。 NL 本回合下一张 *方法 打出两次。"
   },
   "bronze:LegacyCode": {
-    "NAME": "Legacy Code",
-    "DESCRIPTION": "Retain. NL Put !M! card from your discard pile into your hand.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Put !M! cards from your discard pile into your hand."
+    "NAME": "历史代码",
+    "DESCRIPTION": " 保留 。 NL 将 !M! 张牌从弃牌堆加入手牌。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 将 !M! 张牌从弃牌堆加入手牌。"
   },
   "bronze:Repulsor": {
-    "NAME": "Repulsor",
-    "DESCRIPTION": "When you draw the first Status or Curse card each turn, Exhaust it and draw a card.",
-    "UPGRADE_DESCRIPTION": "Innate. NL When you draw the first Status or Curse card each turn, Exhaust it and draw a card."
+    "NAME": "反冲",
+    "DESCRIPTION": "每回合当你抽到第一张 状态牌 和 诅咒 时, 消耗 并抽一张牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 每回合当你抽到第一张 状态牌 和 诅咒 时, 消耗 并抽一张牌。"
   },
   "bronze:Debug": {
-    "NAME": "Debug",
-    "DESCRIPTION": "Remove all negative bronze:Compile effects from the cards in the Sequence. NL Exhaust."
+    "NAME": "调试",
+    "DESCRIPTION": "去除 *队列 中牌的 bronze:编译 负面效果。 NL 消耗 。"
   },
   "bronze:HyperBeam": {
-    "NAME": "HYPER BEAM",
-    "DESCRIPTION": "Retain. NL Deal !D! damage to ALL enemies. NL Skip your next turn. NL When Retained, lower its cost by 1 this combat."
+    "NAME": "超能射线",
+    "DESCRIPTION": " 保留 。 NL 对所有敌人造成 !D! 点伤害。 NL 将 5 张 *虚空 加你的抽牌堆顶部。 NL 保留 时，这张牌的耗能降低1。"
   },
   "bronze:Hardcode": {
-    "NAME": "Hardcode",
-    "DESCRIPTION": "Fleeting. NL The next Function you create goes into your deck permanently instead of your hand."
+    "NAME": "硬编码",
+    "DESCRIPTION": " 即逝 。 NL 你生成的下张 *方法 将加入牌组。"
   },
   "bronze:SpaghettiCode": {
-    "NAME": "Spaghetti Code",
-    "DESCRIPTION": "Until the Sequence is full, choose 1 of 3 random cards to bronze:Encode. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Until the Sequence is full, choose 1 of 3 random cards to bronze:Encode."
+    "NAME": "意面代码",
+    "DESCRIPTION": "从3张随机牌中选择1张 bronze:编码 直到充满 *队列 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "从3张随机牌中选择1张 bronze:编码 直到充满 *队列 。"
   },
   "bronze:Assembly": {
-    "NAME": "Assembly",
-    "DESCRIPTION": "Scry !M!. NL bronze:Encode all cards with bronze:Encode discarded. NL Exhaust."
+    "NAME": "装配",
+    "DESCRIPTION": " 预见 !M! 。 NL bronze:编码 其中丢弃的 bronze:编码 的牌。 NL 消耗 。"
   },
   "bronze:FineTuning": {
-    "NAME": "Fine Tuning",
-    "DESCRIPTION": "Increase all numbers on cards in the Sequence by !M!. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Increase all numbers on cards in the Sequence by !M!. NL Exhaust."
+    "NAME": "性能调整",
+    "DESCRIPTION": "提升 *队列 中的所有牌的数值 !M! 点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 提升 *队列 中的所有牌的数值 !M! 点。 NL 消耗 。"
   },
   "bronze:CleanCode": {
-    "NAME": "Clean Code",
-    "DESCRIPTION": "Remove all negative bronze:Compile effects from cards in the Sequence. NL Lasts for the next !M! Functions created."
+    "NAME": "简明代码",
+    "DESCRIPTION": "下 !M! 次生成 *方法 时，移除其中 bronze:编译 的负面效果。"
   },
   "bronze:BranchBlock": {
-    "NAME": "Branch: Block",
-    "DESCRIPTION": "Gain !B! Block.",
+    "NAME": "分支: 格挡",
+    "DESCRIPTION": "获得 !B! 点 格挡 。",
     "EXTENDED_DESCRIPTION": [
-      "forked",
-      "Branch"
+      "分叉",
+      "分支"
     ]
   },
   "bronze:BranchHit": {
-    "NAME": "Branch: Attack",
-    "DESCRIPTION": "Deal !D! damage.",
+    "NAME": "分支: 攻击",
+    "DESCRIPTION": "造成 !D! 点 伤害 。",
     "EXTENDED_DESCRIPTION": [
-      "forked",
-      "Branch"
+      "分叉",
+      "分支"
     ]
   },
   "bronze:Ignite": {
-    "NAME": "Ignite",
-    "DESCRIPTION": "Apply !M! hexamod:Soulburn. NL At the end of your turn, take 2 damage.",
-    "UPGRADE_DESCRIPTION": "Apply !M! hexamod:Soulburn. NL At the end of your turn, take 4 damage."
+    "NAME": "引燃",
+    "DESCRIPTION": "给予 !M! 层 hexamod:灼魂 。 NL 回合结束时,受到 2 点伤害。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 hexamod:灼魂 。 NL 回合结束时,受到 4 点伤害。"
   },
   "bronze:IntoTheVoid": {
-    "NAME": "Into the Void",
-    "DESCRIPTION": "Ethereal. NL Enemy loses !M! Strength this turn. NL Whenever this card is drawn, lose 1 Energy. NL Exhaust."
+    "NAME": "遁入虚空",
+    "DESCRIPTION": "虚无 。 NL 本回合敌人失去 !M! 力量 。 NL 抽到这张牌时，失去 [E] 。 NL 消耗 。"
   },
   "bronze:Lubricant": {
-    "NAME": "Lubricant",
-    "DESCRIPTION": "Draw !M! cards. NL Exhaust."
+    "NAME": "润滑剂",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 消耗 。"
   },
   "bronze:GrievousWound": {
-    "NAME": "Grievous Wound",
-    "DESCRIPTION": "Apply !M! Vulnerable."
+    "NAME": "重伤",
+    "DESCRIPTION": "给予 !M! 层 易伤 。"
   },
   "bronze:Daze": {
-    "NAME": "Daze",
-    "DESCRIPTION": "Ethereal. NL Apply !M! Weak. NL Exhaust."
+    "NAME": "晕眩",
+    "DESCRIPTION": "虚无 。 NL 给予 !M! 层 虚弱 。 NL 消耗 。"
   },
   "bronze:UnknownStatus": {
-    "NAME": "Perplex",
-    "DESCRIPTION": "Deal !B! Block."
+    "NAME": "迷惑",
+    "DESCRIPTION": "造成 !B! 点 格挡 。"
   },
   "bronze:TinkerersToolbox": {
-    "NAME": "Dev Tools",
-    "DESCRIPTION": "Retain. NL Choose between *Debug, *Batch, *Decompile, and *Byte *Shift. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Choose between *Debug, *Batch, *Decompile, and *Byte *Shift."
+    "NAME": "开发工具",
+    "DESCRIPTION": "保留。 NL 在 *调试 ， *批处理 和 *反编译 中选择加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留。 NL 在 *调试 ， *批处理 和 *反编译 中选择加入手牌。"
   },
   "bronze:Refactor": {
-    "NAME": "Refactor",
-    "DESCRIPTION": "Scry !M!. NL Exhaust all cards discarded. NL Gain !B! Block for each Status card exhausted."
+    "NAME": "重构",
+    "DESCRIPTION": " 预见 !M! 。 NL 消耗 丢弃的状态牌。 NL 每消耗一张牌获得 !B! 点 格挡 。"
   },
   "bronze:Turbo": {
-    "NAME": "Turbo",
-    "DESCRIPTION": "Gain [E] [E] . NL bronze:Insert a *Void.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain [E] [E] . NL bronze:Insert a *Void."
+    "NAME": "内核加速",
+    "DESCRIPTION": "获得 [E] [E] 。 NL bronze:插入 *虚空 。",
+    "UPGRADE_DESCRIPTION": "保留。 NL 获得 [E] [E] 。 NL bronze:插入 *虚空 。"
   },
   "bronze:BugBarrage": {
-    "NAME": "Bug Barrage",
-    "DESCRIPTION": "Add 1 *Wound to your hand. NL Deal !D! damage for each Status card in hand.",
-    "UPGRADE_DESCRIPTION": "Add !M! *Wounds to your hand. NL Deal !D! damage for each Status card in hand.",
+    "NAME": "错误齐射",
+    "DESCRIPTION": "将1张 *伤口 加入手牌。 NL 手牌中每有一张 状态牌 造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "将 !M! 张 *伤口 到手牌。 NL 手牌中每有一张 状态牌 造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
-      " NL (Hits ",
-      " times.)"
+      " NL （攻击 ",
+      " 次）"
     ]
   },
   "bronze:BuggyMess": {
-    "NAME": "Buggy Mess",
-    "DESCRIPTION": "bronze:Insert random Status. NL Gain !M! [E] .",
+    "NAME": "多重错误",
+    "DESCRIPTION": "bronze:插入 随机状态牌 。 NL 获得 [E] 。",
     "EXTENDED_DESCRIPTION": [
-      "buggy",
-      "Mess"
+      "错误的",
+      "混乱"
     ]
   },
   "bronze:FindAndReplace": {
-    "NAME": "Find and Replace",
-    "DESCRIPTION": "Put a card from your draw or discard pile into your hand. NL Add a Dazed where it was.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Put a card from your draw or discard pile into your hand. NL Add a Dazed where it was."
+    "NAME": "查找替换",
+    "DESCRIPTION": "虚无 。 NL 将一张抽牌堆或弃牌堆的牌，加入手牌。 NL 在原来的位置加入 *晕眩 。",
+    "UPGRADE_DESCRIPTION": "保留。 NL 将一张抽牌堆或弃牌堆的牌，加入手牌。 NL 在原来的位置加入 *晕眩 。"
   },
   "bronze:ThunderWave": {
-    "NAME": "Thunder Wave",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for each Function created this combat.",
+    "NAME": "雷霆",
+    "DESCRIPTION": "本场战斗每生成一张 *方法 对随机敌人造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
-      " NL (Hits ",
-      " times.)"
+      " NL （攻击 ",
+      " 次）"
     ]
   },
   "bronze:AlphaBuild": {
-    "NAME": "Early Access",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Beta Build.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Beta Build.",
+    "NAME": "抢先体验",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:插入 随机状态牌。 NL bronze:编译 - bronze:插入 *贝塔测试 。",
+    "UPGRADE_DESCRIPTION": "固有。 NL 造成 !D! 点伤害。 NL bronze:插入 随机状态牌。 NL bronze:编译 - bronze:插入 *贝塔测试 。",
     "EXTENDED_DESCRIPTION": [
-      "rough",
-      "Alpha"
+      "粗略",
+      "初版"
     ]
   },
   "bronze:BetaBuild": {
-    "NAME": "Beta Build",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Full Release.",
+    "NAME": "贝塔测试",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:插入 随机状态牌。 NL bronze:编译 - bronze:插入 *完全公开 。",
     "EXTENDED_DESCRIPTION": [
-      "early",
-      "Beta"
+      "早期",
+      "内测"
     ]
   },
   "bronze:FullRelease": {
-    "NAME": "Full Release",
-    "DESCRIPTION": "bronze:Compile - Function becomes a Power which activates its effects at the start of each turn.",
+    "NAME": "完全公开",
+    "DESCRIPTION": "bronze:编译 - *方法 变成一张 能力牌 并且每回合打出一张。",
     "EXTENDED_DESCRIPTION": [
-      "full",
-      "Release"
+      "完全",
+      "公开"
     ]
   }
 }

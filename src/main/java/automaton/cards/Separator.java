@@ -32,7 +32,7 @@ public class Separator extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.LIGHTNING);
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
     }
 
     public void upp() {

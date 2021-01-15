@@ -145,8 +145,8 @@
   "Guardian:RevengePower": {
     "NAME": "Revenge",
     "DESCRIPTIONS": [
-      "When #yDefensive #yMode is removed, gain ",
-      " #yStrength."
+      "While in #yDefensive #yMode raise your #yStrength by #b",
+      " ."
     ]
   },
   "Guardian:StasisEnginePower": {

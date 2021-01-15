@@ -3,10 +3,11 @@
     "NAME": "学习尖塔",
     "DESCRIPTIONS": [
       "在下回合开始时将随机一张 #y首领 牌加入手牌。 NL 它直到打出前耗能为 #b0 。",
-      "Gain a random Automaton card at the start of your next #b",
-      " turns. NL They cost #b0 until played.",
-      "Gain a random #yUpgraded #yBoss card at the start of next turn. NL It costs #b0 until played.",
-      "Gain a random #yUpgradedAutomaton card at the start of your next #b"
+      "接下来的 #b",
+      " 个回合开始时将随机一张 #y首领 牌加入手牌。 NL 它直到打出前耗能为 #b0 。",
+      "在下回合开始时将随机一张已 #y升级 的 #y首领 牌加入手牌。 NL 它直到打出前耗能为 #b0 。",
+      "接下来的 #b",
+      " 个回合开始时将随机一张已 #y升级 的 #y首领 牌加入手牌。 NL 它直到打出前耗能为 #b0 。"
     ]
   },
   "expansioncontent:AwakenedOnePower": {

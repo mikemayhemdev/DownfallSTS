@@ -3,7 +3,7 @@
     "NAME": "异蛇之魂",
     "FLAVOR": "0……3……2……2……1",
     "DESCRIPTIONS": [
-      "每当你将一张 #ysneckomod:未知 牌加入牌组中时，获得 #b1 点最大生命。"
+      "你能在 #y休息处 明晰一张 #y未知牌 。"
     ]
   },
   "sneckomod:SuperSneckoSoul": {
@@ -11,12 +11,12 @@
     "FLAVOR": "3120231321230320",
     "DESCRIPTIONS": [
       "替换 #r",
-      " 。 NL 拾起时，你的牌组中每有一张 #ysneckomod:未知 牌，获得 #b2 点最大生命。"
+      " 。 NL #y休息处 明晰一张 #y未知牌 现在变成自由行动了。"
     ]
   },
   "sneckomod:CleanMud": {
     "NAME": "蛇笛",
-    "FLAVOR": "You're an oxy-moron!",
+    "FLAVOR": "嘶嘶嘶嘶嘶嘶嘶……",
     "DESCRIPTIONS": [
       "#ysneckomod:混淆 数值不为 #b3."
     ]
@@ -44,14 +44,14 @@
   },
   "sneckomod:RareBoosterPack": {
     "NAME": "稀有增强箱",
-    "FLAVOR": "一手货。",
+    "FLAVOR": "新品。",
     "DESCRIPTIONS": [
-      "拾起时，获得不同类型的 #ysneckomod:未知 #y稀有 牌各一张。"
+      "拾起时，获得不同类型的 #y未知稀有 牌各一张。"
     ]
   },
   "sneckomod:SleevedAce": {
     "NAME": "袖中王牌",
-    "FLAVOR": "我也出王牌。",
+    "FLAVOR": "我也出A。",
     "DESCRIPTIONS": [
       "每场战斗开始时，将一张 #y作弊 加入手牌并 #y保留 。"
     ]
@@ -60,7 +60,7 @@
     "NAME": "未知之蛋",
     "FLAVOR": "想知道孵出什么？ 交 $1000 再说。",
     "DESCRIPTIONS": [
-      "卡牌奖励中的 #ysneckomod:未知 将被 #y升级 。"
+      "卡牌奖励中的 #y未知 牌将被 #y升级 。"
     ]
   },
   "sneckomod:SuperSneckoEye": {
@@ -74,7 +74,7 @@
     "NAME": "陈家挂坠",
     "FLAVOR": "见证了异蛇之眼与符文金字塔的辉煌。",
     "DESCRIPTIONS": [
-      "你的回合开始时，将手牌中耗能最高的牌的耗能减少 #b1 。"
+      "你的回合开始时，将手牌中耗能最高的牌的本回合耗能减少 #b1 。"
     ]
   },
   "sneckomod:BlankCard": {

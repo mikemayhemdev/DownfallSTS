@@ -18,12 +18,12 @@
     "FLAVOR": "看看我们能不能做得... 更好。",
     "DESCRIPTIONS": [
       "替换 #r",
-      " 。[]  NL 每回合第一次 #y点燃 时，获得 [E] 。"
+      ".[]  NL 每回合第一次 #y点燃 时，获得 [E] 。"
     ]
   },
   "hexamod:IceCube": {
     "NAME": "幽灵雪花",
-    "FLAVOR": "我感觉... 好冷。",
+    "FLAVOR": "我感觉……好冷。",
     "DESCRIPTIONS": [
       "每回合获得 [E] 。 #yhexamod:灼魂 需要 #r4 回合才能生效。"
     ]
@@ -32,7 +32,7 @@
     "NAME": "保暖石",
     "FLAVOR": "一点火苗就能激活这东西了！",
     "DESCRIPTIONS": [
-      "如果本场战斗引爆过 #yhexamod:灼魂 ，战斗结束时回复 #b2 点生命。"
+      "如果本场战斗引爆过 #yhexamod:灼魂 ，战斗结束时回复 #b4 点生命。"
     ]
   },
   "hexamod:RecyclingMachine": {
@@ -60,7 +60,7 @@
     "NAME": "混沌灵魂",
     "FLAVOR": "混乱，现出真身。",
     "DESCRIPTIONS": [
-      "第二个灼热鬼火变为狂徒鬼火。 NL 狂徒鬼火在激活时结束回合点燃。 NL 点燃：打出抽牌堆顶部的牌。"
+      "第二个灼热鬼火变为狂徒鬼火。 NL 狂徒鬼火激活时在结束回合点燃。 NL 点燃：打出抽牌堆顶部的牌。"
     ]
   },
   "hexamod:JarOfFuel": {

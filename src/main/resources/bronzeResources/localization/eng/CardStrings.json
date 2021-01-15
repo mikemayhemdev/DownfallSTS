@@ -605,7 +605,7 @@
   },
   "bronze:BuggyMess": {
     "NAME": "Buggy Mess",
-    "DESCRIPTION": "bronze:Insert random Status. NL Gain !M! [E] .",
+    "DESCRIPTION": "bronze:Insert random Status. NL Gain [E] .",
     "EXTENDED_DESCRIPTION": [
       "buggy",
       "Mess"
@@ -626,8 +626,8 @@
   },
   "bronze:AlphaBuild": {
     "NAME": "Early Access",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Beta Build.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Beta Build.",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert *Beta *Build.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert *Beta *Build.",
     "EXTENDED_DESCRIPTION": [
       "rough",
       "Alpha"
@@ -635,7 +635,7 @@
   },
   "bronze:BetaBuild": {
     "NAME": "Beta Build",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Full Release.",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert *Full *Release.",
     "EXTENDED_DESCRIPTION": [
       "early",
       "Beta"

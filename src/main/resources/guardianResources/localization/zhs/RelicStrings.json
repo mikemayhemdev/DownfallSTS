@@ -31,22 +31,22 @@
     "NAME": "便携哨兵",
     "FLAVOR": "哨兵模式启动。 获得目标。无慈悲。",
     "DESCRIPTIONS": [
-      "在你的回合开始时,，以下行动交替进行: NL 对随机敌人造成 ",
-      " 点伤害。 NL 对所有敌人给予 1 层 #y虚弱 。"
+      "在你的回合开始时，以下行动交替进行: NL 对随机敌人造成 ",
+      " 点伤害。 NL 对所有敌人给予 #b1 层 #y虚弱 。"
     ]
   },
   "Guardian:SackOfGems": {
     "NAME": "宝石袋",
     "FLAVOR": "噢……闪闪发光！",
     "DESCRIPTIONS": [
-      "拾起时，向牌库中加入5张随机 宝石 。"
+      "拾起时，向牌库中加入5张随机 #y宝石 。"
     ]
   },
   "Guardian:StasisCodex": {
     "NAME": "机械宝典",
     "FLAVOR": "尖塔最早原型的设计和图表。",
     "DESCRIPTIONS": [
-      "回合结束时如果没有被 凝滞 的牌，从三张牌中选择一张牌 #yguardianmod:凝滞 。"
+      "回合结束时如果没有被 #y凝滞 的牌，从三张牌中选择一张牌 #yguardianmod:凝滞 。"
     ]
   },
   "Guardian:StasisSlotIncreaseRelic": {
@@ -60,7 +60,7 @@
     "NAME": "悬浮机",
     "FLAVOR": "这些自动机搜寻最棒的遗宝，但需要占用处理能力来维持运转。",
     "DESCRIPTIONS": [
-      "拾起时， 失去 2 个 #yguardianmod:凝滞 栏位，每回合开始时获得 [E] 。"
+      "拾起时， 失去 #b2 个 #yguardianmod:凝滞 栏位，每回合开始时获得 [E] 。"
     ]
   },
   "Guardian:StasisUpgradeRelic": {
@@ -77,7 +77,7 @@
       "拾起时，选择 #y一张牌 。每场战斗开始时将它 #y凝滞 。",
       "选择一张牌 ",
       "每场战斗开始时 ",
-      " 凝滞。"
+      " #y凝滞 。"
     ]
   },
   "Guardian:StasisEgg": {
@@ -94,14 +94,14 @@
     "NAME": "冷却液",
     "FLAVOR": "有公害，不要随便丢弃",
     "DESCRIPTIONS": [
-      "每场战斗开始时获得 #b2 个 #yguardianmod:凝滞 栏位。当一张牌触发 #yguardianmod:滴答 时, #y提高 回合计数器 2 点。"
+      "每场战斗开始时获得 #b2 个 #yguardianmod:凝滞 栏位。牌被 #yguardianmod:凝滞 的回合计数器增加 #b2 点。"
     ]
   },
   "Guardian:PickAxe": {
     "NAME": "星光公司采矿镐",
     "FLAVOR": "有那么多宝石散落在尖塔中，很难想象有这么不幸的人需要这把镐来帮助他们。",
     "DESCRIPTIONS": [
-	"你能在 3 处 篝火 #g挖掘 2 颗 #yguardianmod:宝石 。"
+	"你能在 #b3 处 篝火 #g挖掘 #b2 颗 #yguardianmod:宝石 。"
     ]
   },
     "Guardian:GemstoneGun": {

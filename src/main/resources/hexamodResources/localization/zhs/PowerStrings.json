@@ -2,9 +2,9 @@
   "hexamod:AgainPower": {
     "NAME": "复燃！",
     "DESCRIPTIONS": [
-      "本回合不能 #y步进 。",
+      "本回合结束时不能 #y步进 。",
       "接下来的 #b",
-      " 个回合不能 #y步进 。"
+      " 个回合结束时不能 #y步进 。"
     ]
   },
   "hexamod:ApocalypticArmorPower": {
@@ -56,14 +56,14 @@
   "hexamod:CrispyPower": {
     "NAME": "清脆",
     "DESCRIPTIONS": [
-      "给予灼魂层数增加 #b",
+      "给予 #y灼魂 层数增加 #b",
       " 层。"
     ]
   },
   "hexamod:EnhancePower": {
     "NAME": "热烈",
     "DESCRIPTIONS": [
-      "提高鬼火上点燃效果提供的伤害、灼魂和格挡获得 #b",
+      "提高鬼火上点燃效果提供的 #y伤害 、 #y灼魂 和 #y格挡 获得 #b",
       " 点。"
     ]
   },
@@ -104,7 +104,7 @@
     ]
   },
   "hexamod:GiftsFromTheDeadPower": {
-    "NAME": "亡魂馈赠",
+    "NAME": "馈赠抽牌",
     "DESCRIPTIONS": [
       "每当一张 #y虚无 牌被 #y消耗 时，下一回合抽 ",
       " 张牌",
@@ -113,13 +113,10 @@
     ]
   },
   "hexamod:GiftsFromTheDeadPowerPlus": {
-    "NAME": "亡魂馈赠+",
+    "NAME": "馈赠能量",
     "DESCRIPTIONS": [
       "每当一张 #y虚无 牌被 #y消耗 时，下回合获得 ",
-      " 并额外抽",
-      " 张牌",
-      " 张牌",
-      "。"
+      " 。"
     ]
   },
   "hexamod:GoldPostCombatPower": {
@@ -155,10 +152,12 @@
   "hexamod:PastPower": {
     "NAME": "魔鬼之舞",
     "DESCRIPTIONS": [
-      "每回合你第一次 #y回退 时，获得 ",
-      " 并抽 #b",
-      " 张牌。",
-      " 张牌。"
+      "每回合你前 ",
+      " 次",
+      " 次",
+      " #y回退 时，获得 [E] 并抽 #b1 张牌。本回合已 #y回退 #b",
+      " 次。",
+      " 次。"
     ]
   },
   "hexamod:PotionPostCombatPower": {
