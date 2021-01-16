@@ -57,7 +57,12 @@
   },
   "bronze:FunctionCard": {
     "NAME": "()",
-    "DESCRIPTION": ""
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": [
+      "function()",
+      "Perfection()",
+      "()"
+    ]
   },
   "bronze:Goto": {
     "NAME": "Goto",
