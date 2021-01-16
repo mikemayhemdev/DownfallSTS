@@ -71,7 +71,7 @@ public class expansionContentMod implements
     public static boolean teleportToWheelTime = false;
     private static String modID;
 
-    public static Color BOSS_CARD_COLOR = new Color(0.5F, 0F, 0F, 1);
+    public static Color BOSS_CARD_COLOR = new Color(0.443F, 0.231F, 0.286F, 1);
 
     public expansionContentMod() {
         BaseMod.subscribe(this);
