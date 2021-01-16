@@ -419,7 +419,7 @@
   },
   "bronze:Philosophize": {
     "NAME": "哲学思想",
-    "DESCRIPTION": "获得 !bauto! 力量 。 NL bronze:编译 - 所有敌人获得 !M! 点 力量 。",
+    "DESCRIPTION": "获得 !bauto! 点 力量 。 NL bronze:编译 - 所有敌人获得 !M! 点 力量 。",
     "EXTENDED_DESCRIPTION": [
       "智能",
       "想法"
@@ -582,8 +582,8 @@
   },
   "bronze:TinkerersToolbox": {
     "NAME": "开发工具",
-    "DESCRIPTION": "保留 。 NL 在 *调试 ， *批处理 和 *反编译 中选择加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 在 *调试 ， *批处理 和 *反编译 中选择加入手牌。"
+    "DESCRIPTION": "保留 。 NL 在 *调试 ， *批处理 、 *反编译 和 *字节位移 中选择加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 在 *调试 ， *批处理 、 *反编译 和 *字节位移 中选择加入手牌。"
   },
   "bronze:Refactor": {
     "NAME": "重构",
