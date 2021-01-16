@@ -419,7 +419,7 @@
   },
   "bronze:Philosophize": {
     "NAME": "哲学思想",
-    "DESCRIPTION": "获得 !bauto! 力量 。 NL bronze:编译 - 所有敌人获得 !M! 点 力量 。",
+    "DESCRIPTION": "获得 !bauto! 点 力量 。 NL bronze:编译 - 所有敌人获得 !M! 点 力量 。",
     "EXTENDED_DESCRIPTION": [
       "智能",
       "想法"
