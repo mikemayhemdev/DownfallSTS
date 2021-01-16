@@ -189,4 +189,82 @@ Roll Through - maybe a custom 'spinning big slime ball rolling through the enemi
 
 Rally the Troops - green colored 'shout' wave effect
 
+The Guardian
 
+Accelerate - yellow sparks coming off of the Stasis Slot the card is in!?
+
+Strike - maybe Strike could swap to the claw effect used in Rip and Tear?
+
+Crystal Ray - beam effect, increasing in size with damage dealt, multicolored based on gems in cards. it'd be crazy, but good?
+
+Incinerate - Flamethrower
+
+Priming Shot - beam maybe?
+
+Roll Attack - far cry from realistic, but it could be funny to have Guardian actually roll if the Defensive Mode triggers
+
+Temporal cards - Bluish version of regular attack/defend animations (I have code for this already, add it later)
+
+Prismatic Barrier/Spray - recolor the damage/block effects based on Gems in the card!? IE, Ruby Sapphire Quartz would have regular beam, red beam, blue beam, white beam
+
+Refracted Beam - Rainbow beam. Art is so good on these.
+
+Time Bomb - might be cool to have it do the Astrologer's Cataclysm wave in reverse time, then the explosion
+
+Bauble Burst - Same vfx as Wallop, or similar
+
+Gem Cannon - is it too much if we actually fired the Gems!?  BLACK HOLE!
+
+Hexaghost
+
+Seals - display the number onscreen like a stamp or something? I'm imagining an I, II, etc popping up somewhere for sure.
+
+Force-Ignite - orange/yellow sparks coming off of the Force-Ignited Ghostflame. will need some refactoring if we do this, as Force Ignite is currently not actually an action
+
+Poltergeist - some kind of ghostly projectile / helper / something, inspired by Summon Orb
+
+Charged Barrage - a barrage of fire, actually lobbed at the enemy
+
+Doomsday - when the power triggers during Ignition, light up the screen edges orange
+
+Rain of Embers - embers fall from the sky
+
+Sixth Seal - card reward has spooky particles coming off it in the rewards screen?
+
+Heat Metal - enemy bursts into green flames when the Soulburn reapplication happens
+
+Ghost Lash - send a swirling ghostly thing at an enemy? Moving like the ghosts in Haunting Echo's art
+
+Ghostflame Wall - green version of flame barrier, if I haven't already done that
+
+Incorporeal - Fade in and out of existence, temporary like Puddle Form
+
+Radiant Flame - this could be another spot for a helper-esque thing.
+
+Unleash Spirits - Same swirling ghost into the enemy effect as Ghost Lash, but for every card?
+
+Searing Wound - Some kind of pain effect
+
+Automaton
+
+Bug Barrage - launch glitches at an enemy?
+
+Cultist Strike - maybe cacaw on Compile.
+
+Break - something brutal
+
+Mutator - Steal jobby's transform vfx for this.
+
+Oil Spill - poison launch effect?
+
+Sticky Shield - green version of the regular block vfx (should have code for this)
+
+Dark Dash - some kind of dark attack.
+
+Merge Conflict - blue beam, like the art
+
+Hardcode - some kind of golden reskin or something in the Function UI while you have the power to make it clear the next Func is going to deck?
+
+Virus - same as Mutator
+
+Early Access - Red beam

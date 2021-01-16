@@ -71,7 +71,8 @@ public class RandomCardWithTagAction extends AbstractGameAction {
 
         for (Map.Entry<String, AbstractCard> stringAbstractCardEntry : CardLibrary.cards.entrySet()) {
             Map.Entry<String, AbstractCard> c = (Map.Entry) stringAbstractCardEntry;
-            if (c.getValue().hasTag(tag)
+            if (c.getValue().rarity != AbstractCard.CardRarity.SPECIAL &&
+                    c.getValue().hasTag(tag)
                     && (!(c.getValue().hasTag(expansionContentMod.STUDY_SLIMEBOSS)
                     && AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND))
                     && (!(c.getValue().hasTag(expansionContentMod.STUDY_GUARDIAN)

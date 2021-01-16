@@ -1,3 +1,4 @@
+/*
 package downfall.relics;
 
 import automaton.AutomatonChar;
@@ -67,3 +68,4 @@ public class TestRelic extends CustomRelic implements ClickableRelic {
         setNextCard();
     }
 }
+*/

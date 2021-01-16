@@ -17,7 +17,7 @@ public class GemFinder extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("GemFinder");
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "cards/gemFinder.png";
+    public static final String IMG_PATH = "cards/gemfinder.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.RARE;

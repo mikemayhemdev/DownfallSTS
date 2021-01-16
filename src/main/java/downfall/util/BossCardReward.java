@@ -82,7 +82,7 @@ public class BossCardReward extends RewardItem {
     public static AbstractCard getRandomSeal() {
         ArrayList<AbstractCard> list = new ArrayList<>();// 1201
         for (AbstractCard c : CardLibrary.getAllCards()) {
-            if (c.hasTag(expansionContentMod.STUDY)){
+            if (c.rarity != AbstractCard.CardRarity.SPECIAL && c.hasTag(expansionContentMod.STUDY)){
                 if (!(c.hasTag(expansionContentMod.STUDY_HEXAGHOST) && AbstractDungeon.player instanceof TheHexaghost))
                     if (!(c.hasTag(expansionContentMod.STUDY_GUARDIAN) && AbstractDungeon.player instanceof GuardianCharacter))
                         if (!(c.hasTag(expansionContentMod.STUDY_SLIMEBOSS) && AbstractDungeon.player instanceof SlimeboundCharacter))

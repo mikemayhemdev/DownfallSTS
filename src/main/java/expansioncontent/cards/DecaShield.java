@@ -28,6 +28,7 @@ public class DecaShield extends AbstractExpansionCard {
             if (upgraded) q.upgrade();
             cardsToPreview = q;
         }
+        tags.add(expansionContentMod.STUDY);
     }
 
     public DecaShield() {
