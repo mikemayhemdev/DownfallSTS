@@ -47,6 +47,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
     protected String UPGRADE_DESCRIPTION;
     protected String[] EXTENDED_DESCRIPTION;
     private AbstractCard functionPreviewCard;
+    protected String[] replaceStrings;
 
     public static final UIStrings masterUI = CardCrawlGame.languagePack.getUIString("bronze:MiscStrings");
 
@@ -59,6 +60,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
         rawDescription = DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
         EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
+        replaceStrings = CardCrawlGame.languagePack.getUIString("bronze:ReplaceStrings").TEXT;
         initializeTitle();
         initializeDescription();
     }
@@ -183,7 +185,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
     }
 
     public String getSpecialCompileText() {
-        String[] splitText = this.rawDescription.split("bronze:Compile");
+        String[] splitText = this.rawDescription.split(replaceStrings[0]);
         String compileText = splitText[1];
         return (compileText.replaceAll("bronze:", "#y").replaceAll("!D!", String.valueOf(this.damage)).replaceAll("!B!", String.valueOf(this.block)).replaceAll("!M!", String.valueOf(this.magicNumber)).replaceAll("!bauto!", (String.valueOf(this.auto))).replace("*", "#y"));
     }

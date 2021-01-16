@@ -47,5 +47,10 @@
       "When Compiled:",
       "bronze:Compile"
     ]
+  },
+  "bronze:ReplaceStrings": {
+    "TEXT": [
+      "bronze:Compile"
+    ]
   }
 }
