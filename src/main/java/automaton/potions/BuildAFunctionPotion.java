@@ -50,7 +50,7 @@ public class BuildAFunctionPotion extends CustomPotion {
         for (int i = 0; i < (FunctionHelper.max() - FunctionHelper.held.size()); i++) {
             ArrayList<AbstractCard> cardsList = getRandomEncodeChoices();
             addToBot(new SelectCardsCenteredAction(cardsList, 1, masterUI.TEXT[7], (cards) -> {
-                addToTop(new AddToFuncAction(cards.get(0), null));
+                AbstractDungeon.actionManager.addToTop(new AddToFuncAction(cards.get(0), null));
             }));
         }
         if (potency > 1) {
