@@ -49,7 +49,7 @@
   },
   "bronze:Defend": {
     "NAME": "防御",
-    "DESCRIPTION": "获得 !B! 点格挡。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。",
     "EXTENDED_DESCRIPTION": [
       "基础",
       "防御"

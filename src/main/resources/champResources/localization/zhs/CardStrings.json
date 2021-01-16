@@ -243,7 +243,7 @@
   },
   "champ:BladeFlurry": {
     "NAME": "剑刃乱舞",
-    "DESCRIPTION": "手牌中每有一张“打击”牌，造成 !D! 点伤害。",
+    "DESCRIPTION": "手牌中每有一张“打击”牌 NL 造成 !D! 点伤害。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 手牌中每有一张“打击”牌，造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       " NL （攻击 ",
