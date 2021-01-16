@@ -54,7 +54,7 @@
   "downfall:WatcherAngryPower": {
     "NAME": "Unbridled Rage",
     "DESCRIPTIONS": [
-      "When Watcher is reduced to #b50% HP, she enters Wrath permanently. NL Watcher's Wrath increases damage dealt and received by #b50% instead of #b100%."
+      "When Watcher is reduced to #b50% HP, she IMMEDIATELY enters Wrath permanently. NL Watcher's Wrath increases damage dealt and received by #b50% instead of #b100%."
     ]
   },
   "downfall:NeowUnbridledRage": {
