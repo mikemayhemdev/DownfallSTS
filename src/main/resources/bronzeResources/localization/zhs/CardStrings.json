@@ -582,8 +582,8 @@
   },
   "bronze:TinkerersToolbox": {
     "NAME": "开发工具",
-    "DESCRIPTION": "保留 。 NL 在 *调试 ， *批处理 和 *反编译 中选择加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 在 *调试 ， *批处理 和 *反编译 中选择加入手牌。"
+    "DESCRIPTION": "保留 。 NL 在 *调试 ， *批处理 、 *反编译 和 *字节位移 中选择加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 在 *调试 ， *批处理 、 *反编译 和 *字节位移 中选择加入手牌。"
   },
   "bronze:Refactor": {
     "NAME": "重构",
