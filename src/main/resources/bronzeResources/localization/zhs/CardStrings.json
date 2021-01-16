@@ -330,8 +330,8 @@
   },
   "bronze:ItsAFeature": {
     "NAME": "这是特性",
-    "DESCRIPTION": "当你抽到诅咒或状态牌 时, 获得 1 guardianmod:临时 力量 和 敏捷 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 当你抽到诅咒或状态牌 时, 获得 1 guardianmod:临时 力量 和 敏捷 。"
+    "DESCRIPTION": "当你抽到诅咒或状态牌 时, 获得 1 点 guardianmod:临时 力量 和 敏捷 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 当你抽到诅咒或状态牌 时, 获得 1 点 guardianmod:临时 力量 和 敏捷 。"
   },
   "bronze:MinorBeam": {
     "NAME": "微光射线",
