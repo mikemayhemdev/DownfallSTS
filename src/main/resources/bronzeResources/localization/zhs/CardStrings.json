@@ -193,7 +193,7 @@
   },
   "bronze:Deprecate": {
     "NAME": "屏蔽",
-    "DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL bronze:编译 - 获得 !bauto! 层 虚弱 。",
+    "DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL bronze:编译 - 获得 1层 虚弱 。",
     "EXTENDED_DESCRIPTION": [
       "旧版",
       "羞辱"
