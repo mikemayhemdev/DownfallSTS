@@ -233,7 +233,7 @@
   },
   "bronze:Constructor": {
     "NAME": "构造器",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 当 bronze:编码，如果在第一个槽位, 提升 格挡 !M! 点。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 当 bronze:编码 ，如果在第一个槽位, 提升 格挡 !M! 点。",
     "EXTENDED_DESCRIPTION": [
       "构造",
       "失落",
