@@ -44,7 +44,7 @@
   },
   "bronze:CompileDisplayPanel": {
     "TEXT": [
-      "When Compiled:",
+      "编译时：",
       " bronze:编译 "
     ]
   }

@@ -243,8 +243,8 @@
   },
   "champ:BladeFlurry": {
     "NAME": "剑刃乱舞",
-    "DESCRIPTION": "手牌中每有一张“打击”牌，造成 !D! 点伤害。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 手牌中每有一张“打击”牌，造成 !D! 点伤害。",
+    "DESCRIPTION": "手牌中每有一张 *打击 牌 NL 造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 手牌中每有一张 *打击 牌，造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       " NL （攻击 ",
       " 次。）"
@@ -369,7 +369,7 @@
   },
   "champ:PerfectedStrike": {
     "NAME": "完美打击",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 你每有一张名字中有“打击”的牌，伤害+ !M! 。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 你每有一张名字中有 *打击 的牌，伤害+ !M! 。"
   },
   "champ:GladiatorForm": {
     "NAME": "角斗形态",
@@ -387,8 +387,8 @@
   },
   "champ:StrikeOfGenius": {
     "NAME": "打击天才",
-    "DESCRIPTION": "在你的回合开始时，将随机一张带有 消耗 的“打击”牌加入你的手牌。 NL 它直到打出前的耗能为0。",
-    "UPGRADE_DESCRIPTION": "你的回合开始时，将随机一张已 升级 带有 消耗 的“打击”牌加入你的手牌。 NL 它直到打出前的耗能为0。"
+    "DESCRIPTION": "在你的回合开始时，将随机一张带有 消耗 的 *打击 牌加入你的手牌。 NL 它直到打出前的耗能为0。",
+    "UPGRADE_DESCRIPTION": "你的回合开始时，将随机一张已 升级 带有 消耗 的 *打击 牌加入你的手牌。 NL 它直到打出前的耗能为0。"
   },
   "champ:DefensiveStyle": {
     "NAME": "防守战法",
@@ -445,8 +445,8 @@
   },
   "champ:FancyFootwork": {
     "NAME": "花哨步法",
-    "DESCRIPTION": "处于 champ:防守 或 champ:狂战 时才能被打出。 NL 进入另外一种姿态。 NL 抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "处于 champ:防守 或 champ:狂战 时才能被打出。 NL 进入另外一种姿态。 NL 抽 !M! 张牌。",
+    "DESCRIPTION": "处于 champ:防守 或 champ:狂战 时才能被打出。 NL 进入另外一种 姿态 。 NL 抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "处于 champ:防守 或 champ:狂战 时才能被打出。 NL 进入另外一种 姿态 。 NL 抽 !M! 张牌。",
     "EXTENDED_DESCRIPTION": [
       "我不处于姿态"
     ]
