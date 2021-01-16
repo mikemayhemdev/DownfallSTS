@@ -57,7 +57,12 @@
   },
   "bronze:FunctionCard": {
     "NAME": "()",
-    "DESCRIPTION": ""
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": [
+      "方法()",
+      "完美()",
+      "()"
+    ]
   },
   "bronze:Goto": {
     "NAME": "跳转",
