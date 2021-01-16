@@ -47,10 +47,5 @@
       "编译时：",
       " bronze:编译 "
     ]
-  },
-  "bronze:ReplaceStrings": {
-    "TEXT": [
-      "bronze:编译"
-    ]
   }
 }
