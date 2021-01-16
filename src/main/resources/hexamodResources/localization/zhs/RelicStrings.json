@@ -81,7 +81,7 @@
     "NAME": "红蜡烛",
     "FLAVOR": "烈焰炙烤...",
     "DESCRIPTIONS": [
-      "每当你造成未被格挡的 #y攻击 伤害，给予 #b1 层 #yhexamod:点燃 。"
+      "每当你造成未被格挡的 #y攻击 伤害，给予 #b1 层 #yhexamod:灼魂 。"
     ]
   },
   "hexamod:Sixitude": {
