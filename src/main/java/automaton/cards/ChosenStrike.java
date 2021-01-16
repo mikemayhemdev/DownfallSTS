@@ -18,7 +18,7 @@ public class ChosenStrike extends AbstractBronzeCard {
 
     public ChosenStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
+        baseDamage = DAMAGE + misc;
         baseMagicNumber = magicNumber = 1;
         thisEncodes();
     }
@@ -58,6 +58,8 @@ public class ChosenStrike extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeDamage(UPG_DAMAGE);
+        misc += 3;
+        upgradedDamage = true;
+        baseDamage = DAMAGE + misc;
     }
 }
