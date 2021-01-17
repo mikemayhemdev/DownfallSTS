@@ -29,7 +29,7 @@ public class FindAndReplace extends AbstractBronzeCard {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         cardsList.addAll(p.drawPile.group);
         cardsList.addAll(p.discardPile.group);
-        atb(new SelectCardsAction(cardsList, 1, "Choose.", (cards) -> {
+        atb(new SelectCardsAction(cardsList, 1, EXTENDED_DESCRIPTION[0], (cards) -> {
             if (p.drawPile.contains(cards.get(0))) {
                 p.drawPile.moveToHand(cards.get(0));
                 addToTop(new MakeTempCardInDrawPileAction(new Dazed(), 1, true, true));

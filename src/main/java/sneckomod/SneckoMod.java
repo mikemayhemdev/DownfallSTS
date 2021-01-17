@@ -434,7 +434,6 @@ public class SneckoMod implements
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(SuspiciousHouse.ID, SuspiciousHouse.class) //Event ID//
-                .playerClass(TheSnecko.Enums.THE_SNECKO)
                 .dungeonID(TheCity.ID)
                 .eventType(EventUtils.EventType.NORMAL)
                 //Only in Evil if content sharing is disabled

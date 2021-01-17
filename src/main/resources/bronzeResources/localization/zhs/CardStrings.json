@@ -57,7 +57,12 @@
   },
   "bronze:FunctionCard": {
     "NAME": "()",
-    "DESCRIPTION": ""
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": [
+      "方法()",
+      "完美()",
+      "()"
+    ]
   },
   "bronze:Goto": {
     "NAME": "跳转",
@@ -72,7 +77,7 @@
     "NAME": "复制爪",
     "DESCRIPTION": "造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
-      "重复",
+      "反复",
       "拷贝"
     ]
   },
@@ -177,7 +182,7 @@
   },
   "bronze:DelayedGuard": {
     "NAME": "缓时防护",
-    "DESCRIPTION": "下回合, 获得 !B! 点 格挡 。",
+    "DESCRIPTION": "下回合获得 !B! 点 格挡 。",
     "EXTENDED_DESCRIPTION": [
       "延缓",
       "防卫"
@@ -201,7 +206,7 @@
   },
   "bronze:Invalidate": {
     "NAME": "无效化",
-    "DESCRIPTION": "对所有敌人给予 !M! 层 易伤 。 NL bronze:编译 - 获得 !bauto! 层 易伤 。",
+    "DESCRIPTION": "对所有敌人给予 !M! 层 易伤 。 NL bronze:编译 - 获得1层 易伤 。",
     "EXTENDED_DESCRIPTION": [
       "无效",
       "错误"
@@ -283,7 +288,7 @@
   },
   "bronze:Fortify": {
     "NAME": "强化",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 获得 !M! 敏捷 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 获得 !M! 点 敏捷 。",
     "EXTENDED_DESCRIPTION": [
       "固化",
       "巩固"
@@ -390,7 +395,7 @@
   },
   "bronze:Boost": {
     "NAME": "蓄能增压",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 - 获得 !M! 力量 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 - 获得 !M! 点 力量 。",
     "EXTENDED_DESCRIPTION": [
       "升压",
       "强化"
@@ -414,8 +419,8 @@
   },
   "bronze:ForLoop": {
     "NAME": "循环",
-    "DESCRIPTION": "下一张牌 bronze:编码 时， X 张这张牌的复制品也 bronze:编码。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL The 下一张牌 bronze:编码 时，X张这张牌的复制品也 bronze:编码。 NL 消耗 。"
+    "DESCRIPTION": "下一张牌 bronze:编码 时， X 张这张牌的复制品也 bronze:编码 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 下一张牌 bronze:编码 时，X张这张牌的复制品也 bronze:编码 。 NL 消耗 。"
   },
   "bronze:Philosophize": {
     "NAME": "哲学思想",
@@ -613,8 +618,11 @@
   },
   "bronze:FindAndReplace": {
     "NAME": "查找替换",
-    "DESCRIPTION": "虚无 。 NL 将一张抽牌堆或弃牌堆的牌，加入手牌。 NL 在原来的位置加入 *晕眩 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 将一张抽牌堆或弃牌堆的牌，加入手牌。 NL 在原来的位置加入 *晕眩 。"
+    "DESCRIPTION": "虚无 。 NL 将一张抽牌堆或弃牌堆的牌，加入手牌。 NL 在原来的位置加入 *晕眩 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 将一张抽牌堆或弃牌堆的牌，加入手牌。 NL 在原来的位置加入 *晕眩 。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "选择一张牌加入手牌并在其原位加入晕眩"
+    ]
   },
   "bronze:ThunderWave": {
     "NAME": "雷霆",
