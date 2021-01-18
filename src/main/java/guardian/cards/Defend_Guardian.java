@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class Defend_Guardian extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("Defend_Guardian");
     public static final String NAME;
@@ -48,6 +50,7 @@ public class Defend_Guardian extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("defendGuardian.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

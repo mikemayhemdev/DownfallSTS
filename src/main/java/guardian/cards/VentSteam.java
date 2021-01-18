@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class VentSteam extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("VentSteam");
     public static final String NAME;
@@ -48,6 +50,7 @@ public class VentSteam extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("ventSteam.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
