@@ -1,5 +1,6 @@
 package downfall.patches;
 
+import automaton.AutomatonChar;
 import champ.ChampChar;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -63,7 +64,7 @@ public class DeathScreenUnlockPatch {
                         AbstractDungeon.unlockScreen.open((AbstractUnlock) AbstractDungeon.unlocks.remove(0));
                         ////SlimeboundMod.logger.info("Triggered Automaton Unlock screen!");
                         return SpireReturn.Return(null);
-                    } else if ((UnlockTracker.isCharacterLocked("Snecko")) && (AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP)) {
+                    } else if ((UnlockTracker.isCharacterLocked("Snecko")) && (AbstractDungeon.player.chosenClass == AutomatonChar.Enums.THE_AUTOMATON)) {
                         AbstractDungeon.unlocks.add(new SneckoUnlock());
                         AbstractDungeon.unlockScreen.open((AbstractUnlock) AbstractDungeon.unlocks.remove(0));
                         ////SlimeboundMod.logger.info("Triggered Snecko Unlock screen!");
