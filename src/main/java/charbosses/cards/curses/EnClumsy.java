@@ -16,11 +16,11 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class EnClumsy extends AbstractBossCard {
-    public static final String ID = "downfall_Charboss:Decay";
+    public static final String ID = "downfall_Charboss:Clumsy";
     private static final CardStrings cardStrings;
 
     static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings("Decay");
+        cardStrings = CardCrawlGame.languagePack.getCardStrings("Clumsy");
     }
 
     public EnClumsy() {
