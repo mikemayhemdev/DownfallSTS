@@ -148,20 +148,20 @@
   "downfall:NeowAncientConstruct": {
     "NAME": "先古造物",
     "DESCRIPTIONS": [
-      "每回合开始时如果没有 #y人工制品 ，获得 3 层 #y人工制品 。"
+      "每回合开始时如果没有 #y人工制品 ，获得 #b2 层 #y人工制品 。"
     ]
   },
   "downfall:DefectCuriosity": {
     "NAME": "偏差认知",
     "DESCRIPTIONS": [
-      "每当你打出一张 #y能力牌 ， #y故障机器人 获得 #b",
+      "每当你打出一张 #y稀有牌 ， #y故障机器人 获得 #b",
       " 点 #y集中 。"
     ]
   },
   "downfall:NeowUnbiasedCognition": {
     "NAME": "偏差认知",
     "DESCRIPTIONS": [
-      "每当你打出一张 #y能力牌 ， #y涅奥 获得 #b1 点 #y力量 。"
+      "每当你打出一张 #y稀有牌 ， #y涅奥 获得 #b1 点 #y力量 。"
     ]
   },
   "downfall:IroncladStatusPower": {
