@@ -272,7 +272,7 @@
   },
   "bronze:DigitalCarnage": {
     "NAME": "Digital Carnage",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile *Error - Function gains Ethereal.",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile *Error - Function is Ethereal.",
     "EXTENDED_DESCRIPTION": [
       "digital",
       "Carnage"
