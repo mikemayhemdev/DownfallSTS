@@ -380,8 +380,8 @@
   },
   "Guardian:StasisEngine": {
     "NAME": "凝滞引擎",
-    "DESCRIPTION": "每打出 3 张0费卡时，获得 [E] 并抽 1 张卡。",
-    "UPGRADE_DESCRIPTION": "固有 ， NL 每打出 3 张0费卡时，获得 [E] 并抽 1 张卡。"
+    "DESCRIPTION": "每回合打出第三张0费牌时，获得 [E] 并抽 1 张牌。",
+    "UPGRADE_DESCRIPTION": "固有 ， NL 每回合打出第三张0费牌时，获得 [E] 并抽 1 张牌。"
   },
   "Guardian:HammerDown": {
     "NAME": "坠落重锤",

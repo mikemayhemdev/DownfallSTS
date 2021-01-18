@@ -14,7 +14,7 @@
   },
   "sneckomod:TailWhip": {
     "NAME": "扫尾",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 0- !M! 层 虚弱 。 NL 给予 0- !M! 层 易伤 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! - 2  层 虚弱 。 NL 给予 !M! - 2 层 易伤 。"
   },
   "sneckomod:UnknownCommonAttack": {
     "NAME": "？？？",

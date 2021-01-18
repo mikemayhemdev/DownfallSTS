@@ -23,7 +23,7 @@ public class UnknownUpgradedPostCombatPower extends AbstractPower implements Clo
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public UnknownUpgradedPostCombatPower(final int amount) {
-        this.name = "Post-Combat Upgraded Unknown";
+        this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;

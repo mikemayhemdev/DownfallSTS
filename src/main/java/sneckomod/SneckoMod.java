@@ -493,7 +493,7 @@ public class SneckoMod implements
         CardGroup charChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         charChoices.addToTop(colorChoices.getTopCard());
         charChoices.addToTop(colorChoices.getNCardFromTop(1));
-        AbstractDungeon.gridSelectScreen.open(charChoices, 1, false, "Choose.");
+        AbstractDungeon.gridSelectScreen.open(charChoices, 1, false, CardCrawlGame.languagePack.getUIString("sneckomod:AtGameStart").TEXT[5]);
     }
 
     public static AbstractCard playerStartCardForEventFromColor(AbstractCard.CardColor c) {
@@ -514,7 +514,8 @@ public class SneckoMod implements
                 if (r != AbstractCard.CardColor.CURSE && r != AbstractDungeon.player.getCardColor() && r != AbstractCard.CardColor.COLORLESS && r != CardColorEnumPatch.CardColorPatch.BOSS) {
                     String s = getClassFromColor(r);
                     AbstractCard q = playerStartCardForEventFromColor(r);
-                    CustomCard c = new OctoChoiceCard("UNVERIFIED", s + " Cards", "bronzeResources/images/cards/BuggyMess.png", "Unknown cards can become " + s + " cards this run.", r, q.type);
+                    String[] strings = CardCrawlGame.languagePack.getUIString("sneckomod:AtGameStart").TEXT;
+                    CustomCard c = new OctoChoiceCard("UNVERIFIED", strings[0] + s + strings[1], "bronzeResources/images/cards/BuggyMess.png", strings[2] + s + strings[3], r, q.type);
 
                     c.portrait = q.portrait;
                     colorChoices.addToTop(c);
