@@ -9,8 +9,8 @@
   "bronze:CleanCodePotion": {
     "NAME": "Alchyrical Elixir",
     "DESCRIPTIONS": [
-      "Remove all negative Compile effects from the next Function you create.  Reduce its cost to #b0 until played.",
-      "Remove all negative Compile effects from the next #b",
+      "Remove all Compile *Error effects from the next Function you create.  Reduce its cost to #b0 until played.",
+      "Remove all Compile *Error effects from the next #b",
       " Functions you create.  Reduce their cost to #b0 until played."
     ]
   },
