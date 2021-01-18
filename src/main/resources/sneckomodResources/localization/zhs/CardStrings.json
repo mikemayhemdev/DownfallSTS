@@ -291,7 +291,7 @@
   "sneckomod:Memorize": {
     "NAME": "回忆",
     "DESCRIPTION": "sneckomod:蛇证 。 即逝 。 NL 选择一张未知牌将其加入你的牌组并移除未知。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 即逝 。 保留。 NL 选择一张未知牌将其加入你的牌组并移除未知。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 即逝 。 保留 。 NL 选择一张未知牌将其加入你的牌组并移除未知。",
     "EXTENDED_DESCRIPTION": [
       "选择一张牌进行回忆。"
     ]

@@ -198,7 +198,7 @@
   },
   "Slimebound:Prepare": {
     "NAME": "伺机待发",
-    "DESCRIPTION": "获得 !B! 格挡 。下个回合获得 [E] [E] 并抽 !M! 张牌。 NL 消耗 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。下个回合获得 [E] [E] 并抽 !M! 张牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "下个回合获得 [E] [E] 并抽 !M! 张牌。 至多 保留 !M! 张牌。 NL 消耗 。"
   },
   "Slimebound:Grow": {

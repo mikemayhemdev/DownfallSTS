@@ -42,7 +42,7 @@
   "downfall:PoisonResist": {
     "NAME": "抗毒",
     "DESCRIPTIONS": [
-      " #y中毒 现在能被格挡，且在回合结束时触发并层数减半。"
+      " #y中毒 将在你回合结束时触发。回合结束时，你每有 [E] ，失去 #b10 层 #y中毒 。"
     ]
   },
   "downfall:NeowBuff": {

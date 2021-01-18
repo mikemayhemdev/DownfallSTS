@@ -74,7 +74,7 @@
     ]
   },
   "bronze:Replicate": {
-    "NAME": "复制爪",
+    "NAME": "副本",
     "DESCRIPTION": "造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       "反复",
