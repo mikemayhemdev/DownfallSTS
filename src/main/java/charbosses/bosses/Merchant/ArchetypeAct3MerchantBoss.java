@@ -80,6 +80,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
                     turn++;
                     break;
                 case 2:
+                    //Bomb goes Boom.
                     addToList(cardsList, new EnPanacea(), true);  //removed
                     addToList(cardsList, new EnPanicButton(), true);  //removed
                     addToList(cardsList, new EnBlind(), true);
@@ -103,6 +104,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
         } else {
             switch (turn) {
                 case 0:
+                    //Bomb goes Boom.
                     addToList(cardsList, new EnTheBomb(), true);
                     addToList(cardsList, new EnTrip(), true);
                     addToList(cardsList, new EnGoodInstincts(), true);
@@ -110,12 +112,13 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
                     break;
                 case 1:
                     addToList(cardsList, new EnHandOfGreed(), true);
-                    addToList(cardsList, new EnGoodInstincts(), true);
+                    addToList(cardsList, new EnTheBomb(), true);
                     addToList(cardsList, new EnBlind(), true);
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnTheBomb(), true);
+                    //Bomb goes Boom.
+                    addToList(cardsList, new EnGoodInstincts(), true);
                     addToList(cardsList, new EnSwiftStrike(), true);
                     addToList(cardsList, new EnSwiftStrike(), true);
                     turn = 0;
