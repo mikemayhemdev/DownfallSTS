@@ -36,28 +36,32 @@
   {
     "PROPER_NAME": "防守",
     "NAMES": [
-      "防守"
+      "防守",
+      "defensive"
     ],
     "DESCRIPTION": "#y姿态 ： NL #y战术 -获得 #b5 层 #y反击 。 NL #y终结技 -获得 #b12 点 #y格挡 。"
   },
   {
     "PROPER_NAME": "狂战",
     "NAMES": [
-      "狂战"
+      "狂战",
+      "berserker"
     ],
-    "DESCRIPTION": "#y姿态 ： NL #y战术 - #y疲劳 #b5 。 NL #y终结技 -失去所有 #y决心 并回复等量生命（保留 #y力量 ）。"
+    "DESCRIPTION": "#y姿态 ： NL #y战术 - #y疲劳 #b5 。 NL #y终结技 -失去所有 #y疲劳 并回复等量生命（保留 #y力量 ）。"
   },
   {
     "PROPER_NAME": "角斗",
     "NAMES": [
-      "角斗"
+      "角斗",
+      "gladiator"
     ],
     "DESCRIPTION": "#y姿态 ： #y战术 -抽 #b1 张牌。 NL #y终结技 -下回合抽 #b1 张牌并获得 [E] 。"
   },
   {
     "PROPER_NAME": "终极",
     "NAMES": [
-      "终极"
+      "终极",
+      "ultimate"
     ],
     "DESCRIPTION": "#y姿态 。视为同时拥有 #r狂战 、 #b防守 和 #y角斗 。不能切换 #y姿态 。 #y终结技 将不会结束回合并退出姿态。"
   },
