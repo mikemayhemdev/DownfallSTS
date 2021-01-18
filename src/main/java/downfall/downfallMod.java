@@ -1214,6 +1214,7 @@ public class downfallMod implements
 
         if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Hexed.ID)) || ModHelper.isModEnabled(Hexed.ID)) {
             RelicLibrary.getRelic(VelvetChoker.ID).makeCopy().instantObtain();
+            AbstractDungeon.bossRelicPool.remove(VelvetChoker.ID);
         }
 
         if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ExchangeController.ID)) || ModHelper.isModEnabled(ExchangeController.ID)) {
