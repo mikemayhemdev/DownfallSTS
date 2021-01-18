@@ -1,6 +1,7 @@
 package charbosses.powers.bossmechanicpowers;
 
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
@@ -32,7 +33,7 @@ public class DefectCuriosityPower extends AbstractBossMechanicPower {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.POWER && action.target != AbstractCharBoss.boss) {
+        if (card.rarity == AbstractCard.CardRarity.RARE && !(card instanceof AbstractBossCard)) {
             flash();
             addToBot(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(this.owner, this.owner, new FocusPower(this.owner, this.amount), this.amount));
         }

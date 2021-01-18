@@ -1,6 +1,7 @@
 package downfall.powers.neowpowers;
 
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.cards.AbstractBossCard;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -47,7 +48,7 @@ public class UnbiasedCognition extends AbstractBossMechanicPower {
 
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.POWER && action.target != AbstractCharBoss.boss) {
+        if (card.rarity == AbstractCard.CardRarity.RARE && !(card instanceof AbstractBossCard)) {
             flash();
             addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount), this.amount));
         }

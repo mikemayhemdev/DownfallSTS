@@ -154,14 +154,14 @@
   "downfall:DefectCuriosity": {
     "NAME": "Unbiased Cognition",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower card, gains #b",
+      "Whenever you play a #yRare card, gains #b",
       " #yFocus."
     ]
   },
   "downfall:NeowUnbiasedCognition": {
     "NAME": "Unbiased Cognition",
     "DESCRIPTIONS": [
-      "Neow gains #b2 #yStrength for every #yPower card you play."
+      "Neow gains #b2 #yStrength for every #yRare card you play."
     ]
   },
   "downfall:IroncladStatusPower": {

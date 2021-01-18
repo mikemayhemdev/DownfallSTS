@@ -4,6 +4,8 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct3OrbsNewAge;
 import charbosses.bosses.Silent.NewAge.ArchetypeAct1ShivsNewAge;
 import charbosses.cards.AbstractBossCard;
+import charbosses.powers.bossmechanicpowers.DefectCuriosityPower;
+import charbosses.powers.bossmechanicpowers.SilentShivTimeEaterPower;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -18,6 +20,9 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.CardGlowBorder;
+import downfall.monsters.NeowBossFinal;
+import downfall.powers.neowpowers.BagOfKnives;
+import downfall.powers.neowpowers.UnbiasedCognition;
 
 //Implementation taken from MintySpire
 @SpirePatch(clz = AbstractCard.class, method = "renderEnergy")
@@ -32,7 +37,7 @@ public class HighlightCards {
     public static void patch(AbstractCard c, SpriteBatch sb) {
         if (zeroCostChecker(c))
             renderIcon(c, sb, shivRegion);
-        else if (powerChecker(c))
+        else if (rareChecker(c))
             renderIcon(c, sb, biasRegion);
     }
 
@@ -51,7 +56,7 @@ public class HighlightCards {
     public static class CardGlowPatch {
         @SpirePostfixPatch
         public static void patch(CardGlowBorder __instance, AbstractCard c, Color col, @ByRef Color[] ___color) {
-            if(zeroCostChecker(c) || powerChecker(c)) {
+            if(zeroCostChecker(c) || rareChecker(c)) {
                 ___color[0] = Color.RED.cpy();
             }
         }
@@ -64,16 +69,43 @@ public class HighlightCards {
 
     private static boolean zeroCostChecker(AbstractCard c) {
         if (AbstractDungeon.player != null && AbstractDungeon.getCurrMapNode() != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) { //This should stop the DoubleImage from rendering if the player has Echo stacks remaining in the card selection screen
-            return (AbstractDungeon.lastCombatMetricKey.equals("downfall:Silent") && AbstractDungeon.actNum == 1 &&
-                    !(c instanceof AbstractBossCard) && (c.freeToPlayOnce || c.costForTurn == 0));
+            if (AbstractCharBoss.boss != null){
+                if (AbstractCharBoss.boss.hasPower(SilentShivTimeEaterPower.POWER_ID)){
+                    if (!(c instanceof AbstractBossCard) && c.rarity == AbstractCard.CardRarity.RARE){
+                        return true;
+                    }
+                }
+            }
+            if (NeowBossFinal.neowboss != null){
+                if (NeowBossFinal.neowboss.hasPower(BagOfKnives.POWER_ID)){
+                    if (!(c instanceof AbstractBossCard) && c.rarity == AbstractCard.CardRarity.RARE){
+                        return true;
+                    }
+                }
+            }
+
         }
+
         return false;
     }
 
-    private static boolean powerChecker(AbstractCard c) {
+    private static boolean rareChecker(AbstractCard c) {
         if (AbstractDungeon.player != null && AbstractDungeon.getCurrMapNode() != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) { //This should stop the DoubleImage from rendering if the player has Echo stacks remaining in the card selection screen
-            return (AbstractDungeon.lastCombatMetricKey.equals("downfall:Defect") && AbstractDungeon.actNum == 3 &&
-                    !(c instanceof AbstractBossCard) && c.type == AbstractCard.CardType.POWER);
+            if (AbstractCharBoss.boss != null){
+                if (AbstractCharBoss.boss.hasPower(DefectCuriosityPower.POWER_ID)){
+                    if (!(c instanceof AbstractBossCard) && c.rarity == AbstractCard.CardRarity.RARE){
+                        return true;
+                    }
+                }
+            }
+            if (NeowBossFinal.neowboss != null){
+                if (NeowBossFinal.neowboss.hasPower(UnbiasedCognition.POWER_ID)){
+                    if (!(c instanceof AbstractBossCard) && c.rarity == AbstractCard.CardRarity.RARE){
+                        return true;
+                    }
+                }
+            }
+
         }
         return false;
     }
