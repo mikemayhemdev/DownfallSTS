@@ -81,7 +81,7 @@
     "NAME": "Red Candle",
     "FLAVOR": "Fire BURNS...",
     "DESCRIPTIONS": [
-      "Whenever an #yAttack deals unblocked damage, apply #b1 #yhexamod:Soulburn."
+      "Whenever an #yAttack deals unblocked damage, apply #b2 #yhexamod:Soulburn."
     ]
   },
   "hexamod:Sixitude": {

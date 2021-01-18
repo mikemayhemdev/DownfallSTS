@@ -6,6 +6,7 @@ import charbosses.cards.colorless.EnDramaticEntrance;
 import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnDoubt;
 import charbosses.cards.curses.EnIcky;
+import charbosses.cards.curses.EnMalfunctioning;
 import charbosses.cards.red.*;
 import charbosses.cards.status.EnBurn;
 import charbosses.cards.status.EnDazed;
@@ -66,8 +67,8 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
         if (!looped) {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnDramaticEntrance());
                     addToList(cardsList, new EnBash());
+                    addToList(cardsList, new EnMalfunctioning());
                     addToList(cardsList, new EnDoubt());
                     turn++;
                     break;
@@ -99,7 +100,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
                     break;
                 case 5:
                     addToList(cardsList, new EnThunderclap(), true);
-                    addToList(cardsList, new EnClumsy());
+                    addToList(cardsList, new EnFeelNoPain());
                     addToList(cardsList, new EnDazed());
                     turn=0;
                     looped=true;
@@ -112,10 +113,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
                     addToList(cardsList, new EnTrueGrit(), true);
                     //IC will exhaust the Doubt the first time through the loop instead of a wound
                     //So the wound will appear the second time through the loop onward
-                    if (!secondLoop)
-                        addToList(cardsList, new EnDoubt());
-                    else
-                        addToList(cardsList, new EnWound());
+                    addToList(cardsList, new EnWound());
                     turn++;
                     theArtOfWar.beginPulse();
                     break;
@@ -144,7 +142,6 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
                     addToList(cardsList, new EnWound());
                     theArtOfWar.beginPulse();
                     turn=0;
-                    secondLoop = true;
                     break;
             }
         }
