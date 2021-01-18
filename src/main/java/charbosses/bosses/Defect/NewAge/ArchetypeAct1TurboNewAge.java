@@ -59,7 +59,6 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
                 case 0:
                     addToList(cardsList, new EnBuffer(), false);
                     addToList(cardsList, new EnDoomAndGloom(), extraUpgrades);
-                    darkOrbsChanneled += 1;
                     addToList(cardsList, new EnShame(), false);
                     turn++;
                     break;

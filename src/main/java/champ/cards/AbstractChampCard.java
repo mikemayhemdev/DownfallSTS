@@ -24,12 +24,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.city.Champ;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 
 import java.util.ArrayList;
@@ -272,24 +270,23 @@ public abstract class AbstractChampCard extends CustomCard {
         ChampMod.finishersThisTurn++;
         ChampMod.finishersThisCombat++; //If there is a finishers this combat problem, maybe look here
 
-        if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
+        if (!AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
             boolean leaveStance = true;
             if (AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID) || (AbstractDungeon.player.stance instanceof UltimateStance)) {
                 leaveStance = false;
-
             }
-            if (leaveStance) {
-                if (AbstractDungeon.player.hasRelic(SignatureFinisher.ID)) {
-                    SignatureFinisher s = (SignatureFinisher) AbstractDungeon.player.getRelic(SignatureFinisher.ID);
-                    if (s.card.uuid == this.uuid) {
-                        leaveStance = false;
-                    }
+            if (AbstractDungeon.player.hasRelic(SignatureFinisher.ID)) {
+                SignatureFinisher s = (SignatureFinisher) AbstractDungeon.player.getRelic(SignatureFinisher.ID);
+                if (s.card.uuid == this.uuid) {
+                    leaveStance = false;
                 }
             }
             if (leaveStance) {
                 exitStance();
             }
-            ((AbstractChampStance) AbstractDungeon.player.stance).fisher();
+            if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
+                ((AbstractChampStance) AbstractDungeon.player.stance).fisher();
+            }
             for (AbstractPower p : AbstractDungeon.player.powers) {
                 if (p instanceof OnFinisherSubscriber) {
                     ((OnFinisherSubscriber) p).onFinisher();

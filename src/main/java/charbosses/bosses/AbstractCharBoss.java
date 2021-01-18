@@ -402,6 +402,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                                 budget += ((AbstractBossCard) c).energyGeneratedIfPlayed;
                                 if (budget < 0) budget = 0;
                             }
+                            else if (c.costForTurn == -2 && c.type == AbstractCard.CardType.CURSE && c.color == AbstractCard.CardColor.CURSE) {
+                                ((AbstractBossCard) c).bossLighten();
+                            }
                         }
                         for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
                             AbstractBossCard cB = (AbstractBossCard) c;

@@ -56,7 +56,7 @@ public class HighlightCards {
     public static class CardGlowPatch {
         @SpirePostfixPatch
         public static void patch(CardGlowBorder __instance, AbstractCard c, Color col, @ByRef Color[] ___color) {
-            if(zeroCostChecker(c) || rareChecker(c)) {
+            if (zeroCostChecker(c) || rareChecker(c)) {
                 ___color[0] = Color.RED.cpy();
             }
         }
@@ -69,17 +69,21 @@ public class HighlightCards {
 
     private static boolean zeroCostChecker(AbstractCard c) {
         if (AbstractDungeon.player != null && AbstractDungeon.getCurrMapNode() != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) { //This should stop the DoubleImage from rendering if the player has Echo stacks remaining in the card selection screen
-            if (AbstractCharBoss.boss != null){
-                if (AbstractCharBoss.boss.hasPower(SilentShivTimeEaterPower.POWER_ID)){
-                    if (!(c instanceof AbstractBossCard) && c.rarity == AbstractCard.CardRarity.RARE){
-                        return true;
+            if (AbstractCharBoss.boss != null) {
+                if (!AbstractCharBoss.boss.isDeadOrEscaped()) {
+                    if (AbstractCharBoss.boss.hasPower(SilentShivTimeEaterPower.POWER_ID)) {
+                        if (!(c instanceof AbstractBossCard) && c.rarity == AbstractCard.CardRarity.RARE) {
+                            return true;
+                        }
                     }
                 }
             }
-            if (NeowBossFinal.neowboss != null){
-                if (NeowBossFinal.neowboss.hasPower(BagOfKnives.POWER_ID)){
-                    if (!(c instanceof AbstractBossCard) && c.rarity == AbstractCard.CardRarity.RARE){
-                        return true;
+            if (NeowBossFinal.neowboss != null) {
+                if (!NeowBossFinal.neowboss.isDeadOrEscaped()) {
+                    if (NeowBossFinal.neowboss.hasPower(BagOfKnives.POWER_ID)) {
+                        if (!(c instanceof AbstractBossCard) && c.rarity == AbstractCard.CardRarity.RARE) {
+                            return true;
+                        }
                     }
                 }
             }
@@ -91,17 +95,21 @@ public class HighlightCards {
 
     private static boolean rareChecker(AbstractCard c) {
         if (AbstractDungeon.player != null && AbstractDungeon.getCurrMapNode() != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) { //This should stop the DoubleImage from rendering if the player has Echo stacks remaining in the card selection screen
-            if (AbstractCharBoss.boss != null){
-                if (AbstractCharBoss.boss.hasPower(DefectCuriosityPower.POWER_ID)){
-                    if (!(c instanceof AbstractBossCard) && c.rarity == AbstractCard.CardRarity.RARE){
-                        return true;
+            if (AbstractCharBoss.boss != null) {
+                if (!AbstractCharBoss.boss.isDeadOrEscaped()) {
+                    if (AbstractCharBoss.boss.hasPower(DefectCuriosityPower.POWER_ID)) {
+                        if (!(c instanceof AbstractBossCard) && c.rarity == AbstractCard.CardRarity.RARE) {
+                            return true;
+                        }
                     }
                 }
             }
-            if (NeowBossFinal.neowboss != null){
-                if (NeowBossFinal.neowboss.hasPower(UnbiasedCognition.POWER_ID)){
-                    if (!(c instanceof AbstractBossCard) && c.rarity == AbstractCard.CardRarity.RARE){
-                        return true;
+            if (NeowBossFinal.neowboss != null) {
+                if (!NeowBossFinal.neowboss.isDeadOrEscaped()) {
+                    if (NeowBossFinal.neowboss.hasPower(UnbiasedCognition.POWER_ID)) {
+                        if (!(c instanceof AbstractBossCard) && c.rarity == AbstractCard.CardRarity.RARE) {
+                            return true;
+                        }
                     }
                 }
             }

@@ -43,7 +43,7 @@
     "NAME": "Unending Supply",
     "DESCRIPTIONS": [
       "At the start of your turn, add #b",
-      "random #yOffclass cards into your hand and #yMuddle them."
+      " random #yOffclass cards into your hand and #yMuddle them."
     ]
   },
   "sneckomod:UnknownUpgradedPostCombatPower": {

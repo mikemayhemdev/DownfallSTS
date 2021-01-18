@@ -3,6 +3,7 @@ package champ.cards;
 import champ.ChampMod;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
+import champ.stances.UltimateStance;
 import champ.vfx.StanceDanceEffect;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -44,7 +45,7 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
     public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
         switch (card.cardID) {
             case "octo:OctoBerserk":
-                if (upgraded || AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
+                if (upgraded || AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)|| AbstractDungeon.player.stance.ID.equals(champ.stances.UltimateStance.STANCE_ID)) {
                     ArrayList<AbstractCard> rCardList = new ArrayList<AbstractCard>();
                     for (AbstractCard t : CardLibrary.getAllCards()) {
                         if (!UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.COMBOBERSERKER))
@@ -57,7 +58,7 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
                 berserkOpen();
                 break;
             case "octo:OctoDefense":
-                if (upgraded || AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID)) {
+                if (upgraded || AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)) {
                     ArrayList<AbstractCard> rCardList = new ArrayList<AbstractCard>();
                     for (AbstractCard t : CardLibrary.getAllCards()) {
                         if (!UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.COMBODEFENSIVE))

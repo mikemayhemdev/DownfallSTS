@@ -78,6 +78,10 @@ public abstract class AbstractGuardianCard extends CustomCard {
         return super.getPortraitImage();
     }
 
+    public void whenReturnedFromStasis() {
+
+    }
+
     /*
 
     @Override

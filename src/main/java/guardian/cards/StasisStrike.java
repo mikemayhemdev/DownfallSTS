@@ -41,6 +41,13 @@ public class StasisStrike extends AbstractGuardianCard {
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 
+    @Override
+    public void whenReturnedFromStasis() {
+        upgradeDamage(magicNumber);
+        freeToPlayOnce = false;
+        cost = costForTurn = 1;
+    }
+
     public StasisStrike() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
