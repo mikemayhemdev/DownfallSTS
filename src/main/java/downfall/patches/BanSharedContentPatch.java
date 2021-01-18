@@ -1,6 +1,10 @@
 package downfall.patches;
 
 import automaton.AutomatonChar;
+import automaton.relics.BronzeIdol;
+import automaton.relics.DecasWashers;
+import automaton.relics.DonusWashers;
+import automaton.relics.MakeshiftBattery;
 import champ.ChampChar;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -111,6 +115,10 @@ public class BanSharedContentPatch {
                 AbstractDungeon.relicsToRemoveOnStart.add(BolsterEngine.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(CandleOfCauterizing.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(Sixitude.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(DecasWashers.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(DonusWashers.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(BronzeIdol.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(MakeshiftBattery.ID);
             }
             if (EvilModeCharacterSelect.evilMode) {
                 AbstractDungeon.relicsToRemoveOnStart.add(Ectoplasm.ID);
