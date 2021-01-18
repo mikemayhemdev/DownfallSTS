@@ -191,7 +191,7 @@
   "downfall:IroncladFortificationPower": {
     "NAME": "堡垒",
     "DESCRIPTIONS": [
-      " #y铁甲战士 构筑了 #y堡垒 。每回合 #y堡垒 将给予他 #b10 点 #y格挡 。NL 当 #y堡垒 被摧毁时， #y铁甲战士 失去 #y壁垒 以及所有 #y格挡 ，但每回合将会获得 #b5 点 #y力量 。"
+      " #y铁甲战士 构筑了 #y堡垒 。每回合 #y堡垒 将给予他 #b10 点 #y格挡 。 NL 当 #y堡垒 被摧毁时， #y铁甲战士 失去 #y壁垒 以及所有 #y格挡 ，但每回合将会获得 #b5 点 #y力量 。"
     ]
   },
   "downfall:NeowBastion": {
