@@ -247,7 +247,7 @@
   },
   "bronze:Terminator": {
     "NAME": "终止",
-    "DESCRIPTION": "bronze:编译 - 如果在 *队列 最后， *方法 获得再打出一次。",
+    "DESCRIPTION": " bronze:编译 - 如果在 *队列 最后， *方法 获得再打出一次。",
     "EXTENDED_DESCRIPTION": [
       "哭泣",
       "终结"
@@ -442,7 +442,7 @@
   "bronze:Format": {
     "NAME": "格式化",
     "DESCRIPTION": " bronze:编码 X 张 *碎片 。 NL 获得 [E] 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "bronze:编码 X+1 张 *碎片 。 NL 获得 [E] 。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": " bronze:编码 X+1 张 *碎片 。 NL 获得 [E] 。 NL 消耗 。"
   },
   "bronze:FormatEncoded": {
     "NAME": "碎片",
@@ -610,7 +610,7 @@
   },
   "bronze:BuggyMess": {
     "NAME": "多重错误",
-    "DESCRIPTION": "bronze:插入 随机状态牌 。 NL 获得 !M! [E] 。",
+    "DESCRIPTION": " bronze:插入 随机状态牌 。 NL 获得 !M! [E] 。",
     "EXTENDED_DESCRIPTION": [
       "错误的",
       "混乱"
@@ -651,7 +651,7 @@
   },
   "bronze:FullRelease": {
     "NAME": "完全公开",
-    "DESCRIPTION": "bronze:编译 - *方法 变成一张 能力牌 并且每回合打出一张。",
+    "DESCRIPTION": " bronze:编译 - *方法 变成一张 能力牌 并且每回合打出一张。",
     "EXTENDED_DESCRIPTION": [
       "完全",
       "公开"
