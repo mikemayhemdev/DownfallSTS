@@ -17,7 +17,7 @@
   },
   "bronze:Explode": {
     "NAME": "爆炸",
-    "DESCRIPTION": " bronze:插入 *灼伤 。 NL bronze:编译 - 对所有敌人失去 !M! 点生命。",
+    "DESCRIPTION": " bronze:插入 *灼伤 。 NL bronze:编译 - 所有敌人失去 !M! 点生命。",
     "EXTENDED_DESCRIPTION": [
       "不稳定的",
       "爆炸"
@@ -74,7 +74,7 @@
     ]
   },
   "bronze:Replicate": {
-    "NAME": "复制爪",
+    "NAME": "副本",
     "DESCRIPTION": "造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       "反复",
@@ -247,7 +247,7 @@
   },
   "bronze:Terminator": {
     "NAME": "终止",
-    "DESCRIPTION": "bronze:编译 - 如果在 *队列 最后， *方法 获得再打出一次。",
+    "DESCRIPTION": " bronze:编译 - 如果在 *队列 最后， *方法 获得再打出一次。",
     "EXTENDED_DESCRIPTION": [
       "哭泣",
       "终结"
@@ -318,13 +318,13 @@
   },
   "bronze:FollowUp": {
     "NAME": "数据追踪",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 如果打出的上一张是 *方法, 再打出一次 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 如果打出的上一张是 *方法 ,再打出一次。"
   },
   "bronze:ChosenStrike": {
-    "NAME": "异教打击",
+    "NAME": "邪教打击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 本局游戏这张牌的伤害提升 !M! 点。",
     "EXTENDED_DESCRIPTION": [
-      "异教",
+      "邪教",
       "咔咔"
     ]
   },
@@ -442,7 +442,7 @@
   "bronze:Format": {
     "NAME": "格式化",
     "DESCRIPTION": " bronze:编码 X 张 *碎片 。 NL 获得 [E] 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "bronze:编码 X+1 张 *碎片 。 NL 获得 [E] 。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": " bronze:编码 X+1 张 *碎片 。 NL 获得 [E] 。 NL 消耗 。"
   },
   "bronze:FormatEncoded": {
     "NAME": "碎片",
@@ -610,7 +610,7 @@
   },
   "bronze:BuggyMess": {
     "NAME": "多重错误",
-    "DESCRIPTION": "bronze:插入 随机状态牌 。 NL 获得 !M! [E] 。",
+    "DESCRIPTION": " bronze:插入 随机状态牌 。 NL 获得 !M! [E] 。",
     "EXTENDED_DESCRIPTION": [
       "错误的",
       "混乱"
@@ -651,7 +651,7 @@
   },
   "bronze:FullRelease": {
     "NAME": "完全公开",
-    "DESCRIPTION": "bronze:编译 - *方法 变成一张 能力牌 并且每回合打出一张。",
+    "DESCRIPTION": " bronze:编译 - *方法 变成一张 能力牌 并且每回合打出一张。",
     "EXTENDED_DESCRIPTION": [
       "完全",
       "公开"

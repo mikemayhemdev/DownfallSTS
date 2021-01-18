@@ -27,7 +27,7 @@ public class TransmogrifyPower extends AbstractPower implements NonStackablePowe
     private AbstractRelic relicTransmoged;
 
     public TransmogrifyPower(AbstractRelic relic) {
-        this.name = "Transmogrifying";
+        this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.relicTransmoged = relic;

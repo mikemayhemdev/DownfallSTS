@@ -9,6 +9,7 @@ import basemod.ReflectionHacks;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -17,12 +18,14 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import java.util.ArrayList;
 
@@ -30,7 +33,7 @@ import static automaton.AutomatonMod.getModID;
 import static automaton.AutomatonMod.makeCardPath;
 
 public abstract class AbstractBronzeCard extends CustomCard {
-
+    public String betaArtPath;
     private static float functionPreviewCardScale = .9f;
     private static float functionPreviewCardY = Settings.HEIGHT * 0.45F;
     private static float functionPreviewCardX = Settings.WIDTH * 0.1F;
@@ -74,6 +77,32 @@ public abstract class AbstractBronzeCard extends CustomCard {
         EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
         initializeTitle();
         initializeDescription();
+    }
+
+
+    @Override
+    protected Texture getPortraitImage() {
+        if (Settings.PLAYTESTER_ART_MODE || UnlockTracker.betaCardPref.getBoolean(this.cardID, false)) {
+            if (this.textureImg == null) {
+                return null;
+            } else {
+                if (betaArtPath != null) {
+                    int endingIndex = betaArtPath.lastIndexOf(".");
+                    String newPath = betaArtPath.substring(0, endingIndex) + "_p" + betaArtPath.substring(endingIndex);
+                    System.out.println("Finding texture: " + newPath);
+
+                    Texture portraitTexture;
+                    try {
+                        portraitTexture = ImageMaster.loadImage(newPath);
+                    } catch (Exception var5) {
+                        portraitTexture = null;
+                    }
+
+                    return portraitTexture;
+                }
+            }
+        }
+        return super.getPortraitImage();
     }
 
     public static String getCorrectPlaceholderImage(CardType type, String id) {

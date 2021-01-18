@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class FullReleaseCardMod extends BronzeCardMod {
@@ -20,7 +21,7 @@ public class FullReleaseCardMod extends BronzeCardMod {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return "At the start of your turn, NL " + rawDescription;
+        return CardCrawlGame.languagePack.getPowerStrings("bronze:FullRelease").DESCRIPTIONS[0] + rawDescription;
     }
 
     @Override

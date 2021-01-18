@@ -14,7 +14,7 @@
   },
   "sneckomod:TailWhip": {
     "NAME": "扫尾",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 0- !M! 层 虚弱 。 NL 给予 0- !M! 层 易伤 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! - 2  层 虚弱 。 NL 给予 !M! - 2 层 易伤 。"
   },
   "sneckomod:UnknownCommonAttack": {
     "NAME": "？？？",
@@ -291,7 +291,7 @@
   "sneckomod:Memorize": {
     "NAME": "回忆",
     "DESCRIPTION": "sneckomod:蛇证 。 即逝 。 NL 选择一张未知牌将其加入你的牌组并移除未知。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 即逝 。 保留。 NL 选择一张未知牌将其加入你的牌组并移除未知。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 即逝 。 保留 。 NL 选择一张未知牌将其加入你的牌组并移除未知。",
     "EXTENDED_DESCRIPTION": [
       "选择一张牌进行回忆。"
     ]

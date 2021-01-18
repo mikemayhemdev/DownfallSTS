@@ -48,8 +48,8 @@
   },
   "Guardian:DecasProtection": {
     "NAME": "先古防御",
-    "DESCRIPTION": "\"获得 1 点 敏捷 和 1 层 人工制品 。 NL 增加一张随机能力牌到你的手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 1 点 敏捷 和 1 层 人工制品 。增加一张随机能力牌到你的手牌。 NL  消耗 。"
+    "DESCRIPTION": "获得 1 点 敏捷 和 1 层 人工制品 。 NL 增加一张随机能力牌到你的手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 1 点 敏捷 和 1 层 人工制品 。增加一张随机能力牌到你的手牌。本场战斗这张牌耗能降低 1 。 NL  消耗 。"
   },
   "Guardian:FierceBash": {
     "NAME": "猛烈痛击",
@@ -139,37 +139,37 @@
   "Guardian:PackageShapes": {
     "NAME": "组件: 机械",
     "DESCRIPTION": "增加一张 *时间炸弹 、 *荆棘协议 和 *反冲协议 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 *时间炸弹 、 *荆棘协议 和 *反冲协议 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 *时间炸弹 、 *荆棘协议 和 *反冲协议 到你的手牌。 NL 消耗 。"
   },
   "Guardian:PackageDonuDeca": {
     "NAME": "组件: 先古",
     "DESCRIPTION": "增加1张 *先古攻击 、 *先古防御 和 *先古建造 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "增加1张已 升级 的 *先古攻击 、 *先古防御 和 *先古建造 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "增加1张已 升级 的 *先古攻击 、 *先古防御 和 *先古建造 到你的手牌。 NL 消耗 。"
   },
   "Guardian:PackageSphere": {
     "NAME": "组件: 圆球",
     "DESCRIPTION": "增加一张 *球形护盾 、 *硬化 和 *浮动圆球 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 *球形护盾 、 *硬化 和 *浮动圆球 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 *球形护盾 、 *硬化 和 *浮动圆球 到你的手牌。 NL 消耗 。"
   },
   "Guardian:PackageSentry": {
     "NAME": "组件: 哨卫",
     "DESCRIPTION": "增加一张 *哨卫射线 和两张 *哨卫震荡 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 *哨卫射线 和两张 *哨卫震荡 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 *哨卫射线 和两张 *哨卫震荡 到你的手牌。 NL 消耗 。"
   },
   "Guardian:PackageWalker": {
     "NAME": "组件: 行者",
     "DESCRIPTION": "增加一张 *圆球运转 、 *行者爪击 和 *焚烧 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 *圆球运转 、 *行者爪击 和 *焚烧 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 *圆球运转 、 *行者爪击 和 *焚烧 到你的手牌。 NL 消耗 。"
   },
   "Guardian:PackageAutomaton": {
     "NAME": "组件: 铜制",
     "DESCRIPTION": "增加一张 *超能射线 、 *铜制圆球 和 *铜制装甲 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 *超能射线 、 *铜制圆球 和 *铜制装甲 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 *超能射线 、 *铜制圆球 和 *铜制装甲 到你的手牌。 NL 消耗 。"
   },
   "Guardian:PackageDefect": {
     "NAME": "组件: 故障",
     "DESCRIPTION": "增加一张 *重连 ， *预编程 和 *时间电容器 到你的手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 *重连 、 *预编程 和 *时间电容器 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 *重连 、 *预编程 和 *时间电容器 到你的手牌。 NL 消耗 。"
   },
   "Guardian:Planning": {
     "NAME": "规划",
@@ -235,8 +235,8 @@
   },
   "Guardian:GemFire": {
     "NAME": "宝石加农炮",
-    "DESCRIPTION": "消耗手牌中有 guardianmod:宝石 的牌。 每颗宝石对随机一名敌人造成 !D! 点伤害。 NL 消耗 。",
-	"UPGRADE_DESCRIPTION": "保留 。 NL 消耗 手牌中有 guardianmod:宝石 的牌。 每颗宝石对随机一名敌人造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": " 消耗 有 guardianmod:宝石 的牌。 每颗宝石对随机一名敌人造成 !D! 点伤害。 NL 消耗 。",
+	"UPGRADE_DESCRIPTION": "保留 。 NL 消耗 有 guardianmod:宝石 的牌。 每颗宝石对随机一名敌人造成 !D! 点伤害。 NL 消耗 。"
   },
   "Guardian:ChargeCore": {
     "NAME": "充能核心",
@@ -380,8 +380,8 @@
   },
   "Guardian:StasisEngine": {
     "NAME": "凝滞引擎",
-    "DESCRIPTION": "每打出 3 张0费卡时，获得 [E] 并抽 1 张卡。",
-    "UPGRADE_DESCRIPTION": "固有 ， NL 每打出 3 张0费卡时，获得 [E] 并抽 1 张卡。"
+    "DESCRIPTION": "每回合打出第三张0费牌时，获得 [E] 并抽 1 张牌。",
+    "UPGRADE_DESCRIPTION": "固有 ， NL 每回合打出第三张0费牌时，获得 [E] 并抽 1 张牌。"
   },
   "Guardian:HammerDown": {
     "NAME": "坠落重锤",
@@ -399,12 +399,12 @@
   "Guardian:PackageConstruct": {
     "NAME": "组件：建造",
     "DESCRIPTION": "增加 1 张 *坠落重锤 ， *终极加农炮 和 *模式切换 到你的手牌中。 它们的费用本场战斗降低1点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "增加 1 张已 升级 的 *坠落重锤 ， *终极加农炮 和 *模式切换 到你的手牌中。 它们的费用本场战斗降低1点。 NL 消耗。"
+    "UPGRADE_DESCRIPTION": "增加 1 张已 升级 的 *坠落重锤 ， *终极加农炮 和 *模式切换 到你的手牌中。 NL 消耗。"
   },
   "Guardian:PackageMass": {
     "NAME": "组件: 团块",
     "DESCRIPTION": "增加一张 *扭曲荆棘 ， *团状炸弹 和 *合体撞击 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 *扭曲荆棘 ， *团状炸弹 和 *合体撞击 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 *扭曲荆棘 ， *团状炸弹 和 *合体撞击 到你的手牌。 NL 消耗 。"
   },
   "Guardian:MassOfThorns": {
     "NAME": "团状荆棘",

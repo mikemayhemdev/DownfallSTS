@@ -2,7 +2,7 @@
   "bronze:FreeFunctionsPotion": {
     "NAME": "机油",
     "DESCRIPTIONS": [
-      "提升 #y序列 中的所有牌数值 #b",
+      "提升 #y队列 中的所有牌数值 #b",
       " 点。"
     ]
   },

@@ -48,5 +48,14 @@
       "Select a card to add to your deck, removing its Unknown.",
       "[Free Action] Lock an Unknown into a permanent card."
     ]
+  },
+  "sneckomod:AtGameStart": {
+    "TEXT": [
+      "",
+      " Cards",
+      "Unknown cards can become ",
+      " cards this run.",
+      "Choose."
+    ]
   }
 }
