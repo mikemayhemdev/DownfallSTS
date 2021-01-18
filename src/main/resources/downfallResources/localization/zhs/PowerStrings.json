@@ -60,7 +60,7 @@
   "downfall:NeowUnbridledRage": {
     "NAME": "无遏狂怒",
     "DESCRIPTIONS": [
-      "当 #y涅奥 的生命地狱 #b50% 时，她获得 #b6 点 #y力量 。"
+      "当 #y涅奥 的生命低于 #b50% 时，她获得 #b6 点 #y力量 。"
     ]
   },
   "downfall:WatcherCripplePower": {

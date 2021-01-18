@@ -14,6 +14,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class Strike_Guardian extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("Strike_Guardian");
@@ -47,11 +49,12 @@ public class Strike_Guardian extends AbstractGuardianCard {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
         this.baseDamage = DAMAGE;
-        this.tags.add(BaseModCardTags.BASIC_STRIKE);
-        this.tags.add(AbstractCard.CardTags.STRIKE);
+        this.tags.add(CardTags.STARTER_STRIKE);
+        this.tags.add(CardTags.STRIKE);
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("strikeGuardian.png"));
 
 //this.sockets.add(GuardianMod.socketTypes.RED);
 
