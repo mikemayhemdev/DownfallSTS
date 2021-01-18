@@ -72,7 +72,7 @@ public class HighlightCards {
             if (AbstractCharBoss.boss != null) {
                 if (!AbstractCharBoss.boss.isDeadOrEscaped()) {
                     if (AbstractCharBoss.boss.hasPower(SilentShivTimeEaterPower.POWER_ID)) {
-                        if (!(c instanceof AbstractBossCard) && c.rarity == AbstractCard.CardRarity.RARE) {
+                        if (!(c instanceof AbstractBossCard) && (c.costForTurn == 0 || c.freeToPlayOnce)) {
                             return true;
                         }
                     }
@@ -81,7 +81,7 @@ public class HighlightCards {
             if (NeowBossFinal.neowboss != null) {
                 if (!NeowBossFinal.neowboss.isDeadOrEscaped()) {
                     if (NeowBossFinal.neowboss.hasPower(BagOfKnives.POWER_ID)) {
-                        if (!(c instanceof AbstractBossCard) && c.rarity == AbstractCard.CardRarity.RARE) {
+                        if (!(c instanceof AbstractBossCard) && (c.costForTurn == 0 || c.freeToPlayOnce)) {
                             return true;
                         }
                     }
