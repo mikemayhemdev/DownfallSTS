@@ -148,7 +148,7 @@
   "downfall:NeowAncientConstruct": {
     "NAME": "Ancient Construct",
     "DESCRIPTIONS": [
-      "Neow gains #b3 #yArtifact at the start of your turn if she has no #yArtifact."
+      "Neow gains #b2 #yArtifact at the start of your turn if she has no #yArtifact."
     ]
   },
   "downfall:DefectCuriosity": {

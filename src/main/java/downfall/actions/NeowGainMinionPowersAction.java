@@ -65,7 +65,7 @@ public class NeowGainMinionPowersAction extends AbstractGameAction {
                             break;
                         }
                         case "downfall:Defect": {
-                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new AncientConstruct(owner, 3)));
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new AncientConstruct(owner, 2)));
                             break;
                         }
                         case "downfall:Watcher": {
