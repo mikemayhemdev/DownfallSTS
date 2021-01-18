@@ -70,6 +70,7 @@ public class PrimingBeam extends AbstractGuardianCard {
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
         brace(magicNumber);
+        this.useGems(p, m);
     }
 
     @Override
