@@ -493,7 +493,7 @@ public class SneckoMod implements
         CardGroup charChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         charChoices.addToTop(colorChoices.getTopCard());
         charChoices.addToTop(colorChoices.getNCardFromTop(1));
-        AbstractDungeon.gridSelectScreen.open(charChoices, 1, false, CardCrawlGame.languagePack.getUIString("sneckomod:AtGameStart").TEXT[5]);
+        AbstractDungeon.gridSelectScreen.open(charChoices, 1, false, CardCrawlGame.languagePack.getUIString("sneckomod:AtGameStart").TEXT[4]);
     }
 
     public static AbstractCard playerStartCardForEventFromColor(AbstractCard.CardColor c) {
