@@ -50,7 +50,7 @@ public class ApocalypticArmorPower extends AbstractPower implements OnChargeSubs
             }
             if (i >= amount) {
                 addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new TimeStopPower(AbstractDungeon.player, 1), 1));
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, this));
+                AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(owner, owner, this));
             }
         }
     }

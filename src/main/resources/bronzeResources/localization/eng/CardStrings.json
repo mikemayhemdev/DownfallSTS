@@ -635,7 +635,7 @@
   "bronze:AlphaBuild": {
     "NAME": "Early Access",
     "DESCRIPTION": "Deal !D! damage. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert *Beta *Build.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert *Beta *Build.",
+    "UPGRADE_DESCRIPTION": "Innate. NL \u00A0 Deal !D! damage. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert *Beta *Build.",
     "EXTENDED_DESCRIPTION": [
       "rough",
       "Alpha"
