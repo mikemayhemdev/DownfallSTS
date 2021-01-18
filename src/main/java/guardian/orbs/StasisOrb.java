@@ -2,31 +2,23 @@ package guardian.orbs;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.OrbStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import guardian.GuardianMod;
-import guardian.actions.DestroyOrbSlotForDamageAction;
 import guardian.actions.ReturnStasisCardToHandAction;
 import guardian.actions.StasisEvokeIfRoomInHandAction;
-import guardian.cards.*;
-import guardian.powers.BeamBuffPower;
+import guardian.cards.InStasisCard;
+import guardian.cards.StasisField;
+import guardian.cards.StasisStrike;
 import guardian.relics.StasisUpgradeRelic;
 import guardian.vfx.AddCardToStasisEffect;
-import guardian.vfx.SmallLaserEffectColored;
 
 
 public class StasisOrb extends AbstractOrb {
@@ -42,14 +34,14 @@ public class StasisOrb extends AbstractOrb {
     public AbstractCard stasisCard;
     private AbstractGameEffect stasisStartEffect;
 
-    public StasisOrb(AbstractCard card)
-    {
+    public StasisOrb(AbstractCard card) {
         this(card, null);
     }
-    public StasisOrb(AbstractCard card, CardGroup source)
-    {
+
+    public StasisOrb(AbstractCard card, CardGroup source) {
         this(card, source, false);
     }
+
     public StasisOrb(AbstractCard card, CardGroup source, boolean selfStasis) {
         this.stasisCard = card;
         GuardianMod.logger.info("New Stasis Orb made");
@@ -120,8 +112,7 @@ public class StasisOrb extends AbstractOrb {
             GuardianMod.stasisDelay = false;
         }
 
-        if (stasisCard instanceof InStasisCard)
-        {
+        if (stasisCard instanceof InStasisCard) {
             stasisCard.applyPowers();
             ((InStasisCard) stasisCard).onStartOfTurn(this);
         }
@@ -139,8 +130,7 @@ public class StasisOrb extends AbstractOrb {
     }
 
     public void onEvoke() {
-        if (this.stasisCard instanceof InStasisCard)
-        {
+        if (this.stasisCard instanceof InStasisCard) {
             ((InStasisCard) this.stasisCard).onEvoke(this);
         }
 
@@ -149,13 +139,7 @@ public class StasisOrb extends AbstractOrb {
         } else {
             if (this.passiveAmount <= 0) {
                 if (stasisCard.cost > 0) {
-                    if (stasisCard instanceof StasisStrike){
-                        stasisCard.baseDamage += stasisCard.magicNumber;
-                    } else if (stasisCard instanceof StasisField){
-                        stasisCard.baseBlock += stasisCard.magicNumber;
-                    } else {
-                        stasisCard.freeToPlayOnce = true;
-                    }
+                    stasisCard.freeToPlayOnce = true;
                 } else {
                     stasisCard.tags.remove(GuardianMod.STASISGLOW);
                 }
@@ -176,13 +160,11 @@ public class StasisOrb extends AbstractOrb {
         super.updateAnimation();
     }
 
-    private void initialize(CardGroup source, boolean selfStasis)
-    {
+    private void initialize(CardGroup source, boolean selfStasis) {
         if (source != null) {
             source.removeCard(stasisCard);
 
-            switch (source.type)
-            {
+            switch (source.type) {
                 case HAND:
                     stasisStartEffect = new AddCardToStasisEffect(stasisCard, this, stasisCard.current_x, stasisCard.current_y, !selfStasis);
                     break;
@@ -199,8 +181,7 @@ public class StasisOrb extends AbstractOrb {
                 default:
                     stasisStartEffect = new AddCardToStasisEffect(stasisCard, this, Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f, !selfStasis);
             }
-        }
-        else {
+        } else {
             stasisStartEffect = new AddCardToStasisEffect(stasisCard, this, Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f, !selfStasis);
         }
 
@@ -211,8 +192,7 @@ public class StasisOrb extends AbstractOrb {
     @Override
     public void update() {
         super.update();
-        if (stasisStartEffect == null || stasisStartEffect.isDone)
-        {
+        if (stasisStartEffect == null || stasisStartEffect.isDone) {
             this.stasisCard.target_x = this.tX;
             this.stasisCard.target_y = this.tY;
             this.stasisCard.applyPowers();
@@ -229,8 +209,7 @@ public class StasisOrb extends AbstractOrb {
     }
 
     public void render(SpriteBatch sb) {
-        if (!this.hb.hovered && (this.stasisStartEffect == null || this.stasisStartEffect.isDone))
-        {
+        if (!this.hb.hovered && (this.stasisStartEffect == null || this.stasisStartEffect.isDone)) {
             renderActual(sb);
         }
     }
@@ -242,8 +221,7 @@ public class StasisOrb extends AbstractOrb {
     }
 
     public void renderPreview(SpriteBatch sb) {
-        if (this.hb.hovered && (this.stasisStartEffect == null || this.stasisStartEffect.isDone))
-        {
+        if (this.hb.hovered && (this.stasisStartEffect == null || this.stasisStartEffect.isDone)) {
             renderActual(sb);
         }
     }
