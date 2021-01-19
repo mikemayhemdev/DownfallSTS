@@ -10,13 +10,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.ArrayList;
-import static collector.CollectorMod.makeID;
 
 public class WatchersStaff extends AbstractCollectibleCard {
     public final static String ID = makeID("WatchersStaff");
 
     public WatchersStaff() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
        magicNumber = baseMagicNumber = 1;
         this.retain = true;
     }

@@ -3,12 +3,11 @@ package collector.cards.Collectibles;
 import collector.powers.MysticCharge;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import static collector.CollectorMod.makeID;
 public class CrookedStaff extends AbstractCollectibleCard {
     public final static String ID = makeID("CrookedStaff");
 
     public CrookedStaff () {
-        super(ID, 2, CardType.POWER, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         magicNumber = baseMagicNumber = 3;
     }
 

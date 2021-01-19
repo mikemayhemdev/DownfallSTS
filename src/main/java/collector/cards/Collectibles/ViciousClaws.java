@@ -3,13 +3,12 @@ package collector.cards.Collectibles;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import static collector.CollectorMod.makeID;
 
 public class ViciousClaws extends AbstractCollectibleCard {
     public final static String ID = makeID("ViciousClaws");
 
     public ViciousClaws() {
-        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
        damage= baseDamage = 1;
         this.exhaust = true;
     }

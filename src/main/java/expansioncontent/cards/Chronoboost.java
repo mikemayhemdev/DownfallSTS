@@ -4,7 +4,6 @@ package expansioncontent.cards;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
 import expansioncontent.powers.ChronoBoostPlusPower;
 import expansioncontent.powers.ChronoBoostPower;

@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
-import expansioncontent.cards.deprecated.*;
 import expansioncontent.expansionContentMod;
 import guardian.patches.GuardianEnum;
 import slimebound.patches.SlimeboundEnum;

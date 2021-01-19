@@ -9,8 +9,6 @@ import downfall.downfallMod;
 import downfall.relics.Hecktoplasm;
 import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.cards.*;
-import expansioncontent.cards.deprecated.*;
-import expansioncontent.cards.Chronoboost;
 import expansioncontent.relics.StudyCardRelic;
 import guardian.cards.Aged;
 import guardian.characters.GuardianCharacter;

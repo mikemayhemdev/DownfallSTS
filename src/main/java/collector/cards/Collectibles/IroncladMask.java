@@ -4,12 +4,12 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import static collector.CollectorMod.makeID;
+
 public class IroncladMask extends AbstractCollectibleCard {
     public final static String ID = makeID("IroncladMask");
 
     public IroncladMask() {
-        super(ID,2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
       damage = baseDamage = 10;
         this.exhaust = true;
     }

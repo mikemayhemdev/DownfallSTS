@@ -75,7 +75,7 @@ public class CollectorMod implements
     public static ArrayList<String> Afflictions = new ArrayList<>();
     public static ArrayList<String> Boons = new ArrayList<>();
     public static HashMap<String, AbstractCard> cardsList;
-    public static Color COLLECTIBLE_CARD_COLOR = new Color(0.443F, 0.231F, 0.286F, 1);
+
     public CollectorMod() {
         BaseMod.subscribe(this);
 

@@ -7,13 +7,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;
 import com.megacrit.cardcrawl.powers.IntangiblePower;
-import static collector.CollectorMod.makeID;
 
 public class SilentTrophy extends AbstractCollectibleCard {
     public final static String ID = makeID("SilentTrophy");
     public static AbstractCard s;
     public SilentTrophy() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         this.exhaust = true;
         s = (new Shiv()).makeCopy();
         s.upgrade();

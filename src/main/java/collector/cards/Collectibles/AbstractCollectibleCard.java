@@ -5,7 +5,7 @@ import automaton.cardmods.EncodeMod;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.CardModifierManager;
-import collector.patches.CollectibleCardColorPatch;
+import collector.CollectorChar;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -23,8 +23,8 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 
 import java.util.ArrayList;
 
+import static automaton.AutomatonMod.makeCardPath;
 import static automaton.FunctionHelper.WITH_DELIMITER;
-import static collector.CollectorMod.*;
 
 public abstract class AbstractCollectibleCard extends CustomCard {
 
@@ -46,8 +46,8 @@ public abstract class AbstractCollectibleCard extends CustomCard {
     private AbstractCard functionPreviewCard;
 
     public AbstractCollectibleCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
-        super(id, "ERROR", getCorrectPlaceholderImage(type,id),
-                cost, "ERROR", type, CollectibleCardColorPatch.CardColorPatch.COLLECTIBLE, rarity, target);
+        super(id, "ERROR", getCorrectPlaceholderImage(type, id),
+                cost, "ERROR", type, CollectorChar.Enums.COLLECTOR, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
         name = NAME = cardStrings.NAME;
         originalName = NAME;
@@ -56,22 +56,10 @@ public abstract class AbstractCollectibleCard extends CustomCard {
         EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
         initializeTitle();
         initializeDescription();
+    }
 
-    }
-    public AbstractCollectibleCard(final String id, final String img, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
-        super(id, "ERROR", getCorrectPlaceholderImage(type,img),
-                cost, "ERROR", type, CollectibleCardColorPatch.CardColorPatch.COLLECTIBLE, rarity, target);
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
-        name = NAME = cardStrings.NAME;
-        originalName = NAME;
-        rawDescription = DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-        initializeTitle();
-        initializeDescription();
-    }
     public AbstractCollectibleCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
-        super(id, "ERROR", getCorrectPlaceholderImage(type,id),
+        super(id, "ERROR", getCorrectPlaceholderImage(type, id),
                 cost, "ERROR", type, color, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
         name = NAME = cardStrings.NAME;
@@ -84,12 +72,10 @@ public abstract class AbstractCollectibleCard extends CustomCard {
     }
 
     public static String getCorrectPlaceholderImage(CardType type, String id) {
-        String img = makeCardPath(id.replaceAll((getModID() + ":"), "") + ".png");
-        System.out.println(img);
+        String img = makeCardPath(id.replaceAll(("collector:"), "") + ".png");
         if ((!Gdx.files.internal(img).exists()))
             switch (type) {
                 case ATTACK:
-                    System.out.println(makeCardPath("Attack.png"));
                     return makeCardPath("Attack.png");
                 case SKILL:
                     return makeCardPath("Skill.png");
@@ -97,6 +83,10 @@ public abstract class AbstractCollectibleCard extends CustomCard {
                     return makeCardPath("Power.png");
             }
         return img;
+    }
+
+    public static String makeID(String blah) {
+        return "collector:" + blah;
     }
 
     public void resetAttributes() {
