@@ -1,6 +1,7 @@
 package automaton.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -22,5 +23,12 @@ public class Strike extends AbstractBronzeCard {
     @Override
     public void upp() {
         upgradeDamage(3);
+    }
+
+    @Override
+    public void onCompile(AbstractCard function, boolean forGameplay) {
+        if (position == 1) {
+            function.tags.add(CardTags.STRIKE);
+        }
     }
 }
