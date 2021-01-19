@@ -44,7 +44,7 @@ public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
         addRelic(new CBR_NeowsBlessing());
         // addRelic(new CBR_BagOfPreparation());
         //addRelic(new CBR_Lantern());
-        addRelic(new CBR_HornCleat());
+        addRelic(new CBR_Lantern());
         addRelic(new CBR_FusionHammer());
         addRelic(new CBR_SneckoSkull());
         addRelic(new CBR_TwistedFunnel());
@@ -63,7 +63,7 @@ public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
             switch (turn) {
                 case 0:
                     //Turn 1
-                    addToList(cardsList, new EnSadisticNature(), extraUpgrades);
+                    addToList(cardsList, new EnNoxiousFumes(), extraUpgrades);
                     addToList(cardsList, new EnDeadlyPoison(), true);
                     addToList(cardsList, new EnCripplingCloud(), extraUpgrades);
                     turn++;
