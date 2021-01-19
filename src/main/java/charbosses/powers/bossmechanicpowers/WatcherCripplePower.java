@@ -5,16 +5,13 @@
 
 package charbosses.powers.bossmechanicpowers;
 
-import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
@@ -46,7 +43,7 @@ public class WatcherCripplePower extends AbstractBossMechanicPower {
     @Override
     public int onLoseHp(int damageAmount) {
         this.flash();
-        stackPower( damageAmount * -1);
+        stackPower(damageAmount * -1);
         this.updateDescription();
         return super.onLoseHp(damageAmount);
     }
@@ -56,7 +53,8 @@ public class WatcherCripplePower extends AbstractBossMechanicPower {
         if (amount <= 0 && !used) {
             used = true;
             this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, -4), -4, true, AbstractGameAction.AttackEffect.NONE));
-            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new GainStrengthPower(this.owner, 4), 4, true, AbstractGameAction.AttackEffect.NONE));
+            if (!owner.hasPower(ArtifactPower.POWER_ID))
+                this.addToBot(new ApplyPowerAction(this.owner, this.owner, new GainStrengthPower(this.owner, 4), 4, true, AbstractGameAction.AttackEffect.NONE));
         }
     }
 
