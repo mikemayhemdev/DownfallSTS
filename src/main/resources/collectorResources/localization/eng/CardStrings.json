@@ -99,7 +99,7 @@
   },
   "collector:LouseSegment": {
   "NAME": "Louse Segment",
-  "DESCRIPTION": "The next time you take attack damage, Gain !B! Block. NL Exhaust."
+  "DESCRIPTION": "The next time you take attack damage, Gain !B! Block. NL collector:Perpetual."
   },
   "collector:LagavullinShell": {
     "NAME": "Lagavullin Shell",

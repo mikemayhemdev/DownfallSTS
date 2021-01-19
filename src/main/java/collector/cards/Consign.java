@@ -1,15 +1,14 @@
 package collector.cards;
 
-import collector.actions.ConsignAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import collector.powers.SoulSnare;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
 public class Consign extends AbstractCollectorCard {
     public final static String ID = makeID("Consign");
-
+    public int iniHP;
     public Consign() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         damage = baseDamage = 16;
@@ -18,8 +17,17 @@ public class Consign extends AbstractCollectorCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new VFXAction(new CleaveEffect()));
-        atb(new ConsignAction(m,new DamageInfo(p,damage, DamageInfo.DamageType.NORMAL)));
+        iniHP = m.currentHealth;
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                if (m.currentHealth < iniHP){
+                    atb(new ApplyPowerAction(m,p,new SoulSnare(iniHP - m.currentHealth,m)));
+                }
+                isDone = true;
+            }
+        });
     }
 
     @Override

@@ -1,8 +1,9 @@
 package collector.cards;
 
-import collector.actions.SoulHarvestAction;
+import collector.actions.FatalCollectAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -22,7 +23,8 @@ public class SoulHarvest extends AbstractCollectorCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new CleaveEffect()));
-        atb(new SoulHarvestAction(p, multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
+        atb(new DamageAllEnemiesAction(p,multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
+        atb(new FatalCollectAction());
     }
 
     @Override

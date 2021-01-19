@@ -10,6 +10,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
@@ -40,6 +41,7 @@ public class CollectorChar extends CustomPlayer {
             "collectorResources/images/char/mainChar/orb/layer5d.png",};
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
+    public static AbstractCreature TorchHead;
 
     public float renderscale = 1.2F;
 

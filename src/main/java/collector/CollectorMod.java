@@ -9,6 +9,7 @@ import collector.cards.Collectibles.*;
 import collector.patches.CollectibleCardColorEnumPatch;
 import collector.powers.SoulSnare;
 import collector.util.CollectorSecondDamage;
+import collector.util.TorchHead;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -17,6 +18,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -65,8 +67,8 @@ public class CollectorMod implements
     private static final String CHARSELECT_BUTTON = "collectorResources/images/charSelect/charButton.png";
     private static final String CHARSELECT_PORTRAIT = "collectorResources/images/charSelect/charBG.png";
 
-    public static Color placeholderColor = new Color(29, 108, 161, 1);
-    public static Color potionLabColor = new Color(29, 108, 161, 1);
+    public static Color placeholderColor = CardHelper.getColor(13, 158, 131);
+    public static Color potionLabColor = CardHelper.getColor(113, 158, 131);
     private static String modID = "collector";
     private CustomUnlockBundle unlocks0; // TODO: Set this up
     private CustomUnlockBundle unlocks1;
@@ -76,7 +78,7 @@ public class CollectorMod implements
     public static ArrayList<String> Afflictions = new ArrayList<>();
     public static ArrayList<String> Boons = new ArrayList<>();
     public static HashMap<String, AbstractCard> cardsList;
-    public static Color COLLECTIBLE_CARD_COLOR = new Color(0.443F, 0.231F, 0.286F, 1);
+    public static Color COLLECTIBLE_CARD_COLOR = CardHelper.getColor(13, 158, 153);
     public CollectorMod() {
         BaseMod.subscribe(this);
 
@@ -330,7 +332,6 @@ public class CollectorMod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         CollectorCollection.atBattleStart();
-
     }
 
     @Override
@@ -355,6 +356,8 @@ public class CollectorMod implements
         Boons.add("Block");
 
         CollectorCollection.init();
+        CollectorChar.TorchHead = new TorchHead();
+        System.out.println("Torch Friend!");
     }
 
     public static CardGroup getRareCards() {
