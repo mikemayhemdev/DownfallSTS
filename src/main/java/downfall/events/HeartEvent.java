@@ -1,7 +1,6 @@
 package downfall.events;
 
 
-import basemod.devcommands.unlock.Unlock;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
@@ -35,8 +34,6 @@ import downfall.vfx.CustomAnimatedNPC;
 import downfall.vfx.TopLevelInfiniteSpeechBubble;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import slimebound.patches.SlimeboundEnum;
-import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -404,8 +401,7 @@ public class HeartEvent extends AbstractEvent {
         this.roomEventText.removeDialogOption(0);
         if (hasPlayedRun(AbstractDungeon.player.chosenClass)) {
             this.roomEventText.addDialogOption(OPTIONS[5]);
-        }
-        else {
+        } else {
             this.roomEventText.addDialogOption(OPTIONS[6], true);
         }
         this.roomEventText.addDialogOption(((HeartReward) this.rewards.get(1)).optionLabel);

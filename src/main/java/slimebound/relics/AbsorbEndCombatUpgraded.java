@@ -21,11 +21,31 @@ public class AbsorbEndCombatUpgraded extends CustomRelic {
     public static final String ID = "Slimebound:AbsorbEndCombatUpgraded";
     public static final String IMG_PATH = "relics/heartofgooblack.png";
     public static final String OUTLINE_IMG_PATH = "relics/heartofgooOutline.png";
-    private static final int HP_PER_CARD = 1;
+    private static final int HP_PER_SLURP = 3;
+    private static final int HP_PER_COMBAT = 15;
 
     public AbsorbEndCombatUpgraded() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.BOSS, LandingSound.MAGICAL);
+    }
+
+    @Override
+    public void atBattleStart() {
+        grayscale = false;
+        counter = HP_PER_COMBAT;
+    }
+
+    @Override
+    public void onTrigger() {
+        int realAmount = Math.min(HP_PER_SLURP, counter);
+        if (realAmount > 0) {
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(AbstractDungeon.player, AbstractDungeon.player, realAmount));
+            flash();
+            counter -= realAmount;
+            if (counter == 0) {
+                grayscale = true;
+            }
+        }
     }
 
     public boolean canSpawn() {

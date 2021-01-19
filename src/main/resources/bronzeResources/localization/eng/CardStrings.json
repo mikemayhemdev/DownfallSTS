@@ -1,7 +1,7 @@
 {
   "bronze:DazingPulse": {
     "NAME": "Dazing Pulse",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block NL bronze:Compile - bronze:Insert !M! *Dazed.",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block NL bronze:Compile *Error - bronze:Insert !M! *Dazed.",
     "EXTENDED_DESCRIPTION": [
       "dazing",
       "Pulse"
@@ -125,7 +125,7 @@
   },
   "bronze:Overheat": {
     "NAME": "Overheat",
-    "DESCRIPTION": "Take !M! damage. NL Deal !D! damage. NL bronze:Compile - bronze:Insert a *Burn+.",
+    "DESCRIPTION": "Take !M! damage. NL Deal !D! damage. NL bronze:Compile *Error - bronze:Insert a *Burn+.",
     "EXTENDED_DESCRIPTION": [
       "heated",
       "Burn"
@@ -150,7 +150,7 @@
   },
   "bronze:DarkDash": {
     "NAME": "Dark Dash",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Compile - bronze:Insert a *Void.",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Compile *Error - bronze:Insert a *Void.",
     "EXTENDED_DESCRIPTION": [
       "dark",
       "Dash"
@@ -158,7 +158,7 @@
   },
   "bronze:OilSpill": {
     "NAME": "Oil Spill",
-    "DESCRIPTION": "Deal !D! damage and apply !M! Poison. NL bronze:Compile - bronze:Insert a *Slimed.",
+    "DESCRIPTION": "Deal !D! damage and apply !M! Poison. NL bronze:Compile *Error - bronze:Insert a *Slimed.",
     "EXTENDED_DESCRIPTION": [
       "oily",
       "Spill"
@@ -166,7 +166,7 @@
   },
   "bronze:WildBeam": {
     "NAME": "Wild Beam",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - bronze:Insert a *Wound.",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile *Error - bronze:Insert a *Wound.",
     "EXTENDED_DESCRIPTION": [
       "wild",
       "Beam"
@@ -198,7 +198,7 @@
   },
   "bronze:Deprecate": {
     "NAME": "Deprecate",
-    "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL bronze:Compile - Gain Weak.",
+    "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL bronze:Compile *Error - Gain Weak.",
     "EXTENDED_DESCRIPTION": [
       "old",
       "Insult"
@@ -206,7 +206,7 @@
   },
   "bronze:Invalidate": {
     "NAME": "Invalidate",
-    "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies. NL bronze:Compile - Gain Vulnerable.",
+    "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies. NL bronze:Compile *Error - Gain Vulnerable.",
     "EXTENDED_DESCRIPTION": [
       "invalid",
       "Error"
@@ -272,7 +272,7 @@
   },
   "bronze:DigitalCarnage": {
     "NAME": "Digital Carnage",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Function gains Ethereal.",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile *Error - Function is Ethereal.",
     "EXTENDED_DESCRIPTION": [
       "digital",
       "Carnage"
@@ -280,7 +280,7 @@
   },
   "bronze:NullPointer": {
     "NAME": "Null Pointer",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL bronze:Compile - Function gains Unplayable.",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL bronze:Compile *Error - Function is Unplayable.",
     "EXTENDED_DESCRIPTION": [
       "null",
       "Pointer"
@@ -305,7 +305,7 @@
   },
   "bronze:Backtrace": {
     "NAME": "Backtrace",
-    "DESCRIPTION": "Innate. NL \u00A0 Deal !D! damage. NL bronze:Compile - Function gains Exhaust.",
+    "DESCRIPTION": "Innate. NL \u00A0 Deal !D! damage. NL bronze:Compile *Error - Function gains Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "sneaky",
       "Trace"
@@ -403,7 +403,7 @@
   },
   "bronze:Safeguard": {
     "NAME": "Safeguard",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! Frail.",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile *Error - Gain !M! Frail.",
     "EXTENDED_DESCRIPTION": [
       "safe",
       "Guard"
@@ -411,7 +411,7 @@
   },
   "bronze:BronzeArmor": {
     "NAME": "Bronze Armor",
-    "DESCRIPTION": "Gain !bauto! Artifact. NL bronze:Compile - ALL enemies gain !M! Artifact.",
+    "DESCRIPTION": "Gain !bauto! Artifact. NL bronze:Compile *Error - ALL enemies gain !M! Artifact.",
     "EXTENDED_DESCRIPTION": [
       "bronze",
       "Armor"
@@ -424,7 +424,7 @@
   },
   "bronze:Philosophize": {
     "NAME": "Philosophize",
-    "DESCRIPTION": "Gain !bauto! Strength. NL bronze:Compile - ALL enemies gain !M! Strength.",
+    "DESCRIPTION": "Gain !bauto! Strength. NL bronze:Compile *Error - ALL enemies gain !M! Strength.",
     "EXTENDED_DESCRIPTION": [
       "smart",
       "Idea"
@@ -466,7 +466,7 @@
   },
   "bronze:Break": {
     "NAME": "Break",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - bronze:Insert !M! random Status cards.",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile *Error - bronze:Insert !M! random Status cards.",
     "EXTENDED_DESCRIPTION": [
       "broken",
       "Smash"
@@ -516,7 +516,7 @@
   },
   "bronze:Debug": {
     "NAME": "Debug",
-    "DESCRIPTION": "Remove all negative bronze:Compile effects from the cards in the Sequence. NL Exhaust."
+    "DESCRIPTION": "Remove all bronze:Compile *Error effects from the cards in the Sequence. NL Exhaust."
   },
   "bronze:HyperBeam": {
     "NAME": "HYPER BEAM",
@@ -542,7 +542,7 @@
   },
   "bronze:CleanCode": {
     "NAME": "Clean Code",
-    "DESCRIPTION": "Remove all negative bronze:Compile effects from cards in the Sequence. NL Lasts for the next !M! Functions created."
+    "DESCRIPTION": "Remove all bronze:Compile *Error effects from cards in the Sequence. NL Lasts for the next !M! Functions created."
   },
   "bronze:BranchBlock": {
     "NAME": "Branch: Block",

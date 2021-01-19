@@ -142,7 +142,7 @@
   "downfall:DefectAncientConstructPower": {
     "NAME": "Ancient Construct",
     "DESCRIPTIONS": [
-      "Begins the fight with 2 Bronze Orb minions. NL Gains 1 Artifact each turn if it did not already have Artifact."
+      "Begins the fight with 2 Bronze Orb minions. NL Gains 1 Artifact at the end of its turn if it did not already have Artifact."
     ]
   },
   "downfall:NeowAncientConstruct": {
@@ -191,7 +191,7 @@
   "downfall:IroncladFortificationPower": {
     "NAME": "Bastion",
     "DESCRIPTIONS": [
-      "Ironclad begins the fight with a Fortification, which will grant him #b10 Block each turn. NL When the Fortification has been destroyed, Ironclad loses Barricade, but gains #b5 Strength per turn."
+      "Ironclad begins the fight with a Fortification, which will grant him #b15 Block each turn. NL When the Fortification has been destroyed, Ironclad loses Barricade, but gains #b5 Strength per turn."
     ]
   },
   "downfall:NeowBastion": {

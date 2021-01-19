@@ -42,15 +42,16 @@ public class FormatEncoded extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, block));
-        atb(new TimedVFXAction(new VfxBuilder(TextureLoader.getTexture("bronzeResources/images/ui/block.png"), m.hb.x - (50 * Settings.scale), m.hb.cY, 0.25F)
-                .setColor(getRandomColor())
-                .fadeIn(0.1F)
-                .rotate(300f)
-                .moveX(m.hb.x - (50 * Settings.scale), m.hb.x - (150 * Settings.scale))
-                .andThen(0.2f)
-                .moveX(m.hb.x - (150 * Settings.scale), m.hb.cX)
-                .build())
-        );
+        if (m != null)
+            atb(new TimedVFXAction(new VfxBuilder(TextureLoader.getTexture("bronzeResources/images/ui/block.png"), m.hb.x - (50 * Settings.scale), m.hb.cY, 0.25F)
+                    .setColor(getRandomColor())
+                    .fadeIn(0.1F)
+                    .rotate(300f)
+                    .moveX(m.hb.x - (50 * Settings.scale), m.hb.x - (150 * Settings.scale))
+                    .andThen(0.2f)
+                    .moveX(m.hb.x - (150 * Settings.scale), m.hb.cX)
+                    .build())
+            );
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
     }
 

@@ -1,4 +1,4 @@
-package champ.patches;
+package downfall.patches;
 
 import champ.ChampMod;
 import champ.cards.AbstractChampCard;
@@ -16,8 +16,10 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import sneckomod.SneckoMod;
+import sneckomod.patches.UnknownExtraUiPatch;
 
-public class CardExtraUiPatch {
+public class GlobalExtraCardUIPatch {
 
     private static TextureAtlas.AtlasRegion healthBlob = ChampMod.UIAtlas.findRegion("heartOrb");
     private static TextureAtlas.AtlasRegion crown = ChampMod.UIAtlas.findRegion("crown");
@@ -34,6 +36,10 @@ public class CardExtraUiPatch {
     public static class SecondEnergyRenderPatch {
         @SpirePostfixPatch
         public static void patch(AbstractCard __instance, SpriteBatch sb) {
+            if (UnknownExtraUiPatch.parentCard.get(__instance) != null) {
+                renderHelper(sb, SneckoMod.overBannerAll, __instance.current_x, __instance.current_y, __instance);
+                renderHelper(sb, UnknownExtraUiPatch.parentCard.get(__instance).getOverBannerTex(), __instance.current_x, __instance.current_y, __instance);
+            }
             if (__instance instanceof AbstractChampCard) {
                 if (((AbstractChampCard) __instance).myHpLossCost > 0) { // Berserker draw stuff.
                     FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
@@ -76,6 +82,10 @@ public class CardExtraUiPatch {
         private static void renderHelper(SpriteBatch sb, TextureAtlas.AtlasRegion img, float drawX, float drawY, AbstractCard C) {
             Color color = Color.WHITE.cpy();
             color.a = C.transparency; // i wish i'd come up with this earlier. makes things so much less ugly
+            if (img == null) {
+                System.out.println("HELP!");
+                img = ChampMod.UIAtlas.findRegion("crown");
+            }
             sb.draw(img, drawX + img.offsetX - (float) img.originalWidth / 2.0F, drawY + img.offsetY - (float) img.originalHeight / 2.0F, (float) img.originalWidth / 2.0F - img.offsetX, (float) img.originalHeight / 2.0F - img.offsetY, (float) img.packedWidth, (float) img.packedHeight, C.drawScale * Settings.scale, C.drawScale * Settings.scale, C.angle);
         }
     }

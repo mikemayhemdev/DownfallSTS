@@ -17,7 +17,7 @@ import sneckomod.cards.SoulRoll;
 import downfall.cardmods.ExhaustMod;
 import downfall.util.TextureLoader;
 
-public class UnlimitedRollsPower extends AbstractPower implements CloneablePowerInterface, NonStackablePower {
+public class UnlimitedRollsPower extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = SneckoMod.makeID("UnlimitedRollsPower");
 
@@ -26,7 +26,6 @@ public class UnlimitedRollsPower extends AbstractPower implements CloneablePower
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private boolean bruh;
 
     public UnlimitedRollsPower() {
         this.name = NAME;
@@ -51,7 +50,7 @@ public class UnlimitedRollsPower extends AbstractPower implements CloneablePower
             CardModifierManager.addModifier(card, new EtherealMod());
             CardModifierManager.addModifier(card, new ExhaustMod());
 
-            this.addToBot(new MakeTempCardInHandAction(card, 1, false));// 30 32 33
+            this.addToBot(new MakeTempCardInHandAction(card, amount, false));// 30 32 33
         }
     }
 

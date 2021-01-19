@@ -110,15 +110,11 @@ public class SlimedPower extends AbstractPower {
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type == DamageInfo.DamageType.NORMAL) {
             if (AbstractDungeon.player.hasRelic(AbsorbEndCombat.ID)) {
-                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(this.source, this.source, 1));
-                AbstractDungeon.player.getRelic(AbsorbEndCombat.ID).flash();
+                AbstractDungeon.player.getRelic(AbsorbEndCombat.ID).onTrigger();
             }
 
             if (AbstractDungeon.player.hasRelic(AbsorbEndCombatUpgraded.ID)) {
-                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(this.source, this.source, 2));
-                AbstractDungeon.player.getRelic(AbsorbEndCombatUpgraded.ID).flash();
-                //AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.source, this.source, 3));
-
+                AbstractDungeon.player.getRelic(AbsorbEndCombatUpgraded.ID).onTrigger();
             }
 
             if (this.source.hasPower(GoopArmorPower.POWER_ID)) {
