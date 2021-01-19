@@ -41,7 +41,7 @@ public class EnergyOrbGuardian extends CustomEnergyOrb {
         scale5 += Gdx.graphics.getDeltaTime() * 5.0f * (GuardianCharacter.orbScaleFinal - scale5);
         if((GuardianCharacter.orbScaleFinal - scale5 < 0.0f && GuardianCharacter.orbScaleFinal - scale5 > -0.01f )
             || (GuardianCharacter.orbScaleFinal - scale5 > 0.0f && GuardianCharacter.orbScaleFinal - scale5 < 0.01f )){
-             if(GuardianCharacter.orbScaleFinal < 0.85){
+             if(GuardianCharacter.orbScaleFinal < 1.0f){
                  scale5 = 0.7f;
              }else {
                  scale5 = 1.0f;
