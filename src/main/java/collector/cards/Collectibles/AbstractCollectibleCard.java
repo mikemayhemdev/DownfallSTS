@@ -85,16 +85,14 @@ public abstract class AbstractCollectibleCard extends CustomCard {
 
     public static String getCorrectPlaceholderImage(CardType type, String id) {
         String img = makeCardPath(id.replaceAll((getModID() + ":"), "") + ".png");
-        System.out.println(img);
         if ((!Gdx.files.internal(img).exists()))
             switch (type) {
                 case ATTACK:
-                    System.out.println(makeCardPath("Attack.png"));
-                    return makeCardPath("Attack.png");
+                    return "bronzeResources/images/cards/Attack.png";
                 case SKILL:
-                    return makeCardPath("Skill.png");
+                    return "bronzeResources/images/cards/Skill.png";
                 case POWER:
-                    return makeCardPath("Power.png");
+                    return "bronzeResources/images/cards/Power.png";
             }
         return img;
     }
