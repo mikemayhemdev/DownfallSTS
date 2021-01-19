@@ -10,7 +10,7 @@ public class DefectCore extends AbstractCollectibleCard {
     public final static String ID = makeID("DefectCore");
 
     public DefectCore() {
-        super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         magicNumber = baseMagicNumber = 1;
     }
 

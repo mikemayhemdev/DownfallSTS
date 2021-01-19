@@ -8,7 +8,7 @@ public class SentryCore extends AbstractCollectibleCard {
     public final static String ID = makeID("SentryCore");
 
     public SentryCore() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         magicNumber = baseMagicNumber = 1;
         this.exhaust = true;
     }

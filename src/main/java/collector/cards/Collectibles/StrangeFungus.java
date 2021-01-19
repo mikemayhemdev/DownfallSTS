@@ -10,7 +10,7 @@ public class StrangeFungus extends AbstractCollectibleCard {
     public final static String ID = makeID("StrangeFungus");
 
     public StrangeFungus() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         magicNumber =  baseMagicNumber = 1;
         this.exhaust = true;
     }

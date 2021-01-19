@@ -10,7 +10,7 @@ public class SlimeSample extends AbstractCollectibleCard {
     public final static String ID = makeID("SlimeSample");
 
     public SlimeSample() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         magicNumber =  baseMagicNumber = 1;
         this.exhaust = true;
         cardsToPreview = new Slimed();

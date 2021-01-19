@@ -1,6 +1,7 @@
 package collector.powers;
 
 import collector.CollectorMod;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -8,6 +9,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.BlurPower;
 
 public class PlayerCurlUp extends AbstractPower {
     public static final String POWER_ID = CollectorMod.makeID("CurlUp");
@@ -30,6 +32,7 @@ public class PlayerCurlUp extends AbstractPower {
             this.flash();
             this.triggered = true;
             this.addToBot(new GainBlockAction(this.owner, this.owner, this.amount));
+            this.addToBot(new ApplyPowerAction(owner,owner,new BlurPower(owner,1)));
             this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "Curl Up"));
         }
 

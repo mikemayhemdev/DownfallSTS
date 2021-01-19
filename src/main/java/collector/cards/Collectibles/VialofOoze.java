@@ -8,7 +8,7 @@ public class VialofOoze extends AbstractCollectibleCard {
     public final static String ID = makeID("VialofOoze");
 
     public VialofOoze() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         block = baseBlock = 2;
         magicNumber = baseMagicNumber = 2;
         this.exhaust = true;

@@ -7,7 +7,7 @@ public class LagavullinShell extends AbstractCollectibleCard {
     public final static String ID = makeID("LagavullinShell");
 
     public LagavullinShell() {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseDamage = 1;
         block = baseBlock = 10;
         baseMagicNumber = 0;

@@ -10,7 +10,7 @@ public class GremlinPoker extends AbstractCollectibleCard {
     public final static String ID = makeID("GremlinPoker");
 
     public GremlinPoker() {
-        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         damage = baseDamage = 3;
     }
 

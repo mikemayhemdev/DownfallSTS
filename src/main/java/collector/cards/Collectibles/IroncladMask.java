@@ -9,7 +9,7 @@ public class IroncladMask extends AbstractCollectibleCard {
     public final static String ID = makeID("IroncladMask");
 
     public IroncladMask() {
-        super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
       damage = baseDamage = 10;
         this.exhaust = true;
     }

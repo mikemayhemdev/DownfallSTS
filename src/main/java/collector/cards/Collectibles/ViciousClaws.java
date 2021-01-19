@@ -8,7 +8,7 @@ public class ViciousClaws extends AbstractCollectibleCard {
     public final static String ID = makeID("ViciousClaws");
 
     public ViciousClaws() {
-        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
        damage= baseDamage = 1;
         this.exhaust = true;
     }

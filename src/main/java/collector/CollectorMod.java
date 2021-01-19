@@ -6,6 +6,7 @@ import basemod.abstracts.CustomUnlockBundle;
 import basemod.interfaces.*;
 import collector.cards.*;
 import collector.cards.Collectibles.*;
+import collector.patches.CollectibleCardColorEnumPatch;
 import collector.powers.SoulSnare;
 import collector.util.CollectorSecondDamage;
 import com.badlogic.gdx.graphics.Color;
@@ -75,7 +76,7 @@ public class CollectorMod implements
     public static ArrayList<String> Afflictions = new ArrayList<>();
     public static ArrayList<String> Boons = new ArrayList<>();
     public static HashMap<String, AbstractCard> cardsList;
-
+    public static Color COLLECTIBLE_CARD_COLOR = new Color(0.443F, 0.231F, 0.286F, 1);
     public CollectorMod() {
         BaseMod.subscribe(this);
 
@@ -87,7 +88,12 @@ public class CollectorMod implements
                 ATTACK_L_ART, SKILL_L_ART, POWER_L_ART,
                 CARD_ENERGY_L, TEXT_ENERGY);
 
-
+        BaseMod.addColor(CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE,
+                COLLECTIBLE_CARD_COLOR, COLLECTIBLE_CARD_COLOR, COLLECTIBLE_CARD_COLOR, COLLECTIBLE_CARD_COLOR, COLLECTIBLE_CARD_COLOR, COLLECTIBLE_CARD_COLOR, COLLECTIBLE_CARD_COLOR,
+                "champResources/images/512/bg_attack_colorless.png", "champResources/images/512/bg_skill_colorless.png",
+                "champResources/images/512/bg_power_colorless.png", "champResources/images/512/card_champ_orb.png",
+                "champResources/images/1024/bg_attack_colorless.png", "champResources/images/1024/bg_skill_colorless.png",
+                "champResources/images/1024/bg_power_colorless.png","champResources/images/1024/card_champ_orb.png");
     }
 
     public static String makeCardPath(String resourcePath) {

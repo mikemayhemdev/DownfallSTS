@@ -5,7 +5,7 @@ import automaton.cardmods.EncodeMod;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.CardModifierManager;
-import collector.CollectorChar;
+import collector.patches.CollectibleCardColorEnumPatch;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -47,7 +47,7 @@ public abstract class AbstractCollectibleCard extends CustomCard {
 
     public AbstractCollectibleCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),
-                cost, "ERROR", type, CollectorChar.Enums.COLLECTOR, rarity, target);
+                cost, "ERROR", type, CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
         name = NAME = cardStrings.NAME;
         originalName = NAME;

@@ -8,7 +8,7 @@ public class LouseSegment extends AbstractCollectibleCard {
     public final static String ID = makeID("LouseSegment");
 
     public LouseSegment() {
-        super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseDamage = 1;
         block = baseBlock = 8;
         baseMagicNumber = 1;

@@ -15,7 +15,7 @@ public class WatchersStaff extends AbstractCollectibleCard {
     public final static String ID = makeID("WatchersStaff");
 
     public WatchersStaff() {
-        super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
        magicNumber = baseMagicNumber = 1;
         this.retain = true;
     }

@@ -7,7 +7,7 @@ public class CrookedStaff extends AbstractCollectibleCard {
     public final static String ID = makeID("CrookedStaff");
 
     public CrookedStaff () {
-        super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.COMMON, CardTarget.SELF);
         magicNumber = baseMagicNumber = 3;
     }
 
