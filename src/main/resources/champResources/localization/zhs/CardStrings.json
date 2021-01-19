@@ -114,8 +114,8 @@
   },
   "champ:FanOfKnives": {
     "NAME": "刀阵",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:角斗 champ:连段 ：造成两次伤害。 NL 进入 champ:狂战 。",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:角斗 champ:连段 ：造成三次伤害。 NL 进入 champ:狂战 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:狂战 champ:连段 ：造成两次伤害。 NL 进入 champ:狂战 。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:狂战 champ:连段 ：造成三次伤害。 NL 进入 champ:狂战 。"
   },
   "champ:Devastate": {
     "NAME": "坏灭",
@@ -198,10 +198,10 @@
   },
   "champ:Haymaker": {
     "NAME": "刺拳",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:角斗 champ:连段 ：给予2层 易伤 。 NL champ:防守 champ:连段 ：给予 2 层 虚弱 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:狂战 champ:连段 ：给予2层 易伤 。 NL champ:防守 champ:连段 ：给予 2 层 虚弱 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL ",
     "EXTENDED_DESCRIPTION": [
-      "champ:角斗 champ:连段 ：给予2层 易伤 。 ",
+      "champ:狂战 champ:连段 ：给予2层 易伤 。 ",
       "champ:防守 champ:连段 ：给予 2 层 虚弱 。"
     ]
   },
@@ -217,10 +217,10 @@
   },
   "champ:PreciseThrust": {
     "NAME": "精准冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:角斗 champ:连段 ：造成 !D! 点伤害。 NL champ:防守 champ:连段 ：获得 !B! 点 格挡 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:狂战 champ:连段 ：造成 !D! 点伤害。 NL champ:防守 champ:连段 ：获得 !B! 点 格挡 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL ",
     "EXTENDED_DESCRIPTION": [
-      "champ:角斗 champ:连段 ： 造成 !D! 点伤害。 NL ",
+      "champ:狂战 champ:连段 ： 造成 !D! 点伤害。 NL ",
       "champ:防守 champ:连段 ： 获得 !B! 点 格挡 。"
     ]
   },
