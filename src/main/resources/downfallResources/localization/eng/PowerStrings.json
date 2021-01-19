@@ -142,7 +142,7 @@
   "downfall:DefectAncientConstructPower": {
     "NAME": "Ancient Construct",
     "DESCRIPTIONS": [
-      "Begins the fight with 2 Bronze Orb minions. NL Gains 1 Artifact each turn if it did not already have Artifact."
+      "Begins the fight with 2 Bronze Orb minions. NL Gains 1 Artifact at the end of its turn if it did not already have Artifact."
     ]
   },
   "downfall:NeowAncientConstruct": {
