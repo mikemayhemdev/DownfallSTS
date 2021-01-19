@@ -66,10 +66,10 @@ public class Gem_Purple extends AbstractGuardianCard {
                 @Override
                 public void update() {
                     isDone = true;
-                    addToTop(new ApplyPowerAction(q, p, new StrengthPower(q, -STRENGTHLOSS), -STRENGTHLOSS, true));
                     if (!q.hasPower(ArtifactPower.POWER_ID)) {
                         addToTop(new ApplyPowerAction(q, p, new GainStrengthPower(q, STRENGTHLOSS), STRENGTHLOSS, true));
                     }
+                    addToTop(new ApplyPowerAction(q, p, new StrengthPower(q, -STRENGTHLOSS), -STRENGTHLOSS, true));
                 }
             });
         }
