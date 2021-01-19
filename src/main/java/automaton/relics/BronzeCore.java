@@ -32,11 +32,11 @@ public class BronzeCore extends CustomRelic implements OnCompileRelic {
         if (!activated) {
             if (function.cost > 0) {
                 function.freeToPlayOnce = true;
-            }
-            if (forGameplay) {
-                activated = true;
-                flash();
-                grayscale = true;
+                if (forGameplay) {
+                    activated = true;
+                    flash();
+                    grayscale = true;
+                }
             }
         }
     }

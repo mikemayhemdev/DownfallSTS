@@ -34,11 +34,11 @@ public class PlatinumCore extends CustomRelic implements OnCompileRelic {
         if (counter != 0) {
             if (function.cost > 0) {
                 function.freeToPlayOnce = true;
-            }
-            if (forGameplay) {
-                counter -= 1;
-                flash();
-                if (counter == 0) grayscale = true;
+                if (forGameplay) {
+                    counter -= 1;
+                    flash();
+                    if (counter == 0) grayscale = true;
+                }
             }
         }
     }
