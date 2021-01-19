@@ -1,6 +1,5 @@
 package collector.util;
 
-import collector.CollectorChar;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -12,15 +11,12 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class TorchHead extends AbstractCreature {
     public int KindleStr = 0;
-    public int BasePower = 5;
+    public int BasePower = 6;
     public static TextureAtlas Torch = new TextureAtlas("collectorResources\\images\\TorchHead");
     public TorchHead(){
         super();
         isPlayer = false;
        maxHealth = 45;
-    }
-    public static void init(){
-        CollectorChar.TorchHead = new TorchHead();
     }
 
     public void Command(){

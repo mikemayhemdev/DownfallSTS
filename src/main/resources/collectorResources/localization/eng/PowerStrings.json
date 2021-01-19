@@ -33,6 +33,13 @@
       " HP."
     ]
   },
+  "collector:Protection": {
+    "NAME": "Protection",
+    "DESCRIPTIONS": [
+      "You minion will receive the next #b",
+      " Attacks instead of You."
+    ]
+  },
   "collector:Miser": {
     "NAME": "Miser",
     "DESCRIPTIONS": [

@@ -37,6 +37,10 @@
     "NAME": "Culling Blow",
     "DESCRIPTION": "Deal !D! damage. NL if this brings an enemy under !M! HP, collector:Collect them."
   },
+  "collector:TagTeam": {
+    "NAME": "Tag Team",
+    "DESCRIPTION": "Deal !D! damage. NL collector:Command towards the target."
+  },
   "collector:Fever": {
     "NAME": "Fever",
     "DESCRIPTION": "Apply !M! hexamod:Soulburn. NL Apply 1 Weak."

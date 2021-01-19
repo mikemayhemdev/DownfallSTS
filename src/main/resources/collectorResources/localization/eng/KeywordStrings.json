@@ -17,6 +17,22 @@
     "DESCRIPTION": "When Applied, enemy loses HP equal to their current #ySoul #ySnare. Increase this by 1 whenever another #yAffliction is applied, does not trigger itself."
   },
   {
+    "PROPER_NAME": "Torch Head",
+    "NAMES": [
+      "Torch Head",
+      "torch_head"
+    ],
+    "DESCRIPTION": "You Start every Combat with a torch Head that intercepts attack damage while it has Protection. if dead, it reignits in 2 turns with 5 HP. Can be #yCommanded, dealing 6 damage by default."
+  },
+  {
+    "PROPER_NAME": "Command",
+    "NAMES": [
+      "Command",
+      "command"
+    ],
+    "DESCRIPTION": "Your specified minion attacks the listed Target."
+  },
+  {
     "PROPER_NAME": "Collect",
     "NAMES": [
       "collect",

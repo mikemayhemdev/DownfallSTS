@@ -3,7 +3,7 @@
     "NAME": "Emerald Torch",
     "FLAVOR": "Sustained by the Fires of envy",
     "DESCRIPTIONS": [
-      "At the start of each combat, your #yTorch #yHead gains 8 Block."
+      "At the start of each combat, your #yTorch #yHead gains #b1 #yProtection and #b5 #yBlock."
     ]
   }
 }
