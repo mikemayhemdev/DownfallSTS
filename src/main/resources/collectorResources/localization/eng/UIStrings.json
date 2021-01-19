@@ -3,5 +3,10 @@
     "TEXT": [
       "Choose a card to Collect."
     ]
-  }
+  },
+  "collector:CollectibleCardTagName": {
+    "TEXT": [
+        "Collectible"
+      ]
+      }
 }

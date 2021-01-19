@@ -4,12 +4,13 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import static collector.CollectorMod.makeID;
 
 public class LuckyWick extends AbstractCollectibleCard {
     public final static String ID = makeID("LuckyWick");
 
     public LuckyWick() {
-        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         damage = baseDamage = 1;
        block = baseBlock = 1;
         magicNumber = baseMagicNumber = 0;

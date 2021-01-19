@@ -5,12 +5,13 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import static collector.CollectorMod.makeID;
 
 public class SlimeSample extends AbstractCollectibleCard {
     public final static String ID = makeID("SlimeSample");
 
     public SlimeSample() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         magicNumber =  baseMagicNumber = 1;
         this.exhaust = true;
         cardsToPreview = new Slimed();

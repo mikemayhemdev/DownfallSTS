@@ -3,12 +3,13 @@ package collector.cards.Collectibles;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import static collector.CollectorMod.makeID;
 
 public class NobsBoneClub extends AbstractCollectibleCard {
     public final static String ID = makeID("NobsBoneClub");
 
     public NobsBoneClub() {
-        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         damage = baseDamage = 13;
         this.exhaust = true;
     }

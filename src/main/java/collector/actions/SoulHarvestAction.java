@@ -17,7 +17,7 @@ public class SoulHarvestAction
 
     public SoulHarvestAction(AbstractCreature source, int[] amount, DamageInfo.DamageType type,
                              AbstractGameAction.AttackEffect effect) {
-        setValues(null, source, amount[0]);
+        setValues(null, source, damage[0]);
         this.damage = amount;
         this.actionType = AbstractGameAction.ActionType.DAMAGE;
         this.damageType = type;
@@ -26,10 +26,11 @@ public class SoulHarvestAction
 
     public void update() {
         boolean playedMusic;
+        int i;
         if (this.duration == 0.5F) {
             playedMusic = false;
             int temp = AbstractDungeon.getCurrRoom().monsters.monsters.size();
-            for (int i = 0; i < temp; i++) {
+            for (i = 0; i < temp; i++) {
                 if ((!AbstractDungeon.getCurrRoom().monsters.monsters.get(i).isDying) &&
                         (AbstractDungeon.getCurrRoom().monsters.monsters.get(i).currentHealth > 0) &&
                         (!AbstractDungeon.getCurrRoom().monsters.monsters.get(i).isEscaping)) {
@@ -55,16 +56,16 @@ public class SoulHarvestAction
                 p.onDamageAllEnemies(this.damage);
             }
         }
-        for (int i = 0; i < AbstractDungeon.getCurrRoom().monsters.monsters.size(); i++) {
-            AbstractMonster target = AbstractDungeon.getCurrRoom().monsters.monsters.get(i);
-            if ((!target.isDying) && (target.currentHealth > 0) && (!target.isEscaping)) {
+        for (i = 0; i < AbstractDungeon.getCurrRoom().monsters.monsters.size(); i++) {
+            AbstractMonster target = (AbstractMonster) AbstractDungeon.getCurrRoom().monsters.monsters.get(i);
+            if (!target.isDying && target.currentHealth > 0 && !target.isEscaping) {
                 target.damage(new DamageInfo(this.source, this.damage[i], this.damageType));
-                if (((target.isDying) || (target.currentHealth <= 0))
-                        && (!target.halfDead) && (!target.hasPower("Minion"))) {
+                if ((this.target.isDying || this.target.currentHealth <= 0) && !this.target.halfDead) {
                     CollectorCollection.GetCollectible(target);
                 }
             }
         }
+
         if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
             AbstractDungeon.actionManager.clearPostCombatActions();
         }

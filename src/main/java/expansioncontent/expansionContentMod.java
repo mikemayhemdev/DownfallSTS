@@ -1,12 +1,10 @@
 package expansioncontent;
 
 /*
-
 This package should contain all content additions that get added to the entire game, not just
 Evil Mode.  For example: Colorless Cards, Global Events,
 Global Relics (not attached to character-specific unlocks),
 Daily/Custom Run modifiers.
-
  */
 
 import basemod.BaseMod;
@@ -14,6 +12,7 @@ import basemod.helpers.RelicType;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.PostUpdateSubscriber;
+import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -23,6 +22,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.ui.campfire.WheelSpinButton;
 import downfall.util.CardIgnore;
+import expansioncontent.patches.CardColorEnumPatch;
 import expansioncontent.relics.StudyCardRelic;
 import expansioncontent.util.CardFilter;
 import javassist.CtClass;
@@ -68,11 +68,19 @@ public class expansionContentMod implements
     public static boolean teleportToWheelTime = false;
     private static String modID;
 
+    public static Color BOSS_CARD_COLOR = new Color(0.443F, 0.231F, 0.286F, 1);
+
     public expansionContentMod() {
         BaseMod.subscribe(this);
 
         modID = "expansioncontent";
 
+        BaseMod.addColor(CardColorEnumPatch.CardColorPatch.BOSS,
+                BOSS_CARD_COLOR, BOSS_CARD_COLOR, BOSS_CARD_COLOR, BOSS_CARD_COLOR, BOSS_CARD_COLOR, BOSS_CARD_COLOR, BOSS_CARD_COLOR,
+                "champResources/images/512/bg_attack_colorless.png", "champResources/images/512/bg_skill_colorless.png",
+                "champResources/images/512/bg_power_colorless.png", "champResources/images/512/card_champ_orb.png",
+                "champResources/images/1024/bg_attack_colorless.png", "champResources/images/1024/bg_skill_colorless.png",
+                "champResources/images/1024/bg_power_colorless.png","champResources/images/1024/card_champ_orb.png");
     }
 
     public static String makeCardPath(String resourcePath) {

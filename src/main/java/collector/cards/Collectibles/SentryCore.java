@@ -3,12 +3,13 @@ package collector.cards.Collectibles;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.actions.PlaceCardsInHandIntoStasisAction;
+import static collector.CollectorMod.makeID;
 
 public class SentryCore extends AbstractCollectibleCard {
     public final static String ID = makeID("SentryCore");
 
     public SentryCore() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         magicNumber = baseMagicNumber = 1;
         this.exhaust = true;
     }

@@ -248,7 +248,6 @@ public class SaveData {
             for (CardSave c : collectiontosave) {
                 CollectorCollection.collection.addToTop(CardLibrary.getCopy(c.id));
             }
-
                 saveLogger.info("Save loaded.");
             //Anything that triggers on load goes here
         }
