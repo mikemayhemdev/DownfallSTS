@@ -2,6 +2,7 @@ package guardian.cards;
 
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -9,7 +10,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 import guardian.GuardianMod;
 
 import java.util.ArrayList;
@@ -41,6 +41,7 @@ public class PackageAutomaton extends AbstractGuardianCard {
     public AbstractGuardianCard prev1;
     public AbstractGuardianCard prev2;
     public AbstractGuardianCard prev3;
+
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         NAME = cardStrings.NAME;
@@ -60,7 +61,7 @@ public class PackageAutomaton extends AbstractGuardianCard {
         prev2 = constPrev2;
         prev3 = constPrev3;
 
-        if (upgraded){
+        if (upgraded) {
             prev1.upgrade();
             prev2.upgrade();
             prev3.upgrade();
@@ -70,29 +71,27 @@ public class PackageAutomaton extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
 
-        ArrayList derp = new ArrayList();
+        ArrayList<AbstractCard> derp = new ArrayList();
         AbstractCard tmp;
 
         tmp = new HyperBeam_Guardian();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-       // tmp.modifyCostForCombat(-1);
+        // tmp.modifyCostForCombat(-1);
 
         tmp = new BronzeOrb();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-       // tmp.modifyCostForCombat(-1);
+        // tmp.modifyCostForCombat(-1);
 
         tmp = new BronzeArmor();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-       // tmp.modifyCostForCombat(-1);
+        // tmp.modifyCostForCombat(-1);
 
-        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect((AbstractCard) derp.get(0), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
-        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect((AbstractCard) derp.get(1), (float) Settings.WIDTH * .75F, (float) Settings.HEIGHT / 2.0F));
-        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect((AbstractCard) derp.get(2), (float) Settings.WIDTH * .25F, (float) Settings.HEIGHT / 2.0F));
-
-
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(derp.get(0), true));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(derp.get(1), true));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(derp.get(2), true));
     }
 
     public AbstractCard makeCopy() {
@@ -168,7 +167,7 @@ public class PackageAutomaton extends AbstractGuardianCard {
             if (isLocked || (AbstractDungeon.player != null && (AbstractDungeon.player.isDraggingCard || AbstractDungeon.player.inSingleTargetMode))) {
                 return;
             }
-            if (hb.hovered){
+            if (hb.hovered) {
 
                 float drawScale = 0.5f;
                 float yPosition1 = this.current_y + this.hb.height * 1.2f;
