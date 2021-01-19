@@ -142,7 +142,7 @@
   "downfall:DefectAncientConstructPower": {
     "NAME": "先古造物",
     "DESCRIPTIONS": [
-      "战斗开始时召唤2个 #y铜制圆球 。 NL 每回合开始时如果没有 #y人工制品 ，获得 1 层 #y人工制品 。"
+      "战斗开始时召唤2个 #y铜制圆球 。 NL 它的回合结束时时如果没有 #y人工制品 ，获得 1 层 #y人工制品 。"
     ]
   },
   "downfall:NeowAncientConstruct": {
@@ -191,7 +191,7 @@
   "downfall:IroncladFortificationPower": {
     "NAME": "堡垒",
     "DESCRIPTIONS": [
-      " #y铁甲战士 构筑了 #y堡垒 。每回合 #y堡垒 将给予他 #b10 点 #y格挡 。 NL 当 #y堡垒 被摧毁时， #y铁甲战士 失去 #y壁垒 以及所有 #y格挡 ，但每回合将会获得 #b5 点 #y力量 。"
+      " #y铁甲战士 构筑了 #y堡垒 。每回合 #y堡垒 将给予他 #b15 点 #y格挡 。 NL 当 #y堡垒 被摧毁时， #y铁甲战士 失去 #y壁垒 以及所有 #y格挡 ，但每回合将会获得 #b5 点 #y力量 。"
     ]
   },
   "downfall:NeowBastion": {

@@ -3,7 +3,7 @@
     "NAME": "黏液之心",
     "FLAVOR": "我可真时髦。",
     "DESCRIPTIONS": [
-      "每当你 #yslimeboundmod:消耗黏液 ，恢复 #b1 点生命。"
+      "每当你 #yslimeboundmod:消耗黏液 ，恢复 #b2 点生命。（每场战斗最多 #b8 点）"
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
@@ -11,7 +11,7 @@
     "FLAVOR": "黏浆中的秘密。",
     "DESCRIPTIONS": [
 	"替换 ",
-     ".[] NL 每当你 #yslimeboundmod:消耗黏液 时，回复 #b2 点生命。"
+     ".[] NL 每当你 #yslimeboundmod:消耗黏液 时，回复 #b3 点生命。（每场战斗最多 #b15 点）"
     ]
   },
   "Slimebound:SlimedTailRelic": {
