@@ -5,6 +5,8 @@ import automaton.cards.DecaBeam;
 import automaton.cards.DonuBeam;
 import automaton.util.DecaBeamReward;
 import automaton.util.DonuBeamReward;
+import automaton.util.ProtoDeca;
+import automaton.util.ProtoDonu;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
@@ -57,7 +59,7 @@ public class AncientFactory extends AbstractImageEvent {
                     case 0:
                         this.screen = CurScreen.FIGHT;
                         //SlimeboundMod.logger.info("fight");
-                        m = new Donu();
+                        m = new ProtoDonu();
                         m.maxHealth = m.maxHealth / 2;
                         m.currentHealth = m.maxHealth;
                         m.powers.add(new StrengthPower(m,-3));
@@ -74,7 +76,7 @@ public class AncientFactory extends AbstractImageEvent {
 
                         this.screen = CurScreen.FIGHT;
                         //SlimeboundMod.logger.info("fight");
-                        m = new Donu();
+                        m = new ProtoDeca();
                         m.maxHealth = m.maxHealth / 2;
                         m.currentHealth = m.maxHealth;
                         m.powers.add(new StrengthPower(m,-3));
@@ -89,11 +91,11 @@ public class AncientFactory extends AbstractImageEvent {
                     case 2:
                         this.screen = CurScreen.FIGHT;
                         //SlimeboundMod.logger.info("fight");
-                        m = new Donu();
+                        m = new ProtoDonu();
                         m.maxHealth = m.maxHealth / 2;
                         m.currentHealth = m.maxHealth;
                         m.powers.add(new StrengthPower(m,-3));
-                        AbstractMonster m2 = new Deca ();
+                        AbstractMonster m2 = new ProtoDeca();
                         m2.maxHealth = m2.maxHealth / 2;
                         m2.currentHealth = m2.maxHealth;
                         m2.powers.add(new StrengthPower(m2,-3));
