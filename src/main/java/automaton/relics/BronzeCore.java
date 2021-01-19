@@ -31,7 +31,7 @@ public class BronzeCore extends CustomRelic implements OnCompileRelic {
     public void receiveCompile(AbstractCard function, boolean forGameplay) {
         if (!activated) {
             if (function.cost > 0) {
-                function.setCostForTurn(function.cost - 1);
+                function.freeToPlayOnce = true;
             }
             if (forGameplay) {
                 activated = true;

@@ -33,7 +33,7 @@ public class PlatinumCore extends CustomRelic implements OnCompileRelic {
     public void receiveCompile(AbstractCard function, boolean forGameplay) {
         if (counter != 0) {
             if (function.cost > 0) {
-                function.setCostForTurn(function.cost - 1);
+                function.freeToPlayOnce = true;
             }
             if (forGameplay) {
                 counter -= 1;
