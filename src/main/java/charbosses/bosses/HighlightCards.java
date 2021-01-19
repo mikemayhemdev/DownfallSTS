@@ -98,7 +98,7 @@ public class HighlightCards {
             if (AbstractCharBoss.boss != null) {
                 if (!AbstractCharBoss.boss.isDeadOrEscaped()) {
                     if (AbstractCharBoss.boss.hasPower(DefectCuriosityPower.POWER_ID)) {
-                        if (!(c instanceof AbstractBossCard) && c.rarity == AbstractCard.CardRarity.RARE && !c.purgeOnUse) {
+                        if (!(c instanceof AbstractBossCard) && c.rarity == AbstractCard.CardRarity.RARE) {
                             return true;
                         }
                     }
@@ -107,7 +107,7 @@ public class HighlightCards {
             if (NeowBossFinal.neowboss != null) {
                 if (!NeowBossFinal.neowboss.isDeadOrEscaped()) {
                     if (NeowBossFinal.neowboss.hasPower(UnbiasedCognition.POWER_ID)) {
-                        if (!(c instanceof AbstractBossCard) && c.rarity == AbstractCard.CardRarity.RARE && !c.purgeOnUse) {
+                        if (!(c instanceof AbstractBossCard) && c.rarity == AbstractCard.CardRarity.RARE) {
                             return true;
                         }
                     }
