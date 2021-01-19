@@ -83,7 +83,7 @@
   },
   "bronze:Branch": {
     "NAME": "分支",
-    "DESCRIPTION": "选择 - 造成 !D! 点伤害 或 获得 !B! 点 格挡 。 NL bronze:编码 待选择。 NL 消耗 。",
+    "DESCRIPTION": "选择 - 造成 !D! 点伤害 或 获得 !B! 点 格挡 。 NL bronze:编码 另一张牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "分支: 攻击",
       "造成 !D! 点伤害。",
