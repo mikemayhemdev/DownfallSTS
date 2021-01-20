@@ -226,7 +226,7 @@
   },
   "hexamod:GhostflameBarrier": {
     "NAME": "Ghostflame Wall",
-    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply !M! hexamod:Soulburn to the attacker."
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply !burny! hexamod:Soulburn to the attacker."
   },
   "hexamod:Toasty": {
     "NAME": "Toasty!",
