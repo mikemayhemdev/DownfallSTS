@@ -82,7 +82,7 @@ public class WanderingSpecter extends AbstractImageEvent {
                     break;
                 }
             }
-            this.imageEventText.setDialogOption(OPTIONS[0], new Haunted());
+            this.imageEventText.setDialogOption(OPTIONS[0]);
         } else {
             imageEventText.setDialogOption(OPTIONS[3], true);
         }
