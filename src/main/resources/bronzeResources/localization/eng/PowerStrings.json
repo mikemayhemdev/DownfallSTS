@@ -117,8 +117,8 @@
   "bronze:CleanCode": {
     "NAME": "Clean Code",
     "DESCRIPTIONS": [
-      "Remove all #yCompile *Error effects from cards in the Sequence. Lasts for #b1 more Function.",
-      "Remove all #yCompile *Error effects from cards in the Sequence. Lasts for #b",
+      "Remove all #yCompile Error effects from cards in the Sequence. Lasts for #b1 more Function.",
+      "Remove all #yCompile Error effects from cards in the Sequence. Lasts for #b",
       " Functions."
     ]
   },

@@ -20,6 +20,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 import slimebound.SlimeboundMod;
 
 public class WatcherAngryPower extends AbstractBossMechanicPower {
@@ -43,31 +44,15 @@ public class WatcherAngryPower extends AbstractBossMechanicPower {
     }
 
     @Override
-    public int onLoseHp(int damageAmount) {
-        SlimeboundMod.logger.info("Watcher Angry lost " + damageAmount + " HP");
-        SlimeboundMod.logger.info("Watcher Angry current HP " + this.owner.currentHealth);
-        SlimeboundMod.logger.info("Watcher Angry Max HP " + this.owner.maxHealth / 2);
-        if ((this.owner.currentHealth - damageAmount) <= (this.owner.maxHealth / 2) && !active) {
-            flash();
-            active = true;
+    public void atEndOfRound() {
+        super.atEndOfRound();
+        if (!active && owner.currentHealth <= owner.maxHealth/2) {
+
             this.addToBot(new EnemyChangeStanceAction(EnWrathStance.STANCE_ID));
-           // this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+            active = true;
         }
-        return super.onLoseHp(damageAmount);
     }
 
-    @Override
-    public float atDamageReceive(float damage, DamageInfo.DamageType damageType) {
-
-        if (damage > 1.0F) {
-            if (this.owner instanceof AbstractCharBoss) {
-                if (AbstractCharBoss.boss.stance instanceof EnWrathStance) {
-                   return damage * 1.5F;
-                }
-            }
-        }
-       return damage;
-    }
 
     static {
         powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);

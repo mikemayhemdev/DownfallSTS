@@ -54,13 +54,13 @@
   "downfall:WatcherAngryPower": {
     "NAME": "Unbridled Rage",
     "DESCRIPTIONS": [
-      "When Watcher is reduced to #b50% HP, she IMMEDIATELY enters Wrath permanently. NL Watcher's Wrath increases damage dealt and received by #b50% instead of #b100%."
+      "At the end of the round, if Watcher is at or below #b50% HP, she enters Wrath. NL Watcher's Wrath increases damage dealt and received by #b50% instead of #b100%."
     ]
   },
   "downfall:NeowUnbridledRage": {
     "NAME": "Unbridled Rage",
     "DESCRIPTIONS": [
-      "While Neow is below #b50% Max HP, she gains #b6 #yStrength."
+      "At the end of the round, if Neow is at or below #b50% HP, she gains #b6 #yStrength. NL Can only trigger once per combat."
     ]
   },
   "downfall:WatcherCripplePower": {
@@ -148,7 +148,7 @@
   "downfall:NeowAncientConstruct": {
     "NAME": "Ancient Construct",
     "DESCRIPTIONS": [
-      "Neow gains #b2 #yArtifact at the start of your turn if she has no #yArtifact."
+      "Neow gains #b2 #yArtifact at the end of her turn if she has no #yArtifact."
     ]
   },
   "downfall:DefectCuriosity": {

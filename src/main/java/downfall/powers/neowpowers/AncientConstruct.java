@@ -41,8 +41,7 @@ public class AncientConstruct extends AbstractBossMechanicPower {
 
 
     @Override
-    public void atStartOfTurn() {
-        super.atStartOfTurn();
+    public void atEndOfTurn(boolean isPlayer) {
         if (!this.owner.hasPower(ArtifactPower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ArtifactPower(this.owner, this.amount), this.amount));
             //   AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(this.amount));

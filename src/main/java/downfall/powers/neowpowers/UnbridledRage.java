@@ -1,12 +1,17 @@
 package downfall.powers.neowpowers;
 
+import charbosses.actions.unique.EnemyChangeStanceAction;
+import charbosses.bosses.AbstractCharBoss;
+import charbosses.stances.EnWrathStance;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;import downfall.downfallMod; import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.stances.NeutralStance;
+import downfall.downfallMod; import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
 import downfall.util.TextureLoader;
 
 public class UnbridledRage extends AbstractBossMechanicPower {
@@ -31,30 +36,20 @@ public class UnbridledRage extends AbstractBossMechanicPower {
         this.updateDescription();
 
         active = false;
+
         this.canGoNegative = false;
     }
 
-    @Override
-    public int onLoseHp(int damageAmount) {
-        if (!active) {
-            if (owner.currentHealth <= owner.maxHealth / 2) {
-                active = true;
-                addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, 6), 6));
-            }
-        }
-        return super.onLoseHp(damageAmount);
-    }
 
     @Override
-    public int onHeal(int healAmount) {
-        if (active) {
-            if (owner.currentHealth > owner.maxHealth / 2) {
-                active = false;
-                addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, -6), -6));
-            }
+    public void atEndOfRound() {
+        super.atEndOfRound();
+        if (!active && owner.currentHealth <= owner.maxHealth/2) {
+            addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, 6), 6));
+            active = true;
         }
-        return super.onHeal(healAmount);
     }
+
 
     @Override
     public void updateDescription() {

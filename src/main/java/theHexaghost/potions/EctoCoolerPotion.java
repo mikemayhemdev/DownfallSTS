@@ -17,7 +17,7 @@ public class EctoCoolerPotion extends CustomPotion {
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
     public EctoCoolerPotion() {
-        super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.CARD, PotionColor.SMOKE);
+        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.CARD, PotionColor.SMOKE);
         this.isThrown = false;
         this.targetRequired = false;
     }

@@ -1,6 +1,7 @@
 package charbosses.powers.general;
 
 import basemod.interfaces.CloneablePowerInterface;
+import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
@@ -11,7 +12,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.downfallMod;
 import downfall.util.TextureLoader;
 
-public class PoisonProtectionPower extends AbstractPower implements CloneablePowerInterface {
+public class PoisonProtectionPower extends AbstractBossMechanicPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = downfallMod.makeID("PoisonResist");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;

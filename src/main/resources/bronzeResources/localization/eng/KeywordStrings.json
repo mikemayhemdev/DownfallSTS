@@ -13,7 +13,7 @@
       "compile",
       "compiled"
     ],
-    "DESCRIPTION": "An additional effect that triggers when this card, while in the Sequence, is combined into a Function."
+    "DESCRIPTION": "An additional effect that triggers when this card, while in the Sequence, is combined into a Function. NL Can be a negative effect, which is referred to as an 'Error'."
   },
   {
     "PROPER_NAME": "Blur",
