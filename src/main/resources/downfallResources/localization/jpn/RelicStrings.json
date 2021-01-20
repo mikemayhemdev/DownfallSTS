@@ -484,5 +484,23 @@
       "Corrupted Courier",
       "The Heart restocks cards, relics, and potions. All prices are reduced by #b20%."
     ]
+  },
+  "downfall:ExtraCursedBell": {
+    "NAME": "Calling Bell",
+    "FLAVOR": "This dark iron bell rang 3 times when you found it, but now stays silent.",
+    "DESCRIPTIONS": [
+      "Upon pickup, obtain 2 unique #rCurses and #b3 relics.",
+      "The Bell Tolls Twice...",
+      "Skip Rewards",
+      "Close"
+    ]
+  },
+  "downfall:ExtraCursedKey": {
+    "NAME": "Cursed Key",
+    "FLAVOR": "You can feel the malicious energy emanating from the key. Power comes at a price.",
+    "DESCRIPTIONS": [
+      " at the start of your turn. Whenever you open a non-Boss chest, obtain 2 #rCurses.",
+      "Gain [E]"
+    ]
   }
 }
