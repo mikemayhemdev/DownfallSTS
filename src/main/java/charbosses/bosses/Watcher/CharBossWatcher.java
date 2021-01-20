@@ -12,6 +12,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.*;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -152,6 +153,16 @@ public class CharBossWatcher extends AbstractCharBoss {
             default:
                 break;
         }
+    }
+
+    public void damage(DamageInfo info) {
+        if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.output - this.currentBlock > 0) {
+            AnimationState.TrackEntry e = this.state.setAnimation(0, "Hit", false);
+            this.state.addAnimation(0, "Idle", true, 0.0F);
+            e.setTimeScale(0.6F);
+        }
+
+        super.damage(info);
     }
 
 

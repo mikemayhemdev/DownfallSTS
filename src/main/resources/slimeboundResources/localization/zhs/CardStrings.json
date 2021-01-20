@@ -25,7 +25,7 @@
   "Slimebound:Replication": {
     "NAME": "复制",
     "DESCRIPTION": "选择一张牌，在抽牌堆顶部中加入它的复制品。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择一张牌，在抽牌堆顶部中加入它的复制品。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择一张牌，在抽牌堆顶部中加入它的复制品。",
 	"EXTENDED_DESCRIPTION": [
       "选择一张牌复制到手牌。",
       "选择一张牌复制到抽牌堆顶部。"
@@ -140,7 +140,7 @@
   "Slimebound:MassRepurpose": {
     "NAME": "回炉重造",
     "DESCRIPTION": "slimeboundmod:吸收 所有史莱姆。 NL 每 slimeboundmod:吸收 一只史莱姆随机 slimeboundmod:分裂 一只 slimeboundmod:专家史莱姆 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:吸收 所有史莱姆。 NL 每 slimeboundmod:吸收 一只史莱姆随机 slimeboundmod:分裂 一只 slimeboundmod:专家史莱姆 并 slimeboundmod:命令。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "slimeboundmod:吸收 所有史莱姆。 NL 每 slimeboundmod:吸收 一只史莱姆随机 slimeboundmod:分裂 一只 slimeboundmod:专家史莱姆 并 slimeboundmod:命令 。 NL 消耗 。"
   },
   "Slimebound:Lick": {
     "NAME": "舔舔",

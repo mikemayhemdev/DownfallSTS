@@ -256,11 +256,11 @@
   },
   "Guardian:PrismaticBeam": {
     "NAME": "棱镜射线",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每 guardianmod:镶嵌 一颗 guardianmod:宝石 造成 !D! 点伤害。"
+    "DESCRIPTION": "每 guardianmod:镶嵌 一颗 guardianmod:宝石 造成 !D! 点伤害。"
   },
   "Guardian:PrismaticBarrier": {
     "NAME": "棱镜屏障",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每 guardianmod:镶嵌 一颗 guardianmod:宝石 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "每 guardianmod:镶嵌 一颗 guardianmod:宝石 获得 !B! 点 格挡 。"
   },
   "Guardian:TemporalStrike": {
     "NAME": "质朴打击",

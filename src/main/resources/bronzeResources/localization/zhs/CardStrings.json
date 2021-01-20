@@ -542,7 +542,7 @@
   },
   "bronze:CleanCode": {
     "NAME": "简明代码",
-    "DESCRIPTION": "下 !M! 次生成 *方法 时，移除其中 bronze:编译错误 。"
+    "DESCRIPTION": "下 !M! 次生成 *方法 时，移除其中 bronze:编译 *错误 。"
   },
   "bronze:BranchBlock": {
     "NAME": "分支: 格挡",

@@ -38,6 +38,7 @@ import champ.powers.LastStandModPower;
 import champ.relics.ChampStancesModRelic;
 import champ.util.TechniqueMod;
 import charbosses.actions.util.CharBossMonsterGroup;
+import charbosses.bosses.Crowbot.CharBossCrowbot;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
@@ -1035,7 +1036,7 @@ public class downfallMod implements
         BaseMod.addMonster(NeowBoss.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBoss()}));
         BaseMod.addMonster(NeowBossFinal.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBossFinal()}));
 
-
+        BaseMod.addMonster(CharBossCrowbot.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossCrowbot()}));
     }
 
     public void addPotions() {
