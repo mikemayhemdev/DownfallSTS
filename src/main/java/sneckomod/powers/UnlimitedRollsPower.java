@@ -31,7 +31,7 @@ public class UnlimitedRollsPower extends AbstractPower implements CloneablePower
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
-        this.amount = -1;
+        this.amount = 1;
         this.type = PowerType.BUFF;
         this.isTurnBased = true;
 
