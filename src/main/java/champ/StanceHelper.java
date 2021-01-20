@@ -68,7 +68,7 @@ public class StanceHelper {
         } else if (AbstractDungeon.player.stance instanceof DefensiveStance) {
             return ChampChar.characterStrings.TEXT[12] + DefensiveStance.amount() + ChampChar.characterStrings.TEXT[47];
         } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
-            return ChampChar.characterStrings.TEXT[19];
+            return ChampChar.characterStrings.TEXT[19] + BerserkerStance.amount() + ChampChar.characterStrings.TEXT[58] + DefensiveStance.amount() + ChampChar.characterStrings.TEXT[59];
         } else if (AbstractDungeon.player instanceof ChampChar) {
             return ChampChar.characterStrings.TEXT[6];
         }
@@ -81,7 +81,7 @@ public class StanceHelper {
         } else if (AbstractDungeon.player.stance instanceof DefensiveStance) {
             return ChampChar.characterStrings.TEXT[12] + DefensiveStance.finisherAmount() + ChampChar.characterStrings.TEXT[56];
         } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
-            return ChampChar.characterStrings.TEXT[20];
+            return ChampChar.characterStrings.TEXT[20] + DefensiveStance.finisherAmount() + ChampChar.characterStrings.TEXT[60];
         } else if (AbstractDungeon.player instanceof ChampChar) {
             return ChampChar.characterStrings.TEXT[6];
         }
