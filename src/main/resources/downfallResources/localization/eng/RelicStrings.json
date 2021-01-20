@@ -516,5 +516,22 @@
     "DESCRIPTIONS": [
       "#pRight #pClick: Play the next card."
     ]
+  },
+  "downfall:ExtraCursedKey": {
+    "NAME": "Extra Cursed Key",
+    "FLAVOR": "Locked away for good reason.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. NL Whenever you open a non-Boss chest, obtain #b2 #rCurses."
+    ]
+  },
+  "downfall:ExtraCursedBell": {
+    "NAME": "Extra Cursed Bell",
+    "FLAVOR": "You think you hear it echoing, but can never confirm it.",
+    "DESCRIPTIONS": [
+      "Upon pickup, obtain #b2 of a unique #rCurse and #b3 relics.",
+      "The Bell Tolls Twice...",
+      "Skip Rewards",
+      "Close"
+    ]
   }
 }

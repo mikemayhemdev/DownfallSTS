@@ -1065,6 +1065,8 @@ public class downfallMod implements
         BaseMod.addRelic(new TeleportStone(), RelicType.SHARED);
         BaseMod.addRelic(new HeartsMalice(), RelicType.SHARED);
         BaseMod.addRelic(new NeowBlessing(), RelicType.SHARED);
+        BaseMod.addRelic(new ExtraCursedBell(), RelicType.SHARED);
+        BaseMod.addRelic(new ExtraCursedKey(), RelicType.SHARED);
     }
 
     public static boolean readyToDoThing = false;
