@@ -54,13 +54,13 @@
   "downfall:WatcherAngryPower": {
     "NAME": "无遏狂怒",
     "DESCRIPTIONS": [
-      "当 #y观者 的生命低于 #b50% 时将永久进入 #y暴怒 。 NL #y观者暴怒 造成和受到的伤害为 #b50% 而不是 #b100% 。"
+      "当回合结束时，如果 #y观者 的生命不高于 #b50% 时将永久进入 #y暴怒 。 NL #y观者暴怒 造成和受到的伤害为 #b50% 而不是 #b100% 。"
     ]
   },
   "downfall:NeowUnbridledRage": {
     "NAME": "无遏狂怒",
     "DESCRIPTIONS": [
-      "当 #y涅奥 的生命低于 #b50% 时，她获得 #b6 点 #y力量 。"
+      "当回合结束时， #y涅奥 的生命低于 #b50% 时，她获得 #b6 点 #y力量 。 NL 每场战斗只能触发一次。"
     ]
   },
   "downfall:WatcherCripplePower": {
