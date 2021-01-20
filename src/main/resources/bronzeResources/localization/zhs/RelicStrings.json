@@ -3,7 +3,7 @@
     "NAME": "铜制核心",
     "FLAVOR": "每50,000年一换。",
     "DESCRIPTIONS": [
-      "每场战斗你生成的第一张 #y方法 在该回合费用减少 #b1 。"
+      "每场战斗你生成的第一张 #y方法 直到打出前费用为 #b0 。"
     ]
   },
   "bronze:ProtectiveGoggles": {
