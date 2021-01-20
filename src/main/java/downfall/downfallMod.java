@@ -38,6 +38,7 @@ import champ.powers.LastStandModPower;
 import champ.relics.ChampStancesModRelic;
 import champ.util.TechniqueMod;
 import charbosses.actions.util.CharBossMonsterGroup;
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
@@ -1126,6 +1127,7 @@ public class downfallMod implements
     public void receiveStartGame() {
         GoldToSoulPatches.changeGoldToSouls(!evilMode);
         if (!CardCrawlGame.loadingSave) {
+            AbstractCharBoss.boss = null;
             resetBossList();
             FleeingMerchant.DEAD = false;
             FleeingMerchant.CURRENT_HP = 400;
