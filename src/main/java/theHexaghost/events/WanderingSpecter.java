@@ -39,6 +39,9 @@ public class WanderingSpecter extends AbstractImageEvent {
     private AbstractRelic rtog;
     private AbstractRelic rtog2;
 
+    private boolean shopForMore;
+    private boolean shopForMore2;
+
 
     private int curseCount = 2;
 
@@ -52,8 +55,8 @@ public class WanderingSpecter extends AbstractImageEvent {
         ArrayList<String> possRelicsList2 = new ArrayList<>();
         if (!AbstractDungeon.player.hasRelic(DarkstonePeriapt.ID)) possRelicsList.add(DarkstonePeriapt.ID);
         if (!AbstractDungeon.player.hasRelic(DuVuDoll.ID)) possRelicsList.add(DuVuDoll.ID);
-        if (!AbstractDungeon.player.hasRelic(CursedKey.ID)) possRelicsList2.add(ExtraCursedKey.ID);
-        if (!AbstractDungeon.player.hasRelic(CallingBell.ID)) possRelicsList2.add(ExtraCursedBell.ID);
+        if (!AbstractDungeon.player.hasRelic(CursedKey.ID) && !AbstractDungeon.player.hasRelic(ExtraCursedKey.ID)) possRelicsList2.add(ExtraCursedKey.ID);
+        if (!AbstractDungeon.player.hasRelic(CallingBell.ID) && !AbstractDungeon.player.hasRelic(ExtraCursedBell.ID)) possRelicsList2.add(ExtraCursedBell.ID);
 
 
         if (possRelicsList.size() > 0) {
@@ -61,12 +64,14 @@ public class WanderingSpecter extends AbstractImageEvent {
             this.imageEventText.setDialogOption(OPTIONS[0]);
         } else {
             imageEventText.setDialogOption(OPTIONS[1]);
+            shopForMore = true;
         }
         if (possRelicsList2.size() > 0) {
             rtog2 = RelicLibrary.getRelic(possRelicsList2.get(AbstractDungeon.cardRandomRng.random(possRelicsList.size() - 1))).makeCopy();
             this.imageEventText.setDialogOption(OPTIONS[2]);
         } else {
             imageEventText.setDialogOption(OPTIONS[1]);
+            shopForMore2 = true;
         }
         if (!AbstractDungeon.player.hasRelic(BlueCandle.ID)){
             this.imageEventText.setDialogOption(OPTIONS[3], new BlueCandle());
@@ -80,11 +85,13 @@ public class WanderingSpecter extends AbstractImageEvent {
             case INTRO:
                 switch (buttonPressed) {
                     case 0:
-                        for (int i = 0; i < curseCount; i++) {
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect((CardLibrary.getCurse().makeStatEquivalentCopy()), (float) (Settings.WIDTH * .75F * ((i / curseCount))), (float) (Settings.HEIGHT / 2)));// 73
+                        if (!shopForMore) {
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect((CardLibrary.getCurse().makeStatEquivalentCopy()), (float) (Settings.WIDTH * .35F), (float) (Settings.HEIGHT / 2)));
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect((CardLibrary.getCurse().makeStatEquivalentCopy()), (float) (Settings.WIDTH * .65F), (float) (Settings.HEIGHT / 2)));
+
+                            AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), rtog);// 83
+                            downfallMod.removeAnyRelicFromPools(rtog.relicId);
                         }
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), rtog);// 83
-                        downfallMod.removeAnyRelicFromPools(rtog.relicId);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[5]);
                         this.imageEventText.setDialogOption(OPTIONS[6]);
@@ -94,11 +101,13 @@ public class WanderingSpecter extends AbstractImageEvent {
                         this.screen = CurScreen.TRADE;
                         return;
                     case 1:
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), rtog2);// 83
-                        if (rtog2 instanceof ExtraCursedBell){
-                            downfallMod.removeAnyRelicFromPools(CallingBell.ID);
-                        } else {
-                            downfallMod.removeAnyRelicFromPools(CursedKey.ID);
+                        if (!shopForMore2) {
+                            AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), rtog2);// 83
+                            if (rtog2 instanceof ExtraCursedBell) {
+                                downfallMod.removeAnyRelicFromPools(CallingBell.ID);
+                            } else {
+                                downfallMod.removeAnyRelicFromPools(CursedKey.ID);
+                            }
                         }
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[5]);

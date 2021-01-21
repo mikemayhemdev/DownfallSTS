@@ -397,7 +397,6 @@ public class HexaMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(WanderingSpecter.ID, WanderingSpecter.class) //Event ID//
                 //Extra Requirement
-                .bonusCondition(HexaMod::canGetCurseRelic)
                 //Only in Evil if content sharing is disabled
                 .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
                 .bonusCondition(() -> (AbstractDungeon.cardRandomRng.random(0, 2) == 2))
@@ -436,19 +435,5 @@ public class HexaMod implements
                 .create());
     }
 
-    public static boolean canGetCurseRelic() {
-        ArrayList<String> possRelicsList = new ArrayList<>();
-        possRelicsList.add(BlueCandle.ID);
-        possRelicsList.add(DarkstonePeriapt.ID);
-        possRelicsList.add(DuVuDoll.ID);
-        possRelicsList.add(CursedKey.ID);
-        possRelicsList.add(CallingBell.ID);
-        possRelicsList.add(Omamori.ID);
 
-        for (AbstractRelic q : AbstractDungeon.player.relics) {
-            possRelicsList.removeIf(q.relicId::equals);
-        }
-
-        return !possRelicsList.isEmpty();
-    }
 }
