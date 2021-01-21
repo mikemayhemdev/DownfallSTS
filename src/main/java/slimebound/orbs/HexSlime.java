@@ -52,11 +52,6 @@ public class HexSlime
         this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1] + 3 + this.descriptions[2];
     }
 
-    @Override
-    public void applyFocus() {
-
-    }
-
 
     public void activateEffectUnique() {
         AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.FIRE, this, false, false, false, 3, false, 0, false, false, false, true, true));
