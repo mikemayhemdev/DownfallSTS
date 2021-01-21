@@ -213,12 +213,12 @@
     ]
   },
   "bronze:Shell": {
-    "NAME": "Shell",
+    "NAME": "Blockchain",
     "DESCRIPTION": "Gain !M! bronze:Blur.",
     "UPGRADE_DESCRIPTION": "Gain !M! bronze:Blur. NL bronze:Compile - Gain !M! bronze:Blur.",
     "EXTENDED_DESCRIPTION": [
-      "curling",
-      "Shell"
+      "block",
+      "Chain"
     ]
   },
   "bronze:BitShift": {
