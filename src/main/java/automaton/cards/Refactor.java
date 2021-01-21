@@ -9,8 +9,8 @@ public class Refactor extends AbstractBronzeCard {
 
     public Refactor() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 5;
-        baseBlock = 5;
+        baseMagicNumber = magicNumber = 4;
+        baseBlock = 4;
     }
 
     @Override
