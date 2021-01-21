@@ -125,11 +125,7 @@
   },
   "bronze:Overheat": {
     "NAME": "Overheat",
-    "DESCRIPTION": "Take !M! damage. NL Deal !D! damage. NL bronze:Compile *Error - bronze:Insert a *Burn+.",
-    "EXTENDED_DESCRIPTION": [
-      "heated",
-      "Burn"
-    ]
+    "DESCRIPTION": "Deal !D! damage. NL Remove the next bronze:Compile *Error you would bronze:Encode."
   },
   "bronze:CutThrough": {
     "NAME": "Cut Through",

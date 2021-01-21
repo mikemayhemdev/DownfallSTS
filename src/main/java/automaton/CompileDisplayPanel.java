@@ -24,14 +24,15 @@ public class CompileDisplayPanel extends EasyInfoDisplayPanel {
         StringBuilder s = new StringBuilder();
         if (FunctionHelper.held != null && FunctionHelper.doStuff)
             for (AbstractCard card : FunctionHelper.held.group) {
-                if (card.rawDescription.contains(uiStrings.TEXT[1])) {
-                    String x = ((AbstractBronzeCard) card).getSpecialCompileText();
-                    if (!x.equals("")) {
-                        flip = true;
-                        s.append(((AbstractBronzeCard) card).getSpecialCompileText());
-                        s.append(" NL "); //?
+                if (card instanceof AbstractBronzeCard)
+                    if (card.rawDescription.contains(uiStrings.TEXT[1]) && ((AbstractBronzeCard) card).doSpecialCompileStuff) {
+                        String x = ((AbstractBronzeCard) card).getSpecialCompileText();
+                        if (!x.equals("")) {
+                            flip = true;
+                            s.append(((AbstractBronzeCard) card).getSpecialCompileText());
+                            s.append(" NL "); //?
+                        }
                     }
-                }
             }
         if (!flip) {
             return "NORENDER";
