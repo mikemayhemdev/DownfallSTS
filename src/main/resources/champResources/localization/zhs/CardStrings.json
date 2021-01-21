@@ -230,7 +230,7 @@
   },
   "champ:RapidStrikes": {
     "NAME": "连续打击",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 本回合每打出过一张 champ:战术 牌再重复一次。",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 本回合每触发过一次 champ:战术 奖励，再重复一次。",
     "EXTENDED_DESCRIPTION": [
       " NL （攻击 ",
       " 次）",

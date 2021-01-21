@@ -226,7 +226,7 @@
   },
   "hexamod:GhostflameBarrier": {
     "NAME": "亡魂屏障",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每当你本回合被攻击时，给予攻击者 !M! 层 hexamod:灼魂 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每当你本回合被攻击时，给予攻击者 !burny! 层 hexamod:灼魂 。"
   },
   "hexamod:Toasty": {
     "NAME": "烘焙！",

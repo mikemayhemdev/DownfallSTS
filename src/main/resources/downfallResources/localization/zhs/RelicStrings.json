@@ -516,5 +516,23 @@
     "DESCRIPTIONS": [
       "#pRight #pClick: Play the next card."
     ]
+  },
+  "downfall:ExtraCursedBell": {
+    "NAME": "召唤铃铛",
+    "FLAVOR": "这个黑铁铃铛在你找到它时作响了3次，但现在它已经不再响了。",
+    "DESCRIPTIONS": [
+      "获得 #b2 个独特的 #r诅咒 和 #b3 件 #y遗物 。",
+      "铃铛再次鸣响……",
+      "跳过奖励",
+      "关闭"
+    ]
+  },
+  "downfall:ExtraCursedKey": {
+    "NAME": "诅咒钥匙",
+    "FLAVOR": "你能感到这把钥匙上散发出邪恶的能量。力量总是需要付出代价的。",
+    "DESCRIPTIONS": [
+      " 你每次打开一个非Boss宝箱，都会获得 #b2 张 #r诅咒 。",
+      "在每回合开始时获得 [E] 。"
+    ]
   }
 }

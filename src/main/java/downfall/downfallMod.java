@@ -390,7 +390,7 @@ public class downfallMod implements
         BaseMod.addCard(new Icky());
         BaseMod.addCard(new Aged());
         BaseMod.addCard(new Pride());
-
+/*
         BaseMod.addCard(new Slug());
         BaseMod.addCard(new Defend_Crowbot());
         BaseMod.addCard(new Boom());
@@ -403,7 +403,7 @@ public class downfallMod implements
         BaseMod.addCard(new Beam());
         BaseMod.addCard(new FanTheHammer());
         BaseMod.addCard(new CompressionMold());
-        BaseMod.addCard(new Desperado());
+        BaseMod.addCard(new Desperado());*/
     }
 
     @Override

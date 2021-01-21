@@ -32,5 +32,13 @@
       "insert"
     ],
     "DESCRIPTION": "将一张牌加入抽牌堆。"
+  },
+  {
+    "PROPER_NAME": "循环",
+    "NAMES": [
+      "循环",
+      "cycle"
+    ],
+    "DESCRIPTION": "丢弃一张牌，抽一张牌替换其原来的位置。"
   }
 ]

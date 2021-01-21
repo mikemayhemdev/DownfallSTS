@@ -125,11 +125,7 @@
   },
   "bronze:Overheat": {
     "NAME": "过热",
-    "DESCRIPTION": "受到 !M! 点伤害。 NL 造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:插入 *灼伤+ 。",
-    "EXTENDED_DESCRIPTION": [
-      "高温",
-      "灼伤"
-    ]
+    "DESCRIPTION": "造成 !M! 点伤害。 移除下一张 bronze:编码 中的 bronze:编译 *错误 。"
   },
   "bronze:CutThrough": {
     "NAME": "斩破命运",
@@ -213,12 +209,12 @@
     ]
   },
   "bronze:Shell": {
-    "NAME": "外壳",
+    "NAME": "区块链",
     "DESCRIPTION": "获得 !M! 层 bronze:残影 。",
     "UPGRADE_DESCRIPTION": "获得 !M! 层 bronze:残影 。 NL bronze:编译 - 获得 !M! 层 bronze:残影 。",
     "EXTENDED_DESCRIPTION": [
-      "卷缩",
-      "护盾"
+      "区块",
+      "链接"
     ]
   },
   "bronze:BitShift": {
@@ -601,8 +597,8 @@
   },
   "bronze:BugBarrage": {
     "NAME": "错误齐射",
-    "DESCRIPTION": "将1张 *伤口 加入手牌。 NL 手牌中每有一张 状态牌 造成 !D! 点伤害。",
-    "UPGRADE_DESCRIPTION": "将 !M! 张 *伤口 加入手牌。 NL 手牌中每有一张 状态牌 造成 !D! 点伤害。",
+    "DESCRIPTION": "将1张 *伤口 加入手牌。 NL bronze:循环 手牌中的 状态牌 。每 bronze:循环 一张牌，造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "将 !M! 张 *伤口 加入手牌。 NL bronze:循环 手牌中的 状态牌 。每 bronze:循环 一张牌，造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       " NL （攻击 ",
       " 次）"

@@ -135,5 +135,13 @@
     "DESCRIPTIONS": [
       "每回合开始时， NL "
     ]
+  },
+  "bronze:RemoveNextError": {
+    "NAME": "移除错误",
+    "DESCRIPTIONS": [
+      "移除下一张 #y编码 中的 #y编译错误 。",
+      "移除下 #b",
+      " 张 #y编码 中的 #y编译错误 。"
+    ]
   }
 }
