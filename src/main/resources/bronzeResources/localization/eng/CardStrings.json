@@ -597,8 +597,8 @@
   },
   "bronze:BugBarrage": {
     "NAME": "Bug Barrage",
-    "DESCRIPTION": "Add 1 *Wound to your hand. NL Deal !D! damage for each Status card in hand.",
-    "UPGRADE_DESCRIPTION": "Add !M! *Wounds to your hand. NL Deal !D! damage for each Status card in hand.",
+    "DESCRIPTION": "Add 1 *Wound to your hand. NL bronze:Cycle each Status in your hand, dealing !D! damage for each.",
+    "UPGRADE_DESCRIPTION": "Add !M! *Wounds to your hand. NL bronze:Cycle each Status in your hand, dealing !D! damage for each.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " times.)"
