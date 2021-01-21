@@ -51,7 +51,7 @@ public class Equalize extends AbstractSlimeboundCard {
 
 
         this.baseDamage = 8;
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 4;
         this.exhaust = true;
         tags.add(CardTags.HEALING);
 
