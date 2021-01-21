@@ -50,7 +50,6 @@ public class GemFire extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-        this.selfRetain = true;
         //this.sockets.add(GuardianMod.socketTypes.RED);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
