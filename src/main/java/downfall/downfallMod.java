@@ -44,6 +44,7 @@ import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
+import charbosses.cards.crowbot.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -71,10 +72,7 @@ import com.megacrit.cardcrawl.events.city.*;
 import com.megacrit.cardcrawl.events.exordium.*;
 import com.megacrit.cardcrawl.events.shrines.FaceTrader;
 import com.megacrit.cardcrawl.events.shrines.*;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ModHelper;
-import com.megacrit.cardcrawl.helpers.RelicLibrary;
+import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
@@ -197,6 +195,8 @@ public class downfallMod implements
     @SpireEnum
     public static AbstractCard.CardTags DOWNFALL_CURSE;
 
+    public static final Color crowbot_Color = CardHelper.getColor(39,100,140).cpy();
+
     public static final boolean EXPERIMENTAL_FLIP = false;
     public static Settings.GameLanguage[] SupportedLanguages = {
             // Insert other languages here
@@ -228,6 +228,25 @@ public class downfallMod implements
 
         loadConfigData();
 
+
+        BaseMod.addColor(CharBossCrowbot.Enums.Crowbot_COLOR,
+                crowbot_Color,
+                crowbot_Color,
+                crowbot_Color,
+                crowbot_Color,
+                crowbot_Color,
+                crowbot_Color,
+                crowbot_Color,
+
+                "downfallResources/images/cardui/512/bg_attack_blue.png",
+                "downfallResources/images/cardui/512/bg_skill_blue.png",
+                "downfallResources/images/cardui/512/bg_power_blue.png",
+                "downfallResources/images/cardui/512/card_blue_orb.png",
+                "downfallResources/images/cardui/1024/bg_attack_blue.png",
+                "downfallResources/images/cardui/1024/bg_skill_blue.png",
+                "downfallResources/images/cardui/1024/bg_power_blue.png",
+                "downfallResources/images/cardui/1024/card_blue_orb.png",
+                "downfallResources/images/cardui/blue.png");
     }
 
     public static void initialize() {
@@ -370,6 +389,20 @@ public class downfallMod implements
         BaseMod.addCard(new Icky());
         BaseMod.addCard(new Aged());
         BaseMod.addCard(new Pride());
+
+        BaseMod.addCard(new Slug());
+        BaseMod.addCard(new Defend_Crowbot());
+        BaseMod.addCard(new Boom());
+        BaseMod.addCard(new Pellet());
+        BaseMod.addCard(new Barrier());
+        BaseMod.addCard(new Ricochet());
+        BaseMod.addCard(new HeavySlug());
+        BaseMod.addCard(new Cannonball());
+        BaseMod.addCard(new FullMetalJacket());
+        BaseMod.addCard(new Beam());
+        BaseMod.addCard(new FanTheHammer());
+        BaseMod.addCard(new CompressionMold());
+        BaseMod.addCard(new Desperado());
     }
 
     @Override
@@ -416,7 +449,7 @@ public class downfallMod implements
         loadModKeywords(GuardianMod.getModID(), otherPackagePaths.PACKAGE_GUARDIAN);
         loadModKeywords(ChampMod.getModID(), otherPackagePaths.PACKAGE_CHAMP);
         loadModKeywords(AutomatonMod.getModID(), otherPackagePaths.PACKAGE_AUTOMATON);
-
+        loadModKeywords(modID, otherPackagePaths.PACKAGE_DOWNFALL);
     }
 
 
@@ -1357,7 +1390,8 @@ public class downfallMod implements
         PACKAGE_SNECKO,
         PACKAGE_EXPANSION,
         PACKAGE_CHAMP,
-        PACKAGE_AUTOMATON;
+        PACKAGE_AUTOMATON,
+        PACKAGE_DOWNFALL;
 
         otherPackagePaths() {
         }
@@ -1488,9 +1522,9 @@ public class downfallMod implements
         SuperTip.render(sb, EasyInfoDisplayPanel.RENDER_TIMING.TIMING_RENDERSUBSCRIBER);
     }
 
-    public static void removeAnyRelicFromPools(String relicID){
+    public static void removeAnyRelicFromPools(String relicID) {
         if (AbstractDungeon.shopRelicPool.contains(relicID))
-        AbstractDungeon.shopRelicPool.remove(relicID);
+            AbstractDungeon.shopRelicPool.remove(relicID);
         if (AbstractDungeon.rareRelicPool.contains(relicID))
             AbstractDungeon.rareRelicPool.remove(relicID);
         if (AbstractDungeon.uncommonRelicPool.contains(relicID))

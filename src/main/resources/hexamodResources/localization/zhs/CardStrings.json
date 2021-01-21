@@ -339,11 +339,11 @@
     "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，药水奖励中加入一瓶额外的药水。"
   },
   "hexamod:FifthSeal": {
-    "NAME": "第五容器",
+    "NAME": "第六容器",
     "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，卡牌奖励中加入一张“容器”牌。"
   },
   "hexamod:SixthSeal": {
-    "NAME": "第六容器",
+    "NAME": "第五容器",
     "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，随机升级牌组中的一张牌。"
   },
   "hexamod:SoulSteal": {

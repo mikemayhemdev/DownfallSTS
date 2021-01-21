@@ -107,6 +107,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     private ArrayList<AbstractGameEffect> intentVfx = new ArrayList<>();
 
 
+
     public AbstractBossCard(String id, String name, String img, int cost, String rawDescription, CardType type,
                             CardColor color, CardRarity rarity, CardTarget target) {
         super(id, name, img, cost, rawDescription, type, color, rarity, target);
@@ -121,6 +122,20 @@ public abstract class AbstractBossCard extends AbstractCard {
         this.owner = AbstractCharBoss.boss;
         this.limit = 99;
         this.intent = intent;
+
+    }
+
+    public AbstractBossCard(String id, String name, String img, int cost, String rawDescription, CardType type,
+                            CardColor color, CardRarity rarity, CardTarget target, AbstractMonster.Intent intent, boolean isCustomCard) {
+        super(id, name, img, cost, rawDescription, type, color, rarity, target);
+        this.owner = AbstractCharBoss.boss;
+        this.limit = 99;
+        this.intent = intent;
+
+        if (isCustomCard) {
+            this.portrait = new TextureAtlas.AtlasRegion(new Texture("downfallResources/images/cards/" + img + ".png"), 0, 0, 250, 190);
+            this.portraitImg = new Texture("downfallResources/images/cards/" + img + "_p.png");
+        }
 
     }
 
@@ -179,10 +194,10 @@ public abstract class AbstractBossCard extends AbstractCard {
         }
 
 
-        if(this.type == CardType.ATTACK ){
-            if ( ownerBoss.currentHealth > ownerBoss.maxHealth / 2){
+        if (this.type == CardType.ATTACK) {
+            if (ownerBoss.currentHealth > ownerBoss.maxHealth / 2) {
                 value += Math.max(this.damage, 0);
-            }else {
+            } else {
                 value += Math.max(this.damage * 2.0f, 0);
             }
             if (ownerBoss instanceof CharBossWatcher && ownerBoss.stance instanceof EnDivinityStance) {
@@ -192,11 +207,11 @@ public abstract class AbstractBossCard extends AbstractCard {
 
         value += Math.max(this.block * 1.3F * blockModifier, 0);
 
-        if(this.type == CardType.POWER || this.color == CardColor.COLORLESS ){
-            if ( ownerBoss.currentHealth > ownerBoss.maxHealth / 2){
-                value *= 5 ;
-            }else {
-                value /= 2 ;
+        if (this.type == CardType.POWER || this.color == CardColor.COLORLESS) {
+            if (ownerBoss.currentHealth > ownerBoss.maxHealth / 2) {
+                value *= 5;
+            } else {
+                value /= 2;
             }
 
         }
@@ -358,6 +373,8 @@ public abstract class AbstractBossCard extends AbstractCard {
         }
         this.cantUseMessage = AbstractCard.TEXT[11];
         return false;
+
+
     }
 
     public boolean canUse(final AbstractPlayer p, final AbstractMonster m) {
@@ -711,14 +728,14 @@ public abstract class AbstractBossCard extends AbstractCard {
         if (AbstractCharBoss.boss != null) {
             if (AbstractCharBoss.boss.hasPower(IntangiblePower.POWER_ID)) {
                 this.intentBaseDmg = 1;
-            }
-            else if (!lockIntentValues) this.intentBaseDmg = this.intentDmg = Math.round(((this.damage + customIntentModifiedDamage() + manualCustomDamageModifier) * manualCustomDamageModifierMult));
+            } else if (!lockIntentValues)
+                this.intentBaseDmg = this.intentDmg = Math.round(((this.damage + customIntentModifiedDamage() + manualCustomDamageModifier) * manualCustomDamageModifierMult));
         }
 
-       // //SlimeboundMod.logger.info(this.name + " intent being created: damage = " + this.intentDmg);
+        // //SlimeboundMod.logger.info(this.name + " intent being created: damage = " + this.intentDmg);
 
-       // //SlimeboundMod.logger.info(this.name + " intent being created: custom damage = " + customIntentModifiedDamage());
-       // //SlimeboundMod.logger.info(this.name + " intent being created: custom manual damage = " + manualCustomDamageModifier * manualCustomDamageModifierMult);
+        // //SlimeboundMod.logger.info(this.name + " intent being created: custom damage = " + customIntentModifiedDamage());
+        // //SlimeboundMod.logger.info(this.name + " intent being created: custom manual damage = " + manualCustomDamageModifier * manualCustomDamageModifierMult);
 
         if ((!lockIntentValues) && this.damage > -1) {
             this.calculateCardDamage(null);
@@ -740,7 +757,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         ////SlimeboundMod.logger.info(this.name + " intent made.");
     }
 
-    public int customIntentModifiedDamage(){
+    public int customIntentModifiedDamage() {
         return 0;
     }
 
@@ -857,7 +874,7 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     public String overrideIntentText() {
         if (this.type == CardType.POWER && (owner.hasPower(EnemyStormPower.POWER_ID) || fakeStormPower)) {
-            return "(" + ( 3 + AbstractEnemyOrb.masterPretendFocus + getFocusAmountSafe()) + ")";
+            return "(" + (3 + AbstractEnemyOrb.masterPretendFocus + getFocusAmountSafe()) + ")";
         }
         if (this.isMultiDamage) {
             return intentDmg + "x" + intentMultiAmt;

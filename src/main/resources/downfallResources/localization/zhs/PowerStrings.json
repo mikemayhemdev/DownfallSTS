@@ -212,10 +212,30 @@
       "每当 #y涅奥 拥有 #b10 层 #y真言 时，将其转换成 #b10 点 #y力量 。"
     ]
   },
+  "downfall:CrowbotRitualPower": {
+    "NAME": "重编程：邪教",
+    "DESCRIPTIONS": [
+      "当 #y乌鸦机器人 的生命不高于 #b50% 时，其回合结束时失去 #b3 点生命并获得 #b",
+      " 点 #y力量 。"
+    ]
+  },
   "downfall:NeowSeeingDoubleProduct": {
     "NAME": "???",
     "DESCRIPTIONS": [
       "本回合你的下一张攻击牌对 #y涅奥 造成 #b0 点伤害。"
+    ]
+  },
+  "downfall:DamageMultiplier": {
+    "NAME": "伤害增幅",
+    "DESCRIPTIONS": [
+      "#y攻击牌 造成 #b",
+      " 倍伤害。"
+    ]
+  },
+  "downfall:CompressionMold": {
+    "NAME": "压模",
+    "DESCRIPTIONS": [
+      "升级被 #y发射 后的弹药。"
     ]
   }
 }

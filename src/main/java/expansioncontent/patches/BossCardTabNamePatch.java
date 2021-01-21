@@ -28,7 +28,9 @@ public class BossCardTabNamePatch {
             if (tabName[0].equals("Boss")) {
                 tabName[0] = uiStrings.TEXT[0];
             }
-
+            if (tabName[0].equals("Crowbot")) {
+                tabName[0] = CardCrawlGame.languagePack.getCharacterString("Crowbot").NAMES[0];
+            }
         }
 
         private static class TabNameLocator extends SpireInsertLocator {

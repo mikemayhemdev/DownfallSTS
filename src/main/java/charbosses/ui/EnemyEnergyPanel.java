@@ -1,6 +1,7 @@
 package charbosses.ui;
 
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.bosses.Crowbot.CharBossCrowbot;
 import charbosses.vfx.EnemyRefreshEnergyEffect;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -8,6 +9,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -80,6 +82,12 @@ public class EnemyEnergyPanel extends AbstractPanel {
                 this.energyNumFont = FontHelper.energyNumFontRed;
                 break;
         }
+
+        if (this.owner.chosenClass == ((AbstractPlayer.PlayerClass) CharBossCrowbot.Enums.Crowbot)) {
+            this.energyNumFont = FontHelper.energyNumFontBlue;
+        }
+
+
     }
 
     public static void setEnergy(final int energy) {

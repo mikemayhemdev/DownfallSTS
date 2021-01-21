@@ -22,5 +22,58 @@
   "downfall:Malfunctioning": {
     "NAME": "纰漏",
     "DESCRIPTION": "虚无 。 NL 你的回合结束时，将手牌变化为随机状态牌。 NL 消耗 。"
+  },
+  "downfall_Charboss:Slug": {
+    "NAME": "弹头",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "downfall_Charboss:Defend_Crowbot": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "downfall_Charboss:Boom": {
+    "NAME": "砰！",
+    "DESCRIPTION": "将弹药 !M! 倍伤害 downfall:发射 。"
+  },
+  "downfall_Charboss:Pellet": {
+    "NAME": "弹丸",
+    "DESCRIPTION": "造成 !D! 点伤害."
+  },
+  "downfall_Charboss:Beam": {
+    "NAME": "射线",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 [E] 。 NL 直接打出时 消耗 。"
+  },
+  "downfall_Charboss:Barrier": {
+    "NAME": "护壁",
+    "DESCRIPTION": "如果你没有 格挡 ，获得 !B! 点 格挡 。"
+  },
+  "downfall_Charboss:Ricochet": {
+    "NAME": "跳弹",
+    "DESCRIPTION": "对随机敌人 downfall:发射 弹药 !M! 次。"
+  },
+  "downfall_Charboss:HeavySlug": {
+    "NAME": "重弹头",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL downfall:发射 时 消耗 。"
+  },
+  "downfall_Charboss:Cannonball": {
+    "NAME": "炮弹",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "downfall_Charboss:FullMetalJacket": {
+    "NAME": "全威力弹",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果被 downfall:发射 ，给予 !M! 层 易伤 。"
+  },
+  "downfall_Charboss:FanTheHammer": {
+    "NAME": "牛仔射击",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 将其中的弹药 downfall:发射 。"
+  },
+  "downfall_Charboss:CompressionMold": {
+    "NAME": "压模",
+    "DESCRIPTION": "升级被 downfall:发射 后的弹药。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 升级被 downfall:发射 后的弹药。"
+  },
+  "downfall_Charboss:Desperado": {
+    "NAME": "亡命之徒",
+    "DESCRIPTION": "如果手牌中没有弹药，造成 !D! 点伤害。"
   }
 }

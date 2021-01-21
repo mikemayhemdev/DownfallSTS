@@ -132,5 +132,10 @@
       "捕鲸者",
       "终结轮回。"
     ]
+  },
+  "downfall:SingleCardViewPopup": {
+    "TEXT": [
+      "弹药"
+    ]
   }
 }

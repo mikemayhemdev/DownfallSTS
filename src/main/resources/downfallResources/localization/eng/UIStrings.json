@@ -131,5 +131,10 @@
       "Whale Hunter",
       "Ended the cycle."
     ]
+  },
+  "downfall:SingleCardViewPopup": {
+    "TEXT": [
+      "Ammo"
+    ]
   }
 }

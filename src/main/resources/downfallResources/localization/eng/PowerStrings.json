@@ -217,5 +217,25 @@
     "DESCRIPTIONS": [
       "Your next #yAttack used against Neow deals #b0 damage this turn."
     ]
+  },
+  "downfall:CrowbotRitualPower": {
+    "NAME": "Reprogram:Ritual",
+    "DESCRIPTIONS": [
+      "When #yCrowBot is at or below #b50% HP,it lose #b3 HP and gain #b",
+      " #yStrength at the end of its turn."
+    ]
+  },
+  "downfall:DamageMultiplier": {
+    "NAME": "Damage Multiplier",
+    "DESCRIPTIONS": [
+      "#yAttacks deal #b",
+      " times damage."
+    ]
+  },
+  "downfall:CompressionMold": {
+    "NAME": "Compression Mold",
+    "DESCRIPTIONS": [
+      "#yFired Ammo is upgraded afterwards."
+    ]
   }
 }

@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "NAMES": [
+      "fire",
+      "fired"
+    ],
+    "DESCRIPTION": "Only Ammo can be fired. Firing Ammo activates its effect and discards it."
+  }
+]
