@@ -45,8 +45,7 @@ public class ChosenStrike extends AbstractBronzeCard {
             for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
                 if (c.uuid.equals(this.uuid)) {
                     c.misc += magicNumber;
-                    c.applyPowers();
-                    // c.baseDamage = c.misc;
+                    c.baseDamage = DAMAGE + misc;
                 }
             }
 
