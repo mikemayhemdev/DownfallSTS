@@ -135,5 +135,13 @@
     "DESCRIPTIONS": [
       "At the start of your turn, NL "
     ]
+  },
+  "bronze:RemoveNextError": {
+    "NAME": "Remove Errors",
+    "DESCRIPTIONS": [
+      "Remove the next #yCompile #yError #yEncoded.",
+      "Remove the next #b",
+      " #yCompile #yErrors #yEncoded."
+    ]
   }
 }

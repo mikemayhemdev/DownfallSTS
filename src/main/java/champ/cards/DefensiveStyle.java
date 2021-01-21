@@ -21,7 +21,7 @@ public class DefensiveStyle extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         defenseOpen();
-        applyToSelf(new DefensiveStylePower(3));
+        applyToSelf(new DefensiveStylePower(magicNumber));
     }
 
     public void upp() {

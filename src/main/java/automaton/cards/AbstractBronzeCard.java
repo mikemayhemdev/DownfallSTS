@@ -378,6 +378,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
         this.doSpecialCompileStuff = false;
         this.rawDescription = AutomatonTextHelper.cleanAllCompileText(this.rawDescription);
         this.initializeDescription();
+        superFlash();
     }
 
     @Override

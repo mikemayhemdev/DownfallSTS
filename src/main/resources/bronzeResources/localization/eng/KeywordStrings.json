@@ -28,5 +28,12 @@
       "insert"
     ],
     "DESCRIPTION": "Add a card to your draw pile."
+  },
+  {
+    "PROPER_NAME": "Cycle",
+    "NAMES": [
+      "cycle"
+    ],
+    "DESCRIPTION": "Discard a card, drawing a new card to replace it."
   }
 ]

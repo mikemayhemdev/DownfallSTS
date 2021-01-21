@@ -1,8 +1,11 @@
 package automaton.cards;
 
 import basemod.BaseMod;
+import basemod.devcommands.draw.Draw;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Wound;
@@ -26,6 +29,8 @@ public class BugBarrage extends AbstractBronzeCard {
         magicNumber = baseMagicNumber = 1;
     }
 
+    private int dummyPlaceholderOf;
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new MakeTempCardInHandAction(new Wound(), magicNumber));
 
@@ -34,10 +39,20 @@ public class BugBarrage extends AbstractBronzeCard {
             public void update() {
                 isDone = true;
                 int x = 0;
-                for (AbstractCard q : p.hand.group) if (q.type == CardType.STATUS) x++;
-
-                for (int i = 0; i < x; i++) att(new DamageAction(m, makeInfo(), AttackEffect.BLUNT_LIGHT));
-
+                for (AbstractCard q : p.hand.group)
+                    if (q.type == CardType.STATUS) {
+                        x++;
+                        att(new DamageAction(m, makeInfo(), AttackEffect.BLUNT_LIGHT));
+                        att(new DiscardSpecificCardAction(q, p.hand));
+                    }
+                dummyPlaceholderOf = x;
+            }
+        });
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                addToTop(new DrawCardAction(dummyPlaceholderOf));
             }
         });
 

@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import downfall.downfallMod;
 import downfall.events.FaceTrader_Evil;
 
 import java.util.ArrayList;
@@ -145,6 +146,7 @@ public class Library_Champ extends AbstractImageEvent {
                     case 2:
                         AbstractRelic r = this.getRandomFace();
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, r);
+                        downfallMod.removeAnyRelicFromPools(r.relicId);
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);

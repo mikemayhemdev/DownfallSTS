@@ -43,7 +43,7 @@ public class FormatEncoded extends AbstractBronzeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, block));
         if (m != null)
-            atb(new TimedVFXAction(new VfxBuilder(TextureLoader.getTexture("bronzeResources/images/ui/block.png"), m.hb.x - (50 * Settings.scale), m.hb.cY, 0.25F)
+            atb(new TimedVFXAction(new VfxBuilder(TextureLoader.getTexture("bronzeResources/images/ui/block.png"), m.hb.x - (50 * Settings.scale), m.hb.cY, 0.2F)
                     .setColor(getRandomColor())
                     .fadeIn(0.1F)
                     .rotate(300f)

@@ -230,7 +230,7 @@
   },
     "champ:RapidStrikes": {
     "NAME": "Rapid Strikes",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Deal !D! damage an additional time for each champ:Technique used this turn.",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Deal !D! damage an additional time for each champ:Technique *Bonus triggered this turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " time.)",
