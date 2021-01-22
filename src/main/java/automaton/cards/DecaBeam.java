@@ -29,7 +29,6 @@ public class DecaBeam extends AbstractBronzeCard {
         if (forGameplay) {
             applyToSelf(new PlatedArmorPower(AbstractDungeon.player, magicNumber));
             shuffleIn(new Dazed(), auto);
-            shuffleIn(new Dazed(), auto);
         }
     }
 
