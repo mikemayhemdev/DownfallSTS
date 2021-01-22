@@ -41,7 +41,7 @@
   },
   "champ:FaceSlap": {
     "NAME": "Face Slap",
-    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage, twice if enemy is Vulnerable. NL *Berserker champ:Combo: Apply !M! Vulnerable."
+    "DESCRIPTION": "Deal !D! damage, twice if enemy is Vulnerable. NL *Berserker champ:Combo: Apply !M! Vulnerable."
   },
   "champ:FlashCut": {
     "NAME": "Flash Strike",
@@ -77,8 +77,7 @@
   },
   "champ:SetATrap": {
     "NAME": "Set A Trap",
-    "DESCRIPTION": "*Defensive champ:Combo: Gain !M! champ:Counter for each Attack in your hand. NL Enter champ:Defensive.",
-    "UPGRADE_DESCRIPTION": "Gain !M! champ:Counter. NL *Defensive champ:Combo: Gain !M! champ:Counter for each Attack in your hand. NL Enter champ:Defensive."
+    "DESCRIPTION": "Gain !B! Block, twice if any enemy is Weak. NL *Defensive champ:Combo: Apply !M! Weak."
   },
   "champ:Backstep": {
     "NAME": "Backstep",
@@ -143,8 +142,8 @@
   },
   "champ:TornadoPunch": {
     "NAME": "Tornado Punch",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counter and !B! Block for each enemy hit.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counter and !B! Block for each enemy hit."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !B! Block for each enemy hit.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !B! Block for each enemy hit."
   },
   "champ:EnGarde": {
     "NAME": "En Garde",
@@ -180,8 +179,8 @@
     ]
   },
   "champ:IronFortress": {
-    "NAME": "Iron Fortress",
-    "DESCRIPTION": "Whenever you enter a Stance, gain !M! Block and !M! champ:Counter."
+    "NAME": "Technical Jig",
+    "DESCRIPTION": "Whenever you enter a Stance:"
   },
   "champ:Lariat": {
     "NAME": "Lariat",
@@ -193,8 +192,8 @@
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter. NL Gain 1 bronze:Blur."
   },
   "champ:ShieldWall": {
-    "NAME": "Shield Wall",
-    "DESCRIPTION": "Gain 2 Dexterity. NL At the end of each turn, gain !M! champ:Counter."
+    "NAME": "Iron Fortress",
+    "DESCRIPTION": "Gain 2 Dexterity. NL At the end of each turn, gain !M! Block."
   },
   "champ:Haymaker": {
     "NAME": "Piledriver",
@@ -230,12 +229,7 @@
   },
     "champ:RapidStrikes": {
     "NAME": "Rapid Strikes",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Deal !D! damage an additional time for each champ:Technique *Bonus triggered this turn.",
-    "EXTENDED_DESCRIPTION": [
-      " NL (Hits ",
-      " time.)",
-      " times.)"
-    ]
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Reduce the cost of a random #yStrike in your hand to 0 this turn."
   },
   "champ:EnchantSword": {
     "NAME": "Enchant Sword",
@@ -243,8 +237,8 @@
   },
   "champ:BladeFlurry": {
     "NAME": "Flurry of Strikes",
-    "DESCRIPTION": "Deal !D! damage for each card containing \"Strike\" in your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Deal !D! damage for each card containing \"Strike\" in your hand.",
+    "DESCRIPTION": "Deal !D! damage for each card #yStrike in your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Deal !D! damage for each #yStrike in your hand.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " times.)"
@@ -303,7 +297,7 @@
   },
   "champ:Encircle": {
     "NAME": "Encircle",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL *Berserker champ:Combo: Play this twice. "
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL For each enemy hit:"
   },
   "champ:LastStand": {
     "NAME": "Last Stand",
@@ -335,7 +329,7 @@
   },
   "champ:EndlessRage": {
     "NAME": "Endless Rage",
-    "DESCRIPTION": "Whenever you lose HP on your turn, gain 1 temporary Strength."
+    "DESCRIPTION": "Whenever you Enter a stance:"
   },
   "champ:SteelEdge": {
     "NAME": "Steel Edge",

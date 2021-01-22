@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.powers.IronFortressPower;
 import champ.powers.WorseRupturePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -21,7 +22,7 @@ public class EndlessRage extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new WorseRupturePower(1));
+        applyToSelf(new IronFortressPower(magicNumber));
     }
 
     public void upp() {

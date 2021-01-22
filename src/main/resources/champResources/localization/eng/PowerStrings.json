@@ -139,10 +139,17 @@
     ]
   },
   "champ:IronFortressPower": {
-    "NAME": "Iron Fortress",
+    "NAME": "Technical Jig: Counter",
     "DESCRIPTIONS": [
       "Whenever you enter a Stance, gain #b",
-      " Block and #yCounter."
+      " #yCounter."
+    ]
+  },
+  "champ:IronFortressVigorPower": {
+    "NAME": "Technical Jig: Vigor",
+    "DESCRIPTIONS": [
+      "Whenever you enter a Stance, gain #b",
+      " #yVigor."
     ]
   },
   "champ:LastStandMod": {

@@ -10,12 +10,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
 
-public class IronFortressPower extends AbstractPower implements CloneablePowerInterface {
+public class IronFortressVigorPower extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = ChampMod.makeID("IronFortressPower");
 
@@ -25,7 +25,7 @@ public class IronFortressPower extends AbstractPower implements CloneablePowerIn
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public IronFortressPower(final int amount) {
+    public IronFortressVigorPower(final int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
@@ -43,7 +43,7 @@ public class IronFortressPower extends AbstractPower implements CloneablePowerIn
     public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
         if (!newStance.ID.equals(NeutralStance.STANCE_ID) && !(oldStance.ID.equals(newStance.ID))) {
             flash();
-            addToBot(new ApplyPowerAction(owner, owner, new CounterPower(amount), amount));
+            addToBot(new ApplyPowerAction(owner, owner, new VigorPower(owner, amount), amount));
 
         }
     }
@@ -55,6 +55,6 @@ public class IronFortressPower extends AbstractPower implements CloneablePowerIn
 
     @Override
     public AbstractPower makeCopy() {
-        return new IronFortressPower(amount);
+        return new IronFortressVigorPower(amount);
     }
 }

@@ -38,6 +38,6 @@ public class SwordThrow extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        upgradeDamage(3);
     }
 }

@@ -24,8 +24,8 @@ public class FaceSlap extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-        tags.add(ChampMod.OPENER);
-        tags.add(ChampMod.OPENERBERSERKER);
+     //   tags.add(ChampMod.OPENER);
+       // tags.add(ChampMod.OPENERBERSERKER);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
         postInit();
@@ -43,7 +43,7 @@ public class FaceSlap extends AbstractChampCard {
             }
         });
         if (bcombo()) applyToEnemy(m, autoVuln(m, magicNumber));
-        berserkOpen();
+   //     berserkOpen();
     }
 
     @Override

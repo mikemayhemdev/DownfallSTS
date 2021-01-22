@@ -31,6 +31,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 
+import java.security.Signature;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -329,11 +330,20 @@ public abstract class AbstractChampCard extends CustomCard {
         super.update();
     }
 
+
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        boolean bottled = false;
         if (hasTag(FINISHER)) {
-            if ((AbstractDungeon.player.stance instanceof NeutralStance))
-                return false;
+            if (p.hasRelic(SignatureFinisher.ID)){
+                if ((((SignatureFinisher)p.getRelic(SignatureFinisher.ID)).card.uuid == this.uuid)){
+                    bottled = true;
+                };
+            }
+            if (!bottled) {
+                if ((AbstractDungeon.player.stance instanceof NeutralStance))
+                    return false;
+            }
         }
         return super.canUse(p, m);
     }

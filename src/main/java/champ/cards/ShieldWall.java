@@ -4,6 +4,7 @@ import champ.powers.ShieldWallPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.MetallicizePower;
 
 public class ShieldWall extends AbstractChampCard {
 
@@ -11,7 +12,7 @@ public class ShieldWall extends AbstractChampCard {
 
     //stupid intellij stuff power, self, uncommon
 
-    private static final int MAGIC = 6;
+    private static final int MAGIC = 3;
     private static final int UPG_MAGIC = 3;
 
     public ShieldWall() {
@@ -21,8 +22,8 @@ public class ShieldWall extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new ShieldWallPower(magicNumber));
         applyToSelf(new DexterityPower(p, 2));
+        applyToSelf(new MetallicizePower(p, magicNumber));
     }
 
     public void upp() {
