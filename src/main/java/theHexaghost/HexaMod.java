@@ -274,7 +274,7 @@ public class HexaMod implements
 
                 ApocalypticArmor.ID,
                 ApocalypseNow.ID,
-                UnlimitedPower.ID,
+                FlameSwitch.ID,
 
                 RecyclingMachine.ID,
                 SoulOfChaos.ID,
