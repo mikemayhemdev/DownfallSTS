@@ -29,7 +29,7 @@ public class RecklessLeap extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         //myHpLossCost = MAGIC;
-     //   tags.add(ChampMod.TECHNIQUE);
+        tags.add(ChampMod.TECHNIQUE);
         tags.add(CardTags.STRIKE);
         postInit();
     }
@@ -43,6 +43,7 @@ public class RecklessLeap extends AbstractChampCard {
             //addToTop(new ApplyPowerAction(p, p, new CounterPower(boom), boom));
         }
         fatigue(magicNumber);
+        techique();
     }
 
     public void upp() {
