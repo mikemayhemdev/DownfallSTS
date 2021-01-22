@@ -1,7 +1,6 @@
 package charbosses.ui;
 
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Crowbot.CharBossCrowbot;
 import charbosses.vfx.EnemyRefreshEnergyEffect;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -83,10 +82,11 @@ public class EnemyEnergyPanel extends AbstractPanel {
                 break;
         }
 
+        /*
         if (this.owner.chosenClass == ((AbstractPlayer.PlayerClass) CharBossCrowbot.Enums.Crowbot)) {
             this.gainEnergyImg = ImageMaster.BLUE_ORB_FLASH_VFX;
             this.energyNumFont = FontHelper.energyNumFontBlue;
-        }
+        }*/
 
 
     }

@@ -230,6 +230,7 @@ public class downfallMod implements
         loadConfigData();
 
 
+        /*
         BaseMod.addColor(CharBossCrowbot.Enums.Crowbot_COLOR,
                 crowbot_Color,
                 crowbot_Color,
@@ -248,6 +249,7 @@ public class downfallMod implements
                 "downfallResources/images/cardui/1024/bg_power_blue.png",
                 "downfallResources/images/cardui/1024/card_blue_orb.png",
                 "downfallResources/images/cardui/blue.png");
+                */
     }
 
     public static void initialize() {

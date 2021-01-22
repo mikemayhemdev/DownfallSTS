@@ -1,3 +1,4 @@
+
 package charbosses.bosses.Crowbot;
 
 import charbosses.bosses.AbstractBossDeckArchetype;
@@ -49,6 +50,7 @@ public class CharBossCrowbot extends AbstractCharBoss {
         this.eye = this.skeleton.findBone("eye");
     }
 
+
     public static class Enums {
         @SpireEnum
         public static PlayerClass Crowbot;
@@ -59,6 +61,7 @@ public class CharBossCrowbot extends AbstractCharBoss {
         @SpireEnum
         public static AbstractCard.CardTags AMMO;
     }
+
 
 
     @Override
