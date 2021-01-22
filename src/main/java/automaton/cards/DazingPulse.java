@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -23,6 +24,7 @@ public class DazingPulse extends AbstractBronzeCard {
         baseDamage = 5;
         baseMagicNumber = magicNumber = 2;
         thisEncodes();
+        tags.add(AutomatonMod.BAD_COMPILE);
     }
 
     @Override
