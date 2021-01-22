@@ -725,8 +725,8 @@ public abstract class AbstractBossCard extends AbstractCard {
         refreshIntentHbLocation();
         if (!intentActive) this.intentParticleTimer = 0.5F;
         if (!lockIntentValues) calculateCardDamage(null);
-        if (AbstractCharBoss.boss != null) {
-            if (AbstractCharBoss.boss.hasPower(IntangiblePower.POWER_ID)) {
+        if (AbstractDungeon.player != null) {
+            if (AbstractDungeon.player.hasPower(IntangiblePower.POWER_ID)) {
                 this.intentBaseDmg = 1;
             } else if (!lockIntentValues)
                 this.intentBaseDmg = this.intentDmg = Math.round(((this.damage + customIntentModifiedDamage() + manualCustomDamageModifier) * manualCustomDamageModifierMult));
