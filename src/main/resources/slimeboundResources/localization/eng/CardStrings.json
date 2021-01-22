@@ -27,8 +27,8 @@
     "DESCRIPTION": "Choose a card in your hand. NL Put a copy of that card on top of your draw pile. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Choose a card in your hand. NL Add a copy of it into your hand. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "Choose a card to add a copy into your hand.",
-      "Choose a card to put a copy on top of your draw pile."
+      " to add a copy into your hand.",
+      " to put a copy on top of your draw pile."
     ]
   },
   "Slimebound:Overexert": {
