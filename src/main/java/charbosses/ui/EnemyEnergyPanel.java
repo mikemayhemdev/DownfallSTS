@@ -84,6 +84,7 @@ public class EnemyEnergyPanel extends AbstractPanel {
         }
 
         if (this.owner.chosenClass == ((AbstractPlayer.PlayerClass) CharBossCrowbot.Enums.Crowbot)) {
+            this.gainEnergyImg = ImageMaster.BLUE_ORB_FLASH_VFX;
             this.energyNumFont = FontHelper.energyNumFontBlue;
         }
 

@@ -125,7 +125,7 @@
   },
   "bronze:Overheat": {
     "NAME": "过热",
-    "DESCRIPTION": "造成 !M! 点伤害。 移除下一张 bronze:编码 中的 bronze:编译 *错误 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 移除下一张 bronze:编码 中的 bronze:编译 *错误 。"
   },
   "bronze:CutThrough": {
     "NAME": "斩破命运",
