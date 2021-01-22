@@ -54,7 +54,7 @@ public class DancingMasterPower extends AbstractPower implements CloneablePowerI
             if (stanceChangesThisTurn == 3 && !usedYet) {
                 flash();
                 addToBot(new GainEnergyAction(amount));
-                addToBot(new DrawCardAction(2));
+                addToBot(new DrawCardAction(amount * 2));
                 usedYet = true;
             }
         }
@@ -64,7 +64,7 @@ public class DancingMasterPower extends AbstractPower implements CloneablePowerI
     @Override
     public void updateDescription() {
         int x = 3 - stanceChangesThisTurn;
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + (usedYet ? DESCRIPTIONS[3] : DESCRIPTIONS[4] + x + DESCRIPTIONS[2]);
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + amount * 2 + DESCRIPTIONS[2] + (usedYet ? DESCRIPTIONS[4] : x + DESCRIPTIONS[3]);
     }
 
     @Override

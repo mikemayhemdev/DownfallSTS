@@ -77,18 +77,12 @@ public class TemporalShield extends AbstractGuardianCard {
             upgradeName();
             upgradeBlock(UPGRADE_BLOCK);
             upgradeMagicNumber(1);
+            updateDescription();
         }
     }
 
     public void updateDescription() {
-
-        if (this.socketCount > 0) {
-            if (upgraded && UPGRADED_DESCRIPTION != null) {
-                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
-            } else {
-                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
-            }
-        }
+        this.rawDescription = upgraded ? UPGRADED_DESCRIPTION : DESCRIPTION;
         this.initializeDescription();
     }
 }

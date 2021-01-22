@@ -186,8 +186,8 @@
   },
   "Guardian:Clone": {
     "NAME": "Clone",
-    "DESCRIPTION": "Choose a card. Place a copy of that card into guardianmod:Stasis. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a card. Place a copy of that card into guardianmod:Stasis. NL guardianmod:Accelerate. NL Exhaust."
+    "DESCRIPTION": "Choose a card in your hand. Place a copy of that card into guardianmod:Stasis. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a card in your hand. Place a copy of that card into guardianmod:Stasis. NL guardianmod:Accelerate. NL Exhaust."
   },
   "Guardian:Preprogram": {
     "NAME": "Preprogram",
