@@ -22,6 +22,7 @@ public class RisingSlash extends AbstractChampCard {
         baseDamage = DAMAGE;
         tags.add(ChampMod.TECHNIQUE);
         tags.add(CardTags.STRIKE);
+        techniqueLast = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

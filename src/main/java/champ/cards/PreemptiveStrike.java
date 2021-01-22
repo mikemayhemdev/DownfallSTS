@@ -49,16 +49,6 @@ public class PreemptiveStrike extends AbstractChampCard {
         initializeDescription();
     }
 
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (!(AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID))) {
-            cantUseMessage = EXTENDED_DESCRIPTION[1];
-            return false;
-        }
-        return super.canUse(p, m);
-    }
-
-
     public void onMoveToDiscard() {
         this.rawDescription = cardStrings.DESCRIPTION;
         this.initializeDescription();

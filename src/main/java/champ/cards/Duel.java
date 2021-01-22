@@ -26,10 +26,10 @@ public class Duel extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
         tags.add(ChampMod.TECHNIQUE);
+        techniqueLast = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
         blck();
         if (m != null) {
             atb(new VFXAction(new ClashEffect(m.hb.cX, m.hb.cY), 0.1F));
@@ -45,6 +45,7 @@ public class Duel extends AbstractChampCard {
                 }
             });
         }
+        techique();
     }
 
     @Override

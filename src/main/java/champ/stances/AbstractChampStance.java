@@ -4,7 +4,7 @@ import champ.ChampChar;
 import champ.ChampMod;
 import champ.actions.FatigueHpLossAction;
 import champ.cards.AbstractChampCard;
-import champ.powers.ResolvePower;
+
 import champ.util.OnTechniqueSubscriber;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;

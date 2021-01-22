@@ -17,7 +17,7 @@ public class FanOfKnives extends AbstractChampCard {
     //stupid intellij stuff attack, enemy, common
 
     private static final int DAMAGE = 5;
-    private static final int UPG_DAMAGE = 2;
+    private static final int UPG_DAMAGE = 3;
 
     private boolean found;
 
@@ -54,8 +54,6 @@ public class FanOfKnives extends AbstractChampCard {
     }
 
     public void upp() {
-        // upgradeDamage(UPG_DAMAGE);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeDamage(UPG_DAMAGE);
     }
 }

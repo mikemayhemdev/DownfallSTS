@@ -2,6 +2,7 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.powers.FocusedDefPower;
+import champ.util.OnFinisherSubscriber;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;

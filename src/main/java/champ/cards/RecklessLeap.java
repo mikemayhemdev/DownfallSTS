@@ -26,17 +26,8 @@ public class RecklessLeap extends AbstractChampCard {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-        myHpLossCost = MAGIC;
+        //myHpLossCost = MAGIC;
      //   tags.add(ChampMod.TECHNIQUE);
-    }
-
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (!(AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID) ||AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID))) {
-            cantUseMessage = EXTENDED_DESCRIPTION[0];
-            return false;
-        }
-        return super.canUse(p, m);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -48,6 +39,6 @@ public class RecklessLeap extends AbstractChampCard {
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
         upgradeMagicNumber(UPG_MAGIC);
-        myHpLossCost = magicNumber;
+       // myHpLossCost = magicNumber;
     }
 }

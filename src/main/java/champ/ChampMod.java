@@ -14,11 +14,12 @@ import champ.potions.OpenerPotion;
 import champ.potions.TechPotion;
 import champ.potions.UltimateStancePotion;
 import champ.powers.CounterPower;
-import champ.powers.ResolvePower;
+
 import champ.relics.*;
 import champ.stances.AbstractChampStance;
 import champ.util.CardFilter;
 import champ.util.CoolVariable;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -496,19 +497,17 @@ public class ChampMod implements
 
     public static int fatigue(int begone) {
 
-        int y = AbstractDungeon.player.currentHealth;
         AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
-                int x = Math.min(begone, AbstractDungeon.player.currentHealth - 1);
-                if (AbstractDungeon.player.hasRelic(PowerArmor.ID) && AbstractDungeon.player.hasPower(ResolvePower.POWER_ID)) {
-                    if (x + AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount > PowerArmor.CAP_RESOLVE_ETC) {
-                        x = PowerArmor.CAP_RESOLVE_ETC - AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount;
+                int x = begone;
+                if (AbstractDungeon.player.hasRelic(PowerArmor.ID) && AbstractDungeon.player.hasPower(VigorPower.POWER_ID)) {
+                    if (x + AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount > PowerArmor.CAP_RESOLVE_ETC) {
+                        x = PowerArmor.CAP_RESOLVE_ETC - AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount;
                     }
                 }
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(x), x));
-                AbstractDungeon.actionManager.addToTop(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, x));
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, x), x));
             }
         });
 
@@ -517,7 +516,7 @@ public class ChampMod implements
             public void update() {
                 isDone = true;
                 if (y - AbstractDungeon.player.currentHealth > 0) {
-                    att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(y - AbstractDungeon.player.currentHealth), y - AbstractDungeon.player.currentHealth));
+                    att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(y - AbstractDungeon.player.currentHealth), y - AbstractDungeon.player.currentHealth));
                 }
             }
         });

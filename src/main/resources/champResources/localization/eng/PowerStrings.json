@@ -6,32 +6,18 @@
       " damage back."
     ]
   },
-  "champ:ResolvePower": {
-    "NAME": "Fatigue",
-    "DESCRIPTIONS": [
-      "You have #b1 #yStrength for every #b10 Fatigue. At the end of combat, restore your Fatigued HP."
-    ]
-  },
   "champ:FocusedDefPower": {
     "NAME": "Focused: Defensive",
     "DESCRIPTIONS": [
-      "At the end of your turn, if you have at least #b20 #yCounter, gain #b",
+      "The next time you use a #yFinisher this turn, gain #b",
       " #yBlock."
     ]
   },
   "champ:FocusedBerPower": {
     "NAME": "Focused: Berserker",
     "DESCRIPTIONS": [
-      "At the end of your turn, if you have at least #b20 #yFatigue, deal #b",
+      "The next time you use a #yFinisher this turn, deal #b",
       " damage to ALL enemies."
-    ]
-  },
-  "champ:EnchantedShieldPower": {
-    "NAME": "Enchanted Shield",
-    "DESCRIPTIONS": [
-      "Prevent the next time you would lose HP this turn.",
-      "Prevent the next #b",
-      " times you would lose HP this turn."
     ]
   },
   "champ:ShieldWallPower": {
@@ -133,7 +119,7 @@
     "NAME": "Berserker Style",
     "DESCRIPTIONS": [
       "#yBerserker #yTechniques grant #b",
-      " more #yFatigue."
+      " more #yVigor."
     ]
   },
   "champ:FalseCounterPower": {
@@ -209,6 +195,12 @@
     "DESCRIPTIONS": [
       "At the start of your next turn, return ",
       " to your hand. It costs #b0 until played."
+    ]
+  },
+  "champ:ResolvePower": {
+    "NAME": "Fatigue",
+    "DESCRIPTIONS": [
+      "At the end of combat, restore your Fatigued HP."
     ]
   }
 }

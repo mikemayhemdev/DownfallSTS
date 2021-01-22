@@ -1,7 +1,7 @@
 /*
 package champ.cards;
 
-import champ.powers.ResolvePower;
+
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -34,8 +34,8 @@ public class FightOn extends AbstractChampCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (p.hasPower(ResolvePower.POWER_ID)) {
-            if (p.getPower(ResolvePower.POWER_ID).amount >= magicNumber) {
+        if (p.hasPower(VigorPower.POWER_ID)) {
+            if (p.getPower(VigorPower.POWER_ID).amount >= magicNumber) {
                 return super.canUse(p, m);
             }
         }

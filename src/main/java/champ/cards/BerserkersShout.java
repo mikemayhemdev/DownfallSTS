@@ -23,7 +23,7 @@ public class BerserkersShout extends AbstractChampCard {
         tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERBERSERKER);
-        myHpLossCost = magicNumber;
+       // myHpLossCost = magicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

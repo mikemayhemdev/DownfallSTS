@@ -30,16 +30,6 @@ public class ShieldSigil extends AbstractChampCard {
     }
 
     @Override
-    public void applyPowers() {
-        super.applyPowers();
-        if (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
-            this.myHpLossCost = BerserkerStance.amount() * magicNumber;
-        } else {
-            this.myHpLossCost = 0;
-        }
-    }
-
-    @Override
     public void triggerOnGlowCheck() {
         glowColor = dcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }

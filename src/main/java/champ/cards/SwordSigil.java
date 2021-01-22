@@ -29,15 +29,6 @@ public class SwordSigil extends AbstractChampCard {
     }
 
 
-    @Override
-    public void applyPowers() {
-        super.applyPowers();
-        if (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
-            this.myHpLossCost = BerserkerStance.amount() * magicNumber;
-        } else {
-            this.myHpLossCost = 0;
-        }
-    }
 
 
     public void upp() {

@@ -7,8 +7,10 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 import sneckomod.SneckoMod;
 
+@CardIgnore
 public class SetATrap extends AbstractChampCard {
 
     public final static String ID = makeID("SetATrap");

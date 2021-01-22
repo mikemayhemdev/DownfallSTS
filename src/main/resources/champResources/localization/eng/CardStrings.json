@@ -14,8 +14,8 @@
   },
   "champ:Execute": {
     "NAME": "Execute",
-    "DESCRIPTION": "Deal !D! damage !cool! times. NL champ:Fatigue !M!.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage !cool! times. NL champ:Fatigue !M!."
+    "DESCRIPTION": "Deal !D! damage !cool! times.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage !cool! times."
   },
   "champ:StanceDance": {
     "NAME": "Stance Dance",
@@ -69,11 +69,11 @@
   },
   "champ:FocusedDefense": {
     "NAME": "Focus: Defensive",
-    "DESCRIPTION": "Enter champ:Defensive. NL If you end this turn with at least 20 champ:Counter, gain !B! Block."
+    "DESCRIPTION": "Enter champ:Defensive. NL The next time you use a champ:Finisher this turn, gain !B! Block."
   },
   "champ:FocusedBerserking": {
     "NAME": "Focus: Berserker",
-    "DESCRIPTION": "Enter champ:Berserker. NL If you end this turn with at least 20 champ:Fatigue, deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Enter champ:Berserker. NL The next time you use a champ:Finisher this turn, deal !D! damage to ALL enemies."
   },
   "champ:SetATrap": {
     "NAME": "Set A Trap",
@@ -82,7 +82,7 @@
   },
   "champ:Backstep": {
     "NAME": "Backstep",
-    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain Block equal to your champ:Fatigue.",
+    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain Block equal to your Vigor.",
     "EXTENDED_DESCRIPTION": [
 	" NL (Grants !B! Block.)"
 	]
@@ -100,8 +100,8 @@
   },
   "champ:BerserkersShout": {
     "NAME": "Berserker's Shout",
-    "DESCRIPTION": "Enter champ:Berserker. NL champ:Fatigue !M!.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Berserker. NL champ:Fatigue !M!. NL Draw a card."
+    "DESCRIPTION": "Enter champ:Berserker. NL Gain !M! Vigor.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Berserker. NL Gain !M! Vigor. NL Draw a card."
   },
   "champ:RageSigil": {
     "NAME": "Battle Plan",
@@ -139,7 +139,7 @@
   },
   "champ:SkillfulDodge": {
     "NAME": "Skillful Dodge",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter. NL *Defensive champ:Combo: Increase this card's Block and champ:Counter by !cool! this combat."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter. NL *Defensive champ:Combo: Increase this card's effects by !cool! this combat."
   },
   "champ:TornadoPunch": {
     "NAME": "Tornado Punch",
@@ -161,7 +161,7 @@
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
-    "DESCRIPTION": "Requires *Defensive or *Berserker. NL Gain !B! Block. NL Gain !M! champ:Counter.",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter.",
     "EXTENDED_DESCRIPTION": [
       "I am not in a Stance."
     ]
@@ -173,8 +173,8 @@
   },
   "champ:FalseCounter": {
     "NAME": "False Counter",
-    "DESCRIPTION": "Requires champ:Defensive. NL The next time champ:Counter activates, lose only half.",
-    "UPGRADE_DESCRIPTION": "Requires champ:Defensive. NL Gain !M! champ:Counter. NL The next time champ:Counter activates, lose only half.",
+    "DESCRIPTION": "The next time champ:Counter activates, lose only half.",
+    "UPGRADE_DESCRIPTION": "Gain !M! champ:Counter. NL The next time champ:Counter activates, lose only half.",
     "EXTENDED_DESCRIPTION": [
       "A poor time for that move."
     ]
@@ -185,8 +185,8 @@
   },
   "champ:Lariat": {
     "NAME": "Lariat",
-    "DESCRIPTION": "Perform X times: NL Gain !B! Block. NL Trigger champ:Technique.",
-    "UPGRADE_DESCRIPTION": "Perform X times, then gain [E] : NL Gain !B! Block. NL Trigger champ:Technique."
+    "DESCRIPTION": "Perform X times: NL Gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "Perform X times, then gain [E] : NL Gain !B! Block."
   },
   "champ:HoldFirm": {
     "NAME": "Hold Firm",
@@ -226,7 +226,7 @@
   },
   "champ:CrookedStrike": {
     "NAME": "Crooked Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Hits three times if *Fatigue is 20 or higher."
+    "DESCRIPTION": "Deal !D! damage. NL Does not consume Vigor."
   },
     "champ:RapidStrikes": {
     "NAME": "Rapid Strikes",
@@ -277,8 +277,8 @@
   },
   "champ:EnragedBash": {
     "NAME": "Enraged Bash",
-    "DESCRIPTION": "Deal !D! damage. NL champ:Fatigue 5. NL *Berserker champ:Combo: This card hits an additional time this combat.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. NL champ:Fatigue 5. NL *Berserker champ:Combo: This card hits an additional time this combat."
+    "DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: This card hits an additional time this combat.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. NL *Berserker champ:Combo: This card hits an additional time this combat."
   },
   "champ:VampiricStrike": {
     "NAME": "Clobber",
@@ -291,7 +291,7 @@
   },
   "champ:HeartStrike": {
     "NAME": "Finish Him",
-    "DESCRIPTION": "Requires champ:Berserker. NL Deal damage equal to your champ:Fatigue.",
+    "DESCRIPTION": "Requires champ:Berserker. NL Deal damage equal to your Vigor.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage.)",
       "A poor time for that move."
@@ -300,10 +300,6 @@
   "champ:CrownThrow": {
     "NAME": "Crownarang",
     "DESCRIPTION": "Deal !D! damage. NL If this doesn't cost 0, return it to your hand next turn. NL It costs 0 until played."
-  },
-  "champ:FightOn": {
-    "NAME": "Fight On",
-    "DESCRIPTION": "Fleeting. NL Can only be played if you have at least !M! champ:Fatigue. NL Gain 5 Max HP."
   },
   "champ:Encircle": {
     "NAME": "Encircle",
@@ -319,7 +315,7 @@
   },
   "champ:RecklessLeap": {
     "NAME": "Reckless Leap",
-    "DESCRIPTION": "Requires champ:Berserker. NL Deal !D! damage. NL champ:Fatigue !M!.",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Vigor.",
     "EXTENDED_DESCRIPTION": [
       "A poor time for that move."
     ]
@@ -331,7 +327,7 @@
   },
   "champ:DeathBlow": {
     "NAME": "Death Blow",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL champ:Fatigue !M!."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !M! Vigor."
   },
   "champ:ArenaPreparation": {
     "NAME": "Arena Preparation",
@@ -392,18 +388,17 @@
   },
   "champ:DefensiveStyle": {
     "NAME": "Defensive Style",
-    "DESCRIPTION": "Enter champ:Defensive. NL champ:Defensive *Techniques grant !M! more champ:Counter.",
+    "DESCRIPTION": "Enter champ:Defensive. NL champ:Fatigue 5. NL champ:Defensive *Techniques grant !M! more champ:Counter.",
     "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Defensive. NL champ:Defensive *Techniques grant !M! more champ:Counter."
   },
   "champ:GladiatorStyle": {
     "NAME": "Good Clean Fight",
-    "DESCRIPTION": "If you start your turn in no Stance, gain !M! temporary Strength and Dexterity.",
-    "UPGRADE_DESCRIPTION": "If you start your turn in no Stance, gain !M! temporary Strength and Dexterity."
+    "DESCRIPTION": "champ:Fatigue 10. NL Gain !M! Strength and Dexterity."
   },
   "champ:BerserkerStyle": {
     "NAME": "Berserker Style",
-    "DESCRIPTION": "Enter champ:Berserker. NL champ:Berserker champ:Techniques grant !M! more champ:Fatigue.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Berserker. NL champ:Berserker champ:Techniques grant !M! more champ:Fatigue."
+    "DESCRIPTION": "Enter champ:Berserker. NL champ:Fatigue 5. NL champ:Berserker champ:Techniques grant !M! more Vigor.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Berserker. NL champ:Fatigue 5. NL champ:Berserker champ:Techniques grant !M! more Vigor."
   },
   "champ:Riposte": {
     "NAME": "Riposte",
@@ -416,7 +411,7 @@
   },
   "champ:PreemptiveStrike": {
     "NAME": "Preemptive Strike",
-    "DESCRIPTION": "Requires *Defensive. NL Deal damage equal to your champ:Counter to ALL enemies. NL Lose half of your champ:Counter.",
+    "DESCRIPTION": "Deal damage equal to your champ:Counter to ALL enemies. NL Lose half of your champ:Counter.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage)",
       "A poor time for that move."

@@ -20,6 +20,7 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -49,6 +50,8 @@ public abstract class AbstractChampCard extends CustomCard {
     public String UPGRADE_DESCRIPTION;
     public String[] EXTENDED_DESCRIPTION;
     public boolean reInitDescription = true;
+
+    public boolean techniqueLast = false;
 
 
     public AbstractChampCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
@@ -321,4 +324,14 @@ public abstract class AbstractChampCard extends CustomCard {
         }
         super.update();
     }
+
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if (hasTag(FINISHER)) {
+            if ((AbstractDungeon.player.stance instanceof NeutralStance))
+                return false;
+        }
+        return super.canUse(p, m);
+    }
+
 }

@@ -3,7 +3,7 @@
     "NAME": "Champion's Crown",
     "FLAVOR": "A WINNER IS YOU!",
     "DESCRIPTIONS": [
-      "When you enter a #yStance while not in one, reduce the cost of a random card in your hand by #b1 this turn."
+      "Start each combat in a random #yStance."
     ]
   },
   "champ:BlackKnightHelmet": {
@@ -73,7 +73,7 @@
     "NAME": "Power Armor",
     "FLAVOR": "Bought used.",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain [E] . NL Your maximum #yFatigue and #yCounter is #b20."
+      "At the start of your turn, gain [E] . NL Your maximum #yVigor and #yCounter is #b20."
     ]
   },
   "champ:SignatureFinisher": {
