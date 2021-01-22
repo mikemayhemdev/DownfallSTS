@@ -52,7 +52,8 @@
       "Allow Standard runs to encounter Downfall Curse cards.",
       "Downfall runs use traditional Map layout - fire before boss, not at start.",
       "Unlock all locked cards and relics for Downfall characters (requires game restart)",
-      "Disable Champ's Stance Helper - for experienced Champions"
+      "Disable Champ's Stance Helper - for experienced Champions",
+      "Disable music overrides (requires game restart)"
     ]
   },
   "downfall:EnergyPanelTip": {

@@ -28,7 +28,7 @@ public class CurlUp extends AbstractGuardianCard {
     private static final int BLOCK = 10;
     private static final int UPGRADE_BONUS = 3;
     private static final int MULTICOUNT = 0;
-    private static final int SOCKETS = 1;
+    private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
 

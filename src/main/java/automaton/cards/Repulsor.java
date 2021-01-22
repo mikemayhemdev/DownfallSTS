@@ -21,8 +21,6 @@ public class Repulsor extends AbstractBronzeCard {
     }
 
     public void upp() {
-        isInnate = true;
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeBaseCost(1);
     }
 }
