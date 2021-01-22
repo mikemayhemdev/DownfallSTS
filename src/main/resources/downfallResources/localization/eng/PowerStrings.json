@@ -16,7 +16,8 @@
   "downfall:NeowInvulnerable": {
     "NAME": "God of Life",
     "DESCRIPTIONS": [
-      "Heals #b2 HP whenever you play a card."
+      "Heals #b",
+      " HP whenever you play a card."
     ]
   },
   "downfall:TransformDrawnCardsPower": {
