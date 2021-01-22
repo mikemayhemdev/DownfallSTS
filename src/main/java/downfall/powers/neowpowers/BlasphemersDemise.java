@@ -22,7 +22,6 @@ public class BlasphemersDemise extends AbstractBossMechanicPower {
     private static final Texture tex32 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowWatcher232.png"));
     private boolean firstTurn;
 
-    private boolean used = false;
 
     public BlasphemersDemise(final AbstractCreature owner, final int amount) {
         this.ID = POWER_ID;
@@ -67,15 +66,6 @@ public class BlasphemersDemise extends AbstractBossMechanicPower {
         } else {
             this.flash();
             amount = 150;
-        }
-    }
-
-    @Override
-    public void atEndOfRound() {
-        super.atEndOfRound();
-        if (used) {
-            this.amount = 100;
-            used = false;
         }
     }
 
