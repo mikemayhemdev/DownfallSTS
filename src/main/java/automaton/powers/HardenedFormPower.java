@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class HardenedFormPower extends AbstractAutomatonPower implements OnCompilePower {
     public static final String NAME = "HardenedForm";
@@ -39,10 +40,11 @@ public class HardenedFormPower extends AbstractAutomatonPower implements OnCompi
             @Override
             public void update() {
                 isDone = true;
+                int x = HardenedFormPower.this.amount;
                 AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(true);
                 if (m != null) {
-                    addToTop(new GainBlockAction(owner, amount));
-                    addToTop(new DamageAction(m, new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
+                    addToTop(new GainBlockAction(owner, x));
+                    addToTop(new DamageAction(m, new DamageInfo(owner, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
                     AbstractDungeon.actionManager.addToTop(new VFXAction(new com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect(orbVFX.currentX + (50F * Settings.scale), orbVFX.currentY + (85F * Settings.scale), m.hb.cX, m.hb.cY), 0.1F));
                     AbstractDungeon.actionManager.addToTop(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
                 }
