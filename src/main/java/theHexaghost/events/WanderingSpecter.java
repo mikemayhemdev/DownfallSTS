@@ -61,7 +61,7 @@ public class WanderingSpecter extends AbstractImageEvent {
 
         if (possRelicsList.size() > 0) {
             rtog = RelicLibrary.getRelic(possRelicsList.get(AbstractDungeon.cardRandomRng.random(possRelicsList.size() - 1))).makeCopy();
-            this.imageEventText.setDialogOption(OPTIONS[0]);
+            this.imageEventText.setDialogOption(OPTIONS[0], new Haunted());
         } else {
             imageEventText.setDialogOption(OPTIONS[1]);
             shopForMore = true;
@@ -86,8 +86,8 @@ public class WanderingSpecter extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         if (!shopForMore) {
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect((CardLibrary.getCurse().makeStatEquivalentCopy()), (float) (Settings.WIDTH * .35F), (float) (Settings.HEIGHT / 2)));
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect((CardLibrary.getCurse().makeStatEquivalentCopy()), (float) (Settings.WIDTH * .65F), (float) (Settings.HEIGHT / 2)));
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Haunted(), (float) (Settings.WIDTH * .35F), (float) (Settings.HEIGHT / 2)));
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Haunted(), (float) (Settings.WIDTH * .65F), (float) (Settings.HEIGHT / 2)));
 
                             AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), rtog);// 83
                             downfallMod.removeAnyRelicFromPools(rtog.relicId);
