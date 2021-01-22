@@ -39,13 +39,11 @@ import champ.relics.ChampStancesModRelic;
 import champ.util.TechniqueMod;
 import charbosses.actions.util.CharBossMonsterGroup;
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Crowbot.CharBossCrowbot;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
-import charbosses.cards.crowbot.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -198,8 +196,6 @@ public class downfallMod implements
     @SpireEnum
     public static AbstractCard.CardTags DOWNFALL_CURSE;
 
-    public static final Color crowbot_Color = CardHelper.getColor(39,100,140).cpy();
-
     public static final boolean EXPERIMENTAL_FLIP = false;
     public static Settings.GameLanguage[] SupportedLanguages = {
             // Insert other languages here
@@ -233,26 +229,6 @@ public class downfallMod implements
         loadConfigData();
 
 
-        /*
-        BaseMod.addColor(CharBossCrowbot.Enums.Crowbot_COLOR,
-                crowbot_Color,
-                crowbot_Color,
-                crowbot_Color,
-                crowbot_Color,
-                crowbot_Color,
-                crowbot_Color,
-                crowbot_Color,
-
-                "downfallResources/images/cardui/512/bg_attack_blue.png",
-                "downfallResources/images/cardui/512/bg_skill_blue.png",
-                "downfallResources/images/cardui/512/bg_power_blue.png",
-                "downfallResources/images/cardui/512/card_blue_orb.png",
-                "downfallResources/images/cardui/1024/bg_attack_blue.png",
-                "downfallResources/images/cardui/1024/bg_skill_blue.png",
-                "downfallResources/images/cardui/1024/bg_power_blue.png",
-                "downfallResources/images/cardui/1024/card_blue_orb.png",
-                "downfallResources/images/cardui/blue.png");
-                */
     }
 
     public static void initialize() {
@@ -1087,7 +1063,6 @@ public class downfallMod implements
         BaseMod.addMonster(NeowBoss.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBoss()}));
         BaseMod.addMonster(NeowBossFinal.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBossFinal()}));
 
-        BaseMod.addMonster(CharBossCrowbot.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossCrowbot()}));
     }
 
     public void addPotions() {
