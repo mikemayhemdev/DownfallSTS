@@ -26,6 +26,7 @@ public class EnragedBash extends AbstractChampCard {
         //myHpLossCost = 5;
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -19,6 +19,7 @@ public class FocusedDefense extends AbstractChampCard {
         this.tags.add(ChampMod.OPENERDEFENSIVE);
         baseBlock = 10;
         tags.add(ChampMod.TECHNIQUE);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

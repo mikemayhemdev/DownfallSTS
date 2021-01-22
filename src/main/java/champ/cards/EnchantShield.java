@@ -16,6 +16,7 @@ public class EnchantShield extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
         magicNumber = baseMagicNumber = 5;
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

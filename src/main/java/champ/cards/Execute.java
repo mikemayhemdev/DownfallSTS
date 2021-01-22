@@ -28,6 +28,7 @@ public class Execute extends AbstractChampCard {
         baseCool = cool = 2;
       //  myHpLossCost = magicNumber;
         tags.add(ChampMod.FINISHER);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

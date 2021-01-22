@@ -16,6 +16,7 @@ public class EnchantCrown extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         //    tags.add(ChampMod.FINISHER);
         exhaust = true;
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

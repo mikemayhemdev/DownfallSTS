@@ -34,6 +34,7 @@ public class TornadoPunch extends AbstractChampCard {
         isMultiDamage = true;
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -17,6 +17,7 @@ public class ShieldSigil extends AbstractChampCard {
         tags.add(ChampMod.TECHNIQUE);
         //tags.add(ChampMod.OPENER);
         baseMagicNumber = magicNumber = 2;
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

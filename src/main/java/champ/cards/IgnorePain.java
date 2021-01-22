@@ -15,6 +15,7 @@ public class IgnorePain extends AbstractChampCard {
         super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
        // tags.add(ChampMod.TECHNIQUE);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

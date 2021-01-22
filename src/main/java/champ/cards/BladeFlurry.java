@@ -25,6 +25,7 @@ public class BladeFlurry extends AbstractChampCard {
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
         tags.add(ChampMod.FINISHER);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

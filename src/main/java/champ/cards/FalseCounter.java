@@ -30,6 +30,7 @@ public class FalseCounter extends AbstractChampCard {
         if (upgraded) applyToSelf(new CounterPower(magicNumber));
         applyToSelf(new FalseCounterPower(1));
         finisher();
+        postInit();
     }
 
     public void upp() {

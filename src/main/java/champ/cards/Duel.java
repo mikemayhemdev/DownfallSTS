@@ -26,7 +26,8 @@ public class Duel extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
         tags.add(ChampMod.TECHNIQUE);
-        techniqueLast = true;
+
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

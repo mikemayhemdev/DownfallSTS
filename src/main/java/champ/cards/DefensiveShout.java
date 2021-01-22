@@ -22,6 +22,7 @@ public class DefensiveShout extends AbstractChampCard {
         tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERDEFENSIVE);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -24,6 +24,7 @@ public class RapidStrikes extends AbstractChampCard {
         // tags.add(ChampMod.FINISHER);
       //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
         baseMagicNumber = magicNumber = 2;
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

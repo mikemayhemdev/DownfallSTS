@@ -18,6 +18,7 @@ public class PreemptiveStrike extends AbstractChampCard {
         baseDamage = 0;
         isMultiDamage = true;
         tags.add(CardTags.STRIKE);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

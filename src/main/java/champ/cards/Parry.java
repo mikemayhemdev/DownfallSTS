@@ -22,6 +22,7 @@ public class Parry extends AbstractChampCard {
         c.rawDescription = UPGRADE_DESCRIPTION;
         c.initializeDescription();
         cardsToPreview = c;
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

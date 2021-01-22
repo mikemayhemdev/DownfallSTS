@@ -16,6 +16,7 @@ public class StrikeOfGenius extends AbstractChampCard {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
 
      //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

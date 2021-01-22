@@ -20,6 +20,7 @@ public class GladiatorStyle extends AbstractChampCard {
         baseMagicNumber = magicNumber = 2;
        // this.tags.add(ChampMod.OPENERGLADIATOR);
         myHpLossCost = 10;
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

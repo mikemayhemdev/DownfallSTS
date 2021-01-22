@@ -18,6 +18,7 @@ public class SwordSigil extends AbstractChampCard {
         //  tags.add(ChampMod.OPENER);
         baseMagicNumber = magicNumber = 2;
         this.exhaust = true;
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

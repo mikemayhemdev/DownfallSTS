@@ -17,6 +17,7 @@ public class ShieldWall extends AbstractChampCard {
     public ShieldWall() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

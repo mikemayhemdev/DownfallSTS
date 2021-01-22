@@ -26,7 +26,8 @@ public class TripleStrike extends AbstractChampCard {
         cardsToPreview = r;
       //  CardModifierManager.addModifier(this, new TechniqueMod());
         tags.add(CardTags.STRIKE);
-       // techniqueLast = true;
+       //
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

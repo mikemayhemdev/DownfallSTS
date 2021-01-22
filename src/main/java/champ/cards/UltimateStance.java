@@ -1,6 +1,7 @@
 package champ.cards;
 
 import basemod.helpers.CardModifierManager;
+import champ.ChampMod;
 import champ.powers.UltimateFormPower;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
@@ -22,7 +23,8 @@ public class UltimateStance extends AbstractChampCard {
     public UltimateStance() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        CardModifierManager.addModifier(this, new TechniqueMod());
+        tags.add(ChampMod.TECHNIQUE);
+        postInit();
     }
 
     @Override
@@ -35,6 +37,7 @@ public class UltimateStance extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        techique();
         triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
         ultimateStance();
         applyToSelf(new UltimateFormPower(magicNumber));

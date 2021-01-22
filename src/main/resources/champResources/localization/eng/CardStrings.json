@@ -291,7 +291,7 @@
   },
   "champ:HeartStrike": {
     "NAME": "Finish Him",
-    "DESCRIPTION": "Requires champ:Berserker. NL Deal damage equal to your Vigor.",
+    "DESCRIPTION": "Deal damage equal to your Vigor.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage.)",
       "A poor time for that move."
@@ -314,8 +314,8 @@
     ]
   },
   "champ:RecklessLeap": {
-    "NAME": "Reckless Leap",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Vigor.",
+    "NAME": "Reckless Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Perform X times:",
     "EXTENDED_DESCRIPTION": [
       "A poor time for that move."
     ]
@@ -327,7 +327,7 @@
   },
   "champ:DeathBlow": {
     "NAME": "Death Blow",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !M! Vigor."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !M! Vigor. NL champ:Fatigue 10. NL Exhaust."
   },
   "champ:ArenaPreparation": {
     "NAME": "Arena Preparation",

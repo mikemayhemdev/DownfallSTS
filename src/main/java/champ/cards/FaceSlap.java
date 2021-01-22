@@ -28,6 +28,7 @@ public class FaceSlap extends AbstractChampCard {
         tags.add(ChampMod.OPENERBERSERKER);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

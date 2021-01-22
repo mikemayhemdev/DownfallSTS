@@ -24,6 +24,7 @@ public class CalledShot extends AbstractChampCard {
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
         tags.add(ChampMod.COMBOBERSERKER);
+        postInit();
     }
 
 

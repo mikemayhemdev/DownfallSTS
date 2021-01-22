@@ -20,6 +20,7 @@ public class HoldFirm extends AbstractChampCard {
         baseBlock = BLOCK;
         magicNumber = baseMagicNumber = 10;
        // tags.add(ChampMod.TECHNIQUE);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

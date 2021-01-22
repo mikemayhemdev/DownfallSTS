@@ -19,6 +19,7 @@ public class DefensiveStyle extends AbstractChampCard {
         this.tags.add(ChampMod.OPENERDEFENSIVE);
         baseMagicNumber = magicNumber = 2;
         myHpLossCost = 5;
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

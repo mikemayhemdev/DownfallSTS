@@ -18,6 +18,7 @@ public class BerserkerStyle extends AbstractChampCard {
         this.tags.add(ChampMod.OPENERBERSERKER);
         baseMagicNumber = magicNumber = 2;
         myHpLossCost = 5;
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

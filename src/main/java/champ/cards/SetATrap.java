@@ -28,6 +28,7 @@ public class SetATrap extends AbstractChampCard {
         this.tags.add(ChampMod.OPENERDEFENSIVE);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

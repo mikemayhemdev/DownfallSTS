@@ -23,6 +23,7 @@ public class SwordThrow extends AbstractChampCard {
         tags.add(ChampMod.COMBOBERSERKER);
         tags.add(ChampMod.COMBO);
         // tags.add(ChampMod.TECHNIQUE);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

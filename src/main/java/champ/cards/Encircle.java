@@ -19,7 +19,7 @@ public class Encircle extends AbstractChampCard {
     //stupid intellij stuff attack, all_enemy, uncommon
 
     private static final int DAMAGE = 3;
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 3;
 
     public Encircle() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
@@ -28,6 +28,7 @@ public class Encircle extends AbstractChampCard {
         //  tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -37,16 +38,6 @@ public class Encircle extends AbstractChampCard {
             atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
 
-        if (bcombo() && !this.purgeOnUse) {
-            AbstractCard r = this;
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    GameActionManager.queueExtraCard(r, m);
-                }
-            });
-        }
     }
 
     @Override
@@ -58,6 +49,5 @@ public class Encircle extends AbstractChampCard {
     public void upp() {
         // tags.add(ChampMod.TECHNIQUE);
         upgradeDamage(2);
-        initializeDescription();
     }
 }

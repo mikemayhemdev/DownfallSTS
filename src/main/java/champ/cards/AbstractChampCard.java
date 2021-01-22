@@ -310,6 +310,10 @@ public abstract class AbstractChampCard extends CustomCard {
         ChampTextHelper.colorCombos(this, true);
     }
 
+    public void postInit(){
+        if (baseDamage > 0) techniqueLast = true;
+    }
+
     @Override
     public void initializeDescription() {
         ChampTextHelper.calculateTagText(this);

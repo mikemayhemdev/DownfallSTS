@@ -20,6 +20,7 @@ public class Devastate extends AbstractChampCard {
 
         this.baseDamage = DAMAGE;
         tags.add(ChampMod.FINISHER);
+        postInit();
 
     }
 

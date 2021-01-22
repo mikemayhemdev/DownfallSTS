@@ -22,6 +22,7 @@ public class BringItOn extends AbstractChampCard {
         baseBlock = 10;
         //exhaust = true;
         tags.add(ChampMod.FINISHER);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

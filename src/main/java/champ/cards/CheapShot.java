@@ -21,6 +21,7 @@ public class CheapShot extends AbstractChampCard {
         baseDamage = DAMAGE;
       //  tags.add(ChampMod.FINISHER);
         exhaust = true;
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
