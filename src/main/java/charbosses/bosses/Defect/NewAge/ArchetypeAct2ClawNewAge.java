@@ -114,7 +114,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                     //Turn 5
                     // Frost
                     addToList(cardsList, new EnHyperbeam(), true);  // removed
-                    ArchetypeAct3OrbsNewAge.increasePretendFocus(-2);
+                    ArchetypeAct3OrbsNewAge.increasePretendFocus(-3);
                     addToList(cardsList, new EnMalfunctioning(), false);
                     addToList(cardsList, new EnDefendBlue(), false);
                     addToList(cardsList, new EnClumsy(), false);  //removed
@@ -151,7 +151,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                 case 1:
                     //Turn 3
                     addToList(cardsList, new EnHyperbeam(), false);
-                    ArchetypeAct3OrbsNewAge.increasePretendFocus(-2);
+                    ArchetypeAct3OrbsNewAge.increasePretendFocus(-3);
                     addToList(cardsList, new EnChargeBattery(), false);
                     addToList(cardsList, new EnShame(), false);
                     addToList(cardsList,  new EnRebound(), false);
@@ -175,6 +175,6 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_Mutagenic());
+        addRelic(new CBR_Ginger());
     }
 }
