@@ -36,7 +36,7 @@ public class YouAreMine extends AbstractExpansionCard {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flash();
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-                if ((!monster.isDead) && (!monster.isDying)) {
+                if ((!monster.isDead) && (!monster.isDying) && !monster.halfDead) {
                     atb(new VFXAction(new CollectorCurseEffect(monster.hb.cX, monster.hb.cY), .5F));
                     atb(new RemoveAllBlockAction(monster, p));
 
