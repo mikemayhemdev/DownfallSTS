@@ -31,11 +31,9 @@ public class GiftsFromTheDead extends AbstractHexaCard {
 
     @Override
     public void triggerOnExhaust() {
-
         applyToSelf(new GiftsFromTheDeadPowerPlus(1));
-
-        if (!upgraded) applyToSelf(new GiftsFromTheDeadPower(1));
-
+        if (upgraded)
+            applyToSelf(new GiftsFromTheDeadPower(1));
     }
 
     public void upgrade() {
