@@ -38,7 +38,7 @@ public class ShopBossPatch {
         }
     }
 
-    private static AbstractCard getReplacement(AbstractCard.CardRarity rarity) {
+    public static AbstractCard getReplacement(AbstractCard.CardRarity rarity) {
         ArrayList<AbstractCard> potentialCardsList = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
             if (q.color == CardColorEnumPatch.CardColorPatch.BOSS && q.rarity == rarity && okayToSpawn(q)) {
