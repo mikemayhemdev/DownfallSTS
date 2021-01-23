@@ -4,13 +4,19 @@ import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.map.MapRoomNode;
+import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.saveAndContinue.SaveAndContinue;
 import com.megacrit.cardcrawl.saveAndContinue.SaveFile;
+import com.megacrit.cardcrawl.ui.buttons.ProceedButton;
 import downfall.downfallMod;
 import downfall.events.Cleric_Evil;
 import downfall.events.WomanInBlue_Evil;
 import downfall.monsters.FleeingMerchant;
+import downfall.monsters.NeowBossFinal;
+import downfall.patches.EndingDoubleFightPatch;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.relics.BrokenWingStatue;
@@ -252,6 +258,18 @@ public class SaveData {
 
             saveLogger.info("Save loaded.");
             //Anything that triggers on load goes here
+
+            System.out.println(file.room_x);
+            if (file.room_x == -2) {
+                System.out.println("WE GOT ONE!");
+               loadIntoNeowDoubleInstead();
+            }
         }
+    }
+
+    public static void loadIntoNeowDoubleInstead() {
+        AbstractDungeon.bossKey = NeowBossFinal.ID;
+        MapRoomNode node = new MapRoomNode(-2, 5);
+        node.room = new MonsterRoomBoss();
     }
 }
