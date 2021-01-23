@@ -4,6 +4,7 @@ import charbosses.actions.util.CharbossDoCardQueueAction;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import charbosses.relics.CBR_Turnip;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.TextAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -30,7 +31,15 @@ public class EnShame extends AbstractBossCard {
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         if (this.dontTriggerOnUseCard) {
             if (AbstractCharBoss.boss.hasRelic(CBR_Turnip.ID)) {
-                this.addToBot(new TextAboveCreatureAction(m, ApplyPowerAction.TEXT[1]));
+                addToBot(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        isDone = true;
+                        CardCrawlGame.sound.play("NULLIFY_SFX");
+                        AbstractCharBoss.boss.getRelic(CBR_Turnip.ID).flash();
+                        this.addToTop(new TextAboveCreatureAction(m, ApplyPowerAction.TEXT[1]));
+                    }
+                });
             }
             else {
                 this.addToTop(new ApplyPowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, new FrailPower(AbstractCharBoss.boss, 1, true), 1));

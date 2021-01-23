@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
@@ -34,7 +35,7 @@ public class StasisCodexAction extends AbstractGameAction {
                         AbstractDungeon.actionManager.addToTop(new PlaceActualCardIntoStasis(codexCard));
                         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
                     } else {
-                        AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.TEXT[6], true));
+                        AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT[5], true));
                     }
 
                     AbstractDungeon.cardRewardScreen.codexCard = null;
