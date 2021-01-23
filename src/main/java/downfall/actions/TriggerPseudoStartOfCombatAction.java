@@ -16,14 +16,14 @@ public class TriggerPseudoStartOfCombatAction extends AbstractGameAction {
     public void update() {
         //Has a bunch of extra stuff in it
         //cB.usePreBattleAction();
+        if (NeowBoss.neowboss.Rezzes == 1){
+            cB.energy.recharge();
+        }
         for (AbstractCharbossRelic r : cB.relics) {
             r.atBattleStartPreDraw();
         }
         for (AbstractCharbossRelic r : cB.relics) {
             r.atBattleStart();
-        }
-        if (NeowBoss.neowboss.Rezzes == 1){
-            cB.energy.recharge();
         }
 
         isDone = true;

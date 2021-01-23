@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import guardian.GuardianMod;
 import guardian.powers.ModeShiftPower;
+import guardian.relics.DefensiveModeMoreBlock;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -20,6 +21,9 @@ public class BraceAction extends AbstractGameAction {
     public BraceAction(int value) {
         this.braceValue = value;
 
+        if (AbstractDungeon.player.hasRelic(DefensiveModeMoreBlock.ID)){
+            braceValue += 1;
+        }
 
     }
 

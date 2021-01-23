@@ -29,9 +29,9 @@
       "ERR: SEQUENCE_EMPTY",
       " - Add a copy of #yInfinite #yLoop to your hand with #b",
       " more damage.",
-      "Choose a card to Mutate.",
-      "Choose a Card to Encode.",
-      "Choose a card."
+      " to Mutate.",
+      " to Encode.",
+      ""
     ]
   },
   "bronze:AutoTextHelper": {

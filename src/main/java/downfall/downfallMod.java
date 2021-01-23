@@ -39,13 +39,11 @@ import champ.relics.ChampStancesModRelic;
 import champ.util.TechniqueMod;
 import charbosses.actions.util.CharBossMonsterGroup;
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Crowbot.CharBossCrowbot;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
-import charbosses.cards.crowbot.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -171,6 +169,7 @@ public class downfallMod implements
     public static boolean contentSharing_curses = true;
     public static boolean crossoverCharacters = true;
     public static boolean unlockEverything = false;
+    public static boolean noMusic = false;
     public static boolean normalMapLayout = false;
     public static boolean champDisableStanceHelper = false;
 
@@ -184,6 +183,7 @@ public class downfallMod implements
     public static final String PROP_UNLOCK_ALL = "unlockEverything";
     public static final String PROP_NORMAL_MAP = "normalMapLayout";
     public static final String PROP_CHAMP_PRO = "champDisableStanceHelper";
+    public static final String PROP_NO_MUSIC = "disableMusicOverride";
 
     public static String Act1BossFaced = downfallMod.makeID("Ironclad");
     public static String Act2BossFaced = downfallMod.makeID("Silent");
@@ -195,8 +195,6 @@ public class downfallMod implements
     public static AbstractCard.CardTags CHARBOSS_SETUP;
     @SpireEnum
     public static AbstractCard.CardTags DOWNFALL_CURSE;
-
-    public static final Color crowbot_Color = CardHelper.getColor(39,100,140).cpy();
 
     public static final boolean EXPERIMENTAL_FLIP = false;
     public static Settings.GameLanguage[] SupportedLanguages = {
@@ -225,29 +223,12 @@ public class downfallMod implements
         configDefault.setProperty(PROP_NORMAL_MAP, "FALSE");
         configDefault.setProperty(PROP_UNLOCK_ALL, "FALSE");
         configDefault.setProperty(PROP_CHAMP_PRO, "FALSE");
+        configDefault.setProperty(PROP_NO_MUSIC, "FALSE");
 
 
         loadConfigData();
 
 
-        BaseMod.addColor(CharBossCrowbot.Enums.Crowbot_COLOR,
-                crowbot_Color,
-                crowbot_Color,
-                crowbot_Color,
-                crowbot_Color,
-                crowbot_Color,
-                crowbot_Color,
-                crowbot_Color,
-
-                "downfallResources/images/cardui/512/bg_attack_blue.png",
-                "downfallResources/images/cardui/512/bg_skill_blue.png",
-                "downfallResources/images/cardui/512/bg_power_blue.png",
-                "downfallResources/images/cardui/512/card_blue_orb.png",
-                "downfallResources/images/cardui/1024/bg_attack_blue.png",
-                "downfallResources/images/cardui/1024/bg_skill_blue.png",
-                "downfallResources/images/cardui/1024/bg_power_blue.png",
-                "downfallResources/images/cardui/1024/card_blue_orb.png",
-                "downfallResources/images/cardui/blue.png");
     }
 
     public static void initialize() {
@@ -300,6 +281,7 @@ public class downfallMod implements
 
             config.setBool(PROP_UNLOCK_ALL, unlockEverything);
             config.setBool(PROP_CHAMP_PRO, champDisableStanceHelper);
+            config.setBool(PROP_NO_MUSIC, noMusic);
             config.save();
             GoldenIdol_Evil.save();
         } catch (IOException e) {
@@ -538,7 +520,7 @@ public class downfallMod implements
         });
 
         ModLabeledToggleButton characterCrossoverBtn = new ModLabeledToggleButton(configStrings.TEXT[4],
-                350.0f, 400.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                350.0f, 450.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
                 crossoverCharacters, settingsPanel, (label) -> {
         }, (button) -> {
             crossoverCharacters = button.enabled;
@@ -549,7 +531,7 @@ public class downfallMod implements
         });
 
         ModLabeledToggleButton normalMapBtn = new ModLabeledToggleButton(configStrings.TEXT[6],
-                350.0f, 350, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                350.0f, 400, Settings.CREAM_COLOR, FontHelper.charDescFont,
                 normalMapLayout, settingsPanel, (label) -> {
         }, (button) -> {
             normalMapLayout = button.enabled;
@@ -557,7 +539,7 @@ public class downfallMod implements
         });
 
         ModLabeledToggleButton champProConfig = new ModLabeledToggleButton(configStrings.TEXT[8],
-                350.0f, 300, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                350.0f, 350, Settings.CREAM_COLOR, FontHelper.charDescFont,
                 champDisableStanceHelper, settingsPanel, (label) -> {
         }, (button) -> {
             champDisableStanceHelper = button.enabled;
@@ -566,10 +548,19 @@ public class downfallMod implements
 
 
         ModLabeledToggleButton unlockAllBtn = new ModLabeledToggleButton(configStrings.TEXT[7],
-                350.0f, 250, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                350.0f, 300, Settings.CREAM_COLOR, FontHelper.charDescFont,
                 unlockEverything, settingsPanel, (label) -> {
         }, (button) -> {
             unlockEverything = button.enabled;
+            saveData();
+        });
+
+
+        ModLabeledToggleButton noMusicBtn = new ModLabeledToggleButton(configStrings.TEXT[9],
+                350.0f, 250, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                noMusic, settingsPanel, (label) -> {
+        }, (button) -> {
+            noMusic = button.enabled;
             saveData();
         });
 
@@ -583,6 +574,7 @@ public class downfallMod implements
         settingsPanel.addUIElement(normalMapBtn);
         settingsPanel.addUIElement(champProConfig);
         settingsPanel.addUIElement(unlockAllBtn);
+        settingsPanel.addUIElement(noMusicBtn);
 
         BaseMod.registerModBadge(badgeTexture, "downfall", "Downfall Team", "A very evil Expansion.", settingsPanel);
 
@@ -600,6 +592,7 @@ public class downfallMod implements
             crossoverCharacters = config.getBool(PROP_CHAR_CROSSOVER);
             champDisableStanceHelper = config.getBool(PROP_CHAMP_PRO);
             unlockEverything = config.getBool(PROP_UNLOCK_ALL);
+            noMusic = config.getBool(PROP_NO_MUSIC);
         } catch (Exception e) {
             e.printStackTrace();
             clearData();
@@ -1070,7 +1063,6 @@ public class downfallMod implements
         BaseMod.addMonster(NeowBoss.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBoss()}));
         BaseMod.addMonster(NeowBossFinal.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBossFinal()}));
 
-        BaseMod.addMonster(CharBossCrowbot.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossCrowbot()}));
     }
 
     public void addPotions() {
