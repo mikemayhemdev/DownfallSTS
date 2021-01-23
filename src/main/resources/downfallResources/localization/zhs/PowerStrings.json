@@ -106,7 +106,7 @@
   "downfall:SilentMirrorImagePower": {
     "NAME": "复视",
     "DESCRIPTIONS": [
-      "一个 #y静默猎手 的 #y残影 隐蔽了她的真实位置。攻击 #y残影 则其将在本回合消失。"
+      "一个 #y静默猎手 的 #y残影 隐蔽了她的真实位置。攻击 #y本体或残影 则其将在本回合消失。"
     ]
   },
   "downfall:NeowSeeingDouble": {

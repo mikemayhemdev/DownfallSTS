@@ -17,7 +17,7 @@
     "NAME": "铜制装甲板",
     "FLAVOR": "装甲再多也不为过。",
     "DESCRIPTIONS": [
-      "每当你 #yguardianmod:提防 时，降低模式转换的计数1。"
+      "每当你 #yguardianmod:提防 时，　#yguardianmod:提防 #b1 。"
     ]
   },
   "Guardian:GemCopier": {
