@@ -21,7 +21,7 @@ public class RemoveNextErrorPower extends AbstractAutomatonPower implements OnAd
         if (addition instanceof AbstractBronzeCard && addition.hasTag(AutomatonMod.BAD_COMPILE)) {
             ((AbstractBronzeCard) addition).turnOffCompileStuff();
             flash();
-            addToBot(new ReducePowerAction(owner, owner, this.ID, 1));
+            addToTop(new ReducePowerAction(owner, owner, this.ID, 1));
         }
     }
 
