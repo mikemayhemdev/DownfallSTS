@@ -6,6 +6,8 @@ import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.fatigue;
+
 public class BerserkerStyle extends AbstractChampCard {
 
     public final static String ID = makeID("BerserkerStyle");
