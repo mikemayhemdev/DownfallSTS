@@ -1166,7 +1166,6 @@ public class downfallMod implements
             AddBustKeyButtonPatches.KeyFields.bustedEmerald.set(AbstractDungeon.player, false);
             AddBustKeyButtonPatches.KeyFields.bustedRuby.set(AbstractDungeon.player, false);
             AddBustKeyButtonPatches.KeyFields.bustedSapphire.set(AbstractDungeon.player, false);
-            EndingDoubleFightPatch.inTrueFight = false;
         }
     }
 
