@@ -65,7 +65,7 @@
   },
   "Guardian:GuardianWhirl": {
     "NAME": "Guardian Whirl",
-    "DESCRIPTION": "Must be in *Defensive *Mode. NL Exit *Defensive *Mode. NL Deal !D! damage !M! times to ALL enemies."
+    "DESCRIPTION": "Must be in guardianmod:Defensive_Mode. NL Exit guardianmod:Defensive_Mode. NL Deal !D! damage !M! times to ALL enemies."
   },
   "Guardian:VentSteam": {
     "NAME": "Vent Steam",
@@ -116,7 +116,7 @@
   },
   "Guardian:Harden": {
     "NAME": "Harden",
-    "DESCRIPTION": "Must be in *Defensive *Mode. NL Gain !B! Block and !M! Thorns."
+    "DESCRIPTION": "Must be in guardianmod:Defensive_Mode. NL Gain !B! Block and !M! Thorns."
   },
   "Guardian:SentryBeam": {
     "NAME": "Sentry Blast",
