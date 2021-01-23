@@ -238,12 +238,7 @@
   },
   "champ:BladeFlurry": {
     "NAME": "Flurry of Strikes",
-    "DESCRIPTION": "Deal !D! damage for each card *Strike in your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Deal !D! damage for each *Strike in your hand.",
-    "EXTENDED_DESCRIPTION": [
-      " NL (Hits ",
-      " times.)"
-    ]
+    "DESCRIPTION": "Deal !D! damage. NL The next *Strike you play this turn is played twice."
   },
   "champ:SwordThrow": {
     "NAME": "Sword Throw",
@@ -287,15 +282,15 @@
   },
   "champ:HeartStrike": {
     "NAME": "Finish Him",
-    "DESCRIPTION": "Deal damage equal to your Vigor.",
+    "DESCRIPTION": "Can only be used against an enemy with less than !M!% HP. NL Deal !D1 damage.",
     "EXTENDED_DESCRIPTION": [
-      " NL (Deals !D! damage.)",
-      "A poor time for that move."
+      "A poor time for that move.",
+      "That foe isn't ready to be ended yet."
     ]
   },
   "champ:CrownThrow": {
     "NAME": "Crownarang",
-    "DESCRIPTION": "Deal !D! damage. NL If this doesn't cost 0, return it to your hand next turn. NL It costs 0 until played."
+    "DESCRIPTION": "Deal !D! damage. NL If this doesn't cost 0, return it to your hand next turn. It costs 0 until played."
   },
   "champ:Encircle": {
     "NAME": "Encircle",

@@ -36,6 +36,7 @@ import champ.ChampMod;
 import champ.cards.ModFinisher;
 import champ.powers.LastStandModPower;
 import champ.relics.ChampStancesModRelic;
+import champ.relics.ChampionCrown;
 import champ.util.TechniqueMod;
 import charbosses.actions.util.CharBossMonsterGroup;
 import charbosses.bosses.AbstractCharBoss;
@@ -1243,7 +1244,10 @@ public class downfallMod implements
         }
 
         if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ChampStances.ID) || ModHelper.isModEnabled(ChampStances.ID)) {
-            RelicLibrary.getRelic(ChampStancesModRelic.ID).makeCopy().instantObtain();
+            if (!(AbstractDungeon.player instanceof ChampChar)) {
+                RelicLibrary.getRelic(ChampionCrown.ID).makeCopy().instantObtain();
+            }
+
             for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
                 if (!c.hasTag(ChampMod.TECHNIQUE))
                     CardModifierManager.addModifier(c, new TechniqueMod());

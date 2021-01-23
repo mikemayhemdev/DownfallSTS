@@ -17,11 +17,11 @@ public class CrookedStrike extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 0;
     private static final int UPG_DAMAGE = 3;
 
     public CrookedStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
         tags.add(ChampMod.FINISHER);
@@ -30,26 +30,13 @@ public class CrookedStrike extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        if (AbstractDungeon.player.hasPower(VigorPower.POWER_ID)) {
 
-
-        }
         finisher();
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeBaseCost(1);
     }
 
 
-    @Override
-    public void triggerOnGlowCheck() {
-        if (AbstractDungeon.player.hasPower(VigorPower.POWER_ID)) {
-            if (AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount >= 20) {
-                glowColor = GOLD_BORDER_GLOW_COLOR;
-                return;
-            }
-        }
-        glowColor = BLUE_BORDER_GLOW_COLOR;
-    }
 }

@@ -52,7 +52,7 @@ public abstract class AbstractChampCard extends CustomCard {
     public String[] EXTENDED_DESCRIPTION;
     public boolean reInitDescription = true;
 
-    public boolean techniqueLast = false;
+    public boolean techniqueLast = true;
 
 
     public AbstractChampCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {

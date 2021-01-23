@@ -28,9 +28,9 @@ public class Encircle extends AbstractChampCard {
     public Encircle() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
-        //  tags.add(ChampMod.TECHNIQUE);
-        tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBOBERSERKER);
+        tags.add(ChampMod.TECHNIQUE);
+        //tags.add(ChampMod.COMBO);
+       // tags.add(ChampMod.COMBOBERSERKER);
         postInit();
     }
 

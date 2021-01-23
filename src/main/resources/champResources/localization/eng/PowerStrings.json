@@ -209,5 +209,13 @@
     "DESCRIPTIONS": [
       "At the end of combat, restore your Fatigued HP."
     ]
+  },
+  "champ:DualPlaySrikePower": {
+    "NAME": "Flurry of Strikes",
+    "DESCRIPTIONS": [
+      "Your next #yStrike is played twice this turn.",
+      "Your next ",
+      " #yStrikes are played twice this turn."
+    ]
   }
 }
