@@ -46,8 +46,6 @@ public class GiftsFromTheDeadPowerPlus extends AbstractPower implements Cloneabl
     @Override
     public void onExhaust(AbstractCard card) {
         if (card.isEthereal) {
-          //  addToBot(new ApplyPowerAction(owner, owner, new DrawCardNextTurnPower(owner, amount), amount));
-//            addToBot(new GainEnergyAction(amount));
             addToBot(new ApplyPowerAction(owner, owner, new EnergizedPower(owner, amount), amount));
         }
     }

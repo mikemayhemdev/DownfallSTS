@@ -211,9 +211,6 @@ public abstract class AbstractGuardianCard extends CustomCard {
         if (!AbstractDungeon.player.hasPower(ModeShiftPower.POWER_ID)){
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ModeShiftPower(AbstractDungeon.player, AbstractDungeon.player, 20), 20));
         }
-        if (AbstractDungeon.player.hasRelic(DefensiveModeMoreBlock.ID)){
-            modeShiftValue += 1;
-        }
         AbstractDungeon.actionManager.addToBottom(new BraceAction(modeShiftValue));
 
     }

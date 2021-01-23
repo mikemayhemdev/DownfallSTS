@@ -16,7 +16,8 @@
   "downfall:NeowInvulnerable": {
     "NAME": "God of Life",
     "DESCRIPTIONS": [
-      "Heals #b2 HP whenever you play a card."
+      "Heals #b",
+      " HP whenever you play a card."
     ]
   },
   "downfall:TransformDrawnCardsPower": {
@@ -106,7 +107,7 @@
   "downfall:SilentMirrorImagePower": {
     "NAME": "Seeing Double",
     "DESCRIPTIONS": [
-      "At the start of each turn, a mirror image of Silent will hide her real location. Attacking the mirror removes it from combat for the turn."
+      "At the start of each turn, a mirror image of Silent will hide her real location. Attacking Silent or the mirror removes it from combat for the turn."
     ]
   },
   "downfall:NeowSeeingDouble": {

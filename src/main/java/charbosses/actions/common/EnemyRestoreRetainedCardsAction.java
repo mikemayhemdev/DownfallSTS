@@ -30,6 +30,8 @@ public class EnemyRestoreRetainedCardsAction extends AbstractGameAction {
                 c.remove();
             }
         }
-        this.boss.hand.refreshHandLayout();
+        if (boss != null) {
+            this.boss.hand.refreshHandLayout();
+        }
     }
 }

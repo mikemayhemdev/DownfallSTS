@@ -41,6 +41,7 @@ public class HexaFalling extends AbstractImageEvent {
                     this.imageEventText.updateBodyText(DESCRIPTIONS[0]);
                     this.screen = CurScreen.END;
                 }
+                break;
             case END:
                 this.openMap();
         }

@@ -14,12 +14,11 @@ public class FullRelease extends AbstractBronzeCard {
 
 
     public FullRelease() {
-        super(ID, 3, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         thisEncodes();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
     }
 
     @Override

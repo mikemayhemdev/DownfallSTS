@@ -1,5 +1,6 @@
 package downfall.util;
 
+import basemod.patches.com.megacrit.cardcrawl.saveAndContinue.SaveAndContinue.Save;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.saveAndContinue.SaveAndContinue;
 import downfall.downfallMod;
 import downfall.vfx.CustomAnimatedNPC;
 import downfall.vfx.TopLevelSpeechBubble;
@@ -53,8 +55,6 @@ public class HeartMerchant implements Disposable {
         this.saidWelcome = false;
         this.shopScreen = 1;
         this.anim = new CustomAnimatedNPC(DRAW_X, DRAW_Y, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true,0);
-
-
         AbstractCard c;
         for(c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.ATTACK, true).makeCopy(); c.color == AbstractCard.CardColor.COLORLESS; c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.ATTACK, true).makeCopy()) {
         }

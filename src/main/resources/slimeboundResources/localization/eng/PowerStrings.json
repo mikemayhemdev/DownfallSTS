@@ -190,9 +190,9 @@
   "Slimebound:GluttonyPower": {
     "NAME": "Gluttony",
     "DESCRIPTIONS": [
-      "The first time you #yAttack a #yGooped enemy each turn, add a random #yLick card to your hand.",
+      "The first time you #yConsume each turn, add a random #yLick card to your hand.",
       "The first ",
-      " times you #yAttack a #yGooped enemy each turn, add a random #yLick card to your hand.",
+      " times you #yConsume each turn, add a random #yLick card to your hand.",
       " NL This effect can be triggered #b",
       " more times this turn.",
       " more time this turn.",

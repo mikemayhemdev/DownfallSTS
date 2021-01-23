@@ -21,6 +21,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
 
     private EnClaw c;
     private CharBossDefect cB;
+    private boolean A19 = AbstractDungeon.ascensionLevel >= 19;
 
     public ArchetypeAct3OrbsNewAge() {
         super("DF_ARCHETYPE_ORBS", "Orbs");
@@ -100,18 +101,25 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     cB.orbsAsEn().get(1).evokeOverride = true;
                     cB.orbsAsEn().get(1).evokeMult = 2;
                     // Dark Lightning
-                    addToList(cardsList, new EnMulticast(2));
                     // Evokes Dark
-                    cB.orbsAsEn().get(2).evokeOverride = true;
-                    cB.orbsAsEn().get(2).evokeMult = 2;
+                    if (!A19) {
+                        addToList(cardsList, new EnMulticast(2));
+                        cB.orbsAsEn().get(2).evokeOverride = true;
+                        cB.orbsAsEn().get(2).evokeMult = 2;
+                    }
+                    else {
+                        addToList(cardsList, new EnMulticast(3));
+                        cB.orbsAsEn().get(2).evokeOverride = true;
+                        cB.orbsAsEn().get(2).evokeMult = 3;
+                    }
                     // Lightning
                     turn++;
                     break;
                 case 2:
                     //Turn 3
                     //Lightning
-                    addToList(cardsList, new EnBarrage(), true); // Bullseye was here, but Bullseye is a cursed thing
                     addToList(cardsList, new EnColdSnap());
+                    addToList(cardsList, new EnBarrage(), true); // Bullseye was here, but Bullseye is a cursed thing
                     //Lightning Frost
                     addToList(cardsList, new EnLeap());
                     turn++;
@@ -158,8 +166,11 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     addToList(cardsList, new EnColdSnap(), false);
                     //Lightning Frost
                     addToList(cardsList, new EnZap(), true);
-                    // Lightning Frost Lightning. Perfect loop!
-                    addToList(cardsList, new EnReinforcedBody(), extraUpgrades);
+                    // Lightning Frost Lightning. Perfect loop! :D
+                    if (!A19)
+                        addToList(cardsList, new EnReinforcedBody(), extraUpgrades);
+                    else
+                        addToList(cardsList, new EnReinforcedBody(3), extraUpgrades);
                     turn = 0;
                     looped = true;
                     break;

@@ -16,11 +16,11 @@ public class AlphaBuild extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, rare
 
-    private static final int DAMAGE = 15;
+    private static final int DAMAGE = 13;
     private static final int UPG_DAMAGE = 3;
 
     public AlphaBuild() {
-        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         thisEncodes();
         //tags.add(AutomatonMod.BAD_COMPILE);

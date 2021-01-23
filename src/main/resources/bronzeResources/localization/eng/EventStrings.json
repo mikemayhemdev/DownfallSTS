@@ -23,8 +23,8 @@
       "Even for unfinished prototypes, they are still formidable - no need for unnecessary risks."
     ],
     "OPTIONS": [
-      "[Fight Donu Prototype] #gGain #gDonu #gBeam.",
-      "[Fight Deca Prototype] #gGain #gDeca #gShield.",
+      "[Fight Donu Prototype] #gGain #gProto-Beam.",
+      "[Fight Deca Prototype] #gGain #gProto-Shield.",
       "[Fight Both] #gGain #gBoth #gCards.",
       "[Leave]"
     ]

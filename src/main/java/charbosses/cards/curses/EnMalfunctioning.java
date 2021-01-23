@@ -42,7 +42,6 @@ public class EnMalfunctioning extends AbstractBossCard {
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         if (this.dontTriggerOnUseCard) {
             this.addToBot(new MakeTempCardInDiscardAction(new Wound(), 1));
-
         }
     }
 
