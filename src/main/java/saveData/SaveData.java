@@ -7,7 +7,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.map.MapRoomNode;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
+import com.megacrit.cardcrawl.rooms.ShopRoom;
 import com.megacrit.cardcrawl.saveAndContinue.SaveAndContinue;
 import com.megacrit.cardcrawl.saveAndContinue.SaveFile;
 import com.megacrit.cardcrawl.ui.buttons.ProceedButton;
@@ -20,6 +22,7 @@ import downfall.patches.EndingDoubleFightPatch;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.relics.BrokenWingStatue;
+import downfall.rooms.HeartShopRoom;
 import javassist.CtBehavior;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -240,8 +243,11 @@ public class SaveData {
             FleeingMerchant.CURRENT_STRENGTH = merchantStrength;
             FleeingMerchant.CURRENT_SOULS = merchantSouls;
 
+            System.out.println(merchantDead);
             FleeingMerchant.DEAD = merchantDead;
+            System.out.println(merchantEscaped);
             FleeingMerchant.ESCAPED = merchantEscaped;
+
 
             BrokenWingStatue.GIVEN = brokenWingGiven;
 
