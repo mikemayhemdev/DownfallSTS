@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
+import static champ.ChampMod.fatigue;
+
 public class GladiatorStyle extends AbstractChampCard {
 
     public final static String ID = makeID("GladiatorStyle");
@@ -24,7 +26,7 @@ public class GladiatorStyle extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new ResolvePower(10));
+        fatigue(10);
         applyToSelf(new StrengthPower(p, magicNumber));
         applyToSelf(new DexterityPower(p, magicNumber));
     }

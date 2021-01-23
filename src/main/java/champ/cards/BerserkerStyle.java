@@ -23,7 +23,7 @@ public class BerserkerStyle extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         berserkOpen();
-        applyToSelf(new ResolvePower(5));
+        fatigue(5);
         applyToSelf(new BerserkerStylePower(magicNumber));
     }
 

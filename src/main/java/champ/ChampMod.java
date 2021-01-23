@@ -15,6 +15,7 @@ import champ.potions.TechPotion;
 import champ.potions.UltimateStancePotion;
 import champ.powers.CounterPower;
 
+import champ.powers.ResolvePower;
 import champ.relics.*;
 import champ.stances.AbstractChampStance;
 import champ.util.CardFilter;
@@ -298,16 +299,16 @@ public class ChampMod implements
 
         downfallMod.registerUnlockSuite(
                 BerserkerStyle.ID,
-                ViciousMockery.ID,
+                GladiatorStyle.ID,
                 DefensiveStyle.ID,
-
-                RageSigil.ID,
-                ShieldSigil.ID,
-                SwordSigil.ID,
 
                 EnchantShield.ID,
                 EnchantSword.ID,
                 EnchantCrown.ID,
+
+                DeathBlow.ID,
+                IgnorePain.ID,
+                LastStand.ID,
 
                 SignatureFinisher.ID,
                 PowerArmor.ID,
@@ -495,7 +496,7 @@ public class ChampMod implements
         }
     }
 
-    public static int fatigue(int begone) {
+    public static void vigor(int begone) {
 
         AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
             @Override
@@ -511,12 +512,27 @@ public class ChampMod implements
             }
         });
 
+    }
+
+    public static int fatigue(int begone) {
+
+        int y = AbstractDungeon.player.currentHealth;
+        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                int x = Math.min(begone, AbstractDungeon.player.currentHealth - 1);
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(x), x));
+                AbstractDungeon.actionManager.addToTop(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, x));
+            }
+        });
+
         /*atb(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
                 if (y - AbstractDungeon.player.currentHealth > 0) {
-                    att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(y - AbstractDungeon.player.currentHealth), y - AbstractDungeon.player.currentHealth));
+                    att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(y - AbstractDungeon.player.currentHealth), y - AbstractDungeon.player.currentHealth));
                 }
             }
         });
@@ -525,3 +541,4 @@ public class ChampMod implements
         return Math.min(begone, AbstractDungeon.player.currentHealth - 1);
     }
 }
+

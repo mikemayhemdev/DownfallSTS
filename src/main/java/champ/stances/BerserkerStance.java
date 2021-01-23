@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
 import guardian.vfx.DefensiveModeStanceParticleEffect;
 
 import static champ.ChampMod.fatigue;
+import static champ.ChampMod.vigor;
 
 public class BerserkerStance extends AbstractChampStance {
 
@@ -62,7 +63,7 @@ public class BerserkerStance extends AbstractChampStance {
 
     @Override
     public void technique() {
-        fatigue(amount());
+        vigor(amount());
     }
 
     @Override

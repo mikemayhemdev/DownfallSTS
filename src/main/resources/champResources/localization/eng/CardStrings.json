@@ -77,7 +77,7 @@
   },
   "champ:SetATrap": {
     "NAME": "Set A Trap",
-    "DESCRIPTION": "Gain !B! Block, twice if any enemy is Weak. NL *Defensive champ:Combo: Apply !M! Weak."
+    "DESCRIPTION": "Gain !B! Block, twice if any enemy is Weak. NL *Defensive champ:Combo: Apply !M! Weak to ALL enemies."
   },
   "champ:Backstep": {
     "NAME": "Backstep",
@@ -156,7 +156,7 @@
   },
   "champ:EnchantShield": {
     "NAME": "Enchant Shield",
-    "DESCRIPTION": "Choose a card in hand. Increase its Block by !M! for this combat. NL Exhaust."
+    "DESCRIPTION": "champ:Fatigue 5. NL Choose a card in hand. Increase its Block by !M! for this combat. NL Exhaust."
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
@@ -230,11 +230,11 @@
   },
     "champ:RapidStrikes": {
     "NAME": "Rapid Strikes",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Reduce the cost of a random #yStrike in your hand to 0 this turn."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Reduce the cost of a random *Strike in your hand to 0 this turn."
   },
   "champ:EnchantSword": {
     "NAME": "Enchant Sword",
-    "DESCRIPTION": "Choose a card in hand. Increase its damage by !M! for this combat. Exhaust."
+    "DESCRIPTION": "champ:Fatigue 5. NL Choose a card in hand. Increase its damage by !M! for this combat. Exhaust."
   },
   "champ:BladeFlurry": {
     "NAME": "Flurry of Strikes",
@@ -420,7 +420,7 @@
   },
   "champ:EnchantCrown": {
     "NAME": "Enchant Crown",
-    "DESCRIPTION": "Choose a card in hand. It costs 0 this combat. NL Exhaust."
+    "DESCRIPTION": "champ:Fatigue 5. NL Choose a card in hand. It costs 0 this combat. NL Exhaust."
   },
   "champ:ModFinisherStrike": {
     "NAME": "Finishing Strike",

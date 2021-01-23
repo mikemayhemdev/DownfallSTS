@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static champ.ChampMod.fatigue;
+import static champ.ChampMod.vigor;
 
 public class DeathBlow extends AbstractChampCard {
 
@@ -32,8 +33,8 @@ public class DeathBlow extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
        // techique();
         allDmg(AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        fatigue(magicNumber);
-        applyToSelf(new ResolvePower(10));
+        vigor(magicNumber);
+        fatigue(10);
        // finisher();
     }
 

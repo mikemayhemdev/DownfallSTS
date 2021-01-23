@@ -7,6 +7,8 @@ import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.fatigue;
+
 public class DefensiveStyle extends AbstractChampCard {
 
     public final static String ID = makeID("DefensiveStyle");
@@ -24,7 +26,7 @@ public class DefensiveStyle extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         defenseOpen();
-        applyToSelf(new ResolvePower(5));
+        fatigue(5);
         applyToSelf(new DefensiveStylePower(magicNumber));
     }
 

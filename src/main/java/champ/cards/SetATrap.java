@@ -25,7 +25,7 @@ public class SetATrap extends AbstractChampCard {
     // private static final int UPG_MAGIC = 3;
 
     public SetATrap() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL);
         baseBlock = block = 6;
         baseMagicNumber = magicNumber = MAGIC;
      //   tags.add(ChampMod.OPENER);
@@ -55,7 +55,15 @@ public class SetATrap extends AbstractChampCard {
             }
         });
 
-        if (dcombo()) applyToEnemy(m, autoWeak(m, magicNumber));
+        if (dcombo()) {
+
+            for (AbstractMonster m2 : AbstractDungeon.getMonsters().monsters) {
+                if (!m2.isDead && !m2.isDying) {
+                    applyToEnemy(m2, autoWeak(m, magicNumber));
+                }
+
+            }
+        }
      //   defenseOpen();
 
     }

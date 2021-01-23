@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static champ.ChampMod.fatigue;
+import static champ.ChampMod.vigor;
 
 public class RecklessLeap extends AbstractChampCard {
 
@@ -42,7 +43,7 @@ public class RecklessLeap extends AbstractChampCard {
                 ((AbstractChampStance) AbstractDungeon.player.stance).techique();
             //addToTop(new ApplyPowerAction(p, p, new CounterPower(boom), boom));
         }
-        fatigue(magicNumber);
+        vigor(magicNumber);
         techique();
     }
 
