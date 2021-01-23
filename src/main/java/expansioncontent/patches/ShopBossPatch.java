@@ -1,12 +1,19 @@
 package expansioncontent.patches;
 
+import automaton.AutomatonChar;
 import basemod.ReflectionHacks;
+import champ.ChampChar;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.shop.ShopScreen;
 import downfall.patches.EvilModeCharacterSelect;
+import expansioncontent.actions.RandomCardWithTagAction;
+import expansioncontent.cards.*;
+import guardian.characters.GuardianCharacter;
+import slimebound.characters.SlimeboundCharacter;
+import theHexaghost.TheHexaghost;
 
 import java.util.ArrayList;
 
@@ -34,10 +41,31 @@ public class ShopBossPatch {
     private static AbstractCard getReplacement(AbstractCard.CardRarity rarity) {
         ArrayList<AbstractCard> potentialCardsList = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
-            if (q.color == CardColorEnumPatch.CardColorPatch.BOSS && q.rarity == rarity) {
+            if (q.color == CardColorEnumPatch.CardColorPatch.BOSS && q.rarity == rarity && okayToSpawn(q)) {
                 potentialCardsList.add(q);
             }
         }
         return potentialCardsList.get(AbstractDungeon.merchantRng.random(0, potentialCardsList.size() - 1));
+    }
+
+    private static boolean okayToSpawn(AbstractCard q) {
+        if (AbstractDungeon.player instanceof SlimeboundCharacter) {
+            if (q.cardID.equals(PrepareCrush.ID)) {
+                return false;
+            }
+        }
+        if (AbstractDungeon.player instanceof TheHexaghost || RandomCardWithTagAction.hexaLocked()) {
+           if (q.cardID.equals(Hexaburn.ID)) return false;
+        }
+        if (AbstractDungeon.player instanceof GuardianCharacter || RandomCardWithTagAction.guardianLocked()) {
+            if (q.cardID.equals(GuardianWhirl.ID)) return false;
+        }
+        if (AbstractDungeon.player instanceof ChampChar || RandomCardWithTagAction.champLocked()) {
+            if (q.cardID.equals(LastStand.ID)) return false;
+        }
+        if (AbstractDungeon.player instanceof AutomatonChar || RandomCardWithTagAction.autoLocked()) {
+            if (q.cardID.equals(HyperBeam.ID)) return false;
+        }
+        return true;
     }
 }
