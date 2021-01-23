@@ -529,7 +529,7 @@
   },
   "bronze:Assembly": {
     "NAME": "Assembly",
-    "DESCRIPTION": "Scry !M!. NL bronze:Encode all cards with bronze:Encode discarded. NL Exhaust."
+    "DESCRIPTION": "Scry !M!. NL bronze:Encode all cards with bronze:Encode discarded in selected order. NL Exhaust."
   },
   "bronze:FineTuning": {
     "NAME": "Fine Tuning",

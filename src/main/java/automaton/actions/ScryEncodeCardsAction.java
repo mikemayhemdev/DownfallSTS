@@ -55,14 +55,14 @@ public class ScryEncodeCardsAction extends AbstractGameAction {
 
                 AbstractDungeon.gridSelectScreen.open(tmpGroup, this.amount, true, TEXT[0]);
             } else if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-                for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
+                for (int i = AbstractDungeon.gridSelectScreen.selectedCards.size() - 1; i >= 0; i--) {
+                    AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(i);
                     if (c.hasTag(AutomatonMod.ENCODES)) {
                         addToTop(new AddToFuncAction(c, AbstractDungeon.player.drawPile));
                     } else {
                         AbstractDungeon.player.drawPile.moveToDiscardPile(c);
                     }
                 }
-
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
             }
 

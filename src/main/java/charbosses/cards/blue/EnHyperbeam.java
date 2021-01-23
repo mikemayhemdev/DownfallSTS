@@ -53,8 +53,7 @@ public class EnHyperbeam extends AbstractBossCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(3);
-            this.upgradeMagicNumber(1);
+            this.upgradeDamage(8);
         }
     }
 

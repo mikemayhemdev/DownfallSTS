@@ -150,6 +150,6 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_CharonsAshes());
+        addRelic(new CBR_Orichalcum());
     }
 }
