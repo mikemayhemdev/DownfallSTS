@@ -17,7 +17,6 @@ import downfall.util.CardIgnore;
 
 import static champ.ChampMod.fatigue;
 
-@CardIgnore
 public class Encircle extends AbstractChampCard {
 
     public final static String ID = makeID("Encircle");

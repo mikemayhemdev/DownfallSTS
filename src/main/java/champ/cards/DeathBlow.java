@@ -23,7 +23,7 @@ public class DeathBlow extends AbstractChampCard {
         baseMagicNumber = magicNumber = MAGIC;
         isMultiDamage = true;
        // tags.add(ChampMod.TECHNIQUE);
-        myHpLossCost = MAGIC;
+        myHpLossCost = 10;
         //tags.add(ChampMod.FINISHER);
         postInit();
         exhaust = true;

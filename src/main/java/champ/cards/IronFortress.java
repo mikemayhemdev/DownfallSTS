@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import champ.powers.IronFortressPower;
 import champ.powers.IronFortressVigorPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,6 +17,9 @@ public class IronFortress extends AbstractChampCard {
     public IronFortress() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+
+        tags.add(ChampMod.TECHNIQUE);
+        techniqueLast = true;
         postInit();
     }
 

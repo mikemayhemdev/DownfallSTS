@@ -13,7 +13,6 @@ import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
-@CardIgnore
 public class RapidStrikes extends AbstractChampCard {
 
     public final static String ID = makeID("RapidStrikes");

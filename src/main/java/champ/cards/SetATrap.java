@@ -15,7 +15,6 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import downfall.util.CardIgnore;
 import sneckomod.SneckoMod;
 
-@CardIgnore
 public class SetATrap extends AbstractChampCard {
 
     public final static String ID = makeID("SetATrap");

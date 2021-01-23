@@ -180,7 +180,8 @@
   },
   "champ:IronFortress": {
     "NAME": "Technical Jig",
-    "DESCRIPTION": "Whenever you enter a Stance:"
+    "DESCRIPTION": "Whenever you enter a Stance:",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you enter a Stance:"
   },
   "champ:Lariat": {
     "NAME": "Lariat",
@@ -237,8 +238,8 @@
   },
   "champ:BladeFlurry": {
     "NAME": "Flurry of Strikes",
-    "DESCRIPTION": "Deal !D! damage for each card #yStrike in your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Deal !D! damage for each #yStrike in your hand.",
+    "DESCRIPTION": "Deal !D! damage for each card *Strike in your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Deal !D! damage for each *Strike in your hand.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " times.)"
@@ -254,7 +255,8 @@
   },
   "champ:HeavySlash": {
     "NAME": "Masterful Slash",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your Upgraded cards."
+    "DESCRIPTION": "Deal !D! damage. NL Add a random champ:Technique to your hand. It costs 0.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a random Upgraded champ:Technique to your hand. It costs 0."
   },
   "champ:CheapShot": {
     "NAME": "Cheap Shot",
