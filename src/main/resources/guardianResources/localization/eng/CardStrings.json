@@ -287,7 +287,7 @@
   },
   "Guardian:BaubleBeam": {
     "NAME": "Bauble Burst",
-    "DESCRIPTION": "Deal !D! damage. NL Perform the following !M! times:"
+    "DESCRIPTION": "Deal !D! damage. NL NL Perform !M! times:"
   },
   "Guardian:PrimingBeam": {
     "NAME": "Priming Shot",

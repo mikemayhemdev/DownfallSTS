@@ -311,15 +311,15 @@
   },
   "champ:RecklessLeap": {
     "NAME": "Reckless Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Perform !M! times:",
+    "DESCRIPTION": "Deal !D! damage. NL NL Perform !M! times:",
     "EXTENDED_DESCRIPTION": [
       "A poor time for that move."
     ]
   },
   "champ:IgnorePain": {
     "NAME": "Ignore Pain",
-    "DESCRIPTION": "Your HP cannot be reduced until your next turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Your HP cannot be reduced until your next turn. NL Exhaust."
+    "DESCRIPTION": "champ:Fatigue 5. Your HP cannot be reduced until your next turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL champ:Fatigue 5. Your HP cannot be reduced until your next turn. NL Exhaust."
   },
   "champ:DeathBlow": {
     "NAME": "Death Blow",
