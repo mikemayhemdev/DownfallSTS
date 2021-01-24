@@ -1207,7 +1207,7 @@ public class downfallMod implements
         l.add(new CustomMod(Improvised.ID, "g", true));
         l.add(new CustomMod(EvilRun.ID, "b", false));
         l.add(new CustomMod(ExchangeController.ID, "r", true));
-        l.add(new CustomMod(Lament.ID, "g", true));
+        l.add(new CustomMod(Lament.ID, "g", false));
         l.add(new CustomMod(Analytical.ID, "g", true));
         l.add(new CustomMod(StatusAbuse.ID, "r", true));
     }
