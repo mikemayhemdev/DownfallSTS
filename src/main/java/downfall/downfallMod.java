@@ -1166,7 +1166,13 @@ public class downfallMod implements
             AddBustKeyButtonPatches.KeyFields.bustedEmerald.set(AbstractDungeon.player, false);
             AddBustKeyButtonPatches.KeyFields.bustedRuby.set(AbstractDungeon.player, false);
             AddBustKeyButtonPatches.KeyFields.bustedSapphire.set(AbstractDungeon.player, false);
-            EndingDoubleFightPatch.inTrueFight = false;
+
+            if ((ModHelper.enabledMods.size() > 0) &&
+                    ((ModHelper.isModEnabled("The Guardian Cards"))
+                            || (ModHelper.isModEnabled("The Slime Boss Cards"))
+                    )) {
+                AbstractDungeon.player.increaseMaxOrbSlots(1, false);
+            }
         }
     }
 
@@ -1208,7 +1214,7 @@ public class downfallMod implements
         l.add(new CustomMod(Improvised.ID, "g", true));
         l.add(new CustomMod(EvilRun.ID, "b", false));
         l.add(new CustomMod(ExchangeController.ID, "r", true));
-        l.add(new CustomMod(Lament.ID, "g", true));
+        l.add(new CustomMod(Lament.ID, "g", false));
         l.add(new CustomMod(Analytical.ID, "g", true));
         l.add(new CustomMod(StatusAbuse.ID, "r", true));
     }

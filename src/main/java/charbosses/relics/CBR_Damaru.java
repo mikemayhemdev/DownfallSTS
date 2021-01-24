@@ -20,6 +20,10 @@ public class CBR_Damaru extends AbstractCharbossRelic {
         super(new Damaru());
     }
 
+    public String getUpdatedDescription() {
+        return this.DESCRIPTIONS[0] + 1 + this.DESCRIPTIONS[1];
+    }
+
     @Override
     public void atTurnStart() {
 
