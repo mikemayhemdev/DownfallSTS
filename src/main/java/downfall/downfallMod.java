@@ -1166,6 +1166,13 @@ public class downfallMod implements
             AddBustKeyButtonPatches.KeyFields.bustedEmerald.set(AbstractDungeon.player, false);
             AddBustKeyButtonPatches.KeyFields.bustedRuby.set(AbstractDungeon.player, false);
             AddBustKeyButtonPatches.KeyFields.bustedSapphire.set(AbstractDungeon.player, false);
+
+            if ((ModHelper.enabledMods.size() > 0) &&
+                    ((ModHelper.isModEnabled("The Guardian Cards"))
+                            || (ModHelper.isModEnabled("The Slime Boss Cards"))
+                    )) {
+                AbstractDungeon.player.increaseMaxOrbSlots(1, false);
+            }
         }
     }
 
