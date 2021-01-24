@@ -24,7 +24,7 @@
     ]
   },
   "bronze:DonuBeam": {
-    "NAME": "甜圈激光",
+    "NAME": "原型激光",
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL bronze:编译 - 获得 !M! 力量 并 失去 !bauto! 敏捷 。",
     "EXTENDED_DESCRIPTION": [
       "平滑",
@@ -32,7 +32,7 @@
     ]
   },
   "bronze:DecaBeam": {
-    "NAME": "八体护盾",
+    "NAME": "原型护盾",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 - 获得 !M! 层 多层护甲 并 bronze:插入 !bauto! 张 *晕眩 。",
     "EXTENDED_DESCRIPTION": [
       "锯齿",
