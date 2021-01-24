@@ -16,7 +16,8 @@
   "downfall:NeowInvulnerable": {
     "NAME": "生命之神",
     "DESCRIPTIONS": [
-      "你每打出一张牌，它回复 #b2 点生命。"
+      "你每打出一张牌，它回复 #b",
+      " 点生命。"
     ]
   },
   "downfall:TransformDrawnCardsPower": {
