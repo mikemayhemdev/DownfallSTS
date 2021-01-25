@@ -16,14 +16,12 @@ import downfall.monsters.NeowBossFinal;
         method = "goToTrueVictoryRoom"
 )
 public class EndingDoubleFightPatch {
-    public static boolean inTrueFight = false;
-
     public static SpireReturn<Void> Prefix(ProceedButton __instance) {
         AbstractRoom curRoom = AbstractDungeon.getCurrRoom();
         if (curRoom instanceof MonsterRoomBoss) {
             if (EvilModeCharacterSelect.evilMode && AbstractDungeon.id.equals("TheEnding")) {
-                if (!inTrueFight) {
-                    inTrueFight = true;
+                System.out.println(AbstractDungeon.getCurrMapNode().x);
+                if (!AbstractDungeon.bossKey.equals(NeowBossFinal.ID)) {
                     goToNeowBoss(__instance);
                     return SpireReturn.Return(null);
                 }
@@ -36,7 +34,7 @@ public class EndingDoubleFightPatch {
         AbstractDungeon.bossKey = NeowBossFinal.ID;
         CardCrawlGame.music.fadeOutBGM();
         CardCrawlGame.music.fadeOutTempBGM();
-        MapRoomNode node = new MapRoomNode(-1, 5);
+        MapRoomNode node = new MapRoomNode(-2, 5);
         node.room = new MonsterRoomBoss();
         AbstractDungeon.nextRoom = node;
         AbstractDungeon.closeCurrentScreen();

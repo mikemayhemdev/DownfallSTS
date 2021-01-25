@@ -1,10 +1,12 @@
 package automaton.powers;
 
-import automaton.actions.RepeatCardAction;
+import automaton.cards.FunctionCard;
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardModifierPatches;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class FullReleasePower extends AbstractAutomatonPower implements NonStackablePower {
     public static final String NAME = "FullRelease";
@@ -25,7 +27,30 @@ public class FullReleasePower extends AbstractAutomatonPower implements NonStack
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flash();
             AbstractCard q = stored.makeStatEquivalentCopy();
-            addToBot(new RepeatCardAction(q));
+            if (q instanceof FunctionCard) {
+                for (AbstractCard r : ((FunctionCard) q).cards()) {
+                    r.resetAttributes();
+                }
+                addToBot(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        isDone = true;
+                        for (int i = ((FunctionCard) q).cards().size() - 1; i >= 0; i--) {
+                            AbstractCard c = ((FunctionCard) q).cards().get(i);
+                            c.resetAttributes();
+                            addToTop(new AbstractGameAction() {
+                                @Override
+                                public void update() {
+                                    isDone = true;
+                                    c.resetAttributes();
+                                    AbstractMonster m = AbstractDungeon.getRandomMonster();
+                                    c.use(AbstractDungeon.player, m);
+                                }
+                            });
+                        }
+                    }
+                });
+            }
         }
     }
 
@@ -34,9 +59,9 @@ public class FullReleasePower extends AbstractAutomatonPower implements NonStack
     public void updateDescription() {
         if (stored == null) {
             description = "ERROR - PLEASE REPORT BUG";
-        }
-        else {
-            description = DESCRIPTIONS[0] + CardModifierPatches.CardModifierOnCreateDescription.calculateRawDescription(stored, stored.rawDescription);
+        } else {
+            String s = DESCRIPTIONS[0] + CardModifierPatches.CardModifierOnCreateDescription.calculateRawDescription(stored, stored.rawDescription);
+            description = s.replaceAll("bronze:", "#y").replaceAll("\\*", "#y");
         }
     }
 }

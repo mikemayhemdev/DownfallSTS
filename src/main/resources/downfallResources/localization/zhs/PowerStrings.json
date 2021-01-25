@@ -16,7 +16,8 @@
   "downfall:NeowInvulnerable": {
     "NAME": "生命之神",
     "DESCRIPTIONS": [
-      "你每打出一张牌，它回复 #b2 点生命。"
+      "你每打出一张牌，它回复 #b",
+      " 点生命。"
     ]
   },
   "downfall:TransformDrawnCardsPower": {
@@ -106,7 +107,7 @@
   "downfall:SilentMirrorImagePower": {
     "NAME": "复视",
     "DESCRIPTIONS": [
-      "一个 #y静默猎手 的 #y残影 隐蔽了她的真实位置。攻击 #y残影 则其将在本回合消失。"
+      "一个 #y静默猎手 的 #y残影 隐蔽了她的真实位置。攻击 #y本体或残影 则其将在本回合消失。"
     ]
   },
   "downfall:NeowSeeingDouble": {

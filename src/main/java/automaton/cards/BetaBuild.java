@@ -18,10 +18,10 @@ public class BetaBuild extends AbstractBronzeCard {
     public final static String ID = makeID("BetaBuild");
 
     //stupid intellij stuff attack, enemy, rare
-    private static final int BLOCK = 15;
+    private static final int BLOCK = 13;
 
     public BetaBuild() {
-        super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = 1;
         thisEncodes();
