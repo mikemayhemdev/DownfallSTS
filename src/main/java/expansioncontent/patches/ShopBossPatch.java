@@ -48,7 +48,7 @@ public class ShopBossPatch {
         return potentialCardsList.get(AbstractDungeon.merchantRng.random(0, potentialCardsList.size() - 1));
     }
 
-    private static boolean okayToSpawn(AbstractCard q) {
+    public static boolean okayToSpawn(AbstractCard q) {
         if (AbstractDungeon.player instanceof SlimeboundCharacter) {
             if (q.cardID.equals(PrepareCrush.ID)) {
                 return false;
@@ -64,7 +64,7 @@ public class ShopBossPatch {
             if (q.cardID.equals(LastStand.ID)) return false;
         }
         if (AbstractDungeon.player instanceof AutomatonChar || RandomCardWithTagAction.autoLocked()) {
-            if (q.cardID.equals(HyperBeam.ID)) return false;
+            return !q.cardID.equals(HyperBeam.ID);
         }
         return true;
     }

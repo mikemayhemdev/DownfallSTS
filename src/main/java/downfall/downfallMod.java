@@ -13,9 +13,7 @@ import automaton.EasyInfoDisplayPanel;
 import automaton.SuperTip;
 import automaton.cardmods.EncodeMod;
 import automaton.cards.Defend;
-import automaton.cards.SpaghettiCode;
 import automaton.cards.Strike;
-import automaton.powers.LibraryModPower;
 import automaton.relics.*;
 import automaton.util.*;
 import basemod.BaseMod;
@@ -23,7 +21,6 @@ import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.Pair;
 import basemod.abstracts.CustomUnlockBundle;
-import basemod.devcommands.unlock.Unlock;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
@@ -69,12 +66,17 @@ import com.megacrit.cardcrawl.events.city.*;
 import com.megacrit.cardcrawl.events.exordium.*;
 import com.megacrit.cardcrawl.events.shrines.FaceTrader;
 import com.megacrit.cardcrawl.events.shrines.*;
-import com.megacrit.cardcrawl.helpers.*;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ModHelper;
+import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
-import com.megacrit.cardcrawl.monsters.beyond.Donu;
-import com.megacrit.cardcrawl.relics.*;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.GoldenIdol;
+import com.megacrit.cardcrawl.relics.MedicalKit;
+import com.megacrit.cardcrawl.relics.VelvetChoker;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -96,13 +98,13 @@ import downfall.events.shrines_evil.TransmogrifierEvil;
 import downfall.events.shrines_evil.UpgradeShrineEvil;
 import downfall.monsters.*;
 import downfall.patches.DailyModeEvilPatch;
-import downfall.patches.EndingDoubleFightPatch;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.patches.ui.topPanel.GoldToSoulPatches;
 import downfall.potions.CursedFountainPotion;
 import downfall.relics.KnowingSkull;
 import downfall.relics.*;
+import downfall.util.BossCardReward;
 import downfall.util.LocalizeHelper;
 import downfall.util.ReplaceData;
 import expansioncontent.expansionContentMod;
@@ -117,7 +119,6 @@ import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
@@ -471,16 +472,19 @@ public class downfallMod implements
 
 
         //Init save stuff for custom rewards.
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new DazingPulseReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+        //Automaton
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new DazingPulseReward(), (customReward) -> new RewardSave(customReward.type.toString(), DazingPulseReward.ID));
 
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new DecaBeamReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new DecaBeamReward(), (customReward) -> new RewardSave(customReward.type.toString(), DecaBeamReward.ID));
 
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new DonuBeamReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new DonuBeamReward(), (customReward) -> new RewardSave(customReward.type.toString(), DonuBeamReward.ID));
 
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new ExplodeReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new ExplodeReward(), (customReward) -> new RewardSave(customReward.type.toString(), ExplodeReward.ID));
 
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new SpikeReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new SpikeReward(), (customReward) -> new RewardSave(customReward.type.toString(), SpikeReward.ID));
 
+        //Downfall
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new BossCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), BossCardReward.ID));
     }
 
     private void initializeConfig() {
