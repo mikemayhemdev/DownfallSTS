@@ -13,14 +13,14 @@ public class Hexaburn extends AbstractExpansionCard {
     public Hexaburn() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_hexaghost.png", "expansioncontentResources/images/1024/bg_boss_hexaghost.png");
-
         tags.add(expansionContentMod.STUDY_HEXAGHOST);
         tags.add(expansionContentMod.STUDY);
         baseMagicNumber = magicNumber = 6;
+        baseDamage = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new PretendHexWheelPower(magicNumber));
+        applyToSelf(new PretendHexWheelPower(magicNumber, damage));
     }
 
     public void upgrade() {
@@ -29,7 +29,6 @@ public class Hexaburn extends AbstractExpansionCard {
             upgradeMagicNumber(-2);
         }
     }
-
 }
 
 
