@@ -41,6 +41,7 @@ public class EnJAX extends AbstractBossCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeMagicNumber(1);
+            strengthGeneratedIfPlayed++;
         }
 
     }
