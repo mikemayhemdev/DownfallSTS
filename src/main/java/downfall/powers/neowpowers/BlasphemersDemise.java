@@ -1,6 +1,6 @@
 package downfall.powers.neowpowers;
 
-import charbosses.bosses.Watcher.CharBossWatcher;
+import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -8,9 +8,8 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.GainStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;import downfall.downfallMod; import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import downfall.downfallMod;
 import downfall.util.TextureLoader;
 
 public class BlasphemersDemise extends AbstractBossMechanicPower {
@@ -49,13 +48,12 @@ public class BlasphemersDemise extends AbstractBossMechanicPower {
         }
     }
 
-
     @Override
-    public int onLoseHp(int damageAmount) {
+    public int onAttacked(DamageInfo info, int damageAmount) {
         this.flash();
-        stackPower( damageAmount * -1);
+        stackPower(damageAmount * -1);
         this.updateDescription();
-        return super.onLoseHp(damageAmount);
+        return damageAmount;
     }
 
     @Override

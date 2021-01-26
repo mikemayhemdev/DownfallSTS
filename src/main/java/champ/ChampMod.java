@@ -461,7 +461,7 @@ public class ChampMod implements
     public int receiveOnPlayerLoseBlock(int i) {
         if (AbstractDungeon.player.hasRelic(DeflectingBracers.ID)) {
             AbstractDungeon.player.getRelic(DeflectingBracers.ID).flash();
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(AbstractDungeon.player.currentBlock), AbstractDungeon.player.currentBlock));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(i), i));
         }
         return i;
     }
