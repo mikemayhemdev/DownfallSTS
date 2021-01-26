@@ -77,7 +77,6 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.GoldenIdol;
 import com.megacrit.cardcrawl.relics.MedicalKit;
 import com.megacrit.cardcrawl.relics.VelvetChoker;
-import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.custom.CustomMod;
@@ -99,6 +98,7 @@ import downfall.events.shrines_evil.UpgradeShrineEvil;
 import downfall.monsters.*;
 import downfall.patches.DailyModeEvilPatch;
 import downfall.patches.EvilModeCharacterSelect;
+import downfall.patches.RewardItemTypeEnumPatch;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.patches.ui.topPanel.GoldToSoulPatches;
 import downfall.potions.CursedFountainPotion;
@@ -474,34 +474,34 @@ public class downfallMod implements
 
         //Init save stuff for custom rewards.
         //Automaton
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new DazingPulseReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.DAZINGPULSE, (rewardSave) -> new DazingPulseReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new DecaBeamReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.DECABEAM, (rewardSave) -> new DecaBeamReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new DonuBeamReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.DONUBEAM, (rewardSave) -> new DonuBeamReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new ExplodeReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.EXPLODE, (rewardSave) -> new ExplodeReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new SpikeReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.SPIKE, (rewardSave) -> new SpikeReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
         //Downfall
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new BossCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.BOSSCARD, (rewardSave) -> new BossCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new JaxReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.JAXCARD, (rewardSave) -> new JaxReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new RemoveCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.REMOVECARD, (rewardSave) -> new RemoveCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new TransformCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.TRANSFORMCARD, (rewardSave) -> new TransformCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new UpgradeCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.UPGRADECARD, (rewardSave) -> new UpgradeCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
         //Snecko
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new ColorfulCardReward(AbstractCard.CardColor.valueOf(rewardSave.id)), (customReward) -> new RewardSave(customReward.type.toString(), customReward instanceof ColorfulCardReward ? ((ColorfulCardReward) customReward).myColor.toString() : "COLORLESS"));
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.COLORFULCARD, (rewardSave) -> new ColorfulCardReward(AbstractCard.CardColor.valueOf(rewardSave.id)), (customReward) -> new RewardSave(customReward.type.toString(), customReward instanceof ColorfulCardReward ? ((ColorfulCardReward) customReward).myColor.toString() : "COLORLESS"));
 
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new UpgradedUnknownReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.UPGRADEDUNKNOWNCARD, (rewardSave) -> new UpgradedUnknownReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
         //Hexaghost
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new SealSealReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.SEALCARD, (rewardSave) -> new SealSealReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
     }
 
     private void initializeConfig() {
