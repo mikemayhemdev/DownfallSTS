@@ -117,6 +117,7 @@ import sneckomod.util.ColorfulCardReward;
 import sneckomod.util.UpgradedUnknownReward;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
+import theHexaghost.util.SealSealReward;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -498,6 +499,9 @@ public class downfallMod implements
         BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new ColorfulCardReward(AbstractCard.CardColor.valueOf(rewardSave.id)), (customReward) -> new RewardSave(customReward.type.toString(), customReward instanceof ColorfulCardReward ? ((ColorfulCardReward) customReward).myColor.toString() : "COLORLESS"));
 
         BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new UpgradedUnknownReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+
+        //Hexaghost
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new SealSealReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
     }
 
     private void initializeConfig() {
