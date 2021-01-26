@@ -187,9 +187,9 @@ public class expansionContentMod implements
     /*
     @Override
     public void receiveEditStrings() {
-        BaseMod.loadCustomStringsFile(CardStrings.class, getModID() + "Resources/localization/eng/Cardstrings.json");
-        BaseMod.loadCustomStringsFile(RelicStrings.class, getModID() + "Resources/localization/eng/Relicstrings.json");
-        BaseMod.loadCustomStringsFile(PowerStrings.class, getModID() + "Resources/localization/eng/Powerstrings.json");
+        BaseMod.loadCustomStringsFile(CardStrings.class, getModID() + "Resources/localization/eng/CardStrings.json");
+        BaseMod.loadCustomStringsFile(RelicStrings.class, getModID() + "Resources/localization/eng/RelicStrings.json");
+        BaseMod.loadCustomStringsFile(PowerStrings.class, getModID() + "Resources/localization/eng/PowerStrings.json");
     }
     */
 
