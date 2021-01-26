@@ -49,13 +49,12 @@ public class BlasphemersDemise extends AbstractBossMechanicPower {
         }
     }
 
-
     @Override
-    public int onLoseHp(int damageAmount) {
+    public int onAttacked(DamageInfo info, int damageAmount) {
         this.flash();
         stackPower( damageAmount * -1);
         this.updateDescription();
-        return super.onLoseHp(damageAmount);
+        return damageAmount;
     }
 
     @Override
