@@ -1,23 +1,20 @@
 package theTodo;
 
-import automaton.AutomatonMod;
+
 import basemod.BaseMod;
-import basemod.interfaces.*;
+import basemod.interfaces.EditCardsSubscriber;
+import basemod.interfaces.EditCharactersSubscriber;
+import basemod.interfaces.EditRelicsSubscriber;
+import basemod.interfaces.PostInitializeSubscriber;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
-import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
-import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.Prefs;
 import com.megacrit.cardcrawl.helpers.SaveHelper;
-import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.random.Random;
 import downfall.util.CardIgnore;
 import javassist.CtClass;
@@ -34,7 +31,6 @@ import theTodo.util.Wiz;
 import java.io.File;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -134,7 +130,7 @@ public class TodoMod implements
     private static void autoAddCards()
             throws URISyntaxException, IllegalAccessException, InstantiationException, NotFoundException, ClassNotFoundException {
         ClassFinder finder = new ClassFinder();
-        URL url = AutomatonMod.class.getProtectionDomain().getCodeSource().getLocation();
+        URL url = TodoMod.class.getProtectionDomain().getCodeSource().getLocation();
         finder.add(new File(url.toURI()));
 
         ClassFilter filter =
