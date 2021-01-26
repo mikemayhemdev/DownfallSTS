@@ -30,7 +30,8 @@ public class DonuBeam extends AbstractBronzeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
             AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY, new Color(MathUtils.random(0, 255), MathUtils.random(0, 255), MathUtils.random(0, 255), 1F)), 0.1F));
+            if (m != null)
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY, new Color(MathUtils.random(0, 255), MathUtils.random(0, 255), MathUtils.random(0, 255), 1F)), 0.1F));
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
         }
 
