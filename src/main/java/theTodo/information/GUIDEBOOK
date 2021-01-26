@@ -8,4 +8,4 @@ Setup guide:
 5. Rename the modded character file. (the class initially named TheTodo, not in a folder.)
 6. In the modded character file, go to the Enums section at the bottom and change the PlayerClass and CardColor enums. They're also annotated with TODOs.
 7. You'll need to go into downfallMod and refactor->Rename the package name of the todo-character. There's a TODO marked there.
-8+. You'll probably want to rename your character in the CharStrings file to start off. From there, it's just making the mod of your dreams!
+8+. Finally, go into the strings files and find-and-replace todomod with your new mod ID. From there, it's just making the mod of your dreams!
