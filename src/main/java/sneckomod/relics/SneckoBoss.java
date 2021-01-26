@@ -12,10 +12,10 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.UnknownClass;
 import sneckomod.util.ColorfulCardReward;
-import downfall.util.TextureLoader;
 
 public class SneckoBoss extends CustomRelic implements CustomSavable<String> {
 
@@ -82,7 +82,8 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<String> {
             AbstractDungeon.commonCardPool.group.removeIf(q -> q instanceof UnknownClass && !q.cardID.equals(c.cardID));
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
-            this.description = getUpdatedDescription(); this.tips.clear();
+            this.description = getUpdatedDescription();
+            this.tips.clear();
             this.tips.add(new PowerTip(this.name, this.description));
         }
     }
@@ -102,7 +103,8 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<String> {
     @Override
     public void onLoad(String s) {
         chosenChar = s;
-        this.description = getUpdatedDescription(); this.tips.clear();
+        this.description = getUpdatedDescription();
+        this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
     }
 

@@ -47,7 +47,7 @@ public class UnknownUpgradedPostCombatPower extends AbstractPower implements Clo
     @Override
     public void onVictory() {
         for (int i = 0; i < this.amount; i++)
-            AbstractDungeon.getCurrRoom().addCardReward(new UpgradedUnknownReward(AbstractDungeon.player.getCardColor()));
+            AbstractDungeon.getCurrRoom().addCardReward(new UpgradedUnknownReward());
     }
 
     @Override

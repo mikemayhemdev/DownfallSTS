@@ -113,6 +113,8 @@ import guardian.relics.PickAxe;
 import slimebound.SlimeboundMod;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.*;
+import sneckomod.util.ColorfulCardReward;
+import sneckomod.util.UpgradedUnknownReward;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
 
@@ -471,26 +473,31 @@ public class downfallMod implements
 
         //Init save stuff for custom rewards.
         //Automaton
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new DazingPulseReward(), (customReward) -> new RewardSave(customReward.type.toString(), DazingPulseReward.ID));
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new DazingPulseReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new DecaBeamReward(), (customReward) -> new RewardSave(customReward.type.toString(), DecaBeamReward.ID));
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new DecaBeamReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new DonuBeamReward(), (customReward) -> new RewardSave(customReward.type.toString(), DonuBeamReward.ID));
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new DonuBeamReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new ExplodeReward(), (customReward) -> new RewardSave(customReward.type.toString(), ExplodeReward.ID));
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new ExplodeReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new SpikeReward(), (customReward) -> new RewardSave(customReward.type.toString(), SpikeReward.ID));
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new SpikeReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
         //Downfall
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new BossCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), BossCardReward.ID));
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new BossCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new JaxReward(), (customReward) -> new RewardSave(customReward.type.toString(), JaxReward.ID));
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new JaxReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new RemoveCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), RemoveCardReward.ID));
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new RemoveCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new TransformCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), TransformCardReward.ID));
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new TransformCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
-        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new UpgradeCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), UpgradeCardReward.ID));
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new UpgradeCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+
+        //Snecko
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new ColorfulCardReward(AbstractCard.CardColor.valueOf(rewardSave.id)), (customReward) -> new RewardSave(customReward.type.toString(), customReward instanceof ColorfulCardReward ? ((ColorfulCardReward) customReward).myColor.toString() : "COLORLESS"));
+
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new UpgradedUnknownReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
     }
 
     private void initializeConfig() {
