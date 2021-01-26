@@ -17,6 +17,7 @@ import automaton.cards.SpaghettiCode;
 import automaton.cards.Strike;
 import automaton.powers.LibraryModPower;
 import automaton.relics.*;
+import automaton.util.DazingPulseReward;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
@@ -73,6 +74,8 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.relics.*;
+import com.megacrit.cardcrawl.rewards.RewardItem;
+import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.custom.CustomMod;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
@@ -464,6 +467,10 @@ public class downfallMod implements
                 downfallCurses.add(c);
             }
         }
+
+
+        //Init save stuff for custom rewards.
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new DazingPulseReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
     }
 
