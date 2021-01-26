@@ -17,7 +17,7 @@ import automaton.cards.SpaghettiCode;
 import automaton.cards.Strike;
 import automaton.powers.LibraryModPower;
 import automaton.relics.*;
-import automaton.util.DazingPulseReward;
+import automaton.util.*;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
@@ -73,6 +73,7 @@ import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.monsters.beyond.Donu;
 import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rewards.RewardSave;
@@ -471,6 +472,14 @@ public class downfallMod implements
 
         //Init save stuff for custom rewards.
         BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new DazingPulseReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new DecaBeamReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new DonuBeamReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new ExplodeReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new SpikeReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
     }
 
