@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.RewardGlowEffect;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
+import sneckomod.cards.unknowns.UnknownClass;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -68,9 +69,20 @@ public class UpgradedUnknownReward extends RewardItem {
 
     public static AbstractCard getUnknownCard() {
         ArrayList<AbstractCard> list = new ArrayList<>();// 1201
-        for (AbstractCard c : CardLibrary.getAllCards()) {
-            if (c instanceof AbstractUnknownCard)
-                list.add(c);
+        for (AbstractCard c : AbstractDungeon.commonCardPool.group) {
+            AbstractCard q = c.makeCopy();
+            q.upgrade();
+            list.add(c);
+        }
+        for (AbstractCard c : AbstractDungeon.uncommonCardPool.group) {
+            AbstractCard q = c.makeCopy();
+            q.upgrade();
+            list.add(c);
+        }
+        for (AbstractCard c : AbstractDungeon.rareCardPool.group) {
+            AbstractCard q = c.makeCopy();
+            q.upgrade();
+            list.add(c);
         }
         return list.get(cardRandomRng.random(list.size() - 1));// 1217
     }
