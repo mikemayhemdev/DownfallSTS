@@ -1,0 +1,9 @@
+{
+  "todomod:TodoItem": {
+    "NAME": "Todo Item",
+    "FLAVOR": "TODO: make this a sweet relic.",
+    "DESCRIPTIONS": [
+      "Has no effect."
+    ]
+  }
+}
