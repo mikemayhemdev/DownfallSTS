@@ -16,10 +16,7 @@ import automaton.cards.Defend;
 import automaton.cards.SpaghettiCode;
 import automaton.cards.Strike;
 import automaton.powers.LibraryModPower;
-import automaton.relics.BronzeIdol;
-import automaton.relics.DecasWashers;
-import automaton.relics.DonusWashers;
-import automaton.relics.MakeshiftBattery;
+import automaton.relics.*;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
@@ -1273,6 +1270,7 @@ public class downfallMod implements
         }
 
         if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Analytical.ID)) || ModHelper.isModEnabled(Analytical.ID)) {
+            RelicLibrary.getRelic(AnalyticalCore.ID).makeCopy().instantObtain();
 
             ArrayList<AbstractCard> cardsToRemove = new ArrayList<>();
             ArrayList<AbstractCard> strikes = new ArrayList<>();
@@ -1421,16 +1419,6 @@ public class downfallMod implements
             for (AbstractMonster m : abstractRoom.monsters.monsters)
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new LastStandModPower(m, AbstractDungeon.actNum * 2), AbstractDungeon.actNum * 2));
         }
-
-        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Analytical.ID)) || ModHelper.isModEnabled(Analytical.ID)) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LibraryModPower(1), 1));
-            AbstractCard qCardGet = SpaghettiCode.getRandomEncode();
-            //qCardGet.modifyCostForCombat(-99);
-            CardModifierManager.addModifier(qCardGet, new EtherealMod());
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(qCardGet, true));
-
-        }
-
 
     }
 
