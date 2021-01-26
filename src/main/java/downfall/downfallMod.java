@@ -1214,7 +1214,6 @@ public class downfallMod implements
         l.add(new CustomMod(Improvised.ID, "g", true));
         l.add(new CustomMod(EvilRun.ID, "b", false));
         l.add(new CustomMod(ExchangeController.ID, "r", true));
-        l.add(new CustomMod(Lament.ID, "g", false));
         l.add(new CustomMod(Analytical.ID, "g", true));
         l.add(new CustomMod(StatusAbuse.ID, "r", true));
     }
@@ -1255,11 +1254,6 @@ public class downfallMod implements
 
         if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ExchangeController.ID)) || ModHelper.isModEnabled(ExchangeController.ID)) {
             RelicLibrary.getRelic(NeowBlessing.ID).makeCopy().instantObtain();
-
-        }
-
-        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Lament.ID)) || ModHelper.isModEnabled(Lament.ID)) {
-            RelicLibrary.getRelic(NeowsLament.ID).makeCopy().instantObtain();
 
         }
 
