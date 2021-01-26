@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import downfall.patches.RewardItemTypeEnumPatch;
 import downfall.util.TextureLoader;
 import theHexaghost.HexaMod;
 import theHexaghost.cards.seals.AbstractSealCard;
@@ -19,7 +20,7 @@ public class SealSealReward extends CustomReward {
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
 
     public SealSealReward() {
-        super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), TEXT[0], RewardType.CARD);
+        super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), TEXT[0], RewardItemTypeEnumPatch.SEALCARD);
         cards.clear();
         cards.addAll(getCards());
     }

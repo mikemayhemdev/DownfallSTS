@@ -5,6 +5,7 @@ import automaton.cards.Spike;
 import basemod.abstracts.CustomReward;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.patches.RewardItemTypeEnumPatch;
 import downfall.util.TextureLoader;
 
 public class SpikeReward extends CustomReward {
@@ -12,7 +13,7 @@ public class SpikeReward extends CustomReward {
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString("bronze:SpecificCardReward").TEXT;
 
     public SpikeReward() {
-        super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), "ERROR", RewardType.CARD);
+        super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), "ERROR", RewardItemTypeEnumPatch.SPIKE);
         cards.clear();
         cards.add(new Spike());
         this.text = TEXT[0] + cards.get(0).name + TEXT[1];

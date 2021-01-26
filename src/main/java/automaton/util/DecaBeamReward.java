@@ -7,6 +7,7 @@ import basemod.abstracts.CustomReward;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.patches.RewardItemTypeEnumPatch;
 import downfall.util.TextureLoader;
 
 public class DecaBeamReward extends CustomReward {
@@ -14,7 +15,7 @@ public class DecaBeamReward extends CustomReward {
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString("bronze:SpecificCardReward").TEXT;
 
     public DecaBeamReward() {
-        super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), "ERROR", RewardType.CARD);
+        super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), "ERROR", RewardItemTypeEnumPatch.DECABEAM);
         cards.clear();
         cards.add(new DecaBeam());
         this.text = TEXT[0] + cards.get(0).name + TEXT[1];

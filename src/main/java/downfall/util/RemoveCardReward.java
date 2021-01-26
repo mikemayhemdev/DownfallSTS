@@ -7,13 +7,14 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
+import downfall.patches.RewardItemTypeEnumPatch;
 
 public class RemoveCardReward extends CustomReward {
     public static final String ID = downfallMod.makeID("RemoveCardReward");
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
 
     public RemoveCardReward() {
-        super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), TEXT[0], RewardType.CARD);
+        super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), TEXT[0], RewardItemTypeEnumPatch.REMOVECARD);
     }
 
     @Override

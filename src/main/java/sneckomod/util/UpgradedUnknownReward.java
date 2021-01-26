@@ -4,6 +4,7 @@ import basemod.abstracts.CustomReward;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.patches.RewardItemTypeEnumPatch;
 import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
 
@@ -16,7 +17,7 @@ public class UpgradedUnknownReward extends CustomReward {
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
 
     public UpgradedUnknownReward() {
-        super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), TEXT[0], RewardType.CARD);
+        super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), TEXT[0], RewardItemTypeEnumPatch.UPGRADEDUNKNOWNCARD);
         cards.clear();
         cards.addAll(getCards());
     }
