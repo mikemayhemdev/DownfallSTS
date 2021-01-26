@@ -484,6 +484,8 @@ public class downfallMod implements
         //Downfall
         BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new BossCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), BossCardReward.ID));
 
+        BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new JaxReward(), (customReward) -> new RewardSave(customReward.type.toString(), JaxReward.ID));
+
         BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new RemoveCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), RemoveCardReward.ID));
 
         BaseMod.registerCustomReward(RewardItem.RewardType.CARD, (rewardSave) -> new TransformCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), TransformCardReward.ID));
