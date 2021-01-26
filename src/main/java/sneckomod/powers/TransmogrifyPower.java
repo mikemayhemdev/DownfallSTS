@@ -9,9 +9,10 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rewards.RewardItem;
-import sneckomod.SneckoMod;
-import sneckomod.util.TransmogrifyLinkedReward;
 import downfall.util.TextureLoader;
+import sneckomod.SneckoMod;
+import sneckomod.cards.Transmogrify;
+import sneckomod.util.TransmogrifyLinkedReward;
 
 public class TransmogrifyPower extends AbstractPower implements NonStackablePower {
 
@@ -47,7 +48,7 @@ public class TransmogrifyPower extends AbstractPower implements NonStackablePowe
 
     @Override
     public void onVictory() {
-        RewardItem original = new RewardItem(AbstractDungeon.returnRandomRelic(relicTransmoged.tier));
+        RewardItem original = new RewardItem(Transmogrify.returnTrueRandomScreenlessRelic(relicTransmoged.tier));
         TransmogrifyLinkedReward newrelic = new TransmogrifyLinkedReward(original);
         TransmogrifyLinkedReward newrelic2 = new TransmogrifyLinkedReward(newrelic, relicTransmoged);
 
