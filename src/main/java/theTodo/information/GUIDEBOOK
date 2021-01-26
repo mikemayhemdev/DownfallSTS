@@ -1,4 +1,11 @@
-This guidebook will walk you through the basics of programming your Slay the Spire mod.
-This is a long guidebook. Grab your pot of tea, sit back...
+Attention DOWNFALL modders: Here's the instructions.
 
-1. Basic Overview
+Setup guide:
+1. Rename the enclosing mod folder. (the folder just under Java, initially named theTodo.)
+2. Set your modID in the main Mod file. (initially TodoMod).
+3. Rename the main mod file. (the class initially named TodoMod, not in a folder.)
+4. Rename the mod's Resources folder. (the folder under the "resources" folder, initially named todomodResources. The change needs to match your mod ID, plus "Resources". IE: if your modid is "blah", "blahResources".)
+5. Rename the modded character file. (the class initially named TheTodo, not in a folder.)
+6. In the modded character file, go to the Enums section at the bottom and change the PlayerClass and CardColor enums. They're also annotated with TODOs.
+7. You'll need to go into downfallMod and refactor->Rename the package name of the todo-character. There's a TODO marked there.
+8+. You'll probably want to rename your character in the CharStrings file to start off. From there, it's just making the mod of your dreams!
