@@ -41,9 +41,8 @@ public class ShieldThrow extends AbstractChampCard {
     }
 
     public void applyPowers() {
-        this.baseDamage = AbstractDungeon.player.currentBlock;
+        this.baseDamage = AbstractDungeon.player.currentBlock + block;
         super.applyPowers();
-        this.baseDamage = this.baseDamage + block;
         this.rawDescription = cardStrings.DESCRIPTION;
         this.rawDescription = this.rawDescription + cardStrings.UPGRADE_DESCRIPTION;
         this.initializeDescription();
@@ -55,6 +54,7 @@ public class ShieldThrow extends AbstractChampCard {
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
+        baseDamage = AbstractDungeon.player.currentBlock + block;
         super.calculateCardDamage(mo);
         this.rawDescription = cardStrings.DESCRIPTION;
         this.rawDescription = this.rawDescription + cardStrings.UPGRADE_DESCRIPTION;

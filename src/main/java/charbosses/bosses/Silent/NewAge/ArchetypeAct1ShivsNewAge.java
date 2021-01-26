@@ -91,7 +91,7 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
                 case 0:
                     addToList(cardsList, new EnShiv());
                     addToList(cardsList, new EnBurst());
-                    addToList(cardsList, new EnCloakAndDagger());
+                    addToList(cardsList, new EnCloakAndDagger(), extraUpgrades);
                     AbstractBossCard c = new EnCloakAndDagger();
                     c.cost = 0;
                     c.freeToPlayOnce = true;

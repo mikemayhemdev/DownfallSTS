@@ -520,7 +520,7 @@
   },
   "bronze:Hardcode": {
     "NAME": "Hardcode",
-    "DESCRIPTION": "Fleeting. NL The next Function you create goes into your deck permanently instead of your hand."
+    "DESCRIPTION": "Next time you create a Function, add it to your deck. NL Remove the cards used to create it (including this)."
   },
   "bronze:SpaghettiCode": {
     "NAME": "Spaghetti Code",

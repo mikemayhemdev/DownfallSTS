@@ -93,9 +93,9 @@
   "bronze:Hardcode": {
     "NAME": "Hardcoding",
     "DESCRIPTIONS": [
-      "Next time you create a Function, it goes into your deck instead of your hand.",
+      "Next time you create a Function, it goes into your deck instead of your hand, removing all cards used.",
       "The next #b",
-      " times you create a Function, it goes into your deck instead of your hand."
+      " times you create a Function, it goes into your deck instead of your hand, removing all cards used."
     ]
   },
   "bronze:Verify": {
