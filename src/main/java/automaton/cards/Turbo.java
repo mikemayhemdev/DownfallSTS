@@ -1,6 +1,7 @@
 package automaton.cards;
 
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -19,7 +20,7 @@ public class Turbo extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new GainEnergyAction(magicNumber));
-        shuffleIn(new VoidCard());
+        atb(new MakeTempCardInDiscardAction(new VoidCard(), 1));
     }
 
     public void upp() {

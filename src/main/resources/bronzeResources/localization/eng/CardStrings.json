@@ -592,8 +592,8 @@
   },
   "bronze:Turbo": {
     "NAME": "Turbo",
-    "DESCRIPTION": "Gain [E] [E] . NL bronze:Insert a *Void.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain [E] [E] . NL bronze:Insert a *Void."
+    "DESCRIPTION": "Gain [E] [E] . NL Add a *Void into your discard pile.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Add a *Void into your discard pile."
   },
   "bronze:BugBarrage": {
     "NAME": "Bug Barrage",
