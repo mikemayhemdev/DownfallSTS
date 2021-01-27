@@ -520,7 +520,7 @@
   },
   "bronze:Hardcode": {
     "NAME": "硬编码",
-    "DESCRIPTION": " 即逝 。 NL 你生成的下张 *方法 将加入牌组。"
+    "DESCRIPTION": " 即逝 。 NL 你生成的下张 *方法 将加入牌组。 NL 从牌组中移除构成 *方法 的牌。"
   },
   "bronze:SpaghettiCode": {
     "NAME": "意面代码",
@@ -592,8 +592,8 @@
   },
   "bronze:Turbo": {
     "NAME": "内核加速",
-    "DESCRIPTION": "获得 [E] [E] 。 NL bronze:插入 *虚空 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 获得 [E] [E] 。 NL bronze:插入 *虚空 。"
+    "DESCRIPTION": "获得 [E] [E] 。 NL 将一张 *虚空 加入你的弃牌堆。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 获得 [E] [E] 。 NL 将一张 *虚空 加入你的弃牌堆。"
   },
   "bronze:BugBarrage": {
     "NAME": "错误齐射",
