@@ -3,7 +3,6 @@ package expansioncontent.actions;
 
 import automaton.AutomatonChar;
 import champ.ChampChar;
-import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,12 +10,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import expansioncontent.expansionContentMod;
-import guardian.cards.AbstractGuardianCard;
 import guardian.patches.GuardianEnum;
-import slimebound.cards.AbstractSlimeboundCard;
 import slimebound.patches.SlimeboundEnum;
 import theHexaghost.TheHexaghost;
-import theHexaghost.cards.AbstractHexaCard;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -72,6 +68,7 @@ public class RandomCardWithTagAction extends AbstractGameAction {
         for (Map.Entry<String, AbstractCard> stringAbstractCardEntry : CardLibrary.cards.entrySet()) {
             Map.Entry<String, AbstractCard> c = (Map.Entry) stringAbstractCardEntry;
             if (c.getValue().rarity != AbstractCard.CardRarity.SPECIAL &&
+                    !c.getValue().hasTag(AbstractCard.CardTags.HEALING) &&
                     c.getValue().hasTag(tag)
                     && (!(c.getValue().hasTag(expansionContentMod.STUDY_SLIMEBOSS)
                     && AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND))

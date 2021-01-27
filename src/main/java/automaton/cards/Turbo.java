@@ -24,7 +24,7 @@ public class Turbo extends AbstractBronzeCard {
     }
 
     public void upp() {
-        selfRetain = true;
+        upgradeMagicNumber(1);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

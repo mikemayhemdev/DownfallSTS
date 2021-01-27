@@ -21,6 +21,7 @@ public class AwakenDeath extends AbstractExpansionCard {
         tags.add(expansionContentMod.STUDY);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_awakenedone.png", "expansioncontentResources/images/1024/bg_boss_awakenedone.png");
         baseMagicNumber = magicNumber = MAGIC;
+        tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
