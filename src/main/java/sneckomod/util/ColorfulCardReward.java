@@ -20,8 +20,8 @@ public class ColorfulCardReward extends CustomReward {
     public ColorfulCardReward(AbstractCard.CardColor myColor) {
         super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), TEXT[0], RewardItemTypeEnumPatch.COLORFULCARD);
         cards.clear();
-        cards.addAll(getCards());
         this.myColor = myColor;
+        cards.addAll(getCards());
     }
 
     public ArrayList<AbstractCard> getCards() {
@@ -32,13 +32,21 @@ public class ColorfulCardReward extends CustomReward {
                 listOfColoredCards.add(q);
             }
         }
-        while (cardsList.size() < 3) {
-            AbstractCard q = listOfColoredCards.get(AbstractDungeon.cardRandomRng.random(0, listOfColoredCards.size() - 1));
-            if (!cardListDuplicate(cardsList, q)) {
-                cardsList.add(q.makeCopy());
+        if (!listOfColoredCards.isEmpty()) {
+            while (cardsList.size() < 3) {
+                AbstractCard q = listOfColoredCards.get(AbstractDungeon.cardRandomRng.random(0, listOfColoredCards.size() - 1));
+                if (!cardListDuplicate(cardsList, q)) {
+                    cardsList.add(q.makeCopy());
+                }
             }
+            return cardsList;
+        } else {
+            ArrayList<AbstractCard> debug = new ArrayList<>();
+            for (AbstractCard q : CardLibrary.getAllCards()) {
+                debug.add(q.makeCopy());
+            }
+            return debug;
         }
-        return cardsList;
     }
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
