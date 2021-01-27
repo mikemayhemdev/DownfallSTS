@@ -593,7 +593,7 @@
   "bronze:Turbo": {
     "NAME": "内核加速",
     "DESCRIPTION": "获得 [E] [E] 。 NL 将一张 *虚空 加入你的弃牌堆。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 获得 [E] [E] 。 NL 将一张 *虚空 加入你的弃牌堆。"
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] [E] 。 NL 将一张 *虚空 加入你的弃牌堆。"
   },
   "bronze:BugBarrage": {
     "NAME": "错误齐射",
