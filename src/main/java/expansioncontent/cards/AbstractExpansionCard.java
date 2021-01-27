@@ -42,7 +42,6 @@ public abstract class AbstractExpansionCard extends CustomCard {
         initializeTitle();
         initializeDescription();
         setFrame();
-        tags.add(CardTags.HEALING);
     }
 
     public AbstractExpansionCard(final String id, final String img, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
@@ -57,7 +56,6 @@ public abstract class AbstractExpansionCard extends CustomCard {
         initializeTitle();
         initializeDescription();
         setFrame();
-        tags.add(CardTags.HEALING);
     }
 
     public AbstractExpansionCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
@@ -72,7 +70,6 @@ public abstract class AbstractExpansionCard extends CustomCard {
         initializeTitle();
         initializeDescription();
         setFrame();
-        tags.add(CardTags.HEALING);
     }
 
     public void setFrame(){
