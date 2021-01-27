@@ -72,7 +72,8 @@ public class SneckoMod implements
         SetUnlocksSubscriber,
         EditCharactersSubscriber,
         PostInitializeSubscriber,
-        StartGameSubscriber {
+        StartGameSubscriber,
+        PostUpdateSubscriber{
     public static final String SHOULDER1 = "sneckomodResources/images/char/shoulder.png";
     public static final String SHOULDER2 = "sneckomodResources/images/char/shoulderR.png";
     public static final String CORPSE = "sneckomodResources/images/char/corpse.png";
@@ -574,7 +575,8 @@ public class SneckoMod implements
         AbstractUnknownCard.updateReplacements(predList, listList);
     }
 
-    public static void importantStuff() {
+    @Override
+    public void receivePostUpdate() {
         if (!SneckoMod.openedStarterScreen) {
             if (CardCrawlGame.isInARun() && downfallMod.readyToDoThing) {
                 SneckoMod.findAWayToTriggerThisAtGameStart();

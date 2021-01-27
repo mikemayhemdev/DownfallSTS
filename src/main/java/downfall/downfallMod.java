@@ -1172,9 +1172,6 @@ public class downfallMod implements
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
         }
-
-        //Snecko mod run start choosing stuff
-        SneckoMod.importantStuff();
     }
 
     private void resetBossList() {
