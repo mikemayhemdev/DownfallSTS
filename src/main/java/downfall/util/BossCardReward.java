@@ -27,7 +27,7 @@ public class BossCardReward extends CustomReward {
         while (cardsList.size() < 3) {
             AbstractCard q = getBossCard();
             if (!cardListDuplicate(cardsList, q)) {
-                cardsList.add(q);
+                cardsList.add(q.makeCopy());
             }
         }
         return cardsList;

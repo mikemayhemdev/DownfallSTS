@@ -58,7 +58,7 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<String> {
             for (AbstractCard q : CardLibrary.getAllCards()) {
                 if (q instanceof UnknownClass) {
                     if (SneckoMod.validColors.contains(((UnknownClass) q).myColor)) {
-                        c.addToTop(q);
+                        c.addToTop(q.makeCopy());
                     }
                 }
             }

@@ -41,7 +41,7 @@ public class SneckoCommon extends CustomRelic {
         for (AbstractCard q : CardLibrary.getAllCards()) {
             if (q instanceof UnknownClass) {
                 if (SneckoMod.validColors.contains(((UnknownClass) q).myColor)) {
-                    c.addToTop(q);
+                    c.addToTop(q.makeCopy());
                 }
             }
         }

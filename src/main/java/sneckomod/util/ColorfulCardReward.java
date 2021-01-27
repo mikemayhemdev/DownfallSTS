@@ -35,7 +35,7 @@ public class ColorfulCardReward extends CustomReward {
         while (cardsList.size() < 3) {
             AbstractCard q = listOfColoredCards.get(AbstractDungeon.cardRandomRng.random(0, listOfColoredCards.size() - 1));
             if (!cardListDuplicate(cardsList, q)) {
-                cardsList.add(q);
+                cardsList.add(q.makeCopy());
             }
         }
         return cardsList;
