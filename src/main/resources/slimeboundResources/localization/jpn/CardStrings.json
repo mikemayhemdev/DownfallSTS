@@ -101,8 +101,8 @@
   },
   "Slimebound:Dissolve": {
     "NAME": "Dissolve",
-    "DESCRIPTION": "Draw a card, then Exhaust a card in your hand. Add a number of *Licks to your hand equal to it's cost. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw a card, then Exhaust a card in your hand. Add a number of *Licks to your hand equal to it's cost plus 1. NL Exhaust."
+    "DESCRIPTION": "Draw a card, then Exhaust a card in your hand. Add a number of *Licks to your hand equal to its cost. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw a card, then Exhaust a card in your hand. Add a number of *Licks to your hand equal to its cost plus 1. NL Exhaust."
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "Duplicated Form",
