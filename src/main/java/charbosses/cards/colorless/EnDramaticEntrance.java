@@ -22,7 +22,7 @@ public class EnDramaticEntrance extends AbstractBossCard {
 
     public EnDramaticEntrance() {
         super(ID, cardStrings.NAME, "colorless/attack/dramatic_entrance", 0, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY, AbstractMonster.Intent.ATTACK);
-        this.baseDamage = 6;
+        this.baseDamage = 8;
         this.exhaust = true;
         this.isInnate = true;
     }
@@ -34,7 +34,7 @@ public class EnDramaticEntrance extends AbstractBossCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(2);
+            this.upgradeDamage(4);
         }
 
     }
