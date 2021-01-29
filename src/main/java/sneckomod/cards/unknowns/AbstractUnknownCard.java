@@ -177,6 +177,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
     public void replaceUnknown() {
         AbstractPlayer p = AbstractDungeon.player;
+        int idx = p.drawPile.group.indexOf(this);
 
         AbstractCard cUnknown;
         if (myList().isEmpty()) {
@@ -190,8 +191,12 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         p.hand.removeCard(this);
         p.drawPile.removeCard(this);
         UnknownExtraUiPatch.parentCard.set(cUnknown, this);
-        AbstractDungeon.player.drawPile.addToRandomSpot(cUnknown);
-
+        if (cUnknown.isInnate) {
+            AbstractDungeon.player.drawPile.addToTop(cUnknown);
+        }
+        else {
+            AbstractDungeon.player.drawPile.group.add(idx, cUnknown);
+        }
     }
 
     public void replaceUnknownFromHand() {
