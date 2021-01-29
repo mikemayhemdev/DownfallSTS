@@ -81,7 +81,12 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
         }
 
         if (this.relicOffersAvailable >= 1) {
-            this.imageEventText.setDialogOption(OPTIONS[0] + this.relicsOffered.get(0).name + OPTIONS[1] + OPTIONS[2]);
+            if (AbstractDungeon.ascensionLevel >= 15) {
+                this.imageEventText.setDialogOption(OPTIONS[0] + this.relicsOffered.get(0).name + OPTIONS[1] + OPTIONS[8]);
+            }
+            else {
+                this.imageEventText.setDialogOption(OPTIONS[0] + this.relicsOffered.get(0).name + OPTIONS[1] + OPTIONS[2]);
+            }
         } else {
             this.imageEventText.setDialogOption(OPTIONS[7], true);
         }
