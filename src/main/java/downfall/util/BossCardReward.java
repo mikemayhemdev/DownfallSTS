@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import downfall.downfallMod;
 import downfall.patches.RewardItemTypeEnumPatch;
-import expansioncontent.patches.CardColorEnumPatch;
+import expansioncontent.expansionContentMod;
 import expansioncontent.patches.ShopBossPatch;
 
 import java.util.ArrayList;
@@ -36,7 +36,7 @@ public class BossCardReward extends CustomReward {
     public static AbstractCard getBossCard() {
         ArrayList<AbstractCard> potentialCardsList = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
-            if (q.color == CardColorEnumPatch.CardColorPatch.BOSS && ShopBossPatch.okayToSpawn(q)) {
+            if (q.hasTag(expansionContentMod.STUDY) && ShopBossPatch.okayToSpawn(q)) {
                 potentialCardsList.add(q);
             }
         }
