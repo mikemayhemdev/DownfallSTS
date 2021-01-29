@@ -472,8 +472,8 @@ public class SneckoMod implements
     public void receiveStartGame() {
         if (!CardCrawlGame.loadingSave) {
             openedStarterScreen = false;
+            validColors = new ArrayList<>();
         }
-        validColors = new ArrayList<>();
     }
 
     public static int choosingCharacters = -1;
