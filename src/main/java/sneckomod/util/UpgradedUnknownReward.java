@@ -27,7 +27,9 @@ public class UpgradedUnknownReward extends CustomReward {
         while (cardsList.size() < 3) {
             AbstractCard q = getUnknownUpgradedCard();
             if (!cardListDuplicate(cardsList, q)) {
-                cardsList.add(q.makeCopy());
+                AbstractCard r  = q.makeCopy();
+                r.upgrade();
+                cardsList.add(r);
             }
         }
         return cardsList;
