@@ -46,9 +46,9 @@ public class VexVinciblePower extends TwoAmountPower {
 
     public void updateDescription() {
         if (this.amount2 == 1) {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+            this.description = DESCRIPTIONS[0] + this.amount2 + DESCRIPTIONS[1];
         } else {
-            this.description = DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3] + amount2 + DESCRIPTIONS[4];
+            this.description = DESCRIPTIONS[2] + this.amount2 + DESCRIPTIONS[3] + amount + DESCRIPTIONS[4];
         }
     }
 }
