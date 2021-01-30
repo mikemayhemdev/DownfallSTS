@@ -2,13 +2,14 @@ package sneckomod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.ConfusionPower;
 import com.megacrit.cardcrawl.relics.SneckoEye;
-import sneckomod.SneckoMod;
 import downfall.util.TextureLoader;
+import sneckomod.SneckoMod;
 
 public class SuperSneckoEye extends CustomRelic {
 
@@ -43,14 +44,21 @@ public class SuperSneckoEye extends CustomRelic {
 
     @Override
     public void onCardDraw(AbstractCard card) {
-        if (card.cost == 3 && !activated) {
-            flash();
-            activated = true;
-            card.cost = 0;// 35
-            card.costForTurn = card.cost;// 36
-            card.isCostModified = true;// 37
-            card.freeToPlayOnce = false;// 39
-        }
+        if (!activated)
+            addToBot(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    if (card.cost == 3 && !activated) {
+                        flash();
+                        activated = true;
+                        card.cost = 0;// 35
+                        card.costForTurn = card.cost;// 36
+                        card.isCostModified = true;// 37
+                        card.freeToPlayOnce = false;// 39
+                    }
+                }
+            });
     }
 
     public void onEquip() {
