@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.patches.RewardItemTypeEnumPatch;
 import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
+import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 import java.util.ArrayList;
 
@@ -27,7 +28,7 @@ public class UpgradedUnknownReward extends CustomReward {
         while (cardsList.size() < 3) {
             AbstractCard q = getUnknownUpgradedCard();
             if (!cardListDuplicate(cardsList, q)) {
-                AbstractCard r  = q.makeCopy();
+                AbstractCard r = q.makeCopy();
                 r.upgrade();
                 cardsList.add(r);
             }
@@ -37,21 +38,27 @@ public class UpgradedUnknownReward extends CustomReward {
 
 
     public static AbstractCard getUnknownUpgradedCard() {
-        ArrayList<AbstractCard> list = new ArrayList<>();// 1201
+        ArrayList<AbstractCard> list = new ArrayList<>();
         for (AbstractCard c : AbstractDungeon.commonCardPool.group) {
-            AbstractCard q = c.makeCopy();
-            q.upgrade();
-            list.add(c);
+            if (c instanceof AbstractUnknownCard) {
+                AbstractCard q = c.makeCopy();
+                q.upgrade();
+                list.add(c);
+            }
         }
         for (AbstractCard c : AbstractDungeon.uncommonCardPool.group) {
-            AbstractCard q = c.makeCopy();
-            q.upgrade();
-            list.add(c);
+            if (c instanceof AbstractUnknownCard) {
+                AbstractCard q = c.makeCopy();
+                q.upgrade();
+                list.add(c);
+            }
         }
         for (AbstractCard c : AbstractDungeon.rareCardPool.group) {
-            AbstractCard q = c.makeCopy();
-            q.upgrade();
-            list.add(c);
+            if (c instanceof AbstractUnknownCard) {
+                AbstractCard q = c.makeCopy();
+                q.upgrade();
+                list.add(c);
+            }
         }
         return list.get(cardRandomRng.random(list.size() - 1));// 1217
     }
