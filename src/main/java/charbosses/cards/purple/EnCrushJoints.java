@@ -26,7 +26,7 @@ public class EnCrushJoints extends AbstractBossCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        addToBot(new ApplyPowerAction(p, m, new VulnerablePower(p, magicValue, true), magicValue)); // All uses trigger, no need for logic!
+        addToBot(new ApplyPowerAction(p, m, new VulnerablePower(p, magicNumber, true), magicNumber)); // All uses trigger, no need for logic!
     }
 
     public void upgrade() {
