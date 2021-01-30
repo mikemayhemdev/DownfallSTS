@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.metrics.Metrics;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.screens.GameOverScreen;
+import downfall.downfallMod;
 import guardian.patches.GuardianEnum;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -30,7 +31,7 @@ public class MetricsPatches {
     public static class SendPostPatch {
 
         public static void Prefix(Metrics metrics, @ByRef String[] url, String fileName) {
-            if (AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP || AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND || AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN || AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT || AbstractDungeon.player.chosenClass == TheSnecko.Enums.THE_SNECKO || AbstractDungeon.player.chosenClass == AutomatonChar.Enums.THE_AUTOMATON) {
+            if (downfallMod.isDownfallCharacter(AbstractDungeon.player)) {
                 url[0] = "http://downfallstats.atwebpages.com/";
             }
         }
@@ -41,7 +42,7 @@ public class MetricsPatches {
     public static class ShouldUploadMetricData {
 
         public static boolean Postfix(boolean returnValue) {
-            if (AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP || AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND || AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN || AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT || AbstractDungeon.player.chosenClass == TheSnecko.Enums.THE_SNECKO || AbstractDungeon.player.chosenClass == AutomatonChar.Enums.THE_AUTOMATON) {
+            if (downfallMod.isDownfallCharacter(AbstractDungeon.player)) {
                 returnValue = Settings.UPLOAD_DATA;
             }
             return returnValue;
@@ -53,7 +54,7 @@ public class MetricsPatches {
     public static class RunPatch {
 
         public static void Postfix(Metrics metrics) {
-            if (metrics.type == Metrics.MetricRequestType.UPLOAD_METRICS && (AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP || AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND || AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN || AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT || AbstractDungeon.player.chosenClass == TheSnecko.Enums.THE_SNECKO || AbstractDungeon.player.chosenClass == AutomatonChar.Enums.THE_AUTOMATON)) {
+            if (metrics.type == Metrics.MetricRequestType.UPLOAD_METRICS && downfallMod.isDownfallCharacter(AbstractDungeon.player)) {
                 try {
                     Method m = Metrics.class.getDeclaredMethod("gatherAllDataAndSend", boolean.class, boolean.class, MonsterGroup.class);
                     m.setAccessible(true);

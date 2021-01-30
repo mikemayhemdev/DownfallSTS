@@ -8,6 +8,7 @@ Event Override patches, and other things that only appear during Evil Runs.
 
  */
 
+import automaton.AutomatonChar;
 import automaton.AutomatonMod;
 import automaton.EasyInfoDisplayPanel;
 import automaton.SuperTip;
@@ -109,9 +110,12 @@ import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 import guardian.GuardianMod;
 import guardian.cards.ExploitGems;
+import guardian.characters.GuardianCharacter;
 import guardian.relics.PickAxe;
 import slimebound.SlimeboundMod;
+import slimebound.characters.SlimeboundCharacter;
 import sneckomod.SneckoMod;
+import sneckomod.TheSnecko;
 import sneckomod.cards.unknowns.*;
 import sneckomod.util.ColorfulCardReward;
 import sneckomod.util.UpgradedUnknownReward;
@@ -1233,6 +1237,19 @@ public class downfallMod implements
             }
         }
 
+    }
+
+
+    public static boolean isDownfallCharacter(AbstractPlayer p){
+        if (p instanceof SlimeboundCharacter ||
+                p instanceof TheHexaghost ||
+                p instanceof GuardianCharacter ||
+                p instanceof TheSnecko ||
+                p instanceof ChampChar ||
+                p instanceof AutomatonChar){
+            return true;
+        }
+        return false;
     }
 
 
