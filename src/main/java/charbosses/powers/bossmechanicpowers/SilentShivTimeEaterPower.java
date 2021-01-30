@@ -49,14 +49,16 @@ public class SilentShivTimeEaterPower extends AbstractBossMechanicPower {
         this.description = DESC[0];
     }
 
-    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+    //This is used instead of onAfterUseCard so that cards like Streamline, when used at 1-cost, will not trigger this effect
+    @Override
+    public void onUseCard(AbstractCard card, UseCardAction action) {
         if (!(card instanceof AbstractBossCard) && (card.freeToPlayOnce || card.costForTurn == 0) && card.cost != -1 && !card.purgeOnUse) {
             ++this.amount;
             if (this.amount == 1) {
                 this.amount = 0;
                 this.flashWithoutSound();
-               // CardCrawlGame.sound.playA("POWER_TIME_WARP", 0.25F);
-               // AbstractDungeon.topLevelEffectsQueue.add(new TimeWarpTurnEndEffect());
+                // CardCrawlGame.sound.playA("POWER_TIME_WARP", 0.25F);
+                // AbstractDungeon.topLevelEffectsQueue.add(new TimeWarpTurnEndEffect());
                 //this.addToBot(new ApplyPowerAction(this.owner, this.owner, new EnemyAccuracyPower(this.owner, 1), 1));
 
                 if (AbstractCharBoss.boss != null) {
@@ -71,6 +73,7 @@ public class SilentShivTimeEaterPower extends AbstractBossMechanicPower {
             //this.updateDescription();
         }
     }
+
 
     static {
         powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);

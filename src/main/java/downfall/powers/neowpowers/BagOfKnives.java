@@ -49,8 +49,8 @@ public class BagOfKnives extends AbstractBossMechanicPower {
         this.canGoNegative = false;
     }
 
-
-    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+    //This is used instead of onAfterUseCard so that cards like Streamline, when used at 1-cost, will not trigger this effect
+    public void onUseCard(AbstractCard card, UseCardAction action) {
         if (!(card instanceof AbstractBossCard) && (card.freeToPlayOnce || card.costForTurn <= 0)) {
 
                 this.flashWithoutSound();
