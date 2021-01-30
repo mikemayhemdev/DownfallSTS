@@ -100,6 +100,23 @@ public class Transmogrify extends AbstractSneckoCard {
         }
     }
 
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        boolean newMusic = super.canUse(p, m);
+        if (p.relics.stream().anyMatch(r -> {
+            try {
+                return (r.tier != AbstractRelic.RelicTier.STARTER && r.tier != AbstractRelic.RelicTier.SPECIAL && equipCheck(r));
+            } catch (NoSuchMethodException e) {
+                e.printStackTrace();
+            }
+            return false;
+        })) {
+            return newMusic;
+        }
+        cantUseMessage = EXTENDED_DESCRIPTION[0];
+        return false;
+    }
+
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
