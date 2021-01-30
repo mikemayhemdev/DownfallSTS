@@ -33,7 +33,10 @@ public class EnchantShield extends AbstractChampCard {
                 break;
             }
         }
-        if (!canUse) return false;
+        if (!canUse) {
+            cantUseMessage = EXTENDED_DESCRIPTION[0];
+            return false;
+        }
         return super.canUse(p, m);
     }
 

@@ -157,7 +157,10 @@
   },
   "champ:EnchantShield": {
     "NAME": "Enchant Shield",
-    "DESCRIPTION": "Choose a card in hand. Increase its Block by !M! for this combat. NL Exhaust."
+    "DESCRIPTION": "Choose a card in hand. Increase its Block by !M! for this combat. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "I have nothing to Enchant."
+    ]
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
@@ -237,7 +240,10 @@
   },
   "champ:EnchantSword": {
     "NAME": "Enchant Sword",
-    "DESCRIPTION": "Choose a card in hand. Increase its damage by !M! for this combat. Exhaust."
+    "DESCRIPTION": "Choose a card in hand. Increase its damage by !M! for this combat. Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "I have nothing to Enchant."
+    ]
   },
   "champ:BladeFlurry": {
     "NAME": "Flurry of Strikes",
@@ -427,7 +433,10 @@
   },
   "champ:EnchantCrown": {
     "NAME": "Enchant Crown",
-    "DESCRIPTION": "Choose a card in hand. It costs 0 this combat. NL Exhaust."
+    "DESCRIPTION": "Choose a card in hand. It costs 0 this combat. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "I have nothing to Enchant."
+    ]
   },
   "champ:ModFinisherStrike": {
     "NAME": "Finishing Strike",

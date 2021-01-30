@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampChar;
 import champ.ChampMod;
 import champ.powers.CounterPower;
 import champ.stances.AbstractChampStance;
@@ -26,8 +27,10 @@ public class BringItOn extends AbstractChampCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if ((AbstractDungeon.player.stance instanceof NeutralStance))
+        if ((AbstractDungeon.player.stance instanceof NeutralStance)) {
+            cantUseMessage = ChampChar.characterStrings.TEXT[61];
             return false;
+        }
         return super.canUse(p, m);
     }
 
