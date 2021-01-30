@@ -201,7 +201,7 @@
     "NAME": "惊变",
     "DESCRIPTION": "失去随机一个遗物。 NL 在战斗结束时选择将其取回，或者获得相同稀有度的另一个遗物。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "I have no relicsss to ssswap."
+      "我没有遗物能够惊变"
     ]
   },
   "sneckomod:DefensiveFlair": {

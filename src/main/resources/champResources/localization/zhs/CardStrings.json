@@ -159,7 +159,7 @@
     "NAME": "整备装甲",
     "DESCRIPTION": "选择一张手牌。本场战斗这张牌的格挡获得提高 !M! 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "I have nothing to Enchant."
+      "我没有能够强化的牌"
     ]
   },
   "champ:BringItOn": {
@@ -435,7 +435,7 @@
     "NAME": "附魔金冠",
     "DESCRIPTION": "选择一张手牌，这张牌本场战斗中的耗能变为0。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "I have nothing to Enchant."
+      "我没有能强化的牌"
     ]
   },
   "champ:ModFinisherStrike": {
