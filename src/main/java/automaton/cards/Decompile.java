@@ -25,6 +25,13 @@ public class Decompile extends AbstractBronzeCard {
             @Override
             public void update() {
                 isDone = true;
+                att(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        isDone = true;
+                        FunctionHelper.genPreview();
+                    }
+                });
                 for (AbstractCard q : FunctionHelper.held.group) {
                     addToTop(new DrawCardAction(1));
                     addToTop(new GainEnergyAction(1));
