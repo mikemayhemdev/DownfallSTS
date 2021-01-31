@@ -49,7 +49,9 @@ public class OpenerPotion extends CustomPotion {
         ArrayList<AbstractCard> cardsList = generateColorlessCardChoices();
         addToBot(new SelectCardsCenteredAction(cardsList, "Choose.", (cards) -> {
             for (int i = 0; i < potency; i++) {
-                AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(cards.get(0).makeStatEquivalentCopy()));
+                AbstractCard card = cards.get(0).makeStatEquivalentCopy();
+                card.setCostForTurn(0);
+                AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(card));
             }
         }));
     }
