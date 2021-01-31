@@ -49,6 +49,8 @@ public class ShopBossPatch {
     }
 
     public static boolean okayToSpawn(AbstractCard q) {
+        if (q.rarity == AbstractCard.CardRarity.SPECIAL) return false;
+
         if (AbstractDungeon.player instanceof SlimeboundCharacter) {
             if (q.cardID.equals(PrepareCrush.ID)) {
                 return false;
