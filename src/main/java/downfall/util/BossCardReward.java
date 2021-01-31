@@ -26,7 +26,7 @@ public class BossCardReward extends CustomReward {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         while (cardsList.size() < 3) {
             AbstractCard q = getBossCard();
-            if (!cardListDuplicate(cardsList, q)) {
+            if (!cardListDuplicate(cardsList, q) && q.rarity != AbstractCard.CardRarity.SPECIAL) {
                 cardsList.add(q.makeCopy());
             }
         }
