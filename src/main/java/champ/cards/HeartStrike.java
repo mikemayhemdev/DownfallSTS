@@ -50,6 +50,6 @@ public class HeartStrike extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeBaseCost(8);
+        upgradeDamage(8);
     }
 }
