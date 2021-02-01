@@ -22,7 +22,6 @@ public class Float extends AbstractHexaCard implements OctopusCard {
 
     public Float() {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
-        isEthereal = true;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }

@@ -13,8 +13,8 @@
   },
   "hexamod:Float": {
     "NAME": "Float",
-    "DESCRIPTION": "Ethereal. NL Draw a card. NL hexamod:Advance.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Draw a card. NL You may choose to NL hexamod:Retract or hexamod:Advance.",
+    "DESCRIPTION": "Draw a card. NL hexamod:Advance.",
+    "UPGRADE_DESCRIPTION": "Draw a card. NL You may choose to NL hexamod:Retract or hexamod:Advance.",
     "EXTENDED_DESCRIPTION": ["hexamod:Advance.","hexamod:Retract.", "Do nothing."]
   },
   "hexamod:AdvancingGuard": {

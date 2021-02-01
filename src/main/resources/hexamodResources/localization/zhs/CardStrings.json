@@ -13,8 +13,8 @@
   },
   "hexamod:Float": {
     "NAME": "浮动",
-    "DESCRIPTION": "虚无 。 NL 抽一张牌。 NL hexamod:步进 。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 抽一张牌。 NL 可选择 hexamod:回退 或 hexamod:步进 。",
+    "DESCRIPTION": "抽一张牌。 NL hexamod:步进 。",
+    "UPGRADE_DESCRIPTION": "抽一张牌。 NL 可选择 hexamod:回退 或 hexamod:步进 。",
     "EXTENDED_DESCRIPTION": [" hexamod:步进 。"," hexamod:回退 。","不动。"]
   },
   "hexamod:AdvancingGuard": {
