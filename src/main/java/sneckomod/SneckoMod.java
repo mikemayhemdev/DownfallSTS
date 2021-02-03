@@ -517,8 +517,8 @@ public class SneckoMod implements
                     AbstractCard q = playerStartCardForEventFromColor(r);
                     String[] strings = CardCrawlGame.languagePack.getUIString("sneckomod:AtGameStart").TEXT;
                     CustomCard c = new OctoChoiceCard("UNVERIFIED", strings[0] + s + strings[1], "bronzeResources/images/cards/BuggyMess.png", strings[2] + s + strings[3], r, q.type);
-
-                    c.portrait = q.portrait;
+                    if (q.portrait != null)
+                        c.portrait = q.portrait;
                     colorChoices.addToTop(c);
                 }
             }
