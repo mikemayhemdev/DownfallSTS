@@ -84,7 +84,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                 case 0:
                     // No Orbs
                     addToList(cardsList, new EnRainbow());
-                    addToList(cardsList, new EnReinforcedBody(), extraUpgrades);
+                    addToList(cardsList, new EnReinforcedBody());
                     addToList(cardsList, new EnChargeBattery());
                     // Lightning Frost Dark
                     turn++;
@@ -168,9 +168,9 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     addToList(cardsList, new EnZap(), true);
                     // Lightning Frost Lightning. Perfect loop! :D
                     if (!A19)
-                        addToList(cardsList, new EnReinforcedBody(), extraUpgrades);
+                        addToList(cardsList, new EnReinforcedBody());
                     else
-                        addToList(cardsList, new EnReinforcedBody(3), extraUpgrades);
+                        addToList(cardsList, new EnReinforcedBody(3));
                     turn = 0;
                     looped = true;
                     break;

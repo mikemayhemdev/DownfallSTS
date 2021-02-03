@@ -95,13 +95,13 @@
   "downfall:SilentShivTimeEaterPower": {
     "NAME": "Bag of Knives",
     "DESCRIPTIONS": [
-      "Whenever you play a #b0 cost card, if Silent has less than #b7 cards in hand, she gains a #yShiv."
+      "The first time you play a #b0 cost card each turn, Silent gains a #yShiv."
       ]
   },
   "downfall:NeowBagOfKnives": {
     "NAME": "Bag of Knives",
     "DESCRIPTIONS": [
-      "Whenever you play a #b0 cost card, take #b4 damage."
+      "The first two times you play a #b0 cost card each turn, take #b4 damage."
     ]
   },
   "downfall:SilentMirrorImagePower": {

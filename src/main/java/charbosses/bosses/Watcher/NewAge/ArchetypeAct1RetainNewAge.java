@@ -25,7 +25,7 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
     public ArchetypeAct1RetainNewAge() {
         super("WA_ARCHETYPE_RETAIN", "Retain");
 
-        maxHPModifier += 108;
+        maxHPModifier += 88;
         actNum = 1;
     }
 
@@ -72,7 +72,7 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
                 case 2:
                     //Turn 3
                     theVeryImportantSandsOfTime.lockIntentValues = false;
-                    addToList(cardsList, new EnPanacea(), extraUpgrades);
+                    addToList(cardsList, new EnPanacea());
                     addToList(cardsList, new EnFasting(), false);
                     addToList(cardsList, new EnClumsy(), true);
                     turn++;

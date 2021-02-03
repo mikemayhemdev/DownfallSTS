@@ -34,7 +34,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
     public ArchetypeAct2ClawNewAge() {
         super("DF_ARCHETYPE_CLAW", "Claw");
 
-        maxHPModifier += 140;
+        maxHPModifier += 110;
         actNum = 2;
     }
 
@@ -73,17 +73,17 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                     // NO Orbs
                     addToList(cardsList, new EnBootSequence(), false);  // removed
                     addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), extraUpgrades);
-                    addToList(cardsList, new EnMachineLearning(), extraUpgrades);  // removed
+                    addToList(cardsList, new EnMachineLearning(), true);  // removed
                     turn++;
                     // No Orbs
                     break;
                 case 1:
                     //Turn 2
                     // No Orbs
-                    addToList(cardsList, new EnLeap(), extraUpgrades);
+                    addToList(cardsList, new EnLeap());
                     addToList(cardsList, new EnColdSnap(), true);
                     frostOrbsChanneled += 1;
-                    addToList(cardsList, new EnPanicButton(), extraUpgrades);  // removed
+                    addToList(cardsList, new EnPanicButton());  // removed
                     addToList(cardsList, new EnStrikeBlue(), false);
                     // Frost
                     turn++;
@@ -95,7 +95,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                     ArchetypeAct3OrbsNewAge.increasePretendFocus(-1);
                     addToList(cardsList, new EnSwiftStrike(), false);
                     addToList(cardsList, new EnRebound(), false);
-                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), extraUpgrades);
+                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2));
                     // Frost
                     //Kunai Proc
                     turn++;
@@ -103,7 +103,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                 case 3:
                     //Turn 4
                     // Frost
-                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), extraUpgrades);
+                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2));
                     addToList(cardsList, new EnChargeBattery(), false);
                     addToList(cardsList, new EnGeneticAlgorithm(14), true);  //removed
                     addToList(cardsList, new EnShame(), false);
@@ -135,14 +135,14 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                             ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeOverride = true;
                         }
                         addToList(cardsList, new EnStrikeBlue(), true);
-                        addToList(cardsList, new EnLeap(), extraUpgrades);
+                        addToList(cardsList, new EnLeap());
                     } else {
                         addToList(cardsList, new EnColdSnap(), true);
                         frostOrbsChanneled += 1;
                         if (frostOrbsChanneled > 3 && AbstractCharBoss.boss.orbs.get(0) instanceof AbstractEnemyOrb) {
                             ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeOverride = true;
                         }
-                        addToList(cardsList, new EnLeap(), extraUpgrades);
+                        addToList(cardsList, new EnLeap());
                         addToList(cardsList, new EnStrikeBlue(), true);
                     }
                     //Kunai Proc

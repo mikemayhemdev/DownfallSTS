@@ -68,8 +68,8 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
             switch (turn) {
                 case 0:
 
-                    addToList(cardsList, new EnPanicButton(), extraUpgrades);  //removed
-                    addToList(cardsList, new EnDramaticEntrance(), extraUpgrades);  //removed
+                    addToList(cardsList, new EnPanicButton());  //removed
+                    addToList(cardsList, new EnDramaticEntrance());  //removed
                     addToList(cardsList, new EnTheBomb(), extraUpgrades);
                     turn++;
                     break;
