@@ -1,0 +1,51 @@
+{
+  "Gremlin:GremlinBomb": {
+    "NAME": "Gremlin Bomb",
+    "FLAVOR": "Gremlins have an uncanny knack for finding dangerous things. Sometimes, they even survive looting them.",
+    "DESCRIPTIONS": [
+      "Whenever a Gremlin dies, deal #b", " damage to ALL enemies."
+    ]
+  },
+  "Gremlin:GremlinKnob": {
+    "NAME": "Gremlin Knob",
+    "FLAVOR": "A sign of status among the Gremlin Mobs.",
+    "DESCRIPTIONS": [
+      "Whenever an enemy dies, gain [E] , draw #b1 card, and #ySwap to the next Gremlin."
+    ]
+  },
+  "Gremlin:GremlinMask": {
+    "NAME": "Gremlin Mask",
+    "FLAVOR": "A sign of status among the Gremlin Mobs.",
+    "DESCRIPTIONS": [
+      "Start each combat with #b1 #yStrength."
+    ]
+  },
+  "Gremlin:PricklyShields": {
+    "NAME": "PricklyShields",
+    "FLAVOR": "Gremlins use whatever scraps they can find as weapons or armor. Some serve as both.",
+    "DESCRIPTIONS": [
+      "Whenever you gain #yBlock, deal #b", " damage to a random enemy."
+    ]
+  },
+  "Gremlin:StolenMerchandise": {
+    "NAME": "Stolen Merchandise",
+    "FLAVOR": "\"Blasted, thieving Gremlins!\".",
+    "DESCRIPTIONS": [
+      "Whenever you #ySwap, add an #yEcho of a random Colorless card to your hand."
+    ]
+  },
+  "Gremlin:SupplyScroll": {
+    "NAME": "Supply Scroll",
+    "FLAVOR": "A surprisingly detailed inventory of the mob's various bits and bobbles.",
+    "DESCRIPTIONS": [
+      "At the start of your 3rd turn, add a random assortment of 4 #yShivs and #yWards to your hand."
+    ]
+  },
+  "Gremlin:WizardStaff": {
+    "NAME": "Wizard Staff",
+    "FLAVOR": "The pride and joy of every Gremlin Wizard, this staff is a frequent target of theft by rival mobs.",
+    "DESCRIPTIONS": [
+      "Wiz deals #b7 additional damage."
+    ]
+  }
+}

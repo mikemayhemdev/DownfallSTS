@@ -1,0 +1,65 @@
+{
+  "Gremlin:CursedTome": {
+    "OPTIONS": [
+      "[Take] #gObtain #gthe #gBook. #rAll #rGremlins #rLose #r"
+    ]
+  },
+  "Gremlin:KnowingSkull": {
+    "OPTIONS": [
+      "[Information?] #gReveal #gthe #gBoss. #rAll #rGremlins #rLose #r",
+      "[Success?] #gGet #ga #gColorless #gCard. #rAll #rGremlins #rLose #r",
+      "[A Pick Me Up?] #gGet #ga #gPotion. #rAll #rGremlins #rLose #r",
+      " #gGold. #rAll #rGremlins #rLose #r",
+      "[How do I leave?] #rAll #rGremlins #rLose #r"
+
+    ]
+  },
+  "Gremlin:MatchingGame": {
+    "DESCRIPTIONS": [
+      "\" #bTwelve cards! Match them to keep them! #bFive tries-\" NL NL  \" #bTen tries!\" you interrupt. NL NL The gremlin scowls. \" #bFive tries!\" NL NL \" #bEight.\" NL NL \" #bSix,\" he spits. \"And I hope you get #pCursed.\" NL NL You hope he gets #pCursed.",
+      "You complete the gremlin's game and look up. NL He ran away before you could get more #y~free~ #y~stuff!~ ",
+      "A gremlin is madly shuffling cards on a table. He seems to be offering #y~free~ #y~stuff.~ You want #y~free~ #y~stuff.~ "
+    ]
+  },
+  "Gremlin:Nest": {
+    "OPTIONS": [
+      "[Stay in Line] #gObtain Ritual Dagger. #rAll #rGremlins #rLose #r"
+    ]
+  },
+  "Gremlin:ScrapOoze": {
+    "OPTIONS": [
+      "[Reach Inside] #rAll #rGremlins #rLose #r",
+      "[Deeper] #rAll #rGremlins #rLose #r"
+    ]
+  },
+  "Gremlin:SensoryStone": {
+    "OPTIONS": [
+      "[Recall] #gAdd #g2 #gColorless #gcards #gto #gyour #gdeck. #rAll #rGremlins #rLose #r",
+      "[Recall] #gAdd #g3 #gColorless #gcards #gto #gyour #gdeck. #rAll #rGremlins #rLose #r"
+    ]
+  },
+  "Gremlin:Vampires": {
+    "DESCRIPTIONS": [
+      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~greedy~ ~ones,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~"
+    ]
+  },
+  "Gremlin:WheelGame": {
+    "DESCRIPTIONS": [
+      "He lunges at you, but you are ready. NL You slash him open before he can get you with his shiv. NL You treat yourself to your prize, but sadly the Wheel disappears before you can loot it too."
+    ],
+    "OPTIONS": [
+      "[Prize!] #gPREEMPTIVE #gSTRIKE!",
+      "[Loot]"
+    ]
+  },
+  "Gremlin:WingStatue": {
+    "OPTIONS": [
+      "[Pray] #gRemove #ga #gcard #gfrom #gyour #gdeck. #rAll #rGremlins #rLose #r"
+    ]
+  },
+  "Gremlin:WorldOfGoop": {
+    "OPTIONS": [
+      " #gGold. #rAll #rGremlins #rLose #r"
+    ]
+  }
+}

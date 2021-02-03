@@ -1,0 +1,53 @@
+[
+  {
+    "NAMES": [
+      "bang"
+    ],
+    "DESCRIPTION": "Bang is a #b2 cost Attack that benefits from Wiz."
+  },
+  {
+    "NAMES": [
+      "echo",
+      "echoes"
+    ],
+    "DESCRIPTION": "Echoes are copies of cards with Ethereal and Exhaust."
+  },
+  {
+    "NAMES": [
+      "momentary"
+    ],
+    "DESCRIPTION": "Removed at end of turn."
+  },
+  {
+    "NAMES": [
+      "pinprick",
+      "pinpricks"
+    ],
+    "DESCRIPTION": "Pinpricks are #b0 cost Attack cards which draw a card."
+  },
+  {
+    "NAMES": [
+      "swap"
+    ],
+    "DESCRIPTION": "Switch places with another character. Does nothing if there is no valid target."
+  },
+  {
+    "NAMES": [
+      "ward",
+      "wards"
+    ],
+    "DESCRIPTION": "Wards are #b0 cost Skill cards which grant #yBlock and Exhaust."
+  },
+  {
+    "NAMES": [
+      "whiz"
+    ],
+    "DESCRIPTION": "Whiz is a #b1 cost Skill that grants Wiz."
+  },
+  {
+    "NAMES": [
+      "wiz"
+    ],
+    "DESCRIPTION": "When you have at least three stacks of Wiz, attacks will consume all stacks to deal 10 additional damage."
+  }
+]
