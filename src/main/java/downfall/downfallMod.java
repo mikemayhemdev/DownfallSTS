@@ -109,6 +109,7 @@ import downfall.util.*;
 import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 import gremlin.GremlinMod;
+import gremlin.characters.GremlinCharacter;
 import guardian.GuardianMod;
 import guardian.cards.ExploitGems;
 import guardian.characters.GuardianCharacter;
@@ -1253,7 +1254,8 @@ public class downfallMod implements
                 p instanceof GuardianCharacter ||
                 p instanceof TheSnecko ||
                 p instanceof ChampChar ||
-                p instanceof AutomatonChar){
+                p instanceof AutomatonChar ||
+                p instanceof GremlinCharacter){
             return true;
         }
         return false;
