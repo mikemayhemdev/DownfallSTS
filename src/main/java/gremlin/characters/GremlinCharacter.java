@@ -58,17 +58,17 @@ public class GremlinCharacter extends CustomPlayer {
     private static final String SKELETON_ATLAS = "/skeleton.atlas";
     private static final String SKELETON_JSON = "/skeleton.json";
     private static final String[] orbTextures = {
-            "gremlin/images/char/orb/layer1.png",
-            "gremlin/images/char/orb/layer2.png",
-            "gremlin/images/char/orb/layer3.png",
-            "gremlin/images/char/orb/layer4.png",
-            "gremlin/images/char/orb/layer5.png",
-            "gremlin/images/char/orb/layer6.png",
-            "gremlin/images/char/orb/layer1d.png",
-            "gremlin/images/char/orb/layer2d.png",
-            "gremlin/images/char/orb/layer3d.png",
-            "gremlin/images/char/orb/layer4d.png",
-            "gremlin/images/char/orb/layer5d.png"
+            "gremlinResources/images/char/orb/layer1.png",
+            "gremlinResources/images/char/orb/layer2.png",
+            "gremlinResources/images/char/orb/layer3.png",
+            "gremlinResources/images/char/orb/layer4.png",
+            "gremlinResources/images/char/orb/layer5.png",
+            "gremlinResources/images/char/orb/layer6.png",
+            "gremlinResources/images/char/orb/layer1d.png",
+            "gremlinResources/images/char/orb/layer2d.png",
+            "gremlinResources/images/char/orb/layer3d.png",
+            "gremlinResources/images/char/orb/layer4d.png",
+            "gremlinResources/images/char/orb/layer5d.png"
     };
 
     public float xStartOffset = (float) Settings.WIDTH * 0.25F;
@@ -95,7 +95,7 @@ public class GremlinCharacter extends CustomPlayer {
 
     public GremlinCharacter(String name) {
         super(name, GremlinEnum.GREMLIN, orbTextures,
-                "gremlin/images/char/orb/vfx.png", (String)null, null);
+                "gremlinResources/images/char/orb/vfx.png", (String)null, null);
 
         this.drawX += 5.0F * Settings.scale;
         this.drawY += 7.0F * Settings.scale;

@@ -223,37 +223,37 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
         logger.info("Loading GremlinMod Strings.");
         // CharacterStrings
         BaseMod.loadCustomStringsFile(CharacterStrings.class,
-                "gremlin/localization/" +language+"/GremlinMod-Character-Strings.json");
+                "gremlinResources/localization/" +language+"/GremlinMod-Character-Strings.json");
         // CardStrings
         BaseMod.loadCustomStringsFile(CardStrings.class,
-                "gremlin/localization/" +language+"/GremlinMod-Card-Strings.json");
+                "gremlinResources/localization/" +language+"/GremlinMod-Card-Strings.json");
 
         // PowerStrings
         BaseMod.loadCustomStringsFile(PowerStrings.class,
-                "gremlin/localization/" +language+"/GremlinMod-Power-Strings.json");
+                "gremlinResources/localization/" +language+"/GremlinMod-Power-Strings.json");
 
         // OrbStrings
         BaseMod.loadCustomStringsFile(OrbStrings.class,
-                "gremlin/localization/" +language+"/GremlinMod-Orb-Strings.json");
+                "gremlinResources/localization/" +language+"/GremlinMod-Orb-Strings.json");
 
         // RelicStrings
         BaseMod.loadCustomStringsFile(RelicStrings.class,
-                "gremlin/localization/" +language+"/GremlinMod-Relic-Strings.json");
+                "gremlinResources/localization/" +language+"/GremlinMod-Relic-Strings.json");
 
         // UIStrings
         BaseMod.loadCustomStringsFile(UIStrings.class,
-                "gremlin/localization/" +language+"/GremlinMod-UI-Strings.json");
+                "gremlinResources/localization/" +language+"/GremlinMod-UI-Strings.json");
 
         // EventStrings
         BaseMod.loadCustomStringsFile(EventStrings.class,
-                "gremlin/localization/" +language+"/GremlinMod-Event-Strings.json");
+                "gremlinResources/localization/" +language+"/GremlinMod-Event-Strings.json");
     }
 
     @Override
     public void receiveEditKeywords() {
         String language = "eng";
         final Gson gson = new Gson();
-        String jsonPath = "gremlin/localization/" +language+"/";
+        String jsonPath = "gremlinResources/localization/" +language+"/";
         final String json = Gdx.files.internal(jsonPath + "GremlinMod-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         final Keyword[] keywords = gson.fromJson(json, Keyword[].class);
         if (keywords != null) {
