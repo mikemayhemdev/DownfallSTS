@@ -16,7 +16,6 @@ public class Sear extends AbstractHexaCard {
     public Sear() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.ENEMY);
         baseBurn = burn = MAGIC;
-        isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
