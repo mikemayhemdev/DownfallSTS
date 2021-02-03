@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.powers.PolishPower;
 import guardian.GuardianMod;
 
 
@@ -42,7 +43,11 @@ public class CrystalWard extends AbstractGuardianCard {
     public CrystalWard() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
-        this.baseBlock = BLOCK;
+        if ((AbstractDungeon.player != null) && (AbstractDungeon.player.hasPower(PolishPower.POWER_ID))) {
+            this.baseBlock = (BLOCK + AbstractDungeon.player.getPower(PolishPower.POWER_ID).amount);
+        } else {
+            this.baseBlock = BLOCK;
+        }
 
 //this.sockets.add(GuardianMod.socketTypes.RED);
 
