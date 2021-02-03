@@ -36,6 +36,7 @@ import static basemod.BaseMod.addRelicToCustomPool;
 @SpireInitializer
 public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscriber, EditKeywordsSubscriber,
         EditRelicsSubscriber, EditCardsSubscriber, OnStartBattleSubscriber, PostBattleSubscriber{
+    private static String modID = "gremlin";
 
     private static final Color GREMLIN_COLOR = CardHelper.getColor(205.0f, 92.0f, 92.0f);
     private static final String ASSETS_FOLDER = "gremlinResources/images";
@@ -71,6 +72,10 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
                 getResourcePath(ENERGY_ORB_PORTRAIT));
 
         BaseMod.addSaveField("Gremlins", new GremlinModSaveState());
+    }
+
+    public static String getModID() {
+        return modID;
     }
 
     public static void initialize() {
@@ -214,14 +219,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
 
     @Override
     public void receiveEditStrings() {
-        String language;
-        switch (Settings.language) {
-            case ZHS:
-                language = "zhs";
-                break;
-            default:
-                language = "eng";
-        }
+        String language = "eng";
         logger.info("Loading GremlinMod Strings.");
         // CharacterStrings
         BaseMod.loadCustomStringsFile(CharacterStrings.class,
@@ -253,14 +251,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
 
     @Override
     public void receiveEditKeywords() {
-        String language;
-        switch (Settings.language) {
-            case ZHS:
-                language = "zhs";
-                break;
-            default:
-                language = "eng";
-        }
+        String language = "eng";
         final Gson gson = new Gson();
         String jsonPath = "gremlin/localization/" +language+"/";
         final String json = Gdx.files.internal(jsonPath + "GremlinMod-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));

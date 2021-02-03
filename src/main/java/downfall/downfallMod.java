@@ -108,6 +108,7 @@ import downfall.relics.*;
 import downfall.util.*;
 import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
+import gremlin.GremlinMod;
 import guardian.GuardianMod;
 import guardian.cards.ExploitGems;
 import guardian.characters.GuardianCharacter;
@@ -267,6 +268,8 @@ public class downfallMod implements
                 return "champResources/" + path;
             case PACKAGE_AUTOMATON:
                 return "bronzeResources/" + path;
+            case PACKAGE_GREMLIN:
+                return "gremlinResources/" + path;
         }
         return "downfallResources/" + path;
     }
@@ -348,6 +351,9 @@ public class downfallMod implements
 
         //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_AUTOMATON" + stringType);
         BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_AUTOMATON));
+
+        //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_GREMLIN" + stringType);
+        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_GREMLIN));
     }
 
     private void loadLocalization(Settings.GameLanguage language) {
@@ -439,6 +445,7 @@ public class downfallMod implements
         loadModKeywords(GuardianMod.getModID(), otherPackagePaths.PACKAGE_GUARDIAN);
         loadModKeywords(ChampMod.getModID(), otherPackagePaths.PACKAGE_CHAMP);
         loadModKeywords(AutomatonMod.getModID(), otherPackagePaths.PACKAGE_AUTOMATON);
+        loadModKeywords(GremlinMod.getModID(), otherPackagePaths.PACKAGE_GREMLIN);
         loadModKeywords(modID, otherPackagePaths.PACKAGE_DOWNFALL);
     }
 
@@ -1436,6 +1443,7 @@ public class downfallMod implements
         PACKAGE_EXPANSION,
         PACKAGE_CHAMP,
         PACKAGE_AUTOMATON,
+        PACKAGE_GREMLIN,
         PACKAGE_DOWNFALL;
 
         otherPackagePaths() {
