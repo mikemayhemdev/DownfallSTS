@@ -32,7 +32,8 @@ public class NullPointer extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new VFXAction(new ViceCrushEffect(m.hb.cX, m.hb.cY), 0.5F));
+        if (m != null)
+            atb(new VFXAction(new ViceCrushEffect(m.hb.cX, m.hb.cY), 0.5F));
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         blck();
     }
