@@ -13,20 +13,22 @@ public class VexVinciblePower extends TwoAmountPower {
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
     public int maxAmt;
 
+    private boolean activated = false;
+
     public VexVinciblePower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
-        this.amount = amount;
-        this.amount2 = 10;
+        this.amount = amount;   //duration
+        this.amount2 = 10;      //damage cap, also "damage remaining this turn"
         this.maxAmt = amount;
         this.updateDescription();
         this.loadRegion("heartDef");
-        this.priority = 99;// 23
+        this.priority = 99;
+        this.activated = false;
     }
 
     public int onLoseHp(int damageAmount) {
-        boolean activated = false;
         if (damageAmount > this.amount2) {
             damageAmount = this.amount2;
             activated = true;
@@ -38,10 +40,16 @@ public class VexVinciblePower extends TwoAmountPower {
         }
 
         this.updateDescription();
+
+        return damageAmount;
+    }
+
+    @Override
+    public void atEndOfRound(){
         if (activated) {
             addToBot(new ReducePowerAction(owner, owner, this, 1));
         }
-        return damageAmount;
+        this.amount2 = 10;
     }
 
     public void updateDescription() {
