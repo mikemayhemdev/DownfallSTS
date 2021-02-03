@@ -57,8 +57,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.function.Predicate;
 
-import static com.megacrit.cardcrawl.cards.AbstractCard.CardType.CURSE;
-import static com.megacrit.cardcrawl.cards.AbstractCard.CardType.STATUS;
+import static com.megacrit.cardcrawl.cards.AbstractCard.CardType.*;
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
@@ -516,8 +515,12 @@ public class SneckoMod implements
                     String s = getClassFromColor(r);
                     AbstractCard q = playerStartCardForEventFromColor(r);
                     String[] strings = CardCrawlGame.languagePack.getUIString("sneckomod:AtGameStart").TEXT;
-                    CustomCard c = new OctoChoiceCard("UNVERIFIED", strings[0] + s + strings[1], "bronzeResources/images/cards/BuggyMess.png", strings[2] + s + strings[3], r, q.type);
-                    if (q.portrait != null)
+                    AbstractCard.CardType tv = SKILL;
+                    if (q != null) {
+                        tv = q.type;
+                    }
+                    CustomCard c = new OctoChoiceCard("UNVERIFIED", strings[0] + s + strings[1], "bronzeResources/images/cards/BuggyMess.png", strings[2] + s + strings[3], r, tv);
+                    if (q != null && q.portrait != null)
                         c.portrait = q.portrait;
                     colorChoices.addToTop(c);
                 }
