@@ -31,7 +31,6 @@ public class SneakyGremlinPower extends GremlinPower {
             AbstractDungeon.actionManager.addToBottom(
                     new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, this.pot, DamageInfo.DamageType.THORNS),
                             AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-            this.flash();
         }
     }
 }

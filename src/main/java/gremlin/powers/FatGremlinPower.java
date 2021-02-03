@@ -49,7 +49,6 @@ public class FatGremlinPower extends GremlinPower {
             alreadyHit.add(target);
             AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, owner,
                     new WeakPower(target, this.pot, false), this.pot));
-            this.flash();
         }
     }
 }

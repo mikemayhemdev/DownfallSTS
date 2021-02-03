@@ -27,7 +27,6 @@ public class ShieldGremlinPower extends GremlinPower {
     public void onUseCard(final AbstractCard card, final UseCardAction action) {
         if (card.type == AbstractCard.CardType.SKILL) {
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.pot));
-            this.flash();
         }
     }
 }

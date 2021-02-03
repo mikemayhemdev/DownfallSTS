@@ -1,7 +1,7 @@
 {
   "Gremlin:NobFight": {
     "TEXT": [
-      "PUNY GREMS GIVE GOLD!",
+      "PUNY GREMS GIVE SOULS!",
       "You, Angry. You're mine now.",
       "You, Fatty. You're mine now.",
       "You, Girly. You're mine now.",
@@ -21,8 +21,8 @@
   "Gremlin:ResurrectOption": {
     "TEXT": [
       "Resurrect",
-      "Summon a random Gremlin back from the dead at the cost of 1 Maximum HP from each Gremlin. Gremlins do NOT revive automatically after the floor boss.",
-      "When Gremlins Die, you can Revive them here. Gremlins do NOT revive automatically after the floor boss."
+      "Summon a random Gremlin back from the dead at the cost of 1 Maximum HP from each Gremlin. Gremlins do not revive automatically after the floor boss.",
+      "When Gremlins Die, you can Revive them here. Gremlins do not revive automatically after the floor boss."
     ]
   },
   "Gremlin:RestOption": {

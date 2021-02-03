@@ -37,7 +37,7 @@ public class ResurrectOption extends AbstractCampfireOption {
         }
         if (!this.used) {
             if (this.usable) {
-                this.description += TEXT[1];
+                this.description = TEXT[1];
             } else {
                 this.description = TEXT[2];
             }
@@ -86,21 +86,6 @@ public class ResurrectOption extends AbstractCampfireOption {
                 this.usable = true;
                 updateImage();
             }
-        }
-
-        CampfireUI campfire = ((RestRoom) AbstractDungeon.getCurrRoom()).campfireUI;
-
-
-        if (this.used && !this.hacked) {
-            this.hacked = true;
-            campfire.somethingSelected = false;
-            campfire.touchOption = null;
-            campfire.confirmButton.hide();
-            campfire.confirmButton.hideInstantly();
-            campfire.confirmButton.isDisabled = true;
-
-            AbstractDungeon.overlayMenu.proceedButton.hide();
-            AbstractDungeon.overlayMenu.proceedButton.hideInstantly();
         }
     }
 

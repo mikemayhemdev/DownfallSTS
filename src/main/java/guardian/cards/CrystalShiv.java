@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import gremlin.powers.PolishPower;
 import guardian.GuardianMod;
 
 
@@ -45,11 +44,7 @@ public class CrystalShiv extends AbstractGuardianCard {
     public CrystalShiv() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
-        if ((AbstractDungeon.player != null) && (AbstractDungeon.player.hasPower(PolishPower.POWER_ID))) {
-            this.baseDamage = (DAMAGE + AbstractDungeon.player.getPower(PolishPower.POWER_ID).amount);
-        } else {
-            this.baseDamage = DAMAGE;
-        }
+        this.baseDamage = DAMAGE;
 
 //this.sockets.add(GuardianMod.socketTypes.RED);
 
