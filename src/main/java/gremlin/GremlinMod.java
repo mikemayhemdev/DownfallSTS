@@ -2,6 +2,9 @@ package gremlin;
 
 import basemod.BaseMod;
 import basemod.interfaces.*;
+import champ.cards.FalseCounter;
+import charbosses.bosses.AbstractCharBoss;
+import charbosses.cards.AbstractBossCard;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
@@ -12,6 +15,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -344,5 +348,31 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
                 ((AbstractGremlinRelic) relic).onGremlinDeath();
             }
         }
+    }
+
+    public static boolean doesEnemyIntendToAttack(final AbstractMonster m) {
+        if (m == null){
+            return false;
+        }
+        if (m instanceof AbstractCharBoss) {
+            final AbstractCharBoss boss = (AbstractCharBoss)m;
+            for (AbstractCard card : boss.hand.group) {
+                if (card instanceof AbstractBossCard) {
+                    AbstractMonster.Intent intent = ((AbstractBossCard) card).intent;
+                    if (intent == AbstractMonster.Intent.ATTACK
+                            || intent == AbstractMonster.Intent.ATTACK_BUFF
+                            || intent == AbstractMonster.Intent.ATTACK_DEBUFF
+                            || intent == AbstractMonster.Intent.ATTACK_DEFEND) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        AbstractMonster.Intent intent = m.intent;
+        return intent == AbstractMonster.Intent.ATTACK
+                || intent == AbstractMonster.Intent.ATTACK_BUFF
+                || intent == AbstractMonster.Intent.ATTACK_DEBUFF
+                || intent == AbstractMonster.Intent.ATTACK_DEFEND;
     }
 }

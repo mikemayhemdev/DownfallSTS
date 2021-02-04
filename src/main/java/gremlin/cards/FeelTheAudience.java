@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import gremlin.powers.WizPower;
 
 public class FeelTheAudience extends AbstractGremlinCard {
@@ -42,10 +43,7 @@ public class FeelTheAudience extends AbstractGremlinCard {
         int amount = 0;
         for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (!mo.isDeadOrEscaped()) {
-                if (mo.intent == AbstractMonster.Intent.ATTACK ||
-                        mo.intent == AbstractMonster.Intent.ATTACK_BUFF ||
-                        mo.intent == AbstractMonster.Intent.ATTACK_DEBUFF ||
-                        mo.intent == AbstractMonster.Intent.ATTACK_DEFEND) {
+                if (GremlinMod.doesEnemyIntendToAttack(mo)) {
                     amount += this.magicNumber;
                 }
             }
