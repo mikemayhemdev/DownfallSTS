@@ -23,6 +23,9 @@ public class CampfireRestPatch {
                 int toHeal = (Integer)ReflectionHacks.getPrivate(__instance, CampfireSleepEffect.class, "healAmount");
                 gremlinMob.mobState.campfireHeal(toHeal, gremlinMob.maxHealth);
             }
+            if (gremlinMob.canRez()) {
+                gremlinMob.resurrect();
+            }
         }
     }
 }

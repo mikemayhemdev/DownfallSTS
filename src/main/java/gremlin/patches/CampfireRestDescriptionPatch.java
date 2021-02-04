@@ -35,10 +35,11 @@ public class CampfireRestDescriptionPatch {
             else
             {
                 desc = (TEXT[3] + healAmt + ").");
-                if (AbstractDungeon.player.hasRelic(NightTerrors.ID)) {
+                if (AbstractDungeon.player.hasRelic(RegalPillow.ID)) {
                     desc = (desc + "\n+15" + TEXT[2] + AbstractDungeon.player.getRelic(RegalPillow.ID).name + LocalizedStrings.PERIOD);
                 }
             }
+            desc = desc + "\n" + TEXT[4];
             ReflectionHacks.setPrivateInherited(__instance, RestOption.class, "description", desc);
         }
     }

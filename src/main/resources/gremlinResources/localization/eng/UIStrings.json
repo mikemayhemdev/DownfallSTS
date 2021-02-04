@@ -21,8 +21,12 @@
   "Gremlin:ResurrectOption": {
     "TEXT": [
       "Resurrect",
-      "Summon a random Gremlin back from the dead at the cost of 1 Maximum HP from each Gremlin. Gremlins do not revive automatically after the floor boss.",
-      "When Gremlins Die, you can Revive them here. Gremlins do not revive automatically after the floor boss."
+      "(Free Action) Summon a random Gremlin back from the dead.",
+      "Requires a Gremlin to be Dead.",
+      "The grave site has been desecrated already.",
+      "I RISE!",
+      "I RISE, AGAIN!",
+      "I'M BACK FOR MORE LOOTING!"
     ]
   },
   "Gremlin:RestOption": {
@@ -30,7 +34,8 @@
       "Rest",
       "Heal every Gremlin for 100% of your Max HP (",
       " HP from ",
-      "Heal every Gremlin for 30% of your Max HP ("
+      "Heal every Gremlin for 30% of your Max HP (",
+      "If any Gremlins are dead, one will resurrect at random."
     ]
   },
   "Gremlin:Swap": {

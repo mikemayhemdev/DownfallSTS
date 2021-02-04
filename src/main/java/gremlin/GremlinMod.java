@@ -105,6 +105,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
 
         // Rare
         addRelicToCustomPool(new PricklyShields(), AbstractCardEnum.GREMLIN);
+        addRelicToCustomPool(new GremlinGravestone(), AbstractCardEnum.GREMLIN);
 
         // Boss
         addRelicToCustomPool(new GremlinBomb(), AbstractCardEnum.GREMLIN);

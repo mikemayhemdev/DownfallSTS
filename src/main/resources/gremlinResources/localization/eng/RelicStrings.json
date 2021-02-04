@@ -6,6 +6,13 @@
       "Whenever a Gremlin dies, deal #b", " damage to ALL enemies."
     ]
   },
+  "Gremlin:GremlinGravestone": {
+    "NAME": "Gremlin Gravestone",
+    "FLAVOR": "Where does a Gremlin go when they die? Not bloody far enough.",
+    "DESCRIPTIONS": [
+      "Dead Gremlins can be Resurrected at Rest Sites as a Free Action."
+    ]
+  },
   "Gremlin:GremlinKnob": {
     "NAME": "Gremlin Knob",
     "FLAVOR": "A sign of status among the Gremlin Mobs.",
