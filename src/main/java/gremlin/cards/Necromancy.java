@@ -25,8 +25,8 @@ public class Necromancy extends AbstractGremlinCard {
     private static final AbstractCard.CardTarget TARGET = CardTarget.SELF;
 
     private static final int COST = 1;
-    private static final int MAGIC = 5;
-    private static final int UPGRADE_BONUS = 3;
+    private static final int MAGIC = 10;
+    private static final int UPGRADE_BONUS = 5;
     private static final int VOODOO = 5;
 
     public Necromancy()

@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -503,8 +504,60 @@ public class GremlinCharacter extends CustomPlayer {
             cowering = false;
             gameHandSize = trueGameHandSize;
             if(endTurnButton) {
-                AbstractDungeon.overlayMenu.endTurnButton.enable();
+                AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, AbstractDungeon.player.gameHandSize));
+                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.EnableEndTurnButtonAction());
+                AbstractDungeon.overlayMenu.showCombatPanels();
+                AbstractDungeon.player.applyStartOfCombatLogic();
+
+                AbstractDungeon.getCurrRoom().skipMonsterTurn = false;
+                AbstractDungeon.player.applyStartOfTurnRelics();
+                AbstractDungeon.player.applyStartOfTurnPostDrawRelics();
+                AbstractDungeon.player.applyStartOfTurnCards();
+                AbstractDungeon.player.applyStartOfTurnPowers();
+                AbstractDungeon.player.applyStartOfTurnOrbs();
             }
+        }
+    }
+
+    @Override
+    public void applyStartOfCombatLogic() {
+        if(!cowering) {
+            super.applyStartOfCombatLogic();
+        }
+    }
+
+    @Override
+    public void applyStartOfTurnRelics() {
+        if(!cowering) {
+            super.applyStartOfTurnRelics();
+        }
+    }
+
+    @Override
+    public void applyStartOfTurnPostDrawRelics() {
+        if(!cowering) {
+            super.applyStartOfTurnPostDrawRelics();
+        }
+    }
+
+    @Override
+    public void applyStartOfTurnCards() {
+        if(!cowering) {
+            super.applyStartOfTurnCards();
+        }
+    }
+
+    @Override
+    public void applyStartOfTurnPowers() {
+        if(!cowering) {
+            super.applyStartOfTurnPowers();
+        }
+    }
+
+    @Override
+    public void applyStartOfTurnOrbs() {
+        if(!cowering) {
+            super.applyStartOfTurnOrbs();
         }
     }
 

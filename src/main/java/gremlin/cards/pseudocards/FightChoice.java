@@ -60,7 +60,6 @@ public class FightChoice extends AbstractGremlinCard {
                 }
             }
         }
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 5));
         if(AbstractDungeon.player instanceof GremlinCharacter){
             ((GremlinCharacter) AbstractDungeon.player).removeCower(true);
         }

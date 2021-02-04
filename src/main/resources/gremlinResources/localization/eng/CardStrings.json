@@ -148,7 +148,7 @@
 
   "Gremlin:FightChoice": {
     "NAME": "Fight",
-    "DESCRIPTION": "Draw 5 cards. NL Enemy gains !M! Strength.",
+    "DESCRIPTION": "Start Combat. NL Enemy gains !M! Strength.",
     "EXTENDED_DESCRIPTION": ["GREMS DIE NOW!", "Somebody's asking for a beating!"]
   },
 
