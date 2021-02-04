@@ -29,6 +29,7 @@ public class ShankStone extends AbstractGremlinCard {
 
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
+        this.cardsToPreview = new Shiv();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {}

@@ -35,6 +35,8 @@ public class CounterStrike extends AbstractGremlinCard {
         this.magicNumber = MAGIC;
 
         this.tags.add(AbstractCard.CardTags.STRIKE);
+
+        this.cardsToPreview = new Ward();
     }
 
     @Override
@@ -52,6 +54,7 @@ public class CounterStrike extends AbstractGremlinCard {
             upgradeDamage(UPGRADE_BONUS);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             initializeDescription();
+            this.cardsToPreview.upgrade();
         }
     }
 }

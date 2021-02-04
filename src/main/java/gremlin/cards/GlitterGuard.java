@@ -29,6 +29,7 @@ public class GlitterGuard extends AbstractGremlinCard {
 
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
+        this.cardsToPreview = new Ward();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
@@ -48,6 +49,7 @@ public class GlitterGuard extends AbstractGremlinCard {
             upgradeName();
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             initializeDescription();
+            this.cardsToPreview.upgrade();
         }
     }
 }

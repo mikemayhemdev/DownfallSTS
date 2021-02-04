@@ -31,6 +31,7 @@ public class FairyDust extends AbstractGremlinCard {
         this.magicNumber = baseMagicNumber;
 
         this.exhaust = true;
+        this.cardsToPreview = new Ward();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

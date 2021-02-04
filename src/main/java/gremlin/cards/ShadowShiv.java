@@ -2,6 +2,7 @@ package gremlin.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -25,6 +26,7 @@ public class ShadowShiv extends AbstractGremlinCard {
     public ShadowShiv()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
+        this.cardsToPreview = new Shiv();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

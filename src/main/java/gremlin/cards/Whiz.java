@@ -25,6 +25,8 @@ public class Whiz extends AbstractGremlinCard {
     private static final int MAGIC = 1;
     private static final int UPGRADE_BONUS = 1;
 
+    private boolean real = true;
+
     public Whiz()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
@@ -33,6 +35,18 @@ public class Whiz extends AbstractGremlinCard {
         this.magicNumber = baseMagicNumber;
 
         this.exhaust = true;
+        this.cardsToPreview = new Bang(false);
+    }
+
+    public Whiz(boolean real)
+    {
+        super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
+
+        this.baseMagicNumber = MAGIC;
+        this.magicNumber = baseMagicNumber;
+
+        this.exhaust = true;
+        this.real = real;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
@@ -56,6 +70,9 @@ public class Whiz extends AbstractGremlinCard {
             upgradeMagicNumber(UPGRADE_BONUS);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             initializeDescription();
+            if(real) {
+                this.cardsToPreview.upgrade();
+            }
         }
     }
 }

@@ -25,12 +25,25 @@ public class GremlinOffensive extends AbstractGremlinCard {
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
 
+    private boolean real = true;
+
     public GremlinOffensive()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
         this.exhaust = true;
+        this.cardsToPreview = new GremlinOffensive(false);
+    }
+
+    public GremlinOffensive(boolean real)
+    {
+        super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
+
+        this.baseDamage = POWER;
+        this.exhaust = true;
+
+        this.real = real;
     }
 
     @Override
@@ -52,6 +65,9 @@ public class GremlinOffensive extends AbstractGremlinCard {
             upgradeDamage(UPGRADE_BONUS);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             initializeDescription();
+            if (real) {
+                this.cardsToPreview.upgrade();
+            }
         }
     }
 }

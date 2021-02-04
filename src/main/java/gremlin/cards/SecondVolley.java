@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -30,6 +31,7 @@ public class SecondVolley extends AbstractGremlinCard {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
+        this.cardsToPreview = new Shiv();
     }
 
     @Override
@@ -85,6 +87,7 @@ public class SecondVolley extends AbstractGremlinCard {
             upgradeDamage(UPGRADE_BONUS);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             initializeDescription();
+            this.cardsToPreview.upgrade();
         }
     }
 }

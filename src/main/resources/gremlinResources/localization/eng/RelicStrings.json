@@ -8,16 +8,16 @@
   },
   "Gremlin:GremlinGravestone": {
     "NAME": "Gremlin Gravestone",
-    "FLAVOR": "Where does a Gremlin go when they die? Not bloody far enough.",
+    "FLAVOR": "Where do gremlins go when they die? Not bloody far enough.",
     "DESCRIPTIONS": [
       "Dead Gremlins can be Resurrected at Rest Sites as a Free Action."
     ]
   },
   "Gremlin:GremlinKnob": {
-    "NAME": "Gremlin Knob",
-    "FLAVOR": "A sign of status among the Gremlin Mobs.",
+    "NAME": "Mob Leader's Staff",
+    "FLAVOR": "Among gremlin mobs, the one with the best horn maintains complete command over the troupe, until another one manages to steal it.",
     "DESCRIPTIONS": [
-      "Whenever an enemy dies, gain [E] , draw #b1 card, and #ySwap to the next Gremlin."
+      "At the start of each combat, gain [E] , draw #b1 card, and #ySwap to the next Gremlin."
     ]
   },
   "Gremlin:GremlinMask": {

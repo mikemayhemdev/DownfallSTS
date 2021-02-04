@@ -35,6 +35,7 @@ public class PinNeedle extends AbstractGremlinCard {
         this.magicNumber = MAGIC;
 
         this.exhaust = true;
+        this.cardsToPreview = new Pinprick();
     }
 
     @Override
@@ -57,6 +58,7 @@ public class PinNeedle extends AbstractGremlinCard {
             upgradeDamage(UPGRADE_BONUS);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             initializeDescription();
+            this.cardsToPreview.upgrade();
         }
     }
 }

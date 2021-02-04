@@ -1,15 +1,20 @@
 package gremlin.cards;
 
+import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.actions.ProperToolsAction;
+
+import java.util.ArrayList;
 
 public class ProperTools extends AbstractGremlinCard {
     private static final String ID = getID("ProperTools");
@@ -26,6 +31,10 @@ public class ProperTools extends AbstractGremlinCard {
     private static final int UPGRADE_BONUS = 4;
     private static final int MAGIC = 3;
 
+    private float rotationTimer;
+    private int previewIndex;
+    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
+
     public ProperTools()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
@@ -33,6 +42,10 @@ public class ProperTools extends AbstractGremlinCard {
         this.baseDamage = POWER;
         this.baseMagicNumber = MAGIC;
         this.magicNumber = MAGIC;
+        cardsList.add(new Shiv());
+        cardsList.add(new Ward());
+
+        this.cardsToPreview = new Shiv();
     }
 
     @Override
@@ -48,6 +61,28 @@ public class ProperTools extends AbstractGremlinCard {
         {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
+        }
+    }
+
+    @Override
+    public void update() {
+        super.update();
+        if (hb.hovered) {
+            if (rotationTimer <= 0F) {
+                rotationTimer = 2F;
+                if (cardsList.size() == 0) {
+                    cardsToPreview = CardLibrary.cards.get("Madness");
+                } else {
+                    cardsToPreview = cardsList.get(previewIndex);
+                }
+                if (previewIndex == cardsList.size() - 1) {
+                    previewIndex = 0;
+                } else {
+                    previewIndex++;
+                }
+            } else {
+                rotationTimer -= Gdx.graphics.getDeltaTime();
+            }
         }
     }
 }

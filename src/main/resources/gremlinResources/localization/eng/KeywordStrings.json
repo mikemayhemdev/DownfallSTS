@@ -1,12 +1,6 @@
 [
   {
     "NAMES": [
-      "bang"
-    ],
-    "DESCRIPTION": "Bang is a #b2 cost Attack that benefits from Wiz."
-  },
-  {
-    "NAMES": [
       "echo",
       "echoes"
     ],
@@ -32,19 +26,6 @@
   },
   {
     "NAMES": [
-      "momentary"
-    ],
-    "DESCRIPTION": "Removed at end of turn."
-  },
-  {
-    "NAMES": [
-      "pinprick",
-      "pinpricks"
-    ],
-    "DESCRIPTION": "Pinpricks are #b0 cost Attack cards which draw a card."
-  },
-  {
-    "NAMES": [
       "shield gremlin", "shield_gremlin"
     ],
     "DESCRIPTION": "Whenever you play a skill, gain #b2 #yBlock."
@@ -60,19 +41,6 @@
       "swap"
     ],
     "DESCRIPTION": "Switch places with another character. Does nothing if there is no valid target."
-  },
-  {
-    "NAMES": [
-      "ward",
-      "wards"
-    ],
-    "DESCRIPTION": "Wards are #b0 cost Skill cards which grant #yBlock and Exhaust."
-  },
-  {
-    "NAMES": [
-      "whiz"
-    ],
-    "DESCRIPTION": "Whiz is a #b1 cost Skill that grants Wiz."
   },
   {
     "NAMES": [

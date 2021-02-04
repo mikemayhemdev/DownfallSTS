@@ -28,14 +28,22 @@ public class GremlinKnob extends AbstractGremlinRelic {
     }
 
     @Override
-    public void onMonsterDeath(final AbstractMonster m) {
-        if (m.currentHealth == 0 && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            this.flash();
-            AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(m, this));
-            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
-            AbstractDungeon.actionManager.addToBottom(new GremlinSwapAction(true));
-        }
+    public void atBattleStart() {
+        this.flash();
+        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
+        AbstractDungeon.actionManager.addToBottom(new GremlinSwapAction(true));
     }
+
+//    @Override
+//    public void onMonsterDeath(final AbstractMonster m) {
+//        if (m.currentHealth == 0 && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+//            this.flash();
+//            AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(m, this));
+//            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+//            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
+//            AbstractDungeon.actionManager.addToBottom(new GremlinSwapAction(true));
+//        }
+//    }
 }
 

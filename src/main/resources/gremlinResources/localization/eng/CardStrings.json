@@ -117,7 +117,7 @@
 
   "Gremlin:Erupt": {
     "NAME": "Erupt",
-    "DESCRIPTION": "Gain !M! Momentary Strength. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Temporary Strength. NL Exhaust."
   },
 
   "Gremlin:Exacerbate": {
@@ -169,7 +169,7 @@
 
   "Gremlin:FollowThrough": {
     "NAME": "Follow Through",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Momentary Strength."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Temporary Strength."
   },
 
   "Gremlin:Fury": {
@@ -195,8 +195,8 @@
   },
 
   "Gremlin:GremlinMeal": {
-    "NAME": "Gremlin Meal",
-    "DESCRIPTION": "Gain !M! Momentary Strength."
+    "NAME": "Flex",
+    "DESCRIPTION": "Gain !M! Temporary Strength."
   },
 
   "Gremlin:GremlinDance": {

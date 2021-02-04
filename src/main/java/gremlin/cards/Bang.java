@@ -26,6 +26,8 @@ public class Bang extends AbstractGremlinCard {
     private static final int MAGIC = 3;
     private static final int UPGRADE_MAGIC = 1;
 
+    private boolean real = true;
+
     public Bang()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
@@ -35,6 +37,19 @@ public class Bang extends AbstractGremlinCard {
         this.magicNumber = MAGIC;
 
         this.exhaust = true;
+        this.cardsToPreview = new Whiz(false);
+    }
+
+    public Bang(boolean real)
+    {
+        super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
+
+        this.baseDamage = POWER;
+        this.baseMagicNumber = MAGIC;
+        this.magicNumber = MAGIC;
+
+        this.exhaust = true;
+        this.real = real;
     }
 
     @Override
@@ -58,6 +73,9 @@ public class Bang extends AbstractGremlinCard {
             upgradeMagicNumber(UPGRADE_MAGIC);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             initializeDescription();
+            if (real) {
+                this.cardsToPreview.upgrade();
+            }
         }
     }
 }

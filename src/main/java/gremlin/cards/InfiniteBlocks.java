@@ -24,6 +24,7 @@ public class InfiniteBlocks extends AbstractGremlinCard {
     public InfiniteBlocks()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
+        this.cardsToPreview = new Ward();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
