@@ -359,11 +359,13 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
             for (AbstractCard card : boss.hand.group) {
                 if (card instanceof AbstractBossCard) {
                     AbstractMonster.Intent intent = ((AbstractBossCard) card).intent;
-                    if (intent == AbstractMonster.Intent.ATTACK
-                            || intent == AbstractMonster.Intent.ATTACK_BUFF
-                            || intent == AbstractMonster.Intent.ATTACK_DEBUFF
-                            || intent == AbstractMonster.Intent.ATTACK_DEFEND) {
-                        return true;
+                    if (!((AbstractBossCard) card).bossDarkened) {
+                        if (intent == AbstractMonster.Intent.ATTACK
+                                || intent == AbstractMonster.Intent.ATTACK_BUFF
+                                || intent == AbstractMonster.Intent.ATTACK_DEBUFF
+                                || intent == AbstractMonster.Intent.ATTACK_DEFEND) {
+                            return true;
+                        }
                     }
                 }
             }

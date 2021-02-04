@@ -1,5 +1,6 @@
 package gremlin.cards;
 
+import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -7,11 +8,15 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import gremlin.characters.GremlinCharacter;
+import sneckomod.SneckoMod;
+
+import java.util.ArrayList;
 
 public class GremlinDance extends AbstractGremlinCard {
     private static final String ID = getID("GremlinDance");
@@ -29,14 +34,39 @@ public class GremlinDance extends AbstractGremlinCard {
     private static final int MAGIC = 2;
     private static final int UPGRADE_BONUS = 3;
 
+    private String gremlin;
+    private float rotationTimer;
+    private int previewIndex;
+    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
+
     public GremlinDance()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
         this.baseDamage = POWER;
         this.baseBlock = BLOCK;
         this.baseMagicNumber = MAGIC;
         this.magicNumber = this.baseMagicNumber;
+        this.gremlin = "";
+
+        cardsList.add(new GremlinDance("angry"));
+        cardsList.add(new GremlinDance("fat"));
+        cardsList.add(new GremlinDance("shield"));
+        cardsList.add(new GremlinDance("sneak"));
+        cardsList.add(new GremlinDance("wizard"));
+    }
+
+    public GremlinDance(String gremlin) {
+        super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+
+        this.baseDamage = POWER;
+        this.baseBlock = BLOCK;
+        this.baseMagicNumber = MAGIC;
+        this.magicNumber = this.baseMagicNumber;
+        this.gremlin = gremlin;
+        updateContents();
     }
 
     @Override
@@ -85,6 +115,28 @@ public class GremlinDance extends AbstractGremlinCard {
         }
     }
 
+    @Override
+    public void update() {
+        super.update();
+        if (hb.hovered) {
+            if (rotationTimer <= 0F) {
+                rotationTimer = 2F;
+                if (cardsList.size() == 0) {
+                    cardsToPreview = CardLibrary.cards.get("Madness");
+                } else {
+                    cardsToPreview = cardsList.get(previewIndex);
+                }
+                if (previewIndex == cardsList.size() - 1) {
+                    previewIndex = 0;
+                } else {
+                    previewIndex++;
+                }
+            } else {
+                rotationTimer -= Gdx.graphics.getDeltaTime();
+            }
+        }
+    }
+
     public AbstractCard makeCopy()
     {
         return new GremlinDance();
@@ -98,14 +150,17 @@ public class GremlinDance extends AbstractGremlinCard {
 
     private void updateContents(){
         this.rawDescription = strings.EXTENDED_DESCRIPTION[0];
-        if(AbstractDungeon.player instanceof GremlinCharacter){
-            if(((GremlinCharacter) AbstractDungeon.player).nob){
+        if(!this.gremlin.equals("") || AbstractDungeon.player instanceof GremlinCharacter){
+            if(this.gremlin.equals("") && ((GremlinCharacter) AbstractDungeon.player).nob){
                 rawDescription += strings.EXTENDED_DESCRIPTION[6];
                 this.isMultiDamage = false;
                 this.target = CardTarget.ENEMY;
                 this.wizardry = false;
             } else {
-                String gremlin = ((GremlinCharacter) AbstractDungeon.player).currentGremlin;
+                String gremlin = this.gremlin;
+                if (gremlin.equals("")) {
+                    gremlin = ((GremlinCharacter) AbstractDungeon.player).currentGremlin;
+                }
                 switch (gremlin) {
                     case "angry":
                         rawDescription += strings.EXTENDED_DESCRIPTION[1];

@@ -14,6 +14,24 @@
   },
   {
     "NAMES": [
+      "fat gremlin", "fat_gremlin"
+    ],
+    "DESCRIPTION": "Whenever you play an attack, apply #b1 #yWeak to all targets."
+  },
+  {
+    "NAMES": [
+      "gremlin wizard", "gremlin_wizard"
+    ],
+    "DESCRIPTION": "Whenever you play a skill, gain #b1 #yWiz."
+  },
+  {
+    "NAMES": [
+      "mad gremlin", "mad_gremlin"
+    ],
+    "DESCRIPTION": "Gain #b2 #yTemporary #yStrength when attacked."
+  },
+  {
+    "NAMES": [
       "momentary"
     ],
     "DESCRIPTION": "Removed at end of turn."
@@ -24,6 +42,18 @@
       "pinpricks"
     ],
     "DESCRIPTION": "Pinpricks are #b0 cost Attack cards which draw a card."
+  },
+  {
+    "NAMES": [
+      "shield gremlin", "shield_gremlin"
+    ],
+    "DESCRIPTION": "Whenever you play a skill, gain #b2 #yBlock."
+  },
+  {
+    "NAMES": [
+      "sneaky gremlin", "sneaky_gremlin"
+    ],
+    "DESCRIPTION": "Whenever you play an attack, deal #b2 damage to a random enemy."
   },
   {
     "NAMES": [

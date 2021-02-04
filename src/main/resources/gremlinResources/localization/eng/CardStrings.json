@@ -38,7 +38,7 @@
 
   "Gremlin:BulkUp": {
     "NAME": "Bulk Up",
-    "DESCRIPTION": "Gain !M! Temporary HP. NL Swap to Fat Gremlin."
+    "DESCRIPTION": "Gain !M! Temporary HP. NL Swap to Fat_Gremlin."
   },
 
   "Gremlin:BurlyBlow": {
@@ -138,7 +138,7 @@
 
   "Gremlin:FatGremlin": {
     "NAME": "Fat Gremlin",
-    "DESCRIPTION": "Swap to Fat Gremlin."
+    "DESCRIPTION": "Swap to Fat_Gremlin."
   },
 
   "Gremlin:FeelTheAudience": {
@@ -185,8 +185,8 @@
 
   "Gremlin:GlitterGuard": {
     "NAME": "Glitter Guard",
-    "DESCRIPTION": "Add !M! Wards to your hand. NL Swap to Shield Gremlin.",
-    "UPGRADE_DESCRIPTION": "Add !M! Upgraded Wards to your hand. NL Swap to Shield Gremlin."
+    "DESCRIPTION": "Add !M! Wards to your hand. NL Swap to Shield_Gremlin.",
+    "UPGRADE_DESCRIPTION": "Add !M! Upgraded Wards to your hand. NL Swap to Shield_Gremlin."
   },
 
   "Gremlin:GremlinArms": {
@@ -222,7 +222,7 @@
 
   "Gremlin:GremlinWizard": {
     "NAME": "Gremlin Wizard",
-    "DESCRIPTION": "Swap to Gremlin Wizard."
+    "DESCRIPTION": "Swap to Gremlin_Wizard."
   },
 
   "Gremlin:Heckle": {
@@ -243,7 +243,7 @@
 
   "Gremlin:Irritability": {
     "NAME": "Irritability",
-    "DESCRIPTION": "Whenever you are attacked this turn, deal !M! damage to the attacker. NL Swap to Mad Gremlin."
+    "DESCRIPTION": "Whenever you are attacked this turn, deal !M! damage to the attacker. NL Swap to Mad_Gremlin."
   },
 
   "Gremlin:Jeer": {
@@ -263,7 +263,7 @@
 
   "Gremlin:MadGremlin": {
     "NAME": "Mad Gremlin",
-    "DESCRIPTION": "Swap to Mad Gremlin."
+    "DESCRIPTION": "Swap to Mad_Gremlin."
   },
 
   "Gremlin:MakeshiftArmor": {
@@ -408,7 +408,7 @@
 
   "Gremlin:ShieldGremlin": {
     "NAME": "Shield Gremlin",
-    "DESCRIPTION": "Swap to Shield Gremlin."
+    "DESCRIPTION": "Swap to Shield_Gremlin."
   },
 
   "Gremlin:ShowOfHands": {
@@ -430,7 +430,7 @@
 
   "Gremlin:SneakyGremlin": {
     "NAME": "Sneaky Gremlin",
-    "DESCRIPTION": "Swap to Sneaky Gremlin."
+    "DESCRIPTION": "Swap to Sneaky_Gremlin."
   },
 
   "Gremlin:Strike": {
@@ -445,8 +445,8 @@
 
   "Gremlin:Tadah": {
     "NAME": "Tadah!",
-    "DESCRIPTION": "Add an Echo of a random Skill to your hand. NL Swap to Gremlin Wizard.",
-    "UPGRADE_DESCRIPTION": "Add an Echo of a random Skill to your hand. It costs 1 less. NL Swap to Gremlin Wizard."
+    "DESCRIPTION": "Add an Echo of a random Skill to your hand. NL Swap to Gremlin_Wizard.",
+    "UPGRADE_DESCRIPTION": "Add an Echo of a random Skill to your hand. It costs 1 less. NL Swap to Gremlin_Wizard."
   },
 
   "Gremlin:TagTeam": {
@@ -461,7 +461,7 @@
 
   "Gremlin:Tricksy": {
     "NAME": "Tricksy",
-    "DESCRIPTION": "Draw !M! cards. Discard all cards draw this way that are not Attacks. NL Swap to Sneaky Gremlin."
+    "DESCRIPTION": "Draw !M! cards. Discard all cards draw this way that are not Attacks. NL Swap to Sneaky_Gremlin."
   },
 
   "Gremlin:TwistTheKnife": {

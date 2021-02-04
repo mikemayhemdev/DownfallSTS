@@ -32,6 +32,7 @@ public class Astound extends AbstractGremlinCard {
 
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
+        this.cardsToPreview = new Ward();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
@@ -48,6 +49,9 @@ public class Astound extends AbstractGremlinCard {
             upgradeBlock(UPGRADE_BONUS);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             initializeDescription();
+            AbstractCard c = new Ward();
+            c.upgrade();
+            this.cardsToPreview = c;
         }
     }
 }
