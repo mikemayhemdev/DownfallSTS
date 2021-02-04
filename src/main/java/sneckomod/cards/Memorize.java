@@ -18,6 +18,7 @@ public class Memorize extends AbstractSneckoCard {
     public Memorize() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         tags.add(SneckoMod.SNEKPROOF);
+        tags.add(CardTags.HEALING);
         FleetingField.fleeting.set(this, true);
     }
 
