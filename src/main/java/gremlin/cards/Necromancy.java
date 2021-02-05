@@ -13,6 +13,7 @@ import gremlin.characters.GremlinCharacter;
 import gremlin.orbs.GremlinStandby;
 import gremlin.powers.BangPower;
 import gremlin.powers.WizPower;
+import sneckomod.SneckoMod;
 
 public class Necromancy extends AbstractGremlinCard {
     private static final String ID = getID("Necromancy");
@@ -38,6 +39,7 @@ public class Necromancy extends AbstractGremlinCard {
 
         this.exhaust = true;
         this.tags.add(AbstractCard.CardTags.HEALING);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     @Override

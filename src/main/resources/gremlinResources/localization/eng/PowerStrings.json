@@ -1,4 +1,13 @@
 {
+  "Gremlin:Agony": {
+    "NAME": "Agonizing Pain",
+    "DESCRIPTIONS": [
+      "#yAttacks deal #b",
+      "% less damage for #b",
+      " turn.",
+      " turns."
+    ]
+  },
   "Gremlin:Bang": {
     "NAME": "Bang",
     "DESCRIPTIONS": [

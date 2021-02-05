@@ -28,7 +28,7 @@
 
   "Gremlin:BrokenShin": {
     "NAME": "Broken Shin",
-    "DESCRIPTION": "Remove all Weak. Stun the enemy for every !M! stacks of Weak removed this way."
+    "DESCRIPTION": "Remove all Weak. NL The enemy will spend a turn in Agony for every !M! stacks of Weak removed this way."
   },
 
   "Gremlin:BubbleBarrier": {
@@ -179,8 +179,8 @@
 
   "Gremlin:Glimmer": {
     "NAME": "Glimmer",
-    "DESCRIPTION": "Deal !D! damage. NL Add 1 Ward to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add 1 Upgraded Ward to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Add 2 Wards to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add 2 Upgraded Wards to your hand."
   },
 
   "Gremlin:GlitterGuard": {
