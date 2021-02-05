@@ -4,6 +4,16 @@
       "[Take] #gObtain #gthe #gBook. #rAll #rGremlins #rLose #r"
     ]
   },
+  "Gremlin:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "A flexible mind is not burdened by doubt."
+    ],
+    "OPTIONS": [
+      "[Caprice] #gReplace all #gStrikes and #gDefends with #gShivs and #gWards.",
+      "[Locked] Requires a Strike or Defend."
+    ]
+  },
   "Gremlin:KnowingSkull": {
     "OPTIONS": [
       "[Information?] #gReveal #gthe #gBoss. #rAll #rGremlins #rLose #r",

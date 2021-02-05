@@ -1,6 +1,8 @@
 package gremlin;
 
 import basemod.BaseMod;
+import basemod.eventUtil.AddEventParams;
+import basemod.eventUtil.EventUtils;
 import basemod.interfaces.*;
 import champ.cards.FalseCounter;
 import charbosses.bosses.AbstractCharBoss;
@@ -14,6 +16,7 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -23,6 +26,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import gremlin.cards.*;
 import gremlin.cards.SharpenBlades;
 import gremlin.characters.GremlinCharacter;
+import gremlin.events.BackToBasicsGremlin;
 import gremlin.orbs.*;
 import gremlin.patches.AbstractCardEnum;
 import gremlin.patches.GremlinEnum;
@@ -36,11 +40,12 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 import static basemod.BaseMod.addRelicToCustomPool;
+import static gremlin.patches.GremlinEnum.GREMLIN;
 
 
 @SpireInitializer
 public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscriber, EditKeywordsSubscriber,
-        EditRelicsSubscriber, EditCardsSubscriber, OnStartBattleSubscriber, PostBattleSubscriber{
+        EditRelicsSubscriber, EditCardsSubscriber, OnStartBattleSubscriber, PostBattleSubscriber, PostInitializeSubscriber{
     private static String modID = "gremlin";
 
     private static final Color GREMLIN_COLOR = CardHelper.getColor(205.0f, 92.0f, 92.0f);
@@ -106,7 +111,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
         BaseMod.addCharacter(new GremlinCharacter("The Gremlins"),
                 getResourcePath(CHAR_BUTTON),
                 getResourcePath(CHAR_PORTRAIT),
-                GremlinEnum.GREMLIN);
+                GREMLIN);
     }
 
     @Override
@@ -231,9 +236,11 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
         BaseMod.addCard(new Unforgiving());
 
         //Special
-        BaseMod.addCard(new Bellow());
-        BaseMod.addCard(new Rush());
-        BaseMod.addCard(new SkullBash());
+//        BaseMod.addCard(new Bellow());
+//        BaseMod.addCard(new Rush());
+//        BaseMod.addCard(new SkullBash());
+        BaseMod.addCard(new Ward());
+
     }
 
     @Override
@@ -390,5 +397,17 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
                 || intent == AbstractMonster.Intent.ATTACK_BUFF
                 || intent == AbstractMonster.Intent.ATTACK_DEBUFF
                 || intent == AbstractMonster.Intent.ATTACK_DEFEND;
+    }
+
+    @Override
+    public void receivePostInitialize() {
+        BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsGremlin.ID, BackToBasicsGremlin.class) //Event ID//
+                //Event Character//
+                .playerClass(GREMLIN)
+                //Existing Event to Override//
+                .overrideEvent(BackToBasics.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
     }
 }
