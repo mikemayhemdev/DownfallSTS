@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.monsters.city.BronzeAutomaton;
 import com.megacrit.cardcrawl.monsters.city.Champ;
+import com.megacrit.cardcrawl.monsters.city.GremlinLeader;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic.RelicTier;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
@@ -26,11 +27,13 @@ import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import downfall.downfallMod;
+import downfall.monsters.GremlinMirror;
 import downfall.monsters.SneckoMirror;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.relics.HeartBlessingBlue;
 import downfall.relics.HeartBlessingGreen;
 import downfall.relics.HeartBlessingRed;
+import gremlin.characters.GremlinCharacter;
 import guardian.characters.GuardianCharacter;
 import slimebound.characters.SlimeboundCharacter;
 import sneckomod.TheSnecko;
@@ -41,6 +44,9 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
+
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.lastCombatMetricKey;
+import static com.megacrit.cardcrawl.helpers.MonsterHelper.getGremlin;
 
 public class MindBloom_Evil extends AbstractImageEvent {
     public static final String ID = "downfall:MindBloom";
@@ -112,8 +118,11 @@ public class MindBloom_Evil extends AbstractImageEvent {
                         if (AbstractDungeon.player instanceof TheSnecko){
 
                             AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new SneckoMirror());
+                        } else
+                        if (AbstractDungeon.player instanceof GremlinCharacter){
+                            lastCombatMetricKey = "Gremlin Mirror";
+                            AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new AbstractMonster[]{spawnGremlin(GremlinLeader.POSX[0], GremlinLeader.POSY[0]), spawnGremlin(GremlinLeader.POSX[1], GremlinLeader.POSY[1]), new GremlinMirror()});
                         } else {
-
                             ArrayList<String> list = new ArrayList();
                             list.add("Slime Boss");
                             list.add("Hexaghost");
@@ -198,6 +207,19 @@ public class MindBloom_Evil extends AbstractImageEvent {
                 this.openMap();
         }
 
+    }
+
+    private static AbstractMonster spawnGremlin(float x, float y) {
+        ArrayList<String> gremlinPool = new ArrayList<String>();
+        gremlinPool.add("GremlinWarrior");
+        gremlinPool.add("GremlinWarrior");
+        gremlinPool.add("GremlinThief");
+        gremlinPool.add("GremlinThief");
+        gremlinPool.add("GremlinFat");
+        gremlinPool.add("GremlinFat");
+        gremlinPool.add("GremlinTsundere");
+        gremlinPool.add("GremlinWizard");
+        return getGremlin((String)gremlinPool.get(AbstractDungeon.miscRng.random(0, gremlinPool.size() - 1)), x, y);
     }
 
     static {

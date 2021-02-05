@@ -562,8 +562,9 @@ public class GremlinCharacter extends CustomPlayer {
     }
 
     public void gremlinTalk(AbstractCreature enemyGremlin){
-        if(enemyGremTalk < GREMUITEXT.length &&
+        if(enemyGremTalk < GREMUITEXT.length && lastCombatMetricKey != null &&
                 !lastCombatMetricKey.equals(MonsterHelper.GREMLIN_LEADER_ENC) &&
+                !lastCombatMetricKey.equals("Gremlin Mirror") &&
                 GameActionManager.turn <= 1) {
             AbstractDungeon.actionManager.addToBottom(new TalkAction(enemyGremlin, GREMUITEXT[enemyGremTalk]));
             enemyGremTalk++;
