@@ -1,6 +1,12 @@
 [
   {
     "NAMES": [
+      "agony"
+    ],
+    "DESCRIPTION": "Creatures in #yAgony deal #b80% less damage with Attacks."
+  },
+  {
+    "NAMES": [
       "echo",
       "echoes"
     ],

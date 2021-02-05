@@ -1,6 +1,6 @@
 package gremlin.cards;
 
-import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.powers.AgonyPower;
 
 public class BrokenShin extends AbstractGremlinCard {
     private static final String ID = getID("BrokenShin");
@@ -19,7 +20,7 @@ public class BrokenShin extends AbstractGremlinCard {
     private static final AbstractCard.CardRarity RARITY = CardRarity.RARE;
     private static final AbstractCard.CardTarget TARGET = CardTarget.ENEMY;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int MAGIC = 4;
     private static final int UPGRADE_BONUS = -1;
 
@@ -37,7 +38,8 @@ public class BrokenShin extends AbstractGremlinCard {
             int amount = m.getPower("Weakened").amount / this.magicNumber;
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(m, p, "Weakened"));
             if(amount > 0){
-                AbstractDungeon.actionManager.addToBottom(new StunMonsterAction(m, p, amount));
+                AbstractDungeon.actionManager.addToBottom(
+                        new ApplyPowerAction(m, p, new AgonyPower(m, amount, false), amount));
             }
         }
     }

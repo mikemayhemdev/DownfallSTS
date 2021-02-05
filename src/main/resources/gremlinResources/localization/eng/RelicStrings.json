@@ -38,7 +38,11 @@
     "NAME": "Stolen Merchandise",
     "FLAVOR": "\"Blasted, thieving Gremlins!\".",
     "DESCRIPTIONS": [
-      "Whenever you #ySwap, add an #yEcho of a random Colorless card to your hand."
+      "Whenever you #ySwap, add an #yEcho of a random Colorless card to your hand. NL At the start of combat, the Merchant gains #b",
+      " Strength.",
+      "You no good, blasted, thieves!",
+      "You cowardly, wretched vermin!",
+      "Greedy grasping gremlins!"
     ]
   },
   "Gremlin:SupplyScroll": {
