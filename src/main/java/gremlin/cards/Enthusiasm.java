@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.powers.EnthusiasmPower;
+import sneckomod.SneckoMod;
 
 public class Enthusiasm extends AbstractGremlinCard {
     private static final String ID = getID("Enthusiasm");
@@ -30,6 +31,7 @@ public class Enthusiasm extends AbstractGremlinCard {
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnthusiasmPower(p, 1), 1));
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void upgrade()

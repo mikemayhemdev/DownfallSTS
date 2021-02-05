@@ -87,7 +87,7 @@
 
   "Gremlin:Dazzle": {
     "NAME": "Dazzle",
-    "DESCRIPTION": "Deal !D! damage. NL Enemy loses 1 Strength for each stack of Wiz you have. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL If you have 5 or more Wiz, the enemy loses 2 Strength. NL Exhaust."
   },
 
   "Gremlin:Defend": {
@@ -159,7 +159,7 @@
 
   "Gremlin:Flurry": {
     "NAME": "Flurry",
-    "DESCRIPTION": "Deal !D! damage for each card played this turn.",
+    "DESCRIPTION": "Deal !D! damage for each card played this turn. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " card played.)",
@@ -451,7 +451,8 @@
 
   "Gremlin:TagTeam": {
     "NAME": "Tag Team",
-    "DESCRIPTION": "Swap to a living Gremlin of your choice."
+    "DESCRIPTION": "Swap to a living Gremlin of your choice.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Swap to a living Gremlin of your choice."
   },
 
   "Gremlin:TargetWeakness": {

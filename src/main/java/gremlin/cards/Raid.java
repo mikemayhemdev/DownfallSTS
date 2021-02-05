@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import gremlin.orbs.GremlinStandby;
+import sneckomod.SneckoMod;
 
 public class Raid extends AbstractGremlinCard {
     private static final String ID = getID("Raid");
@@ -31,6 +32,7 @@ public class Raid extends AbstractGremlinCard {
 
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

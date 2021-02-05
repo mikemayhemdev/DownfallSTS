@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.powers.CongaLinePower;
+import sneckomod.SneckoMod;
 
 public class CongaLine extends AbstractGremlinCard {
     private static final String ID = getID("CongaLine");
@@ -24,6 +25,7 @@ public class CongaLine extends AbstractGremlinCard {
     public CongaLine()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

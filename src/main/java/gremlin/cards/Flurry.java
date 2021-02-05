@@ -29,6 +29,7 @@ public class Flurry extends AbstractGremlinCard {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
+        this.exhaust = true;
     }
 
     @Override

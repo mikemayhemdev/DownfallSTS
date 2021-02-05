@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.GrandFinalEffect;
 import gremlin.powers.WizPower;
+import sneckomod.SneckoMod;
 
 public class ShowStopper extends AbstractGremlinCard {
     private static final String ID = getID("ShowStopper");
@@ -34,6 +35,7 @@ public class ShowStopper extends AbstractGremlinCard {
         this.baseDamage = POWER;
 
         this.isMultiDamage = true;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     @Override

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.powers.ScatterPower;
+import sneckomod.SneckoMod;
 
 public class Scatter extends AbstractGremlinCard {
     private static final String ID = getID("Scatter");
@@ -27,6 +28,7 @@ public class Scatter extends AbstractGremlinCard {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.exhaust = true;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

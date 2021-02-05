@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.powers.AgonyPower;
+import sneckomod.SneckoMod;
 
 public class BrokenShin extends AbstractGremlinCard {
     private static final String ID = getID("BrokenShin");
@@ -30,6 +31,7 @@ public class BrokenShin extends AbstractGremlinCard {
 
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

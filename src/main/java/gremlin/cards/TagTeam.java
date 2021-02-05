@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import gremlin.cards.pseudocards.*;
 import gremlin.orbs.*;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
@@ -23,8 +24,7 @@ public class TagTeam extends AbstractGremlinCard {
     private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.BASIC;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 
-    private static final int COST = 1;
-    private static final int UPGRADE_COST = 0;
+    private static final int COST = 0;
 
     private boolean hasOptions = true;
 
@@ -32,6 +32,7 @@ public class TagTeam extends AbstractGremlinCard {
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         updateModal();
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
@@ -57,7 +58,9 @@ public class TagTeam extends AbstractGremlinCard {
         if (!this.upgraded)
         {
             upgradeName();
-            upgradeBaseCost(UPGRADE_COST);
+            selfRetain = true;
+            this.rawDescription = strings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

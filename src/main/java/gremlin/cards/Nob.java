@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.patches.SuperRare;
 import gremlin.powers.GremlinNobPower;
+import sneckomod.SneckoMod;
 
 public class Nob extends AbstractGremlinCard implements SuperRare {
     private static final String ID = getID("Nob");
@@ -35,6 +36,7 @@ public class Nob extends AbstractGremlinCard implements SuperRare {
         this.magicNumber = baseMagicNumber;
 
         this.tags.add(BaseModCardTags.FORM);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

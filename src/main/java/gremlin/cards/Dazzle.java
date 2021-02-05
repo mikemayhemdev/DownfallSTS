@@ -43,9 +43,9 @@ public class Dazzle extends AbstractGremlinCard {
         }
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                 this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
-        if(amount > 0){
+        if(amount >= 5){
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                    new StrengthPower(m, -amount), -amount));
+                    new StrengthPower(m, -2), -2));
         }
     }
 
