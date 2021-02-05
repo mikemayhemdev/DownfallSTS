@@ -122,7 +122,7 @@
 
   "Gremlin:Exacerbate": {
     "NAME": "Exacerbate",
-    "DESCRIPTION": "Deal !D! damage. The enemy's Weak no longer wears off. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. Cripple the enemy. NL Exhaust."
   },
 
   "Gremlin:FairyDust": {
@@ -243,7 +243,7 @@
 
   "Gremlin:Irritability": {
     "NAME": "Irritability",
-    "DESCRIPTION": "Whenever you are attacked this turn, deal !M! damage to the attacker. NL Swap to Mad_Gremlin."
+    "DESCRIPTION": "Gain !M! temporary Thorns. NL Swap to Mad_Gremlin."
   },
 
   "Gremlin:Jeer": {
@@ -268,7 +268,8 @@
 
   "Gremlin:MakeshiftArmor": {
     "NAME": "Makeshift Armor",
-    "DESCRIPTION": "Gain !M! Artifact."
+    "DESCRIPTION": "Every time you play #b5 attacks, gain #b1 Artifact.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Artifact. NL Every time you play #b5 attacks, gain #b1 Artifact."
   },
 
   "Gremlin:Mockery": {

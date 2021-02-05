@@ -36,7 +36,7 @@
   "Gremlin:Crippled": {
     "NAME": "Crippled",
     "DESCRIPTIONS": [
-      "#yWeak does not wear off."
+      "#yWeak does not wear off. At the end of its turn, it loses HP equal to its #bWeak."
     ]
   },
   "Gremlin:Encore": {
@@ -106,6 +106,15 @@
     "DESCRIPTIONS": [
       "Gain #b",
       " #yTemporary #yStrength when attacked."
+    ]
+  },
+  "Gremlin:MakeshiftArmor": {
+    "NAME": "Makeshift Armor",
+    "DESCRIPTIONS": [
+      "Play #b",
+      " more attack to gain #b",
+      " more attacks to gain #b",
+      " #yArtifact."
     ]
   },
   "Gremlin:MakingMagic": {

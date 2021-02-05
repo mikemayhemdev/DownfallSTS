@@ -7,6 +7,13 @@
   },
   {
     "NAMES": [
+      "cripple",
+      "crippled"
+    ],
+    "DESCRIPTION": "#yCrippled enemies can no longer lose #yWeak. At the end of their turn, they lose HP equal to their #yWeak."
+  },
+  {
+    "NAMES": [
       "echo",
       "echoes"
     ],

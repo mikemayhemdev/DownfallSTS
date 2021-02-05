@@ -1,5 +1,6 @@
 package gremlin.cards;
 
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,8 +9,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FlameBarrierPower;
+import com.megacrit.cardcrawl.powers.ThornsPower;
+import com.megacrit.cardcrawl.vfx.FlameAnimationEffect;
 import gremlin.actions.GremlinSwapAction;
 import gremlin.orbs.MadGremlin;
+import slimebound.powers.LoseThornsPower;
 
 import static gremlin.GremlinMod.MAD_GREMLIN;
 
@@ -24,7 +28,7 @@ public class Irritability extends AbstractGremlinCard {
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 
     private static final int COST = 1;
-    private static final int MAGIC = 5;
+    private static final int MAGIC = 3;
     private static final int UPGRADE_BONUS = 2;
 
     public Irritability()
@@ -39,8 +43,9 @@ public class Irritability extends AbstractGremlinCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new FlameBarrierPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new FlameAnimationEffect(p.hb)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseThornsPower(p, p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new GremlinSwapAction(new MadGremlin(0)));
     }
 

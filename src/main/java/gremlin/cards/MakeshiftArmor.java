@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
+import gremlin.powers.MakeshiftArmorPower;
 
 import static gremlin.GremlinMod.MAD_GREMLIN;
 
@@ -22,7 +23,7 @@ public class MakeshiftArmor extends AbstractGremlinCard {
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 
     private static final int COST = 1;
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 0;
     private static final int UPGRADE_BONUS = 1;
 
     public MakeshiftArmor()
@@ -38,8 +39,12 @@ public class MakeshiftArmor extends AbstractGremlinCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
+        if (upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                    new ArtifactPower(p, magicNumber), magicNumber));
+        }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new ArtifactPower(p, magicNumber), magicNumber));
+                new MakeshiftArmorPower(p, 1), 1));
     }
 
     public void upgrade()
@@ -48,6 +53,8 @@ public class MakeshiftArmor extends AbstractGremlinCard {
         {
             upgradeName();
             upgradeMagicNumber(UPGRADE_BONUS);
+            this.rawDescription = strings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }
