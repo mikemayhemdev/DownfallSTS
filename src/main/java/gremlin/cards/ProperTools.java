@@ -16,6 +16,8 @@ import gremlin.actions.ProperToolsAction;
 
 import java.util.ArrayList;
 
+import static gremlin.GremlinMod.SNEAKY_GREMLIN;
+
 public class ProperTools extends AbstractGremlinCard {
     private static final String ID = getID("ProperTools");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -46,6 +48,8 @@ public class ProperTools extends AbstractGremlinCard {
         cardsList.add(new Ward());
 
         this.cardsToPreview = new Shiv();
+        this.tags.add(SNEAKY_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

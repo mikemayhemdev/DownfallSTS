@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.powers.BubbleBarrierPower;
 
+import static gremlin.GremlinMod.SHIELD_GREMLIN;
+
 public class BubbleBarrier extends AbstractGremlinCard {
     private static final String ID = getID("BubbleBarrier");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -29,6 +31,8 @@ public class BubbleBarrier extends AbstractGremlinCard {
 
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
+        this.tags.add(SHIELD_GREMLIN);
+        setBackgrounds();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

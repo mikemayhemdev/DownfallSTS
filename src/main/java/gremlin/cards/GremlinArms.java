@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.ArrayList;
 
+import static gremlin.GremlinMod.SNEAKY_GREMLIN;
+
 public class GremlinArms extends AbstractGremlinCard {
     private static final String ID = getID("GremlinArms");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -41,6 +43,8 @@ public class GremlinArms extends AbstractGremlinCard {
         cardsList.add(new Ward());
 
         this.cardsToPreview = new Shiv();
+        this.tags.add(SNEAKY_GREMLIN);
+        setBackgrounds();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

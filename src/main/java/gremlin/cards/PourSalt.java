@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.actions.PourSaltAction;
 
+import static gremlin.GremlinMod.FAT_GREMLIN;
+
 public class PourSalt extends AbstractGremlinCard {
     private static final String ID = getID("PourSalt");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -37,6 +39,8 @@ public class PourSalt extends AbstractGremlinCard {
         this.magicNumber = MAGIC;
 
         this.cardsToPreview = new Shiv();
+        this.tags.add(FAT_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

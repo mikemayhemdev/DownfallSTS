@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.powers.EncorePower;
 import gremlin.powers.WizPower;
 
+import static gremlin.GremlinMod.WIZARD_GREMLIN;
+
 public class Encore extends AbstractGremlinCard {
     private static final String ID = getID("Encore");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -33,6 +35,8 @@ public class Encore extends AbstractGremlinCard {
 
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
+        this.tags.add(WIZARD_GREMLIN);
+        setBackgrounds();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

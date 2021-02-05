@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.actions.ShivPerCardPlayedAction;
 
+import static gremlin.GremlinMod.SNEAKY_GREMLIN;
+
 public class SecondVolley extends AbstractGremlinCard {
     private static final String ID = getID("SecondVolley");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -32,6 +34,8 @@ public class SecondVolley extends AbstractGremlinCard {
 
         this.baseDamage = POWER;
         this.cardsToPreview = new Shiv();
+        this.tags.add(SNEAKY_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

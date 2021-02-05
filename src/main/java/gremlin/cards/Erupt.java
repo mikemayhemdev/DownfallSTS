@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import gremlin.powers.ModifiedLoseStrengthPower;
 
+import static gremlin.GremlinMod.MAD_GREMLIN;
+
 public class Erupt extends AbstractGremlinCard {
     private static final String ID = getID("Erupt");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -32,6 +34,8 @@ public class Erupt extends AbstractGremlinCard {
         this.magicNumber = baseMagicNumber;
 
         this.exhaust = true;
+        this.tags.add(MAD_GREMLIN);
+        setBackgrounds();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

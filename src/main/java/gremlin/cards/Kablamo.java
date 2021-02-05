@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static gremlin.GremlinMod.WIZARD_GREMLIN;
+
 public class Kablamo extends AbstractGremlinCard {
     private static final String ID = getID("Kablamo");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -31,6 +33,8 @@ public class Kablamo extends AbstractGremlinCard {
 
         this.isMultiDamage = true;
         this.wizardry = true;
+        this.tags.add(WIZARD_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

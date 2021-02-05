@@ -15,6 +15,8 @@ import gremlin.powers.BangPower;
 import gremlin.powers.WizPower;
 import sneckomod.SneckoMod;
 
+import static gremlin.GremlinMod.WIZARD_GREMLIN;
+
 public class Necromancy extends AbstractGremlinCard {
     private static final String ID = getID("Necromancy");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -40,6 +42,8 @@ public class Necromancy extends AbstractGremlinCard {
         this.exhaust = true;
         this.tags.add(AbstractCard.CardTags.HEALING);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(WIZARD_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

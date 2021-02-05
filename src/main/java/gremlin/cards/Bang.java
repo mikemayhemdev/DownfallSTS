@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static gremlin.GremlinMod.WIZARD_GREMLIN;
+
 public class Bang extends AbstractGremlinCard {
     private static final String ID = getID("Bang");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -38,6 +40,8 @@ public class Bang extends AbstractGremlinCard {
 
         this.exhaust = true;
         this.cardsToPreview = new Whiz(false);
+        this.tags.add(WIZARD_GREMLIN);
+        setBackgrounds();
     }
 
     public Bang(boolean real)
@@ -50,6 +54,8 @@ public class Bang extends AbstractGremlinCard {
 
         this.exhaust = true;
         this.real = real;
+        this.tags.add(WIZARD_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

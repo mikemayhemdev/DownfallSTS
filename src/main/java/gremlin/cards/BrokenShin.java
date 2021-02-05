@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.powers.AgonyPower;
 import sneckomod.SneckoMod;
 
+import static gremlin.GremlinMod.FAT_GREMLIN;
+
 public class BrokenShin extends AbstractGremlinCard {
     private static final String ID = getID("BrokenShin");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -32,6 +34,8 @@ public class BrokenShin extends AbstractGremlinCard {
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(FAT_GREMLIN);
+        setBackgrounds();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

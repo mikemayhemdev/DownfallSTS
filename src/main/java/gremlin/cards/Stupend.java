@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static gremlin.GremlinMod.WIZARD_GREMLIN;
+
 public class Stupend extends AbstractGremlinCard {
     private static final String ID = getID("Stupend");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -34,6 +36,8 @@ public class Stupend extends AbstractGremlinCard {
         this.baseBlock = BLOCK;
 
         this.sorcery = true;
+        this.tags.add(WIZARD_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

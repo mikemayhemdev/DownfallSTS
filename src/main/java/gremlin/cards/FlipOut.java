@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.powers.FuriousPower;
 
+import static gremlin.GremlinMod.SHIELD_GREMLIN;
+
 public class FlipOut extends AbstractGremlinCard {
     private static final String ID = getID("FlipOut");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -32,6 +34,8 @@ public class FlipOut extends AbstractGremlinCard {
         this.baseDamage = POWER;
 
         this.isMultiDamage = true;
+        this.tags.add(SHIELD_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

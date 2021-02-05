@@ -18,6 +18,8 @@ import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
+import static gremlin.GremlinMod.*;
+
 public class GremlinDance extends AbstractGremlinCard {
     private static final String ID = getID("GremlinDance");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -151,6 +153,12 @@ public class GremlinDance extends AbstractGremlinCard {
     }
 
     private void updateContents(){
+        this.tags.remove(MAD_GREMLIN);
+        this.tags.remove(FAT_GREMLIN);
+        this.tags.remove(SHIELD_GREMLIN);
+        this.tags.remove(SNEAKY_GREMLIN);
+        this.tags.remove(WIZARD_GREMLIN);
+        this.tags.remove(NOB_GREMLIN);
         this.rawDescription = strings.EXTENDED_DESCRIPTION[0];
         if(!this.gremlin.equals("") || AbstractDungeon.player instanceof GremlinCharacter){
             if(this.gremlin.equals("") && ((GremlinCharacter) AbstractDungeon.player).nob){
@@ -158,6 +166,8 @@ public class GremlinDance extends AbstractGremlinCard {
                 this.isMultiDamage = false;
                 this.target = CardTarget.ENEMY;
                 this.wizardry = false;
+                this.tags.add(NOB_GREMLIN);
+                setBackgrounds();
             } else {
                 String gremlin = this.gremlin;
                 if (gremlin.equals("")) {
@@ -169,30 +179,40 @@ public class GremlinDance extends AbstractGremlinCard {
                         this.isMultiDamage = true;
                         this.target = CardTarget.ALL_ENEMY;
                         this.wizardry = false;
+                        this.tags.add(MAD_GREMLIN);
+                        setBackgrounds();
                         break;
                     case "fat":
                         rawDescription += strings.EXTENDED_DESCRIPTION[2];
                         this.isMultiDamage = false;
                         this.target = CardTarget.ENEMY;
                         this.wizardry = false;
+                        this.tags.add(FAT_GREMLIN);
+                        setBackgrounds();
                         break;
                     case "shield":
                         rawDescription += strings.EXTENDED_DESCRIPTION[3];
                         this.isMultiDamage = false;
                         this.target = CardTarget.ENEMY;
                         this.wizardry = false;
+                        this.tags.add(SHIELD_GREMLIN);
+                        setBackgrounds();
                         break;
                     case "sneak":
                         rawDescription += strings.EXTENDED_DESCRIPTION[4];
                         this.isMultiDamage = false;
                         this.target = CardTarget.ENEMY;
                         this.wizardry = false;
+                        this.tags.add(SNEAKY_GREMLIN);
+                        setBackgrounds();
                         break;
                     case "wizard":
                         rawDescription += strings.EXTENDED_DESCRIPTION[5];
                         this.isMultiDamage = false;
                         this.target = CardTarget.ENEMY;
                         this.wizardry = true;
+                        this.tags.add(WIZARD_GREMLIN);
+                        setBackgrounds();
                         break;
                 }
             }

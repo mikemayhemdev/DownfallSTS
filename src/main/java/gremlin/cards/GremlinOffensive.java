@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static gremlin.GremlinMod.SNEAKY_GREMLIN;
+
 public class GremlinOffensive extends AbstractGremlinCard {
     private static final String ID = getID("GremlinOffensive");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -34,6 +36,8 @@ public class GremlinOffensive extends AbstractGremlinCard {
         this.baseDamage = POWER;
         this.exhaust = true;
         this.cardsToPreview = new GremlinOffensive(false);
+        this.tags.add(SNEAKY_GREMLIN);
+        setBackgrounds();
     }
 
     public GremlinOffensive(boolean real)
@@ -44,6 +48,8 @@ public class GremlinOffensive extends AbstractGremlinCard {
         this.exhaust = true;
 
         this.real = real;
+        this.tags.add(SNEAKY_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

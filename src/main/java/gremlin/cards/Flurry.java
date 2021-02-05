@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.actions.DamagePerCardPlayedAction;
 
+import static gremlin.GremlinMod.SNEAKY_GREMLIN;
+
 public class Flurry extends AbstractGremlinCard {
     private static final String ID = getID("Flurry");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -30,6 +32,8 @@ public class Flurry extends AbstractGremlinCard {
 
         this.baseDamage = POWER;
         this.exhaust = true;
+        this.tags.add(SNEAKY_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

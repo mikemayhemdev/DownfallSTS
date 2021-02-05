@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.DaggerSprayEffect;
 
+import static gremlin.GremlinMod.MAD_GREMLIN;
+
 public class DaggerDance extends AbstractGremlinCard {
     private static final String ID = getID("DaggerDance");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -35,6 +37,8 @@ public class DaggerDance extends AbstractGremlinCard {
         this.magicNumber = MAGIC;
 
         this.isMultiDamage = true;
+        this.tags.add(MAD_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

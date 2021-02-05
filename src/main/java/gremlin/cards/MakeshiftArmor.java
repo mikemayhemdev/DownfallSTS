@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 
+import static gremlin.GremlinMod.MAD_GREMLIN;
+
 public class MakeshiftArmor extends AbstractGremlinCard {
     private static final String ID = getID("MakeshiftArmor");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -29,6 +31,9 @@ public class MakeshiftArmor extends AbstractGremlinCard {
 
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
+
+        this.tags.add(MAD_GREMLIN);
+        setBackgrounds();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

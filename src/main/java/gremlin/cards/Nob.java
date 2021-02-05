@@ -13,6 +13,8 @@ import gremlin.patches.SuperRare;
 import gremlin.powers.GremlinNobPower;
 import sneckomod.SneckoMod;
 
+import static gremlin.GremlinMod.NOB_GREMLIN;
+
 public class Nob extends AbstractGremlinCard implements SuperRare {
     private static final String ID = getID("Nob");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -37,6 +39,8 @@ public class Nob extends AbstractGremlinCard implements SuperRare {
 
         this.tags.add(BaseModCardTags.FORM);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(NOB_GREMLIN);
+        setBackgrounds();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

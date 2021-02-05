@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
+import static gremlin.GremlinMod.MAD_GREMLIN;
+
 public class ArmsTheft extends AbstractGremlinCard {
     private static final String ID = getID("ArmsTheft");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -31,6 +33,8 @@ public class ArmsTheft extends AbstractGremlinCard {
         this.magicNumber = baseMagicNumber;
 
         this.exhaust = true;
+        this.tags.add(MAD_GREMLIN);
+        setBackgrounds();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

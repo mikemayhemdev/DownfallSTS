@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static gremlin.GremlinMod.MAD_GREMLIN;
+
 public class IrksomeBlow extends AbstractGremlinCard implements StrengthAffectedCard {
     private static final String ID = getID("IrksomeBlow");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -32,6 +34,8 @@ public class IrksomeBlow extends AbstractGremlinCard implements StrengthAffected
         this.baseDamage = POWER;
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
+        this.tags.add(MAD_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

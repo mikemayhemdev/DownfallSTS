@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import gremlin.powers.WizPower;
 
+import static gremlin.GremlinMod.WIZARD_GREMLIN;
+
 public class Dazzle extends AbstractGremlinCard {
     private static final String ID = getID("Dazzle");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -33,6 +35,8 @@ public class Dazzle extends AbstractGremlinCard {
 
         this.baseDamage = POWER;
         this.exhaust = true;
+        this.tags.add(WIZARD_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

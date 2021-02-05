@@ -10,6 +10,8 @@ import gremlin.actions.GremlinSwapAction;
 import gremlin.cards.AbstractGremlinCard;
 import gremlin.orbs.ShieldGremlin;
 
+import static gremlin.GremlinMod.SHIELD_GREMLIN;
+
 public class ShieldGremlinCard extends AbstractGremlinCard {
     private static final String ID = getID("ShieldGremlin");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -25,6 +27,8 @@ public class ShieldGremlinCard extends AbstractGremlinCard {
     public ShieldGremlinCard()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
+        this.tags.add(SHIELD_GREMLIN);
+        setBackgrounds();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

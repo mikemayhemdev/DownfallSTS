@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.actions.AstoundAction;
 
+import static gremlin.GremlinMod.WIZARD_GREMLIN;
+
 public class Astound extends AbstractGremlinCard {
     private static final String ID = getID("Astound");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -33,6 +35,8 @@ public class Astound extends AbstractGremlinCard {
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
         this.cardsToPreview = new Ward();
+        this.tags.add(WIZARD_GREMLIN);
+        setBackgrounds();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

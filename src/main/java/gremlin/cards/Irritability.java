@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.powers.FlameBarrierPower;
 import gremlin.actions.GremlinSwapAction;
 import gremlin.orbs.MadGremlin;
 
+import static gremlin.GremlinMod.MAD_GREMLIN;
+
 public class Irritability extends AbstractGremlinCard {
     private static final String ID = getID("Irritability");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -31,6 +33,8 @@ public class Irritability extends AbstractGremlinCard {
 
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
+        this.tags.add(MAD_GREMLIN);
+        setBackgrounds();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

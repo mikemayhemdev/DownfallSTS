@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 
+import static gremlin.GremlinMod.NOB_GREMLIN;
+
 public class SkullBash extends AbstractGremlinCard {
     private static final String ID = getID("SkullBash");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -37,6 +39,8 @@ public class SkullBash extends AbstractGremlinCard {
 
         this.isEthereal = true;
         this.exhaust = true;
+        this.tags.add(NOB_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

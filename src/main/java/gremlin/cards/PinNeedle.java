@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static gremlin.GremlinMod.SNEAKY_GREMLIN;
+
 public class PinNeedle extends AbstractGremlinCard {
     private static final String ID = getID("PinNeedle");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -36,6 +38,8 @@ public class PinNeedle extends AbstractGremlinCard {
 
         this.exhaust = true;
         this.cardsToPreview = new Pinprick();
+        this.tags.add(SNEAKY_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

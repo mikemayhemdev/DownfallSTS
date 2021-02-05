@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AccuracyPower;
 import gremlin.powers.PolishPower;
 
+import static gremlin.GremlinMod.SHIELD_GREMLIN;
+
 public class Polish extends AbstractGremlinCard {
     private static final String ID = getID("Polish");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -30,6 +32,8 @@ public class Polish extends AbstractGremlinCard {
 
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
+        this.tags.add(SHIELD_GREMLIN);
+        setBackgrounds();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

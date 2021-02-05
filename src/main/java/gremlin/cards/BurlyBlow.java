@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
+import static gremlin.GremlinMod.FAT_GREMLIN;
+
 public class BurlyBlow extends AbstractGremlinCard {
     private static final String ID = getID("BurlyBlow");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -30,6 +32,8 @@ public class BurlyBlow extends AbstractGremlinCard {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
+        this.tags.add(FAT_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

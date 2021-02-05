@@ -8,6 +8,7 @@ import charbosses.cards.AbstractBossCard;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -63,6 +64,19 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
     }
 
     public static final Logger logger = LogManager.getLogger(GremlinMod.class);
+
+    @SpireEnum
+    public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags FAT_GREMLIN;
+    @SpireEnum
+    public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags MAD_GREMLIN;
+    @SpireEnum
+    public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags SHIELD_GREMLIN;
+    @SpireEnum
+    public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags SNEAKY_GREMLIN;
+    @SpireEnum
+    public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags WIZARD_GREMLIN;
+    @SpireEnum
+    public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags NOB_GREMLIN;
 
     public GremlinMod() {
         logger.info("Loading GremlinMod.");

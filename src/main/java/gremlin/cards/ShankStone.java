@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static gremlin.GremlinMod.SNEAKY_GREMLIN;
+
 public class ShankStone extends AbstractGremlinCard {
     private static final String ID = getID("ShankStone");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -30,6 +32,8 @@ public class ShankStone extends AbstractGremlinCard {
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
         this.cardsToPreview = new Shiv();
+        this.tags.add(SNEAKY_GREMLIN);
+        setBackgrounds();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {}

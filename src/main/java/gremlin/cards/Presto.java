@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.powers.WizPower;
 
+import static gremlin.GremlinMod.WIZARD_GREMLIN;
+
 public class Presto extends AbstractGremlinCard {
     private static final String ID = getID("Presto");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -34,6 +36,8 @@ public class Presto extends AbstractGremlinCard {
         this.baseDamage = POWER;
         this.baseMagicNumber = MAGIC;
         this.magicNumber = MAGIC;
+        this.tags.add(WIZARD_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

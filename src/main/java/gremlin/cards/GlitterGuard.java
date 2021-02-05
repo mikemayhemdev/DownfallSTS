@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.actions.GremlinSwapAction;
 import gremlin.orbs.ShieldGremlin;
 
+import static gremlin.GremlinMod.SHIELD_GREMLIN;
+
 public class GlitterGuard extends AbstractGremlinCard {
     private static final String ID = getID("GlitterGuard");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -30,6 +32,8 @@ public class GlitterGuard extends AbstractGremlinCard {
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
         this.cardsToPreview = new Ward();
+        this.tags.add(SHIELD_GREMLIN);
+        setBackgrounds();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

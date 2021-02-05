@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.powers.CrippledPower;
 
+import static gremlin.GremlinMod.FAT_GREMLIN;
+
 public class Exacerbate extends AbstractGremlinCard {
     private static final String ID = getID("Exacerbate");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -32,6 +34,8 @@ public class Exacerbate extends AbstractGremlinCard {
 
         this.baseDamage = POWER;
         this.exhaust = true;
+        this.tags.add(FAT_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

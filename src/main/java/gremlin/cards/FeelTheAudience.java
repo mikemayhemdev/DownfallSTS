@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.GremlinMod;
 import gremlin.powers.WizPower;
 
+import static gremlin.GremlinMod.WIZARD_GREMLIN;
+
 public class FeelTheAudience extends AbstractGremlinCard {
     private static final String ID = getID("FeelTheAudience");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -36,6 +38,8 @@ public class FeelTheAudience extends AbstractGremlinCard {
         this.magicNumber = MAGIC;
 
         this.isMultiDamage = true;
+        this.tags.add(WIZARD_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

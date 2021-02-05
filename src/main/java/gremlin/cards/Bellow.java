@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import gremlin.GremlinMod;
 
+import static gremlin.GremlinMod.NOB_GREMLIN;
+
 public class Bellow extends AbstractGremlinCard {
     private static final String ID = getID("Bellow");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -33,6 +35,8 @@ public class Bellow extends AbstractGremlinCard {
 
         this.isEthereal = true;
         this.exhaust = true;
+        this.tags.add(NOB_GREMLIN);
+        setBackgrounds();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

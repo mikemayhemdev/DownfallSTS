@@ -48,7 +48,7 @@ public class CrystalShiv extends AbstractGuardianCard {
         this.baseDamage = DAMAGE;
 
         if ((AbstractDungeon.player != null) && (AbstractDungeon.player.hasPower(AccuracyPower.POWER_ID))) {
-            this.baseBlock = (DAMAGE + AbstractDungeon.player.getPower(AccuracyPower.POWER_ID).amount);
+            this.baseDamage = (DAMAGE + AbstractDungeon.player.getPower(AccuracyPower.POWER_ID).amount);
         } else {
             this.baseDamage = DAMAGE;
         }
@@ -61,6 +61,14 @@ public class CrystalShiv extends AbstractGuardianCard {
         loadGemMisc();
 
 
+    }
+
+    @Override
+    public void applyPowers() {
+        if ((AbstractDungeon.player != null) && (AbstractDungeon.player.hasPower(AccuracyPower.POWER_ID))) {
+            this.baseDamage = (DAMAGE + AbstractDungeon.player.getPower(AccuracyPower.POWER_ID).amount);
+        }
+        super.applyPowers();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

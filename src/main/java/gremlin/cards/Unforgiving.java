@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.powers.UnforgivingPower;
 
+import static gremlin.GremlinMod.MAD_GREMLIN;
+
 public class Unforgiving extends AbstractGremlinCard {
     private static final String ID = getID("Unforgiving");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -25,6 +27,8 @@ public class Unforgiving extends AbstractGremlinCard {
     public Unforgiving()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
+        this.tags.add(MAD_GREMLIN);
+        setBackgrounds();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

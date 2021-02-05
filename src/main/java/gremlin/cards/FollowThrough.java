@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import gremlin.powers.ModifiedLoseStrengthPower;
 
+import static gremlin.GremlinMod.MAD_GREMLIN;
+
 public class FollowThrough extends AbstractGremlinCard {
     private static final String ID = getID("FollowThrough");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -36,6 +38,8 @@ public class FollowThrough extends AbstractGremlinCard {
         this.baseDamage = POWER;
         this.baseMagicNumber = MAGIC;
         this.magicNumber = MAGIC;
+        this.tags.add(MAD_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

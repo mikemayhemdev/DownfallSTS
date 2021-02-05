@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.actions.StealArtifactAction;
 
+import static gremlin.GremlinMod.MAD_GREMLIN;
+
 public class Pickpocket extends AbstractGremlinCard {
     private static final String ID = getID("Pickpocket");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -31,6 +33,8 @@ public class Pickpocket extends AbstractGremlinCard {
 
         this.baseDamage = POWER;
         this.exhaust = true;
+        this.tags.add(MAD_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

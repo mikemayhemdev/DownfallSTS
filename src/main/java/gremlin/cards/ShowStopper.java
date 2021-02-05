@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.vfx.combat.GrandFinalEffect;
 import gremlin.powers.WizPower;
 import sneckomod.SneckoMod;
 
+import static gremlin.GremlinMod.WIZARD_GREMLIN;
+
 public class ShowStopper extends AbstractGremlinCard {
     private static final String ID = getID("ShowStopper");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -36,6 +38,8 @@ public class ShowStopper extends AbstractGremlinCard {
 
         this.isMultiDamage = true;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(WIZARD_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

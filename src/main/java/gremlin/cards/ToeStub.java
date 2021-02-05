@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.actions.ToeStubAction;
 
+import static gremlin.GremlinMod.FAT_GREMLIN;
+
 public class ToeStub extends AbstractGremlinCard {
     private static final String ID = getID("ToeStub");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -34,6 +36,8 @@ public class ToeStub extends AbstractGremlinCard {
         this.baseDamage = POWER;
         this.baseMagicNumber = MAGIC;
         this.magicNumber = MAGIC;
+        this.tags.add(FAT_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

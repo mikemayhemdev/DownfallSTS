@@ -38,6 +38,14 @@ public class Ward extends CustomCard {
         this.exhaust = true;
     }
 
+    @Override
+    public void applyPowers() {
+        if ((AbstractDungeon.player != null) && (AbstractDungeon.player.hasPower(PolishPower.POWER_ID))) {
+            this.baseBlock = (BLOCK + AbstractDungeon.player.getPower(PolishPower.POWER_ID).amount);
+        }
+        super.applyPowers();
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));

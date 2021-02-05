@@ -12,6 +12,8 @@ import gremlin.actions.GremlinSwapAction;
 import gremlin.actions.TricksyFollowUpAction;
 import gremlin.orbs.SneakyGremlin;
 
+import static gremlin.GremlinMod.SNEAKY_GREMLIN;
+
 public class Tricksy extends AbstractGremlinCard {
     private static final String ID = getID("Tricksy");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -32,6 +34,8 @@ public class Tricksy extends AbstractGremlinCard {
 
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
+        this.tags.add(SNEAKY_GREMLIN);
+        setBackgrounds();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

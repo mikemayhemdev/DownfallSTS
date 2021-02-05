@@ -10,6 +10,8 @@ import gremlin.actions.GremlinSwapAction;
 import gremlin.cards.AbstractGremlinCard;
 import gremlin.orbs.FatGremlin;
 
+import static gremlin.GremlinMod.FAT_GREMLIN;
+
 public class FatGremlinCard extends AbstractGremlinCard {
     private static final String ID = getID("FatGremlin");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -26,6 +28,8 @@ public class FatGremlinCard extends AbstractGremlinCard {
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.dontTriggerOnUseCard = true;
+        this.tags.add(FAT_GREMLIN);
+        setBackgrounds();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

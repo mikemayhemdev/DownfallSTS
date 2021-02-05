@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.actions.CounterStrikeAction;
 
+import static gremlin.GremlinMod.SHIELD_GREMLIN;
+
 public class CounterStrike extends AbstractGremlinCard {
     private static final String ID = getID("CounterStrike");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -37,6 +39,8 @@ public class CounterStrike extends AbstractGremlinCard {
         this.tags.add(AbstractCard.CardTags.STRIKE);
 
         this.cardsToPreview = new Ward();
+        this.tags.add(SHIELD_GREMLIN);
+        setBackgrounds();
     }
 
     @Override

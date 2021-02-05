@@ -11,6 +11,8 @@ import gremlin.powers.MakingMagicPower;
 import gremlin.powers.MakingMoreMagicPower;
 import gremlin.powers.WizPower;
 
+import static gremlin.GremlinMod.WIZARD_GREMLIN;
+
 public class Whiz extends AbstractGremlinCard {
     private static final String ID = getID("Whiz");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -36,6 +38,8 @@ public class Whiz extends AbstractGremlinCard {
 
         this.exhaust = true;
         this.cardsToPreview = new Bang(false);
+        this.tags.add(WIZARD_GREMLIN);
+        setBackgrounds();
     }
 
     public Whiz(boolean real)
@@ -47,6 +51,8 @@ public class Whiz extends AbstractGremlinCard {
 
         this.exhaust = true;
         this.real = real;
+        this.tags.add(WIZARD_GREMLIN);
+        setBackgrounds();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

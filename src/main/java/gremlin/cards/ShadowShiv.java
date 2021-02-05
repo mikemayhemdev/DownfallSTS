@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.powers.ShadowShivPower;
 
+import static gremlin.GremlinMod.SNEAKY_GREMLIN;
+
 public class ShadowShiv extends AbstractGremlinCard {
     private static final String ID = getID("ShadowShiv");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -27,6 +29,8 @@ public class ShadowShiv extends AbstractGremlinCard {
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.cardsToPreview = new Shiv();
+        this.tags.add(SNEAKY_GREMLIN);
+        setBackgrounds();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
