@@ -36,6 +36,7 @@ import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.relics.GremlinWheel;
+import gremlin.characters.GremlinCharacter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
@@ -95,6 +96,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
     private boolean threatened;
     private boolean threatened2;
     private boolean goldchosen;
+    private boolean gremlinchosen;
 
     public GremlinWheelGame_Evil() {
         super(NAME, INTRO_DIALOG, "images/events/spinTheWheel.jpg");
@@ -245,8 +247,12 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
                 break;
             default:
                 this.imageEventText.updateBodyText(DESCRIPTIONS[6]);
-                this.imageEventText.setDialogOption(OPTIONS[6] + (int) ((float) AbstractDungeon.player.maxHealth * this.hpLossPercent) + OPTIONS[7]);
-                this.color = new Color(0.5F, 0.5F, 0.5F, 1.0F);
+                if (AbstractDungeon.player instanceof GremlinCharacter) {
+                    this.imageEventText.setDialogOption(OPTIONS[14]);
+                } else {
+                    this.imageEventText.setDialogOption(OPTIONS[6] + (int) ((float) AbstractDungeon.player.maxHealth * this.hpLossPercent) + OPTIONS[7]);
+                    this.color = new Color(0.5F, 0.5F, 0.5F, 1.0F);
+                }
         }
         if (this.screen == CUR_SCREEN.POSTSPIN1) {
             this.imageEventText.setDialogOption(OPTIONS[10]);
@@ -280,9 +286,15 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldAmount));
                         AbstractDungeon.player.gainGold(this.goldAmount);
                     }
-                    this.imageEventText.clearAllDialogs();
-                    this.imageEventText.setDialogOption(OPTIONS[8]);
-                    this.screen = CUR_SCREEN.LEAVE;
+                    if (this.gremlinchosen) {
+                        this.screen = CUR_SCREEN.POSTGREMLIN;
+                        this.imageEventText.removeDialogOption(1);
+                        this.imageEventText.updateDialogOption(0, OPTIONS[15]);
+                    } else {
+                        this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption(OPTIONS[8]);
+                        this.screen = CUR_SCREEN.LEAVE;
+                    }
                     break;
                 }
                 if (buttonPressed == 1) {
@@ -313,6 +325,14 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
                         break;
                     }
                 }
+            case POSTGREMLIN:
+                AbstractDungeon.getCurrRoom().rewards.clear();
+                AbstractRelic relic = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());
+                AbstractDungeon.getCurrRoom().addRelicToRewards(relic);
+                AbstractDungeon.getCurrRoom().addGoldToRewards(300);
+                AbstractDungeon.combatRewardScreen.open();
+                this.screen = CUR_SCREEN.LEAVE;
+                break;
             case LEAVE:
                 this.openMap();
                 break;
@@ -339,6 +359,9 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
             case 2:
                 logMetricHeal("Wheel of Change", "Full Heal", AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth);
                 AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
+                if (AbstractDungeon.player instanceof GremlinCharacter) {
+                    ((GremlinCharacter)AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
+                }
                 this.hasFocus = false;
                 break;
             case 3:
@@ -355,12 +378,21 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
                 }
                 break;
             default:
-                this.imageEventText.updateBodyText(DESCRIPTIONS[7]);
-                CardCrawlGame.sound.play("ATTACK_DAGGER_6");
-                CardCrawlGame.sound.play("BLOOD_SPLAT");
-                int damageAmount = (int) ((float) AbstractDungeon.player.maxHealth * this.hpLossPercent);
-                AbstractDungeon.player.damage(new DamageInfo(null, damageAmount, DamageType.HP_LOSS));
-                logMetricTakeDamage("Wheel of Change", "Damaged", damageAmount);
+                if (AbstractDungeon.player instanceof GremlinCharacter) {
+                    this.imageEventText.updateBodyText(DESCRIPTIONS[14]);
+                    CardCrawlGame.sound.play("ATTACK_DAGGER_6");
+                    CardCrawlGame.sound.play("BLOOD_SPLAT");
+                    logMetric("Wheel of Change", "Gremlins");
+                    gremlinchosen = true;
+                } else {
+                    this.imageEventText.updateBodyText(DESCRIPTIONS[7]);
+                    CardCrawlGame.sound.play("ATTACK_DAGGER_6");
+                    CardCrawlGame.sound.play("BLOOD_SPLAT");
+                    int damageAmount = (int) ((float) AbstractDungeon.player.maxHealth * this.hpLossPercent);
+                    AbstractDungeon.player.damage(new DamageInfo(null, damageAmount, DamageType.HP_LOSS));
+                    logMetricTakeDamage("Wheel of Change", "Damaged", damageAmount);
+
+                }
         }
 
     }
@@ -431,7 +463,8 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
         POSTSPIN1,
         POSTSPIN2,
         FIGHT,
-        COMPLETE;
+        COMPLETE,
+        POSTGREMLIN;
 
         CUR_SCREEN() {
         }

@@ -55,7 +55,8 @@
       "Settling in by the fire, you decide to see if you have better luck with the Wheel than your last attempt.",
       "The Wheel has chosen a prize. NL NL You need only to reach out and take it.",
       "Success! You've found what you are looking for, and just in time! NL NL #r@CRACK!@ NL NL You may have been a little rough with that last spin... the Wheel has been broken.",
-      "You decide to try your luck another day. NL NL For now, you must rest and regain your composure."
+      "You decide to try your luck another day. NL NL For now, you must rest and regain your composure.",
+      "He lunges at you, but you are ready. NL You slash him open before he can get you with his shiv. NL You treat yourself to your prize, but sadly the Wheel disappears before you can loot it too."
     ],
     "OPTIONS": [
       "[Play]",
@@ -71,7 +72,9 @@
       "[Again!]",
       "[AGAIN!!]",
       "[Punch] #rFight. #gGain #gGremlin #gWheel.",
-      "[Pass] Try again later."
+      "[Pass] Try again later.",
+      "[Prize!] #gPREEMPTIVE #gSTRIKE!",
+      "[Loot]"
     ]
   },
   "downfall:GremlinWheelGameRest": {

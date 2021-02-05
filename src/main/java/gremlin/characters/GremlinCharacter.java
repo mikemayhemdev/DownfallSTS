@@ -574,4 +574,7 @@ public class GremlinCharacter extends CustomPlayer {
     public void damageGremlins(int dmg){
         mobState.damageAll(dmg);
     }
+    public void healGremlins(int hp){
+        mobState.campfireHeal(hp, this.maxHealth);
+    }
 }
