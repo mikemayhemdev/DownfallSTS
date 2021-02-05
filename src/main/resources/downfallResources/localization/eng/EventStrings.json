@@ -106,7 +106,8 @@
     ],
     "OPTIONS": [
       "[Donate] #rLose #r150 #rSouls. #gGain #g10 #gMax #gHP.",
-      "[Locked] Requires 150 Souls."
+      "[Locked] Requires 150 Souls.",
+      "[Donate] #rLose #r150 #rSouls. #gEach #gGremlin #gGains #g2 #gMax #gHP."
     ]
   },
   "downfall:FaceTrader": {
@@ -464,7 +465,8 @@
       "[I am Gorged] #gGain #g999 #gSouls. #rCursed #r- #r2 #rNormality.",
       "[I am Complete] #gUpgrade #gall #gCards. #rLose #rHeart #rBlessings and #r10 #rMax #rHP.",
       "[Locked] Requires all 3 Heart Blessings.",
-      "[Leave]"
+      "[Leave]",
+      "[I am Complete] #gUpgrade #gall #gCards. #rLose #rHeart #rBlessings and #rAll #rGremlins #r Lose #r2 #rMax #rHP."
     ]
   },
   "downfall:MoaiHead": {
@@ -480,7 +482,9 @@
       " #rSouls. #gGain #g",
       " #gMax #gHP and #gHeal #gto #gfull.",
       "[Locked] Requires ",
-      " Souls."
+      " Souls.",
+      " #rSouls. #gEach #Gremlin #gGains #g",
+      "[Jump Inside] #gHeal #gto #gfull #gHP. #rEach #rGremlin #rLoses #r"
     ]
   },
   "downfall:SensoryStone": {

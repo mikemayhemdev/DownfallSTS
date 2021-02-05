@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import downfall.downfallMod;
 import downfall.potions.CursedFountainPotion;
+import gremlin.characters.GremlinCharacter;
 
 public class CursedFountain extends AbstractImageEvent {
     public static final String ID = "downfall:CursedFountain";
@@ -90,6 +91,9 @@ public class CursedFountain extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                         this.imageEventText.updateDialogOption(2, OPTIONS[6], true);
                         AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
+                        if (AbstractDungeon.player instanceof GremlinCharacter) {
+                            ((GremlinCharacter)AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
+                        }
                         return;
                     case 3:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[4]);

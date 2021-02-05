@@ -69,7 +69,11 @@ public class MindBloom_Evil extends AbstractImageEvent {
         }
 
         if (AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player) && AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player) && AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player)){
-            this.imageEventText.setDialogOption(OPTIONSALT[2]);
+            if (AbstractDungeon.player instanceof GremlinCharacter) {
+                this.imageEventText.setDialogOption(OPTIONSALT[5]);
+            } else {
+                this.imageEventText.setDialogOption(OPTIONSALT[2]);
+            }
         } else {
             this.imageEventText.setDialogOption(OPTIONSALT[3], true);
         }
