@@ -268,8 +268,8 @@
 
   "Gremlin:MakeshiftArmor": {
     "NAME": "Makeshift Armor",
-    "DESCRIPTION": "Every time you play #b5 attacks, gain #b1 Artifact.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Artifact. NL Every time you play #b5 attacks, gain #b1 Artifact."
+    "DESCRIPTION": "Every time you play 5 attacks, gain 1 Artifact.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Artifact. NL Every time you play 5 attacks, gain 1 Artifact."
   },
 
   "Gremlin:Mockery": {

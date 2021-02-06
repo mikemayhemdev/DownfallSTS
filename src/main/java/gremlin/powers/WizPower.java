@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import gremlin.GremlinMod;
+import gremlin.relics.WizardHat;
 import gremlin.relics.WizardStaff;
 
 public class WizPower extends AbstractGremlinPower {
@@ -75,6 +76,9 @@ public class WizPower extends AbstractGremlinPower {
     public void onRemove() {
         if(this.owner.hasPower(EncorePower.POWER_ID)){
             this.owner.getPower(EncorePower.POWER_ID).onSpecificTrigger();
+        }
+        if(AbstractDungeon.player.hasRelic(WizardHat.ID)) {
+            AbstractDungeon.player.getRelic(WizardHat.ID).onTrigger();
         }
     }
 }

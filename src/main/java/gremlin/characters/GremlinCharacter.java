@@ -107,7 +107,7 @@ public class GremlinCharacter extends CustomPlayer {
         initializeClass(null, GremlinMod.getResourcePath(SHOULDER_2),
                 GremlinMod.getResourcePath(SHOULDER_1),
                 GremlinMod.getResourcePath(CORPSE),
-                getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN));
+                getLoadout(), 20.0F, -10.0F, 120.0F, 110.0F, new EnergyManager(ENERGY_PER_TURN));
 
         initializeSlotPositions();
 

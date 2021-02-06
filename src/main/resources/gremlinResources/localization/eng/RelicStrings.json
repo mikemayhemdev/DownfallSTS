@@ -1,4 +1,18 @@
 {
+  "Gremlin:ImpeccablePecs": {
+    "NAME": "Impeccable Pecs",
+    "FLAVOR": "Glorious.",
+    "DESCRIPTIONS": [
+      "Whenever you gain #yStrength, gain an equal amount of Temporary HP."
+    ]
+  },
+  "Gremlin:FragmentationGrenade": {
+    "NAME": "Fragmentation Grenade",
+    "FLAVOR": "Nobody dares to ask where the Gremlin got it from.",
+    "DESCRIPTIONS": [
+      "Damage dealt to random enemies is increased by #b2."
+    ]
+  },
   "Gremlin:GremlinBomb": {
     "NAME": "Gremlin Bomb",
     "FLAVOR": "Gremlins have an uncanny knack for finding dangerous things. Sometimes, they even survive looting them.",
@@ -27,8 +41,15 @@
       "Start each combat with #b1 #yStrength."
     ]
   },
+  "Gremlin:MagicalMallet": {
+    "NAME": "Magical Mallet",
+    "FLAVOR": "Stubs toes twice as hard.",
+    "DESCRIPTIONS": [
+      "Whenever you apply #yWeak, gain #b1 #yWiz, up to #b3 times per turn."
+    ]
+  },
   "Gremlin:PricklyShields": {
-    "NAME": "PricklyShields",
+    "NAME": "Prickly Shields",
     "FLAVOR": "Gremlins use whatever scraps they can find as weapons or armor. Some serve as both.",
     "DESCRIPTIONS": [
       "Whenever you gain #yBlock, deal #b", " damage to a random enemy."
@@ -50,6 +71,13 @@
     "FLAVOR": "A surprisingly detailed inventory of the mob's various bits and bobbles.",
     "DESCRIPTIONS": [
       "At the start of your 3rd turn, add a random assortment of 4 #yShivs and #yWards to your hand."
+    ]
+  },
+  "Gremlin:WizardHat": {
+    "NAME": "Wizard Hat",
+    "FLAVOR": "The accompanying robes have long since been stolen.",
+    "DESCRIPTIONS": [
+      "Whenever you consume #yWiz, remove a debuff at random."
     ]
   },
   "Gremlin:WizardStaff": {

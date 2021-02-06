@@ -3,6 +3,7 @@ package gremlin;
 import basemod.BaseMod;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
+import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
@@ -43,6 +44,7 @@ import org.apache.logging.log4j.Logger;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
+import static basemod.BaseMod.addRelic;
 import static basemod.BaseMod.addRelicToCustomPool;
 import static gremlin.patches.GremlinEnum.GREMLIN;
 
@@ -125,13 +127,17 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
         addRelicToCustomPool(new GremlinKnob(), AbstractCardEnum.GREMLIN);
 
         // Common
-        addRelicToCustomPool(new SupplyScroll(), AbstractCardEnum.GREMLIN);
+        addRelic(new SupplyScroll(), RelicType.SHARED);
+        addRelicToCustomPool(new FragmentationGrenade(), AbstractCardEnum.GREMLIN);
+        addRelicToCustomPool(new WizardHat(), AbstractCardEnum.GREMLIN);
 
         // Uncommon
+        addRelic(new ImpeccablePecs(), RelicType.SHARED);
+        addRelicToCustomPool(new MagicalMallet(), AbstractCardEnum.GREMLIN);
         addRelicToCustomPool(new WizardStaff(), AbstractCardEnum.GREMLIN);
 
         // Rare
-        addRelicToCustomPool(new PricklyShields(), AbstractCardEnum.GREMLIN);
+        addRelic(new PricklyShields(), RelicType.SHARED);
         addRelicToCustomPool(new GremlinGravestone(), AbstractCardEnum.GREMLIN);
 
         // Boss
