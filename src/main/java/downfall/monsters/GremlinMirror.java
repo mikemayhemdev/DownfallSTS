@@ -243,11 +243,13 @@ public class GremlinMirror extends AbstractMonster {
         while(var2.hasNext()) {
             m = (AbstractMonster)var2.next();
             if (!m.isDying) {
-                if (first) {
-                    AbstractDungeon.actionManager.addToBottom(new ShoutAction(m, DIALOG[3], 0.5F, 1.2F));
-                    first = false;
-                } else {
-                    AbstractDungeon.actionManager.addToBottom(new ShoutAction(m, DIALOG[4], 0.5F, 1.2F));
+                if(m.hasPower(MinionPower.POWER_ID)) {
+                    if (first) {
+                        AbstractDungeon.actionManager.addToBottom(new ShoutAction(m, DIALOG[3], 0.5F, 1.2F));
+                        first = false;
+                    } else {
+                        AbstractDungeon.actionManager.addToBottom(new ShoutAction(m, DIALOG[4], 0.5F, 1.2F));
+                    }
                 }
             }
         }
@@ -257,7 +259,9 @@ public class GremlinMirror extends AbstractMonster {
         while(var2.hasNext()) {
             m = (AbstractMonster)var2.next();
             if (!m.isDying) {
-                AbstractDungeon.actionManager.addToBottom(new EscapeAction(m));
+                if(m.hasPower(MinionPower.POWER_ID)) {
+                    AbstractDungeon.actionManager.addToBottom(new EscapeAction(m));
+                }
             }
         }
 
