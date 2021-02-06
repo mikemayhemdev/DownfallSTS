@@ -4,17 +4,17 @@ import basemod.BaseMod;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.interfaces.*;
-import champ.cards.FalseCounter;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.helpers.CardHelper;
@@ -31,6 +31,10 @@ import gremlin.orbs.*;
 import gremlin.patches.AbstractCardEnum;
 import gremlin.patches.GremlinEnum;
 import gremlin.patches.GremlinModSaveState;
+import gremlin.potions.GremlinPotion;
+import gremlin.potions.NecromancyPotion;
+import gremlin.potions.SwapPotion;
+import gremlin.potions.WizPotion;
 import gremlin.powers.AbstractGremlinPower;
 import gremlin.relics.*;
 import org.apache.logging.log4j.LogManager;
@@ -401,6 +405,15 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
 
     @Override
     public void receivePostInitialize() {
+        BaseMod.addPotion(SwapPotion.class, Color.BLACK, Color.GRAY, Color.SLATE, SwapPotion.POTION_ID, GREMLIN);
+        BaseMod.addPotion(GremlinPotion.class, Color.RED, Color.YELLOW, Color.BLUE, GremlinPotion.POTION_ID, GREMLIN);
+        BaseMod.addPotion(NecromancyPotion.class, Color.RED, Color.YELLOW, Color.BLUE, NecromancyPotion.POTION_ID, GREMLIN);
+        BaseMod.addPotion(WizPotion.class, Color.PURPLE, Color.PINK, Color.PURPLE, WizPotion.POTION_ID);
+
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(GremlinPotion.POTION_ID);
+        }
+
         BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsGremlin.ID, BackToBasicsGremlin.class) //Event ID//
                 //Event Character//
                 .playerClass(GREMLIN)

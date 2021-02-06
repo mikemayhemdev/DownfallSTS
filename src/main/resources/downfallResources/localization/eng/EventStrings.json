@@ -102,7 +102,7 @@
   "downfall:BonfireSpirits": {
     "NAME": "Bonfire Elemental",
     "DESCRIPTIONS": [
-      "The spirits hungrily consume your offering! They gorge themselves on souls, burning brighter as the fire @doubles@ in strength. NL The spirits dance around you excitedly before ~merging~ ~into~ ~your~ ~form,~ filling you with warmth and strength. NL Your Max HP increases by #b10 and you are #ghealed to full HP."
+      "The spirits hungrily consume your offering! They gorge themselves on souls, burning brighter as the fire @doubles@ in strength. NL The spirits dance around you excitedly before ~merging~ ~into~ ~your~ ~form,~ filling you with warmth and strength. NL Your Max HP increases and you are #ghealed to full HP."
     ],
     "OPTIONS": [
       "[Donate] #rLose #r150 #rSouls. #gGain #g10 #gMax #gHP.",
@@ -483,7 +483,7 @@
       " #gMax #gHP and #gHeal #gto #gfull.",
       "[Locked] Requires ",
       " Souls.",
-      " #rSouls. #gEach #Gremlin #gGains #g",
+      " #rSouls. #gEach #gGremlin #gGains #g",
       "[Jump Inside] #gHeal #gto #gfull #gHP. #rEach #rGremlin #rLoses #r"
     ]
   },
