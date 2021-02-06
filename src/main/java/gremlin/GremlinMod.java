@@ -24,6 +24,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import downfall.downfallMod;
 import gremlin.cards.*;
 import gremlin.cards.SharpenBlades;
 import gremlin.characters.GremlinCharacter;
@@ -51,7 +52,8 @@ import static gremlin.patches.GremlinEnum.GREMLIN;
 
 @SpireInitializer
 public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscriber, EditKeywordsSubscriber,
-        EditRelicsSubscriber, EditCardsSubscriber, OnStartBattleSubscriber, PostBattleSubscriber, PostInitializeSubscriber{
+        EditRelicsSubscriber, EditCardsSubscriber, OnStartBattleSubscriber, PostBattleSubscriber,
+        PostInitializeSubscriber, SetUnlocksSubscriber {
     private static String modID = "gremlin";
 
     private static final Color GREMLIN_COLOR = CardHelper.getColor(205.0f, 92.0f, 92.0f);
@@ -432,5 +434,32 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
+    }
+
+    @Override
+    public void receiveSetUnlocks() {
+        downfallMod.registerUnlockSuite(
+                Enthusiasm.ID,
+                PartyStick.ID,
+                CongaLine.ID,
+
+                Raid.ID,
+                Revel.ID,
+                Necromancy.ID,
+
+                Unforgiving.ID,
+                ShowStopper.ID,
+                Nob.ID,
+
+                GremlinGravestone.ID,
+                GremlinBomb.ID,
+                ShortStature.ID,
+
+                SupplyScroll.ID,
+                ImpeccablePecs.ID,
+                PricklyShields.ID,
+
+                GREMLIN
+        );
     }
 }

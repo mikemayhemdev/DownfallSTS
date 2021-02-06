@@ -20,6 +20,10 @@ import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.cards.*;
 import expansioncontent.cards.deprecated.*;
 import expansioncontent.relics.StudyCardRelic;
+import gremlin.potions.WizPotion;
+import gremlin.relics.ImpeccablePecs;
+import gremlin.relics.PricklyShields;
+import gremlin.relics.SupplyScroll;
 import guardian.characters.GuardianCharacter;
 import guardian.potions.BlockOnCardUsePotion;
 import guardian.relics.BottledAnomaly;
@@ -149,6 +153,9 @@ public class BanSharedContentPatch {
                 AbstractDungeon.relicsToRemoveOnStart.add(DonusWashers.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(BronzeIdol.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(MakeshiftBattery.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(SupplyScroll.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(ImpeccablePecs.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(PricklyShields.ID);
             }
             if (EvilModeCharacterSelect.evilMode) {
                 AbstractDungeon.relicsToRemoveOnStart.add(Ectoplasm.ID);
@@ -171,6 +178,7 @@ public class BanSharedContentPatch {
                 PotionHelper.potions.remove(BlockOnCardUsePotion.POTION_ID);
                 PotionHelper.potions.remove(CounterstrikePotion.POTION_ID);
                 PotionHelper.potions.remove(BurnAndBuffPotion.POTION_ID);
+                PotionHelper.potions.remove(WizPotion.POTION_ID);
             }
         }
     }

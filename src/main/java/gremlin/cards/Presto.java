@@ -15,7 +15,7 @@ import gremlin.powers.WizPower;
 import static gremlin.GremlinMod.WIZARD_GREMLIN;
 
 public class Presto extends AbstractGremlinCard {
-    private static final String ID = getID("Presto");
+    public static final String ID = getID("Presto");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/presto.png";

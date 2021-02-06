@@ -16,7 +16,7 @@ import sneckomod.SneckoMod;
 import java.util.ArrayList;
 
 public class TagTeam extends AbstractGremlinCard {
-    private static final String ID = getID("TagTeam");
+    public static final String ID = getID("TagTeam");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/tag_team.png";

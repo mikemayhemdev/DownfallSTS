@@ -12,7 +12,7 @@ import gremlin.powers.BubbleBarrierPower;
 import static gremlin.GremlinMod.SHIELD_GREMLIN;
 
 public class BubbleBarrier extends AbstractGremlinCard {
-    private static final String ID = getID("BubbleBarrier");
+    public static final String ID = getID("BubbleBarrier");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/bubble_barrier.png";

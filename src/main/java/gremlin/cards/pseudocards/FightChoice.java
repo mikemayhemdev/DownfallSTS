@@ -18,7 +18,7 @@ import gremlin.cards.AbstractGremlinCard;
 import gremlin.characters.GremlinCharacter;
 
 public class FightChoice extends AbstractGremlinCard {
-    private static final String ID = getID("FightChoice");
+    public static final String ID = getID("FightChoice");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/rage_break.png";

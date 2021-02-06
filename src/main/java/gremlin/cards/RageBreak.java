@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.vfx.FlameAnimationEffect;
 import static gremlin.GremlinMod.MAD_GREMLIN;
 
 public class RageBreak extends AbstractGremlinCard {
-    private static final String ID = getID("RageBreak");
+    public static final String ID = getID("RageBreak");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/rage_break.png";

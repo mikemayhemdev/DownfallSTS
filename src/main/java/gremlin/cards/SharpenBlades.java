@@ -12,7 +12,7 @@ import gremlin.actions.SharpenBladesAction;
 import static gremlin.GremlinMod.SNEAKY_GREMLIN;
 
 public class SharpenBlades extends AbstractGremlinCard {
-    private static final String ID = getID("SharpenBlades");
+    public static final String ID = getID("SharpenBlades");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/sharpen_blades.png";

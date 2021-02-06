@@ -14,7 +14,7 @@ import gremlin.actions.ToeStubAction;
 import static gremlin.GremlinMod.FAT_GREMLIN;
 
 public class ToeStub extends AbstractGremlinCard {
-    private static final String ID = getID("ToeStub");
+    public static final String ID = getID("ToeStub");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/toe_stub.png";

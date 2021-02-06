@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static gremlin.GremlinMod.SHIELD_GREMLIN;
 
 public class Glimmer extends AbstractGremlinCard {
-    private static final String ID = getID("Glimmer");
+    public static final String ID = getID("Glimmer");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/glimmer.png";

@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.actions.GremlinSwapAction;
 
 public class Patsy extends AbstractGremlinCard {
-    private static final String ID = getID("Patsy");
+    public static final String ID = getID("Patsy");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/patsy.png";

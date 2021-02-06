@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static gremlin.GremlinMod.SNEAKY_GREMLIN;
 
 public class PinNeedle extends AbstractGremlinCard {
-    private static final String ID = getID("PinNeedle");
+    public static final String ID = getID("PinNeedle");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/pin_needle.png";

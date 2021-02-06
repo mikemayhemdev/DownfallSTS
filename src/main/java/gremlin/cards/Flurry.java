@@ -13,7 +13,7 @@ import gremlin.actions.DamagePerCardPlayedAction;
 import static gremlin.GremlinMod.SNEAKY_GREMLIN;
 
 public class Flurry extends AbstractGremlinCard {
-    private static final String ID = getID("Flurry");
+    public static final String ID = getID("Flurry");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/flurry.png";

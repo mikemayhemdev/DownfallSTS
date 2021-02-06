@@ -15,7 +15,7 @@ import gremlin.powers.BashedPower;
 import static gremlin.GremlinMod.SHIELD_GREMLIN;
 
 public class AggressiveDefense extends AbstractGremlinCard {
-    private static final String ID = getID("AggressiveDefense");
+    public static final String ID = getID("AggressiveDefense");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/aggressive_defense.png";

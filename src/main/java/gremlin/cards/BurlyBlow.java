@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import static gremlin.GremlinMod.FAT_GREMLIN;
 
 public class BurlyBlow extends AbstractGremlinCard {
-    private static final String ID = getID("BurlyBlow");
+    public static final String ID = getID("BurlyBlow");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/burly_blow.png";

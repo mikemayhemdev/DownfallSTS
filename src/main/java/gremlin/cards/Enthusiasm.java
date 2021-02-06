@@ -11,7 +11,7 @@ import gremlin.powers.EnthusiasmPower;
 import sneckomod.SneckoMod;
 
 public class Enthusiasm extends AbstractGremlinCard {
-    private static final String ID = getID("Enthusiasm");
+    public static final String ID = getID("Enthusiasm");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/enthusiasm.png";

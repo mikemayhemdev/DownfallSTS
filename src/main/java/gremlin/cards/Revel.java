@@ -12,7 +12,7 @@ import gremlin.orbs.GremlinStandby;
 import sneckomod.SneckoMod;
 
 public class Revel extends AbstractGremlinCard {
-    private static final String ID = getID("Revel");
+    public static final String ID = getID("Revel");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/revel.png";

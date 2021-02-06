@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 
 public class NobChoice extends AbstractGremlinCard implements Unmovable {
-    private static final String ID = getID("NobChoice");
+    public static final String ID = getID("NobChoice");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/choice.png";

@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import static gremlin.GremlinMod.NOB_GREMLIN;
 
 public class SkullBash extends AbstractGremlinCard {
-    private static final String ID = getID("SkullBash");
+    public static final String ID = getID("SkullBash");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/skull_bash.png";

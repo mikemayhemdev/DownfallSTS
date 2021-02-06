@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import gremlin.actions.GremlinSwapAction;
 
 public class GremlinKnob extends AbstractGremlinRelic {
-    private static final String ID = getID("GremlinKnob");
+    public static final String ID = getID("GremlinKnob");
     private static final RelicStrings strings = CardCrawlGame.languagePack.getRelicStrings(ID);
     private static final AbstractRelic.RelicTier TIER = RelicTier.STARTER;
     private static final String IMG = "relics/gremlinKnob.png";

@@ -15,7 +15,7 @@ import gremlin.powers.CrippledPower;
 import static gremlin.GremlinMod.FAT_GREMLIN;
 
 public class Exacerbate extends AbstractGremlinCard {
-    private static final String ID = getID("Exacerbate");
+    public static final String ID = getID("Exacerbate");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/exacerbate.png";

@@ -12,7 +12,7 @@ import gremlin.powers.InfiniteBlocksPower;
 import static gremlin.GremlinMod.SHIELD_GREMLIN;
 
 public class InfiniteBlocks extends AbstractGremlinCard {
-    private static final String ID = getID("InfiniteBlocks");
+    public static final String ID = getID("InfiniteBlocks");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/infinite_blocks.png";

@@ -13,7 +13,7 @@ import gremlin.powers.ShadowShivPower;
 import static gremlin.GremlinMod.SNEAKY_GREMLIN;
 
 public class ShadowShiv extends AbstractGremlinCard {
-    private static final String ID = getID("ShadowShiv");
+    public static final String ID = getID("ShadowShiv");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/shadow_shiv.png";

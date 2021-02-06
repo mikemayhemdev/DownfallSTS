@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 
 public class PartyStick extends AbstractGremlinCard {
-    private static final String ID = getID("PartyStick");
+    public static final String ID = getID("PartyStick");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/party_stick.png";

@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import static gremlin.GremlinMod.*;
 
 public class GremlinDance extends AbstractGremlinCard {
-    private static final String ID = getID("GremlinDance");
+    public static final String ID = getID("GremlinDance");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/gremlin_dance.png";

@@ -13,7 +13,7 @@ import gremlin.powers.PolishPower;
 import static gremlin.GremlinMod.SHIELD_GREMLIN;
 
 public class Polish extends AbstractGremlinCard {
-    private static final String ID = getID("Polish");
+    public static final String ID = getID("Polish");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/polish.png";

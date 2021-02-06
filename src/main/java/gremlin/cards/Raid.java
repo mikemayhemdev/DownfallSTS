@@ -13,7 +13,7 @@ import gremlin.orbs.GremlinStandby;
 import sneckomod.SneckoMod;
 
 public class Raid extends AbstractGremlinCard {
-    private static final String ID = getID("Raid");
+    public static final String ID = getID("Raid");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/raid.png";

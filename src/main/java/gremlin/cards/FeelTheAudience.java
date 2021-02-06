@@ -15,7 +15,7 @@ import gremlin.powers.WizPower;
 import static gremlin.GremlinMod.WIZARD_GREMLIN;
 
 public class FeelTheAudience extends AbstractGremlinCard {
-    private static final String ID = getID("FeelTheAudience");
+    public static final String ID = getID("FeelTheAudience");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/feel_the_audience.png";

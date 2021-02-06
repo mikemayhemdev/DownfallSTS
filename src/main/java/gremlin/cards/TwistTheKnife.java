@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static gremlin.GremlinMod.SNEAKY_GREMLIN;
 
 public class TwistTheKnife extends AbstractGremlinCard {
-    private static final String ID = getID("TwistTheKnife");
+    public static final String ID = getID("TwistTheKnife");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/twist_the_knife.png";

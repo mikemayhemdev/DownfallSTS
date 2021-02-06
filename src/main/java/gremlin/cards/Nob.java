@@ -16,7 +16,7 @@ import sneckomod.SneckoMod;
 import static gremlin.GremlinMod.NOB_GREMLIN;
 
 public class Nob extends AbstractGremlinCard implements SuperRare {
-    private static final String ID = getID("Nob");
+    public static final String ID = getID("Nob");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/nob.png";

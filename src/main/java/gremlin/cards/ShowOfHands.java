@@ -12,7 +12,7 @@ import gremlin.actions.BlockPerCardInHandAction;
 import static gremlin.GremlinMod.SHIELD_GREMLIN;
 
 public class ShowOfHands extends AbstractGremlinCard {
-    private static final String ID = getID("ShowOfHands");
+    public static final String ID = getID("ShowOfHands");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/show_of_hands.png";

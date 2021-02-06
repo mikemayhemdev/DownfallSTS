@@ -15,7 +15,7 @@ import gremlin.actions.PourSaltAction;
 import static gremlin.GremlinMod.FAT_GREMLIN;
 
 public class PourSalt extends AbstractGremlinCard {
-    private static final String ID = getID("PourSalt");
+    public static final String ID = getID("PourSalt");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/pour_salt.png";

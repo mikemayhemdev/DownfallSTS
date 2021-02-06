@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static gremlin.GremlinMod.WIZARD_GREMLIN;
 
 public class Kablamo extends AbstractGremlinCard {
-    private static final String ID = getID("Kablamo");
+    public static final String ID = getID("Kablamo");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/kablamo.png";

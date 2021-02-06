@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static gremlin.GremlinMod.SHIELD_GREMLIN;
 
 public class FairyDust extends AbstractGremlinCard {
-    private static final String ID = getID("FairyDust");
+    public static final String ID = getID("FairyDust");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/fairy_dust.png";

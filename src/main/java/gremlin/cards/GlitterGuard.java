@@ -13,7 +13,7 @@ import gremlin.orbs.ShieldGremlin;
 import static gremlin.GremlinMod.SHIELD_GREMLIN;
 
 public class GlitterGuard extends AbstractGremlinCard {
-    private static final String ID = getID("GlitterGuard");
+    public static final String ID = getID("GlitterGuard");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/glitter_guard.png";

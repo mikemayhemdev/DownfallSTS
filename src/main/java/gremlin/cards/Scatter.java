@@ -11,7 +11,7 @@ import gremlin.powers.ScatterPower;
 import sneckomod.SneckoMod;
 
 public class Scatter extends AbstractGremlinCard {
-    private static final String ID = getID("Scatter");
+    public static final String ID = getID("Scatter");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/scatter.png";

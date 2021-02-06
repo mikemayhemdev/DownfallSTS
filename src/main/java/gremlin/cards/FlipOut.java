@@ -14,7 +14,7 @@ import gremlin.powers.FuriousPower;
 import static gremlin.GremlinMod.SHIELD_GREMLIN;
 
 public class FlipOut extends AbstractGremlinCard {
-    private static final String ID = getID("FlipOut");
+    public static final String ID = getID("FlipOut");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/flip_out.png";

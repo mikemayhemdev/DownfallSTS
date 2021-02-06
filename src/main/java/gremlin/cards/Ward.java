@@ -12,7 +12,7 @@ import gremlin.GremlinMod;
 import gremlin.powers.PolishPower;
 
 public class Ward extends CustomCard {
-    private static final String ID = "Gremlin:Ward";
+    public static final String ID = "Gremlin:Ward";
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/ward.png";

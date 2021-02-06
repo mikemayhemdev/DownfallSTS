@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.vfx.combat.DaggerSprayEffect;
 import static gremlin.GremlinMod.MAD_GREMLIN;
 
 public class DaggerDance extends AbstractGremlinCard {
-    private static final String ID = getID("DaggerDance");
+    public static final String ID = getID("DaggerDance");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/dagger_dance.png";

@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import static gremlin.GremlinMod.MAD_GREMLIN;
 
 public class ArmsTheft extends AbstractGremlinCard {
-    private static final String ID = getID("ArmsTheft");
+    public static final String ID = getID("ArmsTheft");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/arms_theft.png";

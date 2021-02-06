@@ -1,6 +1,5 @@
 package gremlin.relics;
 
-import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
@@ -11,7 +10,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import gremlin.cards.Ward;
 
 public class SupplyScroll extends AbstractGremlinRelic {
-    private static final String ID = getID("SupplyScroll");
+    public static final String ID = getID("SupplyScroll");
     private static final RelicStrings strings = CardCrawlGame.languagePack.getRelicStrings(ID);
     private static final AbstractRelic.RelicTier TIER = RelicTier.COMMON;
     private static final String IMG = "relics/supply_scroll.png";

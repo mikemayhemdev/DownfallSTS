@@ -13,7 +13,7 @@ import gremlin.powers.MakeshiftArmorPower;
 import static gremlin.GremlinMod.MAD_GREMLIN;
 
 public class MakeshiftArmor extends AbstractGremlinCard {
-    private static final String ID = getID("MakeshiftArmor");
+    public static final String ID = getID("MakeshiftArmor");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/makeshift_armor.png";

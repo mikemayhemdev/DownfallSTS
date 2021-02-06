@@ -14,7 +14,7 @@ import gremlin.actions.StealArtifactAction;
 import static gremlin.GremlinMod.MAD_GREMLIN;
 
 public class Pickpocket extends AbstractGremlinCard {
-    private static final String ID = getID("Pickpocket");
+    public static final String ID = getID("Pickpocket");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/pickpocket.png";

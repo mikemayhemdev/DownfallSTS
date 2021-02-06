@@ -13,7 +13,7 @@ import gremlin.orbs.MadGremlin;
 import static gremlin.GremlinMod.MAD_GREMLIN;
 
 public class MadGremlinCard extends AbstractGremlinCard {
-    private static final String ID = getID("MadGremlin");
+    public static final String ID = getID("MadGremlin");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/MadGremlin.png";

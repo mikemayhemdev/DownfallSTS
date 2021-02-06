@@ -11,7 +11,7 @@ import gremlin.actions.EatArmorAction;
 import static gremlin.GremlinMod.SHIELD_GREMLIN;
 
 public class EdibleArmor extends AbstractGremlinCard {
-    private static final String ID = getID("EdibleArmor");
+    public static final String ID = getID("EdibleArmor");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/edible_armor.png";

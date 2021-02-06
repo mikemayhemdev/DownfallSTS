@@ -15,7 +15,7 @@ import gremlin.orbs.SneakyGremlin;
 import static gremlin.GremlinMod.SNEAKY_GREMLIN;
 
 public class Tricksy extends AbstractGremlinCard {
-    private static final String ID = getID("Tricksy");
+    public static final String ID = getID("Tricksy");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/tricksy.png";

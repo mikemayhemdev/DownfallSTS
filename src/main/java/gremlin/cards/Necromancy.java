@@ -18,7 +18,7 @@ import sneckomod.SneckoMod;
 import static gremlin.GremlinMod.WIZARD_GREMLIN;
 
 public class Necromancy extends AbstractGremlinCard {
-    private static final String ID = getID("Necromancy");
+    public static final String ID = getID("Necromancy");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/necromancy.png";

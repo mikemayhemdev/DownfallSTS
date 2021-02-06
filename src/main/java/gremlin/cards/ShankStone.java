@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static gremlin.GremlinMod.SNEAKY_GREMLIN;
 
 public class ShankStone extends AbstractGremlinCard {
-    private static final String ID = getID("ShankStone");
+    public static final String ID = getID("ShankStone");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/shank_stone.png";

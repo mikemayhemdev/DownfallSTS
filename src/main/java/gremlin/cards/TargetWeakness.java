@@ -12,7 +12,7 @@ import gremlin.powers.TargetWeaknessPower;
 import static gremlin.GremlinMod.FAT_GREMLIN;
 
 public class TargetWeakness extends AbstractGremlinCard {
-    private static final String ID = getID("TargetWeakness");
+    public static final String ID = getID("TargetWeakness");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/target_weakness.png";

@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class PricklyShields extends AbstractGremlinRelic {
-    private static final String ID = getID("PricklyShields");
+    public static final String ID = getID("PricklyShields");
     private static final RelicStrings strings = CardCrawlGame.languagePack.getRelicStrings(ID);
     private static final AbstractRelic.RelicTier TIER = RelicTier.RARE;
     private static final String IMG = "relics/prickly_shields.png";

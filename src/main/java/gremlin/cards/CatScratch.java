@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static gremlin.GremlinMod.MAD_GREMLIN;
 
 public class CatScratch extends AbstractGremlinCard {
-    private static final String ID = getID("CatScratch");
+    public static final String ID = getID("CatScratch");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/cat_scratch.png";

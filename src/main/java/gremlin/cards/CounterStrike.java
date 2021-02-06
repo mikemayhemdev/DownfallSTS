@@ -14,7 +14,7 @@ import gremlin.actions.CounterStrikeAction;
 import static gremlin.GremlinMod.SHIELD_GREMLIN;
 
 public class CounterStrike extends AbstractGremlinCard {
-    private static final String ID = getID("CounterStrike");
+    public static final String ID = getID("CounterStrike");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/counter_strike.png";

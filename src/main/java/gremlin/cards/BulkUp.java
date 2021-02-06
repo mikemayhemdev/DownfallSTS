@@ -13,7 +13,7 @@ import gremlin.orbs.FatGremlin;
 import static gremlin.GremlinMod.FAT_GREMLIN;
 
 public class BulkUp extends AbstractGremlinCard {
-    private static final String ID = getID("BulkUp");
+    public static final String ID = getID("BulkUp");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/bulk_up.png";

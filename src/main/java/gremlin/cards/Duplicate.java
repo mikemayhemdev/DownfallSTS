@@ -11,7 +11,7 @@ import gremlin.actions.DuplicateAction;
 import static gremlin.GremlinMod.SNEAKY_GREMLIN;
 
 public class Duplicate extends AbstractGremlinCard {
-    private static final String ID = getID("Duplicate");
+    public static final String ID = getID("Duplicate");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/duplicate.png";

@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import static gremlin.GremlinMod.SNEAKY_GREMLIN;
 
 public class GremlinArms extends AbstractGremlinCard {
-    private static final String ID = getID("GremlinArms");
+    public static final String ID = getID("GremlinArms");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/gremlin_arms.png";

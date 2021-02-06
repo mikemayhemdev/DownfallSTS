@@ -13,7 +13,7 @@ import gremlin.GremlinMod;
 import static gremlin.GremlinMod.NOB_GREMLIN;
 
 public class Bellow extends AbstractGremlinCard {
-    private static final String ID = getID("Bellow");
+    public static final String ID = getID("Bellow");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/bellow.png";

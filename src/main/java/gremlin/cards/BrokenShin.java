@@ -14,7 +14,7 @@ import sneckomod.SneckoMod;
 import static gremlin.GremlinMod.FAT_GREMLIN;
 
 public class BrokenShin extends AbstractGremlinCard {
-    private static final String ID = getID("BrokenShin");
+    public static final String ID = getID("BrokenShin");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/broken_shin.png";

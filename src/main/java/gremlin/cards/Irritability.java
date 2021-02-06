@@ -18,7 +18,7 @@ import slimebound.powers.LoseThornsPower;
 import static gremlin.GremlinMod.MAD_GREMLIN;
 
 public class Irritability extends AbstractGremlinCard {
-    private static final String ID = getID("Irritability");
+    public static final String ID = getID("Irritability");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/irritability.png";

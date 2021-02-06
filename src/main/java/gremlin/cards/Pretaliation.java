@@ -14,7 +14,7 @@ import gremlin.actions.PretaliationAction;
 import static gremlin.GremlinMod.MAD_GREMLIN;
 
 public class Pretaliation extends AbstractGremlinCard {
-    private static final String ID = getID("Pretaliation");
+    public static final String ID = getID("Pretaliation");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/pretaliation.png";

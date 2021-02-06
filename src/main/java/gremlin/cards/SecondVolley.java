@@ -15,7 +15,7 @@ import gremlin.actions.ShivPerCardPlayedAction;
 import static gremlin.GremlinMod.SNEAKY_GREMLIN;
 
 public class SecondVolley extends AbstractGremlinCard {
-    private static final String ID = getID("SecondVolley");
+    public static final String ID = getID("SecondVolley");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/second_volley.png";

@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class GremlinBomb extends AbstractGremlinRelic {
-    private static final String ID = getID("GremlinBomb");
+    public static final String ID = getID("GremlinBomb");
     private static final RelicStrings strings = CardCrawlGame.languagePack.getRelicStrings(ID);
     private static final AbstractRelic.RelicTier TIER = RelicTier.BOSS;
     private static final String IMG = "relics/gremlin_bomb.png";

@@ -11,7 +11,7 @@ import gremlin.powers.CongaLinePower;
 import sneckomod.SneckoMod;
 
 public class CongaLine extends AbstractGremlinCard {
-    private static final String ID = getID("CongaLine");
+    public static final String ID = getID("CongaLine");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/conga_line.png";

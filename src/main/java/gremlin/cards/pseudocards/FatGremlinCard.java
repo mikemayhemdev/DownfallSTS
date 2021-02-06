@@ -13,7 +13,7 @@ import gremlin.orbs.FatGremlin;
 import static gremlin.GremlinMod.FAT_GREMLIN;
 
 public class FatGremlinCard extends AbstractGremlinCard {
-    private static final String ID = getID("FatGremlin");
+    public static final String ID = getID("FatGremlin");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/FatGremlin.png";

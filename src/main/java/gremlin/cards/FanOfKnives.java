@@ -16,7 +16,7 @@ import gremlin.powers.WizPower;
 import static gremlin.GremlinMod.WIZARD_GREMLIN;
 
 public class FanOfKnives extends AbstractGremlinCard {
-    private static final String ID = getID("FanOfKnives");
+    public static final String ID = getID("FanOfKnives");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/fan_of_knives.png";

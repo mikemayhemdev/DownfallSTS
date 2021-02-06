@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static gremlin.GremlinMod.MAD_GREMLIN;
 
 public class IrksomeBlow extends AbstractGremlinCard implements StrengthAffectedCard {
-    private static final String ID = getID("IrksomeBlow");
+    public static final String ID = getID("IrksomeBlow");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/irksome_blow.png";

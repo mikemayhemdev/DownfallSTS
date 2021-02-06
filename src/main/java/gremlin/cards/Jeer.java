@@ -14,7 +14,7 @@ import gremlin.actions.JeerAction;
 import static gremlin.GremlinMod.FAT_GREMLIN;
 
 public class Jeer extends AbstractGremlinCard {
-    private static final String ID = getID("Jeer");
+    public static final String ID = getID("Jeer");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/jeer.png";

@@ -18,7 +18,7 @@ import gremlin.cards.AbstractGremlinCard;
 import gremlin.characters.GremlinCharacter;
 
 public class CowerChoice extends AbstractGremlinCard {
-    private static final String ID = getID("CowerChoice");
+    public static final String ID = getID("CowerChoice");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
     private static final String IMG_PATH = "cards/cower.png";
