@@ -42,7 +42,7 @@
     ]
   },
   "Gremlin:LeaderVoucher": {
-    "NAME": "Gremlin Leader Voucher",
+    "NAME": "Gremlin Leader's Voucher",
     "FLAVOR": "IOU 1 Gremlin",
     "DESCRIPTIONS": [
       "Gain [E] at the start of your turn. NL Upon pickup, permanently lose a Gremlin."
@@ -62,6 +62,14 @@
       "Whenever you gain #yBlock, deal #b", " damage to a random enemy."
     ]
   },
+  "Gremlin:ShortStature": {
+    "NAME": "Short Stature",
+    "FLAVOR": "It is easy to get away with mischief if you are literally beneath their notice.",
+    "DESCRIPTIONS": [
+      "The first time a Gremlin would die each combat, heal it to #b50% of your Max HP instead.",
+      "Already used this combat."
+    ]
+  },
   "Gremlin:StolenMerchandise": {
     "NAME": "Stolen Merchandise",
     "FLAVOR": "\"Blasted, thieving Gremlins!\".",
@@ -78,6 +86,13 @@
     "FLAVOR": "A surprisingly detailed inventory of the mob's various bits and bobbles.",
     "DESCRIPTIONS": [
       "At the start of your 3rd turn, add a random assortment of 4 #yShivs and #yWards to your hand."
+    ]
+  },
+  "Gremlin:TagTeamwork": {
+    "NAME": "Tag Teamwork",
+    "FLAVOR": "Teamwork makes the dream work.",
+    "DESCRIPTIONS": [
+      "Whenever you draw #yTag #yTeam, draw another card. NL Upon pickup, add two copies of #yTag #yTeam to your deck."
     ]
   },
   "Gremlin:WizardHat": {

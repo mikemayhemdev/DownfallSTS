@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import gremlin.cards.pseudocards.*;
 import gremlin.orbs.*;
+import gremlin.relics.TagTeamwork;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
@@ -101,6 +102,13 @@ public class TagTeam extends AbstractGremlinCard {
         }
         hasOptions = false;
         return new ArrayList<>();
+    }
+
+    @Override
+    public void triggerWhenDrawn() {
+        if(AbstractDungeon.player.hasRelic(TagTeamwork.ID)) {
+            AbstractDungeon.player.getRelic(TagTeamwork.ID).onTrigger();
+        }
     }
 }
 

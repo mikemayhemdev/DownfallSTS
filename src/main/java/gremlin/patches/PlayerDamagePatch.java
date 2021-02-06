@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import gremlin.actions.GremlinSwapAction;
 import gremlin.characters.GremlinCharacter;
 import gremlin.orbs.GremlinStandby;
+import gremlin.relics.ShortStature;
 import javassist.CtBehavior;
 
 @SpirePatch(
@@ -22,6 +23,14 @@ public class PlayerDamagePatch {
     public static SpireReturn Insert(AbstractPlayer __instance, DamageInfo info) {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             if (__instance instanceof GremlinCharacter) {
+                if (!__instance.hasRelic("Mark of the Bloom")) {
+                    if (__instance.hasRelic(ShortStature.ID) && __instance.getRelic(ShortStature.ID).counter == -1) {
+                        __instance.currentHealth = 0;
+                        __instance.getRelic(ShortStature.ID).onTrigger();
+                        return SpireReturn.Return(null);
+                    }
+                }
+
                 ((GremlinCharacter) __instance).gremlinDeathSFX();
                 boolean anotherGrem = false;
                 for(int i=0;i<AbstractDungeon.player.maxOrbs;i++) {

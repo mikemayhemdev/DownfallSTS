@@ -3,14 +3,8 @@ package gremlin.relics;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.RelicStrings;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import gremlin.actions.LoseRearmostGremlinAction;
 import gremlin.characters.GremlinCharacter;
-import gremlin.orbs.GremlinStandby;
-
-import java.util.Collections;
 
 public class LeaderVoucher extends AbstractGremlinRelic {
     public static final String ID = getID("LeaderVoucher");
@@ -18,8 +12,6 @@ public class LeaderVoucher extends AbstractGremlinRelic {
     private static final AbstractRelic.RelicTier TIER = RelicTier.BOSS;
     private static final String IMG = "relics/leader_voucher.png";
     private static final AbstractRelic.LandingSound SOUND = LandingSound.FLAT;
-
-    public static final int OOMPH = 6;
 
     public LeaderVoucher() {
         super(ID, IMG, TIER, SOUND);
