@@ -10,7 +10,7 @@
     "NAME": "Fragmentation Grenade",
     "FLAVOR": "Nobody dares to ask where the Gremlin got it from.",
     "DESCRIPTIONS": [
-      "Damage dealt to random enemies is increased by #b2."
+      "Damage dealt to random enemies is increased by #b", "."
     ]
   },
   "Gremlin:GremlinBomb": {
@@ -39,6 +39,13 @@
     "FLAVOR": "A sign of status among the Gremlin Mobs.",
     "DESCRIPTIONS": [
       "Start each combat with #b1 #yStrength."
+    ]
+  },
+  "Gremlin:LeaderVoucher": {
+    "NAME": "Gremlin Leader Voucher",
+    "FLAVOR": "IOU 1 Gremlin",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. NL Upon pickup, permanently lose a Gremlin."
     ]
   },
   "Gremlin:MagicalMallet": {
@@ -85,6 +92,13 @@
     "FLAVOR": "The pride and joy of every Gremlin Wizard, this staff is a frequent target of theft by rival mobs.",
     "DESCRIPTIONS": [
       "Wiz deals #b7 additional damage."
+    ]
+  },
+  "Gremlin:WoundPoker": {
+    "NAME": "Wound Poker",
+    "FLAVOR": "Does it hurt when I do this?.",
+    "DESCRIPTIONS": [
+      "At the end of each turn, deal #b", " damage to each #yWeakened enemy."
     ]
   },
   "Gremlin:PatchFixes": {

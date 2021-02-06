@@ -104,6 +104,12 @@ public class GremlinMobState {
     public void enslave(String victim){
         if(!enslaved.contains(victim)) {
             enslaved.add(victim);
+            for (int position = 0; position < gremlins.size(); position++) {
+                if (gremlins.get(position).equals(victim)) {
+                    gremlinHP.set(position, 0);
+                    break;
+                }
+            }
         }
     }
 

@@ -135,6 +135,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
         addRelic(new ImpeccablePecs(), RelicType.SHARED);
         addRelicToCustomPool(new MagicalMallet(), AbstractCardEnum.GREMLIN);
         addRelicToCustomPool(new WizardStaff(), AbstractCardEnum.GREMLIN);
+        addRelicToCustomPool(new WoundPoker(), AbstractCardEnum.GREMLIN);
 
         // Rare
         addRelic(new PricklyShields(), RelicType.SHARED);
@@ -142,6 +143,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
 
         // Boss
         addRelicToCustomPool(new GremlinBomb(), AbstractCardEnum.GREMLIN);
+        addRelicToCustomPool(new LeaderVoucher(), AbstractCardEnum.GREMLIN);
 
         // Shop
         addRelicToCustomPool(new StolenMerchandise(), AbstractCardEnum.GREMLIN);
