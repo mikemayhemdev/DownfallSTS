@@ -60,8 +60,10 @@ public class GremlinMobState {
             if (hp < 0) {
                 hp = 0;
             }
-            int heal = MathUtils.round((max - hp) * multiplier);
-            gremlinHP.set(i, hp + heal);
+            if (!enslaved.contains(gremlins.get(i))) {
+                int heal = MathUtils.round((max - hp) * multiplier);
+                gremlinHP.set(i, hp + heal);
+            }
         }
     }
 
