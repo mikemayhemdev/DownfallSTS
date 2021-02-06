@@ -1,4 +1,4 @@
-package gremlin.patches;
+package gremlin.patches.relicpatches;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;

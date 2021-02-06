@@ -58,5 +58,16 @@
     "DESCRIPTIONS": [
       "Wiz deals #b7 additional damage."
     ]
+  },
+  "Gremlin:PatchFixes": {
+    "NAME": "",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "Upon pickup, raise all your Gremlin's Max HP by #b",
+      "When adding cards into your deck, you may raise all your Gremlins Max HP by #b1 instead.",
+      " #yGold. NL Raise all your Gremlin's Max HP by #b",
+      "At the end of combat, raise all your Gremlin's Max HP by #b1.",
+      "+1 Max HP"
+    ]
   }
 }
