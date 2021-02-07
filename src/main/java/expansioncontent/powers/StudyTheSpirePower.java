@@ -70,7 +70,7 @@ public class StudyTheSpirePower extends AbstractPower implements NonStackablePow
 
     public void atStartOfTurn() {
         flash();
-        AbstractDungeon.actionManager.addToBottom(new RandomCardWithTagAction(false, expansionContentMod.STUDY));
+        AbstractDungeon.actionManager.addToBottom(new RandomCardWithTagAction(this.upgraded, expansionContentMod.STUDY));
         if (this.amount <= 1) {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, StudyTheSpirePower.POWER_ID));
         } else {
