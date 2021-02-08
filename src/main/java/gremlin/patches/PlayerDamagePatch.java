@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import expansioncontent.powers.AwakenDeathPower;
 import gremlin.actions.GremlinSwapAction;
 import gremlin.characters.GremlinCharacter;
 import gremlin.orbs.GremlinStandby;
@@ -23,6 +24,10 @@ public class PlayerDamagePatch {
     public static SpireReturn Insert(AbstractPlayer __instance, DamageInfo info) {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             if (__instance instanceof GremlinCharacter) {
+                if(__instance.hasPower(AwakenDeathPower.POWER_ID)) {
+                    ((AwakenDeathPower)(__instance.getPower(AwakenDeathPower.POWER_ID))).trigger(__instance);
+                    return SpireReturn.Return(null);
+                }
                 if (!__instance.hasRelic("Mark of the Bloom")) {
                     if (__instance.hasRelic(ShortStature.ID) && __instance.getRelic(ShortStature.ID).counter == -1) {
                         __instance.currentHealth = 0;
