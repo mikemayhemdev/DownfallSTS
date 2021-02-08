@@ -223,6 +223,7 @@ public class GremlinDance extends AbstractGremlinCard {
     @Override
     public void onGremlinSwapInDeck() {
         updateContents();
+        super.applyPowers();
     }
 
     @Override
