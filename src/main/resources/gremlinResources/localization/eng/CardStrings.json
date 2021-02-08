@@ -217,7 +217,7 @@
     "NAME": "Gremlin Toss",
     "DESCRIPTION": "Deal damage equal to your current Block and Temporary HP.",
     "UPGRADE_DESCRIPTION": "Gain !M! Temporary HP. NL Deal damage equal to your current Block and Temporary HP.",
-    "EXTENDED_DESCRIPTION": ["NL (Deals !D! damage.)"]
+    "EXTENDED_DESCRIPTION": [" NL (Deals !D! damage.)"]
   },
 
   "Gremlin:GremlinWizard": {
@@ -268,8 +268,8 @@
 
   "Gremlin:MakeshiftArmor": {
     "NAME": "Makeshift Armor",
-    "DESCRIPTION": "Every time you play 5 attacks, gain 1 Artifact.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Artifact. NL Every time you play 5 attacks, gain 1 Artifact."
+    "DESCRIPTION": "Every time you play 7 attacks, gain 1 Artifact.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Artifact. NL Every time you play 7 attacks, gain 1 Artifact."
   },
 
   "Gremlin:Mockery": {

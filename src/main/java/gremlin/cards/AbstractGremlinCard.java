@@ -19,6 +19,7 @@ public abstract class AbstractGremlinCard extends CustomCard {
                                   CardRarity rarity, CardTarget target) {
         super(id, name, GremlinMod.getResourcePath(img), cost, rawDescription, type,
                 AbstractCardEnum.GREMLIN, rarity, target);
+        setBackgrounds();
     }
 
     public void onGremlinSwap() {
@@ -67,6 +68,17 @@ public abstract class AbstractGremlinCard extends CustomCard {
     }
 
     public static ART_GREMLIN getGremlinEnumFromCard(AbstractCard card) {
+        // Make config logic somehow?
+        if (card.type.equals(CardType.ATTACK)) {
+            return ART_GREMLIN.THIEF;
+        }
+        if (card.type.equals(CardType.SKILL)) {
+            return ART_GREMLIN.TSUNDERE;
+        }
+        if (card.type.equals(CardType.POWER)) {
+            return ART_GREMLIN.WIZ;
+        }
+
         // Here is where you or I can implement the function that takes a card,
         // and based off of its tags, returns the corresponding ART_GREMLIN enum.
         if (card.tags.contains(FAT_GREMLIN)) {

@@ -45,7 +45,12 @@
     "NAME": "Gremlin Leader's Voucher",
     "FLAVOR": "IOU 1 Gremlin",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. NL Upon pickup, permanently lose a Gremlin."
+      "Gain [E] at the start of your turn. NL Upon pickup, #rpermanently #rlose #ra #rGremlin.",
+      " NL #r( #rFat #rGremlin #r)",
+      " NL #r( #rGremlin #rWizard #r)",
+      " NL #r( #rMad #rGremlin #r)",
+      " NL #r( #rShield #rGremlin #r)",
+      " NL #r( #rSneaky #rGremlin #r)"
     ]
   },
   "Gremlin:MagicalMallet": {
@@ -120,10 +125,10 @@
     "NAME": "",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Upon pickup, raise all your Gremlin's Max HP by #b",
-      "When adding cards into your deck, you may raise all your Gremlins Max HP by #b1 instead.",
-      " #yGold. NL Raise all your Gremlin's Max HP by #b",
-      "At the end of combat, raise all your Gremlin's Max HP by #b1.",
+      "Upon pickup, raise all your Gremlins' Max HP by #b",
+      "When adding cards into your deck, you may raise all your Gremlins' Max HP by #b1 instead.",
+      " #yGold. NL Raise all your Gremlins' Max HP by #b",
+      "At the end of combat, raise all your Gremlins' Max HP by #b1.",
       "+1 Max HP"
     ]
   }

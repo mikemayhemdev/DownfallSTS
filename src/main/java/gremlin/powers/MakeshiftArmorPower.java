@@ -30,7 +30,7 @@ public class MakeshiftArmorPower extends AbstractGremlinPower {
 
         this.img = IMG;
         this.type = AbstractPower.PowerType.BUFF;
-        this.amount = 5;
+        this.amount = 7;
         this.artifact = artifact;
         this.updateDescription();
     }
@@ -51,7 +51,7 @@ public class MakeshiftArmorPower extends AbstractGremlinPower {
             this.amount -= 1;
             if (this.amount == 0) {
                 flash();
-                this.amount = 5;
+                this.amount = 7;
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner,
                         new ArtifactPower(this.owner, this.artifact), this.artifact));
             }

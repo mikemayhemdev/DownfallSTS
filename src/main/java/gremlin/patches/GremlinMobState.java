@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import gremlin.GremlinMod;
 import gremlin.characters.GremlinCharacter;
 import gremlin.orbs.GremlinStandby;
+import gremlin.relics.LeaderVoucher;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,11 +16,13 @@ public class GremlinMobState {
     private ArrayList<String> gremlins;
     private ArrayList<Integer> gremlinHP;
     private ArrayList<String> enslaved;
+    private String voucher;
 
     public GremlinMobState() {
         gremlins = new ArrayList<>();
         gremlinHP = new ArrayList<>();
         enslaved = new ArrayList<>();
+        voucher = "";
     }
 
     public void initialRandom(int hp){
@@ -103,7 +106,11 @@ public class GremlinMobState {
         }
     }
 
-    public void enslave(String victim){
+    public void enslave(String victim) {
+        enslave(victim, false);
+    }
+
+    public void enslave(String victim, boolean isVoucher){
         if(!enslaved.contains(victim)) {
             enslaved.add(victim);
             for (int position = 0; position < gremlins.size(); position++) {
@@ -111,6 +118,9 @@ public class GremlinMobState {
                     gremlinHP.set(position, 0);
                     break;
                 }
+            }
+            if (isVoucher) {
+                voucher = victim;
             }
         }
     }
@@ -121,6 +131,10 @@ public class GremlinMobState {
 
     public boolean isEnslaved(String gremlin){
         return enslaved.contains(gremlin);
+    }
+
+    public String getVoucher() {
+        return voucher;
     }
 
     public boolean canRez() {
@@ -174,6 +188,9 @@ public class GremlinMobState {
                 ));
             }
         }
+        if(character.hasRelic(LeaderVoucher.ID)) {
+            ((LeaderVoucher)(character.getRelic(LeaderVoucher.ID))).updateEnslavedTooltip();
+        }
     }
 
     private void swap(String gremlin, int pos) {
@@ -213,6 +230,6 @@ public class GremlinMobState {
         for(int i=0;i<gremlins.size();i++){
             s.add(gremlins.get(i) + ": " + gremlinHP.get(i).toString());
         }
-        return s.toString() + " <" + enslaved.toString() + ">";
+        return s.toString() + " <" + enslaved.toString() + ">" + "[" + voucher + "]";
     }
 }

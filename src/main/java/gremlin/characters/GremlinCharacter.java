@@ -336,6 +336,10 @@ public class GremlinCharacter extends CustomPlayer {
         mobState.enslave(victim);
     }
 
+    public void enslave(String victim, boolean isVoucher) {
+        mobState.enslave(victim, isVoucher);
+    }
+
     public void resurrect() {
         mobState.resurrect(this.maxHealth);
     }
