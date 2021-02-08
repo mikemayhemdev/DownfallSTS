@@ -56,6 +56,9 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
             if (card != null) {
                 SignatureMovePatch.inSignatureMove.set(card, true);
                 setDescriptionAfterLoading();
+                card.cost = 0;
+                card.costForTurn = 0;
+                card.isCostModified = true;
             }
         }
     }
@@ -100,6 +103,8 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
             cardSelected = true;
             card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             card.cost = 0;
+            card.costForTurn = 0;
+            card.isCostModified = true;
             SignatureMovePatch.inSignatureMove.set(card, true);
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
 
