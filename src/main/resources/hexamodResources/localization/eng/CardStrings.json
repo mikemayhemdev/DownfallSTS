@@ -114,7 +114,7 @@
   },
   "hexamod:StepThrough": {
     "NAME": "Step Through",
-    "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is hexamod:Ignited, hexamod:Advance. NL If not, hexamod:Ignite it."
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card for each hexamod:Ignited Ghostflame."
   },
   "hexamod:InspiringFlames": {
     "NAME": "Stoke the Fire",
