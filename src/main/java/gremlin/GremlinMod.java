@@ -31,6 +31,7 @@ import gremlin.characters.GremlinCharacter;
 import gremlin.events.BackToBasicsGremlin;
 import gremlin.orbs.*;
 import gremlin.patches.AbstractCardEnum;
+import gremlin.patches.BlamageVar;
 import gremlin.patches.GremlinEnum;
 import gremlin.patches.GremlinModSaveState;
 import gremlin.potions.GremlinPotion;
@@ -158,6 +159,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
     @Override
     public void receiveEditCards() {
         logger.info("Adding Gremlin Cards.");
+        BaseMod.addDynamicVariable(new BlamageVar());
 
         //Basic
         BaseMod.addCard(new Strike());

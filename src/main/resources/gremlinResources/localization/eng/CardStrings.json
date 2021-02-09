@@ -340,7 +340,7 @@
 
   "Gremlin:Pretaliation": {
     "NAME": "Pretaliation",
-    "DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, deal an additional !M! damage."
+    "DESCRIPTION": "Deal !D! damage if the enemy intends to attack. NL Do !blamage! damage otherwise."
   },
 
   "Gremlin:ProperTools": {
