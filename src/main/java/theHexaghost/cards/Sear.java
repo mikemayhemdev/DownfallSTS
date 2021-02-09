@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
+import theHexaghost.HexaMod;
 import theHexaghost.powers.BurnPower;
 
 public class Sear extends AbstractHexaCard {
@@ -21,6 +22,7 @@ public class Sear extends AbstractHexaCard {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.ENEMY);
         baseBurn = burn = MAGIC;
         isEthereal = true;
+        tags.add(HexaMod.AFTERLIFE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
