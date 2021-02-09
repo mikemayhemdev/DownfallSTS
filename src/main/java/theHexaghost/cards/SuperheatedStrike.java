@@ -5,7 +5,9 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 
+@CardIgnore
 public class SuperheatedStrike extends AbstractHexaCard {
 
     public final static String ID = makeID("SuperheatedStrike");
