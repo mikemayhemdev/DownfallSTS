@@ -9,7 +9,7 @@
   },
   "hexamod:Sear": {
     "NAME": "灼烧",
-    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。"
+    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 给予 !burny! 层 hexamod:灼魂 。"
   },
   "hexamod:Float": {
     "NAME": "浮动",
@@ -324,27 +324,33 @@
   },
   "hexamod:FirstSeal": {
     "NAME": "第一容器",
-    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，回复 !M! 点生命。"
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，回复 !M! 点生命。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时，回复 !M! 点生命。"
   },
   "hexamod:SecondSeal": {
     "NAME": "第二容器",
-    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，获得 !M! 个额外的金币。"
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，获得 !M! 个额外的金币。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时，获得 !M! 个额外的金币。"
   },
   "hexamod:ThirdSeal": {
     "NAME": "第三容器",
-    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，卡牌奖励中加入一张牌。"
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，卡牌奖励中加入一张牌。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时，卡牌奖励中加入一张牌。"
   },
   "hexamod:FourthSeal": {
     "NAME": "第四容器",
-    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，药水奖励中加入一瓶额外的药水。"
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，药水奖励中加入一瓶额外的药水。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时，药水奖励中加入一瓶额外的药水。"
   },
   "hexamod:FifthSeal": {
     "NAME": "第六容器",
-    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，卡牌奖励中加入一张“容器”牌。"
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，卡牌奖励中加入一张“容器”牌。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时，卡牌奖励中加入一张“容器”牌。"
   },
   "hexamod:SixthSeal": {
     "NAME": "第五容器",
-    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，随机升级牌组中的一张牌。"
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，随机升级牌组中的一张牌。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时，随机升级牌组中的一张牌。"
   },
   "hexamod:SoulSteal": {
     "NAME": "活体炸弹",

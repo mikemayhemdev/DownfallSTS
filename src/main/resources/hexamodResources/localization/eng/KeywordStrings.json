@@ -67,7 +67,7 @@
     "NAMES": [
       "seal"
     ],
-    "DESCRIPTION": "Can't be upgraded. If all #b6 Seals have been played this combat, obtain #pThe #pBroken #pSeal and remove the Seals from your deck."
+    "DESCRIPTION": "If all #b6 Seals have been played this combat, obtain #pThe #pBroken #pSeal and remove the Seals from your deck."
   },
   {
     "PROPER_NAME": "Afterlife",
