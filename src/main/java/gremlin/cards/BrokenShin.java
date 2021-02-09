@@ -42,7 +42,7 @@ public class BrokenShin extends AbstractGremlinCard {
     {
         if(m.hasPower("Weakened")){
             int amount = m.getPower("Weakened").amount / this.magicNumber;
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(m, p, "Weakened"));
+//            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(m, p, "Weakened"));
             if(amount > 0){
                 AbstractDungeon.actionManager.addToBottom(
                         new ApplyPowerAction(m, p, new AgonyPower(m, amount, false), amount));

@@ -28,7 +28,7 @@
 
   "Gremlin:BrokenShin": {
     "NAME": "Broken Shin",
-    "DESCRIPTION": "Remove all Weak. NL The enemy will spend a turn in Agony for every !M! stacks of Weak removed this way."
+    "DESCRIPTION": "Apply Agony for every !M! stacks of Weak the target has."
   },
 
   "Gremlin:BubbleBarrier": {
