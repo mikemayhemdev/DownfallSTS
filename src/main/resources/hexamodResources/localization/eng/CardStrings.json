@@ -275,7 +275,7 @@
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "Flames from Beyond",
-    "DESCRIPTION": "Unplayable. NL Ethereal, hexamod:Afterlife. NL Apply !burny! hexamod:Soulburn to ALL enemies.",
+    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Apply !burny! hexamod:Soulburn to ALL enemies.",
     "EXTENDED_DESCRIPTION": ["It's too hot to touch!"]
   },
   "hexamod:PhantomFireball": {

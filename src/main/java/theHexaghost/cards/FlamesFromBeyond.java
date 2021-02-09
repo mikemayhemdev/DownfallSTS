@@ -18,19 +18,16 @@ public class FlamesFromBeyond extends AbstractHexaCard {
     private static final int UPG_MAGIC = 5;
 
     public FlamesFromBeyond() {
-        super(ID, -2, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
         baseBurn = burn = MAGIC;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
     }
 
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        cantUseMessage = EXTENDED_DESCRIPTION[0];
-        return false;
-    }
-
     public void use(AbstractPlayer p, AbstractMonster m) {
+        for (AbstractMonster q : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            burn(q, burn);
+        }
     }
 
     @Override
