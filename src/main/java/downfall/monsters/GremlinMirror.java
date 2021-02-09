@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import downfall.actions.ModifiedSummonGremlinAction;
+import gremlin.GremlinMod;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -48,9 +49,11 @@ public class GremlinMirror extends AbstractMonster {
     private int STAB_DMG = 6;
     private int STAB_AMT = 3;
     private boolean firstSummon = true;
+    private int turn = 0;
+    private boolean hijack = false;
 
     public GremlinMirror() {
-        super(NAME, "GremlinMirror", 148, 0.0F, -15.0F, 200.0F, 310.0F, (String)null, 35.0F, 0.0F);
+        super(NAME, "GremlinMirror", 158, 0.0F, -15.0F, 200.0F, 310.0F, (String)null, 35.0F, 0.0F);
         this.type = EnemyType.ELITE;
         this.loadAnimation("images/monsters/theCity/gremlinleader/skeleton.atlas", "images/monsters/theCity/gremlinleader/skeleton.json", 1.0F);
         AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
@@ -58,9 +61,9 @@ public class GremlinMirror extends AbstractMonster {
         this.stateData.setMix("Hit", "Idle", 0.1F);
         e.setTimeScale(0.8F);
         if (AbstractDungeon.ascensionLevel >= 8) {
-            this.setHp(160);
+            this.setHp(170);
         } else {
-            this.setHp(150);
+            this.setHp(160);
         }
 
         if (AbstractDungeon.ascensionLevel >= 18) {
@@ -94,13 +97,18 @@ public class GremlinMirror extends AbstractMonster {
     }
 
     public void takeTurn() {
+        turn += 1;
+        GremlinMod.logger.info("The turn is: " + turn);
         label23:
         switch(this.nextMove) {
             case 2:
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "CALL"));
                 AbstractDungeon.actionManager.addToBottom(new ModifiedSummonGremlinAction(this.gremlins, firstSummon));
                 firstSummon = false;
-                AbstractDungeon.actionManager.addToBottom(new ModifiedSummonGremlinAction(this.gremlins, false));
+                if (!hijack) {
+                    AbstractDungeon.actionManager.addToBottom(new ModifiedSummonGremlinAction(this.gremlins, false));
+                }
+                hijack = false;
                 break;
             case 3:
                 AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, this.getEncourageQuote()));
@@ -139,6 +147,13 @@ public class GremlinMirror extends AbstractMonster {
     }
 
     protected void getMove(int num) {
+        if(firstSummon) {
+            if(turn >= 1) {
+                hijack = this.numAliveGremlins() > 1;
+                this.setMove(RALLY_NAME, (byte)2, Intent.UNKNOWN);
+                return;
+            }
+        }
         if (this.numAliveGremlins() == 0) {
             if (num < 75) {
                 if (!this.lastMove((byte)2)) {

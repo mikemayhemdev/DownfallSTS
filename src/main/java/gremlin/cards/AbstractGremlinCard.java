@@ -67,16 +67,9 @@ public abstract class AbstractGremlinCard extends CustomCard {
         NONE
     }
 
-    public static ART_GREMLIN getGremlinEnumFromCard(AbstractCard card) {
-        // Make config logic somehow?
-        if (card.type.equals(CardType.ATTACK)) {
-            return ART_GREMLIN.THIEF;
-        }
-        if (card.type.equals(CardType.SKILL)) {
-            return ART_GREMLIN.TSUNDERE;
-        }
-        if (card.type.equals(CardType.POWER)) {
-            return ART_GREMLIN.WIZ;
+    public ART_GREMLIN getGremlinEnumFromCard(AbstractCard card) {
+        if (!GremlinMod.gremlinArtMode && !(card instanceof GremlinDance)) {
+            return ART_GREMLIN.NONE;
         }
 
         // Here is where you or I can implement the function that takes a card,

@@ -91,6 +91,8 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
     @SpireEnum
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags NOB_GREMLIN;
 
+    public static boolean gremlinArtMode = false;
+
     public GremlinMod() {
         logger.info("Loading GremlinMod.");
         BaseMod.subscribe(this);

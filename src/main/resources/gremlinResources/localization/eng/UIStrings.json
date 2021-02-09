@@ -44,5 +44,11 @@
       "NOB LEADER NOW!",
       "NOB LEAD FOREVER!"
     ]
+  },
+  "Gremlin:ArtMode": {
+    "TEXT": [
+      "Gremlin Art Mode",
+      "Gremlins invade the card frames. Only impacts aesthetics. Might make finding synergies easier."
+    ]
   }
 }

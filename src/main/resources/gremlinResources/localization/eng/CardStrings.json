@@ -97,7 +97,8 @@
 
   "Gremlin:Duplicate": {
     "NAME": "Duplicate",
-    "DESCRIPTION": "Make !M! Echoes of an Attack in your hand. They cost 1 less."
+    "DESCRIPTION": "Make !M! Echoes of an Attack in your hand. They cost 1 less. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Make !M! Echoes of an Attack in your hand. They cost 1 less."
   },
 
   "Gremlin:EdibleArmor": {

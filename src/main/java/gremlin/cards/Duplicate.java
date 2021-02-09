@@ -22,7 +22,6 @@ public class Duplicate extends AbstractGremlinCard {
 
     private static final int COST = 2;
     private static final int MAGIC = 2;
-    private static final int UPGRADE_BONUS = 1;
 
     public Duplicate()
     {
@@ -30,6 +29,7 @@ public class Duplicate extends AbstractGremlinCard {
 
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
+        this.exhaust = true;
         this.tags.add(SNEAKY_GREMLIN);
         setBackgrounds();
     }
@@ -44,7 +44,8 @@ public class Duplicate extends AbstractGremlinCard {
         if (!this.upgraded)
         {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_BONUS);
+            this.rawDescription = strings.UPGRADE_DESCRIPTION;
+            this.exhaust = false;
         }
     }
 }
