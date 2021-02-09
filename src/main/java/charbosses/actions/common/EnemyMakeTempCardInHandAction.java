@@ -66,6 +66,10 @@ public class EnemyMakeTempCardInHandAction extends AbstractGameAction {
 
     @Override
     public void update() {
+        if (AbstractCharBoss.boss == null || AbstractCharBoss.boss.isDead || AbstractCharBoss.boss.isDying) {
+            isDone = true;
+            return;
+        }
         if (this.amount == 0) {
             this.isDone = true;
             return;
