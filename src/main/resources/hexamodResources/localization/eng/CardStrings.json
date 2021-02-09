@@ -267,7 +267,7 @@
   },
   "hexamod:VolcanoVisage": {
     "NAME": "Volcano Visage",
-    "DESCRIPTION": "Ethereal. NL At the start of your turn, apply !M! hexamod:Soulburn to ALL enemies."
+    "DESCRIPTION": "At the start of your turn, apply !M! hexamod:Soulburn to ALL enemies."
   },
   "hexamod:SuperheatedStrike": {
     "NAME": "Searing Strike",

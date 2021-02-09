@@ -268,7 +268,7 @@
   },
   "hexamod:VolcanoVisage": {
     "NAME": "火山面貌",
-    "DESCRIPTION": "虚无 。 NL 你的回合开始时，给予所有敌人 !M! 层 hexamod:灼魂 。"
+    "DESCRIPTION": "你的回合开始时，给予所有敌人 !M! 层 hexamod:灼魂 。"
   },
   "hexamod:SuperheatedStrike": {
     "NAME": "灼热打击",
