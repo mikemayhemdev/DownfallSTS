@@ -255,7 +255,7 @@
   "hexamod:TurnItUp": {
     "NAME": "Turn It Up",
     "DESCRIPTION": "Gain 5 hexamod:Intensity. NL Lose it in X+1 turns. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 5 hexamod:Intensity. NL Lose it in X+2 turns. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Gain 5 hexamod:Intensity. NL Lose it in X+1 turns. NL Gain [E] . NL Exhaust."
   },
   "hexamod:HeatMetal": {
     "NAME": "Heat Metal",

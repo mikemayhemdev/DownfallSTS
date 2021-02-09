@@ -1,11 +1,12 @@
 package theHexaghost.cards;
 
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import downfall.actions.PerformXAction;
 import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
-import downfall.actions.PerformXAction;
 import theHexaghost.actions.TurnItUpAction;
 
 public class TurnItUp extends AbstractHexaCard {
@@ -28,12 +29,14 @@ public class TurnItUp extends AbstractHexaCard {
         }
         TurnItUpAction r = new TurnItUpAction(magicNumber);
         atb(new PerformXAction(r, p, energyOnUse, freeToPlayOnce));
+        if (upgraded) {
+            atb(new GainEnergyAction(1));
+        }
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
