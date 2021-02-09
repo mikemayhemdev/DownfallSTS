@@ -198,9 +198,8 @@
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "Power from Beyond",
-    "DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Gain [E] and draw !M! card next turn.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Gain [E] and draw !M! cards next turn.",
-    "EXTENDED_DESCRIPTION": ["This power is too distant to directly channel."]
+    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Gain [E] and draw !M! card next turn.",
+    "UPGRADE_DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Gain [E] and draw !M! cards next turn."
   },
   "hexamod:BurningTouch": {
     "NAME": "Burning Touch",

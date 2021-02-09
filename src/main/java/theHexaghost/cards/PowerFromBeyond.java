@@ -17,16 +17,10 @@ public class PowerFromBeyond extends AbstractHexaCard {
     private static final int UPG_MAGIC = 1;
 
     public PowerFromBeyond() {
-        super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
-    }
-
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        this.cantUseMessage = EXTENDED_DESCRIPTION[0];
-        return false;
     }
 
     @Override
@@ -36,6 +30,8 @@ public class PowerFromBeyond extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        applyToSelf(new EnergizedBluePower(AbstractDungeon.player, 1));
+        applyToSelf(new DrawCardNextTurnPower(AbstractDungeon.player, magicNumber));
     }
 
     public void upgrade() {
