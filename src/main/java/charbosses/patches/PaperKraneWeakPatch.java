@@ -21,7 +21,7 @@ public class PaperKraneWeakPatch {
         @SpirePrefixPatch
         public static SpireReturn<Float> Prefix(WeakPower instance, float damage, DamageType type) {
             if (type == DamageInfo.DamageType.NORMAL && instance.owner.isPlayer &&
-                    AbstractCharBoss.boss.hasRelic("Paper Crane")) {
+                    AbstractCharBoss.boss != null && AbstractCharBoss.boss.hasRelic("Paper Crane")) {
                 return SpireReturn.Return(damage * 0.6F);
             }
             else
@@ -36,7 +36,8 @@ public class PaperKraneWeakPatch {
     public static class SuperWeakText {
         @SpirePostfixPatch
         public static void Postfix(WeakPower instance) {
-            if (instance.owner != null && instance.owner.isPlayer && AbstractCharBoss.boss.hasRelic("Paper Crane")) {
+            if (instance.owner != null && instance.owner.isPlayer &&
+                    AbstractCharBoss.boss != null && AbstractCharBoss.boss.hasRelic("Paper Crane")) {
                 if (instance.amount == 1)
                     instance.description = DESCRIPTIONS[0] + 40 + DESCRIPTIONS[1] + instance.amount + DESCRIPTIONS[2];
                 else
