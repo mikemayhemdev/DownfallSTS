@@ -12,10 +12,10 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.UnknownClass;
 import sneckomod.util.ColorfulCardReward;
-import downfall.util.TextureLoader;
 
 public class SneckoBoss extends CustomRelic implements CustomSavable<String> {
 
@@ -57,12 +57,20 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<String> {
             CardGroup c = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for (AbstractCard q : CardLibrary.getAllCards()) {
                 if (q instanceof UnknownClass) {
-                    if (SneckoMod.validColors.contains(((UnknownClass) q).myColor)) {
+                    if (SneckoMod.validColors.contains(((UnknownClass) q).myColor) || SneckoMod.pureSneckoMode) {
                         c.addToTop(q);
                     }
                 }
             }
-            AbstractDungeon.gridSelectScreen.open(c, 1, false, CardCrawlGame.languagePack.getUIString("bronze:MiscStrings").TEXT[8]);
+            if (SneckoMod.pureSneckoMode) {
+                c.shuffle();
+                CardGroup r = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+                for (int i = 0; i < 3; i++) {
+                    r.addToTop(c.group.get(i));
+                }
+                AbstractDungeon.gridSelectScreen.open(r, 1, false, CardCrawlGame.languagePack.getUIString("bronze:MiscStrings").TEXT[8]);
+            } else
+                AbstractDungeon.gridSelectScreen.open(c, 1, false, CardCrawlGame.languagePack.getUIString("bronze:MiscStrings").TEXT[8]);
         }
     }
 
@@ -82,13 +90,14 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<String> {
             AbstractDungeon.commonCardPool.group.removeIf(q -> q instanceof UnknownClass && !q.cardID.equals(c.cardID));
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
-            this.description = getUpdatedDescription(); this.tips.clear();
+            this.description = getUpdatedDescription();
+            this.tips.clear();
             this.tips.add(new PowerTip(this.name, this.description));
         }
     }
 
     public String getUpdatedDescription() {
-        if (!SneckoBoss.chosenChar.equals("UNCHOSEN")) { //I sure hope no one makes a character called The UNCHOSEN.
+        if (!SneckoBoss.chosenChar.equals("UNCHOSEN")) {
             return DESCRIPTIONS[1] + SneckoBoss.chosenChar + DESCRIPTIONS[2] + SneckoBoss.chosenChar + DESCRIPTIONS[3];
         }
         return DESCRIPTIONS[0];
@@ -102,7 +111,8 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<String> {
     @Override
     public void onLoad(String s) {
         chosenChar = s;
-        this.description = getUpdatedDescription(); this.tips.clear();
+        this.description = getUpdatedDescription();
+        this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
     }
 
