@@ -1,4 +1,10 @@
 {
+  "Slimebound:EmptySlimeSlot": {
+    "NAME": "Slime Slot",
+    "DESCRIPTION": [
+      "Slime minions can be placed in these slots through #ySplitting."
+    ]
+  },
   "Slimebound:BronzeSlime": {
     "NAME": "Bronze Slime",
     "DESCRIPTION": [
