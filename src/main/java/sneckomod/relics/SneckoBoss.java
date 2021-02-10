@@ -57,12 +57,20 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<String> {
             CardGroup c = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for (AbstractCard q : CardLibrary.getAllCards()) {
                 if (q instanceof UnknownClass) {
-                    if (SneckoMod.validColors.contains(((UnknownClass) q).myColor)) {
+                    if (SneckoMod.validColors.contains(((UnknownClass) q).myColor) || SneckoMod.pureSneckoMode) {
                         c.addToTop(q.makeCopy());
                     }
                 }
             }
-            AbstractDungeon.gridSelectScreen.open(c, 1, false, CardCrawlGame.languagePack.getUIString("bronze:MiscStrings").TEXT[8]);
+            if (SneckoMod.pureSneckoMode) {
+                c.shuffle();
+                CardGroup r = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+                for (int i = 0; i < 3; i++) {
+                    r.addToTop(c.group.get(i));
+                }
+                AbstractDungeon.gridSelectScreen.open(r, 1, false, CardCrawlGame.languagePack.getUIString("bronze:MiscStrings").TEXT[8]);
+            } else
+                AbstractDungeon.gridSelectScreen.open(c, 1, false, CardCrawlGame.languagePack.getUIString("bronze:MiscStrings").TEXT[8]);
         }
     }
 
