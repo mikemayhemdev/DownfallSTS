@@ -54,10 +54,12 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.blights.VoidEssence;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.curses.Pride;
 import com.megacrit.cardcrawl.cards.status.Slimed;
+import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -67,10 +69,7 @@ import com.megacrit.cardcrawl.events.city.*;
 import com.megacrit.cardcrawl.events.exordium.*;
 import com.megacrit.cardcrawl.events.shrines.FaceTrader;
 import com.megacrit.cardcrawl.events.shrines.*;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ModHelper;
-import com.megacrit.cardcrawl.helpers.RelicLibrary;
+import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
@@ -109,7 +108,10 @@ import downfall.util.*;
 import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 import gremlin.GremlinMod;
+import gremlin.cards.Wizardry;
 import gremlin.characters.GremlinCharacter;
+import gremlin.relics.WizardHat;
+import gremlin.relics.WizardStaff;
 import guardian.GuardianMod;
 import guardian.cards.ExploitGems;
 import guardian.characters.GuardianCharacter;
@@ -1273,6 +1275,8 @@ public class downfallMod implements
         l.add(new CustomMod(ExchangeController.ID, "r", true));
         l.add(new CustomMod(Analytical.ID, "g", true));
         l.add(new CustomMod(StatusAbuse.ID, "r", true));
+        l.add(new CustomMod(TooManyShivs.ID, "r", true));
+        l.add(new CustomMod(Wizzardry.ID, "g", true));
     }
 
     @Override
@@ -1375,6 +1379,23 @@ public class downfallMod implements
             AbstractDungeon.player.masterDeck.addToTop(new UnknownUncommonSkill());
             AbstractDungeon.player.masterDeck.addToTop(new UnknownUncommonPower());
             AbstractDungeon.player.masterDeck.addToTop(new Unknown());
+        }
+
+        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(TooManyShivs.ID) || ModHelper.isModEnabled(TooManyShivs.ID)) {
+            RelicLibrary.getRelic(VelvetChoker.ID).makeCopy().instantObtain();
+            BlightHelper.getBlight(VoidEssence.ID).instantObtain(AbstractDungeon.player, AbstractDungeon.player.blights.size(), true);
+            for (int i=0;i<10;i++) {
+                AbstractDungeon.player.masterDeck.addToBottom(new Shiv());
+            }
+        }
+
+        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Wizzardry.ID) || ModHelper.isModEnabled(Wizzardry.ID)) {
+            RelicLibrary.getRelic(WizardHat.ID).makeCopy().instantObtain();
+            RelicLibrary.getRelic(WizardStaff.ID).makeCopy().instantObtain();
+            AbstractCard c = new Wizardry();
+            c.upgrade();
+            AbstractDungeon.player.masterDeck.addToBottom(c);
+
         }
 
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group)
