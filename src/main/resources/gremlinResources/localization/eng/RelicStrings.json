@@ -54,7 +54,7 @@
     ]
   },
   "Gremlin:MagicalMallet": {
-    "NAME": "Magical Mallet",
+    "NAME": "Magic Mallet",
     "FLAVOR": "Stubs toes twice as hard.",
     "DESCRIPTIONS": [
       "Whenever you apply #yWeak, gain #b1 #yWiz, up to #b3 times per turn."
