@@ -1,8 +1,8 @@
 {
   "Slimebound:EmptySlimeSlot": {
-    "NAME": "Slime Slot",
+    "NAME": "史莱姆栏位",
     "DESCRIPTION": [
-      "Slime minions can be placed in these slots through #ySplitting."
+      "#y分裂 的史莱姆爪牙将进入这个栏位。"
     ]
   },"Slimebound:BronzeSlime": {
     "NAME": "青铜史莱姆",

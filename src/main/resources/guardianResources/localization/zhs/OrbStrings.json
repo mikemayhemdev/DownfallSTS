@@ -1,10 +1,11 @@
 {
   "Guardian:EmptyStasisSlot": {
-    "NAME": "Stasis Slot",
+    "NAME": "凝滞",
     "DESCRIPTION": [
-      "Cards can be placed into this slot through #yStasis."
+      "卡牌被 #y凝滞 时将进入这个栏位。"
     ]
-  },"Guardian:StasisOrb": {
+  },
+  "Guardian:StasisOrb": {
     "NAME": "凝滞: ",
     "DESCRIPTION": [
       " 将会在你的下个回合开始时以0费返回到你的手牌中。",
