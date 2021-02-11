@@ -150,7 +150,8 @@ public class downfallMod implements
         StartGameSubscriber,
         StartActSubscriber,
         AddAudioSubscriber,
-        RenderSubscriber {
+        RenderSubscriber,
+        PostDeathSubscriber {
     public static final String modID = "downfall";
 
 
@@ -216,6 +217,8 @@ public class downfallMod implements
 
 
     private static ArrayList<AbstractCard> downfallCurses = new ArrayList<>();
+
+    public static CustomMod evilWithinSingleton = null;
 
     public downfallMod() {
         BaseMod.subscribe(this);
@@ -1213,7 +1216,7 @@ public class downfallMod implements
 
     @Override
     public void receiveStartAct() {
-        if (evilMode) {
+        if (evilMode || (evilWithinSingleton!=null && evilWithinSingleton.selected) || (CardCrawlGame.trial==null && DailyModeEvilPatch.todaysRunIsEvil)) {
             if (possEncounterList.size() == 0) {
                 resetBossList();
                 //SlimeboundMod.logger.info("ERROR! Had to reset the bosses mid-run!");
@@ -1254,13 +1257,14 @@ public class downfallMod implements
 
 
     public void receiveCustomModeMods(List<CustomMod> l) {
+        evilWithinSingleton = new CustomMod(EvilRun.ID, "b", false);
         l.add(new CustomMod(WorldOfGoo.ID, "r", true));
         l.add(new CustomMod(Hexed.ID, "r", true));
         l.add(new CustomMod(Jewelcrafting.ID, "g", true));
         l.add(new CustomMod(ChampStances.ID, "g", true));
         l.add(new CustomMod(Enraging.ID, "r", true));
         l.add(new CustomMod(Improvised.ID, "g", true));
-        l.add(new CustomMod(EvilRun.ID, "b", false));
+        l.add(evilWithinSingleton);
         l.add(new CustomMod(ExchangeController.ID, "r", true));
         l.add(new CustomMod(Analytical.ID, "g", true));
         l.add(new CustomMod(StatusAbuse.ID, "r", true));
@@ -1371,7 +1375,8 @@ public class downfallMod implements
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group)
             UnlockTracker.markCardAsSeen(c.cardID);
 
-        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(EvilRun.ID)) || DailyModeEvilPatch.todaysRunIsEvil) {
+        if ((evilWithinSingleton!=null && evilWithinSingleton.selected)
+                || (CardCrawlGame.trial==null && DailyModeEvilPatch.todaysRunIsEvil)) {
             evilMode = true;
         }
 
@@ -1394,6 +1399,8 @@ public class downfallMod implements
         Act3BossFaced = "";
 
         playedBossCardThisTurn = false;
+
+        evilWithinSingleton.selected = false;
     }
 
     public static void saveBossFight(String ID) {
@@ -1426,6 +1433,11 @@ public class downfallMod implements
                 CardModifierManager.addModifier(abstractCard, new EtherealMod());
             }
         }
+    }
+
+    @Override
+    public void receivePostDeath() {
+        evilMode = false;
     }
 
     public enum otherPackagePaths {
