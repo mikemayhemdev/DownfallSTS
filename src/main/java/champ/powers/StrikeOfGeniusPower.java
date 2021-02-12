@@ -48,7 +48,7 @@ public class StrikeOfGeniusPower extends AbstractPower implements CloneablePower
         for (int i = 0; i < this.amount; ++i) {
             ArrayList<AbstractCard> qCardList = new ArrayList<>();
             for (AbstractCard r : CardLibrary.getAllCards())
-                if (r.color == AbstractDungeon.player.getCardColor() && !UnlockTracker.isCardLocked(r.cardID) && r.hasTag(AbstractCard.CardTags.STRIKE) && r.type == AbstractCard.CardType.ATTACK && !(r instanceof AbstractUnknownCard)) qCardList.add(r);
+                if (r.color == AbstractDungeon.player.getCardColor() && !UnlockTracker.isCardLocked(r.cardID)&& !r.hasTag(AbstractCard.CardTags.HEALING) && r.hasTag(AbstractCard.CardTags.STRIKE) && r.type == AbstractCard.CardType.ATTACK && !(r instanceof AbstractUnknownCard)) qCardList.add(r);
             AbstractCard l = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1)).makeStatEquivalentCopy();
             l.freeToPlayOnce = true;
             if (!l.exhaust) CardModifierManager.addModifier(l, new ExhaustMod());

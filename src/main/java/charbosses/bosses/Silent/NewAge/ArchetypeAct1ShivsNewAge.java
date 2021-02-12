@@ -96,7 +96,7 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
                     c.cost = 0;
                     c.freeToPlayOnce = true;
                     c.modifyCostForCombat(-1);
-                    addToList(cardsList, c, extraUpgrades);
+                    addToList(cardsList, c);
                     addToList(cardsList, new EnSurvivor());
                     turn++;
                     break;

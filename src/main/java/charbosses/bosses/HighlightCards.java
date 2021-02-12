@@ -52,7 +52,6 @@ public class HighlightCards {
         sb.setColor(Color.WHITE);
     }
 
-
     @SpirePatch(clz = CardGlowBorder.class, method = SpirePatch.CONSTRUCTOR, paramtypez = {AbstractCard.class, Color.class})
     public static class CardGlowPatch {
         @SpirePostfixPatch
