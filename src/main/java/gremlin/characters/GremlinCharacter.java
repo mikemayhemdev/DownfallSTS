@@ -590,7 +590,7 @@ public class GremlinCharacter extends CustomPlayer {
 
     public Map<String, Integer> getAllGremlinHPs() {
         Map<String, Integer> hpMap = new TreeMap<>();
-        if(this.orbs.isEmpty()) {
+        if(!mobState.inCombat) {
             for (int i = 0; i < 5; i++) {
                 hpMap.put(mobState.getGremlinName(i), mobState.getGremlinHP(i));
             }

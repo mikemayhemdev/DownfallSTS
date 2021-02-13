@@ -17,6 +17,7 @@ public class GremlinMobState {
     private ArrayList<Integer> gremlinHP;
     private ArrayList<String> enslaved;
     private String voucher;
+    public boolean inCombat = false;
 
     public GremlinMobState() {
         gremlins = new ArrayList<>();
@@ -176,6 +177,7 @@ public class GremlinMobState {
     }
 
     public void startOfBattle(GremlinCharacter character){
+        inCombat = true;
         GremlinStandby grem = GremlinMod.getGremlinOrb(gremlins.get(0));
         character.swapBody(grem.assetFolder, grem.animationName);
         for(int i=4; i>0; i--){
@@ -205,6 +207,7 @@ public class GremlinMobState {
     }
 
     public void updateMobState(GremlinCharacter character){
+        inCombat = false;
         swap(character.currentGremlin, 0);
         gremlinHP.set(0, character.currentHealth);
 
