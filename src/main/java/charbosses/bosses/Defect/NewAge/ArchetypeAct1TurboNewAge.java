@@ -24,7 +24,7 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
 
     public ArchetypeAct1TurboNewAge() {
         super("DF_ARCHETYPE_STREAMLINE", "Streamline");
-        maxHPModifier += 150;
+        maxHPModifier += 110;
         actNum = 1;
         SlimeboundMod.logger.info("Archetype act num: " + actNum);
     }
@@ -74,14 +74,14 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
                     //Turn 3
                     addToList(cardsList, new EnTurbo(), true);
                     addToList(cardsList, new EnSunder(), false);
-                    addToList(cardsList, new EnDefendBlue(), extraUpgrades);
+                    addToList(cardsList, new EnDefendBlue());
                     turn++;
                     break;
                 case 3:
                     //Turn 4
                     addToList(cardsList, new EnStrikeBlue(), false);
                     addToList(cardsList, new EnCoreSurge(), false);
-                    addToList(cardsList, new EnEquilibrium(), extraUpgrades);
+                    addToList(cardsList, new EnEquilibrium());
                     turn = 0;
                     looped = true;
                     break;
@@ -94,14 +94,14 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
                     if (darkOrbsChanneled > 3 && AbstractCharBoss.boss.orbs.get(0) instanceof AbstractEnemyOrb) {
                         ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeOverride = true;
                     }
-                    addToList(cardsList, new EnDefendBlue(), extraUpgrades);
+                    addToList(cardsList, new EnDefendBlue());
                     addToList(cardsList, new EnShame(), false);
                     turn++;
                     break;
                 case 1:
                     addToList(cardsList, new EnTurbo(), true);
                     addToList(cardsList, new EnSunder(), false);
-                    addToList(cardsList, new EnEquilibrium(), extraUpgrades);
+                    addToList(cardsList, new EnEquilibrium());
                     turn++;
                     break;
                 case 2:

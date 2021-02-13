@@ -1,6 +1,7 @@
 package automaton.powers;
 
 import automaton.AutomatonMod;
+import automaton.FunctionHelper;
 import automaton.cards.AbstractBronzeCard;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -22,6 +23,7 @@ public class RemoveNextErrorPower extends AbstractAutomatonPower implements OnAd
             ((AbstractBronzeCard) addition).turnOffCompileStuff();
             flash();
             addToTop(new ReducePowerAction(owner, owner, this.ID, 1));
+            FunctionHelper.genPreview();
         }
     }
 

@@ -19,7 +19,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.ThrowDaggerEffect;
-import downfall.downfallMod; import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
+import downfall.downfallMod;
+import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
 import downfall.util.TextureLoader;
 
 public class BagOfKnives extends AbstractBossMechanicPower {
@@ -33,43 +34,49 @@ public class BagOfKnives extends AbstractBossMechanicPower {
     private boolean firstTurn;
 
     public BagOfKnives(final AbstractCreature owner) {
-        this.ID = POWER_ID;
+        ID = POWER_ID;
         this.owner = owner;
-        this.amount = amount;
-        this.type = PowerType.BUFF;
+        type = PowerType.BUFF;
 
-        this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
+        region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
+        region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
-        this.name = NAME;
+        name = NAME;
 
-        this.updateDescription();
+        updateDescription();
 
         firstTurn = true;
-        this.canGoNegative = false;
+        canGoNegative = false;
     }
 
     //This is used instead of onAfterUseCard so that cards like Streamline, when used at 1-cost, will not trigger this effect
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!(card instanceof AbstractBossCard) && (card.freeToPlayOnce || card.costForTurn <= 0)) {
+        if (amount > 0) {
+            if (!(card instanceof AbstractBossCard) && (card.freeToPlayOnce || card.costForTurn <= 0) && card.cost != -1 && !card.purgeOnUse) {
 
-                this.flashWithoutSound();
+                flashWithoutSound();
+                amount--;
                 // CardCrawlGame.sound.playA("POWER_TIME_WARP", 0.25F);
                 // AbstractDungeon.topLevelEffectsQueue.add(new TimeWarpTurnEndEffect());
-            addToBot(new VFXAction(new ThrowDaggerEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY)));
-             addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(this.owner, 4, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+                addToBot(new VFXAction(new ThrowDaggerEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY)));
+                addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(owner, 4, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
 
             }
 
-            //this.updateDescription();
+            //updateDescription();
         }
+    }
 
-
+    @Override
+    public void atStartOfTurn() {
+        super.atStartOfTurn();
+        amount = 2;
+    }
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        description = DESCRIPTIONS[0];
     }
 
 }

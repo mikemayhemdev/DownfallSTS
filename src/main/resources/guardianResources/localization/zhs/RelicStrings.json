@@ -1,6 +1,6 @@
 {
   "Guardian:ModeShifter": {
-    "NAME": "形态转换器",
+    "NAME": "铜制齿轮",
     "FLAVOR": "在你最需要的时候保护你。",
     "DESCRIPTIONS": [
       "你的回合开始时 #yguardianmod:提防 2。"
@@ -10,7 +10,7 @@
     "NAME": "守护者齿轮",
     "FLAVOR": "每3000层更换一次",
     "DESCRIPTIONS": [
-      "替换 #r形态转换器 。每场战斗开始时 进入 #yguardianmod:防御模式 并持续 #b3 回合。"
+      "替换 #r铜制齿轮 。每场战斗开始时 进入 #yguardianmod:防御模式 并持续 #b3 回合。"
     ]
   },
   "Guardian:DefensiveModeMoreBlock": {

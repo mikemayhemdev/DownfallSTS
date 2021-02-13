@@ -1,5 +1,10 @@
 {
-  "Slimebound:BronzeSlime": {
+  "Slimebound:EmptySlimeSlot": {
+    "NAME": "史莱姆栏位",
+    "DESCRIPTION": [
+      "#y分裂 的史莱姆爪牙将进入这个栏位。"
+    ]
+  },"Slimebound:BronzeSlime": {
     "NAME": "青铜史莱姆",
     "DESCRIPTION": [
       "回合开始时造成 #b",

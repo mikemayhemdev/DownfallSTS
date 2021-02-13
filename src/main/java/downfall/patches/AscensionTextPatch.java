@@ -21,6 +21,8 @@ public class AscensionTextPatch {
                 __instance.ascLevelInfoString = uiStrings.TEXT[1];
             } else if (__instance.ascensionLevel == 19) {
                 __instance.ascLevelInfoString = uiStrings.TEXT[0];
+            } else if (__instance.ascensionLevel == 4) {
+                __instance.ascLevelInfoString = uiStrings.TEXT[3];
             }
         }
     }

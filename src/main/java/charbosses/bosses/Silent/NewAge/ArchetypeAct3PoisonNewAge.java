@@ -63,9 +63,9 @@ public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
             switch (turn) {
                 case 0:
                     //Turn 1
-                    addToList(cardsList, new EnNoxiousFumes(), extraUpgrades);
+                    addToList(cardsList, new EnNoxiousFumes());
                     addToList(cardsList, new EnDeadlyPoison(), true);
-                    addToList(cardsList, new EnCripplingCloud(), extraUpgrades);
+                    addToList(cardsList, new EnCripplingCloud());
                     turn++;
                     break;
                 case 1:
@@ -77,7 +77,7 @@ public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
                     break;
                 case 2:
                     //Turn 3
-                    addToList(cardsList, new EnFootwork(), extraUpgrades);
+                    addToList(cardsList, new EnFootwork());
                     addToList(cardsList, new EnBurst());
                     addToList(cardsList, new EnDodgeAndRoll());
                     AbstractBossCard c = new EnDodgeAndRoll();
@@ -88,14 +88,14 @@ public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
                     break;
                 case 3:
                     //Turn 4
-                    addToList(cardsList, new EnBouncingFlask());
+                    addToList(cardsList, new EnBouncingFlask(), extraUpgrades);
                     addToList(cardsList, new EnCatalyst());
                     addToList(cardsList, new EnRegret());
                     turn++;
                     break;
                 case 4:
                     //Turn 4
-                    addToList(cardsList, new EnDeadlyPoison(), extraUpgrades);
+                    addToList(cardsList, new EnDeadlyPoison());
                     addToList(cardsList, new EnPoisonedStab());
                     addToList(cardsList, new EnNoxiousFumes());
                     turn = 0;
@@ -108,7 +108,7 @@ public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
             switch (turn) {
                 case 0:
                     //Turn 4
-                    addToList(cardsList, new EnDeadlyPoison(), extraUpgrades);
+                    addToList(cardsList, new EnDeadlyPoison());
                     addToList(cardsList, new EnPoisonedStab());
                     addToList(cardsList, new EnDeflect(), true);
                     turn++;

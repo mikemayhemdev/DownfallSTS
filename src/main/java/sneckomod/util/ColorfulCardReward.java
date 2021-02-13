@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import downfall.downfallMod;
 import downfall.patches.RewardItemTypeEnumPatch;
 import downfall.util.TextureLoader;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
@@ -18,7 +19,7 @@ public class ColorfulCardReward extends CustomReward {
     public AbstractCard.CardColor myColor;
 
     public ColorfulCardReward(AbstractCard.CardColor myColor) {
-        super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), TEXT[0], RewardItemTypeEnumPatch.COLORFULCARD);
+        super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), TEXT[0] + SneckoMod.getClassFromColor(myColor) + TEXT[1], RewardItemTypeEnumPatch.COLORFULCARD);
         cards.clear();
         this.myColor = myColor;
         cards.addAll(getCards());

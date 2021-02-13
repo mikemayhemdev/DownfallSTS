@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class FindAndReplace extends AbstractBronzeCard {
 
@@ -29,6 +30,7 @@ public class FindAndReplace extends AbstractBronzeCard {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         cardsList.addAll(p.drawPile.group);
         cardsList.addAll(p.discardPile.group);
+        cardsList.sort(Comparator.comparing(o -> o.name));
         atb(new SelectCardsAction(cardsList, 1, EXTENDED_DESCRIPTION[0], (cards) -> {
             if (p.drawPile.contains(cards.get(0))) {
                 p.drawPile.moveToHand(cards.get(0));

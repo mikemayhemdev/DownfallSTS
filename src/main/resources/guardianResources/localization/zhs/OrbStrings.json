@@ -1,4 +1,10 @@
 {
+  "Guardian:EmptyStasisSlot": {
+    "NAME": "凝滞",
+    "DESCRIPTION": [
+      "卡牌被 #y凝滞 时将进入这个栏位。"
+    ]
+  },
   "Guardian:StasisOrb": {
     "NAME": "凝滞: ",
     "DESCRIPTION": [

@@ -102,7 +102,7 @@ public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
                     break;
                 case 5:
                     addToList(cardsList, new EnMetallicize());
-                    addToList(cardsList, new EnGhostlyArmor(), extraUpgrades);
+                    addToList(cardsList, new EnGhostlyArmor());
                     addToList(cardsList, new EnBodySlam());
                     turn = 0;
                     looped = true;
@@ -123,7 +123,7 @@ public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnGhostlyArmor(), extraUpgrades);
+                    addToList(cardsList, new EnGhostlyArmor());
                     addToList(cardsList, new EnEntrench());
                     addToList(cardsList, new EnBodySlam());
                     turn++;

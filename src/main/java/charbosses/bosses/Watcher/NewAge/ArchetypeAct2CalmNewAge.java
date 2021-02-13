@@ -28,7 +28,7 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
     public void addedPreBattle() {
         super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherCripplePower(p, 100), 100));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherCripplePower(p, 120), 100));
 
     }
 
@@ -94,7 +94,7 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
                     c.newPrio = -1;
                     addToList(cardsList, c, extraUpgrades);  //removed
                     addToList(cardsList, new EnTranquility(), true);  //not used
-                    addToList(cardsList, new EnVigilance(), extraUpgrades);
+                    addToList(cardsList, new EnVigilance());
                     turn++;
                     AbstractCharBoss.boss.powerhouseTurn = true;
                     break;
@@ -111,7 +111,7 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
         } else {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnVigilance(), extraUpgrades);
+                    addToList(cardsList, new EnVigilance());
                     addToList(cardsList, new EnConsecrate(), true);
                     addToList(cardsList, new EnDefendPurple(), false);
                     AbstractCharBoss.boss.powerhouseTurn = false;

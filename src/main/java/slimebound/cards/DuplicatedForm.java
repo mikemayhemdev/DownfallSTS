@@ -104,8 +104,7 @@ public class DuplicatedForm extends AbstractSlimeboundCard {
 
         int stack = 1;
         //if (upgraded) stack++;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormEnergyPower(p, p, stack), stack));
-
+        if (upgraded) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormEnergyPower(p, p, stack), stack));
 
         int MaxHPActuallyLost = baseHealthCost;
         if (AbstractDungeon.player.maxHealth <= baseHealthCost) {

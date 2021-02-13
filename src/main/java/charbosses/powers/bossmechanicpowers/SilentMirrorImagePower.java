@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package charbosses.powers.bossmechanicpowers;
 
 import com.megacrit.cardcrawl.core.AbstractCreature;
