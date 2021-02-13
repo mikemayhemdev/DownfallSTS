@@ -232,4 +232,18 @@ public class GremlinMobState {
         }
         return s.toString() + " <" + enslaved.toString() + ">" + "[" + voucher + "]";
     }
+
+    public String getGremlinName(int index) {
+        return GremlinMod.getGremlinOrb(gremlins.get(index)).name;
+    }
+    public int getGremlinHP(int index) {
+        String grem = gremlins.get(index);
+        if (enslaved.contains(grem)) {
+            return -1;
+        }
+        if (gremlinHP.get(index) < 0) {
+            return 0;
+        }
+        return gremlinHP.get(index);
+    }
 }

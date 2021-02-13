@@ -44,6 +44,8 @@ import gremlin.patches.GremlinMobState;
 import gremlin.powers.GremlinPower;
 
 import java.util.ArrayList;
+import java.util.Map;
+import java.util.TreeMap;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.lastCombatMetricKey;
 
@@ -496,6 +498,10 @@ public class GremlinCharacter extends CustomPlayer {
         }
     }
 
+    public boolean isCowering() {
+        return cowering;
+    }
+
     private void cower() {
         trueGameHandSize = gameHandSize;
         gameHandSize = 0;
@@ -580,5 +586,39 @@ public class GremlinCharacter extends CustomPlayer {
     }
     public void healGremlins(int hp){
         mobState.campfireHeal(hp, this.maxHealth);
+    }
+
+    public Map<String, Integer> getAllGremlinHPs() {
+        Map<String, Integer> hpMap = new TreeMap<>();
+        if(this.orbs.isEmpty()) {
+            for (int i = 0; i < 5; i++) {
+                hpMap.put(mobState.getGremlinName(i), mobState.getGremlinHP(i));
+            }
+        } else {
+            for (final String grem : GremlinMod.getGremlinStrings()) {
+                if(grem.equals(this.currentGremlin)) {
+                    hpMap.put(GremlinMod.getGremlinOrb(grem).name, this.currentHealth);
+                } else {
+                    boolean found = false;
+                    for (AbstractOrb orb : this.orbs) {
+                        if (orb instanceof GremlinStandby) {
+                            if (((GremlinStandby)orb).assetFolder.equals(grem)) {
+                                hpMap.put(orb.name, ((GremlinStandby) orb).hp);
+                                found = true;
+                                break;
+                            }
+                        }
+                    }
+                    if(!found) {
+                        if (!mobState.isEnslaved(grem)) {
+                            hpMap.put(GremlinMod.getGremlinOrb(grem).name, 0);
+                        } else {
+                            hpMap.put(GremlinMod.getGremlinOrb(grem).name, -1);
+                        }
+                    }
+                }
+            }
+        }
+        return hpMap;
     }
 }
