@@ -355,7 +355,7 @@
   "Slimebound:TagTeam": {
     "NAME": "搭档",
     "DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:分裂 随机史莱姆。 NL slimeboundmod:命令 !M! 次。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:分裂 随机 slimeboundmod: 专家史莱姆 。 NL slimeboundmod:命令 !M! 次。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:分裂 随机 slimeboundmod:专家史莱姆 。 NL slimeboundmod:命令 !M! 次。"
   },
   "Slimebound:RallyTheTroops": {
     "NAME": "集结部队",
