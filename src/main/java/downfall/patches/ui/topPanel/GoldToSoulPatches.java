@@ -275,6 +275,10 @@ public class GoldToSoulPatches {
 
     private static String filterString(String spireString) {
         String replacementString = spireString;
+        
+        //This is still getting an exception sometimes on the "replacementString = replaceAll" line so that leaves one possibility.
+       if (replacementString == null)
+           return "";
 
         for (ReplaceData data : downfallMod.wordReplacements) {
             for (String phrase : data.KEYS) {
