@@ -186,7 +186,7 @@ public class CharBossSilent extends AbstractCharBoss {
 
             for (AbstractMonster m:AbstractDungeon.getCurrRoom().monsters.monsters){
                 if (m instanceof MirrorImageSilent){
-                    AbstractDungeon.actionManager.addToBottom(new InstantKillAction(m));
+                    m.isDead = true;
                 }
             }
     }
