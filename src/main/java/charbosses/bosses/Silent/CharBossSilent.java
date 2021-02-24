@@ -184,13 +184,11 @@ public class CharBossSilent extends AbstractCharBoss {
 
         downfallMod.saveBossFight(CharBossSilent.ID);
 
-        if (hasPower(MinionPower.POWER_ID)){
             for (AbstractMonster m:AbstractDungeon.getCurrRoom().monsters.monsters){
                 if (m instanceof MirrorImageSilent){
-                    AbstractDungeon.actionManager.addToBottom(new InstantKillAction(m));
+                    m.isDead = true;
                 }
             }
-        }
     }
 
     public static void swapCreature(AbstractCreature p, AbstractCreature m) {

@@ -42,7 +42,7 @@ public class ShopBossPatch {
         ArrayList<AbstractCard> potentialCardsList = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
             if (q.color == CardColorEnumPatch.CardColorPatch.BOSS && q.rarity == rarity && okayToSpawn(q)) {
-                potentialCardsList.add(q);
+                potentialCardsList.add(q.makeCopy());
             }
         }
         return potentialCardsList.get(AbstractDungeon.merchantRng.random(0, potentialCardsList.size() - 1));
