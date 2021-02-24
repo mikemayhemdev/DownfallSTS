@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.relics.Ectoplasm;
 import downfall.cards.curses.*;
 import downfall.downfallMod;
+import downfall.events.HeartEvent;
 import downfall.relics.Hecktoplasm;
 import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.cards.*;
@@ -46,7 +47,17 @@ import theHexaghost.relics.BolsterEngine;
 import theHexaghost.relics.CandleOfCauterizing;
 import theHexaghost.relics.Sixitude;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class BanSharedContentPatch {
+    private static Map<AbstractPlayer.PlayerClass, List<String>>runLockedPotions = new HashMap<>();
+
+    public static void registerRunLockedPotion(AbstractPlayer.PlayerClass playerClass, String potionId) {
+        runLockedPotions.computeIfAbsent(playerClass, _ignore -> new ArrayList<>()).add(potionId);
+    }
 
     @SpirePatch(
             clz = AbstractDungeon.class,
@@ -180,6 +191,15 @@ public class BanSharedContentPatch {
                 PotionHelper.potions.remove(BurnAndBuffPotion.POTION_ID);
                 PotionHelper.potions.remove(WizPotion.POTION_ID);
             }
+            // Ban shared potions from other classes if you haven't played as that class before
+            runLockedPotions.forEach((playerClass, potionIds) ->{
+                // Shared potions will never be banned from their base class
+                if (chosenClass!=playerClass) {
+                    if(!HeartEvent.hasPlayedRun(playerClass)) {
+                        PotionHelper.potions.removeAll(potionIds);
+                    }
+                }
+            });
         }
     }
 }
