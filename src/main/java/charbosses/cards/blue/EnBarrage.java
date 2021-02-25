@@ -34,7 +34,7 @@ public class EnBarrage extends AbstractBossCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new EnemyBarrageAction(p, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL)));
+        this.addToBot(new EnemyBarrageAction(p, new DamageInfo(m, this.damage, DamageInfo.DamageType.NORMAL)));
     }
 
     public void upgrade() {
