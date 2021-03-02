@@ -99,7 +99,7 @@ public class AncientFactory extends AbstractImageEvent {
                         m2.maxHealth = m2.maxHealth / 2;
                         m2.currentHealth = m2.maxHealth;
                         m2.powers.add(new StrengthPower(m2,-3));
-                        AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new AbstractMonster[] { m, m2 });
+                        AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new AbstractMonster[] { m2, m });
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().rewards.add(new DonuBeamReward());
                         AbstractDungeon.getCurrRoom().rewards.add(new DecaBeamReward());
