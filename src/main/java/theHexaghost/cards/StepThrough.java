@@ -21,7 +21,8 @@ public class StepThrough extends AbstractHexaCard {
     public StepThrough() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        tags.add(HexaMod.GHOSTWHEELCARD);
+        this.tags.add(HexaMod.GHOSTWHEELCARD);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
