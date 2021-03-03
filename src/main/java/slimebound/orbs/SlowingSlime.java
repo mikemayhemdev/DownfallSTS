@@ -71,8 +71,10 @@ public class SlowingSlime
 
     public void cleanUpVFX() {
         if(!reskinContent.slimeReskinAnimation){
-        this.stopwatch.finish();
-        this.antennae.finish();
+            if (this.stopwatch != null) {
+                this.stopwatch.finish();
+                this.antennae.finish();
+            }
         }
     }
 
