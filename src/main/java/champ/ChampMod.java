@@ -19,6 +19,7 @@ import champ.relics.*;
 import champ.stances.AbstractChampStance;
 import champ.util.CardFilter;
 import champ.util.CoolVariable;
+import downfall.patches.BanSharedContentPatch;
 import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -272,6 +273,8 @@ public class ChampMod implements
         BaseMod.addPotion(OpenerPotion.class, Color.TEAL, Color.GREEN, Color.FOREST, OpenerPotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
         BaseMod.addPotion(TechPotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, TechPotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
         BaseMod.addPotion(UltimateStancePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, UltimateStancePotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
+
+        BanSharedContentPatch.registerRunLockedPotion(ChampChar.Enums.THE_CHAMP, CounterstrikePotion.POTION_ID);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(CounterstrikePotion.POTION_ID);
