@@ -199,9 +199,13 @@
   },
   "sneckomod:Transmogrify": {
     "NAME": "Transmogrify",
-    "DESCRIPTION": "Lose a random Relic. NL Choose to gain it back, or obtain a random Relic at the same rarity at the end of combat. NL Exhaust.",
+    "DESCRIPTION": "Choose 1 of 2 Relics to lose. NL Obtain a random Relic of the same rarity. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "I have no relicsss to ssswap."
+      "I have no Relicsss to ssswap.",
+      "Choose a Relic to lose.",
+      "Lose ",
+      " and obtain another ",
+      " Relic."
     ]
   },
   "sneckomod:DefensiveFlair": {

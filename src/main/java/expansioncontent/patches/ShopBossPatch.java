@@ -7,6 +7,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.shop.ShopScreen;
 import downfall.patches.EvilModeCharacterSelect;
 import expansioncontent.actions.RandomCardWithTagAction;
@@ -29,11 +30,17 @@ public class ShopBossPatch {
                 int x = colorlessCards.get(0).price;
                 colorlessCards.set(0, getReplacement(colorlessCards.get(0).rarity));
                 colorlessCards.get(0).price = x;
+                for (final AbstractRelic r : AbstractDungeon.player.relics) {
+                    r.onPreviewObtainCard(colorlessCards.get(0));
+                }
             }
             if (AbstractDungeon.merchantRng.randomBoolean()) {
                 int x = colorlessCards.get(1).price;
                 colorlessCards.set(1, getReplacement(colorlessCards.get(1).rarity));
                 colorlessCards.get(1).price = x;
+                for (final AbstractRelic r : AbstractDungeon.player.relics) {
+                    r.onPreviewObtainCard(colorlessCards.get(1));
+                }
             }
         }
     }
