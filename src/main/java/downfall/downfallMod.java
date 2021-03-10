@@ -391,6 +391,7 @@ public class downfallMod implements
         BaseMod.addCard(new Icky());
         BaseMod.addCard(new Aged());
         BaseMod.addCard(new Pride());
+        BaseMod.addCard(new Scatterbrained());
 /*
         BaseMod.addCard(new Slug());
         BaseMod.addCard(new Defend_Crowbot());
