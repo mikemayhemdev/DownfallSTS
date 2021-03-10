@@ -53,7 +53,7 @@ import java.util.List;
 import java.util.Map;
 
 public class BanSharedContentPatch {
-    private static Map<AbstractPlayer.PlayerClass, List<String>>runLockedPotions = new HashMap<>();
+    private static Map<AbstractPlayer.PlayerClass, List<String>> runLockedPotions = new HashMap<>();
 
     public static void registerRunLockedPotion(AbstractPlayer.PlayerClass playerClass, String potionId) {
         runLockedPotions.computeIfAbsent(playerClass, _ignore -> new ArrayList<>()).add(potionId);
