@@ -42,6 +42,23 @@
       "[Deeper] #rAll #rGremlins #rLose #r"
     ]
   },
+  "Gremlin:ScrapOozeReplacement": {
+    "NAME": "Scrap Ooze",
+    "DESCRIPTIONS": [
+      "As you walk into the room you hear a ~gurgling~ and the @grinding@ of metals. It's a #yScrap #yOoze! These funny little slimes always find #ygoodies. Even better, they are too slow and too weak to stop you from taking them! You know the best ways of getting around their spiky acid. Unfortunately, it is slow and takes some #rfocus.",
+      "Careful, careful. You avoid the scrapy bits and and the stabby bits. If only it weren't so #r@boring.@ NL But if you keep at it, you know you'll get a shiny #yrelic...",
+      "#gSuccess! NL After rummaging through the metal and burning acid, you finally grab hold of a #yrelic and yank it out. NL You pull your way out of the ooze clutching your new toy.",
+      "This is way too #rboring. What were you even doing again?",
+      "You decide to leave the area. NL The slime pays no attention, content with its meal."
+    ],
+    "OPTIONS": [
+      "[Reach Carefully] #r",
+      "%: #rBecome #rCursed #r- #rScatterbrained. #g",
+      "%: #gFind #ga #gRelic.",
+      "[Leave]",
+      "[Be Careful] #r"
+    ]
+  },
   "Gremlin:SensoryStone": {
     "OPTIONS": [
       "[Recall] #gAdd #g2 #gColorless #gcards #gto #gyour #gdeck. #rAll #rGremlins #rLose #r",

@@ -18,6 +18,7 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
+import com.megacrit.cardcrawl.events.exordium.ScrapOoze;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -30,6 +31,7 @@ import gremlin.cards.*;
 import gremlin.cards.SharpenBlades;
 import gremlin.characters.GremlinCharacter;
 import gremlin.events.BackToBasicsGremlin;
+import gremlin.events.ScrapOozeGremlins;
 import gremlin.orbs.*;
 import gremlin.patches.AbstractCardEnum;
 import gremlin.patches.BlamageVar;
@@ -437,6 +439,15 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
                 .playerClass(GREMLIN)
                 //Existing Event to Override//
                 .overrideEvent(BackToBasics.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(ScrapOozeGremlins.ID, ScrapOozeGremlins.class) //Event ID//
+                //Event Character//
+                .playerClass(GREMLIN)
+                //Existing Event to Override//
+                .overrideEvent(ScrapOoze.ID)
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());

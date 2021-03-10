@@ -242,8 +242,6 @@ public class HexaMod implements
         BaseMod.addPotion(InfernoChargePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, InfernoChargePotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
         BanSharedContentPatch.registerRunLockedPotion(TheHexaghost.Enums.THE_SPIRIT, SoulburnPotion.POTION_ID);
 
-        BanSharedContentPatch.registerRunLockedPotion(TheHexaghost.Enums.THE_SPIRIT, SoulburnPotion.POTION_ID);
-
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(EctoCoolerPotion.POTION_ID);
             WidePotionsMod.whitelistSimplePotion(SoulburnPotion.POTION_ID);

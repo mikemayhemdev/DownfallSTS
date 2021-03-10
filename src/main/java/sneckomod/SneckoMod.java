@@ -346,8 +346,6 @@ public class SneckoMod implements
         BaseMod.addPotion(OffclassReductionPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, OffclassReductionPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
         BanSharedContentPatch.registerRunLockedPotion(TheSnecko.Enums.THE_SNECKO, MuddlingPotion.POTION_ID);
 
-        BanSharedContentPatch.registerRunLockedPotion(TheSnecko.Enums.THE_SNECKO, MuddlingPotion.POTION_ID);
-
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(MuddlingPotion.POTION_ID);
             WidePotionsMod.whitelistSimplePotion(CheatPotion.POTION_ID);
