@@ -54,38 +54,38 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
             switch (turn) {
                 case 0:
                     //Turn 2
-                    addToList(cardsList, new EnWishPlated(), false);
-                    addToList(cardsList, new EnGoodInstincts(), false);
-                    addToList(cardsList, new EnShame(), false);
+                    addToList(cardsList, new EnWishPlated());
+                    addToList(cardsList, new EnGoodInstincts());
+                    addToList(cardsList, new EnShame());
                     turn++;
                     break;
                 case 1:
                     //Turn 2
-                    addToList(cardsList, new EnWaveOfTheHand(), false);
-                    addToList(cardsList, new EnSwivel(), true);
-                    addToList(cardsList, new EnBlind(), false);
+                    addToList(cardsList, new EnWaveOfTheHand());
+                    addToList(cardsList, new EnSwivel());
+                    addToList(cardsList, new EnBlind());
                     turn++;
                     break;
                 case 2:
                     //Turn 3
-                    AbstractBossCard c = new EnSignatureMove();
+                    AbstractBossCard c = new EnSignatureMove(); //Big attack
                     c.freeToPlayOnce = true;
                     c.energyGeneratedIfPlayed = 2;
                     addToList(cardsList, c, extraUpgrades);
-                    addToList(cardsList, new EnConjurBlade(), false);
-                    addToList(cardsList, new EnDeceiveReality(), extraUpgrades);
+                    addToList(cardsList, new EnConjurBlade());
+                    addToList(cardsList, new EnEmptyBody());    //Not played
                     turn++;
                     break;
                 case 3:
                     addToList(cardsList, new EnProtect(), true);
-                    addToList(cardsList, new EnCrushJoints(), false);
-                    addToList(cardsList, new EnNormality(), false);
+                    addToList(cardsList, new EnEmptyFist());    //Exit Divinity
+                    addToList(cardsList, new EnNormality());
                     turn++;
                     break;
                 case 4:
-                    addToList(cardsList, new EnExpunger(), false);
-                    addToList(cardsList, new EnStrikePurple(), false);
-                    addToList(cardsList, new EnDevotion(), false);
+                    addToList(cardsList, new EnExpunger());     //Big Attack
+                    addToList(cardsList, new EnStrikePurple());
+                    addToList(cardsList, new EnDevotion());
                     turn = 0;
                     looped = true;
                     break;
@@ -93,31 +93,31 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
         } else {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnWaveOfTheHand(), false);
+                    addToList(cardsList, new EnWaveOfTheHand());
                     AbstractBossCard c = new EnSwivel();
                     c.energyGeneratedIfPlayed = 1;
                     addToList(cardsList, c, true);
-                    c = new EnCrushJoints();
+                    c = new EnEmptyFist();                      //Exit Divinity
                     c.freeToPlayOnce = true;
                     addToList(cardsList, c, false);
                     turn++;
                     break;
                 case 1:
-                    addToList(cardsList, new EnExpunger(), false);
-                    addToList(cardsList, new EnDeceiveReality(), extraUpgrades);
-                    addToList(cardsList, new EnShame(), false);
+                    addToList(cardsList, new EnExpunger());     //Big Attack
+                    addToList(cardsList, new EnEmptyBody());    //Exit Divinity
+                    addToList(cardsList, new EnShame());
                     turn++;
                     break;
                 case 2:
                     addToList(cardsList, new EnProtect(), true);
-                    addToList(cardsList, new EnStrikePurple(), false);
-                    addToList(cardsList, new EnBlind(), false);
+                    addToList(cardsList, new EnStrikePurple());
+                    addToList(cardsList, new EnBlind());
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnSignatureMove(), false);
-                    addToList(cardsList, new EnGoodInstincts(), false);
-                    addToList(cardsList, new EnNormality(), false);
+                    addToList(cardsList, new EnSignatureMove()); //Big Attack
+                    addToList(cardsList, new EnGoodInstincts());
+                    addToList(cardsList, new EnNormality());
                     turn = 0;
                     break;
             }
