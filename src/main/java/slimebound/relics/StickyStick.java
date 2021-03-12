@@ -28,7 +28,7 @@ public class StickyStick extends CustomRelic {
         return this.DESCRIPTIONS[0];
     }
 
-    public void atBattleStart() {
+    public void atBattleStartPreDraw() {
         this.flash();// 24
         this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EvolvePower(AbstractDungeon.player, 1), 1));// 25
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));// 31
