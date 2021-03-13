@@ -29,7 +29,7 @@ public class ColorfulCardReward extends CustomReward {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         ArrayList<AbstractCard> listOfColoredCards = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
-            if (q.color == myColor) {
+            if (q.color == myColor && q.rarity != AbstractCard.CardRarity.SPECIAL && !q.tags.contains(SneckoMod.BANNEDFORSNECKO)) {
                 listOfColoredCards.add(q);
             }
         }
