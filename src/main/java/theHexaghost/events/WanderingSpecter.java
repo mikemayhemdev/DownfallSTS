@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.*;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
@@ -74,7 +75,7 @@ public class WanderingSpecter extends AbstractImageEvent {
             shopForMore2 = true;
         }
         if (!AbstractDungeon.player.hasRelic(BlueCandle.ID)){
-            this.imageEventText.setDialogOption(OPTIONS[3], new BlueCandle());
+            this.imageEventText.setDialogOption(OPTIONS[3]);
         } else {
             this.imageEventText.setDialogOption(OPTIONS[4]);
         }
@@ -122,8 +123,12 @@ public class WanderingSpecter extends AbstractImageEvent {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[7]);
                         } else {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[6]);
-                            AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), new BlueCandle());// 83
+//                            AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), new BlueCandle());// 83
                             AbstractDungeon.player.damage(new DamageInfo(null, 5, DamageInfo.DamageType.HP_LOSS));
+                            AbstractDungeon.getCurrRoom().rewards.clear();
+                            AbstractDungeon.getCurrRoom().addRelicToRewards(new BlueCandle());
+                            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
+                            AbstractDungeon.combatRewardScreen.open();
                             downfallMod.removeAnyRelicFromPools(BlueCandle.ID);
                         }
                         this.imageEventText.clearAllDialogs();
