@@ -65,6 +65,25 @@
       "[Recall] #gAdd #g3 #gColorless #gcards #gto #gyour #gdeck. #rAll #rGremlins #rLose #r"
     ]
   },
+  "Gremlin:Trenchcoat": {
+    "NAME": "Suspicious Merchant",
+    "DESCRIPTIONS": [
+      "You come across a strange figure that looks suspiciously like five gremlins in a trench coat. NL \"Hello, traveller,\" the squeaky voice calls out. NL \"It is I, the #yfriendly #yMerchant, who is certainly not five gremlins in a trench coat. Would you like to purchase any of my ~fine~ ~wares~ that are definitely not stolen?\"",
+      "You cannot resist a sale, even from one a suspicious as the merchant. NL You make your purchase, but as soon as it is complete, your vendor bolts. NL NL In the distance you can almost make out a faint yell of frustration: #r\"Blasted, #rthieving #rGremlins!\".",
+      "You have no need to enrich the despicable merchant. You will keep your money to yourself. The Merchant flees as soon as it is clear you would not be partaking."
+    ],
+    "OPTIONS": [
+      "[Buy] #rLose #r",
+      " #rGold",
+      ". #gObtain #g1 #grandom #gColorless #gCard.",
+      ". #gObtain #g2 #grandom #gColorless #gCards.",
+      ". #gObtain #g3 #grandom #gColorless #gCards.",
+      "[Leave]",
+      "[Locked] Requires: At least ",
+      " Gold.",
+      "[Refuse]"
+    ]
+  },
   "Gremlin:Vampires": {
     "DESCRIPTIONS": [
       "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~greedy~ ~ones,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~"

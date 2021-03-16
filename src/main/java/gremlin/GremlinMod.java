@@ -31,6 +31,7 @@ import gremlin.cards.*;
 import gremlin.cards.SharpenBlades;
 import gremlin.characters.GremlinCharacter;
 import gremlin.events.BackToBasicsGremlin;
+import gremlin.events.GremlinTrenchcoat;
 import gremlin.events.ScrapOozeGremlins;
 import gremlin.orbs.*;
 import gremlin.patches.AbstractCardEnum;
@@ -51,6 +52,7 @@ import java.util.ArrayList;
 
 import static basemod.BaseMod.addRelic;
 import static basemod.BaseMod.addRelicToCustomPool;
+import static downfall.patches.EvilModeCharacterSelect.evilMode;
 import static gremlin.patches.GremlinEnum.GREMLIN;
 
 
@@ -450,6 +452,15 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
                 .overrideEvent(ScrapOoze.ID)
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(GremlinTrenchcoat.ID, GremlinTrenchcoat.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(() -> evilMode)
+                //Prevent from appearing too early//
+                .bonusCondition(() -> (AbstractDungeon.floorNum > 4))
+                //Event Type//
+                .eventType(EventUtils.EventType.NORMAL)
                 .create());
     }
 

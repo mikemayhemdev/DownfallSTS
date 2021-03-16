@@ -38,7 +38,7 @@
     "NAME": "Gremlin Mask",
     "FLAVOR": "A sign of status among the Gremlin Mobs.",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #yStrength."
+      "Start each combat with #b1 #ytemporary #yStrength."
     ]
   },
   "Gremlin:LeaderVoucher": {
