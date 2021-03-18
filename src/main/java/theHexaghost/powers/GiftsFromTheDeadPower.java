@@ -61,7 +61,7 @@ public class GiftsFromTheDeadPower extends AbstractPower implements CloneablePow
                                 public void update() {
                                     isDone = true;
                                     AbstractDungeon.player.exhaustPile.removeCard(q);
-                                    AbstractDungeon.effectsQueue.add(new ShowCardAndAddToDiscardEffect(q));
+                                    AbstractDungeon.effectsQueue.add(new ShowCardAndAddToDiscardEffect(q.makeSameInstanceOf()));
                                 }
                             });
                         }

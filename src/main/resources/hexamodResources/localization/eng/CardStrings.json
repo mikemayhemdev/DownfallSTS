@@ -181,11 +181,11 @@
   },
   "hexamod:ShadowStrike": {
     "NAME": "Shadow Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "Echo keyword goes here. NL Deal !D! damage. NL Return *Nightmare *Strike from your exhaust pile to your discard pile."
   },
   "hexamod:ShadowGuise": {
     "NAME": "Shadow Guise",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust."
+    "DESCRIPTION": "Echo keyword goes here. NL Gain !B! Block. NL Return *Nightmare *Guise from your exhaust pile to your discard pile."
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "Power from Beyond",

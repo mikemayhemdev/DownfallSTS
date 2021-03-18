@@ -48,7 +48,7 @@ public class HauntingEcho extends AbstractHexaCard {
                             public void update() {
                                 isDone = true;
                                 AbstractDungeon.player.exhaustPile.removeCard(q);
-                                AbstractDungeon.effectsQueue.add(new ShowCardAndAddToDiscardEffect(q));
+                                AbstractDungeon.effectsQueue.add(new ShowCardAndAddToDiscardEffect(q.makeSameInstanceOf()));
                             }
                         });
                     }
