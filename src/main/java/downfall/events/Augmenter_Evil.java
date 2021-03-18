@@ -10,18 +10,15 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Circlet;
 import com.megacrit.cardcrawl.relics.MutagenicStrength;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
-import downfall.monsters.Augmenter;
 import downfall.util.JaxReward;
 import downfall.util.TransformCardReward;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -98,7 +95,7 @@ public class Augmenter_Evil extends AbstractImageEvent {
                     case 3:
                         //SlimeboundMod.logger.info("fight");
 
-                        AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:Augmenter");
+                        AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("downfall:Augmenter");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addGoldToRewards(100);
                         AbstractDungeon.getCurrRoom().addRelicToRewards(new MutagenicStrength());

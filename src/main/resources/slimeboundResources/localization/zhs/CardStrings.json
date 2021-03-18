@@ -25,7 +25,7 @@
   "Slimebound:Replication": {
     "NAME": "复制",
     "DESCRIPTION": "选择一张牌，在抽牌堆顶部中加入它的复制品。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择一张牌，在抽牌堆顶部中加入它的复制品。",
+    "UPGRADE_DESCRIPTION": "选择一张牌，在手牌中加入它的复制品。 NL 消耗 。",
 	"EXTENDED_DESCRIPTION": [
       "选择一张牌复制到手牌。",
       "选择一张牌复制到抽牌堆顶部。"
@@ -355,7 +355,7 @@
   "Slimebound:TagTeam": {
     "NAME": "搭档",
     "DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:分裂 随机史莱姆。 NL slimeboundmod:命令 !M! 次。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:分裂 随机 slimeboundmod: 专家史莱姆 。 NL slimeboundmod:命令 !M! 次。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:分裂 随机 slimeboundmod:专家史莱姆 。 NL slimeboundmod:命令 !M! 次。"
   },
   "Slimebound:RallyTheTroops": {
     "NAME": "集结部队",

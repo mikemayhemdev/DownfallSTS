@@ -31,14 +31,16 @@ public class SilentShivTimeEaterPower extends AbstractBossMechanicPower {
     public static final String NAME;
     public static final String[] DESC;
 
+    public boolean usedThisTurn = false;
+
     public SilentShivTimeEaterPower(AbstractCreature owner) {
-        this.name = NAME;
-        this.ID = POWER_ID;
+        name = NAME;
+        ID = POWER_ID;
         this.owner = owner;
-        this.amount = 0;
-        this.updateDescription();
+        amount = 0;
+        updateDescription();
         loadRegion("curiosity");
-        this.type = PowerType.BUFF;
+        type = PowerType.BUFF;
     }
 
   //  public void playApplyPowerSfx() {
@@ -46,30 +48,41 @@ public class SilentShivTimeEaterPower extends AbstractBossMechanicPower {
   //  }
 
     public void updateDescription() {
-        this.description = DESC[0];
+        description = DESC[0];
     }
 
-    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+    //This is used instead of onAfterUseCard so that cards like Streamline, when used at 1-cost, will not trigger this effect
+    @Override
+    public void onUseCard(AbstractCard card, UseCardAction action) {
+        if (!usedThisTurn){
         if (!(card instanceof AbstractBossCard) && (card.freeToPlayOnce || card.costForTurn == 0) && card.cost != -1 && !card.purgeOnUse) {
-            ++this.amount;
-            if (this.amount == 1) {
-                this.amount = 0;
-                this.flashWithoutSound();
-               // CardCrawlGame.sound.playA("POWER_TIME_WARP", 0.25F);
-               // AbstractDungeon.topLevelEffectsQueue.add(new TimeWarpTurnEndEffect());
-                //this.addToBot(new ApplyPowerAction(this.owner, this.owner, new EnemyAccuracyPower(this.owner, 1), 1));
+            ++amount;
+            if (amount == 1) {
+                amount = 0;
+                flashWithoutSound();
+                usedThisTurn = true;
+                // CardCrawlGame.sound.playA("POWER_TIME_WARP", 0.25F);
+                // AbstractDungeon.topLevelEffectsQueue.add(new TimeWarpTurnEndEffect());
+                //addToBot(new ApplyPowerAction(owner, owner, new EnemyAccuracyPower(owner, 1), 1));
 
                 if (AbstractCharBoss.boss != null) {
                     if (AbstractCharBoss.boss.hand != null) {
                         if (AbstractCharBoss.boss.hand.size() <= 6) {
-                            this.addToBot(new EnemyMakeTempCardInHandAction(new EnShiv(), 1));
+                            addToBot(new EnemyMakeTempCardInHandAction(new EnShiv(), 1));
                         }
                     }
                 }
             }
-
-            //this.updateDescription();
         }
+
+            //updateDescription();
+        }
+    }
+
+    @Override
+    public void atStartOfTurn() {
+        super.atStartOfTurn();
+        usedThisTurn = false;
     }
 
     static {

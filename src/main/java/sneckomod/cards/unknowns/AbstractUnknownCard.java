@@ -147,7 +147,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
             for (int i = 0; i < funkyPredicates.size(); i++) {
                 Predicate<AbstractCard> funkyPredicate = funkyPredicates.get(i);
-                if (funkyPredicate.test(q) && (SneckoMod.pureSneckoMode || SneckoMod.validColors.contains(q.color) || i > 22)) {
+                if (funkyPredicate.test(q) && (SneckoMod.pureSneckoMode || (SneckoMod.validColors.contains(q.color) || (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass != TheSnecko.Enums.THE_SNECKO)) || i >= 22)) {
                     if (validCard) {
                         ArrayList<String> s = funkyLists.get(funkyPredicates.indexOf(funkyPredicate));
                         if (s == null) {
@@ -177,6 +177,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
     public void replaceUnknown() {
         AbstractPlayer p = AbstractDungeon.player;
+        int idx = p.drawPile.group.indexOf(this);
 
         AbstractCard cUnknown;
         if (myList().isEmpty()) {
@@ -190,8 +191,12 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         p.hand.removeCard(this);
         p.drawPile.removeCard(this);
         UnknownExtraUiPatch.parentCard.set(cUnknown, this);
-        AbstractDungeon.player.drawPile.addToRandomSpot(cUnknown);
-
+        if (cUnknown.isInnate) {
+            AbstractDungeon.player.drawPile.addToTop(cUnknown);
+        }
+        else {
+            AbstractDungeon.player.drawPile.group.add(idx, cUnknown);
+        }
     }
 
     public void replaceUnknownFromHand() {

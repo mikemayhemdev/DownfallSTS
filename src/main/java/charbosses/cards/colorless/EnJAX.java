@@ -25,6 +25,7 @@ public class EnJAX extends AbstractBossCard {
         super(ID, EnJAX.cardStrings.NAME, "colorless/skill/jax", 0, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
+        strengthGeneratedIfPlayed = magicNumber;
         this.tags.add(CardTags.HEALING);
         this.tags.add(downfallMod.CHARBOSS_SETUP);
     }
@@ -40,6 +41,7 @@ public class EnJAX extends AbstractBossCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeMagicNumber(1);
+            strengthGeneratedIfPlayed++;
         }
 
     }

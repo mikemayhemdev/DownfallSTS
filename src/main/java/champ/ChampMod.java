@@ -14,13 +14,12 @@ import champ.potions.OpenerPotion;
 import champ.potions.TechPotion;
 import champ.potions.UltimateStancePotion;
 import champ.powers.CounterPower;
-
 import champ.powers.ResolvePower;
 import champ.relics.*;
 import champ.stances.AbstractChampStance;
 import champ.util.CardFilter;
 import champ.util.CoolVariable;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+import downfall.patches.BanSharedContentPatch;
 import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -275,6 +274,8 @@ public class ChampMod implements
         BaseMod.addPotion(TechPotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, TechPotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
         BaseMod.addPotion(UltimateStancePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, UltimateStancePotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
 
+        BanSharedContentPatch.registerRunLockedPotion(ChampChar.Enums.THE_CHAMP, CounterstrikePotion.POTION_ID);
+
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(CounterstrikePotion.POTION_ID);
             WidePotionsMod.whitelistSimplePotion(OpenerPotion.POTION_ID);
@@ -299,16 +300,16 @@ public class ChampMod implements
 
         downfallMod.registerUnlockSuite(
                 BerserkerStyle.ID,
-                GladiatorStyle.ID,
+                ViciousMockery.ID,
                 DefensiveStyle.ID,
+
+                RageSigil.ID,
+                ShieldSigil.ID,
+                SwordSigil.ID,
 
                 EnchantShield.ID,
                 EnchantSword.ID,
                 EnchantCrown.ID,
-
-                DeathBlow.ID,
-                IgnorePain.ID,
-                LastStand.ID,
 
                 SignatureFinisher.ID,
                 PowerArmor.ID,
@@ -463,7 +464,7 @@ public class ChampMod implements
     public int receiveOnPlayerLoseBlock(int i) {
         if (AbstractDungeon.player.hasRelic(DeflectingBracers.ID)) {
             AbstractDungeon.player.getRelic(DeflectingBracers.ID).flash();
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(AbstractDungeon.player.currentBlock), AbstractDungeon.player.currentBlock));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(i), i));
         }
         return i;
     }
@@ -496,24 +497,6 @@ public class ChampMod implements
         }
     }
 
-    public static void vigor(int begone) {
-
-        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                int x = begone;
-                if (AbstractDungeon.player.hasRelic(PowerArmor.ID) && AbstractDungeon.player.hasPower(VigorPower.POWER_ID)) {
-                    if (x + AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount > PowerArmor.CAP_RESOLVE_ETC) {
-                        x = PowerArmor.CAP_RESOLVE_ETC - AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount;
-                    }
-                }
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, x), x));
-            }
-        });
-
-    }
-
     public static int fatigue(int begone) {
 
         int y = AbstractDungeon.player.currentHealth;
@@ -522,6 +505,11 @@ public class ChampMod implements
             public void update() {
                 isDone = true;
                 int x = Math.min(begone, AbstractDungeon.player.currentHealth - 1);
+                if (AbstractDungeon.player.hasRelic(PowerArmor.ID) && AbstractDungeon.player.hasPower(ResolvePower.POWER_ID)) {
+                    if (x + AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount > PowerArmor.CAP_RESOLVE_ETC) {
+                        x = PowerArmor.CAP_RESOLVE_ETC - AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount;
+                    }
+                }
                 AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(x), x));
                 AbstractDungeon.actionManager.addToTop(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, x));
             }
@@ -541,4 +529,3 @@ public class ChampMod implements
         return Math.min(begone, AbstractDungeon.player.currentHealth - 1);
     }
 }
-

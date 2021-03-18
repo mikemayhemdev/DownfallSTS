@@ -93,7 +93,7 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
                     //Turn 4
                     addToList(cardsList, new EnFootwork()); //Removed
                     addToList(cardsList, new EnLegSweep()); //Removed
-                    addToList(cardsList, new EnRiddleWithHoles(), extraUpgrades);  //Not played here
+                    addToList(cardsList, new EnRiddleWithHoles());  //Not played here
                     turn = 0;
                     looped = true;
                     break;
@@ -122,7 +122,7 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
                     break;
                 case 3:
                     addToList(cardsList, new EnLegSweep()); //Removed
-                    addToList(cardsList, new EnRiddleWithHoles(), extraUpgrades);  //Not played here
+                    addToList(cardsList, new EnRiddleWithHoles());  //Not played here
                     addToList(cardsList, new EnBlur());
                     turn = 0;
                     break;

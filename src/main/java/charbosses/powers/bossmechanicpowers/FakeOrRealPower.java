@@ -10,6 +10,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.InvisiblePower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -53,9 +54,7 @@ public class FakeOrRealPower extends AbstractPower implements CloneablePowerInte
         if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner) {
             for (AbstractMonster q : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 if (q instanceof MirrorImageSilent) {
-                    q.currentHealth = 0;
-                    q.healthBarUpdatedEvent();
-                    q.damage(new DamageInfo((AbstractCreature) null, 0, DamageInfo.DamageType.HP_LOSS));
+                    q.isDead = true;
                     AbstractDungeon.effectList.add(new SmallerSmokeBombEffect(q.hb.cX, q.hb.cY));
                 }
                 addToTop(new RemoveSpecificPowerAction(q, q, this.ID));

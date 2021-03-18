@@ -89,17 +89,17 @@
   "champ:StrikeOfGeniusPower": {
     "NAME": "Strike of Genius",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a random card that Enters a Stance to your hand. It costs #b0 until played and Exhausts.",
+      "At the start of your turn, add a random card containing \"Strike\" to your hand. It costs #b0 until played and Exhausts.",
       "At the start of your turn, add #b",
-      " random cards that Enter a Stance to your hand. They cost #b0 until played and Exhausts."
+      " random cards containing \"Strike\" to your hand. They cost #b0 until played and Exhaust."
     ]
   },
   "champ:StrikeOfGeniusUpgradedPower": {
     "NAME": "Strike of Genius+",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a random #yupgraded card that Enters a Stance to your hand. It costs #b0 until played.",
+      "At the start of your turn, add a random #yupgraded card containing \"Strike\" to your hand. It costs #b0 until played and Exhausts.",
       "At the start of your turn, add #b",
-      " random #yupgraded cards that Enter a Stance to your hand. They cost #b0 until played."
+      " random #yupgraded cards containing \"Strike\" to your hand. They cost #b0 until played and Exhaust."
     ]
   },
   "champ:DefensiveStylePower": {

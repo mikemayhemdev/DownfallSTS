@@ -16,6 +16,7 @@ public class SkipABeat extends AbstractHexaCard {
     public SkipABeat() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         tags.add(HexaMod.GHOSTWHEELCARD);
+        exhaust = true;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 

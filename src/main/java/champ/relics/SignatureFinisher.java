@@ -5,21 +5,15 @@ import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
 import champ.ChampMod;
 import champ.patches.SignatureMovePatch;
-import champ.stances.AbstractChampStance;
-import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.stances.NeutralStance;
-import downfall.dailymods.ChampStances;
+import downfall.util.TextureLoader;
 
 import java.util.function.Predicate;
 
@@ -62,6 +56,9 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
             if (card != null) {
                 SignatureMovePatch.inSignatureMove.set(card, true);
                 setDescriptionAfterLoading();
+                card.cost = 0;
+                card.costForTurn = 0;
+                card.isCostModified = true;
             }
         }
     }
@@ -105,6 +102,9 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
         if (!cardSelected && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             cardSelected = true;
             card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            card.cost = 0;
+            card.costForTurn = 0;
+            card.isCostModified = true;
             SignatureMovePatch.inSignatureMove.set(card, true);
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
 

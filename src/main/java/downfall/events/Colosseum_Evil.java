@@ -73,7 +73,7 @@ public class Colosseum_Evil extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2] + DESCRIPTIONS[4]);
                         //SlimeboundMod.logger.info("fight");
                         downfallMod.overrideBossDifficulty = true;
-                        String s = downfallMod.possEncounterList.get(AbstractDungeon.cardRandomRng.random(downfallMod.possEncounterList.size()-1));
+                        String s = downfallMod.possEncounterList.remove(AbstractDungeon.cardRandomRng.random(downfallMod.possEncounterList.size()-1));
                         switch (s) {
                             case "downfall:Ironclad":
                                 AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossIronclad.ID);

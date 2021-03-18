@@ -8,7 +8,7 @@
   },
   "expansioncontent:Hexaburn": {
     "NAME": "幽灵地狱",
-    "DESCRIPTION": "expansioncontent:首领 - 六火亡魂。 NL 在 !M! 回合后，对随机一名敌人造成6点伤害6次。 NL 消耗 。"
+    "DESCRIPTION": "expansioncontent:首领 - 六火亡魂。 NL 在 !M! 回合后，对随机一名敌人造成 !D! 点伤害6次。 NL 消耗 。"
   },
    "expansioncontent:InvincibleStrength": {
     "NAME": "坚不可摧",

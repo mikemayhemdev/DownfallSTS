@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
+import sneckomod.SneckoMod;
 import sneckomod.cards.AbstractSneckoCard;
 
 public class NoApplyRandomDamageAction extends AbstractGameAction {
@@ -19,7 +20,7 @@ public class NoApplyRandomDamageAction extends AbstractGameAction {
     private AbstractSneckoCard source;
     private int dmg;
 
-    public NoApplyRandomDamageAction(AbstractCreature target, int min, int max, int numTimes, AttackEffect fx, AbstractSneckoCard source) {
+    public NoApplyRandomDamageAction(AbstractCreature target, int min, int max, int numTimes, AttackEffect fx, AbstractSneckoCard source, DamageInfo.DamageType type) {
         if (min > max) {
             this.min = max;
             this.max = min;
@@ -29,12 +30,12 @@ public class NoApplyRandomDamageAction extends AbstractGameAction {
         }
 
         if (this.max != this.min) {
-            dmg = AbstractDungeon.miscRng.random(min, max);
+            dmg = AbstractSneckoCard.getRandomNum(min, max, source);
         } else {
             dmg = this.max;
         }
         this.source = source;
-        this.info = new DamageInfo(AbstractDungeon.player, dmg);
+        this.info = new DamageInfo(AbstractDungeon.player, dmg, type);
         this.target = target;
         this.actionType = ActionType.DAMAGE;
         this.attackEffect = fx;
@@ -98,7 +99,8 @@ public class NoApplyRandomDamageAction extends AbstractGameAction {
                                 max,
                                 this.numTimes,
                                 attackEffect,
-                                source
+                                source,
+                                info.type
                         )
                 );
             }

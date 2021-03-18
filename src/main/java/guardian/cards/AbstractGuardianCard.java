@@ -481,7 +481,7 @@ public abstract class AbstractGuardianCard extends CustomCard {
     @Override
     public void render(SpriteBatch sb) {
         super.render(sb);
-        if (socketCount > 0) {
+        if (socketCount > 0 && !isFlipped) {
             Texture socketTexture = null;
             for (int i = 0; i < socketCount; i++) {
 

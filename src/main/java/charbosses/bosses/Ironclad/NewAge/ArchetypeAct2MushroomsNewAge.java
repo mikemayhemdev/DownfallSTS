@@ -73,11 +73,11 @@ public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
                 case 1:
                     addToList(cardsList, new EnSummonMushrooms());
                     addToList(cardsList, new EnGhostlyArmor(), true);
-                    addToList(cardsList, new EnHemokinesis(), extraUpgrades);
+                    addToList(cardsList, new EnHemokinesis());
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnReaper(), extraUpgrades);
+                    addToList(cardsList, new EnReaper());
                     addToList(cardsList, new EnDefendRed());
                     addToList(cardsList, new EnHaunted());
                     turn++;
@@ -107,7 +107,7 @@ public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
                 case 0:
                     addToList(cardsList, new EnBloodletting());
                     addToList(cardsList, new EnHeavyBlade());
-                    addToList(cardsList, new EnReaper(), extraUpgrades);
+                    addToList(cardsList, new EnReaper());
                     turn++;
                     break;
                 case 1:
@@ -124,7 +124,7 @@ public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
                     break;
                 case 3:
                     addToList(cardsList, new EnSummonMushrooms());
-                    addToList(cardsList, new EnHemokinesis(), extraUpgrades);
+                    addToList(cardsList, new EnHemokinesis());
                     addToList(cardsList, new EnHeadbutt());
                     turn=0;
                     break;

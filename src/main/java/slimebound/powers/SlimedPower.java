@@ -108,7 +108,7 @@ public class SlimedPower extends AbstractPower {
 
 
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.type == DamageInfo.DamageType.NORMAL) {
+        if (info.type == DamageInfo.DamageType.NORMAL && info.owner == AbstractDungeon.player) {
             if (AbstractDungeon.player.hasRelic(AbsorbEndCombat.ID)) {
                 AbstractDungeon.player.getRelic(AbsorbEndCombat.ID).onTrigger();
             }

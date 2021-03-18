@@ -141,7 +141,7 @@ public class SensoryStone_Evil extends AbstractImageEvent {
         AbstractDungeon.getCurrRoom().rewards.clear();
 
         for(int i = 0; i < num; ++i) {
-            AbstractDungeon.getCurrRoom().addCardReward(new BossCardReward(CardColor.COLORLESS));
+            AbstractDungeon.getCurrRoom().addCardReward(new BossCardReward());
         }
 
         AbstractDungeon.getCurrRoom().phase = RoomPhase.COMPLETE;

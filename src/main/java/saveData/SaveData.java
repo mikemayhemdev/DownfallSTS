@@ -4,25 +4,18 @@ import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.map.MapRoomNode;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
-import com.megacrit.cardcrawl.rooms.ShopRoom;
 import com.megacrit.cardcrawl.saveAndContinue.SaveAndContinue;
 import com.megacrit.cardcrawl.saveAndContinue.SaveFile;
-import com.megacrit.cardcrawl.ui.buttons.ProceedButton;
 import downfall.downfallMod;
 import downfall.events.Cleric_Evil;
-import downfall.events.WomanInBlue_Evil;
 import downfall.monsters.FleeingMerchant;
 import downfall.monsters.NeowBossFinal;
-import downfall.patches.EndingDoubleFightPatch;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.relics.BrokenWingStatue;
-import downfall.rooms.HeartShopRoom;
 import javassist.CtBehavior;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -77,7 +70,7 @@ public class SaveData {
     private static String act2BossSlain;
     private static String act3BossSlain;
 
-    private static ArrayList<AbstractCard.CardColor> validColors;
+    private static ArrayList<AbstractCard.CardColor> saveCacheColors;
 
     //Save data whenever SaveFile is constructed
     @SpirePatch(
@@ -115,7 +108,7 @@ public class SaveData {
             System.out.println(act2BossSlain);
             System.out.println(act3BossSlain);
 
-            validColors = SneckoMod.validColors;
+            saveCacheColors = SneckoMod.validColors;
 
             saveLogger.info("Saved Evil Mode: " + evilMode);
         }
@@ -148,7 +141,7 @@ public class SaveData {
             params.put(ACT_1_BOSS_SLAIN, act1BossSlain);
             params.put(ACT_2_BOSS_SLAIN, act2BossSlain);
             params.put(ACT_3_BOSS_SLAIN, act3BossSlain);
-            params.put(VALID_COLORS, validColors);
+            params.put(VALID_COLORS, saveCacheColors);
         }
 
         private static class Locator extends SpireInsertLocator {
@@ -198,7 +191,7 @@ public class SaveData {
                 act2BossSlain = data.ACT_2_BOSS_SLAIN;
                 act3BossSlain = data.ACT_3_BOSS_SLAIN;
 
-                validColors = data.VALID_COLORS;
+                saveCacheColors = data.VALID_COLORS;
 
                 saveLogger.info("Loaded downfall save data successfully.");
             } catch (Exception e) {
@@ -259,7 +252,7 @@ public class SaveData {
             downfallMod.Act2BossFaced = act2BossSlain;
             downfallMod.Act3BossFaced = act3BossSlain;
 
-            SneckoMod.validColors = validColors;
+            SneckoMod.validColors = saveCacheColors;
             SneckoMod.updateAllUnknownReplacements();
 
             saveLogger.info("Save loaded.");

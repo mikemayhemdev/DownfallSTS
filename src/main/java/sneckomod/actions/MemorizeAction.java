@@ -60,16 +60,17 @@ public class MemorizeAction extends AbstractGameAction {
 
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {// 87
             for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
-
-                AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(c.makeCopy(), (float) Settings.WIDTH * .75F, (float) Settings.HEIGHT / 2.0F));
-
+                AbstractCard c3 = c.makeCopy();
                 for (AbstractCard c2 : p.masterDeck.group) {
                     if (c2.uuid == UnknownExtraUiPatch.parentCard.get(c).uuid) {
+                        if (c2.upgraded) c3.upgrade();
                         p.masterDeck.removeCard(c2);
                         break;
                     }
                 }
 
+
+                AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(c3, (float) Settings.WIDTH * .75F, (float) Settings.HEIGHT / 2.0F));
 
                     AbstractDungeon.topLevelEffects.add(new com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect(
 

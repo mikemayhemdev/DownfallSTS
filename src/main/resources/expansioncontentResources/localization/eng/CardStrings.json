@@ -8,7 +8,7 @@
   },
   "expansioncontent:Hexaburn": {
     "NAME": "Hexaburn",
-    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL In !M! turns, deal 6 damage to a random enemy 6 times."
+    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL In !M! turns, deal !D! damage to a random enemy 6 times. NL Scales with Strength."
   },
   "expansioncontent:InvincibleStrength": {
     "NAME": "Invincible",

@@ -7,21 +7,11 @@ package charbosses.powers.bossmechanicpowers;
 
 import charbosses.actions.unique.EnemyChangeStanceAction;
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Watcher.CharBossWatcher;
-import charbosses.stances.EnDivinityStance;
 import charbosses.stances.EnWrathStance;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.GainStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.stances.NeutralStance;
-import slimebound.SlimeboundMod;
 
 public class WatcherAngryPower extends AbstractBossMechanicPower {
     public static final String POWER_ID = "downfall:WatcherAngryPower";
@@ -46,11 +36,24 @@ public class WatcherAngryPower extends AbstractBossMechanicPower {
     @Override
     public void atEndOfRound() {
         super.atEndOfRound();
-        if (!active && owner.currentHealth <= owner.maxHealth/2) {
+        if (!active && owner.currentHealth <= owner.maxHealth / 2) {
 
             this.addToBot(new EnemyChangeStanceAction(EnWrathStance.STANCE_ID));
             active = true;
         }
+    }
+
+    @Override
+    public float atDamageReceive(float damage, DamageInfo.DamageType damageType) {
+
+        if (damage > 1.0F) {
+            if (this.owner instanceof AbstractCharBoss) {
+                if (AbstractCharBoss.boss.stance instanceof EnWrathStance) {
+                    return damage * 1.5F;
+                }
+            }
+        }
+        return damage;
     }
 
 

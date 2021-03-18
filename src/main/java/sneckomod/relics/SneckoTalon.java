@@ -5,8 +5,8 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import sneckomod.SneckoMod;
 import downfall.util.TextureLoader;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
@@ -28,13 +28,15 @@ public class SneckoTalon extends CustomRelic {
                 isDone = true;
                 int x = 0;
                 for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                    if (q.costForTurn > x)
-                        x = q.costForTurn;
+                    if (!q.freeToPlay())
+                        if (q.costForTurn > x)
+                            x = q.costForTurn;
                 }
                 ArrayList<AbstractCard> possCardsList = new ArrayList<>();
                 for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                    if (q.costForTurn == x)
-                        possCardsList.add(q);
+                    if (!q.freeToPlay())
+                        if (q.costForTurn == x)
+                            possCardsList.add(q);
                 }
                 if (!possCardsList.isEmpty()) {
                     flash();

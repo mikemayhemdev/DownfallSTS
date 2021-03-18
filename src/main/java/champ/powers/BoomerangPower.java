@@ -1,5 +1,6 @@
 package champ.powers;
 
+import basemod.BaseMod;
 import basemod.helpers.VfxBuilder;
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
@@ -58,7 +59,9 @@ public class BoomerangPower extends AbstractPower implements CloneablePowerInter
                         @Override
                         public void update() {
                             isDone = true;
-                            AbstractDungeon.player.drawPile.moveToHand(stored);
+                            if (AbstractDungeon.player.hand.size() != BaseMod.MAX_HAND_SIZE) {
+                                AbstractDungeon.player.drawPile.moveToHand(stored);
+                            }
                         }
                     });
                 } else if (AbstractDungeon.player.discardPile.contains(stored)) {
@@ -66,7 +69,9 @@ public class BoomerangPower extends AbstractPower implements CloneablePowerInter
                         @Override
                         public void update() {
                             isDone = true;
-                            AbstractDungeon.player.discardPile.moveToHand(stored);
+                            if (AbstractDungeon.player.hand.size() != BaseMod.MAX_HAND_SIZE) {
+                                AbstractDungeon.player.discardPile.moveToHand(stored);
+                            }
                         }
                     });
                 } else if (AbstractDungeon.player.exhaustPile.contains(stored)) {
@@ -74,7 +79,9 @@ public class BoomerangPower extends AbstractPower implements CloneablePowerInter
                         @Override
                         public void update() {
                             isDone = true;
-                            AbstractDungeon.player.exhaustPile.moveToHand(stored);
+                            if (AbstractDungeon.player.hand.size() != BaseMod.MAX_HAND_SIZE) {
+                                AbstractDungeon.player.exhaustPile.moveToHand(stored);
+                            }
                         }
                     });
                 }

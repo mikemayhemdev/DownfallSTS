@@ -19,7 +19,7 @@ public class CouncilsJustice extends AbstractHexaCard {
     public CouncilsJustice() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = DAMAGE;
-        baseMagicNumber = 3;
+        baseMagicNumber = magicNumber = 3;
         exhaust = true;
         isEthereal = true;
         cardsToPreview = new Apparition();

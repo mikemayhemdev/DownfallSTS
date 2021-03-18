@@ -55,9 +55,6 @@ public class ArmoredProtocol extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArmoredProtocolPower(p, magicNumber)));
-        if (p.stance instanceof DefensiveMode) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MetallicizePower(p, magicNumber), magicNumber));
-        }
         brace(10);
     }
 

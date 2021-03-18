@@ -94,11 +94,11 @@
       "#yStatus cards may now be played for useful effects."
     ]
   },
-  "bronze:VexRelic": {
+  "bronze:AnalyticalCore": {
     "NAME": "Paradox Artifact",
-    "FLAVOR": "You've never seen a stress test like this before.",
+    "FLAVOR": "You've never seen a coding frenzy like this before.",
     "DESCRIPTIONS": [
-      "At the start of combat, #yCompile a random #yFunction. Give it #yRetain."
+      "At the start of each turn, add a random card with Encode to your hand and give it Ethereal."
     ]
   }
 }

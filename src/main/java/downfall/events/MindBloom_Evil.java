@@ -25,6 +25,7 @@ import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import downfall.downfallMod;
 import downfall.monsters.SneckoMirror;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.relics.HeartBlessingBlue;
@@ -55,7 +56,7 @@ public class MindBloom_Evil extends AbstractImageEvent {
         super(NAME, DESCRIPTIONSALT[0], "images/events/mindBloom.jpg");
         this.screen = CurScreen.INTRO;
 
-        if (AbstractDungeon.player instanceof SlimeboundCharacter || AbstractDungeon.player instanceof TheHexaghost || AbstractDungeon.player instanceof GuardianCharacter || AbstractDungeon.player instanceof TheSnecko || AbstractDungeon.player instanceof ChampChar || AbstractDungeon.player instanceof AutomatonChar){
+        if (downfallMod.isDownfallCharacter(AbstractDungeon.player)){
             this.imageEventText.setDialogOption(OPTIONSALT[0]);
         } else {
             this.imageEventText.setDialogOption(OPTIONS[0]);   //original Mind Bloom if you are not a villain

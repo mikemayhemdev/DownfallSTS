@@ -520,7 +520,7 @@
   },
   "bronze:Hardcode": {
     "NAME": "Hardcode",
-    "DESCRIPTION": "Fleeting. NL The next Function you create goes into your deck permanently instead of your hand."
+    "DESCRIPTION": "Next time you create a Function, add it to your deck. NL Remove the cards used to create it (including this)."
   },
   "bronze:SpaghettiCode": {
     "NAME": "Spaghetti Code",
@@ -591,9 +591,9 @@
     "DESCRIPTION": "Scry !M!. NL Exhaust all cards discarded. NL Gain !B! Block for each Status card exhausted."
   },
   "bronze:Turbo": {
-    "NAME": "Turbo 2.0",
-    "DESCRIPTION": "Gain [E] [E] . NL bronze:Insert a *Void.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain [E] [E] . NL bronze:Insert a *Void."
+    "NAME": "Turbo",
+    "DESCRIPTION": "Gain [E] [E] . NL Add a *Void into your discard pile.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E]. NL Add a *Void into your discard pile."
   },
   "bronze:BugBarrage": {
     "NAME": "Bug Barrage",

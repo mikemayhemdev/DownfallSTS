@@ -103,7 +103,7 @@ public class TombRedMask_Evil extends AbstractImageEvent {
                 } else {
                     this.imageEventText.clearAllDialogs();
                     this.imageEventText.setDialogOption(OPTIONS[5]);
-                    if (this.MaskTaken) {
+                    if (!this.MaskTaken) {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                     } else {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[4]);

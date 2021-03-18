@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
+import sneckomod.cards.AbstractSneckoCard;
 
 public class RandomDamageAction extends AbstractGameAction {
 
@@ -28,7 +29,7 @@ public class RandomDamageAction extends AbstractGameAction {
         }
 
         if (this.max != this.min) {
-            dmg = AbstractDungeon.miscRng.random(min, max);
+            dmg = AbstractSneckoCard.getRandomNum(min, max);
         } else {
             dmg = this.max;
         }

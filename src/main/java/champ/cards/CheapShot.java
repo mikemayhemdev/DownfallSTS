@@ -1,6 +1,7 @@
 package champ.cards;
 
 import champ.ChampMod;
+import charbosses.bosses.Merchant.CharBossMerchant;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -28,7 +29,7 @@ public class CheapShot extends AbstractChampCard {
         atb(new VFXAction(new WallopEffect(30, m.hb.cX, m.hb.cY)));
 
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        if (m.type != AbstractMonster.EnemyType.BOSS) {
+        if (m.type != AbstractMonster.EnemyType.BOSS || m instanceof CharBossMerchant) {
             atb(new StunMonsterAction(m, p));
         } else {
             dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);

@@ -153,8 +153,8 @@
   },
   "Guardian:PackageSentry": {
     "NAME": "Package: Sentry",
-    "DESCRIPTION": "Add a *Sentry *Blast and two *Sentry *Waves to your hand and reduce their costs by 1 this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a *Sentry *Blast+ and two *Sentry *Waves+ to your hand and reduce their costs by 1 this combat. NL Exhaust."
+    "DESCRIPTION": "Add a *Sentry *Blast and two *Sentry *Waves to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Sentry *Blast+ and two *Sentry *Waves+ to your hand and Upgrade them. NL Exhaust."
   },
   "Guardian:PackageWalker": {
     "NAME": "Package: Orbwalker",

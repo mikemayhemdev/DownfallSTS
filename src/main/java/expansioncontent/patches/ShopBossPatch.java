@@ -7,6 +7,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.shop.ShopScreen;
 import downfall.patches.EvilModeCharacterSelect;
 import expansioncontent.actions.RandomCardWithTagAction;
@@ -29,11 +30,17 @@ public class ShopBossPatch {
                 int x = colorlessCards.get(0).price;
                 colorlessCards.set(0, getReplacement(colorlessCards.get(0).rarity));
                 colorlessCards.get(0).price = x;
+                for (final AbstractRelic r : AbstractDungeon.player.relics) {
+                    r.onPreviewObtainCard(colorlessCards.get(0));
+                }
             }
             if (AbstractDungeon.merchantRng.randomBoolean()) {
                 int x = colorlessCards.get(1).price;
                 colorlessCards.set(1, getReplacement(colorlessCards.get(1).rarity));
                 colorlessCards.get(1).price = x;
+                for (final AbstractRelic r : AbstractDungeon.player.relics) {
+                    r.onPreviewObtainCard(colorlessCards.get(1));
+                }
             }
         }
     }
@@ -42,13 +49,15 @@ public class ShopBossPatch {
         ArrayList<AbstractCard> potentialCardsList = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
             if (q.color == CardColorEnumPatch.CardColorPatch.BOSS && q.rarity == rarity && okayToSpawn(q)) {
-                potentialCardsList.add(q);
+                potentialCardsList.add(q.makeCopy());
             }
         }
         return potentialCardsList.get(AbstractDungeon.merchantRng.random(0, potentialCardsList.size() - 1));
     }
 
-    private static boolean okayToSpawn(AbstractCard q) {
+    public static boolean okayToSpawn(AbstractCard q) {
+        if (q.rarity == AbstractCard.CardRarity.SPECIAL) return false;
+
         if (AbstractDungeon.player instanceof SlimeboundCharacter) {
             if (q.cardID.equals(PrepareCrush.ID)) {
                 return false;
@@ -64,7 +73,7 @@ public class ShopBossPatch {
             if (q.cardID.equals(LastStand.ID)) return false;
         }
         if (AbstractDungeon.player instanceof AutomatonChar || RandomCardWithTagAction.autoLocked()) {
-            if (q.cardID.equals(HyperBeam.ID)) return false;
+            return !q.cardID.equals(HyperBeam.ID);
         }
         return true;
     }

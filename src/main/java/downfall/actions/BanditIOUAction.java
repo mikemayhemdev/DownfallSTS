@@ -10,10 +10,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.BufferPower;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import downfall.vfx.BanditIOUEffect;
-import slimebound.SlimeboundMod;
 
 import java.util.Collections;
 
@@ -44,10 +44,18 @@ public class BanditIOUAction extends AbstractGameAction {
         this.m = m;
 
         //if (m == null) //SlimeboundMod.logger.info("Bandit Cutscene has a null monster!!");
-            this.duration = 13F;
+        this.duration = 13F;
     }
 
-    public void dealDamage(int damage){
+    public void dealDamage(int damage) {
+        if (m.hasPower(BufferPower.POWER_ID)) {
+            m.getPower(BufferPower.POWER_ID).flash();
+            m.getPower(BufferPower.POWER_ID).amount--;
+            if (m.getPower(BufferPower.POWER_ID).amount <= 0) {
+                m.powers.remove(m.getPower(BufferPower.POWER_ID));
+            }
+            return;
+        }
         //SlimeboundMod.logger.info("Deal damage hit");
         if (!m.isDeadOrEscaped()) {
             ////SlimeboundMod.logger.info("Deal damage hitting:" + m.name);
@@ -58,27 +66,27 @@ public class BanditIOUAction extends AbstractGameAction {
             m.damage(info);
         }
 
-        if (currentPower != null){
+        if (currentPower != null) {
             applyPower();
             currentPower = null;
         }
 
-        if (screenshake = true){
+        if (screenshake = true) {
             screenshake = false;
             CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, true);
         }
     }
 
-    public void playEffect(AbstractGameEffect effect){
+    public void playEffect(AbstractGameEffect effect) {
         //SlimeboundMod.logger.info("effect:" + effect);
         AbstractDungeon.effectsQueue.add(effect);
-        if (shouldPlayTextEffect && textEffect != null){
+        if (shouldPlayTextEffect && textEffect != null) {
             AbstractDungeon.effectsQueue.add(textEffect);
         }
 
     }
 
-    public void applyPower(){
+    public void applyPower() {
         if (!m.isDeadOrEscaped()) {
             if (m.hasPower("Artifact")) {
                 CardCrawlGame.sound.play("NULLIFY_SFX");
@@ -95,7 +103,7 @@ public class BanditIOUAction extends AbstractGameAction {
 
             AbstractDungeon.effectList.add(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, this.attackEffect));
 
-            if (m.hasPower(this.currentPower.ID)){
+            if (m.hasPower(this.currentPower.ID)) {
                 m.getPower(this.currentPower.ID).stackPower(this.currentPower.amount);
 
             } else {

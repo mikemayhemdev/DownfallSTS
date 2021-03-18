@@ -16,6 +16,7 @@ import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -51,7 +52,6 @@ public class HighlightCards {
         sb.setColor(Color.WHITE);
     }
 
-
     @SpirePatch(clz = CardGlowBorder.class, method = SpirePatch.CONSTRUCTOR, paramtypez = {AbstractCard.class, Color.class})
     public static class CardGlowPatch {
         @SpirePostfixPatch
@@ -72,8 +72,10 @@ public class HighlightCards {
             if (AbstractCharBoss.boss != null) {
                 if (!AbstractCharBoss.boss.isDeadOrEscaped()) {
                     if (AbstractCharBoss.boss.hasPower(SilentShivTimeEaterPower.POWER_ID)) {
-                        if (!(c instanceof AbstractBossCard) && c.cost != -1 && (c.costForTurn == 0 || c.freeToPlayOnce) && !c.purgeOnUse) {
-                            return true;
+                        if (!((SilentShivTimeEaterPower) AbstractCharBoss.boss.getPower(SilentShivTimeEaterPower.POWER_ID)).usedThisTurn) {
+                            if (!(c instanceof AbstractBossCard) && c.cost != -1 && (c.costForTurn == 0 || c.freeToPlayOnce) && !c.purgeOnUse) {
+                                return true;
+                            }
                         }
                     }
                 }
@@ -81,8 +83,11 @@ public class HighlightCards {
             if (NeowBossFinal.neowboss != null) {
                 if (!NeowBossFinal.neowboss.isDeadOrEscaped()) {
                     if (NeowBossFinal.neowboss.hasPower(BagOfKnives.POWER_ID)) {
-                        if (!(c instanceof AbstractBossCard) && c.cost != -1 && (c.costForTurn == 0 || c.freeToPlayOnce) && !c.purgeOnUse) {
-                            return true;
+                        if (NeowBossFinal.neowboss.getPower(BagOfKnives.POWER_ID).amount > 0) {
+
+                            if (!(c instanceof AbstractBossCard) && c.cost != -1 && (c.costForTurn == 0 || c.freeToPlayOnce) && !c.purgeOnUse) {
+                                return true;
+                            }
                         }
                     }
                 }
@@ -94,6 +99,9 @@ public class HighlightCards {
     }
 
     private static boolean rareChecker(AbstractCard c) {
+        if (!isInCombat()) {
+            return false;
+        }
         if (AbstractDungeon.player != null && AbstractDungeon.getCurrMapNode() != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) { //This should stop the DoubleImage from rendering if the player has Echo stacks remaining in the card selection screen
             if (AbstractCharBoss.boss != null) {
                 if (!AbstractCharBoss.boss.isDeadOrEscaped()) {
@@ -116,5 +124,9 @@ public class HighlightCards {
 
         }
         return false;
+    }
+
+    private static boolean isInCombat() {
+        return CardCrawlGame.isInARun() && AbstractDungeon.currMapNode != null && AbstractDungeon.getCurrRoom() != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT;
     }
 }

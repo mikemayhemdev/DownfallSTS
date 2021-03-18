@@ -86,8 +86,8 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
                     addToList(cardsList, new EnExpunger(), false);
                     addToList(cardsList, new EnStrikePurple(), false);
                     addToList(cardsList, new EnDevotion(), false);
-                    turn=0;
-                    looped=true;
+                    turn = 0;
+                    looped = true;
                     break;
             }
         } else {

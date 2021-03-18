@@ -58,7 +58,7 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<String> {
             for (AbstractCard q : CardLibrary.getAllCards()) {
                 if (q instanceof UnknownClass) {
                     if (SneckoMod.validColors.contains(((UnknownClass) q).myColor) || SneckoMod.pureSneckoMode) {
-                        c.addToTop(q);
+                        c.addToTop(q.makeCopy());
                     }
                 }
             }
@@ -97,7 +97,7 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<String> {
     }
 
     public String getUpdatedDescription() {
-        if (!SneckoBoss.chosenChar.equals("UNCHOSEN")) {
+        if (!SneckoBoss.chosenChar.equals("UNCHOSEN")) { //I sure hope no one makes a character called The UNCHOSEN.
             return DESCRIPTIONS[1] + SneckoBoss.chosenChar + DESCRIPTIONS[2] + SneckoBoss.chosenChar + DESCRIPTIONS[3];
         }
         return DESCRIPTIONS[0];

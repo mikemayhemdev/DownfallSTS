@@ -31,7 +31,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
     public ArchetypeAct1StatusesNewAge() {
         super("IC_STATUS_ARCHETYPE", "Status");
 
-        maxHPModifier += 70;
+        maxHPModifier += 60;
         actNum = 1;
     }
 
@@ -74,7 +74,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
                     break;
                 case 1:
                     addToList(cardsList, new EnRecklessCharge());
-                    addToList(cardsList, new EnWildStrike());
+                    addToList(cardsList, new EnWildStrike(), extraUpgrades);
                     addToList(cardsList, new EnDefendRed());
                     turn++;
                     break;
@@ -118,9 +118,9 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
                     theArtOfWar.beginPulse();
                     break;
                 case 1:
-                    addToList(cardsList, new EnWildStrike());
-                    addToList(cardsList, new EnImmolate());
+                    addToList(cardsList, new EnWildStrike(), extraUpgrades);
                     addToList(cardsList, new EnRecklessCharge());
+                    addToList(cardsList, new EnBash());  //unused
                     turn++;
                     break;
                 case 2:
@@ -131,7 +131,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnBash());
+                    addToList(cardsList, new EnImmolate());
                     addToList(cardsList, new EnThunderclap(), true);
                     addToList(cardsList, new EnDazed());
                     turn++;

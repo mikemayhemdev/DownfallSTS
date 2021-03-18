@@ -2,6 +2,7 @@ package guardian.orbs;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -15,8 +16,6 @@ import guardian.GuardianMod;
 import guardian.actions.ReturnStasisCardToHandAction;
 import guardian.actions.StasisEvokeIfRoomInHandAction;
 import guardian.cards.InStasisCard;
-import guardian.cards.StasisField;
-import guardian.cards.StasisStrike;
 import guardian.relics.StasisUpgradeRelic;
 import guardian.vfx.AddCardToStasisEffect;
 
@@ -135,7 +134,8 @@ public class StasisOrb extends AbstractOrb {
         }
 
         if (this.stasisCard.hasTag(GuardianMod.VOLATILE)) {
-            AbstractDungeon.player.exhaustPile.addToTop(this.stasisCard);
+            AbstractDungeon.player.limbo.addToTop(this.stasisCard);
+            AbstractDungeon.actionManager.addToTop(new ExhaustSpecificCardAction(this.stasisCard, AbstractDungeon.player.limbo));
         } else {
             if (this.passiveAmount <= 0) {
                 if (stasisCard.cost > 0) {

@@ -16,7 +16,8 @@
   "downfall:NeowInvulnerable": {
     "NAME": "生命之神",
     "DESCRIPTIONS": [
-      "你每打出一张牌，它回复 #b2 点生命。"
+      "你每打出一张牌，它回复 #b",
+      " 点生命。"
     ]
   },
   "downfall:TransformDrawnCardsPower": {
@@ -94,19 +95,19 @@
   "downfall:SilentShivTimeEaterPower": {
     "NAME": "满包小刀",
     "DESCRIPTIONS": [
-      "每当你打出一张 #b0 耗能牌，如果 #y静默猎手 的手牌少于 #b7 张，她将获得一张 #y小刀 。"
+      "每回合你打出第一张 #b0 耗能牌时， #y静默猎手 将获得一张 #y小刀 。"
       ]
   },
   "downfall:NeowBagOfKnives": {
     "NAME": "满包小刀",
     "DESCRIPTIONS": [
-      "每当你打出一张 #b0 耗能牌， 受到 #y4 点伤害。"
+      "每回合你打出前两张 #b0 耗能牌时， 受到 #y4 点伤害。"
     ]
   },
   "downfall:SilentMirrorImagePower": {
     "NAME": "复视",
     "DESCRIPTIONS": [
-      "一个 #y静默猎手 的 #y残影 隐蔽了她的真实位置。攻击 #y残影 则其将在本回合消失。"
+      "一个 #y静默猎手 的 #y残影 隐蔽了她的真实位置。攻击 #y本体或残影 则其将在本回合消失。"
     ]
   },
   "downfall:NeowSeeingDouble": {

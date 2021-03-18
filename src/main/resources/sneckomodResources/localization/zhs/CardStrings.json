@@ -199,7 +199,14 @@
   },
   "sneckomod:Transmogrify": {
     "NAME": "惊变",
-    "DESCRIPTION": "失去随机一个遗物。 NL 在战斗结束时选择将其取回，或者获得相同稀有度的另一个遗物。 NL 消耗 。"
+    "DESCRIPTION": "失去随机一个遗物。 NL 在战斗结束时选择将其取回，或者获得相同稀有度的另一个遗物。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "我没有遗物能够惊变",
+      "Choose a Relic to lose.",
+      "Lose ",
+      " and obtain another ",
+      " Relic."
+    ]
   },
   "sneckomod:DefensiveFlair": {
     "NAME": "防御才华",
@@ -215,7 +222,7 @@
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "变废为宝",
-	"DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张牌。 NL 获得与其耗能相等的 [E] 。 NL 消耗 。",
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张牌。 NL 获得与其耗能相等的 [E] 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张牌。 NL 获得与其耗能相等的 [E] 。"
   },
   "sneckomod:DiceBlock": {
@@ -287,7 +294,6 @@
     "NAME": "延绵不绝",
     "DESCRIPTION": "每回合开始时，将随机一张 sneckomod:异色 牌加入手牌并 sneckomod:混淆 。"
   },
-
   "sneckomod:Memorize": {
     "NAME": "回忆",
     "DESCRIPTION": "sneckomod:蛇证 。 即逝 。 NL 选择一张未知牌将其加入你的牌组并移除未知。",

@@ -1032,7 +1032,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
         this.lastDamageTaken = Math.min(damageAmount, this.currentHealth);
         final boolean probablyInstantKill = this.currentHealth == 0;
-        if (damageAmount > 0) {
+        if (damageAmount > 0 || probablyInstantKill) {
             for (final AbstractPower p : this.powers) {
                 damageAmount = p.onLoseHp(damageAmount);
             }

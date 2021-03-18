@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.events.beyond.Falling;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.city.Ghosts;
@@ -28,6 +29,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.scenes.TheBottomScene;
 import com.megacrit.cardcrawl.vfx.scene.InteractableTorchEffect;
 import downfall.downfallMod;
+import downfall.patches.BanSharedContentPatch;
 import downfall.util.CardIgnore;
 import javassist.CtClass;
 import javassist.Modifier;
@@ -240,6 +242,8 @@ public class HexaMod implements
         BaseMod.addPotion(DoubleChargePotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, DoubleChargePotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
         BaseMod.addPotion(InfernoChargePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, InfernoChargePotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
 
+        BanSharedContentPatch.registerRunLockedPotion(TheHexaghost.Enums.THE_SPIRIT, SoulburnPotion.POTION_ID);
+
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(EctoCoolerPotion.POTION_ID);
             WidePotionsMod.whitelistSimplePotion(SoulburnPotion.POTION_ID);
@@ -398,6 +402,7 @@ public class HexaMod implements
         BaseMod.addEvent(new AddEventParams.Builder(WanderingSpecter.ID, WanderingSpecter.class) //Event ID//
                 //Extra Requirement
                 //Only in Evil if content sharing is disabled
+                .dungeonID(Exordium.ID)
                 .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
                 .bonusCondition(() -> (AbstractDungeon.cardRandomRng.random(0, 2) == 2))
                 .create());

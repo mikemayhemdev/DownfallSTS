@@ -1,6 +1,7 @@
 package automaton.powers;
 
 import automaton.AutomatonMod;
+import automaton.FunctionHelper;
 import automaton.cards.AbstractBronzeCard;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -21,7 +22,8 @@ public class RemoveNextErrorPower extends AbstractAutomatonPower implements OnAd
         if (addition instanceof AbstractBronzeCard && addition.hasTag(AutomatonMod.BAD_COMPILE)) {
             ((AbstractBronzeCard) addition).turnOffCompileStuff();
             flash();
-            addToBot(new ReducePowerAction(owner, owner, this.ID, 1));
+            addToTop(new ReducePowerAction(owner, owner, this.ID, 1));
+            FunctionHelper.genPreview();
         }
     }
 

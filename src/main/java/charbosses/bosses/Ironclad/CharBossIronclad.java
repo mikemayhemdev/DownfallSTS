@@ -69,15 +69,12 @@ public class CharBossIronclad extends AbstractCharBoss {
         } else
             switch (AbstractDungeon.actNum) {
                 case 1:
-                    AbstractDungeon.lastCombatMetricKey = "ArchetypeAct1Statuses";
                     archetype = new ArchetypeAct1StatusesNewAge();
                     break;
                 case 2:
-                    AbstractDungeon.lastCombatMetricKey = "ArchetypeAct2MushroomsNewAge";
                     archetype = new ArchetypeAct2MushroomsNewAge();
                     break;
                 case 3:
-                    AbstractDungeon.lastCombatMetricKey = "ArchetypeAct3BlockNewAge";
                     archetype = new ArchetypeAct3BlockNewAge();
                     break;
                 case 4: {

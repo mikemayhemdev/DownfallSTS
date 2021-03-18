@@ -33,27 +33,33 @@ public class ViciousMockery extends AbstractChampCard {
     @Override
     public void applyPowers() {
         rawDescription = EXTENDED_DESCRIPTION[0];
-        if (bcombo()) rawDescription += "[#5ebf2a]";
-        else rawDescription += "*";
-        rawDescription += EXTENDED_DESCRIPTION[1];
-        if (dcombo()) rawDescription += "[#5ebf2a]";
-        else rawDescription += "*";
-        if (upgraded) {
-            rawDescription += EXTENDED_DESCRIPTION[3];
-        } else {
-            rawDescription += EXTENDED_DESCRIPTION[2];
-        }
+        if (bcombo()) rawDescription = "[#5ebf2a]" + rawDescription;
+        else rawDescription = "*" + rawDescription;
+        if (dcombo()) rawDescription += ("[#5ebf2a]" + EXTENDED_DESCRIPTION[1]);
+        else rawDescription += ("*" + EXTENDED_DESCRIPTION[1]);
+        initializeDescription();
+    }
+
+    @Override
+    public void onMoveToDiscard() {
+        rawDescription = DESCRIPTION;
         initializeDescription();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SFXAction("VO_CHAMP_2A"));
-        atb(new TalkAction(true, getTaunt(), 2.0F, 2.0F));
+        boolean triggeredAnyEffect = false;
         if (dcombo()) {
+            triggeredAnyEffect = true;
+            atb(new SFXAction("VO_CHAMP_2A"));
+            atb(new TalkAction(true, getTaunt(), 2.0F, 2.0F));
             applyToSelf(new DexterityPower(p, magicNumber));
             applyToSelf(new LoseDexterityPower(p, magicNumber));
         }
         if (bcombo()) {
+            if (!triggeredAnyEffect) {
+                atb(new SFXAction("VO_CHAMP_2A"));
+                atb(new TalkAction(true, getTaunt(), 2.0F, 2.0F));
+            }
             applyToSelf(new StrengthPower(p, magicNumber));
             applyToSelf(new LoseStrengthPower(p, magicNumber));
         }

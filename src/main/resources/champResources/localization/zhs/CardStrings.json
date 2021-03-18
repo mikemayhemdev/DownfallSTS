@@ -157,7 +157,10 @@
   },
   "champ:EnchantShield": {
     "NAME": "整备装甲",
-    "DESCRIPTION": "选择一张手牌。本场战斗这张牌的格挡获得提高 !M! 。 NL 消耗 。"
+    "DESCRIPTION": "选择一张手牌。本场战斗这张牌的格挡获得提高 !M! 。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "我没有能够强化的牌"
+    ]
   },
   "champ:BringItOn": {
     "NAME": "全力以赴",
@@ -209,9 +212,7 @@
     "NAME": "毒舌",
     "DESCRIPTION": "champ:狂战 champ:连段 ：获得 !M! 点 guardianmod:临时 力量 。 NL champ:防守 champ:连段 ：获得 !M! 点 guardianmod:临时 敏捷 。",
     "EXTENDED_DESCRIPTION": [
-      "champ:狂战 champ:连段 : 获得 !M! guardianmod:临时 力量 。 NL 消耗 ",
       "champ:狂战 champ:连段 : 获得 !M! guardianmod:临时 力量 。 NL ",
-      "champ:防守 champ:连段 : 获得 !M! guardianmod:临时 敏捷 。 NL 消耗 。",
       "champ:防守 champ:连段 : 获得 !M! guardianmod:临时 敏捷 。"
     ]
   },
@@ -239,7 +240,10 @@
   },
   "champ:EnchantSword": {
     "NAME": "强化剑刃",
-    "DESCRIPTION": "选择一张手牌。本场战斗这张牌造成的伤害提高 !M! 。 NL 消耗 。"
+    "DESCRIPTION": "选择一张手牌。本场战斗这张牌造成的伤害提高 !M! 。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "I have nothing to Enchant."
+    ]
   },
   "champ:BladeFlurry": {
     "NAME": "剑刃乱舞",
@@ -363,8 +367,7 @@
     "EXTENDED_DESCRIPTION": [
       "champ:狂战 champ:连段 ：获得 [E] [E] 并 消耗 。NL ",
       "champ:狂战 champ:连段 ：获得 [E] [E] [E] 并 消耗 。 NL ",
-      "champ:防守 champ:连段 ：抽 !M! 张牌。",
-      "还不是时候。"
+      "champ:防守 champ:连段 ：抽 !M! 张牌。"
     ]
   },
   "champ:PerfectedStrike": {
@@ -429,7 +432,10 @@
   },
   "champ:EnchantCrown": {
     "NAME": "附魔金冠",
-    "DESCRIPTION": "选择一张手牌，这张牌本场战斗中的耗能变为0。 NL 消耗 。"
+    "DESCRIPTION": "选择一张手牌，这张牌本场战斗中的耗能变为0。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "我没有能强化的牌"
+    ]
   },
   "champ:ModFinisherStrike": {
     "NAME": "终结打击",

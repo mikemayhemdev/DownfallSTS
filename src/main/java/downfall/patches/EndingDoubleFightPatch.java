@@ -21,7 +21,7 @@ public class EndingDoubleFightPatch {
         if (curRoom instanceof MonsterRoomBoss) {
             if (EvilModeCharacterSelect.evilMode && AbstractDungeon.id.equals("TheEnding")) {
                 System.out.println(AbstractDungeon.getCurrMapNode().x);
-                if (AbstractDungeon.getCurrMapNode().x != -2) {
+                if (!AbstractDungeon.bossKey.equals(NeowBossFinal.ID)) {
                     goToNeowBoss(__instance);
                     return SpireReturn.Return(null);
                 }

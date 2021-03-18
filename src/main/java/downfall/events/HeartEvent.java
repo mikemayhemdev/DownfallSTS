@@ -135,7 +135,7 @@ public class HeartEvent extends AbstractEvent {
         }
     }
 
-    public boolean hasPlayedRun(AbstractPlayer.PlayerClass p) {
+    public static boolean hasPlayedRun(AbstractPlayer.PlayerClass p) {
         return UnlockTracker.getCurrentProgress(p) > 0 || UnlockTracker.getUnlockLevel(p) > 0;
     }
 
