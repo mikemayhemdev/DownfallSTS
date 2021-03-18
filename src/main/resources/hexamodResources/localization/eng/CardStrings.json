@@ -122,11 +122,11 @@
   },
   "hexamod:GhostLash": {
     "NAME": "Ghost Lash",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL If your hand contains another Ethereal card, deal !D! damage."
+    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Deal !D! damage. NL If you Exhausted a card last turn, deal !D! damage."
   },
   "hexamod:GhostShield": {
     "NAME": "Ghost Shield",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL If your hand contains another Ethereal card, gain !B! Block."
+    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Gain !B! Block. NL If you Exhausted a card last turn, gain !B! Block."
   },
   "hexamod:Haunt": {
     "NAME": "Haunted Hand",
