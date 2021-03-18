@@ -92,7 +92,7 @@
   "hexamod:GainStrengthThatGoesAwayPower": {
     "NAME": "Here and Now",
     "DESCRIPTIONS": [
-      "If you start and end your turn with the same Ghostflame active, gain ",
+      "If you start and end your turn on the same Ghostflame, gain ",
       " #yStrength."
     ]
   },

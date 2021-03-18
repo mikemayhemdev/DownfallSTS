@@ -480,6 +480,25 @@ public class ChampMod implements
         }
     }
 
+
+    public static void vigor(int begone) {
+
+        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                int x = begone;
+                if (AbstractDungeon.player.hasRelic(PowerArmor.ID) && AbstractDungeon.player.hasPower(VigorPower.POWER_ID)) {
+                    if (x + AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount > PowerArmor.CAP_RESOLVE_ETC) {
+                        x = PowerArmor.CAP_RESOLVE_ETC - AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount;
+                    }
+                }
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, x), x));
+            }
+        });
+
+    }
+
     public static void updateTechniquesInCombat() {
         for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
             if (c.hasTag(TECHNIQUE)) c.initializeDescription();
