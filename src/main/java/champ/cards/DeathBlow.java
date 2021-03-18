@@ -39,7 +39,7 @@ public class DeathBlow extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(5);
         upgradeDamage(5);
+        upgradeMagicNumber(5);
     }
 }

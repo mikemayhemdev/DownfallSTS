@@ -9,7 +9,7 @@
   },
   "hexamod:Sear": {
     "NAME": "Sear",
-    "DESCRIPTION": "Ethereal. Afterlife. NL Apply !burny! hexamod:Soulburn."
+    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Apply !burny! hexamod:Soulburn."
   },
   "hexamod:Float": {
     "NAME": "Float",
@@ -164,7 +164,7 @@
   },
   "hexamod:ParanormalForm": {
     "NAME": "Poltergeist",
-    "DESCRIPTION": "Ethereal. NL Whenever you play an Ethereal card, deal !M! damage to a random enemy."
+    "DESCRIPTION": "Whenever you play an *Afterlife card, deal !M! damage to a random enemy."
   },
   "hexamod:UnleashSpirits": {
     "NAME": "Unleash Spirits",

@@ -4,6 +4,7 @@ import champ.ChampMod;
 import champ.cards.AbstractChampCard;
 import champ.cards.StanceDance;
 import champ.cards.Taunt;
+import champ.cards.WindUp;
 import champ.stances.BerserkerStance;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -53,7 +54,7 @@ public class GlobalExtraCardUIPatch {
 
             //Opener / Technique / Finisher draws
             if (__instance.hasTag(ChampMod.OPENER)) {
-                if (__instance instanceof StanceDance || __instance instanceof Taunt) {
+                if (__instance instanceof StanceDance || __instance instanceof Taunt || __instance instanceof WindUp) {
                     renderHelper(sb, openerall, __instance.current_x, __instance.current_y, __instance);
                 } else if (__instance.hasTag(ChampMod.OPENERBERSERKER)) {
                     renderHelper(sb, openerR, __instance.current_x, __instance.current_y, __instance);
