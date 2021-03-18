@@ -363,5 +363,9 @@
       "Replace the current Ghostflame with a hexamod:Bolstering Ghostflame",
       "Replace the current Ghostflame with a hexamod:Crushing Ghostflame"
     ]
+  },
+  "hexamod:BurningQuestion": {
+    "NAME": "Burning Question",
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Increase this card's damage by !M!. NL When this card is Exhausted, deal !D! damage to ALL enemies."
   }
 }
