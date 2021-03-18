@@ -15,6 +15,7 @@ import champ.potions.TechPotion;
 import champ.potions.UltimateStancePotion;
 import champ.powers.CounterPower;
 import champ.powers.ResolvePower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import champ.relics.*;
 import champ.stances.AbstractChampStance;
 import champ.util.CardFilter;
