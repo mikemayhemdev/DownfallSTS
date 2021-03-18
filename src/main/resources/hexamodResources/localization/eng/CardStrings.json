@@ -77,7 +77,7 @@
   },
   "hexamod:HauntingEcho": {
     "NAME": "Haunting Echo",
-    "DESCRIPTION": "Deal !D! damage. NL If the current Ghostflame is hexamod:Ignited, hexamod:Ignite it.",
+    "DESCRIPTION": "Deal !D! damage. NL Return a random Exhausted Afterlife card to your discard pile.",
     "EXTENDED_DESCRIPTION": ["Ethereal","Ethereal. NL "]
   },
   "hexamod:NecessarySacrifice": {

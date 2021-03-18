@@ -16,7 +16,7 @@ public class NightmareGuise extends AbstractHexaCard {
     private static final int UPG_BLOCK = 4;
 
     public NightmareGuise() {
-        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         isEthereal = true;
         cardsToPreview = new ShadowGuise();
