@@ -1523,7 +1523,7 @@ public class downfallMod implements
         BaseMod.addUnlockBundle(currentBundle, player, index);
 
 
-        if (downfallMod.unlockEverything || UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index + 1) {
+        if (downfallMod.unlockEverything || UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index) {
 
             SlimeboundMod.logger.info("Relic trigger: " + relic1 + " " + UnlockTracker.lockedRelics.contains(relic1) + " " + UnlockTracker.isRelicLocked(relic1) + " " + UnlockTracker.isRelicSeen(relic1));
             SlimeboundMod.logger.info("Relic trigger: " + relic2 + " " + UnlockTracker.lockedRelics.contains(relic2) + " " + UnlockTracker.isRelicLocked(relic2) + " " + UnlockTracker.isRelicSeen(relic3));
