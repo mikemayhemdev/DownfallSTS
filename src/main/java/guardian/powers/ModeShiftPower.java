@@ -17,6 +17,7 @@ public class ModeShiftPower extends AbstractGuardianPower {
     public static final String POWER_ID = "Guardian:ModeShiftPower";
     private static final int STARTINGAMOUNT = 20;
     private static final int AMOUNTGAINPERACTIVATION = 10;
+    private static final int MAXAMOUNT = 40;
     private static final int BLOCKONTRIGGER = 10;
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
@@ -60,7 +61,7 @@ public class ModeShiftPower extends AbstractGuardianPower {
             else turns = 1;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DontLeaveDefensiveModePower(AbstractDungeon.player, turns), turns));
             this.activations++;
-            this.amount += STARTINGAMOUNT + (AMOUNTGAINPERACTIVATION * activations);
+            this.amount += Math.min(STARTINGAMOUNT + (AMOUNTGAINPERACTIVATION * activations), MAXAMOUNT); //Set max of 40 Brace
             updateDescription();
             if (this.amount <= 0){
                 onSpecificTrigger(0);

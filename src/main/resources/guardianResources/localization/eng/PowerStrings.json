@@ -131,7 +131,7 @@
     "NAME": "Mode Shift",
     "DESCRIPTIONS": [
       "When you lose #b",
-      " HP, gain #b10 #yBlock, enter #yDefensive #yMode until next turn, and increase the amount required to trigger this effect again by 10."
+      " HP, gain #b10 #yBlock, enter #yDefensive #yMode until next turn, and increase the amount required to trigger this effect again by 10, up to a maximum of 40."
     ]
   },
   "Guardian:ExhaustStatusesPower": {

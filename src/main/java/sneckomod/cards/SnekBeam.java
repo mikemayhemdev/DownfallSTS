@@ -42,6 +42,8 @@ public class SnekBeam extends AbstractSneckoCard {
         super.calculateCardDamage(mo);
         this.baseDamage = realBaseDamage;
         this.isDamageModified = this.damage != this.baseDamage;
+        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+        this.initializeDescription();
     }
 
     public void applyPowers() {
@@ -50,6 +52,8 @@ public class SnekBeam extends AbstractSneckoCard {
         super.applyPowers();
         this.baseDamage = realBaseDamage;
         this.isDamageModified = this.damage != this.baseDamage;
+        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+        this.initializeDescription();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
