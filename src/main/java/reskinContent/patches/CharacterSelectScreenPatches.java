@@ -136,6 +136,16 @@ public class CharacterSelectScreenPatches {
     private static Texture sneckoTexture = ImageMaster.loadImage(reskinContent.assetPath("img/SneckoMod/portrait_waifu.png"));
     private static Texture sneckoTexture2 = ImageMaster.loadImage(reskinContent.assetPath("img/SneckoMod/portrait_waifu2.png"));
 
+    //Champ
+    private static Texture champOriginal = ImageMaster.loadImage("champResources/images/charSelect/charBG.png");
+    private static Texture champTexture = ImageMaster.loadImage(reskinContent.assetPath("img/ChampMod/portrait_waifu.png"));
+    private static Texture champTexture2 = ImageMaster.loadImage(reskinContent.assetPath("img/ChampMod/portrait_waifu2.png"));
+
+    //Bronze
+    private static Texture bronzeOriginal = ImageMaster.loadImage("bronzeResources/images/charSelect/charBG.png");
+    private static Texture bronzeTexture = ImageMaster.loadImage(reskinContent.assetPath("img/BronzeMod/portrait_waifu.png"));
+    private static Texture bronzeTexture2 = ImageMaster.loadImage(reskinContent.assetPath("img/BronzeMod/portrait_waifu2.png"));
+
 
     //portrait Skeleton
     public static TextureAtlas portraitAtlas = null;
@@ -161,12 +171,16 @@ public class CharacterSelectScreenPatches {
         characterOptionNames.put(1, CardCrawlGame.languagePack.getCharacterString("Slimebound").NAMES[0]);
         characterOptionNames.put(2, CardCrawlGame.languagePack.getCharacterString("hexamod:theHexaghost").NAMES[0]);
         characterOptionNames.put(3, CardCrawlGame.languagePack.getCharacterString("sneckomod:theSnecko").NAMES[0]);
+        characterOptionNames.put(4, CardCrawlGame.languagePack.getCharacterString("champ:theChamp").NAMES[0]);
+        characterOptionNames.put(5, CardCrawlGame.languagePack.getCharacterString("bronze:theAutomaton").NAMES[0]);
 
 
         portraitAtlasMaps.put(0, reskinContent.assetPath("img/GuardianMod/animation/GuardianChan_portrait"));
         portraitAtlasMaps.put(1, reskinContent.assetPath("img/Slimebound/animation/SlimeBoss_portrait"));
         portraitAtlasMaps.put(2, reskinContent.assetPath("img/HexaghostMod/animation/Hexaghost_portrait"));
         portraitAtlasMaps.put(3, reskinContent.assetPath("img/SneckoMod/animation/Snecko_portrait"));
+        portraitAtlasMaps.put(4, reskinContent.assetPath("img/ChampMod/animation/GuardianChan_portrait"));
+        portraitAtlasMaps.put(5, reskinContent.assetPath("img/BronzeMod/animation/GuardianChan_portrait"));
 
     }
 
@@ -296,6 +310,20 @@ public class CharacterSelectScreenPatches {
                 InitializeStaticPortraitVar();
             }
 
+            if (characterCount == 4) {
+                portraitState.setAnimation(1, "fade_in", false);
+                portraitState.addAnimation(0, "idle", true, 0.0f);
+                InitializeStaticPortraitVar();
+            }
+
+            if (characterCount == 5) {
+                portraitState.setAnimation(1, "fade_in", false);
+                portraitState.addAnimation(0, "idle", true, 0.0f);
+                InitializeStaticPortraitVar();
+            }
+
+
+
         } else {
             InitializeStaticPortraitVar();
         }
@@ -391,7 +419,7 @@ public class CharacterSelectScreenPatches {
 
 
             for (CharacterOption o : __instance.options) {
-                for (int i = 0; i <= 3; i++) {
+                for (int i = 0; i <= characterOptionNames.size()-1; i++) {
                     InitializeReskinCount(i);
 
                     if (o.name.equals(characterOptionNames.get(i)) && o.selected) {
@@ -463,7 +491,7 @@ public class CharacterSelectScreenPatches {
             // Render your buttons/images by passing SpriteBatch
 
             for (CharacterOption o : __instance.options) {
-                for (int i = 0; i <= 3; i++) {
+                for (int i = 0; i <= characterOptionNames.size()-1; i++) {
                     InitializeReskinCount(i);
                     if (o.name.equals(characterOptionNames.get(i)) && o.selected && reskinCount == 1 && reskinContent.portraitAnimationType != 0) {
 
@@ -582,7 +610,7 @@ public class CharacterSelectScreenPatches {
             char_effectsQueue.clear();
             bgIMGUpdate = false;
 
-            for (int i = 0; i <= 3; i++) {
+            for (int i = 0; i <= characterOptionNames.size()-1; i++) {
                 InitializeReskinCount(i);
 
                 if (__instance.name.equals(characterOptionNames.get(i)) && reskinContent.portraitAnimationType != 0) {
@@ -607,7 +635,7 @@ public class CharacterSelectScreenPatches {
 
 // deal with click box and portrait img
             for (CharacterOption o : __instance.options) {
-                for (int i = 0; i <= 3; i++) {
+                for (int i = 0; i <= characterOptionNames.size() -1; i++) {
                     InitializeReskinCount(i);
 
                     if (o.name.equals(characterOptionNames.get(i)) && o.selected && reskinUnlockChecker(i)) {
@@ -924,6 +952,12 @@ public class CharacterSelectScreenPatches {
             case 3:
                 return reskinContent.sneckoReskinUnlock;
 
+            case 4:
+                return reskinContent.champReskinUnlock;
+
+            case 5:
+                return reskinContent.bronzeReskinUnlock;
+
             default:
                 return false;
         }
@@ -942,6 +976,12 @@ public class CharacterSelectScreenPatches {
                 break;
             case 3:
                 reflashReskinCount(reskinContent.sneckoReskinAnimation);
+                break;
+            case 4:
+                reflashReskinCount(reskinContent.champReskinAnimation);
+                break;
+            case 5:
+                reflashReskinCount(reskinContent.bronzeReskinAnimation);
                 break;
             default:
                 break;
@@ -1042,6 +1082,42 @@ public class CharacterSelectScreenPatches {
                         }
                     default:
                         return sneckoOriginal;
+                }
+
+            case 4:
+                switch (reskinCount) {
+                    case 0:
+                        reskinContent.champReskinAnimation = false;
+                        reskinContent.saveSettings();
+                        return champOriginal;
+                    case 1:
+                        reskinContent.champReskinAnimation = true;
+                        reskinContent.saveSettings();
+                        if (reskinContent.portraitAnimationType == 0) {
+                            return champTexture;
+                        } else {
+                            return champTexture2;
+                        }
+                    default:
+                        return champOriginal;
+                }
+
+            case 5:
+                switch (reskinCount) {
+                    case 0:
+                        reskinContent.bronzeReskinAnimation = false;
+                        reskinContent.saveSettings();
+                        return bronzeOriginal;
+                    case 1:
+                        reskinContent.champReskinAnimation = true;
+                        reskinContent.saveSettings();
+                        if (reskinContent.portraitAnimationType == 0) {
+                            return bronzeTexture;
+                        } else {
+                            return bronzeTexture2;
+                        }
+                    default:
+                        return bronzeOriginal;
                 }
 
 

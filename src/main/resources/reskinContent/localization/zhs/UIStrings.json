@@ -19,8 +19,8 @@
   "reskinContent:PortraitAnimationType": {
     "TEXT": [
       "静态",
-      "动态",
-      "全特效"
+      "动态（低粒子）",
+      "动态"
     ]
   },
   "reskinContent:BetaArtUnlockEffect": {

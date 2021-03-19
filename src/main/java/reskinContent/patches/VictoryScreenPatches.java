@@ -1,5 +1,7 @@
 package reskinContent.patches;
 
+import automaton.AutomatonChar;
+import champ.ChampChar;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
@@ -43,6 +45,12 @@ public class VictoryScreenPatches
                 if(AbstractDungeon.player.chosenClass == TheSnecko.Enums.THE_SNECKO && !reskinContent.sneckoReskinUnlock)
                     unlockedReskin = 3;
 
+                if(AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP && !reskinContent.champReskinUnlock)
+                    unlockedReskin = 4;
+
+                if(AbstractDungeon.player.chosenClass == AutomatonChar.Enums.THE_AUTOMATON && !reskinContent.bronzeReskinUnlock)
+                    unlockedReskin = 4;
+
                 if(unlockedReskin != -1){
                     AbstractDungeon.topLevelEffects.add(new ReskinUnlockedTextEffect(unlockedReskin));
 
@@ -60,6 +68,12 @@ public class VictoryScreenPatches
                         case 3:
                             reskinContent.sneckoReskinUnlock = true;
                             break;
+                        case 4:
+                            reskinContent.champReskinUnlock = true;
+                            break;
+                        case 5:
+                            reskinContent.bronzeReskinUnlock = true;
+                            break;
                         default:
                             break;
                     }
@@ -69,6 +83,8 @@ public class VictoryScreenPatches
                     System.out.println(reskinContent.slimeReskinUnlock);
                     System.out.println(reskinContent.hexaghostReskinUnlock);
                     System.out.println(reskinContent.sneckoReskinUnlock);
+                    System.out.println(reskinContent.champReskinAnimation);
+                    System.out.println(reskinContent.bronzeReskinAnimation);
                     System.out.println(CardCrawlGame.saveSlot);
 
                 }
