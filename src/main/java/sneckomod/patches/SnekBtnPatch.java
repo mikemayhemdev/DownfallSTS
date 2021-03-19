@@ -14,6 +14,8 @@ import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
+import static reskinContent.patches.CharacterSelectScreenPatches.allTextInfoX;
+
 public class SnekBtnPatch {
     public static final Hitbox challengeDownHitbox = new Hitbox(40.0f * Settings.scale * (0.01f + (1.0f - 0.019f)), 40.0f * Settings.scale);
 
@@ -28,11 +30,11 @@ public class SnekBtnPatch {
                 challengeDownHitbox.render(sb);
 
                 sb.setColor(Color.WHITE);
-                sb.draw(ImageMaster.CHECKBOX, challengeDownHitbox.cX - 32.0f, challengeDownHitbox.cY - 32.0f, 32.0f, 32.0f, 64.0f, 64.0f, Settings.scale * (0.01f + (1.0f - 0.019f)), Settings.scale * (0.01f + (1.0f - 0.019f)), 0.0f, 0, 0, 64, 64, false, false);
+                sb.draw(ImageMaster.CHECKBOX, challengeDownHitbox.cX - 32.0f + allTextInfoX, challengeDownHitbox.cY - 32.0f , 32.0f, 32.0f, 64.0f, 64.0f, Settings.scale * (0.01f + (1.0f - 0.019f)), Settings.scale * (0.01f + (1.0f - 0.019f)), 0.0f, 0, 0, 64, 64, false, false);
                 if (SneckoMod.pureSneckoMode) {
-                    sb.draw(ImageMaster.TICK, challengeDownHitbox.cX - 32.0f, challengeDownHitbox.cY - 32.0f, 32.0f, 32.0f, 64.0f, 64.0f, Settings.scale * (0.01f + (1.0f - 0.019f)), Settings.scale * (0.01f + (1.0f - 0.019f)), 0.0f, 0, 0, 64, 64, false, false);
+                    sb.draw(ImageMaster.TICK, challengeDownHitbox.cX - 32.0f + allTextInfoX, challengeDownHitbox.cY - 32.0f , 32.0f, 32.0f, 64.0f, 64.0f, Settings.scale * (0.01f + (1.0f - 0.019f)), Settings.scale * (0.01f + (1.0f - 0.019f)), 0.0f, 0, 0, 64, 64, false, false);
                 }
-                FontHelper.renderSmartText(sb, FontHelper.tipHeaderFont, uiStrings.TEXT[0], challengeDownHitbox.cX + 25f * Settings.scale, challengeDownHitbox.cY, Settings.BLUE_TEXT_COLOR);
+                FontHelper.renderSmartText(sb, FontHelper.tipHeaderFont, uiStrings.TEXT[0], challengeDownHitbox.cX + 25f * Settings.scale + allTextInfoX, challengeDownHitbox.cY, Settings.BLUE_TEXT_COLOR);
             }
         }
     }

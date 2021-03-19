@@ -25,7 +25,8 @@ public abstract class AbstractSkinCharacter {
 
     public String portraitAtlasPath;
 
-    public String name = "";
+    public String ID = "";
+    public String NAME = "";
 
     public boolean reskinAnimation = false;
     public boolean reskinUnlock = false;
@@ -34,6 +35,7 @@ public abstract class AbstractSkinCharacter {
 
     public int reskinCount = 0;
 
+    public int reskinSize = 1;
 
     public AbstractSkinCharacter() {
 
@@ -96,10 +98,10 @@ public abstract class AbstractSkinCharacter {
 
     public void InitializeReskinCount() {
         if (this.reskinAnimation) {
-            if (this.reskinCount != 1)
+            if (this.reskinCount < 1)
                 this.reskinCount = 1;
         } else {
-            if (this.reskinCount != 0)
+            if (this.reskinCount < 0)
                 this.reskinCount = 0;
         }
     }

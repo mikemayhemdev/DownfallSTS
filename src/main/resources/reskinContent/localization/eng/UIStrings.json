@@ -2,13 +2,7 @@
   "reskinContent:ReSkin": {
     "TEXT": [
       "Skin",
-      "Original",
-      "Guardian Chan",
-      "Slaifu",
-      "Hexago",
-      "SSSSnecko",
-      "Champ Sister",
-      "Automaton"
+      "Original"
     ]
   },
   "reskinContent:PortraitAnimation": {
@@ -25,12 +19,43 @@
   },
   "reskinContent:BetaArtUnlockEffect": {
     "TEXT": [
-      "Guardian Beta Card Art Unlocked!",
-      "Slime Boss Beta Card Art Unlocked!",
-      "Hexaghost Beta Card Art Unlocked!",
-      "Snecko Beta Card Art Unlocked!",
-      "Champ Beta Card Art Unlocked!",
-      "Automaton Beta Card Art Unlocked!"
+      "Guardian Alterative Art Unlocked!",
+      "Slime Boss Alterative Art Unlocked!",
+      "Hexaghost Alterative Art Unlocked!",
+      "Snecko Alterative Art Unlocked!",
+      "Champ Alterative Art Unlocked!",
+      "Automaton Alterative Art Unlocked!"
+    ]
+  },
+
+  "reskinContent:ReSkinGuardian": {
+    "TEXT": [
+      "Guardian Chan"
+    ]
+  },
+  "reskinContent:ReSkinSlime": {
+    "TEXT": [
+      "Slaifu"
+    ]
+  },
+  "reskinContent:ReSkinHexaghost": {
+    "TEXT": [
+      "Hexago"
+    ]
+  },
+  "reskinContent:ReSkinSnecko": {
+    "TEXT": [
+      "SSSSnecko"
+    ]
+  },
+  "reskinContent:ReSkinChamp": {
+    "TEXT": [
+      "Chan-p"
+    ]
+  },
+  "reskinContent:ReSkinBronze": {
+    "TEXT": [
+      "Automaton"
     ]
   }
 }

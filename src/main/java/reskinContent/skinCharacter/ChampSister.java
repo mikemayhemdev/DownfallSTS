@@ -14,7 +14,8 @@
         this.portrait_waifu =  ImageMaster.loadImage(reskinContent.assetPath("img/ChampMod/portrait_waifu.png"));
         this.portrait_waifu2 =  ImageMaster.loadImage(reskinContent.assetPath("img/ChampMod/portrait_waifu2.png"));
 
-        this.name = CardCrawlGame.languagePack.getCharacterString("champ:theChamp").NAMES[0];
+        this.ID = CardCrawlGame.languagePack.getCharacterString("champ:theChamp").NAMES[0];
+        this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinChamp").TEXT[0];
 
         this.portraitAtlasPath = reskinContent.assetPath("img/ChampMod/animation/GuardianChan_portrait");
     }

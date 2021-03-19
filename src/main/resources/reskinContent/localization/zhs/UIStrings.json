@@ -2,13 +2,7 @@
   "reskinContent:ReSkin": {
     "TEXT": [
       "皮肤",
-      "原版",
-      "蹲酱",
-      "史莱姆娘",
-      "六子",
-      "蛇蛇",
-      "妹妹勇士",
-      "童制机械人偶"
+      "原版"
     ]
   },
   "reskinContent:PortraitAnimation": {
@@ -31,6 +25,36 @@
       "已解锁异蛇皮肤！",
       "已解锁第一勇士皮肤！",
       "已解锁铜制机械人偶皮肤！"
+    ]
+  },
+  "reskinContent:ReSkinGuardian": {
+    "TEXT": [
+      "蹲酱"
+    ]
+  },
+  "reskinContent:ReSkinSlime": {
+    "TEXT": [
+      "史莱姆娘"
+    ]
+  },
+  "reskinContent:ReSkinHexaghost": {
+    "TEXT": [
+      "六子"
+    ]
+  },
+  "reskinContent:ReSkinSnecko": {
+    "TEXT": [
+      "蛇蛇"
+    ]
+  },
+  "reskinContent:ReSkinChamp": {
+    "TEXT": [
+      "妹妹勇士"
+    ]
+  },
+  "reskinContent:ReSkinBronze": {
+    "TEXT": [
+      "童制机械人偶"
     ]
   }
 }

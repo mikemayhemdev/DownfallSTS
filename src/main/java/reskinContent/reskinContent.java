@@ -55,6 +55,7 @@ public class reskinContent implements
 
 
     public static boolean hexaghostMask = false;
+    public static boolean unlockAllReskin = false;
 
     public static Properties reskinContentDefaults = new Properties();
 
@@ -121,23 +122,12 @@ public class reskinContent implements
     public static void saveSettings() {
         try {
             SpireConfig config = new SpireConfig("reskinContent", "reskinContentSaveData", reskinContentDefaults);
-            config.setBool(CardCrawlGame.saveSlot + "guardianReskinAnimation", characters[0].reskinAnimation);
-            config.setBool(CardCrawlGame.saveSlot + "slimeReskinAnimation", characters[1].reskinAnimation);
-            config.setBool(CardCrawlGame.saveSlot + "hexaghostReskinAnimation", characters[2].reskinAnimation);
-            config.setBool(CardCrawlGame.saveSlot + "sneckoReskinAnimation", characters[3].reskinAnimation);
-            config.setBool(CardCrawlGame.saveSlot + "champReskinAnimation", characters[4].reskinAnimation);
-            config.setBool(CardCrawlGame.saveSlot + "bronzeReskinAnimation", characters[5].reskinAnimation);
-
-            config.setBool(CardCrawlGame.saveSlot + "guardianReskinUnlock", characters[0].reskinUnlock);
-            config.setBool(CardCrawlGame.saveSlot + "slimeReskinUnlock", characters[1].reskinUnlock);
-            config.setBool(CardCrawlGame.saveSlot + "hexaghostReskinUnlock", characters[2].reskinUnlock);
-            config.setBool(CardCrawlGame.saveSlot + "sneckoReskinUnlock", characters[3].reskinUnlock);
-            config.setBool(CardCrawlGame.saveSlot + "champReskinUnlock", characters[4].reskinUnlock);
-            config.setBool(CardCrawlGame.saveSlot + "bronzeReskinUnlock", characters[5].reskinUnlock);
 
             config.setBool(CardCrawlGame.saveSlot + "hexaghostMask", hexaghostMask);
 
-            for(int i = 0; i <= characters.length - 1; i++) {
+            for (int i = 0; i <= characters.length - 1; i++) {
+                config.setBool(CardCrawlGame.saveSlot + "ReskinAnimation" + i, characters[i].reskinAnimation);
+                config.setBool(CardCrawlGame.saveSlot + "ReskinUnlock" + i, characters[i].reskinUnlock);
                 config.setInt(CardCrawlGame.saveSlot + "portraitAnimationType" + i, characters[i].portraitAnimationType);
             }
 
@@ -155,30 +145,18 @@ public class reskinContent implements
             config.load();
             System.out.println("==============reskin载入数据");
 
-
-            characters[0].reskinAnimation = config.getBool(CardCrawlGame.saveSlot + "guardianReskinAnimation");
-            characters[1].reskinAnimation = config.getBool(CardCrawlGame.saveSlot + "slimeReskinAnimation");
-            characters[2].reskinAnimation = config.getBool(CardCrawlGame.saveSlot + "hexaghostReskinAnimation");
-            characters[3].reskinAnimation = config.getBool(CardCrawlGame.saveSlot + "sneckoReskinAnimation");
-            characters[4].reskinAnimation = config.getBool(CardCrawlGame.saveSlot + "champReskinAnimation");
-            characters[5].reskinAnimation = config.getBool(CardCrawlGame.saveSlot + "bronzeReskinAnimation");
-
-            characters[0].reskinUnlock = config.getBool(CardCrawlGame.saveSlot + "guardianReskinUnlock");
-            characters[1].reskinUnlock = config.getBool(CardCrawlGame.saveSlot + "slimeReskinUnlock");
-            characters[2].reskinUnlock = config.getBool(CardCrawlGame.saveSlot + "hexaghostReskinUnlock");
-            characters[3].reskinUnlock = config.getBool(CardCrawlGame.saveSlot + "sneckoReskinUnlock");
-            characters[4].reskinUnlock = config.getBool(CardCrawlGame.saveSlot + "champReskinUnlock");
-            characters[5].reskinUnlock = config.getBool(CardCrawlGame.saveSlot + "bronzeReskinUnlock");
-
             hexaghostMask = config.getBool(CardCrawlGame.saveSlot + "hexaghostMask");
 
-            for(int i = 0; i <= characters.length - 1; i++) {
+            for (int i = 0; i <= characters.length - 1; i++) {
+                characters[i].reskinAnimation = config.getBool(CardCrawlGame.saveSlot + "ReskinAnimation" + i);
+                characters[i].reskinUnlock = config.getBool(CardCrawlGame.saveSlot + "ReskinUnlock" + i);
+
+
                 characters[i].portraitAnimationType = config.getInt(CardCrawlGame.saveSlot + "portraitAnimationType" + i);
 
                 if (characters[i].portraitAnimationType > 2 || characters[i].portraitAnimationType < 0)
                     characters[i].portraitAnimationType = 2;
             }
-
 
 
         } catch (Exception e) {

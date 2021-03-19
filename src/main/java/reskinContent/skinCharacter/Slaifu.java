@@ -35,7 +35,8 @@
         this.portrait_waifu =  ImageMaster.loadImage(reskinContent.assetPath("img/Slimebound/portrait_waifu.png"));
         this.portrait_waifu2 =  ImageMaster.loadImage(reskinContent.assetPath("img/Slimebound/portrait_waifu2.png"));
 
-        this.name = CardCrawlGame.languagePack.getCharacterString("Slimebound").NAMES[0];
+        this.ID = CardCrawlGame.languagePack.getCharacterString("Slimebound").NAMES[0];
+        this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinSlime").TEXT[0];
 
         this.portraitAtlasPath = reskinContent.assetPath("img/Slimebound/animation/SlimeBoss_portrait");
     }

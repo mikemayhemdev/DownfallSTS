@@ -14,7 +14,8 @@
         this.portrait_waifu =  ImageMaster.loadImage(reskinContent.assetPath("img/BronzeMod/portrait_waifu.png"));
         this.portrait_waifu2 =  ImageMaster.loadImage(reskinContent.assetPath("img/BronzeMod/portrait_waifu2.png"));
 
-        this.name = CardCrawlGame.languagePack.getCharacterString("bronze:theAutomaton").NAMES[0];
+        this.ID = CardCrawlGame.languagePack.getCharacterString("bronze:theAutomaton").NAMES[0];
+        this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinBronze").TEXT[0];
 
         this.portraitAtlasPath = reskinContent.assetPath("img/BronzeMod/animation/GuardianChan_portrait");
     }

@@ -39,7 +39,8 @@ public class SSSSnecko extends AbstractSkinCharacter {
         this.portrait_waifu = ImageMaster.loadImage(reskinContent.assetPath("img/SneckoMod/portrait_waifu.png"));
         this.portrait_waifu2 = ImageMaster.loadImage(reskinContent.assetPath("img/SneckoMod/portrait_waifu2.png"));
 
-        this.name = CardCrawlGame.languagePack.getCharacterString("sneckomod:theSnecko").NAMES[0];
+        this.ID = CardCrawlGame.languagePack.getCharacterString("sneckomod:theSnecko").NAMES[0];
+        this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinSnecko").TEXT[0];
 
         this.portraitAtlasPath = reskinContent.assetPath("img/SneckoMod/animation/Snecko_portrait");
     }

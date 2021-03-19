@@ -133,6 +133,7 @@ import java.util.List;
 import java.util.Properties;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
+import static reskinContent.reskinContent.unlockAllReskin;
 
 @SpireInitializer
 public class downfallMod implements
@@ -605,6 +606,13 @@ public class downfallMod implements
             saveData();
         });
 
+        ModLabeledToggleButton unlockAllSkinBtn = new ModLabeledToggleButton(configStrings.TEXT[10],
+                350.0f, 200, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                unlockAllReskin, settingsPanel, (label) -> {
+        }, (button) -> {
+            unlockAllReskin = button.enabled;
+            unlockAllReskin();
+        });
 
         settingsPanel.addUIElement(contentSharingBtnCurses);
         settingsPanel.addUIElement(contentSharingBtnEvents);
@@ -616,6 +624,7 @@ public class downfallMod implements
         settingsPanel.addUIElement(champProConfig);
         settingsPanel.addUIElement(unlockAllBtn);
         settingsPanel.addUIElement(noMusicBtn);
+        settingsPanel.addUIElement(unlockAllSkinBtn);
 
         BaseMod.registerModBadge(badgeTexture, "downfall", "Downfall Team", "A very evil Expansion.", settingsPanel);
 
