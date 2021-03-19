@@ -1,6 +1,7 @@
 package slimebound.characters;
 
 import com.megacrit.cardcrawl.helpers.*;
+import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
@@ -79,7 +80,7 @@ public class SlimeboundCharacter extends CustomPlayer {
 
     public SlimeboundCharacter(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "slimeboundResources/SlimeboundImages/char/orb/vfx.png", (String)null, (String)null);
-        if(!reskinContent.slimeReskinAnimation){
+        if(!CharacterSelectScreenPatches.characters[1].reskinAnimation){
         this.initializeClass(null,
                 "slimeboundResources/SlimeboundImages/char/shoulder.png",
                 "slimeboundResources/SlimeboundImages/char/shoulderR.png",
@@ -161,7 +162,7 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if(reskinContent.slimeReskinAnimation && reskinContent.slimeReskinUnlock){
+        if(CharacterSelectScreenPatches.characters[1].reskinAnimation && CharacterSelectScreenPatches.characters[1].reskinUnlock){
             this.loadAnimation(currentAtlas2, this.currentJson2, renderscale);
         }else {
             this.loadAnimation(atlasURL, this.currentJson, renderscale);

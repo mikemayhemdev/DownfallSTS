@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.SlimeAnimListener;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 
 
@@ -37,7 +38,7 @@ public class DoubleSlimeParticle extends com.megacrit.cardcrawl.vfx.AbstractGame
     private float y;
 
     public DoubleSlimeParticle(AbstractPlayer p) {
-        if(!reskinContent.slimeReskinAnimation){
+        if(!CharacterSelectScreenPatches.characters[1].reskinAnimation){
             this.atlas = new TextureAtlas(Gdx.files.internal("slimeboundResources/SlimeboundImages/char/skeleton.atlas"));
             SkeletonJson json = new SkeletonJson(this.atlas);
 

@@ -108,7 +108,7 @@
            if (this.particleTimer < 0.0F) {
                CharacterSelectScreenPatches.char_effectsQueue.add(new PortraitGhostlyFireEffect(this.x + oX + this.effect.y * 2.0F, this.y + oY + this.effect.y * 2.0F, this.scale));
              
-             this.particleTimer = 0.12F/(float)reskinContent.portraitAnimationType;
+             this.particleTimer = 0.12F/(float)CharacterSelectScreenPatches.characters[2].portraitAnimationType;
            } 
          } 
        } else {
@@ -117,7 +117,7 @@
          if (this.particleTimer < 0.0F) {
              CharacterSelectScreenPatches.char_effectsQueue.add(new PortraitGhostlyWeakFireEffect(this.x + oX + this.effect.y * 2.0F, this.y + oY + this.effect.y * 2.0F, this.scale));
 
-           this.particleTimer = 0.12F/(float)reskinContent.portraitAnimationType;
+           this.particleTimer = 0.12F/(float)CharacterSelectScreenPatches.characters[2].portraitAnimationType;
          } 
        } 
      } else {

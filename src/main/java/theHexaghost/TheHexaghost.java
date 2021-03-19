@@ -1,6 +1,7 @@
 package theHexaghost;
 
 import com.megacrit.cardcrawl.helpers.*;
+import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
@@ -76,7 +77,7 @@ public class TheHexaghost extends CustomPlayer {
 
     public TheHexaghost(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "hexamodResources/images/char/mainChar/orb/vfx.png", (String)null, (String)null);
-        if(!reskinContent.hexaghostReskinAnimation) {
+        if(!CharacterSelectScreenPatches.characters[2].reskinAnimation) {
             initializeClass(null,
                     SHOULDER1,
                     SHOULDER2,
@@ -108,7 +109,7 @@ public class TheHexaghost extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if(reskinContent.hexaghostReskinAnimation && reskinContent.hexaghostReskinUnlock){
+        if(CharacterSelectScreenPatches.characters[2].reskinAnimation && CharacterSelectScreenPatches.characters[1].reskinUnlock){
             this.loadAnimation(atlasURL2, this.jsonURL2, renderscale2);
         }else {
             this.loadAnimation(atlasURL, this.jsonURL, renderscale);

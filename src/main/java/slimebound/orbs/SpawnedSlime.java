@@ -30,6 +30,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import reskinContent.patches.CharacterSelectScreenPatches;
 import slimebound.SlimeboundMod;
 import slimebound.cards.SplitGreed;
 import slimebound.cards.SplitScrap;
@@ -151,7 +152,7 @@ public abstract class SpawnedSlime
     public SpawnedSlime(String ID, Color projectileColor, String atlasString, String skeletonString, boolean medScale, boolean alt, int passive, int initialBoost, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage) {
 
         this.scale = scale * .85F;
-        if(!reskinContent.slimeReskinAnimation){
+        if(!CharacterSelectScreenPatches.characters[1].reskinAnimation){
             this.modelColor = modelColor;
 
             this.atlas = new TextureAtlas(Gdx.files.internal(atlasString));
@@ -189,7 +190,7 @@ public abstract class SpawnedSlime
 
 
         SkeletonData skeletonData ;
-        if(!reskinContent.slimeReskinAnimation){
+        if(!CharacterSelectScreenPatches.characters[1].reskinAnimation){
             skeletonData = json.readSkeletonData(Gdx.files.internal(skeletonString));
         }else {
             skeletonData = json.readSkeletonData(Gdx.files.internal(skeletonMap.get(ID)+".json"));

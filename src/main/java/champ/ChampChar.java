@@ -66,23 +66,6 @@ public class ChampChar extends CustomPlayer {
 
     public ChampChar(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "champResources/images/char/mainChar/orb/vfx.png", (String)null, (String)null);
-
-        /*
-        if(!reskinContent.hexaghostReskinAnimation) {
-
-        }else {
-            if(reskinContent.hexaghostMask){
-            initializeClass(null,
-                    "reskinContent/img/HexaghostMod/shoulder2.png",
-                    "reskinContent/img/HexaghostMod/shoulder.png",
-                    CORPSE,
-                    getLoadout(), -15.0F, 0.0F, 450.0F, 450.0F, new EnergyManager(3));
-
-            }else {
-
-            }
-        }
-        */
         initializeClass(null,
                 SHOULDER1,
                 SHOULDER2,

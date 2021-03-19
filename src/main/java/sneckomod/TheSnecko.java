@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import sneckomod.cards.Defend;
 import sneckomod.cards.SnekBite;
@@ -56,7 +57,7 @@ public class TheSnecko extends CustomPlayer {
     public TheSnecko(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "sneckomodResources/images/char/orb/vfx.png", (String)null, (String)null);
 
-        if (!reskinContent.sneckoReskinAnimation) {
+        if (!CharacterSelectScreenPatches.characters[3].reskinAnimation) {
             initializeClass(null,
                     SHOULDER1,
                     SHOULDER2,
@@ -77,7 +78,7 @@ public class TheSnecko extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if (reskinContent.sneckoReskinAnimation && reskinContent.sneckoReskinUnlock) {
+        if (CharacterSelectScreenPatches.characters[3].reskinAnimation&& CharacterSelectScreenPatches.characters[1].reskinUnlock) {
             loadAnimation("reskinContent/img/SneckoMod/animation/Snecko_waifu.atlas", "reskinContent/img/SneckoMod/animation/Snecko_waifu.json", renderscale);
         } else {
             loadAnimation("sneckomodResources/images/char/skeleton.atlas", "sneckomodResources/images/char/skeleton.json", renderscale);
