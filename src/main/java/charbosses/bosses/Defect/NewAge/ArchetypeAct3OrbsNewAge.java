@@ -66,7 +66,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
         addRelic(new CBR_DataDisk());
         addRelic(new CBR_Lantern());
         addRelic(new CBR_FossilizedHelix());
-        addRelic(new CBR_PhilosopherStone());
+        addRelic(new CBR_CoffeeDripper());
 
     }
 
