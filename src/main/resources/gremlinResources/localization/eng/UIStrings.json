@@ -50,5 +50,10 @@
       "Gremlin Art Mode",
       "Gremlins invade the card frames. Only impacts aesthetics. Might make finding synergies easier."
     ]
+  },
+  "Gremlin:BonusGold": {
+    "TEXT": [
+       " Gold (Bonus)"
+    ]
   }
 }

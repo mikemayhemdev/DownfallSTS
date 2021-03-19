@@ -27,7 +27,7 @@ public class CowerChoice extends AbstractGremlinCard {
     private static final AbstractCard.CardRarity RARITY = CardRarity.SPECIAL;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.NONE;
 
-    private static final int COST = 0;
+    private static final int COST = -2;
 
     public CowerChoice()
     {
