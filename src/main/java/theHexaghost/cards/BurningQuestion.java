@@ -19,6 +19,7 @@ public class BurningQuestion extends AbstractHexaCard {
         baseBlock = 10;
         baseMagicNumber = magicNumber = 8;
         isMultiDamage = true;
+        isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

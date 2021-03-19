@@ -1,11 +1,13 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
+import slimebound.SlimeboundMod;
 
 public class ShadowStrike extends AbstractHexaCard {
 
@@ -25,7 +27,8 @@ public class ShadowStrike extends AbstractHexaCard {
         isEthereal = true;
         tags.add(CardTags.STRIKE);
         this.parent = parent;
-        cardsToPreview = new NightmareStrike();
+        if (parent != null)
+            cardsToPreview = new NightmareStrike();
     }
 
     public ShadowStrike() {
@@ -34,11 +37,14 @@ public class ShadowStrike extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
+        SlimeboundMod.logger.info("Parent null:" + (parent != null));
+        SlimeboundMod.logger.info("Parent exhausted:" + (parent != null && p.exhaustPile.contains(parent)));
         atb(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
                 if (parent != null && p.exhaustPile.contains(parent)) {
+                    SlimeboundMod.logger.info("parent in discard");
                     att(new AbstractGameAction() {
                         @Override
                         public void update() {
@@ -47,6 +53,7 @@ public class ShadowStrike extends AbstractHexaCard {
                             AbstractDungeon.effectsQueue.add(new ShowCardAndAddToDiscardEffect(parent.makeSameInstanceOf()));
                         }
                     });
+                    att(new MakeTempCardInDiscardAction(parent, 1));
                 }
             }
         });

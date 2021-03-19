@@ -29,7 +29,7 @@ public class NightmareGuise extends AbstractHexaCard {
     @Override
     public void triggerOnExhaust() {
         superFlash(Color.PURPLE);
-        AbstractCard q = new ShadowGuise();
+        AbstractCard q = new ShadowGuise(this);
         if (upgraded) q.upgrade();
         atb(new MakeTempCardInHandAction(q));
     }
