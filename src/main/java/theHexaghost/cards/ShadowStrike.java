@@ -21,7 +21,7 @@ public class ShadowStrike extends AbstractHexaCard {
     private AbstractCard parent;
 
     public ShadowStrike(AbstractCard parent) {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
+        super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = DAMAGE;
         exhaust = true;
         isEthereal = true;
@@ -35,16 +35,18 @@ public class ShadowStrike extends AbstractHexaCard {
         this(null);
     }
 
+    public void setParent(AbstractCard parent) {
+        this.parent = parent;
+        cardsToPreview = new NightmareStrike();
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
-        SlimeboundMod.logger.info("Parent null:" + (parent != null));
-        SlimeboundMod.logger.info("Parent exhausted:" + (parent != null && p.exhaustPile.contains(parent)));
         atb(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
                 if (parent != null && p.exhaustPile.contains(parent)) {
-                    SlimeboundMod.logger.info("parent in discard");
                     att(new AbstractGameAction() {
                         @Override
                         public void update() {
@@ -53,10 +55,39 @@ public class ShadowStrike extends AbstractHexaCard {
                             AbstractDungeon.effectsQueue.add(new ShowCardAndAddToDiscardEffect(parent.makeSameInstanceOf()));
                         }
                     });
-                    att(new MakeTempCardInDiscardAction(parent, 1));
                 }
             }
         });
+    }
+
+    @Override
+    public AbstractCard makeStatEquivalentCopy() {
+        ShadowStrike card = (ShadowStrike) this.makeCopy();
+
+        for(int i = 0; i < this.timesUpgraded; ++i) {
+            card.upgrade();
+        }
+
+        card.name = this.name;
+        card.target = this.target;
+        card.upgraded = this.upgraded;
+        card.timesUpgraded = this.timesUpgraded;
+        card.baseDamage = this.baseDamage;
+        card.baseBlock = this.baseBlock;
+        card.baseMagicNumber = this.baseMagicNumber;
+        card.cost = this.cost;
+        card.costForTurn = this.costForTurn;
+        card.isCostModified = this.isCostModified;
+        card.isCostModifiedForTurn = this.isCostModifiedForTurn;
+        card.inBottleLightning = this.inBottleLightning;
+        card.inBottleFlame = this.inBottleFlame;
+        card.inBottleTornado = this.inBottleTornado;
+        card.isSeen = this.isSeen;
+        card.isLocked = this.isLocked;
+        card.misc = this.misc;
+        card.freeToPlayOnce = this.freeToPlayOnce;
+        card.setParent(this.parent);
+        return card;
     }
 
     public void upgrade() {
