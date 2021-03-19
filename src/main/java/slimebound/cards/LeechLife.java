@@ -41,6 +41,8 @@ public class LeechLife extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         this.baseDamage = 12;
         this.exhaust = true;
+        this.baseMagicNumber = 12;
+        this.magicNumber = this.baseMagicNumber;
         tags.add(CardTags.HEALING);
     }
 
@@ -57,6 +59,7 @@ public class LeechLife extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
         if (x>0) {
+            x = Math.min(x, magicNumber);
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new LeechEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY, x, new Color(0.75F, 0F, 0F, 1F)), 0.15F));
             AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player, AbstractDungeon.player, x));
         }
@@ -72,6 +75,7 @@ public class LeechLife extends AbstractSlimeboundCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeDamage(6);
+            upgradeMagicNumber(6);
         }
     }
 }

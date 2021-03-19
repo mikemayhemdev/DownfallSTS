@@ -273,7 +273,7 @@
   },
   "Slimebound:LeechLife": {
     "NAME": "Leech Life",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Consume - Heal HP equal to the enemy's slimeboundmod:Goop. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Consume - Heal HP equal to the enemy's slimeboundmod:Goop, up to !M!. NL Exhaust."
   },
   "Slimebound:Equalize": {
     "NAME": "Equalize",

@@ -39,7 +39,7 @@
     "NAME": "Recycler",
     "FLAVOR": "One day, it shall be recycled too.",
     "DESCRIPTIONS": [
-      "The first time an #yEthereal card is #yExhausted each combat, add a copy to your hand that costs #b0 until played."
+      "The first time an non-Status and non-Curse #yEthereal card is #yExhausted each combat, add a copy to your hand that costs #b0 until played."
     ]
   },
   "hexamod:MatchstickCase": {

@@ -73,7 +73,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
                     c.energyGeneratedIfPlayed = 2;
                     addToList(cardsList, c, extraUpgrades);
                     addToList(cardsList, new EnConjurBlade());
-                    addToList(cardsList, new EnEmptyBody());    //Not played
+                    addToList(cardsList, new EnSanctity());    //Not played
                     turn++;
                     break;
                 case 3:
@@ -104,7 +104,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
                     break;
                 case 1:
                     addToList(cardsList, new EnExpunger());     //Big Attack
-                    addToList(cardsList, new EnEmptyBody());    //Exit Divinity
+                    addToList(cardsList, new EnSanctity());    //Exit Divinity
                     addToList(cardsList, new EnShame());
                     turn++;
                     break;
