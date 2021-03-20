@@ -128,7 +128,7 @@
       "Upon pickup, raise all your Gremlins' Max HP by #b",
       "When adding cards into your deck, you may raise all your Gremlins' Max HP by #b1 instead.",
       " #yGold. NL Raise all your Gremlins' Max HP by #b",
-      "At the end of combat, raise all your Gremlins' Max HP by #b1.",
+      "At the end of every 5th combat, raise all your Gremlins' Max HP by #b1.",
       "+1 Max HP"
     ]
   }
