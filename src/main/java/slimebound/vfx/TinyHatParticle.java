@@ -27,7 +27,7 @@ public class TinyHatParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffe
 
     public TinyHatParticle(AbstractPlayer p) {
         this.duration = 0.05F;
-        if(!CharacterSelectScreenPatches.characters[1].reskinAnimation){
+        if(CharacterSelectScreenPatches.characters[1].reskinCount <= 0){
             this.img = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/relics/tinybowlerhatinverted.png");
             W = img.getWidth();
             H = img.getHeight();

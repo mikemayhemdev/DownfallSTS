@@ -126,7 +126,6 @@ public class reskinContent implements
             config.setBool(CardCrawlGame.saveSlot + "hexaghostMask", hexaghostMask);
 
             for (int i = 0; i <= characters.length - 1; i++) {
-                config.setBool(CardCrawlGame.saveSlot + "ReskinAnimation" + i, characters[i].reskinAnimation);
                 config.setBool(CardCrawlGame.saveSlot + "ReskinUnlock" + i, characters[i].reskinUnlock);
                 config.setInt(CardCrawlGame.saveSlot + "portraitAnimationType" + i, characters[i].portraitAnimationType);
             }
@@ -148,7 +147,6 @@ public class reskinContent implements
             hexaghostMask = config.getBool(CardCrawlGame.saveSlot + "hexaghostMask");
 
             for (int i = 0; i <= characters.length - 1; i++) {
-                characters[i].reskinAnimation = config.getBool(CardCrawlGame.saveSlot + "ReskinAnimation" + i);
                 characters[i].reskinUnlock = config.getBool(CardCrawlGame.saveSlot + "ReskinUnlock" + i);
 
 

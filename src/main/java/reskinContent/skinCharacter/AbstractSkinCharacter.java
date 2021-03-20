@@ -28,7 +28,7 @@ public abstract class AbstractSkinCharacter {
     public String ID = "";
     public String NAME = "";
 
-    public boolean reskinAnimation = false;
+
     public boolean reskinUnlock = false;
     public int portraitAnimationType = 0;
 
@@ -79,11 +79,9 @@ public abstract class AbstractSkinCharacter {
     public Texture updateBgImg() {
         switch (reskinCount) {
             case 0:
-                reskinAnimation = false;
                 reskinContent.saveSettings();
                 return original_IMG;
             case 1:
-                reskinAnimation = true;
                 reskinContent.saveSettings();
                 if (portraitAnimationType == 0) {
                     return portrait_waifu;
@@ -97,13 +95,8 @@ public abstract class AbstractSkinCharacter {
 
 
     public void InitializeReskinCount() {
-        if (this.reskinAnimation) {
-            if (this.reskinCount < 1)
-                this.reskinCount = 1;
-        } else {
             if (this.reskinCount < 0)
                 this.reskinCount = 0;
-        }
     }
 
     public void render(SpriteBatch sb){
@@ -140,6 +133,10 @@ public abstract class AbstractSkinCharacter {
 
     public void clearOrbs(){
 
+    }
+
+    public Boolean isOriginal(){
+        return this.reskinCount <= 0;
     }
 
 }

@@ -186,11 +186,12 @@ public class CharacterSelectScreenPatches {
                             }
                             if (characters[i].reskinUnlock) {
                                 FontHelper.renderFontCentered(sb, FontHelper.losePowerFont, TEXT[0], Settings.WIDTH / 2.0F - reskinX_center + allTextInfoX, 850.0F * Settings.scale, Settings.GOLD_COLOR.cpy());
+
+                                if(characters[i].reskinCount >0)
                                 FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, characters[i].NAME, Settings.WIDTH / 2.0F - reskinX_center + allTextInfoX, 800.0F * Settings.scale, Settings.GOLD_COLOR.cpy());
-
+                                else
+                                FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, TEXT[1], Settings.WIDTH / 2.0F - reskinX_center + allTextInfoX, 800.0F * Settings.scale, Settings.GOLD_COLOR.cpy());
                             }
-
-
                         }
                     }
                 }

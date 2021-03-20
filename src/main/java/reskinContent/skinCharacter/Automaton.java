@@ -10,6 +10,7 @@
 
 
     public Automaton() {
+        super();
         this.original_IMG = ImageMaster.loadImage("bronzeResources/images/charSelect/charBG.png");
         this.portrait_waifu =  ImageMaster.loadImage(reskinContent.assetPath("img/BronzeMod/portrait_waifu.png"));
         this.portrait_waifu2 =  ImageMaster.loadImage(reskinContent.assetPath("img/BronzeMod/portrait_waifu2.png"));

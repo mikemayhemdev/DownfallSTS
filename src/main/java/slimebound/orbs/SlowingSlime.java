@@ -45,7 +45,7 @@ public class SlowingSlime
         this.antennae = new AntennaeParticle(this);
         this.stopwatch = new StopwatchParticle(this);
 
-        if(!CharacterSelectScreenPatches.characters[1].reskinAnimation){
+        if(CharacterSelectScreenPatches.characters[1].isOriginal()){
         AbstractDungeon.effectList.add(this.antennae);
         AbstractDungeon.effectList.add(this.stopwatch);
         }
@@ -71,7 +71,7 @@ public class SlowingSlime
     }
 
     public void cleanUpVFX() {
-        if(!CharacterSelectScreenPatches.characters[1].reskinAnimation){
+        if(CharacterSelectScreenPatches.characters[1].isOriginal()){
             if (this.stopwatch != null) {
                 this.stopwatch.finish();
                 this.antennae.finish();

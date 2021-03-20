@@ -35,6 +35,7 @@ public class SSSSnecko extends AbstractSkinCharacter {
     private static float sneckoWaifuY = 0.0f;
 
     public SSSSnecko() {
+        super();
         this.original_IMG = ImageMaster.loadImage("sneckomodResources/images/charSelect/portrait.png");
         this.portrait_waifu = ImageMaster.loadImage(reskinContent.assetPath("img/SneckoMod/portrait_waifu.png"));
         this.portrait_waifu2 = ImageMaster.loadImage(reskinContent.assetPath("img/SneckoMod/portrait_waifu2.png"));

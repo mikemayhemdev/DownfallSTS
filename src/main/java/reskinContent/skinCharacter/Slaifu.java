@@ -31,6 +31,7 @@
      private static boolean slimeHitSFX = false;
 
     public Slaifu() {
+        super();
         this.original_IMG = ImageMaster.loadImage(SlimeboundMod.getResourcePath("charSelect/portrait.png"));
         this.portrait_waifu =  ImageMaster.loadImage(reskinContent.assetPath("img/Slimebound/portrait_waifu.png"));
         this.portrait_waifu2 =  ImageMaster.loadImage(reskinContent.assetPath("img/Slimebound/portrait_waifu2.png"));

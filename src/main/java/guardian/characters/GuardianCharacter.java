@@ -83,7 +83,7 @@ public class GuardianCharacter extends CustomPlayer {
 //        super(name, setClass, orbTextures, "guardianResources/GuardianImages/char/orb/vfx.png", (String)null, (String)null);
         super(name, setClass, new EnergyOrbGuardian(orbTextures,"guardianResources/GuardianImages/char/orb/vfx.png"), (String)null, (String)null);
 
-        if(!CharacterSelectScreenPatches.characters[0].reskinAnimation){
+        if(CharacterSelectScreenPatches.characters[0].isOriginal()){
         this.initializeClass(null,
                 "guardianResources/GuardianImages/char/shoulder.png",
                 "guardianResources/GuardianImages/char/shoulderR.png",
@@ -126,7 +126,7 @@ public class GuardianCharacter extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if(CharacterSelectScreenPatches.characters[0].reskinAnimation && CharacterSelectScreenPatches.characters[0].reskinUnlock){
+        if(!CharacterSelectScreenPatches.characters[0].isOriginal() && CharacterSelectScreenPatches.characters[0].reskinUnlock){
             this.loadAnimation(atlasURL2, this.currentJson2, renderscale2);
         }else {
             this.loadAnimation(atlasURL, this.currentJson, renderscale);
@@ -148,7 +148,7 @@ public class GuardianCharacter extends CustomPlayer {
         orbScaleFinal = 0.7f;
         if (!inShattered) {
             if (!inDefensive) {
-                if(!CharacterSelectScreenPatches.characters[0].reskinAnimation){
+                if(CharacterSelectScreenPatches.characters[0].isOriginal()){
 
                     this.stateData.setMix("idle", "defensive", 0.2F);
                     this.state.setTimeScale(.75F);
@@ -187,7 +187,7 @@ public class GuardianCharacter extends CustomPlayer {
         orbScaleFinal = 1.0f;
         if (!inShattered) {
             if (inDefensive) {
-                if(!CharacterSelectScreenPatches.characters[0].reskinAnimation){
+                if(CharacterSelectScreenPatches.characters[0].isOriginal()){
                     CardCrawlGame.sound.playA("GUARDIAN_ROLL_UP", .25F);
                     this.stateData.setMix("defensive", "idle", 0.2F);
                     this.state.setTimeScale(.75F);

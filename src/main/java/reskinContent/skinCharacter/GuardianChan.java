@@ -17,6 +17,7 @@
      private static boolean guardianWhirl_played = false;
 
     public GuardianChan() {
+        super();
         this.original_IMG = ImageMaster.loadImage(GuardianMod.getResourcePath("charSelect/portrait.png"));
         this.portrait_waifu =  ImageMaster.loadImage(reskinContent.assetPath("img/GuardianMod/portrait_waifu.png"));
         this.portrait_waifu2 =  ImageMaster.loadImage(reskinContent.assetPath("img/GuardianMod/portrait_waifu2.png"));

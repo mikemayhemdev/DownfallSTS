@@ -38,6 +38,7 @@ public class Hexago extends AbstractSkinCharacter {
 
 
     public Hexago() {
+        super();
         this.original_IMG = ImageMaster.loadImage("hexamodResources/images/charSelect/charBG.png");
         this.portrait_waifu = ImageMaster.loadImage(reskinContent.assetPath("img/HexaghostMod/portrait_waifu.png"));
         this.portrait_waifu2 = ImageMaster.loadImage(reskinContent.assetPath("img/HexaghostMod/portrait_waifu2.png"));
@@ -91,11 +92,9 @@ public class Hexago extends AbstractSkinCharacter {
     public Texture updateBgImg() {
         switch (reskinCount) {
             case 0:
-                reskinAnimation = false;
                 reskinContent.saveSettings();
                 return original_IMG;
             case 1:
-                reskinAnimation = true;
                 reskinContent.saveSettings();
                 if (portraitAnimationType == 0) {
                     if (hexaghostMask_switch) {

@@ -80,7 +80,7 @@ public class SlimeboundCharacter extends CustomPlayer {
 
     public SlimeboundCharacter(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "slimeboundResources/SlimeboundImages/char/orb/vfx.png", (String)null, (String)null);
-        if(!CharacterSelectScreenPatches.characters[1].reskinAnimation){
+        if(CharacterSelectScreenPatches.characters[1].isOriginal()){
         this.initializeClass(null,
                 "slimeboundResources/SlimeboundImages/char/shoulder.png",
                 "slimeboundResources/SlimeboundImages/char/shoulderR.png",
@@ -162,7 +162,7 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if(CharacterSelectScreenPatches.characters[1].reskinAnimation && CharacterSelectScreenPatches.characters[1].reskinUnlock){
+        if(!CharacterSelectScreenPatches.characters[1].isOriginal() && CharacterSelectScreenPatches.characters[1].reskinUnlock){
             this.loadAnimation(currentAtlas2, this.currentJson2, renderscale);
         }else {
             this.loadAnimation(atlasURL, this.currentJson, renderscale);

@@ -57,7 +57,7 @@ public class TheSnecko extends CustomPlayer {
     public TheSnecko(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "sneckomodResources/images/char/orb/vfx.png", (String)null, (String)null);
 
-        if (!CharacterSelectScreenPatches.characters[3].reskinAnimation) {
+        if (CharacterSelectScreenPatches.characters[3].isOriginal()) {
             initializeClass(null,
                     SHOULDER1,
                     SHOULDER2,
@@ -78,7 +78,7 @@ public class TheSnecko extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if (CharacterSelectScreenPatches.characters[3].reskinAnimation&& CharacterSelectScreenPatches.characters[1].reskinUnlock) {
+        if (CharacterSelectScreenPatches.characters[3].isOriginal() && CharacterSelectScreenPatches.characters[1].reskinUnlock) {
             loadAnimation("reskinContent/img/SneckoMod/animation/Snecko_waifu.atlas", "reskinContent/img/SneckoMod/animation/Snecko_waifu.json", renderscale);
         } else {
             loadAnimation("sneckomodResources/images/char/skeleton.atlas", "sneckomodResources/images/char/skeleton.json", renderscale);

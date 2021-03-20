@@ -10,6 +10,7 @@
 
 
     public ChampSister() {
+        super();
         this.original_IMG = ImageMaster.loadImage("champResources/images/charSelect/charBG.png");
         this.portrait_waifu =  ImageMaster.loadImage(reskinContent.assetPath("img/ChampMod/portrait_waifu.png"));
         this.portrait_waifu2 =  ImageMaster.loadImage(reskinContent.assetPath("img/ChampMod/portrait_waifu2.png"));

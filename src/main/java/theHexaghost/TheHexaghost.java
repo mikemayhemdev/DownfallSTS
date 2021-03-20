@@ -77,7 +77,7 @@ public class TheHexaghost extends CustomPlayer {
 
     public TheHexaghost(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "hexamodResources/images/char/mainChar/orb/vfx.png", (String)null, (String)null);
-        if(!CharacterSelectScreenPatches.characters[2].reskinAnimation) {
+        if(CharacterSelectScreenPatches.characters[2].isOriginal()) {
             initializeClass(null,
                     SHOULDER1,
                     SHOULDER2,
@@ -109,7 +109,7 @@ public class TheHexaghost extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if(CharacterSelectScreenPatches.characters[2].reskinAnimation && CharacterSelectScreenPatches.characters[1].reskinUnlock){
+        if(CharacterSelectScreenPatches.characters[2].isOriginal() && CharacterSelectScreenPatches.characters[1].reskinUnlock){
             this.loadAnimation(atlasURL2, this.jsonURL2, renderscale2);
         }else {
             this.loadAnimation(atlasURL, this.jsonURL, renderscale);
