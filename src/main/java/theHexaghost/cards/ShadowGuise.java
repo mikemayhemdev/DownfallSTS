@@ -52,7 +52,6 @@ public class ShadowGuise extends AbstractHexaCard {
                             AbstractDungeon.effectsQueue.add(new ShowCardAndAddToDiscardEffect(parent.makeSameInstanceOf()));
                         }
                     });
-                    atb(new MakeTempCardInDiscardAction(parent, 1));
                 }
             }
         });
