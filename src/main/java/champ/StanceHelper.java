@@ -64,11 +64,13 @@ public class StanceHelper {
 
     public static String getStanceTechnique() {
         if (AbstractDungeon.player.stance instanceof BerserkerStance) {
-            return ChampChar.characterStrings.TEXT[10] + BerserkerStance.amount() + ChampChar.characterStrings.TEXT[55];
+            return ChampChar.characterStrings.TEXT[12] + BerserkerStance.amount() + ChampChar.characterStrings.TEXT[46];
         } else if (AbstractDungeon.player.stance instanceof DefensiveStance) {
             return ChampChar.characterStrings.TEXT[12] + DefensiveStance.amount() + ChampChar.characterStrings.TEXT[47];
         } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
-            return ChampChar.characterStrings.TEXT[19] + BerserkerStance.amount() + ChampChar.characterStrings.TEXT[58] + DefensiveStance.amount() + ChampChar.characterStrings.TEXT[59];
+
+            return ChampChar.characterStrings.TEXT[12] + BerserkerStance.amount() + ChampChar.characterStrings.TEXT[46] + " NL " +
+             ChampChar.characterStrings.TEXT[12] + DefensiveStance.amount() + ChampChar.characterStrings.TEXT[47];
         } else if (AbstractDungeon.player instanceof ChampChar) {
             return ChampChar.characterStrings.TEXT[6];
         }
@@ -81,7 +83,8 @@ public class StanceHelper {
         } else if (AbstractDungeon.player.stance instanceof DefensiveStance) {
             return ChampChar.characterStrings.TEXT[12] + DefensiveStance.finisherAmount() + ChampChar.characterStrings.TEXT[56];
         } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
-            return ChampChar.characterStrings.TEXT[20] + DefensiveStance.finisherAmount() + ChampChar.characterStrings.TEXT[60];
+            return ChampChar.characterStrings.TEXT[11] + " NL " +
+                    ChampChar.characterStrings.TEXT[12] + DefensiveStance.finisherAmount() + ChampChar.characterStrings.TEXT[56];
         } else if (AbstractDungeon.player instanceof ChampChar) {
             return ChampChar.characterStrings.TEXT[6];
         }
@@ -123,8 +126,8 @@ public class StanceHelper {
                                 t = BaseMod.getKeywordTitle("champ:counter");
                                 d = BaseMod.getKeywordDescription("champ:counter");
                             } else if (AbstractDungeon.player.stance instanceof BerserkerStance) {
-                                t = BaseMod.getKeywordTitle("champ:fatigue");
-                                d = BaseMod.getKeywordDescription("champ:fatigue");
+                                t = BaseMod.getKeywordTitle("vigor");
+                                d = BaseMod.getKeywordDescription("vigor");
                             }
                             if (!t.equals("ERROR")) {
                                 if ((float) InputHelper.mX < 1400.0F * Settings.scale) {
@@ -148,8 +151,8 @@ public class StanceHelper {
                             String t = "ERROR";
                             String d = "ERROR2";
                             if (AbstractDungeon.player.stance instanceof BerserkerStance) {
-                                t = BaseMod.getKeywordTitle("champ:fatigue");
-                                d = BaseMod.getKeywordDescription("champ:fatigue");
+                                t = BaseMod.getKeywordTitle("vigor");
+                                d = BaseMod.getKeywordDescription("vigor");
                             }
                             if (!t.equals("ERROR")) {
                                 if ((float) InputHelper.mX < 1400.0F * Settings.scale) {

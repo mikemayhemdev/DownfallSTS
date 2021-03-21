@@ -2,6 +2,7 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.powers.FocusedDefPower;
+import champ.util.OnFinisherSubscriber;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
@@ -18,6 +19,7 @@ public class FocusedDefense extends AbstractChampCard {
         this.tags.add(ChampMod.OPENERDEFENSIVE);
         baseBlock = 10;
         tags.add(ChampMod.TECHNIQUE);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

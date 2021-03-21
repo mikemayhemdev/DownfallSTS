@@ -14,6 +14,7 @@ public class Riposte extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseDamage = 0;
         exhaust = true;
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -23,6 +23,7 @@ public class PerfectedStrike extends AbstractChampCard {
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(CardTags.STRIKE);
         tags.add(ChampMod.FINISHER);
+        postInit();
     }
 
     public void calculateCardDamage(AbstractMonster mo) {

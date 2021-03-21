@@ -46,7 +46,7 @@
     "NAME": "Sneaky Teakwood Match",
     "FLAVOR": "Lights on any surface!",
     "DESCRIPTIONS": [
-      "At the start of the first turn, #yhexamod:Ignite the #yhexamod:Active Ghostflame and #yhexamod:Advance."
+      "At the start of each combat, #yhexamod:Ignite the current Ghostflame and #yhexamod:Advance."
     ]
   },
   "hexamod:InflammatoryLetter": {
@@ -60,7 +60,7 @@
     "NAME": "Soul of Chaos",
     "FLAVOR": "Mayhem, made manifest.",
     "DESCRIPTIONS": [
-      "The second Searing Ghostflame becomes a Mayhem Ghostflame. NL Mayhem Ghostflame activates when you end your turn while it is active. NL Ignition: Play the top card of your draw pile."
+      "The second Searing Ghostflame becomes a Mayhem Ghostflame. NL Mayhem Ghostflame activates when you end your turn on it. NL Ignition: Play the top card of your draw pile."
     ]
   },
   "hexamod:JarOfFuel": {

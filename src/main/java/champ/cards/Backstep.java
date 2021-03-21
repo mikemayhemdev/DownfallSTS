@@ -1,11 +1,12 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.powers.ResolvePower;
+
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 
 public class Backstep extends AbstractChampCard {
 
@@ -21,14 +22,15 @@ public class Backstep extends AbstractChampCard {
         this.tags.add(ChampMod.OPENERDEFENSIVE);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         defenseOpen();
         blck();
         if (bcombo()) {
-            if (AbstractDungeon.player.hasPower(ResolvePower.POWER_ID)) {
-                int x = AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount;
+            if (AbstractDungeon.player.hasPower(VigorPower.POWER_ID)) {
+                int x = AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount;
                 atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, x));
             }
         }

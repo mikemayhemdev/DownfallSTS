@@ -53,45 +53,8 @@ public class ResolvePower extends AbstractPower implements CloneablePowerInterfa
     }
     */
 
-    @Override
-    public void onRemove() {
-        amount = 0;
-        equivStrCheck();
-    }
-
-    @Override
-    public void onInitialApplication() {
-        equivStrCheck();
-    }
-
-    @Override
-    public void stackPower(int stackAmount) {
-        if (AbstractDungeon.player.hasRelic(PowerArmor.ID))
-            if (amount + stackAmount > PowerArmor.CAP_RESOLVE_ETC)
-                stackAmount = (PowerArmor.CAP_RESOLVE_ETC - amount);
-        super.stackPower(stackAmount);
-        equivStrCheck();
-    }
-
-    public void equivStrCheck() {
-        if (adjustStrength) {
-            int x = amount / 10;
-            if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-                owner.getPower(StrengthPower.POWER_ID).amount += x - strengthGrantedByResolve;
-                if (owner.getPower(StrengthPower.POWER_ID).amount == 0)
-                    addToTop(new RemoveSpecificPowerAction(owner, owner, StrengthPower.POWER_ID));
-            } else {
-                if (x != 0)
-                    addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, x), x));
-            }
-            if (strengthGrantedByResolve != x) strengthGrantedByResolve = x;
-            if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID))
-                AbstractDungeon.player.getPower(StrengthPower.POWER_ID).updateDescription();
-        }
-    }
 
     public boolean renderOnHpBar = true;
-    public boolean adjustStrength = true;
 
     @Override
     public void onVictory() {

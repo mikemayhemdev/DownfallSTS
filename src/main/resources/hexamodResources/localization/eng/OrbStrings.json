@@ -3,11 +3,11 @@
     "NAME": "Searing Ghostflame",
     "DESCRIPTION": [
       "#yIgnited. ",
-	  "#yActive. #yIgnites when #b" ,
+	  "#yIgnites when #b" ,
 	  " #yAttack is played.",
 	  " #yAttacks are played.",
-	  "Inactive. #yIgnites when #b2 #yAttacks are played while #yActive.",
-	  " NL NL #yIgnition: When #yIgnited, apply #b",
+	  "#yIgnites when #b2 #yAttacks are played while on it.",
+	  " NL NL #yIgnition: Apply #b",
 	  " #ySoulburn to a random enemy.",
 	  " NL NL At the end of your turn, if this is #yIgnited, #yAdvance to the next Ghostflame."
     ]
@@ -16,11 +16,11 @@
     "NAME": "Crushing Ghostflame",
     "DESCRIPTION": [
       "#yIgnited. ",
-	  "#yActive. #yIgnites when #b" ,
+	  "#yIgnites when #b" ,
 	  " #ySkill is played.",
 	  " #ySkills are played.",
-	  "Inactive. #yIgnites when #b2 #ySkills are played while #yActive.",
-	  " NL NL #yIgnition: When #yIgnited, deal #b",
+	  "#yIgnites when #b2 #ySkills are played while on it.",
+	  " NL NL #yIgnition: Deal #b",
 	  " damage to a random enemy twice.",
 		" NL NL At the end of your turn, if this is #yIgnited, #yAdvance to the next Ghostflame."
     ]
@@ -29,9 +29,9 @@
     "NAME": "Bolstering Ghostflame",
     "DESCRIPTION": [
       "#yIgnited. ",
-	  "#yActive. #yIgnites when a #yPower is played.",
-	  "Inactive. #yIgnites when a #yPower is played while #yActive.",
-	  " NL NL #yIgnition: When #yIgnited, gain #b",
+	  "#yIgnites when a #yPower is played.",
+	  "#yIgnites when a #yPower is played while on it.",
+	  " NL NL #yIgnition: Gain #b",
 	  " #yBlock and #b1 #yStrength.",
 		" NL NL At the end of your turn, if this is #yIgnited, #yAdvance to the next Ghostflame."
     ]
@@ -40,13 +40,13 @@
     "NAME": "Inferno Ghostflame",
     "DESCRIPTION": [
       "#yIgnited. ",
-	  "#yActive. Ignites when spending [E] [E] [E] .",
-	  "#yActive. Ignites when spending [E] [E] .",
-	  "#yActive. Ignites when spending [E] .",
+	  "Ignites when spending [E] [E] [E] .",
+	  "Ignites when spending [E] [E] .",
+	  "Ignites when spending [E] .",
 	  "Error. Please report to mod dev: ",
-	  "Inactive. Ignites when spending [E] [E] [E] while #yActive.",
-	  " NL NL #yIgnition: When #yIgnited, deal #b",
-	  " damage to a random enemy for each #yIgnited #yGhostflame, then #yExtinguish them and gain #b1 #yIntensity. If this is #yActive, #yAdvance.",
+	  "Ignites when spending [E] [E] [E] while on it.",
+	  " NL NL #yIgnition: Deal #b",
+	  " damage to a random enemy for each #yIgnited #yGhostflame, then #yExtinguish them and gain #b1 #yIntensity. If on this flame, #yAdvance.",
 		" NL NL At the end of your turn, if this is #yIgnited, #yAdvance to the next Ghostflame."
     ]
   }, 
@@ -54,9 +54,9 @@
     "NAME": "Mayhem Ghostflame",
     "DESCRIPTION": [
       "#yIgnited. ",
-	  "#yActive. #yIgnites when you end your turn.",
-	  "Inactive. #yIgnites when you end your turn while this is #yActive.",
-	  " NL NL #yIgnition: When #yIgnited, play the top card of your draw pile.",
+	  "#yIgnites when you end your turn.",
+	  "#yIgnites when you end your turn on it.",
+	  " NL NL #yIgnition: Play the top card of your draw pile.",
 		" NL NL At the end of your turn, if this is #yIgnited, #yAdvance to the next Ghostflame."
     ]
   }

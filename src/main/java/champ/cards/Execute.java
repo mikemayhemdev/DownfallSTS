@@ -28,8 +28,9 @@ public class Execute extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = HP_LOSS;
         baseCool = cool = 2;
-        myHpLossCost = magicNumber;
+      //  myHpLossCost = magicNumber;
         tags.add(ChampMod.FINISHER);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -39,7 +40,6 @@ public class Execute extends AbstractChampCard {
         dmg(m, AbstractGameAction.AttackEffect.NONE);
         atb(new VFXAction(new GoldenSlashEffect(m.hb.cX - 30.0F * Settings.scale, m.hb.cY, true), 0.1F));
         dmg(m, AbstractGameAction.AttackEffect.NONE);
-        fatigue(magicNumber);
         finisher();
     }
 

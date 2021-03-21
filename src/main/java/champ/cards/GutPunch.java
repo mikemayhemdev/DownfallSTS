@@ -28,6 +28,7 @@ public class GutPunch extends AbstractChampCard {
         tags.add(ChampMod.OPENERBERSERKER);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

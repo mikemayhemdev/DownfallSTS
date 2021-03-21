@@ -42,7 +42,7 @@ public class ParanormalFormPower extends AbstractPower implements CloneablePower
     @Override
     public void onAfterCardPlayed(AbstractCard card) {
         super.onAfterCardPlayed(card);
-        if (card.isEthereal) {
+        if (card.hasTag(HexaMod.AFTERLIFE)) {
             flash();
             addToBot(new DamageRandomEnemyAction(new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
         }

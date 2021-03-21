@@ -17,6 +17,7 @@ public class ShieldSigil extends AbstractChampCard {
         tags.add(ChampMod.TECHNIQUE);
         //tags.add(ChampMod.OPENER);
         baseMagicNumber = magicNumber = 2;
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -27,16 +28,6 @@ public class ShieldSigil extends AbstractChampCard {
             techique();
         }
 
-    }
-
-    @Override
-    public void applyPowers() {
-        super.applyPowers();
-        if (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
-            this.myHpLossCost = BerserkerStance.amount() * magicNumber;
-        } else {
-            this.myHpLossCost = 0;
-        }
     }
 
     @Override

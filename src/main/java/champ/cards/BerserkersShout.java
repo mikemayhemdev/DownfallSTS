@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static champ.ChampMod.fatigue;
+import static champ.ChampMod.vigor;
 
 public class BerserkersShout extends AbstractChampCard {
 
@@ -23,13 +24,14 @@ public class BerserkersShout extends AbstractChampCard {
         tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERBERSERKER);
-        myHpLossCost = magicNumber;
+       // myHpLossCost = magicNumber;
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
         berserkOpen();
-        fatigue(magicNumber);
+        vigor(magicNumber);
         if (upgraded) upgradeAction(p,m);
     }
 

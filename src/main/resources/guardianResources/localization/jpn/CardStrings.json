@@ -290,7 +290,7 @@
   },
   "Guardian:BaubleBeam": {
     "NAME": "Bauble Beam",
-    "DESCRIPTION": "Deal !D! damage. NL Perform the following !M! times:"
+    "DESCRIPTION": "Deal !D! damage. NL Repeat !M! times:"
   },
   "Guardian:PrimingBeam": {
     "NAME": "Priming Beam",

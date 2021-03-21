@@ -23,6 +23,7 @@ public class ArenaPreparation extends AbstractChampCard {
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
         tags.add(ChampMod.TECHNIQUE);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

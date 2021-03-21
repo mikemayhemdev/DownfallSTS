@@ -22,11 +22,13 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
         isEthereal = true;
     }
 
-    public boolean canUpgrade() {
-        return false;
-    }
-
     public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            isEthereal = false;
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
+        }
     }
 
     @Override

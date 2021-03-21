@@ -1,10 +1,17 @@
 package champ.cards;
 
+import basemod.helpers.CardModifierManager;
+import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.cardmods.RetainCardMod;
+
+import java.util.ArrayList;
 
 public class HeavySlash extends AbstractChampCard {
 
@@ -20,46 +27,32 @@ public class HeavySlash extends AbstractChampCard {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-        //tags.add(ChampMod.FINISHER);
+       // tags.add(ChampMod.TECHNIQUE);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         //finisher();
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        //finisher();
+        ArrayList<AbstractCard> qCardList = new ArrayList<AbstractCard>();
+        for (AbstractCard t : CardLibrary.getAllCards()) {
+            if (!(t.cardID.equals(this.cardID)) && !UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.TECHNIQUE) && !(t.hasTag(CardTags.HEALING)))
+                qCardList.add(t);
+        }
+        AbstractCard c = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1)).makeStatEquivalentCopy();
+        c.isSeen = true;
+        UnlockTracker.markCardAsSeen(c.cardID);
+        c.modifyCostForCombat(-99);
+        if (upgraded) c.upgrade();
+        makeInHand(c);
+     //   techique();
     }
 
-    public int upgradeAmount() {
-        int x = 0;
-        for (AbstractCard q : AbstractDungeon.player.drawPile.group) {
-            if (q.upgraded) x++;
-        }
-        for (AbstractCard q : AbstractDungeon.player.discardPile.group) {
-            if (q.upgraded) x++;
-        }
-        for (AbstractCard q : AbstractDungeon.player.hand.group) {
-            if (q.upgraded) x++;
-        }
-        return x;
-    }
-
-    public void calculateCardDamage(AbstractMonster mo) {
-        int realBaseDamage = this.baseDamage;
-        this.baseDamage += this.magicNumber * upgradeAmount();
-        super.calculateCardDamage(mo);
-        this.baseDamage = realBaseDamage;
-        this.isDamageModified = this.damage != this.baseDamage;
-    }
-
-    public void applyPowers() {
-        int realBaseDamage = this.baseDamage;
-        this.baseDamage += this.magicNumber * upgradeAmount();
-        super.applyPowers();
-        this.baseDamage = realBaseDamage;
-        this.isDamageModified = this.damage != this.baseDamage;
-    }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        upgradeDamage(3);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
+
     }
 }
