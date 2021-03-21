@@ -75,15 +75,15 @@
   "downfall:NeowBlasphemersDemise": {
     "NAME": "Blasphemers Demise",
     "DESCRIPTIONS": [
-      "When Neow loses #b",
-      " more HP, she will be stopped from gaining #b10 #yStrength the next turn she uses a Buff.",
+      "Unless Neow loses #b",
+      " more HP, the next time she uses a Buff, she will gain #b10 additional #yStrength.",
       "Neow is crippled and will not gain additional #yStrength during her next Buff turn."
     ]
   },
   "downfall:WatcherDivinityPower": {
     "NAME": "Fleeting Faith",
     "DESCRIPTIONS": [
-      "Watcher gains #b1 Mantra whenever you play a card. NL Watcher loses #b5 Mantra at the start of her turn. NL Watcher's Divinity Stance is permanent."
+      "Watcher gains #b1 Mantra whenever you play a card. NL Watcher loses #b5 Mantra at the start of her turn. NL Watcher does not exit Divinity Stance at the end of her turn."
     ]
   },
   "downfall:NeowFleetingFaith": {

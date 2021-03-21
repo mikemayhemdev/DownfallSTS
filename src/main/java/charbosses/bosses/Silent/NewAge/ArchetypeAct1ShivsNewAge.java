@@ -63,7 +63,7 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
                     break;
                 case 1:
                     //Turn 2
-                    addToList(cardsList, new EnCloakAndDagger(), false);
+                    addToList(cardsList, new EnCloakAndDagger());
                     addToList(cardsList, new EnDefendGreen());
                     addToList(cardsList, new EnDefendGreen());  //Not played here
                     turn++;
