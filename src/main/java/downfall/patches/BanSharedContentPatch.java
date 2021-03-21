@@ -21,6 +21,10 @@ import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.cards.*;
 import expansioncontent.cards.deprecated.*;
 import expansioncontent.relics.StudyCardRelic;
+import gremlin.potions.WizPotion;
+import gremlin.relics.ImpeccablePecs;
+import gremlin.relics.PricklyShields;
+import gremlin.relics.SupplyScroll;
 import guardian.characters.GuardianCharacter;
 import guardian.potions.BlockOnCardUsePotion;
 import guardian.relics.BottledAnomaly;
@@ -96,6 +100,7 @@ public class BanSharedContentPatch {
                 AbstractDungeon.curseCardPool.removeCard(Haunted.ID);
                 AbstractDungeon.curseCardPool.removeCard(PrideStandard.ID);
                 AbstractDungeon.curseCardPool.removeCard(Malfunctioning.ID);
+                AbstractDungeon.curseCardPool.removeCard(Scatterbrained.ID);
 
                 AbstractDungeon.srcCurseCardPool.removeCard(Aged.ID);
                 AbstractDungeon.srcCurseCardPool.removeCard(Icky.ID);
@@ -103,6 +108,7 @@ public class BanSharedContentPatch {
                 AbstractDungeon.srcCurseCardPool.removeCard(Haunted.ID);
                 AbstractDungeon.srcCurseCardPool.removeCard(PrideStandard.ID);
                 AbstractDungeon.srcCurseCardPool.removeCard(Malfunctioning.ID);
+                AbstractDungeon.srcCurseCardPool.removeCard(Scatterbrained.ID);
             }
             if (AbstractDungeon.player instanceof SlimeboundCharacter) {
                 AbstractDungeon.colorlessCardPool.removeCard(PrepareCrush.ID);
@@ -160,6 +166,9 @@ public class BanSharedContentPatch {
                 AbstractDungeon.relicsToRemoveOnStart.add(DonusWashers.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(BronzeIdol.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(MakeshiftBattery.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(SupplyScroll.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(ImpeccablePecs.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(PricklyShields.ID);
             }
             if (EvilModeCharacterSelect.evilMode) {
                 AbstractDungeon.relicsToRemoveOnStart.add(Ectoplasm.ID);
@@ -182,6 +191,7 @@ public class BanSharedContentPatch {
                 PotionHelper.potions.remove(BlockOnCardUsePotion.POTION_ID);
                 PotionHelper.potions.remove(CounterstrikePotion.POTION_ID);
                 PotionHelper.potions.remove(BurnAndBuffPotion.POTION_ID);
+                PotionHelper.potions.remove(WizPotion.POTION_ID);
             }
             // Ban shared potions from other classes if you haven't played as that class before
             runLockedPotions.forEach((playerClass, potionIds) ->{

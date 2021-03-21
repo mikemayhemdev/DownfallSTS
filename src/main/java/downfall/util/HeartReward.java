@@ -26,6 +26,7 @@ import java.util.Iterator;
 import downfall.downfallMod;
 import downfall.events.HeartEvent;
 import downfall.relics.HeartsMalice;
+import gremlin.characters.GremlinCharacter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -46,6 +47,10 @@ public class HeartReward {
     private HeartReward.NeowRewardDrawbackDef drawbackDef;
 
     private String fleeText = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("Heart Event")).OPTIONS[5];
+    private String gremlinTextA = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("Heart Event")).OPTIONS[7];
+    private String gremlinTextB = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("Heart Event")).OPTIONS[8];
+    private String gremlinTextC = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("Heart Event")).OPTIONS[9];
+    private String gremlinTextD = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("Heart Event")).OPTIONS[10];
 
     public HeartReward(boolean firstMini) {
         this.drawback = HeartReward.NeowRewardDrawback.NONE;
@@ -57,7 +62,11 @@ public class HeartReward {
         if (firstMini) {
             reward = new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.THREE_ENEMY_KILL, fleeText);
         } else {
-            reward = new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.TEN_PERCENT_HP_BONUS, TEXT[7] + this.hp_bonus + " ]");
+            if (AbstractDungeon.player instanceof GremlinCharacter) {
+                reward = new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.TEN_PERCENT_HP_BONUS, gremlinTextA + this.hp_bonus + " ]");
+            } else {
+                reward = new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.TEN_PERCENT_HP_BONUS, TEXT[7] + this.hp_bonus + " ]");
+            }
         }
 
         this.optionLabel = this.optionLabel + reward.desc;
@@ -82,10 +91,15 @@ public class HeartReward {
 
     private ArrayList<HeartReward.NeowRewardDrawbackDef> getRewardDrawbackOptions() {
         ArrayList<HeartReward.NeowRewardDrawbackDef> drawbackOptions = new ArrayList();
-        drawbackOptions.add(new HeartReward.NeowRewardDrawbackDef(HeartReward.NeowRewardDrawback.TEN_PERCENT_HP_LOSS, TEXT[17] + this.hp_bonus + TEXT[18]));
+        if (AbstractDungeon.player instanceof GremlinCharacter) {
+            drawbackOptions.add(new HeartReward.NeowRewardDrawbackDef(HeartReward.NeowRewardDrawback.TEN_PERCENT_HP_LOSS, gremlinTextC + this.hp_bonus + TEXT[18]));
+            drawbackOptions.add(new HeartReward.NeowRewardDrawbackDef(HeartReward.NeowRewardDrawback.PERCENT_DAMAGE, gremlinTextD + AbstractDungeon.player.currentHealth / 10 * 3 + TEXT[29] + " "));
+        } else {
+            drawbackOptions.add(new HeartReward.NeowRewardDrawbackDef(HeartReward.NeowRewardDrawback.TEN_PERCENT_HP_LOSS, TEXT[17] + this.hp_bonus + TEXT[18]));
+            drawbackOptions.add(new HeartReward.NeowRewardDrawbackDef(HeartReward.NeowRewardDrawback.PERCENT_DAMAGE, TEXT[21] + AbstractDungeon.player.currentHealth / 10 * 3 + TEXT[29] + " "));
+        }
         drawbackOptions.add(new HeartReward.NeowRewardDrawbackDef(HeartReward.NeowRewardDrawback.NO_GOLD, TEXT[19]));
         drawbackOptions.add(new HeartReward.NeowRewardDrawbackDef(HeartReward.NeowRewardDrawback.CURSE, TEXT[20]));
-        drawbackOptions.add(new HeartReward.NeowRewardDrawbackDef(HeartReward.NeowRewardDrawback.PERCENT_DAMAGE, TEXT[21] + AbstractDungeon.player.currentHealth / 10 * 3 + TEXT[29] + " "));
         return drawbackOptions;
     }
 
@@ -103,7 +117,11 @@ public class HeartReward {
             case 1:
                 rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.THREE_SMALL_POTIONS, TEXT[5]));
                 rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.RANDOM_COMMON_RELIC, TEXT[6]));
-                rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.TEN_PERCENT_HP_BONUS, TEXT[7] + this.hp_bonus + " ]"));
+                if (AbstractDungeon.player instanceof GremlinCharacter) {
+                    rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.TEN_PERCENT_HP_BONUS, gremlinTextA + this.hp_bonus + " ]"));
+                } else {
+                    rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.TEN_PERCENT_HP_BONUS, TEXT[7] + this.hp_bonus + " ]"));
+                }
 
                 rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.THREE_ENEMY_KILL, fleeText));
                 rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.HUNDRED_GOLD, TEXT[8] + 100 + TEXT[9]));
@@ -125,7 +143,11 @@ public class HeartReward {
 
                 rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.TRANSFORM_TWO_CARDS, TEXT[15]));
                 if (this.drawback != HeartReward.NeowRewardDrawback.TEN_PERCENT_HP_LOSS) {
-                    rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.TWENTY_PERCENT_HP_BONUS, TEXT[16] + this.hp_bonus * 2 + " ]"));
+                    if (AbstractDungeon.player instanceof GremlinCharacter) {
+                        rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.TWENTY_PERCENT_HP_BONUS, gremlinTextB + this.hp_bonus * 2 + " ]"));
+                    } else {
+                        rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.TWENTY_PERCENT_HP_BONUS, TEXT[16] + this.hp_bonus * 2 + " ]"));
+                    }
                 }
                 break;
             case 3:
@@ -202,10 +224,18 @@ public class HeartReward {
                 AbstractDungeon.player.loseGold(AbstractDungeon.player.gold);
                 break;
             case TEN_PERCENT_HP_LOSS:
-                AbstractDungeon.player.decreaseMaxHealth(this.hp_bonus);
+                if(AbstractDungeon.player instanceof GremlinCharacter) {
+                    AbstractDungeon.player.decreaseMaxHealth(this.hp_bonus*5);
+                } else {
+                    AbstractDungeon.player.decreaseMaxHealth(this.hp_bonus);
+                }
                 break;
             case PERCENT_DAMAGE:
-                AbstractDungeon.player.damage(new DamageInfo((AbstractCreature)null, AbstractDungeon.player.currentHealth / 10 * 3, DamageType.HP_LOSS));
+                if(AbstractDungeon.player instanceof GremlinCharacter) {
+                    ((GremlinCharacter) AbstractDungeon.player).damageGremlins(AbstractDungeon.player.currentHealth / 10 * 3);
+                } else {
+                    AbstractDungeon.player.damage(new DamageInfo((AbstractCreature) null, AbstractDungeon.player.currentHealth / 10 * 3, DamageType.HP_LOSS));
+                }
                 break;
             default:
                 logger.info("[ERROR] Missing Neow Reward Drawback: " + this.drawback.name());
@@ -257,7 +287,11 @@ public class HeartReward {
                 AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), new HeartsMalice());
                 break;
             case TEN_PERCENT_HP_BONUS:
-                AbstractDungeon.player.increaseMaxHp(this.hp_bonus, true);
+                if(AbstractDungeon.player instanceof GremlinCharacter) {
+                    AbstractDungeon.player.increaseMaxHp(this.hp_bonus*5, true);
+                } else {
+                    AbstractDungeon.player.increaseMaxHp(this.hp_bonus, true);
+                }
                 break;
             case THREE_CARDS:
                 AbstractDungeon.cardRewardScreen.open(this.getRewardCards(false), (RewardItem)null, CardCrawlGame.languagePack.getUIString("CardRewardScreen").TEXT[1]);
@@ -286,7 +320,11 @@ public class HeartReward {
                 }
                 break;
             case TWENTY_PERCENT_HP_BONUS:
-                AbstractDungeon.player.increaseMaxHp(this.hp_bonus * 2, true);
+                if(AbstractDungeon.player instanceof GremlinCharacter) {
+                    AbstractDungeon.player.increaseMaxHp(this.hp_bonus*10, true);
+                } else {
+                    AbstractDungeon.player.increaseMaxHp(this.hp_bonus*2, true);
+                }
                 break;
             case TWO_FIFTY_GOLD:
                 CardCrawlGame.sound.play("GOLD_JINGLE");

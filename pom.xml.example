@@ -53,6 +53,20 @@
             <scope>system</scope>
             <systemPath>${workshopFolder}1609158507/StSLib.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>actlikeit</groupId>
+            <artifactId>actlikeit</artifactId>
+            <version>1.0.0</version>
+            <scope>system</scope>
+            <systemPath>${workshopFolder}1934902042/actlikeit.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.megacrit.cardcrawl.mod</groupId>
+            <artifactId>WidePotions</artifactId>
+            <version>0.4</version>
+            <scope>system</scope>
+            <systemPath>${workshopFolder}2368513093/WidePotions.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <build>

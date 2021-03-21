@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.Circlet;
 import com.megacrit.cardcrawl.relics.SpiritPoop;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
+import gremlin.characters.GremlinCharacter;
 
 public class BonfireSpirits_Evil extends AbstractImageEvent {
     public static final String ID = "downfall:BonfireSpirits";
@@ -102,7 +103,11 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         this.imageEventText.removeDialogOption(1);
                         if (AbstractDungeon.player.gold >= 150) {
-                            this.imageEventText.setDialogOption(OPTIONSALT[0]);
+                            if (AbstractDungeon.player instanceof GremlinCharacter) {
+                                this.imageEventText.setDialogOption(OPTIONSALT[2]);
+                            } else {
+                                this.imageEventText.setDialogOption(OPTIONSALT[0]);
+                            }
                         } else {
                             this.imageEventText.setDialogOption(OPTIONSALT[1], true);
                         }
