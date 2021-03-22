@@ -232,7 +232,7 @@ public class HeartReward {
                 break;
             case PERCENT_DAMAGE:
                 if(AbstractDungeon.player instanceof GremlinCharacter) {
-                    ((GremlinCharacter) AbstractDungeon.player).damageGremlins(AbstractDungeon.player.currentHealth / 10 * 3);
+                    ((GremlinCharacter) AbstractDungeon.player).damageAllGremlins(AbstractDungeon.player.currentHealth / 10 * 3, false);
                 } else {
                     AbstractDungeon.player.damage(new DamageInfo((AbstractCreature) null, AbstractDungeon.player.currentHealth / 10 * 3, DamageType.HP_LOSS));
                 }

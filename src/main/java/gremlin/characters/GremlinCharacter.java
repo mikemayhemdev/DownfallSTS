@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -584,6 +585,17 @@ public class GremlinCharacter extends CustomPlayer {
     public void damageGremlins(int dmg){
         mobState.damageAll(dmg);
     }
+
+    public void damageAllGremlins(int dmg, boolean splitByFive) {
+        int trueDmg = dmg;
+        if (splitByFive) {
+            // Round up
+            trueDmg = (dmg + 4)/5;
+        }
+        damageGremlins(trueDmg);
+        damage(new DamageInfo((AbstractCreature) null, trueDmg, DamageInfo.DamageType.HP_LOSS));
+    }
+
     public void healGremlins(int hp){
         mobState.campfireHeal(hp, this.maxHealth);
     }
