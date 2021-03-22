@@ -75,7 +75,12 @@ public class CharacterSelectScreenPatches {
     public static ArrayList<AbstractGameEffect> char_effectsQueue_toRemove = new ArrayList();
 
     public static AbstractSkinCharacter[] characters = new AbstractSkinCharacter[]{
-            new GuardianChan(), new Slaifu(), new Hexago(), new SSSSnecko(), new ChampSister(), new Automaton()
+            new GuardianChan(),
+            new Slaifu(),
+            new Hexago(),
+            new SSSSnecko(),
+            new ChampSister(),
+            new Automaton()
     };
 
 

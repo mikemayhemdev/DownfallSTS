@@ -1,0 +1,335 @@
+
+TheChampPlayer.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Champ/Sword
+  rotate: false
+  xy: 1, 1
+  size: 820, 260
+  orig: 820, 260
+  offset: 0, 0
+  index: -1
+Champ/Shadow1
+  rotate: false
+  xy: 1, 316
+  size: 436, 93
+  orig: 436, 93
+  offset: 0, 0
+  index: -1
+Champ/Shadow2
+  rotate: false
+  xy: 1, 263
+  size: 787, 51
+  orig: 787, 51
+  offset: 0, 0
+  index: -1
+Champ/Tail
+  rotate: false
+  xy: 823, 1
+  size: 146, 294
+  orig: 146, 294
+  offset: 0, 0
+  index: -1
+Champ/Arm_R1B
+  rotate: false
+  xy: 356, 411
+  size: 75, 101
+  orig: 75, 101
+  offset: 0, 0
+  index: -1
+Champ/Foot_R3
+  rotate: false
+  xy: 148, 622
+  size: 119, 62
+  orig: 119, 62
+  offset: 0, 0
+  index: -1
+Champ/Foot_R2
+  rotate: false
+  xy: 957, 297
+  size: 62, 168
+  orig: 62, 168
+  offset: 0, 0
+  index: -1
+Champ/Foot_R1
+  rotate: false
+  xy: 564, 510
+  size: 144, 170
+  orig: 144, 170
+  offset: 0, 0
+  index: -1
+Champ/Foot_L3
+  rotate: false
+  xy: 439, 316
+  size: 123, 211
+  orig: 123, 211
+  offset: 0, 0
+  index: -1
+Champ/Foot_L2
+  rotate: false
+  xy: 710, 529
+  size: 133, 172
+  orig: 133, 172
+  offset: 0, 0
+  index: -1
+Champ/Foot_L1
+  rotate: false
+  xy: 1, 682
+  size: 102, 197
+  orig: 102, 197
+  offset: 0, 0
+  index: -1
+Champ/Body
+  rotate: false
+  xy: 790, 297
+  size: 165, 230
+  orig: 165, 230
+  offset: 0, 0
+  index: -1
+Champ/Foot_R4
+  rotate: false
+  xy: 564, 316
+  size: 133, 192
+  orig: 133, 192
+  offset: 0, 0
+  index: -1
+Champ/Foot_L4
+  rotate: false
+  xy: 845, 684
+  size: 97, 221
+  orig: 97, 221
+  offset: 0, 0
+  index: -1
+Champ/Shield
+  rotate: false
+  xy: 710, 316
+  size: 77, 210
+  orig: 77, 210
+  offset: 0, 0
+  index: -1
+Champ/Arm_R0
+  rotate: false
+  xy: 957, 467
+  size: 63, 60
+  orig: 63, 60
+  offset: 0, 0
+  index: -1
+Champ/Hand_R3
+  rotate: false
+  xy: 513, 611
+  size: 40, 43
+  orig: 40, 43
+  offset: 0, 0
+  index: -1
+Champ/Hand_R1
+  rotate: false
+  xy: 232, 686
+  size: 34, 17
+  orig: 34, 17
+  offset: 0, 0
+  index: -1
+Champ/Hand_R2
+  rotate: false
+  xy: 430, 665
+  size: 13, 31
+  orig: 13, 31
+  offset: 0, 0
+  index: -1
+Champ/Arm_R4
+  rotate: false
+  xy: 971, 1
+  size: 49, 124
+  orig: 49, 124
+  offset: 0, 0
+  index: -1
+Champ/Arm_R2
+  rotate: false
+  xy: 348, 632
+  size: 55, 107
+  orig: 55, 107
+  offset: 0, 0
+  index: -1
+Champ/Arm_R3
+  rotate: false
+  xy: 232, 710
+  size: 60, 59
+  orig: 60, 59
+  offset: 0, 0
+  index: -1
+Champ/ShieldTie
+  rotate: false
+  xy: 1, 659
+  size: 69, 15
+  orig: 69, 15
+  offset: 0, 0
+  index: -1
+Champ/Arm_R1
+  rotate: false
+  xy: 356, 529
+  size: 88, 101
+  orig: 88, 101
+  offset: 0, 0
+  index: -1
+Champ/ScarfBack
+  rotate: false
+  xy: 105, 686
+  size: 125, 52
+  orig: 125, 52
+  offset: 0, 0
+  index: -1
+Champ/HelmetBack
+  rotate: false
+  xy: 1, 529
+  size: 145, 98
+  orig: 145, 98
+  offset: 0, 0
+  index: -1
+Champ/HairBack
+  rotate: false
+  xy: 944, 814
+  size: 64, 117
+  orig: 64, 117
+  offset: 0, 0
+  index: -1
+Champ/Head
+  rotate: false
+  xy: 261, 411
+  size: 93, 120
+  orig: 93, 120
+  offset: 0, 0
+  index: -1
+Champ/BandAid
+  rotate: false
+  xy: 513, 656
+  size: 43, 19
+  orig: 43, 19
+  offset: 0, 0
+  index: -1
+Champ/HairFront_2
+  rotate: false
+  xy: 269, 617
+  size: 77, 91
+  orig: 77, 91
+  offset: 0, 0
+  index: -1
+Champ/HairFront_1
+  rotate: false
+  xy: 248, 533
+  size: 90, 82
+  orig: 90, 82
+  offset: 0, 0
+  index: -1
+Champ/Eye3
+  rotate: false
+  xy: 405, 705
+  size: 69, 24
+  orig: 69, 24
+  offset: 0, 0
+  index: -1
+Champ/Eye2
+  rotate: false
+  xy: 72, 629
+  size: 69, 27
+  orig: 69, 27
+  offset: 0, 0
+  index: -1
+Champ/Eye1
+  rotate: false
+  xy: 1, 629
+  size: 69, 28
+  orig: 69, 28
+  offset: 0, 0
+  index: -1
+Champ/EyeBrow
+  rotate: false
+  xy: 72, 658
+  size: 70, 18
+  orig: 70, 18
+  offset: 0, 0
+  index: -1
+Champ/Helmet
+  rotate: false
+  xy: 845, 529
+  size: 147, 153
+  orig: 147, 153
+  offset: 0, 0
+  index: -1
+Champ/Crown
+  rotate: false
+  xy: 513, 682
+  size: 61, 53
+  orig: 61, 53
+  offset: 0, 0
+  index: -1
+Champ/Mask
+  rotate: false
+  xy: 1, 411
+  size: 130, 101
+  orig: 130, 101
+  offset: 0, 0
+  index: -1
+Champ/MaskRing
+  rotate: false
+  xy: 790, 263
+  size: 14, 15
+  orig: 14, 15
+  offset: 0, 0
+  index: -1
+Champ/Chest
+  rotate: false
+  xy: 446, 529
+  size: 109, 80
+  orig: 109, 80
+  offset: 0, 0
+  index: -1
+Champ/Scarf
+  rotate: false
+  xy: 133, 411
+  size: 126, 94
+  orig: 126, 94
+  offset: 0, 0
+  index: -1
+Champ/Hand_L2
+  rotate: false
+  xy: 405, 665
+  size: 23, 36
+  orig: 23, 36
+  offset: 0, 0
+  index: -1
+Champ/Hand_L1
+  rotate: false
+  xy: 405, 632
+  size: 38, 31
+  orig: 38, 31
+  offset: 0, 0
+  index: -1
+Champ/Arm_L4
+  rotate: false
+  xy: 944, 684
+  size: 70, 128
+  orig: 70, 128
+  offset: 0, 0
+  index: -1
+Champ/Arm_L2
+  rotate: false
+  xy: 446, 611
+  size: 65, 92
+  orig: 65, 92
+  offset: 0, 0
+  index: -1
+Champ/Arm_L1
+  rotate: false
+  xy: 148, 507
+  size: 98, 113
+  orig: 98, 113
+  offset: 0, 0
+  index: -1
+Champ/Arm_L3
+  rotate: false
+  xy: 105, 740
+  size: 66, 53
+  orig: 66, 53
+  offset: 0, 0
+  index: -1

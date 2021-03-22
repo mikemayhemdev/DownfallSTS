@@ -268,7 +268,7 @@
   },
   "champ:CheapShot": {
     "NAME": "偷袭",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 如果敌人不是首领，再造成两次伤害，否则 击晕 敌人。 NL 消耗 。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 如果敌人是首领，再造成两次伤害，否则 击晕 敌人。 NL 消耗 。"
   },
   "champ:RisingSlash": {
     "NAME": "狂烈打击",
@@ -303,7 +303,7 @@
   },
   "champ:CrownThrow": {
     "NAME": "投掷王冠",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 如果伤害不为零，下回合返回手牌。 NL 直到打出前的耗能为零。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 如果伤害不为零， NL 下回合返回手牌。 NL 直到打出前的耗能为零。"
   },
   "champ:FightOn": {
     "NAME": "越战越勇",

@@ -87,15 +87,15 @@ public class reskinContent implements
             case ZHS:
                 language = "zhs";
                 break;
-            case ZHT:
-                language = "zht";
-                break;
-            case KOR:
-                language = "kor";
-                break;
-            case JPN:
-                language = "jpn";
-                break;
+//            case ZHT:
+//                language = "zht";
+//                break;
+//            case KOR:
+//                language = "kor";
+//                break;
+//            case JPN:
+//                language = "jpn";
+//                break;
             default:
                 language = "eng";
         }
@@ -127,6 +127,7 @@ public class reskinContent implements
 
             for (int i = 0; i <= characters.length - 1; i++) {
                 config.setBool(CardCrawlGame.saveSlot + "ReskinUnlock" + i, characters[i].reskinUnlock);
+                config.setInt(CardCrawlGame.saveSlot + "reskinCount" + i, characters[i].reskinCount);
                 config.setInt(CardCrawlGame.saveSlot + "portraitAnimationType" + i, characters[i].portraitAnimationType);
             }
 
@@ -148,8 +149,7 @@ public class reskinContent implements
 
             for (int i = 0; i <= characters.length - 1; i++) {
                 characters[i].reskinUnlock = config.getBool(CardCrawlGame.saveSlot + "ReskinUnlock" + i);
-
-
+                characters[i].reskinCount = config.getInt(CardCrawlGame.saveSlot + "reskinCount" + i);
                 characters[i].portraitAnimationType = config.getInt(CardCrawlGame.saveSlot + "portraitAnimationType" + i);
 
                 if (characters[i].portraitAnimationType > 2 || characters[i].portraitAnimationType < 0)

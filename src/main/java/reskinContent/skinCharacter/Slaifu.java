@@ -8,12 +8,16 @@
  import com.esotericsoftware.spine.*;
  import com.megacrit.cardcrawl.core.CardCrawlGame;
  import com.megacrit.cardcrawl.core.Settings;
+ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
  import com.megacrit.cardcrawl.helpers.ImageMaster;
  import guardian.GuardianMod;
+ import guardian.patches.GuardianEnum;
  import reskinContent.patches.CharacterSelectScreenPatches;
  import reskinContent.reskinContent;
+ import reskinContent.vfx.ReskinUnlockedTextEffect;
  import reskinContent.vfx.SlimedScreenEffect;
  import slimebound.SlimeboundMod;
+ import slimebound.patches.SlimeboundEnum;
 
  import static com.megacrit.cardcrawl.core.AbstractCreature.sr;
 
@@ -41,6 +45,14 @@
 
         this.portraitAtlasPath = reskinContent.assetPath("img/Slimebound/animation/SlimeBoss_portrait");
     }
+
+     @Override
+     public void checkUnlock() {
+         if (AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND && !this.reskinUnlock){
+             AbstractDungeon.topLevelEffects.add(new ReskinUnlockedTextEffect(1));
+             this.reskinUnlock = true;
+         }
+     }
 
      @Override
      public void loadAnimation() {

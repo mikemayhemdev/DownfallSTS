@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
@@ -14,6 +15,9 @@ import reskinContent.helpers.PortraitHexaghostOrb;
 import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import reskinContent.vfx.PortraitScreenOnFireEffect;
+import reskinContent.vfx.ReskinUnlockedTextEffect;
+import slimebound.patches.SlimeboundEnum;
+import theHexaghost.TheHexaghost;
 
 import java.util.ArrayList;
 
@@ -52,6 +56,15 @@ public class Hexago extends AbstractSkinCharacter {
 
         orbs.clear();
     }
+
+    @Override
+    public void checkUnlock() {
+        if (AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT && !this.reskinUnlock){
+            AbstractDungeon.topLevelEffects.add(new ReskinUnlockedTextEffect(2));
+            this.reskinUnlock = true;
+        }
+    }
+
 
     @Override
     public void loadPortraitAnimation() {

@@ -6,11 +6,14 @@
  import com.badlogic.gdx.math.MathUtils;
  import com.megacrit.cardcrawl.core.CardCrawlGame;
  import com.megacrit.cardcrawl.core.Settings;
+ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
  import com.megacrit.cardcrawl.helpers.ImageMaster;
  import guardian.GuardianMod;
+ import guardian.patches.GuardianEnum;
  import reskinContent.patches.CharacterSelectScreenPatches;
  import reskinContent.reskinContent;
  import reskinContent.vfx.PortraitWhirlwindEffect;
+ import reskinContent.vfx.ReskinUnlockedTextEffect;
 
  public  class GuardianChan extends AbstractSkinCharacter {
      private static float guardianSFX_timer = 0.0f;
@@ -27,6 +30,14 @@
 
         this.portraitAtlasPath = reskinContent.assetPath("img/GuardianMod/animation/GuardianChan_portrait");
     }
+
+     @Override
+     public void checkUnlock() {
+         if (AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN && !this.reskinUnlock){
+             AbstractDungeon.topLevelEffects.add(new ReskinUnlockedTextEffect(0));
+             this.reskinUnlock = true;
+         }
+     }
 
      @Override
      public void InitializeStaticPortraitVar() {

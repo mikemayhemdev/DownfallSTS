@@ -1,10 +1,14 @@
  package reskinContent.skinCharacter;
 
+ import champ.ChampChar;
  import com.badlogic.gdx.graphics.Texture;
  import com.megacrit.cardcrawl.core.CardCrawlGame;
+ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
  import com.megacrit.cardcrawl.helpers.ImageMaster;
  import guardian.GuardianMod;
  import reskinContent.reskinContent;
+ import reskinContent.vfx.ReskinUnlockedTextEffect;
+ import sneckomod.TheSnecko;
 
  public  class ChampSister extends AbstractSkinCharacter {
 
@@ -20,6 +24,14 @@
 
         this.portraitAtlasPath = reskinContent.assetPath("img/ChampMod/animation/GuardianChan_portrait");
     }
+
+     @Override
+     public void checkUnlock() {
+         if (AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP && !this.reskinUnlock){
+             AbstractDungeon.topLevelEffects.add(new ReskinUnlockedTextEffect(4));
+             this.reskinUnlock = true;
+         }
+     }
 
      @Override
      public void InitializeStaticPortraitVar() {

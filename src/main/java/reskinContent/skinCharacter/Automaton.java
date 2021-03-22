@@ -1,10 +1,14 @@
  package reskinContent.skinCharacter;
 
+ import automaton.AutomatonChar;
  import com.badlogic.gdx.graphics.Texture;
  import com.megacrit.cardcrawl.core.CardCrawlGame;
+ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
  import com.megacrit.cardcrawl.helpers.ImageMaster;
  import guardian.GuardianMod;
  import reskinContent.reskinContent;
+ import reskinContent.vfx.ReskinUnlockedTextEffect;
+ import sneckomod.TheSnecko;
 
  public  class Automaton extends AbstractSkinCharacter {
 
@@ -20,6 +24,14 @@
 
         this.portraitAtlasPath = reskinContent.assetPath("img/BronzeMod/animation/GuardianChan_portrait");
     }
+
+     @Override
+     public void checkUnlock() {
+         if (AbstractDungeon.player.chosenClass == AutomatonChar.Enums.THE_AUTOMATON && !this.reskinUnlock){
+             AbstractDungeon.topLevelEffects.add(new ReskinUnlockedTextEffect(5));
+             this.reskinUnlock = true;
+         }
+     }
 
      @Override
      public void InitializeStaticPortraitVar() {

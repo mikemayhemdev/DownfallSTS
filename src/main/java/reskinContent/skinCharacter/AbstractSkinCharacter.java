@@ -139,6 +139,8 @@ public abstract class AbstractSkinCharacter {
         return this.reskinCount <= 0;
     }
 
+    public void checkUnlock(){}
+
 }
 
 
