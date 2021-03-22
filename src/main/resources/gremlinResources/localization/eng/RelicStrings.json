@@ -34,6 +34,14 @@
       "At the start of each combat, gain [E] , draw #b1 card, and #ySwap to the next Gremlin."
     ]
   },
+  "Gremlin:GremlinKnobUpgrade": {
+    "NAME": "Mob Leader's Crown",
+    "FLAVOR": "The fancier the symbol of office, the more likely it is to be stolen.",
+    "DESCRIPTIONS": [
+      "Replaces ",
+      ". NL The first time you shuffle your deck each turn, gain [E] , draw #b1 card, and #ySwap to the next Gremlin."
+    ]
+  },
   "Gremlin:GremlinMask": {
     "NAME": "Gremlin Mask",
     "FLAVOR": "A sign of status among the Gremlin Mobs.",

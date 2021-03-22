@@ -36,7 +36,6 @@ import gremlin.events.ScrapOozeGremlins;
 import gremlin.orbs.*;
 import gremlin.patches.AbstractCardEnum;
 import gremlin.patches.BlamageVar;
-import gremlin.patches.GremlinEnum;
 import gremlin.patches.GremlinModSaveState;
 import gremlin.potions.GremlinPotion;
 import gremlin.potions.NecromancyPotion;
@@ -154,6 +153,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
 
         // Boss
         addRelicToCustomPool(new GremlinBomb(), AbstractCardEnum.GREMLIN);
+        addRelicToCustomPool(new GremlinKnobUpgrade(), AbstractCardEnum.GREMLIN);
         addRelicToCustomPool(new LeaderVoucher(), AbstractCardEnum.GREMLIN);
 
         // Shop
