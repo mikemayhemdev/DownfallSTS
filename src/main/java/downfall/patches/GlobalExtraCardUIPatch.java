@@ -10,6 +10,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -34,7 +35,7 @@ public class GlobalExtraCardUIPatch {
 
     @SpirePatch(clz = AbstractCard.class, method = "renderEnergy")
     public static class SecondEnergyRenderPatch {
-        @SpirePostfixPatch
+        @SpirePrefixPatch
         public static void patch(AbstractCard __instance, SpriteBatch sb) {
             if (UnknownExtraUiPatch.parentCard.get(__instance) != null) {
                 renderHelper(sb, SneckoMod.overBannerAll, __instance.current_x, __instance.current_y, __instance);
@@ -82,6 +83,7 @@ public class GlobalExtraCardUIPatch {
         private static void renderHelper(SpriteBatch sb, TextureAtlas.AtlasRegion img, float drawX, float drawY, AbstractCard C) {
             Color color = Color.WHITE.cpy();
             color.a = C.transparency; // i wish i'd come up with this earlier. makes things so much less ugly
+            sb.setColor(color);
             if (img == null) {
                 System.out.println("HELP!");
                 img = ChampMod.UIAtlas.findRegion("crown");

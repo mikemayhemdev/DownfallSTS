@@ -17,7 +17,7 @@ import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.UnknownClass;
 import sneckomod.util.ColorfulCardReward;
 
-public class SneckoBoss extends CustomRelic implements CustomSavable<String> {
+public class SneckoBoss extends CustomRelic implements CustomSavable<AbstractCard.CardColor> {
 
     public static final String ID = SneckoMod.makeID("SneckoBoss");
     private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("LuckyHorseshoe.png"));
@@ -27,13 +27,12 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<String> {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
-    public static String chosenChar = "UNCHOSEN";
-    public static AbstractCard.CardColor myColor = null;
+    public static AbstractCard.CardColor myColor = null; // shared between SneckoCommon and SneckoBoss
     private boolean chosenInGeneral = true;
 
     @Override
     public void onEquip() {
-        if (!chosenChar.equals("UNCHOSEN") && AbstractDungeon.player.hasRelic(SneckoCommon.ID)) { // Already got Seal of Approval
+        if (myColor != null && AbstractDungeon.player.hasRelic(SneckoCommon.ID)) { // Already got Seal of Approval
             for (AbstractCard c : CardLibrary.getAllCards()) {
                 if (c instanceof UnknownClass) {
                     if (myColor == ((UnknownClass) c).myColor) {
@@ -74,20 +73,23 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<String> {
         }
     }
 
+    public static void updateCardPools() {
+        AbstractDungeon.commonCardPool.group.removeIf(q -> q instanceof UnknownClass && ((UnknownClass) q).myColor != myColor);
+    }
+
     @Override
     public void update() {
         super.update();
         if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && !chosenInGeneral) {
             chosenInGeneral = true;
             AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-            chosenChar = SneckoMod.getClassFromColor(((UnknownClass) c).myColor);
             myColor = ((UnknownClass) c).myColor;
             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c.makeCopy(), Settings.WIDTH * 0.2F, Settings.HEIGHT / 2F));
             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c.makeCopy(), Settings.WIDTH * 0.35F, Settings.HEIGHT / 2F));
             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c.makeCopy(), Settings.WIDTH * 0.5F, Settings.HEIGHT / 2F));
             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c.makeCopy(), Settings.WIDTH * 0.65F, Settings.HEIGHT / 2F));
             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c.makeCopy(), Settings.WIDTH * 0.8F, Settings.HEIGHT / 2F));
-            AbstractDungeon.commonCardPool.group.removeIf(q -> q instanceof UnknownClass && !q.cardID.equals(c.cardID));
+            updateCardPools();
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             this.description = getUpdatedDescription();
@@ -97,20 +99,20 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<String> {
     }
 
     public String getUpdatedDescription() {
-        if (!SneckoBoss.chosenChar.equals("UNCHOSEN")) { //I sure hope no one makes a character called The UNCHOSEN.
-            return DESCRIPTIONS[1] + SneckoBoss.chosenChar + DESCRIPTIONS[2] + SneckoBoss.chosenChar + DESCRIPTIONS[3];
+        if (myColor != null) {
+            return DESCRIPTIONS[1] + SneckoMod.getClassFromColor(myColor) + DESCRIPTIONS[2] + SneckoMod.getClassFromColor(myColor) + DESCRIPTIONS[3];
         }
         return DESCRIPTIONS[0];
     }
 
     @Override
-    public String onSave() {
-        return chosenChar;
+    public AbstractCard.CardColor onSave() {
+        return myColor;
     }
 
     @Override
-    public void onLoad(String s) {
-        chosenChar = s;
+    public void onLoad(AbstractCard.CardColor s) {
+        myColor = s;
         this.description = getUpdatedDescription();
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
