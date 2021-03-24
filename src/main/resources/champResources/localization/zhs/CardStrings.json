@@ -212,8 +212,8 @@
     "NAME": "毒舌",
     "DESCRIPTION": "champ:狂战 champ:连段 ：获得 !M! 点 guardianmod:临时 力量 。 NL champ:防守 champ:连段 ：获得 !M! 点 guardianmod:临时 敏捷 。",
     "EXTENDED_DESCRIPTION": [
-      "champ:狂战 champ:连段 : 获得 !M! guardianmod:临时 力量 。 NL ",
-      "champ:防守 champ:连段 : 获得 !M! guardianmod:临时 敏捷 。"
+      " champ:狂战 champ:连段 : 获得 !M! 点 guardianmod:临时 力量 。 NL ",
+      " champ:防守 champ:连段 : 获得 !M! 点 guardianmod:临时 敏捷 。"
     ]
   },
   "champ:PreciseThrust": {
