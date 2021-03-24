@@ -48,7 +48,8 @@
   },
   "expansioncontent:PrepareCrush": {
     "NAME": "Prepare Crush",
-    "DESCRIPTION": "expansioncontent:Boss - Slime. NL Gain !B! Block. NL On your next turn, gain [E] [E] [E] and add SLIME CRUSH to your hand. NL Exhaust."
+    "DESCRIPTION": "expansioncontent:Boss - Slime. NL Gain !B! Block. NL On your next turn, gain [E] [E] [E] and add SLIME CRUSH to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Slime. NL Gain !B! Block. NL On your next turn, gain [E] [E] [E] and add SLIME CRUSH+ to your hand. NL Exhaust."
   },
   "expansioncontent:StudyTheSpire": {
     "NAME": "Study the Spire",

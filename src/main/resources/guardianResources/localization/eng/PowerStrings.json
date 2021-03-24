@@ -203,5 +203,12 @@
       "#yDefensive #yMode will be active for #b",
       " more rounds."
     ]
+  },
+  "Guardian:BracePerTurnPower": {
+    "NAME": "Bracing",
+    "DESCRIPTIONS": [
+      "At the start of your turn, Brace #b",
+      " ."
+    ]
   }
 }

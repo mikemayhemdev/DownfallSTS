@@ -6,20 +6,19 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import guardian.actions.BraceAction;
+import static guardian.cards.AbstractGuardianCard.brace;
 
 
-public class RevengePower extends AbstractGuardianPower implements DefensiveModeBooster {
-    public static final String POWER_ID = "Guardian:RevengePower";
+public class BracePerTurnPower extends AbstractGuardianPower{
+    public static final String POWER_ID = "Guardian:BracePerTurnPower";
     public static PowerType POWER_TYPE = PowerType.BUFF;
 
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
 
-
-    public RevengePower(AbstractCreature owner, AbstractCreature source, int amount) {
-
+    public BracePerTurnPower(AbstractCreature owner, int amount) {
         this.ID = POWER_ID;
         this.owner = owner;
         this.source = source;
@@ -28,9 +27,7 @@ public class RevengePower extends AbstractGuardianPower implements DefensiveMode
         this.amount = amount;
         DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
-
         updateDescription();
-
     }
 
     public void updateDescription() {
@@ -38,14 +35,8 @@ public class RevengePower extends AbstractGuardianPower implements DefensiveMode
     }
 
     @Override
-    public void onEnter() {
-        flash();
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
-    }
-
-    @Override
-    public void onLeave() {
-        flash();
-        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(owner, owner, StrengthPower.POWER_ID, amount));
+    public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
+        this.flash();
+        brace(amount);
     }
 }

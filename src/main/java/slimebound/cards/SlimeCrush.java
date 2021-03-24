@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.AnimateJumpAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -36,51 +37,38 @@ public class SlimeCrush extends AbstractSlimeboundCard {
         NAME = cardStrings.NAME;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-
     }
 
-
     public SlimeCrush() {
-
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-
-
         this.baseDamage = 35;
         this.exhaust = true;
         this.isEthereal = true;
-
-
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         AbstractDungeon.actionManager.addToBottom(new AnimateJumpAction(p));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY, new Color(0.1F, 1.0F, 0.1F, 0.0F))));
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
-
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.POISON));
-
+        if (!upgraded)
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.POISON));
+        else
+            AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.POISON));
         //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StunMonsterPower(p, p, this.magicNumber), this.magicNumber));
-
-
     }
 
     public AbstractCard makeCopy() {
-
         return new SlimeCrush();
-
     }
 
     public void upgrade() {
-
         if (!this.upgraded) {
-
             upgradeName();
-
-            upgradeDamage(10);
-
+            upgradeDamage(5);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
+            this.isMultiDamage = this.upgraded;
         }
-
     }
 }
 

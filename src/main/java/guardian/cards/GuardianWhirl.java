@@ -51,7 +51,7 @@ public class GuardianWhirl extends AbstractGuardianCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (p.stance instanceof DefensiveMode) {
+        if (p.currentBlock >= 20) {
             return super.canUse(p, m);
         } else {
             return false;
@@ -78,7 +78,7 @@ public class GuardianWhirl extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
 
-        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));
+        //AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));
 
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_WHIRLWIND"));
         for (int i = 0; i < this.magicNumber; i++) {
