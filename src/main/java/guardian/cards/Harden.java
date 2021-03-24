@@ -35,9 +35,9 @@ public class Harden extends AbstractGuardianCard {
 
 
     //TUNING CONSTANTS
-    private static final int BLOCK = 12;
+    private static final int BRACE = 12;
     private static final int THORNS = 2;
-    private static final int UPGRADE_BLOCK = 4;
+    private static final int UPGRADE_BRACE = 4;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
@@ -55,9 +55,8 @@ public class Harden extends AbstractGuardianCard {
 
     public Harden() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-
         this.magicNumber = this.baseMagicNumber = THORNS;
-        this.baseBlock = BLOCK;
+        this.secondaryM = BRACE;
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
@@ -67,7 +66,7 @@ public class Harden extends AbstractGuardianCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (p.stance instanceof DefensiveMode) {
+        if (p.currentBlock >= 20) {
             return super.canUse(p, m);
         } else {
             return false;
@@ -77,10 +76,8 @@ public class Harden extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
         //AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));
-
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+        brace(secondaryM);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
-
         this.useGems(p, m);
     }
 
@@ -91,7 +88,7 @@ public class Harden extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_BLOCK);
+            upgradeSecondaryM(UPGRADE_BRACE);
             upgradeMagicNumber(1);
         }
     }

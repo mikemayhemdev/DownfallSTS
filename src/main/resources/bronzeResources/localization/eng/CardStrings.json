@@ -17,7 +17,7 @@
   },
   "bronze:Explode": {
     "NAME": "Explode",
-    "DESCRIPTION": "bronze:Insert a *Burn. NL bronze:Compile - ALL enemies lose !M! HP.",
+    "DESCRIPTION": "Apply !M! hexamod:Soulburn to ALL enemies. NL bronze:Compile *Error - bronze:Insert !bauto! *Burn.",
     "EXTENDED_DESCRIPTION": [
       "unstable",
       "Bomb"

@@ -285,12 +285,13 @@
   },
   "Slimebound:PrepareCrush": {
     "NAME": "Prepare: Crush",
-    "DESCRIPTION": "Next turn, gain [E] [E] [E] and !M! Strength, and add Slime Crush to your hand.",
-    "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E] [E] [E] and !M! Strength, and add Slime Crush to your hand."
+    "DESCRIPTION": "Next turn, gain [E] [E] [E] and !SlimeboundSlimed! Strength, and add SLIME CRUSH to your hand.",
+    "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E] [E] [E] and !SlimeboundSlimed! Strength, and add SLIME CRUSH+ to your hand."
   },
   "Slimebound:SlimeCrush": {
     "NAME": "SLIME CRUSH!!!",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies. NL Exhaust."
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Divide & Conquer",

@@ -7,9 +7,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import guardian.GuardianMod;
 import guardian.actions.BraceAction;
+import guardian.powers.DefensiveModeBooster;
+import guardian.powers.DontLeaveDefensiveModePower;
 import guardian.powers.ModeShiftPower;
 
-public class ModeShifter extends CustomRelic {
+public class ModeShifter extends CustomRelic{
     public static final String ID = "Guardian:ModeShifter";
     public static final String IMG_PATH = "relics/modeShifter.png";
     public static final String OUTLINE_IMG_PATH = "relics/modeShifterOutline.png";
@@ -26,14 +28,7 @@ public class ModeShifter extends CustomRelic {
     }
 
     @Override
-    public void atTurnStart() {
-        super.atTurnStart();
-        AbstractDungeon.actionManager.addToBottom(new BraceAction(2));
-    }
-
-    @Override
     public AbstractRelic makeCopy() {
         return new ModeShifter();
     }
-
 }

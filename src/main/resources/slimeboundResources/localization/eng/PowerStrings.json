@@ -303,8 +303,10 @@
     "NAME": "Preparing to Crush",
     "DESCRIPTIONS": [
       "Gain a #gSLIME #gCRUSH on your next turn.",
+      "Gain a #gSLIME #gCRUSH+ on your next turn.",
       "Gain #b",
-      " copies of #gSLIME #gCRUSH on your next turn."
+      " copies of #gSLIME #gCRUSH on your next turn.",
+      " copies of #gSLIME #gCRUSH+ on your next turn."
     ]
   },
   "Slimebound:StunnedPower": {
