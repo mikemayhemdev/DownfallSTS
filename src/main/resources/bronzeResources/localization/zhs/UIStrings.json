@@ -2,7 +2,8 @@
   "bronze:SpecificCardReward": {
     "TEXT": [
       "将 ",
-      " 加入牌组"
+      " 加入牌组",
+      "选择一张牌"
     ]
   },
   "bronze:UnplayableMod": {

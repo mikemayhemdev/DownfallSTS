@@ -116,13 +116,15 @@
 },
   "downfall:BossCardReward": {
     "TEXT": [
-      "将一张首领牌加入牌组"
+      "将一张首领牌加入牌组",
+      "选择一张牌"
     ]
   },
     "downfall:ColorfulCardReward": {
     "TEXT": [
       "将一张 ",
-      " 牌加入牌组"
+      " 牌加入牌组",
+      "选择一张牌"
     ]
   },
   "downfall:RunHistoryMonsterNames": {

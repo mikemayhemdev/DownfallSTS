@@ -115,13 +115,15 @@
   },
   "downfall:BossCardReward": {
     "TEXT": [
-      "Add a Boss Card to your deck"
+      "Add a Boss Card to your deck",
+      "Pick a card."
     ]
   },
   "downfall:ColorfulCardReward": {
     "TEXT": [
       "Add a ",
-      " Card to your deck"
+      " Card to your deck",
+      "Pick a Card."
     ]
   },
   "downfall:RunHistoryMonsterNames": {

@@ -111,7 +111,8 @@
   },
   "downfall:BossCardReward": {
     "TEXT": [
-      "Add a Boss Card to your deck"
+      "Add a Boss Card to your deck",
+      "Pick a card."
     ]
   },
   "downfall:RunHistoryMonsterNames": {

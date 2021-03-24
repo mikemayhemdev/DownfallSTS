@@ -22,8 +22,8 @@
     "DESCRIPTION": "选择进入一种 姿态 。 NL 如果已处于 姿态 ，将一张该姿态的 champ:连段 牌加入你的手牌。",
     "UPGRADE_DESCRIPTION": "选择进入一种 姿态 。 NL 将一张该姿态的 champ:连段 牌加入你的手牌。",
     "EXTENDED_DESCRIPTION": [
-      "进入 champ:狂战 。",
-      "进入 champ:防守 。"
+      " 进入 champ:狂战 。",
+      " 进入 champ:防守 。"
     ]
   },
   "champ:GladiatorsShout": {
@@ -52,10 +52,10 @@
     "DESCRIPTION": "进入 champ:防守 或 champ:角斗 。 NL 将一张所选 姿态 的 champ:连段 牌加入手牌。",
     "UPGRADE_DESCRIPTION": "进入 champ:防守 或 champ:角斗 。 NL 将一张已 升级 的所选 姿态 的 champ:连段 牌加入手牌。",
     "EXTENDED_DESCRIPTION": [
-      "进入 champ:防守 。 NL 将一张随机 champ:防守 牌加入手牌。",
-      "进入 champ:角斗 。 NL 将一张随机 champ:角斗 牌加入手牌。",
-      "进入 champ:防守 。 NL 将一张随机已 升级 的 champ:防守 牌加入手牌。",
-      "进入 champ:角斗 。 NL 将一张随机已 升级 的 champ:角斗 牌加入手牌。"
+      " 进入 champ:防守 。 NL 将一张随机 champ:防守 牌加入手牌。",
+      " 进入 champ:角斗 。 NL 将一张随机 champ:角斗 牌加入手牌。",
+      " 进入 champ:防守 。 NL 将一张随机已 升级 的 champ:防守 牌加入手牌。",
+      " 进入 champ:角斗 。 NL 将一张随机已 升级 的 champ:角斗 牌加入手牌。"
     ]
   },
   "champ:DefensiveShout": {
@@ -92,10 +92,10 @@
     "DESCRIPTION": "进入 champ:狂战 或 champ:角斗 。 NL 将一张所选 姿态 的 champ:连段 牌加入手牌。",
     "UPGRADE_DESCRIPTION": "进入 champ:狂战 或 champ:角斗 。 NL 将一张已 升级 的所选 姿态 的 champ:连段 牌加入手牌。",
     "EXTENDED_DESCRIPTION": [
-      "进入 champ:狂战 。 NL 将一张随机 champ:狂战 牌加入手牌。",
-      "进入 champ:角斗 。 NL 将一张随机 champ:角斗 牌加入手牌。",
-      "进入 champ:狂战 。 NL 将一张随机已 升级 的 champ:狂战 牌加入手牌。",
-      "进入 champ:角斗 。 NL 将一张随机已 升级 的 champ:角斗 牌加入手牌。"
+      " 进入 champ:狂战 。 NL 将一张随机 champ:狂战 牌加入手牌。",
+      " 进入 champ:角斗 。 NL 将一张随机 champ:角斗 牌加入手牌。",
+      " 进入 champ:狂战 。 NL 将一张随机已 升级 的 champ:狂战 牌加入手牌。",
+      " 进入 champ:角斗 。 NL 将一张随机已 升级 的 champ:角斗 牌加入手牌。"
     ]
   },
   "champ:BerserkersShout": {
@@ -126,10 +126,10 @@
     "DESCRIPTION": "进入 champ:防守 或 champ:狂战 。 NL 将一张所选 姿态 的 champ:连段 牌加入手牌。",
     "UPGRADE_DESCRIPTION": "进入 champ:防守 或 champ:狂战 。 NL 将一张已 升级 的所选 姿态 的 champ:连段 牌加入手牌。",
     "EXTENDED_DESCRIPTION": [
-      "进入 champ:防守 。 NL 将一张随机 champ:防守 牌加入手牌。",
-      "进入 champ:狂战 。 NL 将一张随机 champ:狂战 牌加入手牌。",
-      "进入 champ:防守 。 NL 将一张随机已 升级 的 champ:防守 牌加入手牌。",
-      "进入 champ:狂战 。 NL 将一张随机已 升级 的 champ:狂战 牌加入手牌。"
+      " 进入 champ:防守 。 NL 将一张随机 champ:防守 牌加入手牌。",
+      " 进入 champ:狂战 。 NL 将一张随机 champ:狂战 牌加入手牌。",
+      " 进入 champ:防守 。 NL 将一张随机已 升级 的 champ:防守 牌加入手牌。",
+      " 进入 champ:狂战 。 NL 将一张随机已 升级 的 champ:狂战 牌加入手牌。"
     ]
   },
   "champ:Circumvent": {
@@ -188,8 +188,8 @@
   },
   "champ:Lariat": {
     "NAME": "套索",
-    "DESCRIPTION": "重复X次： NL 获得 !B! 点 格挡 。触发 champ:战术 。",
-    "UPGRADE_DESCRIPTION": "获得 [E] 。 NL 重复X次： NL 获得 !B! 点 格挡 。触发 champ:战术 。"
+    "DESCRIPTION": "重复X次： NL 获得 !B! 点 格挡 。 NL 触发 champ:战术 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] 。 NL 重复X次： NL 获得 !B! 点 格挡 。 NL 触发 champ:战术 。"
   },
   "champ:HoldFirm": {
     "NAME": "固守",
@@ -200,12 +200,12 @@
     "DESCRIPTION": "获得 2 点 敏捷 。 NL 你的回合结束时，获得 !M! 层 champ:反击 。"
   },
   "champ:Haymaker": {
-    "NAME": "刺拳",
+    "NAME": "螺旋打桩",
     "DESCRIPTION": "造成 !D! 点伤害。 NL champ:狂战 champ:连段 ：给予2层 易伤 。 NL champ:防守 champ:连段 ：给予 2 层 虚弱 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL ",
     "EXTENDED_DESCRIPTION": [
-      "champ:狂战 champ:连段 ：给予2层 易伤 。 ",
-      "champ:防守 champ:连段 ：给予 2 层 虚弱 。"
+      " champ:狂战 champ:连段 ：给予2层 易伤 。 NL ",
+      " champ:防守 champ:连段 ：给予 2 层 虚弱 。"
     ]
   },
   "champ:ViciousMockery": {
@@ -221,8 +221,8 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL champ:狂战 champ:连段 ：造成 !D! 点伤害。 NL champ:防守 champ:连段 ：获得 !B! 点 格挡 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL ",
     "EXTENDED_DESCRIPTION": [
-      "champ:狂战 champ:连段 ： 造成 !D! 点伤害。 NL ",
-      "champ:防守 champ:连段 ： 获得 !B! 点 格挡 。"
+      " champ:狂战 champ:连段 ： 造成 !D! 点伤害。 NL ",
+      " champ:防守 champ:连段 ： 获得 !B! 点 格挡 。"
     ]
   },
   "champ:CrookedStrike": {
@@ -242,11 +242,11 @@
     "NAME": "强化剑刃",
     "DESCRIPTION": "选择一张手牌。本场战斗这张牌造成的伤害提高 !M! 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "I have nothing to Enchant."
+      "我不必强化"
     ]
   },
   "champ:BladeFlurry": {
-    "NAME": "剑刃乱舞",
+    "NAME": "乱舞打击",
     "DESCRIPTION": "手牌中每有一张 *打击 牌 NL 造成 !D! 点伤害。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 手牌中每有一张 *打击 牌，造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
@@ -268,7 +268,7 @@
   },
   "champ:CheapShot": {
     "NAME": "偷袭",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 如果敌人是首领，再造成两次伤害，否则 击晕 敌人。 NL 消耗 。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 如果敌人是首领，再造成两次伤害，否则 *击晕 敌人。 消耗 。"
   },
   "champ:RisingSlash": {
     "NAME": "狂烈打击",
@@ -349,11 +349,11 @@
     "NAME": "剑锋",
     "DESCRIPTION": "champ:狂战 champ:连段 ：造成 !D! 点伤害X次。 NL champ:防守 champ:连段 ：获得 !B! 点 格挡 X次。",
     "EXTENDED_DESCRIPTION": [
-      "champ:狂战 champ:连段 ：造成 !D! 点伤害X次。 NL ",
-      "champ:防守 champ:连段 ：获得 !B! 点 格挡 X次。",
+      " champ:狂战 champ:连段 ：造成 !D! 点伤害X次。 NL ",
+      " champ:防守 champ:连段 ：获得 !B! 点 格挡 X次。",
       "角斗: 抽1张牌并获得 [E] 。",
       "角斗: 抽2张牌并获得 [E] 。",
-      "champ:连段 NL "
+      " champ:连段 NL "
     ]
   },
   "champ:Improvising": {
@@ -365,9 +365,9 @@
     "DESCRIPTION": " champ:狂战 champ:连段 ：获得 [E] [E] 并 消耗 。 NL champ:防守 champ:连段 ：抽 !M! 张牌。",
     "UPGRADE_DESCRIPTION": "champ:狂战 champ:连段 ：获得 [E] [E] [E] 并 消耗 。 NL champ:防守 champ:连段 ：抽 !M! 张牌。",
     "EXTENDED_DESCRIPTION": [
-      "champ:狂战 champ:连段 ：获得 [E] [E] 并 消耗 。NL ",
-      "champ:狂战 champ:连段 ：获得 [E] [E] [E] 并 消耗 。 NL ",
-      "champ:防守 champ:连段 ：抽 !M! 张牌。"
+      " champ:狂战 champ:连段 ：获得 [E] [E] 并 消耗 。NL ",
+      " champ:狂战 champ:连段 ：获得 [E] [E] [E] 并 消耗 。 NL ",
+      " champ:防守 champ:连段 ：抽 !M! 张牌。"
     ]
   },
   "champ:PerfectedStrike": {
