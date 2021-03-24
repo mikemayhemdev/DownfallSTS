@@ -79,8 +79,8 @@ public class CharacterSelectScreenPatches {
             new Slaifu(),
             new Hexago(),
             new SSSSnecko(),
-            new ChampSister(),
-            new Automaton()
+            new ChampSister()
+//            ,new Automaton()
     };
 
 
