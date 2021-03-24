@@ -58,7 +58,7 @@ public class FullReleasePower extends AbstractAutomatonPower implements NonStack
                                         AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new PiercingShotEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, Settings.WIDTH + 100F, AbstractDungeon.player.hb.cY), 0F));
                                         addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(c.baseDamage, true), DamageInfo.DamageType.THORNS, AttackEffect.NONE));
                                     } else if (c instanceof Flail) {
-                                        addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(c.baseDamage, true), DamageInfo.DamageType.THORNS, AttackEffect.NONE));
+                                        addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(c.baseDamage, true), DamageInfo.DamageType.THORNS, AttackEffect.SLASH_HORIZONTAL));
                                     } else {
                                         c.use(AbstractDungeon.player, m);
                                     }
