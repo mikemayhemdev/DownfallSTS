@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.actions.PlaceCardsInHandIntoStasisAction;
+import guardian.actions.PlaceRandomCardInHandIntoStasisAction;
 import guardian.actions.ReduceRightMostStasisAction;
 import guardian.stances.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
@@ -56,15 +57,11 @@ public class CurlUp extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        AbstractDungeon.actionManager.addToBottom(new PlaceCardsInHandIntoStasisAction(p, 1, false));
-        if (upgraded)
-            upgradeAction(p,m);
+        if (!upgraded)
+            this.addToBot(new PlaceRandomCardInHandIntoStasisAction(p));
+        else
+            this.addToBot(new PlaceCardsInHandIntoStasisAction(p, 1, false));
         brace(magicNumber);
-    }
-
-    public void upgradeAction(AbstractPlayer p, AbstractMonster m){
-        AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.BorderFlashEffect(com.badlogic.gdx.graphics.Color.GOLD, true));
-        AbstractDungeon.actionManager.addToBottom(new ReduceRightMostStasisAction(false));
     }
 
     public AbstractCard makeCopy() {
@@ -74,6 +71,7 @@ public class CurlUp extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeMagicNumber(UPGRADE_BONUS);
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.updateDescription();
         }

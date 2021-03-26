@@ -74,8 +74,8 @@
   },
   "Guardian:CurlUp": {
     "NAME": "Curl Up",
-    "DESCRIPTION": "Place a card in your hand into guardianmod:Stasis. NL guardianmod:Brace !M!.",
-    "UPGRADE_DESCRIPTION": "Place a card in your hand into guardianmod:Stasis. NL guardianmod:Accelerate. NL guardianmod:Brace !M!."
+    "DESCRIPTION": "Place a random card from your hand into guardianmod:Stasis. NL guardianmod:Brace !M!.",
+    "UPGRADE_DESCRIPTION": "Place a card in your hand into guardianmod:Stasis. NL guardianmod:Brace !M!."
   },
   "Guardian:TimeBomb": {
     "NAME": "Time Bomb",
