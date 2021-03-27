@@ -1,4 +1,4 @@
- package reskinContent.skinCharacter;
+ package reskinContent.skinCharacter.skins.Guardian;
 
  import com.badlogic.gdx.Gdx;
  import com.badlogic.gdx.graphics.Color;
@@ -12,32 +12,23 @@
  import guardian.patches.GuardianEnum;
  import reskinContent.patches.CharacterSelectScreenPatches;
  import reskinContent.reskinContent;
+ import reskinContent.skinCharacter.AbstractSkin;
  import reskinContent.vfx.PortraitWhirlwindEffect;
  import reskinContent.vfx.ReskinUnlockedTextEffect;
 
- public  class GuardianChan extends AbstractSkinCharacter {
+ public  class GuardianChan extends AbstractSkin {
      private static float guardianSFX_timer = 0.0f;
      private static boolean guardianWhirl_played = false;
 
     public GuardianChan() {
-        super();
-        this.original_IMG = ImageMaster.loadImage(GuardianMod.getResourcePath("charSelect/portrait.png"));
-        this.portrait_waifu =  ImageMaster.loadImage(reskinContent.assetPath("img/GuardianMod/portrait_waifu.png"));
-        this.portrait_waifu2 =  ImageMaster.loadImage(reskinContent.assetPath("img/GuardianMod/portrait_waifu2.png"));
+        this.portraitStatic_IMG =  ImageMaster.loadImage(reskinContent.assetPath("img/GuardianMod/GuardianChan/portrait_waifu.png"));
+        this.portraitAnimation_IMG =  ImageMaster.loadImage(reskinContent.assetPath("img/GuardianMod/GuardianChan/portrait_waifu2.png"));
 
-        this.ID = CardCrawlGame.languagePack.getCharacterString("Guardian").NAMES[0];
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinGuardian").TEXT[0];
 
-        this.portraitAtlasPath = reskinContent.assetPath("img/GuardianMod/animation/GuardianChan_portrait");
+        this.portraitAtlasPath = reskinContent.assetPath("img/GuardianMod/GuardianChan/animation/GuardianChan_portrait");
     }
 
-     @Override
-     public void checkUnlock() {
-         if (AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN && !this.reskinUnlock){
-             AbstractDungeon.topLevelEffects.add(new ReskinUnlockedTextEffect(0));
-             this.reskinUnlock = true;
-         }
-     }
 
      @Override
      public void InitializeStaticPortraitVar() {
@@ -47,13 +38,12 @@
 
      @Override
      public void setPos() {
-
          portraitSkeleton.setPosition(1092.0f * Settings.scale, Settings.HEIGHT - 1032.0f * Settings.scale);
      }
 
      @Override
      public void update() {
-         if (reskinCount == 1 && portraitAnimationType != 0) {
+         if (portraitAnimationType != 0) {
              guardianSFX_timer += Gdx.graphics.getDeltaTime();
              if (guardianSFX_timer > 1.95f && !guardianWhirl_played) {
                 CharacterSelectScreenPatches.char_effectsQueue.add(new PortraitWhirlwindEffect(new Color(MathUtils.random(0.6F, 0.7F), MathUtils.random(0.6F, 0.7F), MathUtils.random(0.5F, 0.55F), 1.0F), false));
@@ -64,7 +54,6 @@
                  CardCrawlGame.sound.playA("MONSTER_GUARDIAN_DESTROY", MathUtils.random(-0.1F, 0.1F));
                  guardianSFX_timer = guardianSFX_timer % 1;
                  guardianWhirl_played = false;
-
              }
          }
      }

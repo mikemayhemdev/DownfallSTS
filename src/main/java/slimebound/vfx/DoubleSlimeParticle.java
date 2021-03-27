@@ -50,13 +50,13 @@ public class DoubleSlimeParticle extends com.megacrit.cardcrawl.vfx.AbstractGame
             this.stateData = new AnimationStateData(skeletonData);
             this.state = new AnimationState(this.stateData);
         }else {
-            this.atlas = new TextureAtlas(Gdx.files.internal(reskinContent.assetPath("img/Slimebound/animation/TheSlimeBossWaifuDownFall.atlas")));
+            this.atlas = new TextureAtlas(Gdx.files.internal(reskinContent.assetPath("img/Slimebound/Slaifu/animation/TheSlimeBossWaifuDownFall.atlas")));
             SkeletonJson json = new SkeletonJson(this.atlas);
 
 
 
             json.setScale(Settings.scale / scale);
-            SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal(reskinContent.assetPath("img/Slimebound/animation/TheSlimeBossWaifuDownFall.json")));
+            SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal(reskinContent.assetPath("img/Slimebound/Slaifu/animation/TheSlimeBossWaifuDownFall.json")));
             this.skeleton = new Skeleton(skeletonData);
             this.skeleton.setColor(Color.WHITE);
             this.stateData = new AnimationStateData(skeletonData);

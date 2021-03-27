@@ -128,7 +128,8 @@ public class reskinContent implements
             for (int i = 0; i <= characters.length - 1; i++) {
                 config.setBool(CardCrawlGame.saveSlot + "ReskinUnlock" + i, characters[i].reskinUnlock);
                 config.setInt(CardCrawlGame.saveSlot + "reskinCount" + i, characters[i].reskinCount);
-                config.setInt(CardCrawlGame.saveSlot + "portraitAnimationType" + i, characters[i].portraitAnimationType);
+                for(int k = 0; k <= characters[i].skins.length -1; k++)
+                config.setInt(CardCrawlGame.saveSlot + "portraitAnimationType" + i + "_" + k, characters[i].skins[k].portraitAnimationType);
             }
 
 
@@ -150,10 +151,16 @@ public class reskinContent implements
             for (int i = 0; i <= characters.length - 1; i++) {
                 characters[i].reskinUnlock = config.getBool(CardCrawlGame.saveSlot + "ReskinUnlock" + i);
                 characters[i].reskinCount = config.getInt(CardCrawlGame.saveSlot + "reskinCount" + i);
-                characters[i].portraitAnimationType = config.getInt(CardCrawlGame.saveSlot + "portraitAnimationType" + i);
+                for(int k = 0; k <= characters[i].skins.length -1; k++){
+                    characters[i].skins[k].portraitAnimationType = config.getInt(CardCrawlGame.saveSlot + "portraitAnimationType" + i + "_" + k);
 
-                if (characters[i].portraitAnimationType > 2 || characters[i].portraitAnimationType < 0)
-                    characters[i].portraitAnimationType = 2;
+                    if (characters[i].skins[k].portraitAnimationType > 2 || characters[i].skins[k].portraitAnimationType < 0)
+                        characters[i].skins[k].portraitAnimationType = 2;
+
+                    if(!characters[i].skins[k].hasAnimation())
+                        characters[i].skins[k].portraitAnimationType = 0;
+                }
+
             }
 
 

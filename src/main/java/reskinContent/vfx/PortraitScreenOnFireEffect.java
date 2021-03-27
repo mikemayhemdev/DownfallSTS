@@ -33,7 +33,7 @@
        CharacterSelectScreenPatches.char_effectsQueue.add(new GiantFireEffect());
        CharacterSelectScreenPatches.char_effectsQueue.add(new GiantFireEffect());
        CharacterSelectScreenPatches.char_effectsQueue.add(new GiantFireEffect());
-       if(CharacterSelectScreenPatches.characters[2].portraitAnimationType == 2){
+       if(CharacterSelectScreenPatches.characters[2].skins[1].portraitAnimationType == 2){
            CharacterSelectScreenPatches.char_effectsQueue.add(new GiantFireEffect());
            CharacterSelectScreenPatches.char_effectsQueue.add(new GiantFireEffect());
            CharacterSelectScreenPatches.char_effectsQueue.add(new GiantFireEffect());

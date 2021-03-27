@@ -112,22 +112,22 @@ public abstract class SpawnedSlime
         skeletonMap = new HashMap<>();
         modelColorMap = new HashMap<>();
 
-        skeletonMap.put(AttackSlime.ID,                  reskinContent.assetPath("img/Slimebound/orbs/Slime_spike_S"));
-        skeletonMap.put(BronzeSlime.ID,                  reskinContent.assetPath("img/Slimebound/orbs/Slime_spike_M"));
-        skeletonMap.put(CultistSlime.ID,                 reskinContent.assetPath("img/Slimebound/orbs/Slime_CultistSlime"));
-        skeletonMap.put(GreedOozeSlime.ID,               reskinContent.assetPath("img/Slimebound/orbs/Slime_acid_S"));
-        skeletonMap.put(HexSlime.ID,                     reskinContent.assetPath("img/Slimebound/orbs/Slime_spike_M"));
-        skeletonMap.put(PoisonSlime.ID,                  reskinContent.assetPath("img/Slimebound/orbs/Slime_acid_S"));
-        skeletonMap.put(ScrapOozeSlime.ID,               reskinContent.assetPath("img/Slimebound/orbs/Slime_spike_S"));
-        skeletonMap.put(ShieldSlime.ID,                  reskinContent.assetPath("img/Slimebound/orbs/Slime_ShieldSlime"));
-        skeletonMap.put(SlimingSlime.ID,                 reskinContent.assetPath("img/Slimebound/orbs/Slime_spike_S"));
-        skeletonMap.put(TorchHeadSlime.ID,               reskinContent.assetPath("img/Slimebound/orbs/Slime_spike_M"));
+        skeletonMap.put(AttackSlime.ID,                  reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_S"));
+        skeletonMap.put(BronzeSlime.ID,                  reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_M"));
+        skeletonMap.put(CultistSlime.ID,                 reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_CultistSlime"));
+        skeletonMap.put(GreedOozeSlime.ID,               reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_acid_S"));
+        skeletonMap.put(HexSlime.ID,                     reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_M"));
+        skeletonMap.put(PoisonSlime.ID,                  reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_acid_S"));
+        skeletonMap.put(ScrapOozeSlime.ID,               reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_S"));
+        skeletonMap.put(ShieldSlime.ID,                  reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_ShieldSlime"));
+        skeletonMap.put(SlimingSlime.ID,                 reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_S"));
+        skeletonMap.put(TorchHeadSlime.ID,               reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_M"));
 
-        skeletonMap.put(ChampSlime.ID,                   reskinContent.assetPath("img/Slimebound/orbs/ChampSlime"));
+        skeletonMap.put(ChampSlime.ID,                   reskinContent.assetPath("img/Slimebound/Slaifu/orbs/ChampSlime"));
         skeletonMap.put(DarklingSlime.ID,                "images/monsters/theForest/darkling/skeleton");
-        skeletonMap.put(DrawingSlime.ID,                 reskinContent.assetPath("img/Slimebound/orbs/Slime_spike_M"));
-        skeletonMap.put(ProtectorSlime.ID,               reskinContent.assetPath("img/Slimebound/orbs/Slime_spike_M"));
-        skeletonMap.put(SlowingSlime.ID,                 reskinContent.assetPath("img/Slimebound/orbs/TimeSlime"));
+        skeletonMap.put(DrawingSlime.ID,                 reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_M"));
+        skeletonMap.put(ProtectorSlime.ID,               reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_M"));
+        skeletonMap.put(SlowingSlime.ID,                 reskinContent.assetPath("img/Slimebound/Slaifu/orbs/TimeSlime"));
 
 
         modelColorMap.put(AttackSlime.ID,             new Color(0.8F,0.25F,0.25F,2F));

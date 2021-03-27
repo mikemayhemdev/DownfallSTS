@@ -1,4 +1,4 @@
-package reskinContent.skinCharacter;
+package reskinContent.skinCharacter.skins.Snecko;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import guardian.GuardianMod;
 import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
+import reskinContent.skinCharacter.AbstractSkin;
 import reskinContent.vfx.PortraitIntimidateEffect;
 import reskinContent.vfx.ReskinUnlockedTextEffect;
 import sneckomod.TheSnecko;
@@ -20,7 +21,7 @@ import theHexaghost.TheHexaghost;
 
 import static com.megacrit.cardcrawl.core.AbstractCreature.sr;
 
-public class SSSSnecko extends AbstractSkinCharacter {
+public class SSSSnecko extends AbstractSkin {
     public static TextureAtlas sneckoAtlas = null;
     public static Skeleton sneckoSkeleton;
     public static AnimationState sneckoState;
@@ -40,32 +41,23 @@ public class SSSSnecko extends AbstractSkinCharacter {
 
     public SSSSnecko() {
         super();
-        this.original_IMG = ImageMaster.loadImage("sneckomodResources/images/charSelect/portrait.png");
-        this.portrait_waifu = ImageMaster.loadImage(reskinContent.assetPath("img/SneckoMod/portrait_waifu.png"));
-        this.portrait_waifu2 = ImageMaster.loadImage(reskinContent.assetPath("img/SneckoMod/portrait_waifu2.png"));
+        this.portraitStatic_IMG = ImageMaster.loadImage(reskinContent.assetPath("img/SneckoMod/SSSSnecko/portrait_waifu.png"));
+        this.portraitAnimation_IMG = ImageMaster.loadImage(reskinContent.assetPath("img/SneckoMod/SSSSnecko/portrait_waifu2.png"));
 
-        this.ID = CardCrawlGame.languagePack.getCharacterString("sneckomod:theSnecko").NAMES[0];
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinSnecko").TEXT[0];
 
-        this.portraitAtlasPath = reskinContent.assetPath("img/SneckoMod/animation/Snecko_portrait");
+        this.portraitAtlasPath = reskinContent.assetPath("img/SneckoMod/SSSSnecko/animation/Snecko_portrait");
     }
 
-    @Override
-    public void checkUnlock() {
-        if (AbstractDungeon.player.chosenClass == TheSnecko.Enums.THE_SNECKO && !this.reskinUnlock){
-            AbstractDungeon.topLevelEffects.add(new ReskinUnlockedTextEffect(3));
-            this.reskinUnlock = true;
-        }
-    }
 
 
     @Override
     public void loadAnimation() {
         super.loadAnimation();
-        sneckoAtlas = new TextureAtlas(Gdx.files.internal(reskinContent.assetPath("img/SneckoMod/animation/Snecko_portrait_effect.atlas")));
+        sneckoAtlas = new TextureAtlas(Gdx.files.internal(reskinContent.assetPath("img/SneckoMod/SSSSnecko/animation/Snecko_portrait_effect.atlas")));
         SkeletonJson sneckoJson = new SkeletonJson(sneckoAtlas);
         sneckoJson.setScale(Settings.scale / 1.0F);
-        sneckoData = sneckoJson.readSkeletonData(Gdx.files.internal(reskinContent.assetPath("img/SneckoMod/animation/Snecko_portrait_effect.json")));
+        sneckoData = sneckoJson.readSkeletonData(Gdx.files.internal(reskinContent.assetPath("img/SneckoMod/SSSSnecko/animation/Snecko_portrait_effect.json")));
 
 
         sneckoSkeleton = new Skeleton(sneckoData);
@@ -150,7 +142,7 @@ public class SSSSnecko extends AbstractSkinCharacter {
 
     @Override
     public void update() {
-        if (reskinCount == 1 && portraitAnimationType != 0) {
+        if (portraitAnimationType != 0) {
             sneckoTimer += Gdx.graphics.getDeltaTime();
             sneckoAfterImageTimer += Gdx.graphics.getDeltaTime();
 

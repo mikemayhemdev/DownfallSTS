@@ -1,4 +1,4 @@
- package reskinContent.skinCharacter;
+ package reskinContent.skinCharacter.skins.Slimebound;
 
  import com.badlogic.gdx.Gdx;
  import com.badlogic.gdx.graphics.Color;
@@ -14,6 +14,7 @@
  import guardian.patches.GuardianEnum;
  import reskinContent.patches.CharacterSelectScreenPatches;
  import reskinContent.reskinContent;
+ import reskinContent.skinCharacter.AbstractSkin;
  import reskinContent.vfx.ReskinUnlockedTextEffect;
  import reskinContent.vfx.SlimedScreenEffect;
  import slimebound.SlimeboundMod;
@@ -21,7 +22,7 @@
 
  import static com.megacrit.cardcrawl.core.AbstractCreature.sr;
 
- public  class Slaifu extends AbstractSkinCharacter {
+ public  class Slaifu extends AbstractSkin {
      public static TextureAtlas sneckoAtlas = null;
      public static Skeleton sneckoSkeleton;
      public static AnimationState sneckoState;
@@ -35,32 +36,22 @@
      private static boolean slimeHitSFX = false;
 
     public Slaifu() {
-        super();
-        this.original_IMG = ImageMaster.loadImage(SlimeboundMod.getResourcePath("charSelect/portrait.png"));
-        this.portrait_waifu =  ImageMaster.loadImage(reskinContent.assetPath("img/Slimebound/portrait_waifu.png"));
-        this.portrait_waifu2 =  ImageMaster.loadImage(reskinContent.assetPath("img/Slimebound/portrait_waifu2.png"));
+        this.portraitStatic_IMG =  ImageMaster.loadImage(reskinContent.assetPath("img/Slimebound/Slaifu/portrait_waifu.png"));
+        this.portraitAnimation_IMG =  ImageMaster.loadImage(reskinContent.assetPath("img/Slimebound/Slaifu/portrait_waifu2.png"));
 
-        this.ID = CardCrawlGame.languagePack.getCharacterString("Slimebound").NAMES[0];
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinSlime").TEXT[0];
 
-        this.portraitAtlasPath = reskinContent.assetPath("img/Slimebound/animation/SlimeBoss_portrait");
+        this.portraitAtlasPath = reskinContent.assetPath("img/Slimebound/Slaifu/animation/SlimeBoss_portrait");
     }
 
-     @Override
-     public void checkUnlock() {
-         if (AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND && !this.reskinUnlock){
-             AbstractDungeon.topLevelEffects.add(new ReskinUnlockedTextEffect(1));
-             this.reskinUnlock = true;
-         }
-     }
 
      @Override
      public void loadAnimation() {
          super.loadAnimation();
-         sneckoAtlas = new TextureAtlas(Gdx.files.internal(reskinContent.assetPath("img/SneckoMod/animation/Snecko_portrait_effect.atlas")));
+         sneckoAtlas = new TextureAtlas(Gdx.files.internal(reskinContent.assetPath("img/SneckoMod/SSSSnecko/animation/Snecko_portrait_effect.atlas")));
          SkeletonJson sneckoJson = new SkeletonJson(sneckoAtlas);
          sneckoJson.setScale(Settings.scale / 1.0F);
-         sneckoData = sneckoJson.readSkeletonData(Gdx.files.internal(reskinContent.assetPath("img/SneckoMod/animation/Snecko_portrait_effect.json")));
+         sneckoData = sneckoJson.readSkeletonData(Gdx.files.internal(reskinContent.assetPath("img/SneckoMod/SSSSnecko/animation/Snecko_portrait_effect.json")));
 
 
          sneckoSkeleton = new Skeleton(sneckoData);
@@ -117,7 +108,7 @@
 
      @Override
      public void update() {
-         if (reskinCount == 1 && portraitAnimationType != 0) {
+         if (portraitAnimationType != 0) {
              slime_timer += Gdx.graphics.getDeltaTime();
              if (slime_timer > 1.0f && !slimeScreen) {
                  CharacterSelectScreenPatches.char_effectsQueue.add(new SlimedScreenEffect());

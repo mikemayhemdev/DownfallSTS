@@ -69,11 +69,11 @@ public class TheHexaghost extends CustomPlayer {
 
     public static AbstractGhostflame startingFlame;
 
-    private String atlasURL = "reskinContent/img/HexaghostMod/animation/Hexaghost_original.atlas";
-    private String jsonURL = "reskinContent/img/HexaghostMod/animation/Hexaghost_original.json";
+    private String atlasURL = "reskinContent/img/HexaghostMod/Hexago/animation/Hexaghost_original.atlas";
+    private String jsonURL = "reskinContent/img/HexaghostMod/Hexago/animation/Hexaghost_original.json";
 
-    private String atlasURL2 = "reskinContent/img/HexaghostMod/animation/Hexaghost_self_downfall.atlas";
-    private String jsonURL2 = "reskinContent/img/HexaghostMod/animation/Hexaghost_self_downfall.json";
+    private String atlasURL2 = "reskinContent/img/HexaghostMod/Hexago/animation/Hexaghost_self_downfall.atlas";
+    private String jsonURL2 = "reskinContent/img/HexaghostMod/Hexago/animation/Hexaghost_self_downfall.json";
 
     public TheHexaghost(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "hexamodResources/images/char/mainChar/orb/vfx.png", (String)null, (String)null);
@@ -86,15 +86,15 @@ public class TheHexaghost extends CustomPlayer {
         }else {
             if(reskinContent.hexaghostMask){
             initializeClass(null,
-                    "reskinContent/img/HexaghostMod/shoulder2.png",
-                    "reskinContent/img/HexaghostMod/shoulder.png",
+                    "reskinContent/img/HexaghostMod/Hexago/shoulder2.png",
+                    "reskinContent/img/HexaghostMod/Hexago/shoulder.png",
                     CORPSE,
                     getLoadout(), -15.0F, 0.0F, 450.0F, 450.0F, new EnergyManager(3));
 
             }else {
                 initializeClass(null,
-                        "reskinContent/img/HexaghostMod/shoulderMask2.png",
-                        "reskinContent/img/HexaghostMod/shoulderMask.png",
+                        "reskinContent/img/HexaghostMod/Hexago/shoulderMask2.png",
+                        "reskinContent/img/HexaghostMod/Hexago/shoulderMask.png",
                         CORPSE,
                         getLoadout(), -15.0F, 0.0F, 450.0F, 450.0F, new EnergyManager(3));
             }
@@ -109,7 +109,7 @@ public class TheHexaghost extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if(CharacterSelectScreenPatches.characters[2].isOriginal() && CharacterSelectScreenPatches.characters[1].reskinUnlock){
+        if(!CharacterSelectScreenPatches.characters[2].isOriginal()){
             this.loadAnimation(atlasURL2, this.jsonURL2, renderscale2);
         }else {
             this.loadAnimation(atlasURL, this.jsonURL, renderscale);

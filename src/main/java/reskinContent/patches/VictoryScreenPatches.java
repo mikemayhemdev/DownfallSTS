@@ -27,7 +27,7 @@ public class VictoryScreenPatches {
 
         @SpirePrefixPatch
         public static void Prefix(VictoryScreen _instance) {
-            if (AbstractDungeon.isAscensionMode && !Settings.seedSet && !Settings.isTrial) {
+            if (!Settings.seedSet && !Settings.isTrial) {
             } else {
                 for (AbstractSkinCharacter c : CharacterSelectScreenPatches.characters) {
                     c.checkUnlock();

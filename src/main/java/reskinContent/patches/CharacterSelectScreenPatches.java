@@ -1,25 +1,13 @@
 package reskinContent.patches;
 
 
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ScreenShake;
-import com.megacrit.cardcrawl.screens.options.SettingsScreen;
-import com.megacrit.cardcrawl.ui.panels.TopPanel;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import guardian.patches.GuardianEnum;
 import javassist.CtBehavior;
 import reskinContent.reskinContent;
 
-import reskinContent.helpers.PortraitHexaghostOrb;
+
 import reskinContent.skinCharacter.*;
-import reskinContent.vfx.*;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.math.MathUtils;
-import com.esotericsoftware.spine.*;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -33,21 +21,7 @@ import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterSelectScreen;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
-import guardian.GuardianMod;
-
-import slimebound.SlimeboundMod;
-import slimebound.patches.SlimeboundEnum;
-import sneckomod.TheSnecko;
-import theHexaghost.TheHexaghost;
-
-
-import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
-import static com.megacrit.cardcrawl.core.AbstractCreature.sr;
-
 
 @SuppressWarnings("unused")
 public class CharacterSelectScreenPatches {
@@ -68,19 +42,18 @@ public class CharacterSelectScreenPatches {
 
     private static boolean bgIMGUpdate = false;
 
-    public static Hitbox hexaghostMask;
 
     public static ArrayList<AbstractGameEffect> char_effectsQueue = new ArrayList();
 
     public static ArrayList<AbstractGameEffect> char_effectsQueue_toRemove = new ArrayList();
 
     public static AbstractSkinCharacter[] characters = new AbstractSkinCharacter[]{
-            new GuardianChan(),
-            new Slaifu(),
-            new Hexago(),
-            new SSSSnecko(),
-            new ChampSister()
-//            ,new Automaton()
+            new GuardianSkin(),
+            new SlimeBoundSkin(),
+            new HexaghostSkin(),
+            new SneckoSkin(),
+            new ChampSkin()
+//            ,new AutomatonSkin()
     };
 
 
@@ -103,8 +76,6 @@ public class CharacterSelectScreenPatches {
             portraitAnimationLeft.move(Settings.WIDTH / 2.0F - reskin_W / 2.0F - reskinX_center + allTextInfoX, 920.0F * Settings.scale);
             portraitAnimationRight.move(Settings.WIDTH / 2.0F + reskin_W / 2.0F - reskinX_center + allTextInfoX, 920.0F * Settings.scale);
 
-            hexaghostMask = new Hitbox(250.0f * Settings.scale, 350.0f * Settings.scale);
-            hexaghostMask.move(1350.0F * Settings.scale, 780.0F * Settings.scale);
 
         }
 
@@ -113,8 +84,8 @@ public class CharacterSelectScreenPatches {
                 method = "renderInfo"
         )
         public static class CharacterOptionRenderInfoPatch {
-            @SpireInsertPatch(locator = renderRelicsLocator.class,localvars = {"infoX"})
-            public static SpireReturn<Void> Insert(CharacterOption _instance, SpriteBatch sb,float infoX) {
+            @SpireInsertPatch(locator = renderRelicsLocator.class, localvars = {"infoX"})
+            public static SpireReturn<Void> Insert(CharacterOption _instance, SpriteBatch sb, float infoX) {
                 allTextInfoX = infoX - 200.0f * Settings.scale;
 
                 return SpireReturn.Continue();
@@ -131,33 +102,31 @@ public class CharacterSelectScreenPatches {
         }
 
 
-
-
         @SpirePatch(clz = CharacterSelectScreen.class, method = "render")
         public static class CharacterSelectScreenPatch_Render {
             @SpirePostfixPatch
             public static void Initialize(CharacterSelectScreen __instance, SpriteBatch sb) {
                 for (CharacterOption o : __instance.options) {
-                    for (int i = 0; i <= characters.length - 1; i++) {
-                        characters[i].InitializeReskinCount();
+                    for (AbstractSkinCharacter c : characters) {
+                        c.InitializeReskinCount();
 
 
-                        if (o.name.equals(characters[i].ID) && o.selected) {
+                        if (o.name.equals(c.id) && o.selected) {
                             reskinRight.render(sb);
                             reskinLeft.render(sb);
                             portraitAnimationLeft.render(sb);
                             portraitAnimationRight.render(sb);
 
-                            if (i == 2 && characters[i].reskinCount == 1)
-                                hexaghostMask.render(sb);
-
-                            if (characters[i].reskinCount > 0 && characters[i].reskinUnlock) {
+                            c.skins[c.reskinCount].extraHitboxRender(sb);
+//   动画类型箭头渲染
+                            if (c.skins[c.reskinCount].hasAnimation() && c.reskinUnlock) {
                                 if (portraitAnimationLeft.hovered || Settings.isControllerMode) {
                                     sb.setColor(Color.WHITE.cpy());
                                 } else {
                                     sb.setColor(Color.LIGHT_GRAY.cpy());
                                 }
                                 sb.draw(ImageMaster.CF_LEFT_ARROW, Settings.WIDTH / 2.0F - reskin_W / 2.0F - reskinX_center - 36.0f * Settings.scale + allTextInfoX, 920.0F * Settings.scale - 36.0f * Settings.scale, 0.0f, 0.0f, 48.0f, 48.0f, Settings.scale * 1.5f, Settings.scale * 1.5f, 0.0F, 0, 0, 48, 48, false, false);
+
                                 if (portraitAnimationRight.hovered || Settings.isControllerMode) {
                                     sb.setColor(Color.WHITE.cpy());
                                 } else {
@@ -166,8 +135,9 @@ public class CharacterSelectScreenPatches {
                                 sb.draw(ImageMaster.CF_RIGHT_ARROW, Settings.WIDTH / 2.0F + reskin_W / 2.0F - reskinX_center - 36.0f * Settings.scale + allTextInfoX, 920.0F * Settings.scale - 36.0f * Settings.scale, 0.0f, 0.0f, 48.0f, 48.0f, Settings.scale * 1.5f, Settings.scale * 1.5f, 0.0F, 0, 0, 48, 48, false, false);
 
                             }
-
-                            if (characters[i].reskinUnlock) {
+//   动画类型箭头渲染
+//   皮肤选择箭头渲染
+                            if (c.reskinUnlock) {
                                 if (reskinRight.hovered || Settings.isControllerMode) {
                                     sb.setColor(Color.WHITE.cpy());
                                 } else {
@@ -181,21 +151,19 @@ public class CharacterSelectScreenPatches {
                                 }
                                 sb.draw(ImageMaster.CF_LEFT_ARROW, Settings.WIDTH / 2.0F - reskin_W / 2.0F - reskinX_center - 36.0f * Settings.scale + allTextInfoX, 800.0F * Settings.scale - 36.0f * Settings.scale, 0.0f, 0.0f, 48.0f, 48.0f, Settings.scale * 1.5f, Settings.scale * 1.5f, 0.0F, 0, 0, 48, 48, false, false);
                             }
+//   皮肤选择箭头渲染
 
                             FontHelper.cardTitleFont.getData().setScale(1.0F);
                             FontHelper.losePowerFont.getData().setScale(0.8F);
 
-                            if (characters[i].reskinCount > 0 && characters[i].reskinUnlock) {
-                                FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, CardCrawlGame.languagePack.getUIString(reskinContent.makeID("PortraitAnimationType")).TEXT[characters[i].portraitAnimationType], Settings.WIDTH / 2.0F - reskinX_center + allTextInfoX, 920.0F * Settings.scale, Settings.GOLD_COLOR.cpy());
+                            if (c.skins[c.reskinCount].hasAnimation() && c.reskinUnlock) {
+                                FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, CardCrawlGame.languagePack.getUIString(reskinContent.makeID("PortraitAnimationType")).TEXT[c.skins[c.reskinCount].portraitAnimationType], Settings.WIDTH / 2.0F - reskinX_center + allTextInfoX, 920.0F * Settings.scale, Settings.GOLD_COLOR.cpy());
                                 FontHelper.renderFontCentered(sb, FontHelper.losePowerFont, CardCrawlGame.languagePack.getUIString(reskinContent.makeID("PortraitAnimation")).TEXT[0], Settings.WIDTH / 2.0F - reskinX_center + allTextInfoX, 970 * Settings.scale, Settings.GOLD_COLOR);
                             }
-                            if (characters[i].reskinUnlock) {
-                                FontHelper.renderFontCentered(sb, FontHelper.losePowerFont, TEXT[0], Settings.WIDTH / 2.0F - reskinX_center + allTextInfoX, 850.0F * Settings.scale, Settings.GOLD_COLOR.cpy());
 
-                                if(characters[i].reskinCount >0)
-                                FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, characters[i].NAME, Settings.WIDTH / 2.0F - reskinX_center + allTextInfoX, 800.0F * Settings.scale, Settings.GOLD_COLOR.cpy());
-                                else
-                                FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, TEXT[1], Settings.WIDTH / 2.0F - reskinX_center + allTextInfoX, 800.0F * Settings.scale, Settings.GOLD_COLOR.cpy());
+                            if (c.reskinUnlock) {
+                                FontHelper.renderFontCentered(sb, FontHelper.losePowerFont, TEXT[0], Settings.WIDTH / 2.0F - reskinX_center + allTextInfoX, 850.0F * Settings.scale, Settings.GOLD_COLOR.cpy());
+                                FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, c.skins[c.reskinCount].NAME, Settings.WIDTH / 2.0F - reskinX_center + allTextInfoX, 800.0F * Settings.scale, Settings.GOLD_COLOR.cpy());
                             }
                         }
                     }
@@ -213,8 +181,8 @@ public class CharacterSelectScreenPatches {
                 for (CharacterOption o : __instance.options) {
                     for (AbstractSkinCharacter c : characters) {
                         c.InitializeReskinCount();
-                        if (o.name.equals(c.ID) && o.selected && c.reskinCount > 0 && c.portraitAnimationType != 0) {
-                            c.render(sb);
+                        if (o.name.equals(c.id) && o.selected && c.skins[c.reskinCount].hasAnimation() && c.skins[c.reskinCount].portraitAnimationType != 0) {
+                            c.skins[c.reskinCount].render(sb);
 
                             if (char_effectsQueue.size() > 0) {
                                 for (int k = 0; k < char_effectsQueue.size(); k++) {
@@ -252,10 +220,10 @@ public class CharacterSelectScreenPatches {
 
             for (AbstractSkinCharacter c : characters) {
                 c.InitializeReskinCount();
-                if (__instance.name.equals(c.ID) && c.portraitAnimationType != 0) {
-                    c.clearOrbs();
-                    if (c.reskinCount > 0)
-                        c.loadPortraitAnimation();
+                if (__instance.name.equals(c.id) && c.skins[c.reskinCount].portraitAnimationType != 0) {
+                    c.skins[c.reskinCount].clearWhenClick();
+                    if (c.skins[c.reskinCount].hasAnimation())
+                        c.skins[c.reskinCount].loadPortraitAnimation();
                     System.out.println("立绘载入2");
                 }
             }
@@ -272,9 +240,9 @@ public class CharacterSelectScreenPatches {
                 for (AbstractSkinCharacter c : characters) {
                     c.InitializeReskinCount();
 
-                    if (o.name.equals(c.ID) && o.selected && c.reskinUnlock) {
+                    if (o.name.equals(c.id) && o.selected && c.reskinUnlock) {
                         if (!bgIMGUpdate) {
-                            __instance.bgCharImg = c.updateBgImg();
+                            __instance.bgCharImg = c.skins[c.reskinCount].updateBgImg();
                             bgIMGUpdate = true;
                         }
 
@@ -304,76 +272,8 @@ public class CharacterSelectScreenPatches {
                         if ((portraitAnimationLeft.justHovered || portraitAnimationRight.justHovered) && c.reskinCount > 0)
                             CardCrawlGame.sound.playV("UI_HOVER", 0.75f);
 
-                        if (InputHelper.justClickedLeft && hexaghostMask.hovered && c.reskinCount > 0)
-                            hexaghostMask.clickStarted = true;
 
-
-                        if (reskinRight.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed()) {
-                            reskinRight.clicked = false;
-                            c.clearOrbs();
-                            char_effectsQueue.clear();
-
-                            if (c.reskinCount < c.reskinSize) {
-                                c.reskinCount += 1;
-                            } else {
-                                c.reskinCount = 0;
-                            }
-                            c.loadPortraitAnimation();
-                            __instance.bgCharImg = c.updateBgImg();
-                        }
-
-
-                        if (reskinLeft.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed()) {
-                            reskinLeft.clicked = false;
-                            c.clearOrbs();
-                            char_effectsQueue.clear();
-
-                            if (c.reskinCount > 0) {
-                                c.reskinCount -= 1;
-                            } else {
-                                c.reskinCount = c.reskinSize;
-                            }
-                            c.loadPortraitAnimation();
-                            __instance.bgCharImg = c.updateBgImg();
-                        }
-
-
-                        if (portraitAnimationLeft.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed()) {
-                            portraitAnimationLeft.clicked = false;
-                            c.clearOrbs();
-                            char_effectsQueue.clear();
-                            if (c.portraitAnimationType <= 0) {
-                                c.portraitAnimationType = 2;
-                            } else {
-                                c.portraitAnimationType -= 1;
-                            }
-                            c.loadPortraitAnimation();
-                            __instance.bgCharImg = c.updateBgImg();
-                        }
-
-                        if (portraitAnimationRight.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed()) {
-                            portraitAnimationRight.clicked = false;
-                            c.clearOrbs();
-                            char_effectsQueue.clear();
-                            if (c.portraitAnimationType >= 2) {
-                                c.portraitAnimationType = 0;
-                            } else {
-                                c.portraitAnimationType += 1;
-                            }
-                            c.loadPortraitAnimation();
-                            __instance.bgCharImg = c.updateBgImg();
-                        }
-
-                        if (hexaghostMask.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed()) {
-
-                            __instance.bgCharImg = c.updateBgImg();
-                        }
-
-
-                        c.InitializeReskinCount();
-
-
-                        c.update();
+                        c.skins[c.reskinCount].extraHitboxClickStart();
 
                         reskinRight.move(Settings.WIDTH / 2.0F + reskin_W / 2.0F - reskinX_center + allTextInfoX, 800.0F * Settings.scale);
                         reskinLeft.move(Settings.WIDTH / 2.0F - reskin_W / 2.0F - reskinX_center + allTextInfoX, 800.0F * Settings.scale);
@@ -388,7 +288,75 @@ public class CharacterSelectScreenPatches {
                             portraitAnimationRight.update();
                         }
 
-                        hexaghostMask.update();
+                        c.skins[c.reskinCount].extraHitboxUpdate();
+
+                        if (c.skins[c.reskinCount].extraHitboxClickCheck()) {
+                            __instance.bgCharImg = c.skins[c.reskinCount].updateBgImg();
+                        }
+
+
+                        if (reskinRight.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed()) {
+                            reskinRight.clicked = false;
+                            c.skins[c.reskinCount].clearWhenClick();
+                            char_effectsQueue.clear();
+
+                            if (c.reskinCount < c.skins.length - 1) {
+                                c.reskinCount += 1;
+                            } else {
+                                c.reskinCount = 0;
+                            }
+                            c.skins[c.reskinCount].loadPortraitAnimation();
+                            __instance.bgCharImg = c.skins[c.reskinCount].updateBgImg();
+                        }
+
+
+                        if (reskinLeft.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed()) {
+                            reskinLeft.clicked = false;
+                            c.skins[c.reskinCount].clearWhenClick();
+                            char_effectsQueue.clear();
+
+                            if (c.reskinCount > 0) {
+                                c.reskinCount -= 1;
+                            } else {
+                                c.reskinCount = c.skins.length - 1;
+                            }
+                            c.skins[c.reskinCount].loadPortraitAnimation();
+                            __instance.bgCharImg = c.skins[c.reskinCount].updateBgImg();
+                        }
+
+
+                        if (portraitAnimationLeft.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed()) {
+                            portraitAnimationLeft.clicked = false;
+                            c.skins[c.reskinCount].clearWhenClick();
+                            char_effectsQueue.clear();
+                            if (c.skins[c.reskinCount].portraitAnimationType <= 0) {
+                                c.skins[c.reskinCount].portraitAnimationType = 2;
+                            } else {
+                                c.skins[c.reskinCount].portraitAnimationType -= 1;
+                            }
+                            c.skins[c.reskinCount].loadPortraitAnimation();
+                            __instance.bgCharImg = c.skins[c.reskinCount].updateBgImg();
+                        }
+
+                        if (portraitAnimationRight.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed()) {
+                            portraitAnimationRight.clicked = false;
+                            c.skins[c.reskinCount].clearWhenClick();
+                            char_effectsQueue.clear();
+                            if ( c.skins[c.reskinCount].portraitAnimationType >= 2) {
+                                c.skins[c.reskinCount].portraitAnimationType = 0;
+                            } else {
+                                c.skins[c.reskinCount].portraitAnimationType += 1;
+                            }
+                            c.skins[c.reskinCount].loadPortraitAnimation();
+                            __instance.bgCharImg = c.skins[c.reskinCount].updateBgImg();
+                        }
+
+
+                        c.InitializeReskinCount();
+
+                        c.skins[c.reskinCount].update();
+
+
                     }
                 }
             }

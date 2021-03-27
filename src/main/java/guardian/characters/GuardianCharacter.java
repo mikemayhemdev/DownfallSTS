@@ -70,8 +70,8 @@ public class GuardianCharacter extends CustomPlayer {
     private String jsonURL = "guardianResources/GuardianImages/char/skeleton.json";
     private String jsonURLPuddle = "guardianResources/GuardianImages/char/skeletonPuddle.json";
 
-	private String atlasURL2 = "reskinContent/img/GuardianMod/animation/Guardian.atlas";
-	private String jsonURL2 = "reskinContent/img/GuardianMod/animation/Guardian.json";
+	private String atlasURL2 = "reskinContent/img/GuardianMod/GuardianChan/animation/Guardian.atlas";
+	private String jsonURL2 = "reskinContent/img/GuardianMod/GuardianChan/animation/Guardian.json";
 
     private String currentJson = jsonURL;
 	private String currentJson2 = jsonURL2;
@@ -92,9 +92,9 @@ public class GuardianCharacter extends CustomPlayer {
         }else
             {
                 this.initializeClass((String) null,
-                 "reskinContent/img/GuardianMod/shoulder2.png",
-                 "reskinContent/img/GuardianMod/shoulder.png",
-                 "reskinContent/img/GuardianMod/corpse.png", this.getLoadout(),
+                 "reskinContent/img/GuardianMod/GuardianChan/shoulder2.png",
+                 "reskinContent/img/GuardianMod/GuardianChan/shoulder.png",
+                 "reskinContent/img/GuardianMod/GuardianChan/corpse.png", this.getLoadout(),
                   0.0F, -10F, 400.0F, 350.0F, new EnergyManager(3));
 
             }

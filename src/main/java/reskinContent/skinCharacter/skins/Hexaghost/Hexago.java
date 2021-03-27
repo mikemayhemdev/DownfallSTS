@@ -1,4 +1,4 @@
-package reskinContent.skinCharacter;
+package reskinContent.skinCharacter.skins.Hexaghost;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
@@ -9,11 +9,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
+import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import guardian.GuardianMod;
 import reskinContent.helpers.PortraitHexaghostOrb;
 import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
+import reskinContent.skinCharacter.AbstractSkin;
 import reskinContent.vfx.PortraitScreenOnFireEffect;
 import reskinContent.vfx.ReskinUnlockedTextEffect;
 import slimebound.patches.SlimeboundEnum;
@@ -21,7 +23,7 @@ import theHexaghost.TheHexaghost;
 
 import java.util.ArrayList;
 
-public class Hexago extends AbstractSkinCharacter {
+public class Hexago extends AbstractSkin {
     public Texture hexaghostTextureMask;
 
     public static ArrayList<PortraitHexaghostOrb> orbs = new ArrayList();
@@ -40,29 +42,21 @@ public class Hexago extends AbstractSkinCharacter {
 
     public static boolean hexaghostMask_switch = true;
 
+    public Hitbox hexaghostMaskHitBox;
 
     public Hexago() {
-        super();
-        this.original_IMG = ImageMaster.loadImage("hexamodResources/images/charSelect/charBG.png");
-        this.portrait_waifu = ImageMaster.loadImage(reskinContent.assetPath("img/HexaghostMod/portrait_waifu.png"));
-        this.portrait_waifu2 = ImageMaster.loadImage(reskinContent.assetPath("img/HexaghostMod/portrait_waifu2.png"));
-        this.hexaghostTextureMask = ImageMaster.loadImage(reskinContent.assetPath("img/HexaghostMod/portrait_waifu_m.png"));
+        this.portraitStatic_IMG = ImageMaster.loadImage(reskinContent.assetPath("img/HexaghostMod/Hexago/portrait_waifu.png"));
+        this.portraitAnimation_IMG = ImageMaster.loadImage(reskinContent.assetPath("img/HexaghostMod/Hexago/portrait_waifu2.png"));
+        this.hexaghostTextureMask = ImageMaster.loadImage(reskinContent.assetPath("img/HexaghostMod/Hexago/portrait_waifu_m.png"));
 
-        this.ID = CardCrawlGame.languagePack.getCharacterString("hexamod:theHexaghost").NAMES[0];
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinHexaghost").TEXT[0];
 
-        this.portraitAtlasPath = reskinContent.assetPath("img/HexaghostMod/animation/Hexaghost_portrait");
+        this.portraitAtlasPath = reskinContent.assetPath("img/HexaghostMod/Hexago/animation/Hexaghost_portrait");
 
+        hexaghostMaskHitBox = new Hitbox(250.0f * Settings.scale, 350.0f * Settings.scale);
+        hexaghostMaskHitBox.move(1350.0F * Settings.scale, 780.0F * Settings.scale);
 
         orbs.clear();
-    }
-
-    @Override
-    public void checkUnlock() {
-        if (AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT && !this.reskinUnlock){
-            AbstractDungeon.topLevelEffects.add(new ReskinUnlockedTextEffect(2));
-            this.reskinUnlock = true;
-        }
     }
 
 
@@ -87,10 +81,11 @@ public class Hexago extends AbstractSkinCharacter {
         portraitState.addAnimation(3, "maskHalo_fade_in", true, 0.0f);
         portraitState.addAnimation(3, "maskHalo_loop", true, 0.0f);
 
+        hexaghostMask_switch = !reskinContent.hexaghostMask;
         if (reskinContent.hexaghostMask) {
-            hexaghostMask_switch = false;
             portraitState.addAnimation(3, "Mask_off", false, 1.0f);
         }
+
     }
 
     @Override
@@ -103,24 +98,15 @@ public class Hexago extends AbstractSkinCharacter {
 
     @Override
     public Texture updateBgImg() {
-        switch (reskinCount) {
-            case 0:
-                reskinContent.saveSettings();
-                return original_IMG;
-            case 1:
-                reskinContent.saveSettings();
-                if (portraitAnimationType == 0) {
-                    if (hexaghostMask_switch) {
-                        return hexaghostTextureMask;
-                    } else {
-                        return portrait_waifu;
-                    }
-
-                } else {
-                    return portrait_waifu2;
-                }
-            default:
-                return original_IMG;
+        reskinContent.saveSettings();
+        if (portraitAnimationType == 0) {
+            if (hexaghostMask_switch) {
+                return hexaghostTextureMask ;
+            } else {
+                return portraitStatic_IMG;
+            }
+        } else {
+            return portraitAnimation_IMG;
         }
     }
 
@@ -189,73 +175,93 @@ public class Hexago extends AbstractSkinCharacter {
     }
 
     @Override
-    public void clearOrbs() {
+    public void clearWhenClick() {
         orbs.clear();
     }
 
 
-
     @Override
     public void update() {
-        if (reskinCount == 1) {
-            if (portraitAnimationType != 0) {
-                if (CharacterSelectScreenPatches.hexaghostMask.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed()) {
-                    CharacterSelectScreenPatches.hexaghostMask.clicked = false;
+        if (portraitAnimationType > 0) {
+            if (hexaghostMaskHitBox.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed()) {
+                hexaghostMaskHitBox.clicked = false;
 
-                    if (hexaghostMask_switch) {
-                        portraitState.setAnimation(3, "Mask_off", false);
-                        hexaghostMask_switch = false;
-                        reskinContent.hexaghostMask = true;
-                        reskinContent.saveSettings();
-                    } else {
-                        portraitState.setAnimation(3, "Mask_on", false);
-                        portraitState.addAnimation(3, "maskHalo_loop", true, 0.0f);
-                        hexaghostMask_switch = true;
-                        reskinContent.hexaghostMask = false;
-                        reskinContent.saveSettings();
-                    }
+                if (hexaghostMask_switch) {
+                    portraitState.setAnimation(3, "Mask_off", false);
+                    hexaghostMask_switch = false;
+                    reskinContent.hexaghostMask = true;
+                    reskinContent.saveSettings();
+                } else {
+                    portraitState.setAnimation(3, "Mask_on", false);
+                    portraitState.addAnimation(3, "maskHalo_loop", true, 0.0f);
+                    hexaghostMask_switch = true;
+                    reskinContent.hexaghostMask = false;
+                    reskinContent.saveSettings();
                 }
+            }
 
 //  地狱火相关
-                if (orbs.size() != 0) {
-                    if (!giantGhostFire) {
-                        ghostFireTimer -= Gdx.graphics.getDeltaTime();
-                        if (ghostFireTimer < 0) {
-                            hexaghostChangeState(ACTIVATE_ORB);
-                        }
-                    } else {
-                        giantGhostFireTimer -= Gdx.graphics.getDeltaTime();
-                        if (giantGhostFireTimer <= 0) {
-                            hexaghostChangeState(DEACTIVATE_ALL_ORBS);
-                        }
+            if (orbs.size() != 0) {
+                if (!giantGhostFire) {
+                    ghostFireTimer -= Gdx.graphics.getDeltaTime();
+                    if (ghostFireTimer < 0) {
+                        hexaghostChangeState(ACTIVATE_ORB);
                     }
-                }
-
-// 鬼火更新
-                for (PortraitHexaghostOrb orb : orbs) {
-                    orb.update(portraitSkeleton.getX(), portraitSkeleton.getY());
-                }
-//面具hitbox
-                CharacterSelectScreenPatches.hexaghostMask.move(
-                        portraitSkeleton.getX() + portraitSkeleton.findBone("Mask").getWorldX(),
-                        portraitSkeleton.getY() + portraitSkeleton.findBone("Mask").getWorldY()
-                );
-            } else {
-                if (CharacterSelectScreenPatches.hexaghostMask.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed()) {
-                    CharacterSelectScreenPatches.hexaghostMask.clicked = false;
-
-                    if (hexaghostMask_switch) {
-                        hexaghostMask_switch = false;
-                        reskinContent.hexaghostMask = true;
-                        reskinContent.saveSettings();
-                    } else {
-                        hexaghostMask_switch = true;
-                        reskinContent.hexaghostMask = false;
-                        reskinContent.saveSettings();
+                } else {
+                    giantGhostFireTimer -= Gdx.graphics.getDeltaTime();
+                    if (giantGhostFireTimer <= 0) {
+                        hexaghostChangeState(DEACTIVATE_ALL_ORBS);
                     }
                 }
             }
+
+// 鬼火更新
+            for (PortraitHexaghostOrb orb : orbs) {
+                orb.update(portraitSkeleton.getX(), portraitSkeleton.getY());
+            }
+//面具hitbox
+            hexaghostMaskHitBox.move(
+                    portraitSkeleton.getX() + portraitSkeleton.findBone("Mask").getWorldX(),
+                    portraitSkeleton.getY() + portraitSkeleton.findBone("Mask").getWorldY()
+            );
+        } else {
+            if (hexaghostMaskHitBox.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed()) {
+                hexaghostMaskHitBox.clicked = false;
+
+                if (hexaghostMask_switch) {
+                    hexaghostMask_switch = false;
+                    reskinContent.hexaghostMask = true;
+                    reskinContent.saveSettings();
+                } else {
+                    hexaghostMask_switch = true;
+                    reskinContent.hexaghostMask = false;
+                    reskinContent.saveSettings();
+                }
+            }
         }
+
+    }
+
+
+    @Override
+    public void extraHitboxRender(SpriteBatch sb) {
+        hexaghostMaskHitBox.render(sb);
+    }
+
+    @Override
+    public void extraHitboxUpdate() {
+        hexaghostMaskHitBox.update();
+    }
+
+    @Override
+    public void extraHitboxClickStart() {
+        if (InputHelper.justClickedLeft && hexaghostMaskHitBox.hovered)
+            hexaghostMaskHitBox.clickStarted = true;
+    }
+
+    @Override
+    public Boolean extraHitboxClickCheck() {
+       return (hexaghostMaskHitBox.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed());
     }
 }
 

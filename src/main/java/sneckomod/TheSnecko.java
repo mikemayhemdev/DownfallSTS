@@ -65,9 +65,9 @@ public class TheSnecko extends CustomPlayer {
                     getLoadout(), 10.0F, -20.0F, 300.0F, 300.0F, new EnergyManager(3));
         } else {
             initializeClass(null,
-                    "reskinContent/img/SneckoMod/shoulder2.png",
-                    "reskinContent/img/SneckoMod/shoulder.png",
-                    "reskinContent/img/SneckoMod/corpse.png",
+                    "reskinContent/img/SneckoMod/SSSSnecko/shoulder2.png",
+                    "reskinContent/img/SneckoMod/SSSSnecko/shoulder.png",
+                    "reskinContent/img/SneckoMod/SSSSnecko/corpse.png",
                     getLoadout(), 10.0F, -20.0F, 300.0F, 300.0F, new EnergyManager(3));
         }
 
@@ -78,8 +78,8 @@ public class TheSnecko extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if (CharacterSelectScreenPatches.characters[3].isOriginal() && CharacterSelectScreenPatches.characters[1].reskinUnlock) {
-            loadAnimation("reskinContent/img/SneckoMod/animation/Snecko_waifu.atlas", "reskinContent/img/SneckoMod/animation/Snecko_waifu.json", renderscale);
+        if (!CharacterSelectScreenPatches.characters[3].isOriginal()) {
+            loadAnimation("reskinContent/img/SneckoMod/SSSSnecko/animation/Snecko_waifu.atlas", "reskinContent/img/SneckoMod/SSSSnecko/animation/Snecko_waifu.json", renderscale);
         } else {
             loadAnimation("sneckomodResources/images/char/skeleton.atlas", "sneckomodResources/images/char/skeleton.json", renderscale);
         }

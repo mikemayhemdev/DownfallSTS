@@ -61,8 +61,8 @@ public class ChampChar extends CustomPlayer {
     private String atlasURL = "champResources/images/char/mainChar/champ.atlas";
     private String jsonURL = "champResources/images/char/mainChar/champ.json";
 
-    private String atlasURL2 = "reskinContent/img/ChampMod/animation/TheChampPlayer.atlas";
-    private String jsonURL2 = "reskinContent/img/ChampMod/animation/TheChampPlayer.json";
+    private String atlasURL2 = "reskinContent/img/ChampMod/Chan-P/animation/TheChampPlayer.atlas";
+    private String jsonURL2 = "reskinContent/img/ChampMod/Chan-P/animation/TheChampPlayer.json";
 
     /*
     private String atlasURL2 = "reskinContent/img/HexaghostMod/animation/Hexaghost_self_downfall.atlas";
@@ -80,9 +80,9 @@ public class ChampChar extends CustomPlayer {
                     getLoadout(), -15.0F, -30.0F, 250.0F, 300.0F, new EnergyManager(3));
         }else {
             initializeClass(null,
-                    "reskinContent/img/ChampMod/shoulder2.png",
-                    "reskinContent/img/ChampMod/shoulder.png",
-                    "reskinContent/img/ChampMod/corpse.png",
+                    "reskinContent/img/ChampMod/Chan-P/shoulder2.png",
+                    "reskinContent/img/ChampMod/Chan-P/shoulder.png",
+                    "reskinContent/img/ChampMod/Chan-P/corpse.png",
                     getLoadout(), -15.0F, -30.0F, 250.0F, 300.0F, new EnergyManager(3));
         }
 
