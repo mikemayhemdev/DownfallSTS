@@ -273,8 +273,6 @@ public class CharacterSelectScreenPatches {
                             CardCrawlGame.sound.playV("UI_HOVER", 0.75f);
 
 
-                        c.skins[c.reskinCount].extraHitboxClickStart();
-
                         reskinRight.move(Settings.WIDTH / 2.0F + reskin_W / 2.0F - reskinX_center + allTextInfoX, 800.0F * Settings.scale);
                         reskinLeft.move(Settings.WIDTH / 2.0F - reskin_W / 2.0F - reskinX_center + allTextInfoX, 800.0F * Settings.scale);
                         portraitAnimationLeft.move(Settings.WIDTH / 2.0F - reskin_W / 2.0F - reskinX_center + allTextInfoX, 920.0F * Settings.scale);
@@ -288,11 +286,6 @@ public class CharacterSelectScreenPatches {
                             portraitAnimationRight.update();
                         }
 
-                        c.skins[c.reskinCount].extraHitboxUpdate();
-
-                        if (c.skins[c.reskinCount].extraHitboxClickCheck()) {
-                            __instance.bgCharImg = c.skins[c.reskinCount].updateBgImg();
-                        }
 
 
                         if (reskinRight.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed()) {
@@ -351,10 +344,16 @@ public class CharacterSelectScreenPatches {
                             __instance.bgCharImg = c.skins[c.reskinCount].updateBgImg();
                         }
 
+                        c.skins[c.reskinCount].update();
+
+                        if (c.skins[c.reskinCount].extraHitboxClickCheck()) {
+                            __instance.bgCharImg = c.skins[c.reskinCount].updateBgImg();
+                        }
+
 
                         c.InitializeReskinCount();
 
-                        c.skins[c.reskinCount].update();
+
 
 
                     }

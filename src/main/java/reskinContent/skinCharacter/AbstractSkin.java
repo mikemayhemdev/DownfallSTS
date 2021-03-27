@@ -122,12 +122,6 @@ public abstract class AbstractSkin {
     public void extraHitboxRender(SpriteBatch sb){
     }
 
-    public void extraHitboxUpdate(){
-    }
-
-
-    public void extraHitboxClickStart(){}
-
     public Boolean extraHitboxClickCheck(){
         return false;
     }

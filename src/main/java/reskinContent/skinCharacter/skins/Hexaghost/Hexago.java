@@ -40,9 +40,8 @@ public class Hexago extends AbstractSkin {
     private static float giantGhostFireTimer = giantGhostFireTimer_time;
 
 
-    public static boolean hexaghostMask_switch = true;
-
     public Hitbox hexaghostMaskHitBox;
+    public boolean maskClicked = false;
 
     public Hexago() {
         this.portraitStatic_IMG = ImageMaster.loadImage(reskinContent.assetPath("img/HexaghostMod/Hexago/portrait_waifu.png"));
@@ -81,7 +80,7 @@ public class Hexago extends AbstractSkin {
         portraitState.addAnimation(3, "maskHalo_fade_in", true, 0.0f);
         portraitState.addAnimation(3, "maskHalo_loop", true, 0.0f);
 
-        hexaghostMask_switch = !reskinContent.hexaghostMask;
+
         if (reskinContent.hexaghostMask) {
             portraitState.addAnimation(3, "Mask_off", false, 1.0f);
         }
@@ -100,8 +99,8 @@ public class Hexago extends AbstractSkin {
     public Texture updateBgImg() {
         reskinContent.saveSettings();
         if (portraitAnimationType == 0) {
-            if (hexaghostMask_switch) {
-                return hexaghostTextureMask ;
+            if (!reskinContent.hexaghostMask) {
+                return hexaghostTextureMask;
             } else {
                 return portraitStatic_IMG;
             }
@@ -182,22 +181,25 @@ public class Hexago extends AbstractSkin {
 
     @Override
     public void update() {
+        if (InputHelper.justClickedLeft && hexaghostMaskHitBox.hovered)
+            hexaghostMaskHitBox.clickStarted = true;
+
+        hexaghostMaskHitBox.update();
+
         if (portraitAnimationType > 0) {
             if (hexaghostMaskHitBox.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed()) {
                 hexaghostMaskHitBox.clicked = false;
 
-                if (hexaghostMask_switch) {
+
+                if (!reskinContent.hexaghostMask) {
                     portraitState.setAnimation(3, "Mask_off", false);
-                    hexaghostMask_switch = false;
-                    reskinContent.hexaghostMask = true;
-                    reskinContent.saveSettings();
                 } else {
                     portraitState.setAnimation(3, "Mask_on", false);
                     portraitState.addAnimation(3, "maskHalo_loop", true, 0.0f);
-                    hexaghostMask_switch = true;
-                    reskinContent.hexaghostMask = false;
-                    reskinContent.saveSettings();
                 }
+
+                reskinContent.hexaghostMask = !reskinContent.hexaghostMask;
+                reskinContent.saveSettings();
             }
 
 //  地狱火相关
@@ -227,16 +229,9 @@ public class Hexago extends AbstractSkin {
         } else {
             if (hexaghostMaskHitBox.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed()) {
                 hexaghostMaskHitBox.clicked = false;
-
-                if (hexaghostMask_switch) {
-                    hexaghostMask_switch = false;
-                    reskinContent.hexaghostMask = true;
-                    reskinContent.saveSettings();
-                } else {
-                    hexaghostMask_switch = true;
-                    reskinContent.hexaghostMask = false;
-                    reskinContent.saveSettings();
-                }
+                maskClicked = true;
+                reskinContent.hexaghostMask = !reskinContent.hexaghostMask;
+                reskinContent.saveSettings();
             }
         }
 
@@ -249,19 +244,13 @@ public class Hexago extends AbstractSkin {
     }
 
     @Override
-    public void extraHitboxUpdate() {
-        hexaghostMaskHitBox.update();
-    }
-
-    @Override
-    public void extraHitboxClickStart() {
-        if (InputHelper.justClickedLeft && hexaghostMaskHitBox.hovered)
-            hexaghostMaskHitBox.clickStarted = true;
-    }
-
-    @Override
     public Boolean extraHitboxClickCheck() {
-       return (hexaghostMaskHitBox.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed());
+        if(maskClicked){
+            maskClicked = false;
+            return true;
+        }else {
+            return false;
+        }
     }
 }
 
