@@ -27,8 +27,9 @@ public class VictoryScreenPatches {
 
         @SpirePrefixPatch
         public static void Prefix(VictoryScreen _instance) {
+            System.out.println("================您跑了吗");
             if (!Settings.seedSet && !Settings.isTrial) {
-            } else {
+                System.out.println("================您跑了吗2");
                 for (AbstractSkinCharacter c : CharacterSelectScreenPatches.characters) {
                     c.checkUnlock();
                 }

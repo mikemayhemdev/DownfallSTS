@@ -25,6 +25,7 @@ public class SlimeBoundSkin extends AbstractSkinCharacter {
 
     @Override
     public void checkUnlock() {
+        System.out.println("================您跑了吗3");
         if (AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND && !this.reskinUnlock){
             AbstractDungeon.topLevelEffects.add(new ReskinUnlockedTextEffect(1));
             this.reskinUnlock = true;
