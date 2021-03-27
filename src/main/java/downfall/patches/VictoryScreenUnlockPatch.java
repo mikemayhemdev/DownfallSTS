@@ -6,7 +6,7 @@ import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.screens.DeathScreen;
+import com.megacrit.cardcrawl.screens.VictoryScreen;
 import com.megacrit.cardcrawl.ui.buttons.ReturnToMenuButton;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -16,20 +16,18 @@ import javassist.CtBehavior;
 import slimebound.patches.SlimeboundEnum;
 import theHexaghost.TheHexaghost;
 
-import java.util.ArrayList;
-
 
 @SpirePatch(
-        clz = DeathScreen.class,
+        clz = VictoryScreen.class,
         method = "update"
 )
-public class DeathScreenUnlockPatch {
+public class VictoryScreenUnlockPatch {
 
     @SpireInsertPatch(
             locator = Locator.class
     )
 
-    public static SpireReturn Insert(DeathScreen __instance) {
+    public static SpireReturn Insert(VictoryScreen __instance) {
         if ((AbstractDungeon.unlocks.isEmpty()) || (Settings.isDemo)) {
             if ((Settings.isDemo) || (Settings.isDailyRun)) {
                 CardCrawlGame.startOver();
@@ -68,9 +66,9 @@ public class DeathScreenUnlockPatch {
     private static class Locator extends SpireInsertLocator {
         @Override
         public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
-            //Matcher finalMatcher = new Matcher.FieldAccessMatcher(UnlockTracker.class, "isCharacterLocked");
-            Matcher finalMatcher = new Matcher.MethodCallMatcher(ReturnToMenuButton.class, "hide");
-            return new int[]{LineFinder.findAllInOrder(ctMethodToPatch, new ArrayList<>(), finalMatcher)[0], LineFinder.findAllInOrder(ctMethodToPatch, new ArrayList<>(), finalMatcher)[1]};
+            Matcher.MethodCallMatcher methodCallMatcher = new Matcher.MethodCallMatcher(ReturnToMenuButton.class, "hide");
+            int[] lines = LineFinder.findAllInOrder(ctMethodToPatch, methodCallMatcher);
+            return lines;
         }
     }
 }

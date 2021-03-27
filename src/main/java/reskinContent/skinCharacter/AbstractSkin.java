@@ -82,7 +82,7 @@ public abstract class AbstractSkin {
     }
 
     public void render(SpriteBatch sb) {
-        if(hasAnimation()){
+        if(hasAnimation() && portraitAnimationType > 0){
             portraitState.update(Gdx.graphics.getDeltaTime());
             portraitState.apply(portraitSkeleton);
             portraitSkeleton.updateWorldTransform();
