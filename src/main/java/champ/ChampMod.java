@@ -404,13 +404,12 @@ public class ChampMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(MinorLeagueArena.ID, MinorLeagueArena.class) //Event ID//
                 //Event Spawn Condition//
-
-                .playerClass(ChampChar.Enums.THE_CHAMP)
                 .dungeonID(Exordium.ID)
                 .eventType(EventUtils.EventType.NORMAL)
+                .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
                 .create());
                 /*
-                .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
+
                 .dungeonID(Exordium.ID)
                 .eventType(EventUtils.EventType.NORMAL)
                 .create());

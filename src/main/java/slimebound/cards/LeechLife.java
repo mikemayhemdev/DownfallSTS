@@ -41,7 +41,7 @@ public class LeechLife extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         this.baseDamage = 12;
         this.exhaust = true;
-        this.baseMagicNumber = 12;
+        this.baseMagicNumber = 18;
         this.magicNumber = this.baseMagicNumber;
         tags.add(CardTags.HEALING);
     }
