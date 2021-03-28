@@ -3,9 +3,8 @@ package reskinContent.skinCharacter;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import guardian.patches.GuardianEnum;
-import reskinContent.skinCharacter.skins.Champ.ChampOriginal;
-import reskinContent.skinCharacter.skins.Champ.ChampSister;
-import reskinContent.skinCharacter.skins.Guardian.*;
+import reskinContent.skinCharacter.skins.Guardian.GuardianChan;
+import reskinContent.skinCharacter.skins.Guardian.GuardianOriginal;
 import reskinContent.vfx.ReskinUnlockedTextEffect;
 
 

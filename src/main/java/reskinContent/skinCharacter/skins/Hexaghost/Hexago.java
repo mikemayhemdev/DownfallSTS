@@ -5,21 +5,15 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
-import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import guardian.GuardianMod;
 import reskinContent.helpers.PortraitHexaghostOrb;
 import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import reskinContent.skinCharacter.AbstractSkin;
 import reskinContent.vfx.PortraitScreenOnFireEffect;
-import reskinContent.vfx.ReskinUnlockedTextEffect;
-import slimebound.patches.SlimeboundEnum;
-import theHexaghost.TheHexaghost;
 
 import java.util.ArrayList;
 
@@ -245,10 +239,10 @@ public class Hexago extends AbstractSkin {
 
     @Override
     public Boolean extraHitboxClickCheck() {
-        if(maskClicked){
+        if (maskClicked) {
             maskClicked = false;
             return true;
-        }else {
+        } else {
             return false;
         }
     }

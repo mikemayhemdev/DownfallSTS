@@ -8,16 +8,11 @@ import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.*;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import guardian.GuardianMod;
 import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import reskinContent.skinCharacter.AbstractSkin;
 import reskinContent.vfx.PortraitIntimidateEffect;
-import reskinContent.vfx.ReskinUnlockedTextEffect;
-import sneckomod.TheSnecko;
-import theHexaghost.TheHexaghost;
 
 import static com.megacrit.cardcrawl.core.AbstractCreature.sr;
 
@@ -48,7 +43,6 @@ public class SSSSnecko extends AbstractSkin {
 
         this.portraitAtlasPath = reskinContent.assetPath("img/SneckoMod/SSSSnecko/animation/Snecko_portrait");
     }
-
 
 
     @Override

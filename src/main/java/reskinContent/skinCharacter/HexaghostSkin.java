@@ -2,9 +2,6 @@ package reskinContent.skinCharacter;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import guardian.patches.GuardianEnum;
-import org.apache.commons.codec.binary.Hex;
-import reskinContent.skinCharacter.skins.Guardian.*;
 import reskinContent.skinCharacter.skins.Hexaghost.HexaghostOriginal;
 import reskinContent.skinCharacter.skins.Hexaghost.Hexago;
 import reskinContent.vfx.ReskinUnlockedTextEffect;

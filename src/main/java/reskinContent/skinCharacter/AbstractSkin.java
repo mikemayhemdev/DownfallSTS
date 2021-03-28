@@ -28,13 +28,11 @@ public abstract class AbstractSkin {
 
     public int portraitAnimationType = 0;
 
-
-
     public AbstractSkin() {
     }
 
     public void loadPortraitAnimation() {
-        if (hasAnimation()){
+        if (hasAnimation()) {
             loadAnimation();
             setAnimation();
             InitializeStaticPortraitVar();
@@ -50,7 +48,6 @@ public abstract class AbstractSkin {
         SkeletonJson json = new SkeletonJson(portraitAtlas);
         json.setScale(Settings.scale / 1.0F);
         portraitData = json.readSkeletonData(Gdx.files.internal(portraitAtlasPath + ".json"));
-
 
         portraitSkeleton = new Skeleton(portraitData);
         portraitSkeleton.setColor(Color.WHITE);
@@ -69,7 +66,6 @@ public abstract class AbstractSkin {
     }
 
     public void InitializeStaticPortraitVar() {
-
     }
 
     public Texture updateBgImg() {
@@ -82,7 +78,7 @@ public abstract class AbstractSkin {
     }
 
     public void render(SpriteBatch sb) {
-        if(hasAnimation() && portraitAnimationType > 0){
+        if (hasAnimation() && portraitAnimationType > 0) {
             portraitState.update(Gdx.graphics.getDeltaTime());
             portraitState.apply(portraitSkeleton);
             portraitSkeleton.updateWorldTransform();
@@ -105,7 +101,7 @@ public abstract class AbstractSkin {
     }
 
     public void skeletonRender(SpriteBatch sb) {
-        if(hasAnimation()){
+        if (hasAnimation()) {
             sr.draw(CardCrawlGame.psb, portraitSkeleton);
 
             CardCrawlGame.psb.end();
@@ -119,10 +115,10 @@ public abstract class AbstractSkin {
     public void clearWhenClick() {
     }
 
-    public void extraHitboxRender(SpriteBatch sb){
+    public void extraHitboxRender(SpriteBatch sb) {
     }
 
-    public Boolean extraHitboxClickCheck(){
+    public Boolean extraHitboxClickCheck() {
         return false;
     }
 }

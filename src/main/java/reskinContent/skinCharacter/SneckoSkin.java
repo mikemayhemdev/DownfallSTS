@@ -2,10 +2,6 @@ package reskinContent.skinCharacter;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import guardian.patches.GuardianEnum;
-import reskinContent.skinCharacter.skins.Automaton.AutomationOriginal;
-import reskinContent.skinCharacter.skins.Automaton.Automaton;
-import reskinContent.skinCharacter.skins.Guardian.*;
 import reskinContent.skinCharacter.skins.Snecko.SSSSnecko;
 import reskinContent.skinCharacter.skins.Snecko.SneckoOriginal;
 import reskinContent.vfx.ReskinUnlockedTextEffect;
@@ -25,7 +21,7 @@ public class SneckoSkin extends AbstractSkinCharacter {
 
     @Override
     public void checkUnlock() {
-        if (AbstractDungeon.player.chosenClass == TheSnecko.Enums.THE_SNECKO && !this.reskinUnlock){
+        if (AbstractDungeon.player.chosenClass == TheSnecko.Enums.THE_SNECKO && !this.reskinUnlock) {
             AbstractDungeon.topLevelEffects.add(new ReskinUnlockedTextEffect(3));
             this.reskinUnlock = true;
         }
