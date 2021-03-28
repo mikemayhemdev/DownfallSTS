@@ -15,12 +15,10 @@ public abstract class AbstractSkinCharacter {
         this.skins = skins;
     }
 
-
     public void InitializeReskinCount() {
         if (this.reskinCount < 0)
             this.reskinCount = 0;
     }
-
 
     public Boolean isOriginal() {
         return this.reskinCount <= 0;
