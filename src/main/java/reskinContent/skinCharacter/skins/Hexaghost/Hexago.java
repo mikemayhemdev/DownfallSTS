@@ -44,7 +44,7 @@ public class Hexago extends AbstractSkin {
         this.hexaghostTextureMask = ImageMaster.loadImage(reskinContent.assetPath("img/HexaghostMod/Hexago/portrait_waifu_m.png"));
 
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinHexaghost").TEXT[0];
-        this.DESCRIPTION = CardCrawlGame.languagePack.getCharacterString(TheHexaghost.ID).TEXT[0];
+        this.DESCRIPTION = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinHexaghost").EXTRA_TEXT[0];
 
         this.portraitAtlasPath = reskinContent.assetPath("img/HexaghostMod/Hexago/animation/Hexaghost_portrait");
 

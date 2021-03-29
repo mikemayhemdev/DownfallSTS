@@ -2,6 +2,7 @@ package reskinContent.patches;
 
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import javassist.CtBehavior;
 import reskinContent.reskinContent;
 
@@ -85,11 +86,11 @@ public class CharacterSelectScreenPatches {
                 method = "renderInfo"
         )
         public static class CharacterOptionRenderInfoPatch {
-            @SpireInsertPatch(locator = renderRelicsLocator.class, localvars = {"infoX", "c", "flavorText"})
-            public static SpireReturn<Void> Insert(CharacterOption _instance, SpriteBatch sb, float infoX, AbstractPlayer p, @ByRef String[] flavorText) {
+            @SpireInsertPatch(locator = renderRelicsLocator.class, localvars = {"infoX", "charInfo", "flavorText"})
+            public static SpireReturn<Void> Insert(CharacterOption _instance, SpriteBatch sb, float infoX, CharSelectInfo charInfo, @ByRef String[] flavorText) {
                 allTextInfoX = infoX - 200.0f * Settings.scale;
                 for (AbstractSkinCharacter character : characters) {
-                    if (p.name.equals(character.id)) {
+                    if (charInfo.name.equals(character.id)) {
                         flavorText[0] = character.skins[character.reskinCount].DESCRIPTION;
                     }
                 }
