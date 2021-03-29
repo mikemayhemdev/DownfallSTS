@@ -21,7 +21,7 @@ public class GuardianChan extends AbstractSkin {
         this.portraitAnimation_IMG = ImageMaster.loadImage(reskinContent.assetPath("img/GuardianMod/GuardianChan/portrait_waifu2.png"));
 
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinGuardian").TEXT[0];
-        this.DESCRIPTION = CardCrawlGame.languagePack.getCharacterString(GuardianCharacter.ID).TEXT[0];
+        this.DESCRIPTION = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinGuardian").EXTRA_TEXT[0];
 
         this.portraitAtlasPath = reskinContent.assetPath("img/GuardianMod/GuardianChan/animation/GuardianChan_portrait");
 

@@ -30,6 +30,9 @@
   "reskinContent:ReSkinGuardian": {
     "TEXT": [
       "蹲酱"
+    ],
+    "EXTRA_TEXT": [
+      "蹲酱实在是太棒了"
     ]
   },
   "reskinContent:ReSkinSlime": {

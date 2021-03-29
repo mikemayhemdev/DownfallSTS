@@ -31,6 +31,9 @@
   "reskinContent:ReSkinGuardian": {
     "TEXT": [
       "Guardian Chan"
+    ],
+    "EXTRA_TEXT": [
+      "00"
     ]
   },
   "reskinContent:ReSkinSlime": {
