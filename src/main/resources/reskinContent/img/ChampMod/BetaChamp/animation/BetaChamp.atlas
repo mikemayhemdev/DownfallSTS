@@ -1,0 +1,34 @@
+
+BetaChamp.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+champ/Idle
+  rotate: false
+  xy: 1, 422
+  size: 289, 419
+  orig: 289, 419
+  offset: 0, 0
+  index: -1
+champ/IdleUltimate
+  rotate: false
+  xy: 292, 422
+  size: 283, 419
+  orig: 283, 419
+  offset: 0, 0
+  index: -1
+champ/IdleBerserker
+  rotate: false
+  xy: 341, 1
+  size: 263, 419
+  orig: 263, 419
+  offset: 0, 0
+  index: -1
+champ/IdleDefensive
+  rotate: false
+  xy: 1, 1
+  size: 338, 419
+  orig: 338, 419
+  offset: 0, 0
+  index: -1

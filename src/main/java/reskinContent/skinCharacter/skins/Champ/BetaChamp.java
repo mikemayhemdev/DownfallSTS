@@ -5,18 +5,18 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import reskinContent.skinCharacter.AbstractSkin;
 
-public class ChampOriginal extends AbstractSkin {
+public class BetaChamp extends AbstractSkin {
 
-    public ChampOriginal() {
-        this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkin").TEXT[1];
+    public BetaChamp() {
+        this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinChamp").TEXT[1];
         this.DESCRIPTION = CardCrawlGame.languagePack.getCharacterString(ChampChar.ID).TEXT[0];
-        this.portraitStatic_IMG = ImageMaster.loadImage("champResources/images/charSelect/charBG.png");
+        this.portraitStatic_IMG = ImageMaster.loadImage("reskinContent/img/ChampMod/BetaChamp/portrait_beta.png");
         this.SHOULDER1 = "champResources/images/char/mainChar/shoulder.png";
         this.SHOULDER2 = "champResources/images/char/mainChar/shoulderR.png";
         this.CORPSE = "champResources/images/char/mainChar/corpse.png";
-        this.atlasURL = "champResources/images/char/mainChar/champ.atlas";
-        this.jsonURL = "champResources/images/char/mainChar/champ.json";
-        this.renderscale = 1.2f;
+        this.atlasURL = "reskinContent/img/ChampMod/BetaChamp/animation/BetaChamp.atlas";
+        this.jsonURL = "reskinContent/img/ChampMod/BetaChamp/animation/BetaChamp.json";
+        this.renderscale = 1.0f;
     }
 }
 

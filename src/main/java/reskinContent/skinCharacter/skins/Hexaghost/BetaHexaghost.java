@@ -5,21 +5,20 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import reskinContent.skinCharacter.AbstractSkin;
 import theHexaghost.TheHexaghost;
 
-public class HexaghostOriginal extends AbstractSkin {
+public class BetaHexaghost extends AbstractSkin {
 
-    public HexaghostOriginal() {
-        this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkin").TEXT[1];
+    public BetaHexaghost() {
+        this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinHexaghost").TEXT[1];
         this.DESCRIPTION = CardCrawlGame.languagePack.getCharacterString(TheHexaghost.ID).TEXT[0];
-        this.portraitStatic_IMG = ImageMaster.loadImage("hexamodResources/images/charSelect/charBG.png");
+        this.portraitStatic_IMG = ImageMaster.loadImage("reskinContent/img/HexaghostMod/BetaHexaghost/portrait_beta.png");
 
         this.SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder.png";;
         this.SHOULDER2 = "hexamodResources/images/char/mainChar/shoulderR.png";
         this.CORPSE = "hexamodResources/images/char/mainChar/corpse.png";
-        this.atlasURL = "reskinContent/img/HexaghostMod/Hexago/animation/Hexaghost_original.atlas";
-        this.jsonURL = "reskinContent/img/HexaghostMod/Hexago/animation/Hexaghost_original.json";
+        this.atlasURL = "reskinContent/img/HexaghostMod/BetaHexaghost/animation/BetaHexaghost.atlas";
+        this.jsonURL = "reskinContent/img/HexaghostMod/BetaHexaghost/animation/BetaHexaghost.json";
         this.renderscale = 1.0F;
     }
-
 }
 
 

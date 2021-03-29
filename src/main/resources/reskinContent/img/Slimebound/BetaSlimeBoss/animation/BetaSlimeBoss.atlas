@@ -1,0 +1,20 @@
+
+BetaSlimeBoss.png
+size: 2048,4096
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+slime_boss/shadow
+  rotate: false
+  xy: 1242, 1
+  size: 756, 282
+  orig: 756, 282
+  offset: 0, 0
+  index: -1
+slime_boss/slime_boss
+  rotate: false
+  xy: 1, 1
+  size: 1239, 2083
+  orig: 1239, 2083
+  offset: 0, 0
+  index: -1

@@ -41,7 +41,8 @@
   },
   "reskinContent:ReSkinHexaghost": {
     "TEXT": [
-      "Hexago"
+      "Hexago",
+      "Hexaspook"
     ]
   },
   "reskinContent:ReSkinSnecko": {
@@ -51,7 +52,8 @@
   },
   "reskinContent:ReSkinChamp": {
     "TEXT": [
-      "Chan-p"
+      "Chan-p",
+      "Beta Champ"
     ]
   },
   "reskinContent:ReSkinBronze": {

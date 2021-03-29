@@ -27,6 +27,15 @@ public abstract class AbstractSkin {
     public String NAME;
 
     public int portraitAnimationType = 0;
+    public String SHOULDER1;
+    public String SHOULDER2;
+    public String CORPSE;
+
+    public String atlasURL;
+    public String jsonURL;
+    public float renderscale;
+
+    public String DESCRIPTION = null;
 
     public AbstractSkin() {
     }
@@ -121,6 +130,35 @@ public abstract class AbstractSkin {
     public Boolean extraHitboxClickCheck() {
         return false;
     }
+
+    public String getNewCharDescription() {
+        if (DESCRIPTION != null)
+            return DESCRIPTION;
+        else {
+            return "";
+        }
+    }
+
+    public String getAtlasURL() {
+        return atlasURL;
+    }
+
+    public String getJsonURL() {
+        return jsonURL;
+    }
+
+    public String getSHOULDER1() {
+        return SHOULDER1;
+    }
+
+    public String getSHOULDER2() {
+        return SHOULDER2;
+    }
+
+    public String getCORPSE() {
+        return CORPSE;
+    }
+
 }
 
 

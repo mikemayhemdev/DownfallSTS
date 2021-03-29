@@ -106,67 +106,64 @@ public abstract class SpawnedSlime
     private static Map<String, Color> modelColorMap;
 
 
-
-    static
-    {
+    static {
         skeletonMap = new HashMap<>();
         modelColorMap = new HashMap<>();
 
-        skeletonMap.put(AttackSlime.ID,                  reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_S"));
-        skeletonMap.put(BronzeSlime.ID,                  reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_M"));
-        skeletonMap.put(CultistSlime.ID,                 reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_CultistSlime"));
-        skeletonMap.put(GreedOozeSlime.ID,               reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_acid_S"));
-        skeletonMap.put(HexSlime.ID,                     reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_M"));
-        skeletonMap.put(PoisonSlime.ID,                  reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_acid_S"));
-        skeletonMap.put(ScrapOozeSlime.ID,               reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_S"));
-        skeletonMap.put(ShieldSlime.ID,                  reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_ShieldSlime"));
-        skeletonMap.put(SlimingSlime.ID,                 reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_S"));
-        skeletonMap.put(TorchHeadSlime.ID,               reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_M"));
+        skeletonMap.put(AttackSlime.ID, reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_S"));
+        skeletonMap.put(BronzeSlime.ID, reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_M"));
+        skeletonMap.put(CultistSlime.ID, reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_CultistSlime"));
+        skeletonMap.put(GreedOozeSlime.ID, reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_acid_S"));
+        skeletonMap.put(HexSlime.ID, reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_M"));
+        skeletonMap.put(PoisonSlime.ID, reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_acid_S"));
+        skeletonMap.put(ScrapOozeSlime.ID, reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_S"));
+        skeletonMap.put(ShieldSlime.ID, reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_ShieldSlime"));
+        skeletonMap.put(SlimingSlime.ID, reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_S"));
+        skeletonMap.put(TorchHeadSlime.ID, reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_M"));
 
-        skeletonMap.put(ChampSlime.ID,                   reskinContent.assetPath("img/Slimebound/Slaifu/orbs/ChampSlime"));
-        skeletonMap.put(DarklingSlime.ID,                "images/monsters/theForest/darkling/skeleton");
-        skeletonMap.put(DrawingSlime.ID,                 reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_M"));
-        skeletonMap.put(ProtectorSlime.ID,               reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_M"));
-        skeletonMap.put(SlowingSlime.ID,                 reskinContent.assetPath("img/Slimebound/Slaifu/orbs/TimeSlime"));
+        skeletonMap.put(ChampSlime.ID, reskinContent.assetPath("img/Slimebound/Slaifu/orbs/ChampSlime"));
+        skeletonMap.put(DarklingSlime.ID, "images/monsters/theForest/darkling/skeleton");
+        skeletonMap.put(DrawingSlime.ID, reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_M"));
+        skeletonMap.put(ProtectorSlime.ID, reskinContent.assetPath("img/Slimebound/Slaifu/orbs/Slime_spike_M"));
+        skeletonMap.put(SlowingSlime.ID, reskinContent.assetPath("img/Slimebound/Slaifu/orbs/TimeSlime"));
 
 
-        modelColorMap.put(AttackSlime.ID,             new Color(0.8F,0.25F,0.25F,2F));
-        modelColorMap.put(BronzeSlime.ID,             new Color(1F,150F/255F,0F,2F));
-        modelColorMap.put(CultistSlime.ID,            Color.WHITE);//变更
-        modelColorMap.put(GreedOozeSlime.ID,          new Color(1F,1F,30F/255F,2F));
-        modelColorMap.put(HexSlime.ID,                new Color(240F/255F,236/255F,150F/255F,2F));
-        modelColorMap.put(PoisonSlime.ID,             new Color(0.6F,.9F,.6F,2F));
-        modelColorMap.put(ScrapOozeSlime.ID,          new Color(0.8F,0.4F,0.4F,2F));
-        modelColorMap.put(ShieldSlime.ID,             Color.WHITE);
-        modelColorMap.put(SlimingSlime.ID,            new Color(224F/255F,113F/255F,224F/255F,2F));
-        modelColorMap.put(TorchHeadSlime.ID,          new Color(0.75F,0.75F,0.75F,2F));
+        modelColorMap.put(AttackSlime.ID, new Color(0.8F, 0.25F, 0.25F, 2F));
+        modelColorMap.put(BronzeSlime.ID, new Color(1F, 150F / 255F, 0F, 2F));
+        modelColorMap.put(CultistSlime.ID, Color.WHITE);//变更
+        modelColorMap.put(GreedOozeSlime.ID, new Color(1F, 1F, 30F / 255F, 2F));
+        modelColorMap.put(HexSlime.ID, new Color(240F / 255F, 236 / 255F, 150F / 255F, 2F));
+        modelColorMap.put(PoisonSlime.ID, new Color(0.6F, .9F, .6F, 2F));
+        modelColorMap.put(ScrapOozeSlime.ID, new Color(0.8F, 0.4F, 0.4F, 2F));
+        modelColorMap.put(ShieldSlime.ID, Color.WHITE);
+        modelColorMap.put(SlimingSlime.ID, new Color(224F / 255F, 113F / 255F, 224F / 255F, 2F));
+        modelColorMap.put(TorchHeadSlime.ID, new Color(0.75F, 0.75F, 0.75F, 2F));
 
-        modelColorMap.put(ChampSlime.ID,          Color.WHITE);//变更
-        modelColorMap.put(DarklingSlime.ID,          Color.WHITE);//变更
-        modelColorMap.put(DrawingSlime.ID,          Color.WHITE);//变更
-        modelColorMap.put(ProtectorSlime.ID,          Color.WHITE);//变更
-        modelColorMap.put(SlowingSlime.ID,          Color.WHITE);//变更
+        modelColorMap.put(ChampSlime.ID, Color.WHITE);//变更
+        modelColorMap.put(DarklingSlime.ID, Color.WHITE);//变更
+        modelColorMap.put(DrawingSlime.ID, Color.WHITE);//变更
+        modelColorMap.put(ProtectorSlime.ID, Color.WHITE);//变更
+        modelColorMap.put(SlowingSlime.ID, Color.WHITE);//变更
 
     }
 
     public SpawnedSlime(String ID, Color projectileColor, String atlasString, String skeletonString, boolean medScale, boolean alt, int passive, int initialBoost, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage) {
 
         this.scale = scale * .85F;
-        if(CharacterSelectScreenPatches.characters[1].isOriginal()){
-            this.modelColor = modelColor;
-
-            this.atlas = new TextureAtlas(Gdx.files.internal(atlasString));
-        }else {
+//        if(CharacterSelectScreenPatches.characters[1].isOriginal()){
+        if (CharacterSelectScreenPatches.characters[1].reskinCount == 1 && CharacterSelectScreenPatches.characters[1].reskinUnlock) {
             this.modelColor = modelColorMap.get(ID);
-
-            this.atlas = new TextureAtlas(Gdx.files.internal(skeletonMap.get(ID)+".atlas"));
+            this.atlas = new TextureAtlas(Gdx.files.internal(skeletonMap.get(ID) + ".atlas"));
+        } else {
+            this.modelColor = modelColor;
+            this.atlas = new TextureAtlas(Gdx.files.internal(atlasString));
         }
 
 
         //this.renderBehind=true;
         SkeletonJson json = new SkeletonJson(this.atlas);
 
-        if (this instanceof DarklingSlime){
+        if (this instanceof DarklingSlime) {
             json.setScale(Settings.scale * .45F);
 
         } else {
@@ -188,19 +185,20 @@ public abstract class SpawnedSlime
         }
 
 
+        SkeletonData skeletonData;
+//        if(CharacterSelectScreenPatches.characters[1].isOriginal()){
+        if (CharacterSelectScreenPatches.characters[1].reskinCount == 1 && CharacterSelectScreenPatches.characters[1].reskinUnlock) {
+            skeletonData = json.readSkeletonData(Gdx.files.internal(skeletonMap.get(ID) + ".json"));
 
-        SkeletonData skeletonData ;
-        if(CharacterSelectScreenPatches.characters[1].isOriginal()){
+        } else {
             skeletonData = json.readSkeletonData(Gdx.files.internal(skeletonString));
-        }else {
-            skeletonData = json.readSkeletonData(Gdx.files.internal(skeletonMap.get(ID)+".json"));
         }
 
         this.skeleton = new Skeleton(skeletonData);
         this.skeleton.setColor(Color.WHITE);
         this.stateData = new AnimationStateData(skeletonData);
         this.state = new AnimationState(this.stateData);
-        if (this instanceof DarklingSlime){
+        if (this instanceof DarklingSlime) {
             AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
             e.setTime(e.getEndTime() * MathUtils.random());
         } else {
@@ -307,11 +305,10 @@ public abstract class SpawnedSlime
     }
 
 
-
     public void onEvoke() {
         if (!noEvokeBonus) {
             if (this instanceof ScrapOozeSlime) {
-              //  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ScrapRespawnPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
+                //  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ScrapRespawnPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new SplitScrap()));
             } else if (this instanceof GreedOozeSlime) {
                 //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new GreedRespawnPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));

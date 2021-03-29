@@ -34,12 +34,14 @@
   },
   "reskinContent:ReSkinSlime": {
     "TEXT": [
-      "史莱姆娘"
+      "史莱姆娘",
+      "愚人节"
     ]
   },
   "reskinContent:ReSkinHexaghost": {
     "TEXT": [
-      "六子"
+      "六子",
+      "愚人节"
     ]
   },
   "reskinContent:ReSkinSnecko": {
@@ -49,7 +51,8 @@
   },
   "reskinContent:ReSkinChamp": {
     "TEXT": [
-      "妹妹勇士"
+      "妹妹勇士",
+      "愚人节"
     ]
   },
   "reskinContent:ReSkinBronze": {

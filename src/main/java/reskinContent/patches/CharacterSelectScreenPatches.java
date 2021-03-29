@@ -52,8 +52,8 @@ public class CharacterSelectScreenPatches {
             new SlimeBoundSkin(),
             new HexaghostSkin(),
             new SneckoSkin(),
-            new ChampSkin()
-//            ,new AutomatonSkin()
+            new ChampSkin(),
+            new AutomatonSkin()
     };
 
 

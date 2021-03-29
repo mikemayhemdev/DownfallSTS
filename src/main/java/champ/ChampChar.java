@@ -70,21 +70,29 @@ public class ChampChar extends CustomPlayer {
     */
 
     public ChampChar(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "champResources/images/char/mainChar/orb/vfx.png", (String)null, (String)null);
+        super(name, setClass, orbTextures, "champResources/images/char/mainChar/orb/vfx.png", (String) null, (String) null);
 
-        if(CharacterSelectScreenPatches.characters[4].isOriginal()){
-            initializeClass(null,
-                    SHOULDER1,
-                    SHOULDER2,
-                    CORPSE,
-                    getLoadout(), -15.0F, -30.0F, 250.0F, 300.0F, new EnergyManager(3));
-        }else {
-            initializeClass(null,
-                    "reskinContent/img/ChampMod/Chan-P/shoulder2.png",
-                    "reskinContent/img/ChampMod/Chan-P/shoulder.png",
-                    "reskinContent/img/ChampMod/Chan-P/corpse.png",
-                    getLoadout(), -15.0F, -30.0F, 250.0F, 300.0F, new EnergyManager(3));
-        }
+        initializeClass(null,
+                CharacterSelectScreenPatches.characters[4].skins[CharacterSelectScreenPatches.characters[4].reskinCount].SHOULDER1,
+                CharacterSelectScreenPatches.characters[4].skins[CharacterSelectScreenPatches.characters[4].reskinCount].SHOULDER2,
+                CharacterSelectScreenPatches.characters[4].skins[CharacterSelectScreenPatches.characters[4].reskinCount].CORPSE,
+                getLoadout(), -15.0F, -30.0F, 250.0F, 300.0F, new EnergyManager(3));
+
+
+//        if (!CharacterSelectScreenPatches.characters[4].isOriginal()) {
+//            initializeClass(null,
+//                    "reskinContent/img/ChampMod/Chan-P/shoulder2.png",
+//                    "reskinContent/img/ChampMod/Chan-P/shoulder.png",
+//                    "reskinContent/img/ChampMod/Chan-P/corpse.png",
+//                    getLoadout(), -15.0F, -30.0F, 250.0F, 300.0F, new EnergyManager(3));
+//
+//        } else {
+//            initializeClass(null,
+//                    SHOULDER1,
+//                    SHOULDER2,
+//                    CORPSE,
+//                    getLoadout(), -15.0F, -30.0F, 250.0F, 300.0F, new EnergyManager(3));
+//        }
 
 
         this.reloadAnimation();
@@ -96,14 +104,18 @@ public class ChampChar extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if(!CharacterSelectScreenPatches.characters[4].isOriginal() && CharacterSelectScreenPatches.characters[4].reskinUnlock){
-            this.loadAnimation(atlasURL2, this.jsonURL2, renderscale2);
-        }else {
-            this.loadAnimation(atlasURL, this.jsonURL, renderscale);
-        }
+        this.loadAnimation(
+                CharacterSelectScreenPatches.characters[4].skins[CharacterSelectScreenPatches.characters[4].reskinCount].atlasURL,
+                CharacterSelectScreenPatches.characters[4].skins[CharacterSelectScreenPatches.characters[4].reskinCount].jsonURL,
+                CharacterSelectScreenPatches.characters[4].skins[CharacterSelectScreenPatches.characters[4].reskinCount].renderscale);
+//
+//        if (!CharacterSelectScreenPatches.characters[4].isOriginal() && CharacterSelectScreenPatches.characters[4].reskinUnlock) {
+//            this.loadAnimation(atlasURL2, this.jsonURL2, renderscale2);
+//        } else {
+//            this.loadAnimation(atlasURL, this.jsonURL, renderscale);
+//        }
         this.state.setAnimation(0, "Idle", true);
     }
-
 
 
     @Override
@@ -127,17 +139,17 @@ public class ChampChar extends CustomPlayer {
 
     public void switchStanceVisual(String ID) {
 
-        if (currentIdle == "Idle"){
+        if (currentIdle == "Idle") {
             stanceSwitchQueue.add(ID);
         } else {
-          //  stanceSwitchQueue.add(NeutralStance.STANCE_ID);
+            //  stanceSwitchQueue.add(NeutralStance.STANCE_ID);
             stanceSwitchQueue.add(ID);
         }
     }
 
-    private void tickStanceVisualTimer(){
+    private void tickStanceVisualTimer() {
         if (stanceSwitchQueue.size() > 0) {
-           // //SlimeboundMod.logger.info("stance queue is ticking");
+            // //SlimeboundMod.logger.info("stance queue is ticking");
             stanceSwitchAnimTimer = stanceSwitchAnimTimer - Gdx.graphics.getDeltaTime();
             if (stanceSwitchAnimTimer <= 0F) {
                 switchStanceVisualGo(stanceSwitchQueue.get(0));
@@ -150,7 +162,7 @@ public class ChampChar extends CustomPlayer {
     }
 
     public void switchStanceVisualGo(String ID) {
-     //   //SlimeboundMod.logger.info("stance queue has ordered a visual for " + ID);
+        //   //SlimeboundMod.logger.info("stance queue has ordered a visual for " + ID);
 
         switch (ID) {
             case DefensiveStance

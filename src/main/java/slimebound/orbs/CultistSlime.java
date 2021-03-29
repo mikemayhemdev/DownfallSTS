@@ -42,7 +42,7 @@ public class CultistSlime
         this.sticksLeftVFX = new SticksParticle(this);
         this.sticksRightVFX = new SticksParticleRight(this);
 
-        if(!CharacterSelectScreenPatches.characters[1].isOriginal()){
+        if(CharacterSelectScreenPatches.characters[1].isOriginal()){
             AbstractDungeon.effectList.add(this.sticksLeftVFX);
             AbstractDungeon.effectList.add(this.sticksRightVFX);
         }

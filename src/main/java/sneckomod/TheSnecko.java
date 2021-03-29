@@ -47,7 +47,7 @@ public class TheSnecko extends CustomPlayer {
             "sneckomodResources/images/char/orb/layer3d.png",
             "sneckomodResources/images/char/orb/layer4d.png",
             "sneckomodResources/images/char/orb/layer5d.png",};
-    private static final String ID = makeID("theSnecko");
+    public static final String ID = makeID("theSnecko");
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
@@ -56,20 +56,25 @@ public class TheSnecko extends CustomPlayer {
 
     public TheSnecko(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "sneckomodResources/images/char/orb/vfx.png", (String)null, (String)null);
+        initializeClass(null,
+                CharacterSelectScreenPatches.characters[3].skins[CharacterSelectScreenPatches.characters[3].reskinCount].SHOULDER1,
+                CharacterSelectScreenPatches.characters[3].skins[CharacterSelectScreenPatches.characters[3].reskinCount].SHOULDER2,
+                CharacterSelectScreenPatches.characters[3].skins[CharacterSelectScreenPatches.characters[3].reskinCount].CORPSE,
+                getLoadout(), 10.0F, -20.0F, 300.0F, 300.0F, new EnergyManager(3));
 
-        if (CharacterSelectScreenPatches.characters[3].isOriginal()) {
-            initializeClass(null,
-                    SHOULDER1,
-                    SHOULDER2,
-                    CORPSE,
-                    getLoadout(), 10.0F, -20.0F, 300.0F, 300.0F, new EnergyManager(3));
-        } else {
-            initializeClass(null,
-                    "reskinContent/img/SneckoMod/SSSSnecko/shoulder2.png",
-                    "reskinContent/img/SneckoMod/SSSSnecko/shoulder.png",
-                    "reskinContent/img/SneckoMod/SSSSnecko/corpse.png",
-                    getLoadout(), 10.0F, -20.0F, 300.0F, 300.0F, new EnergyManager(3));
-        }
+//        if (CharacterSelectScreenPatches.characters[3].isOriginal()) {
+//            initializeClass(null,
+//                    SHOULDER1,
+//                    SHOULDER2,
+//                    CORPSE,
+//                    getLoadout(), 10.0F, -20.0F, 300.0F, 300.0F, new EnergyManager(3));
+//        } else {
+//            initializeClass(null,
+//                    "reskinContent/img/SneckoMod/SSSSnecko/shoulder2.png",
+//                    "reskinContent/img/SneckoMod/SSSSnecko/shoulder.png",
+//                    "reskinContent/img/SneckoMod/SSSSnecko/corpse.png",
+//                    getLoadout(), 10.0F, -20.0F, 300.0F, 300.0F, new EnergyManager(3));
+//        }
 
 
         dialogX = (drawX + 0.0F * Settings.scale);
@@ -78,11 +83,10 @@ public class TheSnecko extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if (!CharacterSelectScreenPatches.characters[3].isOriginal()) {
-            loadAnimation("reskinContent/img/SneckoMod/SSSSnecko/animation/Snecko_waifu.atlas", "reskinContent/img/SneckoMod/SSSSnecko/animation/Snecko_waifu.json", renderscale);
-        } else {
-            loadAnimation("sneckomodResources/images/char/skeleton.atlas", "sneckomodResources/images/char/skeleton.json", renderscale);
-        }
+        this.loadAnimation(
+                CharacterSelectScreenPatches.characters[3].skins[CharacterSelectScreenPatches.characters[3].reskinCount].atlasURL,
+                CharacterSelectScreenPatches.characters[3].skins[CharacterSelectScreenPatches.characters[3].reskinCount].jsonURL,
+                CharacterSelectScreenPatches.characters[3].skins[CharacterSelectScreenPatches.characters[3].reskinCount].renderscale);
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());

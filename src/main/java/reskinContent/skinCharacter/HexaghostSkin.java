@@ -2,6 +2,7 @@ package reskinContent.skinCharacter;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import reskinContent.skinCharacter.skins.Hexaghost.BetaHexaghost;
 import reskinContent.skinCharacter.skins.Hexaghost.HexaghostOriginal;
 import reskinContent.skinCharacter.skins.Hexaghost.Hexago;
 import reskinContent.vfx.ReskinUnlockedTextEffect;
@@ -12,7 +13,8 @@ public class HexaghostSkin extends AbstractSkinCharacter {
     public static final String ID = CardCrawlGame.languagePack.getCharacterString("hexamod:theHexaghost").NAMES[0];
     public static final AbstractSkin[] SKINS = new AbstractSkin[]{
             new HexaghostOriginal(),
-            new Hexago()
+            new Hexago(),
+            new BetaHexaghost()
     };
 
     public HexaghostSkin() {
