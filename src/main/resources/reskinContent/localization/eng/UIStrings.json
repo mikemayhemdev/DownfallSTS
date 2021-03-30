@@ -30,7 +30,8 @@
 
   "reskinContent:ReSkinGuardian": {
     "TEXT": [
-      "Guardian Chan"
+      "Guardian Chan",
+      "Beta Guardian"
     ]
   },
   "reskinContent:ReSkinSlime": {
@@ -41,22 +42,26 @@
   },
   "reskinContent:ReSkinHexaghost": {
     "TEXT": [
-      "Hexago"
+      "Hexago",
+      "Beta Hexaghost"
     ]
   },
   "reskinContent:ReSkinSnecko": {
     "TEXT": [
-      "SSSSnecko"
+      "SSSSnecko",
+      "Beta Snecko"
     ]
   },
   "reskinContent:ReSkinChamp": {
     "TEXT": [
-      "Chan-p"
+      "Chan-p",
+      "Beta Champ"
     ]
   },
   "reskinContent:ReSkinBronze": {
     "TEXT": [
-      "Automaton"
+      "Automaton",
+      "Beta Automaton"
     ]
   }
 }

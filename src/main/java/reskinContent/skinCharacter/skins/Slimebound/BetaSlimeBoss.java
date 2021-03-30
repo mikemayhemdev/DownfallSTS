@@ -18,5 +18,3 @@ public class BetaSlimeBoss extends AbstractSkin {
         return reskinContent.assetPath("img/Slimebound/" + this.getClass().getSimpleName() + "/" + filename);
     }
 }
-
-
