@@ -1,6 +1,8 @@
 package reskinContent.patches;
 
 
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import javassist.CtBehavior;
 import reskinContent.reskinContent;
 
@@ -52,8 +54,8 @@ public class CharacterSelectScreenPatches {
             new SlimeBoundSkin(),
             new HexaghostSkin(),
             new SneckoSkin(),
-            new ChampSkin()
-//            ,new AutomatonSkin()
+            new ChampSkin(),
+            new AutomatonSkin()
     };
 
 
@@ -84,10 +86,14 @@ public class CharacterSelectScreenPatches {
                 method = "renderInfo"
         )
         public static class CharacterOptionRenderInfoPatch {
-            @SpireInsertPatch(locator = renderRelicsLocator.class, localvars = {"infoX"})
-            public static SpireReturn<Void> Insert(CharacterOption _instance, SpriteBatch sb, float infoX) {
+            @SpireInsertPatch(locator = renderRelicsLocator.class, localvars = {"infoX", "charInfo", "flavorText"})
+            public static SpireReturn<Void> Insert(CharacterOption _instance, SpriteBatch sb, float infoX, CharSelectInfo charInfo, @ByRef String[] flavorText) {
                 allTextInfoX = infoX - 200.0f * Settings.scale;
-
+                for (AbstractSkinCharacter character : characters) {
+                    if (charInfo.name.equals(character.id)) {
+                        flavorText[0] = character.skins[character.reskinCount].DESCRIPTION;
+                    }
+                }
                 return SpireReturn.Continue();
             }
         }
@@ -287,7 +293,6 @@ public class CharacterSelectScreenPatches {
                         }
 
 
-
                         if (reskinRight.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed()) {
                             reskinRight.clicked = false;
                             c.skins[c.reskinCount].clearWhenClick();
@@ -335,7 +340,7 @@ public class CharacterSelectScreenPatches {
                             portraitAnimationRight.clicked = false;
                             c.skins[c.reskinCount].clearWhenClick();
                             char_effectsQueue.clear();
-                            if ( c.skins[c.reskinCount].portraitAnimationType >= 2) {
+                            if (c.skins[c.reskinCount].portraitAnimationType >= 2) {
                                 c.skins[c.reskinCount].portraitAnimationType = 0;
                             } else {
                                 c.skins[c.reskinCount].portraitAnimationType += 1;
@@ -352,8 +357,6 @@ public class CharacterSelectScreenPatches {
 
 
                         c.InitializeReskinCount();
-
-
 
 
                     }

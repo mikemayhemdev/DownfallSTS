@@ -13,6 +13,7 @@ import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import reskinContent.skinCharacter.AbstractSkin;
 import reskinContent.vfx.SlimedScreenEffect;
+import slimebound.characters.SlimeboundCharacter;
 
 import static com.megacrit.cardcrawl.core.AbstractCreature.sr;
 
@@ -34,8 +35,16 @@ public class Slaifu extends AbstractSkin {
         this.portraitAnimation_IMG = ImageMaster.loadImage(reskinContent.assetPath("img/Slimebound/Slaifu/portrait_waifu2.png"));
 
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinSlime").TEXT[0];
+        this.DESCRIPTION = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinSlime").EXTRA_TEXT[0];
 
         this.portraitAtlasPath = reskinContent.assetPath("img/Slimebound/Slaifu/animation/SlimeBoss_portrait");
+
+        this.SHOULDER1 = "reskinContent/img/Slimebound/Slaifu/shoulder2.png";
+        this.SHOULDER2 = "reskinContent/img/Slimebound/Slaifu/shoulder.png";
+        this.CORPSE = "reskinContent/img/Slimebound/Slaifu/corpse.png";
+        this.atlasURL = "reskinContent/img/Slimebound/Slaifu/animation/TheSlimeBossWaifuDownFall.atlas";
+        this.jsonURL = "reskinContent/img/Slimebound/Slaifu/animation/TheSlimeBossWaifuDownFall.json";
+        this.renderscale = 1.2f;
     }
 
     public String getAssetPath(String filename) {

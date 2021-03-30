@@ -2,24 +2,59 @@
   "reskinContent:ReSkin": {
     "TEXT": [
       "皮膚",
-      "原版",
-      "蹲醬",
-      "原版",
-      " 史萊姆娘"
+      "原版"
     ]
   },
-  "reskinContent:Name": {
+  "reskinContent:PortraitAnimation": {
     "TEXT": [
-      "守護者",
-      "黏黏史萊姆"
+      "立繪類型"
     ]
   },
-  "reskinContent:modSettings": {
+  "reskinContent:PortraitAnimationType": {
     "TEXT": [
-      "去除六火的面具",
-      "去除六火周圍的鬼魂",
-      "關閉動態立繪--蹲醬",
-      "禁用敵人皮膚"
+      "靜態",
+      "動態（低粒子）",
+      "動態"
+    ]
+  },
+  "reskinContent:BetaArtUnlockEffect": {
+    "TEXT": [
+      "已解鎖守護者皮膚！",
+      "已解鎖史萊姆老大皮膚！",
+      "已解鎖六火亡魂皮膚！",
+      "已解鎖異蛇皮膚！",
+      "已解鎖第一勇士皮膚！",
+      "已解鎖銅製機械人偶皮膚！"
+    ]
+  },
+  "reskinContent:ReSkinGuardian": {
+    "TEXT": [
+      "蹲醬"
+    ]
+  },
+  "reskinContent:ReSkinSlime": {
+    "TEXT": [
+      "史萊姆娘"
+    ]
+  },
+  "reskinContent:ReSkinHexaghost": {
+    "TEXT": [
+      "六子"
+    ]
+  },
+  "reskinContent:ReSkinSnecko": {
+    "TEXT": [
+      "蛇蛇"
+    ]
+  },
+  "reskinContent:ReSkinChamp": {
+    "TEXT": [
+      "妹妹勇士"
+    ]
+  },
+  "reskinContent:ReSkinBronze": {
+    "TEXT": [
+      "童制機械人偶"
     ]
   }
 }

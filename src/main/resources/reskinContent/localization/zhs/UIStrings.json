@@ -30,26 +30,44 @@
   "reskinContent:ReSkinGuardian": {
     "TEXT": [
       "蹲酱"
+    ],
+    "EXTRA_TEXT": [
+      "量产人形先古造物。 NL 被重编程以用于保护城市入口以外的用途"
     ]
   },
   "reskinContent:ReSkinSlime": {
     "TEXT": [
-      "史莱姆娘"
+      "史莱姆娘",
+      "愚人节"
+    ],
+    "EXTRA_TEXT": [
+      "与随处可见的种类不同。 NL 吞噬了众多物品的它将继续它的美食之旅。"
     ]
   },
   "reskinContent:ReSkinHexaghost": {
     "TEXT": [
-      "六子"
+      "六子",
+      "愚人节"
+    ],
+    "EXTRA_TEXT": [
+      "充满了冤魂的容器中也有不一样的个体。 NL 具现化使得力量更为强劲？"
     ]
   },
   "reskinContent:ReSkinSnecko": {
     "TEXT": [
       "蛇蛇"
+    ],
+    "EXTRA_TEXT": [
+      "它迷惑性的双眸将使人出现认知偏差。 NL 调查显示，被困惑的生物会看见完全不同的世界。"
     ]
   },
   "reskinContent:ReSkinChamp": {
     "TEXT": [
-      "妹妹勇士"
+      "妹妹勇士",
+      "愚人节"
+    ],
+    "EXTRA_TEXT": [
+      "挥舞着与身形完全不相符的巨剑看似滑稽。 NL 实际上有着旁人想象不到的巨大力量。"
     ]
   },
   "reskinContent:ReSkinBronze": {

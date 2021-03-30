@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import reskinContent.patches.CharacterSelectScreenPatches;
 
 import java.util.ArrayList;
 
@@ -50,9 +51,9 @@ public class AutomatonChar extends CustomPlayer {
     public AutomatonChar(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "bronzeResources/images/char/mainChar/orb/vfx.png", (String) null, (String) null);
         initializeClass(null,
-                SHOULDER1,
-                SHOULDER2,
-                CORPSE,
+                CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].SHOULDER1,
+                CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].SHOULDER2,
+                CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].CORPSE,
                 getLoadout(), 0.0F, -30.0F, 270.0F, 310.0F, new EnergyManager(3));
 
         this.reloadAnimation();
@@ -60,8 +61,10 @@ public class AutomatonChar extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-
-        this.loadAnimation(atlasURL, this.jsonURL, renderscale);
+        this.loadAnimation(
+                CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].atlasURL,
+                CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].jsonURL,
+                CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].renderscale);
         this.state.setAnimation(0, "idle", true);
     }
 

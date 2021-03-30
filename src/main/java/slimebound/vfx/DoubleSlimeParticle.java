@@ -38,10 +38,9 @@ public class DoubleSlimeParticle extends com.megacrit.cardcrawl.vfx.AbstractGame
     private float y;
 
     public DoubleSlimeParticle(AbstractPlayer p) {
-        if(CharacterSelectScreenPatches.characters[1].isOriginal()){
+        if (CharacterSelectScreenPatches.characters[1].isOriginal()) {
             this.atlas = new TextureAtlas(Gdx.files.internal("slimeboundResources/SlimeboundImages/char/skeleton.atlas"));
             SkeletonJson json = new SkeletonJson(this.atlas);
-
 
             json.setScale(Settings.scale / scale);
             SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal("slimeboundResources/SlimeboundImages/char/skeleton.json"));
@@ -49,20 +48,29 @@ public class DoubleSlimeParticle extends com.megacrit.cardcrawl.vfx.AbstractGame
             this.skeleton.setColor(Color.WHITE);
             this.stateData = new AnimationStateData(skeletonData);
             this.state = new AnimationState(this.stateData);
-        }else {
-            this.atlas = new TextureAtlas(Gdx.files.internal(reskinContent.assetPath("img/Slimebound/Slaifu/animation/TheSlimeBossWaifuDownFall.atlas")));
-            SkeletonJson json = new SkeletonJson(this.atlas);
+        } else {
+            if (CharacterSelectScreenPatches.characters[1].reskinCount == 1) {
+                this.atlas = new TextureAtlas(Gdx.files.internal(reskinContent.assetPath("img/Slimebound/Slaifu/animation/TheSlimeBossWaifuDownFall.atlas")));
+                SkeletonJson json = new SkeletonJson(this.atlas);
 
+                json.setScale(Settings.scale / scale);
+                SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal(reskinContent.assetPath("img/Slimebound/Slaifu/animation/TheSlimeBossWaifuDownFall.json")));
+                this.skeleton = new Skeleton(skeletonData);
+                this.skeleton.setColor(Color.WHITE);
+                this.stateData = new AnimationStateData(skeletonData);
+                this.state = new AnimationState(this.stateData);
+            } else {
+                this.atlas = new TextureAtlas(Gdx.files.internal(reskinContent.assetPath("img/Slimebound/Slaifu/animation/TheSlimeBossWaifuDownFall.atlas")));
+                SkeletonJson json = new SkeletonJson(this.atlas);
 
-
-            json.setScale(Settings.scale / scale);
-            SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal(reskinContent.assetPath("img/Slimebound/Slaifu/animation/TheSlimeBossWaifuDownFall.json")));
-            this.skeleton = new Skeleton(skeletonData);
-            this.skeleton.setColor(Color.WHITE);
-            this.stateData = new AnimationStateData(skeletonData);
-            this.state = new AnimationState(this.stateData);
+                json.setScale(Settings.scale / scale);
+                SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal(reskinContent.assetPath("img/Slimebound/Slaifu/animation/TheSlimeBossWaifuDownFall.json")));
+                this.skeleton = new Skeleton(skeletonData);
+                this.skeleton.setColor(Color.WHITE);
+                this.stateData = new AnimationStateData(skeletonData);
+                this.state = new AnimationState(this.stateData);
+            }
         }
-
 
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
