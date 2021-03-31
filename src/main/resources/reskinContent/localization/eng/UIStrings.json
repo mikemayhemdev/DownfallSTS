@@ -19,33 +19,33 @@
   },
   "reskinContent:BetaArtUnlockEffect": {
     "TEXT": [
-      "Guardian Alterative Art Unlocked!",
-      "Slime Boss Alterative Art Unlocked!",
-      "Hexaghost Alterative Art Unlocked!",
-      "Snecko Alterative Art Unlocked!",
-      "Champ Alterative Art Unlocked!",
-      "Automaton Alterative Art Unlocked!"
+      "Guardian Alternative Art Unlocked!",
+      "Slime Boss Alternative Art Unlocked!",
+      "Hexaghost Alternative Art Unlocked!",
+      "Snecko Alternative Art Unlocked!",
+      "Champ Alternative Art Unlocked!",
+      "Automaton Alternative Art Unlocked!"
     ]
   },
 
   "reskinContent:ReSkinGuardian": {
     "TEXT": [
       "Guardian Chan",
-      "Beta Guardian"
+      "Concept Art"
     ],
     "EXTRA_TEXT": [
       "One Mass production of anthropomorphic Ancient Artifacts. NL Reprogrammed for protect except entrance to the city",
-      ""
+      "One of the Guardian's earlier drafts. Looks like it wants to prove itself!"
     ]
   },
   "reskinContent:ReSkinSlime": {
     "TEXT": [
       "Slaifu",
-      "Beta Slime Boss"
+      "Slime Boss"
     ],
     "EXTRA_TEXT": [
-      "It's different from others.  NL It will continue its gourmet journey after swallowing many things.",
-      ""
+      "It's different from others. NL It will continue its gourmet journey after swallowing many things.",
+      "Is this... the Slime Boss? It seems awfully friendly. NL Well, its hat is surely the largest in the Spire, so it must be in charge..."
     ]
   },
   "reskinContent:ReSkinHexaghost": {
@@ -71,7 +71,7 @@
   "reskinContent:ReSkinChamp": {
     "TEXT": [
       "Chan-p",
-      "Beta Champ"
+      "Champ"
     ],
     "EXTRA_TEXT": [
       "She looks funny waving a huge sword that doesn't match her figure. NL In fact, it has great power that no one else can imagine.",
@@ -81,11 +81,11 @@
   "reskinContent:ReSkinBronze": {
     "TEXT": [
       "Automaton",
-      "Beta Automaton"
+      "\"Automaton\""
     ],
     "EXTRA_TEXT": [
-      "She looks funny waving a huge sword that doesn't match her figure. NL In fact, it has great power that no one else can imagine.",
-      ""
+      "",
+      "Yep! Tip to toe, that's the Automaton, alright! NL I've never seen anything that looks more like the Automaton!"
     ]
   }
 }

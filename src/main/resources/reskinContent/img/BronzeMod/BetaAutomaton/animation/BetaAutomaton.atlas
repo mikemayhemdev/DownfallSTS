@@ -2,7 +2,7 @@
 BetaAutomaton.png
 size: 1024,1024
 format: RGBA8888
-filter: Linear,Linear
+filter: MipMap,MipMap
 repeat: none
 betaAutomaton/body
   rotate: false
