@@ -82,6 +82,13 @@ public abstract class AbstractGuardianCard extends CustomCard {
 
     }
 
+    protected void upgradeSecondaryM(int amount) {
+        this.secondaryM += amount;
+        this.upgradesecondaryM = true;
+    }
+
+
+
     /*
 
     @Override

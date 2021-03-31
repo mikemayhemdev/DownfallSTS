@@ -26,8 +26,8 @@ public class TurnItUpAction extends AbstractXAction {
 
     public void update() {
         AbstractPlayer p = AbstractDungeon.player;
-        addToTop(new ApplyPowerAction(p, p, new EnhancePower(5), 5));
-        addToTop(new ApplyPowerAction(p, p, new LoseEnhanceInTurnsPower(amount, 5), amount));
+        addToTop(new ApplyPowerAction(p, p, new EnhancePower(6), 6));
+        addToTop(new ApplyPowerAction(p, p, new LoseEnhanceInTurnsPower(amount, 6), amount));
         this.isDone = true;
     }
 }

@@ -3,6 +3,7 @@ package theHexaghost.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,8 +11,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
+
+import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class GiftsFromTheDeadPower extends AbstractPower implements CloneablePowerInterface {
 
@@ -40,9 +45,29 @@ public class GiftsFromTheDeadPower extends AbstractPower implements CloneablePow
     }
 
     @Override
-    public void onExhaust(AbstractCard card) {
-        if (card.isEthereal) {
-            addToBot(new ApplyPowerAction(owner, owner, new DrawCardNextTurnPower(owner, amount), amount));
+    public void atStartOfTurnPostDraw() {
+        flash();
+        for (int i = 0; i < amount; i++) {
+            addToBot(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    if (!AbstractDungeon.player.exhaustPile.isEmpty()) {
+                        ArrayList<AbstractCard> eligible = AbstractDungeon.player.exhaustPile.group.stream().filter(c -> c.hasTag(HexaMod.AFTERLIFE)).collect(Collectors.toCollection(ArrayList::new));  // Very proud of this line
+                        if (!eligible.isEmpty()) {
+                            AbstractCard q = eligible.get(AbstractDungeon.cardRandomRng.random(eligible.size()-1));
+                            addToTop(new AbstractGameAction() {
+                                @Override
+                                public void update() {
+                                    isDone = true;
+                                    AbstractDungeon.player.exhaustPile.removeCard(q);
+                                    AbstractDungeon.effectsQueue.add(new ShowCardAndAddToDiscardEffect(q.makeSameInstanceOf()));
+                                }
+                            });
+                        }
+                    }
+                }
+            });
         }
     }
 

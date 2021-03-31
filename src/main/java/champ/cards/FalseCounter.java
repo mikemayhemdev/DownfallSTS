@@ -26,19 +26,11 @@ public class FalseCounter extends AbstractChampCard {
         tags.add(ChampMod.FINISHER);
     }
 
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (!(AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) ||AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID))) {
-            cantUseMessage = EXTENDED_DESCRIPTION[0];
-            return false;
-        }
-        return super.canUse(p, m);
-    }
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (upgraded) applyToSelf(new CounterPower(magicNumber));
         applyToSelf(new FalseCounterPower(1));
         finisher();
+        postInit();
     }
 
     public void upp() {

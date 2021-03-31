@@ -2,8 +2,11 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.actions.LariatAction;
+import champ.vfx.StanceDanceEffect;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import downfall.actions.PerformXAction;
@@ -24,11 +27,13 @@ public class Lariat extends AbstractChampCard {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         tags.add(ChampMod.TECHNIQUE);
+        techniqueLast = true;
         //baseMagicNumber = magicNumber = MAGIC;
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
+     //   techique();
         if (energyOnUse < EnergyPanel.totalCount) {
             energyOnUse = EnergyPanel.totalCount;
         }
@@ -37,6 +42,8 @@ public class Lariat extends AbstractChampCard {
         if (upgraded) {
             atb(new GainEnergyAction(1));
         }
+
+        atb(new VFXAction(new StanceDanceEffect(AbstractDungeon.player, false, false, false, true), 0.7F));
 
     }
 

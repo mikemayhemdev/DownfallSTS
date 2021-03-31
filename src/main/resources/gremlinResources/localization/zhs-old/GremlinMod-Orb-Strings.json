@@ -1,0 +1,41 @@
+{
+  "Gremlin:FatGremlin": {
+    "NAME": "胖地精",
+    "DESCRIPTION": [
+      "当你攻击时， 给予所有目标 #b",
+      " 层 #y虚弱 。"
+    ]
+  },
+
+  "Gremlin:GremlinWizard": {
+    "NAME": "地精法师",
+    "DESCRIPTION": [
+      "当你打出技能牌时， 获得 #b",
+      " 层 #y法力 。"
+    ]
+  },
+
+  "Gremlin:MadGremlin": {
+    "NAME": "火大地精",
+    "DESCRIPTION": [
+      "受到攻击时获得 #b",
+      " 点 #y临时力量 。"
+    ]
+  },
+
+  "Gremlin:ShieldGremlin": {
+    "NAME": "持盾地精",
+    "DESCRIPTION": [
+      "每当你打出技能牌时， 获得 #b",
+      " 点 #y格挡 。"
+    ]
+  },
+
+  "Gremlin:SneakyGremlin": {
+    "NAME": "卑鄙地精",
+    "DESCRIPTION": [
+      "每当你打出技能牌时， 对随机一名敌人造成 #b",
+      " 点伤害。"
+    ]
+  }
+}

@@ -32,6 +32,7 @@ import champ.ChampMod;
 import champ.cards.ModFinisher;
 import champ.powers.LastStandModPower;
 import champ.relics.ChampStancesModRelic;
+import champ.relics.ChampionCrown;
 import champ.util.TechniqueMod;
 import charbosses.actions.util.CharBossMonsterGroup;
 import charbosses.bosses.AbstractCharBoss;
@@ -54,10 +55,12 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.blights.VoidEssence;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.curses.Pride;
 import com.megacrit.cardcrawl.cards.status.Slimed;
+import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -67,10 +70,7 @@ import com.megacrit.cardcrawl.events.city.*;
 import com.megacrit.cardcrawl.events.exordium.*;
 import com.megacrit.cardcrawl.events.shrines.FaceTrader;
 import com.megacrit.cardcrawl.events.shrines.*;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ModHelper;
-import com.megacrit.cardcrawl.helpers.RelicLibrary;
+import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
@@ -108,6 +108,11 @@ import downfall.relics.*;
 import downfall.util.*;
 import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
+import gremlin.GremlinMod;
+import gremlin.cards.Wizardry;
+import gremlin.characters.GremlinCharacter;
+import gremlin.relics.WizardHat;
+import gremlin.relics.WizardStaff;
 import guardian.GuardianMod;
 import guardian.cards.ExploitGems;
 import guardian.characters.GuardianCharacter;
@@ -271,6 +276,8 @@ public class downfallMod implements
                 return "champResources/" + path;
             case PACKAGE_AUTOMATON:
                 return "bronzeResources/" + path;
+            case PACKAGE_GREMLIN:
+                return "gremlinResources/" + path;
         }
         return "downfallResources/" + path;
     }
@@ -352,6 +359,9 @@ public class downfallMod implements
 
         //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_AUTOMATON" + stringType);
         BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_AUTOMATON));
+
+        //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_GREMLIN" + stringType);
+        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_GREMLIN));
     }
 
     private void loadLocalization(Settings.GameLanguage language) {
@@ -383,6 +393,7 @@ public class downfallMod implements
         BaseMod.addCard(new Icky());
         BaseMod.addCard(new Aged());
         BaseMod.addCard(new Pride());
+        BaseMod.addCard(new Scatterbrained());
 /*
         BaseMod.addCard(new Slug());
         BaseMod.addCard(new Defend_Crowbot());
@@ -443,6 +454,7 @@ public class downfallMod implements
         loadModKeywords(GuardianMod.getModID(), otherPackagePaths.PACKAGE_GUARDIAN);
         loadModKeywords(ChampMod.getModID(), otherPackagePaths.PACKAGE_CHAMP);
         loadModKeywords(AutomatonMod.getModID(), otherPackagePaths.PACKAGE_AUTOMATON);
+        loadModKeywords(GremlinMod.getModID(), otherPackagePaths.PACKAGE_GREMLIN);
         loadModKeywords(modID, otherPackagePaths.PACKAGE_DOWNFALL);
     }
 
@@ -1258,7 +1270,8 @@ public class downfallMod implements
                 p instanceof GuardianCharacter ||
                 p instanceof TheSnecko ||
                 p instanceof ChampChar ||
-                p instanceof AutomatonChar){
+                p instanceof AutomatonChar ||
+                p instanceof GremlinCharacter){
             return true;
         }
         return false;
@@ -1277,6 +1290,8 @@ public class downfallMod implements
         l.add(new CustomMod(ExchangeController.ID, "r", true));
         l.add(new CustomMod(Analytical.ID, "g", true));
         l.add(new CustomMod(StatusAbuse.ID, "r", true));
+        l.add(new CustomMod(TooManyShivs.ID, "r", true));
+        l.add(new CustomMod(Wizzardry.ID, "g", true));
     }
 
     @Override
@@ -1301,7 +1316,10 @@ public class downfallMod implements
         }
 
         if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ChampStances.ID) || ModHelper.isModEnabled(ChampStances.ID)) {
-            RelicLibrary.getRelic(ChampStancesModRelic.ID).makeCopy().instantObtain();
+            if (!(AbstractDungeon.player instanceof ChampChar)) {
+                RelicLibrary.getRelic(ChampionCrown.ID).makeCopy().instantObtain();
+            }
+
             for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
                 if (!c.hasTag(ChampMod.TECHNIQUE))
                     CardModifierManager.addModifier(c, new TechniqueMod());
@@ -1381,6 +1399,23 @@ public class downfallMod implements
             AbstractDungeon.player.masterDeck.addToTop(new Unknown());
         }
 
+        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(TooManyShivs.ID) || ModHelper.isModEnabled(TooManyShivs.ID)) {
+            RelicLibrary.getRelic(VelvetChoker.ID).makeCopy().instantObtain();
+            BlightHelper.getBlight(VoidEssence.ID).instantObtain(AbstractDungeon.player, AbstractDungeon.player.blights.size(), true);
+            for (int i=0;i<10;i++) {
+                AbstractDungeon.player.masterDeck.addToBottom(new Shiv());
+            }
+        }
+
+        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Wizzardry.ID) || ModHelper.isModEnabled(Wizzardry.ID)) {
+            RelicLibrary.getRelic(WizardHat.ID).makeCopy().instantObtain();
+            RelicLibrary.getRelic(WizardStaff.ID).makeCopy().instantObtain();
+            AbstractCard c = new Wizardry();
+            c.upgrade();
+            AbstractDungeon.player.masterDeck.addToBottom(c);
+
+        }
+
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group)
             UnlockTracker.markCardAsSeen(c.cardID);
 
@@ -1457,6 +1492,7 @@ public class downfallMod implements
         PACKAGE_EXPANSION,
         PACKAGE_CHAMP,
         PACKAGE_AUTOMATON,
+        PACKAGE_GREMLIN,
         PACKAGE_DOWNFALL;
 
         otherPackagePaths() {

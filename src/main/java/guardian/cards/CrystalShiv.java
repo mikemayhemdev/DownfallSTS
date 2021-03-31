@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AccuracyPower;
 import guardian.GuardianMod;
 
 
@@ -46,6 +47,12 @@ public class CrystalShiv extends AbstractGuardianCard {
 
         this.baseDamage = DAMAGE;
 
+        if ((AbstractDungeon.player != null) && (AbstractDungeon.player.hasPower(AccuracyPower.POWER_ID))) {
+            this.baseDamage = (DAMAGE + AbstractDungeon.player.getPower(AccuracyPower.POWER_ID).amount);
+        } else {
+            this.baseDamage = DAMAGE;
+        }
+
 //this.sockets.add(GuardianMod.socketTypes.RED);
 
         this.exhaust = true;
@@ -54,6 +61,14 @@ public class CrystalShiv extends AbstractGuardianCard {
         loadGemMisc();
 
 
+    }
+
+    @Override
+    public void applyPowers() {
+        if ((AbstractDungeon.player != null) && (AbstractDungeon.player.hasPower(AccuracyPower.POWER_ID))) {
+            this.baseDamage = (DAMAGE + AbstractDungeon.player.getPower(AccuracyPower.POWER_ID).amount);
+        }
+        super.applyPowers();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

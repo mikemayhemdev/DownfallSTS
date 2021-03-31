@@ -2,17 +2,21 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
+import champ.util.OnFinisherSubscriber;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.util.TextureLoader;
 
-public class FocusedDefPower extends AbstractPower implements CloneablePowerInterface {
+public class FocusedDefPower extends AbstractPower implements CloneablePowerInterface, OnFinisherSubscriber {
 
     public static final String POWER_ID = ChampMod.makeID("FocusedDefPower");
 
@@ -38,12 +42,13 @@ public class FocusedDefPower extends AbstractPower implements CloneablePowerInte
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        if (AbstractDungeon.player.hasPower(CounterPower.POWER_ID)) {
-            if (AbstractDungeon.player.getPower(CounterPower.POWER_ID).amount >= 15) {
-                flash();
-                addToBot(new GainBlockAction(owner, amount));
-            }
-        }
+        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
+    }
+
+    @Override
+    public void onFinisher() {
+        flash();
+        addToBot(new GainBlockAction(owner, amount));
         addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 

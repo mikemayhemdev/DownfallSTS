@@ -42,5 +42,13 @@
   "downfall:StatusAbuse": {
     "NAME": "Inflicted",
     "DESCRIPTION": "Start with a Makeshift Battery, Donu's Washers, Deca's Washers, a Medical Kit, and a Bronze Idol. All other Relics are replaced with Circlets."
+  },
+  "downfall:TooManyShivs": {
+    "NAME": "Too Many Shivs",
+    "DESCRIPTION": "Start with Velvet Choker, Void Essence, and 10 Shivs."
+  },
+  "downfall:Wizzardry": {
+    "NAME": "Wizzardry",
+    "DESCRIPTION": "Start with a Wizard Hat, a Wizard Staff, and an Upgraded copy of Wizardry."
   }
 }

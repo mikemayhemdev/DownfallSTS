@@ -7,8 +7,10 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.cardmods.EtherealMod;
+import theHexaghost.HexaMod;
 
 public class Haunt extends AbstractHexaCard {
 
@@ -25,6 +27,7 @@ public class Haunt extends AbstractHexaCard {
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;
         exhaust = true;
+        tags.add(HexaMod.AFTERLIFE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -34,6 +37,23 @@ public class Haunt extends AbstractHexaCard {
             public void update() {
                 isDone = true;
                 for (AbstractCard c : p.hand.group) {
+                    if (!c.isEthereal) {
+                        CardModifierManager.addModifier(c, new EtherealMod());
+                        c.superFlash(Color.PURPLE.cpy());
+                    }
+                }
+            }
+        });
+    }
+
+    @Override
+    public void triggerOnExhaust() {
+        atb(new DrawCardAction(AbstractDungeon.player, magicNumber));
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                for (AbstractCard c : AbstractDungeon.player.hand.group) {
                     if (!c.isEthereal) {
                         CardModifierManager.addModifier(c, new EtherealMod());
                         c.superFlash(Color.PURPLE.cpy());

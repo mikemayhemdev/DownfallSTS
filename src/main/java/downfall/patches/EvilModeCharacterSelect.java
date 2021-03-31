@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.screens.charSelect.CharacterSelectScreen;
 import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.patches.ui.topPanel.GoldToSoulPatches;
+import gremlin.patches.GremlinEnum;
 import guardian.patches.GuardianEnum;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
@@ -51,7 +52,7 @@ public class EvilModeCharacterSelect {
             Iterator<CharacterOption> options = __instance.options.iterator();
 
             ArrayList<CharacterOption> basegameOptions = new ArrayList<>(), moddedOptions = new ArrayList<>();
-            CharacterOption[] villainOptions = new CharacterOption[6];
+            CharacterOption[] villainOptions = new CharacterOption[7];
 
             while (options.hasNext()) {
                 CharacterOption o = options.next();
@@ -92,12 +93,18 @@ public class EvilModeCharacterSelect {
                                 ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
                             }
                             villainOptions[4] = o;
+                        } else if (o.c.chosenClass == GremlinEnum.GREMLIN) {
+                            if (UnlockTracker.isCharacterLocked("Gremlin")) {
+                                o.locked = true;
+                                ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                            }
+                            villainOptions[5] = o;
                         } else if (o.c.chosenClass == TheSnecko.Enums.THE_SNECKO) {
                             if (UnlockTracker.isCharacterLocked("Snecko")) {
                                 o.locked = true;
                                 ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
                             }
-                            villainOptions[5] = o;
+                            villainOptions[6] = o;
                         } else {
                             isVillain = false;
                             moddedOptions.add(o);

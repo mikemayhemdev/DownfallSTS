@@ -22,6 +22,7 @@ public class SteelEdge extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
      //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        postInit();
     }
 
     @Override

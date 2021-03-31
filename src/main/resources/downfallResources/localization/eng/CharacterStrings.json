@@ -30,7 +30,11 @@
       "[Leave]",
       "Choose 10 cards to add to your deck.",
       "[ #gEnemies #gin #gyour #gnext #gthree #gcombats #gflee #gin #gterror ]",
-      "[ Locked - Can't be chosen on the first run ]"
+      "[ Locked - Can't be chosen on the first run ]",
+      "[ #gAll #gGremlins #gget #gMax #gHP #g+",
+      "#gAll #gGremlins #gget #gMax #gHP #g+",
+      "[ #rAll #rGremlins #rLose #r",
+      "[ #rAll #rGremlins #rTake #r"
     ]
   },
   "downfall:Unlock": {
@@ -44,7 +48,9 @@
       "This character is unlocked by completing a run with the Champ.",
       "This character is unlocked by completing a run with the 5th Villain character.",
       "This character is unlocked by completing a run with the Automaton.",
-      ""
+      "This character is unlocked by completing a run with the 6th Villain character.",
+      "This character is unlocked by completing a run with the Gremlins.",
+      " (Act 4 Wins do not count)"
     ]
   },
   "downfall:HeartMerchant": {

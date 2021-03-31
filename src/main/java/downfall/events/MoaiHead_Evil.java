@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.ScreenShake.ShakeDur;
 import com.megacrit.cardcrawl.helpers.ScreenShake.ShakeIntensity;
 import com.megacrit.cardcrawl.localization.EventStrings;
+import gremlin.characters.GremlinCharacter;
 
 public class MoaiHead_Evil extends AbstractImageEvent {
     public static final String ID = "downfall:MoaiHead";
@@ -28,10 +29,18 @@ public class MoaiHead_Evil extends AbstractImageEvent {
             this.hpAmt = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.125F);
         }
 
-        this.imageEventText.setDialogOption(OPTIONS[0] + this.hpAmt + OPTIONS[1]);
+        if (AbstractDungeon.player instanceof GremlinCharacter){
+            this.imageEventText.setDialogOption(OPTIONSALT[6] + this.hpAmt + OPTIONS[1]);
+        } else {
+            this.imageEventText.setDialogOption(OPTIONS[0] + this.hpAmt + OPTIONS[1]);
+        }
 
         if (AbstractDungeon.player.gold >= this.goldAmount) {
-            this.imageEventText.setDialogOption(OPTIONSALT[0] + this.goldAmount + OPTIONSALT[1] + this.hpAmt + OPTIONSALT[2]);
+            if (AbstractDungeon.player instanceof GremlinCharacter) {
+                this.imageEventText.setDialogOption(OPTIONSALT[0] + this.goldAmount + OPTIONSALT[5] + (this.hpAmt+4)/5 + OPTIONSALT[2]);
+            } else {
+                this.imageEventText.setDialogOption(OPTIONSALT[0] + this.goldAmount + OPTIONSALT[1] + this.hpAmt + OPTIONSALT[2]);
+            }
         } else {
             this.imageEventText.setDialogOption(OPTIONSALT[3] + this.goldAmount + OPTIONSALT[4], true);
         }
@@ -57,6 +66,9 @@ public class MoaiHead_Evil extends AbstractImageEvent {
                         }
 
                         AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
+                        if (AbstractDungeon.player instanceof GremlinCharacter) {
+                            ((GremlinCharacter)AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
+                        }
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         this.imageEventText.clearRemainingOptions();
@@ -67,6 +79,9 @@ public class MoaiHead_Evil extends AbstractImageEvent {
                         AbstractDungeon.player.loseGold(this.goldAmount);
                         AbstractDungeon.player.increaseMaxHp(this.hpAmt, false);
                         AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
+                        if (AbstractDungeon.player instanceof GremlinCharacter) {
+                            ((GremlinCharacter)AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
+                        }
                         this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         this.imageEventText.clearRemainingOptions();
                         return;

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 import guardian.GuardianMod;
+import guardian.powers.BracePerTurnPower;
 import guardian.stances.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.RevengePower;
@@ -29,6 +30,7 @@ public class RevengeProtocol extends AbstractGuardianCard {
 
     //TUNING CONSTANTS
     private static final int STRENGTHFORTURN = 2;
+    private static final int BRACE_PER_TURN = 5;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
@@ -44,8 +46,8 @@ public class RevengeProtocol extends AbstractGuardianCard {
 
     public RevengeProtocol() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-
         this.magicNumber = this.baseMagicNumber = STRENGTHFORTURN;
+        this.secondaryM = BRACE_PER_TURN;
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
@@ -58,7 +60,7 @@ public class RevengeProtocol extends AbstractGuardianCard {
         if (p.stance instanceof DefensiveMode) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
         }
-        brace(10);
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BracePerTurnPower(p, 5)));
     }
 
     public AbstractCard makeCopy() {

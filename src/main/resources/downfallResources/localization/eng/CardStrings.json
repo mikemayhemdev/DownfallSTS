@@ -23,6 +23,10 @@
     "NAME": "Flawed",
     "DESCRIPTION": "Ethereal. NL At the end of your turn, transform all cards in hand into random Status cards. NL Exhaust."
   },
+  "downfall:Scatterbrained": {
+    "NAME": "Scatterbrained",
+    "DESCRIPTION": "Unplayable. NL When drawn, fill your hand with Echoes of this card."
+  },
   "downfall_Charboss:Slug": {
     "NAME": "Slug",
     "DESCRIPTION": "Deal !D! damage."

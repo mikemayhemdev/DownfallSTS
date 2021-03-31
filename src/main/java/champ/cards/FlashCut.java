@@ -30,6 +30,7 @@ public class FlashCut extends AbstractChampCard {
         tags.add(CardTags.STRIKE);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

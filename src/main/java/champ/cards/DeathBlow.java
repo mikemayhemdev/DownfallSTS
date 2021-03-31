@@ -1,11 +1,13 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static champ.ChampMod.fatigue;
+import static champ.ChampMod.vigor;
 
 public class DeathBlow extends AbstractChampCard {
 
@@ -13,9 +15,8 @@ public class DeathBlow extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 10;
-    private static final int MAGIC = 10;
-    private static final int UPG_MAGIC = 5;
+    private static final int DAMAGE = 20;
+    private static final int MAGIC = 20;
 
     public DeathBlow() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL);
@@ -23,18 +24,22 @@ public class DeathBlow extends AbstractChampCard {
         baseMagicNumber = magicNumber = MAGIC;
         isMultiDamage = true;
        // tags.add(ChampMod.TECHNIQUE);
-        myHpLossCost = MAGIC;
-        tags.add(ChampMod.FINISHER);
+        myHpLossCost = 10;
+        //tags.add(ChampMod.FINISHER);
+        postInit();
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
        // techique();
         allDmg(AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        fatigue(magicNumber);
-        finisher();
+        vigor(magicNumber);
+        fatigue(10);
+       // finisher();
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        upgradeDamage(5);
+        upgradeMagicNumber(5);
     }
 }

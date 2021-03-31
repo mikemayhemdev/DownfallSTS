@@ -55,7 +55,8 @@
       "Settling in by the fire, you decide to see if you have better luck with the Wheel than your last attempt.",
       "The Wheel has chosen a prize. NL NL You need only to reach out and take it.",
       "Success! You've found what you are looking for, and just in time! NL NL #r@CRACK!@ NL NL You may have been a little rough with that last spin... the Wheel has been broken.",
-      "You decide to try your luck another day. NL NL For now, you must rest and regain your composure."
+      "You decide to try your luck another day. NL NL For now, you must rest and regain your composure.",
+      "He lunges at you, but you are ready. NL You slash him open before he can get you with his shiv. NL You treat yourself to your prize, but sadly the Wheel disappears before you can loot it too."
     ],
     "OPTIONS": [
       "[Play]",
@@ -71,7 +72,9 @@
       "[Again!]",
       "[AGAIN!!]",
       "[Punch] #rFight. #gGain #gGremlin #gWheel.",
-      "[Pass] Try again later."
+      "[Pass] Try again later.",
+      "[Prize!] #gPREEMPTIVE #gSTRIKE!",
+      "[Loot]"
     ]
   },
   "downfall:GremlinWheelGameRest": {
@@ -99,11 +102,12 @@
   "downfall:BonfireSpirits": {
     "NAME": "Bonfire Elemental",
     "DESCRIPTIONS": [
-      "The spirits hungrily consume your offering! They gorge themselves on souls, burning brighter as the fire @doubles@ in strength. NL The spirits dance around you excitedly before ~merging~ ~into~ ~your~ ~form,~ filling you with warmth and strength. NL Your Max HP increases by #b10 and you are #ghealed to full HP."
+      "The spirits hungrily consume your offering! They gorge themselves on souls, burning brighter as the fire @doubles@ in strength. NL The spirits dance around you excitedly before ~merging~ ~into~ ~your~ ~form,~ filling you with warmth and strength. NL Your Max HP increases and you are #ghealed to full HP."
     ],
     "OPTIONS": [
       "[Donate] #rLose #r150 #rSouls. #gGain #g10 #gMax #gHP.",
-      "[Locked] Requires 150 Souls."
+      "[Locked] Requires 150 Souls.",
+      "[Donate] #rLose #r150 #rSouls. #gEach #gGremlin #gGains #g2 #gMax #gHP."
     ]
   },
   "downfall:FaceTrader": {
@@ -461,7 +465,8 @@
       "[I am Gorged] #gGain #g999 #gSouls. #rCursed #r- #r2 #rNormality.",
       "[I am Complete] #gUpgrade #gall #gCards. #rLose #rHeart #rBlessings and #r10 #rMax #rHP.",
       "[Locked] Requires all 3 Heart Blessings.",
-      "[Leave]"
+      "[Leave]",
+      "[I am Complete] #gUpgrade #gall #gCards. #rLose #rHeart #rBlessings and #r2 #rMax #rHP."
     ]
   },
   "downfall:MoaiHead": {
@@ -477,7 +482,9 @@
       " #rSouls. #gGain #g",
       " #gMax #gHP and #gHeal #gto #gfull.",
       "[Locked] Requires ",
-      " Souls."
+      " Souls.",
+      " #rSouls. #gEach #gGremlin #gGains #g",
+      "[Jump Inside] #gHeal #gto #gfull #gHP. #rEach #rGremlin #rLoses #r"
     ]
   },
   "downfall:SensoryStone": {

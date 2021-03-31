@@ -1,6 +1,7 @@
 package guardian.powers;
 
 
+import champ.relics.DeflectingBracers;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.BlurPower;
 import com.megacrit.cardcrawl.powers.BufferPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import guardian.relics.ModeShifter;
 import guardian.stances.DefensiveMode;
 
 
@@ -57,9 +59,14 @@ public class ModeShiftPower extends AbstractGuardianPower {
             AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveMode.STANCE_ID));
 
             int turns;
-            if (AbstractDungeon.actionManager.turnHasEnded) turns = 2;
-            else turns = 1;
+            if (AbstractDungeon.actionManager.turnHasEnded)
+                turns = 2;
+            else
+                turns = 1;
+            if (AbstractDungeon.player.hasRelic(ModeShifter.ID) && activations == 0)
+                turns += 1;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DontLeaveDefensiveModePower(AbstractDungeon.player, turns), turns));
+
             this.activations++;
             this.amount += Math.min(STARTINGAMOUNT + (AMOUNTGAINPERACTIVATION * activations), MAXAMOUNT); //Set max of 40 Brace
             updateDescription();

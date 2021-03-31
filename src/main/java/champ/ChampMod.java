@@ -15,6 +15,7 @@ import champ.potions.TechPotion;
 import champ.potions.UltimateStancePotion;
 import champ.powers.CounterPower;
 import champ.powers.ResolvePower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import champ.relics.*;
 import champ.stances.AbstractChampStance;
 import champ.util.CardFilter;
@@ -403,13 +404,12 @@ public class ChampMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(MinorLeagueArena.ID, MinorLeagueArena.class) //Event ID//
                 //Event Spawn Condition//
-
-                .playerClass(ChampChar.Enums.THE_CHAMP)
                 .dungeonID(Exordium.ID)
                 .eventType(EventUtils.EventType.NORMAL)
+                .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
                 .create());
                 /*
-                .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
+
                 .dungeonID(Exordium.ID)
                 .eventType(EventUtils.EventType.NORMAL)
                 .create());
@@ -477,6 +477,25 @@ public class ChampMod implements
             AbstractDungeon.actionManager.addToBottom(new PressEndTurnButtonAction());
             endTurnIncoming = false;
         }
+    }
+
+
+    public static void vigor(int begone) {
+
+        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                int x = begone;
+                if (AbstractDungeon.player.hasRelic(PowerArmor.ID) && AbstractDungeon.player.hasPower(VigorPower.POWER_ID)) {
+                    if (x + AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount > PowerArmor.CAP_RESOLVE_ETC) {
+                        x = PowerArmor.CAP_RESOLVE_ETC - AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount;
+                    }
+                }
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, x), x));
+            }
+        });
+
     }
 
     public static void updateTechniquesInCombat() {

@@ -17,10 +17,10 @@ public class TornadoPunch extends AbstractChampCard {
 
     //stupid intellij stuff attack, all_enemy, common
 
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 12;
     private static final int UPG_DAMAGE = 2;
 
-    private static final int BLOCK = 5;
+    private static final int BLOCK = 7;
     private static final int UPG_BLOCK = 2;
 
     private static final int MAGIC = 5;
@@ -34,16 +34,15 @@ public class TornadoPunch extends AbstractChampCard {
         isMultiDamage = true;
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         //if (upgraded) techique();
-        atb(new SFXAction("ATTACK_WHIRLWIND"));
-        atb(new VFXAction(new WhirlwindEffect(), 0.0F));
         allDmg(AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         if (dcombo())
             for (AbstractMonster q : monsterList()) {
-                atb(new ApplyPowerAction(p, p, new CounterPower(magicNumber), magicNumber));
+                //atb(new ApplyPowerAction(p, p, new CounterPower(magicNumber), magicNumber));
                 atb(new GainBlockAction(p, block));
             }
     }
@@ -56,7 +55,6 @@ public class TornadoPunch extends AbstractChampCard {
     public void upp() {
         //  tags.add(ChampMod.TECHNIQUE);
         upgradeDamage(UPG_DAMAGE);
-        upgradeMagicNumber(UPG_MAGIC);
         upgradeBlock(UPG_BLOCK);
     }
 }

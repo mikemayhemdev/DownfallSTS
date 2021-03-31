@@ -13,7 +13,7 @@
       "advanced",
       "advancing"
     ],
-    "DESCRIPTION": "#yActivate the next Ghostflame. If it's Ignited, #yExtinguish it."
+    "DESCRIPTION": "Move to the next Ghostflame. Moving onto a Ghostflame #yExtinguishes it."
   },
   {
     "PROPER_NAME": "Retract",
@@ -22,7 +22,7 @@
       "retracted",
       "retracting"
     ],
-    "DESCRIPTION": "#yActivate the previous Ghostflame. If it's Ignited, #yExtinguish it."
+    "DESCRIPTION": "Move to the previous Ghostflame. Moving onto a Ghostflame #yExtinguishes it."
   },
   {
     "PROPER_NAME": "Intensity",
@@ -56,18 +56,11 @@
     "DESCRIPTION": "Triggers the Ignition effect described on a Ghostflame."
   },
   {
-    "PROPER_NAME": "Force-Ignite",
-    "NAMES": [
-      "force-ignite"
-    ],
-    "DESCRIPTION": "Triggers the Ignition effect described on a Ghostflame, even if it was already Ignited."
-  },
-  {
     "PROPER_NAME": "Seal",
     "NAMES": [
       "seal"
     ],
-    "DESCRIPTION": "Can't be upgraded. If all #b6 Seals have been played this combat, obtain #pThe #pBroken #pSeal and remove the Seals from your deck."
+    "DESCRIPTION": "If all #b6 Seals have been played this combat, obtain #pThe #pBroken #pSeal and remove the Seals from your deck."
   },
   {
     "PROPER_NAME": "Afterlife",

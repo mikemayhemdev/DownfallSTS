@@ -19,8 +19,8 @@
   },
   "Guardian:Gem_Lightblue": {
     "NAME": "Tourmaline",
-    "DESCRIPTION": "guardianmod:Gem. NL Gain 1 temporary Thorns.",
-    "UPGRADE_DESCRIPTION": "Gain 1 temporary Thorns."
+    "DESCRIPTION": "guardianmod:Gem. NL Gain 3 temporary Thorns.",
+    "UPGRADE_DESCRIPTION": "Gain 3 temporary Thorns."
   },
   "Guardian:Gem_White": {
     "NAME": "Quartz",
@@ -65,7 +65,7 @@
   },
   "Guardian:GuardianWhirl": {
     "NAME": "Guardian Whirl",
-    "DESCRIPTION": "Must be in *Defensive *Mode. NL Exit *Defensive *Mode. NL Deal !D! damage !M! times to ALL enemies."
+    "DESCRIPTION": "Requires 20 or more Block. NL Deal !D! damage !M! times to ALL enemies."
   },
   "Guardian:VentSteam": {
     "NAME": "Vent Steam",
@@ -74,7 +74,8 @@
   },
   "Guardian:CurlUp": {
     "NAME": "Curl Up",
-    "DESCRIPTION": "Gain !B! Block if in guardianmod:Defensive_Mode. NL Otherwise, guardianmod:Brace !M!."
+    "DESCRIPTION": "Place a random card from your hand into guardianmod:Stasis. NL guardianmod:Brace !M!.",
+    "UPGRADE_DESCRIPTION": "Place a card in your hand into guardianmod:Stasis. NL guardianmod:Brace !M!."
   },
   "Guardian:TimeBomb": {
     "NAME": "Time Bomb",
@@ -116,7 +117,7 @@
   },
   "Guardian:Harden": {
     "NAME": "Harden",
-    "DESCRIPTION": "Must be in *Defensive *Mode. NL Gain !B! Block and !M! Thorns."
+    "DESCRIPTION": "Requires 20 or more Block. NL Brace !GuardianSecondM! and gain !M! Thorns."
   },
   "Guardian:SentryBeam": {
     "NAME": "Sentry Blast",
@@ -287,7 +288,7 @@
   },
   "Guardian:BaubleBeam": {
     "NAME": "Bauble Burst",
-    "DESCRIPTION": "Deal !D! damage. NL Perform the following !M! times:"
+    "DESCRIPTION": "Deal !D! damage. NL NL Perform !M! times:"
   },
   "Guardian:PrimingBeam": {
     "NAME": "Priming Shot",
@@ -295,15 +296,15 @@
   },
   "Guardian:EvasiveProtocol": {
     "NAME": "Evasive Protocol",
-    "DESCRIPTION": "While in guardianmod:Defensive_Mode, raise your Dexterity by !M!. NL guardianmod:Brace 10."
+    "DESCRIPTION": "While in guardianmod:Defensive_Mode, raise your Dexterity by !M!. NL At the end of your turn, guardianmod:Brace 3."
   },
   "Guardian:SpikerProtocol": {
     "NAME": "Spiker Protocol",
-    "DESCRIPTION": "Gain !M! Thorns while in guardianmod:Defensive_Mode. NL guardianmod:Brace 10."
+    "DESCRIPTION": "Gain !M! Thorns while in guardianmod:Defensive_Mode. NL At the end of your turn, guardianmod:Brace 3."
   },
   "Guardian:ArmoredProtocol": {
     "NAME": "Armored Protocol",
-    "DESCRIPTION": "Gain !M! Block at the end of each turn while in guardianmod:Defensive_Mode. NL guardianmod:Brace 10."
+    "DESCRIPTION": "Gain !M! Block at the end of each turn while in guardianmod:Defensive_Mode. NL At the end of your turn, guardianmod:Brace 3."
   },
   "Guardian:TimeSifter": {
     "NAME": "Time Sifter",
@@ -368,7 +369,7 @@
   },
   "Guardian:RevengeProtocol": {
     "NAME": "Revenge Protocol",
-    "DESCRIPTION": "While in guardianmod:Defensive_Mode, raise your Strength by !M!. NL guardianmod:Brace 10."
+    "DESCRIPTION": "While in guardianmod:Defensive_Mode, raise your Strength by !M!. NL At the end of your turn, guardianmod:Brace 5."
   },
   "Guardian:GatlingBeam": {
     "NAME": "Laser Turret",
