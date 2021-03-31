@@ -1,13 +1,13 @@
 
 BetaAutomaton.png
-size: 512,512
+size: 1024,1024
 format: RGBA8888
-filter: Linear,Linear
+filter: MipMap,MipMap
 repeat: none
-AutomatonApril/Body
+betaAutomaton/body
   rotate: false
   xy: 1, 1
-  size: 320, 466
-  orig: 320, 466
+  size: 712, 826
+  orig: 712, 826
   offset: 0, 0
   index: -1

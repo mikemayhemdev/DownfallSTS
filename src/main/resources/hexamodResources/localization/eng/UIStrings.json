@@ -6,7 +6,8 @@
   },
   "hexamod:SealSealReward": {
     "TEXT": [
-      "Add a Seal to your deck"
+      "Add a Seal to your deck",
+      "Pick a Card."
     ]
   }
 }

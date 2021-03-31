@@ -1,1 +1,76 @@
-{"skeleton":{"width":320,"height":466,"hash":" ","name":"Armature"},"bones":[{"name":"root"},{"y":225,"name":"Body","parent":"root"}],"slots":[{"name":"Body","bone":"Body","attachment":"AutomatonApril/Body"}],"skins":{"default":{"Body":{"AutomatonApril/Body":{"name":"AutomatonApril/Body","width":320,"height":466,"x":-15.5,"y":25.45}}}},"animations":{"idle":{"bones":{"Body":{"translate":[{"time":0},{"time":1,"y":-6},{"time":2}]}}}}}
+{
+  "skeleton": {
+    "width": 712,
+    "height": 826,
+    "hash": " ",
+    "name": "Armature"
+  },
+  "bones": [
+    {
+      "name": "root"
+    },
+    {
+      "y": 407,
+      "name": "body",
+      "parent": "root"
+    }
+  ],
+  "slots": [
+    {
+      "name": "body",
+      "bone": "body",
+      "attachment": "betaAutomaton/body"
+    }
+  ],
+  "skins": {
+    "default": {
+      "body": {
+        "betaAutomaton/body": {
+          "name": "betaAutomaton/body",
+          "width": 712,
+          "height": 826,
+          "x": 190.0,
+          "y": -350.0
+        }
+      }
+    }
+  },
+  "animations": {
+    "idle": {
+      "bones": {
+        "body": {
+          "translate": [
+            {
+              "time": 0
+            },
+            {
+              "time": 1,
+              "y": 4.63
+            },
+            {
+              "time": 2
+            }
+          ]
+        }
+      }
+    },
+    "Hit": {
+      "bones": {
+        "body": {
+          "translate": [
+            {
+              "time": 0
+            },
+            {
+              "time": 1,
+              "y": 4.63
+            },
+            {
+              "time": 2
+            }
+          ]
+        }
+      }
+    }
+  }
+}
