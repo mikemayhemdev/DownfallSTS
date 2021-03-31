@@ -10,7 +10,7 @@ public class BetaSlimeBoss extends AbstractSkin {
 
     public BetaSlimeBoss() {
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinSlime").TEXT[1];
-        this.DESCRIPTION = CardCrawlGame.languagePack.getCharacterString(SlimeboundCharacter.ID).TEXT[0];
+        this.DESCRIPTION = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinSlime").EXTRA_TEXT[1];
         this.portraitStatic_IMG = ImageMaster.loadImage("reskinContent/img/Slimebound/BetaSlimeBoss/portrait_beta_slimeboss.png");
 
         this.SHOULDER1 = "slimeboundResources/SlimeboundImages/char/shoulder.png";

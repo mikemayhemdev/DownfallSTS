@@ -9,8 +9,7 @@ public class BetaAutomaton extends AbstractSkin {
 
     public BetaAutomaton() {
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinBronze").TEXT[1];
-//        this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkin").TEXT[1];
-        this.DESCRIPTION = CardCrawlGame.languagePack.getCharacterString(AutomatonChar.ID).TEXT[0];
+        this.DESCRIPTION = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinBronze").EXTRA_TEXT[1];
         this.portraitStatic_IMG = ImageMaster.loadImage("bronzeResources/images/charSelect/charBG.png");
         this.SHOULDER1 = "bronzeResources/images/char/mainChar/shoulder.png";
         this.SHOULDER2 = "bronzeResources/images/char/mainChar/shoulderR.png";

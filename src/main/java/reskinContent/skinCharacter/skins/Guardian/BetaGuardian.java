@@ -10,7 +10,7 @@ public class BetaGuardian extends AbstractSkin {
 
     public BetaGuardian() {
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinGuardian").TEXT[1];
-        this.DESCRIPTION = CardCrawlGame.languagePack.getCharacterString(GuardianCharacter.ID).TEXT[0];
+        this.DESCRIPTION = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinGuardian").EXTRA_TEXT[1];
         this.portraitStatic_IMG = ImageMaster.loadImage(GuardianMod.getResourcePath("charSelect/portrait.png"));
 
         this.SHOULDER1 = "guardianResources/GuardianImages/char/shoulder.png";

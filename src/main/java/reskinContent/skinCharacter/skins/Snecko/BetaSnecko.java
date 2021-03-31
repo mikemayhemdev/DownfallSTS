@@ -10,7 +10,7 @@ public class BetaSnecko extends AbstractSkin {
 
     public BetaSnecko() {
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinSnecko").TEXT[1];
-        this.DESCRIPTION = CardCrawlGame.languagePack.getCharacterString(TheSnecko.ID).TEXT[0];
+        this.DESCRIPTION = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinSnecko").EXTRA_TEXT[1];
         this.portraitStatic_IMG = ImageMaster.loadImage("sneckomodResources/images/charSelect/portrait.png");
 
         this.SHOULDER1 = "sneckomodResources/images/char/shoulder.png";
