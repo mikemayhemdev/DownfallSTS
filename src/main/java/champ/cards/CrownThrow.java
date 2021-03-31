@@ -21,6 +21,7 @@ public class CrownThrow extends AbstractChampCard {
     public CrownThrow() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -27,6 +27,7 @@ public class ViciousMockery extends AbstractChampCard {
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
         tags.add(ChampMod.COMBODEFENSIVE);
+        postInit();
     }
 
     @Override

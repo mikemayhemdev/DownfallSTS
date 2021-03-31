@@ -9,12 +9,12 @@
   },
   "hexamod:Sear": {
     "NAME": "Sear",
-    "DESCRIPTION": "Apply !burny! hexamod:Soulburn."
+    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Apply !burny! hexamod:Soulburn."
   },
   "hexamod:Float": {
     "NAME": "Float",
-    "DESCRIPTION": "Ethereal. NL Draw a card. NL hexamod:Advance.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Draw a card. NL You may choose to NL hexamod:Retract or hexamod:Advance.",
+    "DESCRIPTION": "Draw a card. NL hexamod:Advance.",
+    "UPGRADE_DESCRIPTION": "Draw a card. NL You may choose to NL hexamod:Retract or hexamod:Advance.",
     "EXTENDED_DESCRIPTION": ["hexamod:Advance.","hexamod:Retract.", "Do nothing."]
   },
   "hexamod:AdvancingGuard": {
@@ -27,8 +27,8 @@
   },
   "hexamod:FastForward": {
     "NAME": "Fast Forward",
-    "DESCRIPTION": "Ethereal. NL hexamod:Force-Ignite the hexamod:Active Ghostflame. NL hexamod:Advance.",
-    "UPGRADE_DESCRIPTION": "hexamod:Force-Ignite the hexamod:Active Ghostflame. NL hexamod:Advance."
+    "DESCRIPTION": "Ethereal. NL hexamod:Ignite the current Ghostflame. NL hexamod:Advance.",
+    "UPGRADE_DESCRIPTION": "hexamod:Ignite the current Ghostflame. NL hexamod:Advance."
   },
   "hexamod:Rewind": {
     "NAME": "Rewind",
@@ -37,12 +37,12 @@
   },
   "hexamod:SkipABeat": {
     "NAME": "Skip a Beat",
-    "DESCRIPTION": "hexamod:Force-Ignite the next Ghostflame. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "hexamod:Force-Ignite the next Ghostflame."
+    "DESCRIPTION": "hexamod:Ignite the next Ghostflame. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "hexamod:Ignite the next Ghostflame."
   },
   "hexamod:CatchUp": {
     "NAME": "Catch Up",
-    "DESCRIPTION": "hexamod:Force-Ignite the previous Ghostflame."
+    "DESCRIPTION": "hexamod:Ignite the previous Ghostflame."
   },
   "hexamod:TimeWarp": {
     "NAME": "Time Warp",
@@ -59,7 +59,7 @@
   },
   "hexamod:UnlimitedPower": {
     "NAME": "Unlimited Power",
-    "DESCRIPTION": "hexamod:Force-Ignite all Ghostflames in order. NL Exhaust."
+    "DESCRIPTION": "hexamod:Ignite all Ghostflames in order. NL Exhaust."
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "Devil's Dance",
@@ -77,16 +77,8 @@
   },
   "hexamod:HauntingEcho": {
     "NAME": "Haunting Echo",
-    "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is hexamod:Ignited, hexamod:Force-Ignite it.",
+    "DESCRIPTION": "Deal !D! damage. NL Return a random Exhausted Afterlife card to your discard pile.",
     "EXTENDED_DESCRIPTION": ["Ethereal","Ethereal. NL "]
-  },
-  "hexamod:CrushingStance": {
-    "NAME": "Crush",
-    "DESCRIPTION": "Deal !D! damage twice. NL Replace the hexamod:Active Ghostflame with a hexamod:Crushing Ghostflame. NL Exhaust."
-  },
-  "hexamod:EmpoweringStance": {
-    "NAME": "Empower",
-    "DESCRIPTION": "Gain !B! Block and !M! Strength. NL Replace the hexamod:Active Ghostflame with a hexamod:Bolstering Ghostflame."
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Worthy Sacrifice",
@@ -102,11 +94,11 @@
   },
   "hexamod:SwordOfDarkness": {
     "NAME": "Sword of Night",
-    "DESCRIPTION": "If the hexamod:Active Ghostflame is not hexamod:Ignited, gain [E] . NL Deal !D! damage."
+    "DESCRIPTION": "If the current Ghostflame is not hexamod:Ignited, gain [E] . NL Deal !D! damage."
   },
   "hexamod:ShieldOfDarkness": {
     "NAME": "Shield of Night",
-    "DESCRIPTION": "If the hexamod:Active Ghostflame is not hexamod:Ignited, gain [E] . NL Gain !B! Block."
+    "DESCRIPTION": "If the current Ghostflame is not hexamod:Ignited, gain [E] . NL Gain !B! Block."
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "Bright Ritual",
@@ -114,7 +106,7 @@
   },
   "hexamod:StepThrough": {
     "NAME": "Step Through",
-    "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is hexamod:Ignited, hexamod:Advance. NL If not, hexamod:Ignite it."
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card for each hexamod:Ignited Ghostflame."
   },
   "hexamod:InspiringFlames": {
     "NAME": "Stoke the Fire",
@@ -130,15 +122,15 @@
   },
   "hexamod:GhostLash": {
     "NAME": "Ghost Lash",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL If your hand contains another Ethereal card, deal !D! damage."
+    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Deal !D! damage. NL If you Exhausted a card last turn, deal !D! damage."
   },
   "hexamod:GhostShield": {
     "NAME": "Ghost Shield",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL If your hand contains another Ethereal card, gain !B! Block."
+    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Gain !B! Block. NL If you Exhausted a card last turn, gain !B! Block."
   },
   "hexamod:Haunt": {
     "NAME": "Haunted Hand",
-    "DESCRIPTION": "Ethereal. NL Draw !M! cards. NL All cards in your hand become Ethereal. NL Exhaust."
+    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Draw !M! cards. NL All cards in your hand become Ethereal. NL Exhaust."
   },
   "hexamod:RecurringNightmare": {
     "NAME": "Nightmare Vision",
@@ -152,8 +144,7 @@
   },
   "hexamod:GiftsFromTheDead": {
     "NAME": "Gifts From Beyond",
-    "DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Whenever an Ethereal card is Exhausted, gain [E] next turn.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Whenever an Ethereal card is Exhausted, gain [E] and draw 1 card next turn.",
+    "DESCRIPTION": "At the start of your turn, return a random Exhausted Afterlife card to your discard pile.",
     "EXTENDED_DESCRIPTION": [
       "These spirits are too powerful to invoke directly."
     ]
@@ -172,7 +163,7 @@
   },
   "hexamod:ParanormalForm": {
     "NAME": "Poltergeist",
-    "DESCRIPTION": "Ethereal. NL Whenever you play an Ethereal card, deal !M! damage to a random enemy."
+    "DESCRIPTION": "Whenever you play an *Afterlife card, deal !M! damage to a random enemy."
   },
   "hexamod:UnleashSpirits": {
     "NAME": "Unleash Spirits",
@@ -190,17 +181,16 @@
   },
   "hexamod:ShadowStrike": {
     "NAME": "Shadow Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "Echo keyword goes here. NL Deal !D! damage. NL Return *Nightmare *Strike from your exhaust pile to your discard pile."
   },
   "hexamod:ShadowGuise": {
     "NAME": "Shadow Guise",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust."
+    "DESCRIPTION": "Echo keyword goes here. NL Gain !B! Block. NL Return *Nightmare *Guise from your exhaust pile to your discard pile."
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "Power from Beyond",
-    "DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Gain [E] and draw !M! card next turn.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Gain [E] and draw !M! cards next turn.",
-    "EXTENDED_DESCRIPTION": ["This power is too distant to directly channel."]
+    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Gain [E] and draw !M! card next turn.",
+    "UPGRADE_DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Gain [E] and draw !M! cards next turn."
   },
   "hexamod:BurningTouch": {
     "NAME": "Burning Touch",
@@ -255,7 +245,7 @@
   "hexamod:TurnItUp": {
     "NAME": "Turn It Up",
     "DESCRIPTION": "Gain 5 hexamod:Intensity. NL Lose it in X+1 turns. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 5 hexamod:Intensity. NL Lose it in X+2 turns. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Gain 5 hexamod:Intensity. NL Lose it in X+1 turns. NL Gain [E] . NL Exhaust."
   },
   "hexamod:HeatMetal": {
     "NAME": "Heat Metal",
@@ -268,7 +258,7 @@
   },
   "hexamod:VolcanoVisage": {
     "NAME": "Volcano Visage",
-    "DESCRIPTION": "Ethereal. NL At the start of your turn, apply !M! hexamod:Soulburn to ALL enemies."
+    "DESCRIPTION": "At the start of your turn, apply !M! hexamod:Soulburn to ALL enemies."
   },
   "hexamod:SuperheatedStrike": {
     "NAME": "Searing Strike",
@@ -276,8 +266,7 @@
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "Flames from Beyond",
-    "DESCRIPTION": "Unplayable. NL Ethereal, hexamod:Afterlife. NL Apply !burny! hexamod:Soulburn to ALL enemies.",
-    "EXTENDED_DESCRIPTION": ["It's too hot to touch!"]
+    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Apply !burny! hexamod:Soulburn to ALL enemies."
   },
   "hexamod:PhantomFireball": {
     "NAME": "Phantom Fireball",
@@ -285,12 +274,12 @@
   },
   "hexamod:SpectralSpark": {
     "NAME": "Spectral Spark",
-    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL If the hexamod:Active Ghostflame is hexamod:Ignited: hexamod:Extinguish it and return this card to your hand."
+    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL If the current Ghostflame is hexamod:Ignited: hexamod:Extinguish it and return this card to your hand."
   },
   "hexamod:GhostflameInferno": {
     "NAME": "Instant Inferno",
     "DESCRIPTION": "Retain. NL hexamod:Ignite the Inferno Ghostflame. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL hexamod:Ignite the hexamod:Active Ghostflame. NL hexamod:Ignite the Inferno Ghostflame. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Retain. NL hexamod:Ignite the current Ghostflame. NL hexamod:Ignite the Inferno Ghostflame. NL Exhaust."
   },
   "hexamod:ChargedBarrage": {
     "NAME": "Charged Barrage",
@@ -302,16 +291,16 @@
   },
   "hexamod:ApocalypseNow": {
     "NAME": "Apocalypse Now",
-    "DESCRIPTION": "Ethereal. NL Gain [E] [E] . NL The Inferno Ghostflame becomes hexamod:Active. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] [E] [E] . NL The Inferno Ghostflame becomes hexamod:Active. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Gain [E] [E] . NL Move to the Inferno Ghostflame. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] [E] [E] . NL Move to the Inferno Ghostflame. NL Exhaust."
   },
   "hexamod:DynamicBlow": {
     "NAME": "Dynamic Blow",
-    "DESCRIPTION": "Ethereal. NL If the hexamod:Active Ghostflame is hexamod:Ignited, apply !burny! hexamod:Soulburn. If not, deal !D! damage."
+    "DESCRIPTION": "Ethereal. NL If the current Ghostflame is hexamod:Ignited, apply !burny! hexamod:Soulburn. If not, deal !D! damage."
   },
   "hexamod:Again": {
     "NAME": "Again!",
-    "DESCRIPTION": "hexamod:Force-Ignite the hexamod:Active Ghostflame. NL Do not hexamod:Advance at the end of this turn."
+    "DESCRIPTION": "hexamod:Ignite the current Ghostflame. NL Do not hexamod:Advance at the end of this turn."
   },
   "hexamod:RetreatToShadows": {
     "NAME": "Incorporeal",
@@ -324,27 +313,33 @@
   },
   "hexamod:FirstSeal": {
     "NAME": "First Seal",
-    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, heal !M! HP."
+    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, heal !M! HP.",
+    "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, heal !M! HP."
   },
   "hexamod:SecondSeal": {
     "NAME": "Second Seal",
-    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain !M! additional Gold."
+    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain !M! additional Gold.",
+    "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, gain !M! additional Gold."
   },
   "hexamod:ThirdSeal": {
     "NAME": "Third Seal",
-    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional card reward."
+    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional card reward.",
+    "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, gain an additional card reward."
   },
   "hexamod:FourthSeal": {
     "NAME": "Fourth Seal",
-    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional Potion reward."
+    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional Potion reward.",
+    "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, gain an additional Potion reward."
   },
   "hexamod:FifthSeal": {
     "NAME": "Sixth Seal",
-    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional non-Sixth Seal card reward."
+    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional non-Sixth Seal card reward.",
+    "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, gain an additional non-Sixth Seal card reward."
   },
   "hexamod:SixthSeal": {
     "NAME": "Fifth Seal",
-    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, Upgrade a random card in your deck."
+    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, Upgrade a random card in your deck.",
+    "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, Upgrade a random card in your deck."
   },
   "hexamod:SoulSteal": {
     "NAME": "Living Bomb",
@@ -357,16 +352,20 @@
   },
   "hexamod:ForkedFlame": {
     "NAME": "Forked Flame",
-    "DESCRIPTION": "Deal !D! damage. NL hexamod:Force-Ignite the previous, then the next Ghostflames.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL hexamod:Force-Ignite the previous, then the *Active, then the next Ghostflames."
+    "DESCRIPTION": "Deal !D! damage. NL hexamod:Ignite the previous, then the next Ghostflames.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL hexamod:Ignite the previous, then the current, then the next Ghostflames."
   },
   "hexamod:FlameSwitch": {
     "NAME": "Bad Omen",
-    "DESCRIPTION": "Ethereal. NL Replace the hexamod:Active Ghostflame with a hexamod:Crushing or hexamod:Bolstering one. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Replace the hexamod:Active Ghostflame with a hexamod:Crushing or hexamod:Bolstering one. NL Exhaust.",
+    "DESCRIPTION": "Ethereal. NL Replace the current Ghostflame with a hexamod:Crushing or hexamod:Bolstering one. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Replace the current Ghostflame with a hexamod:Crushing or hexamod:Bolstering one. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "Replace the hexamod:Active Ghostflame with a hexamod:Bolstering Ghostflame",
-      "Replace the hexamod:Active Ghostflame with a hexamod:Crushing Ghostflame"
+      "Replace the current Ghostflame with a hexamod:Bolstering Ghostflame",
+      "Replace the current Ghostflame with a hexamod:Crushing Ghostflame"
     ]
+  },
+  "hexamod:BurningQuestion": {
+    "NAME": "Burning Question",
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Increase this card's damage by !M!. NL When this card is Exhausted, deal !D! damage to ALL enemies."
   }
 }

@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
+import theHexaghost.patches.ExhaustCardTickPatch;
 
 public class GhostLash extends AbstractHexaCard {
 
@@ -20,24 +22,22 @@ public class GhostLash extends AbstractHexaCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         isEthereal = true;
+        tags.add(HexaMod.AFTERLIFE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
-        if (hasEthereal())
+        if (ExhaustCardTickPatch.exhaustedLastTurn)
             addToTop(new DamageAction(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY));
     }
 
-    private boolean hasEthereal() {
-        for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c.isEthereal && c != this)
-                return true;
-        }
-        return false;
+    @Override
+    public void triggerOnExhaust() {
+        use(AbstractDungeon.player, AbstractDungeon.getRandomMonster());
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = hasEthereal() ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
+        this.glowColor = ExhaustCardTickPatch.exhaustedLastTurn ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
     }// 68
 
     public void upgrade() {

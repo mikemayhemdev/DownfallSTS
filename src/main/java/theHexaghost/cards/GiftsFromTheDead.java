@@ -13,14 +13,12 @@ public class GiftsFromTheDead extends AbstractHexaCard {
     //stupid intellij stuff POWER, SELF, RARE
 
     public GiftsFromTheDead() {
-        super(ID, -2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        isEthereal = true;
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.magicNumber = baseMagicNumber = 1;
-        tags.add(HexaMod.AFTERLIFE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
+        applyToSelf(new GiftsFromTheDeadPower(1));
     }
 
     @Override
@@ -29,19 +27,11 @@ public class GiftsFromTheDead extends AbstractHexaCard {
         return false;
     }
 
-    @Override
-    public void triggerOnExhaust() {
-        applyToSelf(new GiftsFromTheDeadPowerPlus(1));
-        if (upgraded)
-            applyToSelf(new GiftsFromTheDeadPower(1));
-    }
-
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
 
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBaseCost(1);
         }
     }
 }

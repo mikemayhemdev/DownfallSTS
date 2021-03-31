@@ -43,7 +43,6 @@ public class IronFortressPower extends AbstractPower implements CloneablePowerIn
     public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
         if (!newStance.ID.equals(NeutralStance.STANCE_ID) && !(oldStance.ID.equals(newStance.ID))) {
             flash();
-            addToBot(new GainBlockAction(owner, amount));
             addToBot(new ApplyPowerAction(owner, owner, new CounterPower(amount), amount));
 
         }

@@ -16,13 +16,18 @@ public class StanceDanceEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEf
     private boolean useJump;
     private boolean usePetals;
     private boolean useSpotlight;
+    private boolean doubleSpins;
 
-    public StanceDanceEffect(AbstractCreature c, boolean jump, boolean petals, boolean spotlight) {
+    public StanceDanceEffect(AbstractCreature c, boolean jump, boolean petals, boolean spotlight, boolean doubleSpins) {
         this.duration = .65F;
         owner = c;
         useJump = jump;
         useSpotlight = spotlight;
         usePetals = petals;
+    }
+
+    public StanceDanceEffect(AbstractCreature c, boolean jump, boolean petals, boolean spotlight){
+        this(c, jump, petals, spotlight, false);
     }
 
     public void update() {
@@ -45,7 +50,12 @@ public class StanceDanceEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEf
 
         if (this.timerFlip < 0F){
             owner.flipHorizontal = !owner.flipHorizontal;
-            this.timerFlip += 0.2F;
+            if (doubleSpins) {
+                this.timerFlip += 0.1F;
+            } else {
+
+                this.timerFlip += 0.2F;
+            }
         }
 
         if (this.duration < 0.0F) {

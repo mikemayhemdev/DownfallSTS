@@ -32,6 +32,7 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         //if (upgraded) techique();
         atb(new OctoChoiceAction(m, this));
+        postInit();
 
     }
 

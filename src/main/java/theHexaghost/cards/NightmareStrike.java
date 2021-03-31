@@ -17,7 +17,7 @@ public class NightmareStrike extends AbstractHexaCard {
     private static final int UPG_DAMAGE = 4;
 
     public NightmareStrike() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         isEthereal = true;
         cardsToPreview = new ShadowStrike();

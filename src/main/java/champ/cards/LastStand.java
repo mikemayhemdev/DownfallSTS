@@ -34,6 +34,7 @@ public class LastStand extends AbstractChampCard {
         atb(new RemoveDebuffsAction(p));
         applyToSelf(new StrengthPower(p, 6));
         finisher();
+        postInit();
     }
 
     @Override

@@ -2,6 +2,8 @@ package champ.relics;
 
 import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -19,47 +21,11 @@ public class BerserkersGuideToSlaughter extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
     }
 
-    private boolean isActive = false;
-
     @Override
-    public void atBattleStart() {
-        counter = 10;
-    }
-
-    @Override
-    public int onLoseHpLast(int damageAmount) {
-        System.out.println("Yes, this is active. Status: " + isActive);
-        if (!isActive){
-            return damageAmount;
-        }
-        else if (counter > 0){
-            this.flash();
-            if (counter > damageAmount){
-                counter = counter - damageAmount;
-                return 0;
-            } else {
-                int temp = counter;
-                counter = 0;
-                return damageAmount - temp;
-            }
-        }
-        return damageAmount;
-    }
-
-    @Override
-    public void onPlayerEndTurn() {
-        System.out.println("Zerker status set to FALSE");
-        this.isActive = false;
-    }
-
     public void atTurnStart() {
-        System.out.println("Zerker status set to TRUE");
-        this.isActive = true;
-    }
+        super.atTurnStart();
 
-    @Override
-    public void onVictory() {
-        counter = -1;
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, 3), 3));
     }
 
     @Override

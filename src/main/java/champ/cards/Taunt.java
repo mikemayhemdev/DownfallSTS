@@ -24,6 +24,7 @@ public class Taunt extends AbstractChampCard implements OctopusCard {
         tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);
         this.magicNumber = this.baseMagicNumber = 1;
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

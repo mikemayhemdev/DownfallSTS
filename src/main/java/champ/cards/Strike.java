@@ -18,6 +18,7 @@ public class Strike extends AbstractChampCard {
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
         tags.add(CardTags.STARTER_STRIKE);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

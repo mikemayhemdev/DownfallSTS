@@ -24,6 +24,7 @@ public class Circumvent extends AbstractChampCard {
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
         baseMagicNumber = magicNumber = 4;
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

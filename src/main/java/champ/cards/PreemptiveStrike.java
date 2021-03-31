@@ -18,6 +18,7 @@ public class PreemptiveStrike extends AbstractChampCard {
         baseDamage = 0;
         isMultiDamage = true;
         tags.add(CardTags.STRIKE);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -48,16 +49,6 @@ public class PreemptiveStrike extends AbstractChampCard {
         this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[0];
         initializeDescription();
     }
-
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (!(AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID))) {
-            cantUseMessage = EXTENDED_DESCRIPTION[1];
-            return false;
-        }
-        return super.canUse(p, m);
-    }
-
 
     public void onMoveToDiscard() {
         this.rawDescription = cardStrings.DESCRIPTION;

@@ -92,7 +92,7 @@
   "hexamod:GainStrengthThatGoesAwayPower": {
     "NAME": "Here and Now",
     "DESCRIPTIONS": [
-      "If you start and end your turn with the same Ghostflame active, gain ",
+      "If you start and end your turn on the same Ghostflame, gain ",
       " #yStrength."
     ]
   },
@@ -145,7 +145,7 @@
   "hexamod:ParanormalFormPower": {
     "NAME": "Poltergeist",
     "DESCRIPTIONS": [
-      "Whenever you play an #yEthereal card, deal #b",
+      "Whenever you play an #yAfterlife card, deal #b",
       " damage to a random enemy."
     ]
   },

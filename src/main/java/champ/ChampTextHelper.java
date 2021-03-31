@@ -24,17 +24,27 @@ public class ChampTextHelper {
                     prefixTech = prefixTech + DefensiveStance.amount();
                     prefixTech = prefixTech + ChampChar.characterStrings.TEXT[53];
                 } else if (AbstractDungeon.player.stance instanceof BerserkerStance) {
-                    prefixTech = ChampChar.characterStrings.TEXT[32];
+                    prefixTech = ChampChar.characterStrings.TEXT[31];
                     prefixTech = prefixTech + BerserkerStance.amount();
-                    prefixTech = prefixTech + ChampChar.characterStrings.TEXT[52];
+                    prefixTech = prefixTech + ChampChar.characterStrings.TEXT[54];
                 } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
                     prefixTech = ChampChar.characterStrings.TEXT[33];
                 }
             }
             if (c.upgraded && c.UPGRADE_DESCRIPTION != null) {
-                c.rawDescription = prefixTech + c.UPGRADE_DESCRIPTION;
+                if (c.techniqueLast) {
+                    c.rawDescription = c.UPGRADE_DESCRIPTION + " NL " + prefixTech;
+                    c.rawDescription.substring(0,c.rawDescription.length()-4); // trim the trailing NL
+                } else {
+                    c.rawDescription = prefixTech + c.UPGRADE_DESCRIPTION;
+                }
             } else {
-                c.rawDescription = prefixTech + c.DESCRIPTION;
+                if (c.techniqueLast) {
+                    c.rawDescription = c.DESCRIPTION + " NL " + prefixTech;
+                    c.rawDescription.substring(0,c.rawDescription.length()-4); // trim the trailing NL
+                } else {
+                    c.rawDescription = prefixTech + c.DESCRIPTION;
+                }
             }
         }
         if (c.hasTag(FINISHER)) {

@@ -27,8 +27,8 @@
   },
   "hexamod:FastForward": {
     "NAME": "Fast Forward",
-    "DESCRIPTION": "Ethereal. NL hexamod:Force-Ignite the hexamod:Active Ghostflame. NL hexamod:Advance.",
-    "UPGRADE_DESCRIPTION": "hexamod:Force-Ignite the hexamod:Active Ghostflame. NL hexamod:Advance."
+    "DESCRIPTION": "Ethereal. NL hexamod:Ignite the hexamod:Active Ghostflame. NL hexamod:Advance.",
+    "UPGRADE_DESCRIPTION": "hexamod:Ignite the hexamod:Active Ghostflame. NL hexamod:Advance."
   },
   "hexamod:Rewind": {
     "NAME": "Rewind",
@@ -37,12 +37,12 @@
   },
   "hexamod:SkipABeat": {
     "NAME": "Skip a Beat",
-    "DESCRIPTION": "hexamod:Advance. NL hexamod:Force-Ignite the next Ghostflame. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "hexamod:Advance. NL hexamod:Force-Ignite the next Ghostflame."
+    "DESCRIPTION": "hexamod:Advance. NL hexamod:Ignite the next Ghostflame. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "hexamod:Advance. NL hexamod:Ignite the next Ghostflame."
   },
   "hexamod:CatchUp": {
     "NAME": "Catch Up",
-    "DESCRIPTION": "hexamod:Force-Ignite the previous Ghostflame."
+    "DESCRIPTION": "hexamod:Ignite the previous Ghostflame."
   },
   "hexamod:TimeWarp": {
     "NAME": "Time Warp",
@@ -59,7 +59,7 @@
   },
   "hexamod:UnlimitedPower": {
     "NAME": "Unlimited Power",
-    "DESCRIPTION": "hexamod:Force-Ignite all Ghostflames in order. NL Exhaust."
+    "DESCRIPTION": "hexamod:Ignite all Ghostflames in order. NL Exhaust."
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "Devil's Dance",
@@ -78,7 +78,7 @@
   },
   "hexamod:HauntingEcho": {
     "NAME": "Haunting Echo",
-    "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is hexamod:Ignited, hexamod:Force-Ignite it.",
+    "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is hexamod:Ignited, hexamod:Ignite it.",
     "EXTENDED_DESCRIPTION": ["Ethereal","Ethereal. NL "]
   },
   "hexamod:CrushingStance": {
@@ -316,7 +316,7 @@
   },
   "hexamod:Again": {
     "NAME": "Again!",
-    "DESCRIPTION": "hexamod:Force-Ignite the hexamod:Active Ghostflame. NL Do not hexamod:Advance at the end of this turn."
+    "DESCRIPTION": "hexamod:Ignite the hexamod:Active Ghostflame. NL Do not hexamod:Advance at the end of this turn."
   },
   "hexamod:RetreatToShadows": {
     "NAME": "Incorporeal",
