@@ -150,6 +150,10 @@ public class reskinContent implements
                         characters[i].skins[k].portraitAnimationType = 0;
                 }
 
+                if(characters[i].reskinCount > characters[i].skins.length -1){
+                    characters[i].reskinCount = 0;
+                }
+
             }
 
 

@@ -10,7 +10,7 @@ public class BetaHexaghost extends AbstractSkin {
 
     public BetaHexaghost() {
         this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinHexaghost").TEXT[1];
-        this.DESCRIPTION = CardCrawlGame.languagePack.getCharacterString(TheHexaghost.ID).TEXT[0];
+        this.DESCRIPTION = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinHexaghost").EXTRA_TEXT[1];
         this.portraitStatic_IMG = ImageMaster.loadImage(getAssetPath("portrait_beta_hexaghost.png"));
 
         this.SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder.png";;

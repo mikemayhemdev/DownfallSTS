@@ -27,7 +27,7 @@ public class OrbPatches
     public static class SetSlotPatch{
         @SpirePrefixPatch
         public  static SpireReturn<Void> Prefix(AbstractOrb abstractOrb_instance,int slotNum,int maxOrbs){
-            if(AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN && !CharacterSelectScreenPatches.characters[0].isOriginal()){
+            if(AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN && CharacterSelectScreenPatches.characters[0].reskinCount == 1){
                      float dist = 230.0F * Settings.scale + maxOrbs * 10.0F * Settings.scale;
                      float angle = 100.0F + maxOrbs * 12.0F;
                      float offsetAngle = angle / 2.0F;
