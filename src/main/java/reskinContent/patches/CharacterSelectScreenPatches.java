@@ -143,6 +143,7 @@ public class CharacterSelectScreenPatches {
                             }
 //   动画类型箭头渲染
 //   皮肤选择箭头渲染
+                            /*
                             if (c.reskinUnlock) {
                                 if (reskinRight.hovered || Settings.isControllerMode) {
                                     sb.setColor(Color.WHITE.cpy());
@@ -158,7 +159,9 @@ public class CharacterSelectScreenPatches {
                                 sb.draw(ImageMaster.CF_LEFT_ARROW, Settings.WIDTH / 2.0F - reskin_W / 2.0F - reskinX_center - 36.0f * Settings.scale + allTextInfoX, 800.0F * Settings.scale - 36.0f * Settings.scale, 0.0f, 0.0f, 48.0f, 48.0f, Settings.scale * 1.5f, Settings.scale * 1.5f, 0.0F, 0, 0, 48, 48, false, false);
                             }
 //   皮肤选择箭头渲染
+                             */
 
+                            /*
                             FontHelper.cardTitleFont.getData().setScale(1.0F);
                             FontHelper.losePowerFont.getData().setScale(0.8F);
 
@@ -171,6 +174,8 @@ public class CharacterSelectScreenPatches {
                                 FontHelper.renderFontCentered(sb, FontHelper.losePowerFont, TEXT[0], Settings.WIDTH / 2.0F - reskinX_center + allTextInfoX, 850.0F * Settings.scale, Settings.GOLD_COLOR.cpy());
                                 FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, c.skins[c.reskinCount].NAME, Settings.WIDTH / 2.0F - reskinX_center + allTextInfoX, 800.0F * Settings.scale, Settings.GOLD_COLOR.cpy());
                             }
+
+                             */
                         }
                     }
                 }
