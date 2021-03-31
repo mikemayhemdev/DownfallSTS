@@ -21,5 +21,3 @@ public class BetaSlimeBoss extends AbstractSkin {
         this.renderscale = 1.0f;
     }
 }
-
-
