@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeAutoAttack;
@@ -41,7 +42,7 @@ public class CultistSlime
         this.sticksLeftVFX = new SticksParticle(this);
         this.sticksRightVFX = new SticksParticleRight(this);
 
-        if(!reskinContent.slimeReskinAnimation){
+        if(CharacterSelectScreenPatches.characters[1].isOriginal()){
             AbstractDungeon.effectList.add(this.sticksLeftVFX);
             AbstractDungeon.effectList.add(this.sticksRightVFX);
         }
@@ -68,7 +69,7 @@ public class CultistSlime
     }
 
     public void cleanUpVFX() {
-        if(!reskinContent.slimeReskinAnimation){
+        if(CharacterSelectScreenPatches.characters[1].isOriginal()){
         this.sticksLeftVFX.finish();
         this.sticksRightVFX.finish();
         }

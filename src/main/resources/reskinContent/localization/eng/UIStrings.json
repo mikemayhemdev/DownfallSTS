@@ -2,13 +2,7 @@
   "reskinContent:ReSkin": {
     "TEXT": [
       "Skin",
-      "Original",
-      "Guardian Chan",
-      "Slaifu",
-      "Hexago",
-      "SSSSnecko",
-      "Champ Sister",
-      "Automaton"
+      "Original"
     ]
   },
   "reskinContent:PortraitAnimation": {
@@ -25,12 +19,73 @@
   },
   "reskinContent:BetaArtUnlockEffect": {
     "TEXT": [
-      "Guardian Beta Card Art Unlocked!",
-      "Slime Boss Beta Card Art Unlocked!",
-      "Hexaghost Beta Card Art Unlocked!",
-      "Snecko Beta Card Art Unlocked!",
-      "Champ Beta Card Art Unlocked!",
-      "Automaton Beta Card Art Unlocked!"
+      "Guardian Alterative Art Unlocked!",
+      "Slime Boss Alterative Art Unlocked!",
+      "Hexaghost Alterative Art Unlocked!",
+      "Snecko Alterative Art Unlocked!",
+      "Champ Alterative Art Unlocked!",
+      "Automaton Alterative Art Unlocked!"
+    ]
+  },
+
+  "reskinContent:ReSkinGuardian": {
+    "TEXT": [
+      "Guardian Chan",
+      ""
+    ],
+    "EXTRA_TEXT": [
+      "One Mass production of anthropomorphic Ancient Artifacts. NL Reprogrammed for protect except entrance to the city",
+      ""
+    ]
+  },
+  "reskinContent:ReSkinSlime": {
+    "TEXT": [
+      "Slaifu",
+      "Beta Slime Boss"
+    ],
+    "EXTRA_TEXT": [
+      "It's different from others.  NL It will continue its gourmet journey after swallowing many things.",
+      ""
+    ]
+  },
+  "reskinContent:ReSkinHexaghost": {
+    "TEXT": [
+      "Hexago",
+      "Hexaspook"
+    ],
+    "EXTRA_TEXT": [
+      "There are different individuals in the container full of grievances. NL Does l materialization make power stronger?",
+      ""
+    ]
+  },
+  "reskinContent:ReSkinSnecko": {
+    "TEXT": [
+      "SSSSnecko",
+      "Sneckdor"
+    ],
+    "EXTRA_TEXT": [
+      "Its confusing eyes will cause cognitive deviation. NL Surveys show that confused creatures see a completely different world.",
+      ""
+    ]
+  },
+  "reskinContent:ReSkinChamp": {
+    "TEXT": [
+      "Chan-p",
+      "Beta Champ"
+    ],
+    "EXTRA_TEXT": [
+      "She looks funny waving a huge sword that doesn't match her figure. NL In fact, it has great power that no one else can imagine.",
+      ""
+    ]
+  },
+  "reskinContent:ReSkinBronze": {
+    "TEXT": [
+      "Automaton",
+      "Beta Automaton"
+    ],
+    "EXTRA_TEXT": [
+      "She looks funny waving a huge sword that doesn't match her figure. NL In fact, it has great power that no one else can imagine.",
+      ""
     ]
   }
 }

@@ -6,7 +6,8 @@
   },
   "hexamod:SealSealReward": {
     "TEXT": [
-      "덱에 봉인 하나를 추가"
+      "덱에 봉인 하나를 추가",
+      "Pick a Card."
     ]
   }
 }

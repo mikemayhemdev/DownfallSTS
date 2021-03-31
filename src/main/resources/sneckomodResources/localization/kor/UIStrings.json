@@ -17,7 +17,8 @@
   },
   "sneckomod:UpgradedUnknownReward": {
     "TEXT": [
-      "덱에 수수께끼+ 카드 한 장 추가합니다"
+      "덱에 수수께끼+ 카드 한 장 추가합니다",
+      "Pick a Card."
     ]
   },
   "sneckomod:FreeRetainMod": {
