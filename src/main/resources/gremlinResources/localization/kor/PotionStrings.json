@@ -1,0 +1,29 @@
+{
+  "gremlin:GremlinPotion": {
+    "NAME": "Eau de Grem",
+    "DESCRIPTIONS": [
+      "Use all #b5 Gremlin Abilities #b",
+      " times."
+    ]
+  },
+  "gremlin:NecromancyPotion": {
+    "NAME": "Gremlin In A Jar",
+    "DESCRIPTIONS": [
+      "Resurrect a random Gremlin at #b",
+      "% of your Max HP."
+    ]
+  },
+  "gremlin:SwapPotion": {
+    "NAME": "Bottled Dupe",
+    "DESCRIPTIONS": [
+      "#ySwap to a random Gremlin."
+    ]
+  },
+  "gremlin:WizPotion": {
+    "NAME": "Pizazz Potion",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yWiz."
+    ]
+  }
+}
