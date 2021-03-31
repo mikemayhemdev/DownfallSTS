@@ -56,7 +56,7 @@
     ]
   },
   "champ:FightingForDummies": {
-    "NAME": "格斗假人",
+    "NAME": "格斗读本",
     "FLAVOR": "第一步，打败敌人",
     "DESCRIPTIONS": [
       "你的回合结束时没有处于 #y姿态 ，获得 #b6 点 #y格挡 。"

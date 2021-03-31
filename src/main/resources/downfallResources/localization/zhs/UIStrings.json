@@ -54,7 +54,8 @@
       "崩坠模式中使用标准模式的地图逻辑-即篝火在boss战前",
 	  "解锁所有崩坠角色的卡牌和遗物（需要重启游戏）",
       "隐藏第一勇士的姿态提示 - 给第一勇士老手",
-      "禁用音乐替换（需要重启游戏）"
+      "禁用音乐替换（需要重启游戏）",
+      "解锁所有崩坠角色皮肤"
     ]
   },
   "downfall:EnergyPanelTip": {
@@ -115,13 +116,15 @@
 },
   "downfall:BossCardReward": {
     "TEXT": [
-      "将一张首领牌加入牌组"
+      "将一张首领牌加入牌组",
+      "选择一张牌"
     ]
   },
     "downfall:ColorfulCardReward": {
     "TEXT": [
       "将一张 ",
-      " 牌加入牌组"
+      " 牌加入牌组",
+      "选择一张牌"
     ]
   },
   "downfall:RunHistoryMonsterNames": {

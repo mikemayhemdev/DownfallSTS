@@ -24,7 +24,7 @@ public class DecaBeamReward extends CustomReward {
     @Override
     public boolean claimReward() {
         if (AbstractDungeon.screen == AbstractDungeon.CurrentScreen.COMBAT_REWARD) {
-            AbstractDungeon.cardRewardScreen.open(this.cards, this, "Pick a Card.");
+            AbstractDungeon.cardRewardScreen.open(this.cards, this, TEXT[2]);
             AbstractDungeon.previousScreen = AbstractDungeon.CurrentScreen.COMBAT_REWARD;
         }
         return false;

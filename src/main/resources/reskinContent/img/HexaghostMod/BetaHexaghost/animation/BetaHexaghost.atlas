@@ -1,0 +1,13 @@
+
+BetaHexaghost.png
+size: 201,315
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hexaghost/hexaghost
+  rotate: false
+  xy: 1, 1
+  size: 198, 312
+  orig: 198, 312
+  offset: 0, 0
+  index: -1

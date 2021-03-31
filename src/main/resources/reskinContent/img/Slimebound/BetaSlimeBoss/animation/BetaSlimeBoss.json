@@ -1,0 +1,75 @@
+{
+  "skeleton": {
+    "width": 1239,
+    "height": 2083,
+    "hash": " ",
+    "name": "Armature"
+  },
+  "bones": [
+    {
+      "name": "root"
+    },
+    {
+      "y": 57.1936,
+      "scaleX": 0.5,
+      "scaleY": 0.5,
+      "name": "main",
+      "parent": "root"
+    }
+  ],
+  "slots": [
+    {
+      "name": "shadow",
+      "bone": "main",
+      "color": "FFFFFF7F",
+      "attachment": "slime_boss/shadow"
+    },
+    {
+      "name": "slime_boss",
+      "bone": "main",
+      "attachment": "slime_boss/slime_boss"
+    }
+  ],
+  "skins": {
+    "default": {
+      "slime_boss": {
+        "slime_boss/slime_boss": {
+          "name": "slime_boss/slime_boss",
+          "width": 1239,
+          "height": 2083,
+          "x": -335.7,
+          "y": 942.71
+        }
+      },
+      "shadow": {
+        "slime_boss/shadow": {
+          "name": "slime_boss/shadow",
+          "width": 756,
+          "height": 282,
+          "x": -17.2,
+          "y": 24.21
+        }
+      }
+    }
+  },
+  "animations": {
+    "idle": {
+      "bones": {
+        "main": {
+          "translate": [
+            {
+              "time": 0
+            },
+            {
+              "time": 1,
+              "y": -1
+            },
+            {
+              "time": 2
+            }
+          ]
+        }
+      }
+    }
+  }
+}

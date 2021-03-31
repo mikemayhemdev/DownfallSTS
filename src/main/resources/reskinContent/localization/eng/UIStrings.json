@@ -2,13 +2,7 @@
   "reskinContent:ReSkin": {
     "TEXT": [
       "Skin",
-      "Original",
-      "Guardian Chan",
-      "Slaifu",
-      "Hexago",
-      "SSSSnecko",
-      "Champ Sister",
-      "Automaton"
+      "Original"
     ]
   },
   "reskinContent:PortraitAnimation": {
@@ -25,12 +19,73 @@
   },
   "reskinContent:BetaArtUnlockEffect": {
     "TEXT": [
-      "Guardian Beta Card Art Unlocked!",
-      "Slime Boss Beta Card Art Unlocked!",
-      "Hexaghost Beta Card Art Unlocked!",
-      "Snecko Beta Card Art Unlocked!",
-      "Champ Beta Card Art Unlocked!",
-      "Automaton Beta Card Art Unlocked!"
+      "Guardian Alternative Art Unlocked!",
+      "Slime Boss Alternative Art Unlocked!",
+      "Hexaghost Alternative Art Unlocked!",
+      "Snecko Alternative Art Unlocked!",
+      "Champ Alternative Art Unlocked!",
+      "Automaton Alternative Art Unlocked!"
+    ]
+  },
+
+  "reskinContent:ReSkinGuardian": {
+    "TEXT": [
+      "Guardian Chan",
+      "Concept Art"
+    ],
+    "EXTRA_TEXT": [
+      "One Mass production of anthropomorphic Ancient Artifacts. NL Reprogrammed for protect except entrance to the city",
+      "One of the Guardian's earlier drafts. Looks like it wants to prove itself!"
+    ]
+  },
+  "reskinContent:ReSkinSlime": {
+    "TEXT": [
+      "Slaifu",
+      "Slime Boss"
+    ],
+    "EXTRA_TEXT": [
+      "It's different from others. NL It will continue its gourmet journey after swallowing many things.",
+      "Is this... the Slime Boss? It seems awfully friendly. NL Well, its hat is surely the largest in the Spire, so it must be in charge..."
+    ]
+  },
+  "reskinContent:ReSkinHexaghost": {
+    "TEXT": [
+      "Hexago",
+      "Hexaspook"
+    ],
+    "EXTRA_TEXT": [
+      "There are different individuals in the container full of grievances. NL Does l materialization make power stronger?",
+      ""
+    ]
+  },
+  "reskinContent:ReSkinSnecko": {
+    "TEXT": [
+      "SSSSnecko",
+      "Sneckdor"
+    ],
+    "EXTRA_TEXT": [
+      "Its confusing eyes will cause cognitive deviation. NL Surveys show that confused creatures see a completely different world.",
+      ""
+    ]
+  },
+  "reskinContent:ReSkinChamp": {
+    "TEXT": [
+      "Chan-p",
+      "Champ"
+    ],
+    "EXTRA_TEXT": [
+      "She looks funny waving a huge sword that doesn't match her figure. NL In fact, it has great power that no one else can imagine.",
+      ""
+    ]
+  },
+  "reskinContent:ReSkinBronze": {
+    "TEXT": [
+      "Automaton",
+      "\"Automaton\""
+    ],
+    "EXTRA_TEXT": [
+      "",
+      "Yep! Tip to toe, that's the Automaton, alright! NL I've never seen anything that looks more like the Automaton!"
     ]
   }
 }

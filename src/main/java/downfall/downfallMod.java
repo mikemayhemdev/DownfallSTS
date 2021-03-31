@@ -138,6 +138,7 @@ import java.util.List;
 import java.util.Properties;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
+import static reskinContent.reskinContent.unlockAllReskin;
 
 @SpireInitializer
 public class downfallMod implements
@@ -617,6 +618,13 @@ public class downfallMod implements
             saveData();
         });
 
+        ModLabeledToggleButton unlockAllSkinBtn = new ModLabeledToggleButton(configStrings.TEXT[10],
+                350.0f, 200, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                unlockAllReskin, settingsPanel, (label) -> {
+        }, (button) -> {
+            unlockAllReskin = button.enabled;
+            unlockAllReskin();
+        });
 
         settingsPanel.addUIElement(contentSharingBtnCurses);
         settingsPanel.addUIElement(contentSharingBtnEvents);
@@ -628,6 +636,7 @@ public class downfallMod implements
         settingsPanel.addUIElement(champProConfig);
         settingsPanel.addUIElement(unlockAllBtn);
         settingsPanel.addUIElement(noMusicBtn);
+        settingsPanel.addUIElement(unlockAllSkinBtn);
 
         BaseMod.registerModBadge(badgeTexture, "downfall", "Downfall Team", "A very evil Expansion.", settingsPanel);
 
@@ -1559,7 +1568,7 @@ public class downfallMod implements
         BaseMod.addUnlockBundle(currentBundle, player, index);
 
 
-        if (downfallMod.unlockEverything || UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index + 1) {
+        if (downfallMod.unlockEverything || UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index) {
 
             SlimeboundMod.logger.info("Relic trigger: " + relic1 + " " + UnlockTracker.lockedRelics.contains(relic1) + " " + UnlockTracker.isRelicLocked(relic1) + " " + UnlockTracker.isRelicSeen(relic1));
             SlimeboundMod.logger.info("Relic trigger: " + relic2 + " " + UnlockTracker.lockedRelics.contains(relic2) + " " + UnlockTracker.isRelicLocked(relic2) + " " + UnlockTracker.isRelicSeen(relic3));
