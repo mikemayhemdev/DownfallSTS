@@ -29,7 +29,8 @@
   },
   "reskinContent:ReSkinGuardian": {
     "TEXT": [
-      "蹲酱"
+      "蹲酱",
+      "愚人节"
     ],
     "EXTRA_TEXT": [
       "量产人形先古造物。 NL 被重编程以用于保护城市入口以外的用途"
@@ -55,7 +56,8 @@
   },
   "reskinContent:ReSkinSnecko": {
     "TEXT": [
-      "蛇蛇"
+      "蛇蛇",
+      "愚人节"
     ],
     "EXTRA_TEXT": [
       "它迷惑性的双眸将使人出现认知偏差。 NL 调查显示，被困惑的生物会看见完全不同的世界。"
@@ -72,7 +74,8 @@
   },
   "reskinContent:ReSkinBronze": {
     "TEXT": [
-      "童制机械人偶"
+      "童制机械人偶",
+      "愚人节"
     ]
   }
 }

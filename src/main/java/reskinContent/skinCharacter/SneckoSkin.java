@@ -2,8 +2,7 @@ package reskinContent.skinCharacter;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import reskinContent.skinCharacter.skins.Snecko.SSSSnecko;
-import reskinContent.skinCharacter.skins.Snecko.SneckoOriginal;
+import reskinContent.skinCharacter.skins.Snecko.*;
 import reskinContent.vfx.ReskinUnlockedTextEffect;
 import sneckomod.TheSnecko;
 
@@ -12,7 +11,8 @@ public class SneckoSkin extends AbstractSkinCharacter {
     public static final String ID = CardCrawlGame.languagePack.getCharacterString("sneckomod:theSnecko").NAMES[0];
     public static final AbstractSkin[] SKINS = new AbstractSkin[]{
             new SneckoOriginal(),
-            new SSSSnecko()
+            new SSSSnecko(),
+            new BetaSnecko()
     };
 
     public SneckoSkin() {

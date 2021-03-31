@@ -3,14 +3,15 @@ package reskinContent.skinCharacter;
 import automaton.AutomatonChar;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import reskinContent.skinCharacter.skins.Automaton.AutomationOriginal;
+import reskinContent.skinCharacter.skins.Automaton.*;
 import reskinContent.vfx.ReskinUnlockedTextEffect;
 
 
 public class AutomatonSkin extends AbstractSkinCharacter {
     public static final String ID = CardCrawlGame.languagePack.getCharacterString("bronze:theAutomaton").NAMES[0];
     public static final AbstractSkin[] SKINS = new AbstractSkin[]{
-            new AutomationOriginal()
+            new AutomationOriginal(),
+            new BetaAutomaton()
     };
 
     public AutomatonSkin() {

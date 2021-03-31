@@ -30,7 +30,8 @@
 
   "reskinContent:ReSkinGuardian": {
     "TEXT": [
-      "Guardian Chan"
+      "Guardian Chan",
+      ""
     ],
     "EXTRA_TEXT": [
       "One Mass production of anthropomorphic Ancient Artifacts. NL Reprogrammed for protect except entrance to the city"
@@ -56,7 +57,8 @@
   },
   "reskinContent:ReSkinSnecko": {
     "TEXT": [
-      "SSSSnecko"
+      "SSSSnecko",
+      "Sneckdor"
     ],
     "EXTRA_TEXT": [
       "Its confusing eyes will cause cognitive deviation. NL Surveys show that confused creatures see a completely different world."
@@ -73,7 +75,8 @@
   },
   "reskinContent:ReSkinBronze": {
     "TEXT": [
-      "Automaton"
+      "Automaton",
+      ""
     ]
   }
 }
