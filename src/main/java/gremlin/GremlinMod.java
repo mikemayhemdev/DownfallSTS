@@ -75,7 +75,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
     private static final String ENERGY_ORB_PORTRAIT = "1024/card_gremlin_orb.png";
 
     private static final String CHAR_BUTTON = "charSelect/button.png";
-    private static final String CHAR_PORTRAIT = "charSelect/portrait.png";
+    private static final String CHAR_PORTRAIT = "charSelect/charBG.png";
 
     public static String getResourcePath(String resource) {
         return ASSETS_FOLDER + "/" + resource;
