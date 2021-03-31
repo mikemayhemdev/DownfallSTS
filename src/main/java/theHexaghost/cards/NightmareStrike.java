@@ -13,11 +13,11 @@ public class NightmareStrike extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
 
-    private static final int DAMAGE = 16;
+    private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 4;
 
     public NightmareStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         isEthereal = true;
         cardsToPreview = new ShadowStrike();

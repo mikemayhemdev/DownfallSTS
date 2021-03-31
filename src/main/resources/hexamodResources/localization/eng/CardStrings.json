@@ -126,7 +126,7 @@
   },
   "hexamod:GhostShield": {
     "NAME": "Ghost Shield",
-    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Gain !B! Block. NL If you Exhausted a card last turn, gain !B! Block."
+    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Gain !B! Block. NL If you Exhausted a card last turn, gain !M! bronze:Blur."
   },
   "hexamod:Haunt": {
     "NAME": "Haunted Hand",
@@ -181,11 +181,11 @@
   },
   "hexamod:ShadowStrike": {
     "NAME": "Shadow Strike",
-    "DESCRIPTION": "Echo keyword goes here. NL Deal !D! damage. NL Return *Nightmare *Strike from your exhaust pile to your discard pile."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Return *Nightmare *Strike from your exhaust pile to your discard pile. NL Exhaust."
   },
   "hexamod:ShadowGuise": {
     "NAME": "Shadow Guise",
-    "DESCRIPTION": "Echo keyword goes here. NL Gain !B! Block. NL Return *Nightmare *Guise from your exhaust pile to your discard pile."
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Return *Nightmare *Guise from your exhaust pile to your discard pile. NL Exhaust."
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "Power from Beyond",
@@ -244,8 +244,8 @@
   },
   "hexamod:TurnItUp": {
     "NAME": "Turn It Up",
-    "DESCRIPTION": "Gain 5 hexamod:Intensity. NL Lose it in X+1 turns. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 5 hexamod:Intensity. NL Lose it in X+1 turns. NL Gain [E] . NL Exhaust."
+    "DESCRIPTION": "Gain 6 hexamod:Intensity. NL Lose it in X+1 turns. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain 6 hexamod:Intensity. NL Lose it in X+1 turns. NL Gain [E] . NL Exhaust."
   },
   "hexamod:HeatMetal": {
     "NAME": "Heat Metal",

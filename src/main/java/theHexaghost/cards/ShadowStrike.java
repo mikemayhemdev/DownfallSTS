@@ -28,7 +28,7 @@ public class ShadowStrike extends AbstractHexaCard {
         tags.add(CardTags.STRIKE);
         this.parent = parent;
         if (parent != null)
-            cardsToPreview = new NightmareStrike();
+            cardsToPreview = this.parent.makeStatEquivalentCopy();
     }
 
     public ShadowStrike() {
@@ -37,7 +37,7 @@ public class ShadowStrike extends AbstractHexaCard {
 
     public void setParent(AbstractCard parent) {
         this.parent = parent;
-        cardsToPreview = new NightmareStrike();
+        cardsToPreview = this.parent.makeStatEquivalentCopy();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -25,7 +25,7 @@ public class ShadowGuise extends AbstractHexaCard {
         exhaust = true;
         this.parent = parent;
         if (parent != null)
-            cardsToPreview = new NightmareGuise();
+            cardsToPreview = this.parent.makeStatEquivalentCopy();
     }
 
     public ShadowGuise() {
@@ -34,7 +34,7 @@ public class ShadowGuise extends AbstractHexaCard {
 
     public void setParent(AbstractCard parent) {
         this.parent = parent;
-        cardsToPreview = new NightmareGuise();
+        cardsToPreview = this.parent.makeStatEquivalentCopy();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

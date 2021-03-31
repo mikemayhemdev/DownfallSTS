@@ -21,12 +21,6 @@ public class GiftsFromTheDead extends AbstractHexaCard {
         applyToSelf(new GiftsFromTheDeadPower(1));
     }
 
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        cantUseMessage = EXTENDED_DESCRIPTION[0];
-        return false;
-    }
-
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
