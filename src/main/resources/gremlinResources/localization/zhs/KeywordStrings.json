@@ -1,0 +1,64 @@
+[
+  {
+    "NAMES": [
+      "agony"
+    ],
+    "DESCRIPTION": "Creatures in #yAgony deal #b80% less damage with Attacks."
+  },
+  {
+    "NAMES": [
+      "cripple",
+      "crippled"
+    ],
+    "DESCRIPTION": "#yCrippled enemies can no longer lose #yWeak. At the end of their turn, they lose HP equal to their #yWeak."
+  },
+  {
+    "NAMES": [
+      "echo",
+      "echoes"
+    ],
+    "DESCRIPTION": "Echoes are copies of cards with Ethereal and Exhaust."
+  },
+  {
+    "NAMES": [
+      "fat gremlin", "fat_gremlin"
+    ],
+    "DESCRIPTION": "Whenever you play an attack, apply #b1 #yWeak to all targets."
+  },
+  {
+    "NAMES": [
+      "gremlin wizard", "gremlin_wizard"
+    ],
+    "DESCRIPTION": "Whenever you play a skill, gain #b1 #yWiz."
+  },
+  {
+    "NAMES": [
+      "mad gremlin", "mad_gremlin"
+    ],
+    "DESCRIPTION": "Gain #b2 #yTemporary #yStrength when attacked."
+  },
+  {
+    "NAMES": [
+      "shield gremlin", "shield_gremlin"
+    ],
+    "DESCRIPTION": "Whenever you play a skill, gain #b2 #yBlock."
+  },
+  {
+    "NAMES": [
+      "sneaky gremlin", "sneaky_gremlin"
+    ],
+    "DESCRIPTION": "Whenever you play an attack, deal #b2 damage to a random enemy."
+  },
+  {
+    "NAMES": [
+      "swap"
+    ],
+    "DESCRIPTION": "Switch places with another character. Does nothing if there is no valid target."
+  },
+  {
+    "NAMES": [
+      "wiz"
+    ],
+    "DESCRIPTION": "When you have at least three stacks of Wiz, attacks will consume all stacks to deal 10 additional damage."
+  }
+]
