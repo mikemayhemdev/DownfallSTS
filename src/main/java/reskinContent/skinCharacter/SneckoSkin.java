@@ -10,9 +10,8 @@ import sneckomod.TheSnecko;
 public class SneckoSkin extends AbstractSkinCharacter {
     public static final String ID = CardCrawlGame.languagePack.getCharacterString("sneckomod:theSnecko").NAMES[0];
     public static final AbstractSkin[] SKINS = new AbstractSkin[]{
-            new SneckoOriginal(),
-            new SSSSnecko(),
-            new BetaSnecko()
+            new BetaSnecko(),
+            new SSSSnecko()
     };
 
     public SneckoSkin() {

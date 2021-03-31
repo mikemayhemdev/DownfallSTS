@@ -10,9 +10,8 @@ import reskinContent.vfx.ReskinUnlockedTextEffect;
 public class ChampSkin extends AbstractSkinCharacter {
     public static final String ID = CardCrawlGame.languagePack.getCharacterString("champ:theChamp").NAMES[0];
     public static final AbstractSkin[] SKINS = new AbstractSkin[]{
-            new ChampOriginal(),
-            new ChampSister(),
-            new BetaChamp()
+            new BetaChamp(),
+            new ChampSister()
     };
 
     public ChampSkin() {

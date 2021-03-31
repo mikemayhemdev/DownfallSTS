@@ -4,14 +4,15 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import reskinContent.reskinContent;
 import reskinContent.skinCharacter.AbstractSkin;
+import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
 
 public class BetaSlimeBoss extends AbstractSkin {
 
     public BetaSlimeBoss() {
-        this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinSlime").TEXT[1];
+        this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkin").TEXT[1];
         this.DESCRIPTION = CardCrawlGame.languagePack.getCharacterString(SlimeboundCharacter.ID).TEXT[0];
-        this.portraitStatic_IMG = ImageMaster.loadImage("reskinContent/img/Slimebound/BetaSlimeBoss/portrait_beta_slimeboss.png");
+        this.portraitStatic_IMG = ImageMaster.loadImage(SlimeboundMod.getResourcePath("charSelect/portrait.png"));
 
         this.SHOULDER1 = "slimeboundResources/SlimeboundImages/char/shoulder.png";
         this.SHOULDER2 = "slimeboundResources/SlimeboundImages/char/shoulderR.png";

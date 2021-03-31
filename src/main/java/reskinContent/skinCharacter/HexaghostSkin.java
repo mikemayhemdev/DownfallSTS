@@ -12,9 +12,8 @@ import theHexaghost.TheHexaghost;
 public class HexaghostSkin extends AbstractSkinCharacter {
     public static final String ID = CardCrawlGame.languagePack.getCharacterString("hexamod:theHexaghost").NAMES[0];
     public static final AbstractSkin[] SKINS = new AbstractSkin[]{
-            new HexaghostOriginal(),
-            new Hexago(),
-            new BetaHexaghost()
+            new BetaHexaghost(),
+            new Hexago()
     };
 
     public HexaghostSkin() {

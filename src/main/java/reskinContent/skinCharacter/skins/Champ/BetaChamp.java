@@ -8,9 +8,9 @@ import reskinContent.skinCharacter.AbstractSkin;
 public class BetaChamp extends AbstractSkin {
 
     public BetaChamp() {
-        this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinChamp").TEXT[1];
+        this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkin").TEXT[1];
         this.DESCRIPTION = CardCrawlGame.languagePack.getCharacterString(ChampChar.ID).TEXT[0];
-        this.portraitStatic_IMG = ImageMaster.loadImage("reskinContent/img/ChampMod/BetaChamp/portrait_beta.png");
+        this.portraitStatic_IMG = ImageMaster.loadImage("champResources/images/charSelect/charBG.png");
         this.SHOULDER1 = "champResources/images/char/mainChar/shoulder.png";
         this.SHOULDER2 = "champResources/images/char/mainChar/shoulderR.png";
         this.CORPSE = "champResources/images/char/mainChar/corpse.png";

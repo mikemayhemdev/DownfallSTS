@@ -8,9 +8,9 @@ import theHexaghost.TheHexaghost;
 public class BetaHexaghost extends AbstractSkin {
 
     public BetaHexaghost() {
-        this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinHexaghost").TEXT[1];
+        this.NAME = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkin").TEXT[1];
         this.DESCRIPTION = CardCrawlGame.languagePack.getCharacterString(TheHexaghost.ID).TEXT[0];
-        this.portraitStatic_IMG = ImageMaster.loadImage("reskinContent/img/HexaghostMod/BetaHexaghost/portrait_beta.png");
+        this.portraitStatic_IMG = ImageMaster.loadImage("hexamodResources/images/charSelect/charBG.png");
 
         this.SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder.png";;
         this.SHOULDER2 = "hexamodResources/images/char/mainChar/shoulderR.png";

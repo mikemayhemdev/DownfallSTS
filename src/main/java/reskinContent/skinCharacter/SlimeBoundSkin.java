@@ -11,9 +11,8 @@ import slimebound.patches.SlimeboundEnum;
 public class SlimeBoundSkin extends AbstractSkinCharacter {
     public static final String ID = CardCrawlGame.languagePack.getCharacterString("Slimebound").NAMES[0];
     public static final AbstractSkin[] SKINS = new AbstractSkin[]{
-            new SlimeBoundOriginal(),
-            new Slaifu(),
-            new BetaSlimeBoss()
+            new BetaSlimeBoss(),
+            new Slaifu()
     };
 
     public SlimeBoundSkin() {

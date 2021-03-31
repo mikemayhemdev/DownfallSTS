@@ -10,9 +10,8 @@ import reskinContent.vfx.ReskinUnlockedTextEffect;
 public class GuardianSkin extends AbstractSkinCharacter {
     public static final String ID = CardCrawlGame.languagePack.getCharacterString("Guardian").NAMES[0];
     public static final AbstractSkin[] SKINS = new AbstractSkin[]{
-            new GuardianOriginal(),
-            new GuardianChan(),
-            new BetaGuardian()
+            new BetaGuardian(),
+            new GuardianChan()
     };
 
     public GuardianSkin() {
