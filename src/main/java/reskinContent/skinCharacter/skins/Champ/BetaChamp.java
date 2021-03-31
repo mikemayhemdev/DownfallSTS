@@ -1,6 +1,5 @@
 package reskinContent.skinCharacter.skins.Champ;
 
-import champ.ChampChar;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import reskinContent.reskinContent;
