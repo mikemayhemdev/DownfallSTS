@@ -1,200 +1,206 @@
 {
   "Gremlin:Agony": {
-    "NAME": "Agonizing Pain",
+    "NAME": "苦痛",
     "DESCRIPTIONS": [
-      "#yAttacks deal #b",
-      "% less damage for #b",
-      " turn.",
-      " turns."
+      "#y攻击 伤害降低 #b",
+      "% 。持续 #b",
+      " 个回合。",
+      " 个回合。"
     ]
   },
   "Gremlin:Bang": {
-    "NAME": "Bang",
+    "NAME": "砰",
     "DESCRIPTIONS": [
-      "The next attack you play consumes all stacks of #yWiz and deals #b", " additional damage."
+      "你的下次攻击会消耗所有 #y法力 并造成 #b",
+      " 点 额外伤害 。"
     ]
   },
   "Gremlin:Bashed": {
-    "NAME": "Bashed",
+    "NAME": "重击",
     "DESCRIPTIONS": [
-      "Whenever you gain #yBlock this turn, loses #b", " HP."
+      "本回合内每当你获得 #y格挡 时，其失去 #b",
+      " 点生命。"
     ]
   },
   "Gremlin:BubbleBarrier": {
-    "NAME": "Bubble Barrier",
+    "NAME": "气泡屏障",
     "DESCRIPTIONS": [
-      "Whenever you play a card this turn, gain #b", " #yBlock."
+      "你这一回合每打出一张牌， 获得 #b",
+      " 点 #y格挡 。"
     ]
   },
   "Gremlin:CongaLine": {
-    "NAME": "Conga Line",
+    "NAME": "直线阵形",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain ",
-      "and #ySwap to the next Gremlin."
+      "在你的回合开始时， 获得 ",
+      " 并 #y切换 到下一只 地精 。"
     ]
   },
   "Gremlin:Crippled": {
-    "NAME": "Crippled",
+    "NAME": "致残",
     "DESCRIPTIONS": [
-      "#yWeak does not wear off. At the end of its turn, it loses HP equal to its #bWeak."
+      "#y虚弱 不会消失。它的回合结束时，失去 #y虚弱 层数的生命。"
     ]
   },
   "Gremlin:Encore": {
-    "NAME": "Encore",
+    "NAME": "返场",
     "DESCRIPTIONS": [
-      "Whenever you consume #yWiz, deal #b", " damage to ALL enemies."
+      "每当你消耗 #y法力 时，对所有敌人造成 #b",
+      " 点伤害。"
     ]
   },
   "Gremlin:Enthusiasm": {
-    "NAME": "Enthusiasm",
+    "NAME": "狂热",
     "DESCRIPTIONS": [
-      "Whenever you #ySwap, draw #b",
-      " card.",
-      " cards."
+      "每当你 #y切换 地精 时， 抽 #b",
+      " 张牌。",
+      " 张牌。"
     ]
   },
   "Gremlin:FatGremlin": {
-    "NAME": "Fat Gremlin",
+    "NAME": "胖地精",
     "DESCRIPTIONS": [
-      "Whenever you play an attack, apply #b",
-      " #yWeak to all targets."
+      "当你打出攻击牌时， 给予所有目标 #b",
+      " 层 #y虚弱 。"
     ]
   },
   "Gremlin:Flex": {
-    "NAME": "Strength Down",
+    "NAME": "力量下降",
     "DESCRIPTIONS": [
-      "At the end of this turn, lose #b",
-      " #yStrength."
+      "在回合结束时， 失去 #b",
+      " 点 #y力量 。"
     ]
   },
   "Gremlin:Furious": {
-    "NAME": "Furious",
+    "NAME": "发疯",
     "DESCRIPTIONS": [
-      "Whenever you would gain #yBlock this turn, instead deal that much damage to ALL enemies."
+      "本回合每当你获得 #y格挡 ， 对所有敌人造成伤害。"
     ]
   },
   "Gremlin:GremlinNob": {
-    "NAME": "Gremlin Nob",
+    "NAME": "地精大块头",
     "DESCRIPTIONS": [
-      "At the start of each turn, add #b3 Gremlin Nob cards to your hand. You can no longer #ySwap. When you would lose all #yTemporary #yHP, prevent further damage and revert back."
+      "每回合的开始时，将 #b3 张 地精大块头 的牌到你的手牌。你不能 #y切换 地精。当你要失去所有 #y临时生命 时，免疫剩余的伤害。"
     ]
   },
   "Gremlin:GremlinWizard": {
-    "NAME": "Gremlin Wizard",
+    "NAME": "地精法师",
     "DESCRIPTIONS": [
-      "Whenever you play a skill, gain #b",
-      " #yWiz."
+      "当你打出技能牌时， 获得 #b",
+      " 层 #y法力 。"
     ]
   },
   "Gremlin:Heckle": {
-    "NAME": "Heckle",
+    "NAME": "起哄",
     "DESCRIPTIONS": [
-      "Whenever you apply a debuff to an enemy, gain #b",
-      " #yTemporary #yHP."
+      "每当你给予敌人 #y负面效果 时， 获得 #b",
+      " 点 #y临时生命 。"
     ]
   },
   "Gremlin:InfiniteBlocks": {
-    "NAME": "Infinite Blocks",
+    "NAME": "无限护甲",
     "DESCRIPTIONS": [
-      "At the start of your turn, add #b",
-      " #yWard to your hand.",
-      " #yWards to your hand."
+      "在你的回合开始时，将 #b",
+      " 张 #y守卫 加入手牌。",
+      " 张 #y守卫 加入手牌。"
     ]
   },
   "Gremlin:MadGremlin": {
-    "NAME": "Mad Gremlin",
+    "NAME": "火大地精",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yTemporary #yStrength when attacked."
+      "受到攻击时获得 #b",
+      " 点 #y临时 力量 。"
     ]
   },
   "Gremlin:MakeshiftArmor": {
-    "NAME": "Makeshift Armor",
+    "NAME": "临时装甲",
     "DESCRIPTIONS": [
-      "Play #b",
-      " more attack to gain #b",
-      " more attacks to gain #b",
-      " #yArtifact."
+      "打出 #b",
+      " 张 #y攻击牌 后获得 #b",
+      " 张 #y攻击牌 后获得 #b",
+      " 层 #y人工制品 。"
     ]
   },
   "Gremlin:MakingMagic": {
-    "NAME": "Making Magic",
+    "NAME": "获得法力",
     "DESCRIPTIONS": [
-      "At the start of your next turn, add #b",
-      " copy of #yBang to your hand.",
-      " copies of #yBang to your hand."
+      "在你下个回合开始时， 将 #b",
+      " 张 #y砰 的复制品加入你的手牌。",
+      " 张 #y砰 的复制品加入你的手牌。"
     ]
   },
   "Gremlin:MakingMoreMagic": {
-    "NAME": "Making Magic+",
+    "NAME": "获得法力+",
     "DESCRIPTIONS": [
-      "At the start of your next turn, add #b",
-      " #yUpgraded copy of #yBang to your hand.",
-      " #yUpgraded copies of #yBang to your hand."
+      "在你下个回合开始时, 将 #b",
+      " 张 #y已升级 #y砰 的复制品加入你的手牌。",
+      " 张 #y已升级 #y砰 的复制品加入你的手牌。"
     ]
   },
   "Gremlin:Polish": {
-    "NAME": "Polish",
+    "NAME": "磨亮",
     "DESCRIPTIONS": [
-      "Wards grant #b",
-      " additional #yBlock."
+      "守卫额外获得 #b",
+      " #y格挡 。"
     ]
   },
   "Gremlin:Scatter": {
-    "NAME": "Scatter",
+    "NAME": "散开",
     "DESCRIPTIONS": [
-      "The next #b",
-      " time you would lose HP, instead #ySwap into a random Gremlin.",
-      " times you would lose HP, instead #ySwap into a random Gremlin."
+      "下 #b",
+      " 次将要失去生命时，免疫伤害并 #y切换 一只随机地精。",
+      " 次将要失去生命时，免疫伤害并 #y切换 一只随机地精。"
     ]
   },
   "Gremlin:ShadowShiv": {
-    "NAME": "Shadow Shiv",
+    "NAME": "暗影刀刃",
     "DESCRIPTIONS": [
-      "Whenever you play an Attack that doesn't Exhaust, add #b",
-      " #yShiv to your hand.",
-      " #yShivs to your hand."
+      "每当你打出不会 #y消耗 的攻击牌时，将 #b",
+      " 张 #y小刀 加入手牌。",
+      " 张 #y小刀 加入手牌。"
     ]
   },
   "Gremlin:ShieldGremlin": {
-    "NAME": "Shield Gremlin",
+    "NAME": "持盾地精",
     "DESCRIPTIONS": [
-      "Whenever you play a skill, gain #b",
-      " #yBlock."
+      "每当你打出技能牌时，获得 #b",
+      " #y格挡 。"
     ]
   },
   "Gremlin:SneakyGremlin": {
-    "NAME": "Sneaky Gremlin",
+    "NAME": "卑鄙地精",
     "DESCRIPTIONS": [
-      "Whenever you play an attack, deal #b",
-      " damage to a random enemy."
+      "每当你打出攻击牌时，对随机一名敌人造成 #b",
+      " 点伤害。"
     ]
   },
   "Gremlin:TargetWeakness": {
-    "NAME": "Target Wounds",
+    "NAME": "瞄准伤口",
     "DESCRIPTIONS": [
-      "Deal #b",
-      " additional damage to #yWeakened enemies."
+      "对身有 #y虚弱 的敌人造成 #b",
+      " 点额外伤害。"
     ]
   },
   "Gremlin:Unforgiving": {
-    "NAME": "Unforgiving",
+    "NAME": "无情",
     "DESCRIPTIONS": [
-      "You cannot lose Strength."
+      "你不会失去力量。"
     ]
   },
   "Gremlin:Wiz": {
-    "NAME": "Wiz",
+    "NAME": "法力",
     "DESCRIPTIONS": [
-      "Charging up. NL Need #b", " more stack.", " more stacks.",
-      "Ready to fire."
+      " 充能 。 NL 还需要 #b",
+      " 点充能。",
+      " 点充能。",
+      "准备开火。"
     ]
   },
   "Gremlin:Wizardry": {
-    "NAME": "Wizardry",
+    "NAME": "巫术",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b",
-      " #yWiz."
+      "在你的回合开始时, 获得 #b",
+      " 点 #y法力 。"
     ]
   }
 }

@@ -1,111 +1,110 @@
 {
   "Gremlin:CursedTome": {
     "OPTIONS": [
-      "[Take] #gObtain #gthe #gBook. #rAll #rGremlins #rLose #r"
+      "[拿走] #g拿到书。 #r所有地精失去 #r"
     ]
   },
   "Gremlin:BackToBasics": {
     "NAME": "",
     "DESCRIPTIONS": [
-      "A flexible mind is not burdened by doubt."
+      "灵活的头脑不会被质疑所拖累。"
     ],
     "OPTIONS": [
-      "[Caprice] #gReplace all #gStrikes and #gDefends with #gShivs and #gWards.",
-      "[Locked] Requires a Strike or Defend."
+      "[随想] #g将所有打击和防御变为小刀和守卫。",
+      "[锁定] 需要打击或防御。"
     ]
   },
   "Gremlin:KnowingSkull": {
     "OPTIONS": [
-      "[Information?] #gReveal #gthe #gBoss. #rAll #rGremlins #rLose #r",
-      "[Success?] #gGet #ga #gColorless #gCard. #rAll #rGremlins #rLose #r",
-      "[A Pick Me Up?] #gGet #ga #gPotion. #rAll #rGremlins #rLose #r",
-      " #gGold. #rAll #rGremlins #rLose #r",
-      "[How do I leave?] #rAll #rGremlins #rLose #r"
-
+      "[信息？] #g告知 #gBoss #g身份。 #r所有地精失去 #r",
+      "[成功？] #g获得一张无色牌。 #r所有地精失去 #r",
+      "[来点喝的？] #g获得一瓶药水。 #r所有地精失去 #r",
+      " #g金币。 #r所有地精失去 #r",
+      "[我怎么离开？] #r所有地精失去 #r"
     ]
   },
   "Gremlin:MatchingGame": {
     "DESCRIPTIONS": [
-      "\" #bTwelve cards! Match them to keep them! #bFive tries-\" NL NL  \" #bTen tries!\" you interrupt. NL NL The gremlin scowls. \" #bFive tries!\" NL NL \" #bEight.\" NL NL \" #bSix,\" he spits. \"And I hope you get #pCursed.\" NL NL You hope he gets #pCursed.",
-      "You complete the gremlin's game and look up. NL He ran away before you could get more #y~free~ #y~stuff!~ ",
-      "A gremlin is madly shuffling cards on a table. He seems to be offering #y~free~ #y~stuff.~ You want #y~free~ #y~stuff.~ "
+      "\" #b十二张牌！ #b搭对就拿走！ #b五次机会 -\" NL NL  \" #b十次！\" 你打断他。 NL NL 地精皱着眉头。 \" #b五次机会 !\" NL NL \" #b八次。\" NL NL \" #b六次， \" 他吞了口口水。 \"我希望你受到 #p诅咒 。\" NL NL 你希望他受到 #p诅咒 。",
+      "你完成了地精的游戏, 当你抬头看时, 却发现…… NL 在你能拿到更多东西之前他跑了 #y~免费喽!~ ",
+      "有一位地精正在桌子上疯狂地摆弄着一副牌。 他好像在 #y~免费~ 发着什么 。~ 你想要 #y~免费的东西 。~ "
     ]
   },
   "Gremlin:Nest": {
     "OPTIONS": [
-      "[Stay in Line] #gObtain Ritual Dagger. #rAll #rGremlins #rLose #r"
+      "[留在队伍中] #g获得 仪式匕首 #g 。 #r所有地精失去 #r"
     ]
   },
   "Gremlin:ScrapOoze": {
     "OPTIONS": [
-      "[Reach Inside] #rAll #rGremlins #rLose #r",
-      "[Deeper] #rAll #rGremlins #rLose #r"
+      "[伸手进去] #r所有地精失去 #r",
+      "[接着往里伸] #r所有地精失去 #r"
     ]
   },
   "Gremlin:ScrapOozeReplacement": {
-    "NAME": "Scrap Ooze",
+    "NAME": "破烂软泥",
     "DESCRIPTIONS": [
-      "As you walk into the room you hear a ~gurgling~ and the @grinding@ of metals. It's a #yScrap #yOoze! These funny little slimes always find #ygoodies. Even better, they are too slow and too weak to stop you from taking them! You know the best ways of getting around their spiky acid. Unfortunately, it is slow and takes some #rfocus.",
-      "Careful, careful. You avoid the scrapy bits and and the stabby bits. If only it weren't so #r@boring.@ NL But if you keep at it, you know you'll get a shiny #yrelic...",
-      "#gSuccess! NL After rummaging through the metal and burning acid, you finally grab hold of a #yrelic and yank it out. NL You pull your way out of the ooze clutching your new toy.",
-      "This is way too #rboring. What were you even doing again?",
-      "You decide to leave the area. NL The slime pays no attention, content with its meal."
+      "你们刚走进房间，就听见奇怪的 ~咕嘟声~ 和金属的 @摩擦声@ 。是一群 #y破烂软泥！ 这些小家伙总能找到一些 #y好东西 。更妙的是，这些小家伙都太慢太弱了，抢不回来你们从他们身上带走的东西！你知道最好躲着他们的尖刺和酸液。但是这需要慢慢来而且要 #r专心 。",
+      "小心又当心。你尽量避免了刮伤和腐蚀。 NL 但要是里面没有 #y@亮闪闪@ 的东西的话。那也太无聊了。 但是你觉得要是继续摸下去，指不定还能找到点什么……",
+      "#g成功！ NL 在金属和酸液之中翻找了好久，你终于抓住了一件 #y遗物 把它拉了出来。 NL 你从黏液中抽回手来，虽然 #r受了点伤 ，但至少东西拿到了。",
+      "这太 #r无聊 了。你又在干什么？",
+      "你们决定离开这个地方。 NL 史莱姆并不在意，接着慢慢消化它的美餐。"
     ],
     "OPTIONS": [
-      "[Reach Carefully] #r",
-      "%: #rBecome #rCursed #r- #rScatterbrained. #g",
-      "%: #gFind #ga #gRelic.",
-      "[Leave]",
-      "[Be Careful] #r"
+      "[伸手进去] #r",
+      "%: #r被诅咒 #r- #r漫不经心。 #g",
+      "%: #g找到一件遗物。",
+      "[离开]",
+      "[小心] #r"
     ]
   },
   "Gremlin:SensoryStone": {
     "OPTIONS": [
-      "[Recall] #gAdd #g2 #gColorless #gcards #gto #gyour #gdeck. #rAll #rGremlins #rLose #r",
-      "[Recall] #gAdd #g3 #gColorless #gcards #gto #gyour #gdeck. #rAll #rGremlins #rLose #r"
+      "[回忆] #g在你的牌组中加入 #g2 #g张无色牌 。 #r所有地精失去 #r",
+      "[回忆] #g在你的牌组中加入 #g3 #g张无色牌 。 #r所有地精失去 #r"
     ]
   },
   "Gremlin:Trenchcoat": {
-    "NAME": "Suspicious Merchant",
+    "NAME": "可疑的商人",
     "DESCRIPTIONS": [
-      "You come across a strange figure that looks suspiciously like five gremlins in a trench coat. NL \"Hello, traveller,\" the squeaky voice calls out. NL \"It is I, the #yfriendly #yMerchant, who is certainly not five gremlins in a trench coat. Would you like to purchase any of my ~fine~ ~wares~ that are definitely not stolen?\"",
-      "You cannot resist a sale, even from one a suspicious as the merchant. NL You make your purchase, but as soon as it is complete, your vendor bolts. NL NL In the distance you can almost make out a faint yell of frustration: #r\"Blasted, #rthieving #rGremlins!\".",
-      "You have no need to enrich the despicable merchant. You will keep your money to yourself. The Merchant flees as soon as it is clear you would not be partaking."
+      "你遇到一个奇怪的身影，看起来像五个地精钻进一件大衣里面。 NL “你好，旅行者” 带着奸笑的声音从里面传了出来。 NL “是我呀，那个 #y友好的商人 。 NL 想要来买点不是我们偷来的的 ~好东西~ 吗？”",
+      "你根本不在乎对面是不是真的商人。 NL 在你刚买完的时候，这个“商人”突然消失了。 NL 你听到在远处的一声微弱的沮丧的呼喊： NL #r~“该死的地精小偷！”~",
+      "你不想跟着可疑的商人做交易。你继续揣着你的钱。看到你不想买东西，这个商人就走了。"
     ],
     "OPTIONS": [
-      "[Buy] #rLose #r",
-      " #rGold",
-      ". #gObtain #g1 #grandom #gColorless #gCard.",
-      ". #gObtain #g2 #grandom #gColorless #gCards.",
-      ". #gObtain #g3 #grandom #gColorless #gCards.",
-      "[Leave]",
-      "[Locked] Requires: At least ",
-      " Gold.",
-      "[Refuse]"
+      "[购买] #r失去 #r",
+      " #r金币",
+      "。 #g获得1张随机无色牌。",
+      "。 #g获得2张随机无色牌。",
+      "。 #g获得3张随机无色牌。",
+      "[离开]",
+      "[锁定] 需要至少 ",
+      " 金币。",
+      "[拒绝]"
     ]
   },
   "Gremlin:Vampires": {
     "DESCRIPTIONS": [
-      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~greedy~ ~ones,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~"
+      "在一条昏暗的街上, 你遇见几个戴着兜帽的人在进行某种黑暗的仪式。 当你靠近时, 他们全都同时转身面对你，让你觉得十分诡异。 其中个子最高的一个微微一笑。 露出了长长的尖牙, 向你伸出了一只苍白而瘦长的手。 NL ~\"加入~ ~我们~ ~贪婪~ ~的人,~ ~和我们~ ~一起~ ~感受~ ~尖塔的~ ~温暖~ 。\"~"
     ]
   },
   "Gremlin:WheelGame": {
     "DESCRIPTIONS": [
-      "He lunges at you, but you are ready. NL You slash him open before he can get you with his shiv. NL You treat yourself to your prize, but sadly the Wheel disappears before you can loot it too."
+      "他向你扑来, 但是你已经做好准备。 NL 在他还没有用小刀伤到你时, 你已经把他砍刀在地。 NL 本来你打算用它当作你的奖励, 但是你还没搜他就消失不见了。"
     ],
     "OPTIONS": [
-      "[Prize!] #gPREEMPTIVE #gSTRIKE!",
-      "[Loot]"
+      "[奖品！] #g先发制人！",
+      "[抢劫]"
     ]
   },
   "Gremlin:WingStatue": {
     "OPTIONS": [
-      "[Pray] #gRemove #ga #gcard #gfrom #gyour #gdeck. #rAll #rGremlins #rLose #r"
+      "[祈祷] #g从你的牌组中移除一张牌。 #r所有地精失去 #r"
     ]
   },
   "Gremlin:WorldOfGoop": {
     "OPTIONS": [
-      " #gGold. #rAll #rGremlins #rLose #r"
+      " #g金币。 #r所有地精失去 #r"
     ]
   }
 }

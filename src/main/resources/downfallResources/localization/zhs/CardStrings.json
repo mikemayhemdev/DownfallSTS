@@ -23,6 +23,10 @@
     "NAME": "纰漏",
     "DESCRIPTION": "虚无 。 NL 你的回合结束时，将手牌变化为随机状态牌。 NL 消耗 。"
   },
+  "downfall:Scatterbrained": {
+    "NAME": "漫不经心",
+    "DESCRIPTION": "不能被打出 。 NL 抽到时，将这张牌的 回响 充满你的手牌。"
+  },
   "downfall_Charboss:Slug": {
     "NAME": "弹头",
     "DESCRIPTION": "造成 !D! 点伤害。"

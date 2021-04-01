@@ -1,59 +1,64 @@
 {
   "Gremlin:NobFight": {
     "TEXT": [
-      "PUNY GREMS GIVE SOULS!",
-      "You, Angry. You're mine now.",
-      "You, Fatty. You're mine now.",
-      "You, Girly. You're mine now.",
-      "You, Twitchy. You're mine now.",
-      "You. Dopey. You're mine now.",
-      "You. You're mine now.",
-      "I need to choose."
+      "弱小的地精交出金币!",
+      "你， 火大地精。 你现在是我的了。",
+      "你， 胖地精。 你现在是我的了。",
+      "你， 持盾地精。 你现在是我的了。",
+      "你， 卑鄙法师。 你现在是我的了。",
+      "你， 地精法师。 你现在是我的了。",
+      "你， 现在是我的了。",
+      "我需要做出选择。"
     ]
   },
   "Gremlin:GremFight": {
     "TEXT": [
-      "Bash their heads!",
-      "Kill them dead!",
-      "Take their stuff!"
+      "砸他们的头！",
+      "杀死他们！",
+      "拿走他们的东西！"
     ]
   },
   "Gremlin:ResurrectOption": {
     "TEXT": [
-      "Resurrect",
-      "(Free Action) Summon a random Gremlin back from the dead.",
-      "Requires a Gremlin to be Dead.",
-      "The grave site has been desecrated already.",
-      "I RISE!",
-      "I RISE, AGAIN!",
-      "I'M BACK FOR MORE LOOTING!"
+      "复活",
+      "（自由行动）从死亡中随机召唤一个地精。",
+	  "需要有地精死亡。",
+      "墓地已召唤。",
+      "我回来了！",
+      "我又回来了！",
+      "我回来抢东西啦！"
     ]
   },
   "Gremlin:RestOption": {
     "TEXT": [
-      "Rest",
-      "Heal every Gremlin for 100% of your Max HP (",
-      " HP from ",
-      "Heal every Gremlin for 30% of your Max HP (",
-      "If any Gremlins are dead, one will resurrect at random."
+      "休息",
+      "每个地精回复 100% 你的最大生命 （",
+      " 生命来自 ",
+      "每个地精回复 30% 你的最大生命 （",
+	  "如果有地精死了，其中一个将会随机复活。"
     ]
   },
   "Gremlin:Swap": {
     "TEXT": [
-      "NO SWAP!",
-      "NOB LEADER NOW!",
-      "NOB LEAD FOREVER!"
+      "不能切换！",
+      "现在没有首领了！",
+      "永远也没有首领了！"
     ]
   },
-  "Gremlin:ArtMode": {
+    "Gremlin:ArtMode": {
     "TEXT": [
-      "Gremlin Art Mode",
-      "Gremlins invade the card frames. Only impacts aesthetics. Might make finding synergies easier."
+     "地精美术模式",
+      "地精将加到卡图上。单纯影响外观。"
     ]
   },
   "Gremlin:BonusGold": {
     "TEXT": [
-       " Gold (Bonus)"
+       " 金币（额外）"
+    ]
+  },
+  "Gremlin:MakeEchoAction": {
+    "TEXT": [
+      "回响："
     ]
   }
 }

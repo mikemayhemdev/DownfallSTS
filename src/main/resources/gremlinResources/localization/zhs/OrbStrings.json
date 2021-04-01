@@ -1,41 +1,37 @@
 {
   "Gremlin:FatGremlin": {
-    "NAME": "Fat Gremlin",
+    "NAME": "胖地精",
     "DESCRIPTION": [
-      "Whenever you play an attack, apply #b",
-      " #yWeak to all targets."
+      "当你攻击牌时， 给予所有目标 #b",
+      " 层 #y虚弱 。"
     ]
   },
-
   "Gremlin:GremlinWizard": {
-    "NAME": "Gremlin Wizard",
+    "NAME": "地精法师",
     "DESCRIPTION": [
-      "Whenever you play a skill, gain #b",
-      " #yWiz."
+      "当你打出技能牌时， 获得 #b",
+      " 层 #y法力 。"
     ]
   },
-
   "Gremlin:MadGremlin": {
-    "NAME": "Mad Gremlin",
+    "NAME": "火大地精",
     "DESCRIPTION": [
-      "Gain #b",
-      " #yTemporary #yStrength when attacked."
+      "受到攻击时获得 #b",
+      " 点 #y临时力量 。"
     ]
   },
-
   "Gremlin:ShieldGremlin": {
-    "NAME": "Shield Gremlin",
+    "NAME": "持盾地精",
     "DESCRIPTION": [
-      "Whenever you play a skill, gain #b",
-      " #yBlock."
+      "每当你打出技能牌时， 获得 #b",
+      " 点 #y格挡 。"
     ]
   },
-
   "Gremlin:SneakyGremlin": {
-    "NAME": "Sneaky Gremlin",
+    "NAME": "卑鄙地精",
     "DESCRIPTION": [
-      "Whenever you play an attack, deal #b",
-      " damage to a random enemy."
+      "每当你打出攻击牌时， 对随机一名敌人造成 #b",
+      " 点伤害。"
     ]
   }
 }
