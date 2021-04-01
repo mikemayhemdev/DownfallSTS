@@ -282,7 +282,7 @@
   },
   "champ:HeartStrike": {
     "NAME": "Finish Him",
-    "DESCRIPTION": "Can only be used against an enemy with less than !M!% HP. NL Deal !D1 damage.",
+    "DESCRIPTION": "Can only be used against an enemy with less than !M!% HP. NL Deal !D! damage.",
     "EXTENDED_DESCRIPTION": [
       "A poor time for that move.",
       "That foe isn't ready to be ended yet."
