@@ -75,15 +75,15 @@
   "downfall:NeowBlasphemersDemise": {
     "NAME": "渎神者",
     "DESCRIPTIONS": [
-      "当 #y涅奥 再失去 #b",
-      " 生命后，她下回合将要强化时将不会获得 #b10 点 #y力量 。",
-      " #y涅奥 下回合将要强化时将不会获得 #b10 点 #y力量 。"
+      "除非 #y涅奥 再失去 #b",
+      " 生命，她下次强化时将会获得 #b10 点 #y力量 。",
+      " #y涅奥 下次强化时将不会获得 #b10 点 #y力量 。"
     ]
   },
   "downfall:WatcherDivinityPower": {
     "NAME": "消逝的信仰",
     "DESCRIPTIONS": [
-      "每当你打出一张牌， #y观者 获得 #b1 层 #p真言 。 NL 每回合开始时 #y观者 失去 #b5 层 #p真言 。 NL #y观者 将不会自动退出 #y神格 。"
+      "每当你打出一张牌， #y观者 获得 #b1 层 #p真言 。 NL 每回合开始时 #y观者 失去 #b5 层 #p真言 。 NL #y观者 在她的回合结束时将不会退出 #y神格 。"
     ]
   },
   "downfall:NeowFleetingFaith": {
