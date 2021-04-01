@@ -282,7 +282,9 @@
   "champ:EnragedBash": {
     "NAME": "怒斩",
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL champ:疲劳 5 。 NL champ:狂战 champ:连段 ：本场战斗中攻击次数加1。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL champ:疲劳 5 。 NL champ:狂战 champ:连段 ：本场战斗中攻击次数加1。"
+    "EXTENDED_DESCRIPTION": [
+      "造成 !D! 点伤害 !M! 次。 NL champ:疲劳 5 。 NL champ:狂战 champ:连段 ：本场战斗中攻击次数加1。"
+    ]
   },
   "champ:VampiricStrike": {
     "NAME": "重击",
