@@ -156,7 +156,10 @@
   },
   "champ:EnchantShield": {
     "NAME": "Enchant Shield",
-    "DESCRIPTION": "champ:Fatigue 5. NL Choose a card in hand. Increase its Block by !M! for this combat. NL Exhaust."
+    "DESCRIPTION": "champ:Fatigue 5. NL Choose a card in hand. Increase its Block by !M! for this combat. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "A poor time for that move."
+    ]
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
@@ -198,22 +201,11 @@
   },
   "champ:Haymaker": {
     "NAME": "Piledriver",
-    "DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: Apply 2 Vulnerable. NL *Defensive champ:Combo: Apply 2 Weak.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ",
-    "EXTENDED_DESCRIPTION": [
-      "Berserker champ:Combo: Apply 2 Vulnerable. NL ",
-      "Defensive champ:Combo: Apply 2 Weak."
-    ]
+    "DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: Apply 2 Vulnerable. NL *Defensive champ:Combo: Apply 2 Weak."
   },
   "champ:ViciousMockery": {
     "NAME": "Vicious Mockery",
-    "DESCRIPTION": "*Berserker champ:Combo: Gain !M! temporary Strength. NL *Defensive champ:Combo: Gain !M! temporary  Dexterity.",
-    "EXTENDED_DESCRIPTION": [
-      "Berserker champ:Combo: Gain !M! temporary Strength. NL Exhaust.",
-      "Berserker champ:Combo: Gain !M! temporary Strength. NL ",
-      "Defensive champ:Combo: Gain !M! temporary Dexterity. NL Exhaust.",
-      "Defensive champ:Combo: Gain !M! temporary Dexterity."
-    ]
+    "DESCRIPTION": "*Berserker champ:Combo: Gain !M! temporary Strength. NL *Defensive champ:Combo: Gain !M! temporary  Dexterity."
   },
   "champ:PreciseThrust": {
     "NAME": "Precise Thrust",
@@ -234,7 +226,10 @@
   },
   "champ:EnchantSword": {
     "NAME": "Enchant Sword",
-    "DESCRIPTION": "champ:Fatigue 5. NL Choose a card in hand. Increase its damage by !M! for this combat. Exhaust."
+    "DESCRIPTION": "champ:Fatigue 5. NL Choose a card in hand. Increase its damage by !M! for this combat. Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "A poor time for that move."
+    ]
   },
   "champ:BladeFlurry": {
     "NAME": "Flurry of Strikes",
@@ -415,7 +410,10 @@
   },
   "champ:EnchantCrown": {
     "NAME": "Enchant Crown",
-    "DESCRIPTION": "champ:Fatigue 5. NL Choose a card in hand. It costs 0 this combat. NL Exhaust."
+    "DESCRIPTION": "champ:Fatigue 5. NL Choose a card in hand. It costs 0 this combat. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "A poor time for that move."
+    ]
   },
   "champ:ModFinisherStrike": {
     "NAME": "Finishing Strike",
