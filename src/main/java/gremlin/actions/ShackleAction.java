@@ -18,12 +18,14 @@ public class ShackleAction extends AbstractGameAction
 
     @Override
     public void update() {
-        if (!target.hasPower("Artifact")) {
+        if (this.duration == Settings.ACTION_DUR_XFAST && this.target != null) {
+            if (!target.hasPower("Artifact")) {
+                AbstractDungeon.actionManager.addToTop(
+                        new ApplyPowerAction(target, AbstractDungeon.player, new GainStrengthPower(target, this.amount), this.amount));
+            }
             AbstractDungeon.actionManager.addToTop(
-                    new ApplyPowerAction(target, AbstractDungeon.player, new GainStrengthPower(target, this.amount), this.amount));
+                    new ApplyPowerAction(target, AbstractDungeon.player, new StrengthPower(target, -amount), -amount));
         }
-        AbstractDungeon.actionManager.addToTop(
-                new ApplyPowerAction(target, AbstractDungeon.player, new StrengthPower(target, -amount), -amount));
         this.tickDuration();
     }
 }
