@@ -201,11 +201,22 @@
   },
   "champ:Haymaker": {
     "NAME": "Piledriver",
-    "DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: Apply 2 Vulnerable. NL *Defensive champ:Combo: Apply 2 Weak."
+    "DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: Apply 2 Vulnerable. NL *Defensive champ:Combo: Apply 2 Weak.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Berserker champ:Combo: Apply 2 Vulnerable. NL ",
+      "Defensive champ:Combo: Apply 2 Weak."
+    ]
   },
   "champ:ViciousMockery": {
     "NAME": "Vicious Mockery",
-    "DESCRIPTION": "*Berserker champ:Combo: Gain !M! temporary Strength. NL *Defensive champ:Combo: Gain !M! temporary  Dexterity."
+    "DESCRIPTION": "*Berserker champ:Combo: Gain !M! temporary Strength. NL *Defensive champ:Combo: Gain !M! temporary  Dexterity.",
+    "EXTENDED_DESCRIPTION": [
+      "Berserker champ:Combo: Gain !M! temporary Strength. NL Exhaust.",
+      "Berserker champ:Combo: Gain !M! temporary Strength. NL ",
+      "Defensive champ:Combo: Gain !M! temporary Dexterity. NL Exhaust.",
+      "Defensive champ:Combo: Gain !M! temporary Dexterity."
+    ]
   },
   "champ:PreciseThrust": {
     "NAME": "Precise Thrust",
