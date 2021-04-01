@@ -20,7 +20,6 @@ public class Haymaker extends AbstractChampCard {
     public Haymaker() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        tags.add(ChampMod.FINISHER);
         postInit();
     }
 
