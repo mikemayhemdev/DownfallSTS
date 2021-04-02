@@ -1,64 +1,62 @@
 [
   {
     "NAMES": [
-      "agony"
+      "苦痛"
     ],
-    "DESCRIPTION": "Creatures in #yAgony deal #b80% less damage with Attacks."
+    "DESCRIPTION": "处于 #y苦痛 中的生物 造成的伤害减少 #b80% 。"
   },
   {
     "NAMES": [
-      "cripple",
-      "crippled"
+      "致残"
     ],
-    "DESCRIPTION": "#yCrippled enemies can no longer lose #yWeak. At the end of their turn, they lose HP equal to their #yWeak."
+    "DESCRIPTION": "#y致残 的敌人将不会失去 #y虚弱 。它们的回合结束时失去 #y虚弱 层数的生命。"
   },
   {
     "NAMES": [
-      "echo",
-      "echoes"
+      "回响"
     ],
-    "DESCRIPTION": "Echoes are copies of cards with Ethereal and Exhaust."
+    "DESCRIPTION": " 回响 是带有 消耗 和 虚无 的牌的复制品。"
   },
   {
     "NAMES": [
-      "fat gremlin", "fat_gremlin"
+      "胖地精"
     ],
-    "DESCRIPTION": "Whenever you play an attack, apply #b1 #yWeak to all targets."
+    "DESCRIPTION": "每当你打出一张攻击牌，给予所有目标 #b1 层 #y虚弱 。"
   },
   {
     "NAMES": [
-      "gremlin wizard", "gremlin_wizard"
+      "地精法师"
     ],
-    "DESCRIPTION": "Whenever you play a skill, gain #b1 #yWiz."
+    "DESCRIPTION": "每当你打出一张牌，获得 #b1 点 #y法力 。"
   },
   {
     "NAMES": [
-      "mad gremlin", "mad_gremlin"
+      "火大地精"
     ],
-    "DESCRIPTION": "Gain #b2 #yTemporary #yStrength when attacked."
+    "DESCRIPTION": "被攻击时获得 #b2 点 #y临时力量 。"
   },
   {
     "NAMES": [
-      "shield gremlin", "shield_gremlin"
+      "持盾地精"
     ],
-    "DESCRIPTION": "Whenever you play a skill, gain #b2 #yBlock."
+    "DESCRIPTION": "每当你打出一张技能牌，获得 #b2 点 #y格挡 。"
   },
   {
     "NAMES": [
-      "sneaky gremlin", "sneaky_gremlin"
+      "卑鄙地精"
     ],
-    "DESCRIPTION": "Whenever you play an attack, deal #b2 damage to a random enemy."
+    "DESCRIPTION": "每当你打出一张攻击牌，对随机一名敌人造成 #b2 点伤害。"
   },
   {
     "NAMES": [
-      "swap"
+      "切换"
     ],
-    "DESCRIPTION": "Switch places with another character. Does nothing if there is no valid target."
+    "DESCRIPTION": "切换到其他地精。 如果没有其他地精， 则不执行任何操作。"
   },
   {
     "NAMES": [
-      "wiz"
+      "法力"
     ],
-    "DESCRIPTION": "When you have at least three stacks of Wiz, attacks will consume all stacks to deal 10 additional damage."
+    "DESCRIPTION": "当你至少有 #b3 层 #y法力 时， 攻击会消耗所有 #y法力 并额外造成 #b10 点伤害 。"
   }
 ]

@@ -156,7 +156,10 @@
   },
   "champ:EnchantShield": {
     "NAME": "Enchant Shield",
-    "DESCRIPTION": "champ:Fatigue 5. NL Choose a card in hand. Increase its Block by !M! for this combat. NL Exhaust."
+    "DESCRIPTION": "champ:Fatigue 5. NL Choose a card in hand. Increase its Block by !M! for this combat. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "A poor time for that move."
+    ]
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
@@ -234,7 +237,10 @@
   },
   "champ:EnchantSword": {
     "NAME": "Enchant Sword",
-    "DESCRIPTION": "champ:Fatigue 5. NL Choose a card in hand. Increase its damage by !M! for this combat. Exhaust."
+    "DESCRIPTION": "champ:Fatigue 5. NL Choose a card in hand. Increase its damage by !M! for this combat. Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "A poor time for that move."
+    ]
   },
   "champ:BladeFlurry": {
     "NAME": "Flurry of Strikes",
@@ -269,7 +275,9 @@
   "champ:EnragedBash": {
     "NAME": "Enraged Bash",
     "DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: This card hits an additional time this combat.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. NL *Berserker champ:Combo: This card hits an additional time this combat."
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage !M! times. NL *Berserker champ:Combo: This card hits an additional time this combat."
+    ]
   },
   "champ:VampiricStrike": {
     "NAME": "Clobber",
@@ -282,7 +290,7 @@
   },
   "champ:HeartStrike": {
     "NAME": "Finish Him",
-    "DESCRIPTION": "Can only be used against an enemy with less than !M!% HP. NL Deal !D1 damage.",
+    "DESCRIPTION": "Can only be used against an enemy with less than !M!% HP. NL Deal !D! damage.",
     "EXTENDED_DESCRIPTION": [
       "A poor time for that move.",
       "That foe isn't ready to be ended yet."
@@ -415,7 +423,10 @@
   },
   "champ:EnchantCrown": {
     "NAME": "Enchant Crown",
-    "DESCRIPTION": "champ:Fatigue 5. NL Choose a card in hand. It costs 0 this combat. NL Exhaust."
+    "DESCRIPTION": "champ:Fatigue 5. NL Choose a card in hand. It costs 0 this combat. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "A poor time for that move."
+    ]
   },
   "champ:ModFinisherStrike": {
     "NAME": "Finishing Strike",

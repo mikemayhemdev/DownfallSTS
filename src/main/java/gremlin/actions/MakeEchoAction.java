@@ -6,6 +6,7 @@ import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.AlwaysRetai
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -41,7 +42,7 @@ public class MakeEchoAction extends AbstractGameAction {
 
     private AbstractCard echoCard(){
         AbstractCard card = this.c.makeStatEquivalentCopy();
-        card.name = "Echo: " + card.name;
+        card.name = CardCrawlGame.languagePack.getUIString("Gremlin:MakeEchoAction").TEXT[0] + card.name;
         card.exhaust = true;
         card.isEthereal = true;
         AlwaysRetainField.alwaysRetain.set(card, false);

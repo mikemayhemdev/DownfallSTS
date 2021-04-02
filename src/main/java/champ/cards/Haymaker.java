@@ -20,18 +20,16 @@ public class Haymaker extends AbstractChampCard {
     public Haymaker() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        tags.add(ChampMod.FINISHER);
         postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new AnimateSuplexAction(m));
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-
+        if (dcombo())
             applyToEnemy(m, autoWeak(m, 2));
-
+        if (bcombo())
             applyToEnemy(m, autoVuln(m, 2));
-            finisher();
     }
 
     @Override

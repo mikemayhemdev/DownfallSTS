@@ -55,5 +55,10 @@
     "TEXT": [
        " Gold (Bonus)"
     ]
+  },
+  "Gremlin:MakeEchoAction": {
+    "TEXT": [
+      "Echo: "
+    ]
   }
 }

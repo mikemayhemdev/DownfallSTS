@@ -1,143 +1,147 @@
 {
   "Gremlin:ImpeccablePecs": {
-    "NAME": "Impeccable Pecs",
-    "FLAVOR": "Glorious.",
+    "NAME": "完美胸肌",
+    "FLAVOR": "完美！",
     "DESCRIPTIONS": [
-      "Whenever you gain #yStrength, gain an equal amount of Temporary HP."
+      "每当你获得 #y力量 时，获得等量临时生命。"
     ]
   },
   "Gremlin:FragmentationGrenade": {
-    "NAME": "Fragmentation Grenade",
-    "FLAVOR": "Nobody dares to ask where the Gremlin got it from.",
+    "NAME": "破片手雷",
+    "FLAVOR": "没人敢问这玩意地精到底是从哪里搞来的。",
     "DESCRIPTIONS": [
-      "Damage dealt to random enemies is increased by #b", "."
+      "对随机敌人造成的伤害提高 #b",
+      " 点。"
     ]
   },
   "Gremlin:GremlinBomb": {
-    "NAME": "Gremlin Bomb",
-    "FLAVOR": "Gremlins have an uncanny knack for finding dangerous things. Sometimes, they even survive looting them.",
+    "NAME": "地精炸弹",
+    "FLAVOR": "地精有察觉危险的能力。 有时这能让他们劫后余生。",
     "DESCRIPTIONS": [
-      "Whenever a Gremlin dies, deal #b", " damage to ALL enemies."
+      "当地精死亡时, 对所有敌人造成 #b",
+      " 点伤害。"
     ]
   },
   "Gremlin:GremlinGravestone": {
-    "NAME": "Gremlin Gravestone",
-    "FLAVOR": "Where do gremlins go when they die? Not bloody far enough.",
+    "NAME": "地精墓碑",
+    "FLAVOR": "地精死后去了哪里呢？",
     "DESCRIPTIONS": [
-      "Dead Gremlins can be Resurrected at Rest Sites as a Free Action."
+      "死亡的地精能在休息处复活（自由行动）。"
     ]
   },
   "Gremlin:GremlinKnob": {
-    "NAME": "Mob Leader's Staff",
-    "FLAVOR": "Among gremlin mobs, the one with the best horn maintains complete command over the troupe, until another one manages to steal it.",
+    "NAME": "首领之角",
+    "FLAVOR": "在地精小队这种，谁有这个角，谁就是首领。直到这玩意下一次被人偷走。",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain [E] , draw #b1 card, and #ySwap to the next Gremlin."
+      "每场战斗开始时，获得 [E] 并抽 #b1 张牌。 #y切换 到下一只地精。"
     ]
   },
   "Gremlin:GremlinKnobUpgrade": {
-    "NAME": "Mob Leader's Crown",
-    "FLAVOR": "The fancier the symbol of office, the more likely it is to be stolen.",
+    "NAME": "首领之冠",
+    "FLAVOR": "标志越华丽，越容易被偷走。",
     "DESCRIPTIONS": [
-      "Replaces ",
-      ". NL The first time you shuffle your deck each turn, gain [E] , draw #b1 card, and #ySwap to the next Gremlin."
+      "替换 ",
+      " 。 NL 每回合第一次洗牌时，获得 [E] 并抽 #b1 张牌。 #y切换 到下一只地精。"
     ]
   },
   "Gremlin:GremlinMask": {
-    "NAME": "Gremlin Mask",
-    "FLAVOR": "A sign of status among the Gremlin Mobs.",
+    "NAME": "地精面具",
+    "FLAVOR": "地精暴民地位的标志。",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #ytemporary #yStrength."
+      "每场战斗开始时获得 #b1 点 #y临时力量 。"
     ]
   },
   "Gremlin:LeaderVoucher": {
-    "NAME": "Gremlin Leader's Voucher",
-    "FLAVOR": "IOU 1 Gremlin",
+    "NAME": "领头代付",
+    "FLAVOR": "欠一只地精",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. NL Upon pickup, #rpermanently #rlose #ra #rGremlin.",
-      " NL #r( #rFat #rGremlin #r)",
-      " NL #r( #rGremlin #rWizard #r)",
-      " NL #r( #rMad #rGremlin #r)",
-      " NL #r( #rShield #rGremlin #r)",
-      " NL #r( #rSneaky #rGremlin #r)"
+      "你的回合开始时获得 [E] 。 NL 拾起时， #r永久失去一名地精 。",
+      " NL #r（胖地精）",
+      " NL #r（地精法师）",
+      " NL #r（火大地精）",
+      " NL #r（持盾地精）",
+      " NL #r（卑鄙地精）"
     ]
   },
   "Gremlin:MagicalMallet": {
-    "NAME": "Magic Mallet",
-    "FLAVOR": "Stubs toes twice as hard.",
+    "NAME": "魔槌",
+    "FLAVOR": "手柄翻倍加固。",
     "DESCRIPTIONS": [
-      "Whenever you apply #yWeak, gain #b1 #yWiz, up to #b3 times per turn."
+      "每当你给予 #y虚弱 时，获得 #b1 点 #y法力 。每回合至多 #b3 次。"
     ]
   },
   "Gremlin:PricklyShields": {
-    "NAME": "Prickly Shields",
-    "FLAVOR": "Gremlins use whatever scraps they can find as weapons or armor. Some serve as both.",
+    "NAME": "多刺盾牌",
+    "FLAVOR": "地精可以找到任何残片充当武器和铠甲。有时候两者都可以。",
     "DESCRIPTIONS": [
-      "Whenever you gain #yBlock, deal #b", " damage to a random enemy."
+      "当你获得 #y格挡 时, 随机对敌人造成 #b",
+      " 点伤害。"
     ]
   },
   "Gremlin:ShortStature": {
-    "NAME": "Short Stature",
-    "FLAVOR": "It is easy to get away with mischief if you are literally beneath their notice.",
+    "NAME": "小个子",
+    "FLAVOR": "身材小才不容易引起注意。",
     "DESCRIPTIONS": [
-      "The first time a Gremlin would die each combat, heal it to #b50% of your Max HP instead.",
-      "Already used this combat."
+      "每场战斗可一次地精将要死亡时，免死并回复到 #b50% 最大生命。",
+      "本场战斗已经失效。"
     ]
   },
   "Gremlin:StolenMerchandise": {
-    "NAME": "Stolen Merchandise",
-    "FLAVOR": "\"Blasted, thieving Gremlins!\".",
+    "NAME": "被盗商品",
+    "FLAVOR": "“诅咒你，可恶的小偷！”",
     "DESCRIPTIONS": [
-      "Whenever you #ySwap, add an #yEcho of a random Colorless card to your hand. NL At the start of combat, the Merchant gains #b",
-      " Strength.",
-      "You no good, blasted, thieves!",
-      "You cowardly, wretched vermin!",
-      "Greedy grasping gremlins!"
+      "当你 #y切换 地精 时, 随机将一张无色牌的 #y回响 加入你的手牌。 NL 每场战斗开始时，商人获得 #b",
+	  " 点 #y力量 。",
+      "这好吗？这不好，小偷们！",
+      "你们这群胆小鬼！",
+      "贪婪的小地精们！"
     ]
   },
   "Gremlin:SupplyScroll": {
-    "NAME": "Supply Scroll",
-    "FLAVOR": "A surprisingly detailed inventory of the mob's various bits and bobbles.",
+    "NAME": "供应卷轴",
+    "FLAVOR": "一份十分详尽的关于地精暴徒武器装甲素材的物品清单。",
     "DESCRIPTIONS": [
-      "At the start of your 3rd turn, add a random assortment of 4 #yShivs and #yWards to your hand."
+      "第三回合开始时， NL 将 3 张随机 #y小刀 或 #y守卫 加入手牌。"
     ]
   },
   "Gremlin:TagTeamwork": {
-    "NAME": "Tag Teamwork",
-    "FLAVOR": "Teamwork makes the dream work.",
+    "NAME": "团队协作",
+    "FLAVOR": "团队合作让梦想成真。",
     "DESCRIPTIONS": [
-      "Whenever you draw #yTag #yTeam, draw another card. NL Upon pickup, add two copies of #yTag #yTeam to your deck."
+      "每当你抽到 #y配合 时，再抽一张牌。 NL 拾起时，将两张 #y配合 的复制加入牌组。"
     ]
   },
   "Gremlin:WizardHat": {
-    "NAME": "Wizard Hat",
-    "FLAVOR": "The accompanying robes have long since been stolen.",
+    "NAME": "巫师帽",
+    "FLAVOR": "配套的长袍早就不知道什么时候被偷了。",
     "DESCRIPTIONS": [
-      "Whenever you consume #yWiz, remove a debuff at random."
+      "每当你消耗 #y法力 时，随机移除一种负面效果。"
     ]
   },
   "Gremlin:WizardStaff": {
-    "NAME": "Wizard Staff",
-    "FLAVOR": "The pride and joy of every Gremlin Wizard, this staff is a frequent target of theft by rival mobs.",
+    "NAME": "法师杖",
+    "FLAVOR": "每个地精法师的骄傲和快乐，敌方法师经常想偷走这根法杖。",
     "DESCRIPTIONS": [
-      "Wiz deals #b7 additional damage."
+      "每点 法力 额外造成 #b7 点伤害 。"
     ]
   },
   "Gremlin:WoundPoker": {
-    "NAME": "Wound Poker",
-    "FLAVOR": "Does it hurt when I do this?.",
+    "NAME": "烧火棍",
+    "FLAVOR": "我这样做会疼吗？。",
     "DESCRIPTIONS": [
-      "At the end of each turn, deal #b", " damage to each #yWeakened enemy."
+      "每回合结束时，对有 #y虚弱 的敌人造成 #b",
+      " 点伤害。"
     ]
   },
   "Gremlin:PatchFixes": {
     "NAME": "",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Upon pickup, raise all your Gremlins' Max HP by #b",
-      "When adding cards into your deck, you may raise all your Gremlins' Max HP by #b1 instead.",
-      " #yGold. NL Raise all your Gremlins' Max HP by #b",
-      "At the end of every 5th combat, raise all your Gremlins' Max HP by #b1.",
-      "+1 Max HP"
+      "拾起时，将所有地精最大生命提高 #b",
+      "每当你将一张牌加入你的牌组，可以选择提高所有地精 #b1 点最大生命。",
+      " #y金币 。将所有地精最大生命提高 #b",
+      "每5场战斗结束，所有地精获得 #b1 点最大生命。",
+      "+1 最大生命"
     ]
   }
 }

@@ -63,8 +63,6 @@ public class RapidStrikes extends AbstractChampCard {
         super.applyPowers();
 
         this.rawDescription = cardStrings.DESCRIPTION;
-        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0] + (ChampMod.techniquesThisTurn + magicNumber);
-        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[2];
 
         this.initializeDescription();
     }

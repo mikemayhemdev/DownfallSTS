@@ -42,5 +42,13 @@
   "downfall:StatusAbuse": {
     "NAME": "强加",
     "DESCRIPTION": "初始拥有备用电池、甜圈垫片、八体垫片、医疗箱和铜制神像。所有其他遗物将变为头环。"
+  },
+  "downfall:TooManyShivs": {
+    "NAME": "超量小刀",
+    "DESCRIPTION": "初始拥有天鹅绒颈圈，虚无结晶和10张小刀。"
+  },
+  "downfall:Wizzardry": {
+    "NAME": "巫术",
+    "DESCRIPTION": "初始拥有巫师帽，法师杖和一张升级的巫术。"
   }
 }

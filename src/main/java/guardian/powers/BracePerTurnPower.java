@@ -21,7 +21,6 @@ public class BracePerTurnPower extends AbstractGuardianPower{
     public BracePerTurnPower(AbstractCreature owner, int amount) {
         this.ID = POWER_ID;
         this.owner = owner;
-        this.source = source;
         this.setImage("Revenge84.png", "Revenge32.png");
         this.type = POWER_TYPE;
         this.amount = amount;
@@ -34,8 +33,7 @@ public class BracePerTurnPower extends AbstractGuardianPower{
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
-    @Override
-    public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
+    public void atStartOfTurn() {
         this.flash();
         brace(amount);
     }

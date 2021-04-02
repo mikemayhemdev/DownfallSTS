@@ -23,9 +23,7 @@ public class ShadowGuise extends AbstractHexaCard {
         super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseBlock = BLOCK;
         exhaust = true;
-        this.parent = parent;
-        if (parent != null)
-            cardsToPreview = this.parent.makeStatEquivalentCopy();
+        setParent(parent);
     }
 
     public ShadowGuise() {
@@ -34,7 +32,8 @@ public class ShadowGuise extends AbstractHexaCard {
 
     public void setParent(AbstractCard parent) {
         this.parent = parent;
-        cardsToPreview = this.parent.makeStatEquivalentCopy();
+        if (parent != null)
+            cardsToPreview = this.parent.makeStatEquivalentCopy();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

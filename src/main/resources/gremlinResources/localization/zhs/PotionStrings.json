@@ -1,29 +1,29 @@
 {
   "gremlin:GremlinPotion": {
-    "NAME": "Eau de Grem",
+    "NAME": "地精香水",
     "DESCRIPTIONS": [
-      "Use all #b5 Gremlin Abilities #b",
-      " times."
+      "使用所有 #b5 名 地精的能力 #b",
+      " 次。"
     ]
   },
   "gremlin:NecromancyPotion": {
-    "NAME": "Gremlin In A Jar",
+    "NAME": "罐装地精",
     "DESCRIPTIONS": [
-      "Resurrect a random Gremlin at #b",
-      "% of your Max HP."
+      "复活随机一只地精并回复到 #b",
+      "% 最大生命。"
     ]
   },
   "gremlin:SwapPotion": {
-    "NAME": "Bottled Dupe",
+    "NAME": "瓶装哄骗",
     "DESCRIPTIONS": [
-      "#ySwap to a random Gremlin."
+      "#y切换 到随机一只地精。"
     ]
   },
   "gremlin:WizPotion": {
-    "NAME": "Pizazz Potion",
+    "NAME": "激情药水",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yWiz."
+      "获得 #b",
+      " 点 #y法术 。"
     ]
   }
 }

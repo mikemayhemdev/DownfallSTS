@@ -35,13 +35,13 @@
     ],
     "EXTRA_TEXT": [
       "One Mass production of anthropomorphic Ancient Artifacts. NL Reprogrammed for protect except entrance to the city",
-      "One of the Guardian's earlier drafts. Looks like it wants to prove itself!"
+      "One of the Guardian's earlier drafts. NL It worked better on paper."
     ]
   },
   "reskinContent:ReSkinSlime": {
     "TEXT": [
       "Slaifu",
-      "Slime Boss"
+      "Slime Boss?"
     ],
     "EXTRA_TEXT": [
       "It's different from others. NL It will continue its gourmet journey after swallowing many things.",
@@ -51,11 +51,11 @@
   "reskinContent:ReSkinHexaghost": {
     "TEXT": [
       "Hexago",
-      "Hexaspook"
+      "Ghostagon"
     ],
     "EXTRA_TEXT": [
       "There are different individuals in the container full of grievances. NL Does l materialization make power stronger?",
-      ""
+      "Likes to chase yellow circles around on its days off. NL Has a crippling fear of power pellets."
     ]
   },
   "reskinContent:ReSkinSnecko": {
@@ -65,17 +65,17 @@
     ],
     "EXTRA_TEXT": [
       "Its confusing eyes will cause cognitive deviation. NL Surveys show that confused creatures see a completely different world.",
-      ""
+      "Seeking greater strength, this ambitious Snecko followed in the footsteps of its hero. NL Adopting many consummate V's and a beefy arm, it calls itself \"Sneckdor\"."
     ]
   },
   "reskinContent:ReSkinChamp": {
     "TEXT": [
       "Chan-p",
-      "Champ"
+      "Laundry Day Champ"
     ],
     "EXTRA_TEXT": [
       "She looks funny waving a huge sword that doesn't match her figure. NL In fact, it has great power that no one else can imagine.",
-      ""
+      "It's laundry day."
     ]
   },
   "reskinContent:ReSkinBronze": {

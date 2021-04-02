@@ -30,7 +30,6 @@ public class CurlUp extends AbstractGuardianCard {
 
     //TUNING CONSTANTS
     private static final int BLOCK = 10;
-    private static final int UPGRADE_BONUS = 3;
     private static final int MULTICOUNT = 0;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
@@ -71,7 +70,6 @@ public class CurlUp extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_BONUS);
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.updateDescription();
         }
