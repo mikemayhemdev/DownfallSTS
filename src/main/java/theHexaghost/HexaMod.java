@@ -39,6 +39,7 @@ import theHexaghost.cards.*;
 import theHexaghost.events.*;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.BolsteringGhostflame;
+import theHexaghost.patches.ExhaustCardTickPatch;
 import theHexaghost.potions.DoubleChargePotion;
 import theHexaghost.potions.EctoCoolerPotion;
 import theHexaghost.potions.InfernoChargePotion;
@@ -295,6 +296,8 @@ public class HexaMod implements
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         renderFlames = false;
+        ExhaustCardTickPatch.exhaustedLastTurn = false;
+        ExhaustCardTickPatch.exhaustedThisTurn = false;
     }
 
     public static void renderGhostflames(SpriteBatch sb) {
