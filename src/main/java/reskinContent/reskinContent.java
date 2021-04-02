@@ -17,9 +17,6 @@ import reskinContent.helpers.AssetLoader;
 import reskinContent.skinCharacter.AbstractSkinCharacter;
 
 import java.nio.charset.StandardCharsets;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import java.util.Properties;
 
 import static reskinContent.patches.CharacterSelectScreenPatches.characters;
@@ -142,8 +139,7 @@ public class reskinContent implements
 
             for (int i = 0; i <= characters.length - 1; i++) {
                 characters[i].reskinUnlock = config.getBool(CardCrawlGame.saveSlot + "ReskinUnlock" + i);
-                characters[i].reskinCount = characters[i].skins.length - 1;
-                characters[i].reskinUnlock = true;
+                characters[i].reskinCount = config.getInt(CardCrawlGame.saveSlot + "reskinCount" + i);
                 for (int k = 0; k <= characters[i].skins.length - 1; k++) {
                     characters[i].skins[k].portraitAnimationType = config.getInt(CardCrawlGame.saveSlot + "portraitAnimationType" + i + "_" + k);
 
