@@ -39,7 +39,7 @@
     "FLAVOR": "The fancier the symbol of office, the more likely it is to be stolen.",
     "DESCRIPTIONS": [
       "Replaces ",
-      ". NL The first time you shuffle your deck each turn, gain [E] , draw #b1 card, and #ySwap to the next Gremlin."
+      ". NL The first time you shuffle your draw pile each turn, gain [E] , draw #b1 card, and #ySwap to the next Gremlin."
     ]
   },
   "Gremlin:GremlinMask": {
