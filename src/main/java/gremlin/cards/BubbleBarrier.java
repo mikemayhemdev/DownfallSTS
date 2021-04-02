@@ -22,7 +22,7 @@ public class BubbleBarrier extends AbstractGremlinCard {
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 
     private static final int COST = 1;
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 2;
     private static final int UPGRADED_COST = 0;
 
     public BubbleBarrier()
