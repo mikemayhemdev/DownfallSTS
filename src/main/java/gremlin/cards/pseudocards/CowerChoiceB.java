@@ -17,6 +17,8 @@ import gremlin.actions.SetCardTargetCoordinatesAction;
 import gremlin.cards.AbstractGremlinCard;
 import gremlin.characters.GremlinCharacter;
 
+import static automaton.AutomatonMod.GOOD_STATUS;
+
 public class CowerChoiceB extends AbstractGremlinCard {
     public static final String ID = getID("CowerChoiceB");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -34,6 +36,8 @@ public class CowerChoiceB extends AbstractGremlinCard {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.dontTriggerOnUseCard = true;
         AlwaysRetainField.alwaysRetain.set(this, true);
+        // To not break with Bronze Idol
+        this.tags.add(GOOD_STATUS);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
