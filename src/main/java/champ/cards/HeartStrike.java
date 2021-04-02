@@ -46,7 +46,10 @@ public class HeartStrike extends AbstractChampCard {
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         if (m != null) {
-            if (m.currentHealth >= (m.maxHealth * (magicNumber / 100))) return false;
+            if (m.currentHealth >= (m.maxHealth * magicNumber / 100)) {
+                this.cantUseMessage = EXTENDED_DESCRIPTION[1];
+                return false;
+            }
         }
         return super.canUse(p, m);
     }
