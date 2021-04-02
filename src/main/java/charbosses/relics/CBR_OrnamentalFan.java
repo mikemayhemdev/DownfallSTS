@@ -24,6 +24,11 @@ public class CBR_OrnamentalFan extends AbstractCharbossRelic {
         this.counter = 0;
     }
 
+    @Override
+    public void atBattleStart() {
+        this.counter = 0;
+    }
+
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK) {
             ++this.counter;
