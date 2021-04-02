@@ -29,6 +29,12 @@ public class CBR_MercuryHourglass extends AbstractCharbossRelic {
     }
 
     @Override
+    public void atPreBattle() {
+        this.pulse = true;
+        this.beginPulse();
+    }
+
+    @Override
     public AbstractRelic makeCopy() {
         return new CBR_MercuryHourglass();
     }
