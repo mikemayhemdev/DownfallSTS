@@ -464,7 +464,7 @@
 
   "Gremlin:Tricksy": {
     "NAME": "Tricksy",
-    "DESCRIPTION": "Draw !M! cards. Discard all cards draw this way that are not Attacks. NL Swap to Sneaky_Gremlin."
+    "DESCRIPTION": "Draw !M! cards. Discard all cards drawn this way that are not Attacks. NL Swap to Sneaky_Gremlin."
   },
 
   "Gremlin:TwistTheKnife": {

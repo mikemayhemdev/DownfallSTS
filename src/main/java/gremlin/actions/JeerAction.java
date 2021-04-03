@@ -20,7 +20,7 @@ public class JeerAction extends AbstractGameAction
         if (this.duration == Settings.ACTION_DUR_XFAST && this.target != null) {
             for(AbstractPower p : this.target.powers){
                 if(p.type == AbstractPower.PowerType.DEBUFF){
-                    AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, amount));
+                    AbstractDungeon.actionManager.addToTop(new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, amount));
                     break;
                 }
             }

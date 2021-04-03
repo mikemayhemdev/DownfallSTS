@@ -18,7 +18,7 @@ public class PourSaltAction extends AbstractGameAction
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_XFAST && this.target != null && this.target.hasPower("Weakened")) {
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Shiv(), amount));
+            AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(new Shiv(), amount));
         }
         this.tickDuration();
     }
