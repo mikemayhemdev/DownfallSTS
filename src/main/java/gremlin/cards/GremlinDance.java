@@ -94,6 +94,7 @@ public class GremlinDance extends AbstractGremlinCard {
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage,
                     this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         } else if(gremlin.equals("wizard")){
+            this.wizardry = true;
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                     this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
         } else {
