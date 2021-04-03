@@ -139,7 +139,11 @@ public class GremlinDance extends AbstractGremlinCard {
 
     public AbstractCard makeCopy()
     {
-        return new GremlinDance();
+        if (this.gremlin.equals("")) {
+            return new GremlinDance();
+        } else {
+            return new GremlinDance(this.gremlin);
+        }
     }
 
     @Override
