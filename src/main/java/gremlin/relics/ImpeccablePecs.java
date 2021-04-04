@@ -26,8 +26,10 @@ public class ImpeccablePecs extends AbstractGremlinRelic {
     }
 
     public void onTrigger(int amount) {
-        this.flash();
-        AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, amount));
+        if (amount > 0) {
+            this.flash();
+            AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, amount));
+        }
     }
 }
 
