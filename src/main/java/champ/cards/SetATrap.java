@@ -59,7 +59,7 @@ public class SetATrap extends AbstractChampCard {
 
             for (AbstractMonster m2 : AbstractDungeon.getMonsters().monsters) {
                 if (!m2.isDead && !m2.isDying) {
-                    applyToEnemy(m2, autoWeak(m, magicNumber));
+                    applyToEnemy(m2, autoWeak(m2, magicNumber));
                 }
 
             }
