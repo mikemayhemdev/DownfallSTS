@@ -23,7 +23,7 @@ public class Bang extends AbstractGremlinCard {
     private static final AbstractCard.CardRarity RARITY = CardRarity.UNCOMMON;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.ENEMY;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int POWER = 0;
     private static final int MAGIC = 3;
     private static final int UPGRADE_MAGIC = 1;

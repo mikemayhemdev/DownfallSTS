@@ -3,6 +3,7 @@ package gremlin.powers;
 import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPField;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnLoseTempHpPower;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -31,7 +32,9 @@ public class GremlinNobPower extends GremlinPower implements OnLoseTempHpPower {
     @Override
     public void onInitialApplication() {
         super.onInitialApplication();
-        ((GremlinCharacter)(AbstractDungeon.player)).becomeNob();
+        if (AbstractDungeon.player instanceof GremlinCharacter) {
+            ((GremlinCharacter) (AbstractDungeon.player)).becomeNob();
+        }
     }
 
     @Override
@@ -45,7 +48,12 @@ public class GremlinNobPower extends GremlinPower implements OnLoseTempHpPower {
     public int onLoseTempHp(DamageInfo damageInfo, int damageAmount) {
         int tempHp = TempHPField.tempHp.get(AbstractDungeon.player);
         if(damageAmount >= tempHp){
-            ((GremlinCharacter)(AbstractDungeon.player)).revertNob();
+            if (AbstractDungeon.player instanceof GremlinCharacter) {
+                ((GremlinCharacter) (AbstractDungeon.player)).revertNob();
+            } else {
+                AbstractDungeon.actionManager.addToTop(
+                        new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, this));
+            }
             return tempHp;
         }
         return damageAmount;
