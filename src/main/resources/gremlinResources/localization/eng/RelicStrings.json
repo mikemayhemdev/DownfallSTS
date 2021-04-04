@@ -79,7 +79,7 @@
     "NAME": "Short Stature",
     "FLAVOR": "It is easy to get away with mischief if you are literally beneath their notice.",
     "DESCRIPTIONS": [
-      "The first time a Gremlin would die each combat, heal it to #b50% of your Max HP instead.",
+      "The first time a Gremlin would die each combat, heal it to #b75% of your Max HP instead.",
       "Already used this combat."
     ]
   },
