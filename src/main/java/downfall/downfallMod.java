@@ -1155,6 +1155,7 @@ public class downfallMod implements
         BaseMod.addRelic(new NeowBlessing(), RelicType.SHARED);
         BaseMod.addRelic(new ExtraCursedBell(), RelicType.SHARED);
         BaseMod.addRelic(new ExtraCursedKey(), RelicType.SHARED);
+        BaseMod.addRelic(new Hecktoplasm(), RelicType.SHARED);
     }
 
     public static boolean readyToDoThing = false;
