@@ -37,6 +37,7 @@ public class BlankCard extends CustomRelic {
 
             card2.freeToPlayOnce = true;
             card2.purgeOnUse = true;
+            card2.applyPowers();
 
             flash();
             AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(card2.makeStatEquivalentCopy()));
