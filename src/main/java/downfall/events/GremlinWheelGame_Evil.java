@@ -331,6 +331,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
                 AbstractDungeon.getCurrRoom().addRelicToRewards(relic);
                 AbstractDungeon.getCurrRoom().addGoldToRewards(300);
                 AbstractDungeon.combatRewardScreen.open();
+                this.hasFocus = false;
                 this.screen = CUR_SCREEN.LEAVE;
                 break;
             case LEAVE:
