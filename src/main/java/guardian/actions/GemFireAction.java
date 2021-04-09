@@ -55,8 +55,8 @@ public class GemFireAction extends AbstractGameAction {
             this.gem = gem;
             this.color = Color.WHITE.cpy();
             this.duration = this.startingDuration = Settings.FAST_MODE
-                    ? (0.5f + Settings.ACTION_DUR_XFAST * exhaustCount)
-                    : (0.5f + Settings.ACTION_DUR_FAST * exhaustCount);
+                    ? (1.0f + Settings.ACTION_DUR_XFAST * exhaustCount)
+                    : (1.0f + Settings.ACTION_DUR_FAST * exhaustCount);
             this.duration += hitNo * (Settings.FAST_MODE ? 0.1 : 0.2);
             sX = x1 = AbstractDungeon.player.hb.cX - AbstractDungeon.player.animX;
             sY = y1 = AbstractDungeon.player.hb.cY - AbstractDungeon.player.animY;
@@ -143,8 +143,8 @@ public class GemFireAction extends AbstractGameAction {
                 this.sX = this.x1;
                 this.sY = this.y1;
             } else if (this.duration > deployed) {
-                this.sX = Interpolation.pow2Out.apply(x2, x1, (this.duration - deployed) / 0.25f);
-                this.sY = Interpolation.pow2Out.apply(y2, y1, (this.duration - deployed) / 0.25f);
+                this.sX = Interpolation.fade.apply(x2, x1, (this.duration - deployed) / 0.25f);
+                this.sY = Interpolation.fade.apply(y2, y1, (this.duration - deployed) / 0.25f);
             } else if (this.duration > 0.25f) {
                 this.sX = x2; this.sY = y2;
             } else {
@@ -183,6 +183,13 @@ public class GemFireAction extends AbstractGameAction {
 
         if (this.duration == this.startingDuration) {
             addToTop(new GemFireDamageAction());
+            addToTop(new AbstractGameAction() {
+                { duration = 0.5f; }
+                @Override
+                public void update() {
+                    tickDuration();
+                }
+            });
             addGemsFromGroup(AbstractDungeon.player.hand);
             addGemsFromGroup(AbstractDungeon.player.drawPile);
             addGemsFromGroup(AbstractDungeon.player.discardPile);
