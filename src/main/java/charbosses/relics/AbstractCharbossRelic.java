@@ -72,7 +72,7 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
 
     @Override
     public void render(SpriteBatch sb) {
-        super.render(sb);
+        super.renderInTopPanel(sb);
         ////SlimeboundMod.logger.info("boss relic rendering hovered = " + this.hb.hovered);
         if (this.hb.hovered && !CardCrawlGame.relicPopup.isOpen) {
            // //SlimeboundMod.logger.info("boss relic rendering hovered");

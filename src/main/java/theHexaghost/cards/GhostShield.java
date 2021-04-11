@@ -16,7 +16,7 @@ public class GhostShield extends AbstractHexaCard {
 
     private static final int BLOCK = 6;
     private static final int MAGIC = 1;
-    private static final int UPG_BLOCK = 9;
+    private static final int UPG_BLOCK = 4;
 
     public GhostShield() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
