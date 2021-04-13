@@ -1,14 +1,10 @@
 package expansioncontent.cards;
 
-import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.beyond.Deca;
-import downfall.cardmods.EtherealMod;
 import expansioncontent.expansionContentMod;
-import expansioncontent.powers.AddCopyPower;
 import expansioncontent.powers.AddSameInstancePower;
 import expansioncontent.powers.NextTurnExhumePower;
 
@@ -20,14 +16,15 @@ public class DecaShield extends AbstractExpansionCard {
     private static final int BLOCK_INCREASE = 1;
 
     public PolyBeam partner = null;
-    public DecaShield(PolyBeam partner, boolean isPreview) {
+
+    public DecaShield(PolyBeam partner, boolean hasPreview) {
         super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_donudeca.png", "expansioncontentResources/images/1024/bg_boss_donudeca.png");
         tags.add(expansionContentMod.STUDY);
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = BLOCK_INCREASE;
         this.exhaust = true;
-        if (!isPreview) setPartner(partner);
+        if (hasPreview) setPartner(partner);
     }
 
     public DecaShield() {
@@ -40,8 +37,12 @@ public class DecaShield extends AbstractExpansionCard {
 
     public void setPartner(PolyBeam partner) {
         this.partner = partner;
-        if (partner != null)
+        if (partner != null) {
             cardsToPreview = this.partner;
+        } else {
+            cardsToPreview = new PolyBeam(null, false);
+            if (this.upgraded) cardsToPreview.upgrade();
+        }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -57,7 +58,7 @@ public class DecaShield extends AbstractExpansionCard {
         });
 
         if (this.partner == null) {
-            PolyBeam partner = new PolyBeam(this, false);
+            PolyBeam partner = new PolyBeam(this, true);
             if (this.upgraded) partner.upgrade();
             setPartner(partner);
             applyToSelf(new AddSameInstancePower(1, this.partner,
@@ -93,4 +94,3 @@ public class DecaShield extends AbstractExpansionCard {
         return new DecaShield(partner);
     }
 }
-
