@@ -310,7 +310,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
         if (keywords != null) {
             for (final Keyword keyword : keywords) {
                 logger.info("Adding Keyword - " + keyword.PROPER_NAME + " | " + keyword.NAMES[0]);
-                BaseMod.addKeyword(keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
+                BaseMod.addKeyword(modID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
             }
         }
     }
