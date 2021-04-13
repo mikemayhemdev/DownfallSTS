@@ -652,6 +652,7 @@ public class downfallMod implements
             contentSharing_potions = config.getBool(PROP_POTION_SHARING);
             contentSharing_colorlessCards = config.getBool(PROP_CARD_SHARING);
             crossoverCharacters = config.getBool(PROP_CHAR_CROSSOVER);
+            normalMapLayout = config.getBool(PROP_NORMAL_MAP);
             champDisableStanceHelper = config.getBool(PROP_CHAMP_PRO);
             unlockEverything = config.getBool(PROP_UNLOCK_ALL);
             noMusic = config.getBool(PROP_NO_MUSIC);
