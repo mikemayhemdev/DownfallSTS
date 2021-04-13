@@ -10,11 +10,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
 import expansioncontent.expansionContentMod;
-import expansioncontent.powers.AddCopyPower;
 import expansioncontent.powers.AddSameInstancePower;
 import expansioncontent.powers.NextTurnExhumePower;
-
-import java.util.UUID;
 
 public class PolyBeam extends AbstractExpansionCard {
     public final static String ID = makeID("PolyBeam");
@@ -25,7 +22,7 @@ public class PolyBeam extends AbstractExpansionCard {
 
     public DecaShield partner = null;
 
-    public PolyBeam(DecaShield partner, boolean isPreview) {
+    public PolyBeam(DecaShield partner, boolean hasPreview) {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_donudeca.png", "expansioncontentResources/images/1024/bg_boss_donudeca.png");
         tags.add(expansionContentMod.STUDY_SHAPES);
@@ -33,7 +30,7 @@ public class PolyBeam extends AbstractExpansionCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = DAMAGE_INCREASE;
         this.exhaust = true;
-        if (!isPreview) setPartner(partner);
+        if (hasPreview) setPartner(partner);
     }
 
     public PolyBeam() {
@@ -46,8 +43,11 @@ public class PolyBeam extends AbstractExpansionCard {
 
     public void setPartner(DecaShield partner) {
         this.partner = partner;
-        if (partner != null){
-            cardsToPreview = this.partner;//.makeStatEquivalentCopy(true);
+        if (partner != null) {
+            cardsToPreview = this.partner;
+        } else {
+            cardsToPreview = new DecaShield(null, false);
+            if (this.upgraded) cardsToPreview.upgrade();
         }
     }
 
@@ -66,7 +66,7 @@ public class PolyBeam extends AbstractExpansionCard {
         });
 
         if (this.partner == null) {
-            DecaShield partner = new DecaShield(this, false);
+            DecaShield partner = new DecaShield(this, true);
             if (this.upgraded) partner.upgrade();
             setPartner(partner);
             applyToSelf(new AddSameInstancePower(1, this.partner,
