@@ -45,13 +45,23 @@ public class HeartStrike extends AbstractChampCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if(!super.canUse(p, m)) return false; // prefer the cantUseMessage from being out of stance
+
         if (m != null) {
-            if (m.currentHealth >= (m.maxHealth * magicNumber / 100)) {
+            // targeting check
+            if (m.currentHealth >= (m.maxHealth * magicNumber / 100f)) {
                 this.cantUseMessage = EXTENDED_DESCRIPTION[1];
                 return false;
             }
+        } else {
+            // in-hand glow check
+            for (AbstractMonster m2 : monsterList()) {
+                if (m2.currentHealth < (m2.maxHealth * magicNumber / 100f))
+                    return true;
+            }
+            return false;
         }
-        return super.canUse(p, m);
+        return true;
     }
 
     public void upp() {
