@@ -100,14 +100,14 @@ public class GremlinSwapAction extends AbstractGameAction {
             AbstractDungeon.player.orbs.get(i).setSlot(i, AbstractDungeon.player.maxOrbs);
         }
 
+        AbstractDungeon.actionManager.addToTop(
+                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, gremlin.getPower(), 1));
+
         if(gremlinOrb.hp > 0) {
             AbstractDungeon.actionManager.addToTop(new ChannelAction(gremlinOrb));
         } else {
             GremlinMod.onGremlinDeath();
         }
-
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, gremlin.getPower(), 1));
 
         GremlinMod.onSwap();
 
