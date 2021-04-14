@@ -27,7 +27,7 @@ public class IroncladFortificationPower extends AbstractBossMechanicPower {
     }
 
     public void updateDescription() {
-        this.description = DESC[0];
+        this.description = DESC[0] + amount + DESC[1];
     }
 
     static {
