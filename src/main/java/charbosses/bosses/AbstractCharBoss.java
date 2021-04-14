@@ -15,6 +15,7 @@ import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
 import charbosses.cards.red.EnBodySlam;
+import charbosses.cards.red.EnSecondWind;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.orbs.EnemyDark;
@@ -486,10 +487,15 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
                 //Block checks for Act 3 Ironclad's Body Slams
                 if (c.block > 0) {
+                    //Special case for Second Wind, always exhausts 2 wounds with Feel No Pain up
+                    int tmpBlock = c.block;
+                    if(c instanceof EnSecondWind) {
+                        tmpBlock = 2 * (c.block + 3);
+                    }
                     for (int j = i + 1; j < hand.size(); j++) {
                         AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
                         if (c2 instanceof EnBodySlam) {
-                            c2.manualCustomDamageModifier += c.block;
+                            c2.manualCustomDamageModifier += tmpBlock;
                         }
                     }
                 }
