@@ -65,6 +65,8 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 
+import static charbosses.bosses.Ironclad.NewAge.ArchetypeAct3BlockNewAge.FORTIFICATION_AMOUNT;
+
 public abstract class AbstractCharBoss extends AbstractMonster {
 
     public static AbstractCharBoss boss;
@@ -503,7 +505,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 //Minion block checks for Act 3 Ironclad's Body Slams
                 if (c instanceof EnBodySlam) {
                     if (hasPower(BarricadePower.POWER_ID)) {
-                        c.manualCustomDamageModifier += 10;
+                        c.manualCustomDamageModifier += FORTIFICATION_AMOUNT;
                     }
                 }
 
