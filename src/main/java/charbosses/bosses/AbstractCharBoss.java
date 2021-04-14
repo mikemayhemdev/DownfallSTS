@@ -382,6 +382,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                     AbstractCharBoss.boss.hand.group = newHand;
 
                     AbstractCharBoss.boss.hand.refreshHandLayout();
+                    applyPowers();
                 }
             });
             addToBot(new WaitAction(0.2f));
