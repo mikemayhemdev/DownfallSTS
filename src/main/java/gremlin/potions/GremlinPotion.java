@@ -17,6 +17,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import gremlin.orbs.MadGremlin;
+import gremlin.orbs.ShieldGremlin;
+import gremlin.orbs.SneakyGremlin;
 import gremlin.powers.ModifiedLoseStrengthPower;
 import gremlin.powers.WizPower;
 
@@ -50,17 +53,17 @@ public class GremlinPotion extends AbstractPotion {
         }
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new StrengthPower(p, this.potency), this.potency));
+                new StrengthPower(p, MadGremlin.STRENGTH * this.potency)));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new ModifiedLoseStrengthPower(p, this.potency), this.potency));
+                new ModifiedLoseStrengthPower(p, MadGremlin.STRENGTH * this.potency)));
 
         for (int i = 0; i < this.potency; i++) {
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 2));
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, ShieldGremlin.BLOCK));
         }
 
         for (int i = 0; i < this.potency; i++) {
             AbstractDungeon.actionManager.addToBottom(
-                    new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, 2, DamageInfo.DamageType.THORNS),
+                    new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, SneakyGremlin.DAMAGE, DamageInfo.DamageType.THORNS),
                             AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
 

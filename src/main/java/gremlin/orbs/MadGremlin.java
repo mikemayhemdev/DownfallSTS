@@ -5,6 +5,7 @@ import gremlin.powers.GremlinPower;
 import gremlin.powers.MadGremlinPower;
 
 public class MadGremlin extends GremlinStandby{
+    public static final int STRENGTH = 2;
 
     public MadGremlin(int hp) {
         super(hp,"Gremlin:MadGremlin", "angry", "idle", 25);
@@ -12,7 +13,7 @@ public class MadGremlin extends GremlinStandby{
 
     @Override
     public void updateDescription() {
-        this.description = this.descriptions[0] + 2 + this.descriptions[1];
+        this.description = this.descriptions[0] + STRENGTH + this.descriptions[1];
     }
 
     @Override
@@ -27,6 +28,6 @@ public class MadGremlin extends GremlinStandby{
 
     @Override
     public GremlinPower getPower() {
-        return new MadGremlinPower(2);
+        return new MadGremlinPower(STRENGTH);
     }
 }
