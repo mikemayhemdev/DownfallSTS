@@ -70,6 +70,20 @@
       " 加入你的手牌。"
     ]
   },
+  "expansioncontent:AddSameInstancePower": {
+    "NAME": "推迟卡牌",
+    "DESCRIPTIONS": [
+      "下一回合开始时将 ",
+      " 加入你的手牌。"
+    ]
+  },
+  "expansioncontent:NextTurnExhumePower": {
+    "NAME": "推迟发掘",
+    "DESCRIPTIONS": [
+      "下一回合开始时 #y发掘 ",
+      " 到你的手牌。"
+    ]
+  },
   "expansioncontent:PretendHexWheelPower": {
     "NAME": "地狱火",
     "DESCRIPTIONS": [

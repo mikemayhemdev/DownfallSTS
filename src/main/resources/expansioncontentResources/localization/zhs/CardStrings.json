@@ -38,13 +38,13 @@
   },
   "expansioncontent:PolyBeam": {
     "NAME": "甜圈爆破",
-    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 造成 !D! 点伤害两次。 NL 下一回合将一张 *八体护盾 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 造成 !D! 点伤害两次。 NL 下一回合将一张 *八体护盾+ 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 造成 !D! 点伤害两次。 NL 这张牌的伤害提高 !M! 点。 NL 下一回合将一张 *八体护盾 *发掘 或加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 造成 !D! 点伤害两次。 NL 这张牌的伤害提高 !M! 点。 NL 下一回合将一张 *八体护盾+ *发掘 或加入手牌。 NL 消耗 。"
   },
     "expansioncontent:DecaShield": {
     "NAME": "八体护盾",
-    "DESCRIPTION": "虚无 。 NL expansioncontent:首领 - 先古造物。 NL 获得 !B! 点 格挡 。 NL 下一回合将一张带有 虚无 的 *八体射线 加入手牌 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL expansioncontent:首领 - 先古造物。 NL 获得 !B! 点 格挡 。 NL 下一回合将一张带有 虚无 的 *八体射线+ 加入手牌 。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL expansioncontent:首领 - 先古造物。 NL 获得 !B! 点 格挡 。 NL 这张牌的 格挡 提高 !M! 点。 NL 下一回合将一张 *八体射线 *发掘 或加入手牌 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL expansioncontent:首领 - 先古造物。 NL 获得 !B! 点 格挡 。 NL 这张牌的 格挡 提高 !M! 点。 NL 下一回合将一张 *八体射线+ *发掘 或加入手牌 。 NL 消耗 。"
   },
   "expansioncontent:PrepareCrush": {
     "NAME": "准备：猛撞",

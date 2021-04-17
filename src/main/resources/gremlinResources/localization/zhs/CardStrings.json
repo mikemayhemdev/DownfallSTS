@@ -216,7 +216,7 @@
   },
   "Gremlin:Irritability": {
     "NAME": "易怒",
-    "DESCRIPTION": "获得 !M! 层 guardianmod:临时 荆棘 。 NL gremlin:切换 到 gremlin:火大地精 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 guardianmod:临时 荆棘 。 NL gremlin:切换 到 gremlin:火大地精 。"
   },
   "Gremlin:Jeer": {
     "NAME": "嘲讽",

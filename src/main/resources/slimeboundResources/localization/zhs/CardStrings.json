@@ -273,7 +273,7 @@
   },
   "Slimebound:LeechLife": {
     "NAME": "吸取生命",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:消耗黏液 -回复等于敌人 slimeboundmod:黏液 层数的生命。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:消耗黏液 -回复等于敌人 slimeboundmod:黏液 层数的生命。（至多 !M! 点） NL 消耗 。"
   },
   "Slimebound:Equalize": {
     "NAME": "均质化",

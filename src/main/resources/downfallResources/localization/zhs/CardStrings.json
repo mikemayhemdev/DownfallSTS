@@ -25,7 +25,7 @@
   },
   "downfall:Scatterbrained": {
     "NAME": "漫不经心",
-    "DESCRIPTION": "不能被打出 。 NL 抽到时，将这张牌的 回响 充满你的手牌。"
+    "DESCRIPTION": "不能被打出 。 NL 如果在你的回合中抽到时，将这张牌的 回响 充满你的手牌。"
   },
   "downfall_Charboss:Slug": {
     "NAME": "弹头",
