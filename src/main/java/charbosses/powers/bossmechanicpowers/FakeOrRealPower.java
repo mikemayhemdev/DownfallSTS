@@ -55,6 +55,7 @@ public class FakeOrRealPower extends AbstractPower implements CloneablePowerInte
             for (AbstractMonster q : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 if (q instanceof MirrorImageSilent) {
                     q.isDead = true;
+                    q.isDying = true;
                     AbstractDungeon.effectList.add(new SmallerSmokeBombEffect(q.hb.cX, q.hb.cY));
                 }
                 addToTop(new RemoveSpecificPowerAction(q, q, this.ID));
