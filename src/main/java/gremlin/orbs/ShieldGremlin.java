@@ -5,6 +5,7 @@ import gremlin.powers.GremlinPower;
 import gremlin.powers.ShieldGremlinPower;
 
 public class ShieldGremlin extends GremlinStandby{
+    public static final int BLOCK = 2;
 
     public ShieldGremlin(int hp) {
         super(hp, "Gremlin:ShieldGremlin", "shield", "idle", 25);
@@ -12,7 +13,7 @@ public class ShieldGremlin extends GremlinStandby{
 
     @Override
     public void updateDescription() {
-        this.description = this.descriptions[0] + 2 + this.descriptions[1];
+        this.description = this.descriptions[0] + BLOCK + this.descriptions[1];
     }
 
     @Override
@@ -27,7 +28,7 @@ public class ShieldGremlin extends GremlinStandby{
 
     @Override
     public GremlinPower getPower() {
-        return new ShieldGremlinPower(2);
+        return new ShieldGremlinPower(BLOCK);
     }
 }
 
