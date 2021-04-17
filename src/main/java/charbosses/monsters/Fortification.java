@@ -16,6 +16,8 @@ import com.megacrit.cardcrawl.powers.BarricadePower;
 import com.megacrit.cardcrawl.powers.DemonFormPower;
 import downfall.downfallMod;
 
+import static charbosses.bosses.Ironclad.NewAge.ArchetypeAct3BlockNewAge.FORTIFICATION_AMOUNT;
+
 public class Fortification extends AbstractMonster {
 
     public static final String ID = downfallMod.makeID("Fortification");
@@ -35,7 +37,7 @@ public class Fortification extends AbstractMonster {
     public void takeTurn() {
         if (AbstractCharBoss.boss != null) {
             if (!AbstractCharBoss.boss.isDead && !AbstractCharBoss.boss.isDying)
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractCharBoss.boss, this, 10));
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractCharBoss.boss, this, FORTIFICATION_AMOUNT));
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
         }

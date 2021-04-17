@@ -23,6 +23,7 @@ import com.megacrit.cardcrawl.powers.BarricadePower;
 import java.util.ArrayList;
 
 public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
+    public static final int FORTIFICATION_AMOUNT = 10;
 
     public ArchetypeAct3BlockNewAge() {
         super("IC_BLOCK_ARCHETYPE", "Block");

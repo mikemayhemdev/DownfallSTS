@@ -88,6 +88,7 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
                     break;
                 case 4:
                     theVeryImportantBlasphemy.newPrio = -2;
+                    theVeryImportantBlasphemy.lockIntentValues = false;
                     theVeryImportantFlyingSleeves.newPrio = 0;
                     theVeryImportantFlyingSleeves.lockIntentValues = false;
                     AbstractBossCard c = new EnWish();
