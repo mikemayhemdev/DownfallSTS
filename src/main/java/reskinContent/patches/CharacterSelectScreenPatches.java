@@ -198,8 +198,8 @@ public class CharacterSelectScreenPatches {
                             if (char_effectsQueue.size() > 0) {
                                 for (int k = 0; k < char_effectsQueue.size(); k++) {
                                     if (!char_effectsQueue.get(k).isDone) {
-                                        char_effectsQueue.get(k).render(sb);
                                         char_effectsQueue.get(k).update();
+                                        char_effectsQueue.get(k).render(sb);
                                     } else {
                                         if (char_effectsQueue_toRemove == null)
                                             char_effectsQueue_toRemove = new ArrayList<>();
