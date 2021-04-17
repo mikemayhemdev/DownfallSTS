@@ -12,6 +12,8 @@ import gremlin.patches.Unmovable;
 
 import java.util.ArrayList;
 
+import static automaton.AutomatonMod.GOOD_STATUS;
+
 
 public class LeaderChoice extends AbstractGremlinCard implements Unmovable {
     public static final String ID = getID("LeaderChoice");
@@ -30,6 +32,8 @@ public class LeaderChoice extends AbstractGremlinCard implements Unmovable {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.dontTriggerOnUseCard = true;
         this.purgeOnUse = true;
+        // To not break with Bronze Idol
+        this.tags.add(GOOD_STATUS);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

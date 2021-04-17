@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 public class ShortStature extends AbstractGremlinRelic {
     public static final String ID = getID("ShortStature");
     private static final RelicStrings strings = CardCrawlGame.languagePack.getRelicStrings(ID);
-    private static final AbstractRelic.RelicTier TIER = RelicTier.RARE;
+    private static final AbstractRelic.RelicTier TIER = RelicTier.BOSS;
     private static final String IMG = "relics/short_stature.png";
     private static final AbstractRelic.LandingSound SOUND = LandingSound.FLAT;
 
@@ -41,7 +41,7 @@ public class ShortStature extends AbstractGremlinRelic {
     public void onTrigger() {
         this.flash();
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        int healAmt = AbstractDungeon.player.maxHealth / 2;
+        int healAmt = (AbstractDungeon.player.maxHealth * 3)/4;
         if (healAmt < 1) {
             healAmt = 1;
         }

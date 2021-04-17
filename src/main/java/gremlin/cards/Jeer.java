@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.actions.JeerAction;
+import gremlin.actions.JeerOuterAction;
 
 import static gremlin.GremlinMod.FAT_GREMLIN;
 
@@ -42,9 +43,8 @@ public class Jeer extends AbstractGremlinCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
-                this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        AbstractDungeon.actionManager.addToBottom(new JeerAction(m,this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new JeerOuterAction(m,new DamageInfo(p, this.damage,
+                this.damageTypeForTurn),this.magicNumber));
     }
 
     @Override

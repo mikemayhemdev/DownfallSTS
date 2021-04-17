@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import gremlin.actions.ShackleAction;
 import gremlin.characters.GremlinCharacter;
 import sneckomod.SneckoMod;
 
@@ -93,6 +94,7 @@ public class GremlinDance extends AbstractGremlinCard {
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage,
                     this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         } else if(gremlin.equals("wizard")){
+            this.wizardry = true;
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                     this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
         } else {
@@ -101,12 +103,7 @@ public class GremlinDance extends AbstractGremlinCard {
         }
 
         if(gremlin.equals("fat")){
-            AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(m, p, new StrengthPower(m, -this.magicNumber), -this.magicNumber));
-            if (!m.hasPower("Artifact")) {
-                AbstractDungeon.actionManager.addToBottom(
-                        new ApplyPowerAction(m, p, new GainStrengthPower(m, this.magicNumber), this.magicNumber));
-            }
+            AbstractDungeon.actionManager.addToBottom(new ShackleAction(m, magicNumber));
         }
 
         if(gremlin.equals("sneak")){
@@ -143,7 +140,11 @@ public class GremlinDance extends AbstractGremlinCard {
 
     public AbstractCard makeCopy()
     {
-        return new GremlinDance();
+        if (this.gremlin.equals("")) {
+            return new GremlinDance();
+        } else {
+            return new GremlinDance(this.gremlin);
+        }
     }
 
     @Override

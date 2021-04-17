@@ -148,13 +148,13 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
 
         // Rare
         addRelic(new PricklyShields(), RelicType.SHARED);
+        addRelicToCustomPool(new GremlinBomb(), AbstractCardEnum.GREMLIN);
         addRelicToCustomPool(new GremlinGravestone(), AbstractCardEnum.GREMLIN);
-        addRelicToCustomPool(new ShortStature(), AbstractCardEnum.GREMLIN);
 
         // Boss
-        addRelicToCustomPool(new GremlinBomb(), AbstractCardEnum.GREMLIN);
         addRelicToCustomPool(new GremlinKnobUpgrade(), AbstractCardEnum.GREMLIN);
         addRelicToCustomPool(new LeaderVoucher(), AbstractCardEnum.GREMLIN);
+        addRelicToCustomPool(new ShortStature(), AbstractCardEnum.GREMLIN);
 
         // Shop
         addRelicToCustomPool(new StolenMerchandise(), AbstractCardEnum.GREMLIN);
@@ -310,7 +310,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
         if (keywords != null) {
             for (final Keyword keyword : keywords) {
                 logger.info("Adding Keyword - " + keyword.PROPER_NAME + " | " + keyword.NAMES[0]);
-                BaseMod.addKeyword(keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
+                BaseMod.addKeyword(modID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
             }
         }
     }

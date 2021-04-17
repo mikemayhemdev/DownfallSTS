@@ -36,7 +36,7 @@
     "DESCRIPTION": "Whenever you play a card this turn, gain !M! Block."
   },
 
-  "Gremlin:": {
+  "Gremlin:BulkUp": {
     "NAME": "Bulk Up",
     "DESCRIPTION": "Gain !M! Temporary HP. NL Swap to Fat_Gremlin."
   },
@@ -175,7 +175,7 @@
 
   "Gremlin:Fury": {
     "NAME": "Fury",
-    "DESCRIPTION": "Costs 1 less [E] for each 2 Strength you have. NL Deal !D! damage thrice."
+    "DESCRIPTION": "Costs 1 less [E] for every 2 Strength you have. NL Deal !D! damage three times."
   },
 
   "Gremlin:Glimmer": {
@@ -244,7 +244,7 @@
 
   "Gremlin:Irritability": {
     "NAME": "Irritability",
-    "DESCRIPTION": "Gain !M! temporary Thorns. NL Swap to Mad_Gremlin."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Temporary Thorns. NL Swap to Mad_Gremlin."
   },
 
   "Gremlin:Jeer": {
@@ -464,7 +464,7 @@
 
   "Gremlin:Tricksy": {
     "NAME": "Tricksy",
-    "DESCRIPTION": "Draw !M! cards. Discard all cards draw this way that are not Attacks. NL Swap to Sneaky_Gremlin."
+    "DESCRIPTION": "Draw !M! cards. Discard all cards drawn this way that are not Attacks. NL Swap to Sneaky_Gremlin."
   },
 
   "Gremlin:TwistTheKnife": {

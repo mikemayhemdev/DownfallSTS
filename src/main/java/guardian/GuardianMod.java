@@ -113,6 +113,7 @@ public class GuardianMod implements PostDrawSubscriber,
     public static ArrayList<Texture> socketTextures2 = new ArrayList<>();
     public static ArrayList<Texture> socketTextures3 = new ArrayList<>();
     public static ArrayList<Texture> socketTextures4 = new ArrayList<>();
+    public static ArrayList<Texture> gemTextures = new ArrayList<>();
     public static boolean stasisDelay = false;
     public static int stasisCount;
     public static boolean discoveryOverride = false;
@@ -1028,6 +1029,19 @@ public static void saveData() {
         socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/blackgem4.png")));
         socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/yellowgem4.png")));
         socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/lightbluegem4.png")));
+
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/redgem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/bluegem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/greengem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/lightbluegem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/whitegem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/cyangem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/orangegem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/crimsongem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/fraggem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/blackgem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/purplegem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/yellowgem4png")));
 
     }
 

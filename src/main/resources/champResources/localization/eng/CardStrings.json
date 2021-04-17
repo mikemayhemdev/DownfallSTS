@@ -275,7 +275,9 @@
   "champ:EnragedBash": {
     "NAME": "Enraged Bash",
     "DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: This card hits an additional time this combat.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. NL *Berserker champ:Combo: This card hits an additional time this combat."
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage !M! times. NL *Berserker champ:Combo: This card hits an additional time this combat."
+    ]
   },
   "champ:VampiricStrike": {
     "NAME": "Clobber",

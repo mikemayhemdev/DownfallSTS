@@ -341,8 +341,10 @@ public abstract class AbstractChampCard extends CustomCard {
                 };
             }
             if (!bottled) {
-                if ((AbstractDungeon.player.stance instanceof NeutralStance))
+                if ((AbstractDungeon.player.stance instanceof NeutralStance)) {
+                    this.cantUseMessage = ChampChar.characterStrings.TEXT[61];
                     return false;
+                }
             }
         }
         return super.canUse(p, m);

@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.actions.PourSaltAction;
+import gremlin.actions.PourSaltOuterAction;
 
 import static gremlin.GremlinMod.FAT_GREMLIN;
 
@@ -45,9 +46,8 @@ public class PourSalt extends AbstractGremlinCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
-                this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        AbstractDungeon.actionManager.addToBottom(new PourSaltAction(m,this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new PourSaltOuterAction(m, new DamageInfo(p, this.damage,
+                this.damageTypeForTurn), this.magicNumber));
     }
 
     @Override

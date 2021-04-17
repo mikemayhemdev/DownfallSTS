@@ -53,14 +53,27 @@ public class Fury extends AbstractGremlinCard {
         this.costForTurn += this.prevDiscount;
 
         super.applyPowers();
-        if (!AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) return;
-        if (AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount < 0) return;
+        if (!AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
+            if (this.costForTurn == COST) {
+                this.isCostModifiedForTurn = false;
+            }
+            return;
+        }
+        if (AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount < 0) {
+            if (this.costForTurn == COST) {
+                this.isCostModifiedForTurn = false;
+            }
+            return;
+        }
 
         this.prevDiscount = AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount / 2;
 
         if (this.costForTurn - this.prevDiscount < 0) this.prevDiscount = this.costForTurn;
 
         this.costForTurn = this.costForTurn - this.prevDiscount;
+        if (this.costForTurn != COST) {
+            this.isCostModifiedForTurn = true;
+        }
     }
 
     @Override

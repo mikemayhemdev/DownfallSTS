@@ -70,6 +70,20 @@
       " into your hand at the start of your next turn."
     ]
   },
+  "expansioncontent:AddSameInstancePower": {
+    "NAME": "Delayed Card",
+    "DESCRIPTIONS": [
+      "Add ",
+      " into your hand at the start of your next turn."
+    ]
+  },
+  "expansioncontent:NextTurnExhumePower": {
+    "NAME": "Delayed Exhume",
+    "DESCRIPTIONS": [
+      "Exhume ",
+      " at the start of your next turn."
+    ]
+  },
   "expansioncontent:PretendHexWheelPower": {
     "NAME": "Hexaburn",
     "DESCRIPTIONS": [

@@ -1,11 +1,11 @@
 package gremlin.events;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import com.megacrit.cardcrawl.rewards.RewardItem;
 
 public class GremlinTrenchcoat extends AbstractImageEvent {
     public static final String ID = "Gremlin:Trenchcoat";
@@ -21,6 +21,7 @@ public class GremlinTrenchcoat extends AbstractImageEvent {
         super(NAME, DIALOG_1, "images/events/ballAndCup.jpg");
         this.screen = CUR_SCREEN.INTRO;
         this.goldAmount = 50;
+        this.noCardsInRewards = true;
         if (AbstractDungeon.ascensionLevel >= 15) {
             this.goldAmount = 60;
         }
@@ -47,10 +48,14 @@ public class GremlinTrenchcoat extends AbstractImageEvent {
     }
 
     private void getColorlessCard(int num) {
+        AbstractDungeon.getCurrRoom().rewards.clear();
         for (int i=0;i<num;i++) {
-            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(AbstractDungeon.returnColorlessCard(),
-                    (float) Settings.WIDTH / 2.0F + (30F*i), (float)Settings.HEIGHT / 2.0F));
+            RewardItem reward = new RewardItem(AbstractCard.CardColor.COLORLESS);
+            reward.cards.remove(2);
+            reward.cards.remove(1);
+            AbstractDungeon.getCurrRoom().addCardReward(reward);
         }
+        AbstractDungeon.combatRewardScreen.open();
     }
 
     @Override

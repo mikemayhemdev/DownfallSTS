@@ -1,6 +1,5 @@
 package expansioncontent.cards;
 
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -11,34 +10,45 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
 import expansioncontent.expansionContentMod;
-import expansioncontent.powers.AddCopyPower;
-
+import expansioncontent.powers.AddSameInstancePower;
+import expansioncontent.powers.NextTurnExhumePower;
 
 public class PolyBeam extends AbstractExpansionCard {
     public final static String ID = makeID("PolyBeam");
 
     private static final int DAMAGE = 9;
     private static final int UPGRADE_DAMAGE = 3;
+    private static final int DAMAGE_INCREASE = 2;
 
-    public boolean isAPreview;
+    public DecaShield partner = null;
 
-    public PolyBeam(boolean noHover) {
+    public PolyBeam(DecaShield partner, boolean hasPreview) {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_donudeca.png", "expansioncontentResources/images/1024/bg_boss_donudeca.png");
         tags.add(expansionContentMod.STUDY_SHAPES);
         tags.add(expansionContentMod.STUDY);
         baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = DAMAGE_INCREASE;
         this.exhaust = true;
-        if (!noHover) {
-            DecaShield q = new DecaShield(true);
-            q.isAPreview = true;
-            if (upgraded) q.upgrade();
-            cardsToPreview = q;
-        }
+        if (hasPreview) setPartner(partner);
     }
 
     public PolyBeam() {
-        this(false);
+        this(null);
+    }
+
+    public PolyBeam(DecaShield partner) {
+        this(partner, true);
+    }
+
+    public void setPartner(DecaShield partner) {
+        this.partner = partner;
+        if (partner != null) {
+            cardsToPreview = this.partner;
+        } else {
+            cardsToPreview = new DecaShield(null, false);
+            if (this.upgraded) cardsToPreview.upgrade();
+        }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -46,16 +56,33 @@ public class PolyBeam extends AbstractExpansionCard {
         atb(new VFXAction(new SmallLaserEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY), 0.3F));
         atb(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
         atb(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
-        applyToSelf(new AddCopyPower(1,
-                cardsToPreview.makeStatEquivalentCopy(),
-                expansionContentMod.getModID() + "Resources/images/powers/StudyShapes84.png",
-                expansionContentMod.getModID() + "Resources/images/powers/StudyShapes32.png"));
 
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                baseDamage += magicNumber;
+            }
+        });
+
+        if (this.partner == null) {
+            DecaShield partner = new DecaShield(this, true);
+            if (this.upgraded) partner.upgrade();
+            setPartner(partner);
+            applyToSelf(new AddSameInstancePower(1, this.partner,
+                    expansionContentMod.getModID() + "Resources/images/powers/StudyShapes84.png",
+                    expansionContentMod.getModID() + "Resources/images/powers/StudyShapes32.png"));
+        } else {
+            this.partner.setPartner(this);
+            applyToSelf(new NextTurnExhumePower(1, this.partner,
+                    expansionContentMod.getModID() + "Resources/images/powers/StudyShapes84.png",
+                    expansionContentMod.getModID() + "Resources/images/powers/StudyShapes32.png"));
+        }
     }
 
     public void upgrade() {
         if (!upgraded) {
-            if (!isAPreview) cardsToPreview.upgrade();
+            if (cardsToPreview != null) cardsToPreview.upgrade();
             upgradeName();
             upgradeDamage(UPGRADE_DAMAGE);
             rawDescription = UPGRADE_DESCRIPTION;
@@ -63,5 +90,15 @@ public class PolyBeam extends AbstractExpansionCard {
         }
     }
 
-}
+    @Override
+    public AbstractCard makeStatEquivalentCopy() {
+        PolyBeam copy = (PolyBeam) super.makeStatEquivalentCopy();
+        copy.setPartner(partner);
+        return copy;
+    }
 
+    @Override
+    public AbstractCard makeCopy() {
+        return new PolyBeam(partner);
+    }
+}

@@ -24,7 +24,7 @@ public class BurlyBlow extends AbstractGremlinCard {
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.ENEMY;
 
     private static final int COST = 2;
-    private static final int POWER = 8;
+    private static final int POWER = 7;
     private static final int UPGRADE_BONUS = 2;
 
     public BurlyBlow()

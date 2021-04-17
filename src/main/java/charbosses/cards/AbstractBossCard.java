@@ -320,15 +320,27 @@ public abstract class AbstractBossCard extends AbstractCard {
             if (this.baseDamage != (int) tmp) {
                 this.isDamageModified = true;
             }
-            for (final AbstractPower p : player.powers) {
-                tmp = p.atDamageReceive(tmp, this.damageTypeForTurn, this);
+            if (mo == this.owner) {
+                for (final AbstractPower p : player.powers) {
+                    tmp = p.atDamageReceive(tmp, this.damageTypeForTurn, this);
+                }
+                tmp = player.stance.atDamageReceive(tmp, this.damageTypeForTurn);
+            } else {
+                for (final AbstractPower p : mo.powers) {
+                    tmp = p.atDamageReceive(tmp, this.damageTypeForTurn, this);
+                }
             }
-            tmp = player.stance.atDamageReceive(tmp, this.damageTypeForTurn);
             for (final AbstractPower p : this.owner.powers) {
                 tmp = p.atDamageFinalGive(tmp, this.damageTypeForTurn, this);
             }
-            for (final AbstractPower p : player.powers) {
-                tmp = p.atDamageFinalReceive(tmp, this.damageTypeForTurn, this);
+            if (mo == this.owner) {
+                for (final AbstractPower p : player.powers) {
+                    tmp = p.atDamageFinalReceive(tmp, this.damageTypeForTurn, this);
+                }
+            } else {
+                for (final AbstractPower p : mo.powers) {
+                    tmp = p.atDamageFinalReceive(tmp, this.damageTypeForTurn, this);
+                }
             }
             if (tmp < 0.0f) {
                 tmp = 0.0f;

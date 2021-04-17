@@ -4,6 +4,7 @@ import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.actions.ScatterbrainedAction;
@@ -32,8 +33,8 @@ public class Scatterbrained extends CustomCard {
     public Scatterbrained() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, CardColor.CURSE, RARITY, TARGET);
 
-        tags.add(downfallMod.DOWNFALL_CURSE);
-
+        // Prevent Scatterbrained from showing up in Neow Fights
+        // tags.add(downfallMod.DOWNFALL_CURSE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -41,7 +42,9 @@ public class Scatterbrained extends CustomCard {
     }
 
     public void triggerWhenDrawn() {
-        this.addToBot(new ScatterbrainedAction());
+        if (!AbstractDungeon.actionManager.turnHasEnded) {
+            this.addToBot(new ScatterbrainedAction());
+        }
     }
 
     public AbstractCard makeCopy() {

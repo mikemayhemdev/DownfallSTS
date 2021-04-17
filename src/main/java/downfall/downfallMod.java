@@ -652,6 +652,7 @@ public class downfallMod implements
             contentSharing_potions = config.getBool(PROP_POTION_SHARING);
             contentSharing_colorlessCards = config.getBool(PROP_CARD_SHARING);
             crossoverCharacters = config.getBool(PROP_CHAR_CROSSOVER);
+            normalMapLayout = config.getBool(PROP_NORMAL_MAP);
             champDisableStanceHelper = config.getBool(PROP_CHAMP_PRO);
             unlockEverything = config.getBool(PROP_UNLOCK_ALL);
             noMusic = config.getBool(PROP_NO_MUSIC);
@@ -1155,6 +1156,7 @@ public class downfallMod implements
         BaseMod.addRelic(new NeowBlessing(), RelicType.SHARED);
         BaseMod.addRelic(new ExtraCursedBell(), RelicType.SHARED);
         BaseMod.addRelic(new ExtraCursedKey(), RelicType.SHARED);
+        BaseMod.addRelic(new Hecktoplasm(), RelicType.SHARED);
     }
 
     public static boolean readyToDoThing = false;
