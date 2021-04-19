@@ -226,6 +226,8 @@ public class downfallMod implements
 
     public static CustomMod evilWithinSingleton = null;
 
+    public static Texture soulsImage;
+
     public downfallMod() {
         BaseMod.subscribe(this);
 
@@ -475,6 +477,7 @@ public class downfallMod implements
     }
 
     public void receivePostInitialize() {
+        soulsImage = ImageMaster.loadImage(downfallMod.assetPath("images/ui/Souls.png"));
 
         loadOtherData();
 
