@@ -192,6 +192,7 @@ public class CrystalForge extends AbstractImageEvent {
             cardChosen.addGemToSocket(gemChosen);
             AbstractDungeon.effectList.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
             AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(cardChosen.makeStatEquivalentCopy()));
+            this.imageEventText.updateBodyText(ENHANCE);
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             GuardianMod.gridScreenForSockets = false;
@@ -248,7 +249,6 @@ public class CrystalForge extends AbstractImageEvent {
                     case 3:
                         GuardianMod.gridScreenForGems = true;
                         AbstractDungeon.gridSelectScreen.open(GuardianMod.getGemCards(), 1, DESCRIPTIONS[8], false, false, true, false);
-                        this.imageEventText.updateBodyText(ENHANCE);
 
                         break;
                     case 4:
