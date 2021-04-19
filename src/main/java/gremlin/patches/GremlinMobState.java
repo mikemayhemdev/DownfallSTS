@@ -44,9 +44,10 @@ public class GremlinMobState {
         return gremlins.get(0);
     }
 
+    // Never returns the active gremlin
     public String getRearLivingGremlin() {
         String returnVal = "";
-        for(int i=0; i<5; i++){
+        for(int i=1; i<5; i++){
             if(gremlinHP.get(i) > 0){
                 returnVal = gremlins.get(i);
             }

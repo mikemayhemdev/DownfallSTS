@@ -9,6 +9,8 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.esotericsoftware.spine.*;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
@@ -16,6 +18,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.exordium.ScrapOoze;
@@ -48,6 +51,9 @@ import org.apache.logging.log4j.Logger;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import static basemod.BaseMod.addRelic;
 import static basemod.BaseMod.addRelicToCustomPool;
@@ -118,6 +124,31 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
 
     public static void initialize() {
         new GremlinMod();
+    }
+
+    private static Map<String, Skeleton> gremlinSkeletonMap = new HashMap<>();
+    private static Map<String, AnimationState> gremlinAnimationStateMap = new HashMap<>();
+
+    public static Skeleton getGremlinSkeleton(String assetFolder) {
+        if (!gremlinSkeletonMap.containsKey(assetFolder)) {
+            String atlasString = GremlinMod.getResourcePath("char/" + assetFolder + "/skeleton.atlas");
+            String jsonString = GremlinMod.getResourcePath("char/" + assetFolder + "/skeleton.json");
+
+            TextureAtlas texture = new TextureAtlas(Gdx.files.internal(atlasString));
+            SkeletonJson json = new SkeletonJson(texture);
+            json.setScale(Settings.scale / 1f);
+            SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal(jsonString));
+            gremlinSkeletonMap.put(assetFolder, new Skeleton(skeletonData));
+            gremlinSkeletonMap.get(assetFolder).setColor(Color.WHITE);
+            gremlinAnimationStateMap.put(assetFolder, new AnimationState(new AnimationStateData(skeletonData)));
+        }
+
+        return gremlinSkeletonMap.get(assetFolder);
+    }
+
+    public static AnimationState getGremlinAnimationState(String assetFolder) {
+        getGremlinSkeleton(assetFolder);
+        return gremlinAnimationStateMap.get(assetFolder);
     }
 
     @Override

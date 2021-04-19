@@ -1,9 +1,7 @@
 package gremlin.orbs;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.*;
@@ -22,10 +20,8 @@ import gremlin.powers.GremlinPower;
 public abstract class GremlinStandby extends AbstractOrb {
     public String[] descriptions;
 
-    private TextureAtlas atlas;
     public Skeleton skeleton;
     public AnimationState state;
-    private AnimationStateData stateData;
 
     public int hp;
     private int yOffset;
@@ -40,17 +36,9 @@ public abstract class GremlinStandby extends AbstractOrb {
 
         this.assetFolder = assetFolder;
         this.animationName = animationName;
-        String atlasString = GremlinMod.getResourcePath("char/" + assetFolder + "/skeleton.atlas");
-        String jsonString = GremlinMod.getResourcePath("char/" + assetFolder + "/skeleton.json");
 
-        this.atlas = new TextureAtlas(Gdx.files.internal(atlasString));
-        SkeletonJson json = new SkeletonJson(this.atlas);
-        json.setScale(Settings.scale / scale);
-        SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal(jsonString));
-        this.skeleton = new Skeleton(skeletonData);
-        this.skeleton.setColor(Color.WHITE);
-        this.stateData = new AnimationStateData(skeletonData);
-        this.state = new AnimationState(this.stateData);
+        this.skeleton = GremlinMod.getGremlinSkeleton(assetFolder);
+        this.state = GremlinMod.getGremlinAnimationState(assetFolder);
         AnimationState.TrackEntry e = this.state.setAnimation(0, animationName, true);
         e.setTime(e.getEndTime() * MathUtils.random());
 
