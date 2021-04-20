@@ -29,7 +29,6 @@ public class WizPotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
-        this.potency = getPotency();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                 new WizPower(AbstractDungeon.player, this.potency), this.potency));
     }

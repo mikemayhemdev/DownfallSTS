@@ -43,7 +43,6 @@ public class GremlinPotion extends AbstractPotion {
     }
 
     public void use(AbstractCreature target) {
-        this.potency = getPotency();
         AbstractPlayer p = AbstractDungeon.player;
         for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (!mo.isDeadOrEscaped()) {
