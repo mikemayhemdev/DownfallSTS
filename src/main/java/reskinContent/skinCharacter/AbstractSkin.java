@@ -159,6 +159,9 @@ public abstract class AbstractSkin {
         return CORPSE;
     }
 
+    public void dispose() {
+        if (this.portraitAtlas != null) this.portraitAtlas.dispose();
+    }
 }
 
 

@@ -152,6 +152,12 @@ public class Slaifu extends AbstractSkin {
             }
         }
     }
+
+    @Override
+    public void dispose() {
+        super.dispose();
+        if (this.sneckoAtlas != null) this.sneckoAtlas.dispose();
+    }
 }
 
 

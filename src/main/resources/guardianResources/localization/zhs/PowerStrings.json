@@ -203,5 +203,12 @@
       "你将在下 #b",
       " 个回合后退出 #y防御模式 。"
     ]
+  },
+  "Guardian:BracePerTurnPower": {
+    "NAME": "维持",
+    "DESCRIPTIONS": [
+      "你的回合开始时，提防 #b",
+      " 。"
+    ]
   }
 }

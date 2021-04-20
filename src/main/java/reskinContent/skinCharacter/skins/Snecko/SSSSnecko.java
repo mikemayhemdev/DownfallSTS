@@ -199,6 +199,12 @@ public class SSSSnecko extends AbstractSkin {
             }
         }
     }
+
+    @Override
+    public void dispose() {
+        super.dispose();
+        if (this.sneckoAtlas != null) this.sneckoAtlas.dispose();
+    }
 }
 
 
