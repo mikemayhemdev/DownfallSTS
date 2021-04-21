@@ -87,7 +87,7 @@
 
   "Gremlin:Dazzle": {
     "NAME": "Dazzle",
-    "DESCRIPTION": "Deal !D! damage. NL If you have 5 or more Wiz, the enemy loses 2 Strength. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL If you have 3 or more Wiz, the enemy loses 2 Strength. NL Exhaust."
   },
 
   "Gremlin:Defend": {
@@ -280,7 +280,7 @@
 
   "Gremlin:Necromancy": {
     "NAME": "Necromancy",
-    "DESCRIPTION": "Can only be played if you have 5 or more Wiz. NL Consume all Wiz to resurrect a random Gremlin with !M! HP. Exhaust.",
+    "DESCRIPTION": "Can only be played if you have 3 or more Wiz. NL Consume all Wiz to resurrect a random Gremlin with !M! HP. Exhaust.",
     "EXTENDED_DESCRIPTION": ["Not enough mojo.", "Nobody is dead yet.", "Not enough room."]
   },
 
@@ -421,7 +421,7 @@
 
   "Gremlin:ShowStopper": {
     "NAME": "Show Stopper",
-    "DESCRIPTION": "Can only be played if you have exactly 10 Wiz. NL Deal !D! damage to ALL enemies 5 times.",
+    "DESCRIPTION": "Can only be played if you have exactly 7 Wiz. NL Deal !D! damage to ALL enemies 5 times.",
     "EXTENDED_DESCRIPTION": ["Not enough suspense.", "The timing is ruined."]
   },
 
@@ -447,8 +447,8 @@
 
   "Gremlin:Tadah": {
     "NAME": "Tadah!",
-    "DESCRIPTION": "Add an Echo of a random Skill to your hand. NL Swap to Gremlin_Wizard.",
-    "UPGRADE_DESCRIPTION": "Add an Echo of a random Skill to your hand. It costs 1 less. NL Swap to Gremlin_Wizard."
+    "DESCRIPTION": "Add an Echo of a random Skill to your hand. It costs 1 less. NL Swap to Gremlin_Wizard.",
+    "UPGRADE_DESCRIPTION": "Add an Echo of a random, Upgraded Skill to your hand. NL It costs 1 less. NL Swap to Gremlin_Wizard."
   },
 
   "Gremlin:TagTeam": {

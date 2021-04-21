@@ -1,7 +1,5 @@
 package gremlin.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
@@ -10,7 +8,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import gremlin.actions.PourSaltAction;
 import gremlin.actions.PourSaltOuterAction;
 
 import static gremlin.GremlinMod.FAT_GREMLIN;
@@ -26,8 +23,8 @@ public class PourSalt extends AbstractGremlinCard {
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.ENEMY;
 
     private static final int COST = 1;
-    private static final int POWER = 4;
-    private static final int UPGRADE_BONUS = 1;
+    private static final int POWER = 6;
+    private static final int UPGRADE_BONUS = 2;
     private static final int MAGIC = 2;
     private static final int UPGRADE_MAGIC = 1;
 

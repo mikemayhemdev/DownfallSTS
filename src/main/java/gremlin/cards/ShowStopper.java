@@ -28,7 +28,7 @@ public class ShowStopper extends AbstractGremlinCard {
     private static final int COST = 0;
     private static final int POWER = 0;
     private static final int UPGRADE_BONUS = 2;
-    private static final int SHOWMANSHIP = 10;
+    private static final int SHOWMANSHIP = 7;
 
     public ShowStopper()
     {

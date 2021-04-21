@@ -28,6 +28,7 @@ public class Dazzle extends AbstractGremlinCard {
     private static final int COST = 1;
     private static final int POWER = 9;
     private static final int UPGRADE_BONUS = 4;
+    private static final int RAZZLE = 3;
 
     public Dazzle()
     {
@@ -47,7 +48,7 @@ public class Dazzle extends AbstractGremlinCard {
         }
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                 this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
-        if(amount >= 5){
+        if(amount >= RAZZLE){
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                     new StrengthPower(m, -2), -2));
         }
