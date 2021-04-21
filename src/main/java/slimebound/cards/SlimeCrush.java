@@ -48,12 +48,16 @@ public class SlimeCrush extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new AnimateJumpAction(p));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY, new Color(0.1F, 1.0F, 0.1F, 0.0F))));
-        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
-        if (!upgraded)
+        if (!upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY, new Color(0.1F, 1.0F, 0.1F, 0.0F))));
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.POISON));
-        else
+        } else {
+            for (AbstractMonster mon : AbstractDungeon.getCurrRoom().monsters.monsters)
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(new WeightyImpactEffect(mon.hb.cX, mon.hb.cY, new Color(0.1F, 1.0F, 0.1F, 0.0F))));
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.POISON));
+        }
         //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StunMonsterPower(p, p, this.magicNumber), this.magicNumber));
     }
 
@@ -65,6 +69,7 @@ public class SlimeCrush extends AbstractSlimeboundCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeDamage(5);
+            this.target = CardTarget.ALL_ENEMY;
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
             this.isMultiDamage = this.upgraded;
