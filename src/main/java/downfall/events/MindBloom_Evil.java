@@ -4,7 +4,9 @@ package downfall.events;
 import automaton.AutomatonChar;
 import basemod.ReflectionHacks;
 import champ.ChampChar;
+import com.badlogic.gdx.assets.loaders.ModelLoader;
 import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
 import com.megacrit.cardcrawl.cards.curses.Normality;
@@ -62,13 +64,17 @@ public class MindBloom_Evil extends AbstractImageEvent {
         super(NAME, DESCRIPTIONSALT[0], "images/events/mindBloom.jpg");
         this.screen = CurScreen.INTRO;
 
-        if (downfallMod.isDownfallCharacter(AbstractDungeon.player)){
-            this.imageEventText.setDialogOption(OPTIONSALT[0]);
+        if (downfallMod.isDownfallCharacter(AbstractDungeon.player)
+        &&( AbstractDungeon.player instanceof GuardianCharacter || AbstractDungeon.player instanceof AutomatonChar)) {
+            if (Loader.isModLoaded("DownfallExtension"))
+                this.imageEventText.setDialogOption(CardCrawlGame.languagePack.getEventString("DownfallExtension:MindBloom").OPTIONS[0]);
+            else
+                this.imageEventText.setDialogOption(OPTIONSALT[0]);
         } else {
             this.imageEventText.setDialogOption(OPTIONS[0]);   //original Mind Bloom if you are not a villain
         }
 
-        if (AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player) && AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player) && AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player)){
+        if (AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player) && AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player) && AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player)) {
             if (AbstractDungeon.player instanceof GremlinCharacter) {
                 this.imageEventText.setDialogOption(OPTIONSALT[5]);
             } else {
@@ -87,43 +93,43 @@ public class MindBloom_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screen) {
+        switch (this.screen) {
             case INTRO:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
                         this.screen = CurScreen.FIGHT;
-                        if (AbstractDungeon.player instanceof SlimeboundCharacter){
+                        if (AbstractDungeon.player instanceof SlimeboundCharacter) {
                             AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Slime Boss");
-                        } else
-                        if (AbstractDungeon.player instanceof GuardianCharacter){
-
+                        } else if (AbstractDungeon.player instanceof GuardianCharacter) {
+                            if (Loader.isModLoaded("DownfallExtension"))
+                            AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("DownfallExtension:Crowbot");
+                            else
                             AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("The Guardian");
-                        } else
-                        if (AbstractDungeon.player instanceof TheHexaghost){
+                        } else if (AbstractDungeon.player instanceof TheHexaghost) {
 
                             AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Hexaghost");
-                        } else
-                        if (AbstractDungeon.player instanceof ChampChar){
+                        } else if (AbstractDungeon.player instanceof ChampChar) {
                             AbstractMonster m = new Champ();
                             m.maxHealth = Math.round(m.maxHealth * .6F);
                             m.currentHealth = m.maxHealth;
-                            m.powers.add(new StrengthPower(m,-3));
+                            m.powers.add(new StrengthPower(m, -3));
                             AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
-                        } else
-                        if (AbstractDungeon.player instanceof AutomatonChar){
-                            AbstractMonster m = new BronzeAutomaton();
-                            m.maxHealth = Math.round(m.maxHealth * .6F);
-                            m.currentHealth = m.maxHealth;
-                            ReflectionHacks.setPrivate(m, BronzeAutomaton.class, "firstTurn", false);
-                            m.powers.add(new StrengthPower(m,-3));
-                            AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
-                        } else
-                        if (AbstractDungeon.player instanceof TheSnecko){
+                        } else if (AbstractDungeon.player instanceof AutomatonChar) {
+                            if (Loader.isModLoaded("DownfallExtension"))
+                                AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("DownfallExtension:Crowbot");
+                            else{
+                                AbstractMonster m = new BronzeAutomaton();
+                                m.maxHealth = Math.round(m.maxHealth * .6F);
+                                m.currentHealth = m.maxHealth;
+                                ReflectionHacks.setPrivate(m, BronzeAutomaton.class, "firstTurn", false);
+                                m.powers.add(new StrengthPower(m, -3));
+                                AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
+                            }
+                        } else if (AbstractDungeon.player instanceof TheSnecko) {
 
                             AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new SneckoMirror());
-                        } else
-                        if (AbstractDungeon.player instanceof GremlinCharacter){
+                        } else if (AbstractDungeon.player instanceof GremlinCharacter) {
                             lastCombatMetricKey = "Gremlin Mirror";
                             AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new AbstractMonster[]{spawnGremlin(GremlinLeader.POSX[0], GremlinLeader.POSY[0]), spawnGremlin(GremlinLeader.POSX[1], GremlinLeader.POSY[1]), new GremlinMirror()});
                         } else {
@@ -133,7 +139,7 @@ public class MindBloom_Evil extends AbstractImageEvent {
                             list.add("The Guardian");
 
                             Collections.shuffle(list, new Random(AbstractDungeon.miscRng.randomLong()));
-                            AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter((String)list.get(0));
+                            AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter((String) list.get(0));
                         }
 
                         AbstractDungeon.getCurrRoom().rewards.clear();
@@ -189,15 +195,15 @@ public class MindBloom_Evil extends AbstractImageEvent {
                             cardsAdded.add("Normality");
                             AbstractDungeon.effectList.add(new RainingGoldEffect(999));
                             AbstractDungeon.player.gainGold(999);
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Normality(), (float)Settings.WIDTH * 0.6F, (float)Settings.HEIGHT / 2.0F));
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Normality(), (float)Settings.WIDTH * 0.3F, (float)Settings.HEIGHT / 2.0F));
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Normality(), (float) Settings.WIDTH * 0.6F, (float) Settings.HEIGHT / 2.0F));
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Normality(), (float) Settings.WIDTH * 0.3F, (float) Settings.HEIGHT / 2.0F));
                             this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         } else {
                             this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
                             this.screen = CurScreen.LEAVE;
                             AbstractCard curse = new Doubt();
                             AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                             this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         }
                 }
@@ -223,7 +229,7 @@ public class MindBloom_Evil extends AbstractImageEvent {
         gremlinPool.add("GremlinFat");
         gremlinPool.add("GremlinTsundere");
         gremlinPool.add("GremlinWizard");
-        return getGremlin((String)gremlinPool.get(AbstractDungeon.miscRng.random(0, gremlinPool.size() - 1)), x, y);
+        return getGremlin((String) gremlinPool.get(AbstractDungeon.miscRng.random(0, gremlinPool.size() - 1)), x, y);
     }
 
     static {
