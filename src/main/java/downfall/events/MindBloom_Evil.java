@@ -4,7 +4,6 @@ package downfall.events;
 import automaton.AutomatonChar;
 import basemod.ReflectionHacks;
 import champ.ChampChar;
-import charbosses.bosses.Crowbot.CharBossCrowbot;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
@@ -99,7 +98,7 @@ public class MindBloom_Evil extends AbstractImageEvent {
                         } else
                         if (AbstractDungeon.player instanceof GuardianCharacter){
 
-                            AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(CharBossCrowbot.ID);
+                            AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("The Guardian");
                         } else
                         if (AbstractDungeon.player instanceof TheHexaghost){
 
