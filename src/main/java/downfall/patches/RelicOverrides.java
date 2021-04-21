@@ -86,6 +86,7 @@ public class RelicOverrides {
         public static void Prefix(Courier _instance) {
             if (EvilModeCharacterSelect.evilMode && _instance.name != CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[6]) {
                 //ReflectionHacks.setPrivateStaticFinal(Courier.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[6]);
+                _instance.imgUrl = null;
                 _instance.img = ImageMaster.loadImage(downfallMod.assetPath("images/relics/courierEvil.png"));
                 _instance.outlineImg = ImageMaster.loadImage(downfallMod.assetPath("images/relics/Outline/courierEvil.png"));
                 _instance.flavorText = CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[5];

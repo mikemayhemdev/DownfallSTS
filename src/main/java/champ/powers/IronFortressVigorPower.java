@@ -17,7 +17,7 @@ import downfall.util.TextureLoader;
 
 public class IronFortressVigorPower extends AbstractPower implements CloneablePowerInterface {
 
-    public static final String POWER_ID = ChampMod.makeID("IronFortressPower");
+    public static final String POWER_ID = ChampMod.makeID("IronFortressVigorPower");
 
     private static final Texture tex84 = TextureLoader.getTexture(ChampMod.getModID() + "Resources/images/powers/IronFortress84.png");
     private static final Texture tex32 = TextureLoader.getTexture(ChampMod.getModID() + "Resources/images/powers/IronFortress32.png");

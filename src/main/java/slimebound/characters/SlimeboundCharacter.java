@@ -52,9 +52,6 @@ public class SlimeboundCharacter extends CustomPlayer {
     public float xJumpCharOffset = (float) Settings.WIDTH * 0.21F;
     public float x = (float) Settings.WIDTH * 0.1F;
     public boolean puddleForm;
-    public float[] orbPositionsX = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    public float[] orbPositionsY = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-
 
     private String atlasURL = "slimeboundResources/SlimeboundImages/char/skeleton.atlas";
     private String jsonURL = "slimeboundResources/SlimeboundImages/char/skeleton.json";
@@ -108,10 +105,8 @@ public class SlimeboundCharacter extends CustomPlayer {
         this.reloadAnimation();
 
 
-        this.initializeSlotPositions();
         // this.dialogX = -200 * Settings.scale;
         //this.dialogY += -100 * Settings.scale;
-        //initializeSlotPositions();
 
     }
 
@@ -231,29 +226,6 @@ public class SlimeboundCharacter extends CustomPlayer {
         retVal.add(AbsorbEndCombat.ID);
         UnlockTracker.markRelicAsSeen(AbsorbEndCombat.ID);
         return retVal;
-    }
-
-    public void initializeSlotPositions() {
-        float xStartOffset = this.drawX + Settings.scale * -150F;
-        float yStartOffset = this.drawY + Settings.scale * -55F;
-        float ySpaceBottomAlternatingOffset = -70 * Settings.scale;
-        float ySpaceAlternatingOffset = -20 * Settings.scale;
-        float xSpaceBetweenSlots = 110 * Settings.scale;
-        float xSpaceBottomAlternatingOffset = -0.2F * Settings.scale;
-
-
-        orbPositionsX[0] = xStartOffset + (xSpaceBetweenSlots * 0);
-        orbPositionsX[1] = xStartOffset + (xSpaceBetweenSlots * 1);
-        orbPositionsX[2] = xStartOffset + (xSpaceBetweenSlots * 2);
-        orbPositionsX[3] = xStartOffset + (xSpaceBetweenSlots * 3);
-        orbPositionsX[4] = xStartOffset + (xSpaceBetweenSlots * 4);
-
-        orbPositionsY[0] = yStartOffset;
-        orbPositionsY[1] = yStartOffset + ySpaceAlternatingOffset;
-        orbPositionsY[2] = yStartOffset;
-        orbPositionsY[3] = yStartOffset + ySpaceAlternatingOffset;
-        orbPositionsY[4] = yStartOffset;
-
     }
 
     public CharSelectInfo getLoadout() {
