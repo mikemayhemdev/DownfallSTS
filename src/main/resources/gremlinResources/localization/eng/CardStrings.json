@@ -447,8 +447,8 @@
 
   "Gremlin:Tadah": {
     "NAME": "Tadah!",
-    "DESCRIPTION": "Add an Echo of a random Skill to your hand. NL Swap to Gremlin_Wizard.",
-    "UPGRADE_DESCRIPTION": "Add an Echo of a random Skill to your hand. It costs 1 less. NL Swap to Gremlin_Wizard."
+    "DESCRIPTION": "Add an Echo of a random Skill to your hand. It costs 1 less. NL Swap to Gremlin_Wizard.",
+    "UPGRADE_DESCRIPTION": "Add an Echo of a random, Upgraded Skill to your hand. NL It costs 1 less. NL Swap to Gremlin_Wizard."
   },
 
   "Gremlin:TagTeam": {
