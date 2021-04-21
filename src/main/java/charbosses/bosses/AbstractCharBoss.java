@@ -517,6 +517,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                     }
                 }
 
+                c.manualCustomDamageModifierMult *= c.damageMultIfPlayed;
+
                 //TODO - Sadistic Nature for Act 3 Silent
 
             }

@@ -66,6 +66,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     public int energyGeneratedIfPlayed = 0;
     public int strengthGeneratedIfPlayed = 0;
     public int damageMultGeneratedIfPlayed = 1;
+    public int damageMultIfPlayed = 1;
     public int focusGeneratedIfPlayed = 0;
     public int vulnGeneratedIfPlayed = 0;
     public int artifactConsumedIfPlayed = 0;
@@ -78,7 +79,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     public int newPrio = 0;
 
     public int manualCustomDamageModifier = 0;
-    public float manualCustomDamageModifierMult = 1;
+    public float manualCustomDamageModifierMult = 1.0f;
     public boolean manualCustomVulnModifier = false;
     public static boolean fakeStormPower = false;
     //TODO - Does Vuln get actually calculated anywhere?  this variable does not appear to be referenced
@@ -733,11 +734,6 @@ public abstract class AbstractBossCard extends AbstractCard {
         refreshIntentHbLocation();
         if (!intentActive) this.intentParticleTimer = 0.5F;
         if (!lockIntentValues) calculateCardDamage(null);
-
-        // //SlimeboundMod.logger.info(this.name + " intent being created: damage = " + this.intentDmg);
-
-        // //SlimeboundMod.logger.info(this.name + " intent being created: custom damage = " + customIntentModifiedDamage());
-        // //SlimeboundMod.logger.info(this.name + " intent being created: custom manual damage = " + manualCustomDamageModifier * manualCustomDamageModifierMult);
 
         if ((!lockIntentValues) && this.damage > -1) {
             if (this.isMultiDamage) {

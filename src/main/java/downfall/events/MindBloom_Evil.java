@@ -4,7 +4,6 @@ package downfall.events;
 import automaton.AutomatonChar;
 import basemod.ReflectionHacks;
 import champ.ChampChar;
-import com.badlogic.gdx.assets.loaders.ModelLoader;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.cards.AbstractCard;
