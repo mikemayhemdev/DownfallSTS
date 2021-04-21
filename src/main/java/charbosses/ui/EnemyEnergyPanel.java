@@ -34,7 +34,7 @@ public class EnemyEnergyPanel extends AbstractPanel {
     public static float fontScale;
     public static int totalCount;
     public static float energyVfxTimer;
-    private BitmapFont energyNumFont;
+    public BitmapFont energyNumFont;
 
     static {
         MSG = EnemyEnergyPanel.uiStrings.TEXT;
@@ -46,7 +46,7 @@ public class EnemyEnergyPanel extends AbstractPanel {
     }
 
     private Hitbox tipHitbox;
-    private Texture gainEnergyImg;
+    public Texture gainEnergyImg;
     private float energyVfxAngle;
     private float energyVfxScale;
     private Color energyVfxColor;
