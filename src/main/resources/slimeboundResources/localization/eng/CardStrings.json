@@ -285,8 +285,8 @@
   },
   "Slimebound:PrepareCrush": {
     "NAME": "Prepare: Crush",
-    "DESCRIPTION": "Next turn, gain [E] [E] [E] and !SlimeboundSlimed! Strength, and add SLIME CRUSH to your hand.",
-    "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E] [E] [E] and !SlimeboundSlimed! Strength, and add SLIME CRUSH+ to your hand."
+    "DESCRIPTION": "Next turn, gain [E] [E] [E] and !SlimeboundSlimed! Strength, and add SLIME CRUSH to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E] [E] [E] and !SlimeboundSlimed! Strength, and add SLIME CRUSH+ to your hand. NL Exhaust."
   },
   "Slimebound:SlimeCrush": {
     "NAME": "SLIME CRUSH!!!",
