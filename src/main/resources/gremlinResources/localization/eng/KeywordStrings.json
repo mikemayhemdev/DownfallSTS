@@ -3,62 +3,77 @@
     "NAMES": [
       "agony"
     ],
+    "PROPER_NAME": "Agony",
     "DESCRIPTION": "Creatures in #yAgony deal #b80% less damage with Attacks."
   },
   {
     "NAMES": [
-      "cripple",
-      "crippled"
+      "cripple"
     ],
+    "PROPER_NAME": "Cripple",
     "DESCRIPTION": "#yCrippled enemies can no longer lose #yWeak. At the end of their turn, they lose HP equal to their #yWeak."
   },
   {
     "NAMES": [
-      "echo",
+      "echo"
+    ],
+    "PROPER_NAME": "Echo",
+    "DESCRIPTION": "Echoes are copies of cards with Ethereal and Exhaust."
+  },
+  {
+    "NAMES": [
       "echoes"
     ],
+    "PROPER_NAME": "Echoes",
     "DESCRIPTION": "Echoes are copies of cards with Ethereal and Exhaust."
   },
   {
     "NAMES": [
       "fat gremlin", "fat_gremlin"
     ],
+    "PROPER_NAME": "Fat Gremlin",
     "DESCRIPTION": "Whenever you play an attack, apply #b1 #yWeak to all targets."
   },
   {
     "NAMES": [
       "gremlin wizard", "gremlin_wizard"
     ],
+    "PROPER_NAME": "Gremlin Wizard",
     "DESCRIPTION": "Whenever you play a skill, gain #b1 #yWiz."
   },
   {
     "NAMES": [
       "mad gremlin", "mad_gremlin"
     ],
+    "PROPER_NAME": "Mad Gremlin",
     "DESCRIPTION": "Gain #b2 #yTemporary #yStrength when attacked."
   },
   {
     "NAMES": [
       "shield gremlin", "shield_gremlin"
     ],
+    "PROPER_NAME": "Shield Gremlin",
     "DESCRIPTION": "Whenever you play a skill, gain #b2 #yBlock."
   },
   {
     "NAMES": [
       "sneaky gremlin", "sneaky_gremlin"
     ],
+    "PROPER_NAME": "Sneaky Gremlin",
     "DESCRIPTION": "Whenever you play an attack, deal #b3 damage to a random enemy."
   },
   {
     "NAMES": [
       "swap"
     ],
+    "PROPER_NAME": "Swap",
     "DESCRIPTION": "Switch places with another character. Does nothing if there is no valid target."
   },
   {
     "NAMES": [
       "wiz"
     ],
+    "PROPER_NAME": "Wiz",
     "DESCRIPTION": "When you have at least three stacks of Wiz, attacks will consume all stacks to deal 10 additional damage."
   }
 ]
