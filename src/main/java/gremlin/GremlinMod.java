@@ -62,7 +62,7 @@ import static gremlin.patches.GremlinEnum.GREMLIN;
 
 
 @SpireInitializer
-public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscriber, EditKeywordsSubscriber,
+public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscriber,
         EditRelicsSubscriber, EditCardsSubscriber, OnStartBattleSubscriber, PostBattleSubscriber,
         PostInitializeSubscriber, SetUnlocksSubscriber {
     private static String modID = "gremlin";
@@ -329,21 +329,6 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
         // EventStrings
         BaseMod.loadCustomStringsFile(EventStrings.class,
                 "gremlinResources/localization/" +language+"/EventStrings.json");
-    }
-
-    @Override
-    public void receiveEditKeywords() {
-        String language = "eng";
-        final Gson gson = new Gson();
-        String jsonPath = "gremlinResources/localization/" +language+"/";
-        final String json = Gdx.files.internal(jsonPath + "KeywordStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        final Keyword[] keywords = gson.fromJson(json, Keyword[].class);
-        if (keywords != null) {
-            for (final Keyword keyword : keywords) {
-                logger.info("Adding Keyword - " + keyword.PROPER_NAME + " | " + keyword.NAMES[0]);
-                BaseMod.addKeyword(modID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
-            }
-        }
     }
 
     @Override
