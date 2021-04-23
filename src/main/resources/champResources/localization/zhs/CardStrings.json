@@ -451,5 +451,14 @@
     "NAME": "三重打击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 将 2 张带有 champ:战术 的 *打击 加入手牌。它们的耗能为0。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将 2 张已 升级 带有 champ:战术 的 *打击 加入手牌。它们的耗能为0。 NL 消耗 。"
+  },
+  "champ:WindUp": {
+    "NAME": "挑衅",
+    "DESCRIPTION": "选择进入一种 姿态 。 NL 检索 一张 champ:终结技 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择进入一种 姿态 。 NL 检索 一张 champ:终结技 。",
+    "EXTENDED_DESCRIPTION": [
+      "进入 champ:战狂 。",
+      "进入 champ:防守 。"
+    ]
   }
 }
