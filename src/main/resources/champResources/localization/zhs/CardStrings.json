@@ -138,7 +138,7 @@
   },
   "champ:SkillfulDodge": {
     "NAME": "精巧闪避",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。 NL champ:防守 champ:连段 ：本场战斗这张牌的数值提高 !cool! 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。 NL champ:防守 champ:连段 ：本场战斗这张牌的 格挡 和 champ:反击 获得提高 !cool! 。"
   },
   "champ:TornadoPunch": {
     "NAME": "飓风拳",
