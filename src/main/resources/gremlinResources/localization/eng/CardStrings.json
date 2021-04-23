@@ -11,14 +11,14 @@
 
   "Gremlin:Astound": {
     "NAME": "Astound",
-    "DESCRIPTION": "Gain !B! Block. NL If you have 3 or more Wiz, add !M! Wards to your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you have 3 or more Wiz, add !M! Upgraded Wards to your hand."
+    "DESCRIPTION": "Gain !B! Block. NL If you have 3 or more gremlin:Wiz, add !M! Wards to your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you have 3 or more gremlin:Wiz, add !M! Upgraded Wards to your hand."
   },
 
   "Gremlin:Bang": {
     "NAME": "Bang",
-    "DESCRIPTION": "Deal !D! damage !M! times. Add 1 copy of Whiz to your discard pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. Add 1 Upgraded copy of Whiz to your discard pile. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage !M! times. Add a copy of Whiz to your discard pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. Add an Upgraded copy of Whiz to your discard pile. NL Exhaust."
   },
 
   "Gremlin:Bellow": {
@@ -28,7 +28,7 @@
 
   "Gremlin:BrokenShin": {
     "NAME": "Broken Shin",
-    "DESCRIPTION": "Apply Agony for every !M! stacks of Weak the target has."
+    "DESCRIPTION": "Apply gremlin:Agony for every !M! stacks of Weak the target has."
   },
 
   "Gremlin:BubbleBarrier": {
@@ -38,7 +38,7 @@
 
   "Gremlin:BulkUp": {
     "NAME": "Bulk Up",
-    "DESCRIPTION": "Gain !M! Temporary HP. NL Swap to Fat_Gremlin."
+    "DESCRIPTION": "Gain !M! Temporary HP. NL gremlin:Swap to gremlin:Fat_Gremlin."
   },
 
   "Gremlin:BurlyBlow": {
@@ -53,13 +53,13 @@
 
   "Gremlin:Changeo": {
     "NAME": "Change-o!",
-    "DESCRIPTION": "Gain !B! Block and !M! Wiz."
+    "DESCRIPTION": "Gain !B! Block and !M! gremlin:Wiz."
   },
 
   "Gremlin:CongaLine": {
     "NAME": "Conga Line",
-    "DESCRIPTION": "At the start of your turn, gain [E] and Swap to the next Gremlin.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain [E] and Swap to the next Gremlin."
+    "DESCRIPTION": "At the start of your turn, gain [E] and gremlin:Swap to the next Gremlin.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain [E] and gremlin:Swap to the next Gremlin."
   },
 
   "Gremlin:CounterStrike": {
@@ -87,7 +87,7 @@
 
   "Gremlin:Dazzle": {
     "NAME": "Dazzle",
-    "DESCRIPTION": "Deal !D! damage. NL If you have 3 or more Wiz, the enemy loses 2 Strength. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL If you have 3 or more gremlin:Wiz, the enemy loses 2 Strength. NL Exhaust."
   },
 
   "Gremlin:Defend": {
@@ -97,8 +97,8 @@
 
   "Gremlin:Duplicate": {
     "NAME": "Duplicate",
-    "DESCRIPTION": "Make !M! Echoes of an Attack in your hand. They cost 1 less. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Make !M! Echoes of an Attack in your hand. They cost 1 less."
+    "DESCRIPTION": "Make !M! gremlin:Echoes of an Attack in your hand. They cost 1 less. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Make !M! gremlin:Echoes of an Attack in your hand. They cost 1 less."
   },
 
   "Gremlin:EdibleArmor": {
@@ -108,12 +108,12 @@
 
   "Gremlin:Encore": {
     "NAME": "Encore",
-    "DESCRIPTION": "Gain 3 Wiz. NL Whenever you consume Wiz, deal !M! damage to ALL enemies."
+    "DESCRIPTION": "Gain 3 gremlin:Wiz. NL Whenever you consume gremlin:Wiz, deal !M! damage to ALL enemies."
   },
 
   "Gremlin:Enthusiasm": {
     "NAME": "Enthusiasm",
-    "DESCRIPTION": "Whenever you Swap, draw a card."
+    "DESCRIPTION": "Whenever you gremlin:Swap, draw a card."
   },
 
   "Gremlin:Erupt": {
@@ -123,7 +123,7 @@
 
   "Gremlin:Exacerbate": {
     "NAME": "Exacerbate",
-    "DESCRIPTION": "Deal !D! damage. Cripple the enemy. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. gremlin:Cripple the enemy. NL Exhaust."
   },
 
   "Gremlin:FairyDust": {
@@ -133,18 +133,18 @@
 
   "Gremlin:FanOfKnives": {
     "NAME": "Fan Of Knives",
-    "DESCRIPTION": "Deal !D! damage. NL Add 1 Shiv to your hand for each stack of Wiz you have.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add 1 Upgraded Shiv to your hand for each stack of Wiz you have."
+    "DESCRIPTION": "Deal !D! damage. NL Add 1 Shiv to your hand for each stack of gremlin:Wiz you have.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add 1 Upgraded Shiv to your hand for each stack of gremlin:Wiz you have."
   },
 
   "Gremlin:FatGremlin": {
     "NAME": "Fat Gremlin",
-    "DESCRIPTION": "Swap to Fat_Gremlin."
+    "DESCRIPTION": "gremlin:Swap to gremlin:Fat_Gremlin."
   },
 
   "Gremlin:FeelTheAudience": {
     "NAME": "Feel The Audience",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !M! Wiz for each one that intends to attack."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !M! gremlin:Wiz for each one that intends to attack."
   },
 
   "Gremlin:FightChoice": {
@@ -186,8 +186,8 @@
 
   "Gremlin:GlitterGuard": {
     "NAME": "Glitter Guard",
-    "DESCRIPTION": "Add !M! Wards to your hand. NL Swap to Shield_Gremlin.",
-    "UPGRADE_DESCRIPTION": "Add !M! Upgraded Wards to your hand. NL Swap to Shield_Gremlin."
+    "DESCRIPTION": "Add !M! Wards to your hand. NL gremlin:Swap to gremlin:Shield_Gremlin.",
+    "UPGRADE_DESCRIPTION": "Add !M! Upgraded Wards to your hand. NL gremlin:Swap to gremlin:Shield_Gremlin."
   },
 
   "Gremlin:GremlinArms": {
@@ -205,7 +205,7 @@
     "DESCRIPTION": "Deal !D! damage. NL Has a bonus effect based on which Gremlin you are.",
     "EXTENDED_DESCRIPTION": ["Deal !D! damage",
     " to ALL enemies.", ". NL Enemy loses !M! Strength this turn.",
-    ". NL Gain !B! Block.", ". NL Draw !M! cards.", ". NL This attack does not consume Wiz.", ". NL Gain !M! Strength."]
+    ". NL Gain !B! Block.", ". NL Draw !M! cards.", ". NL This attack does not consume gremlin:Wiz.", ". NL Gain !M! Strength."]
   },
 
   "Gremlin:GremlinOffensive": {
@@ -223,7 +223,7 @@
 
   "Gremlin:GremlinWizard": {
     "NAME": "Gremlin Wizard",
-    "DESCRIPTION": "Swap to Gremlin_Wizard."
+    "DESCRIPTION": "gremlin:Swap to gremlin:Gremlin_Wizard."
   },
 
   "Gremlin:Heckle": {
@@ -244,7 +244,7 @@
 
   "Gremlin:Irritability": {
     "NAME": "Irritability",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Temporary Thorns. NL Swap to Mad_Gremlin."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Temporary Thorns. NL gremlin:Swap to gremlin:Mad_Gremlin."
   },
 
   "Gremlin:Jeer": {
@@ -254,7 +254,7 @@
 
   "Gremlin:Kablamo": {
     "NAME": "Kablamo!",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL This attack does not consume Wiz."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL This attack does not consume gremlin:Wiz."
   },
 
   "Gremlin:LeaderChoice": {
@@ -264,7 +264,7 @@
 
   "Gremlin:MadGremlin": {
     "NAME": "Mad Gremlin",
-    "DESCRIPTION": "Swap to Mad_Gremlin."
+    "DESCRIPTION": "gremlin:Swap to gremlin:Mad_Gremlin."
   },
 
   "Gremlin:MakeshiftArmor": {
@@ -280,7 +280,7 @@
 
   "Gremlin:Necromancy": {
     "NAME": "Necromancy",
-    "DESCRIPTION": "Can only be played if you have 3 or more Wiz. NL Consume all Wiz to resurrect a random Gremlin with !M! HP. Exhaust.",
+    "DESCRIPTION": "Can only be played if you have 3 or more gremlin:Wiz. NL Consume all gremlin:Wiz to resurrect a random Gremlin with !M! HP. Exhaust.",
     "EXTENDED_DESCRIPTION": ["Not enough mojo.", "Nobody is dead yet.", "Not enough room."]
   },
 
@@ -296,14 +296,14 @@
 
   "Gremlin:PartyStick": {
     "NAME": "Party Stick",
-    "DESCRIPTION": "Unplayable. NL Whenever you Swap while this card is in your hand, gain [E]",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Whenever you Swap while this card is in your hand, gain [E] [E]",
+    "DESCRIPTION": "Unplayable. NL Whenever you gremlin:Swap while this card is in your hand, gain [E]",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Whenever you gremlin:Swap while this card is in your hand, gain [E] [E]",
     "EXTENDED_DESCRIPTION": ["Nobody is allowed to play with the Party Stick."]
   },
 
   "Gremlin:Patsy": {
     "NAME": "Patsy",
-    "DESCRIPTION": "Gain !B! Block. NL Swap to the next Gremlin."
+    "DESCRIPTION": "Gain !B! Block. NL gremlin:Swap to the next Gremlin."
   },
 
   "Gremlin:Pickpocket": {
@@ -320,7 +320,7 @@
   "Gremlin:Pinprick": {
     "NAME": "Pinprick",
     "DESCRIPTION": "Deal !D! damage. NL Draw a card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Whenever you draw this card, add an Echo of it to your hand. NL Deal !D! damage. NL Draw a card. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Whenever you draw this card, add an gremlin:Echo of it to your hand. NL Deal !D! damage. NL Draw a card. NL Exhaust."
   },
 
   "Gremlin:Polish": {
@@ -335,7 +335,7 @@
 
   "Gremlin:Presto": {
     "NAME": "Presto!",
-    "DESCRIPTION": "Deal !D! damage. Gain !M! Wiz."
+    "DESCRIPTION": "Deal !D! damage. Gain !M! gremlin:Wiz."
   },
 
   "Gremlin:Pretaliation": {
@@ -367,7 +367,7 @@
 
   "Gremlin:Rhythm": {
     "NAME": "Rhythm",
-    "DESCRIPTION": "Swap to the next Gremlin. NL Fetch a Basic card from your draw pile. It costs 0 this turn."
+    "DESCRIPTION": "gremlin:Swap to the next Gremlin. NL Fetch a Basic card from your draw pile. It costs 0 this turn."
   },
 
   "Gremlin:Rush": {
@@ -377,13 +377,13 @@
 
   "Gremlin:Scatter": {
     "NAME": "Scatter!",
-    "DESCRIPTION": "The next time you would lose HP, instead Swap into a random Gremlin. NL Exhaust"
+    "DESCRIPTION": "The next time you would lose HP, instead gremlin:Swap to a random Gremlin. NL Exhaust"
   },
 
   "Gremlin:SecondVolley": {
     "NAME": "Second Volley",
     "DESCRIPTION": "Deal !D! damage. Add a Shiv to your hand for each card played this turn",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add an upgraded Shiv to your hand for each card played this turn",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add an Upgraded Shiv to your hand for each card played this turn",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " card played.)",
@@ -393,7 +393,7 @@
 
   "Gremlin:ShadowShiv": {
     "NAME": "Shadow Shiv",
-    "DESCRIPTION": "Whenever you play an Attack that doesn't exhaust, add a Shiv to your hand."
+    "DESCRIPTION": "Whenever you play an Attack that doesn't Exhaust, add a Shiv to your hand."
   },
 
   "Gremlin:ShankStone": {
@@ -410,7 +410,7 @@
 
   "Gremlin:ShieldGremlin": {
     "NAME": "Shield Gremlin",
-    "DESCRIPTION": "Swap to Shield_Gremlin."
+    "DESCRIPTION": "gremlin:Swap to gremlin:Shield_Gremlin."
   },
 
   "Gremlin:ShowOfHands": {
@@ -421,7 +421,7 @@
 
   "Gremlin:ShowStopper": {
     "NAME": "Show Stopper",
-    "DESCRIPTION": "Can only be played if you have exactly 7 Wiz. NL Deal !D! damage to ALL enemies 5 times.",
+    "DESCRIPTION": "Can only be played if you have exactly 7 gremlin:Wiz. NL Deal !D! damage to ALL enemies 5 times.",
     "EXTENDED_DESCRIPTION": ["Not enough suspense.", "The timing is ruined."]
   },
 
@@ -432,7 +432,7 @@
 
   "Gremlin:SneakyGremlin": {
     "NAME": "Sneaky Gremlin",
-    "DESCRIPTION": "Swap to Sneaky_Gremlin."
+    "DESCRIPTION": "gremlin:Swap to gremlin:Sneaky_Gremlin."
   },
 
   "Gremlin:Strike": {
@@ -442,19 +442,19 @@
 
   "Gremlin:Stupend": {
     "NAME": "Stupend",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Block is affected by Wiz."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Block is affected by gremlin:Wiz."
   },
 
   "Gremlin:Tadah": {
     "NAME": "Tadah!",
-    "DESCRIPTION": "Add an Echo of a random Skill to your hand. It costs 1 less. NL Swap to Gremlin_Wizard.",
-    "UPGRADE_DESCRIPTION": "Add an Echo of a random, Upgraded Skill to your hand. NL It costs 1 less. NL Swap to Gremlin_Wizard."
+    "DESCRIPTION": "Add an gremlin:Echo of a random Skill to your hand. It costs 1 less. NL gremlin:Swap to gremlin:Gremlin_Wizard.",
+    "UPGRADE_DESCRIPTION": "Add an gremlin:Echo of a random, Upgraded Skill to your hand. NL It costs 1 less. NL gremlin:Swap to gremlin:Gremlin_Wizard."
   },
 
   "Gremlin:TagTeam": {
     "NAME": "Tag Team",
-    "DESCRIPTION": "Swap to a living Gremlin of your choice.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Swap to a living Gremlin of your choice."
+    "DESCRIPTION": "gremlin:Swap to a living Gremlin of your choice.",
+    "UPGRADE_DESCRIPTION": "Retain. NL gremlin:Swap to a living Gremlin of your choice."
   },
 
   "Gremlin:TargetWeakness": {
@@ -464,7 +464,7 @@
 
   "Gremlin:Tricksy": {
     "NAME": "Tricksy",
-    "DESCRIPTION": "Draw !M! cards. Discard all cards drawn this way that are not Attacks. NL Swap to Sneaky_Gremlin."
+    "DESCRIPTION": "Draw !M! cards. Discard all cards drawn this way that are not Attacks. NL gremlin:Swap to gremlin:Sneaky_Gremlin."
   },
 
   "Gremlin:TwistTheKnife": {
@@ -490,14 +490,14 @@
 
   "Gremlin:Whiz": {
     "NAME": "Whiz",
-    "DESCRIPTION": "Gain !M! Wiz. Next turn, add 1 Bang to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Wiz. Next turn, add 1 Upgraded Bang to your hand. NL Exhaust."
+    "DESCRIPTION": "Gain !M! gremlin:Wiz. Next turn, add Bang to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! gremlin:Wiz. Next turn, add an Upgraded Bang to your hand. NL Exhaust."
   },
 
   "Gremlin:Wizardry": {
     "NAME": "Wizardry",
-    "DESCRIPTION": "At the start of your turn, gain !M! Wiz.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! Wiz."
+    "DESCRIPTION": "At the start of your turn, gain !M! gremlin:Wiz.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! gremlin:Wiz."
   },
 
   "Gremlin:Placeholder": {
