@@ -3,7 +3,7 @@
     "NAME": "铜制齿轮",
     "FLAVOR": "在你最需要的时候保护你。",
     "DESCRIPTIONS": [
-      "每场战斗第一次进入 #yguardianmod:防御模式 时，额外持续一回合。"
+      "每场战斗首次进入 #yguardianmod:防御模式 时，额外持续一回合。"
     ]
   },
   "Guardian:ModeShifterPlus": {
