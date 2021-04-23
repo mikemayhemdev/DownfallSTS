@@ -48,7 +48,8 @@
   },
   "expansioncontent:PrepareCrush": {
     "NAME": "准备：猛撞",
-    "DESCRIPTION": "expansioncontent:首领 - 史莱姆。 NL 获得 !B! 点 格挡 。 NL 你的下一回合，获得 [E] [E] [E] 并将一张 *史莱姆撞击 加入你的手牌。 NL 消耗 。"
+    "DESCRIPTION": "expansioncontent:首领 - 史莱姆。 NL 获得 !B! 点 格挡 。 NL 你的下一回合，获得 [E] [E] [E] 并将一张 *史莱姆撞击 加入你的手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 史莱姆。 NL 获得 !B! 点 格挡 。 NL 你的下一回合，获得 [E] [E] [E] 并将一张 *史莱姆撞击+ 加入你的手牌。 NL 消耗 。"
   },
   "expansioncontent:StudyTheSpire": {
     "NAME": "研究尖塔",

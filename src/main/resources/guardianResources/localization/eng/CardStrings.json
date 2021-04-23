@@ -117,7 +117,7 @@
   },
   "Guardian:Harden": {
     "NAME": "Harden",
-    "DESCRIPTION": "Requires 20 or more Block. NL Brace !GuardianSecondM! and gain !M! Thorns."
+    "DESCRIPTION": "Requires 20 or more Block. NL guardianmod:Brace !GuardianSecondM! and gain !M! Thorns."
   },
   "Guardian:SentryBeam": {
     "NAME": "Sentry Blast",

@@ -39,15 +39,15 @@
       "防守",
       "defensive"
     ],
-    "DESCRIPTION": "#y姿态 ： NL #y战术 -获得 #b5 层 #y反击 。 NL #y终结技 -获得 #b12 点 #y格挡 。"
+    "DESCRIPTION": "#y姿态 ： NL #y战术 -获得 #b4 层 #y反击 。 NL #y终结技 -获得 #b12 点 #y格挡 。"
   },
   {
-    "PROPER_NAME": "狂战",
+    "PROPER_NAME": "战狂",
     "NAMES": [
-      "狂战",
+      "战狂",
       "berserker"
     ],
-    "DESCRIPTION": "#y姿态 ： NL #y战术 - #y疲劳 #b5 。 NL #y终结技 -失去所有 #y疲劳 并回复等量生命（保留 #y力量 ）。"
+    "DESCRIPTION": "#y姿态 ： NL #y战术 -获得 #b4 点 #y活力 。 NL #y终结技 -获得 #b1 点 #y力量 。"
   },
   {
     "PROPER_NAME": "角斗",
@@ -63,7 +63,7 @@
       "终极",
       "ultimate"
     ],
-    "DESCRIPTION": "#y姿态 。视为同时拥有 #r狂战 和 #b防守 。不能切换 #y姿态 。 #y终结技 将不会结束回合并退出姿态。"
+    "DESCRIPTION": "#y姿态 。视为同时拥有 #r战狂 和 #b防守 。不能切换 #y姿态 。 #y终结技 将不会结束回合并退出姿态。"
   },
   {
     "PROPER_NAME": "疲劳",
@@ -71,6 +71,6 @@
       "疲劳",
       "fatigue"
     ],
-    "DESCRIPTION": "失去生命并每有 #b10 层拥有 #b1 点 #y力量 。每场战斗的结束时 #y疲劳 回复丢失的生命"
+    "DESCRIPTION": "失去生命。 NL 每场战斗的结束时 #y疲劳 回复丢失的生命"
   }
 ]

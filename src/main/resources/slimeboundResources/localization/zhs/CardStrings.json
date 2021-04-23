@@ -285,12 +285,13 @@
   },
   "Slimebound:PrepareCrush": {
     "NAME": "准备：猛撞",
-    "DESCRIPTION": "在下个回合获得 [E] [E] [E] 和 !M! 点 力量 ，并将 *史莱姆撞击 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "在你的下个回合获得 [E] [E] [E] [E] 和 !M! 点 力量 ，并将 *史莱姆撞击 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "在下个回合获得 [E] [E] [E] 和 !SlimeboundSlimed! 点 力量 ，并将 *史莱姆撞击 加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "在你的下个回合获得 [E] [E] [E] [E] 和 !SlimeboundSlimed! 点 力量 ，并将 *史莱姆撞击+ 加入手牌。 NL 消耗 。"
   },
   "Slimebound:SlimeCrush": {
     "NAME": "史莱姆撞击！！！",
-    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 对所有敌人造成 !D! 点伤害。 NL 消耗 。"
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "分而治之",

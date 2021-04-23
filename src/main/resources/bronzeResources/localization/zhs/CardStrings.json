@@ -17,7 +17,7 @@
   },
   "bronze:Explode": {
     "NAME": "爆炸",
-    "DESCRIPTION": " bronze:插入 *灼伤 。 NL bronze:编译 - 所有敌人失去 !M! 点生命。",
+    "DESCRIPTION": "给予所有敌人 !M! 层 hexamod:灼魂 。 NL bronze:编译 *错误 - bronze:插入 !bauto! 张 *灼伤 。",
     "EXTENDED_DESCRIPTION": [
       "不稳定的",
       "爆炸"
@@ -520,7 +520,7 @@
   },
   "bronze:Hardcode": {
     "NAME": "硬编码",
-    "DESCRIPTION": " 即逝 。 NL 你生成的下张 *方法 将加入牌组。 NL 从牌组中移除构成 *方法 的牌。"
+    "DESCRIPTION": "你生成的下张 *方法 将加入牌组。 NL 从牌组中移除构成 *方法 的牌（包括本牌）。"
   },
   "bronze:SpaghettiCode": {
     "NAME": "意面代码",

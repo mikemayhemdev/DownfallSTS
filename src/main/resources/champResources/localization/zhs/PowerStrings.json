@@ -6,32 +6,18 @@
       " 点伤害。"
     ]
   },
-  "champ:ResolvePower": {
-    "NAME": "疲劳",
-    "DESCRIPTIONS": [
-      "每有 #b10 层时你拥有 #b1 点 #y力量 。战斗结束时，回复 #y疲劳 层数的生命。"
-    ]
-  },
   "champ:FocusedDefPower": {
     "NAME": "防反家",
     "DESCRIPTIONS": [
-      "你的回合结束时，如果你有至少 #b20 层 #y反击 ，获得 #b",
+      "本回合你打出下张 #y终结技 时，获得 #b",
       " 点 #y格挡 。"
     ]
   },
   "champ:FocusedBerPower": {
-    "NAME": "狂战士",
+    "NAME": "战狂士",
     "DESCRIPTIONS": [
-      "你的回合结束时，如果你有至少 #b20 层 #y疲劳 ，对所有敌人造成 #b",
+      "本回合你打出下张 #y终结技 时，对所有敌人造成 #b",
       " 点伤害。"
-    ]
-  },
-  "champ:EnchantedShieldPower": {
-    "NAME": "强化护盾",
-    "DESCRIPTIONS": [
-      "阻止本回合下一次生命损失。",
-      "阻止本回合下 #b",
-      " 次生命损失。"
     ]
   },
   "champ:ShieldWallPower": {
@@ -92,10 +78,11 @@
   "champ:DancingMasterPower": {
     "NAME": "战技大师",
     "DESCRIPTIONS": [
-      "每当你在一回合内进入过三次相同的姿态，获得 #b",
-      " [E] 并抽 #b2 张牌。",
+      "每回合第三次进入姿态时，获得 #b",
+      " [E] 并抽 #b",
+      " 张牌。",
 	  " 次。",
-	  "本回合使用 ",
+	  "本回合已触发。 ",
 	  "还剩"
     ]
   },
@@ -132,8 +119,8 @@
   "champ:BerserkerStylePower": {
     "NAME": "狂暴战法",
     "DESCRIPTIONS": [
-      "#y狂战 #y战术 奖励额外获得 #b",
-      " 层 #y疲劳 。"
+      "#y战狂 #y战术 奖励额外获得 #b",
+      " 层 #y活力 。"
     ]
   },
   "champ:FalseCounterPower": {
@@ -153,10 +140,17 @@
     ]
   },
   "champ:IronFortressPower": {
-    "NAME": "钢铁要塞",
+    "NAME": "战斗跃舞：反击",
     "DESCRIPTIONS": [
       "每当你进入 #y姿态 时，获得 #b",
-      " 点 #y格挡 和 #y反击 。"
+      " 点 #y反击 。"
+    ]
+  },
+  "champ:IronFortressVigorPower": {
+    "NAME": "战斗跃舞：活力",
+    "DESCRIPTIONS": [
+      "每当你进入 #y姿态 时，获得 #b",
+      " 点 #y活力 。"
     ]
   },
   "champ:LastStandMod": {
@@ -209,6 +203,20 @@
     "DESCRIPTIONS": [
       "你的下一回合开始时，将 ",
       " 返回手牌。它的耗能打出前变为 #b0 。"
+    ]
+  },
+  "champ:ResolvePower": {
+    "NAME": "疲劳",
+    "DESCRIPTIONS": [
+      "每有 #b10 层时你拥有 #b1 点 #y力量 。战斗结束时，回复 #y疲劳 层数的生命。"
+    ]
+  },
+  "champ:DualPlaySrikePower": {
+    "NAME": "乱舞打击",
+    "DESCRIPTIONS": [
+      "本回合你打出的下张 #y打击 将打出两次。",
+      "本回合你打出的下 ",
+      " 张 #y打击 将打出两次。"
     ]
   }
 }
