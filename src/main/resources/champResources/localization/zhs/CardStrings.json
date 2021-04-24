@@ -256,7 +256,8 @@
   },
   "champ:HeavySlash": {
     "NAME": "大师斩击",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 你的牌组每有一张已 升级 的牌伤害提高 !M! 。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 将随机一张 champ:战术 牌加入你的手牌。它的耗能为0。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将随机一张已 升级 的 champ:战术 牌加入你的手牌。它的耗能为0。"
   },
   "champ:CheapShot": {
     "NAME": "偷袭",
@@ -395,8 +396,8 @@
   },
   "champ:BerserkerStyle": {
     "NAME": "狂暴战法",
-    "DESCRIPTION": "进入 champ:战狂 。 NL champ:疲劳 5。 NL champ:战狂 champ:战术 奖励额外获得 !M! 层 champ:活力 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 进入 champ:战狂 。 NL champ:疲劳 5。 NL champ:战狂 champ:战术 奖励额外获得 !M! 层 champ:活力 。"
+    "DESCRIPTION": "进入 champ:战狂 。 NL champ:疲劳 5。 NL champ:战狂 champ:战术 奖励额外获得 !M! 层 活力 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 进入 champ:战狂 。 NL champ:疲劳 5。 NL champ:战狂 champ:战术 奖励：额外获得 !M! 层 活力 。"
   },
   "champ:Riposte": {
     "NAME": "弹反",
@@ -422,7 +423,7 @@
   },
   "champ:EnchantCrown": {
     "NAME": "附魔金冠",
-    "DESCRIPTION": "选择一张手牌，这张牌本场战斗中的耗能变为0。 NL 消耗 。",
+    "DESCRIPTION": "champ:疲劳 5。 NL 选择一张手牌，这张牌本场战斗中的耗能变为0。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我没有能强化的牌"
     ]

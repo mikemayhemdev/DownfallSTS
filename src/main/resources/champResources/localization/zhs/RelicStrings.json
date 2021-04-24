@@ -24,7 +24,7 @@
     "NAME": "战狂指南",
     "FLAVOR": "文字难以辨认。",
     "DESCRIPTIONS": [
-      "阻止每场战斗前10点生命损失。"
+      "阻止每场战斗你的回合的前10点在生命损失。"
     ]
   },
   "champ:ChampionCrownUpgraded": {
