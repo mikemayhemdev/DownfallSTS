@@ -6,6 +6,10 @@
 package downfall.events;
 
 import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.mod.widepotions.relics.WideBeastStatue;
+import com.evacipated.cardcrawl.mod.widepotions.relics.WidePotionBelt;
+import com.evacipated.cardcrawl.mod.widepotions.relics.WideToyOrnithopter;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -72,9 +76,21 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
                         }
 
                         ArrayList<AbstractRelic> possRelics = new ArrayList<>();
-                        if (!AbstractDungeon.player.hasRelic(WhiteBeast.ID)) possRelics.add(new WhiteBeast());
-                        if (!AbstractDungeon.player.hasRelic(PotionBelt.ID)) possRelics.add(new PotionBelt());
-                        if (!AbstractDungeon.player.hasRelic(ToyOrnithopter.ID)) possRelics.add(new ToyOrnithopter());
+                        if(Loader.isModLoaded("widepotions")) {
+                            if (!AbstractDungeon.player.hasRelic(WhiteBeast.ID))
+                                possRelics.add(new WideBeastStatue());
+                            if (!AbstractDungeon.player.hasRelic(PotionBelt.ID))
+                                possRelics.add(new WidePotionBelt());
+                            if (!AbstractDungeon.player.hasRelic(ToyOrnithopter.ID))
+                                possRelics.add(new WideToyOrnithopter());
+                        } else {
+                            if (!AbstractDungeon.player.hasRelic(WhiteBeast.ID))
+                                possRelics.add(new WhiteBeast());
+                            if (!AbstractDungeon.player.hasRelic(PotionBelt.ID))
+                                possRelics.add(new PotionBelt());
+                            if (!AbstractDungeon.player.hasRelic(ToyOrnithopter.ID))
+                                possRelics.add(new ToyOrnithopter());
+                        }
 
                         if (possRelics.size() == 0) {
                             AbstractDungeon.getCurrRoom().addGoldToRewards(100);
