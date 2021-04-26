@@ -31,4 +31,5 @@ public class downfallSaveData {
     public String ACT_3_BOSS_SLAIN = "";
 
     public ArrayList<AbstractCard.CardColor> VALID_COLORS = new ArrayList<>();
+    public boolean PURE_SNECKO_MODE;
 }

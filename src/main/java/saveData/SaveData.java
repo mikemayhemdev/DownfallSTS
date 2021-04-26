@@ -42,6 +42,7 @@ public class SaveData {
     public static final String ACT_2_BOSS_SLAIN = "ACT_2_BOSS_SLAIN";
     public static final String ACT_3_BOSS_SLAIN = "ACT_3_BOSS_SLAIN";
     public static final String VALID_COLORS = "VALID_COLORS";
+    public static final String PURE_SNECKO_MODE = "PURE_SNECKO_MODE";
 
     private static Logger saveLogger = LogManager.getLogger("downfallSaveData");
     //data is stored here in addition to the actual location
@@ -71,6 +72,7 @@ public class SaveData {
     private static String act3BossSlain;
 
     private static ArrayList<AbstractCard.CardColor> saveCacheColors;
+    private static boolean pureSneckoMode;
 
     //Save data whenever SaveFile is constructed
     @SpirePatch(
@@ -109,6 +111,7 @@ public class SaveData {
             System.out.println(act3BossSlain);
 
             saveCacheColors = SneckoMod.validColors;
+            pureSneckoMode = SneckoMod.pureSneckoMode;
 
             saveLogger.info("Saved Evil Mode: " + evilMode);
         }
@@ -142,6 +145,7 @@ public class SaveData {
             params.put(ACT_2_BOSS_SLAIN, act2BossSlain);
             params.put(ACT_3_BOSS_SLAIN, act3BossSlain);
             params.put(VALID_COLORS, saveCacheColors);
+            params.put(PURE_SNECKO_MODE, pureSneckoMode);
         }
 
         private static class Locator extends SpireInsertLocator {
@@ -192,6 +196,7 @@ public class SaveData {
                 act3BossSlain = data.ACT_3_BOSS_SLAIN;
 
                 saveCacheColors = data.VALID_COLORS;
+                pureSneckoMode = data.PURE_SNECKO_MODE;
 
                 saveLogger.info("Loaded downfall save data successfully.");
             } catch (Exception e) {
@@ -215,6 +220,7 @@ public class SaveData {
             method = "loadSave"
     )
     public static class loadSave {
+
         @SpirePostfixPatch
         public static void loadSave(AbstractDungeon __instance, SaveFile file) {
             //Some data, after loading into this file, will need to actually be assigned here.
@@ -253,6 +259,8 @@ public class SaveData {
             downfallMod.Act3BossFaced = act3BossSlain;
 
             SneckoMod.validColors = saveCacheColors;
+            SneckoMod.pureSneckoMode = pureSneckoMode;
+
             SneckoMod.updateAllUnknownReplacements();
 
             saveLogger.info("Save loaded.");
