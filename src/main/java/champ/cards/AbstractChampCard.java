@@ -95,16 +95,24 @@ public abstract class AbstractChampCard extends CustomCard {
         return img;
     }
 
-    public static String makeID(String blah) {
-        return getModID() + ":" + blah;
+    public static String makeID(String name) {
+        return getModID() + ":" + name;
     }
 
     public static boolean bcombo() {
-        return (enteredBerserkerThisTurn || AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID) || (AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)));
+        return (enteredBerserkerThisTurn || AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID));
     }
 
     public static boolean dcombo() {
-        return (enteredDefensiveThisTurn || AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || (AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)));
+        return (enteredDefensiveThisTurn || AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID));
+    }
+
+    public static boolean inBerserker() {
+        return AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID);
+    }
+
+    public static boolean inDefensive() {
+        return AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID);
     }
 
     public void displayUpgrades() {

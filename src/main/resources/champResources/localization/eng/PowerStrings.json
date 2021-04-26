@@ -140,7 +140,7 @@
     ]
   },
   "champ:IronFortressPower": {
-    "NAME": "Technical Jig: Counter",
+    "NAME": "Technical Jig: Defensive",
     "DESCRIPTIONS": [
       "Whenever you enter a Stance, trigger Defensive Stance's technique",
       " #b",
@@ -148,7 +148,7 @@
     ]
   },
   "champ:IronFortressVigorPower": {
-    "NAME": "Technical Jig: Vigor",
+    "NAME": "Technical Jig: Berserker",
     "DESCRIPTIONS": [
       "Whenever you enter a Stance, trigger Berserker Stance's technique",
       " #b",
