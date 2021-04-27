@@ -24,11 +24,11 @@ public class IronFortress extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (bcombo()){
-            applyToSelf(new IronFortressVigorPower(magicNumber));
+        if (inBerserker()){
+            applyToSelf(new IronFortressVigorPower(1));
         }
-        if (dcombo()){
-            applyToSelf(new IronFortressPower(magicNumber));
+        if (inDefensive()){
+            applyToSelf(new IronFortressPower(1));
         }
     }
 
