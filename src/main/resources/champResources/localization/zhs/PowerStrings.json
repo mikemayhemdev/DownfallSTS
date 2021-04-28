@@ -140,17 +140,19 @@
     ]
   },
   "champ:IronFortressPower": {
-    "NAME": "战斗跃舞：反击",
+    "NAME": "战斗跃舞：防守",
     "DESCRIPTIONS": [
-      "每当你进入 #y姿态 时，获得 #b",
-      " 点 #y反击 。"
+      "每当你进入 #y姿态 时，触发防守战术 #b",
+      " #b",
+      " 次。"
     ]
   },
   "champ:IronFortressVigorPower": {
-    "NAME": "战斗跃舞：活力",
+    "NAME": "战斗跃舞：战狂",
     "DESCRIPTIONS": [
-      "每当你进入 #y姿态 时，获得 #b",
-      " 点 #y活力 。"
+      "每当你进入 #y姿态 时，触发战狂战术 #b",
+      " #b",
+      " 次。"
     ]
   },
   "champ:LastStandMod": {
