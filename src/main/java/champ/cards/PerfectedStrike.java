@@ -13,7 +13,7 @@ public class PerfectedStrike extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 14;
+    private static final int DAMAGE = 8;
     private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 1;
 
@@ -22,7 +22,6 @@ public class PerfectedStrike extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(CardTags.STRIKE);
-        tags.add(ChampMod.FINISHER);
         postInit();
     }
 
@@ -44,7 +43,6 @@ public class PerfectedStrike extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
-        finisher();
     }
 
     public void upp() {

@@ -35,7 +35,7 @@ public class Harden extends AbstractGuardianCard {
 
 
     //TUNING CONSTANTS
-    private static final int BRACE = 12;
+    private static final int BRACE = 10;
     private static final int THORNS = 2;
     private static final int UPGRADE_BRACE = 4;
     private static final int SOCKETS = 0;

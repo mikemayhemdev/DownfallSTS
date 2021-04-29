@@ -99,7 +99,7 @@
     "NAME": "Gelatinous Cube",
     "FLAVOR": "Hey, it stuck to your body.",
     "DESCRIPTIONS": [
-      "Whenever you draw a #rCurse or #yStatus card, draw #b1 card."
+      "Whenever you draw a #yStatus card, draw #b1 card."
     ]
   }
 }
