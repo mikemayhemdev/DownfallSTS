@@ -41,7 +41,7 @@ public class HexSlime
         this.extraFontColor = new Color(.5F, 1F, .5F, 1F);
         this.color.a = 0.0F;
         this.activated = true;
-        this.debuffAmount = 3;
+        this.debuffAmount = 5;
         spawnVFX();
 
     }
@@ -49,12 +49,12 @@ public class HexSlime
 
     public void updateDescription() {
 
-        this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1] + 3 + this.descriptions[2];
+        this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1] + this.debuffAmount + this.descriptions[2];
     }
 
 
     public void activateEffectUnique() {
-        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.FIRE, this, false, false, false, 3, false, 0, false, false, false, true, true));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.FIRE, this, false, false, false, this.debuffAmount, false, 0, false, false, false, true, true));
 
 
     }

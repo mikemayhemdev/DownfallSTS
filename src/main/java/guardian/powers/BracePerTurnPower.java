@@ -21,7 +21,7 @@ public class BracePerTurnPower extends AbstractGuardianPower{
     public BracePerTurnPower(AbstractCreature owner, int amount) {
         this.ID = POWER_ID;
         this.owner = owner;
-        this.setImage("Revenge84.png", "Revenge32.png");
+        this.setImage("Bracing84.png", "Bracing32.png");
         this.type = POWER_TYPE;
         this.amount = amount;
         DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
