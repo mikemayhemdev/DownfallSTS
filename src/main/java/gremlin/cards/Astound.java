@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.actions.AstoundAction;
+import gremlin.powers.WizPower;
 
 import static gremlin.GremlinMod.WIZARD_GREMLIN;
 
@@ -26,8 +27,7 @@ public class Astound extends AbstractGremlinCard {
     private static final int MAGIC = 2;
     private static final int UPGRADE_BONUS = 3;
 
-    public Astound()
-    {
+    public Astound() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseBlock = BLOCK;
@@ -39,16 +39,13 @@ public class Astound extends AbstractGremlinCard {
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
         AbstractDungeon.actionManager.addToBottom(new AstoundAction(p, magicNumber, upgraded));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_BONUS);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
@@ -56,6 +53,15 @@ public class Astound extends AbstractGremlinCard {
             AbstractCard c = new Ward();
             c.upgrade();
             this.cardsToPreview = c;
+        }
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        if (AbstractDungeon.player.hasPower(WizPower.POWER_ID) && AbstractDungeon.player.getPower(WizPower.POWER_ID).amount >= 3) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        } else {
+            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         }
     }
 }
