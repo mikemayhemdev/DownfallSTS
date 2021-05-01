@@ -65,7 +65,7 @@
   },
   "Guardian:GuardianWhirl": {
     "NAME": "Guardian Whirl",
-    "DESCRIPTION": "Requires 20 or more Block. NL Deal !D! damage !M! times to ALL enemies."
+    "DESCRIPTION": "Requires 20 or more Block. NL Deal !D! damage to ALL enemies !M! times."
   },
   "Guardian:VentSteam": {
     "NAME": "Vent Steam",

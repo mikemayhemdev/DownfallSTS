@@ -30,8 +30,7 @@ public class Dazzle extends AbstractGremlinCard {
     private static final int UPGRADE_BONUS = 4;
     private static final int RAZZLE = 3;
 
-    public Dazzle()
-    {
+    public Dazzle() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -43,12 +42,12 @@ public class Dazzle extends AbstractGremlinCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int amount = 0;
-        if(p.hasPower(WizPower.POWER_ID)){
+        if (p.hasPower(WizPower.POWER_ID)) {
             amount = p.getPower(WizPower.POWER_ID).amount;
         }
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                 this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
-        if(amount >= RAZZLE){
+        if (amount >= RAZZLE) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                     new StrengthPower(m, -2), -2));
         }
@@ -56,10 +55,18 @@ public class Dazzle extends AbstractGremlinCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
+        }
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        if (AbstractDungeon.player.hasPower(WizPower.POWER_ID) && AbstractDungeon.player.getPower(WizPower.POWER_ID).amount >= RAZZLE) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        } else {
+            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         }
     }
 }

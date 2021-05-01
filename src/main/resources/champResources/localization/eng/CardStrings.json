@@ -212,9 +212,7 @@
     "NAME": "Vicious Mockery",
     "DESCRIPTION": "*Berserker champ:Combo: Gain !M! temporary Strength. NL *Defensive champ:Combo: Gain !M! temporary  Dexterity.",
     "EXTENDED_DESCRIPTION": [
-      "Berserker champ:Combo: Gain !M! temporary Strength. NL Exhaust.",
       "Berserker champ:Combo: Gain !M! temporary Strength. NL ",
-      "Defensive champ:Combo: Gain !M! temporary Dexterity. NL Exhaust.",
       "Defensive champ:Combo: Gain !M! temporary Dexterity."
     ]
   },
