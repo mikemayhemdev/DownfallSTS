@@ -12,5 +12,19 @@
       "invincible"
     ],
     "DESCRIPTION": "You cannot lose more than a given amount of HP in a single turn. NL At the end of any round in which Invincible prevented HP loss, remove it."
+  },
+  {
+    "PROPER_NAME": "Exhume",
+    "NAMES": [
+      "exhume"
+    ],
+    "DESCRIPTION": "Put a card from your exhaust pile into your hand."
+  },
+  {
+    "PROPER_NAME": "Reclaim",
+    "NAMES": [
+      "reclaim"
+    ],
+    "DESCRIPTION": "Put a card from your exhaust pile into your discard pile."
   }
 ]
