@@ -207,7 +207,7 @@ public abstract class AbstractChampCard extends CustomCard {
     public ArrayList<AbstractMonster> monsterList() {
         ArrayList<AbstractMonster> q = new ArrayList<>();
         for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-            if (!m.isDying && !m.isDead) q.add(m);
+            if (!m.isDeadOrEscaped()) q.add(m);
         }
         return q;
     }
