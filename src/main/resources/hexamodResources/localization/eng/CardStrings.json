@@ -137,9 +137,9 @@
     "DESCRIPTION": "expansioncontent:Exhume an Ethereal card. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "expansioncontent:Exhume 2 Ethereal cards. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "Choose an Ethereal card to expansioncontent:Exhume.",
+      "Choose an Ethereal card to return to your hand.",
       "Choose ",
-      " Ethereal cards to expansioncontent:Exhume."
+      " Ethereal cards to return to your hand."
     ]
   },
   "hexamod:GiftsFromTheDead": {

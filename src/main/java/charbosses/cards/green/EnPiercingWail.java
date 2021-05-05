@@ -41,7 +41,8 @@ public class EnPiercingWail extends AbstractBossCard {
             this.addToBot(new VFXAction(p, new ShockWaveEffect(m.hb.cX, m.hb.cY, Settings.GREEN_TEXT_COLOR, ShockWaveEffect.ShockWaveType.CHAOTIC), 1.5F));
         }
         this.addToBot(new ApplyPowerAction(p, m, new StrengthPower(p, -this.magicNumber), -this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-        this.addToBot(new ApplyPowerAction(p, m, new GainStrengthPower(p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+        if (!p.hasPower("Artifact"))
+            this.addToBot(new ApplyPowerAction(p, m, new GainStrengthPower(p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
     }
 
     @Override
