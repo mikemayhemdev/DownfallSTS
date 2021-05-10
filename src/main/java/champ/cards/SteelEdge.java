@@ -1,6 +1,7 @@
 package champ.cards;
 
 import automaton.actions.EasyXCostAction;
+import champ.ChampChar;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -28,6 +29,7 @@ public class SteelEdge extends AbstractChampCard {
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         if (!(bcombo()) && !dcombo()) {
+            this.cantUseMessage = ChampChar.characterStrings.TEXT[61];
             return false;
         }
         return super.canUse(p, m);

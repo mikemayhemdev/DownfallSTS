@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
+import gremlin.actions.PseudoDamageRandomEnemyAction;
 
 public class PolyBeamAction extends AbstractGameAction {
     private AbstractCard card;
@@ -38,7 +39,7 @@ public class PolyBeamAction extends AbstractGameAction {
             AbstractDungeon.topLevelEffects.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, this.attackEffect));
 
             this.card.calculateCardDamage((AbstractMonster)this.target);
-            addToTop(new DamageAction(target, new DamageInfo(AbstractDungeon.player, this.card.damage, this.card.damageTypeForTurn)));
+            addToTop(new PseudoDamageRandomEnemyAction(target, new DamageInfo(AbstractDungeon.player, this.card.damage, this.card.damageTypeForTurn)));
         }
         this.isDone = true;
     }

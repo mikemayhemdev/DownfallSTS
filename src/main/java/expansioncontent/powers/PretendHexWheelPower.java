@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
 import expansioncontent.expansionContentMod;
 import downfall.util.TextureLoader;
+import gremlin.actions.PseudoDamageRandomEnemyAction;
 
 
 public class PretendHexWheelPower extends TwoAmountPower implements NonStackablePower {
@@ -54,7 +55,7 @@ public class PretendHexWheelPower extends TwoAmountPower implements NonStackable
                         isDone = true;
                         AbstractMonster m = AbstractDungeon.getRandomMonster();
                         if (m != null && !m.halfDead) {
-                            addToTop(new DamageAction(m, new DamageInfo(owner, amount2, DamageInfo.DamageType.THORNS), AttackEffect.FIRE));
+                            addToTop(new PseudoDamageRandomEnemyAction(m, new DamageInfo(owner, amount2, DamageInfo.DamageType.THORNS), AttackEffect.FIRE));
                         }
                     }
                 });
