@@ -38,13 +38,13 @@
   },
   "expansioncontent:PolyBeam": {
     "NAME": "Donu Blast",
-    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. Increase this card's damage by !M!. NL Next turn, add a *Deca *Shield into your hand, or Exhume it. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. Increase this card's damage by !M!. NL Next turn, add a *Deca *Shield+ into your hand, or Exhume it. NL Exhaust."
+    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. Increase this card's damage by !M!. NL Next turn, add a *Deca *Shield into your hand, or expansioncontent:Exhume it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. Increase this card's damage by !M!. NL Next turn, add a *Deca *Shield+ into your hand, or expansioncontent:Exhume it. NL Exhaust."
   },
   "expansioncontent:DecaShield": {
     "NAME": "Deca Shield",
-    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Gain !B! Block twice. Increase this card's Block by !M!. NL Next turn, Exhume *Donu *Blast. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Ancients. NL Gain !B! Block twice. Increase this card's Block by !M!. NL Next turn, Exhume *Donu *Blast+. NL Exhaust."
+    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Gain !B! Block twice. Increase this card's Block by !M!. NL Next turn, expansioncontent:Exhume *Donu *Blast. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Ancients. NL Gain !B! Block twice. Increase this card's Block by !M!. NL Next turn, expansioncontent:Exhume *Donu *Blast+. NL Exhaust."
   },
   "expansioncontent:PrepareCrush": {
     "NAME": "Prepare Crush",

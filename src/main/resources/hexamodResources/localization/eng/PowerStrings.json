@@ -106,10 +106,10 @@
   "hexamod:GiftsFromTheDeadPower": {
     "NAME": "Gifted Cards",
     "DESCRIPTIONS": [
-      "Whenever an #yEthereal card is #yExhausted, draw ",
-      " cards",
-      " card",
-      " next turn."
+      "At the start of your turn, expansioncontent:Reclaim ",
+      " random Afterlife ",
+      " card.",
+      " cards."
     ]
   },
   "hexamod:GiftsFromTheDeadPowerPlus": {

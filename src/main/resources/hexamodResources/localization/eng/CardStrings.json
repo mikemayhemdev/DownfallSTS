@@ -77,7 +77,7 @@
   },
   "hexamod:HauntingEcho": {
     "NAME": "Haunting Echo",
-    "DESCRIPTION": "Deal !D! damage. NL Return a random Exhausted Afterlife card to your discard pile.",
+    "DESCRIPTION": "Deal !D! damage. NL expansioncontent:Reclaim a random Afterlife card.",
     "EXTENDED_DESCRIPTION": ["Ethereal","Ethereal. NL "]
   },
   "hexamod:NecessarySacrifice": {
@@ -134,8 +134,8 @@
   },
   "hexamod:RecurringNightmare": {
     "NAME": "Nightmare Vision",
-    "DESCRIPTION": "Put an Ethereal card from your exhaust pile into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Put 2 Ethereal cards from your exhaust pile into your hand. NL Exhaust.",
+    "DESCRIPTION": "expansioncontent:Exhume an Ethereal card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:Exhume 2 Ethereal cards. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose an Ethereal card to return to your hand.",
       "Choose ",
@@ -144,7 +144,7 @@
   },
   "hexamod:GiftsFromTheDead": {
     "NAME": "Gifts From Beyond",
-    "DESCRIPTION": "At the start of your turn, return a random Exhausted Afterlife card to your discard pile.",
+    "DESCRIPTION": "At the start of your turn, expansioncontent:Reclaim a random Afterlife card.",
     "EXTENDED_DESCRIPTION": [
       "These spirits are too powerful to invoke directly."
     ]
@@ -181,11 +181,11 @@
   },
   "hexamod:ShadowStrike": {
     "NAME": "Shadow Strike",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Return *Nightmare *Strike from your exhaust pile to your discard pile. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL expansioncontent:Reclaim *Nightmare *Strike. NL Exhaust."
   },
   "hexamod:ShadowGuise": {
     "NAME": "Shadow Guise",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Return *Nightmare *Guise from your exhaust pile to your discard pile. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL expansioncontent:Reclaim *Nightmare *Guise. NL Exhaust."
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "Power from Beyond",
