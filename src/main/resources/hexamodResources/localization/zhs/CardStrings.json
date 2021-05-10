@@ -77,7 +77,7 @@
   },
   "hexamod:HauntingEcho": {
     "NAME": "萦绕回声",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将消耗堆中的一张 hexamod:阴世 牌返回你的弃牌堆。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL expansioncontent:取回 一张 hexamod:阴世 牌。",
 	"EXTENDED_DESCRIPTION": ["虚无","虚无。 NL "]
   },
   "hexamod:NecessarySacrifice": {
@@ -134,17 +134,17 @@
   },
   "hexamod:RecurringNightmare": {
     "NAME": "梦魇幻象",
-    "DESCRIPTION": "将消耗堆中的1张 虚无 牌加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将消耗堆中的2张 虚无 牌加入手牌。 NL 消耗 。",
+    "DESCRIPTION": "expansioncontent:发掘 1张 虚无 牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:发掘 1张 虚无 牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "选择一张虚无牌加入手牌",
-	  "选择",
-	  "张虚无牌加入手牌"
+      "发掘一张虚无牌",
+	  "发掘",
+	  "张虚无牌"
     ]
   },
   "hexamod:GiftsFromTheDead": {
     "NAME": "深处之礼",
-    "DESCRIPTION": "每回合开始时，将消耗堆中的一张 hexamod:阴世 牌返回你的弃牌堆。",
+    "DESCRIPTION": "每回合开始时， expansioncontent:取回一张 hexamod:阴世 牌。",
 	"EXTENDED_DESCRIPTION": [
       "这些灵魂太强大了，无法直接召唤。"
     ]
@@ -181,11 +181,11 @@
   },
   "hexamod:ShadowStrike": {
     "NAME": "暗影打击",
-    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 将消耗堆中的 *梦魇打击 放入弃牌堆。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL expansioncontent:取回 *梦魇打击 。 NL 消耗 。"
   },
   "hexamod:ShadowGuise": {
     "NAME": "暗影伪装",
-    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 将消耗堆中的 *梦魇伪装 放入弃牌堆。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL expansioncontent:取回 *梦魇伪装 。 NL 消耗 。"
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "深处之力",
