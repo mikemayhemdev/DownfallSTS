@@ -361,7 +361,7 @@
     ]
   },
   "champ:PerfectedStrike": {
-    "NAME": "Perfected Strike",
+    "NAME": "Perfecter Strike",
     "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your cards containing \"Strike\"."
   },
   "champ:GladiatorForm": {
@@ -453,8 +453,8 @@
   },
   "champ:WindUp": {
     "NAME": "Wind Up",
-    "DESCRIPTION": "Choose a Stance to Enter. NL Fetch a champ:Finisher. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a Stance to Enter. NL Fetch a champ:Finisher.",
+    "DESCRIPTION": "Choose a Stance to Enter. NL Fetch a champ:Finisher from your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a Stance to Enter. NL Fetch a champ:Finisher from your draw pile.",
     "EXTENDED_DESCRIPTION": [
       "Enter champ:Berserker.",
       "Enter champ:Defensive."
