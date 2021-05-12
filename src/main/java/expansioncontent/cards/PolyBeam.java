@@ -55,6 +55,9 @@ public class PolyBeam extends AbstractExpansionCard {
         atb(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
         atb(new VFXAction(new SmallLaserEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY), 0.3F));
         atb(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
+
+        atb(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
+        atb(new VFXAction(new SmallLaserEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY), 0.3F));
         atb(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 
         atb(new AbstractGameAction() {
@@ -82,11 +85,11 @@ public class PolyBeam extends AbstractExpansionCard {
 
     public void upgrade() {
         if (!upgraded) {
-            if (cardsToPreview != null) cardsToPreview.upgrade();
             upgradeName();
             upgradeDamage(UPGRADE_DAMAGE);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
+            if (cardsToPreview != null && !cardsToPreview.upgraded) cardsToPreview.upgrade();
         }
     }
 
