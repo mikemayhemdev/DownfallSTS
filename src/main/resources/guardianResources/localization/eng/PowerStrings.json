@@ -207,7 +207,7 @@
   "Guardian:BracePerTurnPower": {
     "NAME": "Bracing",
     "DESCRIPTIONS": [
-      "At the start of your turn, guardianmod:Brace #b",
+      "At the start of your turn, #yBrace #b",
       " ."
     ]
   }
