@@ -330,7 +330,7 @@
 
   "Gremlin:PourSalt": {
     "NAME": "Pour Salt",
-    "DESCRIPTION": "Deal !D! damage. If the enemy is Weak, add !M! Shivs to your hand."
+    "DESCRIPTION": "Deal !D! damage. If the enemy is Weak, remove a stack to add !M! Shivs to your hand."
   },
 
   "Gremlin:Presto": {
