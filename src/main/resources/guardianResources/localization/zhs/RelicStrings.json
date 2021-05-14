@@ -3,7 +3,7 @@
     "NAME": "铜制齿轮",
     "FLAVOR": "在你最需要的时候保护你。",
     "DESCRIPTIONS": [
-      "你的回合开始时 #yguardianmod:提防 2。"
+      "每场战斗首次进入 #yguardianmod:防御模式 时，额外持续一回合。"
     ]
   },
   "Guardian:ModeShifterPlus": {
@@ -98,7 +98,7 @@
     ]
   },
   "Guardian:PickAxe": {
-    "NAME": "星光公司采矿镐",
+    "NAME": "星光采矿镐",
     "FLAVOR": "有那么多宝石散落在尖塔中，很难想象有这么不幸的人需要这把镐来帮助他们。",
     "DESCRIPTIONS": [
 	"你能在 #b3 处 篝火 #g挖掘 #b2 颗 #yguardianmod:宝石 。"

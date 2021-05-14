@@ -26,58 +26,5 @@
   "downfall:Scatterbrained": {
     "NAME": "Scatterbrained",
     "DESCRIPTION": "Unplayable. NL When drawn, if it is your turn, fill your hand with Echoes of this card."
-  },
-  "downfall_Charboss:Slug": {
-    "NAME": "Slug",
-    "DESCRIPTION": "Deal !D! damage."
-  },
-  "downfall_Charboss:Defend_Crowbot": {
-    "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block."
-  },
-  "downfall_Charboss:Boom": {
-    "NAME": "Boom",
-    "DESCRIPTION": "downfall:Fire 1 Ammo for !M! times damage."
-  },
-  "downfall_Charboss:Beam": {
-    "NAME": "Beam",
-    "DESCRIPTION": "Deal !D! damage. NL Gain [E]. NL Exhaust this card if played from your hand."
-  },
-  "downfall_Charboss:Pellet": {
-    "NAME": "Pellet",
-    "DESCRIPTION": "Deal !D! damage."
-  },
-  "downfall_Charboss:Barrier": {
-    "NAME": "Barrier",
-    "DESCRIPTION": "If you have no Block, gain !B! Block."
-  },
-  "downfall_Charboss:Ricochet": {
-    "NAME": "Ricochet",
-    "DESCRIPTION": "downfall:Fire 1 Ammo. Deal its effect to !M! random targets."
-  },
-  "downfall_Charboss:HeavySlug": {
-    "NAME": "Heavy Slug",
-    "DESCRIPTION": "Deal !D! damage. NL Exhausts if downfall:Fired."
-  },
-  "downfall_Charboss:Cannonball": {
-    "NAME": "Cannonball",
-    "DESCRIPTION": "Deal !D! damage."
-  },
-  "downfall_Charboss:FullMetalJacket": {
-    "NAME": "Full Metal Jacket",
-    "DESCRIPTION": "Deal !D! damage. NL If downfall:Fired, apply !M! Vulnerable."
-  },
-  "downfall_Charboss:FanTheHammer": {
-    "NAME": "Fan The Hammer",
-    "DESCRIPTION": "Draw !M! cards. NL downfall:Fire Ammo cards drawn this way."
-  },
-  "downfall_Charboss:CompressionMold": {
-    "NAME": "Compression Mold",
-    "DESCRIPTION": "downfall:Fired Ammo is upgraded afterwards.",
-    "UPGRADE_DESCRIPTION": "Innate. NL downfall:Fired Ammo is upgraded afterwards."
-  },
-  "downfall_Charboss:Desperado": {
-    "NAME": "Desperado",
-    "DESCRIPTION": "If you no Ammo cards in your hand, deal !D! damage."
   }
 }

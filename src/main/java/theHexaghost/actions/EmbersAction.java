@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.actions.AbstractXAction;
+import gremlin.actions.PseudoDamageRandomEnemyAction;
 import theHexaghost.powers.BurnPower;
 
 public class EmbersAction extends AbstractXAction {
@@ -46,7 +47,7 @@ public class EmbersAction extends AbstractXAction {
                     isDone = true;
                     AbstractMonster m = AbstractDungeon.getRandomMonster();
                     addToTop(new ApplyPowerAction(m, p, new BurnPower(m, burn), burn));
-                    addToTop(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.FIRE));
+                    addToTop(new PseudoDamageRandomEnemyAction(m, new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.FIRE));
                 }
             });
         }

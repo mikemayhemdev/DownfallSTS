@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.actions.PseudoDamageRandomEnemyAction;
 import theHexaghost.powers.BurnPower;
 
 public class Incineration extends AbstractHexaCard {
@@ -34,7 +35,7 @@ public class Incineration extends AbstractHexaCard {
                 public void update() {
                     isDone = true;
                     AbstractMonster m = AbstractDungeon.getRandomMonster();
-                    addToTop(new DamageAction(m, makeInfo(), AttackEffect.FIRE));
+                    addToTop(new PseudoDamageRandomEnemyAction(m, makeInfo(), AttackEffect.FIRE));
                     addToTop(new ApplyPowerAction(m, p, new BurnPower(m, burn), burn));
                 }
             });

@@ -614,8 +614,8 @@
   },
   "bronze:FindAndReplace": {
     "NAME": "Find and Replace",
-    "DESCRIPTION": "Ethereal. NL Put a card from your draw or discard pile into your hand. NL Add a Dazed where it was. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Put a card from your draw or discard pile into your hand. NL Add a Dazed where it was. NL Exhaust.",
+    "DESCRIPTION": "Ethereal. NL Fetch a card from your draw or discard pile. NL Add a Dazed where it was. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Fetch a card from your draw or discard pile. NL Add a Dazed where it was. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose."
     ]

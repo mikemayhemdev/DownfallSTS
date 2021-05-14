@@ -2,6 +2,7 @@ package sneckomod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -37,10 +38,17 @@ public class BlankCard extends CustomRelic {
 
             card2.freeToPlayOnce = true;
             card2.purgeOnUse = true;
-            card2.applyPowers();
 
             flash();
             AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(card2.makeStatEquivalentCopy()));
+
+            AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    card2.applyPowers();
+                    isDone = true;
+                }
+            });
             AbstractDungeon.actionManager.addToBottom(new NewQueueCardAction(card2, m));
             this.activated = true;
         }

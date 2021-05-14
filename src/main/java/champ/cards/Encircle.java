@@ -1,21 +1,12 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
-import downfall.util.CardIgnore;
-
-import static champ.ChampMod.fatigue;
 
 public class Encircle extends AbstractChampCard {
 
@@ -29,8 +20,9 @@ public class Encircle extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         tags.add(ChampMod.TECHNIQUE);
-        //tags.add(ChampMod.COMBO);
-       // tags.add(ChampMod.COMBOBERSERKER);
+        isMultiDamage = true;
+        // tags.add(ChampMod.COMBO);
+        // tags.add(ChampMod.COMBOBERSERKER);
         postInit();
     }
 

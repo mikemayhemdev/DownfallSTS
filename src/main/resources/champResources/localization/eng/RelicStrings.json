@@ -24,7 +24,7 @@
     "NAME": "Berserker's Guide",
     "FLAVOR": "The text is illegible.",
     "DESCRIPTIONS": [
-      "Prevent the first #b10 HP you lose on your turn each combat."
+      "At the start of your turn, gain #b3 Vigor."
     ]
   },
   "champ:ChampionCrownUpgraded": {

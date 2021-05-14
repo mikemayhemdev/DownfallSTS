@@ -19,8 +19,8 @@
   },
   "Guardian:Gem_Lightblue": {
     "NAME": "碧玺",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 1 点 guardianmod:临时 荆棘 。",
-    "UPGRADE_DESCRIPTION": "获得 1 点 guardianmod:临时 荆棘 。"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 3 点 guardianmod:临时 荆棘 。",
+    "UPGRADE_DESCRIPTION": "获得 3 点 guardianmod:临时 荆棘 。"
   },
   "Guardian:Gem_White": {
     "NAME": "石英",
@@ -65,7 +65,7 @@
   },
   "Guardian:GuardianWhirl": {
     "NAME": "守护者旋风",
-    "DESCRIPTION": "guardianmod:防御模式 时才能被打出，退出当前 姿态 。对所有敌人造成 !D! 点伤害 !M! 次。"
+    "DESCRIPTION": "至少有20点 格挡 才能被打出。 NL 对所有敌人造成 !D! 点伤害 !M! 次。"
   },
   "Guardian:VentSteam": {
     "NAME": "蒸汽喷射",
@@ -74,7 +74,8 @@
   },
   "Guardian:CurlUp": {
     "NAME": "蜷身",
-    "DESCRIPTION": "处于 guardianmod:防御模式 时获得 !B! 点 格挡 。 NL 否则， guardianmod:提防 !M! 。"
+    "DESCRIPTION": "将随机一张手牌 guardianmod:凝滞 。 NL guardianmod:提防 !M! 。",
+    "UPGRADE_DESCRIPTION": "将一张手牌 guardianmod:凝滞 。 NL guardianmod:提防 !M! 。"
   },
   "Guardian:TimeBomb": {
     "NAME": "时间炸弹",
@@ -116,7 +117,7 @@
   },
   "Guardian:Harden": {
     "NAME": "硬化",
-    "DESCRIPTION": "至少有20点 格挡 才能被打出。 NL 获得 !B! 点 格挡 和 !M! 层 荆棘 。"
+    "DESCRIPTION": "至少有20点 格挡 才能被打出。 NL guardianmod:提防 !GuardianSecondM! 并获得 !M! 层 荆棘 。"
   },
   "Guardian:SentryBeam": {
     "NAME": "哨卫射线",

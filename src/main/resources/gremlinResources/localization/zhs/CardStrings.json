@@ -76,7 +76,7 @@
   },
   "Gremlin:Dazzle": {
     "NAME": "耀眼",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果你有至少5点 gremlin:法力 ，敌人失去 2 点 力量 。 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果你至少有3点 gremlin:法力 ，敌人失去 2 点 力量 。 消耗 。"
   },
   "Gremlin:Defend": {
     "NAME": "防御",
@@ -245,7 +245,7 @@
   },
   "Gremlin:Necromancy": {
     "NAME": "招魂",
-    "DESCRIPTION": "当你有至少 5 点 gremlin:法力 才能被打出。 NL 消耗所有 gremlin:法力 复活随机一只地精并回复到 !M! 点生命。 消耗 。",
+    "DESCRIPTION": "当你至少有3点 gremlin:法力 才能被打出。 NL 消耗所有 gremlin:法力 复活随机一只地精并回复到 !M! 点生命。 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "法力还不够mojo。",
       "大家都还活着。",
@@ -369,7 +369,7 @@
   },
   "Gremlin:ShowStopper": {
     "NAME": "炫耀",
-    "DESCRIPTION": "恰好有 10 点 gremlin:法力 才能打出。 NL 对所有敌人造成 !D! 点伤害 5 次。",
+    "DESCRIPTION": "恰好有 7 点 gremlin:法力 才能打出。 NL 对所有敌人造成 !D! 点伤害 5 次。",
     "EXTENDED_DESCRIPTION": [
       "时机未到。",
       "时机已过。"
@@ -393,8 +393,8 @@
   },
   "Gremlin:Tadah": {
     "NAME": "愚蠢！",
-    "DESCRIPTION": "将一张随机技能牌的 gremlin:回响 加入你的手牌。 NL gremlin:切换 到 gremlin:地精法师 。",
-    "UPGRADE_DESCRIPTION": "将一张随机技能牌的 gremlin:回响 加入你的手牌。其能耗减少 1 。 NL gremlin:切换 到 gremlin:地精法师 。"
+    "DESCRIPTION": "将一张随机技能牌的 gremlin:回响 加入你的手牌。 NL 其能耗减少1。 NL gremlin:切换 到 gremlin:地精法师 。",
+    "UPGRADE_DESCRIPTION": "将一张随机技能牌已 升级 的 gremlin:回响 加入你的手牌。 NL 其能耗减少1。 NL gremlin:切换 到 gremlin:地精法师 。"
   },
   "Gremlin:TagTeam": {
     "NAME": "配合",

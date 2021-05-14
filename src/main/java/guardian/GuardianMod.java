@@ -1041,7 +1041,7 @@ public static void saveData() {
         gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/fraggem.png")));
         gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/blackgem.png")));
         gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/purplegem.png")));
-        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/yellowgem4png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/yellowgem.png")));
 
     }
 

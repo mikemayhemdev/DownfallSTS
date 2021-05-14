@@ -105,8 +105,8 @@
   },
   "Slimebound:Recollect": {
     "NAME": "Recollect",
-    "DESCRIPTION": "Gain !B! Block. NL Return a random 0-cost Exhausted card to your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Return 2 random 0-cost Exhausted cards to your hand.",
+    "DESCRIPTION": "Gain !B! Block. NL expansioncontent:Exhume a random 0-cost card.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL expansioncontent:Exhume 2 random 0-cost cards.",
     "EXTENDED_DESCRIPTION": [
       "Not... Exhausted..."
     ]
@@ -125,8 +125,8 @@
   },
   "Slimebound:Recycling": {
     "NAME": "Recycling",
-    "DESCRIPTION": "At the start of your turn, return a random Exhausted 0-cost card to your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, return a random Exhausted 0-cost card to your hand."
+    "DESCRIPTION": "At the start of your turn, expansioncontent:Exhume a random 0-cost card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, expansioncontent:Exhume a random 0-cost card."
   },
   "Slimebound:Repurpose": {
     "NAME": "Repurpose",
@@ -191,7 +191,7 @@
   },
   "Slimebound:WasteNot": {
     "NAME": "Waste Not",
-    "DESCRIPTION": "Return all 0-cost Exhausted cards to your hand. NL Exhaust.",
+    "DESCRIPTION": "expansioncontent:Exhume all 0-cost cards. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Not... Exhausted..."
     ]
@@ -207,8 +207,8 @@
   },
   "Slimebound:HungryTackle": {
     "NAME": "Hungry Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Return a random 0-cost Exhausted card to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Return 2 random 0-cost Exhausted cards to your hand."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL expansioncontent:Exhume a random 0-cost card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL expansioncontent:Exhume 2 random 0-cost cards."
   },
   "Slimebound:FinishingTackle": {
     "NAME": "Opening Tackle",
@@ -285,8 +285,8 @@
   },
   "Slimebound:PrepareCrush": {
     "NAME": "Prepare: Crush",
-    "DESCRIPTION": "Next turn, gain [E] [E] [E] and !SlimeboundSlimed! Strength, and add SLIME CRUSH to your hand.",
-    "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E] [E] [E] and !SlimeboundSlimed! Strength, and add SLIME CRUSH+ to your hand."
+    "DESCRIPTION": "Next turn, gain [E] [E] [E] and !SlimeboundSlimed! Strength, and add SLIME CRUSH to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E] [E] [E] and !SlimeboundSlimed! Strength, and add SLIME CRUSH+ to your hand. NL Exhaust."
   },
   "Slimebound:SlimeCrush": {
     "NAME": "SLIME CRUSH!!!",

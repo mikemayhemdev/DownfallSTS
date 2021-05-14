@@ -19,7 +19,7 @@ public class OrbPositionPatch {
 
         if (AbstractDungeon.player instanceof SlimeboundCharacter && !(abstractOrb_instance instanceof AbstractEnemyOrb)) {
             float xStartOffset = AbstractDungeon.player.drawX + Settings.scale * -150F;
-            float yStartOffset = AbstractDungeon.player.drawY + Settings.scale * -55F;
+            float yStartOffset = AbstractDungeon.player.drawY + Settings.scale * -130F;
             float ySpaceAlternatingOffset = -20 * Settings.scale;
             float xSpaceBetweenSlots = 110 * Settings.scale;
 

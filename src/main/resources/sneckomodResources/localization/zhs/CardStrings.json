@@ -199,13 +199,13 @@
   },
   "sneckomod:Transmogrify": {
     "NAME": "惊变",
-    "DESCRIPTION": "失去随机一个遗物。 NL 在战斗结束时选择将其取回，或者获得相同稀有度的另一个遗物。 NL 消耗 。",
+    "DESCRIPTION": "从2件遗物中选择失去1件遗物。 NL 获得相同稀有度的另一件遗物。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我没有遗物能够惊变",
-      "Choose a Relic to lose.",
-      "Lose ",
-      " and obtain another ",
-      " Relic."
+      "选择失去一件遗物",
+      "失去 ",
+      " 并获得另一件 ",
+      " 遗物。"
     ]
   },
   "sneckomod:DefensiveFlair": {
