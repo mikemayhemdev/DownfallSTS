@@ -28,7 +28,7 @@
 
   "Gremlin:BrokenShin": {
     "NAME": "Broken Shin",
-    "DESCRIPTION": "Apply gremlin:Agony for every !M! stacks of Weak the target has."
+    "DESCRIPTION": "Apply gremlin:Agony for every !M! stacks of Weak the target has. NL Exhaust."
   },
 
   "Gremlin:BubbleBarrier": {
