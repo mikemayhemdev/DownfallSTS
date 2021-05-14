@@ -193,7 +193,7 @@ public class GremlinCharacter extends CustomPlayer {
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(characterStrings.NAMES[0],
                 characterStrings.TEXT[0],
-                20, 20, 4, 99,
+                16, 16, 4, 99,
                 5, this, getStartingRelics(), getStartingDeck(), false);
     }
 
