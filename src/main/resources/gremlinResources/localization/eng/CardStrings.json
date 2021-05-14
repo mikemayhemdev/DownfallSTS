@@ -87,7 +87,7 @@
 
   "Gremlin:Dazzle": {
     "NAME": "Dazzle",
-    "DESCRIPTION": "Deal !D! damage. NL If you have 3 or more gremlin:Wiz, the enemy loses 2 Strength. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL If you have 3 or more gremlin:Wiz, the steal 2 Strength. NL Exhaust."
   },
 
   "Gremlin:Defend": {
@@ -259,7 +259,7 @@
 
   "Gremlin:LeaderChoice": {
     "NAME": "Make a Choice",
-    "DESCRIPTION": "Surrender your friend to slavery?"
+    "DESCRIPTION": "Surrender your friend?"
   },
 
   "Gremlin:MadGremlin": {

@@ -51,6 +51,10 @@ public class Dazzle extends AbstractGremlinCard {
         if(amount >= RAZZLE){
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                     new StrengthPower(m, -2), -2));
+            if(!m.hasPower("Artifact")){
+                AbstractDungeon.actionManager.addToBottom(
+                        new ApplyPowerAction(p, p, new StrengthPower(p, 2), 2));
+            }
         }
     }
 
