@@ -87,7 +87,7 @@
 
   "Gremlin:Dazzle": {
     "NAME": "Dazzle",
-    "DESCRIPTION": "Deal !D! damage. NL If you have 3 or more gremlin:Wiz, the steal 2 Strength. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL If you have 3 or more gremlin:Wiz, then steal 2 Strength. NL Exhaust."
   },
 
   "Gremlin:Defend": {
