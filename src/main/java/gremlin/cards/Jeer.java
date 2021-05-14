@@ -1,7 +1,5 @@
 package gremlin.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,7 +7,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import gremlin.actions.JeerAction;
 import gremlin.actions.JeerOuterAction;
 
 import static gremlin.GremlinMod.FAT_GREMLIN;
@@ -27,8 +24,8 @@ public class Jeer extends AbstractGremlinCard {
     private static final int COST = 1;
     private static final int POWER = 7;
     private static final int UPGRADE_BONUS = 4;
-    private static final int MAGIC = 3;
-    private static final int UPGRADE_MAGIC = 1;
+    private static final int MAGIC = 2;
+    private static final int UPGRADE_MAGIC = 2;
 
     public Jeer()
     {
