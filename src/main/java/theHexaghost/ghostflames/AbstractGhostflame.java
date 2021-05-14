@@ -104,6 +104,13 @@ public abstract class AbstractGhostflame {
         }
     }
 
+    public void forceCharge(){
+        if (charged){
+            extinguish();
+        }
+        charge();
+    }
+
     public abstract void onCharge();
 
     public void update() {
