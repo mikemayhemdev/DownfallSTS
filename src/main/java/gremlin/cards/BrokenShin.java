@@ -35,6 +35,7 @@ public class BrokenShin extends AbstractGremlinCard {
         this.magicNumber = baseMagicNumber;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(FAT_GREMLIN);
+        this.exhaust = true;
         setBackgrounds();
     }
 

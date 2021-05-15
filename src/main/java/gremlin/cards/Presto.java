@@ -26,8 +26,9 @@ public class Presto extends AbstractGremlinCard {
 
     private static final int COST = 1;
     private static final int POWER = 7;
-    private static final int UPGRADE_BONUS = 5;
+    private static final int UPGRADE_BONUS = 4;
     private static final int MAGIC = 1;
+    private static final int UPGRADE_MAGIC = 1;
 
     public Presto()
     {
@@ -54,6 +55,7 @@ public class Presto extends AbstractGremlinCard {
         {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
+            upgradeMagicNumber(UPGRADE_MAGIC);
         }
     }
 }

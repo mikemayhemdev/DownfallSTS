@@ -25,7 +25,8 @@ public class Changeo extends AbstractGremlinCard {
     private static final int COST = 1;
     private static final int BLOCK = 8;
     private static final int MAGIC = 1;
-    private static final int UPGRADE_BONUS = 4;
+    private static final int UPGRADE_BONUS = 3;
+    private static final int UPGRADE_MAGIC = 1;
 
     public Changeo()
     {
@@ -51,6 +52,7 @@ public class Changeo extends AbstractGremlinCard {
         {
             upgradeName();
             upgradeBlock(UPGRADE_BONUS);
+            upgradeMagicNumber(UPGRADE_MAGIC);
         }
     }
 }
