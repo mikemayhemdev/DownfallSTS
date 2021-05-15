@@ -23,7 +23,7 @@
   },
   "Gremlin:BrokenShin": {
     "NAME": "破胫",
-    "DESCRIPTION": "目标每有 !M! 层 虚弱 ，给予一层 gremlin:苦痛 。"
+    "DESCRIPTION": "目标每有 !M! 层 虚弱 ，给予一层 gremlin:苦痛 。 NL 消耗 。"
   },
   "Gremlin:BubbleBarrier": {
     "NAME": "气泡屏障",
@@ -76,7 +76,7 @@
   },
   "Gremlin:Dazzle": {
     "NAME": "耀眼",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果你至少有3点 gremlin:法力 ，敌人失去 2 点 力量 。 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果你至少有3点 gremlin:法力 ，窃取2点 力量 。 NL 消耗 。"
   },
   "Gremlin:Defend": {
     "NAME": "防御",
@@ -292,7 +292,7 @@
   },
   "Gremlin:PourSalt": {
     "NAME": "撒盐",
-    "DESCRIPTION": "造成 !D! 点伤害。 如果目标身上有 虚弱 ，将 !M! 张 小刀 加入手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 如果目标身上有 虚弱 ，移除并将 !M! 张 小刀 加入手牌。"
   },
   "Gremlin:Presto": {
     "NAME": "法师！",
