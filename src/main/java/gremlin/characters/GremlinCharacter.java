@@ -115,7 +115,7 @@ public class GremlinCharacter extends CustomPlayer {
         initializeSlotPositions();
 
         mobState = new GremlinMobState();
-        int load_hp = 20;
+        int load_hp = 16;
         if(AbstractDungeon.ascensionLevel >= 14){
             load_hp -= getAscensionMaxHPLoss();
         }
@@ -193,7 +193,7 @@ public class GremlinCharacter extends CustomPlayer {
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(characterStrings.NAMES[0],
                 characterStrings.TEXT[0],
-                20, 20, 4, 99,
+                16, 16, 4, 99,
                 5, this, getStartingRelics(), getStartingDeck(), false);
     }
 
@@ -224,7 +224,7 @@ public class GremlinCharacter extends CustomPlayer {
 
     @Override
     public int getAscensionMaxHPLoss() {
-        return 1;
+        return 2;
     }
 
     @Override
