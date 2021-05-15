@@ -75,6 +75,7 @@ public class CursedFountain extends AbstractImageEvent {
             case 0:
                 switch (buttonPressed) {
                     case 0:
+                        //bottle
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         this.imageEventText.updateDialogOption(0, OPTIONS[6], true);
                         AbstractDungeon.getCurrRoom().rewards.clear();
@@ -82,12 +83,14 @@ public class CursedFountain extends AbstractImageEvent {
                         AbstractDungeon.combatRewardScreen.open();
                         return;
                     case 1:
+                        //consume
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         this.imageEventText.updateDialogOption(1, OPTIONS[6], true);
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldAmt));
                         AbstractDungeon.player.gainGold(this.goldAmt);
                         return;
                     case 2:
+                        //drink
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                         this.imageEventText.updateDialogOption(2, OPTIONS[6], true);
                         AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);

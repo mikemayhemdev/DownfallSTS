@@ -77,8 +77,7 @@
   },
   "hexamod:HauntingEcho": {
     "NAME": "Haunting Echo",
-    "DESCRIPTION": "Deal !D! damage. NL expansioncontent:Reclaim a random Afterlife card.",
-    "EXTENDED_DESCRIPTION": ["Ethereal","Ethereal. NL "]
+    "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is hexamod:Ignited, hexamod:Ignite it again."
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Worthy Sacrifice",
@@ -135,7 +134,7 @@
   "hexamod:RecurringNightmare": {
     "NAME": "Nightmare Vision",
     "DESCRIPTION": "expansioncontent:Exhume an Ethereal card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Exhume 2 Ethereal cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:Exhume !M! Ethereal cards. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose an Ethereal card to return to your hand.",
       "Choose ",
@@ -367,5 +366,26 @@
   "hexamod:BurningQuestion": {
     "NAME": "Burning Question",
     "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Increase this card's damage by !M!. NL When this card is Exhausted, deal !D! damage to ALL enemies."
+  },
+  "hexamod:Floatwork": {
+    "NAME": "Floatwork",
+    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Gain !M! Dexterity.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Ethereal. hexamod:Afterlife. NL Gain !M! Dexterity."
+  },
+  "hexamod:Premonition": {
+    "NAME": "Premonition",
+    "DESCRIPTION": "Choose a card in your hand. NL Play the chosen card and Exhaust it. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "to play and Exhaust."
+    ]
+  },
+  "hexamod:Divider": {
+    "NAME": "Divider",
+    "DESCRIPTION": "Deal !D! damage for each hexamod:Ignited Ghostflame."
+  },
+  "hexamod:StrikeFromBeyond": {
+    "NAME": "Strike From Beyond",
+    "DESCRIPTION": "Deal !D! damage twice. NL expansioncontent:Reclaim a random Afterlife card.",
+    "EXTENDED_DESCRIPTION": ["Ethereal","Ethereal. NL "]
   }
 }

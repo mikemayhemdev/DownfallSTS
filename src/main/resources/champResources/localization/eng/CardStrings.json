@@ -453,8 +453,8 @@
   },
   "champ:WindUp": {
     "NAME": "Wind Up",
-    "DESCRIPTION": "Choose a Stance to Enter. NL Fetch a champ:Finisher. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a Stance to Enter. NL Fetch a champ:Finisher.",
+    "DESCRIPTION": "Choose a Stance to Enter. NL Fetch a champ:Finisher from your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a Stance to Enter. NL Fetch a champ:Finisher from your draw pile.",
     "EXTENDED_DESCRIPTION": [
       "Enter champ:Berserker.",
       "Enter champ:Defensive."
