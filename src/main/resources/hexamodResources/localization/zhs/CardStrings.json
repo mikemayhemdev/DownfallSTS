@@ -77,7 +77,7 @@
   },
   "hexamod:HauntingEcho": {
     "NAME": "萦绕回声",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL expansioncontent:取回 一张 hexamod:阴世 牌。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果 hexamod:激活 的鬼火已 hexamod:点燃 ， hexamod:点燃 这个鬼火。",
 	"EXTENDED_DESCRIPTION": ["虚无","虚无。 NL "]
   },
   "hexamod:NecessarySacrifice": {
@@ -135,7 +135,7 @@
   "hexamod:RecurringNightmare": {
     "NAME": "梦魇幻象",
     "DESCRIPTION": "expansioncontent:发掘 1张 虚无 牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "expansioncontent:发掘 1张 虚无 牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:发掘 !M! 张 虚无 牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "发掘一张虚无牌",
 	  "发掘",
