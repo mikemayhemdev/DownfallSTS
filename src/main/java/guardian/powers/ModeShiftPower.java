@@ -80,7 +80,7 @@ public class ModeShiftPower extends AbstractGuardianPower {
     @Override
     public int onLoseHp(int damageAmount) {
 
-        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && this.active && !AbstractDungeon.player.hasPower(ConstructModePower.POWER_ID) && !AbstractDungeon.player.hasPower(BufferPower.POWER_ID)) {
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && this.active && !AbstractDungeon.player.hasPower(BufferPower.POWER_ID)) {
             onSpecificTrigger(damageAmount);
         }
 
