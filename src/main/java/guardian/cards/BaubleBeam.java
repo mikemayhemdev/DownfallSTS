@@ -1,6 +1,8 @@
 package guardian.cards;
 
 
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -12,7 +14,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
+import com.megacrit.cardcrawl.vfx.StarBounceEffect;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import sneckomod.SneckoMod;
@@ -77,9 +79,16 @@ public class BaubleBeam extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY), 0.3F));
 
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        for (int i = 0; i < this.damage; i++) {
+            final Color gemColor = this.sockets.size() > 0
+                    ? this.sockets.get(MathUtils.random(this.sockets.size()-1)).color.cpy()
+                    .add(MathUtils.random(-.1f, .1f), MathUtils.random(-.1f, .1f), MathUtils.random(-.1f, .1f), 0f)
+                    : new Color(MathUtils.random(0.8F, 1.0F), MathUtils.random(0.6F, 0.8F), MathUtils.random(0.0F, 0.6F), 0.0F);
+
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new StarBounceEffect(m.hb.cX, m.hb.cY) {{color = gemColor;}}));
+        }
 
         for (int i = 0; i < this.magicNumber; i++) {
             super.useGems(p, m);
