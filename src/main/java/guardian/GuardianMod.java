@@ -1090,19 +1090,23 @@ public static void saveData() {
     }
 
     public enum socketTypes {
-        RED,
-        BLUE,
-        GREEN,
-        LIGHTBLUE,
-        WHITE,
-        CYAN,
-        ORANGE,
-        CRIMSON,
-        FRAGMENTED,
-        SYNTHETIC,
-        PURPLE,
-        YELLOW
+        RED(Color.RED),
+        BLUE(Color.BLUE),
+        GREEN(Color.GREEN),
+        LIGHTBLUE(Color.SKY),
+        WHITE(Color.WHITE),
+        CYAN(Color.CYAN),
+        ORANGE(Color.ORANGE),
+        CRIMSON(Color.RED),
+        FRAGMENTED(Color.VIOLET),
+        SYNTHETIC(Color.DARK_GRAY),
+        PURPLE(Color.PURPLE),
+        YELLOW(Color.YELLOW);
 
+        public Color color;
+        socketTypes(Color color) {
+            this.color = color.cpy();
+        }
     }
 
     @Override
