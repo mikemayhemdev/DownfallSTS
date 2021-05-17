@@ -7,6 +7,7 @@ import basemod.BaseMod;
 import basemod.ModPanel;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomUnlockBundle;
+import basemod.devcommands.ConsoleCommand;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
@@ -49,6 +50,7 @@ import guardian.cards.*;
 import guardian.cards.BronzeArmor;
 import guardian.cards.BronzeOrb;
 import guardian.characters.GuardianCharacter;
+import guardian.commands.SocketGems;
 import guardian.events.StasisEgg;
 import guardian.events.*;
 import guardian.helpers.MultihitVariable;
@@ -974,6 +976,7 @@ public static void saveData() {
 
         initializeSocketTextures();
 
+        ConsoleCommand.addCommand("socketgems", SocketGems.class);
     }
 
     public void initializeSocketTextures() {
