@@ -9,13 +9,17 @@ import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
+import guardian.vfx.CrystalRayEffect;
 import guardian.vfx.SmallLaserEffectColored;
 import sneckomod.SneckoMod;
+
+import java.util.ArrayList;
 
 
 public class CrystalBeam extends AbstractGuardianCard {
@@ -62,39 +66,34 @@ public class CrystalBeam extends AbstractGuardianCard {
 
     }
 
-    public static int countCards() {
-        int count = 0;
+    public static ArrayList<GuardianMod.socketTypes> listGems() {
+        ArrayList<GuardianMod.socketTypes> sockets = new ArrayList<>();
         for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
             if (c instanceof AbstractGuardianCard) {
-                if (((AbstractGuardianCard) c).sockets.size() > 0)
-                    count += ((AbstractGuardianCard) c).sockets.size();
+                sockets.addAll(((AbstractGuardianCard) c).sockets);
             }
         }
         for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
             if (c instanceof AbstractGuardianCard) {
-                if (((AbstractGuardianCard) c).sockets.size() > 0)
-                    count += ((AbstractGuardianCard) c).sockets.size();
+                sockets.addAll(((AbstractGuardianCard) c).sockets);
             }
         }
         for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
             if (c instanceof AbstractGuardianCard) {
-                if (((AbstractGuardianCard) c).sockets.size() > 0)
-                    count += ((AbstractGuardianCard) c).sockets.size();
+                sockets.addAll(((AbstractGuardianCard) c).sockets);
             }
         }
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
             if (c instanceof AbstractGuardianCard) {
-                if (((AbstractGuardianCard) c).sockets.size() > 0)
-                    count += ((AbstractGuardianCard) c).sockets.size();
+                sockets.addAll(((AbstractGuardianCard) c).sockets);
             }
         }
-        return count;
+        return sockets;
     }
 
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
-        int bonus = 0;
-        int cards = countCards();
-        bonus = cards * this.magicNumber;
+        int cards = listGems().size();
+        int bonus = cards * this.magicNumber;
         return tmp + bonus + calculateBeamDamage();
 
     }
@@ -102,7 +101,7 @@ public class CrystalBeam extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY, Color.BLUE), 0.3F));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new CrystalRayEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY, listGems()), Settings.FAST_MODE ? 0.25f : 0.5f));
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 

@@ -75,32 +75,8 @@ public class GemFireAction extends AbstractGameAction {
             scaleX = scaleY = scale;
             //this.scale = 0.01f;
             glowColor = this.color;
-            switch(gem) {
-                case RED:
-                    glowColor = Color.RED.cpy(); break;
-                case BLUE:
-                    glowColor = Color.BLUE.cpy(); break;
-                case GREEN:
-                    glowColor = Color.GREEN.cpy(); break;
-                case LIGHTBLUE:
-                    glowColor = Color.SKY.cpy(); break;
-                case WHITE:
-                    glowColor = Color.WHITE.cpy(); break;
-                case CYAN:
-                    glowColor = Color.CYAN.cpy(); break;
-                case ORANGE:
-                    glowColor = Color.ORANGE.cpy(); break;
-                case CRIMSON:
-                    glowColor = Color.RED.cpy(); break;
-                case FRAGMENTED:
-                    glowColor = Color.VIOLET.cpy(); break;
-                case SYNTHETIC:
-                    glowColor = Color.BLACK.cpy(); break;
-                case PURPLE:
-                    glowColor = Color.PURPLE.cpy(); break;
-                case YELLOW:
-                    glowColor = Color.YELLOW.cpy(); break;
-            }
+            if(this.gem != null) glowColor = this.gem.color.cpy();
+
         }
         @Override
         public void render(SpriteBatch sb) {

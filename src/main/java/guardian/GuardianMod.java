@@ -7,6 +7,7 @@ import basemod.BaseMod;
 import basemod.ModPanel;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomUnlockBundle;
+import basemod.devcommands.ConsoleCommand;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
@@ -49,6 +50,7 @@ import guardian.cards.*;
 import guardian.cards.BronzeArmor;
 import guardian.cards.BronzeOrb;
 import guardian.characters.GuardianCharacter;
+import guardian.commands.SocketGems;
 import guardian.events.StasisEgg;
 import guardian.events.*;
 import guardian.helpers.MultihitVariable;
@@ -974,6 +976,7 @@ public static void saveData() {
 
         initializeSocketTextures();
 
+        ConsoleCommand.addCommand("socketgems", SocketGems.class);
     }
 
     public void initializeSocketTextures() {
@@ -1090,19 +1093,23 @@ public static void saveData() {
     }
 
     public enum socketTypes {
-        RED,
-        BLUE,
-        GREEN,
-        LIGHTBLUE,
-        WHITE,
-        CYAN,
-        ORANGE,
-        CRIMSON,
-        FRAGMENTED,
-        SYNTHETIC,
-        PURPLE,
-        YELLOW
+        RED(Color.RED),
+        BLUE(Color.BLUE),
+        GREEN(Color.GREEN),
+        LIGHTBLUE(Color.SKY),
+        WHITE(Color.WHITE),
+        CYAN(Color.CYAN),
+        ORANGE(Color.ORANGE),
+        CRIMSON(Color.RED),
+        FRAGMENTED(Color.VIOLET),
+        SYNTHETIC(Color.DARK_GRAY),
+        PURPLE(Color.PURPLE),
+        YELLOW(Color.YELLOW);
 
+        public Color color;
+        socketTypes(Color color) {
+            this.color = color.cpy();
+        }
     }
 
     @Override
