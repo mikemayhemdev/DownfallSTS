@@ -5,6 +5,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.helpers.ModHelper;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.downfallMod;
 import downfall.patches.RewardItemTypeEnumPatch;
 import expansioncontent.expansionContentMod;
@@ -24,7 +26,16 @@ public class BossCardReward extends CustomReward {
 
     public static ArrayList<AbstractCard> getCards() {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
-        while (cardsList.size() < 3) {
+        int numCards = 3;
+
+        for(AbstractRelic r : AbstractDungeon.player.relics) {
+            numCards = r.changeNumberOfCardsInReward(numCards);
+        }
+
+        if (ModHelper.isModEnabled("Binary")) {
+            --numCards;
+        }
+        while (cardsList.size() < numCards) {
             AbstractCard q = getBossCard();
             if (!cardListDuplicate(cardsList, q) && q.rarity != AbstractCard.CardRarity.SPECIAL) {
                 cardsList.add(q.makeCopy());
