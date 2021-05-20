@@ -192,11 +192,11 @@ public class FlipMap {
                 @Override
                 public void edit(MethodCall m) throws CannotCompileException {
                     if (m.getMethodName().equals("iterator")) {
-                        m.replace("{" +
+                        m.replace("if (downfall.patches.EvilModeCharacterSelect.evilMode) {" +
                                 "    java.util.ArrayList _tmp = (java.util.ArrayList)$0.clone();" +
                                 "    java.util.Collections.reverse(_tmp);" +
                                 "    $_ = _tmp.iterator();" +
-                                "}");
+                                "} else { $_ = $0.iterator(); }");
                     }
                 }
             };
