@@ -85,6 +85,9 @@ public class FlipMap {
             }
         }
 
+        // Reverses the direction of the edges between map rooms. for example, rooms on floor 2
+        // now have edges that end at floor 1 instead of floor 3. floor 1 nodes end at the boss instead
+        // of floor 2. doesn't change which floor the player starts at, that's elsewhere.
         private static void flip(ArrayList<ArrayList<MapRoomNode>> map) {
             startY = 0;
 
@@ -153,7 +156,8 @@ public class FlipMap {
         }
     }
 
-
+    // prevents elite and rest rooms from being created in the first five floors (first meaning floors with Y=10-14)
+    // only overrides base logic in evilMode
     @SpirePatch(
             clz = RoomTypeAssigner.class,
             method = "ruleAssignableToRow"
@@ -270,6 +274,7 @@ public class FlipMap {
         return retVal;
     }
 
+    // when in evilMode, allows the top row of rooms to be chosen as the first room instead of the bottom row
     @SpirePatch(
             clz = MapRoomNode.class,
             method = "update"
@@ -308,6 +313,8 @@ public class FlipMap {
         }
     }
 
+    // Adjusts the positions of all rooms upward to account for the boss room being
+    // at the bottom of the map instead of the top
     @SpirePatch(
             clz = MapRoomNode.class,
             method = SpirePatch.CONSTRUCTOR
@@ -413,6 +420,8 @@ public class FlipMap {
         }
     }
 
+    // moves the boss room's hitbox to the bottom of the map. has a special case for the
+    // fourth act since the map is shorter.
     @SpirePatch(
             clz = DungeonMap.class,
             method = "update"
@@ -482,6 +491,7 @@ public class FlipMap {
         }
     }
 
+    // change the position of the boss room's visuals to match the hitbox, changed previously
     @SpirePatch(
             clz = DungeonMap.class,
             method = "renderBossIcon"
