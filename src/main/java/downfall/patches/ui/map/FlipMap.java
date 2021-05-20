@@ -183,6 +183,26 @@ public class FlipMap {
         }
     }
 
+    // Assigns rooms to map nodes in reverse order. since elites are prevented from spawning at the top of the map,
+    // this allows those elites to try to spawn again further down.
+    @SpirePatch(clz = RoomTypeAssigner.class, method = "assignRoomsToNodes")
+    public static class AssignRoomsInReverse {
+        public static ExprEditor Instrument() {
+            return new ExprEditor() {
+                @Override
+                public void edit(MethodCall m) throws CannotCompileException {
+                    if (m.getMethodName().equals("iterator")) {
+                        m.replace("{" +
+                                "    java.util.ArrayList _tmp = (java.util.ArrayList)$0.clone();" +
+                                "    java.util.Collections.reverse(_tmp);" +
+                                "    $_ = _tmp.iterator();" +
+                                "}");
+                    }
+                }
+            };
+        }
+    }
+
     @SpirePatch(clz = RoomTypeAssigner.class, method = "distributeRoomsAcrossMap")
     public static class FixMapGenProbelms {
         @SpirePostfixPatch
