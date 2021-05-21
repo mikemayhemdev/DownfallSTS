@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.DaggerSprayEffect;
 
 public class FanOfKnives extends AbstractChampCard {
 
@@ -18,8 +17,6 @@ public class FanOfKnives extends AbstractChampCard {
 
     private static final int DAMAGE = 5;
     private static final int UPG_DAMAGE = 3;
-
-    private boolean found;
 
     public FanOfKnives() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
@@ -39,14 +36,13 @@ public class FanOfKnives extends AbstractChampCard {
         if (bcombo()) {
             atb(new VFXAction(new DaggerSprayAnyColorEffect(AbstractDungeon.getMonsters().shouldFlipVfx(), Color.RED), 0.0F));
             allDmg(AbstractGameAction.AttackEffect.NONE);
-            if (upgraded) {
-
-                atb(new VFXAction(new DaggerSprayAnyColorEffect(AbstractDungeon.getMonsters().shouldFlipVfx(), Color.SCARLET), 0.0F));
-                allDmg(AbstractGameAction.AttackEffect.NONE);
-            }
+//            if (upgraded) {
+//                atb(new VFXAction(new DaggerSprayAnyColorEffect(AbstractDungeon.getMonsters().shouldFlipVfx(), Color.SCARLET), 0.0F));
+//                allDmg(AbstractGameAction.AttackEffect.NONE);
+//            }
         }
-        berserkOpen();
 
+        berserkOpen();
     }
 
     @Override
