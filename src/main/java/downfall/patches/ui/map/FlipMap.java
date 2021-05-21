@@ -42,16 +42,45 @@ public class FlipMap {
             clz = AbstractDungeon.class,
             method = "generateMap"
     )
-    @SpirePatch(
-            clz = TheEnding.class,
-            method = "generateSpecialMap"
-    )
-    public static class EverythingIsWrong {
-        public static int startY = 0;
+    public static class StandardMapFlipper {
+        private static class Locator extends SpireInsertLocator {
+            public int[] Locate(CtBehavior ctBehavior) throws Exception {
+                Matcher finalMatcher = new Matcher.MethodCallMatcher(RoomTypeAssigner.class, "distributeRoomsAcrossMap");
+                return LineFinder.findInOrder(ctBehavior, finalMatcher);
+            }
+        }
 
         @SpireInsertPatch(
                 locator = Locator.class
         )
+        public static void Insert() {
+            MapFlipper.flipflipflipflipflip();
+        }
+    }
+
+    @SpirePatch(
+            clz = TheEnding.class,
+            method = "generateSpecialMap"
+    )
+    public static class EndingMapFlipper {
+        private static class Locator extends SpireInsertLocator {
+            public int[] Locate(CtBehavior ctBehavior) throws Exception {
+                Matcher finalMatcher = new Matcher.MethodCallMatcher(Logger.class, "info");
+                return LineFinder.findInOrder(ctBehavior, finalMatcher);
+            }
+        }
+
+        @SpireInsertPatch(
+                locator = Locator.class
+        )
+        public static void Insert() {
+            MapFlipper.flipflipflipflipflip();
+        }
+    }
+
+    public static class MapFlipper {
+        public static int startY = 0;
+
         public static void flipflipflipflipflip() {
             if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
                 if (downfallMod.normalMapLayout) {
@@ -71,8 +100,6 @@ public class FlipMap {
 
             assignRowAsRoomType(map.get(0), RestRoom.class);
             assignRowAsRoomType(map.get(map.size() - 1), MonsterRoom.class);
-
-
         }
 
         public static void assignRowAsRoomType(ArrayList<MapRoomNode> row, Class<? extends AbstractRoom> c) {
@@ -93,25 +120,28 @@ public class FlipMap {
 
             ArrayList<MapNodeData> edges = new ArrayList<>();
 
-            for (ArrayList<MapRoomNode> row : map)
+            for (ArrayList<MapRoomNode> row : map) {
                 for (MapRoomNode n : row) {
-                    if (n.room == null || n.getRoomSymbol(true) == null || n.room instanceof MonsterRoomBoss)
+                    if (n.room instanceof MonsterRoomBoss)
                         continue;
 
-                    for (MapEdge e : n.getEdges())
+                    for (MapEdge e : n.getEdges()) {
                         if (!edgeArrayContains(edges, e)) {
                             if (e.dstY >= 0 && e.dstY < map.size())
 
                                 edges.add(new MapNodeData(e, n, map.get(e.dstY).get(e.dstX)));
                         }
+                    }
 
                     n.getEdges().clear();
+                    n.getParents().clear();
                 }
+            }
 
             ArrayList<MapRoomNode> finalNodes = new ArrayList<>();
 
             for (MapNodeData data : edges) {
-                if (data.end.room == null || data.end.getRoomSymbol(true) == null || data.end.room instanceof MonsterRoomBoss)
+                if (data.end.room instanceof MonsterRoomBoss)
                     continue;
 
                 if (data.end.y > startY)
@@ -119,7 +149,7 @@ public class FlipMap {
 
                 data.end.addEdge(new MapEdge(data.end.x, data.end.y, data.end.offsetX, data.end.offsetY, data.start.x, data.start.y, data.start.offsetX, data.start.offsetY, false));
                 data.end.getEdges().sort(MapEdge::compareTo);
-
+                data.start.getParents().add(data.end);
                 if (data.start.y == 0)
                     finalNodes.add(data.start);
             }
@@ -148,12 +178,6 @@ public class FlipMap {
             }
         }
 
-        private static class Locator extends SpireInsertLocator {
-            public int[] Locate(CtBehavior ctBehavior) throws Exception {
-                Matcher finalMatcher = new Matcher.MethodCallMatcher(Logger.class, "info");
-                return LineFinder.findInOrder(ctBehavior, finalMatcher);
-            }
-        }
     }
 
     // prevents elite and rest rooms from being created in the first five floors (first meaning floors with Y=10-14)
@@ -201,50 +225,6 @@ public class FlipMap {
                 }
             };
         }
-    }
-
-    @SpirePatch(clz = RoomTypeAssigner.class, method = "distributeRoomsAcrossMap")
-    public static class FixMapGenProbelms {
-        @SpirePostfixPatch
-        public static ArrayList<ArrayList<MapRoomNode>> patch(ArrayList<ArrayList<MapRoomNode>> __result, Random rng, ArrayList<ArrayList<MapRoomNode>> map, ArrayList<AbstractRoom> roomList) {
-            if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
-                for (int i = 0; i < __result.size(); i++) {
-                    for(MapRoomNode mn : __result.get(i)) {
-                        if(mn.room instanceof ShopRoom) {
-                            for (MapRoomNode mn2 : mn.getParents()) {
-                                if(mn2.room instanceof ShopRoom) {
-                                    logger.info("Found consecutive shops: " + mn2.toString());
-                                    //Switch with monster or event room node from somewhere on the map
-                                    if(replaceSustainableSwitchRoom(__result, mn2, mn2.y) || replaceSustainableSwitchRoom(__result, mn2, mn2.y+1) || replaceSustainableSwitchRoom(__result, mn2, mn2.y-1)) {
-                                        break;
-                                    } else {
-                                        logger.error("Tried fixing consecutive shops but no applicable rooms have been found.");
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            return __result;
-        }
-    }
-
-    private static boolean replaceSustainableSwitchRoom(ArrayList<ArrayList<MapRoomNode>> __result, MapRoomNode mn2, int floor) {
-        for(MapRoomNode sibling : __result.get(floor)) {
-            if(!(sibling.room instanceof ShopRoom) && sibling.room != null && notConnectedToShops(sibling)) {
-                logger.info("Switching rooms: "+mn2.toString()+"      with      "+sibling.toString());
-                AbstractRoom tmp = sibling.room;
-                sibling.room = mn2.room;
-                mn2.room = tmp;
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private static boolean notConnectedToShops(MapRoomNode mn) {
-        return getConnectedNodes(mn).stream().noneMatch(m -> m.room instanceof ShopRoom) && mn.getParents().stream().noneMatch(m -> m.room instanceof ShopRoom);
     }
 
     @SpirePatch(clz = EmeraldElite.class, method = "alternate")
@@ -306,7 +286,7 @@ public class FlipMap {
 
         public static int isValidFirstNode(MapRoomNode n) {
             if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
-                if (n.y == FlipMap.EverythingIsWrong.startY) {
+                if (n.y == FlipMap.MapFlipper.startY) {
                     return 0;
                 } else if (n.y == 0) {
                     return 1;
