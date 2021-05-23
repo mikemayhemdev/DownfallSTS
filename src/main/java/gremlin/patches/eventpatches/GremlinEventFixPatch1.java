@@ -5,10 +5,12 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.ui.buttons.LargeDialogOptionButton;
+import gremlin.patches.GremlinEnum;
 import gremlin.powers.CrippledPower;
 
 @SpirePatch(
@@ -23,7 +25,7 @@ public class GremlinEventFixPatch1 {
 
     // Check if an event option involves the player losing HP via their text.
     protected static boolean needs_replacement(String msg) {
-        return msg.contains(REPLACEMENTSTRINGS[0]) && msg.contains(REPLACEMENTSTRINGS[1]);
+        return AbstractDungeon.player.chosenClass == GremlinEnum.GREMLIN && msg.contains(REPLACEMENTSTRINGS[0]) && msg.contains(REPLACEMENTSTRINGS[1]);
     }
 
     @SpirePatch(
