@@ -60,5 +60,12 @@
     "TEXT": [
       "Echo: "
     ]
+  },
+  "Gremlin:EventReplacementStrings": {
+    "TEXT": [
+      "#rLose #r",
+      " #rHP.",
+      "#rAll #rGremlins #rlose #r"
+    ]
   }
 }

@@ -5,7 +5,9 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.rooms.EventRoom;
 import expansioncontent.powers.AwakenDeathPower;
+import gremlin.GremlinMod;
 import gremlin.actions.GremlinSwapAction;
 import gremlin.characters.GremlinCharacter;
 import gremlin.orbs.GremlinStandby;
@@ -49,6 +51,25 @@ public class PlayerDamagePatch {
                     (new GremlinSwapAction()).update();
                     return SpireReturn.Return(null);
                 }
+            }
+        }
+        else if (AbstractDungeon.getCurrRoom() instanceof EventRoom) {
+            if (__instance instanceof GremlinCharacter) {
+                ((GremlinCharacter) __instance).gremlinDeathSFX();
+                String targetGremlin = null;
+                int idxTargetGremlin = -1;
+                for (int i = 0; i < 5; i++) {
+                    if (((GremlinCharacter) __instance).mobState.gremlinHP.get(i) > 0) {
+                        targetGremlin = ((GremlinCharacter) __instance).mobState.gremlins.get(i);
+                        idxTargetGremlin = i;
+                    }
+                }
+                if(targetGremlin != null) {
+                    __instance.currentHealth = ((GremlinCharacter) __instance).mobState.gremlinHP.get(idxTargetGremlin);
+                    ((GremlinCharacter) __instance).currentGremlin = targetGremlin;
+                    return SpireReturn.Return(null);
+                }
+
             }
         }
         return SpireReturn.Continue();

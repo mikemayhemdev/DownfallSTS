@@ -28,7 +28,7 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
     public void addedPreBattle() {
         super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherCripplePower(p, 120), 100));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherCripplePower(p, 150), 100));
 
     }
 
