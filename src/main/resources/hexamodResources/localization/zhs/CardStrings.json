@@ -366,6 +366,6 @@
   },
   "hexamod:BurningQuestion": {
     "NAME": "紧迫问题",
-    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 这张牌的伤害提高 !M! 点。 NL 被 消耗 时：对所有敌人造成 !D! 点伤害。"
+    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 这张牌的伤害提高 !M! 点。 NL 被 消耗 时：对所有敌人造成 !D! 点伤害。"
   }
 }

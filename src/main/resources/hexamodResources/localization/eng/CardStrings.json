@@ -365,7 +365,7 @@
   },
   "hexamod:BurningQuestion": {
     "NAME": "Burning Question",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Increase this card's damage by !M!. NL When this card is Exhausted, deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. Increase this card's damage by !M!. NL When this card is Exhausted, deal !D! damage to ALL enemies."
   },
   "hexamod:Floatwork": {
     "NAME": "Floatwork",
