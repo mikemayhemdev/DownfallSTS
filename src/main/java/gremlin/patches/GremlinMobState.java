@@ -13,8 +13,8 @@ import java.util.Collections;
 import java.util.Random;
 
 public class GremlinMobState {
-    private ArrayList<String> gremlins;
-    private ArrayList<Integer> gremlinHP;
+    public ArrayList<String> gremlins;
+    public ArrayList<Integer> gremlinHP;
     private ArrayList<String> enslaved;
     private String voucher;
     public boolean inCombat = false;
