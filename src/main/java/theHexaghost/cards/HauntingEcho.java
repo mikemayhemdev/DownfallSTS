@@ -21,7 +21,7 @@ public class HauntingEcho extends AbstractHexaCard {
     private static final int UPG_DAMAGE = 3;
 
     public HauntingEcho() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
         baseDamage = DAMAGE;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
