@@ -23,7 +23,7 @@ public class LouseSegment extends AbstractCollectibleCard {
         AbstractCard card = this;
         atb(new AbstractGameAction() {
             public void update() {
-                CollectorMod.PerpetualEffect(card);
+                CollectorMod.PerpetualEffect(card,0);
                 this.isDone = true;
             }});
     }

@@ -24,7 +24,7 @@ public class SoulSnare extends AbstractPower implements CloneablePowerInterface,
         this.amount = amount;
         this.type = PowerType.DEBUFF;
         this.isTurnBased = false;
-        this.loadRegion("constricted");
+        this.loadRegion("corruption");
 
         this.updateDescription();
     }
@@ -39,10 +39,8 @@ public class SoulSnare extends AbstractPower implements CloneablePowerInterface,
     public AbstractPower makeCopy() {
         return new SoulSnare(amount, owner);
     }
-
     @Override
     public boolean onReceivePower(AbstractPower abstractPower, AbstractCreature abstractCreature, AbstractCreature abstractCreature1) {
-
         if (CollectorMod.AfflictionMatch(abstractPower.ID) && !abstractPower.ID.equals(CollectorMod.Afflictions.get(5))){
             this.amount += 1;
         }

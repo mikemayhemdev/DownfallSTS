@@ -8,5 +8,58 @@
     "TEXT": [
       "Collectible"
     ]
+  },
+  "collector:Aggro": {
+    "TEXT": [
+      "Aggro+",
+      "",
+      "Shield down",
+      "Protecting the Collector"
+    ]
+  },
+  "collector:TargetMarker": {
+    "TEXT": [
+      "Target Marker",
+      "[#60D0D0]Collector[] will be attacked. [#60D0D0]Torch[] [#60D0D0]Head[] has no #yProtection,",
+      "",
+      "[#60D0D0]Torch[] [#60D0D0]Head[] will be attacked. NL [#60D0D0]Torch[] [#60D0D0]Head[] has #b",
+      " #yProtection.",
+      "[#60D0D0]Collector[] is fighting solo. NL [#60D0D0]Collector[] Will always be attacked, [#60D0D0]Torch[] [#60D0D0]Head[] cannot Act."
+    ]
+  },
+  "collector:MonsterIntent": {
+    "TEXT": [
+      "Aggressive",
+      "This enemy intends to NL #yAttack [#60D0D0]Torch[] [#60D0D0]Head[] for #b",
+      " damage #b",
+      " times.",
+      "This enemy intends to NL #yAttack [#60D0D0]Torch[] [#60D0D0]Head[] for #b",
+      " damage.",
+      "Aggressive",
+      "This enemy intends to use a #yBuff and #yAttack [#60D0D0]Torch[] [#60D0D0]Head[] for #b",
+      " times.",
+      "This enemy intends to use a #yBuff and #yAttack [#60D0D0]Torch[] [#60D0D0]Head[] for #b",
+      "Strategic",
+      "This enemy intends to inflict a #yNegative #yEffect on [#60D0D0]Torch[] [#60D0D0]Head[]] and #yAttack for #b",
+      "This enemy intends to #yBlock and #yAttack [#60D0D0]Torch[] [#60D0D0]Head[] for #b",
+      "Defensive",
+      "Cowardly",
+      "Magical",
+      "Sleeping",
+      "Stunned",
+      "Unknown",
+      "This enemy intends to use a #yBuff.",
+      "This enemy intends to inflict a #yNegative #yEffect on [#60D0D0]Torch[] [#60D0D0]Head[].",
+      "This enemy intends to inflict a powerful #yNegative #yEffect on [#60D0D0]Torch[] [#60D0D0]Head[].",
+      "This enemy intends to #yBlock on its turn.",
+      "This enemy intends to #yBlock and inflict a #yNegative #yEffect on [#60D0D0]Torch[] [#60D0D0]Head[].",
+      "This enemy intends to #yBlock and use a #yBuff.",
+      "This enemy intends to #yEscape.",
+      "This enemy intends to use mysterious #yMagic on its turn.",
+      "This enemy is asleep.",
+      "This enemy is #yStunned on its turn.",
+      "This enemy's intentions are #yUnknown (not attacking).",
+      "Blocked"
+    ]
   }
 }

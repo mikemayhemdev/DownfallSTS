@@ -6,7 +6,15 @@
       "afflictions",
       "afflicted"
     ],
-    "DESCRIPTION": "Creatures are Afflicted when they have 1 or more of the following effects, #yWeak, #yVulnerable, #yPoison, #yGoop, #ySoulfire, and #ySoul #ySnare"
+    "DESCRIPTION": "Creatures are Afflicted when they have 1 or more of the following effects, #yWeak, #yVulnerable, #yPoison, #yGoop, #ySoulfire, and #yInfection"
+  },
+  {
+    "PROPER_NAME": "Suffering",
+    "NAMES": [
+      "Suffering",
+      "suffering"
+    ],
+    "DESCRIPTION": "When Applied, enemy loses HP equal to their current #ySuffering NL Increase this by 1 whenever another #yAffliction is applied."
   },
   {
     "PROPER_NAME": "Soul Snare",
@@ -14,7 +22,7 @@
       "Soul Snare",
       "soul_snare"
     ],
-    "DESCRIPTION": "When Applied, enemy loses HP equal to their current #ySoul #ySnare. Increase this by 1 whenever another #yAffliction is applied, does not trigger itself."
+    "DESCRIPTION": "If the target dies while #ySoul #ySnared, #yCollect them."
   },
   {
     "PROPER_NAME": "Torch Head",
@@ -25,12 +33,22 @@
     "DESCRIPTION": "You Start every Combat with a torch Head that intercepts attack damage while it has Protection. if dead, it reignits in 2 turns with 5 HP. Can be #yCommanded, dealing 6 damage by default."
   },
   {
-    "PROPER_NAME": "Command",
+    "PROPER_NAME": "Order",
     "NAMES": [
-      "Command",
-      "command"
+      "Order",
+      "order"
     ],
-    "DESCRIPTION": "Your specified minion attacks the listed Target."
+    "DESCRIPTION": "Choose an ability for your torch head to use."
+  },
+  {
+    "PROPER_NAME": "Ability",
+    "NAMES": [
+      "Ability",
+      "Abilities",
+      "abilities",
+      "ability"
+    ],
+    "DESCRIPTION": "Special Cards available to your Torch Head to use when #yOrdered."
   },
   {
     "PROPER_NAME": "Collect",

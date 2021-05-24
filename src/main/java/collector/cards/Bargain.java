@@ -13,7 +13,7 @@ public class Bargain extends AbstractCollectorCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SelectCardsInHandAction(2,cardStrings.EXTENDED_DESCRIPTION[0],false,false,null,list -> {
+        atb(new SelectCardsInHandAction(2,cardStrings.EXTENDED_DESCRIPTION[0],false,false,card -> card.cost > -1,list -> {
            list.get(1).modifyCostForCombat(list.get(0).cost);
             list.get(0).modifyCostForCombat(list.get(1).cost);
         }));

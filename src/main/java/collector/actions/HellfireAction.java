@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.FlameAnimationEffect;
@@ -16,14 +17,12 @@ public class HellfireAction extends AbstractGameAction {
     private boolean freeToPlayOnce;
     private int damage;
     private AbstractPlayer p;
-    private AbstractMonster m;
     private DamageType damageTypeForTurn;
     private int energyOnUse;
     private boolean Upgraded;
 
-    public HellfireAction(AbstractPlayer p, AbstractMonster m, int damage, DamageType damageTypeForTurn, boolean freeToPlayOnce, int energyOnUse, boolean upgraded) {
+    public HellfireAction(AbstractPlayer p, int damage, DamageType damageTypeForTurn, boolean freeToPlayOnce, int energyOnUse, boolean upgraded) {
         this.p = p;
-        this.m = m;
         this.damage = damage;
         Upgraded = upgraded;
         this.freeToPlayOnce = freeToPlayOnce;
@@ -47,7 +46,8 @@ public class HellfireAction extends AbstractGameAction {
         if (effect > 0) {
             addToBot(new VFXAction(new FlameAnimationEffect(p.hb)));
             for(int i = 0; i < effect; ++i) {
-                this.addToBot(new DamageAction(this.m, new DamageInfo(this.p, this.damage, this.damageTypeForTurn), AttackEffect.FIRE));
+                AbstractMonster m = AbstractDungeon.getRandomMonster();
+                this.addToBot(new DamageAction(m, new DamageInfo(this.p, this.damage, this.damageTypeForTurn), AttackEffect.FIRE));
                 CollectorMod.ApplyRandomAffliciton(m, Upgraded);
             }
 

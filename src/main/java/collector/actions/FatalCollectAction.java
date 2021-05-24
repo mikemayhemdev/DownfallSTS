@@ -17,7 +17,7 @@ public class FatalCollectAction extends AbstractGameAction {
         for (AbstractMonster M : AbstractDungeon.getCurrRoom().monsters.monsters){
             if (M.isDead || M.isDying){
                 System.out.println("Collected!");
-                addToTop(new VFXAction(new BiteEffect(M.drawX,M.drawY, CollectorMod.placeholderColor)));
+                addToTop(new VFXAction(new BiteEffect(M.drawX,M.drawY, CollectorMod.characterColor)));
                 CollectorCollection.GetCollectible(M);
             }
         }

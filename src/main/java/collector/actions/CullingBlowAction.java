@@ -1,10 +1,8 @@
 package collector.actions;
 
-import collector.CollectorCollection;
-import com.badlogic.gdx.graphics.Color;
+import collector.powers.SoulSnare;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -12,7 +10,8 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 public class CullingBlowAction extends AbstractGameAction {
@@ -59,9 +58,9 @@ public class CullingBlowAction extends AbstractGameAction {
                 if (!target.isDying && target.currentHealth > threshold && !target.isEscaping) {
                     target.damage(new DamageInfo(this.source, this.damage[i], this.damageType));
                     if ((this.target.isDying || this.target.currentHealth <= threshold) && !this.target.halfDead) {
-                        CollectorCollection.GetCollectible(target);
-                        addToBot(new VFXAction(new BiteEffect(target.drawX,target.drawY, Color.DARK_GRAY.cpy())));
-                        addToBot(new LoseHPAction(target,target,target.currentHealth));
+                        addToBot(new ApplyPowerAction(target,AbstractDungeon.player,new SoulSnare(1,target)));
+                        addToBot(new ApplyPowerAction(target,AbstractDungeon.player,new WeakPower(target,1,false)));
+                        addToBot(new ApplyPowerAction(target,AbstractDungeon.player,new VulnerablePower(target,1,false)));
                     }
                 }
             }

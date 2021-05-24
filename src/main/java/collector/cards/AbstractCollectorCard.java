@@ -6,22 +6,31 @@ import basemod.ReflectionHacks;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.CardModifierManager;
 import collector.CollectorChar;
+import collector.TorchChar;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.PenNibPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.StrikeDummy;
+import com.megacrit.cardcrawl.relics.WristBlade;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 import static automaton.AutomatonMod.makeCardPath;
 import static automaton.FunctionHelper.WITH_DELIMITER;
@@ -44,10 +53,40 @@ public abstract class AbstractCollectorCard extends CustomCard {
     protected String UPGRADE_DESCRIPTION;
     protected String[] EXTENDED_DESCRIPTION;
     private AbstractCard functionPreviewCard;
+
     public boolean isCollectorSecondDamageModified;
     public int CollectorSecondDamage;
     public int BaseCollectorSecondDamage;
     public boolean upgradedCollectorSecondDamage;
+
+    public static HashSet<String> playerPowerApplyToDragon;
+    public static HashSet<String> relicApplyToDragon;
+
+    public int douDamage = -1;
+    public int douBaseDamage = -1;
+    public boolean upgradedDuoDamage = false;
+    public boolean isDuoDamageModified = false;
+
+    public int douBlock = -1;
+    public int douBaseBlock = -1;
+    public boolean upgradedDuoBlock = false;
+    public boolean isDuoBlockModified = false;
+
+    public int[] dragonMultiDamage;
+
+    public int douMagic = -1;
+    public int douBaseMagic = -1;
+    public boolean upgradedDuoMagic = false;
+    public boolean isDuoMagicModified = false;
+
+    static {
+        playerPowerApplyToDragon = new HashSet<>();
+        playerPowerApplyToDragon.add(VigorPower.POWER_ID);
+        playerPowerApplyToDragon.add(PenNibPower.POWER_ID);
+        relicApplyToDragon = new HashSet<>();
+        relicApplyToDragon.add(WristBlade.ID);
+        relicApplyToDragon.add(StrikeDummy.ID);
+    }
     public AbstractCollectorCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),
                 cost, "ERROR", type, CollectorChar.Enums.COLLECTOR, rarity, target);
@@ -88,14 +127,157 @@ public abstract class AbstractCollectorCard extends CustomCard {
         return img;
     }
 
-    public static String makeID(String blah) {
-        return "collector:" + blah;
+    @Override
+    protected void applyPowersToBlock() {
+        super.applyPowersToBlock();
+
+        TorchChar dragon = CollectorChar.getLivingDragon();
+        if (douBaseBlock != -1) {
+            douBlock = douBaseBlock;
+            if (dragon != null) {
+                isDuoBlockModified = false;
+                float tmp = (float) douBaseBlock;
+
+                for (AbstractPower p : dragon.powers) {
+                    tmp = p.modifyBlock(tmp);
+                    if (douBaseBlock != MathUtils.floor(tmp)) {
+                        isDuoBlockModified = true;
+                    }
+                }
+
+                if (tmp < 0.0F) {
+                    tmp = 0.0F;
+                }
+
+                douBlock = MathUtils.floor(tmp);
+            }
+        }
     }
 
+
+
+    public int calculateCardDamageAsMonster(AbstractCreature attacker, int[] baseDamage, AbstractMonster mo, int[] enemyMultiDamage) {
+        if (!isMultiDamage && mo != null) {
+            float tmp = baseDamage[0];
+
+            for (AbstractRelic r : AbstractDungeon.player.relics) {
+                if (relicApplyToDragon.contains(r.relicId)) {
+                    tmp = r.atDamageModify(tmp, this);
+                }
+            }
+
+            for (AbstractPower p : attacker.powers) {
+                tmp = p.atDamageGive(tmp, damageTypeForTurn);
+            }
+            for (AbstractPower p : AbstractDungeon.player.powers) {
+                if (playerPowerApplyToDragon.contains(p.ID)) {
+                    tmp = p.atDamageGive(tmp, damageTypeForTurn);
+                }
+            }
+
+            for (AbstractPower p : mo.powers) {
+                tmp = p.atDamageReceive(tmp, damageTypeForTurn, this);
+            }
+
+            for (AbstractPower p : attacker.powers) {
+                tmp = p.atDamageFinalGive(tmp, damageTypeForTurn);
+            }
+            for (AbstractPower p : AbstractDungeon.player.powers) {
+                if (playerPowerApplyToDragon.contains(p.ID)) {
+                    tmp = p.atDamageFinalGive(tmp, damageTypeForTurn);
+                }
+            }
+            for (AbstractPower p : mo.powers) {
+                tmp = p.atDamageFinalReceive(tmp, damageTypeForTurn, this);
+            }
+            if (tmp < 0.0F) {
+                tmp = 0.0F;
+            }
+
+            return MathUtils.floor(tmp);
+        } else {
+            ArrayList<AbstractMonster> m = AbstractDungeon.getCurrRoom().monsters.monsters;
+            float[] tmp = new float[m.size()];
+
+            int i;
+            for (i = 0; i < tmp.length; ++i) {
+                tmp[i] = baseDamage[0];
+            }
+
+            for (i = 0; i < tmp.length; ++i) {
+                for (AbstractRelic r : AbstractDungeon.player.relics) {
+                    if (relicApplyToDragon.contains(r.relicId)) {
+                        tmp[i] = r.atDamageModify(tmp[i], this);
+                    }
+                }
+
+                for (AbstractPower p : attacker.powers) {
+                    tmp[i] = p.atDamageGive(tmp[i], damageTypeForTurn);
+                }
+                for (AbstractPower p : AbstractDungeon.player.powers) {
+                    if (playerPowerApplyToDragon.contains(p.ID)) {
+                        tmp[i] = p.atDamageGive(tmp[i], damageTypeForTurn);
+                    }
+                }
+                for (AbstractPower p : m.get(i).powers) {
+                    tmp[i] = p.atDamageReceive(tmp[i], damageTypeForTurn, this);
+                }
+
+                for (AbstractPower p : attacker.powers) {
+                    tmp[i] = p.atDamageFinalGive(tmp[i], damageTypeForTurn);
+                }
+                for (AbstractPower p : AbstractDungeon.player.powers) {
+                    if (playerPowerApplyToDragon.contains(p.ID)) {
+                        tmp[i] = p.atDamageFinalGive(tmp[i], damageTypeForTurn);
+                    }
+                }
+                for (AbstractPower p : m.get(i).powers) {
+                    tmp[i] = p.atDamageFinalReceive(tmp[i], damageTypeForTurn, this);
+                }
+            }
+
+            for (i = 0; i < tmp.length; ++i) {
+                if (tmp[i] < 0.0F) {
+                    tmp[i] = 0.0F;
+                }
+            }
+
+            if (enemyMultiDamage != null && enemyMultiDamage.length > 0) {
+
+                for (i = 0; i < tmp.length && i < enemyMultiDamage.length; ++i) {
+                    enemyMultiDamage[i] = MathUtils.floor(tmp[i]);
+                }
+
+                return enemyMultiDamage[0];
+            } else {
+                return (int) tmp[0];
+            }
+        }
+    }
+
+    public void upgradeDTDragonDamage(int amount) {
+        douBaseDamage += amount;
+        upgradedDuoDamage = true;
+    }
+
+    public void upgradeDTDragonBlock(int amount) {
+        douBaseBlock += amount;
+        upgradedDuoBlock = true;
+    }
+
+
+    @Override
     public void resetAttributes() {
         super.resetAttributes();
         auto = baseAuto;
         isAutoModified = false;
+        isDuoBlockModified = false;
+        isDuoDamageModified = false;
+        douBlock = douBaseBlock;
+        douDamage = douBaseDamage;
+    }
+    public static String makeID(String blah) {
+        return "collector:" + blah;
     }
 
     public void displayUpgrades() {
@@ -104,7 +286,15 @@ public abstract class AbstractCollectorCard extends CustomCard {
             auto = baseAuto;
             isAutoModified = true;
         }
-
+        super.displayUpgrades();
+        if (upgradedDuoDamage) {
+            douDamage = douBaseDamage;
+            isDuoDamageModified = true;
+        }
+        if (upgradedDuoBlock) {
+            douBlock = douBaseBlock;
+            isDuoBlockModified = true;
+        }
     }
 
     void upgradeAuto(int amount) {
@@ -123,6 +313,100 @@ public abstract class AbstractCollectorCard extends CustomCard {
     @Override
     public void applyPowers()
     {
+        TorchChar dragon = CollectorChar.getLivingDragon();
+        if (douBaseDamage != -1) {
+            douDamage= douBaseDamage;
+            if (dragon != null) {
+                isDuoDamageModified = false;
+                if (!isMultiDamage) {
+                    float tmp = (float) douBaseDamage;
+
+                    for (AbstractRelic r : AbstractDungeon.player.relics) {
+                        if (relicApplyToDragon.contains(r.relicId)) {
+                            tmp = r.atDamageModify(tmp, this);
+                        }
+                    }
+
+                    for (AbstractPower p : dragon.powers) {
+                        tmp = p.atDamageGive(tmp, damageTypeForTurn);
+                    }
+                    for (AbstractPower p : AbstractDungeon.player.powers) {
+                        if (playerPowerApplyToDragon.contains(p.ID)) {
+                            tmp = p.atDamageGive(tmp, damageTypeForTurn);
+                        }
+                    }
+                    tmp = dragon.stance.atDamageGive(tmp, damageTypeForTurn, this);
+                    for (AbstractPower p : dragon.powers) {
+                        tmp = p.atDamageFinalGive(tmp, damageTypeForTurn);
+                    }
+                    for (AbstractPower p : AbstractDungeon.player.powers) {
+                        if (playerPowerApplyToDragon.contains(p.ID)) {
+                            tmp = p.atDamageFinalGive(tmp, damageTypeForTurn);
+                        }
+                    }
+
+                    if (tmp < 0.0F) {
+                        tmp = 0.0F;
+                    }
+
+                    douDamage = MathUtils.floor(tmp);
+
+                    if (douBaseDamage != douDamage) {
+                        isDuoDamageModified = true;
+                    }
+                } else {
+                    ArrayList<AbstractMonster> m = AbstractDungeon.getCurrRoom().monsters.monsters;
+                    float[] tmp = new float[m.size()];
+
+                    int i;
+                    for (i = 0; i < tmp.length; ++i) {
+                        tmp[i] = (float) douBaseDamage;
+                    }
+
+                    for (i = 0; i < tmp.length; ++i) {
+                        for (AbstractRelic r : AbstractDungeon.player.relics) {
+                            if (relicApplyToDragon.contains(r.relicId)) {
+                                tmp[i] = r.atDamageModify(tmp[i], this);
+                            }
+                        }
+                        for (AbstractPower p : dragon.powers) {
+                            tmp[i] = p.atDamageGive(tmp[i], damageTypeForTurn);
+                        }
+                        for (AbstractPower p : AbstractDungeon.player.powers) {
+                            if (playerPowerApplyToDragon.contains(p.ID)) {
+                                tmp[i] = p.atDamageGive(tmp[i], damageTypeForTurn);
+                            }
+                        }
+                        tmp[i] = dragon.stance.atDamageGive(tmp[i], damageTypeForTurn, this);
+                        for (AbstractPower p : dragon.powers) {
+                            tmp[i] = p.atDamageFinalGive(tmp[i], damageTypeForTurn);
+                        }
+                        for (AbstractPower p : AbstractDungeon.player.powers) {
+                            if (playerPowerApplyToDragon.contains(p.ID)) {
+                                tmp[i] = p.atDamageFinalGive(tmp[i], damageTypeForTurn);
+                            }
+                        }
+                    }
+
+                    for (i = 0; i < tmp.length; ++i) {
+                        if (tmp[i] < 0.0F) {
+                            tmp[i] = 0.0F;
+                        }
+                    }
+
+                    dragonMultiDamage = new int[tmp.length];
+
+                    for (i = 0; i < tmp.length; ++i) {
+                        dragonMultiDamage[i] = MathUtils.floor(tmp[i]);
+                    }
+
+                    douDamage = dragonMultiDamage[0];
+                    if (douBaseDamage != douDamage) {
+                        isDuoDamageModified = true;
+                    }
+                }
+            }
+        }
         CollectorSecondDamage = BaseCollectorSecondDamage;
 
         int tmp = baseDamage;
@@ -141,6 +425,118 @@ public abstract class AbstractCollectorCard extends CustomCard {
     @Override
     public void calculateCardDamage(AbstractMonster mo)
     {
+        super.calculateCardDamage(mo);
+
+        TorchChar dragon = CollectorChar.getLivingDragon();
+        if (douBaseDamage != -1) {
+            douDamage = douBaseDamage;
+            if (dragon != null) {
+                isDuoDamageModified = false;
+                if (!isMultiDamage && mo != null) {
+                    float tmp = (float) douBaseDamage;
+
+                    for (AbstractRelic r : AbstractDungeon.player.relics) {
+                        if (relicApplyToDragon.contains(r.relicId)) {
+                            tmp = r.atDamageModify(tmp, this);
+                        }
+                    }
+
+                    for (AbstractPower p : dragon.powers) {
+                        tmp = p.atDamageGive(tmp, damageTypeForTurn);
+                        if (douBaseDamage != (int) tmp) {
+                            isDuoDamageModified = true;
+                        }
+                    }
+                    for (AbstractPower p : AbstractDungeon.player.powers) {
+                        if (playerPowerApplyToDragon.contains(p.ID)) {
+                            tmp = p.atDamageGive(tmp, damageTypeForTurn);
+                            if (douBaseDamage != (int) tmp) {
+                                isDuoDamageModified= true;
+                            }
+                        }
+                    }
+                    tmp = dragon.stance.atDamageGive(tmp, damageTypeForTurn, this);
+                    for (AbstractPower p : mo.powers) {
+                        tmp = p.atDamageReceive(tmp, damageTypeForTurn, this);
+                    }
+
+                    for (AbstractPower p : dragon.powers) {
+                        tmp = p.atDamageFinalGive(tmp, damageTypeForTurn);
+                    }
+                    for (AbstractPower p : AbstractDungeon.player.powers) {
+                        if (playerPowerApplyToDragon.contains(p.ID)) {
+                            tmp = p.atDamageFinalGive(tmp, damageTypeForTurn);
+                        }
+                    }
+                    for (AbstractPower p : mo.powers) {
+                        tmp = p.atDamageFinalReceive(tmp, damageTypeForTurn, this);
+                    }
+                    if (tmp < 0.0F) {
+                        tmp = 0.0F;
+                    }
+
+                    douDamage = MathUtils.floor(tmp);
+                } else {
+                    ArrayList<AbstractMonster> m = AbstractDungeon.getCurrRoom().monsters.monsters;
+                    float[] tmp = new float[m.size()];
+
+                    int i;
+                    for (i = 0; i < tmp.length; ++i) {
+                        tmp[i] = (float) douDamage;
+                    }
+
+                    for (i = 0; i < tmp.length; ++i) {
+                        for (AbstractRelic r : AbstractDungeon.player.relics) {
+                            if (relicApplyToDragon.contains(r.relicId)) {
+                                tmp[i] = r.atDamageModify(tmp[i], this);
+                            }
+                        }
+
+                        for (AbstractPower p : dragon.powers) {
+                            tmp[i] = p.atDamageGive(tmp[i], damageTypeForTurn);
+                        }
+                        for (AbstractPower p : AbstractDungeon.player.powers) {
+                            if (playerPowerApplyToDragon.contains(p.ID)) {
+                                tmp[i] = p.atDamageGive(tmp[i], damageTypeForTurn);
+                            }
+                        }
+                        tmp[i] = dragon.stance.atDamageGive(tmp[i], damageTypeForTurn, this);
+                        for (AbstractPower p : m.get(i).powers) {
+                            tmp[i] = p.atDamageReceive(tmp[i], damageTypeForTurn, this);
+                        }
+
+                        for (AbstractPower p : dragon.powers) {
+                            tmp[i] = p.atDamageFinalGive(tmp[i], damageTypeForTurn);
+                        }
+                        for (AbstractPower p : AbstractDungeon.player.powers) {
+                            if (playerPowerApplyToDragon.contains(p.ID)) {
+                                tmp[i] = p.atDamageFinalGive(tmp[i], damageTypeForTurn);
+                            }
+                        }
+                        for (AbstractPower p : m.get(i).powers) {
+                            tmp[i] = p.atDamageFinalReceive(tmp[i], damageTypeForTurn, this);
+                        }
+                    }
+
+                    for (i = 0; i < tmp.length; ++i) {
+                        if (tmp[i] < 0.0F) {
+                            tmp[i] = 0.0F;
+                        }
+                    }
+
+                    dragonMultiDamage = new int[tmp.length];
+
+                    for (i = 0; i < tmp.length; ++i) {
+                        dragonMultiDamage[i] = MathUtils.floor(tmp[i]);
+                    }
+
+                    douDamage = dragonMultiDamage[0];
+                }
+                if (douBaseDamage != douDamage) {
+                    isDuoDamageModified = true;
+                }
+            }
+        }
         CollectorSecondDamage = BaseCollectorSecondDamage;
 
         int tmp = baseDamage;
@@ -383,6 +779,12 @@ public abstract class AbstractCollectorCard extends CustomCard {
                 r.rawDescription = ""; // It's over!! If you only have Compile effects, you're gone!!!!!
             }
             r.initializeDescription();
+        }
+        AbstractCard card = super.makeStatEquivalentCopy();
+        if (card instanceof AbstractCollectorCard) {
+            AbstractCollectorCard dtCard = (AbstractCollectorCard) card;
+            dtCard.douBaseDamage = douBaseDamage;
+            dtCard.douBaseBlock = douBaseBlock;
         }
         return r;
     }

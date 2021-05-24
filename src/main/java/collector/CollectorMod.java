@@ -4,12 +4,21 @@ import automaton.util.CardFilter;
 import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.interfaces.*;
+import collector.Relics.EmeraldTorch;
+import collector.Vars.DuoBlock;
+import collector.Vars.DuoDamage;
+import collector.Vars.DuoMagic;
+import collector.actions.FreezeAggroAction;
 import collector.cards.*;
 import collector.cards.Collectibles.*;
 import collector.patches.CollectibleCardColorEnumPatch;
+import collector.patches.TorchHeadPatches.MonsterIntentPatch;
+import collector.patches.TorchHeadPatches.MonsterPowerPatch;
+import collector.patches.TorchHeadPatches.MonsterTargetPatch;
+import collector.patches.TorchHeadPatches.StanceChangeParticlePatch;
 import collector.powers.SoulSnare;
 import collector.util.CollectorSecondDamage;
-import collector.util.TorchHead;
+import collector.util.TargetMarker;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -19,6 +28,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -51,7 +61,7 @@ public class CollectorMod implements
         OnStartBattleSubscriber,
         PostBattleSubscriber,
         StartGameSubscriber,
-        PostDrawSubscriber {
+        PostDrawSubscriber, OnPowersModifiedSubscriber, PostEnergyRechargeSubscriber  {
     public static final String SHOULDER1 = "collectorResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "collectorResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "collectorResources/images/char/mainChar/corpse.png";
@@ -67,7 +77,7 @@ public class CollectorMod implements
     private static final String CHARSELECT_BUTTON = "collectorResources/images/charSelect/charButton.png";
     private static final String CHARSELECT_PORTRAIT = "collectorResources/images/charSelect/charBG.png";
 
-    public static Color placeholderColor = CardHelper.getColor(13, 158, 131);
+    public static Color characterColor = CardHelper.getColor(13, 158, 131);
     public static Color potionLabColor = CardHelper.getColor(113, 158, 131);
     private static String modID = "collector";
     private CustomUnlockBundle unlocks0; // TODO: Set this up
@@ -79,13 +89,16 @@ public class CollectorMod implements
     public static ArrayList<String> Boons = new ArrayList<>();
     public static HashMap<String, AbstractCard> cardsList;
     public static Color COLLECTIBLE_CARD_COLOR = CardHelper.getColor(13, 158, 153);
+    public static int CollectorAggro = 0;
+    public static int TorchAggro = 0;
+    public static TargetMarker targetMarker;
     public CollectorMod() {
         BaseMod.subscribe(this);
 
         modID = "collector";
 
-        BaseMod.addColor(CollectorChar.Enums.COLLECTOR, placeholderColor, placeholderColor, placeholderColor,
-                placeholderColor, placeholderColor, placeholderColor, placeholderColor,
+        BaseMod.addColor(CollectorChar.Enums.COLLECTOR, characterColor, characterColor, characterColor,
+                characterColor, characterColor, characterColor, characterColor,
                 ATTACK_S_ART, SKILL_S_ART, POWER_S_ART, CARD_ENERGY_S,
                 ATTACK_L_ART, SKILL_L_ART, POWER_L_ART,
                 CARD_ENERGY_L, TEXT_ENERGY);
@@ -96,6 +109,9 @@ public class CollectorMod implements
                 "champResources/images/512/bg_power_colorless.png", "champResources/images/512/card_champ_orb.png",
                 "champResources/images/1024/bg_attack_colorless.png", "champResources/images/1024/bg_skill_colorless.png",
                 "champResources/images/1024/bg_power_colorless.png","champResources/images/1024/card_champ_orb.png");
+    }
+    public static String makePath(String resourcePath) {
+        return modID + "Resources/" + resourcePath;
     }
 
     public static String makeCardPath(String resourcePath) {
@@ -180,6 +196,7 @@ public class CollectorMod implements
 
     @Override
     public void receiveEditRelics() {
+        BaseMod.addRelicToCustomPool(new EmeraldTorch(),CollectorChar.Enums.COLLECTOR);
     }
 
     public static void ApplyRandomAffliciton(AbstractCreature target, boolean upgraded) {
@@ -215,7 +232,10 @@ public class CollectorMod implements
         }
     }
 
-    public static void PerpetualEffect(AbstractCard card) {
+    public static void PerpetualEffect(AbstractCard card, int bonus) {
+        card.baseBlock += bonus;
+        card.baseDamage += bonus;
+        card.baseMagicNumber += bonus;
         CollectorCollection.combatCollection.addToBottom(card);
         AbstractDungeon.player.discardPile.removeCard(card);
     }
@@ -235,6 +255,9 @@ public class CollectorMod implements
     @Override
     public void receiveEditCards() {
         BaseMod.addDynamicVariable(new CollectorSecondDamage());
+        BaseMod.addDynamicVariable(new DuoDamage());
+        BaseMod.addDynamicVariable(new DuoBlock());
+        BaseMod.addDynamicVariable(new DuoMagic());
 
         BaseMod.addCard(new Strike());
         BaseMod.addCard(new Defend());
@@ -251,6 +274,7 @@ public class CollectorMod implements
         BaseMod.addCard(new Miser());
         BaseMod.addCard(new Omen());
         BaseMod.addCard(new Wrack());
+        BaseMod.addCard(new TagTeam());
 
         BaseMod.addCard(new LuckyWick());
         BaseMod.addCard(new CrookedStaff());
@@ -286,7 +310,7 @@ public class CollectorMod implements
         UnlockTracker.unlockCard(Miser.ID);
         UnlockTracker.unlockCard(Omen.ID);
         UnlockTracker.unlockCard(Wrack.ID);
-
+        UnlockTracker.unlockCard(TagTeam.ID);
 
         UnlockTracker.unlockCard(LuckyWick.ID);
         UnlockTracker.unlockCard(CrookedStaff.ID);
@@ -319,6 +343,7 @@ public class CollectorMod implements
 
     public void receivePostInitialize() {
         addPotions();
+        targetMarker = new TargetMarker();
         //BaseMod.addEvent(new AddEventParams.Builder(AccursedBlacksmithAutomaton.ID, AccursedBlacksmithAutomaton.class) //Event ID//
         //Event Character//
         // .playerClass(AutomatonChar.Enums.THE_AUTOMATON)
@@ -327,11 +352,6 @@ public class CollectorMod implements
         //Event Type//
         // .eventType(EventUtils.EventType.FULL_REPLACE)
         // .create());
-    }
-
-    @Override
-    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
-        CollectorCollection.atBattleStart();
     }
 
     @Override
@@ -356,10 +376,51 @@ public class CollectorMod implements
         Boons.add("Block");
 
         CollectorCollection.init();
-        CollectorChar.TorchHead = new TorchHead();
-        System.out.println("Torch Friend!");
+        //CollectorChar.TorchHeadHelper = new TorchHeadHelper();
+        //System.out.println("Torch Friend!");
+    }
+    @Override
+    public void receivePowersModified() {
+        if (AbstractDungeon.currMapNode != null &&
+                AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT &&
+                AbstractDungeon.player instanceof CollectorChar
+        ) {
+            ArrayList<PowerTip> tips = new ArrayList<>();
+            TorchChar d = ((CollectorChar) AbstractDungeon.player).torch;
+            if (d.isDead) {
+                tips.add(new PowerTip(TorchChar.characterStrings.NAMES[0], TorchChar.characterStrings.TEXT[0]));
+            } else {
+                for (AbstractPower p : d.powers) {
+                    if (p.region48 != null) {
+                        tips.add(new PowerTip(p.name, p.description, p.region48));
+                    } else {
+                        tips.add(new PowerTip(p.name, p.description, p.img));
+                    }
+                }
+            }
+        }
     }
 
+    @Override
+    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        CollectorCollection.atBattleStart();
+        StanceChangeParticlePatch.ParticleGeneratorRenderPatch.prevPlayer = null;
+        StanceChangeParticlePatch.WrathParticleRenderPatch.prevPlayer = null;
+        MonsterIntentPatch.prevPlayer = null;
+        MonsterPowerPatch.prevPlayer = null;
+        MonsterTargetPatch.prevPlayer = null;
+
+        TorchAggro = 0;
+        CollectorAggro = 0;
+
+        FreezeAggroAction.frozen = false;
+
+        receivePostEnergyRecharge();
+    }
+    @Override
+    public void receivePostEnergyRecharge() {
+        CollectorChar.frontChangedThisTurn = false;
+    }
     public static CardGroup getRareCards() {
         CardGroup retVal = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 

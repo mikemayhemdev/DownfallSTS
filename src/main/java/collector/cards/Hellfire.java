@@ -10,14 +10,14 @@ public class Hellfire extends AbstractCollectorCard {
     public final static String ID = makeID("Hellfire");
 
     public Hellfire() {
-        super(ID, -1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, -1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         magicNumber = baseMagicNumber = 3;
         damage = baseDamage = 5;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new HellfireAction(p,m,damage, DamageInfo.DamageType.NORMAL,freeToPlayOnce, EnergyPanel.getCurrentEnergy(),upgraded));
+        atb(new HellfireAction(p,damage, DamageInfo.DamageType.NORMAL,freeToPlayOnce, EnergyPanel.getCurrentEnergy(),upgraded));
     }
 
     @Override

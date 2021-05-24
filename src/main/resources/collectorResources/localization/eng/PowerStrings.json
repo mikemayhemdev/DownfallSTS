@@ -6,6 +6,12 @@
       " HP. Whenever you apply an #yAffliction to this increase this by 1."
     ]
   },
+  "collector:SoulMark": {
+    "NAME": "Soul Mark",
+    "DESCRIPTIONS": [
+      "When you defeat this monster #yCollect it."
+    ]
+  },
   "collector:ChaoticFlux": {
     "NAME": "Chaotic Flux",
     "DESCRIPTIONS": [

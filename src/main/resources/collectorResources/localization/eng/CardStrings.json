@@ -9,11 +9,11 @@
   },
   "collector:SoulStitch": {
     "NAME": "Soul Stitch",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! collector:Soul_Snare."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! collector:Suffering."
   },
   "collector:SoulHarvest": {
     "NAME": "Soul Harvest",
-    "DESCRIPTION": "Retain. NL Deal !D! damage to ALL Enemies. NL if Fatal, collector:Collect them. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Apply !M! collector:Soul_Snare and Deal !D! damage to ALL Enemies. NL Exhaust."
   },
   "collector:Contemplate": {
     "NAME": "Contemplate",
@@ -31,15 +31,11 @@
   },
   "collector:Consign": {
     "NAME": "Consign",
-    "DESCRIPTION": "Deal !D! damage. NL Apply collector:Soul_Snare equal to unblocked damage dealt."
+    "DESCRIPTION": "Deal !D! damage. NL Apply collector:Suffering equal to unblocked damage dealt."
   },
   "collector:CullingBlow": {
     "NAME": "Culling Blow",
-    "DESCRIPTION": "Deal !D! damage. NL if this brings an enemy under !M! HP, collector:Collect them."
-  },
-  "collector:TagTeam": {
-    "NAME": "Tag Team",
-    "DESCRIPTION": "Deal !D! damage. NL collector:Command towards the target."
+    "DESCRIPTION": "Deal !D! damage. NL if the target has collector:Suffering, Apply !M! collector:Soul_Snare."
   },
   "collector:Fever": {
     "NAME": "Fever",
@@ -51,12 +47,12 @@
   },
   "collector:Wrack": {
     "NAME": "Wrack",
-    "DESCRIPTION": "Double an enemies collector:Afflictions."
+    "DESCRIPTION": "Double an enemies collector:Afflictions. NL Exhaust."
   },
   "collector:Hellfire": {
     "NAME": "Hellfire",
-    "DESCRIPTION": "Deal !D! damage and Apply a random collector:Affliction X Times.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and Apply a random *πUpgraded collector:Affliction X Times."
+    "DESCRIPTION": "Deal !D! damage and Apply a random collector:Affliction to a random enemy X Times.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and Apply a random *πUpgraded collector:Affliction to a random enemy X Times."
   },
   "collector:DarkSuffusion": {
     "NAME": "Dark Suffusion",
@@ -66,10 +62,22 @@
     "NAME": "Omen",
     "DESCRIPTION": "Dealing Attack Damage to an enemy with 6 collector:Afflictions reduces them by 1 and they lose !M! HP."
   },
+  "collector:AllyStrike": {
+    "NAME": "Ally Strike",
+    "DESCRIPTION": "Torch Head Deals !DUO:D! damage."
+  },
+  "collector:AllyDefend": {
+    "NAME": "AllyDefend",
+    "DESCRIPTION": "Torch Head Gain !DUO:B! Block."
+  },
+  "collector:TagTeam": {
+    "NAME": "Tag Team",
+    "DESCRIPTION": "Deal !D! damage. NL collector:Order."
+  },
   "collector:LuckyWick": {
     "NAME": "Lucky Wick",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Draw !M! card. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Draw !M! card. NL collector:Perpetual.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Draw !M! card. NL collector:Perpetual 1."
   },
   "collector:CrookedStaff": {
     "NAME": "Crooked Staff",

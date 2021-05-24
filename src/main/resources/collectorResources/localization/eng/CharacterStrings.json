@@ -11,5 +11,13 @@
       "to add to your hand",
       "to put in Statis"
     ]
+  },
+  "collector:TorchHead": {
+    "NAMES": [
+      "Torch Head"
+    ],
+    "TEXT": [
+      "Torch Head is fainted and cannot move. 3 Turns after dying, it will reignite with #b5 HP."
+    ]
   }
 }

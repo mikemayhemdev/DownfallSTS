@@ -1,5 +1,6 @@
 package collector;
 
+import basemod.abstracts.CustomSavable;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Silent.CharBossSilent;
@@ -12,13 +13,14 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.exordium.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
-public class CollectorCollection {
-    public static CardGroup collection;
-    public static CardGroup combatCollection;
-
-    public static HashMap<String, AbstractCard> cardsList;
+public class CollectorCollection implements CustomSavable<ArrayList<AbstractCard>> {
+    public  static CardGroup collection;
+    public  static CardGroup combatCollection;
+    public static ArrayList<AbstractCard> SavedCollection = new ArrayList<>();
+    public  static HashMap<String, AbstractCard> cardsList;
     public static void init() {
         cardsList = new HashMap<>();
         cardsList.put(GremlinWizard.ID, new CrookedStaff());
@@ -68,5 +70,17 @@ public class CollectorCollection {
             AbstractCard NewCollectible = cardsList.get(collectedMonster.id).makeStatEquivalentCopy();
             CollectionReward.collectPool.add(NewCollectible);
         } else CollectionReward.collectPool.add(new LuckyWick());
+    }
+
+    @Override
+    public ArrayList<AbstractCard> onSave() {
+        return SavedCollection = collection.group;
+    }
+
+    @Override
+    public void onLoad(ArrayList<AbstractCard> abstractCards) {
+        for (AbstractCard c : SavedCollection){
+            collection.addToTop(c);
+        }
     }
 }
