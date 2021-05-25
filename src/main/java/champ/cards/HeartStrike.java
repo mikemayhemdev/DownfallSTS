@@ -25,7 +25,6 @@ public class HeartStrike extends AbstractChampCard {
     public HeartStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        tags.add(ChampMod.FINISHER);
         baseMagicNumber = magicNumber = 50;
         postInit();
     }
@@ -40,7 +39,6 @@ public class HeartStrike extends AbstractChampCard {
 
         addToBot(new WaitAction(0.8F));
         dmg(m, AbstractGameAction.AttackEffect.NONE);
-        finisher();
     }
 
     @Override
