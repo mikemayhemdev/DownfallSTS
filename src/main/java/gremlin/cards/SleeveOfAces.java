@@ -15,11 +15,11 @@ import gremlin.powers.WizPower;
 
 import static gremlin.GremlinMod.WIZARD_GREMLIN;
 
-public class FanOfKnives extends AbstractGremlinCard {
-    public static final String ID = getID("FanOfKnives");
+public class SleeveOfAces extends AbstractGremlinCard {
+    public static final String ID = getID("SleeveOfAces");
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = strings.NAME;
-    private static final String IMG_PATH = "cards/fan_of_knives.png";
+    private static final String IMG_PATH = "cards/sleeve_of_aces.png";
 
     private static final AbstractCard.CardType TYPE = AbstractCard.CardType.ATTACK;
     private static final AbstractCard.CardRarity RARITY = CardRarity.UNCOMMON;
@@ -29,7 +29,7 @@ public class FanOfKnives extends AbstractGremlinCard {
     private static final int POWER = 4;
     private static final int UPGRADE_BONUS = 1;
 
-    public FanOfKnives()
+    public SleeveOfAces()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 

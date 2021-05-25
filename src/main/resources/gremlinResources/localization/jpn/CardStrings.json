@@ -131,8 +131,8 @@
     "DESCRIPTION": "Add !M! Wards to your hand and draw !M! cards. NL Exhaust."
   },
 
-  "Gremlin:FanOfKnives": {
-    "NAME": "Fan Of Knives",
+  "Gremlin:SleeveOfAces": {
+    "NAME": "Sleeve Of Aces",
     "DESCRIPTION": "Deal !D! damage. NL Add 1 Shiv to your hand for each stack of Wiz you have.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add 1 Upgraded Shiv to your hand for each stack of Wiz you have."
   },

@@ -111,7 +111,7 @@
     "NAME": "仙尘",
     "DESCRIPTION": "增加 !M! 张 *守卫 到你的手牌并抽 !M! 张牌。 NL 消耗 。"
   },
-  "Gremlin:FanOfKnives": {
+  "Gremlin:SleeveOfAces": {
     "NAME": "刀扇",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 每拥有1点 gremlin:法力 ，将 1 张 *小刀 加入手牌。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 每拥有1点 gremlin:法力 ，将 1 张 已 升级 的 *小刀 加入手牌。"
