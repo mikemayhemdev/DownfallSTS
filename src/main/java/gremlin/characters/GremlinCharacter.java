@@ -115,14 +115,7 @@ public class GremlinCharacter extends CustomPlayer {
         initializeSlotPositions();
 
         mobState = new GremlinMobState();
-        int load_hp = 16;
-        if(AbstractDungeon.ascensionLevel >= 14){
-            load_hp -= getAscensionMaxHPLoss();
-        }
-        if(AbstractDungeon.ascensionLevel >= 6){
-            load_hp = MathUtils.round((float)load_hp * 0.9f);
-        }
-        mobState.initialRandom(load_hp);
+        mobState.initialRandom(16);
 
         swapBody(mobState.getFrontGremlin(), mobState.getFrontAnimation());
     }

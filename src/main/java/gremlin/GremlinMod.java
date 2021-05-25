@@ -64,7 +64,7 @@ import static gremlin.patches.GremlinEnum.GREMLIN;
 @SpireInitializer
 public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscriber,
         EditRelicsSubscriber, EditCardsSubscriber, OnStartBattleSubscriber, PostBattleSubscriber,
-        PostInitializeSubscriber, SetUnlocksSubscriber {
+        PostInitializeSubscriber, SetUnlocksSubscriber, StartGameSubscriber {
     private static String modID = "gremlin";
 
     private static final Color GREMLIN_COLOR = CardHelper.getColor(205.0f, 92.0f, 92.0f);
@@ -505,5 +505,21 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
 
                 GREMLIN
         );
+    }
+
+    @Override
+    public void receiveStartGame() {
+        if (AbstractDungeon.player instanceof GremlinCharacter) {
+            if (AbstractDungeon.ascensionLevel >= 6) {
+                for (int i = 0; i < ((GremlinCharacter) AbstractDungeon.player).mobState.gremlinHP.size(); i++) {
+                    ((GremlinCharacter) AbstractDungeon.player).mobState.gremlinHP.set(i, ((GremlinCharacter) AbstractDungeon.player).mobState.gremlinHP.get(i) - AbstractDungeon.player.getAscensionMaxHPLoss());
+                }
+            }
+            if (AbstractDungeon.ascensionLevel >= 14) {
+                for (int i = 0; i < ((GremlinCharacter) AbstractDungeon.player).mobState.gremlinHP.size(); i++) {
+                    ((GremlinCharacter) AbstractDungeon.player).mobState.gremlinHP.set(i, ((GremlinCharacter) AbstractDungeon.player).mobState.gremlinHP.get(i) - AbstractDungeon.player.getAscensionMaxHPLoss());
+                }
+            }
+        }
     }
 }
