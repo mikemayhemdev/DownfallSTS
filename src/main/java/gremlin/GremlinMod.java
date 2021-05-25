@@ -11,12 +11,10 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.esotericsoftware.spine.*;
-import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
-import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -49,10 +47,8 @@ import gremlin.relics.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import static basemod.BaseMod.addRelic;
@@ -64,7 +60,7 @@ import static gremlin.patches.GremlinEnum.GREMLIN;
 @SpireInitializer
 public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscriber,
         EditRelicsSubscriber, EditCardsSubscriber, OnStartBattleSubscriber, PostBattleSubscriber,
-        PostInitializeSubscriber, SetUnlocksSubscriber {
+        PostInitializeSubscriber, SetUnlocksSubscriber, StartGameSubscriber {
     private static String modID = "gremlin";
 
     private static final Color GREMLIN_COLOR = CardHelper.getColor(205.0f, 92.0f, 92.0f);
@@ -473,8 +469,8 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
         BaseMod.addEvent(new AddEventParams.Builder(GremlinTrenchcoat.ID, GremlinTrenchcoat.class) //Event ID//
                 //Event Spawn Condition//
                 .spawnCondition(() -> evilMode)
-                //Prevent from appearing too early//
-                .bonusCondition(() -> (AbstractDungeon.floorNum > 4))
+                //Prevent from appearing too early, or when no money
+                .bonusCondition(() -> (AbstractDungeon.floorNum > 4)&&(AbstractDungeon.player.gold >= 60))
                 //Event Type//
                 .eventType(EventUtils.EventType.NORMAL)
                 .create());
@@ -505,5 +501,14 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
 
                 GREMLIN
         );
+    }
+
+    @Override
+    public void receiveStartGame() {
+        if (AbstractDungeon.player instanceof GremlinCharacter) {
+            if (((GremlinCharacter) AbstractDungeon.player).mobState.unset) {
+                ((GremlinCharacter) AbstractDungeon.player).mobState.setAll(AbstractDungeon.player.currentHealth);
+            }
+        }
     }
 }
