@@ -18,6 +18,8 @@ public class GremlinMobState {
     private ArrayList<String> enslaved;
     private String voucher;
     public boolean inCombat = false;
+    // Workaround for not have ascension available at creation
+    public boolean unset = false;
 
     public GremlinMobState() {
         gremlins = new ArrayList<>();
@@ -37,6 +39,14 @@ public class GremlinMobState {
         gremlins.add("wizard");
         if(AbstractDungeon.miscRng != null) {
             Collections.shuffle(gremlins, AbstractDungeon.miscRng.random);
+        }
+        unset = true;
+    }
+
+    public void setAll(int hp) {
+        unset = false;
+        for(int i = 0; i<5; i++ ){
+            gremlinHP.set(i, hp);
         }
     }
 
