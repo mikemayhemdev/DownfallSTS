@@ -14,11 +14,11 @@ public class FlamesFromBeyond extends AbstractHexaCard {
 
     //stupid intellij stuff SKILL, NONE, COMMON
 
-    private static final int MAGIC = 20;
-    private static final int UPG_MAGIC = 8;
+    private static final int MAGIC = 18;
+    private static final int UPG_MAGIC = 6;
 
     public FlamesFromBeyond() {
-        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
+        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseBurn = burn = MAGIC;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);

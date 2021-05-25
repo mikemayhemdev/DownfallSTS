@@ -112,7 +112,7 @@
     "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage. NL *Defensive champ:Combo: Gain [E] and !B! Block."
   },
   "champ:FanOfKnives": {
-    "NAME": "Fan of Knives",
+    "NAME": "Deadly Daggers",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Berserker champ:Combo: Deals damage twice. NL Enter champ:Berserker.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Berserker champ:Combo: Deals damage three times. NL Enter champ:Berserker."
   },
