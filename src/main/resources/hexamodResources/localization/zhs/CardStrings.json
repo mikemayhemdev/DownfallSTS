@@ -367,5 +367,27 @@
   "hexamod:BurningQuestion": {
     "NAME": "紧迫问题",
     "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 这张牌的伤害提高 !M! 点。 NL 被 消耗 时：对所有敌人造成 !D! 点伤害。"
+  },
+
+  "hexamod:Floatwork": {
+    "NAME": "飘忽不定",
+    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 获得 !M! 点 敏捷 。",
+    "UPGRADE_DESCRIPTION": "固有 。 虚无 。 hexamod:阴世 。 NL 获得 !M! 点 敏捷 。"
+  },
+  "hexamod:Premonition": {
+    "NAME": "预兆",
+    "DESCRIPTION": "选择一张手牌打出并 消耗 。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "选择打出并消耗"
+    ]
+  },
+  "hexamod:Divider": {
+    "NAME": "Divider",
+    "DESCRIPTION": "每 hexamod:点燃 一个鬼火，造成 !D! 点伤害。"
+  },
+  "hexamod:StrikeFromBeyond": {
+    "NAME": "深处打击",
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 随机 expansioncontent:取回 一张 hexamod:阴世 牌。",
+    "EXTENDED_DESCRIPTION": [" 虚无 "," 虚无 。 NL "]
   }
 }

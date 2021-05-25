@@ -60,5 +60,12 @@
     "TEXT": [
       "回响："
     ]
+  },
+  "Gremlin:EventReplacementStrings": {
+    "TEXT": [
+      "#r失去 #r",
+      " #r生命。",
+      "#r所有地精失去 #r"
+    ]
   }
 }
