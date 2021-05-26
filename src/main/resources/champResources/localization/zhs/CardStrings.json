@@ -112,7 +112,7 @@
     "DESCRIPTION": "进入 champ:战狂 。 NL 造成 !D! 点伤害。 NL champ:防守 champ:连段 ：获得 [E] 和 !B! 点 格挡 。"
   },
   "champ:FanOfKnives": {
-    "NAME": "刀阵",
+    "NAME": "致命匕首",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:战狂 champ:连段 ：造成两次伤害。 NL 进入 champ:战狂 。",
     "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:战狂 champ:连段 ：造成三次伤害。 NL 进入 champ:战狂 。"
   },

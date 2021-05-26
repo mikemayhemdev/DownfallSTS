@@ -228,7 +228,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
         BaseMod.addCard(new BurlyBlow());
         BaseMod.addCard(new CounterStrike());
         BaseMod.addCard(new Dazzle());
-        BaseMod.addCard(new FanOfKnives());
+        BaseMod.addCard(new SleeveOfAces());
         BaseMod.addCard(new FeelTheAudience());
         BaseMod.addCard(new Flurry());
         BaseMod.addCard(new FollowThrough());
