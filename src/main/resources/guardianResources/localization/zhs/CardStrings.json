@@ -284,7 +284,7 @@
   },
   "Guardian:MultiBeam": {
     "NAME": "多重射线",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 X 次。 NL  guardianmod:滴答 -本场战斗所有射线牌增加 !M! 点伤害。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 X 次。 NL  guardianmod:滴答 -本场战斗这张牌增加 !M! 点伤害。"
   },
   "Guardian:BaubleBeam": {
     "NAME": "鳞片爆破",
