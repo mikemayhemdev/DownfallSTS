@@ -470,7 +470,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
                 //Event Spawn Condition//
                 .spawnCondition(() -> evilMode)
                 //Prevent from appearing too early, or when no money
-                .bonusCondition(() -> (AbstractDungeon.floorNum > 4)&&(AbstractDungeon.player.gold >= 60))
+                .bonusCondition(() -> (AbstractDungeon.floorNum > 4)&&(AbstractDungeon.player.gold >= 40))
                 //Event Type//
                 .eventType(EventUtils.EventType.NORMAL)
                 .create());
