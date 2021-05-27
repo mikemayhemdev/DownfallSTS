@@ -90,7 +90,6 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
 
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnShiv());
                     addToList(cardsList, new EnBurst());
                     addToList(cardsList, new EnCloakAndDagger());
                     AbstractBossCard c = new EnCloakAndDagger();
@@ -102,14 +101,12 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
                     turn++;
                     break;
                 case 1:
-                    addToList(cardsList, new EnShiv());
                     addToList(cardsList, new EnLegSweep());
                     addToList(cardsList, new EnDecay());
                     addToList(cardsList, new EnStrikeGreen());  //Not played here
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnShiv());
                     addToList(cardsList, new EnBladeDance(), extraUpgrades);
                     addToList(cardsList, new EnDefendGreen());
                     addToList(cardsList, new EnDefendGreen());  //Not played here

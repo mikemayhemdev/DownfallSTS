@@ -91,7 +91,7 @@ public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
                 case 4:
                     addToList(cardsList, new EnBloodletting());
                     addToList(cardsList, new EnHeadbutt());
-                    addToList(cardsList, new EnFlameBarrier(), true);
+                    addToList(cardsList, new EnFlameBarrier());
                     turn++;
                     break;
                 case 5:

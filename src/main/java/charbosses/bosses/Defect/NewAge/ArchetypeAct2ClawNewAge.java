@@ -72,7 +72,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                 case 0:
                     // NO Orbs
                     addToList(cardsList, new EnBootSequence(), false);  // removed
-                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), extraUpgrades);
+                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), false);
                     addToList(cardsList, new EnMachineLearning(), true);  // removed
                     turn++;
                     // No Orbs
@@ -84,7 +84,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                     addToList(cardsList, new EnColdSnap(), true);
                     frostOrbsChanneled += 1;
                     addToList(cardsList, new EnPanicButton());  // removed
-                    addToList(cardsList, new EnStrikeBlue(), false);
+                    addToList(cardsList, new EnStrikeBlue(), true);
                     // Frost
                     turn++;
                     break;
@@ -113,7 +113,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                 case 4:
                     //Turn 5
                     // Frost
-                    addToList(cardsList, new EnHyperbeam(), true);  // removed
+                    addToList(cardsList, new EnHyperbeam(), extraUpgrades);
                     ArchetypeAct3OrbsNewAge.increasePretendFocus(-3);
                     addToList(cardsList, new EnMalfunctioning(), false);
                     addToList(cardsList, new EnDefendBlue(), false);
@@ -126,7 +126,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
         } else {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), extraUpgrades);
+                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), false);
                     //Play Leap if Block can be gained, otherwise play Stirike
                     if (AbstractCharBoss.boss.hasPower(NoBlockPower.POWER_ID)){
                         addToList(cardsList, new EnColdSnap(), true);
@@ -150,7 +150,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                     break;
                 case 1:
                     //Turn 3
-                    addToList(cardsList, new EnHyperbeam(), false);
+                    addToList(cardsList, new EnHyperbeam(), extraUpgrades);
                     ArchetypeAct3OrbsNewAge.increasePretendFocus(-3);
                     addToList(cardsList, new EnChargeBattery(), false);
                     addToList(cardsList, new EnShame(), false);
@@ -160,7 +160,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                 case 2:
                     addToList(cardsList, new EnReprogram(), false);
                     ArchetypeAct3OrbsNewAge.increasePretendFocus(-1);
-                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), true);
+                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), false);
                     addToList(cardsList,  new EnDefendBlue(), false);
                     addToList(cardsList, new EnSwiftStrike(), false);
                     //Kunai Proc

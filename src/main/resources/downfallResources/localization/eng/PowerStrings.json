@@ -43,7 +43,7 @@
   "downfall:PoisonResist": {
     "NAME": "Poison Resistance",
     "DESCRIPTIONS": [
-      "#yPoison triggers at the end of your turn. At the end of your turn, spend all remaining [E] to remove 10 #yPoison per [E] spent."
+      "#yPoison triggers at the end of your turn. NL At the end of your turn, spend all remaining [E] to remove 10 #yPoison per [E] spent."
     ]
   },
   "downfall:NeowBuff": {
@@ -83,7 +83,7 @@
   "downfall:WatcherDivinityPower": {
     "NAME": "Fleeting Faith",
     "DESCRIPTIONS": [
-      "Watcher gains #b1 Mantra whenever you play a card. NL Watcher loses #b5 Mantra at the start of her turn. NL Watcher does not exit Divinity Stance at the end of her turn."
+      "Watcher gains #b1 #yMantra whenever you play a card. NL Watcher loses #b5 #yMantra at the start of her turn. NL Watcher does not exit Divinity Stance at the end of her turn."
     ]
   },
   "downfall:NeowFleetingFaith": {

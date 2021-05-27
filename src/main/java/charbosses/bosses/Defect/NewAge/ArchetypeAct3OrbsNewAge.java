@@ -38,6 +38,16 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
 
     }
 
+    public void initialize() {
+
+        addRelic(new CBR_NeowsBlessing());
+        addRelic(new CBR_DataDisk());
+        addRelic(new CBR_Lantern());
+        addRelic(new CBR_FossilizedHelix());
+        addRelic(new CBR_CoffeeDripper());
+
+    }
+
     public static void increasePretendFocus(int amount) {
         for (AbstractOrb o : AbstractCharBoss.boss.orbs) {
             if (o instanceof AbstractEnemyOrb) {
@@ -60,15 +70,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
         }
     }
 
-    public void initialize() {
 
-        addRelic(new CBR_NeowsBlessing());
-        addRelic(new CBR_DataDisk());
-        addRelic(new CBR_Lantern());
-        addRelic(new CBR_FossilizedHelix());
-        addRelic(new CBR_CoffeeDripper());
-
-    }
 
 
     @Override
@@ -129,10 +131,10 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     //Lightning Frost
                     addToList(cardsList, new EnStorm(), false);
                     AbstractBossCard.fakeStormPower = true;
-                    addToList(cardsList, new EnDefragment(), true);
+                    addToList(cardsList, new EnDefragment(), extraUpgrades);
                     increasePretendFocus(2);
                     //Lightning Frost Lightning
-                    addToList(cardsList, new EnBlind(), extraUpgrades);
+                    addToList(cardsList, new EnBlind(), false);
                     turn = 0;
                     looped = true;
                     break;
@@ -148,7 +150,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     break;
                 case 1:
                     //Lightning Frost Lightning
-                    addToList(cardsList, new EnBlind(), true);
+                    addToList(cardsList, new EnBlind());
                     addToList(cardsList, new EnDualcast());
                     //Evokes Lightning
                     cB.orbsAsEn().get(0).evokeOverride = true;
