@@ -445,6 +445,11 @@
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Block is affected by gremlin:Wiz."
   },
 
+  "Gremlin:SupplyScrollCard": {
+    "NAME": "Supply Scroll",
+    "DESCRIPTION": "Add a random assortment of 4 Shivs and Wards to your hand. NL Exhaust."
+  },
+
   "Gremlin:Tadah": {
     "NAME": "Tadah!",
     "DESCRIPTION": "Add an gremlin:Echo of a random Skill to your hand. It costs 1 less. NL gremlin:Swap to gremlin:Gremlin_Wizard.",
