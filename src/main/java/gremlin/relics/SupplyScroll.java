@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import gremlin.cards.SupplyScrollCard;
 import gremlin.cards.Ward;
 
 public class SupplyScroll extends AbstractGremlinRelic {
@@ -16,7 +17,7 @@ public class SupplyScroll extends AbstractGremlinRelic {
     private static final String IMG = "relics/supply_scroll.png";
     private static final AbstractRelic.LandingSound SOUND = LandingSound.FLAT;
 
-    private static final int SUPPLY = 4;
+    public static final int SUPPLY = 4;
 
     public SupplyScroll() {
         super(ID, IMG, TIER, SOUND);
@@ -39,13 +40,8 @@ public class SupplyScroll extends AbstractGremlinRelic {
         if (this.counter == 3) {
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            int shivs = AbstractDungeon.cardRandomRng.random(0,SUPPLY);
-            if(shivs > 0){
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Shiv(), shivs));
-            }
-            if(shivs < SUPPLY) {
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Ward(), SUPPLY - shivs));
-            }
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new SupplyScrollCard()));
+
             this.counter = -1;
             this.grayscale = true;
         }
