@@ -106,7 +106,7 @@
   "hexamod:GiftsFromTheDeadPower": {
     "NAME": "Gifted Cards",
     "DESCRIPTIONS": [
-      "At the start of your turn, expansioncontent:Reclaim ",
+      "At the start of your turn, #yReclaim ",
       " random Afterlife ",
       " card.",
       " cards."

@@ -20,10 +20,10 @@ public class GremlinTrenchcoat extends AbstractImageEvent {
     public GremlinTrenchcoat() {
         super(NAME, DIALOG_1, "images/events/ballAndCup.jpg");
         this.screen = CUR_SCREEN.INTRO;
-        this.goldAmount = 50;
+        this.goldAmount = 30;
         this.noCardsInRewards = true;
         if (AbstractDungeon.ascensionLevel >= 15) {
-            this.goldAmount = 60;
+            this.goldAmount = 40;
         }
 
         if (AbstractDungeon.player.gold >= this.goldAmount) {
@@ -51,8 +51,9 @@ public class GremlinTrenchcoat extends AbstractImageEvent {
         AbstractDungeon.getCurrRoom().rewards.clear();
         for (int i=0;i<num;i++) {
             RewardItem reward = new RewardItem(AbstractCard.CardColor.COLORLESS);
-            reward.cards.remove(2);
-            reward.cards.remove(1);
+            while(reward.cards.size() > 1) {
+                reward.cards.remove(0);
+            }
             AbstractDungeon.getCurrRoom().addCardReward(reward);
         }
         AbstractDungeon.combatRewardScreen.open();

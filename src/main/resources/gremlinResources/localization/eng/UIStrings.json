@@ -64,8 +64,11 @@
   "Gremlin:EventReplacementStrings": {
     "TEXT": [
       "#rLose #r",
-      " #rHP.",
-      "#rAll #rGremlins #rlose #r"
+      " #rHP",
+      "#rAll #rGremlins #rlose #r",
+      "#gGain #g",
+      " #gHP",
+      "#gAll #gGremlins #ggain #g"
     ]
   }
 }

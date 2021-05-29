@@ -296,15 +296,15 @@
   },
   "Guardian:EvasiveProtocol": {
     "NAME": "Evasive Protocol",
-    "DESCRIPTION": "While in guardianmod:Defensive_Mode, raise your Dexterity by !M!. NL At the end of your turn, guardianmod:Brace 3."
+    "DESCRIPTION": "While in guardianmod:Defensive_Mode, raise your Dexterity by !M!. NL At the start of your turn, guardianmod:Brace 3."
   },
   "Guardian:SpikerProtocol": {
     "NAME": "Spiker Protocol",
-    "DESCRIPTION": "Gain !M! Thorns while in guardianmod:Defensive_Mode. NL At the end of your turn, guardianmod:Brace 3."
+    "DESCRIPTION": "Gain !M! Thorns while in guardianmod:Defensive_Mode. NL At the start of your turn, guardianmod:Brace 3."
   },
   "Guardian:ArmoredProtocol": {
     "NAME": "Armored Protocol",
-    "DESCRIPTION": "Gain !M! Block at the end of each turn while in guardianmod:Defensive_Mode. NL At the end of your turn, guardianmod:Brace 3."
+    "DESCRIPTION": "Gain !M! Block at the end of each turn while in guardianmod:Defensive_Mode. NL At the start of your turn, guardianmod:Brace 3."
   },
   "Guardian:TimeSifter": {
     "NAME": "Time Sifter",
@@ -369,7 +369,7 @@
   },
   "Guardian:RevengeProtocol": {
     "NAME": "Revenge Protocol",
-    "DESCRIPTION": "While in guardianmod:Defensive_Mode, raise your Strength by !M!. NL At the end of your turn, guardianmod:Brace 5."
+    "DESCRIPTION": "While in guardianmod:Defensive_Mode, raise your Strength by !M!. NL At the start of your turn, guardianmod:Brace 5."
   },
   "Guardian:GatlingBeam": {
     "NAME": "Laser Turret",
