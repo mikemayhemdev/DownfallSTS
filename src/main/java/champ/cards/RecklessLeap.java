@@ -2,16 +2,10 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.stances.AbstractChampStance;
-import champ.stances.BerserkerStance;
-import champ.stances.UltimateStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import static champ.ChampMod.fatigue;
-import static champ.ChampMod.vigor;
 
 public class RecklessLeap extends AbstractChampCard {
 
@@ -36,15 +30,11 @@ public class RecklessLeap extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-       // techique();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
         for (int i = 0; i < magicNumber; i++) {
             if (AbstractDungeon.player.stance instanceof AbstractChampStance)
                 ((AbstractChampStance) AbstractDungeon.player.stance).techique();
-            //addToTop(new ApplyPowerAction(p, p, new CounterPower(boom), boom));
         }
-        vigor(magicNumber);
-        techique();
     }
 
     public void upp() {
