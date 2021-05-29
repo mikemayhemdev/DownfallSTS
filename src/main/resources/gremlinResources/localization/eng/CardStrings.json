@@ -377,13 +377,13 @@
 
   "Gremlin:Scatter": {
     "NAME": "Scatter!",
-    "DESCRIPTION": "The next time you would lose HP, instead gremlin:Swap to a random Gremlin. NL Exhaust"
+    "DESCRIPTION": "The next time you would lose HP, instead gremlin:Swap to a random Gremlin. NL Exhaust."
   },
 
   "Gremlin:SecondVolley": {
     "NAME": "Second Volley",
-    "DESCRIPTION": "Deal !D! damage. Add a Shiv to your hand for each card played this turn",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add an Upgraded Shiv to your hand for each card played this turn",
+    "DESCRIPTION": "Deal !D! damage. Add a Shiv to your hand for each card played this turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add an Upgraded Shiv to your hand for each card played this turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " card played.)",

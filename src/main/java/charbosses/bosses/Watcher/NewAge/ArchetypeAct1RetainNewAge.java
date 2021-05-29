@@ -1,7 +1,7 @@
 package charbosses.bosses.Watcher.NewAge;
 
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Defect.ArchetypeBaseDefect;
+import charbosses.bosses.Watcher.ArchetypeBaseWatcher;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnPanacea;
 import charbosses.cards.curses.EnClumsy;
@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
 
-public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
+public class ArchetypeAct1RetainNewAge extends ArchetypeBaseWatcher {
 
     private AbstractBossCard theVeryImportantSandsOfTime = null;
     private AbstractBossCard theVeryImportantPerseverence = null;
@@ -53,36 +53,36 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
                 case 0:
                     //Turn 1
                     addToList(cardsList, new EnWallop(), extraUpgrades);
-                    addToList(cardsList, new EnHalt(), false);
+                    addToList(cardsList, new EnHalt());
                     addToList(cardsList, new EnDefendPurple(), true);
                     theVeryImportantSandsOfTime = new EnSandsOfTime();
                     theVeryImportantSandsOfTime.newPrio = 1;
-                    addToList(cardsList, theVeryImportantSandsOfTime, false);
-                    addToList(cardsList, new EnClumsy(), false);
+                    addToList(cardsList, theVeryImportantSandsOfTime);
+                    addToList(cardsList, new EnClumsy());
                     turn++;
                     break;
                 case 1:
                     //Turn 2
                     theVeryImportantSandsOfTime.lockIntentValues = false;
-                    addToList(cardsList, new EnTalkToTheHand(), false);
-                    addToList(cardsList, new EnHalt(), false);
-                    addToList(cardsList, new EnCrushJoints(), false);
+                    addToList(cardsList, new EnTalkToTheHand());
+                    addToList(cardsList, new EnHalt());
+                    addToList(cardsList, new EnCrushJoints());
                     turn++;
                     break;
                 case 2:
                     //Turn 3
                     theVeryImportantSandsOfTime.lockIntentValues = false;
                     addToList(cardsList, new EnPanacea());
-                    addToList(cardsList, new EnFasting(), false);
-                    addToList(cardsList, new EnClumsy(), true);
+                    addToList(cardsList, new EnFasting());
+                    addToList(cardsList, new EnClumsy());
                     turn++;
                     break;
                 case 3:
                     theVeryImportantSandsOfTime.newPrio = -1;
                     theVeryImportantSandsOfTime.lockIntentValues = false;
-                    addToList(cardsList, new EnHalt(), false);
-                    addToList(cardsList, new EnRegret(), false);
-                    addToList(cardsList, new EnParasite(), false);
+                    addToList(cardsList, new EnHalt());
+                    addToList(cardsList, new EnRegret());
+                    addToList(cardsList, new EnParasite());
                     turn = 0;
                     looped = true;
                     break;
@@ -90,21 +90,21 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
         } else {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnHalt(), false);
-                    addToList(cardsList, new EnCrushJoints(), false);
+                    addToList(cardsList, new EnHalt());
+                    addToList(cardsList, new EnCrushJoints());
                     addToList(cardsList, new EnDefendPurple(), true);
                     turn++;
                     break;
                 case 1:
                     addToList(cardsList, new EnWallop(), extraUpgrades);
-                    addToList(cardsList, new EnHalt(), false);
-                    addToList(cardsList, new EnRegret(), false);
+                    addToList(cardsList, new EnHalt());
+                    addToList(cardsList, new EnRegret());
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnSandsOfTime(3), false);
-                    addToList(cardsList, new EnHalt(), false);
-                    addToList(cardsList, new EnParasite(), false);
+                    addToList(cardsList, new EnSandsOfTime(3));
+                    addToList(cardsList, new EnHalt());
+                    addToList(cardsList, new EnParasite());
                     turn = 0;
                     break;
             }

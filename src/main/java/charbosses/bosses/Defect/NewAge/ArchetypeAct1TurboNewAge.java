@@ -121,7 +121,7 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_CrackedCore());
+        addRelic(new CBR_SymbioticVirus());
         darkOrbsChanneled += 1;
     }
 

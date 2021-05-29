@@ -55,9 +55,11 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
             switch (turn) {
                 case 0:
                     if (AbstractDungeon.ascensionLevel >= 19) {
-                        AbstractCard c = new EnLikeWater();
+                        AbstractBossCard c = new EnLikeWater();
                         c.freeToPlayOnce = true;
-                        addToList(cardsList, new EnLikeWater(), false);  //removed
+                        c.costForTurn = 0;
+//                        c.energyGeneratedIfPlayed = 1;
+                        addToList(cardsList, c, false);  //removed
                     }
                     addToList(cardsList, new EnLikeWater(), false);  //removed
                     addToList(cardsList, new EnDefendPurple(), false);
@@ -66,7 +68,7 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
                     break;
                 case 1:
                     addToList(cardsList, new EnStrikePurple(), false);
-                    addToList(cardsList, new EnFollowUp(), extraUpgrades);
+                    addToList(cardsList, new EnFollowUp(), true);
                     addToList(cardsList, new EnDefendPurple(), false);  //not used
                     turn++;
                     break;
@@ -119,7 +121,7 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
                     turn++;
                     break;
                 case 1:
-                    addToList(cardsList, new EnFollowUp(), extraUpgrades);
+                    addToList(cardsList, new EnFollowUp(), true);
                     addToList(cardsList, new EnFlyingSleeves(), true);
                     addToList(cardsList, new EnStrikePurple(), false);
                     turn++;

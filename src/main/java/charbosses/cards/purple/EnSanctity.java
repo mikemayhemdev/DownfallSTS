@@ -22,6 +22,7 @@ public class EnSanctity extends AbstractBossCard {
     public EnSanctity() {
         super(ID, cardStrings.NAME, "purple/skill/sanctity", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.PURPLE, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
         this.baseBlock = 6;
+        this.baseMagicNumber = this.magicNumber = 2;
     }
 
     @Override
