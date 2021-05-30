@@ -801,6 +801,8 @@ public class downfallMod implements
         BaseMod.addEvent(new AddEventParams.Builder(DeadGuy_Evil.ID, DeadGuy_Evil.class) //Event ID//
                 //Event Spawn Condition//
                 .spawnCondition(() -> evilMode)
+                //Prevent from appearing too early//
+                .bonusCondition(() -> (AbstractDungeon.floorNum > 4))
                 //Event ID to Override//
                 .overrideEvent(DeadAdventurer.ID)
                 //Event Type//
