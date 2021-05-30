@@ -87,8 +87,8 @@ public abstract class AbstractExpansionCard extends CustomCard {
         return makeCardPath(id.replaceAll((expansionContentMod.getModID() + ":"), "")) + ".png";
     }
 
-    public static String makeID(String blah) {
-        return getModID() + ":" + blah;
+    public static String makeID(String name) {
+        return getModID() + ":" + name;
     }
 
     protected void atb(AbstractGameAction action) {
