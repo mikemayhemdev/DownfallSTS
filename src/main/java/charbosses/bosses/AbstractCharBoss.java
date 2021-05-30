@@ -507,6 +507,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                     if (hasPower(BarricadePower.POWER_ID)) {
                         c.manualCustomDamageModifier += FORTIFICATION_AMOUNT;
                     }
+                    // and Self-Forming Clay
+                    AbstractPower p = getPower(NextTurnBlockPower.POWER_ID);
+                    if (p != null) {
+                        c.manualCustomDamageModifier += p.amount;
+                    }
                 }
 
                 //Divinity Check for Act 2 Watcher
