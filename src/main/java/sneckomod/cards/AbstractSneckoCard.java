@@ -152,8 +152,8 @@ public abstract class AbstractSneckoCard extends CustomCard {
         return sum;
     }
 
-    public static String makeID(String blah) {
-        return getModID() + ":" + blah;
+    public static String makeID(String name) {
+        return getModID() + ":" + name;
     }
 
     protected void atb(AbstractGameAction action) {

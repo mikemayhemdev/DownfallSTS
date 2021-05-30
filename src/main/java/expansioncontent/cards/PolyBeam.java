@@ -30,21 +30,22 @@ public class PolyBeam extends AbstractExpansionCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = DAMAGE_INCREASE;
         this.exhaust = true;
+        //partner is null until this card is played in combat
         if (hasPreview) setPartner(partner);
-    }
-
-    public PolyBeam() {
-        this(null);
     }
 
     public PolyBeam(DecaShield partner) {
         this(partner, true);
     }
 
+    public PolyBeam() {
+        this(null);
+    }
+
     public void setPartner(DecaShield partner) {
         this.partner = partner;
         if (partner != null) {
-            cardsToPreview = this.partner;
+            cardsToPreview = partner.makeStatEquivalentCopy(true);
         } else {
             cardsToPreview = new DecaShield(null, false);
             if (this.upgraded) cardsToPreview.upgrade();
@@ -100,8 +101,14 @@ public class PolyBeam extends AbstractExpansionCard {
         return copy;
     }
 
+    public AbstractCard makeStatEquivalentCopy(boolean isPreview) {
+        PolyBeam copy = (PolyBeam) super.makeStatEquivalentCopy();
+        if (!isPreview) copy.setPartner(partner);
+        return copy;
+    }
+
     @Override
     public AbstractCard makeCopy() {
-        return new PolyBeam(partner);
+        return new PolyBeam(partner, false);
     }
 }

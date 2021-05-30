@@ -27,24 +27,25 @@ public class DecaShield extends AbstractExpansionCard {
         if (hasPreview) setPartner(partner);
     }
 
-    public DecaShield() {
-        this(null);
-    }
-
     public DecaShield(PolyBeam partner) {
         this(partner, true);
+    }
+
+    public DecaShield() {
+        this(null);
     }
 
     public void setPartner(PolyBeam partner) {
         this.partner = partner;
         if (partner != null) {
-            cardsToPreview = this.partner;
+            cardsToPreview = partner.makeStatEquivalentCopy(true);
         } else {
             cardsToPreview = new PolyBeam(null, false);
             if (this.upgraded) cardsToPreview.upgrade();
         }
     }
 
+    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         blck();
@@ -72,6 +73,7 @@ public class DecaShield extends AbstractExpansionCard {
         }
     }
 
+    @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
@@ -89,8 +91,14 @@ public class DecaShield extends AbstractExpansionCard {
         return copy;
     }
 
+    public AbstractCard makeStatEquivalentCopy(boolean isPreview) {
+        DecaShield copy = (DecaShield) super.makeStatEquivalentCopy();
+        if (!isPreview) copy.setPartner(partner);
+        return copy;
+    }
+
     @Override
     public AbstractCard makeCopy() {
-        return new DecaShield(partner);
+        return new DecaShield(partner, false);
     }
 }
