@@ -16,7 +16,7 @@ public class Hardcode extends AbstractBronzeCard {
 
     public Hardcode() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        FleetingField.fleeting.set(this, true);
+//        FleetingField.fleeting.set(this, true);
         //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(CardTags.HEALING);
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Hardcode.png"));
