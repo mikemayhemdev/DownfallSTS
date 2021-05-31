@@ -20,7 +20,14 @@ public class GremlinPostBossHealPatch {
             if (AbstractDungeon.ascensionLevel >= 5) {
                 multiplier = .75f;
             }
-            ((GremlinCharacter)(AbstractDungeon.player)).mobState.postBossHeal(AbstractDungeon.player.maxHealth, multiplier);
+
+            // Only rez 1
+            if (((GremlinCharacter) AbstractDungeon.player).canRez()) {
+                ((GremlinCharacter) AbstractDungeon.player).resurrect(multiplier);
+            }
+
+            // Rez all
+            //((GremlinCharacter)(AbstractDungeon.player)).mobState.postBossHeal(AbstractDungeon.player.maxHealth, multiplier);
         }
         return SpireReturn.Continue();
     }
