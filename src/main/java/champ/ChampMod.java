@@ -408,7 +408,7 @@ public class ChampMod implements
                 .eventType(EventUtils.EventType.NORMAL)
                 .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
                 //Prevent from appearing too early//
-                .bonusCondition(() -> (AbstractDungeon.floorNum > 7))
+                .bonusCondition(() -> (AbstractDungeon.floorNum > 6))
                 .create());
                 /*
 
