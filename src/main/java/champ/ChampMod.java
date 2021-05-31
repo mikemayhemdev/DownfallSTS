@@ -408,7 +408,7 @@ public class ChampMod implements
                 .eventType(EventUtils.EventType.NORMAL)
                 .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
                 //Prevent from appearing too early//
-                .bonusCondition(() -> (AbstractDungeon.floorNum > 7))
+                .bonusCondition(() -> (AbstractDungeon.floorNum > 6))
                 .create());
                 /*
 
@@ -465,8 +465,11 @@ public class ChampMod implements
     @Override
     public int receiveOnPlayerLoseBlock(int i) {
         if (AbstractDungeon.player.hasRelic(DeflectingBracers.ID)) {
-            AbstractDungeon.player.getRelic(DeflectingBracers.ID).flash();
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(i), i));
+            int counter = Math.min(i, AbstractDungeon.player.currentBlock);
+            if (counter > 0) {
+                AbstractDungeon.player.getRelic(DeflectingBracers.ID).flash();
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(counter), counter));
+            }
         }
         return i;
     }
