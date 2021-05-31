@@ -340,6 +340,10 @@ public class GremlinCharacter extends CustomPlayer {
         mobState.resurrect(this.maxHealth);
     }
 
+    public void resurrect(double multiplier) {
+        mobState.resurrect((int)(this.maxHealth*0.5));
+    }
+
     public boolean canRez() {
         return mobState.canRez();
     }
