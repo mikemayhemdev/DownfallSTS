@@ -72,12 +72,11 @@ public class GremlinMobState {
     public void postBossHeal(int max, float multiplier){
         for(int i = 0; i<5; i++ ){
             int hp = gremlinHP.get(i);
-            if (hp < 0) {
-                hp = 0;
-            }
-            if (!enslaved.contains(gremlins.get(i))) {
-                int heal = MathUtils.round((max - hp) * multiplier);
-                gremlinHP.set(i, hp + heal);
+            if (hp > 0) {
+                if (!enslaved.contains(gremlins.get(i))) {
+                    int heal = MathUtils.round((max - hp) * multiplier);
+                    gremlinHP.set(i, hp + heal);
+                }
             }
         }
     }
