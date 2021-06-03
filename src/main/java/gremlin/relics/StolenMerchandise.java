@@ -43,7 +43,7 @@ public class StolenMerchandise extends AbstractGremlinRelic {
         this.flash();
         AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 
-        AbstractCard colorless = AbstractDungeon.returnTrulyRandomColorlessCardInCombat();
+        AbstractCard colorless = AbstractDungeon.returnTrulyRandomColorlessCardInCombat().makeCopy();
         AbstractDungeon.actionManager.addToBottom(new MakeEchoAction(colorless));
     }
 
@@ -54,7 +54,7 @@ public class StolenMerchandise extends AbstractGremlinRelic {
                     flash();
                     addToBot(new RelicAboveCreatureAction(mo, this));
                     AbstractDungeon.actionManager.addToBottom(
-                            new TalkAction(mo, strings.DESCRIPTIONS[MathUtils.random(2,4)]));
+                            new TalkAction(mo, strings.DESCRIPTIONS[MathUtils.random(2, 4)]));
                     AbstractDungeon.actionManager.addToBottom(
                             new ApplyPowerAction(mo, mo, new StrengthPower(mo, RAGE), RAGE));
                 }
