@@ -26,8 +26,8 @@ public class GremlinPostBossHealPatch {
                 ((GremlinCharacter) AbstractDungeon.player).resurrect(multiplier);
             }
 
-            // Rez all
-            //((GremlinCharacter)(AbstractDungeon.player)).mobState.postBossHeal(AbstractDungeon.player.maxHealth, multiplier);
+            // Heal all
+            ((GremlinCharacter)(AbstractDungeon.player)).mobState.postBossHeal(AbstractDungeon.player.maxHealth, multiplier);
         }
         return SpireReturn.Continue();
     }
