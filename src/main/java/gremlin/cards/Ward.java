@@ -41,7 +41,11 @@ public class Ward extends CustomCard {
     @Override
     public void applyPowers() {
         if ((AbstractDungeon.player != null) && (AbstractDungeon.player.hasPower(PolishPower.POWER_ID))) {
-            this.baseBlock = (BLOCK + AbstractDungeon.player.getPower(PolishPower.POWER_ID).amount);
+            if(this.upgraded) {
+                this.baseBlock = (BLOCK + UPGRADE_BONUS + AbstractDungeon.player.getPower(PolishPower.POWER_ID).amount);
+            } else {
+                this.baseBlock = (BLOCK + AbstractDungeon.player.getPower(PolishPower.POWER_ID).amount);
+            }
         }
         super.applyPowers();
     }
