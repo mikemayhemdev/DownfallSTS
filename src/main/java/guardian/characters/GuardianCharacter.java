@@ -235,27 +235,6 @@ public class GuardianCharacter extends CustomPlayer {
         }
     }
 
-
-    @Override
-    public ArrayList<AbstractCard> getCardPool(ArrayList<AbstractCard> tmpPool) {
-        if (ModHelper.isModEnabled("Red Cards")) {
-            CardLibrary.addRedCards(tmpPool);
-        }
-        if (ModHelper.isModEnabled("Green Cards")) {
-            CardLibrary.addGreenCards(tmpPool);
-        }
-
-        if (ModHelper.isModEnabled("Blue Cards")) {
-            CardLibrary.addBlueCards(tmpPool);
-        }
-
-        if (ModHelper.isModEnabled("Purple Cards")) {
-            CardLibrary.addPurpleCards(tmpPool);
-        }
-
-        return super.getCardPool(tmpPool);
-    }
-
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
 
