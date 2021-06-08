@@ -274,7 +274,7 @@ public class HexaMod implements
 
                 Toasty.ID,
                 SpectralSpark.ID,
-                SuperheatedStrike.ID,
+                BurningQuestion.ID,
 
                 ApocalypticArmor.ID,
                 ApocalypseNow.ID,
