@@ -312,7 +312,7 @@
   },
   "champ:RecklessLeap": {
     "NAME": "Reckless Strike",
-    "DESCRIPTION": "Deal !D! damage. NL NL Perform !M! times:",
+    "DESCRIPTION": "Deal !D! damage. NL Perform !M! times:",
     "EXTENDED_DESCRIPTION": [
       "A poor time for that move."
     ]

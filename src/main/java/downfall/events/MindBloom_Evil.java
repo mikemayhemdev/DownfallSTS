@@ -63,8 +63,7 @@ public class MindBloom_Evil extends AbstractImageEvent {
         super(NAME, DESCRIPTIONSALT[0], "images/events/mindBloom.jpg");
         this.screen = CurScreen.INTRO;
 
-        if (downfallMod.isDownfallCharacter(AbstractDungeon.player)
-        &&( AbstractDungeon.player instanceof GuardianCharacter || AbstractDungeon.player instanceof AutomatonChar)) {
+        if (downfallMod.isDownfallCharacter(AbstractDungeon.player)) {
             if (Loader.isModLoaded("DownfallExtension"))
                 this.imageEventText.setDialogOption(CardCrawlGame.languagePack.getEventString("DownfallExtension:MindBloom").OPTIONS[0]);
             else

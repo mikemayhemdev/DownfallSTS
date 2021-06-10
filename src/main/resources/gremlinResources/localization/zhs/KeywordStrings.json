@@ -32,7 +32,7 @@
       "地精法师"
     ],
     "PROPER_NAME": "地精法师",
-    "DESCRIPTION": "每当你打出一张牌，获得 #b1 点 #y法力 。"
+    "DESCRIPTION": "每当你打出一张技能牌，获得 #b1 点 #y法力 。"
   },
   {
     "NAMES": [

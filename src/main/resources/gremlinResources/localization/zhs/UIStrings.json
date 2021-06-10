@@ -64,8 +64,11 @@
   "Gremlin:EventReplacementStrings": {
     "TEXT": [
       "#r失去 #r",
-      " #r生命。",
-      "#r所有地精失去 #r"
+      " #r点生命。",
+      "#r所有地精失去 #r",
+      "#g获得 #g",
+      " #g点生命 ",
+      "#g所有地精获得 #g"
     ]
   }
 }

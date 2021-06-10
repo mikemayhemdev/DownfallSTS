@@ -26,6 +26,7 @@ public class GhostLash extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (m == null) return;
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
         if (ExhaustCardTickPatch.exhaustedLastTurn)
             addToTop(new DamageAction(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY));

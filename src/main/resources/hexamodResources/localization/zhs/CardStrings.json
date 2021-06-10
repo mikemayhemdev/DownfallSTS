@@ -144,7 +144,7 @@
   },
   "hexamod:GiftsFromTheDead": {
     "NAME": "深处之礼",
-    "DESCRIPTION": "每回合开始时， expansioncontent:取回一张 hexamod:阴世 牌。",
+    "DESCRIPTION": "每回合开始时， expansioncontent:取回 一张 hexamod:阴世 牌。",
 	"EXTENDED_DESCRIPTION": [
       "这些灵魂太强大了，无法直接召唤。"
     ]
@@ -365,7 +365,7 @@
     ]
   },
   "hexamod:BurningQuestion": {
-    "NAME": "紧迫问题",
+    "NAME": "迫在眉睫",
     "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 这张牌的伤害提高 !M! 点。 NL 被 消耗 时：对所有敌人造成 !D! 点伤害。"
   },
 
@@ -382,7 +382,7 @@
     ]
   },
   "hexamod:Divider": {
-    "NAME": "Divider",
+    "NAME": "分整化火",
     "DESCRIPTION": "每 hexamod:点燃 一个鬼火，造成 !D! 点伤害。"
   },
   "hexamod:StrikeFromBeyond": {

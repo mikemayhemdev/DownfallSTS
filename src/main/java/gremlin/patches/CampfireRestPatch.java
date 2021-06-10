@@ -24,7 +24,7 @@ public class CampfireRestPatch {
                 gremlinMob.mobState.campfireHeal(toHeal, gremlinMob.maxHealth);
             }
             if (gremlinMob.canRez()) {
-                gremlinMob.resurrect();
+                gremlinMob.resurrect(0.5);
             }
         }
     }

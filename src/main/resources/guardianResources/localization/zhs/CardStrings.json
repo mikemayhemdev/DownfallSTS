@@ -284,7 +284,7 @@
   },
   "Guardian:MultiBeam": {
     "NAME": "多重射线",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 X 次。 NL  guardianmod:滴答 -本场战斗所有射线牌增加 !M! 点伤害。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 X 次。 NL  guardianmod:滴答 -本场战斗这张牌增加 !M! 点伤害。"
   },
   "Guardian:BaubleBeam": {
     "NAME": "鳞片爆破",
@@ -296,15 +296,15 @@
   },
   "Guardian:EvasiveProtocol": {
     "NAME": "闪避协议",
-    "DESCRIPTION": "处于 guardianmod:防御模式 时拥有 !M! 点 敏捷 。 NL 在你的回合结束时， guardianmod:提防 3。"
+    "DESCRIPTION": "处于 guardianmod:防御模式 时拥有 !M! 点 敏捷 。 NL 在你的回合开始时， guardianmod:提防 3。"
   },
   "Guardian:SpikerProtocol": {
     "NAME": "荆棘协议",
-    "DESCRIPTION": "处于 guardianmod:防御模式 时拥有 !M! 层 荆棘 。 NL 在你的回合结束时， guardianmod:提防 3。"
+    "DESCRIPTION": "处于 guardianmod:防御模式 时拥有 !M! 层 荆棘 。 NL 在你的回合开始时， guardianmod:提防 3。"
   },
   "Guardian:ArmoredProtocol": {
     "NAME": "装甲协议",
-    "DESCRIPTION": "处于 guardianmod:防御模式 每回合结束时获得 !M! 点 格挡 。 NL 在你的回合结束时， guardianmod:提防 3。"
+    "DESCRIPTION": "处于 guardianmod:防御模式 每回合结束时获得 !M! 点 格挡 。 NL 在你的回合开始时， guardianmod:提防 3。"
   },
   "Guardian:TimeSifter": {
     "NAME": "时间沙漏",
@@ -369,7 +369,7 @@
   },
   "Guardian:RevengeProtocol": {
     "NAME": "复仇协议",
-    "DESCRIPTION": "处于 guardianmod:防御模式 时，拥有 !M! 点 力量 。 NL 在你的回合结束时， guardianmod:提防 5。"
+    "DESCRIPTION": "处于 guardianmod:防御模式 时，拥有 !M! 点 力量 。 NL 在你的回合开始时， guardianmod:提防 5。"
   },
   "Guardian:GatlingBeam": {
     "NAME": "炮塔射线",
