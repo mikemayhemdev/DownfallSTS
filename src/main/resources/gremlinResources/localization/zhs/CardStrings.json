@@ -84,8 +84,8 @@
   },
   "Gremlin:Duplicate": {
     "NAME": "复制",
-    "DESCRIPTION": "将一张攻击牌的 !M! 张 gremlin:回响 加入你的手牌手牌。 NL 它们的耗能降低 1 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将一张攻击牌的 !M! 张 gremlin:回响 加入你的手牌手牌。 NL 它们的耗能降低 1 。"
+    "DESCRIPTION": "将一张攻击牌的 !M! 张 gremlin:回响 加入你的手牌。 NL 它们的耗能降低 1 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "将一张攻击牌的 !M! 张 gremlin:回响 加入你的手牌。 NL 它们的耗能降低 1 。"
   },
   "Gremlin:EdibleArmor": {
     "NAME": "食用护甲",

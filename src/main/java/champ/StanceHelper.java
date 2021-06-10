@@ -9,8 +9,10 @@ import champ.stances.UltimateStance;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Vector2;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
@@ -126,8 +128,8 @@ public class StanceHelper {
                                 t = BaseMod.getKeywordTitle("champ:counter");
                                 d = BaseMod.getKeywordDescription("champ:counter");
                             } else if (AbstractDungeon.player.stance instanceof BerserkerStance) {
-                                t = BaseMod.getKeywordTitle("vigor");
-                                d = BaseMod.getKeywordDescription("vigor");
+                                t = CardCrawlGame.languagePack.getKeywordString("Game Dictionary").VIGOR.NAMES[0];
+                                d = CardCrawlGame.languagePack.getKeywordString("Game Dictionary").VIGOR.DESCRIPTION;
                             }
                             if (!t.equals("ERROR")) {
                                 if ((float) InputHelper.mX < 1400.0F * Settings.scale) {
@@ -151,8 +153,8 @@ public class StanceHelper {
                             String t = "ERROR";
                             String d = "ERROR2";
                             if (AbstractDungeon.player.stance instanceof BerserkerStance) {
-                                t = BaseMod.getKeywordTitle("vigor");
-                                d = BaseMod.getKeywordDescription("vigor");
+                                t = CardCrawlGame.languagePack.getKeywordString("Game Dictionary").VIGOR.NAMES[0];
+                                d = CardCrawlGame.languagePack.getKeywordString("Game Dictionary").VIGOR.DESCRIPTION;
                             }
                             if (!t.equals("ERROR")) {
                                 if ((float) InputHelper.mX < 1400.0F * Settings.scale) {
