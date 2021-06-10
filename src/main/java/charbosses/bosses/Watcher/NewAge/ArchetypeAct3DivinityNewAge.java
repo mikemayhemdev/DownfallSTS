@@ -71,14 +71,14 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
                     AbstractBossCard c = new EnSignatureMove(); //Big attack
                     c.freeToPlayOnce = true;
                     c.energyGeneratedIfPlayed = 2;
-                    addToList(cardsList, c, extraUpgrades);
+                    addToList(cardsList, c, false);
                     addToList(cardsList, new EnConjurBlade());
                     addToList(cardsList, new EnSanctity());    //Not played
                     turn++;
                     break;
                 case 3:
                     addToList(cardsList, new EnProtect(), true);
-                    addToList(cardsList, new EnEmptyFist());    //Exit Divinity
+                    addToList(cardsList, new EnEmptyFist(), extraUpgrades);    //Exit Divinity
                     addToList(cardsList, new EnNormality());
                     turn++;
                     break;
@@ -99,7 +99,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
                     addToList(cardsList, c);
                     c = new EnEmptyFist();                      //Exit Divinity
                     c.freeToPlayOnce = true;
-                    addToList(cardsList, c, false);
+                    addToList(cardsList, c, extraUpgrades);
                     turn++;
                     break;
                 case 1:
@@ -115,7 +115,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnSignatureMove(), extraUpgrades); //Big Attack
+                    addToList(cardsList, new EnSignatureMove()); //Big Attack
                     addToList(cardsList, new EnGoodInstincts());
                     addToList(cardsList, new EnNormality());
                     turn = 0;

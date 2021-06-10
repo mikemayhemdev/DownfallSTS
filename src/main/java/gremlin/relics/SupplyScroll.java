@@ -1,5 +1,6 @@
 package gremlin.relics;
 
+import basemod.helpers.CardPowerTip;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
@@ -21,6 +22,7 @@ public class SupplyScroll extends AbstractGremlinRelic {
 
     public SupplyScroll() {
         super(ID, IMG, TIER, SOUND);
+        this.tips.add(new CardPowerTip(new SupplyScrollCard()));
     }
 
     @Override

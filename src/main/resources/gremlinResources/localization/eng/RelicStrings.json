@@ -98,7 +98,7 @@
     "NAME": "Supply Scroll",
     "FLAVOR": "A surprisingly detailed inventory of the mob's various bits and bobbles.",
     "DESCRIPTIONS": [
-      "At the start of your 3rd turn, add a random assortment of 4 #yShivs and #yWards to your hand."
+      "At the start of your 3rd turn, add a #ySupply #yScroll to your hand."
     ]
   },
   "Gremlin:TagTeamwork": {
