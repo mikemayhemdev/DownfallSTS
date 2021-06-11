@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>mod-group-name</groupId>
+    <artifactId>downfall</artifactId>
+    <name>Downfall</name>
+    <version>0.1.0</version>
+
+    <description>
+        Downfall is a full-featured Expansion for Slay the Spire, including a new campaign, four new heroes to play, new relics, new cards, new potions, and more. \n \n The Heart demands that this endless cycle of slaughter be finished.  Answer the call as a Villain, and see to the defense of the Spire. \n \n This mod is a combination modpack which includes the former mods known as Slimebound Mod, Guardian Mod, and Playable Snecko, along with a ton of new content, a new character, and much more.
+    </description>
+
+    <properties>
+
+	//Change below line to your Steam installation directory
+<steamFolder>D:/SteamLibrary/</steamFolder>
+        <workshopFolder>${steamFolder}steamapps/workshop/content/646570/</workshopFolder>
+        <stsPath>${steamFolder}steamapps/common/SlayTheSpire/</stsPath>
+        <SlayTheSpire.version>2.0</SlayTheSpire.version>
+        <ModTheSpire.version>3.8.0</ModTheSpire.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.megacrit.cardcrawl</groupId>
+            <artifactId>SlayTheSpire</artifactId>
+            <version>${SlayTheSpire.version}</version>
+            <scope>system</scope>
+            <systemPath>${stsPath}desktop-1.0.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.evacipated.cardcrawl</groupId>
+            <artifactId>ModTheSpire</artifactId>
+            <version>${ModTheSpire.version}</version>
+            <scope>system</scope>
+            <systemPath>${workshopFolder}1605060445/ModTheSpire.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>basemod</groupId>
+            <artifactId>basemod</artifactId>
+            <version>5.17.0</version>
+            <scope>system</scope>
+            <systemPath>${workshopFolder}1605833019/BaseMod.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>come.evacipated.cardcrawl</groupId>
+            <artifactId>stslib</artifactId>
+            <version>1.17.2</version>
+            <scope>system</scope>
+            <systemPath>${workshopFolder}1609158507/StSLib.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>actlikeit</groupId>
+            <artifactId>actlikeit</artifactId>
+            <version>1.0.0</version>
+            <scope>system</scope>
+            <systemPath>${workshopFolder}1934902042/actlikeit.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.megacrit.cardcrawl.mod</groupId>
+            <artifactId>WidePotions</artifactId>
+            <version>0.4</version>
+            <scope>system</scope>
+            <systemPath>${workshopFolder}2368513093/WidePotions.jar</systemPath>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+                <excludes>
+                    <exclude>ModTheSpire.json</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>ModTheSpire.json</include>
+                </includes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <configuration>
+                            <target>
+                                <copy file="target/${project.artifactId}.jar" tofile="${stsPath}mods/${project.artifactId}.jar" />
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
