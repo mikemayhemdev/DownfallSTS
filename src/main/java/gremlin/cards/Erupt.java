@@ -23,8 +23,8 @@ public class Erupt extends AbstractGremlinCard {
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 
     private static final int COST = 1;
-    private static final int MAGIC = 6;
-    private static final int UPGRADE_BONUS = 3;
+    private static final int MAGIC = 5;
+    private static final int UPGRADE_BONUS = 2;
 
     public Erupt()
     {

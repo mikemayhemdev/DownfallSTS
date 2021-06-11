@@ -29,7 +29,7 @@ public class Necromancy extends AbstractGremlinCard {
 
     private static final int COST = 1;
     private static final int MAGIC = 10;
-    private static final int UPGRADE_BONUS = 5;
+    private static final int UPGRADE_BONUS = 3;
     private static final int VOODOO = 3;
 
     public Necromancy()

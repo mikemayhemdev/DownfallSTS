@@ -29,8 +29,8 @@ public class ProperTools extends AbstractGremlinCard {
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.ENEMY;
 
     private static final int COST = 2;
-    private static final int POWER = 6;
-    private static final int UPGRADE_BONUS = 4;
+    private static final int POWER = 5;
+    private static final int UPGRADE_BONUS = 3;
     private static final int MAGIC = 3;
 
     private float rotationTimer;

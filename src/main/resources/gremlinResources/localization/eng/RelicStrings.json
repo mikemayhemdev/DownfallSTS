@@ -3,7 +3,7 @@
     "NAME": "Impeccable Pecs",
     "FLAVOR": "Glorious.",
     "DESCRIPTIONS": [
-      "Whenever you gain #yStrength, gain an equal amount of Temporary HP."
+      "Whenever you gain #yStrength, gain an equal amount of Temporary HP. NL Start each combat with #b1 #yStrength."
     ]
   },
   "Gremlin:FragmentationGrenade": {

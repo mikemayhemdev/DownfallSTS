@@ -20,8 +20,8 @@ public class Enthusiasm extends AbstractGremlinCard {
     private static final AbstractCard.CardRarity RARITY = CardRarity.UNCOMMON;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 
-    private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
+    private static final int COST = 2;
+    private static final int UPGRADED_COST = 1;
 
     public Enthusiasm()
     {
