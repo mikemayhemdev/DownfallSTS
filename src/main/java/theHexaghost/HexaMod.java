@@ -277,7 +277,7 @@ public class HexaMod implements
                 BurningQuestion.ID,
 
                 ApocalypticArmor.ID,
-                ApocalypseNow.ID,
+                Premonition.ID,
                 FlameSwitch.ID,
 
                 RecyclingMachine.ID,
