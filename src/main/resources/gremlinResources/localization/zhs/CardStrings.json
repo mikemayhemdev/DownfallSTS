@@ -391,6 +391,10 @@
     "NAME": "惊人",
     "DESCRIPTION": "获得 !B! 格挡 。 NL 造成 !D! 点伤害。 NL 格挡 值受 gremlin:法力 影响。"
   },
+  "Gremlin:SupplyScrollCard": {
+    "NAME": "支援卷轴",
+    "DESCRIPTION": "将4张随机 *小刀 或 *守卫 加入你的手牌。 NL 消耗 。"
+  },
   "Gremlin:Tadah": {
     "NAME": "愚蠢！",
     "DESCRIPTION": "将一张随机技能牌的 gremlin:回响 加入你的手牌。 NL 其能耗减少1。 NL gremlin:切换 到 gremlin:地精法师 。",
