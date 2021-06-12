@@ -21,8 +21,8 @@ public class Unforgiving extends AbstractGremlinCard {
     private static final AbstractCard.CardRarity RARITY = CardRarity.RARE;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 
-    private static final int COST = 2;
-    private static final int UPGRADE_COST = 1;
+    private static final int COST = 3;
+    private static final int UPGRADE_COST = 2;
 
     public Unforgiving()
     {

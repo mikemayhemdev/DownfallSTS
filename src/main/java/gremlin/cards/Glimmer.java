@@ -25,7 +25,7 @@ public class Glimmer extends AbstractGremlinCard {
 
     private static final int COST = 1;
     private static final int POWER = 1;
-    private static final int UPGRADE_BONUS = 3;
+    private static final int UPGRADE_BONUS = 1;
 
     public Glimmer()
     {
