@@ -20,7 +20,7 @@ public class Hexaburn extends AbstractExpansionCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new PretendHexWheelPower(magicNumber, damage));
+        applyToSelf(new PretendHexWheelPower(magicNumber));
     }
 
     public void upgrade() {

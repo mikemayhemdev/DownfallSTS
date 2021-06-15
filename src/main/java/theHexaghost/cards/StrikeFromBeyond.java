@@ -28,7 +28,6 @@ public class StrikeFromBeyond extends AbstractHexaCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(CardTags.STRIKE);
     }
 
