@@ -33,7 +33,7 @@ public class GhostLash extends AbstractHexaCard {
     }
 
     @Override
-    public void triggerOnExhaust() {
+    public void afterlife() {
         use(AbstractDungeon.player, AbstractDungeon.getRandomMonster());
     }
 

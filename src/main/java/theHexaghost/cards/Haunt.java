@@ -47,7 +47,7 @@ public class Haunt extends AbstractHexaCard {
     }
 
     @Override
-    public void triggerOnExhaust() {
+    public void afterlife() {
         atb(new DrawCardAction(AbstractDungeon.player, magicNumber));
         atb(new AbstractGameAction() {
             @Override

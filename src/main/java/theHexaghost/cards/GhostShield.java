@@ -32,7 +32,7 @@ public class GhostShield extends AbstractHexaCard {
     }
 
     @Override
-    public void triggerOnExhaust() {
+    public void afterlife() {
         use(AbstractDungeon.player, null);
     }
 
