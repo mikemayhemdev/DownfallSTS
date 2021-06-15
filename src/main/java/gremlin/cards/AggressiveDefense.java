@@ -28,6 +28,7 @@ public class AggressiveDefense extends AbstractGremlinCard {
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 2;
     private static final int MAGIC = 3;
+    private static final int UPGRADE_MAGIC_BONUS = 1;
 
     public AggressiveDefense()
     {
@@ -54,7 +55,7 @@ public class AggressiveDefense extends AbstractGremlinCard {
         {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
-            upgradeMagicNumber(UPGRADE_BONUS);
+            upgradeMagicNumber(UPGRADE_MAGIC_BONUS);
         }
     }
 }

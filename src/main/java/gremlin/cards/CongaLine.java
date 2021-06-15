@@ -20,7 +20,7 @@ public class CongaLine extends AbstractGremlinCard {
     private static final AbstractCard.CardRarity RARITY = CardRarity.RARE;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 
-    private static final int COST = 1;
+    private static final int COST = 2;
 
     public CongaLine()
     {

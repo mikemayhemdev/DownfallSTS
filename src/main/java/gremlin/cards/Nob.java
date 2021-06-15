@@ -28,7 +28,7 @@ public class Nob extends AbstractGremlinCard implements SuperRare {
     private static final int COST = 4;
 
     private static final int MAGIC = 20;
-    private static final int UPGRADE_BONUS = 15;
+    private static final int UPGRADE_BONUS = 10;
 
     public Nob()
     {

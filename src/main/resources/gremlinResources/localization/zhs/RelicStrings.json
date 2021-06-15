@@ -98,10 +98,10 @@
     ]
   },
   "Gremlin:SupplyScroll": {
-    "NAME": "供应卷轴",
+    "NAME": "支援卷轴",
     "FLAVOR": "一份十分详尽的关于地精暴徒武器装甲素材的物品清单。",
     "DESCRIPTIONS": [
-      "第三回合开始时， NL 将 3 张随机 #y小刀 或 #y守卫 加入手牌。"
+      "第三回合开始时， NL 将一张 #y支援卷轴 加入手牌。"
     ]
   },
   "Gremlin:TagTeamwork": {

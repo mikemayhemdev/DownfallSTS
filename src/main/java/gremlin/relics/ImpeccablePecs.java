@@ -2,10 +2,12 @@ package gremlin.relics;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import gremlin.powers.WizPower;
 
@@ -23,6 +25,10 @@ public class ImpeccablePecs extends AbstractGremlinRelic {
     @Override
     public String getUpdatedDescription() {
         return strings.DESCRIPTIONS[0];
+    }
+
+    public void atBattleStart() {
+        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
     }
 
     public void onTrigger(int amount) {

@@ -27,7 +27,7 @@ public class GremlinToss extends AbstractGremlinCard {
     private static final int COST = 1;
     private static final int POWER = 0;
     private static final int MAGIC = 0;
-    private static final int UPGRADE_BONUS = 4;
+    private static final int UPGRADE_BONUS = 3;
 
     public GremlinToss()
     {
