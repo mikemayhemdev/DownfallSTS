@@ -1,8 +1,5 @@
 package guardian;
 
-import automaton.AutomatonChar;
-import automaton.cards.*;
-import automaton.relics.*;
 import basemod.BaseMod;
 import basemod.ModPanel;
 import basemod.ReflectionHacks;
@@ -12,8 +9,6 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import champ.ChampChar;
-import champ.events.BackToBasicsChamp;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -40,15 +35,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
-import downfall.cards.curses.Aged;
 import downfall.downfallMod;
-import downfall.potions.CursedFountainPotion;
 import guardian.cards.*;
-import guardian.cards.BronzeArmor;
-import guardian.cards.BronzeOrb;
 import guardian.characters.GuardianCharacter;
 import guardian.commands.SocketGems;
 import guardian.events.StasisEgg;
@@ -689,7 +679,9 @@ public static void saveData() {
         BaseMod.addCard(new ShieldCharger());
         BaseMod.addCard(new StasisEngine());
         BaseMod.addCard(new Gem_Purple());
-
+        
+        BaseMod.addCard(new CrystalShiv());
+        BaseMod.addCard(new CrystalWard());
 
         //CONSTRUCT cross-mod
         /*
@@ -1107,6 +1099,7 @@ public static void saveData() {
         YELLOW(Color.YELLOW);
 
         public Color color;
+
         socketTypes(Color color) {
             this.color = color.cpy();
         }
