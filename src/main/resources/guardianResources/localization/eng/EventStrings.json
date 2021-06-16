@@ -77,7 +77,7 @@
       "Taking advantage of this break in the climb, you place a gemstone into your equipment, instantly feeling your power grow."
     ],
     "OPTIONS": [
-      "[Dismantle] #rRemove Socketed Card. Gain it's #gGems.",
+      "[Dismantle] #rRemove Socketed Card. Gain its #gGems.",
       "[Locked] Requires Socketed Card with a Gem installed.",
       "[Pry] #rDestroy all #gGems in a Socketed Card.",
       "[Transmute] #rRemove a Card. Gain a random #gGem.",
