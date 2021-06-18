@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;
+import theHexaghost.HexaMod;
 import theHexaghost.patches.ExhaustCardTickPatch;
 
 public class GhostShield extends AbstractHexaCard {
@@ -23,6 +24,7 @@ public class GhostShield extends AbstractHexaCard {
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;
+        tags.add(HexaMod.AFTERLIFE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
