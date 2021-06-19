@@ -108,11 +108,15 @@ public class MindBloom_Evil extends AbstractImageEvent {
 
                             AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Hexaghost");
                         } else if (AbstractDungeon.player instanceof ChampChar) {
-                            AbstractMonster m = new Champ();
-                            m.maxHealth = Math.round(m.maxHealth * .6F);
-                            m.currentHealth = m.maxHealth;
-                            m.powers.add(new StrengthPower(m, -3));
-                            AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
+                            if (Loader.isModLoaded("DownfallExtension"))
+                                AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("DownfallExtension:Irondead");
+                            else{
+                                AbstractMonster m = new Champ();
+                                m.maxHealth = Math.round(m.maxHealth * .6F);
+                                m.currentHealth = m.maxHealth;
+                                m.powers.add(new StrengthPower(m, -3));
+                                AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
+                            }
                         } else if (AbstractDungeon.player instanceof AutomatonChar) {
                             if (Loader.isModLoaded("DownfallExtension"))
                                 AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("DownfallExtension:Crowbot");

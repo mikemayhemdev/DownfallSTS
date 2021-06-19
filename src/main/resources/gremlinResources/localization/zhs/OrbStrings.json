@@ -2,7 +2,7 @@
   "Gremlin:FatGremlin": {
     "NAME": "胖地精",
     "DESCRIPTION": [
-      "当你攻击牌时， 给予所有目标 #b",
+      "当你攻击牌时， 给予目标 #b",
       " 层 #y虚弱 。"
     ]
   },

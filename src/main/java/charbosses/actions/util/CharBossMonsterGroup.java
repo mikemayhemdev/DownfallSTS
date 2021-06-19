@@ -1,9 +1,11 @@
 package charbosses.actions.util;
 
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
 import charbosses.relics.CBR_Calipers;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.BlurPower;
 import downfall.monsters.NeowBoss;
 import slimebound.SlimeboundMod;
@@ -23,6 +25,11 @@ public class CharBossMonsterGroup extends MonsterGroup {
             if (m instanceof AbstractCharBoss) {
                 AbstractCharBoss cB = (AbstractCharBoss) m;
                 if (!m.isDying && !m.isEscaping) {
+                    for(AbstractPower p : m.powers){
+                        if(p instanceof AbstractBossMechanicPower){
+                            ((AbstractBossMechanicPower)p).PreRoundLoseBlock();
+                        }
+                    }
                     if (!m.hasPower("Barricade") && !m.hasPower(BlurPower.POWER_ID)) {
                         if (cB.hasRelic(CBR_Calipers.ID)) {
                             //SlimeboundMod.logger.info("Calipers block triggered.");

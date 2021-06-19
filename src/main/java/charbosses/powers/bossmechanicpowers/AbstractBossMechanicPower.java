@@ -56,4 +56,6 @@ public abstract class AbstractBossMechanicPower extends AbstractPower {
         //to prevent the 'last turn' warning from pinging audio all the time
     }
 
+    public void PreRoundLoseBlock(){}
+
 }
