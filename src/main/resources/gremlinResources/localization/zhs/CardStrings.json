@@ -180,7 +180,7 @@
       "。 NL 敌人在本回合内失去 !M! 点 力量 。",
       "。 NL 获得 !B! 点 格挡 。",
       "。 NL 抽 !M! 张牌。",
-      "。 NL 这次攻击不会消耗 gremlin:法力 。",
+      "。 NL 获得 !M! 点 gremlin:法力 。",
       "。 NL 获得 !M! 点 力量 。"
     ]
   },
@@ -262,8 +262,8 @@
   },
   "Gremlin:PartyStick": {
     "NAME": "荧光棒",
-    "DESCRIPTION": " 不能被打出 。 NL 每当你 gremlin:切换 地精 且本牌在手中时， 获得 [E]",
-    "UPGRADE_DESCRIPTION": " 不能被打出 。 NL 每当你 gremlin:切换 地精 且本牌在手中时， 获得 [E] [E]",
+    "DESCRIPTION": "虚无 。 不能被打出 。 NL 每当你 gremlin:切换 地精 且本牌在手中时， 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": " 不能被打出 。 NL 每当你 gremlin:切换 地精 且本牌在手中时， 获得 [E] 。",
     "EXTENDED_DESCRIPTION": [
       "任何人都不准玩荧光棒。"
     ]
@@ -309,7 +309,7 @@
   "Gremlin:RageBreak": {
     "NAME": "战吼",
     "DESCRIPTION": "翻倍你的 力量 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "翻倍你的 力量 。"
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 翻倍你的 力量 。 NL 消耗 。"
   },
   "Gremlin:Raid": {
     "NAME": "突袭",

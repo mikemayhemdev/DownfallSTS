@@ -3,7 +3,7 @@
     "NAME": "完美胸肌",
     "FLAVOR": "完美！",
     "DESCRIPTIONS": [
-      "每当你获得 #y力量 时，获得等量临时生命。"
+      "每当你获得 #y力量 时，获得等量临时生命。每场战斗开始时获得 #b1 点 #y力量 。"
     ]
   },
   "Gremlin:FragmentationGrenade": {
