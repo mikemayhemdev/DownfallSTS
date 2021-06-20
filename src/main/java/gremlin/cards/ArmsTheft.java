@@ -22,7 +22,7 @@ public class ArmsTheft extends AbstractGremlinCard {
     private static final AbstractCard.CardTarget TARGET = CardTarget.ENEMY;
 
     private static final int COST = 2;
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 1;
     private static final int UPGRADE_BONUS = 1;
 
     public ArmsTheft()

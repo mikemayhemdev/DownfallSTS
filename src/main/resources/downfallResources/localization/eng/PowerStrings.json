@@ -37,7 +37,7 @@
   "downfall:ExhaustCardsPower": {
     "NAME": "Forgetful",
     "DESCRIPTIONS": [
-      "At the end of your turn, choose a card to Exhaust."
+      "At the end of your turn, choose a card to #yExhaust."
     ]
   },
   "downfall:PoisonResist": {
@@ -49,13 +49,13 @@
   "downfall:NeowBuff": {
     "NAME": "Neow's Vigor",
     "DESCRIPTIONS": [
-      "Gains #b2 #yStrength at the end of the round."
+      "Gains #b2 #yStrength at the end of her turn."
     ]
   },
   "downfall:WatcherAngryPower": {
     "NAME": "Unbridled Rage",
     "DESCRIPTIONS": [
-      "At the end of the round, if Watcher is at or below #b50% HP, she enters Wrath. NL Watcher's Wrath increases damage dealt and received by #b50% instead of #b100%."
+      "At the end of her turn, if Watcher is at or below #b50% HP, she enters Wrath. NL Watcher's Wrath increases damage dealt and received by #b50% instead of #b100%."
     ]
   },
   "downfall:NeowUnbridledRage": {
@@ -83,13 +83,13 @@
   "downfall:WatcherDivinityPower": {
     "NAME": "Fleeting Faith",
     "DESCRIPTIONS": [
-      "Watcher gains #b1 #yMantra whenever you play a card. NL Watcher loses #b5 #yMantra at the start of her turn. NL Watcher does not exit Divinity Stance at the end of her turn."
+      "Watcher gains #b1 #yMantra whenever you play a card. NL Watcher loses #b5 #yMantra at the start of her turn. NL Watcher does not exit #yDivinity at the end of her turn."
     ]
   },
   "downfall:NeowFleetingFaith": {
     "NAME": "Fleeting Faith",
     "DESCRIPTIONS": [
-      "Whenever you play a card, Neow gains #b1 #yMantra. Neow loses #b5 #yMantra per turn."
+      "Whenever you play a card, Neow gains #b1 #yMantra. Neow loses #b5 #yMantra at the start of her turn."
     ]
   },
   "downfall:SilentShivTimeEaterPower": {

@@ -21,9 +21,9 @@ public class FairyDust extends AbstractGremlinCard {
     private static final AbstractCard.CardRarity RARITY = CardRarity.RARE;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 
-    private static final int COST = 0;
+    private static final int COST = 1;
+    private static final int UPGRADED_COST = 0;
     private static final int MAGIC = 2;
-    private static final int UPGRADE_BONUS = 1;
 
     public FairyDust()
     {
@@ -49,7 +49,7 @@ public class FairyDust extends AbstractGremlinCard {
         if (!this.upgraded)
         {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_BONUS);
+            upgradeBaseCost(UPGRADED_COST);
         }
     }
 }

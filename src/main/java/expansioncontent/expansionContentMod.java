@@ -13,6 +13,7 @@ import basemod.BaseMod;
 import basemod.helpers.RelicType;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
+import basemod.interfaces.OnPowersModifiedSubscriber;
 import basemod.interfaces.PostUpdateSubscriber;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
@@ -22,6 +23,8 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.ui.campfire.WheelSpinButton;
 import downfall.util.CardIgnore;
@@ -44,6 +47,7 @@ import java.util.Collection;
 public class expansionContentMod implements
         EditCardsSubscriber,
         EditRelicsSubscriber,
+        OnPowersModifiedSubscriber,
         //EditStringsSubscriber,
         //EditKeywordsSubscriber,
         PostUpdateSubscriber {
@@ -192,6 +196,19 @@ public class expansionContentMod implements
         BaseMod.loadCustomStringsFile(PowerStrings.class, getModID() + "Resources/localization/eng/Powerstrings.json");
     }
     */
+
+    //Got this from Jorb's Wanderer Mod, used for Hexaburn description
+    @Override
+    public void receivePowersModified() {
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT &&
+                !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            for (AbstractPower p : AbstractDungeon.player.powers) {
+                if (p instanceof OnPowersModifiedSubscriber) {
+                    ((OnPowersModifiedSubscriber) p).receivePowersModified();
+                }
+            }
+        }
+    }
 
 
     public void atb(AbstractGameAction q) {

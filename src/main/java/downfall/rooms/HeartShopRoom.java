@@ -36,18 +36,12 @@ public class HeartShopRoom extends ShopRoom {
         super.setMerchant(merc);
     }
 
-    public void setHeartMerchant(HeartMerchant merc) {
-        this.heartMerchant = merc;
-    }
-
     public void onPlayerEntry() {
         if (EvilModeCharacterSelect.evilMode)
             if (!FleeingMerchant.DEAD && yesFight) {
                 startCombat();
                 startedCombat = true;
             } else {
-                this.setHeartMerchant(new HeartMerchant());
-                this.heartMerchant.spawnHitbox();
                 showHeartMerchant();
             }
 
@@ -69,7 +63,6 @@ public class HeartShopRoom extends ShopRoom {
             m.usePreBattleAction();
             m.useUniversalPreBattleAction();
         }
-        ((HeartShopRoom) AbstractDungeon.getCurrRoom()).heartMerchant = new HeartMerchant();
         AbstractRoom.waitTimer = 0.1f;
         AbstractDungeon.player.preBattlePrep();
     }
@@ -101,6 +94,10 @@ public class HeartShopRoom extends ShopRoom {
 
 
     public void showHeartMerchant() {
+        if (heartMerchant == null) {
+            this.heartMerchant = new HeartMerchant();
+        }
+
         this.heartMerchantShown = true;
         this.heartMerchant.spawnHitbox();
     }

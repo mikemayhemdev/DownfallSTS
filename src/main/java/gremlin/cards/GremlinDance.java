@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import gremlin.actions.ShackleAction;
 import gremlin.characters.GremlinCharacter;
+import gremlin.powers.WizPower;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
@@ -108,6 +109,11 @@ public class GremlinDance extends AbstractGremlinCard {
 
         if(gremlin.equals("sneak")){
             AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
+        }
+
+        if(gremlin.equals("wizard")){
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                    new WizPower(p, this.magicNumber), this.magicNumber));
         }
 
         if(isNob){
@@ -211,7 +217,7 @@ public class GremlinDance extends AbstractGremlinCard {
                         rawDescription += strings.EXTENDED_DESCRIPTION[5];
                         this.isMultiDamage = false;
                         this.target = CardTarget.ENEMY;
-                        this.wizardry = true;
+                        this.wizardry = false;
                         this.tags.add(WIZARD_GREMLIN);
                         setBackgrounds();
                         break;

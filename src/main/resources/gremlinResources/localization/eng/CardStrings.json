@@ -205,7 +205,7 @@
     "DESCRIPTION": "Deal !D! damage. NL Has a bonus effect based on which Gremlin you are.",
     "EXTENDED_DESCRIPTION": ["Deal !D! damage",
     " to ALL enemies.", ". NL Enemy loses !M! Strength this turn.",
-    ". NL Gain !B! Block.", ". NL Draw !M! cards.", ". NL This attack does not consume gremlin:Wiz.", ". NL Gain !M! Strength."]
+    ". NL Gain !B! Block.", ". NL Draw !M! cards.", ". NL Gain !M! gremlin:Wiz.", ". NL Gain !M! Strength."]
   },
 
   "Gremlin:GremlinOffensive": {
@@ -296,8 +296,8 @@
 
   "Gremlin:PartyStick": {
     "NAME": "Party Stick",
-    "DESCRIPTION": "Unplayable. NL Whenever you gremlin:Swap while this card is in your hand, gain [E]",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Whenever you gremlin:Swap while this card is in your hand, gain [E] [E]",
+    "DESCRIPTION": "Ethereal. Unplayable. NL Whenever you gremlin:Swap while this card is in your hand, gain [E]",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Whenever you gremlin:Swap while this card is in your hand, gain [E]",
     "EXTENDED_DESCRIPTION": ["Nobody is allowed to play with the Party Stick."]
   },
 
@@ -351,13 +351,13 @@
   "Gremlin:RageBreak": {
     "NAME": "Rage Break",
     "DESCRIPTION": "Double your Strength. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Double your Strength."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Double your Strength. NL Exhaust."
   },
 
   "Gremlin:Raid": {
     "NAME": "Raid",
     "DESCRIPTION": "Draw a card for each living Gremlin. NL Discard !M! cards.",
-    "UPGRADE_DESCRIPTION": "Draw a card for each living Gremlin. NL Discard !M! card."
+    "UPGRADE_DESCRIPTION": "Draw a card for each living Gremlin. NL Discard !M! cards."
   },
 
   "Gremlin:Revel": {

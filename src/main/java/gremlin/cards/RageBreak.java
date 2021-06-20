@@ -1,6 +1,7 @@
 package gremlin.cards;
 
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.unique.LimitBreakAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -23,11 +24,13 @@ public class RageBreak extends AbstractGremlinCard {
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 
     private static final int COST = 2;
+    private static final int BLOCK = 5;
 
     public RageBreak()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
+        this.baseBlock = BLOCK;
         this.exhaust = true;
         this.tags.add(MAD_GREMLIN);
         setBackgrounds();
@@ -36,6 +39,9 @@ public class RageBreak extends AbstractGremlinCard {
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new FlameAnimationEffect(p.hb)));
+        if (this.upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+        }
         AbstractDungeon.actionManager.addToBottom(new LimitBreakAction());
     }
 
@@ -44,7 +50,6 @@ public class RageBreak extends AbstractGremlinCard {
         if (!this.upgraded)
         {
             upgradeName();
-            this.exhaust = false;
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }

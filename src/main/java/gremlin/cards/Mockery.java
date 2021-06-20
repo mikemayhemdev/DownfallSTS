@@ -24,7 +24,7 @@ public class Mockery extends AbstractGremlinCard {
 
     private static final int COST = 1;
     private static final int BLOCK = 10;
-    private static final int UPGRADE_BONUS = 4;
+    private static final int UPGRADE_BONUS = 3;
     private static final int MAGIC = 1;
     private static final int MAGIC_UPGRADE_BONUS = 1;
 
