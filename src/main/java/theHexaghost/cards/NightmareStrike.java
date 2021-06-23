@@ -29,7 +29,7 @@ public class NightmareStrike extends AbstractHexaCard {
     }
 
     @Override
-    public void triggerOnExhaust() {
+    public void afterlife() {
         superFlash(Color.PURPLE);
         AbstractCard q = new ShadowStrike(this);
         if (upgraded) q.upgrade();

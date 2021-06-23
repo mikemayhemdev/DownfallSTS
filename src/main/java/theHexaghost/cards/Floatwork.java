@@ -31,7 +31,7 @@ public class Floatwork extends AbstractHexaCard {
         applyToSelf(new DexterityPower(p, magicNumber));
     }
 
-    public void triggerOnExhaust() {
+    public void afterlife() {
         applyToSelf(new DexterityPower(AbstractDungeon.player, magicNumber));
     }
 

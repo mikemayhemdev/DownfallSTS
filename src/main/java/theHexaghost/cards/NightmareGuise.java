@@ -27,7 +27,7 @@ public class NightmareGuise extends AbstractHexaCard {
     }
 
     @Override
-    public void triggerOnExhaust() {
+    public void afterlife() {
         superFlash(Color.PURPLE);
         AbstractCard q = new ShadowGuise(this);
         if (upgraded) q.upgrade();

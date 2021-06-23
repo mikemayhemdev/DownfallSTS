@@ -255,6 +255,9 @@ public class HexaMod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         GhostflameHelper.init();
+        ExhaustCardTickPatch.exhaustedLastTurn = false;
+        ExhaustCardTickPatch.exhaustedThisTurn = false;
+
         if (AbstractDungeon.player instanceof TheHexaghost) {
             renderFlames = true;
             if (AbstractDungeon.scene instanceof TheBottomScene) {

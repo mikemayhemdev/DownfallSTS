@@ -31,7 +31,7 @@ public class FlamesFromBeyond extends AbstractHexaCard {
     }
 
     @Override
-    public void triggerOnExhaust() {
+    public void afterlife() {
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
             burn(m, burn);
         }

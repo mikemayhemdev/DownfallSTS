@@ -35,7 +35,7 @@ public class SuperheatedStrike extends AbstractHexaCard {
     }
 
     @Override
-    public void triggerOnExhaust() {
+    public void afterlife() {
         AbstractDungeon.player.damage(new DamageInfo(null, magicNumber, DamageInfo.DamageType.THORNS));
     }
 

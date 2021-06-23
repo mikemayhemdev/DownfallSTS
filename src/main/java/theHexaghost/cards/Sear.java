@@ -31,7 +31,7 @@ public class Sear extends AbstractHexaCard {
     }
 
     @Override
-    public void triggerOnExhaust() {
+    public void afterlife() {
         atb(new AbstractGameAction() {
             @Override
             public void update() {

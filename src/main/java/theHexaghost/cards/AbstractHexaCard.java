@@ -179,4 +179,14 @@ public abstract class AbstractHexaCard extends CustomCard {
                 }
             }
     }
+
+    @Override
+    public void triggerOnExhaust() {
+        applyPowers();
+        afterlife();
+    }
+
+    public void afterlife() {
+
+    }
 }
