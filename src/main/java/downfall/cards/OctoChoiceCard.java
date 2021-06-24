@@ -82,7 +82,7 @@ public class OctoChoiceCard extends CustomCard {
 
     @Override
     public void upgrade() {
-
+        upgradeName();
     }
 
     @Override

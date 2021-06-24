@@ -17,8 +17,6 @@ import java.util.Collections;
 public class QuickStudy extends AbstractExpansionCard {
 
     public final static String ID = makeID("QuickStudy");
-    public String[] NAMES = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").NAMES;
-    public String[] TEXT = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").TEXT;
 
     //stupid intellij stuff SKILL, SELF, RARE
 

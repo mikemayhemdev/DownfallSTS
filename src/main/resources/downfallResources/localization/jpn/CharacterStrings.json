@@ -184,7 +184,10 @@
       "Split into a slimeboundmod:Bruiser_Slime.",
       "Split into a slimeboundmod:Guerilla_Slime.",
       "Split into a slimeboundmod:Mire_Slime.",
-      "Split into a slimeboundmod:Leeching_Slime."
+      "Split into a slimeboundmod:Leeching_Slime.",
+      "Lose 3 HP. NL Gain 50 Souls.",
+      "Lose 1 HP. NL Add a random upgraded Colorless card to your hand.",
+      "Lose 2 HP. NL Gain a random Potion."
     ]
   },
   "downfall:lazyStorage": {
