@@ -386,7 +386,7 @@
   "champ:DefensiveStyle": {
     "NAME": "Defensive Style",
     "DESCRIPTION": "Enter champ:Defensive. NL champ:Fatigue 5. NL champ:Defensive *Techniques grant !M! more champ:Counter.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Defensive. NL champ:Defensive *Techniques grant !M! more champ:Counter."
+    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Defensive. NL champ:Fatigue 5. NL champ:Defensive *Techniques grant !M! more champ:Counter."
   },
   "champ:GladiatorStyle": {
     "NAME": "Good Clean Fight",

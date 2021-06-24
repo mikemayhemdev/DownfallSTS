@@ -41,25 +41,26 @@ public class SupplyScrollCard extends CustomCard {
 
         cardsList.add(new Shiv());
         cardsList.add(new Ward());
-
         this.cardsToPreview = new Shiv();
         this.exhaust = true;
 
+        this.baseMagicNumber = this.magicNumber = SUPPLY;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int shivs = AbstractDungeon.cardRandomRng.random(0, SUPPLY);
+        int shivs = AbstractDungeon.cardRandomRng.random(0, magicNumber);
         if (shivs > 0) {
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Shiv(), shivs));
         }
-        if (shivs < SUPPLY) {
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Ward(), SUPPLY - shivs));
+        if (shivs < magicNumber) {
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Ward(), magicNumber - shivs));
         }
     }
 
     @Override
     public void upgrade() {
-
+        upgradeName();
+        upgradeMagicNumber(2);
     }
 
     @Override

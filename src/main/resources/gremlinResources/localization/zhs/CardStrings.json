@@ -393,7 +393,7 @@
   },
   "Gremlin:SupplyScrollCard": {
     "NAME": "支援卷轴",
-    "DESCRIPTION": "将4张随机 *小刀 或 *守卫 加入你的手牌。 NL 消耗 。"
+    "DESCRIPTION": "将 !M! 张随机 *小刀 或 *守卫 加入你的手牌。 NL 消耗 。"
   },
   "Gremlin:Tadah": {
     "NAME": "愚蠢！",
