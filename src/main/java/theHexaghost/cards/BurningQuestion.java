@@ -3,6 +3,8 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.ModifyDamageAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.cards.red.Rampage;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -30,8 +32,14 @@ public class BurningQuestion extends AbstractHexaCard {
     @Override
     public void afterlife() {
         flash();
-        atb(new DamageAllEnemiesAction(AbstractDungeon.player, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
+        this.addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(this.baseDamage, true), DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE, true));
     }
+
+//    @Override
+//    public void calculateCardDamage(AbstractMonster mo) {
+//        this.damage = baseDamage;
+//    }
+
 
     public void upgrade() {
         if (!upgraded) {
