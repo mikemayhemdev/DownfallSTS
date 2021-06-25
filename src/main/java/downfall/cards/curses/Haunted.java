@@ -54,7 +54,7 @@ public class Haunted extends CustomCard {
     @Override
     public void triggerWhenDrawn() {
         super.triggerWhenDrawn();
-        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+        AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;

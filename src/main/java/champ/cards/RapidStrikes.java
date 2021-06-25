@@ -25,8 +25,6 @@ public class RapidStrikes extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
-        // tags.add(ChampMod.FINISHER);
-      //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
         baseMagicNumber = magicNumber = 2;
         postInit();
     }
@@ -42,15 +40,13 @@ public class RapidStrikes extends AbstractChampCard {
                 isDone = true;
                 ArrayList<AbstractCard> tackleList = new ArrayList<>();
                 for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                    if (q.hasTag(CardTags.STRIKE) && q.cost > 0) {
+                    if (q.hasTag(CardTags.STRIKE) && q.costForTurn > 0 && !q.freeToPlayOnce) {
                         tackleList.add(q);
                     }
                 }
                 if (!tackleList.isEmpty()) {
                     if (upgraded){
                         tackleList.get(AbstractDungeon.cardRandomRng.random(tackleList.size() - 1)).modifyCostForCombat(-9);
-
-
                     } else {
                         addToTop(new ReduceCostForTurnAction(tackleList.get(AbstractDungeon.cardRandomRng.random(tackleList.size() - 1)), 9));
                     }

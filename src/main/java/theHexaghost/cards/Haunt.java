@@ -26,7 +26,6 @@ public class Haunt extends AbstractHexaCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;
-        exhaust = true;
         tags.add(HexaMod.AFTERLIFE);
     }
 
