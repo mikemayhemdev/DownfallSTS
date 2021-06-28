@@ -36,7 +36,9 @@ public class PretendHexWheelPower extends TwoAmountPower implements NonStackable
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
-        this.amount2 = 6 + AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
+        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID))
+            this.amount2 = 6 + AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
+        else this.amount2 = 6;
         this.type = PowerType.BUFF;
         this.isTurnBased = true;
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
@@ -67,7 +69,9 @@ public class PretendHexWheelPower extends TwoAmountPower implements NonStackable
 
     @Override
     public void receivePowersModified() {
-        amount2 = 6 + AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
+        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID))
+            this.amount2 = 6 + AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
+        else this.amount2 = 6;
         updateDescription();
     }
 
