@@ -199,7 +199,7 @@
   },
   "sneckomod:Transmogrify": {
     "NAME": "Transmogrify",
-    "DESCRIPTION": "Choose 1 of 2 Relics to lose. NL Obtain a random Relic of the same rarity. NL Exhaust.",
+    "DESCRIPTION": "Choose 1 of 2 non-Starter, non-Special Relics to lose. NL Obtain a random Relic of the same rarity. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "I have no Relicsss to ssswap.",
       "Choose a Relic to lose.",

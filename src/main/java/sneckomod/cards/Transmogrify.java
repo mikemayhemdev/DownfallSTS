@@ -99,24 +99,35 @@ public class Transmogrify extends AbstractSneckoCard {
         if (!eligibleRelicsList.isEmpty()) {
             Collections.shuffle(eligibleRelicsList, AbstractDungeon.cardRandomRng.random);
             AbstractRelic q = eligibleRelicsList.get(0);
-            AbstractRelic q2 = eligibleRelicsList.get(1);
-            //AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, s);
-            //AbstractDungeon.effectsQueue.add(new AnnouncementEffect(Color.PURPLE.cpy(), q.name + " transformed to " + s.name + "!", 5.5F));
-            ArrayList<AbstractCard> cardChoices = new ArrayList<>();
-            cardChoices.add(new OctoChoiceCard(q.relicId, q.name, getCorrectPlaceholderImage(ID), EXTENDED_DESCRIPTION[2] + q.name + EXTENDED_DESCRIPTION[3] + q.tier.name().toLowerCase(Locale.ROOT) + EXTENDED_DESCRIPTION[4], CardColor.COLORLESS));
-            cardChoices.add(new OctoChoiceCard(q2.relicId, q2.name, getCorrectPlaceholderImage(ID), "Lose " + q2.name + " and obtain another " + q2.tier.name().toLowerCase(Locale.ROOT) + " relic.", CardColor.COLORLESS));
-            atb(new SelectCardsCenteredAction(cardChoices, 1, EXTENDED_DESCRIPTION[1], (cards) -> {
-                AbstractRelic r = AbstractDungeon.player.getRelic(cards.get(0).cardID);
-                r.flash();
-                AbstractDungeon.player.loseRelic(r.relicId);
+            if (eligibleRelicsList.size() == 1) {
+                q.flash();
+                AbstractDungeon.player.loseRelic(q.relicId);
                 att(new AbstractGameAction() {
                     @Override
                     public void update() {
                         isDone = true;
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, returnTrueRandomScreenlessRelic(r.tier));
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, returnTrueRandomScreenlessRelic(q.tier));
                     }
                 });
-            }));
+            }
+            else {
+                AbstractRelic q2 = eligibleRelicsList.get(1);
+                ArrayList<AbstractCard> cardChoices = new ArrayList<>();
+                cardChoices.add(new OctoChoiceCard(q.relicId, q.name, getCorrectPlaceholderImage(ID), EXTENDED_DESCRIPTION[2] + q.name + EXTENDED_DESCRIPTION[3] + q.tier.name().toLowerCase(Locale.ROOT) + EXTENDED_DESCRIPTION[4], CardColor.COLORLESS));
+                cardChoices.add(new OctoChoiceCard(q2.relicId, q2.name, getCorrectPlaceholderImage(ID), "Lose " + q2.name + " and obtain another " + q2.tier.name().toLowerCase(Locale.ROOT) + " relic.", CardColor.COLORLESS));
+                atb(new SelectCardsCenteredAction(cardChoices, 1, EXTENDED_DESCRIPTION[1], (cards) -> {
+                    AbstractRelic r = AbstractDungeon.player.getRelic(cards.get(0).cardID);
+                    r.flash();
+                    AbstractDungeon.player.loseRelic(r.relicId);
+                    att(new AbstractGameAction() {
+                        @Override
+                        public void update() {
+                            isDone = true;
+                            AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, returnTrueRandomScreenlessRelic(r.tier));
+                        }
+                    });
+                }));
+            }
         }
     }
 
