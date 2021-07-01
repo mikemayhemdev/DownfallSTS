@@ -36,7 +36,7 @@ public class AfterlifePlayEffect extends AbstractGameEffect {
             this.card.current_y = this.card.target_y = (Settings.HEIGHT / 2.0F);
             this.deltaX = MathUtils.random(Settings.scale * -100, Settings.scale * 100);
             this.card.angle = this.card.targetAngle = 0F;
-            this.color.a = 0.0f;
+            this.card.transparency = 0f;
             for (int i = 0; i < 50; ++i) {
                 AbstractDungeon.effectsQueue.add(new SpookyEmberEffect(this.card.current_x, this.card.current_y));
             }
@@ -78,6 +78,7 @@ public class AfterlifePlayEffect extends AbstractGameEffect {
 
         if (this.duration < 0.0F) {
             this.isDone = true;
+            this.color.g = 1f;
             AbstractDungeon.player.limbo.removeCard(this.card);
             for (int i = 0; i < 30; ++i) {
                 AbstractDungeon.effectsQueue.add(new ExhaustBlurEffect(this.card.current_x, this.card.current_y));
