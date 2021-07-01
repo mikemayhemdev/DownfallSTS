@@ -199,7 +199,7 @@
   },
   "sneckomod:Transmogrify": {
     "NAME": "惊变",
-    "DESCRIPTION": "从2件遗物中选择失去1件遗物。 NL 获得相同稀有度的另一件遗物。 NL 消耗 。",
+    "DESCRIPTION": "从2件非初始、非特殊遗物中选择失去1件。 NL 获得相同稀有度的另一件遗物。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我没有遗物能够惊变",
       "选择失去一件遗物",

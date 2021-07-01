@@ -194,7 +194,10 @@
       "slimeboundmod:分裂 slimeboundmod:好斗史莱姆 。",
       "slimeboundmod:分裂 slimeboundmod:游击史莱姆 。",
       "slimeboundmod:分裂 slimeboundmod:污泥史莱姆 。",
-      "slimeboundmod:分裂 slimeboundmod:水蛭史莱姆 。"
+      "slimeboundmod:分裂 slimeboundmod:水蛭史莱姆 。",
+      "失去 3 点生命。 NL 获得 50 灵魂。",
+      "失去 1 点生命。 NL 将一张随机无色牌加入手牌。",
+      "失去 2 点生命。 NL 获得随机一瓶药水。"
     ]
   },
   "downfall:lazyStorage": {
