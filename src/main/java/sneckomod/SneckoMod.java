@@ -24,6 +24,7 @@ import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.exordium.Sssserpent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.random.Random;
 import downfall.cards.OctoChoiceCard;
 import downfall.downfallMod;
 import downfall.events.Serpent_Evil;
@@ -96,6 +97,8 @@ public class SneckoMod implements
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags RNG;
     @SpireEnum
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags BANNEDFORSNECKO;
+
+    public static Random identifyRng;
 
     public static ArrayList<AbstractCard.CardColor> validColors = new ArrayList<>();
     public static ArrayList<UnknownClass> unknownClasses = new ArrayList<>();
