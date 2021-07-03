@@ -2,7 +2,10 @@ package theHexaghost.cards;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.utility.ShowCardAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -16,6 +19,7 @@ import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
 import theHexaghost.powers.BurnPower;
 import theHexaghost.powers.CrispyPower;
+import theHexaghost.vfx.AfterlifePlayEffect;
 
 import java.util.ArrayList;
 
@@ -182,8 +186,37 @@ public abstract class AbstractHexaCard extends CustomCard {
 
     @Override
     public void triggerOnExhaust() {
-        applyPowers();
-        afterlife();
+        att(new AbstractGameAction() {
+            @Override
+            public void update() {
+                if (useAfterlifeVFX() && duration == startDuration) {
+                    atb(new VFXAction(new AfterlifePlayEffect(AbstractHexaCard.this)));
+                }
+                tickDuration();
+                if (isDone) {
+
+                    atb(new WaitAction(0.2F)); // from ShowCardAction
+
+                    applyPowers();
+                    afterlife();
+
+                    atb(new WaitAction(0.15F)); // from UseCardAction
+
+                    if (type == AbstractCard.CardType.POWER) { // special case for powers in UseCardAction
+                        if (com.megacrit.cardcrawl.core.Settings.FAST_MODE) {
+                            atb(new WaitAction(0.1F));
+                        } else {
+                            atb(new WaitAction(0.7F));
+                        }
+                    }
+                }
+            }
+        });
+
+    }
+
+    protected boolean useAfterlifeVFX() {
+        return AbstractHexaCard.this.tags.contains(HexaMod.AFTERLIFE);
     }
 
     public void afterlife() {

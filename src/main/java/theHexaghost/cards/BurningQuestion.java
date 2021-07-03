@@ -41,6 +41,11 @@ public class BurningQuestion extends AbstractHexaCard {
 //    }
 
 
+    @Override
+    protected boolean useAfterlifeVFX() {
+        return true;
+    }
+
     public void upgrade() {
         if (!upgraded) {
             upgradeName();

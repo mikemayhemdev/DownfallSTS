@@ -47,28 +47,27 @@ public class GiftsFromTheDeadPower extends AbstractPower implements CloneablePow
     @Override
     public void atStartOfTurnPostDraw() {
         flash();
-        for (int i = 0; i < amount; i++) {
-            addToBot(new AbstractGameAction() {
-                @Override
-                public void update() {
+        addToBot(new AbstractGameAction() {
+            { startDuration = duration = 1.5f; }
+            @Override
+            public void update() {
+                if (duration == startDuration) {
                     isDone = true;
-                    if (!AbstractDungeon.player.exhaustPile.isEmpty()) {
-                        ArrayList<AbstractCard> eligible = AbstractDungeon.player.exhaustPile.group.stream().filter(c -> c.hasTag(HexaMod.AFTERLIFE)).collect(Collectors.toCollection(ArrayList::new));  // Very proud of this line
-                        if (!eligible.isEmpty()) {
-                            AbstractCard q = eligible.get(AbstractDungeon.cardRandomRng.random(eligible.size()-1));
-                            addToTop(new AbstractGameAction() {
-                                @Override
-                                public void update() {
-                                    isDone = true;
-                                    AbstractDungeon.player.exhaustPile.removeCard(q);
-                                    AbstractDungeon.effectsQueue.add(new ShowCardAndAddToDiscardEffect(q.makeSameInstanceOf()));
-                                }
-                            });
+                    for (int i = 0; i < GiftsFromTheDeadPower.this.amount; i++) {
+                        if (!AbstractDungeon.player.exhaustPile.isEmpty()) {
+                            ArrayList<AbstractCard> eligible = AbstractDungeon.player.exhaustPile.group.stream().filter(c -> c.hasTag(HexaMod.AFTERLIFE)).collect(Collectors.toCollection(ArrayList::new));  // Very proud of this line
+                            if (!eligible.isEmpty()) {
+                                isDone = false;
+                                AbstractCard q = eligible.get(AbstractDungeon.cardRandomRng.random(eligible.size() - 1));
+                                AbstractDungeon.player.exhaustPile.removeCard(q);
+                                AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(q.makeSameInstanceOf()));
+                            }
                         }
                     }
                 }
-            });
-        }
+                tickDuration();
+            }
+        });
     }
 
     @Override
