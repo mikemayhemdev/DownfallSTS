@@ -29,16 +29,18 @@ public class SuperSneckoEye extends CustomRelic {
     }
 
     @Override
-    public void obtain() {
+    public void instantObtain() {
+        // instantObtain() is called for chest loot and shop purchases
         if (AbstractDungeon.player.hasRelic(SneckoEye.ID)) {
             for (int i = 0; i < AbstractDungeon.player.relics.size(); ++i) {
                 if (AbstractDungeon.player.relics.get(i).relicId.equals(SneckoEye.ID)) {
+                    AbstractDungeon.player.relics.get(i).onUnequip();
                     instantObtain(AbstractDungeon.player, i, true);
                     break;
                 }
             }
         } else {
-            super.obtain();
+            super.instantObtain();
         }
     }
 
@@ -50,6 +52,7 @@ public class SuperSneckoEye extends CustomRelic {
                 public void update() {
                     isDone = true;
                     if (card.cost == 3 && !activated) {
+                        stopPulse();
                         flash();
                         activated = true;
                         card.cost = 0;// 35

@@ -6,6 +6,7 @@ import com.google.gson.GsonBuilder;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.map.MapRoomNode;
+import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.saveAndContinue.SaveAndContinue;
 import com.megacrit.cardcrawl.saveAndContinue.SaveFile;
@@ -43,6 +44,7 @@ public class SaveData {
     public static final String ACT_3_BOSS_SLAIN = "ACT_3_BOSS_SLAIN";
     public static final String VALID_COLORS = "VALID_COLORS";
     public static final String PURE_SNECKO_MODE = "PURE_SNECKO_MODE";
+    public static final String IDENTIFY_RNG_COUNT = "IDENTIFY_RNG_COUNT";
 
     private static Logger saveLogger = LogManager.getLogger("downfallSaveData");
     //data is stored here in addition to the actual location
@@ -74,6 +76,8 @@ public class SaveData {
     private static ArrayList<AbstractCard.CardColor> saveCacheColors;
     private static boolean pureSneckoMode;
 
+    private static int identifyRngCount;
+
     //Save data whenever SaveFile is constructed
     @SpirePatch(
             clz = SaveFile.class,
@@ -81,6 +85,7 @@ public class SaveData {
             paramtypez = {SaveFile.SaveType.class}
     )
     public static class SaveTheSaveData {
+
         @SpirePostfixPatch
         public static void saveAllTheSaveData(SaveFile __instance, SaveFile.SaveType type) {
             evilMode = EvilModeCharacterSelect.evilMode;
@@ -112,6 +117,8 @@ public class SaveData {
 
             saveCacheColors = SneckoMod.validColors;
             pureSneckoMode = SneckoMod.pureSneckoMode;
+
+            identifyRngCount = SneckoMod.identifyRng.counter;
 
             saveLogger.info("Saved Evil Mode: " + evilMode);
         }
@@ -146,6 +153,7 @@ public class SaveData {
             params.put(ACT_3_BOSS_SLAIN, act3BossSlain);
             params.put(VALID_COLORS, saveCacheColors);
             params.put(PURE_SNECKO_MODE, pureSneckoMode);
+            params.put(IDENTIFY_RNG_COUNT, identifyRngCount);
         }
 
         private static class Locator extends SpireInsertLocator {
@@ -197,6 +205,8 @@ public class SaveData {
 
                 saveCacheColors = data.VALID_COLORS;
                 pureSneckoMode = data.PURE_SNECKO_MODE;
+
+                identifyRngCount = data.IDENTIFY_RNG_COUNT;
 
                 saveLogger.info("Loaded downfall save data successfully.");
             } catch (Exception e) {
@@ -260,6 +270,8 @@ public class SaveData {
 
             SneckoMod.validColors = saveCacheColors;
             SneckoMod.pureSneckoMode = pureSneckoMode;
+
+            SneckoMod.identifyRng = new Random(file.seed, identifyRngCount);
 
             SneckoMod.updateAllUnknownReplacements();
 

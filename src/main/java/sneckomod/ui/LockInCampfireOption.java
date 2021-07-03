@@ -5,27 +5,23 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
-import guardian.GuardianMod;
-import guardian.vfx.SocketGemEffect;
-import sneckomod.SneckoMod;
+import downfall.util.TextureLoader;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
-import sneckomod.patches.UnknownExtraUiPatch;
 import sneckomod.relics.SuperSneckoSoul;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
 public class LockInCampfireOption extends AbstractCampfireOption {
     public static final String[] DESCRIPTIONS;
     private static final UIStrings UI_STRINGS;
+    public static boolean usedIdentify = false;
 
     private ArrayList<AbstractCard> validCards = new ArrayList<>();
+
 
     static {
         UI_STRINGS = CardCrawlGame.languagePack.getUIString("sneckomod:LockInBonfireOptions");
@@ -44,7 +40,6 @@ public class LockInCampfireOption extends AbstractCampfireOption {
             }
         }
 
-
         this.usable = active;
         if (active) {
             if (AbstractDungeon.player.hasRelic(SuperSneckoSoul.ID)) {
@@ -52,25 +47,37 @@ public class LockInCampfireOption extends AbstractCampfireOption {
             } else {
                 this.description = DESCRIPTIONS[1];
             }
-            this.img = ImageMaster.loadImage("sneckomodResources/images/ui/lockincampfire.png");
         } else {
             this.description = DESCRIPTIONS[2];
-            this.img = ImageMaster.loadImage("sneckomodResources/images/ui/lockincampfiredisabled.png");
+        }
+        usedIdentify = false;
+        updateImage(active);
+
+    }
+
+    public void updateImage(boolean active) {
+        if (active) {
+            this.img = TextureLoader.getTexture("sneckomodResources/images/ui/lockincampfire.png");
+        } else {
+            this.img = TextureLoader.getTexture("sneckomodResources/images/ui/lockincampfiredisabled.png");
         }
     }
 
     @Override
     public void useOption() {
         if (this.usable) {
-            AbstractDungeon.effectList.add(new LockInCampfireEffect());
-            this.usable = false;
-            this.img = ImageMaster.loadImage("sneckomodResources/images/ui/lockincampfiredisabled.png");
+            LockInCampfireEffect e = new LockInCampfireEffect();
+            AbstractDungeon.effectList.add(e);
         }
     }
 
     @Override
     public void update() {
         float hackScale = (float) ReflectionHacks.getPrivate(this, AbstractCampfireOption.class, "scale");
+        if (usable && usedIdentify) {
+            usable = false;
+            updateImage(false);
+        }
 
         if (this.hb.hovered) {
 

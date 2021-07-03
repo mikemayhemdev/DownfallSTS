@@ -32,4 +32,6 @@ public class downfallSaveData {
 
     public ArrayList<AbstractCard.CardColor> VALID_COLORS = new ArrayList<>();
     public boolean PURE_SNECKO_MODE;
+
+    public int IDENTIFY_RNG_COUNT;
 }
