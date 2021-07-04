@@ -57,6 +57,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.function.Predicate;
 
 import static com.megacrit.cardcrawl.cards.AbstractCard.CardType.*;
@@ -105,6 +106,8 @@ public class SneckoMod implements
     public static boolean pureSneckoMode = false;
 
     public static boolean openedStarterScreen = true;
+
+    public static HashMap<String, TextureAtlas.AtlasRegion> overBannerClasses = new HashMap<>();
 
     public static TextureAtlas.AtlasRegion overBannerAll;
     public static TextureAtlas.AtlasRegion overBanner0;
