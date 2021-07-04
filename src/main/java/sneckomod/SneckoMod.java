@@ -125,6 +125,7 @@ public class SneckoMod implements
     public static TextureAtlas.AtlasRegion overBannerDraw;
     public static TextureAtlas.AtlasRegion overBannerEthereal;
     public static TextureAtlas.AtlasRegion overBannerExhaust;
+    public static TextureAtlas.AtlasRegion overBannerGremlins;
     public static TextureAtlas.AtlasRegion overBannerGuardian;
     public static TextureAtlas.AtlasRegion overBannerHexa;
     public static TextureAtlas.AtlasRegion overBannerIronclad;
@@ -379,6 +380,7 @@ public class SneckoMod implements
         overBannerDraw = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/draw.png");
         overBannerEthereal = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/ethereal.png");
         overBannerExhaust = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/exhaust.png");
+        overBannerGremlins = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/gremlins.png");
         overBannerGuardian = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/guardian.png");
         overBannerHexa = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/hexaghost.png");
         overBannerIronclad = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/ironclad.png");

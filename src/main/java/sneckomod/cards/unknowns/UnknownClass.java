@@ -53,6 +53,8 @@ public class UnknownClass extends AbstractUnknownCard {
                 return "UnknownChamp";
             case "THE_BRONZE_AUTOMATON":
                 return "UnknownAutomaton";
+            case "GREMLIN":
+                return "UnknownGremlin";
             default:
                 return "UnknownModded";
         }
@@ -108,6 +110,8 @@ public class UnknownClass extends AbstractUnknownCard {
                 return SneckoMod.overBannerChamp;
             case "BRONZE_AUTOMATON":
                 return SneckoMod.overBannerAuto;
+            case "GREMLIN":
+                return SneckoMod.overBannerGremlins;
         }
         return SneckoMod.overBannerModded;
     }
