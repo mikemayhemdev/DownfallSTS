@@ -1,5 +1,6 @@
 package sneckomod.cards.unknowns;
 
+import basemod.BaseMod;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
@@ -193,8 +194,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         UnknownExtraUiPatch.parentCard.set(cUnknown, this);
         if (cUnknown.isInnate) {
             AbstractDungeon.player.drawPile.addToTop(cUnknown);
-        }
-        else {
+        } else {
             AbstractDungeon.player.drawPile.group.add(idx, cUnknown);
         }
     }
@@ -215,7 +215,17 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         p.hand.removeCard(this);
         p.drawPile.removeCard(this);
         UnknownExtraUiPatch.parentCard.set(cUnknown, this);
-        AbstractDungeon.player.hand.addToTop(cUnknown);
-    }
 
+        if (AbstractDungeon.player.hand.size() == BaseMod.MAX_HAND_SIZE) {
+            AbstractDungeon.player.drawPile.moveToDiscardPile(cUnknown);
+            AbstractDungeon.player.createHandIsFullDialog();
+        } else {
+            cUnknown.current_x = this.current_x;
+            cUnknown.current_y = this.current_y;
+            this.drawScale = cUnknown.drawScale;
+            AbstractDungeon.player.hand.addToTop(cUnknown);
+            AbstractDungeon.player.hand.refreshHandLayout();
+            AbstractDungeon.player.hand.applyPowers();
+        }
+    }
 }
