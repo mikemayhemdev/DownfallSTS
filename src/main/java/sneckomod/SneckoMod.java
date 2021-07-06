@@ -537,6 +537,8 @@ public class SneckoMod implements
             }
             CenterGridCardSelectScreen.centerGridSelect = true;
             dualClassChoice();
+        } else {
+            resetUnknownsLists();
         }
     }
 
