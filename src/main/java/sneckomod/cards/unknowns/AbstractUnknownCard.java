@@ -137,7 +137,6 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         for (AbstractCard c : CardLibrary.getAllCards()) {
             if (!c.isSeen)
                 UnlockTracker.markCardAsSeen(c.cardID);
-            AbstractCard q = c.makeCopy();
             validCard = !c.hasTag(CardTags.STARTER_STRIKE) && !c.hasTag(CardTags.STARTER_DEFEND) && c.type != CardType.STATUS && c.color != CardColor.CURSE && c.type != CardType.CURSE && c.rarity != CardRarity.SPECIAL && !c.hasTag(SneckoMod.BANNEDFORSNECKO);
 
             if (AbstractDungeon.player != null && validCard) {
@@ -148,7 +147,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
             for (int i = 0; i < funkyPredicates.size(); i++) {
                 Predicate<AbstractCard> funkyPredicate = funkyPredicates.get(i);
-                if (funkyPredicate.test(q) && (SneckoMod.pureSneckoMode || (SneckoMod.validColors.contains(q.color) || (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass != TheSnecko.Enums.THE_SNECKO)) || i >= 22)) {
+                if (funkyPredicate.test(c) && (SneckoMod.pureSneckoMode || (SneckoMod.validColors.contains(c.color) || (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass != TheSnecko.Enums.THE_SNECKO)) || i >= 22)) {
                     if (validCard) {
                         ArrayList<String> s = funkyLists.get(funkyPredicates.indexOf(funkyPredicate));
                         if (s == null) {
