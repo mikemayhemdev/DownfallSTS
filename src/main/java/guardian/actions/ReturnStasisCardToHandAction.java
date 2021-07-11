@@ -15,12 +15,14 @@ public class ReturnStasisCardToHandAction extends AbstractGameAction {
     }
 
     public void update() {
-        AbstractDungeon.player.hand.addToHand(this.card);
-        if (this.card instanceof AbstractGuardianCard) {
-            ((AbstractGuardianCard) this.card).whenReturnedFromStasis();
+        if (!AbstractDungeon.player.hand.contains(this.card)) {
+            AbstractDungeon.player.hand.addToHand(this.card);
+            if (this.card instanceof AbstractGuardianCard) {
+                ((AbstractGuardianCard) this.card).whenReturnedFromStasis();
+            }
+            this.card.update();
+            AbstractDungeon.player.hand.refreshHandLayout();
         }
-        this.card.update();
-        AbstractDungeon.player.hand.refreshHandLayout();
         this.isDone = true;
     }
 }

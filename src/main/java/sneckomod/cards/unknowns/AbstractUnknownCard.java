@@ -1,5 +1,6 @@
 package sneckomod.cards.unknowns;
 
+import basemod.BaseMod;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
@@ -136,7 +137,6 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         for (AbstractCard c : CardLibrary.getAllCards()) {
             if (!c.isSeen)
                 UnlockTracker.markCardAsSeen(c.cardID);
-            AbstractCard q = c.makeCopy();
             validCard = !c.hasTag(CardTags.STARTER_STRIKE) && !c.hasTag(CardTags.STARTER_DEFEND) && c.type != CardType.STATUS && c.color != CardColor.CURSE && c.type != CardType.CURSE && c.rarity != CardRarity.SPECIAL && !c.hasTag(SneckoMod.BANNEDFORSNECKO);
 
             if (AbstractDungeon.player != null && validCard) {
@@ -147,7 +147,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
             for (int i = 0; i < funkyPredicates.size(); i++) {
                 Predicate<AbstractCard> funkyPredicate = funkyPredicates.get(i);
-                if (funkyPredicate.test(q) && (SneckoMod.pureSneckoMode || (SneckoMod.validColors.contains(q.color) || (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass != TheSnecko.Enums.THE_SNECKO)) || i >= 22)) {
+                if (funkyPredicate.test(c) && (SneckoMod.pureSneckoMode || (SneckoMod.validColors.contains(c.color) || (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass != TheSnecko.Enums.THE_SNECKO)) || i >= 22)) {
                     if (validCard) {
                         ArrayList<String> s = funkyLists.get(funkyPredicates.indexOf(funkyPredicate));
                         if (s == null) {
@@ -193,8 +193,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         UnknownExtraUiPatch.parentCard.set(cUnknown, this);
         if (cUnknown.isInnate) {
             AbstractDungeon.player.drawPile.addToTop(cUnknown);
-        }
-        else {
+        } else {
             AbstractDungeon.player.drawPile.group.add(idx, cUnknown);
         }
     }
@@ -215,7 +214,17 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         p.hand.removeCard(this);
         p.drawPile.removeCard(this);
         UnknownExtraUiPatch.parentCard.set(cUnknown, this);
-        AbstractDungeon.player.hand.addToTop(cUnknown);
-    }
 
+        if (AbstractDungeon.player.hand.size() == BaseMod.MAX_HAND_SIZE) {
+            AbstractDungeon.player.drawPile.moveToDiscardPile(cUnknown);
+            AbstractDungeon.player.createHandIsFullDialog();
+        } else {
+            cUnknown.current_x = this.current_x;
+            cUnknown.current_y = this.current_y;
+            this.drawScale = cUnknown.drawScale;
+            AbstractDungeon.player.hand.addToTop(cUnknown);
+            AbstractDungeon.player.hand.refreshHandLayout();
+            AbstractDungeon.player.hand.applyPowers();
+        }
+    }
 }

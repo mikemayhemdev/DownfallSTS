@@ -57,6 +57,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.function.Predicate;
 
 import static com.megacrit.cardcrawl.cards.AbstractCard.CardType.*;
@@ -106,6 +107,8 @@ public class SneckoMod implements
 
     public static boolean openedStarterScreen = true;
 
+    public static HashMap<String, TextureAtlas.AtlasRegion> overBannerClasses = new HashMap<>();
+
     public static TextureAtlas.AtlasRegion overBannerAll;
     public static TextureAtlas.AtlasRegion overBanner0;
     public static TextureAtlas.AtlasRegion overBanner1;
@@ -125,6 +128,7 @@ public class SneckoMod implements
     public static TextureAtlas.AtlasRegion overBannerDraw;
     public static TextureAtlas.AtlasRegion overBannerEthereal;
     public static TextureAtlas.AtlasRegion overBannerExhaust;
+    public static TextureAtlas.AtlasRegion overBannerGremlins;
     public static TextureAtlas.AtlasRegion overBannerGuardian;
     public static TextureAtlas.AtlasRegion overBannerHexa;
     public static TextureAtlas.AtlasRegion overBannerIronclad;
@@ -379,6 +383,7 @@ public class SneckoMod implements
         overBannerDraw = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/draw.png");
         overBannerEthereal = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/ethereal.png");
         overBannerExhaust = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/exhaust.png");
+        overBannerGremlins = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/gremlins.png");
         overBannerGuardian = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/guardian.png");
         overBannerHexa = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/hexaghost.png");
         overBannerIronclad = TextureLoader.getTextureAsAtlasRegion("sneckomodResources/images/cardicons/overbannerIcons/ironclad.png");
@@ -532,6 +537,8 @@ public class SneckoMod implements
             }
             CenterGridCardSelectScreen.centerGridSelect = true;
             dualClassChoice();
+        } else {
+            resetUnknownsLists();
         }
     }
 

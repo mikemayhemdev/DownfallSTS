@@ -1,15 +1,19 @@
 
 package sneckomod.cards.unknowns;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import downfall.util.CardIgnore;
+import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
+
+import static sneckomod.SneckoMod.makeCardPath;
 
 @CardIgnore
 public class UnknownClass extends AbstractUnknownCard {
@@ -53,7 +57,12 @@ public class UnknownClass extends AbstractUnknownCard {
                 return "UnknownChamp";
             case "THE_BRONZE_AUTOMATON":
                 return "UnknownAutomaton";
+            case "GREMLIN":
+                return "UnknownGremlin";
             default:
+                String filename = "UnknownClass" + myColor.name();
+                if (Gdx.files.internal(makeCardPath(filename) + ".png").exists())
+                    return filename;
                 return "UnknownModded";
         }
     }
@@ -108,8 +117,16 @@ public class UnknownClass extends AbstractUnknownCard {
                 return SneckoMod.overBannerChamp;
             case "BRONZE_AUTOMATON":
                 return SneckoMod.overBannerAuto;
+            case "GREMLIN":
+                return SneckoMod.overBannerGremlins;
+            default:
+                return SneckoMod.overBannerClasses.computeIfAbsent(myColor.name(), s -> {
+                    String filename = "sneckomodResources/images/cardicons/overbannerIcons/class" + s + ".png";
+                    if (Gdx.files.internal(filename).exists())
+                        return TextureLoader.getTextureAsAtlasRegion(filename);
+                    return SneckoMod.overBannerModded;
+                });
         }
-        return SneckoMod.overBannerModded;
     }
 }
 
