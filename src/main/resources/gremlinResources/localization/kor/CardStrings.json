@@ -210,7 +210,7 @@
 
   "Gremlin:GremlinOffensive": {
     "NAME": "Gremlin Offensive",
-    "DESCRIPTION": "Deal !D! damage. NL Add a Gremlin Offensive to your hand. NL Exhaust.",
+    "DESCRIPTION": "Deal !D! damage. NL Add a *Gremlin *Offensive to your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add an Upgraded Gremlin Offensive to your hand. NL Exhaust."
   },
 
@@ -313,8 +313,8 @@
 
   "Gremlin:PinNeedle": {
     "NAME": "Pin Needle",
-    "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! Pinpricks into your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle !M! Upgraded Pinpricks into your draw pile. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! *Pinpricks into your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle !M! Upgraded *Pinpricks into your draw pile. NL Exhaust."
   },
 
   "Gremlin:Pinprick": {
@@ -325,12 +325,12 @@
 
   "Gremlin:Polish": {
     "NAME": "Polish",
-    "DESCRIPTION": "Shivs deal !M! additional damage. NL Wards grant !M! additional Block."
+    "DESCRIPTION": "*Shivs deal !M! additional damage. NL Wards grant !M! additional Block."
   },
 
   "Gremlin:PourSalt": {
     "NAME": "Pour Salt",
-    "DESCRIPTION": "Deal !D! damage. If the enemy is Weak, add !M! Shivs to your hand."
+    "DESCRIPTION": "Deal !D! damage. If the enemy is Weak, add !M! *Shivs to your hand."
   },
 
   "Gremlin:Presto": {

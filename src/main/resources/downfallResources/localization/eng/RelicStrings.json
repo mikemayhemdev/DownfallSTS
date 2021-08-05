@@ -380,7 +380,7 @@
     "FLAVOR": "You were no match for the Gremlin and his bodyguard.",
     "DESCRIPTIONS": [
       "Upon pickup, add the following cards to your deck: NL ",
-      "Upon pickup, add 6 cards to your deck from the Match Game.",
+      "Upon pickup, add #b6 cards to your deck from the Match Game.",
       "#g(Starter) ",
       "#g(Common) ",
       "#b(Uncommon) ",
@@ -446,7 +446,7 @@
   },
   "downfall:HeartBlessingRed": {
     "NAME": "Ruby Heart Blessing",
-    "FLAVOR": "The heart is strong. The heart is pleased.",
+    "FLAVOR": "The heart is strong.",
     "DESCRIPTIONS": [
       "Start each combat with #b1 #yStrength."
     ]

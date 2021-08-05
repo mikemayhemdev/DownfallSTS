@@ -15,16 +15,10 @@
   },
   {
     "NAMES": [
-      "echo"
-    ],
-    "PROPER_NAME": "Echo",
-    "DESCRIPTION": "Echoes are copies of cards with Ethereal and Exhaust."
-  },
-  {
-    "NAMES": [
+      "echo",
       "echoes"
     ],
-    "PROPER_NAME": "Echoes",
+    "PROPER_NAME": "Echo",
     "DESCRIPTION": "Echoes are copies of cards with Ethereal and Exhaust."
   },
   {

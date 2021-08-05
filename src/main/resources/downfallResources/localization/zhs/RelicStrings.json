@@ -380,7 +380,7 @@
     "FLAVOR": "You were no match for the Gremlin and his bodyguard.",
     "DESCRIPTIONS": [
       "拾起时，将下列牌加入你的牌组： ",
-      "拾起时，将6张对对碰牌加入你的牌组。",
+      "拾起时，将#b6张对对碰牌加入你的牌组。",
       "#g（初始牌） ",
       "#g（普通牌） ",
       "#b（罕见牌） ",

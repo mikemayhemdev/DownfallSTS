@@ -17,8 +17,8 @@
 
   "Gremlin:Bang": {
     "NAME": "Bang",
-    "DESCRIPTION": "Deal !D! damage !M! times. Add a copy of Whiz to your discard pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. Add an Upgraded copy of Whiz to your discard pile. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage !M! times. Add a copy of *Whiz to your discard pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. Add an Upgraded copy of *Whiz to your discard pile. NL Exhaust."
   },
 
   "Gremlin:Bellow": {
@@ -210,8 +210,8 @@
 
   "Gremlin:GremlinOffensive": {
     "NAME": "Gremlin Offensive",
-    "DESCRIPTION": "Deal !D! damage. NL Add a Gremlin Offensive to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add an Upgraded Gremlin Offensive to your hand. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Add a *Gremlin *Offensive to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add an Upgraded *Gremlin *Offensive to your hand. NL Exhaust."
   },
 
   "Gremlin:GremlinToss": {
@@ -495,8 +495,8 @@
 
   "Gremlin:Whiz": {
     "NAME": "Whiz",
-    "DESCRIPTION": "Gain !M! gremlin:Wiz. Next turn, add Bang to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !M! gremlin:Wiz. Next turn, add an Upgraded Bang to your hand. NL Exhaust."
+    "DESCRIPTION": "Gain !M! gremlin:Wiz. Next turn, add *Bang to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! gremlin:Wiz. Next turn, add an Upgraded *Bang to your hand. NL Exhaust."
   },
 
   "Gremlin:Wizardry": {

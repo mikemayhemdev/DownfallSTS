@@ -31,7 +31,7 @@
   "downfall:TotemInvulnerable": {
     "NAME": "Living Wall",
     "DESCRIPTIONS": [
-      "Cannot die unless all other Heads are at #b1 HP.  Dies if any other Head dies."
+      "Cannot die unless all other Heads are at #b1 HP. Dies if any other Head dies."
     ]
   },
   "downfall:ExhaustCardsPower": {
@@ -55,7 +55,7 @@
   "downfall:WatcherAngryPower": {
     "NAME": "Unbridled Rage",
     "DESCRIPTIONS": [
-      "At the end of her turn, if Watcher is at or below #b50% HP, she enters Wrath. NL Watcher's Wrath increases damage dealt and received by #b50% instead of #b100%."
+      "At the end of her turn, if Watcher is at or below #b50% HP, she enters #yWrath. NL Watcher's #yWrath increases damage dealt and received by #b50% instead of #b100%."
     ]
   },
   "downfall:NeowUnbridledRage": {
@@ -137,13 +137,13 @@
   "downfall:NeowEnergyThief": {
     "NAME": "Energy Thief",
     "DESCRIPTIONS": [
-      "When Neow adds #rCurses to your draw pile, she also adds 1 #yVoid #yStatus card."
+      "When Neow adds #rCurses to your draw pile, she also adds 1 #yVoid card to it."
     ]
   },
   "downfall:DefectAncientConstructPower": {
     "NAME": "Ancient Construct",
     "DESCRIPTIONS": [
-      "Begins the fight with 2 Bronze Orb minions. NL Gains 1 Artifact at the end of its turn if it did not already have Artifact."
+      "Begins the fight with 2 #yBronze #yOrb minions. NL Gains 1 #yArtifact at the end of its turn if it did not already have #yArtifact."
     ]
   },
   "downfall:NeowAncientConstruct": {
@@ -168,7 +168,7 @@
   "downfall:IroncladStatusPower": {
     "NAME": "Synchronize",
     "DESCRIPTIONS": [
-      "Whenever Ironclad generates a status card, a duplicate is added into your discard pile."
+      "Whenever Ironclad generates a #yStatus card, a duplicate is added into your discard pile."
     ]
   },
   "downfall:NeowSyncronize": {
@@ -180,7 +180,7 @@
   "downfall:IroncladMushroomPower": {
     "NAME": "Feeding Frenzy",
     "DESCRIPTIONS": [
-      "Ironclad's Reaper does not Exhaust and targets ALL Mushrooms. NL When Ironclad kills a Mushroom, he gains #b1 Strength."
+      "Ironclad's #yReaper does not *Exhaust and targets ALL Mushrooms. NL When Ironclad kills a Mushroom, he gains #b1 #yStrength."
     ]
   },
   "downfall:NeowFeedingFrenzy": {
@@ -192,8 +192,8 @@
   "downfall:IroncladFortificationPower": {
     "NAME": "Bastion",
     "DESCRIPTIONS": [
-      "Ironclad begins the fight with a Fortification, which will grant him #b",
-      " Block each turn. NL When the Fortification has been destroyed, Ironclad loses Barricade, but gains #b5 Strength per turn."
+      "Ironclad begins the fight with a #yFortification, which will grant him #b",
+      " #yBlock each turn. NL When the #yFortification has been destroyed, Ironclad loses #yBarricade, but gains #b5 #yStrength at the start of each turn."
     ]
   },
   "downfall:NeowBastion": {
@@ -205,7 +205,7 @@
   "downfall:MerchantStrengthPower": {
     "NAME": "Soul Stealer",
     "DESCRIPTIONS": [
-      "Merchant still has the Strength it earned from Soul Steal this run, and gains an equal amount of Dexterity."
+      "Merchant still has the #yStrength it earned from Soul Steal this run, and gains an equal amount of #yDexterity."
     ]
   },
   "downfall:NeowMantra": {
