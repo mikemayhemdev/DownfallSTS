@@ -292,7 +292,7 @@
   },
   "bronze:BronzeOrb": {
     "NAME": "铜制圆球",
-    "DESCRIPTION": " 固有 。 NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL bronze:编码 抽牌堆随机一张可 bronze:编码 的牌。 NL 消耗 。"
+    "DESCRIPTION": " 固有 。 NL 获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL bronze:编码 抽牌堆随机一张可 bronze:编码 的牌。 NL 消耗 。"
   },
   "bronze:Virus": {
     "NAME": "病毒",

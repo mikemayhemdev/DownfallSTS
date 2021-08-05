@@ -35,8 +35,8 @@ public class BronzeOrb extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new BronzeOrbEffect(p, m), 0.5F));
-        dmg(m, AbstractGameAction.AttackEffect.NONE);
         blck();
+        dmg(m, AbstractGameAction.AttackEffect.NONE);
         atb(new AbstractGameAction() {
             @Override
             public void update() {

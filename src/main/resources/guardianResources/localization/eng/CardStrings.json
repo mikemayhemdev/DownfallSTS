@@ -365,7 +365,7 @@
   },
   "Guardian:BronzeOrb": {
     "NAME": "Orb Support",
-    "DESCRIPTION": "Innate. NL Place a random card from your draw pile into guardianmod:Stasis. NL Deal !D! damage. NL Gain !B! Block. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Place a random card from your draw pile into guardianmod:Stasis. NL Gain !B! Block. NL Deal !D! damage. NL Exhaust."
   },
   "Guardian:RevengeProtocol": {
     "NAME": "Revenge Protocol",

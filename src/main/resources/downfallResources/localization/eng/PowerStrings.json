@@ -95,7 +95,7 @@
   "downfall:SilentShivTimeEaterPower": {
     "NAME": "Bag of Knives",
     "DESCRIPTIONS": [
-      "The first time you play a #b0 cost card each turn, Silent gains a #yShiv."
+      "The first two times you play a #b0 cost card each turn, Silent gains a #yShiv."
       ]
   },
   "downfall:NeowBagOfKnives": {

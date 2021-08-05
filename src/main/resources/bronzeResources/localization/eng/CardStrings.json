@@ -292,7 +292,7 @@
   },
   "bronze:BronzeOrb": {
     "NAME": "Bronze Orb",
-    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Gain !B! Block. NL bronze:Encode a random card with bronze:Encode in your draw pile. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Gain !B! Block. NL Deal !D! damage. NL bronze:Encode a random card with bronze:Encode in your draw pile. NL Exhaust."
   },
   "bronze:Virus": {
     "NAME": "Virus",

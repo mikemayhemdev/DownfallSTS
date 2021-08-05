@@ -43,10 +43,6 @@ public class SilentShivTimeEaterPower extends AbstractBossMechanicPower {
         type = PowerType.BUFF;
     }
 
-  //  public void playApplyPowerSfx() {
-  //      CardCrawlGame.sound.play("POWER_TIME_WARP", 0.05F);
-  //  }
-
     public void updateDescription() {
         description = DESC[0];
     }
@@ -57,21 +53,17 @@ public class SilentShivTimeEaterPower extends AbstractBossMechanicPower {
         if (!usedThisTurn){
         if (!(card instanceof AbstractBossCard) && (card.freeToPlayOnce || card.costForTurn == 0) && card.cost != -1 && !card.purgeOnUse) {
             ++amount;
-            if (amount == 1) {
-                amount = 0;
-                flashWithoutSound();
-                usedThisTurn = true;
-                // CardCrawlGame.sound.playA("POWER_TIME_WARP", 0.25F);
-                // AbstractDungeon.topLevelEffectsQueue.add(new TimeWarpTurnEndEffect());
-                //addToBot(new ApplyPowerAction(owner, owner, new EnemyAccuracyPower(owner, 1), 1));
-
-                if (AbstractCharBoss.boss != null) {
-                    if (AbstractCharBoss.boss.hand != null) {
-                        if (AbstractCharBoss.boss.hand.size() <= 6) {
-                            addToBot(new EnemyMakeTempCardInHandAction(new EnShiv(), 1));
-                        }
+            flashWithoutSound();
+            if (AbstractCharBoss.boss != null) {
+                if (AbstractCharBoss.boss.hand != null) {
+                    if (AbstractCharBoss.boss.hand.size() <= 6) {
+                        addToBot(new EnemyMakeTempCardInHandAction(new EnShiv(), 1));
                     }
                 }
+            }
+            if (amount >= 2) {
+                usedThisTurn = true;
+                amount = 2;
             }
         }
 
@@ -83,6 +75,7 @@ public class SilentShivTimeEaterPower extends AbstractBossMechanicPower {
     public void atStartOfTurn() {
         super.atStartOfTurn();
         usedThisTurn = false;
+        amount = 0;
     }
 
     static {

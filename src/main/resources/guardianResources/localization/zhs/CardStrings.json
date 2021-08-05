@@ -365,7 +365,7 @@
   },
   "Guardian:BronzeOrb": {
     "NAME": "铜球支援",
-    "DESCRIPTION": " 固有 。 NL 随机将抽牌堆的 1 张牌 guardianmod:凝滞 。 NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 消耗 。"
+    "DESCRIPTION": " 固有 。 NL 随机将抽牌堆的 1 张牌 guardianmod:凝滞 。 NL 获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 消耗 。"
   },
   "Guardian:RevengeProtocol": {
     "NAME": "复仇协议",

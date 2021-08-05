@@ -23,7 +23,7 @@ public class Haunt extends AbstractHexaCard {
     public static final String EXTENDED_DESCRIPTION[] = CardCrawlGame.languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION;
 
     public Haunt() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);

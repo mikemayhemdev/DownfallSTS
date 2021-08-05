@@ -60,9 +60,9 @@
   },
   "sneckomod:SnekBeam": {
     "NAME": "Snek Beam",
-    "DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unknown cards in your deck. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unknown cards in your deck.",
+    "DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unknown cards in your deck.",
     "EXTENDED_DESCRIPTION": [
+      " NL (Deals !D! damage.) NL Exhaust.",
       " NL (Deals !D! damage.)"
     ]
   },

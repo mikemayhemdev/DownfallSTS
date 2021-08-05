@@ -52,7 +52,7 @@ public class SnekBeam extends AbstractSneckoCard {
         super.applyPowers();
         this.baseDamage = realBaseDamage;
         this.isDamageModified = this.damage != this.baseDamage;
-        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+        this.rawDescription = DESCRIPTION + (upgraded ? cardStrings.EXTENDED_DESCRIPTION[1] : cardStrings.EXTENDED_DESCRIPTION[0]);
         this.initializeDescription();
     }
 
@@ -64,8 +64,8 @@ public class SnekBeam extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.exhaust = false;
-            rawDescription = UPGRADE_DESCRIPTION;
+            exhaust = false;
+            rawDescription = DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[1];
             initializeDescription();
         }
     }

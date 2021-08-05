@@ -80,8 +80,8 @@ public class BronzeOrb extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new BronzeOrbEffect(p, m), 0.5F));
 
         AbstractDungeon.actionManager.addToBottom(new PlaceRandomCardIntoStasisAction(1));
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         this.useGems(p, m);
     }
 
