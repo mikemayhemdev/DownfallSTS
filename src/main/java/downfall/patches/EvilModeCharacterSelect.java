@@ -28,9 +28,9 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-public class EvilModeCharacterSelect {
-    public static boolean villainsInNormalAndNormalInVillains = false;
+import static downfall.downfallMod.crossoverCharacters;
 
+public class EvilModeCharacterSelect {
     public static boolean evilMode = false;
 
     private static int maxEvilSelectIndex = 0;
@@ -62,7 +62,7 @@ public class EvilModeCharacterSelect {
                     case THE_SILENT:
                     case DEFECT:
                     case WATCHER:
-                        if (villainsInNormalAndNormalInVillains)
+                        if (crossoverCharacters)
                             basegameOptions.add(o);
                         break;
                     default:
@@ -110,7 +110,7 @@ public class EvilModeCharacterSelect {
                             moddedOptions.add(o);
                         }
 
-                        if (isVillain && !villainsInNormalAndNormalInVillains)
+                        if (isVillain && !crossoverCharacters)
                             options.remove();
 
                         break;

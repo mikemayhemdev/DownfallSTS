@@ -581,7 +581,6 @@ public class downfallMod implements
                 crossoverCharacters, settingsPanel, (label) -> {
         }, (button) -> {
             crossoverCharacters = button.enabled;
-            EvilModeCharacterSelect.villainsInNormalAndNormalInVillains = button.enabled;
             CardCrawlGame.mainMenuScreen.charSelectScreen.options.clear();
             CardCrawlGame.mainMenuScreen.charSelectScreen.initialize();
             saveData();
