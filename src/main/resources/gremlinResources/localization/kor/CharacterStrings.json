@@ -1,15 +1,15 @@
 {
   "Gremlin": {
     "NAMES": [
-      "The Gremlins"
+      "그렘린 군단"
     ],
     "TEXT": [
-      "A chaotic mob of spire denizens banded together NL in search of food and treasure.",
-      "NL Such a feast! You ready your knives."
+      "보물과 음식을 찾아 한데 뭉친 NL 혼란스러운 첨탑의 주민들입니다.",
+      "NL 진수성찬이네요! 당신은 칼을 준비합니다."
     ],
     "KEYWORDS": [
-      "A chaotic mob of spire denizens banded together NL in search of food and treasure.",
-      "NL Such a feast! You ready your knives."
+      "보물과 음식을 찾아 한데 뭉친 NL 혼란스러운 첨탑의 주민들입니다",
+      "NL 진수성찬이네요! 당신은 칼을 준비합니다."
     ]
   }
 }

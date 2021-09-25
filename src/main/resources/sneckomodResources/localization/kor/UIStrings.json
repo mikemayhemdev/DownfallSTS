@@ -1,24 +1,28 @@
 {
   "sneckomod:Unknown": {
     "TEXT": [
-      "수수께끼",
-      " 강화된 "
+      "Unknown",
+      " 강화된 ",
+      "전투 시작 시 이 Unknown 카드는 해당 조건의 무작위 카드로 변합니다.",
+      " NL 고른 캐릭터 카드:",
+      "전투 시작 시 기본 타격, 수비 카드를 제외한 해당 조건의 무작위 모든 직업 카드로 변합니다.",
+      "전투 시작 시 기본 타격, 수비 카드를 제외한 해당 조건의 무작위 다른 직업 카드로 변합니다."
     ]
   },
   "sneckomod:UnknownClass": {
     "TEXT": [
       "???",
-      "sneckomod:수수께끼 ",
+      "*Unknown ",
       " 카드.",
       "캐릭터",
-      " ",
-      "You should never see this. Report to Vex"
+      "",
+      "이 문구는 절대 볼 수 없습니다. Vex에게 제보하세요"
     ]
   },
   "sneckomod:UpgradedUnknownReward": {
     "TEXT": [
-      "덱에 수수께끼+ 카드 한 장 추가합니다",
-      "Pick a Card."
+      "덱에 Unknown+ 카드를 추가",
+      "카드를 선택하십시오."
     ]
   },
   "sneckomod:FreeRetainMod": {
@@ -29,6 +33,30 @@
   "sneckomod:ExhaustMod": {
     "TEXT": [
       " NL 소멸."
+    ]
+  },
+  "sneckomod:ChallengeMode": {
+    "TEXT": [
+      "도전 모드 - 태초의 스네코",
+      "Unknown 카드가 모든 직업을 포함한 카드가 됩니다. 스네코 전문가라면 추천합니다."
+    ]
+  },
+  "sneckomod:LockInBonfireOptions": {
+    "TEXT": [
+      "식별",
+      "Unknown 카드를 영구적인 카드로 고정합니다.",
+      "Unknown 카드가 필요합니다.",
+      "고른 카드는 덱에 추가되고 해당 Unknown 카드는 제거됩니다.",
+      "[자유 행동] Unknown 카드를 영구적인 카드로 고정합니다."
+    ]
+  },
+  "sneckomod:AtGameStart": {
+    "TEXT": [
+      "",
+      " 카드",
+      "이번 도전에서 Unknown 카드는 *",
+      " 의 카드가 등장하게 됩니다.",
+      "고르십시오."
     ]
   }
 }

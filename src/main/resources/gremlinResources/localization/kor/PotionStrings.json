@@ -1,29 +1,29 @@
 {
   "gremlin:GremlinPotion": {
-    "NAME": "Eau de Grem",
+    "NAME": "그렘린 향수",
     "DESCRIPTIONS": [
-      "Use all #b5 Gremlin Abilities #b",
-      " times."
+      "모든 그렘린 #b5 마리의 능력을 #b",
+      " 번 사용합니다."
     ]
   },
   "gremlin:NecromancyPotion": {
-    "NAME": "Gremlin In A Jar",
+    "NAME": "단지 속의 그렘린",
     "DESCRIPTIONS": [
-      "Resurrect a random Gremlin at #b",
-      "% of your Max HP."
+      "무작위 그렘린을 최대 체력의 #b",
+      "% 회복한 상태로 부활시킵니다."
     ]
   },
   "gremlin:SwapPotion": {
-    "NAME": "Bottled Dupe",
+    "NAME": "병에 담긴 사기",
     "DESCRIPTIONS": [
-      "#ySwap to a random Gremlin."
+      "무작위 그렘린으로 #y교체 합니다."
     ]
   },
   "gremlin:WizPotion": {
-    "NAME": "Pizazz Potion",
+    "NAME": "마법 핏자 포션",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yWiz."
+      "#y마법 을 #b",
+      " 얻습니다."
     ]
   }
 }

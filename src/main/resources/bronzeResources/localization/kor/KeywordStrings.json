@@ -1,0 +1,55 @@
+[
+  {
+    "PROPER_NAME": "부호화",
+    "NAMES": [
+      "부호화",
+      "부호화한",
+      "encode",
+      "encoded"
+    ],
+    "DESCRIPTION": "카드를 #y함수 카드의 순차열에 넣습니다. NL #y순차열 에 카드가 3장이라면 #y함수 카드에 병합합니다. 병합한 함수 카드의 #y비용 은 사용된 부호화 카드 중 #y가장 #y높은 #y비용 과 같습니다."
+  },
+  {
+    "PROPER_NAME": "컴파일",
+    "NAMES": [
+      "컴파일",
+      "compile",
+      "compiled"
+    ],
+    "DESCRIPTION": "#y순차열 에 있다가 #y함수 카드가 생성될 때 발동하는 효과입니다. NL 부정적인 효과는 #y'오류' 가 붙습니다."
+  },
+  {
+    "PROPER_NAME": "흐릿함",
+    "NAMES": [
+      "흐릿함",
+      "흐릿함을",
+      "blur"
+    ],
+    "DESCRIPTION": "턴이 끝날 때 #y방어도 를 잃지 않습니다."
+  },
+  {
+    "PROPER_NAME": "투입",
+    "NAMES": [
+      "투입",
+      "insert"
+    ],
+    "DESCRIPTION": "카드를 덱에 넣고 섞습니다."
+  },
+  {
+    "PROPER_NAME": "순환",
+    "NAMES": [
+      "순환",
+      "순환된",
+      "cycle"
+    ],
+    "DESCRIPTION": "카드를 버리고 새로 카드를 뽑습니다."
+  },
+  {
+    "PROPER_NAME": "소유",
+    "NAMES": [
+      "소유",
+      "소유한"
+    ],
+    "DESCRIPTION": "뽑을, 버린 카드 더미와 손에 있는 카드입니다."
+  }
+]

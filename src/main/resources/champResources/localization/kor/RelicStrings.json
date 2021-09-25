@@ -1,0 +1,110 @@
+{
+  "champ:ChampionCrown": {
+    "NAME": "챔피언 왕관",
+    "FLAVOR": "승자는 바로 당신입니다!",
+    "DESCRIPTIONS": [
+      "무작위 #y자세 를 취한 채로 전투를 시작합니다."
+    ]
+  },
+  "champ:BlackKnightHelmet": {
+    "NAME": "검은 기사의 투구",
+    "FLAVOR": "살짝 스친 상처 뿐입니다.",
+    "DESCRIPTIONS": [
+      "매 전투 시 처음으로 자세를 취할 때 효과가 적용됩니다. NL #b수비: 민첩을 2 얻고 힘을 1 잃습니다. NL #r광폭화: 힘을 2 얻고 민첩을 1 잃습니다."
+    ]
+  },
+  "champ:Barbells": {
+    "NAME": "역기",
+    "FLAVOR": "100번? 웃기는군. 난 101번도 가능하다.",
+    "DESCRIPTIONS": [
+      "휴식 장소를 거칠 때마다 강화하지 않은 카드가 10장 이상이면 #y무작위로 하나 강화합니다."
+    ]
+  },
+  "champ:BerserkersGuideToSlaughter": {
+    "NAME": "올바른 광폭화 지침서",
+    "FLAVOR": "글을 읽을 수가 없습니다.",
+    "DESCRIPTIONS": [
+      "매 턴 시작 시 활력 을 #b3 얻습니다."
+    ]
+  },
+  "champ:ChampionCrownUpgraded": {
+    "NAME": "승리의 왕관",
+    "FLAVOR": "축하합니다!! 당신은 영광스러운 승자입니다.",
+    "DESCRIPTIONS": [
+      "#r챔피언 #r왕관 과 교체합니다. NL #b2 턴 동안 #y궁극의 #y자세 를 취한 채로 전투를 시작합니다."
+    ]
+  },
+  "champ:DefensiveTrainingManual": {
+    "NAME": "수비 논문",
+    "FLAVOR": "전문가의 조언: 안 맞으면 됩니다.",
+    "DESCRIPTIONS": [
+      "수비 자세의 #y마무리 #y추가 #y효과의 #y방어도 가 #b8 증가합니다."
+    ]
+  },
+  "champ:DeflectingBracers": {
+    "NAME": "편향된 아대",
+    "FLAVOR": "차단하고 싶은 게 있다면...",
+    "DESCRIPTIONS": [
+      "매 턴 시작 시 잃은 방어도 만큼 #y반격 을 얻습니다."
+    ]
+  },
+  "champ:DuelingGlove": {
+    "NAME": "결투 장갑",
+    "FLAVOR": "10부터 세겠다...",
+    "DESCRIPTIONS": [
+      "공격 대상이 하나인 #y공격 카드 사용 시 대상에 #y취약 이 없다면 #y취약 을 1 부여합니다."
+    ]
+  },
+  "champ:FightingForDummies": {
+    "NAME": "싸움용 설계도",
+    "FLAVOR": "방법 1. 적을 처리한다.",
+    "DESCRIPTIONS": [
+      "턴 종료 시 #y자세 를 취하고 있지 않다면 #y방어도 를 #b6 얻습니다."
+    ]
+  },
+  "champ:GladiatorsBookOfMartialProwess": {
+    "NAME": "검투사 안내서",
+    "FLAVOR": "뭐든 하다보면 - 뭐라도 걸리겠죠.",
+    "DESCRIPTIONS": [
+      "한 턴에 #y기술, #y연계, #y마무리, #y자세 카드를 전부 사용할 때마다 #y힘 과 #y민첩 을 #b1 얻습니다."
+    ]
+  },
+  "champ:PowerArmor": {
+    "NAME": "힘찬 갑옷",
+    "FLAVOR": "중고로 샀습니다.",
+    "DESCRIPTIONS": [
+      "매 턴 시작 시 [E] 를 얻습니다. NL 최대 #y활력 과 #y반격 이 #b30 으로 감소합니다."
+    ]
+  },
+  "champ:SignatureFinisher": {
+    "NAME": "대표 마무리",
+    "FLAVOR": "이제부터 궁극기를 맛보아라!",
+    "DESCRIPTIONS": [
+      "획득 시 #y마무리 카드를 1장 고릅니다. 이 카드의 비용은 0이 됩니다. #y자세 를 취하지 않아도 사용 가능하며 #y자세 에서 벗어나지 않습니다.",
+      "선택한 ",
+      " 카드는 비용이 0이 됩니다. #y자세 를 취하지 않아도 사용 가능하며 #y자세 에서 벗어나지 않습니다."
+    ]
+  },
+  "champ:SpectersHand": {
+    "NAME": "불안한 귀신의 손",
+    "FLAVOR": "승리했다면 무언가가 함께하고 있을지도 모릅니다.",
+    "DESCRIPTIONS": [
+      "자세를 취할 때마다 #y타격 또는 #y수비 카드를 얻습니다. 그 카드의 비용은 #b0 이고 #y소멸 합니다."
+    ]
+  },
+  "champ:LiftRelic": {
+    "NAME": "내면의 힘",
+    "FLAVOR": "누구든 마음속에 거대한 검을 품고 있습니다.",
+    "DESCRIPTIONS": [
+      "#y힘 을 #b",
+      " 얻은 채로 전투를 시작합니다."
+    ]
+  },
+  "champ:ChampStancesModRelic": {
+    "NAME": "새로운 도전자",
+    "FLAVOR": "왕관을 노리고 왔느냐?",
+    "DESCRIPTIONS": [
+      "무작위 #y자세 를 취한 채로 전투를 시작합니다."
+    ]
+  }
+}

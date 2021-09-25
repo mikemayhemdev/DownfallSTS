@@ -2,54 +2,60 @@
   "downfall:EvilMenuPanel": {
     "TEXT": [
       "몰락",
-      "첨탑을 오르려는 침입자들로부터 심장을 보호하십시오.",
-      "당신은 악당을 선택하세요",
+      "첨탑을 오르려는 침입자들로부터 심장을 보호하세요.",
+      "악당을 선택하십시오",
       "캠페인"
     ]
   },
   "downfall:SoulToGoldChanges": {
     "TEXT": [
       "영혼",
-      "영혼이 얼마나 많은지 보여줍니다. 영혼은 심장의 보상으로 주어질 수 있습니다."
+      "영혼이 얼마나 많은지 보여줍니다. 영혼은 심장의 보상으로도 주어집니다."
     ]
   },
   "downfall:BustKeyButton": {
     "TEXT": [
-      "루비를 파괴한다",
-      "사파이어를 파괴한다",
-      "에메랄드를 파괴한다",
-      "(자유 행동) 영혼 75 개를 사용: 키를 파괴한다 ",
-      "힘 1 얻는다.",
-      "최대체력이 10 증가한다.",
-      "민첩 1 얻는다.",
-      "키를 깨트린다!",
-      "요구 ",
-      " 영혼."
+      "루비 파괴",
+      "사파이어 파괴",
+      "에메랄드 파괴",
+      "(자유 행동) 100 영혼을 소모하고 열쇠를 파괴합니다. ",
+      "힘을 1 얻습니다.",
+      "최대 체력이 10 증가합니다.",
+      "민첩을 1 얻습니다.",
+      "열쇠를 깨트렸다!",
+      "요구. ",
+      " 영혼.",
+      "(자유 행동) 열쇠를 파괴합니다. "
     ]
   },
   "downfall:WheelSpinButton": {
     "TEXT": [
-      "돌림판을 돌린다",
-      "(자유 행동) 돌림판을 돌린다.",
+      "돌림판",
+      "(자유 행동) 돌림판을 돌립니다.",
       "다시 돌릴 수 없습니다."
     ]
   },
   "downfall:AscensionText": {
     "TEXT": [
-      "19. 보스는 추가 유물을 획득합니다.",
-      "20. 액트 3 보스는 도마뱀 꼬리와 마법의 꽃을 가지고 있습니다.",
-      "루비 키를 획득합니다. 부수는 것은 나중에 합니다."
+      "19. 보스들이 더 많은 유물을 가지고 등장합니다.",
+      "20. 3막 보스가 모든 체력을 회복하는 도마뱀 꼬리를 가지고 등장합니다.",
+      "루비 열쇠를 획득합니다. 파괴는 나중에 해야 합니다.",
+      "4. 보스들이 더 많은 강화된 카드를 가지고 등장합니다."
     ]
   },
   "downfall:ConfigMenuText": {
     "TEXT": [
-      "Allow Standard runs to encounter global relics from Downfall's characters.",
-      "Allow Standard runs to encounter global potions from Downfall.",
-      "Allow Standard runs to encounter global events from Downfall.",
-      "Allow Standard runs to encounter Boss Cards from Downfall.",
-      "Allow Standard characters to play Downfall runs, and Villains to play in Standard runs.",
-      "Allow Standard runs to encounter Downfall Curse cards.",
-      "Downfall runs use traditional Map layout - fire before boss, not at start."
+      "일반 도전에서 Downfall 모드의 캐릭터의 유물이 출현합니다.",
+      "일반 도전에서 Downfall 모드의 포션이 출현합니다.",
+      "일반 도전에서 Downfall 모드의 이벤트가 출현합니다.",
+      "일반 도전에서 Downfall 모드의 보스 카드가 출현합니다.",
+      "일반 캐릭터로 몰락을 도전하고 몰락의 악당 캐릭터로 일반을 도전합니다.",
+      "일반 도전에서 Downfall 모드의 저주가 출현합니다.",
+      "Downfall 도전에서 원래 지도 형식을 사용합니다. 시작을 모닥불에서 하지 않습니다.",
+      "Downfall 모드 캐릭터의 모든 잠긴 카드와 유물을 해금합니다(재시작이 필요합니다.).",
+      "투사의 상단 자세 설명창을 표시하지 않습니다.",
+      "음악을 끕니다.(재시작이 필요합니다.)",
+      "Downfall 모드 캐릭터의 모든 잠긴 교체 스킨을 해금합니다."
     ]
   },
   "downfall:EnergyPanelTip": {
@@ -62,28 +68,28 @@
   },
   "downfall:RemoveCardReward": {
   "TEXT": [
-    "덱에서 카드 한 장 제거합니다.",
-    "제거할 카드를 선택하세요"
+    "덱에 카드를 제거",
+    "제거할 카드를 선택하십시오."
   ]
 },
   "downfall:TransformCardReward": {
     "TEXT": [
-      "덱에서 카드 한 장 변화합니다.",
-      "변화할 카드를 선택하세요"
+      "덱에 카드를 변화",
+      "변화할 카드를 선택하십시오."
     ]
   },
   "downfall:UpgradeCardReward": {
     "TEXT": [
-      "덱에서 카드 한 장 강화합니다.",
-      "강화할 카드를 선택하세요"
+      "덱에 카드를 강화",
+      "강화할 카드를 선택하십시오."
     ]
   },
   "downfall:BossRelicReward": {
     "TEXT": [
       "3개의 보스 유물 중 1개를 고르세요.",
-      "얻습니다 ",
+      "얻습니다. ",
       ".",
-      "유물을 선택하세요.. 아무거나요"
+      "유물을 선택하세요.. 아무거나요."
     ]
   },
   "downfall:EtherealMod": {
@@ -98,25 +104,42 @@
   },
   "downfall:RareCardReward": {
     "TEXT": [
-      "덱에 희귀 카드를 추가하세요"
+      "덱에 희귀 카드를 추가"
     ]
   },
   "downfall:OctoChoiceAction": {
     "TEXT": [
-      "사용할 소망을 선택하세요.",
-      "당신은 이걸 절대 보면 안됩니다.",
-      "슬라임을 선택하세요."
+      "사용할 소망을 선택하십시오.",
+      "당신은 이걸 봐선 안됐습니다. 에그머니나."
     ]
   },
   "downfall:BossCardReward": {
     "TEXT": [
-      "덱에 보스 카드를 추가하세요",
-      "Pick a card."
+      "덱에 보스 카드를 추가",
+      "카드를 선택하십시오."
+    ]
+  },
+  "downfall:ColorfulCardReward": {
+    "TEXT": [
+      "덱에 ",
+      " 카드를 추가",
+      "카드를 선택하십시오."
     ]
   },
   "downfall:RunHistoryMonsterNames": {
     "TEXT": [
       "살아있는 벽 머리들"
+    ]
+  },
+  "downfall:WhaleHunter": {
+    "TEXT": [
+      "고래 사냥꾼",
+      "순환은 끝났다."
+    ]
+  },
+  "downfall:SingleCardViewPopup": {
+    "TEXT": [
+      "탄약"
     ]
   }
 }

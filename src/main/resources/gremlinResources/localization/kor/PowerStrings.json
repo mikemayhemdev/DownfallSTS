@@ -1,200 +1,206 @@
 {
   "Gremlin:Agony": {
-    "NAME": "Agonizing Pain",
+    "NAME": "고통스러운 상처",
     "DESCRIPTIONS": [
-      "#yAttacks deal #b",
-      "% less damage for #b",
-      " turn.",
-      " turns."
+      "#y공격 피해량을 #b",
+      "% 감소시킵니다. #b",
+      " 턴 동안 지속됩니다.",
+      " 턴 동안 지속됩니다."
     ]
   },
   "Gremlin:Bang": {
-    "NAME": "Bang",
+    "NAME": "쾅",
     "DESCRIPTIONS": [
-      "The next attack you play consumes all stacks of #yWiz and deals #b", " additional damage."
+      "다음 사용하는 공격 카드가 모든 #y마법을 소모해서 피해량을 #b",
+      " 증가시킵니다."
     ]
   },
   "Gremlin:Bashed": {
-    "NAME": "Bashed",
+    "NAME": "강타 피해",
     "DESCRIPTIONS": [
-      "Whenever you gain #yBlock this turn, loses #b", " HP."
+      "이번 턴에 #y방어도 를 얻을 때마다 체력을 #b",
+      " 잃습니다."
     ]
   },
   "Gremlin:BubbleBarrier": {
-    "NAME": "Bubble Barrier",
+    "NAME": "거품 장벽",
     "DESCRIPTIONS": [
-      "Whenever you play a card this turn, gain #b", " #yBlock."
+      "이번 턴에 카드를 사용할 때마다 #y방어도 를 #b",
+      " 얻습니다."
     ]
   },
   "Gremlin:CongaLine": {
-    "NAME": "Conga Line",
+    "NAME": "콩가 자세",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain ",
-      "and #ySwap to the next Gremlin."
+      "턴 시작 시 ",
+      " 를 얻고 다음 그렘린으로 #y교체 합니다."
     ]
   },
   "Gremlin:Crippled": {
-    "NAME": "Crippled",
+    "NAME": "무력화",
     "DESCRIPTIONS": [
-      "#yWeak does not wear off. At the end of its turn, it loses HP equal to its #bWeak."
+      "#y약화 가 제거되지 않습니다. 적 턴 종료 시 #b약화 만큼 체력을 잃습니다."
     ]
   },
   "Gremlin:Encore": {
-    "NAME": "Encore",
+    "NAME": "앙코르",
     "DESCRIPTIONS": [
-      "Whenever you consume #yWiz, deal #b", " damage to ALL enemies."
+      "#y마법 을 소모할 때마다 적 전체에게 피해를 #b",
+      " 줍니다."
     ]
   },
   "Gremlin:Enthusiasm": {
-    "NAME": "Enthusiasm",
+    "NAME": "열광",
     "DESCRIPTIONS": [
-      "Whenever you #ySwap, draw #b",
-      " card.",
-      " cards."
+      "#y교체 할 때마다 카드를 #b",
+      " 장 뽑습니다.",
+      " 장 뽑습니다."
     ]
   },
   "Gremlin:FatGremlin": {
-    "NAME": "Fat Gremlin",
+    "NAME": "뚱뚱한 그렘린",
     "DESCRIPTIONS": [
-      "Whenever you play an attack, apply #b",
-      " #yWeak to all targets."
+      "공격 카드를 사용할 때마다 공격한 대상에게 #y약화 를 #b",
+      " 부여합니다."
     ]
   },
   "Gremlin:Flex": {
-    "NAME": "Strength Down",
+    "NAME": "힘 감소",
     "DESCRIPTIONS": [
-      "At the end of this turn, lose #b",
-      " #yStrength."
+      "이번 턴 종료 시 #y힘 을 #b",
+      " 잃습니다."
     ]
   },
   "Gremlin:Furious": {
-    "NAME": "Furious",
+    "NAME": "거센 분노",
     "DESCRIPTIONS": [
-      "Whenever you would gain #yBlock this turn, instead deal that much damage to ALL enemies."
+      "이번 턴에 #y방어도 를 얻는 대신 적 전체에게 #y방어도 만큼 피해를 줍니다."
     ]
   },
   "Gremlin:GremlinNob": {
-    "NAME": "Gremlin Nob",
+    "NAME": "귀족 그렘린",
     "DESCRIPTIONS": [
-      "At the start of each turn, add #b3 Gremlin Nob cards to your hand. You can no longer #ySwap. When you would lose all #yTemporary #yHP, prevent further damage and revert back."
+      "매 턴 시작 시 귀족 그렘린의 카드를 #b3 장 얻습니다. #y교체 할 수 없습니다. 모든 #y임시 #y체력 을 잃는다면 #y임시 #y체력 을 초과하는 피해를 막아주고 원래 그렘린으로 돌아옵니다."
     ]
   },
   "Gremlin:GremlinWizard": {
-    "NAME": "Gremlin Wizard",
+    "NAME": "마법사 그렘린",
     "DESCRIPTIONS": [
-      "Whenever you play a skill, gain #b",
-      " #yWiz."
+      "스킬 카드를 사용할 때마다 #y마법 을 #b",
+      " 얻습니다."
     ]
   },
   "Gremlin:Heckle": {
-    "NAME": "Heckle",
+    "NAME": "야유",
     "DESCRIPTIONS": [
-      "Whenever you apply a debuff to an enemy, gain #b",
-      " #yTemporary #yHP."
+      "해로운 효과를 부여할 때마다 #y임시 #y체력 을 #b",
+      " 얻습니다."
     ]
   },
   "Gremlin:InfiniteBlocks": {
-    "NAME": "Infinite Blocks",
+    "NAME": "무한의 방어",
     "DESCRIPTIONS": [
-      "At the start of your turn, add #b",
-      " #yWard to your hand.",
-      " #yWards to your hand."
+      "턴 시작 시 #y수호 를 #b",
+      " 장 얻습니다.",
+      " 장 얻습니다."
     ]
   },
   "Gremlin:MadGremlin": {
-    "NAME": "Mad Gremlin",
+    "NAME": "화난 그렘린",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yTemporary #yStrength when attacked."
+      "공격을 받으면 힘을 #b",
+      " 얻습니다. 내 턴이 끝날 때 얻은 힘을 잃습니다."
     ]
   },
   "Gremlin:MakeshiftArmor": {
-    "NAME": "Makeshift Armor",
+    "NAME": "임시 갑옷",
     "DESCRIPTIONS": [
-      "Play #b",
-      " more attack to gain #b",
-      " more attacks to gain #b",
-      " #yArtifact."
+      "공격 카드를 #b",
+      " 장 더 사용하면 #y인공물 을 #b",
+      " 장 더 사용하면 #y인공물 을 #b",
+      " 얻습니다."
     ]
   },
   "Gremlin:MakingMagic": {
-    "NAME": "Making Magic",
+    "NAME": "마법 제작",
     "DESCRIPTIONS": [
-      "At the start of your next turn, add #b",
-      " copy of #yBang to your hand.",
-      " copies of #yBang to your hand."
+      "다음 턴 시작 시 #y쾅 을 #b",
+      " 장 복사해 얻습니다.",
+      " 장 복사해 얻습니다."
     ]
   },
   "Gremlin:MakingMoreMagic": {
-    "NAME": "Making Magic+",
+    "NAME": "마법 제작+",
     "DESCRIPTIONS": [
-      "At the start of your next turn, add #b",
-      " #yUpgraded copy of #yBang to your hand.",
-      " #yUpgraded copies of #yBang to your hand."
+      "다음 턴 시작 시 #y강화된 #y쾅 을 #b",
+      " 장 복사해 얻습니다.",
+      " 장 복사해 얻습니다."
     ]
   },
   "Gremlin:Polish": {
-    "NAME": "Polish",
+    "NAME": "광택제",
     "DESCRIPTIONS": [
-      "Wards grant #b",
-      " additional #yBlock."
+      "수호의 #y방어도 를 #b",
+      " 증가시킵니다."
     ]
   },
   "Gremlin:Scatter": {
-    "NAME": "Scatter",
+    "NAME": "튀어어",
     "DESCRIPTIONS": [
-      "The next #b",
-      " time you would lose HP, instead #ySwap into a random Gremlin.",
-      " times you would lose HP, instead #ySwap into a random Gremlin."
+      "다음 #b",
+      " 번까지 체력을 잃을 때 무작위 그렘린으로 gremlin:교체 하고 체력을 대신 잃습니다.",
+      " 번까지 체력을 잃을 때 무작위 그렘린으로 gremlin:교체 하고 체력을 대신 잃습니다."
     ]
   },
   "Gremlin:ShadowShiv": {
-    "NAME": "Shadow Shiv",
+    "NAME": "그림자 단도",
     "DESCRIPTIONS": [
-      "Whenever you play an Attack that doesn't Exhaust, add #b",
-      " #yShiv to your hand.",
-      " #yShivs to your hand."
+      "소멸하지 않는 공격 카드를 사용할 때마다 #y단도 를 #b",
+      " 장 얻습니다.",
+      " 장 얻습니다."
     ]
   },
   "Gremlin:ShieldGremlin": {
-    "NAME": "Shield Gremlin",
+    "NAME": "방패 그렘린",
     "DESCRIPTIONS": [
-      "Whenever you play a skill, gain #b",
-      " #yBlock."
+      "스킬 카드를 사용할 때마다 #y방어도 를 #b",
+      " 얻습니다."
     ]
   },
   "Gremlin:SneakyGremlin": {
-    "NAME": "Sneaky Gremlin",
+    "NAME": "교활한 그렘린",
     "DESCRIPTIONS": [
-      "Whenever you play an attack, deal #b",
-      " damage to a random enemy."
+      "공격 카드를 사용할 때마다 무작위 적에게 피해를 #b",
+      " 줍니다."
     ]
   },
   "Gremlin:TargetWeakness": {
-    "NAME": "Target Wounds",
+    "NAME": "상처입은 대상",
     "DESCRIPTIONS": [
-      "Deal #b",
-      " additional damage to #yWeakened enemies."
+      "#y약화 를 보유한 적이면 피해량이 #b",
+      " 증가합니다."
     ]
   },
   "Gremlin:Unforgiving": {
-    "NAME": "Unforgiving",
+    "NAME": "지독함",
     "DESCRIPTIONS": [
-      "You cannot lose Strength."
+      "힘을 잃지 않습니다."
     ]
   },
   "Gremlin:Wiz": {
-    "NAME": "Wiz",
+    "NAME": "마법",
     "DESCRIPTIONS": [
-      "Charging up. NL Need #b", " more stack.", " more stacks.",
-      "Ready to fire."
+      "충전 중입니다. NL #y마법 이 #b",
+      " 더 필요합니다.",
+      " 더 필요합니다.",
+      "이제 갑니다."
     ]
   },
   "Gremlin:Wizardry": {
-    "NAME": "Wizardry",
+    "NAME": "마법 기술",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b",
-      " #yWiz."
+      "턴 시작 시 #y마법 을 #b",
+      " 얻습니다."
     ]
   }
 }

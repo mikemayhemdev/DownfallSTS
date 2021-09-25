@@ -1,41 +1,41 @@
 {
   "Gremlin:FatGremlin": {
-    "NAME": "Fat Gremlin",
+    "NAME": "뚱뚱한 그렘린",
     "DESCRIPTION": [
-      "Whenever you play an attack, apply #b",
-      " #yWeak to all targets."
+      "공격 카드를 사용할 때마다 대상으로한 모두에게 #y약화 를 #b",
+      " 부여합니다."
     ]
   },
 
   "Gremlin:GremlinWizard": {
-    "NAME": "Gremlin Wizard",
+    "NAME": "마법사 그렘린",
     "DESCRIPTION": [
-      "Whenever you play a skill, gain #b",
-      " #yWiz."
+      "스킬 카드를 사용할 때마다 #y마법 을 #b",
+      " 얻습니다."
     ]
   },
 
   "Gremlin:MadGremlin": {
-    "NAME": "Mad Gremlin",
+    "NAME": "화난 그렘린",
     "DESCRIPTION": [
-      "Gain #b",
-      " #yTemporary #yStrength when attacked."
+      "피해를 받으면 힘을 #b",
+      " 얻습니다. 내 턴이 끝날 때 얻은 힘을 잃습니다."
     ]
   },
 
   "Gremlin:ShieldGremlin": {
-    "NAME": "Shield Gremlin",
+    "NAME": "방패 그렘린",
     "DESCRIPTION": [
-      "Whenever you play a skill, gain #b",
-      " #yBlock."
+      "스킬 카드를 사용할 때마다 #y방어도 를 #b",
+      " 얻습니다."
     ]
   },
 
   "Gremlin:SneakyGremlin": {
-    "NAME": "Sneaky Gremlin",
+    "NAME": "교활한 그렘린",
     "DESCRIPTION": [
-      "Whenever you play an attack, deal #b",
-      " damage to a random enemy."
+      "공격카드를 사용할 때마다 무작위 적에게 피해를 #b",
+      " 줍니다."
     ]
   }
 }

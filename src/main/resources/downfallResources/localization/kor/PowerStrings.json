@@ -1,48 +1,243 @@
 {
   "downfall:FairyPotion": {
-    "NAME": "요정 포션",
+    "NAME": "병 속의 요정",
     "DESCRIPTIONS": [
-      "죽는 대신 최대체력의 30% 를 회복하고는, 이 효과를 제거합니다.",
-      "하! 요정 포션이라니, 얼간이 같으니!"
+      "체력이 #b0 이하가 될 때 최대 체력의 #b30% 만큼 회복하고 이 효과를 제거합니다.",
+      "허! 병 속의 요정이라니, 얼간이 같으니!"
     ]
   },
   "downfall:SoulSteal": {
     "NAME": "영혼 도둑",
     "DESCRIPTIONS": [
-      "당신의 영혼을 ",
+      "당신의 영혼을 #b",
       " 훔쳤습니다."
     ]
   },
   "downfall:NeowInvulnerable": {
     "NAME": "신의 생명",
     "DESCRIPTIONS": [
-      "죽일 수 없습니다. 체력이 1로 감소하면 회복하기 위해 후퇴합니다."
+      "내 카드를 사용할 때마다 체력을 #b",
+      " 회복합니다."
     ]
   },
   "downfall:TransformDrawnCardsPower": {
-    "NAME": "뽑을 카드 번형",
+    "NAME": "뽑을 카드 변형",
     "DESCRIPTIONS": [
-      "이번 턴에 처음으로 뽑는 카드 #b",
-      " 장을 #y변형 합니다. (",
-      " 보존)"
+      "이번 턴에 처음으로 뽑는 카드를 #b",
+      " 장 #y변형 합니다. (",
+      " #y보존)"
     ]
   },
   "downfall:TotemInvulnerable": {
     "NAME": "살아있는 벽",
     "DESCRIPTIONS": [
-      "다른 머리들이 체력이 1이 이니라면 사망하지 않습니다. 다른 머리가 죽으면 죽습니다."
+      "모든 머리의 체력이 #b1 이 될 때까지 죽일 수 없습니다. 다른 머리가 죽으면 죽습니다."
     ]
   },
   "downfall:ExhaustCardsPower": {
     "NAME": "망각",
     "DESCRIPTIONS": [
-      "당신의 차례가 끝나면, 소멸할 카드를 선택합니다."
+      "턴 종료 시 #y소멸 시킬 카드를 1장 고릅니다."
     ]
   },
   "downfall:PoisonResist": {
-    "NAME": "독 저항",
+    "NAME": "중독 저항",
     "DESCRIPTIONS": [
-      "독은 당신의 방어도를 무시할 수 없으며, 당신의 턴이 끝나고 발동한 뒤 스택의 절반을 잃습니다."
+      "턴 종료 시 #y중독 효과를 받습니다. NL 내 턴을 끝낼 때, 남은 [E] 당 #y중독을 #b10 만큼 제거합니다."
+    ]
+  },
+  "downfall:NeowBuff": {
+    "NAME": "니오우의 힘",
+    "DESCRIPTIONS": [
+      "니오우의 턴 종료 시 #y힘 을 #b2 얻습니다."
+    ]
+  },
+  "downfall:WatcherAngryPower": {
+    "NAME": "진노 표출",
+    "DESCRIPTIONS": [
+      "와쳐의 턴 종료 시 체력이 #b50% 이하라면 진노합니다. NL 진노는 와쳐의 주고 받는 피해량을 증가시킵니다. 받는 피해량은 #b100% 가 아닌 #b50% 증가합니다."
+    ]
+  },
+  "downfall:NeowUnbridledRage": {
+    "NAME": "격노 표출",
+    "DESCRIPTIONS": [
+      "니오우의 턴 종료 시 체력이 #b50% 이하라면 힘을 #b6 얻습니다. NL 전투마다 한 번만 발동합니다."
+    ]
+  },
+  "downfall:WatcherCripplePower": {
+    "NAME": "신성 모독자의 최후",
+    "DESCRIPTIONS": [
+      "와쳐가 체력을 #b",
+      " 잃으면 와쳐가 #y라그나로크 를 사용하거나 #y강림 할 때 #y힘 을 #b4 잃습니다.",
+      "와쳐가 #y라그나로크 를 사용하거나 #y강림할 때 #y힘 을 #b4 잃습니다."
+    ]
+  },
+  "downfall:NeowBlasphemersDemise": {
+    "NAME": "모독자의 최후",
+    "DESCRIPTIONS": [
+      "니오우가 체력을 #b",
+      " 잃기 전까지 이로운 효과를 얻을 때 추가로 #y힘 을 #b10 증가시킵니다.",
+      "니오우가 마비되어 이로운 효과 턴에도 #y힘 을 증가시킬 수 없습니다."
+    ]
+  },
+  "downfall:WatcherDivinityPower": {
+    "NAME": "속절없는 믿음",
+    "DESCRIPTIONS": [
+      "내 카드를 1장 사용할 때마다 와쳐가 #y만트라 를 #b1 얻습니다. NL 와쳐의 턴 시작 시 #y만트라 를 #b5 잃습니다. NL 턴 종료 시 #y강림 경지에서 벗어나지 않습니다."
+    ]
+  },
+  "downfall:NeowFleetingFaith": {
+    "NAME": "덧없는 믿음",
+    "DESCRIPTIONS": [
+      "내 카드를 1장 사용할 때마다 니오우가 #y만트라 를 #b1 얻습니다. 니오우의 턴 시작 시 #y만트라 를 #b5 잃습니다."
+    ]
+  },
+  "downfall:SilentShivTimeEaterPower": {
+    "NAME": "칼날 꾸러미",
+    "DESCRIPTIONS": [
+      "내가 비용이 #b0 인 카드를 처음으로 사용하면 사일런트가 #y단도 를 1장 얻습니다."
+      ]
+  },
+  "downfall:NeowBagOfKnives": {
+    "NAME": "날붙이 꾸러미",
+    "DESCRIPTIONS": [
+      "내가 비용이 #b0 인 카드를 사용하면 2번까지 피해를 #b4 만큼 받습니다."
+    ]
+  },
+  "downfall:SilentMirrorImagePower": {
+    "NAME": "복시",
+    "DESCRIPTIONS": [
+      "매 턴 시작 시 사일런트의 분신이 진짜 사일런트가 어디에 있는지 숨깁니다. 진짜 사일런트나 분신을 공격하면 해당 턴에 제거됩니다."
+    ]
+  },
+  "downfall:NeowSeeingDouble": {
+    "NAME": "복안",
+    "DESCRIPTIONS": [
+      "매 턴 니오우에게 가하는 #y공격 의 피해가 #b0 됩니다."
+    ]
+  },
+  "downfall:SilentPoisonPower": {
+    "NAME": "위험: 유독 과다",
+    "DESCRIPTIONS": [
+      "이번 전투에서 사일런트의 #y중독 에 #y중독 #y저항 효과를 가집니다."
+    ]
+  },
+  "downfall:NeowHighlyToxic": {
+    "NAME": "위험: 유독 과대",
+    "DESCRIPTIONS": [
+      "이번 전투에서 니오우의 #y중독 에 #y중독 #y저항 효과를 가집니다. 니오우의 턴 시작 시 #y중독 을 #b10 부여합니다."
+    ]
+  },
+  "downfall:DefectVoidPower": {
+    "NAME": "에너지 도둑",
+    "DESCRIPTIONS": [
+      "디펙트가 #y공허 를 생성할 때마다 내 뽑을 카드 더미 맨 위에 #y공허 를 넣습니다."
+    ]
+  },
+  "downfall:NeowEnergyThief": {
+    "NAME": "에너지 강탈",
+    "DESCRIPTIONS": [
+      "니오우가 #r저주 카드를 내 뽑을 카드 더미에 섞어 넣을 때 #r상태이상 #r공허 도 1장 카드 더미에 섞어 넣습니다."
+    ]
+  },
+  "downfall:DefectAncientConstructPower": {
+    "NAME": "고대의 구성",
+    "DESCRIPTIONS": [
+      "청동 구체 하수인 2체와 싸웁니다. NL 턴 종료 시 청동 구체가 #b인공물 이 없다면 #y인공물 을 #b1 얻습니다."
+    ]
+  },
+  "downfall:NeowAncientConstruct": {
+    "NAME": "고대의 구조",
+    "DESCRIPTIONS": [
+      "니오우가 #y인공물 이 없다면 턴 종료 시 #y인공물을 #b2 얻습니다."
+    ]
+  },
+  "downfall:DefectCuriosity": {
+    "NAME": "인지 비편향",
+    "DESCRIPTIONS": [
+      "내 #y희귀 카드를 1장 사용할 때마다 디펙트는 밀집을 #b",
+      " #y얻습니다."
+    ]
+  },
+  "downfall:NeowUnbiasedCognition": {
+    "NAME": "인식 비편향",
+    "DESCRIPTIONS": [
+      "내 #y희귀 카드를 1장 사용할 때마다 니오우는 #y힘 을 #b2 얻습니다."
+    ]
+  },
+  "downfall:IroncladStatusPower": {
+    "NAME": "아픔 나누기",
+    "DESCRIPTIONS": [
+      "아이언클래드가 #y상태이상 카드를 생성할 때마다 동일한 #y상태이상 을 내 뽑을 카드 더미에 섞어 넣습니다."
+    ]
+  },
+  "downfall:NeowSyncronize": {
+    "NAME": "고통 나누기",
+    "DESCRIPTIONS": [
+      "매 턴 니오우는 무작위 #y상태이상 카드를 1장 내 버린 카드더미에 섞어 넣습니다."
+    ]
+  },
+  "downfall:IroncladMushroomPower": {
+    "NAME": "광란의 포식",
+    "DESCRIPTIONS": [
+      "아이언클래드의 #y사신 카드는 #y소멸 하지 않고 모든 버섯들을 대상으로 삼습니다. NL 버섯을 죽이면 #y힘 을 #b1 얻습니다."
+    ]
+  },
+  "downfall:NeowFeedingFrenzy": {
+    "NAME": "광도의 포식",
+    "DESCRIPTIONS": [
+      "니오우는 막히지 않은 피해를 입힐 때마다 체력을 회복합니다."
+    ]
+  },
+  "downfall:IroncladFortificationPower": {
+    "NAME": "요새",
+    "DESCRIPTIONS": [
+      "아이언클래드가 요새와 함께 싸웁니다. 매 턴 요새는 아이언클래드에게 방어도 를 #b",
+      " 줍니다. NL 요새가 파괴되었다면 아이언클래드는 바리케이드를 잃지만 매 턴 #y힘 을 #b5 얻습니다."
+    ]
+  },
+  "downfall:NeowBastion": {
+    "NAME": "보루",
+    "DESCRIPTIONS": [
+      "니오우는 #y바리케이드 를 가지고 턴 시작 시 #y방어도 를 #b10 얻습니다."
+    ]
+  },
+  "downfall:MerchantStrengthPower": {
+    "NAME": "영혼 도둑",
+    "DESCRIPTIONS": [
+      "상인은 이번 도전에서 영혼 강탈로 벌은 #y힘 을 유지하며 벌은 #y힘 만큼 #y민첩 을 얻습니다."
+    ]
+  },
+  "downfall:NeowMantra": {
+    "NAME": "만트라",
+    "DESCRIPTIONS": [
+      "니오우의 보유한 #y만트라가 #b10 되면 #y만트라 #b10 을 #y힘 #b10 으로 변환합니다."
+    ]
+  },
+  "downfall:NeowSeeingDoubleProduct": {
+    "NAME": "???",
+    "DESCRIPTIONS": [
+      "이번 턴에 니오우에게 가하는 #y공격 의 피해가 #b0 됩니다."
+    ]
+  },
+  "downfall:CrowbotRitualPower": {
+    "NAME": "재 프로그래밍: 의식",
+    "DESCRIPTIONS": [
+      "#y크로우봇 의 체력이 #b50% 이하됐다면 턴 종료 시 체력을 #b3 잃고 #y힘 을 #b",
+      " 얻습니다."
+    ]
+  },
+  "downfall:DamageMultiplier": {
+    "NAME": "피해 배율기",
+    "DESCRIPTIONS": [
+      "#y공격 이 피해를 #b",
+      " 번 줍니다."
+    ]
+  },
+  "downfall:CompressionMold": {
+    "NAME": "금형 압축",
+    "DESCRIPTIONS": [
+      "#y발사된 탄약은 이후 강화됩니다."
     ]
   }
 }

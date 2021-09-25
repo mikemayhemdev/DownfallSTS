@@ -1,1 +1,12 @@
-{}
+{
+  "expansioncontent:CannotUseBossCardMessage": {
+    "TEXT": [
+      "이번 턴에 이미 보스 카드를 사용했다!"
+    ]
+  },
+  "expansioncontent:BossCardTagName": {
+    "TEXT": [
+      "보스"
+    ]
+  }
+}

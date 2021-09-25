@@ -1,59 +1,74 @@
 {
   "Gremlin:NobFight": {
     "TEXT": [
-      "PUNY GREMS GIVE SOULS!",
-      "You, Angry. You're mine now.",
-      "You, Fatty. You're mine now.",
-      "You, Girly. You're mine now.",
-      "You, Twitchy. You're mine now.",
-      "You. Dopey. You're mine now.",
-      "You. You're mine now.",
-      "I need to choose."
+      "보잘것 없는 그렘린들. NL 영혼을 내놔라!",
+      "화난 녀석. 넌 이제 내 거다.",
+      "뚱뚱한 녀석. 넌 이제 내 거다.",
+      "겁쟁이 녀석. 넌 이제 내 거다.",
+      "까딱대는 녀석. 넌 이제 내 거다.",
+      "멍청한 녀석. 넌 이제 내 거다.",
+      "녀석. 넌 이제 내 거다.",
+      "선택을 해야만 한다."
     ]
   },
   "Gremlin:GremFight": {
     "TEXT": [
-      "Bash their heads!",
-      "Kill them dead!",
-      "Take their stuff!"
+      "뒷통수를 쳐라!",
+      "모두 죽여라!",
+      "물건을 뺏어라!"
     ]
   },
   "Gremlin:ResurrectOption": {
     "TEXT": [
-      "Resurrect",
-      "(Free Action) Summon a random Gremlin back from the dead.",
-      "Requires a Gremlin to be Dead.",
-      "The grave site has been desecrated already.",
-      "I RISE!",
-      "I RISE, AGAIN!",
-      "I'M BACK FOR MORE LOOTING!"
+      "부활",
+      "(자유 행동) 무작위 죽은 그렘린을 되살립니다.",
+      "죽은 그렘린이 필요합니다.",
+      "묘지가 훼손되었습니다.",
+      "돌아왔다!",
+      "다시 돌아왔다고!",
+      "더 많이 훔치려고 돌아왔다!"
     ]
   },
   "Gremlin:RestOption": {
     "TEXT": [
-      "Rest",
-      "Heal every Gremlin for 100% of your Max HP (",
-      " HP from ",
-      "Heal every Gremlin for 30% of your Max HP (",
-      "If any Gremlins are dead, one will resurrect at random."
+      "휴식",
+      "최대 체력의 100% 만큼 모든 그렘린이 회복합니다 (",
+      " +15 체력을 다음 효과로 추가 회복합니다 : ",
+      "최대 체력의 30% 만큼 모든 그렘린이 회복합니다 (",
+      "만약 죽은 그렘린이 있다면 무작위로 한 마리를 살립니다."
     ]
   },
   "Gremlin:Swap": {
     "TEXT": [
-      "NO SWAP!",
-      "NOB LEADER NOW!",
-      "NOB LEAD FOREVER!"
+      "교체 못한다!",
+      "귀족이 지금 리더다!",
+      "귀족은 항상 선두다!"
     ]
   },
   "Gremlin:ArtMode": {
     "TEXT": [
-      "Gremlin Art Mode",
-      "Gremlins invade the card frames. Only impacts aesthetics. Might make finding synergies easier."
+      "그렘린 그림 모드",
+      "카드 틀에 그렘린들이 보입니다. 외형만 변경됩니다. 시너지 카드를 더 쉽게 찾을 수 있습니다."
     ]
   },
   "Gremlin:BonusGold": {
     "TEXT": [
-       " Gold (Bonus)"
+       " 골드 (추가)"
+    ]
+  },
+  "Gremlin:MakeEchoAction": {
+    "TEXT": [
+      "메아리: "
+    ]
+  },
+  "Gremlin:EventReplacementStrings": {
+    "TEXT": [
+      "#r체력을 #r",
+      " #r잃습니다.",
+      "#r모든 #r그렘린이 #r체력을 #r",
+      "#g체력을 #g",
+      " #g얻습니다.",
+      "#g모든 #g그렘린이 #g체력을 #g"
     ]
   }
 }

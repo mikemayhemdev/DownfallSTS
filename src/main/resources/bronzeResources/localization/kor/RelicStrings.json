@@ -1,0 +1,104 @@
+{
+  "bronze:BronzeCore": {
+    "NAME": "청동 핵심",
+    "FLAVOR": "50,000년에 한번 교체해주세요.",
+    "DESCRIPTIONS": [
+      "전투마다 처음으로 생성하는 #y함수 카드의 비용이 사용하기 전까지 #b0 이 됩니다."
+    ]
+  },
+  "bronze:ProtectiveGoggles": {
+    "NAME": "보안경",
+    "FLAVOR": "가까이서 볼 수 있습니다.",
+    "DESCRIPTIONS": [
+      "턴 종료 시 #y순차열 에 카드가 없다면 #y방어도 를 #b4 얻습니다."
+    ]
+  },
+  "bronze:DecasWashers": {
+    "NAME": "데카의 기계 부품",
+    "FLAVOR": "데카가 왜 이것들을 수집하는지는 밝혀지지 않았습니다.",
+    "DESCRIPTIONS": [
+      "매 전투 시작 시 카드를 #b3 장 추가로 뽑고 뽑을 카드 더미에 #y어지러움 을 섞어 넣습니다."
+    ]
+  },
+  "bronze:Timepiece": {
+    "NAME": "손목시계",
+    "FLAVOR": "똑같은 시계 수집품에서 가져왔습니다.",
+    "DESCRIPTIONS": [
+      "#y컴파일 시 모든 #y함수 카드에 #y보존 효과가 추가됩니다."
+    ]
+  },
+  "bronze:Mallet": {
+    "NAME": "망치",
+    "FLAVOR": "이거죠! 망치 사올게요!",
+    "DESCRIPTIONS": [
+      "#y미세 #y조정+ 를 2장 복사해 얻은 채로 전투를 시작합니다."
+    ]
+  },
+  "bronze:SilverBullet": {
+    "NAME": "은 탄환",
+    "FLAVOR": "첨탑눅대는 사라진 지 오래입니다.",
+    "DESCRIPTIONS": [
+      "#y순차열 에 #y관통 #y사격 을 넣은 채로 전투를 시작합니다."
+    ]
+  },
+  "bronze:MakeshiftBattery": {
+    "NAME": "임시변통 전지",
+    "FLAVOR": "8.99 볼트짜리입니다.",
+    "DESCRIPTIONS": [
+      "매 턴 시작 시 [E] 를 얻고 무작위 #y상태이상 카드를 버린 카드 더미에 넣고 섞습니다."
+    ]
+  },
+  "bronze:CableSpool": {
+    "NAME": "전선 타래",
+    "FLAVOR": "꼬여있습니다...",
+    "DESCRIPTIONS": [
+      "전투마다 처음으로 #y부호화 하는 카드를 1장 복사해 순차열에 넣습니다."
+    ]
+  },
+  "bronze:ElectromagneticCoil": {
+    "NAME": "전자기 코일",
+    "FLAVOR": "비효율적이지만 흥미로운 전원입니다.",
+    "DESCRIPTIONS": [
+      "#y함수 카드가 순차열에 카드를 #b4 장 병합해야 생성됩니다."
+    ]
+  },
+  "bronze:PlatinumCore": {
+    "NAME": "백금 핵심",
+    "FLAVOR": "변경 사항 기록: 사용자 경험을 향상시켜줍니다.",
+    "DESCRIPTIONS": [
+      "",
+      " 과 교체합니다.[] NL 다음 생성하는 #y함수 카드 #b3 장의 비용이 사용하기 전까지 #b0 이 됩니다."
+    ]
+  },
+  "bronze:BottledCode": {
+    "NAME": "병에 담긴 코드",
+    "FLAVOR": "사실, 내가 정확한 코드를 가지고 있는데...",
+    "DESCRIPTIONS": [
+      "획득 시 #y부호화 할 카드를 1장 고릅니다. 그 카드를 #y순차열 에 넣은 채로 전투를 시작합니다.",
+      "카드를 고르십시오 ",
+      "#y순차열 에 ",
+      " 카드를 넣은 채로 전투를 시작합니다."
+    ]
+  },
+  "bronze:DonusWashers": {
+    "NAME": "도누의 기계 부품",
+    "FLAVOR": "도누가 왜 이것들을 수집하는지는 알 거 같습니다.",
+    "DESCRIPTIONS": [
+      "매 전투 시작 시 [E] [E] 를 얻고 뽑을 카드 더미에 #y공허 를 #b1 장 섞어 넣습니다."
+    ]
+  },
+  "bronze:BronzeIdol": {
+    "NAME": "청동 우상",
+    "FLAVOR": "고대의 무기화된 백신입니다. 왜 만들었는지 그 누가 알겠습니까?",
+    "DESCRIPTIONS": [
+      "#y상태이상 카드가 이로운 효과를 가진 카드로 변경되고 사용할 수 있게됩니다."
+    ]
+  },
+  "bronze:AnalyticalCore": {
+    "NAME": "패러독스의 인공물",
+    "FLAVOR": "이런 코딩 광풍은 처음 봅니다.",
+    "DESCRIPTIONS": [
+      "매 턴 시작 시 무작위 #y부호화 카드를 1장 얻습니다. 그 카드에는 #y휘발성 효과가 추가됩니다."
+    ]
+  }
+}

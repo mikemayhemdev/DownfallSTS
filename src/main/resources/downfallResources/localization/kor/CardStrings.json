@@ -1,1 +1,30 @@
-{}
+{
+  "downfall:SummonMushrooms": {
+    "NAME": "균류 무리",
+    "DESCRIPTION": "모든 버섯을 죽입니다. 버섯의 남아있던 체력만큼 체력을 회복합니다. NL 버섯 2개를 소환합니다."
+  },
+  "downfall:Aged": {
+    "NAME": "노쇠",
+    "DESCRIPTION": "사용불가. NL 휘발성. NL 턴 종료 시 뽑을 더미 맨 위에 *공허 를 놓습니다."
+  },
+  "downfall:Bewildered": {
+    "NAME": "당혹",
+    "DESCRIPTION": "이 카드 이외의 다른 카드를 사용하면 손에 있는 모든 카드가 sneckomod:뒤엉키고 이 카드를 버립니다. NL 소멸."
+  },
+  "downfall:Icky": {
+    "NAME": "질척임",
+    "DESCRIPTION": "사용하면 *점액투성이 를 1장 얻습니다. NL 소멸."
+  },
+  "downfall:Haunted": {
+    "NAME": "귀신들림",
+    "DESCRIPTION": "사용불가. NL 휘발성. NL 뽑으면 손에 있는 모든 카드에 휘발성 을 부여합니다."
+  },
+  "downfall:Malfunctioning": {
+    "NAME": "결함",
+    "DESCRIPTION": "휘발성. NL 턴 종료 시 손에 있는 모든 카드를 무작위 상태이상 카드로 변환 합니다. NL 소멸."
+  },
+  "downfall:Scatterbrained": {
+    "NAME": "주의산만",
+    "DESCRIPTION": "사용불가. NL 뽑으면 이 카드의 gremlin:메아리 를 손에 가득 차게 만듭니다."
+  }
+}

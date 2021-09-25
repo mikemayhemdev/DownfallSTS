@@ -1,503 +1,508 @@
 {
   "Gremlin:AggressiveDefense": {
-    "NAME": "Aggressive Defense",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you gain Block this turn, targeted enemy loses !M! HP."
+    "NAME": "공격적인 수비",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 방어도를 얻을 때마다 공격한 대상은 체력을 !M! 잃습니다."
   },
 
   "Gremlin:ArmsTheft": {
-    "NAME": "Arms Theft",
-    "DESCRIPTION": "Steal !M! Strength. NL Exhaust."
+    "NAME": "소매 치기",
+    "DESCRIPTION": "적의 힘을 !M! 감소시킵니다. 적의 힘을 !M! 빼앗습니다. NL 소멸."
   },
 
   "Gremlin:Astound": {
-    "NAME": "Astound",
-    "DESCRIPTION": "Gain !B! Block. NL If you have 3 or more Wiz, add !M! Wards to your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you have 3 or more Wiz, add !M! Upgraded Wards to your hand."
+    "NAME": "경외",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL gremlin:마법을 3 이상 보유하고 있다면 *수호를 !M! 장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL gremlin:마법을 3 이상 보유하고 있다면 강화된 *수호를 !M! 장 얻습니다."
   },
 
   "Gremlin:Bang": {
-    "NAME": "Bang",
-    "DESCRIPTION": "Deal !D! damage !M! times. Add 1 copy of Whiz to your discard pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. Add 1 Upgraded copy of Whiz to your discard pile. NL Exhaust."
+    "NAME": "쾅",
+    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. 버린 카드 더미에서 *마아법을 1장 복사해 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. 버린 카드 더미에서 강화된 *마아법을 1장 복사해 얻습니다. NL 소멸."
   },
 
   "Gremlin:Bellow": {
-    "NAME": "Bellow",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Strength for each enemy that does not intend to Attack. NL Exhaust."
+    "NAME": "고함",
+    "DESCRIPTION": "휘발성. NL 공격할 의도가 없는 적마다 힘을 !M! 얻습니다. NL 소멸."
   },
 
   "Gremlin:BrokenShin": {
-    "NAME": "Broken Shin",
-    "DESCRIPTION": "Apply Agony for every !M! stacks of Weak the target has."
+    "NAME": "정강이 까기",
+    "DESCRIPTION": "대상이 보유한 약화 !M! 마다 gremlin:분개를 부여합니다. NL 소멸."
   },
 
   "Gremlin:BubbleBarrier": {
-    "NAME": "Bubble Barrier",
-    "DESCRIPTION": "Whenever you play a card this turn, gain !M! Block."
+    "NAME": "거품 장벽",
+    "DESCRIPTION": "이번 턴에 카드를 사용할 때마다 방어도를 !M! 얻습니다."
   },
 
   "Gremlin:BulkUp": {
-    "NAME": "Bulk Up",
-    "DESCRIPTION": "Gain !M! Temporary HP. NL Swap to Fat_Gremlin."
+    "NAME": "몸집 부풀리기",
+    "DESCRIPTION": "임시_체력 을 !M! 얻습니다. NL gremlin:뚱뚱한_그렘린으로 gremlin:교체합니다."
   },
 
   "Gremlin:BurlyBlow": {
-    "NAME": "Burly Blow",
-    "DESCRIPTION": "Deal !D! damage for each stack of Weakened. NL (Always hits at least once.)"
+    "NAME": "굵직한 강타",
+    "DESCRIPTION": "적이 보유한 약화마다 피해를 !D! 줍니다. NL 약화를 보유하고 있지 않다면 피해를 !D! 만큼 1번 줍니다."
   },
 
   "Gremlin:CatScratch": {
-    "NAME": "Cat Scratch",
-    "DESCRIPTION": "Deal !D! damage !M! times."
+    "NAME": "고양이 할퀴기",
+    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다."
   },
 
   "Gremlin:Changeo": {
-    "NAME": "Change-o!",
-    "DESCRIPTION": "Gain !B! Block and !M! Wiz."
+    "NAME": "충전 중이다!",
+    "DESCRIPTION": "방어도를 !B! 얻습니다 gremlin:마법을 !M! 얻습니다."
   },
 
   "Gremlin:CongaLine": {
-    "NAME": "Conga Line",
-    "DESCRIPTION": "At the start of your turn, gain [E] and Swap to the next Gremlin.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain [E] and Swap to the next Gremlin."
+    "NAME": "콩가 자세",
+    "DESCRIPTION": "턴 시작 시 [E] 를 얻고 다음 그렘린으로 gremlin:교체합니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 턴 시작 시 [E] 를 얻고 다음 그렘린으로 gremlin:교체합니다."
   },
 
   "Gremlin:CounterStrike": {
-    "NAME": "Counter Strike",
-    "DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, add !M! Wards to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, add !M! Upgraded Wards to your hand."
+    "NAME": "반사 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다. 적이 공격할 의도가 있다면 *수호를 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 적이 공격할 의도가 있다면 강화된 *수호를 !M! 얻습니다."
   },
 
   "Gremlin:CowerChoice": {
-    "NAME": "Cower",
-    "DESCRIPTION": "Lose all your gold.",
-    "EXTENDED_DESCRIPTION": ["WIMPY GREMS NOT STUPID."]
+    "NAME": "큰절",
+    "DESCRIPTION": "모든 영혼을 잃습니다.",
+    "EXTENDED_DESCRIPTION": ["겁쟁이 그렘린. NL 멍청하지 않다."]
   },
 
   "Gremlin:CowerChoiceB": {
-    "NAME": "Cower",
-    "DESCRIPTION": "Permanently lose your rearmost Gremlin.",
-    "EXTENDED_DESCRIPTION": ["Good. Now the rest of you, scram!", "Yeah! Scram!"]
+    "NAME": "큰절",
+    "DESCRIPTION": "가장 뒤에 있는 그렘린을 영구적으로 잃습니다.",
+    "EXTENDED_DESCRIPTION": ["좋다. 남은 녀석들은 꺼져라!", "좋다! 꺼져라!"]
   },
 
   "Gremlin:DaggerDance": {
-    "NAME": "Dagger Dance",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies !M! times."
+    "NAME": "검무",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 만큼 !M! 번 줍니다."
   },
 
   "Gremlin:Dazzle": {
-    "NAME": "Dazzle",
-    "DESCRIPTION": "Deal !D! damage. NL If you have 5 or more Wiz, the enemy loses 2 Strength. NL Exhaust."
+    "NAME": "현혹",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL gremlin:마법을 3 이상 보유하고 있다면 힘을 2 감소시키고 힘을 2 빼앗습니다. NL 소멸."
   },
 
   "Gremlin:Defend": {
-    "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block."
+    "NAME": "수비",
+    "DESCRIPTION": "방어도를 !B! 얻습니다."
   },
 
   "Gremlin:Duplicate": {
-    "NAME": "Duplicate",
-    "DESCRIPTION": "Make !M! Echoes of an Attack in your hand. They cost 1 less. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Make !M! Echoes of an Attack in your hand. They cost 1 less."
+    "NAME": "복제",
+    "DESCRIPTION": "손에 있는 공격 카드의 gremlin:메아리를 !M! 장 만듭니다. 그 카드의 비용을 1 낮춥니다. 소멸.",
+    "UPGRADE_DESCRIPTION": "손에 있는 공격 카드의 gremlin:메아리를 !M! 장 만듭니다. 그 카드의 비용을 1 낮춥니다."
   },
 
   "Gremlin:EdibleArmor": {
-    "NAME": "Edible Armor",
-    "DESCRIPTION": "Convert your Block into Temporary HP."
+    "NAME": "식용 갑옷",
+    "DESCRIPTION": "방어도를 변환해서 임시_체력 을 얻습니다."
   },
 
   "Gremlin:Encore": {
-    "NAME": "Encore",
-    "DESCRIPTION": "Gain 3 Wiz. NL Whenever you consume Wiz, deal !M! damage to ALL enemies."
+    "NAME": "앙코르",
+    "DESCRIPTION": "gremlin:마법을 3 얻습니다. NL gremlin:마법을 소모할 때마다 적 전체에게 피해를 !M! 줍니다."
   },
 
   "Gremlin:Enthusiasm": {
-    "NAME": "Enthusiasm",
-    "DESCRIPTION": "Whenever you Swap, draw a card."
+    "NAME": "열광",
+    "DESCRIPTION": "gremlin:교체할 때마다 카드를 1장 뽑습니다."
   },
 
   "Gremlin:Erupt": {
-    "NAME": "Erupt",
-    "DESCRIPTION": "Gain !M! Temporary Strength. NL Exhaust."
+    "NAME": "분출",
+    "DESCRIPTION": "힘을 !M! 얻습니다. 턴 종료 시 힘을 !M! 잃습니다. NL 소멸."
   },
 
   "Gremlin:Exacerbate": {
-    "NAME": "Exacerbate",
-    "DESCRIPTION": "Deal !D! damage. Cripple the enemy. NL Exhaust."
+    "NAME": "악화",
+    "DESCRIPTION": "피해를 !D! 줍니다. gremlin:무력화 를 부여합니다. NL 소멸."
   },
 
   "Gremlin:FairyDust": {
-    "NAME": "Fairy Dust",
-    "DESCRIPTION": "Add !M! Wards to your hand and draw !M! cards. NL Exhaust."
+    "NAME": "요정 가루",
+    "DESCRIPTION": "*수호를 !M! 장 얻고 카드를 !M! 장 뽑습니다. NL 소멸."
   },
 
   "Gremlin:SleeveOfAces": {
-    "NAME": "Sleeve Of Aces",
-    "DESCRIPTION": "Deal !D! damage. NL Add 1 Shiv to your hand for each stack of Wiz you have.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add 1 Upgraded Shiv to your hand for each stack of Wiz you have."
+    "NAME": "소매 속 카드",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 보유하고 있는 gremlin:마법 만큼 단도를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 보유하고 있는 gremlin:마법 만큼 강화된 단도를 얻습니다."
   },
 
   "Gremlin:FatGremlin": {
-    "NAME": "Fat Gremlin",
-    "DESCRIPTION": "Swap to Fat_Gremlin."
+    "NAME": "뚱뚱한 그렘린",
+    "DESCRIPTION": "gremlin:뚱뚱한_그렘린으로 gremlin:교체합니다."
   },
 
   "Gremlin:FeelTheAudience": {
-    "NAME": "Feel The Audience",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !M! Wiz for each one that intends to attack."
+    "NAME": "관중 청취",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 공격할 의도가 있는 적마다 gremlin:마법을 !M! 얻습니다."
   },
 
   "Gremlin:FightChoice": {
-    "NAME": "Fight",
-    "DESCRIPTION": "Start Combat. NL Enemy gains !M! Strength.",
-    "EXTENDED_DESCRIPTION": ["GREMS DIE NOW!", "Somebody's asking for a beating!"]
+    "NAME": "싸움",
+    "DESCRIPTION": "전투를 시작합니다. NL 적이 힘을 !M! 얻습니다.",
+    "EXTENDED_DESCRIPTION": ["그렘린 죽인다!", "아무나 공격해라!"]
   },
 
   "Gremlin:FlipOut": {
-    "NAME": "Flip Out",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Whenever you would gain Block this turn, instead deal that much damage to ALL enemies."
+    "NAME": "자제력 상실",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 이번 턴에 방어도를 얻는 대신 적 전체에게 방어도만큼 피해를 줍니다."
   },
 
   "Gremlin:Flurry": {
-    "NAME": "Flurry",
-    "DESCRIPTION": "Deal !D! damage for each card played this turn. NL Exhaust.",
+    "NAME": "돌풍",
+    "DESCRIPTION": "이번 턴에 사용된 카드마다 피해를 !D! 줍니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
-      " NL (",
-      " card played.)",
-      " cards played.)"
+      " NL (카드를 ",
+      " 장 사용했습니다.)",
+      " 장 사용했습니다.)"
     ]
   },
 
   "Gremlin:FollowThrough": {
-    "NAME": "Follow Through",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Temporary Strength."
+    "NAME": "마무리 동작",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 힘을 !M! 얻습니다. 턴 종료 시 힘을 !M! 잃습니다."
   },
 
   "Gremlin:Fury": {
-    "NAME": "Fury",
-    "DESCRIPTION": "Costs 1 less [E] for each 2 Strength you have. NL Deal !D! damage thrice."
+    "NAME": "격분",
+    "DESCRIPTION": "보유한 힘 2마다 이 카드의 비용을 1 만큼 낮춥니다. NL 피해를 !D! 만큼 3번 줍니다."
   },
 
   "Gremlin:Glimmer": {
-    "NAME": "Glimmer",
-    "DESCRIPTION": "Deal !D! damage. NL Add 2 Wards to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add 2 Upgraded Wards to your hand."
+    "NAME": "희미한 빛",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL *수호를 2 장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 강화된 *수호를 2 장 얻습니다."
   },
 
   "Gremlin:GlitterGuard": {
-    "NAME": "Glitter Guard",
-    "DESCRIPTION": "Add !M! Wards to your hand. NL Swap to Shield_Gremlin.",
-    "UPGRADE_DESCRIPTION": "Add !M! Upgraded Wards to your hand. NL Swap to Shield_Gremlin."
+    "NAME": "희미한 보호",
+    "DESCRIPTION": "*수호를 !M! 장 얻습니다. NL gremlin:방패_그렘린으로 gremlin:교체합니다.",
+    "UPGRADE_DESCRIPTION": "강화된 *수호를 !M! 장 얻습니다. NL gremlin:방패_그렘린으로 gremlin:교체합니다."
   },
 
   "Gremlin:GremlinArms": {
-    "NAME": "Gremlin Arms",
-    "DESCRIPTION": "Add a random assortment of !M! Shivs and Wards to your hand."
+    "NAME": "그렘린 무기",
+    "DESCRIPTION": "무작위 단도 또는 *수호를 !M! 장 얻습니다."
   },
 
   "Gremlin:GremlinMeal": {
-    "NAME": "Flex",
-    "DESCRIPTION": "Gain !M! Temporary Strength."
+    "NAME": "몸 풀기",
+    "DESCRIPTION": "힘을 !M! 얻습니다. 턴 종료 시 힘을 !M! 잃습니다."
   },
 
   "Gremlin:GremlinDance": {
-    "NAME": "Gremlin Dance",
-    "DESCRIPTION": "Deal !D! damage. NL Has a bonus effect based on which Gremlin you are.",
-    "EXTENDED_DESCRIPTION": ["Deal !D! damage",
-    " to ALL enemies.", ". NL Enemy loses !M! Strength this turn.",
-    ". NL Gain !B! Block.", ". NL Draw !M! cards.", ". NL This attack does not consume Wiz.", ". NL Gain !M! Strength."]
+    "NAME": "그렘린의 춤",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 현재 맨 앞에 있는 그렘린에 따라 효과가 추가됩니다.",
+    "EXTENDED_DESCRIPTION": ["피해를 !D! 줍니다",
+    " 적 전체에게 피해를 줍니다.", ". NL 이번 턴 동안 적의 힘을 !M! 감소시킵니다.",
+    ". NL 방어도를 !B! 얻습니다.", ". NL 카드를 !M! 장 뽑습니다.", ". NL gremlin:마법을 !M! 얻습니다.", ". NL 힘을 !M! 얻습니다."]
   },
 
   "Gremlin:GremlinOffensive": {
-    "NAME": "Gremlin Offensive",
-    "DESCRIPTION": "Deal !D! damage. NL Add a *Gremlin *Offensive to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add an Upgraded Gremlin Offensive to your hand. NL Exhaust."
+    "NAME": "그렘린 공세",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL *그렘린 *공세를 1장 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL *강화된 *그렘린 공세를 1장 얻습니다. NL 소멸."
   },
 
   "Gremlin:GremlinToss": {
-    "NAME": "Gremlin Toss",
-    "DESCRIPTION": "Deal damage equal to your current Block and Temporary HP.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Temporary HP. NL Deal damage equal to your current Block and Temporary HP.",
-    "EXTENDED_DESCRIPTION": [" NL (Deals !D! damage.)"]
+    "NAME": "그렘린 던지기",
+    "DESCRIPTION": "현재 방어도와 임시 체력만큼 피해를 줍니다.",
+    "UPGRADE_DESCRIPTION": "임시_체력 을 !M! 얻습니다. NL 현재 방어도와 임시 체력만큼 피해를 줍니다.",
+    "EXTENDED_DESCRIPTION": [" NL (피해를 !D! 줍니다.)"]
   },
 
   "Gremlin:GremlinWizard": {
-    "NAME": "Gremlin Wizard",
-    "DESCRIPTION": "Swap to Gremlin_Wizard."
+    "NAME": "마법사 그렘린",
+    "DESCRIPTION": "gremlin:마법사_그렘린으로 gremlin:교체합니다."
   },
 
   "Gremlin:Heckle": {
-    "NAME": "Heckle",
-    "DESCRIPTION": "Whenever you apply a debuff to an enemy, gain !M! Temporary HP."
+    "NAME": "야유",
+    "DESCRIPTION": "적에게 해로운 효과를 부여할 때마다 임시_체력 을 !M! 얻습니다."
   },
 
   "Gremlin:InfiniteBlocks": {
-    "NAME": "Infinite Blocks",
-    "DESCRIPTION": "At the start of your turn, add a Ward to your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add a Ward to your hand."
+    "NAME": "무한의 방어",
+    "DESCRIPTION": "턴 시작 시 *수호를 1장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 턴 시작 시 *수호를 1장 얻습니다."
   },
 
   "Gremlin:IrksomeBlow": {
-    "NAME": "Irksome Blow",
-    "DESCRIPTION": "Deal !D! damage. NL Irksome Blow is affected by Strength !M! times."
+    "NAME": "짜증나는 강타",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 힘의 효과가 !M! 배로 적용됩니다."
   },
 
   "Gremlin:Irritability": {
-    "NAME": "Irritability",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! temporary Thorns. NL Swap to Mad_Gremlin."
+    "NAME": "조급함",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 가시를 !M! 얻습니다. 턴 종료 시 가시를 !M! 잃습니다. NL gremlin:화난_그렘린으로 gremlin:교체합니다."
   },
 
   "Gremlin:Jeer": {
-    "NAME": "Jeer",
-    "DESCRIPTION": "Deal !D! damage. If the enemy has a debuff, gain !M! Temporary HP."
+    "NAME": "조롱",
+    "DESCRIPTION": "피해를 !D! 줍니다. 적이 해로운 효과를 보유하고 있다면 임시_체력 을 !M! 얻습니다."
   },
 
   "Gremlin:Kablamo": {
-    "NAME": "Kablamo!",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL This attack does not consume Wiz."
+    "NAME": "멋져!",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 이 공격은 gremlin:마법을 소모하지 않습니다."
   },
 
   "Gremlin:LeaderChoice": {
-    "NAME": "Make a Choice",
-    "DESCRIPTION": "Surrender your friend to slavery?"
+    "NAME": "선택하기",
+    "DESCRIPTION": "포기할 친구는 누구?"
   },
 
   "Gremlin:MadGremlin": {
-    "NAME": "Mad Gremlin",
-    "DESCRIPTION": "Swap to Mad_Gremlin."
+    "NAME": "화난 그렘린",
+    "DESCRIPTION": "gremlin:화난_그렘린으로 gremlin:교체합니다."
   },
 
   "Gremlin:MakeshiftArmor": {
-    "NAME": "Makeshift Armor",
-    "DESCRIPTION": "Every time you play 7 attacks, gain 1 Artifact.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Artifact. NL Every time you play 7 attacks, gain 1 Artifact."
+    "NAME": "임시 갑옷",
+    "DESCRIPTION": "공격 카드를 7장 사용할 때마다 인공물을 1 얻습니다.",
+    "UPGRADE_DESCRIPTION": "인공물을 !M! 얻습니다. NL 공격 카드를 7장 사용할 때마다 인공물을 1 얻습니다."
   },
 
   "Gremlin:Mockery": {
-    "NAME": "Mockery",
-    "DESCRIPTION": "Apply !M! Weak. NL If the enemy has 3 or more Weak, gain !B! Block."
+    "NAME": "무시하는 조롱",
+    "DESCRIPTION": "약화를 !M! 부여합니다. NL 적이 약화를 3 이상 보유하고 있다면 방어도를 !B! 얻습니다."
   },
 
   "Gremlin:Necromancy": {
-    "NAME": "Necromancy",
-    "DESCRIPTION": "Can only be played if you have 5 or more Wiz. NL Consume all Wiz to resurrect a random Gremlin with !M! HP. Exhaust.",
-    "EXTENDED_DESCRIPTION": ["Not enough mojo.", "Nobody is dead yet.", "Not enough room."]
+    "NAME": "주술",
+    "DESCRIPTION": "gremlin:마법을 3 이상 보유하고 있을 때만 사용 가능합니다. NL 모든 gremlin:마법을 소모해서 무작위 그렘린을 체력이 !M! 인 상태로 부활시킵니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": ["마력이 부족해.", "아무도 죽지 않았어.", "공간이 비좁아."]
   },
 
   "Gremlin:Nob": {
-    "NAME": "NOB",
-    "DESCRIPTION": "Gain !M! Temporary HP. NL Mutate into Gremlin Nob until you run out of Temporary HP."
+    "NAME": "귀족",
+    "DESCRIPTION": "임시_체력 을 !M! 얻습니다. NL 임시_체력 을 모두 잃기 전까지 gremlin:귀족_그렘린으로 변이합니다."
   },
 
   "Gremlin:NobChoice": {
-    "NAME": "Make a Choice",
-    "DESCRIPTION": "Puny Grems give Gold?"
+    "NAME": "선택하기",
+    "DESCRIPTION": "연약한 그렘린이 금화를 줘야 할까?"
   },
 
   "Gremlin:PartyStick": {
-    "NAME": "Party Stick",
-    "DESCRIPTION": "Unplayable. NL Whenever you Swap while this card is in your hand, gain [E]",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Whenever you Swap while this card is in your hand, gain [E] [E]",
-    "EXTENDED_DESCRIPTION": ["Nobody is allowed to play with the Party Stick."]
+    "NAME": "선봉 막대",
+    "DESCRIPTION": "휘발성. 사용불가. NL 이 카드가 손에 있다면 gremlin:교체할 때마다 [E] 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "사용불가. NL 이 카드가 손에 있다면 gremlin:교체할 때마다 [E] 를 얻습니다.",
+    "EXTENDED_DESCRIPTION": ["선봉 막대를 받아 줄 그렘린이 없어."]
   },
 
   "Gremlin:Patsy": {
-    "NAME": "Patsy",
-    "DESCRIPTION": "Gain !B! Block. NL Swap to the next Gremlin."
+    "NAME": "봉",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 그렘린으로 gremlin:교체합니다."
   },
 
   "Gremlin:Pickpocket": {
-    "NAME": "Pickpocket",
-    "DESCRIPTION": "Steal all Artifact. NL Deal !D! damage. NL Exhaust."
+    "NAME": "소매치기",
+    "DESCRIPTION": "모든 인공물을 빼앗습니다. NL 피해를 !D! 줍니다. NL 소멸."
   },
 
   "Gremlin:PinNeedle": {
-    "NAME": "Pin Needle",
-    "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! *Pinpricks into your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle !M! Upgraded *Pinpricks into your draw pile. NL Exhaust."
+    "NAME": "바늘 핀",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL *성가신 *구멍을 !M! 장 뽑을 카드 더미에 넣고 섞습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL *성가신 *구멍을 !M! 장 뽑을 카드 더미에 넣고 섞습니다. NL 소멸."
   },
 
   "Gremlin:Pinprick": {
-    "NAME": "Pinprick",
-    "DESCRIPTION": "Deal !D! damage. NL Draw a card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Whenever you draw this card, add an Echo of it to your hand. NL Deal !D! damage. NL Draw a card. NL Exhaust."
+    "NAME": "성가신 구멍",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "이 카드를 뽑을 때마다 이 카드의 gremlin:메아리를 1장 얻습니다. NL 피해를 !D! 줍니다. NL 카드를 1장 뽑습니다. NL 소멸."
   },
 
   "Gremlin:Polish": {
-    "NAME": "Polish",
-    "DESCRIPTION": "*Shivs deal !M! additional damage. NL Wards grant !M! additional Block."
+    "NAME": "광택제",
+    "DESCRIPTION": "단도 의 피해량을 !M! 증가시킵니다. NL *수호의 방어도를 !M! 증가시킵니다."
   },
 
   "Gremlin:PourSalt": {
-    "NAME": "Pour Salt",
-    "DESCRIPTION": "Deal !D! damage. If the enemy is Weak, add !M! *Shivs to your hand."
+    "NAME": "소금 치기",
+    "DESCRIPTION": "피해를 !D! 줍니다. 적이 약화를 보유하고 있다면 약화를 1 제거하고 단도를 !M! 장 얻습니다."
   },
 
   "Gremlin:Presto": {
-    "NAME": "Presto!",
-    "DESCRIPTION": "Deal !D! damage. Gain !M! Wiz."
+    "NAME": "쨘!",
+    "DESCRIPTION": "피해를 !D! 줍니다. gremlin:마법을 !M! 얻습니다."
   },
 
   "Gremlin:Pretaliation": {
-    "NAME": "Pretaliation",
-    "DESCRIPTION": "Deal !D! damage if the enemy intends to attack. NL Do !blamage! damage otherwise."
+    "NAME": "선제 공격",
+    "DESCRIPTION": "적이 공격할 의도가 있다면 피해를 !D! 줍니다. NL 적이 공격할 의도가 없다면 피해를 !blamage! 줍니다."
   },
 
   "Gremlin:ProperTools": {
-    "NAME": "Proper Tools",
-    "DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, add !M! Wards to your hand. Otherwise, add !M! Shivs to your hand."
+    "NAME": "제대로된 장비",
+    "DESCRIPTION": "피해를 !D! 줍니다. 적이 공격할 의도가 있다면 *수호를 !M! 장 얻습니다. 적이 공격할 의도가 없다면 단도를 !M! 장 얻습니다."
   },
 
   "Gremlin:RageBreak": {
-    "NAME": "Rage Break",
-    "DESCRIPTION": "Double your Strength. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Double your Strength."
+    "NAME": "고장난 분노",
+    "DESCRIPTION": "힘을 두 배로 만듭니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 힘을 두 배로 만듭니다. NL 소멸."
   },
 
   "Gremlin:Raid": {
-    "NAME": "Raid",
-    "DESCRIPTION": "Draw a card for each living Gremlin. NL Discard !M! cards.",
-    "UPGRADE_DESCRIPTION": "Draw a card for each living Gremlin. NL Discard !M! card."
+    "NAME": "습격",
+    "DESCRIPTION": "살아있는 그렘린마다 카드를 1장 뽑습니다. NL 카드를 !M! 장 버립니다.",
+    "UPGRADE_DESCRIPTION": "살아있는 그렘린마다 카드를 1장 뽑습니다. NL 카드를 !M! 장 버립니다."
   },
 
   "Gremlin:Revel": {
-    "NAME": "Revel",
-    "DESCRIPTION": "Gain [E] for each living Gremlin."
+    "NAME": "연회",
+    "DESCRIPTION": "살아있는 그렘린마다 [E] 를 얻습니다."
   },
 
   "Gremlin:Rhythm": {
-    "NAME": "Rhythm",
-    "DESCRIPTION": "Swap to the next Gremlin. NL Fetch a Basic card from your draw pile. It costs 0 this turn."
+    "NAME": "리듬",
+    "DESCRIPTION": "다음 그렘린으로 gremlin:교체합니다. NL 뽑을 카드 더미에서 gremlin:시작 카드를 1장 가져옵니다. 이번 턴에 그 카드의 비용은 0이 됩니다."
   },
 
   "Gremlin:Rush": {
-    "NAME": "Rush",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
+    "NAME": "서두르기",
+    "DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL 소멸."
   },
 
   "Gremlin:Scatter": {
-    "NAME": "Scatter!",
-    "DESCRIPTION": "The next time you would lose HP, instead Swap into a random Gremlin. NL Exhaust"
+    "NAME": "튀어어!",
+    "DESCRIPTION": "다음 번에 체력을 잃을 때 무작위 그렘린으로 gremlin:교체하고 체력을 대신 잃습니다. NL 소멸."
   },
 
   "Gremlin:SecondVolley": {
-    "NAME": "Second Volley",
-    "DESCRIPTION": "Deal !D! damage. Add a Shiv to your hand for each card played this turn",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add an upgraded Shiv to your hand for each card played this turn",
+    "NAME": "다음 일제 사격",
+    "DESCRIPTION": "피해를 !D! 줍니다. 이번 턴에 사용한 카드마다 단도를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 이번 턴에 사용한 카드마다 강화된 단도를 얻습니다.",
     "EXTENDED_DESCRIPTION": [
-      " NL (",
-      " card played.)",
-      " cards played.)"
+      " NL (카드를 ",
+      " 장 사용했습니다.)",
+      " 장 사용했습니다.)"
     ]
   },
 
   "Gremlin:ShadowShiv": {
-    "NAME": "Shadow Shiv",
-    "DESCRIPTION": "Whenever you play an Attack that doesn't exhaust, add a Shiv to your hand."
+    "NAME": "그림자 단도",
+    "DESCRIPTION": "소멸하지 않는 공격 카드를 사용할 때마다 단도를 얻습니다."
   },
 
   "Gremlin:ShankStone": {
-    "NAME": "Shank Stone",
-    "DESCRIPTION": "Unplayable. NL Whenever you draw this card, add !M! Shivs to your hand.",
-    "EXTENDED_DESCRIPTION": ["I can't play this card."]
+    "NAME": "자루석",
+    "DESCRIPTION": "사용불가. NL 이 카드를 뽑을 때마다 단도를 !M! 장 얻습니다.",
+    "EXTENDED_DESCRIPTION": ["이 카드는 사용할 수 없다."]
   },
 
   "Gremlin:SharpenBlades": {
-    "NAME": "Sharpen Blades",
-    "DESCRIPTION": "Reduce the cost of all Attacks in your hand to 0 this turn.",
-    "UPGRADE_DESCRIPTION": "Draw a card. NL Reduce the cost of all Attacks in your hand to 0 this turn."
+    "NAME": "날카로운 검",
+    "DESCRIPTION": "이번 턴 동안 모든 공격 카드의 비용을 0으로 낮춥니다.",
+    "UPGRADE_DESCRIPTION": "카드를 1장 뽑습니다. NL 이번 턴 동안 모든 공격 카드의 비용을 0으로 낮춥니다."
   },
 
   "Gremlin:ShieldGremlin": {
-    "NAME": "Shield Gremlin",
-    "DESCRIPTION": "Swap to Shield_Gremlin."
+    "NAME": "방패 그렘린",
+    "DESCRIPTION": " gremlin:방패_그렘린으로 gremlin:교체합니다."
   },
 
   "Gremlin:ShowOfHands": {
-    "NAME": "Show of Hands",
-    "DESCRIPTION": "Gain !M! Block for every card in your hand.",
-    "UPGRADE_DESCRIPTION": "Draw a card. NL Gain !M! Block for every card in your hand."
+    "NAME": "거수",
+    "DESCRIPTION": "손에 있는 카드마다 방어도를 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "카드를 1장 뽑습니다. NL 손에 있는 카드마다 방어도를 !M! 얻습니다."
   },
 
   "Gremlin:ShowStopper": {
-    "NAME": "Show Stopper",
-    "DESCRIPTION": "Can only be played if you have exactly 10 Wiz. NL Deal !D! damage to ALL enemies 5 times.",
-    "EXTENDED_DESCRIPTION": ["Not enough suspense.", "The timing is ruined."]
+    "NAME": "명연기",
+    "DESCRIPTION": "gremlin:마법을 7 보유하고 있을 때만 사용가능합니다. NL 적 전체에게 피해를 !D! 만큼 5번 줍니다.",
+    "EXTENDED_DESCRIPTION": ["긴장감이 부족해.", "너무 늦었어."]
   },
 
   "Gremlin:SkullBash": {
-    "NAME": "Skull Bash",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Apply !M! Vulnerable. NL Exhaust."
+    "NAME": "해골 강타",
+    "DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL 취약을 !M! 부여합니다. NL 소멸."
   },
 
   "Gremlin:SneakyGremlin": {
-    "NAME": "Sneaky Gremlin",
-    "DESCRIPTION": "Swap to Sneaky_Gremlin."
+    "NAME": "교활한 그렘린",
+    "DESCRIPTION": "gremlin:교활한_그렘린으로 gremlin:교체합니다."
   },
 
   "Gremlin:Strike": {
-    "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage."
+    "NAME": "타격",
+    "DESCRIPTION": "피해를 !D! 줍니다."
   },
 
   "Gremlin:Stupend": {
-    "NAME": "Stupend",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Block is affected by Wiz."
+    "NAME": "비대",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL gremlin:마법 효과가 방어도에 적용됩니다."
+  },
+
+  "Gremlin:SupplyScrollCard": {
+    "NAME": "보급형 두루마리",
+    "DESCRIPTION": "무작위 단도 또는 *수호를 !M! 장 얻습니다. NL 소멸."
   },
 
   "Gremlin:Tadah": {
-    "NAME": "Tadah!",
-    "DESCRIPTION": "Add an Echo of a random Skill to your hand. NL Swap to Gremlin_Wizard.",
-    "UPGRADE_DESCRIPTION": "Add an Echo of a random Skill to your hand. It costs 1 less. NL Swap to Gremlin_Wizard."
+    "NAME": "이제 간다!",
+    "DESCRIPTION": "무작위 스킬 카드의 gremlin:메아리를 1장 얻습니다. 그 카드의 비용을 1 낮춥니다. NL gremlin:마법사_그렘린으로 gremlin:교체합니다.",
+    "UPGRADE_DESCRIPTION": "무작위 강화된 스킬 카드의 gremlin:메아리를 1장 얻습니다. NL 그 카드의 비용을 1 낮춥니다. NL gremlin:마법사_그렘린으로 gremlin:교체합니다."
   },
 
   "Gremlin:TagTeam": {
-    "NAME": "Tag Team",
-    "DESCRIPTION": "Swap to a living Gremlin of your choice.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Swap to a living Gremlin of your choice."
+    "NAME": "태그 팀",
+    "DESCRIPTION": "살아있는 그렘린 중 골라서 gremlin:교체합니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 살아있는 그렘린 중 골라서 gremlin:교체합니다."
   },
 
   "Gremlin:TargetWeakness": {
-    "NAME": "Target Wounds",
-    "DESCRIPTION": "Deal !M! additional damage to Weakened enemies."
+    "NAME": "상처입은 대상",
+    "DESCRIPTION": "약화를 보유한 적이면 피해량이 !M! 증가합니다."
   },
 
   "Gremlin:Tricksy": {
-    "NAME": "Tricksy",
-    "DESCRIPTION": "Draw !M! cards. Discard all cards draw this way that are not Attacks. NL Swap to Sneaky_Gremlin."
+    "NAME": "잔머리",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. 뽑은 카드 중 공격 카드가 아닌 카드를 모두 버립니다. NL gremlin:교활한_그렘린으로 gremlin:교체합니다."
   },
 
   "Gremlin:TwistTheKnife": {
-    "NAME": "Twist The Knife",
-    "DESCRIPTION": "Deal !D! damage. NL Add 1 Shiv to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add 1 Upgraded Shiv to your hand."
+    "NAME": "칼 돋친 말",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 단도를 1장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 강화된 단도를 1장 얻습니다."
   },
 
   "Gremlin:ToeStub": {
-    "NAME": "Toe Stub",
-    "DESCRIPTION": "Deal !D! damage. If the enemy is Weak, apply !M! Vulnerable."
+    "NAME": "삐끗",
+    "DESCRIPTION": "피해를 !D! 줍니다. 약화를 보유하고 있다면 취약을 !M! 부여합니다."
   },
 
   "Gremlin:Unforgiving": {
-    "NAME": "Unforgiving",
-    "DESCRIPTION": "You cannot lose Strength."
+    "NAME": "지독함",
+    "DESCRIPTION": "힘을 잃지 않습니다."
   },
 
   "Gremlin:Ward": {
-    "NAME": "Ward",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust."
+    "NAME": "수호",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 소멸."
   },
 
   "Gremlin:Whiz": {
-    "NAME": "Whiz",
-    "DESCRIPTION": "Gain !M! Wiz. Next turn, add 1 Bang to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Wiz. Next turn, add 1 Upgraded Bang to your hand. NL Exhaust."
+    "NAME": "마아법",
+    "DESCRIPTION": "gremlin:마법을 !M! 얻습니다. 다음 턴에 *쾅을 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "gremlin:마법을 !M! 얻습니다. 다음 턴에 강화된 *쾅을 얻습니다. NL 소멸."
   },
 
   "Gremlin:Wizardry": {
-    "NAME": "Wizardry",
-    "DESCRIPTION": "At the start of your turn, gain !M! Wiz.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! Wiz."
+    "NAME": "마법 기술",
+    "DESCRIPTION": "턴 시작 시 gremlin:마법을 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 턴 시작 시 gremlin:마법을 !M! 얻습니다."
   },
 
   "Gremlin:Placeholder": {

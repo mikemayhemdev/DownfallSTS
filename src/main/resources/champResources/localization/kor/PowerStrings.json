@@ -1,0 +1,224 @@
+{
+  "champ:CounterPower": {
+    "NAME": "반격",
+    "DESCRIPTIONS": [
+      "피해를 받으면 공격한 대상에게 피해를 #b",
+      " 줍니다."
+    ]
+  },
+  "champ:FocusedDefPower": {
+    "NAME": "집중: 수비",
+    "DESCRIPTIONS": [
+      "이번 턴에 #y마무리 를 사용하면 #y방어도 를 #b",
+      " 얻습니다."
+    ]
+  },
+  "champ:FocusedBerPower": {
+    "NAME": "집중: 광폭화",
+    "DESCRIPTIONS": [
+      "이번 턴에 #y마무리 를 사용하면 적 전체에게 피해를 #b",
+      " 줍니다."
+    ]
+  },
+  "champ:ShieldWallPower": {
+    "NAME": "철의 요새",
+    "DESCRIPTIONS": [
+      "턴 종료 시 #y반격 을 #b",
+      " 얻습니다."
+    ]
+  },
+  "champ:EntangleNextTurnPower": {
+    "NAME": "검 투척",
+    "DESCRIPTIONS": [
+      "다음 턴에 #y공격 카드를 사용할 수 없습니다.",
+      "다음 #b",
+      " 턴 동안 #y공격 카드를 사용할 수 없습니다."
+    ]
+  },
+  "champ:DrawLessNextTurnPower": {
+    "NAME": "왕관 투척",
+    "DESCRIPTIONS": [
+      "다음 턴에 카드를 #b",
+      " 장 적게 뽑습니다.",
+      " 장 적게 뽑습니다."
+    ]
+  },
+  "champ:PushThroughPower": {
+    "NAME": "고통 감내",
+    "DESCRIPTIONS": [
+      "이번 턴에 체력을 잃지 않습니다.",
+      "#b",
+      " 턴 동안 체력을 잃지 않습니다."
+    ]
+  },
+  "champ:WorseRupturePower": {
+    "NAME": "끝없는 분노",
+    "DESCRIPTIONS": [
+      "내 턴에 체력을 잃을 때마다 #y힘 을 #b",
+      " 얻고 턴 종료 시 잃습니다."
+    ]
+  },
+  "champ:ImprovisingPower": {
+    "NAME": "증강",
+    "DESCRIPTIONS": [
+      "매 턴 처음으로 #y연계 카드를 사용하면 그 카드를 가져오고 사용하기 전까지 비용이 #b0 이 됩니다. #b",
+      " 번 남았습니다.",
+      "매 턴 #b",
+      " 번까지 #y연계 카드를 사용하면 그 카드를 가져오고 사용하기 전까지 비용이 #b0 이 됩니다. #b"
+    ]
+  },
+  "champ:CalledShotPower": {
+    "NAME": "원기 회복",
+    "DESCRIPTIONS": [
+      "처음으로 사용한 #y마무리 카드는 #y자세 에서 벗어나지 않습니다.",
+      "#b",
+      " 번 까지 사용한 #y마무리 카드는 #y자세 에서 벗어나지 않습니다."
+    ]
+  },
+  "champ:DancingMasterPower": {
+    "NAME": "춤 전문가",
+    "DESCRIPTIONS": [
+      "매 턴 #y자세 카드를 3번 사용할 때마다 #b",
+      " [E] 를 얻고 카드를 #b",
+      " 장 뽑습니다. ",
+      " 번 남았습니다.",
+      "이번 턴에 사용됐습니다.",
+      ""
+    ]
+  },
+  "champ:StrikeOfGeniusPower": {
+    "NAME": "천재적인 타격",
+    "DESCRIPTIONS": [
+      "턴 시작 시 이름에 \"타격\" 이 포함된 무작위 카드를 1장 얻습니다. 그 카드의 비용은 사용하기 전까지 #b0 이고 소멸합니다.",
+      "턴 시작 시 이름에 \"타격\" 이 포함된 무작위 카드를 #b",
+      " 장 얻습니다. 그 카드의 비용은 사용하기 전까지 #b0 이고 소멸합니다."
+    ]
+  },
+  "champ:StrikeOfGeniusUpgradedPower": {
+    "NAME": "천재적인 타격+",
+    "DESCRIPTIONS": [
+      "턴 시작 시 이름에 \"타격\" 이 포함된 무작위 #y강화된 카드를 1장 얻습니다. 그 카드의 비용은 사용하기 전까지 #b0 이고 소멸합니다.",
+      "턴 시작 시 이름에 \"타격\" 이 포함된 무작위 #y강화된 카드를 #b",
+      " 장 얻습니다. 그 카드의 비용은 사용하기 전까지 #b0 이고 소멸합니다."
+    ]
+  },
+  "champ:DefensiveStylePower": {
+    "NAME": "수비 태세",
+    "DESCRIPTIONS": [
+      "#y수비 #y기술 의 #y반격 이 #b",
+      " 증가합니다."
+    ]
+  },
+  "champ:GladiatorStylePower": {
+    "NAME": "건투",
+    "DESCRIPTIONS": [
+      "턴 시작 시 #y자세 를 취하고 있지 않다면 이번 턴에 #y힘 과 #y민첩 을 #b",
+      " 얻고 턴 종료 시 잃습니다."
+    ]
+  },
+  "champ:BerserkerStylePower": {
+    "NAME": "광폭화 태세",
+    "DESCRIPTIONS": [
+      "#y광폭화 기술 의 #y활력 이 #b",
+      " 증가합니다."
+    ]
+  },
+  "champ:FalseCounterPower": {
+    "NAME": "속이는 반격",
+    "DESCRIPTIONS": [
+      "#y반격 이 발동하면 #y반격 을 절반만 잃습니다.",
+      "#b",
+      " 번까지 #y반격 이 발동하면 #y반격 을 절반만 잃습니다."
+    ]
+  },
+  "champ:EnergizedDurationPower": {
+    "NAME": "왕관 강화",
+    "DESCRIPTIONS": [
+      "다음 턴 시작 시 [E] 를 얻습니다.",
+      "다음 #b",
+      " 턴 동안 턴 시작 시 [E] 를 얻습니다."
+    ]
+  },
+  "champ:IronFortressPower": {
+    "NAME": "현란한 꺾기: 수비",
+    "DESCRIPTIONS": [
+      "자세를 취할 때마다 #y수비 #y자세 의 #y기술 을",
+      " #b",
+      " 번 발동합니다."
+    ]
+  },
+  "champ:IronFortressVigorPower": {
+    "NAME": "현란한 꺾기: 광폭화",
+    "DESCRIPTIONS": [
+      "자세를 취할 때마다 #y광폭화 #y자세 의 #y기술 을",
+      " #b",
+      " 번 발동합니다."
+    ]
+  },
+  "champ:LastStandMod": {
+    "NAME": "최후의 자세",
+    "DESCRIPTIONS": [
+      "턴 시작 시 체력이 50% 이하라면 모든 해로운 효과를 제거하고 #y힘 을 #b",
+      " 얻습니다."
+    ]
+  },
+  "champ:GladiatorFormPower": {
+    "NAME": "검투사의 형상",
+    "DESCRIPTIONS": [
+      "#y기술 #y추가 #y효과 가 발동할 때마다 카드를 #b",
+      " 뽑습니다. #y마무리 #y추가 #y효과 가 발동할 때마다 다음 턴에 [E] 를 얻습니다.",
+      " 뽑습니다.  #y마무리 #y추가 #y효과 가 발동할 때마다 다음 턴에 #b",
+      " 번 [E] 를 얻습니다."
+    ]
+  },
+  "champ:NoBlockNextTurnPower": {
+    "NAME": "방패 던지기",
+    "DESCRIPTIONS": [
+      "다음 턴 #y방어도 를 얻을 수 없습니다.",
+      "다음 #b",
+      " 턴 동안 #y방어도 를 얻을 수 없습니다."
+    ]
+  },
+  "champ:UltimateStancePower": {
+    "NAME": "궁극의 회수",
+    "DESCRIPTIONS": [
+      "궁극의 자세가 이번 턴에 끝납니다.",
+      "궁극의 자세가 #b",
+      " 턴 남았습니다."
+    ]
+  },
+  "champ:EnGardePower": {
+    "NAME": "준비!",
+    "DESCRIPTIONS": [
+      "이번 턴에 #y방어도 를 모두 잃으면 다음 턴에 #y방어도 를 #b",
+      " 얻습니다."
+    ]
+  },
+  "champ:ParryPower": {
+    "NAME": "받아치기",
+    "DESCRIPTIONS": [
+      "이번 턴에 #y반격 이 발동하면 #y응수 카드를 한 장 얻습니다."
+    ]
+  },
+  "champ:BoomerangPower": {
+    "NAME": "부메랑",
+    "DESCRIPTIONS": [
+      "다음 턴 시작 시 ",
+      " 카드를 가져옵니다. 그 카드의 비용은 사용하기 전까지 #b0 이 됩니다."
+    ]
+  },
+  "champ:ResolvePower": {
+    "NAME": "피로",
+    "DESCRIPTIONS": [
+      "전투 종료 시 #y피로 로 잃은 체력을 회복합니다."
+    ]
+  },
+  "champ:DualPlaySrikePower": {
+    "NAME": "타격 돌풍",
+    "DESCRIPTIONS": [
+      "이번 턴에 다음으로 사용하는 #y타격 카드를 2번 사용합니다.",
+      "이번 턴에 ",
+      " 번까지 사용하는 #y타격 카드를 2번 사용합니다."
+    ]
+  }
+}

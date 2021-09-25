@@ -1,111 +1,111 @@
 {
   "Gremlin:CursedTome": {
     "OPTIONS": [
-      "[Take] #gObtain #gthe #gBook. #rAll #rGremlins #rLose #r"
+      "[가져간다] #g책을 #g얻습니다. #r모든 #r그렘린이 #r체력을 #r"
     ]
   },
   "Gremlin:BackToBasics": {
     "NAME": "",
     "DESCRIPTIONS": [
-      "A flexible mind is not burdened by doubt."
+      "융통성있는 정신은 의심에 굴하지 않습니다."
     ],
     "OPTIONS": [
-      "[Caprice] #gReplace all #gStrikes and #gDefends with #gShivs and #gWards.",
-      "[Locked] Requires a Strike or Defend."
+      "[변덕] #g모든 #g타격과 #g수비를 #g단도와 #g수호로 #g교체합니다.",
+      "[잠김] 타격과 수비가 필요합니다."
     ]
   },
   "Gremlin:KnowingSkull": {
     "OPTIONS": [
-      "[Information?] #gReveal #gthe #gBoss. #rAll #rGremlins #rLose #r",
-      "[Success?] #gGet #ga #gColorless #gCard. #rAll #rGremlins #rLose #r",
-      "[A Pick Me Up?] #gGet #ga #gPotion. #rAll #rGremlins #rLose #r",
-      " #gGold. #rAll #rGremlins #rLose #r",
-      "[How do I leave?] #rAll #rGremlins #rLose #r"
+      "[정보?] #g보스가 #g나타납니다. #r모든 #r그렘린이 #r체력을 #r",
+      "[성공하는 법?] #g무색 #g카드를 #g1개 #g얻습니다. #r모든 #r그렘린이 #r체력을 #r",
+      "[정신자극제?] #g포션을 #g1개 #g얻습니다. #r모든 #r그렘린이 #r영혼을 #r",
+      " #g잃습니다. #r모든 #r그렘린이 #r체력을 #r",
+      "[어디로 나가?] #r모든 #r그렘린이 #r체력을 #r"
 
     ]
   },
   "Gremlin:MatchingGame": {
     "DESCRIPTIONS": [
-      "\" #bTwelve cards! Match them to keep them! #bFive tries-\" NL NL  \" #bTen tries!\" you interrupt. NL NL The gremlin scowls. \" #bFive tries!\" NL NL \" #bEight.\" NL NL \" #bSix,\" he spits. \"And I hope you get #pCursed.\" NL NL You hope he gets #pCursed.",
-      "You complete the gremlin's game and look up. NL He ran away before you could get more #y~free~ #y~stuff!~ ",
-      "A gremlin is madly shuffling cards on a table. He seems to be offering #y~free~ #y~stuff.~ You want #y~free~ #y~stuff.~ "
+      "\" 카드는 #b12장! 짝을 맞추면 가져가도 된다! 기회는 #b5번- \" NL NL #b\"10번!\" 당신이 끼어듭니다. NL NL 그렘린이 노려봅니다. #b\"5번!\" NL NL #b\"여덟.\" NL NL #b\"6번,\" 그가 침을 뱉습니다. \"그리고 #p저주 도 받아 가야겠구나.\" NL NL 당신은 그가 #p저주받길 바랍니다.",
+      "당신은 그렘린의 게임을 마치고 올려다보았습니다. NL 더 #y~공짜로~ #y~더~ #y~챙기기도~ 전에 그는 도망쳐버렸습니다!",
+      "그렘린은 미친듯이 테이블 위의 카드를 섞고 있습니다. 그는 #y~공짜로~ ~물건을~ 주는 것 같습니다. 당신은 #y~공짜~ #y~물건이라면~ 놓칠 수 없죠."
     ]
   },
   "Gremlin:Nest": {
     "OPTIONS": [
-      "[Stay in Line] #gObtain Ritual Dagger. #rAll #rGremlins #rLose #r"
+      "[줄에 서 있는다] 의식용 단검 #g카드를 #g얻습니다. #r그렘린들이 #r체력을 #r"
     ]
   },
   "Gremlin:ScrapOoze": {
     "OPTIONS": [
-      "[Reach Inside] #rAll #rGremlins #rLose #r",
-      "[Deeper] #rAll #rGremlins #rLose #r"
+      "[뒤진다] #r모든 #r그렘린이 #r체력을 #r",
+      "[더 뻗는다] #r모든 #r그렘린이 #r체력을 #r"
     ]
   },
   "Gremlin:ScrapOozeReplacement": {
-    "NAME": "Scrap Ooze",
+    "NAME": "날붙이 수액",
     "DESCRIPTIONS": [
-      "As you walk into the room you hear a ~gurgling~ and the @grinding@ of metals. It's a #yScrap #yOoze! These funny little slimes always find #ygoodies. Even better, they are too slow and too weak to stop you from taking them! You know the best ways of getting around their spiky acid. Unfortunately, it is slow and takes some #rfocus.",
-      "Careful, careful. You avoid the scrapy bits and and the stabby bits. If only it weren't so #r@boring.@ NL But if you keep at it, you know you'll get a shiny #yrelic...",
-      "#gSuccess! NL After rummaging through the metal and burning acid, you finally grab hold of a #yrelic and yank it out. NL You pull your way out of the ooze clutching your new toy.",
-      "This is way too #rboring. What were you even doing again?",
-      "You decide to leave the area. NL The slime pays no attention, content with its meal."
+      "방으로 들어가 보니 ~콸콸~ ~흐르는~ ~소리~ 와 @철이@ @갈리는@ @소리@ 가 들립니다. #y날붙이 #y수액 이네요! 이 재미있는 작은 슬라임들은 항상 #y먹음직스러운 #y것들 을 찾아다닙니다. 더 좋은 건 그들이 느리고 너무 약해서 당신이 가져가도 된다는 거죠! 당신은 가시의 산성을 피하는 최적의 방법도 알고 있으니까요. 하지만 불행히도 물건을 가져가려면 약간의 #r평정심 과 #r집중력 이 필요합니다.",
+      "조심, 조심스럽게, 당신은 가시 부분과 날붙이 부분을 피해서 갑니다. 이거 참 #r@지루하네요.@ NL 하지만 계속하다 보면 눈부신 유물을 얻을 수 있을 것입니다...",
+      "#g성공이다! NL 당신은 날붙이와 불타는 산 속을 뒤적거린 끝에 #y유물을 붙잡아 꺼냈습니다. NL 새로운 장난감을 움켜쥐고 수액에서 손을 뺍니다.",
+      "이 방법은 너무 #r지루했습니다. 대체 무슨 짓을 한거죠?",
+      "당신은 이 곳을 벗어나기로 했습니다. NL 슬라임은 계속 날붙이를 삼키기만 할 뿐 당신에게 아무런 관심도 보이지 않습니다."
     ],
     "OPTIONS": [
-      "[Reach Carefully] #r",
-      "%: #rBecome #rCursed #r- #rScatterbrained. #g",
-      "%: #gFind #ga #gRelic.",
-      "[Leave]",
-      "[Be Careful] #r"
+      "[조심히 가져간다] #r",
+      "%: #r저주를 #r받습니다 #r- #r주의산만. #g",
+      "%: #g유물을 #g찾습니다.",
+      "[떠난다]",
+      "[조심한다] #r"
     ]
   },
   "Gremlin:SensoryStone": {
     "OPTIONS": [
-      "[Recall] #gAdd #g2 #gColorless #gcards #gto #gyour #gdeck. #rAll #rGremlins #rLose #r",
-      "[Recall] #gAdd #g3 #gColorless #gcards #gto #gyour #gdeck. #rAll #rGremlins #rLose #r"
+      "[회상] #g2장의 #g무색 #g카드 #b보상을 #g획득합니다. #r모든 #r그렘린이 #r체력을 #r",
+      "[회상] #g3장의 #g무색 #g카드 #b보상을 #g획득합니다. #r모든 #r그렘린이 #r체력을 #r"
     ]
   },
   "Gremlin:Trenchcoat": {
-    "NAME": "Suspicious Merchant",
+    "NAME": "수상쩍은 상인",
     "DESCRIPTIONS": [
-      "You come across a strange figure that looks suspiciously like five gremlins in a trench coat. NL \"Hello, traveller,\" the squeaky voice calls out. NL \"It is I, the #yfriendly #yMerchant, who is certainly not five gremlins in a trench coat. Would you like to purchase any of my ~fine~ ~wares~ that are definitely not stolen?\"",
-      "You cannot resist a sale, even from one a suspicious as the merchant. NL You make your purchase, but as soon as it is complete, your vendor bolts. NL NL In the distance you can almost make out a faint yell of frustration: #r\"Blasted, #rthieving #rGremlins!\".",
-      "You have no need to enrich the despicable merchant. You will keep your money to yourself. The Merchant flees as soon as it is clear you would not be partaking."
+      "당신은 트렌치코트 안에 다섯 그렘린이 서 있는 듯한 수상쩍은 자와 우연히 만났습니다. NL \"안녕, 여행자,\" 거슬리는 목소리로 불러세웁니다. NL \"나야 나, #y친절한 #y상인, 절대 트렌치코트 안에 그렘린 다섯 마리가 함께 있는 건 아니다. 완전 훔치지 않은 것 같은 ~양품들~ 좀 보고 가?\"",
+      "수상쩍은 상인의 물건일지라도 할인은 참을 수 없습니다. NL 구매를 마치자마자 상인은 바로 판을 접습니다. NL NL 멀리서 희미하게 화난 고함 소리가 들립니다. #r\"빌어먹을, #r그렘린들이 #r털어갔네요!\"",
+      "비열한 상인의 배를 채워줄 순 없죠. 당신은 짐을 챙깁니다. 당신이 가담하지 않자 상인은 곧바로 달아나버렸습니다."
     ],
     "OPTIONS": [
-      "[Buy] #rLose #r",
-      " #rGold",
-      ". #gObtain #g1 #grandom #gColorless #gCard.",
-      ". #gObtain #g2 #grandom #gColorless #gCards.",
-      ". #gObtain #g3 #grandom #gColorless #gCards.",
-      "[Leave]",
-      "[Locked] Requires: At least ",
-      " Gold.",
-      "[Refuse]"
+      "[산다] #r영혼을 #r",
+      " #r잃습니다",
+      ". #g무작위 #g무색 #g카드를 #g1장 #g얻습니다.",
+      ". #g무작위 #g무색 #g카드를 #g2장 #g얻습니다.",
+      ". #g무작위 #g무색 #g카드를 #g3장 #g얻습니다.",
+      "[떠난다]",
+      "[잠김] 요구 사항: 최소 ",
+      " 영혼.",
+      "[거절한다]"
     ]
   },
   "Gremlin:Vampires": {
     "DESCRIPTIONS": [
-      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~greedy~ ~ones,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~"
+      "조명이 없는 거리에서, 어둠의 의식을 치르고 있는 대여섯 명의 후드를 눌러싼 자들이 보입니다. 당신이 다가가자, 그들은 섬뜩한 미소를 지으며 돌아섰습니다. 그들 중 가장 키 큰 이는 송곳니가 길게 삐져나와 있었습니다. 그가 당신에게 창백한 손을 내밉니다. NL ~\"우리와~ ~함께~ ~하자~ ~탐욕스러운~ ~자여,~ ~첨탑의~ ~따스함을~ ~느낄~ ~수~ ~있다네.\"~"
     ]
   },
   "Gremlin:WheelGame": {
     "DESCRIPTIONS": [
-      "He lunges at you, but you are ready. NL You slash him open before he can get you with his shiv. NL You treat yourself to your prize, but sadly the Wheel disappears before you can loot it too."
+      "그렘린은 달려들지만 당신은 준비되어있습니다. NL 그렘린이 단도로 찌르기 전에 베어버립니다. NL 슬프게도 당신 맘대로 상을 뜯어가기도 전에 돌림판은 감쪽같이 사라졌습니다."
     ],
     "OPTIONS": [
-      "[Prize!] #gPREEMPTIVE #gSTRIKE!",
-      "[Loot]"
+      "[보상!] #g선빵필승!",
+      "[턴다]"
     ]
   },
   "Gremlin:WingStatue": {
     "OPTIONS": [
-      "[Pray] #gRemove #ga #gcard #gfrom #gyour #gdeck. #rAll #rGremlins #rLose #r"
+      "[기도] #g카드를 #g1장 #g덱에서 #g제거합니다. #r모든 #r그렘린들이 #r체력을 #r"
     ]
   },
   "Gremlin:WorldOfGoop": {
     "OPTIONS": [
-      " #gGold. #rAll #rGremlins #rLose #r"
+      " #g얻습니다. #r모든 #r그렘린들이 #r체력을 #r"
     ]
   }
 }

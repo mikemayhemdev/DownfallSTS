@@ -2,29 +2,29 @@
   "Slimebound:SlimedPotion": {
     "NAME": "점액 병",
     "DESCRIPTIONS": [
-      "점액을 #b",
+      "#y점액을 #b",
       " 부여합니다."
     ]
   },
   "Slimebound:SlimyTonguePotion": {
     "NAME": "점액질 엘릭서",
     "DESCRIPTIONS": [
-      "점액을 적용할때 마다 #b",
-      " 더 적용합니다."
+      "이번 전투에서 #y점액 을 부여할 때마다 #b",
+      " 만큼 더 부여합니다."
     ]
   },
   "Slimebound:SpawnSlimePotion": {
-    "NAME": "병 속의 군대",
+    "NAME": "병 속의 군단",
     "DESCRIPTIONS": [
-      "당신이 사용할 슬라임 슬롯 #b3 개를 얻습니다. NL #y거머리, #y진흙탕, 그리고 #y특공대 슬라임을 소환합니다. 체력을 소모하지 않습니다.",
-      "당신이 사용할 슬라임 슬롯 #b6 개를 얻습니다. NL  #b2 #y거머리, #b2 #y진흙탕, 그리고 #b2 #y특공대 슬라임을 소환합니다. 체력을 소모하지 않습니다."
+      "전문가를 포함한 무작위 슬라임을 #b",
+      " 마리 생성합니다."
     ]
   },
   "Slimebound:ThreeZeroPotion": {
-    "NAME": "수액충전된 음료",
+    "NAME": "수액 충전 음료",
     "DESCRIPTIONS": [
       "비용이 0인 무작위 카드를 #b",
-      " 개 손에 넣습니다."
+      " 장 얻습니다."
     ]
   }
 }

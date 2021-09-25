@@ -1,9 +1,21 @@
 [
   {
     "KEYS": [
-      "골드"
+      "Gold"
     ],
-    "VALUE": "영혼"
+    "VALUE": "Souls"
+  },
+  {
+    "KEYS": [
+      "gold"
+    ],
+    "VALUE": "souls"
+  },
+  {
+    "KEYS": [
+      "골드를"
+    ],
+    "VALUE": "영혼을"
   },
   {
     "KEYS": [

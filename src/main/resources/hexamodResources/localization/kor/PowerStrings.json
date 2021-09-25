@@ -1,90 +1,90 @@
 {
   "hexamod:AgainPower": {
-    "NAME": "재연소!",
+    "NAME": "다시!",
     "DESCRIPTIONS": [
-      "다음 턴이 끝날 때까지 #y확장할 수 없습니다.",
+      "이번 턴 종료 시 #y팽창 하지 않습니다.",
       "다음 #b",
-      " 턴이 끝날 때까지 #y확장할 수 없습니다."
+      " 턴까지 #y팽창 하지 않습니다."
     ]
   },
   "hexamod:ApocalypticArmorPower": {
-    "NAME": "종말의 날",
+    "NAME": "최후의 심판",
     "DESCRIPTIONS": [
-      "다음 번 지옥불 유령불꽃이 #y점화하고 모든 #b",
-      " 유령불꽃이 #y점화하면, 턴이 끝날 시 추가 턴을 가집니다.",
-      "지옥불 유령불꽃 #y점화하고 최소 #b"
+      "#y지옥 의 유령불꽃을 #y점화 하고 모든 #b",
+      " 개의 유령불꽃을 #y점화 한다면 턴 종료 시 추가 턴을 얻습니다.",
+      "#y지옥 의 유령불꽃을 #y점화 하고 적어도 #b"
     ]
   },
   "hexamod:ApplyBurnAtTurnStartOncePower": {
-    "NAME": "지연 불꽃",
+    "NAME": "지연된 불꽃",
     "DESCRIPTIONS": [
-      "다음 턴 시작시, 모든 적에게 #y영혼화상 #b",
+      "다음 턴 시작 시 적 전체에게 #y영혼 #y불꽃 을 #b",
       " 부여합니다."
     ]
   },
   "hexamod:BurnPerTurnPower": {
-    "NAME": "녹는 금속",
+    "NAME": "녹아내리는 금속",
     "DESCRIPTIONS": [
-      "턴이 시작되면 #y영혼화상 #b",
-      " 얻습니다. 이 효과는 #y영혼화상이 폭발하면 제거됩니다."
+      "이 적의 #y영혼 #y화상 이 체력을 잃게 하고 제거된다면 #y영혼 #y화상 을 #b",
+      " 부여합니다."
     ]
   },
   "hexamod:BurnPower": {
-    "NAME": "영혼화상",
+    "NAME": "영혼 화상",
     "DESCRIPTIONS": [
       "#b",
-      " 턴 후, 체력 #b",
-      " 턴 후, 체력 #b",
-      " 잃은 후 #y영혼화상 을 제거합니다."
+      " 턴 후 체력을 #b",
+      " 턴 후 체력을 #b",
+      " 잃습니다. 그 후 #y영혼 #y화상 을 제거합니다."
     ]
   },
   "hexamod:BurnvenomPower": {
     "NAME": "도깨비불 무기",
     "DESCRIPTIONS": [
-      "막히지 않는 피해를 가하면, #y영혼화상 #b",
-      " 적용시킵니다."
+      "막히지 않은 피해를 줄 때마다 #y영혼 #y화상 을 #b",
+        " 부여합니다."
     ]
   },
   "hexamod:CommonPostCombatPower": {
-    "NAME": "전투 후 카드생성",
+    "NAME": "봉인의 대가: 카드",
     "DESCRIPTIONS": [
-      "전투 후, 추가 #y일반카드 #b",
+      "전투 종료 시 추가로 카드를 #b",
       " 장 얻습니다.",
       " 장 얻습니다."
     ]
   },
   "hexamod:CrispyPower": {
-    "NAME": "추가 불태우기",
+    "NAME": "바싹 굽기",
     "DESCRIPTIONS": [
-      "#y영혼화상 적용시 추가로 #b",
-      " 부여합니다."
+      "#y영혼 #y화상 의 부여량이 #b",
+      " 증가합니다."
     ]
   },
   "hexamod:EnhancePower": {
-    "NAME": "작열",
+    "NAME": "극열",
     "DESCRIPTIONS": [
-      "다음 #b",
-      " 차례, 유령불꽃에 의해 적용되는 방어도, 영혼화상, 피해를 증가시킵니다.."
+      "유령불꽃의 #y점화 시 피해량, #y영혼 #y화상, #y방어도 가 #b",
+      " 증가합니다."
     ]
   },
   "hexamod:EtherealRefundPower": {
     "NAME": "휘발성 환불",
     "DESCRIPTIONS": [
-      "이번 턴 #y휘발성 카드를 사용할 때마다, ",
-      " 얻습니다."
+      "#y휘발성 카드를 사용할 때마다 ",
+      " 를 얻습니다."
     ]
   },
   "hexamod:FuturePower": {
-    "NAME": "스피드런",
+    "NAME": "스피드 런",
     "DESCRIPTIONS": [
-      "#y확장할 때마다, #y방어도 #b",
+      "#y팽창 할 때마다 #y방어도 를 #b",
       " 얻습니다."
     ]
   },
   "hexamod:FutureUpgradePower": {
-    "NAME": "전투 경험",
+    "NAME": "봉인의 대가: 강화",
     "DESCRIPTIONS": [
-      "전투 후, 덱에 있는 무작위 카드 #b",
+      "전투 종료 시 무작위 카드를 #b",
       " 장 #y강화합니다.",
       " 장 #y강화합니다."
     ]
@@ -92,76 +92,78 @@
   "hexamod:GainStrengthThatGoesAwayPower": {
     "NAME": "지금 당장",
     "DESCRIPTIONS": [
-      "턴 시작시, #y힘 #b",
-      " 얻습니다. #y확장하거나 #y수축하면 이 #y힘을 잃습니다."
+      "만약 턴 시작 혹은 종료 시 같은 유령불꽃이 점화되어 있다면 #y힘 을 #b",
+      " 얻습니다."
     ]
   },
   "hexamod:GhostFlameBarrierPower": {
     "NAME": "유령불꽃 장벽",
     "DESCRIPTIONS": [
-      "공격당하면, 공격자에게 #y영혼화상 #b",
+      "공격을 받을 때마다 공격한 대상에게 #y영혼 #y화상 을 #b",
       " 부여합니다."
     ]
   },
   "hexamod:GiftsFromTheDeadPower": {
-    "NAME": "귀신의 선물",
+    "NAME": "카드 선물",
     "DESCRIPTIONS": [
-      "#y휘발성 카드를 #y소멸시킬 때마다, 다음 턴 ",
-      " 얻습니다."
+      "턴 시작 시  ",
+      " 무작위 #y사후세계 카드를 ",
+      " 장 #y복구 합니다.",
+      " 장 #y복구 합니다."
     ]
   },
   "hexamod:GiftsFromTheDeadPowerPlus": {
-    "NAME": "귀신의 선물+",
+    "NAME": "에너지 선물",
     "DESCRIPTIONS": [
-      "#y휘발성 카드를 #y소멸시킬 때마다, 다음 턴 카드 ",
-      " 장 뽑고",
-      " 장 뽑고",
-      " 얻습니다."
+      "#y휘발성 카드가 #y소멸 될 때마다 다음 턴에 ",
+      " 를 얻습니다."
     ]
   },
   "hexamod:GoldPostCombatPower": {
-    "NAME": "전투 후 금화",
+    "NAME": "봉인의 대가: 영혼",
     "DESCRIPTIONS": [
-      "이 전투로 얻는 골드를 #b",
-      " 증가시킵니다."
+      "이번 전투 영혼 보상이 #b",
+      " 증가합니다."
     ]
   },
   "hexamod:HexalevelPower": {
-    "NAME": "육각레벨",
+    "NAME": "지옥의 형상",
     "DESCRIPTIONS": [
-      "턴 시작시, #y작열 #b",
+      "턴 시작 시 #y극열 을 #b",
       " 얻습니다."
     ]
   },
   "hexamod:LoseEnhanceInTurnsPower": {
-    "NAME": "불타오르기",
+    "NAME": "예열",
     "DESCRIPTIONS": [
-      "턴 종료시, #y작열 #b",
+      "턴 종료 시 #y극열 을 #b",
       "#b",
-      " 턴 동안, #y작열 #b",
+      " 턴 후에 #y극열 을 #b",
       " 잃습니다."
     ]
   },
   "hexamod:ParanormalFormPower": {
-    "NAME": "귀신의 형상",
+    "NAME": "폴터가이스트",
     "DESCRIPTIONS": [
-      "#y휘발성 카드를 사용할 때마다, 무작위 적에게 피해 #b",
-      " 가합니다."
+      "#y사후세계 카드를 사용할 때마다 무작위 적에게 피해를 #b",
+      " 줍니다."
     ]
   },
   "hexamod:PastPower": {
     "NAME": "악마의 춤",
     "DESCRIPTIONS": [
-      "매턴 처음 #y수축할 때마다, ",
-      " 얻고 카드 #b",
-      " 장 뽑습니다.",
-      " 장 뽑습니다."
+      "매 턴 #b",
+      " 처음 ",
+      " 번까지 ",
+      "#y수축 하면 [E] 를 얻고 카드를 1장 뽑습니다. NL 이번 턴에 #b",
+      " 번 #y수축 했습니다.",
+      " 번 #y수축 했습니다."
     ]
   },
   "hexamod:PotionPostCombatPower": {
-    "NAME": "전투 후 포션",
+    "NAME": "봉인의 대가: 포션",
     "DESCRIPTIONS": [
-      "전투 후, 추가 포션 #b",
+      "전투 종료 시 추가 포션을 #b",
       " 개 얻습니다.",
       " 개 얻습니다."
     ]
@@ -169,14 +171,14 @@
   "hexamod:RadiantPower": {
     "NAME": "불꽃 복사",
     "DESCRIPTIONS": [
-      "유령불꽃이 #y점화할 때마다, 무작위 적에게 #y영혼화상 #b",
+      "유령불꽃을 #y점화 할 때마다 무작위 적에게 #y영혼 #y화상 을 #b",
       " 부여합니다."
     ]
   },
   "hexamod:SealPostCombatPower": {
-    "NAME": "전투 후 봉인",
+    "NAME": "봉인의 대가: 봉인",
     "DESCRIPTIONS": [
-      "전투 후, 추가 #y봉인 카드 #b",
+      "전투 종료 시 추가로 #y봉인 카드를 #b",
       " 장 얻습니다.",
       " 장 얻습니다."
     ]
@@ -184,20 +186,20 @@
   "hexamod:TimeStopPower": {
     "NAME": "종말의 도래",
     "DESCRIPTIONS": [
-      "턴 종료시, 즉시 또다른 턴을 시작합니다. NL 에너지와 방어도가 유지됩니다."
+      "턴 종료 시 즉시 다음 턴을 시작합니다. NL [E] 와 #y방어도 가 유지됩니다."
     ]
   },
   "hexamod:VolcanoVisagePower": {
     "NAME": "화산의 얼굴",
     "DESCRIPTIONS": [
-      "턴 시작시, 모든 적에게 #y영혼화상 #b",
-      " 적용합니다."
+      "턴 시작 시 적 전체에게 #y영혼 #y화상 을 #b",
+      " 부여합니다."
     ]
   },
   "hexamod:LivingBombPower": {
     "NAME": "살아있는 폭탄",
     "DESCRIPTIONS": [
-      "다음 번 목표의 #y영혼화상이 폭발하면, 모든 적에게 영향을 끼칩니다."
+      "대상의 #y영혼 #y화상 이 체력을 잃게 하고 제거된다면 적 전체를 대상으로 체력을 잃게 합니다."
     ]
   }
 }

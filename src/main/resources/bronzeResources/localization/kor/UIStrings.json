@@ -1,0 +1,52 @@
+{
+  "bronze:SpecificCardReward": {
+    "TEXT": [
+      "덱에 ",
+      " 카드를 추가",
+      "카드를 선택하십시오"
+    ]
+  },
+  "bronze:UnplayableMod": {
+    "TEXT": [
+      "사용불가. NL ",
+      "오류_주소_공백"
+    ]
+  },
+  "bronze:EncodeAndShuffleMod": {
+    "TEXT": [
+      " NL bronze:부호화 되면 이 카드를 복사해 버린 카드 더미에 섞어 넣습니다."
+    ]
+  },
+  "bronze:DoublePlayModifier": {
+    "TEXT": [
+      " NL 이 카드를 다시 사용합니다."
+    ]
+  },
+  "bronze:MiscStrings": {
+    "TEXT": [
+      "손에 가져올 카드를 고르십시오. 그 카드는 보존됩니다.",
+      " - 영구적으로 #y광신자 #y타격의 피해량을 #b",
+      " 증가시킵니다.",
+      "오류: 순차열_공백",
+      " - #y무한 #y반복 을 복사해 얻고 피해량을 #b",
+      " 증가시킵니다.",
+      " 변화시킬 카드를 고르십시오.",
+      " 부호화시킬 카드를 고르십시오.",
+      ""
+    ]
+  },
+  "bronze:AutoTextHelper": {
+    "TEXT": [
+      " NL bronze:컴파일",
+      "bronze:컴파일",
+      " NL bronze:부호화 합니다.",
+      "bronze:부호화 합니다. NL "
+    ]
+  },
+  "bronze:CompileDisplayPanel": {
+    "TEXT": [
+      "컴파일 시:",
+      "bronze:컴파일"
+    ]
+  }
+}

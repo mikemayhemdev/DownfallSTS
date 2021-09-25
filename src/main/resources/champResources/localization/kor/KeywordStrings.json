@@ -1,0 +1,101 @@
+[
+  {
+    "PROPER_NAME": "기술",
+    "NAMES": [
+      "기술",
+      "technique",
+      "techniques",
+      "champ:[crown_icon]",
+      "[crown_icon]"
+    ],
+    "DESCRIPTION": "해당 #y자세 를 취하면 해당 추가 효과를 얻게 해줍니다."
+  },
+  {
+    "PROPER_NAME": "연계",
+    "NAMES": [
+      "연계",
+      "연계가",
+      "combo"
+    ],
+    "DESCRIPTION": "이번 턴에 설명창에 적혀있는 #y자세 카드를 사용하면 발동되는 추가 효과입니다."
+  },
+  {
+    "PROPER_NAME": "마무리",
+    "NAMES": [
+      "마무리",
+      "finisher",
+      "finishers",
+      "[fist_icon]",
+      "champ:[fist_icon]"
+    ],
+    "DESCRIPTION": "자세를 취해야만 사용할 수 있습니다. NL 마무리 카드를 사용하면 #y자세 에서 벗어나고 마무리 추가 효과가 적용됩니다."
+  },
+  {
+    "PROPER_NAME": "반격",
+    "NAMES": [
+      "반격",
+      "반격이",
+      "반격을",
+      "반격한",
+      "반격만큼",
+      "counter"
+    ],
+    "DESCRIPTION": "#y공격 을 받을 때 공격한 대상에게 피해를 줍니다."
+  },
+  {
+    "PROPER_NAME": "수비",
+    "NAMES": [
+      "수비",
+      "defensive",
+      "defensive."
+    ],
+    "DESCRIPTION": "#y자세. NL #y기술 추가 효과: #y반격 을 #b4 얻습니다. NL #y마무리 추가 효과: #y방어도 를 #b12 얻습니다."
+  },
+  {
+    "PROPER_NAME": "광폭화",
+    "NAMES": [
+      "광폭화",
+      "berserker",
+      "berserker."
+    ],
+    "DESCRIPTION": "#y자세.  NL #y기술 추가 효과: #y활력 을 #b4 얻습니다. NL #y마무리 추가 효과: #y힘 을 #b1 얻습니다."
+  },
+  {
+    "PROPER_NAME": "검투사",
+    "NAMES": [
+      "검투사",
+      "gladiator",
+      "gladiator."
+    ],
+    "DESCRIPTION": "#y자세.  NL #y기술 추가 효과: 카드를 한 장 뽑습니다. NL #y마무리 추가 효과: 다음 턴에 카드를 #b1 장 뽑고 [E] 를 얻습니다. 내 턴을 종료합니다."
+  },
+  {
+    "PROPER_NAME": "궁극의 자세",
+    "NAMES": [
+      "궁극",
+      "궁극의",
+      "ultimate",
+      "ultimate."
+    ],
+    "DESCRIPTION": "#y자세. #y수비와 #y광폭화 자세를 모두 취한 것으로 취급합니다. NL 마무리로 자세를 벗어나지 않습니다. NL 다른 #y자세 로 변경할 수 없습니다."
+  },
+  {
+    "PROPER_NAME": "피로",
+    "NAMES": [
+      "피로",
+      "피로를",
+      "fatigue",
+      "fatigued"
+    ],
+    "DESCRIPTION": "체력을 잃습니다. 전투가 끝난 후 #y피로 로 잃은 체력을 회복합니다."
+  },
+  {
+    "PROPER_NAME": "자세",
+    "NAMES": [
+      "자세",
+      "자세의",
+      "자세를"
+    ],
+    "DESCRIPTION": "동시에 하나의 자세만 취할 수 있습니다."
+  }
+]

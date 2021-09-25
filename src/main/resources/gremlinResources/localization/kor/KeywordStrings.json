@@ -1,64 +1,127 @@
 [
   {
     "NAMES": [
+      "분개",
+      "분개를",
       "agony"
     ],
-    "DESCRIPTION": "Creatures in #yAgony deal #b80% less damage with Attacks."
+    "PROPER_NAME": "분개",
+    "DESCRIPTION": "적의 피해량을 #b80% 감소시킵니다."
   },
   {
     "NAMES": [
-      "cripple",
-      "crippled"
+      "무력화",
+      "cripple"
     ],
-    "DESCRIPTION": "#yCrippled enemies can no longer lose #yWeak. At the end of their turn, they lose HP equal to their #yWeak."
+    "PROPER_NAME": "무력화",
+    "DESCRIPTION": "#y무력화 된 적들은 #y약화 를 잃지 않습니다. 적 턴 종료 시 보유한 #y약화 만큼 체력을 잃습니다."
   },
   {
     "NAMES": [
-      "echo",
+      "메아리",
+      "메아리를",
+      "echo"
+    ],
+    "PROPER_NAME": "메아리",
+    "DESCRIPTION": "#y휘발성 과 #y소멸 효과를 추가해 복사한 카드입니다."
+  },
+  {
+    "NAMES": [
+      "메아리들",
       "echoes"
     ],
-    "DESCRIPTION": "Echoes are copies of cards with Ethereal and Exhaust."
+    "PROPER_NAME": "메아리",
+    "DESCRIPTION": "#y휘발성 과 #y소멸 효과가 추가된 복사한 카드들입니다."
   },
   {
     "NAMES": [
-      "fat gremlin", "fat_gremlin"
+      "뚱뚱한 그렘린",
+      "뚱뚱한_그렘린",
+      "뚱뚱한_그렘린으로",
+      "fat gremlin",
+      "fat_gremlin"
     ],
-    "DESCRIPTION": "Whenever you play an attack, apply #b1 #yWeak to all targets."
+    "PROPER_NAME": "뚱뚱한 그렘린",
+    "DESCRIPTION": "#y공격 카드를 사용할 때마다 공격한 대상에게 #y약화 를 #b1 부여합니다."
   },
   {
     "NAMES": [
-      "gremlin wizard", "gremlin_wizard"
+      "마법사 그렘린",
+      "마법사_그렘린",
+      "마법사_그렘린으로",
+      "gremlin wizard",
+      "gremlin_wizard"
     ],
-    "DESCRIPTION": "Whenever you play a skill, gain #b1 #yWiz."
+    "PROPER_NAME": "마법사 그렘린",
+    "DESCRIPTION": "#y스킬 카드를 사용할 때마다 #y마법 을 #b1 얻습니다."
   },
   {
     "NAMES": [
-      "mad gremlin", "mad_gremlin"
+      "화난 그렘린",
+      "화난_그렘린",
+      "화난_그렘린으로",
+      "mad gremlin",
+      "mad_gremlin"
     ],
-    "DESCRIPTION": "Gain #b2 #yTemporary #yStrength when attacked."
+    "PROPER_NAME": "화난 그렘린",
+    "DESCRIPTION": "공격을 받을 때마다 힘을 #b2 얻습니다. 내 턴이 끝날 때 이 효과로 얻은 힘을 잃습니다."
   },
   {
     "NAMES": [
-      "shield gremlin", "shield_gremlin"
+      "방패 그렘린",
+      "방패_그렘린",
+      "방패_그렘린으로",
+      "shield gremlin",
+      "shield_gremlin"
     ],
-    "DESCRIPTION": "Whenever you play a skill, gain #b2 #yBlock."
+    "PROPER_NAME": "방패 그렘린",
+    "DESCRIPTION": "#y스킬 카드를 사용할 때마다 #y방어도 를 #b2 얻습니다."
   },
   {
     "NAMES": [
-      "sneaky gremlin", "sneaky_gremlin"
+      "교활한 그렘린",
+      "교활한_그렘린",
+      "교활한_그렘린으로",
+      "sneaky gremlin",
+      "sneaky_gremlin"
     ],
-    "DESCRIPTION": "Whenever you play an attack, deal #b3 damage to a random enemy."
+    "PROPER_NAME": "교활한 그렘린",
+    "DESCRIPTION": "#y공격 카드를 사용할 때마다 무작위 적에게 피해를 #b3 줍니다."
   },
   {
     "NAMES": [
+      "교체",
+      "교체합니다",
+      "교체하고",
+      "교체할",
       "swap"
     ],
-    "DESCRIPTION": "Switch places with another character. Does nothing if there is no valid target."
+    "PROPER_NAME": "교체",
+    "DESCRIPTION": "다른 그렘린과 자리를 바꿉니다. 유효한 대상이 없는 경우 아무 효과도 없습니다."
   },
   {
     "NAMES": [
+      "마법",
+      "마법을",
       "wiz"
     ],
-    "DESCRIPTION": "When you have at least three stacks of Wiz, attacks will consume all stacks to deal 10 additional damage."
+    "PROPER_NAME": "마법",
+    "DESCRIPTION": "#y마법 이 #b3 이상 쌓이면 #y공격 카드를 쓸 때 모든 #y마법 이 소모되고 피해량을 10 증가시킵니다."
+  },
+  {
+    "NAMES": [
+      "시작"
+    ],
+    "PROPER_NAME": "시작",
+    "DESCRIPTION": "처음으로 도전하면 얻는 캐릭터의 기본 카드 10장입니다."
+  },
+  {
+    "NAMES": [
+      "귀족 그렘린",
+      "귀족_그렘린",
+      "귀족_그렘린으로"
+    ],
+    "PROPER_NAME": "귀족 그렘린",
+    "DESCRIPTION": "매 턴 시작 시 귀족 그렘린의 카드를 #b3 장 얻습니다. #y교체 할 수 없습니다. 모든 #y임시 #y체력 을 잃는다면 #y임시 #y체력 을 초과하는 피해를 막아주고 원래 그렘린으로 돌아옵니다."
   }
 ]

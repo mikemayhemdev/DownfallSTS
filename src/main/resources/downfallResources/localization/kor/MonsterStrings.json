@@ -1,7 +1,7 @@
 {
   "downfall:ChangingTotem": {
     "MOVES": [
-      "변형의 시선"
+      "Transformative Gaze"
     ],
     "NAME": "변화의 머리",
     "DIALOG": [
@@ -10,7 +10,7 @@
   },
   "downfall:ForgetfulTotem": {
     "MOVES": [
-      "건망증 시선"
+      "Forgetful Stare"
     ],
     "NAME": "망각의 머리",
     "DIALOG": [
@@ -19,7 +19,7 @@
   },
   "downfall:GrowingTotem": {
     "MOVES": [
-      "성장 빔"
+      "Growth Beam"
     ],
     "NAME": "성장의 머리",
     "DIALOG": [
@@ -28,9 +28,9 @@
   },
   "downfall:FleeingMerchant": {
     "MOVES": [
-      "영혼 훔치기"
+      "Soul Steal"
     ],
-    "NAME": "성장의 머리",
+    "NAME": "영혼 강탈",
     "DIALOG": [
       ""
     ]
@@ -40,9 +40,9 @@
     ],
     "NAME": "도적",
     "DIALOG": [
-      "~이봐,~ 넌 돈이 없다고오!",
-      "@안돼애애애애!@",
-      "넌 오늘 죽을 거라고, 멍청아."
+      "~어이,~ 돈이 없잖아!",
+      "@안돼에에에에에!@",
+      "오늘이 네 제삿날이다, 멍청아."
     ]
   },
   "downfall:MuggerAlt": {
@@ -50,8 +50,36 @@
     ],
     "NAME": "강도",
     "DIALOG": [
-      "놈에게 한 수 가르쳐 주지.",
-      "제대로 혼내주마!"
+      "한 수 가르쳐주지.",
+      "혼쭐을 내주마!"
+    ]
+  },
+  "downfall:Fortification": {
+    "MOVES": [
+    ],
+    "NAME": "요새",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomRed": {
+    "MOVES": [
+    ],
+    "NAME": "그물버섯",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomPurple": {
+    "MOVES": [
+    ],
+    "NAME": "섯버섯",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomWhite": {
+    "MOVES": [
+    ],
+    "NAME": "말불버섯",
+    "DIALOG": [
     ]
   }
 }

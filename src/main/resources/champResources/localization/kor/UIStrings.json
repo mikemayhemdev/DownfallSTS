@@ -1,0 +1,36 @@
+{
+  "champ:SealCommonReward": {
+    "TEXT": [
+      "덱에 일반 카드 추가"
+    ]
+  },
+  "champ:SealSealReward": {
+    "TEXT": [
+      "덱에 봉인 추가"
+    ]
+  },
+  "champ:TechniqueMod": {
+    "TEXT": [
+      "champ:기술. NL "
+    ]
+  },
+  "champ:OpenerMod": {
+    "TEXT": [
+      " NL champ:광폭화 자세를 취합니다.",
+      " NL champ:수비 자세를 취합니다.",
+      "champ:검투사 자세를 취합니다 NL "
+    ]
+  },
+  "champ:RetainCardMod": {
+    "TEXT": [
+      "보존. NL "
+    ]
+  },
+  "champ:EnchantUI": {
+    "TEXT": [
+      "비용이 0이 됩니다.",
+      "피해량이 증가합니다.",
+      "방어도 가 증가합니다."
+    ]
+  }
+}

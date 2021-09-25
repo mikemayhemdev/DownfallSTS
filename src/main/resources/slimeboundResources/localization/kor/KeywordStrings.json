@@ -1,184 +1,269 @@
 [
   {
     "NAMES": [
-      "흡수"
+      "흡수",
+      "흡수할",
+      "흡수한",
+      "흡수된",
+      "흡수합니다",
+      "absorb",
+      "absorbing",
+      "absorbed"
     ],
     "PROPER_NAME": "흡수",
-    "DESCRIPTION": "당신을 따르는 #y슬라임과 수동으로 재결합하며, #y분열 할 때 잃은 최대 HP를 돌려받으며 #y힘 1 얻습니다."
+    "DESCRIPTION": "가장 최근에 생성한 #y슬라임 을 흡수하고 #y힘 을 1 얻습니다."
   },
   {
     "NAMES": [
-      "분열"
+      "분열",
+      "분열하면",
+      "분열하고",
+      "분열합니다",
+      "split",
+      "splitting"
     ],
     "PROPER_NAME": "분열",
-    "DESCRIPTION": "체력을 4 잃고 슬라임 부하를 하나 생성합니다. 슬라임은 매턴 시작시 공격합니다. 슬라임이 살아있는 동안 최대 체력을 4 잃습니다. NL NL 만약 빈 슬라임 슬롯이 없다면, 가장 오래된 슬라임이 자동으로 흡수되며 당신에게 힘 1 부여합니다."
+    "DESCRIPTION": "#y슬라임 부하를 생성합니다. 생성된 슬라임은 매 턴 시작 시 행동합니다. NL NL 만약 빈 슬롯이 없다면 가장 오래된 슬라임이 #y흡수 되며 #y힘 을 1 얻습니다."
   },
   {
     "NAMES": [
-      "점액"
+      "점액",
+      "점액을",
+      "점액의",
+      "점액만큼",
+      "goop",
+      "gooped"
     ],
     "PROPER_NAME": "점액",
-    "DESCRIPTION": "다음 공격이 점액 수치만큼 추가 데미지를 주며 모든 점액을 제거하며, 모든 소비 효과를 발동시킵니다."
+    "DESCRIPTION": "#y점액 을 보유한 적 공격 시 모든 #y점액 을 제거하고 #y점액 만큼 피해량이 #b1 씩 증가합니다. NL 모든 #y소비 효과를 발동시킵니다."
   },
   {
     "NAMES": [
+      "potency",
+      "잠재력을",
       "잠재력"
     ],
     "PROPER_NAME": "잠재력",
-    "DESCRIPTION": "생성한 슬라임들의 피해량을 증가시킵니다."
+    "DESCRIPTION": "생성한 모든 슬라임의 피해량을 증가시킵니다."
   },
   {
     "NAMES": [
-      "명령"
+      "명령",
+      "명령을",
+      "명령하면",
+      "명령합니다",
+      "command",
+      "commands"
     ],
     "PROPER_NAME": "명령",
-    "DESCRIPTION": "가장 우측 부하 슬라임에게 공격을 명령합니다."
+    "DESCRIPTION": "부하 슬라임들이 공격합니다."
   },
   {
     "NAMES": [
       "불머리 슬라임",
-      "불머리_슬라임"
+      "불머리_슬라임",
+      "torchhead slime",
+      "torchhead_slime"
     ],
     "PROPER_NAME": "불머리 슬라임",
-    "DESCRIPTION": "매턴마다 #b6 피해를 줍니다. 잠재력으로부터 두 배의 효과를 얻습니다."
+    "DESCRIPTION": "매 턴 피해를 #b6 줍니다. 내 증가된 #y힘 만큼 피해량이 추가되는 슬라임입니다."
   },
   {
     "NAMES": [
       "싸움꾼 슬라임",
-      "싸움꾼_슬라임"
+      "싸움꾼_슬라임",
+      "bruiser slime",
+      "bruiser_slime",
+      "bruiser slimes",
+      "bruiser_slimes",
+      "bruiser"
     ],
     "PROPER_NAME": "싸움꾼 슬라임",
-    "DESCRIPTION": "매턴마다 #b5 피해를 주는 슬라임입니다."
+    "DESCRIPTION": "매 턴 피해를 #b5 주는 슬라임입니다."
   },
   {
-      "NAMES": [
+    "NAMES": [
       "광신자 슬라임",
-      "광신자_슬라임"
+      "광신자_슬라임",
+      "cultist slime",
+      "cultist_slime"
     ],
     "PROPER_NAME": "광신자 슬라임",
-    "DESCRIPTION": "매턴 #b6 피해를 주며, 턴이 끝나면 피해량이 1 증가합니다."
+    "DESCRIPTION": "매 턴 피해를 #b6 주고 턴이 끝나면 피해량이 #b1 증가하는 슬라임입니다."
   },
   {
     "NAMES": [
       "거머리 슬라임",
-      "거머리_슬라임"
+      "거머리_슬라임",
+      "leeching slime",
+      "leeching_slime",
+      "leeching slimes",
+      "leeching_slimes",
+      "leeching"
     ],
     "PROPER_NAME": "거머리 슬라임",
-    "DESCRIPTION": "매턴 #b2 피해를 주며 #b2 방어도 를 주는 슬라임 입니다."
+    "DESCRIPTION": "매 턴 피해를 #b1 주고 #y방어도 를 #b3 주는 슬라임입니다."
   },
   {
     "NAMES": [
       "특공대 슬라임",
-      "특공대_슬라임"
+      "특공대_슬라임",
+      "guerilla slime",
+      "guerilla_slime",
+      "guerilla slimes",
+      "guerilla_slimes",
+      "guerilla"
     ],
     "PROPER_NAME": "특공대 슬라임",
-    "DESCRIPTION": "매턴마다 모든 적에게 #b3 피해를 가합니다."
+    "DESCRIPTION": "매 턴 적 전체에게 피해를 #b3 주는 슬라임입니다."
   },
   {
     "NAMES": [
       "진흙탕 슬라임",
-      "진흙탕_슬라임"
+      "진흙탕_슬라임",
+      "mire slime",
+      "mire_slime",
+      "mire slimes",
+      "mire_slimes",
+      "mire"
     ],
     "PROPER_NAME": "진흙탕 슬라임",
-    "DESCRIPTION": "매턴 #b2 피해를 주고 점액 #b2 부여하는 슬라임 입니다."
+    "DESCRIPTION": "매 턴 피해를 #b2 주고 #y점액 을 #b2 부여하는 슬라임입니다."
   },
   {
     "NAMES": [
       "청동 슬라임",
-      "청동_슬라임"
+      "청동_슬라임",
+      "bronze slime",
+      "bronze_slime"
     ],
     "PROPER_NAME": "청동 슬라임",
-    "DESCRIPTION": "매턴 #b4 피해를 주고 #b4 방어도 를 얻습니다."
+    "DESCRIPTION": "매 턴 피해를 #b4 주고 #y방어도 를 #b4 주는 슬라임입니다."
   },
   {
     "NAMES": [
-      "핥기"
+      "핥기",
+      "lick"
     ],
     "PROPER_NAME": "핥기",
-    "DESCRIPTION": "여러가지 약화를 거는 비용 0 의 카드입니다."
+    "DESCRIPTION": "여러 부가 효과와 #y점액 을 부여하는 비용 0 카드입니다."
   },
   {
     "NAMES": [
       "유령불꽃 슬라임",
-      "유령불꽃_슬라임"
+      "유령불꽃_슬라임",
+      "ghostflame slime",
+      "ghostflame_slime"
     ],
     "PROPER_NAME": "유령불꽃 슬라임",
-    "DESCRIPTION": "매턴마다 #b3 피해와 #b3 #y화상을 가합니다."
+    "DESCRIPTION": "매 턴 피해를 #b3 주고 #y영혼화상 을 #b3 부여합니다."
   },
   {
     "NAMES": [
-      "변형"
+      "변형",
+      "morph"
     ],
     "PROPER_NAME": "변형",
-    "DESCRIPTION": "무작위 자신의 클래스 카드로 변화시킵니다, 종류에 상관없이 비용이 #b1 감소합니다."
+    "DESCRIPTION": "무작위 대왕 슬라임 카드로 변화시키고 해당 비용을 #b1 감소시킵니다."
   },
   {
     "NAMES": [
-      "둔화"
+      "둔화",
+      "slow"
     ],
     "PROPER_NAME": "둔화",
-    "DESCRIPTION": "이번턴에 사용한 카드 한 장당 #b10% 추가 피해를 받습니다."
+    "DESCRIPTION": "이번 턴에 사용한 카드 한 장당 받는 피해량이 #b10% 증가합니다."
   },
   {
     "NAMES": [
-      "태클"
+      "태클",
+      "태클의",
+      "tackle",
+      "tackles"
     ],
     "PROPER_NAME": "태클",
-    "DESCRIPTION": "높은 피해와 함께 당신에게도 약간의 피해를 주는 강력한 공격입니다."
+    "DESCRIPTION": "강력한 #y공격 과 함께 반동으로 약간의 피해를 받는 카드입니다."
   },
   {
     "NAMES": [
       "첨탑 보스",
-      "첨탑_보스"
+      "첨탑_보스",
+      "spire boss",
+      "spire_boss"
     ],
     "PROPER_NAME": "첨탑 보스",
-    "DESCRIPTION": "첨탑의 보스들에게서 영감을 얻은 강력한 0 코스트 카드들입니다."
+    "DESCRIPTION": "첨탑의 보스들에게 영감을 얻은 강력한 0 비용 카드들입니다."
   },
   {
     "NAMES": [
       "경호원 슬라임",
-      "경호원_슬라임"
+      "경호원_슬라임",
+      "protector slime",
+      "protector_slime"
     ],
-    "PROPER_NAME": "수호자 슬라임",
-    "DESCRIPTION": "매턴마다 #b2 피해를 주며 #b6 #y방어도 얻습니다."
+    "PROPER_NAME": "경호원 슬라임",
+    "DESCRIPTION": "매 턴 피해를 #b2 주고 #y방어도 를 #b6 주는 슬라임입니다."
   },
   {
     "NAMES": [
       "욕쟁이 슬라임",
-      "욕쟁이_슬라임"
+      "욕쟁이_슬라임",
+      "insulting slime",
+      "insulting_slime"
     ],
-    "PROPER_NAME": "챔피언 슬라임",
-    "DESCRIPTION": "매턴마다 #b4 피해와 #b1 #y취약 가하는 슬라임입니다."
+    "PROPER_NAME": "욕쟁이 슬라임",
+    "DESCRIPTION": "매 턴 피해를 #b4 주고 #y취약 을 #b1 을 부여하는 슬라임입니다."
   },
   {
     "NAMES": [
+      "어두미 슬라임",
+      "어두미_슬라임",
       "어두운 슬라임",
-      "어두운_슬라임"
+      "어두운_슬라임",
+      "darkling slime",
+      "darkling_slime"
     ],
     "PROPER_NAME": "어두미 슬라임",
-    "DESCRIPTION": "매턴마다 #b3 피해를 줍니다. 명령시, 다른 어두운 슬라임 또한 공격합니다."
+    "DESCRIPTION": "매 턴 피해를 #b3 주는 슬라임입니다. 명령 시, 다른 어두미 슬라임 또한 공격합니다."
   },
   {
     "NAMES": [
-      "고대의 슬라임",
-      "고대의_슬라임"
+      "고대 슬라임",
+      "고대_슬라임",
+      "ancient slime",
+      "ancient_slime"
     ],
-    "PROPER_NAME": "고대의 슬라임",
-    "DESCRIPTION": "매턴마다 #b3 피해를 주며 #b1 장의 카드를 뽑습니다."
+    "PROPER_NAME": "고대 슬라임",
+    "DESCRIPTION": "매 턴 피해를 #b3 주고 카드를 #b1 장 뽑아주는 슬라임입니다."
   },
   {
     "NAMES": [
       "시간 슬라임",
-      "시간_슬라임"
+      "시간_슬라임",
+      "time slime",
+      "time_slime"
     ],
     "PROPER_NAME": "시간 슬라임",
-    "DESCRIPTION": "매턴마다 #b4 피해를 주며 #b1 #y약화 적용시킵니다."
+    "DESCRIPTION": "매 턴 피해를 #b4 주고 #y약화 를 #b1 부여하는 슬라임입니다."
   },
   {
     "NAMES": [
-      "소비"
+      "소비",
+      "소비한",
+      "소비하면",
+      "소비했을",
+      "consume"
     ],
     "PROPER_NAME": "소비",
-    "DESCRIPTION": "점액을 가진 적을 공격할 때 활성화되는 추가 효과입니다."
+    "DESCRIPTION": "적 #y공격 시 보유한 #y점액 을 소모하는 조건으로 발동하는 효과입니다."
+  },
+  {
+    "NAMES": [
+      "전문가",
+      "specialist",
+      "specialist"
+    ],
+    "PROPER_NAME": "전문가",
+    "DESCRIPTION": "일반 슬라임보다 더 강력하고 특별한 슬라임입니다."
   }
 ]

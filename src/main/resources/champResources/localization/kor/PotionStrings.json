@@ -1,0 +1,32 @@
+{
+  "champ:OpenerPotion": {
+    "NAME": "전략 포션",
+    "DESCRIPTIONS": [
+      "각기 다른 #y자세 카드 #b2 장 중에서 #b1 장을 골라서 얻습니다. 이번 턴에 그 카드의 비용은 #b0 이 됩니다.",
+      "복사한 카드를 #b",
+      " 장 얻습니다.",
+      " 장 얻습니다."
+    ]
+  },
+  "champ:TechniquePotion": {
+    "NAME": "병에 담긴 기술",
+    "DESCRIPTIONS": [
+      "#y기술 #y추가 #y효과 를 #b",
+      " 번 얻습니다."
+    ]
+  },
+  "champ:UltimateStancePotion": {
+    "NAME": "의심스러운 포션",
+    "DESCRIPTIONS": [
+      "#y궁극의 #y자세를 #b",
+      " 턴 동안 취합니다."
+    ]
+  },
+  "champ:CounterPotion": {
+    "NAME": "잘 우린 날카로움",
+    "DESCRIPTIONS": [
+      "#y반격 을 #b",
+      " 얻습니다."
+    ]
+  }
+}
