@@ -6,7 +6,7 @@
       "afflictions",
       "afflicted"
     ],
-    "DESCRIPTION": "Creatures are Afflicted when they have 1 or more of the following effects, #yWeak, #yVulnerable, #yPoison, #yGoop, #ySoulfire, and #yInfection"
+    "DESCRIPTION": "Creatures are Afflicted when they have 1 or more of the following effects, #yWeak, #yVulnerable, #yPoison, #yGoop, #ySoulfire, #ySuffering, #ySoul #ySnare"
   },
   {
     "PROPER_NAME": "Suffering",
@@ -30,38 +30,44 @@
       "Torch Head",
       "torch_head"
     ],
-    "DESCRIPTION": "You Start every Combat with a torch Head that intercepts attack damage while it has Protection. if dead, it reignits in 2 turns with 5 HP. Can be #yCommanded, dealing 6 damage by default."
+    "DESCRIPTION": "Assists the Collector in battle by taking hits while they have #yAggro and being the source or target of different card effects. NL Cards that utilize an Ally explicitly cannot be played without one or without a living ally."
   },
   {
-    "PROPER_NAME": "Order",
+    "PROPER_NAME": "Front",
     "NAMES": [
-      "Order",
-      "order"
+      "Front",
+      "front"
     ],
-    "DESCRIPTION": "Choose an ability for your torch head to use."
+    "DESCRIPTION": "The Leading charater is the charater to be targeted by enemy Attacks."
   },
   {
-    "PROPER_NAME": "Ability",
+    "PROPER_NAME": "Back",
     "NAMES": [
-      "Ability",
-      "Abilities",
-      "abilities",
-      "ability"
+      "Back",
+      "back"
     ],
-    "DESCRIPTION": "Special Cards available to your Torch Head to use when #yOrdered."
+    "DESCRIPTION": "The Back charater is the charater not being targeted by enemy Attacks currently."
   },
   {
     "PROPER_NAME": "Collect",
     "NAMES": [
-      "collect",
       "Collected",
       "collected"
     ],
     "DESCRIPTION": "When a #yCollected Monster dies, after combat it's #yCollectible will appear in a separate card reward, no more then 3 #yCollectibles can appear."
   },
   {
+    "PROPER_NAME": "Aggro",
+    "NAMES": [
+      "Aggro",
+      "aggro"
+    ],
+    "DESCRIPTION": "#yAggro causes your #yTorch #yHead to be attacked instead of you so long as it's greater than 0. NL your #yTorch #yHead loses #b1 #yAggro whenever they lose HP."
+  },
+  {
     "PROPER_NAME": "Collection",
     "NAMES": [
+      "collect",
       "collection"
     ],
     "DESCRIPTION": "#yCollectibles are placed here in combat. Contains 4 #yLucky #yWick at the start of a run."
@@ -79,6 +85,13 @@
       "perpetual"
     ],
     "DESCRIPTION": "This card returns to the #yCollection in when played."
+  },
+  {
+    "PROPER_NAME": "Pyre",
+    "NAMES": [
+      "pyre"
+    ],
+    "DESCRIPTION": "You may #yexhaust a card in your hand to trigger an extra effect."
   },
   {
     "NAMES": [

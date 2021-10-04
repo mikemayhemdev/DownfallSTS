@@ -5,7 +5,7 @@
   },
   "collector:Defend": {
     "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block."
+    "DESCRIPTION": "collector:Front Gains !B! Block."
   },
   "collector:SoulStitch": {
     "NAME": "Soul Stitch",
@@ -17,8 +17,8 @@
   },
   "collector:Contemplate": {
     "NAME": "Contemplate",
-    "DESCRIPTION": "Choose 1 of 3 cards from your collector:Collection. Put it in your hand.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 cards from your collector:Collection. Put it in your hand and Upgrade it."
+    "DESCRIPTION": "Choose 1 of 3 cards from your collector:Collect pile. Put it in your hand.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 cards from your collector:Collect pile. Put it in your hand and Upgrade it."
   },
   "collector:Miser": {
     "NAME": "Miser",
@@ -27,7 +27,8 @@
   "collector:Bargain": {
     "NAME": "Bargain",
     "DESCRIPTION": "Switch the Cost of 2 cards in your hand.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Switch the Cost of 2 cards in your hand."
+    "UPGRADE_DESCRIPTION": "Retain. NL Switch the Cost of 2 cards in your hand.",
+    "EXTENDED_DESCRIPTION" : ["Swap costs of"]
   },
   "collector:Consign": {
     "NAME": "Consign",
@@ -43,15 +44,50 @@
   },
   "collector:Fireball": {
     "NAME": "Fireball",
-    "DESCRIPTION": "Deal !collector:AltD! damage if Fatal, deal !D! damage to ALL enemies."
+    "DESCRIPTION": "*Collector Deals !D! damage. NL collector:Pyre - bronze:Insert a copy of this with + !M! damage. NL Exhaust."
+  },
+  "collector:FlameLash": {
+    "NAME": "Flame Lash",
+    "DESCRIPTION": "collector:Back Deals !D! damage. NL collector:Pyre - Add a copy of this to your discard pile with - !M! Cost. NL Exhaust.",
+    "EXTENDED_DESCRIPTION" : ["collector:Back Deals !collector:DUOD! damage. NL collector:Pyre - Add a copy of this to your discard pile with - !M! Cost. NL Exhaust."]
+  },
+  "collector:Bonfire": {
+    "NAME": "Bonfire",
+    "DESCRIPTION": "*Torch *Head Deals !collector:DUOD! damage to ALL enemies. NL collector:Pyre - collector:Torch_Head gains !collector:DUOB! Block and !M! collector:Aggro."
+  },
+  "collector:FelsteelAegis": {
+    "NAME": "Felsteel Aegis",
+    "DESCRIPTION": "Retain. NL Your collector:Torch_Head gains !M! collector:Aggro NL collector:Pyre - add a copy of this to your discard pile. NL Exhaust."
+  },
+  "collector:Combustibles": {
+    "NAME": "Combustibles",
+    "DESCRIPTION": "collector:Front Gains !B! Block NL collector:Pyre - Gain 8, 12, or 20 Block based on rarity.",
+    "EXTENDED_DESCRIPTION" : ["collector:Front Gains !collector:DUOB! Block NL collector:Pyre - Gain 8, 12, or 20 Block based on rarity."]
+  },
+  "collector:SoulForge": {
+    "NAME": "Soul Forge",
+    "DESCRIPTION": "collector:Back Gains !M! Vigor. NL collector:Pyre - Gain 4, 8, or 10 Vigor based on rarity."
+  },
+  "collector:Mindflare": {
+    "NAME": "Mindflare",
+    "DESCRIPTION": "*Collector Deals !D! damage. NL Draw a card from your collector:Collect pile for each collector:Affliction the target has."
+  },
+  "collector:ScorchingRay": {
+    "NAME": "Scorching Ray",
+    "DESCRIPTION": "*Collector Deals !D! damage for each collector:Affliction the target has."
   },
   "collector:Wrack": {
     "NAME": "Wrack",
     "DESCRIPTION": "Double an enemies collector:Afflictions. NL Exhaust."
   },
+  "collector:FingerofDeath": {
+    "NAME": "Finger of Death",
+    "DESCRIPTION": "*Collector Deals !D! damage. NL Apply 1 collector:Suffering Twice. NL When Exhausted : bronze:Insert a copy of this that applies *Suffering an additional time.",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage. NL Apply 1 collector:Suffering !M! Times. NL When Exhausted : bronze:Insert a copy of this that applies *Suffering an additional time."]
+  },
   "collector:Hellfire": {
     "NAME": "Hellfire",
-    "DESCRIPTION": "Deal !D! damage and Apply a random collector:Affliction to a random enemy X Times.",
+    "DESCRIPTION": "*Collector Deals !D! damage and Apply a random collector:Affliction to a random enemy X Times.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage and Apply a random *πUpgraded collector:Affliction to a random enemy X Times."
   },
   "collector:DarkSuffusion": {
@@ -60,19 +96,37 @@
   },
   "collector:Omen": {
     "NAME": "Omen",
-    "DESCRIPTION": "Dealing Attack Damage to an enemy with 6 collector:Afflictions reduces them by 1 and they lose !M! HP."
+    "DESCRIPTION": "Dealing Attack Damage to an enemy with at least 6 collector:Afflictions they lose !M! HP."
   },
-  "collector:AllyStrike": {
-    "NAME": "Ally Strike",
-    "DESCRIPTION": "Torch Head Deals !DUO:D! damage."
+  "collector:SelfDestruct": {
+    "NAME": "Self Destruct",
+    "DESCRIPTION": "At the end of your turn, all enemies lose HP equal to your *Torch *Heads HP, Kill your collector:Torch_Head.",
+    "UPGRADE_DESCRIPTION": "Retain NL At the end of your turn, all enemies lose HP equal to your *Torch *Heads HP, Kill your collector:Torch_Head."
   },
-  "collector:AllyDefend": {
-    "NAME": "AllyDefend",
-    "DESCRIPTION": "Torch Head Gain !DUO:B! Block."
+  "collector:StakingAClaim": {
+    "NAME": "Staking a Claim",
+    "DESCRIPTION": "Apply !M! collector:Soul_Snare. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL Exhaust."
+  },
+  "collector:PainSiphon": {
+    "NAME": "Pain Siphon",
+    "DESCRIPTION": "Gain [E] and Draw a card for each of an enemy's collector:Afflictions NL Exhaust."
+  },
+  "collector:HighStakes": {
+    "NAME": "High Stakes",
+    "DESCRIPTION": "Draw any number of cards. NL if their combined cost exceeds !M! stop drawing, discard any cards drawn and Exhaust this."
+  },
+  "collector:Hit": {
+    "NAME": "Hit",
+    "DESCRIPTION": "Draw another card NL !M! Energy remains."
+  },
+  "collector:Fold": {
+    "NAME": "Fold",
+    "DESCRIPTION": "Stop drawing cards. NL !M! is enough"
   },
   "collector:TagTeam": {
     "NAME": "Tag Team",
-    "DESCRIPTION": "Deal !D! damage. NL collector:Order."
+    "DESCRIPTION": "collector:Back Deals !D! damage. NL collector:Front Gains !collector:DUOB! Block.",
+    "EXTENDED_DESCRIPTION" : ["collector:Back Deals !collector:DUOD! damage. NL collector:Front Gains !B! Block."]
   },
   "collector:LuckyWick": {
     "NAME": "Lucky Wick",
@@ -89,8 +143,8 @@
   },
   "collector:CultistFeather": {
     "NAME": "Cultist Feather",
-    "DESCRIPTION": "Gain !M! Strength. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Strength and Dexterity. NL Exhaust."
+    "DESCRIPTION": "collector:Lead Gains !M! Strength.",
+    "UPGRADE_DESCRIPTION": "collector:Lead Gains !M! Strength and Dexterity."
   },
   "collector:CurledHorns": {
     "NAME": "Curled Horns",

@@ -5,8 +5,6 @@ import basemod.abstracts.CustomPlayer;
 import basemod.abstracts.CustomSavable;
 import basemod.animations.SpineAnimation;
 import collector.actions.FaintAction;
-import collector.cards.AbilityCards.AllyDefend;
-import collector.cards.AbilityCards.AllyStrike;
 import collector.util.DuoUtils.GreyscaleShader;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -47,7 +45,6 @@ import static collector.CollectorMod.*;
 public class TorchChar extends CustomPlayer implements CustomSavable<ArrayList<Integer>> {
     static final String ID = makeID("TorchHead"); //TODO: Change this
     static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
-    public static ArrayList<AbstractCard> Abilities = new ArrayList<>();
     public static final int STARTING_HP = 35;
     public static final int MAX_HP = 35;
 
@@ -88,15 +85,6 @@ public class TorchChar extends CustomPlayer implements CustomSavable<ArrayList<I
         this.drawY = AbstractDungeon.floorY + OFFSET_Y * Settings.scale;
         this.dialogX = (this.drawX + 20.0F * Settings.scale);
         this.dialogY = (this.drawY + 240.0F * Settings.scale);
-        if (Abilities.size() == 0) {
-            Abilities.add(new AllyStrike());
-            Abilities.add(new AllyDefend());
-        } if (Abilities.size() > 3){
-            System.out.println("Too Many Abilities, Resetting to Default");
-            Abilities.clear();
-            Abilities.add(new AllyStrike());
-            Abilities.add(new AllyDefend());
-        }
         this.master = master;
         this.isPlayer = true;
 

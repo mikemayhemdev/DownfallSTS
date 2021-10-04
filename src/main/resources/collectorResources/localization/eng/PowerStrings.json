@@ -1,15 +1,21 @@
 {
-  "collector:SoulSnare": {
-    "NAME": "Soul Snare",
+  "collector:Suffering": {
+    "NAME": "Suffering",
     "DESCRIPTIONS": [
       "When Soul Snare is applied to this, it loses #b",
       " HP. Whenever you apply an #yAffliction to this increase this by 1."
     ]
   },
   "collector:SoulMark": {
-    "NAME": "Soul Mark",
+    "NAME": "Soul Snare",
     "DESCRIPTIONS": [
       "When you defeat this monster #yCollect it."
+    ]
+  },
+  "collector:SelfDestruct": {
+    "NAME": "Self Destruct",
+    "DESCRIPTIONS": [
+      "At the end of your turn, all enemies lose HP equal to your #yTorch #yHeads HP, Kill your #yTorch #yHead."
     ]
   },
   "collector:ChaoticFlux": {
@@ -37,13 +43,6 @@
     "DESCRIPTIONS": [
       "Dealing Attack damage to an enemy with 6 #Afflictions they lose #b",
       " HP."
-    ]
-  },
-  "collector:Protection": {
-    "NAME": "Protection",
-    "DESCRIPTIONS": [
-      "You minion will receive the next #b",
-      " Attacks instead of You."
     ]
   },
   "collector:Miser": {

@@ -4,13 +4,20 @@ import basemod.ReflectionHacks;
 import basemod.abstracts.CustomPlayer;
 import collector.Relics.EmeraldTorch;
 import collector.actions.ApplyAggroAction;
-import collector.cards.*;
+import collector.cards.CollectorCards.AbstractCollectorCard;
+import collector.cards.CollectorCards.Attacks.SoulHarvest;
+import collector.cards.CollectorCards.Attacks.SoulStitch;
+import collector.cards.CollectorCards.Attacks.Strike;
+import collector.cards.CollectorCards.Skills.Contemplate;
+import collector.cards.CollectorCards.Skills.Defend;
 import collector.util.FlashTargetArrowEffect;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
+import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -26,6 +33,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import com.megacrit.cardcrawl.vfx.GlowyFireEyesEffect;
+import com.megacrit.cardcrawl.vfx.StaffFireEffect;
 import com.megacrit.cardcrawl.vfx.combat.PowerBuffEffect;
 
 import java.util.ArrayList;
@@ -51,11 +60,11 @@ public class CollectorChar extends CustomPlayer {
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
     public float renderscale = 1.2F;
-    private String atlasURL = "collectorResources/images/char/mainChar/bronze.atlas";
-    private String jsonURL = "collectorResources/images/char/mainChar/bronze.json";
+    private String atlasURL = "collectorResources/images/char/mainChar/skeleton.atlas";
+    private String jsonURL = "collectorResources/images/char/mainChar/skeleton.json";
     public static TorchChar torch;
     public AbstractCreature front = this;
-
+    private float fireTimer = 0.0F;
     public static boolean frontChangedThisTurn = false;
 
     // The aggro of Dragon
@@ -67,13 +76,14 @@ public class CollectorChar extends CustomPlayer {
 
     public boolean dragonAttackAnimation;
     public boolean attackAnimation;
+    private static final float ORB_IMG_SCALE = 1.15f * Settings.scale;
     public CollectorChar(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "collectorResources/images/char/mainChar/orb/vfx.png", (String) null, (String) null);
         initializeClass(null,
                 SHOULDER1,
                 SHOULDER2,
                 CORPSE,
-                getLoadout(), 0.0F, -30.0F, 270.0F, 400.0F, new EnergyManager(3));
+                getLoadout(), 0.0F, -40.0F, 300.0F, 390.0F, new EnergyManager(3));
         dialogX = (drawX + 0.0F * Settings.scale);
         dialogY = (drawY + 240.0F * Settings.scale);
         torch = new TorchChar(TorchChar.characterStrings.NAMES[0], 0.0f, 0.0f, 220.0f, 290.0f, this);
@@ -83,9 +93,9 @@ public class CollectorChar extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-
-        this.loadAnimation(atlasURL, this.jsonURL, renderscale);
-        this.state.setAnimation(0, "idle", true);
+        this.loadAnimation(atlasURL, jsonURL, 1.0F);
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
+        flipHorizontal = !flipHorizontal;
     }
 
 
@@ -230,10 +240,19 @@ public class CollectorChar extends CustomPlayer {
 
     @Override
     public void update() {
-        torch.update();
         super.update();
         if (getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             CollectorMod.targetMarker.update();
+            torch.update();
+        }
+        if (!this.isDying && getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+            this.fireTimer -= Gdx.graphics.getDeltaTime();
+            if (this.fireTimer < 0.0F) {
+                this.fireTimer = 0.07F;
+                AbstractDungeon.effectList.add(new GlowyFireEyesEffect(this.skeleton.getX() + this.skeleton.findBone("lefteyefireslot").getX(), this.skeleton.getY() + this.skeleton.findBone("lefteyefireslot").getY() + 140.0F * Settings.scale));
+                AbstractDungeon.effectList.add(new GlowyFireEyesEffect(this.skeleton.getX() + this.skeleton.findBone("righteyefireslot").getX(), this.skeleton.getY() + this.skeleton.findBone("righteyefireslot").getY() + 140.0F * Settings.scale));
+                AbstractDungeon.effectList.add(new StaffFireEffect(this.skeleton.getX() + this.skeleton.findBone("fireslot").getX() - 120.0F * Settings.scale, this.skeleton.getY() + this.skeleton.findBone("fireslot").getY() + 390.0F * Settings.scale));
+            }
         }
     }
 
@@ -304,9 +323,9 @@ public class CollectorChar extends CustomPlayer {
 
         aggro = 0;
         front = this;
-        addAggro(1);
-        if (!AbstractDungeon.player.hasRelic(EmeraldTorch.ID)) {
-            addAggro(-1);
+        addAggro(0);
+        if (AbstractDungeon.player.hasRelic(EmeraldTorch.ID)) {
+            addAggro(1);
         }
         frontChangedThisTurn = false;
     }
@@ -435,14 +454,14 @@ public class CollectorChar extends CustomPlayer {
 
     public static TorchChar getDragon() {
         if (AbstractDungeon.player instanceof CollectorChar) {
-            return ((CollectorChar) AbstractDungeon.player).torch;
+            return torch;
         }
         return null;
     }
 
     public static TorchChar getLivingDragon() {
         if (AbstractDungeon.player instanceof CollectorChar) {
-            TorchChar dragon = ((CollectorChar) AbstractDungeon.player).torch;
+            TorchChar dragon = torch;
             if (dragon.isDead) return null;
             return dragon;
         }
@@ -451,7 +470,7 @@ public class CollectorChar extends CustomPlayer {
 
     public static boolean isFrontDragon() {
         if (AbstractDungeon.player instanceof CollectorChar) {
-            TorchChar torch = ((CollectorChar) AbstractDungeon.player).torch;
+            TorchChar torch = CollectorChar.torch;
             if (torch.isDead) return false;
             return ((CollectorChar) AbstractDungeon.player).front == torch;
         }
@@ -460,7 +479,7 @@ public class CollectorChar extends CustomPlayer {
 
     public static boolean isRearYou() {
         if (AbstractDungeon.player instanceof CollectorChar) {
-            TorchChar dragon = ((CollectorChar) AbstractDungeon.player).torch;
+            TorchChar dragon = torch;
             if (dragon.isDead) return true;
             return ((CollectorChar) AbstractDungeon.player).front != AbstractDungeon.player;
         }
@@ -469,7 +488,7 @@ public class CollectorChar extends CustomPlayer {
 
     public static AbstractCreature getCurrentTarget(AbstractCreature monster) {
 
-        if (AbstractDungeon.player instanceof CollectorChar && !((CollectorChar) AbstractDungeon.player).torch.isDead) {
+        if (AbstractDungeon.player instanceof CollectorChar && !torch.isDead) {
             return ((CollectorChar) AbstractDungeon.player).front;
         } else {
             return AbstractDungeon.player;
@@ -478,7 +497,7 @@ public class CollectorChar extends CustomPlayer {
 
     public static boolean isSolo() {
         if (AbstractDungeon.player instanceof CollectorChar) {
-            return ((CollectorChar) AbstractDungeon.player).torch.isDead;
+            return torch.isDead;
         } else {
             return true;
         }

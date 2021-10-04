@@ -1,7 +1,7 @@
 package collector.util;
 
 import basemod.abstracts.DynamicVariable;
-import collector.cards.AbstractCollectorCard;
+import collector.cards.CollectorCards.AbstractCollectorCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class CollectorSecondDamage extends DynamicVariable {

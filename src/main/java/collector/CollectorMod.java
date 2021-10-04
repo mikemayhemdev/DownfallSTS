@@ -9,14 +9,19 @@ import collector.Vars.DuoBlock;
 import collector.Vars.DuoDamage;
 import collector.Vars.DuoMagic;
 import collector.actions.FreezeAggroAction;
-import collector.cards.*;
 import collector.cards.Collectibles.*;
+import collector.cards.CollectorCards.Attacks.*;
+import collector.cards.CollectorCards.Powers.Miser;
+import collector.cards.CollectorCards.Powers.Omen;
+import collector.cards.CollectorCards.Powers.SelfDestruct;
+import collector.cards.CollectorCards.Skills.*;
 import collector.patches.CollectibleCardColorEnumPatch;
 import collector.patches.TorchHeadPatches.MonsterIntentPatch;
 import collector.patches.TorchHeadPatches.MonsterPowerPatch;
 import collector.patches.TorchHeadPatches.MonsterTargetPatch;
 import collector.patches.TorchHeadPatches.StanceChangeParticlePatch;
-import collector.powers.SoulSnare;
+import collector.powers.SoulMark;
+import collector.powers.Suffering;
 import collector.util.CollectorSecondDamage;
 import collector.util.TargetMarker;
 import com.badlogic.gdx.graphics.Color;
@@ -65,15 +70,15 @@ public class CollectorMod implements
     public static final String SHOULDER1 = "collectorResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "collectorResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "collectorResources/images/char/mainChar/corpse.png";
-    public static final String CARD_ENERGY_S = "collectorResources/images/512/card_bronze_orb.png";
+    public static final String CARD_ENERGY_S = "collectorResources/images/512/card_collector_orb.png";
     public static final String TEXT_ENERGY = "collectorResources/images/512/card_small_orb.png";
-    private static final String ATTACK_S_ART = "collectorResources/images/512/bg_attack_bronze.png";
-    private static final String SKILL_S_ART = "collectorResources/images/512/bg_skill_bronze.png";
-    private static final String POWER_S_ART = "collectorResources/images/512/bg_power_bronze.png";
-    private static final String ATTACK_L_ART = "collectorResources/images/1024/bg_attack_bronze.png";
-    private static final String SKILL_L_ART = "collectorResources/images/1024/bg_skill_bronze.png";
-    private static final String POWER_L_ART = "collectorResources/images/1024/bg_power_bronze.png";
-    private static final String CARD_ENERGY_L = "collectorResources/images/1024/card_bronze_orb.png";
+    private static final String ATTACK_S_ART = "collectorResources/images/512/bg_attack_.png";
+    private static final String SKILL_S_ART = "collectorResources/images/512/bg_skill_.png";
+    private static final String POWER_S_ART = "collectorResources/images/512/bg_power_.png";
+    private static final String ATTACK_L_ART = "collectorResources/images/1024/bg_attack_.png";
+    private static final String SKILL_L_ART = "collectorResources/images/1024/bg_skill_.png";
+    private static final String POWER_L_ART = "collectorResources/images/1024/bg_power_.png";
+    private static final String CARD_ENERGY_L = "collectorResources/images/1024/card_collector_orb.png";
     private static final String CHARSELECT_BUTTON = "collectorResources/images/charSelect/charButton.png";
     private static final String CHARSELECT_PORTRAIT = "collectorResources/images/charSelect/charBG.png";
 
@@ -105,10 +110,10 @@ public class CollectorMod implements
 
         BaseMod.addColor(CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE,
                 COLLECTIBLE_CARD_COLOR, COLLECTIBLE_CARD_COLOR, COLLECTIBLE_CARD_COLOR, COLLECTIBLE_CARD_COLOR, COLLECTIBLE_CARD_COLOR, COLLECTIBLE_CARD_COLOR, COLLECTIBLE_CARD_COLOR,
-                "champResources/images/512/bg_attack_colorless.png", "champResources/images/512/bg_skill_colorless.png",
-                "champResources/images/512/bg_power_colorless.png", "champResources/images/512/card_champ_orb.png",
-                "champResources/images/1024/bg_attack_colorless.png", "champResources/images/1024/bg_skill_colorless.png",
-                "champResources/images/1024/bg_power_colorless.png","champResources/images/1024/card_champ_orb.png");
+                "collectorResources/images/512/bg_attack_colorless.png", "collectorResources/images/512/bg_skill_colorless.png",
+                "collectorResources/images/512/bg_power_colorless.png", CARD_ENERGY_S,
+                "collectorResources/images/1024/bg_attack_colorless.png", "collectorResources/images/1024/bg_skill_colorless.png",
+                "collectorResources/images/1024/bg_power_colorless.png",CARD_ENERGY_L,TEXT_ENERGY);
     }
     public static String makePath(String resourcePath) {
         return modID + "Resources/" + resourcePath;
@@ -213,7 +218,9 @@ public class CollectorMod implements
             } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(4))) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new BurnPower(target, 8)));
             } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(5))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new SoulSnare(2,target)));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new Suffering(2,target)));
+            } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(6))) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new SoulMark(2,target)));
             }
         } else {
             if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(0))) {
@@ -227,7 +234,7 @@ public class CollectorMod implements
             } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(4))) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new BurnPower(target, 11)));
             } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(5))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new SoulSnare(4,target)));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new Suffering(4,target)));
             }
         }
     }
@@ -243,7 +250,8 @@ public class CollectorMod implements
     public static boolean AfflictionMatch(String stringtocompare) {
         if (stringtocompare.equals(Afflictions.get(0)) || stringtocompare.equals(Afflictions.get(1)) ||
                 stringtocompare.equals(Afflictions.get(2)) || stringtocompare.equals(Afflictions.get(3)) ||
-                stringtocompare.equals(Afflictions.get(4)) || stringtocompare.equals(Afflictions.get(5))) {
+                stringtocompare.equals(Afflictions.get(4)) || stringtocompare.equals(Afflictions.get(5))
+                || stringtocompare.equals(Afflictions.get(6))) {
             return true;
         }
         return false;
@@ -269,12 +277,24 @@ public class CollectorMod implements
         BaseMod.addCard(new CullingBlow());
         BaseMod.addCard(new DarkSuffusion());
         BaseMod.addCard(new Fever());
+        BaseMod.addCard(new SoulForge());
+        BaseMod.addCard(new Bonfire());
+        BaseMod.addCard(new Combustibles());
         BaseMod.addCard(new Fireball());
         BaseMod.addCard(new Hellfire());
+        BaseMod.addCard(new FlameLash());
+        BaseMod.addCard(new FelsteelAegis());
+        BaseMod.addCard(new SelfDestruct());
         BaseMod.addCard(new Miser());
         BaseMod.addCard(new Omen());
         BaseMod.addCard(new Wrack());
         BaseMod.addCard(new TagTeam());
+        BaseMod.addCard(new Mindflare());
+        BaseMod.addCard(new ScorchingRay());
+        BaseMod.addCard(new HighStakes());
+        BaseMod.addCard(new FingerofDeath());
+        BaseMod.addCard(new PainSiphon());
+        BaseMod.addCard(new StakingAClaim());
 
         BaseMod.addCard(new LuckyWick());
         BaseMod.addCard(new CrookedStaff());
@@ -304,13 +324,25 @@ public class CollectorMod implements
         UnlockTracker.unlockCard(Consign.ID);
         UnlockTracker.unlockCard(CullingBlow.ID);
         UnlockTracker.unlockCard(DarkSuffusion.ID);
+        UnlockTracker.unlockCard(Combustibles.ID);
         UnlockTracker.unlockCard(Fever.ID);
         UnlockTracker.unlockCard(Fireball.ID);
         UnlockTracker.unlockCard(Hellfire.ID);
+        UnlockTracker.unlockCard(FelsteelAegis.ID);
+        UnlockTracker.unlockCard(Bonfire.ID);
+        UnlockTracker.unlockCard(SoulForge.ID);
+        UnlockTracker.unlockCard(FlameLash.ID);
         UnlockTracker.unlockCard(Miser.ID);
+        UnlockTracker.unlockCard(SelfDestruct.ID);
         UnlockTracker.unlockCard(Omen.ID);
         UnlockTracker.unlockCard(Wrack.ID);
         UnlockTracker.unlockCard(TagTeam.ID);
+        UnlockTracker.unlockCard(Mindflare.ID);
+        UnlockTracker.unlockCard(ScorchingRay.ID);
+        UnlockTracker.unlockCard(HighStakes.ID);
+        UnlockTracker.unlockCard(FingerofDeath.ID);
+        UnlockTracker.unlockCard(PainSiphon.ID);
+        UnlockTracker.unlockCard(StakingAClaim.ID);
 
         UnlockTracker.unlockCard(LuckyWick.ID);
         UnlockTracker.unlockCard(CrookedStaff.ID);
@@ -366,7 +398,8 @@ public class CollectorMod implements
         Afflictions.add(PoisonPower.POWER_ID);
         Afflictions.add(SlimedPower.POWER_ID);
         Afflictions.add(BurnPower.POWER_ID);
-        Afflictions.add(SoulSnare.POWER_ID);
+        Afflictions.add(Suffering.POWER_ID);
+        Afflictions.add(SoulMark.POWER_ID);
 
         Boons.add(StrengthPower.POWER_ID);
         Boons.add(DexterityPower.POWER_ID);

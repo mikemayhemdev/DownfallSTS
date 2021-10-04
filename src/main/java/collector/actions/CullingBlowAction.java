@@ -1,6 +1,6 @@
 package collector.actions;
 
-import collector.powers.SoulSnare;
+import collector.powers.Suffering;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
@@ -58,7 +58,7 @@ public class CullingBlowAction extends AbstractGameAction {
                 if (!target.isDying && target.currentHealth > threshold && !target.isEscaping) {
                     target.damage(new DamageInfo(this.source, this.damage[i], this.damageType));
                     if ((this.target.isDying || this.target.currentHealth <= threshold) && !this.target.halfDead) {
-                        addToBot(new ApplyPowerAction(target,AbstractDungeon.player,new SoulSnare(1,target)));
+                        addToBot(new ApplyPowerAction(target,AbstractDungeon.player,new Suffering(1,target)));
                         addToBot(new ApplyPowerAction(target,AbstractDungeon.player,new WeakPower(target,1,false)));
                         addToBot(new ApplyPowerAction(target,AbstractDungeon.player,new VulnerablePower(target,1,false)));
                     }

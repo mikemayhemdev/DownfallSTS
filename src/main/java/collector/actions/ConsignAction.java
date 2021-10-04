@@ -1,6 +1,6 @@
 package collector.actions;
 
-import collector.powers.SoulSnare;
+import collector.powers.Suffering;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -28,7 +28,7 @@ public class ConsignAction extends AbstractGameAction {
                 healAmount += target.lastDamageTaken;
             }
             if (healAmount > 0) {
-                addToBot(new ApplyPowerAction(target,AbstractDungeon.player,new SoulSnare(healAmount,target)));
+                addToBot(new ApplyPowerAction(target,AbstractDungeon.player,new Suffering(healAmount,target)));
             }
 
             if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {

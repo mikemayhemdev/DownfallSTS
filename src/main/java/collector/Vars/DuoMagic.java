@@ -1,13 +1,13 @@
 package collector.Vars;
 
 import basemod.abstracts.DynamicVariable;
-import collector.cards.AbstractCollectorCard;
+import collector.cards.CollectorCards.AbstractCollectorCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class DuoMagic extends DynamicVariable {
     @Override
     public String key() {
-        return "DUO:M";
+        return "collector:DUOM";
     }
 
     @Override

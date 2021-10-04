@@ -2,6 +2,7 @@ package collector.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import collector.CollectorMod;
+import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -13,7 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
 
-public class Omen extends AbstractPower implements CloneablePowerInterface {
+public class Omen extends TwoAmountPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = CollectorMod.makeID("Omen");
 
@@ -26,6 +27,7 @@ public class Omen extends AbstractPower implements CloneablePowerInterface {
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
+        amount2 = 6;
         this.type = AbstractPower.PowerType.BUFF;
         this.isTurnBased = false;
         this.loadRegion("wraithForm");
@@ -42,20 +44,26 @@ public class Omen extends AbstractPower implements CloneablePowerInterface {
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK && action.target != null) {
             if (!action.target.isDying && action.target.currentHealth > 0 && !action.target.isEscaping) {
-                if (action.target.hasPower(CollectorMod.Afflictions.get(0)) && action.target.hasPower(CollectorMod.Afflictions.get(1)) &&
-                        action.target.hasPower(CollectorMod.Afflictions.get(2)) && action.target.hasPower(CollectorMod.Afflictions.get(3)) &&
-                        action.target.hasPower(CollectorMod.Afflictions.get(4)) && action.target.hasPower(CollectorMod.Afflictions.get(5))
-                ) {
+                int AfflictionCounter = 0;
+                for (AbstractPower po : action.target.powers) {
+                    if (CollectorMod.AfflictionMatch(po.ID)) {
+                        AfflictionCounter++;
+                    }
+                }
+                if (AfflictionCounter >= amount2){
                     addToBot(new VFXAction(new CollectorCurseEffect(action.target.drawX, action.target.drawY)));
                     addToBot(new LoseHPAction(action.target, action.target, amount));
                 }
             }
         } else if( card.type == AbstractCard.CardType.ATTACK){
             for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters){
-                if (action.target.hasPower(CollectorMod.Afflictions.get(0)) && action.target.hasPower(CollectorMod.Afflictions.get(1)) &&
-                        action.target.hasPower(CollectorMod.Afflictions.get(2)) && action.target.hasPower(CollectorMod.Afflictions.get(3)) &&
-                        action.target.hasPower(CollectorMod.Afflictions.get(4)) && action.target.hasPower(CollectorMod.Afflictions.get(5))
-                ) {
+                int AfflictionCounter = 0;
+                for (AbstractPower po : m.powers) {
+                    if (CollectorMod.AfflictionMatch(po.ID)) {
+                        AfflictionCounter++;
+                    }
+                }
+                if (AfflictionCounter >= amount2){
                     addToBot(new VFXAction(new CollectorCurseEffect(action.target.drawX, action.target.drawY)));
                     addToBot(new LoseHPAction(action.target, action.target, amount));
                 }

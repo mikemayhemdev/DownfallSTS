@@ -1,0 +1,41 @@
+
+CollectorEnergyOrb.png
+size: 128,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+FlameBase
+  rotate: false
+  xy: 1, 73
+  size: 83, 72
+  orig: 83, 72
+  offset: 0, 0
+  index: -1
+FlameTrail1
+  rotate: false
+  xy: 1, 147
+  size: 26, 80
+  orig: 26, 80
+  offset: 0, 0
+  index: -1
+FlameTrail2
+  rotate: false
+  xy: 29, 147
+  size: 20, 72
+  orig: 20, 72
+  offset: 0, 0
+  index: -1
+FlameTrail3
+  rotate: false
+  xy: 86, 73
+  size: 29, 79
+  orig: 29, 79
+  offset: 0, 0
+  index: -1
+Basin
+  rotate: false
+  xy: 1, 1
+  size: 108, 70
+  orig: 108, 102
+  offset: 0, 0
+  index: -1

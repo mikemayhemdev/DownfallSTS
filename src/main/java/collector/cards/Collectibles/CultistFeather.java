@@ -1,5 +1,8 @@
 package collector.cards.Collectibles;
 
+import collector.CollectorChar;
+import collector.cards.CollectorCards.AbstractCollectorCard;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
@@ -9,7 +12,7 @@ public class CultistFeather extends AbstractCollectibleCard {
     public final static String ID = makeID("CultistFeather");
 
     public CultistFeather() {
-        super(ID, 0, CardType.POWER, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 0, CardType.POWER, CardRarity.COMMON, CardTarget.NONE, AbstractCollectorCard.DTCardTarget.BOTH);
         baseDamage = 13;
         baseBlock = 1;
         magicNumber = baseMagicNumber = 1;
@@ -18,15 +21,21 @@ public class CultistFeather extends AbstractCollectibleCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new StrengthPower(p,magicNumber));
-        if (upgraded){
-            applyToSelf(new DexterityPower(p,magicNumber));
+        if (CollectorChar.isFrontDragon()) {
+            atb(new ApplyPowerAction(CollectorChar.torch,CollectorChar.torch,new StrengthPower(CollectorChar.torch,magicNumber)));
+            if (upgraded){
+                atb(new ApplyPowerAction(CollectorChar.torch,CollectorChar.torch,new DexterityPower(CollectorChar.torch,magicNumber)));
+            }
+        } else {
+            atb(new ApplyPowerAction(p,p,new StrengthPower(p,magicNumber)));
+            if (upgraded){
+                atb(new ApplyPowerAction(p,p,new DexterityPower(CollectorChar.torch,magicNumber)));
+            }
         }
     }
 
     @Override
     public void upp() {
-        upgradeMagicNumber(4);
         this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
         initializeDescription();
     }
