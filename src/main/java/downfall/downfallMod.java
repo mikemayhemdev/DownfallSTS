@@ -117,6 +117,7 @@ import guardian.GuardianMod;
 import guardian.cards.ExploitGems;
 import guardian.characters.GuardianCharacter;
 import guardian.relics.PickAxe;
+import quickRestart.helper.RestartRunHelper;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
 import sneckomod.SneckoMod;
@@ -1487,7 +1488,10 @@ public class downfallMod implements
 
     @Override
     public void receivePostDeath() {
-        evilMode = false;
+        if (!Loader.isModLoaded("quickrestart") || (!RestartRunHelper.queuedScoreRestart && !RestartRunHelper.queuedRestart)) {
+            evilMode = false;
+        }
+        // else: we are doing a quickRestart, do not reset evilMode
     }
 
     public enum otherPackagePaths {

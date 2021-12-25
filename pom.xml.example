@@ -67,6 +67,13 @@
             <scope>system</scope>
             <systemPath>${workshopFolder}2368513093/WidePotions.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>quickRestart</groupId>
+            <artifactId>quickRestart</artifactId>
+            <version>2.0.5</version>
+            <scope>system</scope>
+            <systemPath>${workshopFolder}1805046408/quickRestart.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <build>
