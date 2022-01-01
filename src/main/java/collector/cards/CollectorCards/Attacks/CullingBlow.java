@@ -29,10 +29,9 @@ public class CullingBlow extends AbstractCollectorCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new VFXAction(new WhirlwindEffect()));
         AbstractDungeon.effectsQueue.add(new RoomTintEffect(Color.BLACK.cpy(), 0.8F));
-        if (CollectorChar.isFrontTorchHead()) {
-            atb(new DamageAction(m,new DamageInfo(p,damage), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        } else atb(new DamageAction(m,new DamageInfo(CollectorChar.torch,douDamage), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        if (m.hasPower(Suffering.POWER_ID)) {
+
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+         if (m.hasPower(Suffering.POWER_ID)) {
             applyToEnemy(m, new SoulMark(magicNumber, m));
         }
     }

@@ -19,18 +19,17 @@ public class Strike extends AbstractCollectorCard {
         douDamage = douBaseDamage = 6;
         tags.add(CardTags.STRIKE);
         tags.add(CardTags.STARTER_STRIKE);
+        frontDealsDmg = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (CollectorChar.isFrontTorchHead()) {
-            atb(new DamageAction(m, new DamageInfo(getTorchHead(), douDamage, DamageInfo.DamageType.NORMAL)));
-        } else dmg(m, AbstractGameAction.AttackEffect.SMASH);
+        dmg(m, AbstractGameAction.AttackEffect.SMASH, AbstractGameAction.AttackEffect.SMASH);
     }
 
     @Override
     public void upp() {
         upgradeDamage(3);
-        upgradeDTDragonDamage(3);
+        upgradeTorchHeadDamage(3);
     }
 }
