@@ -150,15 +150,19 @@ public abstract class AbstractCollectorCard extends CustomCard {
     }
     public void SetPositionalVarsFromEnum(){
         if (DamageSource == CollectorCardSource.FRONT){
+            FrontDamage = FrontBaseDamage = baseDamage;
             frontDealsDmg = true;
         }
         if (DamageSource == CollectorCardSource.BACK){
+            RearDamage = RearBaseDamage = baseDamage;
             rearDealsDmg = true;
         }
         if (BlockSource == CollectorCardSource.FRONT){
+            FrontBlock = FrontBaseBlock = baseBlock;
             frontGainsBlock = true;
         }
         if (BlockSource == CollectorCardSource.BACK){
+            RearBlock = RearBaseBlock = baseBlock;
             rearGainsBlock = true;
         }
     }
@@ -1606,7 +1610,7 @@ public abstract class AbstractCollectorCard extends CustomCard {
         atb(new DamageAllEnemiesAction(getTorchHead(), TorchMultiDamage, damageTypeForTurn, fx));
     }
     public void CollectorallDmg(AbstractGameAction.AttackEffect fx) {
-
+        atb(new DamageAllEnemiesAction(AbstractDungeon.player, multiDamage, damageTypeForTurn, fx));
     }
 
     //Easy function to just call one FX for both Collector and Torchhead
