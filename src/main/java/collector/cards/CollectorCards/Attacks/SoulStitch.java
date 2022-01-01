@@ -17,7 +17,6 @@ public class SoulStitch extends AbstractCollectorCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         applyToEnemy(m, new Suffering(magicNumber,m));
     }

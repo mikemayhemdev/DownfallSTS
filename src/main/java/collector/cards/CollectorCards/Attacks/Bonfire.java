@@ -23,14 +23,14 @@ public class Bonfire extends AbstractCollectorCard {
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean result = super.canUse(p, m);
-        if (result && CollectorChar.getLivingDragon() == null) {
+        if (result && CollectorChar.getLivingTorchHead() == null) {
             return false;
         }
         return result;
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (CollectorChar.getLivingDragon() != null) {
+        if (CollectorChar.getLivingTorchHead() != null) {
             atb(new DamageAllEnemiesAction(CollectorChar.torch, douBaseDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
             atb(new SelectCardsInHandAction(magicNumber, ExhaustAction.TEXT[0], true, true, card -> true, Cards -> {
                 if (Cards.size() > 0) {

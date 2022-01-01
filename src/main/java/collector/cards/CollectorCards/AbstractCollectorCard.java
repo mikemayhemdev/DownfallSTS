@@ -37,7 +37,7 @@ import static automaton.FunctionHelper.WITH_DELIMITER;
 
 public abstract class AbstractCollectorCard extends CustomCard {
     public enum DTCardTarget {
-        DEFAULT, DRAGON_ONLY, BOTH
+        DEFAULT, DRAGON_ONLY, BOTH, FRONT, BACK
     }
     private static float functionPreviewCardScale = .9f;
     private static float functionPreviewCardY = Settings.HEIGHT * 0.45F;
@@ -136,7 +136,7 @@ public abstract class AbstractCollectorCard extends CustomCard {
     protected void applyPowersToBlock() {
         super.applyPowersToBlock();
 
-        TorchChar dragon = CollectorChar.getLivingDragon();
+        TorchChar dragon = CollectorChar.getLivingTorchHead();
         if (douBaseBlock != -1) {
             douBlock = douBaseBlock;
             if (dragon != null) {
@@ -318,7 +318,7 @@ public abstract class AbstractCollectorCard extends CustomCard {
     @Override
     public void applyPowers()
     {
-        TorchChar dragon = CollectorChar.getLivingDragon();
+        TorchChar dragon = CollectorChar.getLivingTorchHead();
         if (douBaseDamage != -1) {
             douDamage= douBaseDamage;
             if (dragon != null) {
@@ -432,7 +432,7 @@ public abstract class AbstractCollectorCard extends CustomCard {
     {
         super.calculateCardDamage(mo);
 
-        TorchChar dragon = CollectorChar.getLivingDragon();
+        TorchChar dragon = CollectorChar.getLivingTorchHead();
         if (douBaseDamage != -1) {
             douDamage = douBaseDamage;
             if (dragon != null) {

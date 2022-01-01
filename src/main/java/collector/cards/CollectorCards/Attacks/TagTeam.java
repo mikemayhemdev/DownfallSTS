@@ -31,13 +31,13 @@ public class TagTeam extends AbstractCollectorCard {
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (CollectorChar.isFrontDragon()) {
+        if (CollectorChar.isFrontTorchHead()) {
             atb(new DamageAction(m,new DamageInfo(p,damage, DamageInfo.DamageType.NORMAL)));
-            if (CollectorChar.getLivingDragon() != null) {
+            if (CollectorChar.getLivingTorchHead() != null) {
                 atb(new GainBlockAction(CollectorChar.torch, douBlock));
             }
         } else {
-            if (CollectorChar.getLivingDragon() != null) {
+            if (CollectorChar.getLivingTorchHead() != null) {
                 atb(new DamageAction(m, new DamageInfo(CollectorChar.torch, douDamage, DamageInfo.DamageType.NORMAL)));
             }
             atb(new GainBlockAction(p,block));

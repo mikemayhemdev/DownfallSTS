@@ -21,7 +21,7 @@ public class CultistFeather extends AbstractCollectibleCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (CollectorChar.isFrontDragon()) {
+        if (CollectorChar.isFrontTorchHead()) {
             atb(new ApplyPowerAction(CollectorChar.torch,CollectorChar.torch,new StrengthPower(CollectorChar.torch,magicNumber)));
             if (upgraded){
                 atb(new ApplyPowerAction(CollectorChar.torch,CollectorChar.torch,new DexterityPower(CollectorChar.torch,magicNumber)));

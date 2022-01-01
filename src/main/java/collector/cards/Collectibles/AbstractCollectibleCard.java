@@ -133,7 +133,7 @@ public abstract class AbstractCollectibleCard extends CustomCard {
     protected void applyPowersToBlock() {
         super.applyPowersToBlock();
 
-        TorchChar dragon = CollectorChar.getLivingDragon();
+        TorchChar dragon = CollectorChar.getLivingTorchHead();
         if (douBaseBlock != -1) {
             douBlock = douBaseBlock;
             if (dragon != null) {

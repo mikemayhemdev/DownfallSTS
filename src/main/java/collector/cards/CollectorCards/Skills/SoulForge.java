@@ -20,7 +20,7 @@ public class SoulForge extends AbstractCollectorCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (CollectorChar.isFrontDragon()) {
+        if (CollectorChar.isFrontTorchHead()) {
             applyToSelf(new VigorPower(p, magicNumber));
             atb(new SelectCardsInHandAction(magicNumber, ExhaustAction.TEXT[0], true, true, card -> true, Cards -> {
                 if (Cards.size() > 0) {

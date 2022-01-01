@@ -18,6 +18,12 @@
       "At the end of your turn, all enemies lose HP equal to your #yTorch #yHeads HP, Kill your #yTorch #yHead."
     ]
   },
+  "collector:AggroNegated": {
+    "NAME": "Distraction",
+    "DESCRIPTIONS": [
+      "At the start of your turn gain #b"," #yAggro."
+    ]
+  },
   "collector:ChaoticFlux": {
     "NAME": "Chaotic Flux",
     "DESCRIPTIONS": [

@@ -47,16 +47,18 @@ public class CollectorCollection implements CustomSavable<ArrayList<AbstractCard
         cardsList.put(CharBossWatcher.ID, new WatchersStaff());
         collection = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         combatCollection = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        collection.addToBottom(new LuckyWick());
-        collection.addToBottom(new LuckyWick());
-        collection.addToBottom(new LuckyWick());
-        collection.addToBottom(new LuckyWick());
+        if (collection.isEmpty()) {
+            collection.addToBottom(new LuckyWick());
+        }
     }
 
     public static void atBattleStart() {
+        combatCollection.clear();
         for (AbstractCard q : collection.group) {
             combatCollection.addToTop(q.makeSameInstanceOf());
+            System.out.println(q.name);
         }
+
         CollectionReward.collectPool.clear();
     }
     public static void atBattleEnd() {

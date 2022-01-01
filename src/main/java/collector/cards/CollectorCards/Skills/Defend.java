@@ -18,7 +18,7 @@ public class Defend extends AbstractCollectorCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (CollectorChar.isFrontDragon()) {
+        if (CollectorChar.isFrontTorchHead()) {
             atb(new GainBlockAction(CollectorChar.torch,douBlock));
         } else {
             atb(new GainBlockAction(p,block));

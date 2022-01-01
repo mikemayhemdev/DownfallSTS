@@ -2,8 +2,10 @@ package collector.cards.CollectorCards.Attacks;
 
 import collector.cards.CollectorCards.AbstractCollectorCard;
 import collector.powers.Suffering;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.DamageCallbackAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -18,17 +20,7 @@ public class Consign extends AbstractCollectorCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        iniHP = m.currentHealth;
-        dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                if (m.currentHealth < iniHP){
-                    atb(new ApplyPowerAction(m,p,new Suffering(iniHP - m.currentHealth,m)));
-                }
-                isDone = true;
-            }
-        });
+        atb(new DamageCallbackAction(m,new DamageInfo(p,damage), AbstractGameAction.AttackEffect.FIRE, (i)->{atb(new ApplyPowerAction(m,p,new Suffering(i,m)));}));
     }
 
     @Override

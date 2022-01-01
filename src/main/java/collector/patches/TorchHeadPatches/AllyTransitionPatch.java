@@ -13,7 +13,7 @@ public class AllyTransitionPatch {
         @SpirePostfixPatch
         public static void Postfix() {
             if (AbstractDungeon.player instanceof CollectorChar) {
-                TorchChar dragon = CollectorChar.getDragon();
+                TorchChar dragon = CollectorChar.getTorchHead();
                 dragon.loseBlock(true);
                 if (!dragon.stance.ID.equals(NeutralStance.STANCE_ID)) {
                     dragon.stance = new NeutralStance();

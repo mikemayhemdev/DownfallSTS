@@ -16,7 +16,7 @@ public class SelfDestruct extends AbstractCollectorCard {
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean result = super.canUse(p, m);
-        if (result && CollectorChar.getLivingDragon() == null) {
+        if (result && CollectorChar.getLivingTorchHead() == null) {
             return false;
         }
         return result;

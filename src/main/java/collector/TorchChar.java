@@ -354,7 +354,7 @@ public class TorchChar extends CustomPlayer implements CustomSavable<ArrayList<I
     public void move() {
         float x = flipHorizontal ? (master.drawX + OFFSET_X * Settings.scale) : (master.drawX - OFFSET_X * Settings.scale);
         movePosition(x, master.drawY + OFFSET_Y * Settings.scale);
-        if (CollectorChar.isFrontDragon()) {
+        if (CollectorChar.isFrontTorchHead()) {
             CollectorMod.targetMarker.move(this);
         }
     }

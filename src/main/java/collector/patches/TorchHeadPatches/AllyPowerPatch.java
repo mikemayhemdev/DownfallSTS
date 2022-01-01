@@ -17,7 +17,7 @@ public class AllyPowerPatch {
     public static class DragonStartTurnPower {
         @SpirePostfixPatch
         public static void Postfix(AbstractRoom __instance) {
-            TorchChar dragon = CollectorChar.getLivingDragon();
+            TorchChar dragon = CollectorChar.getLivingTorchHead();
             if (dragon != null) {
                 for (AbstractPower p : dragon.powers) {
                     p.atEndOfTurnPreEndTurnCards(true);
@@ -30,7 +30,7 @@ public class AllyPowerPatch {
     public static class DragonDrawPower {
         @SpireInsertPatch(locator = DrawPowerLocator.class)
         public static void Insert(AbstractPlayer __instance, int numCards, AbstractCard ___c) {
-            TorchChar dragon = CollectorChar.getLivingDragon();
+            TorchChar dragon = CollectorChar.getLivingTorchHead();
             if (dragon != null) {
                 for (AbstractPower p : dragon.powers) {
                     p.onCardDraw(___c);
@@ -51,7 +51,7 @@ public class AllyPowerPatch {
     public static class DragonOnUseCardPower {
         @SpirePostfixPatch
         public static void Postfix(UseCardAction __instance, AbstractCard card, AbstractCreature target) {
-            TorchChar dragon = CollectorChar.getLivingDragon();
+            TorchChar dragon = CollectorChar.getLivingTorchHead();
             if (dragon != null) {
                 for (AbstractPower p : dragon.powers) {
                     if (!card.dontTriggerOnUseCard) {
@@ -66,7 +66,7 @@ public class AllyPowerPatch {
     public static class DragonOnEnergyRechargePower {
         @SpirePostfixPatch
         public static void Postfix(PlayerTurnEffect __instance) {
-            TorchChar dragon = CollectorChar.getLivingDragon();
+            TorchChar dragon = CollectorChar.getLivingTorchHead();
             if (dragon != null) {
                 for (AbstractPower p : dragon.powers) {
                     p.onEnergyRecharge();

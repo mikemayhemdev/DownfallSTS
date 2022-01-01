@@ -1,10 +1,11 @@
 package collector.cards.CollectorCards.Attacks;
 
+import collector.CollectorChar;
 import collector.cards.CollectorCards.AbstractCollectorCard;
 import collector.powers.SoulMark;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -17,6 +18,7 @@ public class SoulHarvest extends AbstractCollectorCard {
     public SoulHarvest() {
         super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ALL_ENEMY);
         baseDamage = 6;
+        douBaseDamage = 6;
         isMultiDamage = true;
         selfRetain = true;
         exhaust = true;
@@ -26,9 +28,11 @@ public class SoulHarvest extends AbstractCollectorCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new CleaveEffect()));
-        atb(new DamageAllEnemiesAction(p,multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
-        for (AbstractMonster abstractMonster : AbstractDungeon.getCurrRoom().monsters.monsters){
-            applyToEnemy(abstractMonster, new SoulMark(magicNumber,abstractMonster));
+        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters){
+            applyToEnemy(mo, new SoulMark(magicNumber,mo));
+            if (CollectorChar.isFrontTorchHead()) {
+                atb(new DamageAction(mo,new DamageInfo(p,douDamage), AbstractGameAction.AttackEffect.FIRE));
+            } else atb(new DamageAction(mo,new DamageInfo(CollectorChar.torch,douDamage), AbstractGameAction.AttackEffect.FIRE));
         }
     }
 

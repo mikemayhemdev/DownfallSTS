@@ -1,5 +1,6 @@
 package collector.cards.CollectorCards.Skills;
 
+import collector.CollectorChar;
 import collector.actions.AddAggroAction;
 import collector.cards.CollectorCards.AbstractCollectorCard;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
@@ -23,7 +24,9 @@ public class FelsteelAegis extends AbstractCollectorCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new AddAggroAction(true,magicNumber));
+        if (CollectorChar.getLivingTorchHead() != null) {
+            atb(new AddAggroAction(true, magicNumber));
+        }
         atb(new SelectCardsInHandAction(magicNumber, ExhaustAction.TEXT[0],true,true, card ->true, Cards->{
             if (Cards.size() > 0){
                 atb(new ExhaustSpecificCardAction(Cards.get(0), AbstractDungeon.player.hand));

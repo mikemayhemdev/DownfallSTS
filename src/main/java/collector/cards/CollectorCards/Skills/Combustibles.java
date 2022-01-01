@@ -21,7 +21,7 @@ public class Combustibles extends AbstractCollectorCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (CollectorChar.isFrontDragon()) {
+        if (CollectorChar.isFrontTorchHead()) {
             atb(new GainBlockAction(CollectorChar.torch, douBlock));
             atb(new SelectCardsInHandAction(magicNumber, ExhaustAction.TEXT[0], true, true, card -> true, Cards -> {
                 if (Cards.size() > 0) {

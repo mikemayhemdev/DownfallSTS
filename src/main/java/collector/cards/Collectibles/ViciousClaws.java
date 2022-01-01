@@ -1,16 +1,16 @@
 package collector.cards.Collectibles;
 
+import collector.Interfaces.PerpetualCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class ViciousClaws extends AbstractCollectibleCard {
+public class ViciousClaws extends AbstractCollectibleCard implements PerpetualCard {
     public final static String ID = makeID("ViciousClaws");
 
     public ViciousClaws() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
        damage= baseDamage = 1;
-        this.exhaust = true;
     }
 
     @Override
@@ -26,5 +26,10 @@ public class ViciousClaws extends AbstractCollectibleCard {
     public void upp() {
         this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
         initializeDescription();
+    }
+
+    @Override
+    public void PerpetualBonus() {
+
     }
 }

@@ -1,24 +1,28 @@
 {
   "collector:Strike": {
     "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "collector:Front deals !D! damage."
   },
   "collector:Defend": {
     "NAME": "Defend",
-    "DESCRIPTION": "collector:Front Gains !B! Block."
+    "DESCRIPTION": "collector:Front gains !B! Block."
   },
   "collector:SoulStitch": {
     "NAME": "Soul Stitch",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! collector:Suffering."
+    "DESCRIPTION": "*Collector deals !D! damage. NL Apply !M! collector:Suffering."
   },
   "collector:SoulHarvest": {
     "NAME": "Soul Harvest",
-    "DESCRIPTION": "Innate. NL Apply !M! collector:Soul_Snare and Deal !D! damage to ALL Enemies. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Apply !M! collector:Soul_Snare and collector:Back deals !D! damage to ALL Enemies. NL Exhaust."
   },
   "collector:Contemplate": {
     "NAME": "Contemplate",
     "DESCRIPTION": "Choose 1 of 3 cards from your collector:Collect pile. Put it in your hand.",
     "UPGRADE_DESCRIPTION": "Choose 1 of 3 cards from your collector:Collect pile. Put it in your hand and Upgrade it."
+  },
+  "collector:Forgery": {
+    "NAME": "Forgery",
+    "DESCRIPTION": "Choose !M! of 3 cards from your collector:Collect pile. NL Put a Rare copy of them in your hand"
   },
   "collector:Miser": {
     "NAME": "Miser",
@@ -32,11 +36,11 @@
   },
   "collector:Consign": {
     "NAME": "Consign",
-    "DESCRIPTION": "Deal !D! damage. NL Apply collector:Suffering equal to unblocked damage dealt."
+    "DESCRIPTION": "*Collector deals !D! damage. NL Apply collector:Suffering equal to unblocked damage dealt."
   },
   "collector:CullingBlow": {
     "NAME": "Culling Blow",
-    "DESCRIPTION": "Deal !D! damage. NL if the target has collector:Suffering, Apply !M! collector:Soul_Snare."
+    "DESCRIPTION": "collector:Back deals !D! damage. NL if the target has collector:Suffering, Apply !M! collector:Soul_Snare."
   },
   "collector:Fever": {
     "NAME": "Fever",
@@ -45,6 +49,10 @@
   "collector:Fireball": {
     "NAME": "Fireball",
     "DESCRIPTION": "*Collector Deals !D! damage. NL collector:Pyre - bronze:Insert a copy of this with + !M! damage. NL Exhaust."
+  },
+  "collector:DancingLight": {
+    "NAME": "Dancing Light",
+    "DESCRIPTION": "Reduce collector:Torch_Head collector:Aggro to 0 until next turn. NL Draw !M! Card."
   },
   "collector:FlameLash": {
     "NAME": "Flame Lash",
@@ -70,11 +78,11 @@
   },
   "collector:Mindflare": {
     "NAME": "Mindflare",
-    "DESCRIPTION": "*Collector Deals !D! damage. NL Draw a card from your collector:Collect pile for each collector:Affliction the target has."
+    "DESCRIPTION": "Deal !D! damage. NL Draw a card from your collector:Collect pile for each collector:Affliction the target has."
   },
   "collector:ScorchingRay": {
     "NAME": "Scorching Ray",
-    "DESCRIPTION": "*Collector Deals !D! damage for each collector:Affliction the target has."
+    "DESCRIPTION": "Deal !D! damage for each collector:Affliction the target has."
   },
   "collector:Wrack": {
     "NAME": "Wrack",
@@ -82,12 +90,12 @@
   },
   "collector:FingerofDeath": {
     "NAME": "Finger of Death",
-    "DESCRIPTION": "*Collector Deals !D! damage. NL Apply 1 collector:Suffering Twice. NL When Exhausted : bronze:Insert a copy of this that applies *Suffering an additional time.",
+    "DESCRIPTION": "Deal !D! damage. NL Apply 1 collector:Suffering Twice. NL When Exhausted : bronze:Insert a copy of this that applies *Suffering an additional time.",
     "EXTENDED_DESCRIPTION": ["Deal !D! damage. NL Apply 1 collector:Suffering !M! Times. NL When Exhausted : bronze:Insert a copy of this that applies *Suffering an additional time."]
   },
   "collector:Hellfire": {
     "NAME": "Hellfire",
-    "DESCRIPTION": "*Collector Deals !D! damage and Apply a random collector:Affliction to a random enemy X Times.",
+    "DESCRIPTION": "Deal !D! damage and Apply a random collector:Affliction to a random enemy X Times.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage and Apply a random *πUpgraded collector:Affliction to a random enemy X Times."
   },
   "collector:DarkSuffusion": {
@@ -139,16 +147,16 @@
   },
   "collector:CrudeShield": {
     "NAME": "Crude Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !B! Block. NL Exhaust."
+    "DESCRIPTION": "collector:Torch_Head Gains !B! Block and 1 collector:Aggro. NL collector:Perpetual."
   },
   "collector:CultistFeather": {
     "NAME": "Cultist Feather",
-    "DESCRIPTION": "collector:Lead Gains !M! Strength.",
-    "UPGRADE_DESCRIPTION": "collector:Lead Gains !M! Strength and Dexterity."
+    "DESCRIPTION": "collector:Front Gains !M! Strength.",
+    "UPGRADE_DESCRIPTION": "collector:Front Gains !M! Strength and Dexterity."
   },
   "collector:CurledHorns": {
     "NAME": "Curled Horns",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust."
+    "DESCRIPTION": "collector:Front Gains !B! Block. NL collector:Perpetual."
   },
   "collector:DefectCore": {
     "NAME": "Defect Core",
@@ -157,7 +165,8 @@
   },
   "collector:GremlinPoker": {
     "NAME": "Gremlin Poker",
-    "DESCRIPTION": "Deal !D! damage. NL collector:Perpetual."
+    "DESCRIPTION": "Deal !D! damage. NL collector:Perpetual 2.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL collector:Perpetual 3."
   },
   "collector:IroncladMask": {
     "NAME": "Ironclad Mask",
@@ -165,7 +174,7 @@
   },
   "collector:LouseSegment": {
   "NAME": "Louse Segment",
-  "DESCRIPTION": "The next time you take attack damage, Gain !B! Block. NL collector:Perpetual."
+  "DESCRIPTION": "The next time the collector:Back takes attack damage, they Gain !B! Block. NL collector:Perpetual."
   },
   "collector:LagavullinShell": {
     "NAME": "Lagavullin Shell",
@@ -203,8 +212,8 @@
   },
   "collector:ViciousClaws": {
     "NAME": "Vicious Claws",
-    "DESCRIPTION": "Deal !D! damage twice. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage 3 times. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage twice. NL collector:Perpetual.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage 3 times. NL collector:Perpetual."
   },
   "collector:WatchersStaff": {
     "NAME": "Watchers Staff",

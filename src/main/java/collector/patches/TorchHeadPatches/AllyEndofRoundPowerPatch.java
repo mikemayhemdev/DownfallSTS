@@ -12,7 +12,7 @@ public class AllyEndofRoundPowerPatch {
     public static class EndOfRoundPower {
         @SpireInsertPatch(locator = EndOfTurnPowerLocator.class)
         public static void Insert(MonsterGroup __instance) {
-            TorchChar dragon = CollectorChar.getLivingDragon();
+            TorchChar dragon = CollectorChar.getLivingTorchHead();
             if (dragon != null) {
                 for (AbstractPower p : dragon.powers) {
                     p.atEndOfRound();

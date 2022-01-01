@@ -4,14 +4,11 @@ import collector.cards.CollectorCards.AbstractCollectorCard;
 import collector.powers.Suffering;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class FingerofDeath extends AbstractCollectorCard {
     public final static String ID = makeID("FingerofDeath");
@@ -30,13 +27,6 @@ public class FingerofDeath extends AbstractCollectorCard {
         }
     }
     public void triggerOnExhaust() {
-        for (AbstractMonster m: AbstractDungeon.getCurrRoom().monsters.monsters) {
-            for (AbstractPower p:m.powers) {
-                if (p instanceof Suffering){
-                    atb(new GainEnergyAction(1));
-                }
-            }
-        }
         AbstractCard copy = this.makeStatEquivalentCopy();
         copy.magicNumber += 1;
         copy.rawDescription = ((AbstractCollectorCard)copy).EXTENDED_DESCRIPTION[0];

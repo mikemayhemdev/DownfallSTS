@@ -10,10 +10,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.ArrayList;
 
-public class Contemplate extends AbstractCollectorCard {
-    public final static String ID = makeID("Contemplate");
-    public Contemplate() {
-        super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
+public class Forgery extends AbstractCollectorCard {
+    public final static String ID = makeID("Forgery");
+    public Forgery() {
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        magicNumber = baseMagicNumber = 1;
     }
 
     @Override
@@ -27,18 +28,24 @@ public class Contemplate extends AbstractCollectorCard {
         } else {
             possCardsList.addAll(CollectorCollection.combatCollection.group);
         }
-        atb(new SelectCardsAction(possCardsList, 1, "Choose.", (cards) -> {
+        atb(new SelectCardsAction(possCardsList, magicNumber, "Choose.", (cards) -> {
             if (upgraded && !cards.get(0).upgraded){
                 cards.get(0).upgrade();
             }
-            CollectorCollection.combatCollection.removeCard(cards.get(0));
-            AbstractDungeon.player.hand.addToTop(cards.get(0));
+            AbstractCard c = cards.get(0).makeStatEquivalentCopy();
+            c.rarity = CardRarity.RARE;
+            AbstractDungeon.player.hand.addToTop(c);
+            if (upgraded){
+                AbstractCard c1 = cards.get(1).makeStatEquivalentCopy();
+                c1.rarity = CardRarity.RARE;
+                AbstractDungeon.player.hand.addToTop(c1);
+            }
         }));
     }
 
     @Override
     public void upp() {
-        this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+        upgradeMagicNumber(1);
         initializeDescription();
     }
 }

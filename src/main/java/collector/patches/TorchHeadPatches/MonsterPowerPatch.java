@@ -88,7 +88,7 @@ public class MonsterPowerPatch {
         @SpirePrefixPatch
         public static void Prefix(SharpHidePower __instance, AbstractCard card, UseCardAction action) {
             if (CollectorChar.getCurrentTarget(__instance.owner) instanceof TorchChar) {
-                changePlayer(CollectorChar.getDragon());
+                changePlayer(CollectorChar.getTorchHead());
             }
         }
 
@@ -103,7 +103,7 @@ public class MonsterPowerPatch {
         @SpirePrefixPatch
         public static void Prefix(BeatOfDeathPower __instance, AbstractCard card, UseCardAction action) {
             if (CollectorChar.getCurrentTarget(__instance.owner) instanceof TorchChar) {
-                changePlayer(CollectorChar.getDragon());
+                changePlayer(CollectorChar.getTorchHead());
             }
         }
 

@@ -239,13 +239,7 @@ public class CollectorMod implements
         }
     }
 
-    public static void PerpetualEffect(AbstractCard card, int bonus) {
-        card.baseBlock += bonus;
-        card.baseDamage += bonus;
-        card.baseMagicNumber += bonus;
-        CollectorCollection.combatCollection.addToBottom(card);
-        AbstractDungeon.player.discardPile.removeCard(card);
-    }
+
 
     public static boolean AfflictionMatch(String stringtocompare) {
         if (stringtocompare.equals(Afflictions.get(0)) || stringtocompare.equals(Afflictions.get(1)) ||
@@ -276,8 +270,10 @@ public class CollectorMod implements
         BaseMod.addCard(new Consign());
         BaseMod.addCard(new CullingBlow());
         BaseMod.addCard(new DarkSuffusion());
+        BaseMod.addCard(new Forgery());
         BaseMod.addCard(new Fever());
         BaseMod.addCard(new SoulForge());
+        BaseMod.addCard(new DancingLight());
         BaseMod.addCard(new Bonfire());
         BaseMod.addCard(new Combustibles());
         BaseMod.addCard(new Fireball());
@@ -321,10 +317,12 @@ public class CollectorMod implements
         UnlockTracker.unlockCard(SoulStitch.ID);
         UnlockTracker.unlockCard(SoulHarvest.ID);
         UnlockTracker.unlockCard(Bargain.ID);
+        UnlockTracker.unlockCard(DancingLight.ID);
         UnlockTracker.unlockCard(Consign.ID);
         UnlockTracker.unlockCard(CullingBlow.ID);
         UnlockTracker.unlockCard(DarkSuffusion.ID);
         UnlockTracker.unlockCard(Combustibles.ID);
+        UnlockTracker.unlockCard(Forgery.ID);
         UnlockTracker.unlockCard(Fever.ID);
         UnlockTracker.unlockCard(Fireball.ID);
         UnlockTracker.unlockCard(Hellfire.ID);

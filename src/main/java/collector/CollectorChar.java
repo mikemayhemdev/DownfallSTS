@@ -71,7 +71,7 @@ public class CollectorChar extends CustomPlayer {
     public int aggro;
 
     public boolean isReticleAttackIcon;
-    public Color attackIconColor = CardHelper.getColor(255, 160, 48);
+    public Color attackIconColor = CardHelper.getColor(48, 160, 108);
     public static Texture attackerIcon = null;
 
     public boolean dragonAttackAnimation;
@@ -452,14 +452,14 @@ public class CollectorChar extends CustomPlayer {
         return attackerIcon;
     }
 
-    public static TorchChar getDragon() {
+    public static TorchChar getTorchHead() {
         if (AbstractDungeon.player instanceof CollectorChar) {
             return torch;
         }
         return null;
     }
 
-    public static TorchChar getLivingDragon() {
+    public static TorchChar getLivingTorchHead() {
         if (AbstractDungeon.player instanceof CollectorChar) {
             TorchChar dragon = torch;
             if (dragon.isDead) return null;
@@ -468,7 +468,7 @@ public class CollectorChar extends CustomPlayer {
         return null;
     }
 
-    public static boolean isFrontDragon() {
+    public static boolean isFrontTorchHead() {
         if (AbstractDungeon.player instanceof CollectorChar) {
             TorchChar torch = CollectorChar.torch;
             if (torch.isDead) return false;

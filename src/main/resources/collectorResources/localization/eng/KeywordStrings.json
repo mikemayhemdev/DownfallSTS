@@ -84,7 +84,7 @@
     "NAMES": [
       "perpetual"
     ],
-    "DESCRIPTION": "This card returns to the #yCollection in when played."
+    "DESCRIPTION": "This card shuffles into the Collect pile in when played instead of going to the Discard pile, increasing Damage and Block Gain by the shown value."
   },
   {
     "PROPER_NAME": "Pyre",

@@ -15,7 +15,7 @@ public class AllyEnemyRedirectPatch {
 
         @SpirePrefixPatch
         public static void Prefix(DamageAction __instance) {
-            TorchChar dragon = CollectorChar.getDragon();
+            TorchChar dragon = CollectorChar.getTorchHead();
             if (dragon != null && __instance.target == dragon) {
                 prevTarget = __instance.target;
                 __instance.target = AbstractDungeon.player;

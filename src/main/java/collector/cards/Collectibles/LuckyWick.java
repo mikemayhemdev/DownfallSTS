@@ -1,13 +1,15 @@
 package collector.cards.Collectibles;
 
-import collector.CollectorMod;
+import basemod.helpers.CardModifierManager;
+import collector.Interfaces.PerpetualCard;
+import collector.util.PlusDamageAndBlockCardMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class LuckyWick extends AbstractCollectibleCard {
+public class LuckyWick extends AbstractCollectibleCard implements PerpetualCard {
     public final static String ID = makeID("LuckyWick");
     public int perpetualbonus;
     public LuckyWick() {
@@ -24,11 +26,9 @@ public class LuckyWick extends AbstractCollectibleCard {
         blck();
         atb(new DrawCardAction(p,magicNumber));
         AbstractCard card = this;
-        atb(new AbstractGameAction() {
-            public void update() {
-                CollectorMod.PerpetualEffect(card,perpetualbonus);
-                this.isDone = true;
-            }});
+    }
+    public void PerpetualBonus() {
+        CardModifierManager.addModifier(this, new PlusDamageAndBlockCardMod(perpetualbonus));
     }
 
     @Override

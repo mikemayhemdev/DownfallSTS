@@ -1,8 +1,11 @@
 package collector.cards.CollectorCards.Attacks;
 
+import collector.CollectorChar;
 import collector.cards.CollectorCards.AbstractCollectorCard;
 import collector.powers.SoulMark;
+import collector.powers.Suffering;
 import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -17,7 +20,7 @@ public class CullingBlow extends AbstractCollectorCard {
 
     public CullingBlow() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 10;
+        douDamage = douBaseDamage = damage = baseDamage = 10;
         magicNumber = baseMagicNumber = 2;
         isMultiDamage = true;
     }
@@ -26,8 +29,12 @@ public class CullingBlow extends AbstractCollectorCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new VFXAction(new WhirlwindEffect()));
         AbstractDungeon.effectsQueue.add(new RoomTintEffect(Color.BLACK.cpy(), 0.8F));
-        atb(new DamageAction(m,new DamageInfo(p,baseDamage)));
-        applyToEnemy(m,new SoulMark(magicNumber,m));
+        if (CollectorChar.isFrontTorchHead()) {
+            atb(new DamageAction(m,new DamageInfo(p,damage), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        } else atb(new DamageAction(m,new DamageInfo(CollectorChar.torch,douDamage), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        if (m.hasPower(Suffering.POWER_ID)) {
+            applyToEnemy(m, new SoulMark(magicNumber, m));
+        }
     }
 
     @Override
