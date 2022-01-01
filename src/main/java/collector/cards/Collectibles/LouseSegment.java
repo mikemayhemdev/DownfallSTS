@@ -10,7 +10,7 @@ public class LouseSegment extends AbstractCollectibleCard implements PerpetualCa
     public final static String ID = makeID("LouseSegment");
 
     public LouseSegment() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, AbstractCollectorCard.DTCardTarget.BOTH);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, AbstractCollectorCard.CollectorCardSource.BOTH);
         baseDamage = 1;
         block = baseBlock = 10;
         baseMagicNumber = 1;

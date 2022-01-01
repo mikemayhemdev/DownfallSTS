@@ -3,6 +3,7 @@ package collector;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomPlayer;
 import collector.Relics.EmeraldTorch;
+import collector.actions.AddAggroAction;
 import collector.actions.ApplyAggroAction;
 import collector.cards.CollectorCards.AbstractCollectorCard;
 import collector.cards.CollectorCards.Attacks.SoulHarvest;
@@ -320,12 +321,10 @@ public class CollectorChar extends CustomPlayer {
     public void preBattlePrep() {
         super.preBattlePrep();
         torch.preBattlePrep();
-
-        aggro = 0;
         front = this;
-        addAggro(0);
+        setAggro(1);
         if (AbstractDungeon.player.hasRelic(EmeraldTorch.ID)) {
-            addAggro(1);
+            AbstractDungeon.actionManager.addToBottom(new AddAggroAction(1));
         }
         frontChangedThisTurn = false;
     }
@@ -358,8 +357,8 @@ public class CollectorChar extends CustomPlayer {
 
 
     public void setAggro(int aggro) {
-        this.aggro = aggro;
-        if (aggro > 0) {
+        TorchAggro = aggro;
+        if (TorchAggro > 0) {
             setFront(torch);
         } else {
             setFront(this);
@@ -370,7 +369,7 @@ public class CollectorChar extends CustomPlayer {
     }
 
     public void addAggro(int delta) {
-        setAggro(this.aggro + delta);
+        setAggro(TorchAggro + delta);
     }
 
     public void updateIntents() {
@@ -505,7 +504,7 @@ public class CollectorChar extends CustomPlayer {
 
     public static int getAggro() {
         if (AbstractDungeon.player instanceof CollectorChar) {
-            return ((CollectorChar) AbstractDungeon.player).aggro;
+            return TorchAggro;
         } else {
             return 0;
         }

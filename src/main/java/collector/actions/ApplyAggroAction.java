@@ -27,24 +27,13 @@ public class ApplyAggroAction extends AbstractGameAction {
 
     public void update() {
         if (AbstractDungeon.getMonsters().areMonstersBasicallyDead() || !(AbstractDungeon.player instanceof CollectorChar) ||
-                (CollectorMod.CollectorAggro == 0 && CollectorMod.TorchAggro == 0)) {
+                (CollectorMod.TorchAggro == 0)) {
             this.isDone = true;
             return;
         }
-
         if (!CollectorChar.isSolo()) {
-            if (CollectorMod.CollectorAggro != 0) {
-                addAggroChangeEffect(AbstractDungeon.player,CollectorMod.CollectorAggro);
-            }
-            if (CollectorMod.TorchAggro != 0) {
-                addAggroChangeEffect(((CollectorChar) AbstractDungeon.player).torch, CollectorMod.TorchAggro);
-            }
-            if (CollectorMod.TorchAggro - CollectorMod.CollectorAggro != 0) {
-                ((CollectorChar) AbstractDungeon.player).addAggro(CollectorMod.TorchAggro - CollectorMod.CollectorAggro);
-            }
-        }
-        CollectorMod.TorchAggro = 0;
-        CollectorMod.CollectorAggro = 0;
+            addAggroChangeEffect(CollectorChar.torch, CollectorMod.TorchAggro);
+        } else CollectorMod.TorchAggro = 0;
         isDone = true;
     }
 

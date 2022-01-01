@@ -11,7 +11,7 @@ public class CurledHorns extends AbstractCollectibleCard implements PerpetualCar
     public final static String ID = makeID("CurledHorns");
 
     public CurledHorns() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, AbstractCollectorCard.DTCardTarget.BOTH);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, AbstractCollectorCard.CollectorCardSource.BOTH);
         block = baseBlock = 4;
         douBaseBlock = baseBlock;
         this.exhaust = true;

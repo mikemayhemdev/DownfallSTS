@@ -147,7 +147,7 @@
   },
   "collector:CrudeShield": {
     "NAME": "Crude Shield",
-    "DESCRIPTION": "collector:Torch_Head Gains !B! Block and 1 collector:Aggro. NL collector:Perpetual."
+    "DESCRIPTION": "collector:Torch_Head Gains !B! Block and !M! collector:Aggro. NL collector:Perpetual."
   },
   "collector:CultistFeather": {
     "NAME": "Cultist Feather",

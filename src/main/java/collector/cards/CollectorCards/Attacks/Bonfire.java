@@ -15,7 +15,7 @@ public class Bonfire extends AbstractCollectorCard {
     public final static String ID = makeID("Bonfire");
 
     public Bonfire() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY,DTCardTarget.DRAGON_ONLY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY, CollectorCardSource.TORCH_ONLY);
         douBaseDamage =  baseDamage = damage = 4;
         douBlock = douBaseBlock = 8;
         magicNumber = baseMagicNumber = 1;
@@ -36,7 +36,7 @@ public class Bonfire extends AbstractCollectorCard {
                 if (Cards.size() > 0) {
                     atb(new ExhaustSpecificCardAction(Cards.get(0), AbstractDungeon.player.hand));
                     atb(new GainBlockAction(CollectorChar.torch, douBlock));
-                    atb(new AddAggroAction(true, magicNumber));
+                    atb(new AddAggroAction(magicNumber));
                 }
             }));
         }

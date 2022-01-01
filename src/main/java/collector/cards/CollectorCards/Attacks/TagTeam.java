@@ -12,7 +12,7 @@ public class TagTeam extends AbstractCollectorCard {
     public final static String ID = makeID("TagTeam");
 
     public TagTeam() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY,DTCardTarget.BOTH);
+        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY, CollectorCardSource.BOTH);
         baseDamage = 9;
         douBaseDamage = 9;
         baseBlock = 9;

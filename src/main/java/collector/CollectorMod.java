@@ -5,9 +5,7 @@ import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.interfaces.*;
 import collector.Relics.EmeraldTorch;
-import collector.Vars.DuoBlock;
-import collector.Vars.DuoDamage;
-import collector.Vars.DuoMagic;
+import collector.Vars.*;
 import collector.actions.FreezeAggroAction;
 import collector.cards.Collectibles.*;
 import collector.cards.CollectorCards.Attacks.*;
@@ -94,7 +92,6 @@ public class CollectorMod implements
     public static ArrayList<String> Boons = new ArrayList<>();
     public static HashMap<String, AbstractCard> cardsList;
     public static Color COLLECTIBLE_CARD_COLOR = CardHelper.getColor(13, 158, 153);
-    public static int CollectorAggro = 0;
     public static int TorchAggro = 0;
     public static TargetMarker targetMarker;
     public CollectorMod() {
@@ -259,6 +256,10 @@ public class CollectorMod implements
         BaseMod.addDynamicVariable(new CollectorSecondDamage());
         BaseMod.addDynamicVariable(new DuoDamage());
         BaseMod.addDynamicVariable(new DuoBlock());
+        BaseMod.addDynamicVariable(new FrontDamage());
+        BaseMod.addDynamicVariable(new FrontBlock());
+        BaseMod.addDynamicVariable(new BackDamage());
+        BaseMod.addDynamicVariable(new BackBlock());
         BaseMod.addDynamicVariable(new DuoMagic());
 
         BaseMod.addCard(new Strike());
@@ -440,9 +441,6 @@ public class CollectorMod implements
         MonsterIntentPatch.prevPlayer = null;
         MonsterPowerPatch.prevPlayer = null;
         MonsterTargetPatch.prevPlayer = null;
-
-        TorchAggro = 0;
-        CollectorAggro = 0;
 
         FreezeAggroAction.frozen = false;
 

@@ -22,8 +22,8 @@ public class EmeraldTorch extends CustomRelic {
     }
     public void atBattleStart() {
         this.flash();
-        this.addToBot(new GainBlockAction(CollectorChar.torch,5));
         this.addToTop(new RelicAboveCreatureAction(CollectorChar.torch, this));
+        this.addToBot(new GainBlockAction(CollectorChar.torch,5));
     }
 }
 

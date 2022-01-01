@@ -25,7 +25,7 @@ public class FelsteelAegis extends AbstractCollectorCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (CollectorChar.getLivingTorchHead() != null) {
-            atb(new AddAggroAction(true, magicNumber));
+            atb(new AddAggroAction(magicNumber));
         }
         atb(new SelectCardsInHandAction(magicNumber, ExhaustAction.TEXT[0],true,true, card ->true, Cards->{
             if (Cards.size() > 0){

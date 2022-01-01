@@ -25,6 +25,6 @@ public class AggroNegated extends AbstractPower {
 
     @Override
     public void atStartOfTurnPostDraw(){
-        addToBot(new AddAggroAction(true,amount));
+        addToBot(new AddAggroAction(amount));
     }
 }

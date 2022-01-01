@@ -12,7 +12,7 @@ public class CultistFeather extends AbstractCollectibleCard {
     public final static String ID = makeID("CultistFeather");
 
     public CultistFeather() {
-        super(ID, 0, CardType.POWER, CardRarity.COMMON, CardTarget.NONE, AbstractCollectorCard.DTCardTarget.BOTH);
+        super(ID, 0, CardType.POWER, CardRarity.COMMON, CardTarget.NONE, AbstractCollectorCard.CollectorCardSource.BOTH);
         baseDamage = 13;
         baseBlock = 1;
         magicNumber = baseMagicNumber = 1;
