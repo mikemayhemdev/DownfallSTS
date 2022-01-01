@@ -36,6 +36,9 @@ import charbosses.relics.CBR_MagicFlower;
 import charbosses.stances.AbstractEnemyStance;
 import charbosses.stances.EnNeutralStance;
 import charbosses.ui.EnemyEnergyPanel;
+import collector.CollectorChar;
+import collector.TorchChar;
+import collector.patches.TorchHeadPatches.MonsterTargetPatch;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
@@ -87,6 +90,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public static AbstractCharBoss boss;
     public static boolean finishedSetup;
 
+    public AbstractPlayer prevPlayer;
     public ArrayList<AbstractCharbossRelic> relics;
     public AbstractStance stance;
     public ArrayList<AbstractOrb> orbs;
@@ -284,12 +288,63 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.onSetupTurn = !this.onSetupTurn;
     }
 
+    private void debugStrings(){
+
+        SlimeboundMod.logger.info(AbstractDungeon.player);
+        SlimeboundMod.logger.info(CollectorChar.getCurrentTarget(null));
+        SlimeboundMod.logger.info(MonsterTargetPatch.redirectTarget);
+    }
+
     public void makePlay() {
         for (AbstractCard _c : this.hand.group) {
             AbstractBossCard c = (AbstractBossCard) _c;
             if (c.canUse(AbstractDungeon.player, this) && c.getPriority(this.hand.group) > -100) {
                 SlimeboundMod.logger.info("Enemy using card: " + c.name + " energy = " + EnemyEnergyPanel.totalCount);
+
+
+                /**This section is a whole bunch of somewhat ugly hackery to get Boss Cards to follow
+                 * along with the MonsterTargetPatch in order for Boss cards to properly use
+                 * Collector's Aggro System.
+                 */
+                //   SlimeboundMod.logger.info("trying to get collector target");
+             //   debugStrings();
+                AbstractCreature target = CollectorChar.getCurrentTarget(null);
+
+              //  SlimeboundMod.logger.info("got collector target");
+             //   debugStrings();
+
+                if (target instanceof AbstractMonster) {
+              //     SlimeboundMod.logger.info("Redirecttarget");
+              //      debugStrings();
+                    MonsterTargetPatch.redirectTarget = target;
+                } else if (AbstractDungeon.player instanceof CollectorChar && target instanceof TorchChar) {
+
+               //     SlimeboundMod.logger.info("2nd else");
+               //     debugStrings();
+                    if (prevPlayer != null) {
+                        System.out.println("BUG - MonsterTargetPatch!");
+                    }
+             //       SlimeboundMod.logger.info("settings vars");
+              //      debugStrings();
+                    prevPlayer = AbstractDungeon.player;
+                    AbstractDungeon.player = ((CollectorChar) AbstractDungeon.player).torch;
+                }
+               // SlimeboundMod.logger.info("using card");
+               // debugStrings();
                 this.useCard(c, this, EnemyEnergyPanel.totalCount);
+
+               // SlimeboundMod.logger.info("setting back");
+                //debugStrings();
+                AbstractDungeon.player = prevPlayer;
+                MonsterTargetPatch.redirectTarget = null;
+
+              //  SlimeboundMod.logger.info("done");
+              //  debugStrings();
+                if (AbstractDungeon.player == null) AbstractDungeon.player = prevPlayer;
+
+                /**End of the Collector hackery
+                 */
+
                 this.addToBot(new DelayedActionAction(new CharbossDoNextCardAction()));
                 return;
             }
@@ -826,6 +881,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         if (monster == null) {
             monster = this;
         }
+
         if (c.type == AbstractCard.CardType.ATTACK) {
             this.attacksPlayedThisTurn++;
             this.useFastAttackAnimation();

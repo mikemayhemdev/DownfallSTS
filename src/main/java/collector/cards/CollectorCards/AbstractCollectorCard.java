@@ -34,6 +34,7 @@ import java.util.HashSet;
 
 import static automaton.AutomatonMod.makeCardPath;
 import static automaton.FunctionHelper.WITH_DELIMITER;
+import static collector.CollectorChar.getTorchHead;
 
 public abstract class AbstractCollectorCard extends CustomCard {
     public enum DTCardTarget {
@@ -73,6 +74,9 @@ public abstract class AbstractCollectorCard extends CustomCard {
     public int douBaseBlock = -1;
     public boolean upgradedDuoBlock = false;
     public boolean isDuoBlockModified = false;
+
+    public boolean frontDealsDmg = false;
+    public boolean rearDealsDmg = false;
 
     public int[] dragonMultiDamage;
 
@@ -260,12 +264,12 @@ public abstract class AbstractCollectorCard extends CustomCard {
         }
     }
 
-    public void upgradeDTDragonDamage(int amount) {
+    public void upgradeTorchHeadDamage(int amount) {
         douBaseDamage += amount;
         upgradedDuoDamage = true;
     }
 
-    public void upgradeDTDragonBlock(int amount) {
+    public void upgradeTorchHeadBlock(int amount) {
         douBaseBlock += amount;
         upgradedDuoBlock = true;
     }
@@ -561,35 +565,6 @@ public abstract class AbstractCollectorCard extends CustomCard {
         CollectorSecondDamage = BaseCollectorSecondDamage;
         isCollectorSecondDamageModified = true;
     }
-    public void fineTune() {
-        this.baseDamage += 1;
-        this.damage += 1;
-        this.baseBlock += 1;
-        this.block += 1;
-        this.baseMagicNumber += 1;
-        this.magicNumber += 1;
-        this.baseAuto += 1;
-        this.auto += 1;
-        this.superFlash();
-        FunctionHelper.genPreview();
-    }
-
-    public void onInput() {
-        // Called right after a card enters The Function, before outputs would occur.
-        // Pro tip: Don't delete things just because they're unused..
-    }
-
-    public void onCompilePreCardEffectEmbed(boolean forGameplay) {
-        // Called before the effects of cards are added to the Function. Use this if a card modifies its statistics as a Compile effect. Don't put these on action queue.
-    }
-
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        // Called when the function is about to be created. Watch out, onCompile() is called in order of insertion.
-    }
-
-    public void onCompileLast(AbstractCard function, boolean forGameplay) {
-        // Called after all cards have done onCompile, before relics and powers have.
-    }
 
     public void doNothingSpecificInParticular() {
         initializeTitle();
@@ -605,12 +580,6 @@ public abstract class AbstractCollectorCard extends CustomCard {
 
     public String getBonusChar() {
         return String.valueOf(NAME.charAt(0));
-    }
-
-    public String getSpecialCompileText() {
-        String[] splitText = this.rawDescription.split("bronze:Compile");
-        String compileText = splitText[1];
-        return (compileText.replaceAll("bronze:", "#y").replaceAll("!D!", String.valueOf(this.damage)).replaceAll("!B!", String.valueOf(this.block)).replaceAll("!M!", String.valueOf(this.magicNumber)).replaceAll("!bauto!", (String.valueOf(this.auto))).replace("*", "#y"));
     }
 
     public abstract void upp();
@@ -631,8 +600,26 @@ public abstract class AbstractCollectorCard extends CustomCard {
         return new DamageInfo(AbstractDungeon.player, damage, type);
     }
 
+    public void dmg(AbstractMonster m, AbstractGameAction.AttackEffect fx, AbstractGameAction.AttackEffect fxTorch) {
+        if (frontDealsDmg) {
+            if (CollectorChar.isFrontTorchHead()) {
+                atb(new DamageAction(m, new DamageInfo(getTorchHead(), douDamage, DamageInfo.DamageType.NORMAL), fxTorch));
+            } else atb(new DamageAction(m, makeInfo(), fx));
+        }
+        if (rearDealsDmg) {
+            if (!CollectorChar.isFrontTorchHead()) {
+                atb(new DamageAction(m, new DamageInfo(getTorchHead(), douDamage, DamageInfo.DamageType.NORMAL), fxTorch));
+            } else atb(new DamageAction(m, makeInfo(), fx));
+        }
+        if (!frontDealsDmg && !rearDealsDmg){
+            atb(new DamageAction(m, makeInfo(), fx));
+        }
+
+    }
+
+    //Easy function to just call one FX for both Collector and Torchhead
     public void dmg(AbstractMonster m, AbstractGameAction.AttackEffect fx) {
-        atb(new DamageAction(m, makeInfo(), fx));
+        dmg(m,fx,fx);
     }
 
     public void allDmg(AbstractGameAction.AttackEffect fx) {
@@ -691,106 +678,14 @@ public abstract class AbstractCollectorCard extends CustomCard {
         return new VulnerablePower(m, i, false);
     }
 
-    void thisEncodes() {
-        CardModifierManager.addModifier(this, new EncodeMod());
-    }
-
-    public int getSequencePosition() {
-        if (FunctionHelper.held != null) {
-            if (FunctionHelper.held.contains(this)) {
-                return FunctionHelper.held.group.indexOf(this);
-            }
-        }
-        return -1;
-    }
-
-    @Override
-    public void hover() {
-        if ((getSequencePosition() >= 0 || FunctionHelper.secretStorage == this) && !isHoveredInSequence) {
-            isHoveredInSequence = true;
-            //SlimeboundMod.logger.info("hover() hit");
-            ReflectionHacks.setPrivate(this, AbstractCard.class, "hovered", true);
-
-        } else {
-            super.hover();
-        }
-
-    }
-
-    @Override
-    public void unhover() {
-        if ((getSequencePosition() >= 0 || FunctionHelper.secretStorage == this) && isHoveredInSequence) {
-            isHoveredInSequence = false;
-            //SlimeboundMod.logger.info("unhover() hit");
-            ReflectionHacks.setPrivate(this, AbstractCard.class, "hovered", false);
-
-        } else {
-            super.unhover();
-        }
-    }
-
-    @Override
-    public void render(SpriteBatch sb) {
-        super.render(sb);
-
-        // SlimeboundMod.logger.info("rendering cardTip");
-
-        if (isHoveredInSequence) {
-            // SlimeboundMod.logger.info("isHoveredInSequence");
-            if (isLocked || (AbstractDungeon.player != null && (AbstractDungeon.player.isDraggingCard || AbstractDungeon.player.inSingleTargetMode))) {
-
-                // SlimeboundMod.logger.info("bounced");
-                return;
-            }
-
-
-            // SlimeboundMod.logger.info("Is in Sequence");
-            if (functionPreviewCard == null) {
-                functionPreviewCard = makeStatEquivalentCopy();
-            }
-            //SlimeboundMod.logger.info("rendering previewcard");
-            functionPreviewCard.drawScale = functionPreviewCardScale;
-            functionPreviewCard.current_x = functionPreviewCardX;
-            functionPreviewCard.current_y = functionPreviewCardY;
-            // functionPreviewCard.update();
-            functionPreviewCard.render(sb);
-
-
-        }
-        if (!hb.hovered && functionPreviewCard != null) {
-            functionPreviewCard = null;
-        }
-    }
-
-    boolean lastCard() {
-        return position == FunctionHelper.max - 1;
-    }
-
-    boolean firstCard() {
-        return position == 0;
-    }
-
     @Override
     public AbstractCard makeStatEquivalentCopy() {
-        AbstractCard r = super.makeStatEquivalentCopy();
-        if (!this.doSpecialCompileStuff && r instanceof AbstractCollectorCard) {
-            ((AbstractCollectorCard) r).doSpecialCompileStuff = false;
-            if (r.rawDescription.contains(" NL bronze:Compile")) {
-                String[] splitText = r.rawDescription.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
-                String compileText = splitText[1] + splitText[2];
-                r.rawDescription = r.rawDescription.replaceAll(compileText, "");
-            } //I will make this good soon
-            else if (r.rawDescription.contains("bronze:Compile")) {
-                r.rawDescription = ""; // It's over!! If you only have Compile effects, you're gone!!!!!
-            }
-            r.initializeDescription();
-        }
         AbstractCard card = super.makeStatEquivalentCopy();
         if (card instanceof AbstractCollectorCard) {
             AbstractCollectorCard dtCard = (AbstractCollectorCard) card;
             dtCard.douBaseDamage = douBaseDamage;
             dtCard.douBaseBlock = douBaseBlock;
         }
-        return r;
+        return card;
     }
 }

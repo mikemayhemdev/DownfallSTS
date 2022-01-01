@@ -23,6 +23,7 @@ public class SoulHarvest extends AbstractCollectorCard {
         selfRetain = true;
         exhaust = true;
         baseMagicNumber = magicNumber = 3;
+        rearDealsDmg = true;
     }
 
     @Override
@@ -30,9 +31,7 @@ public class SoulHarvest extends AbstractCollectorCard {
         atb(new VFXAction(new CleaveEffect()));
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters){
             applyToEnemy(mo, new SoulMark(magicNumber,mo));
-            if (CollectorChar.isFrontTorchHead()) {
-                atb(new DamageAction(mo,new DamageInfo(p,douDamage), AbstractGameAction.AttackEffect.FIRE));
-            } else atb(new DamageAction(mo,new DamageInfo(CollectorChar.torch,douDamage), AbstractGameAction.AttackEffect.FIRE));
+            dmg(mo, AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.FIRE);
         }
     }
 
