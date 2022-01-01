@@ -61,5 +61,17 @@
       "This enemy's intentions are #yUnknown (not attacking).",
       "Blocked"
     ]
+  },
+  "collector:CollectionScreen": {
+    "TEXT": [
+      "Hide",
+      "Start-of-combat Collection"
+    ]
+  },
+  "collector:CollectionUITopPanel": {
+    "TEXT": [
+      "Collection",
+      "Description text here"
+    ]
   }
 }

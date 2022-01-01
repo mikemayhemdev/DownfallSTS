@@ -16,6 +16,7 @@ import collector.cards.CollectorCards.Powers.Omen;
 import collector.cards.CollectorCards.Powers.SelfDestruct;
 import collector.cards.CollectorCards.Skills.*;
 import collector.patches.CollectibleCardColorEnumPatch;
+import collector.patches.ExtraDeckButtonPatches.TopPanelExtraDeck;
 import collector.patches.TorchHeadPatches.MonsterIntentPatch;
 import collector.patches.TorchHeadPatches.MonsterPowerPatch;
 import collector.patches.TorchHeadPatches.MonsterTargetPatch;
@@ -382,6 +383,8 @@ public class CollectorMod implements
         //Event Type//
         // .eventType(EventUtils.EventType.FULL_REPLACE)
         // .create());
+
+        BaseMod.addTopPanelItem(new TopPanelExtraDeck());
     }
 
     @Override
