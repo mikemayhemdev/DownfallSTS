@@ -1606,6 +1606,15 @@ public abstract class AbstractCollectorCard extends CustomCard {
         atb(new DamageAllEnemiesAction(getTorchHead(), TorchMultiDamage, damageTypeForTurn, fx));
     }
     public void CollectorallDmg(AbstractGameAction.AttackEffect fx) {
+
+    }
+
+    //Easy function to just call one FX for both Collector and Torchhead
+    public void dmg(AbstractMonster m, AbstractGameAction.AttackEffect fx) {
+        dmg(m,fx,fx);
+    }
+
+    public void allDmg(AbstractGameAction.AttackEffect fx) {
         atb(new DamageAllEnemiesAction(AbstractDungeon.player, multiDamage, damageTypeForTurn, fx));
     }
     public void blck() {

@@ -23,6 +23,7 @@ public class CullingBlow extends AbstractCollectorCard {
         douDamage = douBaseDamage = damage = baseDamage = 10;
         magicNumber = baseMagicNumber = 2;
         isMultiDamage = true;
+        rearDealsDmg = true;
     }
 
     @Override
