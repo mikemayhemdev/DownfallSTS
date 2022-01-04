@@ -47,7 +47,7 @@ public class ByteShift extends AbstractBronzeCard {
                         public void update() {
                             isDone = true;
                             FunctionHelper.held.removeCard(r);
-                            if (p.hand.size() <= BaseMod.MAX_HAND_SIZE) {
+                            if (p.hand.size() < BaseMod.MAX_HAND_SIZE) {
                                 p.hand.addToTop(r);
                             } else {
                                 p.discardPile.addToTop(r);

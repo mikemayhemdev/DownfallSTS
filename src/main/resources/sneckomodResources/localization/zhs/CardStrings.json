@@ -60,7 +60,8 @@
   },
   "sneckomod:SnekBeam": {
     "NAME": "蛇线",
-    "DESCRIPTION": "对所有敌人造成牌组中 *未知 牌数量的伤害。",
+    "DESCRIPTION": "对所有敌人造成牌组中 *未知 牌数量的伤害。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成牌组中 *未知 牌数量的伤害。",
     "EXTENDED_DESCRIPTION": [
       " NL （造成 !D! 点伤害。） NL 消耗 。",
       " NL （造成 !D! 点伤害。）"

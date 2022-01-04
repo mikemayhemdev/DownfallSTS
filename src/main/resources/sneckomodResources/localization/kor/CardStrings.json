@@ -63,6 +63,7 @@
     "DESCRIPTION": "적 전체에게 덱에 있는 *Unknown 카드만큼 피해를 줍니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "적 전체에게 덱에 있는 *Unknown 카드만큼 피해를 줍니다.",
     "EXTENDED_DESCRIPTION": [
+      " NL (피해를 !D! 줍니다.) NL 소멸.",
       " NL (피해를 !D! 줍니다.)"
     ]
   },

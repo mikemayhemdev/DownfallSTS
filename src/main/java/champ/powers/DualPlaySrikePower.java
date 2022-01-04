@@ -54,7 +54,7 @@ public class DualPlaySrikePower extends AbstractPower implements CloneablePowerI
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if ((!card.purgeOnUse) && (card.hasTag(AbstractCard.CardTags.STRIKE) && (card.type == AbstractCard.CardType.ATTACK) && (this.amount > 0))) {
+        if ((!card.purgeOnUse) && (card.hasTag(AbstractCard.CardTags.STRIKE) && (this.amount > 0))) {
             flash();
             AbstractMonster m = null;
 
