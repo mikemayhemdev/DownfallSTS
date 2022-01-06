@@ -125,6 +125,11 @@ public class TorchChar extends CustomPlayer implements CustomSavable<ArrayList<I
         powers.clear();
         healthBarUpdatedEvent();
     }
+
+    public void loseBlock() {
+        this.loseBlock(this.currentBlock);
+    }
+
     @Override
     public ArrayList<String> getStartingDeck() {
         return new ArrayList<>();

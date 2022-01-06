@@ -18,7 +18,7 @@ public class GremlinPoker extends AbstractCollectibleCard implements PerpetualCa
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        CollectorDmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
     }
 
     @Override

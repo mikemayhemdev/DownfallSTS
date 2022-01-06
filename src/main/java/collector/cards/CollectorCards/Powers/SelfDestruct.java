@@ -10,7 +10,7 @@ public class SelfDestruct extends AbstractCollectorCard {
     public final static String ID = makeID("SelfDestruct");
 
     public SelfDestruct() {
-        super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.NONE, CollectorCardSource.TORCH_ONLY);
+        super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.NONE, CollectorCardSource.TORCH_HEAD);
         baseMagicNumber = 25;
     }
     @Override

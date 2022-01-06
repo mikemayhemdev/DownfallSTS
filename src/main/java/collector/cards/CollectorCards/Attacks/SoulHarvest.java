@@ -14,7 +14,7 @@ public class SoulHarvest extends AbstractCollectorCard {
 
     public SoulHarvest() {
         super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ALL_ENEMY,CollectorCardSource.BACK);
-        RearBaseDamage = baseDamage = 6;
+        RearBaseDamage = douDamage = baseDamage = 6;
         isMultiDamage = true;
         selfRetain = true;
         exhaust = true;

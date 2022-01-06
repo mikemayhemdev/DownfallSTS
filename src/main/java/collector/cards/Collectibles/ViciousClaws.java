@@ -9,8 +9,8 @@ public class ViciousClaws extends AbstractCollectibleCard implements PerpetualCa
     public final static String ID = makeID("ViciousClaws");
 
     public ViciousClaws() {
-        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-       damage= baseDamage = 1;
+        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY, CollectorCardSource.FRONT);
+        FrontBaseDamage = douDamage = damage= baseDamage = 1;
     }
 
     @Override

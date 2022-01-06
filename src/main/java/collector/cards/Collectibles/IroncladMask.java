@@ -19,7 +19,7 @@ public class IroncladMask extends AbstractCollectibleCard {
         if (p.hasPower(StrengthPower.POWER_ID)){
             applyToSelf(new StrengthPower(p,p.getPower(StrengthPower.POWER_ID).amount));
         }
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+        CollectorDmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
 
     }
 

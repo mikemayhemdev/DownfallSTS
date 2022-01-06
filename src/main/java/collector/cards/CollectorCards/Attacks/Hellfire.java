@@ -1,5 +1,6 @@
 package collector.cards.CollectorCards.Attacks;
 
+import collector.CollectorChar;
 import collector.actions.HellfireAction;
 import collector.cards.CollectorCards.AbstractCollectorCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -18,7 +19,7 @@ public class Hellfire extends AbstractCollectorCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new HellfireAction(p,damage, DamageInfo.DamageType.NORMAL,freeToPlayOnce, EnergyPanel.getCurrentEnergy(),upgraded));
+        atb(new HellfireAction(CollectorChar.getLivingTorchHead(),damage, DamageInfo.DamageType.NORMAL,freeToPlayOnce, EnergyPanel.getCurrentEnergy(),upgraded));
     }
 
     @Override

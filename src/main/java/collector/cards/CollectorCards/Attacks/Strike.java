@@ -10,7 +10,7 @@ public class Strike extends AbstractCollectorCard {
 
     public Strike() {
         super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY, CollectorCardSource.FRONT);
-        FrontBaseDamage = baseDamage = 6;
+        FrontBaseDamage = douDamage = baseDamage = 6;
         tags.add(CardTags.STRIKE);
         tags.add(CardTags.STARTER_STRIKE);
         frontDealsDmg = true;
@@ -23,7 +23,7 @@ public class Strike extends AbstractCollectorCard {
 
     @Override
     public void upp() {
-        upgradeDamage(3);
+        upgradeFrontDamage(3);
         upgradeTorchHeadDamage(3);
     }
 }

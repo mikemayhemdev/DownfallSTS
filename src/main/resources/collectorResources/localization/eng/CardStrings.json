@@ -1,11 +1,11 @@
 {
   "collector:Strike": {
     "NAME": "Strike",
-    "DESCRIPTION": "collector:Front deals !D! damage."
+    "DESCRIPTION": "collector:Front deals !collector:FrontDamage! damage."
   },
   "collector:Defend": {
     "NAME": "Defend",
-    "DESCRIPTION": "collector:Front gains !B! Block."
+    "DESCRIPTION": "collector:Front gains !collector:FrontBlock! Block."
   },
   "collector:SoulStitch": {
     "NAME": "Soul Stitch",
@@ -13,7 +13,7 @@
   },
   "collector:SoulHarvest": {
     "NAME": "Soul Harvest",
-    "DESCRIPTION": "Innate. NL Apply !M! collector:Soul_Snare and collector:Back deals !D! damage to ALL Enemies. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Apply !M! collector:Soul_Snare and collector:Back deals !collector:RearDamage! damage to ALL Enemies. NL Exhaust."
   },
   "collector:Contemplate": {
     "NAME": "Contemplate",
@@ -40,7 +40,7 @@
   },
   "collector:CullingBlow": {
     "NAME": "Culling Blow",
-    "DESCRIPTION": "collector:Back deals !D! damage. NL if the target has collector:Suffering, Apply !M! collector:Soul_Snare."
+    "DESCRIPTION": "collector:Back deals !collector:RearDamage! damage. NL if the target has collector:Suffering, Apply !M! collector:Soul_Snare."
   },
   "collector:Fever": {
     "NAME": "Fever",
@@ -78,11 +78,11 @@
   },
   "collector:Mindflare": {
     "NAME": "Mindflare",
-    "DESCRIPTION": "Deal !D! damage. NL Draw a card from your collector:Collect pile for each collector:Affliction the target has."
+    "DESCRIPTION": "*Collector deals !D! damage. NL Draw a card from your collector:Collect pile for each collector:Affliction the target has."
   },
   "collector:ScorchingRay": {
     "NAME": "Scorching Ray",
-    "DESCRIPTION": "Deal !D! damage for each collector:Affliction the target has."
+    "DESCRIPTION": "*Collector deals !D! damage for each collector:Affliction the target has."
   },
   "collector:Wrack": {
     "NAME": "Wrack",
@@ -90,13 +90,13 @@
   },
   "collector:FingerofDeath": {
     "NAME": "Finger of Death",
-    "DESCRIPTION": "Deal !D! damage. NL Apply 1 collector:Suffering Twice. NL When Exhausted : bronze:Insert a copy of this that applies *Suffering an additional time.",
+    "DESCRIPTION": "*Collector Deals !D! damage. NL Apply 1 collector:Suffering Twice. NL When Exhausted : bronze:Insert a copy of this that applies *Suffering an additional time.",
     "EXTENDED_DESCRIPTION": ["Deal !D! damage. NL Apply 1 collector:Suffering !M! Times. NL When Exhausted : bronze:Insert a copy of this that applies *Suffering an additional time."]
   },
   "collector:Hellfire": {
     "NAME": "Hellfire",
-    "DESCRIPTION": "Deal !D! damage and Apply a random collector:Affliction to a random enemy X Times.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and Apply a random *πUpgraded collector:Affliction to a random enemy X Times."
+    "DESCRIPTION": "*Torch *Head deals !D! damage and Apply a random collector:Affliction to a random enemy X Times.",
+    "UPGRADE_DESCRIPTION": "Torch *Head deals  !D! damage and Apply a random *πUpgraded collector:Affliction to a random enemy X Times."
   },
   "collector:DarkSuffusion": {
     "NAME": "Dark Suffusion",
@@ -104,7 +104,7 @@
   },
   "collector:Omen": {
     "NAME": "Omen",
-    "DESCRIPTION": "Dealing Attack Damage to an enemy with at least 6 collector:Afflictions they lose !M! HP."
+    "DESCRIPTION": "Dealing Attack damage to an enemy with at least 6 collector:Afflictions they lose !M! HP."
   },
   "collector:SelfDestruct": {
     "NAME": "Self Destruct",
@@ -133,17 +133,17 @@
   },
   "collector:TagTeam": {
     "NAME": "Tag Team",
-    "DESCRIPTION": "collector:Back Deals !D! damage. NL collector:Front Gains !collector:DUOB! Block.",
+    "DESCRIPTION": "collector:Back Deals !collector:RearDamage! damage. NL collector:Front Gains !collector:FrontBlock! Block.",
     "EXTENDED_DESCRIPTION" : ["collector:Back Deals !collector:DUOD! damage. NL collector:Front Gains !B! Block."]
   },
   "collector:LuckyWick": {
     "NAME": "Lucky Wick",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Draw !M! card. NL collector:Perpetual.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Draw !M! card. NL collector:Perpetual 1."
+    "DESCRIPTION": "*Collector deals !D! damage. NL collector:Front Gains !collector:FrontBlock! Block. NL Draw !M! card. NL collector:Perpetual 1.",
+    "UPGRADE_DESCRIPTION": "*Collector deals !D! damage. NL collector:Front Gains !collector:FrontBlock! Block. NL Draw !M! card. NL collector:Perpetual 2."
   },
   "collector:CrookedStaff": {
     "NAME": "Crooked Staff",
-    "DESCRIPTION": "At the end of !M! turns, gain 12 Vigor."
+    "DESCRIPTION": "At the end of !M! turns, *Collector gains 12 Vigor."
   },
   "collector:CrudeShield": {
     "NAME": "Crude Shield",
@@ -156,7 +156,7 @@
   },
   "collector:CurledHorns": {
     "NAME": "Curled Horns",
-    "DESCRIPTION": "collector:Front Gains !B! Block. NL collector:Perpetual."
+    "DESCRIPTION": "collector:Front Gains !collector:FrontBlock! Block. NL collector:Perpetual."
   },
   "collector:DefectCore": {
     "NAME": "Defect Core",
@@ -165,12 +165,12 @@
   },
   "collector:GremlinPoker": {
     "NAME": "Gremlin Poker",
-    "DESCRIPTION": "Deal !D! damage. NL collector:Perpetual 2.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL collector:Perpetual 3."
+    "DESCRIPTION": "*Collector deals !D! damage. NL collector:Perpetual 2.",
+    "UPGRADE_DESCRIPTION": "*Collector deals !D! damage. NL collector:Perpetual 3."
   },
   "collector:IroncladMask": {
     "NAME": "Ironclad Mask",
-    "DESCRIPTION": "Double your Strength. NL Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "Double your Strength. NL *Collector deals !D! damage. NL Exhaust."
   },
   "collector:LouseSegment": {
   "NAME": "Louse Segment",
@@ -178,15 +178,15 @@
   },
   "collector:LagavullinShell": {
     "NAME": "Lagavullin Shell",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust."
+    "DESCRIPTION": "collector:Front Gains !collector:FrontBlock! Block. NL Exhaust."
   },
   "collector:JarWormTooth": {
     "NAME": "Jar Worm Tooth",
-    "DESCRIPTION": "Gain !M! Strength. NL Gain !B! Block. NL Exhaust."
+    "DESCRIPTION": "collector:Front Gains !M! Strength. NL collector:Front Gains !collector:FrontBlock! Block. NL Exhaust."
   },
   "collector:NobsBoneClub": {
     "NAME": "Nob's Bone Club",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "*Torch *Head deals !D! damage. NL Exhaust."
   },
   "collector:SentryCore": {
     "NAME": "Sentry Core",
@@ -194,8 +194,8 @@
   },
   "collector:SilentTrophy": {
     "NAME": "Silent Trophy",
-    "DESCRIPTION": "Gain 1 Intangible. NL Add 2 *Shivs to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Intangible. NL Add 2 Upgraded *Shivs to your hand. NL Block is not removed at the start of your next turn. NL Exhaust."
+    "DESCRIPTION": "collector:Front Gains 1 Intangible. NL Add 2 *Shivs to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "collector:Front Gains 1 Intangible. NL Add 2 Upgraded *Shivs to your hand. NL Block is not removed at the start of your next turn. NL Exhaust."
   },
   "collector:SlimeSample": {
     "NAME": "Slime Sample",
@@ -212,11 +212,11 @@
   },
   "collector:ViciousClaws": {
     "NAME": "Vicious Claws",
-    "DESCRIPTION": "Deal !D! damage twice. NL collector:Perpetual.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage 3 times. NL collector:Perpetual."
+    "DESCRIPTION": "collector:Front deals !collector:FrontDamage! damage twice. NL collector:Perpetual.",
+    "UPGRADE_DESCRIPTION": "collector:Front deals !collector:FrontDamage! damage 3 times. NL collector:Perpetual."
   },
   "collector:WatchersStaff": {
     "NAME": "Watchers Staff",
-    "DESCRIPTION": "Retain. NL Enter Wrath or Calm. NL Gain !M! Energy. NL Exit your Stance Next Turn."
+    "DESCRIPTION": "Retain. NL collector:Front enters Wrath or Calm. NL Gain !M! Energy. NL Exit your Stance Next Turn."
   }
 }

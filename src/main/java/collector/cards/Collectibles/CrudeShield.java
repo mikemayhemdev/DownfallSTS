@@ -10,7 +10,7 @@ public class CrudeShield extends AbstractCollectibleCard {
     public final static String ID = makeID("CrudeShield");
 
     public CrudeShield() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, AbstractCollectorCard.CollectorCardSource.TORCH_ONLY);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, AbstractCollectorCard.CollectorCardSource.TORCH_HEAD);
         douBaseBlock = baseBlock;
         magicNumber = baseMagicNumber = 1;
         this.exhaust = true;

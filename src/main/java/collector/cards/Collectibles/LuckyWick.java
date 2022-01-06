@@ -13,16 +13,16 @@ public class LuckyWick extends AbstractCollectibleCard implements PerpetualCard 
     public final static String ID = makeID("LuckyWick");
     public int perpetualbonus;
     public LuckyWick() {
-        super(ID, 0, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
-        damage = baseDamage = 1;
-        block = baseBlock = 1;
+        super(ID, 0, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY,CollectorCardSource.FRONT);
+        damage = baseDamage = 2;
+        FrontBlock = FrontBaseBlock = douBlock = douBaseBlock = block = baseBlock = 2;
         magicNumber = baseMagicNumber = 1;
-        perpetualbonus = 0;
+        perpetualbonus = 1;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        CollectorDmg(m, AbstractGameAction.AttackEffect.FIRE);
         blck();
         atb(new DrawCardAction(p,magicNumber));
         AbstractCard card = this;
@@ -34,7 +34,7 @@ public class LuckyWick extends AbstractCollectibleCard implements PerpetualCard 
     @Override
     public void upp() {
         this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-        perpetualbonus = 1;
+        perpetualbonus += 1;
         initializeDescription();
     }
 }

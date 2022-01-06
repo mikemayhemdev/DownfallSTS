@@ -1,8 +1,6 @@
 package collector.cards.Collectibles;
 
-import collector.CollectorChar;
 import collector.cards.CollectorCards.AbstractCollectorCard;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
@@ -16,21 +14,13 @@ public class CultistFeather extends AbstractCollectibleCard {
         baseDamage = 13;
         baseBlock = 1;
         magicNumber = baseMagicNumber = 1;
-        this.exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (CollectorChar.isFrontTorchHead()) {
-            atb(new ApplyPowerAction(CollectorChar.torch,CollectorChar.torch,new StrengthPower(CollectorChar.torch,magicNumber)));
-            if (upgraded){
-                atb(new ApplyPowerAction(CollectorChar.torch,CollectorChar.torch,new DexterityPower(CollectorChar.torch,magicNumber)));
-            }
-        } else {
-            atb(new ApplyPowerAction(p,p,new StrengthPower(p,magicNumber)));
-            if (upgraded){
-                atb(new ApplyPowerAction(p,p,new DexterityPower(CollectorChar.torch,magicNumber)));
-            }
+        applyToFront(new StrengthPower(p,magicNumber));
+        if (upgraded){
+            applyToFront(new DexterityPower(p,magicNumber));
         }
     }
 

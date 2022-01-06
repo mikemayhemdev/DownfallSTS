@@ -15,7 +15,7 @@ public class WatchersStaff extends AbstractCollectibleCard {
     public final static String ID = makeID("WatchersStaff");
 
     public WatchersStaff() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF,CollectorCardSource.FRONT);
        magicNumber = baseMagicNumber = 1;
         this.retain = true;
     }
@@ -27,7 +27,7 @@ public class WatchersStaff extends AbstractCollectibleCard {
         stanceChoices.add(new ChooseCalm());
         this.addToBot(new ChooseOneAction(stanceChoices));
         atb(new GainEnergyAction(magicNumber));
-        applyToSelf(new FalteringFocus(p));
+        applyToFront(new FalteringFocus(p));
     }
 
     @Override

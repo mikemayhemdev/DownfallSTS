@@ -469,7 +469,6 @@ public class CollectorChar extends CustomPlayer {
 
     public static boolean isFrontTorchHead() {
         if (AbstractDungeon.player instanceof CollectorChar) {
-            TorchChar torch = CollectorChar.torch;
             if (torch.isDead) return false;
             return ((CollectorChar) AbstractDungeon.player).front == torch;
         }

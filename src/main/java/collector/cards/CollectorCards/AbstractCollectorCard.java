@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -33,7 +34,7 @@ import static collector.CollectorChar.isFrontTorchHead;
 
 public abstract class AbstractCollectorCard extends CustomCard {
     public enum CollectorCardSource {
-        DEFAULT, TORCH_ONLY, BOTH, FRONT, BACK
+        DEFAULT, TORCH_HEAD, BOTH, FRONT, BACK
     }
     private static float functionPreviewCardScale = .9f;
     private static float functionPreviewCardY = Settings.HEIGHT * 0.45F;
@@ -150,21 +151,23 @@ public abstract class AbstractCollectorCard extends CustomCard {
     }
     public void SetPositionalVarsFromEnum(){
         if (DamageSource == CollectorCardSource.FRONT){
-            FrontDamage = FrontBaseDamage = baseDamage;
             frontDealsDmg = true;
         }
         if (DamageSource == CollectorCardSource.BACK){
-            RearDamage = RearBaseDamage = baseDamage;
             rearDealsDmg = true;
         }
         if (BlockSource == CollectorCardSource.FRONT){
-            FrontBlock = FrontBaseBlock = baseBlock;
             frontGainsBlock = true;
         }
         if (BlockSource == CollectorCardSource.BACK){
-            RearBlock = RearBaseBlock = baseBlock;
             rearGainsBlock = true;
         }
+    }
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m){
+        if (DamageSource == CollectorCardSource.TORCH_HEAD && CollectorChar.getLivingTorchHead() == null){
+            return false;
+        }else return super.canUse(p,m);
     }
 
 
@@ -568,101 +571,20 @@ public abstract class AbstractCollectorCard extends CustomCard {
                 }
             } else {
                 isFrontDamageModified = false;
-                if (!isMultiDamage) {
-                    float tmp = (float) FrontBaseDamage;
+                    int tmp = FrontDamage;
+                    baseDamage = FrontBaseDamage;
 
-                    for (AbstractRelic r : AbstractDungeon.player.relics) {
-                        if (relicApplyToTorch.contains(r.relicId)) {
-                            tmp = r.atDamageModify(tmp, this);
-                        }
-                    }
+                    super.applyPowers();
 
-                    for (AbstractPower p : dragon.powers) {
-                        tmp = p.atDamageGive(tmp, damageTypeForTurn);
-                        if (FrontBaseDamage != (int) tmp) {
-                            isFrontDamageModified = true;
-                        }
-                    }
-                    for (AbstractPower p : AbstractDungeon.player.powers) {
-                        if (playerPowerApplyToTorch.contains(p.ID)) {
-                            tmp = p.atDamageGive(tmp, damageTypeForTurn);
-                            if (FrontBaseDamage != (int) tmp) {
-                                isFrontDamageModified= true;
-                            }
-                        }
-                    }
-                    tmp = dragon.stance.atDamageGive(tmp, damageTypeForTurn, this);
+                    FrontDamage = damage;
+                    baseDamage = tmp;
 
-                    for (AbstractPower p : dragon.powers) {
-                        tmp = p.atDamageFinalGive(tmp, damageTypeForTurn);
-                    }
-                    for (AbstractPower p : AbstractDungeon.player.powers) {
-                        if (playerPowerApplyToTorch.contains(p.ID)) {
-                            tmp = p.atDamageFinalGive(tmp, damageTypeForTurn);
-                        }
-                    }
-                    if (tmp < 0.0F) {
-                        tmp = 0.0F;
-                    }
-
-                    FrontDamage = MathUtils.floor(tmp);
-                } else {
-                    ArrayList<AbstractMonster> m = AbstractDungeon.getCurrRoom().monsters.monsters;
-                    float[] tmp = new float[m.size()];
-
-                    int i;
-                    for (i = 0; i < tmp.length; ++i) {
-                        tmp[i] = (float) FrontDamage;
-                    }
-
-                    for (i = 0; i < tmp.length; ++i) {
-                        for (AbstractRelic r : AbstractDungeon.player.relics) {
-                            tmp[i] = r.atDamageModify(tmp[i], this);
-                        }
-                        for (AbstractPower p : AbstractDungeon.player.powers) {
-                            tmp[i] = p.atDamageGive(tmp[i], damageTypeForTurn);
-                        }
-                        for (AbstractPower p : AbstractDungeon.player.powers) {
-                            tmp[i] = p.atDamageGive(tmp[i], damageTypeForTurn);
-                        }
-                        tmp[i] = AbstractDungeon.player.stance.atDamageGive(tmp[i], damageTypeForTurn, this);
-                        for (AbstractPower p : m.get(i).powers) {
-                            tmp[i] = p.atDamageReceive(tmp[i], damageTypeForTurn, this);
-                        }
-
-                        for (AbstractPower p : AbstractDungeon.player.powers) {
-                            tmp[i] = p.atDamageFinalGive(tmp[i], damageTypeForTurn);
-                        }
-                        for (AbstractPower p : AbstractDungeon.player.powers) {
-                            tmp[i] = p.atDamageFinalGive(tmp[i], damageTypeForTurn);
-                        }
-                        for (AbstractPower p : m.get(i).powers) {
-                            tmp[i] = p.atDamageFinalReceive(tmp[i], damageTypeForTurn, this);
-                        }
-                    }
-
-                    for (i = 0; i < tmp.length; ++i) {
-                        if (tmp[i] < 0.0F) {
-                            tmp[i] = 0.0F;
-                        }
-                    }
-
-                    multiDamage = new int[tmp.length];
-
-                    for (i = 0; i < tmp.length; ++i) {
-                        multiDamage[i] = MathUtils.floor(tmp[i]);
-                    }
-
-                    FrontDamage = multiDamage[0];
+                    super.applyPowers();
                 }
-                if (FrontBaseDamage != FrontDamage) {
-                    isFrontDamageModified = true;
-                }
-            }
         }
-        if (rearDealsDmg && RearDamage != -1){
+        if (rearDealsDmg && RearDamage != -1) {
             RearDamage = RearBaseDamage;
-            if (CollectorChar.isFrontTorchHead()){
+            if (CollectorChar.isFrontTorchHead()) {
                 if (dragon != null) {
                     isRearDamageModified = false;
                     if (!isMultiDamage) {
@@ -684,7 +606,7 @@ public abstract class AbstractCollectorCard extends CustomCard {
                             if (playerPowerApplyToTorch.contains(p.ID)) {
                                 tmp = p.atDamageGive(tmp, damageTypeForTurn);
                                 if (RearBaseDamage != (int) tmp) {
-                                    isRearDamageModified= true;
+                                    isRearDamageModified = true;
                                 }
                             }
                         }
@@ -764,97 +686,15 @@ public abstract class AbstractCollectorCard extends CustomCard {
                     }
                 }
             } else {
-                isFrontDamageModified = false;
-                if (!isMultiDamage) {
-                    float tmp = (float) RearBaseDamage;
+                int tmp = RearDamage;
+                baseDamage = RearBaseDamage;
 
-                    for (AbstractRelic r : AbstractDungeon.player.relics) {
-                        if (relicApplyToTorch.contains(r.relicId)) {
-                            tmp = r.atDamageModify(tmp, this);
-                        }
-                    }
+                super.applyPowers();
 
-                    for (AbstractPower p : AbstractDungeon.player.powers) {
-                        tmp = p.atDamageGive(tmp, damageTypeForTurn);
-                        if (RearBaseDamage != (int) tmp) {
-                            isRearDamageModified = true;
-                        }
-                    }
-                    for (AbstractPower p : AbstractDungeon.player.powers) {
-                        if (playerPowerApplyToTorch.contains(p.ID)) {
-                            tmp = p.atDamageGive(tmp, damageTypeForTurn);
-                            if (RearBaseDamage != (int) tmp) {
-                                isRearDamageModified= true;
-                            }
-                        }
-                    }
-                    tmp = AbstractDungeon.player.stance.atDamageGive(tmp, damageTypeForTurn, this);
+                RearDamage = damage;
+                baseDamage = tmp;
 
-                    for (AbstractPower p : AbstractDungeon.player.powers) {
-                        tmp = p.atDamageFinalGive(tmp, damageTypeForTurn);
-                    }
-                    for (AbstractPower p : AbstractDungeon.player.powers) {
-                        if (playerPowerApplyToTorch.contains(p.ID)) {
-                            tmp = p.atDamageFinalGive(tmp, damageTypeForTurn);
-                        }
-                    }
-                    if (tmp < 0.0F) {
-                        tmp = 0.0F;
-                    }
-
-                    RearDamage = MathUtils.floor(tmp);
-                } else {
-                    ArrayList<AbstractMonster> m = AbstractDungeon.getCurrRoom().monsters.monsters;
-                    float[] tmp = new float[m.size()];
-
-                    int i;
-                    for (i = 0; i < tmp.length; ++i) {
-                        tmp[i] = (float) RearDamage;
-                    }
-
-                    for (i = 0; i < tmp.length; ++i) {
-                        for (AbstractRelic r : AbstractDungeon.player.relics) {
-                            tmp[i] = r.atDamageModify(tmp[i], this);
-                        }
-                        for (AbstractPower p : AbstractDungeon.player.powers) {
-                            tmp[i] = p.atDamageGive(tmp[i], damageTypeForTurn);
-                        }
-                        for (AbstractPower p : AbstractDungeon.player.powers) {
-                            tmp[i] = p.atDamageGive(tmp[i], damageTypeForTurn);
-                        }
-                        tmp[i] = AbstractDungeon.player.stance.atDamageGive(tmp[i], damageTypeForTurn, this);
-                        for (AbstractPower p : m.get(i).powers) {
-                            tmp[i] = p.atDamageReceive(tmp[i], damageTypeForTurn, this);
-                        }
-
-                        for (AbstractPower p : AbstractDungeon.player.powers) {
-                            tmp[i] = p.atDamageFinalGive(tmp[i], damageTypeForTurn);
-                        }
-                        for (AbstractPower p : AbstractDungeon.player.powers) {
-                            tmp[i] = p.atDamageFinalGive(tmp[i], damageTypeForTurn);
-                        }
-                        for (AbstractPower p : m.get(i).powers) {
-                            tmp[i] = p.atDamageFinalReceive(tmp[i], damageTypeForTurn, this);
-                        }
-                    }
-
-                    for (i = 0; i < tmp.length; ++i) {
-                        if (tmp[i] < 0.0F) {
-                            tmp[i] = 0.0F;
-                        }
-                    }
-
-                    multiDamage = new int[tmp.length];
-
-                    for (i = 0; i < tmp.length; ++i) {
-                        multiDamage[i] = MathUtils.floor(tmp[i]);
-                    }
-
-                    RearDamage = multiDamage[0];
-                }
-                if (RearBaseDamage != RearDamage) {
-                    isRearDamageModified = true;
-                }
+                super.applyPowers();
             }
         }
         if (douBaseDamage != -1) {
@@ -970,220 +810,129 @@ public abstract class AbstractCollectorCard extends CustomCard {
     {
         super.calculateCardDamage(mo);
         TorchChar dragon = CollectorChar.getLivingTorchHead();
-
         if (frontDealsDmg && FrontDamage != -1){
             FrontDamage = FrontBaseDamage;
             if (CollectorChar.isFrontTorchHead()){
-            if (dragon != null) {
-                isFrontDamageModified = false;
-                if (!isMultiDamage && mo != null) {
-                    float tmp = (float) FrontBaseDamage;
+                if (dragon != null) {
+                    isFrontDamageModified = false;
+                    if (!isMultiDamage) {
+                        float tmp = (float) FrontBaseDamage;
 
-                    for (AbstractRelic r : AbstractDungeon.player.relics) {
-                        if (relicApplyToTorch.contains(r.relicId)) {
-                            tmp = r.atDamageModify(tmp, this);
-                        }
-                    }
-
-                    for (AbstractPower p : dragon.powers) {
-                        tmp = p.atDamageGive(tmp, damageTypeForTurn);
-                        if (FrontBaseDamage != (int) tmp) {
-                            isFrontDamageModified = true;
-                        }
-                    }
-                    for (AbstractPower p : AbstractDungeon.player.powers) {
-                        if (playerPowerApplyToTorch.contains(p.ID)) {
-                            tmp = p.atDamageGive(tmp, damageTypeForTurn);
-                            if (FrontBaseDamage != (int) tmp) {
-                                isFrontDamageModified= true;
+                        for (AbstractRelic r : AbstractDungeon.player.relics) {
+                            if (relicApplyToTorch.contains(r.relicId)) {
+                                tmp = r.atDamageModify(tmp, this);
                             }
                         }
-                    }
-                    tmp = dragon.stance.atDamageGive(tmp, damageTypeForTurn, this);
-                    for (AbstractPower p : mo.powers) {
-                        tmp = p.atDamageReceive(tmp, damageTypeForTurn, this);
-                    }
 
-                    for (AbstractPower p : dragon.powers) {
-                        tmp = p.atDamageFinalGive(tmp, damageTypeForTurn);
-                    }
-                    for (AbstractPower p : AbstractDungeon.player.powers) {
-                        if (playerPowerApplyToTorch.contains(p.ID)) {
-                            tmp = p.atDamageFinalGive(tmp, damageTypeForTurn);
-                        }
-                    }
-                    for (AbstractPower p : mo.powers) {
-                        tmp = p.atDamageFinalReceive(tmp, damageTypeForTurn, this);
-                    }
-                    if (tmp < 0.0F) {
-                        tmp = 0.0F;
-                    }
-
-                    FrontDamage = MathUtils.floor(tmp);
-                } else {
-                    ArrayList<AbstractMonster> m = AbstractDungeon.getCurrRoom().monsters.monsters;
-                    float[] tmp = new float[m.size()];
-
-                    int i;
-                    for (i = 0; i < tmp.length; ++i) {
-                        tmp[i] = (float) FrontDamage;
-                    }
-
-                    for (i = 0; i < tmp.length; ++i) {
-                        for (AbstractRelic r : AbstractDungeon.player.relics) {
-                            tmp[i] = r.atDamageModify(tmp[i], this);
-                        }
-
-                        for (AbstractPower p : AbstractDungeon.player.powers) {
-                            tmp[i] = p.atDamageGive(tmp[i], damageTypeForTurn);
+                        for (AbstractPower p : dragon.powers) {
+                            tmp = p.atDamageGive(tmp, damageTypeForTurn);
+                            if (FrontBaseDamage != (int) tmp) {
+                                isFrontDamageModified = true;
+                            }
                         }
                         for (AbstractPower p : AbstractDungeon.player.powers) {
                             if (playerPowerApplyToTorch.contains(p.ID)) {
+                                tmp = p.atDamageGive(tmp, damageTypeForTurn);
+                                if (FrontBaseDamage != (int) tmp) {
+                                    isFrontDamageModified= true;
+                                }
+                            }
+                        }
+                        tmp = dragon.stance.atDamageGive(tmp, damageTypeForTurn, this);
+
+                        for (AbstractPower p : dragon.powers) {
+                            tmp = p.atDamageFinalGive(tmp, damageTypeForTurn);
+                        }
+                        for (AbstractPower p : AbstractDungeon.player.powers) {
+                            if (playerPowerApplyToTorch.contains(p.ID)) {
+                                tmp = p.atDamageFinalGive(tmp, damageTypeForTurn);
+                            }
+                        }
+                        for (AbstractPower p : mo.powers) {
+                            tmp = p.atDamageFinalReceive(tmp, damageTypeForTurn, this);
+                        }
+                        if (tmp < 0.0F) {
+                            tmp = 0.0F;
+                        }
+
+                        FrontDamage = MathUtils.floor(tmp);
+                    } else {
+                        ArrayList<AbstractMonster> m = AbstractDungeon.getCurrRoom().monsters.monsters;
+                        float[] tmp = new float[m.size()];
+
+                        int i;
+                        for (i = 0; i < tmp.length; ++i) {
+                            tmp[i] = (float) FrontDamage;
+                        }
+
+                        for (i = 0; i < tmp.length; ++i) {
+                            for (AbstractRelic r : AbstractDungeon.player.relics) {
+                                tmp[i] = r.atDamageModify(tmp[i], this);
+                            }
+
+                            for (AbstractPower p : AbstractDungeon.player.powers) {
                                 tmp[i] = p.atDamageGive(tmp[i], damageTypeForTurn);
                             }
-                        }
-                        tmp[i] = AbstractDungeon.player.stance.atDamageGive(tmp[i], damageTypeForTurn, this);
-                        for (AbstractPower p : m.get(i).powers) {
-                            tmp[i] = p.atDamageReceive(tmp[i], damageTypeForTurn, this);
-                        }
+                            for (AbstractPower p : AbstractDungeon.player.powers) {
+                                if (playerPowerApplyToTorch.contains(p.ID)) {
+                                    tmp[i] = p.atDamageGive(tmp[i], damageTypeForTurn);
+                                }
+                            }
+                            tmp[i] = AbstractDungeon.player.stance.atDamageGive(tmp[i], damageTypeForTurn, this);
+                            for (AbstractPower p : m.get(i).powers) {
+                                tmp[i] = p.atDamageReceive(tmp[i], damageTypeForTurn, this);
+                            }
 
-                        for (AbstractPower p : AbstractDungeon.player.powers) {
-                            tmp[i] = p.atDamageFinalGive(tmp[i], damageTypeForTurn);
-                        }
-                        for (AbstractPower p : AbstractDungeon.player.powers) {
-                            if (playerPowerApplyToTorch.contains(p.ID)) {
+                            for (AbstractPower p : AbstractDungeon.player.powers) {
                                 tmp[i] = p.atDamageFinalGive(tmp[i], damageTypeForTurn);
                             }
-                        }
-                        for (AbstractPower p : m.get(i).powers) {
-                            tmp[i] = p.atDamageFinalReceive(tmp[i], damageTypeForTurn, this);
-                        }
-                    }
-
-                    for (i = 0; i < tmp.length; ++i) {
-                        if (tmp[i] < 0.0F) {
-                            tmp[i] = 0.0F;
-                        }
-                    }
-
-                    TorchMultiDamage = new int[tmp.length];
-
-                    for (i = 0; i < tmp.length; ++i) {
-                        TorchMultiDamage[i] = MathUtils.floor(tmp[i]);
-                    }
-
-                    FrontDamage = TorchMultiDamage[0];
-                }
-                if (FrontBaseDamage != FrontDamage) {
-                    isFrontDamageModified = true;
-                }
-            }
-            } else {
-                isFrontDamageModified = false;
-                if (!isMultiDamage && mo != null) {
-                    float tmp = (float) FrontBaseDamage;
-
-                    for (AbstractRelic r : AbstractDungeon.player.relics) {
-                        if (relicApplyToTorch.contains(r.relicId)) {
-                            tmp = r.atDamageModify(tmp, this);
-                        }
-                    }
-
-                    for (AbstractPower p : dragon.powers) {
-                        tmp = p.atDamageGive(tmp, damageTypeForTurn);
-                        if (FrontBaseDamage != (int) tmp) {
-                            isFrontDamageModified = true;
-                        }
-                    }
-                    for (AbstractPower p : AbstractDungeon.player.powers) {
-                        if (playerPowerApplyToTorch.contains(p.ID)) {
-                            tmp = p.atDamageGive(tmp, damageTypeForTurn);
-                            if (FrontBaseDamage != (int) tmp) {
-                                isFrontDamageModified= true;
+                            for (AbstractPower p : AbstractDungeon.player.powers) {
+                                if (playerPowerApplyToTorch.contains(p.ID)) {
+                                    tmp[i] = p.atDamageFinalGive(tmp[i], damageTypeForTurn);
+                                }
+                            }
+                            for (AbstractPower p : m.get(i).powers) {
+                                tmp[i] = p.atDamageFinalReceive(tmp[i], damageTypeForTurn, this);
                             }
                         }
-                    }
-                    tmp = dragon.stance.atDamageGive(tmp, damageTypeForTurn, this);
-                    for (AbstractPower p : mo.powers) {
-                        tmp = p.atDamageReceive(tmp, damageTypeForTurn, this);
-                    }
 
-                    for (AbstractPower p : dragon.powers) {
-                        tmp = p.atDamageFinalGive(tmp, damageTypeForTurn);
-                    }
-                    for (AbstractPower p : AbstractDungeon.player.powers) {
-                        if (playerPowerApplyToTorch.contains(p.ID)) {
-                            tmp = p.atDamageFinalGive(tmp, damageTypeForTurn);
-                        }
-                    }
-                    for (AbstractPower p : mo.powers) {
-                        tmp = p.atDamageFinalReceive(tmp, damageTypeForTurn, this);
-                    }
-                    if (tmp < 0.0F) {
-                        tmp = 0.0F;
-                    }
-
-                    FrontDamage = MathUtils.floor(tmp);
-                } else {
-                    ArrayList<AbstractMonster> m = AbstractDungeon.getCurrRoom().monsters.monsters;
-                    float[] tmp = new float[m.size()];
-
-                    int i;
-                    for (i = 0; i < tmp.length; ++i) {
-                        tmp[i] = (float) FrontDamage;
-                    }
-
-                    for (i = 0; i < tmp.length; ++i) {
-                        for (AbstractRelic r : AbstractDungeon.player.relics) {
-                            tmp[i] = r.atDamageModify(tmp[i], this);
-                        }
-                        for (AbstractPower p : AbstractDungeon.player.powers) {
-                            tmp[i] = p.atDamageGive(tmp[i], damageTypeForTurn);
-                        }
-                        for (AbstractPower p : AbstractDungeon.player.powers) {
-                            tmp[i] = p.atDamageGive(tmp[i], damageTypeForTurn);
-                        }
-                        tmp[i] = AbstractDungeon.player.stance.atDamageGive(tmp[i], damageTypeForTurn, this);
-                        for (AbstractPower p : m.get(i).powers) {
-                            tmp[i] = p.atDamageReceive(tmp[i], damageTypeForTurn, this);
+                        for (i = 0; i < tmp.length; ++i) {
+                            if (tmp[i] < 0.0F) {
+                                tmp[i] = 0.0F;
+                            }
                         }
 
-                        for (AbstractPower p : AbstractDungeon.player.powers) {
-                            tmp[i] = p.atDamageFinalGive(tmp[i], damageTypeForTurn);
+                        TorchMultiDamage = new int[tmp.length];
+
+                        for (i = 0; i < tmp.length; ++i) {
+                            TorchMultiDamage[i] = MathUtils.floor(tmp[i]);
                         }
-                        for (AbstractPower p : AbstractDungeon.player.powers) {
-                            tmp[i] = p.atDamageFinalGive(tmp[i], damageTypeForTurn);
-                        }
-                        for (AbstractPower p : m.get(i).powers) {
-                            tmp[i] = p.atDamageFinalReceive(tmp[i], damageTypeForTurn, this);
-                        }
+
+                        FrontDamage = TorchMultiDamage[0];
                     }
-
-                    for (i = 0; i < tmp.length; ++i) {
-                        if (tmp[i] < 0.0F) {
-                            tmp[i] = 0.0F;
-                        }
+                    if (FrontBaseDamage != FrontDamage) {
+                        isFrontDamageModified = true;
                     }
-
-                    multiDamage = new int[tmp.length];
-
-                    for (i = 0; i < tmp.length; ++i) {
-                        multiDamage[i] = MathUtils.floor(tmp[i]);
-                    }
-
-                    FrontDamage = multiDamage[0];
                 }
-                if (FrontBaseDamage != FrontDamage) {
-                    isFrontDamageModified = true;
-                }
+            } else {
+                isFrontDamageModified = false;
+                int tmp = FrontDamage;
+                baseDamage = FrontBaseDamage;
+
+                super.applyPowers();
+
+                FrontDamage = damage;
+                baseDamage = tmp;
+
+                super.applyPowers();
             }
         }
-        if (rearDealsDmg && RearDamage != -1){
+        if (rearDealsDmg && RearDamage != -1) {
             RearDamage = RearBaseDamage;
-            if (CollectorChar.isFrontTorchHead()){
+            if (CollectorChar.isFrontTorchHead()) {
                 if (dragon != null) {
                     isRearDamageModified = false;
-                    if (!isMultiDamage && mo != null) {
+                    if (!isMultiDamage) {
                         float tmp = (float) RearBaseDamage;
 
                         for (AbstractRelic r : AbstractDungeon.player.relics) {
@@ -1202,14 +951,11 @@ public abstract class AbstractCollectorCard extends CustomCard {
                             if (playerPowerApplyToTorch.contains(p.ID)) {
                                 tmp = p.atDamageGive(tmp, damageTypeForTurn);
                                 if (RearBaseDamage != (int) tmp) {
-                                    isRearDamageModified= true;
+                                    isRearDamageModified = true;
                                 }
                             }
                         }
                         tmp = dragon.stance.atDamageGive(tmp, damageTypeForTurn, this);
-                        for (AbstractPower p : mo.powers) {
-                            tmp = p.atDamageReceive(tmp, damageTypeForTurn, this);
-                        }
 
                         for (AbstractPower p : dragon.powers) {
                             tmp = p.atDamageFinalGive(tmp, damageTypeForTurn);
@@ -1288,103 +1034,15 @@ public abstract class AbstractCollectorCard extends CustomCard {
                     }
                 }
             } else {
-                isFrontDamageModified = false;
-                if (!isMultiDamage && mo != null) {
-                    float tmp = (float) RearBaseDamage;
+                int tmp = RearDamage;
+                baseDamage = RearBaseDamage;
 
-                    for (AbstractRelic r : AbstractDungeon.player.relics) {
-                        if (relicApplyToTorch.contains(r.relicId)) {
-                            tmp = r.atDamageModify(tmp, this);
-                        }
-                    }
+                super.applyPowers();
 
-                    for (AbstractPower p : AbstractDungeon.player.powers) {
-                        tmp = p.atDamageGive(tmp, damageTypeForTurn);
-                        if (RearBaseDamage != (int) tmp) {
-                            isRearDamageModified = true;
-                        }
-                    }
-                    for (AbstractPower p : AbstractDungeon.player.powers) {
-                        if (playerPowerApplyToTorch.contains(p.ID)) {
-                            tmp = p.atDamageGive(tmp, damageTypeForTurn);
-                            if (RearBaseDamage != (int) tmp) {
-                                isRearDamageModified= true;
-                            }
-                        }
-                    }
-                    tmp = AbstractDungeon.player.stance.atDamageGive(tmp, damageTypeForTurn, this);
-                    for (AbstractPower p : mo.powers) {
-                        tmp = p.atDamageReceive(tmp, damageTypeForTurn, this);
-                    }
+                RearDamage = damage;
+                baseDamage = tmp;
 
-                    for (AbstractPower p : AbstractDungeon.player.powers) {
-                        tmp = p.atDamageFinalGive(tmp, damageTypeForTurn);
-                    }
-                    for (AbstractPower p : AbstractDungeon.player.powers) {
-                        if (playerPowerApplyToTorch.contains(p.ID)) {
-                            tmp = p.atDamageFinalGive(tmp, damageTypeForTurn);
-                        }
-                    }
-                    for (AbstractPower p : mo.powers) {
-                        tmp = p.atDamageFinalReceive(tmp, damageTypeForTurn, this);
-                    }
-                    if (tmp < 0.0F) {
-                        tmp = 0.0F;
-                    }
-
-                    RearDamage = MathUtils.floor(tmp);
-                } else {
-                    ArrayList<AbstractMonster> m = AbstractDungeon.getCurrRoom().monsters.monsters;
-                    float[] tmp = new float[m.size()];
-
-                    int i;
-                    for (i = 0; i < tmp.length; ++i) {
-                        tmp[i] = (float) RearDamage;
-                    }
-
-                    for (i = 0; i < tmp.length; ++i) {
-                        for (AbstractRelic r : AbstractDungeon.player.relics) {
-                            tmp[i] = r.atDamageModify(tmp[i], this);
-                        }
-                        for (AbstractPower p : AbstractDungeon.player.powers) {
-                            tmp[i] = p.atDamageGive(tmp[i], damageTypeForTurn);
-                        }
-                        for (AbstractPower p : AbstractDungeon.player.powers) {
-                            tmp[i] = p.atDamageGive(tmp[i], damageTypeForTurn);
-                        }
-                        tmp[i] = AbstractDungeon.player.stance.atDamageGive(tmp[i], damageTypeForTurn, this);
-                        for (AbstractPower p : m.get(i).powers) {
-                            tmp[i] = p.atDamageReceive(tmp[i], damageTypeForTurn, this);
-                        }
-
-                        for (AbstractPower p : AbstractDungeon.player.powers) {
-                            tmp[i] = p.atDamageFinalGive(tmp[i], damageTypeForTurn);
-                        }
-                        for (AbstractPower p : AbstractDungeon.player.powers) {
-                            tmp[i] = p.atDamageFinalGive(tmp[i], damageTypeForTurn);
-                        }
-                        for (AbstractPower p : m.get(i).powers) {
-                            tmp[i] = p.atDamageFinalReceive(tmp[i], damageTypeForTurn, this);
-                        }
-                    }
-
-                    for (i = 0; i < tmp.length; ++i) {
-                        if (tmp[i] < 0.0F) {
-                            tmp[i] = 0.0F;
-                        }
-                    }
-
-                    multiDamage = new int[tmp.length];
-
-                    for (i = 0; i < tmp.length; ++i) {
-                        multiDamage[i] = MathUtils.floor(tmp[i]);
-                    }
-
-                    RearDamage = multiDamage[0];
-                }
-                if (RearBaseDamage != RearDamage) {
-                    isRearDamageModified = true;
-                }
+                super.applyPowers();
             }
         }
         if (douBaseDamage != -1) {
@@ -1573,12 +1231,12 @@ public abstract class AbstractCollectorCard extends CustomCard {
     public void dmg(AbstractMonster m, AbstractGameAction.AttackEffect fx, AbstractGameAction.AttackEffect fxTorch) {
         if (frontDealsDmg) {
             if (CollectorChar.isFrontTorchHead()) {
-                atb(new DamageAction(m, new DamageInfo(getTorchHead(), FrontDamage, DamageInfo.DamageType.NORMAL), fxTorch));
+                atb(new DamageAction(m, new DamageInfo(getTorchHead(), douDamage, DamageInfo.DamageType.NORMAL), fxTorch));
             } else atb(new DamageAction(m, makeInfo(), fx));
         }
         if (rearDealsDmg) {
             if (!CollectorChar.isFrontTorchHead()) {
-                atb(new DamageAction(m, new DamageInfo(getTorchHead(), RearDamage, DamageInfo.DamageType.NORMAL), fxTorch));
+                atb(new DamageAction(m, new DamageInfo(getTorchHead(), douDamage, DamageInfo.DamageType.NORMAL), fxTorch));
             } else atb(new DamageAction(m, makeInfo(), fx));
         }
         if (!frontDealsDmg && !rearDealsDmg){
@@ -1624,12 +1282,12 @@ public abstract class AbstractCollectorCard extends CustomCard {
     public void blck() {
         if (frontGainsBlock) {
             if (CollectorChar.isFrontTorchHead()) {
-                atb(new GainBlockAction(getTorchHead(), AbstractDungeon.player, douBlock));
+                atb(new GainBlockAction(getTorchHead(), getTorchHead(), douBlock));
             } else  atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
         }
         if (rearGainsBlock) {
             if (!CollectorChar.isFrontTorchHead()) {
-                atb(new GainBlockAction(getTorchHead(), AbstractDungeon.player, douBlock));
+                atb(new GainBlockAction(getTorchHead(), getTorchHead(), douBlock));
             } else atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
         }
         if (!frontGainsBlock && !rearGainsBlock){
@@ -1637,7 +1295,7 @@ public abstract class AbstractCollectorCard extends CustomCard {
         }
     }
     public void Torchblck() {
-        atb(new GainBlockAction(getTorchHead(), AbstractDungeon.player, douBlock));
+        atb(new GainBlockAction(getTorchHead(), getTorchHead(), douBlock));
     }
     public void Collectorblck() {
         atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
@@ -1676,6 +1334,21 @@ public abstract class AbstractCollectorCard extends CustomCard {
 
     public void applyToSelf(AbstractPower po) {
         atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, po, po.amount));
+    }
+    public void applyToFront(AbstractPower po) {
+        if (CollectorChar.isFrontTorchHead()) {
+            po.owner = CollectorChar.getTorchHead();
+            applyToTorchHead(po);
+        } else applyToSelf(po);
+    }
+    public void applyToBack(AbstractPower po) {
+        if (CollectorChar.isFrontTorchHead()) {
+            po.owner = CollectorChar.getTorchHead();
+            applyToSelf(po);
+        } else applyToTorchHead(po);
+    }
+    public void applyToTorchHead(AbstractPower po){
+        atb(new ApplyPowerAction(CollectorChar.getTorchHead(), CollectorChar.getTorchHead(), po, po.amount));
     }
 
     public void applyToSelfTop(AbstractPower po) {

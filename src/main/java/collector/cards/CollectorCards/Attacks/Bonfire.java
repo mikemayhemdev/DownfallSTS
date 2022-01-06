@@ -15,18 +15,10 @@ public class Bonfire extends AbstractCollectorCard {
     public final static String ID = makeID("Bonfire");
 
     public Bonfire() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY, CollectorCardSource.TORCH_ONLY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY, CollectorCardSource.TORCH_HEAD);
         douBaseDamage =  baseDamage = damage = 4;
         douBlock = douBaseBlock = 8;
         magicNumber = baseMagicNumber = 1;
-    }
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        boolean result = super.canUse(p, m);
-        if (result && CollectorChar.getLivingTorchHead() == null) {
-            return false;
-        }
-        return result;
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {

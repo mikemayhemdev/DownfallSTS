@@ -18,7 +18,7 @@ public class LouseSegment extends AbstractCollectibleCard implements PerpetualCa
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new PlayerCurlUp(p,block));
+        applyToBack(new PlayerCurlUp(p,block));
     }
 
     @Override

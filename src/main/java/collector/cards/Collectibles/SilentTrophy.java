@@ -12,7 +12,7 @@ public class SilentTrophy extends AbstractCollectibleCard {
     public final static String ID = makeID("SilentTrophy");
     public static AbstractCard s;
     public SilentTrophy() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF, CollectorCardSource.BOTH);
         this.exhaust = true;
         s = (new Shiv()).makeCopy();
         s.upgrade();
@@ -23,7 +23,7 @@ public class SilentTrophy extends AbstractCollectibleCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new IntangiblePower(p,1));
+        applyToFront(new IntangiblePower(p,1));
         if (!upgraded) {
             atb(new MakeTempCardInHandAction(new Shiv(), 2));
         } else

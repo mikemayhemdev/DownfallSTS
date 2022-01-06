@@ -20,10 +20,10 @@
   "collector:TargetMarker": {
     "TEXT": [
       "Target Marker",
-      "[#60D0D0]Collector[] will be attacked. [#60D0D0]Torch[] [#60D0D0]Head[] has no #yProtection,",
+      "[#60D0D0]Collector[] will be attacked. [#60D0D0]Torch[] [#60D0D0]Head[] has no #yAggro,",
       "",
       "[#60D0D0]Torch[] [#60D0D0]Head[] will be attacked. NL [#60D0D0]Torch[] [#60D0D0]Head[] has #b",
-      " #yProtection.",
+      " #yAggro.",
       "[#60D0D0]Collector[] is fighting solo. NL [#60D0D0]Collector[] Will always be attacked, [#60D0D0]Torch[] [#60D0D0]Head[] cannot Act."
     ]
   },
@@ -71,7 +71,7 @@
   "collector:CollectionUITopPanel": {
     "TEXT": [
       "Collection",
-      "Description text here"
+      "View all cards in your Collection"
     ]
   }
 }

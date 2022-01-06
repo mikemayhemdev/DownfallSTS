@@ -8,14 +8,14 @@ public class NobsBoneClub extends AbstractCollectibleCard {
     public final static String ID = makeID("NobsBoneClub");
 
     public NobsBoneClub() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        damage = baseDamage = 13;
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY,CollectorCardSource.TORCH_HEAD);
+        douDamage = damage = baseDamage = 13;
         this.exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SMASH);
+        TorchDmg(m, AbstractGameAction.AttackEffect.SMASH);
     }
 
     @Override
