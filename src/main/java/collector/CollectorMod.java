@@ -19,6 +19,7 @@ import collector.patches.TorchHeadPatches.MonsterIntentPatch;
 import collector.patches.TorchHeadPatches.MonsterPowerPatch;
 import collector.patches.TorchHeadPatches.MonsterTargetPatch;
 import collector.patches.TorchHeadPatches.StanceChangeParticlePatch;
+import collector.powers.GainBlockPower;
 import collector.powers.SoulMark;
 import collector.powers.Suffering;
 import collector.util.CollectorSecondDamage;
@@ -27,6 +28,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -249,7 +251,76 @@ public class CollectorMod implements
         return false;
     }
 
-    public void ApplyRandomBoon(AbstractCreature target) {
+    public void ApplyRandomBoon(AbstractCreature target, boolean upgraded) {
+        String BoontoApply = Boons.get((AbstractDungeon.cardRandomRng.random(Boons.size() - 1)));
+        if (!upgraded) {
+            if (BoontoApply.equals(CollectorMod.Boons.get(0))) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new StrengthPower(target, 2)));
+            } else if (BoontoApply.equals(CollectorMod.Boons.get(1))) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new DexterityPower(target, 1)));
+            } else if (BoontoApply.equals(CollectorMod.Boons.get(2))) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new ArtifactPower(target, 1)));
+            } else if (BoontoApply.equals(CollectorMod.Boons.get(3))) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new PlatedArmorPower(target, 3)));
+            } else if (BoontoApply.equals(CollectorMod.Boons.get(4))) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new VigorPower(target, 6)));
+            } else if (BoontoApply.equals(CollectorMod.Boons.get(5))) {
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(target,10));
+            }
+        } else {
+            if (BoontoApply.equals(CollectorMod.Boons.get(0))) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new StrengthPower(target, 3)));
+            } else if (BoontoApply.equals(CollectorMod.Boons.get(1))) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new DexterityPower(target, 2)));
+            } else if (BoontoApply.equals(CollectorMod.Boons.get(2))) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new ArtifactPower(target, 2)));
+            } else if (BoontoApply.equals(CollectorMod.Boons.get(3))) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new PlatedArmorPower(target, 4)));
+            } else if (BoontoApply.equals(CollectorMod.Boons.get(4))) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new VigorPower(target, 9)));
+            } else if (BoontoApply.equals(CollectorMod.Boons.get(5))) {
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(target,15));
+            }
+        }
+    }
+
+    public static AbstractPower GetRandomBoon(AbstractCreature target, boolean upgraded){
+        String BoontoApply= Boons.get((AbstractDungeon.cardRandomRng.random(Boons.size() - 1)));
+        if (BoontoApply.equals(CollectorMod.Boons.get(0))) {
+            return new StrengthPower(target, upgraded? 3 : 2);
+        } else if (BoontoApply.equals(CollectorMod.Boons.get(1))) {
+            return new DexterityPower(target, upgraded? 2 : 1);
+        } else if (BoontoApply.equals(CollectorMod.Boons.get(2))) {
+            return new ArtifactPower(target, upgraded? 2 : 1);
+        } else if (BoontoApply.equals(CollectorMod.Boons.get(3))) {
+            return new PlatedArmorPower(target, upgraded? 4 : 3);
+        } else if (BoontoApply.equals(CollectorMod.Boons.get(4))) {
+            return new VigorPower(target, upgraded? 9 : 6);
+        } else if (BoontoApply.equals(CollectorMod.Boons.get(5))) {
+            return new GainBlockPower(upgraded? 15 : 10, target);
+        }
+        System.out.println("Invalid Value in Boons Array, Defaulting to 10 Block. please report this to the mod developer");
+        return new GainBlockPower(10, target);
+    }
+    public static AbstractPower GetRandomAffliction(AbstractCreature target, boolean upgraded){
+        String AfflictiontoApply= Afflictions.get((AbstractDungeon.cardRandomRng.random(Afflictions.size() - 1)));
+        if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(0))) {
+            return new WeakPower(target, upgraded? 2 : 1,false);
+        } else if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(1))) {
+            return new VulnerablePower(target, upgraded? 2 : 1,false);
+        } else if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(2))) {
+            return new PoisonPower(target,AbstractDungeon.player, upgraded? 4 : 3);
+        } else if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(3))) {
+            return new SlimedPower(target,AbstractDungeon.player, upgraded? 6 : 4);
+        } else if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(4))) {
+            return new BurnPower(target, upgraded? 11 : 8);
+        } else if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(5))) {
+            return new Suffering(upgraded? 4 : 2, target);
+        }else if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(6))) {
+            return new SoulMark(upgraded? 3 : 2, target);
+        }
+        System.out.println("Invalid Value in Boons Array, Defaulting to 10 Block. please report this to the mod developer");
+        return new GainBlockPower(10, target);
     }
 
     @Override

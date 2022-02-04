@@ -11,7 +11,7 @@ public class CrudeShield extends AbstractCollectibleCard {
 
     public CrudeShield() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, AbstractCollectorCard.CollectorCardSource.TORCH_HEAD);
-        douBaseBlock = baseBlock;
+        FrontBaseBlock = douBaseBlock = baseBlock = 4;
         magicNumber = baseMagicNumber = 1;
         this.exhaust = true;
     }

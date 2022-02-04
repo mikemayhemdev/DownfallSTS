@@ -13,7 +13,7 @@ public class Hellfire extends AbstractCollectorCard {
 
     public Hellfire() {
         super(ID, -1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        magicNumber = baseMagicNumber = 3;
+        magicNumber = baseMagicNumber = 1;
         damage = baseDamage = 5;
     }
 

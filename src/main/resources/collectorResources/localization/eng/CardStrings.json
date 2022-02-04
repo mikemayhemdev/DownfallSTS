@@ -96,7 +96,7 @@
   "collector:Hellfire": {
     "NAME": "Hellfire",
     "DESCRIPTION": "*Torch *Head deals !D! damage and Apply a random collector:Affliction to a random enemy X Times.",
-    "UPGRADE_DESCRIPTION": "Torch *Head deals  !D! damage and Apply a random *πUpgraded collector:Affliction to a random enemy X Times."
+    "UPGRADE_DESCRIPTION": "Torch *Head deals  !D! damage and Apply a random *Upgraded collector:Affliction to a random enemy X+ !M! Times."
   },
   "collector:DarkSuffusion": {
     "NAME": "Dark Suffusion",
@@ -217,6 +217,6 @@
   },
   "collector:WatchersStaff": {
     "NAME": "Watchers Staff",
-    "DESCRIPTION": "Retain. NL collector:Front enters Wrath or Calm. NL Gain !M! Energy. NL Exit your Stance Next Turn."
+    "DESCRIPTION": "Retain. NL collector:Front enters Wrath or Calm. NL Gain !M! Energy. NL collector:Front Exits their Stance Next Turn."
   }
 }

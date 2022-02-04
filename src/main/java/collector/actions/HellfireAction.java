@@ -3,6 +3,7 @@ package collector.actions;
 import collector.CollectorMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
@@ -48,11 +49,11 @@ public class HellfireAction extends AbstractGameAction {
             for(int i = 0; i < effect; ++i) {
                 AbstractMonster m = AbstractDungeon.getRandomMonster();
                 this.addToBot(new DamageAction(m, new DamageInfo(this.p, this.damage, this.damageTypeForTurn), AttackEffect.FIRE));
-                CollectorMod.ApplyRandomAffliciton(m, Upgraded);
+                this.addToBot(new ApplyPowerAction(m,p,CollectorMod.GetRandomAffliction(m,Upgraded)));
             }
 
             if (!this.freeToPlayOnce) {
-                this.p.energy.use(EnergyPanel.totalCount);
+                AbstractDungeon.player.energy.use(EnergyPanel.totalCount);
             }
         }
 
