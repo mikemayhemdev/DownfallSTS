@@ -1,0 +1,15 @@
+{
+  "HermitMod:HermitTutorials": {
+    "TEXT": [
+      "O Heremita é capaz de usar cartas com #yNa #yMira. NL NL Cartas com #yDead #yOn ativam seus efeitos especiais quando posicionadas no meio da sua mão.",
+      "Em mãos pares, #yambas das cartas do meio contam, mesmo se essas sejam as unicas cartas na sua mão."
+    ],
+    "LABEL": [
+      "Próximo",
+      "Entendi",
+      "Na Mira",
+      "(Página: ",
+      ")"
+    ]
+  }
+}

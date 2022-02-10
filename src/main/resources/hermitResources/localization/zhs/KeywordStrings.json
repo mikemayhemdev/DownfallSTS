@@ -1,0 +1,37 @@
+[
+  {
+    "PROPER_NAME": "精准",
+    "NAMES": [
+      "精准"
+    ],
+    "DESCRIPTION": "这张牌在中间位置打出时将有额外效果。"
+  },
+  {
+    "PROPER_NAME": "专注",
+    "NAMES": [
+      "专注"
+    ],
+    "DESCRIPTION": "下一张 #y精准 牌在任意位置打出都能触发效果。 NL 回合结束时失去该效果。"
+  },
+  {
+    "PROPER_NAME": "瘀伤",
+    "NAMES": [
+      "瘀伤"
+    ],
+  "DESCRIPTION": "受瘀伤效果影响的敌人将受到额外伤害。 NL 每次触发后失去 #b1 层。 NL 回合结束时失去该效果。"
+},
+  {
+    "PROPER_NAME": "坚固",
+    "NAMES": [
+      "坚固"
+    ],
+  "DESCRIPTION": "减少下次受到的攻击伤害到 #b1 点。"
+},
+  {
+    "PROPER_NAME": "赏金",
+    "NAMES": [
+      "赏金"
+    ],
+  "DESCRIPTION": "普通: #b15 金币。 NL #b精英 : #b35 金币。 #y首领 : #b75 金币。"
+}
+]

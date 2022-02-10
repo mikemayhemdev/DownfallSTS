@@ -1,0 +1,47 @@
+[
+  {
+    "PROPER_NAME": "Dead On",
+    "NAMES": [
+      "Dead On",
+      "Dead_On",
+      "dead_on",
+      "deadon"
+    ],
+    "DESCRIPTION": "This card has a bonus effect if played from the middle of your hand."
+  },
+  {
+    "PROPER_NAME": "Concentration",
+    "NAMES": [
+      "Concentrate",
+      "concentrate",
+      "concentrated",
+      "Concentrated"
+    ],
+    "DESCRIPTION": "The next #yDead #yOn card played while #yConcentrated triggers its effect regardless of position. Wears off on turn end."
+  },
+  {
+    "ID": "bruise",
+    "PROPER_NAME": "Bruise",
+    "NAMES": [
+      "bruise",
+      "bruised"
+    ],
+  "DESCRIPTION": "Bruised targets take more attack damage. Each hit, Bruise is reduced by #b1. Wears off on turn end."
+},
+  {
+    "ID": "rugged",
+    "PROPER_NAME": "Rugged",
+    "NAMES": [
+      "rugged",
+    ],
+  "DESCRIPTION": "Reduces next instance of attack damage taken to #b1."
+},
+  {
+    "PROPER_NAME": "Bounty",
+    "NAMES": [
+      "bounty"
+    ],
+  "DESCRIPTION": "Normal Enemy: #b15 gold.       Elite Enemy: #b35 gold.              Boss: #b75 gold."
+}
+
+]

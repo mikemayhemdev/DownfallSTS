@@ -1,0 +1,78 @@
+{
+"hermit:Concentration": {
+        "NAME": "집중",
+        "DESCRIPTIONS": ["이번 턴에 사용하는 #y정조준 카드의 효과는 위치와 관계없이 발동합니다."]
+},
+"hermit:HighNoonPower": {
+        "NAME": "정오",
+        "DESCRIPTIONS": ["#y타격 이나 #y수비 를 사용할 때마다, 카드를 #b", " 장 뽑습니다.", " 장 뽑습니다."]
+},
+"hermit:FatalDesirePower": {
+        "NAME": "파멸의 욕망",
+        "DESCRIPTIONS": ["턴 시작 시, 카드를 #b", " 장 뽑고, 상처를 #b", " 장 손으로 가져옵니다.", " 장 손으로 가져옵니다."]
+},
+"hermit:ShadowCloakPower": {
+        "NAME": "그림자 망토",
+        "DESCRIPTIONS": ["저주를 뽑을 때마다, 방어도를 #b", " 얻습니다."]
+},
+"hermit:TakeAimPower": {
+        "NAME": "겨냥",
+        "DESCRIPTIONS": ["턴 시작 시, #y집중합니다."]
+},
+"hermit:AdaptPower": {
+        "NAME": "적응",
+        "DESCRIPTIONS": ["턴 종료 시, 최대 2장의 카드를 소멸시킵니다. 소멸시킨 카드마다 방어도를 #b", " 얻습니다."]
+},
+"hermit:Bruise": {
+        "NAME": "타박상",
+        "DESCRIPTIONS": ["이번 턴에 피해를 #b", " 추가로 받습니다. 매 피해마다 타박상이 1 감소합니다."]
+},
+"hermit:ComboPower": {
+        "NAME": "연계",
+        "DESCRIPTIONS": ["#y정조준 효과가 발동할 때마다, 무작위 정조준 카드 #b", " 장을 손으로 들고 옵니다.", " 장을 손으로 들고 옵니다."]
+},
+"hermit:BigShotPower": {
+        "NAME": "달궈진 총구",
+        "DESCRIPTIONS": ["#y정조준 효과가 발동할 때마다, 다음 공격이 피해를 추가로 #b", " 줍니다."]
+},
+"hermit:BrawlPower": {
+        "NAME": "난투",
+        "DESCRIPTIONS": ["턴 시작 시, 모든 적에게 타박상을 #b", " 부여합니다."]
+},
+"hermit:Rugged": {
+        "NAME": "강인함",
+        "DESCRIPTIONS": ["다음에 받는 방어되지 않은 피해 ", " 번의 피해량을 #b1 로 줄입니다.", " 번의 피해량을 #b1 로 줄입니다."]
+},
+"hermit:EternalPower": {
+        "NAME": "영원의 힘",
+        "DESCRIPTIONS": ["이번 턴 동안 #b", " 장의 카드를 무료로 사용할 수 있습니다.", " 장의 카드를 무료로 사용할 수 있습니다.", "더 이상 무료로 사용할 수 없습니다."]
+},
+"hermit:OverwhelmingPowerPower": {
+        "NAME": "압도적인 힘",
+        "DESCRIPTIONS": ["턴 종료 시 에너지가 0일 경우, 체력을 #b"," 잃습니다."]
+},
+"hermit:Bounty": {
+        "NAME": "현상금",
+        "DESCRIPTIONS": ["현재 현상금: "]
+},
+"hermit:Drained": {
+        "NAME": "탈진",
+        "DESCRIPTIONS": ["다음 턴에 에너지를 #b", " 적게 얻습니다."]
+},
+"hermit:DeterminationPower": {
+        "NAME": "결의",
+        "DESCRIPTIONS": ["해로운 효과가 적용될 때마다 #y힘 을 #b", " 얻습니다."]
+},
+"hermit:RyeStalkPower": {
+        "NAME": "호밀 줄기",
+        "DESCRIPTIONS": ["턴 종료 시, 카드를 원하는 만큼 #y보존합니다."]
+},
+"hermit:PetGhostPower": {
+        "NAME": "꼬마 유령",
+        "DESCRIPTIONS": ["죽을 수 없습니다.", " 다음 턴에 죽습니다.", " 이번 턴에 죽습니다."]
+},
+"hermit:HorrorPower": {
+                "NAME": "참상",
+                "DESCRIPTIONS": ["다음 #b", " 턴 동안 타박상이 사라지지 않습니다.", " 턴 동안 타박상이 사라지지 않습니다."]
+        }
+}

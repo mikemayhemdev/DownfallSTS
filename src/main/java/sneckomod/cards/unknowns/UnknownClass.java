@@ -59,6 +59,8 @@ public class UnknownClass extends AbstractUnknownCard {
                 return "UnknownAutomaton";
             case "GREMLIN":
                 return "UnknownGremlin";
+            case "HERMIT_YELLOW":
+                return "UnknownHermit";
             default:
                 String filename = "UnknownClass" + myColor.name();
                 if (Gdx.files.internal(makeCardPath(filename) + ".png").exists())
@@ -119,6 +121,8 @@ public class UnknownClass extends AbstractUnknownCard {
                 return SneckoMod.overBannerAuto;
             case "GREMLIN":
                 return SneckoMod.overBannerGremlins;
+            case "HERMIT_YELLOW":
+                return SneckoMod.overBannerHermit;
             default:
                 return SneckoMod.overBannerClasses.computeIfAbsent(myColor.name(), s -> {
                     String filename = "sneckomodResources/images/cardicons/overbannerIcons/class" + s + ".png";

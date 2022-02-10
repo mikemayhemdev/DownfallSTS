@@ -1,0 +1,12 @@
+{
+  "hermit:bountygold": {
+    "TEXT": [
+      " Gold (Kopfgeld)"
+    ]
+  },
+  "hermit:LoneWolfAction": {
+    "TEXT": [
+      "Behalte."
+    ]
+  }
+}

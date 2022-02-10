@@ -1,0 +1,329 @@
+{
+  "hermit:Strike_Hermit": {
+    "NAME": "Golpe",
+    "DESCRIPTION": "Cause !D! de dano."
+  },
+  "hermit:Defend_Hermit": {
+    "NAME": "Defender",
+    "DESCRIPTION": "Ganhe !B! de Proteção."
+  },
+  "hermit:Snapshot": {
+    "NAME": "Tiro Rápido",
+    "DESCRIPTION": "Cause !D! de dano. hermit:Na_Mira\: Custa 0."
+  },
+  "hermit:Desperado": {
+    "NAME": "Bandido",
+    "DESCRIPTION": "Cause !D! de dano. NL Ganhe !M! Fragilizado."
+  },
+  "hermit:Headshot": {
+    "NAME": "Tiro na Cabeça",
+    "DESCRIPTION": "Cause !D! de dano. NL hermit:Na_Mira: Cause o dobro de dano."
+  },
+  "hermit:Quickdraw": {
+    "NAME": "Saque Rápido",
+    "DESCRIPTION": "Cause !D! de dano. NL Compre !M! cartas. NL No próximo turno, compre 1 carta a menos."
+  },
+  "hermit:WideOpen": {
+    "NAME": "Guarda Baixa",
+    "DESCRIPTION": "Cause !D! de dano. NL Aplique !M! de Vulnerabilidade."
+  },
+  "hermit:Covet": {
+    "NAME": "Ambição",
+    "DESCRIPTION": "Exaura uma carta. Compre uma carta. Se você Exaurir uma Maldição, compre !M! a mais.",
+    "UPGRADE_DESCRIPTION": "Exaura uma carta. Compre uma carta. Se você Exaurir uma Maldição ou uma Condição, compre !M! a mais."
+  },
+  "hermit:HighCaliber": {
+    "NAME": "Alto-Calibre",
+    "DESCRIPTION": "Cause !D! de dano. NL Adicione um *Golpe na sua pilha de descarte. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Cause !D! de dano. NL Adicione um *Golpe+ na sua pilha de descarte. NL Exaurir."
+  },
+  "hermit:BodyArmor": {
+    "NAME": "Body Armor",
+    "DESCRIPTION": "Ganhe !B! de Proteção.  NL Adicione um *Defender na sua pilha de descarte. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Ganhe !B! de Proteção. NL Adicione um *Defender+ na sua pilha de descarte. NL Exaurir."
+  },
+  "hermit:Snipe": {
+    "NAME": "Tiro Franco",
+    "DESCRIPTION": "hermit:Concentrar. NL Ganhe !M! de Força nesse turno."
+  },
+  "hermit:CalledShot": {
+    "NAME": "Tiro Chamado",
+    "DESCRIPTION": "Cause dano igual ao tamano de sua mão. NL hermit:Na_Mira: NL Compre !M! cartas.",
+    "UPGRADE_DESCRIPTION": " NL (Cause !D! de dano.)"
+  },
+  "hermit:Dissolve": {
+    "NAME": "Dissolver",
+    "DESCRIPTION": "Ganhe !M! de Proteção para cada carta na sua pilha de descarte. NL Adicione 1 *Apodrecer na sua pilha de descarte.",
+    "UPGRADE_DESCRIPTION": " NL (Ganhe !B! de Proteção.)"
+  },
+  "hermit:BlackWind": {
+    "NAME": "Vento Negro",
+    "DESCRIPTION": "Etéreo. NL Causa dano igual a sua vida faltando. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": " NL (Causa !D! de dano.)"
+  },
+  "hermit:Purgatory": {
+    "NAME": "Purgatório",
+    "DESCRIPTION": "Etéreo. NL Cause 30 de dano a TODOS os inimigos",
+    "UPGRADE_DESCRIPTION": "Cause 30 de dano a TODOS os inimigos"
+  },
+  "hermit:ShadowCloak": {
+    "NAME": "Capa Sombria",
+    "DESCRIPTION": "Quando você comprar uma Maldição, ganhe !M! de Proteção."
+  },
+  "hermit:FatalDesire": {
+    "NAME": "Desejo Fatal",
+    "DESCRIPTION": "No início de seu turno, compre 2 cartas e adicione um *Ferimento à sua mão.",
+    "UPGRADE_DESCRIPTION": "Inato. NL No início de seu turno, compre 2 cartas e adicione um *Ferimento à sua mão."
+  },
+  "hermit:Gambit": {
+    "NAME": "Gambito",
+    "DESCRIPTION": "Coloque !M! Ataques aleatórios da sua pilha de descarte na sua mão. Exaurir."
+  },
+  "hermit:Roughhouse": {
+    "NAME": "Alvoroço",
+    "DESCRIPTION": "Cause !D! de dano. hermit:Na_Mira: NL Ganhe !B! de Proteção."
+  },
+  "hermit:Malice": {
+    "NAME": "Malícia",
+    "DESCRIPTION": "Exaura uma carta. NL Cause !D! de dano. NL Se você Exaurir uma Maldição, cause !D! de dano a TODOS os inimigos ao invéz disso."
+  },
+  "hermit:Deadeye": {
+    "NAME": "Olho-Morto",
+    "DESCRIPTION": "Cause !D! de dano. NL Ganhe !M! de Força. NL Exaurir. NL hermit:Na_Mira\: NL Não Exaura."
+  },
+  "hermit:GhostlyPresence": {
+    "NAME": "Presença Fantasmagórica",
+    "DESCRIPTION": "Ganhe !B! de Proteção. NL hermit:Na_Mira: NL Aplique !M! de Fraqueza a TODOS os inimigos."
+  },
+  "hermit:Adapt": {
+    "NAME": "Adaptar",
+    "DESCRIPTION": "No final de seu turno, você pode Exaurir até 2 cartas. NL Ganhe !M! de Proteção por cada."
+  },
+  "hermit:Dive": {
+    "NAME": "Mergulhar",
+    "DESCRIPTION": "Ganhe !B! de Proteção. NL hermit:Na_Mira: NL Ganhe !M! de *Armadura *Chapeada."
+  },
+  "hermit:FlashPowder": {
+    "NAME": "Pó Cegante",
+    "DESCRIPTION": "Ganhe !B! de Proteção. NL TODOS os inimigos perdem !M! de Força. NL Exaurir."
+  },
+  "hermit:Roulette": {
+    "NAME": "Roleta",
+    "DESCRIPTION": "Cause !D! de dano em um inimigo aleatório. NL Descarte sua mão. NL Compre o mesmo número de cartas."
+  },
+  "hermit:Midnight": {
+    "NAME": "Meia Noite",
+    "DESCRIPTION": "Etéreo. NL Ganhe !B! de Proteção. NL Adicione um *Destruição *Iminente à sua mão.",
+    "UPGRADE_DESCRIPTION": "Ganhe !B! de Proteção. NL Adicione um *Destruição *Iminente à sua mão."
+  },
+  "hermit:Glare": {
+    "NAME": "Olhar Penetrante",
+    "DESCRIPTION": "Aplique !M! de Fraqueza. NL Aplique !M! de Vulnerabilidade.",
+    "UPGRADE_DESCRIPTION": "Aplique !M! de Fraqueza. NL Aplique !M! de Vulnerabilidade. NL Aplique !hermit:SecondMagic! hermit:Hematoma."
+  },
+  "hermit:TakeCover": {
+    "NAME": "Tomar Cobertura",
+    "DESCRIPTION": "Adicione X *Defender na sua mão. NL Eles custam 0 nesse combate. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Adicione X *Defender+ na sua mão. NL Eles custam 0 nesse combate. NL Exaurir."
+  },
+  "hermit:Misfire": {
+    "NAME": "Tiro Falho",
+    "DESCRIPTION": "Cause !D! de dano a um inimigo aleatório. NL Embaralhe um *Desajeitado na sua pilha de compras."
+  },
+  "hermit:SprayPray": {
+    "NAME": "Atirar e Rezar",
+    "DESCRIPTION": "Cause !D! de dano a um inimigo aleatório 3 vezes. NL Embaralhe uma *Dúvida na sua pilha de compras."
+  },
+  "hermit:Scavenge": {
+    "NAME": "Limpar",
+    "DESCRIPTION": "Ganhe !M! *Armadura *Chapeada. NL hermit:Na_Mira: NL Ganhe !hermit:SecondMagic! Ouro. NL Exaurir."
+  },
+  "hermit:ImpendingDoom": {
+    "NAME": "Destruição Iminente",
+    "DESCRIPTION": "Injogável. NL hermit:Na_Mira: NL No final de seu turno, cause 13 de dano à TODOS."
+  },
+  "hermit:MementoCard": {
+    "NAME": "Memento",
+    "DESCRIPTION": "Reter. NL Aplique !M! Vulnerável em TODO MUNDO."
+  },
+  "hermit:Shortfuse": {
+    "NAME": "Pavio Curto",
+    "DESCRIPTION": "Cause !D! de dano. NL Custa 1 [E] a menos por *Golpe ou *Defender jogado esse turno."
+  },
+  "hermit:Grudge": {
+    "NAME": "Rancor",
+    "DESCRIPTION": "Cause !D! de dano em TODOS os inimigos. NL Causa !M! a mais por CADA carta de Maldição sua."
+  },
+  "hermit:Spite": {
+    "NAME": "Contrariar",
+    "DESCRIPTION": "Compre !M! *Maldições. NL Cause !D! de dano duas vezes."
+  },
+  "hermit:Manifest": {
+    "NAME": "Manifestar",
+    "DESCRIPTION": "Ganhe !B! de Proteção. NL compre !M! *Maldições."
+  },
+  "hermit:Feint": {
+    "NAME": "Fingir",
+    "DESCRIPTION": "Ganhe !B! de Proteção. NL Aplique !M! hermit:Hematoma em TODOS os inimigos."
+  },
+  "hermit:LowProfile": {
+    "NAME": "Discreto",
+    "DESCRIPTION": "Ganhe !B! de Proteção. NL Ganhe !M! de Proteção adicional para cada debuff seu."
+  },
+  "hermit:Horror": {
+    "NAME": "Horror",
+    "DESCRIPTION": "Aplique !M! hermit:Hematoma a TODOS os inimigos. NL hermit:Hematoma não é removido esse turno."
+  },
+  "hermit:NoHoldsBarred": {
+    "NAME": "Sem Se Segurar",
+    "DESCRIPTION": "Cause !D! de dano e aplique !M! hermit:Hematoma a TODOS os inimigos. NL Ganhe 1 [E] a menos no próximo turno."
+  },
+  "hermit:Cheat": {
+    "NAME": "Trapacear",
+    "DESCRIPTION": "Jogue uma das !M! cartas no topo da sua pilha de compra. NL Se estiver hermit:Na_Mira: a carta jogada também está."
+  },
+  "hermit:Vantage": {
+    "NAME": "Vantagem",
+    "DESCRIPTION": "Ganhe !B! de Proteção. NL hermit:Na_Mira: NL Melhore !M! cartas aleatórias na sua mão pelo resto do combate."
+  },
+  "hermit:Brawl": {
+    "NAME": "Briga",
+    "DESCRIPTION": "No início do seu turno, aplique !M! hermit:Hematoma a TODOS os inimigos."
+  },
+  "hermit:Combo": {
+    "NAME": "Combo",
+    "DESCRIPTION": "Quando você ativar um efeito hermit:Na_Mira, adicione uma carta aleatória com hermit:Na_Mira na sua mão."
+  },
+  "hermit:BigShot": {
+    "NAME": "Cano Quente",
+    "DESCRIPTION": "Quando você ativar um efeito hermit:Na_Mira, seu próximo ataque causa !M! de dano a mais."
+  },
+  "hermit:OverwhelmingPower": {
+    "NAME": "Poder Esmagador",
+    "DESCRIPTION": "Ganhe [E] [E] [E]. Compre 3 cartas. Quando você acabar seu turno com 0 de Energia, perca 4 PV."
+  },
+  "hermit:Maintenance": {
+    "NAME": "Manutenção",
+    "DESCRIPTION": "Melhore todos *Golpes e *Defender por esse combate. NL Isso pode melhorá-los qualquer número de vezes."
+  },
+  "hermit:EternalForm": {
+    "NAME": "Forma Eterna",
+    "DESCRIPTION": "Suas primeiras !M! cartas cada turno custam 0. NL Não ganhe [E] no início do seu turno."
+  },
+  "hermit:FullyLoaded": {
+    "NAME": "Completamente Carregado",
+    "DESCRIPTION": "Compre TODOS seus *Golpes e *Defender. NL Exaurir."
+  },
+  "hermit:Gestalt": {
+    "NAME": "Gestalt",
+    "DESCRIPTION": "Ganhe 2 hermit:Inflexível. NL Ganhe !M! de Vulnerabilidade. NL Exaurir."
+  },
+  "hermit:RoundhouseKick": {
+    "NAME": "Chute Circular",
+    "DESCRIPTION": "Cause !D! de dano a TODOS os inimigos. NL *Atordoe quaisquer que não planejam atacar. NL Exaurir."
+  },
+  "hermit:CursedWeapon": {
+    "NAME": "Arma Amaldiçoada",
+    "DESCRIPTION": "Perca !M! de PV. NL Cause !D! de dano. NL Essa carta permanentemente ganha 3 de dano. NL Exaurir."
+  },
+  "hermit:Enervate": {
+    "NAME": "Debilitar",
+    "DESCRIPTION": "Cause !D! de dano. NL hermit:Na_Mira: NL Ganhe [E] e compre uma carta."
+  },
+  "hermit:Ricochet": {
+    "NAME": "Ricochete",
+    "DESCRIPTION": "Cause !D! de dano. Repita em um inimigo aleatório para cada efeito hermit:Na_Mira ativado nesse turno.",
+    "EXTENDED_DESCRIPTION": [" NL (Repete !M! ", "vez.)","vezes.)"]
+  },
+  "hermit:TrackingShot": {
+    "NAME": "Tiro Rastreador",
+    "DESCRIPTION": "hermit:Concentrar. NL Cause !D! de dano."
+  },
+  "hermit:LoneWolf": {
+    "NAME": "Lobo Solitário",
+    "DESCRIPTION": "Escolha uma carta. NL Ela custa 0 nesse combate. NL Descarte o resto da sua mão. NL Exaurir."
+  },
+  "hermit:HighNoon": {
+    "NAME": "Meio Dia",
+    "DESCRIPTION": "Quando você jogar um *Golpe ou *Defender, compre uma carta."
+  },
+  "hermit:Reprieve": {
+    "NAME": "Prorrogação",
+    "DESCRIPTION": "Exaura qualquer número de *Maldições da sua pilha de compras. NL Recupere 4 PV por cada. NL Exaurir.",
+    "EXTENDED_DESCRIPTION": [
+      "Não existem Maldições NL na minha pilha de compras."
+    ]
+  },
+  "hermit:TakeAim": {
+    "NAME": "Mirar",
+    "DESCRIPTION": "No início do seu turno, ganhe hermit:Concentrar.",
+	"UPGRADE_DESCRIPTION": "Ganhe hermit:Concentrar. NL No inicio do seu turno, ganhe hermit:Concentrar."
+  },
+  "hermit:Magnum": {
+    "NAME": "Magnum",
+    "DESCRIPTION": "Descarte 6 cartas. NL Para cada carta, cause !D! de dano."
+  },
+  "hermit:Determination": {
+    "NAME": "Determinação",
+    "DESCRIPTION": "Quando um debuff for aplicado em você, ganhe 1 de Força.",
+    "UPGRADE_DESCRIPTION": "Inato. NL Quando um debuff for aplicado em você, ganhe 1 de Força."
+  },
+  "hermit:Showdown": {
+    "NAME": "Confronto",
+    "DESCRIPTION": "Reter. NL Cause !D! de dano. NL Jogue todos os *Golpes da sua mão em alvos aleatórios."
+  },
+  "hermit:LuckOfTheDraw": {
+    "NAME": "Sorte das Cartas",
+    "DESCRIPTION": "Compre cartas até você comprar um valor total de !M! [E]."
+  },
+  "hermit:Coalescence": {
+    "NAME": "Coalescência",
+    "DESCRIPTION": "Ganhe !M! de Destreza neste turno."
+  },
+  "hermit:PistolWhip": {
+    "NAME": "Açoite Armado",
+    "DESCRIPTION": "Cause !D! de dano. NL Aplique !M! hermit:Hematoma."
+  },
+  "hermit:DeadMansHand": {
+    "NAME": "Mão do Homem Morto",
+    "DESCRIPTION": "Descarte sua mão. Adicione as !M! cartas mais raras da sua pilha de compras para sua mão."
+  },
+  "hermit:DeadOrAlive": {
+    "NAME": "Morto Ou Vivo",
+    "DESCRIPTION": "Cause !D! de dano X vezes. NL Se Fatal, ganhe uma hermit:Recompensa. NL Exaurir."
+  },
+  "hermit:GoldenBullet": {
+    "NAME": "Bala Áurea",
+    "DESCRIPTION": "Cause !D! de dano. NL Se Fatal, permanentemente reduza o preço dessa carta por 1. NL Exaurir."
+  },
+  "hermit:HoleUp": {
+    "NAME": "Se Esconder",
+    "DESCRIPTION": "Ganhe !B! de Proteção. NL Ganhe !M! de Fraqueza."
+  },
+  "hermit:ItchyTrigger": {
+    "NAME": "Dedo Coçando",
+    "DESCRIPTION": "Cause !D! de dano. NL hermit:Na_Mira: Reduza o preço de uma carta aleatória na sua mão para 0 neste turno."
+  },
+  "hermit:EyeOfTheStorm": {
+    "NAME": "Olho da Tempestade",
+    "DESCRIPTION": "hermit:Na_Mira: NL Ganhe Energia até sua Energia máxima. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Compre uma carta. NL hermit:Na_Mira: NL Ganhe Energia até sua Energia máxima. NL Exaurir."
+  },
+  "hermit:FinalCanter": {
+    "NAME": "Trote Final",
+    "DESCRIPTION": "Reter. NL Cause !D! de dano por cada Maldição em sua mão. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": " NL (Você têm !M! Maldição(ões))"
+  },
+  "hermit:HeroicBravado": {
+    "NAME": "Bravata Heróica",
+    "DESCRIPTION": "Etéreo. NL Ganhe 1 hermit:Inflexível. NL Aumente o custo dessa carta por 1 neste combate."
+  },
+  "hermit:FromBeyond": {
+    "NAME": "Do Além",
+    "DESCRIPTION": "Para cada carta em sua pilha exaurída, um inimigo aleatório perde !M! de PV."
+  },
+  "hermit:Virtue": {
+    "NAME": "Virtude",
+    "DESCRIPTION": "Reduz cada debuff seu por !M!."
+  }
+}

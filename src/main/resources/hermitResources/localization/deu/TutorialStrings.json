@@ -1,0 +1,15 @@
+{
+  "HermitMod:HermitTutorials": {
+    "TEXT": [
+      "Der Einsiedler besitzt Karten die einen #yVolltreffer erzielen können. NL NL Ein #Volltreffer wird erzielt, wenn diese Karten aus der Mitte deiner Hand gespielt sind.",
+      "In ebenen Händen zählen #ybeide mittlere Karten, auch wenn es die einzigen Karten in deiner Hand sind."
+    ],
+    "LABEL": [
+      "Nächstes",
+      "Verstanden",
+      "Volltreffer",
+      "(Seite: ",
+      ")"
+    ]
+  }
+}

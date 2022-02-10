@@ -117,6 +117,7 @@ import guardian.GuardianMod;
 import guardian.cards.ExploitGems;
 import guardian.characters.GuardianCharacter;
 import guardian.relics.PickAxe;
+import hermit.HermitMod;
 import quickRestart.helper.RestartRunHelper;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
@@ -281,6 +282,8 @@ public class downfallMod implements
                 return "bronzeResources/" + path;
             case PACKAGE_GREMLIN:
                 return "gremlinResources/" + path;
+            case PACKAGE_HERMIT:
+                return "hermitResources/" + path;
         }
         return "downfallResources/" + path;
     }
@@ -339,32 +342,41 @@ public class downfallMod implements
     }
 
     private void loadLocalization(Settings.GameLanguage language, Class<?> stringType) {
-        //SlimeboundMod.logger.info("loading loc:" + language + "downfall" + stringType);
-        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName()));
+        if (stringType != TutorialStrings.class) {
+            //SlimeboundMod.logger.info("loading loc:" + language + "downfall" + stringType);
+            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName()));
 
-        //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_EXPANSION" + stringType);
-        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_EXPANSION));
+            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_EXPANSION" + stringType);
+            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_EXPANSION));
 
-        //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_GUARDIAN" + stringType);
-        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_GUARDIAN));
+            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_GUARDIAN" + stringType);
+            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_GUARDIAN));
 
-        //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_HEXAGHOST" + stringType);
-        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_HEXAGHOST));
+            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_HEXAGHOST" + stringType);
+            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_HEXAGHOST));
 
-        //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_SLIME" + stringType);
-        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_SLIME));
+            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_SLIME" + stringType);
+            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_SLIME));
 
-        //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_SNECKO" + stringType);
-        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_SNECKO));
+            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_SNECKO" + stringType);
+            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_SNECKO));
 
-        //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_CHAMP" + stringType);
-        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_CHAMP));
+            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_CHAMP" + stringType);
+            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_CHAMP));
 
-        //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_AUTOMATON" + stringType);
-        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_AUTOMATON));
+            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_AUTOMATON" + stringType);
+            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_AUTOMATON));
 
-        //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_GREMLIN" + stringType);
-        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_GREMLIN));
+            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_GREMLIN" + stringType);
+            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_GREMLIN));
+
+            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
+            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_HERMIT));
+        } else {
+
+            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
+            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_HERMIT));
+        }
     }
 
     private void loadLocalization(Settings.GameLanguage language) {
@@ -381,6 +393,7 @@ public class downfallMod implements
         loadLocalization(language, RunModStrings.class);
         loadLocalization(language, PowerStrings.class);
         loadLocalization(language, RunModStrings.class);
+        loadLocalization(language, TutorialStrings.class);
     }
 
     @Override
@@ -458,6 +471,7 @@ public class downfallMod implements
         loadModKeywords(ChampMod.getModID(), otherPackagePaths.PACKAGE_CHAMP);
         loadModKeywords(AutomatonMod.getModID(), otherPackagePaths.PACKAGE_AUTOMATON);
         loadModKeywords(GremlinMod.getModID(), otherPackagePaths.PACKAGE_GREMLIN);
+        loadModKeywords(HermitMod.getModID(), otherPackagePaths.PACKAGE_HERMIT);
         loadModKeywords(modID, otherPackagePaths.PACKAGE_DOWNFALL);
     }
 
@@ -1503,6 +1517,7 @@ public class downfallMod implements
         PACKAGE_CHAMP,
         PACKAGE_AUTOMATON,
         PACKAGE_GREMLIN,
+        PACKAGE_HERMIT,
         PACKAGE_DOWNFALL;
 
         otherPackagePaths() {

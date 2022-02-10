@@ -1,0 +1,74 @@
+{
+  "hermit:Momento": {
+    "NAME": "오래된 목걸이",
+    "FLAVOR": "안에는 흐릿한 사진이 있습니다.",
+    "DESCRIPTIONS": [
+      "매 전투 시작 시 손에 #y유품 을 추가합니다."
+    ]
+  },
+  "hermit:RyeStalk": {
+    "NAME": "호밀 줄기",
+    "FLAVOR": "한참동안 씹었음에도 불구하고, 아직 새것 같은 상태입니다.",
+    "DESCRIPTIONS": [
+      "피해에 따라 #yhermit:타박상이 감소하지 않습니다."
+    ]
+  },
+  "hermit:BartenderGlass": {
+    "NAME": "바텐더의 유리잔",
+    "FLAVOR": "어떤 액체든지 안에 들어가면 다른 것으로 변화합니다.",
+    "DESCRIPTIONS": [
+      "매 전투마다 포션을 사용할 경우, 무작위 포션을 얻습니다. 매 전투마다 최대 #b2 개의 포션만 사용할 수 있습니다.",
+      "이번 전투에서 더 이상 포션을 사용할 수 없습니다."
+    ]
+  },
+  "hermit:Horseshoe": {
+    "NAME": "편자",
+    "FLAVOR": "행운의 부적. 누군가는 이걸 그리워하고 있겠죠.",
+    "DESCRIPTIONS": [
+      "#y약화, #y손상, #y취약을 얻을 때마다, #b1 덜 얻습니다.."
+    ]
+  },
+  "hermit:Spyglass": {
+    "NAME": "소형 망원경",
+    "FLAVOR": "케스틴 하이핀의 유산.",
+    "DESCRIPTIONS": [
+      "턴 종료 시 #yhermit:집중 상태일 경우, 다음 턴에 [E] 를 추가로 얻습니다."
+    ]
+  },
+  "hermit:RedScarf": {
+    "NAME": "붉은 스카프",
+    "FLAVOR": "따뜻하고 보송합니다.",
+    "DESCRIPTIONS": [
+      "매 전투 시작 시, 뽑을 카드 더미에서 최대 #b7 장의 카드를 버릴 수 있습니다."
+    ]
+  },
+  "hermit:DentedPlate": {
+    "NAME": "찌그러진 철판",
+    "FLAVOR": "총알 몇 개는 아직도 안에 박혀있습니다.",
+    "DESCRIPTIONS": [
+      "체력이 #b50% 이하일 경우 턴이 시작할때마다 카드 1장과 에너지 #b1을 얻습니다."
+    ]
+  },
+  "hermit:PetGhost": {
+    "NAME": "꼬마 유령",
+    "FLAVOR": "불쌍하게도.",
+    "DESCRIPTIONS": [
+      "만약 죽는다면, 그 대신 체력 1로 살아남습니다. 다음 턴이 끝날 때 죽습니다. 그 전엔 죽을 수 없습니다."
+    ]
+  },
+  "hermit:CharredGlove": {
+    "NAME": "그을은 장갑",
+    "FLAVOR": "장갑의 다른 부분은 초자연적인 빛을 띄고 있습니다.",
+    "DESCRIPTIONS": [
+      "#y저주를 뽑을 때마다, 다음 공격의 피해량이 #b4 증가합니다."
+    ]
+  },
+  "hermit:ClaspedLocket": {
+    "NAME": "굳게 닫힌 펜던트",
+    "FLAVOR": "더 이상 열리지 않습니다.",
+    "DESCRIPTIONS": [
+      "#y오래된 목걸이 를 대체합니다. 획득 시, 내 덱에 #y유품 #b3 장을 추가합니다.",
+      "두 번 다시는..."
+    ]
+  }
+}

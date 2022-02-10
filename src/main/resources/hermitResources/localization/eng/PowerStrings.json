@@ -1,0 +1,78 @@
+{
+"hermit:Concentration": {
+        "NAME": "Concentration",
+        "DESCRIPTIONS": ["The next #yDead #yOn card you play this turn triggers its effect regardless of position."]
+},
+"hermit:HighNoonPower": {
+        "NAME": "High Noon",
+        "DESCRIPTIONS": ["Whenever you play a #yStrike or #yDefend, draw #b", " card.", " cards."]
+},
+"hermit:FatalDesirePower": {
+        "NAME": "Fatal Desire",
+        "DESCRIPTIONS": ["At the start of your turn, draw #b", " cards and add #b", " Injury to your hand.", " Injuries to your hand."]
+},
+"hermit:ShadowCloakPower": {
+        "NAME": "Shadow Cloak",
+        "DESCRIPTIONS": ["Whenever you draw a curse, gain #b", " Block."]
+},
+"hermit:TakeAimPower": {
+        "NAME": "Take Aim",
+        "DESCRIPTIONS": ["At the start of your turn, #yConcentrate."]
+},
+"hermit:AdaptPower": {
+        "NAME": "Adapt",
+        "DESCRIPTIONS": ["At the end of your turn, Exhaust up to 2 cards. Gain #b", " Block for each."]
+},
+"hermit:Bruise": {
+        "NAME": "Bruised",
+        "DESCRIPTIONS": ["This turn, target takes #b", " more attack damage. Each hit reduces this by 1."]
+},
+"hermit:HorrorPower": {
+        "NAME": "Horror",
+        "DESCRIPTIONS": ["Bruise will not wear off for #b", " turn.", " turns."]
+},
+"hermit:ComboPower": {
+        "NAME": "Combo",
+        "DESCRIPTIONS": ["Whenever you activate a #yDead #yOn effect, add #b", " random card with #yDead #yOn to your hand.", "  random cards with #yDead #yOn to your hand."]
+},
+"hermit:BigShotPower": {
+        "NAME": "Smoking Barrel",
+        "DESCRIPTIONS": ["Whenever you activate a #yDead #yOn effect, your next attack deals #b", " more damage."]
+},
+"hermit:BrawlPower": {
+        "NAME": "Brawl",
+        "DESCRIPTIONS": ["At the start of your turn, apply #b", " Bruise to ALL enemies."]
+},
+"hermit:Rugged": {
+        "NAME": "Rugged",
+        "DESCRIPTIONS": ["The next", " times you would take unblocked attack damage, reduce it to #b1.", " time you would take unblocked damage, reduce it to #b1."]
+},
+"hermit:EternalPower": {
+        "NAME": "Power Eternal",
+        "DESCRIPTIONS": ["You can play #b", " more card for free this turn.", " more cards for free this turn.", "You are out of free plays."]
+},
+"hermit:OverwhelmingPowerPower": {
+        "NAME": "Overwhelming Power",
+        "DESCRIPTIONS": ["Lose #b"," HP if you end your turn with 0 Energy."]
+},
+"hermit:Bounty": {
+        "NAME": "Bounty",
+        "DESCRIPTIONS": ["Current Bounty: "]
+},
+"hermit:Drained": {
+        "NAME": "Drained",
+        "DESCRIPTIONS": ["Gain #b", " less energy next turn."]
+},
+"hermit:DeterminationPower": {
+        "NAME": "Determination",
+        "DESCRIPTIONS": ["Whenever a debuff is applied to you, gain #b", " #yStrength."]
+},
+"hermit:RyeStalkPower": {
+        "NAME": "Rye Stalk",
+        "DESCRIPTIONS": ["At the end of this turn, #yRetain any number of cards."]
+},
+"hermit:PetGhostPower": {
+        "NAME": "Pet Ghost",
+        "DESCRIPTIONS": ["You cannot die. Die at the end of", " your next turn.", " this turn."]
+}
+}

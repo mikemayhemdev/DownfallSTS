@@ -1,0 +1,329 @@
+{
+  "hermit:Strike_Hermit": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "hermit:Defend_Hermit": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "hermit:Snapshot": {
+    "NAME": "狙杀",
+    "DESCRIPTION": "造成 !D! 点伤害。 hermit:精准 :耗能为0。"
+  },
+  "hermit:Desperado": {
+    "NAME": "法外狂徒",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 层 脆弱 。"
+  },
+  "hermit:Headshot": {
+    "NAME": "爆头",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 :造成双倍伤害。"
+  },
+  "hermit:Quickdraw": {
+    "NAME": "快拔",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 下回合少抽一张牌。"
+  },
+  "hermit:WideOpen": {
+    "NAME": "始料未及",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"
+  },
+  "hermit:Covet": {
+    "NAME": "渴求",
+    "DESCRIPTION": "消耗 一张牌。 NL 抽一张牌。 NL 如果 消耗 诅咒牌, 则多抽 !M! 张牌。",
+	"UPGRADE_DESCRIPTION": "消耗 一张牌。 NL 抽一张牌。 NL 如果 消耗 诅咒或状态牌, 则多抽 !M! 张牌。"
+  },
+  "hermit:HighCaliber": {
+    "NAME": "大口径",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *打击 加入你的弃牌堆。 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *打击+ 加入你的弃牌堆。 消耗 。"
+  },
+  "hermit:BodyArmor": {
+    "NAME": "全身护甲",
+    "DESCRIPTION":"获得 !B! 点 格挡 。 NL 将一张 *防御 加入你的弃牌堆。 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将一张 *防御+ 加入你的弃牌堆。 消耗 。"
+  },
+  "hermit:Snipe": {
+    "NAME": "狙击",
+    "DESCRIPTION": "hermit:专注 。 NL 本回合获得 !M! 点 力量 。"
+  },
+  "hermit:CalledShot": {
+    "NAME": "空气炮",
+    "DESCRIPTION": "造成你手牌数量的伤害。 NL hermit:精准 :抽 !M! 张牌",
+    "UPGRADE_DESCRIPTION": " NL （造成 !D! 点伤害。）"
+  },
+  "hermit:Dissolve": {
+    "NAME": "溶解",
+    "DESCRIPTION": "你的弃牌堆中每有一张牌，获得 !M! 点格挡 。 NL 将一张 *腐朽 加入你的弃牌堆。",
+    "UPGRADE_DESCRIPTION": " NL （获得 !B! 点 格挡 。）"
+  },
+  "hermit:BlackWind": {
+    "NAME": "黑风",
+    "DESCRIPTION": "虚无 。 NL 造成与你损失生命值同等的伤害。 消耗 。",
+    "UPGRADE_DESCRIPTION": " NL （造成 !D! 点伤害。）"
+  },
+  "hermit:Purgatory": {
+    "NAME": "炼狱",
+    "DESCRIPTION": "虚无 。 NL 对所有敌人造成 !D! 点伤害。",
+	"UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。"
+  },
+  "hermit:ShadowCloak": {
+    "NAME": "暗影斗篷",
+    "DESCRIPTION": "每当你抽到诅咒牌时，获得 !M! 点 格挡 。"
+  },
+  "hermit:FatalDesire": {
+    "NAME": "致命一击",
+    "DESCRIPTION": "你的回合开始时，抽2张牌并将1张 *受伤 加入你的手牌。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 你的回合开始时，抽2张牌并将1张 *受伤 加入你的手牌。"
+  },
+  "hermit:Gambit": {
+    "NAME": "开场白",
+    "DESCRIPTION": "将弃牌堆中随机 !M! 张攻击牌加入手牌。 NL 消耗 。"
+  },
+  "hermit:Roughhouse": {
+    "NAME": "锁喉",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 ： NL 获得 !B! 点 格挡 。"
+  },
+  "hermit:Malice": {
+    "NAME": "怨恨",
+    "DESCRIPTION": "消耗 一张牌。 NL 造成 !D! 点伤害。 NL 如果 消耗 *诅咒 牌，则对所有敌人造成伤害。"
+  },
+  "hermit:Deadeye": {
+    "NAME": "死神之眼",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 点力量 。 NL 消耗 。 NL hermit:精准 :不 消耗 。"
+  },
+  "hermit:GhostlyPresence": {
+    "NAME": "幽灵现身",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL hermit:精准 :给予所有敌人 !M! 层 虚弱 。"
+  },
+  "hermit:Adapt": {
+    "NAME": "适应",
+    "DESCRIPTION": "你的回合结束时，至多 消耗 2张牌。 NL 每消耗一张牌获得 !M! 点 格挡 。"
+  },
+  "hermit:Dive": {
+    "NAME": "深潜",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL hermit:精准 : NL 获得 !M! 层 *多层护甲 。"
+  },
+  "hermit:FlashPowder": {
+    "NAME": "闪光粉末",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 所有敌人失去 !M! 点 力量 。 消耗 。"
+  },
+  "hermit:Roulette": {
+    "NAME": "轮转",
+    "DESCRIPTION": "对随机敌人造成 !D! 点伤害。 NL 丢弃你的手牌并抽丢弃数量的牌。"
+  },
+  "hermit:Midnight": {
+    "NAME": "午夜时分",
+    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 将一张 *末日降临 加入手牌。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将一张 *末日降临 加入手牌。"
+  },
+  "hermit:Glare": {
+    "NAME": "凝视",
+    "DESCRIPTION": "给予 !M! 层 虚弱 和 易伤 。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 虚弱 和 易伤 。 NL 给予 !hermit:SecondMagic! 层 hermit:瘀伤 。"
+  },
+  "hermit:TakeCover": {
+    "NAME": "快找掩护",
+    "DESCRIPTION": "将X张 *防御 加入你的手牌。 NL 这些牌在本场战斗中耗能为0。 消耗 。",
+    "UPGRADE_DESCRIPTION": "将X张 *防御+ 加入你的手牌。 NL 这些牌在本场战斗中耗能为0。 消耗 。"
+  },
+  "hermit:Misfire": {
+    "NAME": "擦枪走火",
+    "DESCRIPTION": "对随机敌人造成 !D! 点伤害。 NL 将一张 *笨拙 加入你的抽牌堆。"
+  },
+  "hermit:SprayPray": {
+    "NAME": "倾泻火力",
+    "DESCRIPTION": "对随机敌人造成 !D! 点伤害3次。 NL 将1张 *疑虑 加入你的抽牌堆。"
+  },
+ "hermit:Scavenge": {
+    "NAME": "战利品",
+    "DESCRIPTION": "获得 !M! 层 *多层护甲 。 NL hermit:精准 :获得 !hermit:SecondMagic! 金币。 NL 消耗 。"
+  },
+  "hermit:ImpendingDoom": {
+    "NAME": "末日降临",
+    "DESCRIPTION": "不能被打出 。 NL hermit:精准 ： NL 回合结束时，对所有人（包括自己）造成 13 点伤害。"
+  },
+  "hermit:MementoCard": {
+    "NAME": "纪念品",
+    "DESCRIPTION": "保留 。 NL 给予所有人 !M! 层 易伤 。"
+  },
+  "hermit:Shortfuse": {
+    "NAME": "快速引信",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每打出过一张 *打击 或 *防御 ，这张牌耗能降低 [E] 。"
+  },
+  "hermit:Grudge": {
+    "NAME": "怒怨",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 你每有一张诅咒牌，额外造成 !M! 点伤害。"
+  },
+  "hermit:Spite": {
+    "NAME": "苦恼",
+    "DESCRIPTION": "抽 !M! 张 *诅咒牌 。 NL 造成 !D! 点伤害两次。"
+  },
+  "hermit:Manifest": {
+    "NAME": "祭祀",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张 *诅咒牌 。"
+  },
+  "hermit:Feint": {
+    "NAME": "佯攻",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有敌人 !M! 层 hermit:瘀伤 。"
+  },
+  "hermit:LowProfile": {
+    "NAME": "低姿态",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 你每有一种获得负面效果就额外获得 !M! 点 格挡 。"
+  },
+  "hermit:Horror": {
+    "NAME": "恐惧",
+    "DESCRIPTION": "给予所有敌人 !M! 层 hermit:瘀伤 。 NL hermit:瘀伤 在本回合不会消失。"
+  },
+  "hermit:NoHoldsBarred": {
+    "NAME": "无谋之为",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害并给予 !M! 层 hermit:瘀伤 。 NL 下回合失去 [E] 。"
+  },
+  "hermit:Cheat": {
+    "NAME": "出千",
+    "DESCRIPTION": "从 !M! 张抽牌堆顶部的牌打出一张。 NL  hermit:精准 ：触发打出牌的 hermit:精准 效果。"
+  },
+  "hermit:Vantage": {
+    "NAME": "优势",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL hermit:精准 ：NL 随机 升级 !M! 张手牌。"
+  },
+  "hermit:Brawl": {
+    "NAME": "斗殴",
+    "DESCRIPTION": "你的回合开始时，给予所有敌人 !M! 层 hermit:瘀伤 。"
+  },
+  "hermit:Combo": {
+    "NAME": "连击",
+    "DESCRIPTION": "每当你触发 hermit:精准 效果时，将随机一张 hermit:精准 牌加入手牌。"
+  },
+  "hermit:BigShot": {
+    "NAME": "冒烟枪管",
+    "DESCRIPTION": "每当你触发 hermit:精准 效果时，你的下一张攻击牌额外造成 !M! 点伤害。"
+  },
+  "hermit:OverwhelmingPower": {
+    "NAME": "压倒性力量",
+    "DESCRIPTION": "获得 [E] [E] [E] 。 NL 抽3张牌。 NL 每当你结束回合时能量为0，失去 !M! 点生命。"
+  },
+  "hermit:Maintenance": {
+    "NAME": "维护",
+    "DESCRIPTION": "升级所有的 *打击 与 *防御 。 NL 这些牌能被本效果多次 升级 。"
+  },
+  "hermit:EternalForm": {
+    "NAME": "永恒仪式",
+    "DESCRIPTION": "每回合打出的前 !M! 张牌耗能为0。 NL 每回合开始时不获得能量。"
+  },
+  "hermit:FullyLoaded": {
+    "NAME": "整装待发",
+    "DESCRIPTION": "抽取所有 *打击 和 *防御 。 NL 消耗 。"
+  },
+  "hermit:Gestalt": {
+    "NAME": "深渊注视",
+    "DESCRIPTION": "获得2层 hermit:坚固 。 NL 获得 !M! 层 易伤 。 NL 消耗 。"
+  },
+  "hermit:RoundhouseKick": {
+    "NAME": "回旋踢",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 击晕 意图不为攻击的敌人。 消耗 。"
+  },
+  "hermit:CursedWeapon": {
+    "NAME": "诅咒之枪",
+    "DESCRIPTION": "失去 !M! 点生命。 NL 造成 !D! 点伤害。 NL 这张牌永久增加 !M! 点伤害。 NL 消耗 。"
+  },
+  "hermit:Enervate": {
+    "NAME": "无力",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 : NL 获得 [E] 并抽一张牌。"
+  },
+  "hermit:Ricochet": {
+    "NAME": "跳弹",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每触发过一次 hermit:精准 效果，对随机敌人造成伤害。",
+	"EXTENDED_DESCRIPTION": [" NL （重复 !M! ", "次）","次）"]
+  },
+  "hermit:TrackingShot": {
+    "NAME": "追踪射击",
+    "DESCRIPTION": "hermit:专注 。 NL 造成 !D! 点伤害。"
+  },
+  "hermit:LoneWolf": {
+    "NAME": "孤狼",
+    "DESCRIPTION": "选择1张牌。 NL 使其这场战斗中消耗为0。丢弃你剩余的手牌。"
+  },
+  "hermit:HighNoon": {
+    "NAME": "午时已到",
+    "DESCRIPTION": "每当你打出 *打击 或 *防御 时，抽一张牌。"
+  },
+  "hermit:Reprieve": {
+    "NAME": "延缓死刑",
+    "DESCRIPTION": "消耗抽牌堆中任意数量的 *诅咒 牌。 NL 每 消耗 一张排，回复4点生命。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "抽牌堆里没有诅咒牌。"
+    ]
+  },
+  "hermit:TakeAim": {
+    "NAME": "举枪瞄准",
+    "DESCRIPTION": "在你的回合开始， hermit:专注 。",
+		"UPGRADE_DESCRIPTION": "hermit:专注 。 NL 在你的回合开始， hermit:专注 。"
+  },
+  "hermit:Magnum": {
+    "NAME": "伟大之举",
+    "DESCRIPTION": "丢弃6张牌。 NL 每丢弃一张排，造成 !D! 点伤害。"
+  },
+  "hermit:Determination": {
+    "NAME": "决心",
+    "DESCRIPTION": "每当你获得负面效果时 NL 获得1点 力量 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每当你获得负面效果时 NL 获得1点 力量 。"
+  },
+  "hermit:Showdown": {
+    "NAME": "反击",
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 对随机敌人打出手牌中所有 *打击 。"
+  },
+  "hermit:LuckOfTheDraw": {
+    "NAME": "神抽",
+    "DESCRIPTION": "抽牌直到抽到耗能共计为 !M! 。"
+  },
+  "hermit:Coalescence": {
+    "NAME": "愈合",
+    "DESCRIPTION": "本回合获得 !M! 层 敏捷 。"
+  },
+  "hermit:PistolWhip": {
+    "NAME": "'枪'击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 hermit:瘀伤 。"
+  },
+  "hermit:DeadMansHand": {
+    "NAME": "亡者之手",
+    "DESCRIPTION": "丢弃你的手牌。 从抽牌堆中抽取 !M! 张稀有度最高的牌到手牌。"
+  },
+  "hermit:DeadOrAlive": {
+    "NAME": "死或生",
+    "DESCRIPTION": "造成 !D! 点伤害X次。 NL 斩杀 时，获得 hermit:赏金 。 NL 消耗 。"
+  },
+  "hermit:GoldenBullet": {
+    "NAME": "黄金子弹",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 时，这张牌的耗能永久降低1点。 NL 消耗 。"
+  },
+  "hermit:HoleUp": {
+    "NAME": "'洞'起来",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 虚弱 。"
+  },
+  "hermit:ItchyTrigger": {
+    "NAME": "急扣扳机",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 :将手牌中随机一张牌本回合耗能变为0"
+  },
+  "hermit:EyeOfTheStorm": {
+    "NAME": "风暴之眼",
+    "DESCRIPTION": "hermit:精准 : NL 将能量回复至上限。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽一张牌。 NL hermit:精准 : NL 将能量回复至上限。 NL 消耗 。"
+  },
+  "hermit:FinalCanter": {
+    "NAME": "最终手段",
+    "DESCRIPTION": "保留。 NL 手牌中每有一张 *诅咒牌，造成 !D! 点伤害。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " NL （有 !M! 张诅咒牌）"
+  },
+  "hermit:HeroicBravado": {
+    "NAME": "逞能英雄",
+    "DESCRIPTION": "虚无 。 NL 获得1层 hermit:坚固 。 NL 耗能提高1点。"
+  },
+  "hermit:FromBeyond": {
+    "NAME": "另一维度",
+    "DESCRIPTION": "消耗堆中每有一张牌。，随机敌人失去 !M! 点生命。"
+  },
+  "hermit:Virtue": {
+    "NAME": "高尚",
+    "DESCRIPTION": "减少你的所有负面效果 !M! 层。"
+  }
+}

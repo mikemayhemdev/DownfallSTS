@@ -1,0 +1,74 @@
+{
+  "hermit:Momento": {
+    "NAME": "Velho Medalhão",
+    "FLAVOR": "Têm uma foto desbotada dentro.",
+    "DESCRIPTIONS": [
+      "No inicio de cada combate, adicione um #yMemento para sua mão."
+    ]
+  },
+  "hermit:RyeStalk": {
+    "NAME": "Espiga de Centeio",
+    "FLAVOR": "Ainda em condições perfeitas, apesar de ser mastigado por tanto tempo.",
+    "DESCRIPTIONS": [
+      "#yhermit:Hematoma não é mais redusido por dano."
+    ]
+  },
+  "hermit:BartenderGlass": {
+    "NAME": "Copo de shot",
+    "FLAVOR": "Qualquer liquido colocado dentro torna-se algo diferente.",
+    "DESCRIPTIONS": [
+      "As primeiras #b2 vezes que você usar uma poção em cada combate, ganhe uma poção aleatória. Você só pode usar #b2 poções em cada combate.",
+      "Você não pode usar mais poções neste combate."
+    ]
+  },
+  "hermit:Horseshoe": {
+    "NAME": "Ferradura",
+    "FLAVOR": "Amuleto sortudo. Algúem sentirá falta disso.",
+    "DESCRIPTIONS": [
+      "Quando você ganhar #yFraqueza, #yFragilizado ou #yVulnerável, ganhe #b1 a menos."
+    ]
+  },
+  "hermit:Spyglass": {
+    "NAME": "Luneta",
+    "FLAVOR": "Propriedade de Kestin Highfin.",
+    "DESCRIPTIONS": [
+      "Se você acabar seu turno #yhermit:Concentrado, ganhe um [E] adicional no próximo turno."
+    ]
+  },
+  "hermit:RedScarf": {
+    "NAME": "Cachecol Vermelho",
+    "FLAVOR": "É quente e felpudo.",
+    "DESCRIPTIONS": [
+      "No inicio de cada combate, descarte até #b7 cartas da sua pilha de compra."
+    ]
+  },
+  "hermit:DentedPlate": {
+    "NAME": "Placa Entalhada",
+    "FLAVOR": "Várias balas ainda estão alojadas dentro.",
+    "DESCRIPTIONS": [
+      "Enquanto seu PV é #b50% ou menos, ganhe [E] e compre #b1 carta no inicio de seu turno."
+    ]
+  },
+  "hermit:PetGhost": {
+    "NAME": "Fantasma de Estimação",
+    "FLAVOR": "Pobrezinho.",
+    "DESCRIPTIONS": [
+      "Se você fosse morrer, ao invéz disso, sobreviva com #b1 PV. Você morre no final do seu próximo turno. você não pode morrer antes disso."
+    ]
+  },
+  "hermit:CharredGlove": {
+    "NAME": "Luva Chamuscada",
+    "FLAVOR": "Partes da luva ainda brilham com brasas de outro mundo.",
+    "DESCRIPTIONS": [
+      "Quando você comprar uma #yMaldição, seu próximo ataque causa #b4 a mais de dano."
+    ]
+  },
+  "hermit:ClaspedLocket": {
+    "NAME": "Medalhão Fechado",
+    "FLAVOR": "Não abrirá novamente.",
+    "DESCRIPTIONS": [
+      "Substitui #yVelho Medalhão. Após pegar, adicione #b3 #yMementos em seu baralho.",
+      "Nunca mais..."
+    ]
+  }
+}

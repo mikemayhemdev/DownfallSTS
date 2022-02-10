@@ -1,0 +1,15 @@
+{
+  "HermitMod:HermitTutorials": {
+    "TEXT": [
+      "Hermit is capable of using #yDead #yOn cards. NL NL #yDead #yOn cards trigger their special effect when positioned in the middle of your hand.",
+      "In even hands, #yboth of the middle cards count, even if these are the only cards in your hand."
+    ],
+    "LABEL": [
+      "Next",
+      "Got it",
+      "Dead On",
+      "(Page: ",
+      ")"
+    ]
+  }
+}

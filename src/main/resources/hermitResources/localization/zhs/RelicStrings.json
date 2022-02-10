@@ -1,0 +1,74 @@
+{
+  "hermit:Momento": {
+    "NAME": "老旧小盒",
+    "FLAVOR": "里面有一张褪色的老照片。",
+    "DESCRIPTIONS": [
+      "每场战斗开始时，将一张 #y纪念品 加入你的手牌。"
+    ]
+  },
+  "hermit:RyeStalk": {
+    "NAME": "黑麦茎",
+    "FLAVOR": "即使嚼的时间久，也依旧能保持薄荷的新鲜感。",
+    "DESCRIPTIONS": [
+      "#yhermit:淤伤 将不会在受到攻击时减少层数。"
+    ]
+  },
+  "hermit:BartenderGlass": {
+    "NAME": "酒保玻璃杯",
+    "FLAVOR": "任何倒进去的液体都能变成一杯饮料。",
+    "DESCRIPTIONS": [
+      "在每次战斗你使用的前 #b2 瓶药水将随机获得一瓶药水。 NL 每场战斗至多使用 #b2 瓶药水。",
+      "本场战斗中你不能使用药水。"
+    ]
+  },
+  "hermit:Horseshoe": {
+    "NAME": "幸运马蹄铁",
+    "FLAVOR": "一件幸运的小饰品。 看来某人要错过这个了。",
+    "DESCRIPTIONS": [
+      "每当你获得 #y虚弱 、 #y脆弱 或 #y易伤 时，减少 #b1 层。"
+    ]
+  },
+  "hermit:Spyglass": {
+    "NAME": "望远镜",
+    "FLAVOR": "凯瑟琳·海芬的财产所有物。",
+    "DESCRIPTIONS": [
+      "如果你在回合结束时有 #yhermit:专注 ，下回合开始时获得 [E] 。"
+    ]
+  },
+  "hermit:RedScarf": {
+    "NAME": "红色围巾",
+    "FLAVOR": "温暖又舒适。",
+    "DESCRIPTIONS": [
+      "每场战斗开始时，至多丢弃抽牌堆中的 #b7张牌。"
+    ]
+  },
+  "hermit:DentedPlate": {
+    "NAME": "受损铁板",
+    "FLAVOR": "还有几颗子弹残存在铁板里。",
+    "DESCRIPTIONS": [
+      "当你的生命等于或低于一半时，在你的回合开始获得 [E] 并抽一张牌。"
+    ]
+  },
+  "hermit:PetGhost": {
+    "NAME": "宠物幽灵",
+    "FLAVOR": "可怜的小家伙。",
+    "DESCRIPTIONS": [
+      "每当你要被杀死时，复活至 #b1 点生命。 NL 你只能在下回合结束时死亡。"
+    ]
+  },
+  "hermit:CharredGlove": {
+    "NAME": "烧焦的手套",
+    "FLAVOR": "手套上还残留着部分的尘世灰烬。",
+    "DESCRIPTIONS": [
+      "每当你抽到 #y诅咒 牌时，你的下一张攻击牌额外造成 #b4 点伤害。"
+    ]
+  },
+  "hermit:ClaspedLocket": {
+    "NAME": "破损的吊坠",
+    "FLAVOR": "再也不会打开了",
+    "DESCRIPTIONS": [
+      "替换 #y老旧小盒 。 NL 拾起时，将 #b3 张 #y纪念品 加入你的牌组。",
+      "再也……"
+    ]
+  }
+}

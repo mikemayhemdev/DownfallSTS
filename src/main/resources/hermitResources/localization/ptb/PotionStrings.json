@@ -1,0 +1,14 @@
+{
+"hermit:Tonic": {
+        "NAME": "Tônico",
+        "DESCRIPTIONS": ["Ganhe #b", " #yInflexível."]
+},
+"hermit:BlackBile": {
+        "NAME": "Bile Negra",
+        "DESCRIPTIONS": ["Aplique #b", " #yHematoma."]
+},
+"hermit:Eclipse": {
+        "NAME": "Vazio Líquido",
+        "DESCRIPTIONS": ["Cololque #b", " carta da sua #ypilha #yexaurida na sua mão. Ela custa #b0 esse turno."," cartas da sua #ypilha #yexaurida na sua mão. Elas custam #b0 esse turno."]
+}
+}

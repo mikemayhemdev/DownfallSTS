@@ -1,0 +1,12 @@
+{
+  "hermit:bountygold": {
+    "TEXT": [
+      " Золото (Награда)"
+    ]
+  },
+  "hermit:LoneWolfAction": {
+    "TEXT": [
+      "Оставить."
+    ]
+  }
+}

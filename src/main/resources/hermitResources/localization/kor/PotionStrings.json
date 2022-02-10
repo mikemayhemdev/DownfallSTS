@@ -1,0 +1,14 @@
+{
+"hermit:Tonic": {
+        "NAME": "토닉",
+        "DESCRIPTIONS": ["#y강인함을 #b", " 얻습니다."]
+},
+"hermit:BlackBile": {
+        "NAME": "흑담즙",
+        "DESCRIPTIONS": ["#y타박상을 #b", " 부여합니다."]
+},
+"hermit:Eclipse": {
+        "NAME": "액체 공허",
+        "DESCRIPTIONS": ["소멸된 카드 더미에서 #b", " 장의 카드를 손으로 가져옵니다. 이번 턴 동안 비용이 #b0 이 됩니다.", " 장의 카드를 손으로 가져옵니다. 이번 턴 동안 비용이 #b0 이 됩니다."]
+}
+}

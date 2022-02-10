@@ -1,0 +1,14 @@
+{
+  "hermit:hermit": {
+    "NAMES": [
+      "Der Einsiedler",
+      "der Einsiedler"
+    ],
+    "TEXT": [
+      "Ein einsamer untoter Schütze aus einem fernem Ort. NL Heimgesucht von dem unausweichlichem Geist der Vergangenheit.",
+      "NL Du reichst für deinen Holster...",
+      "Auf einer unbeleuchteten Straße triffst du auf ein paar vermummte Gestalten, die gerade mitten in irgendeinem dunklen Ritual sind. Als du näher kommst, wenden sie sich dir in gespenstischem Gleichklang zu. Der Größte von ihnen entblößt Fangzähne und streckt eine lange, blasse Hand nach dir aus. NL ~\"Schließ~ ~dich~ ~uns~ ~an~ ~Leerer,~ ~und~ ~spüre~ ~die~ ~Wärme~ ~des~ ~Spire.\"~",
+      "#y~VERZWEIFLUNG.~  NL NL Der letzte Gegner sinkt zum Boden, eine rauchende Wunde in Hand. Die Körper haben kaum Zeit kalt zu werden als du sie plünderst. NL NL #bStoff. #rPlatten. #yGold. NL NL Wolken wirbeln sich hoch über dir, ein schlechtes Zeichen. Du hast dich zu lange in einem Ort aufgehalten. Bald kommen sie dich holen. NL NL Wieder musst du fliehen, #raber #rwohin?"
+    ]
+  }
+}

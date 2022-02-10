@@ -1,0 +1,14 @@
+{
+"hermit:Tonic": {
+        "NAME": "奎宁水",
+        "DESCRIPTIONS": ["获得 #b", " #y坚固 。"]
+},
+"hermit:BlackBile": {
+        "NAME": "黑胆汁",
+        "DESCRIPTIONS": ["给予 #b", " #y瘀伤 。"]
+},
+"hermit:Eclipse": {
+        "NAME": "蚀刻药水",
+        "DESCRIPTIONS": ["将 #b", " 张 #y消耗堆 中的牌加入手牌。其耗能本回合变为 #b0 。"," 张 #y消耗堆 中的牌加入手牌。他们耗能本回合变为 #b0 。"]
+}
+}
