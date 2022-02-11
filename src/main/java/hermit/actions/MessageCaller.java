@@ -1,5 +1,7 @@
 package hermit.actions;
 
+import downfall.downfallMod;
+import downfall.tutorials.GuardianTutorials;
 import hermit.HermitMod;
 import hermit.util.HermitTutorials;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -8,6 +10,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.io.IOException;
+import java.security.Guard;
 
 public class MessageCaller extends AbstractGameAction {
     private float startingDuration;
@@ -27,12 +30,22 @@ public class MessageCaller extends AbstractGameAction {
 
     public void update() {
 
-        if (HermitMod.activeTutorials[code]) {
-            AbstractDungeon.ftue = new HermitTutorials();
-            HermitMod.activeTutorials[code] = false;
+        if (downfallMod.unseenTutorials[code]) {
+            switch (code) {
+                case 0:
+                    AbstractDungeon.ftue = new HermitTutorials();
+                    break;
+                case 1:
+                    AbstractDungeon.ftue = new GuardianTutorials();
+                    break;
+                case 2:
+                    AbstractDungeon.ftue = new GuardianTutorials();
+                    break;
+            }
+            downfallMod.unseenTutorials[code] = false;
 
             try {
-                HermitMod.saveData();
+                downfallMod.saveTutorialsSeen();
                 this.isDone = true;;
             } catch (IOException e) {
                 e.printStackTrace();

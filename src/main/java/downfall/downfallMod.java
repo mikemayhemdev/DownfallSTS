@@ -119,6 +119,7 @@ import guardian.cards.ExploitGems;
 import guardian.characters.GuardianCharacter;
 import guardian.relics.PickAxe;
 import hermit.HermitMod;
+import hermit.actions.MessageCaller;
 import quickRestart.helper.RestartRunHelper;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
@@ -206,6 +207,14 @@ public class downfallMod implements
     public static String Act2BossFaced = downfallMod.makeID("Silent");
     public static String Act3BossFaced = downfallMod.makeID("Defect");
 
+    public static boolean[] unseenTutorials = new boolean[]{
+            true, // Hermit
+            true, // Guardian
+            true // Hexa
+    };
+
+    public static Properties tutorialSaves = new Properties();
+
     @SpireEnum
     public static AbstractCard.CardTags CHARBOSS_ATTACK;
     @SpireEnum
@@ -254,6 +263,19 @@ public class downfallMod implements
 
     public static void initialize() {
         new downfallMod();
+
+        try {
+            for (int i = 0; i < unseenTutorials.length; i++) { tutorialSaves.setProperty("activeTutorials" + i, "true"); }
+            SpireConfig config = new SpireConfig("downfall", "TutorialsViewed", tutorialSaves);
+            for (int j = 0; j < unseenTutorials.length; j++) { unseenTutorials[j] = config.getBool("activeTutorials" + j); }
+        } catch (IOException e) { e.printStackTrace(); }
+    }
+
+    public static void saveTutorialsSeen() throws IOException {
+        SpireConfig config = new SpireConfig("downfall", "TutorialsViewed");
+        int i;
+        for (i = 0; i < unseenTutorials.length; i++) { config.setBool("activeTutorials" + i, unseenTutorials[i]); }
+        config.save();
     }
 
     public static final String makeID(String id) {
@@ -1660,6 +1682,11 @@ public class downfallMod implements
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new LastStandModPower(m, AbstractDungeon.actNum * 2), AbstractDungeon.actNum * 2));
         }
 
+        if (AbstractDungeon.player instanceof GuardianCharacter) {
+            if (downfallMod.unseenTutorials[1]) {
+                AbstractDungeon.actionManager.addToBottom(new MessageCaller(1));
+            }
+        }
     }
 
 

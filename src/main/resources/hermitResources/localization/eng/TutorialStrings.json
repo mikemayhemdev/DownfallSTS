@@ -11,5 +11,18 @@
       "(Page: ",
       ")"
     ]
+  },
+  "HermitMod:GuardianTutorials": {
+    "TEXT": [
+      "The Guardian can Curl Up after gaining a certain amount of Brace.",
+      "He can also stash Gems in cards to augment their effects."
+    ],
+    "LABEL": [
+      "Next",
+      "Got it",
+      "Dead On",
+      "(Page: ",
+      ")"
+    ]
   }
 }

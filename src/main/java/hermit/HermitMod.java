@@ -25,6 +25,7 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.downfallMod;
 import downfall.util.CardIgnore;
 import hermit.actions.MessageCaller;
 import hermit.patches.EnumPatch;
@@ -111,7 +112,7 @@ public class HermitMod implements
     public static Properties theDefaultDefaultSettings = new Properties();
     public static final String ENABLE_PLACEHOLDER_SETTINGS = "enablePlaceholder";
     public static boolean enablePlaceholder = true; // The boolean we'll be setting on/off (true/false)
-    public static boolean[] activeTutorials = new boolean[]{true};
+    //public static boolean[] activeTutorials = new boolean[]{true};
     public static Properties HermitModDefaultSettings = new Properties();
     public static boolean tackybypass = false;
 
@@ -613,8 +614,7 @@ public class HermitMod implements
     public void receiveOnBattleStart(AbstractRoom room) {
         tackybypass = true;
         if (AbstractDungeon.player instanceof hermit) {
-            if (HermitMod.activeTutorials[0]){ AbstractDungeon.actionManager.addToBottom(new MessageCaller(0)); }
-
+            if (downfallMod.unseenTutorials[0]){ AbstractDungeon.actionManager.addToBottom(new MessageCaller(0)); }
         }
     }
 
