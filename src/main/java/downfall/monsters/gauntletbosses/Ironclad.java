@@ -16,6 +16,9 @@ import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
 import downfall.downfallMod;
 import downfall.powers.DrawReductionPowerPlus;
 import downfall.powers.EnemyDemonFormPower;
+import downfall.powers.gauntletpowers.MonsterVigor;
+import downfall.powers.gauntletpowers.OnDeathEveryoneBuffer;
+import downfall.powers.gauntletpowers.OnDeathEveryoneStr;
 
 public class Ironclad extends AbstractMonster {
 
@@ -42,27 +45,42 @@ public class Ironclad extends AbstractMonster {
         this.damage.add(new DamageInfo(this, 8));
     }
 
+    @Override
+    public void usePreBattleAction() {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new OnDeathEveryoneStr(this, 2), 2));
+    }
+
     public void takeTurn() {
         switch (this.nextMove) {
             case 1:
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+                if (hasPower(MonsterVigor.POWER_ID)) {
+                    addToBot(new RemoveSpecificPowerAction(this, this, MonsterVigor.POWER_ID));
+                }
                 break;
             case 2:
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
                 addToBot(new GainBlockAction(this, 5));
+                if (hasPower(MonsterVigor.POWER_ID)) {
+                    addToBot(new RemoveSpecificPowerAction(this, this, MonsterVigor.POWER_ID));
+                }
                 break;
             case 3:
                 addToBot(new GainBlockAction(this, 10));
                 break;
             case 4:
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(2), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-                addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VulnerablePower(AbstractDungeon.player, 2, true), 2));
+                addToBot(new ApplyPowerAction(AbstractDungeon.player, this, new VulnerablePower(AbstractDungeon.player, 2, true), 2));
+                if (hasPower(MonsterVigor.POWER_ID)) {
+                    addToBot(new RemoveSpecificPowerAction(this, this, MonsterVigor.POWER_ID));
+                }
                 break;
             case 5:
                 addToBot(new ApplyPowerAction(this, this, new EnemyDemonFormPower(this, 2), 2));
                 break;
         }
+
 
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
     }

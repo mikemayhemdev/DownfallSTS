@@ -15,6 +15,8 @@ import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbBlue;
 import downfall.downfallMod;
 import downfall.powers.DrawReductionPowerPlus;
+import downfall.powers.gauntletpowers.MonsterVigor;
+import downfall.powers.gauntletpowers.OnDeathEveryoneBuffer;
 
 public class Defect extends AbstractMonster {
 
@@ -41,16 +43,28 @@ public class Defect extends AbstractMonster {
         this.damage.add(new DamageInfo(this, 11));
     }
 
+    @Override
+    public void usePreBattleAction() {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new OnDeathEveryoneBuffer(this, 2), 2));
+    }
 
     public void takeTurn() {
         switch (this.nextMove) {
             case 1:
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+
+                if (hasPower(MonsterVigor.POWER_ID)) {
+                    addToBot(new RemoveSpecificPowerAction(this, this, MonsterVigor.POWER_ID));
+                }
                 break;
             case 2:
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
                 addToBot(new GainBlockAction(this, 5));
+
+                if (hasPower(MonsterVigor.POWER_ID)) {
+                    addToBot(new RemoveSpecificPowerAction(this, this, MonsterVigor.POWER_ID));
+                }
                 break;
             case 3:
                 addToBot(new GainBlockAction(this, 10));
@@ -58,6 +72,10 @@ public class Defect extends AbstractMonster {
             case 4:
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(2), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
                 addToBot(new ApplyPowerAction(this, this, new ArtifactPower(this, 1), 1));
+
+                if (hasPower(MonsterVigor.POWER_ID)) {
+                    addToBot(new RemoveSpecificPowerAction(this, this, MonsterVigor.POWER_ID));
+                }
                 break;
             case 5:
                 addToBot(new ApplyPowerAction(this, this, new BufferPower(this, 2), 2));
