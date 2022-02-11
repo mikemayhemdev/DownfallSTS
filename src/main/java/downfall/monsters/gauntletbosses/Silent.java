@@ -38,8 +38,8 @@ public class Silent extends AbstractMonster {
         e.setTimeScale(0.9f);
         type = EnemyType.ELITE;
 
-        this.damage.add(new DamageInfo(this, 1));
-        this.damage.add(new DamageInfo(this, 1));
+        this.damage.add(new DamageInfo(this, 6));
+        this.damage.add(new DamageInfo(this, 6));
 
     }
 
