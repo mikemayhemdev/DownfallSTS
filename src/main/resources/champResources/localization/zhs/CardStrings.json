@@ -9,7 +9,7 @@
   },
   "champ:Taunt": {
     "NAME": "激将",
-    "DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL 进入随机一种 姿态 。",
+    "DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL 如果不处于 姿态 ，随机进入一种 姿态 ，否则进入另一种 姿态 。",
     "UPGRADE_DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL 选择进入一种 姿态 。"
   },
   "champ:Execute": {
@@ -69,11 +69,11 @@
   },
   "champ:FocusedDefense": {
     "NAME": "防反家",
-    "DESCRIPTION": "进入 champ:防守 。 NL 下次你打出 champ:终结技 时，获得 !B! 点 格挡 。"
+    "DESCRIPTION": "进入 champ:防守 。 NL 本回合下次你打出 champ:终结技 时，获得 !B! 点 格挡 。"
   },
   "champ:FocusedBerserking": {
     "NAME": "战狂士",
-    "DESCRIPTION": "进入 champ:战狂 。 NL 下次你打出 champ:终结技 时，对所有敌人造成 !D! 点伤害。"
+    "DESCRIPTION": "进入 champ:战狂 。 NL 本回合下次你打出 champ:终结技 时，对所有敌人造成 !D! 点伤害。"
   },
   "champ:SetATrap": {
     "NAME": "布置陷阱",
@@ -272,7 +272,7 @@
   },
   "champ:EnragedBash": {
     "NAME": "怒斩",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。  NL champ:战狂 champ:连段 ：本场战斗中攻击次数加1。",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL champ:战狂 champ:连段 ：本场战斗中攻击次数加1。",
     "EXTENDED_DESCRIPTION": [
       "造成 !D! 点伤害 !M! 次。 NL champ:战狂 champ:连段 ：本场战斗中攻击次数加1。"
     ]
