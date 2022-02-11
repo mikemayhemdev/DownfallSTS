@@ -7,9 +7,12 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
+import com.megacrit.cardcrawl.cards.red.Bash;
+import com.megacrit.cardcrawl.cards.red.DemonForm;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
@@ -88,7 +91,7 @@ public class Ironclad extends AbstractMonster {
     protected void getMove(int num) {
         turnNum ++;
         if (turnNum == 5) {
-            setMove((byte)5, Intent.BUFF);
+            setMove(CardLibrary.getCard(DemonForm.ID).name, (byte)5, Intent.BUFF);
         }
         else {
             int rnd = AbstractDungeon.cardRandomRng.random(0, 3);
@@ -103,7 +106,7 @@ public class Ironclad extends AbstractMonster {
                     setMove((byte)3, Intent.DEFEND);
                     break;
                 case 3:
-                    setMove((byte)4, Intent.ATTACK_DEBUFF, this.damage.get(2).base);
+                    setMove(CardLibrary.getCard(Bash.ID).name, (byte)4, Intent.ATTACK_DEBUFF, this.damage.get(2).base);
                     break;
             }
         }

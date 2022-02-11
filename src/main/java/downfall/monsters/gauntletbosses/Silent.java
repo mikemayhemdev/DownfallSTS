@@ -7,9 +7,12 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
+import com.megacrit.cardcrawl.cards.green.LegSweep;
+import com.megacrit.cardcrawl.cards.green.WraithForm;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbGreen;
@@ -83,7 +86,7 @@ public class Silent extends AbstractMonster {
     protected void getMove(int num) {
         turnNum ++;
         if (turnNum == 5) {
-            setMove((byte)5, Intent.BUFF);
+            setMove(CardLibrary.getCard(WraithForm.ID).name, (byte)5, Intent.BUFF);
         }
         else {
             int rnd = AbstractDungeon.cardRandomRng.random(0, 3);
@@ -101,7 +104,7 @@ public class Silent extends AbstractMonster {
                     setMove((byte)3, Intent.DEFEND);
                     break;
                 case 3:
-                    setMove((byte)4, Intent.DEFEND_DEBUFF);
+                    setMove(CardLibrary.getCard(LegSweep.ID).name, (byte)4, Intent.DEFEND_DEBUFF);
                     break;
             }
         }

@@ -9,9 +9,12 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.watcher.WallopAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
+import com.megacrit.cardcrawl.cards.purple.Wallop;
+import com.megacrit.cardcrawl.cards.purple.Wish;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbPurple;
@@ -89,7 +92,7 @@ public class Watcher extends AbstractMonster {
     protected void getMove(int num) {
         turnNum ++;
         if (turnNum == 5) {
-            setMove((byte)5, Intent.BUFF);
+            setMove(CardLibrary.getCard(Wish.ID).name + "+", (byte)5, Intent.BUFF);
         }
         else {
             int rnd = AbstractDungeon.cardRandomRng.random(0, 3);
@@ -104,7 +107,7 @@ public class Watcher extends AbstractMonster {
                     setMove((byte)3, Intent.DEFEND);
                     break;
                 case 3:
-                    setMove((byte)4, Intent.ATTACK_BUFF, this.damage.get(2).base);
+                    setMove(CardLibrary.getCard(Wallop.ID).name, (byte)4, Intent.ATTACK_DEFEND, this.damage.get(2).base);
                     break;
             }
         }
