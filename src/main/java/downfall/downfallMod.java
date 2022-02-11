@@ -188,7 +188,7 @@ public class downfallMod implements
     public static boolean crossoverCharacters = true;
     public static boolean unlockEverything = false;
     public static boolean noMusic = false;
-    public static boolean normalMapLayout = false;
+    public static boolean normalMapLayout = true;
     public static boolean champDisableStanceHelper = false;
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
@@ -250,7 +250,7 @@ public class downfallMod implements
         configDefault.setProperty(PROP_POTION_SHARING, "TRUE");
         configDefault.setProperty(PROP_CARD_SHARING, "TRUE");
         configDefault.setProperty(PROP_CHAR_CROSSOVER, "FALSE");
-        configDefault.setProperty(PROP_NORMAL_MAP, "FALSE");
+        configDefault.setProperty(PROP_NORMAL_MAP, "TRUE");
         configDefault.setProperty(PROP_UNLOCK_ALL, "FALSE");
         configDefault.setProperty(PROP_CHAMP_PRO, "FALSE");
         configDefault.setProperty(PROP_NO_MUSIC, "FALSE");
