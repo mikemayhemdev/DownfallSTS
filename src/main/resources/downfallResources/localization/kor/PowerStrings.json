@@ -239,5 +239,49 @@
     "DESCRIPTIONS": [
       "#y발사된 탄약은 이후 강화됩니다."
     ]
+  },
+  ,
+  "downfall:OnDeathEveryoneStr": {
+    "NAME": "Dying Rage",
+    "DESCRIPTIONS": [
+      "When this character dies, ALL characters (including you) gain #b",
+      " #yStrength."
+    ]
+  },
+  "downfall:OnDeathEveryoneThorns": {
+    "NAME": "Thorny Personality",
+    "DESCRIPTIONS": [
+      "When this character dies, ALL characters (including you) gain #b",
+      " #yThorns."
+    ]
+  },
+  "downfall:OnDeathEveryoneBuffer": {
+    "NAME": "pause()",
+    "DESCRIPTIONS": [
+      "When this character dies, ALL characters (including you) gain #b",
+      " #yBuffer."
+    ]
+  },
+  "downfall:OnDeathEveryoneVigor": {
+    "NAME": "Vigorous Strength",
+    "DESCRIPTIONS": [
+      "When this character dies, ALL characters (including you) gain #b",
+      " #yVigor."
+    ]
+  },
+  "downfall:OnDeathEveryoneRuggedVuln": {
+    "NAME": "Determination",
+    "DESCRIPTIONS": [
+      "When this character dies, ALL characters (including you) gain #b",
+      " #yRugged and #b",
+      " #yVulnerable."
+    ]
+  },
+  "downfall:MonsterVigor": {
+    "NAME": "Vigor",
+    "DESCRIPTIONS": [
+      "This character's next attack deals #b",
+      " additional damage."
+    ]
   }
 }
