@@ -23,8 +23,8 @@ import downfall.powers.gauntletpowers.OnDeathEveryoneBuffer;
 
 public class Defect extends AbstractMonster {
 
-    public static final String ID = downfallMod.makeID("FaceTrader");
-    public static final String NAME = CardCrawlGame.languagePack.getEventString("FaceTrader").NAME;
+    public static final String ID = downfallMod.makeID("GauntletDefect");
+    public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Defect").NAMES[0];
     private static final float HB_X = 0.0F;
     private static final float HB_Y = 0.0F;
     private static final float HB_W = 225.0F;

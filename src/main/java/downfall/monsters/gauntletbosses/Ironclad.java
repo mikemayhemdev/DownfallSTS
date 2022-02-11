@@ -25,8 +25,8 @@ import downfall.powers.gauntletpowers.OnDeathEveryoneStr;
 
 public class Ironclad extends AbstractMonster {
 
-    public static final String ID = downfallMod.makeID("FaceTrader");
-    public static final String NAME = CardCrawlGame.languagePack.getEventString("FaceTrader").NAME;
+    public static final String ID = downfallMod.makeID("GauntletIronclad");
+    public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Ironclad").NAMES[0];
     private static final float HB_X = 0.0F;
     private static final float HB_Y = 0.0F;
     private static final float HB_W = 225.0F;
@@ -50,7 +50,7 @@ public class Ironclad extends AbstractMonster {
 
     @Override
     public void usePreBattleAction() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new OnDeathEveryoneStr(this, 2), 2));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new OnDeathEveryoneStr(this, 3), 3));
     }
 
     public void takeTurn() {

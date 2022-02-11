@@ -24,8 +24,8 @@ import downfall.powers.gauntletpowers.OnDeathEveryoneThorns;
 
 public class Silent extends AbstractMonster {
 
-    public static final String ID = downfallMod.makeID("FaceTrader");
-    public static final String NAME = CardCrawlGame.languagePack.getEventString("FaceTrader").NAME;
+    public static final String ID = downfallMod.makeID("GauntletSilent");
+    public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Silent").NAMES[0];
     private static final float HB_X = 0.0F;
     private static final float HB_Y = 0.0F;
     private static final float HB_W = 225.0F;
@@ -48,7 +48,7 @@ public class Silent extends AbstractMonster {
 
     @Override
     public void usePreBattleAction() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new OnDeathEveryoneThorns(this, 2), 2));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new OnDeathEveryoneThorns(this, 4), 4));
     }
 
     public void takeTurn() {
