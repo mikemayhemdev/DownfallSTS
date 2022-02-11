@@ -96,7 +96,7 @@
     "NAME": "Bag of Knives",
     "DESCRIPTIONS": [
       "The first two times you play a #b0 cost card each turn, Silent gains a #yShiv."
-      ]
+    ]
   },
   "downfall:NeowBagOfKnives": {
     "NAME": "Bag of Knives",
@@ -238,6 +238,49 @@
     "NAME": "Compression Mold",
     "DESCRIPTIONS": [
       "#yFired Ammo is upgraded afterwards."
+    ]
+  },
+  "downfall:OnDeathEveryoneStr": {
+    "NAME": "Dying Rage",
+    "DESCRIPTIONS": [
+      "When this character dies, ALL characters (including you) gain #b",
+      " #yStrength."
+    ]
+  },
+  "downfall:OnDeathEveryoneThorns": {
+    "NAME": "Thorny Personality",
+    "DESCRIPTIONS": [
+      "When this character dies, ALL characters (including you) gain #b",
+      " #yThorns."
+    ]
+  },
+  "downfall:OnDeathEveryoneBuffer": {
+    "NAME": "pause()",
+    "DESCRIPTIONS": [
+      "When this character dies, ALL characters (including you) gain #b",
+      " #yBuffer."
+    ]
+  },
+  "downfall:OnDeathEveryoneVigor": {
+    "NAME": "Vigorous Strength",
+    "DESCRIPTIONS": [
+      "When this character dies, ALL characters (including you) gain #b",
+      " #yVigor."
+    ]
+  },
+  "downfall:OnDeathEveryoneRuggedVuln": {
+    "NAME": "Determination",
+    "DESCRIPTIONS": [
+      "When this character dies, ALL characters (including you) gain #b",
+      " #yRugged and #b",
+      " #yVulnerable."
+    ]
+  },
+  "downfall:MonsterVigor": {
+    "NAME": "Vigor",
+    "DESCRIPTIONS": [
+      "This character's next attack deals #b",
+      " additional damage."
     ]
   }
 }
