@@ -1,6 +1,10 @@
 package hermit;
 
+import automaton.AutomatonChar;
+import automaton.cards.*;
+import automaton.relics.*;
 import basemod.*;
+import basemod.abstracts.CustomUnlockBundle;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import basemod.interfaces.ISubscriber;
@@ -102,7 +106,8 @@ public class HermitMod implements
         EditCharactersSubscriber,
         PostInitializeSubscriber,
         AddAudioSubscriber,
-        OnStartBattleSubscriber{
+        OnStartBattleSubscriber,
+        SetUnlocksSubscriber {
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
     //
@@ -659,5 +664,32 @@ public class HermitMod implements
         BaseMod.addAudio(makeID("GUN3"), "hermitResources/audio/hermit_gun3.ogg");
         BaseMod.addAudio(makeID("SPIN"), "hermitResources/audio/hermit_spin.ogg");
         BaseMod.addAudio(makeID("RELOAD"), "hermitResources/audio/hermit_reload.ogg");
+    }
+
+    @Override
+    public void receiveSetUnlocks() {
+        downfallMod.registerUnlockSuite(
+                LoneWolf.ID,
+                FullyLoaded.ID,
+                Showdown.ID,
+
+                BartenderGlass.ID,
+                Spyglass.ID,
+                RedScarf.ID,
+
+                CursedWeapon.ID,
+                BlackWind.ID,
+                Purgatory.ID,
+
+                Horseshoe.ID,
+                CharredGlove.ID,
+                PetGhost.ID,
+
+                Reprieve.ID,
+                FromBeyond.ID,
+                DeadMansHand.ID,
+
+                hermit.Enums.HERMIT
+        );
     }
 }
