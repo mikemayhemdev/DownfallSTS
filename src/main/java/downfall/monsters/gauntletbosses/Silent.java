@@ -1,6 +1,7 @@
 package downfall.monsters.gauntletbosses;
 
 import charbosses.core.EnemyEnergyManager;
+import charbosses.powers.cardpowers.EnemyWraithFormPower;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -10,9 +11,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.RitualPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbGreen;
 import downfall.downfallMod;
 import downfall.powers.DrawReductionPowerPlus;
@@ -44,33 +43,22 @@ public class Silent extends AbstractMonster {
     public void takeTurn() {
         switch (this.nextMove) {
             case 1:
-                addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.FIRE));
-                addToBot(new MakeTempCardInDrawPileAction(new Doubt(), 1, true, false));
-                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "AttackSerpent"));
-
+                addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+                addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
                 break;
             case 2:
-                addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.FIRE));
-                addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new WeakPower(AbstractDungeon.player, 2, false), 2));
-                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "AttackGremlin"));
+                addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+                addToBot(new GainBlockAction(this, 5));
                 break;
             case 3:
-                addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.FIRE));
-                addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawReductionPowerPlus(AbstractDungeon.player, 2), 2));
-                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "AttackNloth"));
+                addToBot(new GainBlockAction(this, 10));
                 break;
             case 4:
-                addToBot(new GainBlockAction(this, 10));
-                addToBot(new ApplyPowerAction(this, this, new RitualPower(this, 1, false), 1));
-                if (!hasPower(RitualPower.POWER_ID)){
-                    addToBot(new ApplyPowerAction(this, this, new StrengthPower(this, 1), 1));
-                }
-                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "AttackCultist"));
+                addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new WeakPower(AbstractDungeon.player, 2, true), 2));
+                addToBot(new GainBlockAction(this, 11));
                 break;
             case 5:
-                addToBot(new GainBlockAction(this, 10));
-                addToBot(new HealAction(this, this, 10));
-                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "AttackCleric"));
+                addToBot(new ApplyPowerAction(this, this, new EnemyWraithFormPower(this, 2), 2));
                 break;
         }
 
@@ -78,26 +66,31 @@ public class Silent extends AbstractMonster {
     }
 
     protected void getMove(int num) {
-        int bruh;
-        switch (turnNum) {
-            case 0:
-                bruh = AbstractDungeon.cardRandomRng.random(0,2);
-                turnNum = 1;
-                switch (bruh) {
-                    case 0: {
-                        this.setMove((byte) 1, Intent.ATTACK_DEBUFF, this.damage.get(0).base);
-                        break;
-                    }
-                    case 1: {
-                        this.setMove((byte) 2, Intent.ATTACK_DEBUFF, this.damage.get(1).base);
-                        break;
-                    }
-                    case 2: {
-                        this.setMove((byte) 3, Intent.ATTACK_DEBUFF, this.damage.get(1).base);
-                        break;
-                    }
-                }
+        turnNum ++;
+        if (turnNum == 5) {
+            setMove((byte)5, Intent.BUFF);
+        }
+        else {
+            int rnd = AbstractDungeon.cardRandomRng.random(0, 3);
+            if (hasPower(EnemyWraithFormPower.POWER_ID)) {
+                rnd = 0;
+            }
+            switch (rnd) {
+                case 0:
+                    setMove((byte)1, Intent.ATTACK, this.damage.get(0).base, 2, true);
+                    break;
+                case 1:
+                    setMove((byte)2, Intent.ATTACK_DEFEND, this.damage.get(1).base);
+                    break;
+                case 2:
+                    setMove((byte)3, Intent.DEFEND);
+                    break;
+                case 3:
+                    setMove((byte)4, Intent.DEFEND_DEBUFF);
+                    break;
+            }
         }
     }
+
 
 }
