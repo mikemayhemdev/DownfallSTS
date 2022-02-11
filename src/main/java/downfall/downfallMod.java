@@ -97,6 +97,7 @@ import downfall.events.shrines_evil.PurificationShrineEvil;
 import downfall.events.shrines_evil.TransmogrifierEvil;
 import downfall.events.shrines_evil.UpgradeShrineEvil;
 import downfall.monsters.*;
+import downfall.monsters.gauntletbosses.*;
 import downfall.patches.DailyModeEvilPatch;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.RewardItemTypeEnumPatch;
@@ -1135,6 +1136,112 @@ public class downfallMod implements
                 new AbstractMonster[]{
                         new LooterAlt(-200.0F, 15.0F),
                         new MuggerAlt(80.0F, 0.0F)
+                }));
+
+        float x1 = 200F;
+        float x2 = -100F;
+        float x3 = -400F;
+        float y1 = 0F;
+        float y2 = -20F;
+        float y3 = 10F;
+
+        BaseMod.addMonster(makeID("Gauntlet1"), "Gauntlet", () -> new MonsterGroup(
+                new AbstractMonster[]{
+                     //   new Ironclad(),
+                     //   new Silent(),
+                        new Defect(x1, y1),
+                        new Watcher(x2, y2),
+                        new Hermit(x3, y3),
+                }));
+
+        BaseMod.addMonster(makeID("Gauntlet2"), "Gauntlet", () -> new MonsterGroup(
+                new AbstractMonster[]{
+                     //   new Ironclad(),
+                        new Silent(x1, y1),
+                     //   new Defect(),
+                        new Watcher(x2, y2),
+                        new Hermit(x3, y3),
+                }));
+
+        BaseMod.addMonster(makeID("Gauntlet3"), "Gauntlet", () -> new MonsterGroup(
+                new AbstractMonster[]{
+                    //    new Ironclad(),
+                        new Silent(x1, y1),
+                        new Defect(x2, y2),
+                     //   new Watcher(),
+                        new Hermit(x3, y3),
+                }));
+
+        BaseMod.addMonster(makeID("Gauntlet4"), "Gauntlet", () -> new MonsterGroup(
+                new AbstractMonster[]{
+                        //    new Ironclad(),
+                        new Silent(x1, y1),
+                        new Defect(x2, y2),
+                           new Watcher(x3, y3),
+                        //new Hermit(),
+                }));
+
+        BaseMod.addMonster(makeID("Gauntlet5"), "Gauntlet", () -> new MonsterGroup(
+                new AbstractMonster[]{
+                        //    new Ironclad(),
+                        new Silent(x1, y1),
+                        new Defect(x2, y2),
+                        new Watcher(x3, y3),
+                        //new Hermit(),
+                }));
+
+        BaseMod.addMonster(makeID("Gauntlet6"), "Gauntlet", () -> new MonsterGroup(
+                new AbstractMonster[]{
+                        new Ironclad(x1, y1),
+                        //new Silent(),
+                        //new Defect(),
+                        new Watcher(x2, y2),
+                        new Hermit(x3, y3),
+                }));
+
+        BaseMod.addMonster(makeID("Gauntlet7"), "Gauntlet", () -> new MonsterGroup(
+                new AbstractMonster[]{
+                        new Ironclad(x1, y1),
+                        //new Silent(),
+                        new Defect(x2, y2),
+                        new Watcher(x3, y3),
+                        //new Hermit(),
+                }));
+
+        BaseMod.addMonster(makeID("Gauntlet8"), "Gauntlet", () -> new MonsterGroup(
+                new AbstractMonster[]{
+                        new Ironclad(x1, y1),
+                        //new Silent(),
+                        new Defect(x2, y2),
+                        new Watcher(x3, y3),
+                        //new Hermit(),
+                }));
+
+        BaseMod.addMonster(makeID("Gauntlet9"), "Gauntlet", () -> new MonsterGroup(
+                new AbstractMonster[]{
+                        new Ironclad(x1, y1),
+                        new Silent(x2, y2),
+                        //new Defect(),
+                        //new Watcher(),
+                        new Hermit(x3, y3),
+                }));
+
+        BaseMod.addMonster(makeID("Gauntlet10"), "Gauntlet", () -> new MonsterGroup(
+                new AbstractMonster[]{
+                        new Ironclad(x1, y1),
+                        new Silent(x2, y2),
+                        //new Defect(),
+                        new Watcher(x3, y3),
+                        //new Hermit(),
+                }));
+
+        BaseMod.addMonster(makeID("Gauntlet11"), "Gauntlet", () -> new MonsterGroup(
+                new AbstractMonster[]{
+                        new Ironclad(x1, y1),
+                        new Silent(x2, y2),
+                        new Defect(x3, y3),
+                        //new Watcher(),
+                        //new Hermit(),
                 }));
 
         BaseMod.addMonster(CharBossIronclad.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()}));
