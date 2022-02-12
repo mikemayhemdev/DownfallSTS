@@ -220,5 +220,12 @@
       "이번 턴에 ",
       " 번까지 사용하는 #y타격 카드를 2번 사용합니다."
     ]
+  },
+  "champ:LastStandPower": {
+    "NAME": "Last Stand",
+    "DESCRIPTIONS": [
+      "Once you get below 50% Hp, remove all debuffs and gain #b",
+      " Strength."
+    ]
   }
 }
