@@ -13,7 +13,7 @@ public class SoulSteal extends AbstractHexaCard {
 
     public SoulSteal() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseBurn = burn = 5;
+        baseBurn = burn = 4;
         exhaust = true;
     }
 
@@ -25,10 +25,8 @@ public class SoulSteal extends AbstractHexaCard {
 
     public void upgrade() {
         if (!upgraded) {
-            exhaust = false;
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBurn(4);
         }
     }
 }

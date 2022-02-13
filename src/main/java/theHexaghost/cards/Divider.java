@@ -19,14 +19,9 @@ public class Divider extends AbstractHexaCard {
 
     public final static String ID = makeID("Divider");
 
-    //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
-
-    private static final int DAMAGE = 4;
-    private static final int UPG_DAMAGE = 2;
-
     public Divider() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseDamage = 4;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
@@ -35,6 +30,7 @@ public class Divider extends AbstractHexaCard {
             @Override
             public void update() {
                 isDone = true;
+                dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
                 for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
                     if (gf.charged) {
                         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
@@ -47,7 +43,7 @@ public class Divider extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPG_DAMAGE);
+            upgradeDamage(2);
         }
     }
 }

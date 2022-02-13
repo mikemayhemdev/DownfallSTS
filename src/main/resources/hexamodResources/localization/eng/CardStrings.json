@@ -81,8 +81,8 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Worthy Sacrifice",
-    "DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand.",
-    "UPGRADE_DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand. NL It costs 1 less.",
+    "DESCRIPTION": "Exhaust a card. NL If it was Attack or Skill, add a random card of the opposite type into your hand.",
+    "UPGRADE_DESCRIPTION": "Exhaust a card. NL If it was Attack or Skill, add a random card of the opposite type into your hand. NL It costs 1 less.",
     "EXTENDED_DESCRIPTION": [
       "to Exhaust for Worthy Sacrifice."
     ]
@@ -252,7 +252,7 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Rain of Embers",
-    "DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn to a random enemy X times. NL If X is 3 or more, apply 1 Weak and Vulnerable to ALL enemies.",
+    "DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn X times. NL If X is 3 or more, apply 2 Weak.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn to a random enemy X times. NL If X is 3 or more, apply 2 Weak and Vulnerable to ALL enemies."
   },
   "hexamod:VolcanoVisage": {
@@ -299,7 +299,7 @@
   },
   "hexamod:Again": {
     "NAME": "Again!",
-    "DESCRIPTION": "hexamod:Ignite the current Ghostflame. NL Do not hexamod:Advance at the end of this turn."
+    "DESCRIPTION": "hexamod:Ignite the current Ghostflame, then hexamod:Extinguish it."
   },
   "hexamod:RetreatToShadows": {
     "NAME": "Incorporeal",
@@ -369,8 +369,8 @@
   },
   "hexamod:Floatwork": {
     "NAME": "Floatwork",
-    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Gain !M! Dexterity.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Ethereal. hexamod:Afterlife. NL Gain !M! Dexterity."
+    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Gain !M! Plated Armor.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Ethereal. hexamod:Afterlife. NL Gain !M! Plated Armor."
   },
   "hexamod:Premonition": {
     "NAME": "Premonition",
@@ -381,7 +381,7 @@
   },
   "hexamod:Divider": {
     "NAME": "Divider",
-    "DESCRIPTION": "Deal !D! damage for each hexamod:Ignited Ghostflame."
+    "DESCRIPTION": "Deal !D! damage. NL Repeat for each hexamod:Ignited Ghostflame."
   },
   "hexamod:StrikeFromBeyond": {
     "NAME": "Strike From Beyond",
