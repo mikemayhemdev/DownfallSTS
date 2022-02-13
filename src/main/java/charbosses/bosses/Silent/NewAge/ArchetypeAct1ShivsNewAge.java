@@ -7,10 +7,13 @@ import charbosses.cards.colorless.EnShiv;
 import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnDecay;
 import charbosses.cards.green.*;
+import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
 import charbosses.powers.bossmechanicpowers.SilentShivTimeEaterPower;
+import charbosses.powers.general.PoisonProtectionPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.green.DeadlyPoison;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
@@ -29,7 +32,9 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
     public void addedPreBattle() {
         super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SilentShivTimeEaterPower(p)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PoisonProtectionPower(p)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, new SilentPoisonPower(AbstractCharBoss.boss)));
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SilentShivTimeEaterPower(p)));
     }
 
     public void initialize() {
@@ -37,14 +42,8 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
         /////   RELICS   /////
 
         addRelic(new CBR_NeowsBlessing());
-        // addRelic(new CBR_BagOfPreparation());
-        addRelic(new CBR_Lantern());
-        //addRelic(new CBR_CaptainsWheel());
-        addRelic(new CBR_Shuriken());
-        // addRelic(new CBR_DreamCatcher());
-        // addRelic(new CBR_Cleric()); // Cleric to remove +1 Strike
-        // addRelic(new CBR_UpgradeShrine()); // To upgrade Infinite Blades
-        // addRelic(new CBR_WeMeetAgain());
+        addRelic(new CBR_TwistedFunnel());
+        addRelic(new CBR_HornCleat());
 
     }
 
@@ -56,31 +55,30 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
             switch (turn) {
                 case 0:
                     //Turn 1
-                    addToList(cardsList, new EnLegSweep());
-                    addToList(cardsList, new EnDodgeAndRoll());
-                    addToList(cardsList, new EnClumsy());  //Removed
+                    addToList(cardsList, new EnCripplingCloud()); //Removed
+                    addToList(cardsList, new EnSurvivor());
+                    addToList(cardsList, new EnBurst());
                     turn++;
                     break;
                 case 1:
                     //Turn 2
-                    addToList(cardsList, new EnCloakAndDagger());
-                    addToList(cardsList, new EnDefendGreen());
-                    addToList(cardsList, new EnDefendGreen());  //Not played here
+                    addToList(cardsList, new EnPoisonedStab());
+                    addToList(cardsList, new EnDodgeAndRoll());
+                    addToList(cardsList, new EnStrikeGreen());
                     turn++;
                     break;
                 case 2:
                     //Turn 3
-                    addToList(cardsList, new EnBladeDance(), extraUpgrades);
+                    addToList(cardsList, new EnBane(), extraUpgrades);
                     addToList(cardsList, new EnDefendGreen());
-                    addToList(cardsList, new EnDecay());
+                    addToList(cardsList, new EnDeflect());
                     turn++;
                     break;
                 case 3:
                     //Turn 4
                     addToList(cardsList, new EnFootwork()); //Removed
-//                    addToList(cardsList, new EnInfiniteBlades()); //Removed
-                    addToList(cardsList, new EnPiercingWail());
-                    addToList(cardsList, new EnBurst());  //Not played here
+                    addToList(cardsList, new EnNoxiousFumes()); //Removed
+                    addToList(cardsList, new EnDeadlyPoison());
                     turn = 0;
                     looped = true;
                     break;
@@ -90,26 +88,26 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
 
             switch (turn) {
                 case 0:
+                    addToList(cardsList, new EnDeadlyPoison());
+                    addToList(cardsList, new EnStrikeGreen());
+                    addToList(cardsList, new EnSurvivor());
+                    turn++;
+                    break;
+                case 1:
                     addToList(cardsList, new EnBurst());
-                    addToList(cardsList, new EnCloakAndDagger());
-                    AbstractBossCard c = new EnCloakAndDagger();
+                    addToList(cardsList, new EnDodgeAndRoll());
+                    AbstractBossCard c = new EnDodgeAndRoll();
                     c.cost = 0;
                     c.freeToPlayOnce = true;
                     c.modifyCostForCombat(-1);
                     addToList(cardsList, c);
-                    addToList(cardsList, new EnDodgeAndRoll());
-                    turn++;
-                    break;
-                case 1:
-                    addToList(cardsList, new EnLegSweep());
-                    addToList(cardsList, new EnDecay());
-                    addToList(cardsList, new EnStrikeGreen());  //Not played here
+                    addToList(cardsList, new EnDeflect());
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnBladeDance(), extraUpgrades);
+                    addToList(cardsList, new EnBane());
+                    addToList(cardsList, new EnPoisonedStab());
                     addToList(cardsList, new EnDefendGreen());
-                    addToList(cardsList, new EnDefendGreen());  //Not played here
                     turn = 0;
                     break;
             }
@@ -120,6 +118,6 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_OrnamentalFan());
+        addRelic(new CBR_Lantern());
     }
 }

@@ -14,6 +14,8 @@ import charbosses.actions.util.DelayedActionAction;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
+import charbosses.cards.green.EnBladeDance;
+import charbosses.cards.green.EnCloakAndDagger;
 import charbosses.cards.red.EnBodySlam;
 import charbosses.cards.red.EnSecondWind;
 import charbosses.core.EnemyEnergyManager;
@@ -464,7 +466,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 //Shuriken Checks for Act 1 Silent
                 if (hasShuriken) {
                     SlimeboundMod.logger.info("has shuriken");
-                    if (c.type == AbstractCard.CardType.ATTACK) {
+                    AbstractBossCard c3 = (AbstractBossCard) hand.group.get(i);
+                    if (c.type == AbstractCard.CardType.ATTACK || c3 instanceof EnCloakAndDagger) {
                         SlimeboundMod.logger.info(c.name + " is an attack.");
                         attackCount++;
                         if (attackCount == 3) {
@@ -475,6 +478,14 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                                 c2.manualCustomDamageModifier += 1;
                             }
                             attackCount = 0;
+                        }
+                    }
+                    if (c3 instanceof EnBladeDance) {
+                        SlimeboundMod.logger.info(c.name + " procs Shuriken.");
+                        for (int j = i + 1; j < hand.size(); j++) {
+                            AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
+                            SlimeboundMod.logger.info(c2.name + " is gaining damage.");
+                            c2.manualCustomDamageModifier += 1;
                         }
                     }
                 }

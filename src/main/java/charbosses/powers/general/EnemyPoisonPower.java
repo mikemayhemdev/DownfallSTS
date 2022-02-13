@@ -58,13 +58,13 @@ public class EnemyPoisonPower extends AbstractPower {
         if (isPlayer) {
             if (AbstractDungeon.getCurrRoom().phase == RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
 
-                int remainingPoison = amount;
-                while (remainingPoison > 0 && EnergyPanel.totalCount > 0){
-                       remainingPoison -= 10;
-                       AbstractDungeon.player.energy.use(1);
-                       stackPower(-10);
-                    AbstractDungeon.player.getPower(PoisonProtectionPower.POWER_ID).flashWithoutSound();
-                }
+//                int remainingPoison = amount;
+//                while (remainingPoison > 0 && EnergyPanel.totalCount > 0){
+//                       remainingPoison -= 10;
+//                       AbstractDungeon.player.energy.use(1);
+//                       stackPower(-10);
+//                    AbstractDungeon.player.getPower(PoisonProtectionPower.POWER_ID).flashWithoutSound();
+//                }
                 if (amount > 0) {
                     this.flashWithoutSound();
                     this.addToBot(new PoisonLoseHpAction(this.owner, this.source, this.amount, AttackEffect.POISON));

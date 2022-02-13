@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class EnFinisher extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Finisher";
@@ -30,19 +31,33 @@ public class EnFinisher extends AbstractBossCard {
         this.baseDamage = 6;
         this.isMultiDamage = true;
         this.magicNumber = 0;
+        intentMultiAmt = this.magicNumber;
     }
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new EnemyDamagePerAttackPlayedAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        this.rawDescription = EnFinisher.cardStrings.DESCRIPTION;
-        this.initializeDescription();
     }
 
     @Override
     public void applyPowers() {
         super.applyPowers();
         int count = this.magicNumber;
+
+        Iterator var2 = AbstractCharBoss.boss.hand.group.iterator();
+
+        while(var2.hasNext()) {
+            AbstractCard c = (AbstractCard)var2.next();
+            if (c.type == CardType.ATTACK && !(c instanceof EnFinisher) || c instanceof EnCloakAndDagger)
+                ++count;
+            if (c instanceof EnBladeDance)
+                count += 3;
+        }
+
+        this.magicNumber = count;
+        this.intentMultiAmt = this.magicNumber;
+        this.lockIntentValues = true;
+
 
         this.rawDescription = EnFinisher.cardStrings.DESCRIPTION;
         this.rawDescription = this.rawDescription + EnFinisher.cardStrings.EXTENDED_DESCRIPTION[0] + count;
@@ -52,8 +67,8 @@ public class EnFinisher extends AbstractBossCard {
 
         } else {
             this.rawDescription += EnFinisher.cardStrings.EXTENDED_DESCRIPTION[2];
-
         }
+
         this.initializeDescription();
     }
 

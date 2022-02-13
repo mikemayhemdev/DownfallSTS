@@ -3,6 +3,7 @@ package charbosses.bosses.Silent.NewAge;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Silent.ArchetypeBaseSilent;
 import charbosses.cards.AbstractBossCard;
+import charbosses.cards.colorless.EnMadness;
 import charbosses.cards.colorless.EnSadisticNature;
 import charbosses.cards.colorless.EnShiv;
 import charbosses.cards.curses.EnClumsy;
@@ -14,6 +15,7 @@ import charbosses.powers.general.PoisonProtectionPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.green.Dash;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
@@ -32,8 +34,6 @@ public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
     public void addedPreBattle() {
         super.addedPreBattle();
         AbstractCreature p = AbstractDungeon.player;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PoisonProtectionPower(p)));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, new SilentPoisonPower(AbstractCharBoss.boss)));
 
     }
 
@@ -42,16 +42,10 @@ public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
         /////   RELICS   /////
 
         addRelic(new CBR_NeowsBlessing());
-        // addRelic(new CBR_BagOfPreparation());
-        //addRelic(new CBR_Lantern());
-        addRelic(new CBR_Lantern());
         addRelic(new CBR_FusionHammer());
-        addRelic(new CBR_SneckoSkull());
-        addRelic(new CBR_TwistedFunnel());
-        // addRelic(new CBR_DreamCatcher());
-        // addRelic(new CBR_Cleric()); // Cleric to remove +1 Strike
-        // addRelic(new CBR_UpgradeShrine()); // To upgrade Infinite Blades
-        // addRelic(new CBR_WeMeetAgain());
+        addRelic(new CBR_Shuriken());
+        addRelic(new CBR_Kunai());
+        addRelic(new CBR_OrnamentalFan());
 
     }
 
@@ -63,41 +57,41 @@ public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
             switch (turn) {
                 case 0:
                     //Turn 1
-                    addToList(cardsList, new EnNoxiousFumes());
-                    addToList(cardsList, new EnDeadlyPoison(), true);
-                    addToList(cardsList, new EnCripplingCloud());
+                    addToList(cardsList, new EnPredator());
+                    addToList(cardsList, new EnFlyingKnee());
+                    addToList(cardsList, new EnBurst());
                     turn++;
                     break;
                 case 1:
                     //Turn 2
-                    addToList(cardsList, new EnDeflect(), true);
+                    addToList(cardsList, new EnFlechettes());
+                    addToList(cardsList, new EnLegSweep());
+                    addToList(cardsList, new EnCloakAndDagger());
                     addToList(cardsList, new EnNeutralize());
-                    addToList(cardsList, new EnFootwork(), true);  //Removed
+                    addToList(cardsList, new EnBlur());  //Removed
+
                     turn++;
                     break;
                 case 2:
                     //Turn 3
-                    addToList(cardsList, new EnFootwork());
-                    addToList(cardsList, new EnBurst());
-                    addToList(cardsList, new EnDodgeAndRoll());
-                    AbstractBossCard c = new EnDodgeAndRoll();
-                    c.freeToPlayOnce = true;
-                    c.costForTurn = 0;
-                    addToList(cardsList, c);
+                    addToList(cardsList, new EnEndlessAgony());
+                    addToList(cardsList, new EnEndlessAgony());
+                    addToList(cardsList, new EnFinisher());
+                    addToList(cardsList, new EnDefendGreen());
                     turn++;
                     break;
                 case 3:
                     //Turn 4
-                    addToList(cardsList, new EnBouncingFlask(), extraUpgrades);
-                    addToList(cardsList, new EnCatalyst());
-                    addToList(cardsList, new EnRegret());
+                    addToList(cardsList, new EnBladeDance());
+                    addToList(cardsList, new EnGlassKnife());
+                    addToList(cardsList, new EnDaggerSpray());
                     turn++;
                     break;
                 case 4:
                     //Turn 4
-                    addToList(cardsList, new EnDeadlyPoison());
-                    addToList(cardsList, new EnPoisonedStab());
-                    addToList(cardsList, new EnNoxiousFumes());
+                    addToList(cardsList, new EnInfiniteBlades());
+                    addToList(cardsList, new EnAfterImage());
+                    addToList(cardsList, new EnDash());
                     turn = 0;
                     looped = true;
                     break;
@@ -108,27 +102,39 @@ public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
             switch (turn) {
                 case 0:
                     //Turn 4
-                    addToList(cardsList, new EnDeadlyPoison());
-                    addToList(cardsList, new EnPoisonedStab());
-                    addToList(cardsList, new EnDeflect(), true);
-                    turn++;
-                    break;
-                case 1:
-                    //Turn 4
-                    addToList(cardsList, new EnDeadlyPoison(), true);
-                    addToList(cardsList, new EnNeutralize());
-                    addToList(cardsList, new EnDodgeAndRoll());
-                    turn++;
-                    break;
-                case 2:
+                    addToList(cardsList, new EnShiv());
                     addToList(cardsList, new EnBurst());
-                    addToList(cardsList, new EnBouncingFlask(), extraUpgrades);
-                    AbstractBossCard c = new EnBouncingFlask();
+                    addToList(cardsList, new EnCloakAndDagger());
+                    AbstractBossCard c = new EnCloakAndDagger();
                     c.freeToPlayOnce = true;
                     c.costForTurn = 0;
                     if (extraUpgrades) c.upgrade();
                     addToList(cardsList, c);
-                    addToList(cardsList, new EnRegret());
+                    addToList(cardsList, new EnGlassKnife());
+                    turn++;
+                    break;
+                case 1:
+                    //Turn 4
+                    addToList(cardsList, new EnShiv());
+                    addToList(cardsList, new EnPredator());
+                    addToList(cardsList, new EnDaggerSpray());
+                    addToList(cardsList, new EnDefendGreen());
+                    turn++;
+                    break;
+                case 2:
+                    addToList(cardsList, new EnShiv());
+                    addToList(cardsList, new EnFlyingKnee());
+                    addToList(cardsList, new EnFlechettes());
+                    addToList(cardsList, new EnFinisher());
+                    addToList(cardsList, new EnLegSweep());
+                    addToList(cardsList, new EnBlur());
+                    turn++;
+                    break;
+                case 3:
+                    addToList(cardsList, new EnShiv());
+                    addToList(cardsList, new EnDash());
+                    addToList(cardsList, new EnNeutralize());
+                    addToList(cardsList, new EnBladeDance());
                     turn = 0;
                     break;
             }
