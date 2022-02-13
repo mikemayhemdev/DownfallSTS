@@ -197,7 +197,7 @@
   },
   "hexamod:Incineration": {
     "NAME": "Incineration",
-    "DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn to a random enemy !M! times."
+    "DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn !M! times."
   },
   "hexamod:Firestarter": {
     "NAME": "Firestarter",
