@@ -1,7 +1,6 @@
 package charbosses.cards.hermit;
 
 import charbosses.cards.AbstractBossCard;
-import charbosses.powers.bossmechanicpowers.HermitConcentrateAdder;
 import charbosses.powers.bossmechanicpowers.HermitConcentrationPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -13,15 +12,16 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import hermit.cards.Headshot;
+import hermit.cards.ItchyTrigger;
 import hermit.characters.hermit;
 
-public class EnHeadshot extends AbstractBossCard {
-    public static final String ID = "downfall_Charboss:Headshot";
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(Headshot.ID);
+public class EnItchyTrigger extends AbstractBossCard {
+    public static final String ID = "downfall_Charboss:ItchyTrigger";
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ItchyTrigger.ID);
 
-    public EnHeadshot() {
-        super(ID, cardStrings.DESCRIPTION, "hermitResources/images/cards/headshot.png", 1, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
-        this.baseDamage = 8;
+    public EnItchyTrigger() {
+        super(ID, cardStrings.DESCRIPTION, "hermitResources/images/cards/itchy_trigger.png", 2, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
+        this.baseDamage = 12;
     }
 
     @Override
@@ -30,27 +30,15 @@ public class EnHeadshot extends AbstractBossCard {
     }
 
     @Override
-    public void calculateCardDamage(AbstractMonster mo) {
-        int oldBaseDamage = baseDamage;
-        AbstractPower p = this.owner.getPower(HermitConcentrationPower.POWER_ID);
-        if (p != null) {
-            baseDamage *= 2;
-        }
-        super.calculateCardDamage(mo);
-        baseDamage = oldBaseDamage;
-        if (this.damage != baseDamage) isDamageModified = true;
-    }
-
-    @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(3);
+            this.upgradeDamage(4);
         }
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new EnHeadshot();
+        return new EnItchyTrigger();
     }
 }

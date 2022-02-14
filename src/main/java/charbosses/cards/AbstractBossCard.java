@@ -932,6 +932,10 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     }
 
+    public void onSpecificTrigger() {
+
+    }
+
 
     static {
         TEXT = CardCrawlGame.languagePack.getUIString("AbstractMonster").TEXT;

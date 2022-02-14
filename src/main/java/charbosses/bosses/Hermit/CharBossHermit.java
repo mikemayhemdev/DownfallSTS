@@ -2,6 +2,7 @@ package charbosses.bosses.Hermit;
 
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.bosses.Hermit.NewAge.ArchetypeAct1SharpshooterNewAge;
 import charbosses.bosses.Watcher.NewAge.ArchetypeAct1RetainNewAge;
 import charbosses.bosses.Watcher.NewAge.ArchetypeAct2CalmNewAge;
 import charbosses.bosses.Watcher.NewAge.ArchetypeAct3DivinityNewAge;
@@ -57,16 +58,16 @@ public class CharBossHermit extends AbstractCharBoss {
         } else
             switch (AbstractDungeon.actNum) {
                 case 1:
-                    archetype = new ArchetypeAct1RetainNewAge();
+                    archetype = new ArchetypeAct1SharpshooterNewAge();
                     break;
                 case 2:
-                    archetype = new ArchetypeAct2CalmNewAge();
+                    archetype = new ArchetypeAct1SharpshooterNewAge();
                     break;
                 case 3:
-                    archetype = new ArchetypeAct3DivinityNewAge();
+                    archetype = new ArchetypeAct1SharpshooterNewAge();
                     break;
                 default:
-                    archetype = new ArchetypeAct1RetainNewAge();
+                    archetype = new ArchetypeAct1SharpshooterNewAge();
                     break;
             }
 
