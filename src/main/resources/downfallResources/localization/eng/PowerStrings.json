@@ -282,5 +282,11 @@
       "This character's next attack deals #b",
       " additional damage."
     ]
+  },
+  "downfall:HermitConcentratingPower": {
+    "NAME": "Deadly Focus",
+    "DESCRIPTIONS": [
+        "Hermit has Concentration, which adds special Dead On effects to his cards. Dealing 10 unblocked attack damage to the Hermit breaks his concentration, causing his cards to lose their Dead On effects."
+    ]
   }
 }
