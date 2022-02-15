@@ -15,12 +15,12 @@ import hermit.cards.Headshot;
 import hermit.cards.ItchyTrigger;
 import hermit.characters.hermit;
 
-public class EnItchyTrigger extends AbstractBossCard {
+public class EnItchyTrigger extends AbstractHermitBossCard {
     public static final String ID = "downfall_Charboss:ItchyTrigger";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ItchyTrigger.ID);
 
     public EnItchyTrigger() {
-        super(ID, cardStrings.DESCRIPTION, "hermitResources/images/cards/itchy_trigger.png", 2, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
+        super(ID, cardStrings.NAME, "hermitResources/images/cards/itchy_trigger.png", 2, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 12;
     }
 

@@ -11,15 +11,16 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import hermit.cards.Dive;
 import hermit.cards.GhostlyPresence;
 import hermit.characters.hermit;
 
-public class EnDive extends AbstractBossCard {
+public class EnDive extends AbstractHermitBossCard {
     public static final String ID = "downfall_Charboss:Dive";
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(GhostlyPresence.ID);
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(Dive.ID);
 
     public EnDive() {
-        super(ID, cardStrings.DESCRIPTION, "hermitResources/images/cards/dive.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND_BUFF);
+        super(ID, cardStrings.NAME, "hermitResources/images/cards/dive.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND_BUFF);
         this.baseBlock = 7;
         baseMagicNumber = magicNumber = 1;
     }
@@ -34,7 +35,7 @@ public class EnDive extends AbstractBossCard {
 
     @Override
     public void onSpecificTrigger() {
-        destroyIntent();
+        intentActive = false;
         this.intent = AbstractMonster.Intent.DEFEND;
         createIntent();
     }

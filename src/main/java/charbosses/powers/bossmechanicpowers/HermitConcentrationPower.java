@@ -7,13 +7,15 @@ package charbosses.powers.bossmechanicpowers;
 
 import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Watcher.CharBossWatcher;
+import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 
 public class HermitConcentrationPower extends AbstractBossMechanicPower {
-    public static final String POWER_ID = "downfall:HermitConcentrateAdder";
+    public static final String POWER_ID = "downfall:HermitConcentrationPower";
     private static final PowerStrings powerStrings;
     public static final String NAME;
     public static final String[] DESC;
@@ -42,13 +44,15 @@ public class HermitConcentrationPower extends AbstractBossMechanicPower {
         if (amount <= 0) {
             addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
             if (this.owner instanceof CharBossHermit) {
-
+                for (AbstractCard bc : ((CharBossHermit) this.owner).hand.group) {
+                    ((AbstractBossCard) bc).onSpecificTrigger();
+                }
             }
         }
     }
 
     public void updateDescription() {
-        this.description = DESC[0];
+        this.description = DESC[0] + amount + DESC[1];
     }
 
     static {

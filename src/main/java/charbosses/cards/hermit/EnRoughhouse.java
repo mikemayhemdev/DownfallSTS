@@ -12,33 +12,35 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
-import hermit.cards.GhostlyPresence;
-import hermit.cards.ItchyTrigger;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import hermit.cards.Headshot;
+import hermit.cards.Roughhouse;
 import hermit.characters.hermit;
 
-public class EnGhostlyPresence extends AbstractHermitBossCard {
-    public static final String ID = "downfall_Charboss:GhostlyPresence";
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(GhostlyPresence.ID);
+public class EnRoughhouse extends AbstractHermitBossCard {
+    public static final String ID = "downfall_Charboss:Roughhouse";
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(Roughhouse.ID);
 
-    public EnGhostlyPresence() {
-        super(ID, cardStrings.NAME, "hermitResources/images/cards/ghostly_presence.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND_DEBUFF);
-        this.baseBlock = 8;
-        baseMagicNumber = magicNumber = 1;
+    public EnRoughhouse() {
+        super(ID, cardStrings.NAME, "hermitResources/images/cards/roughhouse.png", 3, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.RARE, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_DEFEND);
+        this.baseDamage = 24;
+        this.baseBlock = 16;
+        modifyCostForCombat(-3);
     }
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        addToBot(new GainBlockAction(m, m, block));
+        this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         if (this.owner.hasPower(HermitConcentrationPower.POWER_ID)) {
-            addToBot(new ApplyPowerAction(p, m, new WeakPower(p, magicNumber, true), magicNumber));
+            addToBot(new GainBlockAction(m, m, block));
         }
+
     }
 
     @Override
     public void onSpecificTrigger() {
-        intentActive = false;
-        this.intent = AbstractMonster.Intent.DEFEND;
+        destroyIntent();
+        intent = AbstractMonster.Intent.ATTACK;
         createIntent();
     }
 
@@ -46,13 +48,14 @@ public class EnGhostlyPresence extends AbstractHermitBossCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBlock(3);
+            this.upgradeDamage(6);
+            upgradeBlock(4);
+
         }
     }
 
-
     @Override
     public AbstractCard makeCopy() {
-        return new EnGhostlyPresence();
+        return new EnRoughhouse();
     }
 }

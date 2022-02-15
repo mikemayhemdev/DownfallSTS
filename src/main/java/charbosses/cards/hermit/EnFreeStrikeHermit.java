@@ -6,21 +6,19 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.monsters.gauntletbosses.Hermit;
 import hermit.cards.Strike_Hermit;
 import hermit.characters.hermit;
 
-public class EnStrikeHermit extends AbstractHermitBossCard {
+public class EnFreeStrikeHermit extends AbstractHermitBossCard {
     public static final String ID = "downfall_Charboss:Strike_Hermit";
 
-    public EnStrikeHermit() {
+    public EnFreeStrikeHermit() {
         super(ID, Strike_Hermit.NAME, "hermitResources/images/cards/card_strike.png", 1, Strike_Hermit.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.BASIC, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 6;
         this.tags.add(CardTags.STRIKE);
         this.tags.add(CardTags.STARTER_STRIKE);
+        setCostForTurn(0);
     }
 
     @Override
@@ -37,7 +35,13 @@ public class EnStrikeHermit extends AbstractHermitBossCard {
     }
 
     @Override
+    public void onSpecificTrigger() {
+        setCostForTurn(cost);
+        bossDarken();
+    }
+
+    @Override
     public AbstractCard makeCopy() {
-        return new EnStrikeHermit();
+        return new EnFreeStrikeHermit();
     }
 }

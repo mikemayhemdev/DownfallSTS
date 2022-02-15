@@ -2,6 +2,7 @@ package hermit.util;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.Texture.TextureFilter;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
@@ -63,6 +64,10 @@ public class TextureLoader {
         }
     }
 
+    public static TextureAtlas.AtlasRegion getTextureAsAtlasRegion(String textureString) {
+        Texture texture = getTexture(textureString);
+        return ImageHelper.asAtlasRegion(texture);
+    }
 }
 
 

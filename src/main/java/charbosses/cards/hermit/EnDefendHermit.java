@@ -15,7 +15,7 @@ import hermit.cards.Headshot;
 import hermit.cards.Strike_Hermit;
 import hermit.characters.hermit;
 
-public class EnDefendHermit extends AbstractBossCard {
+public class EnDefendHermit extends AbstractHermitBossCard {
     public static final String ID = "downfall_Charboss:Defend_Hermit";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(Defend_Hermit.ID);
 

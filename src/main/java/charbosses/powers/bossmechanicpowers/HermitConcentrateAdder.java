@@ -6,6 +6,7 @@
 package charbosses.powers.bossmechanicpowers;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -32,7 +33,8 @@ public class HermitConcentrateAdder extends AbstractBossMechanicPower {
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        addToBot(new ApplyPowerAction(this.owner, this.owner, new HermitConcentrateAdder(this.owner), 1));
+        addToBot(new RemoveSpecificPowerAction(owner, owner, HermitConcentrationPower.POWER_ID));
+        addToBot(new ApplyPowerAction(this.owner, this.owner, new HermitConcentrationPower(this.owner), 10));
     }
 
     static {

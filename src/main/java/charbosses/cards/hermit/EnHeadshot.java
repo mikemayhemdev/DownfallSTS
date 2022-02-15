@@ -15,12 +15,12 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import hermit.cards.Headshot;
 import hermit.characters.hermit;
 
-public class EnHeadshot extends AbstractBossCard {
+public class EnHeadshot extends AbstractHermitBossCard {
     public static final String ID = "downfall_Charboss:Headshot";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(Headshot.ID);
 
     public EnHeadshot() {
-        super(ID, cardStrings.DESCRIPTION, "hermitResources/images/cards/headshot.png", 1, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
+        super(ID, cardStrings.NAME, "hermitResources/images/cards/headshot.png", 1, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 8;
     }
 
