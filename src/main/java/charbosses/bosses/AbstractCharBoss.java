@@ -14,6 +14,9 @@ import charbosses.actions.util.DelayedActionAction;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
+import charbosses.cards.hermit.EnDesperado;
+import charbosses.cards.hermit.EnHoleUp;
+import charbosses.cards.hermit.EnItchyTrigger;
 import charbosses.cards.red.EnBodySlam;
 import charbosses.cards.red.EnSecondWind;
 import charbosses.core.EnemyEnergyManager;
@@ -58,6 +61,7 @@ import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import hermit.cards.HoleUp;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;

@@ -1,5 +1,6 @@
 package charbosses.cards.hermit;
 
+import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -24,6 +25,14 @@ public class EnFreeStrikeHermit extends AbstractHermitBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), EnumPatch.HERMIT_GUN3));
+    }
+
+    @Override
+    public void onSpecificTrigger() {
+        setCostForTurn(this.cost);
+        if (AbstractCharBoss.boss.hand.group.indexOf(this) == 2) {
+            this.bossDarken();
+        }
     }
 
     @Override
