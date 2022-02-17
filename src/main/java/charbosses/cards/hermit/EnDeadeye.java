@@ -30,7 +30,7 @@ public class EnDeadeye extends AbstractHermitBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         addToBot(new ApplyPowerAction(m, m, new StrengthPower(m, magicNumber), magicNumber));
         if (exhaust && owner.chosenArchetype.actNum == 1) {
             owner.chosenArchetype.defaultToggle = true;

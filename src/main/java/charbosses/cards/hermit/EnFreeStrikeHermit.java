@@ -1,6 +1,5 @@
 package charbosses.cards.hermit;
 
-import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -9,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.cards.Strike_Hermit;
 import hermit.characters.hermit;
+import hermit.patches.EnumPatch;
 
 public class EnFreeStrikeHermit extends AbstractHermitBossCard {
     public static final String ID = "downfall_Charboss:Strike_Hermit";
@@ -23,7 +23,7 @@ public class EnFreeStrikeHermit extends AbstractHermitBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), EnumPatch.HERMIT_GUN3));
     }
 
     @Override
@@ -32,12 +32,6 @@ public class EnFreeStrikeHermit extends AbstractHermitBossCard {
             this.upgradeName();
             this.upgradeDamage(3);
         }
-    }
-
-    @Override
-    public void onSpecificTrigger() {
-        setCostForTurn(cost);
-        bossDarken();
     }
 
     @Override

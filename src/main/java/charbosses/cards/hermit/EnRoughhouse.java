@@ -30,7 +30,7 @@ public class EnRoughhouse extends AbstractHermitBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         if (this.owner.hasPower(HermitConcentrationPower.POWER_ID)) {
             addToBot(new GainBlockAction(m, m, block));
         }

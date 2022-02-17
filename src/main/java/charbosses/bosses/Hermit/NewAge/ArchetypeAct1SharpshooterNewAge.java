@@ -2,15 +2,10 @@ package charbosses.bosses.Hermit.NewAge;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
-import charbosses.cards.colorless.EnSwiftStrike;
-import charbosses.cards.curses.EnClumsy;
-import charbosses.cards.curses.EnHaunted;
 import charbosses.cards.curses.EnInjury;
 import charbosses.cards.hermit.*;
-import charbosses.cards.red.*;
 import charbosses.powers.bossmechanicpowers.HermitConcentrateAdder;
 import charbosses.powers.bossmechanicpowers.HermitConcentrationPower;
-import charbosses.powers.bossmechanicpowers.IroncladMushroomPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -41,6 +36,9 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
 
         /////   RELICS   /////
         addRelic(new CBR_NeowsBlessing());
+        addRelic(new CBR_Abacus());
+        addRelic(new CBR_OddlySmoothStone());
+        addRelic(new CBR_Calipers());
     }
 
     @Override
@@ -59,7 +57,7 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
                     break;
                 case 1:
                     addToList(cardsList, new EnItchyTrigger());
-                    addToList(cardsList, new EnFreeStrikeHermit());
+                    addToList(cardsList, new EnItchyTriggerStrikeHermit());
                     addToList(cardsList, new EnInjury());
                     turn++;
                     break;
@@ -93,7 +91,7 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
                     break;
                 case 1:
                     addToList(cardsList, new EnItchyTrigger());
-                    addToList(cardsList, new EnFreeStrikeHermit());
+                    addToList(cardsList, new EnItchyTriggerStrikeHermit());
                     addToList(cardsList, new EnInjury());
                     turn++;
                     break;
@@ -126,6 +124,6 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_DuvuDoll(4));
+        addRelic(new CBR_Orichalcum());
     }
 }

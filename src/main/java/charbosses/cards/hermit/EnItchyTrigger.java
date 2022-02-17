@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import hermit.cards.Headshot;
 import hermit.cards.ItchyTrigger;
 import hermit.characters.hermit;
+import hermit.patches.EnumPatch;
 
 public class EnItchyTrigger extends AbstractHermitBossCard {
     public static final String ID = "downfall_Charboss:ItchyTrigger";
@@ -26,7 +27,7 @@ public class EnItchyTrigger extends AbstractHermitBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), EnumPatch.HERMIT_GUN2));
     }
 
     @Override

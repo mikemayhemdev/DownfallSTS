@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import hermit.cards.Headshot;
 import hermit.characters.hermit;
+import hermit.patches.EnumPatch;
 
 public class EnHeadshot extends AbstractHermitBossCard {
     public static final String ID = "downfall_Charboss:Headshot";
@@ -26,7 +27,7 @@ public class EnHeadshot extends AbstractHermitBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), EnumPatch.HERMIT_GUN2));
     }
 
     @Override
