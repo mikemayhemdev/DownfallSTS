@@ -295,5 +295,11 @@
       "Hermit's cards currently get bonuses. Deal #b",
       " more damage to break his Concentration."
     ]
+  },
+  "downfall:HermitWheelOfFortune": {
+    "NAME": "Wheel of Fortune",
+    "DESCRIPTIONS": [
+      "Whenever you strike Hermit with an attack, its leftmost attack is discarded and it draws a card."
+    ]
   }
 }

@@ -7,10 +7,12 @@ import charbosses.cards.colorless.EnHandOfGreed;
 import charbosses.cards.curses.EnInjury;
 import charbosses.cards.curses.EnNecronomicurse;
 import charbosses.cards.hermit.*;
+import charbosses.powers.bossmechanicpowers.HermitWheelOfFortune;
 import charbosses.relics.CBR_NeowsBlessing;
 import charbosses.relics.CBR_PenNib;
 import charbosses.relics.CBR_PhilosopherStone;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -36,7 +38,7 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         super.addedPreBattle();
 
         AbstractCreature p = AbstractCharBoss.boss;
-
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HermitWheelOfFortune(p), 1));
     }
 
     public boolean usedGestalt = false;
@@ -120,11 +122,11 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
     }
 
     public void reInitializeHand() {
-        AbstractCharBoss.boss.hand.removeCard(AbstractCharBoss.boss.hand.getTopCard());
+        AbstractCharBoss.boss.hand.removeCard(AbstractCharBoss.boss.hand.getBottomCard());
         if (mockDeck.isEmpty()) {
             reshuffle();
         }
-        AbstractCharBoss.boss.hand.addToBottom(mockDeck.get(0));
+        AbstractCharBoss.boss.hand.addToTop(mockDeck.get(0));
         AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
             @Override
             public void update() {
