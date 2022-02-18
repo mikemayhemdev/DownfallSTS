@@ -27,7 +27,7 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
     public ArchetypeAct2WheelOfFateNewAge() {
         super("HERMIT_WHEEL_ARCHETYPE", "Wheel of Fortune");
 
-        maxHPModifier += 88;
+        maxHPModifier += 160;
         actNum = 1;
     }
 
