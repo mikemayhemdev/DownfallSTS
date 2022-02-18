@@ -4,6 +4,7 @@ import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Hermit.NewAge.ArchetypeAct1SharpshooterNewAge;
 import charbosses.bosses.Hermit.NewAge.ArchetypeAct2WheelOfFateNewAge;
+import charbosses.bosses.Hermit.NewAge.ArchetypeAct3DoomsdayNewAge;
 import charbosses.bosses.Watcher.NewAge.ArchetypeAct1RetainNewAge;
 import charbosses.bosses.Watcher.NewAge.ArchetypeAct2CalmNewAge;
 import charbosses.bosses.Watcher.NewAge.ArchetypeAct3DivinityNewAge;
@@ -59,14 +60,13 @@ public class CharBossHermit extends AbstractCharBoss {
         } else
             switch (AbstractDungeon.actNum) {
                 case 1:
-                    //archetype = new ArchetypeAct1SharpshooterNewAge();
-                    archetype = new ArchetypeAct2WheelOfFateNewAge(); // For testing
+                    archetype = new ArchetypeAct1SharpshooterNewAge();
                     break;
                 case 2:
                     archetype = new ArchetypeAct2WheelOfFateNewAge();
                     break;
                 case 3:
-                    archetype = new ArchetypeAct1SharpshooterNewAge();
+                    archetype = new ArchetypeAct3DoomsdayNewAge();
                     break;
                 default:
                     archetype = new ArchetypeAct1SharpshooterNewAge();

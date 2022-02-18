@@ -301,5 +301,11 @@
     "DESCRIPTIONS": [
       "Whenever you strike Hermit with an attack, its leftmost attack is discarded and it draws a card."
     ]
+  },
+  "downfall:HermitDoomsday": {
+    "NAME": "Doomsday",
+    "DESCRIPTIONS": [
+      "Whenever you #yExhaust a card, add an #rImpending #rDoom into your hand."
+    ]
   }
 }

@@ -2,15 +2,20 @@ package charbosses.bosses.Hermit.NewAge;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
+import charbosses.cards.curses.EnClumsy;
+import charbosses.cards.curses.EnDoubt;
 import charbosses.cards.curses.EnInjury;
+import charbosses.cards.curses.EnPain;
 import charbosses.cards.hermit.*;
 import charbosses.powers.bossmechanicpowers.HermitConcentrateAdder;
 import charbosses.powers.bossmechanicpowers.HermitConcentrationPower;
+import charbosses.powers.bossmechanicpowers.HermitDoomsday;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import hermit.cards.Purgatory;
 
 import java.util.ArrayList;
 
@@ -27,7 +32,7 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
     public void addedPreBattle() {
         super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
-
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HermitDoomsday(p), 1));
     }
 
 
@@ -49,33 +54,41 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
         if (!looped) {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnHeadshot());
+                    addToList(cardsList, new EnCovet());
+                    addToList(cardsList, new EnPain());
+                    addToList(cardsList, new EnSpite());
+                    addToList(cardsList, new EnClumsy());
                     addToList(cardsList, new EnDefendHermit());
-                    addToList(cardsList, new EnInjury());
                     turn++;
                     break;
                 case 1:
-                    addToList(cardsList, new EnItchyTrigger());
-                    addToList(cardsList, new EnItchyTriggerStrikeHermit());
-                    addToList(cardsList, new EnInjury());
+                    addToList(cardsList, new EnMisfire());
+                    addToList(cardsList, new EnManifest());
+                    addToList(cardsList, new EnGlare());
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnGhostlyPresence());
-                    addToList(cardsList, new EnDive());
-                    addToList(cardsList, new EnDefendHermit());
+                    addToList(cardsList, new EnMisfire());
+                    addToList(cardsList, new EnStrikeHermit());
+                    addToList(cardsList, new EnGlare());
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnLoneWolf());
-                    addToList(cardsList, new EnRoughhouse());
-                    addToList(cardsList, new EnInjury());
+                    addToList(cardsList, new EnSprayNPray());
+                    addToList(cardsList, new EnLowProfile());
+                    addToList(cardsList, new EnGlare());
                     turn++;
                     break;
                 case 4:
-                    addToList(cardsList, new EnDive());
-                    addToList(cardsList, new EnDeadeye());
-                    addToList(cardsList, new EnStrikeHermit());
+                    addToList(cardsList, new EnClumsy());
+                    addToList(cardsList, new EnClumsy());
+                    addToList(cardsList, new EnDoubt());
+                    turn++;
+                    break;
+                case 5:
+                    addToList(cardsList, new EnPurgatory());
+                    addToList(cardsList, new EnClumsy()); // Malice later
+                    addToList(cardsList, new EnClumsy());
                     turn=0;
                     looped=true;
                     break;
@@ -83,37 +96,37 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
         } else {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnHeadshot());
-                    addToList(cardsList, new EnDefendHermit());
-                    addToList(cardsList, new EnInjury());
+                    addToList(cardsList, new EnMisfire());
+                    addToList(cardsList, new EnDefendHermit()); // Grudge later
+                    addToList(cardsList, new EnGlare());
                     turn++;
                     break;
                 case 1:
-                    addToList(cardsList, new EnItchyTrigger());
-                    addToList(cardsList, new EnItchyTriggerStrikeHermit());
-                    addToList(cardsList, new EnInjury());
-                    turn++;
-                    break;
-                case 2:
-                    addToList(cardsList, new EnGhostlyPresence());
-                    addToList(cardsList, new EnDive());
+                    addToList(cardsList, new EnMisfire());
+                    addToList(cardsList, new EnSpite());
+                    addToList(cardsList, new EnClumsy());
+                    addToList(cardsList, new EnDoubt());
                     addToList(cardsList, new EnDefendHermit());
                     turn++;
                     break;
+                case 2:
+                    addToList(cardsList, new EnSprayNPray());
+                    addToList(cardsList, new EnLowProfile());
+                    addToList(cardsList, new EnClumsy());
+                    turn++;
+                    break;
                 case 3:
-                    addToList(cardsList, new EnInjury());
-                    addToList(cardsList, new EnRoughhouse());
-                    addToList(cardsList, new EnInjury());
+                    addToList(cardsList, new EnCovet());
+                    addToList(cardsList, new EnDoubt());
+                    addToList(cardsList, new EnGlare());
+                    addToList(cardsList, new EnGlare());
+                    addToList(cardsList, new EnManifest());
                     turn++;
                     break;
                 case 4:
-                    addToList(cardsList, new EnDive());
-                    if (defaultToggle) {
-                        addToList(cardsList, new EnInjury());
-                    }
-                    else
-                        addToList(cardsList, new EnDeadeye());
+                    addToList(cardsList, new EnPurgatory());
                     addToList(cardsList, new EnStrikeHermit());
+                    addToList(cardsList, new EnCovet()); // Grudge later
                     turn=0;
                     break;
             }
