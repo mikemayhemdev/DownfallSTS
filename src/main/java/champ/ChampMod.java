@@ -247,7 +247,7 @@ public class ChampMod implements
         BaseMod.addRelic(new Barbells(), RelicType.SHARED);
         BaseMod.addRelic(new DeflectingBracers(), RelicType.SHARED);
         BaseMod.addRelic(new DuelingGlove(), RelicType.SHARED);
-        BaseMod.addRelic(new ChampStancesModRelic(), RelicType.SHARED);
+        //BaseMod.addRelic(new ChampStancesModRelic(), RelicType.SHARED);
 
     }
 

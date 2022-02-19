@@ -1,7 +1,6 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.actions.DevastateAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,17 +10,13 @@ public class Devastate extends AbstractChampCard {
 
     public final static String ID = makeID("Devastate");
 
-    //stupid intellij stuff attack, enemy, rare
-
-    private static final int DAMAGE = 24;
-
     public Devastate() {
         super(ID, 5, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
 
-        this.baseDamage = DAMAGE;
+        this.baseDamage = 6;
+        this.magicNumber = this.baseMagicNumber = 3;
         tags.add(ChampMod.FINISHER);
         postInit();
-
     }
 
     public void triggerOnCardPlayed(AbstractCard c) {
@@ -31,11 +26,13 @@ public class Devastate extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        for (int i = 0; i < this.magicNumber; i++) {
+            dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        }
         finisher();
     }
 
     public void upp() {
-        upgradeDamage(8);
+        upgradeDamage(3);
     }
 }

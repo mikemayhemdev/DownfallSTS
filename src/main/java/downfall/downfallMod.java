@@ -31,7 +31,6 @@ import champ.ChampChar;
 import champ.ChampMod;
 import champ.cards.ModFinisher;
 import champ.powers.LastStandModPower;
-import champ.relics.ChampStancesModRelic;
 import champ.relics.ChampionCrown;
 import champ.util.TechniqueMod;
 import charbosses.actions.util.CharBossMonsterGroup;

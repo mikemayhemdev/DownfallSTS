@@ -13,40 +13,24 @@ public class Incineration extends AbstractHexaCard {
 
     public final static String ID = makeID("Incineration");
 
-    //stupid intellij stuff ATTACK, ALL_ENEMY, COMMON
-
-    private static final int DAMAGE = 4;
-    private static final int UPG_DAMAGE = 1;
-
-    private static final int MAGIC = 3;
-    private static final int UPG_MAGIC = 1;
-
     public Incineration() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC;
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseDamage = 4;
         baseBurn = burn = 4;
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    AbstractMonster m = AbstractDungeon.getRandomMonster();
-                    addToTop(new PseudoDamageRandomEnemyAction(m, makeInfo(), AttackEffect.FIRE));
-                    addToTop(new ApplyPowerAction(m, p, new BurnPower(m, burn), burn));
-                }
-            });
+            dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
+            atb(new ApplyPowerAction(m, p, new BurnPower(m, burn), burn));
         }
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            //upgradeDamage(UPG_DAMAGE);
-            upgradeMagicNumber(UPG_MAGIC);
+            upgradeMagicNumber(1);
         }
     }
 }
