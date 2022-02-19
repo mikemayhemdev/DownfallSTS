@@ -17,9 +17,9 @@ public class AscensionTextPatch {
 
     public static void Prefix(CharacterSelectScreen __instance, SpriteBatch sb) {
         if (EvilModeCharacterSelect.evilMode) {
-            if (__instance.ascensionLevel == 20) {
-                __instance.ascLevelInfoString = uiStrings.TEXT[1];
-            } else if (__instance.ascensionLevel == 19) {
+           // if (__instance.ascensionLevel == 20) {
+            //    __instance.ascLevelInfoString = uiStrings.TEXT[1];
+             if (__instance.ascensionLevel == 19) {
                 __instance.ascLevelInfoString = uiStrings.TEXT[0];
             } else if (__instance.ascensionLevel == 4) {
                 __instance.ascLevelInfoString = uiStrings.TEXT[3];
