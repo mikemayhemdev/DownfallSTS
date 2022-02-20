@@ -11,14 +11,9 @@ public class NightmareStrike extends AbstractHexaCard {
 
     public final static String ID = makeID("NightmareStrike");
 
-    //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
-
-    private static final int DAMAGE = 10;
-    private static final int UPG_DAMAGE = 4;
-
     public NightmareStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 10;
         isEthereal = true;
         cardsToPreview = new ShadowStrike();
         tags.add(CardTags.STRIKE);
@@ -39,7 +34,7 @@ public class NightmareStrike extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPG_DAMAGE);
+            upgradeDamage(3);
             rawDescription = UPGRADE_DESCRIPTION;
             cardsToPreview.upgrade();
             initializeDescription();

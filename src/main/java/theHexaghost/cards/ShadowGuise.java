@@ -12,16 +12,11 @@ public class ShadowGuise extends AbstractHexaCard {
 
     public final static String ID = makeID("ShadowGuise");
 
-    //stupid intellij stuff SKILL, SELF, SPECIAL
-
-    private static final int BLOCK = 14;
-    private static final int UPG_BLOCK = 4;
-
     private AbstractCard parent;
 
     public ShadowGuise(AbstractCard parent) {
         super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-        baseBlock = BLOCK;
+        baseBlock = 7;
         exhaust = true;
         isEthereal = true;
         setParent(parent);
@@ -38,6 +33,7 @@ public class ShadowGuise extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
         blck();
         atb(new AbstractGameAction() {
             @Override
@@ -90,7 +86,7 @@ public class ShadowGuise extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPG_BLOCK);
+            upgradeBlock(2);
         }
     }
 }

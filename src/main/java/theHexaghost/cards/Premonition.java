@@ -12,7 +12,7 @@ public class Premonition extends AbstractHexaCard {
     public final static String ID = makeID("Premonition");
 
     public Premonition() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.exhaust = true;
     }
 
