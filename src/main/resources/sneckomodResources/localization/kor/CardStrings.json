@@ -170,7 +170,8 @@
   },
   "sneckomod:Rotation": {
     "NAME": "순환",
-    "DESCRIPTION": "sneckomod:스네코항체. NL 모든 sneckomod:다른_직업 카드를 버립니다. NL 카드를 버린 카드 개수 + !M! 장 뽑습니다."
+    "DESCRIPTION": "sneckomod:스네코항체. NL 모든 sneckomod:다른_직업 카드를 버립니다. NL 카드를 버린 카드 개수 + !M! 장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 모든 sneckomod:다른_직업 카드를 버립니다. NL 카드를 버린 카드 개수 + !M! 장 뽑습니다."
   },
   "sneckomod:SerpentMind": {
     "NAME": "외세의 형상",

@@ -50,7 +50,7 @@
   },
   "sneckomod:SoulDraw": {
     "NAME": "Soul Draw",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 0 - !M! cards.",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Add !M! random sneckomod:Offclass cards to your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 - !M! cards."
   },
   "sneckomod:SoulRoll": {
@@ -73,8 +73,8 @@
   },
   "sneckomod:Nope": {
     "NAME": "Nope",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Replace it with a random card of the same type that costs 1 less. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Replace it with a random card of the same type that costs 1 less.",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. NL Replace it with a random card of the same class.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. NL Replace it with a random card of the same class that costs 1 less.",
     "EXTENDED_DESCRIPTION": [
       " to Exhaust for Nope."
     ]
@@ -170,7 +170,8 @@
   },
   "sneckomod:Rotation": {
     "NAME": "Rotation",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards plus !M!."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards plus !M!."
   },
   "sneckomod:SerpentMind": {
     "NAME": "Exotic Form",
@@ -228,11 +229,11 @@
   },
   "sneckomod:DiceBlock": {
     "NAME": "Dice Block",
-    "DESCRIPTION": "Gain !M! - !B! Block. NL Maximum Block is increased by 1 for each *Unknown card you started combat with."
+    "DESCRIPTION": "Gain !M! - !B! Block. NL Repeat per every [E] this card costs, then sneckomod:Muddle this."
   },
   "sneckomod:MixItUp": {
     "NAME": "Mix It Up!",
-    "DESCRIPTION": "Deal !D! damage for each of your Potions. NL Lose your Potions and replace them with new ones. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL *Transform your Potions. NL Exhaust."
   },
   "sneckomod:MorePower": {
     "NAME": "More Power!",
@@ -268,7 +269,7 @@
   },
   "sneckomod:DiceCrush": {
     "NAME": "Dice Crush",
-    "DESCRIPTION": "Deal !M! - !D! damage. NL Maximum damage is increased by 1 for each *Unknown card you started combat with."
+    "DESCRIPTION": "Deal !M! - !D! damage. NL Repeat per every [E] this card costs, then sneckomod:Muddle this."
   },
   "sneckomod:SnakeSap": {
     "NAME": "Snake Sap",
@@ -284,8 +285,8 @@
   },
   "sneckomod:Mudshield": {
     "NAME": "Mud Shield",
-    "DESCRIPTION": "Whenever you sneckomod:Muddle a card, gain 1 Block next turn.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you sneckomod:Muddle a card, gain 1 Block next turn."
+    "DESCRIPTION": "Whenever you sneckomod:Muddle a card, gain !M! Block.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you sneckomod:Muddle a card, gain !M! Block."
   },
   "sneckomod:WideSting": {
     "NAME": "Wide Sting",
@@ -293,7 +294,7 @@
   },
   "sneckomod:UnendingSupply": {
     "NAME": "Unending Supply",
-    "DESCRIPTION": "At the start of each turn, add a random sneckomod:Offclass card to your hand and sneckomod:Muddle it."
+    "DESCRIPTION": "At the start of each turn, add a random sneckomod:Offclass card to your hand."
   },
   "sneckomod:Memorize": {
     "NAME": "Memorize",

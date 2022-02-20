@@ -3,7 +3,7 @@
     "NAME": "Snecko Soul",
     "FLAVOR": "0...3...2...2...1",
     "DESCRIPTIONS": [
-      "You may Identify #yUnknown cards at Rest Sites."
+      "First time you play an #ysneckomod:Offclass in a combat, gain [E] and draw a card."
     ]
   },
   "sneckomod:SuperSneckoSoul": {
@@ -11,7 +11,7 @@
     "FLAVOR": "3120231321230320",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] NL Using Identify at Rest Sites is now a Free Action."
+      ".[] NL First time you play an #ysneckomod:Offclass in a turn, gain [E] ."
     ]
   },
   "sneckomod:CleanMud": {
@@ -60,7 +60,7 @@
     "NAME": "Unknown Egg",
     "FLAVOR": "What will hatch? Pay $1000 to see.",
     "DESCRIPTIONS": [
-      "#yUnknown cards in card rewards are #yUpgraded."
+      "#yIdentifying becomes a free action. NL #yUnknown cards in card rewards are #yUpgraded."
     ]
   },
   "sneckomod:SuperSneckoEye": {

@@ -1,33 +1,30 @@
 package sneckomod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
+import sneckomod.actions.MuddleAction;
 import sneckomod.actions.NoApplyRandomDamageAction;
-import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 public class DiceCrush extends AbstractSneckoCard {
 
     public final static String ID = makeID("DiceCrush");
 
-    //stupid intellij stuff ATTACK, ENEMY, COMMON
-
-    private static final int DAMAGE = 10;
-    private static final int UPG_DAMAGE = 4;
-
-    private static final int MAGIC = 1;
-
     public DiceCrush() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC;
+        baseDamage = 7;
+        baseMagicNumber = magicNumber = 3;
+        tags.add(SneckoMod.RNG);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new NoApplyRandomDamageAction(m, magicNumber, damage, 1, AbstractGameAction.AttackEffect.SMASH, this, DamageInfo.DamageType.NORMAL));
+        for (int i = 0; i < this.cost; i++) {
+            atb(new NoApplyRandomDamageAction(m, magicNumber, damage, 1, AbstractGameAction.AttackEffect.SMASH, this, DamageInfo.DamageType.NORMAL));
+        }
+        atb(new MuddleAction(this));
     }
 
     @Override
@@ -42,12 +39,7 @@ public class DiceCrush extends AbstractSneckoCard {
 
         // repeat so damage holds the second condition's damage
         baseDamage = CURRENT_DMG;
-        for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
-            if (q instanceof AbstractUnknownCard)
-                baseDamage += 1;
-        }
         super.applyPowers();
-        baseDamage = CURRENT_DMG;
         isDamageModified = baseDamage != damage;
     }
 
@@ -63,19 +55,15 @@ public class DiceCrush extends AbstractSneckoCard {
 
         // repeat so damage holds the second condition's damage
         baseDamage = CURRENT_DMG;
-        for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
-            if (q instanceof AbstractUnknownCard)
-                baseDamage += 1;
-        }
         super.calculateCardDamage(mo);
-        baseDamage = CURRENT_DMG;
         isDamageModified = baseDamage != damage;
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPG_DAMAGE);
+            upgradeMagicNumber(1);
+            upgradeDamage(2);
         }
     }
 }

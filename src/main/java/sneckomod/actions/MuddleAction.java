@@ -30,27 +30,25 @@ public class MuddleAction extends AbstractGameAction {
 
     public void update() {
         isDone = true;
-        if (AbstractDungeon.player.hasPower(MudshieldPower.POWER_ID)) {
-            AbstractPower q = AbstractDungeon.player.getPower(MudshieldPower.POWER_ID);
-            q.flash();
-            addToBot(new ApplyPowerAction(q.owner, q.owner, new NextTurnBlockPower(q.owner, q.amount)));
-        }
         if (card.cost >= 0 && !card.hasTag(SneckoMod.SNEKPROOF)) {// 32
+            if (AbstractDungeon.player.hasPower(MudshieldPower.POWER_ID)) {
+                AbstractDungeon.player.getPower(MudshieldPower.POWER_ID).onSpecificTrigger();
+            }
             card.superFlash();
             ArrayList<Integer> numList = new ArrayList<>();
             if (!AbstractDungeon.player.hasRelic(CrystallizedMud.ID)) {
-                if (card.cost != 0) numList.add(0);
+                if (card.costForTurn != 0) numList.add(0);
             }
-            if (card.cost != 1) numList.add(1);
-            if (card.cost != 2) numList.add(2);
+            if (card.costForTurn != 1) numList.add(1);
+            if (card.costForTurn != 2) numList.add(2);
             if (!AbstractDungeon.player.hasRelic(CleanMud.ID)) {
                 if (!this.no3) {
-                    if (card.cost != 3) numList.add(3);
+                    if (card.costForTurn != 3) numList.add(3);
                 }
             }
             int newCost = numList.get(AbstractDungeon.cardRandomRng.random(numList.size() - 1));// 33
             //SlimeboundMod.logger.info("muddling " + card.name + " base " + card.cost + " new " + newCost);
-            if (card.cost != newCost) {// 34
+            if (card.costForTurn != newCost) {// 34
                 card.cost = newCost;// 35
                 card.costForTurn = card.cost;// 36
                 card.isCostModified = true;// 37

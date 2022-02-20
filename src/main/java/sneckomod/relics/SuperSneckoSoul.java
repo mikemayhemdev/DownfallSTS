@@ -2,8 +2,12 @@ package sneckomod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 import downfall.util.TextureLoader;
@@ -16,6 +20,21 @@ public class SuperSneckoSoul extends CustomRelic {
 
     public SuperSneckoSoul() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
+    }
+
+    public void atTurnStart() {
+        grayscale = false;
+    }
+
+    public void onVictory() {
+        grayscale = false;
+    }
+
+    public void onUseCard(AbstractCard c, UseCardAction action) {
+        if (!grayscale && c.color != AbstractDungeon.player.getCardColor()) {
+            addToTop(new GainEnergyAction(1));
+            grayscale = true;
+        }
     }
 
     @Override

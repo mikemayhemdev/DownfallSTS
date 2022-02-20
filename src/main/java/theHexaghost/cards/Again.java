@@ -1,6 +1,9 @@
 package theHexaghost.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
@@ -24,7 +27,13 @@ public class Again extends AbstractHexaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new ExtinguishCurrentFlameAction());
         atb(new ChargeCurrentFlameAction());
-        atb(new ExtinguishCurrentFlameAction());
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                atb(new ExtinguishCurrentFlameAction());
+                isDone = true;
+            }
+        });
     }
 
     public void upgrade() {

@@ -14,17 +14,15 @@ public class Nope extends AbstractSneckoCard {
     public Nope() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         tags.add(SneckoMod.SNEKPROOF);
-        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new NopeAction());
+        atb(new NopeAction(upgraded));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.exhaust = false;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

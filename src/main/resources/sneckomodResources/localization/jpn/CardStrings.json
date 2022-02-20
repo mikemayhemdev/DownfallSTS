@@ -174,7 +174,8 @@
   },
   "sneckomod:Rotation": {
     "NAME": "Rotation",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards plus !M!."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards plus !M!.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards plus !M!."
   },
   "sneckomod:SerpentMind": {
     "NAME": "Exotic Form",
