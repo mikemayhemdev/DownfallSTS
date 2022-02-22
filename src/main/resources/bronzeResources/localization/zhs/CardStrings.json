@@ -125,11 +125,11 @@
   },
   "bronze:Overheat": {
     "NAME": "过热",
-    "DESCRIPTION": "造成 !D! 点伤害。 移除下一张 bronze:编码 中的 bronze:编译 *错误 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 移除下一张 bronze:编码 牌中的 bronze:编译 *错误 。"
   },
   "bronze:CutThrough": {
     "NAME": "斩破命运",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 预见 !M! 。 NL bronze:编译 *错误 - 抽 !bauto! 张牌。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 预见 !M! 。 NL bronze:编译 - 抽 !bauto! 张牌。",
     "EXTENDED_DESCRIPTION": [
       "斩破",
       "切割"
@@ -234,7 +234,7 @@
   },
   "bronze:Constructor": {
     "NAME": "构造器",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编码 时，如果在第一个槽位, 提升 格挡 !M! 点。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编码 时，如果在第一个槽位，提高 !M! 点 格挡 。",
     "EXTENDED_DESCRIPTION": [
       "构造",
       "失落",
@@ -256,7 +256,7 @@
   },
   "bronze:GetLatest": {
     "NAME": "最新素材",
-    "DESCRIPTION": "将一张有 bronze:编码 的随机牌加入手牌。 NL 它费用为0。 NL 消耗 。"
+    "DESCRIPTION": "随机将一张可 bronze:编码 的牌加入手牌。 NL 它费用为0。 NL 消耗 。"
   },
   "bronze:Flail": {
     "NAME": "乱斗",
@@ -314,11 +314,11 @@
   },
   "bronze:FollowUp": {
     "NAME": "数据追踪",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 如果打出的上一张是 *方法 ,再打出一次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 如果打出的上一张牌是 *方法 ,再打出一次。"
   },
   "bronze:ChosenStrike": {
     "NAME": "邪教打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 本局游戏这张牌的伤害提升 !M! 点。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 本局游戏这张牌的伤害增加 !M! 点。",
     "EXTENDED_DESCRIPTION": [
       "邪教",
       "咔咔"
@@ -331,8 +331,8 @@
   },
   "bronze:ItsAFeature": {
     "NAME": "这是特性",
-    "DESCRIPTION": "当你抽到诅咒或状态牌 时, 获得 1 点 guardianmod:临时 力量 和 敏捷 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 当你抽到诅咒或状态牌 时, 获得 1 点 guardianmod:临时 力量 和 敏捷 。"
+    "DESCRIPTION": "当你抽到 诅咒 或 状态牌 时，获得 1 点 guardianmod:临时 力量 和 敏捷 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 当你抽到 诅咒 或 状态牌 时，获得 1 点 guardianmod:临时 力量 和 敏捷 。"
   },
   "bronze:MinorBeam": {
     "NAME": "微光射线",
@@ -344,8 +344,8 @@
   },
   "bronze:InfiniteBeams": {
     "NAME": "无尽射线",
-    "DESCRIPTION": "每回合开始时, 将一张 *微光射线 加入到手牌。",
-    "UPGRADE_DESCRIPTION": "每回合开始时, 将一张 *微光射线+ 加入到手牌。"
+    "DESCRIPTION": "每回合开始时，将一张 *微光射线 加入手牌。",
+    "UPGRADE_DESCRIPTION": "每回合开始时，将一张 *微光射线+ 加入手牌。"
   },
   "bronze:Optimize": {
     "NAME": "优化",
@@ -433,7 +433,7 @@
   },
   "bronze:ForceShield": {
     "NAME": "力场护盾",
-    "DESCRIPTION": "本场战斗每生成一张 *方法 ，本牌费用减1。 NL 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本场战斗每生成一张 *方法 ，本牌费用减1。"
   },
   "bronze:Format": {
     "NAME": "格式化",
@@ -470,8 +470,8 @@
   },
   "bronze:InfiniteLoop": {
     "NAME": "无限循环",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 将一张本牌的复制品加入到手牌，它提升 !M! 点伤害。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL bronze:编译 - 将一张本牌的复制品加入到手牌，它提升 !M! 点伤害。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 将一张本牌的复制品加入手牌，它增加 !M! 点伤害。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL bronze:编译 - 将一张本牌的复制品加入手牌，它增加 !M! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       "无限",
       "循环"
@@ -479,21 +479,21 @@
   },
   "bronze:Library": {
     "NAME": "数据库",
-    "DESCRIPTION": "回合开始时, 将随机一张带有 bronze:编码 的牌加入手牌。 NL 它的费用为0。"
+    "DESCRIPTION": "回合开始时，随机将一张可 bronze:编码 的牌加入手牌。 NL 它的费用为0。"
   },
   "bronze:Verify": {
     "NAME": "感知形态",
-    "DESCRIPTION": "虚无 。 NL 每回合第一次生成或抽到 *方法 时，这张牌的数值提高1。",
-    "UPGRADE_DESCRIPTION": "每回合第一次生成或抽到 *方法 时，这张牌的数值提高1。"
+    "DESCRIPTION": "虚无 。 NL 每回合第一次生成或抽到 *方法 时，这张牌的数值增加1点。",
+    "UPGRADE_DESCRIPTION": "每回合第一次生成或抽到 *方法 时，这张牌的数值增加1点。"
   },
   "bronze:BronzeHeatsink": {
     "NAME": "铜制散热器",
-    "DESCRIPTION": "当你打出 *方法 时, 抽1张牌。",
-    "UPGRADE_DESCRIPTION": "当你打出 *方法 时, 抽2张牌。"
+    "DESCRIPTION": "当你打出 *方法 时，抽1张牌。",
+    "UPGRADE_DESCRIPTION": "当你打出 *方法 时，抽2张牌。"
   },
   "bronze:HardenedForm": {
     "NAME": "圆球召唤",
-    "DESCRIPTION": "每当你生成或打出 *方法 时, 获得 !M! 点 格挡 并对随机敌人造成 !M! 点伤害。"
+    "DESCRIPTION": "每当你生成或打出 *方法 时，获得 !M! 点 格挡 并对随机敌人造成 !M! 点伤害。"
   },
   "bronze:CopyPaste": {
     "NAME": "复制粘贴",
@@ -507,12 +507,12 @@
   },
   "bronze:Repulsor": {
     "NAME": "反冲",
-    "DESCRIPTION": "每回合当你抽到第一张 状态牌 和 诅咒 时, 消耗 并抽一张牌。",
-    "UPGRADE_DESCRIPTION": " 固有 。 每回合当你抽到第一张 状态牌 和 诅咒 时, 消耗 并抽一张牌。"
+    "DESCRIPTION": "消耗 每回合抽到的第一张 状态牌 或 诅咒 并抽一张牌。",
+    "UPGRADE_DESCRIPTION": "消耗 每回合抽到的第一张 状态牌 或 诅咒 并抽一张牌。"
   },
   "bronze:Debug": {
     "NAME": "调试",
-    "DESCRIPTION": "去除 *队列 中牌的 bronze:编译错误 。 NL 消耗 。"
+    "DESCRIPTION": "去除 *队列 中牌的 bronze:编译 *错误 。 NL 消耗 。"
   },
   "bronze:HyperBeam": {
     "NAME": "超能射线",
@@ -529,16 +529,16 @@
   },
   "bronze:Assembly": {
     "NAME": "装配",
-    "DESCRIPTION": " 预见 !M! 。 NL bronze:编码 其中丢弃的 bronze:编码 的牌。 NL 消耗 。"
+    "DESCRIPTION": " 预见 !M! 。 NL bronze:编码 其中丢弃的可 bronze:编码 的牌。 NL 消耗 。"
   },
   "bronze:FineTuning": {
     "NAME": "性能调整",
-    "DESCRIPTION": "提升 *队列 中的所有牌的数值 !M! 点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 提升 *队列 中的所有牌的数值 !M! 点。 NL 消耗 。"
+    "DESCRIPTION": "提高 *队列 中的所有牌的数值 !M! 点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 提高 *队列 中的所有牌的数值 !M! 点。 NL 消耗 。"
   },
   "bronze:CleanCode": {
     "NAME": "简明代码",
-    "DESCRIPTION": "下 !M! 次生成 *方法 时，移除其中 bronze:编译 *错误 。"
+    "DESCRIPTION": "下 !M! 次生成 *方法 时，移除其中的 bronze:编译 *错误 。"
   },
   "bronze:BranchBlock": {
     "NAME": "分支: 格挡",
@@ -583,8 +583,8 @@
   },
   "bronze:TinkerersToolbox": {
     "NAME": "开发工具",
-    "DESCRIPTION": "保留 。 NL 在 *调试 ， *批处理 、 *反编译 和 *字节位移 中选择加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 在 *调试 ， *批处理 、 *反编译 和 *字节位移 中选择加入手牌。"
+    "DESCRIPTION": "保留 。 NL 在 *调试 、 *批处理 、 *反编译 和 *字节位移 中选择一张加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 在 *调试 、 *批处理 、 *反编译 和 *字节位移 中选择一张加入手牌。"
   },
   "bronze:Refactor": {
     "NAME": "重构",
@@ -606,7 +606,7 @@
   },
   "bronze:BuggyMess": {
     "NAME": "多重错误",
-    "DESCRIPTION": " bronze:插入 随机状态牌 。 NL 获得 !M! [E] 。",
+    "DESCRIPTION": " bronze:插入 随机 状态牌 。 NL 获得 !M! [E] 。",
     "EXTENDED_DESCRIPTION": [
       "错误的",
       "混乱"
@@ -614,15 +614,15 @@
   },
   "bronze:FindAndReplace": {
     "NAME": "查找替换",
-    "DESCRIPTION": "虚无 。 NL 将一张抽牌堆或弃牌堆的牌，加入手牌。 NL 在原来的位置加入 *晕眩 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 将一张抽牌堆或弃牌堆的牌，加入手牌。 NL 在原来的位置加入 *晕眩 。 NL 消耗 。",
+    "DESCRIPTION": "虚无 。 NL 将一张抽牌堆或弃牌堆的牌加入手牌。 NL 在原来的位置添加 *晕眩 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 将一张抽牌堆或弃牌堆的牌加入手牌。 NL 在原来的位置添加 *晕眩 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "选择一张牌加入手牌并在其原位加入晕眩"
     ]
   },
   "bronze:ThunderWave": {
     "NAME": "雷霆",
-    "DESCRIPTION": "本场战斗每生成一张 *方法 对随机敌人造成 !D! 点伤害。",
+    "DESCRIPTION": "本场战斗每生成过一张 *方法 对随机敌人造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       " NL （攻击 ",
       " 次）"

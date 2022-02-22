@@ -14,7 +14,7 @@
   },
   "bronze:EncodeAndShuffleMod": {
     "TEXT": [
-      " NL bronze:编码 。将这张牌的复制品加入你的弃牌堆"
+      " NL bronze:编码 。 NL 将这张牌的复制品加入你的弃牌堆"
     ]
   },
   "bronze:DoublePlayModifier": {
