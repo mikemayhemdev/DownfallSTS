@@ -25,7 +25,7 @@
   },
   "expansioncontent:YouAreMine": {
     "NAME": "你是我的了！",
-    "DESCRIPTION": "expansioncontent:首领 - 收藏家。 NL 移除所有 格挡 ，给予所有敌人 !M! 层 虚弱 和 易伤 。 NL 消耗 。"
+    "DESCRIPTION": "expansioncontent:首领 - 收藏家。 NL 移除所有敌人的 格挡 ，给予所有敌人 !M! 层 虚弱 和 易伤 。 NL 消耗 。"
   },
   "expansioncontent:AwakenDeath": {
     "NAME": "觉醒",
@@ -38,13 +38,13 @@
   },
   "expansioncontent:PolyBeam": {
     "NAME": "甜圈爆破",
-    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 造成 !D! 点伤害两次。 NL 这张牌的伤害提高 !M! 点。 NL 下一回合将一张 *八体护盾 expansioncontent:发掘 或加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 造成 !D! 点伤害两次。 NL 这张牌的伤害提高 !M! 点。 NL 下一回合将一张 *八体护盾+ expansioncontent:发掘 或加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 造成 !D! 点伤害两次并提高 !M! 点数值。 NL 下一回合将一张 *八体护盾 expansioncontent:发掘 或加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 造成 !D! 点伤害两次并提高 !M! 点数值。 NL 下一回合将一张 *八体护盾+ expansioncontent:发掘 或加入手牌。 NL 消耗 。"
   },
     "expansioncontent:DecaShield": {
     "NAME": "八体护盾",
-    "DESCRIPTION": "虚无 。 NL expansioncontent:首领 - 先古造物。 NL 获得 !B! 点 格挡 。 NL 这张牌的 格挡 提高 !M! 点。 NL 下一回合将一张 *八体射线 expansioncontent:发掘 或加入手牌 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL expansioncontent:首领 - 先古造物。 NL 获得 !B! 点 格挡 。 NL 这张牌的 格挡 提高 !M! 点。 NL 下一回合将一张 *八体射线+ expansioncontent:发掘 或加入手牌 。 NL 消耗 。"
+    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 !B! 点 格挡 两次并提高 !M! 点数值。 NL 下一回合， expansioncontent:发掘 一张 *八体射线 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 !B! 点 格挡 两次并提高 !M! 点数值。 NL 下一回合， expansioncontent:发掘 一张 *八体射线+ 。 NL 消耗 。"
   },
   "expansioncontent:PrepareCrush": {
     "NAME": "准备：猛撞",
@@ -53,21 +53,21 @@
   },
   "expansioncontent:StudyTheSpire": {
     "NAME": "研究尖塔",
-    "DESCRIPTION": "接下来 !M! 回合，每回合开始时获得1张随机 expansioncontent:首领 牌。他们直到打出前耗能为0。",
-    "UPGRADE_DESCRIPTION": "接下来 !M! 回合，每回合开始时获得1张已 升级 的随机 expansioncontent:首领 牌。他们直到打出前耗能为0。"
+    "DESCRIPTION": "接下来 !M! 回合，每回合开始时获得1张随机 expansioncontent:首领 牌，它们直到打出前耗能为0。",
+    "UPGRADE_DESCRIPTION": "接下来 !M! 回合，每回合开始时获得1张已 升级 的随机 expansioncontent:首领 牌，它们直到打出前耗能为0。"
   },
   "expansioncontent:QuickStudy": {
     "NAME": "快速学习",
-    "DESCRIPTION": "从3名首领中选择1名。 NL 获得对应的 expansioncontent:首领 牌。 NL 它们在打出前耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "从3名首领中选择1名。 NL 获得对应的已 升级 的 expansioncontent:首领 牌。 NL 它们在打出前耗能为0。 NL 消耗 。",
+    "DESCRIPTION": "从3张随机 expansioncontent:首领 牌中选择1张加入手牌， NL 它在打出前耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "从3张已升级的随机 expansioncontent:首领 牌中选择1张加入手牌， NL 它在打出前耗能为0。 NL 消耗 。",
 	 "EXTENDED_DESCRIPTION": [
-      "选择一种首领牌。"
+      "选择一张首领牌。"
     ]
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "恶灵附身",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 将随机一张 expansioncontent:首领 牌加入你的手牌。它直到打出前耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 将随机一已 升级 的张 expansioncontent:首领 牌加入你的手牌。它直到打出前耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 将随机一张 expansioncontent:首领 牌加入你的手牌，它在打出前耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 将随机一张已 升级 的张 expansioncontent:首领 牌加入你的手牌，它在打出前耗能为0。 NL 消耗 。"
   },
     "expansioncontent:KnowingSkullWish": {
     "NAME": "全知头骨",
