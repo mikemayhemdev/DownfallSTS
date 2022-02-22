@@ -86,7 +86,7 @@
   "Gremlin:GremlinWizard": {
     "NAME": "地精法师",
     "DESCRIPTIONS": [
-      "当你打出技能牌时， 获得 #b",
+      "每当你打出技能牌时， 获得 #b",
       " 层 #y法力 。"
     ]
   },
