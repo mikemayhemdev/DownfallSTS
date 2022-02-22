@@ -130,8 +130,8 @@
   "Guardian:ModeShiftPower": {
     "NAME": "模式转换",
     "DESCRIPTIONS": [
-      "当你失去 #b",
-      " 点生命时，获得 #b10 点格挡，进入 #y防御模式。 NL 每次启用模式转换时，激活所需的量增加 #b10 。（至多 #b50 ）"
+      "再失去 #b",
+      " 点生命时，进入 #y防御模式 并获得 #b10 点格挡。 若已处于防御模式，不获得格挡但额外获得 #b1 回合持续时间。 NL 每次进入防御模式时，下次进入所需的生命损失增加 #b10 点。（至多 #b50 点）"
     ]
   },
   "Guardian:ExhaustStatusesPower": {
@@ -197,10 +197,10 @@
     ]
   },
   "Guardian:DontLeaveDefensiveModePower": {
-    "NAME": "防御模式",
+    "NAME": "处于防御模式",
     "DESCRIPTIONS": [
       "你将在本回合退出 #y防御模式 。",
-      "你将在下 #b",
+      "你将在 #b",
       " 个回合后退出 #y防御模式 。"
     ]
   },

@@ -3,7 +3,7 @@
     "NAME": "铜制齿轮",
     "FLAVOR": "在你最需要的时候保护你。",
     "DESCRIPTIONS": [
-      "每场战斗首次进入 #yguardianmod:防御模式 时，额外持续一回合。"
+      "每场战斗首次进入 #yguardianmod:防御模式 时，额外持续 #b1 回合。"
     ]
   },
   "Guardian:ModeShifterPlus": {
@@ -17,7 +17,7 @@
     "NAME": "铜制装甲板",
     "FLAVOR": "装甲再多也不为过。",
     "DESCRIPTIONS": [
-      "每当你 #yguardianmod:提防 时，　#yguardianmod:提防 #b1 。"
+      "每当你 #yguardianmod:提防 时，再　#yguardianmod:提防 #b1 。"
     ]
   },
   "Guardian:GemCopier": {
@@ -46,14 +46,14 @@
     "NAME": "机械宝典",
     "FLAVOR": "尖塔最早原型的设计和图表。",
     "DESCRIPTIONS": [
-      "回合结束时如果没有被 #y凝滞 的牌，从三张牌中选择一张牌 #yguardianmod:凝滞 。"
+      "回合结束时如果没有被 #y凝滞 的牌，从三张随机牌中选择一张牌 #yguardianmod:凝滞 。"
     ]
   },
   "Guardian:StasisSlotIncreaseRelic": {
     "NAME": "警务亭",
     "FLAVOR": "在里面的更大。。。",
     "DESCRIPTIONS": [
-      "每场战斗开始时获得 2 个 #yguardianmod:凝滞 栏位。"
+      "每场战斗开始时获得 #b2 个 #yguardianmod:凝滞 栏位。"
     ]
   },
   "Guardian:StasisSlotReductionRelic": {
@@ -84,10 +84,10 @@
     "NAME": "量子容器",
     "FLAVOR": "你通过孵化鸡蛋而不是砸碎鸡蛋来获得鸡。",
     "DESCRIPTIONS": [
-      "拾起时，选择一张牌。每场战斗开始时移出战斗。在第 #b4 回合开始时，增加两张复制到你的手牌中。",
+      "拾起时，选择一张牌。每场战斗开始时移出战斗。在第 #b4 回合开始时，添加它的两张复制到你的手牌中。",
       "选择一张牌 ",
       "每场战斗开始时 ",
-      " 移出战斗。 在第 #b4 回合开始时，增加两张复制到你的手牌中。"
+      " 移出战斗。 在第 #b4 回合开始时，添加两张复制到你的手牌中。"
     ]
   },
     "Guardian:TickHelperRelic": {
