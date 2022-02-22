@@ -21,6 +21,9 @@ import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import downfall.util.TextureLoader;
 import slimebound.SlimeboundMod;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class LastStandPower extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = ChampMod.makeID("LastStandPower");
@@ -54,20 +57,24 @@ public class LastStandPower extends AbstractPower implements CloneablePowerInter
     }
 
     public void Check(int damage) {
-        SlimeboundMod.logger.info("Last Stand Check.");
-        if (owner.currentHealth - damage < owner.maxHealth / 2) {
+        if ((owner.currentHealth - damage) * 2 < owner.maxHealth) {
             flash();
             addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
             addToTop(new SFXAction("MONSTER_CHAMP_CHARGE"));
-            LastStand c = new LastStand();
-            SlimeboundMod.logger.info(c.getLimitBreak());
-            addToTop(new ShoutAction(owner, c.getLimitBreak(), 2.0F, 3.0F));
+            addToTop(new ShoutAction(owner, this.getLimitBreak(), 2.0F, 3.0F));
             addToTop(new VFXAction(owner, new InflameEffect(owner), 0.25F));
             addToTop(new VFXAction(owner, new InflameEffect(owner), 0.25F));
             addToTop(new VFXAction(owner, new InflameEffect(owner), 0.25F));
-            addToTop(new RemoveDebuffsAction(owner));
             addToTop(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
+            addToTop(new RemoveDebuffsAction(owner));
         }
+    }
+
+    public String getLimitBreak() {
+        ArrayList<String> derpy = new ArrayList<>(Arrays.asList(DESCRIPTIONS).subList(2, DESCRIPTIONS.length));
+        if (!derpy.isEmpty())
+            return derpy.get(AbstractDungeon.cardRandomRng.random(derpy.size() - 1));
+        return "ERROR";
     }
 
     @Override
