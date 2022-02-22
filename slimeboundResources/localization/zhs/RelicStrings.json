@@ -1,0 +1,105 @@
+{
+  "Slimebound:AbsorbEndCombat": {
+    "NAME": "黏液之心",
+    "FLAVOR": "我可真时髦。",
+    "DESCRIPTIONS": [
+      "每当你 #yslimeboundmod:消耗黏液 ，恢复 #b2 点生命。（每场战斗最多 #b8 点）"
+    ]
+  },
+  "Slimebound:AbsorbEndCombatUpgraded": {
+    "NAME": "黏液腐心",
+    "FLAVOR": "黏浆中的秘密。",
+    "DESCRIPTIONS": [
+	"替换 ",
+     ".[] NL 每当你 #yslimeboundmod:消耗黏液 时，回复 #b3 点生命。（每场战斗最多 #b15 点）"
+    ]
+  },
+  "Slimebound:SlimedTailRelic": {
+    "NAME": "黏质断尾",
+    "FLAVOR": "一条完全由黏液包裹的断尾，战斗时可以迷惑敌人。",
+    "DESCRIPTIONS": [
+      "当你的生命值低于 #b50% 时， #yslimeboundmod:分裂 出一1只 #y游击史莱姆 。你下一次承受的伤害将以 #yslimeboundmod:吸收 你最早 分裂 出的史莱姆代替（每场战斗最多生效一次）。",
+      "这个遗物在本场战斗中已被使用，下次战斗才能继续使用。"
+    ]
+  },
+  "Slimebound:PotencyRelic": {
+    "NAME": "黏黏石",
+    "FLAVOR": "据说它能根据你的情绪获得力量",
+    "DESCRIPTIONS": [
+      "战斗开始时， #yslimeboundmod:分裂 出1只 #yslimeboundmod:污泥史莱姆 并获得 #b1 点 #yslimeboundmod:潜力 。"
+    ]
+  },
+  "Slimebound:DailySplitRelic": {
+    "NAME": "黏黏尖塔",
+    "FLAVOR": "永远分裂！为啥这是个遗物？因为我不知道怎么把自定义mod加到已激活mod的UI里！",
+    "DESCRIPTIONS": [
+      "#b自定义模式 NL 所有敌人在生命值低于50%时分裂成两个史莱姆敌人。"
+    ]
+  },
+  "Slimebound:ScrapOozeRelic": {
+    "NAME": "破烂黏液",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "战斗开始时，生成1只 #y破烂史莱姆 。 NL 在休息处，你可以献上一张 #g罕见牌 使它造成的的伤害 #b+1 ，或献上一张 #y稀有牌 使它造成的伤害 #b+2 ，或献上一张 普通牌 使它造成的伤害 #b-1 ，或献上一张 #r诅咒牌 使它造成的伤害 #b-2。",
+      "从牌堆中移除一张牌，改变破烂史莱姆的伤害。",
+      "没有可以给破烂史莱姆的东西了。"
+    ]
+  },
+  "Slimebound:GreedOozeRelic": {
+    "NAME": "贪婪黏液",
+    "FLAVOR": "尖塔里找到的囤金子的朋友。",
+    "DESCRIPTIONS": [
+      "战斗开始时，生成1只 #y贪婪史莱姆 。 NL 在休息处， #y贪婪史莱姆 会吞食 #b50 金币并使它造成的伤害 #b+1 。"
+    ]
+  },
+  "Slimebound:PreparedRelic": {
+    "NAME": "黏粥",
+    "FLAVOR": "尝起来很糟，但极其健康。",
+    "DESCRIPTIONS": [
+      "在休息处后的下场战斗开始时，将1张 #y伺机待发 加入手牌，它的耗能变为 #b0 。"
+    ]
+  },
+  "Slimebound:AggressiveSlimeRelic": {
+    "NAME": "黏液居民",
+    "FLAVOR": "是它跟着我回家的。我能收养它吗？",
+    "DESCRIPTIONS": [
+      "战斗开始时， #yslimeboundmod:分裂 #yslimeboundmod:好斗史莱姆 。"
+    ]
+  },
+  "Slimebound:SlimedSkullRelic": {
+    "NAME": "黏蛇头骨",
+    "FLAVOR": "一个非常恶心的异蛇头骨，灰尘和污垢像胶一样粘在上面，又脏又黏。",
+    "DESCRIPTIONS": [
+      "每当你给予敌人 #yslimeboundmod:黏液 ，额外给予 #b",
+      " 层 #yslimeboundmod:黏液."
+    ]
+  },
+  "Slimebound:MaxSlimesRelic": {
+    "NAME": "陆军旗",
+    "FLAVOR": "你和你的黏黏军团。",
+    "DESCRIPTIONS": [
+      "战斗开始时， #yslimeboundmod:分裂 #yslimeboundmod:水蛭史莱姆 并获得 #b1 个史莱姆栏位。"
+    ]
+  },
+  "Slimebound:SelfDamagePreventRelic": {
+    "NAME": "保护齿轮",
+    "FLAVOR": "进攻是最好的防守！",
+    "DESCRIPTIONS": [
+      "自身受到来自 #yslimeboundmod:冲撞 牌的伤害降低 #b3 点。"
+    ]
+  },
+    "Slimebound:TarBlob": {
+    "NAME": "焦油团",
+    "FLAVOR": "坏的那种史莱姆。",
+    "DESCRIPTIONS": [
+      "你的回合开始时获得 [E] 。每场战斗开始时失去 #b1 个史莱姆栏位。"
+    ]
+  },
+  "Slimebound:StickyStick": {
+    "NAME": "粘胶立方体",
+    "FLAVOR": "嘿，它粘到你身上了。",
+    "DESCRIPTIONS": [
+      "每当你抽到 #y状态 牌时，抽 #b1 张牌。"
+    ]
+  }
+}

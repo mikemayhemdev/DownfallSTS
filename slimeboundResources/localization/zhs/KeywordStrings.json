@@ -1,0 +1,216 @@
+[
+  {
+    "NAMES": [
+      "吸收"
+    ],
+    "PROPERNAME": "吸收",
+    "DESCRIPTION": "融合最前面的的史莱姆并获得1点 #y力量 。"
+  },
+  {
+    "NAMES": [
+      "分裂"
+    ],
+    "PROPERNAME": "分裂",
+    "DESCRIPTION": "生成将在每回合时开始攻击的 #y史莱姆 爪牙。如果栏位不足，融合最后面的史莱姆并获得1点 #y力量。"
+  },
+  {
+    "NAMES": [
+      "黏液"
+    ],
+    "PROPERNAME": "黏液",
+    "DESCRIPTION": "每层 #y黏液 为下次攻击提供 1 点额外伤害，移除所有 #y黏液 并触发 #y消耗黏液 的效果。"
+  },
+  {
+    "NAMES": [
+      "潜力"
+    ],
+    "PROPERNAME": "潜力",
+    "DESCRIPTION": "提升所有生成的史莱姆的攻击伤害。"
+  },
+  { "NAMES": [
+      "命令"
+    ],
+    "PROPER_NAME": "命令",
+    "DESCRIPTION": "最前面的史莱姆将会攻击。"
+  },
+  {
+    "NAMES": [
+      "火炬头史莱姆",
+      "torchhead slime",
+      "torchhead_slime"
+    ],
+    "PROPERNAME": "火炬头史莱姆",
+    "DESCRIPTION": "发动攻击时造成 #b6 点伤害，你的 #y力量 增加其伤害。"
+  },
+  {
+    "NAMES": [
+      "好斗史莱姆",
+      "bruiser slime",
+      "bruiser_slime",
+      "bruiser slimes",
+      "bruiser_slimes",
+      "bruiser"
+    ],
+    "PROPERNAME": "好斗史莱姆",
+    "DESCRIPTION": "发动攻击时造成 #b5 点伤害。"
+  },
+  {
+    "NAMES": [
+      "邪教徒史莱姆",
+	  "cultist slime",
+      "cultist_slime"
+    ],
+    "PROPERNAME": "邪教徒史莱姆",
+    "DESCRIPTION": "发动攻击时造成 #b6 点伤害，提升自身伤害 #b1 点。"
+  },
+  {
+    "NAMES": [
+      "水蛭史莱姆",
+	  "leeching slime",
+      "leeching_slime",
+      "leeching slimes",
+      "leeching_slimes",
+      "leeching"
+    ],
+    "PROPERNAME": "水蛭史莱姆",
+    "DESCRIPTION": "发动攻击时造成 #b1 点伤害，并给予你 #b3 点 #y格挡 。"
+  },
+    {
+    "NAMES": [
+      "游击史莱姆",
+	  "guerilla slime",
+      "guerilla_slime",
+      "guerilla slimes",
+      "guerilla_slimes",
+      "guerilla"
+    ],
+    "PROPER_NAME": "游击史莱姆",
+    "DESCRIPTION": "对所有敌人造成 #b3 点伤害。"
+  },
+  {
+    "NAMES": [
+      "污泥史莱姆",
+	  "mire slime",
+      "mire_slime",
+      "mire slimes",
+      "mire_slimes",
+      "mire"
+    ],
+    "PROPERNAME": "污泥史莱姆",
+    "DESCRIPTION": "发动攻击时造成 #b2 点伤害，并给予敌人 #b2 层 #y黏液。"
+  },
+  {
+    "NAMES": [
+      "青铜史莱姆",
+	  "bronze slime",
+      "bronze_slime"
+    ],
+    "PROPERNAME": "青铜史莱姆",
+    "DESCRIPTION": "发动攻击时造成 #b4 点伤害，并给予你 #b4 点 #y格挡 。"
+  },
+  {
+    "NAMES": [
+      "舔舔"
+    ],
+    "PROPERNAME": "舔舔",
+    "DESCRIPTION": "给予 #y黏液 的0耗能牌，带有各种额外效果。"
+  },
+  {
+    "NAMES": [
+      "鬼火史莱姆",
+	  "ghostflame slime",
+      "ghostflame_slime"
+    ],
+    "PROPERNAME": "鬼火史莱姆",
+    "DESCRIPTION": "每回合攻击造成 #b3 点伤害并给予 #b3 层 #y灼魂 。"
+  },
+  {
+    "NAMES": [
+      "重铸"
+    ],
+    "PROPERNAME": "重铸",
+    "DESCRIPTION": "在本场战斗中，将卡牌替换为本职业的一张随机卡牌，它的耗能减少 1 点。"
+  },
+  {
+    "NAMES": [
+      "缓慢"
+    ],
+    "PROPERNAME": "缓慢",
+    "DESCRIPTION": "一回合内每打出一张牌额外受到 10% 的伤害。"
+  },
+  {
+    "NAMES": [
+      "冲撞"
+    ],
+    "PROPERNAME": "冲撞",
+    "DESCRIPTION": "一类高伤害 #y攻击 牌，会对自己造成少量伤害。"
+  },
+  {
+    "NAMES": [
+      "尖塔首领"
+    ],
+    "PROPERNAME": "尖塔首领",
+    "DESCRIPTION": "强力的0费牌，受尖塔中的首领启发而学会的新东西。"
+  },
+    {
+    "NAMES": [
+      "保护史莱姆",
+	  "protector slime",
+      "protector_slime"
+    ],
+    "PROPER_NAME": "保护史莱姆",
+    "DESCRIPTION": "攻击造成 #b2 点伤害并给予你 #b6 点 #y格挡 。"
+  },
+  {
+    "NAMES": [
+      "嘲讽史莱姆",
+	  "insulting slime",
+      "insulting_slime"
+    ],
+    "PROPER_NAME": "嘲讽史莱姆",
+    "DESCRIPTION": "攻击造成 #b4 点伤害并给予 #b1 层 #y易伤 。"
+  }, 
+  {
+    "NAMES": [
+      "小黑史莱姆",
+	  "darkling slime",
+      "darkling_slime"
+    ],
+    "PROPER_NAME": "小黑史莱姆",
+    "DESCRIPTION": "攻击造成 #b3 点伤害。命令时，其他小黑史莱姆也会攻击。"
+  },
+  {
+    "NAMES": [
+      "先古史莱姆",
+	  "ancient slime",
+      "ancient_slime"
+    ],
+    "PROPER_NAME": "先古史莱姆",
+    "DESCRIPTION": "攻击造成 #b3 点伤害并使你抽 #b1 张牌。"
+  },
+  {
+    "NAMES": [
+      "时间史莱姆",
+	  "time slime",
+      "time_slime"
+    ],
+    "PROPER_NAME": "时间史莱姆",
+    "DESCRIPTION": "攻击造成 #b4 点伤害并给予 #b1 层 #y虚弱 。"
+  },
+    {
+    "NAMES": [
+      "消耗黏液"
+    ],
+    "PROPER_NAME": "消耗黏液",
+    "DESCRIPTION": "当 #y攻击 带有 #y黏液 的敌人时获得的额外效果。"
+  },
+    {
+    "NAMES": [
+      "专家史莱姆",
+	  "specialist",
+      "specialist"
+    ],
+    "PROPER_NAME": "专家史莱姆",
+    "DESCRIPTION": "比普通史莱姆更加强大的独特史莱姆。"
+  }
+]
