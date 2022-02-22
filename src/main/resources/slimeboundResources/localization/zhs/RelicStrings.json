@@ -78,7 +78,7 @@
     "NAME": "陆军旗",
     "FLAVOR": "你和你的黏黏军团。",
     "DESCRIPTIONS": [
-      "战斗开始时， #yslimeboundmod:分裂 #yslimeboundmod:水蛭史莱姆 并获得 #b1 个史莱姆槽位。"
+      "战斗开始时， #yslimeboundmod:分裂 #yslimeboundmod:水蛭史莱姆 并获得 #b1 个史莱姆栏位。"
     ]
   },
   "Slimebound:SelfDamagePreventRelic": {
@@ -92,7 +92,7 @@
     "NAME": "焦油团",
     "FLAVOR": "坏的那种史莱姆。",
     "DESCRIPTIONS": [
-      "你的回合开始时获得 [E] 。每场战斗开始时失去 #b1 个史莱姆槽位。"
+      "你的回合开始时获得 [E] 。每场战斗开始时失去 #b1 个史莱姆栏位。"
     ]
   },
   "Slimebound:StickyStick": {
