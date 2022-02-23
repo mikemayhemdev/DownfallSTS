@@ -121,8 +121,8 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     //Turn 3
                     //Lightning
                     addToList(cardsList, new EnColdSnap());
-                    addToList(cardsList, new EnBarrage(), true); // Bullseye was here, but Bullseye is a cursed thing
                     //Lightning Frost
+                    addToList(cardsList, new EnBarrage(2), true); // Bullseye was here, but Bullseye is a cursed thing
                     addToList(cardsList, new EnLeap());
                     turn++;
                     break;
@@ -145,7 +145,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     //Lightning Frost Lightning
                     addToList(cardsList, new EnLeap());
                     addToList(cardsList, new EnChargeBattery());
-                    addToList(cardsList, new EnBarrage(), true); //Vex replaced Bullseye with Barrage+ here.
+                    addToList(cardsList, new EnBarrage(3), true); //Vex replaced Bullseye with Barrage+ here.
                     turn++;
                     break;
                 case 1:

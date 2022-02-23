@@ -27,10 +27,14 @@ public class EnFinisher extends AbstractBossCard {
     }
 
     public EnFinisher() {
+        this(0);
+    }
+
+    public EnFinisher(int hitCount) {
         super(ID, EnFinisher.cardStrings.NAME, "green/attack/finisher", 1, EnFinisher.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 6;
         this.isMultiDamage = true;
-        this.magicNumber = 0;
+        this.magicNumber = hitCount;
         intentMultiAmt = this.magicNumber;
     }
 
@@ -44,19 +48,19 @@ public class EnFinisher extends AbstractBossCard {
         super.applyPowers();
         int count = this.magicNumber;
 
-        Iterator var2 = AbstractCharBoss.boss.hand.group.iterator();
-
-        while(var2.hasNext()) {
-            AbstractCard c = (AbstractCard)var2.next();
-            if (c.type == CardType.ATTACK && !(c instanceof EnFinisher) || c instanceof EnCloakAndDagger)
-                ++count;
-            if (c instanceof EnBladeDance)
-                count += 3;
-        }
-
-        this.magicNumber = count;
-        this.intentMultiAmt = this.magicNumber;
-        this.lockIntentValues = true;
+//        Iterator var2 = AbstractCharBoss.boss.hand.group.iterator();
+//
+//        while(var2.hasNext()) {
+//            AbstractCard c = (AbstractCard)var2.next();
+//            if (c.type == CardType.ATTACK && !(c instanceof EnFinisher) || c instanceof EnCloakAndDagger)
+//                ++count;
+//            if (c instanceof EnBladeDance)
+//                count += 3;
+//        }
+//
+//        this.magicNumber = count;
+//        this.intentMultiAmt = this.magicNumber;
+//        this.lockIntentValues = true;
 
 
         this.rawDescription = EnFinisher.cardStrings.DESCRIPTION;

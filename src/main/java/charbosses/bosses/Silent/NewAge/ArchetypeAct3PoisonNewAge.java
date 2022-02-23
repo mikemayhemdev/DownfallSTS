@@ -76,7 +76,7 @@ public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
                     //Turn 3
                     addToList(cardsList, new EnEndlessAgony());
                     addToList(cardsList, new EnEndlessAgony());
-                    addToList(cardsList, new EnFinisher());
+                    addToList(cardsList, new EnFinisher(2));
                     addToList(cardsList, new EnDefendGreen());
                     turn++;
                     break;
@@ -108,7 +108,6 @@ public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
                     AbstractBossCard c = new EnCloakAndDagger();
                     c.freeToPlayOnce = true;
                     c.costForTurn = 0;
-                    if (extraUpgrades) c.upgrade();
                     addToList(cardsList, c);
                     addToList(cardsList, new EnGlassKnife());
                     turn++;
@@ -125,7 +124,7 @@ public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
                     addToList(cardsList, new EnShiv());
                     addToList(cardsList, new EnFlyingKnee());
                     addToList(cardsList, new EnFlechettes());
-                    addToList(cardsList, new EnFinisher());
+                    addToList(cardsList, new EnFinisher(3));
                     addToList(cardsList, new EnLegSweep());
                     addToList(cardsList, new EnBlur());
                     turn++;
