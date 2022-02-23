@@ -31,7 +31,7 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
     @Override
     public void addedPreBattle() {
         super.addedPreBattle();
-        AbstractCreature p = AbstractCharBoss.boss;
+        AbstractCreature p = AbstractDungeon.player;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PoisonProtectionPower(p)));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, new SilentPoisonPower(AbstractCharBoss.boss)));
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SilentShivTimeEaterPower(p)));

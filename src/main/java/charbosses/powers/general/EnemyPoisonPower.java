@@ -5,6 +5,7 @@
 
 package charbosses.powers.general;
 
+import charbosses.actions.unique.EnemyPoisonDamageAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
@@ -57,17 +58,9 @@ public class EnemyPoisonPower extends AbstractPower {
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer) {
             if (AbstractDungeon.getCurrRoom().phase == RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-
-//                int remainingPoison = amount;
-//                while (remainingPoison > 0 && EnergyPanel.totalCount > 0){
-//                       remainingPoison -= 10;
-//                       AbstractDungeon.player.energy.use(1);
-//                       stackPower(-10);
-//                    AbstractDungeon.player.getPower(PoisonProtectionPower.POWER_ID).flashWithoutSound();
-//                }
                 if (amount > 0) {
                     this.flashWithoutSound();
-                    this.addToBot(new PoisonLoseHpAction(this.owner, this.source, this.amount, AttackEffect.POISON));
+                    this.addToBot(new EnemyPoisonDamageAction(this.owner, this.source, this.amount, AttackEffect.POISON));
                     this.addToBot(new ReducePowerAction(this.owner, this.owner, this, -1));
                 } else {
                     this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
