@@ -135,7 +135,7 @@
   },
   "Slimebound:RollThrough": {
     "NAME": "翻滚碾压",
-    "DESCRIPTION": "对所有敌人造成 !D! 伤害。 NL 下一张 slimeboundmod:冲撞 牌不会对你造成伤害。"
+    "DESCRIPTION": "对所有敌人造成 !D! 伤害。 NL 接下来 !M! 张 slimeboundmod:冲撞 牌不会对你造成伤害。"
   },
   "Slimebound:MassRepurpose": {
     "NAME": "回炉重造",
