@@ -72,5 +72,9 @@
   "expansioncontent:KnowingSkullWish": {
     "NAME": "Knowing Skull",
     "DESCRIPTION": "Ethereal. NL Spend HP to Wish for Souls, Success, or a Pick Me Up. NL Exhaust."
+  },
+  "expansioncontent:Antidote": {
+    "NAME": "Antidote",
+    "DESCRIPTION": "Retain. NL Lose all Poison. NL Exhaust."
   }
 }

@@ -95,13 +95,13 @@
   "downfall:SilentShivTimeEaterPower": {
     "NAME": "Bag of Knives",
     "DESCRIPTIONS": [
-      "The first two times you play a #b0 cost card each turn, Silent gains a #yShiv."
+      "The first two times you play a card that costs #b2 or more #yEnergy each turn, Silent gains a #yShiv."
     ]
   },
   "downfall:NeowBagOfKnives": {
     "NAME": "Bag of Knives",
     "DESCRIPTIONS": [
-      "The first two times you play a #b0 cost card each turn, take #b4 damage."
+      "The first two times you play a card that costs #b2 or more #yEnergy each turn, take #b4 damage."
     ]
   },
   "downfall:SilentMirrorImagePower": {
@@ -119,13 +119,13 @@
   "downfall:SilentPoisonPower": {
     "NAME": "Warning: Highly Toxic",
     "DESCRIPTIONS": [
-      "You have #yPoison #yResistance to combat Silent's #yPoison effects."
+      "Poison is blockable. Receive 2 #yAntidotes at the start of combat."
     ]
   },
   "downfall:NeowHighlyToxic": {
     "NAME": "Warning: Highly Toxic",
     "DESCRIPTIONS": [
-      "Neow applies #b10 #yPoison to you per turn. You have #yPoison #yResistance."
+      "Neow applies #b5 #yPoison to you per turn. Poison is blockable. Receive an #yAntidote every #b3 turns."
     ]
   },
   "downfall:DefectVoidPower": {

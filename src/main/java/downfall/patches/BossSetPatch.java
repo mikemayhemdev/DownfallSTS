@@ -71,14 +71,14 @@ public class BossSetPatch {
             }
         } else if (key.equals(CharBossSilent.ID)) {
             if (__instance instanceof TheBeyond) {
-                DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/icon/silent_poison.png");
-                DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/outline/silent_poison_outline.png");
+                DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/icon/silent_shiv.png");
+                DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/outline/silent_shiv_outline.png");
             } else if (__instance instanceof TheCity) {
                 DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/icon/silent_mirror_image.png");
                 DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/outline/silent_mirror_image_outline.png");
             } else {
-                DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/icon/silent_shiv.png");
-                DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/outline/silent_shiv_outline.png");
+                DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/icon/silent_poison.png");
+                DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/outline/silent_poison_outline.png");
             }
         } else if (key.equals(CharBossDefect.ID)) {
             if (__instance instanceof TheBeyond) {
