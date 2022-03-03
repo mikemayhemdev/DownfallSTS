@@ -316,7 +316,7 @@
   },
   "hermit:HeroicBravado": {
     "NAME": "Heroic Bravado",
-    "DESCRIPTION": "Ethereal. NL Gain 1 hermit:Rugged. NL Increase the cost of this card by 1 this combat."
+    "DESCRIPTION": "Ethereal. NL Gain 1 hermit:Rugged. NL Increase the cost of this card by !M! this combat."
   },
   "hermit:FromBeyond": {
     "NAME": "From Beyond",
