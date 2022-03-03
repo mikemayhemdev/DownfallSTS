@@ -24,7 +24,7 @@ public class Again extends AbstractHexaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new ExtinguishCurrentFlameAction());
         atb(new ChargeCurrentFlameAction());
-        applyToSelf(new AgainPower(1));
+        atb(new ExtinguishCurrentFlameAction());
     }
 
     public void upgrade() {

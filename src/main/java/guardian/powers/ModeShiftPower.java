@@ -55,7 +55,11 @@ public class ModeShiftPower extends AbstractGuardianPower {
         updateDescription();
         flash();
         if (this.amount <= 0) {
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, BLOCKONTRIGGER));
+            int blockAmt = BLOCKONTRIGGER;
+            if (AbstractDungeon.player.hasRelic(ModeShifter.ID)) {
+                blockAmt += 10;
+            }
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, blockAmt));
             AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveMode.STANCE_ID));
 
             int turns;
@@ -63,8 +67,6 @@ public class ModeShiftPower extends AbstractGuardianPower {
                 turns = 2;
             else
                 turns = 1;
-            if (AbstractDungeon.player.hasRelic(ModeShifter.ID) && activations == 0)
-                turns += 1;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DontLeaveDefensiveModePower(AbstractDungeon.player, turns), turns));
 
             this.activations++;

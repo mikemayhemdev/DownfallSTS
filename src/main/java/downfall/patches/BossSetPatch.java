@@ -1,6 +1,7 @@
 package downfall.patches;
 
 import charbosses.bosses.Defect.CharBossDefect;
+import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
@@ -24,9 +25,12 @@ public class BossSetPatch {
         if (EvilModeCharacterSelect.evilMode) {
             AbstractDungeon.monsterList.replaceAll((s) -> {
                 switch (s) {
-                    case "Looter": return downfallMod.makeID("LooterAlt");
-                    case "2 Thieves": return downfallMod.makeID("LooterAlt2");
-                    default: return s;
+                    case "Looter":
+                        return downfallMod.makeID("LooterAlt");
+                    case "2 Thieves":
+                        return downfallMod.makeID("LooterAlt2");
+                    default:
+                        return s;
                 }
             });
         }
@@ -97,6 +101,17 @@ public class BossSetPatch {
             } else {
                 DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/icon/watcher_wrath.png");
                 DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/outline/watcher_wrath_outline.png");
+            }
+        }  else if (key.equals(CharBossHermit.ID)) {
+            if (__instance instanceof TheBeyond) {
+                DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/icon/hermit_curse.png");
+                DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/outline/hermit_curse_outline.png");
+            } else if (__instance instanceof TheCity) {
+                DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/icon/hermit_wheel.png");
+                DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/outline/hermit_wheel_outline.png");
+            } else {
+                DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/icon/hermit_sharpshooter.png");
+                DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/outline/hermit_sharpshooter_outline.png");
             }
         } else if (key.equals(NeowBoss.ID)) {
             DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/icon/neow.png");

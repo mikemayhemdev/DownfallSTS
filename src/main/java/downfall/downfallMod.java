@@ -31,12 +31,12 @@ import champ.ChampChar;
 import champ.ChampMod;
 import champ.cards.ModFinisher;
 import champ.powers.LastStandModPower;
-import champ.relics.ChampStancesModRelic;
 import champ.relics.ChampionCrown;
 import champ.util.TechniqueMod;
 import charbosses.actions.util.CharBossMonsterGroup;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.CharBossDefect;
+import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
@@ -1270,6 +1270,7 @@ public class downfallMod implements
         BaseMod.addMonster(CharBossSilent.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()}));
         BaseMod.addMonster(CharBossDefect.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
         BaseMod.addMonster(CharBossWatcher.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
+        BaseMod.addMonster(CharBossHermit.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossHermit()}));
 
         BaseMod.addMonster(NeowBoss.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBoss()}));
         BaseMod.addMonster(NeowBossFinal.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBossFinal()}));
@@ -1358,6 +1359,7 @@ public class downfallMod implements
         possEncounterList.add(CharBossSilent.ID);
         possEncounterList.add(CharBossDefect.ID);
         possEncounterList.add(CharBossWatcher.ID);
+        possEncounterList.add(CharBossHermit.ID);
     }
 
     @Override

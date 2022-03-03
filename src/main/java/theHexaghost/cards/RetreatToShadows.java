@@ -12,8 +12,8 @@ public class RetreatToShadows extends AbstractHexaCard {
 
     //stupid intellij stuff SKILL, SELF, UNCOMMON
 
-    private static final int MAGIC = 6;
-    private static final int UPG_MAGIC = -3;
+    private static final int MAGIC = 5;
+    private static final int UPG_MAGIC = -2;
 
     public RetreatToShadows() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);

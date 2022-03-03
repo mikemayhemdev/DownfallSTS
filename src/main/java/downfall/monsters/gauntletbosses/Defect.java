@@ -111,5 +111,4 @@ public class Defect extends AbstractMonster {
             }
         }
     }
-
 }

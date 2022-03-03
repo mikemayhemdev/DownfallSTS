@@ -34,6 +34,7 @@ public class EndingDoubleFightPatch {
         AbstractDungeon.bossKey = NeowBossFinal.ID;
         CardCrawlGame.music.fadeOutBGM();
         CardCrawlGame.music.fadeOutTempBGM();
+
         MapRoomNode node = new MapRoomNode(-2, 5);
         node.room = new MonsterRoomBoss();
         AbstractDungeon.nextRoom = node;

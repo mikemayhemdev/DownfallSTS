@@ -1095,4 +1095,6 @@ public abstract class AbstractBossDeckArchetype {
         }
     }
     */
+
+    public boolean defaultToggle = false;
 }

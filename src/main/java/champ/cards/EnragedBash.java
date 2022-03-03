@@ -15,15 +15,13 @@ public class EnragedBash extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 7;
     private static final int MAGIC = 1;
 
     public EnragedBash() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-       // baseCool = cool = 2;
-        //myHpLossCost = 5;
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
         postInit();

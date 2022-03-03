@@ -21,17 +21,13 @@ public class ForkedFlame extends AbstractHexaCard {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
-        baseDamage = 7;
+        baseDamage = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
         atb(new ExtinguishAction(GhostflameHelper.getPreviousGhostFlame()));
         atb(new ChargeAction(GhostflameHelper.getPreviousGhostFlame()));
-        if (upgraded) {
-            atb(new ExtinguishCurrentFlameAction());
-            atb(new ChargeCurrentFlameAction());
-        }
         atb(new ExtinguishAction(GhostflameHelper.getNextGhostFlame()));
         atb(new ChargeAction(GhostflameHelper.getNextGhostFlame()));
     }
@@ -39,8 +35,7 @@ public class ForkedFlame extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            //upgradeBaseCost(1);
-            rawDescription = UPGRADE_DESCRIPTION;
+            upgradeDamage(5);
             initializeDescription();
         }
     }
