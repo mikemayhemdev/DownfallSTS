@@ -40,8 +40,8 @@ public class CharbossTutorials extends FtueTip {
 
     public CharbossTutorials() {
 
-        this.img1 = ImageMaster.loadImage("hermitResources/images/tip/t1.png");
-        this.img2 = ImageMaster.loadImage("hermitResources/images/tip/t2.png");
+        this.img1 = ImageMaster.loadImage("hermitResources/images/tip/boss_t1.png");
+        this.img2 = ImageMaster.loadImage("hermitResources/images/tip/boss_t2.png");
 
         txt1 = txt[0];
         txt2 = txt[1];
