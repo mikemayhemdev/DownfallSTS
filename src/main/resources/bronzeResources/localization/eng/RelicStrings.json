@@ -3,7 +3,7 @@
     "NAME": "Bronze Core",
     "FLAVOR": "Replace once every 50,000 years.",
     "DESCRIPTIONS": [
-      "The first #yFunction you create each combat costs #b0 until played."
+      "The first time you #yCompile a #yFunction each combat, gain [E] ."
     ]
   },
   "bronze:ProtectiveGoggles": {
@@ -43,7 +43,7 @@
   },
   "bronze:MakeshiftBattery": {
     "NAME": "Makeshift Battery",
-    "FLAVOR": "It's an 8.99 volt.",
+    "FLAVOR": "It's an 8.9 volt.",
     "DESCRIPTIONS": [
       "Gain [E] and add a random #yStatus card into your discard pile at the start of your turn."
     ]

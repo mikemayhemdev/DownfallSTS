@@ -1,6 +1,7 @@
 package automaton.relics;
 
 import automaton.AutomatonMod;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import downfall.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
@@ -29,15 +30,11 @@ public class BronzeCore extends CustomRelic implements OnCompileRelic {
 
     @Override
     public void receiveCompile(AbstractCard function, boolean forGameplay) {
-        if (!activated) {
-            if (function.cost > 0) {
-                function.freeToPlayOnce = true;
-                if (forGameplay) {
-                    activated = true;
-                    flash();
-                    grayscale = true;
-                }
-            }
+        if (!activated && forGameplay) {
+            flash();
+            activated = true;
+            grayscale = true;
+            addToBot(new GainEnergyAction(1));
         }
     }
 

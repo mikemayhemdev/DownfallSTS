@@ -3,7 +3,7 @@
     "NAME": "Bronze Gear",
     "FLAVOR": "Protection where you need it most.",
     "DESCRIPTIONS": [
-      "The first time you enter #yguardianmod:Defensive_Mode, it lasts for 1 more turn."
+      "The first time you enter #yguardianmod:Defensive_Mode each combat, gain an additional #b10 #yBlock."
     ]
   },
   "Guardian:ModeShifterPlus": {
