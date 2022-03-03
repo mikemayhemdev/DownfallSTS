@@ -21,9 +21,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
 
-public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
+public class ArchetypeAct3ShivsNewAge extends ArchetypeBaseSilent {
 
-    public ArchetypeAct3PoisonNewAge() {
+    public ArchetypeAct3ShivsNewAge() {
         super("SI_POISON_ARCHETYPE", "Poison");
 
         maxHPModifier += 350;
@@ -34,7 +34,7 @@ public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
     public void addedPreBattle() {
         super.addedPreBattle();
         AbstractCreature p = AbstractDungeon.player;
-
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, new SilentShivTimeEaterPower(AbstractCharBoss.boss)));
     }
 
     public void initialize() {

@@ -51,7 +51,7 @@ public class SilentShivTimeEaterPower extends AbstractBossMechanicPower {
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (!usedThisTurn){
-        if (!(card instanceof AbstractBossCard) && (card.freeToPlayOnce || card.costForTurn == 0) && card.cost != -1 && !card.purgeOnUse) {
+        if (!(card instanceof AbstractBossCard) && card.costForTurn >= 2 && card.cost != -1 && !card.purgeOnUse) {
             ++amount;
             flashWithoutSound();
             if (AbstractCharBoss.boss != null) {

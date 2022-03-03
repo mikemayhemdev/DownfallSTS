@@ -35,7 +35,8 @@ public class NeowGainMinionPowersAction extends AbstractGameAction {
                             break;
                         }
                         case "downfall:Silent": {
-                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new BagOfKnives(owner)));
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new HighlyToxic(owner, 5)));
+//                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PoisonProtectionPower(AbstractDungeon.player)));
                             break;
                         }
                         case "downfall:Defect": {
@@ -86,9 +87,7 @@ public class NeowGainMinionPowersAction extends AbstractGameAction {
                             break;
                         }
                         case "downfall:Silent": {
-                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new HighlyToxic(owner, 10)));
-                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PoisonProtectionPower(AbstractDungeon.player)));
-
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new BagOfKnives(owner)));
                             break;
                         }
                         case "downfall:Defect": {

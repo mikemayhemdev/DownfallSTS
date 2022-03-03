@@ -58,8 +58,8 @@ public class PoisonProtectionPower extends AbstractPower implements CloneablePow
 
     }
 
-    public void atStartOfTurn() {
-        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+//    public void atStartOfTurn() {
+//        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
 //            boolean antidoteInHand = false;
 //            for (AbstractCard c : AbstractDungeon.player.hand.group) {
 //                if (c instanceof Antidote) {
@@ -68,11 +68,11 @@ public class PoisonProtectionPower extends AbstractPower implements CloneablePow
 //                }
 //            }
 //            if (!antidoteInHand) {
-                this.flash();
-                this.addToBot(new MakeTempCardInHandAction(new Antidote()));
+//                this.flash();
+//                this.addToBot(new MakeTempCardInHandAction(new Antidote()));
 //            }
-        }
-    }
+//        }
+//    }
 
     @Override
     public void update(int slot) {

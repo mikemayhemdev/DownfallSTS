@@ -7,11 +7,13 @@ import charbosses.cards.colorless.EnShiv;
 import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnDecay;
 import charbosses.cards.green.*;
+import charbosses.cards.other.Antidote;
 import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
 import charbosses.powers.bossmechanicpowers.SilentShivTimeEaterPower;
 import charbosses.powers.general.PoisonProtectionPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.green.DeadlyPoison;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -19,9 +21,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
 
-public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
+public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
 
-    public ArchetypeAct1ShivsNewAge() {
+    public ArchetypeAct1PoisonNewAge() {
         super("SI_SHIV_ARCHETYPE", "Shivs");
 
         maxHPModifier += 60;
@@ -32,9 +34,9 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
     public void addedPreBattle() {
         super.addedPreBattle();
         AbstractCreature p = AbstractDungeon.player;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PoisonProtectionPower(p)));
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PoisonProtectionPower(p)));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, new SilentPoisonPower(AbstractCharBoss.boss)));
-//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SilentShivTimeEaterPower(p)));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Antidote(), 2));
     }
 
     public void initialize() {
@@ -105,7 +107,7 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnBane());
+                    addToList(cardsList, new EnBane(), extraUpgrades);
                     addToList(cardsList, new EnPoisonedStab());
                     addToList(cardsList, new EnDefendGreen());
                     turn = 0;
