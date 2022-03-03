@@ -39,7 +39,7 @@ public class EnBouncingFlask extends AbstractBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new VFXAction(new PotionBounceEffect(m.hb.cX, m.hb.cY, p.hb.cX, this.hb.cY), 0.4F));// 41
-        this.addToBot(new EnemyBouncingFlaskAction(4, m, this.magicNumber));// 43
+        this.addToBot(new EnemyBouncingFlaskAction(3, m, this.magicNumber));// 43
     }
 
     @Override

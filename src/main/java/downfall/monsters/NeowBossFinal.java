@@ -26,10 +26,7 @@ import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import downfall.actions.NeowGainMinionPowersAction;
 import downfall.downfallMod;
 import downfall.powers.NeowInvulnerablePower;
-import downfall.powers.neowpowers.BlasphemersDemise;
-import downfall.powers.neowpowers.EnergyThief;
-import downfall.powers.neowpowers.FeedingFrenzy;
-import downfall.powers.neowpowers.SeeingDoubleProduct;
+import downfall.powers.neowpowers.*;
 import downfall.vfx.combat.FakeDeathScene;
 import guardian.vfx.SmallLaserEffectColored;
 

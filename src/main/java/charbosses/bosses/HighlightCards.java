@@ -1,8 +1,5 @@
 package charbosses.bosses;
 
-import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Defect.NewAge.ArchetypeAct3OrbsNewAge;
-import charbosses.bosses.Silent.NewAge.ArchetypeAct1ShivsNewAge;
 import charbosses.cards.AbstractBossCard;
 import charbosses.powers.bossmechanicpowers.DefectCuriosityPower;
 import charbosses.powers.bossmechanicpowers.SilentShivTimeEaterPower;
@@ -36,7 +33,7 @@ public class HighlightCards {
     //TODO Work out an elegant way for the glow text to be slightly larger than the original, while maintaining the same origin
     @SpirePostfixPatch
     public static void patch(AbstractCard c, SpriteBatch sb) {
-        if (zeroCostChecker(c))
+        if (highCostChecker(c))
             renderIcon(c, sb, shivRegion);
         else if (rareChecker(c))
             renderIcon(c, sb, biasRegion);
@@ -56,7 +53,7 @@ public class HighlightCards {
     public static class CardGlowPatch {
         @SpirePostfixPatch
         public static void patch(CardGlowBorder __instance, AbstractCard c, Color col, @ByRef Color[] ___color) {
-            if (zeroCostChecker(c) || rareChecker(c)) {
+            if (highCostChecker(c) || rareChecker(c)) {
                 ___color[0] = Color.RED.cpy();
             }
         }
@@ -67,13 +64,13 @@ public class HighlightCards {
         sb.draw(img, drawX + img.offsetX - (float) img.originalWidth / 2.0F, drawY + img.offsetY - (float) img.originalHeight / 2.0F, (float) img.originalWidth / 2.0F - img.offsetX, (float) img.originalHeight / 2.0F - img.offsetY, (float) img.packedWidth, (float) img.packedHeight, C.drawScale * Settings.scale, C.drawScale * Settings.scale, C.angle);
     }
 
-    private static boolean zeroCostChecker(AbstractCard c) {
+    private static boolean highCostChecker(AbstractCard c) {
         if (AbstractDungeon.player != null && AbstractDungeon.getCurrMapNode() != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) { //This should stop the DoubleImage from rendering if the player has Echo stacks remaining in the card selection screen
             if (AbstractCharBoss.boss != null) {
                 if (!AbstractCharBoss.boss.isDeadOrEscaped()) {
                     if (AbstractCharBoss.boss.hasPower(SilentShivTimeEaterPower.POWER_ID)) {
                         if (!((SilentShivTimeEaterPower) AbstractCharBoss.boss.getPower(SilentShivTimeEaterPower.POWER_ID)).usedThisTurn) {
-                            if (!(c instanceof AbstractBossCard) && c.cost != -1 && (c.costForTurn == 0 || c.freeToPlayOnce) && !c.purgeOnUse) {
+                            if (!(c instanceof AbstractBossCard) && c.cost != -1 && (c.costForTurn >= 2) && !c.purgeOnUse) {
                                 return true;
                             }
                         }
@@ -85,7 +82,7 @@ public class HighlightCards {
                     if (NeowBossFinal.neowboss.hasPower(BagOfKnives.POWER_ID)) {
                         if (NeowBossFinal.neowboss.getPower(BagOfKnives.POWER_ID).amount > 0) {
 
-                            if (!(c instanceof AbstractBossCard) && c.cost != -1 && (c.costForTurn == 0 || c.freeToPlayOnce) && !c.purgeOnUse) {
+                            if (!(c instanceof AbstractBossCard) && c.cost != -1 && (c.costForTurn >= 2) && !c.purgeOnUse) {
                                 return true;
                             }
                         }
