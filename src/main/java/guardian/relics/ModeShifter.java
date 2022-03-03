@@ -23,6 +23,11 @@ public class ModeShifter extends CustomRelic{
     }
 
     @Override
+    public void atBattleStart() {
+        grayscale = false;
+    }
+
+    @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
     }
