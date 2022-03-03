@@ -24,5 +24,19 @@
       "(Page: ",
       ")"
     ]
+  },
+  ,
+  "HermitMod:CharbossTutorials": {
+    "TEXT": [
+      "The enemy Heroes have powerful abilities that may require you to alter your strategies.",
+      "Be sure to always check a hero's buffs before engaging."
+    ],
+    "LABEL": [
+      "Next",
+      "Got it",
+      "Dead On",
+      "(Page: ",
+      ")"
+    ]
   }
 }
