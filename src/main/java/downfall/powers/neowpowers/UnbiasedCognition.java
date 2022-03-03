@@ -48,7 +48,7 @@ public class UnbiasedCognition extends AbstractBossMechanicPower {
 
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.rarity == AbstractCard.CardRarity.RARE && !(card instanceof AbstractBossCard)) {
+        if (card.type == AbstractCard.CardType.POWER && !(card instanceof AbstractBossCard)) {
             flash();
             addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount), this.amount));
         }
