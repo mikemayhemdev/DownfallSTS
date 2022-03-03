@@ -123,8 +123,8 @@
   },
   "hermit:TakeCover": {
     "NAME": "快找掩护",
-    "DESCRIPTION": "将X张 *防御 加入你的手牌。 NL 它们本场战斗中耗能为0。 消耗 。",
-    "UPGRADE_DESCRIPTION": "将X张 *防御+ 加入你的手牌。 NL 它们本场战斗中耗能为0。 消耗 。"
+    "DESCRIPTION": "将X张 *防御 加入你的手牌。 NL 它们本场战斗中耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "将X张 *防御+ 加入你的手牌。 NL 它们本场战斗中耗能为0。 NL 消耗 。"
   },
   "hermit:Misfire": {
     "NAME": "擦枪走火",
