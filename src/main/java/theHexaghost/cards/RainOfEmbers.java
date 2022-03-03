@@ -13,16 +13,11 @@ public class RainOfEmbers extends AbstractHexaCard {
 
     public final static String ID = makeID("RainOfEmbers");
 
-    //stupid intellij stuff ATTACK, ENEMY, COMMON
-
-    private static final int DAMAGE = 7;
-    private static final int MAGIC = 0;
-
     public RainOfEmbers() {
-        super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = DAMAGE;
-        baseBurn = burn = 7;
-        baseMagicNumber = magicNumber = MAGIC;
+        super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseDamage = 6;
+        baseBurn = burn = 6;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -30,31 +25,19 @@ public class RainOfEmbers extends AbstractHexaCard {
             energyOnUse = EnergyPanel.totalCount;
         }
 
-        EmbersAction r = new EmbersAction(magicNumber, p, m, damage, damageTypeForTurn, burn);
+        EmbersAction r = new EmbersAction(0, p, m, damage, damageTypeForTurn, burn);
         atb(new PerformXAction(r, p, energyOnUse, freeToPlayOnce));
 
-        if (energyOnUse >= 3){
-
-            for (AbstractMonster q : monsterList()) {
-                if (upgraded){
-                    applyToEnemy(q, autoWeak(q, 2));
-                    applyToEnemy(q, autoVuln(q, 2));
-                } else {
-                    applyToEnemy(q, autoWeak(q, 1));
-                    applyToEnemy(q, autoVuln(q, 1));
-                }
-            }
-
+        if (energyOnUse >= 3) {
+            applyToEnemy(m, autoWeak(m, magicNumber));
         }
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(1);
-            upgradeBurn(1);
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeDamage(2);
+            upgradeBurn(2);
         }
     }
 }

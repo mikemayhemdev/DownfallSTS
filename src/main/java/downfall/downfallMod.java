@@ -31,12 +31,12 @@ import champ.ChampChar;
 import champ.ChampMod;
 import champ.cards.ModFinisher;
 import champ.powers.LastStandModPower;
-import champ.relics.ChampStancesModRelic;
 import champ.relics.ChampionCrown;
 import champ.util.TechniqueMod;
 import charbosses.actions.util.CharBossMonsterGroup;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.CharBossDefect;
+import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
@@ -80,6 +80,7 @@ import com.megacrit.cardcrawl.relics.MedicalKit;
 import com.megacrit.cardcrawl.relics.VelvetChoker;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.screens.custom.CustomMod;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -210,7 +211,8 @@ public class downfallMod implements
     public static boolean[] unseenTutorials = new boolean[]{
             true, // Hermit
             true, // Guardian
-            true // Hexa
+            true, // Hexa
+            true // Charboss Info
     };
 
     public static Properties tutorialSaves = new Properties();
@@ -1270,6 +1272,7 @@ public class downfallMod implements
         BaseMod.addMonster(CharBossSilent.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()}));
         BaseMod.addMonster(CharBossDefect.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
         BaseMod.addMonster(CharBossWatcher.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
+        BaseMod.addMonster(CharBossHermit.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossHermit()}));
 
         BaseMod.addMonster(NeowBoss.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBoss()}));
         BaseMod.addMonster(NeowBossFinal.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBossFinal()}));
@@ -1358,6 +1361,7 @@ public class downfallMod implements
         possEncounterList.add(CharBossSilent.ID);
         possEncounterList.add(CharBossDefect.ID);
         possEncounterList.add(CharBossWatcher.ID);
+        possEncounterList.add(CharBossHermit.ID);
     }
 
     @Override
@@ -1685,6 +1689,14 @@ public class downfallMod implements
         if (AbstractDungeon.player instanceof GuardianCharacter) {
             if (downfallMod.unseenTutorials[1]) {
                 AbstractDungeon.actionManager.addToBottom(new MessageCaller(1));
+            }
+        }
+
+        if (abstractRoom instanceof MonsterRoomBoss) {
+            if (evilMode) {
+                if (downfallMod.unseenTutorials[3]) {
+                    AbstractDungeon.actionManager.addToBottom(new MessageCaller(3));
+                }
             }
         }
     }

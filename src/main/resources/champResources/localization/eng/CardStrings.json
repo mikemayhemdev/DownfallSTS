@@ -33,7 +33,7 @@
   },
   "champ:SwordSigil": {
     "NAME": "Sigil of Victory",
-    "DESCRIPTION": "Repeat this effect !M! times. NL Exhaust."
+    "DESCRIPTION": "Perform !M! times, then Exhaust:"
   },
   "champ:FocusedGladiator": {
     "NAME": "Focus: Gladiator",
@@ -65,7 +65,7 @@
   },
   "champ:ShieldSigil": {
     "NAME": "Chain Lash",
-    "DESCRIPTION": "Repeat this effect !M! times."
+    "DESCRIPTION": "Perform !M! times:"
   },
   "champ:FocusedDefense": {
     "NAME": "Focus: Defensive",
@@ -118,7 +118,7 @@
   },
   "champ:Devastate": {
     "NAME": "Devastate",
-    "DESCRIPTION": "Deal !D! damage. NL Costs 1 less [E] for each Finisher played this combat."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Costs 1 less [E] for each Finisher played this combat."
   },
   "champ:Control": {
     "NAME": "Control",
@@ -175,7 +175,7 @@
   },
   "champ:FalseCounter": {
     "NAME": "False Counter",
-    "DESCRIPTION": "The next time champ:Counter activates, lose only half.",
+    "DESCRIPTION": "Gain !M! champ:Counter. NL The next time champ:Counter activates, lose only half.",
     "UPGRADE_DESCRIPTION": "Gain !M! champ:Counter. NL The next time champ:Counter activates, lose only half.",
     "EXTENDED_DESCRIPTION": [
       "A poor time for that move."
@@ -246,7 +246,7 @@
   },
   "champ:SwordThrow": {
     "NAME": "Sword Throw",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Unless *Berserker champ:Combo: You can't attack next turn."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Unless *Berserker champ:Combo: Gain 2 Weak."
   },
   "champ:MurderStrike": {
     "NAME": "Murder Strike",
@@ -288,7 +288,7 @@
   },
   "champ:HeartStrike": {
     "NAME": "Finish Him",
-    "DESCRIPTION": "Can only be used against an enemy with less than !M!% HP. NL Deal !D! damage.",
+    "DESCRIPTION": "Deal !D! damage. NL If target was below !M!% HP deals damage twice.",
     "EXTENDED_DESCRIPTION": [
       "A poor time for that move.",
       "That foe isn't ready to be ended yet."
@@ -304,7 +304,7 @@
   },
   "champ:LastStand": {
     "NAME": "Last Stand",
-    "DESCRIPTION": "Can only be played if you're under 50% HP. NL Remove all debuffs. NL Gain 6 Strength.",
+    "DESCRIPTION": "Once you get below 50% HP, remove all debuffs and gain 6 Strength.",
     "EXTENDED_DESCRIPTION": [
       "~You've~ ~done~ ~it~ ~now...~",
       "@DEFEAT??@ NL @IMPOSSIBLE!!@"
@@ -416,7 +416,7 @@
   },
   "champ:Parry": {
     "NAME": "Parry",
-    "DESCRIPTION": "Gain !M! champ:Counter. NL If your champ:Counter is used this turn, add *Riposte to your hand.",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter. NL If your champ:Counter is used this turn, add *Riposte to your hand.",
     "UPGRADE_DESCRIPTION": "Deal damage equal to the amount of champ:Counter used. NL Exhaust."
   },
   "champ:EnchantCrown": {

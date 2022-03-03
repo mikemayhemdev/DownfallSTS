@@ -16,6 +16,9 @@ import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
 import charbosses.cards.green.EnBladeDance;
 import charbosses.cards.green.EnCloakAndDagger;
+import charbosses.cards.hermit.EnDesperado;
+import charbosses.cards.hermit.EnHoleUp;
+import charbosses.cards.hermit.EnItchyTrigger;
 import charbosses.cards.red.EnBodySlam;
 import charbosses.cards.red.EnSecondWind;
 import charbosses.core.EnemyEnergyManager;
@@ -60,6 +63,7 @@ import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import hermit.cards.HoleUp;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
@@ -186,10 +190,10 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         */
 
 
-        if (AbstractDungeon.ascensionLevel >= 20 && CardCrawlGame.dungeon instanceof com.megacrit.cardcrawl.dungeons.TheBeyond) {
-            new CBR_LizardTail().instantObtain(this);
+      //  if (AbstractDungeon.ascensionLevel >= 20 && CardCrawlGame.dungeon instanceof com.megacrit.cardcrawl.dungeons.TheBeyond) {
+       //     new CBR_LizardTail().instantObtain(this);
             // new CBR_MagicFlower().instantObtain(this);
-        }
+      //  }
         /*
         if (NeowBoss.neowboss != null) {
             switch (chosenArchetype.actNum) {
@@ -231,9 +235,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
 
         if (hasPower(MinionPower.POWER_ID)) {
-            if (NeowBoss.neowboss.minion != this) {
-                playMusic();
-            }
+            playMusic();
         } else {
             playMusic();
         }
@@ -1153,12 +1155,10 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             CardCrawlGame.screenShake.rumble(4.0F);
             if (!(this instanceof CharBossMerchant)) {
                 if (hasPower(MinionPower.POWER_ID)) {
-                    if (NeowBoss.neowboss.minion == null) {
-                        if (Settings.FAST_MODE) {
-                            this.deathTimer += 0.7F;
-                        } else {
-                            ++this.deathTimer;
-                        }
+                    if (Settings.FAST_MODE) {
+                        this.deathTimer += 0.7F;
+                    } else {
+                        ++this.deathTimer;
                     }
                 } else {
                     //SlimeboundMod.logger.info("Char boss On Boss Victory now playing");
@@ -1166,20 +1166,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 }
             }
 
-        }
-
-        if (hasPower(MinionPower.POWER_ID)) {
-            if (NeowBoss.neowboss.minion == this) {
-                SlimeboundMod.logger.info("Archetype act num: " + chosenArchetype.actNum);
-                NeowBoss.neowboss.minion = null;
-                if (chosenArchetype.actNum == 3) {
-                    SlimeboundMod.logger.info("Boss instructing Neow to Self Rez");
-                    NeowBoss.neowboss.switchIntentToSelfRez();
-                } else {
-                    SlimeboundMod.logger.info("Boss instructing Neow to Rez");
-                    NeowBoss.neowboss.switchToRez();
-                }
-            }
         }
 
         AbstractCharBoss.boss = null;

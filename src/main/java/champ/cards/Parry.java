@@ -10,14 +10,10 @@ public class Parry extends AbstractChampCard {
 
     public final static String ID = makeID("Parry");
 
-    //stupid intellij stuff skill, self, uncommon
-
-    private static final int MAGIC = 10;
-    private static final int UPG_MAGIC = 4;
-
     public Parry() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = MAGIC;
+        baseBlock = 6;
+        baseMagicNumber = magicNumber = 10;
         AbstractCard c = new Riposte();
         c.rawDescription = UPGRADE_DESCRIPTION;
         c.initializeDescription();
@@ -26,6 +22,7 @@ public class Parry extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
         applyToSelf(new CounterPower(magicNumber));
         applyToSelf(new ParryPower(1));
     }

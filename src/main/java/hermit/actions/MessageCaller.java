@@ -1,6 +1,7 @@
 package hermit.actions;
 
 import downfall.downfallMod;
+import downfall.tutorials.CharbossTutorials;
 import downfall.tutorials.GuardianTutorials;
 import hermit.HermitMod;
 import hermit.util.HermitTutorials;
@@ -40,6 +41,9 @@ public class MessageCaller extends AbstractGameAction {
                     break;
                 case 2:
                     AbstractDungeon.ftue = new GuardianTutorials();
+                    break;
+                case 3:
+                    AbstractDungeon.ftue = new CharbossTutorials();
                     break;
             }
             downfallMod.unseenTutorials[code] = false;
