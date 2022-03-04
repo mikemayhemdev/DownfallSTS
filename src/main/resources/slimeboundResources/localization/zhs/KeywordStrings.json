@@ -4,14 +4,14 @@
       "吸收"
     ],
     "PROPERNAME": "吸收",
-    "DESCRIPTION": "融合最前面的的史莱姆并获得 #b1 点 #y力量 。"
+    "DESCRIPTION": "融合最前面的的 #y史莱姆 并获得 #b1 点 #y力量 。"
   },
   {
     "NAMES": [
       "分裂"
     ],
     "PROPERNAME": "分裂",
-    "DESCRIPTION": "生成将在每回合时开始攻击的 #y史莱姆 爪牙。如果栏位不足，融合最后面的史莱姆并获得 #b1 点 #y力量 。"
+    "DESCRIPTION": "在最前面生成将在每回合时开始攻击的 #y史莱姆 爪牙。如果栏位不足，融合最后面的 #y史莱姆 并获得 #b1 点 #y力量 。"
   },
   {
     "NAMES": [
@@ -25,13 +25,13 @@
       "潜力"
     ],
     "PROPERNAME": "潜力",
-    "DESCRIPTION": "提升所有 #y分裂 的史莱姆的攻击伤害。"
+    "DESCRIPTION": "提升所有 #y分裂 的 #y史莱姆 的攻击伤害。"
   },
   { "NAMES": [
       "命令"
     ],
     "PROPER_NAME": "命令",
-    "DESCRIPTION": "最前面的史莱姆将会攻击。"
+    "DESCRIPTION": "最前面的 #y史莱姆 将会攻击。"
   },
   {
     "NAMES": [
@@ -177,7 +177,7 @@
       "darkling_slime"
     ],
     "PROPER_NAME": "小黑史莱姆",
-    "DESCRIPTION": "攻击造成 #b3 点伤害。 #y命令 时，其他小黑史莱姆也会攻击。"
+    "DESCRIPTION": "攻击造成 #b3 点伤害。 #y命令 时，其他 #y小黑史莱姆 也会攻击。"
   },
   {
     "NAMES": [
@@ -211,6 +211,6 @@
       "specialist"
     ],
     "PROPER_NAME": "专家史莱姆",
-    "DESCRIPTION": "比普通史莱姆更加强大的独特史莱姆。"
+    "DESCRIPTION": "比普通 #y史莱姆 更加强大的独特 #y史莱姆 。"
   }
 ]
