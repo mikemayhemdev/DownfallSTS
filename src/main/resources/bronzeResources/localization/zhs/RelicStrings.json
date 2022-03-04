@@ -3,7 +3,7 @@
     "NAME": "铜制核心",
     "FLAVOR": "每50,000年一换。",
     "DESCRIPTIONS": [
-      "每场战斗你生成的第一张 #y方法 直到打出前费用为 #b0 。"
+      "每场战斗你 #y编译 第一张 #y方法 时，获得 [E] 。"
     ]
   },
   "bronze:ProtectiveGoggles": {
@@ -43,7 +43,7 @@
   },
   "bronze:MakeshiftBattery": {
     "NAME": "备用电池",
-    "FLAVOR": "足足有8。99伏特。",
+    "FLAVOR": "足足有8.9伏特。",
     "DESCRIPTIONS": [
       "每回合开始时获得 [E] ，将一张随机 #y状态牌 加入弃牌堆。"
     ]
@@ -84,7 +84,7 @@
     "NAME": "甜圈垫片",
     "FLAVOR": "这显然是甜甜圈的藏品。",
     "DESCRIPTIONS": [
-      "每场战斗开始时, 获得 [E] [E] 。将 #b1 张 #y虚空 加入到抽牌堆。"
+      "每场战斗开始时，获得 [E] [E] 。将 #b1 张 #y虚空 加入到抽牌堆。"
     ]
   },
   "bronze:BronzeIdol": {
