@@ -208,8 +208,8 @@
   },
   "Guardian:FuturePlans": {
     "NAME": "未来计划",
-    "DESCRIPTION": "你的回合结束时，最多将手牌中的 !M! 张牌 guardianmod:凝滞 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 你的回合结束时，最多将手牌中的 !M! 张牌 guardianmod:凝滞 。"
+    "DESCRIPTION": "你的回合结束时，可将手牌中的 !M! 张牌 guardianmod:凝滞 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 你的回合结束时，可将手牌中的 !M! 张牌 guardianmod:凝滞 。"
   },
   "Guardian:Suspension": {
     "NAME": "挂起",
@@ -222,7 +222,7 @@
 	"UPGRADE_DESCRIPTION": "保留 。 NL  guardianmod:加速 !M! 次。"
   },
   "Guardian:TimeCapacitor": {
-    "NAME": "时间电容器",
+    "NAME": "时间容器",
     "DESCRIPTION": "获得 !M! 个 guardianmod:凝滞 栏位。"
   },
   "Guardian:ConstructionForm": {
@@ -381,8 +381,8 @@
   },
   "Guardian:StasisEngine": {
     "NAME": "凝滞引擎",
-    "DESCRIPTION": "每回合打出第三张0费牌时，获得 [E] 并抽 1 张牌。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 每回合打出第三张0费牌时，获得 [E] 并抽 1 张牌。"
+    "DESCRIPTION": "每回合打出第三张0耗能牌时，获得 [E] 并抽 1 张牌。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每回合打出第三张0耗能牌时，获得 [E] 并抽 1 张牌。"
   },
   "Guardian:HammerDown": {
     "NAME": "坠落重锤",
