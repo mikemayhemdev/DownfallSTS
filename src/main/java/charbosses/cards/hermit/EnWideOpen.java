@@ -1,5 +1,7 @@
 package charbosses.cards.hermit;
 
+import basemod.ModLabel;
+import basemod.ModLabeledToggleButton;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
