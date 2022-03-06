@@ -14,17 +14,14 @@ public class DiceBlock extends AbstractSneckoCard {
     public final static String ID = makeID("DiceBlock");
 
     public DiceBlock() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 5;
-        baseMagicNumber = magicNumber = 3;
+        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = 12;
+        baseMagicNumber = magicNumber = 8;
         tags.add(SneckoMod.RNG);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new GainBlockAction(p, getRandomNum(magicNumber, block, this)));
-        for (int i = 0; i < this.costForTurn; i++) {
-            atb(new GainBlockAction(p, getRandomNum(magicNumber, block, this)));
-        }
         atb(new MuddleAction(this));
     }
 
@@ -45,8 +42,8 @@ public class DiceBlock extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
-            upgradeBlock(2);
+            upgradeMagicNumber(4);
+            upgradeBlock(4);
         }
     }
 }

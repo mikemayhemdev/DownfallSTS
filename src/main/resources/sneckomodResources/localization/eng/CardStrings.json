@@ -74,7 +74,7 @@
   "sneckomod:Nope": {
     "NAME": "Nope",
     "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. NL Replace it with a random card of the same class.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. NL Replace it with a random card of the same class that costs 1 less.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. NL Replace it with a random card of the same class. NL It costs 1 less.",
     "EXTENDED_DESCRIPTION": [
       " to Exhaust for Nope."
     ]
@@ -184,7 +184,7 @@
   "sneckomod:PureSnecko": {
     "NAME": "Shift",
     "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust all sneckomod:Offclass cards in your hand, replacing them with new ones.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust all sneckomod:Offclass cards in your hand, replacing them with new ones that cost 1 less."
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust all sneckomod:Offclass cards in your hand, replacing them with new ones. NL They cost 1 less."
   },
   "sneckomod:Cheat": {
     "NAME": "Cheat",
@@ -229,7 +229,7 @@
   },
   "sneckomod:DiceBlock": {
     "NAME": "Dice Block",
-    "DESCRIPTION": "Gain !M! - !B! Block. NL Repeat per every [E] this card costs, then sneckomod:Muddle this."
+    "DESCRIPTION": "Gain !M! - !B! Block. NL sneckomod:Muddle this."
   },
   "sneckomod:MixItUp": {
     "NAME": "Mix It Up!",
@@ -265,11 +265,11 @@
   },
   "sneckomod:RainOfDice": {
     "NAME": "Rain of Dice",
-    "DESCRIPTION": "Deal !qqq! - !D! damage to a random enemy 2 - !M! times."
+    "DESCRIPTION": "Deal !qqq! - !D! damage to a random enemy per every [E] this card costs plus !M!."
   },
   "sneckomod:DiceCrush": {
     "NAME": "Dice Crush",
-    "DESCRIPTION": "Deal !M! - !D! damage. NL Repeat per every [E] this card costs, then sneckomod:Muddle this."
+    "DESCRIPTION": "Deal !M! - !D! damage. NL sneckomod:Muddle this."
   },
   "sneckomod:SnakeSap": {
     "NAME": "Snake Sap",

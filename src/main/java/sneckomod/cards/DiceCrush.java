@@ -13,17 +13,14 @@ public class DiceCrush extends AbstractSneckoCard {
     public final static String ID = makeID("DiceCrush");
 
     public DiceCrush() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 7;
-        baseMagicNumber = magicNumber = 3;
+        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 16;
+        baseMagicNumber = magicNumber = 10;
         tags.add(SneckoMod.RNG);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new NoApplyRandomDamageAction(m, magicNumber, damage, 1, AbstractGameAction.AttackEffect.SMASH, this, DamageInfo.DamageType.NORMAL));
-        for (int i = 0; i < this.cost; i++) {
-            atb(new NoApplyRandomDamageAction(m, magicNumber, damage, 1, AbstractGameAction.AttackEffect.SMASH, this, DamageInfo.DamageType.NORMAL));
-        }
         atb(new MuddleAction(this));
     }
 
@@ -62,8 +59,8 @@ public class DiceCrush extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
-            upgradeDamage(2);
+            upgradeMagicNumber(4);
+            upgradeDamage(4);
         }
     }
 }
