@@ -281,7 +281,10 @@ public class CustomAnimatedNPC {
 
                 // then, finally, we restart the SpriteBatch and render our final texture.
                 sb.begin();
-                sb.draw(maskedHeart, 0, 0);
+                // the letterboxing was previously applied to the graphics we rendered into the framebuffers. it will
+                // be applied a second time when we render the framebuffer texture to the screen. we can offset the
+                // texture's position to undo the letterboxing.
+                sb.draw(maskedHeart, -2*Settings.VERT_LETTERBOX_AMT, -2*Settings.HORIZ_LETTERBOX_AMT);
 
                 // now you can render whatever you like overtop it.
             }
