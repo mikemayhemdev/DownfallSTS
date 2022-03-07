@@ -117,7 +117,7 @@
   },
   "bronze:Separator": {
     "NAME": "分离器",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 当 bronze:编码 时，如果不在最前后槽位，提高 !M! 点伤害。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编码 时，如果不在最前后槽位，提高 !M! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       "分离",
       "子项"
@@ -137,8 +137,8 @@
   },
   "bronze:RecursiveStrike": {
     "NAME": "递归打击",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL bronze:编译 - bronze:编码 !M! 张 *打击 的复制。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL bronze:编译 - bronze:编码 !M! 张 *打击+ 的复制。",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL bronze:编译 - bronze:编码 !M! 张 *打击 的复制品。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL bronze:编译 - bronze:编码 !M! 张 *打击+ 的复制品。",
     "EXTENDED_DESCRIPTION": [
       "递归",
       "循环"
@@ -256,7 +256,7 @@
   },
   "bronze:GetLatest": {
     "NAME": "最新素材",
-    "DESCRIPTION": "随机将一张可 bronze:编码 的牌加入手牌。 NL 它费用为0。 NL 消耗 。"
+    "DESCRIPTION": "随机将一张可 bronze:编码 的牌加入手牌。 NL 它耗能为0。 NL 消耗 。"
   },
   "bronze:Flail": {
     "NAME": "乱斗",
@@ -309,12 +309,12 @@
   },
   "bronze:CloningBeam": {
     "NAME": "和并冲击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 下一次 bronze:编码 时， bronze:编码 这张牌的复制品。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 下一次 bronze:编码 时， bronze:编码 这张牌的复制品。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 下张 bronze:编码 牌 bronze:编码 两次。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 下张 bronze:编码 牌 bronze:编码 两次。"
   },
   "bronze:FollowUp": {
     "NAME": "数据追踪",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 如果打出的上一张牌是 *方法 ,再打出一次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 如果打出的上张牌是 *方法 ，本牌再打出一次。"
   },
   "bronze:ChosenStrike": {
     "NAME": "邪教打击",
@@ -357,8 +357,8 @@
   },
   "bronze:Mutator": {
     "NAME": "赋值",
-    "DESCRIPTION": "获得 1 点 力量 。 NL 将手牌中的一张 *状态牌 变成本牌的复制品。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得 1 点 力量 。 NL 将手牌中的一张 *状态牌 变成本牌的复制品。"
+    "DESCRIPTION": "获得 1 点 力量 。 NL 将手牌中的一张 状态牌 变成本牌的复制品。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得 1 点 力量 。 NL 将手牌中的一张 状态牌 变成本牌的复制品。"
   },
   "bronze:Allocate": {
     "NAME": "分配",
@@ -415,8 +415,8 @@
   },
   "bronze:ForLoop": {
     "NAME": "循环",
-    "DESCRIPTION": "下一张牌 bronze:编码 时， X 张这张牌的复制品也 bronze:编码 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 下一张牌 bronze:编码 时，X张这张牌的复制品也 bronze:编码 。 NL 消耗 。"
+    "DESCRIPTION": "下张 bronze:编码 牌再 bronze:编码 X次。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 下张 bronze:编码 牌再 bronze:编码 X次。 NL 消耗 。"
   },
   "bronze:Philosophize": {
     "NAME": "哲学思想",
@@ -433,7 +433,7 @@
   },
   "bronze:ForceShield": {
     "NAME": "力场护盾",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本场战斗每生成一张 *方法 ，本牌费用减1。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本场战斗每生成一张 *方法 ，本牌耗能减少 [E] 。"
   },
   "bronze:Format": {
     "NAME": "格式化",
@@ -479,12 +479,12 @@
   },
   "bronze:Library": {
     "NAME": "数据库",
-    "DESCRIPTION": "回合开始时，随机将一张可 bronze:编码 的牌加入手牌。 NL 它的费用为0。"
+    "DESCRIPTION": "回合开始时，随机将一张可 bronze:编码 的牌加入手牌。 NL 它的耗能为0。"
   },
   "bronze:Verify": {
     "NAME": "感知形态",
-    "DESCRIPTION": "虚无 。 NL 每回合第一次生成或抽到 *方法 时，这张牌的数值增加1点。",
-    "UPGRADE_DESCRIPTION": "每回合第一次生成或抽到 *方法 时，这张牌的数值增加1点。"
+    "DESCRIPTION": "虚无 。 NL 每回合第一次生成或抽到 *方法 时，它的数值增加1点。",
+    "UPGRADE_DESCRIPTION": "每回合第一次生成或抽到 *方法 时，它的数值增加1点。"
   },
   "bronze:BronzeHeatsink": {
     "NAME": "铜制散热器",
@@ -520,7 +520,7 @@
   },
   "bronze:Hardcode": {
     "NAME": "硬编码",
-    "DESCRIPTION": "你生成的下张 *方法 将加入牌组。 NL 从牌组中移除构成 *方法 的牌（包括本牌）。"
+    "DESCRIPTION": "你生成的下张 *方法 将加入牌组。 NL 从牌组中移除构成 *方法 的牌和本牌。"
   },
   "bronze:SpaghettiCode": {
     "NAME": "意面代码",
@@ -538,7 +538,7 @@
   },
   "bronze:CleanCode": {
     "NAME": "简明代码",
-    "DESCRIPTION": "下 !M! 次生成 *方法 时，移除其中的 bronze:编译 *错误 。"
+    "DESCRIPTION": "移除 bronze:编译 的下 !M! 张 *方法 中的 bronze:编译 *错误 。"
   },
   "bronze:BranchBlock": {
     "NAME": "分支: 格挡",
@@ -630,8 +630,8 @@
   },
   "bronze:AlphaBuild": {
     "NAME": "抢先体验",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:插入 随机状态牌。 NL bronze:编译 - bronze:插入 *贝塔测试 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 造成 !D! 点伤害。 NL bronze:插入 随机状态牌。 NL bronze:编译 - bronze:插入 *贝塔测试 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:插入 随机 状态牌 。 NL bronze:编译 - bronze:插入 *贝塔测试 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 造成 !D! 点伤害。 NL bronze:插入 随机 状态牌 。 NL bronze:编译 - bronze:插入 *贝塔测试 。",
     "EXTENDED_DESCRIPTION": [
       "粗略",
       "初版"
@@ -639,7 +639,7 @@
   },
   "bronze:BetaBuild": {
     "NAME": "贝塔测试",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:插入 随机状态牌。 NL bronze:编译 - bronze:插入 *完全公开 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:插入 随机 状态牌 。 NL bronze:编译 - bronze:插入 *完全公开 。",
     "EXTENDED_DESCRIPTION": [
       "早期",
       "内测"
@@ -647,7 +647,7 @@
   },
   "bronze:FullRelease": {
     "NAME": "完全公开",
-    "DESCRIPTION": " bronze:编译 - *方法 变成一张 能力牌 并且每回合打出一张。",
+    "DESCRIPTION": " bronze:编译 - *方法 变成一张每回合开始时触发效果的能力牌。",
     "EXTENDED_DESCRIPTION": [
       "完全",
       "公开"
