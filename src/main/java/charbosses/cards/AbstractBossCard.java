@@ -1,6 +1,7 @@
 package charbosses.cards;
 
 import basemod.ReflectionHacks;
+import basemod.abstracts.CustomCard;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import charbosses.cards.purple.EnDevotion;
@@ -40,9 +41,11 @@ import com.megacrit.cardcrawl.vfx.ShieldParticleEffect;
 import com.megacrit.cardcrawl.vfx.combat.BuffParticleEffect;
 import com.megacrit.cardcrawl.vfx.combat.StunStarEffect;
 import com.megacrit.cardcrawl.vfx.combat.UnknownParticleEffect;
+import hermit.characters.hermit;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 
 import static charbosses.cards.blue.EnZap.getFocusAmountSafe;
@@ -133,8 +136,14 @@ public abstract class AbstractBossCard extends AbstractCard {
         this.intent = intent;
 
         if (isCustomCard) {
-            this.portrait = new TextureAtlas.AtlasRegion(new Texture("downfallResources/images/cards/" + img + ".png"), 0, 0, 250, 190);
-            this.portraitImg = new Texture("downfallResources/images/cards/" + img + "_p.png");
+            if (color == hermit.Enums.COLOR_YELLOW) {
+                this.portrait = new TextureAtlas.AtlasRegion(new Texture(img), 0, 0, 250, 190);
+                this.portraitImg = new Texture(img);
+            }
+            else {
+                this.portrait = new TextureAtlas.AtlasRegion(new Texture("downfallResources/images/cards/" + img + ".png"), 0, 0, 250, 190);
+                this.portraitImg = new Texture("downfallResources/images/cards/" + img + "_p.png");
+            }
         }
 
     }
@@ -936,6 +945,23 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     }
 
+    public static HashMap<String, Texture> imgMap = new HashMap();
+
+    public void loadCardImage(String img) {
+        Texture cardTexture;
+        if (imgMap.containsKey(img)) {
+            cardTexture = (Texture)imgMap.get(img);
+        } else {
+            cardTexture = ImageMaster.loadImage(img);
+            imgMap.put(img, cardTexture);
+        }
+
+        cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+        int tw = cardTexture.getWidth();
+        int th = cardTexture.getHeight();
+        TextureAtlas.AtlasRegion cardImg = new TextureAtlas.AtlasRegion(cardTexture, 0, 0, tw, th);
+        ReflectionHacks.setPrivateInherited(this, CustomCard.class, "portrait", cardImg);
+    }
 
     static {
         TEXT = CardCrawlGame.languagePack.getUIString("AbstractMonster").TEXT;
