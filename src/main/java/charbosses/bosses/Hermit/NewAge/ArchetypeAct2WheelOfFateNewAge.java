@@ -126,7 +126,10 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         if (mockDeck.isEmpty()) {
             reshuffle();
         }
+        AbstractCard q = mockDeck.get(0);
         AbstractCharBoss.boss.hand.addToTop(mockDeck.get(0));
+        mockDeck.remove(q);
+        mockDeck.add(mockDeck.size(), q);
         AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
             @Override
             public void update() {

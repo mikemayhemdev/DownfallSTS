@@ -305,7 +305,7 @@
   "downfall:HermitDoomsday": {
     "NAME": "Doomsday",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust a card, add an #rImpending #rDoom into your hand."
+      "At the start of your turn, add an #yEthereal #rImpending #rDoom into your hand."
     ]
   }
 }
