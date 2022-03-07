@@ -91,7 +91,7 @@ public class FleeingMerchant extends AbstractMonster {
 
 
         drawX = 1260.0F * Settings.scale;
-        drawY = 370.0F * Settings.scale;
+        drawY = AbstractDungeon.floorY + 30.0F * Settings.scale;
 
         loadAnimation("images/npcs/merchant/skeleton.atlas", "images/npcs/merchant/skeleton.json", 1.0F);
         AnimationState.TrackEntry e = state.setAnimation(0, "idle", true);
