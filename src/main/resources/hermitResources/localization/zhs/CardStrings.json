@@ -241,7 +241,7 @@
   },
   "hermit:LoneWolf": {
     "NAME": "孤狼",
-    "DESCRIPTION": "选择1张牌，本场战斗中它耗能为0。 NL 丢弃其他手牌。"
+    "DESCRIPTION": "选择1张牌，本场战斗中它耗能为0。 NL 丢弃其他手牌。 NL 消耗 。  "
   },
   "hermit:HighNoon": {
     "NAME": "午时已到",
