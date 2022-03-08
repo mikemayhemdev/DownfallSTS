@@ -34,13 +34,13 @@
   },
   "hermit:HighCaliber": {
     "NAME": "大口径",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *打击 加入你的弃牌堆。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *打击+ 加入你的弃牌堆。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *打击 加入弃牌堆。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *打击+ 加入弃牌堆。 NL 消耗 。"
   },
   "hermit:BodyArmor": {
     "NAME": "全身护甲",
-    "DESCRIPTION":"获得 !B! 点 格挡 。 NL 将一张 *防御 加入你的弃牌堆。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将一张 *防御+ 加入你的弃牌堆。 NL 消耗 。"
+    "DESCRIPTION":"获得 !B! 点 格挡 。 NL 将一张 *防御 加入弃牌堆。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将一张 *防御+ 加入弃牌堆。 NL 消耗 。"
   },
   "hermit:Snipe": {
     "NAME": "狙击",
@@ -72,8 +72,8 @@
   },
   "hermit:FatalDesire": {
     "NAME": "自弑之欲",
-    "DESCRIPTION": "你的回合开始时，抽2张牌并将1张 *受伤 加入你的手牌。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 你的回合开始时，抽2张牌并将1张 *受伤 加入你的手牌。"
+    "DESCRIPTION": "你的回合开始时，抽2张牌并将1张 *受伤 加入手牌。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 你的回合开始时，抽2张牌并将1张 *受伤 加入手牌。"
   },
   "hermit:Gambit": {
     "NAME": "开场白",
@@ -109,7 +109,7 @@
   },
   "hermit:Roulette": {
     "NAME": "轮转",
-    "DESCRIPTION": "对随机敌人造成 !D! 点伤害。 NL 丢弃你的手牌并抽等量的牌。"
+    "DESCRIPTION": "对随机敌人造成 !D! 点伤害。 NL 丢弃其他手牌并抽等量的牌。"
   },
   "hermit:Midnight": {
     "NAME": "午夜时分",
@@ -123,16 +123,16 @@
   },
   "hermit:TakeCover": {
     "NAME": "快找掩护",
-    "DESCRIPTION": "将X张 *防御 加入你的手牌。 NL 它们本场战斗中耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将X张 *防御+ 加入你的手牌。 NL 它们本场战斗中耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "将X张 *防御 加入手牌。 NL 它们本场战斗中耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "将X张 *防御+ 加入手牌。 NL 它们本场战斗中耗能为0。 NL 消耗 。"
   },
   "hermit:Misfire": {
     "NAME": "擦枪走火",
-    "DESCRIPTION": "对随机敌人造成 !D! 点伤害。 NL 将一张 *笨拙 加入你的抽牌堆。"
+    "DESCRIPTION": "对随机敌人造成 !D! 点伤害。 NL 将一张 *笨拙 加入抽牌堆。"
   },
   "hermit:SprayPray": {
     "NAME": "倾泻火力",
-    "DESCRIPTION": "对随机敌人造成 !D! 点伤害4次。 NL 将一张 *疑虑 加入你的抽牌堆。"
+    "DESCRIPTION": "对随机敌人造成 !D! 点伤害4次。 NL 将一张 *疑虑 加入抽牌堆。"
   },
  "hermit:Scavenge": {
     "NAME": "战利品",
@@ -257,7 +257,7 @@
   },
   "hermit:TakeAim": {
     "NAME": "举枪瞄准",
-    "DESCRIPTION": "在你的回合开始， hermit:专注 。",
+    "DESCRIPTION": "回合开始时， hermit:专注 。",
 		"UPGRADE_DESCRIPTION": "hermit:专注 。 NL 在你的回合开始， hermit:专注 。"
   },
   "hermit:Magnum": {
