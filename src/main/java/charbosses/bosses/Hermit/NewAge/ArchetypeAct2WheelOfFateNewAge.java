@@ -18,6 +18,8 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import hermit.cards.Defend_Hermit;
+import hermit.cards.Strike_Hermit;
 
 import java.util.ArrayList;
 
@@ -92,13 +94,19 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
                 c.baseBlock += 3;
                 c.upgradedBlock = true;
             }
-            CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(c.cardID);
+            String NAME;
+            if (c instanceof EnStrikeHermit) {
+                NAME = Strike_Hermit.NAME;
+            }
+            else {
+                NAME = EnDefendHermit.cardStrings.NAME;
+            }
             c.timesUpgraded++;
             c.upgraded = true;
             if (c.timesUpgraded > 1)
-                c.name = cardStrings.NAME + "+" + c.timesUpgraded;
+                c.name = NAME + "+" + c.timesUpgraded;
             else
-                c.name = cardStrings.NAME + "+";
+                c.name = NAME + "+";
             c.applyPowers();
         }
     }

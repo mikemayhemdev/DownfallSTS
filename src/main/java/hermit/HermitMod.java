@@ -407,14 +407,24 @@ public class HermitMod implements
 
         BaseMod.addRelicToCustomPool(new Memento(), hermit.Enums.COLOR_YELLOW);
         BaseMod.addRelicToCustomPool(new RyeStalk(), hermit.Enums.COLOR_YELLOW);
-        BaseMod.addRelicToCustomPool(new BartenderGlass(), hermit.Enums.COLOR_YELLOW);
-        BaseMod.addRelic(new Horseshoe(), RelicType.SHARED);
         BaseMod.addRelicToCustomPool(new Spyglass(), hermit.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new StraightRazor(), hermit.Enums.COLOR_YELLOW);
         BaseMod.addRelicToCustomPool(new CharredGlove(), hermit.Enums.COLOR_YELLOW);
-        BaseMod.addRelic(new RedScarf(), RelicType.SHARED);
-        BaseMod.addRelic(new DentedPlate(), RelicType.SHARED);
-        BaseMod.addRelicToCustomPool(new PetGhost(), hermit.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new RedScarf(), hermit.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new BlackPowder(), hermit.Enums.COLOR_YELLOW);
         BaseMod.addRelicToCustomPool(new ClaspedLocket(), hermit.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new BartenderGlass(), hermit.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new DentedPlate(), hermit.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new PetGhost(), hermit.Enums.COLOR_YELLOW);
+
+
+        BaseMod.addRelic(new BrassTacks(), RelicType.SHARED);
+        BaseMod.addRelic(new BloodyTooth(), RelicType.SHARED);
+        BaseMod.addRelic(new Horseshoe(), RelicType.SHARED);
+
+
+
+
 
 
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file

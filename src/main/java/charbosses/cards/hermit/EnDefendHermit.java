@@ -17,7 +17,7 @@ import hermit.characters.hermit;
 
 public class EnDefendHermit extends AbstractHermitBossCard {
     public static final String ID = "downfall_Charboss:Defend_Hermit";
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(Defend_Hermit.ID);
+    public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(Defend_Hermit.ID);
 
     public EnDefendHermit() {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/card_defend.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.BASIC, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
