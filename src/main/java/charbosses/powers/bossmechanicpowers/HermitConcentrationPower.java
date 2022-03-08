@@ -7,12 +7,10 @@ package charbosses.powers.bossmechanicpowers;
 
 import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.cards.AbstractBossCard;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import hermit.powers.Concentration;
 
 import static charbosses.bosses.Hermit.NewAge.ArchetypeAct1SharpshooterNewAge.damageThreshold;
 
@@ -26,12 +24,9 @@ public class HermitConcentrationPower extends AbstractBossMechanicPower {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
-        this.amount = 10;
-        this.region128 = new TextureAtlas.AtlasRegion(Concentration.tex84, 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(Concentration.tex32, 0, 0, 32, 32);
-
         this.amount = damageThreshold;
         this.updateDescription();
+        loadRegion("curiosity");
         this.type = PowerType.BUFF;
     }
 
