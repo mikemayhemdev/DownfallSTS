@@ -31,10 +31,16 @@ public class EnHeadshot extends AbstractHermitBossCard {
     }
 
     @Override
+    public void onSpecificTrigger() {
+        this.intentActive = false;
+        this.createIntent();
+    }
+
+    @Override
     public void calculateCardDamage(AbstractMonster mo) {
         int oldBaseDamage = baseDamage;
-        AbstractPower p = this.owner.getPower(HermitConcentrationPower.POWER_ID);
-        if (p != null) {
+        AbstractPower concentration = this.owner.getPower(HermitConcentrationPower.POWER_ID);
+        if (concentration != null && concentration.amount > 0) {
             baseDamage *= 2;
         }
         super.calculateCardDamage(mo);

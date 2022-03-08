@@ -6,15 +6,15 @@
 package charbosses.powers.bossmechanicpowers;
 
 import charbosses.bosses.Hermit.CharBossHermit;
-import charbosses.bosses.Watcher.CharBossWatcher;
 import charbosses.cards.AbstractBossCard;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import hermit.powers.Concentration;
+
+import static charbosses.bosses.Hermit.NewAge.ArchetypeAct1SharpshooterNewAge.damageThreshold;
 
 public class HermitConcentrationPower extends AbstractBossMechanicPower {
     public static final String POWER_ID = "downfall:HermitConcentrationPower";
@@ -30,6 +30,7 @@ public class HermitConcentrationPower extends AbstractBossMechanicPower {
         this.region128 = new TextureAtlas.AtlasRegion(Concentration.tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(Concentration.tex32, 0, 0, 32, 32);
 
+        this.amount = damageThreshold;
         this.updateDescription();
         this.type = PowerType.BUFF;
     }
@@ -46,7 +47,6 @@ public class HermitConcentrationPower extends AbstractBossMechanicPower {
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
         if (amount <= 0) {
-            addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
             if (this.owner instanceof CharBossHermit) {
                 for (AbstractCard bc : ((CharBossHermit) this.owner).hand.group) {
                     ((AbstractBossCard) bc).onSpecificTrigger();
@@ -55,8 +55,17 @@ public class HermitConcentrationPower extends AbstractBossMechanicPower {
         }
     }
 
+    public void atEndOfTurn(boolean isPlayer) {
+        this.amount = damageThreshold;
+        this.updateDescription();
+    }
+
     public void updateDescription() {
-        this.description = DESC[0] + amount + DESC[1];
+        if (this.amount > 0) {
+            this.description = DESC[0] + amount + DESC[1];
+        } else {
+            this.description = DESC[2];
+        }
     }
 
     static {

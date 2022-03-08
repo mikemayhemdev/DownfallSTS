@@ -240,7 +240,6 @@
       "#y발사된 탄약은 이후 강화됩니다."
     ]
   },
-  ,
   "downfall:OnDeathEveryoneStr": {
     "NAME": "Dying Rage",
     "DESCRIPTIONS": [

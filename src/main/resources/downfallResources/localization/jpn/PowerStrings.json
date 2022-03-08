@@ -45,7 +45,6 @@
       "Poison does not bypass your Block, triggers at the end of your turn, and loses half its stack."
     ]
   },
-  ,
   "downfall:OnDeathEveryoneStr": {
     "NAME": "Dying Rage",
     "DESCRIPTIONS": [

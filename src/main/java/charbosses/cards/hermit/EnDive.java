@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import hermit.cards.Dive;
@@ -28,7 +29,8 @@ public class EnDive extends AbstractHermitBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         addToBot(new GainBlockAction(m, m, block));
-        if (this.owner.hasPower(HermitConcentrationPower.POWER_ID)) {
+        AbstractPower concentration = this.owner.getPower(HermitConcentrationPower.POWER_ID);
+        if (concentration != null && concentration.amount > 0) {
             addToBot(new ApplyPowerAction(m, m, new PlatedArmorPower(m, magicNumber), magicNumber));
         }
     }
