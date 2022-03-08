@@ -5,9 +5,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
+import com.megacrit.cardcrawl.vfx.stance.StanceChangeParticleGenerator;
 import hermit.HermitMod;
 import hermit.actions.MaintenanceAction;
 import hermit.characters.hermit;
+import hermit.effects.HermitUpgradeShineEffect;
 
 import static hermit.HermitMod.*;
 
@@ -55,6 +58,7 @@ public class Maintenance extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.effectsQueue.add(new HermitUpgradeShineEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY));
         AbstractDungeon.actionManager.addToBottom(new MaintenanceAction());
     }
 

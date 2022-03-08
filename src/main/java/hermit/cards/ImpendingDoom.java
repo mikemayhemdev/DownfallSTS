@@ -3,6 +3,8 @@ package hermit.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,6 +13,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
+import hermit.powers.Concentration;
+import hermit.powers.SnipePower;
 
 
 import static hermit.HermitMod.loadJokeCardImage;
@@ -57,8 +61,14 @@ public class ImpendingDoom extends AbstractDynamicCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.dontTriggerOnUseCard) {
-            this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, 13, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
-            this.addToBot(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(13, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
+            int DeadOnTimes = DeadOnAmount();
+
+            for (int a = 0; a < DeadOnTimes; a++) {
+                this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, 13, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+                this.addToBot(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(13, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
+            }
+
+            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
         }
 
     }
@@ -69,6 +79,7 @@ public class ImpendingDoom extends AbstractDynamicCard {
         if (isDeadOnPos()) {
             //System.out.println("Impending doom trigger, cards in hand: " + AbstractDungeon.player.hand.size() + " Position: " + AbstractDungeon.player.hand.group.indexOf(this));
             onDeadOn();
+            AbstractDungeon.player.powers.removeIf(pow -> pow.ID == Concentration.POWER_ID);
             this.dontTriggerOnUseCard = true;
             AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true));
         }

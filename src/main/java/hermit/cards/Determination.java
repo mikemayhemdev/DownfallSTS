@@ -35,7 +35,7 @@ public class Determination extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     // /STAT DECLARATION/
 

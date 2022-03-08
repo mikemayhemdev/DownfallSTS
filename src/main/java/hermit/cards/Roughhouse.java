@@ -3,6 +3,7 @@ package hermit.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.characters.hermit;
+import hermit.powers.SnipePower;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
@@ -87,7 +89,14 @@ public class Roughhouse extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (isDeadOn()) {
             onDeadOn();
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+
+            int DeadOnTimes = DeadOnAmount();
+
+            for (int a = 0; a < DeadOnTimes; a++) {
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+            }
+
+            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
         }
 
         AbstractDungeon.actionManager.addToBottom( // The action managed queues all the actions a card should do.

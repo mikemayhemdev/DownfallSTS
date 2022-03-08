@@ -39,7 +39,7 @@
     "NAME": "Red Scarf",
     "FLAVOR": "It's warm and fuzzy.",
     "DESCRIPTIONS": [
-      "Whenever you apply a debuff to an enemy, gain #b2 Block."
+      "At the start of each combat, discard up to #b7 cards from your draw pile."
     ]
   },
   "hermit:DentedPlate": {
@@ -69,34 +69,6 @@
     "DESCRIPTIONS": [
       "Replaces #yOld #yLocket. Upon pickup, add #b3 #yMementos to your deck.",
       "Never again..."
-    ]
-  },
-  "hermit:StraightRazor": {
-    "NAME": "Straight Razor",
-    "FLAVOR": "For a cleaner shave...",
-    "DESCRIPTIONS": [
-      "Whenever you remove a card from your deck, heal #b15 HP."
-    ]
-  },
-  "hermit:BrassTacks": {
-    "NAME": "Brass Tacks",
-    "FLAVOR": "The luster on these tacks never seems to fade.",
-    "DESCRIPTIONS": [
-      "Start each combat with #b2 #yMetallicize."
-    ]
-  },
-  "hermit:BlackPowder": {
-    "NAME": "Black Powder",
-    "FLAVOR": "Handle with care.",
-    "DESCRIPTIONS": [
-      "At the end of your turn, deal #b2 damage to all enemies for each #yhermit:Dead_On effect triggered."
-    ]
-  },
-  "hermit:BloodyTooth": {
-    "NAME": "Broken Tooth",
-    "FLAVOR": "Appears too large to have come from a human jaw...",
-    "DESCRIPTIONS": [
-      "Start every combat with #b1 #yStrength for each Elite encounter you defeat in the same act."
     ]
   }
 }

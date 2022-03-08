@@ -2,6 +2,8 @@ package hermit.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -9,6 +11,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
+import hermit.powers.Concentration;
+import hermit.powers.SnipePower;
 
 
 import static hermit.HermitMod.loadJokeCardImage;
@@ -54,15 +58,15 @@ public class Headshot extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int base_dam = this.damage;
         int dam = this.damage;
-        if (isDeadOn()) {
-            dam *= 2;
-        }
+
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, dam, damageTypeForTurn),
                         EnumPatch.HERMIT_GUN2));
         if (isDeadOn()) {
             onDeadOn();
+            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
         }
     }
 
@@ -71,6 +75,24 @@ public class Headshot extends AbstractDynamicCard {
         if (isDeadOnPos()) {
             this.glowColor = AbstractDynamicCard.GOLD_BORDER_GLOW_COLOR.cpy();
         }
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo)
+    {
+        super.calculateCardDamage(mo);
+
+        if (isDeadOnPos()) {
+
+            int DeadOnTimes = DeadOnAmount();
+            int base_dam = this.damage;
+
+            for (int a = 0; a < DeadOnTimes; a++) {
+                this.damage += base_dam;
+            }
+        }
+
+        isDamageModified = damage != baseDamage;
     }
 
     //Upgraded stats.

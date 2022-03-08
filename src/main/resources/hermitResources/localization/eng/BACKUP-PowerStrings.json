@@ -9,7 +9,7 @@
 },
 "hermit:FatalDesirePower": {
         "NAME": "Fatal Desire",
-        "DESCRIPTIONS": ["At the start of your turn, draw #b", " cards and add #b", " #yInjury to your hand.", " #yInjuries to your hand."]
+        "DESCRIPTIONS": ["At the start of your turn, draw #b", " cards and add #b", " Injury to your hand.", " Injuries to your hand."]
 },
 "hermit:ShadowCloakPower": {
         "NAME": "Shadow Cloak",
@@ -74,13 +74,5 @@
 "hermit:PetGhostPower": {
         "NAME": "Pet Ghost",
         "DESCRIPTIONS": ["You cannot die. Die at the end of", " your next turn.", " this turn."]
-},
-"hermit:SnipePower": {
-        "NAME": "Snipe",
-        "DESCRIPTIONS": ["The next #b", " #yDead #yOn effect this turn triggers twice.", " #yDead #yOn effects this turn trigger twice."]
-},
-"hermit:CoalescencePower": {
-        "NAME": "Coalescence",
-        "DESCRIPTIONS": ["At the end of your turn, #yRetain up to #b", " Card.", " Cards."]
 }
 }

@@ -11,9 +11,9 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.Concentration;
+import hermit.powers.SnipePower;
 
-import static hermit.HermitMod.loadJokeCardImage;
-import static hermit.HermitMod.makeCardPath;
+import static hermit.HermitMod.*;
 
 public class Snipe extends AbstractDynamicCard {
 
@@ -35,25 +35,24 @@ public class Snipe extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
 
-    private int STRENGTH = 3;
+    private int SnipeAmount = 1;
 
     // /STAT DECLARATION/
 
 
     public Snipe() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = magicNumber = STRENGTH;
+        baseMagicNumber = magicNumber = SnipeAmount;
         loadJokeCardImage(this, "snipe.png");
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-        this.addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, this.magicNumber), this.magicNumber));
-        if (!AbstractDungeon.player.hasPower(Concentration.POWER_ID)) {
+        this.addToBot(new ApplyPowerAction(p, p, new SnipePower(p, this.magicNumber), this.magicNumber));
+        if (!AbstractDungeon.player.hasPower(Concentration.POWER_ID) && upgraded) {
             this.addToBot(new ApplyPowerAction(p, p, new Concentration(p, -1), -1));
         }
     }
@@ -63,7 +62,8 @@ public class Snipe extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

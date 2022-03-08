@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
+import com.megacrit.cardcrawl.relics.AncientTeaSet;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.ObtainPotionEffect;
 import com.sun.org.apache.bcel.internal.generic.RETURN;
@@ -26,7 +27,7 @@ public class BartenderGlass extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("bartenders_glass.png"));
 
     public BartenderGlass() {
-        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.FLAT);
+        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.SOLID);
         counter=-1;
     }
 
