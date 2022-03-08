@@ -47,6 +47,10 @@ public class NeowGainMinionPowersAction extends AbstractGameAction {
                             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new UnbridledRage(owner)));
                             break;
                         }
+                        case "downfall:Hermit":{
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new Distracting(owner, 1)));
+                            break;
+                        }
                     }
                 }
                 break;
@@ -73,6 +77,10 @@ public class NeowGainMinionPowersAction extends AbstractGameAction {
                             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new BlasphemersDemise(owner, 150)));
                             break;
                         }
+                        case "downfall:Hermit":{
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new WheelOfDeath(owner, 1)));
+                            break;
+                        }
                     }
                 }
                 break;
@@ -97,6 +105,10 @@ public class NeowGainMinionPowersAction extends AbstractGameAction {
                         }
                         case "downfall:Watcher": {
                             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new FleetingFaith(owner)));
+                            break;
+                        }
+                        case "downfall:Hermit":{
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new Eclipse(owner, 1)));
                             break;
                         }
                     }

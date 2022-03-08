@@ -44,7 +44,7 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
         addRelic(new CBR_Omamori());
         addRelic(new CBR_ArtOfWar());
         addRelic(new CBR_MaskGremlin());
-        addRelic(new CBR_CharredGlove());
+        //addRelic(new CBR_CharredGlove());
     }
 
     @Override

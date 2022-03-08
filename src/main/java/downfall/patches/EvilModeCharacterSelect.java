@@ -29,6 +29,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import static downfall.downfallMod.crossoverCharacters;
+import static hermit.characters.hermit.Enums.HERMIT;
 
 public class EvilModeCharacterSelect {
     public static boolean evilMode = false;
@@ -66,54 +67,60 @@ public class EvilModeCharacterSelect {
                             basegameOptions.add(o);
                         break;
                     default:
-                        boolean isVillain = true;
-                        if (o.c.chosenClass == SlimeboundEnum.SLIMEBOUND) {
-                            villainOptions[0] = o;
-                        } else if (o.c.chosenClass == GuardianEnum.GUARDIAN) {
-                            if (UnlockTracker.isCharacterLocked("Guardian")) {
-                                o.locked = true;
-                                ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
-                            }
-                            villainOptions[1] = o;
-                        } else if (o.c.chosenClass == TheHexaghost.Enums.THE_SPIRIT) {
-                            if (UnlockTracker.isCharacterLocked("Hexaghost")) {
-                                o.locked = true;
-                                ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
-                            }
-                            villainOptions[2] = o;
-                        } else if (o.c.chosenClass == ChampChar.Enums.THE_CHAMP) {
-                            if (UnlockTracker.isCharacterLocked("Champ")) {
-                                o.locked = true;
-                                ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
-                            }
-                            villainOptions[3] = o;
-                        } else if (o.c.chosenClass == AutomatonChar.Enums.THE_AUTOMATON) {
-                            if (UnlockTracker.isCharacterLocked("Automaton")) {
-                                o.locked = true;
-                                ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
-                            }
-                            villainOptions[4] = o;
-                        } else if (o.c.chosenClass == GremlinEnum.GREMLIN) {
-                            if (UnlockTracker.isCharacterLocked("Gremlin")) {
-                                o.locked = true;
-                                ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
-                            }
-                            villainOptions[5] = o;
-                        } else if (o.c.chosenClass == TheSnecko.Enums.THE_SNECKO) {
-                            if (UnlockTracker.isCharacterLocked("Snecko")) {
-                                o.locked = true;
-                                ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
-                            }
-                            villainOptions[6] = o;
+                        if (o.c.chosenClass == HERMIT) {
+                            if (crossoverCharacters)
+                                basegameOptions.add(o);
+                            break;
                         } else {
-                            isVillain = false;
-                            moddedOptions.add(o);
+                            boolean isVillain = true;
+                            if (o.c.chosenClass == SlimeboundEnum.SLIMEBOUND) {
+                                villainOptions[0] = o;
+                            } else if (o.c.chosenClass == GuardianEnum.GUARDIAN) {
+                                if (UnlockTracker.isCharacterLocked("Guardian")) {
+                                    o.locked = true;
+                                    ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                                }
+                                villainOptions[1] = o;
+                            } else if (o.c.chosenClass == TheHexaghost.Enums.THE_SPIRIT) {
+                                if (UnlockTracker.isCharacterLocked("Hexaghost")) {
+                                    o.locked = true;
+                                    ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                                }
+                                villainOptions[2] = o;
+                            } else if (o.c.chosenClass == ChampChar.Enums.THE_CHAMP) {
+                                if (UnlockTracker.isCharacterLocked("Champ")) {
+                                    o.locked = true;
+                                    ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                                }
+                                villainOptions[3] = o;
+                            } else if (o.c.chosenClass == AutomatonChar.Enums.THE_AUTOMATON) {
+                                if (UnlockTracker.isCharacterLocked("Automaton")) {
+                                    o.locked = true;
+                                    ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                                }
+                                villainOptions[4] = o;
+                            } else if (o.c.chosenClass == GremlinEnum.GREMLIN) {
+                                if (UnlockTracker.isCharacterLocked("Gremlin")) {
+                                    o.locked = true;
+                                    ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                                }
+                                villainOptions[5] = o;
+                            } else if (o.c.chosenClass == TheSnecko.Enums.THE_SNECKO) {
+                                if (UnlockTracker.isCharacterLocked("Snecko")) {
+                                    o.locked = true;
+                                    ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                                }
+                                villainOptions[6] = o;
+                            } else {
+                                isVillain = false;
+                                moddedOptions.add(o);
+                            }
+
+                            if (isVillain && !crossoverCharacters)
+                                options.remove();
+
+                            break;
                         }
-
-                        if (isVillain && !crossoverCharacters)
-                            options.remove();
-
-                        break;
                 }
             }
 

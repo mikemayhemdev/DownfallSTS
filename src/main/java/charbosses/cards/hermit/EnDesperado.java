@@ -12,13 +12,14 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import hermit.cards.Desperado;
 import hermit.cards.GhostlyPresence;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 
 public class EnDesperado extends AbstractHermitBossCard {
     public static final String ID = "downfall_Charboss:Desperado";
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(GhostlyPresence.ID);
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(Desperado.ID);
 
     public EnDesperado() {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/desperado.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.ATTACK);
