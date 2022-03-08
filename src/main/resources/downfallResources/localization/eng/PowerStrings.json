@@ -292,9 +292,9 @@
   "downfall:HermitConcentrationPower": {
     "NAME": "Concentrated",
     "DESCRIPTIONS": [
-      "Hermit's cards trigger it's #yDead #yOn effect. Deal #b",
+      "Hermit's cards get bonus #yDead #yOn effects while he is concentrated. Deal #b",
       " more damage to break his Concentration this turn.",
-      "Hermit's concentration is broken this turn."
+      "Hermit's concentration is broken and #yDead #yOn effects don't trigger this turn."
     ]
   },
   "downfall:HermitWheelOfFortune": {
