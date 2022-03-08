@@ -54,7 +54,7 @@
   },
   "hermit:Dissolve": {
     "NAME": "溶解",
-    "DESCRIPTION": "下回合获得 !B! 点 格挡 。 NL 消耗 。",
+    "DESCRIPTION": "下回合获得 !B! 点 格挡 。 NL 消耗 。"
   },
   "hermit:BlackWind": {
     "NAME": "黑风",
