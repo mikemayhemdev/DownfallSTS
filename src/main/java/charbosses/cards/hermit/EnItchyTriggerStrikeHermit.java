@@ -38,6 +38,8 @@ public class EnItchyTriggerStrikeHermit extends AbstractHermitBossCard {
     public void onSpecificTrigger() {
         setCostForTurn(cost);
         bossDarken();
+        isCostModified = false;
+        isCostModifiedForTurn = false;
     }
 
     @Override

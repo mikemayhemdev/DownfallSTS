@@ -18,14 +18,14 @@ public class EnSprayNPray extends AbstractHermitBossCard {
 
     public EnSprayNPray() {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/showdown.png", 1, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
-        this.baseDamage = 5;
+        this.baseDamage = 3;
         isMultiDamage = true;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 4;
     }
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             addToBot(new DamageAction(p, new DamageInfo(m, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
         }
     }

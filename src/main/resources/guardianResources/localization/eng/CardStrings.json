@@ -39,7 +39,7 @@
   },
   "Guardian:ChargeUp": {
     "NAME": "Charge Up",
-    "DESCRIPTION": "Place this card into guardianmod:Stasis. NL guardianmod:Tick - Gain !B! Block and !M! Strength. NL guardianmod:Volatile."
+    "DESCRIPTION": "Place this into guardianmod:Stasis. NL guardianmod:Tick - Gain !B! Block and !M! Strength. NL guardianmod:Volatile."
   },
   "Guardian:DonusPower": {
     "NAME": "Ancient Attack",
@@ -79,7 +79,7 @@
   },
   "Guardian:TimeBomb": {
     "NAME": "Time Bomb",
-    "DESCRIPTION": "Place this card into guardianmod:Stasis. NL When this card would leave guardianmod:Stasis, deal !M! damage to ALL enemies. NL guardianmod:Volatile."
+    "DESCRIPTION": "Place this into guardianmod:Stasis. NL When this card would leave guardianmod:Stasis, deal !M! damage to ALL enemies. NL guardianmod:Volatile."
   },
   "Guardian:HyperBeam_Guardian": {
     "NAME": "Hyper Beam",
@@ -200,11 +200,11 @@
   },
   "Guardian:StasisField": {
     "NAME": "Stasis Field",
-    "DESCRIPTION": "Gain !B! Block. NL Place this card into guardianmod:Stasis. NL When this leaves Stasis, increase its Block by !M! and set its cost back to 1."
+    "DESCRIPTION": "Gain !B! Block. NL Place this into guardianmod:Stasis. NL When this leaves Stasis, increase its Block by !M! and set its cost back to 1."
   },
   "Guardian:StasisStrike": {
     "NAME": "Stasis Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Place this card into guardianmod:Stasis. NL When this leaves Stasis, increase its damage by !M! and set its cost back to 1."
+    "DESCRIPTION": "Deal !D! damage. NL Place this into guardianmod:Stasis. NL When this leaves Stasis, increase its damage by !M! and set its cost back to 1."
   },
   "Guardian:FuturePlans": {
     "NAME": "Future Plans",
@@ -241,7 +241,7 @@
   },
   "Guardian:ChargeCore": {
     "NAME": "Charge Core",
-    "DESCRIPTION": "Deal !D! damage, then place this card into guardianmod:Stasis. NL guardianmod:Tick - Draw a card. NL guardianmod:Volatile."
+    "DESCRIPTION": "Deal !D! damage. NL Place this into guardianmod:Stasis. NL guardianmod:Tick - Draw a card. NL guardianmod:Volatile."
   },
   "Guardian:Reroute": {
     "NAME": "Reroute",
@@ -318,7 +318,7 @@
   },
   "Guardian:CrystalBeam": {
     "NAME": "Crystal Ray",
-    "DESCRIPTION": "Deal !D! damage. Damage is increased by !M! for each guardianmod:Gem in ALL of your guardianmod:Socketed cards."
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each guardianmod:Gem in ALL of your guardianmod:Socketed cards."
   },
   "Guardian:Gem_Synthetic": {
     "NAME": "Onyx",
@@ -373,11 +373,11 @@
   },
   "Guardian:GatlingBeam": {
     "NAME": "Laser Turret",
-    "DESCRIPTION": "Place this card into guardianmod:Stasis. NL guardianmod:Tick - Deal !D! damage to a random enemy. NL guardianmod:Volatile."
+    "DESCRIPTION": "Place this into guardianmod:Stasis. NL guardianmod:Tick - Deal !D! damage to a random enemy. NL guardianmod:Volatile."
   },
   "Guardian:ShieldCharger": {
     "NAME": "Shield Charger",
-    "DESCRIPTION": "Place this card into guardianmod:Stasis. NL guardianmod:Tick - guardianmod:Brace 2, then Gain !B! Block and [E]. NL guardianmod:Volatile."
+    "DESCRIPTION": "Place this into guardianmod:Stasis. NL guardianmod:Tick - guardianmod:Brace 2, then Gain !B! Block and [E]. NL guardianmod:Volatile."
   },
   "Guardian:StasisEngine": {
     "NAME": "Stasis Engine",

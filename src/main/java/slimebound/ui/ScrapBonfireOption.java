@@ -30,7 +30,7 @@ public class ScrapBonfireOption extends AbstractCampfireOption {
         //this.idleMessages.add("~Feed ~me!");
         //this.idleMessages.add("~Give ~shiny!");
         //this.idleMessages.add("~More ~scrap!");
-        this.label = "Scrap";
+        this.label = DESCRIPTIONS[3];
         //this.description = "Remove a card from your deck. Increase the Scrap Ooze's damage by 2.";
         this.usable = active;
         if (active) {

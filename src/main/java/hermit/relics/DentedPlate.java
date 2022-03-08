@@ -30,7 +30,7 @@ public class DentedPlate extends CustomRelic {
     private boolean isActive = false;
 
     public DentedPlate() {
-        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.FLAT);
+        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.CLINK);
     }
 
     public void atBattleStart() {

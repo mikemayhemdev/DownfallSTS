@@ -13,19 +13,11 @@ public class RainOfDice extends AbstractSneckoCard {
 
     public final static String ID = makeID("RainOfDice");
 
-    //stupid intellij stuff ATTACK, ALL, COMMON
-
-    private static final int DAMAGE = 4;
-    private static final int UPG_DAMAGE = 1;
-
-    private static final int MAGIC = 4;
-    private static final int UPG_MAGIC = 1;
-
     public RainOfDice() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL);
-        baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC;
         baseSilly = silly = 2;
+        baseDamage = 4;
+        baseMagicNumber = magicNumber = 2;
         tags.add(SneckoMod.RNG);
     }
 
@@ -57,14 +49,13 @@ public class RainOfDice extends AbstractSneckoCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new NoApplyRandomDamageAction(AbstractDungeon.getMonsters().getRandomMonster(true), silly, damage, getRandomNum(2, magicNumber, this), AbstractGameAction.AttackEffect.BLUNT_LIGHT, this, DamageInfo.DamageType.NORMAL));
+        atb(new NoApplyRandomDamageAction(AbstractDungeon.getMonsters().getRandomMonster(true), silly, damage, this.costForTurn + this.magicNumber, AbstractGameAction.AttackEffect.BLUNT_LIGHT, this, DamageInfo.DamageType.NORMAL));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPG_DAMAGE);
-            upgradeMagicNumber(UPG_MAGIC);
+            upgradeMagicNumber(1);
         }
     }
 }

@@ -28,7 +28,7 @@ public class PetGhost extends CustomRelic implements OnPlayerDeathRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("pet_ghost.png"));
 
     public PetGhost() {
-        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.FLAT);
+        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.SOLID);
     }
 
     public boolean canDie = false;

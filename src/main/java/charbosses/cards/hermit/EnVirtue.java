@@ -20,8 +20,10 @@ public class EnVirtue extends AbstractHermitBossCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(Virtue.ID);
 
     public EnVirtue() {
-        super(ID, cardStrings.NAME, "hermitResources/images/cards/virtue.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
-        baseMagicNumber = magicNumber = 2;
+        super(ID, cardStrings.NAME, "hermitResources/images/cards/virtue.png", 0, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
+
+        this.selfRetain = true;
+        magicNumber = baseMagicNumber = 1;
     }
 
     @Override
@@ -37,7 +39,8 @@ public class EnVirtue extends AbstractHermitBossCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(0);
+            upgradeMagicNumber(1);
+            initializeDescription();
         }
     }
 

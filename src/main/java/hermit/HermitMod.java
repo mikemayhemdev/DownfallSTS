@@ -1,73 +1,50 @@
 package hermit;
 
-import automaton.AutomatonChar;
-import automaton.cards.*;
-import automaton.relics.*;
-import basemod.*;
-import basemod.abstracts.CustomUnlockBundle;
+import basemod.BaseMod;
+import basemod.ReflectionHacks;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import basemod.interfaces.ISubscriber;
-import basemod.interfaces.OnStartBattleSubscriber;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
-import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
-import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
 import downfall.util.CardIgnore;
 import hermit.actions.MessageCaller;
+import hermit.cards.*;
+import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 import hermit.potions.BlackBile;
 import hermit.potions.Eclipse;
+import hermit.potions.Tonic;
 import hermit.relics.*;
 import hermit.rewards.BountyGold;
 import hermit.util.CardFilter;
-import javassist.CtClass;
-import javassist.Modifier;
-import javassist.NotFoundException;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import hermit.cards.*;
-import hermit.characters.hermit;
-import hermit.potions.Tonic;
-import hermit.util.IDCheckDontTouchPls;
-import hermit.util.KeywordWithProper;
 import hermit.util.TextureLoader;
 import hermit.variables.DefaultCustomVariable;
 import hermit.variables.DefaultSecondMagicNumber;
-import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
+import javassist.CtClass;
+import javassist.Modifier;
+import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.Properties;
-
-import static basemod.BaseMod.gson;
-import static basemod.BaseMod.loadCustomStrings;
 
 //TODO: DON'T MASS RENAME/REFACTOR
 //TODO: DON'T MASS RENAME/REFACTOR
@@ -125,9 +102,9 @@ public class HermitMod implements
     private static final String MODNAME = "The Hermit";
     private static final String AUTHOR = "Team D-13"; // And pretty soon - You!
     private static final String DESCRIPTION = "A base for Slay the Spire to start your own mod from, feat. the Default.";
-    
+
     // =============== INPUT TEXTURE LOCATION =================
-    
+
     // Colors (RGB)
     // Character Color
     public static final Color DEFAULT_GRAY = CardHelper.getColor(64.0f, 70.0f, 70.0f);
@@ -137,63 +114,63 @@ public class HermitMod implements
     public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
     public static final Color PLACEHOLDER_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f); // Near White
     public static final Color PLACEHOLDER_POTION_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f); // Super Dark Red/Brown
-    
+
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-  
+
     // Card backgrounds - The actual rectangular card.
     private static final String ATTACK_DEFAULT_GRAY = "hermitResources/images/512/bg_attack_default_gray.png";
     private static final String SKILL_DEFAULT_GRAY = "hermitResources/images/512/bg_skill_default_gray.png";
     private static final String POWER_DEFAULT_GRAY = "hermitResources/images/512/bg_power_default_gray.png";
-    
+
     private static final String ENERGY_ORB_DEFAULT_GRAY = "hermitResources/images/512/card_default_gray_orb.png";
     private static final String CARD_ENERGY_ORB = "hermitResources/images/512/card_small_orb.png";
-    
+
     private static final String ATTACK_DEFAULT_GRAY_PORTRAIT = "hermitResources/images/1024/bg_attack_default_gray.png";
     private static final String SKILL_DEFAULT_GRAY_PORTRAIT = "hermitResources/images/1024/bg_skill_default_gray.png";
     private static final String POWER_DEFAULT_GRAY_PORTRAIT = "hermitResources/images/1024/bg_power_default_gray.png";
     private static final String ENERGY_ORB_DEFAULT_GRAY_PORTRAIT = "hermitResources/images/1024/card_default_gray_orb.png";
-    
+
     // Character assets
     private static final String THE_DEFAULT_BUTTON = "hermitResources/images/charSelect/HermitButton.png";
     private static final String THE_DEFAULT_PORTRAIT = "hermitResources/images/charSelect/hermitSelect.png";
     public static final String THE_DEFAULT_SHOULDER_1 = "hermitResources/images/char/hermit/shoulder.png";
     public static final String THE_DEFAULT_SHOULDER_2 = "hermitResources/images/char/hermit/shoulder2.png";
     public static final String THE_DEFAULT_CORPSE = "hermitResources/images/char/hermit/corpse.png";
-    
+
     //Mod Badge - A small icon that appears in the mod settings menu next to your mod.
     public static final String BADGE_IMAGE = "hermitResources/images/Badge.png";
-    
+
     // Atlas and JSON files for the Animations
     public static final String THE_DEFAULT_SKELETON_ATLAS = "hermitResources/images/char/hermit/Hermit.atlas";
     public static final String THE_DEFAULT_SKELETON_JSON = "hermitResources/images/char/hermit/Hermit.json";
 
     // =============== MAKE IMAGE PATHS =================
-    
+
     public static String makeCardPath(String resourcePath) {
         return getModID() + "Resources/images/cards/" + resourcePath;
     }
-    
+
     public static String makeRelicPath(String resourcePath) {
         return getModID() + "Resources/images/relics/" + resourcePath;
     }
-    
+
     public static String makeRelicOutlinePath(String resourcePath) {
         return getModID() + "Resources/images/relics/outline/" + resourcePath;
     }
-    
+
     public static String makeOrbPath(String resourcePath) {
         return getModID() + "Resources/orbs/" + resourcePath;
     }
-    
+
     public static String makePowerPath(String resourcePath) {
         return getModID() + "Resources/images/powers/" + resourcePath;
     }
-    
+
     public static String makeEventPath(String resourcePath) {
         return getModID() + "Resources/images/events/" + resourcePath;
     }
@@ -202,17 +179,17 @@ public class HermitMod implements
 
     public static CardGroup deadList;
 
-    
+
     // =============== /MAKE IMAGE PATHS/ =================
-    
+
     // =============== /INPUT TEXTURE LOCATION/ =================
-    
-    
+
+
     // =============== SUBSCRIBE, CREATE THE COLOR_GRAY, INITIALIZE =================
-    
+
     public HermitMod() {
         System.out.println("Subscribe to BaseMod hooks");
-        
+
         BaseMod.subscribe(this);
         
       /*
@@ -224,34 +201,34 @@ public class HermitMod implements
          | (__| __ |/ _ \ | .` | (_ | _|  | |\/| | (_) | |) |  | | | |) |
           \___|_||_/_/ \_\|_|\_|\___|___| |_|  |_|\___/|___/  |___||___(_)
       */
-      
+
         modID = ("hermit");
         // cool
         // TODO: NOW READ THIS!!!!!!!!!!!!!!!:
-        
+
         // 1. Go to your resources folder in the project panel, and refactor> rename hermitResources to
         // yourModIDResources.
-        
+
         // 2. Click on the localization > eng folder and press ctrl+shift+r, then select "Directory" (rather than in Project)
         // replace all instances of theDefault with yourModID.
         // Because your mod ID isn't the default. Your cards (and everything else) should have Your mod id. Not mine.
-        
+
         // 3. FINALLY and most importantly: Scroll up a bit. You may have noticed the image locations above don't use getModID()
         // Change their locations to reflect your actual ID rather than theDefault. They get loaded before getID is a thing.
-        
+
         System.out.println("Done subscribing");
-        
+
         System.out.println("Creating the color " + hermit.Enums.COLOR_YELLOW.toString());
-        
+
         BaseMod.addColor(hermit.Enums.COLOR_YELLOW, HERMIT_YELLOW, HERMIT_YELLOW, HERMIT_YELLOW,
                 HERMIT_YELLOW, HERMIT_YELLOW, HERMIT_YELLOW, HERMIT_YELLOW,
                 ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
                 ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
                 ENERGY_ORB_DEFAULT_GRAY_PORTRAIT, CARD_ENERGY_ORB);
-        
+
         System.out.println("Done creating the color");
-        
-        
+
+
         System.out.println("Adding mod settings");
         // This loads the mod settings.
         // The actual mod Button is added below in receivePostInitialize()
@@ -260,7 +237,6 @@ public class HermitMod implements
     }
 
 
-    
     // ====== NO EDIT AREA ======
     // DON'T TOUCH THIS STUFF. IT IS HERE FOR STANDARDIZATION BETWEEN MODS AND TO ENSURE GOOD CODE PRACTICES.
     // IF YOU MODIFY THIS I WILL HUNT YOU DOWN AND DOWNVOTE YOUR MOD ON WORKSHOP
@@ -283,7 +259,7 @@ public class HermitMod implements
     } // NO
     */
 
-    
+
     public static String getModID() { // NO
         return modID; // DOUBLE NO
     } // NU-UH
@@ -307,10 +283,10 @@ public class HermitMod implements
     }// NO
 
      */
-    
+
     // ====== YOU CAN EDIT AGAIN ======
-    
-    
+
+
     @SuppressWarnings("unused")
     public static void initialize() {
 
@@ -326,39 +302,39 @@ public class HermitMod implements
 
          */
     }
-    
+
     // ============== /SUBSCRIBE, CREATE THE COLOR_GRAY, INITIALIZE/ =================
-    
-    
+
+
     // =============== LOAD THE CHARACTER =================
-    
+
     @Override
     public void receiveEditCharacters() {
         System.out.println("Beginning to edit characters. " + "Add " + hermit.Enums.HERMIT.toString());
-        
+
         BaseMod.addCharacter(new hermit("the Hermit", hermit.Enums.HERMIT),
                 THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, hermit.Enums.HERMIT);
-        
+
         receiveEditPotions();
         System.out.println("Added " + hermit.Enums.HERMIT.toString());
     }
-    
+
     // =============== /LOAD THE CHARACTER/ =================
-    
-    
+
+
     // =============== POST-INITIALIZE =================
-    
+
     @Override
     public void receivePostInitialize() {
         System.out.println("Loading badge image and mod options");
-        
+
         // Load the Mod Badge
-       // Texture badgeTexture = TextureLoader.getTexture(BADGE_IMAGE);
-        
+        // Texture badgeTexture = TextureLoader.getTexture(BADGE_IMAGE);
+
         // Create the Mod Menu
-      //  ModPanel settingsPanel = new ModPanel();
-        
-       // BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
+        //  ModPanel settingsPanel = new ModPanel();
+
+        // BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
         BaseMod.registerCustomReward(
                 EnumPatch.HERMIT_BOUNTY,
@@ -366,12 +342,12 @@ public class HermitMod implements
                     return new BountyGold(rewardSave.amount);
                 },
                 (customReward) -> { // this handles what to do when this quest type is saved.
-                    return new RewardSave(customReward.type.toString(), null, ((BountyGold)customReward).goldAmt, 0);
+                    return new RewardSave(customReward.type.toString(), null, ((BountyGold) customReward).goldAmt, 0);
                 });
 
-        
+
         // =============== EVENTS =================
-        
+
         // This event will be exclusive to the City (act 2). If you want an event that's present at any
         // part of the game, simply don't include the dungeon ID
         // If you want to have a character-specific event, look at slimebound (CityRemoveEventPatch).
@@ -391,8 +367,7 @@ public class HermitMod implements
         deadList = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
         for (AbstractCard deadlist_c : CardLibrary.getAllCards()) {
-            if (deadlist_c.hasTag(AbstractHermitCard.Enums.DEADON) && !deadlist_c.hasTag(AbstractCard.CardTags.HEALING) && deadlist_c.type != AbstractCard.CardType.CURSE && deadlist_c.rarity != AbstractCard.CardRarity.BASIC)
-            {
+            if (deadlist_c.hasTag(AbstractHermitCard.Enums.DEADON) && !deadlist_c.hasTag(AbstractCard.CardTags.HEALING) && deadlist_c.type != AbstractCard.CardType.CURSE && deadlist_c.rarity != AbstractCard.CardRarity.BASIC) {
                 deadList.addToBottom(deadlist_c);
             }
         }
@@ -400,46 +375,56 @@ public class HermitMod implements
         // =============== /EVENTS/ =================
         System.out.println("Done loading badge Image and mod options");
     }
-    
+
     // =============== / POST-INITIALIZE/ =================
-    
-    
+
+
     // ================ ADD POTIONS ===================
-    
+
     public void receiveEditPotions() {
         System.out.println("Beginning to edit potions");
-        
+
         // Class Specific Potion. If you want your potion to not be class-specific,
         // just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT".
         // Remember, you can press ctrl+P inside parentheses like addPotions)
-        BaseMod.addPotion(Tonic.class, null,null,null, Tonic.POTION_ID, hermit.Enums.HERMIT);
-        BaseMod.addPotion(BlackBile.class, null,null,null, BlackBile.POTION_ID, hermit.Enums.HERMIT);
-        BaseMod.addPotion(Eclipse.class, Color.SCARLET.cpy(),Color.BLACK.cpy(),null, Eclipse.POTION_ID, hermit.Enums.HERMIT);
+        BaseMod.addPotion(Tonic.class, null, null, null, Tonic.POTION_ID, hermit.Enums.HERMIT);
+        BaseMod.addPotion(BlackBile.class, null, null, null, BlackBile.POTION_ID, hermit.Enums.HERMIT);
+        BaseMod.addPotion(Eclipse.class, Color.SCARLET.cpy(), Color.BLACK.cpy(), null, Eclipse.POTION_ID, hermit.Enums.HERMIT);
 
         System.out.println("Done editing potions");
     }
-    
+
     // ================ /ADD POTIONS/ ===================
-    
-    
+
+
     // ================ ADD RELICS ===================
-    
+
     @Override
     public void receiveEditRelics() {
         System.out.println("Adding relics");
-        
+
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
 
         BaseMod.addRelicToCustomPool(new Memento(), hermit.Enums.COLOR_YELLOW);
         BaseMod.addRelicToCustomPool(new RyeStalk(), hermit.Enums.COLOR_YELLOW);
-        BaseMod.addRelicToCustomPool(new BartenderGlass(), hermit.Enums.COLOR_YELLOW);
-        BaseMod.addRelic(new Horseshoe(), RelicType.SHARED);
         BaseMod.addRelicToCustomPool(new Spyglass(), hermit.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new StraightRazor(), hermit.Enums.COLOR_YELLOW);
         BaseMod.addRelicToCustomPool(new CharredGlove(), hermit.Enums.COLOR_YELLOW);
-        BaseMod.addRelic(new RedScarf(), RelicType.SHARED);
-        BaseMod.addRelic(new DentedPlate(), RelicType.SHARED);
-        BaseMod.addRelicToCustomPool(new PetGhost(), hermit.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new RedScarf(), hermit.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new BlackPowder(), hermit.Enums.COLOR_YELLOW);
         BaseMod.addRelicToCustomPool(new ClaspedLocket(), hermit.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new BartenderGlass(), hermit.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new DentedPlate(), hermit.Enums.COLOR_YELLOW);
+        BaseMod.addRelicToCustomPool(new PetGhost(), hermit.Enums.COLOR_YELLOW);
+
+
+        BaseMod.addRelic(new BrassTacks(), RelicType.SHARED);
+        BaseMod.addRelic(new BloodyTooth(), RelicType.SHARED);
+        BaseMod.addRelic(new Horseshoe(), RelicType.SHARED);
+
+
+
+
 
 
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
@@ -455,12 +440,12 @@ public class HermitMod implements
         UnlockTracker.markRelicAsSeen(ClaspedLocket.ID);
         System.out.println("Done adding relics!");
     }
-    
+
     // ================ /ADD RELICS/ ===================
-    
-    
+
+
     // ================ ADD CARDS ===================
-    
+
     @Override
     public void receiveEditCards() {
         System.out.println("Adding variables");
@@ -471,18 +456,18 @@ public class HermitMod implements
         // Add the Custom Dynamic variabls
         BaseMod.addDynamicVariable(new DefaultCustomVariable());
         BaseMod.addDynamicVariable(new DefaultSecondMagicNumber());
-        
+
         System.out.println("Adding cards");
         // Add the cards
         // Don't comment out/delete these cards (yet). You need 1 of each type and rarity (technically) for your game not to crash
         // when generating card rewards/shop screen items.
 
 
-            try {
-                autoAddCards();
-            } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
-                throw new RuntimeException(e);
-            }
+        try {
+            autoAddCards();
+        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
 
 
         System.out.println("Done adding cards!");
@@ -534,14 +519,14 @@ public class HermitMod implements
 
         }
     }
-    
+
     // There are better ways to do this than listing every single individual card, but I do not want to complicate things
     // in a "tutorial" mod. This will do and it's completely ok to use. If you ever want to clean up and
     // shorten all the imports, go look take a look at other mods, such as Hubris.
-    
+
     // ================ /ADD CARDS/ ===================
-    
-    
+
+
     // ================ LOAD THE TEXT ===================
 
     /*
@@ -619,7 +604,9 @@ public class HermitMod implements
     public void receiveOnBattleStart(AbstractRoom room) {
         tackybypass = true;
         if (AbstractDungeon.player instanceof hermit) {
-            if (downfallMod.unseenTutorials[0]){ AbstractDungeon.actionManager.addToBottom(new MessageCaller(0)); }
+            if (downfallMod.unseenTutorials[0]) {
+                AbstractDungeon.actionManager.addToBottom(new MessageCaller(0));
+            }
         }
     }
 
@@ -647,9 +634,9 @@ public class HermitMod implements
         ReflectionHacks.setPrivate(card, AbstractCard.class, "jokePortrait", cardImg);
     }
 
-    
+
     // ================ /LOAD THE KEYWORDS/ ===================    
-    
+
     // this adds "ModName:" before the ID of any card/relic/power etc.
     // in order to avoid conflicts if any other mod uses the same ID.
     public static String makeID(String idText) {
@@ -657,8 +644,7 @@ public class HermitMod implements
     }
 
     @Override
-    public void receiveAddAudio()
-    {
+    public void receiveAddAudio() {
         BaseMod.addAudio(makeID("GUN1"), "hermitResources/audio/hermit_gun.ogg");
         BaseMod.addAudio(makeID("GUN2"), "hermitResources/audio/hermit_gun2.ogg");
         BaseMod.addAudio(makeID("GUN3"), "hermitResources/audio/hermit_gun3.ogg");
@@ -668,7 +654,7 @@ public class HermitMod implements
 
     @Override
     public void receiveSetUnlocks() {
-        downfallMod.registerUnlockSuite(
+        downfallMod.registerUnlockSuiteAlternating(
                 LoneWolf.ID,
                 FullyLoaded.ID,
                 Showdown.ID,

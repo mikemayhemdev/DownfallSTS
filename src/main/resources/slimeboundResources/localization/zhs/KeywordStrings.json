@@ -4,34 +4,35 @@
       "吸收"
     ],
     "PROPERNAME": "吸收",
-    "DESCRIPTION": "融合一只生成的史莱姆，恢复 分裂 时减少的生命上限并获得1点 #y力量 。"
+    "DESCRIPTION": "融合最前面的的 #y史莱姆 并获得 #b1 点 #y力量 。"
   },
   {
     "NAMES": [
       "分裂"
     ],
     "PROPERNAME": "分裂",
-    "DESCRIPTION": "生成将在每回合开始攻击的 #y史莱姆 爪牙 。如果栏位不足，将吸收最后一只史莱姆并获得力量。"
+    "DESCRIPTION": "在最前面生成将在每回合开始时攻击的 #y史莱姆 爪牙。如果栏位不足，融合最后面的 #y史莱姆 并获得 #b1 点 #y力量 。"
   },
   {
     "NAMES": [
-      "黏液"
+      "黏液",
+      "goop"
     ],
     "PROPERNAME": "黏液",
-    "DESCRIPTION": "每层 #y黏液 为下次攻击提供 1 点额外伤害，移除所有 #y黏液 并触发 #y消耗黏液 的效果。"
+    "DESCRIPTION": "每层 #y黏液 为下次攻击提供 #b1 点额外伤害，移除所有 #y黏液 并触发 #y消耗黏液 的效果。"
   },
   {
     "NAMES": [
       "潜力"
     ],
     "PROPERNAME": "潜力",
-    "DESCRIPTION": "提升所有生成的史莱姆的攻击伤害。"
+    "DESCRIPTION": "提升所有 #y分裂 的 #y史莱姆 的攻击伤害。"
   },
   { "NAMES": [
       "命令"
     ],
     "PROPER_NAME": "命令",
-    "DESCRIPTION": "最前面的史莱姆将会攻击。"
+    "DESCRIPTION": "最前面的 #y史莱姆 将会攻击。"
   },
   {
     "NAMES": [
@@ -61,7 +62,7 @@
       "cultist_slime"
     ],
     "PROPERNAME": "邪教徒史莱姆",
-    "DESCRIPTION": "发动攻击时造成 #b6 点伤害，提升自身伤害 #b1 点。"
+    "DESCRIPTION": "发动攻击时造成 #b6 点伤害并提升其自身伤害 #b1 点。"
   },
   {
     "NAMES": [
@@ -73,7 +74,7 @@
       "leeching"
     ],
     "PROPERNAME": "水蛭史莱姆",
-    "DESCRIPTION": "发动攻击时造成 #b1 点伤害，并给予你 #b3 点 #y格挡 。"
+    "DESCRIPTION": "发动攻击时造成 #b1 点伤害并给予你 #b3 点 #y格挡 。"
   },
     {
     "NAMES": [
@@ -85,7 +86,7 @@
       "guerilla"
     ],
     "PROPER_NAME": "游击史莱姆",
-    "DESCRIPTION": "对所有敌人造成 #b3 点伤害。"
+    "DESCRIPTION": "发动攻击时对所有敌人造成 #b3 点伤害。"
   },
   {
     "NAMES": [
@@ -97,7 +98,7 @@
       "mire"
     ],
     "PROPERNAME": "污泥史莱姆",
-    "DESCRIPTION": "发动攻击时造成 #b2 点伤害，并给予敌人 #b2 层 #y黏液。"
+    "DESCRIPTION": "发动攻击时造成 #b2 点伤害并给予敌人 #b2 层 #y黏液 。"
   },
   {
     "NAMES": [
@@ -106,7 +107,7 @@
       "bronze_slime"
     ],
     "PROPERNAME": "青铜史莱姆",
-    "DESCRIPTION": "发动攻击时造成 #b4 点伤害，并给予你 #b4 点 #y格挡 。"
+    "DESCRIPTION": "发动攻击时造成 #b4 点伤害并给予你 #b4 点 #y格挡 。"
   },
   {
     "NAMES": [
@@ -168,7 +169,7 @@
       "insulting_slime"
     ],
     "PROPER_NAME": "嘲讽史莱姆",
-    "DESCRIPTION": "攻击造成 #b4 点伤害并给予 #b1 层 #y易伤 。"
+    "DESCRIPTION": "攻击造成 #b4 点伤害并给予敌人 #b1 层 #y易伤 。"
   }, 
   {
     "NAMES": [
@@ -177,7 +178,7 @@
       "darkling_slime"
     ],
     "PROPER_NAME": "小黑史莱姆",
-    "DESCRIPTION": "攻击造成 #b3 点伤害。命令时，其他小黑史莱姆也会攻击。"
+    "DESCRIPTION": "攻击造成 #b3 点伤害。 #y命令 时，其他 #y小黑史莱姆 也会攻击。"
   },
   {
     "NAMES": [
@@ -195,14 +196,14 @@
       "time_slime"
     ],
     "PROPER_NAME": "时间史莱姆",
-    "DESCRIPTION": "攻击造成 #b4 点伤害并给予 #b1 层 #y虚弱 。"
+    "DESCRIPTION": "攻击造成 #b4 点伤害并给予敌人 #b1 层 #y虚弱 。"
   },
     {
     "NAMES": [
       "消耗黏液"
     ],
     "PROPER_NAME": "消耗黏液",
-    "DESCRIPTION": "当 #y攻击 带有 #y黏液 的敌人时获得的额外效果。"
+    "DESCRIPTION": "当 #y攻击 带有 #y黏液 的敌人时可触发的额外效果。"
   },
     {
     "NAMES": [
@@ -211,6 +212,6 @@
       "specialist"
     ],
     "PROPER_NAME": "专家史莱姆",
-    "DESCRIPTION": "比普通史莱姆有着更加强大且独特的史莱姆。"
+    "DESCRIPTION": "比普通 #y史莱姆 更加强大的独特 #y史莱姆 。"
   }
 ]

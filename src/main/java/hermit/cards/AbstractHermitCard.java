@@ -4,10 +4,14 @@ import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import hermit.HermitMod;
 import hermit.patches.EndOfTurnPatch;
@@ -15,9 +19,12 @@ import hermit.patches.VigorPatch;
 import hermit.powers.BigShotPower;
 import hermit.powers.ComboPower;
 import hermit.powers.Concentration;
+import hermit.powers.SnipePower;
+import hermit.relics.BlackPowder;
 import hermit.util.TextureLoader;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public abstract class AbstractHermitCard extends CustomCard {
 
@@ -126,22 +133,53 @@ public abstract class AbstractHermitCard extends CustomCard {
 
     protected boolean onDeadOn()
     {
-        if (AbstractDungeon.player.hasPower(BigShotPower.POWER_ID)) {
-            VigorPatch.isActive=true;
-        }
-        if (AbstractDungeon.player.hasPower(ComboPower.POWER_ID)) {
-            if (!doneInit)
-                init();
-            AbstractDungeon.player.getPower(ComboPower.POWER_ID).flash();
+        int DeadOnTimes = DeadOnAmount();
 
-            for (int i = 0; i < AbstractDungeon.player.getPower(ComboPower.POWER_ID).amount; i++) {
-                this.addToBot(new MakeTempCardInHandAction(hermit.HermitMod.deadList.getRandomCard(true).makeCopy(), 1));
+        for (int a = 0; a < DeadOnTimes; a++) {
+            if (AbstractDungeon.player.hasPower(BigShotPower.POWER_ID)) {
+                VigorPatch.isActive += 1;
             }
+
+            Iterator findPow = AbstractDungeon.player.relics.iterator();
+
+            while(findPow.hasNext()) {
+                AbstractRelic c = (AbstractRelic)findPow.next();
+
+                if (c.relicId.equals(BlackPowder.ID))
+                {
+                    ((BlackPowder)c).PowderCharge += 2;
+                    ((BlackPowder)c).counter = ((BlackPowder)c).PowderCharge;
+                }
+            }
+
+            if (AbstractDungeon.player.hasPower(ComboPower.POWER_ID)) {
+                if (!doneInit)
+                    init();
+                AbstractDungeon.player.getPower(ComboPower.POWER_ID).flash();
+
+                for (int i = 0; i < AbstractDungeon.player.getPower(ComboPower.POWER_ID).amount; i++) {
+                    this.addToBot(new MakeTempCardInHandAction(hermit.HermitMod.deadList.getRandomCard(true).makeCopy(), 1));
+                }
+            }
+
+            EndOfTurnPatch.deadon_counter++;
         }
 
-        EndOfTurnPatch.deadon_counter++;
+        if (AbstractDungeon.player.hasPower(SnipePower.POWER_ID))
+        AbstractDungeon.player.getPower(SnipePower.POWER_ID).flash();
 
         return true;
+    }
+
+    public int DeadOnAmount()
+    {
+        int do_times = 1;
+
+        if (AbstractDungeon.player.hasPower(SnipePower.POWER_ID)) {
+            do_times++;
+        }
+
+        return do_times;
     }
 
     public String betaArtPath;

@@ -18,7 +18,7 @@ public class EnHoleUp extends AbstractHermitBossCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(HoleUp.ID);
 
     public EnHoleUp() {
-        super(ID, cardStrings.NAME, "hermitResources/images/cards/ghostly_presence.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
+        super(ID, cardStrings.NAME, "hermitResources/images/cards/hole_up.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
         this.baseBlock = 12;
         baseMagicNumber = magicNumber = 2;
     }

@@ -18,6 +18,8 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import hermit.cards.Defend_Hermit;
+import hermit.cards.Strike_Hermit;
 
 import java.util.ArrayList;
 
@@ -51,14 +53,8 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         mockDeck.add(show);
         AbstractCard strik = new EnFreeStrikeHermit();
         strik.upgrade();
-        for (int i = 0; i < maintenanceLevels; i++) {
-            upgradeStrikeOrDefendManually(strik);
-        }
         mockDeck.add(strik);
         AbstractCard strik2 = new EnFreeStrikeHermit();
-        for (int i = 0; i < maintenanceLevels; i++) {
-            upgradeStrikeOrDefendManually(strik2);
-        }
         mockDeck.add(strik2);
         mockDeck.add(new EnDefendHermit());
         mockDeck.add(new EnDesperado());
@@ -98,13 +94,19 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
                 c.baseBlock += 3;
                 c.upgradedBlock = true;
             }
-            CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(c.cardID);
+            String NAME;
+            if (c instanceof EnStrikeHermit) {
+                NAME = Strike_Hermit.NAME;
+            }
+            else {
+                NAME = EnDefendHermit.cardStrings.NAME;
+            }
             c.timesUpgraded++;
             c.upgraded = true;
             if (c.timesUpgraded > 1)
-                c.name = cardStrings.NAME + "+" + c.timesUpgraded;
+                c.name = NAME + "+" + c.timesUpgraded;
             else
-                c.name = cardStrings.NAME + "+";
+                c.name = NAME + "+";
             c.applyPowers();
         }
     }
@@ -116,18 +118,35 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
             if (mockDeck.isEmpty()) {
                 reshuffle();
             }
-            cardsList.add(mockDeck.remove(0));
+            cardsList.add(getNextCard());
         }
         return cardsList;
     }
 
+    protected AbstractCard getNextCard() {
+        AbstractCard q = mockDeck.remove(0);
+        AbstractCard x = q.makeStatEquivalentCopy();
+        if (x instanceof EnStrikeHermit || x instanceof EnDefendHermit) {
+            for (int y = 0; y < maintenanceLevels; y++) {
+                upgradeStrikeOrDefendManually(x);
+            }
+        }
+        mockDeck.add(mockDeck.size(), q);
+        return x;
+    }
+
     public void reInitializeHand() {
-        AbstractCharBoss.boss.hand.removeCard(AbstractCharBoss.boss.hand.getBottomCard());
+        AbstractCard bot = AbstractCharBoss.boss.hand.getBottomCard();
+        AbstractCharBoss.boss.hand.removeCard(bot);
+        if (bot instanceof EnShowdown) {
+            ((EnShowdown) bot).onSpecificTrigger();
+        }
         if (mockDeck.isEmpty()) {
             reshuffle();
         }
-        AbstractCharBoss.boss.hand.addToTop(mockDeck.get(0));
-        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+        AbstractCharBoss.boss.hand.addToTop(getNextCard());
+        AbstractCharBoss.boss.hand.refreshHandLayout();
+        AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
@@ -146,7 +165,9 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
                 for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
                     AbstractBossCard cB = (AbstractBossCard) c;
                     cB.refreshIntentHbLocation();
+                    c.applyPowers();
                 }
+                AbstractCharBoss.boss.hand.refreshHandLayout();
             }
         });
     }

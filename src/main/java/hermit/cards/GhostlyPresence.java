@@ -3,6 +3,7 @@ package hermit.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.Bruise;
+import hermit.powers.SnipePower;
 //import org.apache.logging.log4j.LogManager;
 //import org.apache.logging.log4j.Logger;
 
@@ -64,12 +66,18 @@ public class GhostlyPresence extends AbstractDynamicCard {
         if (isDeadOn()) {
             onDeadOn();
 
-            Iterator var4 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+            int DeadOnTimes = DeadOnAmount();
 
-            while(var4.hasNext()) {
-                AbstractMonster mo = (AbstractMonster)var4.next();
-                this.addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, magicNumber, false), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+            for (int a = 0; a < DeadOnTimes; a++) {
+                Iterator var4 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
+                while (var4.hasNext()) {
+                    AbstractMonster mo = (AbstractMonster) var4.next();
+                    this.addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, magicNumber, false), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                }
             }
+
+            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
         }
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
     }

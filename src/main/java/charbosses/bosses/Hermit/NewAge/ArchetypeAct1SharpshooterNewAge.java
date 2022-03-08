@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import java.util.ArrayList;
 
 public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
+    public static final int damageThreshold = 10;
 
     public ArchetypeAct1SharpshooterNewAge() {
         super("HERMIT_SHARPSHOOTER_ARCHETYPE", "Dead On");
@@ -27,8 +28,7 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
     public void addedPreBattle() {
         super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HermitConcentrateAdder(p), 1));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HermitConcentrationPower(p), 10));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HermitConcentrationPower(p), damageThreshold));
     }
 
 

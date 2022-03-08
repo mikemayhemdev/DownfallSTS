@@ -288,7 +288,7 @@
   },
   "champ:HeartStrike": {
     "NAME": "Finish Him",
-    "DESCRIPTION": "Deal !D! damage. NL If target was below !M!% HP deals damage twice.",
+    "DESCRIPTION": "Deal !D! damage, twice if target was below NL !M!% HP.",
     "EXTENDED_DESCRIPTION": [
       "A poor time for that move.",
       "That foe isn't ready to be ended yet."
@@ -304,7 +304,7 @@
   },
   "champ:LastStand": {
     "NAME": "Last Stand",
-    "DESCRIPTION": "Once you get below 50% HP, remove all debuffs and gain 6 Strength.",
+    "DESCRIPTION": "Once you get below 50% HP, remove all debuffs and gain !M! Strength.",
     "EXTENDED_DESCRIPTION": [
       "~You've~ ~done~ ~it~ ~now...~",
       "@DEFEAT??@ NL @IMPOSSIBLE!!@"

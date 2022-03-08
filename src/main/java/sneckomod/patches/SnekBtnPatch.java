@@ -25,7 +25,7 @@ public class SnekBtnPatch {
     @SpirePatch(clz = CharacterOption.class, method = "renderRelics")
     public static class RenderBtn {
         public static void Postfix(CharacterOption obj, SpriteBatch sb) {
-            if (obj.name.toLowerCase().contains("snecko") && obj.selected) {
+            if ( (obj.name.toLowerCase().contains("snecko") || obj.name.contains("蛇") || obj.name.contains("스네코") )&& obj.selected) {
                 challengeDownHitbox.move(190.0f * Settings.scale, Settings.HEIGHT / 2.0f - 190.0f * Settings.scale);
                 challengeDownHitbox.render(sb);
 
@@ -42,7 +42,7 @@ public class SnekBtnPatch {
     @SpirePatch(clz = CharacterOption.class, method = "updateHitbox")
     public static class UpdateHitbox {
         public static void Postfix(CharacterOption obj) {
-            if (obj.name.toLowerCase().contains("snecko") && obj.selected) {
+            if ((obj.name.toLowerCase().contains("snecko") || obj.name.contains("蛇") || obj.name.contains("스네코") ) && obj.selected) {
                 challengeDownHitbox.update();
                 if (challengeDownHitbox.hovered) {
                     if (challengeTips.isEmpty()) {

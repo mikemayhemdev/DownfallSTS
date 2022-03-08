@@ -1,0 +1,74 @@
+{
+  "hermit:Momento": {
+    "NAME": "Old Locket",
+    "FLAVOR": "There's a faded picture inside.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, add a #yMemento into your hand."
+    ]
+  },
+  "hermit:RyeStalk": {
+    "NAME": "Rye Stalk",
+    "FLAVOR": "Still in mint condition, despite being chewed on for so long.",
+    "DESCRIPTIONS": [
+      "#yhermit:Bruise is no longer reduced on hit."
+    ]
+  },
+  "hermit:BartenderGlass": {
+    "NAME": "Shotglass",
+    "FLAVOR": "Any liquid placed inside changes into something else.",
+    "DESCRIPTIONS": [
+      "First #b2 times you use a potion each combat, gain a random potion. You can only use #b2 potions each combat.",
+      "You cannot use any more potions this combat."
+    ]
+  },
+  "hermit:Horseshoe": {
+    "NAME": "Horseshoe",
+    "FLAVOR": "Lucky charm. Somebody is gonna be missing this.",
+    "DESCRIPTIONS": [
+      "Whenever you gain #yWeak, #yFrail or #yVulnerable, gain #b1 less."
+    ]
+  },
+  "hermit:Spyglass": {
+    "NAME": "Spyglass",
+    "FLAVOR": "Property of Kestin Highfin.",
+    "DESCRIPTIONS": [
+      "If you end your turn #yhermit:Concentrated, gain an additional [E] next turn ."
+    ]
+  },
+  "hermit:RedScarf": {
+    "NAME": "Red Scarf",
+    "FLAVOR": "It's warm and fuzzy.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, discard up to #b7 cards from your draw pile."
+    ]
+  },
+  "hermit:DentedPlate": {
+    "NAME": "Dented Plate",
+    "FLAVOR": "Several bullets are still lodged inside.",
+    "DESCRIPTIONS": [
+      "While your HP is at or below #b50%, gain [E] and draw #b1 card at the start of your turn."
+    ]
+  },
+  "hermit:PetGhost": {
+    "NAME": "Pet Ghost",
+    "FLAVOR": "Poor guy.",
+    "DESCRIPTIONS": [
+      "If you would die, survive with #b1 HP instead. You die at the end of your next turn. You cannot die before then."
+    ]
+  },
+  "hermit:CharredGlove": {
+    "NAME": "Charred Glove",
+    "FLAVOR": "Parts of the glove still glow with otherworldly cinders.",
+    "DESCRIPTIONS": [
+      "Whenever you draw a #yCurse, your next attack deals #b4 more damage."
+    ]
+  },
+  "hermit:ClaspedLocket": {
+    "NAME": "Clasped Locket",
+    "FLAVOR": "It won't open anymore.",
+    "DESCRIPTIONS": [
+      "Replaces #yOld #yLocket. Upon pickup, add #b3 #yMementos to your deck.",
+      "Never again..."
+    ]
+  }
+}

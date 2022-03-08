@@ -45,7 +45,7 @@ public class Virtue extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
 
 
     // /STAT DECLARATION/
@@ -54,7 +54,8 @@ public class Virtue extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         loadJokeCardImage(this, "virtue.png");
 
-        magicNumber = baseMagicNumber = 2;
+        this.selfRetain = true;
+        magicNumber = baseMagicNumber = 1;
     }
 
     // Actions the card should do.
@@ -85,7 +86,7 @@ public class Virtue extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+            upgradeMagicNumber(1);
             initializeDescription();
         }
     }

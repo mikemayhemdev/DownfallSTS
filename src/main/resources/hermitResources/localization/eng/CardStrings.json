@@ -29,8 +29,8 @@
   },
   "hermit:Covet": {
     "NAME": "Covet",
-    "DESCRIPTION": "Exhaust a card. Draw a card. If you Exhaust a Curse, draw !M! more.",
-    "UPGRADE_DESCRIPTION": "Exhaust a card. Draw a card. If you Exhaust a Curse or a Status, draw !M! more."
+    "DESCRIPTION": "Discard 1 card. NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Discard 1 card. NL Draw !M! cards."
   },
   "hermit:HighCaliber": {
     "NAME": "High-Caliber",
@@ -44,7 +44,8 @@
   },
   "hermit:Snipe": {
     "NAME": "Snipe",
-    "DESCRIPTION": "hermit:Concentrate. NL Gain !M! Strength this turn."
+    "DESCRIPTION": "Your next hermit:Dead_On effect this turn triggers twice.",
+    "UPGRADE_DESCRIPTION": "hermit:Concentrate. NL Your next hermit:Dead_On effect this turn triggers twice."
   },
   "hermit:CalledShot": {
     "NAME": "Called Shot",
@@ -53,8 +54,7 @@
   },
   "hermit:Dissolve": {
     "NAME": "Dissolve",
-    "DESCRIPTION": "Gain !M! Block for each card in your discard pile. NL Add 1 *Decay to your discard pile.",
-    "UPGRADE_DESCRIPTION": " NL (Gain !B! Block.)"
+    "DESCRIPTION": "Next turn, Gain !B! Block. NL Exhaust."
   },
   "hermit:BlackWind": {
     "NAME": "Black Wind",
@@ -89,7 +89,7 @@
   },
   "hermit:Deadeye": {
     "NAME": "Deadeye",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL Exhaust. NL hermit:Dead_On\: NL Don't Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL hermit:Dead_On\: NL Gain !M! Strength."
   },
   "hermit:GhostlyPresence": {
     "NAME": "Ghostly Presence",
@@ -119,7 +119,7 @@
   "hermit:Glare": {
     "NAME": "Glare",
     "DESCRIPTION": "Apply !M! Weak and Vulnerable.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable. NL Apply !hermit:SecondMagic! hermit:Bruise."
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !hermit:SecondMagic! Vulnerable."
   },
   "hermit:TakeCover": {
     "NAME": "Take Cover",
@@ -132,7 +132,7 @@
   },
   "hermit:SprayPray": {
     "NAME": "Spray n' Pray",
-    "DESCRIPTION": "Deal !D! damage to a random enemy 3 times. NL Shuffle a *Doubt into your draw pile."
+    "DESCRIPTION": "Deal !D! damage to a random enemy 4 times. NL Shuffle a *Doubt into your draw pile."
   },
   "hermit:Scavenge": {
     "NAME": "Scavenge",
@@ -180,7 +180,7 @@
   },
   "hermit:Cheat": {
     "NAME": "Cheat",
-    "DESCRIPTION": "Play one of the top !M! cards in your draw pile. NL If hermit:Dead_On: So is the played card."
+    "DESCRIPTION": "Play one of the top !M! cards in your draw pile. NL hermit:Dead_On: Also trigger its hermit:Dead_On effect."
   },
   "hermit:Vantage": {
     "NAME": "Vantage",
@@ -212,7 +212,8 @@
   },
   "hermit:FullyLoaded": {
     "NAME": "Fully Loaded",
-    "DESCRIPTION": "Draw ALL your *Strikes and *Defends. NL Exhaust."
+    "DESCRIPTION": "Draw ALL your *Strikes and *Defends. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Draw ALL your *Strikes and *Defends. NL Exhaust."
   },
   "hermit:Gestalt": {
     "NAME": "Gestalt",
@@ -220,7 +221,7 @@
   },
   "hermit:RoundhouseKick": {
     "NAME": "Roundhouse Kick",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Stun any that don't intend to attack. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL hermit:Stun any that don't intend to attack. NL Exhaust."
   },
   "hermit:CursedWeapon": {
     "NAME": "Cursed Weapon",
@@ -278,7 +279,7 @@
   },
   "hermit:Coalescence": {
     "NAME": "Coalescence",
-    "DESCRIPTION": "Gain !M! Dexterity this turn."
+    "DESCRIPTION": "Gain !B! Block. NL Retain up to !M! cards this turn."
   },
   "hermit:PistolWhip": {
     "NAME": "Pistol Whip",
@@ -316,7 +317,7 @@
   },
   "hermit:HeroicBravado": {
     "NAME": "Heroic Bravado",
-    "DESCRIPTION": "Ethereal. NL Gain 1 hermit:Rugged. NL Increase the cost of this card by 1 this combat."
+    "DESCRIPTION": "Ethereal. NL Gain 1 hermit:Rugged. NL Increase the cost of this card by !M! this combat."
   },
   "hermit:FromBeyond": {
     "NAME": "From Beyond",
@@ -324,6 +325,6 @@
   },
   "hermit:Virtue": {
     "NAME": "Virtue",
-    "DESCRIPTION": "Reduce each of your debuffs by !M!."
+    "DESCRIPTION": "Retain. NL Reduce each of your debuffs by !M!."
   }
 }

@@ -17,11 +17,11 @@ import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 
 public class EnDesperado extends AbstractHermitBossCard {
-    public static final String ID = "downfall_Charboss:GhostlyPresence";
+    public static final String ID = "downfall_Charboss:Desperado";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(GhostlyPresence.ID);
 
     public EnDesperado() {
-        super(ID, cardStrings.NAME, "hermitResources/images/cards/ghostly_presence.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.ATTACK);
+        super(ID, cardStrings.NAME, "hermitResources/images/cards/desperado.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 14;
         baseMagicNumber = magicNumber = 2;
     }

@@ -2,6 +2,7 @@ package hermit.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.defect.SeekAction;
 import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.actions.utility.UnlimboAction;
@@ -19,6 +20,7 @@ import com.megacrit.cardcrawl.vfx.scene.DefectVictoryEyesEffect;
 import com.megacrit.cardcrawl.vfx.scene.IroncladVictoryFlameEffect;
 import com.megacrit.cardcrawl.vfx.scene.SilentVictoryStarEffect;
 import hermit.cards.AbstractHermitCard;
+import hermit.powers.SnipePower;
 
 import java.util.Iterator;
 
@@ -107,6 +109,8 @@ public class CheatAction extends AbstractGameAction {
             {
                 ((AbstractHermitCard)c).trig_deadon = true;
             }
+            else
+            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
         }
 
         c.current_y = -200.0F * Settings.scale;

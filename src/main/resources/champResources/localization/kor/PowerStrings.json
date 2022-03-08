@@ -224,8 +224,10 @@
   "champ:LastStandPower": {
     "NAME": "Last Stand",
     "DESCRIPTIONS": [
-      "Once you get below 50% Hp, remove all debuffs and gain #b",
-      " Strength."
+      "Once you get below #b50% Hp, remove all debuffs and gain #b",
+      " Strength.",
+      "~You've~ ~done~ ~it~ ~now...~",
+      "@DEFEAT??@ NL @IMPOSSIBLE!!@"
     ]
   }
 }

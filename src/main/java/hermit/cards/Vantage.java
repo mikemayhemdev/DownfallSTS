@@ -1,6 +1,7 @@
 package hermit.cards;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.UpgradeRandomCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -9,6 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.characters.hermit;
+import hermit.powers.SnipePower;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
@@ -65,8 +67,15 @@ public class Vantage extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
         if (isDeadOn()) {
             onDeadOn();
-            for (int i = 0; i<magicNumber; i++)
-                this.addToBot(new UpgradeRandomCardAction());
+
+            int DeadOnTimes = DeadOnAmount();
+
+            for (int a = 0; a < DeadOnTimes; a++) {
+                for (int i = 0; i < magicNumber; i++)
+                    this.addToBot(new UpgradeRandomCardAction());
+            }
+
+            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
         }
 
     }

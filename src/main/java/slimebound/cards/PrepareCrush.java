@@ -69,6 +69,7 @@ public class PrepareCrush extends AbstractSlimeboundCard {
 
             upgradeMagicNumber(1);
             this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 }

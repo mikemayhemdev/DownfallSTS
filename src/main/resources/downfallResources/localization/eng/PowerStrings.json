@@ -292,8 +292,9 @@
   "downfall:HermitConcentrationPower": {
     "NAME": "Concentrated",
     "DESCRIPTIONS": [
-      "Hermit's cards currently get bonuses. Deal #b",
-      " more damage to break his Concentration."
+      "Hermit's cards get bonus #yDead #yOn effects while he is concentrated. Deal #b",
+      " more damage to break his Concentration this turn.",
+      "Hermit's concentration is broken and #yDead #yOn effects don't trigger this turn."
     ]
   },
   "downfall:HermitWheelOfFortune": {
@@ -305,7 +306,7 @@
   "downfall:HermitDoomsday": {
     "NAME": "Doomsday",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust a card, add an #rImpending #rDoom into your hand."
+      "At the start of your turn, add an #yEthereal #rImpending #rDoom into your hand."
     ]
   }
 }

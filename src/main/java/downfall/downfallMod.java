@@ -1776,8 +1776,21 @@ public class downfallMod implements
         registerUnlockCardBundle(player, 2, bundle3card1, bundle3card2, bundle3card3);
         registerUnlockRelicBundle(player, 3, bundle4relic1, bundle4relic2, bundle4relic3);
         registerUnlockRelicBundle(player, 4, bundle5relic1, bundle5relic2, bundle5relic3);
+    }
 
+    public static void registerUnlockSuiteAlternating(
+            String bundle1card1, String bundle1card2, String bundle1card3,
+            String bundle2relic1, String bundle2relic2, String bundle2relic3,
+            String bundle3card1, String bundle3card2, String bundle3card3,
+            String bundle4relic1, String bundle4relic2, String bundle4relic3,
+            String bundle5card1, String bundle5card2, String bundle5card3,
+            AbstractPlayer.PlayerClass player) {
 
+        registerUnlockCardBundle(player, 0, bundle1card1, bundle1card2, bundle1card3);
+        registerUnlockRelicBundle(player, 1, bundle2relic1, bundle2relic2, bundle2relic3);
+        registerUnlockCardBundle(player, 2, bundle3card1, bundle3card2, bundle3card3);
+        registerUnlockRelicBundle(player, 3, bundle4relic1, bundle4relic2, bundle4relic3);
+        registerUnlockCardBundle(player, 4, bundle5card1, bundle5card2, bundle5card3);
     }
 
     @Override

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import hermit.cards.Headshot;
 import hermit.cards.Roughhouse;
@@ -31,7 +32,8 @@ public class EnRoughhouse extends AbstractHermitBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        if (this.owner.hasPower(HermitConcentrationPower.POWER_ID)) {
+        AbstractPower concentration = this.owner.getPower(HermitConcentrationPower.POWER_ID);
+        if (concentration != null && concentration.amount > 0) {
             addToBot(new GainBlockAction(m, m, block));
         }
 

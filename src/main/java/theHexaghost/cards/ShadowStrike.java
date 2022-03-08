@@ -13,16 +13,11 @@ public class ShadowStrike extends AbstractHexaCard {
 
     public final static String ID = makeID("ShadowStrike");
 
-    //stupid intellij stuff ATTACK, ENEMY, SPECIAL
-
-    private static final int DAMAGE = 16;
-    private static final int UPG_DAMAGE = 4;
-
     private AbstractCard parent;
 
     public ShadowStrike(AbstractCard parent) {
         super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseDamage = DAMAGE;
+        baseDamage = 8;
         exhaust = true;
         isEthereal = true;
         tags.add(CardTags.STRIKE);
@@ -40,6 +35,7 @@ public class ShadowStrike extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
         atb(new AbstractGameAction() {
             @Override
@@ -92,7 +88,7 @@ public class ShadowStrike extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPG_DAMAGE);
+            upgradeDamage(2);
         }
     }
 }

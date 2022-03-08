@@ -11,7 +11,7 @@ public class UnendingSupply extends AbstractSneckoCard {
     //stupid intellij stuff POWER, SELF, UNCOMMON
 
     public UnendingSupply() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

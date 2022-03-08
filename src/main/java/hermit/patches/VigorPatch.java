@@ -13,7 +13,7 @@ import hermit.powers.BigShotPower;
 
 
 public class VigorPatch {
-    public static boolean isActive=false;
+    public static int  isActive=0;
     public static boolean thisRun=false;
 
     @SpirePatch(clz = GameActionManager.class, method = "getNextAction")
@@ -22,7 +22,7 @@ public class VigorPatch {
         @SpirePrefixPatch
         public static void Prefix(GameActionManager m)
         {
-            if (m.actions.isEmpty() && m.preTurnActions.isEmpty() && m.cardQueue.isEmpty() && isActive) {
+            if (m.actions.isEmpty() && m.preTurnActions.isEmpty() && m.cardQueue.isEmpty() && isActive > 0) {
 
                 VigorPatch.thisRun = true;
             }
@@ -32,15 +32,17 @@ public class VigorPatch {
         {
             if (thisRun) {
                 System.out.println("Is thisrun");
-                if (AbstractDungeon.player.hasPower(BigShotPower.POWER_ID)) {
+                while (isActive > 0) {
+                    if (AbstractDungeon.player.hasPower(BigShotPower.POWER_ID)) {
 
-                    AbstractPlayer p = AbstractDungeon.player;
-                    AbstractPower pow = AbstractDungeon.player.getPower(BigShotPower.POWER_ID);
-                    pow.flash();
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VigorPower(p, pow.amount), pow.amount));
+                        AbstractPlayer p = AbstractDungeon.player;
+                        AbstractPower pow = AbstractDungeon.player.getPower(BigShotPower.POWER_ID);
+                        pow.flash();
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VigorPower(p, pow.amount), pow.amount));
+                    }
+                    thisRun = false;
+                    isActive -= 1;
                 }
-                thisRun=false;
-                isActive=false;
             }
 
         }

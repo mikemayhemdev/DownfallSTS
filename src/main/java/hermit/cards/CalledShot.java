@@ -3,6 +3,7 @@ package hermit.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,6 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
+import hermit.powers.SnipePower;
 
 
 import static hermit.HermitMod.loadJokeCardImage;
@@ -67,7 +69,14 @@ public class CalledShot extends AbstractDynamicCard {
         this.initializeDescription();
         if (isDeadOn()) {
             onDeadOn();
-            this.addToBot(new DrawCardAction(magicNumber));
+
+            int DeadOnTimes = DeadOnAmount();
+
+            for (int a = 0; a < DeadOnTimes; a++) {
+                this.addToBot(new DrawCardAction(magicNumber));
+            }
+
+            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
         }
     }
 

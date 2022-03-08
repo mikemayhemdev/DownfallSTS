@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import hermit.cards.Deadeye;
 import hermit.cards.Headshot;
@@ -25,15 +26,23 @@ public class EnDeadeye extends AbstractHermitBossCard {
     public EnDeadeye() {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/deadeye.png", 1, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_BUFF);
         baseDamage = 6;
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
     }
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        if (this.owner.hasPower(HermitConcentrationPower.POWER_ID)) {
+        AbstractPower concentration = this.owner.getPower(HermitConcentrationPower.POWER_ID);
+        if (concentration != null && concentration.amount > 0) {
             addToBot(new ApplyPowerAction(m, m, new StrengthPower(m, magicNumber), magicNumber));
         }
+    }
+
+    @Override
+    public void onSpecificTrigger() {
+        intentActive = false;
+        this.intent = AbstractMonster.Intent.ATTACK;
+        createIntent();
     }
 
     @Override

@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
+import hermit.powers.SnipePower;
 
 
 import static hermit.HermitMod.loadJokeCardImage;
@@ -61,9 +63,17 @@ public class Enervate extends AbstractDynamicCard {
                 new DamageAction(m, new DamageInfo(p, dam, damageTypeForTurn),
                         EnumPatch.HERMIT_GHOSTFIRE));
         if (isDeadOn()) {
-            this.addToBot(new GainEnergyAction(1));
-            this.addToBot(new DrawCardAction(1));
+
             onDeadOn();
+
+            int DeadOnTimes = DeadOnAmount();
+
+            for (int a = 0; a < DeadOnTimes; a++) {
+                this.addToBot(new GainEnergyAction(1));
+                this.addToBot(new DrawCardAction(1));
+            }
+
+            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
         }
     }
 
