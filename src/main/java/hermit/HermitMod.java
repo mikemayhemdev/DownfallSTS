@@ -654,7 +654,7 @@ public class HermitMod implements
 
     @Override
     public void receiveSetUnlocks() {
-        downfallMod.registerUnlockSuite(
+        downfallMod.registerUnlockSuiteAlternating(
                 LoneWolf.ID,
                 FullyLoaded.ID,
                 Showdown.ID,
