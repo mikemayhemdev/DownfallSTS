@@ -21,7 +21,7 @@ public class EnRegret extends AbstractBossCard {
     }
 
     public EnRegret() {
-        super(ID, EnRegret.cardStrings.NAME, "curse/regret", -2, EnRegret.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE, AbstractMonster.Intent.MAGIC);
+        super(ID, EnRegret.cardStrings.NAME, "curse/regret", -2, EnRegret.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE, AbstractMonster.Intent.NONE);
         this.magicValue = -1;
     }
 

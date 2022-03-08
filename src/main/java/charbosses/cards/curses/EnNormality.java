@@ -16,7 +16,7 @@ public class EnNormality extends AbstractBossCard {
     }
 
     public EnNormality() {
-        super(ID, EnNormality.cardStrings.NAME, "curse/normality", -2, EnNormality.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE, AbstractMonster.Intent.MAGIC);
+        super(ID, EnNormality.cardStrings.NAME, "curse/normality", -2, EnNormality.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE, AbstractMonster.Intent.NONE);
     }
 
     @Override

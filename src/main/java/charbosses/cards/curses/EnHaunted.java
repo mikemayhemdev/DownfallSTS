@@ -26,7 +26,7 @@ public class EnHaunted extends AbstractBossCard {
     }
 
     public EnHaunted() {
-        super(ID, EnHaunted.cardStrings.NAME, IMG_PATH, -2, EnHaunted.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE, AbstractMonster.Intent.MAGIC);
+        super(ID, EnHaunted.cardStrings.NAME, IMG_PATH, -2, EnHaunted.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE, AbstractMonster.Intent.NONE);
         this.isEthereal = true;
         portrait = TextureLoader.getTextureAsAtlasRegion(IMG_PATH);
         portraitImg = TextureLoader.getTexture(IMG_PATH);

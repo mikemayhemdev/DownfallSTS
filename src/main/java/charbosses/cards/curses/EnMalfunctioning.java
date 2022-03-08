@@ -30,7 +30,7 @@ public class EnMalfunctioning extends AbstractBossCard {
     }
 
     public EnMalfunctioning() {
-        super(ID, cardStrings.NAME, IMG_PATH, 1, cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE, AbstractMonster.Intent.MAGIC);
+        super(ID, cardStrings.NAME, IMG_PATH, 1, cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE, AbstractMonster.Intent.NONE);
         this.exhaust = true;
         this.isEthereal = true;
         portrait = TextureLoader.getTextureAsAtlasRegion(IMG_PATH);

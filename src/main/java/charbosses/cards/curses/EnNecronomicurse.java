@@ -17,7 +17,7 @@ public class EnNecronomicurse extends AbstractBossCard {
     }
 
     public EnNecronomicurse() {
-        super(ID, EnNecronomicurse.cardStrings.NAME, "curse/necronomicurse", -2, EnNecronomicurse.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.SPECIAL, CardTarget.NONE, AbstractMonster.Intent.MAGIC);
+        super(ID, EnNecronomicurse.cardStrings.NAME, "curse/necronomicurse", -2, EnNecronomicurse.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.SPECIAL, CardTarget.NONE, AbstractMonster.Intent.NONE);
         SoulboundField.soulbound.set(this, true);
     }
 
