@@ -5,11 +5,11 @@
   },
   "downfall:Aged": {
     "NAME": "岁月",
-    "DESCRIPTION": "不能被打出 。 虚无 。 NL 你的回合结束时，将一张 *虚空 加入你的抽牌堆顶部。"
+    "DESCRIPTION": "不能被打出 。 NL 虚无 。 NL 你的回合结束时，将一张 *虚空 加入你的抽牌堆顶部。"
   },
   "downfall:Bewildered": {
     "NAME": "困惑",
-    "DESCRIPTION": "每当你打出其他牌， sneckomod:混淆 你的手牌并将这张牌丢弃。 NL 消耗 。"
+    "DESCRIPTION": "这张牌在手牌时，当你打出其他牌， sneckomod:混淆 你的手牌并将这张牌丢弃。 NL 消耗 。"
   },
   "downfall:Icky": {
     "NAME": "黏液缠身",
@@ -17,7 +17,7 @@
   },
   "downfall:Haunted": {
     "NAME": "闹鬼",
-    "DESCRIPTION": "虚无 。 不能被打出 。 NL 抽到时，将你的手牌加入 虚无 。"
+    "DESCRIPTION": "虚无 。 NL 不能被打出 。 NL 抽到时，将你已有的手牌附加 虚无 。"
   },
   "downfall:Malfunctioning": {
     "NAME": "纰漏",
@@ -25,6 +25,6 @@
   },
   "downfall:Scatterbrained": {
     "NAME": "漫不经心",
-    "DESCRIPTION": "不能被打出 。 NL 如果在你的回合中抽到时，将这张牌的 回响 充满你的手牌。"
+    "DESCRIPTION": "不能被打出 。 NL 在你的回合中抽到时，将这张牌的 gremlin:回响 充满你的手牌。"
   }
 }

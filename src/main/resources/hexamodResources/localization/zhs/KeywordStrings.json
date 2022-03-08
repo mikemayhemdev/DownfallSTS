@@ -2,7 +2,8 @@
   {
     "PROPER_NAME": "激活",
     "NAMES": [
-      "激活"
+      "激活",
+      "active"
     ],
     "DESCRIPTION": "#y激活 的鬼火能在达到点燃条件时被点燃。"
   },
@@ -30,7 +31,8 @@
   {
     "PROPER_NAME": "灼魂",
     "NAMES": [
-      "灼魂"
+      "灼魂",
+      "soulburn"
     ],
     "DESCRIPTION": "在 #b3 个回合后，被灼魂的生物失去相应数量的生命并移除灼魂效果。"
   },
@@ -44,7 +46,9 @@
   {
     "PROPER_NAME": "点燃",
     "NAMES": [
-      "点燃"
+      "点燃",
+      "force-ignite",
+      "ignite"
     ],
     "DESCRIPTION": "触发鬼火上的点燃效果。"
   },

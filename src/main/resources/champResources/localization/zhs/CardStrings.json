@@ -296,7 +296,7 @@
   },
   "champ:CrownThrow": {
     "NAME": "投掷王冠",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 如果伤害不为零， NL 下回合返回手牌。 NL 直到打出前的耗能为零。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 如果耗能不为0， NL 下回合返回手牌。 NL 直到打出前的耗能为0。"
   },
   "champ:Encircle": {
     "NAME": "包围",

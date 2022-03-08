@@ -6,7 +6,7 @@
       "encode",
       "encoded"
     ],
-    "DESCRIPTION": "将牌加入 #y队列 。 NL 当 #y队列 中有3张牌时, 它们的效果保留，融合成一张新的牌。费用为最高的融合素材费用。"
+    "DESCRIPTION": "将牌移入 #y队列 。 NL 当 #y队列 中有 #b3 张牌时, 它们的效果被融合， #y编译 成一张新的 #y方法 牌移入手牌，其费用为融合素材的最高费用。"
   },
   {
     "PROPER_NAME": "编译",
@@ -15,7 +15,7 @@
       "compile",
       "compiled"
     ],
-    "DESCRIPTION": "当 #y编码 的牌生成 #y方法 时获得效果。 NL 某些 #y错误 将是一些 #r负面效果 。"
+    "DESCRIPTION": "当被 #y编码 的牌融合成 #y方法 时触发效果。 NL #y编译错误 将是一些 #r负面效果 。"
   },
   {
     "PROPER_NAME": "残影",

@@ -3,11 +3,11 @@
     "NAME": "充能",
     "DESCRIPTIONS": [
       "在下一回合获得 ",
-      " 点力量。"
+      " 点 #y力量 。"
     ]
   },
   "Guardian:StunnedPower": {
-    "NAME": "击晕",
+    "NAME": "眩晕",
     "DESCRIPTIONS": [
       "跳过你的下回合。",
       "跳过你下 ",
@@ -17,9 +17,9 @@
   "Guardian:FloatingOrbsPower": {
     "NAME": "浮动圆球",
     "DESCRIPTIONS": [
-      "在你的回合开始时, 增加一张 #y圆球撞击 在你的手牌中。",
-      "在你的回合开始时，增加 ",
-      " 张 #y圆球撞击 在你的手牌中。"
+      "你的回合开始时, 添加一张 #y圆球撞击 到你的手牌。",
+      "你的回合开始时，添加 #b",
+      " 张 #y圆球撞击 到你的手牌。"
     ]
   },
   "Guardian:OrbwalkPower": {
@@ -32,23 +32,23 @@
   "Guardian:ClonePower": {
     "NAME": "重连",
     "DESCRIPTIONS": [
-      "将打出的下张非消耗 #y攻击 或 #y技能 牌将凝滞。",
+      "将打出的下张非消耗 #y攻击 或 #y技能 牌 #y凝滞 。",
       "将打出的下 ",
-      " 张非消耗 #y攻击 或 #y技能 牌将凝滞。"
+      " 张非消耗 #y攻击 或 #y技能 牌 #y凝滞 。"
     ]
   },
   "Guardian:GemFinderPower": {
     "NAME": "开采宝石",
     "DESCRIPTIONS": [
-      "在战斗结束后，选择一个普通宝石加入你的牌库。",
-      "在战斗结束后，选择 ",
-      " 个普通 #y宝石 加入你的牌库。"
+      "战斗结束后，选择一颗普通 #y宝石 加入你的牌组。",
+      "战斗结束后，选择 ",
+      " 颗普通 #y宝石 加入你的牌组。"
     ]
   },
   "Guardian:FuturePlansPower": {
     "NAME": "未来计划",
     "DESCRIPTIONS": [
-      "在你的回合结束时，选择 #b",
+      "你的回合结束时，可选择 #b",
       " 张牌 #y凝滞 。",
       " 张牌 #y凝滞 。"
     ]
@@ -64,7 +64,7 @@
   "Guardian:ConstructModePower": {
     "NAME": "建造模式",
     "DESCRIPTIONS": [
-      "在每回合开始时，如果你有缓冲，获得 #b",
+      "每回合开始时，如果你有 #y缓冲 ，获得 #b",
       " 点 #y力量 。"
     ]
   },
@@ -122,24 +122,24 @@
   "Guardian:ConstructPower": {
     "NAME": "先古建造",
     "DESCRIPTIONS": [
-      "如果回合开始时你没有 #y人工制品 获得 ",
-      " 层 #y人工制品 ",
-      " 。"
+      "如果回合开始时你没有 #y人工制品 ，获得 #b",
+      " 层",
+      "。"
     ]
   },
   "Guardian:ModeShiftPower": {
     "NAME": "模式转换",
     "DESCRIPTIONS": [
-      "当你失去 #b",
-      " 点生命时，获得 #b10 点格挡，进入 #y防御模式。 NL 每次启用模式转换时，激活所需的量增加 #b10 。（至多 #b50 ）"
+      "再失去 #b",
+      " 点生命时，进入 #y防御模式 并获得 #b10 点 #y格挡 。 若已处于 #y防御模式 ，不获得 #y格挡 但额外获得 #b1 回合持续时间。 NL 每次进入 #y防御模式 时，下次进入所需的生命损失增加 #b10 点。（最多 #b50 点）"
     ]
   },
   "Guardian:ExhaustStatusesPower": {
     "NAME": "反冲",
     "DESCRIPTIONS": [
-      "消耗每回合抽到的前1张状态或诅咒牌并抽1张牌。",
-      "消耗每回合抽到的前 ",
-      " 张状态或诅咒牌并抽1张牌。"
+      "消耗每回合抽到的第一张 状态牌 或 诅咒 并抽一张牌。",
+      "消耗每回合抽到的前 #b",
+      " 张 状态牌 或 诅咒 并抽等量的牌。"
     ]
   },
   "Guardian:RevengePower": {
@@ -152,11 +152,11 @@
   "Guardian:StasisEnginePower": {
     "NAME": "凝滞引擎",
     "DESCRIPTIONS": [
-      "每回合打出第三张0费牌时，获得 ",
-      " [E] 并抽 ",
-      " 张牌 ",
-      " 张牌 ",
-      " 。"
+      "每回合打出第三张0耗能牌时，获得 #b",
+      " [E] 并抽 #b",
+      " 张牌",
+      " 张牌",
+      "。"
     ]
   },
   "Guardian:EnergizedGuardianPower": {
@@ -171,41 +171,41 @@
   "Guardian:BlockOnCardUsePower": {
     "NAME": "抛光油",
     "DESCRIPTIONS": [
-      "本回合每当打出一张牌，获得 #b",
+      "本回合每当你打出一张牌，获得 #b",
       " 点 #y格挡 。"
     ]
   },
   "Guardian:EvasiveProtocolPower": {
     "NAME": "回避协议",
     "DESCRIPTIONS": [
-      "处于 #y防御模式 时，获得 #b",
+      "处于 #y防御模式 时，拥有 #b",
       " 点 #y敏捷 。"
     ]
   },
   "Guardian:SpikerProtocolPower": {
     "NAME": "荆棘协议",
     "DESCRIPTIONS": [
-      "处于 #y防御模式 时，获得 #b",
+      "处于 #y防御模式 时，拥有 #b",
       " 层 #y荆棘 。"
     ]
   },
   "Guardian:ArmoredProtocolPower": {
     "NAME": "装甲协议",
     "DESCRIPTIONS": [
-      "处于 #y防御模式 时，回合结束时获得 #b",
+      "处于 #y防御模式 时，回合结束获得 #b",
       " 点 #y格挡 。"
     ]
   },
   "Guardian:DontLeaveDefensiveModePower": {
-    "NAME": "防御模式",
+    "NAME": "处于防御模式",
     "DESCRIPTIONS": [
       "你将在本回合退出 #y防御模式 。",
-      "你将在下 #b",
+      "你将在 #b",
       " 个回合后退出 #y防御模式 。"
     ]
   },
   "Guardian:BracePerTurnPower": {
-    "NAME": "维持",
+    "NAME": "防备",
     "DESCRIPTIONS": [
       "你的回合开始时，提防 #b",
       " 。"
