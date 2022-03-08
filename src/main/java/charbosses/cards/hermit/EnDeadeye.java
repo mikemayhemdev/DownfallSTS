@@ -37,6 +37,13 @@ public class EnDeadeye extends AbstractHermitBossCard {
     }
 
     @Override
+    public void onSpecificTrigger() {
+        intentActive = false;
+        this.intent = AbstractMonster.Intent.ATTACK;
+        createIntent();
+    }
+
+    @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();

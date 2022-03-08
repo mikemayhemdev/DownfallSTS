@@ -35,7 +35,7 @@ public class HermitWheelOfFortune extends AbstractBossMechanicPower {
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         flash();
-        if (this.owner instanceof CharBossHermit) {
+        if (this.owner instanceof CharBossHermit && info.type == DamageInfo.DamageType.NORMAL) {
             if (((CharBossHermit) this.owner).chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge) {
                 ((ArchetypeAct2WheelOfFateNewAge) ((CharBossHermit) this.owner).chosenArchetype).reInitializeHand();
             }
