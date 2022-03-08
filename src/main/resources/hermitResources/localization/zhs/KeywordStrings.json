@@ -4,7 +4,7 @@
     "NAMES": [
       "精准"
     ],
-    "DESCRIPTION": "这张牌在手牌中间打出时将有额外效果。"
+    "DESCRIPTION": "精准牌从手牌中间打出时触发额外效果。"
   },
   {
     "PROPER_NAME": "专注",
@@ -33,5 +33,16 @@
       "赏金"
     ],
   "DESCRIPTION": "普通怪物： #b15 金币。 NL 精英怪物： #b35 金币。 NL 首领怪物： #b75 金币。"
-}
+},
+  {
+    "PROPER_NAME": "击晕",
+    "NAMES": [
+      "击晕",
+      "stun",
+      "Stun",
+      "stunned",
+      "Stunned"
+    ],
+    "DESCRIPTION": "被击晕的敌人跳过它的回合。"
+  } 
 ]

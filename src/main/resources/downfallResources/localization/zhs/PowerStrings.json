@@ -2,14 +2,14 @@
   "downfall:FairyPotion": {
     "NAME": "瓶中精灵",
     "DESCRIPTIONS": [
-      "当你要被杀死时，免死并回复到最大生命值的 #b30% ,移除本效果。",
+      "当你要被杀死时，免死并回复到最大生命值的 #b30% ，移除本效果。",
       "哈！瓶中精灵，没想到吧！"
     ]
   },
   "downfall:SoulSteal": {
     "NAME": "灵魂窃取",
     "DESCRIPTIONS": [
-      "已经偷走了你 ",
+      "已经偷走了你 #b",
       " 灵魂。"
     ]
   },
@@ -31,7 +31,7 @@
   "downfall:TotemInvulnerable": {
     "NAME": "活墙壁",
     "DESCRIPTIONS": [
-      "只有在其他头均生命为1时才会死亡。死亡时其他头同时死亡。"
+      "只有在其他头生命均为1时才会死亡。死亡时其他头同时死亡。"
     ]
   },
   "downfall:ExhaustCardsPower": {
@@ -95,49 +95,49 @@
   "downfall:SilentShivTimeEaterPower": {
     "NAME": "满包小刀",
     "DESCRIPTIONS": [
-      "每回合你打出第一张 #b0 耗能牌时， #y静默猎手 将获得一张 #y小刀 。"
+      "每回合你打出前两张 #b2 耗能以上的牌时， #y静默猎手 获得一张 #y小刀 。"
       ]
   },
   "downfall:NeowBagOfKnives": {
     "NAME": "满包小刀",
     "DESCRIPTIONS": [
-      "每回合你打出前两张 #b0 耗能牌时， 受到 #y4 点伤害。"
+      "每回合你打出前两张 #b2 耗能以上的牌时， 受到 #y4 点伤害。"
     ]
   },
   "downfall:SilentMirrorImagePower": {
     "NAME": "复视",
     "DESCRIPTIONS": [
-      "一个 #y静默猎手 的 #y残影 隐蔽了她的真实位置。攻击 #y本体或残影 则其将在本回合消失。"
+      "每回合开始时 #y静默猎手 将使用 #y残影 来隐蔽自己。攻击其中一名能暴露她 #y本体 的位置。"
     ]
   },
   "downfall:NeowSeeingDouble": {
     "NAME": "复视",
     "DESCRIPTIONS": [
-      "每回合你对 #y涅奥 的第一张 #y攻击牌 将造成 #b0 点 伤害。"
+      "每回合你对 #y涅奥 的第一张 #y攻击牌 不造成伤害。"
     ]
   },
   "downfall:SilentPoisonPower": {
     "NAME": "警告：中毒",
     "DESCRIPTIONS": [
-      "你对 #y静默猎手 的 #y中毒 有一定的 #y抗性 。"
+      "#y中毒 能被 #y格挡 抵消，战斗开始时获得 #b2 瓶 解毒剂。"
     ]
   },
   "downfall:NeowHighlyToxic": {
     "NAME": "警告：中毒",
     "DESCRIPTIONS": [
-      " #y涅奥 每回合给予你 #b10 层 #y中毒 。你对 #y中毒 有一定的 #y抗性 。"
+      " #y涅奥 每回合给予你 #b5 层 #y中毒 ，每过 #b3 回合，获得一瓶解毒剂。"
     ]
   },
   "downfall:DefectVoidPower": {
     "NAME": "能量窃取",
     "DESCRIPTIONS": [
-      "每当 #y故障机器人 生成 #y虚空 时，其将进入你的抽牌堆顶部。"
+      "每当 #y故障机器人 生成 #y虚空 时，其将加入你的抽牌堆顶部。"
     ]
   },
   "downfall:NeowEnergyThief": {
     "NAME": "能量窃取",
     "DESCRIPTIONS": [
-      "每当 #y涅奥 将 #r诅咒牌 加入你的抽牌堆时，她将同时加入 #b1 张 #y虚空 。"
+      "每当 #y涅奥 将 #r诅咒 加入你的抽牌堆时，她将同时加入 #b1 张 #y虚空 。"
     ]
   },
   "downfall:DefectAncientConstructPower": {
@@ -174,13 +174,13 @@
   "downfall:NeowSyncronize": {
     "NAME": "同步",
     "DESCRIPTIONS": [
-      " #y涅奥 将在每回合加入随机一张 #y状态牌 到你的弃牌堆。"
+      " #y涅奥 将在每回合结束时随机将一张 #y状态牌 加入你的弃牌堆。"
     ]
   },
   "downfall:IroncladMushroomPower": {
     "NAME": "掠食",
     "DESCRIPTIONS": [
-      " #y铁甲战士 的 #y死亡收割 将不会消耗且对所有蘑菇生效。 NL 每当铁甲战士击杀一个蘑菇时，他获得 #b1 点 #y力量 并回复 #b20 点生命。"
+      " #y铁甲战士 的 #y死亡收割 不会消耗且对所有蘑菇生效。 NL 每当 #y铁甲战士 击杀一个蘑菇时，他获得 #b1 点 #y力量 并回复 #b20 点生命。"
     ]
   },
   "downfall:NeowFeedingFrenzy": {
@@ -240,48 +240,72 @@
       "升级被 #y发射 后的弹药。"
     ]
   },
-  ,
   "downfall:OnDeathEveryoneStr": {
-    "NAME": "Dying Rage",
+    "NAME": "垂死之怒",
     "DESCRIPTIONS": [
-      "When this character dies, ALL characters (including you) gain #b",
-      " #yStrength."
+      "该单位死亡时，所有单位获得 #b",
+      " 点 #y力量 。"
     ]
   },
   "downfall:OnDeathEveryoneThorns": {
-    "NAME": "Thorny Personality",
+    "NAME": "棘手人格",
     "DESCRIPTIONS": [
-      "When this character dies, ALL characters (including you) gain #b",
-      " #yThorns."
+      "该单位死亡时，所有单位获得 #b",
+      " 层 #y荆棘 。"
     ]
   },
   "downfall:OnDeathEveryoneBuffer": {
-    "NAME": "pause()",
+    "NAME": "时间停止()",
     "DESCRIPTIONS": [
-      "When this character dies, ALL characters (including you) gain #b",
-      " #yBuffer."
+      "该单位死亡时，所有单位获得 #b",
+      " 层 #y缓冲 。"
     ]
   },
   "downfall:OnDeathEveryoneVigor": {
-    "NAME": "Vigorous Strength",
+    "NAME": "鲜活之力",
     "DESCRIPTIONS": [
-      "When this character dies, ALL characters (including you) gain #b",
-      " #yVigor."
+      "该单位死亡时，所有单位获得 #b",
+      " 点 #y活力 。"
     ]
   },
   "downfall:OnDeathEveryoneRuggedVuln": {
-    "NAME": "Determination",
+    "NAME": "不屈决心",
     "DESCRIPTIONS": [
-      "When this character dies, ALL characters (including you) gain #b",
-      " #yRugged and #b",
-      " #yVulnerable."
+      "该单位死亡时，所有单位获得 #b",
+      " 层 #y坚固 和 #b",
+      " 层 #y易伤 。"
     ]
   },
   "downfall:MonsterVigor": {
-    "NAME": "Vigor",
+    "NAME": "活力",
     "DESCRIPTIONS": [
-      "This character's next attack deals #b",
-      " additional damage."
+      "该单位下次攻击额外造成 #b",
+      " 点伤害。"
+    ]
+  },
+  "downfall:HermitConcentrateAdder": {
+    "NAME": "Deadly Focus",
+    "DESCRIPTIONS": [
+        "Hermit has Concentration, which adds special Dead On effects to his cards. Dealing #b10 unblocked attack damage to the Hermit breaks his concentration, causing his cards to lose their Dead On effects."
+    ]
+  },
+  "downfall:HermitConcentrationPower": {
+    "NAME": "Concentrated",
+    "DESCRIPTIONS": [
+      "Hermit's cards currently get bonuses. Deal #b",
+      " more damage to break his Concentration."
+    ]
+  },
+  "downfall:HermitWheelOfFortune": {
+    "NAME": "幸运之轮",
+    "DESCRIPTIONS": [
+      "每当你对 #y亡命之徒 造成一段攻击时， 它丢弃最左边的牌并抽一张牌。"
+    ]
+  },
+  "downfall:HermitDoomsday": {
+    "NAME": "末日",
+    "DESCRIPTIONS": [
+      "每回合开始时，将一张 带有 #y虚无 的 #r末日降临 加入你的手牌。"
     ]
   }
 }

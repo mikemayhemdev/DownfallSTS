@@ -180,7 +180,7 @@
   },
   "hermit:Cheat": {
     "NAME": "Cheat",
-    "DESCRIPTION": "Play one of the top !M! cards in your draw pile. NL hermit:Dead_On: Also trigger it's hermit:Dead_On effect."
+    "DESCRIPTION": "Play one of the top !M! cards in your draw pile. NL hermit:Dead_On: Also trigger its hermit:Dead_On effect."
   },
   "hermit:Vantage": {
     "NAME": "Vantage",
