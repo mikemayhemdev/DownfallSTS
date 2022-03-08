@@ -82,7 +82,7 @@
   "Gremlin:GremlinWizard": {
     "NAME": "Gremlin Wizard",
     "DESCRIPTIONS": [
-      "Whenever you play a skill, gain #b",
+      "Whenever you play a Skill, gain #b",
       " #yWiz."
     ]
   },
@@ -136,7 +136,7 @@
   "Gremlin:Polish": {
     "NAME": "Polish",
     "DESCRIPTIONS": [
-      "Wards grant #b",
+      "#yWards grant #b",
       " additional #yBlock."
     ]
   },
@@ -151,7 +151,7 @@
   "Gremlin:ShadowShiv": {
     "NAME": "Shadow Shiv",
     "DESCRIPTIONS": [
-      "Whenever you play an Attack that doesn't Exhaust, add #b",
+      "Whenever you play an Attack that doesn't #yExhaust, add #b",
       " #yShiv to your hand.",
       " #yShivs to your hand."
     ]
@@ -159,7 +159,7 @@
   "Gremlin:ShieldGremlin": {
     "NAME": "Shield Gremlin",
     "DESCRIPTIONS": [
-      "Whenever you play a skill, gain #b",
+      "Whenever you play a Skill, gain #b",
       " #yBlock."
     ]
   },
@@ -180,7 +180,7 @@
   "Gremlin:Unforgiving": {
     "NAME": "Unforgiving",
     "DESCRIPTIONS": [
-      "You cannot lose Strength."
+      "You cannot lose #yStrength."
     ]
   },
   "Gremlin:Wiz": {

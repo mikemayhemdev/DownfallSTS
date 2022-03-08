@@ -18,7 +18,6 @@ public class GreedOozeRelic extends CustomRelic {
     public static final String ID = "Slimebound:GreedOozeRelic";
     public static final String IMG_PATH = "relics/greedOoze.png";
     public static final String OUTLINE_IMG_PATH = "relics/greedOozeOutline.png";
-    private static final int HP_PER_CARD = 1;
     public int scrapAmount = 0;
 
     private boolean used = false;
@@ -26,11 +25,7 @@ public class GreedOozeRelic extends CustomRelic {
     public GreedOozeRelic() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.SPECIAL, LandingSound.CLINK);
-        if (this.counter <= 4) this.counter = 4;
-        this.description = this.getUpdatedDescription();
-        this.tips.remove(0);
-        this.tips.add(new PowerTip(this.name, this.description));
-
+        this.counter = 4;
     }
 
 
@@ -41,7 +36,6 @@ public class GreedOozeRelic extends CustomRelic {
     public void atBattleStartPreDraw() {
         this.flash();
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.GreedOozeSlime(), false, false));
-
     }
 
     @Override
@@ -49,10 +43,6 @@ public class GreedOozeRelic extends CustomRelic {
         if (!(room instanceof RestRoom)){
             used = false;
         }
-    }
-
-    public boolean canSpawn() {
-        return AbstractDungeon.player instanceof SlimeboundCharacter;
     }
 
 
@@ -73,9 +63,7 @@ public class GreedOozeRelic extends CustomRelic {
             used = true;
             if (AbstractDungeon.player.gold >= 50) {
                 this.counter += 1;
-                this.tips.clear();
-                this.description = this.getUpdatedDescription();
-                this.tips.add(new PowerTip(this.name, this.description));
+
                 this.flash();
                 p.loseGold(50);
                 for (int i = 0; i < 20; i++) {

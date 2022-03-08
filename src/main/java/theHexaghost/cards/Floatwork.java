@@ -37,7 +37,7 @@ public class Floatwork extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(1);
+            upgradeMagicNumber(1);
         }
     }
 }

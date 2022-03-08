@@ -23,6 +23,7 @@ public class SnakeSap extends AbstractSneckoCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         baseSilly = silly = 1;
+        exhaust = true;
         tags.add(SneckoMod.SNEKPROOF);
         tags.add(SneckoMod.RNG);
     }
@@ -38,7 +39,6 @@ public class SnakeSap extends AbstractSneckoCard {
 
         baseDamage = CURRENT_DAMAGE;
         super.applyPowers();
-        this.exhaust = true;
     }
 
     @Override

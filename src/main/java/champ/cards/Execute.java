@@ -44,7 +44,7 @@ public class Execute extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(3);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

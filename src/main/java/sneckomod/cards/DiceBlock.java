@@ -6,28 +6,23 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
+import sneckomod.actions.MuddleAction;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 public class DiceBlock extends AbstractSneckoCard {
 
     public final static String ID = makeID("DiceBlock");
 
-    //stupid intellij stuff SKILL, SELF, COMMON
-
-    private static final int BLOCK = 10;
-    private static final int UPG_BLOCK = 4;
-
     public DiceBlock() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = 1;
+        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = 12;
+        baseMagicNumber = magicNumber = 8;
         tags.add(SneckoMod.RNG);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int x = getRandomNum(magicNumber, block, this);
-        if (x > 0)
-            atb(new GainBlockAction(p, x));
+        atb(new GainBlockAction(p, getRandomNum(magicNumber, block, this)));
+        atb(new MuddleAction(this));
     }
 
     @Override
@@ -40,19 +35,15 @@ public class DiceBlock extends AbstractSneckoCard {
         isMagicNumberModified = block != baseBlock;
 
         baseBlock = CURRENT_BLOCK;
-        for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
-            if (q instanceof AbstractUnknownCard)
-                baseBlock += 1;
-        }
         super.applyPowersToBlock();
-        baseBlock = CURRENT_BLOCK;
         isBlockModified = baseBlock != block;
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPG_BLOCK);
+            upgradeMagicNumber(4);
+            upgradeBlock(4);
         }
     }
 }

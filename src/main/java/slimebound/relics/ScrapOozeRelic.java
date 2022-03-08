@@ -17,29 +17,17 @@ public class ScrapOozeRelic extends CustomRelic {
     public static final String ID = "Slimebound:ScrapOozeRelic";
     public static final String IMG_PATH = "relics/scrapOoze.png";
     public static final String OUTLINE_IMG_PATH = "relics/scrapOozeOutline.png";
-    private static final int HP_PER_CARD = 1;
     public int scrapAmount = 0;
 
     public ScrapOozeRelic() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.SPECIAL, LandingSound.CLINK);
-        if (this.counter <= 6) this.counter = 6;
-        this.description = this.getUpdatedDescription();
-        this.tips.remove(0);
-        this.tips.add(new PowerTip(this.name, this.description));
-
+        this.counter = 6;
     }
 
     @Override
     public void addCampfireOption(ArrayList<AbstractCampfireOption> options) {
         options.add(new ScrapBonfireOption(!AbstractDungeon.player.masterDeck.getPurgeableCards().isEmpty()));
-    }
-
-    public void updateDescription(AbstractPlayer.PlayerClass c) {
-        this.description = this.getUpdatedDescription();
-        this.tips.clear();
-        this.tips.add(new PowerTip(this.name, this.description));
-        this.initializeTips();
     }
 
     public String getUpdatedDescription() {
@@ -59,11 +47,6 @@ public class ScrapOozeRelic extends CustomRelic {
     public void incrementScrapNum(int amount) {
         if (amount != 0) {
             this.counter += amount;
-
-            this.tips.clear();
-            this.description = this.getUpdatedDescription();
-            this.tips.add(new PowerTip(this.name, this.description));
-            this.flash();
         }
     }
 

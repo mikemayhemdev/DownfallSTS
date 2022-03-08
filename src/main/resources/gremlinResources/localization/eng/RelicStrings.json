@@ -119,7 +119,7 @@
     "NAME": "Wizard Staff",
     "FLAVOR": "The pride and joy of every Gremlin Wizard, this staff is a frequent target of theft by rival mobs.",
     "DESCRIPTIONS": [
-      "Wiz deals #b7 additional damage."
+      "#yWiz deals #b7 additional damage."
     ]
   },
   "Gremlin:WoundPoker": {

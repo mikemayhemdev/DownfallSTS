@@ -1,7 +1,7 @@
 {
   "Gremlin:AggressiveDefense": {
     "NAME": "Aggressive Defense",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you gain Block this turn, targeted enemy loses !M! HP."
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you gain Block this turn, the enemy loses !M! HP."
   },
 
   "Gremlin:ArmsTheft": {
@@ -11,8 +11,8 @@
 
   "Gremlin:Astound": {
     "NAME": "Astound",
-    "DESCRIPTION": "Gain !B! Block. NL If you have 3 or more gremlin:Wiz, add !M! Wards to your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you have 3 or more gremlin:Wiz, add !M! Upgraded Wards to your hand."
+    "DESCRIPTION": "Gain !B! Block. NL If you have 3 or more gremlin:Wiz, add !M! *Wards to your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you have 3 or more gremlin:Wiz, add !M! Upgraded *Wards to your hand."
   },
 
   "Gremlin:Bang": {
@@ -43,7 +43,7 @@
 
   "Gremlin:BurlyBlow": {
     "NAME": "Burly Blow",
-    "DESCRIPTION": "Deal !D! damage for each stack of Weakened. NL (Always hits at least once.)"
+    "DESCRIPTION": "Deal !D! damage for each stack of Weak. NL (Always hits at least once.)"
   },
 
   "Gremlin:CatScratch": {
@@ -128,7 +128,7 @@
 
   "Gremlin:FairyDust": {
     "NAME": "Fairy Dust",
-    "DESCRIPTION": "Add !M! Wards to your hand and draw !M! cards. NL Exhaust."
+    "DESCRIPTION": "Add !M! *Wards to your hand and draw !M! cards. NL Exhaust."
   },
 
   "Gremlin:SleeveOfAces": {
@@ -175,24 +175,24 @@
 
   "Gremlin:Fury": {
     "NAME": "Fury",
-    "DESCRIPTION": "Costs 1 less [E] for every 2 Strength you have. NL Deal !D! damage three times."
+    "DESCRIPTION": "Costs 1 less [E] for every 2 Strength you have. NL Deal !D! damage 3 times."
   },
 
   "Gremlin:Glimmer": {
     "NAME": "Glimmer",
-    "DESCRIPTION": "Deal !D! damage. NL Add 2 Wards to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add 2 Upgraded Wards to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Add 2 *Wards to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add 2 Upgraded *Wards to your hand."
   },
 
   "Gremlin:GlitterGuard": {
     "NAME": "Glitter Guard",
-    "DESCRIPTION": "Add !M! Wards to your hand. NL gremlin:Swap to gremlin:Shield_Gremlin.",
-    "UPGRADE_DESCRIPTION": "Add !M! Upgraded Wards to your hand. NL gremlin:Swap to gremlin:Shield_Gremlin."
+    "DESCRIPTION": "Add !M! *Wards to your hand. NL gremlin:Swap to gremlin:Shield_Gremlin.",
+    "UPGRADE_DESCRIPTION": "Add !M! Upgraded *Wards to your hand. NL gremlin:Swap to gremlin:Shield_Gremlin."
   },
 
   "Gremlin:GremlinArms": {
     "NAME": "Gremlin Arms",
-    "DESCRIPTION": "Add a random assortment of !M! Shivs and Wards to your hand."
+    "DESCRIPTION": "Add a random assortment of !M! Shivs and *Wards to your hand."
   },
 
   "Gremlin:GremlinMeal": {
@@ -233,13 +233,13 @@
 
   "Gremlin:InfiniteBlocks": {
     "NAME": "Infinite Blocks",
-    "DESCRIPTION": "At the start of your turn, add a Ward to your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add a Ward to your hand."
+    "DESCRIPTION": "At the start of your turn, add a *Ward to your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add a *Ward to your hand."
   },
 
   "Gremlin:IrksomeBlow": {
     "NAME": "Irksome Blow",
-    "DESCRIPTION": "Deal !D! damage. NL Irksome Blow is affected by Strength !M! times."
+    "DESCRIPTION": "Deal !D! damage. NL Strength affects this card !M! times."
   },
 
   "Gremlin:Irritability": {
@@ -325,7 +325,7 @@
 
   "Gremlin:Polish": {
     "NAME": "Polish",
-    "DESCRIPTION": "Shivs deal !M! additional damage. NL Wards grant !M! additional Block."
+    "DESCRIPTION": "Shivs deal !M! additional damage. NL *Wards grant !M! additional Block."
   },
 
   "Gremlin:PourSalt": {
@@ -340,12 +340,12 @@
 
   "Gremlin:Pretaliation": {
     "NAME": "Pretaliation",
-    "DESCRIPTION": "Deal !D! damage if the enemy intends to attack. NL Do !blamage! damage otherwise."
+    "DESCRIPTION": "Deal !D! damage if the enemy intends to attack. NL Deal !blamage! damage otherwise."
   },
 
   "Gremlin:ProperTools": {
     "NAME": "Proper Tools",
-    "DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, add !M! Wards to your hand. Otherwise, add !M! Shivs to your hand."
+    "DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, add !M! *Wards to your hand. Otherwise, add !M! Shivs to your hand."
   },
 
   "Gremlin:RageBreak": {
@@ -447,7 +447,7 @@
 
   "Gremlin:SupplyScrollCard": {
     "NAME": "Supply Scroll",
-    "DESCRIPTION": "Add a random assortment of !M! Shivs and Wards to your hand. NL Exhaust."
+    "DESCRIPTION": "Add a random assortment of !M! Shivs and *Wards to your hand. NL Exhaust."
   },
 
   "Gremlin:Tadah": {

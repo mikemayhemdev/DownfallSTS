@@ -1,18 +1,8 @@
 package champ.cards;
 
-import champ.ChampMod;
-
-import champ.stances.BerserkerStance;
-import champ.stances.UltimateStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
-import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
-import sneckomod.SneckoMod;
 
 public class HeartStrike extends AbstractChampCard {
 
