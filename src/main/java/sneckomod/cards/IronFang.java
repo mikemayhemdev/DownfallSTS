@@ -14,22 +14,12 @@ public class IronFang extends AbstractSneckoCard {
 
     public final static String ID = makeID("IronFang");
 
-    //stupid intellij stuff ATTACK, SELF_AND_ENEMY, COMMON
-
-    private static final int DAMAGE = 7;
-    private static final int UPG_DAMAGE = 4;
-
-    private static final int BLOCK = 7;
-    private static final int UPG_BLOCK = 4;
-
-    private static final int MAGIC = 3;
-
     public IronFang() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
-        baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = MAGIC;
-        baseSilly = silly = MAGIC;
+        baseDamage = 7;
+        baseBlock = 7;
+        baseMagicNumber = magicNumber = 3;
+        baseSilly = silly = 3;
         tags.add(SneckoMod.RNG);
     }
 
@@ -80,8 +70,10 @@ public class IronFang extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPG_DAMAGE);
-            upgradeBlock(UPG_BLOCK);
+            upgradeSilly(2);
+            upgradeDamage(2);
+            upgradeMagicNumber(2);
+            upgradeBlock(2);
         }
     }
 }

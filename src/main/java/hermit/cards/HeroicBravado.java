@@ -69,14 +69,15 @@ public class HeroicBravado extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
         this.isEthereal = true;
+        baseMagicNumber = magicNumber = 2;
         loadJokeCardImage(this, "heroic_bravado.png");
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.costForTurn--;
-        this.updateCost(1);
+        this.costForTurn -= magicNumber;
+        this.updateCost(magicNumber);
         this.addToBot(new ApplyPowerAction(p, p, new Rugged(p, 1), 1));
 
     }
@@ -86,8 +87,8 @@ public class HeroicBravado extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
             initializeDescription();
+            upgradeMagicNumber(-1);
         }
     }
 }

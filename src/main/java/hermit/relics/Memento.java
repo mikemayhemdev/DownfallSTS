@@ -1,6 +1,7 @@
 package hermit.relics;
 
 import basemod.abstracts.CustomRelic;
+import basemod.devcommands.power.Power;
 import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -13,7 +14,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
-import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.relics.PureWater;
 import com.megacrit.cardcrawl.relics.QuestionCard;
@@ -46,7 +46,10 @@ public class Memento extends CustomRelic {
 
     public Memento() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.FLAT);
+        this.tips.clear();
+        this.tips.add(new PowerTip(name, description));
         this.tips.add(new CardPowerTip(new MementoCard()));
+        initializeTips();
     }
     // Gain 1 Strength on on equip.
 

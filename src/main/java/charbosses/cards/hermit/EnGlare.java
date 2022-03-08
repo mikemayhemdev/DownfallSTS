@@ -21,6 +21,7 @@ public class EnGlare extends AbstractHermitBossCard {
 
     public EnGlare() {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/glare.png", 0, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND_BUFF);
+        baseMagicNumber = magicNumber = 1;
     }
 
     @Override
@@ -33,7 +34,7 @@ public class EnGlare extends AbstractHermitBossCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-
+            upgradeMagicNumber(1);
         }
     }
 

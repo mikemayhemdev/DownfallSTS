@@ -15,14 +15,9 @@ public class Rotation extends AbstractSneckoCard {
 
     public final static String ID = makeID("Rotation");
 
-    //stupid intellij stuff SKILL, SELF, UNCOMMON
-
-    private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 1;
-
     public Rotation() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = MAGIC;
+        baseMagicNumber = magicNumber = 0;
         tags.add(SneckoMod.SNEKPROOF);
     }
 
@@ -51,7 +46,9 @@ public class Rotation extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPG_MAGIC);
+            upgradeMagicNumber(1);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

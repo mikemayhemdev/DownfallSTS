@@ -29,7 +29,7 @@ public class Horseshoe extends CustomRelic implements OnReceivePowerRelic{
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("horseshoe.png"));
 
     public Horseshoe() {
-        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.FLAT);
+        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.CLINK);
     }
 
 

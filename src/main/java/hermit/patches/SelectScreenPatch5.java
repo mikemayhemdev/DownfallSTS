@@ -10,7 +10,7 @@ import hermit.characters.hermit;
 
 @SpirePatch(
         clz= HandCardSelectScreen.class,
-        method="update"
+        method="selectHoveredCard"
 )
 
 public class SelectScreenPatch5 {
@@ -18,7 +18,7 @@ public class SelectScreenPatch5 {
     @SpirePostfixPatch
     public static void SelectionPostPatch(HandCardSelectScreen reg)
     {
-        if (AbstractDungeon.player.chosenClass == hermit.Enums.HERMIT && (InputHelper.justClickedLeft || CInputActionSet.select.isJustPressed())) {
+        if (AbstractDungeon.player.chosenClass == hermit.Enums.HERMIT) {
             SelectScreenPatch.ResetHand();
         }
     }

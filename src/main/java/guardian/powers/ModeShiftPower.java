@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.BlurPower;
 import com.megacrit.cardcrawl.powers.BufferPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import guardian.relics.ModeShifter;
 import guardian.stances.DefensiveMode;
 
@@ -56,8 +57,9 @@ public class ModeShiftPower extends AbstractGuardianPower {
         flash();
         if (this.amount <= 0) {
             int blockAmt = BLOCKONTRIGGER;
-            if (AbstractDungeon.player.hasRelic(ModeShifter.ID)) {
+            if (AbstractDungeon.player.hasRelic(ModeShifter.ID) && !AbstractDungeon.player.getRelic(ModeShifter.ID).grayscale) {
                 blockAmt += 10;
+                AbstractDungeon.player.getRelic(ModeShifter.ID).grayscale = true;
             }
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, blockAmt));
             AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveMode.STANCE_ID));

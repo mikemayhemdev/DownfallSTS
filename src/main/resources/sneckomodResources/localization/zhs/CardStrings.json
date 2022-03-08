@@ -170,7 +170,8 @@
   },
   "sneckomod:Rotation": {
     "NAME": "轮换",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 丢弃所有的 sneckomod:异色 牌。 NL 抽等量加 !M! 张牌。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 丢弃所有的 sneckomod:异色 牌。 NL 抽等量加 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 丢弃所有的 sneckomod:异色 牌。 NL 抽等量加 !M! 张牌。"
   },
   "sneckomod:SerpentMind": {
     "NAME": "异色形态",

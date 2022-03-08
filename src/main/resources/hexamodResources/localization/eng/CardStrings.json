@@ -180,11 +180,11 @@
   },
   "hexamod:ShadowStrike": {
     "NAME": "Shadow Strike",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL expansioncontent:Reclaim *Nightmare *Strike. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage twice. NL expansioncontent:Reclaim *Nightmare *Strike. NL Exhaust."
   },
   "hexamod:ShadowGuise": {
     "NAME": "Shadow Guise",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL expansioncontent:Reclaim *Nightmare *Guise. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block twice. NL expansioncontent:Reclaim *Nightmare *Guise. NL Exhaust."
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "Power from Beyond",

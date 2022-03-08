@@ -23,17 +23,15 @@ public class EnCovet extends AbstractHermitBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        if (this.owner.hand.group.stream().anyMatch(c -> c.cardID == EnPain.ID)) {
-            AbstractCard enPain = this.owner.hand.group.stream().filter(c -> c.cardID == EnPain.ID).collect(Collectors.toList()).get(0);
-            AbstractDungeon.actionManager.addToBottom(new ExhaustSpecificCardAction(enPain, this.owner.hand));
-        }
+
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

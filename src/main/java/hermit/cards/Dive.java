@@ -2,12 +2,14 @@ package hermit.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import hermit.HermitMod;
 import hermit.characters.hermit;
+import hermit.powers.SnipePower;
 
 
 import static hermit.HermitMod.loadJokeCardImage;
@@ -60,7 +62,14 @@ public class Dive extends AbstractDynamicCard {
 
         if (isDeadOn()) {
             onDeadOn();
-            this.addToBot(new ApplyPowerAction(p, p, new PlatedArmorPower(p, magicNumber), magicNumber));
+
+            int DeadOnTimes = DeadOnAmount();
+
+            for (int a = 0; a < DeadOnTimes; a++) {
+                this.addToBot(new ApplyPowerAction(p, p, new PlatedArmorPower(p, magicNumber), magicNumber));
+            }
+
+            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
         }
 
     }

@@ -7,7 +7,7 @@
       "dead_on",
       "deadon"
     ],
-    "DESCRIPTION": "This card has a bonus effect if played from the middle of your hand."
+    "DESCRIPTION": "Dead On cards have a bonus effect when played from the middle of your hand."
   },
   {
     "PROPER_NAME": "Concentration",
@@ -42,6 +42,16 @@
       "bounty"
     ],
   "DESCRIPTION": "Normal Enemy: #b15 gold.       Elite Enemy: #b35 gold.              Boss: #b75 gold."
-}
+},
+  {
+    "PROPER_NAME": "Stun",
+    "NAMES": [
+      "stun",
+      "Stun",
+      "stunned",
+      "Stunned"
+    ],
+    "DESCRIPTION": "Stunned enemies skip their turn."
+  }
 
 ]

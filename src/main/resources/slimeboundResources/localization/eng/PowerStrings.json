@@ -74,7 +74,7 @@
     "DESCRIPTIONS": [
       "Prevent the next time you would be damaged by an enemy attack, #yAbsorbing your leading Slime instead.",
       "Prevent the next #b",
-      " times you would damaged by an enemy attack, #yAbsorbing your leading Slime instead."
+      " times you would be damaged by an enemy attack, #yAbsorbing your leading Slime instead."
     ]
   },
   "Slimebound:SplitForLessPower": {

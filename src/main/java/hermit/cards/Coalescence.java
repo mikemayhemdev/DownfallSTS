@@ -2,15 +2,19 @@ package hermit.cards;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.LoseDexterityPower;
+import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import hermit.HermitMod;
 import hermit.characters.hermit;
+import hermit.powers.CoalescencePower;
 import hermit.powers.Rugged;
 
 import static hermit.HermitMod.loadJokeCardImage;
@@ -58,7 +62,7 @@ public class Coalescence extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
-    private static final int COST = 0;
+    private static final int COST = 1;
 
 
     // Hey want a second damage/magic/block/unique number??? Great!
@@ -71,7 +75,8 @@ public class Coalescence extends AbstractDynamicCard {
     public Coalescence() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
+        baseBlock = block = 5;
 
         loadJokeCardImage(this, "coalescence.png");
     }
@@ -79,9 +84,9 @@ public class Coalescence extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, magicNumber), magicNumber));
-        this.addToBot(new ApplyPowerAction(p, p, new LoseDexterityPower(p, magicNumber), magicNumber));
 
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+        this.addToBot(new ApplyPowerAction(p, p, new CoalescencePower(p, magicNumber), magicNumber));
     }
 
     // Upgraded stats.
@@ -89,7 +94,8 @@ public class Coalescence extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
+            upgradeBlock(3);
             initializeDescription();
         }
     }

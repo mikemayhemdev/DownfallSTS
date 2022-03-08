@@ -80,6 +80,7 @@ import com.megacrit.cardcrawl.relics.MedicalKit;
 import com.megacrit.cardcrawl.relics.VelvetChoker;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.screens.custom.CustomMod;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -210,7 +211,8 @@ public class downfallMod implements
     public static boolean[] unseenTutorials = new boolean[]{
             true, // Hermit
             true, // Guardian
-            true // Hexa
+            true, // Hexa
+            true // Charboss Info
     };
 
     public static Properties tutorialSaves = new Properties();
@@ -1687,6 +1689,14 @@ public class downfallMod implements
         if (AbstractDungeon.player instanceof GuardianCharacter) {
             if (downfallMod.unseenTutorials[1]) {
                 AbstractDungeon.actionManager.addToBottom(new MessageCaller(1));
+            }
+        }
+
+        if (abstractRoom instanceof MonsterRoomBoss) {
+            if (evilMode) {
+                if (downfallMod.unseenTutorials[3]) {
+                    AbstractDungeon.actionManager.addToBottom(new MessageCaller(3));
+                }
             }
         }
     }

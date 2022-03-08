@@ -53,7 +53,7 @@ public class Glare extends AbstractDynamicCard {
     public Glare() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber=magicNumber=1;
-        defaultBaseSecondMagicNumber=defaultSecondMagicNumber=2;
+        defaultBaseSecondMagicNumber=defaultSecondMagicNumber=1;
         loadJokeCardImage(this, "glare.png");
     }
 
@@ -61,10 +61,7 @@ public class Glare extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
             this.addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
-            this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
-
-            if (this.upgraded)
-                this.addToBot(new ApplyPowerAction(m, p, new Bruise(m, this.defaultSecondMagicNumber), this.defaultSecondMagicNumber, true));
+            this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.defaultSecondMagicNumber, false), this.defaultSecondMagicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
     }
 
     //Upgraded stats.
@@ -72,6 +69,7 @@ public class Glare extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeMagicNumber(1);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

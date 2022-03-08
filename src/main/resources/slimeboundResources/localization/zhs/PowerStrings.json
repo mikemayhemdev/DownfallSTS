@@ -2,7 +2,7 @@
   "Slimebound:PotencyPower": {
     "NAME": "潜力",
     "DESCRIPTIONS": [
-      "你 #y分裂 出的 #y史莱姆 造成的伤害增加 #b",
+      "你 #y分裂 的 #y史莱姆 造成的伤害增加 #b",
       " 点。"
     ]
   },
@@ -16,7 +16,7 @@
     "Slimebound:PreventTackleDamagePower": {
     "NAME": "防撞",
     "DESCRIPTIONS": [
-      "你不会受到下 #b",
+      "你不会受到接下来 #b",
       " 张 #y冲撞 牌的伤害。"
     ]
   },
@@ -72,9 +72,9 @@
   "Slimebound:ProtectTheBoss": {
     "NAME": "保护老大",
     "DESCRIPTIONS": [
-      "阻挡你下一次受到的攻击伤害， #y吸收 最早 分裂 出的史莱姆。",
+      "阻挡你下次受到的攻击伤害，变为 #y吸收 。",
       "阻挡你下 #b",
-      " 次受到的攻击伤害， #y吸收 最早 分裂 出的史莱姆。"
+      " 次受到的攻击伤害，变为 #y吸收 。"
     ]
   },
   "Slimebound:SplitForLessPower": {
@@ -89,9 +89,9 @@
   "Slimebound:ComboAttackPower": {
     "NAME": "身先士卒",
     "DESCRIPTIONS": [
-      "每回合打出的第一张 #y攻击 牌会使你最早 分裂 出的史莱姆发起攻击。",
+      "每回合打出的第一张 指向牌将 #y命令 。",
       "每回合打出的前 #b",
-      " 张 #y攻击 牌会使你最早 分裂 出的史莱姆发起攻击。",
+      " 张 指向牌将 #y命令 。",
       " NL 本回合还能触发 #b",
       " 次。",
       " 次。",
@@ -109,7 +109,7 @@
   "Slimebound:EnergizedSlimeboundPower": {
     "NAME": "能量提升",
     "DESCRIPTIONS": [
-      "下个回合获得 #b",
+      "下回合获得 #b",
       " 点额外的 [E] 。",
       " 点额外的 [E] 。",
       " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
@@ -118,29 +118,29 @@
   "Slimebound:SelfFormingGooPower": {
     "NAME": "革新",
     "DESCRIPTIONS": [
-      "每当你吸收一个史莱姆时，获得 #b",
+      "每当你 #y吸收 时，获得 #b",
       " 点 #y力量 。"
     ]
   },
     "Slimebound:SelfFormingGooPowerPlus": {
     "NAME": "革新+",
     "DESCRIPTIONS": [
-      "每当你吸收一个史莱姆时，获得 #b",
+      "每当你 #y吸收 时，获得 #b",
       " 点 #y敏捷 。"
     ]
   },
   "Slimebound:LoseSlimesPower": {
     "NAME": "超负荷",
     "DESCRIPTIONS": [
-      "在下个回合，吸收你 分裂 出的所有史莱姆。",
-      " 回合后，吸收你 分裂 出的所有史莱姆。"
+      "下回合所有 #y史莱姆 攻击后， #y吸收 它们。",
+      " 回合后， #y吸收 所有史莱姆。"
     ]
   },
   "Slimebound:TackleModifyDamagePower": {
-    "NAME": "束缚",
+    "NAME": "撞伤",
     "DESCRIPTIONS": [
-      " #y冲撞 牌对该怪物额外造成 #b",
-      " 点伤害。"
+      "额外受到 #b",
+      " 点 #y冲撞 牌的自我伤害。"
     ]
   },
   "Slimebound:LoseThornsPower": {
@@ -160,17 +160,17 @@
   "Slimebound:PreventSlimeDecayPower": {
     "NAME": "浸入黏液",
     "DESCRIPTIONS": [
-      "下次对该目标发动攻击时， #y黏液 不会被消耗。",
+      "下次对该目标发动攻击时， #y黏液 不会被移除。",
       "下 #b",
-      " 次对该目标发动攻击时， #y黏液 不会被消耗。"
+      " 次对该目标发动攻击时， #y黏液 不会被移除。"
     ]
   },
   "Slimebound:DuplicatedFormPower": {
     "NAME": "增殖形态",
     "DESCRIPTIONS": [
-      "每回合你使用的第一张目标为敌人的牌将打出两次。",
+      "每回合你使用的第一张目标带有敌人的牌将打出两次。",
       "每回合你使用的前 #b",
-      " 张目标为敌人的牌将打出两次。"
+      " 张目标带有敌人的牌将打出两次。"
     ]
   },
   "Slimebound:DuplicatedFormNoHealPower": {
@@ -181,7 +181,7 @@
     ]
   },
   "Slimebound:DuplicatedFormEnergyPower": {
-    "NAME": "增殖形态",
+    "NAME": "增殖膨胀",
     "DESCRIPTIONS": [
       "每回合获得 #b",
       " [E] 。"
@@ -190,13 +190,13 @@
   "Slimebound:GluttonyPower": {
     "NAME": "暴食",
     "DESCRIPTIONS": [
-      "每回合第一次 #y消耗黏液 时，将一张随机 #y舔舔 牌加入手牌。",
+      "每回合第一次 #y消耗黏液 时，将一张 #y舔舔 加入手牌。",
       "每回合前 ",
-      " 次 #y消耗黏液 时，将一张随机 #y舔舔 牌加入手牌。",
+      " 次 #y消耗黏液 时，将一张 #y舔舔 加入手牌。",
       " NL 本回合还能触发 ",
       " 次。",
       " 次。",
-      " NL 本回合不能再触发了。"
+      " NL 本回合不再触发。"
     ]
   },
   "Slimebound:GluttonyPowerUpgraded": {
@@ -224,9 +224,9 @@
   "Slimebound:RecyclingPower": {
     "NAME": "回收",
     "DESCRIPTIONS": [
-      "在你的回合开始时，随机将已被 #y消耗 的 #b",
-      " 张0费牌加入你的手牌。",
-      " 张0费牌加入你的手牌。"
+      "在你的回合开始时，随机 #y发掘 #b",
+      " 张0耗能牌。",
+      " 张0耗能牌。"
     ]
   },
   "Slimebound:RecyclingPowerUpgraded": {
@@ -246,7 +246,7 @@
   "Slimebound:AcidTonguePowerUpgraded": {
     "NAME": "黏液舌头",
     "DESCRIPTIONS": [
-      "给予 #y黏液 的效果额外给予 #b",
+      "给予 #y黏液 时额外给予 #b",
       " 层。"
     ]
   },
@@ -258,7 +258,7 @@
     ]
   },
   "Slimebound:TackleBuffPower": {
-    "NAME": "进攻型冲撞",
+    "NAME": "鲁莽冲撞",
     "DESCRIPTIONS": [
       " #y冲撞 牌对敌人造成的伤害增加 #b",
       " 点。"
@@ -295,18 +295,18 @@
   "Slimebound:NextTurnGainStrengthPower": {
     "NAME": "蓄力",
     "DESCRIPTIONS": [
-      "在你的下个回合，获得 #b",
+      "下回合，获得 #b",
       " 点 #y力量 。"
     ]
   },
   "Slimebound:NextTurnGainSlimeCrush": {
     "NAME": "准备撞击",
     "DESCRIPTIONS": [
-      "在你的下个回合，将一张 #g史莱姆撞击 加入手牌。",
-      "在你的下个回合，将一张 #g史莱姆撞击+ 加入手牌。",
-      "在你的下个回合，将 #b",
-      " 张 #g史莱姆撞击 加入手牌。",
-      " 张 #g史莱姆撞击+ 加入手牌。"
+      "下回合，将一张 #y史莱姆撞击 加入手牌。",
+      "下回合，将一张 #y史莱姆撞击+ 加入手牌。",
+      "下回合，将 #b",
+      " 张 #y史莱姆撞击 加入手牌。",
+      " 张 #y史莱姆撞击+ 加入手牌。"
     ]
   },
   "Slimebound:StunnedPower": {
@@ -505,22 +505,22 @@
   "Slimebound:GoopArmorPower": {
     "NAME": "黏液护甲",
     "DESCRIPTIONS": [
-      "当你 #y攻击 一名带有 #y黏液 的敌人时，获得 #b",
+      "每当你 #y消耗黏液 时，获得 #b",
       " 点 #y格挡 。"
     ]
   },
   "Slimebound:CommandOnPlayPower": {
-    "NAME": "黏液护甲",
+    "NAME": "集结部队",
     "DESCRIPTIONS": [
-      "本回合每当你打出一张牌， #y命令 。",
-      "本回合每当你打出一张牌， #y命令 ",
-      " 次。"
+      "本回合接下来你打出的牌将 #y命令 。",
+      "本回合接下来你打出的 #b",
+      " 张牌将 #y命令 。"
     ]
   },
   "Slimebound:GoopPerTurnPower": {
     "NAME": "黏液浴",
     "DESCRIPTIONS": [
-      "这名敌人回合开始时给予 #b",
+      "这名敌人的回合开始时给予其 #b",
       " 层 #y黏液 。"
     ]
   }

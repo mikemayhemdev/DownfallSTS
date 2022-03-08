@@ -2,7 +2,7 @@
   "Guardian:AcceleratePotion": {
     "NAME": "质朴药水",
     "DESCRIPTIONS": [
-      "将所有被凝滞中的牌 #y加速 #b",
+      " #y加速 所有凝滞中的牌 #b",
       "次。"
     ]
   },
@@ -17,7 +17,7 @@
   "Guardian:BlockOnCardUsePotion": {
     "NAME": "盔甲涂料",
     "DESCRIPTIONS": [
-      "本回合你每打出一张牌，获得 #b",
+      "本回合每当你打出一张牌时，获得 #b",
       " 点 #y格挡 。"
     ]
   },

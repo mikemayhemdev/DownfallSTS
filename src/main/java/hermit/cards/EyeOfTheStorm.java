@@ -1,9 +1,6 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,6 +13,7 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import hermit.HermitMod;
 import hermit.actions.EyeOfTheStormAction;
 import hermit.characters.hermit;
+import hermit.powers.SnipePower;
 //import org.apache.logging.log4j.LogManager;
 //import org.apache.logging.log4j.Logger;
 
@@ -70,6 +68,7 @@ public class EyeOfTheStorm extends AbstractDynamicCard {
             onDeadOn();
 
             this.addToBot(new EyeOfTheStormAction(p,this, getLogicalCardCost(this)));
+            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
         }
 
     }

@@ -18,7 +18,7 @@ public class EnSpite extends AbstractHermitBossCard {
 
     public EnSpite() {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/spite.png", 1, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
-        this.baseBlock = 13;
+        this.baseDamage = 5;
     }
 
     @Override
@@ -32,6 +32,8 @@ public class EnSpite extends AbstractHermitBossCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeDamage(1);
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 public abstract class AbstractHermitBossCard extends AbstractBossCard {
     public AbstractHermitBossCard(String id, String name, String img, int cost, String rawDescription, CardType type,
                                   CardColor color, CardRarity rarity, CardTarget target, AbstractMonster.Intent intent) {
-        super(id, name, img, cost, rawDescription, type, color, rarity, target, intent);
+        super(id, name, img, cost, rawDescription, type, color, rarity, target, intent, true);
     }
 
     protected void renderHelperU(SpriteBatch sb, Color color, TextureAtlas.AtlasRegion img, float drawX, float drawY) {

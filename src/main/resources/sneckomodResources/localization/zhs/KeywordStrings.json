@@ -9,14 +9,17 @@
   {
     "PROPER_NAME": "混淆",
     "NAMES": [
-      "混淆"
+      "混淆",
+      "muddle",
+      "muddled"
     ],
     "DESCRIPTION": "将一张牌的耗能变为0到3之间。"
   },
   {
     "PROPER_NAME": "异色",
     "NAMES": [
-      "异色"
+      "异色",
+      "offclass"
     ],
     "DESCRIPTION": "除了你专属的牌以外的所有可获得牌。（包括诅咒和状态等）"
   }

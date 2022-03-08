@@ -22,6 +22,7 @@ import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 import sneckomod.patches.UnknownExtraUiPatch;
 import sneckomod.relics.SuperSneckoSoul;
+import sneckomod.relics.UnknownEgg;
 
 public class LockInCampfireEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("sneckomod:LockInBonfireOptions");
@@ -103,8 +104,7 @@ public class LockInCampfireEffect extends com.megacrit.cardcrawl.vfx.AbstractGam
             this.isDone = true;
             if (com.megacrit.cardcrawl.rooms.CampfireUI.hidden) {
                 com.megacrit.cardcrawl.rooms.AbstractRoom.waitTimer = 0.0F;
-                if (AbstractDungeon.player.hasRelic(SuperSneckoSoul.ID)){
-
+                if (AbstractDungeon.player.hasRelic(UnknownEgg.ID)){
                     ((RestRoom) AbstractDungeon.getCurrRoom()).campfireUI.reopen();
                 } else {
                     AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;

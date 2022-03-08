@@ -52,7 +52,7 @@ public class FromBeyond extends AbstractDynamicCard {
     public FromBeyond() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         loadJokeCardImage(this, "from_beyond.png");
-        magicNumber= baseMagicNumber=3;
+        magicNumber= baseMagicNumber=5;
     }
 
     // Actions the card should do.

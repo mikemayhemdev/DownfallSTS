@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import downfall.util.TextureLoader;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
-import sneckomod.relics.SuperSneckoSoul;
+import sneckomod.relics.UnknownEgg;
 
 import java.util.ArrayList;
 
@@ -42,7 +42,7 @@ public class LockInCampfireOption extends AbstractCampfireOption {
 
         this.usable = active;
         if (active) {
-            if (AbstractDungeon.player.hasRelic(SuperSneckoSoul.ID)) {
+            if (AbstractDungeon.player.hasRelic(UnknownEgg.ID)) {
                 this.description = DESCRIPTIONS[4];
             } else {
                 this.description = DESCRIPTIONS[1];

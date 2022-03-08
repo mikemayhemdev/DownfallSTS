@@ -36,6 +36,16 @@ public class EnShowdown extends AbstractHermitBossCard {
     }
 
     @Override
+    public void onSpecificTrigger() {
+        for (AbstractCard q : AbstractCharBoss.boss.hand.group) {
+            if (q instanceof EnStrikeHermit) {
+                q.setCostForTurn(1);
+                q.isCostModified = false;
+            }
+        }
+    }
+
+    @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();

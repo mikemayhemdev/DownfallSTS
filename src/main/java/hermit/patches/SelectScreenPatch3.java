@@ -1,5 +1,6 @@
 package hermit.patches;
 
+import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
@@ -20,10 +21,13 @@ import java.util.Iterator;
 
 public class SelectScreenPatch3 {
 
-    @SpirePostfixPatch
-    public static void SelectionPostPatch(HandCardSelectScreen reg)
+    @SpireInsertPatch(
+            rloc=34,
+            localvars={}
+    )
+    public static void Insert()
     {
-        if (AbstractDungeon.player.chosenClass == hermit.Enums.HERMIT && (InputHelper.justClickedLeft || CInputActionSet.select.isJustPressed())) {
+        if (AbstractDungeon.player.chosenClass == hermit.Enums.HERMIT) {
             SelectScreenPatch.ResetHand();
         }
     }

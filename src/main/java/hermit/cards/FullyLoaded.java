@@ -41,7 +41,7 @@ public class FullyLoaded extends AbstractDynamicCard {
 
 
 
-    private static final int COST = 1;
+    private static final int COST = 0;
 
 
     // /STAT DECLARATION/
@@ -66,7 +66,8 @@ public class FullyLoaded extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
 
-            upgradeBaseCost(0);
+            this.selfRetain = true;
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }
