@@ -119,13 +119,13 @@
   "downfall:SilentPoisonPower": {
     "NAME": "警告：中毒",
     "DESCRIPTIONS": [
-      "#y中毒 能被 #y格挡 抵消，战斗开始时获得 #b2 瓶 解毒剂。"
+      "#y中毒 在你的回合结束时触发且伤害能被 #y格挡 抵消，战斗开始时获得一瓶 #y解毒剂 。"
     ]
   },
   "downfall:NeowHighlyToxic": {
     "NAME": "警告：中毒",
     "DESCRIPTIONS": [
-      " #y涅奥 每回合给予你 #b5 层 #y中毒 ，每过 #b3 回合，获得一瓶解毒剂。"
+      " #y涅奥 每回合给予你 #b5 层 #y中毒 。 #y中毒 在你的回合结束时触发且伤害能被 #y格挡 抵消，战斗开始时将两张 #y解毒剂 洗入你的抽牌堆。"
     ]
   },
   "downfall:DefectVoidPower": {
@@ -155,14 +155,14 @@
   "downfall:DefectCuriosity": {
     "NAME": "偏差认知",
     "DESCRIPTIONS": [
-      "每当你打出一张 #y稀有牌 ， #y故障机器人 获得 #b",
+      "每当你打出一张 #y能力牌 ， #y故障机器人 获得 #b",
       " 点 #y集中 。"
     ]
   },
   "downfall:NeowUnbiasedCognition": {
     "NAME": "偏差认知",
     "DESCRIPTIONS": [
-      "每当你打出一张 #y稀有牌 ， #y涅奥 获得 #b1 点 #y力量 。"
+      "每当你打出一张 #y能力牌 ， #y涅奥 获得 #b2 点 #y力量 。"
     ]
   },
   "downfall:IroncladStatusPower": {
@@ -292,8 +292,9 @@
   "downfall:HermitConcentrationPower": {
     "NAME": "Concentrated",
     "DESCRIPTIONS": [
-      "Hermit's cards currently get bonuses. Deal #b",
-      " more damage to break his Concentration."
+      "Hermit's cards get bonus #yDead #yOn effects while he is concentrated. Deal #b",
+      " more damage to break his Concentration this turn.",
+      "Hermit's concentration is broken and #yDead #yOn effects don't trigger this turn."
     ]
   },
   "downfall:HermitWheelOfFortune": {
