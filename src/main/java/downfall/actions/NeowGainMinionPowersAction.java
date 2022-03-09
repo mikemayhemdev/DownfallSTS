@@ -1,9 +1,12 @@
 package downfall.actions;
 
 
+import charbosses.cards.other.Antidote;
 import charbosses.powers.general.PoisonProtectionPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -26,6 +29,7 @@ public class NeowGainMinionPowersAction extends AbstractGameAction {
     public void update() {
 
         this.isDone = true;
+
         switch (num) {
             case 1: {
                 if (downfallMod.Act1BossFaced != "") {
@@ -36,6 +40,7 @@ public class NeowGainMinionPowersAction extends AbstractGameAction {
                         }
                         case "downfall:Silent": {
                             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new HighlyToxic(owner, 5)));
+                            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Antidote(), 2, true, true));
 //                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PoisonProtectionPower(AbstractDungeon.player)));
                             break;
                         }

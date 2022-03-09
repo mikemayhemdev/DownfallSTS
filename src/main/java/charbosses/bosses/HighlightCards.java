@@ -35,7 +35,7 @@ public class HighlightCards {
     public static void patch(AbstractCard c, SpriteBatch sb) {
         if (highCostChecker(c))
             renderIcon(c, sb, shivRegion);
-        else if (rareChecker(c))
+        else if (powerChecker(c))
             renderIcon(c, sb, biasRegion);
     }
 
@@ -53,7 +53,7 @@ public class HighlightCards {
     public static class CardGlowPatch {
         @SpirePostfixPatch
         public static void patch(CardGlowBorder __instance, AbstractCard c, Color col, @ByRef Color[] ___color) {
-            if (highCostChecker(c) || rareChecker(c)) {
+            if (highCostChecker(c) || powerChecker(c)) {
                 ___color[0] = Color.RED.cpy();
             }
         }
@@ -95,7 +95,7 @@ public class HighlightCards {
         return false;
     }
 
-    private static boolean rareChecker(AbstractCard c) {
+    private static boolean powerChecker(AbstractCard c) {
         if (!isInCombat()) {
             return false;
         }
@@ -103,7 +103,7 @@ public class HighlightCards {
             if (AbstractCharBoss.boss != null) {
                 if (!AbstractCharBoss.boss.isDeadOrEscaped()) {
                     if (AbstractCharBoss.boss.hasPower(DefectCuriosityPower.POWER_ID)) {
-                        if (!(c instanceof AbstractBossCard) && c.rarity == AbstractCard.CardRarity.RARE) {
+                        if (!(c instanceof AbstractBossCard) && c.type == AbstractCard.CardType.POWER) {
                             return true;
                         }
                     }
@@ -112,7 +112,7 @@ public class HighlightCards {
             if (NeowBossFinal.neowboss != null) {
                 if (!NeowBossFinal.neowboss.isDeadOrEscaped()) {
                     if (NeowBossFinal.neowboss.hasPower(UnbiasedCognition.POWER_ID)) {
-                        if (!(c instanceof AbstractBossCard) && c.rarity == AbstractCard.CardRarity.RARE) {
+                        if (!(c instanceof AbstractBossCard) && c.type == AbstractCard.CardType.POWER) {
                             return true;
                         }
                     }

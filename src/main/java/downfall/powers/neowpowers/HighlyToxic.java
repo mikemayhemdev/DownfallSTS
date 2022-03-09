@@ -24,14 +24,12 @@ public class HighlyToxic extends AbstractBossMechanicPower {
     private static final Texture tex84 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowSilent384.png"));
     private static final Texture tex32 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowSilent332.png"));
 
-    private boolean firstTurn;
-    private int poisonAmount;
+//    private boolean firstTurn;
 
-    public HighlyToxic(final AbstractCreature owner, final int poisonAmount) {
+    public HighlyToxic(final AbstractCreature owner, final int amount) {
         this.ID = POWER_ID;
         this.owner = owner;
-        this.amount = 0;
-        this.poisonAmount = poisonAmount;
+        this.amount = amount;
         this.type = PowerType.BUFF;
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
@@ -41,9 +39,9 @@ public class HighlyToxic extends AbstractBossMechanicPower {
 
         this.updateDescription();
 
-        firstTurn = true;
-        this.canGoNegative = false;
-        this.isTurnBased = true;
+//        firstTurn = true;
+//        this.canGoNegative = false;
+//        this.isTurnBased = true;
 
     }
 
@@ -52,12 +50,12 @@ public class HighlyToxic extends AbstractBossMechanicPower {
     public void atStartOfTurn() {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {// 27
             this.flash();// 28
-            addToBot(new ApplyPowerAction(AbstractDungeon.player, owner, new EnemyPoisonPower(AbstractDungeon.player, owner, poisonAmount), poisonAmount));
-            amount += 1;
-            if (amount == 3) {
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Antidote(), 1));
-                amount = 0;
-            }
+            addToBot(new ApplyPowerAction(AbstractDungeon.player, owner, new EnemyPoisonPower(AbstractDungeon.player, owner, amount), amount));
+//            amount += 1;
+//            if (amount == 3) {
+//                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Antidote(), 1));
+//                amount = 0;
+//            }
         }
     }
 

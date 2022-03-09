@@ -75,6 +75,6 @@
   },
   "expansioncontent:Antidote": {
     "NAME": "Antidote",
-    "DESCRIPTION": "Retain. NL Lose all Poison. NL Exhaust."
+    "DESCRIPTION": "Lose all Poison."
   }
 }

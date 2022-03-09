@@ -33,7 +33,7 @@ public class DefectCuriosityPower extends AbstractBossMechanicPower {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.rarity == AbstractCard.CardRarity.RARE && !(card instanceof AbstractBossCard)) {
+        if (card.type == AbstractCard.CardType.POWER && !(card instanceof AbstractBossCard)) {
             flash();
             addToBot(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(this.owner, this.owner, new FocusPower(this.owner, this.amount), this.amount));
         }

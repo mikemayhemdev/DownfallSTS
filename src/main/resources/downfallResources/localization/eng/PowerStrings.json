@@ -119,13 +119,13 @@
   "downfall:SilentPoisonPower": {
     "NAME": "Warning: Highly Toxic",
     "DESCRIPTIONS": [
-      "Poison is blockable. Receive 2 #yAntidotes at the start of combat."
+      "Poison is blockable and deals damage at end of turn. NL Receive an #yAntidote at the start of combat."
     ]
   },
   "downfall:NeowHighlyToxic": {
     "NAME": "Warning: Highly Toxic",
     "DESCRIPTIONS": [
-      "Neow applies #b5 #yPoison to you per turn. Poison is blockable. Receive an #yAntidote every #b3 turns."
+      "Neow applies #b5 #yPoison to you per turn. Poison is blockable and deals damage at end of turn. NL Shuffle 2 #yAntidotes into your deck at the start of combat."
     ]
   },
   "downfall:DefectVoidPower": {
@@ -155,14 +155,14 @@
   "downfall:DefectCuriosity": {
     "NAME": "Unbiased Cognition",
     "DESCRIPTIONS": [
-      "Whenever you play a #yRare card, gains #b",
+      "Whenever you play a #yPower card, Defect gains #b",
       " #yFocus."
     ]
   },
   "downfall:NeowUnbiasedCognition": {
     "NAME": "Unbiased Cognition",
     "DESCRIPTIONS": [
-      "Neow gains #b2 #yStrength for every #yRare card you play."
+      "Whenever you play a #yPower card, Neow gains #b2 #yStrength."
     ]
   },
   "downfall:IroncladStatusPower": {
