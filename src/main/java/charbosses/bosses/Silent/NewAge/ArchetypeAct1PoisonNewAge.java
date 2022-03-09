@@ -36,7 +36,7 @@ public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
         AbstractCreature p = AbstractDungeon.player;
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PoisonProtectionPower(p)));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, new SilentPoisonPower(AbstractCharBoss.boss)));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Antidote(), 2));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Antidote(), 1));
     }
 
     public void initialize() {

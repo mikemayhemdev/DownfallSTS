@@ -12,8 +12,6 @@ public class Antidote extends AbstractExpansionCard {
 
     public Antidote() {
         super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
-        exhaust = true;
-        selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

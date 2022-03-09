@@ -119,13 +119,13 @@
   "downfall:SilentPoisonPower": {
     "NAME": "Warning: Highly Toxic",
     "DESCRIPTIONS": [
-      "Poison is blockable. Receive 2 #yAntidotes at the start of combat."
+      "Poison is blockable and deals damage at end of turn. NL Receive an #yAntidote at the start of combat."
     ]
   },
   "downfall:NeowHighlyToxic": {
     "NAME": "Warning: Highly Toxic",
     "DESCRIPTIONS": [
-      "Neow applies #b5 #yPoison to you per turn. Poison is blockable. Receive an #yAntidote every #b3 turns."
+      "Neow applies #b5 #yPoison to you per turn. Poison is blockable and deals damage at end of turn. NL Shuffle 2 #yAntidotes into your deck at the start of combat."
     ]
   },
   "downfall:DefectVoidPower": {
