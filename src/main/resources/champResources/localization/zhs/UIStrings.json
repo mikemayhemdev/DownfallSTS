@@ -1,24 +1,24 @@
 {
   "champ:SealCommonReward": {
     "TEXT": [
-      "Add a Common card to your deck"
+      "将一张普通牌加入牌组。"
     ]
   },
   "champ:SealSealReward": {
     "TEXT": [
-      "Add a Seal to your deck"
+      "将一张容器牌加入牌组。"
     ]
   },
   "champ:TechniqueMod": {
     "TEXT": [
-      " NL champ:技术 。"
+      " NL champ:战术 。"
     ]
   },
   "champ:OpenerMod": {
     "TEXT": [
-      " champ:战狂 champ:起手 。 NL ",
-      " champ:防守 champ:起手 。 NL ",
-      " champ:角斗 champ:起手 。 NL "
+      " NL 进入 champ:战狂 。 ",
+      " NL 进入 champ:防守 。",
+      " NL 进入 *角斗 。"
     ]
   },
   "champ:RetainCardMod": {
