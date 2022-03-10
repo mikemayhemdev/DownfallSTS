@@ -290,11 +290,11 @@
     ]
   },
   "downfall:HermitConcentrationPower": {
-    "NAME": "Concentrated",
+    "NAME": "致命专注",
     "DESCRIPTIONS": [
-      "Hermit's cards get bonus #yDead #yOn effects while he is concentrated. Deal #b",
-      " more damage to break his Concentration this turn.",
-      "Hermit's concentration is broken and #yDead #yOn effects don't trigger this turn."
+      " #y亡命之徒 每回合都进入专注状态，使它的 #y精准 牌触发额外效果。 本回合再对其造成 #b",
+      " 点伤害来打破它的专注状态。",
+      " 它本回合已被扰乱，不触发 #精准 效果。"
     ]
   },
   "downfall:HermitWheelOfFortune": {
