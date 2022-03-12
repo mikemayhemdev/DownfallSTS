@@ -3,7 +3,7 @@
     "NAME": "冠军金冠",
     "FLAVOR": "你是冠军！",
     "DESCRIPTIONS": [
-      "每场战斗开始时随机进入一种 #y姿态 。"
+      "每当你进入 #y战狂 ，对随机一名敌人造成 #b4 点伤害。 NL 每当你进入 #y防守 ，获得 #b4 点 #y格挡 。"
     ]
   },
   "champ:BlackKnightHelmet": {

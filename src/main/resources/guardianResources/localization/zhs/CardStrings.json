@@ -61,7 +61,7 @@
   },
   "Guardian:TwinSlam": {
     "NAME": "双斩",
-    "DESCRIPTION": "造成 !D! 点伤害 !GuardianMulti! 次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 *再打击 加入手牌。"
   },
   "Guardian:GuardianWhirl": {
     "NAME": "守护者旋风",
@@ -429,5 +429,13 @@
     "NAME": "全身撞击",
     "DESCRIPTION": "造成你当前 格挡 值的伤害 。",
     "UPGRADE_DESCRIPTION": " NL （造成 !D! 点伤害）"
+  },
+  "Guardian:SecondStrike": {
+    "NAME": "第二打击",
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗 。"
+  },
+  "Guardian:SecondStrikePreviewCard": {
+    "NAME": "第二打击",
+    "DESCRIPTION": "复制 *双斩 的宝石。 NL 虚无 。 NL 造成 !D! 点伤害。 NL 消耗 。"
   }
 }

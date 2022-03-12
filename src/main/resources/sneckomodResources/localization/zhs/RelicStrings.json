@@ -3,7 +3,7 @@
     "NAME": "异蛇之魂",
     "FLAVOR": "0……3……2……2……1",
     "DESCRIPTIONS": [
-      "你能在 #y休息处 明晰一张 #y未知牌 。"
+      "每场战斗第一次打出 #y异色 牌时，获得 [E] 并抽一张牌。"
     ]
   },
   "sneckomod:SuperSneckoSoul": {
@@ -11,7 +11,7 @@
     "FLAVOR": "3120231321230320",
     "DESCRIPTIONS": [
       "替换 #r",
-      " 。 NL #y休息处 明晰一张 #y未知牌 现在变成自由行动了。"
+      " 。 NL 每回合第一次打出 #y异色 牌时，获得 [E] 。"
     ]
   },
   "sneckomod:CleanMud": {
@@ -60,7 +60,7 @@
     "NAME": "未知之蛋",
     "FLAVOR": "想知道孵出什么？ 交 $1000 再说。",
     "DESCRIPTIONS": [
-      "卡牌奖励中的 #y未知 牌将被 #y升级 。"
+      " #y明晰 变为自由行动。 NL 卡牌奖励中的 #y未知 牌将被 #y升级 。"
     ]
   },
   "sneckomod:SuperSneckoEye": {

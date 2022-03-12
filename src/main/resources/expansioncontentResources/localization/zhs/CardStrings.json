@@ -75,6 +75,6 @@
   },
   "expansioncontent:Antidote": {
     "NAME": "解毒剂",
-    "DESCRIPTION": "解毒。"
+    "DESCRIPTION": "失去所有 中毒 。"
   }
 }

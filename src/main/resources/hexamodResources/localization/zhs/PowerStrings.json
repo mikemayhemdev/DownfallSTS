@@ -77,8 +77,12 @@
   "hexamod:FuturePower": {
     "NAME": "疾走",
     "DESCRIPTIONS": [
-      "每当你 #y步进 时，获得 #b",
-      " 点 #y格挡 。"
+      "每回合前 #b",
+      " 次",
+      " 次",
+      "#y点燃 鬼火时， #y步进 。 NL 本回合已 #y点燃 过 #b",
+      " 个 鬼火。",
+      " 个 鬼火。"
     ]
   },
   "hexamod:FutureUpgradePower": {
@@ -92,8 +96,8 @@
   "hexamod:GainStrengthThatGoesAwayPower": {
     "NAME": "此刻",
     "DESCRIPTIONS": [
-      "如果你开始与结束回合时 #y激活 的 #y鬼火 相同，获得 #b",
-      " 点 #y力量 。"
+      "每回合开始时获得 ",
+      " ， NL 你的回合结束时不会 #y步进 。"
     ]
   },
   "hexamod:GhostFlameBarrierPower": {

@@ -27,7 +27,7 @@
   "sneckomod:MudshieldPower": {
     "NAME": "模糊护盾",
     "DESCRIPTIONS": [
-      "每当你 #y混淆 一张牌，下一回合获得 #b",
+      "每当你 #y混淆 一张牌，获得 #b",
       " 点 #y格挡 。"
     ]
   },
@@ -43,7 +43,7 @@
     "NAME": "无限供应",
     "DESCRIPTIONS": [
       "你的回合开始时，将 #b",
-      " 张随机 #y异色 牌加入你的手牌并 #y混淆 。"
+      " 张随机 #y异色 牌加入你的手牌。"
     ]
   },
   "sneckomod:UnknownUpgradedPostCombatPower": {

@@ -81,7 +81,7 @@
   },
   "champ:Backstep": {
     "NAME": "后撤",
-    "DESCRIPTION": "进入 champ:防守 。 NL 获得 !B! 点 格挡 。 NL champ:战狂 champ:连段 ：获得 活力 点数的 格挡 。",
+    "DESCRIPTION": "进入 champ:防守 。 NL 获得 !B! 点 格挡 。 NL champ:战狂 champ:连段 ：获得 [E] 。",
     "EXTENDED_DESCRIPTION": [
       " NL （获得 !B! 点 格挡 。）"
     ]
@@ -104,13 +104,13 @@
   },
   "champ:RageSigil": {
     "NAME": "战斗计划",
-    "DESCRIPTION": "抽一张牌。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 预见 !M! 。",
     "UPGRADE_DESCRIPTION": "抽一张牌。 NL 获得 !B! 点 格挡 。"
   },
   "champ:GutPunch": {
     "NAME": "腹拳",
-    "DESCRIPTION": "进入 champ:战狂 。 NL 造成 !D! 点伤害。 NL champ:防守 champ:连段 ：获得 [E] 和 !B! 点 格挡 。",
-    "UPGRADE_DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage. NL *Defensive champ:Combo: Gain [E] and draw !M! cards."
+    "DESCRIPTION": "进入 champ:战狂 。 NL 造成 !D! 点伤害。 NL champ:防守 champ:连段 ：获得 [E] 并抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "进入 champ:战狂 。 NL 造成 !D! 点伤害。 NL champ:防守 champ:连段 ：获得 [E] 并抽 !M! 张牌。"
   },
   "champ:FanOfKnives": {
     "NAME": "刀阵",
@@ -119,7 +119,7 @@
   },
   "champ:Devastate": {
     "NAME": "坏灭",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗每打出一张 champ:终结技 ，这张牌的耗能减少 [E] 。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 本场战斗每打出一张 champ:终结技 ，这张牌的耗能减少 [E] 。"
   },
   "champ:Control": {
     "NAME": "控制",
@@ -134,7 +134,7 @@
   },
   "champ:Circumvent": {
     "NAME": "规避",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL champ:防守 champ:连段 ：获得 champ:反击 层数的 格挡 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL champ:防守 champ:连段 ：抽 !M! 张牌。",
     "UPGRADE_DESCRIPTION": "获得 !M! 层 champ:反击 。 NL 获得 !B! 点 格挡 。 NL champ:防守 champ:连段 ：获得 champ:反击 层数的 格挡 。"
   },
   "champ:SkillfulDodge": {
@@ -171,12 +171,12 @@
   },
   "champ:ShieldThrow": {
     "NAME": "爆甲",
-    "DESCRIPTION": " 获得 !B! 点 格挡 。 NL 造成你当前 格挡 值的伤害。 NL 除非 champ:防守 champ:连段 ：下回合不能获得 格挡 。",
+    "DESCRIPTION": " 获得 !B! 点 格挡 。 NL 造成你当前 格挡 值的伤害。 NL 除非 champ:防守 champ:连段 ：获得 !M! 层 脆弱 。",
     "UPGRADE_DESCRIPTION": " NL （造成 !D! 点伤害。）"
   },
   "champ:FalseCounter": {
     "NAME": "伪反",
-    "DESCRIPTION": "下次触发 champ:反击 时，只失去一半 champ:反击 。",
+    "DESCRIPTION": "获得 !M! 层 champ:反击 。 NL 下次触发 champ:反击 时，只失去一半 champ:反击 。",
     "UPGRADE_DESCRIPTION": "获得 !M! 层 champ:反击 。 NL 下次触发 champ:反击 时，只失去一半 champ:反击 。",
     "EXTENDED_DESCRIPTION": [
       "还不是时候。"
@@ -268,8 +268,8 @@
   },
   "champ:Shatter": {
     "NAME": "粉碎",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:战狂 champ:连段 ：移除敌人的 格挡 再造成伤害。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL champ:战狂 champ:连段 ：移除敌人的 格挡 和 人工制品 再造成伤害。"
+    "DESCRIPTION": "移除敌人的 格挡 。 NL 造成 !D! 点伤害。 NL champ:战狂 champ:连段 ：给予 !M! 层 易伤 。",
+    "UPGRADE_DESCRIPTION": "移除敌人的 格挡 与 人工制品 。 NL 造成 !D! 点伤害。 NL champ:战狂 champ:连段 ：给予 !M! 层 易伤 。"
   },
   "champ:EnragedBash": {
     "NAME": "怒斩",
@@ -289,7 +289,7 @@
   },
   "champ:HeartStrike": {
     "NAME": "穿心一击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若敌人生命低于 !M! %，造成双倍伤害。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若敌人生命低于 !M! %时，再造成一次伤害。",
     "EXTENDED_DESCRIPTION": [
       "还不是时候。",
       "那个敌人还没准备好被消灭。"
@@ -297,7 +297,7 @@
   },
   "champ:CrownThrow": {
     "NAME": "投掷王冠",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 若耗能不为0，下回合返回手牌且打出前耗能为0。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 将弃牌堆中的一张牌放到抽牌堆顶部。"
   },
   "champ:Encircle": {
     "NAME": "包围",
@@ -305,7 +305,7 @@
   },
   "champ:LastStand": {
     "NAME": "背水一战",
-    "DESCRIPTION": " 若你处于或降至半血以下： NL 移除所有负面效果。 NL 获得 !M! 点 力量 。",
+    "DESCRIPTION": "当你处于或降至半血以下： NL 移除所有负面效果。 NL 获得 !M! 点 力量 。",
     "EXTENDED_DESCRIPTION": [
       "~你惹火我了……~",
       "@败北？@ NL @不可能！！@ "
@@ -362,7 +362,7 @@
     ]
   },
   "champ:PerfectedStrike": {
-    "NAME": "完美打击",
+    "NAME": "完成打击",
     "DESCRIPTION": " 造成 !D! 点伤害。 NL 每有一张带 *打击 的牌，伤害增加 !M! 点。"
   },
   "champ:GladiatorForm": {
@@ -376,8 +376,7 @@
   },
   "champ:DancingMaster": {
     "NAME": "战技大师",
-    "DESCRIPTION": "如果你在一回合内进入了三次相同的姿态，获得 [E] 并抽2张牌。",
-    "UPGRADE_DESCRIPTION": "如果你在一回合内进入了三次相同的姿态，获得 [E] [E] 并抽2张牌。"
+    "DESCRIPTION": "如果你在一回合内进入了三次相同的姿态，获得 [E] 并抽1张牌。"
   },
   "champ:StrikeOfGenius": {
     "NAME": "打击天才",
@@ -417,7 +416,7 @@
   },
   "champ:Parry": {
     "NAME": "招架",
-    "DESCRIPTION": "获得 !M! 层 champ:反击 。 NL 如果本回合触发了 champ:反击 ，将 *弹反 加入手牌。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。 NL 如果本回合触发了 champ:反击 ，将 *弹反 加入手牌。",
     "UPGRADE_DESCRIPTION": "造成 champ:反击 使用层数的伤害。 NL 消耗 。."
   },
   "champ:EnchantCrown": {
@@ -433,8 +432,8 @@
   },
   "champ:UltimateStance": {
     "NAME": "终极姿态",
-    "DESCRIPTION": "处于 姿态 时才能被打出。 NL 在1回合内处于 champ:终极 。",
-    "UPGRADE_DESCRIPTION": "处于 姿态 时才能被打出。 NL 在 !M! 回合内处于 champ:终极 。",
+    "DESCRIPTION": "处于第一勇士 姿态 时才能被打出。 NL 在 !M! 回合内处于 champ:终极 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "处于第一勇士 姿态 时才能被打出。 NL 在 !M! 回合内处于 champ:终极 。",
     "EXTENDED_DESCRIPTION": [
       "我不处于姿态。"
     ]

@@ -284,9 +284,9 @@
     ]
   },
   "downfall:HermitConcentrateAdder": {
-    "NAME": "Deadly Focus",
+    "NAME": "抗争",
     "DESCRIPTIONS": [
-        "Hermit has Concentration, which adds special Dead On effects to his cards. Dealing #b10 unblocked attack damage to the Hermit breaks his concentration, causing his cards to lose their Dead On effects."
+        " #y亡命之徒 正在 #y专注 ，使得他的卡牌获得 #y精准 效果。 NL 对其造成 #b10 点未被 #y格挡 的伤害能破除他的 #y专注 状态。"
     ]
   },
   "downfall:HermitConcentrationPower": {
