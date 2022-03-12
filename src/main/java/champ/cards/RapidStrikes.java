@@ -1,23 +1,17 @@
 package champ.cards;
 
-import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ReduceCostForTurnAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.util.CardIgnore;
-import slimebound.SlimeboundMod;
-import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
 public class RapidStrikes extends AbstractChampCard {
 
     public final static String ID = makeID("RapidStrikes");
-
-    //stupid intellij stuff attack, enemy, uncommon
 
     private static final int DAMAGE = 4;
 
@@ -38,18 +32,14 @@ public class RapidStrikes extends AbstractChampCard {
             @Override
             public void update() {
                 isDone = true;
-                ArrayList<AbstractCard> tackleList = new ArrayList<>();
+                ArrayList<AbstractCard> strikeList = new ArrayList<>();
                 for (AbstractCard q : AbstractDungeon.player.hand.group) {
                     if (q.hasTag(CardTags.STRIKE) && q.costForTurn > 0 && !q.freeToPlayOnce) {
-                        tackleList.add(q);
+                        strikeList.add(q);
                     }
                 }
-                if (!tackleList.isEmpty()) {
-                    if (upgraded){
-                        tackleList.get(AbstractDungeon.cardRandomRng.random(tackleList.size() - 1)).modifyCostForCombat(-9);
-                    } else {
-                        addToTop(new ReduceCostForTurnAction(tackleList.get(AbstractDungeon.cardRandomRng.random(tackleList.size() - 1)), 9));
-                    }
+                if (!strikeList.isEmpty()) {
+                    addToTop(new ReduceCostForTurnAction(strikeList.get(AbstractDungeon.cardRandomRng.random(strikeList.size() - 1)), 9));
                 }
             }
         });

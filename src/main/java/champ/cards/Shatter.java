@@ -15,9 +15,9 @@ public class Shatter extends AbstractChampCard {
     //stupid intellij stuff skill, self, uncommon
 
     public Shatter() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 8;
-        //  tags.add(ChampMod.TECHNIQUE);
+        baseMagicNumber = magicNumber = 1;
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
         postInit();
@@ -25,11 +25,12 @@ public class Shatter extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         // techique();
-        if (bcombo()) {
-            atb(new RemoveAllBlockAction(m, p));
-            if (upgraded) atb(new RemoveSpecificPowerAction(m, p, ArtifactPower.POWER_ID));
-        }
+        atb(new RemoveAllBlockAction(m, p));
+        if (upgraded) atb(new RemoveSpecificPowerAction(m, p, ArtifactPower.POWER_ID));
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        if (bcombo()) {
+            applyToEnemy(m, autoVuln(m, magicNumber));
+        }
     }
 
     @Override

@@ -10,16 +10,11 @@ public class SkillfulDodge extends AbstractChampCard {
 
     public final static String ID = makeID("SkillfulDodge");
 
-    //stupid intellij stuff skill, self, uncommon
-
-    private static final int BLOCK = 4;
-    private static final int MAGIC = 4;
-
     public SkillfulDodge() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = MAGIC;
-        baseCool = cool = 2;
+        baseBlock = 4;
+        baseMagicNumber = magicNumber = 4;
+        baseCool = cool = 3;
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
         postInit();
@@ -38,6 +33,8 @@ public class SkillfulDodge extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeCool(2);
+        upgradeBlock(1);
+        upgradeMagicNumber(1);
+        upgradeCool(1);
     }
 }

@@ -77,8 +77,12 @@
   "hexamod:FuturePower": {
     "NAME": "Speedrun",
     "DESCRIPTIONS": [
-      "Whenever you #yAdvance, gain #b",
-      " #yBlock."
+      "The first #b",
+      " time ",
+      " times ",
+      "you #yIgnite a Ghostflame each turn, #yAdvance. NL Ignited #b",
+      " Ghostflame this turn.",
+      " Ghostflames this turn."
     ]
   },
   "hexamod:FutureUpgradePower": {
@@ -92,8 +96,8 @@
   "hexamod:GainStrengthThatGoesAwayPower": {
     "NAME": "Here and Now",
     "DESCRIPTIONS": [
-      "If you start and end your turn on the same Ghostflame, gain ",
-      " #yStrength."
+      "Gain ",
+      " at the start of a turn. You no longer #yAdvance at the end of your turn."
     ]
   },
   "hexamod:GhostFlameBarrierPower": {

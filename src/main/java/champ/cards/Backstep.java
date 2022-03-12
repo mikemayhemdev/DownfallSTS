@@ -3,6 +3,7 @@ package champ.cards;
 import champ.ChampMod;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -11,8 +12,6 @@ import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 public class Backstep extends AbstractChampCard {
 
     public final static String ID = makeID("Backstep");
-
-    //stupid intellij stuff skill, self, uncommon
 
     public Backstep() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
@@ -29,10 +28,7 @@ public class Backstep extends AbstractChampCard {
         defenseOpen();
         blck();
         if (bcombo()) {
-            if (AbstractDungeon.player.hasPower(VigorPower.POWER_ID)) {
-                int x = AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount;
-                atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, x));
-            }
+            atb(new GainEnergyAction(1));
         }
 
     }
@@ -44,6 +40,6 @@ public class Backstep extends AbstractChampCard {
 
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeBlock(3);
     }
 }

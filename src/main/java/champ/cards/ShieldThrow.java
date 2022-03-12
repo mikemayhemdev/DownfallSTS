@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.FrailPower;
 
 public class ShieldThrow extends AbstractChampCard {
 
@@ -16,7 +17,8 @@ public class ShieldThrow extends AbstractChampCard {
     public ShieldThrow() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         //  tags.add(ChampMod.FINISHER);
-        baseBlock = block = 9;
+        baseBlock = block = 7;
+        baseMagicNumber = magicNumber = 2;
         tags.add(ChampMod.COMBODEFENSIVE);
         tags.add(ChampMod.COMBO);
         postInit();
@@ -31,7 +33,7 @@ public class ShieldThrow extends AbstractChampCard {
         this.rawDescription = cardStrings.DESCRIPTION;
         this.initializeDescription();
         if (!dcombo()) {
-            applyToSelf(new NoBlockNextTurnPower(1));
+            applyToSelf(new FrailPower(p,2, false));
         }
         //  finisher();
     }
@@ -63,6 +65,6 @@ public class ShieldThrow extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeBlock(4);
+        upgradeBlock(3);
     }
 }

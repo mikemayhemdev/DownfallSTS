@@ -16,19 +16,18 @@ public class GhostOfSpirePresent extends AbstractHexaCard {
 
     public GhostOfSpirePresent() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = MAGIC;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new GainStrengthThatGoesAwayPower(magicNumber));
+        applyToSelf(new GainStrengthThatGoesAwayPower(1));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeBaseCost(0);
         }
     }
 }

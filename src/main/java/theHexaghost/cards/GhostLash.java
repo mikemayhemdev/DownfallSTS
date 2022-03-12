@@ -15,7 +15,7 @@ public class GhostLash extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ENEMY, COMMON
 
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 7;
     private static final int UPG_DAMAGE = 3;
 
     public GhostLash() {
@@ -26,21 +26,21 @@ public class GhostLash extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (m == null) return;
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
-        if (ExhaustCardTickPatch.exhaustedLastTurn)
-            atb(new DamageAction(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY));
     }
 
     @Override
     public void afterlife() {
-        use(AbstractDungeon.player, AbstractDungeon.getRandomMonster());
+        AbstractMonster m = AbstractDungeon.getRandomMonster();
+        if (m == null) return;
+        use(AbstractDungeon.player, m);
+        atb(new DamageAction(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY));
     }
-
+/*
     public void triggerOnGlowCheck() {
         this.glowColor = ExhaustCardTickPatch.exhaustedLastTurn ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
     }// 68
-
+ */
     public void upgrade() {
         if (!upgraded) {
             upgradeName();

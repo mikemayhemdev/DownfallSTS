@@ -81,7 +81,7 @@
   },
   "champ:Backstep": {
     "NAME": "Backstep",
-    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain Block equal to your Vigor.",
+    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain [E] .",
     "EXTENDED_DESCRIPTION": [
       " NL (Grants !B! Block.)"
     ]
@@ -104,12 +104,13 @@
   },
   "champ:RageSigil": {
     "NAME": "Battle Plan",
-    "DESCRIPTION": "Draw a card.",
+    "DESCRIPTION": "Gain !B! Block. NL Scry !M!.",
     "UPGRADE_DESCRIPTION": "Draw a card. NL Gain !B! Block."
   },
   "champ:GutPunch": {
     "NAME": "Gut Punch",
-    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage. NL *Defensive champ:Combo: Gain [E] and !B! Block."
+    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage. NL *Defensive champ:Combo: Gain [E] and draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage. NL *Defensive champ:Combo: Gain [E] and draw !M! cards."
   },
   "champ:FanOfKnives": {
     "NAME": "Fan of Knives",
@@ -133,7 +134,7 @@
   },
   "champ:Circumvent": {
     "NAME": "Circumvent",
-    "DESCRIPTION": "Gain !B! Block. NL *Defensive champ:Combo: Gain Block equal to your champ:Counter.",
+    "DESCRIPTION": "Gain !B! Block. NL *Defensive champ:Combo: Draw !M! cards.",
     "UPGRADE_DESCRIPTION": "Gain !M! champ:Counter. NL Gain !B! Block. NL *Defensive champ:Combo: Gain Block equal to your champ:Counter."
   },
   "champ:SkillfulDodge": {
@@ -170,7 +171,7 @@
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
-    "DESCRIPTION": "Gain !B! Block. NL Deal damage equal to your Block. NL Unless *Defensive champ:Combo: You can't gain Block next turn.",
+    "DESCRIPTION": "Gain !B! Block. NL Deal damage equal to your Block. NL Unless *Defensive champ:Combo: Gain !M! Frail.",
     "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)"
   },
   "champ:FalseCounter": {
@@ -267,8 +268,8 @@
   },
   "champ:Shatter": {
     "NAME": "Shatter",
-    "DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: Remove the enemy's Block before dealing damage.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: Remove the enemy's Block and Artifact before dealing damage."
+    "DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL *Berserker champ:Combo: Apply !M! Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Remove the enemy's Block and Artifact. NL Deal !D! damage. NL *Berserker champ:Combo: Apply !M! Vulnerable."
   },
   "champ:EnragedBash": {
     "NAME": "Enraged Bash",
@@ -296,7 +297,7 @@
   },
   "champ:CrownThrow": {
     "NAME": "Crownarang",
-    "DESCRIPTION": "Deal !D! damage. NL If this doesn't cost 0, return it to your hand next turn. It costs 0 until played."
+    "DESCRIPTION": "Deal !D! damage. NL Put a card from your discard pile on top of your draw pile."
   },
   "champ:Encircle": {
     "NAME": "Encircle",
@@ -361,7 +362,7 @@
     ]
   },
   "champ:PerfectedStrike": {
-    "NAME": "Perfected Strike",
+    "NAME": "Perfecter Strike",
     "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your cards containing \"Strike\"."
   },
   "champ:GladiatorForm": {
@@ -431,7 +432,7 @@
   },
   "champ:UltimateStance": {
     "NAME": "Ultimate Stance",
-    "DESCRIPTION": "Requires *Defensive or *Berserker. NL Enter champ:Ultimate Stance for 1 turn.",
+    "DESCRIPTION": "Requires *Defensive or *Berserker. NL Enter champ:Ultimate Stance for !M! turns. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Requires *Defensive or *Berserker. NL Enter champ:Ultimate Stance for !M! turns.",
     "EXTENDED_DESCRIPTION": [
       "I am not in a Stance."

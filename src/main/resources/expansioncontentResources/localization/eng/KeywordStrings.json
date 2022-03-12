@@ -26,5 +26,12 @@
       "reclaim"
     ],
     "DESCRIPTION": "Put a card from your exhaust pile into your discard pile."
+  },
+  {
+    "PROPER_NAME": "Shackled",
+    "NAMES": [
+      "shackled"
+    ],
+    "DESCRIPTION": "Shackled creatures lose #yStrength for a turn."
   }
 ]

@@ -17,12 +17,12 @@ public class UltimateStance extends AbstractChampCard {
 
     // intellij stuff power, self, rare
 
-    private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 1;
+    private static final int MAGIC = 2;
 
     public UltimateStance() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        exhaust = true;
         tags.add(ChampMod.TECHNIQUE);
         postInit();
     }
@@ -44,7 +44,7 @@ public class UltimateStance extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        exhaust = false;
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }
