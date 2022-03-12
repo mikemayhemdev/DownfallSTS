@@ -5,9 +5,15 @@ import champ.ChampMod;
 import champ.actions.OpenerReduceCostAction;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
+import champ.stances.UltimateStance;
 import champ.util.OnOpenerSubscriber;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
@@ -26,20 +32,14 @@ public class ChampionCrown extends CustomRelic  {
     }
 
     @Override
-    public void atBattleStart() {
-        super.atBattleStart();
-        if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
-            int x = AbstractDungeon.cardRandomRng.random(1);
-            switch (x) {
-                case 0:
-                    //SlimeboundMod.logger.info("Switching to Berserker (Mod Relic)");
-                    addToBot(new ChangeStanceAction(BerserkerStance.STANCE_ID));
-                    break;
-                case 1:
-                    //SlimeboundMod.logger.info("Switching to Defensive (Mod Relic)");
-                    addToBot(new ChangeStanceAction(DefensiveStance.STANCE_ID));
-                    break;
-            }
+    public void onChangeStance(AbstractStance prevStance, AbstractStance newStance) {
+        if (newStance.ID.equals(BerserkerStance.STANCE_ID) || newStance.ID.equals(UltimateStance.STANCE_ID)) {
+            flash();
+            addToBot(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, 4, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        }
+        if (newStance.ID.equals(DefensiveStance.STANCE_ID) || newStance.ID.equals(UltimateStance.STANCE_ID)) {
+            flash();
+            addToBot(new GainBlockAction(AbstractDungeon.player, 4));
         }
     }
 

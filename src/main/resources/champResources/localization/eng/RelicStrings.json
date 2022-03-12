@@ -3,7 +3,7 @@
     "NAME": "Champion's Crown",
     "FLAVOR": "A WINNER IS YOU!",
     "DESCRIPTIONS": [
-      "Start each combat in a random #yStance."
+      "When you enter #rBerserker, deal #b4 damage to a random enemy. NL When you enter #bDefensive, gain #b4 #yBlock."
     ]
   },
   "champ:BlackKnightHelmet": {

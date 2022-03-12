@@ -61,7 +61,7 @@
   },
   "Guardian:TwinSlam": {
     "NAME": "Twin Slam",
-    "DESCRIPTION": "Deal !D! damage !GuardianMulti! times."
+    "DESCRIPTION": "Deal !D! damage. NL Add *Second *Strike into your hand."
   },
   "Guardian:GuardianWhirl": {
     "NAME": "Guardian Whirl",
@@ -429,5 +429,13 @@
     "NAME": "Body Slam",
     "DESCRIPTION": "Deal damage equal to your Block.",
     "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)"
+  },
+  "Guardian:SecondStrike": {
+    "NAME": "Second Strike",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
+  },
+  "Guardian:SecondStrikePreviewCard": {
+    "NAME": "Second Strike",
+    "DESCRIPTION": "Copies Twin Slam's Gems. NL Ethereal. NL Deal !D! damage. NL Exhaust."
   }
 }

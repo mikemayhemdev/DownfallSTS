@@ -32,7 +32,7 @@ public class BaubleBeam extends AbstractGuardianCard {
     private static final int DAMAGE = 10;
 
     //TUNING CONSTANTS
-    private static final int GEMACTIVATIONS = 2;
+    private static final int GEMACTIVATIONS = 3;
     private static final int UPGRADE_GEMACTIVATIONS = 1;
     private static final int SOCKETS = 2;
     private static final boolean SOCKETSAREAFTER = true;
@@ -102,7 +102,10 @@ public class BaubleBeam extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_GEMACTIVATIONS);
+            if (this.socketCount < 4) {
+                this.socketCount++;
+                this.saveGemMisc();
+            }
         }
     }
 

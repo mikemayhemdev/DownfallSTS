@@ -375,8 +375,7 @@
   },
   "champ:DancingMaster": {
     "NAME": "Dancing Master",
-    "DESCRIPTION": "The third time you enter a Stance each turn, gain [E] and draw 2 cards.",
-    "UPGRADE_DESCRIPTION": "The third time you enter a Stance each turn, gain [E] [E] and draw 2 cards."
+    "DESCRIPTION": "The first time you enter a Stance each turn, gain [E] and draw 1 card."
   },
   "champ:StrikeOfGenius": {
     "NAME": "Strike of Genius",

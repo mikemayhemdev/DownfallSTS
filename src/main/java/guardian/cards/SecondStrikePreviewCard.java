@@ -3,7 +3,6 @@ package guardian.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,16 +14,16 @@ import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
 
-public class TwinSlam extends AbstractGuardianCard {
-    public static final String ID = GuardianMod.makeID("TwinSlam");
+public class SecondStrikePreviewCard extends AbstractGuardianCard {
+    public static final String ID = GuardianMod.makeID("SecondStrikePreviewCard");
     public static final String NAME;
-    public static final String IMG_PATH = "cards/twinSlam.png";
+    public static final String IMG_PATH = "cards/SecondStrike.png";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 1;
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 4;
 
     //TUNING CONSTANTS
     private static final int UPGRADE_BONUS = 1;
@@ -43,7 +42,7 @@ public class TwinSlam extends AbstractGuardianCard {
     }
 
 
-    public TwinSlam() {
+    public SecondStrikePreviewCard() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
         this.baseDamage = DAMAGE;
@@ -51,7 +50,9 @@ public class TwinSlam extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-        cardsToPreview = new SecondStrikePreviewCard();
+        isEthereal = true;
+        exhaust = true;
+
 
         //this.sockets.add(GuardianMod.socketTypes.RED);
     }
@@ -59,19 +60,11 @@ public class TwinSlam extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        AbstractGuardianCard q = new SecondStrike();
-        if (upgraded) q.upgrade();
-        int i = 0;
-        for (GuardianMod.socketTypes gem : sockets) {
-            q.sockets.set(i, gem);
-            i++;
-        }
-        addToBot(new MakeTempCardInHandAction(q, true));
         super.useGems(p, m);
     }
 
     public AbstractCard makeCopy() {
-        return new TwinSlam();
+        return new SecondStrikePreviewCard();
     }
 
     public void upgrade() {
@@ -82,9 +75,6 @@ public class TwinSlam extends AbstractGuardianCard {
                 this.socketCount++;
                 this.saveGemMisc();
             }
-            AbstractCard q = new SecondStrikePreviewCard();
-            q.upgrade();
-            cardsToPreview = q;
         }
     }
 
