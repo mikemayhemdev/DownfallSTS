@@ -55,8 +55,7 @@ public class Covet extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DiscardAction(p, p, 1, false));
-        this.addToBot(new DrawCardAction(p, this.magicNumber));
+        this.addToBot(new CovetAction(magicNumber));
     }
 
 

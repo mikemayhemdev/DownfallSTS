@@ -53,21 +53,21 @@
     "NAME": "Pet Ghost",
     "FLAVOR": "Poor guy.",
     "DESCRIPTIONS": [
-      "If you would die, survive with #b1 HP instead. You die at the end of your next turn. You cannot die before then."
+      "First time you would die each combat, survive with #b1 HP instead."
     ]
   },
   "hermit:CharredGlove": {
     "NAME": "Charred Glove",
     "FLAVOR": "Parts of the glove still glow with otherworldly cinders.",
     "DESCRIPTIONS": [
-      "Whenever you draw a #yCurse, your next attack deals #b4 more damage."
+      "Whenever you draw a #rCurse, your next attack deals #b4 more damage."
     ]
   },
   "hermit:ClaspedLocket": {
     "NAME": "Clasped Locket",
     "FLAVOR": "It won't open anymore.",
     "DESCRIPTIONS": [
-      "Replaces #yOld #yLocket. Upon pickup, add #b3 #yMementos to your deck.",
+      "Replaces #yOld #yLocket. At the start of each combat, gain [E] for each #rCurse in your deck. Upon pickup, obtain #b2 #rInjuries.",
       "Never again..."
     ]
   },
@@ -89,14 +89,14 @@
     "NAME": "Black Powder",
     "FLAVOR": "Handle with care.",
     "DESCRIPTIONS": [
-      "At the end of your turn, deal #b2 damage to all enemies for each #yhermit:Dead_On effect triggered."
+      "At the end of your turn, deal #b2 damage to ALL enemies for each #yhermit:Dead_On effect triggered."
     ]
   },
   "hermit:BloodyTooth": {
     "NAME": "Broken Tooth",
     "FLAVOR": "Appears too large to have come from a human jaw...",
     "DESCRIPTIONS": [
-      "Start every combat with #b1 #yStrength for each Elite encounter you defeat in the same act."
+      "Whenever you beat an Elite encounter, gain #b1 #yStrength at the start of each combat for the rest of the Act."
     ]
   }
 }

@@ -2,13 +2,17 @@ package hermit.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.red.IronWave;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
+import hermit.powers.SnipePower;
 
 
 import static hermit.HermitMod.loadJokeCardImage;
@@ -37,21 +41,22 @@ public class Snapshot extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
 
-    private static final int DAMAGE = 10;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int DAMAGE = 5;
+    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int BLOCK = 8;
+    private static final int UPGRADE_PLUS_BLOCK = 2;
 
     int prev_cost = COST;
-    boolean wasDeadOn = false;
 
     // /STAT DECLARATION/
 
     public Snapshot() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        baseBlock = BLOCK;
         this.tags.add(Enums.DEADON);
-        wasDeadOn=false;
         loadJokeCardImage(this, "snapshot.png");
     }
 
@@ -59,14 +64,21 @@ public class Snapshot extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
+        if (isDeadOn()) {
+            onDeadOn();
+
+            int DeadOnTimes = DeadOnAmount();
+
+            for (int a = 0; a < DeadOnTimes; a++) {
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+            }
+
+            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
+        }
+
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                         EnumPatch.HERMIT_GUN));
-        if (isDeadOn()) {
-            onDeadOn();
-        }
-        wasDeadOn=false;
-
     }
 
     public void triggerOnGlowCheck() {
@@ -76,29 +88,13 @@ public class Snapshot extends AbstractDynamicCard {
         }
     }
 
-    public void applyPowers() {
-        super.applyPowers();
-        if (isDeadOnPos() && costForTurn > 0) {
-            prev_cost=costForTurn;
-            wasDeadOn = true;
-            this.setCostForTurn(0);
-        }
-        else if (!isDeadOnPos() && wasDeadOn)
-        {
-            costForTurn = this.prev_cost;
-            wasDeadOn = false;
-
-            if (cost == COST)
-            isCostModifiedForTurn = false;
-        }
-    }
-
     //Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeBlock(UPGRADE_PLUS_BLOCK);
         }
     }
 }

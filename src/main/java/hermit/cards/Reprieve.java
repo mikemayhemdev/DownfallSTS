@@ -1,6 +1,7 @@
 package hermit.cards;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -10,6 +11,7 @@ import hermit.HermitMod;
 import hermit.actions.LoneWolfAction;
 import hermit.actions.ReprieveAction;
 import hermit.characters.hermit;
+import hermit.patches.EndOfTurnPatch;
 
 import java.util.Iterator;
 
@@ -54,8 +56,6 @@ public class Reprieve extends AbstractDynamicCard {
     public Reprieve() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         loadJokeCardImage(this, "reprieve.png");
-        exhaust=true;
-        this.tags.add(CardTags.HEALING);
     }
 
     // Actions the card should do.
@@ -64,27 +64,40 @@ public class Reprieve extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new ReprieveAction());
     }
 
+    public static int countCards(CardGroup varGroup) {
+        int count = 0;
+
+        for (AbstractCard c: varGroup.group)
+        {
+            if (c.color== AbstractCard.CardColor.CURSE)
+                count++;
+        }
+
+        return count;
+    }
+
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean canUse = super.canUse(p, m);
         if (!canUse) {
             return false;
         } else {
             boolean hasCurse = false;
-            Iterator var5 = p.drawPile.group.iterator();
 
-            while(var5.hasNext()) {
-                AbstractCard c = (AbstractCard)var5.next();
-                if (c.type == CardType.CURSE) {
-                    hasCurse = true;
-                }
+            if (countCards(p.drawPile) > 0 || countCards(p.discardPile) > 0 || countCards(p.hand) > 0){
+                hasCurse = true;
             }
-
-            if (!hasCurse) {
+            else{
                 this.cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
-                canUse = false;
             }
 
-            return true;
+            return hasCurse;
+        }
+    }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractDynamicCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        if (countCards(AbstractDungeon.player.drawPile)+countCards(AbstractDungeon.player.discardPile)+countCards(AbstractDungeon.player.hand) > 12) {
+            this.glowColor = AbstractDynamicCard.GOLD_BORDER_GLOW_COLOR.cpy();
         }
     }
 

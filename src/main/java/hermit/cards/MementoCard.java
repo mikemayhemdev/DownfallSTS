@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.curses.CurseOfTheBell;
+import com.megacrit.cardcrawl.cards.curses.Injury;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -73,11 +74,6 @@ public class MementoCard extends AbstractDynamicCard {
     //Upgraded stats.
     @Override
     public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
-        }
     }
 
     public AbstractCard makeCopy() {

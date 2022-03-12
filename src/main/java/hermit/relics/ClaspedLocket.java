@@ -8,11 +8,14 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.colorless.Trip;
 import com.megacrit.cardcrawl.cards.curses.CurseOfTheBell;
+import com.megacrit.cardcrawl.cards.curses.Injury;
 import com.megacrit.cardcrawl.cards.green.Tactician;
 import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -42,6 +45,7 @@ public class ClaspedLocket extends CustomRelic {
     public static int increaseGold = 75;
 
     private boolean cardsReceived = true;
+    private boolean firstTurn = false;
 
     public ClaspedLocket() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.FLAT);
@@ -63,11 +67,47 @@ public class ClaspedLocket extends CustomRelic {
     }
 
     @Override
-    public void onEquip(){
+    public void onEquip() {
+        this.counter = 0;
+        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
+
+        while(var1.hasNext()) {
+            AbstractCard c = (AbstractCard)var1.next();
+            if (c.type == AbstractCard.CardType.CURSE) {
+                ++this.counter;
+            }
+        }
+    }
+
+
+    public void onMasterDeckChange() {
+        this.counter = 0;
+        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
+
+        while(var1.hasNext()) {
+            AbstractCard c = (AbstractCard)var1.next();
+            if (c.type == AbstractCard.CardType.CURSE) {
+                ++this.counter;
+            }
+        }
     }
 
     public boolean canSpawn() {
         return AbstractDungeon.player.hasRelic(Memento.ID);
+    }
+
+    public void atPreBattle() {
+        this.firstTurn = true;
+    }
+
+    public void atTurnStart() {
+        if (this.firstTurn) {
+            this.flash();
+            this.addToTop(new GainEnergyAction(this.counter));
+            this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            this.firstTurn = false;
+        }
+
     }
 
     public void update() {
@@ -77,9 +117,9 @@ public class ClaspedLocket extends CustomRelic {
             cardsReceived = true;
             CardCrawlGame.sound.play("NECRONOMICON");
             CardGroup curseaddgroup = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-            for (int aaa = 0; aaa < 3; aaa++) {
-                AbstractCard mementoCurse = new MementoCard();
-                curseaddgroup.addToBottom(mementoCurse.makeCopy());
+            for (int aaa = 0; aaa < 2; aaa++) {
+                AbstractCard InjuryCard = new Injury();
+                curseaddgroup.addToBottom(InjuryCard.makeCopy());
             }
             AbstractDungeon.gridSelectScreen.openConfirmationGrid(curseaddgroup, this.DESCRIPTIONS[1]);
         }

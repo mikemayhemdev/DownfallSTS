@@ -22,9 +22,9 @@ public class CovetAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
     private AbstractPlayer p;
-    boolean extra_draw;
+    public int extra_draw;
 
-    public CovetAction(boolean extra) {
+    public CovetAction(int extra) {
         this.actionType = ActionType.CARD_MANIPULATION;
         this.p = AbstractDungeon.player;
         this.duration = Settings.ACTION_DUR_FAST;
@@ -37,13 +37,13 @@ public class CovetAction extends AbstractGameAction {
                 this.addToBot(new DrawCardAction(1));
                 this.isDone = true;
             } else if (this.p.hand.size() == 1) {
-                if (this.p.hand.getBottomCard().color == AbstractCard.CardColor.CURSE || (this.extra_draw && this.p.hand.getBottomCard().type == AbstractCard.CardType.STATUS)) {
-                    this.addToBot(new DrawCardAction(2));
+                this.addToBot(new DrawCardAction(this.extra_draw));
+                if (this.p.hand.getBottomCard().color == AbstractCard.CardColor.CURSE) {
+                    this.p.hand.moveToExhaustPile(this.p.hand.getBottomCard());
                 } else {
-                    this.addToBot(new DrawCardAction(1));
+                    this.p.hand.moveToDiscardPile(this.p.hand.getBottomCard());
                 }
 
-                this.p.hand.moveToExhaustPile(this.p.hand.getBottomCard());
                 this.tickDuration();
             } else {
                 AbstractDungeon.handCardSelectScreen.open(TEXT[0], 1, false);
@@ -52,13 +52,16 @@ public class CovetAction extends AbstractGameAction {
         } else {
             if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
                 if (!AbstractDungeon.handCardSelectScreen.selectedCards.group.isEmpty()) {
+
+                    this.addToBot(new DrawCardAction(this.extra_draw));
+
                     AbstractCard c;
-                    for (Iterator var1 = AbstractDungeon.handCardSelectScreen.selectedCards.group.iterator(); var1.hasNext(); this.p.hand.moveToExhaustPile(c)) {
+                    for (Iterator var1 = AbstractDungeon.handCardSelectScreen.selectedCards.group.iterator(); var1.hasNext();) {
                         c = (AbstractCard) var1.next();
-                        if (c.color == AbstractCard.CardColor.CURSE || (this.extra_draw && c.type == AbstractCard.CardType.STATUS)) {
-                            this.addToBot(new DrawCardAction(2));
+                        if (c.color == AbstractCard.CardColor.CURSE) {
+                            this.p.hand.moveToExhaustPile(c);
                         } else {
-                            this.addToBot(new DrawCardAction(1));
+                            this.p.hand.moveToDiscardPile(c);
                         }
                     }
                 }
@@ -72,7 +75,7 @@ public class CovetAction extends AbstractGameAction {
     }
 
     static {
-        uiStrings = CardCrawlGame.languagePack.getUIString("RecycleAction");
+        uiStrings = CardCrawlGame.languagePack.getUIString("DiscardAction");
         TEXT = uiStrings.TEXT;
     }
 }

@@ -9,7 +9,7 @@
   },
   "hermit:Snapshot": {
     "NAME": "Snapshot",
-    "DESCRIPTION": "Deal !D! damage. hermit:Dead_On: Costs 0."
+    "DESCRIPTION": "Deal !D! damage. hermit:Dead_On: Gain !B! Block."
   },
   "hermit:Desperado": {
     "NAME": "Desperado",
@@ -29,8 +29,8 @@
   },
   "hermit:Covet": {
     "NAME": "Covet",
-    "DESCRIPTION": "Discard 1 card. NL Draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Discard 1 card. NL Draw !M! cards."
+    "DESCRIPTION": "Discard 1 card. NL Draw !M! card. NL Discarded *Curses are Exhausted.",
+    "UPGRADE_DESCRIPTION": "Discard 1 card. NL Draw !M! cards. NL Discarded *Curses are Exhausted."
   },
   "hermit:HighCaliber": {
     "NAME": "High-Caliber",
@@ -180,7 +180,7 @@
   },
   "hermit:Cheat": {
     "NAME": "Cheat",
-    "DESCRIPTION": "Play one of the top !M! cards in your draw pile. NL hermit:Dead_On: Also trigger its hermit:Dead_On effect."
+    "DESCRIPTION": "Play one of the top !M! cards in your draw pile. NL hermit:Dead_On: Also trigger it's hermit:Dead_On effect."
   },
   "hermit:Vantage": {
     "NAME": "Vantage",
@@ -250,9 +250,9 @@
   },
   "hermit:Reprieve": {
     "NAME": "Reprieve",
-    "DESCRIPTION": "Exhaust any number of *Curses from your draw pile. NL Heal 4 HP for each. NL Exhaust.",
+    "DESCRIPTION": "Exhaust ALL *Curses. NL If you exhaust at least 13 *Curses, take an extra turn after this one.",
     "EXTENDED_DESCRIPTION": [
-      "There are no Curses NL in my draw pile."
+      "There are no Curses."
     ]
   },
   "hermit:TakeAim": {

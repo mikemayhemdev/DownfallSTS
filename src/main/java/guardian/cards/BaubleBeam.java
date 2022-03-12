@@ -106,6 +106,8 @@ public class BaubleBeam extends AbstractGuardianCard {
                 this.socketCount++;
                 this.saveGemMisc();
             }
+
+            this.updateDescription();
         }
     }
 

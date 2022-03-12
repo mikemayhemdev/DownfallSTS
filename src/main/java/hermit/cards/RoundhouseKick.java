@@ -1,6 +1,5 @@
 package hermit.cards;
 
-import charbosses.bosses.AbstractCharBoss;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -72,8 +71,12 @@ public class RoundhouseKick extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
         this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (mo.getIntentBaseDmg() < 0 && !mo.isDead && !mo.isDying && !(mo instanceof AbstractCharBoss))
+        Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
+
+        while(var3.hasNext()) {
+            AbstractMonster mo = (AbstractMonster)var3.next();
+            if (mo.getIntentBaseDmg()<0)
                 this.addToBot(new StunMonsterAction(mo, p, 1));
         }
     }

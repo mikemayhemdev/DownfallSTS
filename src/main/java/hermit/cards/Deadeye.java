@@ -52,7 +52,7 @@ public class Deadeye extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.tags.add(Enums.DEADON);
-        magicNumber = baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 1;
         loadJokeCardImage(this, "deadeye.png");
     }
 

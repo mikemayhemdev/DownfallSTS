@@ -1,22 +1,25 @@
 package hermit.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.watcher.SkipEnemiesTurnAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
+import com.megacrit.cardcrawl.cards.purple.Vault;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.powers.PlatedArmorPower;
+import hermit.powers.ReprievePower;
 
 import java.util.Iterator;
 
 public class ReprieveAction extends AbstractGameAction {
-    private static final UIStrings uiStrings;
-    public static final String[] TEXT;
     private AbstractPlayer p;
-    private int totalheal = 0;
+    private int totalcards = 0;
 
     public ReprieveAction() {
         this.p = AbstractDungeon.player;
@@ -25,50 +28,60 @@ public class ReprieveAction extends AbstractGameAction {
         this.duration = Settings.ACTION_DUR_MED;
     }
 
+    public static int countCards(CardGroup varGroup) {
+        int count = 0;
+
+        CardGroup myGroup = varGroup;
+
+        for (AbstractCard c: myGroup.group)
+        {
+            if (c.color== AbstractCard.CardColor.CURSE)
+                count++;
+        }
+
+        return count;
+    }
+
     public void update() {
         AbstractCard card;
         if (this.duration == Settings.ACTION_DUR_MED) {
-            CardGroup tmp = new CardGroup(CardGroupType.UNSPECIFIED);
-            Iterator var5 = this.p.drawPile.group.iterator();
-
-            while(var5.hasNext()) {
-                card = (AbstractCard)var5.next();
-                if (card.type == AbstractCard.CardType.CURSE)
-                tmp.addToRandomSpot(card);
+            if (countCards(this.p.drawPile) == 0 && countCards(this.p.discardPile) == 0 && countCards(this.p.hand) == 0) {
+                this.isDone = true;
+                return;
             }
 
-            if (tmp.size() > 0)
-            AbstractDungeon.gridSelectScreen.open(tmp, -1, true, TEXT[0]);
-            else this.isDone = true;
-
-        } else {
-            if (AbstractDungeon.gridSelectScreen.selectedCards.size() != 0) {
-                Iterator var1 = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
-
-                while(var1.hasNext()) {
-                    card = (AbstractCard)var1.next();
-                    card.unhover();
-                    card.isSelected=false;
-
-                    this.p.drawPile.moveToExhaustPile(card);
-                    this.totalheal += 4;
-
-                    this.p.hand.refreshHandLayout();
-                    this.p.hand.applyPowers();
+            for (int i = p.drawPile.group.size(); i > 0; i--) {
+                AbstractCard c = this.p.drawPile.group.get(i-1);
+                if (c.color == AbstractCard.CardColor.CURSE) {
+                    this.p.drawPile.moveToExhaustPile(c);
+                    this.totalcards++;
                 }
-
-                p.heal(this.totalheal);
-
-                AbstractDungeon.gridSelectScreen.selectedCards.clear();
-                this.p.hand.refreshHandLayout();
             }
 
+            for (int i = p.discardPile.group.size(); i > 0; i--) {
+                AbstractCard c = this.p.discardPile.group.get(i-1);
+                if (c.color == AbstractCard.CardColor.CURSE) {
+                    this.p.discardPile.moveToExhaustPile(c);
+                    this.totalcards++;
+                }
+            }
+
+            for (int i = p.hand.group.size(); i > 0; i--) {
+                AbstractCard c = this.p.hand.group.get(i-1);
+                if (c.color == AbstractCard.CardColor.CURSE) {
+                    this.p.hand.moveToExhaustPile(c);
+                    this.totalcards++;
+                }
+            }
+
+            if (this.totalcards > 12)
+            {
+                this.addToTop(new ApplyPowerAction(p, p, new ReprievePower(p,p, 1), 1));
+            }
+
+            totalcards = 0;
+            this.isDone = true;
         }
         this.tickDuration();
-    }
-
-    static {
-        uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
-        TEXT = uiStrings.TEXT;
     }
 }

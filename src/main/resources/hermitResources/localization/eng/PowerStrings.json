@@ -21,7 +21,7 @@
 },
 "hermit:AdaptPower": {
         "NAME": "Adapt",
-        "DESCRIPTIONS": ["At the end of your turn, Exhaust up to 2 cards. Gain #b", " Block for each."]
+        "DESCRIPTIONS": ["At the end of your turn, Exhaust up to #b2 cards. Gain #b", " Block for each."]
 },
 "hermit:Bruise": {
         "NAME": "Bruised",
@@ -57,7 +57,7 @@
 },
 "hermit:Bounty": {
         "NAME": "Bounty",
-        "DESCRIPTIONS": ["Current Bounty: "]
+        "DESCRIPTIONS": ["Current Bounty: #b"]
 },
 "hermit:Drained": {
         "NAME": "Drained",
@@ -82,5 +82,9 @@
 "hermit:CoalescencePower": {
         "NAME": "Coalescence",
         "DESCRIPTIONS": ["At the end of your turn, #yRetain up to #b", " Card.", " Cards."]
+},
+"hermit:ReprievePower": {
+                "NAME": "Reprieve",
+                "DESCRIPTIONS": ["Take #b", " extra turn after this one.", " extra turns after this one."]
 }
 }

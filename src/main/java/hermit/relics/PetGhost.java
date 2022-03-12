@@ -47,18 +47,10 @@ public class PetGhost extends CustomRelic implements OnPlayerDeathRelic {
 
     @Override
     public boolean onPlayerDeath(AbstractPlayer p, DamageInfo damageInfo) {
-        if (!canDie) {
-
-            if (p.hasPower(PetGhost.ID))
-                p.getPower(PetGhost.ID).flash();
-            else {
-                AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                PetGhostPower pow = new PetGhostPower(AbstractDungeon.player,-1);
-                pow.parent = this;
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player, pow));
-                flash();
-
-            }
+        if (!this.canDie && p.currentHealth <= 0) {
+            this.canDie = true;
+            AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            flash();
             p.heal(1,false);
             return false;
         }

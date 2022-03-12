@@ -61,7 +61,7 @@ public class EnemyPoisonPower extends AbstractPower {
                 if (amount > 0) {
                     this.flashWithoutSound();
                     this.addToBot(new EnemyPoisonDamageAction(this.owner, this.source, this.amount, AttackEffect.POISON));
-                    this.addToBot(new ReducePowerAction(this.owner, this.owner, this, -1));
+                    this.addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
                 } else {
                     this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
                 }

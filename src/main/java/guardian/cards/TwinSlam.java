@@ -63,7 +63,7 @@ public class TwinSlam extends AbstractGuardianCard {
         if (upgraded) q.upgrade();
         int i = 0;
         for (GuardianMod.socketTypes gem : sockets) {
-            q.sockets.set(i, gem);
+            q.sockets.add(gem);
             i++;
         }
         addToBot(new MakeTempCardInHandAction(q, true));
@@ -85,6 +85,8 @@ public class TwinSlam extends AbstractGuardianCard {
             AbstractCard q = new SecondStrikePreviewCard();
             q.upgrade();
             cardsToPreview = q;
+
+            this.updateDescription();
         }
     }
 
