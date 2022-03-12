@@ -10,9 +10,9 @@
   "hexamod:ApocalypticArmorPower": {
     "NAME": "决战末世",
     "DESCRIPTIONS": [
-      "下一次你 #y点燃 地狱火且所有的 #b",
+      "下一次你 #y点燃 狱焱鬼火且所有的 #b",
       " 个鬼火已 #y点燃 ，回合结束时额外获得一回合。",
-      "下一次你 #y点燃 地狱火且有至少  #b"
+      "下一次你 #y点燃 狱焱鬼火且有至少 #b"
     ]
   },
   "hexamod:ApplyBurnAtTurnStartOncePower": {
@@ -56,7 +56,7 @@
   "hexamod:CrispyPower": {
     "NAME": "清脆",
     "DESCRIPTIONS": [
-      "给予 #y灼魂 层数增加 #b",
+      "给予 #y灼魂 时层数增加 #b",
       " 层。"
     ]
   },
@@ -111,7 +111,7 @@
     "NAME": "馈赠抽牌",
     "DESCRIPTIONS": [
       "你的回合开始时， #y取回 随机 #b",
-      " 阴世",
+      " 张 #y阴世",
 	  " 牌。",
       " 牌。"
     ]
@@ -126,8 +126,8 @@
   "hexamod:GoldPostCombatPower": {
     "NAME": "战后灵魂",
     "DESCRIPTIONS": [
-      "本场战斗的灵魂奖励提高 #b",
-      " 。"
+      "本场战斗的 #y灵魂 奖励提高 #b",
+      " 点。"
     ]
   },
   "hexamod:HexalevelPower": {
@@ -147,7 +147,7 @@
     ]
   },
   "hexamod:ParanormalFormPower": {
-    "NAME": "超常形态",
+    "NAME": "鬼哭神嚎",
     "DESCRIPTIONS": [
       "本回合每当你打出 #y阴世 牌时，对随机一名敌人造成 #b",
       " 点伤害。"
@@ -175,7 +175,7 @@
   "hexamod:RadiantPower": {
     "NAME": "火焰辐射",
     "DESCRIPTIONS": [
-      "每当 #y点燃 一个鬼火时，给予随机一名敌人 #b",
+      "每当你 #y点燃 一个鬼火时，给予随机一名敌人 #b",
       " 层 #y灼魂 。"
     ]
   },
@@ -190,7 +190,7 @@
   "hexamod:TimeStopPower": {
     "NAME": "末日来临",
     "DESCRIPTIONS": [
-      "你的回合结束时，立刻开始额外的回合。 NL 保留格挡和能量。"
+      "你的回合结束时，立刻开始额外的一回合。 NL 保留格挡和能量。"
     ]
   },
   "hexamod:VolcanoVisagePower": {
