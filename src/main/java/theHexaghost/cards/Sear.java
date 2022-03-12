@@ -14,13 +14,9 @@ public class Sear extends AbstractHexaCard {
 
     public final static String ID = makeID("Sear");
 
-    //stupid intellij stuff SKILL, ENEMY, BASIC
-
-    private static final int MAGIC = 10;
-
     public Sear() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.ENEMY);
-        baseBurn = burn = MAGIC;
+        baseBurn = burn = 10;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
     }
@@ -48,7 +44,7 @@ public class Sear extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBurn(6);
+            upgradeBurn(4);
         }
     }
 }

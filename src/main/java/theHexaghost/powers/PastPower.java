@@ -62,7 +62,7 @@ public class PastPower extends AbstractPower implements CloneablePowerInterface,
         sb.append(DESCRIPTIONS[0]);
 
         if (amount == 1)
-            sb.append("").append(DESCRIPTIONS[1]);
+            sb.append(DESCRIPTIONS[1]);
         else
             sb.append(amount).append(DESCRIPTIONS[2]);
         sb.append(DESCRIPTIONS[3]).append(activation_count);

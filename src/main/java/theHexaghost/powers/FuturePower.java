@@ -3,21 +3,22 @@ package theHexaghost.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
-import theHexaghost.util.OnAdvanceSubscriber;
+import theHexaghost.actions.AdvanceAction;
 import downfall.util.TextureLoader;
+import theHexaghost.util.OnChargeSubscriber;
 
-public class FuturePower extends AbstractPower implements CloneablePowerInterface, OnAdvanceSubscriber {
+public class FuturePower extends AbstractPower implements CloneablePowerInterface, OnChargeSubscriber {
 
     public static final String POWER_ID = HexaMod.makeID("FuturePower");
 
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Future84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Future32.png");
+    public int activation_count = 0;
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
@@ -38,14 +39,36 @@ public class FuturePower extends AbstractPower implements CloneablePowerInterfac
     }
 
     @Override
-    public void onAdvance() {
-        this.flash();
-        addToBot(new GainBlockAction(owner, this.amount));
+    public void atStartOfTurnPostDraw() {
+        activation_count = 0;
+        updateDescription();
+    }
+
+    public void onCharge() {
+        if (activation_count < amount) {
+            this.flash();
+            addToBot(new AdvanceAction(false));
+        }
+        activation_count++;
+        updateDescription();
     }
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        StringBuilder sb = new StringBuilder();
+        sb.append(DESCRIPTIONS[0]);
+
+        if (amount == 1)
+            sb.append(DESCRIPTIONS[1]);
+        else
+            sb.append(amount).append(DESCRIPTIONS[2]);
+        sb.append(DESCRIPTIONS[3]).append(activation_count);
+        if (activation_count == 1)
+            sb.append(DESCRIPTIONS[4]);
+        else
+            sb.append(DESCRIPTIONS[5]);
+
+        this.description = sb.toString();
     }
 
     @Override

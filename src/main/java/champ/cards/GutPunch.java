@@ -2,28 +2,19 @@ package champ.cards;
 
 import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import static champ.ChampMod.fatigue;
 
 public class GutPunch extends AbstractChampCard {
 
     public final static String ID = makeID("GutPunch");
 
-    //stupid intellij stuff attack, enemy, common
-
-    private static final int DAMAGE = 5;
-    private static final int UPG_DAMAGE = 1;
-
-    private static final int MAGIC = 5;
-    private static final int UPG_MAGIC = 5;
-
     public GutPunch() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
-        baseBlock = 5;
+        baseDamage = 5;
+        baseMagicNumber = magicNumber = 1;
         tags.add(ChampMod.OPENER);
         tags.add(ChampMod.OPENERBERSERKER);
         tags.add(ChampMod.COMBO);
@@ -38,14 +29,15 @@ public class GutPunch extends AbstractChampCard {
         if (dcombo()) {
             // exhaust = true;
             atb(new GainEnergyAction(1));
-            blck();
+            atb(new DrawCardAction(magicNumber));
         }
     }
 
     public void upp() {
         upgradeDamage(3);
-        upgradeBlock(3);
-        // myHpLossCost++;
+        upgradeMagicNumber(1);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 
 

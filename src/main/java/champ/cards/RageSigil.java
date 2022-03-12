@@ -1,7 +1,7 @@
 package champ.cards;
 
 import champ.ChampMod;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -9,24 +9,22 @@ public class RageSigil extends AbstractChampCard {
 
     public final static String ID = makeID("RageSigil");
 
-    //stupid intellij stuff skill, self, common
-
     public RageSigil() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseBlock = 2;
+        baseMagicNumber = magicNumber = 3;
         tags.add(ChampMod.TECHNIQUE);
-        // tags.add(ChampMod.OPENER);
         postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
+        atb(new ScryAction(magicNumber));
         techique();
-        atb(new DrawCardAction(1));
-        if (upgraded) blck();
     }
 
     public void upp() {
-        this.block = this.baseBlock = 3;
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeBlock(2);
+        upgradeMagicNumber(2);
     }
 }

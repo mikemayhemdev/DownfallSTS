@@ -1,9 +1,12 @@
 package theHexaghost.powers;
 
+import automaton.powers.InfiniteBeamsPower;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -16,7 +19,7 @@ import theHexaghost.ghostflames.InfernoGhostflame;
 import theHexaghost.util.OnChargeSubscriber;
 import downfall.util.TextureLoader;
 
-public class ApocalypticArmorPower extends AbstractPower implements OnChargeSubscriber, NonStackablePower {
+public class ApocalypticArmorPower extends TwoAmountPower implements OnChargeSubscriber, NonStackablePower {
 
     public static final String POWER_ID = HexaMod.makeID("ApocalypticArmorPower");
 
@@ -31,7 +34,8 @@ public class ApocalypticArmorPower extends AbstractPower implements OnChargeSubs
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
-        this.amount = amount;
+        this.amount = 1;
+        this.amount2 = amount;
         this.type = PowerType.BUFF;
         this.isTurnBased = true;
 
@@ -42,7 +46,20 @@ public class ApocalypticArmorPower extends AbstractPower implements OnChargeSubs
     }
 
     @Override
+    public boolean isStackable(AbstractPower power) {
+        if (power instanceof ApocalypticArmorPower) {
+            return ((ApocalypticArmorPower) power).amount2 == this.amount2;
+        }
+        return false;
+    }
+
+    @Override
     public void onCharge(AbstractGhostflame g) {
+        for (AbstractPower p: owner.powers) {
+            if (p instanceof ApocalypticArmorPower && ((ApocalypticArmorPower) p).amount2 < this.amount2) {
+                return;
+            }
+        }
         if (g instanceof InfernoGhostflame) {
             int i = 0;
             for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
@@ -50,7 +67,7 @@ public class ApocalypticArmorPower extends AbstractPower implements OnChargeSubs
             }
             if (i >= amount) {
                 addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new TimeStopPower(AbstractDungeon.player, 1), 1));
-                AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(owner, owner, this));
+                AbstractDungeon.actionManager.addToTop(new ReducePowerAction(owner, owner, this, 1));
             }
         }
     }
@@ -58,8 +75,8 @@ public class ApocalypticArmorPower extends AbstractPower implements OnChargeSubs
     @Override
     public void updateDescription() {
         if (amount >= GhostflameHelper.hexaGhostFlames.size())
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+            description = DESCRIPTIONS[0] + amount2 + DESCRIPTIONS[1];
         else
-            description = DESCRIPTIONS[2] + amount + DESCRIPTIONS[1];
+            description = DESCRIPTIONS[2] + amount2 + DESCRIPTIONS[1];
     }
 }

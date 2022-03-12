@@ -119,7 +119,7 @@
   "downfall:SilentPoisonPower": {
     "NAME": "Warning: Highly Toxic",
     "DESCRIPTIONS": [
-      "Poison is blockable and deals damage at end of turn. NL Receive an #yAntidote at the start of combat."
+      "#yPoison is blockable and deals damage at end of turn. NL Receive an #yAntidote at the start of combat."
     ]
   },
   "downfall:NeowHighlyToxic": {
@@ -131,7 +131,7 @@
   "downfall:DefectVoidPower": {
     "NAME": "Energy Thief",
     "DESCRIPTIONS": [
-      "Whenever Defect generates a Void, it goes to the top of your draw pile."
+      "Whenever Defect generates a #yVoid, it goes to the top of your draw pile."
     ]
   },
   "downfall:NeowEnergyThief": {

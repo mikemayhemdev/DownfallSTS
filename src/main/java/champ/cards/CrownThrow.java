@@ -1,7 +1,9 @@
 package champ.cards;
 
 import basemod.helpers.VfxBuilder;
+import champ.ChampMod;
 import champ.powers.BoomerangPower;
+import com.megacrit.cardcrawl.actions.unique.DiscardPileToTopOfDeckAction;
 import downfall.util.TextureLoader;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -21,6 +23,7 @@ public class CrownThrow extends AbstractChampCard {
     public CrownThrow() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        tags.add(ChampMod.TECHNIQUE);
         postInit();
     }
 
@@ -31,9 +34,8 @@ public class CrownThrow extends AbstractChampCard {
                 .moveX(p.hb.x + p.hb.width, Settings.WIDTH + (128 * Settings.scale))
                 .rotate(-300F)
                 .build());
-        if (this.costForTurn != 0 && !freeToPlayOnce) {
-            applyToSelf(new BoomerangPower(this));
-        }
+        atb(new DiscardPileToTopOfDeckAction(p));
+        techique();
     }
 
     public void upp() {
