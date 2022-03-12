@@ -75,6 +75,6 @@
   },
   "expansioncontent:Antidote": {
     "NAME": "解毒剂",
-    "DESCRIPTION": "保留 。 NL 解毒。 NL 消耗 。"
+    "DESCRIPTION": "解毒。"
   }
 }

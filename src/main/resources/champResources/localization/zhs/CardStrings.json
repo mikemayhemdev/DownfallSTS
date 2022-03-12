@@ -9,7 +9,7 @@
   },
   "champ:Taunt": {
     "NAME": "激将",
-    "DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL 如果不处于 姿态 ，随机进入一种 姿态 ，否则进入另一种 姿态 。",
+    "DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL 不处于 姿态 时，随机进入一种 姿态 ，否则进入另一种。",
     "UPGRADE_DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL 选择进入一种 姿态 。"
   },
   "champ:Execute": {
@@ -19,8 +19,8 @@
   },
   "champ:StanceDance": {
     "NAME": "姿态之舞",
-    "DESCRIPTION": "选择进入一种 姿态 。 NL 如果已处于 姿态 ，将一张该姿态的 champ:连段 牌加入你的手牌。",
-    "UPGRADE_DESCRIPTION": "选择进入一种 姿态 。 NL 将一张该姿态的 champ:连段 牌加入你的手牌。",
+    "DESCRIPTION": "选择进入一种 姿态 。 NL 如果已处于 该姿态，将它的一张 champ:连段 牌加入手牌。",
+    "UPGRADE_DESCRIPTION": "选择进入一种 姿态 。 NL 将它的一张 champ:连段 牌加入手牌。",
     "EXTENDED_DESCRIPTION": [
       " 进入 champ:战狂 。",
       " 进入 champ:防守 。"
@@ -33,7 +33,7 @@
   },
   "champ:SwordSigil": {
     "NAME": "剑纹",
-    "DESCRIPTION": "重复本效果 !M! 次。 NL 消耗 。"
+    "DESCRIPTION": " 消耗 。 NL 重复 !M! 次："
   },
   "champ:FocusedGladiator": {
     "NAME": "角斗士",
@@ -41,7 +41,7 @@
   },
   "champ:FaceSlap": {
     "NAME": "打脸",
-    "DESCRIPTION": "造成 !D! 点伤害。如果敌人有 易伤 ，再造成一次伤害。 NL champ:战狂 champ:连段 ：给予 !M! 层 易伤 。"
+    "DESCRIPTION": "造成 !D! 点伤害。如果敌人有 易伤 ，造成两次。 NL champ:战狂 champ:连段 ：给予 !M! 层 易伤 。"
   },
   "champ:FlashCut": {
     "NAME": "拔刀打击",
@@ -65,23 +65,23 @@
   },
   "champ:ShieldSigil": {
     "NAME": "防守印记",
-    "DESCRIPTION": "重复本效果 !M! 次。"
+    "DESCRIPTION": "重复 !M! 次："
   },
   "champ:FocusedDefense": {
     "NAME": "防反家",
-    "DESCRIPTION": "进入 champ:防守 。 NL 本回合下次你打出 champ:终结技 时，获得 !B! 点 格挡 。"
+    "DESCRIPTION": "进入 champ:防守 。 NL 本回合下次打出 champ:终结技 时，获得 !B! 点 格挡 。"
   },
   "champ:FocusedBerserking": {
     "NAME": "战狂士",
-    "DESCRIPTION": "进入 champ:战狂 。 NL 本回合下次你打出 champ:终结技 时，对所有敌人造成 !D! 点伤害。"
+    "DESCRIPTION": "进入 champ:战狂 。 NL 本回合下次打出 champ:终结技 时，对所有敌人造成 !D! 点伤害。"
   },
   "champ:SetATrap": {
     "NAME": "布置陷阱",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 如果有敌人有 虚弱 ，在获得一次 格挡 。 NL champ:防守 champ:连段 ：给予所有敌人 !M! 层 虚弱 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。若有敌人被 虚弱 ，再获得一次。 NL champ:防守 champ:连段 ：给予所有敌人 !M! 层 虚弱 。"
   },
   "champ:Backstep": {
     "NAME": "后撤",
-    "DESCRIPTION": "进入 champ:防守 。 NL 获得 !B! 点 格挡 。 NL champ:战狂 champ:连段 ：获得 活力 层数的 格挡 。",
+    "DESCRIPTION": "进入 champ:防守 。 NL 获得 !B! 点 格挡 。 NL champ:战狂 champ:连段 ：获得 活力 点数的 格挡 。",
     "EXTENDED_DESCRIPTION": [
       " NL （获得 !B! 点 格挡 。）"
     ]
@@ -119,7 +119,7 @@
   },
   "champ:Devastate": {
     "NAME": "坏灭",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗每打出一张 champ:终结技 ，这张牌的耗能减少1。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗每打出一张 champ:终结技 ，这张牌的耗能减少 [E] 。"
   },
   "champ:Control": {
     "NAME": "控制",
@@ -139,12 +139,12 @@
   },
   "champ:SkillfulDodge": {
     "NAME": "精巧闪避",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。 NL champ:防守 champ:连段 ：本场战斗这张牌的 格挡 和 champ:反击 获得提高 !cool! 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。 NL champ:防守 champ:连段 ：本场战斗这张牌的 格挡 和 champ:反击 获得增加 !cool! 点。"
   },
   "champ:TornadoPunch": {
     "NAME": "飓风拳",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:防守 champ:连段 ：每打中一名敌人，获得 !B! 点 格挡 。",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:防守 champ:连段 ：每打中一名敌人，获得 !B! 点 格挡 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:防守 champ:连段 ：每有一名敌人，获得 !B! 点 格挡 。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:防守 champ:连段 ：每有一名敌人，获得 !B! 点 格挡 。"
   },
   "champ:EnGarde": {
     "NAME": "待命",
@@ -153,11 +153,11 @@
   "champ:ShieldSlam": {
     "NAME": "决胜时刻",
     "DESCRIPTION": "保留 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 抽 1 张牌。"
+    "UPGRADE_DESCRIPTION": "保留 。 NL 抽一张牌。"
   },
   "champ:EnchantShield": {
     "NAME": "整备装甲",
-    "DESCRIPTION": " champ:疲劳 5。 NL 选择一张手牌。本场战斗这张牌的格挡获得提高 !M! 。 NL 消耗 。",
+    "DESCRIPTION": " champ:疲劳 5。 NL 选择一张手牌。本场战斗它的格挡增加 !M! 点。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我没有能够强化的牌"
     ]
@@ -213,8 +213,8 @@
     "NAME": "毒舌",
     "DESCRIPTION": "champ:战狂 champ:连段 ：获得 !M! 点 guardianmod:临时 力量 。 NL champ:防守 champ:连段 ：获得 !M! 点 guardianmod:临时 敏捷 。",
     "EXTENDED_DESCRIPTION": [
-      " champ:战狂 champ:连段 : 获得 !M! 点 guardianmod:临时 力量 。 NL ",
-      " champ:防守 champ:连段 : 获得 !M! 点 guardianmod:临时 敏捷 。"
+      " champ:战狂 champ:连段 ：获得 !M! 点 guardianmod:临时 力量 。 NL ",
+      " champ:防守 champ:连段 ：获得 !M! 点 guardianmod:临时 敏捷 。"
     ]
   },
   "champ:PreciseThrust": {
@@ -232,26 +232,26 @@
   },
   "champ:RapidStrikes": {
     "NAME": "连续打击",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 将手牌中随机一张“打击”的耗能本回合变为0。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 手牌中随机一张“打击”本回合下次耗能为0。"
   },
   "champ:EnchantSword": {
     "NAME": "强化剑刃",
-    "DESCRIPTION": "选择一张手牌。本场战斗这张牌造成的伤害提高 !M! 。 NL 消耗 。",
+    "DESCRIPTION": "选择一张手牌。本场战斗它造成的伤害增加 !M! 点。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我不必强化"
     ]
   },
   "champ:BladeFlurry": {
     "NAME": "乱舞打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合你打出的下张“打击”将会打出两次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合下张带 *打击 牌将打出两次。"
   },
   "champ:SwordThrow": {
     "NAME": "投掷剑刃",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 除非 champ:战狂 champ:连段 ：下回合不能打出攻击牌。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 除非 champ:战狂 champ:连段 ：获得 2 层 虚弱 。"
   },
   "champ:MurderStrike": {
     "NAME": "刽子打击",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 打出 champ:战术 牌时本场战斗这张牌的耗能减少1并提高 !M! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 打出 champ:战术 牌时本场战斗这张牌的耗能减少 [E] 并提高 !M! 点伤害。 NL 消耗 。"
   },
   "champ:HeavySlash": {
     "NAME": "大师斩击",
@@ -260,11 +260,11 @@
   },
   "champ:CheapShot": {
     "NAME": "偷袭",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 如果敌人是首领，再造成两次伤害，否则 *击晕 敌人。 消耗 。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 若敌人是首领，造成三次伤害，否则 hermit:击晕 敌人。 NL 消耗 。"
   },
   "champ:RisingSlash": {
     "NAME": "狂烈打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果本场战斗中打出的上一张牌是 champ:战术 牌，打出两次"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若打出的上张牌是 champ:战术 牌，打出两次"
   },
   "champ:Shatter": {
     "NAME": "粉碎",
@@ -280,7 +280,7 @@
   },
   "champ:VampiricStrike": {
     "NAME": "重击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:战狂 champ:连段 ： NL 获得 [E] 。 NL champ:防守 champ:连段 ：获得未被 格挡 伤害 的 格挡 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:战狂 champ:连段 ：获得 [E] 。 NL champ:防守 champ:连段 ：获得未被 格挡 伤害 的 格挡 。"
   },
   "champ:AdrenalArmor": {
     "NAME": "振奋装甲",
@@ -288,8 +288,8 @@
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL champ:战狂 champ:连段 ：打出两次。"
   },
   "champ:HeartStrike": {
-    "NAME": "穿心攻击",
-    "DESCRIPTION": "只能对生命低于 !M! %的敌人打出。 NL 造成 !D! 点伤害。 ",
+    "NAME": "穿心一击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若敌人生命低于 !M! %，造成双倍伤害。",
     "EXTENDED_DESCRIPTION": [
       "还不是时候。",
       "那个敌人还没准备好被消灭。"
@@ -297,18 +297,18 @@
   },
   "champ:CrownThrow": {
     "NAME": "投掷王冠",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 如果耗能不为0， NL 下回合返回手牌。 NL 直到打出前的耗能为0。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 若耗能不为0，下回合返回手牌且打出前耗能为0。"
   },
   "champ:Encircle": {
     "NAME": "包围",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 每打中一名敌人："
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 每有一名敌人："
   },
   "champ:LastStand": {
-    "NAME": "最后一战",
-    "DESCRIPTION": " 只能在半血以下才能被打出。 NL 移除所有负面效果。 NL 获得6点 力量 。",
+    "NAME": "背水一战",
+    "DESCRIPTION": " 若你处于或降至半血以下： NL 移除所有负面效果。 NL 获得 !M! 点 力量 。",
     "EXTENDED_DESCRIPTION": [
       "~你惹火我了……~",
-      "@败北？@ NL @不可能的！！@ "
+      "@败北？@ NL @不可能！！@ "
     ]
   },
   "champ:RecklessLeap": {
@@ -325,11 +325,11 @@
   },
   "champ:DeathBlow": {
     "NAME": "绝地反击",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得 !M! 层 活力 。 NL champ:疲劳 10。 NL 消耗 。"
+    "DESCRIPTION": " champ:疲劳 10。 NL 对所有敌人造成 !D! 点伤害。 NL 获得 !M! 点 活力 。 NL 消耗 。"
   },
   "champ:ArenaPreparation": {
     "NAME": "重整战场",
-    "DESCRIPTION": "将 !M! 张带有 保留 的随机 champ:战术 牌加入你的手牌。 NL 消耗 。"
+    "DESCRIPTION": "将 !M! 张带有 保留 的随机 champ:战术 牌加入手牌。 NL 消耗 。"
   },
   "champ:EndlessRage": {
     "NAME": "无穷愤火",
@@ -348,7 +348,7 @@
   },
   "champ:Improvising": {
     "NAME": "触类旁通",
-    "DESCRIPTION": "每回合第一次打出 champ:连段 牌时，返回手牌。 NL 它直到打出前费用为0。"
+    "DESCRIPTION": "每回合第一次打出 champ:连段 牌时，返回手牌。 NL 它下次费用为0。"
   },
   "champ:CalledShot": {
     "NAME": "宣告",
@@ -363,7 +363,7 @@
   },
   "champ:PerfectedStrike": {
     "NAME": "完美打击",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 你每有一张名字中有 *打击 的牌，伤害+ !M! 。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 每有一张带 *打击 的牌，伤害增加 !M! 点。"
   },
   "champ:GladiatorForm": {
     "NAME": "角斗形态",
@@ -371,8 +371,8 @@
   },
   "champ:Duel": {
     "NAME": "决斗",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 如果只有一名敌人，打出两次。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 如果只有一名敌人，打出两次。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 若只有一名敌人，打出两次。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 若只有一名敌人，打出两次。"
   },
   "champ:DancingMaster": {
     "NAME": "战技大师",
@@ -381,8 +381,8 @@
   },
   "champ:StrikeOfGenius": {
     "NAME": "打击天才",
-    "DESCRIPTION": "在你的回合开始时，将随机一张带有 消耗 的 *打击 牌加入你的手牌。 NL 它直到打出前的耗能为0。",
-    "UPGRADE_DESCRIPTION": "你的回合开始时，将随机一张已 升级 带有 消耗 的 *打击 牌加入你的手牌。 NL 它直到打出前的耗能为0。"
+    "DESCRIPTION": "回合开始时，将随机一张带有 消耗 的 *打击 牌加入你的手牌。 NL 它下次耗能为0。",
+    "UPGRADE_DESCRIPTION": "你的回合开始时，将随机一张已 升级 带有 消耗 的 *打击 牌加入你的手牌。 NL 它下次耗能为0。"
   },
   "champ:DefensiveStyle": {
     "NAME": "防守战法",
@@ -395,8 +395,8 @@
   },
   "champ:BerserkerStyle": {
     "NAME": "狂暴战法",
-    "DESCRIPTION": "进入 champ:战狂 。 NL champ:疲劳 5。 NL champ:战狂 champ:战术 奖励额外获得 !M! 层 活力 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 进入 champ:战狂 。 NL champ:疲劳 5。 NL champ:战狂 champ:战术 奖励：额外获得 !M! 层 活力 。"
+    "DESCRIPTION": "进入 champ:战狂 。 NL champ:疲劳 5。 NL champ:战狂 champ:战术 奖励额外获得 !M! 点 活力 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 进入 champ:战狂 。 NL champ:疲劳 5。 NL champ:战狂 champ:战术 奖励：额外获得 !M! 点  活力 。"
   },
   "champ:Riposte": {
     "NAME": "弹反",
@@ -405,24 +405,24 @@
   "champ:Endure": {
     "NAME": "忍耐",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 这张牌的 格挡 受 力量 而非 敏捷 影响 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 这张牌的 格挡 受 力量 影响 。"
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 这张牌的 格挡 还受 力量 影响 。"
   },
   "champ:PreemptiveStrike": {
     "NAME": "抢先打击",
-    "DESCRIPTION": "对所有敌人造成 champ:反击 层数的伤害。 NL 失去一半的 champ:反击 。",
+    "DESCRIPTION": "对所有敌人造成 champ:反击 层数的伤害。 NL 失去一半 champ:反击 。",
     "EXTENDED_DESCRIPTION": [
       " NL （造成 !D! 点伤害）",
       "还不是时候。"
     ]
   },
   "champ:Parry": {
-    "NAME": "闪避",
-    "DESCRIPTION": "获得 !M! 层 champ:反击 。 NL 如果本回合使用了 champ:反击 ，将 *弹反 加入手牌。",
+    "NAME": "招架",
+    "DESCRIPTION": "获得 !M! 层 champ:反击 。 NL 如果本回合触发了 champ:反击 ，将 *弹反 加入手牌。",
     "UPGRADE_DESCRIPTION": "造成 champ:反击 使用层数的伤害。 NL 消耗 。."
   },
   "champ:EnchantCrown": {
     "NAME": "附魔金冠",
-    "DESCRIPTION": "champ:疲劳 5。 NL 选择一张手牌，这张牌本场战斗中的耗能变为0。 NL 消耗 。",
+    "DESCRIPTION": "champ:疲劳 5。 NL 选择一张手牌，本场战斗它的耗能变为0。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我没有能强化的牌"
     ]
@@ -433,16 +433,16 @@
   },
   "champ:UltimateStance": {
     "NAME": "终极姿态",
-    "DESCRIPTION": "处于 champ:防守 或 champ:战狂 时才能被打出。 NL 在1回合内处于 champ:终极 。",
-    "UPGRADE_DESCRIPTION": "处于 champ:防守 或 champ:战狂 时才能被打出。 NL 在 !M! 回合内处于 champ:终极 。",
+    "DESCRIPTION": "处于 姿态 时才能被打出。 NL 在1回合内处于 champ:终极 。",
+    "UPGRADE_DESCRIPTION": "处于 姿态 时才能被打出。 NL 在 !M! 回合内处于 champ:终极 。",
     "EXTENDED_DESCRIPTION": [
       "我不处于姿态。"
     ]
   },
   "champ:FancyFootwork": {
     "NAME": "花哨步法",
-    "DESCRIPTION": "处于 champ:防守 或 champ:战狂 时才能被打出。 NL 进入另外一种 姿态 。 NL 抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "处于 champ:防守 或 champ:战狂 时才能被打出。 NL 进入另外一种 姿态 。 NL 抽 !M! 张牌。",
+    "DESCRIPTION": "处于 姿态 时才能被打出。 NL 进入另一种 姿态 。 NL 抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "处于 姿态 时才能被打出。 NL 进入另一种 姿态 。 NL 抽 !M! 张牌。",
     "EXTENDED_DESCRIPTION": [
       "我不处于姿态"
     ]
@@ -454,8 +454,8 @@
   },
   "champ:WindUp": {
     "NAME": "挑衅",
-    "DESCRIPTION": "选择进入一种 姿态 。 NL 检索 一张 champ:终结技 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择进入一种 姿态 。 NL 检索 一张 champ:终结技 。",
+    "DESCRIPTION": "选择进入一种 姿态 。 NL 检索 抽牌堆中一张 champ:终结技 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择进入一种 姿态 。 NL 检索 抽牌堆中一张 champ:终结技 。",
     "EXTENDED_DESCRIPTION": [
       "进入 champ:战狂 。",
       "进入 champ:防守 。"

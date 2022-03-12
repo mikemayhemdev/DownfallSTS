@@ -119,13 +119,13 @@
   "downfall:SilentPoisonPower": {
     "NAME": "警告：中毒",
     "DESCRIPTIONS": [
-      "#y中毒 能被 #y格挡 抵消，战斗开始时获得 #b2 瓶 解毒剂。"
+      "#y中毒 在你的回合结束时触发且伤害能被 #y格挡 抵消，战斗开始时获得一瓶 #y解毒剂 。"
     ]
   },
   "downfall:NeowHighlyToxic": {
     "NAME": "警告：中毒",
     "DESCRIPTIONS": [
-      " #y涅奥 每回合给予你 #b5 层 #y中毒 ，每过 #b3 回合，获得一瓶解毒剂。"
+      " #y涅奥 每回合给予你 #b5 层 #y中毒 。 #y中毒 在你的回合结束时触发且伤害能被 #y格挡 抵消，战斗开始时将两张 #y解毒剂 洗入你的抽牌堆。"
     ]
   },
   "downfall:DefectVoidPower": {
@@ -155,14 +155,14 @@
   "downfall:DefectCuriosity": {
     "NAME": "偏差认知",
     "DESCRIPTIONS": [
-      "每当你打出一张 #y稀有牌 ， #y故障机器人 获得 #b",
+      "每当你打出一张 #y能力牌 ， #y故障机器人 获得 #b",
       " 点 #y集中 。"
     ]
   },
   "downfall:NeowUnbiasedCognition": {
     "NAME": "偏差认知",
     "DESCRIPTIONS": [
-      "每当你打出一张 #y稀有牌 ， #y涅奥 获得 #b1 点 #y力量 。"
+      "每当你打出一张 #y能力牌 ， #y涅奥 获得 #b2 点 #y力量 。"
     ]
   },
   "downfall:IroncladStatusPower": {
@@ -290,10 +290,11 @@
     ]
   },
   "downfall:HermitConcentrationPower": {
-    "NAME": "Concentrated",
+    "NAME": "致命专注",
     "DESCRIPTIONS": [
-      "Hermit's cards currently get bonuses. Deal #b",
-      " more damage to break his Concentration."
+      " #y亡命之徒 每回合都进入专注状态，使它的 #y精准 牌触发额外效果。 本回合再对其造成 #b",
+      " 点伤害来打破它的专注状态。",
+      " 它本回合已被扰乱，不触发 #精准 效果。"
     ]
   },
   "downfall:HermitWheelOfFortune": {
@@ -305,7 +306,7 @@
   "downfall:HermitDoomsday": {
     "NAME": "末日",
     "DESCRIPTIONS": [
-      "每回合开始时，将一张 带有 #y虚无 的 #r末日降临 加入你的手牌。"
+      "每回合开始时，将一张 带有 #y虚无 的 #r末日将临 加入你的手牌。"
     ]
   }
 }

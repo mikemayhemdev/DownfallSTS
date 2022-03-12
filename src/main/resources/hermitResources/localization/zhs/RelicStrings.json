@@ -71,6 +71,13 @@
       "再也……"
     ]
   },
+  "hermit:StraightRazor": {
+    "NAME": "刮胡刀",
+    "FLAVOR": "干净利落。。。",
+    "DESCRIPTIONS": [
+      "每当你从牌组移除一张牌时，回复 #b15 点生命。"
+    ]
+  },
   "hermit:BrassTacks": {
     "NAME": "破旧铜钉",
     "FLAVOR": "尽管年深岁久，你仍然能从它们身上感受到昔日的光芒。",
