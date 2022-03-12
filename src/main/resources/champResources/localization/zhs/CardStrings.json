@@ -362,7 +362,7 @@
     ]
   },
   "champ:PerfectedStrike": {
-    "NAME": "完成打击",
+    "NAME": "完美打击",
     "DESCRIPTION": " 造成 !D! 点伤害。 NL 每有一张带 *打击 的牌，伤害增加 !M! 点。"
   },
   "champ:GladiatorForm": {
