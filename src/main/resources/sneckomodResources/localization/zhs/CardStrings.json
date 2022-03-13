@@ -76,7 +76,7 @@
     "DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张手牌。 NL 替换为的同类型牌。",
     "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张手牌。 NL 替换为耗能低1的同类型牌。",
     "EXTENDED_DESCRIPTION": [
-      " 被“不行”替换。"
+      " 选择一张牌替换。"
     ]
   },
   "sneckomod:UnknownClass": {
@@ -229,7 +229,7 @@
   },
   "sneckomod:DiceBlock": {
     "NAME": "骰子格挡",
-    "DESCRIPTION": "获得 !M! - !B! 点 格挡 。 NL sneckomod:混淆 这些牌。"
+    "DESCRIPTION": "获得 !M! - !B! 点 格挡 。 NL sneckomod:混淆 这张牌。"
   },
   "sneckomod:MixItUp": {
     "NAME": "混合起来！",
@@ -244,7 +244,7 @@
     "DESCRIPTION": " *未知 力量 牌。"
   },
   "sneckomod:UnknownDraw": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": " *未知 抽牌牌。"
   },
   "sneckomod:UnknownDexterity": {
@@ -265,7 +265,7 @@
   },
   "sneckomod:RainOfDice": {
     "NAME": "骰子雨",
-    "DESCRIPTION": "对随机一名敌人造成 !qqq! - !D! 点伤害。 NL 这张牌的每点耗能使其伤害提高 !M! 。"
+    "DESCRIPTION": "对随机一名敌人造成 !qqq! - !D! 点伤害 !M! 次。 NL 这张牌的每点耗能额外重复一次。"
   },
   "sneckomod:DiceCrush": {
     "NAME": "骰子撞击",
@@ -285,8 +285,8 @@
   },
   "sneckomod:Mudshield": {
     "NAME": "泥泞护盾",
-    "DESCRIPTION": "每当你 sneckomod:混淆 一张牌，获得 !M! 点 格挡 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 每当你 sneckomod:混淆 一张牌，获得 !M! 点 格挡 。"
+    "DESCRIPTION": "每当你 sneckomod:混淆 一张牌时，获得 !M! 点 格挡 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每当你 sneckomod:混淆 一张牌时，获得 !M! 点 格挡 。"
   },
   "sneckomod:WideSting": {
     "NAME": "宽刺",
@@ -298,8 +298,8 @@
   },
   "sneckomod:Memorize": {
     "NAME": "回忆",
-    "DESCRIPTION": "sneckomod:蛇证 。 即逝 。 NL 选择一张未知牌将其加入你的牌组并移除未知。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 即逝 。 保留 。 NL 选择一张未知牌将其加入你的牌组并移除未知。",
+    "DESCRIPTION": "sneckomod:蛇证 。 即逝 。 NL 选择手牌中一张未知牌，将它明晰成目前的牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 即逝 。 保留 。 NL 选择手牌中一张未知牌，将它明晰成目前的牌。",
     "EXTENDED_DESCRIPTION": [
       "选择一张牌进行回忆。"
     ]
