@@ -77,7 +77,7 @@
   },
   "hexamod:HauntingEcho": {
     "NAME": "回声萦绕",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果 hexamod:激活 的鬼火已 hexamod:点燃 ， hexamod:点燃 这个鬼火。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果 hexamod:激活 的鬼火已 hexamod:点燃 ，再 hexamod:点燃 它。",
 	"EXTENDED_DESCRIPTION": ["虚无","虚无。 NL "]
   },
   "hexamod:NecessarySacrifice": {
@@ -122,11 +122,11 @@
   },
   "hexamod:GhostLash": {
     "NAME": "幽灵鞭击",
-    "DESCRIPTION": "虚无 。 NL hexamod:阴世 。 NL 造成 !D! 点伤害。 NL 被 消耗 时，再造成 !D! 点伤害。"
+    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 造成 !D! 点伤害。 NL 被 消耗 时，再造成 !D! 点伤害。"
   },
   "hexamod:GhostShield": {
     "NAME": "幽灵护盾",
-    "DESCRIPTION": "虚无 。 NL hexamod:阴世 。 NL 获得 !B! 点 格挡 。 NL 被 消耗 时，获得 !M! 层 bronze:残影 。"
+    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 获得 !B! 点 格挡 。 NL 被 消耗 时，获得 !M! 层 bronze:残影 。"
   },
   "hexamod:Haunt": {
     "NAME": "鬼手",
@@ -155,7 +155,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "诡异探险",
-    "DESCRIPTION": "虚无 。 NL 将随机一张 虚无 牌加入手牌。 NL 这张牌在本回合耗能变为0。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 将随机一张 虚无 牌加入手牌。 NL 它本回合耗能为0。 NL 消耗 。"
   },
   "hexamod:PhantomCloak": {
     "NAME": "幽灵披风",
@@ -176,8 +176,8 @@
   },
   "hexamod:NightmareGuise": {
     "NAME": "梦魇伪装",
-    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 被 消耗 时，将一张 *暗影伪装 入手牌。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 被 消耗 时，将一张 *暗影伪装+ 入手牌。"
+    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 被 消耗 时，将一张 *暗影伪装 加入手牌。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 被 消耗 时，将一张 *暗影伪装+ 加入手牌。"
   },
   "hexamod:ShadowStrike": {
     "NAME": "暗影打击",
@@ -189,20 +189,20 @@
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "深处之力",
-    "DESCRIPTION": "虚无 。 NL hexamod:阴世 。下回合获得 [E] 并抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL hexamod:阴世 。下回合获得 [E] 并抽 !M! 张牌。"
+    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 下回合获得 [E] 并抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 下回合获得 [E] 并抽 !M! 张牌。"
   },
   "hexamod:BurningTouch": {
     "NAME": "灼烧之触",
-    "DESCRIPTION": "如果敌人有 hexamod:灼魂 ， NL 给予 !burny! 层 hexamod:灼魂 。 NL 给予 !burny! 层 hexamod:灼魂 。"
+    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 如果敌人已有 hexamod:灼魂 ，再给予一次。"
   },
   "hexamod:Incineration": {
     "NAME": "焚化",
-    "DESCRIPTION": "造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 !M! 次。"
+    "DESCRIPTION": "造成 !D! 点伤害并给 NL 予 !burny! 层 hexamod:灼魂 !M! 次。"
   },
   "hexamod:Firestarter": {
     "NAME": "纵火",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点 NL 伤害并给予 !burny! 层 hexamod:灼魂 。"
   },
   "hexamod:SearingWound": {
     "NAME": "灼热伤口",
@@ -253,7 +253,7 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "焰烬雨",
-    "DESCRIPTION": "造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 X 次。次数不少于3时，给予 2 层 虚弱 。",
+    "DESCRIPTION": "造成 !D! 点伤害并给 NL 予 !burny! 层 NL hexamod:灼魂 X 次。次数不少于3时，给予 2 层 虚弱 。",
     "UPGRADE_DESCRIPTION": "对随机敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 X 次。次数不少于3时，给予所有敌人2层 虚弱 和 易伤 。"
   },
   "hexamod:VolcanoVisage": {
@@ -274,7 +274,7 @@
   },
   "hexamod:SpectralSpark": {
     "NAME": "幽灵火花",
-    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 如果 hexamod:激活 的鬼火已 hexamod:点燃 : hexamod:熄灭 并将这张牌返回你的手牌。"
+    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 如果 hexamod:激活 的鬼火已 hexamod:点燃 ， hexamod:熄灭 它并将本牌返回手牌。"
   },
   "hexamod:GhostflameInferno": {
     "NAME": "此即地狱",
@@ -376,7 +376,7 @@
   },
   "hexamod:Premonition": {
     "NAME": "预兆",
-    "DESCRIPTION": "选择一张手牌打出并 消耗 。 NL 消耗 。",
+    "DESCRIPTION": "选择一张手牌打出并 消耗 它。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "选择打出并消耗"
     ]
