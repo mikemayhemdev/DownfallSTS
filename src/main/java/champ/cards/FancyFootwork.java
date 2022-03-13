@@ -16,22 +16,14 @@ public class FancyFootwork extends AbstractChampCard {
 
     // intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 1;
+    private static final int MAGIC = 2;
+    private static final int UPG_MAGIC = 2;
 
     public FancyFootwork() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        exhaust = true;
         postInit();
-    }
-
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)) {
-            return super.canUse(p, m);
-        }
-        cantUseMessage = EXTENDED_DESCRIPTION[0];
-        return false;
     }
 
 
@@ -41,6 +33,12 @@ public class FancyFootwork extends AbstractChampCard {
             berserkOpen();
         } else if (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
             defenseOpen();
+        } else if (!inBerserker() && !inDefensive()) {
+            if (AbstractDungeon.cardRandomRng.randomBoolean()){
+                berserkOpen();
+            } else {
+                defenseOpen();
+            }
         }
         atb(new DrawCardAction(magicNumber));
         p.useHopAnimation();
@@ -50,7 +48,5 @@ public class FancyFootwork extends AbstractChampCard {
 
     public void upp() {
         upgradeMagicNumber(UPG_MAGIC);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 }

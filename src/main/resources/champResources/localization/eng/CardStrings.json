@@ -9,7 +9,7 @@
   },
   "champ:Taunt": {
     "NAME": "Taunt",
-    "DESCRIPTION": "Apply !M! Weak to ALL enemies."
+    "DESCRIPTION": "Apply !M! Weak and 1 Vulnerable."
   },
   "champ:Execute": {
     "NAME": "Execute",
@@ -70,10 +70,8 @@
   },
   "champ:Backstep": {
     "NAME": "Backstep",
-    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain [E] .",
-    "EXTENDED_DESCRIPTION": [
-      " NL (Grants !B! Block.)"
-    ]
+    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain [E] and draw a card.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain [E] and draw !M! cards."
   },
   "champ:Aggression": {
     "NAME": "Aggression",
@@ -423,11 +421,7 @@
   },
   "champ:FancyFootwork": {
     "NAME": "Fancy Footwork",
-    "DESCRIPTION": "Requires *Defensive or *Berserker. NL Enter the Stance you aren't in. NL Draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Requires *Defensive or *Berserker. NL Enter the Stance you aren't in. NL Draw !M! cards.",
-    "EXTENDED_DESCRIPTION": [
-      "I am not in a Stance."
-    ]
+    "DESCRIPTION": "Enter a Stance you aren't in. NL Draw !M! cards."
   },
   "champ:TripleStrike": {
     "NAME": "Triple Strike",

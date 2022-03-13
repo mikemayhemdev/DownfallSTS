@@ -13,7 +13,7 @@ public class GutPunch extends AbstractChampCard {
 
     public GutPunch() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 5;
+        baseDamage = 6;
         baseMagicNumber = magicNumber = 1;
         tags.add(ChampMod.OPENER);
         tags.add(ChampMod.OPENERBERSERKER);

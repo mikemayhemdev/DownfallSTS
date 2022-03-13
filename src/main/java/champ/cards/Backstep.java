@@ -2,6 +2,7 @@ package champ.cards;
 
 import champ.ChampMod;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -17,7 +18,8 @@ public class Backstep extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         tags.add(ChampMod.OPENER);
 
-        baseBlock = 6;
+        baseBlock = 5;
+        baseMagicNumber = magicNumber = 1;
         this.tags.add(ChampMod.OPENERDEFENSIVE);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
@@ -29,6 +31,7 @@ public class Backstep extends AbstractChampCard {
         blck();
         if (bcombo()) {
             atb(new GainEnergyAction(1));
+            atb(new DrawCardAction(magicNumber));
         }
 
     }
@@ -41,5 +44,8 @@ public class Backstep extends AbstractChampCard {
 
     public void upp() {
         upgradeBlock(3);
+        upgradeMagicNumber(1);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

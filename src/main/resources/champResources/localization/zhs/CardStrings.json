@@ -8,8 +8,8 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
   "champ:Taunt": {
-    "NAME": "激将",
-    "DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。"
+    "NAME": "Taunt",
+    "DESCRIPTION": "Apply !M! Weak and 1 Vulnerable."
   },
   "champ:Execute": {
     "NAME": "处决",
@@ -69,11 +69,9 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。若有敌人被 虚弱 ，再获得一次。 NL champ:防守 champ:连段 ：给予所有敌人 !M! 层 虚弱 。"
   },
   "champ:Backstep": {
-    "NAME": "后撤",
-    "DESCRIPTION": "进入 champ:防守 。 NL 获得 !B! 点 格挡 。 NL champ:战狂 champ:连段 ：获得 [E] 。",
-    "EXTENDED_DESCRIPTION": [
-      " NL （获得 !B! 点 格挡 。）"
-    ]
+    "NAME": "Backstep",
+    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain [E] and draw a card.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain [E] and draw !M! cards."
   },
   "champ:Aggression": {
     "NAME": "侵略",
@@ -422,12 +420,8 @@
     ]
   },
   "champ:FancyFootwork": {
-    "NAME": "花哨步法",
-    "DESCRIPTION": "处于 姿态 时才能被打出。 NL 进入另一种 姿态 。 NL 抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "处于 姿态 时才能被打出。 NL 进入另一种 姿态 。 NL 抽 !M! 张牌。",
-    "EXTENDED_DESCRIPTION": [
-      "我不处于姿态"
-    ]
+    "NAME": "Fancy Footwork",
+    "DESCRIPTION": "Enter a Stance you aren't in. NL Draw !M! cards."
   },
   "champ:TripleStrike": {
     "NAME": "三重打击",
