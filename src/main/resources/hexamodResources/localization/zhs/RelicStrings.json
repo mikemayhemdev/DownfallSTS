@@ -39,14 +39,14 @@
     "NAME": "回收器",
     "FLAVOR": "总有一天它也会被回收掉。",
     "DESCRIPTIONS": [
-      "每场战斗第一张非状态费诅咒牌 #y消耗 时，将一张直到打出前耗能为0的复制品加入手牌。"
+      "每场战斗第一张非 #y状态牌 或 #y诅咒 牌 #y消耗 时，将一张下次耗能为 #b0 的复制品加入手牌。"
     ]
   },
   "hexamod:MatchstickCase": {
     "NAME": "火爆火柴",
     "FLAVOR": "划在哪儿都能着！",
     "DESCRIPTIONS": [
-      "每场战斗的第一回合， #yhexamod:点燃 #yhexamod:激活 的鬼火并 #yhexamod:步进 。"
+      "每场战斗开始时， #yhexamod:点燃 #yhexamod:激活 的 #y鬼火 并 #yhexamod:步进 。"
     ]
   },
   "hexamod:InflammatoryLetter": {
@@ -60,14 +60,14 @@
     "NAME": "混沌灵魂",
     "FLAVOR": "混乱，现出真身。",
     "DESCRIPTIONS": [
-      "第二个灼热鬼火变为狂徒鬼火。 NL 狂徒鬼火在回合结束时如果 #y激活 则 #y点燃 。 NL 点燃：打出抽牌堆顶部的牌。"
+      "第二个 #yhexamod:灼热 #y鬼火 变为 #yhexamod:狂徒 #y鬼火。 NL 狂徒鬼火在回合结束时如果 #y激活 则 #y点燃 。 NL 点燃：打出抽牌堆顶部的牌。"
     ]
   },
   "hexamod:JarOfFuel": {
     "NAME": "谜之盾",
     "FLAVOR": "按需防护。",
     "DESCRIPTIONS": [
-      "将高热鬼火与第一个灼热鬼火交换。"
+      "将 #yhexamod:高热 #y鬼火 与第一个 #yhexamod:灼热 #y鬼火 交换位置。"
     ]
   },
   "hexamod:BolsterEngine": {
@@ -81,7 +81,7 @@
     "NAME": "红蜡烛",
     "FLAVOR": "烈焰炙烤...",
     "DESCRIPTIONS": [
-      "每当你造成未被格挡的 #y攻击 伤害，给予 #b2 层 #yhexamod:灼魂 。"
+      "每当你造成未被格挡的 #y攻击 伤害时，给予 #b2 层 #yhexamod:灼魂 。"
     ]
   },
   "hexamod:Sixitude": {

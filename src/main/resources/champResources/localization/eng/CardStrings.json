@@ -104,7 +104,7 @@
   },
   "champ:RageSigil": {
     "NAME": "Battle Plan",
-    "DESCRIPTION": "Gain !B! Block. NL Scry !M!.",
+    "DESCRIPTION": "Gain !B! Block. NL Scry !M! .",
     "UPGRADE_DESCRIPTION": "Draw a card. NL Gain !B! Block."
   },
   "champ:GutPunch": {
