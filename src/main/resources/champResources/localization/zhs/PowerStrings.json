@@ -78,12 +78,12 @@
   "champ:DancingMasterPower": {
     "NAME": "战技大师",
     "DESCRIPTIONS": [
-      "每回合第三次进入同一姿态时，获得 #b",
+      "每回合第一次进入 #y姿态 时，获得 #b",
       " [E] 并抽 #b",
       " 张牌。",
 	  " 次。",
-	  "本回合已触发。 ",
-	  "还剩"
+	  "本回合已触发。",
+	  "还剩 #b"
     ]
   },
   "champ:StrikeOfGeniusPower": {
