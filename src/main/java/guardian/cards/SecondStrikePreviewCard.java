@@ -23,7 +23,7 @@ public class SecondStrikePreviewCard extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 1;
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 5;
 
     //TUNING CONSTANTS
     private static final int UPGRADE_BONUS = 1;
