@@ -376,7 +376,7 @@
   },
   "champ:DancingMaster": {
     "NAME": "战技大师",
-    "DESCRIPTION": "如果你在一回合内进入了三次相同的姿态，获得 [E] 并抽1张牌。"
+    "DESCRIPTION": "每回合第一次进入 姿态 时，获得 [E] 并抽一张牌。"
   },
   "champ:StrikeOfGenius": {
     "NAME": "打击天才",
