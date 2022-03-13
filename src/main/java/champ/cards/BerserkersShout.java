@@ -6,8 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static champ.ChampMod.fatigue;
-import static champ.ChampMod.vigor;
+import static champ.ChampMod.*;
 
 public class BerserkersShout extends AbstractChampCard {
 
@@ -15,13 +14,13 @@ public class BerserkersShout extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 5;
+    private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 3;
 
     public BerserkersShout() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        tags.add(ChampMod.TECHNIQUE);
+        //tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERBERSERKER);
        // myHpLossCost = magicNumber;
@@ -29,18 +28,18 @@ public class BerserkersShout extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
+       // techique();
         berserkOpen();
-        vigor(magicNumber);
-        if (upgraded) upgradeAction(p,m);
+       // vigor(magicNumber)
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
+        if (upgraded) techique();
     }
 
-    public void upgradeAction(AbstractPlayer p, AbstractMonster m){
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
-    }
+
 
     public void upp() {
-        rawDescription = UPGRADE_DESCRIPTION;
+        tags.add(ChampMod.TECHNIQUE);
+        postInit();
         initializeDescription();
     }
 }

@@ -1,10 +1,7 @@
 package champ;
 
 import basemod.abstracts.CustomPlayer;
-import champ.cards.Defend;
-import champ.cards.Execute;
-import champ.cards.Strike;
-import champ.cards.Taunt;
+import champ.cards.*;
 import champ.relics.ChampionCrown;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
@@ -25,6 +22,7 @@ import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.stances.NeutralStance;
+import com.sun.jndi.ldap.Ber;
 import reskinContent.patches.CharacterSelectScreenPatches;
 
 import java.util.ArrayList;
@@ -209,8 +207,10 @@ public class ChampChar extends CustomPlayer {
         for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
-        retVal.add(Execute.ID);
+        retVal.add(BerserkersShout.ID);
+        retVal.add(DefensiveShout.ID);
         retVal.add(Taunt.ID);
+        retVal.add(Execute.ID);
         return retVal;
     }
 

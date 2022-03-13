@@ -13,31 +13,33 @@ public class DefensiveShout extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 5;
+    private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 4;
 
     public DefensiveShout() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        tags.add(ChampMod.TECHNIQUE);
+        //tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERDEFENSIVE);
+        // myHpLossCost = magicNumber;
         postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
+        // techique();
         defenseOpen();
-        applyToSelf(new CounterPower(magicNumber));
-        if (upgraded) upgradeAction(p,m);
+        // vigor(magicNumber)
+
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
+        if (upgraded) techique();
     }
 
-    public void upgradeAction(AbstractPlayer p, AbstractMonster m){
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
-    }
+
 
     public void upp() {
-        rawDescription = UPGRADE_DESCRIPTION;
+        tags.add(ChampMod.TECHNIQUE);
+        postInit();
         initializeDescription();
     }
 }

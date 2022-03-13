@@ -9,8 +9,7 @@
   },
   "champ:Taunt": {
     "NAME": "Taunt",
-    "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Enter a random Stance.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Choose a Stance to Enter."
+    "DESCRIPTION": "Apply !M! Weak to ALL enemies."
   },
   "champ:Execute": {
     "NAME": "Execute",
@@ -26,18 +25,9 @@
       "Enter champ:Defensive."
     ]
   },
-  "champ:GladiatorsShout": {
-    "NAME": "Gladiator's Shout",
-    "DESCRIPTION": "Enter champ:Gladiator. NL Draw 1 card.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Gladiator. NL Draw 2 cards."
-  },
   "champ:SwordSigil": {
     "NAME": "Sigil of Victory",
     "DESCRIPTION": "Perform !M! times, then Exhaust:"
-  },
-  "champ:FocusedGladiator": {
-    "NAME": "Focus: Gladiator",
-    "DESCRIPTION": "Enter champ:Gladiator. NL Until you exit champ:Gladiator Stance, champ:Techniques draw 1 extra card."
   },
   "champ:FaceSlap": {
     "NAME": "Face Slap",
@@ -60,8 +50,7 @@
   },
   "champ:DefensiveShout": {
     "NAME": "Defensive Shout",
-    "DESCRIPTION": "Enter champ:Defensive. NL Gain !M! champ:Counter.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Defensive. NL Gain !M! champ:Counter. NL Draw a card."
+    "DESCRIPTION": "Enter champ:Defensive. NL Draw a card."
   },
   "champ:ShieldSigil": {
     "NAME": "Chain Lash",
@@ -99,8 +88,7 @@
   },
   "champ:BerserkersShout": {
     "NAME": "Berserker's Shout",
-    "DESCRIPTION": "Enter champ:Berserker. NL Gain !M! Vigor.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Berserker. NL Gain !M! Vigor. NL Draw a card."
+    "DESCRIPTION": "Enter champ:Berserker. NL Draw a card."
   },
   "champ:RageSigil": {
     "NAME": "Battle Plan",
@@ -202,12 +190,7 @@
   },
   "champ:Haymaker": {
     "NAME": "Piledriver",
-    "DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: Apply 2 Vulnerable. NL *Defensive champ:Combo: Apply 2 Weak.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ",
-    "EXTENDED_DESCRIPTION": [
-      "Berserker champ:Combo: Apply 2 Vulnerable. NL ",
-      "Defensive champ:Combo: Apply 2 Weak."
-    ]
+    "DESCRIPTION": "Deal !D! damage. NL Apply 2 Vulnerable. NL Apply 2 Weak."
   },
   "champ:ViciousMockery": {
     "NAME": "Vicious Mockery",
