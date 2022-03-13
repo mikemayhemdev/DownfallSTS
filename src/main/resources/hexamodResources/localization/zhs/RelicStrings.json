@@ -1,94 +1,104 @@
-{
-  "hexamod:SpiritBrand": {
-    "NAME": "精神烙印",
-    "FLAVOR": "对约束的一道保护。",
-    "DESCRIPTIONS": [
-      "每回合第一次 #y点燃 时，获得 #b5 点 #y格挡 。"
-    ]
+[
+  {
+    "PROPER_NAME": "激活",
+    "NAMES": [
+      "激活",
+      "active"
+    ],
+    "DESCRIPTION": "#y激活 的鬼火能在达到 #y点燃 条件时被 #y点燃 。"
   },
-  "hexamod:TheBrokenSeal": {
-    "NAME": "破损容器",
-    "FLAVOR": "未阻，无限，不灭的力量。",
-    "DESCRIPTIONS": [
-      "拾起时，获得 #b10 点最大生命并回复所有生命。每场战斗开始时获得 #b2 点 #y力量 、 #y敏捷 和 #yhexamod:热烈 。不能再获得 #y破损容器 。"
-    ]
+  {
+    "PROPER_NAME": "步进",
+    "NAMES": [
+      "步进"
+    ],
+    "DESCRIPTION": "#y激活 下一个鬼火。如果已被点燃则 #y熄灭 它。"
   },
-  "hexamod:UnbrokenSoul": {
-    "NAME": "以太印记",
-    "FLAVOR": "看看我们能不能做得... 更好。",
-    "DESCRIPTIONS": [
-      "替换 #r",
-      ".[]  NL 每回合第一次 #y点燃 时，获得 [E] 。"
-    ]
+  {
+    "PROPER_NAME": "回退",
+    "NAMES": [
+      "回退"
+    ],
+    "DESCRIPTION": "#y激活 上一个鬼火。如果已被点燃则 #y熄灭 它。"
   },
-  "hexamod:IceCube": {
-    "NAME": "幽灵雪花",
-    "FLAVOR": "我感觉……好冷。",
-    "DESCRIPTIONS": [
-      "每回合获得 [E] 。 #yhexamod:灼魂 需要 #r4 回合才能生效。"
-    ]
+  {
+    "PROPER_NAME": "热烈",
+    "NAMES": [
+      "热烈"
+    ],
+    "DESCRIPTION": "提高鬼火点燃效果提供的伤害、 #y灼魂 以及 #y格挡 。"
   },
-  "hexamod:SoulConsumer": {
-    "NAME": "保暖石",
-    "FLAVOR": "一点火苗就能激活这东西了！",
-    "DESCRIPTIONS": [
-      "如果本场战斗引爆过 #yhexamod:灼魂 ，战斗结束时回复 #b4 点生命。"
-    ]
+  {
+    "PROPER_NAME": "灼魂",
+    "NAMES": [
+      "灼魂",
+      "soulburn"
+    ],
+    "DESCRIPTION": "给予未带有灼魂的敌人灼魂时，它身上的灼魂累计至你的下下个回合结束前。之后灼魂将引爆，使敌人失去相应层数的生命并移除所有灼魂。"
   },
-  "hexamod:RecyclingMachine": {
-    "NAME": "回收器",
-    "FLAVOR": "总有一天它也会被回收掉。",
-    "DESCRIPTIONS": [
-      "每场战斗第一张非状态费诅咒牌 #y消耗 时，将一张直到打出前耗能为0的复制品加入手牌。"
-    ]
+  {
+    "PROPER_NAME": "熄灭",
+    "NAMES": [
+      "熄灭"
+    ],
+    "DESCRIPTION": "重置 #y点燃 条件，使得鬼火能被重新 #y点燃 。"
   },
-  "hexamod:MatchstickCase": {
-    "NAME": "火爆火柴",
-    "FLAVOR": "划在哪儿都能着！",
-    "DESCRIPTIONS": [
-      "每场战斗的第一回合， #yhexamod:点燃 #yhexamod:激活 的鬼火并 #yhexamod:步进 。"
-    ]
+  {
+    "PROPER_NAME": "点燃",
+    "NAMES": [
+      "点燃",
+      "force-ignite",
+      "ignite"
+    ],
+    "DESCRIPTION": "触发鬼火上的点燃效果。"
   },
-  "hexamod:InflammatoryLetter": {
-    "NAME": "火种",
-    "FLAVOR": "火使一切更美好。",
-    "DESCRIPTIONS": [
-      "每场战斗开始时获得 #b1 点 #yhexamod:热烈 。"
-    ]
+  {
+    "PROPER_NAME": "强制点燃",
+    "NAMES": [
+      "强制点燃"
+    ],
+    "DESCRIPTION": "触发一个鬼火的点燃效果，即使已经点燃。"
   },
-  "hexamod:SoulOfChaos": {
-    "NAME": "混沌灵魂",
-    "FLAVOR": "混乱，现出真身。",
-    "DESCRIPTIONS": [
-      "第二个灼热鬼火变为狂徒鬼火。 NL 狂徒鬼火在回合结束时如果 #y激活 则 #y点燃 。 NL 点燃：打出抽牌堆顶部的牌。"
-    ]
+  {
+    "PROPER_NAME": "容器",
+    "NAMES": [
+      "容器"
+    ],
+    "DESCRIPTION": "如果本场战斗所有的 #b6 种容器都被打出，获得 #p破损容器 并将打出的容器移出牌组。"
   },
-  "hexamod:JarOfFuel": {
-    "NAME": "谜之盾",
-    "FLAVOR": "按需防护。",
-    "DESCRIPTIONS": [
-      "将高热鬼火与第一个灼热鬼火交换。"
-    ]
+  {
+    "PROPER_NAME": "阴世",
+    "NAMES": [
+      "阴世"
+    ],
+    "DESCRIPTION": "被 #y消耗 时触发效果。"
   },
-  "hexamod:BolsterEngine": {
-    "NAME": "高热之杖",
-    "FLAVOR": "火焰护身！火焰助力。",
-    "DESCRIPTIONS": [
-      "每场战斗第一次打出 #y能力 牌时，获得 #b6 点 #y格挡 和 #b1 点 #y力量 。"
-    ]
+    {
+    "PROPER_NAME": "碾压",
+    "NAMES": [
+      "碾压"
+    ],
+    "DESCRIPTION": "#y鬼火 。 #y激活 时 打出 #b2 张 #y技能牌 #g点燃 。 #y点燃 ：对随机一名敌人造成 #b4 点伤害两次。"
   },
-  "hexamod:CandleOfCauterizing": {
-    "NAME": "红蜡烛",
-    "FLAVOR": "烈焰炙烤...",
-    "DESCRIPTIONS": [
-      "每当你造成未被格挡的 #y攻击 伤害，给予 #b2 层 #yhexamod:灼魂 。"
-    ]
+  {
+    "PROPER_NAME": "高热",
+    "NAMES": [
+      "高热"
+    ],
+    "DESCRIPTION": "#y鬼火 。 #y激活 时 打出 #b1 张 #y能力牌 #g点燃 。 #y点燃 ：获得 #b4 点 #y格挡 和 #b1 点 #y力量 。"
   },
-  "hexamod:Sixitude": {
-    "NAME": "六点烙印",
-    "FLAVOR": "点火，点火，点火，点火，点火，点 火！",
-    "DESCRIPTIONS": [
-      "每当你打出 #b6 张牌时，对随机一名敌人造成 #b6 点伤害。"
-    ]
+  {
+    "PROPER_NAME": "灼热",
+    "NAMES": [
+      "灼热"
+    ],
+    "DESCRIPTION": "#y鬼火 。 NL #y激活 时 打出 #b2 张 #y攻击牌 #y点燃 。 #y点燃 ：给予随机一名敌人 #b4 层 #y灼魂 。"
+  },
+  {
+    "PROPER_NAME": "狱焱",
+    "NAMES": [
+      "狱焱"
+    ],
+    "DESCRIPTION": "#y鬼火 。 NL #y激活 时 消耗 #b3 点 能量 #y点燃 。 #y点燃 ：每有一个其他被点燃的 #y鬼火，对随机一名敌人造成 #b4 点伤害。"
   }
-}
+]
