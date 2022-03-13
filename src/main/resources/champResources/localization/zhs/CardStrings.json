@@ -9,8 +9,7 @@
   },
   "champ:Taunt": {
     "NAME": "激将",
-    "DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL 不处于 姿态 时，随机进入一种 姿态 ，否则进入另一种。",
-    "UPGRADE_DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL 选择进入一种 姿态 。"
+    "DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。"
   },
   "champ:Execute": {
     "NAME": "处决",
@@ -26,18 +25,9 @@
       " 进入 champ:防守 。"
     ]
   },
-  "champ:GladiatorsShout": {
-    "NAME": "角斗怒吼",
-    "DESCRIPTION": "进入 champ:角斗 。 NL 抽 1 张牌。",
-    "UPGRADE_DESCRIPTION": "进入 champ:角斗 。 NL 抽 2 张牌。"
-  },
   "champ:SwordSigil": {
     "NAME": "剑纹",
     "DESCRIPTION": " 消耗 。 NL 重复 !M! 次："
-  },
-  "champ:FocusedGladiator": {
-    "NAME": "角斗士",
-    "DESCRIPTION": "进入 champ:角斗 。 NL 直到你退出 champ:角斗 前， champ:连段 将额外抽一张牌。"
   },
   "champ:FaceSlap": {
     "NAME": "打脸",
@@ -60,8 +50,7 @@
   },
   "champ:DefensiveShout": {
     "NAME": "防卫嘲讽",
-    "DESCRIPTION": "进入 champ:防守 。 NL 获得 !M! 层 champ:反击 。",
-    "UPGRADE_DESCRIPTION": "进入 champ:防守 。 NL 获得 !M! 层 champ:反击 。 NL 抽一张牌。"
+    "DESCRIPTION": "进入 champ:防守 。 NL 抽一张牌。"
   },
   "champ:ShieldSigil": {
     "NAME": "防守印记",
@@ -99,8 +88,7 @@
   },
   "champ:BerserkersShout": {
     "NAME": "怒吼",
-    "DESCRIPTION": "进入 champ:战狂 。 NL 获得 !M! 层 活力 。",
-    "UPGRADE_DESCRIPTION": "进入 champ:战狂 。 NL 获得 !M! 层 活力 。 NL 抽一张牌。"
+    "DESCRIPTION": "进入 champ:战狂 。 NL 抽一张牌。"
   },
   "champ:RageSigil": {
     "NAME": "战斗计划",
@@ -202,12 +190,7 @@
   },
   "champ:Haymaker": {
     "NAME": "螺旋打桩",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:战狂 champ:连段 ：给予2层 易伤 。 NL champ:防守 champ:连段 ：给予 2 层 虚弱 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL ",
-    "EXTENDED_DESCRIPTION": [
-      " champ:战狂 champ:连段 ：给予2层 易伤 。 NL ",
-      " champ:防守 champ:连段 ：给予2层 虚弱 。"
-    ]
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 2 层 易伤 。 NL 2 层 虚弱 。"
   },
   "champ:ViciousMockery": {
     "NAME": "毒舌",
