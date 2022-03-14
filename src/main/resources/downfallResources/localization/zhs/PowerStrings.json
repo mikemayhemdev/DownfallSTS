@@ -308,5 +308,15 @@
     "DESCRIPTIONS": [
       "每回合开始时，将一张 带有 #y虚无 的 #r末日将临 加入你的手牌。"
     ]
+  },
+  "downfall:NextTurnPowerPower": {
+    "NAME": "Next Turn ",
+    "DESCRIPTIONS": [
+      "BUG! You should not see this",
+      "Next turn, gain #b",
+      " ",
+      ".",
+      "LOCALIZATION NOTE: Please keep the space after 'Next Turn' in the NAME field."
+    ]
   }
 }
