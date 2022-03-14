@@ -165,10 +165,8 @@
     "champ:GladiatorFormPower": {
     "NAME": "角斗形态",
     "DESCRIPTIONS": [
-      "每当你获得 #y战术奖励 时，抽 #b",
-      " 张牌。每当你获得 #y终结技奖励 时，下回合获得 [E] 。",
-      " 张牌。每当你获得 #y终结技奖励 时，下回合获得 #b",
-      " [E] 。"
+      "回合开始时，上回合每使用过 #b3 点 #y活力 或 #y反击 ，对应地获得 #b",
+      " #y活力 或 #y反击 。"
     ]
   },
   "champ:NoBlockNextTurnPower": {
