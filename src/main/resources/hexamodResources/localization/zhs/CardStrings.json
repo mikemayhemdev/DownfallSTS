@@ -389,9 +389,5 @@
     "NAME": "深处打击",
     "DESCRIPTION": "造成 !D! 点伤害两次。 NL 随机 expansioncontent:取回 一张 hexamod:阴世 牌。",
     "EXTENDED_DESCRIPTION": [" 虚无 "," 虚无 。 NL "]
-  },
-  "hexamod:GraveExchange": {
-    "NAME": "墓地更易",
-    "DESCRIPTION": "将弃牌堆中的一张牌 消耗 。 NL expansioncontent:取回 随机一张 hexamod:阴世 牌。"
   }
 }
