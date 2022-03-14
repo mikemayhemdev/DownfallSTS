@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class PurificationShrineEvil extends com.megacrit.cardcrawl.events.AbstractImageEvent {
     public static final String ID = downfallMod.makeID("Purifier");
@@ -51,6 +52,9 @@ public class PurificationShrineEvil extends com.megacrit.cardcrawl.events.Abstra
     public void update() {
         super.update();
         if ((!AbstractDungeon.isScreenUp) && (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty())) {
+            ArrayList<String> cards = new ArrayList<>();
+            cards.add(AbstractDungeon.gridSelectScreen.selectedCards.get(0).cardID);
+
             CardCrawlGame.sound.play("CARD_EXHAUST");
             AbstractDungeon.topLevelEffects.add(new com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect(
 
@@ -65,16 +69,23 @@ public class PurificationShrineEvil extends com.megacrit.cardcrawl.events.Abstra
 
 
                 AbstractDungeon.player.masterDeck.removeCard((AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(1));
+                cards.add(AbstractDungeon.gridSelectScreen.selectedCards.get(1).cardID);
 
-            } if (AbstractDungeon.gridSelectScreen.selectedCards.size() > 2){
+            } else {
+                logMetricCardRemoval(ID, "Purged", (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0));
+            }
+
+            if (AbstractDungeon.gridSelectScreen.selectedCards.size() > 2){
                 AbstractDungeon.topLevelEffects.add(new com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect(
 
                         (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(2), com.megacrit.cardcrawl.core.Settings.WIDTH * 0.75F, com.megacrit.cardcrawl.core.Settings.HEIGHT / 2));
 
-                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(CardLibrary.getCurse().makeStatEquivalentCopy(), (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT * .75F)));// 66
-
+                AbstractCard curse = CardLibrary.getCurse().makeStatEquivalentCopy();
+                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT * .75F)));// 66
                 AbstractDungeon.player.masterDeck.removeCard((AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(2));
+                cards.add(AbstractDungeon.gridSelectScreen.selectedCards.get(2).cardID);
 
+                logMetric(ID, "Desecrated", Collections.singletonList(curse.cardID), cards, null, null, null, null, null, 0, 0, 0, 0, 0, 0);
             }
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
 
@@ -112,6 +123,7 @@ public class PurificationShrineEvil extends com.megacrit.cardcrawl.events.Abstra
                         this.imageEventText.updateBodyText(IGNORE);
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
                         this.imageEventText.clearRemainingOptions();
+                        logMetricIgnored(ID);
                 }
 
                 break;
