@@ -17,17 +17,16 @@ import expansioncontent.powers.DeEnergizedPower;
 import hermit.cards.ImpendingDoom;
 
 public class Eclipse extends AbstractBossMechanicPower {
-    public static final String POWER_ID = downfallMod.makeID("NeowDistracting");
+    public static final String POWER_ID = downfallMod.makeID("NeowEclipse");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     private static final Texture tex84 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowDefect284.png"));
     private static final Texture tex32 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowDefect232.png"));
 
-    public Eclipse(final AbstractCreature owner, final int amount) {
+    public Eclipse(final AbstractCreature owner) {
         this.ID = POWER_ID;
         this.owner = owner;
-        this.amount = amount;
         this.type = PowerType.BUFF;
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);

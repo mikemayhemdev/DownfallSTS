@@ -83,7 +83,7 @@ public class NeowGainMinionPowersAction extends AbstractGameAction {
                             break;
                         }
                         case "downfall:Hermit":{
-                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new WheelOfDeath(owner, 1)));
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new WheelOfDeath(owner, 13)));
                             break;
                         }
                     }
@@ -113,7 +113,7 @@ public class NeowGainMinionPowersAction extends AbstractGameAction {
                             break;
                         }
                         case "downfall:Hermit":{
-                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new Eclipse(owner, 1)));
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new Eclipse(owner)));
                             break;
                         }
                     }
