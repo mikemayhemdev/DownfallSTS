@@ -14,14 +14,15 @@ public class GladiatorForm extends AbstractChampCard {
     public GladiatorForm() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         tags.add(BaseModCardTags.FORM);
+        baseMagicNumber = magicNumber = 1;
         postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new GladiatorFormPower(1));
+        applyToSelf(new GladiatorFormPower(magicNumber));
     }
 
     public void upp() {
-        upgradeBaseCost(2);
+        upgradeMagicNumber(1);
     }
 }
