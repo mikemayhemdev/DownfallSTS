@@ -90,8 +90,7 @@
   },
   "champ:RageSigil": {
     "NAME": "战斗计划",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 预见 !M! 。",
-    "UPGRADE_DESCRIPTION": "抽一张牌。 NL 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 预见 !M! 。"
   },
   "champ:GutPunch": {
     "NAME": "腹拳",

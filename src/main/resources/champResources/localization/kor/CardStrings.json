@@ -104,8 +104,7 @@
   },
   "champ:RageSigil": {
     "NAME": "싸움 계획",
-    "DESCRIPTION": "카드를 1장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "카드를 1장 뽑습니다. NL 방어도를 !B! 얻습니다."
+    "DESCRIPTION": "카드를 1장 뽑습니다."
   },
   "champ:GutPunch": {
     "NAME": "내장 파괴",
