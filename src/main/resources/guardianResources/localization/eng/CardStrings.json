@@ -109,7 +109,7 @@
   },
   "Guardian:WalkerClaw": {
     "NAME": "Walker Claw",
-    "DESCRIPTION": "Deal !D! damage. NL Strength affects this card !M! times."
+    "DESCRIPTION": "Deal !D! damage !M! times."
   },
   "Guardian:SphericShield": {
     "NAME": "Spheric Shield",
@@ -288,7 +288,7 @@
   },
   "Guardian:BaubleBeam": {
     "NAME": "Bauble Burst",
-    "DESCRIPTION": "Deal !D! damage. NL NL Perform !M! times:"
+    "DESCRIPTION": "Deal !D! damage. NL Perform !M! times:"
   },
   "Guardian:PrimingBeam": {
     "NAME": "Priming Shot",
