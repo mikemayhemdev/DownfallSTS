@@ -1,13 +1,11 @@
 package charbosses.relics;
 
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.powers.general.EnemyVigorPower;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.utility.ReApplyPowersAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import hermit.relics.CharredGlove;
 
@@ -40,8 +38,7 @@ public class CBR_CharredGlove extends AbstractCharbossRelic {
                 for (AbstractCard q : AbstractCharBoss.boss.hand.group) {
                     if (q.type == AbstractCard.CardType.CURSE || q.color == AbstractCard.CardColor.CURSE) {
                         flash();
-                        addToTop(new ApplyPowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, new LoseStrengthPower(AbstractCharBoss.boss, 4), 4));
-                        addToTop(new ApplyPowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, new StrengthPower(AbstractCharBoss.boss, 4), 4));
+                        addToTop(new ApplyPowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, new EnemyVigorPower(AbstractCharBoss.boss, 4)));
                     }
                 }
             }

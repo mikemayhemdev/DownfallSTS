@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import hermit.cards.Defend_Hermit;
+import hermit.cards.ItchyTrigger;
 import hermit.cards.Strike_Hermit;
 
 import java.util.ArrayList;
@@ -67,6 +68,7 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         } else {
             mockDeck.add(new EnGestalt());
         }
+        mockDeck.add(new EnItchyTrigger());
         mockDeck.add(new EnHandOfGreed());
         AbstractCard virt = new EnVirtue();
         virt.upgrade();

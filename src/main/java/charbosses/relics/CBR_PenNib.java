@@ -26,7 +26,7 @@ public class CBR_PenNib extends AbstractCharbossRelic {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.ATTACK) {
+        if (card.type == AbstractCard.CardType.ATTACK && card instanceof AbstractBossCard) {
             ++this.counter;
             if (this.counter == 10) {
                 this.counter = 0;
