@@ -38,7 +38,11 @@ public class BossCardReward extends CustomReward {
         while (cardsList.size() < numCards) {
             AbstractCard q = getBossCard();
             if (!cardListDuplicate(cardsList, q) && q.rarity != AbstractCard.CardRarity.SPECIAL) {
-                cardsList.add(q.makeCopy());
+                q = q.makeCopy();
+                for (AbstractRelic r : AbstractDungeon.player.relics) {
+                    r.onPreviewObtainCard(q);
+                }
+                cardsList.add(q);
             }
         }
         return cardsList;

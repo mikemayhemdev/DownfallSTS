@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.RewardGlowEffect;
@@ -51,26 +52,14 @@ public class RareCardReward extends RewardItem {
             while (cardListDuplicate(cardToAdd)) {
                 cardToAdd = AbstractDungeon.getCard(AbstractCard.CardRarity.RARE).makeCopy();
             }
+            for (AbstractRelic r : AbstractDungeon.player.relics) {
+                r.onPreviewObtainCard(cardToAdd);
+            }
             this.cards.add(cardToAdd);
         }
 
         this.text = TEXT[0];
-        Iterator var2 = this.cards.iterator();
 
-        while (true) {
-            while (var2.hasNext()) {
-                AbstractCard c = (AbstractCard) var2.next();
-                if (c.type == AbstractCard.CardType.ATTACK && AbstractDungeon.player.hasRelic("Molten Egg 2")) {
-                    c.upgrade();
-                } else if (c.type == AbstractCard.CardType.SKILL && AbstractDungeon.player.hasRelic("Toxic Egg 2")) {
-                    c.upgrade();
-                } else if (c.type == AbstractCard.CardType.POWER && AbstractDungeon.player.hasRelic("Frozen Egg 2")) {
-                    c.upgrade();
-                }
-            }
-
-            return;
-        }
     }
 
     public static AbstractCard getRandomSeal() {
