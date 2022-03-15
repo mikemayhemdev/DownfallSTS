@@ -308,5 +308,15 @@
     "DESCRIPTIONS": [
       "At the start of your turn, add an #yEthereal #rImpending #rDoom into your hand."
     ]
+  },
+  "downfall:NextTurnPowerPower": {
+    "NAME": "Next Turn ",
+    "DESCRIPTIONS": [
+      "BUG! You should not see this",
+      "Next turn, gain #b",
+      " ",
+      ".",
+      "LOCALIZATION NOTE: Please keep the space after 'Next Turn' in the NAME field."
+    ]
   }
 }

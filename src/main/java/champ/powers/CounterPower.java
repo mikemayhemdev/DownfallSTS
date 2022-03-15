@@ -67,6 +67,9 @@ public class CounterPower extends AbstractPower implements CloneablePowerInterfa
                 }
             }
             this.addToTop(new DamageAction(info.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, true));
+            if (owner.hasPower(GladiatorFormPower.POWER_ID)) {
+                owner.getPower(GladiatorFormPower.POWER_ID).onSpecificTrigger();
+            }
         }
 
         return damageAmount;
