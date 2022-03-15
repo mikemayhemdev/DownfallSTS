@@ -121,11 +121,11 @@
   },
   "hexamod:GhostLash": {
     "NAME": "Ghost Lash",
-    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Deal !D! damage. NL When Exhausted, deal !D! damage."
+    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Deal !D! damage. NL When Exhausted, NL deal !D! damage."
   },
   "hexamod:GhostShield": {
     "NAME": "Ghost Shield",
-    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Gain !B! Block. NL When Exhausted, gain !M! bronze:Blur."
+    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Gain !B! Block. NL When Exhausted, NL gain !M! bronze:Blur."
   },
   "hexamod:Haunt": {
     "NAME": "Haunted Hand",
@@ -387,9 +387,5 @@
     "NAME": "Strike From Beyond",
     "DESCRIPTION": "Deal !D! damage twice. NL expansioncontent:Reclaim a random hexamod:Afterlife card.",
     "EXTENDED_DESCRIPTION": ["Ethereal","Ethereal. NL "]
-  },
-  "hexamod:GraveExchange": {
-    "NAME": "Grave Exchange",
-    "DESCRIPTION": "Exhaust a card from your discard pile. NL expansioncontent:Reclaim a random hexamod:Afterlife card."
   }
 }

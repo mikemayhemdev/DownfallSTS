@@ -23,8 +23,6 @@ public class UltimateStance extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
-        tags.add(ChampMod.TECHNIQUE);
-        postInit();
     }
 
     @Override

@@ -22,6 +22,9 @@ public class WheelOfDeath extends AbstractBossMechanicPower {
     private static final Texture tex84 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowDefect284.png"));
     private static final Texture tex32 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowDefect232.png"));
 
+    private final int STRENGTHGAIN = 2;
+    private final int EVERYXCARDS = 13;
+
     public WheelOfDeath(final AbstractCreature owner, final int amount) {
         this.ID = POWER_ID;
         this.owner = owner;
@@ -43,14 +46,15 @@ public class WheelOfDeath extends AbstractBossMechanicPower {
         flash();
         addToBot(new ReducePowerAction(owner, owner, this, 1));
         if (amount == 1) {
-            addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, 2), 2));
-            addToBot(new ApplyPowerAction(owner, owner, new WheelOfDeath(owner, 13)));
+            addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, STRENGTHGAIN), STRENGTHGAIN));
+            addToBot(new ApplyPowerAction(owner, owner, new WheelOfDeath(owner, EVERYXCARDS)));
         }
+        updateDescription();
     }
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + EVERYXCARDS + DESCRIPTIONS[1] + STRENGTHGAIN + DESCRIPTIONS[2];
     }
 
 }

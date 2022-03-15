@@ -286,7 +286,7 @@
   "downfall:HermitConcentrateAdder": {
     "NAME": "Deadly Focus",
     "DESCRIPTIONS": [
-        "Hermit has Concentration, which adds special Dead On effects to his cards. Dealing #b10 unblocked attack damage to the Hermit breaks his concentration, causing his cards to lose their Dead On effects."
+      "Hermit has Concentration, which adds special Dead On effects to his cards. Dealing #b10 unblocked attack damage to the Hermit breaks his concentration, causing his cards to lose their Dead On effects."
     ]
   },
   "downfall:HermitConcentrationPower": {
@@ -300,13 +300,33 @@
   "downfall:HermitWheelOfFortune": {
     "NAME": "Wheel of Fortune",
     "DESCRIPTIONS": [
-      "Whenever you strike Hermit with an attack, its leftmost attack is discarded and it draws a card."
+      "Whenever you strike Hermit with an Attack, its leftmost card is discarded and it draws a card."
     ]
   },
   "downfall:HermitDoomsday": {
     "NAME": "Doomsday",
     "DESCRIPTIONS": [
       "At the start of your turn, add an #yEthereal #rImpending #rDoom into your hand."
+    ]
+  },
+  "downfall:NeowEclipse": {
+    "NAME": "Eclipse",
+    "DESCRIPTIONS": [
+      "Neow adds an #yEthereal #yImpending #yDoom to your hand every turn."
+    ]
+  },
+  "downfall:NeowWheelOfDeath": {
+    "NAME": "WheelOfDeath",
+    "DESCRIPTIONS": [
+      "Every #b",
+      "cards you play, Neow gains #b",
+      " #yStrength"
+    ]
+  },
+  "downfall:NeowDistracting": {
+    "NAME": "Distracting",
+    "DESCRIPTIONS": [
+      "First time you deal #yAttack damage to Neow in a turn, gain #b1 less [E] next turn."
     ]
   },
   "downfall:NextTurnPowerPower": {

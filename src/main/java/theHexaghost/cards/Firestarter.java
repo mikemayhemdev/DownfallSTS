@@ -9,9 +9,10 @@ public class Firestarter extends AbstractHexaCard {
     public final static String ID = makeID("Firestarter");
 
     public Firestarter() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = 6;
         baseBurn = burn = 6;
+        isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
