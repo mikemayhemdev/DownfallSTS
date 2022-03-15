@@ -141,5 +141,10 @@
     "TEXT": [
       "Ammo"
     ]
+  },
+  "downfall:MainMenuAd": {
+    "TEXT": [
+      "Click here to learn about the Slay the Spire Modding Workshop!"
+    ]
   }
 }
