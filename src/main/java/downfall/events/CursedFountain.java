@@ -99,11 +99,11 @@ public class CursedFountain extends AbstractImageEvent {
                         //drink
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                         this.imageEventText.updateDialogOption(2, OPTIONS[6], true);
+                        logMetricHeal(ID, "Drink", AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth);
                         AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
                         if (AbstractDungeon.player instanceof GremlinCharacter) {
                             ((GremlinCharacter)AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
                         }
-                        logMetricHeal(ID, "Drink", AbstractDungeon.player.maxHealth);
                         return;
                     case 3:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
