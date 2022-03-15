@@ -286,7 +286,7 @@
   "downfall:HermitConcentrateAdder": {
     "NAME": "抗争",
     "DESCRIPTIONS": [
-        " #y亡命之徒 正在 #y专注 ，使得他的卡牌获得 #y精准 效果。 NL 对其造成 #b10 点未被 #y格挡 的伤害能破除他的 #y专注 状态。"
+      " #y亡命之徒 正在 #y专注 ，使得他的卡牌获得 #y精准 效果。 NL 对其造成 #b10 点未被 #y格挡 的伤害能破除他的 #y专注 状态。"
     ]
   },
   "downfall:HermitConcentrationPower": {
@@ -307,6 +307,36 @@
     "NAME": "末日",
     "DESCRIPTIONS": [
       "每回合开始时，将一张 带有 #y虚无 的 #r末日将临 加入你的手牌。"
+    ]
+  },
+  "downfall:NextTurnPowerPower": {
+    "NAME": "Next Turn ",
+    "DESCRIPTIONS": [
+      "BUG! You should not see this",
+      "Next turn, gain #b",
+      " ",
+      ".",
+      "LOCALIZATION NOTE: Please keep the space after 'Next Turn' in the NAME field."
+    ]
+  },
+  "downfall:NeowEclipse": {
+    "NAME": "月蚀",
+    "DESCRIPTIONS": [
+      "#y涅奥每回合将一张带有 #y虚无 的 #r末日将临 加入你的手牌。"
+    ]
+  },
+  "downfall:NeowWheelOfDeath": {
+    "NAME": "死亡之轮",
+    "DESCRIPTIONS": [
+      "你每打出 #b",
+      " 张牌，#y涅奥 获得 #b",
+      " 点 #y力量 。"
+    ]
+  },
+  "downfall:NeowDistracting": {
+    "NAME": "侵扰",
+    "DESCRIPTIONS": [
+      "对 #y涅奥 造成攻击伤害后，下回合少获得 [E] 。"
     ]
   }
 }

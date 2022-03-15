@@ -431,11 +431,11 @@
     "UPGRADE_DESCRIPTION": " NL （造成 !D! 点伤害）"
   },
   "Guardian:SecondStrike": {
-    "NAME": "第二打击",
+    "NAME": "再打击",
     "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗 。"
   },
   "Guardian:SecondStrikePreviewCard": {
-    "NAME": "第二打击",
-    "DESCRIPTION": "复制 *双斩 的宝石。 NL 虚无 。 NL 造成 !D! 点伤害。 NL 消耗 。"
+    "NAME": "再打击",
+    "DESCRIPTION": "复制 *双斩 里的宝石效果。 NL 虚无 。 NL 造成 !D! 点伤害。 NL 消耗 。"
   }
 }
