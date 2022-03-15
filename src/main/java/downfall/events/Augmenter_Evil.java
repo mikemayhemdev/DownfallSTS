@@ -65,7 +65,7 @@ public class Augmenter_Evil extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         AbstractCard jax = new JAX();
-                        logMetricObtainCard("Drug Dealer", "Obtain J.A.X.", jax);
+                        logMetricObtainCard(ID, "Obtain J.A.X.", jax);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(jax, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);
@@ -88,12 +88,13 @@ public class Augmenter_Evil extends AbstractImageEvent {
                             AbstractDungeon.getCurrRoom().spawnRelicAndObtain(this.drawX, this.drawY, (AbstractRelic) r);
                         }
 
-                        logMetricObtainRelic("Drug Dealer", "Inject Mutagens", (AbstractRelic) r);
+                        logMetricObtainRelic(ID, "Inject Mutagens", (AbstractRelic) r);
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                         this.imageEventText.clearRemainingOptions();
                         break;
                     case 3:
                         //SlimeboundMod.logger.info("fight");
+                        logMetric(ID, "Fight");
 
                         AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("downfall:Augmenter");
                         AbstractDungeon.getCurrRoom().rewards.clear();
@@ -145,7 +146,7 @@ public class Augmenter_Evil extends AbstractImageEvent {
                 }
 
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
-                logMetricTransformCards("Drug Dealer", "Became Test Subject", transformedCards, obtainedCards);
+                logMetricTransformCards(ID, "Became Test Subject", transformedCards, obtainedCards);
                 AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.25F;
             }
         }

@@ -17,6 +17,9 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
 import slimebound.SlimeboundMod;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Beggar_Evil extends AbstractImageEvent {
     public static final String ID = downfallMod.makeID("Beggar");
     public static final String NAME;
@@ -67,15 +70,20 @@ public class Beggar_Evil extends AbstractImageEvent {
                 AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                 AbstractDungeon.player.masterDeck.removeCard(c);
                 AbstractDungeon.gridSelectScreen.selectedCards.remove(c);
+                logMetricRemoveCards(ID, "Intimidate", Collections.singletonList(c.cardID));
             } else {
+                ArrayList<String> cards = new ArrayList<>();
                 AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
                 AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, (Settings.WIDTH * 0.3F), (float) (Settings.HEIGHT / 2)));
                 AbstractDungeon.player.masterDeck.removeCard(c);
                 AbstractDungeon.gridSelectScreen.selectedCards.remove(c);
+                cards.add(c.cardID);
                 c = AbstractDungeon.gridSelectScreen.selectedCards.get(1);
                 AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, (Settings.WIDTH * 0.7F), (float) (Settings.HEIGHT / 2)));
                 AbstractDungeon.player.masterDeck.removeCard(c);
                 AbstractDungeon.gridSelectScreen.selectedCards.remove(c);
+                cards.add(c.cardID);
+                logMetricRemoveCards(ID, "Threaten", cards);
             }
         }
     }
@@ -90,20 +98,20 @@ public class Beggar_Evil extends AbstractImageEvent {
                     this.screen = CurScreen.CLERICFRESHINTRO;
                     this.imageEventText.updateBodyText(DESCRIPTIONSALT[0]);
 
-                    this.imageEventText.setDialogOption(OPTIONSOG[0] + this.gold + OPTIONSOG[4]);
-                    this.imageEventText.setDialogOption(OPTIONSOG[1]);
+                    this.imageEventText.setDialogOption(OPTIONSOG[0] + this.gold + OPTIONSOG[4]); // Punch: gain souls
+                    this.imageEventText.setDialogOption(OPTIONSOG[1]); // Intimidate: remove 1 card
 
                 } else if (Cleric_Evil.heDead) {
                     this.screen = CurScreen.CLERICDEADINTRO;
                     this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
 
-                    this.imageEventText.setDialogOption(OPTIONSOG[0] + this.gold + OPTIONSOG[4] + OPTIONSALT[0], new Pride());
-                    this.imageEventText.setDialogOption(OPTIONS[5]);
+                    this.imageEventText.setDialogOption(OPTIONSOG[0] + this.gold + OPTIONSOG[4] + OPTIONSALT[0], new Pride()); // Punch: gain souls, curse
+                    this.imageEventText.setDialogOption(OPTIONS[5]); // Leave
                 } else {
                     this.imageEventText.loadImage("images/events/cleric.jpg");
                     this.screen = CurScreen.CLERICALIVEINTRO;
-                    this.imageEventText.updateBodyText(DESCRIPTIONSALT[4]);
-                    this.imageEventText.setDialogOption(OPTIONSALT[1]);
+                    this.imageEventText.updateBodyText(DESCRIPTIONSALT[4]); // CLERIC BOUGHT PROTECTION!
+                    this.imageEventText.setDialogOption(OPTIONSALT[1]); // Fight
 
                 }
                 return;
@@ -117,6 +125,7 @@ public class Beggar_Evil extends AbstractImageEvent {
                         CardCrawlGame.sound.play("BLUNT_HEAVY");
                         this.screen = CurScreen.END;
                         this.imageEventText.setDialogOption(OPTIONS[5]);
+                        logMetricGainGold(ID, "Punch", this.gold);
                         break;
                     case 1:
                         this.imageEventText.clearAllDialogs();
@@ -135,16 +144,19 @@ public class Beggar_Evil extends AbstractImageEvent {
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold));
                         AbstractDungeon.player.gainGold(this.gold);
                         CardCrawlGame.sound.play("BLUNT_HEAVY");
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Pride(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+                        Pride curse = new Pride();
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
 
                         this.screen = CurScreen.END;
                         this.imageEventText.setDialogOption(OPTIONS[5]);
+                        logMetricGainGoldAndCard(ID, "Punch", curse, this.gold);
                         break;
                     case 1:
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[3]);
                         this.screen = CurScreen.END;
                         this.imageEventText.setDialogOption(OPTIONS[5]);
+                        logMetricIgnored(ID);
                         break;
                 }
                 return;
@@ -167,11 +179,12 @@ public class Beggar_Evil extends AbstractImageEvent {
                     case 0:
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[6]);
-                        AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold * 3));
+                        AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold * 2));
                         AbstractDungeon.player.gainGold(this.gold * 2);
                         CardCrawlGame.sound.play("BLUNT_HEAVY");
                         this.screen = CurScreen.END;
                         this.imageEventText.setDialogOption(OPTIONS[5]);
+                        logMetricGainGold(ID, "Punch", this.gold * 2);
                         break;
                     case 1:
                         AbstractDungeon.getCurrRoom().rewards.clear();
@@ -199,8 +212,8 @@ public class Beggar_Evil extends AbstractImageEvent {
             AbstractDungeon.player.preBattlePrep();
             this.imageEventText.clearAllDialogs();
             this.imageEventText.updateBodyText(DESCRIPTIONSALT[5]);
-            this.imageEventText.setDialogOption(OPTIONSOG[0] + (this.gold * 3) + OPTIONSOG[4]);
-            this.imageEventText.setDialogOption(OPTIONSALT[2]);
+            this.imageEventText.setDialogOption(OPTIONSOG[0] + (this.gold * 2) + OPTIONSOG[4]); // Punch: gain many souls
+            this.imageEventText.setDialogOption(OPTIONSALT[2]); // Threaten: remove 2 cards
             this.enterImageFromCombat();
         }
 
