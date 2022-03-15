@@ -90,7 +90,7 @@ public class Scavenge extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDefaultSecondMagicNumber(2);
+            upgradeDefaultSecondMagicNumber(5);
             upgradeMagicNumber(1);
 
 

@@ -55,7 +55,7 @@ public class DeadOrAlive extends AbstractDynamicCard {
         baseDamage = 8;
         this.exhaust=true;
         loadJokeCardImage(this, "dead_or_alive.png");
-
+        tags.add(CardTags.HEALING);
     }
 
     // Actions the card should do.
