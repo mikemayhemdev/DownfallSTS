@@ -17,7 +17,7 @@ public class Encircle extends AbstractChampCard {
     private static final int DAMAGE = 7;
 
     public Encircle() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         tags.add(ChampMod.TECHNIQUE);
         isMultiDamage = true;

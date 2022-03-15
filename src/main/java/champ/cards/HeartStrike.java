@@ -9,8 +9,8 @@ public class HeartStrike extends AbstractChampCard {
     public final static String ID = makeID("HeartStrike");
 
     public HeartStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 10;
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 9;
         baseMagicNumber = magicNumber = 50;
         postInit();
     }
@@ -41,6 +41,6 @@ public class HeartStrike extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeDamage(5);
+        upgradeDamage(3);
     }
 }

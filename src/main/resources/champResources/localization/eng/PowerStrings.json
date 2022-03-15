@@ -165,10 +165,8 @@
   "champ:GladiatorFormPower": {
     "NAME": "Gladiator Form",
     "DESCRIPTIONS": [
-      "Whenever you use a #yTechnique #yBonus, draw #b",
-      " card. Whenever you use a #yFinisher #yBonus, gain [E] next turn.",
-      " cards. Whenever you use a #yFinisher #yBonus, gain #b",
-      " [E] next turn."
+      "At the start of your turn, gain #b",
+      " #yVigor for every #b3 spent this turn, then do the same for #yCounter."
     ]
   },
   "champ:NoBlockNextTurnPower": {

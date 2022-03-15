@@ -9,8 +9,7 @@
   },
   "champ:Taunt": {
     "NAME": "Taunt",
-    "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Enter a random Stance.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Choose a Stance to Enter."
+    "DESCRIPTION": "Apply !M! Weak and 1 Vulnerable."
   },
   "champ:Execute": {
     "NAME": "Execute",
@@ -26,18 +25,9 @@
       "Enter champ:Defensive."
     ]
   },
-  "champ:GladiatorsShout": {
-    "NAME": "Gladiator's Shout",
-    "DESCRIPTION": "Enter champ:Gladiator. NL Draw 1 card.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Gladiator. NL Draw 2 cards."
-  },
   "champ:SwordSigil": {
     "NAME": "Sigil of Victory",
     "DESCRIPTION": "Perform !M! times, then Exhaust:"
-  },
-  "champ:FocusedGladiator": {
-    "NAME": "Focus: Gladiator",
-    "DESCRIPTION": "Enter champ:Gladiator. NL Until you exit champ:Gladiator Stance, champ:Techniques draw 1 extra card."
   },
   "champ:FaceSlap": {
     "NAME": "Face Slap",
@@ -60,8 +50,7 @@
   },
   "champ:DefensiveShout": {
     "NAME": "Defensive Shout",
-    "DESCRIPTION": "Enter champ:Defensive. NL Gain !M! champ:Counter.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Defensive. NL Gain !M! champ:Counter. NL Draw a card."
+    "DESCRIPTION": "Enter champ:Defensive. NL Draw a card."
   },
   "champ:ShieldSigil": {
     "NAME": "Chain Lash",
@@ -81,10 +70,8 @@
   },
   "champ:Backstep": {
     "NAME": "Backstep",
-    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain [E] .",
-    "EXTENDED_DESCRIPTION": [
-      " NL (Grants !B! Block.)"
-    ]
+    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain [E] and draw a card.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain [E] and draw !M! cards."
   },
   "champ:Aggression": {
     "NAME": "Aggression",
@@ -99,8 +86,7 @@
   },
   "champ:BerserkersShout": {
     "NAME": "Berserker's Shout",
-    "DESCRIPTION": "Enter champ:Berserker. NL Gain !M! Vigor.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Berserker. NL Gain !M! Vigor. NL Draw a card."
+    "DESCRIPTION": "Enter champ:Berserker. NL Draw a card."
   },
   "champ:RageSigil": {
     "NAME": "Battle Plan",
@@ -202,12 +188,7 @@
   },
   "champ:Haymaker": {
     "NAME": "Piledriver",
-    "DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: Apply 2 Vulnerable. NL *Defensive champ:Combo: Apply 2 Weak.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ",
-    "EXTENDED_DESCRIPTION": [
-      "Berserker champ:Combo: Apply 2 Vulnerable. NL ",
-      "Defensive champ:Combo: Apply 2 Weak."
-    ]
+    "DESCRIPTION": "Deal !D! damage. NL Apply 2 Vulnerable. NL Apply 2 Weak."
   },
   "champ:ViciousMockery": {
     "NAME": "Vicious Mockery",
@@ -367,7 +348,7 @@
   },
   "champ:GladiatorForm": {
     "NAME": "Gladiator Form",
-    "DESCRIPTION": "Whenever you use a champ:Technique *Bonus, draw a card. NL Whenever you use a champ:Finisher *Bonus, gain [E] next turn."
+    "DESCRIPTION": "At the start of each turn, gain !M! Vigor for every 3 Vigor spent last turn. Then do the same for champ:Counter."
   },
   "champ:Duel": {
     "NAME": "Duel",
@@ -440,11 +421,7 @@
   },
   "champ:FancyFootwork": {
     "NAME": "Fancy Footwork",
-    "DESCRIPTION": "Requires *Defensive or *Berserker. NL Enter the Stance you aren't in. NL Draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Requires *Defensive or *Berserker. NL Enter the Stance you aren't in. NL Draw !M! cards.",
-    "EXTENDED_DESCRIPTION": [
-      "I am not in a Stance."
-    ]
+    "DESCRIPTION": "Enter a Stance you aren't in. NL Draw !M! cards."
   },
   "champ:TripleStrike": {
     "NAME": "Triple Strike",
