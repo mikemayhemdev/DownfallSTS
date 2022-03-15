@@ -348,7 +348,7 @@
   },
   "champ:GladiatorForm": {
     "NAME": "Gladiator Form",
-    "DESCRIPTION": "Whenever you use a champ:Technique *Bonus, draw a card. NL Whenever you use a champ:Finisher *Bonus, gain [E] next turn."
+    "DESCRIPTION": "At the start of each turn, gain !M! Vigor for every 3 Vigor spent last turn. Then do the same for champ:Counter."
   },
   "champ:Duel": {
     "NAME": "Duel",

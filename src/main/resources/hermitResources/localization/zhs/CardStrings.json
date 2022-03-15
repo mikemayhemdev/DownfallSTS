@@ -9,7 +9,7 @@
   },
   "hermit:Snapshot": {
     "NAME": "狙杀",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 :耗能为0。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 ：获得 !B! 点 格挡 。"
   },
   "hermit:Desperado": {
     "NAME": "法外狂徒",
@@ -29,8 +29,8 @@
   },
   "hermit:Covet": {
     "NAME": "渴求",
-    "DESCRIPTION": "丢弃1张牌。 NL 抽 !M! 张牌。",
-	"UPGRADE_DESCRIPTION": "丢弃1张牌。 NL 抽 !M! 张牌。"
+    "DESCRIPTION": "丢弃1张牌。 NL 抽 !M! 张牌。 NL 消耗 被丢弃的 诅咒 。",
+	"UPGRADE_DESCRIPTION": "丢弃1张牌。 NL 抽 !M! 张牌。 NL 消耗 被丢弃的 诅咒 。"
   },
   "hermit:HighCaliber": {
     "NAME": "大口径",
@@ -250,9 +250,9 @@
   },
   "hermit:Reprieve": {
     "NAME": "延缓死刑",
-    "DESCRIPTION": "消耗抽牌堆中任意数量的 诅咒 。 NL 每 消耗 一张，回复4点生命。 NL 消耗 。",
+    "DESCRIPTION": "消耗所有 诅咒 。 NL 如果至少 消耗 13 张，额外获得一回合。",
     "EXTENDED_DESCRIPTION": [
-      "抽牌堆里没有诅咒牌。"
+      "我没有诅咒牌。"
     ]
   },
   "hermit:TakeAim": {

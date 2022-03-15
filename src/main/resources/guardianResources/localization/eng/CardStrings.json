@@ -109,7 +109,7 @@
   },
   "Guardian:WalkerClaw": {
     "NAME": "Walker Claw",
-    "DESCRIPTION": "Deal !D! damage. NL Strength affects this card !M! times."
+    "DESCRIPTION": "Deal !D! damage !M! times."
   },
   "Guardian:SphericShield": {
     "NAME": "Spheric Shield",

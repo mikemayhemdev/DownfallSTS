@@ -34,7 +34,7 @@ public class BaubleBeam extends AbstractGuardianCard {
     //TUNING CONSTANTS
     private static final int GEMACTIVATIONS = 3;
     private static final int UPGRADE_GEMACTIVATIONS = 1;
-    private static final int SOCKETS = 2;
+    private static final int SOCKETS = 1;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;

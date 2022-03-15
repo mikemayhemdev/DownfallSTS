@@ -8,8 +8,8 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
   "champ:Taunt": {
-    "NAME": "Taunt",
-    "DESCRIPTION": "Apply !M! Weak and 1 Vulnerable."
+    "NAME": "激将",
+    "DESCRIPTION": "给予 !M! 层 虚弱 和 1 层 易伤 。"
   },
   "champ:Execute": {
     "NAME": "处决",
@@ -69,9 +69,9 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。若有敌人被 虚弱 ，再获得一次。 NL champ:防守 champ:连段 ：给予所有敌人 !M! 层 虚弱 。"
   },
   "champ:Backstep": {
-    "NAME": "Backstep",
-    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain [E] and draw a card.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain [E] and draw !M! cards."
+    "NAME": "后撤",
+    "DESCRIPTION": "进入 champ:防守 。 NL 获得 !B! 点 格挡 。 NL champ:战狂 champ:连段 ：获得 [E] 并抽1张牌。",
+    "UPGRADE_DESCRIPTION": "进入 champ:防守 。 NL 获得 !B! 点 格挡 。 NL champ:战狂 champ:连段 ：获得 [E] 并抽 !M! 张牌。"
   },
   "champ:Aggression": {
     "NAME": "侵略",
@@ -306,7 +306,7 @@
   },
   "champ:DeathBlow": {
     "NAME": "绝地反击",
-    "DESCRIPTION": " champ:疲劳 10。 NL 对所有敌人造成 !D! 点伤害。 NL 获得 !M! 点 活力 。 NL 消耗 。"
+    "DESCRIPTION": " champ:疲劳 10。 NL 对所有敌人造成 !D! 点伤害。 NL 获得 !M! 层 活力 。 NL 消耗 。"
   },
   "champ:ArenaPreparation": {
     "NAME": "重整战场",
@@ -348,7 +348,7 @@
   },
   "champ:GladiatorForm": {
     "NAME": "角斗形态",
-    "DESCRIPTION": "每当你获得 champ:战术 奖励时，抽一张牌。 NL 每当你获得 champ:终结技 奖励时，下回合获得 [E] 。"
+    "DESCRIPTION": "回合开始时，上回合每使用过3层 活力 或 champ:反击 ，对应地获得 !M! 层。"
   },
   "champ:Duel": {
     "NAME": "决斗",
@@ -357,7 +357,7 @@
   },
   "champ:DancingMaster": {
     "NAME": "战技大师",
-    "DESCRIPTION": "如果你在一回合内进入了三次相同的姿态，获得 [E] 并抽1张牌。"
+    "DESCRIPTION": "每回合第一次进入 姿态 时，获得 [E] 并抽一张牌。"
   },
   "champ:StrikeOfGenius": {
     "NAME": "打击天才",
@@ -375,8 +375,8 @@
   },
   "champ:BerserkerStyle": {
     "NAME": "狂暴战法",
-    "DESCRIPTION": "进入 champ:战狂 。 NL champ:疲劳 5。 NL champ:战狂 champ:战术 奖励额外获得 !M! 点 活力 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 进入 champ:战狂 。 NL champ:疲劳 5。 NL champ:战狂 champ:战术 奖励：额外获得 !M! 点  活力 。"
+    "DESCRIPTION": "进入 champ:战狂 。 NL champ:疲劳 5。 NL champ:战狂 champ:战术 奖励额外获得 !M! 层 活力 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 进入 champ:战狂 。 NL champ:疲劳 5。 NL champ:战狂 champ:战术 奖励：额外获得 !M! 层  活力 。"
   },
   "champ:Riposte": {
     "NAME": "弹反",
@@ -413,15 +413,15 @@
   },
   "champ:UltimateStance": {
     "NAME": "终极姿态",
-    "DESCRIPTION": "处于第一勇士 姿态 时才能被打出。 NL 在 !M! 回合内处于 champ:终极 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "处于第一勇士 姿态 时才能被打出。 NL 在 !M! 回合内处于 champ:终极 。",
+    "DESCRIPTION": "处于 姿态 时才能被打出。 NL 在 !M! 回合内处于 champ:终极 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "处于 姿态 时才能被打出。 NL 在 !M! 回合内处于 champ:终极 。",
     "EXTENDED_DESCRIPTION": [
       "我不处于姿态。"
     ]
   },
   "champ:FancyFootwork": {
-    "NAME": "Fancy Footwork",
-    "DESCRIPTION": "Enter a Stance you aren't in. NL Draw !M! cards."
+    "NAME": "花哨步法",
+    "DESCRIPTION": "进入一种你不处于的 姿态 。 NL 抽 !M! 张牌。"
   },
   "champ:TripleStrike": {
     "NAME": "三重打击",
