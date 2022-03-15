@@ -83,6 +83,7 @@ public class Nloth_Evil extends AbstractImageEvent {
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         this.imageEventText.clearRemainingOptions();
+                        logMetricRelicSwap(ID, "Traded Relic", gift, choice1);
                         return;
                     case 1:
                         this.imageEventText.updateBodyText(DIALOG_2);
@@ -97,18 +98,16 @@ public class Nloth_Evil extends AbstractImageEvent {
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         this.imageEventText.clearRemainingOptions();
+                        logMetricRelicSwap(ID, "Traded Relic", gift, choice2);
                         return;
                     case 2:
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[0]);
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Pain(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), AbstractDungeon.returnRandomRelic(AbstractDungeon.returnRandomRelicTier()));
+                        Pain curse = new Pain();
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+                        AbstractRelic relic = AbstractDungeon.returnRandomRelic(AbstractDungeon.returnRandomRelicTier());
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), relic);
                         CardCrawlGame.sound.play("BLUNT_HEAVY");
-                        this.screenNum = 1;
-                        this.imageEventText.updateDialogOption(0, OPTIONS[2]);
-                        this.imageEventText.clearRemainingOptions();
-                        return;
-                    case 3:
-                        this.imageEventText.updateBodyText(DIALOG_3);
+                        logMetricObtainCardAndRelic(ID, "Punch", curse, relic);
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         this.imageEventText.clearRemainingOptions();
@@ -118,6 +117,7 @@ public class Nloth_Evil extends AbstractImageEvent {
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         this.imageEventText.clearRemainingOptions();
+                        logMetricIgnored(ID);
                         return;
                 }
             case 1:

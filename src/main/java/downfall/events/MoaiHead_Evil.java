@@ -64,7 +64,7 @@ public class MoaiHead_Evil extends AbstractImageEvent {
                         if (AbstractDungeon.player.maxHealth < 1) {
                             AbstractDungeon.player.maxHealth = 1;
                         }
-
+                        logMetricHealAndLoseMaxHP(ID, "Heal", AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth, hpAmt);
                         AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
                         if (AbstractDungeon.player instanceof GremlinCharacter) {
                             ((GremlinCharacter)AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
@@ -78,6 +78,8 @@ public class MoaiHead_Evil extends AbstractImageEvent {
                         this.screenNum = 1;
                         AbstractDungeon.player.loseGold(this.goldAmount);
                         AbstractDungeon.player.increaseMaxHp(this.hpAmt, false);
+                        logMetric(ID, "Gave Souls", null, null, null, null, null, null, null,
+                                0, AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth, 0, hpAmt, goldAmount, 0);
                         AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
                         if (AbstractDungeon.player instanceof GremlinCharacter) {
                             ((GremlinCharacter)AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
@@ -90,6 +92,7 @@ public class MoaiHead_Evil extends AbstractImageEvent {
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         this.imageEventText.clearRemainingOptions();
+                        logMetricIgnored(ID);
                         return;
                 }
             default:

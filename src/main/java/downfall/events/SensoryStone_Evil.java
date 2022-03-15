@@ -66,6 +66,7 @@ public class SensoryStone_Evil extends AbstractImageEvent {
             case INTRO_2:
                 switch(buttonPressed) {
                     case 0:
+                        logMetric(ID, "Memory 1");
                         this.screen = CurScreen.ACCEPT;
                         this.choice = 1;
                         this.reward(this.choice);
@@ -73,6 +74,7 @@ public class SensoryStone_Evil extends AbstractImageEvent {
                         getMemoryText();
                         break;
                     case 1:
+                        logMetricTakeDamage(ID, "Memory 2", 5);
                         this.screen = CurScreen.ACCEPT;
                         this.choice = 2;
                         this.reward(this.choice);
@@ -81,6 +83,7 @@ public class SensoryStone_Evil extends AbstractImageEvent {
                         getMemoryText();
                         break;
                     case 2:
+                        logMetricTakeDamage(ID, "Memory 3", 10);
                         this.screen = CurScreen.ACCEPT;
                         this.choice = 3;
                         this.reward(this.choice);
