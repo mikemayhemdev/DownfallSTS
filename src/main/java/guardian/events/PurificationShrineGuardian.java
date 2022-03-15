@@ -52,7 +52,7 @@ public class PurificationShrineGuardian extends AbstractImageEvent {
         super.update();
         if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             CardCrawlGame.sound.play("CARD_EXHAUST");
-            logMetricCardRemoval("Purifier", "Purged", AbstractDungeon.gridSelectScreen.selectedCards.get(0));
+            logMetricCardRemoval(ID, "Purged", AbstractDungeon.gridSelectScreen.selectedCards.get(0));
             AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(AbstractDungeon.gridSelectScreen.selectedCards.get(0), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
             AbstractDungeon.player.masterDeck.removeCard(AbstractDungeon.gridSelectScreen.selectedCards.get(0));
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
@@ -68,16 +68,14 @@ public class PurificationShrineGuardian extends AbstractImageEvent {
                         this.screen = PurificationShrineGuardian.CUR_SCREEN.COMPLETE;
                         this.imageEventText.updateBodyText(CardCrawlGame.languagePack.getEventString("Guardian:Purifier").DESCRIPTIONS[0]);
                         ArrayList<AbstractCard> gems = GuardianMod.getRewardGemCards(false, 2);
-                        ArrayList<AbstractCard> rewards = new ArrayList<>();
-                        int rando;
-                        for (int i = 0; i < 2; ++i) {
-                            rando = AbstractDungeon.cardRng.random(gems.size() - 1);
-                            rewards.add(gems.get(rando));
-                            gems.remove(rando);
+                        ArrayList<String> gemIDs = new ArrayList<>();
+                        for (AbstractCard gem : gems) {
+                            gemIDs.add(gem.cardID);
                         }
+                        logMetricObtainCards(ID, "Smashed", gemIDs);
 
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(rewards.get(0), (float) (Settings.WIDTH * 0.35), (float) (Settings.HEIGHT / 2)));
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(rewards.get(1), (float) (Settings.WIDTH * 0.7), (float) (Settings.HEIGHT / 2)));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(gems.get(0), (float) (Settings.WIDTH * 0.35), (float) (Settings.HEIGHT / 2)));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(gems.get(1), (float) (Settings.WIDTH * 0.7), (float) (Settings.HEIGHT / 2)));
 
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
                         this.imageEventText.clearRemainingOptions();
@@ -91,7 +89,7 @@ public class PurificationShrineGuardian extends AbstractImageEvent {
                         return;
                     case 2:
                         this.screen = PurificationShrineGuardian.CUR_SCREEN.COMPLETE;
-                        logMetricIgnored("Purifier");
+                        logMetricIgnored(ID);
                         this.imageEventText.updateBodyText(IGNORE);
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
                         this.imageEventText.clearRemainingOptions();

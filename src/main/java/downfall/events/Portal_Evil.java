@@ -48,16 +48,18 @@ public class Portal_Evil extends AbstractImageEvent {
 
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
                         this.screen = CurScreen.LEAVE;
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new TeleportStone());
+                        TeleportStone relic = new TeleportStone();
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, relic);
 
                         CardCrawlGame.sound.play("ATTACK_MAGIC_SLOW_1");
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
-
+                        logMetricObtainRelic(ID, "Took Portal Stone", relic);
                         break;
                     case 1:
                         this.imageEventText.updateBodyText(DIALOG_3);
                         this.screen = CurScreen.LEAVE;
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
+                        logMetricIgnored(ID);
                         break;
                 }
 

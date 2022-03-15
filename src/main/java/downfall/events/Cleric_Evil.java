@@ -52,7 +52,7 @@ public class Cleric_Evil extends AbstractImageEvent {
         if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
-            AbstractEvent.logMetricCardRemovalAtCost("The Cleric", "Card Removal", c, 0);
+            AbstractEvent.logMetricCardRemovalAtCost(ID, "Card Removal", c, 0);
             AbstractDungeon.player.masterDeck.removeCard(c);
             AbstractDungeon.gridSelectScreen.selectedCards.remove(c);
         }
@@ -68,6 +68,7 @@ public class Cleric_Evil extends AbstractImageEvent {
                         AbstractDungeon.player.gainGold(this.gold);
                         CardCrawlGame.sound.play("BLUNT_HEAVY");
                         heDead = true;
+                        logMetricGainGold(ID, "Punch", this.gold);
                         break;
                     case 1:
                         this.imageEventText.updateBodyText(DESC[2]);

@@ -156,13 +156,13 @@ public class MindBloom_Evil extends AbstractImageEvent {
                         CardCrawlGame.music.fadeOutBGM();
                         CardCrawlGame.music.fadeOutTempBGM();
                         CardCrawlGame.music.playTempBgmInstantly("MINDBLOOM", true);
+                        logMetric(ID, "Fight Yourself");
                         break;
                     case 1:
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[2]);
                         this.screen = CurScreen.LEAVE;
                         int effectCount = 0;
                         List<String> upgradedCards = new ArrayList();
-                        List<String> obtainedRelic = new ArrayList();
 
                         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
                             if (c.canUpgrade()) {
@@ -185,6 +185,7 @@ public class MindBloom_Evil extends AbstractImageEvent {
                         AbstractDungeon.player.loseRelic(HeartBlessingGreen.ID);
 
                         AbstractDungeon.player.decreaseMaxHealth(10);
+                        logMetricUpgradeCards(ID, "Upgrade", upgradedCards);
 
                         this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         break;
@@ -192,18 +193,21 @@ public class MindBloom_Evil extends AbstractImageEvent {
                         if (AbstractDungeon.floorNum % 50 <= 40) {
                             this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
                             this.screen = CurScreen.LEAVE;
-                            List<String> cardsAdded = new ArrayList();
+                            List<String> cardsAdded = new ArrayList<>();
                             cardsAdded.add("Normality");
                             cardsAdded.add("Normality");
-                            AbstractDungeon.effectList.add(new RainingGoldEffect(999));
-                            AbstractDungeon.player.gainGold(999);
+                            int goldGain = 999;
+                            AbstractDungeon.effectList.add(new RainingGoldEffect(goldGain));
+                            AbstractDungeon.player.gainGold(goldGain);
                             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Normality(), (float) Settings.WIDTH * 0.6F, (float) Settings.HEIGHT / 2.0F));
                             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Normality(), (float) Settings.WIDTH * 0.3F, (float) Settings.HEIGHT / 2.0F));
                             this.imageEventText.updateDialogOption(0, OPTIONS[4]);
+                            logMetric(ID, "Gold", cardsAdded, null, null, null, null, null, null, 0, 0, 0, 0, goldGain, 0);
                         } else {
                             this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
                             this.screen = CurScreen.LEAVE;
                             AbstractCard curse = new Doubt();
+                            logMetricObtainCardAndHeal(ID, "Heal", curse, AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth);
                             AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
                             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                             this.imageEventText.updateDialogOption(0, OPTIONS[4]);

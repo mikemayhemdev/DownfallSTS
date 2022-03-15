@@ -68,7 +68,6 @@ public class ShiningLight_Evil extends AbstractImageEvent {
                     this.imageEventText.removeDialogOption(1);
                     this.imageEventText.updateDialogOption(0, OPTIONS[1]);
                     this.screen = CUR_SCREEN.COMPLETE;
-                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Malfunctioning(), (float) Settings.WIDTH * .5F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
 
                     this.upgradeCards();
                 } else {
@@ -76,6 +75,7 @@ public class ShiningLight_Evil extends AbstractImageEvent {
                     this.imageEventText.removeDialogOption(1);
                     this.imageEventText.updateDialogOption(0, OPTIONS[1]);
                     this.screen = CUR_SCREEN.COMPLETE;
+                    logMetricIgnored(ID);
                 }
                 break;
             default:
@@ -129,6 +129,11 @@ public class ShiningLight_Evil extends AbstractImageEvent {
 
             }
         }
+
+        Malfunctioning curse = new Malfunctioning();
+        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) Settings.WIDTH * .5F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
+        logMetric(ID, "Entered Light", Collections.singletonList(curse.cardID), null, null, cardMetrics, null, null, null,
+                0, 0, 0, 0, 0, 0);
 
     }
 

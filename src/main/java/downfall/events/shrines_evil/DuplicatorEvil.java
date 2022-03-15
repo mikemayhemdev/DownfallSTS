@@ -49,24 +49,31 @@ import downfall.downfallMod;
 
     public void update() {
         super.update();
-        if ((!AbstractDungeon.isScreenUp) && (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) &&
-                (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty())) {
-            AbstractCard c = ((AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0)).makeStatEquivalentCopy();
+        if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+            ArrayList<String> cards = new ArrayList<>();
+
+            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0).makeStatEquivalentCopy();
             c.inBottleFlame = false;
             c.inBottleLightning = false;
             c.inBottleTornado = false;
             AbstractDungeon.effectList.add(new com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect(c, com.megacrit.cardcrawl.core.Settings.WIDTH * 0.25F, com.megacrit.cardcrawl.core.Settings.HEIGHT / 2.0F));
+            cards.add(c.cardID);
 
             if (AbstractDungeon.gridSelectScreen.selectedCards.size() > 1){
-                c = ((AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(1)).makeStatEquivalentCopy();
+                c = AbstractDungeon.gridSelectScreen.selectedCards.get(1).makeStatEquivalentCopy();
                 c.inBottleFlame = false;
                 c.inBottleLightning = false;
                 c.inBottleTornado = false;
                 AbstractDungeon.effectList.add(new com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect(c, com.megacrit.cardcrawl.core.Settings.WIDTH * 0.75F, com.megacrit.cardcrawl.core.Settings.HEIGHT / 2.0F));
+                cards.add(c.cardID);
 
-                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(CardLibrary.getCurse().makeStatEquivalentCopy(), (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT / 2)));// 66
+                AbstractCard curse = CardLibrary.getCurse().makeStatEquivalentCopy();
+                cards.add(curse.cardID);
+                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT / 2)));// 66
 
-
+                logMetricObtainCards(ID, "Desecrated", cards);
+            } else {
+                logMetricObtainCard(ID, "Copied", c);
             }
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
@@ -97,6 +104,7 @@ import downfall.downfallMod;
                         this.imageEventText.updateBodyText(IGNORE);
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
                         this.imageEventText.clearRemainingOptions();
+                        logMetricIgnored(ID);
                 }
 
                 break;

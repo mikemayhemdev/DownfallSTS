@@ -121,6 +121,9 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
                             AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(PotionHelper.getRandomPotion()));
                         }
                         AbstractDungeon.player.loseRelic(this.relicsOffered.get(0).relicId);
+                        logMetric(ID, "Traded Relic For Potions", null, null, null, null,
+                                null, null, Collections.singletonList(this.relicsOffered.get(0).relicId),
+                                0, 0, 0, 0, 0, 0);
 
                         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
                         AbstractDungeon.combatRewardScreen.open();
@@ -131,6 +134,9 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldAmt));
                         AbstractDungeon.player.gainGold(this.goldAmt);
                         AbstractDungeon.player.loseRelic(this.relicsOffered.get(1).relicId);
+                        logMetric(ID, "Traded Relic For Gold", null, null, null, null,
+                                null, null, Collections.singletonList(this.relicsOffered.get(1).relicId),
+                                0, 0, 0, 0, goldAmt, 0);
 
                         break;
                     case 2:
@@ -138,12 +144,16 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
                         AbstractCard rewardCard = AbstractDungeon.getCard(AbstractCard.CardRarity.RARE).makeCopy();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(rewardCard, Settings.WIDTH * 0.5F, Settings.HEIGHT * 0.2F));
                         AbstractDungeon.player.loseRelic(this.relicsOffered.get(2).relicId);
+                        logMetric(ID, "Traded Relic For Card", null, null, null, null,
+                                null, null, Collections.singletonList(this.relicsOffered.get(2).relicId),
+                                0, 0, 0, 0, 0, 0);
 
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[6]);
                         break;
                     case 3:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
+                        logMetricIgnored(ID);
                 }
 
                 this.imageEventText.updateDialogOption(0, OPTIONS[6]);

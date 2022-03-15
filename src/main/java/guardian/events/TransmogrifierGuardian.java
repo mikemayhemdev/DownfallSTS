@@ -58,7 +58,7 @@ public class TransmogrifierGuardian extends AbstractImageEvent {
             AbstractDungeon.player.masterDeck.removeCard(c);
             AbstractDungeon.transformCard(c);
             AbstractCard transCard = AbstractDungeon.getTransformedCard();
-            logMetricTransformCard("Transmorgrifier", "Transformed", c, transCard);
+            logMetricTransformCard(ID, "Transformed", c, transCard);
             AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(transCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
         }
@@ -73,16 +73,15 @@ public class TransmogrifierGuardian extends AbstractImageEvent {
                         this.screen = TransmogrifierGuardian.CUR_SCREEN.COMPLETE;
                         this.imageEventText.updateBodyText(CardCrawlGame.languagePack.getEventString("Guardian:Purifier").DESCRIPTIONS[0]);
                         ArrayList<AbstractCard> gems = GuardianMod.getRewardGemCards(false, 2);
-                        ArrayList<AbstractCard> rewards = new ArrayList<>();
-                        int rando;
-                        for (int i = 0; i < 2; ++i) {
-                            rando = AbstractDungeon.cardRng.random(gems.size() - 1);
-                            rewards.add(gems.get(rando));
-                            gems.remove(rando);
+                        ArrayList<String> gemIDs = new ArrayList<>();
+                        for (AbstractCard gem : gems) {
+                            gemIDs.add(gem.cardID);
                         }
+                        logMetricObtainCards(ID, "Smashed", gemIDs);
 
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(rewards.get(0), (float) (Settings.WIDTH * 0.35), (float) (Settings.HEIGHT / 2)));
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(rewards.get(1), (float) (Settings.WIDTH * 0.7), (float) (Settings.HEIGHT / 2)));
+
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(gems.get(0), (float) (Settings.WIDTH * 0.35), (float) (Settings.HEIGHT / 2)));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(gems.get(1), (float) (Settings.WIDTH * 0.7), (float) (Settings.HEIGHT / 2)));
 
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
                         this.imageEventText.clearRemainingOptions();
@@ -96,7 +95,7 @@ public class TransmogrifierGuardian extends AbstractImageEvent {
                         return;
                     case 2:
                         this.screen = TransmogrifierGuardian.CUR_SCREEN.COMPLETE;
-                        logMetricIgnored("Transmorgrifier");
+                        logMetricIgnored(ID);
                         this.imageEventText.updateBodyText(IGNORE);
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
                         this.imageEventText.clearRemainingOptions();

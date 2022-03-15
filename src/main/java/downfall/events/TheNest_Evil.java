@@ -63,6 +63,7 @@ public class TheNest_Evil extends AbstractImageEvent {
                         this.screen = CUR_SCREEN.GIFTSTAGE1;
                         return;
                     case 1:
+                        logMetricObtainCardAndDamage(ID, "Stole from Cult", dagger, 6);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         AbstractDungeon.player.damage(new DamageInfo((AbstractCreature)null, 6, DamageInfo.DamageType.HP_LOSS));
 
@@ -75,7 +76,7 @@ public class TheNest_Evil extends AbstractImageEvent {
 
                         return;
                     case 2:
-
+                        logMetric(ID, "Accepted Cult Offering");
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         this.screen = CUR_SCREEN.COMPLETE;
                         AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(PotionHelper.getPotion(CultistPotion.POTION_ID)));
@@ -88,6 +89,7 @@ public class TheNest_Evil extends AbstractImageEvent {
                 }
                 break;
             case GIFTSTAGE1:
+                logMetricObtainCard(ID, "Performed Ritual Sacrifice", dagger);
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.dagger, (float)Settings.WIDTH * 0.3F, (float)Settings.HEIGHT / 2.0F));
                 this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
                 this.imageEventText.clearAllDialogs();

@@ -16,6 +16,7 @@ import downfall.relics.RedIOU;
 import downfall.vfx.StealRelicEffect;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Bandits_Evil extends AbstractEvent {
     public static final String ID = downfallMod.makeID("Bandits");
@@ -100,9 +101,12 @@ public class Bandits_Evil extends AbstractEvent {
                         this.roomEventText.updateDialogOption(0, OPTIONS[3]);// 62
                         this.roomEventText.clearRemainingOptions();// 63
                         this.screen = CUR_SCREEN.COMPLETE;
+                        logMetric(ID, "Hired Bandits",
+                                null, null, null, null,
+                                Collections.singletonList(RedIOU.ID), null, Collections.singletonList(wantThisOne.relicId), 0, 0, 0, 0, 0, 0);// 68
                         return;// 65
                     case 1:
-                        logMetric("Masked Bandits", "Fought Bandits");// 68
+                        logMetric(ID, "Fought Bandits");// 68
                         if (Settings.isDailyRun) {// 70
                             AbstractDungeon.getCurrRoom().addGoldToRewards(AbstractDungeon.miscRng.random(30));// 71
                         } else {

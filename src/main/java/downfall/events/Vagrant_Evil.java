@@ -53,7 +53,9 @@ public class Vagrant_Evil extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         AbstractDungeon.player.damage(new DamageInfo(null, takeCost, DamageInfo.DamageType.HP_LOSS));// 114
-                        AbstractDungeon.player.gainGold(85);
+                        int gold = 85;
+                        AbstractDungeon.player.gainGold(gold);
+                        logMetricGainGoldAndDamage(ID, "Punch", gold, takeCost);
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[0]);
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[5]);
@@ -63,7 +65,7 @@ public class Vagrant_Evil extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);// 60
                         AbstractCard card = new PrideStandard();// 62
                         AbstractRelic relic = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());// 63 64
-                        AbstractEvent.logMetricObtainCardAndRelic("Addict", "Stole Relic", card, relic);// 65
+                        AbstractEvent.logMetricObtainCardAndRelic(ID, "Stole Relic", card, relic);// 65
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));// 66
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain(this.drawX, this.drawY, relic);// 68
                         this.imageEventText.updateDialogOption(0, OPTIONS[5]);// 70
@@ -71,6 +73,7 @@ public class Vagrant_Evil extends AbstractImageEvent {
                         this.screenNum = 1;
                         return;// 73
                     default:
+                        logMetricIgnored(ID);
                         this.imageEventText.updateDialogOption(0, OPTIONS[5]);// 75
                         this.imageEventText.clearRemainingOptions();// 76
                         this.openMap();// 77

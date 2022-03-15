@@ -77,7 +77,7 @@ public class LivingWall_Evil extends AbstractImageEvent {
                 case FORGET:
                     CardCrawlGame.sound.play("CARD_EXHAUST");
                     AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(AbstractDungeon.gridSelectScreen.selectedCards.get(0), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
-                    AbstractEvent.logMetricCardRemoval("Living Wall", "Forget", AbstractDungeon.gridSelectScreen.selectedCards.get(0));
+                    AbstractEvent.logMetricCardRemoval(ID, "Forget", AbstractDungeon.gridSelectScreen.selectedCards.get(0));
                     AbstractDungeon.player.masterDeck.removeCard(AbstractDungeon.gridSelectScreen.selectedCards.get(0));
                     break;
                 case CHANGE:
@@ -86,13 +86,13 @@ public class LivingWall_Evil extends AbstractImageEvent {
                     AbstractDungeon.transformCard(c, false, AbstractDungeon.miscRng);
                     AbstractCard transCard = AbstractDungeon.getTransformedCard();
                     AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(transCard, c.current_x, c.current_y));
-                    AbstractEvent.logMetricTransformCard("Living Wall", "Change", c, transCard);
+                    AbstractEvent.logMetricTransformCard(ID, "Change", c, transCard);
                     break;
                 case GROW:
                     AbstractDungeon.effectsQueue.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                     AbstractDungeon.gridSelectScreen.selectedCards.get(0).upgrade();
                     AbstractCard upgCard = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-                    AbstractEvent.logMetricCardUpgrade("Living Wall", "Grow", upgCard);
+                    AbstractEvent.logMetricCardUpgrade(ID, "Grow", upgCard);
                     AbstractDungeon.player.bottledCardUpgradeCheck(upgCard);
             }
 
@@ -130,6 +130,7 @@ public class LivingWall_Evil extends AbstractImageEvent {
 //                        MonsterGroup monsters =
                                 AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("downfall:Heads");
 //                        AbstractDungeon.getCurrRoom().monsters = monsters;
+                        logMetric(ID, "Fight");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addGoldToRewards(100);
                         AbstractDungeon.getCurrRoom().rewards.add(new RemoveCardReward());

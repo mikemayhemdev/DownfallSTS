@@ -82,11 +82,14 @@ public class GoldenIdol_Evil extends AbstractImageEvent {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                             AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(this.strike, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                             AbstractDungeon.player.masterDeck.removeCard(strike);
+                            logMetricCardRemoval(ID, "Set Trap", strike);
+
                             trapAlreadySet = true;
                         } else {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                             AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold));
                             AbstractDungeon.player.gainGold(this.gold);
+                            logMetricGainGold(ID, "Harvest", gold);
                             trapAlreadySet = false;
                         }
 
@@ -105,6 +108,7 @@ public class GoldenIdol_Evil extends AbstractImageEvent {
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[3]);
                         this.screen = CurScreen.RESULT;
+                        logMetricIgnored(ID);
                         return;
                     default:
                         return;

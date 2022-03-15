@@ -312,6 +312,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
 
                         this.screen = GremlinWheelGame_Evil.CUR_SCREEN.FIGHT;
                         //SlimeboundMod.logger.info("fight");
+                        logMetric(ID, "Fight");
                         MonsterGroup monsters = new MonsterGroup(new GremlinThief(-400F, 0F));
                         monsters.add(new GremlinNob(0F, 0F));
                         AbstractDungeon.getCurrRoom().monsters = monsters;
@@ -326,6 +327,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
                     }
                 }
             case POSTGREMLIN:
+                logMetric(ID, "Killed Gremlin");
                 AbstractDungeon.getCurrRoom().rewards.clear();
                 AbstractRelic relic = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());
                 AbstractDungeon.getCurrRoom().addRelicToRewards(relic);
@@ -347,18 +349,18 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
         switch (this.result) {
             case 0:
                 this.hasFocus = false;
-                logMetricGainGold("Wheel of Change", "Gold", this.goldAmount);
+                logMetricGainGold(ID, "Gold", this.goldAmount);
                 break;
             case 1:
                 AbstractDungeon.getCurrRoom().rewards.clear();
                 AbstractRelic r = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());
                 AbstractDungeon.getCurrRoom().addRelicToRewards(r);
                 AbstractDungeon.combatRewardScreen.open();
-                logMetric("Wheel of Change", "Relic");
+                logMetric(ID, "Relic");
                 this.hasFocus = false;
                 break;
             case 2:
-                logMetricHeal("Wheel of Change", "Full Heal", AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth);
+                logMetricHeal(ID, "Full Heal", AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth);
                 AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
                 if (AbstractDungeon.player instanceof GremlinCharacter) {
                     ((GremlinCharacter)AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
@@ -367,7 +369,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
                 break;
             case 3:
                 AbstractCard curse = new Decay();
-                logMetricObtainCard("Wheel of Change", "Cursed", curse);
+                logMetricObtainCard(ID, "Cursed", curse);
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                 this.hasFocus = false;
                 break;
@@ -383,7 +385,6 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
                     this.imageEventText.updateBodyText(DESCRIPTIONS[14]);
                     CardCrawlGame.sound.play("ATTACK_DAGGER_6");
                     CardCrawlGame.sound.play("BLOOD_SPLAT");
-                    logMetric("Wheel of Change", "Gremlins");
                     gremlinchosen = true;
                 } else {
                     this.imageEventText.updateBodyText(DESCRIPTIONS[7]);
@@ -391,7 +392,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
                     CardCrawlGame.sound.play("BLOOD_SPLAT");
                     int damageAmount = (int) ((float) AbstractDungeon.player.maxHealth * this.hpLossPercent);
                     AbstractDungeon.player.damage(new DamageInfo(null, damageAmount, DamageType.HP_LOSS));
-                    logMetricTakeDamage("Wheel of Change", "Damaged", damageAmount);
+                    logMetricTakeDamage(ID, "Damaged", damageAmount);
 
                 }
         }
@@ -401,7 +402,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
     private void purgeLogic() {
         if (this.purgeResult && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-            logMetricCardRemoval("Wheel of Change", "Card Removal", c);
+            logMetricCardRemoval(ID, "Card Removal", c);
             AbstractDungeon.player.masterDeck.removeCard(c);
             AbstractDungeon.effectList.add(new PurgeCardEffect(c));
             AbstractDungeon.gridSelectScreen.selectedCards.clear();

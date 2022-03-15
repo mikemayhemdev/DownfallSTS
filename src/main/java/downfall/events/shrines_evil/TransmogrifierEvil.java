@@ -7,14 +7,13 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import com.megacrit.cardcrawl.events.GenericEventDialog;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.screens.select.GridCardSelectScreen;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class TransmogrifierEvil extends AbstractImageEvent {
@@ -30,6 +29,8 @@ public class TransmogrifierEvil extends AbstractImageEvent {
     public static String[] OPTIONSALT;
     private CUR_SCREEN screen = CUR_SCREEN.INTRO;
 
+    private List<String> removedCards = new ArrayList<String>();
+    private List<String> obtainedCards = new ArrayList<String>();
 
     private boolean bonusShrine;
     private boolean bonusShrine2;
@@ -60,16 +61,25 @@ public class TransmogrifierEvil extends AbstractImageEvent {
 
         if ((!AbstractDungeon.isScreenUp) && (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty())) {
             AbstractCard c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            removedCards.add(c.cardID);
+
             AbstractDungeon.player.masterDeck.removeCard(c);
+
             AbstractDungeon.transformCard(c, false, AbstractDungeon.miscRng);
             AbstractCard transCard = AbstractDungeon.getTransformedCard();
+            obtainedCards.add(transCard.cardID);
+
             AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect(transCard, com.megacrit.cardcrawl.core.Settings.WIDTH * 0.25F, com.megacrit.cardcrawl.core.Settings.HEIGHT / 2.0F));
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             if (bonusShrine3){
-                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(CardLibrary.getCurse().makeStatEquivalentCopy(), (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT / 2)));// 66
-            }
-            if (bonusShrine && !bonusShrine2){
+                AbstractCard curse = CardLibrary.getCurse().makeStatEquivalentCopy();
+                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT / 2)));// 66
+                obtainedCards.add(curse.cardID);
+
+                logMetricTransformCards(ID, "Desecrated", removedCards, obtainedCards);
+
+            } else if (bonusShrine && !bonusShrine2){
                 bonusShrine = false;
                 bonusShrine2 = true;
                 AbstractDungeon.gridSelectScreen.open(
@@ -84,6 +94,8 @@ public class TransmogrifierEvil extends AbstractImageEvent {
                         com.megacrit.cardcrawl.cards.CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck
                                 .getPurgeableCards()), 1, OPTIONS[2], false, true, false, false);
 
+            } else {
+                logMetricTransformCards(ID, "Transformed", removedCards, obtainedCards);
             }
         }
 
@@ -98,7 +110,8 @@ public class TransmogrifierEvil extends AbstractImageEvent {
                 switch (buttonPressed) {
 
                     case 0:
-
+                        removedCards.clear();
+                        obtainedCards.clear();
                         bonusShrine = true;
                         this.screen = CUR_SCREEN.COMPLETE;
 
@@ -115,7 +128,8 @@ public class TransmogrifierEvil extends AbstractImageEvent {
 
                         break;
                     case 1:
-
+                        removedCards.clear();
+                        obtainedCards.clear();
                         this.screen = CUR_SCREEN.COMPLETE;
 
                         this.imageEventText.updateBodyText(DIALOG_2);
@@ -141,6 +155,7 @@ public class TransmogrifierEvil extends AbstractImageEvent {
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
 
                         this.imageEventText.clearRemainingOptions();
+                        logMetricIgnored(ID);
 
                 }
 

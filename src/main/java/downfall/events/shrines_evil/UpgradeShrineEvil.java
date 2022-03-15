@@ -16,10 +16,12 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 
 public class UpgradeShrineEvil extends AbstractImageEvent {
-    public static final String ID = downfallMod.makeID("Upgrade Shrine");
+    public static final String ID = downfallMod.makeID("Upgrade_Shrine");
     private static final EventStrings eventStrings = CardCrawlGame.languagePack.getEventString("Upgrade Shrine");
     public static final String NAME = eventStrings.NAME;
     public static final String[] DESCRIPTIONS = eventStrings.DESCRIPTIONS;
@@ -33,6 +35,7 @@ public class UpgradeShrineEvil extends AbstractImageEvent {
 
     private boolean bonusShrine;
     private boolean bonusShrine2;
+    private List<String> upgradedCards = new ArrayList<String>();
 
     private CUR_SCREEN screen = CUR_SCREEN.INTRO;
 
@@ -54,7 +57,7 @@ public class UpgradeShrineEvil extends AbstractImageEvent {
             this.imageEventText.setDialogOption(OPTIONS[3], true);
         }
 
-        if (AbstractDungeon.player.masterDeck.hasUpgradableCards().booleanValue()) {
+        if (AbstractDungeon.player.masterDeck.hasUpgradableCards()) {
             this.imageEventText.setDialogOption(OPTIONS[0]);
         } else {
             this.imageEventText.setDialogOption(OPTIONS[3], true);
@@ -69,23 +72,28 @@ public class UpgradeShrineEvil extends AbstractImageEvent {
     public void update() {
         super.update();
         if ((!AbstractDungeon.isScreenUp) && (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty())) {
-            AbstractCard c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             c.upgrade();
+            upgradedCards.add(c.cardID);
+
             AbstractDungeon.player.bottledCardUpgradeCheck(c);
             AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect(c.makeStatEquivalentCopy()));
             AbstractDungeon.topLevelEffects.add(new com.megacrit.cardcrawl.vfx.UpgradeShineEffect(com.megacrit.cardcrawl.core.Settings.WIDTH * .25F, com.megacrit.cardcrawl.core.Settings.HEIGHT / 2.0F));
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             if (bonusShrine2){
-                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(CardLibrary.getCurse().makeStatEquivalentCopy(), (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT / 2)));// 66
-            }
-            if (bonusShrine){
+                AbstractCard curse = CardLibrary.getCurse().makeStatEquivalentCopy();
+                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (Settings.WIDTH * .5F), Settings.HEIGHT * .5F));// 66
+                logMetric(ID, "Desecrated", Collections.singletonList(curse.cardID), null,
+                        null, upgradedCards, null, null, null,
+                        0, 0, 0, 0, 0, 0);
+            } else if (bonusShrine){
                 bonusShrine = false;
                 bonusShrine2 = true;
-                AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck
-                        .getUpgradableCards(), 1, OPTIONS[2], true, false, false, false);
-
-
+                AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getUpgradableCards(),
+                        1, OPTIONS[2], true, false, false, false);
+            } else {
+                logMetricCardUpgrade(ID, "Upgraded", c);
             }
 
         }
@@ -96,6 +104,7 @@ public class UpgradeShrineEvil extends AbstractImageEvent {
             case INTRO:
                 switch (buttonPressed) {
                     case 0:
+                        upgradedCards.clear();
                         bonusShrine = true;
                         this.screen = CUR_SCREEN.COMPLETE;
                         AbstractDungeon.getCurrRoom().phase = com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase.COMPLETE;
@@ -108,6 +117,7 @@ public class UpgradeShrineEvil extends AbstractImageEvent {
                         this.imageEventText.clearRemainingOptions();
                         break;
                     case 1:
+                        upgradedCards.clear();
                         this.screen = CUR_SCREEN.COMPLETE;
                         AbstractDungeon.getCurrRoom().phase = com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase.COMPLETE;
                         this.imageEventText.updateBodyText(DIALOG_2);
@@ -124,6 +134,7 @@ public class UpgradeShrineEvil extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(IGNORE);
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
                         this.imageEventText.clearRemainingOptions();
+                        logMetricIgnored(ID);
                 }
 
                 break;

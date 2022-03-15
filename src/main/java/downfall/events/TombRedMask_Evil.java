@@ -15,6 +15,7 @@ import downfall.relics.RedIOU;
 import downfall.relics.RedIOUUpgrade;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 
 public class TombRedMask_Evil extends AbstractImageEvent {
@@ -83,6 +84,17 @@ public class TombRedMask_Evil extends AbstractImageEvent {
                     AbstractDungeon.player.loseRelic(RedIOU.ID);
                     AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), new RedIOUUpgrade());
 
+                    if(MaskTaken) {
+                        ArrayList<String> relics = new ArrayList<String>();
+                        relics.add(RedIOUUpgrade.ID);
+                        relics.add(RedMask.ID);
+
+                        logMetric(ID, "Broke Tomb and Upgraded Contract", null, Collections.singletonList(attack.cardID), null, null,
+                                relics, null, Collections.singletonList(RedIOU.ID),
+                                0, 0, 0, 0, 0, 0);
+                    } else {
+                        logMetricRelicSwap(ID, "Upgraded Contract", new RedIOU(), new RedIOUUpgrade());
+                    }
                     return;
                 } else if (buttonPressed == 1 && !MaskTaken) {
                     AbstractDungeon.effectList.add(new PurgeCardEffect(this.attack));
@@ -105,8 +117,10 @@ public class TombRedMask_Evil extends AbstractImageEvent {
                     this.imageEventText.setDialogOption(OPTIONS[5]);
                     if (!this.MaskTaken) {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
+                        logMetricIgnored(ID);
                     } else {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
+                        logMetricRemoveCardAndObtainRelic(ID, "Broke Tomb", attack, new RedMask());
                     }
                     this.screen = CurScreen.RESULT;
                     return;

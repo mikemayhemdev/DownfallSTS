@@ -50,6 +50,7 @@ public class WingStatue_Evil extends AbstractImageEvent {
                         AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, this.damage));
                         AbstractDungeon.effectList.add(new FlashAtkImgEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AttackEffect.FIRE));
                         this.screen = CurScreen.RESULT;
+                        logMetricObtainRelicAndDamage(ID, "Destroyed Statue", new ShatteredFragment(), damage);
                         return;
                     case 1:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
@@ -57,12 +58,14 @@ public class WingStatue_Evil extends AbstractImageEvent {
                         this.imageEventText.setDialogOption(OPTIONS[3]);
                         this.screen = CurScreen.RESULT;
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new BrokenWingStatue());
+                        logMetricObtainRelic(ID, "Collected Statue", new BrokenWingStatue());
                         return;
                     case 2:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[3]);
                         this.screen = CurScreen.RESULT;
+                        logMetricIgnored(ID);
                         return;
                     default:
                         return;
