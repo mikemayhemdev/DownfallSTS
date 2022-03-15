@@ -57,6 +57,7 @@ public class Colosseum_Evil extends AbstractImageEvent {
                         this.screen = CurScreen.FIGHT;
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2] + DESCRIPTIONS[3]);
                         //SlimeboundMod.logger.info("fight");
+                        logMetric(ID, "Fought Nobs");
                         AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Colosseum Nobs");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.RARE);
@@ -72,6 +73,7 @@ public class Colosseum_Evil extends AbstractImageEvent {
                         this.screen = CurScreen.FIGHT;
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2] + DESCRIPTIONS[4]);
                         //SlimeboundMod.logger.info("fight");
+                        logMetric(ID, "Fought Captured Player");
                         downfallMod.overrideBossDifficulty = true;
                         String s = downfallMod.possEncounterList.remove(AbstractDungeon.cardRandomRng.random(downfallMod.possEncounterList.size()-1));
                         switch (s) {
@@ -114,6 +116,7 @@ public class Colosseum_Evil extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[5]);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[2]);
+                        logMetricIgnored(ID);
                         return;
                     default:
                         return;

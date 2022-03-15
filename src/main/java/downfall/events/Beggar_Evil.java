@@ -170,6 +170,7 @@ public class Beggar_Evil extends AbstractImageEvent {
                         AbstractDungeon.getCurrRoom().monsters = monsters;
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().rewardAllowed = false;
+                        AbstractDungeon.lastCombatMetricKey = "Hired Bodyguards";
                         this.enterCombatFromImage();
                         break;
                 }
