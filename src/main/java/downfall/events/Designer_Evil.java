@@ -153,7 +153,7 @@ public class Designer_Evil extends AbstractImageEvent {
                             AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(newCard1, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                             AbstractDungeon.gridSelectScreen.selectedCards.clear();
                         }
-                        logMetric(ID, "Clean Up", null, transCards, obtainedCards, null, null, null, null,
+                        logMetric(ID, "Clean Up", obtainedCards, null, transCards, null, null, null, null,
                                 hpLoss, 0, 0, 0, 0, 0);
 
                         this.option = OptionChosen.NONE;
