@@ -53,6 +53,9 @@ public class GemMine extends AbstractImageEvent {
     private int screenNum = 0;
     private boolean tookGems = false;
     private int damage;
+    private int damageTaken = 0;
+    private ArrayList<String> cardsAdded = new ArrayList<>();
+    private ArrayList<String> relicsAdded = new ArrayList<>();
 
     public GemMine() {
         super(NAME, DIALOG_START, GuardianMod.getResourcePath("/events/gemMine.jpg"));
@@ -95,6 +98,7 @@ public class GemMine extends AbstractImageEvent {
                             this.imageEventText.updateBodyText(DIALOG_MINEPICK);
                             ArrayList<AbstractCard> gems = GuardianMod.getRewardGemCards(false, 1);
                             AbstractCard card = gems.get(0);
+                            cardsAdded.add(card.cardID);
 
                             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                             CardCrawlGame.sound.play("MONSTER_BOOK_STAB_0");
@@ -123,10 +127,12 @@ public class GemMine extends AbstractImageEvent {
 
                         ArrayList<AbstractCard> gems = GuardianMod.getRewardGemCards(false, 1);
                         AbstractCard card = gems.get(0);
+                        cardsAdded.add(card.cardID);
 
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                         CardCrawlGame.sound.play("MONSTER_BOOK_STAB_0");
                         AbstractDungeon.player.damage(new DamageInfo(null, this.damage));
+                        this.damageTaken += damage;
                         this.tookGems = true;
                         return;
                     default:
@@ -140,6 +146,12 @@ public class GemMine extends AbstractImageEvent {
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         this.imageEventText.clearRemainingOptions();
+                        if(cardsAdded.size() > 0 || relicsAdded.size() > 0 || damageTaken > 0) {
+                            logMetric(ID, "Entered Mine", cardsAdded, null, null, null, relicsAdded, null, null,
+                                    0, 0, damageTaken, 0, 0, 0);
+                        } else {
+                            logMetricIgnored(ID);
+                        }
                         break;
                 }
             case 1:
@@ -157,6 +169,7 @@ public class GemMine extends AbstractImageEvent {
             if (!AbstractDungeon.player.hasRelic(PickAxe.ID)) {
                 AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), new guardian.relics.PickAxe());
                 AbstractDungeon.commonRelicPool.remove(PickAxe.ID);
+                relicsAdded.add(PickAxe.ID);
             }
             enterImageFromCombat();
         }

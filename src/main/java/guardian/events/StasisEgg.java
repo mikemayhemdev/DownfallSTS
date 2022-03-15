@@ -19,6 +19,8 @@ import guardian.GuardianMod;
 import downfall.cards.curses.Aged;
 import guardian.ui.RelicPreviewButton;
 
+import java.util.Collections;
+
 public class StasisEgg extends AbstractImageEvent {
     public static final String ID = "Guardian:StasisEgg";
     public static final String NAME;
@@ -70,12 +72,14 @@ public class StasisEgg extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         this.imageEventText.updateBodyText(DIALOG_USE);
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), new guardian.relics.StasisEgg());
+                        guardian.relics.StasisEgg relic = new guardian.relics.StasisEgg();
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), relic);
                         AbstractCard card = new Aged();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                         this.imageEventText.clearRemainingOptions();
+                        logMetricObtainCardAndRelic(ID, "Took Egg", card, relic);
 
                         return;
                     case 1:
@@ -88,6 +92,9 @@ public class StasisEgg extends AbstractImageEvent {
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                         this.imageEventText.clearRemainingOptions();
+                        logMetric(ID, "Smashed Egg", Collections.singletonList(card2.cardID), null, null, null,
+                                null, null, null,
+                                0, 0, 0, maxHP, 0, 0);
 
                         return;
                     case 2:
@@ -96,6 +103,7 @@ public class StasisEgg extends AbstractImageEvent {
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                         this.imageEventText.clearRemainingOptions();
+                        logMetricIgnored(ID);
                         return;
                 }
             case 1:

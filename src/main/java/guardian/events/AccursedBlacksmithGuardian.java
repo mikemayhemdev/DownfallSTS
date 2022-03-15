@@ -93,6 +93,7 @@ public class AccursedBlacksmithGuardian extends AbstractImageEvent {
             AbstractDungeon.effectsQueue.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy()));
             AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+            logMetricCardUpgrade(ID, "Forge", c);
             this.pickCard = false;
         } else if (this.pickCardForSocket && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
@@ -102,6 +103,7 @@ public class AccursedBlacksmithGuardian extends AbstractImageEvent {
             AbstractDungeon.effectsQueue.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy()));
             AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+            logMetricCardUpgrade(ID, "Tinker", c);
             this.pickCardForSocket = false;
         }
 
@@ -132,12 +134,14 @@ public class AccursedBlacksmithGuardian extends AbstractImageEvent {
                         AbstractCard curse = new Pain();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), new WarpedTongs());
+                        logMetricObtainCardAndRelic(ID, "Rummage", curse, new WarpedTongs());
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         break;
                     case 3:
                         this.screenNum = 2;
                         this.imageEventText.updateBodyText(LEAVE_RESULT);
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
+                        logMetricIgnored(ID);
                 }
 
                 this.imageEventText.clearRemainingOptions();
