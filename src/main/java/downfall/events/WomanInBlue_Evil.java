@@ -67,6 +67,7 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
             case INTRO:
                 switch (buttonPressed) {
                     case 0:
+                        logMetric(ID, "Punch");
                         this.screen = WomanInBlue_Evil.CurScreen.FIGHT;
                         AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(LadyInBlue.ID);
                         AbstractDungeon.getCurrRoom().rewards.clear();
@@ -126,10 +127,14 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                             CardCrawlGame.screenShake.shake(ShakeIntensity.MED, ShakeDur.MED, false);
                             CardCrawlGame.sound.play("BLUNT_FAST");
-                            AbstractDungeon.player.damage(new DamageInfo(null, MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.05F), DamageType.HP_LOSS));
+                            int damage = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.05F);
+                            logMetricTakeDamage(ID, "Get Punched", damage);
+                            AbstractDungeon.player.damage(new DamageInfo(null, damage, DamageType.HP_LOSS));
                         } else {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
+                            logMetricIgnored(ID);
                         }
+
                         break;
                     default:
                         this.imageEventText.clearRemainingOptions();

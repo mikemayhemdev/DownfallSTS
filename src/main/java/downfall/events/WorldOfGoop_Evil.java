@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
 import downfall.cards.curses.Icky;
 
+import java.util.ArrayList;
+
 public class WorldOfGoop_Evil extends AbstractImageEvent {
     public static final String ID = downfallMod.makeID("WorldOfGoop");
     public static final String NAME;
@@ -55,6 +57,16 @@ public class WorldOfGoop_Evil extends AbstractImageEvent {
 
     }
 
+    private void logMetricGoop(int goops) {
+        ArrayList<String> icks = new ArrayList<>();
+        for (int i = 0; i < goops; i++) {
+            icks.add(Icky.ID);
+        }
+        logMetric(ID, "Gooped x"+goops, icks, null, null, null,
+                null, null, null,
+                0, 0, 0, 0, this.gold * goops, 0);
+    }
+
     protected void buttonEffect(int buttonPressed) {
         switch (this.screen) {
             case INTRO:
@@ -69,6 +81,7 @@ public class WorldOfGoop_Evil extends AbstractImageEvent {
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .75F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold * 3));
                         AbstractDungeon.player.gainGold(this.gold * 3);
+                        logMetricGoop(3);
                         return;
                     case 1:
                         this.imageEventText.updateBodyText(GOLD_DIALOG);
@@ -79,6 +92,7 @@ public class WorldOfGoop_Evil extends AbstractImageEvent {
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .25F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold * 2));
                         AbstractDungeon.player.gainGold(this.gold * 2);
+                        logMetricGoop(2);
                         return;
                     case 2:
                         this.imageEventText.updateBodyText(GOLD_DIALOG);
@@ -88,12 +102,14 @@ public class WorldOfGoop_Evil extends AbstractImageEvent {
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .5F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold));
                         AbstractDungeon.player.gainGold(this.gold);
+                        logMetricGoop(1);
                         return;
                     case 3:
                         this.imageEventText.updateBodyText(LEAVE_DIALOG);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[6]);
                         this.screen = CurScreen.RESULT;
+                        logMetricIgnored(ID);
                     default:
                         return;
                 }
