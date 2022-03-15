@@ -72,7 +72,7 @@ public class Designer_Evil extends AbstractImageEvent {
         super.update();
         if (this.option != OptionChosen.NONE) {
             AbstractCard c;
-            AbstractCard upgradeCard;
+            AbstractCard upgradeCard = null;
             switch (this.option) {
                 case REMOVE:
                     if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
@@ -82,6 +82,9 @@ public class Designer_Evil extends AbstractImageEvent {
                         AbstractDungeon.player.masterDeck.removeCard(upgradeCard);
                         AbstractDungeon.gridSelectScreen.selectedCards.clear();
                         this.option = OptionChosen.NONE;
+                        logMetric(ID, "Clean Up", null, Collections.singletonList(upgradeCard.cardID), null, null, null, null, null,
+                                hpLoss, 0, 0, 0, 0, 0);
+
                     }
                     break;
                 case REMOVE_AND_UPGRADE:
@@ -102,14 +105,19 @@ public class Designer_Evil extends AbstractImageEvent {
                         }
 
                         Collections.shuffle(upgradableCards, new Random(AbstractDungeon.miscRng.randomLong()));
+
                         if (!upgradableCards.isEmpty()) {
                             upgradeCard = upgradableCards.get(0);
                             upgradeCard.upgrade();
                             AbstractDungeon.player.bottledCardUpgradeCheck(upgradeCard);
                             AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(upgradeCard.makeStatEquivalentCopy()));
                             AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+
                         } else {
                         }
+                        logMetric(ID, "Full Service", null, Collections.singletonList(removeCard.cardID), null,
+                                upgradeCard == null ? null : Collections.singletonList(upgradeCard.cardID), null, null, null,
+                                hpLoss, 0, 0, 0, 0, 0);
 
                         this.option = OptionChosen.NONE;
                     }
@@ -138,11 +146,15 @@ public class Designer_Evil extends AbstractImageEvent {
                         } else {
                             c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
                             AbstractDungeon.player.masterDeck.removeCard(c);
+                            transCards.add(c.cardID);
                             AbstractDungeon.transformCard(c, false, AbstractDungeon.miscRng);
                             newCard1 = AbstractDungeon.getTransformedCard();
+                            obtainedCards.add(newCard1.cardID);
                             AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(newCard1, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                             AbstractDungeon.gridSelectScreen.selectedCards.clear();
                         }
+                        logMetric(ID, "Clean Up", null, transCards, obtainedCards, null, null, null, null,
+                                hpLoss, 0, 0, 0, 0, 0);
 
                         this.option = OptionChosen.NONE;
                     }
@@ -151,10 +163,15 @@ public class Designer_Evil extends AbstractImageEvent {
                     if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
                         AbstractDungeon.gridSelectScreen.selectedCards.get(0).upgrade();
                         AbstractDungeon.player.bottledCardUpgradeCheck(AbstractDungeon.gridSelectScreen.selectedCards.get(0));
-                        AbstractDungeon.effectsQueue.add(new ShowCardBrieflyEffect(AbstractDungeon.gridSelectScreen.selectedCards.get(0).makeStatEquivalentCopy()));
+                        upgradeCard = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+                        AbstractDungeon.effectsQueue.add(new ShowCardBrieflyEffect(upgradeCard.makeStatEquivalentCopy()));
                         AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                         AbstractDungeon.gridSelectScreen.selectedCards.clear();
                         this.option = OptionChosen.NONE;
+                        logMetric(ID, "Adjustments", null, null, null,
+                                Collections.singletonList(upgradeCard.cardID), null, null, null,
+                                hpLoss, 0, 0, 0, 0, 0);
+
                     }
             }
         }
@@ -189,6 +206,7 @@ public class Designer_Evil extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESC[2]);
                         this.imageEventText.setDialogOption(OPTIONS[14]);
                         this.curScreen = CurrentScreen.DONE;
+                        logMetricIgnored(ID);
                         break;
                 }
                 break;
@@ -240,7 +258,7 @@ public class Designer_Evil extends AbstractImageEvent {
                     case 3:
                         this.imageEventText.loadImage("images/events/designerPunched2.jpg");
                         this.imageEventText.updateBodyText(DESC[5]);
-                        logMetricTakeDamage("Designer", "Punched", this.hpLoss);
+                        logMetricTakeDamage(ID, "Punched", this.hpLoss);
                         CardCrawlGame.sound.play("BLUNT_FAST");
                 }
 
@@ -284,6 +302,8 @@ public class Designer_Evil extends AbstractImageEvent {
             AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(upgradableCards.get(0).makeStatEquivalentCopy(), (float) Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F - 20.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
             AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(upgradableCards.get(1).makeStatEquivalentCopy(), (float) Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F + 20.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
             AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+            logMetric(ID, "Adjustments", null, null, null, cards, null, null, null,
+                    hpLoss, 0, 0, 0, 0, 0);
         }
 
     }
