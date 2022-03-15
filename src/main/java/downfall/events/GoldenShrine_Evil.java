@@ -73,7 +73,7 @@ public class GoldenShrine_Evil extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         this.screen = CUR_SCREEN.COMPLETE;
-                        //logMetricGainGold("Golden Shrine", "Pray", this.goldAmt);
+                        logMetricGainGold(ID, "Pray", this.goldAmt);
                         this.imageEventText.updateBodyText(DIALOG_2);
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldAmt));
@@ -83,7 +83,7 @@ public class GoldenShrine_Evil extends AbstractImageEvent {
                     case 1:
                         this.screen = CUR_SCREEN.COMPLETE;
                         AbstractCard curse = new Regret();
-                       // logMetricGainGoldAndCard("Golden Shrine", "Desecrate", curse, 275);
+                        logMetricGainGoldAndCard(ID, "Desecrate", curse, 275);
                         AbstractDungeon.effectList.add(new RainingGoldEffect(275));
                         AbstractDungeon.player.gainGold(275);
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
@@ -93,7 +93,7 @@ public class GoldenShrine_Evil extends AbstractImageEvent {
                         return;
                     case 2:
                         this.screen = CUR_SCREEN.COMPLETE;
-                      //  logMetricIgnored("Golden Shrine");
+                        logMetricIgnored(ID);
                         this.imageEventText.updateBodyText(IGNORE);
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                         this.imageEventText.clearRemainingOptions();

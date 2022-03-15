@@ -309,6 +309,7 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         //SlimeboundMod.logger.info("case default opening map");
+                        logMetricObtainCards(ID, this.cardsMatched + " cards matched", this.matchedCards);
                         this.openMap();
                         return;
 
@@ -348,6 +349,7 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                         } else {
                             this.screen = CUR_SCREEN.FIGHT;
                             //SlimeboundMod.logger.info("fight");
+                            logMetric(ID, "Fight");
                             MonsterGroup monsters = new MonsterGroup(new GremlinFat(-400F, 0F));
                             monsters.add(new GremlinNob(0F, 0F));
                             AbstractDungeon.getCurrRoom().monsters = monsters;
@@ -358,6 +360,7 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                             AbstractDungeon.getCurrRoom().addGoldToRewards(100);
 
                             AbstractDungeon.getCurrRoom().eliteTrigger = true;
+                            AbstractDungeon.lastCombatMetricKey = "Match Game Nob";
                             this.imageEventText.clearRemainingOptions();
                             this.enterCombatFromImage();
                             return;
