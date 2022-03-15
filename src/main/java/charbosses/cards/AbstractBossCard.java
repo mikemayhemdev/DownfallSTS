@@ -4,10 +4,9 @@ import basemod.ReflectionHacks;
 import basemod.abstracts.CustomCard;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Watcher.CharBossWatcher;
-import charbosses.cards.purple.EnDevotion;
+import charbosses.cards.colorless.EnHandOfGreedHermitNecro;
 import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.powers.cardpowers.EnemyStormPower;
-import charbosses.relics.AbstractCharbossRelic;
 import charbosses.stances.EnDivinityStance;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.Gdx;
@@ -31,7 +30,6 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.EvolvePower;
-import com.megacrit.cardcrawl.powers.IntangiblePower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
@@ -42,7 +40,6 @@ import com.megacrit.cardcrawl.vfx.combat.BuffParticleEffect;
 import com.megacrit.cardcrawl.vfx.combat.StunStarEffect;
 import com.megacrit.cardcrawl.vfx.combat.UnknownParticleEffect;
 import hermit.characters.hermit;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -110,7 +107,6 @@ public abstract class AbstractBossCard extends AbstractCard {
     private ArrayList<AbstractGameEffect> intentVfx = new ArrayList<>();
 
 
-
     public AbstractBossCard(String id, String name, String img, int cost, String rawDescription, CardType type,
                             CardColor color, CardRarity rarity, CardTarget target) {
         super(id, name, img, cost, rawDescription, type, color, rarity, target);
@@ -139,8 +135,7 @@ public abstract class AbstractBossCard extends AbstractCard {
             if (color == hermit.Enums.COLOR_YELLOW) {
                 this.portrait = new TextureAtlas.AtlasRegion(new Texture(img), 0, 0, 250, 190);
                 this.portraitImg = new Texture(img);
-            }
-            else {
+            } else {
                 this.portrait = new TextureAtlas.AtlasRegion(new Texture("downfallResources/images/cards/" + img + ".png"), 0, 0, 250, 190);
                 this.portraitImg = new Texture("downfallResources/images/cards/" + img + "_p.png");
             }
@@ -747,6 +742,9 @@ public abstract class AbstractBossCard extends AbstractCard {
         if ((!lockIntentValues) && this.damage > -1) {
             if (this.isMultiDamage) {
                 this.intentMultiAmt = this.magicNumber;
+                if (this instanceof EnHandOfGreedHermitNecro) {
+                    this.intentMultiAmt = 2;
+                }
             } else {
                 this.intentMultiAmt = -1;
             }
@@ -950,7 +948,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     public void loadCardImage(String img) {
         Texture cardTexture;
         if (imgMap.containsKey(img)) {
-            cardTexture = (Texture)imgMap.get(img);
+            cardTexture = (Texture) imgMap.get(img);
         } else {
             cardTexture = ImageMaster.loadImage(img);
             imgMap.put(img, cardTexture);

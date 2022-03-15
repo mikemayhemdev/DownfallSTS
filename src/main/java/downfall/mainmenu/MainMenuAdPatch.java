@@ -25,7 +25,7 @@ import java.net.URISyntaxException;
 public class MainMenuAdPatch {
 
     private static final UIStrings STRINGS = CardCrawlGame.languagePack.getUIString("downfall:MainMenuAd");
-    private static final MainMenuAd advert = new MainMenuAd(STRINGS.TEXT[0], "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+    private static final MainMenuAd advert = new MainMenuAd(STRINGS.TEXT[0], "https://DownfallTutorial.github.io");
 
     @SpirePatch(clz = TitleBackground.class, method = "render")
     public static class RenderPatch {

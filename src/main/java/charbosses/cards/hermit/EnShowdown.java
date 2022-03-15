@@ -32,7 +32,6 @@ public class EnShowdown extends AbstractHermitBossCard {
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-
     }
 
     @Override
