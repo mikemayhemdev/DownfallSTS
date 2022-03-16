@@ -420,7 +420,7 @@
   },
   "champ:FancyFootwork": {
     "NAME": "花哨步法",
-    "DESCRIPTION": "进入一种你不处于的 姿态 。 NL 抽 !M! 张牌。"
+    "DESCRIPTION": "进入一种你不处于的 姿态 。 NL 抽 !M! 张牌。 NL 消耗 。"
   },
   "champ:TripleStrike": {
     "NAME": "三重打击",
