@@ -258,7 +258,7 @@
   "hermit:TakeAim": {
     "NAME": "举枪瞄准",
     "DESCRIPTION": "回合开始时， hermit:专注 。",
-		"UPGRADE_DESCRIPTION": "hermit:专注 。 NL 在你的回合开始， hermit:专注 。"
+    "UPGRADE_DESCRIPTION": "hermit:专注 。 NL 回合开始时， hermit:专注 。"
   },
   "hermit:Magnum": {
     "NAME": "伟大之举",
