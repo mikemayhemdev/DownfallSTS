@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.curses.Pride;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -25,6 +26,7 @@ import downfall.cards.curses.Haunted;
 import downfall.cards.curses.PrideStandard;
 import slimebound.SlimeboundMod;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 
 public class TechniqueTome extends AbstractImageEvent {
@@ -44,6 +46,9 @@ public class TechniqueTome extends AbstractImageEvent {
     private int screenNum = 0;
     private boolean pickCard = false;
     private int hpCost = 5;
+    private int hpSpent = 0;
+    private ArrayList<String> cardsTeched = new ArrayList<>();
+    private int prideGained;
 
     public TechniqueTome() {
         super(NAME, DESCRIPTIONS[0], "champResources/images/events/book.png");
@@ -69,6 +74,8 @@ public class TechniqueTome extends AbstractImageEvent {
             AbstractDungeon.effectsQueue.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy()));
             AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+            cardsTeched.add(c.cardID);
+
             this.pickCard = false;
             if (this.hpCost == 5) {
 
@@ -98,7 +105,9 @@ public class TechniqueTome extends AbstractImageEvent {
                         this.pickCard = true;
                         if (this.hpCost > 20){
                             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new PrideStandard(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
+                            prideGained++;
                         } else {
+                            hpSpent += hpCost;
                             AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, this.hpCost));
                             AbstractDungeon.effectList.add(new FlashAtkImgEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AbstractGameAction.AttackEffect.POISON));
                         }
@@ -110,13 +119,21 @@ public class TechniqueTome extends AbstractImageEvent {
                         if (this.hpCost == 5) {
 
                             this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
+                            logMetricIgnored(ID);
                         } else {
 
                             this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
+                            ArrayList<String> curses = new ArrayList<>();
+                            for (int i = 0; i < prideGained; i++) {
+                                curses.add(Pride.ID);
+                            }
+                            logMetric(ID, "Read", prideGained > 0 ? curses : null, null, null, cardsTeched,
+                                    null, null, null,
+                                    0, 0, hpSpent, 0, 0, 0);
+
                         }
 
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
-
 
                         this.imageEventText.clearRemainingOptions();
                         return;
