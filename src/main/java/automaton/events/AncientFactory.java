@@ -57,6 +57,7 @@ public class AncientFactory extends AbstractImageEvent {
             case INTRO:
                 switch (buttonPressed) {
                     case 0:
+                        logMetric(ID, "Fought Donu");
                         this.screen = CurScreen.FIGHT;
                         //SlimeboundMod.logger.info("fight");
                         m = new ProtoDonu();
@@ -73,7 +74,7 @@ public class AncientFactory extends AbstractImageEvent {
 
                         return;
                     case 1:
-
+                        logMetric(ID, "Fought Deca");
                         this.screen = CurScreen.FIGHT;
                         //SlimeboundMod.logger.info("fight");
                         m = new ProtoDeca();
@@ -89,6 +90,7 @@ public class AncientFactory extends AbstractImageEvent {
                         this.enterCombatFromImage();
                         return;
                     case 2:
+                        logMetric(ID, "Fought Donu and Deca");
                         this.screen = CurScreen.FIGHT;
                         //SlimeboundMod.logger.info("fight");
                         m = new ProtoDonu();
@@ -113,6 +115,7 @@ public class AncientFactory extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[3]);
+                        logMetricIgnored(ID);
                         return;
                     default:
                         return;
