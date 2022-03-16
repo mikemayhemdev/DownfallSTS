@@ -99,6 +99,7 @@ public class BackToBasicsGremlin extends AbstractImageEvent {
             AbstractDungeon.effectList.add(new PurgeCardEffect(c));
             AbstractDungeon.player.masterDeck.removeCard(c);
             AbstractDungeon.gridSelectScreen.selectedCards.remove(c);
+            logMetricCardRemoval(ID, "Elegance", c);
         }
 
     }
@@ -107,15 +108,24 @@ public class BackToBasicsGremlin extends AbstractImageEvent {
         switch (this.screen) {
             case INTRO:
                 if (buttonPressed == 0) {
+                    ArrayList<String> cardsRemoved = new ArrayList<>();
+                    ArrayList<String> cardsAdded = new ArrayList<>();
 
                     for (AbstractCard c : strikesToRemove){
+                        cardsRemoved.add(c.cardID);
+                        cardsAdded.add(Shiv.ID);
                         AbstractDungeon.player.masterDeck.removeCard(c);
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Shiv(), (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
                     }
                     for (AbstractCard c : defendsToRemove){
+                        cardsRemoved.add(c.cardID);
+                        cardsAdded.add(Ward.ID);
                         AbstractDungeon.player.masterDeck.removeCard(c);
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Ward(), (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
                     }
+                    logMetric(ID, "Caprice", cardsAdded, cardsRemoved, null, null,
+                            null, null, null,
+                            0, 0, 0, 0, 0, 0);
 
                     this.imageEventText.updateBodyText(DESCRIPTIONSGUARDIAN[0]);
                     this.imageEventText.updateDialogOption(0, OPTIONS[3]);
@@ -152,6 +162,7 @@ public class BackToBasicsGremlin extends AbstractImageEvent {
                 AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH, MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT));
             }
         }
+        logMetricUpgradeCards(ID, "Simplicity", cardsUpgraded);
     }
 
     private enum CUR_SCREEN {
