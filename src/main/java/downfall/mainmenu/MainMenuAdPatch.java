@@ -85,6 +85,9 @@ public class MainMenuAdPatch {
         }
 
         public void update() {
+            if(CardCrawlGame.mainMenuScreen.screen != MainMenuScreen.CurScreen.MAIN_MENU) {
+                return;
+            }
             hb.update();
             if (hb.hovered) {
                 this.tint.a = 0.25F;
