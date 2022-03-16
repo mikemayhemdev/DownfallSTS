@@ -4,9 +4,7 @@ import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -52,9 +50,8 @@ public class GladiatorFormPower extends AbstractPower implements CloneablePowerI
             int found = AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount;
             int totaled = found / 3;
             int remainder = found % 3;
-            for (int i = 0; i < totaled; i++) {
-                addToBot(new ApplyPowerAction(owner, owner, new NextTurnPowerPower(owner, new VigorPower(owner, amount)), amount));
-            }
+            int finalized = totaled * amount;
+            addToBot(new ApplyPowerAction(owner, owner, new NextTurnPowerPower(owner, new VigorPower(owner, finalized)), finalized));
             remainingVigor -= remainder;
             if (remainingVigor <= 0) {
                 remainingVigor = 3;
@@ -70,9 +67,8 @@ public class GladiatorFormPower extends AbstractPower implements CloneablePowerI
             int found = AbstractDungeon.player.getPower(CounterPower.POWER_ID).amount;
             int totaled = found / 3;
             int remainder = found % 3;
-            for (int i = 0; i < totaled; i++) {
-                addToBot(new ApplyPowerAction(owner, owner, new NextTurnPowerPower(owner, new CounterPower(amount)), amount));
-            }
+            int finalized = totaled * amount;
+            addToBot(new ApplyPowerAction(owner, owner, new NextTurnPowerPower(owner, new CounterPower(finalized)), finalized));
             remainingCounter -= remainder;
             if (remainingCounter <= 0) {
                 remainingCounter = 3;
