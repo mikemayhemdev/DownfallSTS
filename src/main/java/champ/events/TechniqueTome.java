@@ -129,7 +129,7 @@ public class TechniqueTome extends AbstractImageEvent {
                             }
                             logMetric(ID, "Read", prideGained > 0 ? curses : null, null, null, cardsTeched,
                                     null, null, null,
-                                    0, 0, hpSpent, 0, 0, 0);
+                                    hpSpent, 0, 0, 0, 0, 0);
 
                         }
 
