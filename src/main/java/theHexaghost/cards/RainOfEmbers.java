@@ -25,12 +25,8 @@ public class RainOfEmbers extends AbstractHexaCard {
             energyOnUse = EnergyPanel.totalCount;
         }
 
-        EmbersAction r = new EmbersAction(0, p, m, damage, damageTypeForTurn, burn);
+        EmbersAction r = new EmbersAction(0, p, m, damage, damageTypeForTurn, burn, magicNumber);
         atb(new PerformXAction(r, p, energyOnUse, freeToPlayOnce));
-
-        if (energyOnUse >= 3) {
-            applyToEnemy(m, autoWeak(m, magicNumber));
-        }
     }
 
     public void upgrade() {

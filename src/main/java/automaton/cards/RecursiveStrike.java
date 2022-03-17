@@ -21,6 +21,7 @@ public class RecursiveStrike extends AbstractBronzeCard {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = 2;
+        tags.add(CardTags.STRIKE);
         thisEncodes();
         cardsToPreview = new Strike();
     }

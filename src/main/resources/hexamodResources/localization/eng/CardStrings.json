@@ -193,7 +193,7 @@
   },
   "hexamod:BurningTouch": {
     "NAME": "Burning Touch",
-    "DESCRIPTION": "If the enemy has hexamod:Soulburn, apply !burny! hexamod:Soulburn. NL Apply !burny! hexamod:Soulburn."
+    "DESCRIPTION": "Apply !burny! hexamod:Soulburn, twice if the enemy NL has hexamod:Soulburn."
   },
   "hexamod:Incineration": {
     "NAME": "Incineration",
@@ -252,7 +252,7 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Rain of Embers",
-    "DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn X times. NL If X is 3 or more, apply 2 Weak.",
+    "DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn X times. NL If X is 3 or more, apply !M! Weak.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn to a random enemy X times. NL If X is 3 or more, apply 2 Weak and Vulnerable to ALL enemies."
   },
   "hexamod:VolcanoVisage": {

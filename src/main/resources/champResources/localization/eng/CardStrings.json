@@ -169,8 +169,8 @@
   },
   "champ:IronFortress": {
     "NAME": "Technical Jig",
-    "DESCRIPTION": "Whenever you enter a Stance, trigger it's champ:Technique effect.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you enter a Stance, trigger it's champ:Technique effect."
+    "DESCRIPTION": "Whenever you enter a Stance, trigger its champ:Technique effect.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you enter a Stance, trigger its champ:Technique effect."
   },
   "champ:Lariat": {
     "NAME": "Lariat",
@@ -264,7 +264,7 @@
   },
   "champ:HeartStrike": {
     "NAME": "Finish Him",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy is below 50% HP, deal !D! damage again.",
+    "DESCRIPTION": "Deal !D! damage, twice if the enemy is below !M! % Hp.",
     "EXTENDED_DESCRIPTION": [
       "A poor time for that move.",
       "That foe isn't ready to be ended yet."
