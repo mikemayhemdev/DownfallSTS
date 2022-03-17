@@ -142,7 +142,7 @@
   "champ:IronFortressPower": {
     "NAME": "战斗跃舞",
     "DESCRIPTIONS": [
-      "每当你进入 #y姿态 时，触发它的战术 #b",
+      "每当你进入 #y姿态 时，触发它的 #y战术 #b",
       " #b",
       " 次。"
     ]
