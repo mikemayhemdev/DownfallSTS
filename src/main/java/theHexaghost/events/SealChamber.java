@@ -94,6 +94,12 @@ public class SealChamber extends AbstractImageEvent {
         return (AbstractCard) list.get(0);
     }
 
+    private ArrayList<String> cardsRemoved = new ArrayList<>();
+    private ArrayList<String> cardsObtained = new ArrayList<>();
+    private int goldLost = 0;
+    private int damageTaken = 0;
+
+
     protected void buttonEffect(int buttonPressed) {
         switch (this.screen) {
             case INTRO:
@@ -105,6 +111,8 @@ public class SealChamber extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         this.screen = CurScreen.INTRO;
                         used = true;
+                        damageTaken = hpLoss;
+                        cardsObtained.add(FirstSeal.ID);
                         return;
                     case 1:
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldLoss));
@@ -115,6 +123,8 @@ public class SealChamber extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         this.screen = CurScreen.INTRO;
                         used = true;
+                        goldLost = goldLoss;
+                        cardsObtained.add(SecondSeal.ID);
                         return;
                     case 2:
                         AbstractDungeon.topLevelEffects.add(new com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect(this.cardOption, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
@@ -125,6 +135,8 @@ public class SealChamber extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         this.screen = CurScreen.INTRO;
                         used = true;
+                        cardsObtained.add(ThirdSeal.ID);
+                        cardsRemoved.add(this.cardOption.cardID);
                         return;
                     case 3:
                         AbstractDungeon.player.removePotion(this.potionOption);
@@ -134,6 +146,7 @@ public class SealChamber extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         this.screen = CurScreen.INTRO;
                         used = true;
+                        cardsObtained.add(FourthSeal.ID);
                         return;
                     case 4:
                         this.imageEventText.clearAllDialogs();
@@ -141,8 +154,11 @@ public class SealChamber extends AbstractImageEvent {
                         this.imageEventText.setDialogOption(OPTIONS[8]);
                         if (!used) {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
+                            logMetricIgnored(ID);
                         } else {
-
+                            logMetric(ID, "Entered Chamber", cardsObtained, cardsRemoved, null, null,
+                                    null, null, null,
+                                    damageTaken, 0, 0, 0, 0, goldLost);
                             this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                         }
                         return;
