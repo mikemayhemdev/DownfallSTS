@@ -11,8 +11,8 @@
     "NAME": "Doomsday",
     "DESCRIPTIONS": [
       "The next time you #yIgnite the Inferno Ghostflame and all #b",
-      " Ghostflames are #yIgnited, end your turn and take an additional turn.",
-      "Whenever you #yIgnite the Inferno Ghostflame and at least #b"
+      " Ghostflames are #yIgnited, gain an additional turn.",
+      "The next time you #yIgnite the Inferno Ghostflame and at least #b"
     ]
   },
   "hexamod:ApplyBurnAtTurnStartOncePower": {
@@ -93,11 +93,10 @@
       " random cards in your deck."
     ]
   },
-  "hexamod:GainStrengthThatGoesAwayPower": {
+  "hexamod:StopFromAdvancingPower": {
     "NAME": "Here and Now",
     "DESCRIPTIONS": [
-      "Gain ",
-      " at the start of a turn. You no longer #yAdvance at the end of your turn."
+      "You no longer #yAdvance at the end of your turn."
     ]
   },
   "hexamod:GhostFlameBarrierPower": {
@@ -204,6 +203,12 @@
     "NAME": "Living Bomb",
     "DESCRIPTIONS": [
       "The next time this creature's #ySoulburn is detonated, it affects ALL enemies."
+    ]
+  },
+  "hexamod:GainEnergyAtStartOfTurnPower": {
+    "NAME": "More Energy",
+    "DESCRIPTIONS": [
+      "At the start of your turn gain "
     ]
   }
 }
