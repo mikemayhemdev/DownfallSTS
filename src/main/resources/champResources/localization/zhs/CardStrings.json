@@ -199,12 +199,7 @@
   },
   "champ:PreciseThrust": {
     "NAME": "精准冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:战狂 champ:连段 ：造成 !D! 点伤害。 NL champ:防守 champ:连段 ：获得 !B! 点 格挡 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL ",
-    "EXTENDED_DESCRIPTION": [
-      " champ:战狂 champ:连段 ： 造成 !D! 点伤害。 NL ",
-      " champ:防守 champ:连段 ： 获得 !B! 点 格挡 。"
-    ]
+    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:战狂 champ:连段 ：造成 !D! 点伤害。 NL champ:防守 champ:连段 ：获得 !B! 点 格挡 。"
   },
   "champ:CrookedStrike": {
     "NAME": "蛇形打击",
