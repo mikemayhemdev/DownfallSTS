@@ -199,7 +199,7 @@
   },
   "champ:PreciseThrust": {
     "NAME": "Precise Thrust",
-    "DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: Deal !D! damage. NL *Defensive champ:Combo: Gain !B! Block.",
+    "DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: Deal !D! damage. NL *Defensive champ:Combo: Gain !B! Block."
   },
   "champ:CrookedStrike": {
     "NAME": "Crooked Strike",

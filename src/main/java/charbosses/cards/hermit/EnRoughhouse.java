@@ -41,7 +41,7 @@ public class EnRoughhouse extends AbstractHermitBossCard {
 
     @Override
     public void onSpecificTrigger() {
-        destroyIntent();
+        intentActive = false;
         intent = AbstractMonster.Intent.ATTACK;
         createIntent();
     }
