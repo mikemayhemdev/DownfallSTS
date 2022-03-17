@@ -5,19 +5,15 @@ import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.curses.Doubt;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.*;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import downfall.downfallMod;
-import downfall.powers.DrawReductionPowerPlus;
 import downfall.powers.gauntletpowers.MonsterVigor;
-import downfall.powers.gauntletpowers.OnDeathEveryoneBuffer;
 import downfall.powers.gauntletpowers.OnDeathEveryoneRuggedVuln;
 import hermit.powers.Bruise;
 
-public class Hermit extends AbstractMonster {
+public class Hermit extends GauntletBoss {
 
     public static final String ID = downfallMod.makeID("GauntletHermit");
     public static final String NAME = CardCrawlGame.languagePack.getCharacterString("hermit:hermit").NAMES[0];
@@ -30,7 +26,7 @@ public class Hermit extends AbstractMonster {
 
     public Hermit(float x, float y) {
         super(NAME, ID, 72, 0.0F, -5.0F, 240.0F, 270.0F, null, x, y);
-   this.loadAnimation("hermitResources/images/char/hermit/Hermit.atlas", "hermitResources/images/char/hermit/Hermit.json", 1.0f);
+        this.loadAnimation("hermitResources/images/char/hermit/Hermit.atlas", "hermitResources/images/char/hermit/Hermit.json", 1.0f);
         this.flipHorizontal = true;
         AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
@@ -83,24 +79,23 @@ public class Hermit extends AbstractMonster {
     }
 
     protected void getMove(int num) {
-        turnNum ++;
+        turnNum++;
         if (turnNum == 5) {
-            setMove((byte)5, Intent.BUFF);
-        }
-        else {
+            setMove((byte) 5, Intent.BUFF);
+        } else {
             int rnd = AbstractDungeon.cardRandomRng.random(0, 3);
             switch (rnd) {
                 case 0:
-                    setMove((byte)1, Intent.ATTACK, this.damage.get(0).base, 2, true);
+                    setMove((byte) 1, Intent.ATTACK, this.damage.get(0).base, 2, true);
                     break;
                 case 1:
-                    setMove((byte)2, Intent.ATTACK_DEFEND, this.damage.get(1).base);
+                    setMove((byte) 2, Intent.ATTACK_DEFEND, this.damage.get(1).base);
                     break;
                 case 2:
-                    setMove((byte)3, Intent.DEFEND);
+                    setMove((byte) 3, Intent.DEFEND);
                     break;
                 case 3:
-                    setMove((byte)4, Intent.ATTACK_DEBUFF, this.damage.get(2).base);
+                    setMove((byte) 4, Intent.ATTACK_DEBUFF, this.damage.get(2).base);
                     break;
             }
         }

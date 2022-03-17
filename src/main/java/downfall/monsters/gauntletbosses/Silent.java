@@ -22,7 +22,7 @@ import downfall.powers.gauntletpowers.MonsterVigor;
 import downfall.powers.gauntletpowers.OnDeathEveryoneBuffer;
 import downfall.powers.gauntletpowers.OnDeathEveryoneThorns;
 
-public class Silent extends AbstractMonster {
+public class Silent extends GauntletBoss {
 
     public static final String ID = downfallMod.makeID("GauntletSilent");
     public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Silent").NAMES[0];

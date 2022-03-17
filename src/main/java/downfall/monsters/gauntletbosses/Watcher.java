@@ -24,7 +24,7 @@ import downfall.powers.gauntletpowers.MonsterVigor;
 import downfall.powers.gauntletpowers.OnDeathEveryoneBuffer;
 import downfall.powers.gauntletpowers.OnDeathEveryoneVigor;
 
-public class Watcher extends AbstractMonster {
+public class Watcher extends GauntletBoss {
 
     public static final String ID = downfallMod.makeID("GauntletWatcher");
     public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Watcher").NAMES[0];

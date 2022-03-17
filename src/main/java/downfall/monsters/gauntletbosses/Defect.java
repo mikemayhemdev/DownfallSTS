@@ -21,7 +21,7 @@ import downfall.powers.DrawReductionPowerPlus;
 import downfall.powers.gauntletpowers.MonsterVigor;
 import downfall.powers.gauntletpowers.OnDeathEveryoneBuffer;
 
-public class Defect extends AbstractMonster {
+public class Defect extends GauntletBoss {
 
     public static final String ID = downfallMod.makeID("GauntletDefect");
     public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Defect").NAMES[0];
