@@ -15,8 +15,8 @@ public class FastForward extends AbstractHexaCard {
     //stupid intellij stuff SKILL, SELF, COMMON
 
     public FastForward() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        isEthereal = true;
+        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
+        exhaust = true;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
@@ -31,7 +31,8 @@ public class FastForward extends AbstractHexaCard {
         if (!upgraded) {
             upgradeName();
             //upgradeBaseCost(1);
-            this.isEthereal = false;
+            //this.isEthereal = false;
+            this.exhaust = false;
 
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();

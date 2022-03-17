@@ -27,10 +27,8 @@ import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import sneckomod.SneckoMod;
-import theHexaghost.cards.Defend;
+import theHexaghost.cards.*;
 import theHexaghost.cards.Float;
-import theHexaghost.cards.Sear;
-import theHexaghost.cards.Strike;
 import theHexaghost.ghostflames.*;
 import theHexaghost.relics.SpiritBrand;
 import downfall.util.TextureLoader;
@@ -207,6 +205,7 @@ public class TheHexaghost extends CustomPlayer {
         }
         retVal.add(Sear.ID);
         retVal.add(Float.ID);
+        retVal.add(FastForward.ID);
         return retVal;
     }
 

@@ -27,7 +27,7 @@
   },
   "hexamod:FastForward": {
     "NAME": "Fast Forward",
-    "DESCRIPTION": "Ethereal. NL hexamod:Ignite the current Ghostflame. NL hexamod:Advance.",
+    "DESCRIPTION": "hexamod:Ignite the current Ghostflame. NL hexamod:Advance. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "hexamod:Ignite the current Ghostflame. NL hexamod:Advance."
   },
   "hexamod:Rewind": {

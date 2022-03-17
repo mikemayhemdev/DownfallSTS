@@ -36,7 +36,7 @@ public class InfernoGhostflame extends AbstractGhostflame {
 
     public InfernoGhostflame(float x, float y) {
         super(x, y);
-        damage = 4;
+        damage = 6;
         //this.textColor = new Color(1F,.75F,.75F,1F);
         this.triggersRequired = 3;
 
@@ -63,12 +63,15 @@ public class InfernoGhostflame extends AbstractGhostflame {
             if (gf.charged) {
                 atb(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
                 //atb(new WaitAction(0.1F));  //Critical for keeping the UI not broken, and helps sell the anim
-                atb(new ExtinguishAction(gf));
+               // atb(new ExtinguishAction(gf));
             }
         }
+        /*
         if (GhostflameHelper.activeGhostFlame == this){
             atb(new AdvanceAction(false));
         }
+        */
+
         atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(1), 1));
     }
 
@@ -172,9 +175,9 @@ public class InfernoGhostflame extends AbstractGhostflame {
         }
         int x = getEffectCount();
         s = s + DESCRIPTIONS[6] + x + DESCRIPTIONS[7];
-      //  if (GhostflameHelper.activeGhostFlame == this) {
-      //      s = s + DESCRIPTIONS[8];
-     //   }
+        if (GhostflameHelper.activeGhostFlame == this) {
+            s = s + DESCRIPTIONS[9];
+        }
         return s;
     }
 
