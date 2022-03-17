@@ -264,7 +264,7 @@
   },
   "champ:HeartStrike": {
     "NAME": "穿心一击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若敌人生命低于 50%，再造成一次伤害。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若敌人生命早已低于 !M! %，造成两次伤害。",
     "EXTENDED_DESCRIPTION": [
       "还不是时候。",
       "那个敌人还没准备好被消灭。"
