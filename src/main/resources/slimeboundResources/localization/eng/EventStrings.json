@@ -14,13 +14,13 @@
   "Slimebound:WorldofGoop": {
     "NAME": "World of Goop",
     "DESCRIPTIONS": [
-      "You fall into a puddle. NL @IT'S@ @MADE@ @OF@ #g@SLIME@ #g@GOOP!!@ NL Calmly, you bathe yourself as you bond with the goop, enjoying a moment of reprieve. NL NL Climbing out, you notice in the pool a pile of #ygold from unfortunate adventurers, along with a curious creature who seems to be attracted to the shiny metal.",
-      "You exit the invigorating slime bath, fishing out the #ygold, leaving the creature with a sad look upon its amorphous face.",
-      "You succeed in negotiating a deal with the creature to provide it with more shiny metal if it will aid you in your quest. NL You and your newfound #gfriend exit the slime bath together."
+      "You fall into a puddle. NL @IT'S@ @MADE@ @OF@ #g@SLIME@ #g@GOOP!!@ NL Calmly, you bathe yourself as you bond with the goop, enjoying a moment of reprieve. NL NL Climbing out, you notice in the pool the #ysouls of a few unfortunate adventurers, slowly being consumed by a gluttonous creature.",
+      "You exit the invigorating slime bath, absorbing the #ysouls, leaving the creature with a sad look upon its amorphous face.",
+      "You succeed in negotiating a deal with the creature to provide it with more tasty souls if it will aid you in your quest. NL You and your newfound #gfriend exit the slime bath together."
     ],
     "OPTIONS": [
-      "[Gather Gold] #gGain #g75 #gGold.",
-      "[Recruit] #rLose #r75 #rGold. #gGain #yGreed #yOoze.",
+      "[Gather Souls] #gGain #g75 #gSouls.",
+      "[Recruit] #rLose #r75 #rSouls. #gGain #yGreed #yOoze.",
       "[Leave]",
       "[Locked] Requires 75 Souls."
     ]

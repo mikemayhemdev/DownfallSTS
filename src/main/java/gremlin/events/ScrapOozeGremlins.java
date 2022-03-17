@@ -51,10 +51,12 @@ public class ScrapOozeGremlins extends AbstractImageEvent {
                         int random = AbstractDungeon.miscRng.random(0, 99);
                         if (random < this.curseObtainChance) {
                             this.imageEventText.updateBodyText(BIG_FAIL_MSG);
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Scatterbrained(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
+                            Scatterbrained curse = new Scatterbrained();
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                             this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                             this.imageEventText.removeDialogOption(1);
                             this.screenNum = 1;
+                            logMetricObtainCard(ID, "Got Bored", curse);
                         } else if (random >= 99 - this.relicObtainChance) {
                             this.imageEventText.updateBodyText(SUCCESS_MSG);
                             AbstractRelic r = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());
@@ -62,6 +64,7 @@ public class ScrapOozeGremlins extends AbstractImageEvent {
                             this.imageEventText.removeDialogOption(1);
                             this.screenNum = 1;
                             AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F, r);
+                            logMetricObtainRelic(ID, "Reached Inside", r);
                         } else {
                             this.imageEventText.updateBodyText(FAIL_MSG);
                             this.curseObtainChance += 5;
@@ -79,6 +82,7 @@ public class ScrapOozeGremlins extends AbstractImageEvent {
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                         this.imageEventText.removeDialogOption(1);
                         this.screenNum = 1;
+                        logMetricIgnored(ID);
                         return;
                     default:
                         return;

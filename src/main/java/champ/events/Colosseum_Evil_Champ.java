@@ -51,6 +51,7 @@ public class Colosseum_Evil_Champ extends AbstractImageEvent {
             case INTRO:
                 switch (buttonPressed) {
                     case 0:
+                        logMetric(ID, "Fought Black Knight");
                         this.screen = CurScreen.FIGHT;
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2] + DESCRIPTIONS[3]);
                         //SlimeboundMod.logger.info("fight");
@@ -65,6 +66,7 @@ public class Colosseum_Evil_Champ extends AbstractImageEvent {
 
                         return;
                     case 1:
+                        logMetric(ID, "Fought Captured Player");
                         this.screen = CurScreen.FIGHT;
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2] + DESCRIPTIONS[4]);
                         //SlimeboundMod.logger.info("fight");
@@ -110,6 +112,7 @@ public class Colosseum_Evil_Champ extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[5]);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[2]);
+                        logMetricIgnored(ID);
                         return;
                     default:
                         return;

@@ -107,6 +107,7 @@ public class BackToBasicsHexaghost extends AbstractImageEvent {
             AbstractDungeon.effectList.add(new PurgeCardEffect(c));
             AbstractDungeon.player.masterDeck.removeCard(c);
             AbstractDungeon.gridSelectScreen.selectedCards.remove(c);
+            logMetricCardRemoval(ID, "Elegance", c);
         }
 
     }
@@ -118,7 +119,9 @@ public class BackToBasicsHexaghost extends AbstractImageEvent {
 
                     for (AbstractCard c : cardsToRemove){
                         CardModifierManager.addModifier(c, new EtherealMod());
-                   }
+                        cardsUpgraded.add(c.cardID);
+                    }
+                    logMetricUpgradeCards(ID, "Wistfulness", cardsUpgraded);
 
                     this.imageEventText.updateBodyText(DESCRIPTIONSGUARDIAN[0]);
                     this.imageEventText.updateDialogOption(0, OPTIONS[3]);
@@ -155,6 +158,7 @@ public class BackToBasicsHexaghost extends AbstractImageEvent {
                 AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH, MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT));
             }
         }
+        logMetricUpgradeCards(ID, "Simplicity", cardsUpgraded);
     }
 
     private enum CUR_SCREEN {

@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 
+import java.util.ArrayList;
+
 public class GremlinTrenchcoat extends AbstractImageEvent {
     public static final String ID = "Gremlin:Trenchcoat";
     private static final EventStrings eventStrings;
@@ -49,6 +51,8 @@ public class GremlinTrenchcoat extends AbstractImageEvent {
 
     private void getColorlessCard(int num) {
         AbstractDungeon.getCurrRoom().rewards.clear();
+        logMetricLoseGold(ID, "Bought " + num + " cards", goldAmount * num);
+
         for (int i=0;i<num;i++) {
             RewardItem reward = new RewardItem(AbstractCard.CardColor.COLORLESS);
             while(reward.cards.size() > 1) {
@@ -82,6 +86,7 @@ public class GremlinTrenchcoat extends AbstractImageEvent {
                         break;
                     case 3:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
+                        logMetricIgnored(ID);
                 }
 
                 this.imageEventText.updateDialogOption(0, OPTIONS[5]);

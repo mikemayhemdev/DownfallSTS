@@ -76,9 +76,8 @@ public class Gym extends AbstractImageEvent {
             this.imageEventText.updateDialogOption(0, OPTIONS[4]);
             this.pickCard = false;
             this.screen = CurScreen.RESULT;
-
+            logMetricCardUpgrade(ID, "Spar", c);
         }
-
     }
 
     protected void buttonEffect(int buttonPressed) {
@@ -91,6 +90,7 @@ public class Gym extends AbstractImageEvent {
                         this.imageEventText.setDialogOption(OPTIONS[4]);
                         AbstractDungeon.player.increaseMaxHp(maxHP, true);
                         this.screen = CurScreen.RESULT;
+                        logMetricMaxHPGain(ID, "Cardio", maxHP);
                         return;
                     case 1:
                        // this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
@@ -103,9 +103,11 @@ public class Gym extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[4]);
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new LiftRelic());
+                        LiftRelic relic = new LiftRelic();
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, relic);
 
                         this.screen = CurScreen.RESULT;
+                        logMetricObtainRelic(ID, "Lift", relic);
                         return;
                     default:
                         return;

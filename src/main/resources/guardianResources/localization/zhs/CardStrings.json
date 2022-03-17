@@ -109,7 +109,7 @@
   },
   "Guardian:WalkerClaw": {
     "NAME": "行者爪击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 力量 在本牌中发挥 !M! 倍效果。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
   },
   "Guardian:SphericShield": {
     "NAME": "球形护盾",

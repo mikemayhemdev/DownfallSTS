@@ -420,7 +420,7 @@
   },
   "champ:FancyFootwork": {
     "NAME": "Fancy Footwork",
-    "DESCRIPTION": "Enter a Stance you aren't in. NL Draw !M! cards."
+    "DESCRIPTION": "Enter a Stance you aren't in. NL Draw !M! cards. NL Exhaust."
   },
   "champ:TripleStrike": {
     "NAME": "Triple Strike",
