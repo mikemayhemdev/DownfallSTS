@@ -23,7 +23,7 @@ import downfall.powers.gauntletpowers.MonsterVigor;
 import downfall.powers.gauntletpowers.OnDeathEveryoneBuffer;
 import downfall.powers.gauntletpowers.OnDeathEveryoneStr;
 
-public class Ironclad extends AbstractMonster {
+public class Ironclad extends GauntletBoss {
 
     public static final String ID = downfallMod.makeID("GauntletIronclad");
     public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Ironclad").NAMES[0];

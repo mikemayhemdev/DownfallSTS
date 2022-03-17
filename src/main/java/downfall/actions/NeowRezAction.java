@@ -71,7 +71,15 @@ public class NeowRezAction extends AbstractGameAction {
                 String name;
                 name = owner.bossesToRez.get(i);
                 owner.bossesRezzed.add(name);
-                AbstractDungeon.actionManager.addToTop(new SpawnMonsterAction(rezBoss(name, i), false));
+                AbstractMonster q = rezBoss(name, i);
+                AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        isDone = true;
+                        q.usePreBattleAction();
+                    }
+                });
+                AbstractDungeon.actionManager.addToTop(new SpawnMonsterAction(q, false));
             }
         }
 
