@@ -73,12 +73,14 @@ public class D8 extends AbstractImageEvent {
                         for (AbstractCard c : CardLibrary.getAllCards()) {
                             if (c instanceof AbstractUnknownCard)
                                 list.add(c);
+
                         }
                         Collections.shuffle(list);
 
                         int times = 0;
+                        ArrayList<String> cardsAdded = new ArrayList<>();
                         for (AbstractCard c : list) {
-
+                            cardsAdded.add(c.cardID);
                             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float) (Settings.WIDTH * (0.1 + (0.2 * times))), (float) (Settings.HEIGHT / 2)));
                             times++;
                             if (times == 5) break;
@@ -91,22 +93,29 @@ public class D8 extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         this.screen = CurScreen.END;
                         list.clear();
+                        logMetric(ID, "Shatter", cardsAdded, null, null, null,
+                                null, null, null,
+                                finalDmg, 0, 0, 0, 0, 0);
                         break;
                     case 1:
 
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Pain(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), new sneckomod.relics.D8());
+                        Pain curse = new Pain();
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+                        sneckomod.relics.D8 relic = new sneckomod.relics.D8();
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), relic);
 
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[3]);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         this.screen = CurScreen.END;
+                        logMetricObtainCardAndRelic(ID, "Take", curse, relic);
                         return;
                     case 2:
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[3]);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                         this.screen = CurScreen.END;
+                        logMetricIgnored(ID);
                         return;
                 }
 

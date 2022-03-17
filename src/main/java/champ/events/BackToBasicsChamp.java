@@ -111,8 +111,8 @@ public class BackToBasicsChamp extends AbstractImageEvent {
             AbstractDungeon.effectList.add(new PurgeCardEffect(c));
             AbstractDungeon.player.masterDeck.removeCard(c);
             AbstractDungeon.gridSelectScreen.selectedCards.remove(c);
+            logMetricCardRemoval(ID, "Elegance", c);
         }
-
     }
 
     protected void buttonEffect(int buttonPressed) {
@@ -149,24 +149,20 @@ public class BackToBasicsChamp extends AbstractImageEvent {
 
 
     private void techStrikeAndDefends() {
-        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
+        ArrayList<String> cardsTeched = new ArrayList<>();
 
-        while (true) {
-            AbstractCard c;
-            do {
-                if (!var1.hasNext()) {
-                    return;
+        for(AbstractCard c: AbstractDungeon.player.masterDeck.group) {
+            if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
+                if (!c.hasTag(ChampMod.TECHNIQUE)) {
+                    CardModifierManager.addModifier(c, new TechniqueMod());
+                    c.initializeDescription();
+                    cardsTeched.add(c.cardID);
                 }
-
-                c = (AbstractCard) var1.next();
-            } while (!c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) && !c.hasTag(AbstractCard.CardTags.STARTER_DEFEND));
-
-            if (!c.hasTag(ChampMod.TECHNIQUE)) {
-                CardModifierManager.addModifier(c, new TechniqueMod());
-            c.initializeDescription();
             }
         }
+        logMetricUpgradeCards(ID, "Intuition", cardsTeched);
     }
+
     private void upgradeStrikeAndDefends() {
         for (AbstractCard c: AbstractDungeon.player.masterDeck.group){
             if (c.canUpgrade() && (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) ) {
@@ -176,6 +172,7 @@ public class BackToBasicsChamp extends AbstractImageEvent {
                 AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH, MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT));
             }
         }
+        logMetricUpgradeCards(ID, "Simplicity", cardsUpgraded);
     }
 
     private enum CUR_SCREEN {

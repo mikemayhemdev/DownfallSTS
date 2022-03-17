@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import slimebound.relics.GreedOozeRelic;
 
@@ -75,17 +76,20 @@ public class WorldOfGoopSlimebound extends AbstractImageEvent {
                         AbstractDungeon.player.gainGold(this.gold);
                         imageEventText.updateBodyText(GOLD_DIALOG);
                         this.screen = WorldOfGoopSlimebound.CurScreen.RESULT;
+                        logMetricGainGold(ID, "Gather Souls", gold);
                         return;
                     case 1:
                         imageEventText.updateBodyText(LEAVE_DIALOG);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[2]);
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f, RelicLibrary.getRelic(GreedOozeRelic.ID).makeCopy());
+                        AbstractRelic relic = RelicLibrary.getRelic(GreedOozeRelic.ID).makeCopy();
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f, relic);
                         AbstractDungeon.player.loseGold(this.gold);
                         this.screen = WorldOfGoopSlimebound.CurScreen.RESULT;
+                        logMetricObtainRelicAtCost(ID, "Recruit", relic, gold);
                         return;
                     default:
-
+                        logMetricIgnored(ID);
                         return;
                 }
             default:

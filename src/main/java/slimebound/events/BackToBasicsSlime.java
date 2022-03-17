@@ -105,6 +105,7 @@ public class BackToBasicsSlime extends AbstractImageEvent {
             AbstractDungeon.effectList.add(new PurgeCardEffect(c));
             AbstractDungeon.player.masterDeck.removeCard(c);
             AbstractDungeon.gridSelectScreen.selectedCards.remove(c);
+            logMetricCardRemoval(ID, "Elegance", c);
         }
 
     }
@@ -113,10 +114,13 @@ public class BackToBasicsSlime extends AbstractImageEvent {
         switch (this.screen) {
             case INTRO:
                 if (buttonPressed == 0) {
+                    ArrayList<String> cardsCommanded = new ArrayList<>();
 
                     for (AbstractCard c : cardsToRemove){
                         CardModifierManager.addModifier(c, new CommandMod());
-                   }
+                        cardsCommanded.add(c.cardID);
+                    }
+                    logMetricUpgradeCards(ID, "Inspiration", cardsCommanded);
 
                     this.imageEventText.updateBodyText(DESCRIPTIONSGUARDIAN[0]);
                     this.imageEventText.updateDialogOption(0, OPTIONS[3]);
@@ -153,6 +157,7 @@ public class BackToBasicsSlime extends AbstractImageEvent {
                 AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH, MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT));
             }
         }
+        logMetricUpgradeCards(ID, "Simplicity", cardsUpgraded);
     }
 
     private enum CUR_SCREEN {

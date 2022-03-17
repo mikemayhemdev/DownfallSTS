@@ -41,18 +41,22 @@ public class SuspiciousHouse extends AbstractImageEvent {
                 this.imageEventText.clearAllDialogs();
                 switch (buttonPressed) {
                     case 0:
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Bewildered(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), new sneckomod.relics.BabySnecko());
+                        Bewildered curse = new Bewildered();
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+                        BabySnecko relic = new BabySnecko();
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), relic);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[1]);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         this.screen = CurScreen.END;
+                        logMetricObtainCardAndRelic(ID, "Rescued", curse, relic);
                         return;
                     case 2:
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[1]);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         this.screen = CurScreen.END;
+                        logMetricIgnored(ID);
                         return;
                 }
 

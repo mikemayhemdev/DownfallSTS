@@ -40,6 +40,7 @@ public class HexaFalling extends AbstractImageEvent {
                     this.imageEventText.setDialogOption(OPTIONS[1]);
                     this.imageEventText.updateBodyText(DESCRIPTIONS[0]);
                     this.screen = CurScreen.END;
+                    logMetric(ID, "Float");
                 }
                 break;
             case END:

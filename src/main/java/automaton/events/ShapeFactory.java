@@ -92,6 +92,7 @@ public class ShapeFactory extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[3]);
+                        logMetricIgnored(ID);
                         return;
                     default:
                         return;
@@ -156,7 +157,6 @@ public class ShapeFactory extends AbstractImageEvent {
         this.screen = CurScreen.FIGHT;
         //SlimeboundMod.logger.info("fight");
         float spawnX = 0F;
-
         AbstractDungeon.getCurrRoom().rewards.clear();
         if (fightSpiker){
             AbstractDungeon.getCurrRoom().rewards.add(new SpikeReward());
@@ -167,6 +167,8 @@ public class ShapeFactory extends AbstractImageEvent {
         if (fightExploder){
             AbstractDungeon.getCurrRoom().rewards.add(new ExplodeReward());
         }
+        int numShapes = AbstractDungeon.getCurrRoom().rewards.size();
+        logMetric(ID, "Fought " + numShapes + " shapes");
 
         if (fightSpiker){
             AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new Spiker(spawnX, 0.0F));

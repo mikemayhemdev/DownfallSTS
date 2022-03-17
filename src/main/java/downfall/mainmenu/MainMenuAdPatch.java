@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.scenes.TitleBackground;
+import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 import downfall.util.TextureLoader;
 
 import java.awt.*;

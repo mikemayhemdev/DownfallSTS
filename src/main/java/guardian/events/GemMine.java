@@ -148,7 +148,7 @@ public class GemMine extends AbstractImageEvent {
                         this.imageEventText.clearRemainingOptions();
                         if(cardsAdded.size() > 0 || relicsAdded.size() > 0 || damageTaken > 0) {
                             logMetric(ID, "Entered Mine", cardsAdded, null, null, null, relicsAdded, null, null,
-                                    0, 0, damageTaken, 0, 0, 0);
+                                    damageTaken, 0, 0, 0, 0, 0);
                         } else {
                             logMetricIgnored(ID);
                         }
