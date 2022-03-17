@@ -48,9 +48,9 @@
   },
   "Slimebound:GreedOozeRelic": {
     "NAME": "Greed Ooze",
-    "FLAVOR": "A friend found in the Spire who hoards gold.",
+    "FLAVOR": "A friend found in the Spire who devours souls.",
     "DESCRIPTIONS": [
-      "At the start of combat, spawn #yGreed #yOoze. NL At Rest Sites, #yGreed #yOoze will take #b50 of your gold, increasing its damage by #b1."
+      "At the start of combat, spawn #yGreed #yOoze. NL At Rest Sites, #yGreed #yOoze will take #b50 of your souls, increasing its damage by #b1."
     ]
   },
   "Slimebound:PreparedRelic": {
