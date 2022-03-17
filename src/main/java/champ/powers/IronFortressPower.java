@@ -2,6 +2,7 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
+import champ.stances.AbstractChampStance;
 import champ.stances.DefensiveStance;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -43,10 +44,10 @@ public class IronFortressPower extends AbstractPower implements CloneablePowerIn
         if (!newStance.ID.equals(NeutralStance.STANCE_ID) && !(oldStance.ID.equals(newStance.ID))) {
             flash();
             //addToBot(new ApplyPowerAction(owner, owner, new CounterPower(amount), amount));
-            DefensiveStance stance = new DefensiveStance();
-            for (int x = 0; x < this.amount; x++) {
-                stance.technique();
-            }
+            if (newStance instanceof AbstractChampStance)
+                for (int x = 0; x < this.amount; x++) {
+                    ((AbstractChampStance) newStance).technique();
+                }
         }
     }
 

@@ -1,33 +1,21 @@
 package theHexaghost.powers;
 
-import basemod.ReflectionHacks;
 import basemod.interfaces.CloneablePowerInterface;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import com.megacrit.cardcrawl.vfx.combat.GainPowerEffect;
-import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
-import theHexaghost.TheHexaghost;
-import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.util.OnAdvanceOrRetractSubscriber;
 import downfall.util.TextureLoader;
 
-import java.util.ArrayList;
+public class StopFromAdvancingPower extends AbstractPower implements CloneablePowerInterface {
 
-public class GainStrengthThatGoesAwayPower extends AbstractPower implements CloneablePowerInterface, OnAdvanceOrRetractSubscriber {
-
-    public static final String POWER_ID = HexaMod.makeID("GainStrengthThatGoesAwayPower");
+    public static final String POWER_ID = HexaMod.makeID("StopFromAdvancingPower");
 
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Present84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Present32.png");
@@ -39,12 +27,11 @@ public class GainStrengthThatGoesAwayPower extends AbstractPower implements Clon
 
     private float timer;
 
-    public GainStrengthThatGoesAwayPower(final int amount) {
+    public StopFromAdvancingPower() {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
-        this.amount = amount;
-        this.type = PowerType.BUFF;
+        this.type = PowerType.DEBUFF;
         this.isTurnBased = true;
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
@@ -79,24 +66,9 @@ public class GainStrengthThatGoesAwayPower extends AbstractPower implements Clon
  */
 
     @Override
-    public void atStartOfTurn() {
-        this.addToBot(new GainEnergyAction(this.amount));
-        this.flash();
-    }
-
-    @Override
     public void updateDescription() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(powerStrings.DESCRIPTIONS[0]);
-
-        for(int i = 0; i < this.amount; ++i) {
-            sb.append("[E] ");
-        }
-
-        sb.append(LocalizedStrings.PERIOD);
-        this.description = sb.toString();
+        this.description = powerStrings.DESCRIPTIONS[0];
     }
-    //TODO Split into two different powers.
 
     /*
     @Override
@@ -107,6 +79,6 @@ public class GainStrengthThatGoesAwayPower extends AbstractPower implements Clon
 
     @Override
     public AbstractPower makeCopy() {
-        return new GainStrengthThatGoesAwayPower(amount);
+        return new StopFromAdvancingPower();
     }
 }

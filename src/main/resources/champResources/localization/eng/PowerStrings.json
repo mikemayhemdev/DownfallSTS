@@ -140,9 +140,9 @@
     ]
   },
   "champ:IronFortressPower": {
-    "NAME": "Technical Jig: Defensive",
+    "NAME": "Technical Jig",
     "DESCRIPTIONS": [
-      "Whenever you enter a Stance, trigger Defensive Stance's technique",
+      "Whenever you enter a Stance, trigger it's technique",
       " #b",
       " times."
     ]

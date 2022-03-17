@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.AdvanceAction;
 import downfall.util.TextureLoader;
+import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.util.OnChargeSubscriber;
 
 public class FuturePower extends AbstractPower implements CloneablePowerInterface, OnChargeSubscriber {
@@ -44,7 +45,7 @@ public class FuturePower extends AbstractPower implements CloneablePowerInterfac
         updateDescription();
     }
 
-    public void onCharge() {
+    public void onCharge(AbstractGhostflame gf) {
         if (activation_count < amount) {
             this.flash();
             addToBot(new AdvanceAction(false));

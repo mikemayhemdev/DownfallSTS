@@ -4,7 +4,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
-import theHexaghost.powers.GainStrengthThatGoesAwayPower;
+import theHexaghost.powers.GainEnergyAtTheStartOfTurnPower;
+import theHexaghost.powers.StopFromAdvancingPower;
 
 public class GhostOfSpirePresent extends AbstractHexaCard {
 
@@ -21,7 +22,8 @@ public class GhostOfSpirePresent extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new GainStrengthThatGoesAwayPower(1));
+        applyToSelf(new GainEnergyAtTheStartOfTurnPower(1));
+        applyToSelf(new StopFromAdvancingPower());
     }
 
     public void upgrade() {
