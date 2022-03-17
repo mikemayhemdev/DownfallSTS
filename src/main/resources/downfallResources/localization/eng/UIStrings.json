@@ -144,7 +144,12 @@
   },
   "downfall:MainMenuAd": {
     "TEXT": [
-      "Click here to learn about the Slay the Spire Modding Workshop!"
+      "Want More?",
+      "Many more mods, including",
+      "Downfall, are available for ",
+      "base Slay the Spire on",
+      "Steam Workshop.",
+      "Click here to learn how!"
     ]
   }
 }

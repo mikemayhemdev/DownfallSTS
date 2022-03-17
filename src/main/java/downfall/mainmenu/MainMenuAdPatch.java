@@ -26,7 +26,7 @@ import java.net.URISyntaxException;
 public class MainMenuAdPatch {
 
     private static final UIStrings STRINGS = CardCrawlGame.languagePack.getUIString("downfall:MainMenuAd");
-    private static final MainMenuAd advert = new MainMenuAd(STRINGS.TEXT[0], "https://DownfallTutorial.github.io");
+    private static final MainMenuAd advert = new MainMenuAd(STRINGS.TEXT[1], STRINGS.TEXT[0], STRINGS.TEXT[2], STRINGS.TEXT[3], STRINGS.TEXT[4], STRINGS.TEXT[5], "https://DownfallTutorial.github.io");
 
     @SpirePatch(clz = TitleBackground.class, method = "render")
     public static class RenderPatch {
@@ -46,26 +46,34 @@ public class MainMenuAdPatch {
 
     private static class MainMenuAd {
         private String text;
+        private String text2;
+        private String text3;
+        private String text4;
+        private String text5;
+        private String textheader;
         private String url;
         private static final Texture tex = TextureLoader.getTexture("downfallResources/images/menuPanelHalfBlue.png");
 
         public final Hitbox hb;
 
         private Color tint = new Color(1, 1, 1, 0);
-        private float paddingTop = 16f * Settings.scale;
-        private float paddingRight = 32f * Settings.scale;
         private float width = tex.getWidth();
         private float height = tex.getHeight();
-        private float xPos = Settings.WIDTH - (width + paddingRight);
+        private float xPos = Settings.WIDTH * 0.9F;
         private float xCenteredPos = xPos - (width / 2f);
-        private float yPos = Settings.HEIGHT - (height + paddingTop) - (height / 2f);
-        private float yTextPos = yPos + paddingTop;
+        private float yPos = Settings.HEIGHT * 0.8F - (height / 2f);
+        private float yTextPos = yPos;
         private float angle = 0.0f;
 
-        public MainMenuAd(String text, String url) {
+        public MainMenuAd(String text, String textheader, String text2,String text3,String text4,String text5,String url) {
             hb = new Hitbox(xCenteredPos, yPos, width, height);
             this.text = text;
             this.url = url;
+            this.textheader = textheader;
+            this.text2 = text2;
+            this.text3 = text3;
+            this.text4 = text4;
+            this.text5 = text5;
         }
 
         public void render(SpriteBatch sb) {
@@ -80,7 +88,14 @@ public class MainMenuAdPatch {
             }
             FontHelper.cardTitleFont.getData().setScale(1.0f);
 
-            FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, text, xPos, yTextPos);
+            FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, textheader, xPos, yTextPos + 360F * Settings.scale);
+
+            FontHelper.cardDescFont_N.getData().setScale(1.0f);
+            FontHelper.renderFontCentered(sb, FontHelper.cardDescFont_N, text, xPos, yTextPos + 290F * Settings.scale);
+            FontHelper.renderFontCentered(sb, FontHelper.cardDescFont_N, text2, xPos, yTextPos + 250F * Settings.scale);
+            FontHelper.renderFontCentered(sb, FontHelper.cardDescFont_N, text3, xPos, yTextPos + 210F * Settings.scale);
+            FontHelper.renderFontCentered(sb, FontHelper.cardDescFont_N, text4, xPos, yTextPos + 170F * Settings.scale);
+            FontHelper.renderFontCentered(sb, FontHelper.cardDescFont_N, text5, xPos, yTextPos + 130F * Settings.scale);
 
             hb.render(sb);
         }
