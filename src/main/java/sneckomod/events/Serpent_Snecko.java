@@ -69,13 +69,14 @@ public class Serpent_Snecko extends AbstractImageEvent {
 
                     com.megacrit.cardcrawl.relics.AbstractRelic r = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());
                     AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2, Settings.HEIGHT / 2, r);
-
+                    logMetricObtainCardAndRelic(ID, "Agree", curse, r);
                     this.screen = CUR_SCREEN.AGREE;
                 } else {
                     this.imageEventText.updateBodyText(DISAGREE_DIALOG);
                     this.imageEventText.removeDialogOption(1);
                     this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                     this.screen = CUR_SCREEN.DISAGREE;
+                    logMetricIgnored(ID);
                 }
                 break;
             default:

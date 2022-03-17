@@ -110,6 +110,7 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
             AbstractDungeon.effectList.add(new PurgeCardEffect(c));
             AbstractDungeon.player.masterDeck.removeCard(c);
             AbstractDungeon.gridSelectScreen.selectedCards.remove(c);
+            logMetricCardRemoval(ID, "Elegance", c);
         }
 
     }
@@ -132,16 +133,21 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
                             }
                         }
                     }
+                    ArrayList<String> cardsRemoved = new ArrayList<>();
+                    ArrayList<String> cardsAdded = new ArrayList<>();
 
                     for (AbstractCard c : cardsToRemove) {
                         Collections.shuffle(list);
                         AbstractCard cU = list.get(0);
+                        cardsAdded.add(cU.cardID);
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(cU.makeStatEquivalentCopy(), (Settings.WIDTH / 2F), (float) (Settings.HEIGHT / 2)));
                     }
 
                     for (AbstractCard c : cardsToRemove) {
                         AbstractDungeon.player.masterDeck.removeCard(c);
+                        cardsRemoved.add(c.cardID);
                     }
+                    logMetricTransformCards(ID, "Improvisation", cardsAdded, cardsRemoved);
 
                     this.imageEventText.updateBodyText(DESCRIPTIONSGUARDIAN[0]);
                     this.imageEventText.updateDialogOption(0, OPTIONS[3]);
@@ -178,6 +184,7 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
                 AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH, MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT));
             }
         }
+        logMetricUpgradeCards(ID, "Simplicity", cardsUpgraded);
     }
 
     private enum CUR_SCREEN {
