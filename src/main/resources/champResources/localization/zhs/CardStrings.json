@@ -70,7 +70,7 @@
   },
   "champ:Backstep": {
     "NAME": "后撤",
-    "DESCRIPTION": "进入 champ:防守 。 NL 获得 !B! 点 格挡 。 NL champ:战狂 champ:连段 ：获得 [E] 并抽1张牌。",
+    "DESCRIPTION": "进入 champ:防守 。 NL 获得 !B! 点 格挡 。 NL champ:战狂 champ:连段 ：获得 [E] 并抽 !M! 张牌。",
     "UPGRADE_DESCRIPTION": "进入 champ:防守 。 NL 获得 !B! 点 格挡 。 NL champ:战狂 champ:连段 ：获得 [E] 并抽 !M! 张牌。"
   },
   "champ:Aggression": {
@@ -169,8 +169,8 @@
   },
   "champ:IronFortress": {
     "NAME": "战斗跃舞",
-    "DESCRIPTION": "每当你进入 姿态 时：",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 每当你进入 姿态 时："
+    "DESCRIPTION": "每当你进入 姿态 时，触发它的 champ:战术 效果。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每当你进入 姿态 时，触发它的 champ:战术 效果。"
   },
   "champ:Lariat": {
     "NAME": "套索",
@@ -199,12 +199,7 @@
   },
   "champ:PreciseThrust": {
     "NAME": "精准冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:战狂 champ:连段 ：造成 !D! 点伤害。 NL champ:防守 champ:连段 ：获得 !B! 点 格挡 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL ",
-    "EXTENDED_DESCRIPTION": [
-      " champ:战狂 champ:连段 ： 造成 !D! 点伤害。 NL ",
-      " champ:防守 champ:连段 ： 获得 !B! 点 格挡 。"
-    ]
+    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:战狂 champ:连段 ：造成 !D! 点伤害。 NL champ:防守 champ:连段 ：获得 !B! 点 格挡 。"
   },
   "champ:CrookedStrike": {
     "NAME": "蛇形打击",
