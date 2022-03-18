@@ -57,12 +57,13 @@
     "DESCRIPTION": "Perform !M! times:"
   },
   "champ:FocusedDefense": {
-    "NAME": "Focus: Defensive",
-    "DESCRIPTION": "Enter champ:Defensive. NL The next time you use a champ:Finisher this turn, gain !B! Block."
+    "NAME": "Bob and Weave",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Vigor"
   },
   "champ:FocusedBerserking": {
-    "NAME": "Focus: Berserker",
-    "DESCRIPTION": "Enter champ:Berserker. NL The next time you use a champ:Finisher this turn, deal !D! damage to ALL enemies."
+    "NAME": "All Out",
+    "DESCRIPTION": "Exhaust. NL Trigger !M! times without exiting your Stance: "
+
   },
   "champ:SetATrap": {
     "NAME": "Set A Trap",
@@ -415,7 +416,7 @@
   },
   "champ:FancyFootwork": {
     "NAME": "Fancy Footwork",
-    "DESCRIPTION": "Enter a Stance you aren't in. NL Draw !M! cards. NL Exhaust."
+    "DESCRIPTION": "Enter a Stance you aren't in. NL The next time you use a champ:Finisher this turn, ALL enemies lose !M! HP."
   },
   "champ:TripleStrike": {
     "NAME": "Triple Strike",

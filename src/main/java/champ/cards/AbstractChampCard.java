@@ -278,7 +278,7 @@ public abstract class AbstractChampCard extends CustomCard {
             ((AbstractChampStance) AbstractDungeon.player.stance).techique();
     }
 
-    public void finisher() {
+    public void finisher (boolean noExit){
 
         if (AbstractDungeon.player.hasPower(DancingMasterPower.POWER_ID)){
             if (finishersThisTurn == 0){
@@ -291,7 +291,7 @@ public abstract class AbstractChampCard extends CustomCard {
 
         if (!AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
             boolean leaveStance = true;
-            if (AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID) || (AbstractDungeon.player.stance instanceof UltimateStance)) {
+            if (noExit || AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID) || (AbstractDungeon.player.stance instanceof UltimateStance)) {
                 leaveStance = false;
             }
             if (AbstractDungeon.player.hasRelic(SignatureFinisher.ID)) {
@@ -312,6 +312,10 @@ public abstract class AbstractChampCard extends CustomCard {
                 }
             }
         }
+    }
+
+    public void finisher() {
+        finisher(false);
     }
 
     @Override

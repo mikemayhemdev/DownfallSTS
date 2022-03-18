@@ -14,10 +14,10 @@
     ]
   },
   "champ:FocusedBerPower": {
-    "NAME": "Focused: Berserker",
+    "NAME": "Fancy Footwork",
     "DESCRIPTIONS": [
-      "The next time you use a #yFinisher this turn, deal #b",
-      " damage to ALL enemies."
+      "The next time you use a #yFinisher this turn, ALL enemies lose #b",
+      " HP."
     ]
   },
   "champ:ShieldWallPower": {
