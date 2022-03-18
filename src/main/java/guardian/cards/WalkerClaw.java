@@ -53,8 +53,8 @@ public class WalkerClaw extends AbstractGuardianCard {
         this.baseDamage = DAMAGE;
 
         this.magicNumber = this.baseMagicNumber = 3;
-       // this.socketCount = SOCKETS;
-       // updateDescription();
+        this.socketCount = SOCKETS;
+        updateDescription();
         //loadGemMisc();
     }
 
