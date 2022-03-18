@@ -6,6 +6,7 @@ import champ.ChampChar;
 import champ.ChampMod;
 import champ.ChampTextHelper;
 import champ.powers.CalledShotPower;
+import champ.powers.DancingMasterPower;
 import champ.relics.SignatureFinisher;
 import champ.stances.AbstractChampStance;
 import champ.stances.BerserkerStance;
@@ -278,6 +279,12 @@ public abstract class AbstractChampCard extends CustomCard {
     }
 
     public void finisher() {
+
+        if (AbstractDungeon.player.hasPower(DancingMasterPower.POWER_ID)){
+            if (finishersThisTurn == 0){
+                AbstractDungeon.player.getPower(DancingMasterPower.POWER_ID).onSpecificTrigger();
+            }
+        }
 
         ChampMod.finishersThisTurn++;
         ChampMod.finishersThisCombat++; //If there is a finishers this combat problem, maybe look here

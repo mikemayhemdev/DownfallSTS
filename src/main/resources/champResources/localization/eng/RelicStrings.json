@@ -3,7 +3,7 @@
     "NAME": "Champion's Crown",
     "FLAVOR": "A WINNER IS YOU!",
     "DESCRIPTIONS": [
-      "When you enter #rBerserker, deal #b4 damage to a random enemy. NL When you enter #bDefensive, gain #b4 #yBlock."
+      "When you enter #rBerserker, deal #b3 damage to a random enemy. NL When you enter #bDefensive, gain #b3 #yBlock."
     ]
   },
   "champ:BlackKnightHelmet": {
@@ -73,7 +73,7 @@
     "NAME": "Power Armor",
     "FLAVOR": "Bought used.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. NL Your maximum #yVigor and #yCounter is #b30."
+      "Gain [E] at the start of your turn. NL Your maximum #yVigor and #yCounter is #b20."
     ]
   },
   "champ:SignatureFinisher": {
