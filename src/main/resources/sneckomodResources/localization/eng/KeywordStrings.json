@@ -12,7 +12,7 @@
       "muddle",
       "muddled"
     ],
-    "DESCRIPTION": "Muddling a card changes its cost to between 0 and 3."
+    "DESCRIPTION": "Muddling a card changes its cost this turn to between 0 and 3."
   },
   {
     "PROPER_NAME": "Offclass",

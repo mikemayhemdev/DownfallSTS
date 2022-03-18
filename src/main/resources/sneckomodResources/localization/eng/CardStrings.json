@@ -229,7 +229,7 @@
   },
   "sneckomod:DiceBlock": {
     "NAME": "Dice Block",
-    "DESCRIPTION": "Gain !M! - !B! Block. NL sneckomod:Muddle this."
+    "DESCRIPTION": "Gain !M! - !B! Block."
   },
   "sneckomod:MixItUp": {
     "NAME": "Mix It Up!",
@@ -265,11 +265,11 @@
   },
   "sneckomod:RainOfDice": {
     "NAME": "Rain of Dice",
-    "DESCRIPTION": "Deal !qqq! - !D! damage to a random enemy per every [E] this card costs plus !M!."
+    "DESCRIPTION": "Deal !qqq! - !D! damage to a random enemy. NL sneckomod:Muddle this, then return this to your hand."
   },
   "sneckomod:DiceCrush": {
     "NAME": "Dice Crush",
-    "DESCRIPTION": "Deal !M! - !D! damage. NL sneckomod:Muddle this."
+    "DESCRIPTION": "Deal !M! - !D! damage."
   },
   "sneckomod:SnakeSap": {
     "NAME": "Snake Sap",
