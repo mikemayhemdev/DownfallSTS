@@ -377,7 +377,7 @@
   },
   "downfall:GremlinSack": {
     "NAME": "Gremlin Sack",
-    "FLAVOR": "You were no match for the Gremlin and his bodyguard.",
+    "FLAVOR": "The Gremlin and his bodyguard were no match for you.",
     "DESCRIPTIONS": [
       "Upon pickup, add the following cards to your deck: NL ",
       "Upon pickup, add #b6 cards to your deck from the Match Game.",

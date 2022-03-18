@@ -14,10 +14,10 @@
     ]
   },
   "champ:FocusedBerPower": {
-    "NAME": "Focused: Berserker",
+    "NAME": "Fancy Footwork",
     "DESCRIPTIONS": [
-      "The next time you use a #yFinisher this turn, deal #b",
-      " damage to ALL enemies."
+      "The next time you use a #yFinisher this turn, ALL enemies lose #b",
+      " HP."
     ]
   },
   "champ:ShieldWallPower": {
@@ -78,10 +78,10 @@
   "champ:DancingMasterPower": {
     "NAME": "Dancing Master",
     "DESCRIPTIONS": [
-      "The third time you enter a #yStance each turn, gain #b",
+      "The first time you use a #yFinisher each turn, gain #b",
       " [E] and draw #b",
       " cards. ",
-      " remaining.",
+      "",
       "Used this turn.",
 	  ""
     ]

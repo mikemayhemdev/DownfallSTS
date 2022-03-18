@@ -48,23 +48,17 @@ public class DancingMasterPower extends AbstractPower implements CloneablePowerI
     }
 
     @Override
-    public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
-        if (!newStance.ID.equals(NeutralStance.STANCE_ID)) {
-            stanceChangesThisTurn++;
-            if (stanceChangesThisTurn == 1 && !usedYet) {
-                flash();
-                addToBot(new GainEnergyAction(amount));
-                addToBot(new DrawCardAction(1));
-                usedYet = true;
-            }
-        }
+    public void onSpecificTrigger() {
+        flash();
+        addToBot(new GainEnergyAction(amount));
+        addToBot(new DrawCardAction(amount));
+        usedYet = true;
         updateDescription();
     }
 
     @Override
     public void updateDescription() {
-        int x = 3 - stanceChangesThisTurn;
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + 2 + DESCRIPTIONS[2] + (usedYet ? DESCRIPTIONS[4] : DESCRIPTIONS[5] + x + DESCRIPTIONS[3]);
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2] + (usedYet ? DESCRIPTIONS[4] : "");
     }
 
     @Override

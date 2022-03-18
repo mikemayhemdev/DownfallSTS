@@ -6,12 +6,15 @@ import champ.util.OnFinisherSubscriber;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import downfall.util.TextureLoader;
@@ -48,7 +51,9 @@ public class FocusedBerPower extends AbstractPower implements CloneablePowerInte
     @Override
     public void onFinisher() {
         flash();
-        addToBot(new DamageAllEnemiesAction(owner, DamageInfo.createDamageMatrix(amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            addToBot(new LoseHPAction(m,m,amount,AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        }
         addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 

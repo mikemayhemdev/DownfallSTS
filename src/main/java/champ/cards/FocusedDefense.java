@@ -1,10 +1,12 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.powers.CounterPower;
 import champ.powers.FocusedDefPower;
 import champ.util.OnFinisherSubscriber;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import sneckomod.SneckoMod;
 
 public class FocusedDefense extends AbstractChampCard {
@@ -14,21 +16,21 @@ public class FocusedDefense extends AbstractChampCard {
     //stupid intellij stuff skill, self, common
 
     public FocusedDefense() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        tags.add(ChampMod.OPENER);
-        this.tags.add(ChampMod.OPENERDEFENSIVE);
-        baseBlock = 10;
-        tags.add(ChampMod.TECHNIQUE);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+
+        baseBlock = 5;
+        baseMagicNumber = magicNumber = 5;
+
         postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
-        defenseOpen();
-        applyToSelf(new FocusedDefPower(block));
+        blck();
+        applyToSelf(new VigorPower(p, magicNumber));
     }
 
     public void upp() {
-        upgradeBlock(5);
+        upgradeBlock(2);
+        upgradeMagicNumber(2);
     }
 }

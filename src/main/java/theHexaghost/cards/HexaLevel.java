@@ -30,7 +30,7 @@ public class HexaLevel extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(2);
+            upgradeMagicNumber(1);
         }
     }
 }

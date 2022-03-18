@@ -14,20 +14,20 @@ public class FocusedBerserking extends AbstractChampCard {
     //stupid intellij stuff skill, self, common
 
     public FocusedBerserking() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        tags.add(ChampMod.OPENER);
-        this.tags.add(ChampMod.OPENERBERSERKER);
-        baseDamage = 10;
-        tags.add(ChampMod.TECHNIQUE);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        exhaust = true;
+        baseMagicNumber = magicNumber = 2;
+        tags.add(ChampMod.FINISHER);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
-        berserkOpen();
-        applyToSelf(new FocusedBerPower(damage));
+        for (int i = 0; i < magicNumber; i++) {
+            finisher(true);
+        }
     }
 
     public void upp() {
-        upgradeDamage(5);
+        upgradeMagicNumber(1);
     }
 }

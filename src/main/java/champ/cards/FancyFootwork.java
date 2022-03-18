@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.powers.FocusedBerPower;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
 import champ.stances.UltimateStance;
@@ -16,8 +17,8 @@ public class FancyFootwork extends AbstractChampCard {
 
     // intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 2;
-    private static final int UPG_MAGIC = 2;
+    private static final int MAGIC = 10;
+    private static final int UPG_MAGIC = 5;
 
     public FancyFootwork() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
@@ -40,7 +41,7 @@ public class FancyFootwork extends AbstractChampCard {
                 defenseOpen();
             }
         }
-        atb(new DrawCardAction(magicNumber));
+        applyToSelf(new FocusedBerPower(magicNumber));
         p.useHopAnimation();
         atb(new VFXAction(new StanceDanceEffect(p, false, false, true), 0.7F));
 
