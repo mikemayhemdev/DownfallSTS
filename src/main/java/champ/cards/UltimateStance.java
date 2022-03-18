@@ -35,7 +35,7 @@ public class UltimateStance extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
+       // techique();
         triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
         ultimateStance();
         applyToSelf(new UltimateFormPower(magicNumber));

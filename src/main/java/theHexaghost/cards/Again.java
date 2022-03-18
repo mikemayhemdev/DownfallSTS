@@ -18,7 +18,7 @@ public class Again extends AbstractHexaCard {
     //stupid intellij stuff SKILL, SELF, UNCOMMON
 
     public Again() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
