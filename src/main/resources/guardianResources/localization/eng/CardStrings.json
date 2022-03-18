@@ -109,7 +109,8 @@
   },
   "Guardian:WalkerClaw": {
     "NAME": "Walker Claw",
-    "DESCRIPTION": "Deal !D! damage !M! times."
+    "DESCRIPTION": "Deal !D! damage !M! times.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times."
   },
   "Guardian:SphericShield": {
     "NAME": "Spheric Shield",
