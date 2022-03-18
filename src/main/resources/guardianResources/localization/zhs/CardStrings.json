@@ -190,7 +190,7 @@
   },
   "Guardian:Preprogram": {
     "NAME": "预编程",
-    "DESCRIPTION": "查看你的抽牌堆顶部的 !M! 张牌。可以选择其中 1 张 guardianmod:凝滞 。"
+    "DESCRIPTION": "查看抽牌堆顶部 !M! 张牌。 NL 可 guardianmod:凝滞 其中一张。"
   },
   "Guardian:GemFinder": {
     "NAME": "宝石发现",
