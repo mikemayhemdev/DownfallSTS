@@ -10,12 +10,16 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.actions.AdvanceAction;
 import theHexaghost.actions.ExtinguishAction;
+import theHexaghost.powers.ApocalypticArmorPower;
 import theHexaghost.powers.EnhancePower;
 import downfall.util.TextureLoader;
+
+import java.util.ArrayList;
 
 import static theHexaghost.HexaMod.makeUIPath;
 
@@ -54,7 +58,7 @@ public class InfernoGhostflame extends AbstractGhostflame {
     @Override
     public void onCharge() {
         atb(new VFXAction(AbstractDungeon.player, new ScreenOnFireEffect(), 1.0F));
-        int x = damage;
+        int x = damage, amountOfIgnitedGhostflames = 0;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
@@ -63,7 +67,8 @@ public class InfernoGhostflame extends AbstractGhostflame {
             if (gf.charged) {
                 atb(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
                 //atb(new WaitAction(0.1F));  //Critical for keeping the UI not broken, and helps sell the anim
-               // atb(new ExtinguishAction(gf));
+                // atb(new ExtinguishAction(gf));
+                amountOfIgnitedGhostflames++;
             }
         }
         /*
@@ -73,6 +78,25 @@ public class InfernoGhostflame extends AbstractGhostflame {
         */
 
         atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(1), 1));
+
+        DoomsdayCheck(amountOfIgnitedGhostflames);
+    }
+
+    private void DoomsdayCheck(int amount) {
+        if (AbstractDungeon.player.hasPower(ApocalypticArmorPower.POWER_ID)) {
+            AbstractPower Doom = null;
+            int a = 0;
+            //Get the highest Doomsday that would trigger
+            for (AbstractPower p : AbstractDungeon.player.powers) {
+                if (p instanceof ApocalypticArmorPower) {
+                    if (p.amount <= amount && p.amount > a)
+                        Doom = p;
+                }
+            }
+            //Trigger it
+            if (Doom != null)
+                Doom.onSpecificTrigger();
+        }
     }
 
 

@@ -70,7 +70,7 @@
   },
   "champ:Backstep": {
     "NAME": "Backstep",
-    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain [E] and draw a card.",
+    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain [E] and draw !M! card.",
     "UPGRADE_DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain [E] and draw !M! cards."
   },
   "champ:Aggression": {
@@ -169,8 +169,8 @@
   },
   "champ:IronFortress": {
     "NAME": "Technical Jig",
-    "DESCRIPTION": "Whenever you enter a Stance:",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you enter a Stance:"
+    "DESCRIPTION": "Whenever you enter a Stance, trigger it's champ:Technique effect.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you enter a Stance, trigger it's champ:Technique effect."
   },
   "champ:Lariat": {
     "NAME": "Lariat",

@@ -93,11 +93,10 @@
       " 张牌。"
     ]
   },
-  "hexamod:GainStrengthThatGoesAwayPower": {
+  "hexamod:StopFromAdvancingPower": {
     "NAME": "此刻",
     "DESCRIPTIONS": [
-      "每回合开始时获得 ",
-      " ， NL 你的回合结束时不会 #y步进 。"
+      "你的回合结束时不会自动 #y步进 。"
     ]
   },
   "hexamod:GhostFlameBarrierPower": {
@@ -204,6 +203,12 @@
     "NAME": "活体炸弹",
     "DESCRIPTIONS": [
       "这个下次引爆灼魂时，对全体敌人生效。"
+    ]
+  },
+  "hexamod:GainEnergyAtStartOfTurnPower": {
+    "NAME": "更多能量",
+    "DESCRIPTIONS": [
+      "回合开始时，获得 "
     ]
   }
 }

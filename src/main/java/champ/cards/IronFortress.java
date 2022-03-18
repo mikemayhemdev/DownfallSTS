@@ -12,24 +12,16 @@ public class IronFortress extends AbstractChampCard {
 
     //stupid intellij stuff power, self, uncommon
 
-    private static final int MAGIC = 5;
-
     public IronFortress() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = MAGIC;
 
-        tags.add(ChampMod.TECHNIQUE);
-        techniqueLast = true;
-        postInit();
+        //tags.add(ChampMod.TECHNIQUE);
+        //techniqueLast = true;
+        //postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (inBerserker()){
-            applyToSelf(new IronFortressVigorPower(1));
-        }
-        if (inDefensive()){
-            applyToSelf(new IronFortressPower(1));
-        }
+        applyToSelf(new IronFortressPower(1));
     }
 
     public void upp() {
