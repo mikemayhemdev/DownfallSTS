@@ -373,7 +373,7 @@
   },
   "Guardian:GatlingBeam": {
     "NAME": "Laser Turret",
-    "DESCRIPTION": "Place this into guardianmod:Stasis. NL guardianmod:Tick - Deal !D! damage to a random enemy. NL guardianmod:Volatile."
+    "DESCRIPTION": "Deal !D! damage. NL Place this into guardianmod:Stasis. NL guardianmod:Stasis lasts !M! turns. NL guardianmod:Tick - Deal !D! damage to a random enemy."
   },
   "Guardian:ShieldCharger": {
     "NAME": "Shield Charger",
