@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import guardian.GuardianMod;
 import guardian.actions.BraceAction;
+import guardian.orbs.StasisOrb;
 import guardian.powers.BeamBuffPower;
 import guardian.powers.ModeShiftPower;
 import guardian.relics.DefensiveModeMoreBlock;
@@ -76,6 +77,10 @@ public abstract class AbstractGuardianCard extends CustomCard {
             }
         }
         return super.getPortraitImage();
+    }
+
+    public void whenEnteredStasis(StasisOrb orb) {
+
     }
 
     public void whenReturnedFromStasis() {

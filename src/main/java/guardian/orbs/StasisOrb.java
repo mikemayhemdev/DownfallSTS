@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import guardian.GuardianMod;
 import guardian.actions.ReturnStasisCardToHandAction;
 import guardian.actions.StasisEvokeIfRoomInHandAction;
+import guardian.cards.AbstractGuardianCard;
 import guardian.cards.InStasisCard;
 import guardian.relics.StasisUpgradeRelic;
 import guardian.vfx.AddCardToStasisEffect;
@@ -79,6 +80,11 @@ public class StasisOrb extends AbstractOrb {
         this.updateDescription();
 
         initialize(source, selfStasis);
+
+        if(stasisCard instanceof AbstractGuardianCard) {
+            AbstractGuardianCard agc = (AbstractGuardianCard) stasisCard;
+            agc.whenEnteredStasis(this);
+        }
     }
 
     @Override
@@ -187,6 +193,7 @@ public class StasisOrb extends AbstractOrb {
 
         AbstractDungeon.effectsQueue.add(stasisStartEffect);
         stasisCard.retain = false;
+
     }
 
     @Override
