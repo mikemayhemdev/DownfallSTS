@@ -42,14 +42,14 @@
     "DESCRIPTION": "Place this into guardianmod:Stasis. NL guardianmod:Tick - Gain !B! Block and !M! Strength. NL guardianmod:Volatile."
   },
   "Guardian:DonusPower": {
-    "NAME": "Ancient Attack",
-    "DESCRIPTION": "Gain 1 Strength and 1 Artifact. NL Add a random Attack card to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Strength and 1 Artifact. NL Add a random Attack card to your hand. It costs 1 less this combat. NL Exhaust."
+    "NAME": "Overload",
+    "DESCRIPTION": "Draw !M! Cards. NL Next turn, draw 2 fewer cards.",
+    "UPGRADE_DESCRIPTION": "Draw !M! Cards. NL Next turn, draw 2 fewer cards. NL Reduce all your debuffs by 1."
   },
   "Guardian:DecasProtection": {
     "NAME": "Ancient Power",
-    "DESCRIPTION": "Gain 1 Dexterity and 1 Artifact. NL Add a random Power card to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Dexterity and 1 Artifact. NL Add a random Power card to your hand. It costs 1 less this combat. NL Exhaust."
+    "DESCRIPTION": "Gain 4 Temporary Strength and Dexterity. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain 4 Temporary Strength and Dexterity. NL Reduce all your debuffs by 1. NL Exhaust."
   },
   "Guardian:FierceBash": {
     "NAME": "Fierce Bash",
@@ -146,8 +146,8 @@
   },
   "Guardian:PackageDonuDeca": {
     "NAME": "Package: Ancients",
-    "DESCRIPTION": "Add an *Ancient *Attack, *Ancient *Power, and *Ancient *Construct to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an *Ancient *Attack, *Ancient *Power, and *Ancient *Construct to your hand and Upgrade them. NL Exhaust."
+    "DESCRIPTION": "Add an *Overload, *Ancient *Power, and *Ancient *Construct to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an *Overload, *Ancient *Power, and *Ancient *Construct to your hand and Upgrade them. NL Exhaust."
   },
   "Guardian:PackageSphere": {
     "NAME": "Package: Spheric",
