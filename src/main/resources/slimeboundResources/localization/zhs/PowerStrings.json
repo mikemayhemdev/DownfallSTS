@@ -3,8 +3,8 @@
     "NAME": "潜力",
     "DESCRIPTIONS": [
       "你 #y分裂 的 #y史莱姆 造成的伤害增加 #b",
-      ". Increase secondary effects by #b",
-      " 点。"
+      " 点，附加效果对应地被强化 #b",
+      " 。"
     ]
   },
   "Slimebound:SlimedPower": {
