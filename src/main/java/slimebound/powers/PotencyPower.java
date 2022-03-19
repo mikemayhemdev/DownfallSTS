@@ -49,7 +49,7 @@ public class PotencyPower extends AbstractPower {
 
 
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]+ this.amount/2 + DESCRIPTIONS[2]);
 
     }
 

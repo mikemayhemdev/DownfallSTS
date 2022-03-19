@@ -3,6 +3,7 @@
     "NAME": "Potency",
     "DESCRIPTIONS": [
       "Increase the damage of your spawned Slimes by #b",
+      ". Increase secondary effects by #b",
       "."
     ]
   },

@@ -432,11 +432,11 @@
     "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)"
   },
   "Guardian:SecondStrike": {
-    "NAME": "Second Strike",
+    "NAME": "Second Slam",
     "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
   },
   "Guardian:SecondStrikePreviewCard": {
-    "NAME": "Second Strike",
-    "DESCRIPTION": "Copies Twin Slam's Gems. NL Ethereal. NL Deal !D! damage. NL Exhaust."
+    "NAME": "Second Slam",
+    "DESCRIPTION": "Ethereal. NL Copies Twin Slam's Gems. NL Deal !D! damage. NL Exhaust."
   }
 }

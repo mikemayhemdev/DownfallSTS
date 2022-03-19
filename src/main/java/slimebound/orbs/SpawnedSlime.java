@@ -76,7 +76,7 @@ public abstract class SpawnedSlime
     public AbstractPlayer p;
     public boolean noRender;
     public String customDescription;
-    public int debuffBonusAmount;
+    public int debuffBaseAmount;
     public int debuffAmount;
     public Color extraFontColor = null;
     public boolean topSpawnVFX = false;
@@ -147,7 +147,7 @@ public abstract class SpawnedSlime
 
     }
 
-    public SpawnedSlime(String ID, Color projectileColor, String atlasString, String skeletonString, boolean medScale, boolean alt, int passive, int initialBoost, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage) {
+    public SpawnedSlime(String ID, Color projectileColor, String atlasString, String skeletonString, boolean medScale, boolean alt, int passive, int secondary, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage) {
 
         this.scale = scale * .85F;
 //        if(CharacterSelectScreenPatches.characters[1].isOriginal()){
@@ -213,6 +213,7 @@ public abstract class SpawnedSlime
 
 
         this.basePassiveAmount = passive;
+        this.debuffBaseAmount = secondary;
         this.movesToAttack = movesToAttack;
 
         this.deathColor = projectileColor;
@@ -284,13 +285,13 @@ public abstract class SpawnedSlime
         if (this instanceof TorchHeadSlime && AbstractDungeon.player.hasPower(StrengthPower.POWER_ID))
             bonus = AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
 
-
         if (power != null) {
-
             this.passiveAmount = this.basePassiveAmount + power.amount + this.UniqueFocus + bonus;
+            this.debuffAmount = this.debuffBaseAmount + (power.amount / 2) ;
 
         } else {
             this.passiveAmount = this.basePassiveAmount + this.UniqueFocus + bonus;
+            this.debuffAmount = this.debuffBaseAmount;
 
         }
         updateDescription();

@@ -29,7 +29,7 @@
       "potency"
     ],
     "PROPER_NAME": "Potency",
-    "DESCRIPTION": "Increases the damage of ALL of your Spawned Slimes."
+    "DESCRIPTION": "Increases the damage of ALL of your Spawned Slimes. Secondary effects increase by 1 for every 2 Potency."
   },
   {
     "NAMES": [
@@ -105,7 +105,7 @@
       "bronze_slime"
     ],
     "PROPER_NAME": "Bronze Slime",
-    "DESCRIPTION": "Attacks for #b4 and grants you #b4 #yBlock each turn."
+    "DESCRIPTION": "Attacks for #b10 to ALL enemies each turn, but skips every other attack."
   },
   {
     "NAMES": [
@@ -120,7 +120,7 @@
       "ghostflame_slime"
     ],
     "PROPER_NAME": "Ghostflame Slime",
-    "DESCRIPTION": "Attacks for #b3 and applies #b3 #ySoulburn each turn."
+    "DESCRIPTION": "Attacks for #b3 and applies #b5 #ySoulburn each turn."
   },
   {
     "NAMES": [
@@ -158,7 +158,7 @@
       "protector_slime"
     ],
     "PROPER_NAME": "Protector Slime",
-    "DESCRIPTION": "Attacks for #b2 and grants you #b6 #yBlock each turn."
+    "DESCRIPTION": "Attacks for #b2 and grants you #b3 Temporary #yThorns each turn."
   },
   {
     "NAMES": [
