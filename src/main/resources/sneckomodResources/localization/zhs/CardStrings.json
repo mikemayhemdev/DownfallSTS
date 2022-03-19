@@ -229,7 +229,7 @@
   },
   "sneckomod:DiceBlock": {
     "NAME": "骰子格挡",
-    "DESCRIPTION": "获得 !M! - !B! 点 格挡 。 NL sneckomod:混淆 这张牌。"
+    "DESCRIPTION": "获得 !M! - !B! 点 格挡 。"
   },
   "sneckomod:MixItUp": {
     "NAME": "混合起来！",
@@ -265,11 +265,11 @@
   },
   "sneckomod:RainOfDice": {
     "NAME": "骰子雨",
-    "DESCRIPTION": "对随机一名敌人造成 !qqq! - !D! 点伤害 !M! 次。 NL 这张牌的每点耗能额外重复一次。"
+    "DESCRIPTION": "对随机一名敌人造成 !qqq! - !D! 点伤害 !M! 次。 NL sneckomod:混淆 本牌并返回手牌。"
   },
   "sneckomod:DiceCrush": {
     "NAME": "骰子撞击",
-    "DESCRIPTION": "造成 !M! - !D! 点伤害。 NL sneckomod:混淆 这张牌。"
+    "DESCRIPTION": "造成 !M! - !D! 点伤害。"
   },
   "sneckomod:SnakeSap": {
     "NAME": "蛇液",

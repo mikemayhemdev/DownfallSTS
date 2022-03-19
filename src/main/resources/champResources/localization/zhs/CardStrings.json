@@ -57,12 +57,12 @@
     "DESCRIPTION": "重复 !M! 次："
   },
   "champ:FocusedDefense": {
-    "NAME": "防反家",
-    "DESCRIPTION": "进入 champ:防守 。 NL 本回合下次打出 champ:终结技 时，获得 !B! 点 格挡 。"
+    "NAME": "下潜摇摆",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 活力 。"
   },
   "champ:FocusedBerserking": {
-    "NAME": "战狂士",
-    "DESCRIPTION": "进入 champ:战狂 。 NL 本回合下次打出 champ:终结技 时，对所有敌人造成 !D! 点伤害。"
+    "NAME": "全力以赴",
+    "DESCRIPTION": "消耗 。 NL 连续触发 !M! 次且不退出 姿态 。"
   },
   "champ:SetATrap": {
     "NAME": "布置陷阱",
@@ -148,7 +148,7 @@
     ]
   },
   "champ:BringItOn": {
-    "NAME": "全力以赴",
+    "NAME": "后发",
     "DESCRIPTION": "获得 !B! 点格挡。 NL 获得 !M! 层 champ:反击 。",
     "EXTENDED_DESCRIPTION": [
       "我不处于那个姿态。"
@@ -323,7 +323,7 @@
   },
   "champ:Improvising": {
     "NAME": "触类旁通",
-    "DESCRIPTION": "每回合第一次打出 champ:连段 牌时，返回手牌。 NL 它下次费用为0。"
+    "DESCRIPTION": "每回合初次打出 champ:连段 牌时，返回手牌。 NL 它下次费用为0。"
   },
   "champ:CalledShot": {
     "NAME": "宣告",
@@ -351,7 +351,7 @@
   },
   "champ:DancingMaster": {
     "NAME": "战技大师",
-    "DESCRIPTION": "每回合第一次进入 姿态 时，获得 [E] 并抽一张牌。"
+    "DESCRIPTION": "每回合初次打出 champ:终结技 时，获得 [E] 并抽一张牌。"
   },
   "champ:StrikeOfGenius": {
     "NAME": "打击天才",
@@ -415,7 +415,7 @@
   },
   "champ:FancyFootwork": {
     "NAME": "花哨步法",
-    "DESCRIPTION": "进入一种你不处于的 姿态 。 NL 抽 !M! 张牌。 NL 消耗 。"
+    "DESCRIPTION": "进入未处于的 姿态 。 NL 本回合下张 champ:终结技 使所有敌人失去 !M! 点生命。"
   },
   "champ:TripleStrike": {
     "NAME": "三重打击",
