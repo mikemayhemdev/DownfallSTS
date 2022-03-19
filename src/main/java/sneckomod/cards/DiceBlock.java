@@ -22,7 +22,6 @@ public class DiceBlock extends AbstractSneckoCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new GainBlockAction(p, getRandomNum(magicNumber, block, this)));
-        atb(new MuddleAction(this));
     }
 
     @Override
