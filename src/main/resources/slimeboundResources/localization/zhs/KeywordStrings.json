@@ -58,7 +58,7 @@
   {
     "NAMES": [
       "邪教徒史莱姆",
-	  "cultist slime",
+      "cultist slime",
       "cultist_slime"
     ],
     "PROPERNAME": "邪教徒史莱姆",
@@ -67,7 +67,7 @@
   {
     "NAMES": [
       "水蛭史莱姆",
-	  "leeching slime",
+      "leeching slime",
       "leeching_slime",
       "leeching slimes",
       "leeching_slimes",
@@ -79,7 +79,7 @@
     {
     "NAMES": [
       "游击史莱姆",
-	  "guerilla slime",
+      "guerilla slime",
       "guerilla_slime",
       "guerilla slimes",
       "guerilla_slimes",
@@ -91,7 +91,7 @@
   {
     "NAMES": [
       "污泥史莱姆",
-	  "mire slime",
+      "mire slime",
       "mire_slime",
       "mire slimes",
       "mire_slimes",
@@ -103,11 +103,11 @@
   {
     "NAMES": [
       "青铜史莱姆",
-	  "bronze slime",
+      "bronze slime",
       "bronze_slime"
     ],
     "PROPERNAME": "青铜史莱姆",
-    "DESCRIPTION": "发动攻击时造成 #b4 点伤害并给予你 #b4 点 #y格挡 。"
+    "DESCRIPTION": "发动攻击时对所有敌人造成 #b10 点伤害，但攻击后休息一回合。"
   },
   {
     "NAMES": [
@@ -120,11 +120,11 @@
   {
     "NAMES": [
       "鬼火史莱姆",
-	  "ghostflame slime",
+      "ghostflame slime",
       "ghostflame_slime"
     ],
     "PROPERNAME": "鬼火史莱姆",
-    "DESCRIPTION": "每回合攻击造成 #b3 点伤害并给予 #b3 层 #y灼魂 。"
+    "DESCRIPTION": "每回合攻击造成 #b3 点伤害并给予 #b5 层 #y灼魂 。"
   },
   {
     "NAMES": [
@@ -157,16 +157,16 @@
     {
     "NAMES": [
       "保护史莱姆",
-	  "protector slime",
+      "protector slime",
       "protector_slime"
     ],
     "PROPER_NAME": "保护史莱姆",
-    "DESCRIPTION": "攻击造成 #b2 点伤害并给予你 #b6 点 #y格挡 。"
+    "DESCRIPTION": "攻击造成 #b2 点伤害并给予你 #b3 层 #y临时 #y荆棘 。"
   },
   {
     "NAMES": [
       "嘲讽史莱姆",
-	  "insulting slime",
+      "insulting slime",
       "insulting_slime"
     ],
     "PROPER_NAME": "嘲讽史莱姆",
@@ -175,7 +175,7 @@
   {
     "NAMES": [
       "小黑史莱姆",
-	  "darkling slime",
+      "darkling slime",
       "darkling_slime"
     ],
     "PROPER_NAME": "小黑史莱姆",
@@ -184,7 +184,7 @@
   {
     "NAMES": [
       "先古史莱姆",
-	  "ancient slime",
+      "ancient slime",
       "ancient_slime"
     ],
     "PROPER_NAME": "先古史莱姆",
@@ -193,7 +193,7 @@
   {
     "NAMES": [
       "时间史莱姆",
-	  "time slime",
+      "time slime",
       "time_slime"
     ],
     "PROPER_NAME": "时间史莱姆",
