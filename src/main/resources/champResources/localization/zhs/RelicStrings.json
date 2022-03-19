@@ -3,7 +3,7 @@
     "NAME": "冠军金冠",
     "FLAVOR": "你是冠军！",
     "DESCRIPTIONS": [
-      "每当你进入 #y战狂 ，对随机一名敌人造成 #b4 点伤害。 NL 每当你进入 #y防守 ，获得 #b4 点 #y格挡 。"
+      "每当你进入 #y战狂 ，对随机一名敌人造成 #b3 点伤害。 NL 每当你进入 #y防守 ，获得 #b3 点 #y格挡 。"
     ]
   },
   "champ:BlackKnightHelmet": {
@@ -73,7 +73,7 @@
     "NAME": "力量铠甲",
     "FLAVOR": "买来的。",
     "DESCRIPTIONS": [
-      "每回合开始时获得 [E] 。 NL 你的最大 #y活力 点数和 #y反击 层数为 #b30 。"
+      "每回合开始时获得 [E] 。 NL 你的最大 #y活力 点数和 #y反击 层数为 #b20 。"
     ]
   },
   "champ:SignatureFinisher": {
