@@ -14,10 +14,10 @@
     ]
   },
   "champ:FocusedBerPower": {
-    "NAME": "战狂士",
+    "NAME": "花哨步法",
     "DESCRIPTIONS": [
-      "本回合你打出下张 #y终结技 时，对所有敌人造成 #b",
-      " 点伤害。"
+      "本回合下张 #y终结技 使所有敌人失去 #b",
+      " 点生命。"
     ]
   },
   "champ:ShieldWallPower": {
