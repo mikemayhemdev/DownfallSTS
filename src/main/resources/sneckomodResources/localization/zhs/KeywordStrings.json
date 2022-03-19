@@ -13,7 +13,7 @@
       "muddle",
       "muddled"
     ],
-    "DESCRIPTION": "将一张牌的耗能本回合变为0~3。"
+    "DESCRIPTION": "将一张牌的耗能本回合变为 #b0 ~ #b3 。"
   },
   {
     "PROPER_NAME": "异色牌",
