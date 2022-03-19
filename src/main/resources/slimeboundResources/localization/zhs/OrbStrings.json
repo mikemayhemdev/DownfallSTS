@@ -7,9 +7,9 @@
   },"Slimebound:BronzeSlime": {
     "NAME": "青铜史莱姆",
     "DESCRIPTION": [
-      "回合开始时造成 #b",
-      " 伤害并给予你 #b",
-      " 点 #y格挡 。"
+      "回合开始时对所有敌人造成 #b",
+      " 点伤害，但跳过它的下次攻击。",
+      ""
     ]
   },
   "Slimebound:AttackSlime": {
@@ -99,7 +99,7 @@
     "DESCRIPTION": [
       "造成 #b",
       " 点伤害并给予你 #b",
-      " 点 #y格挡 。"
+      " 层 #y临时 #y荆棘 。"
     ]
   },
   "Slimebound:DrawingSlime": {
