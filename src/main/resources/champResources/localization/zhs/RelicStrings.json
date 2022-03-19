@@ -3,21 +3,21 @@
     "NAME": "冠军金冠",
     "FLAVOR": "你是冠军！",
     "DESCRIPTIONS": [
-      "每当你进入 #y战狂 ，对随机一名敌人造成 #b4 点伤害。 NL 每当你进入 #y防守 ，获得 #b4 点 #y格挡 。"
+      "进入 #ychamp:战狂 时，对随机一名敌人造成 #b3 点伤害。 NL 进入 #ychamp:防守 时，获得 #b3 点 #y格挡 。"
     ]
   },
   "champ:BlackKnightHelmet": {
     "NAME": "黑骑头盔",
     "FLAVOR": "只受到一点擦伤。",
     "DESCRIPTIONS": [
-      "每场战斗第一次进入每种 #y姿态 时： NL #b防守 -获得 #b2 点敏捷并失去 #b1 点力量。 NL #r战狂 -获得 #b2 点力量并失去 #b1 点敏捷。"
+      "每场战斗初次进入每种 #y姿态 时： NL #ychamp:防守 -获得 #b2 点敏捷并失去 #b1 点力量。 NL #ychamp:战狂 -获得 #b2 点力量并失去 #b1 点敏捷。"
     ]
   },
   "champ:Barbells": {
     "NAME": "杠铃",
     "FLAVOR": "1000 下？切，我还能做 1001 下。",
     "DESCRIPTIONS": [
-      "每当你进入 #y休息处 ，如果你至少有 #b10 张未 #y升级 的牌，随机 #y升级 其中一张。"
+      "进入 #y休息处 时，若至少有 #b10 张未 #y升级 的牌，随机 #y升级 其中一张。"
     ]
   },
   "champ:BerserkersGuideToSlaughter": {
@@ -31,21 +31,21 @@
     "NAME": "终极王冠",
     "FLAVOR": "恭喜！！你是最大的赢家。",
     "DESCRIPTIONS": [
-      "替换 #r冠军金冠 。 NL 每场战斗开始时进入 #y终极 并持续 #b2 回合 。"
+      "替换 #r冠军金冠 。 NL 每场战斗开始时进入 #ychamp:终极 并持续 #b2 回合 。"
     ]
   },
   "champ:DefensiveTrainingManual": {
     "NAME": "防御训练手册",
     "FLAVOR": "专业提示：不要被打到。",
     "DESCRIPTIONS": [
-      " #y防守 的 #y终结技奖励 额外获得 #b8 点 #y格挡 。"
+      " #ychamp:防守 的 #ychamp:终结技 奖励额外获得 #b5 点 #y格挡 。"
     ]
   },
   "champ:DeflectingBracers": {
     "NAME": "偏折护腕",
     "FLAVOR": "如果你觉得格挡很好的话……",
     "DESCRIPTIONS": [
-      "敌人的回合结束后，你自动失去的 #y格挡 转化为等量的 #y反击 。"
+      "敌人的回合结束后，你自动失去的 #y格挡 转化为等量的 #ychamp:反击 。"
     ]
   },
   "champ:DuelingGlove": {
@@ -59,29 +59,29 @@
     "NAME": "格斗读本",
     "FLAVOR": "第一步，打败敌人",
     "DESCRIPTIONS": [
-      "若你回合结束时不处于 #y姿态 ，获得 #b6 点 #y格挡 。"
+      "若回合结束时未处于 #y姿态 ，获得 #b6 点 #y格挡 。"
     ]
   },
   "champ:GladiatorsBookOfMartialProwess": {
     "NAME": "角斗技法",
     "FLAVOR": "凡事都要先试试 - 即使有时没能成功。",
     "DESCRIPTIONS": [
-      "每当你一回合内打出过 #y进入姿态 、 #y战术 、 #y连段 和 #y终结技 ，获得 #b1 点 #y力量 和 #y敏捷 。"
+      "每当你一回合内打出过 #y进入姿态 、 #ychamp:战术 、 #ychamp:连段 和 #ychamp:终结技 ，获得 #b1 点 #y力量 和 #y敏捷 。"
     ]
   },
   "champ:PowerArmor": {
     "NAME": "力量铠甲",
     "FLAVOR": "买来的。",
     "DESCRIPTIONS": [
-      "每回合开始时获得 [E] 。 NL 你的最大 #y活力 点数和 #y反击 层数为 #b30 。"
+      "每回合开始时获得 [E] 。 NL 最大 #y活力 和 #ychamp:反击 层数为 #b20 。"
     ]
   },
   "champ:SignatureFinisher": {
     "NAME": "终结者",
     "FLAVOR": "是时候该使出我的终结一击了。",
     "DESCRIPTIONS": [
-      "拾起时，选择一张 #y终结技 牌。这张牌耗能变为 #b0 ，能在不处于姿态时打出且不会退出 #y姿态 。",
-      "选则一张终结技牌 ",
+      "拾起时，选择一张 #ychamp:终结技 牌。这张牌耗能变为 #b0 ，能在未处于 #y姿态 时打出且不会退出 #y姿态 。",
+      "选择一张终结技牌 ",
       " 的耗能为 #b0 ，能在不处于姿态时打出且不会退出姿态"
     ]
   },
@@ -89,7 +89,7 @@
     "NAME": "幽灵之手",
     "FLAVOR": "有些胜利与你同在。",
     "DESCRIPTIONS": [
-      "每当你进入 #y姿态 时，将一张 #b0 耗能带 #y消耗 的打击或防御加入你的手牌。"
+      "每当你进入 #y姿态 时，将一张 #b0 耗能带 #y消耗 的打击或防御加入手牌。"
     ]
   },
   "champ:LiftRelic": {
@@ -104,7 +104,7 @@
     "NAME": "新晋者",
     "FLAVOR": "你能拿走金冠吗？",
     "DESCRIPTIONS": [
-      "每场战斗开始时，进入随机一种第一勇士 #y姿态 。"
+      "每场战斗开始时，随机进入一种 #y姿态 。"
     ]
   }
 }

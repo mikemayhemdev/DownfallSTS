@@ -13,14 +13,14 @@
       "muddle",
       "muddled"
     ],
-    "DESCRIPTION": "将一张牌的耗能变为0到3之间。"
+    "DESCRIPTION": "将一张牌的耗能本回合变为 #b0 ~ #b3 。"
   },
   {
-    "PROPER_NAME": "异色",
+    "PROPER_NAME": "异色牌",
     "NAMES": [
       "异色",
       "offclass"
     ],
-    "DESCRIPTION": "除了你专属的牌以外的所有可获得牌。（包括诅咒和状态等）"
+    "DESCRIPTION": "异蛇牌池以外的所有可获得牌。（包括 #y诅咒 和 #y状态牌 等）"
   }
 ]

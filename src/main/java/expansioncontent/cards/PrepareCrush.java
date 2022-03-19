@@ -51,6 +51,7 @@ public class PrepareCrush extends AbstractExpansionCard {
         if (!upgraded) {
             upgradeName();
             this.rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
             upgradeBlock(UPGRADE_BLOCK);
 
             AbstractCard q = new SlimeCrush();
