@@ -107,7 +107,7 @@
       "bronze_slime"
     ],
     "PROPERNAME": "青铜史莱姆",
-    "DESCRIPTION": "发动攻击时对所有敌人造成 #b10 点伤害，但攻击后休息一回合。"
+    "DESCRIPTION": "发动攻击时对所有敌人造成 #b10 点伤害，但跳过它的下次攻击。"
   },
   {
     "NAMES": [
