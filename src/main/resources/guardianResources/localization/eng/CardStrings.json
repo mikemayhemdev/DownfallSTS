@@ -9,18 +9,18 @@
   },
   "Guardian:Gem_Red": {
     "NAME": "Ruby",
-    "DESCRIPTION": "guardianmod:Gem. NL Gain 1 temporary Strength.",
-    "UPGRADE_DESCRIPTION": "Gain 1 temporary Strength."
+    "DESCRIPTION": "guardianmod:Gem. NL Gain 2 temporary Strength.",
+    "UPGRADE_DESCRIPTION": "Gain 2 temporary Strength."
   },
   "Guardian:Gem_Green": {
     "NAME": "Emerald",
-    "DESCRIPTION": "guardianmod:Gem. NL Gain 1 temporary Dexterity.",
-    "UPGRADE_DESCRIPTION": "Gain 1 temporary Dexterity."
+    "DESCRIPTION": "guardianmod:Gem. NL Gain 2 temporary Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain 2 temporary Dexterity."
   },
   "Guardian:Gem_Lightblue": {
     "NAME": "Tourmaline",
-    "DESCRIPTION": "guardianmod:Gem. NL Gain 3 temporary Thorns.",
-    "UPGRADE_DESCRIPTION": "Gain 3 temporary Thorns."
+    "DESCRIPTION": "guardianmod:Gem. NL Gain 4 temporary Thorns.",
+    "UPGRADE_DESCRIPTION": "Gain 4 temporary Thorns."
   },
   "Guardian:Gem_White": {
     "NAME": "Quartz",
@@ -86,8 +86,9 @@
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Strength affects this card !M! times. NL Skip your next turn."
   },
   "Guardian:BronzeArmor": {
-    "NAME": "Bronze Armor",
-    "DESCRIPTION": "Gain !M! Artifact. NL guardianmod:Brace 10. NL Exhaust."
+    "NAME": "Resilient Plate",
+    "DESCRIPTION": "Reduce all your debuffs by !M!. NL guardianmod:Brace 8. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Reduce all your debuffs by !M!. NL guardianmod:Brace 8."
   },
   "Guardian:FloatingOrbs": {
     "NAME": "Floating Orbs",
@@ -165,8 +166,8 @@
   },
   "Guardian:PackageAutomaton": {
     "NAME": "Package: Bronze",
-    "DESCRIPTION": "Add a *Hyper *Beam, *Orb *Beam, and *Bronze *Armor to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a *Hyper *Beam, *Orb *Beam, and *Bronze *Armor to your hand and Upgrade them. NL Exhaust."
+    "DESCRIPTION": "Add a *Hyper *Beam, *Orb *Support, and *Resilient *Plate to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Hyper *Beam, *Orb *Support, and *Resilient *Plate to your hand and Upgrade them. NL Exhaust."
   },
   "Guardian:PackageDefect": {
     "NAME": "Package: Defect",
@@ -323,8 +324,8 @@
   },
   "Guardian:Gem_Synthetic": {
     "NAME": "Onyx",
-    "DESCRIPTION": "guardianmod:Gem. NL Gain 1 Artifact.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Artifact."
+    "DESCRIPTION": "guardianmod:Gem. NL Reduce all your debuffs by 1.",
+    "UPGRADE_DESCRIPTION": "Reduce all your debuffs by 1."
   },
   "Guardian:Gem_Yellow": {
     "NAME": "Amber",

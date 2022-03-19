@@ -27,7 +27,7 @@ public class Gem_Green extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
     private static final int COST = 0;
-    private static final int DAMAGEBUFF = 1;  //HARDCODED IN DESCRIPTION
+    private static final int DAMAGEBUFF = 2;  //HARDCODED IN DESCRIPTION
 
     //TUNING CONSTANTS
     private static final int SOCKETS = 0;
