@@ -323,7 +323,7 @@
   },
   "champ:Improvising": {
     "NAME": "触类旁通",
-    "DESCRIPTION": "每回合第一次打出 champ:连段 牌时，返回手牌。 NL 它下次费用为0。"
+    "DESCRIPTION": "每回合初次打出 champ:连段 牌时，返回手牌。 NL 它下次费用为0。"
   },
   "champ:CalledShot": {
     "NAME": "宣告",
@@ -351,7 +351,7 @@
   },
   "champ:DancingMaster": {
     "NAME": "战技大师",
-    "DESCRIPTION": "每回合第一次进入 姿态 时，获得 [E] 并抽一张牌。"
+    "DESCRIPTION": "每回合初次打出 champ:终结技 时，获得 [E] 并抽一张牌。"
   },
   "champ:StrikeOfGenius": {
     "NAME": "打击天才",
