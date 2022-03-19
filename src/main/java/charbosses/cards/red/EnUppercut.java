@@ -27,8 +27,8 @@ public class EnUppercut extends AbstractBossCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, this.magicNumber + 1, false), this.magicNumber + 1));
-        this.addToBot(new ApplyPowerAction(p, m, new VulnerablePower(p, this.magicNumber + 1, false), this.magicNumber + 1));
+        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, this.magicNumber, true), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, m, new VulnerablePower(p, this.magicNumber, true), this.magicNumber));
     }
 
     public void upgrade() {

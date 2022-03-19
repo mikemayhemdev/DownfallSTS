@@ -1,6 +1,8 @@
 package downfall.monsters.gauntletbosses;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.core.EnemyEnergyManager;
+import charbosses.powers.BossIntangiblePower;
 import charbosses.powers.cardpowers.EnemyWraithFormPower;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -75,7 +77,8 @@ public class Silent extends GauntletBoss {
                 addToBot(new GainBlockAction(this, 11));
                 break;
             case 5:
-                addToBot(new ApplyPowerAction(this, this, new EnemyWraithFormPower(this, 2), 2));
+                addToBot(new ApplyPowerAction(this, this, new BossIntangiblePower(this, 2), 2));
+                addToBot(new ApplyPowerAction(this, this, new EnemyWraithFormPower(this, -1), -1));
                 break;
         }
 

@@ -37,7 +37,7 @@ public class EnCripplingCloud extends AbstractBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(p, m, new EnemyPoisonPower(p, m, this.magicNumber), this.magicNumber));
-        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, 3, false), 3));
+        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, 2, true), 2));
     }
 
     @Override

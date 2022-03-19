@@ -58,13 +58,9 @@ public class EnemyPoisonPower extends AbstractPower {
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer) {
             if (AbstractDungeon.getCurrRoom().phase == RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-                if (amount > 0) {
-                    this.flashWithoutSound();
-                    this.addToBot(new EnemyPoisonDamageAction(this.owner, this.source, this.amount, AttackEffect.POISON));
-                    this.addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
-                } else {
-                    this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-                }
+                this.flashWithoutSound();
+                this.addToBot(new EnemyPoisonDamageAction(this.owner, this.source, this.amount, AttackEffect.POISON));
+                //Poison reduction/removal handled in damage action
             }
 
         }

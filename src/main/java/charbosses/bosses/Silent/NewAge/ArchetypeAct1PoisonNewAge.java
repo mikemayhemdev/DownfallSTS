@@ -57,9 +57,21 @@ public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
             switch (turn) {
                 case 0:
                     //Turn 1
-                    addToList(cardsList, new EnCripplingCloud()); //Removed
-                    addToList(cardsList, new EnSurvivor());
-                    addToList(cardsList, new EnBurst());
+                    if (AbstractDungeon.ascensionLevel >= 19) {
+                        addToList(cardsList, new EnBurst());
+                        addToList(cardsList, new EnCripplingCloud()); //Removed
+                        AbstractBossCard c = new EnCripplingCloud();
+                        c.cost = 0;
+                        c.freeToPlayOnce = true;
+                        c.modifyCostForCombat(-2);
+                        addToList(cardsList, c);
+                        addToList(cardsList, new EnSurvivor());
+                    }
+                    else {
+                        addToList(cardsList, new EnCripplingCloud()); //Removed
+                        addToList(cardsList, new EnSurvivor());
+                        addToList(cardsList, new EnBurst());
+                    }
                     turn++;
                     break;
                 case 1:

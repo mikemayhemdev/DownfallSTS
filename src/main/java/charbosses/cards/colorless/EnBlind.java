@@ -29,7 +29,7 @@ public class EnBlind extends AbstractBossCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, this.magicNumber + 1, true), this.magicNumber + 1));
+        this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, this.magicNumber, true), this.magicNumber));
     }
 
     public void upgrade() {
