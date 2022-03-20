@@ -225,9 +225,9 @@
   "Slimebound:RecyclingPower": {
     "NAME": "回收",
     "DESCRIPTIONS": [
-      "在你的回合开始时，随机 #y发掘 #b",
-      " 张0耗能牌。",
-      " 张0耗能牌。"
+      "你的回合开始时，随机 #y发掘 #b",
+      " 张 *舔舔 系牌。",
+      " 张 *舔舔 系牌。"
     ]
   },
   "Slimebound:RecyclingPowerUpgraded": {
