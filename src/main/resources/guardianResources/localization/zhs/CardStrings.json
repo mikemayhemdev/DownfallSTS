@@ -61,7 +61,8 @@
   },
   "Guardian:TwinSlam": {
     "NAME": "双斩",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 *再斩 加入手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 *再斩 加入手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将 *再斩 加入手牌。"
   },
   "Guardian:GuardianWhirl": {
     "NAME": "守护者旋风",
@@ -397,7 +398,7 @@
   },
   "Guardian:SecondStrikePreviewCard": {
     "NAME": "再斩",
-    "DESCRIPTION": "虚无 。 NL 复制 *双斩 里的宝石效果。 NL 造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 复制 *双斩 里的宝石效果。 NL 消耗 。"
   },
   "Guardian:PackageConstruct": {
     "NAME": "    ！！！！！！！！！！！！   以下为疑似弃用文本，为了保险起见防止游戏崩溃，暂未删除。    ！！！！！！！！！！！！  ",
