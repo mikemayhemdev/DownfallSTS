@@ -88,6 +88,7 @@ public class TwinSlam extends AbstractGuardianCard {
             q.upgrade();
             cardsToPreview = q;
 
+            this.rawDescription = UPGRADED_DESCRIPTION;
             this.updateDescription();
         }
     }

@@ -74,8 +74,8 @@
   },
   "Slimebound:SelfFormingGoo": {
     "NAME": "Reformation",
-    "DESCRIPTION": "When you slimeboundmod:Absorb a Slime, gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "When you slimeboundmod:Absorb a Slime, gain !M! Strength and !M! Dexterity."
+    "DESCRIPTION": "Whenever you slimeboundmod:Absorb a Slime, gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Whenever you slimeboundmod:Absorb a Slime, gain !M! Strength and !M! Dexterity."
   },
   "Slimebound:OozeBath": {
     "NAME": "Ooze Bath",

@@ -257,7 +257,7 @@
   },
   "hexamod:VolcanoVisage": {
     "NAME": "Volcano Visage",
-    "DESCRIPTION": "At the start of your turn, apply !M! hexamod:Soulburn to ALL enemies."
+    "DESCRIPTION": "Whenever you hexamod:Ignite a Ghostflame, apply !M! hexamod:Soulburn to ALL enemies."
   },
   "hexamod:SuperheatedStrike": {
     "NAME": "Searing Strike",
@@ -286,7 +286,7 @@
   },
   "hexamod:RadiantFlame": {
     "NAME": "Radiant Flame",
-    "DESCRIPTION": "Whenever you hexamod:Ignite a Ghostflame, apply !M! hexamod:Soulburn to a random enemy."
+    "DESCRIPTION": "Whenever you hexamod:Ignite a Ghostflame, gain !M! Block."
   },
   "hexamod:ApocalypseNow": {
     "NAME": "Apocalypse Now",

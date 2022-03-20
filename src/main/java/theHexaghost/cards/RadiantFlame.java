@@ -9,14 +9,9 @@ public class RadiantFlame extends AbstractHexaCard {
 
     public final static String ID = makeID("RadiantFlame");
 
-    //stupid intellij stuff POWER, SELF, UNCOMMON
-
-    private static final int MAGIC = 3;
-    private static final int UPG_MAGIC = 2;
-
     public RadiantFlame() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = MAGIC;
+        baseMagicNumber = magicNumber = 3;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
@@ -27,7 +22,7 @@ public class RadiantFlame extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPG_MAGIC);
+            upgradeMagicNumber(1);
         }
     }
 }

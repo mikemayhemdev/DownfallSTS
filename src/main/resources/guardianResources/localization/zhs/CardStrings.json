@@ -61,7 +61,8 @@
   },
   "Guardian:TwinSlam": {
     "NAME": "双斩",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 *再打击 加入手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 *再打击 加入手牌。",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add *Second *Strike+ into your hand."
   },
   "Guardian:GuardianWhirl": {
     "NAME": "守护者旋风",
