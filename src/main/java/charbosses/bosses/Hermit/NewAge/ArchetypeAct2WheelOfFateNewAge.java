@@ -25,7 +25,7 @@ import hermit.cards.Strike_Hermit;
 import java.util.ArrayList;
 
 public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
-    private ArrayList<AbstractCard> mockDeck = new ArrayList<>();
+    public ArrayList<AbstractCard> mockDeck = new ArrayList<>();
 
     public ArchetypeAct2WheelOfFateNewAge() {
         super("HERMIT_WHEEL_ARCHETYPE", "Wheel of Fortune");
@@ -172,6 +172,9 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
                 AbstractCharBoss.boss.hand.refreshHandLayout();
             }
         });
+        if (mockDeck.isEmpty()) {
+            reshuffle();
+        }
     }
 
     @Override

@@ -14,7 +14,9 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
+import com.badlogic.gdx.math.Vector2;
 import com.esotericsoftware.spine.*;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -23,6 +25,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbPurple;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+
+import java.awt.*;
 
 import static hermit.HermitMod.THE_DEFAULT_SKELETON_ATLAS;
 import static hermit.HermitMod.THE_DEFAULT_SKELETON_JSON;
@@ -126,5 +130,18 @@ public class CharBossHermit extends AbstractCharBoss {
         downfallMod.saveBossFight(CharBossHermit.ID);
     }
 
+    private static AbstractCard previewCard;
+    private static Vector2 PREVIEW_CARD_POS = new Vector2(Settings.WIDTH / 2F, (Settings.HEIGHT / 3F)*2);
 
+    @Override
+    public void render(SpriteBatch sb) {
+        super.render(sb);
+        if (chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge) {
+            AbstractCard q =((ArchetypeAct2WheelOfFateNewAge) chosenArchetype).mockDeck.get(0);
+            previewCard = q.makeStatEquivalentCopy();
+            previewCard.current_x = previewCard.target_x = PREVIEW_CARD_POS.x;
+            previewCard.current_y = previewCard.target_y = PREVIEW_CARD_POS.y;
+            previewCard.render(sb);
+        }
+    }
 }
