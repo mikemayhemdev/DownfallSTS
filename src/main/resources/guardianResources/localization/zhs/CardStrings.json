@@ -85,9 +85,9 @@
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 力量 在本牌中发挥 !M! 倍效果。 NL 跳过你的下个回合。"
   },
   "Guardian:BronzeArmor": {
-    "NAME": "铜制装甲",
-    "DESCRIPTION": "Reduce all your debuffs by !M!. NL guardianmod:Brace 8. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Reduce all your debuffs by !M!. NL guardianmod:Brace 8."
+    "NAME": "弹性护甲",
+    "DESCRIPTION": "降低自身所有负面效果 !M! 层。 NL guardianmod:提防 8。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "降低自身所有负面效果 !M! 层。 NL guardianmod:提防 8。"
   },
   "Guardian:FloatingOrbs": {
     "NAME": "浮游圆球",
@@ -163,8 +163,8 @@
   },
   "Guardian:PackageAutomaton": {
     "NAME": "组件: 铜制",
-    "DESCRIPTION": "将1张 *超能射线 、 *铜制圆球 和 *铜制装甲 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "添加一张已 升级 的 *超能射线 、 *铜制圆球 和 *铜制装甲 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "将1张 *超能射线 、 *铜制圆球 和 *弹性护甲 加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "添加一张已 升级 的 *超能射线 、 *铜制圆球 和 *弹性护甲 加入手牌。 NL 消耗 。"
   },
   "Guardian:PackageDefect": {
     "NAME": "组件: 故障",
@@ -320,8 +320,8 @@
   },
   "Guardian:Gem_Synthetic": {
     "NAME": "玛瑙",
-    "DESCRIPTION": "guardianmod:Gem. NL Reduce all your debuffs by 1.",
-    "UPGRADE_DESCRIPTION": "Reduce all your debuffs by 1."
+    "DESCRIPTION": "guardianmod:宝石 。 NL 降低自身所有负面效果1层。",
+    "UPGRADE_DESCRIPTION": "降低自身所有负面效果1层。"
   },
   "Guardian:Gem_Yellow": {
     "NAME": "琥珀",
