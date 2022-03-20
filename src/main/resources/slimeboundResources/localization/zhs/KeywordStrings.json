@@ -128,13 +128,6 @@
   },
   {
     "NAMES": [
-      "重铸"
-    ],
-    "PROPERNAME": "重铸",
-    "DESCRIPTION": "在本场战斗中，将卡牌替换为本职业的一张随机卡牌，它的耗能减少 1 点。"
-  },
-  {
-    "NAMES": [
       "缓慢"
     ],
     "PROPERNAME": "缓慢",
@@ -156,12 +149,12 @@
   },
     {
     "NAMES": [
-      "保护史莱姆",
+      "尖刺史莱姆",
       "protector slime",
       "protector_slime"
     ],
-    "PROPER_NAME": "保护史莱姆",
-    "DESCRIPTION": "攻击造成 #b2 点伤害并给予你 #b3 层 #y临时 #y荆棘 。"
+    "PROPER_NAME": "尖刺史莱姆",
+    "DESCRIPTION": "攻击造成 #b4 点伤害并给予你 #b4 层 #y临时 #y荆棘 。"
   },
   {
     "NAMES": [
@@ -209,10 +202,24 @@
     {
     "NAMES": [
       "专家史莱姆",
-	  "specialist",
+      "specialist",
       "specialist"
     ],
     "PROPER_NAME": "专家史莱姆",
     "DESCRIPTION": "比普通 #y史莱姆 更加强大的独特 #y史莱姆 。"
+  },
+  {
+    "NAMES": [
+      "深埋"
+    ],
+    "PROPER_NAME": "深埋",
+    "DESCRIPTION": "被 #y取回 的优先级最低。"
+  },
+  {
+    "NAMES": [
+      "重铸"
+    ],
+    "PROPERNAME": "重铸",
+    "DESCRIPTION": "在本场战斗中，将卡牌替换为本职业的一张随机卡牌，它的耗能减少 1 点。"
   }
 ]
