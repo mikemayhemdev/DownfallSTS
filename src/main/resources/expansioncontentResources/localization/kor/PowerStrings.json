@@ -13,14 +13,14 @@
   "expansioncontent:AwakenedOnePower": {
     "NAME": "어두운 의식",
     "DESCRIPTIONS": [
-      "이번 턴에 적이 공격하지 않으면 #y힘 을 #b",
+      "이번 턴에 적이 공격하지 않으면 #y힘을 #b",
       " 얻습니다."
     ]
   },
   "expansioncontent:AwakenDeathPower": {
     "NAME": "각성",
     "DESCRIPTIONS": [
-      "사망 할때 체력을 #b",
+      "사망할 때 체력을 #b",
       " 회복하고 이 효과를 제거합니다."
     ]
   },
@@ -28,7 +28,7 @@
     "NAME": "시간 가속",
     "DESCRIPTIONS": [
       "카드를 #b",
-      " 장 더 사용하면 #y힘 을 #b",
+      " 장 더 사용하면 #y힘을 #b",
       " 얻습니다."
     ]
   },
@@ -36,14 +36,14 @@
     "NAME": "시간 가속+",
     "DESCRIPTIONS": [
       "카드를 #b",
-      " 장 더 사용하면 #y힘 을 #b",
+      " 장 더 사용하면 #y힘을 #b",
       " 얻습니다."
     ]
   },
   "expansioncontent:DeEnergizedPower": {
     "NAME": "무전압 상태",
     "DESCRIPTIONS": [
-      "다음 턴 시작 시 [E] 를 #b",
+      "다음 내 턴 시작 시 [E] 를 #b",
       " 잃습니다."
     ]
   },
@@ -66,21 +66,21 @@
   "expansioncontent:AddCopyPower": {
     "NAME": "지연된 카드",
     "DESCRIPTIONS": [
-      "다음 턴 시작 시 ",
+      "다음 내 턴 시작 시 ",
       " 카드를 얻습니다."
     ]
   },
   "expansioncontent:AddSameInstancePower": {
     "NAME": "지연된 카드",
     "DESCRIPTIONS": [
-      "다음 턴 시작 시 ",
+      "다음 내 턴 시작 시 ",
       " 카드를 얻습니다."
     ]
   },
   "expansioncontent:NextTurnExhumePower": {
     "NAME": "지연된 발굴",
     "DESCRIPTIONS": [
-      "다음 턴 시작 시 ",
+      "다음 내 턴 시작 시 ",
       " 카드를 발굴합니다."
     ]
   },
@@ -99,7 +99,7 @@
       "이번 턴에 #b",
       " 체력 이상을 잃지 않습니다. 효과가 발동하면 천하무적을 다음 턴에 제거합니다.",
       "이번 턴에 #b",
-      " 체력 이상을 잃지 않습니다. 효과가 발동하면 천하무적을 다음 턴에 제거합니다. NL 제거될 시 #b",
+      " 체력 이상을 잃지 않습니다. 효과가 발동하면 천하무적을 다음 턴에 제거합니다. NL 제거될 시 다음 #b",
       " 번까지 다시 바로 발동합니다."
     ]
   }

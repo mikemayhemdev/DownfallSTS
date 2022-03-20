@@ -50,7 +50,7 @@
   },
   "sneckomod:SoulDraw": {
     "NAME": "영혼의 뽑기",
-    "DESCRIPTION": "sneckomod:스네코항체. NL 카드를 0 - !M! 장 뽑습니다.",
+    "DESCRIPTION": "sneckomod:스네코항체. NL 무작위 sneckomod:다른_직업 카드를 !M! 장 얻습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 카드를 1 - !M! 장 뽑습니다."
   },
   "sneckomod:SoulRoll": {
@@ -73,8 +73,8 @@
   },
   "sneckomod:Nope": {
     "NAME": "안돼",
-    "DESCRIPTION": "sneckomod:스네코항체. NL 손에 있는 카드를 1장 소멸시킵니다. NL 그 카드와 같은 유형의 비용이 1 낮아진 무작위 카드로 교체합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 손에 있는 카드를 1장 소멸시킵니다. NL 그 카드와 같은 유형의 비용이 1 낮아진 무작위 카드로 교체합니다.",
+    "DESCRIPTION": "sneckomod:스네코항체. NL 카드를 1장 소멸시킵니다. NL 그 카드와 같은 유형의 카드로 교체합니다.",
+    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 카드를 1장 소멸시킵니다. NL 그 카드와 같은 유형의 비용이 1 낮아진 무작위 카드로 교체합니다.",
     "EXTENDED_DESCRIPTION": [
       " 안돼로 소멸시킬 카드를 고르십시오."
     ]
@@ -130,21 +130,21 @@
   },
   "sneckomod:SoulExchange": {
     "NAME": "영혼의 교환",
-    "DESCRIPTION": "sneckomod:스네코항체. NL 카드를 1장 뽑고 카드를 1장 소멸시킵니다. NL 손에 있는 카드를 모두 소멸 시키고 그 카드를 처음 소멸 시킨 카드의 직업 카드로 교체합니다.",
-    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 카드를 2장 뽑고 카드를 1장 소멸시킵니다. NL 손에 있는 카드를 모두 소멸 시키고 그 카드를 처음 소멸 시킨 카드의 직업 카드로 교체합니다.",
+    "DESCRIPTION": "sneckomod:스네코항체. NL 카드를 1장 뽑고 카드를 1장 소멸시킵니다. NL 카드를 모두 소멸시키고 그 카드를 처음 소멸시킨 카드의 직업 카드로 교체합니다.",
+    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 카드를 2장 뽑고 카드를 1장 소멸시킵니다. NL 카드를 모두 소멸시키고 그 카드를 처음 소멸시킨 카드의 직업 카드로 교체합니다.",
     "EXTENDED_DESCRIPTION": [
       "영혼 교환으로 소멸시킬 카드를 고르십시오."
     ]
   },
   "sneckomod:CheapStock": {
     "NAME": "값싼 재고품",
-    "DESCRIPTION": "턴 시작 시 손에 있는 비용이 가장 높은 sneckomod:다른_직업 카드의 비용을 1 낮춥니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 턴 시작 시 손에 있는 비용이 가장 높은 sneckomod:다른_직업 카드의 비용을 1 낮춥니다."
+    "DESCRIPTION": "내 턴 시작 시 손에 있는 비용이 가장 높은 sneckomod:다른_직업 카드의 비용을 1 낮춥니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 내 턴 시작 시 손에 있는 비용이 가장 높은 sneckomod:다른_직업 카드의 비용을 1 낮춥니다."
   },
   "sneckomod:UnlimitedRolls": {
     "NAME": "무제한 도박",
-    "DESCRIPTION": "턴 시작 시 *영혼의 *도박을 1장 얻습니다. 그 카드에는 휘발성 과 소멸 효과가 추가됩니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 턴 시작 시 *영혼의 *도박을 1장 얻습니다. 그 카드에는 휘발성 과 소멸 효과가 추가됩니다."
+    "DESCRIPTION": "내 턴 시작 시 *영혼의 *도박을 1장 얻습니다. 그 카드에는 휘발성 과 소멸 효과가 추가됩니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 내 턴 시작 시 *영혼의 *도박을 1장 얻습니다. 그 카드에는 휘발성 과 소멸 효과가 추가됩니다."
   },
   "sneckomod:MasterEye": {
     "NAME": "달인의 눈",
@@ -157,7 +157,7 @@
   },
   "sneckomod:ImprovisedGuard": {
     "NAME": "변덕스러운 보호",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL sneckomod:다른_직업 스킬 카드를 얻고 그 카드를 sneckomod:뒤엉키게 합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 무작위 sneckomod:다른_직업 스킬 카드를 얻고 그 카드를 sneckomod:뒤엉키게 합니다."
   },
   "sneckomod:QuickMove": {
     "NAME": "날랜 움직임",
@@ -170,8 +170,8 @@
   },
   "sneckomod:Rotation": {
     "NAME": "순환",
-    "DESCRIPTION": "sneckomod:스네코항체. NL 모든 sneckomod:다른_직업 카드를 버립니다. NL 카드를 버린 카드 개수 + !M! 장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 모든 sneckomod:다른_직업 카드를 버립니다. NL 카드를 버린 카드 개수 + !M! 장 뽑습니다."
+    "DESCRIPTION": "sneckomod:스네코항체. NL 모든 sneckomod:다른_직업 카드를 버립니다. NL 카드를 버린 카드 개수만큼 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 모든 sneckomod:다른_직업 카드를 버립니다. NL 카드를 버린 카드 개수 + !M! 만큼 뽑습니다."
   },
   "sneckomod:SerpentMind": {
     "NAME": "외세의 형상",
@@ -183,17 +183,17 @@
   },
   "sneckomod:PureSnecko": {
     "NAME": "변화무쌍",
-    "DESCRIPTION": "sneckomod:스네코항체. NL 손에 있는 모든 sneckomod:다른_직업 카드를 소멸 시키고 교체합니다.",
-    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 손에 있는 모든 sneckomod:다른_직업 카드를 소멸 시키고 교체합니다. 교체된 카드의 비용을 1 낮춥니다."
+    "DESCRIPTION": "sneckomod:스네코항체. NL 손에 있는 모든 sneckomod:다른_직업 카드를 소멸시키고 교체합니다.",
+    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 손에 있는 모든 sneckomod:다른_직업 카드를 소멸시키고 교체합니다. 교체된 카드의 비용을 1 낮춥니다."
   },
   "sneckomod:Cheat": {
     "NAME": "치트",
-    "DESCRIPTION": "sneckomod:스네코항체. NL 이번 턴에 무작위 수치 범위가 있는 카드를 사용하면 최대 수치로 사용됩니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 이번 턴에 무작위 수치 범위가 있는 카드를 사용하면 최대 수치로 사용됩니다."
+    "DESCRIPTION": "sneckomod:스네코항체. NL 이번 턴 동안 무작위 수치 범위가 있는 카드를 사용하면 최대 수치로 사용됩니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 이번 턴 동안 무작위 수치 범위가 있는 카드를 사용하면 최대 수치로 사용됩니다."
   },
   "sneckomod:Restock": {
     "NAME": "재보급",
-    "DESCRIPTION": "sneckomod:스네코항체. NL 손에 있는 카드를 모두 버립니다. NL 카드를 5-10 장 뽑습니다. NL 소멸."
+    "DESCRIPTION": "sneckomod:스네코항체. NL 카드를 모두 버립니다. NL 카드를 5-10 장 뽑습니다. NL 소멸."
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "반짝이는 도박수",
@@ -212,11 +212,11 @@
   },
   "sneckomod:DefensiveFlair": {
     "NAME": "수비적인 솜씨",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. 손에 있는 sneckomod:다른_직업 카드마다 방어도를 !M! 증가시킵니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. 손에 있는 sneckomod:다른_직업 카드당 방어도를 !M! 증가시킵니다."
   },
   "sneckomod:DangerNoodle": {
     "NAME": "위험한 머리",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 sneckomod:다른_직업 카드마다 이 카드를 반복해서 사용합니다. 손에 있는 sneckomod:다른_직업 카드를 모두 소멸 시킵니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 sneckomod:다른_직업 카드당 이 카드를 반복해서 사용하고 sneckomod:다른_직업 카드를 모두 소멸시킵니다."
   },
   "sneckomod:SerpentIdol": {
     "NAME": "구렁이 우상",
@@ -224,20 +224,20 @@
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "쓰레기 재활용",
-    "DESCRIPTION": "sneckomod:스네코항체. NL 카드를 1장 소멸 시킵니다. NL 그 카드의 비용만큼 [E] 를 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 카드를 1장 소멸 시킵니다. NL 그 카드의 비용만큼 [E] 를 얻습니다."
+    "DESCRIPTION": "sneckomod:스네코항체. NL 카드를 1장 소멸시킵니다. NL 그 카드의 비용만큼 [E] 를 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 카드를 1장 소멸시킵니다. NL 그 카드의 비용만큼 [E] 를 얻습니다."
   },
   "sneckomod:DiceBlock": {
     "NAME": "주사위 막기",
-    "DESCRIPTION": "방어도를 !M! - !B! 얻습니다. 덱에 있는 *Unknown 카드마다 최대 방어도를 1 증가시킨 채로 전투를 시작합니다."
+    "DESCRIPTION": "방어도를 !M! - !B! 얻습니다."
   },
   "sneckomod:MixItUp": {
-    "NAME": "흔들어 젓지 말고!",
-    "DESCRIPTION": "*포션마다 피해를 !D! 줍니다. NL 보유한 포션을 잃고 새 포션으로 교체합니다. NL 소멸."
+    "NAME": "섞어섞어!",
+    "DESCRIPTION": "피해를 !D! 만큼 !M! 줍니다. NL 보유한 포션을 *변화시킵니다. NL 소멸."
   },
   "sneckomod:MorePower": {
     "NAME": "더 많은 힘!",
-    "DESCRIPTION": "전투 종료 시 강화된 *Unknown 카드 보상을 얻습니다."
+    "DESCRIPTION": "전투 종료 시 강화된 *Unknown 카드 보상을 추가로 얻습니다."
   },
   "sneckomod:UnknownStrength": {
     "NAME": "???",
@@ -265,11 +265,11 @@
   },
   "sneckomod:RainOfDice": {
     "NAME": "주사위 비",
-    "DESCRIPTION": "무작위 적에게 피해를 !qqq! - !D! 만큼 2 - !M! 번 줍니다."
+    "DESCRIPTION": "무작위 적에게 피해를 !qqq! - !D! 줍니다. NL 이 카드를 sneckomod:뒤엉키게 하고 가져옵니다."
   },
   "sneckomod:DiceCrush": {
     "NAME": "주사위 으깨기",
-    "DESCRIPTION": "피해를 !M! - !D! 줍니다. NL 덱에 있는 *Unknown 카드마다 최대 피해량을 1 증가시킨 채로 전투를 시작합니다."
+    "DESCRIPTION": "피해를 !M! - !D! 줍니다."
   },
   "sneckomod:SnakeSap": {
     "NAME": "뱀 수액",
@@ -285,8 +285,8 @@
   },
   "sneckomod:Mudshield": {
     "NAME": "진흙 방패",
-    "DESCRIPTION": "카드가 sneckomod:뒤엉킬 때마다 다음 턴에 방어도를 1 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 카드가 sneckomod:뒤엉킬 때마다 다음 턴에 방어도를 1 얻습니다."
+    "DESCRIPTION": "카드가 sneckomod:뒤엉킬 때마다 방어도를 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 카드가 sneckomod:뒤엉킬 때마다 방어도를 !M! 얻습니다."
   },
   "sneckomod:WideSting": {
     "NAME": "광역 찌르기",
@@ -294,12 +294,12 @@
   },
   "sneckomod:UnendingSupply": {
     "NAME": "영원한 공급",
-    "DESCRIPTION": "매 턴 시작 시 무작위 sneckomod:다른_직업 카드를 1장 얻습니다. 그 카드는 sneckomod:뒤엉킵니다."
+    "DESCRIPTION": "매 턴 시작 시 무작위 sneckomod:다른_직업 카드를 1장 얻습니다."
   },
   "sneckomod:Memorize": {
     "NAME": "기억",
-    "DESCRIPTION": "sneckomod:스네코항체. NL 손에 있는 *Unknown 카드를 1장 고릅니다. NL 그 카드를 고정해 영구적으로 덱에 추가하고 고른 *Unknown 카드를 제거합니다. 이 카드는 사용하면 덱에서 영구적으로 제거됩니다.",
-    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. 보존. NL 손에 있는 *Unknown 카드를 1장 고릅니다. NL 그 카드를 고정해 영구적으로 덱에 추가하고 고른 *Unknown 카드를 제거합니다. 이 카드는 사용하면 덱에서 영구적으로 제거됩니다.",
+    "DESCRIPTION": "sneckomod:스네코항체. NL *Unknown 카드를 1장 선택합니다. 이 카드를 덱에서 영구적으로 제거합니다. NL sneckomod:영구각인.",
+    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. 보존. NL *Unknown 카드를 1장 선택합니다. 이 카드를 덱에서 영구적으로 제거합니다. NL sneckomod:영구각인. ",
     "EXTENDED_DESCRIPTION": [
       " 기억할 카드를 고르십시오."
     ]

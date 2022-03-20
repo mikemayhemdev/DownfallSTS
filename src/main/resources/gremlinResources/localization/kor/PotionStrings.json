@@ -16,13 +16,13 @@
   "gremlin:SwapPotion": {
     "NAME": "병에 담긴 사기",
     "DESCRIPTIONS": [
-      "무작위 그렘린으로 #y교체 합니다."
+      "무작위 그렘린으로 #y교체합니다."
     ]
   },
   "gremlin:WizPotion": {
     "NAME": "마법 핏자 포션",
     "DESCRIPTIONS": [
-      "#y마법 을 #b",
+      "#y마법을 #b",
       " 얻습니다."
     ]
   }

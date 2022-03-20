@@ -9,7 +9,7 @@
   "Slimebound:SlimyTonguePotion": {
     "NAME": "점액질 엘릭서",
     "DESCRIPTIONS": [
-      "이번 전투에서 #y점액 을 부여할 때마다 #b",
+      "이번 전투에서 #y점액을 부여할 때마다 #b",
       " 만큼 더 부여합니다."
     ]
   },
