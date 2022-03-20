@@ -3,7 +3,7 @@
     "NAME": "Champion's Crown",
     "FLAVOR": "A WINNER IS YOU!",
     "DESCRIPTIONS": [
-      "When you enter #rBerserker, deal #b3 damage to a random enemy. NL When you enter #bDefensive, gain #b3 #yBlock."
+      "When you enter a #yStance, deal #b3 damage to a random enemy."
     ]
   },
   "champ:BlackKnightHelmet": {
