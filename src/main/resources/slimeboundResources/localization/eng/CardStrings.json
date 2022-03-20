@@ -336,8 +336,9 @@
     "DESCRIPTION": "slimeboundmod:Tackles deal !M! more damage to enemies, and 1 more damage to you."
   },
   "Slimebound:Darklings": {
-    "NAME": "Darkling Trio",
-    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Darkling_Slime !M! times. NL Exhaust."
+    "NAME": "Darkling Duo",
+    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Darkling_Slime !M! times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Darkling Trio"
   },
   "Slimebound:SlimeSlap": {
     "NAME": "Slime Slap",

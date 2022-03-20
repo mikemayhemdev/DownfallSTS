@@ -1,7 +1,10 @@
 package guardian.cards;
 
 
+import basemod.devcommands.draw.Draw;
+import champ.powers.DrawLessNextTurnPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -9,9 +12,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
+import com.megacrit.cardcrawl.powers.DrawReductionPower;
+import com.megacrit.cardcrawl.powers.LoseDexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
+import hermit.actions.ReduceDebuffsAction;
 
 
 public class DonusPower extends AbstractGuardianCard {
@@ -23,7 +29,7 @@ public class DonusPower extends AbstractGuardianCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     //TUNING CONSTANTS
     public static String UPGRADED_DESCRIPTION;
@@ -41,19 +47,17 @@ public class DonusPower extends AbstractGuardianCard {
     public DonusPower() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
-        this.exhaust = true;
+        baseMagicNumber = magicNumber = 4;
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, 1), 1));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArtifactPower(p, 1), 1));
 
-        AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.ATTACK).makeCopy();
-        if (upgraded) c.modifyCostForCombat(-1);
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction(c, true));
-
-
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawLessNextTurnPower(2), 2));
+        if (upgraded){
+            AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, 1));
+        }
     }
 
     public AbstractCard makeCopy() {
@@ -68,17 +72,6 @@ public class DonusPower extends AbstractGuardianCard {
         }
     }
 
-    public void updateDescription() {
-
-        if (this.socketCount > 0) {
-            if (upgraded && UPGRADED_DESCRIPTION != null) {
-                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
-            } else {
-                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
-            }
-        }
-        this.initializeDescription();
-    }
 }
 
 

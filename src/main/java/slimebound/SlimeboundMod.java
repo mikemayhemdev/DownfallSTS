@@ -312,7 +312,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
                 SplitSpecialist.ID,
                 TagTeam.ID,
-                Darklings.ID,
+                FeelOurPain.ID,
 
                 HungryTackle.ID,
                 Recollect.ID,

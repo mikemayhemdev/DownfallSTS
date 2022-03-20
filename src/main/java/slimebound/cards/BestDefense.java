@@ -36,7 +36,7 @@ public class BestDefense extends AbstractSlimeboundCard {
 
     public BestDefense() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 5;
+        this.magicNumber = this.baseMagicNumber = 6;
 
        // this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
@@ -54,7 +54,7 @@ public class BestDefense extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(3);
 
 
         }

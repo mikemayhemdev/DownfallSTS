@@ -22,7 +22,7 @@ public class GemFire extends AbstractGuardianCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardStrings cardStrings;
-    private static final int COST = 0;
+    private static final int COST = 2;
     private static final int DAMAGE = 10;
 
     //TUNING CONSTANTS

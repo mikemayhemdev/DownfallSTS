@@ -9,18 +9,18 @@
   },
   "Guardian:Gem_Red": {
     "NAME": "红宝石",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 1 点 guardianmod:临时 力量 。",
-    "UPGRADE_DESCRIPTION": "获得 1 点 guardianmod:临时 力量 。"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 2 点 guardianmod:临时 力量 。",
+    "UPGRADE_DESCRIPTION": "获得 2 点 guardianmod:临时 力量 。"
   },
   "Guardian:Gem_Green": {
     "NAME": "翡翠",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 1 点 guardianmod:临时 敏捷 。",
-    "UPGRADE_DESCRIPTION": "获得 1 点 guardianmod:临时 敏捷 。"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 2 点 guardianmod:临时 敏捷 。",
+    "UPGRADE_DESCRIPTION": "获得 2 点 guardianmod:临时 敏捷 。"
   },
   "Guardian:Gem_Lightblue": {
     "NAME": "碧玺",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 3 点 guardianmod:临时 荆棘 。",
-    "UPGRADE_DESCRIPTION": "获得 3 点 guardianmod:临时 荆棘 。"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 4 点 guardianmod:临时 荆棘 。",
+    "UPGRADE_DESCRIPTION": "获得 4 点 guardianmod:临时 荆棘 。"
   },
   "Guardian:Gem_White": {
     "NAME": "石英",
@@ -86,7 +86,8 @@
   },
   "Guardian:BronzeArmor": {
     "NAME": "铜制装甲",
-    "DESCRIPTION": "获得 !M! 层 人工制品 。 NL guardianmod:提防 10 。 NL 消耗 。"
+    "DESCRIPTION": "Reduce all your debuffs by !M!. NL guardianmod:Brace 8. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Reduce all your debuffs by !M!. NL guardianmod:Brace 8."
   },
   "Guardian:FloatingOrbs": {
     "NAME": "浮游圆球",
@@ -319,8 +320,8 @@
   },
   "Guardian:Gem_Synthetic": {
     "NAME": "玛瑙",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 1 层 人工制品 。",
-    "UPGRADE_DESCRIPTION": "获得 1 层 人工制品 。"
+    "DESCRIPTION": "guardianmod:Gem. NL Reduce all your debuffs by 1.",
+    "UPGRADE_DESCRIPTION": "Reduce all your debuffs by 1."
   },
   "Guardian:Gem_Yellow": {
     "NAME": "琥珀",
