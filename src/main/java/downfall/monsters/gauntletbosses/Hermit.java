@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import downfall.downfallMod;
 import downfall.powers.gauntletpowers.MonsterVigor;
@@ -64,11 +65,7 @@ public class Hermit extends GauntletBoss {
                 addToBot(new GainBlockAction(this, 10));
                 break;
             case 4:
-                addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(2), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-                addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new Bruise(AbstractDungeon.player, 5), 5));
-                if (hasPower(MonsterVigor.POWER_ID)) {
-                    addToBot(new RemoveSpecificPowerAction(this, this, MonsterVigor.POWER_ID));
-                }
+                addToBot(new ApplyPowerAction(this, this, new PlatedArmorPower(this, 4), 4));
                 break;
             case 5:
                 addToBot(new ApplyPowerAction(this, this, new StrengthPower(this, 4), 4));
@@ -95,7 +92,7 @@ public class Hermit extends GauntletBoss {
                     setMove((byte) 3, Intent.DEFEND);
                     break;
                 case 3:
-                    setMove((byte) 4, Intent.ATTACK_DEBUFF, this.damage.get(2).base);
+                    setMove((byte) 4, Intent.BUFF);
                     break;
             }
         }

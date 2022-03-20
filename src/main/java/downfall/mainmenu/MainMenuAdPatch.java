@@ -11,11 +11,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.Hitbox;
-import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.scenes.TitleBackground;
 import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
+import downfall.downfallMod;
 import downfall.util.TextureLoader;
 
 import java.awt.*;
@@ -32,7 +32,8 @@ public class MainMenuAdPatch {
     public static class RenderPatch {
         @SpirePostfixPatch
         public static void renderAd(TitleBackground instance, SpriteBatch sb) {
-            advert.render(sb);
+            if (downfallMod.STEAM_MODE)
+                advert.render(sb);
         }
     }
 
@@ -40,7 +41,8 @@ public class MainMenuAdPatch {
     public static class UpdatePatch {
         @SpirePostfixPatch
         public static void updateAd(TitleBackground instance) {
-            advert.update();
+            if (downfallMod.STEAM_MODE)
+                advert.update();
         }
     }
 
@@ -65,7 +67,7 @@ public class MainMenuAdPatch {
         private float yTextPos = yPos;
         private float angle = 0.0f;
 
-        public MainMenuAd(String text, String textheader, String text2,String text3,String text4,String text5,String url) {
+        public MainMenuAd(String text, String textheader, String text2, String text3, String text4, String text5, String url) {
             hb = new Hitbox(xCenteredPos, yPos, width, height);
             this.text = text;
             this.url = url;
@@ -79,11 +81,11 @@ public class MainMenuAdPatch {
         public void render(SpriteBatch sb) {
             sb.setColor(Color.WHITE.cpy());
             TextureAtlas.AtlasRegion menuTexture = new TextureAtlas.AtlasRegion(tex, 0, 0, tex.getWidth(), tex.getHeight());
-            sb.draw(menuTexture, xCenteredPos, yPos, width / 2f, height / 2f, width, height, 1, 1, angle);
+            sb.draw(menuTexture, xCenteredPos, yPos, width / 2f, height / 2f, width, height, Settings.scale, Settings.scale, angle);
             if (tint.a > 0.0f) {
                 sb.setBlendFunction(770, 1);
                 sb.setColor(tint);
-                sb.draw(menuTexture, xCenteredPos, yPos, width / 2f, height / 2f, width, height, 1, 1, angle);
+                sb.draw(menuTexture, xCenteredPos, yPos, width / 2f, height / 2f, width, height, Settings.scale, Settings.scale, angle);
                 sb.setBlendFunction(770, 771);
             }
             FontHelper.cardTitleFont.getData().setScale(1.0f);
@@ -101,7 +103,7 @@ public class MainMenuAdPatch {
         }
 
         public void update() {
-            if(CardCrawlGame.mainMenuScreen.screen != MainMenuScreen.CurScreen.MAIN_MENU) {
+            if (CardCrawlGame.mainMenuScreen.screen != MainMenuScreen.CurScreen.MAIN_MENU) {
                 return;
             }
             hb.update();
