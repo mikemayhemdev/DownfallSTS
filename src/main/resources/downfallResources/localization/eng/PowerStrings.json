@@ -300,7 +300,8 @@
   "downfall:HermitWheelOfFortune": {
     "NAME": "Wheel of Fortune",
     "DESCRIPTIONS": [
-      "Whenever you strike Hermit with an Attack, its leftmost card is discarded and it draws a card."
+      "Whenever you strike Hermit with an Attack, its leftmost card is discarded and it draws a card. Every #b",
+      " times this happens, Hermit gains #b1 #yStrength."
     ]
   },
   "downfall:HermitDoomsday": {

@@ -3,15 +3,15 @@ package charbosses.powers.bossmechanicpowers;
 import basemod.ReflectionHacks;
 import charbosses.bosses.AbstractCharBoss;
 import com.badlogic.gdx.Gdx;
+import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.GainPowerEffect;
-import downfall.monsters.NeowBoss;
 import downfall.monsters.NeowBossFinal;
 
 import java.util.ArrayList;
 
-public abstract class AbstractBossMechanicPower extends AbstractPower {
+public abstract class AbstractTwoAmountBossMechanicPower extends TwoAmountPower {
 
     private float timer;
     private boolean firstTurn = true;

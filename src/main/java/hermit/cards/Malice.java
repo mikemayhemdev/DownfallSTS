@@ -1,7 +1,9 @@
 package hermit.cards;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.unique.WhirlwindAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.red.Whirlwind;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -78,7 +80,7 @@ public class Malice extends AbstractHermitCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new MaliceAction(m,new DamageInfo(p, this.damage, this.damageTypeForTurn),this.baseDamage));
+        this.addToBot(new MaliceAction(m,new DamageInfo(p, this.damage, this.damageTypeForTurn),this.multiDamage));
     }
 
     // Upgraded stats.

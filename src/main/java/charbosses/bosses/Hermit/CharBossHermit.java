@@ -6,16 +6,11 @@ import charbosses.bosses.Hermit.NewAge.ArchetypeAct1SharpshooterNewAge;
 import charbosses.bosses.Hermit.NewAge.ArchetypeAct2WheelOfFateNewAge;
 import charbosses.bosses.Hermit.NewAge.ArchetypeAct3DoomsdayNewAge;
 import charbosses.bosses.Watcher.NewAge.ArchetypeAct1RetainNewAge;
-import charbosses.bosses.Watcher.NewAge.ArchetypeAct2CalmNewAge;
-import charbosses.bosses.Watcher.NewAge.ArchetypeAct3DivinityNewAge;
 import charbosses.core.EnemyEnergyManager;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
-import com.esotericsoftware.spine.*;
+import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
@@ -24,9 +19,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbPurple;
 import downfall.downfallMod;
-import downfall.monsters.NeowBoss;
-
-import java.awt.*;
 
 import static hermit.HermitMod.THE_DEFAULT_SKELETON_ATLAS;
 import static hermit.HermitMod.THE_DEFAULT_SKELETON_JSON;
@@ -129,15 +121,17 @@ public class CharBossHermit extends AbstractCharBoss {
 
     }
 
-    private static AbstractCard previewCard;
-    private static Vector2 PREVIEW_CARD_POS = new Vector2(Settings.WIDTH / 2F, (Settings.HEIGHT / 3F)*2);
+    public static AbstractCard previewCard;
+    private static final Vector2 PREVIEW_CARD_POS = new Vector2((Settings.WIDTH / 4F) * 3, (Settings.HEIGHT / 3F) * 2);
 
     @Override
     public void render(SpriteBatch sb) {
         super.render(sb);
         if (chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge) {
-            AbstractCard q =((ArchetypeAct2WheelOfFateNewAge) chosenArchetype).mockDeck.get(0);
-            previewCard = q.makeStatEquivalentCopy();
+            if (previewCard == null) {
+                AbstractCard q = ((ArchetypeAct2WheelOfFateNewAge) chosenArchetype).mockDeck.get(0);
+                previewCard = q.makeStatEquivalentCopy();
+            }
             previewCard.current_x = previewCard.target_x = PREVIEW_CARD_POS.x;
             previewCard.current_y = previewCard.target_y = PREVIEW_CARD_POS.y;
             previewCard.render(sb);

@@ -54,8 +54,9 @@ public class DeadOrAlive extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = 8;
         this.exhaust=true;
+        this.tags.add(CardTags.HEALING);
         loadJokeCardImage(this, "dead_or_alive.png");
-        tags.add(CardTags.HEALING);
+
     }
 
     // Actions the card should do.
