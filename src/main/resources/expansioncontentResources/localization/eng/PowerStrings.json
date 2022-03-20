@@ -44,7 +44,7 @@
     "NAME": "De-Energized",
     "DESCRIPTIONS": [
       "At the start of your next turn, lose #b",
-      " [E]."
+      " [E] ."
     ]
   },
   "expansioncontent:PolyBeamAgainPower": {

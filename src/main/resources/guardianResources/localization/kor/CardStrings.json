@@ -61,7 +61,8 @@
   },
   "Guardian:TwinSlam": {
     "NAME": "두 번 강타",
-    "DESCRIPTION": "피해를 !D! 만큼 !GuardianMulti! 번 줍니다."
+    "DESCRIPTION": "피해를 !D! 만큼 !GuardianMulti! 번 줍니다.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add *Second *Strike+ into your hand."
   },
   "Guardian:GuardianWhirl": {
     "NAME": "회오리 바람",

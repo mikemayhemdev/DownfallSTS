@@ -22,7 +22,6 @@ import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import com.sun.jndi.ldap.Ber;
 import reskinContent.patches.CharacterSelectScreenPatches;
 
 import java.util.ArrayList;
