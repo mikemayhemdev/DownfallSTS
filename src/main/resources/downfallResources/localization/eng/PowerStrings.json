@@ -180,7 +180,7 @@
   "downfall:IroncladMushroomPower": {
     "NAME": "Feeding Frenzy",
     "DESCRIPTIONS": [
-      "Ironclad's #yReaper does not *Exhaust and targets ALL Mushrooms. NL When Ironclad kills a Mushroom, he gains #b1 #yStrength."
+      "Ironclad's #yReaper does not #yExhaust and targets ALL Mushrooms. NL When Ironclad kills a Mushroom, he gains #b1 #yStrength."
     ]
   },
   "downfall:NeowFeedingFrenzy": {
