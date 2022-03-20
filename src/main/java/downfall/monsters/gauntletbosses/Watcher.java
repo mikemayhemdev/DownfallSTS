@@ -9,8 +9,11 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.watcher.WallopAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
+import com.megacrit.cardcrawl.cards.purple.Defend_Watcher;
+import com.megacrit.cardcrawl.cards.purple.Strike_Purple;
 import com.megacrit.cardcrawl.cards.purple.Wallop;
 import com.megacrit.cardcrawl.cards.purple.Wish;
+import com.megacrit.cardcrawl.cards.red.Strike_Red;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -36,7 +39,7 @@ public class Watcher extends GauntletBoss {
     int turnNum = 0;
 
     public Watcher(float x, float y) {
-        super(NAME, ID, 72, 0.0F, -5.0F, 240.0F, 270.0F, null, x, y);
+        super(NAME, ID, 72 * 2, 0.0F, -5.0F, 240.0F, 270.0F, null, x, y);
    this.loadAnimation("images/characters/watcher/idle/skeleton.atlas", "images/characters/watcher/idle/skeleton.json", 1.0f);
         final AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
         this.flipHorizontal = true;
@@ -52,7 +55,7 @@ public class Watcher extends GauntletBoss {
 
     @Override
     public void usePreBattleAction() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new OnDeathEveryoneVigor(this, 6), 6));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new OnDeathEveryoneVigor(this, 8), 8));
     }
 
     public void takeTurn() {
@@ -92,22 +95,22 @@ public class Watcher extends GauntletBoss {
     protected void getMove(int num) {
         turnNum ++;
         if (turnNum == 5) {
-            setMove(CardLibrary.getCard(Wish.ID).name + "+", (byte)5, Intent.BUFF);
+            setMove(moveName(Wish.ID) + "+", (byte)5, Intent.BUFF);
         }
         else {
             int rnd = AbstractDungeon.cardRandomRng.random(0, 3);
             switch (rnd) {
                 case 0:
-                    setMove((byte)1, Intent.ATTACK, this.damage.get(0).base, 2, true);
+                    setMove(moveName(Strike_Purple.ID, Strike_Purple.ID), (byte)1, Intent.ATTACK, this.damage.get(0).base, 2, true);
                     break;
                 case 1:
-                    setMove((byte)2, Intent.ATTACK_DEFEND, this.damage.get(1).base);
+                    setMove(moveName(Strike_Purple.ID, Defend_Watcher.ID), (byte)2, Intent.ATTACK_DEFEND, this.damage.get(1).base);
                     break;
                 case 2:
-                    setMove((byte)3, Intent.DEFEND);
+                    setMove(moveName(Defend_Watcher.ID, Defend_Watcher.ID), (byte)3, Intent.DEFEND);
                     break;
                 case 3:
-                    setMove(CardLibrary.getCard(Wallop.ID).name, (byte)4, Intent.ATTACK_DEFEND, this.damage.get(2).base);
+                    setMove(moveName(Wallop.ID), (byte)4, Intent.ATTACK_DEFEND, this.damage.get(2).base);
                     break;
             }
         }

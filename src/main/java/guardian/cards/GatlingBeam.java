@@ -33,7 +33,7 @@ public class GatlingBeam extends AbstractGuardianCard implements InStasisCard {
     private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 8;
     private static final int UPGRADE_DAMAGE = 2;
 
     private static final int TICK_DURATION = 4;

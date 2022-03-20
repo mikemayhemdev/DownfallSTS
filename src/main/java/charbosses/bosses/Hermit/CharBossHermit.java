@@ -127,7 +127,6 @@ public class CharBossHermit extends AbstractCharBoss {
                 break;
         }
 
-        downfallMod.saveBossFight(CharBossHermit.ID);
     }
 
     private static AbstractCard previewCard;

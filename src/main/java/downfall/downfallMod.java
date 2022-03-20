@@ -206,9 +206,9 @@ public class downfallMod implements
     public static final String PROP_CHAMP_PRO = "champDisableStanceHelper";
     public static final String PROP_NO_MUSIC = "disableMusicOverride";
 
-    public static String Act1BossFaced = downfallMod.makeID("Ironclad");
-    public static String Act2BossFaced = downfallMod.makeID("Silent");
-    public static String Act3BossFaced = downfallMod.makeID("Defect");
+    public static String Act1BossFaced = "";
+    public static String Act2BossFaced = "";
+    public static String Act3BossFaced = "";
 
     public static boolean[] unseenTutorials = new boolean[]{
             true, // Hermit

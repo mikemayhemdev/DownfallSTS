@@ -241,35 +241,35 @@
     ]
   },
   "downfall:OnDeathEveryoneStr": {
-    "NAME": "Dying Rage",
+    "NAME": "Last Gasp: Inflame+",
     "DESCRIPTIONS": [
       "When this character dies, ALL characters (including you) gain #b",
       " #yStrength."
     ]
   },
   "downfall:OnDeathEveryoneThorns": {
-    "NAME": "Thorny Personality",
+    "NAME": "Last Gasp: Caltrops+",
     "DESCRIPTIONS": [
       "When this character dies, ALL characters (including you) gain #b",
       " #yThorns."
     ]
   },
   "downfall:OnDeathEveryoneBuffer": {
-    "NAME": "pause()",
+    "NAME": "Last Gasp: Buffer+",
     "DESCRIPTIONS": [
       "When this character dies, ALL characters (including you) gain #b",
       " #yBuffer."
     ]
   },
   "downfall:OnDeathEveryoneVigor": {
-    "NAME": "Vigorous Strength",
+    "NAME": "Last Gasp: Wreath of Flame+",
     "DESCRIPTIONS": [
       "When this character dies, ALL characters (including you) gain #b",
       " #yVigor."
     ]
   },
   "downfall:OnDeathEveryoneRuggedVuln": {
-    "NAME": "Determination",
+    "NAME": "Last Gasp: Gestalt",
     "DESCRIPTIONS": [
       "When this character dies, ALL characters (including you) gain #b",
       " #yRugged and #b",

@@ -184,7 +184,6 @@ public class CharBossIronclad extends AbstractCharBoss {
                 break;
         }
 
-        downfallMod.saveBossFight(CharBossIronclad.ID);
 
         if (hasPower(MinionPower.POWER_ID)){
             for (AbstractMonster m:AbstractDungeon.getCurrRoom().monsters.monsters){

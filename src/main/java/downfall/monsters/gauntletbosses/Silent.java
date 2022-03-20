@@ -9,8 +9,11 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
+import com.megacrit.cardcrawl.cards.green.Defend_Green;
 import com.megacrit.cardcrawl.cards.green.LegSweep;
+import com.megacrit.cardcrawl.cards.green.Strike_Green;
 import com.megacrit.cardcrawl.cards.green.WraithForm;
+import com.megacrit.cardcrawl.cards.red.Strike_Red;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -35,7 +38,7 @@ public class Silent extends GauntletBoss {
 
     int turnNum = 0;
     public Silent(float x, float y) {
-        super(NAME, ID, 70, -4.0f, -16.0f, 240.0f, 290.0f, null, x, y);
+        super(NAME, ID, 70 * 2, -4.0f, -16.0f, 240.0f, 290.0f, null, x, y);
         this.loadAnimation("images/characters/theSilent/idle/skeleton.atlas", "images/characters/theSilent/idle/skeleton.json", 1.0f);
         final AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
         this.stateData.setMix("Hit", "Idle", 0.1f);
@@ -50,10 +53,11 @@ public class Silent extends GauntletBoss {
 
     @Override
     public void usePreBattleAction() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new OnDeathEveryoneThorns(this, 4), 4));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new OnDeathEveryoneThorns(this, 5), 5));
     }
 
     public void takeTurn() {
+        int dex = 0;
         switch (this.nextMove) {
             case 1:
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
@@ -63,14 +67,20 @@ public class Silent extends GauntletBoss {
                 }
                 break;
             case 2:
+                if (this.hasPower(DexterityPower.POWER_ID)){
+                    dex = getPower(DexterityPower.POWER_ID).amount;
+                }
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-                addToBot(new GainBlockAction(this, 5));
+                addToBot(new GainBlockAction(this, 5 + dex));
                 if (hasPower(MonsterVigor.POWER_ID)) {
                     addToBot(new RemoveSpecificPowerAction(this, this, MonsterVigor.POWER_ID));
                 }
                 break;
             case 3:
-                addToBot(new GainBlockAction(this, 10));
+                if (this.hasPower(DexterityPower.POWER_ID)){
+                    dex = getPower(DexterityPower.POWER_ID).amount;
+                }
+                addToBot(new GainBlockAction(this, 10 + (dex * 2)));
                 break;
             case 4:
                 addToBot(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 2, true), 2));
@@ -89,7 +99,7 @@ public class Silent extends GauntletBoss {
     protected void getMove(int num) {
         turnNum ++;
         if (turnNum == 5) {
-            setMove(CardLibrary.getCard(WraithForm.ID).name, (byte)5, Intent.BUFF);
+            setMove(moveName(WraithForm.ID), (byte)5, Intent.BUFF);
         }
         else {
             int rnd = AbstractDungeon.cardRandomRng.random(0, 3);
@@ -98,16 +108,16 @@ public class Silent extends GauntletBoss {
             }
             switch (rnd) {
                 case 0:
-                    setMove((byte)1, Intent.ATTACK, this.damage.get(0).base, 2, true);
+                    setMove(moveName(Strike_Green.ID, Strike_Green.ID), (byte)1, Intent.ATTACK, this.damage.get(0).base, 2, true);
                     break;
                 case 1:
-                    setMove((byte)2, Intent.ATTACK_DEFEND, this.damage.get(1).base);
+                    setMove(moveName(Strike_Green.ID, Defend_Green.ID), (byte)2, Intent.ATTACK_DEFEND, this.damage.get(1).base);
                     break;
                 case 2:
-                    setMove((byte)3, Intent.DEFEND);
+                    setMove(moveName(Defend_Green.ID, Defend_Green.ID), (byte)3, Intent.DEFEND);
                     break;
                 case 3:
-                    setMove(CardLibrary.getCard(LegSweep.ID).name, (byte)4, Intent.DEFEND_DEBUFF);
+                    setMove(moveName(LegSweep.ID), (byte)4, Intent.DEFEND_DEBUFF);
                     break;
             }
         }

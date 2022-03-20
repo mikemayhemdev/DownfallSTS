@@ -8,7 +8,9 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
 import com.megacrit.cardcrawl.cards.red.Bash;
+import com.megacrit.cardcrawl.cards.red.Defend_Red;
 import com.megacrit.cardcrawl.cards.red.DemonForm;
+import com.megacrit.cardcrawl.cards.red.Strike_Red;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -34,7 +36,7 @@ public class Ironclad extends GauntletBoss {
 
     int turnNum = 0;
     public Ironclad(float x, float y) {
-        super(NAME, ID, 80, -4.0f, -16.0f, 220.0f, 290.0f, null, x, y);
+        super(NAME, ID, 80 * 2, -4.0f, -16.0f, 220.0f, 290.0f, null, x, y);
 
         this.loadAnimation("images/characters/ironclad/idle/skeleton.atlas", "images/characters/ironclad/idle/skeleton.json", 1.0f);
         final AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
@@ -91,22 +93,22 @@ public class Ironclad extends GauntletBoss {
     protected void getMove(int num) {
         turnNum ++;
         if (turnNum == 5) {
-            setMove(CardLibrary.getCard(DemonForm.ID).name, (byte)5, Intent.BUFF);
+            setMove(moveName(DemonForm.ID), (byte)5, Intent.BUFF);
         }
         else {
             int rnd = AbstractDungeon.cardRandomRng.random(0, 3);
             switch (rnd) {
                 case 0:
-                    setMove((byte)1, Intent.ATTACK, this.damage.get(0).base, 2, true);
+                    setMove(moveName(Strike_Red.ID, Strike_Red.ID), (byte)1, Intent.ATTACK, this.damage.get(0).base, 2, true);
                     break;
                 case 1:
-                    setMove((byte)2, Intent.ATTACK_DEFEND, this.damage.get(1).base);
+                    setMove(moveName(Strike_Red.ID, Defend_Red.ID), (byte)2, Intent.ATTACK_DEFEND, this.damage.get(1).base);
                     break;
                 case 2:
-                    setMove((byte)3, Intent.DEFEND);
+                    setMove(moveName(Defend_Red.ID, Defend_Red.ID), (byte)3, Intent.DEFEND);
                     break;
                 case 3:
-                    setMove(CardLibrary.getCard(Bash.ID).name, (byte)4, Intent.ATTACK_DEBUFF, this.damage.get(2).base);
+                    setMove(moveName(Bash.ID), (byte)4, Intent.ATTACK_DEBUFF, this.damage.get(2).base);
                     break;
             }
         }

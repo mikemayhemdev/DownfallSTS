@@ -8,7 +8,10 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.blue.Buffer;
 import com.megacrit.cardcrawl.cards.blue.CoreSurge;
+import com.megacrit.cardcrawl.cards.blue.Defend_Blue;
+import com.megacrit.cardcrawl.cards.blue.Strike_Blue;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
+import com.megacrit.cardcrawl.cards.green.Strike_Green;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -32,7 +35,7 @@ public class Defect extends GauntletBoss {
 
     int turnNum = 0;
     public Defect(float x, float y) {
-        super(NAME, ID, 75, 0.0F, -5.0F, 240.0F, 244.0F, null, x, y);
+        super(NAME, ID, 75 * 2, 0.0F, -5.0F, 240.0F, 244.0F, null, x, y);
 
         this.loadAnimation("images/characters/defect/idle/skeleton.atlas", "images/characters/defect/idle/skeleton.json", 1.0F);
         final AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
@@ -91,22 +94,22 @@ public class Defect extends GauntletBoss {
     protected void getMove(int num) {
         turnNum ++;
         if (turnNum == 5) {
-            setMove(CardLibrary.getCard(Buffer.ID).name + "+", (byte)5, Intent.BUFF);
+            setMove(moveName(Buffer.ID) + "+", (byte)5, Intent.BUFF);
         }
         else {
             int rnd = AbstractDungeon.cardRandomRng.random(0, 3);
             switch (rnd) {
                 case 0:
-                    setMove((byte)1, Intent.ATTACK, this.damage.get(0).base, 2, true);
+                    setMove(moveName(Strike_Blue.ID, Strike_Blue.ID), (byte)1, Intent.ATTACK, this.damage.get(0).base, 2, true);
                     break;
                 case 1:
-                    setMove((byte)2, Intent.ATTACK_DEFEND, this.damage.get(1).base);
+                    setMove(moveName(Strike_Blue.ID, Defend_Blue.ID), (byte)2, Intent.ATTACK_DEFEND, this.damage.get(1).base);
                     break;
                 case 2:
-                    setMove((byte)3, Intent.DEFEND);
+                    setMove(moveName(Defend_Blue.ID, Defend_Blue.ID), (byte)3, Intent.DEFEND);
                     break;
                 case 3:
-                    setMove(CardLibrary.getCard(CoreSurge.ID).name, (byte)4, Intent.ATTACK_BUFF, this.damage.get(2).base);
+                    setMove(moveName(CoreSurge.ID), (byte)4, Intent.ATTACK_BUFF, this.damage.get(2).base);
                     break;
             }
         }
