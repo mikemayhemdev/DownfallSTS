@@ -31,7 +31,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
     public ArchetypeAct1StatusesNewAge() {
         super("IC_STATUS_ARCHETYPE", "Status");
 
-        maxHPModifier += 60;
+        maxHPModifier += 100;
         actNum = 1;
     }
 
