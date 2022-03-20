@@ -258,7 +258,7 @@
   },
   "hexamod:VolcanoVisage": {
     "NAME": "火山面貌",
-    "DESCRIPTION": "你的回合开始时，给予所有敌人 !M! 层 hexamod:灼魂 。"
+    "DESCRIPTION": "hexamod:点燃 一个鬼火时，给予所有敌人 !M! 层 hexamod:灼魂 。"
   },
   "hexamod:SuperheatedStrike": {
     "NAME": "灼热打击",
@@ -287,7 +287,7 @@
   },
   "hexamod:RadiantFlame": {
     "NAME": "火焰辐射",
-    "DESCRIPTION": "每当你 hexamod:点燃 了鬼火，给予随机一名敌人 !M! 层 hexamod:灼魂 。"
+    "DESCRIPTION": "hexamod:点燃 一个鬼火时，获得 !M! 点 格挡 。"
   },
   "hexamod:ApocalypseNow": {
     "NAME": "启示录",
