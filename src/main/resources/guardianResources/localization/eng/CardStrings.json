@@ -61,7 +61,8 @@
   },
   "Guardian:TwinSlam": {
     "NAME": "Twin Slam",
-    "DESCRIPTION": "Deal !D! damage. NL Add *Second *Strike into your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Add *Second *Strike into your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add *Second *Strike+ into your hand."
   },
   "Guardian:GuardianWhirl": {
     "NAME": "Guardian Whirl",
@@ -247,7 +248,7 @@
   },
   "Guardian:Reroute": {
     "NAME": "Reroute",
-    "DESCRIPTION": "Deal !D! damage. NL Place the next non-Exhausting Attack or Skill you play this turn into guardianmod:Stasis."
+    "DESCRIPTION": "Deal !D! damage. NL Place the next card you play this turn into guardianmod:Stasis."
   },
   "Guardian:PiercingHide": {
     "NAME": "Piercing Hide",
@@ -438,6 +439,6 @@
   },
   "Guardian:SecondStrikePreviewCard": {
     "NAME": "Second Slam",
-    "DESCRIPTION": "Ethereal. NL Copies Twin Slam's Gems. NL Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Copies Twin Slam's Gems. NL Exhaust."
   }
 }

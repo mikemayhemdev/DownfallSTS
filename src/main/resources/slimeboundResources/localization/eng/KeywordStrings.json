@@ -157,8 +157,8 @@
       "protector slime",
       "protector_slime"
     ],
-    "PROPER_NAME": "Protector Slime",
-    "DESCRIPTION": "Attacks for #b2 and grants you #b3 Temporary #yThorns each turn."
+    "PROPER_NAME": "Spiky Slime",
+    "DESCRIPTION": "Attacks for #b4 and grants you #b4 Temporary #yThorns each turn."
   },
   {
     "NAMES": [
@@ -206,5 +206,12 @@
     ],
     "PROPER_NAME": "Specialist",
     "DESCRIPTION": "A unique slime with a more powerful effect than normal slimes."
+  },
+  {
+    "NAMES": [
+      "buried"
+    ],
+    "PROPER_NAME": "Buried",
+    "DESCRIPTION": "Non-buried cards will always be randomly chosen first for #yExhume effects."
   }
 ]

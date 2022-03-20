@@ -53,8 +53,7 @@ public class RejuvenatingLick extends AbstractSlimeboundCard {
 
         this.slimed = this.baseSlimed = 4;
         this.exhaust = true;
-        this.magicNumber = this.baseMagicNumber = 2;
-        this.cardsToPreview = new Lick();
+        //this.magicNumber = this.baseMagicNumber = 2;
 
 
     }
@@ -78,9 +77,10 @@ public class RejuvenatingLick extends AbstractSlimeboundCard {
         */
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.slimed), this.slimed, true, AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new LickEffect(m.hb.cX, m.hb.cY, 0.6F, new Color(Color.PURPLE)), 0.4F));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.slimed), this.slimed, true, AbstractGameAction.AttackEffect.NONE));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new LickEffect(m.hb.cX, m.hb.cY, 0.6F, new Color(Color.PURPLE)), 0.1F));
 
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Lick()));
 
         if (upgraded)upgradeAction(p,m);
 

@@ -98,9 +98,9 @@ public class NeowRezAction extends AbstractGameAction {
             case 0:
                 return 100;
             case 1:
-                return -175;
+                return -200;
             case 2:
-                return -350;
+                return -500;
         }
         return 100;
     }
