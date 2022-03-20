@@ -1,7 +1,9 @@
 package charbosses.bosses.Hermit.NewAge;
 
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
+import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnHandOfGreed;
 import charbosses.cards.curses.EnInjury;
@@ -174,6 +176,10 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         });
         if (mockDeck.isEmpty()) {
             reshuffle();
+        }
+        if (AbstractCharBoss.boss instanceof CharBossHermit) {
+            CharBossHermit.previewCard = mockDeck.get(0).makeStatEquivalentCopy();
+            CharBossHermit.previewCard.superFlash();
         }
     }
 

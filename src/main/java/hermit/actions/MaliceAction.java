@@ -26,10 +26,10 @@ public class MaliceAction extends AbstractGameAction {
     private final float startingDuration;
     private final DamageInfo info;
     private AbstractPlayer p;
-    int base;
+    int[] base;
     boolean extra_draw;
 
-    public MaliceAction(AbstractCreature target, DamageInfo info, int baseDamage) {
+    public MaliceAction(AbstractCreature target, DamageInfo info, int[] baseDamage) {
         this.info = info;
         this.setValues(target, info);
         this.actionType = ActionType.WAIT;
