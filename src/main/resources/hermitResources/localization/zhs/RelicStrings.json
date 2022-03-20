@@ -22,7 +22,7 @@
     ]
   },
   "hermit:Horseshoe": {
-    "NAME": "幸运马蹄铁",
+    "NAME": "马蹄铁",
     "FLAVOR": "一件幸运的小饰品。 看来某人要错过这个了。",
     "DESCRIPTIONS": [
       "每当你获得 #y虚弱 、 #y脆弱 或 #y易伤 时，减少 #b1 层。"

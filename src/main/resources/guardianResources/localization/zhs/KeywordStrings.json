@@ -4,7 +4,7 @@
       "镶嵌"
     ],
     "PROPER_NAME": "镶嵌",
-    "DESCRIPTION": " #y宝石 能够被镶嵌到有 #y孔位 的牌上，使宝石的效果附加到牌上。"
+    "DESCRIPTION": " #y宝石 能够被镶嵌进有 #y孔位 的牌上，使它的效果附加于牌。"
   },
   {
     "NAMES": [
@@ -18,7 +18,7 @@
       "宝石"
     ],
     "PROPER_NAME": "宝石",
-    "DESCRIPTION": "宝石能够在休息处被 #y镶嵌 到有 #y孔位 的牌上。不能被 #y升级 。"
+    "DESCRIPTION": "宝石能够在 #y休息处 被 #y镶嵌 到有 #y孔位 的牌上。不能被 #y升级 。"
   },
   {
     "PROPER_NAME": "防御模式",
@@ -32,28 +32,28 @@
       "加速"
     ],
     "PROPER_NAME": "加速",
-    "DESCRIPTION": "降低被 #y凝滞 牌的回合计数器 #b1 点。如果归零, 返回它到手牌且它打出前耗能为 #b0 。"
+    "DESCRIPTION": "降低被 #y凝滞 牌的回合计数器 #b1 点。如果归零, 将它返回手牌且它下次耗能为 #b0 。"
   },
   {
     "NAMES": [
       "组件"
     ],
     "PROPER_NAME": "组件",
-    "DESCRIPTION": "0费消耗技能牌，添加三张同体系牌到手牌中。"
+    "DESCRIPTION": "一系列 #b0 耗能消耗技能牌，可将 #b3 张同体系牌加入手牌。"
   },
   {
     "NAMES": [
       "临时"
     ],
     "PROPER_NAME": "临时",
-    "DESCRIPTION": "类似活动肌肉的效果（获得buff和回合结束时消失的debuff），扩展到多个属性。"
+    "DESCRIPTION": "只持续一回合，即同时获得等量层，回合结束时剥夺增益的 #r负面效果 。"
   },
   {
     "NAMES": [
       "挥发"
     ],
     "PROPER_NAME": "挥发",
-    "DESCRIPTION": "被 #y凝滞 的牌结束 #y凝滞 时， #y消耗 这张牌而不是返回到手牌。"
+    "DESCRIPTION": "被 #y凝滞 的牌结束 #y凝滞 时， #y消耗 这张牌而非返回手牌。"
   },
   {
     "NAMES": [

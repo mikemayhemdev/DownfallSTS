@@ -9,12 +9,12 @@
   },
   "hexamod:Sear": {
     "NAME": "그을음",
-    "DESCRIPTION": "휘발성. hexamod:사후세계. NL hexamod:영혼_화상을 !burny! 부여합니다."
+    "DESCRIPTION": "휘발성. hexamod:사후세계. NL hexamod:영혼화상을 !burny! 부여합니다."
   },
   "hexamod:Float": {
     "NAME": "부유",
     "DESCRIPTION": "카드를 1장 뽑습니다. NL hexamod:팽창합니다.",
-    "UPGRADE_DESCRIPTION": "카드를 1장 뽑습니다. NL hexamod:수축 또는 hexamod:팽창 하거나, 현재 상태를 유지합니다.",
+    "UPGRADE_DESCRIPTION": "카드를 1장 뽑습니다. NL hexamod:수축 또는 hexamod:팽창하거나 현재 상태를 유지합니다.",
     "EXTENDED_DESCRIPTION": ["hexamod:팽창.","hexamod:수축.", "유지."]
   },
   "hexamod:AdvancingGuard": {
@@ -22,12 +22,12 @@
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL hexamod:팽창합니다."
   },
   "hexamod:BacktrackSmack": {
-    "NAME": "돌려치기",
+    "NAME": "되짚어 치기",
     "DESCRIPTION": "피해를 !D! 줍니다. NL hexamod:수축합니다."
   },
   "hexamod:FastForward": {
     "NAME": "빨리 감기",
-    "DESCRIPTION": "휘발성. NL 현재 유령불꽃을 hexamod:점화합니다. NL hexamod:팽창합니다.",
+    "DESCRIPTION": "현재 유령불꽃을 hexamod:점화합니다. NL hexamod:팽창합니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "현재 유령불꽃을 hexamod:점화합니다. NL hexamod:팽창합니다."
   },
   "hexamod:Rewind": {
@@ -46,7 +46,7 @@
   },
   "hexamod:TimeWarp": {
     "NAME": "시간 왜곡",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL hexamod:팽창 또는 hexamod:수축 할 때마다 이 카드를 버린 카드 더미에서 가져옵니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL hexamod:팽창 또는 hexamod:수축할 때마다 이 카드를 버린 카드 더미에서 가져옵니다."
   },
   "hexamod:EmpoweredFlame": {
     "NAME": "힘찬 불꽃",
@@ -54,8 +54,8 @@
   },
   "hexamod:HexaLevel": {
     "NAME": "지옥의 형상",
-    "DESCRIPTION": "턴 시작 시 hexamod:극열을 !M! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 턴 시작 시 hexamod:극열을 !M! 얻습니다."
+    "DESCRIPTION": "내 턴 시작 시 hexamod:극열을 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 내 턴 시작 시 hexamod:극열을 !M! 얻습니다."
   },
   "hexamod:UnlimitedPower": {
     "NAME": "무한의 힘",
@@ -68,12 +68,12 @@
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "스피드 런",
-    "DESCRIPTION": "hexamod:팽창 할 때마다 방어도를 !M! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL hexamod:팽창 할 때마다 방어도를 !M! 얻습니다."
+    "DESCRIPTION": "매 턴 처음으로 hexamod:점화하면 hexamod:팽창합니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL hexamod:팽창할 때마다 방어도를 !M! 얻습니다."
   },
   "hexamod:GhostOfSpirePresent": {
     "NAME": "지금 당장",
-    "DESCRIPTION": "턴 시작과 종료 시 다른 자리에 있는 같은 종류의 유령불꽃이 점화되어 있다면 힘을 !M! 얻습니다."
+    "DESCRIPTION": "턴 종료 시 팽창하지 않습니다. NL 내 턴 시작 시 [E] 를 얻습니다."
   },
   "hexamod:HauntingEcho": {
     "NAME": "귀신들린 메아리",
@@ -81,15 +81,15 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "대가 지불",
-    "DESCRIPTION": "소멸 시킬 공격 또는 스킬 카드를 고릅니다. NL 고른 카드의 유형과 반대되는 무작위 카드 1장을 얻습니다.",
-    "UPGRADE_DESCRIPTION": "소멸 시킬 공격 또는 스킬 카드를 고릅니다. NL 고른 카드의 유형과 반대되는 무작위 카드 1장을 얻습니다. NL 이번 전투 동안 그 카드의 비용을 1 낮춥니다.",
+    "DESCRIPTION": "소멸 시킬 공격 또는 스킬 카드를 선택합니다. NL 선택한 카드의 유형과 반대되는 무작위 카드를 1장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "소멸 시킬 공격 또는 스킬 카드를 선택합니다. NL 선택한 카드의 유형과 반대되는 무작위 카드를 1장 얻습니다. NL 이번 전투 동안 그 카드의 비용을 1 낮춥니다.",
     "EXTENDED_DESCRIPTION": [
-      "대가 지불로 소멸시킬 카드를 고르십시오."
+      "대가 지불로 소멸시킬 카드를 선택하십시오."
     ]
   },
   "hexamod:TimeOfNeed": {
     "NAME": "필요의 때",
-    "DESCRIPTION": "보존. NL 무작위 파워 카드 1장을 얻습니다. NL 사용하기 전까지 그 카드의 비용이 0이 됩니다. NL 소멸."
+    "DESCRIPTION": "보존. NL 무작위 파워 카드를 1장 얻습니다. NL 사용하기 전까지 그 카드의 비용이 0이 됩니다. NL 소멸."
   },
   "hexamod:SwordOfDarkness": {
     "NAME": "밤의 검",
@@ -101,15 +101,15 @@
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "눈부신 의식",
-    "DESCRIPTION": "hexamod:점화된 유령불꽃마다 [E] 를 얻고 카드를 1장 뽑습니다. hexamod:점화된 유령불꽃을 모두 hexamod:소화시킵니다. NL 소멸."
+    "DESCRIPTION": "hexamod:점화된 유령불꽃당 [E] 를 얻고 카드를 1장 뽑습니다. hexamod:점화된 유령불꽃을 모두 hexamod:소화시킵니다. NL 소멸."
   },
   "hexamod:StepThrough": {
     "NAME": "단계 밟기",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL hexamod:점화된 유령불꽃마다 카드를 1장 뽑습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL hexamod:점화된 유령불꽃당 카드를 1장 뽑습니다."
   },
   "hexamod:InspiringFlames": {
     "NAME": "불 지피기",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL hexamod:점화된 유령불꽃마다 카드를 무작위로 1장 강화합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL hexamod:점화된 유령불꽃당 카드를 무작위로 1장 강화합니다."
   },
   "hexamod:SpectersWail": {
     "NAME": "망령의 통곡",
@@ -121,11 +121,11 @@
   },
   "hexamod:GhostLash": {
     "NAME": "유령 채찍",
-    "DESCRIPTION": "휘발성. hexamod:사후세계. NL 피해를 !D! 줍니다. NL 저번 턴에 소멸 된 카드가 있다면 피해를 !D! 줍니다."
+    "DESCRIPTION": "휘발성. hexamod:사후세계. NL 피해를 !D! 줍니다. NL 소멸되면 피해를 !D! 줍니다."
   },
   "hexamod:GhostShield": {
     "NAME": "유령 보호",
-    "DESCRIPTION": "휘발성. hexamod:사후세계. NL 방어도를 !B! 얻습니다. NL 저번 턴에 소멸 된 카드가 있다면 bronze:흐릿함을 !M! 얻습니다."
+    "DESCRIPTION": "휘발성. hexamod:사후세계. NL 방어도를 !B! 얻습니다. NL 소멸되면 bronze:흐릿함을 !M! 얻습니다."
   },
   "hexamod:Haunt": {
     "NAME": "귀신들린 손",
@@ -136,14 +136,14 @@
     "DESCRIPTION": "휘발성 카드를 1장 expansioncontent:발굴합니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "휘발성 카드를 !M! 장 expansioncontent:발굴합니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
-      "가져올 휘발성 카드를 1장 고르십시오.",
+      "가져올 휘발성 카드를 1장 선택하십시오.",
       "가져올 휘발성 카드를 ",
-      " 장 고르십시오."
+      " 장 선택하십시오."
     ]
   },
   "hexamod:GiftsFromTheDead": {
     "NAME": "저편의 선물",
-    "DESCRIPTION": "턴 시작 시 무작위 hexamod:사후세계 카드를 1장 expansioncontent:복구합니다.",
+    "DESCRIPTION": "내 턴 시작 시 무작위 hexamod:사후세계 카드를 1장 expansioncontent:복구합니다.",
     "EXTENDED_DESCRIPTION": [
       "이 영혼들은 직접 부르기엔 너무 강력하다."
     ]
@@ -158,7 +158,7 @@
   },
   "hexamod:PhantomCloak": {
     "NAME": "혼령의 망토",
-    "DESCRIPTION": "휘발성. NL 민첩을 !M! 얻고 힘을 1 얻습니다."
+    "DESCRIPTION": "휘발성. NL 민첩을 !M! 얻고 힘을 1 잃습니다."
   },
   "hexamod:ParanormalForm": {
     "NAME": "폴터가이스트",
@@ -170,21 +170,21 @@
   },
   "hexamod:NightmareStrike": {
     "NAME": "악몽 타격",
-    "DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL 이 카드가 소멸되면 *그림자 *타격 을 얻습니다.",
-    "UPGRADE_DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL 이 카드가 소멸되면 *그림자 *타격+ 을 얻습니다."
+    "DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL 이 카드가 소멸되면 *그림자 *타격을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL 이 카드가 소멸되면 *그림자 *타격+을 얻습니다."
   },
   "hexamod:NightmareGuise": {
     "NAME": "악몽 가장",
-    "DESCRIPTION": "휘발성. NL 방어도를 !B! 얻습니다. NL 이 카드가 소멸되면 *그림자 *가장 을 얻습니다.",
-    "UPGRADE_DESCRIPTION": "휘발성. NL 방어도를 !B! 얻습니다. NL 이 카드가 소멸되면 *그림자 *가장+ 을 얻습니다."
+    "DESCRIPTION": "휘발성. NL 방어도를 !B! 얻습니다. NL 이 카드가 소멸되면 *그림자 *가장을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "휘발성. NL 방어도를 !B! 얻습니다. NL 이 카드가 소멸되면 *그림자 *가장+을 얻습니다."
   },
   "hexamod:ShadowStrike": {
     "NAME": "그림자 타격",
-    "DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL *악몽 *타격 을 expansioncontent:복구합니다. NL 소멸."
+    "DESCRIPTION": "휘발성. NL 피해를 !D! 만큼 2번 줍니다. NL *악몽 *타격을 expansioncontent:복구합니다. NL 소멸."
   },
   "hexamod:ShadowGuise": {
     "NAME": "그림자 가장",
-    "DESCRIPTION": "휘발성. NL 방어도를 !B! 얻습니다. NL *악몽 *가장 을 expansioncontent:복구합니다. NL 소멸."
+    "DESCRIPTION": "휘발성. NL 방어도를 !B! 만큼 2번 얻습니다. NL *악몽 *가장을 expansioncontent:복구합니다. NL 소멸."
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "저편의 힘",
@@ -193,52 +193,52 @@
   },
   "hexamod:BurningTouch": {
     "NAME": "불타는 접촉",
-    "DESCRIPTION": "hexamod:영혼_화상을 !burny! 부여합니다. NL 적이 hexamod:영혼_화상을 가진다면 hexamod:영혼_화상을 !burny! 부여합니다."
+    "DESCRIPTION": "hexamod:영혼화상을 !burny! 부여합니다. NL 대상이 hexamod:영혼화상을 보유한다면 2번 부여합니다."
   },
   "hexamod:Incineration": {
     "NAME": "소각",
-    "DESCRIPTION": "무작위 적들에게 피해를 !D! 만큼 !M! 번 주고 hexamod:영혼_화상을 !burny! 만큼 !M! 번 부여합니다."
+    "DESCRIPTION": "무작위 적들에게 피해를 !D! 만큼 !M! 번 주고 hexamod:영혼화상을 !burny! 만큼 !M! 번 부여합니다."
   },
   "hexamod:Firestarter": {
     "NAME": "불쏘시개",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL hexamod:영혼_화상을 !burny! 부여합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 적 전체에게 hexamod:영혼화상을 !burny! 부여합니다."
   },
   "hexamod:SearingWound": {
     "NAME": "화끈거리는 상처",
-    "DESCRIPTION": "적 전체에게 보유한 hexamod:영혼_화상만큼 체력을 잃게 합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "적 전체에게 보유한 hexamod:영혼_화상만큼 체력을 잃게 합니다."
+    "DESCRIPTION": "적 전체에게 보유한 hexamod:영혼화상만큼 체력을 잃게 합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "적 전체에게 보유한 hexamod:영혼화상만큼 체력을 잃게 합니다."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "바싹 굽기",
-    "DESCRIPTION": "카드와 유령불꽃이 부여하는 hexamod:영혼_화상을 !M! 증가시킵니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 카드와 유령불꽃이 부여하는 hexamod:영혼_화상을 !M! 증가시킵니다."
+    "DESCRIPTION": "카드와 유령불꽃이 부여하는 hexamod:영혼화상을 !M! 증가시킵니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 카드와 유령불꽃이 부여하는 hexamod:영혼화상을 !M! 증가시킵니다."
   },
   "hexamod:GhostflameBarrier": {
     "NAME": "유령불꽃 장벽",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 공격을 받을 때마다 공격한 대상에게 hexamod:영혼_화상을 !burny! 부여합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 공격을 받을 때마다 공격한 대상에게 hexamod:영혼화상을 !burny! 부여합니다."
   },
   "hexamod:Toasty": {
-    "NAME": "토스트!",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 막히지 않은 피해만큼 hexamod:영혼_화상을 부여합니다."
+    "NAME": "훈제 구이!",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 막히지 않은 피해만큼 hexamod:영혼화상을 부여합니다."
   },
   "hexamod:WildfireWeapon": {
     "NAME": "도깨비불 무기",
-    "DESCRIPTION": "막히지 않은 피해를 줄 때마다 hexamod:영혼_화상을 !M! 부여합니다."
+    "DESCRIPTION": "막히지 않은 피해를 줄 때마다 hexamod:영혼화상을 !M! 부여합니다."
   },
   "hexamod:ThermalTransfer": {
     "NAME": "열전사",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 hexamod:영혼_화상을 가진다면 방어도를 !B! 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 hexamod:영혼화상을 가진다면 방어도를 !B! 얻습니다."
   },
   "hexamod:HeatCrush": {
     "NAME": "열기 충돌",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 보유한 hexamod:영혼_화상만큼 피해량이 증가합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 보유한 hexamod:영혼화상만큼 피해량이 증가합니다."
   },
   "hexamod:HeatShield": {
     "NAME": "열기 방패",
-    "DESCRIPTION": "휘발성. NL 기본으로 방어도를 !M! 얻습니다. 적 전체의 hexamod:영혼_화상만큼 방어도가 증가합니다.",
-    "UPGRADE_DESCRIPTION": "기본으로 방어도를 !M! 얻습니다. 적 전체의 hexamod:영혼_화상만큼 방어도가 증가합니다.",
+    "DESCRIPTION": "휘발성. NL 방어도를 !M! 얻습니다. 적 전체의 hexamod:영혼화상만큼 방어도가 증가합니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !M! 얻습니다. 적 전체의 hexamod:영혼화상만큼 방어도가 증가합니다.",
     "EXTENDED_DESCRIPTION": [
-      " NL 현재 방어도를 !B! 얻습니다."
+      " NL (방어도를 !B! 얻습니다.)"
     ]
   },
   "hexamod:TurnItUp": {
@@ -248,32 +248,32 @@
   },
   "hexamod:HeatMetal": {
     "NAME": "열기 금속",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 대상이 hexamod:영혼_화상으로 체력을 잃고 hexamod:영혼_화상을 제거한다면 hexamod:영혼_화상을 !M! 부여합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 대상이 hexamod:영혼화상으로 체력을 잃고 hexamod:영혼화상을 제거한다면 hexamod:영혼화상을 !M! 부여합니다."
   },
   "hexamod:RainOfEmbers": {
     "NAME": "불씨의 비",
-    "DESCRIPTION": "무작위 적들에게 피해를 !D! 만큼 X번 주고 hexamod:영혼_화상을 !burny! 만큼 X번 부여합니다. NL 에너지를 3 이상 소모하면 적 전체에게 약화 와 취약 을 1 부여합니다.",
-    "UPGRADE_DESCRIPTION": "무작위 적들에게 피해를 !D! 만큼 X번 주고 hexamod:영혼_화상을 !burny! 만큼 X번 부여합니다. NL 에너지를 3 이상 소모하면 적 전체에게 약화 와 취약 을 2 부여합니다."
+    "DESCRIPTION": "무작위 적들에게 피해를 !D! 만큼 X번 주고 hexamod:영혼화상을 !burny! 만큼 X번 부여합니다. NL [E] 를 3 이상 소모하면 약화를 !M! 부여합니다.",
+    "UPGRADE_DESCRIPTION": "무작위 적들에게 피해를 !D! 만큼 X번 주고 hexamod:영혼화상을 !burny! 만큼 X번 부여합니다. NL [E] 를 3 이상 소모하면 적 전체에게 약화 와 취약을 2 부여합니다."
   },
   "hexamod:VolcanoVisage": {
     "NAME": "화산의 얼굴",
-    "DESCRIPTION": "턴 시작 시 적 전체에게 hexamod:영혼_화상을 !M! 부여합니다."
+    "DESCRIPTION": "내 턴 시작 시 적 전체에게 hexamod:영혼화상을 !M! 부여합니다."
   },
   "hexamod:SuperheatedStrike": {
     "NAME": "화끈한 타격",
-    "DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL hexamod:영혼_화상을 !burny! 부여합니다. NL 이 카드가 소멸 되면 피해를 !M! 받습니다."
+    "DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL hexamod:영혼화상을 !burny! 부여합니다. NL 이 카드가 소멸되면 피해를 !M! 받습니다."
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "저편의 불꽃",
-    "DESCRIPTION": "휘발성. hexamod:사후세계. NL 적 전체에게 hexamod:영혼_화상을 !burny! 부여합니다."
+    "DESCRIPTION": "휘발성. hexamod:사후세계. NL 적 전체에게 hexamod:영혼화상을 !burny! 부여합니다."
   },
   "hexamod:PhantomFireball": {
     "NAME": "혼령의 불덩이",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 대상의 보유한 hexamod:영혼_화상만큼 체력을 잃게 하고 hexamod:영혼_화상을 제거합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 대상의 보유한 hexamod:영혼화상만큼 체력을 잃게 하고 hexamod:영혼화상을 제거합니다."
   },
   "hexamod:SpectralSpark": {
     "NAME": "귀신 같은 불똥",
-    "DESCRIPTION": "hexamod:영혼_화상을 !burny! 부여합니다. NL 현재 유령불꽃이 hexamod:점화되어 있다면 hexamod:소화시키고 이 카드를 가져옵니다."
+    "DESCRIPTION": "hexamod:영혼화상을 !burny! 부여합니다. NL 현재 유령불꽃이 hexamod:점화되어 있다면 hexamod:소화시키고 이 카드를 가져옵니다."
   },
   "hexamod:GhostflameInferno": {
     "NAME": "즉발 지옥불",
@@ -282,11 +282,11 @@
   },
   "hexamod:ChargedBarrage": {
     "NAME": "충전된 일제 공격",
-    "DESCRIPTION": "hexamod:영혼_화상을 !burny! 부여합니다. NL hexamod:점화된 유령불꽃마다 반복합니다."
+    "DESCRIPTION": "hexamod:영혼화상을 !burny! 부여합니다. NL hexamod:점화된 유령불꽃당 반복합니다."
   },
   "hexamod:RadiantFlame": {
     "NAME": "불꽃 복사",
-    "DESCRIPTION": "영혼불꽃을 hexamod:점화 할 때마다 무작위 적에게 hexamod:영혼_화상을 !M! 부여합니다."
+    "DESCRIPTION": "영혼불꽃을 hexamod:점화할 때마다 무작위 적에게 hexamod:영혼화상을 !M! 부여합니다."
   },
   "hexamod:ApocalypseNow": {
     "NAME": "지옥의 묵시록",
@@ -295,20 +295,20 @@
   },
   "hexamod:DynamicBlow": {
     "NAME": "유동성 강타",
-    "DESCRIPTION": "휘발성. NL 현재 유령불꽃이 hexamod:점화되어 있다면 hexamod:영혼_화상을 !burny! 부여합니다. 아니라면 피해를 !D! 줍니다."
+    "DESCRIPTION": "휘발성. NL 현재 유령불꽃이 hexamod:점화되어 있다면 hexamod:영혼화상을 !burny! 부여합니다. 아니라면 피해를 !D! 줍니다."
   },
   "hexamod:Again": {
     "NAME": "다시!",
-    "DESCRIPTION": "현재 영혼불꽃을 hexamod:점화합니다. NL 이번 턴 종료 시 hexamod:팽창 하지 않습니다."
+    "DESCRIPTION": "현재 영혼불꽃을 hexamod:점화하고 hexamod:소화합니다."
   },
   "hexamod:RetreatToShadows": {
     "NAME": "무체",
-    "DESCRIPTION": "hexamod:수축. NL 체력을 !M! 잃습니다. NL 불가침 을 1 얻습니다. NL 소멸."
+    "DESCRIPTION": "hexamod:수축. NL 체력을 !M! 잃습니다. NL 불가침을 1 얻습니다. NL 소멸."
   },
   "hexamod:ApocalypticArmor": {
     "NAME": "최후의 심판",
-    "DESCRIPTION": "hexamod:지옥의 유령불꽃을 hexamod:점화 했고 모든 유령불꽃 !M! 개가 hexamod:점화되어 있다면 턴 종료 시 추가 턴을 얻습니다.",
-    "UPGRADE_DESCRIPTION": "hexamod:지옥의 유령불꽃을 hexamod:점화 했고 유령불꽃이 !M! 개 이상 hexamod:점화되어 있다면 턴 종료 시 추가 턴을 얻습니다."
+    "DESCRIPTION": "모든 유령불꽃 !M! 개가 hexamod:점화되어 있다면 다음으로 hexamod:지옥의 유령불꽃을 hexamod:점화 시 이번 턴 후에 내 턴을 추가로 진행합니다.",
+    "UPGRADE_DESCRIPTION": "유령불꽃이 !M! 개 이상 hexamod:점화되어 있다면 다음으로 hexamod:지옥의 유령불꽃을 hexamod:점화 시 이번 턴 후에 내 턴을 추가로 진행합니다."
   },
   "hexamod:FirstSeal": {
     "NAME": "첫 번째 봉인",
@@ -342,8 +342,8 @@
   },
   "hexamod:SoulSteal": {
     "NAME": "살아있는 폭탄",
-    "DESCRIPTION": "hexamod:영혼_화상을 !burny! 부여합니다. NL 부여한 대상의 hexamod:영혼_화상이 체력을 잃게 하고 제거된다면 적 전체를 대상으로 합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "hexamod:영혼_화상을 !burny! 부여합니다. NL 부여한 대상의 hexamod:영혼_화상이 체력을 잃게 하고 제거된다면 적 전체를 대상으로 합니다."
+    "DESCRIPTION": "hexamod:영혼화상을 !burny! 부여합니다. NL 부여한 대상의 hexamod:영혼화상이 체력을 잃게 하고 제거된다면 적 전체를 대상으로 합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "hexamod:영혼화상을 !burny! 부여합니다. NL 부여한 대상의 hexamod:영혼화상이 체력을 잃게 하고 제거된다면 적 전체를 대상으로 합니다."
   },
   "hexamod:CouncilsJustice": {
     "NAME": "의회의 정의",
@@ -365,27 +365,31 @@
   },
   "hexamod:BurningQuestion": {
     "NAME": "불타는 의문",
-    "DESCRIPTION": "휘발성. NL 방어도를 !B! 얻습니다. 이 카드의 피해량이 !M! 만큼 증가합니다. NL 이 카드가 소멸하면 적 전체에게 피해를 !D! 줍니다."
+    "DESCRIPTION": "휘발성. NL 방어도를 !B! 얻습니다. 이 카드의 피해량을 !M! 증가시킵니다. NL 이 카드가 소멸하면 적 전체에게 피해를 !D! 줍니다."
   },
   "hexamod:Floatwork": {
     "NAME": "떠돌기",
-    "DESCRIPTION": "휘발성. hexamod:사후세계. NL 민첩을 !M! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 휘발성. hexamod:사후세계. NL 민첩을 !M! 얻습니다."
+    "DESCRIPTION": "휘발성. hexamod:사후세계. NL *판금 *갑옷을 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 휘발성. hexamod:사후세계. NL *판금 *갑옷을 !M! 얻습니다."
   },
   "hexamod:Premonition": {
     "NAME": "불길한 예감",
-    "DESCRIPTION": "손에 있는 카드를 1장 고릅니다. NL 고른 카드를 사용하고 소멸 시킵니다. NL 소멸.",
+    "DESCRIPTION": "카드를 1장 선택합니다. NL 선택한 카드를 사용하고 소멸시킵니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
-      "사용하고 소멸시킬 카드를 고르십시오."
+      "사용하고 소멸시킬 카드를 선택하십시오."
     ]
   },
   "hexamod:Divider": {
     "NAME": "분할기",
-    "DESCRIPTION": "hexamod:점화된 유령불꽃마다 피해를 !D! 줍니다."
+    "DESCRIPTION": "hexamod:점화된 유령불꽃당 피해를 !D! 줍니다."
   },
   "hexamod:StrikeFromBeyond": {
     "NAME": "저편의 타격",
     "DESCRIPTION": "피해를 !D! 만큼 2번 줍니다. NL 무작위 hexamod:사후세계 카드를 1장 expansioncontent:복구합니다.",
     "EXTENDED_DESCRIPTION": ["휘발성","휘발성. NL "]
+  },
+  "hexamod:GraveExchange": {
+    "NAME": "뒤바뀐 무덤",
+    "DESCRIPTION": "버린 카드 더미에서 카드를 1장 소멸시킵니다. NL 무작위 hexamod:사후세계 카드를 1장 expansioncontent:복구합니다."
   }
 }

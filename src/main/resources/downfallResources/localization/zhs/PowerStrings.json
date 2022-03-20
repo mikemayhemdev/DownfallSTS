@@ -241,35 +241,35 @@
     ]
   },
   "downfall:OnDeathEveryoneStr": {
-    "NAME": "垂死之怒",
+    "NAME": "奄息：垂死之怒",
     "DESCRIPTIONS": [
       "该单位死亡时，所有单位获得 #b",
       " 点 #y力量 。"
     ]
   },
   "downfall:OnDeathEveryoneThorns": {
-    "NAME": "棘手人格",
+    "NAME": "奄息：蒺藜蔓延",
     "DESCRIPTIONS": [
       "该单位死亡时，所有单位获得 #b",
       " 层 #y荆棘 。"
     ]
   },
   "downfall:OnDeathEveryoneBuffer": {
-    "NAME": "时间停止()",
+    "NAME": "奄息：局部时滞",
     "DESCRIPTIONS": [
       "该单位死亡时，所有单位获得 #b",
       " 层 #y缓冲 。"
     ]
   },
   "downfall:OnDeathEveryoneVigor": {
-    "NAME": "鲜活之力",
+    "NAME": "奄息：鲜火之环",
     "DESCRIPTIONS": [
       "该单位死亡时，所有单位获得 #b",
       " 点 #y活力 。"
     ]
   },
   "downfall:OnDeathEveryoneRuggedVuln": {
-    "NAME": "不屈决心",
+    "NAME": "奄息：不屈决心",
     "DESCRIPTIONS": [
       "该单位死亡时，所有单位获得 #b",
       " 层 #y坚固 和 #b",

@@ -92,8 +92,7 @@
   },
   "Slimebound:Dissolve": {
     "NAME": "溶解",
-    "DESCRIPTION": "抽一张牌。 NL 消耗一张手牌。 NL 将其耗能数量的 *舔舔 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "抽一张牌。 NL 消耗 一张手牌。 NL 将其耗能数量+1的 *舔舔 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 消耗一张手牌。 NL 将其耗能数量的 *舔舔 加入手牌。 NL 消耗 。"
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "增殖形态",
@@ -105,8 +104,8 @@
   },
   "Slimebound:Recollect": {
     "NAME": "重新收集",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 随机 expansioncontent:发掘 一张0耗能牌。",
-    "UPGRADE_DESCRIPTION": "得 !B! 点 格挡 。 NL 随机 expansioncontent:发掘 一张0耗能牌。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 随机 expansioncontent:发掘 1张 slimeboundmod:舔舔 系牌。",
+    "UPGRADE_DESCRIPTION": "得 !B! 点 格挡 。 NL 随机 expansioncontent:发掘 2张 slimeboundmod:舔舔 系牌。",
     "EXTENDED_DESCRIPTION": [
       "没有…… 已消耗的…… 0耗能牌……"
     ]
@@ -125,8 +124,8 @@
   },
   "Slimebound:Recycling": {
     "NAME": "循环再生",
-    "DESCRIPTION": "回合开始时随机 expansioncontent:发掘 一张0耗能牌。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时随机 expansioncontent:发掘 一张0耗能牌。"
+    "DESCRIPTION": "回合开始时随机 expansioncontent:发掘 一张 slimeboundmod:舔舔 系牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时随机 expansioncontent:发掘 一张 slimeboundmod:舔舔 系牌。"
   },
   "Slimebound:Repurpose": {
     "NAME": "重新考虑",
@@ -144,8 +143,8 @@
   },
   "Slimebound:Lick": {
     "NAME": "舔舔",
-    "DESCRIPTION": "给予 !SlimeboundSlimed! 层 slimeboundmod:黏液 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "给予 !M! 层 虚弱 和 !SlimeboundSlimed! 层 slimeboundmod:黏液 。 NL 抽一张牌。 NL 消耗 。"
+    "DESCRIPTION": "给予 !SlimeboundSlimed! 层 slimeboundmod:黏液 。 NL 消耗 - slimeboundmod:深埋 。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 虚弱 和 !SlimeboundSlimed! 层 slimeboundmod:黏液 。 NL 抽一张牌。 NL 消耗 - slimeboundmod:深埋 。"
   },
   "Slimebound:HauntingLick": {
     "NAME": "缠绕之舔",
@@ -159,8 +158,8 @@
   },
   "Slimebound:RejuvenatingLick": {
     "NAME": "双重舔舔",
-    "DESCRIPTION": "给予 !SlimeboundSlimed! 层 slimeboundmod:黏液 。 NL 将一张 *舔舔 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "给予 !SlimeboundSlimed! 层 slimeboundmod:黏液 。 NL 将一张 *舔舔 加入手牌。 NL 抽一张牌。 NL 消耗 。"
+    "DESCRIPTION": "给予 !SlimeboundSlimed! 层 slimeboundmod:黏液 2次。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予 !SlimeboundSlimed! 层 slimeboundmod:黏液 2次。 NL 抽一张牌。 NL 消耗 。"
   },
   "Slimebound:Gluttony": {
     "NAME": "暴食",
@@ -174,7 +173,7 @@
   },
   "Slimebound:TongueLash": {
     "NAME": "舌鞭",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一张 消耗 的 slimeboundmod:舔舔 牌伤害增加 !M! 点。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一张 消耗 的 slimeboundmod:舔舔 系牌伤害增加 !M! 点。"
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "垂涎欲滴",
@@ -191,10 +190,10 @@
   },
   "Slimebound:WasteNot": {
     "NAME": "别浪费",
-    "DESCRIPTION": "expansioncontent:发掘 所有0耗能牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "expansioncontent:发掘 所有0耗能牌。",
+    "DESCRIPTION": "expansioncontent:发掘 所有 slimeboundmod:舔舔 系牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:发掘 所有 slimeboundmod:舔舔 系牌。",
     "EXTENDED_DESCRIPTION": [
-      "没有……已消耗的……0费牌……"
+      "没有……被消耗的……牌……"
     ]
   },
   "Slimebound:Prepare": {
@@ -208,8 +207,8 @@
   },
   "Slimebound:HungryTackle": {
     "NAME": "饥饿冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机 expansioncontent:发掘 一张0耗能牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机将2张已 消耗 的0费牌加入手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机 expansioncontent:发掘 1张 slimeboundmod:舔舔 系牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机 expansioncontent:发掘 2张 slimeboundmod:舔舔 系牌。"
   },
   "Slimebound:FinishingTackle": {
     "NAME": "开幕冲撞",
@@ -281,8 +280,8 @@
     "DESCRIPTION": "造成 !D! 点伤害并回复 !M! 点生命。 NL slimeboundmod:消耗黏液 -打出两次。 NL 消耗 。"
   },
   "Slimebound:DisruptingSlam": {
-    "NAME": "扰乱猛击",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。给予意图是攻击的敌人 !M! 层 虚弱 。"
+    "NAME": "宴后甜点",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL expansioncontent:取回 !M! 张 slimeboundmod:舔舔 系牌。"
   },
   "Slimebound:PrepareCrush": {
     "NAME": "准备：猛撞",
@@ -337,9 +336,9 @@
     "DESCRIPTION": "slimeboundmod:冲撞 牌： NL 额外造成 !M! 点伤害。 NL 额外受到1点伤害。"
   },
   "Slimebound:Darklings": {
-    "NAME": "黑色三人组",
+    "NAME": "黝黑二人组",
     "DESCRIPTION": " slimeboundmod:分裂 slimeboundmod:小黑史莱姆 !M! 次。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "黑色三人组"
+    "UPGRADE_DESCRIPTION": "黝黑三人组"
   },
   "Slimebound:SlimeSlap": {
     "NAME": "黏液斩击",
@@ -365,9 +364,9 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合接下来的 !M! 张牌将 slimeboundmod:命令 。"
   },
   "Slimebound:Nibble": {
-    "NAME": "轻咬",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将随机一张0费牌加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将随机一张已 升级 的0费牌加入手牌。 NL 消耗 。"
+    "NAME": "轻咬舔抵",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *舔舔 加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *舔舔 加入手牌。 NL 抽一张牌。 NL 消耗 。"
   },
   "Slimebound:Schlurp": {
     "NAME": "咀嚼",

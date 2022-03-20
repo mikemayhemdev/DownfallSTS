@@ -15,8 +15,8 @@
     "DESCRIPTION": "expansioncontent:보스 - 타락한 심장. NL expansioncontent:천하무적을 10 얻습니다. NL expansioncontent:천하무적을 이미 보유하고 있다면 보유한 천하무적이 끝나면 바로 적용됩니다."
   },
   "expansioncontent:HyperBeam": {
-    "NAME": "파괴광선",
-    "DESCRIPTION": "expansioncontent:보스 - 청동 자동인형. NL 적 전체에게 피해를 !D! 줍니다. NL 다음 턴 시작 시 [E] 를 잃습니다. NL 소멸."
+    "NAME": "자동 광선",
+    "DESCRIPTION": "expansioncontent:보스 - 청동 자동인형. NL 적 전체에게 피해를 !D! 줍니다. NL 다음 내 턴 시작 시 [E] 를 잃습니다. NL 소멸."
   },
   "expansioncontent:LastStand": {
     "NAME": "최후의 저항",
@@ -25,7 +25,7 @@
   },
   "expansioncontent:YouAreMine": {
     "NAME": "넌 나의 것이다!",
-    "DESCRIPTION": "expansioncontent:보스 - 수집가. NL 적 전체의 방어도를 제거합니다. NL 적 전체에게 약화 와 취약 을 !M! 부여합니다. NL 소멸."
+    "DESCRIPTION": "expansioncontent:보스 - 수집가. NL 적 전체의 방어도를 제거합니다. NL 적 전체에게 약화 와 취약을 !M! 부여합니다. NL 소멸."
   },
   "expansioncontent:AwakenDeath": {
     "NAME": "각성",
@@ -38,18 +38,18 @@
   },
   "expansioncontent:PolyBeam": {
     "NAME": "도누의 힘",
-    "DESCRIPTION": "expansioncontent:보스 - 도누. NL 피해를 !D! 만큼 2번 줍니다. 이 카드의 피해량이 !M! 증가합니다. NL 다음 턴에 *데카의 *보호 를 얻거나 expansioncontent:발굴합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:보스 - 도누. NL 피해를 !D! 만큼 2번 줍니다. 이 카드의 피해량이 !M! 증가합니다. NL *데카의 *보호+ 를 얻거나 expansioncontent:발굴합니다. NL 소멸."
+    "DESCRIPTION": "expansioncontent:보스 - 도누. NL 피해를 !D! 만큼 2번 줍니다. 이 카드의 피해량이 !M! 증가합니다. NL 다음 턴에 *데카의 *보호를 얻거나 expansioncontent:발굴합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:보스 - 도누. NL 피해를 !D! 만큼 2번 줍니다. 이 카드의 피해량이 !M! 증가합니다. NL *데카의 *보호+를 얻거나 expansioncontent:발굴합니다. NL 소멸."
      },
   "expansioncontent:DecaShield": {
     "NAME": "데카의 힘",
-    "DESCRIPTION": "expansioncontent:보스 - 데카. NL 방어도를 !B! 만큼 2번 얻습니다. 이 카드의 방어도가 !M! 증가합니다. NL 다음 턴에 *도누의 *힘 을 expansioncontent:발굴합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:보스 - 데카. NL 방어도를 !B! 만큼 2번 얻습니다. 이 카드의 방어도가 !M! 증가합니다. NL 다음 턴에 *도누의 *힘+ 을 expansioncontent:발굴합니다. NL 소멸."
+    "DESCRIPTION": "expansioncontent:보스 - 데카. NL 방어도를 !B! 만큼 2번 얻습니다. 이 카드의 방어도가 !M! 증가합니다. NL 다음 턴에 *도누의 *힘을 expansioncontent:발굴합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:보스 - 데카. NL 방어도를 !B! 만큼 2번 얻습니다. 이 카드의 방어도가 !M! 증가합니다. NL 다음 턴에 *도누의 *힘+을 expansioncontent:발굴합니다. NL 소멸."
   },
   "expansioncontent:PrepareCrush": {
     "NAME": "으깨기 준비",
-    "DESCRIPTION": "expansioncontent:보스 - 대왕 슬라임. NL 방어도를 !B! 얻습니다. NL 다음 턴에 [E] [E] [E] 을 얻고 *슬라임 *으깬다!!! 를 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:보스 - 대왕 슬라임. NL 방어도를 !B! 얻습니다. NL 다음 턴에 [E] [E] [E] 을 얻고 *슬라임 *으깬다!!!+ 를 얻습니다. NL 소멸."
+    "DESCRIPTION": "expansioncontent:보스 - 대왕 슬라임. NL 방어도를 !B! 얻습니다. NL 다음 내 턴에 [E] [E] [E] 을 얻고 *슬라임 *으깬다를 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:보스 - 대왕 슬라임. NL 방어도를 !B! 얻습니다. NL 다음 내 턴에 [E] [E] [E] 을 얻고 *슬라임 *으깬다 *+를 얻습니다. NL 소멸."
   },
   "expansioncontent:StudyTheSpire": {
     "NAME": "첨탑 학습",
@@ -71,6 +71,10 @@
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "뭐든지 아는 해골",
-    "DESCRIPTION": "휘발성. NL 체력을 소모하고 영혼, 정신자극제, 성공하는 법을 구합니다. NL 소멸."
+    "DESCRIPTION": "휘발성. NL 체력을 잃고 영혼, 정신자극제, 성공하는 법을 구합니다. NL 소멸."
+  },
+  "expansioncontent:Antidote": {
+    "NAME": "해독제",
+    "DESCRIPTION": "모든 중독을 잃습니다."
   }
 }

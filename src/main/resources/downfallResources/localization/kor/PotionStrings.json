@@ -2,9 +2,9 @@
   "downfall:CursedFountainPotion": {
     "NAME": "저주받은 샘 포션",
     "DESCRIPTIONS": [
-      "사용하면 #y약화 를 #b",
-      " 부여하고 #y손상 을 #b",
-      " 부여하고 #y힘 을 #b",
+      "사용하면 #y약화를 #b",
+      " 부여하고 #y손상을 #b",
+      " 부여하고 #y힘을 #b",
       " 감소시킵니다."
     ]
   }
