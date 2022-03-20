@@ -319,8 +319,8 @@
     "NAME": "WheelOfDeath",
     "DESCRIPTIONS": [
       "Every #b",
-      "cards you play, Neow gains #b",
-      " #yStrength"
+      " cards you play, Neow gains #b",
+      " #yStrength."
     ]
   },
   "downfall:NeowDistracting": {
