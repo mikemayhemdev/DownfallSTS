@@ -214,5 +214,12 @@
     ],
     "PROPER_NAME": "专家史莱姆",
     "DESCRIPTION": "比普通 #y史莱姆 更加强大的独特 #y史莱姆 。"
+  },
+  {
+    "NAMES": [
+      "buried"
+    ],
+    "PROPER_NAME": "Buried",
+    "DESCRIPTION": "Non-buried cards will always be randomly chosen first for #yExhume effects."
   }
 ]

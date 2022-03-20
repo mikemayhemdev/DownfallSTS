@@ -273,7 +273,7 @@
   },
   "hexamod:SpectralSpark": {
     "NAME": "Spectral Spark",
-    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL If the current Ghostflame is hexamod:Ignited: hexamod:Extinguish it and return this card to your hand."
+    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL If the current Ghostflame is hexamod:Ignited: hexamod:Extinguish it and return this to your hand."
   },
   "hexamod:GhostflameInferno": {
     "NAME": "Instant Inferno",

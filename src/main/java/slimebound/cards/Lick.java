@@ -48,6 +48,7 @@ public class Lick extends AbstractSlimeboundCard {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
         tags.add(SlimeboundMod.LICK);
+        tags.add(SlimeboundMod.BURIED);
         this.slimed = this.baseSlimed = 4;
         this.magicNumber = this.baseMagicNumber = 1;
         this.exhaust = true;

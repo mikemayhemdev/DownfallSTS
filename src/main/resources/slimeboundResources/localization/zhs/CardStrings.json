@@ -192,6 +192,7 @@
   "Slimebound:WasteNot": {
     "NAME": "别浪费",
     "DESCRIPTION": "expansioncontent:发掘 所有0耗能牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:发掘 所有0耗能牌。",
     "EXTENDED_DESCRIPTION": [
       "没有……已消耗的……0费牌……"
     ]

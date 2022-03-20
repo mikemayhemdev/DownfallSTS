@@ -46,13 +46,9 @@ public class Dissolve extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         // AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 2));
+        AbstractDungeon.actionManager.addToBottom(new DissolveAction(p, p, 1, false, this.block, 0));
 
-        if (this.upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new DissolveAction(p, p, 1, false, this.block, 1));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new DissolveAction(p, p, 1, false, this.block, 0));
-        }
 
     }
 
@@ -63,8 +59,7 @@ public class Dissolve extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            upgradeMagicNumber(1);
         }
     }
 }
