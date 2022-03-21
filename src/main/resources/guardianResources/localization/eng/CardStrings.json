@@ -43,13 +43,13 @@
   },
   "Guardian:DonusPower": {
     "NAME": "Overload",
-    "DESCRIPTION": "Draw !M! Cards. NL Next turn, draw 2 fewer cards.",
-    "UPGRADE_DESCRIPTION": "Draw !M! Cards. NL Next turn, draw 2 fewer cards. NL Reduce all your debuffs by 1."
+    "DESCRIPTION": "Draw !M! Cards. NL Next turn, draw 2 less cards.",
+    "UPGRADE_DESCRIPTION": "Draw !M! Cards. NL Next turn, draw 2 less cards. NL Reduce each of your debuffs by 1."
   },
   "Guardian:DecasProtection": {
     "NAME": "Ancient Power",
     "DESCRIPTION": "Gain 4 Temporary Strength and Dexterity. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 4 Temporary Strength and Dexterity. NL Reduce all your debuffs by 1. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Gain 4 Temporary Strength and Dexterity. NL Reduce each of your debuffs by 1. NL Exhaust."
   },
   "Guardian:FierceBash": {
     "NAME": "Fierce Bash",
@@ -88,8 +88,8 @@
   },
   "Guardian:BronzeArmor": {
     "NAME": "Resilient Plate",
-    "DESCRIPTION": "Reduce all your debuffs by !M!. NL guardianmod:Brace 8. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Reduce all your debuffs by !M!. NL guardianmod:Brace 8."
+    "DESCRIPTION": "Reduce each of your debuffs by !M!. NL guardianmod:Brace 8. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Reduce each of your debuffs by !M!. NL guardianmod:Brace 8."
   },
   "Guardian:FloatingOrbs": {
     "NAME": "Floating Orbs",
@@ -226,7 +226,7 @@
   },
   "Guardian:TimeCapacitor": {
     "NAME": "Time Capacitor",
-    "DESCRIPTION": "Gain !M! guardianmod:Stasis Slots."
+    "DESCRIPTION": "Gain !M! Stasis slots."
   },
   "Guardian:ConstructionForm": {
     "NAME": "Construction Form",
@@ -325,8 +325,8 @@
   },
   "Guardian:Gem_Synthetic": {
     "NAME": "Onyx",
-    "DESCRIPTION": "guardianmod:Gem. NL Reduce all your debuffs by 1.",
-    "UPGRADE_DESCRIPTION": "Reduce all your debuffs by 1."
+    "DESCRIPTION": "guardianmod:Gem. NL Reduce each of your debuffs by 1.",
+    "UPGRADE_DESCRIPTION": "Reduce each of your debuffs by 1."
   },
   "Guardian:Gem_Yellow": {
     "NAME": "Amber",
@@ -439,6 +439,6 @@
   },
   "Guardian:SecondStrikePreviewCard": {
     "NAME": "Second Slam",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Copies Twin Slam's Gems. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Copies *Twin *Slam's *Gems. NL Exhaust."
   }
 }

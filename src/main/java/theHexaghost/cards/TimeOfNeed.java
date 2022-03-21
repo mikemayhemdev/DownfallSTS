@@ -5,6 +5,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class TimeOfNeed extends AbstractHexaCard {
 
@@ -16,6 +19,7 @@ public class TimeOfNeed extends AbstractHexaCard {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         selfRetain = true;
         exhaust = true;
+        HexaMod.loadJokeCardImage(this, "TimeOfNeed.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

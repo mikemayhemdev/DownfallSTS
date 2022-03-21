@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import basemod.BaseMod;
 import basemod.devcommands.draw.Draw;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -12,6 +13,8 @@ import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class BugBarrage extends AbstractBronzeCard {
 
@@ -27,6 +30,7 @@ public class BugBarrage extends AbstractBronzeCard {
         baseDamage = DAMAGE;
         // exhaust = true;
         magicNumber = baseMagicNumber = 1;
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("BugBarrage.png"));
     }
 
     private int dummyPlaceholderOf;

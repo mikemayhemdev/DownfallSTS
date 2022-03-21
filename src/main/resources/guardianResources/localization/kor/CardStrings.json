@@ -61,7 +61,8 @@
   },
   "Guardian:TwinSlam": {
     "NAME": "두 번 강타",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL *두 *번 *타격을 1장 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL *두 *번 *타격을 1장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL *두 *번 *타격을 1장 얻습니다."
   },
   "Guardian:GuardianWhirl": {
     "NAME": "회오리 바람",
@@ -87,7 +88,8 @@
   },
   "Guardian:BronzeArmor": {
     "NAME": "청동 갑옷",
-    "DESCRIPTION": "인공물을 !M! 얻습니다. NL guardianmod:대비를 10 만큼 합니다. NL 소멸."
+    "DESCRIPTION": "인공물을 !M! 얻습니다. NL guardianmod:대비를 10 만큼 합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "인공물을 !M! 얻습니다. NL guardianmod:대비를 10 만큼 합니다. NL 소멸."
   },
   "Guardian:FloatingOrbs": {
     "NAME": "떠다니는 구체",

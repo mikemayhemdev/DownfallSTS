@@ -3,6 +3,9 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class Strike extends AbstractHexaCard {
 
@@ -18,6 +21,7 @@ public class Strike extends AbstractHexaCard {
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
         tags.add(CardTags.STARTER_STRIKE);
+        HexaMod.loadJokeCardImage(this, "Strike.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

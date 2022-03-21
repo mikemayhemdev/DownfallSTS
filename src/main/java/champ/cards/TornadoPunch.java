@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class TornadoPunch extends AbstractChampCard {
 
     public final static String ID = makeID("TornadoPunch");
@@ -35,6 +37,7 @@ public class TornadoPunch extends AbstractChampCard {
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
         postInit();
+        loadJokeCardImage(this, "TornadoPunch.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
