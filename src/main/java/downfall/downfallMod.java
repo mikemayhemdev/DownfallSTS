@@ -32,7 +32,6 @@ import champ.ChampMod;
 import champ.cards.ModFinisher;
 import champ.powers.LastStandModPower;
 import champ.relics.ChampStancesModRelic;
-import champ.relics.ChampionCrown;
 import champ.util.TechniqueMod;
 import charbosses.actions.util.CharBossMonsterGroup;
 import charbosses.bosses.AbstractCharBoss;
@@ -101,7 +100,6 @@ import downfall.events.shrines_evil.UpgradeShrineEvil;
 import downfall.monsters.*;
 import downfall.monsters.gauntletbosses.*;
 import downfall.patches.DailyModeEvilPatch;
-import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.RewardItemTypeEnumPatch;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.patches.ui.topPanel.GoldToSoulPatches;
@@ -162,8 +160,9 @@ public class downfallMod implements
         StartGameSubscriber,
         StartActSubscriber,
         AddAudioSubscriber,
-        RenderSubscriber,
-        PostDeathSubscriber {
+        RenderSubscriber
+        //PostDeathSubscriber
+        {
     public static final String modID = "downfall";
 
     public static final boolean STEAM_MODE = true;
@@ -186,13 +185,13 @@ public class downfallMod implements
     public static Properties configDefault = new Properties();
     public static boolean contentSharing_relics = true;
     public static boolean contentSharing_potions = true;
-    public static boolean contentSharing_events = true;
-    public static boolean contentSharing_colorlessCards = true;
+    public static boolean contentSharing_events = false;
+    public static boolean contentSharing_colorlessCards = false;
     public static boolean contentSharing_curses = true;
     public static boolean crossoverCharacters = true;
     public static boolean unlockEverything = false;
     public static boolean noMusic = false;
-    public static boolean normalMapLayout = true;
+    public static boolean normalMapLayout = false;
     public static boolean champDisableStanceHelper = false;
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
@@ -270,16 +269,24 @@ public class downfallMod implements
         new downfallMod();
 
         try {
-            for (int i = 0; i < unseenTutorials.length; i++) { tutorialSaves.setProperty("activeTutorials" + i, "true"); }
+            for (int i = 0; i < unseenTutorials.length; i++) {
+                tutorialSaves.setProperty("activeTutorials" + i, "true");
+            }
             SpireConfig config = new SpireConfig("downfall", "TutorialsViewed", tutorialSaves);
-            for (int j = 0; j < unseenTutorials.length; j++) { unseenTutorials[j] = config.getBool("activeTutorials" + j); }
-        } catch (IOException e) { e.printStackTrace(); }
+            for (int j = 0; j < unseenTutorials.length; j++) {
+                unseenTutorials[j] = config.getBool("activeTutorials" + j);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void saveTutorialsSeen() throws IOException {
         SpireConfig config = new SpireConfig("downfall", "TutorialsViewed");
         int i;
-        for (i = 0; i < unseenTutorials.length; i++) { config.setBool("activeTutorials" + i, unseenTutorials[i]); }
+        for (i = 0; i < unseenTutorials.length; i++) {
+            config.setBool("activeTutorials" + i, unseenTutorials[i]);
+        }
         config.save();
     }
 
@@ -579,48 +586,106 @@ public class downfallMod implements
 
         settingsPanel = new ModPanel();
 
-        ModLabeledToggleButton contentSharingBtnCurses = new ModLabeledToggleButton(configStrings.TEXT[5],
-                350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                contentSharing_curses, settingsPanel, (label) -> {
-        }, (button) -> {
-            contentSharing_curses = button.enabled;
-            saveData();
-        });
+        if (!STEAM_MODE) {
 
-        ModLabeledToggleButton contentSharingBtnRelics = new ModLabeledToggleButton(configStrings.TEXT[0],
-                350.0f, 650.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                contentSharing_relics, settingsPanel, (label) -> {
-        }, (button) -> {
-            contentSharing_relics = button.enabled;
-            saveData();
-        });
+            ModLabeledToggleButton contentSharingBtnCurses = new ModLabeledToggleButton(configStrings.TEXT[5],
+                    350.0f, 450.0F, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    contentSharing_curses, settingsPanel, (label) -> {
+            }, (button) -> {
+                contentSharing_curses = button.enabled;
+                saveData();
+            });
 
-        ModLabeledToggleButton contentSharingBtnEvents = new ModLabeledToggleButton(configStrings.TEXT[2],
-                350.0f, 600.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                contentSharing_events, settingsPanel, (label) -> {
-        }, (button) -> {
-            contentSharing_events = button.enabled;
-            saveData();
-        });
+            ModLabeledToggleButton contentSharingBtnRelics = new ModLabeledToggleButton(configStrings.TEXT[0],
+                    350.0f, 650.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    contentSharing_relics, settingsPanel, (label) -> {
+            }, (button) -> {
+                contentSharing_relics = button.enabled;
+                saveData();
+            });
 
-        ModLabeledToggleButton contentSharingBtnPotions = new ModLabeledToggleButton(configStrings.TEXT[1],
-                350.0f, 550.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                contentSharing_potions, settingsPanel, (label) -> {
-        }, (button) -> {
-            contentSharing_potions = button.enabled;
-            saveData();
-        });
+            ModLabeledToggleButton contentSharingBtnEvents = new ModLabeledToggleButton(configStrings.TEXT[2],
+                    350.0f, 600.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    contentSharing_events, settingsPanel, (label) -> {
+            }, (button) -> {
+                contentSharing_events = button.enabled;
+                saveData();
+            });
 
-        ModLabeledToggleButton contentSharingBtnColorless = new ModLabeledToggleButton(configStrings.TEXT[3],
-                350.0f, 500.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                contentSharing_colorlessCards, settingsPanel, (label) -> {
-        }, (button) -> {
-            contentSharing_colorlessCards = button.enabled;
-            saveData();
-        });
+            ModLabeledToggleButton contentSharingBtnPotions = new ModLabeledToggleButton(configStrings.TEXT[1],
+                    350.0f, 550.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    contentSharing_potions, settingsPanel, (label) -> {
+            }, (button) -> {
+                contentSharing_potions = button.enabled;
+                saveData();
+            });
+
+            ModLabeledToggleButton contentSharingBtnColorless = new ModLabeledToggleButton(configStrings.TEXT[3],
+                    350.0f, 500.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    contentSharing_colorlessCards, settingsPanel, (label) -> {
+            }, (button) -> {
+                contentSharing_colorlessCards = button.enabled;
+                saveData();
+            });
+
+
+            ModLabeledToggleButton normalMapBtn = new ModLabeledToggleButton(configStrings.TEXT[6],
+                    350.0f, 400, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    normalMapLayout, settingsPanel, (label) -> {
+            }, (button) -> {
+                normalMapLayout = button.enabled;
+                saveData();
+            });
+
+            ModLabeledToggleButton champProConfig = new ModLabeledToggleButton(configStrings.TEXT[8],
+                    350.0f, 350, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    champDisableStanceHelper, settingsPanel, (label) -> {
+            }, (button) -> {
+                champDisableStanceHelper = button.enabled;
+                saveData();
+            });
+
+
+            ModLabeledToggleButton unlockAllBtn = new ModLabeledToggleButton(configStrings.TEXT[7],
+                    350.0f, 300, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    unlockEverything, settingsPanel, (label) -> {
+            }, (button) -> {
+                unlockEverything = button.enabled;
+                saveData();
+            });
+
+
+            ModLabeledToggleButton noMusicBtn = new ModLabeledToggleButton(configStrings.TEXT[9],
+                    350.0f, 250, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    noMusic, settingsPanel, (label) -> {
+            }, (button) -> {
+                noMusic = button.enabled;
+                saveData();
+            });
+
+            ModLabeledToggleButton unlockAllSkinBtn = new ModLabeledToggleButton(configStrings.TEXT[10],
+                    350.0f, 200, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    unlockAllReskin, settingsPanel, (label) -> {
+            }, (button) -> {
+                unlockAllReskin = button.enabled;
+                unlockAllReskin();
+            });
+
+
+            settingsPanel.addUIElement(contentSharingBtnCurses);
+            settingsPanel.addUIElement(contentSharingBtnEvents);
+            settingsPanel.addUIElement(contentSharingBtnPotions);
+            settingsPanel.addUIElement(contentSharingBtnRelics);
+            settingsPanel.addUIElement(contentSharingBtnColorless);
+            settingsPanel.addUIElement(normalMapBtn);
+            settingsPanel.addUIElement(champProConfig);
+            settingsPanel.addUIElement(unlockAllBtn);
+            settingsPanel.addUIElement(noMusicBtn);
+            settingsPanel.addUIElement(unlockAllSkinBtn);
+        }
 
         ModLabeledToggleButton characterCrossoverBtn = new ModLabeledToggleButton(configStrings.TEXT[4],
-                350.0f, 450.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
                 crossoverCharacters, settingsPanel, (label) -> {
         }, (button) -> {
             crossoverCharacters = button.enabled;
@@ -629,59 +694,8 @@ public class downfallMod implements
             saveData();
         });
 
-        ModLabeledToggleButton normalMapBtn = new ModLabeledToggleButton(configStrings.TEXT[6],
-                350.0f, 400, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                normalMapLayout, settingsPanel, (label) -> {
-        }, (button) -> {
-            normalMapLayout = button.enabled;
-            saveData();
-        });
 
-        ModLabeledToggleButton champProConfig = new ModLabeledToggleButton(configStrings.TEXT[8],
-                350.0f, 350, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                champDisableStanceHelper, settingsPanel, (label) -> {
-        }, (button) -> {
-            champDisableStanceHelper = button.enabled;
-            saveData();
-        });
-
-
-        ModLabeledToggleButton unlockAllBtn = new ModLabeledToggleButton(configStrings.TEXT[7],
-                350.0f, 300, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                unlockEverything, settingsPanel, (label) -> {
-        }, (button) -> {
-            unlockEverything = button.enabled;
-            saveData();
-        });
-
-
-        ModLabeledToggleButton noMusicBtn = new ModLabeledToggleButton(configStrings.TEXT[9],
-                350.0f, 250, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                noMusic, settingsPanel, (label) -> {
-        }, (button) -> {
-            noMusic = button.enabled;
-            saveData();
-        });
-
-        ModLabeledToggleButton unlockAllSkinBtn = new ModLabeledToggleButton(configStrings.TEXT[10],
-                350.0f, 200, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                unlockAllReskin, settingsPanel, (label) -> {
-        }, (button) -> {
-            unlockAllReskin = button.enabled;
-            unlockAllReskin();
-        });
-
-        settingsPanel.addUIElement(contentSharingBtnCurses);
-        settingsPanel.addUIElement(contentSharingBtnEvents);
-        settingsPanel.addUIElement(contentSharingBtnPotions);
-        settingsPanel.addUIElement(contentSharingBtnRelics);
-        settingsPanel.addUIElement(contentSharingBtnColorless);
         settingsPanel.addUIElement(characterCrossoverBtn);
-        settingsPanel.addUIElement(normalMapBtn);
-        settingsPanel.addUIElement(champProConfig);
-        settingsPanel.addUIElement(unlockAllBtn);
-        settingsPanel.addUIElement(noMusicBtn);
-        settingsPanel.addUIElement(unlockAllSkinBtn);
 
         BaseMod.registerModBadge(badgeTexture, "downfall", "Downfall Team", "A very evil Expansion.", settingsPanel);
 
@@ -691,16 +705,18 @@ public class downfallMod implements
         try {
             SpireConfig config = new SpireConfig("downfall", "downfallSaveData", configDefault);
             config.load();
-            contentSharing_curses = config.getBool(PROP_CURSE_SHARING);
-            contentSharing_relics = config.getBool(PROP_RELIC_SHARING);
-            contentSharing_events = config.getBool(PROP_EVENT_SHARING);
-            contentSharing_potions = config.getBool(PROP_POTION_SHARING);
-            contentSharing_colorlessCards = config.getBool(PROP_CARD_SHARING);
+            if (!STEAM_MODE) {
+                contentSharing_curses = config.getBool(PROP_CURSE_SHARING);
+                contentSharing_relics = config.getBool(PROP_RELIC_SHARING);
+                contentSharing_events = config.getBool(PROP_EVENT_SHARING);
+                contentSharing_potions = config.getBool(PROP_POTION_SHARING);
+                contentSharing_colorlessCards = config.getBool(PROP_CARD_SHARING);
+                normalMapLayout = config.getBool(PROP_NORMAL_MAP);
+                champDisableStanceHelper = config.getBool(PROP_CHAMP_PRO);
+                unlockEverything = config.getBool(PROP_UNLOCK_ALL);
+                noMusic = config.getBool(PROP_NO_MUSIC);
+            }
             crossoverCharacters = config.getBool(PROP_CHAR_CROSSOVER);
-            normalMapLayout = config.getBool(PROP_NORMAL_MAP);
-            champDisableStanceHelper = config.getBool(PROP_CHAMP_PRO);
-            unlockEverything = config.getBool(PROP_UNLOCK_ALL);
-            noMusic = config.getBool(PROP_NO_MUSIC);
         } catch (Exception e) {
             e.printStackTrace();
             clearData();
@@ -1174,8 +1190,8 @@ public class downfallMod implements
 
         BaseMod.addMonster(makeID("Gauntlet1"), "Gauntlet", () -> new MonsterGroup(
                 new AbstractMonster[]{
-                     //   new Ironclad(),
-                     //   new Silent(),
+                        //   new Ironclad(),
+                        //   new Silent(),
                         new Defect(x1, y1),
                         new Watcher(x2, y2),
                         new Hermit(x3, y3),
@@ -1183,19 +1199,19 @@ public class downfallMod implements
 
         BaseMod.addMonster(makeID("Gauntlet2"), "Gauntlet", () -> new MonsterGroup(
                 new AbstractMonster[]{
-                     //   new Ironclad(),
+                        //   new Ironclad(),
                         new Silent(x1, y1),
-                     //   new Defect(),
+                        //   new Defect(),
                         new Watcher(x2, y2),
                         new Hermit(x3, y3),
                 }));
 
         BaseMod.addMonster(makeID("Gauntlet3"), "Gauntlet", () -> new MonsterGroup(
                 new AbstractMonster[]{
-                    //    new Ironclad(),
+                        //    new Ironclad(),
                         new Silent(x1, y1),
                         new Defect(x2, y2),
-                     //   new Watcher(),
+                        //   new Watcher(),
                         new Hermit(x3, y3),
                 }));
 
@@ -1204,7 +1220,7 @@ public class downfallMod implements
                         //    new Ironclad(),
                         new Silent(x1, y1),
                         new Defect(x2, y2),
-                           new Watcher(x3, y3),
+                        new Watcher(x3, y3),
                         //new Hermit(),
                 }));
 
@@ -1358,7 +1374,7 @@ public class downfallMod implements
         }
     }
 
-    private void resetBossList() {
+    public static void resetBossList() {
         possEncounterList.clear();
         possEncounterList.add(CharBossIronclad.ID);
         possEncounterList.add(CharBossSilent.ID);
@@ -1394,7 +1410,7 @@ public class downfallMod implements
 
     @Override
     public void receiveStartAct() {
-        if (evilMode || (evilWithinSingleton!=null && evilWithinSingleton.selected) || (CardCrawlGame.trial==null && DailyModeEvilPatch.todaysRunIsEvil)) {
+        if (evilMode || (evilWithinSingleton != null && evilWithinSingleton.selected) || (CardCrawlGame.trial == null && DailyModeEvilPatch.todaysRunIsEvil)) {
             if (possEncounterList.size() == 0) {
                 resetBossList();
                 //SlimeboundMod.logger.info("ERROR! Had to reset the bosses mid-run!");
@@ -1409,6 +1425,9 @@ public class downfallMod implements
                 } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
                     e.printStackTrace();
                 }
+                if (AbstractDungeon.ascensionLevel > 20 && AbstractDungeon.isAscensionMode && AbstractDungeon.actNum == 3) {
+                    AbstractDungeon.bossList.add(1, CharBossMerchant.ID);
+                }
             }
         }
 
@@ -1421,14 +1440,14 @@ public class downfallMod implements
     }
 
 
-    public static boolean isDownfallCharacter(AbstractPlayer p){
+    public static boolean isDownfallCharacter(AbstractPlayer p) {
         if (p instanceof SlimeboundCharacter ||
                 p instanceof TheHexaghost ||
                 p instanceof GuardianCharacter ||
                 p instanceof TheSnecko ||
                 p instanceof ChampChar ||
                 p instanceof AutomatonChar ||
-                p instanceof GremlinCharacter){
+                p instanceof GremlinCharacter) {
             return true;
         }
         return false;
@@ -1557,7 +1576,7 @@ public class downfallMod implements
         if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(TooManyShivs.ID) || ModHelper.isModEnabled(TooManyShivs.ID)) {
             RelicLibrary.getRelic(VelvetChoker.ID).makeCopy().instantObtain();
             BlightHelper.getBlight(VoidEssence.ID).instantObtain(AbstractDungeon.player, AbstractDungeon.player.blights.size(), true);
-            for (int i=0;i<10;i++) {
+            for (int i = 0; i < 10; i++) {
                 AbstractDungeon.player.masterDeck.addToBottom(new Shiv());
             }
         }
@@ -1574,8 +1593,8 @@ public class downfallMod implements
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group)
             UnlockTracker.markCardAsSeen(c.cardID);
 
-        if ((evilWithinSingleton!=null && evilWithinSingleton.selected)
-                || (CardCrawlGame.trial==null && DailyModeEvilPatch.todaysRunIsEvil)) {
+        if ((evilWithinSingleton != null && evilWithinSingleton.selected)
+                || (CardCrawlGame.trial == null && DailyModeEvilPatch.todaysRunIsEvil)) {
             evilMode = true;
         }
 
@@ -1634,6 +1653,7 @@ public class downfallMod implements
         }
     }
 
+    /*
     @Override
     public void receivePostDeath() {
         if (!Loader.isModLoaded("quickrestart") || (!RestartRunHelper.queuedScoreRestart && !RestartRunHelper.queuedRestart)) {
@@ -1641,6 +1661,8 @@ public class downfallMod implements
         }
         // else: we are doing a quickRestart, do not reset evilMode
     }
+
+     */
 
     public enum otherPackagePaths {
         PACKAGE_SLIME,
