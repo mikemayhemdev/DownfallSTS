@@ -1,12 +1,15 @@
 package charbosses.cards.hermit;
 
+import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import hermit.cards.ItchyTrigger;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
@@ -27,6 +30,21 @@ public class EnItchyTriggerAct2 extends AbstractHermitBossCard {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), EnumPatch.HERMIT_GUN2));
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), EnumPatch.HERMIT_GUN2));
     }
+
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        boolean addedWeak = false;
+        if (AbstractCharBoss.boss.hand.group.stream().anyMatch(c -> c.cardID.equals(EnHoleUp.ID))) {
+            AbstractCharBoss.boss.powers.add(0, new WeakPower(AbstractDungeon.player, 1, false));
+            addedWeak = true;
+        }
+        super.calculateCardDamage(mo);
+        if (addedWeak) {
+            AbstractCharBoss.boss.powers.remove(0);
+        }
+    }
+
 
     @Override
     public void upgrade() {

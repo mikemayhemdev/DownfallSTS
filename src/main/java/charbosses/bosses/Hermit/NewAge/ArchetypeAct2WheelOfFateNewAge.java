@@ -10,6 +10,7 @@ import charbosses.cards.curses.EnInjury;
 import charbosses.cards.curses.EnNecronomicurse;
 import charbosses.cards.hermit.*;
 import charbosses.powers.bossmechanicpowers.HermitWheelOfFortune;
+import charbosses.relics.CBR_Necronomicon;
 import charbosses.relics.CBR_NeowsBlessing;
 import charbosses.relics.CBR_PenNib;
 import charbosses.relics.CBR_PhilosopherStone;
@@ -70,7 +71,7 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         } else {
             mockDeck.add(new EnGestalt());
         }
-        mockDeck.add(new EnItchyTrigger());
+        mockDeck.add(new EnItchyTriggerAct2());
         mockDeck.add(new EnHandOfGreed());
         AbstractCard virt = new EnVirtue();
         virt.upgrade();
@@ -87,6 +88,7 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_PenNib());
         addRelic(new CBR_PhilosopherStone());
+        addRelic(new CBR_Necronomicon());
     }
 
     public void upgradeStrikeOrDefendManually(AbstractCard c) {

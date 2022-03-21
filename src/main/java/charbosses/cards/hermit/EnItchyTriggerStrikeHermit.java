@@ -1,6 +1,5 @@
 package charbosses.cards.hermit;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -40,6 +39,7 @@ public class EnItchyTriggerStrikeHermit extends AbstractHermitBossCard {
         bossDarken();
         isCostModified = false;
         isCostModifiedForTurn = false;
+        destroyIntent();
     }
 
     @Override
