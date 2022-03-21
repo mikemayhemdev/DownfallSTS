@@ -3,7 +3,7 @@
     "NAME": "끈끈이 심장",
     "FLAVOR": "멋진 기분이다.",
     "DESCRIPTIONS": [
-      "#yslimeboundmod:소비 할 때마다 체력을 #b2 회복합니다. 전투마다 체력을 최대 #b15 회복할 수 있습니다."
+      "#yslimeboundmod:소비했을 때마다 체력을 #b2 회복합니다. 전투마다 체력을 최대 #b15 회복할 수 있습니다."
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
@@ -11,14 +11,14 @@
     "FLAVOR": "질척거리는 비밀.",
     "DESCRIPTIONS": [
       "",
-      " 과 교체합니다.[] NL #yslimeboundmod:소비 할 때마다 체력을 #b3 회복합니다. 전투마다 체력을 최대 #b15 회복할 수 있습니다."
+      " 과 교체합니다.[] NL #yslimeboundmod:소비했을 때마다 체력을 #b3 회복합니다. 전투마다 체력을 최대 #b15 회복할 수 있습니다."
     ]
   },
   "Slimebound:SlimedTailRelic": {
     "NAME": "슬라임 꼬리",
-    "FLAVOR": "전투 중에 적을 속이기 위한 가짜 꼬리, 점액으로 뒤덮여 있습니다.",
+    "FLAVOR": "전투 중에 적을 속이기 위한 가짜 꼬리로 점액으로 뒤덮여 있습니다.",
     "DESCRIPTIONS": [
-      "전투마다 한 번, 체력이 #b50% 이하일 때 #yslimeboundmod:특공대_슬라임 으로 #yslimeboundmod:분열 합니다. 그 후 피해를 입는다면 대신해서 가장 최근에 생성된 슬라임을 #yslimeboundmod:흡수 합니다.",
+      "전투마다 한 번, 체력이 #b50% 이하일 때 #yslimeboundmod:특공대_슬라임 으로 #yslimeboundmod:분열합니다. 그 후 피해를 입는다면 대신해서 가장 최근에 생성된 슬라임을 #yslimeboundmod:흡수 합니다.",
       "사용된 유물입니다. 다음 전투에서 다시 사용 가능합니다."
     ]
   },
@@ -26,7 +26,7 @@
     "NAME": "끈적이 돌",
     "FLAVOR": "당신의 감정에 따라 힘을 북돋아 준다고 전해집니다.",
     "DESCRIPTIONS": [
-      "전투 시작 시 #yslimeboundmod:진흙탕_슬라임 으로 #yslimeboundmod:분열 하고 #yslimeboundmod:잠재력 을 #b1 얻습니다."
+      "전투 시작 시 #yslimeboundmod:진흙탕_슬라임 으로 #yslimeboundmod:분열하고 #yslimeboundmod:잠재력을 #b1 얻습니다."
     ]
   },
   "Slimebound:DailySplitRelic": {
@@ -42,36 +42,36 @@
     "DESCRIPTIONS": [
       "전투 시작 시 #y날붙이 #y수액을 소환합니다. NL 휴식 장소에서 카드를 주면 등급에 따라 피해량이 증가하거나 감소합니다. NL 등급별 피해량 증감 : #y희귀 #b+2 NL #g특별 #b+1 NL 일반 #b-1 NL #r저주 #b-2 .",
       "카드를 제거하고 날붙이 수액의 피해량을 조정합니다.",
-      "날붙이 수액에게 줄게 없습니다.",
-      "Scrap"
+      "날붙이 수액에게 줄 게 없습니다.",
+      "날붙이"
     ]
   },
   "Slimebound:GreedOozeRelic": {
     "NAME": "욕심쟁이 수액",
-    "FLAVOR": "첨탑에서 골드를 모으던 친구입니다.",
+    "FLAVOR": "첨탑에서 영혼을 탐욕스레 모으던 친구입니다.",
     "DESCRIPTIONS": [
-      "전투 시작 시 #y욕심쟁이 #y수액을 소환합니다. NL 휴식 장소에서 #y욕심쟁이 #y수액 은 #b50 골드를 뺏어가는 대신 피해량이 #b1 증가합니다."
+      "전투 시작 시 #y욕심쟁이 #y수액을 소환합니다. NL 휴식 장소에서 #b50 영혼을 뺏어가는 대신 #y욕심쟁이 #y수액의 피해량이 #b1 증가합니다."
     ]
   },
   "Slimebound:PreparedRelic": {
     "NAME": "슬라임 수프",
     "FLAVOR": "믿기지 않겠지만, 맛이 끔찍하긴 해도 건강에 매우 좋습니다.",
     "DESCRIPTIONS": [
-      "휴식 장소를 거친 다음 전투에서 비용이 #b0 인 #y준비 카드를 얻습니다."
+      "휴식 장소를 거친 다음 전투에서 비용이 #b0 인 #y준비 #y동작 카드를 얻습니다."
     ]
   },
   "Slimebound:AggressiveSlimeRelic": {
     "NAME": "끈적이는 주민",
     "FLAVOR": "집까지 따라왔으니까 데리고 다녀도 되겠지?",
     "DESCRIPTIONS": [
-      "전투 시작 시 #yslimeboundmod:싸움꾼_슬라임 으로 #yslimeboundmod:분열 합니다."
+      "전투 시작 시 #yslimeboundmod:싸움꾼_슬라임 으로 #yslimeboundmod:분열합니다."
     ]
   },
   "Slimebound:SlimedSkullRelic": {
     "NAME": "점액 투성이 해골",
     "FLAVOR": "상태가 매우 안 좋은 스네코 해골입니다. 더럽고 끈적거리는 땟국물투성이입니다.",
     "DESCRIPTIONS": [
-      "#yslimeboundmod:점액 을 부여할 때마다 #yslimeboundmod:점액 을 #b",
+      "#yslimeboundmod:점액을 부여할 때마다 #yslimeboundmod:점액을 #b",
       " 추가로 부여합니다."
     ]
   },
@@ -79,7 +79,7 @@
     "NAME": "예레미아의 현수막",
     "FLAVOR": "당신과 끈끈이 군단의 상징입니다.",
     "DESCRIPTIONS": [
-      "전투 시작 시 #yslimeboundmod:거머리_슬라임 으로 #yslimeboundmod:분열 하고 슬라임 슬롯을 #b하나 얻습니다."
+      "전투 시작 시 #yslimeboundmod:거머리_슬라임 으로 #yslimeboundmod:분열하고 슬라임 슬롯을 #b하나 얻습니다."
     ]
   },
   "Slimebound:SelfDamagePreventRelic": {
@@ -100,7 +100,7 @@
     "NAME": "젤라틴 큐브",
     "FLAVOR": "이봐요, 당신 몸에 딱 달라붙었다구요.",
     "DESCRIPTIONS": [
-      "#y상태이상 카드를 뽑으면 카드를 #b1 장 뽑습니다."
+      "#y상태이상 카드를 뽑을 때마다 카드를 #b1 장 뽑습니다."
     ]
   }
 }

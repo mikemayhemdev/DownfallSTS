@@ -180,7 +180,6 @@ public class CharBossSilent extends AbstractCharBoss {
                 break;
         }
 
-        downfallMod.saveBossFight(CharBossSilent.ID);
 
             for (AbstractMonster m:AbstractDungeon.getCurrRoom().monsters.monsters){
                 if (m instanceof MirrorImageSilent){

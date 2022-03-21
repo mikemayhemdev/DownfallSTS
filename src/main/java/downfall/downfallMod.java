@@ -31,6 +31,7 @@ import champ.ChampChar;
 import champ.ChampMod;
 import champ.cards.ModFinisher;
 import champ.powers.LastStandModPower;
+import champ.relics.ChampStancesModRelic;
 import champ.relics.ChampionCrown;
 import champ.util.TechniqueMod;
 import charbosses.actions.util.CharBossMonsterGroup;
@@ -165,6 +166,8 @@ public class downfallMod implements
         PostDeathSubscriber {
     public static final String modID = "downfall";
 
+    public static final boolean STEAM_MODE = true;
+
 
     public static boolean choosingBossRelic = false;
     public static boolean choosingRemoveCard = false;
@@ -204,9 +207,9 @@ public class downfallMod implements
     public static final String PROP_CHAMP_PRO = "champDisableStanceHelper";
     public static final String PROP_NO_MUSIC = "disableMusicOverride";
 
-    public static String Act1BossFaced = downfallMod.makeID("Ironclad");
-    public static String Act2BossFaced = downfallMod.makeID("Silent");
-    public static String Act3BossFaced = downfallMod.makeID("Defect");
+    public static String Act1BossFaced = "";
+    public static String Act2BossFaced = "";
+    public static String Act3BossFaced = "";
 
     public static boolean[] unseenTutorials = new boolean[]{
             true, // Hermit
@@ -1274,7 +1277,7 @@ public class downfallMod implements
         BaseMod.addMonster(CharBossWatcher.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
         BaseMod.addMonster(CharBossHermit.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossHermit()}));
 
-        BaseMod.addMonster(NeowBoss.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBoss()}));
+        BaseMod.addMonster(NeowBoss.ID, () -> new MonsterGroup(new AbstractMonster[]{new NeowBoss()}));
         BaseMod.addMonster(NeowBossFinal.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBossFinal()}));
 
     }
@@ -1470,9 +1473,7 @@ public class downfallMod implements
         }
 
         if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ChampStances.ID) || ModHelper.isModEnabled(ChampStances.ID)) {
-            if (!(AbstractDungeon.player instanceof ChampChar)) {
-                RelicLibrary.getRelic(ChampionCrown.ID).makeCopy().instantObtain();
-            }
+            RelicLibrary.getRelic(ChampStancesModRelic.ID).makeCopy().instantObtain();
 
             for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
                 if (!c.hasTag(ChampMod.TECHNIQUE))

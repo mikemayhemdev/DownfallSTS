@@ -579,7 +579,7 @@
   },
   "bronze:UnknownStatus": {
     "NAME": "Perplex",
-    "DESCRIPTION": "Deal !B! Block."
+    "DESCRIPTION": "Gain !B! Block."
   },
   "bronze:TinkerersToolbox": {
     "NAME": "Dev Tools",

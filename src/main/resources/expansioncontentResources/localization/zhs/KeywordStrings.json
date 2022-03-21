@@ -4,34 +4,34 @@
     "NAMES": [
       "首领"
     ],
-    "DESCRIPTION": "一回合只能打出 #b1 张 #y首领 牌。"
+    "DESCRIPTION": "每回合只能打出 #b1 张 #y首领 牌。"
   },
   {
     "PROPER_NAME": "坚不可摧",
     "NAMES": [
       "坚不可摧"
     ],
-    "DESCRIPTION": "你将不会失去超过坚不可摧层数的生命。当回合结束时如果坚不可摧层数减少，移除坚不可摧。"
+    "DESCRIPTION": "你最多失去坚不可摧层数的生命。受到一回合的伤害后移除坚不可摧。如果已有本效果时再获得它，额外生效一回合。"
   },
   {
     "PROPER_NAME": "发掘",
     "NAMES": [
       "发掘"
     ],
-    "DESCRIPTION": "将一张消耗堆的牌放入手牌。"
+    "DESCRIPTION": "将一张 #y消耗 堆的牌放入手牌。"
   },
   {
     "PROPER_NAME": "取回",
     "NAMES": [
       "取回"
     ],
-    "DESCRIPTION": "将一张消耗堆的牌放入你的弃牌堆。"
+    "DESCRIPTION": "将一张 #y消耗 堆的牌放入弃牌堆。"
   },
   {
     "PROPER_NAME": "镣铐",
     "NAMES": [
       "镣铐"
     ],
-    "DESCRIPTION": "带有 #y镣铐 的生物本回合失去 #y力量 。"
+    "DESCRIPTION": "带有 #y镣铐 的单位本回合失去 #y力量 。"
   }
 ]

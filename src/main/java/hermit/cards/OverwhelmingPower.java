@@ -72,8 +72,8 @@ public class OverwhelmingPower extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeMagicNumber(-2);
             initializeDescription();
-            upgradeMagicNumber(-1);
         }
     }
 

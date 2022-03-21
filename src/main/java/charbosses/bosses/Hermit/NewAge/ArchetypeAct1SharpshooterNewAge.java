@@ -20,7 +20,7 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
     public ArchetypeAct1SharpshooterNewAge() {
         super("HERMIT_SHARPSHOOTER_ARCHETYPE", "Dead On");
 
-        maxHPModifier += 88;
+        maxHPModifier += 95;
         actNum = 1;
     }
 

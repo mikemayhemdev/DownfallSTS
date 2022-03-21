@@ -107,11 +107,11 @@
     ]
   },
   "hexamod:GiftsFromTheDeadPower": {
-    "NAME": "馈赠抽牌",
+    "NAME": "深处馈赠",
     "DESCRIPTIONS": [
       "你的回合开始时， #y取回 随机 #b",
       " 张 #y阴世",
-	  " 牌。",
+      " 牌。",
       " 牌。"
     ]
   },
@@ -174,8 +174,8 @@
   "hexamod:RadiantPower": {
     "NAME": "火焰辐射",
     "DESCRIPTIONS": [
-      "每当你 #y点燃 一个鬼火时，给予随机一名敌人 #b",
-      " 层 #y灼魂 。"
+      "#y点燃 一个鬼火时，获得 #b",
+      " 点 #y格挡 。"
     ]
   },
   "hexamod:SealPostCombatPower": {
@@ -189,13 +189,13 @@
   "hexamod:TimeStopPower": {
     "NAME": "末日来临",
     "DESCRIPTIONS": [
-      "你的回合结束时，立刻开始额外的一回合。 NL 保留格挡和能量。"
+      "你的回合结束时，立刻开始额外的一回合。 NL 保留 #y格挡和 #y能量 。"
     ]
   },
   "hexamod:VolcanoVisagePower": {
     "NAME": "火山容貌",
     "DESCRIPTIONS": [
-      "你的回合开始时，给予所有敌人 #b",
+      "#y点燃 一个鬼火时，给予所有敌人 #b",
       " 层 #y灼魂 。"
     ]
   },

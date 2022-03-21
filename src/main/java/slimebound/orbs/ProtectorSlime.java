@@ -19,9 +19,9 @@ public class ProtectorSlime
 
     public ProtectorSlime() {
 
-        super(ID, new Color(1.0F, 217F / 255F, 70F / 255F, 100F), atlasString, skeletonString, true, false, 2, 0, true, new Color(.63F, .58F, .41F, 1), SlimeFlareEffect.OrbFlareColor.BRONZE, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDefend.png"));
+        super(ID, new Color(1.0F, 217F / 255F, 70F / 255F, 100F), atlasString, skeletonString, true, false, 4, 4, true, new Color(.63F, .58F, .41F, 1), SlimeFlareEffect.OrbFlareColor.BRONZE, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDefend.png"));
         this.extraFontColor = Color.ROYAL;
-        this.debuffAmount = 6;
+        this.debuffAmount = 4;
         spawnVFX();
 
     }
@@ -34,7 +34,7 @@ public class ProtectorSlime
 
     public void activateEffectUnique() {
 
-        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.SLASH_VERTICAL, this, false, false, false, 0, false, this.debuffAmount, false));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.SLASH_VERTICAL, this, false, false, false, debuffAmount, false, this.debuffAmount, false, false, false, false, false, true));
 
     }
 

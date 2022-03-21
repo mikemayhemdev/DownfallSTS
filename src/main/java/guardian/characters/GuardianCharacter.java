@@ -284,7 +284,7 @@ public class GuardianCharacter extends CustomPlayer {
 
     public AbstractCard getStartCardForEvent() {
         //TODO - Note card goes here
-        return new Gem_Red();
+        return new TwinSlam();
     }
 
     public Color getCardTrailColor() {

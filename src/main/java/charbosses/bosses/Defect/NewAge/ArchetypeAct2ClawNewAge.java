@@ -34,7 +34,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
     public ArchetypeAct2ClawNewAge() {
         super("DF_ARCHETYPE_CLAW", "Claw");
 
-        maxHPModifier += 110;
+        maxHPModifier += 192;
         actNum = 2;
     }
 

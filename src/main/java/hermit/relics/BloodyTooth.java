@@ -37,7 +37,7 @@ public class BloodyTooth extends CustomRelic {
     }
 
     public void onVictory(){
-        if ((AbstractDungeon.getCurrRoom()).eliteTrigger)
+        if ((AbstractDungeon.getCurrRoom()).eliteTrigger && !AbstractDungeon.getCurrRoom().mugged)
         {
             this.flash();
             this.counter++;

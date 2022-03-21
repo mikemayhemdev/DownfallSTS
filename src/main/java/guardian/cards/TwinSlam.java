@@ -27,7 +27,7 @@ public class TwinSlam extends AbstractGuardianCard {
     private static final int DAMAGE = 5;
 
     //TUNING CONSTANTS
-    private static final int UPGRADE_BONUS = 1;
+    private static final int UPGRADE_BONUS = 2;
     private static final int SOCKETS = 1;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
@@ -52,6 +52,8 @@ public class TwinSlam extends AbstractGuardianCard {
         updateDescription();
         loadGemMisc();
         cardsToPreview = new SecondStrikePreviewCard();
+        ((AbstractGuardianCard)cardsToPreview).socketCount = 0;
+        ((AbstractGuardianCard)cardsToPreview).updateDescription();
 
         //this.sockets.add(GuardianMod.socketTypes.RED);
     }
@@ -86,6 +88,7 @@ public class TwinSlam extends AbstractGuardianCard {
             q.upgrade();
             cardsToPreview = q;
 
+            this.rawDescription = UPGRADED_DESCRIPTION;
             this.updateDescription();
         }
     }

@@ -24,11 +24,11 @@
   },
   "Slimebound:Replication": {
     "NAME": "자기복제",
-    "DESCRIPTION": "손에 있는 카드를 1장 선택합니다. NL 복사하여 뽑을 더미 맨 위에 놓습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "손에 있는 카드를 1장 선택합니다. NL 카드를 복사하여 손에 가져옵니다. NL 소멸.",
+    "DESCRIPTION": "카드를 1장 선택합니다. NL 그 카드를 복사하여 뽑을 더미 맨 위에 놓습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "카드를 1장 선택합니다. NL 그 카드를 한 장 복사하여 얻습니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
-      " 복사할 카드를 선택해야 돼.",
-      " 뽑을 더미 맨 위에 복사한 카드를 넣어야지."
+      " 복사할 카드를 선택하십시오.",
+      " 복사하여 뽑을 더미 맨 위에 놓을 카드를 선택하십시오."
     ]
   },
   "Slimebound:Overexert": {
@@ -44,12 +44,12 @@
   "Slimebound:LeadByExample": {
     "NAME": "시범을 보여주지",
     "DESCRIPTION": "매 턴 처음으로 카드를 사용한 대상에게 slimeboundmod:명령합니다.",
-    "UPGRADE_DESCRIPTION": "매 턴 !M! 번까지 대상에게 사용한 카드만큼 slimeboundmod:명령합니다."
+    "UPGRADE_DESCRIPTION": "매 턴 !M! 번까지 카드를 사용한 대상에게 slimeboundmod:명령합니다."
   },
   "Slimebound:SlimeTap": {
     "NAME": "슬라임 회수",
     "DESCRIPTION": "슬라임을 1번 slimeboundmod:흡수한 후, [E] [E] 를 얻고 카드를 !M! 장 뽑습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "슬라임을 2번 slimeboundmod:흡수한 후, [E] [E] 를 얻고 slimeboundmod:흡수된 슬라임마다 카드를 2장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "슬라임을 2번 slimeboundmod:흡수한 후, [E] [E] 를 얻고 slimeboundmod:흡수된 슬라임당 카드를 2장 뽑습니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
       "부하들이... 필요해..."
     ]
@@ -66,7 +66,7 @@
   },
   "Slimebound:SlimeBrawl": {
     "NAME": "슬라임 난투",
-    "DESCRIPTION": "슬라임 부하 수만큼 뽑을 더미 맨 위의 카드를 반복 사용합니다. NL 소멸."
+    "DESCRIPTION": "슬라임 수만큼 뽑을 더미 맨 위의 카드를 반복해서 사용합니다. NL 소멸."
   },
   "Slimebound:SpikyOuterGoop": {
     "NAME": "끈적이 갑옷",
@@ -79,26 +79,26 @@
   },
   "Slimebound:OozeBath": {
     "NAME": "점액 목욕",
-    "DESCRIPTION": "적 턴 시작 시 slimeboundmod:점액을 !M! 씩 부여합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "적의 slimeboundmod:점액을 세배로 늘립니다. NL 소멸."
+    "DESCRIPTION": "적 턴 시작 시 slimeboundmod:점액을 !M! 부여합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "적의 slimeboundmod:점액을 3배로 늘립니다. NL 소멸."
   },
   "Slimebound:SlimeSpikes": {
     "NAME": "슬라임 가시",
-    "DESCRIPTION": "방어도를 !B! 얻고 가시를 !M! 얻습니다. 다음 턴에 가시를 !M! 잃습니다."
+    "DESCRIPTION": "방어도를 !B! 얻고 가시를 !M! 얻습니다. 적 턴이 끝날 때 가시를 !M! 잃습니다."
   },
   "Slimebound:LeechingTouch": {
-    "NAME": "흡수의 손길",
+    "NAME": "흡수의 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL slimeboundmod:소비했을 때 적의 slimeboundmod:점액만큼 방어도를 얻습니다."
   },
   "Slimebound:Dissolve": {
     "NAME": "용해",
-    "DESCRIPTION": "카드를 1장 뽑은 후 손에 있는 카드를 1장 소멸 시킵니다. 소멸 시킨 카드의 비용만큼 *핥기 카드를 추가합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "카드를 1장 뽑은 후 손에 있는 카드를 1장 소멸 시킵니다. 소멸 시킨 카드의 비용 + 1만큼 *핥기 카드를 추가합니다. NL 소멸."
+    "DESCRIPTION": "카드를 1장 뽑고 카드를 1장 소멸시킵니다. 소멸시킨 카드의 비용만큼 *핥기 카드를 추가합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "카드를 1장 뽑고 카드를 1장 소멸시킵니다. 소멸시킨 카드의 비용 + 1만큼 *핥기 카드를 추가합니다. NL 소멸."
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "복제의 형상",
-	"DESCRIPTION": "이번 전투에서 체력을 !M! 잃고 최대 체력을 !M! 잃습니다. NL 매 턴 처음으로 적에게 사용한 카드가 2번 사용됩니다.",
-    "UPGRADE_DESCRIPTION": "이번 전투에서 체력을 !M! 잃고 최대 체력을 !M! 잃습니다. NL 매 턴 [E] 를 획득합니다. NL 매 턴 처음으로 적에게 사용한 카드가 2번 사용됩니다.",
+	"DESCRIPTION": "이번 전투 동안 체력을 !M! 잃고 최대 체력을 !M! 잃습니다. NL 매 턴 처음으로 적에게 사용한 카드가 2번 사용됩니다.",
+    "UPGRADE_DESCRIPTION": "이번 전투 동안 체력을 !M! 잃고 최대 체력을 !M! 잃습니다. NL 매 턴 [E] 를 획득합니다. NL 매 턴 처음으로 적에게 사용한 카드가 2번 사용됩니다.",
     "EXTENDED_DESCRIPTION": [
       "체력이... 필요해..."
     ]
@@ -140,12 +140,12 @@
   "Slimebound:MassRepurpose": {
     "NAME": "대량 재설계",
     "DESCRIPTION": "모든 슬라임을 slimeboundmod:흡수합니다. NL slimeboundmod:흡수한 슬라임 하나당 무작위 slimeboundmod:전문가 슬라임으로 slimeboundmod:분열합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "모든 슬라임을 slimeboundmod:흡수합니다. NL slimeboundmod:흡수한 슬라임 하나당 무작위 slimeboundmod:전문가 슬라임으로 slimeboundmod:분열하고, 모든 슬라임에게 slimeboundmod:명령합니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "모든 슬라임을 slimeboundmod:흡수합니다. NL slimeboundmod:흡수한 슬라임 하나당 무작위 slimeboundmod:전문가 슬라임으로 slimeboundmod:분열하고 모든 슬라임에게 slimeboundmod:명령합니다. NL 소멸."
   },
   "Slimebound:Lick": {
     "NAME": "핥기",
     "DESCRIPTION": "slimeboundmod:점액을 !SlimeboundSlimed! 부여합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:점액을 !SlimeboundSlimed! 부여합니다. NL 카드를 1장 뽑습니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "약화를 !M! 부여하고 slimeboundmod:점액을 !SlimeboundSlimed! 부여합니다. NL 카드를 1장 뽑습니다. NL 소멸."
   },
   "Slimebound:HauntingLick": {
     "NAME": "홀리는 핥기",
@@ -174,7 +174,7 @@
   },
   "Slimebound:TongueLash": {
     "NAME": "혓바닥 채찍",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 소멸 된 카드 중에 이름에 \"핥기\" 가 붙은 카드 하나당 피해량이 !M! 증가합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 소멸된 카드 중에 이름에 \"핥기\" 가 붙은 카드 하나당 피해량이 !M! 증가합니다."
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "맜있겠군",
@@ -197,7 +197,7 @@
     ]
   },
   "Slimebound:Prepare": {
-    "NAME": "준비",
+    "NAME": "준비 동작",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에 [E] [E] 를 얻고 카드를 !M! 장 뽑습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "다음 턴에 [E] [E] 를 얻고 카드를 !M! 장 뽑습니다. NL 카드를 !M! 장 보존 합니다. 소멸"
   },
@@ -237,8 +237,8 @@
   },
   "Slimebound:Chomp": {
     "NAME": "우걱우걱",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴 동안 손에 있는 무작위 slimeboundmod:태클 카드의 비용을 0으로 줄입니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 이번 전투 동안 손에 있는 무작위 slimeboundmod:태클 카드의 비용을 0으로 줄입니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴 동안 손에 있는 무작위 slimeboundmod:태클 카드의 비용을 0으로 낮춥니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 이번 전투 동안 손에 있는 무작위 slimeboundmod:태클 카드의 비용을 0으로 낮춥니다."
   },
   "Slimebound:DouseInSlime": {
     "NAME": "점액 적시기",
@@ -285,8 +285,8 @@
   },
   "Slimebound:PrepareCrush": {
     "NAME": "준비: 으깨기",
-    "DESCRIPTION": "다음 턴에 [E] [E] [E] 과 힘을 !SlimeboundSlimed! 얻고 *슬라임 *으깬다!!! 를 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "다음 턴에 [E] [E] [E] 과 힘을 !SlimeboundSlimed! 얻고 *슬라임 *으깬다!!!+ 를 얻습니다. NL 소멸."
+    "DESCRIPTION": "다음 턴에 [E] [E] [E] 과 힘을 !SlimeboundSlimed! 얻고 *슬라임 *으깬다를 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "다음 턴에 [E] [E] [E] 과 힘을 !SlimeboundSlimed! 얻고 *슬라임 *으깬다+를 얻습니다. NL 소멸."
   },
   "Slimebound:SlimeCrush": {
     "NAME": "슬라임 으깬다!!!",
@@ -295,31 +295,31 @@
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "분할 & 정복",
-    "DESCRIPTION": "무작위 적에게 슬라임들이 피해를 !D! 줍니다. NL 모든 슬라임을 slimeboundmod:흡수합니다. NL 소멸."
+    "DESCRIPTION": "슬라임당 무작위 적에게 피해를 !D! 줍니다. NL 모든 슬라임을 slimeboundmod:흡수합니다. NL 소멸."
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "넣기 & 보호",
-    "DESCRIPTION": "슬라임마다 방어도 !B! 과 bronze:흐릿함 을 1 얻습니다. NL 모든 슬라임을 slimeboundmod:흡수합니다. NL 소멸."
+    "DESCRIPTION": "슬라임당 방어도를 !B! 얻고 bronze:흐릿함을 1 얻습니다. NL 모든 슬라임을 slimeboundmod:흡수합니다. NL 소멸."
   },
   "Slimebound:SplitBruiser": {
     "NAME": "분열: 싸움꾼",
-    "DESCRIPTION": "slimeboundmod:싸움꾼_슬라임 으로 slimeboundmod:분열합니다. NL slimeboundmod:명령을 !M! 번 내립니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:싸움꾼_슬라임 으로 slimeboundmod:분열합니다. NL slimeboundmod:명령을 3번 내립니다. NL 소멸."
+    "DESCRIPTION": "slimeboundmod:싸움꾼_슬라임으로 slimeboundmod:분열합니다. NL slimeboundmod:명령을 !M! 번 내립니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:싸움꾼_슬라임으로 slimeboundmod:분열합니다. NL slimeboundmod:명령을 3번 내립니다. NL 소멸."
   },
   "Slimebound:SplitLeeching": {
     "NAME": "분열: 거머리",
-    "DESCRIPTION": "slimeboundmod:거머리_슬라임 으로 slimeboundmod:분열합니다. NL slimeboundmod:명령을 !M! 번 내립니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:거머리_슬라임 으로 slimeboundmod:분열합니다. NL slimeboundmod:명령을 3번 내립니다. NL 소멸."
+    "DESCRIPTION": "slimeboundmod:거머리_슬라임으로 slimeboundmod:분열합니다. NL slimeboundmod:명령을 !M! 번 내립니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:거머리_슬라임으로 slimeboundmod:분열합니다. NL slimeboundmod:명령을 3번 내립니다. NL 소멸."
   },
   "Slimebound:SplitAcid": {
     "NAME": "분열: 특공대",
-    "DESCRIPTION": "slimeboundmod:특공대_슬라임 으로 slimeboundmod:분열합니다. NL slimeboundmod:명령을 !M! 번 내립니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:특공대_슬라임 으로 slimeboundmod:분열합니다. NL slimeboundmod:명령을 3번 내립니다. NL 소멸."
+    "DESCRIPTION": "slimeboundmod:특공대_슬라임으로 slimeboundmod:분열합니다. NL slimeboundmod:명령을 !M! 번 내립니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:특공대_슬라임으로 slimeboundmod:분열합니다. NL slimeboundmod:명령을 3번 내립니다. NL 소멸."
   },
   "Slimebound:SplitMire": {
     "NAME": "분열: 진흙탕",
-    "DESCRIPTION": "slimeboundmod:진흙탕_슬라임 으로 slimeboundmod:분열합니다. NL slimeboundmod:명령을 !M! 번 내립니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:진흙탕_슬라임 으로 slimeboundmod:분열합니다. NL slimeboundmod:명령을 3번 내립니다. NL 소멸."
+    "DESCRIPTION": "slimeboundmod:진흙탕_슬라임으로 slimeboundmod:분열합니다. NL slimeboundmod:명령을 !M! 번 내립니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:진흙탕_슬라임으로 slimeboundmod:분열합니다. NL slimeboundmod:명령을 3번 내립니다. NL 소멸."
   },
   "Slimebound:SplitSpecialist": {
     "NAME": "분열: 전문가",
@@ -337,7 +337,7 @@
   },
   "Slimebound:Darklings": {
     "NAME": "어두미 삼총사",
-    "DESCRIPTION": "slimeboundmod:어두미_슬라임 으로 !M! 번 slimeboundmod:분열합니다. NL 소멸."
+    "DESCRIPTION": "slimeboundmod:어두미_슬라임으로 !M! 번 slimeboundmod:분열합니다. NL 소멸."
   },
   "Slimebound:SlimeSlap": {
     "NAME": "슬라임 찰싹!",
@@ -365,7 +365,7 @@
   "Slimebound:Nibble": {
     "NAME": "시식",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 무작위 비용이 0인 카드를 1장 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 무작위 강화된 비용 0인 카드를 1장 얻습니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 무작위 강화된 비용이 0인 카드를 1장 얻습니다. NL 소멸."
   },
   "Slimebound:Schlurp": {
     "NAME": "핥짝",

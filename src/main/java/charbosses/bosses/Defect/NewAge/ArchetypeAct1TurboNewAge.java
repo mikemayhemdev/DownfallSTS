@@ -24,7 +24,7 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
 
     public ArchetypeAct1TurboNewAge() {
         super("DF_ARCHETYPE_STREAMLINE", "Streamline");
-        maxHPModifier += 110;
+        maxHPModifier += 102;
         actNum = 1;
         SlimeboundMod.logger.info("Archetype act num: " + actNum);
     }

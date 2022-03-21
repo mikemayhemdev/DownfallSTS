@@ -26,7 +26,7 @@ public class SecondStrikePreviewCard extends AbstractGuardianCard {
     private static final int DAMAGE = 5;
 
     //TUNING CONSTANTS
-    private static final int UPGRADE_BONUS = 1;
+    private static final int UPGRADE_BONUS = 2;
     private static final int SOCKETS = 1;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
@@ -79,14 +79,6 @@ public class SecondStrikePreviewCard extends AbstractGuardianCard {
     }
 
     public void updateDescription() {
-
-        if (this.socketCount > 0) {
-            if (upgraded && UPGRADED_DESCRIPTION != null) {
-                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
-            } else {
-                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
-            }
-        }
         this.initializeDescription();
     }
 }

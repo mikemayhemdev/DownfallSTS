@@ -180,7 +180,7 @@
   "downfall:IroncladMushroomPower": {
     "NAME": "Feeding Frenzy",
     "DESCRIPTIONS": [
-      "Ironclad's #yReaper does not *Exhaust and targets ALL Mushrooms. NL When Ironclad kills a Mushroom, he gains #b1 #yStrength."
+      "Ironclad's #yReaper does not #yExhaust and targets ALL Mushrooms. NL When Ironclad kills a Mushroom, he gains #b1 #yStrength."
     ]
   },
   "downfall:NeowFeedingFrenzy": {
@@ -241,35 +241,35 @@
     ]
   },
   "downfall:OnDeathEveryoneStr": {
-    "NAME": "Dying Rage",
+    "NAME": "Last Gasp: Inflame+",
     "DESCRIPTIONS": [
       "When this character dies, ALL characters (including you) gain #b",
       " #yStrength."
     ]
   },
   "downfall:OnDeathEveryoneThorns": {
-    "NAME": "Thorny Personality",
+    "NAME": "Last Gasp: Caltrops+",
     "DESCRIPTIONS": [
       "When this character dies, ALL characters (including you) gain #b",
       " #yThorns."
     ]
   },
   "downfall:OnDeathEveryoneBuffer": {
-    "NAME": "pause()",
+    "NAME": "Last Gasp: Buffer+",
     "DESCRIPTIONS": [
       "When this character dies, ALL characters (including you) gain #b",
       " #yBuffer."
     ]
   },
   "downfall:OnDeathEveryoneVigor": {
-    "NAME": "Vigorous Strength",
+    "NAME": "Last Gasp: Wreath of Flame+",
     "DESCRIPTIONS": [
       "When this character dies, ALL characters (including you) gain #b",
       " #yVigor."
     ]
   },
   "downfall:OnDeathEveryoneRuggedVuln": {
-    "NAME": "Determination",
+    "NAME": "Last Gasp: Gestalt",
     "DESCRIPTIONS": [
       "When this character dies, ALL characters (including you) gain #b",
       " #yRugged and #b",
@@ -300,7 +300,8 @@
   "downfall:HermitWheelOfFortune": {
     "NAME": "Wheel of Fortune",
     "DESCRIPTIONS": [
-      "Whenever you strike Hermit with an Attack, its leftmost card is discarded and it draws a card."
+      "Whenever you strike Hermit with an Attack, its leftmost card is discarded and it draws a card. Every #b",
+      " times this happens, Hermit gains #b1 #yStrength."
     ]
   },
   "downfall:HermitDoomsday": {
@@ -316,11 +317,11 @@
     ]
   },
   "downfall:NeowWheelOfDeath": {
-    "NAME": "WheelOfDeath",
+    "NAME": "Wheel Of Death",
     "DESCRIPTIONS": [
       "Every #b",
-      "cards you play, Neow gains #b",
-      " #yStrength"
+      " cards you play, Neow gains #b",
+      " #yStrength."
     ]
   },
   "downfall:NeowDistracting": {

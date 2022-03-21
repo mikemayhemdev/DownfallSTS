@@ -28,7 +28,7 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
     public ArchetypeAct2MirrorImageNewAge() {
         super("SI_MIRROR_ARCHETYPE", "Mirror");
 
-        maxHPModifier += 220;
+        maxHPModifier += 240;
         actNum = 2;
     }
 

@@ -25,7 +25,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
     public ArchetypeAct3DivinityNewAge() {
         super("WA_ARCHETYPE_DIVINITY", "Divinity");
 
-        maxHPModifier += 398;
+        maxHPModifier += 348;
         actNum = 3;
     }
 

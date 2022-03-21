@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -42,17 +43,9 @@ public class RadiantPower extends AbstractPower implements CloneablePowerInterfa
     }
 
     @Override
-    public void onCharge(AbstractGhostflame g) {
+    public void onCharge(AbstractGhostflame gf) {
         flash();
-        if (!AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
-            AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
-            if (m!=null) {
-                if (!m.isDead && !m.isDying) {
-                    addToBot(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));// 173
-                    addToBot(new ApplyPowerAction(m, owner, new BurnPower(m, amount), amount));
-                }
-            }
-        }
+        this.addToBot(new GainBlockAction(this.owner, this.owner, this.amount));
     }
 
     @Override

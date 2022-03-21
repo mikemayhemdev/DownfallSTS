@@ -8,10 +8,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.*;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
+import hermit.actions.ReduceDebuffsAction;
 
 
 public class DecasProtection extends AbstractGuardianCard {
@@ -23,7 +23,7 @@ public class DecasProtection extends AbstractGuardianCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     //TUNING CONSTANTS
     public static String UPGRADED_DESCRIPTION;
@@ -40,19 +40,18 @@ public class DecasProtection extends AbstractGuardianCard {
     public DecasProtection() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
-        this.exhaust = true;
-
+        baseMagicNumber = magicNumber = 4;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, 1), 1));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArtifactPower(p, 1), 1));
-
-        AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.POWER).makeCopy();
-
-        if (upgraded) c.modifyCostForCombat(-1);
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction(c, true));
-
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseStrengthPower(p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseDexterityPower(p, magicNumber), magicNumber));
+        if (upgraded){
+            AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, 1));
+        }
 
     }
 
@@ -68,13 +67,6 @@ public class DecasProtection extends AbstractGuardianCard {
         }
     }
 
-    public void updateDescription() {
-
-        if (this.socketCount > 0) {
-            this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
-        }
-        this.initializeDescription();
-    }
 }
 
 

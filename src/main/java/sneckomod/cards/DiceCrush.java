@@ -27,7 +27,6 @@ public class DiceCrush extends AbstractSneckoCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new NoApplyRandomDamageAction(m, magicNumber, damage, 1, AbstractGameAction.AttackEffect.SMASH, this, DamageInfo.DamageType.NORMAL));
-        atb(new MuddleAction(this));
     }
 
     @Override

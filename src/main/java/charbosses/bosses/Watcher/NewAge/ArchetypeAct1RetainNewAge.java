@@ -25,7 +25,7 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseWatcher {
     public ArchetypeAct1RetainNewAge() {
         super("WA_ARCHETYPE_RETAIN", "Retain");
 
-        maxHPModifier += 88;
+        maxHPModifier += 98;
         actNum = 1;
     }
 

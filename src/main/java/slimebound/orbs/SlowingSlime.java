@@ -34,7 +34,7 @@ public class SlowingSlime
 
     public SlowingSlime() {
 
-        super(ID, new Color(1.0F, 100F / 255F, 100F / 255F, 100F), atlasString, skeletonString, false, true, 4, 0, true, new Color(.45F, .58F, .58F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDebuff.png"));
+        super(ID, new Color(1.0F, 100F / 255F, 100F / 255F, 100F), atlasString, skeletonString, false, true, 4, 1, true, new Color(.45F, .58F, .58F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDebuff.png"));
         this.debuffAmount = 1;
         this.extraFontColor = new Color(137F / 255F, 204F / 255F, 170F / 255F, 1F);
         spawnVFX();

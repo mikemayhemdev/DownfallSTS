@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import slimebound.SlimeboundMod;
+import slimebound.actions.ExhumeLickAction;
 import slimebound.patches.AbstractCardEnum;
 
 
@@ -41,9 +42,9 @@ public class DisruptingSlam extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = 5;
+        this.baseDamage = 6;
         this.isMultiDamage = true;
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber = 2;
 
 
     }
@@ -52,19 +53,7 @@ public class DisruptingSlam extends AbstractSlimeboundCard {
 
 
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-
-        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-
-
-                if ((!monster.isDead) && (!monster.isDying)) {
-                    if (monster.getIntentBaseDmg() > -1) {
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new WeakPower(monster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-
-                    }
-                }
-            }
-        }
+        AbstractDungeon.actionManager.addToBottom(new ExhumeLickAction(magicNumber, false));
 
     }
 
@@ -79,7 +68,7 @@ public class DisruptingSlam extends AbstractSlimeboundCard {
         if (!this.upgraded) {
 
             upgradeName();
-            upgradeDamage(3);
+            upgradeDamage(2);
             upgradeMagicNumber(1);
 
         }

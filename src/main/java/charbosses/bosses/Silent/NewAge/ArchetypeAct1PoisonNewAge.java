@@ -26,7 +26,7 @@ public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
     public ArchetypeAct1PoisonNewAge() {
         super("SI_SHIV_ARCHETYPE", "Shivs");
 
-        maxHPModifier += 60;
+        maxHPModifier += 100;
         actNum = 1;
     }
 

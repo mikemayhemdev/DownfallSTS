@@ -1,13 +1,16 @@
 package charbosses.bosses.Hermit.NewAge;
 
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
+import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnHandOfGreed;
 import charbosses.cards.curses.EnInjury;
 import charbosses.cards.curses.EnNecronomicurse;
 import charbosses.cards.hermit.*;
 import charbosses.powers.bossmechanicpowers.HermitWheelOfFortune;
+import charbosses.relics.CBR_Necronomicon;
 import charbosses.relics.CBR_NeowsBlessing;
 import charbosses.relics.CBR_PenNib;
 import charbosses.relics.CBR_PhilosopherStone;
@@ -25,12 +28,12 @@ import hermit.cards.Strike_Hermit;
 import java.util.ArrayList;
 
 public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
-    private ArrayList<AbstractCard> mockDeck = new ArrayList<>();
+    public ArrayList<AbstractCard> mockDeck = new ArrayList<>();
 
     public ArchetypeAct2WheelOfFateNewAge() {
         super("HERMIT_WHEEL_ARCHETYPE", "Wheel of Fortune");
 
-        maxHPModifier += 160;
+        maxHPModifier += 195;
         actNum = 1;
     }
 
@@ -68,7 +71,7 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         } else {
             mockDeck.add(new EnGestalt());
         }
-        mockDeck.add(new EnItchyTrigger());
+        mockDeck.add(new EnItchyTriggerAct2());
         mockDeck.add(new EnHandOfGreed());
         AbstractCard virt = new EnVirtue();
         virt.upgrade();
@@ -85,6 +88,7 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_PenNib());
         addRelic(new CBR_PhilosopherStone());
+        addRelic(new CBR_Necronomicon());
     }
 
     public void upgradeStrikeOrDefendManually(AbstractCard c) {
@@ -172,6 +176,13 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
                 AbstractCharBoss.boss.hand.refreshHandLayout();
             }
         });
+        if (mockDeck.isEmpty()) {
+            reshuffle();
+        }
+        if (AbstractCharBoss.boss instanceof CharBossHermit) {
+            CharBossHermit.previewCard = mockDeck.get(0).makeStatEquivalentCopy();
+            CharBossHermit.previewCard.superFlash();
+        }
     }
 
     @Override

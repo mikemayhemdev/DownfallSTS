@@ -63,7 +63,7 @@
   "hexamod:EnhancePower": {
     "NAME": "Intensity",
     "DESCRIPTIONS": [
-      "Increase the amount of damage, #ySoulburn, and Block applied by Ghostflames when Ignited by #b",
+      "Increase the amount of damage, #ySoulburn, and #yBlock applied by Ghostflames when Ignited by #b",
       "."
     ]
   },
@@ -110,7 +110,7 @@
     "NAME": "Gifted Cards",
     "DESCRIPTIONS": [
       "At the start of your turn, #yReclaim ",
-      " random Afterlife ",
+      " random #yAfterlife ",
       " card.",
       " cards."
     ]
@@ -174,8 +174,8 @@
   "hexamod:RadiantPower": {
     "NAME": "Radiant Flame",
     "DESCRIPTIONS": [
-      "Whenever a Ghostflame is #yIgnited, apply #b",
-      " #ySoulburn to a random enemy."
+      "Whenever you #yIgnite a Ghostflame, gain #b",
+      " #yBlock."
     ]
   },
   "hexamod:SealPostCombatPower": {
@@ -189,13 +189,13 @@
   "hexamod:TimeStopPower": {
     "NAME": "Doom's Arrival",
     "DESCRIPTIONS": [
-      "At the end of your turn, immediately start another turn. NL Energy and Block are maintained."
+      "At the end of your turn, immediately start another turn. NL #yEnergy and #yBlock are maintained."
     ]
   },
   "hexamod:VolcanoVisagePower": {
     "NAME": "Volcanic Visage",
     "DESCRIPTIONS": [
-      "At the start of your turn, apply #b",
+      "Whenever you #yIgnite a Ghostflame, apply #b",
       " #ySoulburn to all enemies."
     ]
   },

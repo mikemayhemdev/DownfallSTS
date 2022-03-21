@@ -11,6 +11,7 @@ import charbosses.actions.util.CharbossDoNextCardAction;
 import charbosses.actions.util.CharbossMakePlayAction;
 import charbosses.actions.util.CharbossTurnstartDrawAction;
 import charbosses.actions.util.DelayedActionAction;
+import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
@@ -241,6 +242,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
 
         chosenArchetype.addedPreBattle();
+
+        downfallMod.saveBossFight(id);
     }
 
     public void playMusic() {

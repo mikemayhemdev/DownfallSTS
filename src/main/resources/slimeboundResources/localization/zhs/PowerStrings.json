@@ -3,7 +3,8 @@
     "NAME": "潜力",
     "DESCRIPTIONS": [
       "你 #y分裂 的 #y史莱姆 造成的伤害增加 #b",
-      " 点。"
+      " 点，附加效果对应地被强化 #b",
+      " 。"
     ]
   },
   "Slimebound:SlimedPower": {
@@ -224,9 +225,9 @@
   "Slimebound:RecyclingPower": {
     "NAME": "回收",
     "DESCRIPTIONS": [
-      "在你的回合开始时，随机 #y发掘 #b",
-      " 张0耗能牌。",
-      " 张0耗能牌。"
+      "你的回合开始时，随机 #y发掘 #b",
+      " 张 *舔舔 系牌。",
+      " 张 *舔舔 系牌。"
     ]
   },
   "Slimebound:RecyclingPowerUpgraded": {

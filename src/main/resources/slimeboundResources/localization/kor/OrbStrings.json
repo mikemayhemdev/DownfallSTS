@@ -2,111 +2,111 @@
   "Slimebound:EmptySlimeSlot": {
     "NAME": "슬라임 슬롯",
     "DESCRIPTION": [
-      "#y분열 한 슬라임 부하들이 자리잡는 장소입니다."
+      "#y분열한 슬라임 부하들이 자리잡는 장소입니다."
     ]
   },
   "Slimebound:BronzeSlime": {
     "NAME": "청동 슬라임",
     "DESCRIPTION": [
-      "턴 시작 시 피해를 #b",
-      " 주고 #y방어도 를 #b",
-      " 얻습니다."
+      "내 턴 시작 시 적 전체에게 피해를 #b",
+      " 주고 공격 했다면 이 청동 슬라임의 다음 공격 턴을 넘깁니다.",
+      ""
     ]
   },
   "Slimebound:AttackSlime": {
     "NAME": "싸움꾼 슬라임",
     "DESCRIPTION": [
-      "턴 시작 시 피해를 #b",
+      "내 턴 시작 시 피해를 #b",
       " 줍니다."
     ]
   },
   "Slimebound:ScrapOozeSlime": {
     "NAME": "날붙이 수액",
     "DESCRIPTION": [
-      "턴 시작 시 피해를 #b",
-      " 줍니다. NL #흡수 되어도 되살아납니다."
+      "내 턴 시작 시 피해를 #b",
+      " 줍니다. NL #y흡수되어도 되살아납니다."
     ]
   },
   "Slimebound:GreedOozeSlime": {
     "NAME": "욕심쟁이 수액",
     "DESCRIPTION": [
-      "턴 시작 시 피해를 #b",
-      " 줍니다. NL 흡수 되어도 되살아납니다."
+      "내 턴 시작 시 피해를 #b",
+      " 줍니다. NL #y흡수되어도 되살아납니다."
     ]
   },
   "Slimebound:TorchHeadSlime": {
     "NAME": "불머리 슬라임",
     "DESCRIPTION": [
-      "턴 시작 시 피해를 #b",
-      " 줍니다. 내 증가된 #y힘 만큼 피해량이 증가합니다."
+      "내 턴 시작 시 피해를 #b",
+      " 줍니다. 내 증가된 #y힘만큼 피해량이 증가합니다."
     ]
   },
   "Slimebound:CultistSlime": {
     "NAME": "광신자 슬라임",
     "DESCRIPTION": [
-      "턴 시작 시 피해를 #b",
+      "내 턴 시작 시 피해를 #b",
       " 줍니다. 공격 후 피해량이 #b1 증가합니다."
     ]
   },
   "Slimebound:ShieldSlime": {
     "NAME": "거머리 슬라임",
     "DESCRIPTION": [
-      "턴 시작 시 피해를 #b",
-      " 주고 #y방어도 를 #b",
+      "내 턴 시작 시 피해를 #b",
+      " 주고 #y방어도를 #b",
       " 얻습니다."
     ]
   },
   "Slimebound:PoisonSlime": {
     "NAME": "특공대 슬라임",
     "DESCRIPTION": [
-      "턴 시작 시 적 전체에게 피해를 #b",
+      "내 턴 시작 시 적 전체에게 피해를 #b",
       " 줍니다."
     ]
   },
   "Slimebound:SlimingSlime": {
     "NAME": "진흙탕 슬라임",
     "DESCRIPTION": [
-      "턴 시작 시 피해를 #b",
-      " 주고 #y점액 을 #b",
+      "내 턴 시작 시 피해를 #b",
+      " 주고 #y점액을 #b",
       " 부여합니다."
     ]
   },
   "Slimebound:HexSlime": {
     "NAME": "유령불꽃 슬라임",
     "DESCRIPTION": [
-      "턴 시작 시 피해를 #b",
-      " 주고 #y영혼불꽃 을 #b",
+      "내 턴 시작 시 피해를 #b",
+      " 주고 #y영혼불꽃을 #b",
       " 부여합니다."
     ]
   },
   "Slimebound:ChampSlime": {
     "NAME": "욕쟁이 슬라임",
     "DESCRIPTION": [
-      "턴 시작 시 피해를 #b",
-      " 주고 #y취약 을 #b",
+      "내 턴 시작 시 피해를 #b",
+      " 주고 #y취약을 #b",
       " 부여합니다."
     ]
   },
   "Slimebound:SlowingSlime": {
     "NAME": "시간 슬라임",
     "DESCRIPTION": [
-      "턴 시작 시 피해를 #b",
-      " 주고 #y약화 를 #b",
+      "내 턴 시작 시 피해를 #b",
+      " 주고 #y약화를 #b",
       " 부여합니다."
     ]
   },
   "Slimebound:ProtectorSlime": {
     "NAME": "수호자 슬라임",
     "DESCRIPTION": [
-      "턴 시작 시 피해를 #b",
-      " 주고 #y방어도 를 #b",
-      " 얻습니다."
+      "내 턴 시작 시 피해를 #b",
+      " 주고 #y가시를 #b",
+      " 얻습니다. 턴 종료 시 이 효과로 얻은 #y가시를 잃습니다."
     ]
   },
   "Slimebound:DrawingSlime": {
     "NAME": "고대의 슬라임",
     "DESCRIPTION": [
-      "턴 시작 시 피해를 #b",
+      "내 턴 시작 시 피해를 #b",
       " 주고 카드를 #b",
       " 장 뽑아줍니다."
     ]
@@ -114,8 +114,8 @@
   "Slimebound:DarklingSlime": {
     "NAME": "어두미 슬라임",
     "DESCRIPTION": [
-      "턴 시작 시 피해를 #b",
-      " 줍니다. 명령 시, 모든 어두미 슬라임 또한 공격합니다."
+      "내 턴 시작 시 피해를 #b",
+      " 줍니다. 명령 시 모든 어두미 슬라임이 공격합니다."
     ]
   }
 }

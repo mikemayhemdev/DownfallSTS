@@ -63,7 +63,7 @@ public class WalkerClaw extends AbstractGuardianCard {
         super.use(p, m);
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new RipAndTearEffect(m.hb.cX, m.hb.cY, Color.GOLDENROD, Color.WHITE), 0.1F));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new RipAndTearEffect(m.hb.cX, m.hb.cY, Color.GOLDENROD, Color.WHITE), 0.4F));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new RipAndTearEffect(m.hb.cX, m.hb.cY, Color.GOLDENROD, Color.WHITE), 0.1F));
 
         for (int i = 0; i < magicNumber; i++) {
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));

@@ -105,7 +105,6 @@ public class CharBossDefect extends AbstractCharBoss {
     @Override
     public void die() {
         super.die();
-        downfallMod.saveBossFight(CharBossDefect.ID);
 
         if (hasPower(MinionPower.POWER_ID)) {
             for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {

@@ -1,18 +1,14 @@
 package guardian.cards;
 
-
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.ArtifactPower;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
-import guardian.stances.DefensiveMode;
+import hermit.actions.ReduceDebuffsAction;
 
 public class BronzeArmor extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("BronzeArmor");
@@ -26,7 +22,7 @@ public class BronzeArmor extends AbstractGuardianCard {
     private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int ARTIFACT = 1;
+    private static final int ARTIFACT = 2;
     private static final int UPGRADE_ARTIFACT = 1;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
@@ -54,8 +50,9 @@ public class BronzeArmor extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArtifactPower(p, this.magicNumber), this.magicNumber));
-        brace(10);
+
+        AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, magicNumber));
+        brace(8);
     }
 
     public AbstractCard makeCopy() {
@@ -65,7 +62,9 @@ public class BronzeArmor extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_ARTIFACT);
+            exhaust = false;
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            updateDescription();
         }
     }
 

@@ -80,8 +80,10 @@ public class CompilePackage extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             this.rawDescription = UPGRADED_DESCRIPTION;
-
             this.initializeDescription();
+            for(AbstractCard c:cardsList){
+                c.upgrade();
+            }    
         }
     }
 

@@ -129,6 +129,9 @@ public class SlimeboundMod implements OnCardUseSubscriber,
     public static AbstractCard.CardTags LICK;
 
     @SpireEnum
+    public static AbstractCard.CardTags BURIED;
+
+    @SpireEnum
     public static AbstractCard.CardTags TACKLE;
     public static Properties slimeboundDefault = new Properties();
     public static boolean contentSharing_relics = true;
@@ -330,7 +333,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
                 SplitSpecialist.ID,
                 TagTeam.ID,
-                Darklings.ID,
+                FeelOurPain.ID,
 
                 HungryTackle.ID,
                 Recollect.ID,

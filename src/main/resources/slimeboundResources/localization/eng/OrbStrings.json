@@ -9,8 +9,8 @@
     "NAME": "Bronze Slime",
     "DESCRIPTION": [
       "Deals #b",
-      " damage at the start of your turn and grants you #b",
-      " #yBlock."
+      " damage to ALL enemies at the start of your turn and skips its next attack.",
+      ""
     ]
   },
   "Slimebound:AttackSlime": {
@@ -96,11 +96,11 @@
     ]
   },
   "Slimebound:ProtectorSlime": {
-    "NAME": "Protector Slime",
+    "NAME": "Spiky Slime",
     "DESCRIPTION": [
       "Deals #b",
       " damage at the start of your turn and grants you #b",
-      " #yBlock."
+      " Temporary #yThorns."
     ]
   },
   "Slimebound:DrawingSlime": {

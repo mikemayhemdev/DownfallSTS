@@ -34,7 +34,7 @@ public class HexSlime
 
 
     public HexSlime() {
-        super(ID, new Color(.65F, .65F, 1.0F, 100F), atlasString, skeletonString, true, false, 3, 0, false, new Color(.36F, .55F, .85F, 1), SlimeFlareEffect.OrbFlareColor.HEX, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDebuff.png"));
+        super(ID, new Color(.65F, .65F, 1.0F, 100F), atlasString, skeletonString, true, false, 5, 3, false, new Color(.36F, .55F, .85F, 1), SlimeFlareEffect.OrbFlareColor.HEX, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDebuff.png"));
         this.x = (x * Settings.scale + (5F + MathUtils.random(-10.0F, 10.0F) * Settings.scale));
         this.y = (y * Settings.scale + (-30F + MathUtils.random(-10.0F, 10.0F) * Settings.scale));
         this.color = Color.CHARTREUSE.cpy();

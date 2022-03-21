@@ -28,7 +28,7 @@ public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
     public ArchetypeAct3BlockNewAge() {
         super("IC_BLOCK_ARCHETYPE", "Block");
 
-        maxHPModifier += 250;
+        maxHPModifier += 300;
         actNum = 3;
     }
 
