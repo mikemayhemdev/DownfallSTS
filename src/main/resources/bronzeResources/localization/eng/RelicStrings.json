@@ -52,7 +52,7 @@
     "NAME": "Cable Spool",
     "FLAVOR": "Tangled...",
     "DESCRIPTIONS": [
-      "Add a copy of the first card you play with #yEncode each combat to the Sequence."
+      "Add a copy of the first card you play with #yEncode each combat to the #ySequence."
     ]
   },
   "bronze:ElectromagneticCoil": {
@@ -98,7 +98,7 @@
     "NAME": "Paradox Artifact",
     "FLAVOR": "You've never seen a coding frenzy like this before.",
     "DESCRIPTIONS": [
-      "At the start of each turn, add a random card with Encode to your hand and give it Ethereal."
+      "At the start of each turn, add a random card with #yEncode to your hand and give it #yEthereal."
     ]
   }
 }

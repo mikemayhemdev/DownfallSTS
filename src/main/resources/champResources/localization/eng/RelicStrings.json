@@ -24,14 +24,14 @@
     "NAME": "Berserker's Guide",
     "FLAVOR": "The text is illegible.",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b3 Vigor."
+      "At the start of your turn, gain #b3 #yVigor."
     ]
   },
   "champ:ChampionCrownUpgraded": {
     "NAME": "Victorious Crown",
     "FLAVOR": "Conglaturation!! You are the greatest winner.",
     "DESCRIPTIONS": [
-      "Replaces #rChampion's #rCrown. NL Start each combat in #yUltimate #yStance, which lasts for #b2 turns."
+      "Replaces #rChampion's #rCrown. NL Start each combat in #ychamp:Ultimate #yStance, which lasts for #b2 turns."
     ]
   },
   "champ:DefensiveTrainingManual": {
@@ -45,14 +45,14 @@
     "NAME": "Deflecting Bracers",
     "FLAVOR": "If you thought blocking was good then...",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #yCounter equal to the amount of Block lost."
+      "At the start of your turn, gain #ychamp:Counter equal to the amount of #yBlock lost."
     ]
   },
   "champ:DuelingGlove": {
     "NAME": "Dueling Glove",
     "FLAVOR": "Count from ten...",
     "DESCRIPTIONS": [
-      "After using a single-target Attack, if the target has no #yVulnerable, apply #b1 #yVulnerable."
+      "After using a single-target #yAttack, if the target has no #yVulnerable, apply #b1 #yVulnerable."
     ]
   },
   "champ:FightingForDummies": {
@@ -73,7 +73,7 @@
     "NAME": "Power Armor",
     "FLAVOR": "Bought used.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. NL Your maximum #yVigor and #yCounter is #b20."
+      "Gain [E] at the start of your turn. NL Your maximum #yVigor and #ychamp:Counter is #b20."
     ]
   },
   "champ:SignatureFinisher": {

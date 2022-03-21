@@ -92,7 +92,7 @@
   },
   "Slimebound:Dissolve": {
     "NAME": "Dissolve",
-    "DESCRIPTION": "Draw !M! cards. NL Exhaust a card in your hand. Gain *Licks equal to its cost. NL Exhaust."
+    "DESCRIPTION": "Draw !M! cards. NL Exhaust a card. Gain *Licks equal to its cost. NL Exhaust."
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "Duplicated Form",

@@ -1,4 +1,3 @@
-/*
 package champ.relics;
 
 import basemod.abstracts.CustomRelic;
@@ -48,4 +47,4 @@ public class ChampStancesModRelic extends CustomRelic {
         return DESCRIPTIONS[0];
     }
 
-} */
+}

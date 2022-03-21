@@ -4,7 +4,7 @@
     "NAMES": [
       "active"
     ],
-    "DESCRIPTION": "The #yActive Ghostflame can be Ignited by meeting its listed Ignition requirements."
+    "DESCRIPTION": "The #yActive Ghostflame can be #yIgnited by meeting its listed Ignition requirements."
   },
   {
     "PROPER_NAME": "Advance",
@@ -29,7 +29,7 @@
     "NAMES": [
       "intensity"
     ],
-    "DESCRIPTION": "Intensity increases the amount of damage, Soulburn, and Block applied by Ghostflames when Ignited."
+    "DESCRIPTION": "Intensity increases the amount of damage, #ySoulburn, and #yBlock applied by Ghostflames when #yIgnited."
   },
   {
     "PROPER_NAME": "Soulburn",
@@ -45,7 +45,7 @@
       "extinguish",
       "extinguished"
     ],
-    "DESCRIPTION": "Allows Ghostflame to become Ignited again, resetting its Ignition requirements."
+    "DESCRIPTION": "Allows Ghostflame to become #yIgnited again, resetting its Ignition requirements."
   },
   {
     "PROPER_NAME": "Ignite",
@@ -68,7 +68,7 @@
     "NAMES": [
       "afterlife"
     ],
-    "DESCRIPTION": "If this card is Exhausted, its effects activate."
+    "DESCRIPTION": "If this card is #yExhausted, its effects activate."
   },
   {
     "PROPER_NAME": "Crushing",

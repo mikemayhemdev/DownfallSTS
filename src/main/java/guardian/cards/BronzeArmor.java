@@ -1,18 +1,13 @@
 package guardian.cards;
 
-
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.ArtifactPower;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
-import guardian.stances.DefensiveMode;
 import hermit.actions.ReduceDebuffsAction;
 
 public class BronzeArmor extends AbstractGuardianCard {
@@ -68,6 +63,7 @@ public class BronzeArmor extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             exhaust = false;
+            this.rawDescription = UPGRADED_DESCRIPTION;
             updateDescription();
         }
     }
