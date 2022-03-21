@@ -1358,7 +1358,7 @@ public class downfallMod implements
         }
     }
 
-    private void resetBossList() {
+    public static void resetBossList() {
         possEncounterList.clear();
         possEncounterList.add(CharBossIronclad.ID);
         possEncounterList.add(CharBossSilent.ID);

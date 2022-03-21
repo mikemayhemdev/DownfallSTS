@@ -48,10 +48,12 @@ public class SeeingDoubleProduct extends AbstractPower {
         return damageAmount;
     }
 
+    /*
     @Override
     public void atEndOfRound() {
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, this));
     }
+     */
 
     @Override
     public void updateParticles() {
