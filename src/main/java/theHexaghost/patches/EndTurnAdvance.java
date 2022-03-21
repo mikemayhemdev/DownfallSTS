@@ -26,14 +26,7 @@ public class EndTurnAdvance {
         if (HexaMod.renderFlames) {
             if (GhostflameHelper.activeGhostFlame instanceof MayhemGhostflame)
                 GhostflameHelper.activeGhostFlame.advanceTrigger(null);
-            if (AbstractDungeon.player.hasPower(AgainPower.POWER_ID)) {
-                AbstractPower p = AbstractDungeon.player.getPower(AgainPower.POWER_ID);
-                p.flash();
-                AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p.owner, p.owner, p, 1));
-            } else if (AbstractDungeon.player.hasPower(StopFromAdvancingPower.POWER_ID)) {
-                AbstractPower p = AbstractDungeon.player.getPower(StopFromAdvancingPower.POWER_ID);
-                p.flash();
-            } else if (GhostflameHelper.activeGhostFlame.charged) {
+            if (GhostflameHelper.activeGhostFlame.charged) {
                 if (GhostflameHelper.activeGhostFlame instanceof InfernoGhostflame) {
                     for (int j = GhostflameHelper.hexaGhostFlames.size() - 1; j >= 0; j--) {
                         AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(j);
@@ -43,11 +36,20 @@ public class EndTurnAdvance {
                         }
                     }
                 }
+                if (AbstractDungeon.player.hasPower(AgainPower.POWER_ID)) {
+                    AbstractPower p = AbstractDungeon.player.getPower(AgainPower.POWER_ID);
+                    p.flash();
+                    AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p.owner, p.owner, p, 1));
+                } else if (AbstractDungeon.player.hasPower(StopFromAdvancingPower.POWER_ID)) {
+                    AbstractPower p = AbstractDungeon.player.getPower(StopFromAdvancingPower.POWER_ID);
+                    p.flash();
 
-                AbstractDungeon.actionManager.addToBottom(new AdvanceAction(true));
+                } else if (GhostflameHelper.activeGhostFlame.charged) {
+                    AbstractDungeon.actionManager.addToBottom(new AdvanceAction(true));
 
+                }
             }
+            downfallMod.playedBossCardThisTurn = false;
         }
-        downfallMod.playedBossCardThisTurn = false;
     }
 }

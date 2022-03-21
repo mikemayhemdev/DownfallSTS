@@ -33,13 +33,9 @@ public class ChampionCrown extends CustomRelic  {
 
     @Override
     public void onChangeStance(AbstractStance prevStance, AbstractStance newStance) {
-        if (newStance.ID.equals(BerserkerStance.STANCE_ID) || newStance.ID.equals(UltimateStance.STANCE_ID)) {
+        if (!newStance.ID.equals(NeutralStance.STANCE_ID)) {
             flash();
             addToBot(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, 3, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        }
-        if (newStance.ID.equals(DefensiveStance.STANCE_ID) || newStance.ID.equals(UltimateStance.STANCE_ID)) {
-            flash();
-            addToBot(new GainBlockAction(AbstractDungeon.player, 3));
         }
     }
 
