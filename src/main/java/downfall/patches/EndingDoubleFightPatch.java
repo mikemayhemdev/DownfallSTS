@@ -1,4 +1,4 @@
-
+/*
 package downfall.patches;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.ui.buttons.ProceedButton;
 import downfall.monsters.NeowBossFinal;
+import downfall.patches.EvilModeCharacterSelect;
 
 @SpirePatch(
         clz = ProceedButton.class,
@@ -43,3 +44,4 @@ public class EndingDoubleFightPatch {
         __instance.hide();
     }
 }
+*/

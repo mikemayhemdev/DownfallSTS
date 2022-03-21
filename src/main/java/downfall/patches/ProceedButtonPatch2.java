@@ -2,13 +2,13 @@
 package downfall.patches;
 
 
+import charbosses.bosses.Merchant.CharBossMerchant;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.map.MapRoomNode;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
-import com.megacrit.cardcrawl.rooms.VictoryRoom;
 import com.megacrit.cardcrawl.ui.buttons.ProceedButton;
 import downfall.downfallMod;
 import slimebound.SlimeboundMod;
@@ -22,12 +22,9 @@ public class ProceedButtonPatch2 {
     public static SpireReturn Prefix(ProceedButton __instance) {
         if (EvilModeCharacterSelect.evilMode) {
             SlimeboundMod.logger.info("HIT THE DOUBLE BOSS PATCH!");
-            downfallMod.resetBossList();
-            downfallMod.possEncounterList.remove(downfallMod.Act1BossFaced);
-            downfallMod.possEncounterList.remove(downfallMod.Act2BossFaced);
-            downfallMod.possEncounterList.remove(downfallMod.Act3BossFaced);
-
-            AbstractDungeon.bossKey = downfallMod.possEncounterList.get(0);
+            AbstractDungeon.bossList.clear();
+            AbstractDungeon.bossList.add(CharBossMerchant.ID); // This and clear - just for safety.
+            AbstractDungeon.bossKey = CharBossMerchant.ID;
             CardCrawlGame.music.fadeOutBGM();
             CardCrawlGame.music.fadeOutTempBGM();
             MapRoomNode node = new MapRoomNode(-1, 15);
