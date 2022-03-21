@@ -32,6 +32,7 @@ public class PolyBeam extends AbstractExpansionCard {
         this.exhaust = true;
         //partner is null until this card is played in combat
         if (hasPreview) setPartner(partner);
+        expansionContentMod.loadJokeCardImage(this, "PolyBeam.png");
     }
 
     public PolyBeam(DecaShield partner) {

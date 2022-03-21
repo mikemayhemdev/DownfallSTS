@@ -1,7 +1,9 @@
 package theHexaghost.cards;
 
+import champ.ChampMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import theHexaghost.actions.SacrificeAction2;
 
 public class NecessarySacrifice extends AbstractHexaCard {
@@ -12,6 +14,7 @@ public class NecessarySacrifice extends AbstractHexaCard {
 
     public NecessarySacrifice() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        HexaMod.loadJokeCardImage(this, "NecessarySacrifice.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

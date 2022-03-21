@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.actions.AddToFuncAction;
 import automaton.cardmods.EncodeMod;
 import basemod.helpers.CardModifierManager;
@@ -12,6 +13,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.vfx.BronzeOrbEffect;
 
 import java.util.ArrayList;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class BronzeOrb extends AbstractBronzeCard {
 
@@ -31,6 +34,7 @@ public class BronzeOrb extends AbstractBronzeCard {
         baseBlock = BLOCK;
         exhaust = true;
         isInnate = true;
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("BronzeOrb.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

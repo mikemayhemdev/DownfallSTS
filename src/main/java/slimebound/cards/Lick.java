@@ -1,6 +1,7 @@
 package slimebound.cards;
 
 
+import champ.ChampMod;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -17,7 +18,9 @@ import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.SlimedPower;
 import slimebound.vfx.LickEffect;
 import slimebound.vfx.SlimeDripsEffect;
+import sneckomod.SneckoMod;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
 import static com.badlogic.gdx.graphics.Color.GREEN;
 
 
@@ -52,6 +55,7 @@ public class Lick extends AbstractSlimeboundCard {
         this.slimed = this.baseSlimed = 4;
         this.magicNumber = this.baseMagicNumber = 1;
         this.exhaust = true;
+        SlimeboundMod.loadJokeCardImage(this, "lick.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

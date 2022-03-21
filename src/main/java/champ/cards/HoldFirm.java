@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class HoldFirm extends AbstractChampCard {
 
     public final static String ID = makeID("HoldFirm");
@@ -21,6 +23,7 @@ public class HoldFirm extends AbstractChampCard {
         magicNumber = baseMagicNumber = 10;
        // tags.add(ChampMod.TECHNIQUE);
         postInit();
+        loadJokeCardImage(this, "HoldFirm.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

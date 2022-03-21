@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
@@ -10,6 +11,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class BurnOut extends AbstractBronzeCard {
 
@@ -24,6 +27,7 @@ public class BurnOut extends AbstractBronzeCard {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         cardsToPreview = new Burn();
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("BurnOut.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

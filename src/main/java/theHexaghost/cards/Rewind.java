@@ -9,6 +9,8 @@ import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.RetractAction;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 public class Rewind extends AbstractHexaCard {
 
     public final static String ID = makeID("Rewind");
@@ -19,6 +21,7 @@ public class Rewind extends AbstractHexaCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         tags.add(HexaMod.GHOSTWHEELCARD);
+        HexaMod.loadJokeCardImage(this, "Rewind.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -3,7 +3,10 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import theHexaghost.actions.BurningHitAction;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class Toasty extends AbstractHexaCard {
 
@@ -17,6 +20,7 @@ public class Toasty extends AbstractHexaCard {
     public Toasty() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        HexaMod.loadJokeCardImage(this, "Toasty.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

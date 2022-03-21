@@ -15,6 +15,7 @@ public class GhostOfSpireFuture extends AbstractHexaCard {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        HexaMod.loadJokeCardImage(this, "GhostOfSpireFuture.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
