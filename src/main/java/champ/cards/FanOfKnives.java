@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class FanOfKnives extends AbstractChampCard {
 
     public final static String ID = makeID("FanOfKnives");
@@ -27,6 +29,7 @@ public class FanOfKnives extends AbstractChampCard {
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
         postInit();
+        loadJokeCardImage(this, "FanOfKnives.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

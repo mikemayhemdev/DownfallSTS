@@ -18,6 +18,8 @@ import downfall.util.OctopusCard;
 
 import java.util.ArrayList;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class StanceDance extends AbstractChampCard implements OctopusCard {
 
     public final static String ID = makeID("StanceDance");
@@ -27,6 +29,7 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
     public StanceDance() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         tags.add(ChampMod.OPENER);
+        loadJokeCardImage(this, "StanceDance.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,8 +1,11 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.powers.FeaturePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class ItsAFeature extends AbstractBronzeCard {
 
@@ -12,6 +15,7 @@ public class ItsAFeature extends AbstractBronzeCard {
 
     public ItsAFeature() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("ItsAFeature.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

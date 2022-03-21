@@ -8,6 +8,9 @@ import expansioncontent.expansionContentMod;
 import expansioncontent.powers.AddSameInstancePower;
 import expansioncontent.powers.NextTurnExhumePower;
 
+import static expansioncontent.expansionContentMod.loadJokeCardImage;
+
+
 public class DecaShield extends AbstractExpansionCard {
     public final static String ID = makeID("DecaShield");
 
@@ -25,6 +28,7 @@ public class DecaShield extends AbstractExpansionCard {
         baseMagicNumber = magicNumber = BLOCK_INCREASE;
         this.exhaust = true;
         if (hasPreview) setPartner(partner);
+        loadJokeCardImage(this, "DecaShield.png");
     }
 
     public DecaShield(PolyBeam partner) {

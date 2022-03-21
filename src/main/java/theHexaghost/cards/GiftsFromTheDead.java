@@ -6,6 +6,8 @@ import theHexaghost.HexaMod;
 import theHexaghost.powers.GiftsFromTheDeadPower;
 import theHexaghost.powers.GiftsFromTheDeadPowerPlus;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 public class GiftsFromTheDead extends AbstractHexaCard {
 
     public final static String ID = makeID("GiftsFromTheDead");
@@ -15,6 +17,7 @@ public class GiftsFromTheDead extends AbstractHexaCard {
     public GiftsFromTheDead() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.magicNumber = baseMagicNumber = 1;
+        HexaMod.loadJokeCardImage(this, "GiftsFromTheDead.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

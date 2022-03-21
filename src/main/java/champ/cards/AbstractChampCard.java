@@ -16,6 +16,7 @@ import champ.util.OnFinisherSubscriber;
 import champ.util.OnOpenerSubscriber;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
@@ -23,7 +24,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -31,6 +34,8 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.stances.NeutralStance;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import hermit.util.TextureLoader;
 
 import java.security.Signature;
 import java.util.ArrayList;
@@ -42,6 +47,7 @@ import static champ.ChampMod.*;
 public abstract class AbstractChampCard extends CustomCard {
 
     protected final CardStrings cardStrings;
+    public String betaArtPath;
     protected final String NAME;
     public int cool;
     public int baseCool;
@@ -367,6 +373,28 @@ public abstract class AbstractChampCard extends CustomCard {
             }
         }
         return super.canUse(p, m);
+    }
+
+    @Override
+    protected Texture getPortraitImage() {
+        if (Settings.PLAYTESTER_ART_MODE || UnlockTracker.betaCardPref.getBoolean(this.cardID, false)) {
+            if (this.textureImg == null) {
+                return null;
+            } else {
+                if (betaArtPath != null) {
+                    int endingIndex = betaArtPath.lastIndexOf(".");
+                    String newPath = betaArtPath.substring(0, endingIndex) + "_p" + betaArtPath.substring(endingIndex);
+                    newPath = "champResources/images/betacards/" + newPath;
+                    System.out.println("Finding texture: " + newPath);
+
+                    Texture portraitTexture;
+                    portraitTexture = TextureLoader.getTexture(newPath);
+
+                    return portraitTexture;
+                }
+            }
+        }
+        return super.getPortraitImage();
     }
 
 }

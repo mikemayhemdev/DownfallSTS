@@ -10,6 +10,7 @@ import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Interpolation;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
@@ -24,6 +25,7 @@ import com.megacrit.cardcrawl.events.beyond.Falling;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.city.Ghosts;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.scenes.TheBottomScene;
@@ -31,10 +33,12 @@ import com.megacrit.cardcrawl.vfx.scene.InteractableTorchEffect;
 import downfall.downfallMod;
 import downfall.patches.BanSharedContentPatch;
 import downfall.util.CardIgnore;
+import guardian.cards.AbstractGuardianCard;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import slimebound.cards.AbstractSlimeboundCard;
 import theHexaghost.cards.*;
 import theHexaghost.events.*;
 import theHexaghost.ghostflames.AbstractGhostflame;
@@ -114,6 +118,19 @@ public class HexaMod implements
                 CARD_ENERGY_L, TEXT_ENERGY);
 
 
+    }
+
+    public static void loadJokeCardImage(AbstractCard card, String img) {
+        if (card instanceof AbstractHexaCard) {
+            ((AbstractHexaCard) card).betaArtPath = img;
+        }
+        Texture cardTexture;
+        cardTexture = hermit.util.TextureLoader.getTexture(getModID() + "Resources/images/betacards/" + img);
+        cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+        int tw = cardTexture.getWidth();
+        int th = cardTexture.getHeight();
+        TextureAtlas.AtlasRegion cardImg = new TextureAtlas.AtlasRegion(cardTexture, 0, 0, tw, th);
+        ReflectionHacks.setPrivate(card, AbstractCard.class, "jokePortrait", cardImg);
     }
 
     public static String makeCardPath(String resourcePath) {

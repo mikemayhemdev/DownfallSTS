@@ -1,10 +1,15 @@
 package slimebound.cards;
 
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import hermit.util.TextureLoader;
 import slimebound.SlimeboundMod;
 import slimebound.actions.CommandAction;
 import slimebound.actions.TrigggerSpecificSlimeAttackAction;
@@ -21,6 +26,7 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
     public int baseSlimed;
     public boolean isSlimedModified;
     public boolean upgradeSlimed;
+    public String betaArtPath;
 
     public AbstractSlimeboundCard(String id, String name, String img, int cost, String rawDescription, CardType type, CardColor color,
                                   CardRarity rarity, CardTarget target) {
@@ -106,5 +112,27 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
                 addToBot(new CommandAction());
             }
         }
+    }
+
+    @Override
+    protected Texture getPortraitImage() {
+        if (Settings.PLAYTESTER_ART_MODE || UnlockTracker.betaCardPref.getBoolean(this.cardID, false)) {
+            if (this.textureImg == null) {
+                return null;
+            } else {
+                if (betaArtPath != null) {
+                    int endingIndex = betaArtPath.lastIndexOf(".");
+                    String newPath = betaArtPath.substring(0, endingIndex) + "_p" + betaArtPath.substring(endingIndex);
+                    newPath = "slimeboundResources/images/betacards/" + newPath;
+                    System.out.println("Finding texture: " + newPath);
+
+                    Texture portraitTexture;
+                    portraitTexture = TextureLoader.getTexture(newPath);
+
+                    return portraitTexture;
+                }
+            }
+        }
+        return super.getPortraitImage();
     }
 }
