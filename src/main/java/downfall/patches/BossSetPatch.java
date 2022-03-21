@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.map.DungeonMap;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import downfall.monsters.NeowBossFinal;
 
 @SpirePatch(clz = AbstractDungeon.class, method = "setBoss")
 public class BossSetPatch {
@@ -38,21 +39,21 @@ public class BossSetPatch {
 
             AbstractDungeon.bossList.clear();
 
-            AbstractDungeon.bossList.add(NeowBoss.ID);
-            AbstractDungeon.bossList.add(NeowBoss.ID);
-            AbstractDungeon.bossList.add(NeowBoss.ID);
+            AbstractDungeon.bossList.add(NeowBossFinal.ID);
+            AbstractDungeon.bossList.add(NeowBossFinal.ID);
+            AbstractDungeon.bossList.add(NeowBossFinal.ID);
 
             AbstractDungeon.monsterList.clear();
             AbstractDungeon.eliteMonsterList.clear();
 
-            AbstractDungeon.monsterList.add(CharBossMerchant.ID);
-            AbstractDungeon.monsterList.add(CharBossMerchant.ID);
-            AbstractDungeon.monsterList.add(CharBossMerchant.ID);
-            AbstractDungeon.eliteMonsterList.add(CharBossMerchant.ID);
-            AbstractDungeon.eliteMonsterList.add(CharBossMerchant.ID);
-            AbstractDungeon.eliteMonsterList.add(CharBossMerchant.ID);
+            AbstractDungeon.monsterList.add(NeowBoss.ID);
+            AbstractDungeon.monsterList.add(NeowBoss.ID);
+            AbstractDungeon.monsterList.add(NeowBoss.ID);
+            AbstractDungeon.eliteMonsterList.add(NeowBoss.ID);
+            AbstractDungeon.eliteMonsterList.add(NeowBoss.ID);
+            AbstractDungeon.eliteMonsterList.add(NeowBoss.ID);
 
-            key = NeowBoss.ID;
+            key = NeowBossFinal.ID;
 
             AbstractDungeon.bossKey = key;
         }
@@ -113,7 +114,7 @@ public class BossSetPatch {
                 DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/icon/hermit_sharpshooter.png");
                 DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/outline/hermit_sharpshooter_outline.png");
             }
-        } else if (key.equals(NeowBoss.ID)) {
+        } else if (key.equals(NeowBossFinal.ID)) {
             DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/icon/neow.png");
             DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/outline/neow_outline.png");
         }

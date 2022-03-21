@@ -32,7 +32,6 @@ import champ.ChampMod;
 import champ.cards.ModFinisher;
 import champ.powers.LastStandModPower;
 import champ.relics.ChampStancesModRelic;
-import champ.relics.ChampionCrown;
 import champ.util.TechniqueMod;
 import charbosses.actions.util.CharBossMonsterGroup;
 import charbosses.bosses.AbstractCharBoss;
@@ -101,7 +100,6 @@ import downfall.events.shrines_evil.UpgradeShrineEvil;
 import downfall.monsters.*;
 import downfall.monsters.gauntletbosses.*;
 import downfall.patches.DailyModeEvilPatch;
-import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.RewardItemTypeEnumPatch;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.patches.ui.topPanel.GoldToSoulPatches;
@@ -271,16 +269,24 @@ public class downfallMod implements
         new downfallMod();
 
         try {
-            for (int i = 0; i < unseenTutorials.length; i++) { tutorialSaves.setProperty("activeTutorials" + i, "true"); }
+            for (int i = 0; i < unseenTutorials.length; i++) {
+                tutorialSaves.setProperty("activeTutorials" + i, "true");
+            }
             SpireConfig config = new SpireConfig("downfall", "TutorialsViewed", tutorialSaves);
-            for (int j = 0; j < unseenTutorials.length; j++) { unseenTutorials[j] = config.getBool("activeTutorials" + j); }
-        } catch (IOException e) { e.printStackTrace(); }
+            for (int j = 0; j < unseenTutorials.length; j++) {
+                unseenTutorials[j] = config.getBool("activeTutorials" + j);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void saveTutorialsSeen() throws IOException {
         SpireConfig config = new SpireConfig("downfall", "TutorialsViewed");
         int i;
-        for (i = 0; i < unseenTutorials.length; i++) { config.setBool("activeTutorials" + i, unseenTutorials[i]); }
+        for (i = 0; i < unseenTutorials.length; i++) {
+            config.setBool("activeTutorials" + i, unseenTutorials[i]);
+        }
         config.save();
     }
 
@@ -1184,8 +1190,8 @@ public class downfallMod implements
 
         BaseMod.addMonster(makeID("Gauntlet1"), "Gauntlet", () -> new MonsterGroup(
                 new AbstractMonster[]{
-                     //   new Ironclad(),
-                     //   new Silent(),
+                        //   new Ironclad(),
+                        //   new Silent(),
                         new Defect(x1, y1),
                         new Watcher(x2, y2),
                         new Hermit(x3, y3),
@@ -1193,19 +1199,19 @@ public class downfallMod implements
 
         BaseMod.addMonster(makeID("Gauntlet2"), "Gauntlet", () -> new MonsterGroup(
                 new AbstractMonster[]{
-                     //   new Ironclad(),
+                        //   new Ironclad(),
                         new Silent(x1, y1),
-                     //   new Defect(),
+                        //   new Defect(),
                         new Watcher(x2, y2),
                         new Hermit(x3, y3),
                 }));
 
         BaseMod.addMonster(makeID("Gauntlet3"), "Gauntlet", () -> new MonsterGroup(
                 new AbstractMonster[]{
-                    //    new Ironclad(),
+                        //    new Ironclad(),
                         new Silent(x1, y1),
                         new Defect(x2, y2),
-                     //   new Watcher(),
+                        //   new Watcher(),
                         new Hermit(x3, y3),
                 }));
 
@@ -1214,7 +1220,7 @@ public class downfallMod implements
                         //    new Ironclad(),
                         new Silent(x1, y1),
                         new Defect(x2, y2),
-                           new Watcher(x3, y3),
+                        new Watcher(x3, y3),
                         //new Hermit(),
                 }));
 
@@ -1404,7 +1410,7 @@ public class downfallMod implements
 
     @Override
     public void receiveStartAct() {
-        if (evilMode || (evilWithinSingleton!=null && evilWithinSingleton.selected) || (CardCrawlGame.trial==null && DailyModeEvilPatch.todaysRunIsEvil)) {
+        if (evilMode || (evilWithinSingleton != null && evilWithinSingleton.selected) || (CardCrawlGame.trial == null && DailyModeEvilPatch.todaysRunIsEvil)) {
             if (possEncounterList.size() == 0) {
                 resetBossList();
                 //SlimeboundMod.logger.info("ERROR! Had to reset the bosses mid-run!");
@@ -1419,6 +1425,9 @@ public class downfallMod implements
                 } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
                     e.printStackTrace();
                 }
+                if (AbstractDungeon.ascensionLevel > 20 && AbstractDungeon.isAscensionMode && AbstractDungeon.actNum == 3) {
+                    AbstractDungeon.bossList.add(1, CharBossMerchant.ID);
+                }
             }
         }
 
@@ -1431,14 +1440,14 @@ public class downfallMod implements
     }
 
 
-    public static boolean isDownfallCharacter(AbstractPlayer p){
+    public static boolean isDownfallCharacter(AbstractPlayer p) {
         if (p instanceof SlimeboundCharacter ||
                 p instanceof TheHexaghost ||
                 p instanceof GuardianCharacter ||
                 p instanceof TheSnecko ||
                 p instanceof ChampChar ||
                 p instanceof AutomatonChar ||
-                p instanceof GremlinCharacter){
+                p instanceof GremlinCharacter) {
             return true;
         }
         return false;
@@ -1567,7 +1576,7 @@ public class downfallMod implements
         if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(TooManyShivs.ID) || ModHelper.isModEnabled(TooManyShivs.ID)) {
             RelicLibrary.getRelic(VelvetChoker.ID).makeCopy().instantObtain();
             BlightHelper.getBlight(VoidEssence.ID).instantObtain(AbstractDungeon.player, AbstractDungeon.player.blights.size(), true);
-            for (int i=0;i<10;i++) {
+            for (int i = 0; i < 10; i++) {
                 AbstractDungeon.player.masterDeck.addToBottom(new Shiv());
             }
         }
@@ -1584,8 +1593,8 @@ public class downfallMod implements
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group)
             UnlockTracker.markCardAsSeen(c.cardID);
 
-        if ((evilWithinSingleton!=null && evilWithinSingleton.selected)
-                || (CardCrawlGame.trial==null && DailyModeEvilPatch.todaysRunIsEvil)) {
+        if ((evilWithinSingleton != null && evilWithinSingleton.selected)
+                || (CardCrawlGame.trial == null && DailyModeEvilPatch.todaysRunIsEvil)) {
             evilMode = true;
         }
 

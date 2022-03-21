@@ -4,7 +4,6 @@ package downfall.mainmenu;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -59,16 +58,15 @@ public class MainMenuAdPatch {
         public final Hitbox hb;
 
         private Color tint = new Color(1, 1, 1, 0);
-        private float width = tex.getWidth();
-        private float height = tex.getHeight();
-        private float xPos = Settings.WIDTH * 0.9F;
-        private float xCenteredPos = xPos - (width / 2f);
-        private float yPos = Settings.HEIGHT * 0.8F - (height / 2f);
-        private float yTextPos = yPos;
+        private float xPos = Settings.WIDTH * 0.6F;
+        private float yPos = Settings.HEIGHT / 2F;
         private float angle = 0.0f;
+        private float scale = 0.5f;
+        private float adjustedWidth = tex.getWidth() * Settings.scale * scale;
+        private float adjustedHeight = tex.getHeight() * Settings.scale * scale;
 
         public MainMenuAd(String text, String textheader, String text2, String text3, String text4, String text5, String url) {
-            hb = new Hitbox(xCenteredPos, yPos, width, height);
+            hb = new Hitbox(xPos, yPos, adjustedWidth, adjustedHeight);
             this.text = text;
             this.url = url;
             this.textheader = textheader;
@@ -80,24 +78,23 @@ public class MainMenuAdPatch {
 
         public void render(SpriteBatch sb) {
             sb.setColor(Color.WHITE.cpy());
-            TextureAtlas.AtlasRegion menuTexture = new TextureAtlas.AtlasRegion(tex, 0, 0, tex.getWidth(), tex.getHeight());
-            sb.draw(menuTexture, xCenteredPos, yPos, width / 2f, height / 2f, width, height, Settings.scale, Settings.scale, angle);
+            sb.draw(tex, xPos, yPos, 0, 0, tex.getWidth(), tex.getHeight(), Settings.scale * scale, Settings.scale * scale, angle, 0, 0, tex.getWidth(), tex.getHeight(), false, false);
             if (tint.a > 0.0f) {
                 sb.setBlendFunction(770, 1);
                 sb.setColor(tint);
-                sb.draw(menuTexture, xCenteredPos, yPos, width / 2f, height / 2f, width, height, Settings.scale, Settings.scale, angle);
+                sb.draw(tex, xPos, yPos, 0, 0, tex.getWidth(), tex.getHeight(), Settings.scale * scale, Settings.scale * scale, angle, 0, 0, tex.getWidth(), tex.getHeight(), false, false);
                 sb.setBlendFunction(770, 771);
             }
             FontHelper.cardTitleFont.getData().setScale(1.0f);
 
-            FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, textheader, xPos, yTextPos + 360F * Settings.scale);
+            FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, textheader, xPos+ adjustedWidth / 2, yPos + 360F * Settings.scale);
 
             FontHelper.cardDescFont_N.getData().setScale(1.0f);
-            FontHelper.renderFontCentered(sb, FontHelper.cardDescFont_N, text, xPos, yTextPos + 290F * Settings.scale);
-            FontHelper.renderFontCentered(sb, FontHelper.cardDescFont_N, text2, xPos, yTextPos + 250F * Settings.scale);
-            FontHelper.renderFontCentered(sb, FontHelper.cardDescFont_N, text3, xPos, yTextPos + 210F * Settings.scale);
-            FontHelper.renderFontCentered(sb, FontHelper.cardDescFont_N, text4, xPos, yTextPos + 170F * Settings.scale);
-            FontHelper.renderFontCentered(sb, FontHelper.cardDescFont_N, text5, xPos, yTextPos + 130F * Settings.scale);
+            FontHelper.renderFontCentered(sb, FontHelper.cardDescFont_N, text, xPos + adjustedWidth / 2, yPos + 290F * Settings.scale);
+            FontHelper.renderFontCentered(sb, FontHelper.cardDescFont_N, text2, xPos + adjustedWidth / 2, yPos + 250F * Settings.scale);
+            FontHelper.renderFontCentered(sb, FontHelper.cardDescFont_N, text3, xPos + adjustedWidth / 2, yPos + 210F * Settings.scale);
+            FontHelper.renderFontCentered(sb, FontHelper.cardDescFont_N, text4, xPos + adjustedWidth / 2, yPos + 170F * Settings.scale);
+            FontHelper.renderFontCentered(sb, FontHelper.cardDescFont_N, text5, xPos + adjustedWidth / 2, yPos + 130F * Settings.scale);
 
             hb.render(sb);
         }

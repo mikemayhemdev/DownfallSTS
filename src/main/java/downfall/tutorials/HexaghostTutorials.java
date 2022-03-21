@@ -15,9 +15,9 @@ import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.TutorialStrings;
 import com.megacrit.cardcrawl.ui.FtueTip;
 
-public class GuardianTutorials extends FtueTip {
+public class HexaghostTutorials extends FtueTip {
 
-    private static final TutorialStrings tutorialStrings = CardCrawlGame.languagePack.getTutorialString("HermitMod:GuardianTutorials");
+    private static final TutorialStrings tutorialStrings = CardCrawlGame.languagePack.getTutorialString("HermitMod:HexaghostTutorials");
     public static final String[] txt = tutorialStrings.TEXT;
     public static final String[] LABEL = tutorialStrings.LABEL;
     private Texture img1;
@@ -38,10 +38,10 @@ public class GuardianTutorials extends FtueTip {
     private int closeScreen;
 
 
-    public GuardianTutorials() {
+    public HexaghostTutorials() {
 
-        this.img1 = ImageMaster.loadImage("hermitResources/images/tip/guardian_t1.png");
-        this.img2 = ImageMaster.loadImage("hermitResources/images/tip/guardian_t2.png");
+        this.img1 = ImageMaster.loadImage("hermitResources/images/tip/hexaghost_t1.png");
+        this.img2 = ImageMaster.loadImage("hermitResources/images/tip/hexaghost_t2.png");
 
         txt1 = txt[0];
         txt2 = txt[1];
