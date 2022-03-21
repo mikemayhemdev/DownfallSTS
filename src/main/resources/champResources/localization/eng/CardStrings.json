@@ -265,7 +265,7 @@
   },
   "champ:HeartStrike": {
     "NAME": "Finish Him",
-    "DESCRIPTION": "Deal !D! damage, twice if the enemy is below !M! % Hp.",
+    "DESCRIPTION": "Deal !D! damage, twice if the enemy is below !M! % HP.",
     "EXTENDED_DESCRIPTION": [
       "A poor time for that move.",
       "That foe isn't ready to be ended yet."
