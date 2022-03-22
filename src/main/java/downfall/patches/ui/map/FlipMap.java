@@ -109,14 +109,14 @@ public class FlipMap {
 
             ArrayList<ArrayList<MapRoomNode>> map = new ArrayList();
 
-            MapRoomNode restNode = new MapRoomNode(3, 3);
-            restNode.room = new RestRoom();
-            MapRoomNode shopNode = new MapRoomNode(3, 2);
-            shopNode.room = new ShopRoom();
-            MapRoomNode enemyNode = new MapRoomNode(3, 1);
-            enemyNode.room = new MonsterRoomElite();
             MapRoomNode courierNode = new MapRoomNode(3, 0);
             courierNode.room = new CoopCourierRoom();
+            MapRoomNode enemyNode = new MapRoomNode(3, 1);
+            enemyNode.room = new MonsterRoomElite();
+            MapRoomNode shopNode = new MapRoomNode(3, 2);
+            shopNode.room = new ShopRoom();
+            MapRoomNode restNode = new MapRoomNode(3, 3);
+            restNode.room = new RestRoom();
             MapRoomNode bossNode = new MapRoomNode(3, 4);
             bossNode.room = new MonsterRoomBoss();
             MapRoomNode victoryNode = new MapRoomNode(3, 5);
@@ -129,47 +129,42 @@ public class FlipMap {
 
             courierNode.addEdge(new MapEdge(courierNode.x, courierNode.y, courierNode.offsetX, courierNode.offsetY, bossNode.x, bossNode.y, bossNode.offsetX, bossNode.offsetY, false));
 
+
             ArrayList<MapRoomNode> row1 = new ArrayList();
-
-            row1.add(new MapRoomNode(0, 3));
-            row1.add(new MapRoomNode(1, 3));
-            row1.add(new MapRoomNode(2, 3));
-            row1.add(restNode);
-            row1.add(new MapRoomNode(4, 3));
-            row1.add(new MapRoomNode(5, 3));
-            row1.add(new MapRoomNode(6, 3));
-
+            row1.add(new MapRoomNode(0, 0));
+            row1.add(new MapRoomNode(1, 0));
+            row1.add(new MapRoomNode(2, 0));
+            row1.add(courierNode);
+            row1.add(new MapRoomNode(4, 0));
+            row1.add(new MapRoomNode(5, 0));
+            row1.add(new MapRoomNode(6, 0));
 
             ArrayList<MapRoomNode> row2 = new ArrayList();
-            row2.add(new MapRoomNode(0, 2));
-            row2.add(new MapRoomNode(1, 2));
-            row2.add(new MapRoomNode(2, 2));
-            row2.add(shopNode);
-            row2.add(new MapRoomNode(4, 2));
-            row2.add(new MapRoomNode(5, 2));
-            row2.add(new MapRoomNode(6, 2));
-
+            row2.add(new MapRoomNode(0, 1));
+            row2.add(new MapRoomNode(1, 1));
+            row2.add(new MapRoomNode(2, 1));
+            row2.add(enemyNode);
+            row2.add(new MapRoomNode(4, 1));
+            row2.add(new MapRoomNode(5, 1));
+            row2.add(new MapRoomNode(6, 1));
 
             ArrayList<MapRoomNode> row3 = new ArrayList();
-            row3.add(new MapRoomNode(0, 1));
-            row3.add(new MapRoomNode(1, 1));
-            row3.add(new MapRoomNode(2, 1));
-            row3.add(enemyNode);
-            row3.add(new MapRoomNode(4, 1));
-            row3.add(new MapRoomNode(5, 1));
-            row3.add(new MapRoomNode(6, 1));
-
+            row3.add(new MapRoomNode(0, 2));
+            row3.add(new MapRoomNode(1, 2));
+            row3.add(new MapRoomNode(2, 2));
+            row3.add(shopNode);
+            row3.add(new MapRoomNode(4, 2));
+            row3.add(new MapRoomNode(5, 2));
+            row3.add(new MapRoomNode(6, 2));
 
             ArrayList<MapRoomNode> row4 = new ArrayList();
-            row4.add(new MapRoomNode(0, 0));
-            row4.add(new MapRoomNode(1, 0));
-            row4.add(new MapRoomNode(2, 0));
-            row4.add(courierNode);
-            row4.add(new MapRoomNode(4, 0));
-            row4.add(new MapRoomNode(5, 0));
-            row4.add(new MapRoomNode(6, 0));
-
-
+            row4.add(new MapRoomNode(0, 3));
+            row4.add(new MapRoomNode(1, 3));
+            row4.add(new MapRoomNode(2, 3));
+            row4.add(restNode);
+            row4.add(new MapRoomNode(4, 3));
+            row4.add(new MapRoomNode(5, 3));
+            row4.add(new MapRoomNode(6, 3));
 
             ArrayList<MapRoomNode> row5 = new ArrayList();
             row5.add(new MapRoomNode(0, 4));
@@ -191,10 +186,10 @@ public class FlipMap {
             row6.add(new MapRoomNode(6, 5));
 
 
-            map.add(row4);
-            map.add(row3);
-            map.add(row2);
             map.add(row1);
+            map.add(row2);
+            map.add(row3);
+            map.add(row4);
             map.add(row5);
             map.add(row6);
 
