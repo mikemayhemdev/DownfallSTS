@@ -55,13 +55,14 @@ public class Reprieve extends AbstractDynamicCard {
 
     public Reprieve() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        baseMagicNumber = magicNumber = 13;
         loadJokeCardImage(this, "reprieve.png");
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ReprieveAction());
+        AbstractDungeon.actionManager.addToBottom(new ReprieveAction(this.magicNumber));
     }
 
     public static int countCards(CardGroup varGroup) {
@@ -107,6 +108,7 @@ public class Reprieve extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeBaseCost(0);
+            upgradeMagicNumber(-3);
             initializeDescription();
         }
     }

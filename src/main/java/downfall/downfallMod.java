@@ -120,6 +120,8 @@ import guardian.characters.GuardianCharacter;
 import guardian.relics.PickAxe;
 import hermit.HermitMod;
 import hermit.actions.MessageCaller;
+import hermit.potions.BlackBile;
+import hermit.potions.Tonic;
 import quickRestart.helper.RestartRunHelper;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;

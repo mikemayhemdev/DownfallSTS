@@ -20,20 +20,20 @@ import java.util.Iterator;
 public class ReprieveAction extends AbstractGameAction {
     private AbstractPlayer p;
     private int totalcards = 0;
+    int curseTreshold = 0;
 
-    public ReprieveAction() {
+    public ReprieveAction(int curseTreshold) {
         this.p = AbstractDungeon.player;
         this.setValues(this.p, AbstractDungeon.player, amount);
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_MED;
+        this.curseTreshold = curseTreshold;
     }
 
     public static int countCards(CardGroup varGroup) {
         int count = 0;
 
-        CardGroup myGroup = varGroup;
-
-        for (AbstractCard c: myGroup.group)
+        for (AbstractCard c: varGroup.group)
         {
             if (c.color== AbstractCard.CardColor.CURSE)
                 count++;
@@ -43,7 +43,6 @@ public class ReprieveAction extends AbstractGameAction {
     }
 
     public void update() {
-        AbstractCard card;
         if (this.duration == Settings.ACTION_DUR_MED) {
             if (countCards(this.p.drawPile) == 0 && countCards(this.p.discardPile) == 0 && countCards(this.p.hand) == 0) {
                 this.isDone = true;
@@ -74,7 +73,7 @@ public class ReprieveAction extends AbstractGameAction {
                 }
             }
 
-            if (this.totalcards > 12)
+            if (this.totalcards >= this.curseTreshold)
             {
                 this.addToTop(new ApplyPowerAction(p, p, new ReprievePower(p,p, 1), 1));
             }
