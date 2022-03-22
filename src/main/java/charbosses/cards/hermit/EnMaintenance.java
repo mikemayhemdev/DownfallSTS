@@ -29,7 +29,7 @@ public class EnMaintenance extends AbstractHermitBossCard {
                 isDone = true;
                 if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge) {
                     for (AbstractCard q : ((ArchetypeAct2WheelOfFateNewAge) AbstractCharBoss.boss.chosenArchetype).mockDeck) {
-                        if (q instanceof EnStrikeHermit || q instanceof EnDefendHermit) {
+                        if (q instanceof EnStrikeHermit || q instanceof EnDefendHermit || q instanceof EnFreeStrikeHermit) {
                             ArchetypeAct2WheelOfFateNewAge.upgradeStrikeOrDefendManually(q);
                         }
                     }

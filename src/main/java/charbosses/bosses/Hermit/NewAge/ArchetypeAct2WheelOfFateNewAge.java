@@ -4,7 +4,6 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.colorless.EnHandOfGreed;
 import charbosses.cards.colorless.EnHandOfGreedHermitNecro;
 import charbosses.cards.curses.EnInjury;
 import charbosses.cards.curses.EnNecronomicurse;
@@ -101,7 +100,7 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
                 c.upgradedBlock = true;
             }
             String NAME;
-            if (c instanceof EnStrikeHermit) {
+            if (c instanceof EnStrikeHermit || c instanceof EnFreeStrikeHermit) {
                 NAME = Strike_Hermit.NAME;
             } else {
                 NAME = EnDefendHermit.cardStrings.NAME;
@@ -145,7 +144,7 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         AbstractCard bot = AbstractCharBoss.boss.hand.getBottomCard();
         AbstractCharBoss.boss.hand.removeCard(bot);
         if (bot instanceof EnShowdown || bot instanceof EnItchyTriggerAct2) {
-            ((EnShowdown) bot).onSpecificTrigger();
+            ((AbstractHermitBossCard) bot).onSpecificTrigger();
         }
         AbstractCharBoss.boss.hand.addToTop(getNextCard());
         AbstractCharBoss.boss.hand.refreshHandLayout();
