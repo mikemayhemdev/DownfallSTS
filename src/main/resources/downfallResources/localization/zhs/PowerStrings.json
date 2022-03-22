@@ -111,9 +111,9 @@
     ]
   },
   "downfall:NeowSeeingDouble": {
-    "NAME": "复视",
+    "NAME": "谢幕",
     "DESCRIPTIONS": [
-      "每回合你对 #y涅奥 的第一张 #y攻击牌 不造成伤害。"
+      "#y涅奥 的回合开始时会使用烟幕来隐蔽它自己。你的第一张 #y攻击牌 对它不造成伤害。"
     ]
   },
   "downfall:SilentPoisonPower": {
