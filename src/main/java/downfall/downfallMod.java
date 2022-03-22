@@ -185,13 +185,13 @@ public class downfallMod implements
     public static Properties configDefault = new Properties();
     public static boolean contentSharing_relics = true;
     public static boolean contentSharing_potions = true;
-    public static boolean contentSharing_events = true;
-    public static boolean contentSharing_colorlessCards = true;
+    public static boolean contentSharing_events = false;
+    public static boolean contentSharing_colorlessCards = false;
     public static boolean contentSharing_curses = true;
     public static boolean crossoverCharacters = true;
     public static boolean unlockEverything = false;
     public static boolean noMusic = false;
-    public static boolean normalMapLayout = true;
+    public static boolean normalMapLayout = false;
     public static boolean champDisableStanceHelper = false;
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
