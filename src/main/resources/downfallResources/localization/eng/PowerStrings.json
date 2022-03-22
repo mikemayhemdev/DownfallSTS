@@ -95,13 +95,13 @@
   "downfall:SilentShivTimeEaterPower": {
     "NAME": "Bag of Knives",
     "DESCRIPTIONS": [
-      "The first two times you play a card that costs #b2 or more #yEnergy each turn, Silent gains a #yShiv."
+      "The first time you play a card that costs #b2 or more each turn, Silent gains 2 #yShivs."
     ]
   },
   "downfall:NeowBagOfKnives": {
     "NAME": "Bag of Knives",
     "DESCRIPTIONS": [
-      "The first two times you play a card that costs #b2 or more #yEnergy each turn, take #b4 damage."
+      "The first time you play a card that costs #b2 or more each turn, take #b4 damage twice."
     ]
   },
   "downfall:SilentMirrorImagePower": {

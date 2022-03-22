@@ -32,6 +32,7 @@ public class BagOfKnives extends AbstractBossMechanicPower {
     private static final Texture tex32 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowSilent132.png"));
 
     private boolean firstTurn;
+    public boolean usedThisTurn = false;
 
     public BagOfKnives(final AbstractCreature owner) {
         ID = POWER_ID;
@@ -51,19 +52,17 @@ public class BagOfKnives extends AbstractBossMechanicPower {
 
     //This is used instead of onAfterUseCard so that cards like Streamline, when used at 1-cost, will not trigger this effect
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (amount > 0) {
+        if (!usedThisTurn) {
             if (!(card instanceof AbstractBossCard) && card.costForTurn >= 2 && card.cost != -1 && !card.purgeOnUse) {
 
                 flashWithoutSound();
-                amount--;
                 // CardCrawlGame.sound.playA("POWER_TIME_WARP", 0.25F);
                 // AbstractDungeon.topLevelEffectsQueue.add(new TimeWarpTurnEndEffect());
                 addToBot(new VFXAction(new ThrowDaggerEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY)));
                 addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(owner, 4, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-
-
+                addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(owner, 4, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+                usedThisTurn = true;
             }
-
             //updateDescription();
         }
     }
@@ -71,7 +70,7 @@ public class BagOfKnives extends AbstractBossMechanicPower {
     @Override
     public void atStartOfTurn() {
         super.atStartOfTurn();
-        amount = 2;
+        usedThisTurn = false;
     }
 
     @Override

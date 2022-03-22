@@ -9,6 +9,9 @@ import charbosses.actions.common.EnemyMakeTempCardInHandAction;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnShiv;
+import charbosses.cards.green.EnBladeDance;
+import charbosses.cards.green.EnCloakAndDagger;
+import charbosses.cards.green.EnFinisher;
 import charbosses.powers.cardpowers.EnemyAccuracyPower;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -37,7 +40,6 @@ public class SilentShivTimeEaterPower extends AbstractBossMechanicPower {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;
-        amount = 0;
         updateDescription();
         loadRegion("curiosity");
         type = PowerType.BUFF;
@@ -51,22 +53,24 @@ public class SilentShivTimeEaterPower extends AbstractBossMechanicPower {
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (!usedThisTurn){
-        if (!(card instanceof AbstractBossCard) && card.costForTurn >= 2 && card.cost != -1 && !card.purgeOnUse) {
-            ++amount;
-            flashWithoutSound();
-            if (AbstractCharBoss.boss != null) {
-                if (AbstractCharBoss.boss.hand != null) {
-                    if (AbstractCharBoss.boss.hand.size() <= 6) {
-                        addToBot(new EnemyMakeTempCardInHandAction(new EnShiv(), 1));
+            if (!(card instanceof AbstractBossCard) && card.costForTurn >= 2 && card.cost != -1 && !card.purgeOnUse) {
+                flashWithoutSound();
+                if (AbstractCharBoss.boss != null) {
+                    if (AbstractCharBoss.boss.hand != null) {
+                        if (AbstractCharBoss.boss.hand.size() <= 6) {
+                            //doing it twice to work with intent calculation (Shuriken interaction)
+                            addToBot(new EnemyMakeTempCardInHandAction(new EnShiv(), 1));
+                            addToBot(new EnemyMakeTempCardInHandAction(new EnShiv(), 1));
+
+                            for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
+                                if (c instanceof EnFinisher)
+                                    ((EnFinisher) c).increaseHits(2);
+                            }
+                        }
                     }
                 }
+            usedThisTurn = true;
             }
-            if (amount >= 2) {
-                usedThisTurn = true;
-                amount = 2;
-            }
-        }
-
             //updateDescription();
         }
     }
@@ -75,7 +79,6 @@ public class SilentShivTimeEaterPower extends AbstractBossMechanicPower {
     public void atStartOfTurn() {
         super.atStartOfTurn();
         usedThisTurn = false;
-        amount = 0;
     }
 
     static {

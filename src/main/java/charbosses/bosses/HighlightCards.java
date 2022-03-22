@@ -82,8 +82,7 @@ public class HighlightCards {
             if (NeowBossFinal.neowboss != null) {
                 if (!NeowBossFinal.neowboss.isDeadOrEscaped()) {
                     if (NeowBossFinal.neowboss.hasPower(BagOfKnives.POWER_ID)) {
-                        if (NeowBossFinal.neowboss.getPower(BagOfKnives.POWER_ID).amount > 0) {
-
+                        if (!((BagOfKnives) NeowBossFinal.neowboss.getPower(BagOfKnives.POWER_ID)).usedThisTurn) {
                             if (!(c instanceof AbstractBossCard) && c.cost != -1 && (c.costForTurn >= 2) && !c.purgeOnUse) {
                                 return true;
                             }
