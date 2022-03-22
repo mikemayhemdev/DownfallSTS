@@ -48,18 +48,17 @@ public class EnFinisher extends AbstractBossCard {
         super.applyPowers();
         int count = this.magicNumber;
 
-//        Iterator var2 = AbstractCharBoss.boss.hand.group.iterator();
-//
-//        while(var2.hasNext()) {
-//            AbstractCard c = (AbstractCard)var2.next();
+//        for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
 //            if (c.type == CardType.ATTACK && !(c instanceof EnFinisher) || c instanceof EnCloakAndDagger)
 //                ++count;
 //            if (c instanceof EnBladeDance)
 //                count += 3;
 //        }
-//
+
 //        this.magicNumber = count;
 //        this.intentMultiAmt = this.magicNumber;
+//        this.lockIntentValues = false;
+//        this.calculateCardDamage(null);
 //        this.lockIntentValues = true;
 
 
@@ -75,6 +74,15 @@ public class EnFinisher extends AbstractBossCard {
 
         this.initializeDescription();
     }
+
+    public void increaseHits(int amount) {
+        this.magicNumber += amount;
+        this.intentMultiAmt = this.magicNumber;
+        this.lockIntentValues = false;
+        this.createIntent();
+//        this.lockIntentValues = true;
+    }
+
 
 
     @Override

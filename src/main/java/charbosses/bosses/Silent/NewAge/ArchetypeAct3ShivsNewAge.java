@@ -3,15 +3,9 @@ package charbosses.bosses.Silent.NewAge;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Silent.ArchetypeBaseSilent;
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.colorless.EnMadness;
-import charbosses.cards.colorless.EnSadisticNature;
 import charbosses.cards.colorless.EnShiv;
-import charbosses.cards.curses.EnClumsy;
-import charbosses.cards.curses.EnRegret;
 import charbosses.cards.green.*;
-import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
 import charbosses.powers.bossmechanicpowers.SilentShivTimeEaterPower;
-import charbosses.powers.general.PoisonProtectionPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -43,8 +37,8 @@ public class ArchetypeAct3ShivsNewAge extends ArchetypeBaseSilent {
 
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_FusionHammer());
+        addRelic(new CBR_Vajra());
         addRelic(new CBR_Shuriken());
-        addRelic(new CBR_Kunai());
         addRelic(new CBR_OrnamentalFan());
 
     }
@@ -76,14 +70,14 @@ public class ArchetypeAct3ShivsNewAge extends ArchetypeBaseSilent {
                     //Turn 3
                     addToList(cardsList, new EnEndlessAgony());
                     addToList(cardsList, new EnEndlessAgony());
-                    addToList(cardsList, new EnFinisher(2));
+                    addToList(cardsList, new EnFinisher(2), extraUpgrades);
                     addToList(cardsList, new EnDefendGreen());
                     turn++;
                     break;
                 case 3:
                     //Turn 4
                     addToList(cardsList, new EnBladeDance());
-                    addToList(cardsList, new EnGlassKnife());
+                    addToList(cardsList, new EnSuckerPunch());
                     addToList(cardsList, new EnDaggerSpray());
                     turn++;
                     break;
@@ -109,7 +103,7 @@ public class ArchetypeAct3ShivsNewAge extends ArchetypeBaseSilent {
                     c.freeToPlayOnce = true;
                     c.costForTurn = 0;
                     addToList(cardsList, c);
-                    addToList(cardsList, new EnGlassKnife());
+                    addToList(cardsList, new EnSuckerPunch());
                     turn++;
                     break;
                 case 1:
@@ -124,7 +118,7 @@ public class ArchetypeAct3ShivsNewAge extends ArchetypeBaseSilent {
                     addToList(cardsList, new EnShiv());
                     addToList(cardsList, new EnFlyingKnee());
                     addToList(cardsList, new EnFlechettes());
-                    addToList(cardsList, new EnFinisher(3));
+                    addToList(cardsList, new EnFinisher(3), extraUpgrades);
                     addToList(cardsList, new EnLegSweep());
                     addToList(cardsList, new EnBlur());
                     turn++;
@@ -144,6 +138,6 @@ public class ArchetypeAct3ShivsNewAge extends ArchetypeBaseSilent {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_OrangePellets());
+        addRelic(new CBR_Kunai());
     }
 }
