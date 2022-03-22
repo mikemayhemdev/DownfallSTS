@@ -1,16 +1,15 @@
 package charbosses.cards.hermit;
 
+import charbosses.bosses.AbstractCharBoss;
+import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Hermit.NewAge.ArchetypeAct2WheelOfFateNewAge;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import hermit.cards.Maintenance;
-import hermit.cards.Virtue;
 import hermit.characters.hermit;
 
 public class EnMaintenance extends AbstractHermitBossCard {
@@ -28,8 +27,15 @@ public class EnMaintenance extends AbstractHermitBossCard {
             @Override
             public void update() {
                 isDone = true;
-                if (owner.chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge) {
-                    ((ArchetypeAct2WheelOfFateNewAge) owner.chosenArchetype).maintenanceLevels += 1;
+                if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge) {
+                    for (AbstractCard q : ((ArchetypeAct2WheelOfFateNewAge) AbstractCharBoss.boss.chosenArchetype).mockDeck) {
+                        if (q instanceof EnStrikeHermit || q instanceof EnDefendHermit || q instanceof EnFreeStrikeHermit) {
+                            ArchetypeAct2WheelOfFateNewAge.upgradeStrikeOrDefendManually(q);
+                        }
+                    }
+                    if (AbstractCharBoss.boss instanceof CharBossHermit) {
+                        CharBossHermit.previewCard = ((ArchetypeAct2WheelOfFateNewAge) AbstractCharBoss.boss.chosenArchetype).mockDeck.get(0).makeStatEquivalentCopy();
+                    }
                 }
             }
         });

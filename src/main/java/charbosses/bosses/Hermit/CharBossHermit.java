@@ -122,7 +122,7 @@ public class CharBossHermit extends AbstractCharBoss {
     }
 
     public static AbstractCard previewCard;
-    private static final Vector2 PREVIEW_CARD_POS = new Vector2((Settings.WIDTH / 4F) * 3, (Settings.HEIGHT / 3F) * 2);
+    public static final Vector2 PREVIEW_CARD_POS = new Vector2(Settings.WIDTH * 0.95F, (Settings.HEIGHT / 3F) * 2);
 
     @Override
     public void render(SpriteBatch sb) {
@@ -134,6 +134,7 @@ public class CharBossHermit extends AbstractCharBoss {
             }
             previewCard.current_x = previewCard.target_x = PREVIEW_CARD_POS.x;
             previewCard.current_y = previewCard.target_y = PREVIEW_CARD_POS.y;
+            previewCard.drawScale = previewCard.targetDrawScale = 0.66F;
             previewCard.render(sb);
         }
     }

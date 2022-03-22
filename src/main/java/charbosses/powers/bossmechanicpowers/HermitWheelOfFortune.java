@@ -39,13 +39,12 @@ public class HermitWheelOfFortune extends AbstractTwoAmountBossMechanicPower {
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        flash();
         if (this.owner instanceof CharBossHermit && info.type == DamageInfo.DamageType.NORMAL) {
             if (((CharBossHermit) this.owner).chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge) {
+                flash();
                 ((ArchetypeAct2WheelOfFateNewAge) ((CharBossHermit) this.owner).chosenArchetype).reInitializeHand();
                 amount2 -= 1;
                 if (amount2 == 0) {
-                    flash();
                     amount2 = CARDS_TO_STR;
                     addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, 1), 1));
                 }

@@ -1,11 +1,15 @@
 package downfall.patches;
 
+import chronoMods.TogetherManager;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.neow.NeowRoom;
 import downfall.events.HeartEvent;
 import javassist.CtBehavior;
+import slimebound.SlimeboundMod;
 import sneckomod.SneckoMod;
+
 
 @SpirePatch(
         clz = NeowRoom.class,
@@ -16,8 +20,17 @@ public class NeowEventPatch {
             locator = Locator.class
     )
     public static void ChangeEvent(NeowRoom __instance, boolean isDone) {
+        boolean switchToHeart = true;
         if (EvilModeCharacterSelect.evilMode) {
-            __instance.event = new HeartEvent(isDone);
+            SlimeboundMod.logger.info("Neow Event detected evil mode");
+            if (Loader.isModLoaded("chronoMods")){
+                SlimeboundMod.logger.info("Neow Event detected Spire With Friends");
+                if (TogetherManager.gameMode.equals(TogetherManager.mode.Coop)){
+                    SlimeboundMod.logger.info("Neow Event detected Co-op Mode");
+                    switchToHeart = false;
+                }
+            }
+           if (switchToHeart) __instance.event = new HeartEvent(isDone);
         }
     }
 

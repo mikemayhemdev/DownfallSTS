@@ -55,7 +55,7 @@ public class Grudge extends AbstractDynamicCard {
     public Grudge() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        magicNumber = baseMagicNumber = 3;
+        magicNumber = baseMagicNumber = 2;
         loadJokeCardImage(this, "grudge.png");
         isMultiDamage=true;
     }

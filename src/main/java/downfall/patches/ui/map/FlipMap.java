@@ -1,5 +1,7 @@
 package downfall.patches.ui.map;
 
+import chronoMods.TogetherManager;
+import chronoMods.coop.CoopCourierRoom;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
@@ -13,6 +15,7 @@ import com.megacrit.cardcrawl.dungeons.TheEnding;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.map.*;
 import com.megacrit.cardcrawl.random.Random;
+import com.megacrit.cardcrawl.relics.Courier;
 import com.megacrit.cardcrawl.rooms.*;
 import com.megacrit.cardcrawl.screens.DungeonMapScreen;
 import com.megacrit.cardcrawl.ui.buttons.DynamicBanner;
@@ -32,6 +35,7 @@ public class FlipMap {
     public static final Logger logger = LogManager.getLogger(FlipMap.class.getName());
 
     private static final HashSet<String> invalidActs;
+
     static {
         invalidActs = new HashSet<>();
         invalidActs.add("paleoftheancients:PaleOfTheAncients");
@@ -85,22 +89,131 @@ public class FlipMap {
             if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
                 if (downfallMod.normalMapLayout) {
                     if (!AbstractDungeon.id.equals(TheEnding.ID)) {
-
                         flipCampfire();
                     }
                     flip(AbstractDungeon.map);
+
+
                 } else {
                     flip(AbstractDungeon.map);
                 }
             }
         }
 
+        public static void connectNode(MapRoomNode src, MapRoomNode dst) {
+            src.addEdge(new MapEdge(src.x, src.y, src.offsetX, src.offsetY, dst.x, dst.y, dst.offsetX, dst.offsetY, false));
+        }
+
+
+        public static ArrayList<ArrayList<MapRoomNode>> SWFAct4Override() {
+
+            ArrayList<ArrayList<MapRoomNode>> map = new ArrayList();
+
+            MapRoomNode restNode = new MapRoomNode(3, 3);
+            restNode.room = new RestRoom();
+            MapRoomNode shopNode = new MapRoomNode(3, 2);
+            shopNode.room = new ShopRoom();
+            MapRoomNode enemyNode = new MapRoomNode(3, 1);
+            enemyNode.room = new MonsterRoomElite();
+            MapRoomNode courierNode = new MapRoomNode(3, 0);
+            courierNode.room = new CoopCourierRoom();
+            MapRoomNode bossNode = new MapRoomNode(3, 4);
+            bossNode.room = new MonsterRoomBoss();
+            MapRoomNode victoryNode = new MapRoomNode(3, 5);
+            victoryNode.room = new TrueVictoryRoom();
+
+
+            connectNode(restNode, shopNode);
+            connectNode(shopNode, enemyNode);
+            connectNode(enemyNode, courierNode);
+
+            courierNode.addEdge(new MapEdge(courierNode.x, courierNode.y, courierNode.offsetX, courierNode.offsetY, bossNode.x, bossNode.y, bossNode.offsetX, bossNode.offsetY, false));
+
+            ArrayList<MapRoomNode> row1 = new ArrayList();
+
+            row1.add(new MapRoomNode(0, 3));
+            row1.add(new MapRoomNode(1, 3));
+            row1.add(new MapRoomNode(2, 3));
+            row1.add(restNode);
+            row1.add(new MapRoomNode(4, 3));
+            row1.add(new MapRoomNode(5, 3));
+            row1.add(new MapRoomNode(6, 3));
+
+
+            ArrayList<MapRoomNode> row2 = new ArrayList();
+            row2.add(new MapRoomNode(0, 2));
+            row2.add(new MapRoomNode(1, 2));
+            row2.add(new MapRoomNode(2, 2));
+            row2.add(shopNode);
+            row2.add(new MapRoomNode(4, 2));
+            row2.add(new MapRoomNode(5, 2));
+            row2.add(new MapRoomNode(6, 2));
+
+
+            ArrayList<MapRoomNode> row3 = new ArrayList();
+            row3.add(new MapRoomNode(0, 1));
+            row3.add(new MapRoomNode(1, 1));
+            row3.add(new MapRoomNode(2, 1));
+            row3.add(enemyNode);
+            row3.add(new MapRoomNode(4, 1));
+            row3.add(new MapRoomNode(5, 1));
+            row3.add(new MapRoomNode(6, 1));
+
+
+            ArrayList<MapRoomNode> row4 = new ArrayList();
+            row4.add(new MapRoomNode(0, 0));
+            row4.add(new MapRoomNode(1, 0));
+            row4.add(new MapRoomNode(2, 0));
+            row4.add(courierNode);
+            row4.add(new MapRoomNode(4, 0));
+            row4.add(new MapRoomNode(5, 0));
+            row4.add(new MapRoomNode(6, 0));
+
+
+
+            ArrayList<MapRoomNode> row5 = new ArrayList();
+            row5.add(new MapRoomNode(0, 4));
+            row5.add(new MapRoomNode(1, 4));
+            row5.add(new MapRoomNode(2, 4));
+            row5.add(bossNode);
+            row5.add(new MapRoomNode(4, 4));
+            row5.add(new MapRoomNode(5, 4));
+            row5.add(new MapRoomNode(6, 4));
+
+
+            ArrayList<MapRoomNode> row6 = new ArrayList();
+            row6.add(new MapRoomNode(0, 5));
+            row6.add(new MapRoomNode(1, 5));
+            row6.add(new MapRoomNode(2, 5));
+            row6.add(victoryNode);
+            row6.add(new MapRoomNode(4, 5));
+            row6.add(new MapRoomNode(5, 5));
+            row6.add(new MapRoomNode(6, 5));
+
+
+            map.add(row4);
+            map.add(row3);
+            map.add(row2);
+            map.add(row1);
+            map.add(row5);
+            map.add(row6);
+
+            AbstractDungeon.map.clear();
+            AbstractDungeon.map = map;
+
+            return map;
+        }
+
+
         private static void flipCampfire() {
             ArrayList<ArrayList<MapRoomNode>> map = AbstractDungeon.map;
 
+
             assignRowAsRoomType(map.get(0), RestRoom.class);
             assignRowAsRoomType(map.get(map.size() - 1), MonsterRoom.class);
+
         }
+
 
         public static void assignRowAsRoomType(ArrayList<MapRoomNode> row, Class<? extends AbstractRoom> c) {
             for (MapRoomNode n : row) {
@@ -116,6 +229,16 @@ public class FlipMap {
         // now have edges that end at floor 1 instead of floor 3. floor 1 nodes end at the boss instead
         // of floor 2. doesn't change which floor the player starts at, that's elsewhere.
         private static void flip(ArrayList<ArrayList<MapRoomNode>> map) {
+
+            if (AbstractDungeon.id == "TheEnding") {
+                if (Loader.isModLoaded("chronoMods")) {
+                    if (TogetherManager.gameMode.equals(TogetherManager.mode.Coop)) {
+                        map = SWFAct4Override();
+                    }
+                }
+            }
+
+
             startY = 0;
 
             ArrayList<MapNodeData> edges = new ArrayList<>();
@@ -181,7 +304,7 @@ public class FlipMap {
     }
 
     // prevents elite and rest rooms from being created in the first five floors (first meaning floors with Y=10-14)
-    // only overrides base logic in evilMode
+// only overrides base logic in evilMode
     @SpirePatch(
             clz = RoomTypeAssigner.class,
             method = "ruleAssignableToRow"
@@ -208,7 +331,7 @@ public class FlipMap {
     }
 
     // Assigns rooms to map nodes in reverse order. since elites are prevented from spawning at the top of the map,
-    // this allows those elites to try to spawn again further down.
+// this allows those elites to try to spawn again further down.
     @SpirePatch(clz = RoomTypeAssigner.class, method = "assignRoomsToNodes")
     public static class AssignRoomsInReverse {
         public static ExprEditor Instrument() {
@@ -232,17 +355,17 @@ public class FlipMap {
         @SpireInsertPatch(locator = Locator.class, localvars = {"chosenNode"})
         public static void patch(MapRoomNode chosenNode) {
             if (AbstractDungeon.actNum == 3 && EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
-                if(!hasRestSite(chosenNode)) {
+                if (!hasRestSite(chosenNode)) {
                     ArrayList<MapRoomNode> cN = getConnectedNodes(chosenNode);
                     logger.info("Found and fixed emerald elite without campfire.");
-                    if(!cN.isEmpty()) {
-                        for(MapRoomNode n : cN) {
-                            if(!(n.room instanceof TreasureRoom)) {
+                    if (!cN.isEmpty()) {
+                        for (MapRoomNode n : cN) {
+                            if (!(n.room instanceof TreasureRoom)) {
                                 n.room = new RestRoom();
                                 return;
                             }
                         }
-                        getConnectedNodes(cN.get(0)).stream().findAny().ifPresent( m -> m.room = new RestRoom());
+                        getConnectedNodes(cN.get(0)).stream().findAny().ifPresent(m -> m.room = new RestRoom());
                     }
                 }
             }
@@ -263,8 +386,8 @@ public class FlipMap {
 
     private static ArrayList<MapRoomNode> getConnectedNodes(MapRoomNode origin) {
         ArrayList<MapRoomNode> retVal = new ArrayList<>();
-        for(MapEdge mn : origin.getEdges()) {
-            if(AbstractDungeon.map.size() >= mn.dstY && mn.dstY >= 0 && AbstractDungeon.map.get(mn.dstY).size() >= mn.dstX) {
+        for (MapEdge mn : origin.getEdges()) {
+            if (AbstractDungeon.map.size() >= mn.dstY && mn.dstY >= 0 && AbstractDungeon.map.get(mn.dstY).size() >= mn.dstX) {
                 MapRoomNode cN = AbstractDungeon.map.get(mn.dstY).get(mn.dstX);
                 if (cN != null) {
                     retVal.add(cN);
@@ -314,7 +437,7 @@ public class FlipMap {
     }
 
     // Adjusts the positions of all rooms upward to account for the boss room being
-    // at the bottom of the map instead of the top
+// at the bottom of the map instead of the top
     @SpirePatch(
             clz = MapRoomNode.class,
             method = SpirePatch.CONSTRUCTOR
@@ -327,6 +450,7 @@ public class FlipMap {
             if (EvilModeCharacterSelect.evilMode && !invalidActs.contains(AbstractDungeon.id)) {
                 __instance.offsetY += EVIL_ADJUST;
             }
+
         }
     }
 
@@ -379,11 +503,7 @@ public class FlipMap {
                     if (!AbstractDungeon.firstRoomChosen) {
                         targetOffsetY[0] = DungeonMapScreen.offsetY = ___mapScrollUpperLimit;
                     }
-                    /*else
-                    {
-                        targetOffsetY[0] += MORE_ADJUST;
-                        DungeonMapScreen.offsetY += MORE_ADJUST;
-                    }*/
+
                 }
             }
         }
@@ -421,7 +541,7 @@ public class FlipMap {
     }
 
     // moves the boss room's hitbox to the bottom of the map. has a special case for the
-    // fourth act since the map is shorter.
+// fourth act since the map is shorter.
     @SpirePatch(
             clz = DungeonMap.class,
             method = "update"
@@ -469,6 +589,7 @@ public class FlipMap {
                 }
             }
         }
+
 
         public static int compatibleGetARealY(MapRoomNode mmmmmm) {
             if (Loader.isModLoaded("actlikeit")) {

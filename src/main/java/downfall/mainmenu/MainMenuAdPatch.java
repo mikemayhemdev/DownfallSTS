@@ -58,7 +58,7 @@ public class MainMenuAdPatch {
         public final Hitbox hb;
 
         private Color tint = new Color(1, 1, 1, 0);
-        private float xPos = Settings.WIDTH * 0.6F;
+        private float xPos = Settings.WIDTH * 0.75F;
         private float yPos = Settings.HEIGHT / 2F;
         private float angle = 0.0f;
         private float scale = 0.5f;

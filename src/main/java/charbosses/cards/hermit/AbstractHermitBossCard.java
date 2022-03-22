@@ -29,7 +29,7 @@ public abstract class AbstractHermitBossCard extends AbstractBossCard {
     @Override
     public void render(SpriteBatch sb) {
         super.render(sb);
-        if (AbstractCharBoss.boss != null && AbstractCharBoss.boss.hasRelic(CBR_Necronomicon.ID)) {
+        if (AbstractCharBoss.boss != null && AbstractCharBoss.boss.hasRelic(CBR_Necronomicon.ID) && this.cost >= 2) {
             nCon.currentX = this.current_x + 390.0f * this.drawScale / 3.0f * Settings.scale;
             nCon.currentY = this.current_y + 546.0f * this.drawScale / 3.0f * Settings.scale;
             nCon.scale = this.drawScale;
