@@ -123,7 +123,7 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
                 if (betaArtPath != null) {
                     int endingIndex = betaArtPath.lastIndexOf(".");
                     String newPath = betaArtPath.substring(0, endingIndex) + "_p" + betaArtPath.substring(endingIndex);
-                    newPath = "slimeboundResources/images/betacards/" + newPath;
+                    newPath = "slimeboundResources/SlimeboundImages/betacards/" + newPath;
                     System.out.println("Finding texture: " + newPath);
 
                     Texture portraitTexture;
