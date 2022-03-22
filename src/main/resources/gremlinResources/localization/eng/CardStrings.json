@@ -38,7 +38,7 @@
 
   "Gremlin:BulkUp": {
     "NAME": "Bulk Up",
-    "DESCRIPTION": "Gain !M! Temporary HP. NL gremlin:Swap to gremlin:Fat_Gremlin."
+    "DESCRIPTION": "Gain !M! Temporary_HP. NL gremlin:Swap to gremlin:Fat_Gremlin."
   },
 
   "Gremlin:BurlyBlow": {
@@ -103,7 +103,7 @@
 
   "Gremlin:EdibleArmor": {
     "NAME": "Edible Armor",
-    "DESCRIPTION": "Convert your Block into Temporary HP."
+    "DESCRIPTION": "Convert your Block into Temporary_HP."
   },
 
   "Gremlin:Encore": {
@@ -216,8 +216,8 @@
 
   "Gremlin:GremlinToss": {
     "NAME": "Gremlin Toss",
-    "DESCRIPTION": "Deal damage equal to your current Block and Temporary HP.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Temporary HP. NL Deal damage equal to your current Block and Temporary HP.",
+    "DESCRIPTION": "Deal damage equal to your current Block and Temporary_HP.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Temporary_HP. NL Deal damage equal to your current Block and Temporary_HP.",
     "EXTENDED_DESCRIPTION": [" NL (Deals !D! damage.)"]
   },
 
@@ -228,7 +228,7 @@
 
   "Gremlin:Heckle": {
     "NAME": "Heckle",
-    "DESCRIPTION": "Whenever you apply a debuff to an enemy, gain !M! Temporary HP."
+    "DESCRIPTION": "Whenever you apply a debuff to an enemy, gain !M! Temporary_HP."
   },
 
   "Gremlin:InfiniteBlocks": {
@@ -249,7 +249,7 @@
 
   "Gremlin:Jeer": {
     "NAME": "Jeer",
-    "DESCRIPTION": "Deal !D! damage. If the enemy has a debuff, gain !M! Temporary HP."
+    "DESCRIPTION": "Deal !D! damage. If the enemy has a debuff, gain !M! Temporary_HP."
   },
 
   "Gremlin:Kablamo": {
@@ -286,7 +286,7 @@
 
   "Gremlin:Nob": {
     "NAME": "NOB",
-    "DESCRIPTION": "Gain !M! Temporary HP. NL Mutate into Gremlin Nob until you run out of Temporary HP."
+    "DESCRIPTION": "Gain !M! Temporary_HP. NL Mutate into Gremlin Nob until you run out of Temporary_HP."
   },
 
   "Gremlin:NobChoice": {
