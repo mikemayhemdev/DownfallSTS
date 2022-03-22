@@ -75,12 +75,12 @@ public class EnFinisher extends AbstractBossCard {
         this.initializeDescription();
     }
 
-    public void increaseHits() {
-        this.magicNumber++;
+    public void increaseHits(int amount) {
+        this.magicNumber += amount;
         this.intentMultiAmt = this.magicNumber;
         this.lockIntentValues = false;
         this.createIntent();
-        this.lockIntentValues = true;
+//        this.lockIntentValues = true;
     }
 
 

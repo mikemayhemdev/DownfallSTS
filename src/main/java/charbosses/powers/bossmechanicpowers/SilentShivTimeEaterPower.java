@@ -58,11 +58,13 @@ public class SilentShivTimeEaterPower extends AbstractBossMechanicPower {
                 if (AbstractCharBoss.boss != null) {
                     if (AbstractCharBoss.boss.hand != null) {
                         if (AbstractCharBoss.boss.hand.size() <= 6) {
-                            addToBot(new EnemyMakeTempCardInHandAction(new EnShiv(), 2));
+                            //doing it twice to work with intent calculation (Shuriken interaction)
+                            addToBot(new EnemyMakeTempCardInHandAction(new EnShiv(), 1));
+                            addToBot(new EnemyMakeTempCardInHandAction(new EnShiv(), 1));
 
                             for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
                                 if (c instanceof EnFinisher)
-                                    ((EnFinisher) c).increaseHits();
+                                    ((EnFinisher) c).increaseHits(2);
                             }
                         }
                     }
