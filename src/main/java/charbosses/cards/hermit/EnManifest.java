@@ -20,6 +20,7 @@ public class EnManifest extends AbstractHermitBossCard {
     public EnManifest() {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/manifest.png", 2, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
         this.baseBlock = 13;
+        baseMagicNumber = magicNumber = 2;
     }
 
     @Override

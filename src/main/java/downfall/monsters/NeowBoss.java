@@ -22,6 +22,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.combat.HeartMegaDebuffEffect;
 import downfall.actions.NeowRezAction;
 import downfall.downfallMod;
@@ -222,6 +223,13 @@ public class NeowBoss extends AbstractMonster {
                     AbstractDungeon.actionManager.addToBottom(new HealAction(minion, this, 10));
                 } else {
                     escape();
+                    addToBot(new AbstractGameAction() {
+                        @Override
+                        public void update() {
+                            isDone = true;
+                            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
+                        }
+                    });
                 }
                 break;
         }
