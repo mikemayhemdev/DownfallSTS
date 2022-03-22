@@ -55,7 +55,7 @@
   "downfall:WatcherAngryPower": {
     "NAME": "无遏狂怒",
     "DESCRIPTIONS": [
-      "当回合结束时，如果 #y观者 的生命不高于 #b50% 时将永久进入 #y暴怒 。 NL #y观者暴怒 造成和受到的伤害提高 #b50% 而不是 #b100% 。"
+      "#y观者的回合结束时，如果她的生命不高于 #b50% ，她将永久进入 #y暴怒 。 NL #y暴怒 造成和受到的伤害提高 #b50% 而非 #b100% 。"
     ]
   },
   "downfall:NeowUnbridledRage": {
