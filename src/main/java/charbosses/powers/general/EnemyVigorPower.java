@@ -1,5 +1,6 @@
 package charbosses.powers.general;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -37,14 +38,35 @@ public class EnemyVigorPower extends AbstractPower {
         this.description = powerStrings.DESCRIPTIONS[0] + this.amount + powerStrings.DESCRIPTIONS[1];
     }
 
-    public float atDamageGive(float damage, DamageInfo.DamageType type) {
-        return type == DamageInfo.DamageType.NORMAL ? damage + (float) this.amount : damage;
+    private boolean cardCheck(AbstractCard card) {
+        boolean isFirst = true;
+        for (AbstractCard q : AbstractCharBoss.boss.hand.group) {
+            if (q.type == AbstractCard.CardType.ATTACK) {
+                if (q == card && isFirst) {
+                    return true;
+                }
+                else {
+                    isFirst = false;
+                }
+            }
+        }
+        return false;
+    }
+
+    public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
+        if (card instanceof AbstractBossCard) {
+            if (cardCheck(card)) {
+                return type == DamageInfo.DamageType.NORMAL ? damage + (float) this.amount : damage;
+            }
+            return damage;
+        }
+        return damage;
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK && card instanceof AbstractBossCard) {
             this.flash();
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "Vigor"));
+            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
 
     }
