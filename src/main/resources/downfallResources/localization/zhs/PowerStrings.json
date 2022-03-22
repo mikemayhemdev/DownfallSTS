@@ -95,13 +95,13 @@
   "downfall:SilentShivTimeEaterPower": {
     "NAME": "满包小刀",
     "DESCRIPTIONS": [
-      "每回合你打出前两张 #b2 耗能以上的牌时， #y静默猎手 获得一张 #y小刀 。"
+      "每回合你初次打出 #b2 耗能以上的牌时， #y静默猎手 获得两张 #y小刀 。"
       ]
   },
   "downfall:NeowBagOfKnives": {
     "NAME": "满包小刀",
     "DESCRIPTIONS": [
-      "每回合你打出前两张 #b2 耗能以上的牌时， 受到 #y4 点伤害。"
+      "每回合你初次打出 #b2 耗能以上的牌时， 受到 #y4 点伤害两次。"
     ]
   },
   "downfall:SilentMirrorImagePower": {
@@ -111,7 +111,7 @@
     ]
   },
   "downfall:NeowSeeingDouble": {
-    "NAME": "谢幕",
+    "NAME": "复视",
     "DESCRIPTIONS": [
       "#y涅奥 的回合开始时会使用烟幕来隐蔽它自己。你的第一张 #y攻击牌 对它不造成伤害。"
     ]
