@@ -1,6 +1,7 @@
 package charbosses.cards.hermit;
 
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.cards.colorless.EnHandOfGreedHermitNecro;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -36,7 +37,7 @@ public class EnItchyTriggerAct2 extends AbstractHermitBossCard {
     public void calculateCardDamage(AbstractMonster mo) {
         boolean addedWeak = false;
         if (AbstractCharBoss.boss.hand.group.stream().anyMatch(c -> c.cardID.equals(EnHoleUp.ID))) {
-            AbstractCharBoss.boss.powers.add(0, new WeakPower(AbstractDungeon.player, 1, false));
+            AbstractCharBoss.boss.powers.add(0, new WeakPower(AbstractCharBoss.boss, 1, false));
             addedWeak = true;
         }
         super.calculateCardDamage(mo);
@@ -45,6 +46,19 @@ public class EnItchyTriggerAct2 extends AbstractHermitBossCard {
         }
     }
 
+    @Override
+    public void onSpecificTrigger() {
+        for (AbstractCard q : AbstractCharBoss.boss.hand.group) {
+            if (q instanceof EnHandOfGreedHermitNecro) {
+                q.setCostForTurn(2);
+                q.cost = 2;
+                q.isCostModified = false;
+                ((EnHandOfGreedHermitNecro) q).overrideThing();
+                ((EnHandOfGreedHermitNecro) q).intentActive = false;
+                ((EnHandOfGreedHermitNecro) q).createIntent();
+            }
+        }
+    }
 
     @Override
     public void upgrade() {
