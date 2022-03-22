@@ -281,7 +281,7 @@
   },
   "Slimebound:DisruptingSlam": {
     "NAME": "Just Desserts",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL expansioncontent:Exhume !M! random Lick cards."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL expansioncontent:Exhume !M! random *Lick cards."
   },
   "Slimebound:PrepareCrush": {
     "NAME": "Prepare: Crush",
