@@ -38,7 +38,7 @@ public class HeartShopRoom extends ShopRoom {
 
     public void onPlayerEntry() {
         if (EvilModeCharacterSelect.evilMode)
-            if (!FleeingMerchant.DEAD && yesFight) {
+            if (!FleeingMerchant.DEAD && yesFight && AbstractDungeon.actNum != 4) {
                 startCombat();
                 startedCombat = true;
             } else {
