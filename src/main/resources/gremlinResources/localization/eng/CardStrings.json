@@ -313,8 +313,8 @@
 
   "Gremlin:PinNeedle": {
     "NAME": "Pin Needle",
-    "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! Pinpricks into your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle !M! Upgraded Pinpricks into your draw pile. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! *Pinpricks into your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle !M! Upgraded *Pinpricks into your draw pile. NL Exhaust."
   },
 
   "Gremlin:Pinprick": {
