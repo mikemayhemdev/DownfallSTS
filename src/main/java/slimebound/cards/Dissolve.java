@@ -46,7 +46,7 @@ public class Dissolve extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         // AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 2));
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
         AbstractDungeon.actionManager.addToBottom(new DissolveAction(p, p, 1, false, this.block, 0));
 
 
