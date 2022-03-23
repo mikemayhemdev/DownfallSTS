@@ -2,7 +2,7 @@
 Hexaghost_portrait.png
 size: 4096,4096
 format: RGBA8888
-filter: Linear,Linear
+filter: MipMapLinearLinear,Linear
 repeat: none
 output/Plasma3
   rotate: false

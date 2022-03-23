@@ -2,7 +2,7 @@
 Snecko_portrait.png
 size: 4096,2048
 format: RGBA8888
-filter: Linear,Linear
+filter: MipMapLinearLinear,Linear
 repeat: none
 output/Snecko_tail
   rotate: false
