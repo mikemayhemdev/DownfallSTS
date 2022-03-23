@@ -1,6 +1,7 @@
 package champ.potions;
 
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
 import champ.ChampMod;
 import champ.powers.CounterPower;
@@ -8,7 +9,9 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 
 
@@ -29,6 +32,7 @@ public class CounterstrikePotion extends CustomPotion {
         description = DESCRIPTIONS[0] + potency + DESCRIPTIONS[1];
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("champ:counter")), GameDictionary.keywords.get("champ:counter")));
     }
 
     public void use(AbstractCreature target) {
