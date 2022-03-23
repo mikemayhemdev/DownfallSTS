@@ -12,6 +12,7 @@ public abstract class AbstractGremlinRelic extends CustomRelic{
 
     AbstractGremlinRelic(String id, String img, RelicTier tier, LandingSound sfx) {
         super(id, new Texture(GremlinMod.getResourcePath(img)), tier, sfx);
+        outlineImg = (new Texture(GremlinMod.getOutlineResourcePath(img)));
     }
 
     public void onGremlinSwap() {}

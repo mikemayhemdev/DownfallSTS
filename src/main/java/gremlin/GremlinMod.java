@@ -82,6 +82,9 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
     public static String getResourcePath(String resource) {
         return ASSETS_FOLDER + "/" + resource;
     }
+    public static String getOutlineResourcePath(String resource) {
+        return ASSETS_FOLDER + "/relics/" + resource;
+    }
 
     public static final Logger logger = LogManager.getLogger(GremlinMod.class);
 
