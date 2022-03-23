@@ -77,7 +77,7 @@
   },
   "hexamod:HauntingEcho": {
     "NAME": "Haunting Echo",
-    "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is hexamod:Ignited, hexamod:Ignite it again."
+    "DESCRIPTION": "Deal !D! damage. NL If the current Ghostflame is hexamod:Ignited, hexamod:Ignite it again."
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Worthy Sacrifice",
