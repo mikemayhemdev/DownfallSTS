@@ -1,11 +1,15 @@
 package downfall.monsters.gauntletbosses;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.monsters.NeowBoss;
+import downfall.powers.gauntletpowers.OnDeathEveryoneBuffer;
 
 public abstract class GauntletBoss extends AbstractMonster {
 
@@ -24,6 +28,13 @@ public abstract class GauntletBoss extends AbstractMonster {
         } else {
             return CardLibrary.getCard(ID).name + " / " + CardLibrary.getCard(ID2).name;
         }
+    }
+
+    @Override
+    public void usePreBattleAction() {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new DexterityPower(this, 3), 3));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 3), 3));
+
     }
 
     @Override

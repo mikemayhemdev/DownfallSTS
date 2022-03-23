@@ -51,10 +51,14 @@ public class Defect extends GauntletBoss {
 
     @Override
     public void usePreBattleAction() {
+        super.usePreBattleAction();
+
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new OnDeathEveryoneBuffer(this, 2), 2));
     }
 
     public void takeTurn() {
+
+        int dex = 0;
         switch (this.nextMove) {
             case 1:
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
@@ -65,15 +69,20 @@ public class Defect extends GauntletBoss {
                 }
                 break;
             case 2:
+                if (this.hasPower(DexterityPower.POWER_ID)){
+                    dex = getPower(DexterityPower.POWER_ID).amount;
+                }
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-                addToBot(new GainBlockAction(this, 5));
-
+                addToBot(new GainBlockAction(this, 5 + dex));
                 if (hasPower(MonsterVigor.POWER_ID)) {
                     addToBot(new RemoveSpecificPowerAction(this, this, MonsterVigor.POWER_ID));
                 }
                 break;
             case 3:
-                addToBot(new GainBlockAction(this, 10));
+                if (this.hasPower(DexterityPower.POWER_ID)){
+                    dex = getPower(DexterityPower.POWER_ID).amount;
+                }
+                addToBot(new GainBlockAction(this, 10 + (dex * 2)));
                 break;
             case 4:
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(2), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
