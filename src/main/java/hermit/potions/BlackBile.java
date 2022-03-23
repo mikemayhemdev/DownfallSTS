@@ -1,10 +1,13 @@
 package hermit.potions;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -51,7 +54,7 @@ public class BlackBile extends AbstractPotion {
 
         tips.clear();
         tips.add(new PowerTip(name, description));
-        tips.add(new PowerTip(keyword_name, keyword_description));
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("hermit:bruise")), GameDictionary.keywords.get("hermit:bruise")));
     }
 
     // See that description? It has DESCRIPTIONS[1] instead of just hard-coding the "text " + potency + " more text" inside.

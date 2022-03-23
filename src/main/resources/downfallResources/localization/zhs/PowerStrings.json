@@ -55,7 +55,7 @@
   "downfall:WatcherAngryPower": {
     "NAME": "无遏狂怒",
     "DESCRIPTIONS": [
-      "当回合结束时，如果 #y观者 的生命不高于 #b50% 时将永久进入 #y暴怒 。 NL #y观者暴怒 造成和受到的伤害提高 #b50% 而不是 #b100% 。"
+      "#y观者 的回合结束时，如果她的生命不高于 #b50% ，她将永久进入 #y暴怒 。 NL #y暴怒 造成和受到的伤害提高 #b50% 而非 #b100% 。"
     ]
   },
   "downfall:NeowUnbridledRage": {
@@ -95,13 +95,13 @@
   "downfall:SilentShivTimeEaterPower": {
     "NAME": "满包小刀",
     "DESCRIPTIONS": [
-      "每回合你打出前两张 #b2 耗能以上的牌时， #y静默猎手 获得一张 #y小刀 。"
+      "每回合你初次打出 #b2 耗能以上的牌时， #y静默猎手 获得两张 #y小刀 。"
       ]
   },
   "downfall:NeowBagOfKnives": {
     "NAME": "满包小刀",
     "DESCRIPTIONS": [
-      "每回合你打出前两张 #b2 耗能以上的牌时， 受到 #y4 点伤害。"
+      "每回合你初次打出 #b2 耗能以上的牌时， 受到 #y4 点伤害两次。"
     ]
   },
   "downfall:SilentMirrorImagePower": {
@@ -113,7 +113,7 @@
   "downfall:NeowSeeingDouble": {
     "NAME": "复视",
     "DESCRIPTIONS": [
-      "每回合你对 #y涅奥 的第一张 #y攻击牌 不造成伤害。"
+      "#y涅奥 的回合开始时会使用烟幕来隐蔽它自己。你的第一张 #y攻击牌 对它不造成伤害。"
     ]
   },
   "downfall:SilentPoisonPower": {
@@ -131,13 +131,13 @@
   "downfall:DefectVoidPower": {
     "NAME": "能量窃取",
     "DESCRIPTIONS": [
-      "每当 #y故障机器人 生成 #y虚空 时，其将加入你的抽牌堆顶部。"
+      "每当 #y故障机器人 生成 #y虚空 时，反而将其加入你的抽牌堆顶部。"
     ]
   },
   "downfall:NeowEnergyThief": {
     "NAME": "能量窃取",
     "DESCRIPTIONS": [
-      "每当 #y涅奥 将 #r诅咒 加入你的抽牌堆时，她将同时加入 #b1 张 #y虚空 。"
+      "每当 #y涅奥 将 #r诅咒 加入你的抽牌堆时，同时加入 #b1 张 #y虚空 。"
     ]
   },
   "downfall:DefectAncientConstructPower": {
@@ -168,7 +168,7 @@
   "downfall:IroncladStatusPower": {
     "NAME": "同步",
     "DESCRIPTIONS": [
-      "每当 #y铁甲战士 生成 #y状态牌 时，将其复制品加入你的弃牌堆。"
+      "每当 #y铁甲战士 生成 #y状态牌 时，反而将其加入你的弃牌堆。"
     ]
   },
   "downfall:NeowSyncronize": {
@@ -294,7 +294,7 @@
     "DESCRIPTIONS": [
       " #y亡命之徒 每回合都进入专注状态，使它的 #y精准 牌触发额外效果。 本回合再对其造成 #b",
       " 点伤害来打破它的专注状态。",
-      " 它本回合已被扰乱，不触发 #精准 效果。"
+      " 它本回合已被扰乱，不触发 #y精准 效果。"
     ]
   },
   "downfall:HermitWheelOfFortune": {

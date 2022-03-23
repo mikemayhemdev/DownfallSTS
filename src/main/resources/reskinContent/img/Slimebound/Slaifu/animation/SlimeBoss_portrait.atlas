@@ -2,7 +2,7 @@
 SlimeBoss_portrait.png
 size: 4096,4096
 format: RGBA8888
-filter: Linear,Linear
+filter: MipMapLinearLinear,Linear
 repeat: none
 slime2/slime2_ball
   rotate: false

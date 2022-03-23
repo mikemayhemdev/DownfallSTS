@@ -2,7 +2,7 @@
 Hexaghost_self_downfall.png
 size: 512,1024
 format: RGBA8888
-filter: Linear,Linear
+filter: MipMapLinearLinear,Linear
 repeat: none
 05_out_self/hair_back
   rotate: false

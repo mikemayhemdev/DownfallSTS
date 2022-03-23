@@ -5,7 +5,9 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
@@ -51,6 +53,7 @@ public class Tonic extends AbstractPotion {
         tips.clear();
         tips.add(new PowerTip(name, description));
         tips.add(new PowerTip(keyword_name, keyword_description));
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("hermit:rugged")), GameDictionary.keywords.get("hermit:rugged")));
     }
     // See that description? It has DESCRIPTIONS[1] instead of just hard-coding the "text " + potency + " more text" inside.
     // DO NOT HARDCODE YOUR STRINGS ANYWHERE, it's really bad practice to have "Strings" in your code:
