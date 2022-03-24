@@ -6,7 +6,9 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.SaveHelper;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
+import slimebound.patches.SlimeboundEnum;
 
 import java.io.*;
 
