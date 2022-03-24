@@ -14,18 +14,18 @@ import java.io.*;
 public class MigrateSavePatch {
     @SpirePrefixPatch
     public static void Prefix(CardCrawlGame __instance) {
-        if (downfallMod.STEAM_MODE) {
+        if (downfallMod.STEAM_MODE && !SaveHelper.saveExists()) {
             System.out.println("VEX LOOK HERE! -> -> -> Attempting to migrate save.");
             String q = Gdx.files.getLocalStoragePath();
-            if (q.contains("SlayTheSpire")) {
-                q = q.replaceAll("SlayTheSpire", "Downfall - A Slay the Spire Fan Expansion");
-            }
+            q = q + "preferences";
             System.out.println(q);
+            new File(q).mkdirs();
             String result = q.split(String.format(FunctionHelper.WITH_DELIMITER, "common"))[0] + "common\\";
             System.out.println(result);
             String path = result + "SlayTheSpire\\preferences";
             System.out.println(path);
             try {
+                System.out.println("COPYING DIRECTORY...");
                 copyDirectory(new File(path), new File(q));
                 System.out.println("SAVE MIGRATION SUCCESS!");
             } catch (IOException e) {
@@ -40,11 +40,14 @@ public class MigrateSavePatch {
             throws IOException {
         if (sourceLocation.isDirectory()) {
             String[] files = sourceLocation.list();
+            System.out.println(files.toString());
             for (int i = 0; i < files.length; i++) {
                 copyDirectory(new File(sourceLocation, files[i]),
                         new File(targetLocation, files[i]));
             }
         } else {
+            System.out.println(sourceLocation);
+            System.out.println(targetLocation);
             InputStream in = new FileInputStream(sourceLocation);
             OutputStream out = new FileOutputStream(targetLocation);
             byte[] buf = new byte[1024];

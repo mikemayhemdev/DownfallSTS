@@ -8,6 +8,7 @@ package charbosses.powers.bossmechanicpowers;
 import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Hermit.NewAge.ArchetypeAct2WheelOfFateNewAge;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -34,7 +35,17 @@ public class HermitWheelOfFortune extends AbstractTwoAmountBossMechanicPower {
     }
 
     public void updateDescription() {
-        this.description = DESC[0] + amount2 + DESC[1];
+        this.description = DESC[0] + CARDS_TO_STR + DESC[1];
+    }
+
+    @Override
+    public void onCardDraw(AbstractCard card) {
+        amount2 -= 1;
+        if (amount2 == 0) {
+            amount2 = CARDS_TO_STR;
+            addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, 1), 1));
+        }
+        updateDescription();
     }
 
     @Override
