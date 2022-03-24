@@ -167,7 +167,7 @@ public class downfallMod implements
         {
     public static final String modID = "downfall";
 
-    public static final boolean STEAM_MODE = true;
+    public static final boolean STEAM_MODE = false;
 
 
     public static boolean choosingBossRelic = false;
