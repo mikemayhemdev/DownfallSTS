@@ -49,6 +49,8 @@ public class EndTurnAdvance {
 
                 }
             }
+
+            GhostflameHelper.hexaGhostFlames.get(5).extinguish();
         }
         downfallMod.playedBossCardThisTurn = false;
     }

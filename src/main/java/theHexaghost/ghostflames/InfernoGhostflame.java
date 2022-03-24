@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -66,8 +67,8 @@ public class InfernoGhostflame extends AbstractGhostflame {
             AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(j);
             if (gf.charged) {
                 atb(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-                //atb(new WaitAction(0.1F));  //Critical for keeping the UI not broken, and helps sell the anim
-                // atb(new ExtinguishAction(gf));
+                atb(new WaitAction(0.1F));  //Critical for keeping the UI not broken, and helps sell the anim
+                if (gf != this) atb(new ExtinguishAction(gf));
                 amountOfIgnitedGhostflames++;
             }
         }
@@ -77,7 +78,9 @@ public class InfernoGhostflame extends AbstractGhostflame {
         }
         */
 
-        atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(1), 1));
+        if (amountOfIgnitedGhostflames == 6) {
+            atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(2), 2));
+        }
 
         DoomsdayCheck(amountOfIgnitedGhostflames);
     }
