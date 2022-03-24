@@ -287,8 +287,16 @@ public class HermitMod implements
     // ====== YOU CAN EDIT AGAIN ======
 
 
+    private static boolean alreadyInitialized = false;
+
     @SuppressWarnings("unused")
     public static void initialize() {
+
+        if (alreadyInitialized) {
+            return;
+        }
+        alreadyInitialized = true;
+        // ...
 
         HermitMod hermitMod = new HermitMod();
 
@@ -421,10 +429,6 @@ public class HermitMod implements
         BaseMod.addRelic(new BrassTacks(), RelicType.SHARED);
         BaseMod.addRelic(new BloodyTooth(), RelicType.SHARED);
         BaseMod.addRelic(new Horseshoe(), RelicType.SHARED);
-
-
-
-
 
 
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file

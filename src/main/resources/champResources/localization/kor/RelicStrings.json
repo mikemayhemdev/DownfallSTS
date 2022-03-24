@@ -59,7 +59,7 @@
     "NAME": "싸움용 설계도",
     "FLAVOR": "방법 1. 적을 처리한다.",
     "DESCRIPTIONS": [
-      "내 턴 종료 시 #y자세를 취하고 있지 않다면 #y방어도를 #b6 얻습니다."
+      "내 턴 종료 시 #y자세를 취하고 있지 않다면 다음 턴에 카드를 1 장 더 뽑습니다."
     ]
   },
   "champ:GladiatorsBookOfMartialProwess": {
