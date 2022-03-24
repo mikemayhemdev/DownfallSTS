@@ -40,7 +40,7 @@ public class Eclipse extends AbstractBossMechanicPower {
     }
 
     @Override
-    public void atStartOfTurnPostDraw() {
+    public void atStartOfTurn() {
         flash();
         AbstractCard q = new ImpendingDoom();
         CardModifierManager.addModifier(q, new EtherealMod());
