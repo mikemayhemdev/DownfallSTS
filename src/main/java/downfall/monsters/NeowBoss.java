@@ -72,7 +72,7 @@ public class NeowBoss extends AbstractMonster {
 
     public ArrayList<String> bossesToRez = new ArrayList<>();
     public ArrayList<String> bossesRezzed = new ArrayList<>();
-    private static int StrGain = 1;
+    private static int StrGain = 3;
 
     public NeowBoss() {
         super(NAME, ID, 600, HB_X, HB_Y, HB_W, HB_H, "images/npcs/neow/skeleton.png");
