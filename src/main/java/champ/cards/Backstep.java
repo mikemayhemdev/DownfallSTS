@@ -44,8 +44,5 @@ public class Backstep extends AbstractChampCard {
 
     public void upp() {
         upgradeBlock(3);
-        upgradeMagicNumber(1);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 }

@@ -82,11 +82,7 @@ public class LeechEnergy extends AbstractSlimeboundCard {
         if (!this.upgraded) {
 
             upgradeName();
-
-            upgradeMagicNumber(1);
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
-
+            upgradeDamage(3);
         }
 
     }
