@@ -18,8 +18,8 @@
     "NAME": "Vexing Draught",
     "DESCRIPTIONS": [
       "Gain #b",
-      " Strength and #b",
-      " Dexterity. NL Add two #yBurn+ #yStatus cards to your draw pile."
+      " #yStrength and #b",
+      " #yDexterity. NL Add two #yBurn+ cards to your draw pile."
     ]
   },
   "bronze:BuildAFunctionPotion": {
