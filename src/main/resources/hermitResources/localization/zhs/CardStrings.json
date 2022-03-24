@@ -208,7 +208,7 @@
   },
   "hermit:EternalForm": {
     "NAME": "永恒形态",
-    "DESCRIPTION": "每回合打出的前 !M! 张牌耗能为0。 NL 每回合开始时不获得能量。"
+    "DESCRIPTION": "每回合开始时不获得 能量 ，但打出的前 !M! 张牌耗能为0。"
   },
   "hermit:FullyLoaded": {
     "NAME": "整装待发",
