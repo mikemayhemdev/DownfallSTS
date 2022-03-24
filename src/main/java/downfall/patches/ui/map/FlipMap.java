@@ -1,7 +1,6 @@
 package downfall.patches.ui.map;
 
 import chronoMods.TogetherManager;
-import chronoMods.coop.CoopCourierRoom;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
@@ -13,16 +12,19 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.TheEnding;
 import com.megacrit.cardcrawl.helpers.Hitbox;
-import com.megacrit.cardcrawl.map.*;
-import com.megacrit.cardcrawl.random.Random;
-import com.megacrit.cardcrawl.relics.Courier;
+import com.megacrit.cardcrawl.map.DungeonMap;
+import com.megacrit.cardcrawl.map.MapEdge;
+import com.megacrit.cardcrawl.map.MapRoomNode;
+import com.megacrit.cardcrawl.map.RoomTypeAssigner;
 import com.megacrit.cardcrawl.rooms.*;
 import com.megacrit.cardcrawl.screens.DungeonMapScreen;
 import com.megacrit.cardcrawl.ui.buttons.DynamicBanner;
 import downfall.downfallMod;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.actlikeit.MapCompatiblity;
-import javassist.*;
+import downfall.util.ModCrossoverHelperClass;
+import javassist.CannotCompileException;
+import javassist.CtBehavior;
 import javassist.expr.ExprEditor;
 import javassist.expr.FieldAccess;
 import javassist.expr.MethodCall;
@@ -110,7 +112,7 @@ public class FlipMap {
             ArrayList<ArrayList<MapRoomNode>> map = new ArrayList();
 
             MapRoomNode courierNode = new MapRoomNode(3, 0);
-            courierNode.room = new CoopCourierRoom();
+            courierNode.room = ModCrossoverHelperClass.returnCourierRoom();
             MapRoomNode restNode = new MapRoomNode(3, 1);
             restNode.room = new RestRoom();
             MapRoomNode shopNode = new MapRoomNode(3, 2);
