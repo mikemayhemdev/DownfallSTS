@@ -415,7 +415,7 @@
     "NAME": "Sharpened Fragment",
     "FLAVOR": "Once a broken statue - now a makeshift weapon.",
     "DESCRIPTIONS": [
-      "At the start of each turn, add a Crystal Shiv to your hand."
+      "At the start of each turn, add a #yCrystal #yShiv to your hand."
     ]
   },
   "downfall:RedIOU": {
@@ -441,7 +441,7 @@
     "NAME": "Knowing Skull",
     "FLAVOR": "Put me down!",
     "DESCRIPTIONS": [
-      "At the start of each combat, you may Wish for Souls, Success, or a Pick me Up."
+      "At the start of each combat, you may wish for Souls, Success, or a Pick me Up."
     ]
   },
   "downfall:HeartBlessingRed": {

@@ -52,7 +52,6 @@ public class Tonic extends AbstractPotion {
 
         tips.clear();
         tips.add(new PowerTip(name, description));
-        tips.add(new PowerTip(keyword_name, keyword_description));
         this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("hermit:rugged")), GameDictionary.keywords.get("hermit:rugged")));
     }
     // See that description? It has DESCRIPTIONS[1] instead of just hard-coding the "text " + potency + " more text" inside.
