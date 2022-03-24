@@ -35,9 +35,6 @@ public class GutPunch extends AbstractChampCard {
 
     public void upp() {
         upgradeDamage(3);
-        upgradeMagicNumber(1);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 
 
