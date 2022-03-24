@@ -9,7 +9,7 @@
   "hexamod:DoubleChargePotion": {
     "NAME": "Combustive Fluid",
     "DESCRIPTIONS": [
-      "#yForce-Ignite the #yActive Ghostflame #b",
+      "#yIgnite the current Ghostflame #b",
       " times."
     ]
   },

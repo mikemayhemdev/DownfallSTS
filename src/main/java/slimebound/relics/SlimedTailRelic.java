@@ -20,7 +20,6 @@ public class SlimedTailRelic extends CustomRelic {
     public static final String IMG_PATH = "relics/slimedTail.png";
     public static final String IMG_PATH_LARGE = "relics/slimedTailLarge.png";
     public static final String OUTLINE_IMG_PATH = "relics/slimedTailOutline.png";
-    private static final int HP_PER_CARD = 1;
     private boolean isActive = false;
 
     public SlimedTailRelic() {
@@ -37,6 +36,7 @@ public class SlimedTailRelic extends CustomRelic {
 
     public void atBattleStart() {
         this.isActive = true;
+        this.grayscale = false;
         AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
             public void update() {
                 if (SlimedTailRelic.this.isActive && AbstractDungeon.player.isBloodied) {
@@ -60,7 +60,7 @@ public class SlimedTailRelic extends CustomRelic {
 
         this.isActive = false;
         AbstractDungeon.player.hand.applyPowers();
-        this.img = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/relics/slimedTailUsed.png");
+        this.grayscale = true;
 
         this.usedUp = true;
         this.description = this.DESCRIPTIONS[1];
@@ -70,8 +70,6 @@ public class SlimedTailRelic extends CustomRelic {
     }
 
     public void onBloodied() {
-
-
         if (this.isActive && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             activate();
         }
@@ -81,8 +79,7 @@ public class SlimedTailRelic extends CustomRelic {
 
     public void onVictory() {
         if (!isActive) {
-            this.img = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/relics/slimedTail.png");
-
+            this.grayscale = false;
             this.isActive = true;
             this.usedUp = false;
             this.description = this.getUpdatedDescription();

@@ -61,8 +61,8 @@
   },
   "Guardian:TwinSlam": {
     "NAME": "Twin Slam",
-    "DESCRIPTION": "Deal !D! damage. NL Add *Second *Strike into your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add *Second *Strike+ into your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Add *Second *Slam into your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add *Second *Slam+ into your hand."
   },
   "Guardian:GuardianWhirl": {
     "NAME": "Guardian Whirl",

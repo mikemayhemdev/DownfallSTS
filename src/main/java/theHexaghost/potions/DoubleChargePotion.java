@@ -34,8 +34,7 @@ public class DoubleChargePotion extends CustomPotion {
         this.description = (DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1]);
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
-        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle(HexaMod.makeID("force-ignite"))), BaseMod.getKeywordDescription(HexaMod.makeID("force-ignite"))));
-        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle(HexaMod.makeID("active"))), BaseMod.getKeywordDescription(HexaMod.makeID("active"))));
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle(HexaMod.makeID("ignite"))), BaseMod.getKeywordDescription(HexaMod.makeID("ignite"))));
     }
 
     public void use(AbstractCreature target) {
