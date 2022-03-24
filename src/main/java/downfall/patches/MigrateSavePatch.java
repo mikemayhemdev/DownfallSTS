@@ -14,12 +14,20 @@ import java.io.*;
 public class MigrateSavePatch {
     @SpirePrefixPatch
     public static void Prefix(CardCrawlGame __instance) {
-        if (!SaveHelper.saveExists() && downfallMod.STEAM_MODE) {
+        if (downfallMod.STEAM_MODE) {
+            System.out.println("VEX LOOK HERE! -> -> -> Attempting to migrate save.");
             String q = Gdx.files.getLocalStoragePath();
-            String result = q.split(String.format(FunctionHelper.WITH_DELIMITER, "common"))[0];
-            String path = result + "\\SlayTheSpire\\preferences";
+            if (q.contains("SlayTheSpire")) {
+                q = q.replaceAll("SlayTheSpire", "Downfall - A Slay the Spire Fan Expansion");
+            }
+            System.out.println(q);
+            String result = q.split(String.format(FunctionHelper.WITH_DELIMITER, "common"))[0] + "common\\";
+            System.out.println(result);
+            String path = result + "SlayTheSpire\\preferences";
+            System.out.println(path);
             try {
                 copyDirectory(new File(path), new File(q));
+                System.out.println("SAVE MIGRATION SUCCESS!");
             } catch (IOException e) {
                 System.out.println("SAVE MIGRATION FAILURE!");
                 e.printStackTrace();
