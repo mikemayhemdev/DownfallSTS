@@ -34,7 +34,7 @@ public class CovetAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
             if (this.p.hand.isEmpty()) {
-                this.addToBot(new DrawCardAction(1));
+                this.addToBot(new DrawCardAction(this.extra_draw));
                 this.isDone = true;
             } else if (this.p.hand.size() == 1) {
                 this.addToBot(new DrawCardAction(this.extra_draw));

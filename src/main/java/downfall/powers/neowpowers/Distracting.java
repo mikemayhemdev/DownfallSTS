@@ -46,11 +46,13 @@ public class Distracting extends AbstractBossMechanicPower {
         appliedThisTurn = false;
     }
 
-    public void onInflictDamage(DamageInfo info, int damageAmount, AbstractCreature target) {
+    @Override
+    public int onAttacked(DamageInfo info, int damageAmount) {
         if (damageAmount > 0 && info.type != DamageInfo.DamageType.THORNS && !appliedThisTurn) {
-            this.addToBot(new ApplyPowerAction(target, owner, new DeEnergizedPower(1), 1));
+            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DeEnergizedPower(1), 1));
             appliedThisTurn = true;
         }
+        return damageAmount;
     }
 
 

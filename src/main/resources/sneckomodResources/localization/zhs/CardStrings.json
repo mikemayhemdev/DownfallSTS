@@ -170,8 +170,8 @@
   },
   "sneckomod:Rotation": {
     "NAME": "轮换",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 丢弃所有的 sneckomod:异色 牌。 NL 抽等量加 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 丢弃所有的 sneckomod:异色 牌。 NL 抽等量加 !M! 张牌。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 丢弃所有 sneckomod:异色 牌。 NL 抽等量张牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 丢弃所有 sneckomod:异色 牌。 NL 抽等量加 !M! 张牌。"
   },
   "sneckomod:SerpentMind": {
     "NAME": "异色形态",
@@ -215,8 +215,8 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。手牌中每有一张 sneckomod:异色 牌，获得 格挡 提高 !M! 点。"
   },
   "sneckomod:DangerNoodle": {
-    "NAME": "危险长条",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 手牌中每有一张 sneckomod:异色 牌重复一次，并将这些牌 消耗 。"
+    "NAME": "贪吃蛇",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一张 sneckomod:异色 手牌再重复一次，之后消耗 它们。"
   },
   "sneckomod:SerpentIdol": {
     "NAME": "蛇神像",
@@ -224,8 +224,8 @@
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "变废为宝",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张牌。 NL 获得与其耗能相等的 [E] 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张牌。 NL 获得与其耗能相等的 [E] 。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张手牌。 NL 获得与其耗能相等的 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张手牌。 NL 获得与其耗能相等的 [E] 。"
   },
   "sneckomod:DiceBlock": {
     "NAME": "骰子格挡",
@@ -265,7 +265,7 @@
   },
   "sneckomod:RainOfDice": {
     "NAME": "骰子雨",
-    "DESCRIPTION": "对随机一名敌人造成 !qqq! - !D! 点伤害 !M! 次。 NL sneckomod:混淆 本牌并返回手牌。"
+    "DESCRIPTION": "对随机一名敌人造成 !qqq! - !D! 点伤害。 NL sneckomod:混淆 本牌并返回手牌。"
   },
   "sneckomod:DiceCrush": {
     "NAME": "骰子撞击",

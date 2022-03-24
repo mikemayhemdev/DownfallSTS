@@ -72,7 +72,7 @@ public class NeowBoss extends AbstractMonster {
 
     public ArrayList<String> bossesToRez = new ArrayList<>();
     public ArrayList<String> bossesRezzed = new ArrayList<>();
-
+    private static int StrGain = 1;
 
     public NeowBoss() {
         super(NAME, ID, 600, HB_X, HB_Y, HB_W, HB_H, "images/npcs/neow/skeleton.png");
@@ -87,9 +87,12 @@ public class NeowBoss extends AbstractMonster {
 
 
         if (AbstractDungeon.ascensionLevel >= 9) {
-            setHp(650);
+            StrGain = 2;
         } else {
             setHp(600);
+        }
+        if (AbstractDungeon.ascensionLevel >= 18) {
+            StrGain = 2;
         }
 
 
@@ -217,8 +220,8 @@ public class NeowBoss extends AbstractMonster {
                     AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.6F));
                     AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(minion.hb.cX, minion.hb.cY, this.hb.cX + EYE1_X, this.hb.cY + EYE1_Y, Color.GOLD), 0.25F));
                     //AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo) this.damage.get(0), AbstractGameAction.AttackEffect.FIRE, false, true));
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, this, new StrengthPower(minion, 1), 1));
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, this, new DexterityPower(minion, 1), 1));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, this, new StrengthPower(minion, StrGain), StrGain));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, this, new DexterityPower(minion, StrGain), StrGain));
                     AbstractDungeon.actionManager.addToBottom(new HealAction(minion, this, 15));
                 } else {
                     escape();
