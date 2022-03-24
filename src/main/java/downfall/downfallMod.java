@@ -233,7 +233,7 @@ public class downfallMod implements
             // Insert other languages here
             Settings.GameLanguage.ENG,
             Settings.GameLanguage.ZHS,
-            Settings.GameLanguage.JPN,
+           // Settings.GameLanguage.JPN
             Settings.GameLanguage.KOR
     };
     public static ReplaceData[] wordReplacements;
@@ -1665,6 +1665,8 @@ public class downfallMod implements
     }
 
      */
+
+
 
     public enum otherPackagePaths {
         PACKAGE_SLIME,

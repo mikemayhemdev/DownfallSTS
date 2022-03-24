@@ -332,8 +332,8 @@
   },
   "hexamod:FifthSeal": {
     "NAME": "Sixth Seal",
-    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional non-Sixth Seal card reward.",
-    "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, gain an additional non-Sixth Seal card reward."
+    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional non-Sixth *Seal card reward.",
+    "UPGRADE_DESCRIPTION": "hexamod:Seal. NL At the end of combat, gain an additional non-Sixth *Seal card reward."
   },
   "hexamod:SixthSeal": {
     "NAME": "Fifth Seal",

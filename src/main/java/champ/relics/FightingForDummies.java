@@ -4,6 +4,8 @@ import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
 import champ.actions.OpenerReduceCostAction;
 import champ.util.OnOpenerSubscriber;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -26,7 +28,7 @@ public class FightingForDummies extends CustomRelic {
     @Override
     public void onPlayerEndTurn() {
         if (AbstractDungeon.player.stance instanceof NeutralStance){
-            addToBot(new GainBlockAction(AbstractDungeon.player,6));
+            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player, 1), 1));
         }
     }
 
