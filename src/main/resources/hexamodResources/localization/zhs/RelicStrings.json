@@ -3,7 +3,7 @@
     "NAME": "精神烙印",
     "FLAVOR": "对约束的一道保护。",
     "DESCRIPTIONS": [
-      "每回合第一次 #y点燃 时，获得 #b5 点 #y格挡 。"
+      "每回合初次 #y点燃 时，获得 #b5 点 #y格挡 。"
     ]
   },
   "hexamod:TheBrokenSeal": {
@@ -18,7 +18,7 @@
     "FLAVOR": "看看我们能不能做得... 更好。",
     "DESCRIPTIONS": [
       "替换 #r",
-      ".[]  NL 每回合第一次 #y点燃 时，获得 [E] 。"
+      ".[]  NL 每回合初次 #y点燃 时，获得 [E] 。"
     ]
   },
   "hexamod:IceCube": {
@@ -74,7 +74,7 @@
     "NAME": "高热之杖",
     "FLAVOR": "火焰护身！火焰助力。",
     "DESCRIPTIONS": [
-      "每场战斗第一次打出 #y能力 牌时，获得 #b6 点 #y格挡 和 #b1 点 #y力量 。"
+      "每场战斗初次打出 #y能力 牌时，获得 #b6 点 #y格挡 和 #b1 点 #y力量 。"
     ]
   },
   "hexamod:CandleOfCauterizing": {
