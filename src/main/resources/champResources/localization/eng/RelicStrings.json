@@ -59,7 +59,7 @@
     "NAME": "Fighting for Dummies",
     "FLAVOR": "Step 1. Defeat the enemy",
     "DESCRIPTIONS": [
-      "If you end your turn while in no #yStance, gain #b6 #yBlock."
+      "If you end your turn while in no #yStance, draw an additional card next turn."
     ]
   },
   "champ:GladiatorsBookOfMartialProwess": {
