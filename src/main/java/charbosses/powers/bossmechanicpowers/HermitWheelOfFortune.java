@@ -22,7 +22,7 @@ public class HermitWheelOfFortune extends AbstractTwoAmountBossMechanicPower {
     public static final String NAME;
     public static final String[] DESC;
 
-    public static final int CARDS_TO_STR = 13;
+    public static final int CARDS_TO_STR = 6;
 
     public HermitWheelOfFortune(AbstractCreature owner) {
         this.name = NAME;
@@ -37,18 +37,6 @@ public class HermitWheelOfFortune extends AbstractTwoAmountBossMechanicPower {
 
     public void updateDescription() {
         this.description = DESC[0] + CARDS_TO_STR + DESC[1];
-    }
-
-    @Override
-    public void onCardDraw(AbstractCard card) {
-        if (card instanceof AbstractBossCard) {
-            amount2 -= 1;
-            if (amount2 == 0) {
-                amount2 = CARDS_TO_STR;
-                addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, 1), 1));
-            }
-            updateDescription();
-        }
     }
 
     @Override
