@@ -226,7 +226,7 @@ public class NeowBoss extends AbstractMonster {
                         @Override
                         public void update() {
                             isDone = true;
-                            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
+                            AbstractDungeon.getCurrRoom().endBattle();
                         }
                     });
                 }
