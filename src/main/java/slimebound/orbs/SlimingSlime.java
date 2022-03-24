@@ -43,7 +43,7 @@ public class SlimingSlime
 
     public void activateEffectUnique() {
 
-        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_LIGHT, this, false, true, false, 2 + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player), false, 0, false));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_LIGHT, this, false, true, false, debuffAmount + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player), false, 0, false));
 
     }
 
