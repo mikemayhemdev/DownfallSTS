@@ -101,7 +101,7 @@
   "downfall:NeowBagOfKnives": {
     "NAME": "满包小刀",
     "DESCRIPTIONS": [
-      "每回合你初次打出 #b2 耗能以上的牌时， 受到 #y4 点伤害两次。"
+      "每回合你初次打出 #b2 耗能以上的牌时， 受到 #b4 点伤害两次。"
     ]
   },
   "downfall:SilentMirrorImagePower": {
