@@ -322,7 +322,7 @@
   },
   "champ:Improvising": {
     "NAME": "Improvising",
-    "DESCRIPTION": "The first time you use a champ:Combo each turn, return it to your hand. NL It costs 0 until played."
+    "DESCRIPTION": "The first time you play a champ:Combo each turn, return it to your hand. NL It costs 0 until played."
   },
   "champ:CalledShot": {
     "NAME": "Refreshment",
