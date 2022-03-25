@@ -38,7 +38,7 @@ public class Silent extends GauntletBoss {
 
     int turnNum = 0;
     public Silent(float x, float y) {
-        super(NAME, ID, 70 * 3, -4.0f, -16.0f, 240.0f, 290.0f, null, x, y);
+        super(NAME, ID, 70 * 2, -4.0f, -16.0f, 240.0f, 290.0f, null, x, y);
         this.loadAnimation("images/characters/theSilent/idle/skeleton.atlas", "images/characters/theSilent/idle/skeleton.json", 1.0f);
         final AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
         this.stateData.setMix("Hit", "Idle", 0.1f);

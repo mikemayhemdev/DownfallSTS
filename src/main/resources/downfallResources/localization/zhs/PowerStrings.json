@@ -101,7 +101,7 @@
   "downfall:NeowBagOfKnives": {
     "NAME": "满包小刀",
     "DESCRIPTIONS": [
-      "每回合你初次打出 #b2 耗能以上的牌时， 受到 #y4 点伤害两次。"
+      "每回合你初次打出 #b2 耗能以上的牌时， 受到 #b4 点伤害两次。"
     ]
   },
   "downfall:SilentMirrorImagePower": {
@@ -143,13 +143,13 @@
   "downfall:DefectAncientConstructPower": {
     "NAME": "先古造物",
     "DESCRIPTIONS": [
-      "战斗开始时召唤2个 #y铜制圆球 。 NL 它的回合结束时时如果没有 #y人工制品 ，获得 1 层 #y人工制品 。"
+      "战斗开始时召唤2个 #y铜制圆球 。 NL 敌人的回合结束时如果 #y故障机器人 没有 #y人工制品 ，获得 1 层。"
     ]
   },
   "downfall:NeowAncientConstruct": {
     "NAME": "先古造物",
     "DESCRIPTIONS": [
-      "每回合开始时如果没有 #y人工制品 ，获得 #b2 层 #y人工制品 。"
+      "每回合开始时如果 #y涅奥 没有 #y人工制品 ，获得 #b2 层。"
     ]
   },
   "downfall:DefectCuriosity": {
@@ -301,7 +301,7 @@
     "NAME": "幸运之轮",
     "DESCRIPTIONS": [
       "每当你对 #y亡命之徒 造成一段攻击时，它丢弃最左边的牌并抽一张牌。每丢弃 #b",
-      "张牌，它获得 #b1 点 力量 。"
+      " 张牌，它获得 #b1 点 力量 。"
     ]
   },
   "downfall:HermitDoomsday": {
@@ -330,7 +330,7 @@
     "NAME": "死亡之轮",
     "DESCRIPTIONS": [
       "你每打出 #b",
-      " 张牌，#y涅奥 获得 #b",
+      " 张牌， #y涅奥 获得 #b",
       " 点 #y力量 。"
     ]
   },
