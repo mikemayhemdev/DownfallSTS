@@ -21,10 +21,13 @@ public class FocusedDefense extends AbstractChampCard {
         baseBlock = 5;
         baseMagicNumber = magicNumber = 5;
 
+        tags.add(ChampMod.OPENER);
+        tags.add(ChampMod.OPENERBERSERKER);
         postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        berserkOpen();
         blck();
         applyToSelf(new VigorPower(p, magicNumber));
     }

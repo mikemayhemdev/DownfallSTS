@@ -42,8 +42,6 @@ public class UltimateStance extends AbstractChampCard {
     }
 
     public void upp() {
-        exhaust = false;
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeMagicNumber(1);
     }
 }

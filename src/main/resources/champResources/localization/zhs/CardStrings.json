@@ -35,7 +35,7 @@
   },
   "champ:FlashCut": {
     "NAME": "拔刀打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:防守 champ:连段 ：获得 !M! 层 champ:反击 和 !B! 点 格挡 。 NL 进入 champ:防守 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:防守 champ:连段 ：获得 !M! 层 champ:反击 和 !B! 点 格挡 。 "
   },
   "champ:Balance": {
     "NAME": "平衡",
@@ -58,7 +58,7 @@
   },
   "champ:FocusedDefense": {
     "NAME": "下潜摇摆",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 活力 。"
+    "DESCRIPTION": "进入 champ:战狂 。 获得 !B! 点 格挡 。 NL 获得 !M! 层 活力 。"
   },
   "champ:FocusedBerserking": {
     "NAME": "全力以赴",
@@ -70,8 +70,7 @@
   },
   "champ:Backstep": {
     "NAME": "后撤",
-    "DESCRIPTION": "进入 champ:防守 。 NL 获得 !B! 点 格挡 。 NL champ:战狂 champ:连段 ：获得 [E] 并抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "进入 champ:防守 。 NL 获得 !B! 点 格挡 。 NL champ:战狂 champ:连段 ：获得 [E] 并抽 !M! 张牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL champ:战狂 champ:连段 ：获得 [E] 并抽 !M! 张牌。"
   },
   "champ:Aggression": {
     "NAME": "侵略",
@@ -94,13 +93,12 @@
   },
   "champ:GutPunch": {
     "NAME": "腹拳",
-    "DESCRIPTION": "进入 champ:战狂 。 NL 造成 !D! 点伤害。 NL champ:防守 champ:连段 ：获得 [E] 并抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "进入 champ:战狂 。 NL 造成 !D! 点伤害。 NL champ:防守 champ:连段 ：获得 [E] 并抽 !M! 张牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:连段 ：在 1 回合内处于 champ:终极 。 NL 消耗 。"
   },
   "champ:FanOfKnives": {
     "NAME": "刀阵",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:战狂 champ:连段 ：造成两次伤害。 NL 进入 champ:战狂 。",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:战狂 champ:连段 ：造成三次伤害。 NL 进入 champ:战狂 。"
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:战狂 champ:连段 ：造成三次伤害。"
   },
   "champ:Devastate": {
     "NAME": "坏灭",
@@ -243,8 +241,8 @@
   },
   "champ:Shatter": {
     "NAME": "粉碎",
-    "DESCRIPTION": "移除敌人的 格挡 。 NL 造成 !D! 点伤害。 NL champ:战狂 champ:连段 ：给予 !M! 层 易伤 。",
-    "UPGRADE_DESCRIPTION": "移除敌人的 格挡 与 人工制品 。 NL 造成 !D! 点伤害。 NL champ:战狂 champ:连段 ：给予 !M! 层 易伤 。"
+    "DESCRIPTION": "移除敌人的 格挡 。 NL 造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "移除敌人的 格挡 与 人工制品 。 NL 造成 !D! 点伤害。"
   },
   "champ:EnragedBash": {
     "NAME": "怒斩",
@@ -365,7 +363,7 @@
   },
   "champ:GladiatorStyle": {
     "NAME": "抹杀",
-    "DESCRIPTION": "champ:疲劳 10。 NL 获得 !M! 点 力量 和 敏捷 。"
+    "DESCRIPTION": "champ:疲劳 !M!。 NL 获得 2 点 力量 和 敏捷 。"
   },
   "champ:BerserkerStyle": {
     "NAME": "狂暴战法",

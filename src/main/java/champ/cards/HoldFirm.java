@@ -14,13 +14,13 @@ public class HoldFirm extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, rare
 
-    private static final int BLOCK = 15;
+    private static final int BLOCK = 12;
     private static final int UPG_BLOCK = 5;
 
     public HoldFirm() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseBlock = BLOCK;
-        magicNumber = baseMagicNumber = 10;
+        magicNumber = baseMagicNumber = 12;
        // tags.add(ChampMod.TECHNIQUE);
         postInit();
         loadJokeCardImage(this, "HoldFirm.png");
@@ -34,7 +34,7 @@ public class HoldFirm extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(5);
+        upgradeMagicNumber(4);
         upgradeBlock(UPG_BLOCK);
     }
 }

@@ -19,19 +19,19 @@ public class GladiatorStyle extends AbstractChampCard {
     public GladiatorStyle() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
        // this.tags.add(ChampMod.OPENER);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = myHpLossCost = 20;
        // this.tags.add(ChampMod.OPENERGLADIATOR);
-        myHpLossCost = 10;
         postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        fatigue(10);
-        applyToSelf(new StrengthPower(p, magicNumber));
-        applyToSelf(new DexterityPower(p, magicNumber));
+        fatigue(magicNumber);
+        applyToSelf(new StrengthPower(p, 2));
+        applyToSelf(new DexterityPower(p, 2));
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(-10);
+        myHpLossCost = magicNumber;
     }
 }

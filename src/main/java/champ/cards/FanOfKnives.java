@@ -24,8 +24,8 @@ public class FanOfKnives extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         isMultiDamage = true;
-        tags.add(ChampMod.OPENER);
-        tags.add(ChampMod.OPENERBERSERKER);
+      //  tags.add(ChampMod.OPENER);
+      //  tags.add(ChampMod.OPENERBERSERKER);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
         postInit();
@@ -45,7 +45,7 @@ public class FanOfKnives extends AbstractChampCard {
 //            }
         }
 
-        berserkOpen();
+     //   berserkOpen();
     }
 
     @Override

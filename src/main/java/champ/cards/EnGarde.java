@@ -17,7 +17,7 @@ public class EnGarde extends AbstractChampCard {
 
     public EnGarde() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 8;
+        baseBlock = 7;
         tags.add(ChampMod.TECHNIQUE);
         postInit();
     }

@@ -16,10 +16,8 @@ public class Shatter extends AbstractChampCard {
 
     public Shatter() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 10;
         baseMagicNumber = magicNumber = 1;
-        tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBOBERSERKER);
         postInit();
     }
 
@@ -28,14 +26,7 @@ public class Shatter extends AbstractChampCard {
         atb(new RemoveAllBlockAction(m, p));
         if (upgraded) atb(new RemoveSpecificPowerAction(m, p, ArtifactPower.POWER_ID));
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
-        if (bcombo()) {
-            applyToEnemy(m, autoVuln(m, magicNumber));
-        }
-    }
 
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

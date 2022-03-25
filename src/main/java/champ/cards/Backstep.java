@@ -18,7 +18,7 @@ public class Backstep extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         tags.add(ChampMod.OPENER);
 
-        baseBlock = 5;
+        baseBlock = 6;
         baseMagicNumber = magicNumber = 1;
         this.tags.add(ChampMod.OPENERDEFENSIVE);
         tags.add(ChampMod.COMBO);
@@ -30,8 +30,9 @@ public class Backstep extends AbstractChampCard {
         defenseOpen();
         blck();
         if (bcombo()) {
-            atb(new GainEnergyAction(1));
-            atb(new DrawCardAction(magicNumber));
+            if (p.hasPower(VigorPower.POWER_ID)) {
+                atb(new GainBlockAction(p, p, p.getPower(VigorPower.POWER_ID).amount));
+            }
         }
 
     }

@@ -35,7 +35,7 @@
   },
   "champ:FlashCut": {
     "NAME": "Flash Strike",
-    "DESCRIPTION": "Deal !D! damage. NL *Defensive champ:Combo: Gain !M! champ:Counter and !B! Block. NL Enter champ:Defensive."
+    "DESCRIPTION": "Deal !D! damage. NL *Defensive champ:Combo: Gain !M! champ:Counter and !B! Block."
   },
   "champ:Balance": {
     "NAME": "Balance",
@@ -58,7 +58,7 @@
   },
   "champ:FocusedDefense": {
     "NAME": "Bob and Weave",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Vigor"
+    "DESCRIPTION": "Enter champ:Berserker. NL Gain !B! Block. NL Gain !M! Vigor"
   },
   "champ:FocusedBerserking": {
     "NAME": "All Out",
@@ -71,8 +71,7 @@
   },
   "champ:Backstep": {
     "NAME": "Backstep",
-    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain [E] and draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain [E] and draw !M! cards."
+    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain Block equal to your *Vigor."
   },
   "champ:Aggression": {
     "NAME": "Aggression",
@@ -95,13 +94,12 @@
   },
   "champ:GutPunch": {
     "NAME": "Gut Punch",
-    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage. NL *Defensive champ:Combo: Gain [E] and draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage. NL *Defensive champ:Combo: Gain [E] and draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL *Any *Stance champ:Combo: Enter champ:Ultimate Stance for 1 turn. NL Exhaust."
   },
   "champ:FanOfKnives": {
     "NAME": "Fan of Knives",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Berserker champ:Combo: Deals damage twice. NL Enter champ:Berserker.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Berserker champ:Combo: Deals damage three times. NL Enter champ:Berserker."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Berserker champ:Combo: Deals damage twice.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Berserker champ:Combo: Deals damage three times."
   },
   "champ:Devastate": {
     "NAME": "Devastate",
@@ -244,8 +242,8 @@
   },
   "champ:Shatter": {
     "NAME": "Shatter",
-    "DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage. NL *Berserker champ:Combo: Apply !M! Vulnerable.",
-    "UPGRADE_DESCRIPTION": "Remove the enemy's Block and Artifact. NL Deal !D! damage. NL *Berserker champ:Combo: Apply !M! Vulnerable."
+    "DESCRIPTION": "Remove the enemy's Block. NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Remove the enemy's Block and Artifact. NL Deal !D! damage."
   },
   "champ:EnragedBash": {
     "NAME": "Enraged Bash",
@@ -366,7 +364,7 @@
   },
   "champ:GladiatorStyle": {
     "NAME": "Good Clean Fight",
-    "DESCRIPTION": "champ:Fatigue 10. NL Gain !M! Strength and Dexterity."
+    "DESCRIPTION": "champ:Fatigue !M!. NL Gain 2 Strength and Dexterity."
   },
   "champ:BerserkerStyle": {
     "NAME": "Berserker Style",
