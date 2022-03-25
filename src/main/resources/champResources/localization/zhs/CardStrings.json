@@ -405,8 +405,8 @@
   },
   "champ:UltimateStance": {
     "NAME": "终极姿态",
-    "DESCRIPTION": "处于 姿态 时才能被打出。 NL 在 !M! 回合内处于 champ:终极 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "处于 姿态 时才能被打出。 NL 在 !M! 回合内处于 champ:终极 。",
+    "DESCRIPTION": "处于 姿态 时才能被打出。 NL 进入 champ:终极 !M! 回合。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "处于 姿态 时才能被打出。 NL 进入 champ:终极 !M! 回合。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我不处于姿态。"
     ]
