@@ -9,13 +9,13 @@
   },
   "Gremlin:Astound": {
     "NAME": "惊愕",
-    "DESCRIPTION": "获得 !B! 格挡 。 NL 如果你至少有 3 点 gremlin:法力 ，将 !M! 张 *守卫 加入你的手牌。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 格挡 。 NL 如果你至少有 3 点 gremlin:法力 ，将 !M! 张 *守卫+ 加入你的手牌。"
+    "DESCRIPTION": "获得 !B! 格挡 。 NL 如果至少有 3 点 gremlin:法力 ，将 !M! 张 *守卫 加入手牌。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 格挡 。 NL 如果至少有 3 点 gremlin:法力 ，将 !M! 张 *守卫+ 加入手牌。"
   },
   "Gremlin:Bang": {
     "NAME": "砰",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 将 1 张 *咏唱 加入你的弃牌堆。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 将 1 张 *咏唱+ 加入你的弃牌堆。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 将 1 张 *咏唱 加入弃牌堆。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 将 1 张 *咏唱+ 加入弃牌堆。 NL 消耗 。"
   },
   "Gremlin:Bellow": {
     "NAME": "怒吼",
@@ -47,8 +47,8 @@
   },
   "Gremlin:CongaLine": {
     "NAME": "直线阵型",
-    "DESCRIPTION": "在你的回合开始时，获得 [E] 并 gremlin:切换 到下一只地精。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 在你的回合开始时，获得 [E] 并 gremlin:切换 到下一只地精。"
+    "DESCRIPTION": "回合开始时，获得 [E] 并 gremlin:切换 到下一只地精。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时，获得 [E] 并 gremlin:切换 到下一只地精。"
   },
   "Gremlin:CounterStrike": {
     "NAME": "破招打击",
@@ -84,8 +84,8 @@
   },
   "Gremlin:Duplicate": {
     "NAME": "复制",
-    "DESCRIPTION": "将一张攻击牌的 !M! 张 gremlin:回响 加入你的手牌。 NL 它们的耗能降低 1 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将一张攻击牌的 !M! 张 gremlin:回响 加入你的手牌。 NL 它们的耗能降低 1 。"
+    "DESCRIPTION": "将一张攻击牌的 !M! 张 gremlin:回响 加入手牌。 NL 它们的耗能降低 1 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "将一张攻击牌的 !M! 张 gremlin:回响 加入手牌。 NL 它们的耗能降低 1 。"
   },
   "Gremlin:EdibleArmor": {
     "NAME": "食用护甲",
@@ -109,7 +109,7 @@
   },
   "Gremlin:FairyDust": {
     "NAME": "仙尘",
-    "DESCRIPTION": "添加 !M! 张 *守卫 到你的手牌 NL 抽 !M! 张牌。 NL 消耗 。"
+    "DESCRIPTION": "将 !M! 张 *守卫 加入手牌 NL 抽 !M! 张牌。 NL 消耗 。"
   },
   "Gremlin:SleeveOfAces": {
     "NAME": "袖中王牌",
@@ -207,8 +207,8 @@
   },
   "Gremlin:InfiniteBlocks": {
     "NAME": "无限护甲",
-    "DESCRIPTION": "在你的回合开始时， 添加一张 *守卫 到你的手牌。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 在你的回合开始时， 添加一张 *守卫 到你的手牌。"
+    "DESCRIPTION": "回合开始时， 将一张 *守卫 加入手牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时， 将一张 *守卫 加入手牌。"
   },
   "Gremlin:IrksomeBlow": {
     "NAME": "烦扰一击",
@@ -278,13 +278,13 @@
   },
   "Gremlin:PinNeedle": {
     "NAME": "缝衣针",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 *针刺 加入你的抽牌堆。 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 *针刺+ 加入你的抽牌堆。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 *针刺 加入抽牌堆。 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 *针刺+ 加入抽牌堆。 NL 消耗 。"
   },
   "Gremlin:Pinprick": {
     "NAME": "针刺",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 抽一张牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "抽到时将一张本牌的 gremlin:回响 加入你的手牌。 NL 造成 !D! 点伤害。 NL 抽一张牌。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "抽到时将一张本牌的 gremlin:回响 加入手牌。 NL 造成 !D! 点伤害。 NL 抽一张牌。 NL 消耗 。"
   },
   "Gremlin:Polish": {
     "NAME": "磨亮",
@@ -322,7 +322,7 @@
   },
   "Gremlin:Rhythm": {
     "NAME": "节奏",
-    "DESCRIPTION": "gremlin:切换 到下一只地精。 NL 从你的抽牌堆选择 取出 一张基础牌。它的耗能本回合为 0 。"
+    "DESCRIPTION": "gremlin:切换 到下一只地精。 NL 从抽牌堆选择取出一张基础牌。它的耗能本回合为 0 。"
   },
   "Gremlin:Rush": {
     "NAME": "冲锋",
@@ -393,12 +393,12 @@
   },
   "Gremlin:SupplyScrollCard": {
     "NAME": "支援卷轴",
-    "DESCRIPTION": "将 !M! 张随机 *小刀 或 *守卫 加入你的手牌。 NL 消耗 。"
+    "DESCRIPTION": "将 !M! 张随机 *小刀 或 *守卫 加入手牌。 NL 消耗 。"
   },
   "Gremlin:Tadah": {
     "NAME": "愚蠢！",
-    "DESCRIPTION": "将一张随机技能牌的 gremlin:回响 加入你的手牌。 NL 其能耗减少1。 NL gremlin:切换 到 gremlin:地精法师 。",
-    "UPGRADE_DESCRIPTION": "将一张随机技能牌已 升级 的 gremlin:回响 加入你的手牌。 NL 其能耗减少1。 NL gremlin:切换 到 gremlin:地精法师 。"
+    "DESCRIPTION": "将一张随机技能牌的 gremlin:回响 加入手牌。 NL 其能耗减少1。 NL gremlin:切换 到 gremlin:地精法师 。",
+    "UPGRADE_DESCRIPTION": "将一张随机技能牌已 升级 的 gremlin:回响 加入手牌。 NL 其能耗减少1。 NL gremlin:切换 到 gremlin:地精法师 。"
   },
   "Gremlin:TagTeam": {
     "NAME": "配合",
@@ -437,8 +437,8 @@
   },
   "Gremlin:Wizardry": {
     "NAME": "巫术",
-    "DESCRIPTION": "在你的回合开始时，获得 !M! 点 gremlin:法力 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 在你的回合开始时，获得 !M! 点 gremlin:法力 。"
+    "DESCRIPTION": "回合开始时，获得 !M! 点 gremlin:法力 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时，获得 !M! 点 gremlin:法力 。"
   },
   "Gremlin:Placeholder": {
     "NAME": "",
