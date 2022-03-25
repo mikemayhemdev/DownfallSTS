@@ -32,7 +32,7 @@ public class Hermit extends GauntletBoss {
     int turnNum = 0;
 
     public Hermit(float x, float y) {
-        super(NAME, ID, 72 * 3, 0.0F, -5.0F, 240.0F, 270.0F, null, x, y);
+        super(NAME, ID, 72 * 2, 0.0F, -5.0F, 240.0F, 270.0F, null, x, y);
         this.loadAnimation("hermitResources/images/char/hermit/Hermit.atlas", "hermitResources/images/char/hermit/Hermit.json", 1.0f);
         this.flipHorizontal = true;
         AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);

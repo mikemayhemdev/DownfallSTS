@@ -36,7 +36,7 @@ public class Ironclad extends GauntletBoss {
 
     int turnNum = 0;
     public Ironclad(float x, float y) {
-        super(NAME, ID, 80 * 3, -4.0f, -16.0f, 220.0f, 290.0f, null, x, y);
+        super(NAME, ID, 80 * 2, -4.0f, -16.0f, 220.0f, 290.0f, null, x, y);
 
         this.loadAnimation("images/characters/ironclad/idle/skeleton.atlas", "images/characters/ironclad/idle/skeleton.json", 1.0f);
         final AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);

@@ -35,7 +35,7 @@ public class Defect extends GauntletBoss {
 
     int turnNum = 0;
     public Defect(float x, float y) {
-        super(NAME, ID, 75 * 3, 0.0F, -5.0F, 240.0F, 244.0F, null, x, y);
+        super(NAME, ID, 75 * 2, 0.0F, -5.0F, 240.0F, 244.0F, null, x, y);
 
         this.loadAnimation("images/characters/defect/idle/skeleton.atlas", "images/characters/defect/idle/skeleton.json", 1.0F);
         final AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
