@@ -212,6 +212,6 @@
       "buried"
     ],
     "PROPER_NAME": "Buried",
-    "DESCRIPTION": "Non-buried cards will always be randomly chosen first for #yExhume effects."
+    "DESCRIPTION": "Buried cards will always be chosen last for random #yExhume effects."
   }
 ]
