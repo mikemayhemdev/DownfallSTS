@@ -19,6 +19,7 @@ public class EnCovet extends AbstractHermitBossCard {
 
     public EnCovet() {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/covet.png", 0, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.BASIC, CardTarget.SELF, AbstractMonster.Intent.NONE);
+        baseMagicNumber = magicNumber = 1;
     }
 
     @Override

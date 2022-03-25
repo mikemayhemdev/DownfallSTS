@@ -285,8 +285,8 @@
   },
   "Slimebound:PrepareCrush": {
     "NAME": "准备：猛撞",
-    "DESCRIPTION": "下回合： NL 获得 [E] [E] [E] NL 获得 !SlimeboundSlimed! 点 力量 NL 将 *史莱姆撞击 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "下回合： NL 获得 [E] [E] [E] [E] NL 获得 !SlimeboundSlimed! 点 力量 NL 将 *史莱姆撞击+ 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "下回合： NL 获得 [E] [E] [E] NL 获得 !M! 点 力量 NL 将 *史莱姆撞击 加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "下回合： NL 获得 [E] [E] [E] [E] NL 获得 !M! 点 力量 NL 将 *史莱姆撞击+ 加入手牌。 NL 消耗 。"
   },
   "Slimebound:SlimeCrush": {
     "NAME": "史莱姆撞击！！！",

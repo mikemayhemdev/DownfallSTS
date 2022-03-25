@@ -9,7 +9,6 @@ import charbosses.bosses.Watcher.NewAge.ArchetypeAct1RetainNewAge;
 import charbosses.core.EnemyEnergyManager;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
-import com.badlogic.gdx.math.Vector2;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -17,9 +16,15 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbPurple;
 import downfall.downfallMod;
+import hermit.characters.hermit;
 
+import static charbosses.cards.AbstractBossCard.HAND_SCALE;
+import static charbosses.cards.AbstractBossCard.HOVER_SCALE;
+import static charbosses.cards.EnemyCardGroup.HAND_HEIGHT_OFFSET;
+import static charbosses.cards.EnemyCardGroup.HAND_ROW_LENGTH;
 import static hermit.HermitMod.THE_DEFAULT_SKELETON_ATLAS;
 import static hermit.HermitMod.THE_DEFAULT_SKELETON_JSON;
 
@@ -123,7 +128,8 @@ public class CharBossHermit extends AbstractCharBoss {
     */
 
     public static AbstractCard previewCard;
-    public static final Vector2 PREVIEW_CARD_POS = new Vector2(Settings.WIDTH * 0.9F, (Settings.HEIGHT / 3F) * 2);
+    public static final float PREVIEW_CARD_SIZE = 0.5F;
+
 
     @Override
     public void render(SpriteBatch sb) {
@@ -133,10 +139,24 @@ public class CharBossHermit extends AbstractCharBoss {
                 AbstractCard q = ((ArchetypeAct2WheelOfFateNewAge) chosenArchetype).mockDeck.get(0);
                 previewCard = q.makeStatEquivalentCopy();
             }
-            previewCard.current_x = previewCard.target_x = PREVIEW_CARD_POS.x;
-            previewCard.current_y = previewCard.target_y = PREVIEW_CARD_POS.y;
-            previewCard.drawScale = previewCard.targetDrawScale = 0.5F;
+            int cardsinrow = Math.min(AbstractCharBoss.boss.hand.group.size() - HAND_ROW_LENGTH * (int) Math.floor((float) AbstractCharBoss.boss.hand.group.size() / (float) HAND_ROW_LENGTH), HAND_ROW_LENGTH);
+            float widthspacing = AbstractCard.IMG_WIDTH_S + 100.0f * Settings.scale;
+            int tar = AbstractCharBoss.boss.hand.size() + 1;
+            previewCard.target_x = previewCard.current_x = Settings.WIDTH * .9F - ((cardsinrow + 0.5f) * (widthspacing * HAND_SCALE)) + (widthspacing * HAND_SCALE) * (tar % HAND_ROW_LENGTH);
+            previewCard.target_y = previewCard.current_y = Settings.HEIGHT * HAND_HEIGHT_OFFSET + (AbstractCard.IMG_HEIGHT_S * HAND_SCALE) * ((float) Math.floor(((float) tar) / (float) HAND_ROW_LENGTH) + (tar > HAND_ROW_LENGTH ? 0.0f : 1.0f));
+            previewCard.drawScale = previewCard.targetDrawScale = previewCard.hb.hovered ? HOVER_SCALE : HAND_SCALE;
             previewCard.render(sb);
+            FontHelper.cardDescFont_N.getData().setScale(1.0f);
+            FontHelper.renderFontCentered(sb, FontHelper.cardDescFont_N, hermit.characterStrings.TEXT[4], previewCard.current_x, previewCard.current_y - ((previewCard.hb.hovered ? 175 : 100) * Settings.scale));
+        }
+    }
+
+    @Override
+    public void update() {
+        super.update();
+        if (previewCard != null) {
+            previewCard.update();
+            previewCard.updateHoverLogic();
         }
     }
 }

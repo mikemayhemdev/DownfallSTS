@@ -20,12 +20,13 @@ public class EnHandOfGreedHermitNecro extends AbstractBossCard {
         this.baseMagicNumber = 20;
         this.magicNumber = this.baseMagicNumber;
         isMultiDamage = false;
-        setCostForTurn(0);
     }
+
+    private boolean willDoubleHit = false;
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        if (this.costForTurn > 0)
+        if (willDoubleHit)
             this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
     }
 
@@ -40,6 +41,7 @@ public class EnHandOfGreedHermitNecro extends AbstractBossCard {
 
     public void overrideThing() {
         isMultiDamage = true;
+        willDoubleHit = true;
     }
 
     public AbstractCard makeCopy() {
