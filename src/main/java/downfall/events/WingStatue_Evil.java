@@ -1,6 +1,7 @@
 package downfall.events;
 
 
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -27,7 +28,7 @@ public class WingStatue_Evil extends AbstractImageEvent {
     }
 
     private CurScreen screen;
-    private int damage = AbstractDungeon.player.getAscensionMaxHPLoss() * 3;
+    private int damage = MathUtils.ceil((float) AbstractDungeon.player.getAscensionMaxHPLoss() * 1.5F);
 
     public WingStatue_Evil() {
         super(NAME, DESCRIPTIONS[0], "images/events/goldenWing.jpg");
@@ -47,7 +48,7 @@ public class WingStatue_Evil extends AbstractImageEvent {
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[3]);
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new ShatteredFragment());
-                        AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, this.damage));
+                        AbstractDungeon.player.decreaseMaxHealth(this.damage);
                         AbstractDungeon.effectList.add(new FlashAtkImgEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AttackEffect.FIRE));
                         this.screen = CurScreen.RESULT;
                         logMetricObtainRelicAndDamage(ID, "Destroyed Statue", new ShatteredFragment(), damage);

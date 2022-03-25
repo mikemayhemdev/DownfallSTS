@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import guardian.GuardianMod;
 import guardian.actions.BraceAction;
@@ -25,8 +26,8 @@ public class ModeShifter extends CustomRelic{
     }
 
     @Override
-    public void atBattleStart() {
-        grayscale = false;
+    public void justEnteredRoom(AbstractRoom room) {
+        this.grayscale = false;
     }
 
     @Override
