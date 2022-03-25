@@ -187,7 +187,7 @@
   },
   "champ:Haymaker": {
     "NAME": "螺旋打桩",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 2 层 易伤 。 NL 2 层 虚弱 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 2 层 易伤 。 NL 给予 2 层 虚弱 。"
   },
   "champ:ViciousMockery": {
     "NAME": "毒舌",
