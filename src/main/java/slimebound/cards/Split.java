@@ -64,7 +64,7 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
             cardList.add(new OctoChoiceCard("Slimebound:SplotMire",
                     CardCrawlGame.languagePack.getOrbString("Slimebound:SlimingSlime").NAME,
                     SlimeboundMod.getResourcePath("cards/splitMire.png"),
-                    TEXT[22] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:mire_slime").replaceAll("#b","").replaceAll("#y","")));
+                    TEXT[22] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:mire_slime").replaceAll("#b","").replaceAll("#y","slimeboundmod:")));
             cardList.add(new OctoChoiceCard("Slimebound:SplotLeeching",
                     CardCrawlGame.languagePack.getOrbString("Slimebound:ShieldSlime").NAME,
                     SlimeboundMod.getResourcePath("cards/splitLeeching.png"),
