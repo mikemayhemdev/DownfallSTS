@@ -167,7 +167,7 @@ public class downfallMod implements
         {
     public static final String modID = "downfall";
 
-    public static final boolean STEAM_MODE = true;
+    public static final boolean STEAM_MODE = false;
 
 
     public static boolean choosingBossRelic = false;
@@ -1716,6 +1716,12 @@ public class downfallMod implements
         if (AbstractDungeon.player instanceof GuardianCharacter) {
             if (downfallMod.unseenTutorials[1]) {
                 AbstractDungeon.actionManager.addToBottom(new MessageCaller(1));
+            }
+        }
+
+        if (AbstractDungeon.player instanceof TheHexaghost) {
+            if (downfallMod.unseenTutorials[2]) {
+                AbstractDungeon.actionManager.addToBottom(new MessageCaller(2));
             }
         }
 

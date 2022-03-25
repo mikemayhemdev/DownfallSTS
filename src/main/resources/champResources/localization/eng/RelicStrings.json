@@ -3,7 +3,7 @@
     "NAME": "Champion's Crown",
     "FLAVOR": "A WINNER IS YOU!",
     "DESCRIPTIONS": [
-      "When you enter a #yStance, deal #b3 damage to a random enemy."
+      "Whenever you enter a #yStance, deal #b3 damage to a random enemy."
     ]
   },
   "champ:BlackKnightHelmet": {

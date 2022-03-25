@@ -34,7 +34,7 @@ public class ProtectorSlime
 
     public void activateEffectUnique() {
 
-        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.SLASH_VERTICAL, this, false, false, false, debuffAmount, false, this.debuffAmount, false, false, false, false, false, true));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.SLASH_VERTICAL, this, false, false, false, debuffAmount, false, 0, false, false, false, false, false, true));
 
     }
 

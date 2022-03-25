@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.powers.ThornsPower;
 import com.megacrit.cardcrawl.vfx.FlameAnimationEffect;
 import gremlin.actions.GremlinSwapAction;
 import gremlin.orbs.MadGremlin;
-import slimebound.powers.LoseThornsPower;
+import guardian.powers.LoseThornsPower;
 
 import static gremlin.GremlinMod.MAD_GREMLIN;
 
@@ -49,7 +49,7 @@ public class Irritability extends AbstractGremlinCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new FlameAnimationEffect(p.hb)));
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, this.block));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseThornsPower(p, p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseThornsPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new GremlinSwapAction(new MadGremlin(0)));
     }
 

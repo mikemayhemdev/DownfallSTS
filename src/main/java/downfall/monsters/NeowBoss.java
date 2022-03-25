@@ -72,7 +72,7 @@ public class NeowBoss extends AbstractMonster {
 
     public ArrayList<String> bossesToRez = new ArrayList<>();
     public ArrayList<String> bossesRezzed = new ArrayList<>();
-    private static int StrGain = 1;
+    private static int StrGain = 3;
 
     public NeowBoss() {
         super(NAME, ID, 600, HB_X, HB_Y, HB_W, HB_H, "images/npcs/neow/skeleton.png");
@@ -222,7 +222,7 @@ public class NeowBoss extends AbstractMonster {
                     //AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo) this.damage.get(0), AbstractGameAction.AttackEffect.FIRE, false, true));
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, this, new StrengthPower(minion, StrGain), StrGain));
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, this, new DexterityPower(minion, StrGain), StrGain));
-                    AbstractDungeon.actionManager.addToBottom(new HealAction(minion, this, 15));
+                    AbstractDungeon.actionManager.addToBottom(new HealAction(minion, this, 30));
                 } else {
                     escape();
                     addToBot(new AbstractGameAction() {

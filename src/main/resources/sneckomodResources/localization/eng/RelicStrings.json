@@ -67,7 +67,7 @@
     "NAME": "Super Snecko Eye",
     "FLAVOR": "0121012",
     "DESCRIPTIONS": [
-      "Replaces Snecko Eye. At the start of your turn, draw #b2 additional cards. Start each combat #yConfused. The first time you draw a card that costs #b3 each combat, reduce its cost to #b0."
+      "Replaces #ySnecko #yEye. At the start of your turn, draw #b2 additional cards. Start each combat #yConfused. The first time you draw a card that costs #b3 each combat, reduce its cost to #b0."
     ]
   },
   "sneckomod:SneckoTalon": {
@@ -105,7 +105,7 @@
     "NAME": "Seal of Approval",
     "FLAVOR": "I'm The Ironclad and this is my favorite Relic in the Spire.  -Merchant Advertising Pamphlet",
     "DESCRIPTIONS": [
-      "Upon pickup, choose #b1 of #b3 #yUnknown Character cards to add to your deck. All future Unknown Character cards found will be of this character.",
+      "Upon pickup, choose #b1 of #b3 #yUnknown #yCharacter cards to add to your deck. All future #yUnknown #yCharacter cards found will be of this character.",
       "All Unknown Character cards found will be ",
       " cards."
     ]
@@ -114,7 +114,7 @@
     "NAME": "Lucky Horseshoe",
     "FLAVOR": "Make your own luck.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose #b1 of #b3 #yUnknown Character cards. Add #b5 copies of it to your deck. All combats drop an additional card reward of the chosen character's cards.",
+      "Upon pickup, choose #b1 of #b3 #yUnknown #yCharacter cards. Add #b5 copies of it to your deck. All combats drop an additional card reward of the chosen character's cards.",
       "Upon pickup, obtain #b5 #yUnknown ",
       " cards. All combats drop an additional ",
       " card reward."
