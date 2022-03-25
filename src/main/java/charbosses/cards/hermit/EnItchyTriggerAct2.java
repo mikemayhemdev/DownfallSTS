@@ -50,9 +50,6 @@ public class EnItchyTriggerAct2 extends AbstractHermitBossCard {
     public void onSpecificTrigger() {
         for (AbstractCard q : AbstractCharBoss.boss.hand.group) {
             if (q instanceof EnHandOfGreedHermitNecro) {
-                q.setCostForTurn(2);
-                q.cost = 2;
-                q.isCostModified = false;
                 ((EnHandOfGreedHermitNecro) q).overrideThing();
                 ((EnHandOfGreedHermitNecro) q).intentActive = false;
                 ((EnHandOfGreedHermitNecro) q).createIntent();

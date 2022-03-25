@@ -17,10 +17,14 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import hermit.cards.Strike_Hermit;
 
 import java.util.ArrayList;
+
+import static charbosses.cards.EnemyCardGroup.HAND_HEIGHT_OFFSET;
+import static charbosses.cards.EnemyCardGroup.HAND_ROW_LENGTH;
 
 public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
     public ArrayList<AbstractCard> mockDeck = new ArrayList<>();
@@ -120,10 +124,14 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             AbstractCard target = getNextCard();
-            if (target instanceof EnFreeStrikeHermit) {
-                target.setCostForTurn(0);
-            }
             cardsList.add(target);
+        }
+        if (cardsList.stream().anyMatch(q -> q.cardID.equals(EnItchyTriggerAct2.ID))) {
+            for (AbstractCard target : cardsList) {
+                if (target instanceof EnFreeStrikeHermit) {
+                    target.setCostForTurn(0);
+                }
+            }
         }
         if (AbstractCharBoss.boss instanceof CharBossHermit) {
             CharBossHermit.previewCard = mockDeck.get(0).makeStatEquivalentCopy();
@@ -135,8 +143,10 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         AbstractCard q = mockDeck.remove(0);
         AbstractCard x = q.makeStatEquivalentCopy();
         mockDeck.add(mockDeck.size(), q);
-        x.current_x = CharBossHermit.PREVIEW_CARD_POS.x;
-        x.current_y = CharBossHermit.PREVIEW_CARD_POS.y;
+        int cardsinrow = Math.min(AbstractCharBoss.boss.hand.group.size() - HAND_ROW_LENGTH * (int) Math.floor((float) AbstractCharBoss.boss.hand.group.size() / (float) HAND_ROW_LENGTH), HAND_ROW_LENGTH);
+        float widthspacing = AbstractCard.IMG_WIDTH_S + 100.0f * Settings.scale;
+        x.current_x = Settings.WIDTH * .9F - ((cardsinrow + 0.5f) * (widthspacing * AbstractBossCard.HAND_SCALE)) + (widthspacing * AbstractBossCard.HAND_SCALE) * (AbstractCharBoss.boss.hand.group.size() % HAND_ROW_LENGTH);
+        x.current_y = Settings.HEIGHT * HAND_HEIGHT_OFFSET + (AbstractCard.IMG_HEIGHT_S * AbstractBossCard.HAND_SCALE) * ((float) Math.floor(((float) AbstractCharBoss.boss.hand.group.size()) / (float) HAND_ROW_LENGTH) + (AbstractCharBoss.boss.hand.group.size() > HAND_ROW_LENGTH ? 0.0f : 1.0f));
         return x;
     }
 
@@ -152,6 +162,7 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
             @Override
             public void update() {
                 isDone = true;
+                AbstractCharBoss.boss.hand.group.stream().forEach(q -> ((AbstractBossCard)q).bossDarken());
                 int budget = AbstractCharBoss.boss.energyPanel.getCurrentEnergy();
                 for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
                     if (c.costForTurn <= budget && c.costForTurn != -2 && c instanceof AbstractBossCard) {
