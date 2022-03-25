@@ -44,7 +44,7 @@ public class SlimedVariable extends DynamicVariable {
     public boolean upgraded(AbstractCard card) {
         if (card instanceof AbstractSlimeboundCard) {
             AbstractSlimeboundCard asc = (AbstractSlimeboundCard) card;
-            return asc.isSlimedModified;
+            return asc.upgradeSlimed;
         } else {
             return false;
         }

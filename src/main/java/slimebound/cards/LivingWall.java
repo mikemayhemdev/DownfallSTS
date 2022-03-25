@@ -43,17 +43,10 @@ public class LivingWall extends AbstractSlimeboundCard {
 
 
     public LivingWall() {
-
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-
         this.slimed = this.baseSlimed = 4;
-        //this.baseBlock = 2;
-
         this.baseBlock = 12;
-
-        //  this.exhaust = true;
-
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -98,9 +91,6 @@ public class LivingWall extends AbstractSlimeboundCard {
 
             upgradeSlimed(2);
             upgradeBlock(3);
-
-            //upgradeBlock(1);
-
         }
 
     }

@@ -73,7 +73,7 @@
   },
   "hexamod:GhostOfSpirePresent": {
     "NAME": "Here and Now",
-    "DESCRIPTION": "You no longer *Advance at the end of turn. NL At the start of a turn, gain [E] ."
+    "DESCRIPTION": "You no longer *Advance at the end of turn. NL At the start of your turn, gain [E] ."
   },
   "hexamod:HauntingEcho": {
     "NAME": "Haunting Echo",
@@ -277,8 +277,8 @@
   },
   "hexamod:GhostflameInferno": {
     "NAME": "Instant Inferno",
-    "DESCRIPTION": "Retain. NL hexamod:Ignite the Inferno Ghostflame. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL hexamod:Ignite the current Ghostflame. NL hexamod:Ignite the Inferno Ghostflame. NL Exhaust."
+    "DESCRIPTION": "Retain. NL hexamod:Ignite the *Inferno *Ghostflame. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL hexamod:Ignite the current Ghostflame. NL hexamod:Ignite the *Inferno *Ghostflame. NL Exhaust."
   },
   "hexamod:ChargedBarrage": {
     "NAME": "Charged Barrage",
@@ -307,8 +307,8 @@
   },
   "hexamod:ApocalypticArmor": {
     "NAME": "Doomsday",
-    "DESCRIPTION": "The next time you hexamod:Ignite the Inferno Ghostflame and all !M! Ghostflames are hexamod:Ignited, take an extra turn.",
-    "UPGRADE_DESCRIPTION": "The next time you hexamod:Ignite the Inferno Ghostflame and at least !M! Ghostflames are hexamod:Ignited, take an extra turn."
+    "DESCRIPTION": "The next time you hexamod:Ignite the *Inferno *Ghostflame and all !M! Ghostflames are hexamod:Ignited, take an extra turn.",
+    "UPGRADE_DESCRIPTION": "The next time you hexamod:Ignite the *Inferno *Ghostflame and at least !M! Ghostflames are hexamod:Ignited, take an extra turn."
   },
   "hexamod:FirstSeal": {
     "NAME": "First Seal",
