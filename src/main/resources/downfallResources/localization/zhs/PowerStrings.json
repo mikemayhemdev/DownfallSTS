@@ -143,13 +143,13 @@
   "downfall:DefectAncientConstructPower": {
     "NAME": "先古造物",
     "DESCRIPTIONS": [
-      "战斗开始时召唤2个 #y铜制圆球 。 NL 它的回合结束时时如果没有 #y人工制品 ，获得 1 层 #y人工制品 。"
+      "战斗开始时召唤2个 #y铜制圆球 。 NL 敌人的回合结束时如果 #y故障机器人 没有 #y人工制品 ，获得 1 层。"
     ]
   },
   "downfall:NeowAncientConstruct": {
     "NAME": "先古造物",
     "DESCRIPTIONS": [
-      "每回合开始时如果没有 #y人工制品 ，获得 #b2 层 #y人工制品 。"
+      "每回合开始时如果 #y涅奥 没有 #y人工制品 ，获得 #b2 层。"
     ]
   },
   "downfall:DefectCuriosity": {
