@@ -91,7 +91,7 @@
     "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Consume - Gain Block equal to the enemy's slimeboundmod:Goop."
   },
   "Slimebound:Dissolve": {
-    "NAME": "Dissolve",
+    "NAME": "Quick Snack",
     "DESCRIPTION": "Draw !M! cards. NL Exhaust a card. Gain *Licks equal to its cost. NL Exhaust."
   },
   "Slimebound:DuplicatedForm": {

@@ -54,7 +54,7 @@
   },
   "hermit:Dissolve": {
     "NAME": "Dissolve",
-    "DESCRIPTION": "Next turn, Gain !B! Block. NL Exhaust."
+    "DESCRIPTION": "Next turn, gain !B! Block. NL Exhaust."
   },
   "hermit:BlackWind": {
     "NAME": "Black Wind",
