@@ -30,27 +30,6 @@ public class SacrificeAction2 extends AbstractGameAction {
 
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {// 30
-            if (this.p.hand.group.size() == 1) {// 58
-                for (AbstractCard c : p.hand.group) {
-                    p.hand.moveToExhaustPile(c);
-                    if (c.type == AbstractCard.CardType.ATTACK || c.type == AbstractCard.CardType.SKILL) {// 60
-                        if (c.type == AbstractCard.CardType.ATTACK) {
-                            AbstractCard q = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.SKILL).makeCopy();// 32
-                            if (costify)
-                                q.modifyCostForCombat(-1);
-                            this.addToBot(new MakeTempCardInHandAction(q, true));// 34
-                        } else {
-                            AbstractCard q = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.ATTACK).makeCopy();// 32
-                            if (costify)
-                                q.modifyCostForCombat(-1);
-                            this.addToBot(new MakeTempCardInHandAction(q, true));// 34
-                        }
-                        this.isDone = true;// 64
-                        return;// 65
-                    }
-                }
-            }
-
             if (this.p.hand.group.size() > 1) {// 74
                 AbstractDungeon.handCardSelectScreen.open(EXTENDED_DESCRIPTIONS[0], 1, false, false);// 75
                 this.tickDuration();// 76
