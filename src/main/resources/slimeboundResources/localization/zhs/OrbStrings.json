@@ -23,14 +23,14 @@
     "NAME": "破烂史莱姆",
     "DESCRIPTION": [
       "回合开始时造成 #b",
-      " 点伤害。 NL 被 #y吸收 后可重生。"
+      " 点伤害。 NL 被 #y融合 后可重生。"
     ]
   },
   "Slimebound:GreedOozeSlime": {
     "NAME": "贪婪史莱姆",
     "DESCRIPTION": [
       "回合开始时造成 #b",
-      " 点伤害。 NL 被 #y吸收 后可重生。"
+      " 点伤害。 NL 被 #y融合 后可重生。"
     ]
   },
   "Slimebound:TorchHeadSlime": {
@@ -74,8 +74,8 @@
     "NAME": "鬼火史莱姆",
     "DESCRIPTION": [
       "造成 #b",
-	  " 点伤害并给予 #b",
-	  " 层 #y灼魂 。"
+      " 点伤害并给予 #b",
+      " 层 #yhexamod:灼魂 。"
     ]
   },
   "Slimebound:ChampSlime": {
@@ -114,7 +114,7 @@
     "NAME": "小黑史莱姆",
     "DESCRIPTION": [
       "造成 #b",
-      " 点伤害。命令时，其他小黑也会攻击。"
+      " 点伤害。 #y命令 时，其他小黑也会攻击。"
     ]
   }
 }
