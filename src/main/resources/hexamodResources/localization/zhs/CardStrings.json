@@ -138,8 +138,8 @@
     "UPGRADE_DESCRIPTION": "expansioncontent:发掘 !M! 张 虚无 牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "发掘一张虚无牌",
-	  "发掘",
-	  "张虚无牌"
+      "发掘",
+      "张虚无牌"
     ]
   },
   "hexamod:GiftsFromTheDead": {
