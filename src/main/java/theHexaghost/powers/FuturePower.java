@@ -58,7 +58,8 @@ public class FuturePower extends AbstractPower implements CloneablePowerInterfac
     public void updateDescription() {
         StringBuilder sb = new StringBuilder();
         sb.append(DESCRIPTIONS[0]);
-
+        sb.append(String.valueOf(amount));
+        
         if (amount == 1)
             sb.append(DESCRIPTIONS[1]);
         else

@@ -3,7 +3,7 @@
     "NAME": "黏液之心",
     "FLAVOR": "我可真时髦。",
     "DESCRIPTIONS": [
-      "每当你 #yslimeboundmod:消耗黏液 时，回复 #b2 点生命。 NL （每场战斗最多 #b8 点）"
+      " #yslimeboundmod:消耗黏液 时，回复 #b2 点生命。 NL （每场战斗最多 #b8 点）"
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
@@ -11,15 +11,15 @@
     "FLAVOR": "黏浆中的秘密。",
     "DESCRIPTIONS": [
 	"替换 ",
-     " 。 NL 每当你 #yslimeboundmod:消耗黏液 时，回复 #b3 点生命。 NL （每场战斗最多 #b15 点）"
+     " 。 NL #yslimeboundmod:消耗黏液 时，回复 #b3 点生命。 NL （每场战斗最多 #b15 点）"
     ]
   },
   "Slimebound:SlimedTailRelic": {
     "NAME": "黏质断尾",
     "FLAVOR": "一条完全由黏液包裹的断尾，战斗时可以迷惑敌人。",
     "DESCRIPTIONS": [
-      "当你的生命值低于 #b50% 时， #yslimeboundmod:分裂 一只 #yslimeboundmod:游击史莱姆 。你下次受到攻击伤害时， 变为 #yslimeboundmod:吸收 。 NL（每场战斗只生效一次）",
-      "本场战斗已被使用。"
+      "生命值低于 #b50% 时， #yslimeboundmod:分裂 一只 #yslimeboundmod:游击史莱姆 。下次受到攻击伤害时， 变为 #yslimeboundmod:吸收 。 NL（每场战斗只生效一次）",
+      " NL 本场战斗已被使用。"
     ]
   },
   "Slimebound:PotencyRelic": {
@@ -71,7 +71,7 @@
     "NAME": "黏蛇头骨",
     "FLAVOR": "一个非常恶心的异蛇头骨，灰尘和污垢像胶一样粘在上面，又脏又黏。",
     "DESCRIPTIONS": [
-      "每当你给予敌人 #yslimeboundmod:黏液 时，额外给予 #b",
+      "给予 #yslimeboundmod:黏液 时，额外给予 #b",
       " 层。"
     ]
   },
@@ -93,14 +93,14 @@
     "NAME": "焦油团",
     "FLAVOR": "坏的那种史莱姆。",
     "DESCRIPTIONS": [
-      "你的回合开始时获得 [E] 。每场战斗开始时失去 #b1 个史莱姆栏位。"
+      "回合开始时获得 [E] 。 NL 失去 #b1 个史莱姆栏位。"
     ]
   },
   "Slimebound:StickyStick": {
     "NAME": "粘胶立方体",
     "FLAVOR": "嘿，它粘到你身上了。",
     "DESCRIPTIONS": [
-      "每当你抽到 #y状态 牌时，抽 #b1 张牌。"
+      "抽到 #y状态 牌时再抽 #b1 张牌。"
     ]
   }
 }
