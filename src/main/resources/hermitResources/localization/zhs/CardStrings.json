@@ -49,7 +49,7 @@
   },
   "hermit:CalledShot": {
     "NAME": "空气炮",
-    "DESCRIPTION": "造成你手牌数量的伤害。 NL hermit:精准 :抽 !M! 张牌",
+    "DESCRIPTION": "造成手牌数量点伤害。 NL hermit:精准 ：抽 !M! 张牌。",
     "UPGRADE_DESCRIPTION": " NL （造成 !D! 点伤害。）"
   },
   "hermit:Dissolve": {
@@ -68,7 +68,7 @@
   },
   "hermit:ShadowCloak": {
     "NAME": "暗影斗篷",
-    "DESCRIPTION": "每当你抽到 诅咒 时，获得 !M! 点 格挡 。"
+    "DESCRIPTION": "抽到 诅咒 时获得 !M! 点 格挡 。"
   },
   "hermit:FatalDesire": {
     "NAME": "自弑之欲",
@@ -85,7 +85,7 @@
   },
   "hermit:Malice": {
     "NAME": "怨恨",
-    "DESCRIPTION": "消耗 一张牌。 NL 造成 !D! 点伤害。 NL 如果 消耗 一张 诅咒 ，则对所有敌人造成伤害。"
+    "DESCRIPTION": "消耗 一张手牌。 NL 造成 !D! 点伤害。 NL 如果 消耗 诅咒 ，则对所有敌人造成伤害。"
   },
   "hermit:Deadeye": {
     "NAME": "死神之眼",
@@ -148,11 +148,11 @@
   },
   "hermit:Shortfuse": {
     "NAME": "快速引信",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 在手牌时，每打出一张 *打击 或 *防御 ，这张牌本回合耗能降低 [E] 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 在手牌时，每打出一张 *打击 或 *防御 ，本牌耗能本回合降低 [E] 。"
   },
   "hermit:Grudge": {
     "NAME": "怒怨",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 你每有一张 诅咒 ，额外造成 !M! 点伤害。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 每有一张 诅咒 ，额外造成 !M! 点伤害。"
   },
   "hermit:Spite": {
     "NAME": "苦恼",
@@ -168,7 +168,7 @@
   },
   "hermit:LowProfile": {
     "NAME": "低姿态",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 你每有一种获得负面效果就额外获得 !M! 点 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每有一种获得负面效果，额外获得 !M! 点 格挡 。"
   },
   "hermit:Horror": {
     "NAME": "恐惧",
@@ -192,11 +192,11 @@
   },
   "hermit:Combo": {
     "NAME": "连击",
-    "DESCRIPTION": "每当你触发 hermit:精准 效果时，将随机一张 hermit:精准 牌加入手牌。"
+    "DESCRIPTION": "触发 hermit:精准 效果时，随机将一张 hermit:精准 牌加入手牌。"
   },
   "hermit:BigShot": {
     "NAME": "冒烟枪管",
-    "DESCRIPTION": "每当你触发 hermit:精准 效果，下一张攻击牌额外造成 !M! 点伤害。"
+    "DESCRIPTION": "触发 hermit:精准 效果后，下张 *攻击牌 额外造成 !M! 点伤害。"
   },
   "hermit:OverwhelmingPower": {
     "NAME": "压倒性力量",
@@ -204,7 +204,7 @@
   },
   "hermit:Maintenance": {
     "NAME": "维护",
-    "DESCRIPTION": "升级 所有的 *打击 与 *防御 。 NL 它们能被本牌多次 升级 。"
+    "DESCRIPTION": "升级 所有 *打击 与 *防御 。 NL 它们能被本牌多次 升级 。"
   },
   "hermit:EternalForm": {
     "NAME": "永恒形态",
@@ -225,7 +225,7 @@
   },
   "hermit:CursedWeapon": {
     "NAME": "诅咒之枪",
-    "DESCRIPTION": "失去 !M! 点生命。 NL 造成 !D! 点伤害。 NL 这张牌永久增加 3 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "失去 !M! 点生命。 NL 造成 !D! 点伤害。 NL 本牌伤害永久增加 3 点。 NL 消耗 。"
   },
   "hermit:Enervate": {
     "NAME": "无力化",
@@ -287,7 +287,7 @@
   },
   "hermit:DeadMansHand": {
     "NAME": "亡者之手",
-    "DESCRIPTION": "丢弃你的手牌。 NL 从抽牌堆中抽取 !M! 张稀有度最高的牌。"
+    "DESCRIPTION": "丢弃所有手牌。 NL 从抽牌堆中抽取 !M! 张稀有度最高的牌。"
   },
   "hermit:DeadOrAlive": {
     "NAME": "死或生",
@@ -295,7 +295,7 @@
   },
   "hermit:GoldenBullet": {
     "NAME": "黄金子弹",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 时，这张牌的耗能永久降低1点。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 时，本牌耗能永久减少1点。 NL 消耗 。"
   },
   "hermit:HoleUp": {
     "NAME": "'洞'起来",
@@ -325,6 +325,6 @@
   },
   "hermit:Virtue": {
     "NAME": "高尚",
-    "DESCRIPTION": "保留 。 NL 减少你的所有负面效果 !M! 层。"
+    "DESCRIPTION": "保留 。 NL 降低你的所有负面效果 !M! 层。"
   }
 }
