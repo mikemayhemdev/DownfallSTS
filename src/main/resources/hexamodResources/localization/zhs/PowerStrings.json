@@ -75,12 +75,12 @@
     ]
   },
   "hexamod:FuturePower": {
-    "NAME": "疾走",
+    "NAME": "疾进",
     "DESCRIPTIONS": [
       "每回合前 #b",
       " 次",
       " 次",
-      "#y点燃 鬼火时， #y步进 。 NL 本回合已 #y点燃 过 #b",
+      " #y点燃 鬼火时， #y步进 。 NL 本回合已 #y点燃 过 #b",
       " 个 鬼火。",
       " 个 鬼火。"
     ]
@@ -174,7 +174,7 @@
   "hexamod:RadiantPower": {
     "NAME": "火焰辐射",
     "DESCRIPTIONS": [
-      "#y点燃 一个鬼火时，获得 #b",
+      " #y点燃 一个鬼火时，获得 #b",
       " 点 #y格挡 。"
     ]
   },
@@ -195,7 +195,7 @@
   "hexamod:VolcanoVisagePower": {
     "NAME": "火山容貌",
     "DESCRIPTIONS": [
-      "#y点燃 一个鬼火时，给予所有敌人 #b",
+      " #y点燃 一个鬼火时，给予所有敌人 #b",
       " 层 #y灼魂 。"
     ]
   },
