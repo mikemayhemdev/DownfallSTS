@@ -55,6 +55,7 @@ public class Watcher extends GauntletBoss {
 
     @Override
     public void usePreBattleAction() {
+        super.usePreBattleAction();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new OnDeathEveryoneVigor(this, 8), 8));
     }
 

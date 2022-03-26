@@ -52,6 +52,7 @@ public class Ironclad extends GauntletBoss {
 
     @Override
     public void usePreBattleAction() {
+        super.usePreBattleAction();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new OnDeathEveryoneStr(this, 3), 3));
     }
 

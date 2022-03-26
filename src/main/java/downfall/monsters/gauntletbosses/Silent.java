@@ -53,6 +53,7 @@ public class Silent extends GauntletBoss {
 
     @Override
     public void usePreBattleAction() {
+        super.usePreBattleAction();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new OnDeathEveryoneThorns(this, 5), 5));
     }
 

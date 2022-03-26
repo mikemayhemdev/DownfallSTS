@@ -48,6 +48,7 @@ public class Hermit extends GauntletBoss {
 
     @Override
     public void usePreBattleAction() {
+        super.usePreBattleAction();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new OnDeathEveryoneRuggedVuln(this, 2), 2));
     }
 
