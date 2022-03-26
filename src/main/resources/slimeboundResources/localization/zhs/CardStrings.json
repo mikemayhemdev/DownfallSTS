@@ -91,12 +91,12 @@
     "DESCRIPTION": " 造成 !D! 点伤害。 NL slimeboundmod:消耗黏液 -获得敌人 slimeboundmod:黏液 层数点 格挡 。"
   },
   "Slimebound:Dissolve": {
-    "NAME": "溶解",
+    "NAME": "黏质快餐",
     "DESCRIPTION": "抽 !M! 张牌。 NL 消耗一张手牌。 NL 将其耗能数量的 *舔舔 加入手牌。 NL 消耗 。"
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "增殖形态",
-	"DESCRIPTION": "本场战斗中失去 !M! 点生命和生命上限。 NL 每回合使用的初张指向牌将打出两次。",
+    "DESCRIPTION": "本场战斗中失去 !M! 点生命和生命上限。 NL 每回合使用的初张指向牌将打出两次。",
     "UPGRADE_DESCRIPTION": "本场战斗中失去 !M! 点生命和生命上限。 NL 每回合获得 [E] ，使用的初张指向牌将打出两次。",
     "EXTENDED_DESCRIPTION": [
       "需要…… 生命……"
