@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -42,15 +43,16 @@ public class WheelOfDeath extends AbstractBossMechanicPower {
     }
 
     @Override
-    public void onAfterCardPlayed(AbstractCard usedCard) {
-        flash();
-        addToBot(new ReducePowerAction(owner, owner, this, 1));
-        if (amount == 1) {
+    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+        super.onAfterUseCard(card, action);
+        this.amount -= 1;
+        if (amount == 0) {
             addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, STRENGTHGAIN), STRENGTHGAIN));
             addToBot(new ApplyPowerAction(owner, owner, new WheelOfDeath(owner, EVERYXCARDS)));
         }
         updateDescription();
     }
+
 
     @Override
     public void updateDescription() {
