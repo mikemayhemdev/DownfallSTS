@@ -55,7 +55,7 @@
   "downfall:WatcherAngryPower": {
     "NAME": "无遏狂怒",
     "DESCRIPTIONS": [
-      "#y观者 的回合结束时，如果她的生命不高于 #b50% ，她将永久进入 #y暴怒 。 NL #y暴怒 造成和受到的伤害提高 #b50% 而非 #b100% 。"
+      " #y观者 的回合结束时，如果她的生命不高于 #b50% ，她将永久进入 #y暴怒 。 NL #y暴怒 造成和受到的伤害提高 #b50% 而非 #b100% 。"
     ]
   },
   "downfall:NeowUnbridledRage": {
@@ -113,13 +113,13 @@
   "downfall:NeowSeeingDouble": {
     "NAME": "复视",
     "DESCRIPTIONS": [
-      "#y涅奥 的回合开始时会使用烟幕来隐蔽它自己。你的第一张 #y攻击牌 对它不造成伤害。"
+      " #y涅奥 的回合开始时会使用烟幕来隐蔽它自己。你的第一张 #y攻击牌 对它不造成伤害。"
     ]
   },
   "downfall:SilentPoisonPower": {
     "NAME": "警告：中毒",
     "DESCRIPTIONS": [
-      "#y中毒 在你的回合结束时触发且伤害能被 #y格挡 抵消，战斗开始时获得一瓶 #y解毒剂 。"
+      " #y中毒 在你的回合结束时触发且伤害能被 #y格挡 抵消，战斗开始时获得一瓶 #y解毒剂 。"
     ]
   },
   "downfall:NeowHighlyToxic": {
@@ -230,7 +230,7 @@
   "downfall:DamageMultiplier": {
     "NAME": "伤害增幅",
     "DESCRIPTIONS": [
-      "#y攻击牌 造成 #b",
+      " #y攻击牌 造成 #b",
       " 倍伤害。"
     ]
   },
@@ -265,7 +265,7 @@
     "NAME": "奄息：鲜火之环",
     "DESCRIPTIONS": [
       "该单位死亡时，所有单位获得 #b",
-      " 点 #y活力 。"
+      " 层 #y活力 。"
     ]
   },
   "downfall:OnDeathEveryoneRuggedVuln": {
@@ -323,7 +323,7 @@
   "downfall:NeowEclipse": {
     "NAME": "月蚀",
     "DESCRIPTIONS": [
-      "#y涅奥每回合将一张带有 #y虚无 的 #r末日将临 加入你的手牌。"
+      " #y涅奥 每回合将一张带有 #y虚无 的 #r末日将临 加入你的手牌。"
     ]
   },
   "downfall:NeowWheelOfDeath": {
