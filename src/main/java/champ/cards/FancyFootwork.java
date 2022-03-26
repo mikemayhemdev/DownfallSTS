@@ -23,7 +23,6 @@ public class FancyFootwork extends AbstractChampCard {
     public FancyFootwork() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        exhaust = true;
         postInit();
     }
 
