@@ -188,7 +188,7 @@
   },
   "hermit:Brawl": {
     "NAME": "斗殴",
-    "DESCRIPTION": "回合开始时，给予所有敌人 !M! 层 hermit:瘀伤 。"
+    "DESCRIPTION": "回合开始时给予所有敌人 !M! 层 hermit:瘀伤 。"
   },
   "hermit:Combo": {
     "NAME": "连击",
@@ -291,7 +291,7 @@
   },
   "hermit:DeadOrAlive": {
     "NAME": "死或生",
-    "DESCRIPTION": "造成 !D! 点伤害X次。 NL 斩杀 时，获得 hermit:赏金 。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害X次。 NL 斩杀 时获得 hermit:赏金 。 NL 消耗 。"
   },
   "hermit:GoldenBullet": {
     "NAME": "黄金子弹",
@@ -325,6 +325,6 @@
   },
   "hermit:Virtue": {
     "NAME": "高尚",
-    "DESCRIPTION": "保留 。 NL 降低你的所有负面效果 !M! 层。"
+    "DESCRIPTION": "保留 。 NL 降低自身所有负面效果 !M! 层。"
   }
 }
