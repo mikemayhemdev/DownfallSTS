@@ -2,6 +2,7 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 import theHexaghost.actions.RecurringNightmareAction;
 
 public class RecurringNightmare extends AbstractHexaCard {

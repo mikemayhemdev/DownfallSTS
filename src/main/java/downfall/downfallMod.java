@@ -120,9 +120,6 @@ import guardian.characters.GuardianCharacter;
 import guardian.relics.PickAxe;
 import hermit.HermitMod;
 import hermit.actions.MessageCaller;
-import hermit.potions.BlackBile;
-import hermit.potions.Tonic;
-import quickRestart.helper.RestartRunHelper;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
 import sneckomod.SneckoMod;
@@ -164,7 +161,7 @@ public class downfallMod implements
         AddAudioSubscriber,
         RenderSubscriber
         //PostDeathSubscriber
-        {
+{
     public static final String modID = "downfall";
 
     public static final boolean STEAM_MODE = false;
@@ -233,7 +230,7 @@ public class downfallMod implements
             // Insert other languages here
             Settings.GameLanguage.ENG,
             Settings.GameLanguage.ZHS,
-           // Settings.GameLanguage.JPN
+            // Settings.GameLanguage.JPN
             Settings.GameLanguage.KOR
     };
     public static ReplaceData[] wordReplacements;
@@ -1665,7 +1662,6 @@ public class downfallMod implements
     }
 
      */
-
 
 
     public enum otherPackagePaths {
