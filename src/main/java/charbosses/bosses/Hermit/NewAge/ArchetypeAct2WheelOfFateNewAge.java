@@ -8,6 +8,7 @@ import charbosses.cards.colorless.EnHandOfGreedHermitNecro;
 import charbosses.cards.curses.EnInjury;
 import charbosses.cards.curses.EnNecronomicurse;
 import charbosses.cards.hermit.*;
+import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
 import charbosses.powers.bossmechanicpowers.HermitWheelOfFortune;
 import charbosses.relics.CBR_Necronomicon;
 import charbosses.relics.CBR_NeowsBlessing;
@@ -19,6 +20,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.monsters.gauntletbosses.Hermit;
 import hermit.cards.Strike_Hermit;
 
 import java.util.ArrayList;
@@ -34,6 +36,8 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
 
         maxHPModifier += 195;
         actNum = 1;
+        bossMechanicName = HermitWheelOfFortune.NAME;
+        bossMechanicDesc = HermitWheelOfFortune.DESC[0] + HermitWheelOfFortune.CARDS_TO_STR + HermitWheelOfFortune.DESC[1];
     }
 
     @Override

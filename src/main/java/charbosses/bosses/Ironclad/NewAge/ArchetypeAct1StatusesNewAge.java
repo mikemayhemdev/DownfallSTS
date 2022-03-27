@@ -11,6 +11,7 @@ import charbosses.cards.red.*;
 import charbosses.cards.status.EnBurn;
 import charbosses.cards.status.EnDazed;
 import charbosses.cards.status.EnWound;
+import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
 import charbosses.powers.bossmechanicpowers.DefectVoidPower;
 import charbosses.powers.bossmechanicpowers.IroncladStatusPower;
 import charbosses.relics.*;
@@ -33,6 +34,8 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
 
         maxHPModifier += 80;
         actNum = 1;
+        bossMechanicName = IroncladStatusPower.NAME;
+        bossMechanicDesc = IroncladStatusPower.DESC[0];
     }
 
     @Override

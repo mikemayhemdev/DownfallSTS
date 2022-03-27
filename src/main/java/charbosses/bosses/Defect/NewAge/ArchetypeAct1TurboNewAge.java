@@ -27,6 +27,8 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
         maxHPModifier += 102;
         actNum = 1;
         SlimeboundMod.logger.info("Archetype act num: " + actNum);
+        bossMechanicName = DefectVoidPower.NAME;
+        bossMechanicDesc = DefectVoidPower.DESC[0];
     }
 
     @Override

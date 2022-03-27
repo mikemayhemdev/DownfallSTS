@@ -8,6 +8,7 @@ import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnParasite;
 import charbosses.cards.curses.EnRegret;
 import charbosses.cards.purple.*;
+import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
 import charbosses.powers.bossmechanicpowers.WatcherAngryPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -27,6 +28,8 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseWatcher {
 
         maxHPModifier += 98;
         actNum = 1;
+        bossMechanicName = WatcherAngryPower.NAME;
+        bossMechanicDesc = WatcherAngryPower.DESCRIPTIONS[0];
     }
 
     @Override

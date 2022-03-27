@@ -23,7 +23,7 @@ public class SuperTip {
     public static void render(SpriteBatch sb, EasyInfoDisplayPanel.RENDER_TIMING t) {
         for (EasyInfoDisplayPanel d : EasyInfoDisplayPanel.specialDisplays) {
             String s = d.getDescription();
-            if (d.getTiming() == t && s != null && !s.equals("")) {
+            if (d.getTiming() == t && s != null && !s.equals("") && !s.equals("NORENDER")) {
                 if (!Settings.hidePopupDetails) {
                     renderTipBox(d.x, d.y, d.width, sb, d.getTitle(), d.getDescription());
                 }

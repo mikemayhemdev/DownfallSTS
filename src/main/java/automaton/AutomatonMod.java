@@ -19,6 +19,7 @@ import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import charbosses.BossMechanicDisplayPanel;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -367,7 +368,7 @@ public class AutomatonMod implements
         EasyInfoDisplayPanel.specialDisplays.clear();
         compileDisplayPanel = new CompileDisplayPanel();
         EasyInfoDisplayPanel.specialDisplays.add(compileDisplayPanel);
-       // EasyInfoDisplayPanel.specialDisplays.add(new BossMechanicDisplayPanel());
+        EasyInfoDisplayPanel.specialDisplays.add(new BossMechanicDisplayPanel());
         if (FunctionHelper.held != null) {
             FunctionHelper.doStuff = false;
             FunctionHelper.held.clear();

@@ -8,6 +8,7 @@ import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnDecay;
 import charbosses.cards.green.*;
 import charbosses.cards.other.Antidote;
+import charbosses.powers.bossmechanicpowers.IroncladFortificationPower;
 import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
 import charbosses.powers.bossmechanicpowers.SilentShivTimeEaterPower;
 import charbosses.powers.general.PoisonProtectionPower;
@@ -18,16 +19,20 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.green.DeadlyPoison;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.monsters.gauntletbosses.Silent;
 
 import java.util.ArrayList;
 
 public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
 
     public ArchetypeAct1PoisonNewAge() {
-        super("SI_SHIV_ARCHETYPE", "Shivs");
+        super("SI_POISON_ARCHETYPE", "Poison");
+
 
         maxHPModifier += 100;
         actNum = 1;
+        bossMechanicName = SilentPoisonPower.NAME;
+        bossMechanicDesc = SilentPoisonPower.DESC[0];
     }
 
     @Override

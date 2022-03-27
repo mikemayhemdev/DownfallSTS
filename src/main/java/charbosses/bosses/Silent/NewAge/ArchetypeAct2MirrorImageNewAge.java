@@ -12,6 +12,7 @@ import charbosses.cards.green.*;
 import charbosses.cards.purple.EnFlyingSleeves;
 import charbosses.powers.bossmechanicpowers.IroncladStatusPower;
 import charbosses.powers.bossmechanicpowers.SilentMirrorImagePower;
+import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
 import charbosses.relics.*;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
@@ -30,6 +31,8 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
 
         maxHPModifier += 240;
         actNum = 2;
+        bossMechanicName = SilentMirrorImagePower.NAME;
+        bossMechanicDesc = SilentMirrorImagePower.DESC[0];
     }
 
     @Override

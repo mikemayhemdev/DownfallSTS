@@ -7,6 +7,7 @@ import charbosses.cards.curses.EnDoubt;
 import charbosses.cards.curses.EnInjury;
 import charbosses.cards.curses.EnPain;
 import charbosses.cards.hermit.*;
+import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
 import charbosses.powers.bossmechanicpowers.HermitConcentrateAdder;
 import charbosses.powers.bossmechanicpowers.HermitConcentrationPower;
 import charbosses.powers.bossmechanicpowers.HermitDoomsday;
@@ -26,6 +27,8 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
 
         maxHPModifier += 315;
         actNum = 1;
+        bossMechanicName = HermitDoomsday.NAME;
+        bossMechanicDesc = HermitDoomsday.DESC[0];
     }
 
     @Override

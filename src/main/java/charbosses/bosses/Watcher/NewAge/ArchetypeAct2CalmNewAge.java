@@ -4,6 +4,7 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Watcher.ArchetypeBaseWatcher;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.purple.*;
+import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
 import charbosses.powers.bossmechanicpowers.WatcherCripplePower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -22,6 +23,8 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
         super("WA_ARCHETYPE_CALM", "Calm");
         maxHPModifier += 198;
         actNum = 2;
+        bossMechanicName = WatcherCripplePower.NAME;
+        bossMechanicDesc = WatcherCripplePower.DESCRIPTIONS[0] + 150 + WatcherCripplePower.DESCRIPTIONS[1];
     }
 
     @Override

@@ -1663,6 +1663,7 @@ public class downfallMod implements
     @Override
     public void receivePostDeath() {
         evilMode = false;
+        EasyInfoDisplayPanel.specialDisplays.clear();
         // else: we are doing a quickRestart, do not reset evilMode
     }
 
