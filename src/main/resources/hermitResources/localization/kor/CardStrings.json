@@ -180,7 +180,7 @@
   },
   "hermit:Cheat": {
     "NAME": "사기",
-    "DESCRIPTION": "뽑을 카드 더미 위 !M! 장 중 1장을 선택해서 사용합니다. NL hermit:정조준 : 그 카드의 hermit:정조준 효과도 발동시킵니다."
+    "DESCRIPTION": "뽑을 카드 더미 위 !M! 장 중 1장을 선택해서 사용합니다. NL hermit:정조준: 그 카드의 hermit:정조준 효과도 발동시킵니다."
   },
   "hermit:Vantage": {
     "NAME": "위치 선점",

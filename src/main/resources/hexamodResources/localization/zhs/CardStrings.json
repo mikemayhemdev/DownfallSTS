@@ -82,15 +82,15 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "牺牲",
-    "DESCRIPTION": "消耗 一张牌。 NL 如果是一张攻击或技能牌，随机将一张相反类型的牌加入手牌。",
-    "UPGRADE_DESCRIPTION": "消耗 一张牌。 NL 如果是一张攻击或技能牌，随机将一张相反类型的牌加入手牌。 NL 它的耗能减少1。",
+    "DESCRIPTION": "消耗 一张手牌。 NL 如果是一张攻击或技能牌，随机将一张相反类型的牌加入手牌。",
+    "UPGRADE_DESCRIPTION": "消耗 一张手牌。 NL 如果是一张攻击或技能牌，随机将一张相反类型的牌加入手牌。 NL 其耗能减少1点。",
     "EXTENDED_DESCRIPTION": [
       "消耗作为必要的牺牲。"
     ]
   },
   "hexamod:TimeOfNeed": {
     "NAME": "久逢甘露",
-    "DESCRIPTION": "保留 。 NL 将随机一张能力牌加入手牌。 NL 它的耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL 随机将一张能力牌加入手牌。 NL 其耗能为0。 NL 消耗 。"
   },
   "hexamod:SwordOfDarkness": {
     "NAME": "黑夜之剑",
@@ -138,8 +138,8 @@
     "UPGRADE_DESCRIPTION": "expansioncontent:发掘 !M! 张 虚无 牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "发掘一张虚无牌",
-	  "发掘",
-	  "张虚无牌"
+      "发掘",
+      "张虚无牌"
     ]
   },
   "hexamod:GiftsFromTheDead": {

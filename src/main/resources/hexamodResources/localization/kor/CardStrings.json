@@ -256,7 +256,7 @@
   },
   "hexamod:VolcanoVisage": {
     "NAME": "화산의 얼굴",
-    "DESCRIPTION": "내 턴 시작 시 적 전체에게 hexamod:영혼화상을 !M! 부여합니다."
+    "DESCRIPTION": "유령불꽃을 hexamod:점화할 때마다 적 전체에게 hexamod:영혼화상을 !M! 부여합니다."
   },
   "hexamod:SuperheatedStrike": {
     "NAME": "화끈한 타격",
@@ -285,7 +285,7 @@
   },
   "hexamod:RadiantFlame": {
     "NAME": "불꽃 복사",
-    "DESCRIPTION": "영혼불꽃을 hexamod:점화할 때마다 무작위 적에게 hexamod:영혼화상을 !M! 부여합니다."
+    "DESCRIPTION": "영혼불꽃을 hexamod:점화할 때마다 방어도를 !M! 얻습니다."
   },
   "hexamod:ApocalypseNow": {
     "NAME": "지옥의 묵시록",

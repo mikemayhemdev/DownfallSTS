@@ -96,7 +96,7 @@
     ]
   },
   "Slimebound:ProtectorSlime": {
-    "NAME": "수호자 슬라임",
+    "NAME": "가시 슬라임",
     "DESCRIPTION": [
       "내 턴 시작 시 피해를 #b",
       " 주고 #y가시를 #b",
