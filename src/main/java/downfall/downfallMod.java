@@ -1451,7 +1451,7 @@ public class downfallMod implements
                 p instanceof TheSnecko ||
                 p instanceof ChampChar ||
                 p instanceof AutomatonChar ||
-                p instanceof GremlinCharacter) {
+                p instanceof GremlinCharacter || p instanceof hermit.characters.hermit) {
             return true;
         }
         return false;
