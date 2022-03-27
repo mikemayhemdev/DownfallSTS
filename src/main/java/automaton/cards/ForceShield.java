@@ -17,7 +17,7 @@ public class ForceShield extends AbstractBronzeCard {
     private static final int UPG_BLOCK = 4;
 
     public ForceShield() {
-        super(ID, 4, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 3, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         if (CardCrawlGame.dungeon != null && AbstractDungeon.currMapNode != null) {
             this.configureCostsOnNewCard();
