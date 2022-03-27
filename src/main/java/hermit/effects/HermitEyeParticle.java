@@ -35,8 +35,8 @@ public class HermitEyeParticle extends AbstractGameEffect {
         this.rotation = 0.0F;
         this.color = new Color(MathUtils.random(0.8F, 1.0F), MathUtils.random(0.2F, 0.4F), MathUtils.random(0.2F, 0.4F), 0.01F);
 
-        parent = parent;
-        skeleton = skeleton;
+        this.parent = parent;
+        this.skeleton = skeleton;
 
         if (parent instanceof hermit){
             hermitParent = (hermit)parent;
