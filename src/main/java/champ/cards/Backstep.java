@@ -27,7 +27,7 @@ public class Backstep extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        defenseOpen();
+       // defenseOpen();
         blck();
         if (bcombo()) {
             if (p.hasPower(VigorPower.POWER_ID)) {

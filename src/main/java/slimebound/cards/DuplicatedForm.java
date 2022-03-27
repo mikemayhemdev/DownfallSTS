@@ -2,6 +2,9 @@ package slimebound.cards;
 
 
 import basemod.helpers.BaseModCardTags;
+import champ.ChampMod;
+import champ.actions.FatigueHpLossAction;
+import champ.powers.ResolvePower;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPField;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -57,46 +60,13 @@ public class DuplicatedForm extends AbstractSlimeboundCard {
         tags.add(BaseModCardTags.FORM);
     }
 
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        boolean canUse = super.canUse(p, m);
-        int currentHealth = AbstractDungeon.player.currentHealth;
-        int healthCost = baseHealthCost;
-
-        if (AbstractDungeon.player.hasPower(IntangiblePlayerPower.POWER_ID)) {
-            healthCost = 1;
-        }
-
-        if (TempHPField.tempHp.get(AbstractDungeon.player) != null)
-            currentHealth += TempHPField.tempHp.get(AbstractDungeon.player);
-
-        if (!canUse) {
-            return false;
-        }
-        if (AbstractDungeon.player.hasPower(BufferPower.POWER_ID)) {
-            return true;
-        }
-
-        if (AbstractDungeon.player.hasPower(FirmFortitudePower.POWER_ID)) {
-            if (((FirmFortitudePower) AbstractDungeon.player.getPower(FirmFortitudePower.POWER_ID)).amount2 > 0) {
-                return true;
-            }
-        }
-        if (currentHealth <= healthCost) {
-
-            this.cantUseMessage = EXTENDED_DESCRIPTION[0];
-            return false;
-        } else {
-            return true;
-        }
-
-    }
-
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
         AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(p.hb.cX, p.hb.cY, 0));
         AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(p.hb.cX, p.hb.cY, 0));
 
+        ChampMod.fatigue(magicNumber);
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new BorderFlashEffect(Color.GREEN, true), 0.05F, true));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new IntenseZoomEffect(p.hb.cX, p.hb.cY, false), 0.05F));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormPower(p, p, 1), 1));
@@ -106,14 +76,7 @@ public class DuplicatedForm extends AbstractSlimeboundCard {
         //if (upgraded) stack++;
         if (upgraded) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormEnergyPower(p, p, stack), stack));
 
-        int MaxHPActuallyLost = baseHealthCost;
-        if (AbstractDungeon.player.maxHealth <= baseHealthCost) {
-            MaxHPActuallyLost = AbstractDungeon.player.maxHealth - 1;
-        }
-
-        if (MaxHPActuallyLost > 0)
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DuplicatedFormNoHealPower(AbstractDungeon.player, AbstractDungeon.player, MaxHPActuallyLost), MaxHPActuallyLost));
-    }
+         }
 
     public AbstractCard makeCopy() {
         return new DuplicatedForm();

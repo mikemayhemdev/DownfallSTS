@@ -21,8 +21,6 @@ public class SeeingDoubleProduct extends AbstractPower {
     private static final Texture tex84 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowSilent284.png"));
     private static final Texture tex32 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowSilent232.png"));
 
-    float particleTimer = 0.02f;
-
     public SeeingDoubleProduct(final AbstractCreature owner) {
         this.ID = POWER_ID;
         this.owner = owner;
@@ -48,20 +46,9 @@ public class SeeingDoubleProduct extends AbstractPower {
         return damageAmount;
     }
 
-    /*
     @Override
     public void atEndOfRound() {
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, this));
-    }
-     */
-
-    @Override
-    public void updateParticles() {
-        this.particleTimer -= Gdx.graphics.getDeltaTime();
-        if (particleTimer <= 0) {
-            particleTimer = 0.02f;
-            AbstractDungeon.effectsQueue.add(new QuietSpecialSmokeBombEffect(AbstractDungeon.cardRandomRng.random(owner.healthHb.x, owner.healthHb.x + owner.hb.width), owner.hb.y));
-        }
     }
 
     @Override

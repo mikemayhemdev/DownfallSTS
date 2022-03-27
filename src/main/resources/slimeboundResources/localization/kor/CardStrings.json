@@ -97,8 +97,8 @@
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "복제의 형상",
-	"DESCRIPTION": "이번 전투 동안 체력을 !M! 잃고 최대 체력을 !M! 잃습니다. NL 매 턴 처음으로 적에게 사용한 카드가 2번 사용됩니다.",
-    "UPGRADE_DESCRIPTION": "이번 전투 동안 체력을 !M! 잃고 최대 체력을 !M! 잃습니다. NL 매 턴 [E] 를 획득합니다. NL 매 턴 처음으로 적에게 사용한 카드가 2번 사용됩니다.",
+	"DESCRIPTION": "champ:피로를 !M! 얻습니다. NL 매 턴 처음으로 적에게 사용한 카드가 2번 사용됩니다.",
+    "UPGRADE_DESCRIPTION": "champ:피로를 !M! 얻습니다. NL 매 턴 [E] 를 획득합니다. NL 매 턴 처음으로 적에게 사용한 카드가 2번 사용됩니다.",
     "EXTENDED_DESCRIPTION": [
       "체력이... 필요해..."
     ]

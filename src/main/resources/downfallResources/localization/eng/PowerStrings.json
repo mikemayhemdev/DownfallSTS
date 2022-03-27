@@ -113,7 +113,7 @@
   "downfall:NeowSeeingDouble": {
     "NAME": "Seeing Double",
     "DESCRIPTIONS": [
-      "At the start of her turn, Neow is enshrouded in smoke. The first #yAttack used against her the following turn deals #b0 damage."
+      "The first #yAttack used against Neow each turn deals #b0 damage."
     ]
   },
   "downfall:SilentPoisonPower": {

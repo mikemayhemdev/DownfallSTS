@@ -159,9 +159,8 @@ public class downfallMod implements
         StartGameSubscriber,
         StartActSubscriber,
         AddAudioSubscriber,
-        RenderSubscriber
-        //PostDeathSubscriber
-{
+        RenderSubscriber,
+        PostDeathSubscriber {
     public static final String modID = "downfall";
 
     public static final boolean STEAM_MODE = false;
@@ -232,6 +231,12 @@ public class downfallMod implements
             Settings.GameLanguage.ZHS,
             // Settings.GameLanguage.JPN
             Settings.GameLanguage.KOR
+    };
+
+    public static String[] SupportedLanguagesStrings = {
+            "English",
+            "Chinese (Simplified)",
+            "Korean"
     };
     public static ReplaceData[] wordReplacements;
     public static SpireConfig bruhData = null;
@@ -1621,7 +1626,7 @@ public class downfallMod implements
     }
 
     public static void saveBossFight(String ID) {
-        if (AbstractDungeon.getCurrRoom().event == null) {
+        if (AbstractDungeon.getCurrRoom().event == null && !ID.equals(CharBossMerchant.ID)) {
             switch (AbstractDungeon.actNum) {
                 case 1: {
                     Act1BossFaced = ID;
@@ -1652,16 +1657,11 @@ public class downfallMod implements
         }
     }
 
-    /*
     @Override
     public void receivePostDeath() {
-        if (!Loader.isModLoaded("quickrestart") || (!RestartRunHelper.queuedScoreRestart && !RestartRunHelper.queuedRestart)) {
-            evilMode = false;
-        }
+        evilMode = false;
         // else: we are doing a quickRestart, do not reset evilMode
     }
-
-     */
 
 
     public enum otherPackagePaths {

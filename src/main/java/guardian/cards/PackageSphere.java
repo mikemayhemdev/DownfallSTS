@@ -120,6 +120,12 @@ public class PackageSphere extends AbstractGuardianCard {
 
             this.initializeDescription();
             upgradeName();
+            if (prev1 != null)
+                prev1.upgrade();
+            if (prev2 != null)
+                prev2.upgrade();
+            if (prev3 != null)
+                prev3.upgrade();
         }
     }
 
