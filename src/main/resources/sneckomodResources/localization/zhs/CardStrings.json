@@ -55,8 +55,8 @@
   },
   "sneckomod:SoulRoll": {
     "NAME": "灵魂随机",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL sneckomod:混淆 你的手牌。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL sneckomod:混淆 你的手牌。 NL 抽1张牌。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL sneckomod:混淆 所有手牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL sneckomod:混淆 所有手牌。 NL 抽一张牌。"
   },
   "sneckomod:SnekBeam": {
     "NAME": "蛇线",
@@ -125,39 +125,39 @@
   },
   "sneckomod:SoulCleanse": {
     "NAME": "灵魂净化",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL sneckomod:混淆 你的手牌。 NL 这次 sneckomod:混淆 不会出现耗能为3的牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL sneckomod:混淆 你的手牌。 NL 这次 sneckomod:混淆 不会出现耗能为3的牌。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL sneckomod:混淆 所有手牌。 NL 这次 sneckomod:混淆 不会出现耗能为3的牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL sneckomod:混淆 所有手牌。 NL 这次 sneckomod:混淆 不会出现耗能为3的牌。"
   },
   "sneckomod:SoulExchange": {
     "NAME": "灵魂交换",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 抽1张牌并 消耗 1张牌。 NL 消耗 你的手牌，将它们替换为随机同角色牌。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽2张牌并 消耗 1张牌。 NL 消耗 你的手牌，将它们替换为随机同角色牌。",
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 抽1张牌并 消耗 1张牌。 NL 消耗 所有手牌，将它们替换为随机同角色牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽2张牌并 消耗 1张牌。 NL 消耗 所有手牌，将它们替换为随机同角色牌。",
     "EXTENDED_DESCRIPTION": [
       "来消耗以交换灵魂。"
     ]
   },
   "sneckomod:CheapStock": {
     "NAME": "廉价股票",
-    "DESCRIPTION": "你的回合开始时，将手牌中耗能最高的 sneckomod:异色 牌的耗能减少1。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 你的回合开始时，将手牌中耗能最高的 sneckomod:异色 牌的耗能减少1。"
+    "DESCRIPTION": "回合开始时，将手牌中耗能最高的 sneckomod:异色 牌的耗能降低1点。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，将手牌中耗能最高的 sneckomod:异色 牌的耗能降低1点。"
   },
   "sneckomod:UnlimitedRolls": {
     "NAME": "无限随机",
-    "DESCRIPTION": "你的回合开始时，将一张有 消耗 与 虚无 的 *灵魂随机 加入你的手牌。",
-    "UPGRADE_DESCRIPTION": " 固有 。你的回合开始时，将一张有 消耗 与 虚无 的 *灵魂随机 加入你的手牌。"
+    "DESCRIPTION": "回合开始时，将一张带有 消耗 与 虚无 的 *灵魂随机 加入手牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。回合开始时，将一张带有 消耗 与 虚无 的 *灵魂随机 加入手牌。"
   },
   "sneckomod:MasterEye": {
     "NAME": "主宰之眼",
-    "DESCRIPTION": "获得 *混乱 。 NL 每回合开始时额外抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "获得 *混乱 。 NL 每回合开始时额外抽 !M! 张牌。"
+    "DESCRIPTION": "获得 *混乱 。 NL 回合开始时抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "获得 *混乱 。 NL 回合开始时抽 !M! 张牌。"
   },
   "sneckomod:ImprovisedAttack": {
     "NAME": "即兴攻击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张随机 sneckomod:异色 攻击牌加入你的手牌并 sneckomod:混淆 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机将一张 sneckomod:异色 攻击牌加入手牌并 sneckomod:混淆 它。"
   },
   "sneckomod:ImprovisedGuard": {
     "NAME": "即兴防御",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将一张随机 sneckomod:异色 技能牌加入你的手牌并 sneckomod:混淆 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 随机将一张 sneckomod:异色 技能牌加入手牌并 sneckomod:混淆 它。"
   },
   "sneckomod:QuickMove": {
     "NAME": "快速移动",
@@ -175,16 +175,16 @@
   },
   "sneckomod:SerpentMind": {
     "NAME": "异色形态",
-    "DESCRIPTION": "每当你打出 sneckomod:异色 牌，抽1张牌。"
+    "DESCRIPTION": "打出 sneckomod:异色 牌时抽一张牌。"
   },
   "sneckomod:SlitherStrike": {
     "NAME": "滑动打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 手中的 sneckomod:异色 牌本回合内耗能减少1。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 手中所有 sneckomod:异色 牌本回合内耗能减少1点。"
   },
   "sneckomod:PureSnecko": {
     "NAME": "易质",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 将手牌中的 sneckomod:异色 牌 消耗 并替换为新的牌。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 将手牌中的 sneckomod:异色 牌 消耗 并替换为耗能低1点的新牌。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 将手中所有 sneckomod:异色 牌 消耗 并替换为随机牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 将手中所有 sneckomod:异色 牌 消耗 并替换为耗能低1点的随机牌。"
   },
   "sneckomod:Cheat": {
     "NAME": "作弊",
@@ -193,7 +193,7 @@
   },
   "sneckomod:Restock": {
     "NAME": "补充",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 丢弃你的手牌。 NL 抽 5-10 张牌。 NL 消耗 。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 丢弃所有手牌。 NL 抽 5-10 张牌。 NL 消耗 。"
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "闪光伎俩",
@@ -220,7 +220,7 @@
   },
   "sneckomod:SerpentIdol": {
     "NAME": "蛇神像",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 从3张随机 sneckomod:异色 牌中选择1张加入你的手牌。 NL 这张牌在本回合耗能变为0。 NL 消耗 。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 从3张随机 sneckomod:异色 牌中选择1张加入手牌。 NL 这张牌在本回合耗能变为0。 NL 消耗 。"
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "变废为宝",
@@ -233,7 +233,7 @@
   },
   "sneckomod:MixItUp": {
     "NAME": "混合起来！",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 变化你的药水。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 变化所有药水。 NL 消耗 。"
   },
   "sneckomod:MorePower": {
     "NAME": "更多力量！",
@@ -285,27 +285,27 @@
   },
   "sneckomod:Mudshield": {
     "NAME": "泥泞护盾",
-    "DESCRIPTION": "每当你 sneckomod:混淆 一张牌时，获得 !M! 点 格挡 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 每当你 sneckomod:混淆 一张牌时，获得 !M! 点 格挡 。"
+    "DESCRIPTION": "sneckomod:混淆 一张牌时获得 !M! 点 格挡 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL sneckomod:混淆 一张牌时获得 !M! 点 格挡 。"
   },
   "sneckomod:WideSting": {
     "NAME": "宽刺",
-    "DESCRIPTION": "对所有敌人造成 !M! - !D! 点伤害。 NL 升级  手中的 sneckomod:异色 牌。"
+    "DESCRIPTION": "对所有敌人造成 !M! - !D! 点伤害。 NL 升级 手中所有 sneckomod:异色 牌。"
   },
   "sneckomod:UnendingSupply": {
     "NAME": "延绵不绝",
-    "DESCRIPTION": "每回合开始时，将随机一张 sneckomod:异色 牌加入手牌。"
+    "DESCRIPTION": "回合开始时，随机将一张 sneckomod:异色 牌加入手牌。"
   },
   "sneckomod:Memorize": {
     "NAME": "回忆",
-    "DESCRIPTION": "sneckomod:蛇证 。 即逝 。 NL 选择手牌中一张未知牌，将它明晰成目前的牌。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 即逝 。 保留 。 NL 选择手牌中一张未知牌，将它明晰成目前的牌。",
+    "DESCRIPTION": "sneckomod:蛇证 。 即逝 。 NL 选择一张未知手牌，将它明晰成目前的牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 即逝 。 保留 。 NL 选择一张未知手牌，将它明晰成目前的牌。",
     "EXTENDED_DESCRIPTION": [
       "选择一张牌进行回忆。"
     ]
   },
   "sneckomod:UnknownBoss": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": " *未知 expansioncontent:首领 牌。"
   }
 }
