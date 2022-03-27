@@ -3,7 +3,7 @@
     "NAME": "챔피언 왕관",
     "FLAVOR": "승자는 바로 당신입니다!",
     "DESCRIPTIONS": [
-      "#y광폭화 자세를 취할 때 무작위 적에게 피해를 #b3 줍니다. #y수비 자세를 취할 때 방어도를 #b3 얻습니다."
+      "#y자세를 취할 때마다 무작위 적에게 피해를 #b3 줍니다."
     ]
   },
   "champ:BlackKnightHelmet": {
@@ -31,7 +31,7 @@
     "NAME": "승리의 왕관",
     "FLAVOR": "축하합니다!! 당신은 영광스러운 승자입니다.",
     "DESCRIPTIONS": [
-      "#r챔피언 #r왕관과 교체합니다. NL #b2 턴 동안 #y궁극의 #y자세를 취한 채로 전투를 시작합니다."
+      "#r챔피언 #r왕관과 교체합니다. NL #b2 턴 동안 #ychamp:궁극의 #y자세를 취한 채로 전투를 시작합니다."
     ]
   },
   "champ:DefensiveTrainingManual": {
@@ -45,7 +45,7 @@
     "NAME": "편향된 아대",
     "FLAVOR": "차단하고 싶은 게 있다면...",
     "DESCRIPTIONS": [
-      "내 턴 시작 시 잃은 방어도만큼 #y반격을 얻습니다."
+      "내 턴 시작 시 잃은 방어도만큼 #ychamp:반격을 얻습니다."
     ]
   },
   "champ:DuelingGlove": {
@@ -56,10 +56,10 @@
     ]
   },
   "champ:FightingForDummies": {
-    "NAME": "싸움용 설계도",
-    "FLAVOR": "방법 1. 적을 처리한다.",
+    "NAME": "돌핀 식 안내서",
+    "FLAVOR": "저자: 저명한 탐험가이자 복싱 선수인 돌핀 K.미스트",
     "DESCRIPTIONS": [
-      "내 턴 종료 시 #y자세를 취하고 있지 않다면 다음 턴에 카드를 1 장 더 뽑습니다."
+      "내 턴 종료 시 #y자세를 취하고 있지 않다면 다음 턴에 카드를 1장 추가로 뽑습니다."
     ]
   },
   "champ:GladiatorsBookOfMartialProwess": {
@@ -73,7 +73,7 @@
     "NAME": "강력한 갑옷",
     "FLAVOR": "중고로 샀습니다.",
     "DESCRIPTIONS": [
-      "내 턴 시작 시 [E] 를 얻습니다. NL 최대 #y활력과 #y반격이 #b30 으로 감소합니다."
+      "내 턴 시작 시 [E] 를 얻습니다. NL 최대 #y활력과 #ychamp:반격이 #b30 으로 감소합니다."
     ]
   },
   "champ:SignatureFinisher": {
