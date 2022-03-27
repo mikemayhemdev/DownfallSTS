@@ -49,12 +49,12 @@ public class GremlinArms extends AbstractGremlinCard {
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        int shivs = AbstractDungeon.cardRandomRng.random(0,this.magicNumber);
-        if(shivs > 0){
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Shiv(), shivs));
-        }
-        if(shivs < this.magicNumber) {
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Ward(), this.magicNumber - shivs));
+        for(int i = 0; i < magicNumber; i++){
+            int shiv = AbstractDungeon.cardRandomRng.random(0, 1);
+            if (shiv == 1)
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Shiv(), 1));
+            else
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Ward(), 1));
         }
     }
 

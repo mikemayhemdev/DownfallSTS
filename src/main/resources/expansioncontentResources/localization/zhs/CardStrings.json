@@ -66,8 +66,8 @@
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "恶灵附身",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 将随机一张 expansioncontent:首领 牌加入手牌。 NL 它下次耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 将随机一张已 升级 的张 expansioncontent:首领 牌加入手牌，它下次耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 将随机一张 expansioncontent:首领 牌加入手牌。 NL 它下次耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 将随机一张已 升级 的张 expansioncontent:首领 牌加入手牌，它下次耗能为0。 NL 消耗 。"
   },
     "expansioncontent:KnowingSkullWish": {
     "NAME": "全知头骨",

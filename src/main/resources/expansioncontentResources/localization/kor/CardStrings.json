@@ -66,8 +66,8 @@
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "내면의 악",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 방어도를 !B! 얻습니다. NL 무작위 expansioncontent:보스 카드를 1장 얻습니다. 사용하기 전까지 그 카드의 비용은 0이 됩니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 방어도를 !B! 얻습니다. NL 무작위 강화된 expansioncontent:보스 카드를 1장 얻습니다. 사용하기 전까지 그 카드의 비용은 0이 됩니다. NL 소멸."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 무작위 expansioncontent:보스 카드를 1장 얻습니다. 사용하기 전까지 그 카드의 비용은 0이 됩니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 무작위 강화된 expansioncontent:보스 카드를 1장 얻습니다. 사용하기 전까지 그 카드의 비용은 0이 됩니다. NL 소멸."
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "뭐든지 아는 해골",

@@ -72,7 +72,7 @@ public class HighlightCards {
                 if (!AbstractCharBoss.boss.isDeadOrEscaped()) {
                     if (AbstractCharBoss.boss.hasPower(SilentShivTimeEaterPower.POWER_ID)) {
                         if (!((SilentShivTimeEaterPower) AbstractCharBoss.boss.getPower(SilentShivTimeEaterPower.POWER_ID)).usedThisTurn) {
-                            if (!(c instanceof AbstractBossCard) && c.cost != -1 && (c.costForTurn >= 2) && !c.purgeOnUse) {
+                            if (!(c instanceof AbstractBossCard) && c.cost != -1 && c.costForTurn >= 2 && !c.purgeOnUse && !c.freeToPlayOnce) {
                                 return true;
                             }
                         }
