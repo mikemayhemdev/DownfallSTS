@@ -12,7 +12,7 @@ import downfall.patches.EvilModeCharacterSelect;
 public class EndingChangePatches {
     @SpirePostfixPatch
     public static void patch(NeowNarrationScreen _instance) {
-        if (EvilModeCharacterSelect.evilMode) {
+        if (downfallMod.neowtextoverride) {
             ReflectionHacks.setPrivateStaticFinal(NeowNarrationScreen.class, "charStrings", CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowEnding")));
         } else {
             ReflectionHacks.setPrivateStaticFinal(NeowNarrationScreen.class, "charStrings", CardCrawlGame.languagePack.getCharacterString("PostCreditsNeow"));

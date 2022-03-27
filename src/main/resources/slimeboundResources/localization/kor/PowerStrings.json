@@ -223,15 +223,15 @@
     ]
   },
   "Slimebound:RecyclingPower": {
-    "NAME": "재활용",
+    "NAME": "재수거",
     "DESCRIPTIONS": [
-      "내 턴 시작 시 #y소멸된 카드 더미에서 무작위 비용이 0인 카드를 #b",
+      "내 턴 시작 시 #y소멸된 카드 더미에서 무작위 #y핥기 카드를 #b",
       " 장 가져옵니다.",
       " 장 가져옵니다."
     ]
   },
   "Slimebound:RecyclingPowerUpgraded": {
-    "NAME": "재활용+",
+    "NAME": "재수거+",
     "DESCRIPTIONS": [
       "체력을 #b",
       " 회복하고 #y소멸된 비용 0 카드를 1장 가져옵니다."

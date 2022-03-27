@@ -10,7 +10,7 @@
     "NAME": "가연성 가스",
     "DESCRIPTIONS": [
       "#y활성화된 유령불꽃을 #b",
-      " 번 점화합니다."
+      " 번 #y점화합니다."
     ]
   },
   "hexamod:EctoCoolerPotion": {

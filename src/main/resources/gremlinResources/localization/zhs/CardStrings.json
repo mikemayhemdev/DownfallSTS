@@ -1,7 +1,7 @@
 {
   "Gremlin:AggressiveDefense": {
     "NAME": "侵略防御",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每当你获得 格挡 ，目标敌人失去 !M! 点生命。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每当你获得 格挡 ，目标失去 !M! 点生命。"
   },
   "Gremlin:ArmsTheft": {
     "NAME": "力量窃取",
@@ -76,7 +76,7 @@
   },
   "Gremlin:Dazzle": {
     "NAME": "耀眼",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果你至少有3点 gremlin:法力 ，窃取2点 力量 。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若至少有3点 gremlin:法力 ，窃取2点 力量 。 NL 消耗 。"
   },
   "Gremlin:Defend": {
     "NAME": "防御",
@@ -84,20 +84,20 @@
   },
   "Gremlin:Duplicate": {
     "NAME": "复制",
-    "DESCRIPTION": "将一张攻击牌的 !M! 张 gremlin:回响 加入手牌。 NL 它们的耗能降低 1 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将一张攻击牌的 !M! 张 gremlin:回响 加入手牌。 NL 它们的耗能降低 1 。"
+    "DESCRIPTION": "将一张攻击牌的 !M! 张 gremlin:回响 加入手牌。 NL 其耗能降低1点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "将一张攻击牌的 !M! 张 gremlin:回响 加入手牌。 NL 其耗能降低1点。"
   },
   "Gremlin:EdibleArmor": {
     "NAME": "食用护甲",
-    "DESCRIPTION": "将你的 格挡 转换为等量 临时生命 。"
+    "DESCRIPTION": "将你的 格挡 转换为等量 #y临时生命 。"
   },
   "Gremlin:Encore": {
     "NAME": "鼓舞",
-    "DESCRIPTION": "获得 3 点 gremlin:法力 。 NL 每当你消耗 gremlin:法力 时，对所有敌人造成 !M! 点伤害。"
+    "DESCRIPTION": "获得 3 点 gremlin:法力 。 NL 消耗 gremlin:法力 时，对所有敌人造成 !M! 点伤害。"
   },
   "Gremlin:Enthusiasm": {
     "NAME": "狂热",
-    "DESCRIPTION": "每当你 gremlin:切换 时， NL 抽一张牌。"
+    "DESCRIPTION": " gremlin:切换 时抽一张牌。"
   },
   "Gremlin:Erupt": {
     "NAME": "爆发",
@@ -134,11 +134,11 @@
   },
   "Gremlin:FlipOut": {
     "NAME": "发疯",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 本回合每当你获得 格挡 时， 变为对所有敌人造成等量伤害。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 本回合每当你获得 格挡 ，变为对所有敌人造成等量伤害。"
   },
   "Gremlin:Flurry": {
     "NAME": "乱舞",
-    "DESCRIPTION": "本回合内每打出过一张牌， 造成 !D! 点伤害。 NL 消耗 。",
+    "DESCRIPTION": "本回合每打出过一张牌， 造成 !D! 点伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " 张牌。)",
@@ -151,7 +151,7 @@
   },
   "Gremlin:Fury": {
     "NAME": "狂怒",
-    "DESCRIPTION": "你每有 2 点 力量 ，这张牌牌的能耗降低 [E] 。 NL 造成 !D! 点伤害三次。"
+    "DESCRIPTION": "每有2点 力量 ，本牌的耗能减少 [E] 。 NL 造成 !D! 点伤害三次。"
   },
   "Gremlin:Glimmer": {
     "NAME": "闪光",
@@ -212,7 +212,7 @@
   },
   "Gremlin:IrksomeBlow": {
     "NAME": "烦扰一击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 力量 在这张牌上发挥 !M! 倍效果 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 力量 在本牌发挥 !M! 倍效果 。"
   },
   "Gremlin:Irritability": {
     "NAME": "易怒",
@@ -322,7 +322,7 @@
   },
   "Gremlin:Rhythm": {
     "NAME": "节奏",
-    "DESCRIPTION": "gremlin:切换 到下一只地精。 NL 从抽牌堆选择取出一张基础牌。它的耗能本回合为 0 。"
+    "DESCRIPTION": "gremlin:切换 到下一只地精。 NL 从抽牌堆选择取出一张基础牌。其耗能本回合为 0 。"
   },
   "Gremlin:Rush": {
     "NAME": "冲锋",
@@ -344,7 +344,7 @@
   },
   "Gremlin:ShadowShiv": {
     "NAME": "暗影刀刃",
-    "DESCRIPTION": "每当你打出不会 消耗 的攻击牌时，将一张 *小刀 加入手牌。"
+    "DESCRIPTION": "打出非 消耗 攻击牌时，将一张 *小刀 加入手牌。"
   },
   "Gremlin:ShankStone": {
     "NAME": "石刀",
@@ -355,8 +355,8 @@
   },
   "Gremlin:SharpenBlades": {
     "NAME": "锐化刀片",
-    "DESCRIPTION": "你手牌中的所有攻击牌在本回合打出前的耗能变为 0 点。",
-    "UPGRADE_DESCRIPTION": "抽一张牌。 NL 你手牌中的所有攻击牌在本回合的耗能变为 0 点。"
+    "DESCRIPTION": "手中攻击牌本回合下次耗能变为0。",
+    "UPGRADE_DESCRIPTION": "抽一张牌。 NL 手中攻击牌本回合下次耗能变为0。"
   },
   "Gremlin:ShieldGremlin": {
     "NAME": "持盾地精",
@@ -397,8 +397,8 @@
   },
   "Gremlin:Tadah": {
     "NAME": "愚蠢！",
-    "DESCRIPTION": "将一张随机技能牌的 gremlin:回响 加入手牌。 NL 其能耗减少1。 NL gremlin:切换 到 gremlin:地精法师 。",
-    "UPGRADE_DESCRIPTION": "将一张随机技能牌已 升级 的 gremlin:回响 加入手牌。 NL 其能耗减少1。 NL gremlin:切换 到 gremlin:地精法师 。"
+    "DESCRIPTION": "将一张随机技能牌的 gremlin:回响 加入手牌。 NL 其能耗减少1点。 NL gremlin:切换 到 gremlin:地精法师 。",
+    "UPGRADE_DESCRIPTION": "将一张随机技能牌已 升级 的 gremlin:回响 加入手牌。 NL 其能耗减少1点。 NL gremlin:切换 到 gremlin:地精法师 。"
   },
   "Gremlin:TagTeam": {
     "NAME": "配合",
@@ -424,7 +424,7 @@
   },
   "Gremlin:Unforgiving": {
     "NAME": "无情",
-    "DESCRIPTION": "你不会再失去 力量 。"
+    "DESCRIPTION": "不再失去 力量 。"
   },
   "Gremlin:Ward": {
     "NAME": "守卫",

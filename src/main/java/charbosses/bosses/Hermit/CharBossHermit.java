@@ -7,9 +7,12 @@ import charbosses.bosses.Hermit.NewAge.ArchetypeAct2WheelOfFateNewAge;
 import charbosses.bosses.Hermit.NewAge.ArchetypeAct3DoomsdayNewAge;
 import charbosses.bosses.Watcher.NewAge.ArchetypeAct1RetainNewAge;
 import charbosses.core.EnemyEnergyManager;
+import charbosses.powers.bossmechanicpowers.HermitConcentrationPower;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
+import com.esotericsoftware.spine.Slot;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
@@ -20,6 +23,8 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbPurple;
 import downfall.downfallMod;
 import hermit.characters.hermit;
+import hermit.effects.HermitEyeParticle;
+import hermit.powers.Concentration;
 
 import static charbosses.cards.AbstractBossCard.HAND_SCALE;
 import static charbosses.cards.AbstractBossCard.HOVER_SCALE;
@@ -32,6 +37,8 @@ public class CharBossHermit extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Hermit");
     public static final String NAME = CardCrawlGame.languagePack.getCharacterString("hermit:hermit").NAMES[0];
 
+    public Slot eye;
+    private float fireTimer = 0.0F;
 
     public CharBossHermit() {
         super(NAME, ID, 72, 0.0F, -5.0F, 240.0F, 270.0F, null, 0.0f, -20.0f, PlayerClass.WATCHER);
@@ -156,6 +163,14 @@ public class CharBossHermit extends AbstractCharBoss {
     @Override
     public void update() {
         super.update();
+        if (!this.isDying && AbstractDungeon.player.hasPower(HermitConcentrationPower.POWER_ID)) {
+            this.fireTimer -= Gdx.graphics.getDeltaTime();
+            if (this.fireTimer < 0.0F) {
+                this.fireTimer = 0.1F;
+                HermitEyeParticle shine = new HermitEyeParticle(this.skeleton.getX() + this.eye.getBone().getWorldX(), this.skeleton.getY() + this.eye.getBone().getWorldY(), this, this.skeleton);
+                AbstractDungeon.effectList.add(shine);
+            }
+        }
         if (previewCard != null && !isDying && !isDead) {
             previewCard.update();
             previewCard.updateHoverLogic();
