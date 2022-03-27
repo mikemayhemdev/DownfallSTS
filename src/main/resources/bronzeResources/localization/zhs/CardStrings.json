@@ -251,8 +251,8 @@
   },
   "bronze:Overload": {
     "NAME": "过载",
-    "DESCRIPTION": "打出 *队列 中的牌的复制品。 其不进行 bronze:编码 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "打出 *队列 中的牌的复制品。其不进行 bronze:编码 。"
+    "DESCRIPTION": "打出 *队列 中牌的复制品。 其不进行 bronze:编码 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "打出 *队列 中牌的复制品。其不进行 bronze:编码 。"
   },
   "bronze:GetLatest": {
     "NAME": "最新素材",
@@ -318,7 +318,7 @@
   },
   "bronze:ChosenStrike": {
     "NAME": "邪教打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 本局游戏这张牌的伤害增加 !M! 点。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 本局游戏本牌的伤害增加 !M! 点。",
     "EXTENDED_DESCRIPTION": [
       "邪教",
       "咔咔"
@@ -326,13 +326,13 @@
   },
   "bronze:ClassDefault": {
     "NAME": "默认类",
-    "DESCRIPTION": "将当前 *队列 中的首张牌，自动加入到下 !M! 个 *队列 中。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 将当前 *队列 中的首张牌，自动加入到下 !M! 个 *队列 中。"
+    "DESCRIPTION": "将当前 *队列 中的首张牌，自动加入下 !M! 个 *队列 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 将当前 *队列 中的首张牌，自动加入下 !M! 个 *队列 。"
   },
   "bronze:ItsAFeature": {
     "NAME": "这是特性",
-    "DESCRIPTION": "当你抽到 诅咒 或 状态牌 时，获得 1 点 guardianmod:临时 力量 和 敏捷 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 当你抽到 诅咒 或 状态牌 时，获得 1 点 guardianmod:临时 力量 和 敏捷 。"
+    "DESCRIPTION": "抽到一张 诅咒 或 状态牌 时，获得 1 点 guardianmod:临时 力量 和 敏捷 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 抽到一张 诅咒 或 状态牌 时，获得 1 点 guardianmod:临时 力量 和 敏捷 。"
   },
   "bronze:MinorBeam": {
     "NAME": "微光射线",
@@ -433,7 +433,7 @@
   },
   "bronze:ForceShield": {
     "NAME": "力场护盾",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本场战斗每生成一张 *方法 ，本牌耗能减少 [E] 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本场战斗每 bronze:编译 过一张 *方法 ，本牌耗能减少 [E] 。"
   },
   "bronze:Format": {
     "NAME": "格式化",
@@ -462,7 +462,7 @@
   },
   "bronze:Break": {
     "NAME": "打断",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:插入 !M! 张随机状态牌 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:插入 !M! 张随机 状态牌 。",
     "EXTENDED_DESCRIPTION": [
       "打断",
       "粉碎"
@@ -493,7 +493,7 @@
   },
   "bronze:HardenedForm": {
     "NAME": "圆球召唤",
-    "DESCRIPTION": "每当你生成或打出 *方法 时，获得 !M! 点 格挡 并对随机敌人造成 !M! 点伤害。"
+    "DESCRIPTION": " bronze:编译 或打出 *方法 时，获得 !M! 点 格挡 并对随机敌人造成 !M! 点伤害。"
   },
   "bronze:CopyPaste": {
     "NAME": "复制粘贴",
@@ -516,11 +516,11 @@
   },
   "bronze:HyperBeam": {
     "NAME": "超能射线",
-    "DESCRIPTION": " 保留 。 NL 对所有敌人造成 !D! 点伤害。 NL 将 5 张 *虚空 加你的抽牌堆顶部。 NL 保留 时，这张牌的耗能降低1。"
+    "DESCRIPTION": " 保留 。 NL 对所有敌人造成 !D! 点伤害。 NL 将 5 张 *虚空 加入抽牌堆顶部。 NL 保留 时，本牌的耗能减少1点。"
   },
   "bronze:Hardcode": {
     "NAME": "硬编码",
-    "DESCRIPTION": "你生成的下张 *方法 将加入牌组。 NL 从牌组中移除构成 *方法 的牌和本牌。"
+    "DESCRIPTION": "将 bronze:编译 的下张 *方法 加入牌组。 NL 从牌组中移除构成 *方法 的牌和本牌。"
   },
   "bronze:SpaghettiCode": {
     "NAME": "意面代码",
@@ -529,7 +529,7 @@
   },
   "bronze:Assembly": {
     "NAME": "装配",
-    "DESCRIPTION": " 预见 !M! 。 NL bronze:编码 其中丢弃的可 bronze:编码 的牌。 NL 消耗 。"
+    "DESCRIPTION": " 预见 !M! 。 NL bronze:编码 丢弃的可 bronze:编码 牌。 NL 消耗 。"
   },
   "bronze:FineTuning": {
     "NAME": "性能调整",
@@ -558,8 +558,8 @@
   },
   "bronze:Ignite": {
     "NAME": "引燃",
-    "DESCRIPTION": "给予 !M! 层 hexamod:灼魂 。 NL 回合结束时,受到 2 点伤害。",
-    "UPGRADE_DESCRIPTION": "给予 !M! 层 hexamod:灼魂 。 NL 回合结束时,受到 4 点伤害。"
+    "DESCRIPTION": "给予 !M! 层 hexamod:灼魂 。 NL 回合结束时，受到 2 点伤害。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 hexamod:灼魂 。 NL 回合结束时，受到 4 点伤害。"
   },
   "bronze:IntoTheVoid": {
     "NAME": "遁入虚空",
@@ -592,8 +592,8 @@
   },
   "bronze:Turbo": {
     "NAME": "内核加速",
-    "DESCRIPTION": "获得 [E] [E] 。 NL 将一张 *虚空 加入你的弃牌堆。",
-    "UPGRADE_DESCRIPTION": "获得 [E] [E] [E] 。 NL 将一张 *虚空 加入你的弃牌堆。"
+    "DESCRIPTION": "获得 [E] [E] 。 NL 将一张 *虚空 加入弃牌堆。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] [E] 。 NL 将一张 *虚空 加入弃牌堆。"
   },
   "bronze:BugBarrage": {
     "NAME": "错误齐射",
@@ -622,7 +622,7 @@
   },
   "bronze:ThunderWave": {
     "NAME": "雷霆",
-    "DESCRIPTION": "本场战斗每生成过一张 *方法 对随机敌人造成 !D! 点伤害。",
+    "DESCRIPTION": "本场战斗每 bronze:编译 过一张 *方法 对随机敌人造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       " NL （攻击 ",
       " 次）"
