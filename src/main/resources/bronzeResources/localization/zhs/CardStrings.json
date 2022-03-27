@@ -234,7 +234,7 @@
   },
   "bronze:Constructor": {
     "NAME": "构造器",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编码 时，如果在第一个槽位，提高 !M! 点 格挡 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编码 时，如果在首个槽位，提高 !M! 点 格挡 。",
     "EXTENDED_DESCRIPTION": [
       "构造",
       "失落",
@@ -251,12 +251,12 @@
   },
   "bronze:Overload": {
     "NAME": "过载",
-    "DESCRIPTION": "打出 *队列 中的牌的复制品。 它们不进行 bronze:编码 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "打出 *队列 中的牌的复制品。它们不进行 bronze:编码 。"
+    "DESCRIPTION": "打出 *队列 中的牌的复制品。 其不进行 bronze:编码 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "打出 *队列 中的牌的复制品。其不进行 bronze:编码 。"
   },
   "bronze:GetLatest": {
     "NAME": "最新素材",
-    "DESCRIPTION": "随机将一张可 bronze:编码 的牌加入手牌。 NL 它耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "随机将一张可 bronze:编码 的牌加入手牌。 NL 其耗能为0。 NL 消耗 。"
   },
   "bronze:Flail": {
     "NAME": "乱斗",
@@ -326,8 +326,8 @@
   },
   "bronze:ClassDefault": {
     "NAME": "默认类",
-    "DESCRIPTION": "将当前 *队列 中的第一张牌，自动加入到下 !M! 个 *队列 中。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 将当前 *队列 中的第一张牌，自动加入到下 !M! 个 *队列 中。"
+    "DESCRIPTION": "将当前 *队列 中的首张牌，自动加入到下 !M! 个 *队列 中。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 将当前 *队列 中的首张牌，自动加入到下 !M! 个 *队列 中。"
   },
   "bronze:ItsAFeature": {
     "NAME": "这是特性",
@@ -470,8 +470,8 @@
   },
   "bronze:InfiniteLoop": {
     "NAME": "无限循环",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 将一张本牌的复制品加入手牌，它增加 !M! 点伤害。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL bronze:编译 - 将一张本牌的复制品加入手牌，它增加 !M! 点伤害。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 将一张本牌的复制品加入手牌，其伤害增加 !M! 点。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL bronze:编译 - 将一张本牌的复制品加入手牌，其伤害增加 !M! 点。",
     "EXTENDED_DESCRIPTION": [
       "无限",
       "循环"
@@ -479,12 +479,12 @@
   },
   "bronze:Library": {
     "NAME": "数据库",
-    "DESCRIPTION": "回合开始时，随机将一张可 bronze:编码 的牌加入手牌。 NL 它的耗能为0。"
+    "DESCRIPTION": "回合开始时，随机将一张可 bronze:编码 的牌加入手牌。 NL 其耗能为0。"
   },
   "bronze:Verify": {
     "NAME": "感知形态",
-    "DESCRIPTION": "虚无 。 NL 每回合第一次生成或抽到 *方法 时，它的数值增加1点。",
-    "UPGRADE_DESCRIPTION": "每回合第一次生成或抽到 *方法 时，它的数值增加1点。"
+    "DESCRIPTION": "虚无 。 NL 每回合首次 bronze:编译 或抽到 *方法 时，其数值增加1点。",
+    "UPGRADE_DESCRIPTION": "每回合首次 bronze:编译 或抽到 *方法 时，其数值增加1点。"
   },
   "bronze:BronzeHeatsink": {
     "NAME": "铜制散热器",
@@ -507,8 +507,8 @@
   },
   "bronze:Repulsor": {
     "NAME": "反冲",
-    "DESCRIPTION": "消耗 每回合抽到的第一张 状态牌 或 诅咒 并抽一张牌。",
-    "UPGRADE_DESCRIPTION": "消耗 每回合抽到的第一张 状态牌 或 诅咒 并抽一张牌。"
+    "DESCRIPTION": "消耗 每回合抽到的首张 状态牌 或 诅咒 并抽一张牌。",
+    "UPGRADE_DESCRIPTION": "消耗 每回合抽到的首张 状态牌 或 诅咒 并抽一张牌。"
   },
   "bronze:Debug": {
     "NAME": "调试",
