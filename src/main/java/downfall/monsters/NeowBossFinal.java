@@ -311,28 +311,9 @@ public class NeowBossFinal extends AbstractMonster {
         neowboss = null;
     }
 
-    public boolean foggy() {
-        return this.hasPower(SeeingDoubleProduct.POWER_ID);
-    }
-
-    @Override
-    public void renderTip(SpriteBatch sb) {
-        if (!foggy()) {
-            super.renderTip(sb);
-        }
-    }
-
-
-    @SpireOverride
-    protected void renderName(SpriteBatch sb) {
-        if (!foggy()) {
-            SpireSuper.call(sb);
-        }
-    }
-
     @SpireOverride
     protected void renderPowerIcons(SpriteBatch sb, float x, float y) {
-        if (!foggy() && !halfDead) {
+        if (!halfDead) {
             SpireSuper.call(sb, x, y);
         }
     }

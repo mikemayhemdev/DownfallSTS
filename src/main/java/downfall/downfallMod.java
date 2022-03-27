@@ -120,6 +120,7 @@ import guardian.characters.GuardianCharacter;
 import guardian.relics.PickAxe;
 import hermit.HermitMod;
 import hermit.actions.MessageCaller;
+import quickRestart.helper.RestartRunHelper;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
 import sneckomod.SneckoMod;
@@ -159,12 +160,12 @@ public class downfallMod implements
         StartGameSubscriber,
         StartActSubscriber,
         AddAudioSubscriber,
-        RenderSubscriber
-        //PostDeathSubscriber
+        RenderSubscriber,
+        PostDeathSubscriber
 {
     public static final String modID = "downfall";
 
-    public static final boolean STEAM_MODE = false;
+    public static final boolean STEAM_MODE = true;
 
 
     public static boolean choosingBossRelic = false;
@@ -232,6 +233,12 @@ public class downfallMod implements
             Settings.GameLanguage.ZHS,
             // Settings.GameLanguage.JPN
             Settings.GameLanguage.KOR
+    };
+
+    public static String[] SupportedLanguagesStrings = {
+            "English",
+            "Chinese (Simplified)",
+            "Korean"
     };
     public static ReplaceData[] wordReplacements;
     public static SpireConfig bruhData = null;
@@ -1621,7 +1628,7 @@ public class downfallMod implements
     }
 
     public static void saveBossFight(String ID) {
-        if (AbstractDungeon.getCurrRoom().event == null) {
+        if (AbstractDungeon.getCurrRoom().event == null && !ID.equals(CharBossMerchant.ID)) {
             switch (AbstractDungeon.actNum) {
                 case 1: {
                     Act1BossFaced = ID;
@@ -1652,7 +1659,6 @@ public class downfallMod implements
         }
     }
 
-    /*
     @Override
     public void receivePostDeath() {
         if (!Loader.isModLoaded("quickrestart") || (!RestartRunHelper.queuedScoreRestart && !RestartRunHelper.queuedRestart)) {
@@ -1660,8 +1666,6 @@ public class downfallMod implements
         }
         // else: we are doing a quickRestart, do not reset evilMode
     }
-
-     */
 
 
     public enum otherPackagePaths {
