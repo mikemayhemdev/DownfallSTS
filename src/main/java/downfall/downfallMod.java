@@ -120,7 +120,6 @@ import guardian.characters.GuardianCharacter;
 import guardian.relics.PickAxe;
 import hermit.HermitMod;
 import hermit.actions.MessageCaller;
-import quickRestart.helper.RestartRunHelper;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
 import sneckomod.SneckoMod;
@@ -161,8 +160,7 @@ public class downfallMod implements
         StartActSubscriber,
         AddAudioSubscriber,
         RenderSubscriber,
-        PostDeathSubscriber
-{
+        PostDeathSubscriber {
     public static final String modID = "downfall";
 
     public static final boolean STEAM_MODE = false;
@@ -1661,9 +1659,7 @@ public class downfallMod implements
 
     @Override
     public void receivePostDeath() {
-        if (!Loader.isModLoaded("quickrestart") || (!RestartRunHelper.queuedScoreRestart && !RestartRunHelper.queuedRestart)) {
-            evilMode = false;
-        }
+        evilMode = false;
         // else: we are doing a quickRestart, do not reset evilMode
     }
 

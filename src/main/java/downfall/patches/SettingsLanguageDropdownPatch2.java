@@ -27,6 +27,6 @@ public class SettingsLanguageDropdownPatch2 {
                 ours.add(s);
             }
         }
-        return (String[]) ours.toArray();
+        return ours.toArray(new String[ours.size()]);
     }
 }
