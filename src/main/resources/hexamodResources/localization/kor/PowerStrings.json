@@ -174,8 +174,8 @@
   "hexamod:RadiantPower": {
     "NAME": "불꽃 복사",
     "DESCRIPTIONS": [
-      "유령불꽃을 #y점화할 때마다 무작위 적에게 #y영혼화상을 #b",
-      " 부여합니다."
+      "유령불꽃을 #y점화할 때마다 #y방어도를 #b",
+      " 얻습니다."
     ]
   },
   "hexamod:SealPostCombatPower": {
@@ -195,7 +195,7 @@
   "hexamod:VolcanoVisagePower": {
     "NAME": "화산의 얼굴",
     "DESCRIPTIONS": [
-      "턴 시작 시 적 전체에게 #y영혼화상을 #b",
+      "영혼불꽃을 #y점화할 때마다 적 전체에게 #y영혼화상을 #b",
       " 부여합니다."
     ]
   },
@@ -206,7 +206,7 @@
     ]
   },
   "hexamod:GainEnergyAtStartOfTurnPower": {
-    "NAME": "에너지 추가More Energy",
+    "NAME": "에너지 추가",
     "DESCRIPTIONS": [
       "내 턴 시작 시 획득 "
     ]
