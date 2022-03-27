@@ -96,8 +96,8 @@
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "增殖形态",
-	"DESCRIPTION": "本场战斗中失去 !M! 点生命和生命上限。 NL 每回合使用的初张指向牌将打出两次。",
-    "UPGRADE_DESCRIPTION": "本场战斗中失去 !M! 点生命和生命上限。 NL 每回合获得 [E] ，使用的初张指向牌将打出两次。",
+	"DESCRIPTION": "champ:疲劳 !M!。 NL 每回合使用的初张指向牌将打出两次。",
+    "UPGRADE_DESCRIPTION": "champ:疲劳 !M!。 NL 每回合获得 [E] ，使用的初张指向牌将打出两次。",
     "EXTENDED_DESCRIPTION": [
       "需要…… 生命……"
     ]
