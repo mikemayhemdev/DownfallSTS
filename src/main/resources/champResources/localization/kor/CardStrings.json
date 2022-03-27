@@ -63,6 +63,7 @@
   "champ:FocusedBerserking": {
     "NAME": "총력전",
     "DESCRIPTION": "소멸. NL champ:자세에서 벗어나지 않습니다. 이 효과를 !M! 번 반복합니다:"
+    
   },
   "champ:SetATrap": {
     "NAME": "함정 설치",
