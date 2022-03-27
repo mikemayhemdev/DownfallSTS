@@ -3,7 +3,7 @@
     "NAME": "끈끈이 심장",
     "FLAVOR": "멋진 기분이다.",
     "DESCRIPTIONS": [
-      "#yslimeboundmod:소비했을 때마다 체력을 #b2 회복합니다. 전투마다 체력을 최대 #b15 회복할 수 있습니다."
+      "#yslimeboundmod:소비했을 때마다 체력을 #b2 회복합니다. 전투마다 체력을 최대 #b8 회복할 수 있습니다."
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
@@ -18,7 +18,7 @@
     "NAME": "슬라임 꼬리",
     "FLAVOR": "전투 중에 적을 속이기 위한 가짜 꼬리로 점액으로 뒤덮여 있습니다.",
     "DESCRIPTIONS": [
-      "전투마다 한 번, 체력이 #b50% 이하일 때 #yslimeboundmod:특공대_슬라임 으로 #yslimeboundmod:분열합니다. 그 후 피해를 입는다면 대신해서 가장 최근에 생성된 슬라임을 #yslimeboundmod:흡수 합니다.",
+      "전투마다 한 번, 체력이 #b50% 이하일 때 #yslimeboundmod:특공대_슬라임으로 #yslimeboundmod:분열합니다. 그 후 피해를 입는다면 대신해서 가장 최근에 생성된 슬라임을 #yslimeboundmod:흡수 합니다.",
       "사용된 유물입니다. 다음 전투에서 다시 사용 가능합니다."
     ]
   },
@@ -26,7 +26,7 @@
     "NAME": "끈적이 돌",
     "FLAVOR": "당신의 감정에 따라 힘을 북돋아 준다고 전해집니다.",
     "DESCRIPTIONS": [
-      "전투 시작 시 #yslimeboundmod:진흙탕_슬라임 으로 #yslimeboundmod:분열하고 #yslimeboundmod:잠재력을 #b1 얻습니다."
+      "전투 시작 시 #yslimeboundmod:진흙탕_슬라임으로 #yslimeboundmod:분열하고 #yslimeboundmod:잠재력을 #b1 얻습니다."
     ]
   },
   "Slimebound:DailySplitRelic": {
@@ -64,7 +64,7 @@
     "NAME": "끈적이는 주민",
     "FLAVOR": "집까지 따라왔으니까 데리고 다녀도 되겠지?",
     "DESCRIPTIONS": [
-      "전투 시작 시 #yslimeboundmod:싸움꾼_슬라임 으로 #yslimeboundmod:분열합니다."
+      "전투 시작 시 #yslimeboundmod:싸움꾼_슬라임으로 #yslimeboundmod:분열합니다."
     ]
   },
   "Slimebound:SlimedSkullRelic": {
@@ -79,7 +79,7 @@
     "NAME": "예레미아의 현수막",
     "FLAVOR": "당신과 끈끈이 군단의 상징입니다.",
     "DESCRIPTIONS": [
-      "전투 시작 시 #yslimeboundmod:거머리_슬라임 으로 #yslimeboundmod:분열하고 슬라임 슬롯을 #b하나 얻습니다."
+      "전투 시작 시 #yslimeboundmod:거머리_슬라임으로 #yslimeboundmod:분열하고 슬라임 슬롯을 #b하나 얻습니다."
     ]
   },
   "Slimebound:SelfDamagePreventRelic": {
