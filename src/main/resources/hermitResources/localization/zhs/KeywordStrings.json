@@ -4,28 +4,28 @@
     "NAMES": [
       "精准"
     ],
-    "DESCRIPTION": "精准牌从手牌中央打出时触发额外效果。"
+    "DESCRIPTION": " #y精准 牌从手牌中央打出时触发额外效果。"
   },
   {
     "PROPER_NAME": "专注",
     "NAMES": [
       "专注"
     ],
-    "DESCRIPTION": "下一张 #y精准 牌必定触发 #y精准 效果。 NL 回合结束时失去该效果。"
+    "DESCRIPTION": "下张 #y精准 牌必定触发 #y精准 效果。 NL 回合结束时失去该效果。"
   },
   {
     "PROPER_NAME": "瘀伤",
     "NAMES": [
       "瘀伤"
     ],
-  "DESCRIPTION": "受瘀伤效果影响的敌人将受到额外伤害。 NL 每次触发后失去 #b1 层。 NL 回合结束时失去该效果。"
+    "DESCRIPTION": "受 #y瘀伤 效果影响的敌人将受到额外伤害。 NL 每次触发后失去 #b1 层。 NL 回合结束时失去该效果。"
 },
   {
     "PROPER_NAME": "坚固",
     "NAMES": [
       "坚固"
     ],
-  "DESCRIPTION": "减少下次敌方攻击造成的生命损失到 #b1 点。"
+    "DESCRIPTION": "降低下次敌方攻击造成的生命损失到 #b1 点。"
 },
   {
     "PROPER_NAME": "赏金",
@@ -43,6 +43,6 @@
       "stunned",
       "Stunned"
     ],
-    "DESCRIPTION": "被击晕的敌人跳过它的回合。"
+    "DESCRIPTION": "被 #y击晕 的敌人跳过其回合。"
   } 
 ]
