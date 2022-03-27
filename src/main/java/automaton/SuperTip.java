@@ -33,7 +33,7 @@ public class SuperTip {
 
 
     private static void renderTipBox(float x, float y, float width, SpriteBatch sb, String title, String description) {
-        float h = -FontHelper.getSmartHeight(FontHelper.tipBodyFont, description, width, TIP_DESC_LINE_SPACING) - 7.0F * Settings.scale;
+        float h = -FontHelper.getSmartHeight(FontHelper.tipBodyFont, description, width, TIP_DESC_LINE_SPACING) + 10.0F * Settings.scale;
         sb.setColor(TOP_PANEL_SHADOW_COLOR);
         sb.draw(ImageMaster.KEYWORD_TOP, x + SHADOW_DIST_X, y - SHADOW_DIST_Y, width, BOX_EDGE_H);
         sb.draw(ImageMaster.KEYWORD_BODY, x + SHADOW_DIST_X, y - h - BOX_EDGE_H - SHADOW_DIST_Y, width, h + BOX_EDGE_H);
