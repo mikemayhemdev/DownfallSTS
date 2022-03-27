@@ -49,8 +49,7 @@ public class MuddleAction extends AbstractGameAction {
             int newCost = numList.get(AbstractDungeon.cardRandomRng.random(numList.size() - 1));// 33
             //SlimeboundMod.logger.info("muddling " + card.name + " base " + card.cost + " new " + newCost);
             if (card.costForTurn != newCost) {// 34
-                card.costForTurn = newCost;
-                card.isCostModified = true;// 37
+                card.setCostForTurn(newCost);
             }
 
             card.freeToPlayOnce = false;// 39
