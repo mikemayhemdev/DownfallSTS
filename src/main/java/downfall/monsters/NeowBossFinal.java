@@ -122,7 +122,7 @@ public class NeowBossFinal extends AbstractMonster {
 
     @Override
     public void usePreBattleAction() {
-
+        downfallMod.neowtextoverride = true;
         NeowBoss.neowboss = null;
         neowboss = this;
         super.usePreBattleAction();

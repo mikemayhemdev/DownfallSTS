@@ -235,8 +235,7 @@
   },
   "hexamod:HeatShield": {
     "NAME": "열기 방패",
-    "DESCRIPTION": "휘발성. NL 방어도를 !M! 얻습니다. 적 전체의 hexamod:영혼화상만큼 방어도가 증가합니다.",
-    "UPGRADE_DESCRIPTION": "방어도를 !M! 얻습니다. 적 전체의 hexamod:영혼화상만큼 방어도가 증가합니다.",
+    "DESCRIPTION": "Gain Block equal to hexamod:Soulburn on ALL enemies, then remove hexamod:Soulburn.",
     "EXTENDED_DESCRIPTION": [
       " NL (방어도를 !B! 얻습니다.)"
     ]

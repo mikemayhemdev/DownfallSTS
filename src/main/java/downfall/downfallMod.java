@@ -165,6 +165,8 @@ public class downfallMod implements
 
     public static final boolean STEAM_MODE = false;
 
+    public static boolean neowtextoverride = false;
+
 
     public static boolean choosingBossRelic = false;
     public static boolean choosingRemoveCard = false;
@@ -1414,6 +1416,7 @@ public class downfallMod implements
 
     @Override
     public void receiveStartAct() {
+        neowtextoverride = false;
         if (evilMode || (evilWithinSingleton != null && evilWithinSingleton.selected) || (CardCrawlGame.trial == null && DailyModeEvilPatch.todaysRunIsEvil)) {
             if (possEncounterList.size() == 0) {
                 resetBossList();
