@@ -33,16 +33,17 @@ public class SuperTip {
 
 
     private static void renderTipBox(float x, float y, float width, SpriteBatch sb, String title, String description) {
-        float h = -FontHelper.getSmartHeight(FontHelper.tipBodyFont, description, width, TIP_DESC_LINE_SPACING) + 10.0F * Settings.scale;
+        float ourWidth = width - (15 * Settings.scale);
+        float h = -FontHelper.getSmartHeight(FontHelper.tipBodyFont, description, ourWidth, TIP_DESC_LINE_SPACING) + 10.0F * Settings.scale;
         sb.setColor(TOP_PANEL_SHADOW_COLOR);
-        sb.draw(ImageMaster.KEYWORD_TOP, x + SHADOW_DIST_X, y - SHADOW_DIST_Y, width, BOX_EDGE_H);
-        sb.draw(ImageMaster.KEYWORD_BODY, x + SHADOW_DIST_X, y - h - BOX_EDGE_H - SHADOW_DIST_Y, width, h + BOX_EDGE_H);
-        sb.draw(ImageMaster.KEYWORD_BOT, x + SHADOW_DIST_X, y - h - BOX_BODY_H - SHADOW_DIST_Y, width, BOX_EDGE_H);
+        sb.draw(ImageMaster.KEYWORD_TOP, x + SHADOW_DIST_X, y - SHADOW_DIST_Y, ourWidth, BOX_EDGE_H);
+        sb.draw(ImageMaster.KEYWORD_BODY, x + SHADOW_DIST_X, y - h - BOX_EDGE_H - SHADOW_DIST_Y, ourWidth, h + BOX_EDGE_H);
+        sb.draw(ImageMaster.KEYWORD_BOT, x + SHADOW_DIST_X, y - h - BOX_BODY_H - SHADOW_DIST_Y, ourWidth, BOX_EDGE_H);
         sb.setColor(Color.WHITE.cpy());
-        sb.draw(ImageMaster.KEYWORD_TOP, x, y, width, BOX_EDGE_H);
-        sb.draw(ImageMaster.KEYWORD_BODY, x, y - h - BOX_EDGE_H, width, h + BOX_EDGE_H);
-        sb.draw(ImageMaster.KEYWORD_BOT, x, y - h - BOX_BODY_H, width, BOX_EDGE_H);
+        sb.draw(ImageMaster.KEYWORD_TOP, x, y, ourWidth, BOX_EDGE_H);
+        sb.draw(ImageMaster.KEYWORD_BODY, x, y - h - BOX_EDGE_H, ourWidth, h + BOX_EDGE_H);
+        sb.draw(ImageMaster.KEYWORD_BOT, x, y - h - BOX_BODY_H, ourWidth, BOX_EDGE_H);
         FontHelper.renderFontLeftTopAligned(sb, FontHelper.tipHeaderFont, title, x + TEXT_OFFSET_X, y + HEADER_OFFSET_Y, Settings.GOLD_COLOR);
-        FontHelper.renderSmartText(sb, FontHelper.tipBodyFont, description, x + TEXT_OFFSET_X, y + BODY_OFFSET_Y, width - PADDING_WIDTH_WRAP, TIP_DESC_LINE_SPACING, BASE_COLOR);
+        FontHelper.renderSmartText(sb, FontHelper.tipBodyFont, description, x + TEXT_OFFSET_X, y + BODY_OFFSET_Y, ourWidth - PADDING_WIDTH_WRAP, TIP_DESC_LINE_SPACING, BASE_COLOR);
     }
 }

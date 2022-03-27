@@ -80,7 +80,6 @@ import com.megacrit.cardcrawl.relics.MedicalKit;
 import com.megacrit.cardcrawl.relics.VelvetChoker;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.screens.custom.CustomMod;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -1725,6 +1724,7 @@ public class downfallMod implements
             }
         }
 
+        /*
         if (abstractRoom instanceof MonsterRoomBoss) {
             if (evilMode) {
                 if (downfallMod.unseenTutorials[3]) {
@@ -1732,6 +1732,7 @@ public class downfallMod implements
                 }
             }
         }
+         */
     }
 
 
