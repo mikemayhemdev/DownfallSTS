@@ -24,8 +24,8 @@
   },
   "Slimebound:Replication": {
     "NAME": "复制",
-    "DESCRIPTION": "选择一张手牌。 NL 将它的复制品加入抽牌堆顶部。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择一张手牌。 NL 将它的复制品加入手牌。 NL 消耗 。",
+    "DESCRIPTION": "选择一张手牌。 NL 将其复制品加入抽牌堆顶部。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择一张手牌。 NL 将其复制品加入手牌。 NL 消耗 。",
 	"EXTENDED_DESCRIPTION": [
       "选择一张牌复制到手牌。",
       "选择一张牌复制到抽牌堆顶部。"
