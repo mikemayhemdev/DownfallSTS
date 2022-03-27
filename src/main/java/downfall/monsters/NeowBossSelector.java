@@ -5,6 +5,7 @@ import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.downfallMod;
 import downfall.monsters.gauntletbosses.*;
 import slimebound.SlimeboundMod;
@@ -65,7 +66,7 @@ public class NeowBossSelector {
             bosses.add(Defect.ID);
             bosses.add(Watcher.ID);
             bosses.add(Hermit.ID);
-            Collections.shuffle(bosses);
+            Collections.shuffle(bosses, AbstractDungeon.cardRandomRng.random);
             for (int i = 0; i < 3; i++) {
                 results.add(bosses.get(i));
             }
