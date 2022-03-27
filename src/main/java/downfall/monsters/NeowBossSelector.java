@@ -17,14 +17,21 @@ import java.util.Collections;
 public class NeowBossSelector {
 
     public static boolean validClass(String key) {
+        switch (key) {
+            //This doesn't make sense but this works and checking against the strings with an OR logic check doesn't
+            case "downfall:Ironclad":
+                return true;
+            case "downfall:Silent":
+                return true;
+            case "downfall:Defect":
+                return true;
+            case "downfall:Watcher":
+                return true;
+            case "downfall:Hermit":
+                return true;
+                }
 
-        if (key.equals("downfall:Ironclad") ||
-                key.equals("downfall:Silent)") ||
-                key.equals("downfall:Defect") ||
-                key.equals("downfall:Watcher") ||
-                key.equals("downfall:Hermit")) {
-            return true;
-        }
+
         return false;
     }
 
@@ -59,6 +66,13 @@ public class NeowBossSelector {
             results.add(charbossToGauntlet(downfallMod.Act2BossFaced));
             results.add(charbossToGauntlet(downfallMod.Act3BossFaced));
 
+            if (results.get(2) == Ironclad.ID){
+                Collections.swap(results, 2,0);
+            }
+            else if (results.get(1) == Ironclad.ID){
+                Collections.swap(results, 1,0);
+            }
+
             return results;
         } else {
             bosses.add(Ironclad.ID);
@@ -69,6 +83,13 @@ public class NeowBossSelector {
             Collections.shuffle(bosses, AbstractDungeon.cardRandomRng.random);
             for (int i = 0; i < 3; i++) {
                 results.add(bosses.get(i));
+            }
+
+            if (results.get(2) == Ironclad.ID){
+                Collections.swap(results, 2,0);
+            }
+            else if (results.get(1) == Ironclad.ID){
+                Collections.swap(results, 1,0);
             }
             return results;
         }
