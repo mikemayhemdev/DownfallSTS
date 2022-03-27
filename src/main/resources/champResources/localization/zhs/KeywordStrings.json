@@ -6,7 +6,7 @@
       "champ:[crown_icon]",
       "[crown_icon]"
     ],
-    "DESCRIPTION": "如果你处于某个 #y姿态 ，触发该 #y姿态 的 #y战术奖励 。"
+    "DESCRIPTION": "如果你处于某个 #y姿态 ，触发其 #y战术奖励 。"
   },
   {
     "PROPER_NAME": "连段",
@@ -23,7 +23,7 @@
       "[fist_icon]",
       "champ:[fist_icon]"
     ],
-    "DESCRIPTION": "打出终结技后如果处于 #y姿态 ，退出姿态并触发 #y终结技奖励 。"
+    "DESCRIPTION": "打出终结技后退出该 #y姿态 并触发其 #y终结技奖励 。"
   },
   {
     "PROPER_NAME": "反击",
@@ -31,7 +31,7 @@
       "反击",
       "counter"
     ],
-    "DESCRIPTION": "下次你被 #y攻击 时，对攻击者造成层数点伤害并失去所有层数。"
+    "DESCRIPTION": "下次被 #y攻击 时，失去所有 #y反击 并对攻击者造成层数点伤害。"
   },
   {
     "PROPER_NAME": "防守",
