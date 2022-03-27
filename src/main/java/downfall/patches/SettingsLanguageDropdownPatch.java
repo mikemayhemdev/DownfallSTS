@@ -1,3 +1,4 @@
+/*
 package downfall.patches;
 
 import basemod.ReflectionHacks;
@@ -33,3 +34,4 @@ public class SettingsLanguageDropdownPatch {
         return ours.toArray(new String[ours.size()]);
     }
 }
+*/
