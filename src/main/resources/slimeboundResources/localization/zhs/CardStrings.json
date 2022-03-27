@@ -281,7 +281,7 @@
   },
   "Slimebound:DisruptingSlam": {
     "NAME": "宴后甜点",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL expansioncontent:取回 !M! 张 slimeboundmod:舔舔 系牌。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL expansioncontent:发掘 !M! 张 slimeboundmod:舔舔 系牌。"
   },
   "Slimebound:PrepareCrush": {
     "NAME": "准备：猛撞",
