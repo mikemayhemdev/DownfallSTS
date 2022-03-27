@@ -75,7 +75,7 @@
   },
   "bronze:Replicate": {
     "NAME": "복제",
-    "DESCRIPTION": "피해를 !D! 줍니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL bronze:부호화되면 이 카드를 복사해 버린 카드 더미에 섞어 넣습니다.",
     "EXTENDED_DESCRIPTION": [
       "복사한",
       "복사"

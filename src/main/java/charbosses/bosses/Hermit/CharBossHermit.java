@@ -55,6 +55,8 @@ public class CharBossHermit extends AbstractCharBoss {
         this.energyString = "[E]";
         type = EnemyType.BOSS;
 
+
+        this.eye = this.skeleton.findSlot("eye");
     }
 
 
@@ -163,12 +165,14 @@ public class CharBossHermit extends AbstractCharBoss {
     @Override
     public void update() {
         super.update();
-        if (!this.isDying && AbstractDungeon.player.hasPower(HermitConcentrationPower.POWER_ID)) {
-            this.fireTimer -= Gdx.graphics.getDeltaTime();
-            if (this.fireTimer < 0.0F) {
-                this.fireTimer = 0.1F;
-                HermitEyeParticle shine = new HermitEyeParticle(this.skeleton.getX() + this.eye.getBone().getWorldX(), this.skeleton.getY() + this.eye.getBone().getWorldY(), this, this.skeleton);
-                AbstractDungeon.effectList.add(shine);
+        if (!this.isDying && this.hasPower(HermitConcentrationPower.POWER_ID)) {
+            if (this.getPower(HermitConcentrationPower.POWER_ID).amount > 0) {
+                this.fireTimer -= Gdx.graphics.getDeltaTime();
+                if (this.fireTimer < 0.0F) {
+                    this.fireTimer = 0.1F;
+                    HermitEyeParticle shine = new HermitEyeParticle(this.skeleton.getX() + this.eye.getBone().getWorldX(), this.skeleton.getY() + this.eye.getBone().getWorldY(), this, this.skeleton);
+                    AbstractDungeon.effectList.add(shine);
+                }
             }
         }
         if (previewCard != null && !isDying && !isDead) {

@@ -13,11 +13,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.monsters.city.Snecko;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.screens.select.GridCardSelectScreen;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import slimebound.SlimeboundMod;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 import sneckomod.patches.UnknownExtraUiPatch;
@@ -83,7 +85,15 @@ public class LockInCampfireEffect extends com.megacrit.cardcrawl.vfx.AbstractGam
                 AbstractCard c2;
                 if (c instanceof AbstractUnknownCard){
                     if (((AbstractUnknownCard) c).myList().size() > 0) {
-                        c2 = CardLibrary.getCard(((AbstractUnknownCard) c).myList().get(SneckoMod.identifyRng.random(0, ((AbstractUnknownCard) c).myList().size() - 1))).makeCopy();
+
+                        if (((AbstractUnknownCard)c).lastUnknownRoll != null){
+                            SlimeboundMod.logger.info("Detected last unknown roll!");
+                            c2 = ((AbstractUnknownCard)c).lastUnknownRoll.makeCopy();
+
+                        } else {
+                            c2 = CardLibrary.getCard(((AbstractUnknownCard) c).myList().get(SneckoMod.identifyRng.random(0, ((AbstractUnknownCard) c).myList().size() - 1))).makeCopy();
+                        }
+
                     } else {
                         c2 = CardLibrary.getCard(Madness.ID).makeCopy();
                     }

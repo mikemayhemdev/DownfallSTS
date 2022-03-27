@@ -1,9 +1,11 @@
 package sneckomod.cards.unknowns;
 
 import basemod.BaseMod;
+import basemod.abstracts.CustomSavable;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.StSLib;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -15,16 +17,22 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import guardian.patches.BottledStasisPatch;
 import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
 import sneckomod.cards.AbstractSneckoCard;
 import sneckomod.patches.UnknownExtraUiPatch;
 
+import javax.smartcardio.Card;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.function.Predicate;
 
 
-public abstract class AbstractUnknownCard extends AbstractSneckoCard implements StartupCard {
+public abstract class AbstractUnknownCard extends AbstractSneckoCard implements StartupCard, CustomSavable<String> {
+
+    public AbstractCard lastUnknownRoll;
+
     public AbstractUnknownCard(final String id, final CardType type, final CardRarity rarity) {
         super(id, -2, type, rarity, CardTarget.NONE);
         tags.add(CardTags.HEALING);
@@ -295,6 +303,10 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         }
 
         if (this.upgraded) cUnknown.upgrade();
+        if (StSLib.getMasterDeckEquivalent(this) != null) {
+            ((AbstractUnknownCard)StSLib.getMasterDeckEquivalent(this)).lastUnknownRoll = cUnknown.makeCopy();
+
+        }
 
         p.hand.removeCard(this);
         p.drawPile.removeCard(this);
@@ -334,5 +346,29 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
             AbstractDungeon.player.hand.refreshHandLayout();
             AbstractDungeon.player.hand.applyPowers();
         }
+    }
+
+    @Override
+    public String onSave() {
+        if (lastUnknownRoll != null){
+            return lastUnknownRoll.cardID;
+        }
+        return "";
+    }
+
+    @Override
+    public void onLoad(String cardID) {
+        // Not the most elegant solution but I can't make AbstractDamageModifier serializable because it isn't my code.
+        if (cardID != ""){
+            if (CardLibrary.isACard(cardID)) {
+                lastUnknownRoll = CardLibrary.getCard(cardID).makeCopy();
+            }
+
+        }
+    }
+
+    @Override
+    public Type savedType() {
+        return String.class;
     }
 }

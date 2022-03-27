@@ -75,7 +75,7 @@
   },
   "bronze:Replicate": {
     "NAME": "Replicate",
-    "DESCRIPTION": "Deal !D! damage.",
+    "DESCRIPTION": "Deal !D! damage. NL When this is Encoded, add a copy to your discard pile.",
     "EXTENDED_DESCRIPTION": [
       "copying",
       "Copy"

@@ -75,7 +75,7 @@
   },
   "bronze:Replicate": {
     "NAME": "副本",
-    "DESCRIPTION": "造成 !D! 点伤害。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将这张牌的复制品加入你的弃牌堆",
     "EXTENDED_DESCRIPTION": [
       "反复",
       "拷贝"
