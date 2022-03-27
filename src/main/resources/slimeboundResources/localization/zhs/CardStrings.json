@@ -163,8 +163,8 @@
   },
   "Slimebound:Gluttony": {
     "NAME": "暴食",
-    "DESCRIPTION": "每回合初次 slimeboundmod:消耗黏液 时将一张 *舔舔 加入手牌。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 每回合初次 slimeboundmod:消耗黏液 时将一张 *舔舔 加入手牌。"
+    "DESCRIPTION": "每回合首次 slimeboundmod:消耗黏液 时将一张 *舔舔 加入手牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 每回合首次 slimeboundmod:消耗黏液 时将一张 *舔舔 加入手牌。"
   },
   "Slimebound:PressTheAttack": {
     "NAME": "强攻",
