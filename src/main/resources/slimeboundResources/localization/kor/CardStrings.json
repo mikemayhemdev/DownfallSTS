@@ -116,11 +116,11 @@
   },
   "Slimebound:GrowthPunch": {
     "NAME": "거세지는 주먹질",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 방어도를 !B! 얻습니다. NL 이번 전투에서 slimeboundmod:소비하면 방어도와 피해량이 !M! 증가합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 방어도를 !B! 얻습니다. NL 이번 전투 동안 slimeboundmod:소비하면 방어도와 피해량이 !M! 증가합니다."
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "전술교본 참조",
-    "DESCRIPTION": "무작위 slimeboundmod:태클 카드를 4장 얻습니다. 이번 전투에서 그 카드의 비용이 1 감소합니다. NL 소멸."
+    "DESCRIPTION": "무작위 slimeboundmod:태클 카드를 4장 얻습니다. 이번 전투 동안 그 카드의 비용이 1 감소합니다. NL 소멸."
   },
   "Slimebound:Recycling": {
     "NAME": "재수거",
