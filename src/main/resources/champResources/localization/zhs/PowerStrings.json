@@ -2,15 +2,8 @@
   "champ:CounterPower": {
     "NAME": "反击",
     "DESCRIPTIONS": [
-      "下次你受到 #y攻击 伤害时，反击 #b",
-      " 点伤害。"
-    ]
-  },
-  "champ:FocusedDefPower": {
-    "NAME": "防反家",
-    "DESCRIPTIONS": [
-      "本回合你打出下张 #y终结技 时，获得 #b",
-      " 点 #y格挡 。"
+      "下次你被 #y攻击 时，给予攻击者 #b",
+      " 点伤害并移除所有 #y反击 层数。"
     ]
   },
   "champ:FocusedBerPower": {
@@ -20,23 +13,8 @@
       " 点生命。"
     ]
   },
-  "champ:ShieldWallPower": {
-    "NAME": "盾墙",
-    "DESCRIPTIONS": [
-      "在你的回合结束时，获得 #b",
-      " 层 #y反击 。"
-    ]
-  },
-  "champ:EntangleNextTurnPower": {
-    "NAME": "投掷剑刃",
-    "DESCRIPTIONS": [
-      "下回合你不能打出 #y攻击牌 。",
-      "下 #b",
-      " 个回合你不能打出 #y攻击牌 。"
-    ]
-  },
   "champ:DrawLessNextTurnPower": {
-    "NAME": "投掷王冠",
+    "NAME": "限制抽牌",
     "DESCRIPTIONS": [
       "下回合少抽 #b",
       " 张牌。",
@@ -51,20 +29,13 @@
       " 回合内你不会失去生命。"
     ]
   },
-  "champ:WorseRupturePower": {
-    "NAME": "无穷愤火",
-    "DESCRIPTIONS": [
-      "每当你在你的回合失去生命时，获得 #b",
-      " 点 #y临时力量 。"
-    ]
-  },
   "champ:ImprovisingPower": {
     "NAME": "触类旁通",
     "DESCRIPTIONS": [
-      "每回合第一次打出 #y连段 牌时，它返回手牌且下次耗能为0。还能触发 #b",
+      "每回合首次打出 #y连段 牌时，将其返回手牌且它下次耗能为 #b0 。还能触发 #b",
       " 次。",
       "每回合前 #b",
-      " 次打出 #y连段 牌时，它返回手牌且下次耗能为0。还能触发 #b"
+      " 次打出 #y连段 牌时，将其返回手牌且它下次耗能为 #b0 。还能触发 #b"
     ]
   },
   "champ:CalledShotPower": {
@@ -78,7 +49,7 @@
   "champ:DancingMasterPower": {
     "NAME": "战技大师",
     "DESCRIPTIONS": [
-      "每回合初次使用 #y终结技 时，获得 #b",
+      "每回合首次使用 #y终结技 时，获得 #b",
       " [E] 并抽 #b",
       " 张牌。",
       "",
@@ -109,13 +80,6 @@
       " 层 #y反击 。"
     ]
   },
-  "champ:GladiatorStylePower": {
-    "NAME": "抹杀",
-    "DESCRIPTIONS": [
-      "如果你回合开始时不处于 #y姿态 ，获得 #b",
-      " 点 #y临时力量 和 #y敏捷 。"
-    ]
-  },
   "champ:BerserkerStylePower": {
     "NAME": "狂暴战法",
     "DESCRIPTIONS": [
@@ -142,7 +106,7 @@
   "champ:IronFortressPower": {
     "NAME": "战斗跃舞",
     "DESCRIPTIONS": [
-      "每当你进入 #y姿态 时，触发它的 #y战术 #b",
+      "每当你进入 #y姿态 时，触发其 #y战术 #b",
       " #b",
       " 次。"
     ]
@@ -155,24 +119,17 @@
       " 次。"
     ]
   },
-  "champ:LastStandMod": {
-    "NAME": "最后一战",
-    "DESCRIPTIONS": [
-      "每回合开始时，如果生命低于一半，清除所有负面效果并获得 ",
-      " 点 #y力量 。"
-    ]
-  },
     "champ:GladiatorFormPower": {
     "NAME": "角斗形态",
     "DESCRIPTIONS": [
-      "回合开始时，上回合每使用过 #b3 点 #y活力 或 #y反击 ，对应地获得 #b",
-      " #y活力 或 #y反击 。"
+      "你的回合开始时，上回合每使用过 #b3 层 #y活力 ，获得 #b",
+      " 层 #y活力。 #y反击 亦然。"
     ]
   },
   "champ:NoBlockNextTurnPower": {
     "NAME": "爆甲",
     "DESCRIPTIONS": [
-      "你下个回合不能获得格挡。",
+      "你下回合不能获得格挡。",
       "你下 #b",
       " 个回合不能获得格挡。"
     ]
@@ -188,7 +145,7 @@
   "champ:EnGardePower": {
     "NAME": "待命",
     "DESCRIPTIONS": [
-      "本回合如果你的格挡被打破，下回合获得 #b",
+      "本回合若你的格挡被打破，下回合获得 #b",
       " 点 #y格挡 。"
     ]
   },
@@ -222,10 +179,53 @@
   "champ:LastStandPower": {
     "NAME": "背水一战",
     "DESCRIPTIONS": [
-      "当你降至半血时，清除所有负面状态并获得 #b",
+      "当你低于或降至半血时，清除所有负面状态并获得 #b",
       " 点 #y力量 。",
       "~该~ ~结~ ~束~ ~了……~",
       "@失败？？@ NL @不可能！！@"
+    ]
+  },
+  "champ:LastStandMod": {
+    "NAME": "最后一战",
+    "DESCRIPTIONS": [
+      "每回合开始时，若生命低于一半，清除所有负面效果并获得 ",
+      " 点 #y力量 。"
+    ]
+  },
+  "champ:FocusedDefPower": {
+    "NAME": "防反家",
+    "DESCRIPTIONS": [
+      "本回合你打出下张 #y终结技 时，获得 #b",
+      " 点 #y格挡 。"
+    ]
+  },
+  "champ:ShieldWallPower": {
+    "NAME": "盾墙",
+    "DESCRIPTIONS": [
+      "你的回合结束时，获得 #b",
+      " 层 #y反击 。"
+    ]
+  },
+  "champ:EntangleNextTurnPower": {
+    "NAME": "投掷剑刃",
+    "DESCRIPTIONS": [
+      "下回合你不能打出 #y攻击牌 。",
+      "下 #b",
+      " 个回合你不能打出 #y攻击牌 。"
+    ]
+  },
+  "champ:GladiatorStylePower": {
+    "NAME": "抹杀",
+    "DESCRIPTIONS": [
+      "如果你回合开始时不处于 #y姿态 ，获得 #b",
+      " 点 #y临时力量 和 #y敏捷 。"
+    ]
+  },
+  "champ:WorseRupturePower": {
+    "NAME": "无穷愤火",
+    "DESCRIPTIONS": [
+      "每当你在你的回合失去生命时，获得 #b",
+      " 点 #y临时力量 。"
     ]
   }
 }
