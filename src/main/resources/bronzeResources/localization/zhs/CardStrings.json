@@ -117,7 +117,7 @@
   },
   "bronze:Separator": {
     "NAME": "分离器",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编码 时，如果不在最前后槽位，提高 !M! 点伤害。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编码 时，若不在最前后槽位，提高 !M! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       "分离",
       "子项"
@@ -234,7 +234,7 @@
   },
   "bronze:Constructor": {
     "NAME": "构造器",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编码 时，如果在首个槽位，提高 !M! 点 格挡 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编码 时，若在首个槽位，提高 !M! 点 格挡 。",
     "EXTENDED_DESCRIPTION": [
       "构造",
       "失落",
@@ -243,16 +243,16 @@
   },
   "bronze:Terminator": {
     "NAME": "终止",
-    "DESCRIPTION": " bronze:编译 - 如果在 *队列 最后， *方法 获得再打出一次。",
+    "DESCRIPTION": " bronze:编译 - 若在 *队列 最后， *方法 获得再打出一次。",
     "EXTENDED_DESCRIPTION": [
       "哭泣",
       "终结"
     ]
   },
   "bronze:Overload": {
-    "NAME": "过载",
-    "DESCRIPTION": "打出 *队列 中牌的复制品。 其不进行 bronze:编码 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "打出 *队列 中牌的复制品。其不进行 bronze:编码 。"
+    "NAME": "复制粘贴",
+    "DESCRIPTION": "打出 *队列 中牌的复制品，复制品不被 bronze:编码 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "打出 *队列 中牌的复制品，复制品不被 bronze:编码 。"
   },
   "bronze:GetLatest": {
     "NAME": "最新素材",
@@ -276,7 +276,7 @@
   },
   "bronze:NullPointer": {
     "NAME": "空指针",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL bronze:编译 *错误 - *方法 获得 不能被打出 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL bronze:编译 *错误 - *方法 获得 不能被打出 。",
     "EXTENDED_DESCRIPTION": [
       "无效",
       "指针"
@@ -314,7 +314,7 @@
   },
   "bronze:FollowUp": {
     "NAME": "数据追踪",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 如果打出的上张牌是 *方法 ，本牌再打出一次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 若打出的上张牌是 *方法 ，本牌再打出一次。"
   },
   "bronze:ChosenStrike": {
     "NAME": "邪教打击",
