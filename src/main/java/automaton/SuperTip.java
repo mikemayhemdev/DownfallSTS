@@ -3,6 +3,7 @@ package automaton;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 
@@ -21,11 +22,13 @@ public class SuperTip {
     private static final float PADDING_WIDTH_WRAP = 25.0F * Settings.scale;
 
     public static void render(SpriteBatch sb, EasyInfoDisplayPanel.RENDER_TIMING t) {
-        for (EasyInfoDisplayPanel d : EasyInfoDisplayPanel.specialDisplays) {
-            String s = d.getDescription();
-            if (d.getTiming() == t && s != null && !s.equals("") && !s.equals("NORENDER")) {
-                if (!Settings.hidePopupDetails) {
-                    renderTipBox(d.x, d.y, d.width, sb, d.getTitle(), d.getDescription());
+        if (!AbstractDungeon.isScreenUp) {
+            for (EasyInfoDisplayPanel d : EasyInfoDisplayPanel.specialDisplays) {
+                String s = d.getDescription();
+                if (d.getTiming() == t && s != null && !s.equals("") && !s.equals("NORENDER")) {
+                    if (!Settings.hidePopupDetails) {
+                        renderTipBox(d.x, d.y, d.width, sb, d.getTitle(), d.getDescription());
+                    }
                 }
             }
         }
