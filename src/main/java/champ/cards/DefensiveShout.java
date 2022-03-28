@@ -17,7 +17,7 @@ public class DefensiveShout extends AbstractChampCard {
     private static final int UPG_MAGIC = 4;
 
     public DefensiveShout() {
-        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         //tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);
@@ -31,7 +31,7 @@ public class DefensiveShout extends AbstractChampCard {
         defenseOpen();
         applyToSelf(new CounterPower(magicNumber));
 
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
+      //  AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
         if (upgraded) techique();
     }
 

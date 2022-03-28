@@ -50,7 +50,7 @@
   },
   "champ:DefensiveShout": {
     "NAME": "防卫嘲讽",
-    "DESCRIPTION": "获得 !M! 层 champ:反击 。 NL 进入 champ:防守 。 NL 抽一张牌。"
+    "DESCRIPTION": "获得 !M! 层 champ:反击 。 NL 进入 champ:防守 。"
   },
   "champ:ShieldSigil": {
     "NAME": "防守印记",
@@ -85,7 +85,7 @@
   },
   "champ:BerserkersShout": {
     "NAME": "怒吼",
-    "DESCRIPTION": "获得 !M! 层 活力 。 NL 进入 champ:战狂 。 NL 抽一张牌。"
+    "DESCRIPTION": "获得 !M! 层 活力 。 NL 进入 champ:战狂 。"
   },
   "champ:RageSigil": {
     "NAME": "战斗计划",

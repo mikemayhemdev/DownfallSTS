@@ -50,7 +50,7 @@
   },
   "champ:DefensiveShout": {
     "NAME": "Defensive Shout",
-    "DESCRIPTION": "Gain !M! champ:Counter. NL Enter champ:Defensive. NL Draw a card."
+    "DESCRIPTION": "Gain !M! champ:Counter. NL Enter champ:Defensive."
   },
   "champ:ShieldSigil": {
     "NAME": "Chain Lash",
@@ -86,7 +86,7 @@
   },
   "champ:BerserkersShout": {
     "NAME": "Berserker's Shout",
-    "DESCRIPTION": "Gain !M! Vigor. NL Enter champ:Berserker. NL Draw a card."
+    "DESCRIPTION": "Gain !M! Vigor. NL Enter champ:Berserker."
   },
   "champ:RageSigil": {
     "NAME": "Battle Plan",
