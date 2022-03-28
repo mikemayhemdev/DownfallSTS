@@ -2,7 +2,7 @@
   "Gremlin:FatGremlin": {
     "NAME": "Fat Gremlin",
     "DESCRIPTION": [
-      "Whenever you play an attack, apply #b",
+      "After you play an attack, apply #b",
       " #yWeak to all targets."
     ]
   },
@@ -10,7 +10,7 @@
   "Gremlin:GremlinWizard": {
     "NAME": "Gremlin Wizard",
     "DESCRIPTION": [
-      "Whenever you play a skill, gain #b",
+      "After you play a skill, gain #b",
       " #yWiz."
     ]
   },
@@ -26,7 +26,7 @@
   "Gremlin:ShieldGremlin": {
     "NAME": "Shield Gremlin",
     "DESCRIPTION": [
-      "Whenever you play a skill, gain #b",
+      "After you play a skill, gain #b",
       " #yBlock."
     ]
   },
@@ -34,7 +34,7 @@
   "Gremlin:SneakyGremlin": {
     "NAME": "Sneaky Gremlin",
     "DESCRIPTION": [
-      "Whenever you play an attack, deal #b",
+      "After you play an attack, deal #b",
       " damage to a random enemy."
     ]
   }
