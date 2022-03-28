@@ -66,7 +66,7 @@
   },
   "Slimebound:SlimeBrawl": {
     "NAME": "슬라임 난투",
-    "DESCRIPTION": "슬라임 수만큼 뽑을 더미 맨 위의 카드를 반복해서 사용합니다. NL 소멸."
+    "DESCRIPTION": "슬라임 수만큼 뽑을 더미 맨 위 카드부터 사용합니다. NL 소멸."
   },
   "Slimebound:SpikyOuterGoop": {
     "NAME": "끈적이 갑옷",
@@ -129,8 +129,8 @@
   },
   "Slimebound:Repurpose": {
     "NAME": "재설계",
-    "DESCRIPTION": "1번 slimeboundmod:흡수한 후, 무작위 slimeboundmod:전문가 슬라임 1마리로 분열합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "1번 slimeboundmod:흡수 후, 무작위 slimeboundmod:전문가 슬라임 1마리로 분열합니다. NL slimeboundmod:명령합니다. NL 소멸."
+    "DESCRIPTION": "1번 slimeboundmod:흡수한 후, 무작위 slimeboundmod:전문가 슬라임 1마리로 slimeboundmod:분열합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "1번 slimeboundmod:흡수 후, 무작위 slimeboundmod:전문가 슬라임 1마리로 slimeboundmod:분열합니다. NL slimeboundmod:명령합니다. NL 소멸."
   },
   "Slimebound:RollThrough": {
     "NAME": "구르기",
