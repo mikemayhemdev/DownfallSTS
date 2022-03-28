@@ -95,13 +95,13 @@
   "downfall:SilentShivTimeEaterPower": {
     "NAME": "칼날 꾸러미",
     "DESCRIPTIONS": [
-      "매 턴 내가 비용이 #b2 이상인 카드를 사용하면 2번까지 사일런트가 #y단도를 1장 얻습니다."
+      "매 턴 내가 비용이 #b2 이상인 카드를 처음으로 사용하면 2번까지 사일런트가 #y단도를 2장 얻습니다."
       ]
   },
   "downfall:NeowBagOfKnives": {
     "NAME": "날붙이 꾸러미",
     "DESCRIPTIONS": [
-      "매 턴 내가 비용이 #b2 이상인 카드를 사용하면 2번까지 피해를 #b4 만큼 받습니다."
+      "매 턴 내가 비용이 #b2 이상인 카드를 처음으로 사용하면 피해를 #b4 만큼 2번 받습니다."
     ]
   },
   "downfall:SilentMirrorImagePower": {
@@ -113,7 +113,7 @@
   "downfall:NeowSeeingDouble": {
     "NAME": "복안",
     "DESCRIPTIONS": [
-      "매 턴 처음으로 사용하는 내 #y공격의 피해량이 #b0 이 됩니다."
+      "니오우의 턴 시작 시 니오우가 연기에 둘러싸입니다. 매 턴 처음으로 사용하는 내 #y공격 카드의 피해량이 #b0 이 됩니다."
     ]
   },
   "downfall:SilentPoisonPower": {
@@ -241,35 +241,35 @@
     ]
   },
   "downfall:OnDeathEveryoneStr": {
-    "NAME": "임종의 격노",
+    "NAME": "최후의 발악: 발화+",
     "DESCRIPTIONS": [
       "이 캐릭터가 죽을 때 나를 포함한 모든 캐릭터가 #y힘을 #b",
       " 얻습니다."
     ]
   },
   "downfall:OnDeathEveryoneThorns": {
-    "NAME": "가시 돋친 관계",
+    "NAME": "최후의 발악: 마름쇠+",
     "DESCRIPTIONS": [
       "이 캐릭터가 죽을 때 나를 포함한 모든 캐릭터가 #y가시를 #b",
       " 얻습니다."
     ]
   },
   "downfall:OnDeathEveryoneBuffer": {
-    "NAME": "일시정지()",
+    "NAME": "최후의 발악: 버퍼+",
     "DESCRIPTIONS": [
       "이 캐릭터가 죽을 때 나를 포함한 모든 캐릭터가 #y버퍼를 #b",
       " 얻습니다."
     ]
   },
   "downfall:OnDeathEveryoneVigor": {
-    "NAME": "활기찬 힘",
+    "NAME": "최후의 발악: 불의 고리+",
     "DESCRIPTIONS": [
       "이 캐릭터가 죽을 때 나를 포함한 모든 캐릭터가 #y활력을 #b",
       " 얻습니다."
     ]
   },
   "downfall:OnDeathEveryoneRuggedVuln": {
-    "NAME": "결의",
+    "NAME": "최후의 발악:게슈탈트",
     "DESCRIPTIONS": [
       "이 캐릭터가 죽을 때 나를 포함한 모든 캐릭터가 #y강인함을 #b",
       " 얻고 #y취약을 #b",
@@ -300,7 +300,8 @@
   "downfall:HermitWheelOfFortune": {
     "NAME": "행운의 돌림판",
     "DESCRIPTIONS": [
-      "공격 카드로 공격당할 때마다 허밋은 가장 왼쪽에 있는 카드를 1장 버리고 카드를 1장 뽑습니다."
+      "#y공격 카드로 공격당할 때마다 허밋은 가장 왼쪽에 있는 카드를 1장 버리고 카드를 1장 뽑습니다. #b",
+      " 번 이 효과가 발동할 때마다 허밋은 #y힘을 #b1 얻습니다."
     ]
   },
   "downfall:HermitDoomsday": {
