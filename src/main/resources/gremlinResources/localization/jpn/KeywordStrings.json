@@ -60,5 +60,12 @@
       "wiz"
     ],
     "DESCRIPTION": "When you have at least three stacks of Wiz, attacks will consume all stacks to deal 10 additional damage."
+  },
+  {
+    "NAMES": [
+      "steal"
+    ],
+    "PROPER_NAME": "Steal",
+    "DESCRIPTION": "Target loses specified amount of resource. You gain the amount that was lost."
   }
 ]

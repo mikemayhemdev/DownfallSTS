@@ -10,6 +10,7 @@ import charbosses.cards.red.*;
 import charbosses.cards.status.EnWound;
 import charbosses.monsters.Fortification;
 import charbosses.powers.bossmechanicpowers.IroncladFortificationPower;
+import charbosses.powers.bossmechanicpowers.IroncladMushroomPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
@@ -30,6 +31,8 @@ public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
 
         maxHPModifier += 300;
         actNum = 3;
+        bossMechanicName = IroncladFortificationPower.NAME;
+        bossMechanicDesc = IroncladFortificationPower.DESC[0] + FORTIFICATION_AMOUNT + IroncladFortificationPower.DESC[1];
     }
 
     @Override

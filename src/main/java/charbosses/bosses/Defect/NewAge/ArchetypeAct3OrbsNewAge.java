@@ -7,6 +7,7 @@ import charbosses.cards.AbstractBossCard;
 import charbosses.cards.blue.*;
 import charbosses.cards.colorless.EnBlind;
 import charbosses.orbs.AbstractEnemyOrb;
+import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
 import charbosses.powers.bossmechanicpowers.DefectCuriosityPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -28,6 +29,8 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
 
         maxHPModifier += 350;
         actNum = 3;
+        bossMechanicName = DefectCuriosityPower.NAME;
+        bossMechanicDesc = DefectCuriosityPower.DESCRIPTIONS[0] + 1 + DefectCuriosityPower.DESCRIPTIONS[1];
     }
 
     @Override

@@ -13,6 +13,7 @@ import charbosses.cards.curses.EnShame;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
 import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
+import charbosses.powers.bossmechanicpowers.DefectVoidPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
@@ -36,6 +37,8 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
 
         maxHPModifier += 192;
         actNum = 2;
+        bossMechanicName = DefectAncientConstructPower.NAME;
+        bossMechanicDesc = DefectAncientConstructPower.DESC[0];
     }
 
     @Override

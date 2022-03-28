@@ -39,8 +39,8 @@ public class EnShowdown extends AbstractHermitBossCard {
         for (AbstractCard q : AbstractCharBoss.boss.hand.group) {
             if (q instanceof EnFreeStrikeHermit) {
                 q.setCostForTurn(1);
-                q.cost = 1;
                 q.isCostModified = false;
+                q.isCostModifiedForTurn = false;
             }
         }
     }

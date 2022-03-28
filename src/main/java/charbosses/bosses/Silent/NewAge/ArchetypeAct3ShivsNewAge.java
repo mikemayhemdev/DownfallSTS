@@ -5,6 +5,7 @@ import charbosses.bosses.Silent.ArchetypeBaseSilent;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnShiv;
 import charbosses.cards.green.*;
+import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
 import charbosses.powers.bossmechanicpowers.SilentShivTimeEaterPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -18,10 +19,12 @@ import java.util.ArrayList;
 public class ArchetypeAct3ShivsNewAge extends ArchetypeBaseSilent {
 
     public ArchetypeAct3ShivsNewAge() {
-        super("SI_POISON_ARCHETYPE", "Poison");
+        super("SI_SHIV_ARCHETYPE", "Shivs");
 
         maxHPModifier += 350;
         actNum = 3;
+        bossMechanicName =SilentShivTimeEaterPower.NAME;
+        bossMechanicDesc = SilentShivTimeEaterPower.DESC[0];
     }
 
     @Override

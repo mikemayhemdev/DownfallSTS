@@ -4,6 +4,7 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.curses.EnInjury;
 import charbosses.cards.hermit.*;
+import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
 import charbosses.powers.bossmechanicpowers.HermitConcentrateAdder;
 import charbosses.powers.bossmechanicpowers.HermitConcentrationPower;
 import charbosses.relics.*;
@@ -22,6 +23,8 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
 
         maxHPModifier += 95;
         actNum = 1;
+        bossMechanicName = HermitConcentrateAdder.NAME;
+        bossMechanicDesc = HermitConcentrateAdder.DESC[0];
     }
 
     @Override

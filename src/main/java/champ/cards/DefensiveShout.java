@@ -13,7 +13,7 @@ public class DefensiveShout extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 1;
+    private static final int MAGIC = 4;
     private static final int UPG_MAGIC = 4;
 
     public DefensiveShout() {
@@ -29,9 +29,9 @@ public class DefensiveShout extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         // techique();
         defenseOpen();
-        // vigor(magicNumber)
+        applyToSelf(new CounterPower(magicNumber));
 
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
+      //  AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
         if (upgraded) techique();
     }
 

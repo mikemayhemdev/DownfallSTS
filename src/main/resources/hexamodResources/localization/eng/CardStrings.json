@@ -235,8 +235,7 @@
   },
   "hexamod:HeatShield": {
     "NAME": "Heat Shield",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Block, increased by hexamod:Soulburn on ALL enemies.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Block, increased by hexamod:Soulburn on ALL enemies.",
+    "DESCRIPTION": "Gain Block equal to hexamod:Soulburn on ALL enemies, then remove hexamod:Soulburn.",
     "EXTENDED_DESCRIPTION": [
       " NL (Current: !B! Block.)"
     ]

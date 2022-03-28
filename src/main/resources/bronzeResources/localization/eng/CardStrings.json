@@ -75,7 +75,7 @@
   },
   "bronze:Replicate": {
     "NAME": "Replicate",
-    "DESCRIPTION": "Deal !D! damage.",
+    "DESCRIPTION": "Deal !D! damage. π NL When bronze:Encoded, add a copy to your discard pile.",
     "EXTENDED_DESCRIPTION": [
       "copying",
       "Copy"
@@ -250,7 +250,7 @@
     ]
   },
   "bronze:Overload": {
-    "NAME": "Overload",
+    "NAME": "Copy Paste",
     "DESCRIPTION": "Play a copy of each card in the Sequence. They do not Encode. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Play a copy of each card in the Sequence. They do not Encode."
   },

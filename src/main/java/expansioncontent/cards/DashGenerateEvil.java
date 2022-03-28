@@ -57,8 +57,8 @@ public class DashGenerateEvil extends AbstractExpansionCard {
 
         this.addToBot(new VFXAction(new HemokinesisEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
 
-        atb(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         atb(new GainBlockAction(p, p, this.block));
+        atb(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
         atb(new RandomCardWithTagAction(upgraded, expansionContentMod.STUDY, true));
 

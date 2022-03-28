@@ -24,8 +24,8 @@
   },
   "Slimebound:Replication": {
     "NAME": "复制",
-    "DESCRIPTION": "选择一张手牌。 NL 将它的复制品加入抽牌堆顶部。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择一张手牌。 NL 将它的复制品加入手牌。 NL 消耗 。",
+    "DESCRIPTION": "选择一张手牌。 NL 将其复制品加入抽牌堆顶部。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择一张手牌。 NL 将其复制品加入手牌。 NL 消耗 。",
 	"EXTENDED_DESCRIPTION": [
       "选择一张牌复制到手牌。",
       "选择一张牌复制到抽牌堆顶部。"
@@ -91,13 +91,13 @@
     "DESCRIPTION": " 造成 !D! 点伤害。 NL slimeboundmod:消耗黏液 -获得敌人 slimeboundmod:黏液 层数点 格挡 。"
   },
   "Slimebound:Dissolve": {
-    "NAME": "溶解",
+    "NAME": "黏质快餐",
     "DESCRIPTION": "抽 !M! 张牌。 NL 消耗一张手牌。 NL 将其耗能数量的 *舔舔 加入手牌。 NL 消耗 。"
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "增殖形态",
-	"DESCRIPTION": "champ:疲劳 !M!。 NL 每回合使用的初张指向牌将打出两次。",
-    "UPGRADE_DESCRIPTION": "champ:疲劳 !M!。 NL 每回合获得 [E] ，使用的初张指向牌将打出两次。",
+	  "DESCRIPTION": "champ:疲劳 !M! 。 NL 每回合首张指向牌打出两次。",
+    "UPGRADE_DESCRIPTION": "champ:疲劳 !M! 。 NL 每回合获得 [E] 且首张指向牌打出两次。",
     "EXTENDED_DESCRIPTION": [
       "需要…… 生命……"
     ]
@@ -163,8 +163,8 @@
   },
   "Slimebound:Gluttony": {
     "NAME": "暴食",
-    "DESCRIPTION": "每回合初次 slimeboundmod:消耗黏液 时将一张 *舔舔 加入手牌。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 每回合初次 slimeboundmod:消耗黏液 时将一张 *舔舔 加入手牌。"
+    "DESCRIPTION": "每回合首次 slimeboundmod:消耗黏液 时将一张 *舔舔 加入手牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 每回合首次 slimeboundmod:消耗黏液 时将一张 *舔舔 加入手牌。"
   },
   "Slimebound:PressTheAttack": {
     "NAME": "强攻",

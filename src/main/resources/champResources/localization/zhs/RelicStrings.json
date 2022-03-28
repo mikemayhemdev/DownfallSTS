@@ -3,7 +3,7 @@
     "NAME": "冠军金冠",
     "FLAVOR": "你是冠军！",
     "DESCRIPTIONS": [
-      "进入 #y姿态 时，对随机一名敌人造成 #b3 点伤害。"
+      "进入 #y姿态 时，对随机一名敌人造成 #b4 点伤害。"
     ]
   },
   "champ:BlackKnightHelmet": {

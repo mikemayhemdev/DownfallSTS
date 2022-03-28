@@ -80,7 +80,6 @@ import com.megacrit.cardcrawl.relics.MedicalKit;
 import com.megacrit.cardcrawl.relics.VelvetChoker;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.screens.custom.CustomMod;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -164,6 +163,8 @@ public class downfallMod implements
     public static final String modID = "downfall";
 
     public static final boolean STEAM_MODE = false;
+
+    public static boolean neowtextoverride = false;
 
 
     public static boolean choosingBossRelic = false;
@@ -1414,6 +1415,7 @@ public class downfallMod implements
 
     @Override
     public void receiveStartAct() {
+        neowtextoverride = false;
         if (evilMode || (evilWithinSingleton != null && evilWithinSingleton.selected) || (CardCrawlGame.trial == null && DailyModeEvilPatch.todaysRunIsEvil)) {
             if (possEncounterList.size() == 0) {
                 resetBossList();
@@ -1451,7 +1453,7 @@ public class downfallMod implements
                 p instanceof TheSnecko ||
                 p instanceof ChampChar ||
                 p instanceof AutomatonChar ||
-                p instanceof GremlinCharacter) {
+                p instanceof GremlinCharacter || p instanceof hermit.characters.hermit) {
             return true;
         }
         return false;
@@ -1660,6 +1662,7 @@ public class downfallMod implements
     @Override
     public void receivePostDeath() {
         evilMode = false;
+        EasyInfoDisplayPanel.specialDisplays.clear();
         // else: we are doing a quickRestart, do not reset evilMode
     }
 
@@ -1721,6 +1724,7 @@ public class downfallMod implements
             }
         }
 
+        /*
         if (abstractRoom instanceof MonsterRoomBoss) {
             if (evilMode) {
                 if (downfallMod.unseenTutorials[3]) {
@@ -1728,6 +1732,7 @@ public class downfallMod implements
                 }
             }
         }
+         */
     }
 
 

@@ -18,14 +18,17 @@ public class EncodeAndShuffleMod extends BronzeCardMod {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return rawDescription + uiStrings.TEXT[0];
+        return "";
     }
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
+        /*
         if (!card.purgeOnUse) {
             atb(new MakeTempCardInDiscardAction(card.makeStatEquivalentCopy(), 1));
         }
+
+         */
     }
 
     @Override

@@ -29,7 +29,9 @@ public class EnFreeStrikeHermit extends AbstractHermitBossCard {
 
     @Override
     public void onSpecificTrigger() {
-        setCostForTurn(this.cost);
+        setCostForTurn(1);
+        this.isCostModified = false;
+        this.isCostModifiedForTurn = false;
         if (AbstractCharBoss.boss.hand.group.indexOf(this) == 2) {
             this.bossDarken();
         }

@@ -250,21 +250,23 @@ public abstract class AbstractGhostflame {
     }
 
     public void extinguish() {
-        graphicalRender.charged = false;
-        charged = false;
-        CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);// 297
-        CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);// 298
-        reset();
-        if (AbstractDungeon.player instanceof TheHexaghost) {
-            int x = 0;
-            for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames)
-                if (gf.charged) x++;
-            ((TheHexaghost) AbstractDungeon.player).myBody.targetRotationSpeed = 100F + (20 * x);
-        }
-        for (int i = 0; i < 3; i++) {
-            animAlphaBySlot[i] = 0F;
-            useBrightTexture[i] = false;
-            update();
+        if (charged) {
+            graphicalRender.charged = false;
+            charged = false;
+            CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);// 297
+            CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);// 298
+            reset();
+            if (AbstractDungeon.player instanceof TheHexaghost) {
+                int x = 0;
+                for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames)
+                    if (gf.charged) x++;
+                ((TheHexaghost) AbstractDungeon.player).myBody.targetRotationSpeed = 100F + (20 * x);
+            }
+            for (int i = 0; i < 3; i++) {
+                animAlphaBySlot[i] = 0F;
+                useBrightTexture[i] = false;
+                update();
+            }
         }
     }
 

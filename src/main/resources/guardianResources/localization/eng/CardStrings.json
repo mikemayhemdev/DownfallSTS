@@ -10,17 +10,17 @@
   "Guardian:Gem_Red": {
     "NAME": "Ruby",
     "DESCRIPTION": "guardianmod:Gem. NL Gain 2 temporary Strength.",
-    "UPGRADE_DESCRIPTION": "Gain 2 temporary Strength."
+    "UPGRADE_DESCRIPTION": "Gain 2 temp. Strength."
   },
   "Guardian:Gem_Green": {
     "NAME": "Emerald",
     "DESCRIPTION": "guardianmod:Gem. NL Gain 2 temporary Dexterity.",
-    "UPGRADE_DESCRIPTION": "Gain 2 temporary Dexterity."
+    "UPGRADE_DESCRIPTION": "Gain 2 temp. Dexterity."
   },
   "Guardian:Gem_Lightblue": {
     "NAME": "Tourmaline",
     "DESCRIPTION": "guardianmod:Gem. NL Gain 4 temporary Thorns.",
-    "UPGRADE_DESCRIPTION": "Gain 4 temporary Thorns."
+    "UPGRADE_DESCRIPTION": "Gain 4 temp. Thorns."
   },
   "Guardian:Gem_White": {
     "NAME": "Quartz",
@@ -35,7 +35,7 @@
   "Guardian:Gem_Cyan": {
     "NAME": "Aquamarine",
     "DESCRIPTION": "guardianmod:Gem. NL Add a *Crystal *Ward to your hand.",
-    "UPGRADE_DESCRIPTION": "Add a *Crystal *Ward to your hand."
+    "UPGRADE_DESCRIPTION": "Gain a *Crystal *Ward."
   },
   "Guardian:ChargeUp": {
     "NAME": "Charge Up",
@@ -351,7 +351,7 @@
   "Guardian:Gem_Fragmented": {
     "NAME": "Fragmented Gem",
     "DESCRIPTION": "guardianmod:Gem. NL Add a *Crystal *Shiv to your hand.",
-    "UPGRADE_DESCRIPTION": "Add a *Crystal *Shiv to your hand."
+    "UPGRADE_DESCRIPTION": "Gain a *Crystal *Shiv."
   },
   "Guardian:CrystalShiv": {
     "NAME": "Crystal Shiv",

@@ -20,7 +20,7 @@ public class ArchetypeBaseSilent extends AbstractBossDeckArchetype {
     }
     @Override
     public void addedPreBattle() {
-
+        super.addedPreBattle();
     }
     @Override
     public void initializeBonusRelic() {

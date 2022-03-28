@@ -19,6 +19,7 @@ public abstract class AbstractBossMechanicPower extends AbstractPower {
     @Override
     public void update(int slot) {
         super.update(slot);
+        /*
         if (firstTurn){
             if (this.timer <= 0F){
                 ArrayList<AbstractGameEffect> effect2 = (ArrayList<AbstractGameEffect>) ReflectionHacks.getPrivate(this, AbstractPower.class, "effect");
@@ -38,6 +39,8 @@ public abstract class AbstractBossMechanicPower extends AbstractPower {
                 this.timer -= Gdx.graphics.getDeltaTime();
             }
         }
+
+         */
     }
 
     @Override

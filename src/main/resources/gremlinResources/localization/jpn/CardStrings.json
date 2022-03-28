@@ -6,7 +6,7 @@
 
   "Gremlin:ArmsTheft": {
     "NAME": "Arms Theft",
-    "DESCRIPTION": "Steal !M! Strength. NL Exhaust."
+    "DESCRIPTION": "gremlin:Steal !M! Strength. NL Exhaust."
   },
 
   "Gremlin:Astound": {
@@ -87,7 +87,7 @@
 
   "Gremlin:Dazzle": {
     "NAME": "Dazzle",
-    "DESCRIPTION": "Deal !D! damage. NL If you have 5 or more Wiz, the enemy loses 2 Strength. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL If you have 3 or more gremlin:Wiz, gremlin:Steal 2 Strength. NL Exhaust."
   },
 
   "Gremlin:Defend": {
@@ -308,13 +308,13 @@
 
   "Gremlin:Pickpocket": {
     "NAME": "Pickpocket",
-    "DESCRIPTION": "Steal all Artifact. NL Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "gremlin:Steal all Artifact. NL Deal !D! damage. NL Exhaust."
   },
 
   "Gremlin:PinNeedle": {
     "NAME": "Pin Needle",
-    "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! Pinpricks into your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle !M! Upgraded Pinpricks into your draw pile. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Insert !M! Pinpricks. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Insert !M! Upgraded Pinpricks. NL Exhaust."
   },
 
   "Gremlin:Pinprick": {

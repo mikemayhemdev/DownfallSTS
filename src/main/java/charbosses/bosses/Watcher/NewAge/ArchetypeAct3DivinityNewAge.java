@@ -8,6 +8,7 @@ import charbosses.cards.colorless.EnGoodInstincts;
 import charbosses.cards.curses.EnNormality;
 import charbosses.cards.curses.EnShame;
 import charbosses.cards.purple.*;
+import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
 import charbosses.powers.bossmechanicpowers.WatcherDivinityPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -27,6 +28,8 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
 
         maxHPModifier += 348;
         actNum = 3;
+        bossMechanicName = WatcherDivinityPower.NAME;
+        bossMechanicDesc = WatcherDivinityPower.DESC[0];
     }
 
     @Override

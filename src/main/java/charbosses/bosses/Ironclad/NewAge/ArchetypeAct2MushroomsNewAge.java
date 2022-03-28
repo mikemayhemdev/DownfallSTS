@@ -8,6 +8,7 @@ import charbosses.cards.curses.EnDecay;
 import charbosses.cards.curses.EnHaunted;
 import charbosses.cards.curses.EnInjury;
 import charbosses.cards.red.*;
+import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
 import charbosses.powers.bossmechanicpowers.DefectVoidPower;
 import charbosses.powers.bossmechanicpowers.IroncladMushroomPower;
 import charbosses.relics.*;
@@ -26,6 +27,8 @@ public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
 
         maxHPModifier += 190;
         actNum = 2;
+        bossMechanicName = IroncladMushroomPower.NAME;
+        bossMechanicDesc = IroncladMushroomPower.DESC[0];
     }
 
     @Override
