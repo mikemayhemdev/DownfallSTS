@@ -237,8 +237,8 @@
   },
   "Slimebound:Chomp": {
     "NAME": "啃噬",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将手牌中的随机一张 slimeboundmod:冲撞 牌的耗能本回合变为0。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将手牌中的随机一张 slimeboundmod:冲撞 牌的耗能变为0。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将手中的随机一张 slimeboundmod:冲撞 牌的耗能本回合变为0。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将手中的随机一张 slimeboundmod:冲撞 牌的耗能变为0。"
   },
   "Slimebound:DouseInSlime": {
     "NAME": "浸入黏液",
@@ -284,12 +284,12 @@
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL expansioncontent:发掘 !M! 张 slimeboundmod:舔舔 系牌。"
   },
   "Slimebound:PrepareCrush": {
-    "NAME": "准备：猛撞",
-    "DESCRIPTION": "下回合： NL 获得 [E] [E] [E] NL 获得 !M! 点 力量 NL 将 *史莱姆撞击 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "下回合： NL 获得 [E] [E] [E] [E] NL 获得 !M! 点 力量 NL 将 *史莱姆撞击+ 加入手牌。 NL 消耗 。"
+    "NAME": "准备：猛击",
+    "DESCRIPTION": "下回合： NL 获得 [E] [E] [E] NL 获得 !M! 点 力量 NL 将 *史莱姆猛击 加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "下回合： NL 获得 [E] [E] [E] [E] NL 获得 !M! 点 力量 NL 将 *史莱姆猛击+ 加入手牌。 NL 消耗 。"
   },
   "Slimebound:SlimeCrush": {
-    "NAME": "史莱姆撞击！！！",
+    "NAME": "史莱姆猛击！！！",
     "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "虚无 。 NL 对所有敌人造成 !D! 点伤害。 NL 消耗 。"
   },
