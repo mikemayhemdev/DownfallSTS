@@ -370,7 +370,7 @@
   },
   "Slimebound:Schlurp": {
     "NAME": "咀嚼",
-    "DESCRIPTION": "获得 !B! 点 格挡 。将 !M! 张 *舔舔 加入手牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将 !M! 张 *舔舔 加入手牌。"
   },
   "Slimebound:SplitGreed": {
     "NAME": "贪婪复生",
