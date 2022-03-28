@@ -1,7 +1,6 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -34,7 +33,7 @@ public class HeatShield extends AbstractHexaCard {
                 super.applyPowersToBlock();
                 this.baseBlock = realBaseBlock;// 75
                 this.isBlockModified = block != baseBlock;
-                if (upgraded){
+                if (upgraded) {
                     this.rawDescription = UPGRADE_DESCRIPTION + EXTENDED_DESCRIPTION[0];// 73
                 } else {
                     this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[0];// 73
@@ -42,17 +41,13 @@ public class HeatShield extends AbstractHexaCard {
                 initializeDescription();
             }
         } else {
-            this.baseBlock = this.block = 5;
+            this.baseBlock = this.block = 0;
             this.isBlockModified = false;
         }
     }
 
     public void onMoveToDiscard() {
-        if (upgraded){
-            this.rawDescription = UPGRADE_DESCRIPTION;// 73
-        } else {
-            this.rawDescription = DESCRIPTION;// 73
-        }
+        this.rawDescription = DESCRIPTION;// 73
         this.initializeDescription();// 81
     }// 82
 
