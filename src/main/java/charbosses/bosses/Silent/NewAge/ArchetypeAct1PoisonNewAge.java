@@ -107,15 +107,15 @@ public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
 
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnDeadlyPoison());
+                    addToList(cardsList, new EnDodgeAndRoll());
                     addToList(cardsList, new EnStrikeGreen());
                     addToList(cardsList, new EnSurvivor());
                     turn++;
                     break;
                 case 1:
                     addToList(cardsList, new EnBurst());
-                    addToList(cardsList, new EnDodgeAndRoll());
-                    AbstractBossCard c = new EnDodgeAndRoll();
+                    addToList(cardsList, new EnDeadlyPoison());
+                    AbstractBossCard c = new EnDeadlyPoison();
                     c.cost = 0;
                     c.freeToPlayOnce = true;
                     c.modifyCostForCombat(-1);
