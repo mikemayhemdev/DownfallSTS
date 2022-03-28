@@ -75,7 +75,7 @@
   },
   "bronze:Replicate": {
     "NAME": "副本",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将这张牌的复制品加入你的弃牌堆",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 被 bronze:编码 时将本牌的复制品加入弃牌堆。",
     "EXTENDED_DESCRIPTION": [
       "反复",
       "拷贝"
@@ -488,8 +488,8 @@
   },
   "bronze:BronzeHeatsink": {
     "NAME": "铜制散热器",
-    "DESCRIPTION": "当你打出 *方法 时，抽1张牌。",
-    "UPGRADE_DESCRIPTION": "当你打出 *方法 时，抽2张牌。"
+    "DESCRIPTION": "打出 *方法 时，抽1张牌。",
+    "UPGRADE_DESCRIPTION": "打出 *方法 时，抽2张牌。"
   },
   "bronze:HardenedForm": {
     "NAME": "圆球召唤",
