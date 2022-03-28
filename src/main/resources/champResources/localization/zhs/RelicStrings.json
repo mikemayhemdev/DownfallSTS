@@ -24,7 +24,7 @@
     "NAME": "战狂指南",
     "FLAVOR": "文字难以辨认。",
     "DESCRIPTIONS": [
-      "回合开始时获得 #b3 点 #y活力 。"
+      "你的回合开始时获得 #b3 点 #y活力 。"
     ]
   },
   "champ:ChampionCrownUpgraded": {
@@ -52,14 +52,14 @@
     "NAME": "决斗手套",
     "FLAVOR": "从十开始数……",
     "DESCRIPTIONS": [
-      "单体攻击牌造成伤害后，如果敌人没有 #y易伤 ，给予 #b1 层 #y易伤 。"
+      "单体攻击牌造成伤害后，若敌人没有 #y易伤 ，给予 #b1 层 #y易伤 。"
     ]
   },
   "champ:FightingForDummies": {
     "NAME": "格斗读本",
     "FLAVOR": "第一步，打败敌人",
     "DESCRIPTIONS": [
-      "若回合结束时未处于 #y姿态 ，下回合多抽 #b1 张牌。"
+      "若你的回合结束时未处于 #y姿态 ，下回合多抽 #b1 张牌。"
     ]
   },
   "champ:GladiatorsBookOfMartialProwess": {
