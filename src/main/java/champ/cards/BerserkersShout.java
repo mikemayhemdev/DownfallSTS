@@ -14,11 +14,11 @@ public class BerserkersShout extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 1;
+    private static final int MAGIC = 3;
     private static final int UPG_MAGIC = 3;
 
     public BerserkersShout() {
-        super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         //tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);
@@ -30,7 +30,7 @@ public class BerserkersShout extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
        // techique();
         berserkOpen();
-       // vigor(magicNumber)
+        vigor(magicNumber);
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
         if (upgraded) techique();
     }

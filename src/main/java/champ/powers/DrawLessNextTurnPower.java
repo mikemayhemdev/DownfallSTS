@@ -38,13 +38,27 @@ public class DrawLessNextTurnPower extends AbstractPower implements CloneablePow
     }
 
     @Override
+    public void stackPower(int stackAmount) {
+        AbstractDungeon.player.gameHandSize -= stackAmount;
+        super.stackPower(stackAmount);
+    }
+
+    @Override
     public void onRemove() {
         AbstractDungeon.player.gameHandSize += amount;
     }
 
-    public void atEndOfRound() {
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, ID));
+    @Override
+    public void reducePower(int reduceAmount) {
+        AbstractDungeon.player.gameHandSize += Math.min(reduceAmount,amount);
+        super.reducePower(reduceAmount);
     }
+
+    @Override
+    public void atStartOfTurnPostDraw() {
+        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
+    }
+
 
     @Override
     public void updateDescription() {
