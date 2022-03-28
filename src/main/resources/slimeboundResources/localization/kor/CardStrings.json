@@ -49,7 +49,7 @@
   "Slimebound:SlimeTap": {
     "NAME": "슬라임 회수",
     "DESCRIPTION": "슬라임을 1번 slimeboundmod:흡수한 후, [E] [E] 를 얻고 카드를 !M! 장 뽑습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "슬라임을 2번 slimeboundmod:흡수한 후, [E] [E] 를 얻고 slimeboundmod:흡수된 슬라임당 카드를 2장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "슬라임을 2번 slimeboundmod:흡수한 후, [E] [E] 를 얻고 slimeboundmod:흡수된 슬라임 하나당 카드를 2장 뽑습니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
       "부하들이... 필요해..."
     ]
@@ -70,7 +70,7 @@
   },
   "Slimebound:SpikyOuterGoop": {
     "NAME": "끈적이 갑옷",
-    "DESCRIPTION": "slimeboundmod:소비했을 때 방어도를 !M! 얻습니다."
+    "DESCRIPTION": "slimeboundmod:소비하면 방어도를 !M! 얻습니다."
   },
   "Slimebound:SelfFormingGoo": {
     "NAME": "재형성",
@@ -88,7 +88,7 @@
   },
   "Slimebound:LeechingTouch": {
     "NAME": "흡수의 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL slimeboundmod:소비했을 때 적의 slimeboundmod:점액만큼 방어도를 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL slimeboundmod:소비하면 적의 slimeboundmod:점액만큼 방어도를 얻습니다."
   },
   "Slimebound:Dissolve": {
     "NAME": "가벼운 식사",
@@ -116,7 +116,7 @@
   },
   "Slimebound:GrowthPunch": {
     "NAME": "거세지는 주먹질",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 방어도를 !B! 얻습니다. NL 이번 전투에서 slimeboundmod:소비했을 때 방어도와 피해량이 !M! 증가합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 방어도를 !B! 얻습니다. NL 이번 전투에서 slimeboundmod:소비하면 방어도와 피해량이 !M! 증가합니다."
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "전술교본 참조",
@@ -163,13 +163,13 @@
   },
   "Slimebound:Gluttony": {
     "NAME": "폭식",
-    "DESCRIPTION": "매 턴 처음으로 slimeboundmod:소비했을 때 *핥기 카드를 1장 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 매 턴 처음으로 slimeboundmod:소비했을 때 *핥기 카드를 1장 얻습니다."
+    "DESCRIPTION": "매 턴 처음으로 slimeboundmod:소비하면 *핥기 카드를 1장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 매 턴 처음으로 slimeboundmod:소비하면 *핥기 카드를 1장 얻습니다."
   },
   "Slimebound:PressTheAttack": {
     "NAME": "계속 공격해",
-    "DESCRIPTION": "피해를 !D! 줍니다. slimeboundmod:소비했을 때 slimeboundmod:명령합니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. slimeboundmod:소비했을 때 2번 slimeboundmod:명령합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. slimeboundmod:소비하면 slimeboundmod:명령합니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. slimeboundmod:소비하면 2번 slimeboundmod:명령합니다."
   },
   "Slimebound:TongueLash": {
     "NAME": "혓바닥 채찍",
@@ -177,8 +177,8 @@
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "맜있겠군",
-    "DESCRIPTION": "피해를 !D! 줍니다. slimeboundmod:소비했을 때 *핥기 카드를 1장 얻습니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. slimeboundmod:소비했을 때 *핥기+ 카드를 1장 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. slimeboundmod:소비하면 *핥기 카드를 1장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. slimeboundmod:소비하면 *핥기+ 카드를 1장 얻습니다."
   },
   "Slimebound:AcidTongue": {
     "NAME": "점액 흩뿌리기",
@@ -212,7 +212,7 @@
   },
   "Slimebound:FinishingTackle": {
     "NAME": "시작을 알리는 태클",
-    "DESCRIPTION": "피해를 !D! 주고 반동으로 피해를 !SlimeboundSelfharm! 받습니다. slimeboundmod:소비했을 때 취약을 !M! 부여합니다."
+    "DESCRIPTION": "피해를 !D! 주고 반동으로 피해를 !SlimeboundSelfharm! 받습니다. slimeboundmod:소비하면 취약을 !M! 부여합니다."
   },
   "Slimebound:LivingWall": {
     "NAME": "살아있는 벽",
@@ -268,16 +268,16 @@
   },
   "Slimebound:LeechEnergy": {
     "NAME": "에너지 흡수",
-    "DESCRIPTION": "피해를 !D! 줍니다. slimeboundmod:소비했을 때 [E] 을 얻고 카드를 !M! 장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. slimeboundmod:소비했을 때 [E] 을 얻고 카드를 !M! 장 뽑습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. slimeboundmod:소비하면 [E] 을 얻고 카드를 !M! 장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. slimeboundmod:소비하면 [E] 을 얻고 카드를 !M! 장 뽑습니다."
   },
   "Slimebound:LeechLife": {
     "NAME": "거머리 생명력",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL slimeboundmod:소비했을 때 적의 slimeboundmod:점액만큼 체력을 !M! 까지 회복합니다. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL slimeboundmod:소비하면 적의 slimeboundmod:점액만큼 체력을 !M! 까지 회복합니다. NL 소멸."
   },
   "Slimebound:Equalize": {
     "NAME": "균일화",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 체력을 !M! 회복합니다. NL slimeboundmod:소비했을 때 2번 사용합니다. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 체력을 !M! 회복합니다. NL slimeboundmod:소비하면 2번 사용합니다. NL 소멸."
   },
   "Slimebound:DisruptingSlam": {
     "NAME": "간식 발견",
@@ -295,11 +295,11 @@
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "분할 & 정복",
-    "DESCRIPTION": "슬라임당 무작위 적들에게 피해를 !D! 줍니다. NL 모든 슬라임을 slimeboundmod:흡수합니다. NL 소멸."
+    "DESCRIPTION": "슬라임 하나당 무작위 적들에게 피해를 !D! 줍니다. NL 모든 슬라임을 slimeboundmod:흡수합니다. NL 소멸."
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "넣기 & 보호",
-    "DESCRIPTION": "슬라임당 방어도를 !B! 얻고 bronze:흐릿함을 1 얻습니다. NL 모든 슬라임을 slimeboundmod:흡수합니다. NL 소멸."
+    "DESCRIPTION": "슬라임 하나당 방어도를 !B! 얻고 bronze:흐릿함을 1 얻습니다. NL 모든 슬라임을 slimeboundmod:흡수합니다. NL 소멸."
   },
   "Slimebound:SplitBruiser": {
     "NAME": "분열: 싸움꾼",
@@ -342,7 +342,7 @@
   },
   "Slimebound:SlimeSlap": {
     "NAME": "슬라임 찰싹!",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL slimeboundmod:소비했을 때 slimeboundmod:점액을 소모하지 않습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL slimeboundmod:소비하면 slimeboundmod:점액을 소모하지 않습니다."
   },
   "Slimebound:OneTwoCombo": {
     "NAME": "하나둘 얍",
