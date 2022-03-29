@@ -151,7 +151,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "诡异探险",
-    "DESCRIPTION": "虚无 。 NL 将随机一张 虚无 牌加入手牌。 NL 它本回合耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 随机将一张 虚无 牌加入手牌。 NL 它本回合耗能为0。 NL 消耗 。"
   },
   "hexamod:PhantomCloak": {
     "NAME": "幽灵披风",
@@ -159,11 +159,11 @@
   },
   "hexamod:ParanormalForm": {
     "NAME": "鬼哭神嚎",
-    "DESCRIPTION": "虚无 。 NL 打出一张 虚无 牌时，对随机一名敌人造成 !M! 点伤害。"
+    "DESCRIPTION": "虚无 。 NL 打出一张 虚无 牌时，随机对敌人造成 !M! 点伤害。"
   },
   "hexamod:UnleashSpirits": {
     "NAME": "释魂",
-    "DESCRIPTION": "对随机敌人造成 !D! 点伤害，消耗堆中每有一张 虚无 牌重复一次。 NL 消耗 。"
+    "DESCRIPTION": "随机对敌人造成 !D! 点伤害，消耗堆中每有一张 虚无 牌重复一次。 NL 消耗 。"
   },
   "hexamod:NightmareStrike": {
     "NAME": "梦魇打击",
@@ -190,7 +190,7 @@
   },
   "hexamod:BurningTouch": {
     "NAME": "灼烧之触",
-    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 如果敌人已有 hexamod:灼魂 再给予一次。"
+    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 若敌人已有 hexamod:灼魂 再给予一次。"
   },
   "hexamod:Incineration": {
     "NAME": "焚化",
@@ -245,7 +245,7 @@
   "hexamod:RainOfEmbers": {
     "NAME": "焰烬雨",
     "DESCRIPTION": "造成 !D! 点伤害并给 NL 予 !burny! 层 hexamod:灼魂 X 次。次数不少于3时，给予 !M! 层 虚弱 。",
-    "UPGRADE_DESCRIPTION": "对随机敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 X 次。次数不少于3时，给予所有敌人2层 虚弱 和 易伤 。"
+    "UPGRADE_DESCRIPTION": "随机对敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 X 次。次数不少于3时，给予所有敌人2层 虚弱 和 易伤 。"
   },
   "hexamod:VolcanoVisage": {
     "NAME": "火山面貌",
@@ -383,7 +383,7 @@
   },
   "hexamod:SuperheatedStrike": {
     "NAME": "灼热打击",
-    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 给予 !burny! 层 hexamod:灼魂 。 NL 如果这张牌被 消耗 ，受到 !M! 点伤害。"
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 给予 !burny! 层 hexamod:灼魂 。 NL 若本牌被 消耗 ，受到 !M! 点伤害。"
   },
   "hexamod:Ghostwalk": {
     "NAME": "鬼步",
