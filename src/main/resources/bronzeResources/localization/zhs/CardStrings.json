@@ -450,7 +450,7 @@
   },
   "bronze:BurnOut": {
     "NAME": "燃烧殆尽",
-    "DESCRIPTION": " 消耗 所有状态牌。 每消耗一张 *状态牌 对随机一名敌人造成 !D! 点伤害。 NL bronze:插入 3张 *灼伤 。",
+    "DESCRIPTION": " 消耗 所有 状态牌 ，每 消耗 一张随机对敌人造成 !D! 点伤害。 NL bronze:插入 3张 *灼伤 。",
     "EXTENDED_DESCRIPTION": [
       " NL （攻击 ",
       " 次。）"
@@ -493,7 +493,7 @@
   },
   "bronze:HardenedForm": {
     "NAME": "圆球召唤",
-    "DESCRIPTION": " bronze:编译 或打出 *方法 时，获得 !M! 点 格挡 并对随机敌人造成 !M! 点伤害。"
+    "DESCRIPTION": " bronze:编译 或打出 *方法 时，获得 !M! 点 格挡 并随机对敌人造成 !M! 点伤害。"
   },
   "bronze:CopyPaste": {
     "NAME": "复制粘贴",
@@ -622,7 +622,7 @@
   },
   "bronze:ThunderWave": {
     "NAME": "雷霆",
-    "DESCRIPTION": "本场战斗每 bronze:编译 过一张 *方法 对随机敌人造成 !D! 点伤害。",
+    "DESCRIPTION": "本场战斗每 bronze:编译 过一张 *方法 随机对敌人造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       " NL （攻击 ",
       " 次）"
