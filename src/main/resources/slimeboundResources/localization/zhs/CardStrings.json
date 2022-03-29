@@ -120,7 +120,7 @@
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "查找策略",
-    "DESCRIPTION": "随机将4张 slimeboundmod:冲撞 牌加入手牌。本场战斗它们耗能减少1点。 NL 消耗 。"
+    "DESCRIPTION": "随机将4张 slimeboundmod:冲撞 牌加入手牌。本场战斗其耗能减少1点。 NL 消耗 。"
   },
   "Slimebound:Recycling": {
     "NAME": "循环再生",
@@ -216,7 +216,7 @@
   },
   "Slimebound:LivingWall": {
     "NAME": "活体墙壁",
-    "DESCRIPTION": "获得 !B! 格挡 。 NL 本回合受到敌人攻击时给予它 !SlimeboundSlimed! 层 slimeboundmod:黏液 。"
+    "DESCRIPTION": "获得 !B! 格挡 。 NL 本回合被敌人攻击时给予它 !SlimeboundSlimed! 层 slimeboundmod:黏液 。"
   },
   "Slimebound:ComboTackle": {
     "NAME": "长矛冲撞",
@@ -228,8 +228,8 @@
   },
   "Slimebound:GoopTackle": {
     "NAME": "连续冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机将一张 slimeboundmod:冲撞 牌加入手牌。它本回合耗能为0。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机将一张已 升级 的 slimeboundmod:冲撞 牌加入手牌。它本回合耗能为0。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机将一张 slimeboundmod:冲撞 牌加入手牌。其耗能本回合为0。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机将一张已 升级 的 slimeboundmod:冲撞 牌加入手牌。其耗能本回合为0。"
   },
   "Slimebound:CorrosiveSpit": {
     "NAME": "腐蚀喷吐",
@@ -237,8 +237,8 @@
   },
   "Slimebound:Chomp": {
     "NAME": "啃噬",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将手中随机一张 slimeboundmod:冲撞 牌的耗能本回合变为0。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将手中随机一张 slimeboundmod:冲撞 牌的耗能变为0。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机将手中一张 slimeboundmod:冲撞 牌的耗能本回合变为0。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 随机将手中一张 slimeboundmod:冲撞 牌的耗能变为0。"
   },
   "Slimebound:DouseInSlime": {
     "NAME": "浸入黏液",
@@ -250,8 +250,8 @@
   },
   "Slimebound:RainOfGoop": {
     "NAME": "黏液雨",
-    "DESCRIPTION": "给予随机一名敌人 NL !SlimeboundSlimed! 层 slimeboundmod:黏液 !M! 次。",
-    "UPGRADE_DESCRIPTION": "给予随机一名敌人 NL !SlimeboundSlimed! 层 slimeboundmod:黏液 !M! 次。"
+    "DESCRIPTION": "随机给予敌人 NL !SlimeboundSlimed! 层 slimeboundmod:黏液 !M! 次。",
+    "UPGRADE_DESCRIPTION": "随机给予敌人 NL !SlimeboundSlimed! 层 slimeboundmod:黏液 !M! 次。"
   },
   "Slimebound:GoopSpray": {
     "NAME": "黏液喷射",
@@ -295,7 +295,7 @@
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "分而治之",
-    "DESCRIPTION": "slimeboundmod:吸收 所有史莱姆。 NL 每有一只就对随机一名敌人造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "slimeboundmod:吸收 所有史莱姆。 NL 每有一只就随机对敌人造成 !D! 点伤害。 NL 消耗 。"
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "统而御之",
