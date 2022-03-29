@@ -59,7 +59,7 @@
   },
   "champ:Backstep": {
     "NAME": "后撤",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL champ:战狂 champ:连段 ：获得 活力 层数点 格挡 。"
+    "DESCRIPTION": "进入 champ:防守 。 NL 获得 !B! 点 格挡 。 NL champ:战狂 champ:连段 ：获得 活力 层数点 格挡 。"
   },
   "champ:BerserkersShout": {
     "NAME": "怒吼",
