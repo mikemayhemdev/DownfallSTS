@@ -68,7 +68,7 @@
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "疾进",
-    "DESCRIPTION": "每回合首次 hexamod:点燃 鬼火时， hexamod:步进 。",
+    "DESCRIPTION": "每回合首次 hexamod:点燃 NL 鬼火时， hexamod:步进 。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 每回合首次 hexamod:点燃 鬼火时， hexamod:步进 。"
   },
   "hexamod:GhostOfSpirePresent": {
