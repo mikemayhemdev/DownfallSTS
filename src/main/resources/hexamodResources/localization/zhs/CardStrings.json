@@ -63,13 +63,13 @@
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "魔鬼之舞",
-    "DESCRIPTION": "每回合初次 hexamod:回退 时，获得 [E] 并抽一张牌。 NL hexamod:回退 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 每回合初次 hexamod:回退 时，获得 [E] 并抽一张牌。 NL hexamod:回退 。"
+    "DESCRIPTION": "每回合首次 hexamod:回退 时，获得 [E] 并抽一张牌。 NL hexamod:回退 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每回合首次 hexamod:回退 时，获得 [E] 并抽一张牌。 NL hexamod:回退 。"
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "疾进",
-    "DESCRIPTION": "每回合初次 hexamod:点燃 鬼火时， hexamod:步进 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 每回合初次 hexamod:点燃 鬼火时， hexamod:步进 。"
+    "DESCRIPTION": "每回合首次 hexamod:点燃 鬼火时， hexamod:步进 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每回合首次 hexamod:点燃 鬼火时， hexamod:步进 。"
   },
   "hexamod:GhostOfSpirePresent": {
     "NAME": "此刻",
