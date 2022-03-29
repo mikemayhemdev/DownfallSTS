@@ -354,8 +354,8 @@
   },
   "Guardian:Repulse": {
     "NAME": "反冲协议",
-    "DESCRIPTION": "消耗 每回合抽到的第一张 状态牌 或 诅咒 并抽一张牌。",
-    "UPGRADE_DESCRIPTION": "消耗 每回合抽到的第一张 状态牌 或 诅咒 并抽一张牌。"
+    "DESCRIPTION": "消耗 每回合抽到的首张 状态牌 或 诅咒 并抽一张牌。",
+    "UPGRADE_DESCRIPTION": "消耗 每回合抽到的首张 状态牌 或 诅咒 并抽一张牌。"
   },
   "Guardian:BronzeOrb": {
     "NAME": "铜球支援",
