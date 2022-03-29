@@ -67,11 +67,8 @@ public class GemFire extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-          //  upgradeDamage(UPGRADE_BONUS);
-            selfRetain = true;
-          //  exhaust = false;
-            rawDescription = UPGRADED_DESCRIPTION;
-            initializeDescription();
+
+            upgradeBaseCost(1);
         }
 
 

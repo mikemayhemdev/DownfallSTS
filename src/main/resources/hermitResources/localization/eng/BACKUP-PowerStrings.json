@@ -9,7 +9,7 @@
 },
 "hermit:FatalDesirePower": {
         "NAME": "Fatal Desire",
-        "DESCRIPTIONS": ["At the start of your turn, draw #b", " cards and add #b", " Injury to your hand.", " Injuries to your hand."]
+        "DESCRIPTIONS": ["At the start of your turn, draw #b", " cards and gain #b", " Injury.", " Injuries."]
 },
 "hermit:ShadowCloakPower": {
         "NAME": "Shadow Cloak",
@@ -33,7 +33,7 @@
 },
 "hermit:ComboPower": {
         "NAME": "Combo",
-        "DESCRIPTIONS": ["Whenever you activate a #yDead #yOn effect, add #b", " random card with #yDead #yOn to your hand.", "  random cards with #yDead #yOn to your hand."]
+        "DESCRIPTIONS": ["Whenever you activate a #yDead #yOn effect, gain #b", " random card with #yDead #yOn.", "  random cards with #yDead #yOn."]
 },
 "hermit:BigShotPower": {
         "NAME": "Smoking Barrel",

@@ -27,10 +27,10 @@ public class BronzeOrb extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 0;
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 8;
 
     //TUNING CONSTANTS
-    private static final int UPGRADE_DAMAGE = 2;
+    private static final int UPGRADE_DAMAGE = 4;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BLOCK = 2;
     private static final int SOCKETS = 0;
@@ -52,7 +52,7 @@ public class BronzeOrb extends AbstractGuardianCard {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
         this.baseDamage = DAMAGE;
-        this.baseBlock = BLOCK;
+       // this.baseBlock = BLOCK;
 
         //this.sockets.add(GuardianMod.socketTypes.RED);
         this.isInnate = true;
@@ -80,7 +80,7 @@ public class BronzeOrb extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new BronzeOrbEffect(p, m), 0.5F));
 
         AbstractDungeon.actionManager.addToBottom(new PlaceRandomCardIntoStasisAction(1));
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+      //  AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         this.useGems(p, m);
     }
@@ -93,7 +93,7 @@ public class BronzeOrb extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_DAMAGE);
-            upgradeBlock(UPGRADE_BLOCK);
+      //      upgradeBlock(UPGRADE_BLOCK);
         }
 
 

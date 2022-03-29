@@ -89,17 +89,17 @@
   "champ:StrikeOfGeniusPower": {
     "NAME": "Strike of Genius",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a random card containing \"Strike\" to your hand. It costs #b0 until played and Exhausts.",
-      "At the start of your turn, add #b",
-      " random cards containing \"Strike\" to your hand. They cost #b0 until played and Exhaust."
+      "At the start of your turn, gain a random \"Strike\". It costs #b0 until played and Exhausts.",
+      "At the start of your turn, gain #b",
+      " random \"Strike\"s. They cost #b0 until played and Exhaust."
     ]
   },
   "champ:StrikeOfGeniusUpgradedPower": {
     "NAME": "Strike of Genius+",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a random #yupgraded card containing \"Strike\" to your hand. It costs #b0 until played and Exhausts.",
-      "At the start of your turn, add #b",
-      " random #yupgraded cards containing \"Strike\" to your hand. They cost #b0 until played and Exhaust."
+      "At the start of your turn, gain a random #yupgraded \"Strike\". It costs #b0 until played and Exhausts.",
+      "At the start of your turn, gain #b",
+      " random #yupgraded \"Strike\"s. They cost #b0 until played and Exhaust."
     ]
   },
   "champ:DefensiveStylePower": {
@@ -195,7 +195,7 @@
   "champ:ParryPower": {
     "NAME": "Parrying",
     "DESCRIPTIONS": [
-      "If your Counter is used this turn, add Riposte to your hand."
+      "If your Counter is used this turn, gain Riposte."
     ]
   },
   "champ:BoomerangPower": {

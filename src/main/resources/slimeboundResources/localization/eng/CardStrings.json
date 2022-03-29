@@ -24,8 +24,8 @@
   },
   "Slimebound:Replication": {
     "NAME": "Replication",
-    "DESCRIPTION": "Choose a card in your hand. NL Put a copy of that card on top of your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a card in your hand. NL Add a copy of it into your hand. NL Exhaust.",
+    "DESCRIPTION": "Choose a card in hand. NL Gain a copy on top of your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a card in hand. NL Gain a copy of it. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " to add a copy into your hand.",
       " to put a copy on top of your draw pile."
@@ -96,8 +96,8 @@
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "Duplicated Form",
-	"DESCRIPTION": "champ:Fatigue !M!. NL The first card you play each turn that targets enemies is played twice.",
-    "UPGRADE_DESCRIPTION": "champ:Fatigue !M!. NL Gain [E] each turn. NL The first card you play each turn that targets enemies is played twice.",
+	"DESCRIPTION": "The first card each turn that targets enemies is played twice.",
+    "UPGRADE_DESCRIPTION": "Gain [E] each turn. NL The first card each turn that targets enemies is played twice.",
     "EXTENDED_DESCRIPTION": [
       "Need... Health..."
     ]
@@ -120,7 +120,7 @@
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "Consult Playbook",
-    "DESCRIPTION": "Add 4 random slimeboundmod:Tackle cards to your hand. They cost 1 less this combat. NL Exhaust."
+    "DESCRIPTION": "Gain 4 random slimeboundmod:Tackles. They cost 1 less this combat. NL Exhaust."
   },
   "Slimebound:Recycling": {
     "NAME": "Recycling",
@@ -129,17 +129,17 @@
   },
   "Slimebound:Repurpose": {
     "NAME": "Repurpose",
-    "DESCRIPTION": "slimeboundmod:Absorb - Split into a random slimeboundmod:Specialist Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorb - Split into a random slimeboundmod:Specialist Slime. NL slimeboundmod:Command. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Absorb - Split into a random slimeboundmod:Specialist. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorb - Split into a random slimeboundmod:Specialist. NL slimeboundmod:Command. NL Exhaust."
   },
   "Slimebound:RollThrough": {
     "NAME": "Roll Through",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL You do not take damage from the next !M! slimeboundmod:Tackle cards."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL You do not take damage from the next !M! slimeboundmod:Tackles."
   },
   "Slimebound:MassRepurpose": {
     "NAME": "Mass Repurpose",
-    "DESCRIPTION": "slimeboundmod:Absorb ALL Slimes. NL Split into a random slimeboundmod:Specialist Slime for each slimeboundmod:Absorbed. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorb ALL Slimes. NL Split into a random slimeboundmod:Specialist Slime for each slimeboundmod:Absorbed, then slimeboundmod:Command them all. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Absorb ALL Slimes. Split into a random slimeboundmod:Specialist for each. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorb ALL Slimes. Split into a random slimeboundmod:Specialist for each. slimeboundmod:Command them. NL Exhaust."
   },
   "Slimebound:Lick": {
     "NAME": "Lick",
@@ -163,8 +163,8 @@
   },
   "Slimebound:Gluttony": {
     "NAME": "Gluttony",
-    "DESCRIPTION": "The first time you slimeboundmod:Consume each turn, add a *Lick to your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time you slimeboundmod:Consume each turn, add a *Lick to your hand."
+    "DESCRIPTION": "The first time you slimeboundmod:Consume each turn, gain a *Lick.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time you slimeboundmod:Consume each turn, gain a *Lick."
   },
   "Slimebound:PressTheAttack": {
     "NAME": "Press the Attack",
@@ -177,8 +177,8 @@
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "It Looks Tasty",
-    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Add a *Lick to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Add a *Lick+ to your hand."
+    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Gain a *Lick.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Gain a *Lick+."
   },
   "Slimebound:AcidTongue": {
     "NAME": "Spreading Slime",
@@ -186,7 +186,7 @@
   },
   "Slimebound:FirmFortitude": {
     "NAME": "Liquidate",
-    "DESCRIPTION": "Cannot be used if you have negative Strength. NL Lose 2 Strength. NL Gain !M! slimeboundmod:Potency."
+    "DESCRIPTION": "Unplayable if you have negative Strength. NL Lose 2 Strength. NL Gain !M! slimeboundmod:Potency."
   },
   "Slimebound:WasteNot": {
     "NAME": "Waste Not",
@@ -207,12 +207,12 @@
   },
   "Slimebound:HungryTackle": {
     "NAME": "Hungry Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL expansioncontent:Exhume a random *Lick card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL expansioncontent:Exhume 2 random *Lick cards."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL expansioncontent:Exhume a random *Lick.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damageNL Take !SlimeboundSelfharm! damage. NL expansioncontent:Exhume 2 random *Licks."
   },
   "Slimebound:FinishingTackle": {
     "NAME": "Opening Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. slimeboundmod:Consume - Apply !M! Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. slimeboundmod:Consume - Apply !M! Vulnerable."
   },
   "Slimebound:LivingWall": {
     "NAME": "Living Wall",
@@ -220,16 +220,16 @@
   },
   "Slimebound:ComboTackle": {
     "NAME": "Spear Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Draw !M! cards."
   },
   "Slimebound:Tackle": {
     "NAME": "Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage."
   },
   "Slimebound:GoopTackle": {
     "NAME": "Combo Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Add a random slimeboundmod:Tackle card to your hand. It costs 0 this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Add a random Upgraded slimeboundmod:Tackle card to your hand. It costs 0 this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Gain a random slimeboundmod:Tackle. It costs 0 this turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Gain a random Upgraded slimeboundmod:Tackle. It costs 0 this turn."
   },
   "Slimebound:CorrosiveSpit": {
     "NAME": "Corrosive Spit",
@@ -237,8 +237,8 @@
   },
   "Slimebound:Chomp": {
     "NAME": "Chomp",
-    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random slimeboundmod:Tackle card in your hand to 0 this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random slimeboundmod:Tackle card in your hand to 0 this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random slimeboundmod:Tackle in your hand to 0 this turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random slimeboundmod:Tackle in your hand to 0 this combat."
   },
   "Slimebound:DouseInSlime": {
     "NAME": "Douse in Slime",
@@ -246,7 +246,7 @@
   },
   "Slimebound:FlameTackle": {
     "NAME": "Flame Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL slimeboundmod:Tackles deal !M! more damage this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL slimeboundmod:Tackles deal !M! more damage this combat."
   },
   "Slimebound:RainOfGoop": {
     "NAME": "Rain of Goop",
@@ -263,8 +263,8 @@
   },
   "Slimebound:ViciousTackle": {
     "NAME": "Vicious Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. This gains twice the damage bonus from slimeboundmod:Goop.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. This gains twice the damage bonus AND healing from slimeboundmod:Goop."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. This gains twice the damage bonus from slimeboundmod:Goop.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. This gains twice the damage bonus AND healing from slimeboundmod:Goop."
   },
   "Slimebound:LeechEnergy": {
     "NAME": "Leech Energy",
@@ -285,8 +285,8 @@
   },
   "Slimebound:PrepareCrush": {
     "NAME": "Prepare: Crush",
-    "DESCRIPTION": "Next turn, gain [E] [E] [E] and !M! Strength, and add *SLIME *CRUSH to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E] [E] [E] and !M! Strength, and add *SLIME *CRUSH+ to your hand. NL Exhaust."
+    "DESCRIPTION": "Next turn, gain [E] [E] [E] and !M! Strength, and gain *SLIME *CRUSH. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E] [E] [E] and !M! Strength, and gain *SLIME *CRUSH+. NL Exhaust."
   },
   "Slimebound:SlimeCrush": {
     "NAME": "SLIME CRUSH!!!",
@@ -323,8 +323,8 @@
   },
   "Slimebound:SplitSpecialist": {
     "NAME": "Split: Specialist",
-    "DESCRIPTION": "Choose 1 of 3 slimeboundmod:Specialist Slimes to slimeboundmod:Split into. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 slimeboundmod:Specialist Slimes to slimeboundmod:Split into. NL slimeboundmod:Command. NL Exhaust."
+    "DESCRIPTION": "Choose 1 of 3 slimeboundmod:Specialist to slimeboundmod:Split into. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 slimeboundmod:Specialist to slimeboundmod:Split into. NL slimeboundmod:Command. NL Exhaust."
   },
   "Slimebound:MinionMaster": {
     "NAME": "Minion Master",
@@ -351,13 +351,13 @@
   },
   "Slimebound:ForwardTackle": {
     "NAME": "Forward Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL slimeboundmod:Command twice.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL slimeboundmod:Command three times."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL slimeboundmod:Command twice.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL slimeboundmod:Command three times."
   },
   "Slimebound:TagTeam": {
     "NAME": "Tag Team",
     "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Split into a random Slime. NL slimeboundmod:Command !M! times.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Split into a random slimeboundmod:Specialist Slime. NL slimeboundmod:Command !M! times."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Split into a random slimeboundmod:Specialist. NL slimeboundmod:Command !M! times."
   },
   "Slimebound:RallyTheTroops": {
     "NAME": "Rally the Troops",
@@ -365,12 +365,12 @@
   },
   "Slimebound:Nibble": {
     "NAME": "Nibble and Lick",
-    "DESCRIPTION": "Deal !D! damage. NL Add a *Lick to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a *Lick to your hand. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain a *Lick. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a *Lick. NL Draw a card. NL Exhaust."
   },
   "Slimebound:Schlurp": {
     "NAME": "Schlurp",
-    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Licks to your hand."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! *Licks."
   },
   "Slimebound:SplitGreed": {
     "NAME": "Revive Greed",

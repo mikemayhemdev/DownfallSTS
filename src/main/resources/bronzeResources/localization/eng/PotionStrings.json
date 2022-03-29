@@ -26,9 +26,9 @@
     "NAME": "Kio's Clever Concoction",
     "DESCRIPTIONS": [
       "Until the #ySequence is full, choose #b1 of #b3 random cards to #yEncode.",
-      "Until the #ySequence is full, choose #b1 of #b3 random cards to #yEncode. Add #b",
-      " copy of the created #yFunction to your hand.",
-      " copies of the created #yFunction to your hand."
+      "Until the #ySequence is full, choose #b1 of #b3 random cards to #yEncode. Gain #b",
+      " copy of the created #yFunction.",
+      " copies of the created #yFunction."
     ]
   }
 }

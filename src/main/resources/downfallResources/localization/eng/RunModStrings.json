@@ -37,7 +37,7 @@
   },
   "downfall:Analytical": {
     "NAME": "Analytical",
-    "DESCRIPTION": "At the start of each turn, add a random card with Encode to your hand and give it Ethereal. Basic Strikes and Defends Encode."
+    "DESCRIPTION": "At the start of each turn, gain a random card with Encode and give it Ethereal. Basic Strikes and Defends Encode."
   },
   "downfall:StatusAbuse": {
     "NAME": "Inflicted",

@@ -220,7 +220,7 @@ public class GemFireAction extends AbstractGameAction {
 
         @Override
         public void update() {
-            if (this.duration == this.startDuration && this.group.contains(this.card)) {
+            if (this.duration == this.startDuration && this.group.contains(this.card) && card.hasTag(GuardianMod.GEM)) {
                 card.current_y = -200.0F * Settings.scale;
                 card.target_x = (float)Settings.WIDTH / 2.0F + 200F - 40F * hitNo * Settings.xScale;
                 card.target_y = (float)Settings.HEIGHT * .25f;
@@ -232,6 +232,21 @@ public class GemFireAction extends AbstractGameAction {
                 CardCrawlGame.dungeon.checkForPactAchievement();
                 this.card.exhaustOnUseOnce = false;
                 this.card.freeToPlayOnce = false;
+            } else {
+                if (this.duration == this.startDuration && this.group.contains(this.card)) {
+                    card.current_y = -200.0F * Settings.scale;
+                    card.target_x = (float)Settings.WIDTH / 2.0F + 200F - 40F * hitNo * Settings.xScale;
+                    card.target_y = (float)Settings.HEIGHT * .25f;
+                    card.targetAngle = 0.0F;
+                    card.lighten(false);
+                    card.drawScale = 0.12F;
+                    card.targetDrawScale = 0.75F;
+                    ((AbstractGuardianCard)card).sockets.clear();
+                    ((AbstractGuardianCard)card).updateDescription();
+                    CardCrawlGame.dungeon.checkForPactAchievement();
+                    this.card.exhaustOnUseOnce = false;
+                    this.card.freeToPlayOnce = false;
+                }
             }
 
             this.tickDuration();

@@ -344,7 +344,7 @@
   "Slimebound:GoopTackle": {
     "NAME": "Tacle prévoyant",
     "DESCRIPTION": "Infligez !D! de dégât et !SlimeboundSelfharm! de dégât à vous même. NL Ajoute une carte Tacle aléatoire à votre main. Coûte 0 ce tour.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Ajoute une carte Tacle aléatoire améliorée à votre main. Coûte 0 ce tour"
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Ajoute une carte Tacle aléatoire améliorée à votre main. Coûte 0 ce tour"
   },
   "Slimebound:CorrosiveSpit": {
     "NAME": "Crachat corrosif",

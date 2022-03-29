@@ -9,7 +9,7 @@
 },
 "hermit:FatalDesirePower": {
         "NAME": "Fatal Desire",
-        "DESCRIPTIONS": ["At the start of your turn, draw #b", " cards and add #b", " #yInjury to your hand.", " #yInjuries to your hand."]
+        "DESCRIPTIONS": ["At the start of your turn, draw #b", " cards and gain #b", " #yInjury.", " #yInjuries."]
 },
 "hermit:ShadowCloakPower": {
         "NAME": "Shadow Cloak",

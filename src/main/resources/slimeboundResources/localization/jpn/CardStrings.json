@@ -130,7 +130,7 @@
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "Consult Playbook",
-    "DESCRIPTION": "Add 4 random slimeboundmod:Tackle cards to your hand. They cost 1 less this combat. NL Exhaust."
+    "DESCRIPTION": "Add 4 random slimeboundmod:Tackles to your hand. They cost 1 less this combat. NL Exhaust."
   },
   "Slimebound:Recycling": {
     "NAME": "Recycling",
@@ -143,7 +143,7 @@
   },
   "Slimebound:RollThrough": {
     "NAME": "Roll Through",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL You do not take damage from the next !M! slimeboundmod:Tackle cards."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL You do not take damage from the next !M! slimeboundmod:Tackles."
   },
   "Slimebound:MassRepurpose": {
     "NAME": "Mass Repurpose",
@@ -216,12 +216,12 @@
   },
   "Slimebound:HungryTackle": {
     "NAME": "Hungry Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Return a random 0-cost Exhausted card to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Return 2 random 0-cost Exhausted cards to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Return a random 0-cost Exhausted card to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Return 2 random 0-cost Exhausted cards to your hand."
   },
   "Slimebound:FinishingTackle": {
     "NAME": "Finishing Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. slimeboundmod:Consume - Gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. slimeboundmod:Consume - Gain !B! Block."
   },
   "Slimebound:LivingWall": {
     "NAME": "Living Wall",
@@ -233,17 +233,17 @@
   },
   "Slimebound:ComboTackle": {
     "NAME": "Combo Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Draw a card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Draw a card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Draw !M! cards."
   },
   "Slimebound:Tackle": {
     "NAME": "Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage."
   },
   "Slimebound:GoopTackle": {
     "NAME": "Opening Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Add a random slimeboundmod:Tackle card to your hand. It costs 0 this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Add a random Upgraded slimeboundmod:Tackle card to your hand. It costs 0 this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Add a random slimeboundmod:Tackle card to your hand. It costs 0 this turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Add a random Upgraded slimeboundmod:Tackle card to your hand. It costs 0 this turn."
   },
   "Slimebound:CorrosiveSpit": {
     "NAME": "Corrosive Spit",
@@ -260,7 +260,7 @@
   },
   "Slimebound:FlameTackle": {
     "NAME": "Flame Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL slimeboundmod:Tackles deal !M! more damage this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL slimeboundmod:Tackles deal !M! more damage this combat."
   },
   "Slimebound:RainOfGoop": {
     "NAME": "Rain of Goop",
@@ -277,8 +277,8 @@
   },
   "Slimebound:ViciousTackle": {
     "NAME": "Vicious Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. This gains twice the damage bonus from slimeboundmod:Goop.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. This gains twice the damage bonus AND healing from slimeboundmod:Goop."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. This gains twice the damage bonus from slimeboundmod:Goop.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. This gains twice the damage bonus AND healing from slimeboundmod:Goop."
   },
   "Slimebound:LeechEnergy": {
     "NAME": "Leech Energy",
@@ -388,7 +388,7 @@
   },
   "Slimebound:ForwardTackle": {
     "NAME": "Forward Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL slimeboundmod:Command twice."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL slimeboundmod:Command twice."
   },
   "Slimebound:TagTeam": {
     "NAME": "Tag Team",

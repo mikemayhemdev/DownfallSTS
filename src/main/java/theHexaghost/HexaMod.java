@@ -402,7 +402,7 @@ public class HexaMod implements
 
                     if (gf instanceof BolsteringGhostflame) {
                         sb.setColor(1F, 1F, 1F, 0.6F);
-                        Texture c = TextureLoader.getTexture(HexaMod.makeUIPath("strength.png"));
+                        Texture c = TextureLoader.getTexture(HexaMod.makeUIPath("intensity.png"));
                         sb.draw(c, x - (gf.effectIconXOffset * Settings.scale), y + (gf.effectIconYOffset * Settings.scale) - (50F * Settings.scale), 0, 0, b.getWidth(), b.getHeight(), Settings.scale, Settings.scale, 0, 0, 0, b.getWidth(), b.getHeight(), false, false);
                         sb.setColor(1F, 1F, 1F, 1F);
                         FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, "1", x, y - 50F * Settings.scale, gf.textColor, fontScale);// 150 153

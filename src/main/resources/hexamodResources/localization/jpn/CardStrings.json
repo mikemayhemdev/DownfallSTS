@@ -98,15 +98,15 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Worthy Sacrifice",
-    "DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand.",
-    "UPGRADE_DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand. NL It costs 1 less.",
+    "DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Gain a random card of the opposite type.",
+    "UPGRADE_DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Gain a random card of the opposite type. It costs 1 less.",
     "EXTENDED_DESCRIPTION": [
       "to Exhaust for Necessary Sacrifice."
     ]
   },
   "hexamod:TimeOfNeed": {
     "NAME": "Time of Need",
-    "DESCRIPTION": "Retain. NL Add a random Power card into your hand. NL It costs 0 until played. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain a random Power card. It costs 0 until played. NL Exhaust."
   },
   "hexamod:SwordOfDarkness": {
     "NAME": "Sword of Night",
@@ -173,7 +173,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "Eerie Expedition",
-    "DESCRIPTION": "Ethereal. NL Add a random Ethereal card into your hand. NL It costs 0 this turn. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Gain a random Ethereal card. It costs 0 this turn. NL Exhaust."
   },
   "hexamod:PhantomCloak": {
     "NAME": "Phantom Cloak",

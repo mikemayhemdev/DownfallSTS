@@ -14,15 +14,15 @@ public class SkipABeat extends AbstractHexaCard {
     //stupid intellij stuff SKILL, SELF, UNCOMMON
 
     public SkipABeat() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         tags.add(HexaMod.GHOSTWHEELCARD);
-        exhaust = true;
+       // exhaust = true;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new ExtinguishAction(1));
-        atb(new ChargeAction(1));
+        atb(new ExtinguishAction(0));
+        atb(new ChargeAction(0));
     }
 
     public void upgrade() {

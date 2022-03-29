@@ -58,6 +58,7 @@ public class InfernoGhostflame extends AbstractGhostflame {
 
     @Override
     public void onCharge() {
+
         atb(new VFXAction(AbstractDungeon.player, new ScreenOnFireEffect(), 1.0F));
         int x = damage, amountOfIgnitedGhostflames = 0;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
@@ -78,29 +79,14 @@ public class InfernoGhostflame extends AbstractGhostflame {
         }
         */
 
+        /*
         if (amountOfIgnitedGhostflames == 6) {
             atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(2), 2));
-        }
+        }*/
 
-        DoomsdayCheck(amountOfIgnitedGhostflames);
     }
 
-    private void DoomsdayCheck(int amount) {
-        if (AbstractDungeon.player.hasPower(ApocalypticArmorPower.POWER_ID)) {
-            AbstractPower Doom = null;
-            int a = 0;
-            //Get the highest Doomsday that would trigger
-            for (AbstractPower p : AbstractDungeon.player.powers) {
-                if (p instanceof ApocalypticArmorPower) {
-                    if (p.amount <= amount && p.amount > a)
-                        Doom = p;
-                }
-            }
-            //Trigger it
-            if (Doom != null)
-                Doom.onSpecificTrigger();
-        }
-    }
+
 
 
     @Override

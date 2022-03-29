@@ -2,10 +2,10 @@
   "champ:OpenerPotion": {
     "NAME": "Strategy Potion",
     "DESCRIPTIONS": [
-      "Choose #b1 of #b2 cards which Enter a #yStance to add to your hand (one for each #yStance). It costs #b0 this turn.",
-      " Add #b",
-      " copy of it to your hand.",
-      " copies of it to your hand."
+      "Choose #b1 of #b2 cards which Enter a #yStance to gain (one for each #yStance). It costs #b0 this turn.",
+      " Gain #b",
+      " copy of it.",
+      " copies of it."
     ]
   },
   "champ:TechniquePotion": {

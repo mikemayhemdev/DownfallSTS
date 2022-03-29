@@ -18,8 +18,8 @@
   },
   "champ:StanceDance": {
     "NAME": "Stance Dance",
-    "DESCRIPTION": "Choose a Stance to Enter. NL If you were already in that Stance, add a champ:Combo of that Stance into your hand.",
-    "UPGRADE_DESCRIPTION": "Choose a Stance to Enter. NL Add a champ:Combo of that Stance into your hand.",
+    "DESCRIPTION": "Choose a Stance to Enter. NL If you were already in that Stance, Gain a champ:Combo of that Stance.",
+    "UPGRADE_DESCRIPTION": "Choose a Stance to Enter. NL Gain a champ:Combo of that Stance.",
     "EXTENDED_DESCRIPTION": [
       "Enter champ:Berserker.",
       "Enter champ:Defensive."
@@ -39,8 +39,8 @@
   },
   "champ:Balance": {
     "NAME": "Balance",
-    "DESCRIPTION": "Enter champ:Defensive or champ:Gladiator. NL Add a random champ:Combo of that Stance into your hand.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Defensive or champ:Gladiator. NL Add a random Upgraded random champ:Combo of that Stance into your hand.",
+    "DESCRIPTION": "Enter champ:Defensive or champ:Gladiator. NL Gain a random champ:Combo of that Stance.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Defensive or champ:Gladiator. NL Gain a random Upgraded random champ:Combo of that Stance.",
     "EXTENDED_DESCRIPTION": [
       "Enter champ:Defensive. NL Add a random *Defensive champ:Combo to your hand.",
       "Enter champ:Gladiator. NL Add a random *Gladiator champ:Combo to your hand.",
@@ -206,7 +206,7 @@
   },
   "champ:RapidStrikes": {
     "NAME": "Rapid Strikes",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Reduce the cost of a random *Strike in your hand to 0 this turn."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL A *Strike in your hand costs 0 this turn."
   },
   "champ:EnchantSword": {
     "NAME": "Enchant Sword",
@@ -229,8 +229,8 @@
   },
   "champ:HeavySlash": {
     "NAME": "Masterful Slash",
-    "DESCRIPTION": "Deal !D! damage. NL Add a random champ:Technique to your hand. It costs 0.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a random Upgraded champ:Technique to your hand. It costs 0."
+    "DESCRIPTION": "Deal !D! damage. NL Gain a random champ:Technique. It costs 0.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a random Upgraded champ:Technique. It costs 0."
   },
   "champ:CheapShot": {
     "NAME": "Cheap Shot",
@@ -303,7 +303,7 @@
   },
   "champ:ArenaPreparation": {
     "NAME": "Arena Preparation",
-    "DESCRIPTION": "Add !M! random champ:Techniques into your hand. NL They gain Retain. NL Exhaust."
+    "DESCRIPTION": "Gain !M! random champ:Techniques. NL They gain Retain. NL Exhaust."
   },
   "champ:EndlessRage": {
     "NAME": "Endless Rage",
@@ -354,8 +354,8 @@
   },
   "champ:StrikeOfGenius": {
     "NAME": "Strike of Genius",
-    "DESCRIPTION": "At the start of your turn, add a random card containing \"Strike\" into your hand. NL It costs 0 until played and gains Exhaust.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, add a random Upgraded card containing \"Strike\" to your hand. NL It costs 0 until played and gains Exhaust."
+    "DESCRIPTION": "At the start of your turn, Gain a random \"Strike\". NL It costs 0 until played and gains Exhaust.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, Gain a random Upgraded \"Strike\". NL It costs 0 until played and gains Exhaust."
   },
   "champ:DefensiveStyle": {
     "NAME": "Defensive Style",
@@ -390,7 +390,7 @@
   },
   "champ:Parry": {
     "NAME": "Parry",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter. NL If your champ:Counter is used this turn, add *Riposte to your hand.",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter. NL If your champ:Counter is used this turn, Gain *Riposte.",
     "UPGRADE_DESCRIPTION": "Deal damage equal to the amount of champ:Counter used. NL Exhaust."
   },
   "champ:EnchantCrown": {
@@ -418,8 +418,8 @@
   },
   "champ:TripleStrike": {
     "NAME": "Triple Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Add 2 *Strikes into your hand. They cost 0 and have champ:Technique. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add 2 Upgraded *Strikes into your hand. They cost 0 and have champ:Technique. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain 2 *Strikes. They cost 0 and have champ:Technique. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 Upgraded *Strikes. They cost 0 and have champ:Technique. NL Exhaust."
   },
   "champ:WindUp": {
     "NAME": "Wind Up",
