@@ -57,7 +57,7 @@
   },
   "Guardian:PolyBeam": {
     "NAME": "激光射线",
-    "DESCRIPTION": "对随机敌人造成 !D! 点伤害 !M! 次。"
+    "DESCRIPTION": "随机对敌人造成 !D! 点伤害 !M! 次。"
   },
   "Guardian:TwinSlam": {
     "NAME": "双斩",
@@ -223,8 +223,8 @@
   },
   "Guardian:ConstructionForm": {
     "NAME": "建造形态",
-    "DESCRIPTION": "虚无 。 NL 获得 !M! 层 guardianmod:缓冲 。 NL 回合开始时，若你有 guardianmod:缓冲 ，获得1点 力量 。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 层 guardianmod:缓冲 。 NL 回合开始时，若你有 guardianmod:缓冲 ，获得1点 力量 。"
+    "DESCRIPTION": "虚无 。 NL 获得 !M! 层 guardianmod:缓冲 。 NL 回合开始时若有 guardianmod:缓冲 ，获得1点 力量 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 guardianmod:缓冲 。 NL 回合开始时若有 guardianmod:缓冲 ，获得1点 力量 。"
   },
   "Guardian:RollAttack": {
     "NAME": "蜷身攻击",
@@ -232,8 +232,8 @@
   },
   "Guardian:GemFire": {
     "NAME": "宝石加农炮",
-    "DESCRIPTION": " 消耗 有 guardianmod:宝石 的牌。 每颗 guardianmod:宝石 对随机一名敌人造成 !D! 点伤害。 NL 消耗 。",
-	"UPGRADE_DESCRIPTION": "保留 。 NL 消耗 有 guardianmod:宝石 的牌。 每颗 guardianmod:宝石 对随机一名敌人造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": " 消耗 有 guardianmod:宝石 的牌。 每颗 guardianmod:宝石 随机对敌人造成 !D! 点伤害。 NL 消耗 。",
+	"UPGRADE_DESCRIPTION": "保留 。 NL 消耗 有 guardianmod:宝石 的牌。 每颗 guardianmod:宝石 随机对敌人造成 !D! 点伤害。 NL 消耗 。"
   },
   "Guardian:ChargeCore": {
     "NAME": "充能核心",
@@ -241,7 +241,7 @@
   },
   "Guardian:Reroute": {
     "NAME": "重连",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL guardianmod:凝滞 你打出的下一张非 消耗 攻击或技能牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL guardianmod:凝滞 打出的下一张非 消耗 攻击或技能牌。"
   },
   "Guardian:PiercingHide": {
   "NAME": "隐秘荆棘",
@@ -308,8 +308,8 @@
   },
   "Guardian:AncientConstruct": {
     "NAME": "先古建造",
-    "DESCRIPTION": "回合开始时，若你没有 人工制品 ，获得 !M! 层。",
-	"UPGRADE_DESCRIPTION": "获得 1 层 人工制品 。 NL 回合开始时，若你没有 人工制品 ，获得 !M! 层。"
+    "DESCRIPTION": "回合开始时若无 人工制品 ，获得 !M! 层。",
+	"UPGRADE_DESCRIPTION": "获得1层 人工制品 。 NL 回合开始时若无 人工制品 ，获得 !M! 层。"
   },
   "Guardian:CrystalBeam": {
     "NAME": "水晶射线",
@@ -371,7 +371,7 @@
   },
   "Guardian:GatlingBeam": {
     "NAME": "炮塔射线",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将本牌 guardianmod:凝滞 。 NL 本牌 guardianmod:凝滞 时持续 !M! 回合。 NL guardianmod:滴答 -对随机敌人造成 !D! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将本牌 guardianmod:凝滞 。 NL 本牌 guardianmod:凝滞 时持续 !M! 回合。 NL guardianmod:滴答 -随机对敌人造成 !D! 点伤害。"
   },
   "Guardian:ShieldCharger": {
     "NAME": "护盾充能",
