@@ -73,7 +73,7 @@
   },
   "hexamod:GhostOfSpirePresent": {
     "NAME": "此刻",
-    "DESCRIPTION": "回合结束时不再自动 hexamod:步进 。 NL 每回合开始时，获得 [E] 。"
+    "DESCRIPTION": "回合结束时不 NL 再自动 hexamod:步进 。 NL 每回合获得 [E] 。"
   },
   "hexamod:HauntingEcho": {
     "NAME": "回声萦绕",
@@ -159,7 +159,7 @@
   },
   "hexamod:ParanormalForm": {
     "NAME": "鬼哭神嚎",
-    "DESCRIPTION": "虚无 。 NL 打出一张 虚无 牌时，随机对敌人造成 !M! 点伤害。"
+    "DESCRIPTION": "虚无 。 NL 打出 虚无 牌时，随机对敌人造成 !M! 点伤害。"
   },
   "hexamod:UnleashSpirits": {
     "NAME": "释魂",
