@@ -3,7 +3,7 @@
     "NAME": "铜制齿轮",
     "FLAVOR": "在你最需要的时候保护你。",
     "DESCRIPTIONS": [
-      "每场战斗首次进入 #yguardianmod:防御模式 时，额外获得 #b10 点 格挡 。 NL 游戏开始时将一张普通 #yguardianmod:宝石 牌加入牌组。 "
+      "每场战斗首次进入 #yguardianmod:防御模式 时，额外获得 #b10 点 #y格挡 。 NL 游戏开始时将一张普通 #yguardianmod:宝石 牌加入牌组。 "
     ]
   },
   "Guardian:ModeShifterPlus": {
