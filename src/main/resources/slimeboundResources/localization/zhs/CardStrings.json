@@ -237,8 +237,8 @@
   },
   "Slimebound:Chomp": {
     "NAME": "啃噬",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将手中的随机一张 slimeboundmod:冲撞 牌的耗能本回合变为0。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将手中的随机一张 slimeboundmod:冲撞 牌的耗能变为0。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将手中随机一张 slimeboundmod:冲撞 牌的耗能本回合变为0。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将手中随机一张 slimeboundmod:冲撞 牌的耗能变为0。"
   },
   "Slimebound:DouseInSlime": {
     "NAME": "浸入黏液",
