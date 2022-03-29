@@ -50,7 +50,7 @@
   },
   "sneckomod:SoulDraw": {
     "NAME": "灵魂抽牌",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 将 !M! 张随机 sneckomod:异色 牌加入手牌。 NL 消耗 。",
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 随机将 !M! 张 sneckomod:异色 牌加入手牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽 1 - !M! 张牌。"
   },
   "sneckomod:SoulRoll": {
@@ -130,8 +130,8 @@
   },
   "sneckomod:SoulExchange": {
     "NAME": "灵魂交换",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 抽1张牌并 消耗 1张牌。 NL 消耗 所有手牌，将它们替换为随机同角色牌。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽2张牌并 消耗 1张牌。 NL 消耗 所有手牌，将它们替换为随机同角色牌。",
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 抽1张牌并 消耗 1张牌。 NL 消耗 所有手牌，随机将它们替换为同角色牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽2张牌并 消耗 1张牌。 NL 消耗 所有手牌，随机将它们替换为同角色牌。",
     "EXTENDED_DESCRIPTION": [
       "来消耗以交换灵魂。"
     ]
@@ -143,8 +143,8 @@
   },
   "sneckomod:UnlimitedRolls": {
     "NAME": "无限随机",
-    "DESCRIPTION": "回合开始时，将一张带有 消耗 与 虚无 的 *灵魂随机 加入手牌。",
-    "UPGRADE_DESCRIPTION": " 固有 。回合开始时，将一张带有 消耗 与 虚无 的 *灵魂随机 加入手牌。"
+    "DESCRIPTION": "回合开始时，将一张 *灵魂随机 的 gremlin:回响 加入手牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。回合开始时，将一张 *灵魂随机 的 gremlin:回响 加入手牌。"
   },
   "sneckomod:MasterEye": {
     "NAME": "主宰之眼",
@@ -220,7 +220,7 @@
   },
   "sneckomod:SerpentIdol": {
     "NAME": "蛇神像",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 从3张随机 sneckomod:异色 牌中选择1张加入手牌。 NL 这张牌在本回合耗能变为0。 NL 消耗 。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 从3张随机 sneckomod:异色 牌中选择1张加入手牌。 NL 其耗能本回合为0。 NL 消耗 。"
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "变废为宝",
@@ -265,7 +265,7 @@
   },
   "sneckomod:RainOfDice": {
     "NAME": "骰子雨",
-    "DESCRIPTION": "对随机一名敌人造成 !qqq! - !D! 点伤害。 NL sneckomod:混淆 本牌并返回手牌。"
+    "DESCRIPTION": "随机对敌人造成 !qqq! - !D! 点伤害。 NL sneckomod:混淆 本牌并返回手牌。"
   },
   "sneckomod:DiceCrush": {
     "NAME": "骰子撞击",
