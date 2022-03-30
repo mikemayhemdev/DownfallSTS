@@ -359,7 +359,7 @@
   },
   "Guardian:BronzeOrb": {
     "NAME": "铜球支援",
-    "DESCRIPTION": " 固有 。 NL 随机 guardianmod:凝滞 抽牌堆一张牌。 NL 获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": " 固有 。 NL 随机 guardianmod:凝滞 抽牌堆一张牌。 NL 造成 !D! 点伤害。 NL 消耗 。"
   },
   "Guardian:SphericShield": {
     "NAME": "球形护盾",
