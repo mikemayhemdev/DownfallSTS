@@ -35,7 +35,7 @@ public class GladiatorsBookOfMartialProwess extends CustomRelic {
         if (c.hasTag(OPENER)) {
             hasPlayedOpener = true;
         }
-        if (c.hasTag(TECHNIQUE)) {
+        if (c.type == AbstractCard.CardType.SKILL) {
             hasPlayedTechnique = true;
         }
         if (c.hasTag(FINISHER)) {

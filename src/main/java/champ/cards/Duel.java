@@ -29,7 +29,6 @@ public class Duel extends AbstractChampCard {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
-        tags.add(ChampMod.TECHNIQUE);
 
         postInit();
     }

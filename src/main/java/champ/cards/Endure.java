@@ -18,7 +18,6 @@ public class Endure extends AbstractChampCard {
     public Endure() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = block = MAGIC;
-        tags.add(ChampMod.TECHNIQUE);
         postInit();
     }
 
