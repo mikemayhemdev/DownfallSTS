@@ -50,7 +50,7 @@
   },
   "champ:DefensiveShout": {
     "NAME": "수비 함성",
-    "DESCRIPTION": "champ:수비 자세를 취합니다. NL 카드를 1장 뽑습니다."
+    "DESCRIPTION": "champ:반격을 !M! 얻습니다. NL champ:수비 자세를 취합니다."
   },
   "champ:ShieldSigil": {
     "NAME": "쇠사슬 채찍",
@@ -86,7 +86,7 @@
   },
   "champ:BerserkersShout": {
     "NAME": "광폭화 함성",
-    "DESCRIPTION": "champ:광폭화 자세를 취합니다. NL 카드를 1장 뽑습니다."
+    "DESCRIPTION": "활력 을 !M! 얻습니다. NL champ:광폭화 자세를 취합니다."
   },
   "champ:RageSigil": {
     "NAME": "싸움 계획",

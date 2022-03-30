@@ -70,8 +70,12 @@ public class CultistSlime
 
     public void cleanUpVFX() {
         if(CharacterSelectScreenPatches.characters[1].isOriginal()){
-        this.sticksLeftVFX.finish();
-        this.sticksRightVFX.finish();
+            if (sticksLeftVFX != null) {
+                this.sticksLeftVFX.finish();
+            }
+        if (sticksRightVFX != null){
+            this.sticksRightVFX.finish();
+        }
         }
     }
 

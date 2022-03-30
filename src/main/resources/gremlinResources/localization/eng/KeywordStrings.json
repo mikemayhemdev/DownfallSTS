@@ -26,14 +26,14 @@
       "fat gremlin", "fat_gremlin"
     ],
     "PROPER_NAME": "Fat Gremlin",
-    "DESCRIPTION": "Whenever you play an attack, apply #b1 #yWeak to all targets."
+    "DESCRIPTION": "After you play an attack, apply #b1 #yWeak to all targets."
   },
   {
     "NAMES": [
       "gremlin wizard", "gremlin_wizard"
     ],
     "PROPER_NAME": "Gremlin Wizard",
-    "DESCRIPTION": "Whenever you play a skill, gain #b1 #yWiz."
+    "DESCRIPTION": "After you play a skill, gain #b1 #yWiz."
   },
   {
     "NAMES": [
@@ -47,14 +47,14 @@
       "shield gremlin", "shield_gremlin"
     ],
     "PROPER_NAME": "Shield Gremlin",
-    "DESCRIPTION": "Whenever you play a skill, gain #b2 #yBlock."
+    "DESCRIPTION": "After you play a skill, gain #b2 #yBlock."
   },
   {
     "NAMES": [
       "sneaky gremlin", "sneaky_gremlin"
     ],
     "PROPER_NAME": "Sneaky Gremlin",
-    "DESCRIPTION": "Whenever you play an attack, deal #b3 damage to a random enemy."
+    "DESCRIPTION": "After you play an attack, deal #b3 damage to a random enemy."
   },
   {
     "NAMES": [

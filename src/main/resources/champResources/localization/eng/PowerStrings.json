@@ -36,7 +36,7 @@
     ]
   },
   "champ:DrawLessNextTurnPower": {
-    "NAME": "Crown Thrown",
+    "NAME": "Draw Reduction",
     "DESCRIPTIONS": [
       "Draw #b",
       " less card next turn.",
