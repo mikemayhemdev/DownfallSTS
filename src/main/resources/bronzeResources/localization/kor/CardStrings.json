@@ -75,7 +75,7 @@
   },
   "bronze:Replicate": {
     "NAME": "복제",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL bronze:부호화되면 이 카드를 복사해 버린 카드 더미에 섞어 넣습니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. π NL bronze:부호화되면 이 카드를 한 장 복사해 버린 카드 더미에 섞어 넣습니다.",
     "EXTENDED_DESCRIPTION": [
       "복사한",
       "복사"
@@ -250,7 +250,7 @@
     ]
   },
   "bronze:Overload": {
-    "NAME": "과부하",
+    "NAME": "복사 붙여넣기",
     "DESCRIPTION": "순차열에 있는 모든 카드를 복사해 사용합니다. 복사한 카드는 사용 후 소멸 되고 bronze:부호화되지 않습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "순차열에 있는 모든 카드를 복사해 사용합니다. 복사한 카드는 사용 후 소멸 되고 bronze:부호화되지 않습니다."
   },
@@ -362,7 +362,7 @@
   },
   "bronze:Allocate": {
     "NAME": "배정",
-    "DESCRIPTION": "뽑을 카드 더미에 있는 상태이상 카드당 [E] 를 얻습니다.",
+    "DESCRIPTION": "뽑을 카드 더미에 있는 상태이상 카드 한 장당 [E] 를 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       " NL ( [E] 를 ",
       " 얻습니다.)"
@@ -370,8 +370,8 @@
   },
   "bronze:Decompile": {
     "NAME": "디컴파일",
-    "DESCRIPTION": "순차열에 있는 모든 카드를 소멸시킵니다. [E] 를 얻고 소멸된 카드당 카드를 1장 뽑습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "보존. NL 순차열에 있는 모든 카드를 소멸시킵니다. [E] 를 얻고 소멸된 카드당 카드를 1장 뽑습니다. NL 소멸."
+    "DESCRIPTION": "순차열에 있는 모든 카드를 소멸시킵니다. [E] 를 얻고 소멸된 카드 한 장당 카드를 1장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "보존. NL 순차열에 있는 모든 카드를 소멸시킵니다. [E] 를 얻고 소멸된 카드 한 장당 카드를 1장 뽑습니다. NL 소멸."
   },
   "bronze:ChildClass": {
     "NAME": "호출",
@@ -450,7 +450,7 @@
   },
   "bronze:BurnOut": {
     "NAME": "불태우기",
-    "DESCRIPTION": "bronze:소유한 상태이상 카드당 무작위 적에게 피해를 !D! 주고 그 카드를 모두 소멸시킵니다. NL *화상을 3장 bronze:투입합니다.",
+    "DESCRIPTION": "bronze:소유한 상태이상 카드 한 장당 무작위 적에게 피해를 !D! 주고 그 카드를 모두 소멸시킵니다. NL *화상을 3장 bronze:투입합니다.",
     "EXTENDED_DESCRIPTION": [
       " NL ",
       " 번 피해를 줍니다.)"
@@ -458,7 +458,7 @@
   },
   "bronze:ShipIt": {
     "NAME": "출하",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL bronze:소유한 상태이상 카드당 이 카드의 피해량이 !M! 증가합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL bronze:소유한 상태이상 카드 한 장당 이 카드의 피해량이 !M! 증가합니다."
   },
   "bronze:Break": {
     "NAME": "일시 정지",
@@ -588,7 +588,7 @@
   },
   "bronze:Refactor": {
     "NAME": "리팩터",
-    "DESCRIPTION": "예지 !M!. NL *예지로 버린 카드를 모두 소멸시킵니다. NL 소멸시킨 상태이상 카드당 방어도를 !B! 얻습니다."
+    "DESCRIPTION": "예지 !M!. NL *예지로 버린 카드를 모두 소멸시킵니다. NL 소멸시킨 상태이상 카드 한 장당 방어도를 !B! 얻습니다."
   },
   "bronze:Turbo": {
     "NAME": "터보",
@@ -597,8 +597,8 @@
   },
   "bronze:BugBarrage": {
     "NAME": "버그 방벽",
-    "DESCRIPTION": "*부상을 1장 얻습니다. NL 손에 있는 상태이상 카드를 모두 bronze:순환하고 bronze:순환된 카드당 피해를 !D! 줍니다.",
-    "UPGRADE_DESCRIPTION": "*부상을 !M! 장 얻습니다. NL 손에 있는 상태이상 카드를 모두 bronze:순환하고 bronze:순환된 카드당 피해를 !D! 줍니다.",
+    "DESCRIPTION": "*부상을 1장 얻습니다. NL 손에 있는 상태이상 카드를 모두 bronze:순환하고 bronze:순환된 카드 한 장당 피해를 !D! 줍니다.",
+    "UPGRADE_DESCRIPTION": "*부상을 !M! 장 얻습니다. NL 손에 있는 상태이상 카드를 모두 bronze:순환하고 bronze:순환된 카드 한 장당 피해를 !D! 줍니다.",
     "EXTENDED_DESCRIPTION": [
       " NL (피해를 ",
       " 번 줍니다.)"
@@ -622,7 +622,7 @@
   },
   "bronze:ThunderWave": {
     "NAME": "번개 파동",
-    "DESCRIPTION": "이번 전투 동안 생성된 함수 카드당 무작위 적들에게 피해를 !D! 줍니다.",
+    "DESCRIPTION": "이번 전투 동안 생성된 함수 카드 한 장당 무작위 적들에게 피해를 !D! 줍니다.",
     "EXTENDED_DESCRIPTION": [
       " NL (피해를 ",
       " 번 줍니다.)"

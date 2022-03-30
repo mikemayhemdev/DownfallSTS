@@ -36,7 +36,7 @@
     ]
   },
   "champ:DrawLessNextTurnPower": {
-    "NAME": "왕관 투척",
+    "NAME": "뽑기 감소",
     "DESCRIPTIONS": [
       "다음 턴에 카드를 #b",
       " 장 적게 뽑습니다.",
