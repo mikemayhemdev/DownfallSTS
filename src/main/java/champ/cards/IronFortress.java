@@ -21,7 +21,7 @@ public class IronFortress extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new IronFortressPower(1));
+        applyToSelf(new IronFortressPower(2));
     }
 
     public void upp() {

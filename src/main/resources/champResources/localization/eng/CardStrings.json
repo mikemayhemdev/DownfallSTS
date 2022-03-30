@@ -28,8 +28,7 @@
   },
   "champ:SwordSigil": {
     "NAME": "Sigil of Victory",
-    "DESCRIPTION": "Counts as playing !cool! Skills. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Counts as playing !cool! Skills. NL Exhaust."
+    "DESCRIPTION": "Trigger your current Stance's *Skill *Bonus !M! times. NL Exhaust."
   },
   "champ:FaceSlap": {
     "NAME": "Face Slap",
@@ -157,8 +156,9 @@
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
-    "DESCRIPTION": "Gain !B! Block. NL Deal damage equal to your Block. NL Unless *Defensive champ:Combo: Gain !M! Frail.",
-    "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)"
+    "DESCRIPTION": "Deal damage equal to your Block, twice. NL Gain 2 Frail. NL *Defensive champ:Combo: Lose 2 Frail.",
+    "EXTENDED_DESCRIPTION": ["Deal damage equal to your Block ( !D! ) twice. NL Gain 2 Frail. NL *Defensive champ:Combo: Lose 2 Frail."]
+
   },
   "champ:FalseCounter": {
     "NAME": "False Counter",
@@ -223,7 +223,7 @@
   },
   "champ:SwordThrow": {
     "NAME": "Sword Throw",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Unless *Berserker champ:Combo: Gain 2 Weak."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Gain 2 Weak NL *Berserker champ:Combo: Lose 2 Weak."
   },
   "champ:MurderStrike": {
     "NAME": "Murder Strike",

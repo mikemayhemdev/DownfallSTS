@@ -43,7 +43,10 @@ public class UltimateFormPower extends AbstractPower implements CloneablePowerIn
 
     @Override
     public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
-        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
+        if (!(newStance instanceof UltimateStance)) {
+
+            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(UltimateStance.STANCE_ID));
+        }
     }
 
     public void atEndOfRound() {
