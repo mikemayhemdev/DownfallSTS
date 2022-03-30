@@ -237,7 +237,8 @@
   },
   "champ:CrownThrow": {
     "NAME": "投掷王冠",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 将弃牌堆中的一张牌放到抽牌堆顶部。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 若耗能不为0，下回合将耗能为0的本牌返回手牌。",
+    "EXTENDED_DESCRIPTION": ["造成 !D! 点伤害。"]
   },
   "champ:Encircle": {
     "NAME": "包围",
@@ -265,7 +266,7 @@
   },
   "champ:DeathBlow": {
     "NAME": "绝地反击",
-    "DESCRIPTION": " champ:疲劳 10。 NL 对所有敌人造成 !D! 点伤害。 NL 获得 !M! 层 活力 。 NL 消耗 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得 !M! 层 活力 。 NL 消耗 。"
   },
   "champ:ArenaPreparation": {
     "NAME": "重整战场",
