@@ -196,11 +196,11 @@
   },
   "Guardian:StasisField": {
     "NAME": "凝滞屏障",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将本牌 guardianmod:凝滞 。 NL guardianmod:凝滞 结束时， 格挡 增加 !M! 点且耗能变为1。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将本牌 guardianmod:凝滞 。 NL guardianmod:凝滞 结束时，获得 !B! 点 格挡 。"
   },
   "Guardian:StasisStrike": {
     "NAME": "凝滞打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将本牌 guardianmod:凝滞 。 NL guardianmod:凝滞 结束时，伤害增加 !M! 点且耗能变为1。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得一个 guardianmod:凝滞 栏位。"
   },
   "Guardian:FuturePlans": {
     "NAME": "未来计划",
@@ -232,8 +232,8 @@
   },
   "Guardian:GemFire": {
     "NAME": "宝石加农炮",
-    "DESCRIPTION": " 消耗 有 guardianmod:宝石 的牌。 每颗 guardianmod:宝石 随机对敌人造成 !D! 点伤害。 NL 消耗 。",
-	"UPGRADE_DESCRIPTION": "保留 。 NL 消耗 有 guardianmod:宝石 的牌。 每颗 guardianmod:宝石 随机对敌人造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": " 消耗 所有 guardianmod:宝石 ，每颗随机对敌人造成 !D! 点伤害。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "弃用"
   },
   "Guardian:ChargeCore": {
     "NAME": "充能核心",
@@ -275,7 +275,7 @@
   },
   "Guardian:RefractedBeam": {
     "NAME": "折射射线",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 本场战斗攻击次数减少1次。 NL 能被多次 升级 。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 能被多次 升级 。"
   },
   "Guardian:MultiBeam": {
     "NAME": "多重射线",
