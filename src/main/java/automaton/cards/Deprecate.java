@@ -21,19 +21,11 @@ public class Deprecate extends AbstractBronzeCard {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseMagicNumber = magicNumber = MAGIC;
         thisEncodes();
-        tags.add(AutomatonMod.BAD_COMPILE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster q : monsterList()) {
             applyToEnemy(q, autoWeak(q, magicNumber));
-        }
-    }
-
-    @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        if (forGameplay){
-            applyToSelf(new WeakPower(AbstractDungeon.player,1, false));
         }
     }
 

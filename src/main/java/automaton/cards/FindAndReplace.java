@@ -23,7 +23,6 @@ public class FindAndReplace extends AbstractBronzeCard {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
-        isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -34,17 +33,17 @@ public class FindAndReplace extends AbstractBronzeCard {
         atb(new SelectCardsAction(cardsList, 1, EXTENDED_DESCRIPTION[0], (cards) -> {
             if (p.drawPile.contains(cards.get(0))) {
                 p.drawPile.moveToHand(cards.get(0));
-                addToTop(new MakeTempCardInDrawPileAction(new Dazed(), 1, true, true));
+                if (!upgraded)
+                    addToTop(new MakeTempCardInDrawPileAction(new Dazed(), 1, true, true));
             } else if (p.discardPile.contains(cards.get(0))) {
                 p.discardPile.moveToHand(cards.get(0));
-                addToTop(new MakeTempCardInDiscardAction(new Dazed(), 1));
+                if (!upgraded)
+                    addToTop(new MakeTempCardInDiscardAction(new Dazed(), 1));
             }
         }));
     }
 
     public void upp() {
-        isEthereal = false;
-        selfRetain = true;
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

@@ -40,7 +40,9 @@
       " NL bronze:Compile",
       "bronze:Compile",
       " NL bronze:Encode.",
-      "bronze:Encode. NL "
+      "bronze:Encode. NL ",
+      " π NL When bronze:Encoded, add a copy to your discard pile.",
+      "LOCALIZATION NOTE: The text above must be equal to the extra line in Replicate's description."
     ]
   },
   "bronze:CompileDisplayPanel": {

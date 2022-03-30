@@ -1,3 +1,4 @@
+/*
 package automaton.cards;
 
 import automaton.AutomatonMod;
@@ -46,3 +47,5 @@ public class AlphaBuild extends AbstractBronzeCard {
         initializeDescription();
     }
 }
+
+ */

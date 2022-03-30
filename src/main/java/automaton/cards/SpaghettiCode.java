@@ -51,9 +51,9 @@ public class SpaghettiCode extends AbstractBronzeCard {
     public static ArrayList<AbstractCard> getRandomEncodeChoices() {
         ArrayList<AbstractCard> eligibleCardsList = new ArrayList<>();
 
-        eligibleCardsList.add(getRandomEncodeWithCost(0).makeCopy());
-        eligibleCardsList.add(getRandomEncodeWithCost(1).makeCopy());
-        eligibleCardsList.add(getRandomEncodeWithCost(2).makeCopy());
+        eligibleCardsList.add(getRandomEncode().makeCopy());
+        eligibleCardsList.add(getRandomEncode().makeCopy());
+        eligibleCardsList.add(getRandomEncode().makeCopy());
         return eligibleCardsList;
     }
 

@@ -23,10 +23,8 @@ public class HyperBeam extends AbstractBronzeCard {
     public HyperBeam() {
         super(ID, 6, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = 5;
         isMultiDamage = true;
         selfRetain = true;
-        cardsToPreview = new VoidCard();
     }
 
     public void onRetained() {
@@ -38,7 +36,6 @@ public class HyperBeam extends AbstractBronzeCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1F));
 
         allDmg(AbstractGameAction.AttackEffect.NONE);
-        addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), magicNumber, false, true));
     }
 
     public void upp() {

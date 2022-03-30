@@ -1,3 +1,4 @@
+/*
 package automaton.cards;
 
 import automaton.AutomatonMod;
@@ -42,3 +43,5 @@ public class DarkDash extends AbstractBronzeCard {
         upgradeBlock(2);
     }
 }
+
+ */

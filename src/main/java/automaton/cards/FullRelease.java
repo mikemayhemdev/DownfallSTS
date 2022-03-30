@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonChar;
 import automaton.cardmods.FullReleaseCardMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,7 +15,7 @@ public class FullRelease extends AbstractBronzeCard {
 
 
     public FullRelease() {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         thisEncodes();
     }
 
@@ -26,7 +27,12 @@ public class FullRelease extends AbstractBronzeCard {
         CardModifierManager.addModifier(function, new FullReleaseCardMod());
     }
 
+    @Override
+    public String getBonusChar() {
+        return EXTENDED_DESCRIPTION[2];
+    }
+
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeBaseCost(1);
     }
 }

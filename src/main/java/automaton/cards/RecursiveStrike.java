@@ -18,11 +18,10 @@ public class RecursiveStrike extends AbstractBronzeCard {
     private static final int DAMAGE = 6;
 
     public RecursiveStrike() {
-        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = 2;
         tags.add(CardTags.STRIKE);
-        thisEncodes();
         cardsToPreview = new Strike();
     }
 
@@ -32,16 +31,10 @@ public class RecursiveStrike extends AbstractBronzeCard {
                 this.addToBot(new VFXAction(new ClawEffect(m.hb.cX, m.hb.cY, Color.ORANGE, Color.WHITE), 0.1F));
             dmg(m, AbstractGameAction.AttackEffect.NONE);
         }
-    }
-
-    @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        if (forGameplay) {
-            for (int i = 0; i < magicNumber; i++) {
-                AbstractCard c = new Strike();
-                if (upgraded) c.upgrade();
-                atb(new AddToFuncAction(c, null));
-            }
+        for (int i = 0; i < magicNumber; i++) {
+            AbstractCard c = new Strike();
+            if (upgraded) c.upgrade();
+            atb(new AddToFuncAction(c, null));
         }
     }
 

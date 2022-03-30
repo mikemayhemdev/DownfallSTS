@@ -650,7 +650,8 @@
     "DESCRIPTION": " bronze:编译 - *方法 变成一张每回合开始时触发效果的能力牌。",
     "EXTENDED_DESCRIPTION": [
       "完全",
-      "公开"
+      "公开",
+      "1.0"
     ]
   }
 }
