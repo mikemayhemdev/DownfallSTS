@@ -276,7 +276,7 @@
   },
   "bronze:NullPointer": {
     "NAME": "공백 포인터",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 방어도를 !B! 얻습니다. NL bronze:컴파일 *오류 - 함수 카드에 사용불가 효과가 추가됩니다.",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL bronze:컴파일 *오류 - 함수 카드에 사용불가 효과가 추가됩니다.",
     "EXTENDED_DESCRIPTION": [
       "공백",
       "포인터"

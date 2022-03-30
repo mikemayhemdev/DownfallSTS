@@ -11,7 +11,7 @@
     "NAME": "决战末世",
     "DESCRIPTIONS": [
       "下一次你 #y点燃 狱焱鬼火且所有的 #b",
-      " 个鬼火已 #y点燃 ，回合结束时额外获得一回合。",
+      " 枚鬼火已 #y点燃 ，回合结束时额外获得一回合。",
       "下一次你 #y点燃 狱焱鬼火且有至少 #b"
     ]
   },
@@ -81,8 +81,8 @@
       " 次",
       " 次",
       " #y点燃 鬼火时， #y步进 。 NL 本回合已 #y点燃 过 #b",
-      " 个 鬼火。",
-      " 个 鬼火。"
+      " 枚 鬼火。",
+      " 枚 鬼火。"
     ]
   },
   "hexamod:FutureUpgradePower": {
@@ -174,7 +174,7 @@
   "hexamod:RadiantPower": {
     "NAME": "火焰辐射",
     "DESCRIPTIONS": [
-      " #y点燃 一个鬼火时，获得 #b",
+      " #y点燃 一枚鬼火时，获得 #b",
       " 点 #y格挡 。"
     ]
   },
@@ -195,14 +195,14 @@
   "hexamod:VolcanoVisagePower": {
     "NAME": "火山容貌",
     "DESCRIPTIONS": [
-      " #y点燃 一个鬼火时，给予所有敌人 #b",
+      " #y点燃 一枚鬼火时，给予所有敌人 #b",
       " 层 #y灼魂 。"
     ]
   },
   "hexamod:LivingBombPower": {
     "NAME": "活体炸弹",
     "DESCRIPTIONS": [
-      "这个下次引爆灼魂时，对全体敌人生效。"
+      "该单位下次 #y灼魂 引爆时，对全体敌人生效。"
     ]
   },
   "hexamod:GainEnergyAtStartOfTurnPower": {
