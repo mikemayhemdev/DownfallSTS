@@ -113,7 +113,7 @@
   "downfall:NeowSeeingDouble": {
     "NAME": "复视",
     "DESCRIPTIONS": [
-      " #y涅奥 的回合开始时会使用烟幕来隐蔽它自己。你的第一张 #y攻击牌 对它不造成伤害。"
+      "每回合你的首张 #y攻击牌 不对 #y涅奥 造成伤害。"
     ]
   },
   "downfall:SilentPoisonPower": {
@@ -292,7 +292,7 @@
   "downfall:HermitConcentrationPower": {
     "NAME": "致命专注",
     "DESCRIPTIONS": [
-      " #y亡命之徒 每回合都进入 #y专注 状态，使它的 #y精准 牌触发额外效果。 本回合再对它造成 #b",
+      " #y亡命之徒 每回合都进入 #y专注 状态，使其 #y精准 牌触发额外效果。 本回合再对它造成 #b",
       " 点伤害来打破其 #y专注 状态。",
       " 它本回合已被扰乱，不触发 #y精准 效果。"
     ]

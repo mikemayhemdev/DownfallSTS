@@ -143,8 +143,8 @@
   },
   "sneckomod:UnlimitedRolls": {
     "NAME": "Unlimited Rolls",
-    "DESCRIPTION": "At the start of your turn, add a *Soul *Roll to your hand. It gains Ethereal and Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add a *Soul *Roll to your hand. It gains Ethereal and Exhaust."
+    "DESCRIPTION": "At the start of your turn, add an gremlin:Echo of *Soul *Roll to your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add an gremlin:Echo of *Soul *Roll to your hand."
   },
   "sneckomod:MasterEye": {
     "NAME": "Master Eye",

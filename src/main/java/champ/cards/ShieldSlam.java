@@ -15,17 +15,19 @@ public class ShieldSlam extends AbstractChampCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         selfRetain = true;
         tags.add(ChampMod.FINISHER);
+        baseMagicNumber = magicNumber = 1;
         postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) {
-            atb(new DrawCardAction(1));
-        }
+
+            atb(new DrawCardAction(magicNumber));
+
         finisher();
     }
 
     public void upp() {
+        upgradeMagicNumber(1);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

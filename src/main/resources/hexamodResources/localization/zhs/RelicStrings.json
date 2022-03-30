@@ -3,7 +3,7 @@
     "NAME": "精神烙印",
     "FLAVOR": "对约束的一道保护。",
     "DESCRIPTIONS": [
-      "每回合初次 #y点燃 时，获得 #b5 点 #y格挡 。"
+      "每回合首次 #y点燃 时，获得 #b5 点 #y格挡 。"
     ]
   },
   "hexamod:TheBrokenSeal": {
@@ -18,7 +18,7 @@
     "FLAVOR": "看看我们能不能做得... 更好。",
     "DESCRIPTIONS": [
       "替换 #r",
-      ".[]  NL 每回合初次 #y点燃 时，获得 [E] 。"
+      ".[]  NL 每回合首次 #y点燃 时，获得 [E] 。"
     ]
   },
   "hexamod:IceCube": {
@@ -60,21 +60,21 @@
     "NAME": "混沌灵魂",
     "FLAVOR": "混乱，现出真身。",
     "DESCRIPTIONS": [
-      "第二个 #yhexamod:灼热 #y鬼火 变为 #y狂徒鬼火。 NL 狂徒鬼火在回合结束时如果 #y激活 则自动 #y点燃 。 NL 点燃：打出抽牌堆顶部的牌。"
+      "第二枚 #yhexamod:灼热 #y鬼火 变为 #y狂徒鬼火。 NL 狂徒鬼火在回合结束时如果 #y激活 则自动 #y点燃 。 NL 点燃：打出抽牌堆顶部的牌。"
     ]
   },
   "hexamod:JarOfFuel": {
     "NAME": "谜之盾",
     "FLAVOR": "按需防护。",
     "DESCRIPTIONS": [
-      "将 #yhexamod:高热 #y鬼火 与第一个 #yhexamod:灼热 #y鬼火 交换位置。"
+      "将 #yhexamod:高热 #y鬼火 与第一枚 #yhexamod:灼热 #y鬼火 交换位置。"
     ]
   },
   "hexamod:BolsterEngine": {
     "NAME": "高热之杖",
     "FLAVOR": "火焰护身！火焰助力。",
     "DESCRIPTIONS": [
-      "每场战斗初次打出 #y能力 牌时，获得 #b6 点 #y格挡 和 #b1 点 #y力量 。"
+      "每场战斗首次打出 #y能力 牌时，获得 #b6 点 #y格挡 和 #b1 点 #y力量 。"
     ]
   },
   "hexamod:CandleOfCauterizing": {

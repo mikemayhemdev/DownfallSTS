@@ -6,7 +6,7 @@
 
   "Gremlin:ArmsTheft": {
     "NAME": "소매 치기",
-    "DESCRIPTION": "적의 힘을 !M! 빼앗습니다. NL 소멸."
+    "DESCRIPTION": "적의 힘을 !M! gremlin:강탈합니다. NL 소멸."
   },
 
   "Gremlin:Astound": {
@@ -23,7 +23,7 @@
 
   "Gremlin:Bellow": {
     "NAME": "고함",
-    "DESCRIPTION": "휘발성. NL 공격할 의도가 없는 적당 힘을 !M! 얻습니다. NL 소멸."
+    "DESCRIPTION": "휘발성. NL 공격할 의도가 없는 적 하나당 힘을 !M! 얻습니다. NL 소멸."
   },
 
   "Gremlin:BrokenShin": {
@@ -43,7 +43,7 @@
 
   "Gremlin:BurlyBlow": {
     "NAME": "굵직한 강타",
-    "DESCRIPTION": "적이 보유한 약화당 피해를 !D! 줍니다. NL 약화를 보유하고 있지 않다면 피해를 !D! 만큼 줍니다."
+    "DESCRIPTION": "적이 보유한 약화 하나당 피해를 !D! 줍니다. NL 약화를 보유하고 있지 않다면 피해를 !D! 만큼 줍니다."
   },
 
   "Gremlin:CatScratch": {
@@ -87,7 +87,7 @@
 
   "Gremlin:Dazzle": {
     "NAME": "현혹",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL gremlin:마법을 3 이상 보유하고 있다면 힘을 2 빼앗습니다. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL gremlin:마법을 3 이상 보유하고 있다면 힘을 2 gremlin:강탈합니다. NL 소멸."
   },
 
   "Gremlin:Defend": {
@@ -133,8 +133,8 @@
 
   "Gremlin:SleeveOfAces": {
     "NAME": "소매 속 카드",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 보유하고 있는 gremlin:마법당 단도를 1장 얻습니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 보유하고 있는 gremlin:마법당 강화된 단도를 1장 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 보유하고 있는 gremlin:마법 하나당 단도를 1장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 보유하고 있는 gremlin:마법 하나당 강화된 단도를 1장 얻습니다."
   },
 
   "Gremlin:FatGremlin": {
@@ -144,7 +144,7 @@
 
   "Gremlin:FeelTheAudience": {
     "NAME": "관중 청취",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 공격할 의도가 있는 적당 gremlin:마법을 !M! 얻습니다."
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 공격할 의도가 있는 적 하나당 gremlin:마법을 !M! 얻습니다."
   },
 
   "Gremlin:FightChoice": {
@@ -155,12 +155,12 @@
 
   "Gremlin:FlipOut": {
     "NAME": "자제력 상실",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 이번 턴에 방어도를 얻는 대신 적 전체에게 방어도만큼 피해를 줍니다."
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 이번 턴에 방어도를 얻는 대신 적 전체에게 얻은 방어도만큼 피해를 줍니다."
   },
 
   "Gremlin:Flurry": {
     "NAME": "돌풍",
-    "DESCRIPTION": "이번 턴에 사용된 카드당 피해를 !D! 줍니다. NL 소멸.",
+    "DESCRIPTION": "이번 턴에 사용된 카드 한 장당 피해를 !D! 줍니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
       " NL (카드를 ",
       " 장 사용했습니다.)",
@@ -308,13 +308,13 @@
 
   "Gremlin:Pickpocket": {
     "NAME": "슬쩍하기",
-    "DESCRIPTION": "모든 인공물을 빼앗습니다. NL 피해를 !D! 줍니다. NL 소멸."
+    "DESCRIPTION": "모든 인공물을 gremlin:강탈합니다. NL 피해를 !D! 줍니다. NL 소멸."
   },
 
   "Gremlin:PinNeedle": {
     "NAME": "바늘 핀",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL *성가신 *구멍을 !M! 장 뽑을 카드 더미에 넣고 섞습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL *성가신 *구멍+을 !M! 장 뽑을 카드 더미에 넣고 섞습니다. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL *성가신 *구멍을 !M! 장 bronze:투입합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL *성가신 *구멍+을 !M! 장 bronze:투입합니다. NL 소멸."
   },
 
   "Gremlin:Pinprick": {
@@ -356,13 +356,13 @@
 
   "Gremlin:Raid": {
     "NAME": "습격",
-    "DESCRIPTION": "살아있는 그렘린당 카드를 1장 뽑습니다. NL 카드를 !M! 장 버립니다.",
-    "UPGRADE_DESCRIPTION": "살아있는 그렘린당 카드를 1장 뽑습니다. NL 카드를 !M! 장 버립니다."
+    "DESCRIPTION": "살아있는 그렘린 하나당 카드를 1장 뽑습니다. NL 카드를 !M! 장 버립니다.",
+    "UPGRADE_DESCRIPTION": "살아있는 그렘린 하나당 카드를 1장 뽑습니다. NL 카드를 !M! 장 버립니다."
   },
 
   "Gremlin:Revel": {
     "NAME": "연회",
-    "DESCRIPTION": "살아있는 그렘린당 [E] 를 얻습니다."
+    "DESCRIPTION": "살아있는 그렘린 하나당 [E] 를 얻습니다."
   },
 
   "Gremlin:Rhythm": {
@@ -382,8 +382,8 @@
 
   "Gremlin:SecondVolley": {
     "NAME": "다음 일제 사격",
-    "DESCRIPTION": "피해를 !D! 줍니다. 이번 턴에 사용한 카드당 단도를 얻습니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 이번 턴에 사용한 카드당 강화된 단도를 얻습니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. 이번 턴에 사용한 카드 한 장당 단도를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 이번 턴에 사용한 카드 한 장당 강화된 단도를 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       " NL (카드를 ",
       " 장 사용했습니다.)",
@@ -415,8 +415,8 @@
 
   "Gremlin:ShowOfHands": {
     "NAME": "거수",
-    "DESCRIPTION": "손에 있는 카드당 방어도를 !M! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "카드를 1장 뽑습니다. NL 손에 있는 카드당 방어도를 !M! 얻습니다."
+    "DESCRIPTION": "손에 있는 카드 한 장당 방어도를 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "카드를 1장 뽑습니다. NL 손에 있는 카드 한 장당 방어도를 !M! 얻습니다."
   },
 
   "Gremlin:ShowStopper": {

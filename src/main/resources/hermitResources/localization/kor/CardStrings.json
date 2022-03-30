@@ -81,7 +81,7 @@
   },
   "hermit:Roughhouse": {
     "NAME": "난장판",
-    "DESCRIPTION": "피해를 !D! 줍니다. hermit:정조준: NL 방어도를 !B! 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. hermit:정조준\: NL 방어도를 !B! 얻습니다."
   },
   "hermit:Malice": {
     "NAME": "악의",
@@ -89,11 +89,11 @@
   },
   "hermit:Deadeye": {
     "NAME": "명사수",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL hermit:정조준: NL 힘을 !M! 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL hermit:정조준\: NL 힘을 !M! 얻습니다."
   },
   "hermit:GhostlyPresence": {
     "NAME": "유령적 존재",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL hermit:정조준: NL 적 전체에게 약화를 !M! 부여합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL hermit:정조준\: NL 적 전체에게 약화를 !M! 부여합니다."
   },
   "hermit:Adapt": {
     "NAME": "적응",
@@ -101,7 +101,7 @@
   },
   "hermit:Dive": {
     "NAME": "급하강",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL hermit:정조준: NL *판금 *갑옷을 !M! 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL hermit:정조준\: NL *판금 *갑옷을 !M! 얻습니다."
   },
   "hermit:FlashPowder": {
     "NAME": "섬광탄",
@@ -233,7 +233,7 @@
   },
   "hermit:Ricochet": {
     "NAME": "도탄",
-    "DESCRIPTION": "피해를 !D! 줍니다. 이번 턴에 발동된 hermit:정조준 효과당 무작위 적에게 반복합니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. 이번 턴에 발동된 hermit:정조준 효과 하나당 무작위 적에게 반복합니다.",
     "EXTENDED_DESCRIPTION": [" NL ( !M! ", "번 반복합니다.)","번 반복합니다.)"]
   },
   "hermit:TrackingShot": {

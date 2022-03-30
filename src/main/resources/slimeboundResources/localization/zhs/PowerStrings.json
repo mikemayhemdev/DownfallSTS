@@ -10,7 +10,7 @@
   "Slimebound:SlimedPower": {
     "NAME": "黏液",
     "DESCRIPTIONS": [
-      "对该敌人的下一次 #y攻击 造成额外 #b",
+      "对该敌人的下次 #y攻击 造成额外 #b",
       " 点伤害，并消耗所有 #y黏液 。"
     ]
   },
@@ -65,9 +65,9 @@
   "Slimebound:HexSlimePerTurnPower": {
     "NAME": "鬼火之力",
     "DESCRIPTIONS": [
-      "下个回合开始时 分裂 出一只 #y鬼火史莱姆 。",
+      "下回合开始时 分裂 #y鬼火史莱姆 。",
       "接下来的 #b",
-      " 回合，每回合开始时 分裂 出一只 #y鬼火史莱姆 。"
+      " 回合，每回合开始时 分裂 #y鬼火史莱姆 。"
     ]
   },
   "Slimebound:ProtectTheBoss": {
@@ -90,7 +90,7 @@
   "Slimebound:ComboAttackPower": {
     "NAME": "身先士卒",
     "DESCRIPTIONS": [
-      "每回合打出的第一张 指向牌将 #y命令 。",
+      "每回合打出的首张 指向牌将 #y命令 。",
       "每回合打出的前 #b",
       " 张 指向牌将 #y命令 。",
       " NL 本回合还能触发 #b",
@@ -169,9 +169,9 @@
   "Slimebound:DuplicatedFormPower": {
     "NAME": "增殖形态",
     "DESCRIPTIONS": [
-      "每回合你使用的第一张目标带有敌人的牌将打出两次。",
-      "每回合你使用的前 #b",
-      " 张目标带有敌人的牌将打出两次。"
+      "每回合打出的首张指向牌将打出两次。",
+      "每回合打出的前 #b",
+      " 张指向牌将打出两次。"
     ]
   },
   "Slimebound:DuplicatedFormNoHealPower": {
@@ -191,7 +191,7 @@
   "Slimebound:GluttonyPower": {
     "NAME": "暴食",
     "DESCRIPTIONS": [
-      "每回合第一次 #y消耗黏液 时，将一张 #y舔舔 加入手牌。",
+      "每回合首次 #y消耗黏液 时，将一张 #y舔舔 加入手牌。",
       "每回合前 ",
       " 次 #y消耗黏液 时，将一张 #y舔舔 加入手牌。",
       " NL 本回合还能触发 ",
@@ -233,7 +233,7 @@
   "Slimebound:RecyclingPowerUpgraded": {
     "NAME": "回收+",
     "DESCRIPTIONS": [
-      "每当你 #y消耗 一张耗能为0的牌，回复 #b",
+      "每当你 #y消耗 一张耗能为 #b0 的牌时，回复 #b",
       " 点生命并抽一张牌。"
     ]
   },
@@ -284,7 +284,7 @@
   "Slimebound:FirmFortitudePower": {
     "NAME": "感同身受",
     "DESCRIPTIONS": [
-	  "你的回合下一次即将失去生命时，一个随机的敌人代你承受。",
+      "你的回合下一次即将失去生命时，一个随机的敌人代你承受。",
       "你的回合下 #b",
       " 次即将失去生命时，一个随机的敌人代你承受。",
       " NL 本回合还能触发 #b",
@@ -303,11 +303,11 @@
   "Slimebound:NextTurnGainSlimeCrush": {
     "NAME": "准备撞击",
     "DESCRIPTIONS": [
-      "下回合，将一张 #y史莱姆撞击 加入手牌。",
-      "下回合，将一张 #y史莱姆撞击+ 加入手牌。",
+      "下回合，将一张 #y史莱姆猛击 加入手牌。",
+      "下回合，将一张 #y史莱姆猛击+ 加入手牌。",
       "下回合，将 #b",
-      " 张 #y史莱姆撞击 加入手牌。",
-      " 张 #y史莱姆撞击+ 加入手牌。"
+      " 张 #y史莱姆猛击 加入手牌。",
+      " 张 #y史莱姆猛击+ 加入手牌。"
     ]
   },
   "Slimebound:StunnedPower": {
@@ -328,23 +328,23 @@
   "Slimebound:NextTurnGainHyperBeam": {
     "NAME": "准备射爆",
     "DESCRIPTIONS": [
-      "下个回合开始时，将一张 #y超能光束 加入手牌。",
-      "下个回合开始时，将 #b",
+      "下回合开始时，将一张 #y超能光束 加入手牌。",
+      "下回合开始时，将 #b",
       " 张 #y超能光束 加入手牌。"
     ]
   },
   "Slimebound:NextTurnGainDivider": {
     "NAME": "准备分裂",
     "DESCRIPTIONS": [
-      "下个回合开始时，将一张 #y分裂 加入手牌。",
-      "下个回合开始时，将 #b",
+      "下回合开始时，将一张 #y分裂 加入手牌。",
+      "下回合开始时，将 #b",
       " 张 #y分裂 加入手牌。"
     ]
   },
   "Slimebound:StudyAutomatonPower": {
     "NAME": "研究机械人偶",
     "DESCRIPTIONS": [
-      "下个回合开始时获得一张机械人偶牌。",
+      "下回合开始时获得一张机械人偶牌。",
       "接下来的 #b",
       " 回合，每回合开始时获得一张机械人偶牌。"
     ]
@@ -352,7 +352,7 @@
   "Slimebound:StudyAutomatonPowerUpgraded": {
     "NAME": "研究铜制机械人偶+",
     "DESCRIPTIONS": [
-      "下个回合开始时获得一张升级后的机械人偶牌。",
+      "下回合开始时获得一张升级后的机械人偶牌。",
       "接下来的 #b",
       " 回合，每回合开始时获得一张升级后的机械人偶牌。"
     ]
@@ -360,7 +360,7 @@
   "Slimebound:StudyAwakenedPower": {
     "NAME": "研究觉醒者",
     "DESCRIPTIONS": [
-      "下个回合开始时获得一张觉醒者牌。",
+      "下回合开始时获得一张觉醒者牌。",
       "接下来的 #b",
       " 回合，每回合开始时获得一张觉醒者牌。"
     ]
@@ -368,7 +368,7 @@
   "Slimebound:StudyAwakenedPowerUpgraded": {
     "NAME": "研究觉醒者+",
     "DESCRIPTIONS": [
-      "下个回合开始时获得一张升级后的觉醒者牌。",
+      "下回合开始时获得一张升级后的觉醒者牌。",
       "接下来的 #b",
       " 回合，每回合开始时获得一张升级后的觉醒者牌。"
     ]
@@ -383,7 +383,7 @@
   "Slimebound:StudyChampPower": {
     "NAME": "研究第一勇士",
     "DESCRIPTIONS": [
-      "下个回合开始时获得一张第一勇士牌。",
+      "下回合开始时获得一张第一勇士牌。",
       "接下来的 #b",
       " 回合，每回合开始时获得一张第一勇士牌。"
     ]
@@ -391,7 +391,7 @@
   "Slimebound:StudyChampPowerUpgraded": {
     "NAME": "研究第一勇士+",
     "DESCRIPTIONS": [
-      "下个回合开始时获得一张升级后的第一勇士牌。",
+      "下回合开始时获得一张升级后的第一勇士牌。",
       "接下来的 #b",
       " 回合，每回合开始时获得一张升级后的第一勇士牌。"
     ]
@@ -399,7 +399,7 @@
   "Slimebound:StudyCollectorPower": {
     "NAME": "研究收藏家",
     "DESCRIPTIONS": [
-      "下个回合开始时获得一张收藏家牌。",
+      "下回合开始时获得一张收藏家牌。",
       "接下来的 #b",
       " 回合，每回合开始时获得一张收藏家牌。"
     ]
@@ -407,7 +407,7 @@
   "Slimebound:StudyCollectorPowerUpgraded": {
     "NAME": "研究收藏家+",
     "DESCRIPTIONS": [
-      "下个回合开始时获得一张升级后的收藏家牌。",
+      "下回合开始时获得一张升级后的收藏家牌。",
       "接下来的 #b",
       " 回合，每回合开始时获得一张升级后的收藏家牌。"
     ]
@@ -415,7 +415,7 @@
   "Slimebound:StudyGuardianPower": {
     "NAME": "研究守护者",
     "DESCRIPTIONS": [
-      "下个回合开始时获得一张守护者牌。",
+      "下回合开始时获得一张守护者牌。",
       "接下来的 #b",
       " 回合，每回合开始时获得一张守护者牌。"
     ]
@@ -423,7 +423,7 @@
   "Slimebound:StudyGuardianPowerUpgraded": {
     "NAME": "研究守护者+",
     "DESCRIPTIONS": [
-      "下个回合开始时获得一张升级后的守护者牌。",
+      "下回合开始时获得一张升级后的守护者牌。",
       "接下来的 #b",
       " 回合，每回合开始时获得一张升级后的守护者牌。"
     ]
@@ -431,7 +431,7 @@
   "Slimebound:StudyHexaghostPower": {
     "NAME": "研究六火亡魂",
     "DESCRIPTIONS": [
-      "下个回合开始时获得一张六火亡魂牌。",
+      "下回合开始时获得一张六火亡魂牌。",
       "接下来的 #b",
       " 回合，每回合开始时获得一张六火亡魂牌。"
     ]
@@ -439,7 +439,7 @@
   "Slimebound:StudyHexaghostPowerUpgraded": {
     "NAME": "研究六火亡魂+",
     "DESCRIPTIONS": [
-      "下个回合开始时获得一张升级后的六火亡魂牌。",
+      "下回合开始时获得一张升级后的六火亡魂牌。",
       "接下来的 #b",
       " 回合，每回合开始时获得一张升级后的六火亡魂牌。"
     ]
@@ -447,7 +447,7 @@
   "Slimebound:StudyShapesPower": {
     "NAME": "研究甜圈八体",
     "DESCRIPTIONS": [
-      "下个回合开始时获得一张甜圈和八体牌。",
+      "下回合开始时获得一张甜圈和八体牌。",
       "接下来的 #b",
       " 回合，每回合开始时获得一张甜圈和八体牌。"
     ]
@@ -455,7 +455,7 @@
   "Slimebound:StudyShapesPowerUpgraded": {
     "NAME": "研究甜圈八体+",
     "DESCRIPTIONS": [
-      "下个回合开始时获得一张升级后的甜圈和八体牌。",
+      "下回合开始时获得一张升级后的甜圈和八体牌。",
       "接下来的 #b",
       " 回合，每回合开始时获得一张升级后的甜圈和八体牌。"
     ]
@@ -463,7 +463,7 @@
   "Slimebound:StudyTimeEaterPower": {
     "NAME": "研究时间吞噬者",
     "DESCRIPTIONS": [
-      "下个回合开始时获得一张时间吞噬者牌。",
+      "下回合开始时获得一张时间吞噬者牌。",
       "接下来的 #b",
       " 回合，每回合开始时获得一张时间吞噬者牌。"
     ]
@@ -471,7 +471,7 @@
   "Slimebound:StudyTimeEaterPowerUpgraded": {
     "NAME": "研究时间吞噬者+",
     "DESCRIPTIONS": [
-      "下个回合开始时获得一张升级后的时间吞噬者牌。",
+      "下回合开始时获得一张升级后的时间吞噬者牌。",
       "接下来的 #b",
       " 回合，每回合开始时获得一张升级后的时间吞噬者牌。"
     ]
@@ -493,7 +493,7 @@
     "DESCRIPTIONS": [
       "每当你打出 #y命令 牌时，再 #y命令 #b1 次。",
       "每当你打出 #y命令 牌时，再 #y命令 #b",
-	  " 次。"
+      " 次。"
     ]
   },
   "Slimebound:TackleSelfDamagePreventPower": {

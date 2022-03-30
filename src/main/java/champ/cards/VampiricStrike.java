@@ -13,32 +13,29 @@ public class VampiricStrike extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, rare
 
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 6;
 
     public VampiricStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBOBERSERKER);
-        tags.add(ChampMod.COMBODEFENSIVE);
+       // tags.add(ChampMod.COMBO);
+      //  tags.add(ChampMod.COMBOBERSERKER);
+      //  tags.add(ChampMod.COMBODEFENSIVE);
         postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (dcombo()) {
-            atb(new WallopAction(m, makeInfo()));
-        } else {
-            dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        }
-        if (bcombo()) {
-            atb(new GainEnergyAction(1));
-        }
+
+        atb(new WallopAction(m, makeInfo()));
     }
 
+    /*
     @Override
     public void triggerOnGlowCheck() {
         glowColor = (dcombo() || bcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
+
+     */
 
     public void upp() {
         upgradeDamage(3);

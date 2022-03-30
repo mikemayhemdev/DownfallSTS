@@ -19,7 +19,7 @@
   },
   "champ:StanceDance": {
     "NAME": "Stance Dance",
-    "DESCRIPTION": "Choose a Stance to Enter. NL If you were already in that Stance, Gain a champ:Combo of that Stance.",
+    "DESCRIPTION": "Choose a Stance to Enter. NL If you were already in that Stance, gain a champ:Combo of that Stance.",
     "UPGRADE_DESCRIPTION": "Choose a Stance to Enter. NL Gain a champ:Combo of that Stance.",
     "EXTENDED_DESCRIPTION": [
       "Enter champ:Berserker.",
@@ -125,7 +125,7 @@
   },
   "champ:SkillfulDodge": {
     "NAME": "Skillful Dodge",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter. NL *Defensive champ:Combo: Increase this card's effects by !cool! this combat."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter. NL *Defensive champ:Combo: Increase these effects by !cool! this combat."
   },
   "champ:TornadoPunch": {
     "NAME": "Tornado Punch",
@@ -138,12 +138,12 @@
   },
   "champ:ShieldSlam": {
     "NAME": "Moment of Truth",
-    "DESCRIPTION": "Retain.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Draw 1 card."
+    "DESCRIPTION": "Retain. NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Draw !M! cards."
   },
   "champ:EnchantShield": {
     "NAME": "Enchant Shield",
-    "DESCRIPTION": "champ:Fatigue 5. NL Choose a card in hand. Increase its Block by !M! for this combat. NL Exhaust.",
+    "DESCRIPTION": "Choose a card in hand. Increase its Block by !M! for this combat. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "A poor time for that move."
     ]
@@ -192,7 +192,7 @@
   },
   "champ:ViciousMockery": {
     "NAME": "Vicious Mockery",
-    "DESCRIPTION": "*Berserker champ:Combo: Gain !M! temporary Strength. NL *Defensive champ:Combo: Gain !M! temporary  Dexterity.",
+    "DESCRIPTION": "Target enemy gains 1 Strength. NL Gain !M! Vigor.",
     "EXTENDED_DESCRIPTION": [
       "Berserker champ:Combo: Gain !M! temporary Strength. NL ",
       "Defensive champ:Combo: Gain !M! temporary Dexterity."
@@ -212,7 +212,7 @@
   },
   "champ:EnchantSword": {
     "NAME": "Enchant Sword",
-    "DESCRIPTION": "champ:Fatigue 5. NL Choose a card in hand. Increase its damage by !M! for this combat. Exhaust.",
+    "DESCRIPTION": "Choose a card in hand. Increase its damage by !M! for this combat. Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "A poor time for that move."
     ]
@@ -227,7 +227,7 @@
   },
   "champ:MurderStrike": {
     "NAME": "Murder Strike",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When you use a champ:Technique, this card costs 1 less and deals !M! more damage. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When you use a champ:Technique, this card deals !M! more damage."
   },
   "champ:HeavySlash": {
     "NAME": "Masterful Slash",
@@ -256,7 +256,7 @@
   },
   "champ:VampiricStrike": {
     "NAME": "Clobber",
-    "DESCRIPTION": "Deal !D! damage. *Berserker champ:Combo: NL Gain [E] . NL *Defensive champ:Combo: Gain Block equal to unblocked damage dealt."
+    "DESCRIPTION": "Deal !D! damage. Gain Block equal to unblocked damage dealt."
   },
   "champ:AdrenalArmor": {
     "NAME": "Adrenal Armor",
@@ -299,8 +299,8 @@
   },
   "champ:IgnorePain": {
     "NAME": "Ignore Pain",
-    "DESCRIPTION": "champ:Fatigue 5. Your HP cannot be reduced until your next turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL champ:Fatigue 5. Your HP cannot be reduced until your next turn. NL Exhaust."
+    "DESCRIPTION": "Your HP cannot be reduced until your next turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Your HP cannot be reduced until your next turn. NL Exhaust."
   },
   "champ:DeathBlow": {
     "NAME": "Death Blow",
@@ -317,6 +317,7 @@
   "champ:SteelEdge": {
     "NAME": "Steel Edge",
     "DESCRIPTION": "*Berserker champ:Combo: Deal !D! damage X times. NL *Defensive champ:Combo: Gain !B! Block X times.",
+    "DESCRIPTION": "*Berserker champ:Combo: Deal !D! damage X+1 times. NL *Defensive champ:Combo: Gain !B! Block X+1 times.",
     "EXTENDED_DESCRIPTION": [
       "Berserker champ:Combo: Deal !D! damage X times. NL ",
       "Defensive champ:Combo: Gain !B! Block X times.",
@@ -359,22 +360,32 @@
   },
   "champ:StrikeOfGenius": {
     "NAME": "Strike of Genius",
-    "DESCRIPTION": "At the start of your turn, Gain a random \"Strike\". NL It costs 0 until played and gains Exhaust.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, Gain a random Upgraded \"Strike\". NL It costs 0 until played and gains Exhaust."
+    "DESCRIPTION": "At the start of your turn, gain a random \"Strike\". NL It costs 0 until played and gains Exhaust.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, gain a random Upgraded \"Strike\". NL It costs 0 until played and gains Exhaust."
   },
   "champ:DefensiveStyle": {
     "NAME": "Defensive Style",
+<<<<<<< HEAD
     "DESCRIPTION": "Enter champ:Defensive. NL champ:Fatigue 5. NL champ:Defensive *Skill *Bonuses grant !M! more champ:Counter.",
     "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Defensive. NL champ:Fatigue 5. NL champ:Defensive *Skill *Bonuses grant !M! more champ:Counter."
+=======
+    "DESCRIPTION": "Enter champ:Defensive. NL champ:Defensive *Techniques grant !M! more champ:Counter.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Defensive. NL champ:Defensive *Techniques grant !M! more champ:Counter."
+>>>>>>> 413152d59a8c548411f986ad464c2d74b4c5d3ec
   },
   "champ:GladiatorStyle": {
     "NAME": "Good Clean Fight",
-    "DESCRIPTION": "champ:Fatigue !M!. NL Gain 2 Strength and Dexterity."
+    "DESCRIPTION": "You and ALL enemies gain !M! Strength."
   },
   "champ:BerserkerStyle": {
     "NAME": "Berserker Style",
+<<<<<<< HEAD
     "DESCRIPTION": "Enter champ:Berserker. NL champ:Fatigue 5. NL champ:Berserker *Skill *Bonuses grant !M! more Vigor.",
     "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Berserker. NL champ:Fatigue 5. NL champ:Berserker *Skill *Bonuses grant !M! more Vigor."
+=======
+    "DESCRIPTION": "Enter champ:Berserker. NL champ:Berserker champ:Techniques grant !M! more Vigor.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Berserker. NL champ:Berserker champ:Techniques grant !M! more Vigor."
+>>>>>>> 413152d59a8c548411f986ad464c2d74b4c5d3ec
   },
   "champ:Riposte": {
     "NAME": "Riposte",
@@ -400,7 +411,7 @@
   },
   "champ:EnchantCrown": {
     "NAME": "Enchant Crown",
-    "DESCRIPTION": "champ:Fatigue 5. NL Choose a card in hand. It costs 0 this combat. NL Exhaust.",
+    "DESCRIPTION": "Choose a card in hand. It costs 0 this combat. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "A poor time for that move."
     ]

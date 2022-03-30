@@ -101,15 +101,15 @@
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "눈부신 의식",
-    "DESCRIPTION": "hexamod:점화된 유령불꽃당 [E] 를 얻고 카드를 1장 뽑습니다. hexamod:점화된 유령불꽃을 모두 hexamod:소화시킵니다. NL 소멸."
+    "DESCRIPTION": "hexamod:점화된 유령불꽃 하나당 [E] 를 얻고 카드를 1장 뽑습니다. hexamod:점화된 유령불꽃을 모두 hexamod:소화시킵니다. NL 소멸."
   },
   "hexamod:StepThrough": {
     "NAME": "단계 밟기",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL hexamod:점화된 유령불꽃당 카드를 1장 뽑습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL hexamod:점화된 유령불꽃 하나당 카드를 1장 뽑습니다."
   },
   "hexamod:InspiringFlames": {
     "NAME": "불 지피기",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL hexamod:점화된 유령불꽃당 카드를 무작위로 1장 강화합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL hexamod:점화된 유령불꽃 하나당 카드를 무작위로 1장 강화합니다."
   },
   "hexamod:SpectersWail": {
     "NAME": "망령의 통곡",
@@ -235,7 +235,7 @@
   },
   "hexamod:HeatShield": {
     "NAME": "열기 방패",
-    "DESCRIPTION": "Gain Block equal to hexamod:Soulburn on ALL enemies, then remove hexamod:Soulburn.",
+    "DESCRIPTION": "적 전체의 hexamod:영혼화상만큼 방어도를 얻습니다. 적 전체의 hexamod:영혼화상을 제거합니다.",
     "EXTENDED_DESCRIPTION": [
       " NL (방어도를 !B! 얻습니다.)"
     ]
@@ -281,7 +281,7 @@
   },
   "hexamod:ChargedBarrage": {
     "NAME": "충전된 일제 공격",
-    "DESCRIPTION": "hexamod:영혼화상을 !burny! 부여합니다. NL hexamod:점화된 유령불꽃당 반복합니다."
+    "DESCRIPTION": "hexamod:영혼화상을 !burny! 부여합니다. NL hexamod:점화된 유령불꽃 하나당 반복합니다."
   },
   "hexamod:RadiantFlame": {
     "NAME": "불꽃 복사",
@@ -380,7 +380,7 @@
   },
   "hexamod:Divider": {
     "NAME": "분할기",
-    "DESCRIPTION": "hexamod:점화된 유령불꽃당 피해를 !D! 줍니다."
+    "DESCRIPTION": "hexamod:점화된 유령불꽃 하나당 피해를 !D! 줍니다."
   },
   "hexamod:StrikeFromBeyond": {
     "NAME": "저편의 타격",

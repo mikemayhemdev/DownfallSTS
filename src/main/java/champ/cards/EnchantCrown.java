@@ -19,14 +19,14 @@ public class EnchantCrown extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         //    tags.add(ChampMod.FINISHER);
         exhaust = true;
-        myHpLossCost = 5;
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new SelectCardsInHandAction(1, CardCrawlGame.languagePack.getUIString("champ:EnchantUI").TEXT[0], c -> c.cost > 0, (cards) -> {
             cards.get(0).modifyCostForCombat(-999);
         }));
-        fatigue(5);
+     //   fatigue(5);
     }
 
     @Override

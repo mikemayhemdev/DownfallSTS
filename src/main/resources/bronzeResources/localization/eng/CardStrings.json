@@ -276,7 +276,7 @@
   },
   "bronze:NullPointer": {
     "NAME": "Null Pointer",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL bronze:Compile *Error - Function is Unplayable.",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Compile *Error - Function is Unplayable.",
     "EXTENDED_DESCRIPTION": [
       "null",
       "Pointer"
@@ -344,8 +344,8 @@
   },
   "bronze:InfiniteBeams": {
     "NAME": "Infinite Beams",
-    "DESCRIPTION": "At the start of each turn, Gain a *Minor *Beam.",
-    "UPGRADE_DESCRIPTION": "At the start of each turn, Gain a *Minor *Beam+."
+    "DESCRIPTION": "At the start of each turn, gain a *Minor *Beam.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, gain a *Minor *Beam+."
   },
   "bronze:Optimize": {
     "NAME": "Optimize",
@@ -479,7 +479,7 @@
   },
   "bronze:Library": {
     "NAME": "Library",
-    "DESCRIPTION": "At the start of your turn, Gain a random card with bronze:Encode. NL It costs 0."
+    "DESCRIPTION": "At the start of your turn, gain a random card with bronze:Encode. NL It costs 0."
   },
   "bronze:Verify": {
     "NAME": "Sentient Form",

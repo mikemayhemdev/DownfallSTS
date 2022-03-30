@@ -50,7 +50,7 @@
   },
   "champ:DefensiveShout": {
     "NAME": "수비 함성",
-    "DESCRIPTION": "champ:반격을 !M! 얻습니다. NL champ:수비 자세를 취합니다."
+    "DESCRIPTION": "champ:반격을 !M! 얻습니다. champ:수비 자세를 취합니다. NL 카드를 1장 뽑습니다."
   },
   "champ:ShieldSigil": {
     "NAME": "쇠사슬 채찍",
@@ -63,7 +63,7 @@
   "champ:FocusedBerserking": {
     "NAME": "총력전",
     "DESCRIPTION": "소멸. NL champ:자세에서 벗어나지 않습니다. 이 효과를 !M! 번 반복합니다:"
-    
+
   },
   "champ:SetATrap": {
     "NAME": "함정 설치",
@@ -127,8 +127,8 @@
   },
   "champ:TornadoPunch": {
     "NAME": "회오리 주먹",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL *수비 champ:연계: 공격한 적당 방어도를 !B! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL *수비 champ:연계: 공격한 적당 방어도를 !B! 얻습니다."
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL *수비 champ:연계: 공격한 적 하나당 방어도를 !B! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL *수비 champ:연계: 공격한 적 하나당 방어도를 !B! 얻습니다."
   },
   "champ:EnGarde": {
     "NAME": "준비!",
@@ -276,7 +276,7 @@
   },
   "champ:Encircle": {
     "NAME": "포위",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 공격한 대상당 이 효과를 반복합니다:"
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 공격한 대상 하나당 이 효과를 반복합니다:"
   },
   "champ:LastStand": {
     "NAME": "최후의 저항",
