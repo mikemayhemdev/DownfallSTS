@@ -29,7 +29,7 @@ public class GladiatorStyle extends AbstractChampCard {
         applyToSelf(new StrengthPower(p, magicNumber));
        // applyToSelf(new DexterityPower(p, 2));
         for (AbstractMonster q : monsterList()) {
-            applyToEnemy(q, new StrengthPower(q, magicNumber));
+            applyToEnemy(q, new StrengthPower(q, 2));
             //applyToEnemy(q, new DexterityPower(q, 2));
         }
 
@@ -37,6 +37,5 @@ public class GladiatorStyle extends AbstractChampCard {
 
     public void upp() {
         upgradeMagicNumber(1);
-        myHpLossCost = magicNumber;
     }
 }

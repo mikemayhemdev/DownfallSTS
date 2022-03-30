@@ -12,7 +12,7 @@ public class ShieldSigil extends AbstractChampCard {
 
 
     public ShieldSigil() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 2;
         baseDamage = 3;
     }
@@ -24,6 +24,6 @@ public class ShieldSigil extends AbstractChampCard {
 
     public void upp() {
         upgradeMagicNumber(1);
-        upgradeDamage(1);
+        upgradeDamage(2);
     }
 }

@@ -22,7 +22,7 @@ public class ViciousMockery extends AbstractChampCard {
     //stupid intellij stuff skill, enemy, uncommon
 
     public ViciousMockery() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 12;
         //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
       //  tags.add(ChampMod.COMBO);

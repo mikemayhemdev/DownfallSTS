@@ -24,7 +24,7 @@
       "[fist_icon]",
       "champ:[fist_icon]"
     ],
-    "DESCRIPTION": "Requires being in a Stance. NL After playing a Finisher, if you are in a #yStance, exit it and trigger its Finisher bonus."
+    "DESCRIPTION": "Requires being in a Stance. NL After playing a Finisher, exit your Stance and trigger its Finisher bonus."
   },
   {
     "PROPER_NAME": "Counter",
@@ -39,7 +39,7 @@
       "defensive",
       "defensive."
     ],
-    "DESCRIPTION": "#yStance. NL #yTechnique Bonus: Gain #b4 #yCounter. NL #yFinisher Bonus: Gain #b10 #yBlock."
+    "DESCRIPTION": "#yStance. NL #ySkill Bonus: Gain #b4 #yCounter. NL #yFinisher Effect: Gain #b10 #yBlock."
   },
   {
     "PROPER_NAME": "Berserker",
@@ -47,7 +47,7 @@
       "berserker",
       "berserker."
     ],
-    "DESCRIPTION": "#yStance.  NL #yTechnique Bonus: Gain #b3 #yVigor. NL #yFinisher Bonus: Gain #b1 #yStrength."
+    "DESCRIPTION": "#yStance.  NL #ySkill Bonus: Gain #b3 #yVigor. NL #yFinisher Effect: Gain #b1 #yStrength."
   },
   {
     "PROPER_NAME": "Gladiator",
@@ -55,7 +55,7 @@
       "gladiator",
       "gladiator."
     ],
-    "DESCRIPTION": "#yStance.  NL #yTechnique Bonus: Draw a card. NL #yFinisher Bonus: Next turn, draw #b1 card and gain [E] . End your turn."
+    "DESCRIPTION": "#yStance. NL #ySkill Bonus: Draw a card. NL #yFinisher Bonus: Next turn, draw #b1 card and gain [E] . End your turn."
   },
   {
     "PROPER_NAME": "Ultimate Stance",

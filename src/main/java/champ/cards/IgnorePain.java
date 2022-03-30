@@ -18,7 +18,7 @@ public class IgnorePain extends AbstractChampCard {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
        // tags.add(ChampMod.TECHNIQUE);
-        myHpLossCost = 5;
+      //  myHpLossCost = 5;
         postInit();
     }
 

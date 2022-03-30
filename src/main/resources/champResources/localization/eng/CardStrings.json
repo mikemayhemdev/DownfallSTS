@@ -56,7 +56,7 @@
   },
   "champ:ShieldSigil": {
     "NAME": "Chain Lash",
-    "DESCRIPTION": "Deal !D! damage. NL This turn, your Skill Bonuses grant !M! more effect."
+    "DESCRIPTION": "Deal !D! damage. NL This turn, your Skill Bonus effects are increased by !M!."
   },
   "champ:FocusedDefense": {
     "NAME": "Bob and Weave",
@@ -170,8 +170,8 @@
   },
   "champ:IronFortress": {
     "NAME": "Technical Jig",
-    "DESCRIPTION": "Whenever you enter a Stance, trigger its champ:Technique effect.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you enter a Stance, trigger its champ:Technique effect."
+    "DESCRIPTION": "Whenever you enter a Stance, trigger its *Skill *Bonus twice.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you enter a Stance, trigger *Skill *Bonus twice."
   },
   "champ:Lariat": {
     "NAME": "Lariat",
@@ -227,12 +227,12 @@
   },
   "champ:MurderStrike": {
     "NAME": "Murder Strike",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When you use a champ:Technique, this card deals !M! more damage."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When you use a *Skill, this card deals !M! more damage."
   },
   "champ:HeavySlash": {
     "NAME": "Masterful Slash",
-    "DESCRIPTION": "Deal !D! damage. NL Gain a random champ:Technique. It costs 0.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a random Upgraded champ:Technique. It costs 0."
+    "DESCRIPTION": "Deal !D! damage. NL Gain a random *Skill. It costs 0.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a random Upgraded *Skill. It costs 0."
   },
   "champ:CheapShot": {
     "NAME": "Cheap Shot",
@@ -256,7 +256,7 @@
   },
   "champ:VampiricStrike": {
     "NAME": "Clobber",
-    "DESCRIPTION": "Deal !D! damage. Gain Block equal to unblocked damage dealt."
+    "DESCRIPTION": "Deal !D! damage. NL Gain Block equal to unblocked damage dealt."
   },
   "champ:AdrenalArmor": {
     "NAME": "Adrenal Armor",
@@ -317,7 +317,7 @@
   "champ:SteelEdge": {
     "NAME": "Steel Edge",
     "DESCRIPTION": "*Berserker champ:Combo: Deal !D! damage X times. NL *Defensive champ:Combo: Gain !B! Block X times.",
-    "DESCRIPTION": "*Berserker champ:Combo: Deal !D! damage X+1 times. NL *Defensive champ:Combo: Gain !B! Block X+1 times.",
+    "UPGRADE_DESCRIPTION": "*Berserker champ:Combo: Deal !D! damage X+1 times. NL *Defensive champ:Combo: Gain !B! Block X+1 times.",
     "EXTENDED_DESCRIPTION": [
       "Berserker champ:Combo: Deal !D! damage X times. NL ",
       "Defensive champ:Combo: Gain !B! Block X times.",
@@ -365,17 +365,17 @@
   },
   "champ:DefensiveStyle": {
     "NAME": "Defensive Style",
-    "DESCRIPTION": "Enter champ:Defensive. NL champ:Defensive *Techniques grant !M! more champ:Counter.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Defensive. NL champ:Defensive *Techniques grant !M! more champ:Counter."
+    "DESCRIPTION": "Enter champ:Defensive. NL champ:Defensive *Skill *Bonus grants !M! more champ:Counter.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Defensive. NL champ:Defensive *Skill *Bonus grants !M! more champ:Counter."
   },
   "champ:GladiatorStyle": {
     "NAME": "Good Clean Fight",
-    "DESCRIPTION": "You and ALL enemies gain !M! Strength."
+    "DESCRIPTION": "Gain !M! Strength. NL ALL enemies gain 2 Strength."
   },
   "champ:BerserkerStyle": {
     "NAME": "Berserker Style",
-    "DESCRIPTION": "Enter champ:Berserker. NL champ:Berserker champ:Techniques grant !M! more Vigor.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Berserker. NL champ:Berserker champ:Techniques grant !M! more Vigor."
+    "DESCRIPTION": "Enter champ:Berserker. NL champ:Berserker *Skill *Bonus grants !M! more Vigor.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Berserker. NL champ:Berserker *Skill *Bonus grants !M! more Vigor."
   },
   "champ:Riposte": {
     "NAME": "Riposte",
@@ -425,7 +425,7 @@
   "champ:TripleStrike": {
     "NAME": "Triple Strike",
     "DESCRIPTION": "Deal !D! damage. NL Gain 2 *Strikes. They cost 0 and count as Skills. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 Upgraded *Strikes. They cost 0 and count as Skills. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 Upgraded *Strikes. They cost 0 and trigger *Skill *Bonuses. NL Exhaust."
   },
   "champ:WindUp": {
     "NAME": "Wind Up",
@@ -435,5 +435,9 @@
       "Enter champ:Berserker.",
       "Enter champ:Defensive."
     ]
+  },
+  "champ:Headbutt": {
+    "NAME": "Headbutt",
+    "DESCRIPTION": "Deal !D! damage. NL Put a card from your discard pile on top of your draw pile."
   }
 }

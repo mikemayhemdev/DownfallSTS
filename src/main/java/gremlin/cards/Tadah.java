@@ -22,12 +22,13 @@ public class Tadah extends AbstractGremlinCard {
     private static final AbstractCard.CardRarity RARITY = CardRarity.COMMON;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     public Tadah() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.tags.add(WIZARD_GREMLIN);
         setBackgrounds();
+        baseMagicNumber = magicNumber = 0;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -35,16 +36,20 @@ public class Tadah extends AbstractGremlinCard {
         while (skill.cost == -2) {
             skill = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.SKILL).makeCopy();
         }
+        /*
         if (upgraded) {
             skill.upgrade();
         }
-        AbstractDungeon.actionManager.addToBottom(new MakeEchoAction(skill, 1, 1));
+
+         */
+        AbstractDungeon.actionManager.addToBottom(new MakeEchoAction(skill, 1, magicNumber));
         AbstractDungeon.actionManager.addToBottom(new GremlinSwapAction(new GremlinWizard(0)));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeMagicNumber(1);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }

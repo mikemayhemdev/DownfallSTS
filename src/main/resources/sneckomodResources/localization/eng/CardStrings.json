@@ -73,8 +73,8 @@
   },
   "sneckomod:Nope": {
     "NAME": "Nope",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. NL Replace it with a random card of the same class.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. NL Replace it with a random card of the same class. NL It costs 1 less.",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. Gain a random card of the same class.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. Gain a random card of the same class. NL It costs 1 less.",
     "EXTENDED_DESCRIPTION": [
       " to Exhaust for Nope."
     ]
@@ -130,8 +130,8 @@
   },
   "sneckomod:SoulExchange": {
     "NAME": "Soul Exchange",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card, then Exhaust 1 card. NL Exhaust your hand, replacing them with random cards of the Exhausted card's class.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 2 cards, then Exhaust 1 card. NL Exhaust your hand, replacing them with random cards of the Exhausted card's class.",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card, NL Choose a card, then *Transform your hand to that card's class.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw !M! cards, NL Choose a card, then *Transform your hand to that card's class.",
     "EXTENDED_DESCRIPTION": [
       "to Exhaust for Soul Exchange."
     ]
@@ -183,13 +183,13 @@
   },
   "sneckomod:PureSnecko": {
     "NAME": "Shift",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust all sneckomod:Offclass cards in your hand, replacing them with new ones.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust all sneckomod:Offclass cards in your hand, replacing them with new ones. NL They cost 1 less."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Transform all sneckomod:Offclass cards in your hand.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Transform all sneckomod:Offclass cards in your hand. NL They cost 1 less."
   },
   "sneckomod:Cheat": {
     "NAME": "Cheat",
-    "DESCRIPTION": "sneckomod:Snekproof. NL This turn, cards that choose a random number for their effect choose the maximum possible number. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL This turn, cards that choose a random number for their effect choose the maximum possible number."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Gain sneckomod:Lucky until the end of turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Gain sneckomod:Lucky until the end of turn. NL Exhaust."
   },
   "sneckomod:Restock": {
     "NAME": "Restock",
@@ -201,7 +201,7 @@
   },
   "sneckomod:Transmogrify": {
     "NAME": "Transmogrify",
-    "DESCRIPTION": "Choose 1 of 2 non-Starter, non-Special Relics to lose. NL Obtain a random Relic of the same rarity. NL Exhaust.",
+    "DESCRIPTION": "Choose 1 of 2 Relics to lose. NL Obtain a random Relic of the same rarity. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "I have no Relicsss to ssswap.",
       "Choose a Relic to lose.",
@@ -298,14 +298,14 @@
   },
   "sneckomod:Memorize": {
     "NAME": "Memorize",
-    "DESCRIPTION": "sneckomod:Snekproof. Fleeting. NL Choose a card in hand which started *Unknown. NL Permanently add it to your deck, removing its *Unknown.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. Fleeting. Retain. NL Choose a card in hand which started *Unknown. NL Permanently add it to your deck, removing its *Unknown.",
+    "DESCRIPTION": "sneckomod:Snekproof. Fleeting. NL Choose a card in hand which started *Unknown. sneckomod:Identify it.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. Fleeting. Retain. NL Choose a card in hand which started *Unknown. sneckomod:Identify it.",
     "EXTENDED_DESCRIPTION": [
-      " to Memorize."
+      " to Identify."
     ]
   },
   "sneckomod:UnknownBoss": {
     "NAME": "???",
-    "DESCRIPTION": "*Unknown Boss card."
+    "DESCRIPTION": "*Unknown Colorless Boss card."
   }
 }

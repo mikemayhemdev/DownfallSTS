@@ -15,7 +15,7 @@ public class Circumvent extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, common
 
-    private static final int BLOCK = 7;
+    private static final int BLOCK = 6;
 
 
     public Circumvent() {

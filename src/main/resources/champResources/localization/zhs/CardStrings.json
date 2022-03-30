@@ -238,7 +238,9 @@
   "champ:CrownThrow": {
     "NAME": "投掷王冠",
     "DESCRIPTION": " 造成 !D! 点伤害。 NL 如果耗能不为0， NL 下回合返回手牌。 NL 直到打出前的耗能为0。",
-    "EXTENDED_DESCRIPTION":  [" 造成 !D! 点伤害。"]
+    "EXTENDED_DESCRIPTION": [
+      " 造成 !D! 点伤害。"
+    ]
   },
   "champ:Encircle": {
     "NAME": "包围",
@@ -429,5 +431,10 @@
       " 进入 champ:防守 。 NL 将一张随机已 升级 的 champ:防守 牌加入手牌。",
       " 进入 champ:战狂 。 NL 将一张随机已 升级 的 champ:战狂 牌加入手牌。"
     ]
+  },
+  "champ:Headbutt": {
+    "NAME": "头槌",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将弃牌堆中的一张牌放到抽牌堆的顶部。"
   }
 }
+

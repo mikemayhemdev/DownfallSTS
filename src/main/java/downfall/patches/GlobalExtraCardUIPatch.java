@@ -65,10 +65,13 @@ public class GlobalExtraCardUIPatch {
 
                 FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
             }
-            if (__instance.hasTag(ChampMod.TECHNIQUE)) {
+
+            if (__instance instanceof AbstractChampCard) {
                 FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
                 renderHelper(sb, crown, __instance.current_x, __instance.current_y, __instance);
             }
+
+
             if (__instance.hasTag(ChampMod.FINISHER)) {
                 FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
                 renderHelper(sb, finisher, __instance.current_x, __instance.current_y, __instance);
