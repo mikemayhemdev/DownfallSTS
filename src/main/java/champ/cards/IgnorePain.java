@@ -24,7 +24,7 @@ public class IgnorePain extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
        // techique();
-        fatigue(5);
+       // fatigue(5);
         applyToSelf(new PushThroughPower(1));
     }
 
