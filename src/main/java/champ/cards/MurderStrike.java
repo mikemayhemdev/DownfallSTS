@@ -29,7 +29,7 @@ public class MurderStrike extends AbstractChampCard {
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
         super.onPlayCard(c, m);
-        if (c.hasTag(ChampMod.TECHNIQUE) && AbstractDungeon.player.hand.group.contains(this)) {
+        if (c.type == CardType.SKILL && AbstractDungeon.player.hand.group.contains(this)) {
             {
                 updateCost(-1);
                 baseDamage += magicNumber;

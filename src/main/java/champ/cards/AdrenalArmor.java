@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static champ.ChampMod.fatigue;
 
@@ -15,34 +17,21 @@ public class AdrenalArmor extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, common
 
-    private static final int BLOCK = 5;
+    private static final int BLOCK = 7;
     private static final int MAGIC = 2;
 
     public AdrenalArmor() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
-        //myHpLossCost = 2;
-        tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBOBERSERKER);
-        tags.add(ChampMod.TECHNIQUE);
-        postInit();
+        //tags.add(ChampMod.COMBO);
+        //tags.add(ChampMod.COMBOBERSERKER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
         blck();
-        //fatigue(magicNumber);
-        if (bcombo() && !this.purgeOnUse) {
-            AbstractCard r = this;
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    GameActionManager.queueExtraCard(r, m);
-                }
-            });
-        }
+        applyToSelf(new StrengthPower(p, magicNumber));
+        applyToSelf(new LoseStrengthPower(p, magicNumber));
     }
 
     @Override
@@ -52,6 +41,6 @@ public class AdrenalArmor extends AbstractChampCard {
 
     public void upp() {
         upgradeBlock(2);
-        initializeDescription();
+        upgradeMagicNumber(2);
     }
 }

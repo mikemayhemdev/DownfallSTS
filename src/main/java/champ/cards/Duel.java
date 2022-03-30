@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.combat.ClashEffect;
 
@@ -39,7 +40,7 @@ public class Duel extends AbstractChampCard {
             atb(new VFXAction(new ClashEffect(m.hb.cX, m.hb.cY), 0.1F));
         }
         dmg(m, AbstractGameAction.AttackEffect.NONE);
-        if (monsterList().size() == 1 && !this.purgeOnUse) {
+        if (m.hasPower(StrengthPower.POWER_ID) && m.getPower(StrengthPower.POWER_ID).amount > 0 && !this.purgeOnUse) {
             AbstractCard r = this;
             atb(new AbstractGameAction() {
                 @Override
@@ -49,7 +50,6 @@ public class Duel extends AbstractChampCard {
                 }
             });
         }
-        techique();
     }
 
     public static boolean isInCombat() {

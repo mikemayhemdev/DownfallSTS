@@ -20,7 +20,6 @@ public class EnchantCrown extends AbstractChampCard {
         //    tags.add(ChampMod.FINISHER);
         exhaust = true;
         myHpLossCost = 5;
-        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -15,7 +15,6 @@ public class CrookedStrike extends AbstractChampCard {
         baseDamage = 6;
         tags.add(CardTags.STRIKE);
         tags.add(ChampMod.FINISHER);
-        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

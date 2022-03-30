@@ -9,7 +9,8 @@
   },
   "champ:Taunt": {
     "NAME": "Taunt",
-    "DESCRIPTION": "Apply !M! Weak and 1 Vulnerable."
+    "DESCRIPTION": "Apply !M! Weak and 1 Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Apply 1 Weak and 1 Vulnerable to ALL enemies."
   },
   "champ:Execute": {
     "NAME": "Execute",
@@ -27,7 +28,8 @@
   },
   "champ:SwordSigil": {
     "NAME": "Sigil of Victory",
-    "DESCRIPTION": "Perform !M! times, then Exhaust:"
+    "DESCRIPTION": "Counts as playing !cool! Skills. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Counts as playing !cool! Skills. NL Exhaust."
   },
   "champ:FaceSlap": {
     "NAME": "Face Slap",
@@ -118,7 +120,7 @@
   },
   "champ:Circumvent": {
     "NAME": "Circumvent",
-    "DESCRIPTION": "Gain !B! Block. NL *Defensive champ:Combo: Draw !M! cards.",
+    "DESCRIPTION": "Gain !B! Block. NL *Any *Stance champ:Combo: Draw !M! cards.",
     "UPGRADE_DESCRIPTION": "Gain !M! champ:Counter. NL Gain !B! Block. NL *Defensive champ:Combo: Gain Block equal to your champ:Counter."
   },
   "champ:SkillfulDodge": {
@@ -238,7 +240,7 @@
   },
   "champ:RisingSlash": {
     "NAME": "Rising Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Play this twice if the last played card was a champ:Technique."
+    "DESCRIPTION": "Deal !D! damage. NL Play this twice if the last played card was a champ:Finisher."
   },
   "champ:Shatter": {
     "NAME": "Shatter",
@@ -258,8 +260,7 @@
   },
   "champ:AdrenalArmor": {
     "NAME": "Adrenal Armor",
-    "DESCRIPTION": "Gain !B! Block. NL *Berserker champ:Combo: Play this twice.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL *Berserker champ:Combo: Play this twice."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Temporary Strength."
   },
   "champ:HeartStrike": {
     "NAME": "Finish Him",
@@ -278,7 +279,7 @@
   },
   "champ:Encircle": {
     "NAME": "Encircle",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL For each enemy hit:"
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Trigger Skill Bonus for each enemy hit."
   },
   "champ:LastStand": {
     "NAME": "Last Stand",
@@ -290,7 +291,8 @@
   },
   "champ:RecklessLeap": {
     "NAME": "Reckless Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Perform !M! times:",
+    "DESCRIPTION": "Deal !D! damage. NL Gain 2 Strength. NL Lose 1 Dexterity. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 Strength. NL Lose 1 Dexterity.",
     "EXTENDED_DESCRIPTION": [
       "A poor time for that move."
     ]
@@ -306,7 +308,7 @@
   },
   "champ:ArenaPreparation": {
     "NAME": "Arena Preparation",
-    "DESCRIPTION": "Gain !M! random champ:Techniques. NL They gain Retain. NL Exhaust."
+    "DESCRIPTION": "Gain !M! random Skills. NL They gain Retain. NL Exhaust."
   },
   "champ:EndlessRage": {
     "NAME": "Endless Rage",
@@ -348,8 +350,8 @@
   },
   "champ:Duel": {
     "NAME": "Duel",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If there's only one enemy, play this twice.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If there's only one enemy, play this twice."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If the target has Strength, play this twice.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If the target has Strength, play this twice."
   },
   "champ:DancingMaster": {
     "NAME": "Dancing Master",
@@ -362,8 +364,8 @@
   },
   "champ:DefensiveStyle": {
     "NAME": "Defensive Style",
-    "DESCRIPTION": "Enter champ:Defensive. NL champ:Fatigue 5. NL champ:Defensive *Techniques grant !M! more champ:Counter.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Defensive. NL champ:Fatigue 5. NL champ:Defensive *Techniques grant !M! more champ:Counter."
+    "DESCRIPTION": "Enter champ:Defensive. NL champ:Fatigue 5. NL champ:Defensive *Skill *Bonuses grant !M! more champ:Counter.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Defensive. NL champ:Fatigue 5. NL champ:Defensive *Skill *Bonuses grant !M! more champ:Counter."
   },
   "champ:GladiatorStyle": {
     "NAME": "Good Clean Fight",
@@ -371,8 +373,8 @@
   },
   "champ:BerserkerStyle": {
     "NAME": "Berserker Style",
-    "DESCRIPTION": "Enter champ:Berserker. NL champ:Fatigue 5. NL champ:Berserker champ:Techniques grant !M! more Vigor.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Berserker. NL champ:Fatigue 5. NL champ:Berserker champ:Techniques grant !M! more Vigor."
+    "DESCRIPTION": "Enter champ:Berserker. NL champ:Fatigue 5. NL champ:Berserker *Skill *Bonuses grant !M! more Vigor.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Berserker. NL champ:Fatigue 5. NL champ:Berserker *Skill *Bonuses grant !M! more Vigor."
   },
   "champ:Riposte": {
     "NAME": "Riposte",
@@ -421,8 +423,8 @@
   },
   "champ:TripleStrike": {
     "NAME": "Triple Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Gain 2 *Strikes. They cost 0 and have champ:Technique. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 Upgraded *Strikes. They cost 0 and have champ:Technique. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain 2 *Strikes. They cost 0 and count as Skills. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 Upgraded *Strikes. They cost 0 and count as Skills. NL Exhaust."
   },
   "champ:WindUp": {
     "NAME": "Wind Up",

@@ -24,8 +24,6 @@ public class CrownThrow extends AbstractChampCard {
     public CrownThrow() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        tags.add(ChampMod.TECHNIQUE);
-        postInit();
     }
 
     public void returned() {
@@ -46,7 +44,6 @@ public class CrownThrow extends AbstractChampCard {
         if (!returned) {
             applyToSelf(new BoomerangPower(this));
         }
-        techique();
     }
 
     public void upp() {

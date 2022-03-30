@@ -1,7 +1,6 @@
 package champ.cards;
 
 import basemod.helpers.CardModifierManager;
-import champ.ChampMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -22,7 +21,7 @@ public class ArenaPreparation extends AbstractChampCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
-       // tags.add(ChampMod.TECHNIQUE);
+        // tags.add(ChampMod.TECHNIQUE);
         postInit();
     }
 
@@ -31,7 +30,7 @@ public class ArenaPreparation extends AbstractChampCard {
         for (int i = 0; i < magicNumber; i++) {
             ArrayList<AbstractCard> qCardList = new ArrayList<AbstractCard>();
             for (AbstractCard t : CardLibrary.getAllCards()) {
-                if (!(t.cardID.equals(this.cardID)) && !UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.TECHNIQUE) && !(t.hasTag(CardTags.HEALING)))
+                if (!(t.cardID.equals(this.cardID)) && !UnlockTracker.isCardLocked(t.cardID) && t.type == CardType.SKILL && !(t.hasTag(CardTags.HEALING)))
                     qCardList.add(t);
             }
             AbstractCard c = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1)).makeStatEquivalentCopy();

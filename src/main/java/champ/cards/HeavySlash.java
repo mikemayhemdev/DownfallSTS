@@ -36,7 +36,7 @@ public class HeavySlash extends AbstractChampCard {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         ArrayList<AbstractCard> qCardList = new ArrayList<AbstractCard>();
         for (AbstractCard t : CardLibrary.getAllCards()) {
-            if (!(t.cardID.equals(this.cardID)) && !UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.TECHNIQUE) && !(t.hasTag(CardTags.HEALING)))
+            if (!(t.cardID.equals(this.cardID)) && !UnlockTracker.isCardLocked(t.cardID) && t.type == CardType.SKILL && !(t.hasTag(CardTags.HEALING)))
                 qCardList.add(t);
         }
         AbstractCard c = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1)).makeStatEquivalentCopy();
