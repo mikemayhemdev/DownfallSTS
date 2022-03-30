@@ -6,6 +6,7 @@ import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -17,6 +18,7 @@ import slimebound.actions.CommandAction;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.orbs.*;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.potions.SpawnSlimePotion;
 
 import java.util.ArrayList;
 
@@ -73,7 +75,12 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        choice(m);
+        if (upgraded) {
+            choice(m);
+        } else {
+            SlimeboundMod.spawnNormalSlime();
+            SlimeboundMod.spawnNormalSlime();
+        }
 
 
         //Forever shall this code remain commented here.  A legacy to the origins of how bad Mayhem was at coding when this all began.

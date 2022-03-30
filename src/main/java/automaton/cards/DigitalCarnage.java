@@ -19,8 +19,8 @@ public class DigitalCarnage extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 20;
-    private static final int UPG_DAMAGE = 8;
+    private static final int DAMAGE = 15;
+    private static final int UPG_DAMAGE = 5;
 
     public DigitalCarnage() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);

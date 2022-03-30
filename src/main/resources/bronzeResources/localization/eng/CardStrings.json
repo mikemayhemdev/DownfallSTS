@@ -92,7 +92,7 @@
     ]
   },
   "bronze:DelayedSlice": {
-    "NAME": "Delayed Slice",
+    "NAME": "Robo-Chop",
     "DESCRIPTION": "Deal !D! damage. NL Next turn, draw !M! additional card.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Next turn, draw !M! additional cards.",
     "EXTENDED_DESCRIPTION": [
@@ -118,7 +118,7 @@
   },
   "bronze:Separator": {
     "NAME": "Separator",
-    "DESCRIPTION": "Deal !D! damage. π NL When bronze:Encoded, if this is the middle card, increase its damage by !M!.",
+    "DESCRIPTION": "Deal !D! damage. π NL When bronze:Encoded, if this is in the center, increase damage by !M!.",
     "EXTENDED_DESCRIPTION": [
       "split",
       "Child"
@@ -220,13 +220,13 @@
   },
   "bronze:BitShift": {
     "NAME": "Bit Shift",
-    "DESCRIPTION": "Choose an Encoded card to return to your hand. NL It gains Retain. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Choose an Encoded card to return to your hand. NL It gains Retain. NL Exhaust."
+    "DESCRIPTION": "Choose an Encoded card to return to your hand. It gains Retain. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Choose an Encoded card to return to your hand. It gains Retain. NL Exhaust."
   },
   "bronze:ByteShift": {
     "NAME": "Byte Shift",
-    "DESCRIPTION": "Return all cards in the Sequence to your hand. NL They gain Retain. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Return all cards in the Sequence to your hand. NL They gain Retain. NL Exhaust."
+    "DESCRIPTION": "Return all Encoded cards to your hand. NL They gain Retain. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Return all Encoded cards to your hand. NL They gain Retain. NL Exhaust."
   },
   "bronze:Batch": {
     "NAME": "Batch",
@@ -252,8 +252,8 @@
   },
   "bronze:Overload": {
     "NAME": "Copy Paste",
-    "DESCRIPTION": "Play a copy of each card in the Sequence. They do not Encode. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Play a copy of each card in the Sequence. They do not Encode."
+    "DESCRIPTION": "Play a copy of each Encoded card. They do not Encode. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Play a copy of each Encoded card. They do not Encode."
   },
   "bronze:GetLatest": {
     "NAME": "Get Latest",
@@ -371,12 +371,12 @@
   },
   "bronze:Decompile": {
     "NAME": "Decompile",
-    "DESCRIPTION": "Exhaust all cards in the Sequence. Gain [E] and draw a card for each card Exhausted. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Exhaust all cards in the Sequence. Gain [E] and draw a card for each card Exhausted. NL Exhaust."
+    "DESCRIPTION": "Exhaust all Encoded cards. Gain [E] and draw a card for each card Exhausted. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Exhaust all Encoded cards. Gain [E] and draw a card for each card Exhausted. NL Exhaust."
   },
   "bronze:ChildClass": {
     "NAME": "Invoke",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain [E] equal to the total cost of cards in the Sequence.",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain [E] equal to the total cost of Encoded cards.",
     "EXTENDED_DESCRIPTION": [
       "invoked",
       "Energy"
@@ -453,8 +453,8 @@
     "NAME": "Burn Out",
     "DESCRIPTION": "Deal !D! damage to a random enemy for ALL of your Status cards, then Exhaust them. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      " NL (Hits ",
-      " times.)"
+      "Deal !D! damage to a random enemy for ALL of your Status cards (",
+      "), then Exhaust them. NL Exhaust."
     ]
   },
   "bronze:ShipIt": {
@@ -484,8 +484,8 @@
   },
   "bronze:Verify": {
     "NAME": "Sentient Form",
-    "DESCRIPTION": "Ethereal. NL Whenever you draw a Function, increase all numbers on it by 1.",
-    "UPGRADE_DESCRIPTION": "Whenever you draw a Function, increase all numbers on it by 1."
+    "DESCRIPTION": "Ethereal. NL Whenever you draw a Function, increase all numbers on it by 1 except for cost.",
+    "UPGRADE_DESCRIPTION": "Whenever you draw a Function, increase all numbers on it by 1 except for cost."
   },
   "bronze:BronzeHeatsink": {
     "NAME": "Bronze Heatsink",
@@ -513,11 +513,11 @@
   },
   "bronze:Debug": {
     "NAME": "Debug",
-    "DESCRIPTION": "Remove all bronze:Compile *Error effects from the cards in the Sequence. NL Exhaust."
+    "DESCRIPTION": "Remove all bronze:Compile *Error effects from Encoded cards. NL Exhaust."
   },
   "bronze:HyperBeam": {
     "NAME": "HYPER BEAM",
-    "DESCRIPTION": "Retain. NL Deal !D! damage to ALL enemies. NL When Retained, lower its cost by 1 this combat."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Put 5 *Void on top of your draw pile."
   },
   "bronze:Hardcode": {
     "NAME": "Hardcode",
@@ -534,12 +534,12 @@
   },
   "bronze:FineTuning": {
     "NAME": "Fine Tuning",
-    "DESCRIPTION": "Increase all numbers on cards in the Sequence by !M! except cost. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Increase all numbers on cards in the Sequence by !M! except cost. NL Exhaust."
+    "DESCRIPTION": "Increase all numbers on Encoded cards by !M! except cost. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Increase all numbers on Encoded cards by !M! except cost. NL Exhaust."
   },
   "bronze:CleanCode": {
     "NAME": "Clean Code",
-    "DESCRIPTION": "Remove all bronze:Compile *Error effects from cards in the Sequence. NL Lasts for the next !M! Functions created."
+    "DESCRIPTION": "Remove all bronze:Compile *Error effects from Encoded cards. NL Lasts for the next !M! Functions created."
   },
   "bronze:BranchBlock": {
     "NAME": "Branch: Block",
@@ -615,15 +615,15 @@
   },
   "bronze:FindAndReplace": {
     "NAME": "Find and Replace",
-    "DESCRIPTION": "Ethereal. NL Fetch a card from your draw or discard pile. NL Add a *Dazed where it was. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Fetch a card from your draw or discard pile. NL Exhaust.",
+    "DESCRIPTION": "Fetch a card from your draw or discard pile. NL Add a *Dazed where it was. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Fetch a card from your draw or discard pile. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose."
     ]
   },
   "bronze:ThunderWave": {
     "NAME": "Thunder Wave",
-    "DESCRIPTION": "Deal !D! damage to a ALL enemies. NL Gain 1 Buffer. NL Exhaust.",
+    "DESCRIPTION": "Deal !D! damage to a ALL enemies. NL Gain 1 guardianmod:Buffer. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " times.)"

@@ -103,7 +103,7 @@
     "DESCRIPTIONS": [
       "Whenever you draw a Function, increase all numbers on it by #b1.",
       "Whenever you draw a Function, increase all numbers on it by #b",
-      "."
+      " except for cost."
     ]
   },
   "bronze:FreeFunction": {
@@ -117,8 +117,8 @@
   "bronze:CleanCode": {
     "NAME": "Clean Code",
     "DESCRIPTIONS": [
-      "Remove all #yCompile Error effects from cards in the Sequence. Lasts for #b1 more Function.",
-      "Remove all #yCompile Error effects from cards in the Sequence. Lasts for #b",
+      "Remove all #yCompile Error effects from Encoded cards. Lasts for #b1 more Function.",
+      "Remove all #yCompile Error effects from Encoded cards. Lasts for #b",
       " Functions."
     ]
   },
