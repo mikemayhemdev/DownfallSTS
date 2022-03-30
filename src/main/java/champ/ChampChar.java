@@ -208,7 +208,6 @@ public class ChampChar extends CustomPlayer {
         }
         retVal.add(BerserkersShout.ID);
         retVal.add(DefensiveShout.ID);
-        retVal.add(Taunt.ID);
         retVal.add(Execute.ID);
         return retVal;
     }

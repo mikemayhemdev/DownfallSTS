@@ -4,6 +4,7 @@ import champ.ChampChar;
 import champ.ChampMod;
 import champ.powers.CounterPower;
 import champ.powers.DefensiveStylePower;
+import champ.powers.DoubleStyleThisTurnPower;
 import champ.relics.DefensiveTrainingManual;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -46,6 +47,9 @@ public class DefensiveStance extends AbstractChampStance {
         int x = 4;
         if (AbstractDungeon.player.hasPower(DefensiveStylePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(DefensiveStylePower.POWER_ID).amount;
+        }
+        if (AbstractDungeon.player.hasPower(DoubleStyleThisTurnPower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(DoubleStyleThisTurnPower.POWER_ID).amount;
         }
         return x;
     }

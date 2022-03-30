@@ -56,7 +56,7 @@
   },
   "champ:ShieldSigil": {
     "NAME": "Chain Lash",
-    "DESCRIPTION": "Perform !M! times:"
+    "DESCRIPTION": "Deal !D! damage. NL This turn, your Skill Bonuses grant !M! more effect."
   },
   "champ:FocusedDefense": {
     "NAME": "Bob and Weave",
