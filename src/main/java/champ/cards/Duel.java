@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.combat.ClashEffect;
+import com.sun.org.apache.xpath.internal.objects.XBoolean;
 
 public class Duel extends AbstractChampCard {
 
@@ -19,16 +20,17 @@ public class Duel extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 3;
 
-    private static final int BLOCK = 7;
+    private static final int BLOCK = 8;
     private static final int UPG_BLOCK = 3;
 
     public Duel() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
+        tags.add(ChampMod.TECHNIQUE);
 
         postInit();
     }
@@ -57,8 +59,16 @@ public class Duel extends AbstractChampCard {
 
     @Override
     public void triggerOnGlowCheck() {
+        boolean hasStr = false;
         if (isInCombat()) {
-            glowColor = (monsterList().size() == 1) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+            for (AbstractMonster m:monsterList()){
+                if (m.hasPower(StrengthPower.POWER_ID)){
+                    hasStr=true;
+                    break;
+                }
+            }
+
+            glowColor = (hasStr) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
         }
     }
 
