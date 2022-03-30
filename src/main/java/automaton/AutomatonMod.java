@@ -330,7 +330,7 @@ public class AutomatonMod implements
                 InfiniteBeams.ID,
                 InfiniteLoop.ID,
 
-                Hardcode.ID,
+                FullRelease.ID,
                 Library.ID,
                 TinkerersToolbox.ID,
 

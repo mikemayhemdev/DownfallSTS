@@ -365,13 +365,8 @@
   },
   "champ:DefensiveStyle": {
     "NAME": "Defensive Style",
-<<<<<<< HEAD
-    "DESCRIPTION": "Enter champ:Defensive. NL champ:Fatigue 5. NL champ:Defensive *Skill *Bonuses grant !M! more champ:Counter.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Defensive. NL champ:Fatigue 5. NL champ:Defensive *Skill *Bonuses grant !M! more champ:Counter."
-=======
     "DESCRIPTION": "Enter champ:Defensive. NL champ:Defensive *Techniques grant !M! more champ:Counter.",
     "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Defensive. NL champ:Defensive *Techniques grant !M! more champ:Counter."
->>>>>>> 413152d59a8c548411f986ad464c2d74b4c5d3ec
   },
   "champ:GladiatorStyle": {
     "NAME": "Good Clean Fight",
@@ -379,13 +374,8 @@
   },
   "champ:BerserkerStyle": {
     "NAME": "Berserker Style",
-<<<<<<< HEAD
-    "DESCRIPTION": "Enter champ:Berserker. NL champ:Fatigue 5. NL champ:Berserker *Skill *Bonuses grant !M! more Vigor.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Berserker. NL champ:Fatigue 5. NL champ:Berserker *Skill *Bonuses grant !M! more Vigor."
-=======
     "DESCRIPTION": "Enter champ:Berserker. NL champ:Berserker champ:Techniques grant !M! more Vigor.",
     "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Berserker. NL champ:Berserker champ:Techniques grant !M! more Vigor."
->>>>>>> 413152d59a8c548411f986ad464c2d74b4c5d3ec
   },
   "champ:Riposte": {
     "NAME": "Riposte",
