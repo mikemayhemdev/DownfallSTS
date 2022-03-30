@@ -75,5 +75,13 @@
     ],
     "PROPER_NAME": "提防",
     "DESCRIPTION": "降低进入 #y防御模式 所需生命损失，需求变为 #b0 时进入 #y防御模式 。"
+  },
+  {
+    "NAMES": [
+      "降级",
+      "downgrade"
+    ],
+    "PROPER_NAME": "降级",
+    "DESCRIPTION": "移除一张牌的 升级 。"
   }
 ]
