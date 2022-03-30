@@ -28,8 +28,8 @@
   },
   "champ:SwordSigil": {
     "NAME": "Sigil of Victory",
-    "DESCRIPTION": "Counts as playing !cool! Skills. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Counts as playing !cool! Skills. NL Exhaust."
+    "DESCRIPTION": "Trigger your stance's Skill Bonus !M! times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Trigger your stance's Skill Bonus !M! times. NL Exhaust."
   },
   "champ:FaceSlap": {
     "NAME": "Face Slap",
@@ -170,8 +170,8 @@
   },
   "champ:IronFortress": {
     "NAME": "Technical Jig",
-    "DESCRIPTION": "Whenever you enter a Stance, trigger its champ:Technique effect.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you enter a Stance, trigger its champ:Technique effect."
+    "DESCRIPTION": "Whenever you enter a Stance, trigger its Skill Bonus.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you enter a Stance, trigger its Skill Bonus."
   },
   "champ:Lariat": {
     "NAME": "Lariat",
@@ -227,12 +227,12 @@
   },
   "champ:MurderStrike": {
     "NAME": "Murder Strike",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When you use a champ:Technique, this card deals !M! more damage."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When you play a Skill, this card deals !M! more damage."
   },
   "champ:HeavySlash": {
     "NAME": "Masterful Slash",
-    "DESCRIPTION": "Deal !D! damage. NL Gain a random champ:Technique. It costs 0.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a random Upgraded champ:Technique. It costs 0."
+    "DESCRIPTION": "Deal !D! damage. NL Gain a random Skill. It costs 0.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a random Upgraded Skill. It costs 0."
   },
   "champ:CheapShot": {
     "NAME": "Cheap Shot",
@@ -365,8 +365,8 @@
   },
   "champ:DefensiveStyle": {
     "NAME": "Defensive Style",
-    "DESCRIPTION": "Enter champ:Defensive. NL champ:Defensive *Techniques grant !M! more champ:Counter.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Defensive. NL champ:Defensive *Techniques grant !M! more champ:Counter."
+    "DESCRIPTION": "Enter champ:Defensive. NL champ:Defensive Skill Bonuses grant !M! more champ:Counter.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Defensive. NL champ:Defensive Skill Bonuses grant !M! more champ:Counter."
   },
   "champ:GladiatorStyle": {
     "NAME": "Good Clean Fight",
@@ -374,8 +374,8 @@
   },
   "champ:BerserkerStyle": {
     "NAME": "Berserker Style",
-    "DESCRIPTION": "Enter champ:Berserker. NL champ:Berserker champ:Techniques grant !M! more Vigor.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Berserker. NL champ:Berserker champ:Techniques grant !M! more Vigor."
+    "DESCRIPTION": "Enter champ:Berserker. NL champ:Berserker Skill Bonuses grant !M! more Vigor.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Berserker. NL champ:Berserker Skill Bonuses grant !M! more Vigor."
   },
   "champ:Riposte": {
     "NAME": "Riposte",
