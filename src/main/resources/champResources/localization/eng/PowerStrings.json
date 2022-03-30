@@ -202,7 +202,7 @@
     "NAME": "Boomerang",
     "DESCRIPTIONS": [
       "At the start of your next turn, return ",
-      " to your hand. It costs #b0 until played."
+      " to your hand. It costs #b0 and no longer returns."
     ]
   },
   "champ:ResolvePower": {

@@ -14,11 +14,11 @@ public class DeathBlow extends AbstractChampCard {
 
     public DeathBlow() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL);
-        baseDamage = 20;
-        baseMagicNumber = magicNumber = 20;
+        baseDamage = 15;
+        baseMagicNumber = magicNumber = 10;
         isMultiDamage = true;
-        myHpLossCost = 10;
-        tags.add(ChampMod.FINISHER);
+       // myHpLossCost = 10;
+       // tags.add(ChampMod.FINISHER);
         postInit();
         exhaust = true;
     }
@@ -26,8 +26,8 @@ public class DeathBlow extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         allDmg(AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         vigor(magicNumber);
-        fatigue(10);
-        finisher();
+       // fatigue(10);
+      //  finisher();
     }
 
     public void upp() {

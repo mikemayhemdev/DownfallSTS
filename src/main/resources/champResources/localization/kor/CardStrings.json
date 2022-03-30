@@ -259,7 +259,7 @@
   "champ:AdrenalArmor": {
     "NAME": "흉갑",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL *광폭화 champ:연계: 이 카드를 2번 사용합니다.",
-    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL *광폭화 champ:연계: 이 카드를 2번 사용합니다."
+    "EXTENDED_DESCRIPTION":  ["방어도를 !B! 얻습니다. NL *광폭화 champ:연계: 이 카드를 2번 사용합니다."]
   },
   "champ:HeartStrike": {
     "NAME": "마무리 짓기",
@@ -271,7 +271,8 @@
   },
   "champ:CrownThrow": {
     "NAME": "왕관 부메랑",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 버린 카드 더미에서 카드를 1장 선택해 뽑을 카드 더미 맨 위에 놓습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이 카드의 비용이 0이 아니라면 다음 턴에 손에 가져옵니다. 그 카드의 비용은 사용하기 전까지 0이 됩니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. "
   },
   "champ:Encircle": {
     "NAME": "포위",

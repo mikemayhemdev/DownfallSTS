@@ -270,7 +270,8 @@
   },
   "champ:CrownThrow": {
     "NAME": "投掷王冠",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 将弃牌堆中的一张牌放到抽牌堆顶部。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 如果耗能不为0， NL 下回合返回手牌。 NL 直到打出前的耗能为0。",
+    "EXTENDED_DESCRIPTION":  [" 造成 !D! 点伤害。"]
   },
   "champ:Encircle": {
     "NAME": "包围",

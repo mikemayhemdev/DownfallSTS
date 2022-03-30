@@ -5,7 +5,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.ChargeAction;
+import theHexaghost.actions.ChargeCurrentFlameAction;
 import theHexaghost.actions.ExtinguishAction;
+import theHexaghost.actions.ExtinguishCurrentFlameAction;
 
 public class SkipABeat extends AbstractHexaCard {
 
@@ -21,8 +23,8 @@ public class SkipABeat extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new ExtinguishAction(0));
-        atb(new ChargeAction(0));
+        atb(new ExtinguishCurrentFlameAction());
+        atb(new ChargeCurrentFlameAction());
     }
 
     public void upgrade() {

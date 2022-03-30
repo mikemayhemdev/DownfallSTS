@@ -271,7 +271,10 @@
   },
   "champ:CrownThrow": {
     "NAME": "Crownarang",
-    "DESCRIPTION": "Deal !D! damage. NL Put a card from your discard pile on top of your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Returns next turn with no cost and without this effect.",
+
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage."]
+
   },
   "champ:Encircle": {
     "NAME": "Encircle",
@@ -299,7 +302,7 @@
   },
   "champ:DeathBlow": {
     "NAME": "Death Blow",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !M! Vigor. NL champ:Fatigue 10. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !M! Vigor. NL Exhaust."
   },
   "champ:ArenaPreparation": {
     "NAME": "Arena Preparation",

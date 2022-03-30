@@ -16,8 +16,8 @@ public class GhostflameBarrier extends AbstractHexaCard {
     private static final int BLOCK = 12;
     private static final int UPG_BLOCK = 4;
 
-    private static final int MAGIC = 4;
-    private static final int UPG_MAGIC = 2;
+    private static final int MAGIC = 6;
+    private static final int UPG_MAGIC = 3;
 
     public GhostflameBarrier() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
