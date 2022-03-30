@@ -40,7 +40,7 @@ public class ArchetypeAct3ShivsNewAge extends ArchetypeBaseSilent {
 
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_FusionHammer());
-        addRelic(new CBR_Vajra());
+        addRelic(new CBR_MummifiedHand());
         addRelic(new CBR_Shuriken());
         addRelic(new CBR_OrnamentalFan());
 
@@ -86,9 +86,13 @@ public class ArchetypeAct3ShivsNewAge extends ArchetypeBaseSilent {
                     break;
                 case 4:
                     //Turn 4
-                    addToList(cardsList, new EnInfiniteBlades());
+                    addToList(cardsList, new EnPiercingWail());
                     addToList(cardsList, new EnAfterImage());
-                    addToList(cardsList, new EnDash());
+                    AbstractBossCard c = new EnDash();
+                    c.cost = 0;
+                    c.freeToPlayOnce = true;
+                    c.modifyCostForCombat(-2);
+                    addToList(cardsList, c);
                     turn = 0;
                     looped = true;
                     break;
@@ -111,14 +115,14 @@ public class ArchetypeAct3ShivsNewAge extends ArchetypeBaseSilent {
                     break;
                 case 1:
                     //Turn 4
-                    addToList(cardsList, new EnShiv());
+//                    addToList(cardsList, new EnShiv());
                     addToList(cardsList, new EnPredator());
                     addToList(cardsList, new EnDaggerSpray());
                     addToList(cardsList, new EnDefendGreen());
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnShiv());
+//                    addToList(cardsList, new EnShiv());
                     addToList(cardsList, new EnFlyingKnee());
                     addToList(cardsList, new EnFlechettes());
                     addToList(cardsList, new EnFinisher(3), extraUpgrades);
@@ -127,7 +131,7 @@ public class ArchetypeAct3ShivsNewAge extends ArchetypeBaseSilent {
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnShiv());
+//                    addToList(cardsList, new EnShiv());
                     addToList(cardsList, new EnDash());
                     addToList(cardsList, new EnNeutralize());
                     addToList(cardsList, new EnBladeDance());

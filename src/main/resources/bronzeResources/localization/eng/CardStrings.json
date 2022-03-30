@@ -276,7 +276,7 @@
   },
   "bronze:NullPointer": {
     "NAME": "Null Pointer",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL bronze:Compile *Error - Function is Unplayable.",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Compile *Error - Function is Unplayable.",
     "EXTENDED_DESCRIPTION": [
       "null",
       "Pointer"
