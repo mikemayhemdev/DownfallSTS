@@ -112,7 +112,7 @@
   },
   "expansioncontent:SlimeTackle": {
     "NAME": "Slime Tackle",
-    "DESCRIPTION": "expansioncontent:Boss - Slime. NL Deal !D! damage and 3 damage to yourself. NL Exhaust."
+    "DESCRIPTION": "expansioncontent:Boss - Slime. NL Deal !D! damage. NL Take 3 damage. NL Exhaust."
   },
   "expansioncontent:StudyTheSpire": {
     "NAME": "Study the Spire",

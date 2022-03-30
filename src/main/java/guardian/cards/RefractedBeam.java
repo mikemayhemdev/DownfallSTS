@@ -30,7 +30,7 @@ public class RefractedBeam extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 2;
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 3;
 
     //TUNING CONSTANTS
     private static final int MULTICOUNT = 4;
@@ -87,7 +87,7 @@ public class RefractedBeam extends AbstractGuardianCard {
 
         }
 
-        addToBot(new ModifyMagicNumberAction(this.uuid, -1));
+       // addToBot(new ModifyMagicNumberAction(this.uuid, -1));
     }
 
     public AbstractCard makeCopy() {

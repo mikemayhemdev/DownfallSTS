@@ -47,7 +47,7 @@ public class BolsteringGhostflame extends AbstractGhostflame {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
         atb(new VFXAction(AbstractDungeon.player, new InflameEffect(AbstractDungeon.player), 0.5F));// 194
-        atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
+        atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(1), 1));
         atb(new GainBlockAction(AbstractDungeon.player, x));
     }
 

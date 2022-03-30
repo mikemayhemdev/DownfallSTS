@@ -11,8 +11,8 @@
 
   "Gremlin:Astound": {
     "NAME": "Astound",
-    "DESCRIPTION": "Gain !B! Block. NL If you have 3 or more gremlin:Wiz, add !M! *Wards to your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you have 3 or more gremlin:Wiz, add !M! Upgraded *Wards to your hand."
+    "DESCRIPTION": "Gain !B! Block. NL If you have 3 or more gremlin:Wiz, gain !M! *Wards.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you have 3 or more gremlin:Wiz, gain !M! Upgraded *Wards."
   },
 
   "Gremlin:Bang": {
@@ -64,8 +64,8 @@
 
   "Gremlin:CounterStrike": {
     "NAME": "Counter Strike",
-    "DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, add !M! Wards to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, add !M! Upgraded Wards to your hand."
+    "DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, gain !M! Wards.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, gain !M! Upgraded Wards."
   },
 
   "Gremlin:CowerChoice": {
@@ -128,13 +128,13 @@
 
   "Gremlin:FairyDust": {
     "NAME": "Fairy Dust",
-    "DESCRIPTION": "Add !M! *Wards to your hand and draw !M! cards. NL Exhaust."
+    "DESCRIPTION": "Gain !M! *Wards and draw !M! cards. NL Exhaust."
   },
 
   "Gremlin:SleeveOfAces": {
     "NAME": "Sleeve Of Aces",
-    "DESCRIPTION": "Deal !D! damage. NL Add 1 Shiv to your hand for each stack of gremlin:Wiz you have.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add 1 Upgraded Shiv to your hand for each stack of gremlin:Wiz you have."
+    "DESCRIPTION": "Deal !D! damage. NL Gain 1 Shiv for each stack of gremlin:Wiz you have.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 1 Upgraded Shiv for each stack of gremlin:Wiz you have."
   },
 
   "Gremlin:FatGremlin": {
@@ -180,19 +180,19 @@
 
   "Gremlin:Glimmer": {
     "NAME": "Glimmer",
-    "DESCRIPTION": "Deal !D! damage. NL Add 2 *Wards to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add 2 Upgraded *Wards to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Gain 2 *Wards.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 Upgraded *Wards."
   },
 
   "Gremlin:GlitterGuard": {
     "NAME": "Glitter Guard",
-    "DESCRIPTION": "Add !M! *Wards to your hand. NL gremlin:Swap to gremlin:Shield_Gremlin.",
-    "UPGRADE_DESCRIPTION": "Add !M! Upgraded *Wards to your hand. NL gremlin:Swap to gremlin:Shield_Gremlin."
+    "DESCRIPTION": "Gain !M! *Wards. NL gremlin:Swap to gremlin:Shield_Gremlin.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Upgraded *Wards. NL gremlin:Swap to gremlin:Shield_Gremlin."
   },
 
   "Gremlin:GremlinArms": {
     "NAME": "Gremlin Arms",
-    "DESCRIPTION": "Add a random assortment of !M! Shivs and *Wards to your hand."
+    "DESCRIPTION": "Gain a random assortment of !M! Shivs and *Wards."
   },
 
   "Gremlin:GremlinMeal": {
@@ -210,8 +210,8 @@
 
   "Gremlin:GremlinOffensive": {
     "NAME": "Gremlin Offensive",
-    "DESCRIPTION": "Deal !D! damage. NL Add a *Gremlin *Offensive to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add an Upgraded *Gremlin *Offensive to your hand. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain a *Gremlin *Offensive. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain an Upgraded *Gremlin *Offensive. NL Exhaust."
   },
 
   "Gremlin:GremlinToss": {
@@ -233,8 +233,8 @@
 
   "Gremlin:InfiniteBlocks": {
     "NAME": "Infinite Blocks",
-    "DESCRIPTION": "At the start of your turn, add a *Ward to your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add a *Ward to your hand."
+    "DESCRIPTION": "At the start of your turn, gain a *Ward.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain a *Ward."
   },
 
   "Gremlin:IrksomeBlow": {
@@ -296,8 +296,8 @@
 
   "Gremlin:PartyStick": {
     "NAME": "Party Stick",
-    "DESCRIPTION": "Ethereal. Unplayable. NL Whenever you gremlin:Swap while this card is in your hand, gain [E]",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Whenever you gremlin:Swap while this card is in your hand, gain [E]",
+    "DESCRIPTION": "Ethereal. Unplayable. NL Whenever you gremlin:Swap, gain [E]",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Whenever you gremlin:Swap, gain [E]",
     "EXTENDED_DESCRIPTION": ["Nobody is allowed to play with the Party Stick."]
   },
 
@@ -320,7 +320,7 @@
   "Gremlin:Pinprick": {
     "NAME": "Pinprick",
     "DESCRIPTION": "Deal !D! damage. NL Draw a card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Whenever you draw this card, add an gremlin:Echo of it to your hand. NL Deal !D! damage. NL Draw a card. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Whenever you draw this card, gain an gremlin:Echo of it. NL Deal !D! damage. NL Draw a card. NL Exhaust."
   },
 
   "Gremlin:Polish": {
@@ -330,7 +330,7 @@
 
   "Gremlin:PourSalt": {
     "NAME": "Pour Salt",
-    "DESCRIPTION": "Deal !D! damage. If the enemy is Weak, remove a stack to add !M! Shivs to your hand."
+    "DESCRIPTION": "Deal !D! damage. If the enemy is Weak, remove a stack to gain !M! Shivs."
   },
 
   "Gremlin:Presto": {
@@ -345,7 +345,7 @@
 
   "Gremlin:ProperTools": {
     "NAME": "Proper Tools",
-    "DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, add !M! *Wards to your hand. Otherwise, add !M! Shivs to your hand."
+    "DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, gain !M! *Wards. Otherwise, add !M! Shivs to your hand."
   },
 
   "Gremlin:RageBreak": {

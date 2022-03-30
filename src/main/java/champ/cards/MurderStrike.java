@@ -14,24 +14,24 @@ public class MurderStrike extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, rare
 
-    private static final int DAMAGE = 15;
+    private static final int DAMAGE = 12;
 
     public MurderStrike() {
-        super(ID, 8, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         selfRetain = true;
-        exhaust = true;
+      //  exhaust = true;
         tags.add(CardTags.STRIKE);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
         postInit();
     }
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
         super.onPlayCard(c, m);
-        if (c.hasTag(ChampMod.TECHNIQUE) && AbstractDungeon.player.hand.group.contains(this)) {
+        if (c.type == CardType.SKILL && AbstractDungeon.player.hand.group.contains(this)) {
             {
-                updateCost(-1);
+              //  updateCost(-1);
                 baseDamage += magicNumber;
                 applyPowers();
                 superFlash(Color.RED.cpy());
@@ -45,14 +45,6 @@ public class MurderStrike extends AbstractChampCard {
     }
 
     public void upp() {
-        if (this.cost < 8) {
-            this.upgradeBaseCost(this.cost - 2);
-            if (this.cost < 0) {
-                this.cost = 0;
-            }
-        } else {
-            this.upgradeBaseCost(6);
-            this.upgradeDamage(6);
-        }
+        upgradeMagicNumber(2);
     }
 }

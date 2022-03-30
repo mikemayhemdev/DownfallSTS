@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.cards.red.Rampage;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class BurningQuestion extends AbstractHexaCard {
     public final static String ID = makeID("BurningQuestion");
@@ -16,24 +18,23 @@ public class BurningQuestion extends AbstractHexaCard {
     //ART:
 
     public BurningQuestion() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseDamage = 10;
         baseBlock = 10;
-        baseMagicNumber = magicNumber = 8;
+        baseMagicNumber = magicNumber = 3;
         isMultiDamage = true;
         isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
-        atb(new ModifyDamageAction(uuid, magicNumber));
+        applyToSelf(new StrengthPower(p,magicNumber));
     }
 
     @Override
     public void afterlife() {
         flash();
-        this.addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(this.baseDamage, true), DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE, true));
-    }
+        applyToSelf(new DexterityPower(AbstractDungeon.player,2));
+          }
 
 //    @Override
 //    public void calculateCardDamage(AbstractMonster mo) {
@@ -49,9 +50,7 @@ public class BurningQuestion extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(2);
-            upgradeBlock(2);
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
         }
     }
 }

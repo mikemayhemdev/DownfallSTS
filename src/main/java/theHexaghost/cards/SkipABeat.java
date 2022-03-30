@@ -5,7 +5,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.ChargeAction;
+import theHexaghost.actions.ChargeCurrentFlameAction;
 import theHexaghost.actions.ExtinguishAction;
+import theHexaghost.actions.ExtinguishCurrentFlameAction;
 
 public class SkipABeat extends AbstractHexaCard {
 
@@ -14,15 +16,15 @@ public class SkipABeat extends AbstractHexaCard {
     //stupid intellij stuff SKILL, SELF, UNCOMMON
 
     public SkipABeat() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         tags.add(HexaMod.GHOSTWHEELCARD);
-        exhaust = true;
+       // exhaust = true;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new ExtinguishAction(1));
-        atb(new ChargeAction(1));
+        atb(new ExtinguishCurrentFlameAction());
+        atb(new ChargeCurrentFlameAction());
     }
 
     public void upgrade() {

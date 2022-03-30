@@ -13,14 +13,12 @@ public class RageSigil extends AbstractChampCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 2;
         baseMagicNumber = magicNumber = 3;
-        tags.add(ChampMod.TECHNIQUE);
         postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         atb(new ScryAction(magicNumber));
-        techique();
     }
 
     public void upp() {

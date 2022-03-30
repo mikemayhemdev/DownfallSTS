@@ -35,7 +35,7 @@ public class ChampionCrown extends CustomRelic  {
     public void onChangeStance(AbstractStance prevStance, AbstractStance newStance) {
         if (!newStance.ID.equals(NeutralStance.STANCE_ID)) {
             flash();
-            addToBot(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, 4, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+            addToBot(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, 3, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
     }
 

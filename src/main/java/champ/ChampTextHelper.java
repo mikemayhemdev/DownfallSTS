@@ -16,6 +16,7 @@ public class ChampTextHelper {
     public static void calculateTagText(AbstractChampCard c) {
         String prefixTech = "";
         String prefixFin = "";
+        /*
         if (c.hasTag(TECHNIQUE)) {
             prefixTech = ChampChar.characterStrings.TEXT[29];
             if (AbstractDungeon.player != null) {
@@ -47,6 +48,8 @@ public class ChampTextHelper {
                 }
             }
         }
+        }
+         */
         if (c.hasTag(FINISHER)) {
             prefixFin = ChampChar.characterStrings.TEXT[34];
             if (AbstractDungeon.player != null) {

@@ -153,11 +153,11 @@
   },
   "sneckomod:ImprovisedAttack": {
     "NAME": "Improvised Attack",
-    "DESCRIPTION": "Deal !D! damage. NL Add a random sneckomod:Offclass Attack into your hand and sneckomod:Muddle it."
+    "DESCRIPTION": "Deal !D! damage. NL Gain a random sneckomod:Offclass Attack and sneckomod:Muddle it."
   },
   "sneckomod:ImprovisedGuard": {
     "NAME": "Improvised Guard",
-    "DESCRIPTION": "Gain !B! Block. NL Add a random sneckomod:Offclass Skill into your hand and sneckomod:Muddle it."
+    "DESCRIPTION": "Gain !B! Block. NL Gain a random sneckomod:Offclass Skill and sneckomod:Muddle it."
   },
   "sneckomod:QuickMove": {
     "NAME": "Quick Move",
@@ -220,7 +220,7 @@
   },
   "sneckomod:SerpentIdol": {
     "NAME": "Serpent Idol",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Choose 1 of 3 random sneckomod:Offclass cards to add into your hand. NL It costs 0 this turn. NL Exhaust."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Choose 1 of 3 random sneckomod:Offclass cards to gain. It costs 0 this turn. NL Exhaust."
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "Trash to Treasure",

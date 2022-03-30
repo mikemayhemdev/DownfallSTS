@@ -15,7 +15,7 @@ public class FastForward extends AbstractHexaCard {
     //stupid intellij stuff SKILL, SELF, COMMON
 
     public FastForward() {
-        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);

@@ -307,7 +307,7 @@
   "downfall:HermitDoomsday": {
     "NAME": "Doomsday",
     "DESCRIPTIONS": [
-      "At the start of your turn, add an #yEthereal #rImpending #rDoom into your hand."
+      "At the start of your turn, Gain an #yEthereal #rImpending #rDoom."
     ]
   },
   "downfall:NeowEclipse": {
@@ -338,6 +338,12 @@
       " ",
       ".",
       "LOCALIZATION NOTE: Please keep the space after 'Next Turn' in the NAME field."
+    ]
+  },
+  "downfall:NeowStayAt1Hp": {
+    "NAME": "Unkillable",
+    "DESCRIPTIONS": [
+      "Damage cannot reduce Neow below #b1 HP. Neow will heal to full and enter a new phase instead."
     ]
   }
 }

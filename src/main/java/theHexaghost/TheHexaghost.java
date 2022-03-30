@@ -205,7 +205,7 @@ public class TheHexaghost extends CustomPlayer {
         }
         retVal.add(Sear.ID);
         retVal.add(Float.ID);
-        retVal.add(FastForward.ID);
+        retVal.add(SkipABeat.ID);
         return retVal;
     }
 

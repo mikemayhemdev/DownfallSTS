@@ -87,7 +87,7 @@
     "NAME": "Stolen Merchandise",
     "FLAVOR": "\"Blasted, thieving Gremlins!\".",
     "DESCRIPTIONS": [
-      "Whenever you #ySwap, add an #yEcho of a random Colorless card to your hand. NL At the start of combat, the Merchant gains #b",
+      "Whenever you #ySwap, gain an #yEcho of a random Colorless card. NL At the start of combat, the Merchant gains #b",
       " Strength.",
       "You no good, blasted, thieves!",
       "You cowardly, wretched vermin!",
@@ -98,7 +98,7 @@
     "NAME": "Supply Scroll",
     "FLAVOR": "A surprisingly detailed inventory of the mob's various bits and bobbles.",
     "DESCRIPTIONS": [
-      "At the start of your 3rd turn, add a random assortment of 4 #yShivs and #yWards to your hand."
+      "At the start of your 3rd turn, gain a random assortment of 4 #yShivs and #yWards."
     ]
   },
   "Gremlin:TagTeamwork": {

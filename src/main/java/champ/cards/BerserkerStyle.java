@@ -19,13 +19,13 @@ public class BerserkerStyle extends AbstractChampCard {
         this.tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERBERSERKER);
         baseMagicNumber = magicNumber = 2;
-        myHpLossCost = 5;
+       // myHpLossCost = 5;
         postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         berserkOpen();
-        fatigue(5);
+     //   fatigue(5);
         applyToSelf(new BerserkerStylePower(magicNumber));
     }
 

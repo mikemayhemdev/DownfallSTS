@@ -38,8 +38,8 @@
   },
   "expansioncontent:PolyBeam": {
     "NAME": "Donu Blast",
-    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. Increase this card's damage by !M!. NL Next turn, add a *Deca *Shield into your hand, or expansioncontent:Exhume it. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. Increase this card's damage by !M!. NL Next turn, add a *Deca *Shield+ into your hand, or expansioncontent:Exhume it. NL Exhaust."
+    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. Increase this card's damage by !M!. NL Next turn, gain a *Deca *Shield, or expansioncontent:Exhume it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. Increase this card's damage by !M!. NL Next turn, gain a *Deca *Shield+, or expansioncontent:Exhume it. NL Exhaust."
   },
   "expansioncontent:DecaShield": {
     "NAME": "Deca Shield",
@@ -58,8 +58,8 @@
   },
   "expansioncontent:QuickStudy": {
     "NAME": "Quick Study",
-    "DESCRIPTION": "Choose 1 of 3 expansioncontent:Boss cards. NL Add it into your hand. NL It costs 0 until played. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Upgraded expansioncontent:Boss cards. NL Add it into your hand. NL It costs 0 until played. NL Exhaust.",
+    "DESCRIPTION": "Choose 1 of 3 expansioncontent:Boss cards to gain. NL It costs 0 until played. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Upgraded expansioncontent:Boss cards to gain. NL It costs 0 until played. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose a Boss card."
     ]

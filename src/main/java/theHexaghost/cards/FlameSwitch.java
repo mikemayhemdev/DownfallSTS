@@ -17,6 +17,7 @@ import theHexaghost.actions.RetractAction;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.BolsteringGhostflame;
 import theHexaghost.ghostflames.CrushingGhostflame;
+import theHexaghost.ghostflames.SearingGhostflame;
 
 import java.util.ArrayList;
 
@@ -43,6 +44,7 @@ public class FlameSwitch extends AbstractHexaCard implements OctopusCard {
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
         cardList.add(new OctoChoiceCard("octo:OctoCrush", this.name, HexaMod.makeCardPath("FlameSwitch.png"), this.EXTENDED_DESCRIPTION[1]));
         cardList.add(new OctoChoiceCard("octo:OctoEmpower", this.name, HexaMod.makeCardPath("FlameSwitch.png"), this.EXTENDED_DESCRIPTION[0]));
+        cardList.add(new OctoChoiceCard("octo:OctoSear", this.name, HexaMod.makeCardPath("FlameSwitch.png"), this.EXTENDED_DESCRIPTION[2]));
 
         return cardList;
     }
@@ -69,6 +71,18 @@ public class FlameSwitch extends AbstractHexaCard implements OctopusCard {
                         //  HexaMod.renderFlames = true;
                         isDone = true;
                         AbstractGhostflame gf = new BolsteringGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
+                        GhostflameHelper.hexaGhostFlames.set(GhostflameHelper.hexaGhostFlames.indexOf(GhostflameHelper.activeGhostFlame), gf);
+                        gf.activate();
+                    }
+                });
+                break;
+            case "octo:OctoSear":
+                atb(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        //  HexaMod.renderFlames = true;
+                        isDone = true;
+                        AbstractGhostflame gf = new SearingGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
                         GhostflameHelper.hexaGhostFlames.set(GhostflameHelper.hexaGhostFlames.indexOf(GhostflameHelper.activeGhostFlame), gf);
                         gf.activate();
                     }

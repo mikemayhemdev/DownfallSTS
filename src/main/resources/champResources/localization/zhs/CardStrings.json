@@ -237,7 +237,7 @@
   },
   "champ:CrownThrow": {
     "NAME": "投掷王冠",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 若耗能不为0，下回合将耗能为0的本牌返回手牌。",
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 若耗能不为0，下回合将下次耗能为0的本牌返回手牌。",
     "EXTENDED_DESCRIPTION": ["造成 !D! 点伤害。"]
   },
   "champ:Encircle": {

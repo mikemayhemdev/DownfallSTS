@@ -20,20 +20,27 @@ public class Taunt extends AbstractChampCard {
     //stupid intellij stuff ATTACK, ENEMY, STARTER
 
     public Taunt() {
-        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.ENEMY);
-        tags.add(ChampMod.TECHNIQUE);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         //tags.add(ChampMod.OPENER);
         this.magicNumber = this.baseMagicNumber = 1;
-        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToEnemy(m, autoWeak(m, this.magicNumber));
-        applyToEnemy(m, autoVuln(m, 1));
-        techique();
+        if (!upgraded) {
+            applyToEnemy(m, autoWeak(m, 1));
+            applyToEnemy(m, autoVuln(m, 1));
+        }
+        else {
+           AbstractDungeon.getMonsters().monsters.stream().filter(m2 -> !m2.isDead && !m2.isDying).forEach(m2 -> {
+               applyToEnemy(m2, autoWeak(m2, 1));
+               applyToEnemy(m2, autoVuln(m2, 1));
+           });
+        }
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
+        target = CardTarget.ALL_ENEMY;
     }
 }

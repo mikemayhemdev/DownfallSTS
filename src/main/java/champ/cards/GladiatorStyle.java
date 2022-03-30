@@ -17,21 +17,26 @@ public class GladiatorStyle extends AbstractChampCard {
     //stupid intellij stuff power, self, uncommon
 
     public GladiatorStyle() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
        // this.tags.add(ChampMod.OPENER);
-        baseMagicNumber = magicNumber = myHpLossCost = 20;
+      baseMagicNumber = magicNumber = 2;
        // this.tags.add(ChampMod.OPENERGLADIATOR);
         postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        fatigue(magicNumber);
-        applyToSelf(new StrengthPower(p, 2));
-        applyToSelf(new DexterityPower(p, 2));
+
+        applyToSelf(new StrengthPower(p, magicNumber));
+       // applyToSelf(new DexterityPower(p, 2));
+        for (AbstractMonster q : monsterList()) {
+            applyToEnemy(q, new StrengthPower(q, magicNumber));
+            //applyToEnemy(q, new DexterityPower(q, 2));
+        }
+
     }
 
     public void upp() {
-        upgradeMagicNumber(-10);
+        upgradeMagicNumber(1);
         myHpLossCost = magicNumber;
     }
 }

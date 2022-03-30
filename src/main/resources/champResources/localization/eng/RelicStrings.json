@@ -3,7 +3,7 @@
     "NAME": "Champion's Crown",
     "FLAVOR": "A WINNER IS YOU!",
     "DESCRIPTIONS": [
-      "Whenever you enter a #yStance, deal #b4 damage to a random enemy."
+      "Whenever you enter a #yStance, deal #b3 damage to a random enemy."
     ]
   },
   "champ:BlackKnightHelmet": {
@@ -89,7 +89,7 @@
     "NAME": "Spectre's Hand",
     "FLAVOR": "Some victories stay with you.",
     "DESCRIPTIONS": [
-      "Whenever you Enter a Stance, add a #yStrike or #yDefend to your hand. It costs #b0 and has #yExhaust."
+      "Whenever you Enter a Stance, gain a #yStrike or #yDefend. It costs #b0 and has #yExhaust."
     ]
   },
   "champ:LiftRelic": {

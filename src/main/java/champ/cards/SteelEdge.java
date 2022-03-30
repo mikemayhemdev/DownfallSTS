@@ -38,14 +38,24 @@ public class SteelEdge extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new EasyXCostAction(this, (effect, params) -> {
-            if (bcombo())
-            for (int i = 0; i < effect; i++) {
-                dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+            if (bcombo()) {
+                for (int i = 0; i < effect; i++) {
+                    dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+                }
+                if (upgraded){
+
+                    dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+                }
             }
-            if (dcombo())
+            if (dcombo()) {
                 for (int i = 0; i < effect; i++) {
                     blck();
                 }
+
+                if (upgraded){
+                    blck();
+                }
+            }
             return true;
         }));
     }
@@ -56,7 +66,7 @@ public class SteelEdge extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
-        upgradeBlock(3);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

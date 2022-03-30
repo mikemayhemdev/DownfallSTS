@@ -70,17 +70,13 @@ public abstract class AbstractChampStance extends AbstractStance {
 
     public void techique() {
         technique();
-        for (AbstractPower q : AbstractDungeon.player.powers) {
-            if (q instanceof OnTechniqueSubscriber) {
-                ((OnTechniqueSubscriber) q).onTechnique();
-            }
+    }
+
+    @Override
+    public void onPlayCard(AbstractCard card) {
+        if (card.type == AbstractCard.CardType.SKILL) {
+            technique();
         }
-        for (AbstractCard r : AbstractDungeon.player.hand.group) {
-            if (r instanceof OnTechniqueSubscriber) {
-                ((OnTechniqueSubscriber) r).onTechnique();
-            }
-        }
-        ChampMod.techniquesThisTurn++;
     }
 
     public abstract void technique();

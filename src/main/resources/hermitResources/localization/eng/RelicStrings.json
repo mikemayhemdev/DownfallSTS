@@ -3,7 +3,7 @@
     "NAME": "Old Locket",
     "FLAVOR": "There's a faded picture inside.",
     "DESCRIPTIONS": [
-      "At the start of each combat, add a #yMemento into your hand."
+      "At the start of each combat, gain a #yMemento."
     ]
   },
   "hermit:RyeStalk": {

@@ -6,7 +6,11 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -16,7 +20,10 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
+import theHexaghost.actions.ExtinguishAction;
 import theHexaghost.actions.GreenFlameAction;
+import theHexaghost.powers.ApocalypticArmorPower;
+import theHexaghost.powers.EnhancePower;
 import theHexaghost.util.OnChargeSubscriber;
 import downfall.util.TextureLoader;
 import theHexaghost.vfx.MyOrb;
@@ -67,6 +74,22 @@ public abstract class AbstractGhostflame {
 
     }
 
+    private void DoomsdayCheck(int amount) {
+        if (AbstractDungeon.player.hasPower(ApocalypticArmorPower.POWER_ID)) {
+            AbstractPower Doom = null;
+            int a = 0;
+            //Get the highest Doomsday that would trigger
+            for (AbstractPower p : AbstractDungeon.player.powers) {
+                if (p instanceof ApocalypticArmorPower) {
+                    if (p.amount <= amount && p.amount > a)
+                        Doom = p;
+                }
+            }
+            //Trigger it
+            if (Doom != null)
+                Doom.onSpecificTrigger();
+        }
+    }
     public void advanceTriggerAnim() {
         if (getActiveFlamesTriggerCount() <= 2) {
             animAlphaBySlot[getActiveFlamesTriggerCount()] = AbstractGhostflame.whiteOverlayTimer;
@@ -101,6 +124,15 @@ public abstract class AbstractGhostflame {
                 }
             }
             reset();
+            int amountOfIgnitedGhostflames = 0;
+            for (int j = GhostflameHelper.hexaGhostFlames.size() - 1; j >= 0; j--) {
+                AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(j);
+                if (gf.charged) {
+                     amountOfIgnitedGhostflames++;
+                }
+            }
+
+            DoomsdayCheck(amountOfIgnitedGhostflames);
         }
     }
 

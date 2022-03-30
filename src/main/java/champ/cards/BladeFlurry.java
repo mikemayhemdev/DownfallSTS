@@ -25,8 +25,6 @@ public class BladeFlurry extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
-        tags.add(ChampMod.TECHNIQUE);
-        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -38,8 +36,6 @@ public class BladeFlurry extends AbstractChampCard {
         atb(new DamageAction(m, makeInfo(), AbstractGameAction.AttackEffect.NONE));
 
         applyToSelf(new DualPlaySrikePower(p,1));
-
-        techique();
     }
 
 

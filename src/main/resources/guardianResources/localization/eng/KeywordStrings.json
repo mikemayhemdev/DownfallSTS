@@ -73,5 +73,12 @@
     ],
     "PROPER_NAME": "Brace",
     "DESCRIPTION": "Reduce the HP loss required to trigger Mode Shift by X, triggering Mode Shift if the HP loss required is now 0."
+  },
+  {
+    "NAMES": [
+      "downgrade"
+    ],
+    "PROPER_NAME": "Downgrade",
+    "DESCRIPTION": "Remove an upgrade from a card."
   }
 ]

@@ -17,9 +17,9 @@
   "Guardian:FloatingOrbsPower": {
     "NAME": "Floating Orbs",
     "DESCRIPTIONS": [
-      "At the start of your turn, add an #yOrb #ySlam to your hand.",
-      "At the start of your turn, add #b",
-      " #yOrb #ySlams to your hand."
+      "At the start of your turn, gain an #yOrb #ySlam.",
+      "At the start of your turn, gain #b",
+      " #yOrb #ySlams."
     ]
   },
   "Guardian:OrbwalkPower": {

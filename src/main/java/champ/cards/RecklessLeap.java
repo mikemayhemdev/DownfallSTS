@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class RecklessLeap extends AbstractChampCard {
 
@@ -24,22 +26,19 @@ public class RecklessLeap extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         //myHpLossCost = MAGIC;
-        tags.add(ChampMod.TECHNIQUE);
         tags.add(CardTags.STRIKE);
-        postInit();
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
-        for (int i = 0; i < magicNumber; i++) {
-            if (AbstractDungeon.player.stance instanceof AbstractChampStance)
-                ((AbstractChampStance) AbstractDungeon.player.stance).techique();
-        }
+        applyToSelf(new StrengthPower(p, 2));
+        applyToSelf(new DexterityPower(p, -1));
     }
 
     public void upp() {
-        upgradeDamage(UPG_DAMAGE);
-        upgradeMagicNumber(UPG_MAGIC);
-       // myHpLossCost = magicNumber;
+        exhaust = false;
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

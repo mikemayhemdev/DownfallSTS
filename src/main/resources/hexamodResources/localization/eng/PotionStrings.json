@@ -16,9 +16,9 @@
   "hexamod:EctoCoolerPotion": {
     "NAME": "Ecto-Cooler",
     "DESCRIPTIONS": [
-      "Choose #b1 of #b3 random #yEthereal cards from any class to add to your hand. It costs #b0 this turn.",
-      "Choose #b1 of #b3 random #yEthereal cards from any class and add #b",
-      " copies to your hand. They cost #b0 this turn."
+      "Choose #b1 of #b3 random #yEthereal cards from any class to gain. It costs #b0 this turn.",
+      "Choose #b1 of #b3 random #yEthereal cards from any class and gain #b",
+      " copies. They cost #b0 this turn."
     ]
   },
   "hexamod:InfernoChargePotion": {

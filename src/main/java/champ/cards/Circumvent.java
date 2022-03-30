@@ -31,7 +31,7 @@ public class Circumvent extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         //  techique();
         blck();
-        if (dcombo()) {
+        if (dcombo() || bcombo()) {
             atb(new DrawCardAction(magicNumber));
         }
     }

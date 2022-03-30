@@ -22,8 +22,8 @@ public class BronzeOrb extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 6;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 8;
+    private static final int UPG_DAMAGE = 4;
 
     private static final int BLOCK = 6;
     private static final int UPG_BLOCK = 3;
@@ -31,7 +31,7 @@ public class BronzeOrb extends AbstractBronzeCard {
     public BronzeOrb() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseBlock = BLOCK;
+     //   baseBlock = BLOCK;
         exhaust = true;
         isInnate = true;
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("BronzeOrb.png"));
@@ -39,7 +39,7 @@ public class BronzeOrb extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new BronzeOrbEffect(p, m), 0.5F));
-        blck();
+      //  blck();
         dmg(m, AbstractGameAction.AttackEffect.NONE);
         atb(new AbstractGameAction() {
             @Override
@@ -61,6 +61,6 @@ public class BronzeOrb extends AbstractBronzeCard {
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
-        upgradeBlock(UPG_BLOCK);
+      //  upgradeBlock(UPG_BLOCK);
     }
 }

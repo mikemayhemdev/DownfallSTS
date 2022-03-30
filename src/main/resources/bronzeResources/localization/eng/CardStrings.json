@@ -256,7 +256,7 @@
   },
   "bronze:GetLatest": {
     "NAME": "Get Latest",
-    "DESCRIPTION": "Add a random card with bronze:Encode to your hand. NL It costs 0. NL Exhaust."
+    "DESCRIPTION": "Gain a random card with bronze:Encode. It costs 0. NL Exhaust."
   },
   "bronze:Flail": {
     "NAME": "Flail",
@@ -292,7 +292,7 @@
   },
   "bronze:BronzeOrb": {
     "NAME": "Bronze Orb",
-    "DESCRIPTION": "Innate. NL Gain !B! Block. NL Deal !D! damage. NL bronze:Encode a random card with bronze:Encode in your draw pile. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Deal !D! damage. NL bronze:Encode a random card with bronze:Encode in your draw pile. NL Exhaust."
   },
   "bronze:Virus": {
     "NAME": "Virus",
@@ -344,8 +344,8 @@
   },
   "bronze:InfiniteBeams": {
     "NAME": "Infinite Beams",
-    "DESCRIPTION": "At the start of each turn, add a *Minor *Beam to your hand.",
-    "UPGRADE_DESCRIPTION": "At the start of each turn, add a *Minor *Beam+ to your hand."
+    "DESCRIPTION": "At the start of each turn, gain a *Minor *Beam.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, gain a *Minor *Beam+."
   },
   "bronze:Optimize": {
     "NAME": "Optimize",
@@ -357,8 +357,8 @@
   },
   "bronze:Mutator": {
     "NAME": "Mutator",
-    "DESCRIPTION": "Gain 1 Strength. NL Transform a Status in your hand into a copy of this.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain 1 Strength. NL Transform a Status in your hand into a copy of this."
+    "DESCRIPTION": "Gain 1 Strength. NL Transform a Status into a copy of this.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain 1 Strength. NL Transform a Status into a copy of this."
   },
   "bronze:Allocate": {
     "NAME": "Allocate",
@@ -470,8 +470,8 @@
   },
   "bronze:InfiniteLoop": {
     "NAME": "Infinite Loop",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a copy of this into your hand and increase its damage by !M!.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL bronze:Compile - Add a copy of this into your hand and increase its damage by !M!.",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Gain a copy of this and increase its damage by !M!.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL bronze:Compile - Gain a copy of this and increase its damage by !M!.",
     "EXTENDED_DESCRIPTION": [
       "infinite",
       "Loop"
@@ -479,7 +479,7 @@
   },
   "bronze:Library": {
     "NAME": "Library",
-    "DESCRIPTION": "At the start of your turn, add a random card with bronze:Encode to your hand. NL It costs 0."
+    "DESCRIPTION": "At the start of your turn, gain a random card with bronze:Encode. NL It costs 0."
   },
   "bronze:Verify": {
     "NAME": "Sentient Form",
@@ -597,8 +597,8 @@
   },
   "bronze:BugBarrage": {
     "NAME": "Bug Barrage",
-    "DESCRIPTION": "Add 1 *Wound to your hand. NL bronze:Cycle each Status in your hand, dealing !D! damage for each.",
-    "UPGRADE_DESCRIPTION": "Add !M! *Wounds to your hand. NL bronze:Cycle each Status in your hand, dealing !D! damage for each.",
+    "DESCRIPTION": "Gain 1 *Wound. NL bronze:Cycle each Status, dealing !D! damage for each.",
+    "UPGRADE_DESCRIPTION": "Gain !M! *Wounds. NL bronze:Cycle each Status, dealing !D! damage for each.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " times.)"
