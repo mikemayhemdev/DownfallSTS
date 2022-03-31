@@ -3,7 +3,7 @@
     "NAME": "Champion's Crown",
     "FLAVOR": "A WINNER IS YOU!",
     "DESCRIPTIONS": [
-      "Whenever you enter a #yStance, deal #b3 damage to a random enemy."
+      "At the start of combat, gain [E] and enter #bDefensive or #rBerserker Stance."
     ]
   },
   "champ:BlackKnightHelmet": {
