@@ -95,7 +95,7 @@
   "downfall:SilentShivTimeEaterPower": {
     "NAME": "칼날 꾸러미",
     "DESCRIPTIONS": [
-      "매 턴 내가 비용이 #b2 이상인 카드를 처음으로 사용하면 2번까지 사일런트가 #y단도를 2장 얻습니다."
+      "매 턴 내가 비용이 #b2 이상인 카드를 처음으로 사용하면 사일런트가 #y단도를 2장 얻습니다."
       ]
   },
   "downfall:NeowBagOfKnives": {
@@ -168,13 +168,13 @@
   "downfall:IroncladStatusPower": {
     "NAME": "아픔 나누기",
     "DESCRIPTIONS": [
-      "아이언클래드가 #y상태이상 카드를 생성할 때마다 동일한 카드를 내 버린 카드 더미에 섞어 넣습니다."
+      "아이언클래드가 #y상태이상을 생성할 때마다 동일한 카드를 내 버린 카드 더미에 섞어 넣습니다."
     ]
   },
   "downfall:NeowSyncronize": {
     "NAME": "고통 나누기",
     "DESCRIPTIONS": [
-      "매 턴 니오우는 무작위 #y상태이상 카드를 1장 내 버린 카드더미에 섞어 넣습니다."
+      "매 턴 니오우는 무작위 #y상태이상을 1장 내 버린 카드더미에 섞어 넣습니다."
     ]
   },
   "downfall:IroncladMushroomPower": {
