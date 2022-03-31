@@ -123,8 +123,8 @@
   },
   "champ:ShieldThrow": {
     "NAME": "爆甲",
-    "DESCRIPTION": " 获得 !B! 点 格挡 。 NL 造成你当前 格挡 值的伤害。 NL 除非 champ:防守 champ:连段 ：获得 !M! 层 脆弱 。",
-    "UPGRADE_DESCRIPTION": " NL （造成 !D! 点伤害。）"
+    "DESCRIPTION": "造成你当前 格挡 值点伤害两次。 NL 获得2层 脆弱 。 NL champ:防守 champ:连段 ：失去 2 层 脆弱 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害两次。 NL 获得2层 脆弱 。 NL champ:防守 champ:连段 ：失去 2 层 脆弱 。"
   },
   "champ:FalseCounter": {
     "NAME": "伪反",
@@ -189,7 +189,7 @@
   },
   "champ:SwordThrow": {
     "NAME": "投掷剑刃",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 除非 champ:战狂 champ:连段 ：获得 2 层 虚弱 。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 获得2层 虚弱 。 NL champ:战狂 champ:连段 ：失去2层 虚弱 。"
   },
   "champ:MurderStrike": {
     "NAME": "刽子打击",
