@@ -9,7 +9,7 @@ import static automaton.FunctionHelper.WITH_DELIMITER;
 
 public class AutomatonTextHelper {
 
-    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("bronze:AutoTextHelper");
+    public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("bronze:AutoTextHelper");
 
     private static String getDynamicValue(AbstractCard card, char key) {
         switch (key) {
@@ -59,7 +59,8 @@ public class AutomatonTextHelper {
             String[] splitText = x.split(String.format(WITH_DELIMITER, uiStrings.TEXT[0]));
             String compileText = splitText[1] + splitText[2];
             x = x.replace(compileText, "");
-        } else if (card.rawDescription.contains(uiStrings.TEXT[1])) {
+        }
+        else if (card.rawDescription.contains(uiStrings.TEXT[1])) {
             return ""; // It's over!! If you only have Compile effects, you're gone!!!!!
         } // IT NEVER ENDS!!!!!
         if (card.rawDescription.contains(" π")) {
@@ -97,6 +98,10 @@ public class AutomatonTextHelper {
             return splitText[0] + uiStrings.TEXT[2] + compileText;
         } else if (rawDescription.contains(uiStrings.TEXT[1])) {
             return uiStrings.TEXT[3] + rawDescription;
+        }  else if (rawDescription.contains(uiStrings.TEXT[4])) {
+            String[] splitText = rawDescription.split(String.format(WITH_DELIMITER, uiStrings.TEXT[4])); // Replicate stuff
+            String compileText = splitText[1] + splitText[2];
+            return splitText[0] + uiStrings.TEXT[2] + compileText;
         }
         return rawDescription + uiStrings.TEXT[2];
     }

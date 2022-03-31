@@ -4,6 +4,7 @@ import champ.ChampChar;
 import champ.ChampMod;
 import champ.powers.BerserkerStylePower;
 
+import champ.powers.DoubleStyleThisTurnPower;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
@@ -57,6 +58,9 @@ public class BerserkerStance extends AbstractChampStance {
         int x = 3;
         if (AbstractDungeon.player.hasPower(BerserkerStylePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(BerserkerStylePower.POWER_ID).amount;
+        }
+        if (AbstractDungeon.player.hasPower(DoubleStyleThisTurnPower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(DoubleStyleThisTurnPower.POWER_ID).amount;
         }
         return x;
     }

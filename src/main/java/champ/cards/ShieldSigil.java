@@ -1,6 +1,8 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.powers.DoubleStyleThisTurnPower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -10,19 +12,18 @@ public class ShieldSigil extends AbstractChampCard {
 
 
     public ShieldSigil() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        tags.add(ChampMod.TECHNIQUE);
-        baseMagicNumber = magicNumber = 3;
-        postInit();
+        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseMagicNumber = magicNumber = 2;
+        baseDamage = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < magicNumber; i++) {
-            techique();
-        }
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        applyToSelf(new DoubleStyleThisTurnPower(magicNumber));
     }
 
     public void upp() {
         upgradeMagicNumber(1);
+        upgradeDamage(2);
     }
 }

@@ -259,14 +259,12 @@ public abstract class AbstractChampCard extends CustomCard {
 
     protected void berserkerStance() {
         //SlimeboundMod.logger.info("Switching to Berserker (Abstract)");
-        if (!(AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)))
-            atb(new ChangeStanceAction(BerserkerStance.STANCE_ID));
+        atb(new ChangeStanceAction(BerserkerStance.STANCE_ID));
     }
 
     protected void defensiveStance() {
         //SlimeboundMod.logger.info("Switching to Defensive (Abstract)");
-        if (!(AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)))
-            atb(new ChangeStanceAction(DefensiveStance.STANCE_ID));
+        atb(new ChangeStanceAction(DefensiveStance.STANCE_ID));
     }
 
     protected void ultimateStance() {
@@ -297,7 +295,7 @@ public abstract class AbstractChampCard extends CustomCard {
 
         if (!AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
             boolean leaveStance = true;
-            if (noExit || AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID) || (AbstractDungeon.player.stance instanceof UltimateStance)) {
+            if (noExit || AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)) {
                 leaveStance = false;
             }
             if (AbstractDungeon.player.hasRelic(SignatureFinisher.ID)) {

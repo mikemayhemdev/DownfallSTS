@@ -1,6 +1,8 @@
+/*
 package automaton.cards;
 
 import automaton.AutomatonMod;
+import automaton.cards.AbstractBronzeCard;
 import automaton.powers.HardcodePower;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -30,3 +32,5 @@ public class Hardcode extends AbstractBronzeCard {
         upgradeBaseCost(0);
     }
 }
+
+ */

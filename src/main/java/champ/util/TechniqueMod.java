@@ -22,11 +22,6 @@ public class TechniqueMod extends AbstractCardModifier {
     }
 
     @Override
-    public void onInitialApplication(AbstractCard card) {
-        card.tags.add(ChampMod.TECHNIQUE);
-    }
-
-    @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
         super.onUse(card, target, action);
         if (AbstractDungeon.player.stance instanceof AbstractChampStance)

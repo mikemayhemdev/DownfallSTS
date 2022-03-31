@@ -3,7 +3,6 @@ package automaton.cards;
 import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import automaton.actions.AddToFuncAction;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -48,12 +47,24 @@ public class SpaghettiCode extends AbstractBronzeCard {
         return qCardGet.makeCopy();
     }
 
+    public static AbstractCard getRandomEncode(ArrayList<AbstractCard> exceptions) {
+        ArrayList<AbstractCard> eligibleCardsList = new ArrayList<>();
+        for (AbstractCard c : CardLibrary.getAllCards()) {
+            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL) {
+                eligibleCardsList.add(c.makeCopy());
+            }
+        }
+        eligibleCardsList.removeIf(q -> exceptions.stream().anyMatch(q2 -> q2.cardID.equals(q.cardID)));
+        AbstractCard qCardGet = eligibleCardsList.get(AbstractDungeon.cardRandomRng.random(0, eligibleCardsList.size() - 1));
+        return qCardGet.makeCopy();
+    }
+
     public static ArrayList<AbstractCard> getRandomEncodeChoices() {
         ArrayList<AbstractCard> eligibleCardsList = new ArrayList<>();
 
-        eligibleCardsList.add(getRandomEncodeWithCost(0).makeCopy());
-        eligibleCardsList.add(getRandomEncodeWithCost(1).makeCopy());
-        eligibleCardsList.add(getRandomEncodeWithCost(2).makeCopy());
+        eligibleCardsList.add(getRandomEncode().makeCopy());
+        eligibleCardsList.add(getRandomEncode(eligibleCardsList).makeCopy());
+        eligibleCardsList.add(getRandomEncode(eligibleCardsList).makeCopy());
         return eligibleCardsList;
     }
 

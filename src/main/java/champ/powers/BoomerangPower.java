@@ -1,3 +1,4 @@
+/*
 package champ.powers;
 
 import basemod.BaseMod;
@@ -5,6 +6,7 @@ import basemod.helpers.VfxBuilder;
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
 import champ.cards.CrownThrow;
+import champ.cards.CrownThrowBackup;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
@@ -87,8 +89,8 @@ public class BoomerangPower extends AbstractPower implements CloneablePowerInter
                     });
                 }
 
-                if (stored instanceof CrownThrow){
-                    ((CrownThrow)stored).returned();
+                if (stored instanceof CrownThrowBackup){
+                    ((CrownThrowBackup)stored).returned();
                 }
 
                 isDone = true;
@@ -109,3 +111,5 @@ public class BoomerangPower extends AbstractPower implements CloneablePowerInter
         return new BoomerangPower(stored);
     }
 }
+
+ */

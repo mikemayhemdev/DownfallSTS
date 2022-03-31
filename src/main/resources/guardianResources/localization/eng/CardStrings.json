@@ -83,7 +83,7 @@
     "DESCRIPTION": "Place this into guardianmod:Stasis. NL When this leaves guardianmod:Stasis, deal !M! damage to ALL enemies. NL guardianmod:Volatile."
   },
   "Guardian:HyperBeam_Guardian": {
-    "NAME": "Hyper Beam",
+    "NAME": "Giga Beam",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Strength affects this card !M! times. NL Skip your next turn."
   },
   "Guardian:BronzeArmor": {
@@ -167,8 +167,8 @@
   },
   "Guardian:PackageAutomaton": {
     "NAME": "Package: Bronze",
-    "DESCRIPTION": "Gain a *Hyper *Beam, *Orb *Support, and *Resilient *Plate. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain a *Hyper *Beam, *Orb *Support, and *Resilient *Plate and Upgrade them. NL Exhaust."
+    "DESCRIPTION": "Gain a *Giga *Beam, *Orb *Support, and *Resilient *Plate. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain a *Giga *Beam, *Orb *Support, and *Resilient *Plate and Upgrade them. NL Exhaust."
   },
   "Guardian:PackageDefect": {
     "NAME": "Package: Defect",

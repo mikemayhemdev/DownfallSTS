@@ -1,73 +1,73 @@
 {
   "expansioncontent:GuardianWhirl": {
     "NAME": "Guardian Whirl",
-    "DESCRIPTION": "expansioncontent:Boss - Guardian. NL Requires 10 or more Block. NL Deal !D! damage to ALL enemies 4 times. NL Exhaust.",
+    "DESCRIPTION": "eRequires 10 or more Block. NL Deal !D! damage to ALL enemies 4 times. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "I do not have enough Block."
     ]
   },
   "expansioncontent:Hexaburn": {
     "NAME": "Hexaburn",
-    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL In !M! turns, deal !D! damage to a random enemy 6 times. NL Scales with Strength."
+    "DESCRIPTION": "In !M! turns, deal !D! damage to a random enemy 6 times. NL Scales with Strength."
   },
   "expansioncontent:InvincibleStrength": {
     "NAME": "Invincible",
-    "DESCRIPTION": "expansioncontent:Boss - Corrupt Heart. NL Gain 10 expansioncontent:Invincible. NL If you already had expansioncontent:Invincible, it lasts another turn instead."
+    "DESCRIPTION": "Gain 10 expansioncontent:Invincible. NL If you already had expansioncontent:Invincible, it lasts another turn instead."
   },
   "expansioncontent:HyperBeam": {
     "NAME": "Automa-Beam",
-    "DESCRIPTION": "expansioncontent:Boss - Automaton. NL Deal !D! damage to ALL enemies. NL At the start of your next turn, lose [E]. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL At the start of your next turn, lose [E]. NL Exhaust."
   },
   "expansioncontent:LastStand": {
     "NAME": "Last Stand",
-    "DESCRIPTION": "expansioncontent:Boss - Champ. NL Remove all Debuffs. NL Gain 1 Strength. NL If you are below half HP, Gain 2 Strength.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Champ. NL Remove all Debuffs. NL Gain 1 Strength. NL If you are below half HP, Heal !M! and gain 2 Strength."
+    "DESCRIPTION": "Remove all Debuffs. NL Gain 1 Strength. NL If you are below half HP, Gain 2 Strength.",
+    "UPGRADE_DESCRIPTION": "Remove all Debuffs. NL Gain 1 Strength. NL If you are below half HP, Heal !M! and gain 2 Strength."
   },
   "expansioncontent:YouAreMine": {
     "NAME": "YOU ARE MINE!",
-    "DESCRIPTION": "expansioncontent:Boss - Collector. NL Remove ALL enemy Block. NL Apply !M! Weak and Vulnerable to ALL enemies. NL Exhaust."
+    "DESCRIPTION": "Remove ALL enemy Block. NL Apply !M! Weak and Vulnerable to ALL enemies. NL Exhaust."
   },
   "expansioncontent:AwakenDeath": {
     "NAME": "Awaken",
-    "DESCRIPTION": "expansioncontent:Boss - Awakened One. NL Gain 1 Strength. NL When you would die, heal !M! HP instead."
+    "DESCRIPTION": "Gain 1 Strength. NL When you would die, heal !M! HP instead."
   },
   "expansioncontent:Chronoboost": {
     "NAME": "Chrono-Boost",
-    "DESCRIPTION": "expansioncontent:Boss - Time Eater. NL Gain 1 Strength for every 12th card you play.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Time Eater. NL Gain 1 Strength. NL Gain 1 Strength for every 12th card you play."
+    "DESCRIPTION": "Gain 1 Strength for every 12th card you play.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Strength. NL Gain 1 Strength for every 12th card you play."
   },
   "expansioncontent:PolyBeam": {
     "NAME": "Donu Blast",
-    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. Increase this card's damage by !M!. NL Next turn, gain a *Deca *Shield, or expansioncontent:Exhume it. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. Increase this card's damage by !M!. NL Next turn, gain a *Deca *Shield+, or expansioncontent:Exhume it. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage twice. Increase this card's damage by !M!. NL Next turn, gain a *Deca *Shield, or expansioncontent:Exhume it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage twice. Increase this card's damage by !M!. NL Next turn, gain a *Deca *Shield+, or expansioncontent:Exhume it. NL Exhaust."
   },
   "expansioncontent:DecaShield": {
     "NAME": "Deca Shield",
-    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Gain !B! Block twice. Increase this card's Block by !M!. NL Next turn, expansioncontent:Exhume *Donu *Blast. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Ancients. NL Gain !B! Block twice. Increase this card's Block by !M!. NL Next turn, expansioncontent:Exhume *Donu *Blast+. NL Exhaust."
+    "DESCRIPTION": "*Boss - Ancients. NL Gain !B! Block twice. Increase this card's Block by !M!. NL Next turn, expansioncontent:Exhume *Donu *Blast. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "*Boss - Ancients. NL Gain !B! Block twice. Increase this card's Block by !M!. NL Next turn, expansioncontent:Exhume *Donu *Blast+. NL Exhaust."
   },
   "expansioncontent:PrepareCrush": {
     "NAME": "Prepare Crush",
-    "DESCRIPTION": "expansioncontent:Boss - Slime. NL Gain !B! Block. NL On your next turn, gain [E] [E] [E] and add *SLIME *CRUSH to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Slime. NL Gain !B! Block. NL On your next turn, gain [E] [E] [E] and add *SLIME *CRUSH+ to your hand. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL On your next turn, gain [E] [E] [E] and add *SLIME *CRUSH to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL On your next turn, gain [E] [E] [E] and add *SLIME *CRUSH+ to your hand. NL Exhaust."
   },
   "expansioncontent:StudyTheSpire": {
     "NAME": "Study the Spire",
-    "DESCRIPTION": "Add a random expansioncontent:Boss card to your hand at the start of your next !M! turns. They cost 0 until played.",
-    "UPGRADE_DESCRIPTION": "Add a random Upgraded expansioncontent:Boss card to your hand at the start of your next !M! turns. They cost 0 until played."
+    "DESCRIPTION": "Gain a random *Boss card at the start of your next !M! turns. They cost 0.",
+    "UPGRADE_DESCRIPTION": "Gain a random Upgraded *Boss at the start of your next !M! turns. They cost 0."
   },
   "expansioncontent:QuickStudy": {
     "NAME": "Quick Study",
-    "DESCRIPTION": "Choose 1 of 3 expansioncontent:Boss cards to gain. NL It costs 0 until played. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Upgraded expansioncontent:Boss cards to gain. NL It costs 0 until played. NL Exhaust.",
+    "DESCRIPTION": "Choose 1 of 3 *Boss cards to gain. NL It costs 0 until played. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Upgraded *Boss cards to gain. NL It costs 0 until played. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose a Boss card."
     ]
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "The Evil Within",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Add a random expansioncontent:Boss card to your hand. It costs 0 until played. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Add a random Upgraded expansioncontent:Boss card to your hand. It costs 0 until played. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Add a random *Boss card to your hand. It costs 0 until played. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a random Upgraded *Boss card to your hand. It costs 0 until played. NL Exhaust."
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "Knowing Skull",

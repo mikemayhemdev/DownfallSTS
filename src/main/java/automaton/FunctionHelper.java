@@ -3,30 +3,35 @@ package automaton;
 import automaton.cardmods.CardEffectsCardMod;
 import automaton.cards.AbstractBronzeCard;
 import automaton.cards.ForceShield;
+import automaton.cards.FullRelease;
 import automaton.cards.FunctionCard;
 import automaton.powers.*;
 import automaton.relics.ElectromagneticCoil;
 import automaton.relics.OnCompileRelic;
-import downfall.util.TextureLoader;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.TalkAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.BobEffect;
+import downfall.util.TextureLoader;
 
 import java.util.HashMap;
 
 public class FunctionHelper {
     public static CardGroup held;
+
     public static int max() {
         int max = 3;
         if (AbstractDungeon.player.hasRelic(ElectromagneticCoil.ID)) {
@@ -108,6 +113,14 @@ public class FunctionHelper {
         if (!doStuff) {
             doStuff = true;
         }
+
+        if (c instanceof FullRelease) {
+            if (held.group.stream().anyMatch(q -> q.cardID.equals(FullRelease.ID))) {
+                AbstractDungeon.actionManager.addToTop(new MakeTempCardInDiscardAction(c.makeSameInstanceOf(), 1));
+                AbstractDungeon.actionManager.addToTop(new TalkAction(true, AutomatonTextHelper.uiStrings.TEXT[6], 2.0F, 1.5F));
+            }
+        }
+
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnAddToFuncPower) {
                 ((OnAddToFuncPower) p).receiveAddToFunc(c); // Optimize
@@ -273,8 +286,8 @@ public class FunctionHelper {
             if (AbstractDungeon.player == null) {
                 doStuff = false;
             } else {
-                if (!(AbstractDungeon.player instanceof AutomatonChar)){
-                    if (held.size() == 0){
+                if (!(AbstractDungeon.player instanceof AutomatonChar)) {
+                    if (held.size() == 0) {
                         doStuff = false;
                     }
                 }

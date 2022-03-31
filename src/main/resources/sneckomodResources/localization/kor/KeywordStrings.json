@@ -36,5 +36,12 @@
       "영구각인"
     ],
     "DESCRIPTION": "선택한 카드를 고정해 영구적으로 덱에 추가하고 선택한 카드를 제거합니다."
+  },
+  {
+    "PROPER_NAME": "Identify",
+    "NAMES": [
+      "identify"
+    ],
+    "DESCRIPTION": "Replace an Unknown card with its current random card permanently."
   }
 ]

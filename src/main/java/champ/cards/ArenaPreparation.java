@@ -28,12 +28,7 @@ public class ArenaPreparation extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         //techique();
         for (int i = 0; i < magicNumber; i++) {
-            ArrayList<AbstractCard> qCardList = new ArrayList<AbstractCard>();
-            for (AbstractCard t : CardLibrary.getAllCards()) {
-                if (!(t.cardID.equals(this.cardID)) && !UnlockTracker.isCardLocked(t.cardID) && t.type == CardType.SKILL && !(t.hasTag(CardTags.HEALING)))
-                    qCardList.add(t);
-            }
-            AbstractCard c = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1)).makeStatEquivalentCopy();
+            AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.SKILL);
             c.isSeen = true;
             UnlockTracker.markCardAsSeen(c.cardID);
             CardModifierManager.addModifier(c, new RetainCardMod());

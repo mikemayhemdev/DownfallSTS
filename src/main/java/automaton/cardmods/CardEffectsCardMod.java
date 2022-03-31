@@ -85,11 +85,6 @@ public class CardEffectsCardMod extends BronzeCardMod {
             } else {
                 ((FunctionCard) card).setBackgroundTexture("bronzeResources/images/512/bg_attack_function.png", "bronzeResources/images/1024/bg_attack_function.png");
             }
-
-            if (q.cost > card.cost) {
-                card.cost = q.cost;
-                card.costForTurn = q.cost;
-            }
         }
     }
 

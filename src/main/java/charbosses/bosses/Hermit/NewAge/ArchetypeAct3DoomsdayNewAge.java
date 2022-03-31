@@ -2,21 +2,18 @@ package charbosses.bosses.Hermit.NewAge;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
+import charbosses.cards.colorless.EnBandage;
+import charbosses.cards.colorless.EnMasterOfStrategy;
 import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnDoubt;
-import charbosses.cards.curses.EnInjury;
 import charbosses.cards.curses.EnPain;
 import charbosses.cards.hermit.*;
-import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
-import charbosses.powers.bossmechanicpowers.HermitConcentrateAdder;
-import charbosses.powers.bossmechanicpowers.HermitConcentrationPower;
 import charbosses.powers.bossmechanicpowers.HermitDoomsday;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import hermit.cards.Purgatory;
 
 import java.util.ArrayList;
 
@@ -60,6 +57,7 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
             switch (turn) {
                 case 0:
                     addToList(cardsList, new EnCovet(), true);
+                    addToList(cardsList, new EnDefendHermit());
                     addToList(cardsList, new EnPain());
                     addToList(cardsList, new EnClumsy());
                     addToList(cardsList, new EnSpite());
@@ -68,18 +66,21 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
                 case 1:
                     addToList(cardsList, new EnMisfire());
                     addToList(cardsList, new EnGlare());
-                    addToList(cardsList, new EnManifest());
+                    addToList(cardsList, new EnGhostlyPresence());
                     turn++;
                     break;
                 case 2:
                     addToList(cardsList, new EnMisfire());
-                    addToList(cardsList, new EnGlare());
+                    addToList(cardsList, new EnMasterOfStrategy());
+                    addToList(cardsList, new EnLoneWolf());
+                    addToList(cardsList, new EnBandage());
+                    addToList(cardsList, new EnWideOpen());
                     addToList(cardsList, new EnMalice());
-
                     turn++;
                     break;
                 case 3:
                     addToList(cardsList, new EnSprayNPray());
+                    addToList(cardsList, new EnEnervate());
                     addToList(cardsList, new EnLowProfile());
                     addToList(cardsList, new EnGlare());
                     turn++;
@@ -94,8 +95,8 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
                     addToList(cardsList, new EnPurgatory());
                     addToList(cardsList, new EnGrudge());
                     addToList(cardsList, new EnGrudge());
-                    turn=0;
-                    looped=true;
+                    turn = 0;
+                    looped = true;
                     break;
             }
         } else {
@@ -103,10 +104,10 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
                 case 0:
                     AbstractCard q = new EnDoubt();
                     AbstractCard m = new EnMalice();
-                    ((EnMalice)m).setExhaust(q);
+                    ((EnMalice) m).setExhaust(q);
                     addToList(cardsList, m);
                     addToList(cardsList, q);
-                    addToList(cardsList, new EnGlare());
+                    addToList(cardsList, new EnWideOpen());
                     turn++;
                     break;
                 case 1:
@@ -125,17 +126,17 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
                     break;
                 case 3:
                     addToList(cardsList, new EnCovet(), true);
-                    //addToList(cardsList, new EnDoubt());
+                    addToList(cardsList, new EnDefendHermit());
                     addToList(cardsList, new EnGlare());
                     addToList(cardsList, new EnGlare());
-                    addToList(cardsList, new EnManifest());
+                    addToList(cardsList, new EnGhostlyPresence());
                     turn++;
                     break;
                 case 4:
                     addToList(cardsList, new EnPurgatory());
-                    addToList(cardsList, new EnDefendHermit());
-                    addToList(cardsList, new EnGrudge(12)); // Grudge later
-                    turn=0;
+                    addToList(cardsList, new EnEnervate());
+                    addToList(cardsList, new EnGrudge(12));
+                    turn = 0;
                     break;
             }
         }

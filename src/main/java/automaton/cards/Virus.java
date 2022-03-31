@@ -18,13 +18,12 @@ public class Virus extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 3;
+    private static final int DAMAGE = 5;
 
     public Virus() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         cardsToPreview = new MinorBeam();
-        exhaust = true;
         selfRetain = true;
     }
 

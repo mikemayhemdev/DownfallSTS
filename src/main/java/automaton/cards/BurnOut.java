@@ -20,14 +20,14 @@ public class BurnOut extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, all_enemy, rare
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 3;
 
     public BurnOut() {
-        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
-        cardsToPreview = new Burn();
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("BurnOut.png"));
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -89,8 +89,6 @@ public class BurnOut extends AbstractBronzeCard {
                 atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
             }
         }
-
-        shuffleIn(new Burn(), 3);
     }
 
 
@@ -119,8 +117,7 @@ public class BurnOut extends AbstractBronzeCard {
                 }
             }
 
-            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0] + statusCount;
-            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[1];
+            this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0] + statusCount + cardStrings.EXTENDED_DESCRIPTION[1];
 
             this.initializeDescription();
         }

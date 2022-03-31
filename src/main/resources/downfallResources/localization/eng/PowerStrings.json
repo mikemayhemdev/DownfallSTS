@@ -258,14 +258,14 @@
     "NAME": "Last Gasp: Buffer+",
     "DESCRIPTIONS": [
       "When this character dies, ALL characters (including you) gain #b",
-      " #yBuffer."
+      " #yBuffer. (Buffer: Prevents the next time you would lose HP)"
     ]
   },
   "downfall:OnDeathEveryoneVigor": {
     "NAME": "Last Gasp: Wreath of Flame+",
     "DESCRIPTIONS": [
       "When this character dies, ALL characters (including you) gain #b",
-      " #yVigor."
+      " #yVigor. (Vigor: Increases damage of a single Attack)"
     ]
   },
   "downfall:OnDeathEveryoneRuggedVuln": {
@@ -273,7 +273,7 @@
     "DESCRIPTIONS": [
       "When this character dies, ALL characters (including you) gain #b",
       " #yRugged and #b",
-      " #yVulnerable."
+      " #yVulnerable. (Rugged: Reduces damage to 1 for a single Attack) "
     ]
   },
   "downfall:MonsterVigor": {
@@ -307,7 +307,7 @@
   "downfall:HermitDoomsday": {
     "NAME": "Doomsday",
     "DESCRIPTIONS": [
-      "At the start of your turn, Gain an #yEthereal #rImpending #rDoom."
+      "At the start of your turn, gain an #rImpending #rDoom with #yRetain."
     ]
   },
   "downfall:NeowEclipse": {

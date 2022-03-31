@@ -1,8 +1,10 @@
+/*
 package champ.cards;
 
 import basemod.helpers.VfxBuilder;
 import champ.ChampMod;
 import champ.powers.BoomerangPower;
+import champ.powers.DoubleStyleThisTurnPower;
 import downfall.util.TextureLoader;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,8 +18,8 @@ public class CrownThrow extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, rare
 
-    private static final int DAMAGE = 7;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 8;
+    private static final int UPG_DAMAGE = 2;
 
     private boolean returned;
 
@@ -35,18 +37,20 @@ public class CrownThrow extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         // First you throw a crown...
         AbstractDungeon.effectList.add(new VfxBuilder(TextureLoader.getTexture("champResources/images/relics/ChampionCrown.png"), p.hb.x + p.hb.width, p.hb.cY, 1.5F)
                 .moveX(p.hb.x + p.hb.width, Settings.WIDTH + (128 * Settings.scale))
                 .rotate(-300F)
                 .build());
-        if (!returned) {
-            applyToSelf(new BoomerangPower(this));
-        }
+
+        applyToSelf(new DoubleStyleThisTurnPower(magicNumber));
     }
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
+        upgradeMagicNumber(1);
     }
 }
+
+ */

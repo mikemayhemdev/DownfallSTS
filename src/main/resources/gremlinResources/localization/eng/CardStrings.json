@@ -43,7 +43,7 @@
 
   "Gremlin:BurlyBlow": {
     "NAME": "Burly Blow",
-    "DESCRIPTION": "Deal !D! damage for each stack of Weak. NL (Always hits at least once.)"
+    "DESCRIPTION": "Deal !D! damage.  Repeat for each stack of Weak."
   },
 
   "Gremlin:CatScratch": {
@@ -155,7 +155,7 @@
 
   "Gremlin:FlipOut": {
     "NAME": "Flip Out",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Whenever you would gain Block this turn, instead deal that much damage to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you would gain Block this turn, instead deal that much damage to ALL enemies."
   },
 
   "Gremlin:Flurry": {
@@ -280,7 +280,7 @@
 
   "Gremlin:Necromancy": {
     "NAME": "Necromancy",
-    "DESCRIPTION": "Can only be played if you have 3 or more gremlin:Wiz. NL Consume all gremlin:Wiz to resurrect a random Gremlin with !M! HP. Exhaust.",
+    "DESCRIPTION": "Requires 3 or more gremlin:Wiz. NL Consume all gremlin:Wiz to resurrect a random Gremlin with !M! HP. Exhaust.",
     "EXTENDED_DESCRIPTION": ["Not enough mojo.", "Nobody is dead yet.", "Not enough room."]
   },
 
@@ -452,8 +452,8 @@
 
   "Gremlin:Tadah": {
     "NAME": "Tadah!",
-    "DESCRIPTION": "Add an gremlin:Echo of a random Skill to your hand. It costs 1 less. NL gremlin:Swap to gremlin:Gremlin_Wizard.",
-    "UPGRADE_DESCRIPTION": "Add an gremlin:Echo of a random, Upgraded Skill to your hand. NL It costs 1 less. NL gremlin:Swap to gremlin:Gremlin_Wizard."
+    "DESCRIPTION": "Add an gremlin:Echo of a random Skill to your hand. NL gremlin:Swap to gremlin:Gremlin_Wizard.",
+    "UPGRADE_DESCRIPTION": "Add an gremlin:Echo of a random Skill to your hand. It costs 1 less. NL gremlin:Swap to gremlin:Gremlin_Wizard."
   },
 
   "Gremlin:TagTeam": {
@@ -469,7 +469,7 @@
 
   "Gremlin:Tricksy": {
     "NAME": "Tricksy",
-    "DESCRIPTION": "Draw !M! cards. Discard all cards drawn this way that are not Attacks. NL gremlin:Swap to gremlin:Sneaky_Gremlin."
+    "DESCRIPTION": "Draw !M! cards, then discard any that are not Attacks. NL gremlin:Swap to gremlin:Sneaky_Gremlin."
   },
 
   "Gremlin:TwistTheKnife": {

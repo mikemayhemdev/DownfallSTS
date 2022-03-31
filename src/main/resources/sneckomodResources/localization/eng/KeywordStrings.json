@@ -20,5 +20,19 @@
       "offclass"
     ],
     "DESCRIPTION": "An Offclass card is any obtainable card from a class other than your own (including Colorless cards, Curses, and Statuses)."
+  },
+  {
+    "PROPER_NAME": "Identify",
+    "NAMES": [
+      "identify"
+    ],
+    "DESCRIPTION": "Replace an Unknown card with its current random card permanently."
+  },
+  {
+    "PROPER_NAME": "Lucky",
+    "NAMES": [
+      "lucky"
+    ],
+    "DESCRIPTION": "Cards that choose a random number as part of their card text choose the maximum possible number. (Does not affect Muddle)"
   }
 ]

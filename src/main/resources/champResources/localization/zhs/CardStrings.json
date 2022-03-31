@@ -429,5 +429,10 @@
       " 进入 champ:防守 。 NL 将一张随机已 升级 的 champ:防守 牌加入手牌。",
       " 进入 champ:战狂 。 NL 将一张随机已 升级 的 champ:战狂 牌加入手牌。"
     ]
+  },
+  "champ:Headbutt": {
+    "NAME": "头槌",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将弃牌堆中的一张牌放到抽牌堆的顶部。"
   }
 }
+

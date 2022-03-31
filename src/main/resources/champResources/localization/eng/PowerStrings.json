@@ -105,7 +105,7 @@
   "champ:DefensiveStylePower": {
     "NAME": "Defensive Style",
     "DESCRIPTIONS": [
-      "#yDefensive #yTechniques grant #b",
+      "#yDefensive #ySkill Bonuses grant #b",
       " additional #yCounter."
     ]
   },
@@ -119,7 +119,7 @@
   "champ:BerserkerStylePower": {
     "NAME": "Berserker Style",
     "DESCRIPTIONS": [
-      "#yBerserker #yTechniques grant #b",
+      "#yBerserker #ySkill Bonuses grant #b",
       " more #yVigor."
     ]
   },
@@ -142,7 +142,7 @@
   "champ:IronFortressPower": {
     "NAME": "Technical Jig",
     "DESCRIPTIONS": [
-      "Whenever you enter a Stance, trigger it's technique",
+      "Whenever you enter a Stance, trigger its #ySkill Bonus",
       " #b",
       " times."
     ]
@@ -150,7 +150,7 @@
   "champ:IronFortressVigorPower": {
     "NAME": "Technical Jig: Berserker",
     "DESCRIPTIONS": [
-      "Whenever you enter a Stance, trigger Berserker Stance's technique",
+      "Whenever you enter a Stance, trigger Berserker Stance's #ySkill Bonus",
       " #b",
       " times."
     ]
@@ -226,6 +226,13 @@
       " Strength.",
       "~You've~ ~done~ ~it~ ~now...~",
       "@DEFEAT??@ NL @IMPOSSIBLE!!@"
+    ]
+  },
+  "champ:DoubleStyleThisTurnPower": {
+    "NAME": "Chain Lash",
+    "DESCRIPTIONS": [
+      "This turn, #ySkill Bonuses grant #b",
+      " more effect."
     ]
   }
 }

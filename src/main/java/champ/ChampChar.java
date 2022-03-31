@@ -200,7 +200,7 @@ public class ChampChar extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             retVal.add(Strike.ID);
         }
         for (int i = 0; i < 3; i++) {
@@ -208,7 +208,6 @@ public class ChampChar extends CustomPlayer {
         }
         retVal.add(BerserkersShout.ID);
         retVal.add(DefensiveShout.ID);
-        retVal.add(Taunt.ID);
         retVal.add(Execute.ID);
         return retVal;
     }

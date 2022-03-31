@@ -5,6 +5,7 @@
 
 package charbosses.powers.bossmechanicpowers;
 
+import basemod.cardmods.RetainMod;
 import basemod.helpers.CardModifierManager;
 import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Hermit.NewAge.ArchetypeAct2WheelOfFateNewAge;
@@ -43,7 +44,7 @@ public class HermitDoomsday extends AbstractBossMechanicPower {
     public void atStartOfTurnPostDraw() {
         flash();
         AbstractCard q = new ImpendingDoom();
-        CardModifierManager.addModifier(q, new EtherealMod());
+        CardModifierManager.addModifier(q, new RetainMod());
         addToBot(new MakeTempCardInHandAction(q));
     }
 

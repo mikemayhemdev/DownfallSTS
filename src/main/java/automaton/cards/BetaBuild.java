@@ -1,6 +1,9 @@
+/*
 package automaton.cards;
 
 import automaton.AutomatonMod;
+import automaton.cards.AbstractBronzeCard;
+import automaton.cards.FullRelease;
 import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -45,3 +48,5 @@ public class BetaBuild extends AbstractBronzeCard {
         upgradeBlock(5);
     }
 }
+
+ */
