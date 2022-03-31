@@ -10,6 +10,7 @@ import champ.util.OnOpenerSubscriber;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -31,11 +32,32 @@ public class ChampionCrown extends CustomRelic  {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
     }
 
+    /*
     @Override
     public void onChangeStance(AbstractStance prevStance, AbstractStance newStance) {
         if (!newStance.ID.equals(NeutralStance.STANCE_ID)) {
             flash();
             addToBot(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, 3, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        }
+    }
+
+     */
+    @Override
+    public void atBattleStart() {
+        super.atBattleStart();
+        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+        if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
+            int x = AbstractDungeon.cardRandomRng.random(1);
+            switch (x) {
+                case 0:
+                    //SlimeboundMod.logger.info("Switching to Berserker (Mod Relic)");
+                    addToBot(new ChangeStanceAction(BerserkerStance.STANCE_ID));
+                    break;
+                case 1:
+                    //SlimeboundMod.logger.info("Switching to Defensive (Mod Relic)");
+                    addToBot(new ChangeStanceAction(DefensiveStance.STANCE_ID));
+                    break;
+            }
         }
     }
 

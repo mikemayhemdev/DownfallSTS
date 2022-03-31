@@ -340,7 +340,7 @@
   },
   "hexamod:SoulSteal": {
     "NAME": "Living Bomb",
-    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL When hexamod:Soulburn next detonates, it affects ALL enemies. NL Exhaust."
+    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. When it detonates, it affects ALL enemies. NL Exhaust."
   },
   "hexamod:CouncilsJustice": {
     "NAME": "Council's Justice",
