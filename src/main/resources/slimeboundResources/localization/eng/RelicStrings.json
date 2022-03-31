@@ -23,8 +23,8 @@
     ]
   },
   "Slimebound:PotencyRelic": {
-    "NAME": "Ooze Stone",
-    "FLAVOR": "It is said to gain power based on your mood.",
+    "NAME": "Stone of Nomakk",
+    "FLAVOR": "When presented to one of your Goop Gang, it seems to make the blob dance.",
     "DESCRIPTIONS": [
       "At the start of combat, #yslimeboundmod:split into a #yslimeboundmod:Mire #ySlime and gain #b1 #yslimeboundmod:Potency."
     ]
