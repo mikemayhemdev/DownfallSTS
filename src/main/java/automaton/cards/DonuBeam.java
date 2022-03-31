@@ -20,8 +20,8 @@ public class DonuBeam extends AbstractBronzeCard {
 
     public DonuBeam() {
         super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseDamage = 8;
-        baseMagicNumber = magicNumber = 2;
+        baseDamage = 5;
+        baseMagicNumber = magicNumber = 1;
         baseAuto = auto = 1;
         thisEncodes();
     }
@@ -41,7 +41,7 @@ public class DonuBeam extends AbstractBronzeCard {
     public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
             applyToSelf(new StrengthPower(AbstractDungeon.player, magicNumber));
-            applyToSelf(new DexterityPower(AbstractDungeon.player, -auto));
+          //  applyToSelf(new DexterityPower(AbstractDungeon.player, -auto));
         }
     }
 

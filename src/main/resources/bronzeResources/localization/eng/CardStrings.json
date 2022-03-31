@@ -25,7 +25,7 @@
   },
   "bronze:DonuBeam": {
     "NAME": "Proto-Beam",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL bronze:Compile - Gain !M! Strength and lose !bauto! Dexterity.",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL bronze:Compile - Gain !M! Strength.",
     "EXTENDED_DESCRIPTION": [
       "smooth",
       "Blast"

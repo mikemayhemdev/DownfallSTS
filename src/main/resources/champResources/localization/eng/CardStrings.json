@@ -419,7 +419,7 @@
   },
   "champ:FancyFootwork": {
     "NAME": "Fancy Footwork",
-    "DESCRIPTION": "Enter a Stance you aren't in. NL The next time you use a champ:Finisher this turn, ALL enemies lose !M! HP."
+    "DESCRIPTION": "Enter a Stance you aren't in. NL The next time champ:Finisher this turn deals !M! damage to ALL enemies."
   },
   "champ:TripleStrike": {
     "NAME": "Triple Strike",
