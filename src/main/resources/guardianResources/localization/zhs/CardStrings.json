@@ -9,18 +9,18 @@
   },
   "Guardian:Gem_Red": {
     "NAME": "红宝石",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 2 点 guardianmod:临时 力量 。",
-    "UPGRADE_DESCRIPTION": "获得 2 点 guardianmod:临时 力量 。"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 层 点 guardianmod:临时 力量 。",
+    "UPGRADE_DESCRIPTION": "弃用"
   },
   "Guardian:Gem_Green": {
     "NAME": "翡翠",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 2 点 guardianmod:临时 敏捷 。",
-    "UPGRADE_DESCRIPTION": "获得 2 点 guardianmod:临时 敏捷 。"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 2 层 guardianmod:临时 敏捷 。",
+    "UPGRADE_DESCRIPTION": "弃用"
   },
   "Guardian:Gem_Lightblue": {
     "NAME": "碧玺",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 4 点 guardianmod:临时 荆棘 。",
-    "UPGRADE_DESCRIPTION": "获得 4 点 guardianmod:临时 荆棘 。"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 4 层 guardianmod:临时 荆棘 。",
+    "UPGRADE_DESCRIPTION": "弃用"
   },
   "Guardian:Gem_White": {
     "NAME": "石英",
@@ -48,8 +48,8 @@
   },
   "Guardian:DecasProtection": {
     "NAME": "先古之力",
-    "DESCRIPTION": "获得 4 点 guardianmod:临时 力量 和 敏捷 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 4 点 guardianmod:临时 力量 和 敏捷 。 NL 失去所有负面效果1层。 NL 消耗 。"
+    "DESCRIPTION": "获得 4 层 guardianmod:临时 力量 和 敏捷 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 4 层 guardianmod:临时 力量 和 敏捷 。 NL 失去所有负面效果1层。 NL 消耗 。"
   },
   "Guardian:FierceBash": {
     "NAME": "猛烈痛击",
@@ -249,7 +249,7 @@
 },
   "Guardian:ShieldSpikes": {
     "NAME": "荆棘装甲",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若处于 guardianmod:防御模式 ，获得 !M! 点 guardianmod:临时 荆棘 。 NL 否则 guardianmod:提防 8。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若处于 guardianmod:防御模式 ，获得 !M! 层 guardianmod:临时 荆棘 。 NL 否则 guardianmod:提防 8。"
   },
   "Guardian:PrismaticBeam": {
     "NAME": "棱镜射线",
@@ -407,33 +407,33 @@
   },
   "Guardian:PackageMass": {
     "NAME": "组件: 团块",
-    "DESCRIPTION": "将1张 *扭曲荆棘 ， *团状炸弹 和 *合体撞击 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将1张已 升级 的 *扭曲荆棘 ， *团状炸弹 和 *合体撞击 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "弃用",
+    "UPGRADE_DESCRIPTION": "弃用"
   },
   "Guardian:HammerDown": {
     "NAME": "坠落重锤",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 翻倍你的 力量 和 敏捷 。 NL 消耗 。"
+    "DESCRIPTION": "弃用"
   },
   "Guardian:OmegaCannon": {
     "NAME": "终极加农炮",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每点 力量 降低 1 点耗能。"
+    "DESCRIPTION": "弃用"
   },
   "Guardian:ModeShift": {
     "NAME": "模式切换",
-    "DESCRIPTION": "交换你的 力量 与 敏捷 。 NL 抽 1 张牌。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 交换你的 力量 与 敏捷 。 NL 抽 !M! 张牌。"
+    "DESCRIPTION": "弃用",
+    "UPGRADE_DESCRIPTION": "弃用"
   },
   "Guardian:MassOfThorns": {
     "NAME": "团状荆棘",
-    "DESCRIPTION": "获得 !M! 层 guardianmod:临时 荆棘 。 NL 当你有 人工制品 时 消耗 。"
+    "DESCRIPTION": "弃用"
   },
   "Guardian:MassTimeBomb": {
     "NAME": "团状炸弹",
-    "DESCRIPTION": "向每个空的凝滞栏位加入一张 时间炸弹 。 NL 生成大于等于 2 个时 消耗 。",
-    "UPGRADE_DESCRIPTION": "向每个空的凝滞栏位加入一张已 升级 的 时间炸弹 。 NL 生成大于等于 2 个时 消耗 。"
+    "DESCRIPTION": "弃用",
+    "UPGRADE_DESCRIPTION": "弃用"
   },
   "Guardian:MassSlam": {
     "NAME": "合体撞击",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。NL 力量大于等于 3 时 消耗 。"
+    "DESCRIPTION": "弃用"
   }
 }
