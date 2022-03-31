@@ -66,7 +66,7 @@
     "NAME": "角斗技法",
     "FLAVOR": "凡事都要先试试 - 即使有时没能成功。",
     "DESCRIPTIONS": [
-      "每当你一回合内打出过 #y进入姿态 、 #ychamp:战术 、 #ychamp:连段 和 #ychamp:终结技 ，获得 #b1 点 #y力量 和 #y敏捷 。"
+      "每当你一回合内打出过 #y进入姿态 、 #ychamp:技术 、 #ychamp:连段 和 #ychamp:终结技 ，获得 #b1 点 #y力量 和 #y敏捷 。"
     ]
   },
   "champ:PowerArmor": {
