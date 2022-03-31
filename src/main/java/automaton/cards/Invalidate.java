@@ -17,15 +17,13 @@ public class Invalidate extends AbstractBronzeCard {
     private static final int UPG_MAGIC = 1;
 
     public Invalidate() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = MAGIC;
         thisEncodes();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (AbstractMonster q : monsterList()) {
-            applyToEnemy(q, autoVuln(q, magicNumber));
-        }
+        applyToEnemy(m, autoVuln(m, magicNumber));
     }
 
     public void upp() {
