@@ -44,12 +44,12 @@
   "Guardian:DonusPower": {
     "NAME": "过载",
     "DESCRIPTION": "抽 !M! 张牌。 NL 下回合少抽2张牌。",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 下回合少抽2张牌。 NL 降低自身所有负面效果1层。"
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 下回合少抽2张牌。 NL 失去所有负面效果1层。"
   },
   "Guardian:DecasProtection": {
     "NAME": "先古之力",
     "DESCRIPTION": "获得 4 点 guardianmod:临时 力量 和 敏捷 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 4 点 guardianmod:临时 力量 和 敏捷 。 NL 降低自身所有负面效果1层。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "获得 4 点 guardianmod:临时 力量 和 敏捷 。 NL 失去所有负面效果1层。 NL 消耗 。"
   },
   "Guardian:FierceBash": {
     "NAME": "猛烈痛击",
