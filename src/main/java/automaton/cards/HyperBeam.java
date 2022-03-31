@@ -27,6 +27,7 @@ public class HyperBeam extends AbstractBronzeCard {
        // selfRetain = true;
         exhaust = true;
         baseMagicNumber = magicNumber = 5;
+        cardsToPreview = new VoidCard();
     }
 
     /*
