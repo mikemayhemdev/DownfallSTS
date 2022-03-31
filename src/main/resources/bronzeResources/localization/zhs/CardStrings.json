@@ -224,8 +224,8 @@
   },
   "bronze:ByteShift": {
     "NAME": "字节位移",
-    "DESCRIPTION": "将 *队列 的所有牌返回手牌。 NL 他们获得 保留 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 将 *队列 的所有牌返回手牌。 NL 他们获得 保留 。 NL 消耗 。"
+    "DESCRIPTION": "将所有被 *bronze:编码 的牌返回手牌。 NL 其获得 保留 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 将所有被 *bronze:编码 的牌返回手牌。 NL 其获得 保留 。 NL 消耗 。"
   },
   "bronze:Batch": {
     "NAME": "批处理",
@@ -251,8 +251,8 @@
   },
   "bronze:Overload": {
     "NAME": "复制粘贴",
-    "DESCRIPTION": "打出 *队列 中牌的复制品，复制品不被 bronze:编码 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "打出 *队列 中牌的复制品，复制品不被 bronze:编码 。"
+    "DESCRIPTION": "打出被 *bronze:编码 牌的复制品，复制品不被 bronze:编码 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "打出被 *bronze:编码 牌的复制品，复制品不被 bronze:编码 。"
   },
   "bronze:GetLatest": {
     "NAME": "最新素材",
@@ -370,12 +370,12 @@
   },
   "bronze:Decompile": {
     "NAME": "反编译",
-    "DESCRIPTION": " 消耗 *队列 中的牌。每 消耗 一张牌获得 [E] 并抽一张牌 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 消耗 *队列 中的牌。每 消耗 一张牌获得 [E] 并抽一张牌 。 NL 消耗 。"
+    "DESCRIPTION": " 消耗 被 bronze:编码 的牌。 NL 每 消耗 一张获得 [E] 并抽一张牌 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 消耗被 bronze:编码 的牌。 NL 每 消耗 一张获得 [E] 并抽一张牌 。 NL 消耗 。"
   },
   "bronze:ChildClass": {
-    "NAME": "援引",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 - 获得 *队列 中耗能总和的 [E] 。",
+    "NAME": "调用",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 - 获得被 *编码 牌的总耗能量 [E] 。",
     "EXTENDED_DESCRIPTION": [
       "援引",
       "能量"
@@ -512,11 +512,11 @@
   },
   "bronze:Debug": {
     "NAME": "调试",
-    "DESCRIPTION": "去除 *队列 中牌的 bronze:编译 *错误 。 NL 消耗 。"
+    "DESCRIPTION": "移除被 bronze:编码 牌的 bronze:编译 *错误 。 NL 消耗 。"
   },
   "bronze:HyperBeam": {
     "NAME": "超能射线",
-    "DESCRIPTION": " 保留 。 NL 对所有敌人造成 !D! 点伤害。 NL 保留 时耗能减少 [E] 。"
+    "DESCRIPTION": " 对所有敌人造成 !D! 点伤害。 NL 抽牌堆顶部获得5张 *虚空 。"
   },
   "bronze:Hardcode": {
     "NAME": "硬编码",
@@ -533,8 +533,8 @@
   },
   "bronze:FineTuning": {
     "NAME": "性能调整",
-    "DESCRIPTION": "提高 *队列 中的所有牌的数值 !M! 点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 提高 *队列 中的所有牌的数值 !M! 点。 NL 消耗 。"
+    "DESCRIPTION": "提高被 bronze:编码 牌的数值 !M! 点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 提高被 bronze:编码 牌的数值 !M! 点。 NL 消耗 。"
   },
   "bronze:CleanCode": {
     "NAME": "简明代码",
