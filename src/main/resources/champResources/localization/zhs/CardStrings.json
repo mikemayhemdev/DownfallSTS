@@ -435,7 +435,7 @@
   },
   "champ:Headbutt": {
     "NAME": "头槌",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将弃牌堆中的一张牌放到抽牌堆的顶部。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将弃牌堆一张牌放入抽牌堆顶部。"
   }
 }
 
