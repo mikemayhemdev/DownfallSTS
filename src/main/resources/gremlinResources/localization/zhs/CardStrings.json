@@ -93,7 +93,7 @@
   },
   "Gremlin:Encore": {
     "NAME": "鼓舞",
-    "DESCRIPTION": "获得 3 点 gremlin:法力 。 NL 消耗 gremlin:法力 时，对所有敌人造成 !M! 点伤害。"
+    "DESCRIPTION": "获得 3 点 gremlin:法力 。 NL 使用 gremlin:法力 时，对所有敌人造成 !M! 点伤害。"
   },
   "Gremlin:Enthusiasm": {
     "NAME": "狂热",
@@ -113,8 +113,8 @@
   },
   "Gremlin:SleeveOfAces": {
     "NAME": "袖中王牌",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每拥有1点 gremlin:法力 ，将 1 张 *小刀 加入手牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 每拥有1点 gremlin:法力 ，将 1 张 *小刀+ 加入手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有1点 gremlin:法力 ，将 1 张 *小刀 加入手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 每有1点 gremlin:法力 ，将 1 张 *小刀+ 加入手牌。"
   },
   "Gremlin:FatGremlin": {
     "NAME": "胖地精",
@@ -224,7 +224,7 @@
   },
   "Gremlin:Kablamo": {
     "NAME": "强无敌！",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 本攻击不消耗 gremlin:法力 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 本牌不移除 gremlin:法力 。"
   },
   "Gremlin:LeaderChoice": {
     "NAME": "取舍",
@@ -245,7 +245,7 @@
   },
   "Gremlin:Necromancy": {
     "NAME": "招魂",
-    "DESCRIPTION": "至少有3点 gremlin:法力 才能打出。 NL 消耗所有 gremlin:法力 ，复活随机一只地精并回复 !M! 点生命。 消耗 。",
+    "DESCRIPTION": "至少有3点 gremlin:法力 才能打出。 NL 使用 gremlin:法力 ，复活随机一只地精并回复 !M! 点生命。 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "法力还不够mojo。",
       "大家都还活着。",
