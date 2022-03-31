@@ -72,7 +72,11 @@
   },
   "champ:Backstep": {
     "NAME": "Backstep",
-    "DESCRIPTION": "Enter champ:Defensive NL Gain !B! Block. NL Grants additional Block equal to your *Vigor."
+    "DESCRIPTION": "Enter champ:Defensive NL Gain !B! Block, increased by *Vigor.",
+    "EXTENDED_DESCRIPTION": [
+      "(Grants ",
+      " Block)"
+      ]
   },
   "champ:Aggression": {
     "NAME": "Aggression",

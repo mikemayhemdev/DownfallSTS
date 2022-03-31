@@ -33,19 +33,27 @@ public class Backstep extends AbstractChampCard {
     }
 
     @Override
-    public void applyPowers() {
-        AbstractPlayer p = AbstractDungeon.player;
-        super.applyPowers();
-        if (bcombo()) {
+    public void initializeDescription() {
+
+        if (AbstractDungeon.player !=null) {
+            AbstractPlayer p = AbstractDungeon.player;
+            this.rawDescription = DESCRIPTION;
+
             if (p.hasPower(VigorPower.POWER_ID)) {
-                baseBlock = 6 + p.getPower(VigorPower.POWER_ID).amount;
+                block = baseBlock + p.getPower(VigorPower.POWER_ID).amount;
             }
+
+
+            this.rawDescription = this.rawDescription + " NL " + EXTENDED_DESCRIPTION[0] + baseBlock + EXTENDED_DESCRIPTION[1];
+
         }
     }
 
     @Override
-    public void triggerOnGlowCheck() {
-        glowColor = bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    public void applyPowers() {
+        block = baseBlock;
+        super.applyPowers();
+
     }
 
 

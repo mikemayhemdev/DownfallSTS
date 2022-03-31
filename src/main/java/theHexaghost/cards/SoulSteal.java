@@ -14,7 +14,7 @@ public class SoulSteal extends AbstractHexaCard {
     public SoulSteal() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseBurn = burn = 4;
-        exhaust = true;
+        //exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

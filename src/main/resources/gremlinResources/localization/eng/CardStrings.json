@@ -17,8 +17,8 @@
 
   "Gremlin:Bang": {
     "NAME": "Bang",
-    "DESCRIPTION": "Deal !D! damage !M! times. Add a copy of *Whiz to your discard pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. Add an Upgraded copy of *Whiz to your discard pile. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage !M! times. Add a *Whiz to your discard pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. Add a *Whiz+ to your discard pile. NL Exhaust."
   },
 
   "Gremlin:Bellow": {
@@ -97,8 +97,8 @@
 
   "Gremlin:Duplicate": {
     "NAME": "Duplicate",
-    "DESCRIPTION": "Make !M! gremlin:Echoes of an Attack in your hand. They cost 1 less. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Make !M! gremlin:Echoes of an Attack in your hand. They cost 1 less."
+    "DESCRIPTION": "Gain !M! gremlin:Echoes of an Attack in your hand. They cost 1 less. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! gremlin:Echoes of an Attack in your hand. They cost 1 less."
   },
 
   "Gremlin:EdibleArmor": {
@@ -280,7 +280,7 @@
 
   "Gremlin:Necromancy": {
     "NAME": "Necromancy",
-    "DESCRIPTION": "Requires 3 or more gremlin:Wiz. NL Consume all gremlin:Wiz to resurrect a random Gremlin with !M! HP. Exhaust.",
+    "DESCRIPTION": "Requires 3 gremlin:Wiz. NL Consume all gremlin:Wiz to resurrect a random Gremlin with !M! HP. Exhaust.",
     "EXTENDED_DESCRIPTION": ["Not enough mojo.", "Nobody is dead yet.", "Not enough room."]
   },
 
@@ -345,7 +345,7 @@
 
   "Gremlin:ProperTools": {
     "NAME": "Proper Tools",
-    "DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, gain !M! *Wards. Otherwise, add !M! Shivs to your hand."
+    "DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, gain !M! *Wards. Otherwise, gain !M! Shivs."
   },
 
   "Gremlin:RageBreak": {
@@ -382,8 +382,8 @@
 
   "Gremlin:SecondVolley": {
     "NAME": "Second Volley",
-    "DESCRIPTION": "Deal !D! damage. Add a Shiv to your hand for each card played this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add an Upgraded Shiv to your hand for each card played this turn.",
+    "DESCRIPTION": "Deal !D! damage. Gain a Shiv for each card played this turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain an Upgraded Shiv for each card played this turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " card played.)",
@@ -393,12 +393,12 @@
 
   "Gremlin:ShadowShiv": {
     "NAME": "Shadow Shiv",
-    "DESCRIPTION": "Whenever you play an Attack that doesn't Exhaust, add a Shiv to your hand."
+    "DESCRIPTION": "Whenever you play an Attack that doesn't Exhaust, gain a Shiv."
   },
 
   "Gremlin:ShankStone": {
     "NAME": "Shank Stone",
-    "DESCRIPTION": "Unplayable. NL Whenever you draw this card, add !M! Shivs to your hand.",
+    "DESCRIPTION": "Unplayable. NL Whenever you draw this card, gain !M! Shivs.",
     "EXTENDED_DESCRIPTION": ["I can't play this card."]
   },
 
@@ -447,13 +447,13 @@
 
   "Gremlin:SupplyScrollCard": {
     "NAME": "Supply Scroll",
-    "DESCRIPTION": "Add a random assortment of !M! Shivs and *Wards to your hand. NL Exhaust."
+    "DESCRIPTION": "Gain a random assortment of !M! Shivs and *Wards. NL Exhaust."
   },
 
   "Gremlin:Tadah": {
     "NAME": "Tadah!",
-    "DESCRIPTION": "Add an gremlin:Echo of a random Skill to your hand. NL gremlin:Swap to gremlin:Gremlin_Wizard.",
-    "UPGRADE_DESCRIPTION": "Add an gremlin:Echo of a random Skill to your hand. It costs 1 less. NL gremlin:Swap to gremlin:Gremlin_Wizard."
+    "DESCRIPTION": "Gain an gremlin:Echo of a random Skill. NL gremlin:Swap to gremlin:Gremlin_Wizard.",
+    "UPGRADE_DESCRIPTION": "Gain an gremlin:Echo of a random Skill. It costs 1 less. NL gremlin:Swap to gremlin:Gremlin_Wizard."
   },
 
   "Gremlin:TagTeam": {
@@ -474,8 +474,8 @@
 
   "Gremlin:TwistTheKnife": {
     "NAME": "Twist The Knife",
-    "DESCRIPTION": "Deal !D! damage. NL Add 1 Shiv to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add 1 Upgraded Shiv to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Gain 1 Shiv.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 1 Upgraded Shiv."
   },
 
   "Gremlin:ToeStub": {
@@ -495,8 +495,8 @@
 
   "Gremlin:Whiz": {
     "NAME": "Whiz",
-    "DESCRIPTION": "Gain !M! gremlin:Wiz. Next turn, add *Bang to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !M! gremlin:Wiz. Next turn, add an Upgraded *Bang to your hand. NL Exhaust."
+    "DESCRIPTION": "Gain !M! gremlin:Wiz. Next turn, gain a *Bang. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! gremlin:Wiz. Next turn, gain an Upgraded *Bang. NL Exhaust."
   },
 
   "Gremlin:Wizardry": {

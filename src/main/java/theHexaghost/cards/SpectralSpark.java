@@ -19,8 +19,9 @@ public class SpectralSpark extends AbstractHexaCard {
     private static final int MAGIC = 1;
 
     public SpectralSpark() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
     //    baseBurn = burn = MAGIC;
+        magicNumber = baseMagicNumber =1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -32,7 +33,8 @@ public class SpectralSpark extends AbstractHexaCard {
                 isDone = true;
                 if (GhostflameHelper.activeGhostFlame.charged) {
                     addToBot(new ApplyPowerAction(p, p, new EnhancePower(magicNumber)));
-                    addToTop(new ExtinguishCurrentFlameAction());
+                    //addToTop(new ExtinguishCurrentFlameAction());
+                    addToBot(new ExtinguishCurrentFlameAction());
                 }
             }
         });
