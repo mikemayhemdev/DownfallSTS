@@ -29,8 +29,8 @@
   },
   "hermit:Covet": {
     "NAME": "갈망",
-    "DESCRIPTION": "카드를 1장 버립니다. NL 카드를 !M! 장 뽑습니다. 저주 카드를 버린다면 소멸시킵니다.",
-    "UPGRADE_DESCRIPTION": "카드를 1장 버립니다. NL 카드를 !M! 장 뽑습니다. 저주 카드를 버린다면 소멸시킵니다."
+    "DESCRIPTION": "카드를 1장 버립니다. NL 카드를 !M! 장 뽑습니다. 저주를 버린다면 소멸시킵니다.",
+    "UPGRADE_DESCRIPTION": "카드를 1장 버립니다. NL 카드를 !M! 장 뽑습니다. 저주를 버린다면 소멸시킵니다."
   },
   "hermit:HighCaliber": {
     "NAME": "대구경",
@@ -85,7 +85,7 @@
   },
   "hermit:Malice": {
     "NAME": "악의",
-    "DESCRIPTION": "손에 있는 카드를 1장 소멸시킵니다. NL 피해를 !D! 줍니다. NL 저주 카드를 소멸시켰다면 적 전체에게 피해를 줍니다."
+    "DESCRIPTION": "손에 있는 카드를 1장 소멸시킵니다. NL 피해를 !D! 줍니다. NL 저주를 소멸시켰다면 적 전체에게 피해를 줍니다."
   },
   "hermit:Deadeye": {
     "NAME": "명사수",
@@ -156,11 +156,11 @@
   },
   "hermit:Spite": {
     "NAME": "앙심",
-    "DESCRIPTION": "*저주 카드를 !M! 장 뽑습니다. NL 피해를 !D! 만큼 2번 줍니다."
+    "DESCRIPTION": "저주를 !M! 장 뽑습니다. NL 피해를 !D! 만큼 2번 줍니다."
   },
   "hermit:Manifest": {
     "NAME": "현현",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL *저주 카드를 !M! 장 뽑습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 저주를 !M! 장 뽑습니다."
   },
   "hermit:Feint": {
     "NAME": "속임수",
@@ -212,8 +212,8 @@
   },
   "hermit:FullyLoaded": {
     "NAME": "장전 완료",
-    "DESCRIPTION": "모든 *타격과 *수비를 뽑습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "보존. NL 모든 *타격과 *수비를 뽑습니다. NL 소멸."
+    "DESCRIPTION": "*타격과 *수비를 모두 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "보존. NL *타격과 *수비를 모두 뽑습니다. NL 소멸."
   },
   "hermit:Gestalt": {
     "NAME": "게슈탈트",
@@ -250,9 +250,9 @@
   },
   "hermit:Reprieve": {
     "NAME": "집행유예",
-    "DESCRIPTION": "bronze:소유한 저주 카드를 모두 소멸시킵니다. NL 저주 카드를 13장 이상 *소멸시킨다면 이번 턴 후에 내 턴을 추가로 진행합니다.",
+    "DESCRIPTION": "bronze:소유한 저주를 모두 소멸시킵니다. NL 저주를 13장 이상 *소멸시킨다면 이번 턴 후에 내 턴을 추가로 진행합니다.",
     "EXTENDED_DESCRIPTION": [
-      "소유한 저주 카드가 없어."
+      "소유한 저주가 없어."
     ]
   },
   "hermit:TakeAim": {
@@ -312,8 +312,8 @@
   },
   "hermit:FinalCanter": {
     "NAME": "최후의 위선",
-    "DESCRIPTION": "보존. NL 손에 있는 저주 카드 한 장당 피해를 !D! 줍니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": " NL (저주 카드가 !M! 장 있습니다.)"
+    "DESCRIPTION": "보존. NL 손에 있는 저주 한 장당 피해를 !D! 줍니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": " NL (저주가 !M! 장 있습니다.)"
   },
   "hermit:HeroicBravado": {
     "NAME": "영웅적 객기",
@@ -321,7 +321,7 @@
   },
   "hermit:FromBeyond": {
     "NAME": "저 너머에서",
-    "DESCRIPTION": "이번 전투에서 소멸시킨 카드 한 장당, 무작위 적이 체력을 !M! 잃습니다."
+    "DESCRIPTION": "이번 전투에서 소멸시킨 카드 한 장당 무작위 적이 체력을 !M! 잃습니다."
   },
   "hermit:Virtue": {
     "NAME": "선행",
