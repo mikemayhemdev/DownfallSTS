@@ -115,7 +115,7 @@
     "NAME": "巫师帽",
     "FLAVOR": "配套的长袍早就不知道什么时候被偷了。",
     "DESCRIPTIONS": [
-      "消耗 #ygremlin:法力 时，随机移除 #b1 种 #r负面效果 。"
+      "使用 #ygremlin:法力 时，随机失去 #b1 种 #r负面效果 。"
     ]
   },
   "Gremlin:WizardStaff": {

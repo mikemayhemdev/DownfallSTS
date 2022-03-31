@@ -325,6 +325,6 @@
   },
   "hermit:Virtue": {
     "NAME": "高尚",
-    "DESCRIPTION": "保留 。 NL 降低自身所有负面效果 !M! 层。"
+    "DESCRIPTION": "保留 。 NL 失去所有负面效果 !M! 层。"
   }
 }

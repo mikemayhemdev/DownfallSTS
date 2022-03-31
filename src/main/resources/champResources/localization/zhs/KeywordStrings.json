@@ -1,12 +1,12 @@
 [
   {
-    "PROPER_NAME": "战术",
+    "PROPER_NAME": "技术",
     "NAMES": [
-      "战术",
+      "技术",
       "champ:[crown_icon]",
       "[crown_icon]"
     ],
-    "DESCRIPTION": "如果你处于某个 #y姿态 ，触发其 #y战术奖励 。"
+    "DESCRIPTION": "处于 #y姿态 时，打出 #y技能牌 就获得其 #y技术 奖励。"
   },
   {
     "PROPER_NAME": "连段",
@@ -23,7 +23,7 @@
       "[fist_icon]",
       "champ:[fist_icon]"
     ],
-    "DESCRIPTION": "打出终结技后退出该 #y姿态 并触发其 #y终结技奖励 。"
+    "DESCRIPTION": "打出 #y终结技 后退出当前 #y姿态 并触发其 #y终结技 奖励 。"
   },
   {
     "PROPER_NAME": "反击",
@@ -39,7 +39,7 @@
       "防守",
       "defensive"
     ],
-    "DESCRIPTION": "#y姿态 ： NL #y战术 -获得 #b4 层 #y反击 。 NL #y终结技 -获得 #b10 点 #y格挡 。"
+    "DESCRIPTION": "#y姿态 ： NL #y技术 -获得 #b4 层 #y反击 。 NL #y终结技 -获得 #b10 点 #y格挡 。"
   },
   {
     "PROPER_NAME": "战狂",
@@ -47,7 +47,7 @@
       "战狂",
       "berserker"
     ],
-    "DESCRIPTION": "#y姿态 ： NL #y战术 -获得 #b3 点 #y活力 。 NL #y终结技 -获得 #b1 点 #y力量 。"
+    "DESCRIPTION": "#y姿态 ： NL #y技术 -获得 #b3 点 #y活力 。 NL #y终结技 -获得 #b1 点 #y力量 。"
   },
   {
     "PROPER_NAME": "角斗",
@@ -55,7 +55,7 @@
       "角斗",
       "gladiator"
     ],
-    "DESCRIPTION": "#y姿态 ： #y战术 -抽 #b1 张牌。 NL #y终结技 -下回合抽 #b1 张牌并获得 [E] 。"
+    "DESCRIPTION": "弃用"
   },
   {
     "PROPER_NAME": "终极",
@@ -63,7 +63,7 @@
       "终极",
       "ultimate"
     ],
-    "DESCRIPTION": "#y姿态 。 NL 视为同时处于 #y战狂 和 #y防守 。持续时间结束之前无法切换或退出 #y姿态 。"
+    "DESCRIPTION": "#y姿态 。 NL 视为同时处于 #y战狂 和 #y防守 。持续时间内打出 #y终结技 将重新进入 #y终极 。"
   },
   {
     "PROPER_NAME": "疲劳",

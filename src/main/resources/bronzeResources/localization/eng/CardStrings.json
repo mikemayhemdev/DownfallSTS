@@ -623,7 +623,7 @@
   },
   "bronze:ThunderWave": {
     "NAME": "Thunder Wave",
-    "DESCRIPTION": "Deal !D! damage to a ALL enemies. NL Gain 1 guardianmod:Buffer. NL Exhaust.",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain 1 guardianmod:Buffer. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " times.)"
