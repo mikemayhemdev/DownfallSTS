@@ -272,7 +272,7 @@
   },
   "champ:ArenaPreparation": {
     "NAME": "重整战场",
-    "DESCRIPTION": "随机将 !M! 张 保留 技能牌加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "随机获得 !M! 张 保留 技能牌。 NL 消耗 。"
   },
   "champ:EndlessRage": {
     "NAME": "无穷愤火",
@@ -323,8 +323,8 @@
   },
   "champ:StrikeOfGenius": {
     "NAME": "打击天才",
-    "DESCRIPTION": "回合开始时，随机将一张 消耗 *打击 牌加入手牌。 NL 它下次耗能为0。",
-    "UPGRADE_DESCRIPTION": "回合开始时，随机将一张已 升级 的 消耗 *打击 牌加入手牌。 NL 它下次耗能为0。"
+    "DESCRIPTION": "回合开始时随机获得 消耗 *打击 牌。 NL 其首次耗能为0。",
+    "UPGRADE_DESCRIPTION": "回合开始时随机获得 消耗 *打击 牌+。 NL 其首次耗能为0。"
   },
   "champ:DefensiveStyle": {
     "NAME": "防守战法",
@@ -359,7 +359,7 @@
   },
   "champ:Parry": {
     "NAME": "招架",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。 NL 若本回合触发了 champ:反击 ，将 *弹反 加入手牌。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。 NL 若本回合触发了 champ:反击 ，获得 *弹反 。",
     "UPGRADE_DESCRIPTION": "造成 champ:反击 使用层数的伤害。 NL 消耗 。."
   },
   "champ:EnchantCrown": {
@@ -387,8 +387,8 @@
   },
   "champ:TripleStrike": {
     "NAME": "三重打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将2张视为技能的 *打击 加入手牌。其耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将2张视为技能的 *打击  加入手牌。其耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得2张视为技能的 *打击 。其耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得2张视为技能的 *打击 。其耗能为0。 NL 消耗 。"
   },
   "champ:WindUp": {
     "NAME": "挑衅",
@@ -401,7 +401,7 @@
   },
   "champ:Balance": {
     "NAME": "平衡",
-    "DESCRIPTION": "进入 champ:防守 或 champ:角斗 。 NL 将一张所选 姿态 的 champ:连段 牌加入手牌。",
+    "DESCRIPTION": "弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用",
     "UPGRADE_DESCRIPTION": "进入 champ:防守 或 champ:角斗 。 NL 将一张已 升级 的所选 姿态 的 champ:连段 牌加入手牌。",
     "EXTENDED_DESCRIPTION": [
       " 进入 champ:防守 。 NL 将一张随机 champ:防守 牌加入手牌。",
@@ -412,7 +412,7 @@
   },
   "champ:Aggression": {
     "NAME": "侵略",
-    "DESCRIPTION": "进入 champ:战狂 或 champ:角斗 。 NL 将一张所选 姿态 的 champ:连段 牌加入手牌。",
+    "DESCRIPTION": "弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用",
     "UPGRADE_DESCRIPTION": "进入 champ:战狂 或 champ:角斗 。 NL 将一张已 升级 的所选 姿态 的 champ:连段 牌加入手牌。",
     "EXTENDED_DESCRIPTION": [
       " 进入 champ:战狂 。 NL 将一张随机 champ:战狂 牌加入手牌。",
@@ -423,7 +423,7 @@
   },
   "champ:Control": {
     "NAME": "控制",
-    "DESCRIPTION": "进入 champ:防守 或 champ:战狂 。 NL 将一张所选 姿态 的 champ:连段 牌加入手牌。",
+    "DESCRIPTION": "弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用",
     "UPGRADE_DESCRIPTION": "进入 champ:防守 或 champ:战狂 。 NL 将一张已 升级 的所选 姿态 的 champ:连段 牌加入手牌。",
     "EXTENDED_DESCRIPTION": [
       " 进入 champ:防守 。 NL 将一张随机 champ:防守 牌加入手牌。",
