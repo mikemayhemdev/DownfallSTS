@@ -36,9 +36,9 @@
     "UPGRADE_DESCRIPTION": "hexamod:回退 。 NL 获得 [E] 并抽一张牌。"
   },
   "hexamod:SkipABeat": {
-    "NAME": "空拍",
-    "DESCRIPTION": "hexamod:点燃 下枚鬼火。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "hexamod:点燃 下枚鬼火。"
+    "NAME": "助燃",
+    "DESCRIPTION": "hexamod:点燃 当前鬼火。",
+    "UPGRADE_DESCRIPTION": "弃用"
   },
   "hexamod:CatchUp": {
     "NAME": "及时",
@@ -244,8 +244,8 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "焰烬雨",
-    "DESCRIPTION": "造成 !D! 点伤害并给 NL 予 !burny! 层 hexamod:灼魂 X 次。次数不少于3时，给予 !M! 层 虚弱 。",
-    "UPGRADE_DESCRIPTION": "随机对敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 X 次。次数不少于3时，给予所有敌人2层 虚弱 和 易伤 。"
+    "DESCRIPTION": "造成 !D! 点伤害并给 NL 予 !burny! 层 hexamod:灼魂 X 次。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，给 NL 予 !burny! 层 hexamod:灼魂 和 1层 虚弱 X 次。"
   },
   "hexamod:VolcanoVisage": {
     "NAME": "火山面貌",
@@ -266,7 +266,7 @@
   "hexamod:GhostflameInferno": {
     "NAME": "此即地狱",
     "DESCRIPTION": "保留 。 NL hexamod:点燃 hexamod:狱焱 鬼火 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL hexamod:点燃 当前鬼火和 hexamod:狱焱 鬼火 。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "保留 。 NL hexamod:点燃 当前和 hexamod:狱焱 鬼火 。 NL 消耗 。"
   },
   "hexamod:ChargedBarrage": {
     "NAME": "蓄能焰幕",
@@ -291,8 +291,8 @@
   },
   "hexamod:ApocalypticArmor": {
     "NAME": "末日",
-    "DESCRIPTION": "下次 hexamod:点燃 hexamod:狱焱 鬼火 且全部鬼火已 hexamod:点燃 时，额外获得一回合。",
-    "UPGRADE_DESCRIPTION": "下次 hexamod:点燃 hexamod:狱焱 鬼火 且至少 !M! 枚鬼火已 hexamod:点燃 时，额外获得一回合。"
+    "DESCRIPTION": "下次 hexamod:点燃 至 !M! 枚鬼火时，额外获得一回合。",
+    "UPGRADE_DESCRIPTION": "下次 hexamod:点燃 至 !M! 枚鬼火时，额外获得一回合。"
   },
   "hexamod:FirstSeal": {
     "NAME": "第一容器",
@@ -326,8 +326,7 @@
   },
   "hexamod:SoulSteal": {
     "NAME": "活体炸弹",
-    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 下次目标的 hexamod:灼魂 引爆时，对全体敌人生效。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 下次目标的 hexamod:灼魂 引爆时，对全体敌人生效。"
+    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 下次目标的 hexamod:灼魂 引爆时，对全体敌人生效。 NL 消耗 。"
   },
   "hexamod:CouncilsJustice": {
     "NAME": "议会裁决",
@@ -340,11 +339,12 @@
   },
   "hexamod:FlameSwitch": {
     "NAME": "恶兆",
-    "DESCRIPTION": "虚无 。 NL 将当前鬼火替换为 hexamod:碾压 或 hexamod:高热 鬼火。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 将当前鬼火替换为 hexamod:碾压 或 hexamod:高热 鬼火。 NL 消耗 。",
+    "DESCRIPTION": "虚无 。 NL 将当前鬼火替换为 hexamod:灼热 、 hexamod:碾压 或 hexamod:高热 鬼火。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 将当前鬼火替换为 hexamod:灼热 、 hexamod:碾压 或 hexamod:高热 鬼火。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "将当前鬼火替换为 hexamod:高热 鬼火。",
-      "将当前鬼火替换为 hexamod:碾压 鬼火。"
+      "将当前鬼火替换为 hexamod:碾压 鬼火。",
+      "将当前鬼火替换为 hexamod:灼热 鬼火。"
     ]
   },
   "hexamod:BurningQuestion": {

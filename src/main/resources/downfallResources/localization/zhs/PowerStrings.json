@@ -339,5 +339,11 @@
     "DESCRIPTIONS": [
       "对 #y涅奥 造成攻击伤害后，下回合少获得 [E] 。"
     ]
+  },
+  "downfall:NeowStayAt1Hp": {
+    "NAME": "涅槃",
+    "DESCRIPTIONS": [
+      "你无法使 #y涅奥 降至 #b1 点生命以下。它将完全回复生命并进入下一阶段。"
+    ]
   }
 }
