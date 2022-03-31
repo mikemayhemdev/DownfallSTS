@@ -76,14 +76,14 @@
   "champ:DefensiveStylePower": {
     "NAME": "防守战法",
     "DESCRIPTIONS": [
-      "#y防守 #y战术 奖励额外获得 #b",
+      "#y防守 #y技术 奖励额外提供 #b",
       " 层 #y反击 。"
     ]
   },
   "champ:BerserkerStylePower": {
     "NAME": "狂暴战法",
     "DESCRIPTIONS": [
-      "#y战狂 #y战术 奖励额外获得 #b",
+      "#y战狂 #y技术 奖励额外提供 #b",
       " 点 #y活力 。"
     ]
   },
@@ -106,7 +106,7 @@
   "champ:IronFortressPower": {
     "NAME": "战斗跃舞",
     "DESCRIPTIONS": [
-      "每当你进入 #y姿态 时，触发其 #y战术 #b",
+      "每当你进入 #y姿态 时，获得其 #y技术 奖励 #b",
       " #b",
       " 次。"
     ]
@@ -114,7 +114,7 @@
   "champ:IronFortressVigorPower": {
     "NAME": "战斗跃舞：战狂",
     "DESCRIPTIONS": [
-      "每当你进入 #y姿态 时，触发战狂战术 ",
+      "每当你进入 #y姿态 时，触发 #y战狂 #y技术 奖励 ",
       " #b",
       " 次。"
     ]
