@@ -132,11 +132,12 @@
     ]
   },
   "champ:EnergizedDurationPower": {
-    "NAME": "Enchanted Crown",
+    "NAME": "Energized",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your next turn.",
-      "Gain [E] at the start of your next #b",
-      " turns."
+      "Gain #b",
+      " additional [E] next turn.",
+      " additional [E] next turn.",
+      " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
     ]
   },
   "champ:IronFortressPower": {

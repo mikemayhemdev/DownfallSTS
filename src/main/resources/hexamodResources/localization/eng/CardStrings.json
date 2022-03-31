@@ -271,7 +271,7 @@
   },
   "hexamod:SpectralSpark": {
     "NAME": "Spectral Spark",
-    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL If possible, hexamod:Extinguish the current Ghostflame and return this to your hand."
+    "DESCRIPTION": "If possible, hexamod:Extinguish the current Ghostflame to gain !M! Intensity."
   },
   "hexamod:GhostflameInferno": {
     "NAME": "Instant Inferno",

@@ -76,7 +76,7 @@ public class BanSharedContentPatch {
                 AbstractDungeon.colorlessCardPool.removeCard(Hexaburn.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(HyperBeam.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(LastStand.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(PolyBeam.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(ShapePower.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(PrepareCrush.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(QuickStudy.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(StudyTheSpire.ID);
@@ -90,7 +90,7 @@ public class BanSharedContentPatch {
                 AbstractDungeon.srcColorlessCardPool.removeCard(Hexaburn.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(HyperBeam.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(LastStand.ID);
-                AbstractDungeon.srcColorlessCardPool.removeCard(PolyBeam.ID);
+                AbstractDungeon.srcColorlessCardPool.removeCard(ShapePower.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(PrepareCrush.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(QuickStudy.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(StudyTheSpire.ID);

@@ -72,7 +72,7 @@
   },
   "champ:Backstep": {
     "NAME": "Backstep",
-    "DESCRIPTION": "Enter champ:Defensive NL Gain !B! Block. NL *Berserker champ:Combo: Gain Block equal to your *Vigor."
+    "DESCRIPTION": "Enter champ:Defensive NL Gain !B! Block. NL Grants additional Block equal to your *Vigor."
   },
   "champ:Aggression": {
     "NAME": "Aggression",
@@ -161,12 +161,9 @@
 
   },
   "champ:FalseCounter": {
-    "NAME": "False Counter",
-    "DESCRIPTION": "Gain !M! champ:Counter. NL The next time champ:Counter activates, lose only half.",
-    "UPGRADE_DESCRIPTION": "Gain !M! champ:Counter. NL The next time champ:Counter activates, lose only half.",
-    "EXTENDED_DESCRIPTION": [
-      "A poor time for that move."
-    ]
+    "NAME": "Rope-a-dope",
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] and draw 3 cards.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] [E] and draw 3 cards."
   },
   "champ:IronFortress": {
     "NAME": "Technical Jig",
@@ -272,9 +269,7 @@
   },
   "champ:CrownThrow": {
     "NAME": "Crownarang",
-    "DESCRIPTION": "Deal !D! damage. NL Returns next turn with no cost and without this effect.",
-
-    "EXTENDED_DESCRIPTION": ["Deal !D! damage."]
+    "DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: Draw !M! Attacks."
 
   },
   "champ:Encircle": {
@@ -350,7 +345,7 @@
     "DESCRIPTION": "At the start of each turn, gain !M! Vigor for every 3 Vigor spent last turn. Then do the same for champ:Counter."
   },
   "champ:Duel": {
-    "NAME": "Duel",
+    "NAME": "Challenge",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If the target has Strength, repeat these effects once.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If the target has Strength, repeat these effects once."
   },
@@ -424,7 +419,7 @@
   },
   "champ:TripleStrike": {
     "NAME": "Triple Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Gain 2 *Strikes. They cost 0 and count as Skills. NL Exhaust.",
+    "DESCRIPTION": "Deal !D! damage. NL Gain 2 *Strikes. They cost 0 and trigger *Skill *Bonuses. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 Upgraded *Strikes. They cost 0 and trigger *Skill *Bonuses. NL Exhaust."
   },
   "champ:WindUp": {

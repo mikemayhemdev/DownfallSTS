@@ -11,7 +11,7 @@
   },
   "champ:TechniqueMod": {
     "TEXT": [
-      " NL Trigger your Stance's Skill Bonus."
+      " NL Trigger *Stance *Skill *Bonus."
     ]
   },
   "champ:OpenerMod": {

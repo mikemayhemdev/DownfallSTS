@@ -21,20 +21,26 @@ public class Backstep extends AbstractChampCard {
         baseBlock = 6;
         baseMagicNumber = magicNumber = 1;
         this.tags.add(ChampMod.OPENERDEFENSIVE);
-        tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBOBERSERKER);
+        //tags.add(ChampMod.COMBO);
+        //tags.add(ChampMod.COMBOBERSERKER);
         postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         defenseOpen();
         blck();
+
+    }
+
+    @Override
+    public void applyPowers() {
+        AbstractPlayer p = AbstractDungeon.player;
+        super.applyPowers();
         if (bcombo()) {
             if (p.hasPower(VigorPower.POWER_ID)) {
-                atb(new GainBlockAction(p, p, p.getPower(VigorPower.POWER_ID).amount));
+                baseBlock = 6 + p.getPower(VigorPower.POWER_ID).amount;
             }
         }
-
     }
 
     @Override

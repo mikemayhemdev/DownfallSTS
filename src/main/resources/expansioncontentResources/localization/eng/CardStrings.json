@@ -29,7 +29,7 @@
   },
   "expansioncontent:AwakenDeath": {
     "NAME": "Awaken",
-    "DESCRIPTION": "Gain 1 Strength. NL When you would die, heal !M! HP instead."
+    "DESCRIPTION": "When you would die, or at the end of combat, heal !M! HP instead and lose this buff."
   },
   "expansioncontent:Chronoboost": {
     "NAME": "Chrono-Boost",
@@ -38,13 +38,21 @@
   },
   "expansioncontent:PolyBeam": {
     "NAME": "Donu Blast",
-    "DESCRIPTION": "Deal !D! damage twice. Increase this card's damage by !M!. NL Next turn, gain a *Deca *Shield, or expansioncontent:Exhume it. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage twice. Increase this card's damage by !M!. NL Next turn, gain a *Deca *Shield+, or expansioncontent:Exhume it. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Strength."
   },
   "expansioncontent:DecaShield": {
     "NAME": "Deca Shield",
-    "DESCRIPTION": "*Boss - Ancients. NL Gain !B! Block twice. Increase this card's Block by !M!. NL Next turn, expansioncontent:Exhume *Donu *Blast. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "*Boss - Ancients. NL Gain !B! Block twice. Increase this card's Block by !M!. NL Next turn, expansioncontent:Exhume *Donu *Blast+. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Plated Armor."
+  },
+  "expansioncontent:ShapePower": {
+    "NAME": "Shaper's Blessing",
+    "DESCRIPTION": "Choose - Gain !M! Strength or !B! Plated Armor.",
+    "EXTENDED_DESCRIPTION": [
+      "Donu's Power",
+      "Gain !M! Strength.",
+      "Deca's Shield",
+      "Gain !B! Plated Armor."
+    ]
   },
   "expansioncontent:PrepareCrush": {
     "NAME": "Prepare Crush",

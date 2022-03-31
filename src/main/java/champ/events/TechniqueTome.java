@@ -151,7 +151,7 @@ public class TechniqueTome extends AbstractImageEvent {
 
         while (var2.hasNext()) {
             AbstractCard c = (AbstractCard) var2.next();
-            if (!c.hasTag(ChampMod.TECHNIQUE)) {
+            if (c.type == AbstractCard.CardType.ATTACK) {
                 retVal.group.add(c);
             }
         }

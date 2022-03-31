@@ -1,3 +1,4 @@
+/*
 package expansioncontent.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -106,3 +107,5 @@ public class DecaShield extends AbstractExpansionCard {
         return new DecaShield(partner, false);
     }
 }
+
+ */

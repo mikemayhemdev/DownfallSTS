@@ -1,3 +1,4 @@
+/*
 package champ.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -44,3 +45,5 @@ public class HeartStrike extends AbstractChampCard {
         upgradeDamage(3);
     }
 }
+
+ */

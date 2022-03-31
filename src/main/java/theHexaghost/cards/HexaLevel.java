@@ -13,7 +13,7 @@ public class HexaLevel extends AbstractHexaCard {
 
     //stupid intellij stuff POWER, SELF, RARE
 
-    private static final int MAGIC = 1;
+    private static final int MAGIC = 2;
 
     public HexaLevel() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);

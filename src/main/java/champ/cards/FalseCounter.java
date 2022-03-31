@@ -2,13 +2,18 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.powers.CounterPower;
+import champ.powers.EnergizedDurationPower;
 import champ.powers.FalseCounterPower;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
 import champ.stances.UltimateStance;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
+import com.megacrit.cardcrawl.powers.EnergizedPower;
+import slimebound.powers.EnergizedSlimeboundPower;
 import sneckomod.SneckoMod;
 
 public class FalseCounter extends AbstractChampCard {
@@ -17,13 +22,17 @@ public class FalseCounter extends AbstractChampCard {
 
     public FalseCounter() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 5;
+        baseMagicNumber = magicNumber = 1;
         tags.add(ChampMod.FINISHER);
+        baseBlock = block = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new CounterPower(magicNumber));
-        applyToSelf(new FalseCounterPower(1));
+
+        blck();
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p,3), 3));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedDurationPower(this.magicNumber), this.magicNumber));
+
         finisher();
         postInit();
     }

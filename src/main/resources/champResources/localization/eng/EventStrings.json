@@ -49,12 +49,12 @@
       "Whatever price had to be paid was worth it to gain this precious knowledge. It takes much effort to peel yourself away from the book's hold over you, but you manage to do so. NL NL With the tome's teachings fresh in your mind, you set out to find a new victim to test them out on."
     ],
     "OPTIONS": [
-      "[Read] Choose a card to gain #gTechnique. #rLose #r",
+      "[Read] Choose an Attack to gain #y'trigger #ySkill #yBonus.' #rLose #r",
       " #rHP.",
       "[Leave]",
-      "[Locked] Requires a non-Technique Card.",
-      "Choose a card to gain Technique.",
-      "[Read] Choose a card to gain #gTechnique. #rBecome #rCursed #r- #rPride."
+      "[Locked] Requires an Attack Card.",
+      "Choose a card to gain #y'trigger #ySkill #yBonus.'",
+      "[Read] Choose an Attack to gain #y'trigger #ySkill #yBonus.'. #rCursed #r- #rPride."
     ]
   },
   "champ:Gym": {
@@ -96,7 +96,7 @@
       "Skill and assurance form an invincible combination."
     ],
     "OPTIONS": [
-      "[Intuition] #gAdd #gTechnique to all #gStrikes and #gDefends.",
+      "[Intuition] #gAdd #y'trigger #ySkill #yBonus.' to all #gStrikes and #gDefends.",
       "[Locked] Requires a Strike or Defend."
     ]
   }
