@@ -606,9 +606,9 @@
   },
   "bronze:BuggyMess": {
     "NAME": "多重错误",
-    "DESCRIPTION": " bronze:插入 随机 状态牌 。 NL 获得 !M! [E] 。",
+    "DESCRIPTION": " bronze:插入 随机 状态牌 。 NL 获得 [E] 。",
     "EXTENDED_DESCRIPTION": [
-      "错误的",
+      "错误",
       "混乱"
     ]
   },
