@@ -44,8 +44,8 @@
     "DESCRIPTION": "获得 !M! 层 champ:反击 。 NL 进入 champ:防守 。"
   },
   "champ:ShieldSigil": {
-    "NAME": "防守印记",
-    "DESCRIPTION": "重复 !M! 次："
+    "NAME": "连续猛击",
+    "DESCRIPTION": "造成 !M! 点伤害。 NL 本回合 champ:技术 奖励多提供 !M! 层。"
   },
   "champ:FocusedDefense": {
     "NAME": "下潜摇摆",
