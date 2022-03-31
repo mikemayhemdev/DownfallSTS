@@ -9,7 +9,7 @@ import static automaton.FunctionHelper.WITH_DELIMITER;
 
 public class AutomatonTextHelper {
 
-    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("bronze:AutoTextHelper");
+    public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("bronze:AutoTextHelper");
 
     private static String getDynamicValue(AbstractCard card, char key) {
         switch (key) {
@@ -100,7 +100,7 @@ public class AutomatonTextHelper {
             return uiStrings.TEXT[3] + rawDescription;
         }  else if (rawDescription.contains(uiStrings.TEXT[4])) {
             String[] splitText = rawDescription.split(String.format(WITH_DELIMITER, uiStrings.TEXT[4])); // Replicate stuff
-            String compileText = splitText[1];
+            String compileText = splitText[1] + splitText[2];
             return splitText[0] + uiStrings.TEXT[2] + compileText;
         }
         return rawDescription + uiStrings.TEXT[2];

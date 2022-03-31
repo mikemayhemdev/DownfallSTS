@@ -77,7 +77,7 @@ public class FullReleasePower extends AbstractAutomatonPower implements NonStack
         if (stored == null) {
             description = "ERROR - PLEASE REPORT BUG";
         } else {
-            String s = DESCRIPTIONS[0] + CardModifierPatches.CardModifierOnCreateDescription.calculateRawDescription(stored, stored.rawDescription);
+            String s = CardModifierPatches.CardModifierOnCreateDescription.calculateRawDescription(stored, stored.rawDescription);
             description = s.replaceAll("bronze:", "#y").replaceAll("\\*", "#y");
         }
     }

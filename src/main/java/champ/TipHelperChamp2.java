@@ -113,7 +113,7 @@ public class TipHelperChamp2 {
             }
 
             if (rememberedCard != null) {
-                if (rememberedCard.hasTag(ChampMod.TECHNIQUE)) {
+                if (rememberedCard.type == AbstractCard.CardType.SKILL) {
                     if (AbstractDungeon.player.stance instanceof UltimateStance ||
                             AbstractDungeon.player.stance instanceof BerserkerStance ||
                             AbstractDungeon.player.stance instanceof DefensiveStance

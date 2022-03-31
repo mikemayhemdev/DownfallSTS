@@ -240,7 +240,7 @@
   },
   "champ:RisingSlash": {
     "NAME": "Rising Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Play this twice if the last played card was a champ:Finisher."
+    "DESCRIPTION": "Deal !D! damage. NL If the last played card this combat was a champ:Finisher, deal !D! damage again."
   },
   "champ:Shatter": {
     "NAME": "Shatter",
@@ -351,8 +351,8 @@
   },
   "champ:Duel": {
     "NAME": "Duel",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If the target has Strength, play this twice.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If the target has Strength, play this twice."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If the target has Strength, repeat these effects once.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If the target has Strength, repeat these effects once."
   },
   "champ:DancingMaster": {
     "NAME": "Dancing Master",

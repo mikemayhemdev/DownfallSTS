@@ -42,14 +42,11 @@ public class Duel extends AbstractChampCard {
         }
         dmg(m, AbstractGameAction.AttackEffect.NONE);
         if (m.hasPower(StrengthPower.POWER_ID) && m.getPower(StrengthPower.POWER_ID).amount > 0 && !this.purgeOnUse) {
-            AbstractCard r = this;
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    GameActionManager.queueExtraCard(r, m);
-                }
-            });
+            blck();
+            if (m != null) {
+                atb(new VFXAction(new ClashEffect(m.hb.cX, m.hb.cY), 0.1F));
+            }
+            dmg(m, AbstractGameAction.AttackEffect.NONE);
         }
     }
 
