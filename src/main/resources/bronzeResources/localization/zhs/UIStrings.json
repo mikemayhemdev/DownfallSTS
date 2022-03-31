@@ -40,7 +40,9 @@
       " NL bronze:编译 ",
       " bronze:编译 ",
       " NL bronze:编码 。",
-      " bronze:编码 。 NL "
+      " bronze:编码 。 NL ",
+      " π NL 被 bronze:编码 时将本牌的复制品加入弃牌堆。",
+      "LOCALIZATION NOTE: 上方文本需和副本最后一行一致。"
     ]
   },
   "bronze:CompileDisplayPanel": {
