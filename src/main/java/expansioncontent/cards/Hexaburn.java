@@ -15,7 +15,7 @@ public class Hexaburn extends AbstractExpansionCard {
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_hexaghost.png", "expansioncontentResources/images/1024/bg_boss_hexaghost.png");
         tags.add(expansionContentMod.STUDY_HEXAGHOST);
         tags.add(expansionContentMod.STUDY);
-        baseMagicNumber = magicNumber = 6;
+        baseMagicNumber = magicNumber = 3;
         baseDamage = 6;
     }
 
@@ -26,7 +26,7 @@ public class Hexaburn extends AbstractExpansionCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(-2);
+            upgradeMagicNumber(-1);
         }
     }
 }

@@ -83,7 +83,7 @@
   },
   "bronze:Branch": {
     "NAME": "Branch",
-    "DESCRIPTION": "Choose - Deal !D! damage or gain !B! Block. NL bronze:Encode the option not chosen. Exhaust.",
+    "DESCRIPTION": "Deal !D! damage or gain !B! Block. NL The option not chosen is bronze:Encoded. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Branch: Attack",
       "Deal !D! damage.",
@@ -117,8 +117,8 @@
     ]
   },
   "bronze:Separator": {
-    "NAME": "Separator",
-    "DESCRIPTION": "Deal !D! damage. π NL When bronze:Encoded, if this is in the center, increase damage by !M!.",
+    "NAME": "Wild Strike",
+    "DESCRIPTION": "Deal !D! damage. π NL bronze:Insert 1 *Wound.",
     "EXTENDED_DESCRIPTION": [
       "split",
       "Child"
@@ -155,7 +155,7 @@
   },
   "bronze:OilSpill": {
     "NAME": "Oil Spill",
-    "DESCRIPTION": "Deal !D! damage and apply !M! Poison. NL bronze:Compile *Error - bronze:Insert a *Slimed.",
+    "DESCRIPTION": "Deal !D! damage and apply !M! Poison. NL bronze:Compile *Error - bronze:Insert 1 *Slimed.",
     "EXTENDED_DESCRIPTION": [
       "oily",
       "Spill"
@@ -187,7 +187,7 @@
   },
   "bronze:Shield": {
     "NAME": "Sticky Shield",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Insert a *Slimed.",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Insert 1 *Slimed.",
     "EXTENDED_DESCRIPTION": [
       "sticky",
       "Shield"

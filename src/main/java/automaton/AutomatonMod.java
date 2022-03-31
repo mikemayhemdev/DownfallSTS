@@ -323,7 +323,7 @@ public class AutomatonMod implements
 
         downfallMod.registerUnlockSuite(
                 Constructor.ID,
-                Separator.ID,
+                OilSpill.ID,
                 Terminator.ID,
 
                 Refactor.ID,

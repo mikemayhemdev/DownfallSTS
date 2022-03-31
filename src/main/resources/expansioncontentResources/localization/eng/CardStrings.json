@@ -1,7 +1,7 @@
 {
   "expansioncontent:GuardianWhirl": {
     "NAME": "Guardian Whirl",
-    "DESCRIPTION": "eRequires 10 or more Block. NL Deal !D! damage to ALL enemies 4 times. NL Exhaust.",
+    "DESCRIPTION": "Requires 10 or more Block. NL Deal !D! damage to ALL enemies 4 times. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "I do not have enough Block."
     ]
@@ -48,8 +48,8 @@
   },
   "expansioncontent:PrepareCrush": {
     "NAME": "Prepare Crush",
-    "DESCRIPTION": "Gain !B! Block. NL On your next turn, gain [E] [E] [E] and add *SLIME *CRUSH to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL On your next turn, gain [E] [E] [E] and add *SLIME *CRUSH+ to your hand. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] [E] [E] and *SLIME *CRUSH. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] [E] [E] and *SLIME *CRUSH+. NL Exhaust."
   },
   "expansioncontent:StudyTheSpire": {
     "NAME": "Study the Spire",
