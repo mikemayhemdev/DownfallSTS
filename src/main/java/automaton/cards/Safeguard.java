@@ -15,7 +15,7 @@ public class Safeguard extends AbstractBronzeCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int BLOCK = 8;
+    private static final int BLOCK = 7;
     private static final int MAGIC = 2;
     private static final int UPG_MAGIC = -1;
 
