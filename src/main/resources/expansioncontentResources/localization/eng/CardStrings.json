@@ -1,7 +1,7 @@
 {
   "expansioncontent:GuardianWhirl": {
     "NAME": "Guardian Whirl",
-    "DESCRIPTION": "Requires 10 or more Block. NL Deal !D! damage to ALL enemies 4 times. NL Exhaust.",
+    "DESCRIPTION": "Requires 10 Block. NL Deal !D! damage to ALL enemies 4 times. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "I do not have enough Block."
     ]
@@ -25,7 +25,7 @@
   },
   "expansioncontent:YouAreMine": {
     "NAME": "YOU ARE MINE!",
-    "DESCRIPTION": "Remove ALL enemy Block. NL Apply !M! Weak and Vulnerable to ALL enemies. NL Exhaust."
+    "DESCRIPTION": "Remove Block from, and Apply !M! Weak and Vulnerable to, ALL enemies. NL Exhaust."
   },
   "expansioncontent:AwakenDeath": {
     "NAME": "Awaken",

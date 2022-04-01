@@ -1,3 +1,4 @@
+/*
 package downfall.powers;
 
 import com.badlogic.gdx.graphics.Texture;
@@ -65,3 +66,5 @@ public class NeowStayAt1HpPower extends AbstractPower {
     }
 
 }
+
+ */

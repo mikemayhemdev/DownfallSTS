@@ -203,7 +203,7 @@
   },
   "bronze:Invalidate": {
     "NAME": "Invalidate",
-    "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies.",
+    "DESCRIPTION": "Apply !M! Vulnerable.",
     "EXTENDED_DESCRIPTION": [
       "invalid",
       "Error"

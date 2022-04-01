@@ -1,6 +1,11 @@
 package downfall.actions;
 
 
+import charbosses.bosses.Defect.CharBossDefect;
+import charbosses.bosses.Hermit.CharBossHermit;
+import charbosses.bosses.Ironclad.CharBossIronclad;
+import charbosses.bosses.Silent.CharBossSilent;
+import charbosses.bosses.Watcher.CharBossWatcher;
 import charbosses.cards.other.Antidote;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -10,6 +15,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.downfallMod;
 import downfall.monsters.NeowBossFinal;
 import downfall.powers.neowpowers.*;
+import slimebound.SlimeboundMod;
 
 public class NeowGainMinionPowersAction extends AbstractGameAction {
     private NeowBossFinal owner;
@@ -20,11 +26,36 @@ public class NeowGainMinionPowersAction extends AbstractGameAction {
         num = act;
     }
 
+    public boolean checkBossFaced(String id){
+        if (downfallMod.Act1BossFaced.equals(id)) return true;
+        if (downfallMod.Act2BossFaced.equals(id)) return true;
+        if (downfallMod.Act3BossFaced.equals(id)) return true;
+        return false;
+
+    }
+
     @Override
     public void update() {
 
         this.isDone = true;
+        SlimeboundMod.logger.info(downfallMod.Act1BossFaced);
+        SlimeboundMod.logger.info(downfallMod.Act2BossFaced);
+        SlimeboundMod.logger.info(downfallMod.Act3BossFaced);
+        SlimeboundMod.logger.info("downfall:Ironclad " + checkBossFaced("downfall:Ironclad"));
+        SlimeboundMod.logger.info("downfall:Silent "+ checkBossFaced("downfall:Silent"));
+        SlimeboundMod.logger.info("downfall:Defect "+ checkBossFaced("downfall:Defect"));
+        SlimeboundMod.logger.info("downfall:Watcher "+ checkBossFaced("downfall:Watcher"));
+        SlimeboundMod.logger.info("downfall:Hermit "+ checkBossFaced("downfall:Hermit"));
 
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new TrueNeowPower(owner,
+                checkBossFaced("downfall:Ironclad"),
+                checkBossFaced("downfall:Silent"),
+                checkBossFaced("downfall:Defect"),
+                checkBossFaced("downfall:Watcher"),
+                checkBossFaced("downfall:Hermit")
+        )));
+
+        /*
         switch (num) {
             case 1: {
                 switch (downfallMod.Act1BossFaced) {
@@ -112,7 +143,9 @@ public class NeowGainMinionPowersAction extends AbstractGameAction {
                 }
             }
         }
-        for (int i = 0; i < 5; i++) {
+
+         */
+        for (int i = 0; i < 3; i++) {
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
         }
 
