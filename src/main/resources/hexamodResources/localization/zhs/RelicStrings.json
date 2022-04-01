@@ -60,7 +60,7 @@
     "NAME": "混沌灵魂",
     "FLAVOR": "混乱，现出真身。",
     "DESCRIPTIONS": [
-      "第二枚 #yhexamod:灼热 #y鬼火 变为 #y狂徒鬼火。 NL 狂徒鬼火在回合结束时如果 #y激活 则自动 #y点燃 。 NL 点燃：打出抽牌堆顶部的牌。"
+      "第二枚 #yhexamod:灼热 #y鬼火 变为 #y狂徒鬼火。 NL 狂徒鬼火在回合结束时如果 #y激活 则自动 #y点燃 。 NL #y点燃 ：打出抽牌堆顶部的牌。"
     ]
   },
   "hexamod:JarOfFuel": {
