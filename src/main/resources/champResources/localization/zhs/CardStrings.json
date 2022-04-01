@@ -215,7 +215,7 @@
   },
   "champ:EnragedBash": {
     "NAME": "怒斩",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL champ:战狂 champ:连段 ：攻击次数加1。",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL champ:战狂 champ:连段 ：本场战斗攻击次数加1。",
     "EXTENDED_DESCRIPTION": [
       "造成 !D! 点伤害 !M! 次。 NL champ:战狂 champ:连段 ：攻击次数加1。"
     ]
@@ -311,7 +311,7 @@
   },
   "champ:GladiatorForm": {
     "NAME": "角斗形态",
-    "DESCRIPTION": "回合开始时，上回合每使用过3层 活力 或 champ:反击 ，对应地获得 !M! 层。"
+    "DESCRIPTION": "回合开始时，上回合每使用过3层 活力 ，获得 !M! 层 。 champ:反击 亦然。"
   },
   "champ:Duel": {
     "NAME": "决斗",
