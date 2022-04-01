@@ -190,8 +190,8 @@
   },
   "Guardian:Clone": {
     "NAME": "Clone",
-    "DESCRIPTION": "Choose a card in your hand. Place a copy of that card into guardianmod:Stasis. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a card in your hand. Place a copy of that card into guardianmod:Stasis. NL guardianmod:Accelerate. NL Exhaust."
+    "DESCRIPTION": "Choose a card. NL Place a copy of that card into guardianmod:Stasis. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a card. NL Place a copy of that card into guardianmod:Stasis. NL guardianmod:Accelerate. NL Exhaust."
   },
   "Guardian:Preprogram": {
     "NAME": "Preprogram",
@@ -207,7 +207,7 @@
   },
   "Guardian:StasisStrike": {
     "NAME": "Stasis Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Gain 1 *Stasis Slot."
+    "DESCRIPTION": "Deal !D! damage. NL Gain 1 Stasis Slot."
   },
   "Guardian:FuturePlans": {
     "NAME": "Future Plans",
@@ -235,7 +235,7 @@
   },
   "Guardian:RollAttack": {
     "NAME": "Roll Attack",
-    "DESCRIPTION": "Deal !D! damage. NL If in guardianmod:Defensive_Mode, affects ALL enemies. Otherwise, guardianmod:Brace 8."
+    "DESCRIPTION": "Deal !D! damage. NL If in *Defensive *Mode, affects ALL enemies. Otherwise, guardianmod:Brace 8."
   },
   "Guardian:GemFire": {
     "NAME": "Gem Cannon",
@@ -255,7 +255,7 @@
   },
   "Guardian:ShieldSpikes": {
     "NAME": "Shield Spikes",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! temporary Thorns if in guardianmod:Defensive_Mode. Otherwise, guardianmod:Brace 8."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! temporary Thorns if in *Defensive *Mode. Otherwise, guardianmod:Brace 8."
   },
   "Guardian:PrismaticBeam": {
     "NAME": "Prismatic Spray",
@@ -298,15 +298,15 @@
   },
   "Guardian:EvasiveProtocol": {
     "NAME": "Evasive Protocol",
-    "DESCRIPTION": "While in guardianmod:Defensive_Mode, raise your Dexterity by !M!. NL At the start of your turn, guardianmod:Brace 3."
+    "DESCRIPTION": "While in *Defensive *Mode, raise your Dexterity by !M!. NL At the start of your turn, guardianmod:Brace 3."
   },
   "Guardian:SpikerProtocol": {
     "NAME": "Spiker Protocol",
-    "DESCRIPTION": "Gain !M! Thorns while in guardianmod:Defensive_Mode. NL At the start of your turn, guardianmod:Brace 3."
+    "DESCRIPTION": "Gain !M! Thorns while in *Defensive *Mode. NL At the start of your turn, guardianmod:Brace 3."
   },
   "Guardian:ArmoredProtocol": {
     "NAME": "Armored Protocol",
-    "DESCRIPTION": "Gain !M! Block at the end of each turn while in guardianmod:Defensive_Mode. NL At the start of your turn, guardianmod:Brace 3."
+    "DESCRIPTION": "Gain !M! Block at the end of each turn while in *Defensive *Mode. NL At the start of your turn, guardianmod:Brace 3."
   },
   "Guardian:TimeSifter": {
     "NAME": "Time Sifter",
@@ -367,11 +367,11 @@
   },
   "Guardian:BronzeOrb": {
     "NAME": "Orb Support",
-    "DESCRIPTION": "Innate. NL Deal !D! damage. Put a random card from your draw pile into guardianmod:Stasis. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Deal !D! damage. Put a random card from your draw pile into guardianmod:Stasis. Exhaust."
   },
   "Guardian:RevengeProtocol": {
     "NAME": "Revenge Protocol",
-    "DESCRIPTION": "While in guardianmod:Defensive_Mode, raise your Strength by !M!. NL At the start of your turn, guardianmod:Brace 5."
+    "DESCRIPTION": "While in *Defensive *Mode, raise your Strength by !M!. NL At the start of your turn, guardianmod:Brace 5."
   },
   "Guardian:GatlingBeam": {
     "NAME": "Laser Turret",
