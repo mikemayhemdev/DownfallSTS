@@ -156,40 +156,44 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
 
     public void reInitializeHand() {
         if (!AbstractCharBoss.boss.isDeadOrEscaped()) {
-            AbstractCard bot = AbstractCharBoss.boss.hand.getBottomCard();
-            AbstractCharBoss.boss.hand.removeCard(bot);
-            if (bot instanceof EnShowdown || bot instanceof EnItchyTriggerAct2) {
-                ((AbstractHermitBossCard) bot).onSpecificTrigger();
-            }
-            AbstractCharBoss.boss.hand.addToTop(getNextCard());
-            AbstractCharBoss.boss.hand.refreshHandLayout();
-            AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    AbstractCharBoss.boss.hand.group.stream().forEach(q -> ((AbstractBossCard) q).bossDarken());
-                    int budget = AbstractCharBoss.boss.energyPanel.getCurrentEnergy();
-                    for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
-                        if (c.costForTurn <= budget && c.costForTurn != -2 && c instanceof AbstractBossCard) {
-                            ((AbstractBossCard) c).createIntent();
-                            ((AbstractBossCard) c).bossLighten();
-                            budget -= c.costForTurn;
-                            budget += ((AbstractBossCard) c).energyGeneratedIfPlayed;
-                            if (budget < 0) budget = 0;
-                        } else if (c.costForTurn == -2 && c.type == AbstractCard.CardType.CURSE && c.color == AbstractCard.CardColor.CURSE) {
-                            ((AbstractBossCard) c).bossLighten();
-                        }
+            if (AbstractCharBoss.boss.hand != null) {
+                if (AbstractCharBoss.boss.hand.size() > 0) {
+                    AbstractCard bot = AbstractCharBoss.boss.hand.getBottomCard();
+                    AbstractCharBoss.boss.hand.removeCard(bot);
+                    if (bot instanceof EnShowdown || bot instanceof EnItchyTriggerAct2) {
+                        ((AbstractHermitBossCard) bot).onSpecificTrigger();
                     }
-                    for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
-                        AbstractBossCard cB = (AbstractBossCard) c;
-                        cB.refreshIntentHbLocation();
-                        c.applyPowers();
-                    }
+                    AbstractCharBoss.boss.hand.addToTop(getNextCard());
                     AbstractCharBoss.boss.hand.refreshHandLayout();
+                    AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
+                        @Override
+                        public void update() {
+                            isDone = true;
+                            AbstractCharBoss.boss.hand.group.stream().forEach(q -> ((AbstractBossCard) q).bossDarken());
+                            int budget = AbstractCharBoss.boss.energyPanel.getCurrentEnergy();
+                            for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
+                                if (c.costForTurn <= budget && c.costForTurn != -2 && c instanceof AbstractBossCard) {
+                                    ((AbstractBossCard) c).createIntent();
+                                    ((AbstractBossCard) c).bossLighten();
+                                    budget -= c.costForTurn;
+                                    budget += ((AbstractBossCard) c).energyGeneratedIfPlayed;
+                                    if (budget < 0) budget = 0;
+                                } else if (c.costForTurn == -2 && c.type == AbstractCard.CardType.CURSE && c.color == AbstractCard.CardColor.CURSE) {
+                                    ((AbstractBossCard) c).bossLighten();
+                                }
+                            }
+                            for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
+                                AbstractBossCard cB = (AbstractBossCard) c;
+                                cB.refreshIntentHbLocation();
+                                c.applyPowers();
+                            }
+                            AbstractCharBoss.boss.hand.refreshHandLayout();
+                        }
+                    });
+                    if (AbstractCharBoss.boss instanceof CharBossHermit) {
+                        CharBossHermit.previewCard = mockDeck.get(0).makeStatEquivalentCopy();
+                    }
                 }
-            });
-            if (AbstractCharBoss.boss instanceof CharBossHermit) {
-                CharBossHermit.previewCard = mockDeck.get(0).makeStatEquivalentCopy();
             }
         }
     }
