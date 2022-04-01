@@ -1,35 +1,20 @@
 package expansioncontent.cards;
 
-import automaton.actions.AddToFuncAction;
-import automaton.cards.BranchBlock;
-import automaton.cards.BranchHit;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
 import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
 import expansioncontent.expansionContentMod;
-import expansioncontent.powers.AddSameInstancePower;
-import expansioncontent.powers.NextTurnExhumePower;
 
 import java.util.ArrayList;
 
 public class ShapePower extends AbstractExpansionCard implements OctopusCard {
     public final static String ID = makeID("ShapePower");
-
-    private static final int DAMAGE_INCREASE = 1;
 
     public ShapePower() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
