@@ -77,12 +77,8 @@
   "hexamod:FuturePower": {
     "NAME": "Speedrun",
     "DESCRIPTIONS": [
-      "The first #b",
-      " time ",
-      " times ",
-      "you #yIgnite a Ghostflame each turn, #yAdvance. NL Ignited #b",
-      " Ghostflame this turn.",
-      " Ghostflames this turn."
+      "Whenever you Advance, gain ",
+      " temporary #yStrength."
     ]
   },
   "hexamod:FutureUpgradePower": {

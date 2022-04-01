@@ -33,9 +33,7 @@ public class GhostOfSpirePast extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            isInnate = true;
-            initializeDescription();
+            upgradeBaseCost(1);
         }
     }
 }

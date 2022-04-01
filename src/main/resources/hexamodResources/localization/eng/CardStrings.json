@@ -37,7 +37,7 @@
   },
   "hexamod:SkipABeat": {
     "NAME": "Kindle",
-    "DESCRIPTION": "hexamod:Ignite the current Ghostflame."
+    "DESCRIPTION": "If the current Ghostflame is not *Ignited, hexamod:Ignite it."
   },
   "hexamod:CatchUp": {
     "NAME": "Catch Up",
@@ -67,8 +67,8 @@
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "Speedrunning",
-    "DESCRIPTION": "The first time you hexamod:Ignite a Ghostflame each turn, hexamod:Advance.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you hexamod:Advance, gain !M! Block."
+    "DESCRIPTION": "Whenever you hexamod:Advance, gain !M! temporary Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you hexamod:Advance, gain !M! temporary Strength."
   },
   "hexamod:GhostOfSpirePresent": {
     "NAME": "Here and Now",
@@ -250,7 +250,7 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Rain of Embers",
-    "DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn X times..",
+    "DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn X times.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage, apply !burny! hexamod:Soulburn, and apply 1 Weak X times."
   },
   "hexamod:VolcanoVisage": {

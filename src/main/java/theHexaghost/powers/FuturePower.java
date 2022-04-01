@@ -3,17 +3,21 @@ package theHexaghost.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.AdvanceAction;
 import downfall.util.TextureLoader;
 import theHexaghost.ghostflames.AbstractGhostflame;
+import theHexaghost.util.OnAdvanceSubscriber;
 import theHexaghost.util.OnChargeSubscriber;
 
-public class FuturePower extends AbstractPower implements CloneablePowerInterface, OnChargeSubscriber {
+public class FuturePower extends AbstractPower implements CloneablePowerInterface, OnAdvanceSubscriber {
 
     public static final String POWER_ID = HexaMod.makeID("FuturePower");
 
@@ -39,23 +43,25 @@ public class FuturePower extends AbstractPower implements CloneablePowerInterfac
         this.updateDescription();
     }
 
+    /*
     @Override
     public void atStartOfTurnPostDraw() {
         activation_count = 0;
         updateDescription();
     }
 
-    public void onCharge(AbstractGhostflame gf) {
-        if (activation_count < amount) {
-            this.flash();
-            addToBot(new AdvanceAction(false));
-        }
-        activation_count++;
-        updateDescription();
+     */
+
+    @Override
+    public void onAdvance() {
+
+        addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount),amount));
+        addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, amount),amount));
     }
 
     @Override
     public void updateDescription() {
+        /*
         StringBuilder sb = new StringBuilder();
         sb.append(DESCRIPTIONS[0]);
         sb.append((amount));
@@ -71,6 +77,9 @@ public class FuturePower extends AbstractPower implements CloneablePowerInterfac
             sb.append(DESCRIPTIONS[5]);
 
         this.description = sb.toString();
+
+         */
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
     @Override
