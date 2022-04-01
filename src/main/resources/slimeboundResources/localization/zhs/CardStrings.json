@@ -103,7 +103,7 @@
     ]
   },
   "Slimebound:Recollect": {
-    "NAME": "重新收集",
+    "NAME": "反刍",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 随机 expansioncontent:发掘 1张 slimeboundmod:舔舔 系牌。",
     "UPGRADE_DESCRIPTION": "得 !B! 点 格挡 。 NL 随机 expansioncontent:发掘 2张 slimeboundmod:舔舔 系牌。",
     "EXTENDED_DESCRIPTION": [
@@ -116,7 +116,7 @@
   },
   "Slimebound:GrowthPunch": {
     "NAME": "成长拳",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL slimeboundmod:消耗黏液 -本牌本场战斗中数值提高 !M! 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL slimeboundmod:消耗黏液 -本牌本场战斗数值提高 !M! 点。"
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "查找策略",
@@ -229,7 +229,7 @@
   "Slimebound:GoopTackle": {
     "NAME": "连续冲撞",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机获得 slimeboundmod:冲撞 牌。其耗能本回合为0。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机获得 slimeboundmod:冲撞 牌+。其耗能本回合为0。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机获得 slimeboundmod:冲撞 牌+。 NL 其耗能本回合为0。"
   },
   "Slimebound:CorrosiveSpit": {
     "NAME": "腐蚀喷吐",
@@ -246,7 +246,7 @@
   },
   "Slimebound:FlameTackle": {
     "NAME": "烈焰冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 本场战斗中 slimeboundmod:冲撞 牌的伤害增加 !M! 点。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 本场战斗 slimeboundmod:冲撞 牌的伤害增加 !M! 点。"
   },
   "Slimebound:RainOfGoop": {
     "NAME": "黏液雨",
@@ -277,7 +277,7 @@
   },
   "Slimebound:Equalize": {
     "NAME": "均质化",
-    "DESCRIPTION": "造成 !D! 点伤害并回复 !M! 点生命。 NL slimeboundmod:消耗黏液 -打出两次。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害并回复 !M! 点生命。 NL slimeboundmod:消耗黏液 -再打出一次。 NL 消耗 。"
   },
   "Slimebound:DisruptingSlam": {
     "NAME": "宴后甜点",
