@@ -34,8 +34,8 @@
   },
   "Guardian:Gem_Cyan": {
     "NAME": "蓝晶",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 将1张 *水晶护卫 加入手牌。",
-    "UPGRADE_DESCRIPTION": "获得 1 张 *水晶护卫 。"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 *水晶护卫 。",
+    "UPGRADE_DESCRIPTION": "弃用"
   },
   "Guardian:ChargeUp": {
     "NAME": "充能",
@@ -61,8 +61,8 @@
   },
   "Guardian:TwinSlam": {
     "NAME": "双斩",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 *再斩 加入手牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将 *再斩 加入手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 *再斩 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 *再斩 。"
   },
   "Guardian:GuardianWhirl": {
     "NAME": "守护者旋风",
@@ -82,8 +82,8 @@
     "DESCRIPTION": "将本牌 guardianmod:凝滞 。 NL guardianmod:凝滞 结束时，对所有敌人造成 !M! 点伤害。 NL guardianmod:挥发 。"
   },
   "Guardian:HyperBeam_Guardian": {
-    "NAME": "超能射线",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 力量 在本牌中发挥 !M! 倍效果。 NL 跳过你的下个回合。"
+    "NAME": "究极射线",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 力量 在本牌中发挥 !M! 倍效果。 NL 跳过你的下回合。"
   },
   "Guardian:BronzeArmor": {
     "NAME": "弹性护甲",
@@ -92,7 +92,7 @@
   },
   "Guardian:FloatingOrbs": {
     "NAME": "浮游圆球",
-    "DESCRIPTION": "回合开始时，将一张 *圆球撞击 加入手牌。"
+    "DESCRIPTION": "回合开始时获得 *圆球撞击 。"
   },
   "Guardian:OrbSlam": {
     "NAME": "圆球撞击",
@@ -127,46 +127,46 @@
   },
   "Guardian:CompilePackage": {
     "NAME": "完整组件",
-    "DESCRIPTION": "从3张 guardianmod:组件 牌中选择 1 张加入手牌。 消耗 。",
-    "UPGRADE_DESCRIPTION": "从3张已 升级 的 guardianmod:组件 牌中选择 1 张加入手牌。 消耗 。",
+    "DESCRIPTION": "从3张 guardianmod:组件 牌中选择获得1张。 消耗 。",
+    "UPGRADE_DESCRIPTION": "从3张已 升级 的 guardianmod:组件 牌中选择获得1张。 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "选择一张组件。"
     ]
   },
   "Guardian:PackageShapes": {
     "NAME": "组件: 机械",
-    "DESCRIPTION": "将1张 *时间炸弹 、 *荆棘协议 和 *反冲协议 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将1张 *时间炸弹+ 、 *荆棘协议+ 和 *反冲协议+ 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "获得 *时间炸弹 、 *荆棘协议 和 *反冲协议 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *时间炸弹+ 、 *荆棘协议+ 和 *反冲协议+ 各1张。 NL 消耗 。"
   },
   "Guardian:PackageDonuDeca": {
     "NAME": "组件: 先古",
-    "DESCRIPTION": "将1张 *过载 、 *先古防御 和 *先古建造 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将1张 *过载+ 、 *先古防御+ 和 *先古建造+ 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "获得 *过载 、 *先古防御 和 *先古建造 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *过载+ 、 *先古防御+ 和 *先古建造+ 各1张。 NL 消耗 。"
   },
   "Guardian:PackageSphere": {
     "NAME": "组件: 圆球",
-    "DESCRIPTION": "将1张 *球形护盾 、 *硬化 和 *浮动圆球 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将1张 *球形护盾+ 、 *硬化+ 和 *浮动圆球+ 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "获得 *球形护盾 、 *硬化 和 *浮动圆球 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *球形护盾+ 、 *硬化+ 和 *浮动圆球+ 各1张。 NL 消耗 。"
   },
   "Guardian:PackageSentry": {
     "NAME": "组件: 哨卫",
-    "DESCRIPTION": "将1张 *哨卫射线 和2张 *哨卫震荡 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将1张 *哨卫射线+ 和2张 *哨卫震荡+ 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "获得 *哨卫射线 和2张 *哨卫震荡 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *哨卫射线+ 和2张 *哨卫震荡+ 各1张。 NL 消耗 。"
   },
   "Guardian:PackageWalker": {
     "NAME": "组件: 行者",
-    "DESCRIPTION": "将1张 *行者圆球 、 *行者爪击 和 *焚烧 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将1张 *行者圆球+ 、 *行者爪击+ 和 *焚烧+ 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "获得 *行者圆球 、 *行者爪击 和 *焚烧 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *行者圆球+ 、 *行者爪击+ 和 *焚烧+ 各1张。 NL 消耗 。"
   },
   "Guardian:PackageAutomaton": {
     "NAME": "组件: 铜制",
-    "DESCRIPTION": "将1张 *超能射线 、 *铜制圆球 和 *弹性护甲 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将1张 *超能射线+ 、 *铜制圆球+ 和 *弹性护甲+ 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "获得 *究极射线 、 *铜制圆球 和 *弹性护甲 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *究极射线+ 、 *铜制圆球+ 和 *弹性护甲+ 各1张。 NL 消耗 。"
   },
   "Guardian:PackageDefect": {
     "NAME": "组件: 故障",
-    "DESCRIPTION": "将1张 *重连 ， *预编程 和 *时间电容器 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将1张 *重连+ ， *预编程+ 和 *时间电容器+ 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "获得 *重连 ， *预编程 和 *时间电容器 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *重连+ ， *预编程+ 和 *时间电容器+ 各1张。 NL 消耗 。"
   },
   "Guardian:Planning": {
     "NAME": "规划",
@@ -342,7 +342,7 @@
   },
   "Guardian:Gem_Fragmented": {
     "NAME": "宝石碎片",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 将1张 *水晶小刀 加入手牌。"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 *水晶小刀 。"
   },
   "Guardian:CrystalShiv": {
     "NAME": "水晶小刀",
