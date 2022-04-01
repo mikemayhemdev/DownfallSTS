@@ -39,7 +39,7 @@
       "defensive",
       "defensive."
     ],
-    "DESCRIPTION": "#yStance. NL #ySkill Bonus: Gain #b4 #yCounter. NL #yFinisher Effect: Gain #b10 #yBlock."
+    "DESCRIPTION": "#yStance. NL #ySkill Bonus: Gain #b3 #yCounter. NL #yFinisher Effect: Gain #b10 #yBlock."
   },
   {
     "PROPER_NAME": "Berserker",
@@ -47,7 +47,7 @@
       "berserker",
       "berserker."
     ],
-    "DESCRIPTION": "#yStance.  NL #ySkill Bonus: Gain #b3 #yVigor. NL #yFinisher Effect: Gain #b1 #yStrength."
+    "DESCRIPTION": "#yStance.  NL #ySkill Bonus: Gain #b2 #yVigor. NL #yFinisher Effect: Gain #b1 #yStrength."
   },
   {
     "PROPER_NAME": "Gladiator",

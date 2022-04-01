@@ -44,7 +44,7 @@ public class DefensiveStance extends AbstractChampStance {
     }
 
     public static int amount() {
-        int x = 4;
+        int x = 3;
         if (AbstractDungeon.player.hasPower(DefensiveStylePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(DefensiveStylePower.POWER_ID).amount;
         }

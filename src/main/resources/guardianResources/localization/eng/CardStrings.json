@@ -203,7 +203,7 @@
   },
   "Guardian:StasisField": {
     "NAME": "Stasis Field",
-    "DESCRIPTION": "Gain !B! Block. NL Place this into *Stasis NL When this leaves *Stasis, Gain !B! Block."
+    "DESCRIPTION": "Gain !B! Block. NL Place this into *Stasis NL When this leaves *Stasis, gain !B! Block."
   },
   "Guardian:StasisStrike": {
     "NAME": "Stasis Strike",

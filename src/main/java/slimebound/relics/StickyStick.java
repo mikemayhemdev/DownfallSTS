@@ -18,7 +18,7 @@ public class StickyStick extends CustomRelic {
 
     public StickyStick() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.COMMON, LandingSound.SOLID);
+                RelicTier.UNCOMMON, LandingSound.SOLID);
         this.largeImg = ImageMaster.loadImage(slimebound.SlimeboundMod.getResourcePath(IMG_PATH_LARGE));
 
     }

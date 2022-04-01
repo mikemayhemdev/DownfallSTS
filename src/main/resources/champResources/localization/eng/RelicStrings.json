@@ -3,7 +3,7 @@
     "NAME": "Champion's Crown",
     "FLAVOR": "A WINNER IS YOU!",
     "DESCRIPTIONS": [
-      "At the start of combat, gain [E] and enter #bDefensive or #rBerserker Stance."
+      "At the start of combat, enter #bDefensive or #rBerserker Stance."
     ]
   },
   "champ:BlackKnightHelmet": {

@@ -45,7 +45,7 @@ public class ChampionCrown extends CustomRelic  {
     @Override
     public void atBattleStart() {
         super.atBattleStart();
-        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+       // AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
         if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
             int x = AbstractDungeon.cardRandomRng.random(1);
             switch (x) {
