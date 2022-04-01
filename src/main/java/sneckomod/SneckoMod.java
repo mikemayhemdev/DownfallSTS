@@ -354,7 +354,7 @@ public class SneckoMod implements
                 CleanMud.ID,
 
                 SuperSneckoEye.ID,
-                SneckoTalon.ID,
+                UnknownEgg.ID,
                 BlankCard.ID,
 
                 TheSnecko.Enums.THE_SNECKO
