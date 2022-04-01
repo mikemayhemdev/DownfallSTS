@@ -93,7 +93,7 @@
     "NAME": "焦油团",
     "FLAVOR": "坏的那种史莱姆。",
     "DESCRIPTIONS": [
-      "回合开始时获得 [E] 。 NL 失去 #b1 个史莱姆栏位。"
+      "每回合获得 [E] 。 NL 失去 #b1 个史莱姆栏位。"
     ]
   },
   "Slimebound:StickyStick": {
