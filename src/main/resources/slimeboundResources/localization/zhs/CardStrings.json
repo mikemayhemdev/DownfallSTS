@@ -295,7 +295,7 @@
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "分而治之",
-    "DESCRIPTION": "slimeboundmod:吸收 所有史莱姆。 NL 每有一只就随机对敌人造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "slimeboundmod:吸收 所有史莱姆。 NL 每有一只就随机造成 !D! 点伤害。 NL 消耗 。"
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "统而御之",
