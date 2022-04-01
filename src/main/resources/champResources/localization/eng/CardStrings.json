@@ -376,7 +376,7 @@
   },
   "champ:Riposte": {
     "NAME": "Riposte",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
   },
   "champ:Endure": {
     "NAME": "Endure",
@@ -394,7 +394,7 @@
   "champ:Parry": {
     "NAME": "Parry",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter. NL If your champ:Counter is used this turn, Gain *Riposte.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to the amount of champ:Counter used. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Deal damage equal to the amount of champ:Counter used. NL Exhaust."
   },
   "champ:EnchantCrown": {
     "NAME": "Enchant Crown",

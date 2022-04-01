@@ -13,6 +13,7 @@ public class Riposte extends AbstractChampCard {
     public Riposte() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseDamage = 0;
+        isEthereal = true;
         exhaust = true;
         postInit();
     }
