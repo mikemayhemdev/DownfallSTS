@@ -41,7 +41,7 @@
       "torchhead_slime"
     ],
     "PROPERNAME": "火炬头史莱姆",
-    "DESCRIPTION": "发动攻击时造成 #b6 点伤害，你的 #y力量 增加其伤害。"
+    "DESCRIPTION": "攻击时随机造成 #b6 点伤害。NL 你的 #y力量 提高其伤害。"
   },
   {
     "NAMES": [
@@ -53,7 +53,7 @@
       "bruiser"
     ],
     "PROPERNAME": "好斗史莱姆",
-    "DESCRIPTION": "发动攻击时造成 #b5 点伤害。"
+    "DESCRIPTION": "攻击时随机造成 #b5 点伤害。"
   },
   {
     "NAMES": [
@@ -62,7 +62,7 @@
       "cultist_slime"
     ],
     "PROPERNAME": "邪教徒史莱姆",
-    "DESCRIPTION": "发动攻击时造成 #b6 点伤害并提升其自身伤害 #b1 点。"
+    "DESCRIPTION": "攻击时随机造成 #b6 点伤害并提高其伤害 #b1 点。"
   },
   {
     "NAMES": [
@@ -74,7 +74,7 @@
       "leeching"
     ],
     "PROPERNAME": "水蛭史莱姆",
-    "DESCRIPTION": "发动攻击时造成 #b1 点伤害并给予你 #b3 点 #y格挡 。"
+    "DESCRIPTION": "攻击时随机造成 #b1 点伤害并给予你 #b3 点 #y格挡 。"
   },
     {
     "NAMES": [
@@ -86,7 +86,7 @@
       "guerilla"
     ],
     "PROPER_NAME": "游击史莱姆",
-    "DESCRIPTION": "发动攻击时对所有敌人造成 #b3 点伤害。"
+    "DESCRIPTION": "攻击时对所有敌人造成 #b3 点伤害。"
   },
   {
     "NAMES": [
@@ -98,7 +98,7 @@
       "mire"
     ],
     "PROPERNAME": "污泥史莱姆",
-    "DESCRIPTION": "发动攻击时造成 #b2 点伤害并给予敌人 #b2 层 #y黏液 。"
+    "DESCRIPTION": "攻击时随机造成 #b2 点伤害并给予敌人 #b2 层 #y黏液 。"
   },
   {
     "NAMES": [
@@ -107,7 +107,7 @@
       "bronze_slime"
     ],
     "PROPERNAME": "青铜史莱姆",
-    "DESCRIPTION": "发动攻击时对所有敌人造成 #b10 点伤害，但跳过其下次攻击。"
+    "DESCRIPTION": "攻击时对所有敌人造成 #b10 点伤害，但跳过其下次攻击。"
   },
   {
     "NAMES": [
@@ -124,7 +124,7 @@
       "ghostflame_slime"
     ],
     "PROPERNAME": "鬼火史莱姆",
-    "DESCRIPTION": "每回合攻击造成 #b3 点伤害并给予 #b5 层 #y灼魂 。"
+    "DESCRIPTION": "攻击时随机造成 #b3 点伤害并给予 #b5 层 #y灼魂 。"
   },
   {
     "NAMES": [
@@ -154,7 +154,7 @@
       "protector_slime"
     ],
     "PROPER_NAME": "尖刺史莱姆",
-    "DESCRIPTION": "攻击造成 #b4 点伤害并给予你 #b4 层 #y临时 #y荆棘 。"
+    "DESCRIPTION": "攻击时随机造成 #b4 点伤害并给予你 #b4 层 #y临时 #y荆棘 。"
   },
   {
     "NAMES": [
@@ -163,7 +163,7 @@
       "insulting_slime"
     ],
     "PROPER_NAME": "嘲讽史莱姆",
-    "DESCRIPTION": "攻击造成 #b4 点伤害并给予敌人 #b1 层 #y易伤 。"
+    "DESCRIPTION": "攻击时随机造成 #b4 点伤害并给予敌人 #b1 层 #y易伤 。"
   }, 
   {
     "NAMES": [
@@ -172,7 +172,7 @@
       "darkling_slime"
     ],
     "PROPER_NAME": "小黑史莱姆",
-    "DESCRIPTION": "攻击造成 #b3 点伤害。 #y命令 时，其他 #y小黑史莱姆 也会攻击。"
+    "DESCRIPTION": "攻击时随机造成 #b3 点伤害。 #y命令 时，其他 #y小黑史莱姆 也会攻击。"
   },
   {
     "NAMES": [
@@ -181,7 +181,7 @@
       "ancient_slime"
     ],
     "PROPER_NAME": "先古史莱姆",
-    "DESCRIPTION": "攻击造成 #b3 点伤害并使你抽 #b1 张牌。"
+    "DESCRIPTION": "攻击时随机造成 #b3 点伤害并使你抽 #b1 张牌。"
   },
   {
     "NAMES": [
@@ -190,7 +190,7 @@
       "time_slime"
     ],
     "PROPER_NAME": "时间史莱姆",
-    "DESCRIPTION": "攻击造成 #b4 点伤害并给予敌人 #b1 层 #y虚弱 。"
+    "DESCRIPTION": "攻击时随机造成 #b4 点伤害并给予敌人 #b1 层 #y虚弱 。"
   },
     {
     "NAMES": [
@@ -217,7 +217,7 @@
   },
   {
     "NAMES": [
-      "重铸 以下可能为弃用文本"
+      "重铸 以下为弃用文本"
     ],
     "PROPERNAME": "重铸",
     "DESCRIPTION": "在本场战斗中，将卡牌替换为本职业的一张随机卡牌，其耗能减少 1 点。"
