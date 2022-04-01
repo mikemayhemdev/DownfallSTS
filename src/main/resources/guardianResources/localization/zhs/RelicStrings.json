@@ -60,7 +60,7 @@
     "NAME": "悬浮机",
     "FLAVOR": "这些自动机搜寻最棒的遗宝，但需要占用处理能力来维持运转。",
     "DESCRIPTIONS": [
-      "拾起时，失去 #b2 个 #yguardianmod:凝滞 栏位，每回合开始时获得 [E] 。"
+      "每回合获得 [E] 。 NL 失去 #b2 个 #yguardianmod:凝滞 栏位。"
     ]
   },
   "Guardian:StasisUpgradeRelic": {

@@ -57,7 +57,7 @@
   },
   "Guardian:PolyBeam": {
     "NAME": "激光射线",
-    "DESCRIPTION": "随机对敌人造成 !D! 点伤害 !M! 次。"
+    "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。"
   },
   "Guardian:TwinSlam": {
     "NAME": "双斩",
@@ -232,7 +232,7 @@
   },
   "Guardian:GemFire": {
     "NAME": "宝石加农炮",
-    "DESCRIPTION": " 消耗 所有 guardianmod:宝石 ，每颗随机对敌人造成 !D! 点伤害。 NL 消耗 。",
+    "DESCRIPTION": " 消耗 所有 guardianmod:宝石 ，每颗随机造成 !D! 点伤害。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "弃用"
   },
   "Guardian:ChargeCore": {
@@ -371,7 +371,7 @@
   },
   "Guardian:GatlingBeam": {
     "NAME": "炮塔射线",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将本牌 guardianmod:凝滞 。 NL 本牌 guardianmod:凝滞 时持续 !M! 回合。 NL guardianmod:滴答 -随机对敌人造成 !D! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将本牌 guardianmod:凝滞 。 NL 本牌 guardianmod:凝滞 时持续 !M! 回合。 NL guardianmod:滴答 -随机造成 !D! 点伤害。"
   },
   "Guardian:ShieldCharger": {
     "NAME": "护盾充能",

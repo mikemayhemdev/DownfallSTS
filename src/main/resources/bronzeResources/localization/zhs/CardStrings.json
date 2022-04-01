@@ -116,11 +116,11 @@
     ]
   },
   "bronze:Separator": {
-    "NAME": "分离器",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编码 时，若不在最前后槽位，提高 !M! 点伤害。",
+    "NAME": "狂野打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:插入 伤口 。",
     "EXTENDED_DESCRIPTION": [
-      "分离",
-      "子项"
+      "狂野",
+      "狂躁"
     ]
   },
   "bronze:Overheat": {
@@ -450,7 +450,7 @@
   },
   "bronze:BurnOut": {
     "NAME": "燃烧殆尽",
-    "DESCRIPTION": " 消耗 所有 状态牌 ，每 消耗 一张随机对敌人造成 !D! 点伤害。 NL 消耗 。",
+    "DESCRIPTION": " 消耗 所有 状态牌 ，每 消耗 一张随机造成 !D! 点伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       " NL （攻击 ",
       " 次。）"
@@ -493,7 +493,7 @@
   },
   "bronze:HardenedForm": {
     "NAME": "圆球召唤",
-    "DESCRIPTION": " bronze:编译 或打出 *方法 时，获得 !M! 点 格挡 并随机对敌人造成 !M! 点伤害。"
+    "DESCRIPTION": " bronze:编译 或打出 *方法 时，获得 !M! 点 格挡 并随机造成 !M! 点伤害。"
   },
   "bronze:CopyPaste": {
     "NAME": "复制粘贴",

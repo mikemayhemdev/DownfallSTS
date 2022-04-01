@@ -3,14 +3,14 @@
     "NAME": "冠军金冠",
     "FLAVOR": "你是冠军！",
     "DESCRIPTIONS": [
-      "进入 #y姿态 时，随机对敌人造成 #b4 点伤害。"
+      "战斗开始时，获得 [E] 并随机进入 #y姿态 。"
     ]
   },
   "champ:BlackKnightHelmet": {
     "NAME": "黑骑头盔",
     "FLAVOR": "只受到一点擦伤。",
     "DESCRIPTIONS": [
-      "每场战斗初次进入每种 #y姿态 时： NL #ychamp:防守 -获得 #b2 点敏捷并失去 #b1 点力量。 NL #ychamp:战狂 -获得 #b2 点力量并失去 #b1 点敏捷。"
+      "每场战斗首次进入每种 #y姿态 时： NL #ychamp:防守 -获得 #b2 点敏捷并失去 #b1 点力量。 NL #ychamp:战狂 -获得 #b2 点力量并失去 #b1 点敏捷。"
     ]
   },
   "champ:Barbells": {
@@ -24,7 +24,7 @@
     "NAME": "战狂指南",
     "FLAVOR": "文字难以辨认。",
     "DESCRIPTIONS": [
-      "你的回合开始时获得 #b3 点 #y活力 。"
+      "每回合开始时获得 #b3 点 #y活力 。"
     ]
   },
   "champ:ChampionCrownUpgraded": {
@@ -59,14 +59,14 @@
     "NAME": "格斗读本",
     "FLAVOR": "第一步，打败敌人",
     "DESCRIPTIONS": [
-      "若你的回合结束时未处于 #y姿态 ，下回合多抽 #b1 张牌。"
+      "若你回合结束时不处于 #y姿态 ，下回合多抽 #b1 张牌。"
     ]
   },
   "champ:GladiatorsBookOfMartialProwess": {
     "NAME": "角斗技法",
     "FLAVOR": "凡事都要先试试 - 即使有时没能成功。",
     "DESCRIPTIONS": [
-      "每当你一回合内打出过 #y进入姿态 、 #ychamp:连段 和 #ychamp:终结技 时，获得 #b1 点 #y力量 和 #y敏捷 。"
+      "每当你一回合内打出过进入 #y姿态 、 #ychamp:连段 和 #ychamp:终结技 时，获得 #b1 点 #y力量 和 #y敏捷 。"
     ]
   },
   "champ:PowerArmor": {

@@ -72,8 +72,8 @@
   },
   "hermit:FatalDesire": {
     "NAME": "自弑之欲",
-    "DESCRIPTION": "回合开始时，抽2张牌并将1张 *受伤 加入手牌。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，抽2张牌并将1张 *受伤 加入手牌。"
+    "DESCRIPTION": "回合开始时，抽2张牌并获得1张 *受伤 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，抽2张牌并获得1张 *受伤 。"
   },
   "hermit:Gambit": {
     "NAME": "开场白",
@@ -109,12 +109,12 @@
   },
   "hermit:Roulette": {
     "NAME": "轮转",
-    "DESCRIPTION": "对随机敌人造成 !D! 点伤害。 NL 丢弃其他手牌并抽等量的牌。"
+    "DESCRIPTION": "随机造成 !D! 点伤害。 NL 丢弃其他手牌并抽等量的牌。"
   },
   "hermit:Midnight": {
     "NAME": "午夜时分",
-    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 将一张 *末日将临 加入手牌。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将一张 *末日将临 加入手牌。"
+    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 获得一张 *末日将临 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得一张 *末日将临 。"
   },
   "hermit:Glare": {
     "NAME": "凝视",
@@ -123,16 +123,16 @@
   },
   "hermit:TakeCover": {
     "NAME": "快找掩护",
-    "DESCRIPTION": "将X张 *防御 加入手牌。 NL 其耗能本场战斗为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将X张 *防御+ 加入手牌。 NL 其耗能本场战斗为0。 NL 消耗 。"
+    "DESCRIPTION": "获得X张 *防御 。 NL 其耗能本场战斗为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得X张 *防御+ 。 NL 其耗能本场战斗为0。 NL 消耗 。"
   },
   "hermit:Misfire": {
     "NAME": "擦枪走火",
-    "DESCRIPTION": "对随机敌人造成 !D! 点伤害。 NL 将一张 *笨拙 加入抽牌堆。"
+    "DESCRIPTION": "随机造成 !D! 点伤害。 NL 将一张 *笨拙 加入抽牌堆。"
   },
   "hermit:SprayPray": {
     "NAME": "倾泻火力",
-    "DESCRIPTION": "对随机敌人造成 !D! 点伤害4次。 NL 将一张 *疑虑 加入抽牌堆。"
+    "DESCRIPTION": "随机造成 !D! 点伤害4次。 NL 将一张 *疑虑 加入抽牌堆。"
   },
  "hermit:Scavenge": {
     "NAME": "战利品",
@@ -192,7 +192,7 @@
   },
   "hermit:Combo": {
     "NAME": "连击",
-    "DESCRIPTION": "触发 hermit:精准 效果时，随机将一张 hermit:精准 牌加入手牌。"
+    "DESCRIPTION": "触发 hermit:精准 效果时，随机获得一张 hermit:精准 牌。"
   },
   "hermit:BigShot": {
     "NAME": "冒烟枪管",
@@ -233,7 +233,7 @@
   },
   "hermit:Ricochet": {
     "NAME": "跳弹",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每触发过一次 hermit:精准 ，再对随机敌人造成 !D! 点伤害。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每触发过一次 hermit:精准 ，再随机造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [" NL （重复 !M! ", "次）","次）"]
   },
   "hermit:TrackingShot": {
@@ -271,7 +271,7 @@
   },
   "hermit:Showdown": {
     "NAME": "反击",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 对随机敌人打出手牌中所有 *打击 。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 随机对敌人打出手中所有 *打击 。"
   },
   "hermit:LuckOfTheDraw": {
     "NAME": "神抽",
@@ -303,7 +303,7 @@
   },
   "hermit:ItchyTrigger": {
     "NAME": "急扣扳机",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 ： NL 将随机一张手牌本回合下次耗能变为0。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 ： NL 随机将一张手牌本回合下次耗能变为0。"
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "风暴之眼",
@@ -321,7 +321,7 @@
   },
   "hermit:FromBeyond": {
     "NAME": "另一维度",
-    "DESCRIPTION": "消耗堆中每有一张牌，随机敌人失去 !M! 点生命。"
+    "DESCRIPTION": "消耗堆中每有一张牌，敌人随机失去 !M! 点生命。"
   },
   "hermit:Virtue": {
     "NAME": "高尚",

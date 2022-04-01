@@ -307,7 +307,7 @@
   "downfall:HermitDoomsday": {
     "NAME": "末日",
     "DESCRIPTIONS": [
-      "每回合开始时，将一张 带有 #y虚无 的 #r末日将临 加入你的手牌。"
+      "每回合开始时，将一张 带有 #y保留 的 #r末日将临 加入你的手牌。"
     ]
   },
   "downfall:NextTurnPowerPower": {
