@@ -41,7 +41,7 @@ public class InfernoGhostflame extends AbstractGhostflame {
 
     public InfernoGhostflame(float x, float y) {
         super(x, y);
-        damage = 5;
+        damage = 6;
         //this.textColor = new Color(1F,.75F,.75F,1F);
         this.triggersRequired = 3;
 

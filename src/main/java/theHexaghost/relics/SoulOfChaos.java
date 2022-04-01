@@ -24,7 +24,7 @@ public class SoulOfChaos extends CustomRelic {
     @Override
     public void atBattleStart() {
         flash();
-        AbstractGhostflame q = GhostflameHelper.hexaGhostFlames.get(2);
+        AbstractGhostflame q = GhostflameHelper.hexaGhostFlames.get(3);
         AbstractGhostflame gf = new MayhemGhostflame(q.lx, q.ly);
         GhostflameHelper.hexaGhostFlames.set(2, gf);
     }
