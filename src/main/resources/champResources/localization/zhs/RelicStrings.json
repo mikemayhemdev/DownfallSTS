@@ -59,7 +59,7 @@
     "NAME": "格斗读本",
     "FLAVOR": "第一步，打败敌人",
     "DESCRIPTIONS": [
-      "若你的回合结束时未处于 #y姿态 ，下回合多抽 #b1 张牌。"
+      "若你回合结束时不处于 #y姿态 ，下回合多抽 #b1 张牌。"
     ]
   },
   "champ:GladiatorsBookOfMartialProwess": {
