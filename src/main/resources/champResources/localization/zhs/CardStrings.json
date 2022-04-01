@@ -292,7 +292,7 @@
   },
   "champ:Improvising": {
     "NAME": "触类旁通",
-    "DESCRIPTION": "每回合首次打出 champ:连段 牌时，将其返回手牌。 NL 它下次耗能为0。"
+    "DESCRIPTION": "每回合首次打出 champ:连段 牌时将其返回手牌。 NL 它下次耗能为0。"
   },
   "champ:CalledShot": {
     "NAME": "宣告",
