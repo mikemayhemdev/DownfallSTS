@@ -26,7 +26,7 @@ public class SoulOfChaos extends CustomRelic {
         flash();
         AbstractGhostflame q = GhostflameHelper.hexaGhostFlames.get(3);
         AbstractGhostflame gf = new MayhemGhostflame(q.lx, q.ly);
-        GhostflameHelper.hexaGhostFlames.set(2, gf);
+        GhostflameHelper.hexaGhostFlames.set(3, gf);
     }
 
     public String getUpdatedDescription() {
