@@ -64,7 +64,6 @@
   "champ:FocusedBerserking": {
     "NAME": "All Out",
     "DESCRIPTION": "Exhaust. NL Trigger !M! times without exiting your Stance: "
-
   },
   "champ:SetATrap": {
     "NAME": "Set A Trap",
@@ -72,11 +71,10 @@
   },
   "champ:Backstep": {
     "NAME": "Backstep",
-    "DESCRIPTION": "Enter champ:Defensive NL Gain !B! Block, increased by *Vigor.",
+    "DESCRIPTION": "Enter champ:Defensive. NL Gain !M! Block, increased by *Vigor.",
     "EXTENDED_DESCRIPTION": [
-      "(Grants ",
-      " Block)"
-      ]
+      " NL (Gain !B! Block.)"
+    ]
   },
   "champ:Aggression": {
     "NAME": "Aggression",
@@ -161,8 +159,9 @@
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
     "DESCRIPTION": "Deal damage equal to your Block, twice. NL Gain 2 Frail. NL *Defensive champ:Combo: Lose 2 Frail.",
-    "EXTENDED_DESCRIPTION": ["Deal damage equal to your Block ( !D! ) twice. NL Gain 2 Frail. NL *Defensive champ:Combo: Lose 2 Frail."]
-
+    "EXTENDED_DESCRIPTION": [
+      "Deal damage equal to your Block ( !D! ) twice. NL Gain 2 Frail. NL *Defensive champ:Combo: Lose 2 Frail."
+    ]
   },
   "champ:FalseCounter": {
     "NAME": "Rope-a-dope",
@@ -274,7 +273,6 @@
   "champ:CrownThrow": {
     "NAME": "Crownarang",
     "DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: Draw !M! Attacks."
-
   },
   "champ:Encircle": {
     "NAME": "Encircle",
@@ -419,7 +417,7 @@
   },
   "champ:FancyFootwork": {
     "NAME": "Fancy Footwork",
-    "DESCRIPTION": "Enter a Stance you aren't in. NL The next time you use a champ:Finisher this turn, ALL enemies lose !M! HP."
+    "DESCRIPTION": "Enter a Stance you aren't in. NL The next time champ:Finisher this turn deals !M! damage to ALL enemies."
   },
   "champ:TripleStrike": {
     "NAME": "Triple Strike",

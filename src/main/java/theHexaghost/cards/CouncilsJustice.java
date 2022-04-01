@@ -21,7 +21,7 @@ public class CouncilsJustice extends AbstractHexaCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = 3;
         exhaust = true;
-        isEthereal = true;
+       // isEthereal = true;
         cardsToPreview = new Apparition();
     }
 

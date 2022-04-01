@@ -344,7 +344,7 @@
   },
   "hexamod:CouncilsJustice": {
     "NAME": "Council's Justice",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Damage is increased by !M! for each *Apparition in your exhaust pile. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage, increased by !M! for each *Exhausted *Apparition. NL Exhaust."
   },
   "hexamod:ForkedFlame": {
     "NAME": "Forked Flame",

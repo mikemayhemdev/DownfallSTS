@@ -12,7 +12,7 @@ public class DecaBeam extends AbstractBronzeCard {
 
     public DecaBeam() {
         super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-        baseBlock = block = 16;
+        baseBlock = block = 10;
         thisEncodes();
         magicNumber = baseMagicNumber = 4;
         baseAuto = auto = 2;
