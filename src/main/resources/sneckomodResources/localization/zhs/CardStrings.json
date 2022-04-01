@@ -265,7 +265,7 @@
   },
   "sneckomod:RainOfDice": {
     "NAME": "骰子雨",
-    "DESCRIPTION": "随机对敌人造成 !qqq! - !D! 点伤害。 NL sneckomod:混淆 本牌并返回手牌。"
+    "DESCRIPTION": "随机造成 !qqq! - !D! 点伤害。 NL sneckomod:混淆 本牌并返回手牌。"
   },
   "sneckomod:DiceCrush": {
     "NAME": "骰子撞击",
