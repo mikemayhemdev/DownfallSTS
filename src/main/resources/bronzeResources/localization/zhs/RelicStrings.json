@@ -45,14 +45,14 @@
     "NAME": "备用电池",
     "FLAVOR": "足足有8.9伏特。",
     "DESCRIPTIONS": [
-      "每回合开始时获得 [E] ，将一张随机 #y状态牌 加入弃牌堆。"
+      "每回合获得 [E] 并将一张随机 #y状态牌 加入弃牌堆。"
     ]
   },
   "bronze:CableSpool": {
     "NAME": "电缆线轴",
     "FLAVOR": "缠绕起来的一团……",
     "DESCRIPTIONS": [
-      "每场战斗首次打出 #ybronze:编码 牌时，它 #y编码 两次。"
+      "每场战斗首次打出 #ybronze:编码 牌时,它被 #y编码 两次。"
     ]
   },
   "bronze:ElectromagneticCoil": {
@@ -67,7 +67,7 @@
     "FLAVOR": "更新日志: 提升用户体验。",
     "DESCRIPTIONS": [
       "替换 ",
-      "。[] NL 每场战斗 #ybronze:编译 的前 #b3 张 #y方法 下次耗能为 #b0 。"
+      "。[] NL 每场战斗 #ybronze:编译 的前 #b3 张 #y方法 首次耗能为 #b0 。"
     ]
   },
   "bronze:BottledCode": {
@@ -98,7 +98,7 @@
     "NAME": "悖论制品",
     "FLAVOR": "你从未见过如此意义不明的人工制品。",
     "DESCRIPTIONS": [
-      "每回合开始时，将一张随机 #y虚无 #ybronze:编码 牌加入手牌。"
+      "每回合开始时，随机将一张 #y虚无 #ybronze:编码 牌加入手牌。"
     ]
   }
 }
