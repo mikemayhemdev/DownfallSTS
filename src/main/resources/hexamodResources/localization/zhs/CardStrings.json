@@ -159,7 +159,7 @@
   },
   "hexamod:ParanormalForm": {
     "NAME": "鬼哭神嚎",
-    "DESCRIPTION": "虚无 。 NL 打出 虚无 牌时，随机对敌人造成 !M! 点伤害。"
+    "DESCRIPTION": "打出 虚无 牌时，随机对敌人造成 !M! 点伤害。"
   },
   "hexamod:UnleashSpirits": {
     "NAME": "释魂",
