@@ -116,11 +116,11 @@
     ]
   },
   "bronze:Separator": {
-    "NAME": "分离器",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编码 时，若不在最前后槽位，提高 !M! 点伤害。",
+    "NAME": "狂野打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:插入 伤口 。",
     "EXTENDED_DESCRIPTION": [
-      "分离",
-      "子项"
+      "狂野",
+      "狂躁"
     ]
   },
   "bronze:Overheat": {
