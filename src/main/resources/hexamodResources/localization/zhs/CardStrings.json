@@ -68,8 +68,8 @@
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "疾进",
-    "DESCRIPTION": "每回合首次 hexamod:点燃 NL 鬼火时， hexamod:步进 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 每回合首次 hexamod:点燃 鬼火时， hexamod:步进 。"
+    "DESCRIPTION": " hexamod:点燃 NL 鬼火时，获得 !M! 层 guardianmod:临时 力量 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL hexamod:点燃 NL 鬼火时，获得 !M! 层 guardianmod:临时 力量 。"
   },
   "hexamod:GhostOfSpirePresent": {
     "NAME": "此刻",
