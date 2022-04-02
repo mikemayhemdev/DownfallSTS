@@ -130,6 +130,7 @@ import sneckomod.util.UpgradedUnknownReward;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
 import theHexaghost.util.SealSealReward;
+import timeeater.TimeEaterChar;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -323,6 +324,8 @@ public class downfallMod implements
                 return "gremlinResources/" + path;
             case PACKAGE_HERMIT:
                 return "hermitResources/" + path;
+            case PACKAGE_TIME_EATER:
+                return "timeResources/" + path;
         }
         return "downfallResources/" + path;
     }
@@ -411,6 +414,8 @@ public class downfallMod implements
 
             //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_HERMIT));
+
+            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_TIME_EATER));
         } else {
 
             //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
@@ -512,6 +517,7 @@ public class downfallMod implements
         loadModKeywords(GremlinMod.getModID(), otherPackagePaths.PACKAGE_GREMLIN);
         loadModKeywords(HermitMod.getModID(), otherPackagePaths.PACKAGE_HERMIT);
         loadModKeywords(modID, otherPackagePaths.PACKAGE_DOWNFALL);
+        loadModKeywords(modID, otherPackagePaths.PACKAGE_TIME_EATER);
     }
 
 
@@ -1451,7 +1457,7 @@ public class downfallMod implements
                 p instanceof TheSnecko ||
                 p instanceof ChampChar ||
                 p instanceof AutomatonChar ||
-                p instanceof GremlinCharacter) {
+                p instanceof GremlinCharacter || p instanceof TimeEaterChar) {
             return true;
         }
         return false;
@@ -1674,7 +1680,8 @@ public class downfallMod implements
         PACKAGE_AUTOMATON,
         PACKAGE_GREMLIN,
         PACKAGE_HERMIT,
-        PACKAGE_DOWNFALL;
+        PACKAGE_DOWNFALL,
+        PACKAGE_TIME_EATER;
 
         otherPackagePaths() {
         }
