@@ -7,15 +7,15 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class PackRat extends AbstractBronzeCard {
-    public final static String ID = makeID("PackRat");
+public class MagicMissile extends AbstractBronzeCard {
+    public final static String ID = makeID("MagicMissile");
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
-    public PackRat() {
-        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.ENEMY);
+    public MagicMissile() {
+        super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = 6;
 
-        this.setBackgroundTexture("timeResources/images/512/packratframe.png", "timeResources/images/1024/packratframe.png");
+        this.setBackgroundTexture("timeResources/images/512/magicmissileframe.png", "timeResources/images/1024/magicmissileframe.png");
 
     }
 
