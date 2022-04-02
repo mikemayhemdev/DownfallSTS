@@ -3,7 +3,7 @@
     "NAME": "冠军金冠",
     "FLAVOR": "你是冠军！",
     "DESCRIPTIONS": [
-      "战斗开始时，获得 [E] 并随机进入 #y姿态 。"
+      "战斗开始时，进入随机 #y姿态 。"
     ]
   },
   "champ:BlackKnightHelmet": {
