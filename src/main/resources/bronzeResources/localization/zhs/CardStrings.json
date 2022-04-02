@@ -202,7 +202,7 @@
   },
   "bronze:Invalidate": {
     "NAME": "无效化",
-    "DESCRIPTION": "对所有敌人给予 !M! 层 易伤 。",
+    "DESCRIPTION": "给予 !M! 层 易伤 。",
     "EXTENDED_DESCRIPTION": [
       "无效",
       "错误"
