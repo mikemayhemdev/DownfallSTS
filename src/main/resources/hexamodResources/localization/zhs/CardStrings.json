@@ -37,8 +37,8 @@
   },
   "hexamod:SkipABeat": {
     "NAME": "助燃",
-    "DESCRIPTION": "hexamod:点燃 当前鬼火。",
-    "UPGRADE_DESCRIPTION": "弃用"
+    "DESCRIPTION": "hexamod:点燃 未 *点燃 的当前鬼火。",
+    "UPGRADE_DESCRIPTION": "hexamod:点燃 当前鬼火。"
   },
   "hexamod:CatchUp": {
     "NAME": "及时",
