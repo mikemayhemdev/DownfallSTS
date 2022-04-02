@@ -30,5 +30,32 @@
   "time:DarkEnergy": {
     "NAME": "Dark Energy",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL time:Suspend a *Blur."
+  },
+  "time:Feeble": {
+    "NAME": "Feeble",
+    "DESCRIPTION": "Ethereal. Unplayable. NL When drawn, gain 1 Vulnerable and draw 1 card.",
+    "EXTENDED_DESCRIPTION": [
+      "This is Unplayable."
+    ]
+  },
+  "time:Feeblemind": {
+    "NAME": "Feeblemind",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL time:Suspend a *Feeble."
+  },
+  "time:HammerBlow": {
+    "NAME": "Hammer Blow",
+    "DESCRIPTION": "Deal !D! damage. NL Upgrade all time:Suspended cards.'"
+  },
+  "time:HeadSlam": {
+    "NAME": "Head Slam",
+    "DESCRIPTION": "Deal !D! damage. NL Apply 1 Slow."
+  },
+  "time:InfusePower": {
+    "NAME": "Infuse Power",
+    "DESCRIPTION": "Deal !D! damage. NL Increase all damage on time:Suspended cards by !M!."
+  },
+  "time:Momentum": {
+    "NAME": "Momentum",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Haste."
   }
 }

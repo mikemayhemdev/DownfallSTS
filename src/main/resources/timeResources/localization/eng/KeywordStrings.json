@@ -2,7 +2,8 @@
   {
     "PROPER_NAME": "Suspend",
     "NAMES": [
-      "suspend"
+      "suspend",
+      "suspended"
     ],
     "DESCRIPTION": "Temporarily removed from combat. Draw 3 Suspended cards each turn."
   }

@@ -131,6 +131,7 @@ import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
 import theHexaghost.util.SealSealReward;
 import timeeater.TimeEaterChar;
+import timeeater.TimeEaterMod;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -517,7 +518,7 @@ public class downfallMod implements
         loadModKeywords(GremlinMod.getModID(), otherPackagePaths.PACKAGE_GREMLIN);
         loadModKeywords(HermitMod.getModID(), otherPackagePaths.PACKAGE_HERMIT);
         loadModKeywords(modID, otherPackagePaths.PACKAGE_DOWNFALL);
-        loadModKeywords(modID, otherPackagePaths.PACKAGE_TIME_EATER);
+        loadModKeywords(TimeEaterMod.getModID(), otherPackagePaths.PACKAGE_TIME_EATER);
     }
 
 
