@@ -77,12 +77,8 @@
   "hexamod:FuturePower": {
     "NAME": "疾进",
     "DESCRIPTIONS": [
-      "每回合前 #b",
-      " 次",
-      " 次",
-      " #y点燃 鬼火时， #y步进 。 NL 本回合已 #y点燃 过 #b",
-      " 枚 鬼火。",
-      " 枚 鬼火。"
+      "每当你 #y点燃 时，获得 #b",
+      " 层 #y临时力量 。"
     ]
   },
   "hexamod:FutureUpgradePower": {
