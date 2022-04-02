@@ -17,5 +17,13 @@
       "At the start of your next #b",
       " turns, gain [E] and draw #b1 additional card."
     ]
+  },
+  "time:RetrieveLessNextTurnPower": {
+    "NAME": "Retrieve Less Next Turn",
+    "DESCRIPTIONS": [
+      "Next turn, retrieve #b1 fewer #ySuspended card.",
+      "Next turn, retrieve #b",
+      " fewer #ySuspended cards."
+    ]
   }
 }

@@ -57,5 +57,27 @@
   "time:Momentum": {
     "NAME": "Momentum",
     "DESCRIPTION": "Deal !D! damage. NL Gain !M! Haste."
+  },
+  "time:TimeRip": {
+    "NAME": "Time Rip",
+    "DESCRIPTION": "Deal !D! damage twice. NL time:Suspend 2 *Shivs.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL time:Suspend 2 *Shivs+."
+  },
+  "time:WatchStrike": {
+    "NAME": "Watch Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Enemy loses !M! Strength this turn."
+  },
+  "time:Alacrity": {
+    "NAME": "Alacrity",
+    "DESCRIPTION": "Gain !B! Block. NL time:Suspend 3 *Wards.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL time:Suspend 3 *Wards+."
+  },
+  "time:CosmicWave": {
+    "NAME": "Cosmic Wave",
+    "DESCRIPTION": "Apply !M! Weak and 1 Slow to ALL enemies. NL Suspend 1 *Doubt."
+  },
+  "time:DeepFreeze": {
+    "NAME": "Deep Freeze",
+    "DESCRIPTION": "Gain !B! Block. NL Retrieve 1 fewer time:Suspended card next turn."
   }
 }
