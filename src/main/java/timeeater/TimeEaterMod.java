@@ -1,38 +1,22 @@
 package timeeater;
 
-import automaton.cards.Terminator;
-import automaton.cards.*;
-import automaton.events.*;
-import automaton.potions.BuildAFunctionPotion;
-import automaton.potions.BurnAndBuffPotion;
-import automaton.potions.CleanCodePotion;
-import automaton.potions.FreeFunctionsPotion;
-import automaton.relics.*;
+import automaton.cards.AbstractBronzeCard;
 import automaton.util.AutoVar;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomUnlockBundle;
-import basemod.eventUtil.AddEventParams;
-import basemod.eventUtil.EventUtils;
-import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
-import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.Exordium;
-import com.megacrit.cardcrawl.dungeons.TheCity;
-import com.megacrit.cardcrawl.events.city.BackToBasics;
-import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import downfall.downfallMod;
-import guardian.patches.BottledStasisPatch;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import javassist.NotFoundException;
 import timeeater.cards.AbstractTimeEaterCard;
+import timeeater.suspend.SuspendHelper;
 
 import java.net.URISyntaxException;
 
@@ -45,7 +29,8 @@ public class TimeEaterMod implements
         //EditKeywordsSubscriber,
         EditCharactersSubscriber,
         PostInitializeSubscriber,
-        SetUnlocksSubscriber {
+        SetUnlocksSubscriber,
+        OnStartBattleSubscriber {
     public static final String SHOULDER1 = "bronzeResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "bronzeResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "bronzeResources/images/char/mainChar/corpse.png";
@@ -83,7 +68,6 @@ public class TimeEaterMod implements
 
 
     }
-
 
 
     public static String makeBetaCardPath(String resourcePath) {
@@ -218,5 +202,8 @@ public class TimeEaterMod implements
          */
     }
 
-
+    @Override
+    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        SuspendHelper.atCombatStart();
+    }
 }
