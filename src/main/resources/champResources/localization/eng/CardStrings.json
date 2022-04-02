@@ -158,7 +158,7 @@
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
-    "DESCRIPTION": "Deal damage equal to your Block, twice. NL Gain 2 Frail. NL *Defensive champ:Combo: Lose 2 Frail.",
+    "DESCRIPTION": "Deal damage equal to your Block, twice. NL Gain 2 Frail. NL *Defensive champ:Combo: Don't gain Frail.",
     "EXTENDED_DESCRIPTION": [
       "Deal damage equal to your Block ( !D! ) twice. NL Gain 2 Frail. NL *Defensive champ:Combo: Lose 2 Frail."
     ]
@@ -223,7 +223,7 @@
   },
   "champ:SwordThrow": {
     "NAME": "Sword Throw",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Gain 2 Weak NL *Berserker champ:Combo: Lose 2 Weak."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Gain 2 Weak. NL *Berserker champ:Combo: Don't gain Weak."
   },
   "champ:MurderStrike": {
     "NAME": "Murder Strike",

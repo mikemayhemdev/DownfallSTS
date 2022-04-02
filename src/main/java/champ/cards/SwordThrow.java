@@ -22,8 +22,8 @@ public class SwordThrow extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) dmg(m, AbstractGameAction.AttackEffect.SMASH);
-        applyToSelf(new WeakPower(p,2, false));
-        if (bcombo()) atb(new ReducePowerAction(p,p,WeakPower.POWER_ID,2));
+        if (!bcombo()) applyToSelf(new WeakPower(p,2, false));
+       // if (bcombo()) atb(new ReducePowerAction(p,p,WeakPower.POWER_ID,2));
     }
 
     @Override

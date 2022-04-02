@@ -45,7 +45,7 @@
     "NAME": "Deflecting Bracers",
     "FLAVOR": "If you thought blocking was good then...",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #ychamp:Counter equal to the amount of #yBlock lost."
+      "At the start of your turn, gain #ychamp:Counter equal to half the amount of expired #yBlock."
     ]
   },
   "champ:DuelingGlove": {

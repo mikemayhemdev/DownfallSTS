@@ -42,12 +42,15 @@ public class StasisField extends AbstractGuardianCard implements InStasisCard {
 
     public boolean justUsed = false;
 
+    /*
     @Override
     public void whenReturnedFromStasis() {
         upgradeBlock(magicNumber);
         freeToPlayOnce = false;
         cost = costForTurn = 1;
     }
+    
+     */
 
     public StasisField() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);

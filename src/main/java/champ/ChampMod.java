@@ -483,7 +483,7 @@ public class ChampMod implements
     @Override
     public int receiveOnPlayerLoseBlock(int i) {
         if (AbstractDungeon.player.hasRelic(DeflectingBracers.ID)) {
-            int counter = Math.min(i, AbstractDungeon.player.currentBlock);
+            int counter = Math.min(i, AbstractDungeon.player.currentBlock/2);
             if (counter > 0) {
                 AbstractDungeon.player.getRelic(DeflectingBracers.ID).flash();
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(counter), counter));
