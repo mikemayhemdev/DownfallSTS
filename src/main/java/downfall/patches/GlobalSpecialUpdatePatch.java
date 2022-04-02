@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
+import timeeater.suspend.SuspendHelper;
 
 @SpirePatch(
         clz = EnergyPanel.class,
@@ -23,5 +24,7 @@ public class GlobalSpecialUpdatePatch {
         }
         if (StanceHelper.hitboxStance == null) StanceHelper.init();
         StanceHelper.update();
+
+        SuspendHelper.update();
     }
 }

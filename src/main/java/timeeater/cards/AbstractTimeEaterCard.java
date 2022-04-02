@@ -11,9 +11,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import timeeater.TimeEaterChar;
+import timeeater.util.CardArtRoller;
 
 import java.util.ArrayList;
 
@@ -39,6 +41,8 @@ public abstract class AbstractTimeEaterCard extends CustomCard {
     private int previewIndex;
     protected ArrayList<AbstractCard> cardToPreview = new ArrayList<>();
 
+    private boolean needsArtRefresh = false;
+
     public AbstractTimeEaterCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         this(cardID, cost, type, rarity, target, TimeEaterChar.Enums.MAGENTA);
     }
@@ -51,6 +55,13 @@ public abstract class AbstractTimeEaterCard extends CustomCard {
         name = originalName = cardStrings.NAME;
         initializeTitle();
         initializeDescription();
+
+        if (textureImg.contains("ui/missing.png")) {
+            if (CardLibrary.getAllCards() != null && !CardLibrary.getAllCards().isEmpty()) {
+                CardArtRoller.computeCard(this);
+            } else
+                needsArtRefresh = true;
+        }
     }
 
     public static String getCardTextureString(final String cardName, final CardType cardType) {
@@ -166,6 +177,9 @@ public abstract class AbstractTimeEaterCard extends CustomCard {
 
     public void update() {
         super.update();
+        if (needsArtRefresh) {
+            CardArtRoller.computeCard(this);
+        }
         if (!cardToPreview.isEmpty()) {
             if (hb.hovered) {
                 if (rotationTimer <= 0F) {
@@ -214,5 +228,9 @@ public abstract class AbstractTimeEaterCard extends CustomCard {
 
     protected void upSecondDamage(int x) {
         upgradeSecondDamage(x);
+    }
+
+    public String cardArtCopy() {
+        return null;
     }
 }

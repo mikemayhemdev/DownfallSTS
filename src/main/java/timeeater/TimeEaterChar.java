@@ -23,6 +23,8 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import reskinContent.patches.CharacterSelectScreenPatches;
+import timeeater.cards.Gravitas;
+import timeeater.cards.Suspension;
 
 import java.util.ArrayList;
 
@@ -95,6 +97,8 @@ public class TimeEaterChar extends CustomPlayer {
         for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
+        retVal.add(Gravitas.ID);
+        retVal.add(Suspension.ID);
         return retVal;
     }
 

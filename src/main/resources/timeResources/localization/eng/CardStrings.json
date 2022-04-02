@@ -10,5 +10,25 @@
   "time:PackRat": {
     "NAME": "Pack Rat",
     "DESCRIPTION": "Gain 1 *Buffer. NL Gain a random Potion. NL Exhaust."
+  },
+  "time:Gravitas": {
+    "NAME": "Gravitas",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL time:Suspend a *Dramatic *Entrance."
+  },
+  "time:Suspension": {
+    "NAME": "Suspension",
+    "DESCRIPTION": "Suspend 1 card in your hand.",
+    "UPGRADE_DESCRIPTION": "Draw 1 card. NL Suspend 1 card in your hand.",
+    "EXTENDED_DESCRIPTION": [
+      " to Suspend."
+    ]
+  },
+  "time:CosmicChaos": {
+    "NAME": "Cosmic Chaos",
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL time:Suspend this."
+  },
+  "time:DarkEnergy": {
+    "NAME": "Dark Energy",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL time:Suspend a *Blur."
   }
 }

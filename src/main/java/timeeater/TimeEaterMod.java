@@ -3,7 +3,6 @@ package timeeater;
 
 import automaton.cards.AbstractBronzeCard;
 import automaton.util.AutoVar;
-import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomUnlockBundle;
@@ -11,15 +10,24 @@ import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import downfall.util.CardIgnore;
+import javassist.CtClass;
+import javassist.Modifier;
 import javassist.NotFoundException;
-import timeeater.cards.AbstractTimeEaterCard;
+import org.clapper.util.classutil.*;
 import timeeater.suspend.SuspendHelper;
+import timeeater.util.CardFilter;
 
+import java.io.File;
 import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collection;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
@@ -118,7 +126,7 @@ public class TimeEaterMod implements
     }
 
     public static void initialize() {
-       TimeEaterMod timeEaterMod = new TimeEaterMod();
+        TimeEaterMod timeEaterMod = new TimeEaterMod();
     }
 
     public static String makeID(String idText) {
@@ -127,10 +135,45 @@ public class TimeEaterMod implements
 
     private static void autoAddCards()
             throws URISyntaxException, IllegalAccessException, InstantiationException, NotFoundException, ClassNotFoundException {
-        new AutoAdd(modID)
-                .packageFilter(AbstractTimeEaterCard.class)
-                .setDefaultSeen(false)
-                .cards();
+        ClassFinder finder = new ClassFinder();
+        URL url = TimeEaterMod.class.getProtectionDomain().getCodeSource().getLocation();
+        finder.add(new File(url.toURI()));
+
+        ClassFilter filter =
+                new AndClassFilter(
+                        new NotClassFilter(new InterfaceOnlyClassFilter()),
+                        new NotClassFilter(new AbstractClassFilter()),
+                        new ClassModifiersClassFilter(Modifier.PUBLIC),
+                        new CardFilter()
+                );
+        Collection<ClassInfo> foundClasses = new ArrayList<>();
+        finder.findClasses(foundClasses, filter);
+
+        for (ClassInfo classInfo : foundClasses) {
+            CtClass cls = Loader.getClassPool().get(classInfo.getClassName());
+            if (cls.hasAnnotation(CardIgnore.class)) {
+                continue;
+            }
+            boolean isCard = false;
+            CtClass superCls = cls;
+            while (superCls != null) {
+                superCls = superCls.getSuperclass();
+                if (superCls == null) {
+                    break;
+                }
+                if (superCls.getName().equals(AbstractCard.class.getName())) {
+                    isCard = true;
+                    break;
+                }
+            }
+            if (!isCard) {
+                continue;
+            }
+            System.out.println(classInfo.getClassName());
+            AbstractCard card = (AbstractCard) Loader.getClassPool().getClassLoader().loadClass(cls.getName()).newInstance();
+            BaseMod.addCard(card);
+
+        }
     }
 
     @Override
