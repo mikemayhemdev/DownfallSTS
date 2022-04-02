@@ -6,6 +6,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -28,6 +29,7 @@ public class NeowDivinityPower extends AbstractPower {
         this.updateDescription();
         this.loadRegion("mantra");
         this.type = PowerType.BUFF;
+
     }
 
     @Override
@@ -36,6 +38,11 @@ public class NeowDivinityPower extends AbstractPower {
          CardCrawlGame.sound.stop("STANCE_LOOP_DIVINITY", sfxId);
     }
 
+    @Override
+    public void atEndOfRound() {
+        super.atEndOfRound();
+        addToBot(new RemoveSpecificPowerAction(owner,owner,this));
+    }
 
     public void playApplyPowerSfx() {
          CardCrawlGame.sound.play("STANCE_ENTER_DIVINITY");

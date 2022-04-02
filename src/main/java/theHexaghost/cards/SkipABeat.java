@@ -24,23 +24,23 @@ public class SkipABeat extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!GhostflameHelper.activeGhostFlame.charged)  atb(new ChargeCurrentFlameAction());
+       // if (!GhostflameHelper.activeGhostFlame.charged)  atb(new ChargeCurrentFlameAction());
       //  atb(new ExtinguishCurrentFlameAction());
-        /*
+
         if (!upgraded){
             if (GhostflameHelper.activeGhostFlame.charged)  atb(new ChargeCurrentFlameAction());
         } else {
             atb(new ExtinguishCurrentFlameAction());
             atb(new ChargeCurrentFlameAction());
         }
-
-         */
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+            //upgradeBaseCost(0);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

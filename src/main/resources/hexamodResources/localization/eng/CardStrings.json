@@ -37,7 +37,8 @@
   },
   "hexamod:SkipABeat": {
     "NAME": "Kindle",
-    "DESCRIPTION": "If the current Ghostflame is not *Ignited, hexamod:Ignite it."
+    "DESCRIPTION": "If the current Ghostflame is not *Ignited, hexamod:Ignite it.",
+    "UPGRADE_DESCRIPTION": "hexamod:Ignite the current Ghostflame."
   },
   "hexamod:CatchUp": {
     "NAME": "Catch Up",
