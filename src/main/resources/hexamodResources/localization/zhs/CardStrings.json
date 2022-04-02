@@ -261,7 +261,7 @@
   },
   "hexamod:SpectralSpark": {
     "NAME": "幽灵火花",
-    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 若当前鬼火已 hexamod:点燃 ， hexamod:熄灭 它并将本牌返回手牌。"
+    "DESCRIPTION": "NL 若当前鬼火已 hexamod:点燃 ， hexamod:熄灭 它并获得 !M! 点 hexamod:热烈 。"
   },
   "hexamod:GhostflameInferno": {
     "NAME": "此即地狱",
@@ -326,7 +326,7 @@
   },
   "hexamod:SoulSteal": {
     "NAME": "活体炸弹",
-    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 它引爆时对所有敌人造成伤害。 NL 消耗 。"
+    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 它引爆时对所有敌人造成伤害。"
   },
   "hexamod:CouncilsJustice": {
     "NAME": "议会裁决",
