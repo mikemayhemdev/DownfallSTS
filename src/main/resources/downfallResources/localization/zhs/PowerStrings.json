@@ -211,7 +211,7 @@
   "downfall:NeowMantra": {
     "NAME": "真言",
     "DESCRIPTIONS": [
-      "每当 #y涅奥 拥有 #b10 层 #y真言 时，将其转换成 #b10 点 #y力量 。"
+      "每当 #y涅奥 拥有 #b10 层 #y真言 时，它进入 #p神格 。"
     ]
   },
   "downfall:CrowbotRitualPower": {
@@ -344,6 +344,12 @@
     "NAME": "涅槃",
     "DESCRIPTIONS": [
       "你无法使 #y涅奥 降至 #b1 点生命以下。它将完全回复生命并进入下一阶段。"
+    ]
+  },
+  "downfall:NeowDivinity": {
+    "NAME": "神格",
+    "DESCRIPTIONS": [
+      " #y涅奥 本回合造成 #b3 倍伤害。"
     ]
   },
   "downfall:NeowSpirit": {
