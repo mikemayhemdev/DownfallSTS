@@ -79,5 +79,29 @@
   "time:DeepFreeze": {
     "NAME": "Deep Freeze",
     "DESCRIPTION": "Gain !B! Block. NL Retrieve 1 fewer time:Suspended card next turn."
+  },
+  "time:DistantDodge": {
+    "NAME": "Distant Dodge",
+    "DESCRIPTION": "Gain !B! Block. NL time:Suspend this. NL When *Retrieved, gain !B! Block and discard this."
+  },
+  "time:InfuseDefense": {
+    "NAME": "Infuse Defense",
+    "DESCRIPTION": "Gain !B! Block. NL Increase all Block on time:Suspended cards by !M!."
+  },
+  "time:MirrorImage": {
+    "NAME": "Mirror Image",
+    "DESCRIPTION": "Gain !B! Block. NL Choose a card in your discard pile to time:Suspend. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Choose a card in your discard pile to time:Suspend.",
+    "EXTENDE_DESCRIPTION": [
+      " to Suspend."
+    ]
+  },
+  "time:Planning": {
+    "NAME": "Planning",
+    "DESCRIPTION": "Suspend the top !M! cards of your draw pile."
+  },
+  "time:Wander": {
+    "NAME": "Wander",
+    "DESCRIPTION": "Scry !M!. NL Draw 1 card. NL Next turn, draw 1 fewer card."
   }
 }

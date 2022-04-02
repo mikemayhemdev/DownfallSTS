@@ -26,8 +26,8 @@ public class Suspension extends AbstractTimeEaterCard {
         }
         atb(new SelectCardsInHandAction(cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
             AbstractCard q = cards.get(0);
-            SuspendHelper.suspend(q);
             AbstractDungeon.player.hand.removeCard(q);
+            SuspendHelper.suspend(q);
         }));
     }
 

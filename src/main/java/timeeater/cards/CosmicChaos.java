@@ -28,8 +28,8 @@ public class CosmicChaos extends AbstractTimeEaterCard {
             @Override
             public void update() {
                 isDone = true;
-                SuspendHelper.suspend(q);
                 AbstractDungeon.player.limbo.removeCard(q);
+                SuspendHelper.suspend(q);
             }
         });
     }
