@@ -375,7 +375,7 @@
   },
   "Guardian:ShieldCharger": {
     "NAME": "护盾充能",
-    "DESCRIPTION": "将本牌 guardianmod:凝滞 。 NL guardianmod:滴答 - guardianmod:提防 2 。获得 !B! 点 格挡 和 [E] 。 NL guardianmod:挥发 。"
+    "DESCRIPTION": "将本牌 guardianmod:凝滞 。 NL guardianmod:滴答 - guardianmod:提防 !M! 并获得 !B! 点 格挡 。 NL guardianmod:挥发 。"
   },
   "Guardian:StasisEngine": {
     "NAME": "凝滞引擎",
