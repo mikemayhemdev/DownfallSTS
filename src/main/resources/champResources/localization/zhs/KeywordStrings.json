@@ -23,7 +23,7 @@
       "[fist_icon]",
       "champ:[fist_icon]"
     ],
-    "DESCRIPTION": "打出 #y终结技 后退出当前 #y姿态 并触发其 #y终结技 奖励 。"
+    "DESCRIPTION": "打出 #y终结技 后，退出当前 #y姿态 并触发其 #y终结技 效果 。"
   },
   {
     "PROPER_NAME": "反击",
