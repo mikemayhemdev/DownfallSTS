@@ -1,3 +1,4 @@
+
 package timeeater;
 
 import automaton.cards.Terminator;
@@ -133,7 +134,7 @@ public class TimeEaterMod implements
     }
 
     public static void initialize() {
-        TimeEaterMod timeEaterMod = new TimeEaterMod();
+     //   TimeEaterMod timeEaterMod = new TimeEaterMod();
     }
 
     public static String makeID(String idText) {

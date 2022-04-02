@@ -1,0 +1,70 @@
+{
+  "hexamod:SearingGhostflame": {
+    "NAME": "灼热鬼火",
+    "DESCRIPTION": [
+          "已 #y点燃 。 NL ",
+	  "再打出 #b" ,
+	  " 张 #y攻击牌 将其 #y点燃 。",
+	  " 张 #y攻击牌 将其 #y点燃 。",
+	  " #y激活 时打出 #b2 张 #y攻击牌 将其 #y点燃 。",
+	  " NL NL #y点燃 ：给予随机一名敌人 #b",
+	  " 层 #y灼魂 。",
+	  " NL NL 回合结束时，如果已 #y点燃 ， #y步进 。"
+    ]
+  },
+  "hexamod:CrushingGhostflame": {
+    "NAME": "碾压鬼火",
+    "DESCRIPTION": [
+          "已 #y点燃 。 NL ",
+	  "再打出 #b" ,
+	  " 张 #y技能牌 将其 #y点燃 。",
+	  " 张 #y技能牌 将其 #y点燃 。",
+	  " #y激活 时打出 #b2 张 #y技能牌 将其 #y点燃 。",
+	  " NL NL #y点燃 ：对随机一名敌人造成 #b",
+	  " 点伤害两次。",
+	  " NL NL 回合结束时，如果已 #y点燃 ， #y步进 。"
+    ]
+  },
+  "hexamod:BolsteringGhostflame": {
+    "NAME": "高热鬼火",
+    "DESCRIPTION": [
+          "已 #y点燃 。 NL ",
+	  "打出 #b1 张 #y能力牌 将其 #y点燃 。",
+	  " #y激活 时打出 #b1 张 #y能力牌 将其 #y点燃 。",
+	  " NL NL #y点燃 ：获得 #b",
+	  " 点 #y格挡 和 #b1 点 #y力量 。",
+	  " NL NL 回合结束时，如果已 #y点燃 ， #y步进 。"
+    ]
+  },
+    "hexamod:InfernoGhostflame": {
+    "NAME": "狱焱鬼火",
+    "DESCRIPTION": [
+          "已 #y点燃 。 NL ",
+	  "使用 [E] [E] [E] 将其 #y点燃 。",
+	  "再使用 [E] [E] 将其 #y点燃 。",
+	  "再使用 [E] 将其 #y点燃 。",
+	  "错误。请联系开发者： ",
+	  " #y激活 时使用 [E] [E] [E] 将其 #y点燃 。",
+	  " NL NL #y点燃 ：每有一个 #y点燃 的 #y鬼火 ，对随机敌人造成 #b",
+	  " 点伤害并 #y熄灭 其他 #y鬼火 。 如果所有 #y鬼火 都被 #y点燃 ，获得 #b2 点 #y热烈 。",
+	  " NL NL 回合结束时，如果已 #y点燃 ， #y步进 。",
+	  " NL NL 回合结束时，如果已 #y点燃 ， #y步进 。"
+    ]
+  },
+    "hexamod:MayhemGhostflame": {
+    "NAME": "狂徒鬼火",
+    "DESCRIPTION": [
+          "已 #y点燃 。 NL ",
+	  "回合结束时自动 #y点燃 。",
+	  "若 #y激活 回合结束时自动 #y点燃 。",
+	  " NL NL #y点燃 ：打出抽牌堆顶部的牌。",
+	  " NL NL 回合结束时，如果已 #y点燃 ， #y步进 。"
+    ]
+  }
+}
+
+
+
+
+
+

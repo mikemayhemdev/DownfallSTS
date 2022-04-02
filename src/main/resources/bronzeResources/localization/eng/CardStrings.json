@@ -652,5 +652,9 @@
       "full",
       "Release"
     ]
+  },
+  "bronze:PackRat": {
+    "NAME": "Pack Rat",
+    "DESCRIPTION": "Gain 1 *Buffer. NL Gain a random Potion. NL Exhaust."
   }
 }

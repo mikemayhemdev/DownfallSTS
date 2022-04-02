@@ -1,0 +1,94 @@
+[
+  {
+    "PROPER_NAME": "Active",
+    "NAMES": [
+      "active"
+    ],
+    "DESCRIPTION": "The #yActive Ghostflame can be #yIgnited by meeting its listed Ignition requirements."
+  },
+  {
+    "PROPER_NAME": "Advance",
+    "NAMES": [
+      "advance",
+      "advanced",
+      "advancing"
+    ],
+    "DESCRIPTION": "Move to the next Ghostflame. Moving onto a Ghostflame #yExtinguishes it."
+  },
+  {
+    "PROPER_NAME": "Retract",
+    "NAMES": [
+      "retract",
+      "retracted",
+      "retracting"
+    ],
+    "DESCRIPTION": "Move to the previous Ghostflame. Moving onto a Ghostflame #yExtinguishes it."
+  },
+  {
+    "PROPER_NAME": "Intensity",
+    "NAMES": [
+      "intensity"
+    ],
+    "DESCRIPTION": "Intensity increases the amount of damage, #ySoulburn, and #yBlock applied by Ghostflames when #yIgnited."
+  },
+  {
+    "PROPER_NAME": "Soulburn",
+    "NAMES": [
+      "soulburn",
+      "soulburned"
+    ],
+    "DESCRIPTION": "After #b3 turns, a Soulburned enemy loses HP, removing the Soulburn effect."
+  },
+  {
+    "PROPER_NAME": "Extinguish",
+    "NAMES": [
+      "extinguish",
+      "extinguished"
+    ],
+    "DESCRIPTION": "Allows Ghostflame to become #yIgnited again, resetting its Ignition requirements."
+  },
+  {
+    "PROPER_NAME": "Ignite",
+    "NAMES": [
+      "ignite",
+      "ignited",
+      "force-ignite"
+    ],
+    "DESCRIPTION": "Triggers the Ignition effect described on a Ghostflame."
+  },
+  {
+    "PROPER_NAME": "Seal",
+    "NAMES": [
+      "seal"
+    ],
+    "DESCRIPTION": "If all #b6 Seals have been played this combat, obtain #pThe #pBroken #pSeal and remove the Seals from your deck."
+  },
+  {
+    "PROPER_NAME": "Afterlife",
+    "NAMES": [
+      "afterlife"
+    ],
+    "DESCRIPTION": "If this card is #yExhausted, its effects activate."
+  },
+  {
+    "PROPER_NAME": "Crushing",
+    "NAMES": [
+      "crushing"
+    ],
+    "DESCRIPTION": "#yGhostflame. #yIgnites when #b2 #ySkills are played while #yActive. #yIgnition: When #yIgnited, deal #b4 damage to a random enemy twice."
+  },
+  {
+    "PROPER_NAME": "Bolstering",
+    "NAMES": [
+      "bolstering"
+    ],
+    "DESCRIPTION": "#yGhostflame. #yIgnites when a #yPower is played while #yActive. #yIgnition: When #yIgnited, gain #b4 #yBlock and #b1 #yStrength."
+  },
+  {
+    "PROPER_NAME": "Searing",
+    "NAMES": [
+      "searing"
+    ],
+    "DESCRIPTION": "#yGhostflame. #yIgnites when #b2 #yAttacks are played while #yActive. #yIgnition: When #yIgnited, apply #b4 #ySoulburn to a random enemy."
+  }
+]

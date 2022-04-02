@@ -1,0 +1,13 @@
+{
+  "hexamod:SealCommonReward": {
+    "TEXT": [
+      "Add a Common card to your deck"
+    ]
+  },
+  "hexamod:SealSealReward": {
+    "TEXT": [
+      "Add a Seal to your deck",
+      "Pick a Card."
+    ]
+  }
+}
