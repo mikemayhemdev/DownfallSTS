@@ -39,7 +39,7 @@
     "NAME": "回收器",
     "FLAVOR": "总有一天它也会被回收掉。",
     "DESCRIPTIONS": [
-      "每场战斗第一张非 #y状态牌 或 #y诅咒 牌 #y消耗 时，将一张下次耗能为 #b0 的复制品加入手牌。"
+      "每场战斗首张非 #y状态牌 或 #y诅咒 牌 #y消耗 时，将一张首次耗能为 #b0 的复制品加入手牌。"
     ]
   },
   "hexamod:MatchstickCase": {
@@ -60,14 +60,14 @@
     "NAME": "混沌灵魂",
     "FLAVOR": "混乱，现出真身。",
     "DESCRIPTIONS": [
-      "第二枚 #yhexamod:灼热 #y鬼火 变为 #y狂徒鬼火。 NL 狂徒鬼火在回合结束时如果 #y激活 则自动 #y点燃 。 NL #y点燃 ：打出抽牌堆顶部的牌。"
+      "第 #b4 枚 #y鬼火 变为 #y狂徒鬼火。 NL 若停留在 #y狂徒鬼火 ，其回合结束时自动 #y点燃 。 NL #y点燃 ：打出抽牌堆顶部的牌。"
     ]
   },
   "hexamod:JarOfFuel": {
     "NAME": "谜之盾",
     "FLAVOR": "按需防护。",
     "DESCRIPTIONS": [
-      "将 #yhexamod:高热 #y鬼火 与第一枚 #yhexamod:灼热 #y鬼火 交换位置。"
+      "将 #yhexamod:高热 #y鬼火 与首枚 #yhexamod:灼热 #y鬼火 交换位置。"
     ]
   },
   "hexamod:BolsterEngine": {
