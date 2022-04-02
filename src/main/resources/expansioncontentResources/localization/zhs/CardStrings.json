@@ -29,7 +29,7 @@
   },
   "expansioncontent:AwakenDeath": {
     "NAME": "觉醒",
-    "DESCRIPTION": "获得1点 力量 。 NL 下次死亡时，免死并回复 !M! 生命。"
+    "DESCRIPTION": "下次将要死亡或本场战斗结束时，回复 !M! 点生命并失去本效果。"
   },
   "expansioncontent:Chronoboost": {
     "NAME": "时空加速",
@@ -38,13 +38,21 @@
   },
   "expansioncontent:PolyBeam": {
     "NAME": "甜圈爆破",
-    "DESCRIPTION": "造成 !D! 点伤害两次并提高 !M! 点数值。 NL 下回合将同一张 *八体护盾 expansioncontent:发掘 或加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害两次并提高 !M! 点数值。 NL 下回合将同一张 *八体护盾+ expansioncontent:发掘 或加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "获得 !M! 点 力量 。"
   },
     "expansioncontent:DecaShield": {
     "NAME": "八体护盾",
-    "DESCRIPTION": "获得 !B! 点 格挡 两次并提高 !M! 点数值。 NL 下回合 expansioncontent:发掘 同一张 *甜圈爆破 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 两次并提高 !M! 点数值。 NL 下回合 expansioncontent:发掘 同一张 *甜圈爆破+ 。 NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 层 *多层护甲 。"
+  },
+  "expansioncontent:ShapePower": {
+    "NAME": "先古塑形",
+    "DESCRIPTION": "选择-获得 !M! 点 力量 或 !B! 层 *多层护甲 。",
+    "EXTENDED_DESCRIPTION": [
+      "甜圈之力",
+      "获得 !M! 点 力量 。",
+      "八体护盾",
+      "获得 !B! 层 *多层护甲 。"
+    ]
   },
   "expansioncontent:PrepareCrush": {
     "NAME": "准备：猛击",
