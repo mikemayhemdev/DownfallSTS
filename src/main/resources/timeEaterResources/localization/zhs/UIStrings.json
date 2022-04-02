@@ -1,0 +1,13 @@
+{
+  "hexamod:SealCommonReward": {
+    "TEXT": [
+      "将一张普通牌加入牌组"
+    ]
+  },
+  "hexamod:SealSealReward": {
+    "TEXT": [
+      "将一张容器加入牌组",
+      "选择一张牌"
+    ]
+  }
+}

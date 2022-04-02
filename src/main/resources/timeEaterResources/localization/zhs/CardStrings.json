@@ -1,0 +1,393 @@
+{
+  "hexamod:Strike": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "hexamod:Defend": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "hexamod:Sear": {
+    "NAME": "灼烧",
+    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 给予 !burny! 层 hexamod:灼魂 。"
+  },
+  "hexamod:Float": {
+    "NAME": "浮动",
+    "DESCRIPTION": "抽一张牌。 NL hexamod:步进 。",
+    "UPGRADE_DESCRIPTION": "抽一张牌。 NL 可选择 hexamod:步进 、 hexamod:回退 或不动。",
+    "EXTENDED_DESCRIPTION": [" hexamod:步进 。"," hexamod:回退 。","不动。"]
+  },
+  "hexamod:AdvancingGuard": {
+    "NAME": "行御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL hexamod:步进 。"
+  },
+  "hexamod:BacktrackSmack": {
+    "NAME": "回身击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL hexamod:回退 。"
+  },
+  "hexamod:FastForward": {
+    "NAME": "快进",
+    "DESCRIPTION": "NL hexamod:点燃 当前鬼火 。 NL hexamod:步进 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "hexamod:点燃 当前鬼火 。 NL hexamod:步进 。"
+  },
+  "hexamod:Rewind": {
+    "NAME": "重返",
+    "DESCRIPTION": "hexamod:回退 。 NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "hexamod:回退 。 NL 获得 [E] 并抽一张牌。"
+  },
+  "hexamod:SkipABeat": {
+    "NAME": "空拍",
+    "DESCRIPTION": "hexamod:点燃 下一个鬼火。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "hexamod:点燃 下一个鬼火。"
+  },
+  "hexamod:CatchUp": {
+    "NAME": "及时",
+    "DESCRIPTION": "hexamod:点燃 上一个鬼火。"
+  },
+  "hexamod:TimeWarp": {
+    "NAME": "时间扭曲",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL hexamod:步进 或 hexamod:回退 时，将本牌从弃牌堆返回手牌。"
+  },
+  "hexamod:EmpoweredFlame": {
+    "NAME": "高涨",
+    "DESCRIPTION": "获得 !M! 点 hexamod:热烈 。"
+  },
+  "hexamod:HexaLevel": {
+    "NAME": "地狱形态",
+    "DESCRIPTION": "回合开始时获得 !M! 点 hexamod:热烈 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时获得 !M! 点 hexamod:热烈 。"
+  },
+  "hexamod:UnlimitedPower": {
+    "NAME": "无限潜力",
+    "DESCRIPTION": "依次 hexamod:点燃 全部鬼火。 NL 消耗 。"
+  },
+  "hexamod:GhostOfSpirePast": {
+    "NAME": "魔鬼之舞",
+    "DESCRIPTION": "每回合初次 hexamod:回退 时，获得 [E] 并抽一张牌。 NL hexamod:回退 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每回合初次 hexamod:回退 时，获得 [E] 并抽一张牌。 NL hexamod:回退 。"
+  },
+  "hexamod:GhostOfSpireFuture": {
+    "NAME": "疾进",
+    "DESCRIPTION": "每回合初次 hexamod:点燃 鬼火时， hexamod:步进 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每回合初次 hexamod:点燃 鬼火时， hexamod:步进 。"
+  },
+  "hexamod:GhostOfSpirePresent": {
+    "NAME": "此刻",
+    "DESCRIPTION": "回合结束时不再自动 hexamod:步进 。 NL 每回合开始时，获得 [E] 。"
+  },
+  "hexamod:HauntingEcho": {
+    "NAME": "回声萦绕",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果当前鬼火已 hexamod:点燃 ，再 hexamod:点燃 它。",
+	"EXTENDED_DESCRIPTION": ["虚无","虚无。 NL "]
+  },
+  "hexamod:NecessarySacrifice": {
+    "NAME": "牺牲",
+    "DESCRIPTION": "消耗 一张牌。 NL 如果是一张攻击或技能牌，随机将一张相反类型的牌加入手牌。",
+    "UPGRADE_DESCRIPTION": "消耗 一张牌。 NL 如果是一张攻击或技能牌，随机将一张相反类型的牌加入手牌。 NL 它的耗能减少1。",
+    "EXTENDED_DESCRIPTION": [
+      "消耗作为必要的牺牲。"
+    ]
+  },
+  "hexamod:TimeOfNeed": {
+    "NAME": "久逢甘露",
+    "DESCRIPTION": "保留 。 NL 将随机一张能力牌加入手牌。 NL 它的耗能为0。 NL 消耗 。"
+  },
+  "hexamod:SwordOfDarkness": {
+    "NAME": "黑夜之剑",
+    "DESCRIPTION": "如果当前鬼火未 hexamod:点燃 ，获得 [E] 。 NL 造成 !D! 点伤害。"
+  },
+  "hexamod:ShieldOfDarkness": {
+    "NAME": "黑夜之盾",
+    "DESCRIPTION": "如果当前鬼火未 hexamod:点燃 ，获得 [E] 。 NL 获得 !B! 点 格挡 。"
+  },
+  "hexamod:SpectralAdrenaline": {
+    "NAME": "鲜焰仪式",
+    "DESCRIPTION": "每有一个被 hexamod:点燃 的鬼火，获得 [E] 并抽一张牌 。 hexamod:熄灭 所有的鬼火。 NL 消耗 。"
+  },
+  "hexamod:StepThrough": {
+    "NAME": "逐步",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一个 hexamod:点燃 的鬼火，抽一张牌。"
+  },
+  "hexamod:InspiringFlames": {
+    "NAME": "火上浇油",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每有一个 hexamod:点燃 的 鬼火 ，随机 升级 一张手牌。"
+  },
+  "hexamod:SpectersWail": {
+    "NAME": "亡灵哀号",
+    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 对所有敌人造成 !D! 点伤害。"
+  },
+  "hexamod:Hexaguard": {
+    "NAME": "六边防护",
+    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 获得 !B! 点 格挡 。 NL 抽1张牌。"
+  },
+  "hexamod:GhostLash": {
+    "NAME": "幽灵鞭击",
+    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 造成 !D! 点伤害。 NL 被 消耗 时再造成 !D! 点伤害。"
+  },
+  "hexamod:GhostShield": {
+    "NAME": "幽灵护盾",
+    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 获得 !B! 点 格挡 。 NL 被 消耗 时，获得 !M! 层 bronze:残影 。"
+  },
+  "hexamod:Haunt": {
+    "NAME": "鬼手",
+    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 抽 !M! 张牌。 NL 手牌变为 虚无 。"
+  },
+  "hexamod:RecurringNightmare": {
+    "NAME": "梦魇幻象",
+    "DESCRIPTION": "expansioncontent:发掘 1张 虚无 牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:发掘 !M! 张 虚无 牌。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "发掘一张虚无牌",
+	  "发掘",
+	  "张虚无牌"
+    ]
+  },
+  "hexamod:GiftsFromTheDead": {
+    "NAME": "深处之礼",
+    "DESCRIPTION": "每回合开始时， expansioncontent:取回 一张 hexamod:阴世 牌。",
+    "EXTENDED_DESCRIPTION": [
+    "这些灵魂太强大了，无法直接召唤。"
+    ]
+  },
+  "hexamod:EtherealExpedition": {
+    "NAME": "诡异探险",
+    "DESCRIPTION": "虚无 。 NL 将随机一张 虚无 牌加入手牌。 NL 它本回合耗能为0。 NL 消耗 。"
+  },
+  "hexamod:PhantomCloak": {
+    "NAME": "幽灵披风",
+    "DESCRIPTION": "虚无 。 NL 获得 !M! 点 敏捷 并失去1点 力量 。"
+  },
+  "hexamod:ParanormalForm": {
+    "NAME": "鬼哭神嚎",
+    "DESCRIPTION": "虚无 。 NL 打出一张 虚无 牌时，对随机一名敌人造成 !M! 点伤害。"
+  },
+  "hexamod:UnleashSpirits": {
+    "NAME": "释魂",
+    "DESCRIPTION": "对随机敌人造成 !D! 点伤害，消耗堆中每有一张 虚无 牌重复一次。 NL 消耗 。"
+  },
+  "hexamod:NightmareStrike": {
+    "NAME": "梦魇打击",
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 被 消耗 时，将一张 *暗影打击 加入手牌。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 被 消耗 时，将一张 *暗影打击+ 加入手牌。"
+  },
+  "hexamod:NightmareGuise": {
+    "NAME": "梦魇伪装",
+    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 被 消耗 时，将一张 *暗影伪装 加入手牌。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 被 消耗 时，将一张 *暗影伪装+ 加入手牌。"
+  },
+  "hexamod:ShadowStrike": {
+    "NAME": "暗影打击",
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害两次。 NL expansioncontent:取回 *梦魇打击 。 NL 消耗 。"
+  },
+  "hexamod:ShadowGuise": {
+    "NAME": "暗影伪装",
+    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 两次 。 NL expansioncontent:取回 *梦魇伪装 。 NL 消耗 。"
+  },
+  "hexamod:PowerFromBeyond": {
+    "NAME": "深处之力",
+    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 下回合获得 [E] 并抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 下回合获得 [E] 并抽 !M! 张牌。"
+  },
+  "hexamod:BurningTouch": {
+    "NAME": "灼烧之触",
+    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 如果敌人已有 hexamod:灼魂 再给予一次。"
+  },
+  "hexamod:Incineration": {
+    "NAME": "焚化",
+    "DESCRIPTION": "造成 !D! 点伤害并给 NL 予 !burny! 层 hexamod:灼魂 !M! 次。"
+  },
+  "hexamod:Firestarter": {
+    "NAME": "纵火",
+    "DESCRIPTION": "对所有敌人造成 !D! 点 NL 伤害并给予 !burny! 层 hexamod:灼魂 。"
+  },
+  "hexamod:SearingWound": {
+    "NAME": "灼热伤口",
+    "DESCRIPTION": "所有敌人失去其 hexamod:灼魂 层数的生命。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "所有敌人失去其 hexamod:灼魂 层数的生命。"
+  },
+  "hexamod:ExtraCrispy": {
+    "NAME": "脆烤",
+    "DESCRIPTION": "卡牌和鬼火额外给予 !M! 层 hexamod:灼魂 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 卡牌和鬼火额外给予 !M! 层 hexamod:灼魂 。"
+  },
+  "hexamod:GhostflameBarrier": {
+    "NAME": "亡魂屏障",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合被攻击时，给予攻击者 !burny! 层 hexamod:灼魂 。"
+  },
+  "hexamod:Toasty": {
+    "NAME": "烘焙！",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予未被 格挡 伤害的 hexamod:灼魂 。"
+  },
+  "hexamod:ThermalTransfer": {
+    "NAME": "热传递",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果敌人有 hexamod:灼魂 ，获得 !B! 点 格挡 。"
+  },
+  "hexamod:HeatCrush": {
+    "NAME": "高热撞击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 敌人的 hexamod:灼魂 提高本牌的伤害。"
+  },
+  "hexamod:HeatShield": {
+    "NAME": "高热护盾",
+    "DESCRIPTION": "虚无 。 NL 获得 !M! 点 格挡 。 NL 所有敌人的 hexamod:灼魂 提高本牌的 格挡 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 格挡 、 NL 所有敌人的 hexamod:灼魂 提高本牌的 格挡 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （当前： !B! 点 格挡 。）"
+    ]
+  },
+  "hexamod:TurnItUp": {
+    "NAME": "高热激发",
+    "DESCRIPTION": "获得 6 点 hexamod:热烈 。 NL 在X+1回合后失去。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 6 点 hexamod:热烈 。 NL 在X+1回合后失去。 NL 获得 [E] 。 NL 消耗 。"
+  },
+  "hexamod:HeatMetal": {
+    "NAME": "高热金属",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 引爆后给予敌人 !M! 层 hexamod:灼魂 。"
+  },
+  "hexamod:RainOfEmbers": {
+    "NAME": "焰烬雨",
+    "DESCRIPTION": "造成 !D! 点伤害并给 NL 予 !burny! 层 hexamod:灼魂 X 次。次数不少于3时，给予 !M! 层 虚弱 。",
+    "UPGRADE_DESCRIPTION": "对随机敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 X 次。次数不少于3时，给予所有敌人2层 虚弱 和 易伤 。"
+  },
+  "hexamod:VolcanoVisage": {
+    "NAME": "火山面貌",
+    "DESCRIPTION": "hexamod:点燃 一个鬼火时，给予所有敌人 !M! 层 hexamod:灼魂 。"
+  },
+  "hexamod:FlamesFromBeyond": {
+    "NAME": "深处之焰",
+    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 给予所有敌人 !burny! 层 hexamod:灼魂 。"
+  },
+  "hexamod:PhantomFireball": {
+    "NAME": "幻影火球",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 引爆敌人的 hexamod:灼魂 。"
+  },
+  "hexamod:SpectralSpark": {
+    "NAME": "幽灵火花",
+    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 如果当前鬼火已 hexamod:点燃 ， hexamod:熄灭 它并将本牌返回手牌。"
+  },
+  "hexamod:GhostflameInferno": {
+    "NAME": "此即地狱",
+    "DESCRIPTION": "保留 。 NL hexamod:点燃 hexamod:狱焱 鬼火 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL hexamod:点燃 当前鬼火和 hexamod:狱焱 鬼火 。 NL 消耗 。"
+  },
+  "hexamod:ChargedBarrage": {
+    "NAME": "蓄能焰幕",
+    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 每 hexamod:点燃 一个鬼火 再给予一次。"
+  },
+  "hexamod:RadiantFlame": {
+    "NAME": "火焰辐射",
+    "DESCRIPTION": "hexamod:点燃 一个鬼火时，获得 !M! 点 格挡 。"
+  },
+  "hexamod:ApocalypseNow": {
+    "NAME": "启示录",
+    "DESCRIPTION": "虚无 。 NL 获得 [E] [E] 。 NL hexamod:激活 狱焱鬼火。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 [E] [E] [E] 。 NL hexamod:激活 狱焱鬼火。 NL 消耗 。"
+  },
+  "hexamod:Again": {
+    "NAME": "复燃",
+    "DESCRIPTION": "hexamod:点燃 当前鬼火，然后 hexamod:熄灭 它。"
+  },
+  "hexamod:RetreatToShadows": {
+    "NAME": "无形",
+    "DESCRIPTION": "hexamod:回退 。 NL 失去 !M! 点生命。 NL 获得1层 无实体 。 NL 消耗 。"
+  },
+  "hexamod:ApocalypticArmor": {
+    "NAME": "末日",
+    "DESCRIPTION": "下次 hexamod:点燃 hexamod:狱焱 鬼火 且全部鬼火已 hexamod:点燃 时，额外获得一回合。",
+    "UPGRADE_DESCRIPTION": "下次 hexamod:点燃 hexamod:狱焱 鬼火 且至少 !M! 个鬼火已 hexamod:点燃 时，额外获得一回合。"
+  },
+  "hexamod:FirstSeal": {
+    "NAME": "第一容器",
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，回复 !M! 点生命。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时，回复 !M! 点生命。"
+  },
+  "hexamod:SecondSeal": {
+    "NAME": "第二容器",
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，额外获得 !M! 个 金币 。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时，额外获得 !M! 个 金币 。"
+  },
+  "hexamod:ThirdSeal": {
+    "NAME": "第三容器",
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，额外获得一张牌。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时，额外获得一张牌。"
+  },
+  "hexamod:FourthSeal": {
+    "NAME": "第四容器",
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，额外获得一瓶药水。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时，额外获得一瓶药水。"
+  },
+  "hexamod:FifthSeal": {
+    "NAME": "第六容器",
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，卡牌奖励中加入一张 *容器 牌。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时，卡牌奖励中加入一张 *容器 牌。"
+  },
+  "hexamod:SixthSeal": {
+    "NAME": "第五容器",
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，随机 升级 牌组中的一张牌。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时，随机 升级 牌组中的一张牌。"
+  },
+  "hexamod:SoulSteal": {
+    "NAME": "活体炸弹",
+    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 下次目标的 hexamod:灼魂 引爆时，对全体敌人生效。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 下次目标的 hexamod:灼魂 引爆时，对全体敌人生效。"
+  },
+  "hexamod:CouncilsJustice": {
+    "NAME": "议会裁决",
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗堆中每有一张 *灵体 ，伤害增加 !M! 。 NL 消耗 。"
+  },
+  "hexamod:ForkedFlame": {
+    "NAME": "歧路火焰",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL hexamod:点燃 前后的鬼火。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL hexamod:点燃 前一个、当前的、下一个鬼火。"
+  },
+  "hexamod:FlameSwitch": {
+    "NAME": "恶兆",
+    "DESCRIPTION": "虚无 。 NL 将当前鬼火替换为 hexamod:碾压 或 hexamod:高热 鬼火。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 将当前鬼火替换为 hexamod:碾压 或 hexamod:高热 鬼火。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "将当前鬼火替换为 hexamod:高热 鬼火。",
+      "将当前鬼火替换为 hexamod:碾压 鬼火。"
+    ]
+  },
+  "hexamod:BurningQuestion": {
+    "NAME": "迫在眉睫",
+    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 本牌的伤害增加 !M! 点。 NL 被 消耗 时：对所有敌人造成 !D! 点伤害。"
+  },
+
+  "hexamod:Floatwork": {
+    "NAME": "飘忽不定",
+    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 获得 !M! 层 多层护甲 。",
+    "UPGRADE_DESCRIPTION": "固有 。 虚无 。 hexamod:阴世 。 NL 获得 !M! 层 多层护甲 。"
+  },
+  "hexamod:Premonition": {
+    "NAME": "预兆",
+    "DESCRIPTION": "选择一张手牌打出并 消耗 它。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "选择打出并消耗"
+    ]
+  },
+  "hexamod:Divider": {
+    "NAME": "分整化火",
+    "DESCRIPTION": "造成 !D! 点伤害. NL 每有一个 hexamod:点燃 的鬼火，再重复一次。"
+  },
+  "hexamod:StrikeFromBeyond": {
+    "NAME": "深处打击",
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 随机 expansioncontent:取回 一张 hexamod:阴世 牌。",
+    "EXTENDED_DESCRIPTION": [" 虚无 "," 虚无 。 NL "]
+  },
+  "hexamod:WildfireWeapon": {
+    "NAME": "鬼火武器",
+    "DESCRIPTION": "每造成未被格挡的攻击伤害，就给予 !M! 层 hexamod:灼魂 。"
+  },
+  "hexamod:DynamicBlow": {
+    "NAME": "动态攻击",
+    "DESCRIPTION": "虚无 。 NL 如果 hexamod:激活 的鬼火已 hexamod:点燃 ，给予 !burny! 层 hexamod:灼魂 。否则造成 !D! 点伤害。"
+  },
+  "hexamod:SuperheatedStrike": {
+    "NAME": "灼热打击",
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 给予 !burny! 层 hexamod:灼魂 。 NL 如果这张牌被 消耗 ，受到 !M! 点伤害。"
+  },
+  "hexamod:Ghostwalk": {
+    "NAME": "鬼步",
+    "DESCRIPTION": "虚无 。 NL hexamod:回退 。 NL 每当你本回合打出一张 虚无 牌时，获得 [E] 。"
+  }
+}

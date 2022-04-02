@@ -1,3 +1,4 @@
+
 package timeeater;
 
 import automaton.cards.AbstractBronzeCard;
@@ -117,7 +118,7 @@ public class TimeEaterMod implements
     }
 
     public static void initialize() {
-        TimeEaterMod timeEaterMod = new TimeEaterMod();
+     //   TimeEaterMod timeEaterMod = new TimeEaterMod();
     }
 
     public static String makeID(String idText) {
