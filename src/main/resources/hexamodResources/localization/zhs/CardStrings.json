@@ -330,7 +330,7 @@
   },
   "hexamod:CouncilsJustice": {
     "NAME": "议会裁决",
-    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗堆中每有一张 *灵体 ，伤害增加 !M! 。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 每张 消耗 的 *灵体 提高伤害 !M! 点。 NL 消耗 。"
   },
   "hexamod:ForkedFlame": {
     "NAME": "歧路火焰",
