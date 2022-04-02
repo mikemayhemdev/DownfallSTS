@@ -25,7 +25,7 @@
   },
   "bronze:DonuBeam": {
     "NAME": "原型激光",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL bronze:编译 - 获得 !M! 力量 并 失去 !bauto! 敏捷 。",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL bronze:编译 - 获得 !M! 点 力量 。",
     "EXTENDED_DESCRIPTION": [
       "平滑",
       "爆裂"
