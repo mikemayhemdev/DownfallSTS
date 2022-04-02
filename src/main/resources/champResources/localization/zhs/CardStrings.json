@@ -130,12 +130,9 @@
     "EXTENDED_DESCRIPTION": "造成你当前 格挡 值(!D!)点伤害两次。 NL 获得2层 脆弱 。 NL champ:防守 champ:连段 ：失去 2 层 脆弱 。"
   },
   "champ:FalseCounter": {
-    "NAME": "伪反",
-    "DESCRIPTION": "获得 !M! 层 champ:反击 。 NL 下次触发 champ:反击 时，只失去一半 champ:反击 。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 层 champ:反击 。 NL 下次触发 champ:反击 时，只失去一半 champ:反击 。",
-    "EXTENDED_DESCRIPTION": [
-      "还不是时候。"
-    ]
+    "NAME": "以逸待劳",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 [E] 并抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 [E] [E] 并抽 !M! 张牌。"
   },
   "champ:IronFortress": {
     "NAME": "战斗跃舞",
@@ -242,8 +239,7 @@
   },
   "champ:CrownThrow": {
     "NAME": "投掷王冠",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 若耗能不为0，下回合将下次耗能为0的本牌返回手牌。",
-    "EXTENDED_DESCRIPTION": ["造成 !D! 点伤害。"]
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL champ:战狂 champ:连段 ： NL 抽 !M! 张攻击牌。"
   },
   "champ:Encircle": {
     "NAME": "包围",
@@ -318,7 +314,7 @@
     "DESCRIPTION": "回合开始时，上回合每使用过3层 活力 ，获得 !M! 层 。 champ:反击 亦然。"
   },
   "champ:Duel": {
-    "NAME": "决斗",
+    "NAME": "挑战",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 若目标有 力量 ，再打出一次。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 若目标有 力量 ，再打出一次。"
   },
@@ -392,8 +388,8 @@
   },
   "champ:TripleStrike": {
     "NAME": "三重打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得2张触发 champ:技术 的 *打击 。其耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得2张触发 champ:技术 的 *打击 。其耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得2张可触发 champ:技术 的 *打击 。其耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得2张可触发 champ:技术 的 *打击 。其耗能为0。 NL 消耗 。"
   },
   "champ:WindUp": {
     "NAME": "挑衅",
