@@ -62,7 +62,7 @@
     "DESCRIPTION": "依次 hexamod:点燃 全部鬼火。 NL 消耗 。"
   },
   "hexamod:GhostOfSpirePast": {
-    "NAME": "幽灵之舞",
+    "NAME": "魔鬼之舞",
     "DESCRIPTION": "每回合首次 hexamod:回退 时， NL 获得 [E] 并抽一张牌。 NL hexamod:回退 。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 每回合首次 hexamod:回退 时， NL 获得 [E] 并抽一张牌。 NL hexamod:回退 。"
   },
@@ -292,7 +292,7 @@
   "hexamod:ApocalypticArmor": {
     "NAME": "末日",
     "DESCRIPTION": "下次 hexamod:点燃 !M! 枚鬼火时，额外获得一回合。",
-    "UPGRADE_DESCRIPTION": "下次 hexamod:点燃 至 !M! 枚鬼火时，额外获得一回合。"
+    "UPGRADE_DESCRIPTION": "下次 hexamod:点燃 !M! 枚鬼火时，额外获得一回合。"
   },
   "hexamod:FirstSeal": {
     "NAME": "第一容器",
