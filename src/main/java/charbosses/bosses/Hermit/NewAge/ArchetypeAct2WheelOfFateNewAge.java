@@ -167,7 +167,7 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
                         @Override
                         public void update() {
                             isDone = true;
-                            if (!AbstractCharBoss.boss.isDead && !AbstractCharBoss.boss.isDying) {
+                            if (AbstractCharBoss.boss != null && !AbstractCharBoss.boss.isDead && !AbstractCharBoss.boss.isDying) {
                                 if (AbstractCharBoss.boss.hand != null) {
                                     AbstractCharBoss.boss.hand.group.stream().forEach(q -> ((AbstractBossCard) q).bossDarken());
                                     int budget = AbstractCharBoss.boss.energyPanel.getCurrentEnergy();
