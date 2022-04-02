@@ -1,7 +1,7 @@
 /*
 package downfall.relics;
 
-import automaton.AutomatonChar;
+import automaton.TimeEaterChar;
 import automaton.actions.RepeatCardAction;
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.CardPowerTip;

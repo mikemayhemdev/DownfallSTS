@@ -23,7 +23,7 @@ public class AlphaBuild extends AbstractBronzeCard {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         thisEncodes();
-        //tags.add(AutomatonMod.BAD_COMPILE);
+        //tags.add(TimeEaterMod.BAD_COMPILE);
         cardsToPreview = new BetaBuild();
     }
 
