@@ -102,7 +102,7 @@ public class TheSnecko extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(NAMES[0], TEXT[0],
-                90, 90, 3, 99, 5, this, getStartingRelics(),
+                85, 85, 3, 99, 5, this, getStartingRelics(),
                 getStartingDeck(), false);
     }
 
@@ -143,7 +143,7 @@ public class TheSnecko extends CustomPlayer {
 
     @Override
     public int getAscensionMaxHPLoss() {
-        return 7;
+        return 8;
     }
 
     @Override
@@ -168,8 +168,7 @@ public class TheSnecko extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        ArrayList<AbstractCard> cardList = new ArrayList<>(CardLibrary.getAllCards());
-        return cardList.get(AbstractDungeon.cardRandomRng.random(cardList.size() - 1));
+        return OffclassHelper.getARandomOffclass();
     }
 
     @Override

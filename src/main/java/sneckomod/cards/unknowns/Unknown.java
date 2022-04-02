@@ -16,7 +16,7 @@ public class Unknown extends AbstractUnknownCard {
 
     @Override
     public Predicate<AbstractCard> myNeeds() {
-        return c -> true;
+        return c -> c.rarity == this.rarity;
     }
 
     @Override

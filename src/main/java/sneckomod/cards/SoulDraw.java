@@ -1,9 +1,12 @@
 package sneckomod.cards;
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.OffclassHelper;
 import sneckomod.SneckoMod;
+
+import java.util.ArrayList;
 
 public class SoulDraw extends AbstractSneckoCard {
 
@@ -17,8 +20,9 @@ public class SoulDraw extends AbstractSneckoCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < this.magicNumber; i++) {
-            makeInHand(SneckoMod.getOffClassCard());
+        ArrayList<AbstractCard> cards = OffclassHelper.getXRandomOffclassCards(magicNumber);
+        for (AbstractCard c : cards) {
+            makeInHand(c);
         }
     }
 

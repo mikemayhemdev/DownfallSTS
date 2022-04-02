@@ -11,14 +11,9 @@ public class SnekBite extends AbstractSneckoCard {
 
     public final static String ID = makeID("SnekBite");
 
-    //stupid intellij stuff ATTACK, ENEMY, BASIC
-
-    private static final int DAMAGE = 9;
-    private static final int UPG_DAMAGE = 2;
-
     public SnekBite() {
         super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
+        baseDamage = 7;
         baseMagicNumber = magicNumber = 1;
     }
 
@@ -31,7 +26,7 @@ public class SnekBite extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPG_DAMAGE);
+            upgradeDamage(2);
             upgradeMagicNumber(1);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();

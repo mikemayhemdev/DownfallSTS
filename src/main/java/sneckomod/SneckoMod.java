@@ -26,7 +26,6 @@ import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.exordium.Sssserpent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.random.Random;
 import downfall.cards.OctoChoiceCard;
 import downfall.downfallMod;
@@ -40,7 +39,6 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import slimebound.cards.AbstractSlimeboundCard;
 import sneckomod.cards.*;
 import sneckomod.cards.unknowns.*;
 import sneckomod.events.BackToBasicsSnecko;
@@ -54,7 +52,6 @@ import sneckomod.potions.MuddlingPotion;
 import sneckomod.potions.OffclassReductionPotion;
 import sneckomod.relics.*;
 import sneckomod.util.SneckoSilly;
-import theHexaghost.cards.AbstractHexaCard;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -70,8 +67,6 @@ import static downfall.patches.EvilModeCharacterSelect.evilMode;
 public class SneckoMod implements
         EditCardsSubscriber,
         EditRelicsSubscriber,
-        //EditStringsSubscriber,
-        //EditKeywordsSubscriber,
         SetUnlocksSubscriber,
         EditCharactersSubscriber,
         PostInitializeSubscriber,
@@ -156,7 +151,6 @@ public class SneckoMod implements
     public static TextureAtlas.AtlasRegion overBannerBoss;
 
     private static String modID;
-    private static ArrayList<AbstractCard> statuses = new ArrayList<>();
     private CustomUnlockBundle unlocks0;
     private CustomUnlockBundle unlocks1;
     private CustomUnlockBundle unlocks2;
@@ -266,15 +260,17 @@ public class SneckoMod implements
         }
     }
 
+    @Deprecated
     public static AbstractCard getOffClassCard() {
-        ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
-        possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color == TheSnecko.Enums.SNECKO_CYAN || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.type == STATUS || c.hasTag(AbstractCard.CardTags.HEALING) || c.hasTag(BANNEDFORSNECKO));
-        return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
+        return OffclassHelper.getARandomOffclass();
     }
 
+    //TODO Make rarity matter in Offclass card gen.
     public static AbstractCard getOffClassCardMatchingPredicate(Predicate<AbstractCard> q) {
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
-        possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color == TheSnecko.Enums.SNECKO_CYAN || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.type == STATUS || !q.test(c) || c.hasTag(AbstractCard.CardTags.HEALING) || c.hasTag(BANNEDFORSNECKO));
+        possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color == AbstractDungeon.player.getCardColor() || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.type == STATUS || !q.test(c) || c.hasTag(AbstractCard.CardTags.HEALING) || c.hasTag(BANNEDFORSNECKO));
+        if (!pureSneckoMode && AbstractDungeon.player instanceof TheSnecko)
+            possList.removeIf(c -> !validColors.contains(c.color));
         return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
     }
 
@@ -284,9 +280,9 @@ public class SneckoMod implements
         return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
     }
 
+    @Deprecated
     public static AbstractCard getRandomStatus() {
-        Collections.shuffle(statuses, AbstractDungeon.cardRandomRng.random);
-        return statuses.get(0).makeCopy();
+        return OffclassHelper.getARandomStatus();
     }
 
     @Override
@@ -471,7 +467,7 @@ public class SneckoMod implements
         ArrayList<AbstractCard> tmp = CardLibrary.getAllCards();
         for (AbstractCard c : tmp) {
             if (c.type == AbstractCard.CardType.STATUS && !(c.hasTag(AutomatonMod.GOOD_STATUS))) {
-                statuses.add(c);
+                OffclassHelper.addStatusToList(c);
             }
             if (c.color == AbstractCard.CardColor.COLORLESS && c.rarity != AbstractCard.CardRarity.SPECIAL) {
                 AbstractUnknownCard.unknownColorlessReplacements.add(c.cardID);
@@ -492,7 +488,7 @@ public class SneckoMod implements
             if (c != AbstractCard.CardColor.CURSE && c != AbstractCard.CardColor.COLORLESS)
                 validColors.add(c);
         }
-        updateAllUnknownReplacements();
+        OffclassHelper.resetOffclassList();
     }
 
     @Override
@@ -560,52 +556,9 @@ public class SneckoMod implements
         }
     }
 
-    public static void addToLists(AbstractUnknownCard c, ArrayList<Predicate<AbstractCard>> predList, ArrayList<ArrayList<String>> listList) {
-        predList.add(c.myNeeds());
-        if (c.myList() != null) {
-            c.myList().clear();
-            listList.add(c.myList());
-        }
-    }
-
+    @Deprecated
     public static void updateAllUnknownReplacements() {
-
-        //TODO - Ban any unknowns from the cardpool if their list size = 0
-
-        ArrayList<Predicate<AbstractCard>> predList = new ArrayList<>();
-        ArrayList<ArrayList<String>> listList = new ArrayList<>();
-
-        addToLists(new Unknown(), predList, listList); // 0
-        addToLists(new Unknown0Cost(), predList, listList);
-        addToLists(new Unknown1Cost(), predList, listList);
-        addToLists(new Unknown2Cost(), predList, listList);
-        addToLists(new Unknown3Cost(), predList, listList);
-        addToLists(new UnknownBlock(), predList, listList); // 5
-        addToLists(new UnknownCommonAttack(), predList, listList);
-        addToLists(new UnknownCommonSkill(), predList, listList);
-        addToLists(new UnknownDexterity(), predList, listList);
-        // addToLists(new UnknownEthereal(), predList, listList);
-        addToLists(new UnknownExhaust(), predList, listList);
-        addToLists(new UnknownRareAttack(), predList, listList); // 10
-        addToLists(new UnknownRarePower(), predList, listList);
-        addToLists(new UnknownRareSkill(), predList, listList);
-        addToLists(new UnknownStrength(), predList, listList);
-        addToLists(new UnknownStrike(), predList, listList);
-        addToLists(new UnknownUncommonAttack(), predList, listList); // 15
-        addToLists(new UnknownUncommonSkill(), predList, listList);
-        addToLists(new UnknownUncommonPower(), predList, listList);
-        addToLists(new UnknownVulnerable(), predList, listList);
-        addToLists(new UnknownWeak(), predList, listList);
-        addToLists(new UnknownX(), predList, listList);  // 20
-        addToLists(new UnknownDraw(), predList, listList);
-
-        for (AbstractUnknownCard q : SneckoMod.unknownClasses) {
-            addToLists(q, predList, listList);
-        }
-        addToLists(new UnknownColorless(), predList, listList);
-        addToLists(new UnknownBoss(), predList, listList);
-
-        AbstractUnknownCard.updateReplacements(predList, listList);
+        OffclassHelper.updateAllUnknownReplacements();
     }
 
     @Override
@@ -616,18 +569,18 @@ public class SneckoMod implements
                 SneckoMod.openedStarterScreen = true;
             }
         }
-        if (SneckoMod.choosingCharacters > -1 && SneckoMod.choosingCharacters <= 2 && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && !pureSneckoMode) {
+        if (SneckoMod.choosingCharacters > -1 && SneckoMod.choosingCharacters <= 3 && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && !pureSneckoMode) {
             AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             SneckoMod.colorChoices.removeCard(c);
             SneckoMod.validColors.add(c.color);
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
-            if (SneckoMod.choosingCharacters == 2) {
-                SneckoMod.choosingCharacters = 3;
+            if (SneckoMod.choosingCharacters == 3) {
+                SneckoMod.choosingCharacters = 4;
                 CenterGridCardSelectScreen.centerGridSelect = false;
-                SneckoMod.updateAllUnknownReplacements();
+                OffclassHelper.updateAllUnknownReplacements();
                 AbstractDungeon.commonCardPool.group.removeIf(ii -> ii instanceof UnknownClass && !SneckoMod.validColors.contains(ii.color));
                 AbstractDungeon.srcCommonCardPool.group.removeIf(ii -> ii instanceof UnknownClass && !SneckoMod.validColors.contains(ii.color));
-            } else if (SneckoMod.choosingCharacters < 2) {
+            } else if (SneckoMod.choosingCharacters < 3) {
                 SneckoMod.choosingCharacters += 1;
                 SneckoMod.dualClassChoice();
             }

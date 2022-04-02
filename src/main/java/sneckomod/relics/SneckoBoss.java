@@ -64,7 +64,7 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<AbstractCar
             if (SneckoMod.pureSneckoMode) {
                 c.shuffle();
                 CardGroup r = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-                for (int i = 0; i < 3; i++) {
+                for (int i = 0; i < 4; i++) {
                     r.addToTop(c.group.get(i));
                 }
                 AbstractDungeon.gridSelectScreen.open(r, 1, false, CardCrawlGame.languagePack.getUIString("bronze:MiscStrings").TEXT[8]);
