@@ -103,5 +103,9 @@
   "time:Wander": {
     "NAME": "Wander",
     "DESCRIPTION": "Scry !M!. NL Draw 1 card. NL Next turn, draw 1 fewer card."
+  },
+  "time:TemporalBarrier": {
+    "NAME": "Temporal Barrier",
+    "DESCRIPTION": "Gain !B! Block. NL Enemies that attack you this turn gain !M! Slow."
   }
 }

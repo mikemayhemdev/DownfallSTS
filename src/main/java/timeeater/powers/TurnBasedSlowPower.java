@@ -4,10 +4,10 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static timeeater.TimeEaterMod.makeID;
 
@@ -15,7 +15,7 @@ public class TurnBasedSlowPower extends AbstractTimeEaterPower {
     public static final String ID = makeID(TurnBasedSlowPower.class.getSimpleName());
     public static final PowerStrings strs = CardCrawlGame.languagePack.getPowerStrings(ID);
 
-    public TurnBasedSlowPower(AbstractMonster target, int amount) {
+    public TurnBasedSlowPower(AbstractCreature target, int amount) {
         super(ID, strs.NAME, PowerType.DEBUFF, true, target, amount);
         isTwoAmount = true;
         amount2 = 0;

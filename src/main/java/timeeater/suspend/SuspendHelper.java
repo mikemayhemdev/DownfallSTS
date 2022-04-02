@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import timeeater.powers.RetrieveLessNextTurnPower;
 
 import java.util.ArrayList;
 
@@ -31,6 +32,9 @@ public class SuspendHelper {
 
     public static void atStartOfTurnPostDraw() {
         int suspendDrawAmt = SUSPEND_DRAW_PER_TURN;
+        if (AbstractDungeon.player.hasPower(RetrieveLessNextTurnPower.ID)) {
+            suspendDrawAmt -= AbstractDungeon.player.getPower(RetrieveLessNextTurnPower.ID).amount;
+        }
         suspendDrawAmt = Math.min(suspendDrawAmt, suspendGroup.size());
         for (int i = 0; i < suspendDrawAmt; i++) {
             atb(new AbstractGameAction() {

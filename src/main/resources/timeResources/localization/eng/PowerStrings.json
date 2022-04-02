@@ -25,5 +25,12 @@
       "Next turn, retrieve #b",
       " fewer #ySuspended cards."
     ]
+  },
+  "time:TemporalBarrierPower": {
+    "NAME": "Temporal Barrier",
+    "DESCRIPTIONS": [
+      "Enemies that attack you this turn gain #b",
+      " #ySlow."
+    ]
   }
 }
