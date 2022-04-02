@@ -388,7 +388,7 @@
   },
   "champ:FancyFootwork": {
     "NAME": "花哨步法",
-    "DESCRIPTION": "进入未处于的 姿态 。 NL 本回合下张 champ:终结技 使所有敌人失去 !M! 点生命。"
+    "DESCRIPTION": "进入未处于的 姿态 。 NL 本回合下张 champ:终结技 对所有敌人造成 !M! 点伤害。"
   },
   "champ:TripleStrike": {
     "NAME": "三重打击",
