@@ -36,8 +36,8 @@ public class ShieldThrow extends AbstractChampCard {
         this.rawDescription = cardStrings.DESCRIPTION;
         this.initializeDescription();
 
-        applyToSelf(new FrailPower(p,2, false));
-        if (bcombo()) atb(new ReducePowerAction(p,p,FrailPower.POWER_ID,2));
+        if (!dcombo()) applyToSelf(new FrailPower(p,2, false));
+       // if (bcombo()) atb(new ReducePowerAction(p,p,FrailPower.POWER_ID,2));
         //  finisher();
     }
 

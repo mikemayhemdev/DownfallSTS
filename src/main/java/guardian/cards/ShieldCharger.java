@@ -52,6 +52,7 @@ public class ShieldCharger extends AbstractGuardianCard implements InStasisCard 
         this.tags.add(GuardianMod.VOLATILE);
         this.tags.add(GuardianMod.SELFSTASIS);
         this.socketCount = SOCKETS;
+        this.baseMagicNumber = this.magicNumber = 4;
         updateDescription();
         loadGemMisc();
 
@@ -89,7 +90,7 @@ public class ShieldCharger extends AbstractGuardianCard implements InStasisCard 
     public void onStartOfTurn(StasisOrb orb) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
        // AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
-        brace(4);
+        brace(magicNumber);
     }
 
     @Override
