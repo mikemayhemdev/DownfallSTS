@@ -1,15 +1,11 @@
 package automaton.cards;
 
-import automaton.cards.AbstractBronzeCard;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import timeeater.cards.AbstractTimeEaterCard;
-
-import static timeeater.TimeEaterMod.makeID;
 
 public class PackRat extends AbstractBronzeCard {
     public final static String ID = makeID("PackRat");
@@ -19,7 +15,7 @@ public class PackRat extends AbstractBronzeCard {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = 6;
 
-        this.setBackgroundTexture("timeEaterResources/images/512/packratframe.png", "timeEaterResources/images/1024/packrateframe.png");
+        this.setBackgroundTexture("timeResources/images/512/packratframe.png", "timeResources/images/1024/packrateframe.png");
 
     }
 

@@ -26,8 +26,8 @@ import reskinContent.patches.CharacterSelectScreenPatches;
 
 import java.util.ArrayList;
 
-import static automaton.AutomatonMod.makeID;
-import static automaton.AutomatonMod.placeholderColor;
+import static timeeater.TimeEaterMod.makeID;
+import static timeeater.TimeEaterMod.placeholderColor;
 
 public class TimeEaterChar extends CustomPlayer {
     public static final String ID = makeID("theTimeEater");
