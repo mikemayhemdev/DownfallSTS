@@ -13,6 +13,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.random.Random;
 import timeeater.cards.AbstractTimeEaterCard;
+import timeeater.util.ImageHelper;
+import timeeater.util.TexLoader;
+import timeeater.util.Wiz;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -76,48 +79,17 @@ public class CardArtRoller {
     private static HashMap<String, TextureAtlas.AtlasRegion> doneCards = new HashMap<>();
     public static HashMap<String, ReskinInfo> infos = new HashMap<String, ReskinInfo>();
     private static ShaderProgram shade = new ShaderProgram(vertexShaderHSLC, fragmentShaderHSLC);
-    public static ArrayList<String> attacksList = new ArrayList<>();
-    public static ArrayList<String> skillsList = new ArrayList<>();
-    public static ArrayList<String> powersList = new ArrayList<>();
 
     public static void computeCard(AbstractTimeEaterCard c) {
         c.portrait = doneCards.computeIfAbsent(c.cardID, key -> {
             ReskinInfo r = infos.computeIfAbsent(key, key2 -> {
                 Random rng = new Random((long) c.cardID.hashCode());
+                ArrayList<AbstractCard> cardsList = Wiz.getCardsMatchingPredicate(s -> s.type == c.type && WhatMod.findModName(s.getClass()) == null, true);
                 String q;
                 if (c.cardArtCopy() != null) {
                     q = c.cardArtCopy();
                 } else {
-                    ArrayList<AbstractCard> cardsList;
-                    switch (c.type) {
-                        case ATTACK:
-                            if (attacksList.isEmpty()) {
-                                for (AbstractCard q2 : Wiz.getCardsMatchingPredicate((s) -> s.type == AbstractCard.CardType.ATTACK &&
-                                        WhatMod.findModName(s.getClass()) == null, true)) {
-                                    attacksList.add(q2.cardID);
-                                }
-                            }
-                            q = Wiz.getRandomItem(attacksList, rng);
-                            break;
-                        case POWER:
-                            if (powersList.isEmpty()) {
-                                for (AbstractCard q2 : Wiz.getCardsMatchingPredicate((s) -> s.type == AbstractCard.CardType.POWER &&
-                                        WhatMod.findModName(s.getClass()) == null, true)) {
-                                    powersList.add(q2.cardID);
-                                }
-                            }
-                            q = Wiz.getRandomItem(powersList, rng);
-                            break;
-                        default:
-                            if (skillsList.isEmpty()) {
-                                for (AbstractCard q2 : Wiz.getCardsMatchingPredicate((s) -> s.type != AbstractCard.CardType.ATTACK && s.type != AbstractCard.CardType.POWER &&
-                                        WhatMod.findModName(s.getClass()) == null, true)) {
-                                    skillsList.add(q2.cardID);
-                                }
-                            }
-                            q = Wiz.getRandomItem(skillsList, rng);
-                            break;
-                    }
+                    q = Wiz.getRandomItem(cardsList, rng).cardID;
                 }
                 return new ReskinInfo(q, rng.random(0.35f, 0.65f), rng.random(0.35f, 0.65f), rng.random(0.35f, 0.65f), rng.random(0.35f, 0.65f), rng.randomBoolean());
             });

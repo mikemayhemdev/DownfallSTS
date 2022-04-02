@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
 
+import static automaton.FunctionHelper.HEIGHT_FUNCTION;
 import static automaton.FunctionHelper.HEIGHT_SEQUENCE;
 import static timeeater.util.Wiz.atb;
 
@@ -47,6 +48,8 @@ public class SuspendHelper {
 
     public static void suspend(AbstractCard q) {
         suspendGroup.addToBottom(q);
+        q.current_x = -150 * Settings.xScale;
+        q.current_y = HEIGHT_FUNCTION;
     }
 
     public static void update() {
