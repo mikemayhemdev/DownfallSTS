@@ -38,8 +38,8 @@
   },
   "Slimebound:Split": {
     "NAME": "분열",
-    "DESCRIPTION": "슬라임 4종류 중 1가지를 선택하여 slimeboundmod:분열합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "슬라임 4종류 중 2가지를 선택하여 slimeboundmod:분열합니다. NL 소멸."
+    "DESCRIPTION": "슬라임 4종류 중 1가지를 선택해 slimeboundmod:분열합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "슬라임 4종류 중 2가지를 선택해 slimeboundmod:분열합니다. NL 소멸."
   },
   "Slimebound:LeadByExample": {
     "NAME": "시범을 보여주지",
@@ -323,8 +323,8 @@
   },
   "Slimebound:SplitSpecialist": {
     "NAME": "분열: 전문가",
-    "DESCRIPTION": "slimeboundmod:전문가 슬라임 3가지 중 1가지를 선택하여 slimeboundmod:분열합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:전문가 슬라임 3가지 중 1가지를 선택하여 slimeboundmod:분열하고 slimeboundmod:명령합니다. NL 소멸."
+    "DESCRIPTION": "slimeboundmod:전문가 슬라임 3가지 중 1가지를 선택해 slimeboundmod:분열합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:전문가 슬라임 3가지 중 1가지를 선택해 slimeboundmod:분열하고 slimeboundmod:명령합니다. NL 소멸."
   },
   "Slimebound:MinionMaster": {
     "NAME": "졸개 대장",

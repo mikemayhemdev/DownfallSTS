@@ -8,7 +8,6 @@ import charbosses.cards.colorless.EnHandOfGreedHermitNecro;
 import charbosses.cards.curses.EnInjury;
 import charbosses.cards.curses.EnNecronomicurse;
 import charbosses.cards.hermit.*;
-import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
 import charbosses.powers.bossmechanicpowers.HermitWheelOfFortune;
 import charbosses.relics.CBR_Necronomicon;
 import charbosses.relics.CBR_NeowsBlessing;
@@ -20,7 +19,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import downfall.monsters.gauntletbosses.Hermit;
 import hermit.cards.Strike_Hermit;
 
 import java.util.ArrayList;
@@ -169,25 +167,29 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
                         @Override
                         public void update() {
                             isDone = true;
-                            AbstractCharBoss.boss.hand.group.stream().forEach(q -> ((AbstractBossCard) q).bossDarken());
-                            int budget = AbstractCharBoss.boss.energyPanel.getCurrentEnergy();
-                            for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
-                                if (c.costForTurn <= budget && c.costForTurn != -2 && c instanceof AbstractBossCard) {
-                                    ((AbstractBossCard) c).createIntent();
-                                    ((AbstractBossCard) c).bossLighten();
-                                    budget -= c.costForTurn;
-                                    budget += ((AbstractBossCard) c).energyGeneratedIfPlayed;
-                                    if (budget < 0) budget = 0;
-                                } else if (c.costForTurn == -2 && c.type == AbstractCard.CardType.CURSE && c.color == AbstractCard.CardColor.CURSE) {
-                                    ((AbstractBossCard) c).bossLighten();
+                            if (AbstractCharBoss.boss != null && !AbstractCharBoss.boss.isDead && !AbstractCharBoss.boss.isDying) {
+                                if (AbstractCharBoss.boss.hand != null) {
+                                    AbstractCharBoss.boss.hand.group.stream().forEach(q -> ((AbstractBossCard) q).bossDarken());
+                                    int budget = AbstractCharBoss.boss.energyPanel.getCurrentEnergy();
+                                    for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
+                                        if (c.costForTurn <= budget && c.costForTurn != -2 && c instanceof AbstractBossCard) {
+                                            ((AbstractBossCard) c).createIntent();
+                                            ((AbstractBossCard) c).bossLighten();
+                                            budget -= c.costForTurn;
+                                            budget += ((AbstractBossCard) c).energyGeneratedIfPlayed;
+                                            if (budget < 0) budget = 0;
+                                        } else if (c.costForTurn == -2 && c.type == AbstractCard.CardType.CURSE && c.color == AbstractCard.CardColor.CURSE) {
+                                            ((AbstractBossCard) c).bossLighten();
+                                        }
+                                    }
+                                    for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
+                                        AbstractBossCard cB = (AbstractBossCard) c;
+                                        cB.refreshIntentHbLocation();
+                                        c.applyPowers();
+                                    }
+                                    AbstractCharBoss.boss.hand.refreshHandLayout();
                                 }
                             }
-                            for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
-                                AbstractBossCard cB = (AbstractBossCard) c;
-                                cB.refreshIntentHbLocation();
-                                c.applyPowers();
-                            }
-                            AbstractCharBoss.boss.hand.refreshHandLayout();
                         }
                     });
                     if (AbstractCharBoss.boss instanceof CharBossHermit) {

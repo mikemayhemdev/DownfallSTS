@@ -292,7 +292,7 @@
   },
   "bronze:BronzeOrb": {
     "NAME": "청동 구체",
-    "DESCRIPTION": "선천성. NL 피해를 !D! 줍니다. NL 방어도를 !B! 얻습니다. NL 뽑을 카드 더미에 있는 무작위 부호화 카드를 1장 bronze:부호화합니다. NL 소멸."
+    "DESCRIPTION": "선천성. NL 방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 뽑을 카드 더미에 있는 무작위 부호화 카드를 1장 bronze:부호화합니다. NL 소멸."
   },
   "bronze:Virus": {
     "NAME": "바이러스",
@@ -331,8 +331,8 @@
   },
   "bronze:ItsAFeature": {
     "NAME": "특징",
-    "DESCRIPTION": "상태이상 또는 저주 카드를 뽑을 때마다 힘 과 민첩을 1 얻습니다. 이번 턴 종료 시 이 효과로 얻은 힘 과 민첩을 잃습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 상태이상 또는 저주 카드를 뽑을 때마다 힘 과 민첩을 1 얻습니다. 이번 턴 종료 시 이 효과로 얻은 힘 과 민첩을 잃습니다."
+    "DESCRIPTION": "상태이상 또는 저주를 뽑을 때마다 힘 과 민첩을 1 얻습니다. 이번 턴 종료 시 이 효과로 얻은 힘 과 민첩을 잃습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 상태이상 또는 저주를 뽑을 때마다 힘 과 민첩을 1 얻습니다. 이번 턴 종료 시 이 효과로 얻은 힘 과 민첩을 잃습니다."
   },
   "bronze:MinorBeam": {
     "NAME": "소형 광선",
@@ -357,8 +357,8 @@
   },
   "bronze:Mutator": {
     "NAME": "돌연변이",
-    "DESCRIPTION": "힘을 1 얻습니다. NL 손에 있는 상태이상 카드를 이 카드로 변화시킵니다.",
-    "UPGRADE_DESCRIPTION": "보존. NL 힘을 1 얻습니다. NL 손에 있는 상태이상 카드를 이 카드로 변화시킵니다."
+    "DESCRIPTION": "힘을 1 얻습니다. NL 손에 있는 상태이상을 이 카드로 변화시킵니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 힘을 1 얻습니다. NL 손에 있는 상태이상을 이 카드로 변화시킵니다."
   },
   "bronze:Allocate": {
     "NAME": "배정",
@@ -462,7 +462,7 @@
   },
   "bronze:Break": {
     "NAME": "일시 정지",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL bronze:컴파일 *오류 - 무작위 상태이상 카드를 !M! 장 bronze:투입합니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL bronze:컴파일 *오류 - 무작위 상태이상을 !M! 장 bronze:투입합니다.",
     "EXTENDED_DESCRIPTION": [
       "고장난",
       "주먹"
@@ -507,8 +507,8 @@
   },
   "bronze:Repulsor": {
     "NAME": "격퇴",
-    "DESCRIPTION": "매 턴 처음으로 상태이상 또는 저주 카드를 뽑았다면 그 카드를 소멸 시키고 카드를 1장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 매 턴 처음으로 상태이상 또는 저주 카드를 뽑았다면 그 카드를 소멸 시키고 카드를 1장 뽑습니다."
+    "DESCRIPTION": "매 턴 처음으로 상태이상 또는 저주를 뽑았다면 그 카드를 소멸 시키고 카드를 1장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 매 턴 처음으로 상태이상 또는 저주를 뽑았다면 그 카드를 소멸 시키고 카드를 1장 뽑습니다."
   },
   "bronze:Debug": {
     "NAME": "오류 검출",
@@ -597,8 +597,8 @@
   },
   "bronze:BugBarrage": {
     "NAME": "버그 방벽",
-    "DESCRIPTION": "*부상을 1장 얻습니다. NL 손에 있는 상태이상 카드를 모두 bronze:순환하고 bronze:순환된 카드 한 장당 피해를 !D! 줍니다.",
-    "UPGRADE_DESCRIPTION": "*부상을 !M! 장 얻습니다. NL 손에 있는 상태이상 카드를 모두 bronze:순환하고 bronze:순환된 카드 한 장당 피해를 !D! 줍니다.",
+    "DESCRIPTION": "*부상을 1장 얻습니다. NL 손에 있는 상태이상을 모두 bronze:순환하고 bronze:순환된 카드 한 장당 피해를 !D! 줍니다.",
+    "UPGRADE_DESCRIPTION": "*부상을 !M! 장 얻습니다. NL 손에 있는 상태이상을 모두 bronze:순환하고 bronze:순환된 카드 한 장당 피해를 !D! 줍니다.",
     "EXTENDED_DESCRIPTION": [
       " NL (피해를 ",
       " 번 줍니다.)"
@@ -606,7 +606,7 @@
   },
   "bronze:BuggyMess": {
     "NAME": "버그 덩어리",
-    "DESCRIPTION": "무작위 상태이상 카드를 bronze:투입합니다. NL [E] 를 !M! 얻습니다.",
+    "DESCRIPTION": "무작위 상태이상을 bronze:투입합니다. NL [E] 를 !M! 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       "버그",
       "투성이"
@@ -630,8 +630,8 @@
   },
   "bronze:AlphaBuild": {
     "NAME": "얼리 억세스",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 무작위 상태이상 카드를 bronze:투입합니다. NL bronze:컴파일 - *베타 *빌드를 bronze:투입합니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL \u00A0 피해를 !D! 줍니다. NL 무작위 상태이상 카드를 bronze:투입합니다. NL bronze:컴파일 - *베타 *빌드를 bronze:투입합니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 무작위 상태이상을 bronze:투입합니다. NL bronze:컴파일 - *베타 *빌드를 bronze:투입합니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL \u00A0 피해를 !D! 줍니다. NL 무작위 상태이상을 bronze:투입합니다. NL bronze:컴파일 - *베타 *빌드를 bronze:투입합니다.",
     "EXTENDED_DESCRIPTION": [
       "조잡한",
       "알파"
@@ -639,7 +639,7 @@
   },
   "bronze:BetaBuild": {
     "NAME": "베타 빌드",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 무작위 상태이상 카드를 bronze:투입합니다. NL bronze:컴파일 - *정식 *출시를 bronze:투입합니다.",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 무작위 상태이상을 bronze:투입합니다. NL bronze:컴파일 - *정식 *출시를 bronze:투입합니다.",
     "EXTENDED_DESCRIPTION": [
       "이른",
       "베타"
