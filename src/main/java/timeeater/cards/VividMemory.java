@@ -18,7 +18,7 @@ public class VividMemory extends AbstractMemoryCard {
     // intellij stuff  uncommon,
 
     public VividMemory() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardRarity.UNCOMMON);
     }
 
     @Override

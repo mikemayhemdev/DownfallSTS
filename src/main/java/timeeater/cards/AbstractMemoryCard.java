@@ -17,8 +17,8 @@ import static timeeater.util.Wiz.att;
 public abstract class AbstractMemoryCard extends AbstractTimeEaterCard {
     public static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("time:Misc");
 
-    public AbstractMemoryCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
-        super(cardID, cost, type, rarity, target, TimeEaterChar.Enums.MAGENTA);
+    public AbstractMemoryCard(final String cardID, final int cost, final CardRarity rarity) {
+        super(cardID, cost, CardType.SKILL, rarity, CardTarget.SELF, TimeEaterChar.Enums.MAGENTA);
         cardToPreview.addAll(choices());
         exhaust = true;
     }

@@ -179,5 +179,52 @@
   "time:BorrowedTime": {
     "NAME": "Borrowed Time",
     "DESCRIPTION": "Gain [E] [E] [E]. NL time:Suspend !M! *Void."
+  },
+  "time:BrokenMemory": {
+    "NAME": "Broken Memory",
+    "DESCRIPTION": "Choose: time:Suspend *Melter, *Reinforced *Body, or *Scrape. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose: time:Suspend *Melter+, *Reinforced *Body+, or *Scrape+. NL Exhaust."
+  },
+  "time:DemandDefense": {
+    "NAME": "Demand Defense",
+    "DESCRIPTION": "Gain !B! Block. NL time:Suspend 1 *Shame."
+  },
+  "time:DistantMemory": {
+    "NAME": "Distant Memory",
+    "DESCRIPTION": "Choose: time:Suspend *Malice, *Luck *of *the *Draw, or *Grudge. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose: time:Suspend *Malice+, *Luck *of *the *Draw+, or *Grudge+. NL Exhaust."
+  },
+  "time:DivineMemory": {
+    "NAME": "Divine Memory",
+    "DESCRIPTION": "Choose: time:Suspend *Wallop, *Sanctity, or *Perseverance. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose: time:Suspend *Wallop+, *Sanctity+, or *Perseverance+. NL Exhaust."
+  },
+  "time:QuietMemory": {
+    "NAME": "Quiet Memory",
+    "DESCRIPTION": "Choose: time:Suspend *Choke, *Blur, or *Predator. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose: time:Suspend *Choke+, *Blur+, or *Predator+. NL Exhaust."
+  },
+  "time:EnragedMemory": {
+    "NAME": "Enraged Memory",
+    "DESCRIPTION": "Choose: time:Suspend *Whirlwind, *Uppercut, or *Flame *Barrier. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose: time:Suspend *Whirlwind+, *Uppercut+, or *Flame *Barrier+. NL Exhaust."
+  },
+  "time:Flux": {
+    "NAME": "Flux",
+    "DESCRIPTION": "Gain 4 Temporary Strength. NL Gain !M! *Shivs. NL time:Suspend 1 *Doubt."
+  },
+  "time:LeapAhead": {
+    "NAME": "Leap Ahead",
+    "DESCRIPTION": "Gain !B! Block. NL time:Suspend 1 *Leap. NL Exhaust."
+  },
+  "time:PurgeTimeline": {
+    "NAME": "Purge Timeline",
+    "DESCRIPTION": "Gain !B! Block. NL time:Suspend 1 *Purify.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL time:Suspend 1 *Purify+."
+  },
+  "time:ReachThrough": {
+    "NAME": "Reach Through",
+    "DESCRIPTION": "Choose one of this combat's reward cards to time:Suspend. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose one of this combat's reward cards to time:Suspend. NL It costs 0. NL Exhaust."
   }
 }
