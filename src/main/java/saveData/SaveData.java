@@ -20,6 +20,7 @@ import downfall.relics.BrokenWingStatue;
 import javassist.CtBehavior;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import sneckomod.OffclassHelper;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
@@ -273,7 +274,7 @@ public class SaveData {
 
             SneckoMod.identifyRng = new Random(file.seed, identifyRngCount);
 
-            SneckoMod.updateAllUnknownReplacements();
+            OffclassHelper.updateAllUnknownReplacements();
 
             saveLogger.info("Save loaded.");
             //Anything that triggers on load goes here

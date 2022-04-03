@@ -245,7 +245,7 @@ public class ChampChar extends CustomPlayer {
 
     @Override
     public int getAscensionMaxHPLoss() {
-        return 9;
+        return 8;
     }
 
     @Override

@@ -379,7 +379,7 @@
   },
   "Guardian:ShieldCharger": {
     "NAME": "Shield Charger",
-    "DESCRIPTION": "Place this into guardianmod:Stasis. NL guardianmod:Tick - guardianmod:Brace !M! and Gain !B! Block. NL guardianmod:Volatile."
+    "DESCRIPTION": "Place this into guardianmod:Stasis. NL guardianmod:Tick - guardianmod:Brace !M! and gain !B! Block. NL guardianmod:Volatile."
   },
   "Guardian:StasisEngine": {
     "NAME": "Stasis Engine",

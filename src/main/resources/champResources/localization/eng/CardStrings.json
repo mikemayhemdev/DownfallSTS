@@ -231,8 +231,8 @@
   },
   "champ:HeavySlash": {
     "NAME": "Masterful Slash",
-    "DESCRIPTION": "Deal !D! damage. NL Gain a random *Skill. It costs 0.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a random Upgraded *Skill. It costs 0."
+    "DESCRIPTION": "Deal !D! damage. NL Gain a random Skill. NL It costs 0.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a random Upgraded Skill. NL It costs 0."
   },
   "champ:CheapShot": {
     "NAME": "Cheap Shot",
