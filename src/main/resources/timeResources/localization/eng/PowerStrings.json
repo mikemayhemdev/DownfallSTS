@@ -18,6 +18,13 @@
       " turns, gain [E] and draw #b1 additional card."
     ]
   },
+  "time:MagicMissilePower": {
+    "NAME": "Missile Power",
+    "DESCRIPTIONS": [
+      "Magic Missiles deal ",
+      " more damage this turn."
+    ]
+  },
   "time:RetrieveLessNextTurnPower": {
     "NAME": "Retrieve Less Next Turn",
     "DESCRIPTIONS": [

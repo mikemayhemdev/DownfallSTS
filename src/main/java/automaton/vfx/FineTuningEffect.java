@@ -15,6 +15,13 @@ public class FineTuningEffect extends AbstractGameEffect {
     private boolean clang1 = false;
     private boolean clang2 = false;
     private AbstractCard owningCard;
+    private  boolean notext;
+
+    public FineTuningEffect(AbstractCard c, boolean skipText) {
+        this.duration = 0.8F;
+        owningCard = c;
+        notext = skipText;
+    }
 
     public FineTuningEffect(AbstractCard c) {
         this.duration = 0.8F;
@@ -45,7 +52,7 @@ public class FineTuningEffect extends AbstractGameEffect {
 
     private void clank(float x, float y) {
         com.megacrit.cardcrawl.dungeons.AbstractDungeon.topLevelEffectsQueue.add(new ScaledHammerImprintEffect(x, y, owningCard.targetDrawScale));
-        com.megacrit.cardcrawl.dungeons.AbstractDungeon.topLevelEffectsQueue.add(new TextAboveCreatureEffect(x,y - 200F * owningCard.targetDrawScale,"+1", Color.LIME));
+        if (!notext) com.megacrit.cardcrawl.dungeons.AbstractDungeon.topLevelEffectsQueue.add(new TextAboveCreatureEffect(x,y - 200F * owningCard.targetDrawScale,"+1", Color.LIME));
         if (Settings.DISABLE_EFFECTS) {
             return;
         }
