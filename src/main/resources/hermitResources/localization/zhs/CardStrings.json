@@ -58,7 +58,7 @@
   },
   "hermit:BlackWind": {
     "NAME": "黑风",
-    "DESCRIPTION": "虚无 。 NL 造成与你损失生命值同等的伤害。 NL 消耗 。",
+    "DESCRIPTION": "虚无 。 NL 造成你当前损失生命值点伤害。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": " NL （造成 !D! 点伤害。）"
   },
   "hermit:Purgatory": {
@@ -123,8 +123,8 @@
   },
   "hermit:TakeCover": {
     "NAME": "快找掩护",
-    "DESCRIPTION": "获得X张 *防御 。 NL 其耗能本场战斗为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得X张 *防御+ 。 NL 其耗能本场战斗为0。 NL 消耗 。"
+    "DESCRIPTION": "获得X张 *防御 。 NL 本场战斗其耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得X张 *防御+ 。 NL 本场战斗其耗能为0。 NL 消耗 。"
   },
   "hermit:Misfire": {
     "NAME": "擦枪走火",
@@ -132,7 +132,7 @@
   },
   "hermit:SprayPray": {
     "NAME": "倾泻火力",
-    "DESCRIPTION": "随机造成 !D! 点伤害4次。 NL 将一张 *疑虑 加入抽牌堆。"
+    "DESCRIPTION": "随机造成 !D! 点伤害四次。 NL 将一张 *疑虑 加入抽牌堆。"
   },
  "hermit:Scavenge": {
     "NAME": "战利品",
@@ -140,15 +140,15 @@
   },
   "hermit:ImpendingDoom": {
     "NAME": "末日将临",
-    "DESCRIPTION": "不能被打出 。 NL hermit:精准 ： NL 回合结束时，对所有人（包括自己）造成 13 点伤害。"
+    "DESCRIPTION": "不能被打出 。 NL hermit:精准 ： NL 回合结束时，对所有人造成 13 点伤害。"
   },
   "hermit:MementoCard": {
     "NAME": "纪念品",
-    "DESCRIPTION": "保留 。 NL 给予所有人 !M! 层 易伤 。"
+    "DESCRIPTION": "保留 。 NL 给予所有单位 !M! 层 易伤 。"
   },
   "hermit:Shortfuse": {
     "NAME": "快速引信",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 在手牌时，每打出一张 *打击 或 *防御 ，本牌耗能本回合降低 [E] 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 在手牌时，每打出一张 *打击 或 *防御 ，本牌耗能本回合减少 [E] 。"
   },
   "hermit:Grudge": {
     "NAME": "怒怨",
@@ -168,7 +168,7 @@
   },
   "hermit:LowProfile": {
     "NAME": "低姿态",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每有一种获得负面效果，额外获得 !M! 点 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每有一种负面效果，额外获得 !M! 点 格挡 。"
   },
   "hermit:Horror": {
     "NAME": "恐惧",
@@ -180,11 +180,11 @@
   },
   "hermit:Cheat": {
     "NAME": "出千",
-    "DESCRIPTION": "从 !M! 张抽牌堆顶部的牌打出一张。 NL  hermit:精准 ：触发打出牌的 hermit:精准 效果。"
+    "DESCRIPTION": "从抽牌堆顶部 !M! 张牌中选择打出一张。 NL  hermit:精准 ：触发打出牌的 hermit:精准 效果。"
   },
   "hermit:Vantage": {
     "NAME": "优势",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL hermit:精准 ： NL 随机 升级 !M! 张手牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL hermit:精准 :随机 升级 !M! 张手牌。"
   },
   "hermit:Brawl": {
     "NAME": "斗殴",
@@ -200,7 +200,7 @@
   },
   "hermit:OverwhelmingPower": {
     "NAME": "压倒性力量",
-    "DESCRIPTION": "获得 [E] [E] [E] 。 NL 抽3张牌。 NL 回合结束时若 能量 为0，失去 !M! 点生命。"
+    "DESCRIPTION": "获得 [E] [E] [E] 。 NL 抽3张牌。 NL 回合结束时若无 能量 ，失去 !M! 点生命。"
   },
   "hermit:Maintenance": {
     "NAME": "维护",
@@ -208,7 +208,7 @@
   },
   "hermit:EternalForm": {
     "NAME": "永恒形态",
-    "DESCRIPTION": "每回合开始时不获得 能量 ，但打出的前 !M! 张牌耗能为0。"
+    "DESCRIPTION": "回合开始时不获得 [E] ，但打出的前 !M! 张牌耗能为0。"
   },
   "hermit:FullyLoaded": {
     "NAME": "整装待发",
@@ -242,7 +242,7 @@
   },
   "hermit:LoneWolf": {
     "NAME": "孤狼",
-    "DESCRIPTION": "选择一张牌，本场战斗其耗能为0。 NL 丢弃其他手牌。 NL 消耗 。  "
+    "DESCRIPTION": "选择一张牌。 NL 本场战斗其耗能为0。 NL 丢弃其他手牌。 NL 消耗 。  "
   },
   "hermit:HighNoon": {
     "NAME": "午时已到",
@@ -303,7 +303,7 @@
   },
   "hermit:ItchyTrigger": {
     "NAME": "急扣扳机",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 ： NL 随机将一张手牌本回合下次耗能变为0。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 ： NL 一张手牌本回合下次耗能变为0。"
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "风暴之眼",
