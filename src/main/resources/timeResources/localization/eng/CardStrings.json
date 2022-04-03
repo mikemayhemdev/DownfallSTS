@@ -168,7 +168,16 @@
   },
   "time:Arrest": {
     "NAME": "Arrest",
-    "DESCRIPTION": "You and ALL enemies lose 1 Strength. NL Suspend *Dark *Shackles. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "You and ALL enemies lose 1 Strength. NL Suspend *Dark *Shackles and give it Retain. NL Exhaust."
+    "DESCRIPTION": "You and ALL enemies lose 1 Strength. NL time:Suspend *Dark *Shackles. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "You and ALL enemies lose 1 Strength. NL time:Suspend *Dark *Shackles and give it Retain. NL Exhaust."
+  },
+  "time:BeginAgain": {
+    "NAME": "Begin Again",
+    "DESCRIPTION": "Trigger your start-of-turn effects. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Trigger your start-of-turn effects."
+  },
+  "time:BorrowedTime": {
+    "NAME": "Borrowed Time",
+    "DESCRIPTION": "Gain [E] [E] [E]. NL time:Suspend !M! *Void."
   }
 }
