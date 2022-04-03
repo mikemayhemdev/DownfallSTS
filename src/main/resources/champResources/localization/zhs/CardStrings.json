@@ -343,7 +343,7 @@
   },
   "champ:Riposte": {
     "NAME": "弹反",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗 。"
   },
   "champ:Endure": {
     "NAME": "忍耐",
