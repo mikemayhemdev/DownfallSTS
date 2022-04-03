@@ -500,7 +500,9 @@
       "Truly, you are the Heart's MVB: Most Valuable Boss.",
       "The Heart's corruption knows no limits - not even precious pets.",
       "Corrupted Courier",
-      "The Heart restocks cards, relics, and potions. All prices are reduced by #b20%."
+      "The Heart restocks cards, relics, and potions. All prices are reduced by #b20%.",
+      "Combat reward screens now contain Colorless cards and cards from the Hero colors.",
+      "Gain [E] at the start of your turn. You can no longer gain #ySouls. Breaking Keys costs no #ySouls."
     ]
   },
   "downfall:LizardTail": {
