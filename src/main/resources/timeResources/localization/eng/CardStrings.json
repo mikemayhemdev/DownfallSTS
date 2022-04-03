@@ -286,5 +286,10 @@
     "NAME": "Remember",
     "DESCRIPTION": "Gain !B! BLock, a *Smite, and a *Safety.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block, a *Smite+, and a *Safety+."
+  },
+  "time:StormOfGold": {
+    "NAME": "Storm of Gold",
+    "DESCRIPTION": "Gain !M! time:Haste. NL Fill your hand with Shivs.",
+    "UPGRADE_DESCRIPTION": "Gain !M! time:Haste. NL Fill your hand with Shivs+."
   }
 }
