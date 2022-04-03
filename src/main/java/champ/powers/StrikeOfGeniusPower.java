@@ -1,5 +1,6 @@
 package champ.powers;
 
+import basemod.cardmods.ExhaustMod;
 import basemod.helpers.CardModifierManager;
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;

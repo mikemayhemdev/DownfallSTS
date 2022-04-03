@@ -1,5 +1,7 @@
 package sneckomod.powers;
 
+import basemod.cardmods.EtherealMod;
+import basemod.cardmods.ExhaustMod;
 import basemod.helpers.CardModifierManager;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;

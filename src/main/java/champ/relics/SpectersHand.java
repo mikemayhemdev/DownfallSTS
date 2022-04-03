@@ -1,6 +1,7 @@
 package champ.relics;
 
 import basemod.abstracts.CustomRelic;
+import basemod.cardmods.ExhaustMod;
 import basemod.helpers.CardModifierManager;
 import champ.ChampMod;
 import champ.cards.Defend;

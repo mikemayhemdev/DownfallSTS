@@ -5,6 +5,7 @@
 
 package charbosses.powers.bossmechanicpowers;
 
+import basemod.cardmods.EtherealMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;

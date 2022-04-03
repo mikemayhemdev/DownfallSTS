@@ -1,5 +1,6 @@
 package charbosses.cards.curses;
 
+import basemod.cardmods.EtherealMod;
 import basemod.helpers.CardModifierManager;
 import downfall.util.TextureLoader;
 import charbosses.bosses.AbstractCharBoss;

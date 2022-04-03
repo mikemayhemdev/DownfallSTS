@@ -4,6 +4,7 @@ import automaton.AutomatonMod;
 import automaton.cards.SpaghettiCode;
 import automaton.powers.LibraryModPower;
 import basemod.abstracts.CustomRelic;
+import basemod.cardmods.EtherealMod;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;

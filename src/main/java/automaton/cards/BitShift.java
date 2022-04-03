@@ -2,6 +2,7 @@ package automaton.cards;
 
 import automaton.FunctionHelper;
 import basemod.BaseMod;
+import basemod.cardmods.RetainMod;
 import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -52,7 +53,7 @@ public class BitShift extends AbstractBronzeCard {
                 public void update() {
                     isDone = true;
                     q.superFlash();
-                    CardModifierManager.addModifier(q, new RetainCardMod());
+                    CardModifierManager.addModifier(q, new RetainMod());
                 }
             });
             att(new AbstractGameAction() {

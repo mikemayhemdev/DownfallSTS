@@ -1,5 +1,6 @@
 package downfall.powers.neowpowers;
 
+import basemod.cardmods.EtherealMod;
 import basemod.helpers.CardModifierManager;
 import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
 import com.badlogic.gdx.graphics.Texture;

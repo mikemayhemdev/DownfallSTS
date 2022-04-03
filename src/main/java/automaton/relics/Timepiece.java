@@ -1,6 +1,7 @@
 package automaton.relics;
 
 import automaton.AutomatonMod;
+import basemod.cardmods.RetainMod;
 import downfall.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.CardModifierManager;
@@ -22,7 +23,7 @@ public class Timepiece extends CustomRelic implements OnCompileRelic {
 
     @Override
     public void receiveCompile(AbstractCard function, boolean forGameplay) {
-        CardModifierManager.addModifier(function, new RetainCardMod());
+        CardModifierManager.addModifier(function, new RetainMod());
     }
 
     @Override

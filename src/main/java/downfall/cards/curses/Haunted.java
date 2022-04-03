@@ -2,6 +2,7 @@ package downfall.cards.curses;
 
 
 import basemod.abstracts.CustomCard;
+import basemod.cardmods.EtherealMod;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;

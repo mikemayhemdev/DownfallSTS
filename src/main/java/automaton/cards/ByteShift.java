@@ -2,6 +2,7 @@ package automaton.cards;
 
 import automaton.FunctionHelper;
 import basemod.BaseMod;
+import basemod.cardmods.RetainMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -38,7 +39,7 @@ public class ByteShift extends AbstractBronzeCard {
                         public void update() {
                             isDone = true;
                             r.superFlash();
-                            CardModifierManager.addModifier(r, new RetainCardMod());
+                            CardModifierManager.addModifier(r, new RetainMod());
                         }
                     });
                     att(new AbstractGameAction() {

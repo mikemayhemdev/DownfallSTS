@@ -1,5 +1,6 @@
 package champ.cards;
 
+import basemod.cardmods.RetainMod;
 import basemod.helpers.CardModifierManager;
 import champ.ChampMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -36,7 +37,7 @@ public class ArenaPreparation extends AbstractChampCard {
             AbstractCard c = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1)).makeStatEquivalentCopy();
             c.isSeen = true;
             UnlockTracker.markCardAsSeen(c.cardID);
-            CardModifierManager.addModifier(c, new RetainCardMod());
+            CardModifierManager.addModifier(c, new RetainMod());
             makeInHand(c);
         }
     }

@@ -22,6 +22,7 @@ import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.Pair;
 import basemod.abstracts.CustomUnlockBundle;
+import basemod.cardmods.EtherealMod;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
