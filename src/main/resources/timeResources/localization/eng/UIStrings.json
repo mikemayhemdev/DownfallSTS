@@ -1,13 +1,7 @@
 {
-  "hexamod:SealCommonReward": {
+  "time:Misc": {
     "TEXT": [
-      "Add a Common card to your deck"
-    ]
-  },
-  "hexamod:SealSealReward": {
-    "TEXT": [
-      "Add a Seal to your deck",
-      "Pick a Card."
+      "Choose a card to add into your hand."
     ]
   }
 }

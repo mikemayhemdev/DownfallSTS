@@ -147,5 +147,28 @@
   "time:Continuance": {
     "NAME": "Continuance",
     "DESCRIPTION": "Whenever you *Retrieve a card, gain !M! Block."
+  },
+  "time:Foresight": {
+    "NAME": "Foresight",
+    "DESCRIPTION": "At the start of your turn, Scry !M!."
+  },
+  "time:FuturePlans": {
+    "NAME": "Future Plans",
+    "DESCRIPTION": "At the end of your turn, time:Suspend 1 card in your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, time:Suspend 1 card in your hand."
+  },
+  "time:TimeDilation": {
+    "NAME": "Time Dilation",
+    "DESCRIPTION": "Gain !M! time:Haste. NL Apply !M! Slow to ALL enemies. NL Exhaust."
+  },
+  "time:VividMemory": {
+    "NAME": "Vivid Memory",
+    "DESCRIPTION": "Choose: time:Suspend *Inflame, *Footwork, or *Fasting. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose: time:Suspend *Inflame+, *Footwork+, or *Fasting+. NL Exhaust."
+  },
+  "time:Arrest": {
+    "NAME": "Arrest",
+    "DESCRIPTION": "You and ALL enemies lose 1 Strength. NL Suspend *Dark *Shackles. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "You and ALL enemies lose 1 Strength. NL Suspend *Dark *Shackles and give it Retain. NL Exhaust."
   }
 }
