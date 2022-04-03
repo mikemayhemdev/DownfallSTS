@@ -226,5 +226,20 @@
     "NAME": "Reach Through",
     "DESCRIPTION": "Choose one of this combat's reward cards to time:Suspend. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Choose one of this combat's reward cards to time:Suspend. NL It costs 0. NL Exhaust."
+  },
+  "time:TimeTravel": {
+    "NAME": "Time Travel",
+    "DESCRIPTION": "time:Suspend the top !M! cards of your discard pile."
+  },
+  "time:TimeCapsule": {
+    "NAME": "Time Capsule",
+    "DESCRIPTION": "Unplayable. NL When *Retrieved, gain [E] and !M! time:Haste.",
+    "EXTENDED_DESCRIPTION": [
+      "I can't play this."
+    ]
+  },
+  "time:Acceleration": {
+    "NAME": "Acceleration",
+    "DESCRIPTION": "Deal !D! damage X times. NL Gain X time:Haste."
   }
 }
