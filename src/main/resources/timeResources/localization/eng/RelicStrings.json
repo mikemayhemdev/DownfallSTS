@@ -1,94 +1,9 @@
 {
-  "hexamod:SpiritBrand": {
-    "NAME": "Spirit Brand",
-    "FLAVOR": "A bound protector.",
+  "time:Watch": {
+    "NAME": "Watch",
+    "FLAVOR": "tick... tock...",
     "DESCRIPTIONS": [
-      "The first time you #yIgnite a Ghostflame each turn, gain #b5 #yBlock."
-    ]
-  },
-  "hexamod:TheBrokenSeal": {
-    "NAME": "The Broken Seal",
-    "FLAVOR": "Unlimited, unrestrained, unquenchable power.",
-    "DESCRIPTIONS": [
-      "Upon pickup, raise your Max HP by #b10, then heal all of your HP. Start each combat with #b2 #yStrength, #b2 #yDexterity, and #b2 #yhexamod:Intensity. You can not receive #pThe #pBroken #pSeal again."
-    ]
-  },
-  "hexamod:UnbrokenSoul": {
-    "NAME": "Mark of the Ether",
-    "FLAVOR": "Let’s see if we can do... better.",
-    "DESCRIPTIONS": [
-      "Replaces ",
-      ".[] NL The first time you #yIgnite a Ghostflame each turn, gain [E] ."
-    ]
-  },
-  "hexamod:IceCube": {
-    "NAME": "Xanatos' Icy Charm",
-    "FLAVOR": "I feel... cold.",
-    "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. #yhexamod:Soulburn takes #b4 turns to activate."
-    ]
-  },
-  "hexamod:SoulConsumer": {
-    "NAME": "Thermal Stone",
-    "FLAVOR": "A fire would liven this thing up!",
-    "DESCRIPTIONS": [
-      "If #yhexamod:Soulburn detonates, heal #b4 HP at the end of combat."
-    ]
-  },
-  "hexamod:RecyclingMachine": {
-    "NAME": "Recycler",
-    "FLAVOR": "One day, it shall be recycled too.",
-    "DESCRIPTIONS": [
-      "The first time an non-Status and non-Curse #yEthereal card is #yExhausted each combat, add a copy to your hand that costs #b0 until played."
-    ]
-  },
-  "hexamod:MatchstickCase": {
-    "NAME": "Sneaky Teakwood Match",
-    "FLAVOR": "Lights on any surface!",
-    "DESCRIPTIONS": [
-      "At the start of each combat, #yhexamod:Ignite the current Ghostflame and #yhexamod:Advance."
-    ]
-  },
-  "hexamod:InflammatoryLetter": {
-    "NAME": "Jar of TOBSCo",
-    "FLAVOR": "A little extra heat makes everything better.",
-    "DESCRIPTIONS": [
-      "Start each combat with #b1 #yhexamod:Intensity."
-    ]
-  },
-  "hexamod:SoulOfChaos": {
-    "NAME": "Soul of Chaos",
-    "FLAVOR": "Mayhem, made manifest.",
-    "DESCRIPTIONS": [
-      "The third Ghostflame becomes a #yMayhem #yGhostflame. NL #yMayhem #yGhostflame activates when you end your turn on it. NL #yIgnition: Play the top card of your draw pile."
-    ]
-  },
-  "hexamod:JarOfFuel": {
-    "NAME": "Olexa's Shield",
-    "FLAVOR": "Protection on-demand.",
-    "DESCRIPTIONS": [
-      "Swap the positions of the #yBolstering #yGhostflame and the first #ySearing #yGhostflame."
-    ]
-  },
-  "hexamod:BolsterEngine": {
-    "NAME": "Rod of Bolstering Flame",
-    "FLAVOR": "Fire shields! Fire strengthens.",
-    "DESCRIPTIONS": [
-      "The first time you play a #yPower card each combat, gain #b6 #yBlock and #b1 #yStrength."
-    ]
-  },
-  "hexamod:CandleOfCauterizing": {
-    "NAME": "Red Candle",
-    "FLAVOR": "Fire BURNS...",
-    "DESCRIPTIONS": [
-      "Whenever an #yAttack deals unblocked damage, apply #b2 #yhexamod:Soulburn."
-    ]
-  },
-  "hexamod:Sixitude": {
-    "NAME": "Six-Point Brand",
-    "FLAVOR": "Fire, fire, fire, fire, fire, FIRE!",
-    "DESCRIPTIONS": [
-      "Whenever you play #b6 cards, deal #b6 damage to a random enemy."
+      "After playing your #b12th card in a combat, gain #b2 #yStrength."
     ]
   }
 }

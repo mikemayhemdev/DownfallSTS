@@ -20,6 +20,7 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import timeeater.relics.Watch;
 import timeeater.suspend.SuspendHelper;
 import timeeater.util.CardFilter;
 
@@ -183,7 +184,7 @@ public class TimeEaterMod implements
 
     @Override
     public void receiveEditRelics() {
-
+        BaseMod.addRelicToCustomPool(new Watch(), TimeEaterChar.Enums.MAGENTA);
     }
 
 

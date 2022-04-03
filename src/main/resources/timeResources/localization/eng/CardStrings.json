@@ -187,5 +187,104 @@
   "time:Continuance": {
     "NAME": "Continuance",
     "DESCRIPTION": "Whenever you *Retrieve a card, gain !M! Block."
+  },
+  "time:Foresight": {
+    "NAME": "Foresight",
+    "DESCRIPTION": "At the start of your turn, Scry !M!."
+  },
+  "time:FuturePlans": {
+    "NAME": "Future Plans",
+    "DESCRIPTION": "At the end of your turn, time:Suspend 1 card in your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, time:Suspend 1 card in your hand."
+  },
+  "time:TimeDilation": {
+    "NAME": "Time Dilation",
+    "DESCRIPTION": "Gain !M! time:Haste. NL Apply !M! Slow to ALL enemies. NL Exhaust."
+  },
+  "time:VividMemory": {
+    "NAME": "Vivid Memory",
+    "DESCRIPTION": "Choose: time:Suspend *Inflame, *Footwork, or *Fasting. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose: time:Suspend *Inflame+, *Footwork+, or *Fasting+. NL Exhaust."
+  },
+  "time:Arrest": {
+    "NAME": "Arrest",
+    "DESCRIPTION": "You and ALL enemies lose 1 Strength. NL time:Suspend *Dark *Shackles. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "You and ALL enemies lose 1 Strength. NL time:Suspend *Dark *Shackles and give it Retain. NL Exhaust."
+  },
+  "time:BeginAgain": {
+    "NAME": "Begin Again",
+    "DESCRIPTION": "Trigger your start-of-turn effects. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Trigger your start-of-turn effects."
+  },
+  "time:BorrowedTime": {
+    "NAME": "Borrowed Time",
+    "DESCRIPTION": "Gain [E] [E] [E]. NL time:Suspend !M! *Void."
+  },
+  "time:BrokenMemory": {
+    "NAME": "Broken Memory",
+    "DESCRIPTION": "Choose: time:Suspend *Melter, *Reinforced *Body, or *Scrape. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose: time:Suspend *Melter+, *Reinforced *Body+, or *Scrape+. NL Exhaust."
+  },
+  "time:DemandDefense": {
+    "NAME": "Demand Defense",
+    "DESCRIPTION": "Gain !B! Block. NL time:Suspend 1 *Shame."
+  },
+  "time:DistantMemory": {
+    "NAME": "Distant Memory",
+    "DESCRIPTION": "Choose: time:Suspend *Malice, *Luck *of *the *Draw, or *Grudge. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose: time:Suspend *Malice+, *Luck *of *the *Draw+, or *Grudge+. NL Exhaust."
+  },
+  "time:DivineMemory": {
+    "NAME": "Divine Memory",
+    "DESCRIPTION": "Choose: time:Suspend *Wallop, *Sanctity, or *Perseverance. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose: time:Suspend *Wallop+, *Sanctity+, or *Perseverance+. NL Exhaust."
+  },
+  "time:QuietMemory": {
+    "NAME": "Quiet Memory",
+    "DESCRIPTION": "Choose: time:Suspend *Choke, *Blur, or *Predator. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose: time:Suspend *Choke+, *Blur+, or *Predator+. NL Exhaust."
+  },
+  "time:EnragedMemory": {
+    "NAME": "Enraged Memory",
+    "DESCRIPTION": "Choose: time:Suspend *Whirlwind, *Uppercut, or *Flame *Barrier. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose: time:Suspend *Whirlwind+, *Uppercut+, or *Flame *Barrier+. NL Exhaust."
+  },
+  "time:Flux": {
+    "NAME": "Flux",
+    "DESCRIPTION": "Gain 4 Temporary Strength. NL Gain !M! *Shivs. NL time:Suspend 1 *Doubt."
+  },
+  "time:LeapAhead": {
+    "NAME": "Leap Ahead",
+    "DESCRIPTION": "Gain !B! Block. NL time:Suspend 1 *Leap. NL Exhaust."
+  },
+  "time:PurgeTimeline": {
+    "NAME": "Purge Timeline",
+    "DESCRIPTION": "Gain !B! Block. NL time:Suspend 1 *Purify.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL time:Suspend 1 *Purify+."
+  },
+  "time:ReachThrough": {
+    "NAME": "Reach Through",
+    "DESCRIPTION": "Choose one of this combat's reward cards to time:Suspend. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose one of this combat's reward cards to time:Suspend. NL It costs 0. NL Exhaust."
+  },
+  "time:TimeTravel": {
+    "NAME": "Time Travel",
+    "DESCRIPTION": "time:Suspend the top !M! cards of your discard pile."
+  },
+  "time:TimeCapsule": {
+    "NAME": "Time Capsule",
+    "DESCRIPTION": "Unplayable. NL When *Retrieved, gain [E] and !M! time:Haste.",
+    "EXTENDED_DESCRIPTION": [
+      "I can't play this."
+    ]
+  },
+  "time:Acceleration": {
+    "NAME": "Acceleration",
+    "DESCRIPTION": "Deal !D! damage X times. NL Gain X time:Haste."
+  },
+  "time:Remember": {
+    "NAME": "Remember",
+    "DESCRIPTION": "Gain !B! BLock, a *Smite, and a *Safety.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block, a *Smite+, and a *Safety+."
   }
 }
