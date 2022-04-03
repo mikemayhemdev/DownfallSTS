@@ -159,7 +159,7 @@
   },
   "hexamod:ParanormalForm": {
     "NAME": "鬼哭神嚎",
-    "DESCRIPTION": "打出 虚无 牌时， NL 随机造成 !M! 点伤害。"
+    "DESCRIPTION": "打出 hexamod:阴世 牌时， NL 随机造成 !M! 点伤害。"
   },
   "hexamod:UnleashSpirits": {
     "NAME": "释魂",
