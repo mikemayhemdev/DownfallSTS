@@ -19,7 +19,7 @@ public class ScorchedEarth extends AbstractDimensionalCard {
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
     public ScorchedEarth() {
-        super(ID, 2, CardType.ATTACK, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.ATTACK, CardTarget.ENEMY);
         baseDamage = 6;
 
         setFrame("scorchedearthframe.png");
@@ -48,7 +48,8 @@ public class ScorchedEarth extends AbstractDimensionalCard {
                 public void update() {
                     isDone = true;
                     AbstractMonster q = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng);
-                    att(new DamageAction(q, new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.FIRE));
+                   dmg(m, AttackEffect.FIRE);
+                   // att(new DamageAction(q, new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.FIRE));
                 }
             });
     }

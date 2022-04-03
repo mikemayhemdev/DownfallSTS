@@ -15,7 +15,7 @@ public class PackRat extends AbstractDimensionalCard {
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
     public PackRat() {
-        super(ID, 1, CardType.SKILL, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardTarget.SELF);
         baseDamage = 6;
 
         setFrame("packratframe.png");

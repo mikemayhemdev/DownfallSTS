@@ -23,6 +23,7 @@ public class ConjureBarrage extends AbstractDimensionalCard {
 
         setFrame("conjurebarrageframe.png");
         exhaust = true;
+        cardToPreview.add(new MagicMissile());
     }
 
 

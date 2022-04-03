@@ -20,11 +20,13 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import timeeater.cards.alternateDimension.*;
 import timeeater.relics.Watch;
 import timeeater.suspend.SuspendHelper;
 import timeeater.util.CardFilter;
 
 import java.io.File;
+import java.lang.reflect.Array;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -205,6 +207,7 @@ public class TimeEaterMod implements
         BaseMod.addCard(new UsefulSlime());
         BaseMod.addCard(new UnknownStatus());
         */
+
     }
 
     public void addPotions() {
@@ -216,6 +219,21 @@ public class TimeEaterMod implements
 
     }
 
+
+    public static ArrayList<String> dimensionCards = new ArrayList<>();
+
+    public static void initializeDimensionCardStrings(){
+
+        dimensionCards.add(ArsenalGear.ID);
+        dimensionCards.add(ConjureBarrage.ID);
+        dimensionCards.add(DarkRitual.ID);
+        dimensionCards.add(Inferno.ID);
+        dimensionCards.add(Knighthood.ID);
+        dimensionCards.add(LethalShot.ID);
+        dimensionCards.add(Minniegun.ID);
+        dimensionCards.add(PackRat.ID);
+        dimensionCards.add(ScorchedEarth.ID);
+    }
 
     @Override
     public void receiveSetUnlocks() {
