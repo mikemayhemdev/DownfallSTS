@@ -11,6 +11,46 @@
     "NAME": "Pack Rat",
     "DESCRIPTION": "Gain 1 *Buffer. NL Gain a random Potion. NL Exhaust."
   },
+  "time:Knighthood": {
+    "NAME": "Knighthood",
+    "DESCRIPTION": "Choose a card in hand to Upgrade permanently. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      " to upgrade permanently."
+    ]
+  },
+  "time:ArsenalGear": {
+    "NAME": "Arsenal Gear",
+    "DESCRIPTION": "Gain !M! random *Uncommon or *Rare cards. They cost 0. NL Exhaust."
+  },
+  "time:DarkRitual": {
+    "NAME": "Dark Ritual",
+    "DESCRIPTION": "Lose !M! HP. NL Gain 100 Gold. NL Exhaust."
+  },
+  "time:Inferno": {
+    "NAME": "Inferno",
+    "DESCRIPTION": "Deal !D! damage to EVERYONE. NL Exhaust."
+  },
+  "time:ConjureBarrage": {
+    "NAME": "Conjure Barrage",
+    "DESCRIPTION": "Fill your hand with *Magic *Missiles. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Fill your hand with *Magic *Missiles+. NL Exhaust."
+  },
+  "time:MagicMissile": {
+    "NAME": "Magic Missile",
+    "DESCRIPTION": "Deal 5 damage. NL Increase the damage dealt by *Magic *Missiles by 5 this turn."
+  },
+  "time:LethalShot": {
+    "NAME": "Lethal Shot",
+    "DESCRIPTION": "Fill your hand with *Magic *Missiles. NL Exhaust."
+  },
+  "time:Minniegun": {
+    "NAME": "Minniegun",
+    "DESCRIPTION": "Deal !D! damage 12 times. NL Exhaust."
+  },
+  "time:ScorchedEarth": {
+    "NAME": "Scorched Earth",
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each non-Attack in your Discard and Suspend piles, then Exhaust them. Exhaust."
+  },
   "time:Gravitas": {
     "NAME": "Gravitas",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL time:Suspend a *Dramatic *Entrance."
