@@ -96,11 +96,12 @@
     ]
   },
   "champ:EnergizedDurationPower": {
-    "NAME": "附魔金冠",
+    "NAME": "充满热情",
     "DESCRIPTIONS": [
-      "下一回合开始时获得 [E] 。",
-      "下 #b",
-      " 个回合开始时获得 [E] 。"
+      "获得 #b",
+      " 点额外 [E] 。",
+      " 点额外 [E] 。",
+      " 翻译提醒：两行重复对应英文单双数。"
     ]
   },
   "champ:IronFortressPower": {

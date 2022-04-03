@@ -66,7 +66,7 @@
   },
   "Guardian:GuardianWhirl": {
     "NAME": "守护者旋风",
-    "DESCRIPTION": "至少有20点 格挡 才能被打出。 NL 对所有敌人造成 !D! 点伤害 !M! 次。"
+    "DESCRIPTION": "有20点 格挡 才能打出。 NL 对所有敌人造成 !D! 点伤害 !M! 次。"
   },
   "Guardian:VentSteam": {
     "NAME": "蒸汽喷射",
@@ -87,8 +87,8 @@
   },
   "Guardian:BronzeArmor": {
     "NAME": "弹性护甲",
-    "DESCRIPTION": "降低自身所有负面效果 !M! 层。 NL guardianmod:提防 8。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "降低自身所有负面效果 !M! 层。 NL guardianmod:提防 8。"
+    "DESCRIPTION": "失去所有负面效果 !M! 层。 NL guardianmod:提防 8。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "失去所有负面效果 !M! 层。 NL guardianmod:提防 8。"
   },
   "Guardian:FloatingOrbs": {
     "NAME": "浮游圆球",
@@ -317,8 +317,8 @@
   },
   "Guardian:Gem_Synthetic": {
     "NAME": "玛瑙",
-    "DESCRIPTION": "guardianmod:宝石 。 NL 降低自身所有负面效果1层。",
-    "UPGRADE_DESCRIPTION": "降低自身所有负面效果1层。"
+    "DESCRIPTION": "guardianmod:宝石 。 NL 失去所有负面效果1层。",
+    "UPGRADE_DESCRIPTION": "失去所有负面效果1层。"
   },
   "Guardian:Gem_Yellow": {
     "NAME": "琥珀",
@@ -375,7 +375,7 @@
   },
   "Guardian:ShieldCharger": {
     "NAME": "护盾充能",
-    "DESCRIPTION": "将本牌 guardianmod:凝滞 。 NL guardianmod:滴答 - guardianmod:提防 2 。获得 !B! 点 格挡 和 [E] 。 NL guardianmod:挥发 。"
+    "DESCRIPTION": "将本牌 guardianmod:凝滞 。 NL guardianmod:滴答 - guardianmod:提防 !M! 并获得 !B! 点 格挡 。 NL guardianmod:挥发 。"
   },
   "Guardian:StasisEngine": {
     "NAME": "凝滞引擎",
@@ -398,7 +398,7 @@
   },
   "Guardian:SecondStrikePreviewCard": {
     "NAME": "再斩",
-    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 复制 *双斩 里的宝石效果。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 重复 *双斩 里的宝石效果。 NL 消耗 。"
   },
   "Guardian:PackageConstruct": {
     "NAME": "    ！！！！！！！！！！！！   以下为疑似弃用文本，为了保险起见防止游戏崩溃，暂未删除。    ！！！！！！！！！！！！  ",

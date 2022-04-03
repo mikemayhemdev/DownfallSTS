@@ -3,7 +3,7 @@
     "NAME": "冠军金冠",
     "FLAVOR": "你是冠军！",
     "DESCRIPTIONS": [
-      "战斗开始时，获得 [E] 并随机进入 #y姿态 。"
+      "战斗开始时，进入随机 #y姿态 。"
     ]
   },
   "champ:BlackKnightHelmet": {
@@ -45,7 +45,7 @@
     "NAME": "偏折护腕",
     "FLAVOR": "如果你觉得格挡很好的话……",
     "DESCRIPTIONS": [
-      "敌人的回合结束后，你自动失去的 #y格挡 转化为等量的 #ychamp:反击 。"
+      "敌人的回合结束后，你自动失去的 #y格挡 转化为半量的 #ychamp:反击 。"
     ]
   },
   "champ:DuelingGlove": {

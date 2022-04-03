@@ -23,7 +23,7 @@
       "[fist_icon]",
       "champ:[fist_icon]"
     ],
-    "DESCRIPTION": "打出 #y终结技 后退出当前 #y姿态 并触发其 #y终结技 奖励 。"
+    "DESCRIPTION": "打出 #y终结技 后，退出当前 #y姿态 并触发其 #y终结技 效果 。"
   },
   {
     "PROPER_NAME": "反击",
@@ -39,7 +39,7 @@
       "防守",
       "defensive"
     ],
-    "DESCRIPTION": "#y姿态 ： NL #y技术 -获得 #b4 层 #y反击 。 NL #y终结技 -获得 #b10 点 #y格挡 。"
+    "DESCRIPTION": "#y姿态 ： NL #y技术 -获得 #b3 层 #y反击 。 NL #y终结技 -获得 #b10 点 #y格挡 。"
   },
   {
     "PROPER_NAME": "战狂",
@@ -47,7 +47,7 @@
       "战狂",
       "berserker"
     ],
-    "DESCRIPTION": "#y姿态 ： NL #y技术 -获得 #b3 层 #y活力 。 NL #y终结技 -获得 #b1 点 #y力量 。"
+    "DESCRIPTION": "#y姿态 ： NL #y技术 -获得 #b2 层 #y活力 。 NL #y终结技 -获得 #b1 点 #y力量 。"
   },
   {
     "PROPER_NAME": "角斗",
