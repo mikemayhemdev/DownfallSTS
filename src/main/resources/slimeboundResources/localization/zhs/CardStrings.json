@@ -216,7 +216,7 @@
   },
   "Slimebound:LivingWall": {
     "NAME": "活体墙壁",
-    "DESCRIPTION": "获得 !B! 格挡 。 NL 本回合被敌人攻击时给予它 !SlimeboundSlimed! 层 slimeboundmod:黏液 。"
+    "DESCRIPTION": "获得 !B! 格挡 。 NL 本回合被敌人攻击时给予其 !SlimeboundSlimed! 层 slimeboundmod:黏液 。"
   },
   "Slimebound:ComboTackle": {
     "NAME": "长矛冲撞",

@@ -50,7 +50,7 @@
   },
   "sneckomod:SoulDraw": {
     "NAME": "Soul Draw",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Add !M! random sneckomod:Offclass cards to your hand. NL Exhaust.",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Gain !M! random sneckomod:Offclass cards. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 - !M! cards."
   },
   "sneckomod:SoulRoll": {
@@ -68,7 +68,7 @@
     ]
   },
   "sneckomod:UnknownStrike": {
-    "NAME": "???",
+    "NAME": "??? Strike",
     "DESCRIPTION": "*Unknown Strike Card."
   },
   "sneckomod:Nope": {
@@ -88,27 +88,27 @@
     "DESCRIPTION": "*Unknown Innate Card."
   },
   "sneckomod:Unknown": {
-    "NAME": "???",
-    "DESCRIPTION": "*Unknown Card."
+    "NAME": "??? Basic",
+    "DESCRIPTION": "*Unknown Basic Card."
   },
   "sneckomod:Unknown0Cost": {
-    "NAME": "???",
+    "NAME": "??? 0-Cost",
     "DESCRIPTION": "*Unknown 0 Cost Card."
   },
   "sneckomod:Unknown1Cost": {
-    "NAME": "???",
+    "NAME": "??? 1-Cost",
     "DESCRIPTION": "*Unknown 1 Cost Card."
   },
   "sneckomod:Unknown2Cost": {
-    "NAME": "???",
+    "NAME": "??? 2-Cost",
     "DESCRIPTION": "*Unknown 2 Cost Card."
   },
   "sneckomod:Unknown3Cost": {
-    "NAME": "???",
+    "NAME": "??? 3-Cost",
     "DESCRIPTION": "*Unknown 3 Cost Card."
   },
   "sneckomod:UnknownX": {
-    "NAME": "???",
+    "NAME": "??? X-Cost",
     "DESCRIPTION": "*Unknown X Cost Card."
   },
   "sneckomod:UnknownEthereal": {
@@ -116,11 +116,11 @@
     "DESCRIPTION": "*Unknown Ethereal Card."
   },
   "sneckomod:UnknownBlock": {
-    "NAME": "???",
+    "NAME": "??? Block",
     "DESCRIPTION": "*Unknown Block Card."
   },
   "sneckomod:UnknownExhaust": {
-    "NAME": "???",
+    "NAME": "??? Exhaust",
     "DESCRIPTION": "*Unknown Exhaust Card."
   },
   "sneckomod:SoulCleanse": {
@@ -187,9 +187,9 @@
     "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Transform all sneckomod:Offclass cards in your hand. NL They cost 1 less."
   },
   "sneckomod:Cheat": {
-    "NAME": "Cheat",
+    "NAME": "Pure Luck",
     "DESCRIPTION": "sneckomod:Snekproof. NL Gain sneckomod:Lucky until the end of turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Gain sneckomod:Lucky until the end of turn. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Gain sneckomod:Lucky until the end of turn."
   },
   "sneckomod:Restock": {
     "NAME": "Restock",
@@ -240,27 +240,27 @@
     "DESCRIPTION": "Obtain an additional Upgraded *Unknown card reward at the end of combat."
   },
   "sneckomod:UnknownStrength": {
-    "NAME": "???",
+    "NAME": "??? Strength",
     "DESCRIPTION": "*Unknown Strength Card."
   },
   "sneckomod:UnknownDraw": {
-    "NAME": "???",
+    "NAME": "??? Draw",
     "DESCRIPTION": "*Unknown Draw Card."
   },
   "sneckomod:UnknownDexterity": {
-    "NAME": "???",
+    "NAME": "??? Dexterity",
     "DESCRIPTION": "*Unknown Dexterity Card."
   },
   "sneckomod:UnknownWeak": {
-    "NAME": "???",
+    "NAME": "??? Weak",
     "DESCRIPTION": "*Unknown Weak Card."
   },
   "sneckomod:UnknownVulnerable": {
-    "NAME": "???",
+    "NAME": "??? Vulnerable",
     "DESCRIPTION": "*Unknown Vulnerable Card."
   },
   "sneckomod:UnknownColorless": {
-    "NAME": "???",
+    "NAME": "??? Colorless",
     "DESCRIPTION": "*Unknown Colorless Card."
   },
   "sneckomod:RainOfDice": {
@@ -305,7 +305,7 @@
     ]
   },
   "sneckomod:UnknownBoss": {
-    "NAME": "???",
+    "NAME": "??? Boss",
     "DESCRIPTION": "*Unknown Colorless Boss card."
   }
 }

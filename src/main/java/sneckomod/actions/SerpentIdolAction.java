@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.screens.CardRewardScreen;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
+import sneckomod.OffclassHelper;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ public class SerpentIdolAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {// 26
-            AbstractDungeon.cardRewardScreen.customCombatOpen(this.generateCardChoices(), CardRewardScreen.TEXT[1], true);// 27
+            AbstractDungeon.cardRewardScreen.customCombatOpen(OffclassHelper.getXRandomOffclassCards(3), CardRewardScreen.TEXT[1], true);// 27
             this.tickDuration();// 28
         } else {
             if (!this.retrieveCard) {// 32

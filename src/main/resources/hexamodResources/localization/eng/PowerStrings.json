@@ -77,7 +77,7 @@
   "hexamod:FuturePower": {
     "NAME": "Speedrun",
     "DESCRIPTIONS": [
-      "Whenever you Advance, gain ",
+      "Whenever you #yAdvance, gain #b",
       " temporary #yStrength."
     ]
   },

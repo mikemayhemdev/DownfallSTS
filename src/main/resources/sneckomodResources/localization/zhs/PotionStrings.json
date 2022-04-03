@@ -3,30 +3,30 @@
     "NAME": "可能很强药剂",
     "DESCRIPTIONS": [
       "造成 #b",
-      "到",
+      " - #b",
       " 点伤害。"
     ]
   },
   "sneckomod:CheatPotion": {
     "NAME": "流动幸运",
     "DESCRIPTIONS": [
-      "本回合内，卡牌上的随机数取上限值。",
+      "本回合内，卡牌的随机数值取上限值。",
       "在 #b",
-	  "个回合内，卡牌上的随机数取上限值。"
+      " 回合内，卡牌的随机数值取上限值。"
     ]
   },
   "sneckomod:MuddlingPotion": {
     "NAME": "尖峰苏打",
     "DESCRIPTIONS": [
       " #y混淆 手牌中耗能最高的 #b",
-      " 张牌。最高不为 #b3"
+      " 张牌。最高不为 #b3 点。"
     ]
   },
   "sneckomod:OffclassReductionPotion": {
     "NAME": "奇异饮料",
     "DESCRIPTIONS": [
       "将手牌中的异色牌的耗能降低 #b",
-      "。"
+      " 点。"
     ]
   }
 }

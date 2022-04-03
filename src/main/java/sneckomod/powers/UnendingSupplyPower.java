@@ -9,8 +9,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import sneckomod.OffclassHelper;
 import sneckomod.SneckoMod;
 import downfall.util.TextureLoader;
+
+import java.util.ArrayList;
 
 public class UnendingSupplyPower extends AbstractPower implements CloneablePowerInterface {
 
@@ -41,10 +44,8 @@ public class UnendingSupplyPower extends AbstractPower implements CloneablePower
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {// 27
             this.flash();// 28
 
-            for (int i = 0; i < this.amount; ++i) {// 29
-                AbstractCard card = SneckoMod.getOffClassCard();
-
-                card.freeToPlayOnce = false;// 39
+            ArrayList<AbstractCard> cards = OffclassHelper.getXRandomOffclassCards(this.amount);
+            for (AbstractCard card : cards) {// 29
                 this.addToBot(new MakeTempCardInHandAction(card, 1, false));// 30 32 33
             }
         }

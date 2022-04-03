@@ -275,7 +275,6 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
                 return (lCard.color.name() + lCard.rarity.ordinal() + lCard.name).compareTo(rCard.color.name() + rCard.rarity.ordinal() + rCard.name);
             });
         }
-
     }
 
     @Override
