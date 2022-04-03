@@ -66,7 +66,9 @@
   },
   "Guardian:GuardianWhirl": {
     "NAME": "회오리 바람",
-    "DESCRIPTION": "방어도 가 20 이상 필요합니다. NL 적 전체에게 피해를 !D! 만큼 !M! 번 줍니다."
+    "DESCRIPTION": "방어도 가 20 이상 필요합니다. NL 적 전체에게 피해를 !D! 만큼 !M! 번 줍니다.",    "EXTENDED_DESCRIPTION": [
+      "More Block required."
+    ]
   },
   "Guardian:VentSteam": {
     "NAME": "증기 분출",
@@ -120,7 +122,9 @@
   },
   "Guardian:Harden": {
     "NAME": "경화",
-    "DESCRIPTION": "방어도 가 20 이상 필요합니다. NL guardianmod:대비를 !GuardianSecondM! 만큼 하고 가시를 !M! 얻습니다."
+    "DESCRIPTION": "방어도 가 20 이상 필요합니다. NL guardianmod:대비를 !GuardianSecondM! 만큼 하고 가시를 !M! 얻습니다.",    "EXTENDED_DESCRIPTION": [
+      "More Block required."
+    ]
   },
   "Guardian:SentryBeam": {
     "NAME": "보초기 폭발",

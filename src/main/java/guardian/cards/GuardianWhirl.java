@@ -54,6 +54,7 @@ public class GuardianWhirl extends AbstractGuardianCard {
         if (p.currentBlock >= 20) {
             return super.canUse(p, m);
         } else {
+            this.cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
             return false;
         }
     }

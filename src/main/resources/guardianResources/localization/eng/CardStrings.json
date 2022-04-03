@@ -66,7 +66,9 @@
   },
   "Guardian:GuardianWhirl": {
     "NAME": "Guardian Whirl",
-    "DESCRIPTION": "Requires 20 or more Block. NL Deal !D! damage to ALL enemies !M! times."
+    "DESCRIPTION": "Requires 20 or more Block. NL Deal !D! damage to ALL enemies !M! times.",    "EXTENDED_DESCRIPTION": [
+      "More Block required."
+    ]
   },
   "Guardian:VentSteam": {
     "NAME": "Vent Steam",
@@ -120,7 +122,10 @@
   },
   "Guardian:Harden": {
     "NAME": "Harden",
-    "DESCRIPTION": "Requires 20 or more Block. NL guardianmod:Brace !GuardianSecondM! and gain !M! Thorns."
+    "DESCRIPTION": "Requires 20 or more Block. NL guardianmod:Brace !GuardianSecondM! and gain !M! Thorns.",
+    "EXTENDED_DESCRIPTION": [
+      "More Block required."
+    ]
   },
   "Guardian:SentryBeam": {
     "NAME": "Sentry Blast",
