@@ -41,7 +41,7 @@ public class EnergizedDurationPower extends AbstractPower implements CloneablePo
     public void onEnergyRecharge() {
         this.flash();
         AbstractDungeon.player.gainEnergy(this.amount);
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "Energized"));
+        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 
     @Override
