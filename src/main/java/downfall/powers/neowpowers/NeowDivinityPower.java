@@ -19,6 +19,7 @@ public class NeowDivinityPower extends AbstractPower {
     public static final String POWER_ID = "downfall:NeowDivinity";
     private static final PowerStrings powerStrings;
     private static long sfxId = -1L;
+    private boolean justapplied;
 
     protected float angle; protected float particleTimer = 0.0F; protected float particleTimer2 = 0.0F;
 
@@ -29,8 +30,11 @@ public class NeowDivinityPower extends AbstractPower {
         this.updateDescription();
         this.loadRegion("mantra");
         this.type = PowerType.BUFF;
+        justapplied = true;
+
 
     }
+
 
     @Override
     public void onRemove() {
@@ -41,7 +45,11 @@ public class NeowDivinityPower extends AbstractPower {
     @Override
     public void atEndOfRound() {
         super.atEndOfRound();
-        addToBot(new RemoveSpecificPowerAction(owner,owner,this));
+        if (!justapplied) {
+            addToBot(new RemoveSpecificPowerAction(owner, owner, this));
+        }else{
+            justapplied = false;
+        }
     }
 
     public void playApplyPowerSfx() {

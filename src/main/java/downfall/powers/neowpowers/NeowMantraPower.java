@@ -40,9 +40,10 @@ public class NeowMantraPower extends AbstractPower {
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
         if (this.amount >= 10) {
-            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new NeowDivinityPower(this.owner), 10, true, AbstractGameAction.AttackEffect.NONE));
+            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new NeowDivinityPower(this.owner), 1, true, AbstractGameAction.AttackEffect.NONE));
 
-            this.amount -= 10;
+
+            addToBot(new RemoveSpecificPowerAction(owner, owner, this));
         }
 
     }
