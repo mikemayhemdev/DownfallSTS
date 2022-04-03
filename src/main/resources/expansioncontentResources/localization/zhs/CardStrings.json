@@ -1,7 +1,7 @@
 {
   "expansioncontent:GuardianWhirl": {
     "NAME": "守护者旋风",
-    "DESCRIPTION": "格挡 不少于10点才能被打出。 NL 对所有敌人造成 !D! 点伤害 4 次。 NL 消耗 。",
+    "DESCRIPTION": "有10点 格挡 才能打出。 NL 对所有敌人造成 !D! 点伤害 4 次。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我的格挡不够。"
     ]
@@ -56,18 +56,18 @@
   },
   "expansioncontent:PrepareCrush": {
     "NAME": "准备：猛击",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 [E] [E] [E] 并获得一张 *史莱姆猛击 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 [E] [E] [E] 并获得一张 *史莱姆猛击+ 。 NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 [E] [E] [E] 和一张 *史莱姆猛击 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 [E] [E] [E] 和一张 *史莱姆猛击+ 。 NL 消耗 。"
   },
   "expansioncontent:StudyTheSpire": {
     "NAME": "研究尖塔",
-    "DESCRIPTION": "接下来 !M! 回合，回合开始时随机获得1张 *首领 牌，其耗能为0。",
-    "UPGRADE_DESCRIPTION": "接下来 !M! 回合，回合开始时随机获得1张 *首领 牌+，其耗能为0。"
+    "DESCRIPTION": "接下来 !M! 回合，回合开始时随机获得1张耗能为0的 *首领 牌。",
+    "UPGRADE_DESCRIPTION": "接下来 !M! 回合，回合开始时随机获得1张耗能为0的 *首领 牌+。"
   },
   "expansioncontent:QuickStudy": {
     "NAME": "快速学习",
-    "DESCRIPTION": "从3张随机 *首领 牌中选择获得1张， NL 其首次耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "从3张随机 *首领 牌+中选择获得1张， NL 其首次耗能为0。 NL 消耗 。",
+    "DESCRIPTION": "从3张随机 *首领 牌中选择获得1张。 NL 其首次耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "从3张随机 *首领 牌+中选择获得1张。 NL 其首次耗能为0。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "选择一张首领牌。"
     ]
