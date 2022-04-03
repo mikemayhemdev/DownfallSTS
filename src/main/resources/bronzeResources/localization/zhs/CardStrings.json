@@ -75,7 +75,7 @@
   },
   "bronze:Replicate": {
     "NAME": "副本",
-    "DESCRIPTION": "造成 !D! 点伤害。 π NL 被 bronze:编码 时将本牌的复制品加入弃牌堆。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 被 bronze:编码 时将本牌的复制品加入弃牌堆。",
     "EXTENDED_DESCRIPTION": [
       "反复",
       "拷贝"
@@ -126,10 +126,10 @@
   },
   "bronze:Overheat": {
     "NAME": "过热",
-    "DESCRIPTION": "造成 !D! 点伤害。 移除下一张 bronze:编码 牌中的 bronze:编译 *错误 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 移除下张 bronze:编码 牌中的 bronze:编译 *错误 。"
   },
   "bronze:CutThrough": {
-    "NAME": "斩破命运",
+    "NAME": "剪枝",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 预见 !M! 。 NL bronze:编译 -抽 !bauto! 张牌。",
     "EXTENDED_DESCRIPTION": [
       "斩破",
@@ -162,7 +162,7 @@
     ]
   },
   "bronze:WildBeam": {
-    "NAME": "清击",
+    "NAME": "清理",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 随机 消耗 手中一张 状态牌 。",
     "EXTENDED_DESCRIPTION": [
       "狂野",
@@ -235,7 +235,7 @@
   },
   "bronze:Constructor": {
     "NAME": "构造器",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 π NL 若进入首个槽位，提高 !M! 点 格挡 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若进入首个槽位，提高 !M! 点 格挡 。",
     "EXTENDED_DESCRIPTION": [
       "构造",
       "失落",
@@ -284,7 +284,7 @@
     ]
   },
   "bronze:Fortify": {
-    "NAME": "强化",
+    "NAME": "加固",
     "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 -获得 !M! 点 敏捷 。",
     "EXTENDED_DESCRIPTION": [
       "固化",
@@ -297,8 +297,8 @@
   },
   "bronze:Virus": {
     "NAME": "病毒",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 将所有手牌变为 *微光射线 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 将所有手牌变为 *微光射线+ 。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 将手牌变为 *微 *光 *射 *线 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 将手牌变为 *微 *光 *射 *线 *+ 。"
   },
   "bronze:Backtrace": {
     "NAME": "回溯",
@@ -331,7 +331,7 @@
     "UPGRADE_DESCRIPTION": " 保留 。 NL 将 *队列 首张牌加入下 !M! 个 *队列 。"
   },
   "bronze:ItsAFeature": {
-    "NAME": "这是特性",
+    "NAME": "此为特性",
     "DESCRIPTION": "抽到 诅咒 或 状态牌 时，获得 1 点 guardianmod:临时 力量 和 敏捷 。",
     "UPGRADE_DESCRIPTION": " 固有 。 NL 抽到 诅咒 或 状态牌 时，获得 1 点 guardianmod:临时 力量 和 敏捷 。"
   },
@@ -420,7 +420,7 @@
     "UPGRADE_DESCRIPTION": "下张 bronze:编码 牌再 *编码 X+1次。 NL 消耗 。"
   },
   "bronze:Philosophize": {
-    "NAME": "哲学思想",
+    "NAME": "哲理化",
     "DESCRIPTION": "获得 !bauto! 点 力量 。 NL bronze:编译 *错误 -所有敌人获得 !M! 点 力量 。",
     "EXTENDED_DESCRIPTION": [
       "智能",
@@ -484,8 +484,8 @@
   },
   "bronze:Verify": {
     "NAME": "感知形态",
-    "DESCRIPTION": "虚无 。 NL 每回合首次抽到 *方法 时,提高其数值1点。",
-    "UPGRADE_DESCRIPTION": "每回合首次抽到 *方法 时,提高其数值1点。"
+    "DESCRIPTION": "虚无 。 NL 每回合首次抽到 *方法 时提高其数值1点。",
+    "UPGRADE_DESCRIPTION": "每回合首次抽到 *方法 时提高其数值1点。"
   },
   "bronze:BronzeHeatsink": {
     "NAME": "铜制散热器",
@@ -498,8 +498,8 @@
   },
   "bronze:CopyPaste": {
     "NAME": "复制粘贴",
-    "DESCRIPTION": "本回合下一张 *方法 打出两次。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 本回合下一张 *方法 打出两次。"
+    "DESCRIPTION": "本回合下张 *方法 打出两次。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 本回合下张 *方法 打出两次。"
   },
   "bronze:LegacyCode": {
     "NAME": "历史代码",
@@ -507,7 +507,7 @@
     "UPGRADE_DESCRIPTION": " 保留 。 NL 将 !M! 张牌从弃牌堆加入手牌。"
   },
   "bronze:Repulsor": {
-    "NAME": "反冲",
+    "NAME": "反冲器",
     "DESCRIPTION": "消耗 每回合抽到的首张 状态牌 或 诅咒 并抽一张牌。",
     "UPGRADE_DESCRIPTION": "消耗 每回合抽到的首张 状态牌 或 诅咒 并抽一张牌。"
   },
@@ -584,8 +584,8 @@
   },
   "bronze:TinkerersToolbox": {
     "NAME": "开发工具",
-    "DESCRIPTION": "保留 。 NL 选择获得一张 *调试 、 *批处理 、 *反编译 或 *字节位移 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 选择获得一张 *调试 、 *批处理 、 *反编译 或 *字节位移 。"
+    "DESCRIPTION": "保留 。 NL 选择获得一张 *调 *试 、 *批 *处 *理 、 *反 *编 *译 或 *字 *节 *位 *移 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 选择获得一张 *调 *试 、 *批 *处 *理 、 *反 *编 *译 或 *字 *节 *位 *移 。"
   },
   "bronze:Refactor": {
     "NAME": "重构",
