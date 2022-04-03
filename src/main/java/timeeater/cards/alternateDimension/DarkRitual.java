@@ -14,7 +14,7 @@ public class DarkRitual extends AbstractDimensionalCard {
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
     public DarkRitual() {
-        super(ID, 1, CardType.SKILL, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardTarget.SELF);
 
         setFrame("darkritualframe.png");
         baseMagicNumber = magicNumber = 15;

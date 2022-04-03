@@ -28,10 +28,13 @@ public class ArsenalGear extends AbstractDimensionalCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> validCards = new ArrayList<>();
-        validCards = Wiz.getCardsMatchingPredicate(c -> c.rarity==CardRarity.UNCOMMON||c.rarity==CardRarity.RARE);
+        AbstractCard c;
+        validCards = Wiz.getCardsMatchingPredicate(c2 -> c2.rarity==CardRarity.UNCOMMON||c2.rarity==CardRarity.RARE);
         for (int i = 0; i < magicNumber; i++) {
             if (validCards.size() > 0){
-                addToBot(new MakeTempCardInHandAction(validCards.get(0).makeCopy()));
+                c = validCards.get(0).makeCopy();
+                c.modifyCostForCombat(-9);
+                addToBot(new MakeTempCardInHandAction(c));
                 validCards.remove(0);
             }
         }

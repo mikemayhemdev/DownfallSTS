@@ -1,6 +1,7 @@
 package timeeater.cards.alternateDimension;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -11,7 +12,7 @@ public class Minniegun extends AbstractDimensionalCard {
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
     public Minniegun() {
-        super(ID, 3, CardType.ATTACK, CardTarget.ENEMY);
+        super(ID, 3, CardType.ATTACK, CardTarget.ALL_ENEMY);
         baseDamage = 2;
         setFrame("minniegunframe.png");
         exhaust = true;
@@ -22,7 +23,7 @@ public class Minniegun extends AbstractDimensionalCard {
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         for (int i = 0; i < 12; i++) {
-            dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+            addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
     }
 

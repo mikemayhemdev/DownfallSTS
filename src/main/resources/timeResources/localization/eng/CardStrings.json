@@ -41,15 +41,15 @@
   },
   "time:LethalShot": {
     "NAME": "Lethal Shot",
-    "DESCRIPTION": "Fill your hand with *Magic *Missiles. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison and 1 Vulnerable. NL Exhaust."
   },
   "time:Minniegun": {
     "NAME": "Minniegun",
-    "DESCRIPTION": "Deal !D! damage 12 times. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to a random enemy 12 times. NL Exhaust."
   },
   "time:ScorchedEarth": {
     "NAME": "Scorched Earth",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for each non-Attack in your Discard and Suspend piles, then Exhaust them. Exhaust."
+    "DESCRIPTION": "Exhaust all non-Attacks Suspended and discarded. Deal !D! damage for each. Exhaust."
   },
   "time:Gravitas": {
     "NAME": "Gravitas",
@@ -252,6 +252,10 @@
   "time:Flux": {
     "NAME": "Flux",
     "DESCRIPTION": "Gain 4 Temporary Strength. NL Gain !M! *Shivs. NL time:Suspend 1 *Doubt."
+  },
+  "time:DimensionGate": {
+    "NAME": "Dimension Gate",
+    "DESCRIPTION": "Choose 1 of 3 cards from *another *dimension to time:Suspend."
   },
   "time:LeapAhead": {
     "NAME": "Leap Ahead",
