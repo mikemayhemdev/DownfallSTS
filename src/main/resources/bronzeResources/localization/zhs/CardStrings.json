@@ -459,7 +459,7 @@
   },
   "bronze:ShipIt": {
     "NAME": "废能转换",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一张 *状态牌 造成 !M! 点额外伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一张 状态牌 伤害增加 !M! 点。"
   },
   "bronze:Break": {
     "NAME": "打断",
