@@ -2,9 +2,7 @@ package timeeater;
 
 import automaton.cards.Defend;
 import automaton.cards.Goto;
-import automaton.cards.Replicate;
 import automaton.cards.Strike;
-import automaton.relics.BronzeCore;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -25,6 +23,7 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import reskinContent.patches.CharacterSelectScreenPatches;
 import timeeater.cards.Gravitas;
 import timeeater.cards.Suspension;
+import timeeater.relics.Watch;
 
 import java.util.ArrayList;
 
@@ -104,7 +103,7 @@ public class TimeEaterChar extends CustomPlayer {
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(BronzeCore.ID);
+        retVal.add(Watch.ID);
         return retVal;
     }
 
