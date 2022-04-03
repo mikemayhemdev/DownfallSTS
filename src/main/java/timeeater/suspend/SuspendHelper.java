@@ -1,5 +1,6 @@
 package timeeater.suspend;
 
+import automaton.cards.AbstractBronzeCard;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -12,10 +13,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import timeeater.powers.OnRetrieveCardPower;
 import timeeater.powers.RetrieveLessNextTurnPower;
 
-import java.util.ArrayList;
-
-import static automaton.FunctionHelper.HEIGHT_FUNCTION;
-import static automaton.FunctionHelper.HEIGHT_SEQUENCE;
+import static automaton.FunctionHelper.*;
 import static timeeater.util.Wiz.atb;
 
 public class SuspendHelper {
@@ -67,6 +65,7 @@ public class SuspendHelper {
         suspendGroup.addToBottom(q);
         q.current_x = -150 * Settings.xScale;
         q.current_y = HEIGHT_FUNCTION;
+        q.targetDrawScale = SEQUENCED_CARD_SIZE;
     }
 
     public static void update() {
@@ -76,6 +75,11 @@ public class SuspendHelper {
             c.target_y = cardPositions[i].y;
             c.update();
             c.updateHoverLogic();
+            if (c.hb.hovered) {
+                c.targetDrawScale = AbstractBronzeCard.functionPreviewCardScale;
+            } else {
+                c.targetDrawScale = SEQUENCED_CARD_SIZE;
+            }
         }
     }
 

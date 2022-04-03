@@ -6,11 +6,10 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import timeeater.cards.AbstractTimeEaterCard;
 import timeeater.suspend.SuspendHelper;
 
 import static timeeater.TimeEaterMod.makeID;
-import static timeeater.util.Wiz.*;
+import static timeeater.util.Wiz.atb;
 
 public class Suspension extends AbstractTimeEaterCard {
     public final static String ID = makeID("Suspension");
@@ -26,7 +25,7 @@ public class Suspension extends AbstractTimeEaterCard {
         }
         atb(new SelectCardsInHandAction(cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
             AbstractCard q = cards.get(0);
-            AbstractDungeon.player.hand.removeCard(q);
+            AbstractDungeon.handCardSelectScreen.selectedCards.removeCard(q);
             SuspendHelper.suspend(q);
         }));
     }

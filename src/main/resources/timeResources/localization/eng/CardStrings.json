@@ -96,7 +96,7 @@
   },
   "time:Momentum": {
     "NAME": "Momentum",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Haste."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! time:Haste."
   },
   "time:TimeRip": {
     "NAME": "Time Rip",
