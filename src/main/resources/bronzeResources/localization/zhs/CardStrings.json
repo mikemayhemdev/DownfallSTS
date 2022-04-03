@@ -451,7 +451,7 @@
   },
   "bronze:BurnOut": {
     "NAME": "燃烧殆尽",
-    "DESCRIPTION": " 消耗 所有 状态牌 ，每 消耗 一张随机造成 !D! 点伤害。 NL 消耗 。",
+    "DESCRIPTION": " 消耗 所有 状态牌 ，每张随机造成 !D! 点伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       " NL （攻击 ",
       " 次。）"
