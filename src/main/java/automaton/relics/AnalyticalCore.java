@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import downfall.cardmods.EtherealMod;
 import downfall.util.TextureLoader;
 
 import static automaton.AutomatonMod.makeRelicOutlinePath;

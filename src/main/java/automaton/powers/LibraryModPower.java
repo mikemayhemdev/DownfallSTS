@@ -5,7 +5,6 @@ import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import downfall.cardmods.EtherealMod;
 
 public class LibraryModPower extends AbstractAutomatonPower {
     public static final String NAME = "LibraryMod";

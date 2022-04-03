@@ -325,5 +325,50 @@
   "time:Multiverse": {
     "NAME": "Multiverse",
     "DESCRIPTION": "Whenever you time:Suspend a sneckomod:Offclass card, gain a copy that costs 1 less."
+  },
+  "time:QuantumStrike": {
+    "NAME": "Quantum Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Repeat for ALL your *Quantum *Strikes. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      " NL ( !time:quantumStrike! additional hits. )"
+    ]
+  },
+  "time:Superposition": {
+    "NAME": "Superposition",
+    "DESCRIPTION": "Add a *Quantum *Strike to your draw, discard, and time:Suspend piles.",
+    "UPGRADE_DESCRIPTION": "Add a *Quantum *Strike to your draw, discard, time:Suspend, and Exhaust piles."
+  },
+  "time:TimeWarp": {
+    "NAME": "Time Warp",
+    "DESCRIPTION": "After playing 12 cards, take an extra turn."
+  },
+  "time:Collapse": {
+    "NAME": "Collapse",
+    "DESCRIPTION": "time:Suspend 1 *Searing *Blow. NL Upgrade it X * !M! times. NL Exhaust."
+  },
+  "time:Duality": {
+    "NAME": "Duality",
+    "DESCRIPTION": "time:Suspend a copy of every Attack played this turn. NL They cost !M! less and Exhaust."
+  },
+  "time:Invert": {
+    "NAME": "Invert",
+    "DESCRIPTION": "ALL enemies lose !M! HP and gain 4 Regen."
+  },
+  "time:ThrowLifeline": {
+    "NAME": "Throw Lifeline",
+    "DESCRIPTION": "Gain !M! Vulnerable. NL time:Suspend 2 *Apparitions. NL Exhaust."
+  },
+  "time:Ripple": {
+    "NAME": "Ripple",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak, Vulnerable, and Slow to ALL enemies."
+  },
+  "time:FinalMemory": {
+    "NAME": "Final Memory",
+    "DESCRIPTION": "Choose: time:Suspend *Demon, *Wraith, *Echo, *Deva, or *Eternal *Form. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": "Choose: time:Suspend *Demon, *Wraith, *Echo, *Deva, or *Eternal *Form+. NL Exhaust."
+  },
+  "time:GoldHourglass": {
+    "NAME": "Gold Hourglass",
+    "DESCRIPTION": "For the rest of combat, deal !M! damage to ALL enemies each turn."
   }
 }

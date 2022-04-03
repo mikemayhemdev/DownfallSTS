@@ -21,6 +21,9 @@ import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
 import timeeater.cards.alternateDimension.*;
+import timeeater.cards.vars.QuantumStrikeVar;
+import timeeater.cards.vars.SecondDamage;
+import timeeater.cards.vars.SecondMagicNumber;
 import timeeater.relics.Watch;
 import timeeater.suspend.SuspendHelper;
 import timeeater.util.CardFilter;
@@ -192,7 +195,9 @@ public class TimeEaterMod implements
 
     @Override
     public void receiveEditCards() {
-        BaseMod.addDynamicVariable(new AutoVar());
+        BaseMod.addDynamicVariable(new SecondMagicNumber());
+        BaseMod.addDynamicVariable(new SecondDamage());
+        BaseMod.addDynamicVariable(new QuantumStrikeVar());
         try {
             autoAddCards();
         } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {

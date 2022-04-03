@@ -68,5 +68,30 @@
       "At the end of your turn, increase all damage and #yBlock on #ySuspended cards by #b",
       "."
     ]
+  },
+  "time:TimeWarpPower": {
+    "NAME": "Time Warp",
+    "DESCRIPTIONS": [
+      "After playing #b1 card, take an #pextra #pturn.",
+      "After playing #b",
+      " cards, take an #pextra #pturn."
+    ]
+  },
+  "time:GoldHourglassPower": {
+    "NAME": "Gold Hourglass",
+    "DESCRIPTIONS": [
+      "At the start of your turn, deal #b",
+      " damage to ALL enemies."
+    ]
+  },
+  "time:UnwoundPower": {
+    "NAME": "Unwound",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, your HP becomes #b",
+      ".",
+      "At the start of your next #b",
+      " turns, your HP becomes #b",
+      "."
+    ]
   }
 }

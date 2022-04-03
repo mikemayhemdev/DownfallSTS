@@ -88,7 +88,6 @@ import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
-import downfall.cardmods.EtherealMod;
 import downfall.cards.KnowingSkullWish;
 import downfall.cards.curses.*;
 import downfall.dailymods.*;
