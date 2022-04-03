@@ -176,11 +176,6 @@ public class BanSharedContentPatch {
                 AbstractDungeon.relicsToRemoveOnStart.add(ImpeccablePecs.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(PricklyShields.ID);
             }
-            if (EvilModeCharacterSelect.evilMode) {
-                AbstractDungeon.relicsToRemoveOnStart.add(Ectoplasm.ID);
-            } else {
-                AbstractDungeon.relicsToRemoveOnStart.add(Hecktoplasm.ID);
-            }
         }
     }
 

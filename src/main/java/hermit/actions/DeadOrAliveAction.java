@@ -42,11 +42,11 @@ public class DeadOrAliveAction extends AbstractGameAction {
                 int amount = 15;
 
                 if ((AbstractDungeon.getCurrRoom()).eliteTrigger)
-                    amount = 35;
+                    amount = 40;
 
                 for (AbstractMonster m : (AbstractDungeon.getMonsters()).monsters) {
                     if (m.type == AbstractMonster.EnemyType.BOSS)
-                        amount = 75;
+                        amount = 100;
                 }
 
                 AbstractDungeon.getCurrRoom().rewards.add(new BountyGold(amount));

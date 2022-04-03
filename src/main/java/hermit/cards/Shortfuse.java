@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.green.Eviscerate;
+import com.megacrit.cardcrawl.cards.green.Finisher;
 import com.megacrit.cardcrawl.cards.green.MasterfulStab;
 import com.megacrit.cardcrawl.cards.red.BloodForBlood;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -79,7 +81,7 @@ public class Shortfuse extends AbstractDynamicCard {
         this.cost_revert = 0;
     }
 
-    public void triggerOnOtherCardPlayed(AbstractCard c) {
+    public void triggerOnCardPlayed(AbstractCard c) {
         if ((c.hasTag(CardTags.STARTER_STRIKE) || c.hasTag(CardTags.STARTER_DEFEND)) && this.costForTurn>0) {
             if (this.cost > 0) {
                 this.updateCost(-1);

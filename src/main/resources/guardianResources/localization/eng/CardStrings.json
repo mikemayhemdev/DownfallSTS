@@ -143,37 +143,37 @@
   "Guardian:PackageShapes": {
     "NAME": "Package: Shapes",
     "DESCRIPTION": "Gain a *Time *Bomb, *Spiker *Protocol, and *Repulsor. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain a *Time *Bomb, *Spiker *Protocol, and *Repulsor and Upgrade them. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Gain a *Time *Bomb+, *Spiker *Protocol+, and *Repulsor+. NL Exhaust."
   },
   "Guardian:PackageDonuDeca": {
     "NAME": "Package: Ancients",
     "DESCRIPTION": "Gain an *Overload, *Ancient *Power, and *Ancient *Construct. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain an *Overload, *Ancient *Power, and *Ancient *Construct and Upgrade them. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Gain an *Overload+, *Ancient *Power+, and *Ancient *Construct+. NL Exhaust."
   },
   "Guardian:PackageSphere": {
     "NAME": "Package: Spheric",
     "DESCRIPTION": "Gain a *Spheric *Shield, *Harden, and *Floating *Orbs. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain a *Spheric *Shield, *Harden, and *Floating *Orbs and Upgrade them. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Gain a *Spheric *Shield+, *Harden+, and *Floating *Orbs+. NL Exhaust."
   },
   "Guardian:PackageSentry": {
     "NAME": "Package: Sentry",
     "DESCRIPTION": "Gain a *Sentry *Blast and two *Sentry *Waves. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain a *Sentry *Blast+ and two *Sentry *Waves+ and Upgrade them. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Gain a *Sentry *Blast+ and two *Sentry *Waves+. NL Exhaust."
   },
   "Guardian:PackageWalker": {
     "NAME": "Package: Orbwalker",
     "DESCRIPTION": "Gain an *Orbwalk, *Walker *Claw, and *Incinerate. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain an *Orbwalk, *Walker *Claw, and *Incinerate and Upgrade them. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Gain an *Orbwalk+, *Walker *Claw+, and *Incinerate+. NL Exhaust."
   },
   "Guardian:PackageAutomaton": {
     "NAME": "Package: Bronze",
     "DESCRIPTION": "Gain a *Giga *Beam, *Orb *Support, and *Resilient *Plate. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain a *Giga *Beam, *Orb *Support, and *Resilient *Plate and Upgrade them. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Gain a *Giga *Beam+, *Orb *Support+, and *Resilient *Plate+. NL Exhaust."
   },
   "Guardian:PackageDefect": {
     "NAME": "Package: Defect",
     "DESCRIPTION": "Gain a *Reroute, *Preprogram, and *Time *Capacitor. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain a *Reroute, *Preprogram, and *Time *Capacitor and Upgrade them. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Gain a *Reroute+, *Preprogram+, and *Time *Capacitor+. NL Exhaust."
   },
   "Guardian:Planning": {
     "NAME": "Planning",
@@ -402,12 +402,12 @@
   "Guardian:PackageConstruct": {
     "NAME": "Package: Construct",
     "DESCRIPTION": "Gain a Hammer Down, Omega Cannon, and Mode Shift. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain a Hammer Down, Omega Cannon, and Mode Shift and Upgrade them. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Gain a Hammer Down+, Omega Cannon+, and Mode Shift+. NL Exhaust."
   },
   "Guardian:PackageMass": {
     "NAME": "Package: Mass",
     "DESCRIPTION": "Gain a Mass of Spikes, Mass of Bombs, and Group Slam. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain a Mass of Spikes, Mass of Bombs, and Group Slam and Upgrade them. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Gain a Mass of Spikes+, Mass of Bombs+, and Group Slam+. NL Exhaust."
   },
   "Guardian:MassOfThorns": {
     "NAME": "Mass Of Spikes",

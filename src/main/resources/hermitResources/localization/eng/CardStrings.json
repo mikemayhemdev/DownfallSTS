@@ -49,8 +49,9 @@
   },
   "hermit:CalledShot": {
     "NAME": "Called Shot",
-    "DESCRIPTION": "Deal damage equal to your hand size. NL hermit:Dead_On: NL Draw !M! cards.",
-    "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)"
+    "DESCRIPTION": "Deal damage equal to your hand size. NL hermit:Dead_On: NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)",
+    "EXTENDED_DESCRIPTION": ["Deal damage equal to your hand size. NL hermit:Dead_On: NL Draw !M! cards."]
   },
   "hermit:Dissolve": {
     "NAME": "Dissolve",
@@ -72,8 +73,8 @@
   },
   "hermit:FatalDesire": {
     "NAME": "Fatal Desire",
-    "DESCRIPTION": "At the start of your turn, draw 2 cards and gain an *Injury.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw 2 cards and gain an *Injury."
+    "DESCRIPTION": "At the start of your turn, draw 2 cards and add an *Injury to your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw 2 cards and add an *Injury to your hand."
   },
   "hermit:Gambit": {
     "NAME": "Gambit",
@@ -113,8 +114,8 @@
   },
   "hermit:Midnight": {
     "NAME": "Midnight",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Gain an *Impending *Doom.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain an *Impending *Doom."
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Add an *Impending *Doom to your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add an *Impending *Doom to your hand."
   },
   "hermit:Glare": {
     "NAME": "Glare",
@@ -123,8 +124,8 @@
   },
   "hermit:TakeCover": {
     "NAME": "Take Cover",
-    "DESCRIPTION": "Gain X *Defends. They cost 0 this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain X *Defends+. They cost 0 this combat. NL Exhaust."
+    "DESCRIPTION": "Add X *Defends to your hand. NL They cost 0 this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add X *Defends+ to your hand. NL They cost 0 this combat. NL Exhaust."
   },
   "hermit:Misfire": {
     "NAME": "Misfire",
@@ -192,7 +193,7 @@
   },
   "hermit:Combo": {
     "NAME": "Combo",
-    "DESCRIPTION": "Whenever you trigger a hermit:Dead_On effect, gain a random card with hermit:Dead_On."
+    "DESCRIPTION": "Whenever you trigger a hermit:Dead_On effect, add a random card with hermit:Dead_On to your hand."
   },
   "hermit:BigShot": {
     "NAME": "Smoking Barrel",
@@ -250,7 +251,7 @@
   },
   "hermit:Reprieve": {
     "NAME": "Reprieve",
-    "DESCRIPTION": "Exhaust ALL *Curses. NL If you exhaust at least 13 *Curses, take an extra turn after this one.",
+    "DESCRIPTION": "Exhaust ALL *Curses. NL If you exhaust at least !M! *Curses, take an extra turn after this one.",
     "EXTENDED_DESCRIPTION": [
       "There are no Curses."
     ]

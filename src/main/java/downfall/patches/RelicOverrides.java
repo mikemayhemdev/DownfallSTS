@@ -1,22 +1,12 @@
 package downfall.patches;
 
-import basemod.ReflectionHacks;
-import com.badlogic.gdx.graphics.Texture;
-import com.evacipated.cardcrawl.modthespire.lib.*;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.EventHelper;
-import com.megacrit.cardcrawl.helpers.GameDataStringBuilder;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.map.MapRoomNode;
-import com.megacrit.cardcrawl.map.RoomTypeAssigner;
 import com.megacrit.cardcrawl.relics.*;
-import com.megacrit.cardcrawl.rooms.*;
 import downfall.downfallMod;
-import downfall.rooms.HeartShopRoom;
-
-import java.util.*;
 
 public class RelicOverrides {
 
@@ -35,7 +25,6 @@ public class RelicOverrides {
         }
 
     }
-
 
 
     @SpirePatch(
@@ -76,7 +65,6 @@ public class RelicOverrides {
     }
 
 
-
     @SpirePatch(
             clz = Courier.class,
             method = "getUpdatedDescription"
@@ -91,6 +79,40 @@ public class RelicOverrides {
                 _instance.outlineImg = ImageMaster.loadImage(downfallMod.assetPath("images/relics/Outline/courierEvil.png"));
                 _instance.flavorText = CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[5];
 
+            }
+
+        }
+    }
+
+    @SpirePatch(
+            clz = PrismaticShard.class,
+            method = "getUpdatedDescription"
+    )
+    public static class prismaticDesc {
+        @SpirePrefixPatch
+        public static void Postfix(PrismaticShard _instance) {
+            if (EvilModeCharacterSelect.evilMode) {
+                //ReflectionHacks.setPrivateStaticFinal(Courier.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[6]);
+                _instance.description = CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[8];
+
+            }
+
+        }
+    }
+
+    @SpirePatch(
+            clz = Ectoplasm.class,
+            method = "getUpdatedDescription"
+    )
+    public static class ectoDesc {
+        @SpirePrefixPatch
+        public static void Prefix(Ectoplasm _instance) {
+            if (EvilModeCharacterSelect.evilMode) {
+                //ReflectionHacks.setPrivateStaticFinal(Courier.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[6]);
+                _instance.imgUrl = null;
+                _instance.img = ImageMaster.loadImage(downfallMod.assetPath("images/relics/ectoplasmEvil.png"));
+                _instance.outlineImg = ImageMaster.loadImage(downfallMod.assetPath("images/relics/Outline/ectoplasmEvil.png"));
+                _instance.flavorText = CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[9];
             }
 
         }
@@ -112,7 +134,6 @@ public class RelicOverrides {
 
     }
     */
-
 
 
 }

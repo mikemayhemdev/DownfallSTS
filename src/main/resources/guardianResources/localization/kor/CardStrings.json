@@ -363,8 +363,8 @@
   },
   "Guardian:Repulse": {
     "NAME": "격퇴",
-    "DESCRIPTION": "매 턴 처음으로 상태이상 또는 저주 카드를 뽑으면 소멸시키고 카드를 1장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "매 턴 처음으로 상태이상 또는 저주 카드를 뽑으면 소멸시키고 카드를 1장 뽑습니다."
+    "DESCRIPTION": "매 턴 처음으로 상태이상 또는 저주를 뽑으면 소멸시키고 카드를 1장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "매 턴 처음으로 상태이상 또는 저주를 뽑으면 소멸시키고 카드를 1장 뽑습니다."
   },
   "Guardian:BronzeOrb": {
     "NAME": "구체 보조기",
