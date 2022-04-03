@@ -32,5 +32,20 @@
       "Enemies that attack you this turn gain #b",
       " #ySlow."
     ]
+  },
+  "time:DimensionShiftPower": {
+    "NAME": "Dimension Shift",
+    "DESCRIPTIONS": [
+      "#ySuspend a copy of the next card you play.",
+      "#ySuspend a copy of the next #b",
+      " cards you play."
+    ]
+  },
+  "time:ContinuancePower": {
+    "NAME": "Continuance",
+    "DESCRIPTIONS": [
+      "Whenever you #yRetrieve a card, gain #b",
+      " #yBlock."
+    ]
   }
 }

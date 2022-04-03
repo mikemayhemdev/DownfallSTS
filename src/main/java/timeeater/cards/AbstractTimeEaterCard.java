@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import timeeater.TimeEaterChar;
+import timeeater.suspend.SuspendHelper;
 import timeeater.util.CardArtRoller;
 
 import java.util.ArrayList;
@@ -214,6 +215,10 @@ public abstract class AbstractTimeEaterCard extends CustomCard {
         atb(new DamageAllEnemiesAction(AbstractDungeon.player, multiDamage, damageTypeForTurn, fx));
     }
 
+    protected void allDmgTop(AbstractGameAction.AttackEffect fx) {
+        att(new DamageAllEnemiesAction(AbstractDungeon.player, multiDamage, damageTypeForTurn, fx));
+    }
+
     protected void blck() {
         atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
     }
@@ -228,6 +233,18 @@ public abstract class AbstractTimeEaterCard extends CustomCard {
 
     protected void upSecondDamage(int x) {
         upgradeSecondDamage(x);
+    }
+
+    protected void selfStasis() {
+        AbstractCard q = this;
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                AbstractDungeon.player.limbo.removeCard(q);
+                SuspendHelper.suspend(q);
+            }
+        });
     }
 
     public String cardArtCopy() {

@@ -6,5 +6,12 @@
       "suspended"
     ],
     "DESCRIPTION": "Temporarily removed from combat. Draw 3 Suspended cards each turn."
+  },
+  {
+    "PROPER_NAME": "Haste",
+    "NAMES": [
+      "haste"
+    ],
+    "DESCRIPTION": "Lasts a certain amount of cards. Grants [E] and an additional card each turn."
   }
 ]

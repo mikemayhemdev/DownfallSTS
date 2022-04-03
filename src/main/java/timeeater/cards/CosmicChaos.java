@@ -23,15 +23,7 @@ public class CosmicChaos extends AbstractTimeEaterCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new AttackDamageRandomEnemyAction(this));
-        AbstractCard q = this;
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                AbstractDungeon.player.limbo.removeCard(q);
-                SuspendHelper.suspend(q);
-            }
-        });
+        selfStasis();
     }
 
     public void upp() {

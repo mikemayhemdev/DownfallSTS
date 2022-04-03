@@ -25,15 +25,7 @@ public class DistantDodge extends AbstractTimeEaterCard implements OnRetrieveCar
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        AbstractCard q = this;
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                SuspendHelper.suspend(q);
-                AbstractDungeon.player.limbo.removeCard(q);
-            }
-        });
+        selfStasis();
     }
 
     @Override

@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 
@@ -18,12 +19,20 @@ public class TurnBasedSlowPower extends AbstractTimeEaterPower {
     public TurnBasedSlowPower(AbstractCreature target, int amount) {
         super(ID, strs.NAME, PowerType.DEBUFF, true, target, amount);
         isTwoAmount = true;
-        amount2 = 0;
+        int resetAmt = 0;
+        if (AbstractDungeon.player.hasPower(SlowDownPower.ID)) {
+            resetAmt += AbstractDungeon.player.getPower(SlowDownPower.ID).amount;
+        }
+        amount2 = resetAmt;
     }
 
     @Override
     public void atEndOfRound() {
-        amount2 = 0;
+        int resetAmt = 0;
+        if (AbstractDungeon.player.hasPower(SlowDownPower.ID)) {
+            resetAmt += AbstractDungeon.player.getPower(SlowDownPower.ID).amount;
+        }
+        amount2 = resetAmt;
         updateDescription();
     }
 

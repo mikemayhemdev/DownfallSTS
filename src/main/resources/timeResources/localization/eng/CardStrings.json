@@ -107,5 +107,45 @@
   "time:TemporalBarrier": {
     "NAME": "Temporal Barrier",
     "DESCRIPTION": "Gain !B! Block. NL Enemies that attack you this turn gain !M! Slow."
+  },
+  "time:Chronokinesis": {
+    "NAME": "Chronokinesis",
+    "DESCRIPTION": "Deal !D! damage. NL time:Suspend 1 *Regret."
+  },
+  "time:DimensionShift": {
+    "NAME": "Dimension Shift",
+    "DESCRIPTION": "Deal !D! damage. NL time:Suspend a copy of the next card you play. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL time:Suspend a copy of the next 2 cards you play. NL Exhaust."
+  },
+  "time:InfuseEnergy": {
+    "NAME": "Infuse Energy",
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of all time:Suspended cards by 1."
+  },
+  "time:StasisStrike": {
+    "NAME": "Stasis Strike",
+    "DESCRIPTION": "Deal !D! damage. NL time:Suspend this and increase its damage by !M!."
+  },
+  "time:TimeBomb": {
+    "NAME": "Time Bomb",
+    "DESCRIPTION": "time:Suspend this. When *Retrieved, deal !D! damage to ALL enemies and discard this."
+  },
+  "time:PastBlast": {
+    "NAME": "Past Blast",
+    "DESCRIPTION": "Deal !D! damage. NL Draw the top card of your discard pile."
+  },
+  "time:Chronomancy": {
+    "NAME": "Chronomancy",
+    "DESCRIPTION": "Choose: *Speed *Up or *Slow *Down.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Choose: *Speed *Up or *Slow *Down.",
+    "EXTENDED_DESCRIPTION": [
+      "Speed Up",
+      "time:Haste grants 1 additional [E] each turn.",
+      "Slow Down",
+      "Slow starts as if 2 cards have already been played."
+    ]
+  },
+  "time:Continuance": {
+    "NAME": "Continuance",
+    "DESCRIPTION": "Whenever you *Retrieve a card, gain !M! Block."
   }
 }

@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import timeeater.powers.OnRetrieveCardPower;
 import timeeater.powers.RetrieveLessNextTurnPower;
 
 import java.util.ArrayList;
@@ -44,6 +46,17 @@ public class SuspendHelper {
                     AbstractCard q = suspendGroup.getTopCard();
                     AbstractDungeon.player.drawPile.addToTop(q);
                     suspendGroup.removeCard(q);
+                    AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
+                        @Override
+                        public void update() {
+                            isDone = true;
+                            for (AbstractPower q2 : AbstractDungeon.player.powers) {
+                                if (q2 instanceof OnRetrieveCardPower) {
+                                    ((OnRetrieveCardPower) q2).receiveRetrieve(q);
+                                }
+                            }
+                        }
+                    });
                     AbstractDungeon.actionManager.addToTop(new DrawCardAction(1));
                 }
             });
