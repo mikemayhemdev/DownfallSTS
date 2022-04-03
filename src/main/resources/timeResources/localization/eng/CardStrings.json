@@ -295,5 +295,27 @@
     "NAME": "Storm of Gold",
     "DESCRIPTION": "Gain !M! time:Haste. NL Fill your hand with Shivs.",
     "UPGRADE_DESCRIPTION": "Gain !M! time:Haste. NL Fill your hand with Shivs+."
+  },
+  "time:AlphaStar": {
+    "NAME": "Alpha Star",
+    "DESCRIPTION": "Deal !D! damage. NL time:Suspend 1 *Beta *Star. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL time:Suspend 1 *Beta *Star+. NL Exhaust."
+  },
+  "time:BetaStar": {
+    "NAME": "Beta Star",
+    "DESCRIPTION": "Deal !D! damage. NL time:Suspend 1 *Omega *Star. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL time:Suspend 1 *Omega *Star+. NL Exhaust."
+  },
+  "time:OmegaStar": {
+    "NAME": "Omega Star",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust."
+  },
+  "time:BreakReality": {
+    "NAME": "Break Reality",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL time:Suspend a copy of The Note's current card."
+  },
+  "time:Reverberate": {
+    "NAME": "Reverberate",
+    "DESCRIPTION": "Deal !D! damage. NL Gain a copy of a random Suspended card. NL It costs 0."
   }
 }
