@@ -317,5 +317,13 @@
   "time:Reverberate": {
     "NAME": "Reverberate",
     "DESCRIPTION": "Deal !D! damage. NL Gain a copy of a random Suspended card. NL It costs 0."
+  },
+  "time:SpatialStrike": {
+    "NAME": "Spatial Strike",
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat for each time:Suspended card."
+  },
+  "time:Multiverse": {
+    "NAME": "Multiverse",
+    "DESCRIPTION": "Whenever you time:Suspend a sneckomod:Offclass card, gain a copy that costs 1 less."
   }
 }

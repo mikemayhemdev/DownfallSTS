@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import timeeater.powers.OnRetrieveCardPower;
+import timeeater.powers.OnSuspendCardPower;
 import timeeater.powers.RetrieveLessNextTurnPower;
 
 import static automaton.FunctionHelper.*;
@@ -66,6 +67,11 @@ public class SuspendHelper {
         q.current_x = -150 * Settings.xScale;
         q.current_y = HEIGHT_FUNCTION;
         q.targetDrawScale = SEQUENCED_CARD_SIZE;
+        for (AbstractPower p : AbstractDungeon.player.powers) {
+            if (p instanceof OnSuspendCardPower) {
+                ((OnSuspendCardPower) p).receiveSuspended(q);
+            }
+        }
     }
 
     public static void update() {

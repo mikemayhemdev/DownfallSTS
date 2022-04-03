@@ -54,5 +54,19 @@
       "Whenever you #yRetrieve a card, gain #b",
       " #yBlock."
     ]
+  },
+  "time:MultiversePower": {
+    "NAME": "Multiverse",
+    "DESCRIPTIONS": [
+      "Whenever you #ySuspend a #yOffclass card, gain a copy that costs #b",
+      " less."
+    ]
+  },
+  "time:QuantumFormPower": {
+    "NAME": "Quantum Form",
+    "DESCRIPTIONS": [
+      "At the end of your turn, increase all damage and #yBlock on #ySuspended cards by #b",
+      "."
+    ]
   }
 }

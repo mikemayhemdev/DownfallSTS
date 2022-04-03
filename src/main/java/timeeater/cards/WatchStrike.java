@@ -19,6 +19,7 @@ public class WatchStrike extends AbstractTimeEaterCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 8;
         baseMagicNumber = magicNumber = 1;
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

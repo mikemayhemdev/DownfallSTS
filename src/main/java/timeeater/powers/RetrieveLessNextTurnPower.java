@@ -14,7 +14,7 @@ public class RetrieveLessNextTurnPower extends AbstractTimeEaterPower {
     public static final PowerStrings strs = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public RetrieveLessNextTurnPower(int amount) {
-        super(ID, strs.NAME, PowerType.DEBUFF, false, AbstractDungeon.player, amount);
+        super(ID, strs.NAME, PowerType.DEBUFF, true, AbstractDungeon.player, amount);
     }
 
     @Override

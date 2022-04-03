@@ -13,6 +13,8 @@ public class Strike extends AbstractTimeEaterCard {
     public Strike() {
         super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = 6;
+        tags.add(CardTags.STRIKE);
+        tags.add(CardTags.STARTER_STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
