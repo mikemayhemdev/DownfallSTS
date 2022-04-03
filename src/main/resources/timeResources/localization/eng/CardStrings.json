@@ -370,5 +370,14 @@
   "time:GoldHourglass": {
     "NAME": "Gold Hourglass",
     "DESCRIPTION": "For the rest of combat, deal !M! damage to ALL enemies each turn."
+  },
+  "time:Paradox": {
+    "NAME": "Paradox",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Each combat, one of these is a lie."
+  },
+  "time:HistoryRepeats": {
+    "NAME": "History Repeats",
+    "DESCRIPTION": "Your hand becomes what it started combat as. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Your hand becomes what it started combat as. NL Exhaust."
   }
 }
