@@ -87,8 +87,8 @@
   },
   "Guardian:BronzeArmor": {
     "NAME": "弹性护甲",
-    "DESCRIPTION": "降低自身所有负面效果 !M! 层。 NL guardianmod:提防 8。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "降低自身所有负面效果 !M! 层。 NL guardianmod:提防 8。"
+    "DESCRIPTION": "失去所有负面效果 !M! 层。 NL guardianmod:提防 8。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "失去所有负面效果 !M! 层。 NL guardianmod:提防 8。"
   },
   "Guardian:FloatingOrbs": {
     "NAME": "浮游圆球",
@@ -317,8 +317,8 @@
   },
   "Guardian:Gem_Synthetic": {
     "NAME": "玛瑙",
-    "DESCRIPTION": "guardianmod:宝石 。 NL 降低自身所有负面效果1层。",
-    "UPGRADE_DESCRIPTION": "降低自身所有负面效果1层。"
+    "DESCRIPTION": "guardianmod:宝石 。 NL 失去所有负面效果1层。",
+    "UPGRADE_DESCRIPTION": "失去所有负面效果1层。"
   },
   "Guardian:Gem_Yellow": {
     "NAME": "琥珀",
