@@ -26,6 +26,12 @@ public class Knighthood extends AbstractDimensionalCard {
         super(ID, 1, CardType.SKILL, CardTarget.SELF);
 
         setFrame("knighthoodframe.png");
+        exhaust = true;
+
+    }
+
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new SelectCardsInHandAction(cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
             AbstractCard q = cards.get(0);
             q.upgrade();
@@ -36,12 +42,6 @@ public class Knighthood extends AbstractDimensionalCard {
                 q2.upgrade();
             }
         }));
-
-    }
-
-
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
     }
 
     public void upp() {

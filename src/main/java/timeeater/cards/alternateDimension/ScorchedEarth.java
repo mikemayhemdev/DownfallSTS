@@ -23,7 +23,7 @@ public class ScorchedEarth extends AbstractDimensionalCard {
         baseDamage = 6;
 
         setFrame("scorchedearthframe.png");
-
+        exhaust = true;
     }
 
 
@@ -54,6 +54,6 @@ public class ScorchedEarth extends AbstractDimensionalCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(2);
     }
 }

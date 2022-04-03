@@ -19,6 +19,7 @@ public class PackRat extends AbstractDimensionalCard {
         baseDamage = 6;
 
         setFrame("packratframe.png");
+        exhaust = true;
 
     }
 
