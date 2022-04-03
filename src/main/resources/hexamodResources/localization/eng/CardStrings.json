@@ -27,7 +27,7 @@
   },
   "hexamod:FastForward": {
     "NAME": "Fast Forward",
-    "DESCRIPTION": "hexamod:Ignite the current Ghostflame. NL hexamod:Advance. NL Exhaust.",
+    "DESCRIPTION": "Ethereal. NL hexamod:Ignite the current Ghostflame. NL hexamod:Advance.",
     "UPGRADE_DESCRIPTION": "hexamod:Ignite the current Ghostflame. NL hexamod:Advance."
   },
   "hexamod:Rewind": {
@@ -121,7 +121,7 @@
   },
   "hexamod:GhostLash": {
     "NAME": "Ghost Lash",
-    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Deal !D! damage. NL When *Exhausted, NL deal !D! damage."
+    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Deal !D! damage. NL When *Exhausted, NL gain !M! Vigor."
   },
   "hexamod:GhostShield": {
     "NAME": "Ghost Shield",

@@ -1,3 +1,4 @@
+/*
 package automaton.cards;
 
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -40,3 +41,5 @@ public class ChildClass extends AbstractBronzeCard {
         upgradeBlock(2);
     }
 }
+
+ */

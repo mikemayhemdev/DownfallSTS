@@ -21,7 +21,7 @@ public class ShapePower extends AbstractExpansionCard implements OctopusCard {
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_donudeca.png", "expansioncontentResources/images/1024/bg_boss_donudeca.png");
         tags.add(expansionContentMod.STUDY_SHAPES);
         tags.add(expansionContentMod.STUDY);
-        baseMagicNumber = 2;
+        baseMagicNumber = magicNumber = 2;
         baseBlock = block = 5;
         //partner is null until this card is played in combat
         expansionContentMod.loadJokeCardImage(this, "PolyBeam.png");
@@ -33,8 +33,8 @@ public class ShapePower extends AbstractExpansionCard implements OctopusCard {
 
     public ArrayList<OctoChoiceCard> choiceList() {
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
-        cardList.add(new OctoChoiceCard("expansioncontent:PolyBeam", EXTENDED_DESCRIPTION[0], "expansioncontentResources/images/cards/PolyBeam.png", EXTENDED_DESCRIPTION[1], -1, -1, magicNumber, CardType.ATTACK));
-        cardList.add(new OctoChoiceCard("expansioncontent:DecaShield", EXTENDED_DESCRIPTION[2], "expansioncontentResources/images/cards/DecaShield.png", EXTENDED_DESCRIPTION[3], -1, block, CardType.SKILL));
+        cardList.add(new OctoChoiceCard("expansioncontent:PolyBeam", EXTENDED_DESCRIPTION[0], "expansioncontentResources/images/cards/PolyBeam.png", EXTENDED_DESCRIPTION[1], -1, -1, magicNumber, CardType.POWER));
+        cardList.add(new OctoChoiceCard("expansioncontent:DecaShield", EXTENDED_DESCRIPTION[2], "expansioncontentResources/images/cards/DecaShield.png", EXTENDED_DESCRIPTION[3], -1, block, CardType.POWER));
         return cardList;
     }
 

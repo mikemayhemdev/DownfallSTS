@@ -174,9 +174,8 @@
     "UPGRADE_DESCRIPTION": "Innate. NL Whenever you enter a Stance, trigger *Skill *Bonus twice."
   },
   "champ:Lariat": {
-    "NAME": "Lariat",
-    "DESCRIPTION": "Perform X times: NL Gain !B! Block.",
-    "UPGRADE_DESCRIPTION": "Perform X times, then gain [E] : NL Gain !B! Block."
+    "NAME": "Reinforced Body",
+    "DESCRIPTION": "Gain !B! Block X times."
   },
   "champ:HoldFirm": {
     "NAME": "Hold Firm",

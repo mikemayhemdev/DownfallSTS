@@ -28,7 +28,7 @@ public class SkipABeat extends AbstractHexaCard {
       //  atb(new ExtinguishCurrentFlameAction());
 
         if (!upgraded){
-            if (GhostflameHelper.activeGhostFlame.charged)  atb(new ChargeCurrentFlameAction());
+            if (!GhostflameHelper.activeGhostFlame.charged)  atb(new ChargeCurrentFlameAction());
         } else {
             atb(new ExtinguishCurrentFlameAction());
             atb(new ChargeCurrentFlameAction());

@@ -117,12 +117,16 @@
     ]
   },
   "bronze:Separator": {
-    "NAME": "Wild Strike",
-    "DESCRIPTION": "Deal !D! damage. π NL bronze:Insert 1 *Wound.",
+    "NAME": "Separator",
+    "DESCRIPTION": "Deal !D! damage. π NL When bronze:Encoded in the middle, increase its damage by !M!.",
     "EXTENDED_DESCRIPTION": [
       "split",
       "Child"
     ]
+  },
+  "bronze:WildStrike": {
+    "NAME": "Wild Strike",
+    "DESCRIPTION": "Deal !D! damage. π NL bronze:Insert 1 *Wound."
   },
   "bronze:Overheat": {
     "NAME": "Overheat",
@@ -235,7 +239,7 @@
   },
   "bronze:Constructor": {
     "NAME": "Constructor",
-    "DESCRIPTION": "Gain !B! Block. π NL When bronze:Encoded, if this is the first card, increase its Block by !M!.",
+    "DESCRIPTION": "Gain !B! Block. π NL When bronze:Encoded as the first card, increase its Block by !M!.",
     "EXTENDED_DESCRIPTION": [
       "build",
       "Sadness",
@@ -261,7 +265,7 @@
   },
   "bronze:Flail": {
     "NAME": "Flail",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies !bauto! times.",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies !bauto! times. NL Gain !M! Artifact. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "flailing",
       "Flail"

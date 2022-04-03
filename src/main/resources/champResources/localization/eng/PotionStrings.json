@@ -11,7 +11,7 @@
   "champ:TechniquePotion": {
     "NAME": "Bottled Technique",
     "DESCRIPTIONS": [
-      "#yTechnique #b",
+      "Trigger your current Stance's #ySkill #yBonus #b",
       " times."
     ]
   },
