@@ -9,7 +9,7 @@
   },
   "bronze:Spike": {
     "NAME": "护体尖刺",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 获得 !M! 层 荆棘 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 -获得 !M! 层 荆棘 。",
     "EXTENDED_DESCRIPTION": [
       "尖刺",
       "突起"
@@ -25,7 +25,7 @@
   },
   "bronze:DonuBeam": {
     "NAME": "原型激光",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL bronze:编译 - 获得 !M! 点 力量 。",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL bronze:编译 -获得 !M! 点 力量 。",
     "EXTENDED_DESCRIPTION": [
       "平滑",
       "爆裂"
@@ -33,7 +33,7 @@
   },
   "bronze:DecaBeam": {
     "NAME": "原型护盾",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 - 获得 !M! 层 多层护甲 并 bronze:插入 !bauto! 张 *晕眩 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 -获得 !M! 层 多层护甲 并 bronze:插入 !bauto! 张 *晕眩 。",
     "EXTENDED_DESCRIPTION": [
       "锯齿",
       "屏障"
@@ -66,8 +66,8 @@
   },
   "bronze:Goto": {
     "NAME": "跳转",
-    "DESCRIPTION": "抽 !M! 张牌。 NL bronze:编译 - 下回合抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL bronze:编译 - 下回合抽 !M! 张牌。",
+    "DESCRIPTION": "抽 !M! 张牌。 NL bronze:编译 -下回合抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL bronze:编译 -下回合抽 !M! 张牌。",
     "EXTENDED_DESCRIPTION": [
       "奔跑",
       "冲刺"
@@ -83,7 +83,7 @@
   },
   "bronze:Branch": {
     "NAME": "分支",
-    "DESCRIPTION": "选择 - 造成 !D! 点伤害 或 获得 !B! 点 格挡 。 NL bronze:编码 另一张牌。 NL 消耗 。",
+    "DESCRIPTION": "选择 -造成 !D! 点伤害 或 获得 !B! 点 格挡 。 NL bronze:编码 另一张牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "分支: 攻击",
       "造成 !D! 点伤害。",
@@ -117,7 +117,7 @@
     ]
   },
   "bronze:Separator": {
-    "NAME": "狂野打击",
+    "NAME": "狂野射线",
     "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:插入 伤口 。",
     "EXTENDED_DESCRIPTION": [
       "狂野",
@@ -130,7 +130,7 @@
   },
   "bronze:CutThrough": {
     "NAME": "斩破命运",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 预见 !M! 。 NL bronze:编译 - 抽 !bauto! 张牌。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 预见 !M! 。 NL bronze:编译 -抽 !bauto! 张牌。",
     "EXTENDED_DESCRIPTION": [
       "斩破",
       "切割"
@@ -212,7 +212,7 @@
   "bronze:Shell": {
     "NAME": "区块链",
     "DESCRIPTION": "获得 !M! 层 bronze:残影 。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 层 bronze:残影 。 NL bronze:编译 - 获得 !M! 层 bronze:残影 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 bronze:残影 。 NL bronze:编译 -获得 !M! 层 bronze:残影 。",
     "EXTENDED_DESCRIPTION": [
       "区块",
       "链接"
@@ -243,8 +243,8 @@
     ]
   },
   "bronze:Terminator": {
-    "NAME": "终止",
-    "DESCRIPTION": " bronze:编译 - 若在 *队列 最后， *方法 获得再打出一次。",
+    "NAME": "终止符",
+    "DESCRIPTION": " bronze:编译 -若在 *队列 最后， *方法 获得再打出一次。",
     "EXTENDED_DESCRIPTION": [
       "哭泣",
       "终结"
@@ -285,7 +285,7 @@
   },
   "bronze:Fortify": {
     "NAME": "强化",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 获得 !M! 点 敏捷 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 -获得 !M! 点 敏捷 。",
     "EXTENDED_DESCRIPTION": [
       "固化",
       "巩固"
@@ -319,7 +319,7 @@
   },
   "bronze:ChosenStrike": {
     "NAME": "邪教打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 本局游戏本牌的伤害增加 !M! 点。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 -本局游戏本牌的伤害增加 !M! 点。",
     "EXTENDED_DESCRIPTION": [
       "邪教",
       "咔咔"
@@ -376,7 +376,7 @@
   },
   "bronze:ChildClass": {
     "NAME": "调用",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 - 获得被 *编码 牌的总耗能 [E] 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 -获得被 *编码 牌的总耗能 [E] 。",
     "EXTENDED_DESCRIPTION": [
       "援引",
       "能量"
@@ -384,7 +384,7 @@
   },
   "bronze:Repair": {
     "NAME": "维修",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 - 回复 !M! 点生命。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 -回复 !M! 点生命。",
     "EXTENDED_DESCRIPTION": [
       "修补",
       "扳手"
@@ -392,7 +392,7 @@
   },
   "bronze:Boost": {
     "NAME": "蓄能增压",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 - 获得 !M! 点 力量 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 -获得 !M! 点 力量 。",
     "EXTENDED_DESCRIPTION": [
       "升压",
       "强化"
@@ -408,7 +408,7 @@
   },
   "bronze:BronzeArmor": {
     "NAME": "铜制铠甲",
-    "DESCRIPTION": "获得 !bauto! 层 人工制品 。 NL bronze:编译 *错误 - 所有敌人获得 !M! 点 格挡 。",
+    "DESCRIPTION": "获得 !bauto! 层 人工制品 。 NL bronze:编译 *错误 -所有敌人获得 !M! 点 格挡 。",
     "EXTENDED_DESCRIPTION": [
       "铜制",
       "铠甲"
@@ -421,7 +421,7 @@
   },
   "bronze:Philosophize": {
     "NAME": "哲学思想",
-    "DESCRIPTION": "获得 !bauto! 点 力量 。 NL bronze:编译 *错误 - 所有敌人获得 !M! 点 力量 。",
+    "DESCRIPTION": "获得 !bauto! 点 力量 。 NL bronze:编译 *错误 -所有敌人获得 !M! 点 力量 。",
     "EXTENDED_DESCRIPTION": [
       "智能",
       "想法"
@@ -463,7 +463,7 @@
   },
   "bronze:Break": {
     "NAME": "打断",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:插入 !M! 张随机 状态牌 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 *错误 -随机 bronze:插入 !M! 张 状态牌 。",
     "EXTENDED_DESCRIPTION": [
       "打断",
       "粉碎"
@@ -471,8 +471,8 @@
   },
   "bronze:InfiniteLoop": {
     "NAME": "无限循环",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - 获得本牌的复制品，其伤害增加 !M! 点。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL bronze:编译 - 获得本牌的复制品，其伤害增加 !M! 点。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 -获得本牌的复制品，其伤害增加 !M! 点。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL bronze:编译 -获得本牌的复制品，其伤害增加 !M! 点。",
     "EXTENDED_DESCRIPTION": [
       "无限",
       "循环"
