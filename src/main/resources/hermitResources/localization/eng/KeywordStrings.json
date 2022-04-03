@@ -32,16 +32,16 @@
     "ID": "rugged",
     "PROPER_NAME": "Rugged",
     "NAMES": [
-      "rugged"
+      "rugged",
     ],
-  "DESCRIPTION": "Reduces next instance of attack damage taken to #b1."
+  "DESCRIPTION": "Reduces next instance of attack damage taken to #b3."
 },
   {
     "PROPER_NAME": "Bounty",
     "NAMES": [
       "bounty"
     ],
-  "DESCRIPTION": "Normal Enemy: #b15 gold.       Elite Enemy: #b35 gold.              Boss: #b75 gold."
+  "DESCRIPTION": "Normal Enemy: #b15 gold.       Elite Enemy: #b40 gold.              Boss: #b100 gold."
 },
   {
     "PROPER_NAME": "Stun",

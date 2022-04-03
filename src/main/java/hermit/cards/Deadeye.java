@@ -42,8 +42,8 @@ public class Deadeye extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 6;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int DAMAGE = 5;
+    private static final int UPGRADE_PLUS_DMG = 1;
     private static final int UP_STRENGTH = 1;
 
     // /STAT DECLARATION/
@@ -52,7 +52,7 @@ public class Deadeye extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.tags.add(Enums.DEADON);
-        magicNumber = baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 2;
         loadJokeCardImage(this, "deadeye.png");
     }
 

@@ -54,7 +54,7 @@ public class Rugged extends AbstractPower implements CloneablePowerInterface {
         if (info.owner != null && info.type != DamageInfo.DamageType.HP_LOSS && info.type != DamageInfo.DamageType.THORNS && damageAmount >= 1) {
             this.flash();
             this.addToTop(new ReducePowerAction(this.owner, this.owner, this.ID, 1));
-            return 1;
+            return Math.min(damageAmount,3);
         } else {
             return damageAmount;
         }

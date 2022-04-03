@@ -1,8 +1,10 @@
 package theHexaghost.cards;
 
+import basemod.patches.com.megacrit.cardcrawl.powers.FixVigorReduction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -35,14 +37,14 @@ public class GhostLash extends AbstractHexaCard {
 
     @Override
     public void afterlife() {
-        /*
+
         AbstractMonster m = AbstractDungeon.getRandomMonster();
         if (m == null) return;
         use(AbstractDungeon.player, m);
-        atb(new DamageAction(m, new DamageInfo(AbstractDungeon.player, damage-4, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-    */
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, magicNumber), magicNumber));
+        //atb(new DamageAction(m, new DamageInfo(AbstractDungeon.player, damage-4, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
 
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, magicNumber), magicNumber));
+        atb(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, VigorPower.POWER_ID));
 
     }
 

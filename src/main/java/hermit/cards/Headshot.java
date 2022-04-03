@@ -82,7 +82,7 @@ public class Headshot extends AbstractDynamicCard {
     {
         super.calculateCardDamage(mo);
 
-        if (isDeadOnPos()) {
+        if (isDeadOnPos() || trig_deadon) {
 
             int DeadOnTimes = DeadOnAmount();
             int base_dam = this.damage;

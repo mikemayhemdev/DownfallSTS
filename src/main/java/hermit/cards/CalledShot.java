@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.red.BodySlam;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -37,7 +38,7 @@ public class CalledShot extends AbstractDynamicCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
@@ -45,9 +46,7 @@ public class CalledShot extends AbstractDynamicCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
-    private static final int COST = 1;
-    private static final int UPGRADE_COST = 0;
-
+    private static final int COST = 0;
 
     // /STAT DECLARATION/
 
@@ -55,8 +54,16 @@ public class CalledShot extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.tags.add(Enums.DEADON);
         this.baseDamage=0;
-        magicNumber=baseMagicNumber=2;
+        magicNumber=baseMagicNumber=1;
         loadJokeCardImage(this, "called_shot.png");
+    }
+
+    public void getMyName()
+    {
+        if (!this.upgraded)
+            this.rawDescription = cardStrings.DESCRIPTION;
+        else
+            this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
     }
 
     // Actions the card should do.
@@ -65,8 +72,10 @@ public class CalledShot extends AbstractDynamicCard {
         this.baseDamage = AbstractDungeon.player.hand.size();
         this.calculateCardDamage(m);
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), EnumPatch.HERMIT_GUN2));
-        this.rawDescription = cardStrings.DESCRIPTION;
+
+        this.getMyName();
         this.initializeDescription();
+
         if (isDeadOn()) {
             onDeadOn();
 
@@ -90,8 +99,10 @@ public class CalledShot extends AbstractDynamicCard {
     public void applyPowers() {
         this.baseDamage = AbstractDungeon.player.hand.size();
         super.applyPowers();
-        this.rawDescription = cardStrings.DESCRIPTION;
-        this.rawDescription = this.rawDescription + cardStrings.UPGRADE_DESCRIPTION;
+
+        this.getMyName();
+
+        this.rawDescription += cardStrings.UPGRADE_DESCRIPTION;
         this.initializeDescription();
     }
 
@@ -99,8 +110,10 @@ public class CalledShot extends AbstractDynamicCard {
     @Override
     public void upgrade() {
         if (!upgraded) {
+            rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
             upgradeName();
-            upgradeBaseCost(0);
+            upgradeMagicNumber(1);
+            initializeDescription();
         }
     }
 }
