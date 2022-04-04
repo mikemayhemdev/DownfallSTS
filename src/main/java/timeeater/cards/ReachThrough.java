@@ -37,7 +37,7 @@ public class ReachThrough extends AbstractTimeEaterCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> options = new ArrayList<>();
-        options.addAll(AbstractDungeon.getCurrRoom().rewards.get(0).cards);
+        options.addAll(getThisRoomsCardRewards());
         atb(new SelectCardsCenteredAction(options, AbstractMemoryCard.uiStrings.TEXT[0], (cards) -> {
             AbstractCard q = cards.get(0);
             if (upgraded) q.updateCost(-99);
