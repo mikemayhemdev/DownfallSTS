@@ -17,7 +17,7 @@ public class QuantumFormPower extends AbstractTimeEaterPower {
     public static final PowerStrings strs = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public QuantumFormPower(int amount) {
-        super(ID, strs.NAME, PowerType.BUFF, false, AbstractDungeon.player, amount);
+        super(ID,  PowerType.BUFF, false, AbstractDungeon.player, amount);
     }
 
     @Override

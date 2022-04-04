@@ -13,7 +13,7 @@ public class ContinuancePower extends AbstractTimeEaterPower implements OnRetrie
     public static final PowerStrings strs = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public ContinuancePower(int amount) {
-        super(ID, strs.NAME, PowerType.BUFF, false, AbstractDungeon.player, amount);
+        super(ID,  PowerType.BUFF, false, AbstractDungeon.player, amount);
     }
 
     @Override

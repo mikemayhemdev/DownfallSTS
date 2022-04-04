@@ -14,7 +14,7 @@ public class UnwoundPower extends AbstractTimeEaterPower {
     public static final PowerStrings strs = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public UnwoundPower() {
-        super(ID, strs.NAME, PowerType.BUFF, true, AbstractDungeon.player, 1);
+        super(ID,  PowerType.BUFF, true, AbstractDungeon.player, 1);
         isTwoAmount = true;
         amount2 = AbstractDungeon.player.currentHealth;
     }

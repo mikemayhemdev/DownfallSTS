@@ -17,7 +17,7 @@ public class TimeWarpPower extends AbstractTimeEaterPower implements NonStackabl
     public static final PowerStrings strs = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public TimeWarpPower() {
-        super(ID, strs.NAME, PowerType.BUFF, false, AbstractDungeon.player, 12);
+        super(ID,  PowerType.BUFF, false, AbstractDungeon.player, 12);
     }
 
     @Override

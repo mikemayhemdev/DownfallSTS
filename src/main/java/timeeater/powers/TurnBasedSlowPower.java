@@ -17,7 +17,7 @@ public class TurnBasedSlowPower extends AbstractTimeEaterPower {
     public static final PowerStrings strs = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public TurnBasedSlowPower(AbstractCreature target, int amount) {
-        super(ID, strs.NAME, PowerType.DEBUFF, true, target, amount);
+        super(ID,  PowerType.DEBUFF, true, target, amount);
         isTwoAmount = true;
         int resetAmt = 0;
         if (AbstractDungeon.player.hasPower(SlowDownPower.ID)) {

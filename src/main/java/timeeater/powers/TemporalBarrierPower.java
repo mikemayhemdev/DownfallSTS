@@ -15,7 +15,7 @@ public class TemporalBarrierPower extends AbstractTimeEaterPower {
     public static final PowerStrings strs = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public TemporalBarrierPower(int amount) {
-        super(ID, strs.NAME, PowerType.BUFF, true, AbstractDungeon.player, amount);
+        super(ID,  PowerType.BUFF, true, AbstractDungeon.player, amount);
     }
 
     public int onAttacked(DamageInfo info, int damageAmount) {

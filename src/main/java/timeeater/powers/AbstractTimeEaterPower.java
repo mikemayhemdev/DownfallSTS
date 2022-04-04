@@ -5,12 +5,17 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.random.Random;
 import timeeater.TimeEaterMod;
 import timeeater.util.TexLoader;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public abstract class AbstractTimeEaterPower extends AbstractPower {
     public int amount2 = -1;
@@ -22,18 +27,29 @@ public abstract class AbstractTimeEaterPower extends AbstractPower {
     private boolean overrideRender = false;
     private Color renderIconColor;
 
-    public AbstractTimeEaterPower(String ID, String NAME, PowerType powerType, boolean isTurnBased, AbstractCreature owner, int amount) {
+    protected static Map<String, PowerStrings> powerStrings = new HashMap<>();
+
+    private static PowerStrings getPowerStrings(String ID) {
+        return CardCrawlGame.languagePack.getPowerStrings(ID);
+    }
+
+    protected String[] DESCRIPTIONS;
+
+    public AbstractTimeEaterPower(String ID, PowerType powerType, boolean isTurnBased, AbstractCreature owner, int amount) {
         this.ID = ID;
         this.isTurnBased = isTurnBased;
 
-        this.name = NAME;
+        if (!powerStrings.containsKey(this.ID))
+            powerStrings.put(this.ID, getPowerStrings(this.ID));
+        this.name = powerStrings.get(this.ID).NAME;
+        this.DESCRIPTIONS = powerStrings.get(this.ID).DESCRIPTIONS;
 
         this.owner = owner;
         this.amount = amount;
         this.type = powerType;
 
-        Texture normalTexture = TexLoader.getTexture(TimeEaterMod.getModID() + "Resources/images/powers/" + NAME.replaceAll("([ ])", "") + "32.png");
-        Texture hiDefImage = TexLoader.getTexture(TimeEaterMod.getModID() + "Resources/images/powers/" + NAME.replaceAll("([ ])", "") + "84.png");
+        Texture normalTexture = TexLoader.getTexture(TimeEaterMod.getModID() + "Resources/images/powers/" + ID + "32.png");
+        Texture hiDefImage = TexLoader.getTexture(TimeEaterMod.getModID() + "Resources/images/powers/" + ID + "84.png");
         if (hiDefImage != null) {
             region128 = new TextureAtlas.AtlasRegion(hiDefImage, 0, 0, hiDefImage.getWidth(), hiDefImage.getHeight());
             if (normalTexture != null)

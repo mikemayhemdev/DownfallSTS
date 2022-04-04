@@ -14,7 +14,7 @@ public class GoldHourglassPower extends AbstractTimeEaterPower {
     public static final PowerStrings strs = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public GoldHourglassPower(int amount) {
-        super(ID, strs.NAME, PowerType.BUFF, false, AbstractDungeon.player, amount);
+        super(ID,  PowerType.BUFF, false, AbstractDungeon.player, amount);
     }
 
     @Override

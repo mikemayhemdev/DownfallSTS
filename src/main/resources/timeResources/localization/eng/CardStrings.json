@@ -365,7 +365,7 @@
   "time:FinalMemory": {
     "NAME": "Final Memory",
     "DESCRIPTION": "Choose: time:Suspend *Demon, *Wraith, *Echo, *Deva, or *Eternal *Form. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": "Choose: time:Suspend *Demon, *Wraith, *Echo, *Deva, or *Eternal *Form+. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Choose: time:Suspend *Demon, *Wraith, *Echo, *Deva, or *Eternal *Form+. NL Exhaust."
   },
   "time:GoldHourglass": {
     "NAME": "Gold Hourglass",
@@ -379,5 +379,9 @@
     "NAME": "History Repeats",
     "DESCRIPTION": "Your hand becomes what it started combat as. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Your hand becomes what it started combat as. NL Exhaust."
+  },
+  "time:Erase": {
+    "NAME": "Erase",
+    "DESCRIPTION": "Exhaust up to 3 cards from time:Suspension. NL Deal !D! damage for each."
   }
 }

@@ -2,12 +2,11 @@ package timeeater.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import downfall.util.TextureLoader;
 import timeeater.TimeEaterMod;
+import timeeater.util.TexLoader;
 
 import static timeeater.TimeEaterMod.makeRelicOutlinePath;
 import static timeeater.TimeEaterMod.makeRelicPath;
@@ -17,8 +16,8 @@ import static timeeater.util.Wiz.applyToSelfTop;
 public class Watch extends CustomRelic {
 
     public static final String ID = TimeEaterMod.makeID("Watch");
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Watch.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Watch.png"));
+    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("Watch.png"));
+    private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("Watch.png"));
 
     public Watch() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.CLINK);

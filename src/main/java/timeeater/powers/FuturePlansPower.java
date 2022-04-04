@@ -15,7 +15,7 @@ public class FuturePlansPower extends AbstractTimeEaterPower {
     public static final PowerStrings strs = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public FuturePlansPower(int amount) {
-        super(ID, strs.NAME, PowerType.DEBUFF, false, AbstractDungeon.player, amount);
+        super(ID,  PowerType.DEBUFF, false, AbstractDungeon.player, amount);
     }
 
     @Override
