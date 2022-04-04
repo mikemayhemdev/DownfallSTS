@@ -1,105 +1,105 @@
 {
   "Slimebound:Hunted": {
-    "NAME": "The Boss Approaches",
+    "NAME": "Le Boss s'approche",
     "DESCRIPTIONS": [
-      "A booming voice echoes the spire... NL NL #r~SLIME CRUSH!!!~ NL NL The hulking slime quickly catches up to you, blocking your path forward. It appears it has grown since the Exordium, consuming and strengthening itself as it followed your trail up the Spire.",
-      "Can it really be this easy?",
-      "You dispatch the Slime Boss with ease, claiming its prizes possession for yourself. It's a very stylish hat, after all."
+      "Une voix retentissante résonne dans la tour.... NL NL #r~SLIME TOUT ECRASER!!!~ NL NL Le slime imposant vous rattrape rapidement, bloquant votre chemin. Il semble qu'il ait grandi depuis l'Exordium, se consumant et se renforçant en suivant votre trace dans la Tour.",
+      "Est-ce vraiment si facile?",
+      "Vous vous débarrassez facilement du Parrain Slime, récupérant ses possessions pour vous-même. C'est un chapeau très élégant, après tout."
     ],
     "OPTIONS": [
-      "[Confront] #rFight #rSlime #rBoss. Reward: #gTiny #gBowler #gHat.",
-      "[Flee in Terror] #rCursed #r- #rShame."
+      "[Confront] #rCombattez #rle #rParrain #rSlime. Récompense: #gPetit #gchapeau #gmelon.",
+      "[Fuir] #rMaudit #r- #rHonte."
     ]
   },
   "Slimebound:WorldofGoop": {
-    "NAME": "World of Goop",
+    "NAME": "Monde visqueux",
     "DESCRIPTIONS": [
-      "You fall into a puddle. NL @IT'S@ @MADE@ @OF@ #g@SLIME@ #g@GOOP!!@ NL Calmly, you bathe yourself as you bond with the goop, enjoying a moment of reprieve. NL NL Climbing out, you notice in the pool the #ysouls of a few unfortunate adventurers, slowly being consumed by a gluttonous creature.",
-      "You exit the invigorating slime bath, absorbing the #ysouls, leaving the creature with a sad look upon its amorphous face.",
-      "You succeed in negotiating a deal with the creature to provide it with more tasty souls if it will aid you in your quest. NL You and your newfound #gfriend exit the slime bath together."
+      "Vous tombez dans une flaque. NL @ELLE@ @EST@ @FAITE@ @DE@ #g@SLIME!!@ NL Calmement, vous vous baignez alors que vous vous liez à la matière visqueuse, profitant d'un moment de répit. NL NL En sortant, vous remarquez dans la flaque des #yâmes perdues provenant d'aventuriers malchanceux, ainsi qu'une curieuse créature qui semble être attirée par ce métal que l'on appelle or.",
+      "Vous sortez du bain de slime revigorant, repêchant les #yâmes et laissant la créature avec un regard triste sur son visage amorphe..",
+      "Vous réussissez à négocier un accord avec la créature pour lui fournir plus de métal brillant si elle vous aide dans votre quête. NL Vous et votre nouvel #yami sortez ensemble du bain de slime."
     ],
     "OPTIONS": [
-      "[Gather Souls] #gGain #g75 #gSouls.",
-      "[Recruit] #rLose #r75 #rSouls. #gGain #yGreed #yOoze.",
-      "[Leave]",
-      "[Locked] Requires 75 Souls."
+      "[Récupérer l'or] #gGagnez #g75 #gÂmes.",
+      "[Recruter] #rPerdez #r75 #rÂmes. #gGagnez #gle #ySlime #yCupide.",
+      "[Quitter]",
+      "[Verrouillé] Requiert 75 Âmes."
     ]
   },
   "Slimebound:SlimeTalk": {
     "NAME": "TalkStrings",
     "DESCRIPTIONS": [
-      "~Don't~ ~absorb~ ~me!~",
-      "~Taking~ ~our~ ~souls?~",
-      "~It~ ~will~ ~feed~ ~on~ ~us...~",
-      "~The~ ~Boss!~",
-      "That hat... NL #r~I~ #r~must~ #r~have~ #r~it!~",
-      "~Why~ ~would~",
-      "~it~ ~not~",
-      "~let~ ~us~ ~play?~",
-      "~It~ ~will~ ~consume~ ~us...~",
-      "~It's~ ~so~ ~strong...~",
-      "~It's~ ~like~ ~us...~",
-      "~NICE~ #r~HAT!!!~"
+      "~Ne~ ~m'absorbez~ ~pas!~",
+      "~Vous~ ~voulez~ ~nos~ ~âmes?~",
+      "~Il~ ~se~ ~nourrira~ ~de~ ~nous...~",
+      "~Le~ ~Boss!~",
+      "Ce chapeau... NL #r~Je~ #r~dois~ #r~l'avoir!~",
+      "~Pourquoi~ ~ne~",
+      "~nous~ ~laisse~",
+      "~t'il~ ~pas~ ~jouer?~",
+      "~Il~ ~nous~ ~consumera...~",
+      "~C'est~ ~si~ ~fort...~",
+      "~Il~ ~est~  ~comme~ ~nous...~",
+      "~JOLI~ #r~CHAPEAU!!!~"
     ]
   },
   "Slimebound:ScrapOoze": {
     "NAME": "Scrap Ooze",
     "DESCRIPTIONS": [
-      "Any slime is a friend in your cause.  With offerings of new scrap and treasure, the Scrap Ooze joins your quest."
+      "N'importe quel slime est un allié dans votre quête.  Avec des offres de nouvelles ferrailles et de nouveaux trésors, le Slime ferrailleux se joint à votre quête.."
     ],
     "OPTIONS": [
-      "[Recruit] #rLose ",
-      ". Gain #gScrap #gOoze. #rLocked if you Reach Inside.",
-      "[Recruit] Locked (Angered the Scrap Ooze)",
+      "[Recruter] #rPerdez ",
+      ". Gagnez #gle #gSlime #gFerrailleux. #rVerrouillé si vous Cherchez à l'intérieur.",
+      "[Recruter] Verrouillé (Vous avez énervé le Slime ferrailleux)",
       "[Leave]",
-      "[Recruit] Locked (Requires a Common or Uncommon Relic)"
+      "[Recruit] Verrouillé (Requiert une Relique Commune ou peu commune)"
     ]
   },
   "Slimebound:ArtOfSlimeWar": {
     "NAME": "The Art of Slime War",
     "DESCRIPTIONS": [
-      "You come across a disgusting pedestal with a #gglowing #gbook sitting atop. It appears this book contains the complicated and advanced combat techniques used by the #gSlime #gBoss and its minions.",
-      "As you reach for the book, you hear several traps activate.  You won't be able to avoid them all.",
-      "You steal the book and manage to avoid the traps, but fall into a horrible puddle of goop.",
-      "Grabbing the book revealed a trap of spikes below the floor, which you narrowly escape, but not without a severe gash.",
-      "As soon as the book leaves the pedestal, you feel it draining your very life essence. It had better be worth it.",
-      "You decide to leave the book where it is and continue on.",
-      "You can't figure out how the Slime minions are a threat to anyone - it appears the only tactic they use is to violently throw their bodies at enemies.  Well, if it works for them..."
+      "Vous tombez sur un piédestal dégoûtant sur lequel se trouve un #glivre #gbrillant. Il semblerait que ce livre contienne les techniques de combat compliquées et avancées utilisées par les ancêtres du #gParrain #gSlime et de ses sbires.",
+      "En prenant le livre, vous entendez plusieurs pièges s'activer.  Vous ne pourrez pas tous les éviter.",
+      "Vous volez le livre et réussissez à éviter les pièges, mais vous tombez dans une horrible flaque gluante.",
+      "En saisissant le livre, vous avez découvert un piège de pointes sous le plancher, que vous avez échappé de justesse, mais non sans une sévère entaille.",
+      "Dès que le livre quitte le piédestal, vous sentez qu'il draine votre essence vitale. Il vaut mieux que ça en vaille la peine.",
+      "Vous décidez de laisser le livre là où il est et de continuer votre chemin.",
+      "Vous n'arrivez pas à comprendre comment les serviteurs du Parrain Slime sont une menace pour qui que ce soit. - il semble que la seule tactique qu'ils utilisent soit de jeter violemment leurs corps sur leurs ennemis.  Eh bien, si ça marche pour eux..."
     ],
     "OPTIONS": [
-      "[Read] #gRemove #gall Strikes. #gReceive #g3 #gUpgraded Tackles.",
-      "[Take] #gObtain #gConsult #gPlaybook. #rTrigger #ra #rtrap.",
-      "[Leave]",
-      "[Dive] #rBecome #rCursed #r- #rIcky.",
-      "[Be Patient] #rTake #r",
-      " #rDamage.",
-      "[Grab and Run] #rLose #r",
-      " #rMax #rHP."
+      "[Lire] #gRetirez #gtoutes #gvos Frappes. #gRecevez #g3 Tacles #gAméliorés.",
+      "[Prendre] #gObtenez #gManuel #gstratégique. #rDéclenchez #run #rpiège.",
+      "[Quitter]",
+      "[Plonger] #rSoyez #rMaudit #r- #rDégoût.",
+      "[Être patient] #rPrenez #r",
+      " #rdégâts.",
+      "[Saisir et Courir] #rPerdez #r",
+      " #rPV #rMax."
     ]
   },
   "Slimebound:Darklings": {
     "NAME": "Darklings",
     "DESCRIPTIONS": [
-      "Three unfamiliar looking slimes stand(?) in your way. They look hostile, but as you approach, they note that you are of similar consistency and look at you with curiosity.",
-      "As you ~prepare~ ~to~ ~battle,~ so do the inky black slimes!",
-      "After a short conversation, these fellow slimes are on your side as well - guarding for intruders. They can leave their post for a little while to assist you."
+      "Trois slimes à l'aspect peu familier se dressent (?) sur votre chemin. Ils semblent hostiles, mais lorsque vous vous approchez, ils remarquent que vous avez la même consistance qu'eux et vous regardent avec curiosité.",
+      "Alors que vous vous ~préparez~ ~à~ ~combattre,~ les slimes noirs d'encre font de même !",
+      "Après une brève conversation, ces collègues slimes sont également de votre côté - ils gardent la Tour contre les intrus. Ils peuvent quitter leur poste un petit moment afin de vous aider."
     ],
     "OPTIONS": [
-      "[Recruit] #gObtain #gDarklings. #rLose ",
-      "[Fight]",
-      "[Leave]",
+      "[Recruit] #gObtenez #gles #gTénébreux. #rPerdez ",
+      "[Combattre]",
+      "[Quitter]",
       ".",
-      "[Locked] Requires a Rare card."
+      "[Verrouillé] Requiert une carte Rare."
     ]
   },
   "Slimebound:BackToBasics": {
     "NAME": "",
     "DESCRIPTIONS": [
-      "When one sheep leads the way, all the rest follow."
+      "Quand un mouton ouvre la voie, tous les autres suivent."
     ],
     "OPTIONS": [
-      "[Inspiration] #gAdd #gCommand to all #gStrikes and #gDefends.",
-      "[Locked] Requires a Strike or Defend."
+      "[Inspiration] #gAjoutez #gCommandez à toutes les #gFrappes et les #gDéfenses.",
+      "[Locked] Requiert une Frappe ou une Défense."
     ]
   }
 }
