@@ -28,6 +28,7 @@ public class DigitalCarnage extends AbstractBronzeCard {
         baseDamage = DAMAGE;
         thisEncodes();
         tags.add(AutomatonMod.BAD_COMPILE);
+        AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("DigitalCarnage.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
 import static com.megacrit.cardcrawl.cards.red.PerfectedStrike.countCards;
 
 public class PerfectedStrike extends AbstractChampCard {
@@ -23,6 +24,7 @@ public class PerfectedStrike extends AbstractChampCard {
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(CardTags.STRIKE);
         postInit();
+        loadJokeCardImage(this, "PerfecterStrike.png");
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
