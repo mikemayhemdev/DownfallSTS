@@ -7,6 +7,10 @@
       "펄스"
     ]
   },
+  "bronze:WildStrike": {
+    "NAME": "Wild Strike",
+    "DESCRIPTION": "Deal !D! damage. π NL bronze:Insert 1 *Wound."
+  },
   "bronze:Spike": {
     "NAME": "가시",
     "DESCRIPTION": "피해를 !D! 줍니다. NL bronze:컴파일 - 가시를 !M! 얻습니다.",
@@ -653,5 +657,9 @@
       "출시",
       "1.0"
     ]
+  },
+  "bronze:Undervolt": {
+    "NAME": "Undervolt",
+    "DESCRIPTION": "ALL enemies lose !M! Strength. NL Gain 2 Burns. NL Exhaust."
   }
 }

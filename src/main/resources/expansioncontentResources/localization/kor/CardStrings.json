@@ -46,6 +46,16 @@
     "DESCRIPTION": "expansioncontent:보스 - 데카. NL 방어도를 !B! 만큼 2번 얻습니다. 이 카드의 방어도가 !M! 증가합니다. NL 다음 턴에 *도누의 *힘을 expansioncontent:발굴합니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "expansioncontent:보스 - 데카. NL 방어도를 !B! 만큼 2번 얻습니다. 이 카드의 방어도가 !M! 증가합니다. NL 다음 턴에 *도누의 *힘+을 expansioncontent:발굴합니다. NL 소멸."
   },
+  "expansioncontent:ShapePower": {
+    "NAME": "Shaper's Blessing",
+    "DESCRIPTION": "Choose - Gain !M! Strength or !B! Plated Armor.",
+    "EXTENDED_DESCRIPTION": [
+      "Donu's Power",
+      "Gain !M! Strength.",
+      "Deca's Shield",
+      "Gain !B! Plated Armor."
+    ]
+  },
   "expansioncontent:PrepareCrush": {
     "NAME": "으깨기 준비",
     "DESCRIPTION": "expansioncontent:보스 - 대왕 슬라임. NL 방어도를 !B! 얻습니다. NL 다음 내 턴에 [E] [E] [E] 을 얻고 *슬라임 *으깬다를 얻습니다. NL 소멸.",

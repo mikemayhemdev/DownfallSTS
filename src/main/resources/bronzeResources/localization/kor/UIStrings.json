@@ -40,7 +40,10 @@
       " NL bronze:컴파일",
       "bronze:컴파일",
       " NL bronze:부호화합니다.",
-      "bronze:부호화합니다. NL "
+      "bronze:부호화합니다. NL ",
+      " π NL When bronze:Encoded,",
+      "LOCALIZATION NOTE: The text above must be equal to the start of Replicate's extra description line.",
+      "ERR - NO_DUPE_FULL_RELEASES"
     ]
   },
   "bronze:CompileDisplayPanel": {
