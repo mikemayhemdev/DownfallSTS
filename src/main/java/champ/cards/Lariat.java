@@ -39,7 +39,7 @@ public class Lariat extends AbstractChampCard {
             energyOnUse = EnergyPanel.totalCount;
         }
 
-        atb(new GainBlockAction(p, block * energyOnUse));
+        addToBot(new com.megacrit.cardcrawl.actions.defect.ReinforcedBodyAction(p, this.block, this.freeToPlayOnce, this.energyOnUse));
 
       //  atb(new VFXAction(new StanceDanceEffect(AbstractDungeon.player, false, false, false, true), 0.7F));
 
