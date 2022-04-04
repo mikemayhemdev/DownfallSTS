@@ -188,8 +188,8 @@
   },
   "sneckomod:Cheat": {
     "NAME": "作弊",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 本回合内，卡牌上的随机数取上限值。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 本回合内，卡牌上的随机数取上限值。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 本回合卡牌的随机数值取最大值。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 本回合卡牌的随机数值取最大值。"
   },
   "sneckomod:Restock": {
     "NAME": "补充",

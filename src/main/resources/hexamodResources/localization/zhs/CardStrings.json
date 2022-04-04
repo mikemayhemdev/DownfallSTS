@@ -27,7 +27,7 @@
   },
   "hexamod:FastForward": {
     "NAME": "快进",
-    "DESCRIPTION": "NL hexamod:点燃 当前鬼火 。 NL hexamod:步进 。 NL 消耗 。",
+    "DESCRIPTION": "虚无 。 NL hexamod:点燃 当前鬼火 。 NL hexamod:步进 。",
     "UPGRADE_DESCRIPTION": "hexamod:点燃 当前鬼火 。 NL hexamod:步进 。"
   },
   "hexamod:Rewind": {
@@ -122,7 +122,7 @@
   },
   "hexamod:GhostLash": {
     "NAME": "幽灵鞭击",
-    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 造成 !D! 点伤害。 NL 消耗 时再造成 !D! 点伤害。"
+    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 造成 !D! 点伤害。 NL 消耗 时获得 !M! 层 活力 。"
   },
   "hexamod:GhostShield": {
     "NAME": "幽灵护盾",
@@ -159,7 +159,7 @@
   },
   "hexamod:ParanormalForm": {
     "NAME": "鬼哭神嚎",
-    "DESCRIPTION": "打出 虚无 牌时， NL 随机造成 !M! 点伤害。"
+    "DESCRIPTION": "打出 hexamod:阴世 牌时， NL 随机造成 !M! 点伤害。"
   },
   "hexamod:UnleashSpirits": {
     "NAME": "释魂",

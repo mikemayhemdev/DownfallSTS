@@ -113,7 +113,7 @@
   },
   "Guardian:Harden": {
     "NAME": "硬化",
-    "DESCRIPTION": "至少有20点 格挡 才能被打出。 NL guardianmod:提防 !GuardianSecondM! 并获得 !M! 层 荆棘 。"
+    "DESCRIPTION": "有20点 格挡 才能打出。 NL guardianmod:提防 !GuardianSecondM! 。 NL 获得 !M! 层 荆棘 。"
   },
   "Guardian:SentryBeam": {
     "NAME": "哨卫射线",
@@ -128,7 +128,7 @@
   "Guardian:CompilePackage": {
     "NAME": "完整组件",
     "DESCRIPTION": "从3张 guardianmod:组件 牌中选择获得1张。 消耗 。",
-    "UPGRADE_DESCRIPTION": "从3张已 升级 的 guardianmod:组件 牌中选择获得1张。 消耗 。",
+    "UPGRADE_DESCRIPTION": "从3张 guardianmod:组件 牌+中选择获得1张。 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "选择一张组件。"
     ]
