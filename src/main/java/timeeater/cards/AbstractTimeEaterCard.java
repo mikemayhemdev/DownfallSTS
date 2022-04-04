@@ -1,6 +1,5 @@
 package timeeater.cards;
 
-import automaton.FunctionHelper;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -238,7 +237,9 @@ public abstract class AbstractTimeEaterCard extends CustomCard {
 
     protected void selfStasis() {
         AbstractCard q = this;
-        atb(new AbstractGameAction() {
+        AbstractDungeon.player.hand.removeCard(this);
+        AbstractDungeon.player.limbo.addToTop(this);
+        addToBot(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
