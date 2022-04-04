@@ -117,12 +117,16 @@
     ]
   },
   "bronze:Separator": {
-    "NAME": "狂野射线",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:插入 伤口 。",
+    "NAME": "分离器",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编码 。 NL *编码时若不在前后槽位，伤害增加 !M! 点。",
     "EXTENDED_DESCRIPTION": [
-      "狂野",
-      "狂躁"
+      "分离",
+      "分割"
     ]
+  },
+  "bronze:WildStrike": {
+    "NAME": "狂野打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:插入 *伤口 。"
   },
   "bronze:Overheat": {
     "NAME": "过热",
@@ -261,7 +265,7 @@
   },
   "bronze:Flail": {
     "NAME": "乱斗",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 !bauto! 次。",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 !bauto! 次。 NL 获得 !M! 层 人工制品 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "狂乱",
       "链枷"
