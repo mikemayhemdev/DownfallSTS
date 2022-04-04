@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import gremlin.powers.WizPower;
 
 public class WizPotion extends CustomPotion {
@@ -39,7 +40,7 @@ public class WizPotion extends CustomPotion {
 
     public void use(AbstractCreature target) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new WizPower(AbstractDungeon.player, this.potency), this.potency));
+                new VigorPower(AbstractDungeon.player, this.potency), this.potency));
     }
 
     public CustomPotion makeCopy() {
