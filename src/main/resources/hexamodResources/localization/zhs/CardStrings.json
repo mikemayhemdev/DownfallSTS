@@ -36,7 +36,7 @@
     "UPGRADE_DESCRIPTION": "hexamod:回退 。 NL 获得 [E] 并抽一张牌。"
   },
   "hexamod:SkipABeat": {
-    "NAME": "助燃",
+    "NAME": "引燃",
     "DESCRIPTION": "hexamod:点燃 未 *点燃 的当前鬼火。",
     "UPGRADE_DESCRIPTION": "hexamod:点燃 当前鬼火。"
   },
@@ -349,7 +349,7 @@
   },
   "hexamod:BurningQuestion": {
     "NAME": "迫在眉睫",
-    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 本牌的伤害增加 !M! 点。 NL 被 消耗 时：对所有敌人造成 !D! 点伤害。"
+    "DESCRIPTION": "虚无 。 NL 获得 !M! 点 力量。 NL 消耗 时，获得2 点 敏捷。"
   },
 
   "hexamod:Floatwork": {
