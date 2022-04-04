@@ -3,7 +3,7 @@
     "NAME": "영혼 낙인",
     "FLAVOR": "순환에 얽매인 수호자.",
     "DESCRIPTIONS": [
-      "매 턴 처음 유령불꽃 #y점화 시 #y방어도를 #b5 얻습니다."
+      "매 턴 처음 유령불꽃 #y점화 시 #y방어도를 #b4 얻습니다."
     ]
   },
   "hexamod:TheBrokenSeal": {
@@ -60,7 +60,7 @@
     "NAME": "혼돈의 영혼",
     "FLAVOR": "대혼란의 징조가 나타났습니다.",
     "DESCRIPTIONS": [
-      "세 번째 유령불꽃이 #yhexamod:대혼란 유령불꽃이 됩니다."
+      "네 번째 유령불꽃이 #yhexamod:대혼란 유령불꽃이 됩니다."
     ]
   },
   "hexamod:JarOfFuel": {
