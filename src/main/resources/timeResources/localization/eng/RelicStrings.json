@@ -5,5 +5,17 @@
     "DESCRIPTIONS": [
       "After playing your #b12th card in a combat, gain #b2 #yStrength."
     ]
+  },
+  "time:SkipNextBossRelicReward": {
+    "NAME": "Stolen Cards",
+    "DESCRIPTIONS": [
+      "Skip the Act Boss's card rewards."
+    ]
+  },
+  "time:SkipNextBossCardReward": {
+    "NAME": "Stolen Relic",
+    "DESCRIPTIONS": [
+      "Skip the Act Boss's relic rewards."
+    ]
   }
 }

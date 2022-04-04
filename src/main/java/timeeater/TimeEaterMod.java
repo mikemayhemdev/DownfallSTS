@@ -6,13 +6,19 @@ import automaton.util.AutoVar;
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomUnlockBundle;
+import basemod.eventUtil.AddEventParams;
+import basemod.eventUtil.EventUtils;
 import basemod.interfaces.*;
+import champ.ChampChar;
+import champ.events.TechniqueTome;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.util.CardIgnore;
@@ -24,6 +30,7 @@ import timeeater.cards.alternateDimension.*;
 import timeeater.cards.vars.QuantumStrikeVar;
 import timeeater.cards.vars.SecondDamage;
 import timeeater.cards.vars.SecondMagicNumber;
+import timeeater.events.FutureYoink;
 import timeeater.relics.Watch;
 import timeeater.suspend.SuspendHelper;
 import timeeater.util.CardFilter;
@@ -221,6 +228,14 @@ public class TimeEaterMod implements
 
     public void receivePostInitialize() {
         addPotions();
+
+
+        BaseMod.addEvent(new AddEventParams.Builder(FutureYoink.ID, FutureYoink.class) //Event ID//
+                //Event Character//
+                .playerClass(TimeEaterChar.Enums.THE_TIME_EATER)
+                .dungeonIDs(Exordium.ID, TheCity.ID)
+                .eventType(EventUtils.EventType.NORMAL)
+                .create());
 
     }
 

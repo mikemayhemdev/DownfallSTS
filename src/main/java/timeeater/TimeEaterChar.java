@@ -50,15 +50,13 @@ public class TimeEaterChar extends CustomPlayer {
 
     public float renderscale = 1.2F;
 
-    private String atlasURL = "bronzeResources/images/char/mainChar/bronze.atlas";
-    private String jsonURL = "bronzeResources/images/char/mainChar/bronze.json";
 
     public TimeEaterChar(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "bronzeResources/images/char/mainChar/orb/vfx.png", (String) null, (String) null);
         initializeClass(null,
-                CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].SHOULDER1,
-                CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].SHOULDER2,
-                CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].CORPSE,
+                CharacterSelectScreenPatches.characters[6].skins[CharacterSelectScreenPatches.characters[6].reskinCount].SHOULDER1,
+                CharacterSelectScreenPatches.characters[6].skins[CharacterSelectScreenPatches.characters[6].reskinCount].SHOULDER2,
+                CharacterSelectScreenPatches.characters[6].skins[CharacterSelectScreenPatches.characters[6].reskinCount].CORPSE,
                 getLoadout(), 0.0F, -30.0F, 270.0F, 310.0F, new EnergyManager(3));
 
         this.reloadAnimation();
@@ -67,10 +65,10 @@ public class TimeEaterChar extends CustomPlayer {
 
     public void reloadAnimation() {
         this.loadAnimation(
-                CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].atlasURL,
-                CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].jsonURL,
-                CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].renderscale);
-        this.state.setAnimation(0, "idle", true);
+                CharacterSelectScreenPatches.characters[6].skins[CharacterSelectScreenPatches.characters[6].reskinCount].atlasURL,
+                CharacterSelectScreenPatches.characters[6].skins[CharacterSelectScreenPatches.characters[6].reskinCount].jsonURL,
+                CharacterSelectScreenPatches.characters[6].skins[CharacterSelectScreenPatches.characters[6].reskinCount].renderscale);
+        this.state.setAnimation(0, "Idle", true);
     }
 
 
@@ -110,9 +108,7 @@ public class TimeEaterChar extends CustomPlayer {
     @Override
     public void doCharSelectScreenSelectEffect() {
         if (MathUtils.randomBoolean()) {
-            CardCrawlGame.sound.play("MONSTER_AUTOMATON_SUMMON", 0.1F);
-        } else {
-            CardCrawlGame.sound.play("AUTOMATON_ORB_SPAWN", 0.1F);
+            CardCrawlGame.sound.play("POWER_TIME_WARP", 0.05F);
         }
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT,
                 false);
@@ -120,11 +116,7 @@ public class TimeEaterChar extends CustomPlayer {
 
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
-        if (MathUtils.randomBoolean()) {
-            return "MONSTER_AUTOMATON_SUMMON";
-        } else {
-            return "AUTOMATON_ORB_SPAWN";
-        }
+            return "POWER_TIME_WARP";
     }
 
     @Override
