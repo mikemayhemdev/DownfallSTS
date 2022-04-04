@@ -199,7 +199,7 @@
   },
   "bronze:Deprecate": {
     "NAME": "Deprecate",
-    "DESCRIPTION": "Apply !M! Weak to ALL enemies.",
+    "DESCRIPTION": "Apply !M! Weak.",
     "EXTENDED_DESCRIPTION": [
       "old",
       "Insult"

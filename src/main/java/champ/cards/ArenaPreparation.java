@@ -31,7 +31,9 @@ public class ArenaPreparation extends AbstractChampCard {
             AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.SKILL);
             c.isSeen = true;
             UnlockTracker.markCardAsSeen(c.cardID);
-            CardModifierManager.addModifier(c, new RetainCardMod());
+            if (c.selfRetain = false) {
+                CardModifierManager.addModifier(c, new RetainCardMod());
+            }
             makeInHand(c);
         }
     }
