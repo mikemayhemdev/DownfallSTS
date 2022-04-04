@@ -23,9 +23,9 @@ public class SuspendHelper {
     public static final int SUSPEND_DRAW_PER_TURN = 3;
 
     public static final Vector2[] cardPositions = {
-            new Vector2(218f * Settings.xScale, HEIGHT_SEQUENCE),
-            new Vector2(293f * Settings.xScale, HEIGHT_SEQUENCE),
-            new Vector2(368f * Settings.xScale, HEIGHT_SEQUENCE)
+            new Vector2(150f * Settings.xScale, HEIGHT_SEQUENCE),
+            new Vector2(300f * Settings.xScale, HEIGHT_SEQUENCE),
+            new Vector2(450f * Settings.xScale, HEIGHT_SEQUENCE)
     };
 
     public static void atCombatStart() {

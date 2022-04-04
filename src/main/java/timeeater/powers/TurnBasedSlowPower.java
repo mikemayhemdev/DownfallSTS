@@ -1,6 +1,7 @@
 package timeeater.powers;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -17,7 +18,7 @@ public class TurnBasedSlowPower extends AbstractTimeEaterPower {
     public static final PowerStrings strs = CardCrawlGame.languagePack.getPowerStrings(ID);
 
     public TurnBasedSlowPower(AbstractCreature target, int amount) {
-        super(ID,  PowerType.DEBUFF, true, target, amount);
+        super(ID, PowerType.DEBUFF, true, target, amount);
         isTwoAmount = true;
         int resetAmt = 0;
         if (AbstractDungeon.player.hasPower(SlowDownPower.ID)) {
@@ -34,6 +35,7 @@ public class TurnBasedSlowPower extends AbstractTimeEaterPower {
         }
         amount2 = resetAmt;
         updateDescription();
+        addToBot(new ReducePowerAction(owner, owner, this, 1));
     }
 
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
@@ -54,8 +56,6 @@ public class TurnBasedSlowPower extends AbstractTimeEaterPower {
     @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + FontHelper.colorString(this.owner.name, "y") + DESCRIPTIONS[1];
-        if (this.amount2 != 0) {
-            this.description = this.description + DESCRIPTIONS[2] + this.amount2 * 10 + DESCRIPTIONS[3] + amount + (amount == 1 ? DESCRIPTIONS[4] : DESCRIPTIONS[5]);
-        }
+        this.description = this.description + DESCRIPTIONS[2] + this.amount2 * 10 + DESCRIPTIONS[3] + amount + (amount == 1 ? DESCRIPTIONS[4] : DESCRIPTIONS[5]);
     }
 }
