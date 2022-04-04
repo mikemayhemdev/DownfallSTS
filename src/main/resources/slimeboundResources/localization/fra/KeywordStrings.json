@@ -1,0 +1,218 @@
+[
+  {
+    "NAMES": [
+      "absorbez",
+      "absorbant",
+      "absorbé"
+    ],
+    "PROPER_NAME": "Absorber",
+    "DESCRIPTION": "Recombinez-vous avec votre #ySlime en tête, vous donnant 1 de #yForce."
+  },
+  {
+    "NAMES": [
+      "divisez",
+      "diviser"  
+      "divisant"
+    ],
+    "PROPER_NAME": "Division",
+    "DESCRIPTION": "Faites apparaître un sbire #ySlime, qui attaque au début de chaque tour. NL NL Si vous n'avez pas d'emplacement de Slime, votre Slime le plus ancien est automatiquement #yAbsorbé pour faire de la place, vous donnant 1 de #yForce."
+  },
+  {
+    "NAMES": [
+      "goop",
+      "goopé"
+    ],
+    "PROPER_NAME": "Goop",
+    "DESCRIPTION": "La prochaine attaque inflige #b1 dégât de plus par #yGoop, retirant alors tout le #yGoop et déclenchant n'importe quel effets de #yConsumation."
+  },
+  {
+    "NAMES": [
+      "potentiel"
+    ],
+    "PROPER_NAME": "Potentiel",
+    "DESCRIPTION": "Augmente les dégâts de TOUS vos Slimes invoqués."
+  },
+  {
+    "NAMES": [
+      "commandez",
+      "commande"
+    ],
+    "PROPER_NAME": "Commande",
+    "DESCRIPTION": "Votre Slime en tête attaque."
+  },
+  {
+    "NAMES": [
+      "slime torche",
+      "slime_torche"
+    ],
+    "PROPER_NAME": "Slime torche",
+    "DESCRIPTION": "Inflige #b6 dégâts chaque tour. Gagne de la #yForce lorsque vous en gagnez vous."
+  },
+  {
+    "NAMES": [
+      "slime cogneur",
+      "slime_cogneur",
+      "slimes cogneurs",
+      "slime_cogneur",
+      "cogneur"
+    ],
+    "PROPER_NAME": "Slime cogneur",
+    "DESCRIPTION": "Inflige #b5 dégâts chaque tour."
+  },
+  {
+    "NAMES": [
+      "slime cultiste",
+      "slime_cultiste"
+    ],
+    "PROPER_NAME": "Slime cultiste",
+    "DESCRIPTION": "Inflige #b6 dégâts chaque tour, puis augmente ses dégâts de #b1."
+  },
+  {
+    "NAMES": [
+      "slime sangsue",
+      "slime_sangsue",
+      "slimes sangsues",
+      "slimes_sangsues",
+      "sangsue"
+    ],
+    "PROPER_NAME": "Slime Sangsue",
+    "DESCRIPTION": "Inflige #b1 dégât et vous confère #b3 #yd'Armure chaque tour."
+  },
+  {
+    "NAMES": [
+      "slime guerriers",
+      "slime_guerrier",
+      "slimes guerriers",
+      "slimes_guerriers",
+      "guerrier"
+    ],
+    "PROPER_NAME": "Slime guerrier",
+    "DESCRIPTION": "Inflige #b3 dégâts à TOUS les ennemis chaque tour."
+  },
+  {
+    "NAMES": [
+      "slime bourbier",
+      "slime_bourbier",
+      "slimes bourbier",
+      "slimes_bourbier",
+      "bourbier"
+    ],
+    "PROPER_NAME": "Slime bourbier",
+    "DESCRIPTION": "Inflige #b2 dégâts et applique #b2 de #yGoop chaque tour."
+  },
+  {
+    "NAMES": [
+      "slime de bronze",
+      "slime_de_bronze"
+    ],
+    "PROPER_NAME": "Slime de bronze",
+    "DESCRIPTION": "Inflige #b4 dégâts et vous confère #b4 #yd'Armure chaque tour."
+  },
+  {
+    "NAMES": [
+      "léchouille"
+    ],
+    "PROPER_NAME": "Léchouille",
+    "DESCRIPTION": "Des cartes qui coûtent 0 et qui appliquent du #yGoop avec une varitété d'effets secondaires."
+  },
+  {
+    "NAMES": [
+      "slime follet",
+      "slime_follet"
+    ],
+    "PROPER_NAME": "Slime follet",
+    "DESCRIPTION": "Inflige #b3 dégâts et applique #b3 de #ySoulburn chaque tour."
+  },
+  {
+    "NAMES": [
+      "morphez"
+    ],
+    "PROPER_NAME": "Morpher",
+    "DESCRIPTION": "Remplacez cette carte avec une carte aléatoire de votre classe, peu importe son type. Elle coûte #b1 énergie de moins."
+  },
+  {
+    "NAMES": [
+      "ralenti"
+    ],
+    "PROPER_NAME": "Ralenti",
+    "DESCRIPTION": "Recevez #b10% de dégâts en plus par carte jouée dans un tour."
+  },
+  {
+    "NAMES": [
+      "tacle",
+      "tacles"
+    ],
+    "PROPER_NAME": "Tacle",
+    "DESCRIPTION": "Des #yAttaques puissantes mais qui vous infligent quelques dégâts aussi."
+  },
+  {
+    "NAMES": [
+      "boss de la tour",
+      "boss_de_la_tour"
+    ],
+    "PROPER_NAME": "Boss de la tour",
+    "DESCRIPTION": "Des cartes puissantes qui coûtent 0, inspirées des boss de la Tour."
+  },
+  {
+    "NAMES": [
+      "slime protecteur",
+      "slime_protecteur"
+    ],
+    "PROPER_NAME": "Slime protecteur",
+    "DESCRIPTION": "Inflige #b2 dégâts et vous confère #b6 #yd'Armure chaque tour."
+  },
+  {
+    "NAMES": [
+      "slime insultant",
+      "slime_insultant"
+    ],
+    "PROPER_NAME": "Slime insultant",
+    "DESCRIPTION": "Inflige #b4 dégâts et applique #b1 de #yVulnérabilité chaque tour."
+  },
+  {
+    "NAMES": [
+      "slime ténébreux",
+      "slime_ténébreux"
+    ],
+    "PROPER_NAME": "Slime ténébreux",
+    "DESCRIPTION": "Inflige #b3 dégâts chaque tour. Quand Commandé, les autres Slimes Ténébreux attaquant également."
+  },
+  {
+    "NAMES": [
+      "slime ancien",
+      "slime_ancien"
+    ],
+    "PROPER_NAME": "Slime ancien",
+    "DESCRIPTION": "Inflige #b3 dégâts et vous fait piocher #b1 carte chaque tour."
+  },
+  {
+    "NAMES": [
+      "slime temporel",
+      "slime_temporel"
+    ],
+    "PROPER_NAME": "Slime temporel",
+    "DESCRIPTION": "Inflige #b4 dégâts et applique #b1 de #yFaiblesse chaque tour."
+  },
+  {
+    "NAMES": [
+      "consumez"
+    ],
+    "PROPER_NAME": "Consumer",
+    "DESCRIPTION": "Effet bonus qui s'active quand une #yAttaque est utilisée sur un ennemi qui a du #yGoop."
+  },
+  {
+    "NAMES": [
+      "spécialiste",
+      "spécialistes"
+    ],
+    "PROPER_NAME": "Spécialiste",
+    "DESCRIPTION": "Un slime unique avec des effets plus puissants que les slimes normaux."
+  },
+  {
+    "NAMES": [
+      "Enterrée"
+    ],
+    "PROPER_NAME": "Enterrer",
+    "DESCRIPTION": "Les cartes Enterrées seront toujours choisies en dernier pour les effets #yd'Exhumation aléatoires."
+  }
+]
