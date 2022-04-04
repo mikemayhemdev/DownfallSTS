@@ -190,7 +190,7 @@ public class downfallMod implements
     public static boolean crossoverCharacters = true;
     public static boolean unlockEverything = false;
     public static boolean noMusic = false;
-    public static boolean normalMapLayout = false;
+    public static boolean normalMapLayout = true;
     public static boolean champDisableStanceHelper = false;
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
