@@ -140,9 +140,8 @@
     "UPGRADE_DESCRIPTION": "固有 。 NL 进入不同 姿态 时获得其 champ:技术 奖励。"
   },
   "champ:Lariat": {
-    "NAME": "套索",
-    "DESCRIPTION": "重复X次： NL 获得 !B! 点 格挡 。",
-    "UPGRADE_DESCRIPTION": "获得 [E] 。 NL 重复X次： NL 获得 !B! 点 格挡 。"
+    "NAME": "强身健体",
+    "DESCRIPTION": "获得 !B! 点 格挡 X次。"
   },
   "champ:HoldFirm": {
     "NAME": "固守",
@@ -339,7 +338,7 @@
   "champ:BerserkerStyle": {
     "NAME": "狂暴战法",
     "DESCRIPTION": "进入 champ:战狂 。 NL champ:战狂 champ:技术 奖励多提供 !M! 层 活力 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 进入 champ:战狂 。 NL champ:战狂 champ:技术 奖励多提供 !M! 层  活力 。"
+    "UPGRADE_DESCRIPTION": "固有 。 NL 进入 champ:战狂 。 NL champ:战狂 champ:技术 奖励多提供 !M! 层 活力 。"
   },
   "champ:Riposte": {
     "NAME": "弹反",
