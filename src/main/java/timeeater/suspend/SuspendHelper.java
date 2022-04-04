@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import timeeater.cards.OnRetrieveCard;
 import timeeater.powers.OnRetrieveCardPower;
 import timeeater.powers.OnSuspendCardPower;
 import timeeater.powers.RetrieveLessNextTurnPower;
@@ -53,6 +54,9 @@ public class SuspendHelper {
                                 if (q2 instanceof OnRetrieveCardPower) {
                                     ((OnRetrieveCardPower) q2).receiveRetrieve(q);
                                 }
+                            }
+                            if (q instanceof OnRetrieveCard) {
+                                ((OnRetrieveCard) q).onRetrieve();
                             }
                         }
                     });

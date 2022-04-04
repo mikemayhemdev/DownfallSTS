@@ -1,5 +1,6 @@
 package timeeater.cards;
 
+import automaton.FunctionHelper;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;

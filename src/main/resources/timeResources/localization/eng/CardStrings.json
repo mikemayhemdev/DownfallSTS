@@ -84,7 +84,7 @@
   },
   "time:HammerBlow": {
     "NAME": "Hammer Blow",
-    "DESCRIPTION": "Deal !D! damage. NL Upgrade all time:Suspended cards.'"
+    "DESCRIPTION": "Deal !D! damage. NL Upgrade all time:Suspended cards."
   },
   "time:HeadSlam": {
     "NAME": "Head Slam",
