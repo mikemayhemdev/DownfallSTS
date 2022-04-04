@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 import static timeeater.TimeEaterMod.makeID;
 import static timeeater.util.Wiz.atb;
+import static timeeater.util.Wiz.att;
 
 public class ReachThrough extends AbstractTimeEaterCard {
     public final static String ID = makeID("ReachThrough");
@@ -39,9 +40,9 @@ public class ReachThrough extends AbstractTimeEaterCard {
         ArrayList<AbstractCard> options = new ArrayList<>();
         options.addAll(getThisRoomsCardRewards());
         atb(new SelectCardsCenteredAction(options, AbstractMemoryCard.uiStrings.TEXT[0], (cards) -> {
-            AbstractCard q = cards.get(0);
+            AbstractCard q = cards.get(0).makeStatEquivalentCopy();
             if (upgraded) q.updateCost(-99);
-            atb(new SuspendAction(q));
+            att(new SuspendAction(q));
         }));
     }
 
