@@ -38,10 +38,27 @@
     "DESCRIPTION": "선택한 카드를 고정해 영구적으로 덱에 추가하고 선택한 카드를 제거합니다."
   },
   {
-    "PROPER_NAME": "Identify",
+    "PROPER_NAME": "식별",
     "NAMES": [
-      "identify"
+      "식별",
+      "식별합니다"
     ],
-    "DESCRIPTION": "Replace an Unknown card with its current random card permanently."
+    "DESCRIPTION": "#yUnknown 카드를 영구적으로 고정합니다."
+  },
+  {
+    "PROPER_NAME": "행운",
+    "NAMES": [
+      "lucky",
+      "행운"
+    ],
+    "DESCRIPTION": "무작위 수치 범위가 있는 카드를 사용하면 최대 수치로 사용됩니다. 뒤엉킴에는 적용되지 않습니다."
+  },
+  {
+    "PROPER_NAME": "변화",
+    "NAMES": [
+      "변화합니다",
+      "변화시킵니다"
+    ],
+    "DESCRIPTION": "무작위로 정해진 카드로 교체됩니다."
   }
 ]

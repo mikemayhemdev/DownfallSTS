@@ -9,8 +9,8 @@
   },
   "sneckomod:SnekBite": {
     "NAME": "스네코 물기",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 비용이 가장 높은 카드가 1장 sneckomod:뒤엉킵니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 비용이 가장 높은 카드가 !M! 장 sneckomod:뒤엉킵니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 비용이 가장 높은 카드가 1장 sneckomod:뒤엉킵니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 비용이 가장 높은 카드가 !M! 장 sneckomod:뒤엉킵니다."
   },
   "sneckomod:TailWhip": {
     "NAME": "꼬리 채찍",
@@ -55,8 +55,8 @@
   },
   "sneckomod:SoulRoll": {
     "NAME": "영혼의 도박",
-    "DESCRIPTION": "sneckomod:스네코항체. NL 손에 있는 카드가 sneckomod:뒤엉킵니다.",
-    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 손에 있는 카드가 sneckomod:뒤엉킵니다. NL 카드를 1장 뽑습니다."
+    "DESCRIPTION": "sneckomod:스네코항체. NL 카드가 sneckomod:뒤엉킵니다.",
+    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 카드가 sneckomod:뒤엉킵니다. NL 카드를 1장 뽑습니다."
   },
   "sneckomod:SnekBeam": {
     "NAME": "스네코 광선",
@@ -68,13 +68,13 @@
     ]
   },
   "sneckomod:UnknownStrike": {
-    "NAME": "???",
+    "NAME": "??? 타격",
     "DESCRIPTION": "*Unknown 타격 카드."
   },
   "sneckomod:Nope": {
     "NAME": "안돼",
-    "DESCRIPTION": "sneckomod:스네코항체. NL 카드를 1장 소멸시킵니다. NL 그 카드와 같은 유형의 카드로 교체합니다.",
-    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 카드를 1장 소멸시킵니다. NL 그 카드와 같은 유형의 비용이 1 낮아진 무작위 카드로 교체합니다.",
+    "DESCRIPTION": "sneckomod:스네코항체. NL 카드를 1장 소멸시킵니다. NL 그 카드와 같은 유형의 카드를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 카드를 1장 소멸시킵니다. NL 그 카드와 같은 유형의 비용이 1 낮아진 무작위 카드를 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       " 안돼로 소멸시킬 카드를 고르십시오."
     ]
@@ -84,62 +84,62 @@
     "DESCRIPTION": "*Unknown 이걸절대볼수없으니이걸보면-개발자에게문의하시오 카드."
   },
   "sneckomod:UnknownInnate": {
-    "NAME": "???",
+    "NAME": "??? 선천성",
     "DESCRIPTION": "*Unknown 선천성 카드."
   },
   "sneckomod:Unknown": {
-    "NAME": "???",
-    "DESCRIPTION": "*Unknown 카드."
+    "NAME": "??? 시작",
+    "DESCRIPTION": "*Unknown gremlin:시작 카드."
   },
   "sneckomod:Unknown0Cost": {
-    "NAME": "???",
+    "NAME": "??? 0 비용",
     "DESCRIPTION": "*Unknown 0 비용 카드."
   },
   "sneckomod:Unknown1Cost": {
-    "NAME": "???",
+    "NAME": "??? 1 비용",
     "DESCRIPTION": "*Unknown 1 비용 카드."
   },
   "sneckomod:Unknown2Cost": {
-    "NAME": "???",
+    "NAME": "??? 2 비용",
     "DESCRIPTION": "*Unknown 2 비용 카드."
   },
   "sneckomod:Unknown3Cost": {
-    "NAME": "???",
+    "NAME": "??? 3 비용",
     "DESCRIPTION": "*Unknown 3 비용 카드."
   },
   "sneckomod:UnknownX": {
-    "NAME": "???",
+    "NAME": "??? X 비용",
     "DESCRIPTION": "*Unknown X 비용 카드."
   },
   "sneckomod:UnknownEthereal": {
-    "NAME": "???",
+    "NAME": "??? 휘발성",
     "DESCRIPTION": "*Unknown 휘발성 카드."
   },
   "sneckomod:UnknownBlock": {
-    "NAME": "???",
+    "NAME": "??? 방어도",
     "DESCRIPTION": "*Unknown 방어도 카드."
   },
   "sneckomod:UnknownExhaust": {
-    "NAME": "???",
+    "NAME": "??? 소멸",
     "DESCRIPTION": "*Unknown 소멸 카드."
   },
   "sneckomod:SoulCleanse": {
     "NAME": "영혼의 정화",
-    "DESCRIPTION": "sneckomod:스네코항체. NL 손에 있는 카드가 sneckomod:뒤엉킵니다. 이 카드의 효과로 sneckomod:뒤엉킨 카드의 비용은 3이 되지 않습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 손에 있는 카드가 sneckomod:뒤엉킵니다. 이 카드의 효과로 sneckomod:뒤엉킨 카드의 비용은 3이 되지 않습니다."
+    "DESCRIPTION": "sneckomod:스네코항체. NL 카드가 sneckomod:뒤엉킵니다. 이 카드의 효과로 sneckomod:뒤엉킨 카드의 비용은 3이 되지 않습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 카드가 sneckomod:뒤엉킵니다. 이 카드의 효과로 sneckomod:뒤엉킨 카드의 비용은 3이 되지 않습니다."
   },
   "sneckomod:SoulExchange": {
     "NAME": "영혼의 교환",
-    "DESCRIPTION": "sneckomod:스네코항체. NL 카드를 1장 뽑고 카드를 1장 소멸시킵니다. NL 카드를 모두 소멸시키고 그 카드를 처음 소멸시킨 카드의 직업 카드로 교체합니다.",
-    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 카드를 2장 뽑고 카드를 1장 소멸시킵니다. NL 카드를 모두 소멸시키고 그 카드를 처음 소멸시킨 카드의 직업 카드로 교체합니다.",
+    "DESCRIPTION": "sneckomod:스네코항체. NL 카드를 1장 뽑고 카드를 1장 선택합니다. 선택한 카드는 동일한 직업 카드로 sneckomod:변화시킵니다.",
+    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 카드를 !M! 장 뽑고 카드를 1장 선택합니다. 선택한 카드는 동일한 직업 카드로 sneckomod:변화시킵니다.",
     "EXTENDED_DESCRIPTION": [
       "영혼 교환으로 소멸시킬 카드를 고르십시오."
     ]
   },
   "sneckomod:CheapStock": {
     "NAME": "값싼 재고품",
-    "DESCRIPTION": "내 턴 시작 시 손에 있는 비용이 가장 높은 sneckomod:다른_직업 카드의 비용을 1 낮춥니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 내 턴 시작 시 손에 있는 비용이 가장 높은 sneckomod:다른_직업 카드의 비용을 1 낮춥니다."
+    "DESCRIPTION": "내 턴 시작 시 비용이 가장 높은 sneckomod:다른_직업 카드의 비용을 1 낮춥니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 내 턴 시작 시 비용이 가장 높은 sneckomod:다른_직업 카드의 비용을 1 낮춥니다."
   },
   "sneckomod:UnlimitedRolls": {
     "NAME": "무제한 도박",
@@ -161,12 +161,12 @@
   },
   "sneckomod:QuickMove": {
     "NAME": "날랜 움직임",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 손에 있는 비용이 가장 높은 카드가 1장 sneckomod:뒤엉킵니다.",
-    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 손에 있는 비용이 가장 높은 카드가 !M! 장 sneckomod:뒤엉킵니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 비용이 가장 높은 카드가 1장 sneckomod:뒤엉킵니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 비용이 가장 높은 카드가 !M! 장 sneckomod:뒤엉킵니다."
   },
   "sneckomod:QuickBite": {
     "NAME": "뱀 갈퀴",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !M! - 2 장 뽑습니다. NL 손에 있는 비용이 가장 높은 카드가 sneckomod:뒤엉킵니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !M! - 2 장 뽑습니다. NL 비용이 가장 높은 카드가 sneckomod:뒤엉킵니다."
   },
   "sneckomod:Rotation": {
     "NAME": "순환",
@@ -183,13 +183,13 @@
   },
   "sneckomod:PureSnecko": {
     "NAME": "변화무쌍",
-    "DESCRIPTION": "sneckomod:스네코항체. NL 손에 있는 모든 sneckomod:다른_직업 카드를 소멸시키고 교체합니다.",
-    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 손에 있는 모든 sneckomod:다른_직업 카드를 소멸시키고 교체합니다. 교체된 카드의 비용을 1 낮춥니다."
+    "DESCRIPTION": "sneckomod:스네코항체. NL 손에 있는 모든 sneckomod:다른_직업 카드를 sneckomod:변화시킵니다.",
+    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 손에 있는 모든 sneckomod:다른_직업 카드를 sneckomod:변화시킵니다. 변화된 카드의 비용을 1 낮춥니다."
   },
   "sneckomod:Cheat": {
-    "NAME": "치트",
+    "NAME": "천운",
     "DESCRIPTION": "sneckomod:스네코항체. NL 이번 턴 동안 무작위 수치 범위가 있는 카드를 사용하면 최대 수치로 사용됩니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 이번 턴 동안 무작위 수치 범위가 있는 카드를 사용하면 최대 수치로 사용됩니다."
+    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 이번 턴 동안 무작위 수치 범위가 있는 카드를 사용하면 최대 수치로 사용됩니다. NL 소멸"
   },
   "sneckomod:Restock": {
     "NAME": "재보급",
@@ -201,7 +201,7 @@
   },
   "sneckomod:Transmogrify": {
     "NAME": "탈바꿈",
-    "DESCRIPTION": "시작 유물과 관을 제외한 유물 2개 중 하나를 골라 잃습니다. NL 무작위 같은 희귀도의 유물을 얻습니다. NL 소멸.",
+    "DESCRIPTION": "유물 2개 중 하나를 선택해 잃습니다. NL 같은 등급의 무작위 유물을 얻습니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
       "바꿀 유물이이이 업섯서서.",
       "잃을 유물을 고르십시오.",
@@ -216,11 +216,11 @@
   },
   "sneckomod:DangerNoodle": {
     "NAME": "위험한 머리",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 sneckomod:다른_직업 카드당 이 카드를 반복해서 사용하고 sneckomod:다른_직업 카드를 모두 소멸시킵니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 sneckomod:다른_직업 카드 한 장당 피해를 !D! 주고 sneckomod:다른_직업 카드를 모두 소멸시킵니다."
   },
   "sneckomod:SerpentIdol": {
     "NAME": "구렁이 우상",
-    "DESCRIPTION": "sneckomod:스네코항체. NL sneckomod:다른_직업 카드를 3장 중 1장 골라 얻습니다. NL 이번 턴에 비용이 0이 됩니다. NL 소멸."
+    "DESCRIPTION": "sneckomod:스네코항체. NL sneckomod:다른_직업 카드를 3장 중 1장을 선택해 얻습니다. NL 이번 턴 동안 비용이 0이 됩니다. NL 소멸."
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "쓰레기 재활용",
@@ -240,27 +240,27 @@
     "DESCRIPTION": "전투 종료 시 강화된 *Unknown 카드 보상을 추가로 얻습니다."
   },
   "sneckomod:UnknownStrength": {
-    "NAME": "???",
+    "NAME": "??? 힘",
     "DESCRIPTION": "*Unknown 힘 카드."
   },
   "sneckomod:UnknownDraw": {
-    "NAME": "???",
+    "NAME": "??? 뽑기",
     "DESCRIPTION": "*Unknown 뽑기 카드."
   },
   "sneckomod:UnknownDexterity": {
-    "NAME": "???",
+    "NAME": "??? 민첩",
     "DESCRIPTION": "*Unknown 민첩 카드."
   },
   "sneckomod:UnknownWeak": {
-    "NAME": "???",
+    "NAME": "??? 약화",
     "DESCRIPTION": "*Unknown 약화 카드."
   },
   "sneckomod:UnknownVulnerable": {
-    "NAME": "???",
+    "NAME": "??? 취약",
     "DESCRIPTION": "*Unknown 취약 카드."
   },
   "sneckomod:UnknownColorless": {
-    "NAME": "???",
+    "NAME": "??? 무색",
     "DESCRIPTION": "*Unknown 무색 카드."
   },
   "sneckomod:RainOfDice": {
@@ -301,11 +301,11 @@
     "DESCRIPTION": "sneckomod:스네코항체. NL *Unknown 카드를 1장 선택합니다. 이 카드를 덱에서 영구적으로 제거합니다. NL sneckomod:영구각인.",
     "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. 보존. NL *Unknown 카드를 1장 선택합니다. 이 카드를 덱에서 영구적으로 제거합니다. NL sneckomod:영구각인. ",
     "EXTENDED_DESCRIPTION": [
-      " 기억할 카드를 고르십시오."
+      " 식별할 카드를 고르십시오."
     ]
   },
   "sneckomod:UnknownBoss": {
-    "NAME": "???",
-    "DESCRIPTION": "*Unknown 보스 카드."
+    "NAME": "??? 보스",
+    "DESCRIPTION": "*Unknown 무색 보스 카드."
   }
 }
