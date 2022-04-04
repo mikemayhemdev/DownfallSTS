@@ -105,7 +105,7 @@
   "champ:DefensiveStylePower": {
     "NAME": "수비 태세",
     "DESCRIPTIONS": [
-      "#y수비 #y기술의 #y반격이 #b",
+      "#y수비 자세의 #y스킬 카드 보너스 #y반격이 #b",
       " 증가합니다."
     ]
   },
@@ -119,7 +119,7 @@
   "champ:BerserkerStylePower": {
     "NAME": "광폭화 태세",
     "DESCRIPTIONS": [
-      "#y광폭화 기술의 #y활력이 #b",
+      "#y광폭화 자세의 #y스킬 카드 보너스 #y활력이 #b",
       " 증가합니다."
     ]
   },
@@ -132,27 +132,28 @@
     ]
   },
   "champ:EnergizedDurationPower": {
-    "NAME": "왕관 강화",
+    "NAME": "에너지 충전",
     "DESCRIPTIONS": [
-      "내 다음 턴 시작 시 [E] 를 얻습니다.",
-      "내 다음 #b",
-      " 턴 시작 시 [E] 를 얻습니다."
+      "다음 턴에 [E] 를 #b",
+      " 얻습니다.",
+      " 얻습니다.",
+      " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
     ]
   },
   "champ:IronFortressPower": {
     "NAME": "현란한 꺾기",
     "DESCRIPTIONS": [
-      "자세를 취할 때마다 취한 #y자세의 #y기술 효과가",
+      "자세를 취할 때마다 취한 #y자세의 #y스킬 카드 보너스 효과를 얻습니다.",
       " #b",
-      " 번 발동합니다."
+      " 번 얻습니다."
     ]
   },
   "champ:IronFortressVigorPower": {
     "NAME": "현란한 꺾기: 광폭화",
     "DESCRIPTIONS": [
-      "자세를 취할 때마다 #y광폭화 #y자세의 #y기술을 효과가",
+      "자세를 취할 때마다 #y광폭화 #y자세의 #y스킬 카드 보너스 효과를",
       " #b",
-      " 번 발동합니다."
+      " 번 얻습니다."
     ]
   },
   "champ:LastStandMod": {
@@ -202,7 +203,7 @@
     "NAME": "부메랑",
     "DESCRIPTIONS": [
       "다음 내 턴 시작 시 ",
-      " 카드를 가져옵니다. 그 카드의 비용은 사용하기 전까지 #b0 이 됩니다."
+      " 카드를 가져옵니다. 그 카드의 비용은 사용하기 전까지 #b0 이 되고 사용 후 카드를 가져오지 않습니다."
     ]
   },
   "champ:ResolvePower": {
@@ -226,6 +227,13 @@
       " 얻습니다.",
       "~넌~ ~실수를~ ~저질렀다...~",
       "@패배??@ NL @말도@ @안돼!!@"
+    ]
+  },
+  "champ:DoubleStyleThisTurnPower": {
+    "NAME": "쇠사슬 채찍",
+    "DESCRIPTIONS": [
+      "이번 턴 동안 #y스킬 카드 보너스를 #b",
+      " 증가시킵니다."
     ]
   }
 }

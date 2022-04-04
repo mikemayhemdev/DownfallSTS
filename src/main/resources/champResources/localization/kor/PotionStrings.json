@@ -11,7 +11,7 @@
   "champ:TechniquePotion": {
     "NAME": "병에 담긴 기술",
     "DESCRIPTIONS": [
-      "#y기술 #y추가 #y효과를 #b",
+      "#y스킬 #y카드 #y보너스 효과를 #b",
       " 번 얻습니다."
     ]
   },

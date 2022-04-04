@@ -200,8 +200,8 @@
     "NAME": "수비 모드",
     "DESCRIPTIONS": [
       "이번 턴 종료 시 #y수비 #y모드에서 벗어납니다.",
-      "#y수비 #y모드 전환까지 #b",
-      " 턴 남았습니다."
+      "#y수비 #y모드는 #b",
+      " 턴 동안 활성화됩니다."
     ]
   },
   "Guardian:BracePerTurnPower": {
