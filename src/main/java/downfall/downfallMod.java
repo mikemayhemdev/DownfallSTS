@@ -162,7 +162,7 @@ public class downfallMod implements
         PostDeathSubscriber {
     public static final String modID = "downfall";
 
-    public static final boolean STEAM_MODE = false;
+    public static final boolean STEAM_MODE = true;
 
     public static boolean neowtextoverride = false;
 
@@ -190,7 +190,7 @@ public class downfallMod implements
     public static boolean crossoverCharacters = true;
     public static boolean unlockEverything = false;
     public static boolean noMusic = false;
-    public static boolean normalMapLayout = true;
+    public static boolean normalMapLayout = false;
     public static boolean champDisableStanceHelper = false;
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
