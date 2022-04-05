@@ -19,7 +19,7 @@
     "NAME": "爆炸",
     "DESCRIPTION": "给予所有敌人 !M! 层 hexamod:灼魂 。 NL bronze:编译 *错误 - bronze:插入 !bauto! 张 *灼伤 。",
     "EXTENDED_DESCRIPTION": [
-      "不稳定的",
+      "非稳",
       "爆炸"
     ]
   },
@@ -229,8 +229,8 @@
   },
   "bronze:ByteShift": {
     "NAME": "字节位移",
-    "DESCRIPTION": "将所有 *bronze:编码 中的牌返回手牌。 NL 其获得 保留 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 将所有 *bronze:编码 中的牌返回手牌。 NL 其获得 保留 。 NL 消耗 。"
+    "DESCRIPTION": "将所有 bronze:编码 中的牌返回手牌。 NL 其获得 保留 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 将所有 bronze:编码 中的牌返回手牌。 NL 其获得 保留 。 NL 消耗 。"
   },
   "bronze:Batch": {
     "NAME": "批处理",
@@ -457,8 +457,8 @@
     "NAME": "燃烧殆尽",
     "DESCRIPTION": " 消耗 所有 状态牌 ，每张随机造成 !D! 点伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      " NL （攻击 ",
-      " 次。）"
+      "消耗 所有 状态牌 (",
+      "张)，每张随机造成 !D! 点伤害。 NL 消耗 。"
     ]
   },
   "bronze:ShipIt": {
