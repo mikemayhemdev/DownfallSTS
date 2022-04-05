@@ -121,7 +121,7 @@
   },
   "hexamod:GhostLash": {
     "NAME": "유령 채찍",
-    "DESCRIPTION": "휘발성. hexamod:사후세계. NL 피해를 !D! 줍니다. NL 소멸되면 피해를 !D! 줍니다."
+    "DESCRIPTION": "휘발성. hexamod:사후세계. NL 피해를 !D! 줍니다. NL 소멸되면 활력 을 !M! 얻습니다."
   },
   "hexamod:GhostShield": {
     "NAME": "유령 보호",
