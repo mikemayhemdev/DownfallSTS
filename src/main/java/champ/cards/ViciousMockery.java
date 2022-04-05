@@ -74,10 +74,7 @@ public class ViciousMockery extends AbstractChampCard {
         return derp.get(MathUtils.random(derp.size() - 1));
     }
 
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = ((bcombo() || dcombo())) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
-    }
+
 
 
     public void upp() {

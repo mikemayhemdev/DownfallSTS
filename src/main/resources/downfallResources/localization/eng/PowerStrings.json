@@ -273,7 +273,7 @@
     "DESCRIPTIONS": [
       "When this character dies, ALL characters (including you) gain #b",
       " #yRugged and #b",
-      " #yVulnerable. (Rugged: Reduces damage to 1 for a single Attack) "
+      " #yVulnerable. (Rugged: Reduces unblocked damage taken to 3) "
     ]
   },
   "downfall:MonsterVigor": {
