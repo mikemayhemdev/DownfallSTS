@@ -76,6 +76,7 @@ public class Vagrant_Evil extends AbstractImageEvent {
                         logMetricIgnored(ID);
                         this.imageEventText.updateDialogOption(0, OPTIONS[5]);// 75
                         this.imageEventText.clearRemainingOptions();// 76
+                        this.screenNum = 1;
                         this.openMap();// 77
                 }
             default:
