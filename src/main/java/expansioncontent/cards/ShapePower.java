@@ -46,7 +46,11 @@ public class ShapePower extends AbstractExpansionCard implements OctopusCard {
                  break;
             }
             case "expansioncontent:DecaShield": {
-                atb(new ApplyPowerAction(p, p, new PlatedArmorPower(p, block)));
+                if (upgraded){
+                    atb(new ApplyPowerAction(p, p, new PlatedArmorPower(p, 8)));
+                } else {
+                    atb(new ApplyPowerAction(p, p, new PlatedArmorPower(p, 5)));
+                }
             }
         }
     }
