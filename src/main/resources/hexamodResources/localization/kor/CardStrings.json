@@ -306,8 +306,8 @@
   },
   "hexamod:ApocalypticArmor": {
     "NAME": "최후의 심판",
-    "DESCRIPTION": "모든 유령불꽃 !M! 개 hexamod:점화 시 이번 턴 후에 내 턴을 추가로 진행합니다.",
-    "UPGRADE_DESCRIPTION": "유령불꽃 !M! 개 이상 hexamod:점화 시 이번 턴 후에 내 턴을 추가로 진행합니다."
+    "DESCRIPTION": "모든 유령불꽃 !M! 개가 hexamod:점화되어 있다면 이번 턴 후에 내 턴을 추가로 진행합니다.",
+    "UPGRADE_DESCRIPTION": "유령불꽃 !M! 개 이상 hexamod:점화되어 있다면 이번 턴 후에 내 턴을 추가로 진행합니다."
   },
   "hexamod:FirstSeal": {
     "NAME": "첫 번째 봉인",
