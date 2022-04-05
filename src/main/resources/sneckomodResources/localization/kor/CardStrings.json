@@ -7,7 +7,7 @@
   "sneckomod:Cheat": {
     "NAME": "천운",
     "DESCRIPTION": "sneckomod:스네코항체. NL 이번 턴 동안 무작위 수치 범위가 있는 카드를 사용하면 최대 수치로 사용됩니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 이번 턴 동안 무작위 수치 범위가 있는 카드를 사용하면 최대 수치로 사용됩니다. NL 소멸"
+    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 이번 턴 동안 무작위 수치 범위가 있는 카드를 사용하면 최대 수치로 사용됩니다."
   },
   "sneckomod:DangerNoodle": {
     "NAME": "위험한 머리",
