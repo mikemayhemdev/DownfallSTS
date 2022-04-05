@@ -25,7 +25,7 @@ public class HyperBeam extends AbstractBronzeCard {
         baseDamage = DAMAGE;
         isMultiDamage = true;
        // selfRetain = true;
-        exhaust = true;
+       // exhaust = true;
         baseMagicNumber = magicNumber = 5;
         cardsToPreview = new VoidCard();
     }
