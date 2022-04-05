@@ -127,7 +127,7 @@
   "champ:ShieldThrow": {
     "NAME": "爆甲",
     "DESCRIPTION": "造成你当前 格挡 值点伤害两次。 NL 获得2层 脆弱 。 NL champ:防守 champ:连段 ：不获得 脆弱 。",
-    "EXTENDED_DESCRIPTION": "造成你当前 格挡 值(!D!)点伤害两次。 NL 获得2层 脆弱 。 NL champ:防守 champ:连段 ：不获得 脆弱 。"
+    "EXTENDED_DESCRIPTION": ["造成你当前 格挡 值(!D!)点伤害两次。 NL 获得2层 脆弱 。 NL champ:防守 champ:连段 ：不获得 脆弱 。"]
   },
   "champ:FalseCounter": {
     "NAME": "以逸待劳",
@@ -188,7 +188,7 @@
   },
   "champ:SwordThrow": {
     "NAME": "投掷剑刃",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 获得2层 虚弱 。 NL champ:战狂 champ:连段 ：不获得 虚弱 。",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 获得2层 虚弱 。 NL champ:战狂 champ:连段 ：不获得 虚弱 。"
     
   },
   "champ:MurderStrike": {

@@ -38,7 +38,7 @@ public class FalseCounter extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(5);
+        upgradeMagicNumber(1);
         initializeDescription();
     }
 }

@@ -416,7 +416,7 @@
   },
   "champ:FancyFootwork": {
     "NAME": "Fancy Footwork",
-    "DESCRIPTION": "Enter a Stance you aren't in. NL The next time champ:Finisher this turn deals !M! damage to ALL enemies."
+    "DESCRIPTION": "Enter a Stance you aren't in. NL The next champ:Finisher this turn deals !M! damage to ALL enemies."
   },
   "champ:TripleStrike": {
     "NAME": "Triple Strike",

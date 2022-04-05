@@ -50,7 +50,8 @@
   "hermit:CalledShot": {
     "NAME": "콜드샷",
     "DESCRIPTION": "손에 있는 카드의 수만큼 피해를 줍니다. NL hermit:정조준: NL 카드를 !M! 장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": " NL (피해를 !D! 줍니다.)"
+    "UPGRADE_DESCRIPTION": " NL (피해를 !D! 줍니다.)",
+    "EXTENDED_DESCRIPTION": ["손에 있는 카드의 수만큼 피해를 줍니다. NL hermit:정조준: NL 카드를 !M! 장 뽑습니다."]
   },
   "hermit:Dissolve": {
     "NAME": "용해",
@@ -250,7 +251,7 @@
   },
   "hermit:Reprieve": {
     "NAME": "집행유예",
-    "DESCRIPTION": "bronze:소유한 저주를 모두 소멸시킵니다. NL 저주를 13장 이상 *소멸시킨다면 이번 턴 후에 내 턴을 추가로 진행합니다.",
+    "DESCRIPTION": "bronze:소유한 저주를 모두 소멸시킵니다. NL 저주를 !M! 장 이상 *소멸시킨다면 이번 턴 후에 내 턴을 추가로 진행합니다.",
     "EXTENDED_DESCRIPTION": [
       "소유한 저주가 없어."
     ]

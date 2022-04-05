@@ -22,7 +22,7 @@
   "gremlin:WizPotion": {
     "NAME": "마법 핏자 포션",
     "DESCRIPTIONS": [
-      "#y마법을 #b",
+      "#y활력을 #b",
       " 얻습니다."
     ]
   }
