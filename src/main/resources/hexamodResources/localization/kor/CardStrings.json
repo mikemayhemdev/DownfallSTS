@@ -27,7 +27,7 @@
   },
   "hexamod:FastForward": {
     "NAME": "빨리 감기",
-    "DESCRIPTION": "현재 유령불꽃을 hexamod:점화합니다. NL hexamod:팽창합니다. NL 소멸.",
+    "DESCRIPTION": "휘발성. NL 현재 유령불꽃을 hexamod:점화합니다. NL hexamod:팽창합니다.",
     "UPGRADE_DESCRIPTION": "현재 유령불꽃을 hexamod:점화합니다. NL hexamod:팽창합니다."
   },
   "hexamod:Rewind": {
