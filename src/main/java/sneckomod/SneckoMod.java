@@ -488,7 +488,7 @@ public class SneckoMod implements
             if (c != AbstractCard.CardColor.CURSE && c != AbstractCard.CardColor.COLORLESS)
                 validColors.add(c);
         }
-        OffclassHelper.resetOffclassList();
+        OffclassHelper.updateAllUnknownReplacements();
     }
 
     @Override
