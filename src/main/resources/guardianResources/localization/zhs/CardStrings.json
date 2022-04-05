@@ -66,7 +66,11 @@
   },
   "Guardian:GuardianWhirl": {
     "NAME": "守护者旋风",
-    "DESCRIPTION": "有20点 格挡 才能打出。 NL 对所有敌人造成 !D! 点伤害 !M! 次。"
+    "DESCRIPTION": "有20点 格挡 才能打出。 NL 对所有敌人造成 !D! 点伤害 !M! 次。", 
+    "EXTENDED_DESCRIPTION": 
+    [
+      "需要更多格挡。"
+    ]
   },
   "Guardian:VentSteam": {
     "NAME": "蒸汽喷射",
