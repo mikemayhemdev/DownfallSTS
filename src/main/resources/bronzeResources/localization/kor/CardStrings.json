@@ -661,6 +661,6 @@
   },
   "bronze:Undervolt": {
     "NAME": "저전압",
-    "DESCRIPTION": "적 전체가 힘을 !M! 잃습니다. NL 화상 을 2 얻습니다. NL 소멸."
+    "DESCRIPTION": "적 전체가 힘을 !M! 잃습니다. NL *화상을 2장 얻습니다. NL 소멸."
   }
 }
