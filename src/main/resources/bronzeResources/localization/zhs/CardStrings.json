@@ -229,8 +229,8 @@
   },
   "bronze:ByteShift": {
     "NAME": "字节位移",
-    "DESCRIPTION": "将所有 *bronze:编码 中的牌返回手牌。 NL 其获得 保留 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 将所有 *bronze:编码 中的牌返回手牌。 NL 其获得 保留 。 NL 消耗 。"
+    "DESCRIPTION": "将所有 bronze:编码 中的牌返回手牌。 NL 其获得 保留 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 将所有 bronze:编码 中的牌返回手牌。 NL 其获得 保留 。 NL 消耗 。"
   },
   "bronze:Batch": {
     "NAME": "批处理",
