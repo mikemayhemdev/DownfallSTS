@@ -130,8 +130,8 @@
   },
   "sneckomod:SoulExchange": {
     "NAME": "영혼의 교환",
-    "DESCRIPTION": "sneckomod:스네코항체. NL 카드를 1장 뽑고 카드를 1장 선택합니다. 선택한 카드는 동일한 직업 카드로 sneckomod:변화시킵니다.",
-    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 카드를 !M! 장 뽑고 카드를 1장 선택합니다. 선택한 카드는 동일한 직업 카드로 sneckomod:변화시킵니다.",
+    "DESCRIPTION": "sneckomod:스네코항체. NL 카드를 1장 뽑고 카드를 선택합니다. 손에 있는 카드를 그 카드와 같은 직업 카드로 sneckomod:변화시킵니다.",
+    "UPGRADE_DESCRIPTION": "sneckomod:스네코항체. NL 카드를 !M! 장 뽑고 카드를 선택합니다. 손에 있는 카드를 그 카드와 같은 직업 카드로 sneckomod:변화시킵니다.",
     "EXTENDED_DESCRIPTION": [
       "영혼 교환으로 소멸시킬 카드를 고르십시오."
     ]

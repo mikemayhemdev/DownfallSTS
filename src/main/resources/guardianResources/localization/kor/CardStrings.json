@@ -244,7 +244,7 @@
   },
   "Guardian:GemFire": {
     "NAME": "보석 대포",
-    "DESCRIPTION": "bronze:소유한 guardianmod:보석과 보석이 장착된 카드를 모두 소멸시킵니다. 소멸된 guardianmod:보석 하나당 무작위 적에게 피해를 !D! 줍니다. NL 소멸."
+    "DESCRIPTION": "bronze:소유한 guardianmod:보석과 장착된 guardianmod:보석을 모두 소멸시킵니다. 소멸된 guardianmod:보석 하나당 무작위 적에게 피해를 !D! 줍니다. NL 소멸."
   },
   "Guardian:ChargeCore": {
     "NAME": "코어 충전",
