@@ -68,8 +68,8 @@
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "疾进",
-    "DESCRIPTION": " hexamod:点燃 NL 鬼火时，获得 !M! 层 guardianmod:临时 力量 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL hexamod:点燃 NL 鬼火时，获得 !M! 层 guardianmod:临时 力量 。"
+    "DESCRIPTION": " hexamod:点燃 鬼火时，获得 !M! 层 guardianmod:临时 力量 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL hexamod:点燃 鬼火时，获得 !M! 层 guardianmod:临时 力量 。"
   },
   "hexamod:GhostOfSpirePresent": {
     "NAME": "此刻",
@@ -236,7 +236,7 @@
   "hexamod:TurnItUp": {
     "NAME": "高热激发",
     "DESCRIPTION": "临时获得 6 层 hexamod:热烈 。 NL 持续X+1回合。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 6 点 hexamod:热烈 。 NL 在X+1回合后失去。 NL 获得 [E] 。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "临时获得 6 层 hexamod:热烈 。 NL 持续X+1回合。 NL 获得 [E] 。 NL 消耗 。"
   },
   "hexamod:HeatMetal": {
     "NAME": "高热金属",
