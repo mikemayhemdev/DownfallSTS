@@ -73,7 +73,7 @@
   },
   "hexamod:GhostOfSpirePresent": {
     "NAME": "此刻",
-    "DESCRIPTION": "回合开始时获得 [E] 。 NL 回合结束时不再自动 hexamod:步进 。"
+    "DESCRIPTION": "回合开始时获得 [E] 。 NL 回合结束时不再 hexamod:步进 。"
   },
   "hexamod:HauntingEcho": {
     "NAME": "回声萦绕",
