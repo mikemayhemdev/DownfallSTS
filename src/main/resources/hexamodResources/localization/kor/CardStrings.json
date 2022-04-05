@@ -121,7 +121,7 @@
   },
   "hexamod:GhostLash": {
     "NAME": "유령 채찍",
-    "DESCRIPTION": "휘발성. hexamod:사후세계. NL 피해를 !D! 줍니다. NL 소멸되면 피해를 !D! 줍니다."
+    "DESCRIPTION": "휘발성. hexamod:사후세계. NL 피해를 !D! 줍니다. NL 소멸되면 활력 을 !M! 얻습니다."
   },
   "hexamod:GhostShield": {
     "NAME": "유령 보호",
@@ -251,8 +251,8 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "불씨의 비",
-    "DESCRIPTION": "무작위 적들에게 피해를 !D! 만큼 X번 주고 hexamod:영혼화상을 !burny! 만큼 X번 부여합니다.",
-    "UPGRADE_DESCRIPTION": "무작위 적들에게 피해를 !D! 만큼 X번 주고 hexamod:영혼화상을 !burny! 만큼 X번 부여하고 약화를 1만큼 X번 부여합니다."
+    "DESCRIPTION": "피해를 !D! 만큼 X번 주고 hexamod:영혼화상을 !burny! 만큼 X번 부여합니다.",
+    "UPGRADE_DESCRIPTION": "적들에게 피해를 !D! 만큼 X번 주고 hexamod:영혼화상을 !burny! 만큼 X번 부여하고 약화를 1만큼 X번 부여합니다."
   },
   "hexamod:VolcanoVisage": {
     "NAME": "화산의 얼굴",
