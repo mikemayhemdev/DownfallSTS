@@ -1,0 +1,656 @@
+{
+  "bronze:DazingPulse": {
+    "NAME": "Onde Étrange",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez !B! d'Armure NL bronze:Compilation *Erreur - bronze:Insérez !M! *Hébétement.",
+    "EXTENDED_DESCRIPTION": [
+      "dazing",
+      "Pulse"
+    ]
+  },
+  "bronze:Spike": {
+    "NAME": "Picot",
+    "DESCRIPTION": "Infligez !D! dégâts. NL bronze:Compilation - Gagnez !M! d'Épines.",
+    "EXTENDED_DESCRIPTION": [
+      "spiky",
+      "Spike"
+    ]
+  },
+  "bronze:Explode": {
+    "NAME": "Explosion",
+    "DESCRIPTION": "Appliquez !M! de hexamod:Brûlure à TOUS les ennemis. NL bronze:Compilation *Erreur - bronze:Insérez !bauto! *Brûlure.",
+    "EXTENDED_DESCRIPTION": [
+      "unstable",
+      "Bomb"
+    ]
+  },
+  "bronze:DonuBeam": {
+    "NAME": "Proto-Laser",
+    "DESCRIPTION": "Infligez !D! dégâts !M! fois. NL bronze:Compilation - Gagnez !M! de force et perdez !bauto! de Dextérité.",
+    "EXTENDED_DESCRIPTION": [
+      "smooth",
+      "Blast"
+    ]
+  },
+  "bronze:DecaBeam": {
+    "NAME": "Proto-Bouclier",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL bronze:Compilation - Gagnez !M! d'Armure Plaquée et bronze:Insérez !bauto! *Hébétement.",
+    "EXTENDED_DESCRIPTION": [
+      "jagged",
+      "Barrier"
+    ]
+  },
+  "bronze:Strike": {
+    "NAME": "Frappe",
+    "DESCRIPTION": "Infligez !D! dégâts.",
+    "EXTENDED_DESCRIPTION": [
+      "simple",
+      "Strike"
+    ]
+  },
+  "bronze:Defend": {
+    "NAME": "Défense",
+    "DESCRIPTION": "Gagnez !B! d'Armure.",
+    "EXTENDED_DESCRIPTION": [
+      "basic",
+      "Defend"
+    ]
+  },
+  "bronze:FunctionCard": {
+    "NAME": "()",
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": [
+      "function()",
+      "Perfection()",
+      "()"
+    ]
+  },
+  "bronze:Goto": {
+    "NAME": "Goto",
+    "DESCRIPTION": "Piochez !M! carte. NL bronze:Compilation - Au prochain tour, piochez !M! carte.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cartes. NL bronze:Compile - Au prochain tour, piochez !M! cartes.",
+    "EXTENDED_DESCRIPTION": [
+      "running",
+      "Sprint"
+    ]
+  },
+  "bronze:Replicate": {
+    "NAME": "Réplique",
+    "DESCRIPTION": "Infligez !D! dégâts.",
+    "EXTENDED_DESCRIPTION": [
+      "copying",
+      "Copy"
+    ]
+  },
+  "bronze:Branch": {
+    "NAME": "Branches",
+    "DESCRIPTION": "Choisissez - Infliigez !D! dégâts ou gagnez !B! d'Armure. NL bronze:Encodez l'option non-choisie. NL Épuisement.",
+    "EXTENDED_DESCRIPTION": [
+      "Branch: Attack",
+      "Deal !D! damage.",
+      "Branch: Block",
+      "Gain !B! Block."
+    ]
+  },
+  "bronze:DelayedSlice": {
+    "NAME": "Tranche différée",
+    "DESCRIPTION": "Infigez !D! dégâts. NL bronze:Compilation - Tous les ennemis perdent !M! PV.",
+    "EXTENDED_DESCRIPTION": [
+      "delayed",
+      "Slice"
+    ]
+  },
+  "bronze:WhirlingStrike": {
+    "NAME": "Tir perçant",
+    "DESCRIPTION": "Infligez !D! dégâts à tous les ennemis.",
+    "EXTENDED_DESCRIPTION": [
+      "piercing",
+      "Shot"
+    ]
+  },
+  "bronze:Iterate": {
+    "NAME": "Réitération",
+    "DESCRIPTION": "Infligez !D! dégâts !M! fois.",
+    "EXTENDED_DESCRIPTION": [
+      "parsed",
+      "Iterate"
+    ]
+  },
+  "bronze:Separator": {
+    "NAME": "Séparateur",
+    "DESCRIPTION": "Infligez !D! dégâts. π NL Quand bronze:Encodée au milieu, augmentez ses dégâts de !M!.",
+    "EXTENDED_DESCRIPTION": [
+      "split",
+      "Child"
+    ]
+  },
+  "bronze:Overheat": {
+    "NAME": "Surchauffe",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Retirez la prochaine bronze:Compilation *Erreur que vous auriez bronze:Encodé."
+  },
+  "bronze:CutThrough": {
+    "NAME": "Couper à travers",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Scrutez !M!. NL bronze:Compilation - Piochez !bauto! cartes.",
+    "EXTENDED_DESCRIPTION": [
+      "cutting",
+      "Cut"
+    ]
+  },
+  "bronze:RecursiveStrike": {
+    "NAME": "Frappe récursive",
+    "DESCRIPTION": "Infligez !D! dégâts !M! fois. NL bronze:Compilation - bronze:Encodez !M! copies de *Frappe.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts !M! fois. NL bronze:Compilation - bronze:Encodez !M! copies de *Frappe+.",
+    "EXTENDED_DESCRIPTION": [
+      "recursive",
+      "Recur"
+    ]
+  },
+  "bronze:DarkDash": {
+    "NAME": "Ruée obscure",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Infligez !D! dégâts. NL bronze:Compilation *Erreur - bronze:Insérez un *Néant.",
+    "EXTENDED_DESCRIPTION": [
+      "dark",
+      "Dash"
+    ]
+  },
+  "bronze:OilSpill": {
+    "NAME": "Flaque d'huile",
+    "DESCRIPTION": "Infligez !D! dégâts et appliquez !M! de Poison. NL bronze:Compilation *Erreur - bronze:Insérez un *Englué.",
+    "EXTENDED_DESCRIPTION": [
+      "oily",
+      "Spill"
+    ]
+  },
+  "bronze:WildBeam": {
+    "NAME": "Laser furieux",
+    "DESCRIPTION": "Infligez !D! dégâts. NL bronze:Compilation *Erreur - bronze:Insérez une *Blessure.",
+    "EXTENDED_DESCRIPTION": [
+      "wild",
+      "Beam"
+    ]
+  },
+  "bronze:Frontload": {
+    "NAME": "Remparts",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL bronze:Compilation - La Fonction gagne Retenue.",
+    "EXTENDED_DESCRIPTION": [
+      "sturdy",
+      "Wall"
+    ]
+  },
+  "bronze:DelayedGuard": {
+    "NAME": "Garde différée",
+    "DESCRIPTION": "Au prochain tour, gagnez !B! d'Armure.",
+    "EXTENDED_DESCRIPTION": [
+      "delayed",
+      "Guard"
+    ]
+  },
+  "bronze:Shield": {
+    "NAME": "Bouclier collant",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL bronze:Insérez un *Englué.",
+    "EXTENDED_DESCRIPTION": [
+      "sticky",
+      "Shield"
+    ]
+  },
+  "bronze:Deprecate": {
+    "NAME": "Désapprouvement",
+    "DESCRIPTION": "Appliquez !M! de Faiblesse à TOUS les ennemis. NL bronze:Compilation *Erreur - Obtenez Faiblesse.",
+    "EXTENDED_DESCRIPTION": [
+      "old",
+      "Insult"
+    ]
+  },
+  "bronze:Invalidate": {
+    "NAME": "Invalidation",
+    "DESCRIPTION": "Appliquez !M! de Vulnerabilité à TOUS les ennemis. NL bronze:Compilation *Erreur - Obtenez Vulnerabilité.",
+    "EXTENDED_DESCRIPTION": [
+      "invalid",
+      "Error"
+    ]
+  },
+  "bronze:Shell": {
+    "NAME": "Blockchain",
+    "DESCRIPTION": "Gain !M! de bronze:Flou.",
+    "UPGRADE_DESCRIPTION": "Gagnez !M! de bronze:Flou. NL bronze:Compilation - Gagnez !M! de bronze:Flou.",
+    "EXTENDED_DESCRIPTION": [
+      "block",
+      "Chain"
+    ]
+  },
+  "bronze:BitShift": {
+    "NAME": "Décalage binaire",
+    "DESCRIPTION": "Choisissez une carte Encodée à retourner dans votre main. NL Elle gagne Retenue. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Retenue. NL Choisissez une carte Encodée à retourner dans votre main. NL Elle gagne Retenue. NL Épuisement."
+  },
+  "bronze:ByteShift": {
+    "NAME": "Décalage d'octet",
+    "DESCRIPTION": "Remettez toutes les cartes Encodées dans votre main. NL Elles gagnent Retenue. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Retenue. NL Remettez toutes les cartes Encodées dans votre main. NL Elles gagnent Retenue. NL Epuisement."
+  },
+  "bronze:Batch": {
+    "NAME": "Regroupement",
+    "DESCRIPTION": "Créez immédiatement une Fonction à partir des cartes de la Séquence. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Créez immédiatement une Fonction à partir des cartes de la Séquence."
+  },
+  "bronze:Constructor": {
+    "NAME": "Constructeur",
+    "DESCRIPTION": "Gagnez !B! d'Armure. π NL Quand bronze:Encodée, si elle est la première carte de la Séquence, augmentez son Armure de !M!.",
+    "EXTENDED_DESCRIPTION": [
+      "build",
+      "Sadness",
+      "Greatness"
+    ]
+  },
+  "bronze:Terminator": {
+    "NAME": "Terminateur",
+    "DESCRIPTION": "bronze:Compilation - Si il s'agit de la dernière carte de la Séquence, la Fonction gagne 'Jouez ceci deux fois'.",
+    "EXTENDED_DESCRIPTION": [
+      "sad",
+      "End"
+    ]
+  },
+  "bronze:Overload": {
+    "NAME": "Copier coller",
+    "DESCRIPTION": "Jouez une copie de chaque carte Encodée. Elle ne seront pas Encodées. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Jouez une copie de chaque carte Encodée. Elles ne seront pas Encodées."
+  },
+  "bronze:GetLatest": {
+    "NAME": "Dernière version",
+    "DESCRIPTION": "Ajoutez une carte aléatoire avec bronze:Encode dans votre main. NL Elle coûte 0. NL Épuisement."
+  },
+  "bronze:Flail": {
+    "NAME": "Fléau",
+    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis !bauto! fois. NL bronze:Compilation - Gagnez !M! d'Artéfact.",
+    "EXTENDED_DESCRIPTION": [
+      "flailing",
+      "Flail"
+    ]
+  },
+  "bronze:DigitalCarnage": {
+    "NAME": "Carnage digital",
+    "DESCRIPTION": "Infligez !D! dégâts. NL bronze:Compilation *Erreur - La Fonction est Ethérée.",
+    "EXTENDED_DESCRIPTION": [
+      "digital",
+      "Carnage"
+    ]
+  },
+  "bronze:NullPointer": {
+    "NAME": "Pointeur zéro",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez !B! d'Armure. NL bronze:Compilation *Erreur - La Fonction est Injouable.",
+    "EXTENDED_DESCRIPTION": [
+      "null",
+      "Pointer"
+    ]
+  },
+  "bronze:Fortify": {
+    "NAME": "Fortification",
+    "DESCRIPTION": "Infligez !D! dégâts. NL bronze:Compilation - Gagnez !M! de Dexterité.",
+    "EXTENDED_DESCRIPTION": [
+      "solid",
+      "Fortress"
+    ]
+  },
+  "bronze:BronzeOrb": {
+    "NAME": "Orbe de bronze",
+    "DESCRIPTION": "Inné. NL Infligez !D! dégâts. NL Gagnez !B! d'Armure. NL bronze:Encodez une carte aléatoire avec bronze:Encode dans votre pioche. NL Épuisement."
+  },
+  "bronze:Virus": {
+    "NAME": "Virus",
+    "DESCRIPTION": "Retenue. NL Infligez !D! dégâts. NL Transformez toutes les cartes en main en *Minilaser. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Retenue. NL Infligez !D! dégâts. NL Transformez toutes les cartes en main en *Minilaser+. NL Épuisement."
+  },
+  "bronze:Backtrace": {
+    "NAME": "Backtrace",
+    "DESCRIPTION": "Inné. NL \u00A0 Infligez !D! dégâts. NL bronze:Compilation *Erreur - La Fonction gagne Épuisement.",
+    "EXTENDED_DESCRIPTION": [
+      "sneaky",
+      "Trace"
+    ]
+  },
+  "bronze:CloningBeam": {
+    "NAME": "Conflit fusionnel",
+    "DESCRIPTION": "Infligez !D! dégâts. NL La prochaine fois que vous bronze:Encodez une carte, bronze:Encodez une copie de celle-ci. NL Épuisment.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL La prochaine fois que vous bronze:Encodez une carte, bronze:Encodez une copie de celle-ci."
+  },
+  "bronze:FollowUp": {
+    "NAME": "Suivi des étapes",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez !B! d'Armure. NL Si la dernière carte jouée était une Fonction, jouez cette carte à nouveau."
+  },
+  "bronze:ChosenStrike": {
+    "NAME": "Frappe de cultiste",
+    "DESCRIPTION": "Infligez !D! dégâts. NL bronze:Compilation - Augmentez les dégâts de cette carte de !M! de façon permanente.",
+    "EXTENDED_DESCRIPTION": [
+      "cultist",
+      "Caw"
+    ]
+  },
+  "bronze:ClassDefault": {
+    "NAME": "Classe par défaut",
+    "DESCRIPTION": "Ajoutez une copie de la première carte de la Séquence sur les !M! prochaines Séquences automatiquement.",
+    "UPGRADE_DESCRIPTION": "Retenue. NL Ajoutez une copie de la première carte de la Séquence sur les !M! prochaines Séquences automatiquement."
+  },
+  "bronze:ItsAFeature": {
+    "NAME": "C'est une Feature",
+    "DESCRIPTION": "Lorsque vous piochez une Malédiction ou un Statut, gagnez 1 de Force Temporaire et 1 de Dextérité Temporaire.",
+    "UPGRADE_DESCRIPTION": "Inné. NL Lorsque vous piochez une Malédiction ou un Statut, gagnez 1 de Force Temporaire et 1 de Dextérité Temporaire."
+  },
+  "bronze:MinorBeam": {
+    "NAME": "Minilaser",
+    "DESCRIPTION": "Infligez !D! dégâts.",
+    "EXTENDED_DESCRIPTION": [
+      "minor",
+      "Scratch"
+    ]
+  },
+  "bronze:InfiniteBeams": {
+    "NAME": "Lasers infinis",
+    "DESCRIPTION": "Au début de chaque tour, ajoutez un *Minilaser dans votre main.",
+    "UPGRADE_DESCRIPTION": "Au début de chaque tour, ajoutez un *Minilaser+ dans votre main."
+  },
+  "bronze:Optimize": {
+    "NAME": "Optimisation",
+    "DESCRIPTION": "Améliorez les !M! prochaines cartes que vous bronze:Encodez et qui peuvent être améliorées."
+  },
+  "bronze:MaxOutput": {
+    "NAME": "Rendement max",
+    "DESCRIPTION": "Piochez !M! cartes. NL Au début de chaque tour, piochez 1 carte additionnelle et bronze:Insérez 1 *Hébétement."
+  },
+  "bronze:Mutator": {
+    "NAME": "Mutateur",
+    "DESCRIPTION": "Gagnez 1 de Force. NL Transformez un Statut de votre main en une copie de ceci.",
+    "UPGRADE_DESCRIPTION": "Retenue. NL Gagnez 1 de Force. NL Transformez un Statut de votre main en une copie de ceci."
+  },
+  "bronze:Allocate": {
+    "NAME": "Ventilation",
+    "DESCRIPTION": "Gagnez [E] pour chaque Statut de votre pioche.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Gagnez ",
+      " [E] .)"
+    ]
+  },
+  "bronze:Decompile": {
+    "NAME": "Décompilation",
+    "DESCRIPTION": "Épuisez toutes les cartes Encodées. Gagnez [E] et piochez une carte pour chaque carte Épuisée. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Retenue. NL Épuisez toutes les cartes Encodées. Gagnez [E] et piochez une carte pour chaque carte Épuisée. NL Épuisement."
+  },
+  "bronze:ChildClass": {
+    "NAME": "Invocation",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL bronze:Compilation - Gagnez autant d'[E] que le coût total des cartes Encodées.",
+    "EXTENDED_DESCRIPTION": [
+      "invoked",
+      "Energy"
+    ]
+  },
+  "bronze:Repair": {
+    "NAME": "Réparations",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL bronze:Compilation - Soignez-vous de !M! PV",
+    "EXTENDED_DESCRIPTION": [
+      "tinkers",
+      "Wrench"
+    ]
+  },
+  "bronze:Boost": {
+    "NAME": "Boost",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL bronze:Compilation - Gagnez !M! de Force.",
+    "EXTENDED_DESCRIPTION": [
+      "boosted",
+      "Boost"
+    ]
+  },
+  "bronze:Safeguard": {
+    "NAME": "Sauvegarde",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL bronze:Compilation *Erreur - Obtenez !M! de Fragilité.",
+    "EXTENDED_DESCRIPTION": [
+      "safe",
+      "Guard"
+    ]
+  },
+  "bronze:BronzeArmor": {
+    "NAME": "Armure de Bronze",
+    "DESCRIPTION": "Gagnez !bauto! d'Artéfact. NL bronze:Compilation *Erreur - TOUS les ennemis gagnent !M! d'Artifact.",
+    "EXTENDED_DESCRIPTION": [
+      "bronze",
+      "Armor"
+    ]
+  },
+  "bronze:ForLoop": {
+    "NAME": "Boucle bouclée",
+    "DESCRIPTION": "La prochaine carte que vous bronze:Encodez provoque X copies additionnelles d'être aussi bronze:Encodées. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "La prochaine carte que vous bronze:Encodez provoque X+1 copies additionnelles d'être aussi bronze:Encodées. NL Épuisement."
+  },
+  "bronze:Philosophize": {
+    "NAME": "Philosopher",
+    "DESCRIPTION": "Gagnez !bauto! de Force. NL bronze:Compilation *Erreur - TOUS les ennemis gagnent !M! de Force.",
+    "EXTENDED_DESCRIPTION": [
+      "smart",
+      "Idea"
+    ]
+  },
+  "bronze:Return": {
+    "NAME": "Retour",
+    "DESCRIPTION": "Mettez une carte de votre défausse au dessus de votre pioche. NL Gagnez [E] au prochain tour. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Mettez une carte de votre défausse au dessus de votre pioche. NL Gagnez [E] [E] au prochain tour."
+  },
+  "bronze:ForceShield": {
+    "NAME": "Bouclier de Force",
+    "DESCRIPTION": "Coûte 1 [E] de moins pour chaque Fonction créée ce combat. NL Gagnez !B! d'Armure."
+  },
+  "bronze:Format": {
+    "NAME": "Formatage",
+    "DESCRIPTION": "bronze:Encodez X copies de *Fragment. NL Gagnez [E] . NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "bronze:Encodez X+1 copies de *Fragment. NL Gagnez [E] . NL Épuisement."
+  },
+  "bronze:FormatEncoded": {
+    "NAME": "Fragment",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez !B! d'Armure.",
+    "EXTENDED_DESCRIPTION": [
+      "clean",
+      "Fragment"
+    ]
+  },
+  "bronze:BurnOut": {
+    "NAME": "Burnout",
+    "DESCRIPTION": "Infligez !D! dégâts à un ennemi aléatoire pour tous vos Statuts, puis Épuisez-les. NL bronze:Insérez 3 *Brûlures.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Hits ",
+      " times.)"
+    ]
+  },
+  "bronze:ShipIt": {
+    "NAME": "Livraison express",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Infligez !M! dégâts additionnels pour tous vos Statuts."
+  },
+  "bronze:Break": {
+    "NAME": "Fissure",
+    "DESCRIPTION": "Infligez !D! dégâts. NL bronze:Compilation *Erreur - bronze:Insérez !M! cartes Statut aléatoires.",
+    "EXTENDED_DESCRIPTION": [
+      "broken",
+      "Smash"
+    ]
+  },
+  "bronze:InfiniteLoop": {
+    "NAME": "Boucle infinie",
+    "DESCRIPTION": "Infligez !D! dégâts. NL bronze:Compilation - Ajoutez une copie de ceci dans votre main et augmentez ses dégâts de !M!.",
+    "UPGRADE_DESCRIPTION": "Retenue. NL Infligez !D! dégâts. NL bronze:Compilation - Ajoutez une copie de ceci dans votre main et augmentez ses dégâts de !M!.",
+    "EXTENDED_DESCRIPTION": [
+      "infinite",
+      "Loop"
+    ]
+  },
+  "bronze:Library": {
+    "NAME": "Bibliothèque",
+    "DESCRIPTION": "Au début de votre tour, ajoutez une carte aléatoire avec bronze:Encode dans votre main. NL Elle coûte 0."
+  },
+  "bronze:Verify": {
+    "NAME": "Forme sentinelle",
+    "DESCRIPTION": "Etherée. NL La première fois que vous créez ou piochez une Fonction chaque tour, augmentez tous les nombres dessus par 1.",
+    "UPGRADE_DESCRIPTION": "La première fois que vous créez ou piochez une Fonction chaque tour, augmentez tous les nombres dessus par 1."
+  },
+  "bronze:BronzeHeatsink": {
+    "NAME": "Dissipateur de bronze",
+    "DESCRIPTION": "Lorsque vous jouez une Fonction, piochez une carte.",
+    "UPGRADE_DESCRIPTION": "Lorsque vous jouez une Fonction, piochez 2 cartes."
+  },
+  "bronze:HardenedForm": {
+    "NAME": "Invocation d'orbe",
+    "DESCRIPTION": "Lorsque vous créez ou jouez une Fonction, gagnez !M! d'Armure et infligez !M! dégâts à un ennemi aléatoire."
+  },
+  "bronze:CopyPaste": {
+    "NAME": "Copier-coller",
+    "DESCRIPTION": "Ce tour-ci, votre prochaine Fonction sera jouée 2 fois.",
+    "UPGRADE_DESCRIPTION": "Retenue. NL Ce tour-ci, votre prochaine Fonction sera jouée 2 fois."
+  },
+  "bronze:LegacyCode": {
+    "NAME": "Code hérité",
+    "DESCRIPTION": "Retenue. NL Mettez !M! carte de votre défausse vers votre main.",
+    "UPGRADE_DESCRIPTION": "Retenue. NL Mettez !M! cartes de votre défausse vers votre main."
+  },
+  "bronze:Repulsor": {
+    "NAME": "Répulseur",
+    "DESCRIPTION": "Épuisez la première carte Statut ou Malédiction que vous piochez et piochez une carte pour la remplacer.",
+    "UPGRADE_DESCRIPTION": "Inné. NL Épuisez la première carte Statut ou Malédiction que vous piochez et piochez une carte pour la remplacer."
+  },
+  "bronze:Debug": {
+    "NAME": "Debug",
+    "DESCRIPTION": "Retirez tous les effets des bronze:Compilation *Erreur des cartes Encodées. NL Épuisement."
+  },
+  "bronze:HyperBeam": {
+    "NAME": "ULTRALASER",
+    "DESCRIPTION": "Retenue. NL Infligez !D! dégâts à TOUS les ennemis. NL Mettez 5 *Néant en haut de votre pioche. NL Quand Retenue, baissez son coût de 1 pour ce combat."
+  },
+  "bronze:Hardcode": {
+    "NAME": "Hardcode",
+    "DESCRIPTION": "La prochaine fois que vous créez une Fonction, ajoutez-la à votre deck. NL Retirez toutes les cartes qui composent la Fonction (Cela inclut également cette carte)."
+  },
+  "bronze:SpaghettiCode": {
+    "NAME": "Spaghetti Code",
+    "DESCRIPTION": "Jusqu'à ce que la Séquence soit complète, choisissez 1 de 3 cartes aléatoires à bronze:Encoder. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Jusqu'à ce que la Séquence soit complète, choisissez 1 de 3 cartes aléatoires à bronze:Encoder."
+  },
+  "bronze:Assembly": {
+    "NAME": "Assemblage",
+    "DESCRIPTION": "Scrutez !M!. NL bronze:Encodez toutes les cartes avec bronze:Encode qui ont été défaussées dans l'ordre choisi. NL Exhaust."
+  },
+  "bronze:FineTuning": {
+    "NAME": "Réglage Précis",
+    "DESCRIPTION": "Augmentez tous les nombres des cartes Encodées de !M!. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Retenue. NL Augmentez tous les nombres des cartes Encodées de !M!. NL Épuisement."
+  },
+  "bronze:CleanCode": {
+    "NAME": "Code Clean",
+    "DESCRIPTION": "Retirez tous les effets des all bronze:Compilation *Erreur des cartes Encodées. NL Dure pour les !M! prochaines Fonctions créées."
+  },
+  "bronze:BranchBlock": {
+    "NAME": "Branche: Armure",
+    "DESCRIPTION": "Gagnez !B! d'Armure.",
+    "EXTENDED_DESCRIPTION": [
+      "forked",
+      "Branch"
+    ]
+  },
+  "bronze:BranchHit": {
+    "NAME": "Branche: Attaque",
+    "DESCRIPTION": "Infligez !D! dégâts.",
+    "EXTENDED_DESCRIPTION": [
+      "forked",
+      "Branch"
+    ]
+  },
+  "bronze:Ignite": {
+    "NAME": "Flambage",
+    "DESCRIPTION": "Apply !M! de hexamod:Brûlure. NL At the end of your turn, take 2 damage.",
+    "UPGRADE_DESCRIPTION": "Apply !M! hexamod:Brûlure. NL At the end of your turn, take 4 damage."
+  },
+  "bronze:IntoTheVoid": {
+    "NAME": "Dans le Néant",
+    "DESCRIPTION": "Ethérée. NL L'ennemi perd !M! de Force ce tour. NL Lorsque cette carte est piochée, perdez [E]. NL Épuisement."
+  },
+  "bronze:Lubricant": {
+    "NAME": "Lubrifiant",
+    "DESCRIPTION": "Piochez !M! cartes. NL Épuisement."
+  },
+  "bronze:GrievousWound": {
+    "NAME": "Blessure grave",
+    "DESCRIPTION": "Appliquez !M! de Vulnerabilité."
+  },
+  "bronze:Daze": {
+    "NAME": "Etourdissement",
+    "DESCRIPTION": "Ethérée. NL Appliquez !M! de Faiblesse. NL Épuisement."
+  },
+  "bronze:UnknownStatus": {
+    "NAME": "Perplexe",
+    "DESCRIPTION": "Infligez !B! d'Armure."
+  },
+  "bronze:TinkerersToolbox": {
+    "NAME": "Outils de Dev",
+    "DESCRIPTION": "Retenue. NL Choisissez entre *Debug, *Regroupement, *Décompilation, and *Décalage *d'octet. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Retenue. NL Choisissez entre *Debug, *Regroupement, *Décompilation, and *Décalage *d'octet."
+  },
+  "bronze:Refactor": {
+    "NAME": "Remaniement",
+    "DESCRIPTION": "Scrutez !M!. NL Épuisez toutes les cartes défaussées. NL Gagnez !B! d'Armure pour chaque carte Statut Épuisée."
+  },
+  "bronze:Turbo": {
+    "NAME": "Turbo",
+    "DESCRIPTION": "Gagnez [E] [E] . NL Ajoutez un *Néant dans votre défausse.",
+    "UPGRADE_DESCRIPTION": "Gagnez [E] [E] [E]. NL Ajoutez un *Néant dans votre défausse."
+  },
+  "bronze:BugBarrage": {
+    "NAME": "Barrage buggé",
+    "DESCRIPTION": "Ajoutez 1 *Blessure dans votre main. NL bronze:Cyclez chaque Statut dans votre main, infligeant !D! de dégâts pour chacune.",
+    "UPGRADE_DESCRIPTION": "Ajoutez !M! *Blessure dans votre main. NL bronze:Cyclez chaque Statut dans votre main, infligeant !D! de dégâts pour chacune.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Hits ",
+      " times.)"
+    ]
+  },
+  "bronze:BuggyMess": {
+    "NAME": "Désordre de bugs",
+    "DESCRIPTION": "bronze:Insérez un Statut aléatoire. NL Gagnez !M! [E] .",
+    "EXTENDED_DESCRIPTION": [
+      "buggy",
+      "Mess"
+    ]
+  },
+  "bronze:FindAndReplace": {
+    "NAME": "Trouver et Remplacer",
+    "DESCRIPTION": "Récupérez une carte de votre pioche ou de votre défausse. NL Ajoutez un *Hébétement là où vous avez pris votre carte. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Récupérez une carte de votre pioche ou de votre défausse. NL Épuisement.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose."
+    ]
+  },
+  "bronze:ThunderWave": {
+    "NAME": "Vague électrique",
+    "DESCRIPTION": "Infligez !D! dégâts à un ennemi aléatoire pour chaque Fonction créée durant ce combat.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Hits ",
+      " times.)"
+    ]
+  },
+  "bronze:AlphaBuild": {
+    "NAME": "Early Access",
+    "DESCRIPTION": "Infligez !D! dégâts. NL bronze:Insérez un Statut aléatoire. NL bronze:Compilation - bronze:Insérez *Beta *Build.",
+    "UPGRADE_DESCRIPTION": "Inné. NL \u00A0 Infligez !D! dégâts. NL bronze:Insérez un Statut aléatoire. NL bronze:Compilation - bronze:Insérez *Beta *Build.",
+    "EXTENDED_DESCRIPTION": [
+      "rough",
+      "Alpha"
+    ]
+  },
+  "bronze:BetaBuild": {
+    "NAME": "Beta Build",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL bronze:Insérez un Statut aléatoire. NL bronze:Compilation - bronze:Insérez *Full *Release.",
+    "EXTENDED_DESCRIPTION": [
+      "early",
+      "Beta"
+    ]
+  },
+  "bronze:FullRelease": {
+    "NAME": "Full Release",
+    "DESCRIPTION": "bronze:Compilation - La Fonction devient un Pouvoir qui active ses effets au début de chaque tour.",
+    "EXTENDED_DESCRIPTION": [
+      "full",
+      "Release"
+    ]
+  }
+}

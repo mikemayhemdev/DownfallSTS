@@ -1,0 +1,9 @@
+{
+  "expansioncontent:StudyCardRelic": {
+    "NAME": "Petit chapeau melon",
+    "FLAVOR": "Celui qui contrôle ce chapeau, contrôle la tour.",
+    "DESCRIPTIONS": [
+      "Au début du combat, ajoutez une carte Etude de la Tour dans votre main. Elle coûte 0."
+    ]
+  }
+}

@@ -1,0 +1,521 @@
+{
+  "Slimebound:PotencyPower": {
+    "NAME": "Potentiel",
+    "DESCRIPTIONS": [
+      "Augmente les dégâts de vos Slimes invoqués de #b",
+      "Augmente leurs effets secondaires de #b",
+	  "."
+    ]
+  },
+  "Slimebound:SlimedPower": {
+    "NAME": "Goop",
+    "DESCRIPTIONS": [
+      "La prochaine #yAttaque contre cette ennemi infligera #b",
+      " dégâts de plus, consumant tout le #yGoop."
+    ]
+  },
+  "Slimebound:PreventTackleDamagePower": {
+    "NAME": "Protégé",
+    "DESCRIPTIONS": [
+      "Vous ne prenez pas de dégâts pour les #b",
+      " prochains #yTacles que vous jouez."
+    ]
+  },
+  "Slimebound:SplitDailyTriggerPower": {
+    "NAME": "Division slimique",
+    "DESCRIPTIONS": [
+      "Lorsque ses PV sont à moins de #b50%, se divise en #b2 Slimes ennemis avec les PV actuels de ",
+      "'."
+    ]
+  },
+  "Slimebound:SplitDailyPower": {
+    "NAME": "Division enclenchée",
+    "DESCRIPTIONS": [
+      "L'ennemi se divise pendant ce tour."
+    ]
+  },
+  "Slimebound:BuffAttackSlimesPower": {
+    "NAME": "Amélioration: Cogneur",
+    "DESCRIPTIONS": [
+      "Les Slimes #yCogneurs font #b",
+      " dégâts supplémentaires."
+    ]
+  },
+  "Slimebound:BuffPoisonSlimesPower": {
+    "NAME": "Amélioration : Acide",
+    "DESCRIPTIONS": [
+      "Les Slimes #yVenimeux appliquent #b",
+      " de #yPoison en plus."
+    ]
+  },
+  "Slimebound:BuffSlimingSlimesPower": {
+    "NAME": "Amélioration : Bourbier",
+    "DESCRIPTIONS": [
+      "Les Slimes #yBourbier appliquent #b",
+      " de #yGoop en plus."
+    ]
+  },
+  "Slimebound:BuffShieldSlimesPower": {
+    "NAME": "Upgrade: Leeching",
+    "DESCRIPTIONS": [
+      "#yLeeching Slimes deal #b",
+      " more damage."
+    ]
+  },
+  "Slimebound:HexSlimePerTurnPower": {
+    "NAME": "Pouvoir maudit",
+    "DESCRIPTIONS": [
+      "Spawn a #yGhostflame slime at the start of your next turn.",
+      "Spawn a #yGhostflame slime at the start of your next #b",
+      " turns."
+    ]
+  },
+  "Slimebound:ProtectTheBoss": {
+    "NAME": "Protéger le Boss",
+    "DESCRIPTIONS": [
+      "Empêchez la prochaine fois où vous auriez pris des dégâts d'un ennemi, #yAbsorbant votre Slime en tête à la place.",
+      "Empêchez les #b",
+      " prochaines fois où vous auriez pris des dégâts d'un ennemi, #yAbsorbant votre Slime en tête à la place."
+    ]
+  },
+  "Slimebound:SplitForLessPower": {
+    "NAME": "Efficient Goo",
+    "DESCRIPTIONS": [
+      "#ySplitting costs #b",
+      " less HP.  Add #b",
+      " random #ySplit card to your hand each turn.",
+      " random #ySplit cards to your hand each turn."
+    ]
+  },
+  "Slimebound:ComboAttackPower": {
+    "NAME": "Montrer l'exemple",
+    "DESCRIPTIONS": [
+      "La première carte qui cible un ennemi que vous jouez chaque tour fait attaquer également votre Slime en tête.",
+      "Les #b",
+      " premières cartes qui ciblent un ennemi que vous jouez chaque tour fait attaquer également votre Slime en tête.",
+      " NL Cet effet peut être encore déclenché #b",
+      " fois ce tour-ci.",
+      " fois ce tour-ci.",
+      " NL Cet effet ne peut plus être déclenché ce tour-ci."
+    ]
+  },
+  "Slimebound:RetainCardsOneTurnPower": {
+    "NAME": "Preparing Cards",
+    "DESCRIPTIONS": [
+      "Retain #b",
+      " card this turn.",
+      " cards this turn."
+    ]
+  },
+  "Slimebound:EnergizedSlimeboundPower": {
+    "NAME": "Energisé",
+    "DESCRIPTIONS": [
+      "Gagnez #b",
+      " [E] supplémentaire au prochain tour.",
+      " [E] supplémentaires au prochain tour.",
+      " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
+    ]
+  },
+  "Slimebound:SelfFormingGooPower": {
+    "NAME": "Reformation",
+    "DESCRIPTIONS": [
+      "Lorsque vous Absorbez un Slime, gagnez #b",
+      " de Force."
+    ]
+  },
+  "Slimebound:SelfFormingGooPowerPlus": {
+    "NAME": "Reformation+",
+    "DESCRIPTIONS": [
+      "Lorsque vous Absorbez un Slime, gagnez #b",
+      " de Dextérité."
+    ]
+  },
+  "Slimebound:LoseSlimesPower": {
+    "NAME": "Surmenage",
+    "DESCRIPTIONS": [
+      "Au prochain tour, #yAbsorbez tous vos Slimes invoqués.",
+      " tours à partir de maintenant, #yAbsorbez tous vos Slimes invoqués."
+    ]
+  },
+  "Slimebound:TackleModifyDamagePower": {
+    "NAME": "Malmené",
+    "DESCRIPTIONS": [
+      "Reçoit #b",
+      " dégâts supplémentaires des cartes contenant \"Tacle\"."
+    ]
+  },
+  "Slimebound:LoseThornsPower": {
+    "NAME": "Epines rétractées",
+    "DESCRIPTIONS": [
+      "Perdez #b",
+      " #yd'Epines au début de votre tour."
+    ]
+  },
+  "Slimebound:SlimedThornsPower": {
+    "NAME": "Mur vivant",
+    "DESCRIPTIONS": [
+      "Appliquez #b",
+      " de #yGoop aux attaquants ce tour-ci."
+    ]
+  },
+  "Slimebound:PreventSlimeDecayPower": {
+    "NAME": "Recouvert de Slime",
+    "DESCRIPTIONS": [
+      "La prochaine fois qu'une #yAttaque est utilisée sur cet ennemi, les bénéfices du #yGoop vont s'appliquer sans consumer de #yGoop.",
+      "Les #b",
+      " prochaines fois qu'une #yAttaque est utilisée sur cet ennemi, les bénéfices du #yGoop vont s'appliquer sans consumer de #yGoop."
+    ]
+  },
+  "Slimebound:DuplicatedFormPower": {
+    "NAME": "Forme dupliquée",
+    "DESCRIPTIONS": [
+      "La première carte que vous jouez et qui cible des ennemis chaque tour est jouée deux fois.",
+      "Les #b",
+      " premières cartes que vous jouez et qui ciblent des ennemis chaque tour sont jouées deux fois."
+    ]
+  },
+  "Slimebound:DuplicatedFormNoHealPower": {
+    "NAME": "Split",
+    "DESCRIPTIONS": [
+      "Max HP is temporarily reduced by #b",
+      "."
+    ]
+  },
+  "Slimebound:DuplicatedFormEnergyPower": {
+    "NAME": "Tandem",
+    "DESCRIPTIONS": [
+      "Gagnez #b",
+      " [E] chaque tour."
+    ]
+  },
+  "Slimebound:GluttonyPower": {
+    "NAME": "Gloutonnerie",
+    "DESCRIPTIONS": [
+      "La première fois que vous #yConsumez chaque tour, ajoutez une carte #yLéchouille aléatoire dans votre main.",
+      "Les ",
+      " premières fois que vous #yConsumez chaque tour, ajoutez une carte #yLéchouille aléatoire dans votre main.",
+      " NL Cet effet peut être encore déclenché #b",
+      "  fois ce tour-ci.",
+      "  fois ce tour-ci.",
+      " NL Cet effet ne peut plus être déclenché ce tour-ci."
+    ]
+  },
+  "Slimebound:GluttonyPowerUpgraded": {
+    "NAME": "Gloutonnerie+",
+    "DESCRIPTIONS": [
+      "Ajoutez #b",
+      " #yLéchouille aléatoire #yAméliorée dans votre main ce tour-ci.",
+      " #yLéchouille aléatoire #yAméliorées dans votre main ce tour-ci."
+    ]
+  },
+  "Slimebound:PoisonThornsPower": {
+    "NAME": "Acidic Goop",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " #yPoison when you #yAttack an enemy who has #yGoop."
+    ]
+  },
+  "Slimebound:SlimeRitualPower": {
+    "NAME": "Rituel",
+    "DESCRIPTIONS": [
+      "Gagnez #b",
+      " de #yForce au début de chaque tour."
+    ]
+  },
+  "Slimebound:RecyclingPower": {
+    "NAME": "Recyclage",
+    "DESCRIPTIONS": [
+      "Au début de votre tour, reprenez #b",
+      " carte aléatoire #yÉpuisée coûtant 0 dans votre main.",
+      " cartes aléatoires #yÉpuisées coûtant 0 dans votre main."
+    ]
+  },
+  "Slimebound:RecyclingPowerUpgraded": {
+    "NAME": "Recyclage+",
+    "DESCRIPTIONS": [
+      "Heal #b",
+      " HP and draw a card when you #yExhaust a 0-cost card."
+    ]
+  },
+  "Slimebound:AcidTonguePower": {
+    "NAME": "Acid Tongue",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " #yPoison whenever you apply #yGoop."
+    ]
+  },
+  "Slimebound:AcidTonguePowerUpgraded": {
+    "NAME": "Slime diffu",
+    "DESCRIPTIONS": [
+      "Les effets qui appliquent du #yGoop en appliquent #b",
+      " de plus."
+    ]
+  },
+  "Slimebound:SelfDamageSlimedPower": {
+    "NAME": "Stray Goop",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " #yGoop to a random enemy whenever you lose HP."
+    ]
+  },
+  "Slimebound:TackleBuffPower": {
+    "NAME": "Tacle offensif",
+    "DESCRIPTIONS": [
+      "Les cartes contenant \"Tacle\" infligent #b",
+      " dégâts en plus aux ennemis."
+    ]
+  },
+  "Slimebound:PolyBeamAgainPower": {
+    "NAME": "Rayon alternatif",
+    "DESCRIPTIONS": [
+      "#yMultilaser sera joué au début de votre prochain tour. ",
+      "#yMultilaser sera joué au début de vos #b",
+      " prochains tours."
+    ]
+  },
+  "Slimebound:PolyBeamAgainPowerUpgraded": {
+    "NAME": "Rayon alternatif+",
+    "DESCRIPTIONS": [
+      "#yMultilaser+ sera joué au début de votre prochain tour.. ",
+      "#yMultilaser+ sera joué au début de vos #b",
+      "  prochains tours."
+    ]
+  },
+  "Slimebound:FirmFortitudePower": {
+    "NAME": "Feel Our Pain",
+    "DESCRIPTIONS": [
+      "The next time you would take damage or lose HP on your turn, an enemy takes that much damage instead.",
+      "The next #b",
+      " times you would take damage or lose HP on your turn, an enemy takes that much damage instead.",
+      " NL This effect can be triggered #b",
+      " more times this turn.",
+      " more time this turn.",
+      " NL This effect cannot be triggered again this turn."
+    ]
+  },
+  "Slimebound:NextTurnGainStrengthPower": {
+    "NAME": "Rechargement",
+    "DESCRIPTIONS": [
+      "Gagnez #b",
+      " de #yForce à votre prochain tour."
+    ]
+  },
+  "Slimebound:NextTurnGainSlimeCrush": {
+    "NAME": "Se prépare à Crush",
+    "DESCRIPTIONS": [
+      "Gagnez un #gSLIME #gCRUSH à votre prochain tour.",
+      "Gagnez un #gSLIME #gCRUSH+ à votre prochain tour.",
+      "Gagnez #b",
+      " copies de #gSLIME #gCRUSH à votre prochain tour.",
+      " copies de #gSLIME #gCRUSH+ à votre prochain tour."
+    ]
+  },
+  "Slimebound:StunnedPower": {
+    "NAME": "Complètement épuisé",
+    "DESCRIPTIONS": [
+      "Passez votre prochain tour.",
+      "Passez vos #b",
+      " prochains tours."
+    ]
+  },
+  "Slimebound:NextTurnGainHyperBeam": {
+    "NAME": "Prépare le laser",
+    "DESCRIPTIONS": [
+      "Gagnez un #yUltralaser au prochain tour.",
+      "Gagnez #b",
+      " copies de #yUltralaser au prochain tour."
+    ]
+  },
+  "Slimebound:NextTurnGainDivider": {
+    "NAME": "Se prépare à se diviser",
+    "DESCRIPTIONS": [
+      "Gagnez un #yDiviser au prochain tour.",
+      "Gagnez #b",
+      " copies de #yDiviser au prochain tour."
+    ]
+  },
+  "Slimebound:StudyAutomatonPower": {
+    "NAME": "Étude Automate",
+    "DESCRIPTIONS": [
+      "Gagnez une carte aléatoire de l'Automate au début de votre prochain tour.",
+      "Gagnez une carte aléatoire de l'Automate au début de vos ",
+      " prochains tours."
+    ]
+  },
+  "Slimebound:StudyAutomatonPowerUpgraded": {
+    "NAME": "Étude Automate+",
+    "DESCRIPTIONS": [
+      "Gagnez une carte aléatoire Améliorée de l'Automate au début de votre prochain tour.",
+      "Gagnez une carte aléatoire Améliorée de l'Automate au début de vos ",
+      " prochains tours."
+    ]
+  },
+  "Slimebound:StudyAwakenedPower": {
+    "NAME": "Étude l'Éveillé",
+    "DESCRIPTIONS": [
+      "Gagnez une carte aléatoire de l'Éveillé au début de votre prochain tour.",
+      "Gagnez une carte aléatoire de l'Éveillé au début de vos ",
+      " prochains tours."
+    ]
+  },
+  "Slimebound:StudyAwakenedPowerUpgraded": {
+    "NAME": "Étude l'Éveillé+",
+    "DESCRIPTIONS": [
+      "Gagnez une carte aléatoire Améliorée de l'Éveillé card au début de votre prochain tour.",
+      "Gagnez une carte aléatoire Améliorée de l'Éveillé au début de vos ",
+      " prochains tours."
+    ]
+  },
+  "Slimebound:AwakenedOnePower": {
+    "NAME": "Rituel obscur",
+    "DESCRIPTIONS": [
+      "Gagnez ",
+      " de Force si cet ennnemi n'attaque pas lors de son tour."
+    ]
+  },
+  "Slimebound:StudyChampPower": {
+    "NAME": "Étude Champion",
+    "DESCRIPTIONS": [
+      "Gagnez une carte aléatoire du Champion au début de votre prochain tour.",
+      "Gagnez une carte aléatoire du Champion au début de vos ",
+      " prochains tours."
+    ]
+  },
+  "Slimebound:StudyChampPowerUpgraded": {
+    "NAME": "Étude Champion+",
+    "DESCRIPTIONS": [
+      "Gagnez une carte aléatoire Améliorée du Champion au début de votre prochain tour.",
+      "Gagnez une carte aléatoire Améliorée du Champion au début de vos ",
+      " prochains tours."
+    ]
+  },
+  "Slimebound:StudyCollectorPower": {
+    "NAME": "Étude Collecteur",
+    "DESCRIPTIONS": [
+      "Gagnez une carte aléatoire du Collecteur au début de votre prochain tour.",
+      "Gagnez une carte aléatoire du Collecteur au début de vos ",
+      " prochains tours."
+    ]
+  },
+  "Slimebound:StudyCollectorPowerUpgraded": {
+    "NAME": "Étude Collecteur+",
+    "DESCRIPTIONS": [
+      "Gagnez une carte aléatoire Améliorée du Collecteur au début de votre prochain tour.",
+      "Gagnez une carte aléatoire Améliorée du Collecteur au début de vos ",
+      " prochains tours."
+    ]
+  },
+  "Slimebound:StudyGuardianPower": {
+    "NAME": "Étude Guardien",
+    "DESCRIPTIONS": [
+      "Gagnez une carte aléatoire du Guardien au début de votre prochain tour.",
+      "Gagnez une carte aléatoire du Guardien au début de vos ",
+      " prochains tours."
+    ]
+  },
+  "Slimebound:StudyGuardianPowerUpgraded": {
+    "NAME": "Étude Guardien+",
+    "DESCRIPTIONS": [
+      "Gagnez une carte aléatoire Améliorée du Guardien au début de votre prochain tour.",
+      "Gagnez une carte aléatoire Améliorée du Guardien au début de vos ",
+      " prochains tours."
+    ]
+  },
+  "Slimebound:StudyHexaghostPower": {
+    "NAME": "Étude Hexaplasme",
+    "DESCRIPTIONS": [
+      "Gagnez une carte aléatoire de l'Hexaplasme au début de votre prochain tour.",
+      "Gagnez une carte aléatoire de l'Hexaplasme au début de vos ",
+      " prochains tours."
+    ]
+  },
+  "Slimebound:StudyHexaghostPowerUpgraded": {
+    "NAME": "Étude Hexaplasme+",
+    "DESCRIPTIONS": [
+      "Gagnez une carte aléatoire Améliorée de l'Hexaplasme au début de votre prochain tour.",
+      "Gagnez une carte aléatoire Améliorée de l'Hexaplasme au début de vos ",
+      " prochains tours."
+    ]
+  },
+  "Slimebound:StudyShapesPower": {
+    "NAME": "Étude Donu & Deca",
+    "DESCRIPTIONS": [
+      "Gagnez une carte aléatoire de Donu & Deca au début de votre prochain tour.",
+      "Gagnez une carte aléatoire de Donu & Deca au début de vos ",
+      " prochains tours."
+    ]
+  },
+  "Slimebound:StudyShapesPowerUpgraded": {
+    "NAME": "Étude Donu & Deca+",
+    "DESCRIPTIONS": [
+      "Gagnez une carte aléatoire Améliorée de Donu & Deca au début de votre prochain tour.",
+      "Gagnez une carte aléatoire Améliorée de Donu & Deca au début de vos ",
+      " prochains tours."
+    ]
+  },
+  "Slimebound:StudyTimeEaterPower": {
+    "NAME": "Étude Dévor'heures",
+    "DESCRIPTIONS": [
+      "Gagnez une carte aléatoire du Dévor'heures au début de votre prochain tour.",
+      "Gagnez une carte aléatoire du Dévor'heures au début de vos ",
+      " prochains tours."
+    ]
+  },
+  "Slimebound:StudyTimeEaterPowerUpgraded": {
+    "NAME": "Étude Dévor'heures+",
+    "DESCRIPTIONS": [
+      "Gagnez une carte aléatoire Améliorée du Dévor'heures au début de votre prochain tour.",
+      "Gagnez une carte aléatoire Améliorée du Dévor'heures au début de vos ",
+      " prochains tours."
+    ]
+  },
+  "Slimebound:GreedRespawnPower": {
+    "NAME": "Cupidité rétablie",
+    "DESCRIPTIONS": [
+      "Le #ySlime #yCupide réapparaîtra à la fin de votre tour."
+    ]
+  },
+  "Slimebound:ScrapRespawnPower": {
+    "NAME": "Ferraille rétablie",
+    "DESCRIPTIONS": [
+      "Le #ySlime #yFerrailleux réapparaîtra à la fin de votre tour."
+    ]
+  },
+  "Slimebound:BuffSecondarySlimeEffectsPower": {
+    "NAME": "Maître des sbires",
+    "DESCRIPTIONS": [
+      "Lorsque vous jouez une carte avec l'effet Commande, Commandez une autre fois.",
+      "Lorsque vous jouez une carte avec l'effet Commande, Commandez #b",
+      " fois de plus."
+    ]
+  },
+  "Slimebound:TackleSelfDamagePreventPower": {
+    "NAME": "Reckless",
+    "DESCRIPTIONS": [
+      "Cards containing \"Tackle\" deal #b",
+      " more damage to you."
+    ]
+  },
+  "Slimebound:GoopArmorPower": {
+    "NAME": "Armure de Goop",
+    "DESCRIPTIONS": [
+      "Lorsque vous #yAttaquez un ennemi ayant du #yGoop, gagnez #b",
+      " #yd'Armure."
+    ]
+  },
+  "Slimebound:CommandOnPlayPower": {
+    "NAME": "Ralliement",
+    "DESCRIPTIONS": [
+      "La prochaine fois que vous jouez une carte ce tour-ci, #yCommandez.",
+      "Les ",
+      " prochaines fois que vous jouez une carte ce tour-ci, #yCommandez."
+    ]
+  },
+  "Slimebound:GoopPerTurnPower": {
+    "NAME": "Bain de boue",
+    "DESCRIPTIONS": [
+      "Ajoute ",
+      " de Goop au début du tour de l'ennemi."
+    ]
+  }
+}

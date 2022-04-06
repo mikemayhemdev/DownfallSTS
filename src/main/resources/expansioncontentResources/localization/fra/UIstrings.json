@@ -1,0 +1,12 @@
+{
+  "expansioncontent:CannotUseBossCardMessage": {
+    "TEXT": [
+      "J'ai déjà joué une carte de Boss ce tour!"
+    ]
+  },
+  "expansioncontent:BossCardTagName": {
+    "TEXT": [
+      "Boss"
+    ]
+  }
+}

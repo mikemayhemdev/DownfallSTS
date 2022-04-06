@@ -1,0 +1,16 @@
+{
+  "Slimebound": {
+    "NAMES": [
+      "Le Parrain Slime"
+    ],
+    "TEXT": [
+      "Le général le plus visqueux du Cœur. NL Peut se battre seul, ou à plusieurs.",
+      "Dois... absorber... le Cœur...",
+      "Dans une rue mal éclairée, vous rencontrez plusieurs personnages encapuchonnés en plein rituel. Lorsque vous vous approchez, ils se tournent vers vous à l'unisson. Le plus grand d'entre eux montre ses crocs et tend une longue main pâle vers vous. NL ~\"Rejoignez~ ~nous~ ~seigneur~ ~visqueux,~ ~et~ ~ressentez~ ~la~ ~chaleur~ ~de~ ~la~ ~Tour.\"~"
+    ],
+    "KEYWORDS": [
+      "Le général le plus visqueux du Cœur.",
+      "Dois... absorber... le Cœur..."
+    ]
+  }
+}

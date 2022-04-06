@@ -1,0 +1,11 @@
+{
+  "downfall:CursedFountainPotion": {
+    "NAME": "Liquide de la fontaine maudite",
+    "DESCRIPTIONS": [
+      "Appliquez #b",
+      " de #yFaiblesse, #b",
+      " de #yVulnerabilité, et réduisez la #yForce de l'ennemi de #b",
+      "."
+    ]
+  }
+}

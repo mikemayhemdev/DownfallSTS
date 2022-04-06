@@ -1,0 +1,78 @@
+[
+  {
+    "NAMES": [
+      "cavité",
+      "cavités",
+      "encastrée"
+      "encastrées"
+    ],
+    "PROPER_NAME": "Cavité",
+    "DESCRIPTION": "Une Gemme peut être placée dans une Cavité dans un Site de Repos pour combiner les effets de la carte et les effets de la Gemme."
+  },
+  {
+    "NAMES": [
+      "stase"
+    ],
+    "PROPER_NAME": "Stase",
+    "DESCRIPTION": "Une carte en #yStase gagne un compteur de tour égal à son coût plus #b1. NL Le compteur de tour est réduit de #b1 au début de votre tour. NL Lorsque le compteur atteint #b0, elle retourne dans votre main et coûte #b0 jusqu'à ce qu'elle soit jouée."
+  },
+  {
+    "NAMES": [
+      "gemme",
+      "gemmes"
+    ],
+    "PROPER_NAME": "Gemme",
+    "DESCRIPTION": "Des #yGemmes peuvent être placées dans des #ySockets dans certaines cartes dans un site de Repos. Ne peut pas être #yAméliorée."
+  },
+  {
+    "PROPER_NAME": "Mode défensif",
+    "NAMES": [
+      "Mode défensif",
+      "mode_défensif"
+    ],
+    "DESCRIPTION": "#yPose. NL Gagnez #b10 #yd'Armure lorsque vous entrez en Mode défensif. NL Lorsque vous êtes en Mode défensif , vous avez #b3 #yd'Épines, gagnez #b10 #yd'Armure au début de votre tour, et votre Armure n'expire pas."
+  },
+  {
+    "NAMES": [
+      "accélérez"
+    ],
+    "PROPER_NAME": "Accélérer",
+    "DESCRIPTION": "Réduisez le compteur de tours de 1 de la carte la plus à droite en #yStase de #b1. Si le compteur de la carte est maintenant à #b0, remettez-la dans votre main. Elle coûte #b0 jusqu'à ce qu'elle soit jouée."
+  },
+  {
+    "NAMES": [
+      "Colis",
+      "Colis"
+    ],
+    "PROPER_NAME": "Colis",
+    "DESCRIPTION": "Une #yCompétence #ys'Épuisant qui génère trois cartes inspirées d'un Gardien de la Tour, et réduit leurs coûts de #b1 pour ce combat."
+  },
+  {
+    "NAMES": [
+      "volatile"
+    ],
+    "PROPER_NAME": "Volatile",
+    "DESCRIPTION": "Lorsque cette carte quitte son état de #yStase, #yÉpuisez-la au lieu de la remettre dans votre main."
+  },
+  {
+    "NAMES": [
+      "tic"
+    ],
+    "PROPER_NAME": "Tic",
+    "DESCRIPTION": "Cet effet se déclenche lorsque le compteur de tours de la carte est réduit lorsqu'elle est en #yStase."
+  },
+  {
+    "NAMES": [
+      "tampon"
+    ],
+    "PROPER_NAME": "Tampon",
+    "DESCRIPTION": "Empêchez votre prochaine perte de PV."
+  },
+  {
+    "NAMES": [
+      "renforcez"
+    ],
+    "PROPER_NAME": "Renforcement",
+    "DESCRIPTION": "Réduisez la perte de PV nécessaire pour déclencher le Changement de mode de X, déclenchant le Changement de mode si la perte de PV nécessaire est maintenant à 0."
+  }
+]

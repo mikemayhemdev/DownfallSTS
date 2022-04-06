@@ -1,0 +1,32 @@
+{
+  "champ:OpenerPotion": {
+    "NAME": "Potion de stratégie",
+    "DESCRIPTIONS": [
+      "Choisissez #b1 carte parmi #b2 qui permenttent d'adopter une #yPose à ajouter dans votre main (une pour chaque #yPose). Elle coûte #b0 ce tour.",
+      " Ajoutez #b",
+      " copie de celle-ci dans votre main.",
+      " copies de celle-ci dans votre main."
+    ]
+  },
+  "champ:TechniquePotion": {
+    "NAME": "Technique Embouteillée",
+    "DESCRIPTIONS": [
+      "Utilisez la #yTechnique #b",
+      " fois."
+    ]
+  },
+  "champ:UltimateStancePotion": {
+    "NAME": "Substance à la légalité douteuse",
+    "DESCRIPTIONS": [
+      "Adoptez la #yPose #yUltime pour #b",
+      " tours."
+    ]
+  },
+  "champ:CounterPotion": {
+    "NAME": "Brassage tranchant",
+    "DESCRIPTIONS": [
+      "Gagnez #b",
+      " de #yContre."
+    ]
+  }
+}

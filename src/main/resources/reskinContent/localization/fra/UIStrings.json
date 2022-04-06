@@ -1,0 +1,91 @@
+{
+  "reskinContent:ReSkin": {
+    "TEXT": [
+      "Skin",
+      "Original"
+    ]
+  },
+  "reskinContent:PortraitAnimation": {
+    "TEXT": [
+      "Type de portrait"
+    ]
+  },
+  "reskinContent:PortraitAnimationType": {
+    "TEXT": [
+      "Statique",
+      "Animé",
+      "Plein effet"
+    ]
+  },
+  "reskinContent:BetaArtUnlockEffect": {
+    "TEXT": [
+      "Art alternatif du Gardien déverrouillé!",
+      "Art alternatif du Parrain Slime déverrouillé!",
+      "Art alternatif de l'Hexaplasme déverrouillé!",
+      "Art alternatif du Geckobra déverrouillé!",
+      "Art alternatif du Champion déverrouillé!",
+      "Art alternatif de l'Automate déverrouillé!"
+    ]
+  },
+
+  "reskinContent:ReSkinGuardian": {
+    "TEXT": [
+      "Gardien Chan",
+      "Concept Art"
+    ],
+    "EXTRA_TEXT": [
+      "Un androïde de la Tour, programmée pour la défendre. NL Capable se défendre-lui même par commande.",
+      "Un des premiers projets du Guardien. NL C'était mieux sur le papier."
+    ]
+  },
+  "reskinContent:ReSkinSlime": {
+    "TEXT": [
+      "Slaifu",
+      "Slime Boss?"
+    ],
+    "EXTRA_TEXT": [
+      "Ce slime inhabituel aime manger de savoureuses reliques. NL Il sert le Cœur complètement par accident.",
+      "Est-ce... la Parrain Slime? Il semble horriblement amical. NL Eh bien, son chapeau est sûrement le plus grand de la Tour, donc il doit être en charge..."
+    ]
+  },
+  "reskinContent:ReSkinHexaghost": {
+    "TEXT": [
+      "Hexago",
+      "Ghostagon"
+    ],
+    "EXTRA_TEXT": [
+      "Un esprit maudit de la Spire. NL Scellé à un destin éternel de protecteur.",
+      "Aime chasser les cercles jaunes pendant ses jours de repos. NL  A une peur bleue des granulés de bois."
+    ]
+  },
+  "reskinContent:ReSkinSnecko": {
+    "TEXT": [
+      "SSSSnecko",
+      "Sneckdor"
+    ],
+    "EXTRA_TEXT": [
+      "Il utilise ses yeux pour induire une déviation cognitive, dissimulant sa véritable forme. NL Des études montrent que les créatures confuses voient un monde complètement différent.",
+      "À la recherche d'une plus grande force, cet ambitieux Geckobra a suivi les traces de son héros. NL Adoptant de nombreux V consommés et un bras musclé, il se fait appeler \"Sneckdor\"."
+    ]
+  },
+  "reskinContent:ReSkinChamp": {
+    "TEXT": [
+      "Chan-p",
+      "Laundry Day Champ"
+    ],
+    "EXTRA_TEXT": [
+      "Son épée semble impossible à manier, NL mais elle est en fait la seule personne assez forte pour la soulever.",
+      "C'est le jour du linge."
+    ]
+  },
+  "reskinContent:ReSkinBronze": {
+    "TEXT": [
+      "Automaton",
+      "\"Automaton\""
+    ],
+    "EXTRA_TEXT": [
+      "",
+      "C'est ça ! De la tête aux pieds, c'est bien l'Automaton ! NL Je n'ai jamais rien vu qui ressemble autant à l'Automate!"
+    ]
+  }
+}

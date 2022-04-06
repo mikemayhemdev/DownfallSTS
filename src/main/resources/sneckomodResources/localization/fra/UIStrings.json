@@ -1,0 +1,62 @@
+{
+  "sneckomod:Unknown": {
+    "TEXT": [
+      "Inconnue",
+      " Améliorée ",
+      "Au début du combat, les cartes Inconnues se transforment en autres cartes aléatoires de classes choisies et qui satisfont certaines contraintes.",
+      " NL Classes choisies:",
+      "Au début du combat, les cartes Inconnues se transforment en autres cartes aléatoires de N'IMPORTE quelle classe (autre que les Frappes et Défenses basiques) et qui satisfont certaines contraintes.",
+      "Au début du combat, les cartes Inconnues se transforment en autres cartes aléatoires d'autres classes (autre que les Frappes et Défenses basiques) et qui satisfont certaines contraintes."
+    ]
+  },
+  "sneckomod:UnknownClass": {
+    "TEXT": [
+      "???",
+      "*Inconnue ",
+      " Carte.",
+      "Personnage",
+      "Le ",
+      "Vous n'auriez jamais dû voir ça. Reportez ceci à Vex"
+    ]
+  },
+  "sneckomod:UpgradedUnknownReward": {
+    "TEXT": [
+      "Ajoutez une carte Inconnue+ à votre deck",
+      "Prenez une Carte."
+    ]
+  },
+  "sneckomod:FreeRetainMod": {
+    "TEXT": [
+      "Retenue. NL "
+    ]
+  },
+  "sneckomod:ExhaustMod": {
+    "TEXT": [
+      " NL Épuisement."
+    ]
+  },
+  "sneckomod:ChallengeMode": {
+    "TEXT": [
+      "Mode Challenge - Geckobra pur",
+      "Les cartes Inconnues peuvent être de n'importe quelle carte. Recommandé pour les joueurs de Geckobra experts."
+    ]
+  },
+  "sneckomod:LockInBonfireOptions": {
+    "TEXT": [
+      "Identifier",
+      "Verrouillez une carte Inconnue en carte permanente.",
+      "Requiert une carte Inconnue.",
+      "Sélectionnez une carte à ajouter dans votre deck, retirant son côté Inconnu.",
+      "[Action gratuite] Verrouillez une carte Inconnue en carte permanente."
+    ]
+  },
+  "sneckomod:AtGameStart": {
+    "TEXT": [
+      "",
+      " Cartes",
+      "Les cartes Inconnues peuvent devenir des cartes de ",
+      " cette run.",
+      "Choisissez."
+    ]
+  }
+}

@@ -1,0 +1,309 @@
+{
+  "sneckomod:Strike": {
+    "NAME": "Frappe",
+    "DESCRIPTION": "Infligez !D! dégâts."
+  },
+  "sneckomod:Defend": {
+    "NAME": "Défense",
+    "DESCRIPTION": "Gagnez !B! d'Armure."
+  },
+  "sneckomod:SnekBite": {
+    "NAME": "Morsure de geko",
+    "DESCRIPTION": "Infligez !D! dégâts. NL sneckomod:Confondez la carte coûtant le plus dans votre main.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL sneckomod:Confondez les !M! cartes le coûtant le plus dans votre main."
+  },
+  "sneckomod:TailWhip": {
+    "NAME": "Fouet de queue",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Appliquez !M! - 2 de Faiblesse. NL Appiquez !M! - 2 Vulnérabilité."
+  },
+  "sneckomod:UnknownCommonAttack": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte Attaque *Inconnue Commune."
+  },
+  "sneckomod:UnknownCommonSkill": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte Compétence *Inconnue Commune."
+  },
+  "sneckomod:UnknownUncommonAttack": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte Attaque *Inconnue Peu Commune."
+  },
+  "sneckomod:UnknownUncommonSkill": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte Compétence *Inconnue Peu Commune."
+  },
+  "sneckomod:UnknownUncommonPower": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte Pouvoir *Inconnue Peu Commune."
+  },
+  "sneckomod:UnknownRareAttack": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte Pouvoir *Inconnue Rare."
+  },
+  "sneckomod:UnknownRareSkill": {
+    "NAME": "???",
+    "DESCRIPTION": "*Unknown Rare Skill Card."
+  },
+  "sneckomod:UnknownRarePower": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte Compétence *Inconnue Rare."
+  },
+  "sneckomod:SoulDraw": {
+    "NAME": "Tirage de l'âme",
+    "DESCRIPTION": "sneckomod:Gekoproof. NL Ajoutez !M! cartes sneckomod:Hors-classe aléatoires dans votre main. NL Épuisement",
+    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. NL Piochez 1 - !M! cartes."
+  },
+  "sneckomod:SoulRoll": {
+    "NAME": "Lancer de l'âme",
+    "DESCRIPTION": "sneckomod:Gekoproof. NL sneckomod:Confondez votre main.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. NL sneckomod:Confondez votre main. NL Piochez 1 carte."
+  },
+  "sneckomod:SnekBeam": {
+    "NAME": "Laser Geko",
+    "DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unknown cards in your deck. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unknown cards in your deck.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deals !D! damage.)"
+    ]
+  },
+  "sneckomod:UnknownStrike": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte Frappe *Inconnue."
+  },
+  "sneckomod:Nope": {
+    "NAME": "Nope",
+    "DESCRIPTION": "sneckomod:Gekoproof. NL Épuisez une carte dans votre main. NL Remplacez-la avec une carte aléatoire de la même classe. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. NL Épuisez une carte dans votre main. NL Remplacez-la avec une carte aléatoire de la même classe. Elle coûte 1 [E] de moins.",
+    "EXTENDED_DESCRIPTION": [
+      " à Épuiser pour Nope."
+    ]
+  },
+  "sneckomod:UnknownClass": {
+    "NAME": "???",
+    "DESCRIPTION": "*Unknown YouShouldNeverSeeThis-ReportToDev Card."
+  },
+  "sneckomod:UnknownInnate": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte Innée *Inconnnue."
+  },
+  "sneckomod:Unknown": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte *Inconnue."
+  },
+  "sneckomod:Unknown0Cost": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte *Inconnue coûtant 0."
+  },
+  "sneckomod:Unknown1Cost": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte *Inconnue coûtant 1."
+  },
+  "sneckomod:Unknown2Cost": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte *Inconnue coûtant 2."
+  },
+  "sneckomod:Unknown3Cost": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte *Inconnue coûtant 3."
+  },
+  "sneckomod:UnknownX": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte *Inconnue coûtant X."
+  },
+  "sneckomod:UnknownEthereal": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte *Inconnue Éthérée."
+  },
+  "sneckomod:UnknownBlock": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte *Inconnue d'Armure."
+  },
+  "sneckomod:UnknownExhaust": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte *Inconnue ayant Épuisement."
+  },
+  "sneckomod:SoulCleanse": {
+    "NAME": "Nettoyage de l'âme",
+    "DESCRIPTION": "sneckomod:Gekoproof. NL sneckomod:Confondez votre main. Les cartes sneckomod:Confondues de cette façon ne peuvent pas coûter 3. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. NL sneckomod:Confondez votre main. Les cartes sneckomod:Confondues de cette façon ne peuvent pas coûter 3."
+  },
+  "sneckomod:SoulExchange": {
+    "NAME": "Échange d'âme",
+    "DESCRIPTION": "sneckomod:Gekoproof. NL Piochez 1 carte, puis Épuisez 1 carte. NL Épuisez votre main, remplaçant les cartes Épuisées avec des cartes Aléatoires de la même classe.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. NL Piochez 2 cartes, puis Épuisez 1 carte. NL Épuisez votre main, remplaçant les cartes Épuisées avec des cartes Aléatoires de la même classe.",
+    "EXTENDED_DESCRIPTION": [
+      "à Épuiser pour Échange d'âme."
+    ]
+  },
+  "sneckomod:CheapStock": {
+    "NAME": "Stock bon marché",
+    "DESCRIPTION": "Au début de votre tour, réduisez le coût de la carte sneckomod:Hors-classe coûtant le plus de 1.",
+    "UPGRADE_DESCRIPTION": "Inné. NL Au début de votre tour, réduisez le coût de la carte sneckomod:Hors-classe coûtant le plus de 1."
+  },
+  "sneckomod:UnlimitedRolls": {
+    "NAME": "Lancers illimités",
+    "DESCRIPTION": "Au début de votre tour, ajoutez un *Lancer *de *l'âme dans votre main. Elle gagne Éthérée et Épuisement.",
+    "UPGRADE_DESCRIPTION": "Inné. NL Au début de votre tour, ajoutez un *Lancer *de *l'âme dans votre main. Elle gagne Éthérée et Épuisement."
+  },
+  "sneckomod:MasterEye": {
+    "NAME": "Œil magique",
+    "DESCRIPTION": "Devenez Confus. NL Piochez !M! cartes supplémentaires chaque tour.",
+    "UPGRADE_DESCRIPTION": "Devenez Confus. NL Piochez !M! cartes supplémentaires chaque tour."
+  },
+  "sneckomod:ImprovisedAttack": {
+    "NAME": "Attaque improvisée",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez une Attaque sneckomod:Hors-classe aléatoire dans votre main et sneckomod:Confondez cette carte."
+  },
+  "sneckomod:ImprovisedGuard": {
+    "NAME": "Garde improvisée",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Ajoutez une Compétence sneckomod:Hors-classe aléatoire dans votre main et sneckomod:Confondez cette carte."
+  },
+  "sneckomod:QuickMove": {
+    "NAME": "Mouvement vif",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL sneckomod:Confondez la carte coûtant le plus dans votre main.",
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL sneckomod:Confondez les !M! cartes coûtant le plus dans votre main	."
+  },
+  "sneckomod:QuickBite": {
+    "NAME": "Coupe du serpent",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Piochez !M! - 2 cartes. NL sneckomod:Confondez la carte coûtant le plus dans votre main."
+  },
+  "sneckomod:Rotation": {
+    "NAME": "Rotation",
+    "DESCRIPTION": "sneckomod:Gekoproof. NL Défaussez toutes les cartes sneckomod:Hors-Classe. NL Piochez autant de cartes plus !M!."
+  },
+  "sneckomod:SerpentMind": {
+    "NAME": "Forme exotique",
+    "DESCRIPTION": "Lorsque vous jouez une carte sneckomod:Hors-classe, piochez 1 carte."
+  },
+  "sneckomod:SlitherStrike": {
+    "NAME": "Frappe rampante",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Réduisez le coût de vos cartes sneckomod:Hors-classe de votre main de 1 pour ce tour."
+  },
+  "sneckomod:PureSnecko": {
+    "NAME": "Shift",
+    "DESCRIPTION": "sneckomod:Gekoproof. NL Épuisez toutes les cartes sneckomod:Hors-classe dans votre main, les remplaçant avec des nouvelles them with new ones.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. NL Épuisez toutes les cartes sneckomod:Hors-classe dans votre main, les remplaçant avec des nouvelles qui coûtent 1 de moins."
+  },
+  "sneckomod:Cheat": {
+    "NAME": "Pure chance",
+    "DESCRIPTION": "sneckomod:Gekoproof. NL Obtenez sneckomod:Chanceux jusqu'à la fin du tour. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. NL Obtenez sneckomod:Chanceux jusqu'à la fin du tour."
+  },
+  "sneckomod:Restock": {
+    "NAME": "Réapprovisionnement",
+    "DESCRIPTION": "sneckomod:Gekoproof. NL Défaussez votre main. NL Piochez 5-10 cartes. NL Épuisement."
+  },
+  "sneckomod:GlitteringGambit": {
+    "NAME": "Pari gagnant",
+    "DESCRIPTION": "sneckomod:Gekoproof. NL Gagnez !M! - 30 *Âmes. NL Épuisement."
+  },
+  "sneckomod:Transmogrify": {
+    "NAME": "Transfiguration",
+    "DESCRIPTION": "Choisissez 1 parmi 2 Reliques à perdre. NL Obtenez une Relique aléatoire de la même rareté. NL Épuisement.",
+    "EXTENDED_DESCRIPTION": [
+      "Je n'ai aucune Relique à échanger.",
+      "Choisissez une Relique à perdre.",
+      "Perdez ",
+      " et obtenez une autre Relique ",
+      " ."
+    ]
+  },
+  "sneckomod:DefensiveFlair": {
+    "NAME": "Flair passif",
+    "DESCRIPTION": "Gagnez !B! d'Armure, augmenté de !M! pour chaque carte sneckomod:Hors-classe dans votre main."
+  },
+  "sneckomod:DangerNoodle": {
+    "NAME": "Danger Noodle",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Répétez ceci pour chaque carte sneckomod:Hors-classe dans votre main, puis Épuisez ces cartes."
+  },
+  "sneckomod:SerpentIdol": {
+    "NAME": "Idole serpentine",
+    "DESCRIPTION": "sneckomod:Gekoproof. NL Choisissez 1 carte sneckomod:Hors-classe parmi 3 à ajouter dans votre main. NL Elle coûte 0 ce tour-ci. NL Épuisement."
+  },
+  "sneckomod:TrashToTreasure": {
+    "NAME": "Déchet en trésor",
+    "DESCRIPTION": "sneckomod:Gekoproof. NL Épuisez une carte. NL Gagnez [E] égal à son coût. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. NL Épuisez une carte. NL Gagnez [E] égal à son coût."
+  },
+  "sneckomod:DiceBlock": {
+    "NAME": "Dés en blocs",
+    "DESCRIPTION": "Gagnez !M! - !B! d'Armure."
+  },
+  "sneckomod:MixItUp": {
+    "NAME": "Cocktail explosif",
+    "DESCRIPTION": "Infligez !D! !M! fois. NL *Transformez vos Potions. NL Épuisement."
+  },
+  "sneckomod:MorePower": {
+    "NAME": "Plus de puissance!",
+    "DESCRIPTION": "Obtenez une carte *Inconnue Améliorée supplémentaire lors des récompenses de fin de combat."
+  },
+  "sneckomod:UnknownStrength": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte *Inconnue qui donne de la Force."
+  },
+  "sneckomod:UnknownDraw": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte *Inconnue qui fait Piocher."
+  },
+  "sneckomod:UnknownDexterity": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte *Inconnue qui donne de la Dextérité."
+  },
+  "sneckomod:UnknownWeak": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte *Inconnue qui donne de la Faiblesse."
+  },
+  "sneckomod:UnknownVulnerable": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte *Inconnue qui donne de la Vulnérabilité."
+  },
+  "sneckomod:UnknownColorless": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte *Inconnue Incolore."
+  },
+  "sneckomod:RainOfDice": {
+    "NAME": "Pluie de dés",
+    "DESCRIPTION": "Infligez !qqq! - !D! dégâts à un ennemi aléatoire. NL sneckomod:Confondez cette carte et remettez-la dans votre main"
+  },
+  "sneckomod:DiceCrush": {
+    "NAME": "Coup de dés",
+    "DESCRIPTION": "Infligez !M! - !D! dégâts."
+  },
+  "sneckomod:SnakeSap": {
+    "NAME": "Sève de serpent",
+    "DESCRIPTION": "sneckomod:Gekoproof. NL Infligez !qqq! - !D! dégâts. NL Gagnez 1 - !M! [E] . NL Épuisement."
+  },
+  "sneckomod:DiceBoulder": {
+    "NAME": "Fléau de dés",
+    "DESCRIPTION": "Infligez !M! - !D! dégâts. NL Peut être Améliorée à l'infini."
+  },
+  "sneckomod:IronFang": {
+    "NAME": "Crocs d'acier",
+    "DESCRIPTION": "Infligez !qqq! - !D! dégâts. NL Gagnez !M! - !B! d'Armure."
+  },
+  "sneckomod:Mudshield": {
+    "NAME": "Bouclier de boue",
+    "DESCRIPTION": "Lorsque vous sneckomod:Confondez une carte, gagnez !M! d'Armure.",
+    "UPGRADE_DESCRIPTION": "Inné. NL Lorsque vous sneckomod:Confondez une carte, gagnez !M! d'Armure."
+  },
+  "sneckomod:WideSting": {
+    "NAME": "Piqûre profonde",
+    "DESCRIPTION": "Infligez !M! - !D! dégâts à TOUS les ennemis. NL Améliorez toutes les cartes sneckomod:Hors-classe de votre main."
+  },
+  "sneckomod:UnendingSupply": {
+    "NAME": "Source inépuisable",
+    "DESCRIPTION": "Au début de chaque tour, ajoutez une carte sneckomod:Hors-classe aléatoire dans votre main."
+  },
+  "sneckomod:Memorize": {
+    "NAME": "Mémorisation",
+    "DESCRIPTION": "sneckomod:Gekoproof. Éphémère. NL Choisissez une carte dans votre main qui était *Inconnue. NL Ajoutez-la définitivement à votre deck, retirant son côté *Inconnue.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. Éphémère. Retenue. NL Choisissez une carte dans votre main qui était *Inconnue. NL Ajoutez-la définitivement à votre deck, retirant son côté *Inconnue.",
+    "EXTENDED_DESCRIPTION": [
+      " à Mémoriser."
+    ]
+  },
+  "sneckomod:UnknownBoss": {
+    "NAME": "???",
+    "DESCRIPTION": "Carte Boss *Inconnue."
+  }
+}

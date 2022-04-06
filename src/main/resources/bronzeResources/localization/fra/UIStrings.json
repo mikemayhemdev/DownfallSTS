@@ -1,0 +1,52 @@
+{
+  "bronze:SpecificCardReward": {
+    "TEXT": [
+      "Ajoutez ",
+      " à votre deck",
+      "Prenez une carte."
+    ]
+  },
+  "bronze:UnplayableMod": {
+    "TEXT": [
+      "Injouable. NL ",
+      "ERR_NULL_PTR"
+    ]
+  },
+  "bronze:EncodeAndShuffleMod": {
+    "TEXT": [
+      " NL bronze:Encodez, puis ajoutez une copie de ceci dans votre défausse."
+    ]
+  },
+  "bronze:DoublePlayModifier": {
+    "TEXT": [
+      " NL Jouez ceci une seconde fois."
+    ]
+  },
+  "bronze:MiscStrings": {
+    "TEXT": [
+      "Choissisez une carte à remettre dans votre main. Elle gagne Retenue.",
+      " - Augmentez les dégâts de #yFrappe #yCultiste de #b",
+      " de façon permanente.",
+      "ERR: SEQUENCE_EMPTY",
+      " - Ajoutez une copie de #yBoucle #Infinie dans votre main avec #b",
+      " de dégâts en plus.",
+      " Muter.",
+      " Encoder.",
+      ""
+    ]
+  },
+  "bronze:AutoTextHelper": {
+    "TEXT": [
+      " NL bronze:Compilation",
+      "bronze:Compilation",
+      " NL bronze:Encode.",
+      "bronze:Encode. NL "
+    ]
+  },
+  "bronze:CompileDisplayPanel": {
+    "TEXT": [
+      "Quand Compilé:",
+      "bronze:Compile"
+    ]
+  }
+}

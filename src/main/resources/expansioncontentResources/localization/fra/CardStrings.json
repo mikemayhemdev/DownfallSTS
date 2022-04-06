@@ -1,0 +1,90 @@
+{
+  "expansioncontent:GuardianWhirl": {
+    "NAME": "Tourbillon du gardien",
+    "DESCRIPTION": "Requiert 10 d'Armure ou plus. NL Infligez !D! dégâts à TOUS les ennemis 4 fois. NL Épuisement.",
+    "EXTENDED_DESCRIPTION": [
+      "I do not have enough Block."
+    ]
+  },
+  "expansioncontent:Hexaburn": {
+    "NAME": "Hexabrûlure",
+    "DESCRIPTION": "Dans !M! tours, infligez !D! dégâts à un ennemi aléatoire 6 fois. NL Scales avec la Force."
+  },
+  "expansioncontent:InvincibleStrength": {
+    "NAME": "Invincibilité",
+    "DESCRIPTION": "Gagnez 10 expansioncontent:d'Invincibilité. NL Si vous aviez déjà expansioncontent:Invincibilité, celle-ci dure un tour supplémentaire."
+  },
+  "expansioncontent:HyperBeam": {
+    "NAME": "Laser Automate",
+    "DESCRIPTION": "NL Infligez !D! dégâts à TOUS les ennemis. NL Au début de votre prochain tour, perdez [E]. NL Épuisement."
+  },
+  "expansioncontent:LastStand": {
+    "NAME": "Last Stand",
+    "DESCRIPTION": "Retirez tous vos Débuffs. NL Gagnez 1 de Force. NL Si vous êtes en-dessous de la moitié de vos PV, gagnez 2 de Force.",
+    "UPGRADE_DESCRIPTION": "Retirez tous vos Débuffs. NL Gagnez 1 de Force. NL Si vous êtes en-dessous de la moitié de vos PV, soignez-vous de !M! PV et gagnez 2 de Force."
+  },
+  "expansioncontent:YouAreMine": {
+    "NAME": "VOUS ÊTES À MOI!",
+    "DESCRIPTION": "Retirez TOUTE l'Armure de l'ennemi. NL Appliquez !M! de Faiblesse et de Vulnérabilité à TOUS les ennemis. NL Épuisement."
+  },
+  "expansioncontent:AwakenDeath": {
+    "NAME": "Éveil",
+    "DESCRIPTION": "Lorsque vous auriez dû mourir, ou à la fin du combat, soignez-vous de !M! PV à la place et perdez ce Buff."
+  },
+  "expansioncontent:Chronoboost": {
+    "NAME": "Chrono-Boost",
+    "DESCRIPTION": "Gagnez 1 de Force pour chaque 12ème carte que vous jouez.",
+    "UPGRADE_DESCRIPTION": "Gagnez 1 de Force. NL Gagnez 1 de Force pour chaque 12ème carte que vous jouez."
+  },
+  "expansioncontent:PolyBeam": {
+    "NAME": "Canon Donu",
+    "DESCRIPTION": "Infligez !D! dégâts deux fois. Augmentez les dégâts de cette de !M!. NL Au prochain tour, ajoutez un *Bouclier *Déca dans votre main, ou expansioncontent:Exhumez-la it. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts deux fois. Augmentez les dégâts de cette de !M!. NL Au prochain tour, ajoutez un *Bouclier *Déca+ dans votre main, ou expansioncontent:Exhumez-la. NL Épuisement."
+  },
+  "expansioncontent:DecaShield": {
+    "NAME": "Bouclier Déca",
+    "DESCRIPTION": "Gagnez !B! d'armure deux fois. Augmentez l'Armure de cette carte de !M!. NL Au prochain tour, expansioncontent:Exhumez *Canon *Donu. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure deux fois. Augmentez l'Armure de cette carte de !M!. NL Au prochain tour, expansioncontent:Exhumez *Canon *Donu+. NL Épuisement."
+  },
+  "expansioncontent:ShapePower": {
+    "NAME": "Béndiction de la Forme",
+    "DESCRIPTION": "Choisissez - Gagnez !M! de Force ou !B! d'Armure Plaquée.",
+    "EXTENDED_DESCRIPTION": [
+      "Pouvoir de Donu",
+      "Gagnez !M! de Force.",
+      "Bouclier de Déca",
+      "Gagnez !B! d'Armure plaquée."
+    ]
+  },
+  "expansioncontent:PrepareCrush": {
+    "NAME": "Prépration du Crush",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Au prochain tour, obtenez [E] [E] [E] et *SLIME *CRUSH. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Au prochain tour, obtenez [E] [E] [E] et *SLIME *CRUSH+. NL Épuisement."
+  },
+  "expansioncontent:StudyTheSpire": {
+    "NAME": "Étude de la tour",
+    "DESCRIPTION": "Ajoutez une carte *Boss aléatoire dans votre main au début de vos !M! prochains tours. Elles coûtent 0 jusqu'à ce qu'elles soient jouées.",
+    "UPGRADE_DESCRIPTION": "Ajoutez une carte Améliorée *Boss aléatoire dans votre main au début de vos !M! prochains tours. Elles coûtent 0 jusqu'à ce qu'elles soient jouées."
+  },
+  "expansioncontent:QuickStudy": {
+    "NAME": "Étude rapide",
+    "DESCRIPTION": "Choisissez 1 parmi 3 cartes *Boss. NL Ajoutez-là à votre main. NL Elle coûte 0 jusqu'à ce qu'elle soit jouée. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Choisissez 1 parmi 3 cartes *Boss Améliorées. NL Ajoutez-là à votre main. NL Elle coûte 0 jusqu'à ce qu'elle soit jouée. NL Épuisement.",
+    "EXTENDED_DESCRIPTION": [
+      "Choisissez une carte Boss."
+    ]
+  },
+  "expansioncontent:DashGenerateEvil": {
+    "NAME": "Mal intérieur",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez une carte *Boss aléatoire dans votre main. Elle coûte 0 jusqu'à ce qu'elle soit jouée. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez une carte *Boss aléatoire Améliorée dans votre main. Elle coûte 0 jusqu'à ce qu'elle soit jouée. NL Épuisement."
+  },
+  "expansioncontent:KnowingSkullWish": {
+    "NAME": "Crâne savant",
+    "DESCRIPTION": "Éthérée. NL Dépensez des PV pour obtenir des Âmes, du Succès ou un Remontant. NL Épuisement."
+  },
+  "expansioncontent:Antidote": {
+    "NAME": "Antidote",
+    "DESCRIPTION": "Perdez tout votre Poison."
+  }
+}

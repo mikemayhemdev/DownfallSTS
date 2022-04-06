@@ -1,0 +1,34 @@
+{
+  "Guardian:EnhanceBonfireOptions": {
+    "TEXT": [
+      "Optimiser",
+      "(Action gratuite) Placez une Gemme dans une Cavité ouverte.",
+      "Requiert une Gemme et une Cavité ouverte.",
+      "Sélectionnez une Gemme.",
+      "Sélectionnez une Carte pour recevoir la Gemme."
+    ]
+  },
+  "Guardian:UIOptions": {
+    "TEXT": [
+      "Choisissez une Carte à placer en Stase.",
+      "Choisissez une Gemme.",
+      "Ajoutez une Gemme Commune à mettre dans votre deck",
+      "placer en Stase.",
+      "~ERREUR:~ Impossible #rd'Attaquer en Mode Construction.",
+      "~ERREUR:~ #rStase en cours.",
+      "Ajoutez une Gemme à votre deck"
+    ]
+  },
+  "Guardian:FindGemsOption": {
+    "TEXT": [
+      "Miner",
+      "Gagnez 2 Gemmes aléatoires.",
+      "Pioche cassée."
+    ]
+  },
+  "Guardian:BraceMod": {
+    "TEXT": [
+      " NL guardianmod:Renforcez de 2."
+    ]
+  }
+}

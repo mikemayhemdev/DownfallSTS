@@ -1,0 +1,15 @@
+{
+  "slimeboundConfigMenuText": {
+    "TEXT": [
+      "Permet à d'autres personnages d'obtenir des reliques du Slimebound.",
+      "Permet à d'autres personnages d'obtenir des reliques du Slimebound.",
+      "Permet à d'autres personnages d'obtenir des évènements du Slimebound.",
+      "Tout débloquer (Pas recommandé)"
+    ]
+  },
+  "slimeboundmod:CommandMod": {
+    "TEXT": [
+      " NL slimeboundmod:Commandez."
+    ]
+  }
+}

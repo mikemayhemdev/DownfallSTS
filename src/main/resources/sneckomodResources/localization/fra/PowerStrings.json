@@ -1,0 +1,70 @@
+{
+  "sneckomod:CheapStockPower": {
+    "NAME": "Stock bon marché",
+    "DESCRIPTIONS": [
+      "Au début de votre tour, réduisez le coût de la carte #yHors-classe coûtant le plus de #b1.",
+      "Au début de votre tour, réduisez le coût de la carte #yHors-classe coûtant de #b1 #b",
+      " fois."
+    ]
+  },
+  "sneckomod:CheatPower": {
+    "NAME": "Tricheur",
+    "DESCRIPTIONS": [
+      "Ce tour, les cartes qui choisissent un nombre aléatoire pour leurs effets choisissent le nombre maximum possible.",
+      "Pour les #b",
+      " prochains tours, les cartes qui choisissent un nombre aléatoire pour leurs effets choisissent le nombre maximum possible."
+    ]
+  },
+  "sneckomod:MuddleDrawnCardsPower": {
+    "NAME": "Cartes piochées confondues",
+    "DESCRIPTIONS": [
+      "#yConfondez la prochaine carte que vous piochez.",
+      "#yConfondez les #b",
+      " prochaines cartes que vous piochez ce tour. (",
+      " restantes)"
+    ]
+  },
+  "sneckomod:MudshieldPower": {
+    "NAME": "Bouclier de boue",
+    "DESCRIPTIONS": [
+      "Lorsque vous #yConfondez une carte, gagnez #b",
+      " #yd'Armure au prochain tour."
+    ]
+  },
+  "sneckomod:SerpentMindPower": {
+    "NAME": "Esprit serpentin",
+    "DESCRIPTIONS": [
+      "Lorsque vous jouez une carte #yHors-classe, piochez #b",
+      " carte.",
+      " cartes."
+    ]
+  },
+  "sneckomod:UnendingSupplyPower": {
+    "NAME": "Source inépuisable",
+    "DESCRIPTIONS": [
+      "Au début de chaque tour, ajoutez #b",
+      " carte(s) #yHors-classe dans votre main et #yConfondez les."
+    ]
+  },
+  "sneckomod:UnknownUpgradedPostCombatPower": {
+    "NAME": "Plus de puissance!",
+    "DESCRIPTIONS": [
+      "À la fin du combat, obtenez #b",
+      " cartes #yInconnues #yAméliorées supplémentaires.",
+      " carte #yInconnue #yAméliorée supplémentaire."
+    ]
+  },
+  "sneckomod:UnlimitedRollsPower": {
+    "NAME": "Lancers illimités",
+    "DESCRIPTIONS": [
+      "Au début de votre tour, ajoutez un #yLancer #de #yl'âme dans votre main avec Éthérée et Épuisement."
+    ]
+  },
+  "sneckomod:Transmogrifying": {
+    "NAME": "Transfigurant",
+    "DESCRIPTIONS": [
+      " est transformée en une autre relique ",
+      " ."
+    ]
+  }
+}

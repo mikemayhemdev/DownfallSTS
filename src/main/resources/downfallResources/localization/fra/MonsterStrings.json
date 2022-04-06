@@ -1,0 +1,85 @@
+{
+  "downfall:ChangingTotem": {
+    "MOVES": [
+      "Regard métamorphe"
+    ],
+    "NAME": "Tête du changement",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:ForgetfulTotem": {
+    "MOVES": [
+      "Regard amnésique"
+    ],
+    "NAME": "Tête de l'oubli",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:GrowingTotem": {
+    "MOVES": [
+      "Rayon de croissance"
+    ],
+    "NAME": "Tête de la croissance",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:FleeingMerchant": {
+    "MOVES": [
+      "Voleur d'âmes"
+    ],
+    "NAME": "Tête de la croissance",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:LooterAlt": {
+    "MOVES": [
+    ],
+    "NAME": "Brigand",
+    "DIALOG": [
+      "~Hé,~ t'as pas d'argent sur toi!",
+      "@NOOOoooon!@",
+      "Tu vas crever, mon gars."
+    ]
+  },
+  "downfall:MuggerAlt": {
+    "MOVES": [
+    ],
+    "NAME": "Pickpocket",
+    "DIALOG": [
+      "Let's teach 'em a lesson.",
+      "Teach 'em all the way!"
+    ]
+  },
+  "downfall:Fortification": {
+    "MOVES": [
+    ],
+    "NAME": "Fortification",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomRed": {
+    "MOVES": [
+    ],
+    "NAME": "Porcini",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomPurple": {
+    "MOVES": [
+    ],
+    "NAME": "Actarius",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomWhite": {
+    "MOVES": [
+    ],
+    "NAME": "Puffball",
+    "DIALOG": [
+    ]
+  }
+}

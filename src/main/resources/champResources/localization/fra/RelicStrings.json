@@ -1,0 +1,110 @@
+{
+  "champ:ChampionCrown": {
+    "NAME": "Couronne du champion",
+    "FLAVOR": "VOUS ÊTES LE GAGNANT!",
+    "DESCRIPTIONS": [
+      "Au début du combat, entrez en Pose #bDéfensive ou en Pose du #rDestructeur  #yPose, infligez #b4 dégâts à un ennemi aléatoire."
+    ]
+  },
+  "champ:BlackKnightHelmet": {
+    "NAME": "Casque du Chevalier noir",
+    "FLAVOR": "Seulement une petite blessure.",
+    "DESCRIPTIONS": [
+      "La première fois que vous adoptez une Pose chaque combat: NL #bDéfensive: Gagnez 2 de Dextérité, Perdez 1 de Force. NL #rDestructeur: Gagnez 2 de Force, Perdez 1 de Dextérité."
+    ]
+  },
+  "champ:Barbells": {
+    "NAME": "Haltères",
+    "FLAVOR": "1000 pompes ? Pff. Je peux en faire 1001.",
+    "DESCRIPTIONS": [
+      "Lorsque vous êtes dans un site de Repos, si vous avez au moins #b10 cartes non-Améliorées dans votre deck, #yAméliorez-en une aléatoirement."
+    ]
+  },
+  "champ:BerserkersGuideToSlaughter": {
+    "NAME": "Guide du Destructeur",
+    "FLAVOR": "Le texte est illisible.",
+    "DESCRIPTIONS": [
+      "Au début de votre tour, gagnez #b3 de Vigeur."
+    ]
+  },
+  "champ:ChampionCrownUpgraded": {
+    "NAME": "Couronne du victorieux",
+    "FLAVOR": "Félissitations!! Vous êtes le plus grand vainqueur.",
+    "DESCRIPTIONS": [
+      "Remplace la #rCouronne #rdu #rChampion. NL Commencez chaque combat en #yPose #yUltime, qui dure pendant #b2 tours."
+    ]
+  },
+  "champ:DefensiveTrainingManual": {
+    "NAME": "Thèse défensive",
+    "FLAVOR": "Pro tip: Ne vous faites pas toucher.",
+    "DESCRIPTIONS": [
+      "Le #yBonus de #yFinisher de la Pose Défensive donne #b5 #yd'Armure supplémentaire."
+    ]
+  },
+  "champ:DeflectingBracers": {
+    "NAME": "Bracelets déflecteurs",
+    "FLAVOR": "Si vous pensiez que se protéger était bien...",
+    "DESCRIPTIONS": [
+      "Au début de votre tour, gagnez du #yContre équivalent à l'Armure que vous avez perdu."
+    ]
+  },
+  "champ:DuelingGlove": {
+    "NAME": "Gants de duel",
+    "FLAVOR": "Comptez jusqu'à...",
+    "DESCRIPTIONS": [
+      "Après avoir utilisé une attaque à cible unique, si la cible n'était pas #yVulnérable, appliquez #b1 de #yVulnérabilité."
+    ]
+  },
+  "champ:FightingForDummies": {
+    "NAME": "Combattre pour les Nuls",
+    "FLAVOR": "Etape 1. Battre l'ennemi",
+    "DESCRIPTIONS": [
+      "Si vous terminez votre tour avec aucune #yPose, gagnez 6 d'Armure."
+    ]
+  },
+  "champ:GladiatorsBookOfMartialProwess": {
+    "NAME": "Manuel de gladiateur",
+    "FLAVOR": "Essayez tout - quelque chose marchera sûrement.",
+    "DESCRIPTIONS": [
+      "Lorsque vous jouez une #yTechnique, un #yCombo, un #yFinisher, et que vous entrez dans une #yPose dans le même tour, gagnez #b1 de #yForce et de #yDextérité."
+    ]
+  },
+  "champ:PowerArmor": {
+    "NAME": "Armure de Puissance",
+    "FLAVOR": "Achetée d'occasion.",
+    "DESCRIPTIONS": [
+      "Au début de votre tour, gagnez [E] . NL Votre #Vigueur et votre #Contre maximum est de #b30."
+    ]
+  },
+  "champ:SignatureFinisher": {
+    "NAME": "Attaque Signature",
+    "FLAVOR": "Et maintenant, il est l'heure d'utiliser mon ATTAQUE LA PLUS PUISSANTE!",
+    "DESCRIPTIONS": [
+      "Lorsque vous la récupérez, choisisssez un #yFinisher. Ce #yFinisher coûte 0, peut être utilisée sans être dans une #yPose, et ne fait plus quitter votre #yPose.",
+      "Choisissez une carte pour ",
+      " coûte 0, peut être utilisée sans être dans une #yPose, et ne fait plus quitter votre #yPose."
+    ]
+  },
+  "champ:SpectersHand": {
+    "NAME": "Main de spectre",
+    "FLAVOR": "Certaines victoires restent avec vous.",
+    "DESCRIPTIONS": [
+      "Lorsque vous adoptez une Pose, ajoutez une #yFrappe ou une #yDéfense dans votre main. Elle coûte #b0 et a #yÉpuisement."
+    ]
+  },
+  "champ:LiftRelic": {
+    "NAME": "Force intérieure",
+    "FLAVOR": "Il s'agit de l'épée gigantesque dans ton coeur.",
+    "DESCRIPTIONS": [
+      "Commencez chaque combat avec #b",
+      " de #yForce."
+    ]
+  },
+  "champ:ChampStancesModRelic": {
+    "NAME": "New Challenger",
+    "FLAVOR": "Réussirez-vous à prendre la Couronne?",
+    "DESCRIPTIONS": [
+      "Commencez chaque combat dans une #yPose aléatoire du Champion."
+    ]
+  }
+}

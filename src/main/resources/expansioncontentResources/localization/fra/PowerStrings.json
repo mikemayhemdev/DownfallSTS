@@ -1,0 +1,106 @@
+{
+  "expansioncontent:StudyTheSpirePower": {
+    "NAME": "Étude de la tour",
+    "DESCRIPTIONS": [
+      "Obtenez une carte #yBoss aléatoire au début de votre prochain tour. NL Elle coûte #b0 jusqu'à ce qu'elle soit jouée.",
+      "Obtenez une carte #yBoss aléatoire au début de vos #b",
+      " prochains tours. NL Elles coûtent #b0 jusqu'à ce qu'elles soient jouées.",
+      "Obtenez une carte #yBoss aléatoire #yAméliorée au début de votre prochain tour. NL Elle coûte #b0 jusqu'à ce qu'elle soit jouée.",
+      "Obtenez une carte #yBoss aléatoire #yAméliorée au début de vos #b",
+      " prochains tours. NL Elles coûtent #b0 jusqu'à ce qu'elles soient jouées."
+    ]
+  },
+  "expansioncontent:AwakenedOnePower": {
+    "NAME": "Rituel obscur",
+    "DESCRIPTIONS": [
+      "Gagnez #b",
+      " de #yForce si cet ennemi n'attaque pas pendant son tour."
+    ]
+  },
+  "expansioncontent:AwakenDeathPower": {
+    "NAME": "Éveil",
+    "DESCRIPTIONS": [
+      "Quand vous auriez dû mourir, soignez-vous de #b",
+      " PV et retirez cet effet."
+    ]
+  },
+  "expansioncontent:ChronoBoostPower": {
+    "NAME": "Chrono Boost",
+    "DESCRIPTIONS": [
+      "Après avoir joué #b",
+      " cartes de plus, gagnez #b",
+      " de #yForce."
+    ]
+  },
+  "expansioncontent:ChronoBoostPlusPower": {
+    "NAME": "Chrono Boost+",
+    "DESCRIPTIONS": [
+      "Après avoir joué #b",
+      " cartes de plus, gagnez #b",
+      " de #yForce."
+    ]
+  },
+  "expansioncontent:DeEnergizedPower": {
+    "NAME": "Hors tension",
+    "DESCRIPTIONS": [
+      "Au début de votre prochain tour, perdez #b",
+      " [E]."
+    ]
+  },
+  "expansioncontent:PolyBeamAgainPower": {
+    "NAME": "Puissance",
+    "DESCRIPTIONS": [
+      "#yMultilaser sera joué au début de votre prochain tour. ",
+      "#yMultilaser sera joué au début de vos #b",
+      " prochains tours."
+    ]
+  },
+  "expansioncontent:PolyBeamAgainPowerUpgraded": {
+    "NAME": "Puissance",
+    "DESCRIPTIONS": [
+      "#yMultilaser+ sera jouée lors de votre prochain tour. ",
+      "#yMultilaser+ sera joué au début de vos #b",
+      " prochains tours."
+    ]
+  },
+  "expansioncontent:AddCopyPower": {
+    "NAME": "Carte retardée",
+    "DESCRIPTIONS": [
+      "Ajoutez ",
+      " dans votre main au début de votre prochain tour."
+    ]
+  },
+  "expansioncontent:AddSameInstancePower": {
+    "NAME": "Carte retardée",
+    "DESCRIPTIONS": [
+      "Ajoutez  ",
+      " dans votre main au début de votre prochain tour."
+    ]
+  },
+  "expansioncontent:NextTurnExhumePower": {
+    "NAME": "Exhumation retardée",
+    "DESCRIPTIONS": [
+      "Exhumez ",
+      " au début de votre prochain tour."
+    ]
+  },
+  "expansioncontent:PretendHexWheelPower": {
+    "NAME": "Hexabrûlure",
+    "DESCRIPTIONS": [
+      "Dans #b",
+      " tours, infligez #b",
+      "A la fin de votre tour, infligez #b",
+      " dégâts à un ennemi aléatoire #b6 fois."
+    ]
+  },
+  "expansioncontent:VexVinciblePower": {
+    "NAME": "Invincibilité",
+    "DESCRIPTIONS": [
+      "Limite tous les dégâts et les pertes de PV reçus de #b",
+      " dans un tour. Retiré après activation.",
+      "Limite tous les dégâts et les pertes de PV reçus de #b",
+      " dans un tour. Retiré après #b",
+      " activations."
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+[
+  {
+    "PROPER_NAME": "Technique",
+    "NAMES": [
+      "technique",
+      "techniques",
+      "champ:[crown_icon]",
+      "[crown_icon]"
+    ],
+    "DESCRIPTION": "Si vous êtes dans une #yPose, déclenchez son bonus de Technique."
+  },
+  {
+    "PROPER_NAME": "Combo",
+    "NAMES": [
+      "combo"
+    ],
+    "DESCRIPTION": "Un effet supplémentaire lorsque cette carte est jouée dans la #yPose listée, ou si vous êtes entré dans cette #yPose ce tour."
+  },
+  {
+    "PROPER_NAME": "Finisher",
+    "NAMES": [
+      "finisher",
+      "finishers",
+      "[fist_icon]",
+      "champ:[fist_icon]"
+    ],
+    "DESCRIPTION": "Ceci requiert d'être dans une Pose. NL Après avoir joué un Finisher, si vous êtes dans une #yPose, quittez-la et déclenchez son bonus de Finisher."
+  },
+  {
+    "PROPER_NAME": "Contre",
+    "NAMES": [
+      "contre"
+    ],
+    "DESCRIPTION": "La prochaine fois que vous prenez des dégâts #yd'Attaque, infligez ces dégâts en retour."
+  },
+  {
+    "PROPER_NAME": "Defensive",
+    "NAMES": [
+      "défensive",
+      "défensive."
+    ],
+    "DESCRIPTION": "#yPose. NL Bonus de #yTechnique: Gagnez #b4 de #yContre. NL Bonus de #yFinisher: Gagnez #b12 #yd'Armure."
+  },
+  {
+    "PROPER_NAME": "Destructeur",
+    "NAMES": [
+      "destructeur",
+      "destructeur."
+    ],
+    "DESCRIPTION": "#yPose.  NL Bonus de #yTechnique: Gagnez #b4 de #yVigeur. NL Bonus de #yFinisher: Gagnez #b1 de #yForce."
+  },
+  {
+    "PROPER_NAME": "Gladiateur",
+    "NAMES": [
+      "gladiateur",
+      "gladiateur."
+    ],
+    "DESCRIPTION": "#yPose.  NL Bonus de #yTechnique : Piochez une carte. NL Bonus de #yFinisher: Au prochain tour, piochez #b1 carte et gagnez [E] . Terminez votre tour."
+  },
+  {
+    "PROPER_NAME": "Pose ultime",
+    "NAMES": [
+      "ultime",
+      "ultime."
+    ],
+    "DESCRIPTION": "#yPose. Compte comme les #yPoses de #rDestructeur et #bDéfensive pour tous les usages. NL Les Finishers ne font pas quitter cette Pose. NL Vous ne pouvez donc pas changer de #yPose."
+  },
+  {
+    "PROPER_NAME": "Fatigue",
+    "NAMES": [
+      "fatiguez",
+      "fatigué"
+    ],
+    "DESCRIPTION": "Perdez des PV. Restorez les PV #yFatigués à la fin du combat."
+  }
+]
