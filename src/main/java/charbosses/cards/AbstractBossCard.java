@@ -311,6 +311,13 @@ public abstract class AbstractBossCard extends AbstractCard {
         if (mo != null) {
             this.damage = MathUtils.floor(calculateDamage(mo, player, this.baseDamage));
             this.intentDmg = MathUtils.floor(manualCustomDamageModifierMult * calculateDamage(mo, player, this.baseDamage + customIntentModifiedDamage() + manualCustomDamageModifier));
+            if (this instanceof EnCarveReality) {
+                if (((EnCarveReality)this).willUseSmite) {
+                    EnSmite enSmite = new EnSmite();
+                    enSmite.calculateCardDamage(this.owner);
+                    this.intentDmg += enSmite.intentDmg;
+                }
+            }
         }
         this.initializeDescription();
     }

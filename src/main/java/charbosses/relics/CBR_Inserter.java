@@ -42,6 +42,6 @@ public class CBR_Inserter extends AbstractCharbossRelic {
     }
 
     public AbstractRelic makeCopy() {
-        return new Inserter();
+        return new CBR_Inserter();
     }
 }

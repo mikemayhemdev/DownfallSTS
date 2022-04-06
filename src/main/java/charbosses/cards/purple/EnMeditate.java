@@ -4,7 +4,6 @@ import charbosses.actions.unique.EnemyChangeStanceAction;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import charbosses.stances.EnCalmStance;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,13 +12,14 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.ArrayList;
 
-public class EnTranquility extends AbstractBossCard {
-    public static final String ID = "downfall_Charboss:ClearTheMind";
+public class EnMeditate extends AbstractBossCard {
+    public static final String ID = "downfall_Charboss:Meditate";
     private static final CardStrings cardStrings;
 
-    public EnTranquility() {
-        super(ID, cardStrings.NAME, "purple/skill/tranquility", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.PURPLE, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
-        this.exhaust = true;
+    public EnMeditate() {
+        super(ID, cardStrings.NAME, "purple/skill/meditate", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.PURPLE, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
+        this.baseBlock = 8;
+        this.block = this.baseBlock;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,18 +33,13 @@ public class EnTranquility extends AbstractBossCard {
     }
 
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.upgradeBaseCost(0);
-        }
-
     }
 
     public AbstractCard makeCopy() {
-        return new EnTranquility();
+        return new EnMeditate();
     }
 
     static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings("ClearTheMind");
+        cardStrings = CardCrawlGame.languagePack.getCardStrings("Meditate");
     }
 }

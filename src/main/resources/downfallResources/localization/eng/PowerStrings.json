@@ -40,6 +40,12 @@
       "At the end of your turn, choose a card to #yExhaust."
     ]
   },
+  "downfall:SpotWeakness": {
+    "NAME": "Spot Weakness",
+    "DESCRIPTIONS": [
+      "Every turn in which you play an attack card with this power active, this enemy gains #b"," #yStrength. Currently it will gain #b", " #yStrength."
+    ]
+  },
   "downfall:PoisonResist": {
     "NAME": "Poison Resistance",
     "DESCRIPTIONS": [
