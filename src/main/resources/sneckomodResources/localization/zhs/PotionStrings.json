@@ -10,9 +10,9 @@
   "sneckomod:CheatPotion": {
     "NAME": "流动幸运",
     "DESCRIPTIONS": [
-      "本回合内，卡牌的随机数值取上限值。",
-      "在 #b",
-      " 回合内，卡牌的随机数值取上限值。"
+      "本回合内，获得 #y幸运 。",
+      " #b",
+      " 回合内，获得 #y幸运 。"
     ]
   },
   "sneckomod:MuddlingPotion": {
