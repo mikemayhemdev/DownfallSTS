@@ -248,13 +248,13 @@ public abstract class AbstractChampCard extends CustomCard {
     }
 
     public void berserkOpen() {
-        berserkerStance();
-        triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
+      //  berserkerStance();
+       // triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
     }
 
     public void defenseOpen() {
-        defensiveStance();
-        triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
+     //   defensiveStance();
+      //  triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
     }
 
     protected void berserkerStance() {

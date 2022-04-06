@@ -31,7 +31,7 @@
   },
   "hexamod:CatchUp": {
     "NAME": "Catch Up",
-    "DESCRIPTION": "hexamod:Ignite the previous Ghostflame."
+    "DESCRIPTION": "hexamod:Ignite the previous Ghostflame !M! times."
   },
   "hexamod:ChargedBarrage": {
     "NAME": "Charged Barrage",

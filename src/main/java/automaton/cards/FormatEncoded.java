@@ -19,8 +19,8 @@ public class FormatEncoded extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, all, rare
 
-    private static final int DAMAGE = 5;
-    private static final int BLOCK = 5;
+    private static final int DAMAGE = 4;
+    private static final int BLOCK = 4;
 
     public FormatEncoded() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);

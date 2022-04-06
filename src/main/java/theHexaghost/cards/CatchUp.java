@@ -23,12 +23,14 @@ public class CatchUp extends AbstractHexaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new ExtinguishAction(GhostflameHelper.getPreviousGhostFlame()));
         atb(new ChargeAction(GhostflameHelper.getPreviousGhostFlame()));
+        atb(new ExtinguishAction(GhostflameHelper.getPreviousGhostFlame()));
+        atb(new ChargeAction(GhostflameHelper.getPreviousGhostFlame()));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+            upgradeMagicNumber(1);
         }
     }
 }

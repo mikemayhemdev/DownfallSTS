@@ -43,6 +43,7 @@ public class GlobalExtraCardUIPatch {
                 renderHelper(sb, UnknownExtraUiPatch.parentCard.get(__instance).getOverBannerTex(), __instance.current_x, __instance.current_y, __instance);
             }
 
+            /*
             if (__instance instanceof AbstractChampCard) {
                 if (((AbstractChampCard) __instance).myHpLossCost > 0) { // Berserker draw stuff.
                     FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
@@ -53,7 +54,10 @@ public class GlobalExtraCardUIPatch {
 
             }
 
+             */
+
             //Opener / Technique / Finisher draws
+            /*
             if (__instance.hasTag(ChampMod.OPENER)) {
                 if (__instance instanceof StanceDance || __instance instanceof Taunt || __instance instanceof WindUp) {
                     renderHelper(sb, openerall, __instance.current_x, __instance.current_y, __instance);
@@ -66,16 +70,21 @@ public class GlobalExtraCardUIPatch {
                 FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
             }
 
+             */
+
             if (__instance instanceof AbstractChampCard) {
                 FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
                 renderHelper(sb, crown, __instance.current_x, __instance.current_y, __instance);
             }
 
 
+/*
             if (__instance.hasTag(ChampMod.FINISHER)) {
                 FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
                 renderHelper(sb, finisher, __instance.current_x, __instance.current_y, __instance);
             }
+
+             */
         }
 
         private static void renderHelper(SpriteBatch sb, TextureAtlas.AtlasRegion img, float drawX, float drawY, AbstractCard C) {

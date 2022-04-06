@@ -538,7 +538,8 @@
   },
   "bronze:CleanCode": {
     "NAME": "简明代码",
-    "DESCRIPTION": "移除下 !M! 张 *方法 中的 bronze:编译 *错误 。"
+    "DESCRIPTION": "移除下张 !M! bronze:编码 牌中的 bronze:编译 *错误 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 移除下张 !M! bronze:编码 牌中的 bronze:编译 *错误 。"
   },
   "bronze:BranchBlock": {
     "NAME": "分支: 格挡",

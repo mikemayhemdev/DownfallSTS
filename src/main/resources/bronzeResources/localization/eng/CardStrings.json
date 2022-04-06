@@ -543,7 +543,8 @@
   },
   "bronze:CleanCode": {
     "NAME": "Clean Code",
-    "DESCRIPTION": "Remove all bronze:Compile *Error effects from Encoded cards in the next !M! Functions created."
+    "DESCRIPTION": "Remove the next !M! bronze:Compile *Errors you would bronze:Encode.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Remove the next !M! bronze:Compile *Errors you would bronze:Encode."
   },
   "bronze:BranchBlock": {
     "NAME": "Branch: Block",

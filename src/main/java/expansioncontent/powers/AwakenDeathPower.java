@@ -50,6 +50,14 @@ public class AwakenDeathPower extends AbstractPower implements OnPlayerDeathPowe
         return false;
     }
 
+    public void onVictory()
+         {
+          AbstractPlayer p = com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
+           if (p.currentHealth > 0) {
+                 p.heal(this.amount);
+          }
+          }
+
     public void trigger(AbstractPlayer abstractPlayer) {
         AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, AwakenDeathPower.POWER_ID));
         AbstractDungeon.actionManager.addToTop(new HealAction(abstractPlayer, abstractPlayer, this.amount));

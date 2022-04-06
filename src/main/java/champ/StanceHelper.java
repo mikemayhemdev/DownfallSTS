@@ -45,9 +45,12 @@ public class StanceHelper {
     }
 
     public static void update() {
+        /*
         hitboxStance.update();
         hitboxTechnique.update();
         hitboxFinisher.update();
+
+         */
     }
 
     public static String getStanceName() {
@@ -94,6 +97,7 @@ public class StanceHelper {
     }
 
     public static void render(SpriteBatch sb) {
+        /*
         if (!downfallMod.champDisableStanceHelper) {
             if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT)
                 if (hitboxStance != null) {
@@ -175,6 +179,8 @@ public class StanceHelper {
                     }
                 }
         }
+
+         */
     }
 
     private static void renderHelper(SpriteBatch sb, TextureAtlas.AtlasRegion img, float drawX, float drawY) {

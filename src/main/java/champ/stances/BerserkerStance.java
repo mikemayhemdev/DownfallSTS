@@ -34,6 +34,23 @@ public class BerserkerStance extends AbstractChampStance {
     }// 24
 
     @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String getDescription() {
+        return ChampChar.characterStrings.TEXT[8] + ": " +
+                ChampChar.characterStrings.TEXT[12] + //Gain #B
+                BerserkerStance.amount() +
+                ChampChar.characterStrings.TEXT[46] + //#y Vigor
+                " NL " +
+                ChampChar.characterStrings.TEXT[62] + //"Charges Remaining:
+                getRemainingChargeCount() +
+                ChampChar.characterStrings.TEXT[55]; //"."
+    }
+
+    @Override
     public String getKeywordString() {
         return "champ:berserker";
     }
@@ -44,6 +61,7 @@ public class BerserkerStance extends AbstractChampStance {
                 + ChampChar.characterStrings.TEXT[12] + //Gain #B
                 BerserkerStance.amount() +
                 ChampChar.characterStrings.TEXT[46] + //#y Vigor.
+                ChampChar.characterStrings.TEXT[63] +
                 " NL " + ChampChar.characterStrings.TEXT[9] + ": " + //Finisher Bonus:
                 ChampChar.characterStrings.TEXT[11];   //Gain 1 Strength.
     }
