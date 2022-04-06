@@ -3,6 +3,7 @@ package charbosses.cards.purple;
 import charbosses.actions.common.EnemyMakeTempCardInHandAction;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnShiv;
+import charbosses.powers.cardpowers.EnemyMasterRealityPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;

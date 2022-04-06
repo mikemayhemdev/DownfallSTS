@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.CardPoofEffect;
 
+import java.util.ArrayList;
+
 public class EnemyShowCardAndAddToHandEffect extends AbstractGameEffect {
     private static final float EFFECT_DUR = 0.8f;
     private static final float PADDING;

@@ -5,6 +5,8 @@ import basemod.abstracts.CustomCard;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import charbosses.cards.colorless.EnHandOfGreedHermitNecro;
+import charbosses.cards.purple.EnCarveReality;
+import charbosses.cards.purple.EnSmite;
 import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.powers.cardpowers.EnemyStormPower;
 import charbosses.stances.EnDivinityStance;
