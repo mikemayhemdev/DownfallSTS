@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import champ.powers.FocusedBerPower;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
@@ -24,23 +25,15 @@ public class FancyFootwork extends AbstractChampCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         //exhaust = true;
+        tags.add(ChampMod.OPENER);
+        tags.add(ChampMod.OPENERNOTIN);
         postInit();
     }
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        if (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID)) {
-            berserkOpen();
-        } else if (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
-            defenseOpen();
-        } else if (!inBerserker() && !inDefensive()) {
-            if (AbstractDungeon.cardRandomRng.randomBoolean()){
-                berserkOpen();
-            } else {
-                defenseOpen();
-            }
-        }
+
         applyToSelf(new FocusedBerPower(magicNumber));
         p.useHopAnimation();
         atb(new VFXAction(new StanceDanceEffect(p, false, false, true), 0.7F));

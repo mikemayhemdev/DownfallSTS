@@ -33,6 +33,7 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+
         //if (upgraded) techique();
         atb(new OctoChoiceAction(m, this));
         postInit();
@@ -59,7 +60,8 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
                     UnlockTracker.markCardAsSeen(r.cardID);
                     makeInHand(r);
                 }
-                berserkOpen();
+                ChampMod.berserkOpen();
+
                 break;
             case "octo:OctoDefense":
                 if (upgraded || AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)) {
@@ -72,7 +74,7 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
                     UnlockTracker.markCardAsSeen(r.cardID);
                     makeInHand(r);
                 }
-                defenseOpen();
+                ChampMod.defenseOpen();
                 break;
         }
 

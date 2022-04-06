@@ -4,7 +4,7 @@
       "I've already played a Boss card this turn!"
     ]
   },
-  "*BossCardTagName": {
+  "expansioncontent:BossCardTagName": {
     "TEXT": [
       "Boss"
     ]
