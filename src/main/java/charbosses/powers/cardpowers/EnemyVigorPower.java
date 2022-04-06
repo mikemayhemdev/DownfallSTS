@@ -1,6 +1,7 @@
 package charbosses.powers.cardpowers;
 
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.cards.AbstractBossCard;
 import charbosses.relics.AbstractCharbossRelic;
 import charbosses.relics.CBR_Akabeko;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
@@ -39,7 +40,7 @@ public class EnemyVigorPower extends AbstractPower {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == CardType.ATTACK) {
+        if (card.type == CardType.ATTACK && card instanceof AbstractBossCard) {
             this.flash();
             AbstractCharBoss cB = (AbstractCharBoss)this.owner;
             if (cB.hasRelic(CBR_Akabeko.ID)){
