@@ -3,7 +3,6 @@ package sneckomod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import slimebound.SlimeboundMod;
 import sneckomod.cards.unknowns.*;
 
 import java.util.ArrayList;
@@ -71,9 +70,12 @@ public class OffclassHelper {
         offclassRares.clear();
 
         for (AbstractCard c : CardLibrary.getAllCards()) {
-            if (!c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) && !c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) && c.type != AbstractCard.CardType.STATUS && c.color != AbstractCard.CardColor.CURSE && c.type != AbstractCard.CardType.CURSE && c.rarity != AbstractCard.CardRarity.SPECIAL && !c.hasTag(SneckoMod.BANNEDFORSNECKO)) {
+            if (c.type != AbstractCard.CardType.STATUS && c.color != AbstractCard.CardColor.CURSE && c.type != AbstractCard.CardType.CURSE && c.rarity != AbstractCard.CardRarity.SPECIAL &&
+                    !c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) && !c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) && !c.hasTag(AbstractCard.CardTags.HEALING) && !c.hasTag(SneckoMod.BANNEDFORSNECKO)) {
                 if (SneckoMod.pureSneckoMode || SneckoMod.validColors.contains(c.color) || !(AbstractDungeon.player instanceof TheSnecko)) {
-                    addOffclassToList(c);
+                    if (!(AbstractDungeon.player != null && AbstractDungeon.player.getCardColor() == c.color)) {
+                        addOffclassToList(c);
+                    }
                 }
             }
         }
@@ -128,10 +130,7 @@ public class OffclassHelper {
                 if (oc.isEmpty())
                     oc.addAll(offclassUncommons);
 
-                //SlimeboundMod.logger.info("Common Pool: " + offclassCommons.size());
-                //SlimeboundMod.logger.info("Oc size: " + oc.size());
-                int r = AbstractDungeon.cardRandomRng.random(oc.size() -1);
-                //SlimeboundMod.logger.info("Roll value " + r);
+                int r = AbstractDungeon.cardRandomRng.random(oc.size() - 1);
                 output.add(CardLibrary.cards.get(oc.get(r)).makeCopy());
                 oc.remove(r);
             } else if (roll < 85) {
