@@ -9,18 +9,18 @@
   },
   "Guardian:Gem_Red": {
     "NAME": "红宝石",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 层 点 guardianmod:临时 力量 。",
-    "UPGRADE_DESCRIPTION": "弃用"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得2层 guardianmod:临时 力量 。",
+    "UPGRADE_DESCRIPTION": "获得2层 guardianmod:临时 力量 。"
   },
   "Guardian:Gem_Green": {
     "NAME": "翡翠",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 2 层 guardianmod:临时 敏捷 。",
-    "UPGRADE_DESCRIPTION": "弃用"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得2层 guardianmod:临时 敏捷 。",
+    "UPGRADE_DESCRIPTION": "获得2层 guardianmod:临时 敏捷 。"
   },
   "Guardian:Gem_Lightblue": {
     "NAME": "碧玺",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 4 层 guardianmod:临时 荆棘 。",
-    "UPGRADE_DESCRIPTION": "弃用"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得4层 guardianmod:临时 荆棘 。",
+    "UPGRADE_DESCRIPTION": "获得4层 guardianmod:临时 荆棘 。"
   },
   "Guardian:Gem_White": {
     "NAME": "石英",
