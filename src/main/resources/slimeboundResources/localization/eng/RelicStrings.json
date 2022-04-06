@@ -26,7 +26,7 @@
     "NAME": "Stone of Nomakk",
     "FLAVOR": "When presented to one of your Goop Gang, it seems to make the blob dance.",
     "DESCRIPTIONS": [
-      "At the start of combat, #yslimeboundmod:split into a #yslimeboundmod:Mire #ySlime and gain #b1 #yslimeboundmod:Potency."
+      "At the start of combat, #ySplit into a #yslimeboundmod:Mire #ySlime and gain #b1 #yslimeboundmod:Potency."
     ]
   },
   "Slimebound:DailySplitRelic": {
