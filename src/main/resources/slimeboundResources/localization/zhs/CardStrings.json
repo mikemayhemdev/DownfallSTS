@@ -48,8 +48,8 @@
   },
   "Slimebound:SlimeTap": {
     "NAME": "污泥回用",
-    "DESCRIPTION": "slimeboundmod:吸收 后： NL 获得 [E] [E] 并抽 !M! 张牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:吸收 两次-每只获得 [E] [E] 并抽2张牌。 NL 消耗 。",
+    "DESCRIPTION": "slimeboundmod:吸收 后： NL 获得 [E] 并抽 !M! 张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:吸收 后： NL 获得 [E] [E] 并抽 !M! 张牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "需要……史莱姆……"
     ]

@@ -366,7 +366,7 @@
   },
   "champ:GladiatorStyle": {
     "NAME": "건투",
-    "DESCRIPTION": "힘을 !M! 얻습니다. NL 적 전체가 힘을 2 얻습니다."
+    "DESCRIPTION": "힘을 !M! 얻습니다. NL 적 전체가 힘을 1 얻습니다."
   },
   "champ:BerserkerStyle": {
     "NAME": "광폭화 태세",

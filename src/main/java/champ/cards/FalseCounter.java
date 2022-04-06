@@ -21,10 +21,10 @@ public class FalseCounter extends AbstractChampCard {
     public final static String ID = makeID("FalseCounter");
 
     public FalseCounter() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         tags.add(ChampMod.FINISHER);
-        baseBlock = block = 10;
+        baseBlock = block = 12;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -75,7 +75,12 @@ public class SlimeTap extends AbstractSlimeboundCard {
             numEaten = numEaten + 1;
             AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
             AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DrawCardAction(AbstractDungeon.player, this.magicNumber));
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(2));
+            if (upgraded){
+                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(2));
+            } else {
+                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(1));
+            }
+
             return;
         }
     }
@@ -87,7 +92,9 @@ public class SlimeTap extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+
+            rawDescription = UPGRADED_DESCRIPTION;
+            initializeDescription();
 
 
         }

@@ -226,7 +226,7 @@
   },
   "champ:MurderStrike": {
     "NAME": "Murder Strike",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When you use a *Skill, this card deals !M! more damage."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When you use a *Skill, this deals !M! more damage this combat."
   },
   "champ:HeavySlash": {
     "NAME": "Masterful Slash",
@@ -366,7 +366,7 @@
   },
   "champ:GladiatorStyle": {
     "NAME": "Good Clean Fight",
-    "DESCRIPTION": "Gain !M! Strength. NL ALL enemies gain 2 Strength."
+    "DESCRIPTION": "Gain !M! Strength. NL ALL enemies gain 1 Strength."
   },
   "champ:BerserkerStyle": {
     "NAME": "Berserker Style",

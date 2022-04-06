@@ -333,7 +333,7 @@
   },
   "champ:GladiatorStyle": {
     "NAME": "利落",
-    "DESCRIPTION": "获得 !M! 点 力量 。 NL 所有敌人获得2点 力量 。"
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 所有敌人获得1点 力量 。"
   },
   "champ:BerserkerStyle": {
     "NAME": "狂暴战法",

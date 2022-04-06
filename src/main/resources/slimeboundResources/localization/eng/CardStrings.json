@@ -48,8 +48,8 @@
   },
   "Slimebound:SlimeTap": {
     "NAME": "Slime Tap",
-    "DESCRIPTION": "slimeboundmod:Absorb - Gain [E] [E] and draw !M! cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorb Twice - Gain [E] [E] and draw 2 cards for each slimeboundmod:Absorbed. NL Exhaust.",
+    "DESCRIPTION": "slimeboundmod:Absorb - Gain [E] and draw !M! cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorb - Gain [E] [E] and draw !M! cards. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Need... slimes..."
     ]

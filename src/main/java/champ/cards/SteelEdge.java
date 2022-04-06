@@ -15,8 +15,8 @@ public class SteelEdge extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 9;
-    private static final int BLOCK = 9;
+    private static final int DAMAGE = 8;
+    private static final int BLOCK = 8;
 
     public SteelEdge() {
         super(ID, -1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
@@ -42,19 +42,12 @@ public class SteelEdge extends AbstractChampCard {
                 for (int i = 0; i < effect; i++) {
                     dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
                 }
-                if (upgraded){
-
-                    dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-                }
             }
             if (dcombo()) {
                 for (int i = 0; i < effect; i++) {
                     blck();
                 }
 
-                if (upgraded){
-                    blck();
-                }
             }
             return true;
         }));
@@ -66,7 +59,12 @@ public class SteelEdge extends AbstractChampCard {
     }
 
     public void upp() {
+        upgradeDamage(3);
+        upgradeBlock(3);
+        /*
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
+
+         */
     }
 }

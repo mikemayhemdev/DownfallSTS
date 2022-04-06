@@ -73,7 +73,7 @@
     "NAME": "강력한 갑옷",
     "FLAVOR": "중고로 샀습니다.",
     "DESCRIPTIONS": [
-      "내 턴 시작 시 [E] 를 얻습니다. NL 최대 #y활력과 #ychamp:반격이 #b20 으로 감소합니다."
+      "내 턴 시작 시 [E] 를 얻습니다. NL 최대 #y활력과 #ychamp:반격이 #b10 으로 감소합니다."
     ]
   },
   "champ:SignatureFinisher": {

@@ -1,18 +1,18 @@
 {
   "sneckomod:Unknown": {
     "TEXT": [
-      "Unknown",
+      "Unidentified",
       " Upgraded ",
-      "At the start of combat, Unknown cards transform into other random cards from the chosen classes that satisfy certain constraints.",
+      "At the start of combat, Unidentified cards transform into other random cards from the chosen classes that satisfy certain constraints.",
       " NL Chosen classes:",
-      "At the start of combat, Unknown cards transform into other random cards from ANY other class that satisfy certain constraints.",
-      "At the start of combat, Unknown cards transform into other random cards from other classes that satisfy certain constraints."
+      "At the start of combat, Unidentified cards transform into other random cards from ANY other class that satisfy certain constraints.",
+      "At the start of combat, Unidentified cards transform into other random cards from other classes that satisfy certain constraints."
     ]
   },
   "sneckomod:UnknownClass": {
     "TEXT": [
       "???",
-      "*Unknown ",
+      "*Unidentified ",
       " Card.",
       "Character",
       "The ",
@@ -21,7 +21,7 @@
   },
   "sneckomod:UpgradedUnknownReward": {
     "TEXT": [
-      "Add an Unknown+ card to your deck",
+      "Add an Unidentified+ card to your deck",
       "Pick a Card."
     ]
   },
@@ -38,23 +38,23 @@
   "sneckomod:ChallengeMode": {
     "TEXT": [
       "Challenge Mode - Pure Snecko",
-      "Unknown cards can be from any class. Recommended for experienced Snecko players."
+      "Unidentified cards can be from any class. Recommended for experienced Snecko players."
     ]
   },
   "sneckomod:LockInBonfireOptions": {
     "TEXT": [
       "Identify",
-      "Lock an Unknown into a permanent card.",
-      "Requires an Unknown card.",
-      "Select a card to add to your deck, removing its Unknown.",
-      "[Free Action] Lock an Unknown into a permanent card."
+      "Lock an Unidentified into a permanent card.",
+      "Requires an Unidentified card.",
+      "Select a card to add to your deck, removing its Unidentified.",
+      "[Free Action] Lock an Unidentified into a permanent card."
     ]
   },
   "sneckomod:AtGameStart": {
     "TEXT": [
       "",
       " Cards",
-      "Unknown cards can become ",
+      "Unidentified cards can become ",
       " cards this run.",
       "Choose."
     ]

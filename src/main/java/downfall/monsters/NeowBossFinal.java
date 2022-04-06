@@ -90,7 +90,7 @@ public class NeowBossFinal extends AbstractMonster {
         e.setTime(e.getEndTime() * MathUtils.random());
 
         this.damage.add(new DamageInfo(this, 6)); //Eye Beam Damage
-        this.damage.add(new DamageInfo(this, 20));  //Scream Damage
+        this.damage.add(new DamageInfo(this, 16));  //Scream Damage
 
         this.strAmt = 2; //Strength Scaling for growth ability
         this.blockAmt = 20; //Block for growth ability
