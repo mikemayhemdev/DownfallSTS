@@ -25,7 +25,7 @@
     "PROPER_NAME": "瘀伤",
     "NAMES": [
       "bruise",
-      "bruised"
+      "bruised",
       "瘀伤"
     ],
     "DESCRIPTION": "受 #y瘀伤 效果影响的敌人将受到额外伤害。 NL 每次触发后失去 #b1 层。 NL 回合结束时失去该效果。"
