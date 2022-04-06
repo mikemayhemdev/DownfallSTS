@@ -1,0 +1,452 @@
+g{
+  "champ:Strike": {
+    "NAME": "Frappe",
+    "DESCRIPTION": "Infligez !D! dégâts."
+  },
+  "champ:Defend": {
+    "NAME": "Défense",
+    "DESCRIPTION": "Gagnez !B! d'Armure."
+  },
+  "champ:Taunt": {
+    "NAME": "Provoc",
+    "DESCRIPTION": "Appliquez !M! de Faiblesse et 1 de Vulnérabilité.",
+    "UPGRADE_DESCRIPTION": "Appliquez 1 de Faiblesse et 1 de Vulnérabilité à TOUS les ennemis.",
+  },
+  "champ:Execute": {
+    "NAME": "Exécution",
+    "DESCRIPTION": "Infligez !D! dégâts !cool! fois.",
+    "UPGRADE_DESCRIPTION": "Deal !D! dégâts !cool! fois."
+  },
+  "champ:StanceDance": {
+    "NAME": "Danse des poses",
+    "DESCRIPTION": "Choisissez une Pose à Adopter. NL Si vous étiez déjà dans cette pose, ajoutez un champ:Combo de cette Pose dans votre main.",
+    "UPGRADE_DESCRIPTION": "Choisissez une Pose à Adopter. NL Ajoutez un champ:Combo de cette Pose dans votre main.",
+    "EXTENDED_DESCRIPTION": [
+      "Enter champ:Berserker.",
+      "Enter champ:Defensive."
+    ]
+  },
+  "champ:GladiatorsShout": {
+    "NAME": "Cri du Gladiateur",
+    "DESCRIPTION": "Adoptez la pose du champ:Gladiateur. NL Piochez 1 carte.",
+    "UPGRADE_DESCRIPTION": "Adoptez la pose du champ:Gladiateur. NL Piochez 2 cartes."
+  },
+  "champ:SwordSigil": {
+    "NAME": "Sigle de la victoire",
+    "DESCRIPTION": "Déclenchez le *Bonus de *Compétence de votre Pose !M! fois. NL Épuisement"
+  },
+  "champ:FocusedGladiator": {
+    "NAME": "Focus: Gladiator",
+    "DESCRIPTION": "Enter champ:Gladiator. NL Until you exit champ:Gladiator Stance, champ:Techniques draw 1 extra card."
+  },
+  "champ:FaceSlap": {
+    "NAME": "Gifle",
+    "DESCRIPTION": "Infligez !D! dégâts, deux fois si l'ennemi est Vulnérable. NL Pose du *Destructeur champ:Combo: Appliquez !M! de Vulnérabilité."
+  },
+  "champ:FlashCut": {
+    "NAME": "Frappe éclair",
+    "DESCRIPTION": "Infligez !D! damage. NL Pose *Défensive champ:Combo: Gagnez !M! de champ:Contre et !B! d'Armure."
+  },
+  "champ:Balance": {
+    "NAME": "Balance",
+    "DESCRIPTION": "Enter champ:Defensive or champ:Gladiator. NL Add a random champ:Combo of that Stance into your hand.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Defensive or champ:Gladiator. NL Add a random Upgraded random champ:Combo of that Stance into your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "Enter champ:Defensive. NL Add a random *Defensive champ:Combo to your hand.",
+      "Enter champ:Gladiator. NL Add a random *Gladiator champ:Combo to your hand.",
+      "Enter champ:Defensive. NL Add a random Upgraded *Defensive champ:Combo to your hand.",
+      "Enter champ:Gladiator. NL Add a random Upgraded *Gladiator champ:Combo to your hand."
+    ]
+  },
+  "champ:DefensiveShout": {
+    "NAME": "Cri de défense",
+    "DESCRIPTION": "Gagnez !M! de champ:Contre. NL Adoptez la pose champ:Défensive.",
+  },
+  "champ:ShieldSigil": {
+    "NAME": "Fouet de chaînes",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Ce tour, vos Bonus de Compétences sont augmentés de !M!."
+  },
+  "champ:FocusedDefense": {
+    "NAME": "Bob and Weave",
+    "DESCRIPTION": "Adoptez la pose champ:Berseker. NL Gagnez !B! d'Armure. NL Gagnez !M! de Vigueur."
+  },
+  "champ:FocusedBerserking": {
+    "NAME": "Tout donner",
+    "DESCRIPTION": "Épuisement. Déclenchez !M! fois sans quitter votre pose: "
+	
+  },
+  "champ:SetATrap": {
+    "NAME": "Piège",
+    "DESCRIPTION": "Gagnez !B! d'Armure, deux fois si l'ennemi est Faible. NL Pose *Défensive champ:Combo: Appliquez !M! de Faiblesse à TOUS les ennemis."
+  },
+  "champ:Backstep": {
+    "NAME": "Marche arrière",
+    "DESCRIPTION": "Adoptez la Pose champ:Défensive. NL Gagnez !B! d'Armure, augmentée par la *Vigueur.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Gagnez !B! d'Armure.)"
+    ]
+  },
+  "champ:Aggression": {
+    "NAME": "Aggression",
+    "DESCRIPTION": "Enter champ:Berserker or champ:Gladiator. NL Add a random champ:Combo card to your hand of the chosen Stance.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Berserker or champ:Gladiator. NL Add a random Upgraded champ:Combo card to your hand of the chosen Stance.",
+    "EXTENDED_DESCRIPTION": [
+      "Enter champ:Berserker. NL Add a random *Berserker champ:Combo to your hand.",
+      "Enter champ:Gladiator. NL Add a random *Gladiator champ:Combo to your hand.",
+      "Enter champ:Berserker. NL Add a random Upgraded *Berserker champ:Combo to your hand.",
+      "Enter champ:Gladiator. NL Add a random Upgraded *Gladiator champ:Combo to your hand."
+    ]
+  },
+  "champ:BerserkersShout": {
+    "NAME": "Cri du Destructeur",
+    "DESCRIPTION": "Gagnez !M! de Vigueur. NL Adoptez la Pose du champ:Destructeur.",
+  },
+  "champ:RageSigil": {
+    "NAME": "Plan de bataille",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Scrutez !M! cartes.",
+  },
+  "champ:GutPunch": {
+    "NAME": "Coup à l'estomac",
+    "DESCRIPTION": "Infligez !D! dégâts. NL *N'importe *quel champ:Combo: Adoptez la Pose champ:Ultime pour un tour. Épuisement."
+  },
+  "champ:FanOfKnives": {
+    "NAME": "Fan de lames",
+    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis. NL Pose du *Destructeur champ:Combo: Infligez ces dégâts deux fois.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis. NL Pose du *Destructeur champ:Combo: Infligez ces dégâts trois fois."
+  },
+  "champ:Devastate": {
+    "NAME": "Dévastation",
+    "DESCRIPTION": "Infligez !D! dégâts !M! fois. NL Coûte 1 [E] de moins pour chaque Finisher joué ce combat."
+  },
+  "champ:Control": {
+    "NAME": "Contrôle",
+    "DESCRIPTION": "Adoptez la Pose champ:Défensive ou la Pose du champ:Destructeur. NL Ajoutez un champ:Combo aléatoire dans votre main de la Pose Choisie.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Defensive or champ:Berserker. NL Add a random Upgraded champ:Combo card to your hand of the chosen Stance.",
+    "EXTENDED_DESCRIPTION": [
+      "Enter champ:Defensive. NL Add a random *Defensive champ:Combo to your hand.",
+      "Enter champ:Berserker. NL Add a random *Berserker champ:Combo to your hand.",
+      "Enter champ:Defensive. NL Add a random Upgraded *Defensive champ:Combo to your hand.",
+      "Enter champ:Berserker. NL Add a random Upgraded *Berserker champ:Combo to your hand."
+    ]
+  },
+  "champ:Circumvent": {
+    "NAME": "Contournement",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL *Toute *Pose champ:Combo: Piochez !M! cartes.",
+    "UPGRADE_DESCRIPTION": "Gagnez !M! de champ:Contre. NL Gagnez !B! d'Armure. NL Pose *Défensive champ:Combo: Gagnez autant d'armure que votre champ:Contre."
+  },
+  "champ:SkillfulDodge": {
+    "NAME": "Esquive habile",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Gagnez !M! de champ:Contre. NL Pose *Défensive champ:Combo: Augmentez les effets de cette carte de !cool! ce combat."
+  },
+  "champ:TornadoPunch": {
+    "NAME": "Frappe ouragan",
+    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis. NL Pose *Défensive champ:Combo: Gagnez !B! d'Armure pour chaque ennemi touché.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis. NL Pose *Défensive champ:Combo: Gagnez !B! d'Armure pour chaque ennemi touché."
+  },
+  "champ:EnGarde": {
+    "NAME": "En Garde",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Si votre Armure est cassée ce tour, gagnez !B! d'Armure au prochain tour."
+  },
+  "champ:ShieldSlam": {
+    "NAME": "Moment de vérité",
+    "DESCRIPTION": "Retenue. NL Piochez !M! carte.",
+    "UPGRADE_DESCRIPTION": "Retenue. NL Piochez !M! cartes."
+  },
+  "champ:EnchantShield": {
+    "NAME": "Enchantement de Bouclier",
+    "DESCRIPTION": "champ:Fatiguez de 5. NL Choisissez une carde dans votre main. Augmentez son Armure de !M! pour ce combat. NL Épuisement.",
+    "EXTENDED_DESCRIPTION": [
+      "Un mauvais moment pour cette carte."
+    ]
+  },
+  "champ:BringItOn": {
+    "NAME": "Amène-toi",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Gagnez !M! de champ:Contre.",
+    "EXTENDED_DESCRIPTION": [
+      "Je ne suis pas dans une Pose."
+    ]
+  },
+  "champ:ShieldThrow": {
+    "NAME": "Lancer de bouclier",
+    "DESCRIPTION": "Infligez des dégâts égaux à votre Armure, deux fois. NL Gagnez 2 de Fragilité. Pose *Défensive champ:Combo: Ne gagnez pas de Fragilité.",
+    "EXTENDED_DESCRIPTION": "Infligez des dégâts égaux à votre Armure ( !D! ) deux fois. NL Gagnez 2 de Fragilité. Pose *Défensive champ:Combo: Perdez 2 de Fragilité."
+  },
+  "champ:FalseCounter": {
+    "NAME": "Contre les cordes",
+    "DESCRIPTION": "Gagnez !B! d'Armure. Au prochain tour, gagnez [E] et piochez 3 cartes.",
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. Au prochain tour, gagnez [E] [E] et piochez 3 cartes."
+  },
+  "champ:IronFortress": {
+    "NAME": "Dispositif technique",
+    "DESCRIPTION": "Lorsque vous adoptez une Pose, déclenchez ses *Bonus de *Compétences deux fois.",
+    "UPGRADE_DESCRIPTION": "Inné. NL Lorsque vous adoptez une Pose, déclenchez ses *Bonus de *Compétences deux fois."
+  },
+  "champ:Lariat": {
+    "NAME": "Corps renforcé",
+    "DESCRIPTION": "Gagnez !B! d'Armure X fois."
+  },
+  "champ:HoldFirm": {
+    "NAME": "Tenir bon",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Gagnez !M! de champ:Contre. NL Gagnez 1 bronze:Flou."
+  },
+  "champ:ShieldWall": {
+    "NAME": "Forteresse d'acier",
+    "DESCRIPTION": "Gagnez 2 de Dextérité. NL À la fin de chaque tour, gagnez !M! d'Armure."
+  },
+  "champ:Haymaker": {
+    "NAME": "Pilon",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Appliquez 2 de Vulnérabilité. NL Appliquez 2 de Faiblesse.",
+  },
+  "champ:ViciousMockery": {
+    "NAME": "Moquerie vicieuse",
+    "DESCRIPTION": "L'ennemi gagne 1 de Force. NL Gagnez !M! de Vigueur.",
+    "EXTENDED_DESCRIPTION": [
+      "Pose du Destructeur champ:Combo: Gagnez !M! de Force temporaire. NL ",
+      "Pose *Défensive champ:Combo: Gain !M! de Dextérité temporaire."
+    ]
+  },
+  "champ:PreciseThrust": {
+    "NAME": "Poussée précise",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Pose du *Destructeur champ:Combo: Infligez !D! dégâts. NL Pose *Défensive champ:Combo: Gagnez !B! d'Armure.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Pose du *Destructeur champ:Combo: Infligez !D! dégâts NL ",
+      "Pose *Défensive champ:Combo: Gagnez !B! d'Armure."
+    ]
+  },
+  "champ:CrookedStrike": {
+    "NAME": "Frappe déloyale",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Ne consume pas de Vigueur."
+  },
+  "champ:RapidStrikes": {
+    "NAME": "Frappes rapides",
+    "DESCRIPTION": "Infligez !D! dégâts !M! fois. NL Réduisez le coût d'une carte *Frappe aléatoire dans votre main à 0 ce tour."
+  },
+  "champ:EnchantSword": {
+    "NAME": "Enchantement d'épée",
+    "DESCRIPTION": "champ:Fatigue 5. NL Choisissez une carte en main. Augmentez ses dégâts de !M! pour ce combat.  Épuisement.",
+    "EXTENDED_DESCRIPTION": [
+      "Un mauvais moment pour cette carte."
+    ]
+  },
+  "champ:BladeFlurry": {
+    "NAME": "Frappes en rafale",
+    "DESCRIPTION": "Infligez !D! dégâts. NL La prochaine *Frappe que vous jouez ce tour est jouée deux fois."
+  },
+  "champ:SwordThrow": {
+    "NAME": "Lancer d'épée",
+    "DESCRIPTION": "Infligez !D! dégâts !M! fois. NL Gagnez 2 de Faiblesse. NL Pose du *Destructeur champ:Combo: Ne gagnez pas de Faiblesse."
+  },
+  "champ:MurderStrike": {
+    "NAME": "Frappe meurtrière",
+    "DESCRIPTION": "Retenue. NL Infligez !D! dégâts. NL Lorsque vous utilisez une Compétence, cette carte inflige !M! dégâts supplémentaires ce combat."
+  },
+  "champ:HeavySlash": {
+    "NAME": "Taillade magistrale",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Obtenez une Compétence aléatoire. Elle coûte 0.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Obtenez une Compétence aléatoire Améliorée. Elle coûte 0."
+  },
+  "champ:CheapShot": {
+    "NAME": "Coup bas",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Si l'ennemi est un Boss, Infligez ces dégâts deux fois supplémentaires. Sinon, étourdissez l'ennemi. NL Épuisement."
+  },
+  "champ:RisingSlash": {
+    "NAME": "Frappe ascendante",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Si la dernière carte jouée était un champ:Finisher, infligez !D! dégâts à nouveau."
+  },
+  "champ:Shatter": {
+    "NAME": "Craquement",
+    "DESCRIPTION": "Retirez l'Armure de l'ennemi. NL Infligez !D! dégâts.",
+    "UPGRADE_DESCRIPTION": "Retirez l'Armure et l'Artéfact de l'ennemi. NL Infligez !D! dégâts."
+  },
+  "champ:EnragedBash": {
+    "NAME": "Fleuret enragé",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Pose du *Destructeur champ:Combo: Cette carte touche une fois supplémentaire ce combat.",
+    "EXTENDED_DESCRIPTION": [
+      "Inflligez !D! dégâts !M! fois. NL Pose du *Destructeur champ:Combo: Cette carte touche une fois supplémentaire ce combat."
+    ]
+  },
+  "champ:VampiricStrike": {
+    "NAME": "Démolition",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez de l'Armure égale aux dégâts non-bloqués infligés."
+  },
+  "champ:AdrenalArmor": {
+    "NAME": "Armure surrénale",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Gagnez !M! de Force Temporaire.",
+  },
+  "champ:HeartStrike": {
+    "NAME": "Finish Him",
+    "DESCRIPTION": "Infligez !D! dégâts, deux fois si l'ennemi est à moins de !M! % de ses PV.",
+    "EXTENDED_DESCRIPTION": [
+      "Un mauvais moment pour cette carte.",
+      "Cette cible n'est pas encore prête pour ceci."
+    ]
+  },
+  "champ:CrownThrow": {
+    "NAME": "Couronnerang",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Pose du *Destructeur champ:Combo: Piochez !M! Attaques."
+  },
+  "champ:Encircle": {
+    "NAME": "Encerclement",
+    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis. NL Déclenchez le bonus de Compétence pour chaque ennemi touché."
+  },
+  "champ:LastStand": {
+    "NAME": "Last Stand",
+    "DESCRIPTION": "Une fois que vous êtes en dessous de 50% de vos PV, retirez tous vos Débuffs et gagnez !M! de Force.",
+    "EXTENDED_DESCRIPTION": [
+      "~Vous~ ~allez~ ~le~ ~regretter...~",
+      "@UNE@ @DÉFAITE??@ NL @IMPOSSIBLE!!@"
+    ]
+  },
+  "champ:RecklessLeap": {
+    "NAME": "Frappe téméraire",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez 2 de Force. NL Perdez 1 de Dextérité. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Gagnez 2 de Force. NL Perdez 1 de Dextérité.",
+    "EXTENDED_DESCRIPTION": [
+      "Un mauvais moment pour cette carte."
+    ]
+  },
+  "champ:IgnorePain": {
+    "NAME": "Ignore la Douleur",
+    "DESCRIPTION": "champ:Fatigue 5. Vos PV ne peuvent pas être réduits jusqu'à votre prochain tour. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Retenue. NL champ:Fatigue 5. Vos PV ne peuvent pas être réduits jusqu'à votre prochain tour. NL Épuisement."
+  },
+  "champ:DeathBlow": {
+    "NAME": "Coup mortel",
+    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis. NL Gagnez !M! de Vigueur. NL Épuisement."
+  },
+  "champ:ArenaPreparation": {
+    "NAME": "Préparation de l'arène",
+    "DESCRIPTION": "Ajoutez !M! Compétences aléatoires dans votre main. NL Elles gagnent Retenue. NL Épuisement."
+  },
+  "champ:EndlessRage": {
+    "NAME": "Rage sans fin",
+    "DESCRIPTION": "Lorsque vous Adoptez une Pose :"
+  },
+  "champ:SteelEdge": {
+    "NAME": "Lame de l'épée",
+    "DESCRIPTION": "Pose du *Destructeur champ:Combo: Infligez !D! dégâts X fois. NL Pose *Défensive champ:Combo: Gagnez !B! d'Armure X fois.",
+    "UPGRADE_DESCRIPTION": "Pose du *Destructeur champ:Combo: Infligez !D! dégâts X+1 fois. NL Pose *Défensive champ:Combo: Gagnez !B! d'Armure X+1 fois.",
+    "EXTENDED_DESCRIPTION": [
+      "Pose du *Destructeur champ:Combo: Infligez !D! dégâts X fois. NL ",
+      "Pose *Défensive champ:Combo: Gagnez !B! d'Armure X fois.",
+      "Gladiator: Draw a card and gain [E] .",
+      "Gladiator: Draw 2 cards and gain [E] .",
+      "champ:Combo NL "
+    ]
+  },
+  "champ:Improvising": {
+    "NAME": "Improvisation",
+    "DESCRIPTION": "La première fois que vous utilisez un champ:Combo chaque tour, remettez-la dans votre main. NL Il coûte 0 jusqu'à ce qu'il soit joué."
+  },
+  "champ:CalledShot": {
+    "NAME": "Rafraîchissement",
+    "DESCRIPTION": "Pose du *Destructeur champ:Combo: Gagnez [E] [E] , puis Épuisez-ceci. NL Pose *Défensive champ:Combo: Piochez !M! cartes.",
+    "UPGRADE_DESCRIPTION": "Pose du *Destructeur champ:Combo: Gagnez [E] [E] [E] , puis Épuisez-ceci. NL Pose *Défensive champ:Combo: Piochez !M! cartes.",
+    "EXTENDED_DESCRIPTION": [
+      "Pose du Destructeur champ:Combo: Gagnez [E] [E] , puis Épuisez-ceci. NL ",
+      "Pose du Destructeur champ:Combo: Gagnez [E] [E] [E] , puis Épuisez-ceci. NL ",
+      "Pose Défensive champ:Combo: Piochez !M! cartes.",
+      "Un mauvais moment pour cette carte."
+    ]
+  },
+  "champ:PerfectedStrike": {
+    "NAME": "Frappe perfectionnée",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Infligez !M! dégâts supplémentaires pour TOUTES vos cartes contenant \"Frappe\"."
+  },
+  "champ:GladiatorForm": {
+    "NAME": "Forme gladiatrice",
+    "DESCRIPTION": "Au début de chaque tour, gagnez !M! de Vigueur pour chaque 3 de Vigueur dépensés au tour précédent. Puis faites-la même chose pour le champ:Contre."
+  },
+  "champ:Duel": {
+    "NAME": "Challenge",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Infligez !D! dégâts. NL Si la cible possède de la Force, répétez ces effets.",
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Infligez !D! dégâts. NL Si la cible possède de la Force, répétez ces effets."
+  },
+  "champ:DancingMaster": {
+    "NAME": "Maître de la danse",
+    "DESCRIPTION": "La prmière fois que vous utilisez un champ:Finisher chaque tour, gagnez [E] et piochez 1 carte.",
+  },
+  "champ:StrikeOfGenius": {
+    "NAME": "Frappé de génie",
+    "DESCRIPTION": "Au début de votre tour, ajoutez une carte aléatoire contenant \"Frappe\" dans votre main. NL Elle coûte 0 jusqu'à ce qu'elle soit jouée et gagne Épuisement.",
+    "UPGRADE_DESCRIPTION": "Au début de votre tour, ajoutez une carte aléatoire Améliorée contenant \"Frappe\" dans votre main. NL Elle coûte 0 jusqu'à ce qu'elle soit jouée et gagne Épuisement."
+  },
+  "champ:DefensiveStyle": {
+    "NAME": "Style défensif",
+    "DESCRIPTION": "Adoptez la Pose champ:Défensive. NL Les *Bonus de *Compétences de la Pose champ:Défensive donnent !M! de champ:Contre supplémentaires.",
+    "UPGRADE_DESCRIPTION": "Inné. NL Adoptez la Pose champ:Défensive. NL Les *Bonus de *Compétences de la Pose champ:Défensive donnent !M! de champ:Contre supplémentaires."
+  },
+  "champ:GladiatorStyle": {
+    "NAME": "Combat propre",
+    "DESCRIPTION": "Gagnez !M! de Force. NL Tous les ennemis gagnent 1 de Force."
+  },
+  "champ:BerserkerStyle": {
+    "NAME": "Style destructeur",
+    "DESCRIPTION": "Adoptez la Pose du champ:Destructeur. NL Les *Bonus de *Compétences de la Pose du champ:Destructeur donnent !M! de Vigueur supplémentaires.",
+    "UPGRADE_DESCRIPTION": "Inné. NL Adoptez la Pose du champ:Destructeur. NL Les *Bonus de *Compétences de la Pose du champ:Destructeur donnent !M! de Vigueur supplémentaires."
+  },
+  "champ:Riposte": {
+    "NAME": "Riposte",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Épuisement."
+  },
+  "champ:Endure": {
+    "NAME": "Endurance",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL L'Armure de cette carte est augmentée par la Force et non la Dextérité.",
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL L'Armure de cette carte est augmentée également par la Force."
+  },
+  "champ:PreemptiveStrike": {
+    "NAME": "Frappe préventive",
+    "DESCRIPTION": "Infligez des dégâts égaux à votre champ:Contre à TOUS les ennemis. NL Perdez la moitié de votre champ:Contre.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Infligez !D! dégâts)",
+      "Un mauvais moment pour cette carte."
+    ]
+  },
+  "champ:Parry": {
+    "NAME": "Parade",
+    "DESCRIPTION": "Gagnez !B! d'Armure. Gagnez !M! de champ:Contre. NL Si votre champ:Contre est utilisé ce tour, obtenez *Riposte.",
+    "UPGRADE_DESCRIPTION": "Éthérée. NL Infligez des dégâts égaux à votre champ:Contre utilisé. NL Épuisement."
+  },
+  "champ:EnchantCrown": {
+    "NAME": "Enchantement de la couronne",
+    "DESCRIPTION": "champ:Fatigue 5. NL Choisissez une carte en main. Elle coûte 0 ce combat. NL Épuisement.",
+    "EXTENDED_DESCRIPTION": [
+      "Un mauvais moment pour cette carte."
+    ]
+  },
+  "champ:ModFinisherStrike": {
+    "NAME": "Frappe finale",
+    "DESCRIPTION": "Retenue. NL Infligez !D! dégâts."
+  },
+  "champ:UltimateStance": {
+    "NAME": "Pose ultime",
+    "DESCRIPTION": "Requiert la Pose *Défensive ou du *Destructeur. NL Adoptez la Pose champ:Ultime pour !M! tours NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Requiert la Pose *Défensive ou du *Destructeur. NL Adoptez la Pose champ:Ultime pour !M! tours.",
+    "EXTENDED_DESCRIPTION": [
+      "Je ne suis pas dans une Pose."
+    ]
+  },
+  "champ:FancyFootwork": {
+    "NAME": "Jeu de jambes élégant",
+    "DESCRIPTION": "Entrez dans une Pose dans laquelle vous n'êtes pas. NL La prochaine fois que vous utilisez un champ:Finisher ce tour, TOUS les ennemis perdent !M! PV.",
+  },
+  "champ:TripleStrike": {
+    "NAME": "Triple frappe",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Obtenez 2 *Frappes. Elles coûtent 0 et déclenchent les *Bonus de *Compétence. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez 2 *Frappes Améliorées dans votre main. Elles coûtent 0 et déclenchent les *Bonus de *Compétence. NL Épuisement."
+  },
+  "champ:WindUp": {
+    "NAME": "Pose éphémère",
+    "DESCRIPTION": "Choisissez une Pose à Adopter. NL Récupérez un champ:Finisher de votre pioche. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Choisissez une Pose à Adopter. NL Récupérez un champ:Finisher de votre pioche.",
+    "EXTENDED_DESCRIPTION": [
+      "Adoptez la pose du champ:Destructeur.",
+      "Adoptez la pose champ:Défensive."
+    ]
+   },
+  "champ:Headbutt": {
+    "NAME": "Coup de boule",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Mettez une carte de votre défausse vers le haut de la pioche."
+  }
+}}

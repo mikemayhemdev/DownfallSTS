@@ -1,0 +1,99 @@
+[
+  {
+    "PROPER_NAME": "Actif",
+    "NAMES": [
+      "actif"
+    ],
+    "DESCRIPTION": "Le Feu Follet #yActif peut être Enflammé en répondant à ses exigences en matière d'Inflammation."
+  },
+  {
+    "PROPER_NAME": "Avancement",
+    "NAMES": [
+      "avancez",
+      "avancé",
+      "avancer"
+      "n'avancez"
+    ],
+    "DESCRIPTION": "Passez au Feu Follet suivant. Passer un Feu Follet #yl'Éteint."
+  },
+  {
+    "PROPER_NAME": "Rétraction",
+    "NAMES": [
+      "rétractez",
+      "rétracté",
+      "rétracter"
+    ],
+    "DESCRIPTION": "Passez au Feu Follet précédent. Passer un Feu Follet #yl'Éteint."
+  },
+  {
+    "PROPER_NAME": "Intensité",
+    "NAMES": [
+      "intensité"
+      "d'intensité"
+    ],
+    "DESCRIPTION": "L'Intensité augmente les dégâts, l'Armure et la Brûlure appliqués par les Feu Follets lorsqu'ils sont Enflammés ."
+  },
+  {
+    "PROPER_NAME": "Brûlure",
+    "NAMES": [
+      "brûlure",
+      "brûlé"
+    ],
+    "DESCRIPTION": "Après #b3 tours, un ennemi Brûlé perd des PV, retirant l'effet Brûlure."
+  },
+  {
+    "PROPER_NAME": "Extinction",
+    "NAMES": [
+      "éteignez",
+      "éteints"
+      "éteignez-les"
+      "éteignez-le"
+    ],
+    "DESCRIPTION": "Permet au Feu Follet d'être Enflammé à nouveau, réinitialisant ses conditions d'Inflammation."
+  },
+  {
+    "PROPER_NAME": "Inflammation",
+    "NAMES": [
+      "enflammez",
+      "enflammé"
+      "enflammez-le"
+      "enflammés"
+    ],
+    "DESCRIPTION": "Déclenche l'effet d'Inflammation décrit d'un Feu Follet."
+  },
+  {
+    "PROPER_NAME": "Sceau",
+    "NAMES": [
+      "sceau"
+    ],
+    "DESCRIPTION": "Si les #b6 Sceaux ont été joués ce combat, obtenez #pLe #pSceau #pBrisé et retirez les Sceaux de votre deck."
+  },
+  {
+    "PROPER_NAME": "Après-vie",
+    "NAMES": [
+      "après-vie"
+    ],
+    "DESCRIPTION": "Si cette carte est Épuisée, ses effets s'activent."
+  },
+  {
+    "PROPER_NAME": "Écraseur",
+    "NAMES": [
+      "écraseur"
+    ],
+    "DESCRIPTION": "#yFeu #yFollet. #yEnflammé lorsque #b2 #yCompétences sont jouées alors que celui-ci est #yActif. #yInflammation: Lorsqu'il est #yEnflammé, infligez #b4 dégâts à un ennemi aléatoire deux fois."
+  },
+  {
+    "PROPER_NAME": "Renforceur",
+    "NAMES": [
+      "renforceur"
+    ],
+    "DESCRIPTION": "#yFeu #yFollet. #yEnflammé lorsqu'un #yPouvoir est joué alors que celui-ci est #yActif. #yInflammation: Lorsqu'il est #yEnflammé, gagnez #b4 #yd'Armure et #b1 de #yForce."
+  },
+  {
+    "PROPER_NAME": "Ardent",
+    "NAMES": [
+      "ardent"
+    ],
+    "DESCRIPTION": "#yFeu #yFollet. #yEnflammé lorsque #b2 #yAttaques sont jouées alors que celui-ci est #yActif. #yInflammation: Lorsqu'il est #yEnflammé, appliquez #b4 de #yBrûlure à un ennemi aléatoire."
+  }
+]

@@ -1,0 +1,233 @@
+{
+  "downfall:Heart Event": {
+    "NAMES": [
+      "Le Cœur"
+    ],
+    "TEXT": [
+      "~Servez...~ NL ~moi...~ ~maintenant...~",
+      "~Levez-vous...~ NL ~Servant..~",
+      "~Levez-vous...~",
+      "~Tuez~ NL ~les~ ~intrus...~",
+      "~Atteignez~ ~l'intrus...~ NL ~pour~ ~recevoir~ ~plus~ ~de..~ ~bénédictions...~",
+      "~Allez~ ~au~ ~moins...~ ~confronter~ NL ~le~ ~premier~ ~intrus...~",
+      "~Je~ ~vous~ ~ai~ ~ramené...~",
+      "~Choisissez...~",
+      "~Accepté...~",
+      "~Sacrifice...~ NL ~...pour~ ~pouvoir....~",
+      "~PROUVEZ~ ~votre~ NL ~valeur...~",
+      "Récompenses",
+      "~Continuez~ ~pour~ ~moi...~",
+      "~Descendez...~ ~..dans la folie...~",
+      "~Impressionant...~ ~encore...~",
+      "Maudit!",
+      "Écervelé!",
+      "Transformation!"
+    ],
+    "OPTIONS": [
+      "[Continuer]",
+      "[Parler]",
+      "[Passer]",
+      "[Quitter]",
+      "Choisissez 10 cartes pour ajouter dans votre deck.",
+      "[#gLes #gEnnemis #gdans #gvos #gtrois #gprochains #gcombats #gfuient #gpar #gterreur ]",
+      "[ Verrouillé - Ne peut pas être choisi pour la 1ère run]",
+      "[ #gTous #gles #gDiablotins #ggagnent #gPV #gMax #g+",
+      "#gTous #gles #gDiablotins #ggagnent #gPV #gMax #g+",
+      "[ #rTous #rles #rDiablotins #rperdent #r",
+      "[ #rTous #rles #rDiablotins #rperdent #r"
+    ]
+  },
+  "downfall:Unlock": {
+    "TEXT": [
+      "Ce personnage se déverouille en complétant une run avec le Parrain Slime.",
+      "Ce personnage se déverouille en complétant une run avec le 2ème vilain.",
+      "Ce personnage se déverouille en complétant une run avec le Gardien.",
+      "Ce personnage se déverouille en complétant une run avec le 3ème vilain.",
+      "Ce personnage se déverouille en complétant une run avec l'Hexaplasme.",
+      "Ce personnage se déverouille en complétant une run avec le 4ème vilain.",
+      "Ce personnage se déverouille en complétant une run avec le Champion.",
+      "Ce personnage se déverouille en complétant une run avec le 5ème vilain.",
+      "Ce personnage se déverouille en complétant une run avec l'Automate.",
+      "Ce personnage se déverouille en complétant une run avec le 6ème vilain.",
+      "Ce personnage se déverouille en complétant une run avec les Diablotins.",
+      " (Les victoires de l'Acte 4 ne comptent pas)"
+    ]
+  },
+  "downfall:HeartMerchant": {
+  "NAMES": [
+    "Proceed",
+    "~Sacrifice...~"
+  ],
+  "TEXT": [
+    "~Tu~ ~deviens...~ ~plus...~ ~fort...~",
+    "~Nous~ ~grandissons...~ ~comme~ ~tu~ ~grandis..~",
+    "~Tue...~ ~et~ ~sois~ ~récompensé...~",
+    "~Plus...~ ~d'âmes...~",
+    "~Nourris-nous......~ NL ~NOURRIS-NOUS......~",
+    "~Nourris...~ ~la~ ~corruption...~",
+    "~Les~ ~Bénédictions...~ ~se~ ~méritent...~",
+    "~Aucune...~ ~pitié...~",
+    "~Toujours...~ ~plus~  ~fort...~",
+    "~Notre~ ~pouvoir...~ ~est~ ~tien...~",
+    "~Tue-les~ ~tous...~ ~sur~ ~ton~ ~chemin...~",
+    "~Combats...~ ~tombe...~ ~et~ ~nourris...~",
+    "~Nous~ ~sommes...~ ~légion...~",
+    "~Va~ ~de~ ~l'avant...~ ~et~ ~collecte...~",
+    "~Ces~ ~âmes...~ ~délicieuses...~",
+    "~Récolte...~ ~les~ ~déchus...~"
+  ],
+  "OPTIONS": [
+    "~Neow...~ ~ne~ ~peut~ ~pas~ ~gagner...~",
+    "~Ne~ ~crains~ ~rien...~",
+    "..... NL .... NL .........",
+    "~Finis-les...~",
+    "~Bonne...~ ~chance...~",
+    "~Ne~ ~meurs~ ~pas...~",
+    "~Nous...~ ~attendrons...~",
+    "~Détruis-les...~ ~tous...~"
+  ]
+},
+  "downfall:HeartProceed": {
+    "TEXT": [
+      "~Intrus...~ NL ~...dans~ ",
+      "~Tu~ ~es~ ~requis...~ NL ~...dans~ ",
+      "~Ils~ ~ont~ ~atteint...~ NL ",
+      "~Reviens...~ NL ~Protège~ ",
+      "~Tue~ ~les~ ~tous...~ NL ~...dans~ "
+    ],
+    "OPTIONS": [
+      "~la~ ~Cité...~",
+      "~l'Au-Delà...~"
+    ]
+  },
+  "downfall:NeowEnding": {
+    "TEXT": [
+      "Tu... as... tué... tout le monde...",
+      "...le cycle... est mort.....",
+      "..et donc...... moi... NL ....aussi......"
+    ],
+    "OPTIONS": [
+      "~Je~ ~l'ai...~ NL ~ramené...~ ~LUI...~",
+      "~Protège~ ~moi...~ NL ~Et~ ~sois...~ ~récompensé...~"
+    ]
+  },
+  "downfall:HeartMerchantScreen": {
+    "NAMES": [
+      "~Bienvenue~ NL ~sbire...~",
+      "~Amène-moi~ ~plus~ ~d'âmes...~",
+      "~J'en~ ~ai~ ~besoin~ @de plus...@",
+      "~Tu~ ~n'es~ ~pas~ NL @digne...@",
+      "~Non.~",
+      "~Récolte~ ~plus~ NL ~pour~ ~ceci...~",
+      "~Sacrifice~ ~Insuffisant...~",
+      "~Oui...~",
+      "~Plus...~ @Plus...!@",
+      "~Deviens~ ~fort...~",
+      "~Je~ ~regagne~ ~ma~ ~force...~",
+      "~Va~ ~de~ ~l'avant...~",
+      "Quitter",
+      "Choisissez une carte à retirer de votre deck."
+    ],
+    "TEXT": [
+    "~Tu~ ~deviens...~ ~plus...~ ~fort...~",
+    "~Nous~ ~grandissons...~ ~comme~ ~tu~ ~grandis..~",
+    "~Tue...~ ~et~ ~sois~ ~récompensé...~",
+    "~Plus...~ ~d'âmes...~",
+    "~Nourris-nous......~ NL ~NOURRIS-NOUS......~",
+    "~Nourris...~ ~la~ ~corruption...~",
+    "~Les~ ~Bénédictions...~ ~se~ ~méritent...~",
+    "~Aucune...~ ~pitié...~",
+    "~Toujours...~ ~plus~  ~fort...~",
+    "~Notre~ ~pouvoir...~ ~est~ ~tien...~",
+    "~Tue-les~ ~tous...~ ~sur~ ~ton~ ~chemin...~",
+    "~Combats...~ ~tombe...~ ~et~ ~nourris...~",
+    "~Nous~ ~sommes...~ ~légion...~",
+    "~Va~ ~de~ ~l'avant...~ ~et~ ~collecte...~",
+    "~Ces~ ~âmes...~ ~délicieuses...~",
+    "~Récolte...~ ~les~ ~déchus...~"
+    ]
+  },
+  "downfall:OctoChoiceCards": {
+    "NAMES": [
+      "Âmes",
+      "Succès",
+      "Remontant",
+      "Le Gardien",
+      "L'Hexaplasme",
+      "Le Parrain Slime",
+      "L'Automate",
+      "Le Champion",
+      "Le Collecteur",
+      "Le Dévor'heures'",
+      "L'Éveillé",
+      "Les Anciens",
+      "Division: de Bronze",
+      "Division: Follet",
+      "Division: Torche",
+      "Division: Cultiste",
+      "Division: Protecteur",
+      "Division: Insultant",
+      "Division: Ancien",
+      "Division: Temporel"
+    ],
+    "TEXT": [
+      "Perdez 3 PV. NL Gagnez 40 Âmes.",
+      "Perdez 1 PV. NL Ajoutez une carte Incolore aléatoire dans votre main.",
+      "Perdez 5 PV. NL Gagnez une potion aléatoire.",
+      "Obtenez des cartes du Gardien expansioncontent:Boss.",
+      "Obtenez des cartes de l'Hexaplasme expansioncontent:Boss.",
+      "Obtenez des cartes du Parrain Slime expansioncontent:Boss.",
+      "Obtenez des cartes de l'Automate expansioncontent:Boss.",
+      "Obtenez des cartes du Champion expansioncontent:Boss cards.",
+      "Obtenez des cartes du Collecteur expansioncontent:Boss.",
+      "Obtenez des cartes du Dévor'heures expansioncontent:Boss.",
+      "Obtenez des cartes de l'Éveillé expansioncontent:Boss.",
+      "Obtenez des cartes des Anciens expansioncontent:Boss.",
+      "Divisez vous en slimeboundmod:Slime_de_Bronze.",
+      "Divisez vous en slimeboundmod:Slime_Follet.",
+      "Divisez vous en slimeboundmod:Slime_Torché.",
+      "Divisez vous en slimeboundmod:Slime_Cultiste.",
+      "Divisez vous en slimeboundmod:Slime_Hérissé.",
+      "Divisez vous en slimeboundmod:Slime_Insultant.",
+      "Divisez vous en slimeboundmod:Slime_Antique.",
+      "Divisez vous en slimeboundmod:Slime_Temporel.",
+      "Divisez vous en slimeboundmod:Slime_Cogneur.",
+      "Divisez vous en slimeboundmod:Slime_Guerrier.",
+      "Divisez vous en slimeboundmod:Slime_Bourbier.",
+      "Divisez vous en slimeboundmod:Slime_Sangsue."
+    ]
+  },
+  "downfall:lazyStorage": {
+    "NAMES": [
+
+    ],
+    "TEXT": [
+      "Choisissez un Boss à Étudier.",
+      "Choisissez à Avancer,Reculer ou ne Rien Faire"
+    ]
+  },
+  "downfall:CharBossMerchant": {
+    "NAMES": [
+      "Marchand"
+    ],
+    "TEXT": [
+    ]
+  },
+  "downfall:NeowBoss": {
+    "NAMES": [
+      "Neow"
+    ],
+    "TEXT": [
+      "~Lève-toi...~",
+      "~Combats~ ~encore~ ~une~ ~fois...~",
+      "~Le~ ~cycle~ ~doit~ ~se~ ~terminer...~"
+    ]
+  },
+  "downfall:NeowBossFinal": {
+    "NAMES": [
+      "Neow"
+    ],
+    "TEXT": [
+    ]
+  }
+}

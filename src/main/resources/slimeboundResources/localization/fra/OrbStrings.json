@@ -1,0 +1,121 @@
+{
+  "Slimebound:EmptySlimeSlot": {
+    "NAME": "Emplacement de slime",
+    "DESCRIPTION": [
+      "Des sbires slimes peuvent être placés dans ces emplacements en se #yDivisant."
+    ]
+  },
+  "Slimebound:BronzeSlime": {
+    "NAME": "Slime de bronze",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " dégâts à TOUS les ennemis au début de votre tour et passe sa prochaine attaque.",
+      ""
+    ]
+  },
+  "Slimebound:AttackSlime": {
+    "NAME": "Slime cogneur",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " dégâts au début de votre tour."
+    ]
+  },
+  "Slimebound:ScrapOozeSlime": {
+    "NAME": "Slime ferrailleux",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " dégâts au début de votre tour. NL Peut être ranimé si #yAbsorbé."
+    ]
+  },
+  "Slimebound:GreedOozeSlime": {
+    "NAME": "Slime cupide",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " dégâts au début de votre tour. NL  Peut être ranimé si #yAbsorbé."
+    ]
+  },
+  "Slimebound:TorchHeadSlime": {
+    "NAME": "Slime torche",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " dégâts au début de votre tour. Fait des dégâts supplémentaires selon votre #yForce."
+    ]
+  },
+  "Slimebound:CultistSlime": {
+    "NAME": "Slime cultiste",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " dégâts au début de votre tour. Après avoir attaqué, augmente ses dégâts de #b1."
+    ]
+  },
+  "Slimebound:ShieldSlime": {
+    "NAME": "Slime sangsue",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " dégâts au début de votre tour et vous confère #b",
+      " #yd'Armure."
+    ]
+  },
+  "Slimebound:PoisonSlime": {
+    "NAME": "Slime guerrier",
+    "DESCRIPTION": [
+      "Deals #b",
+      " dégâts à TOUS les ennemis au début de votre tour."
+    ]
+  },
+  "Slimebound:SlimingSlime": {
+    "NAME": "Slime bourbier",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " dégâts and applies #b",
+      " de #yGoop au début de votre tour."
+    ]
+  },
+  "Slimebound:HexSlime": {
+    "NAME": "Slime follet",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " dégâts et applique #b",
+      " de #ySoulburn au début de votre tour."
+    ]
+  },
+  "Slimebound:ChampSlime": {
+    "NAME": "Slime insultant",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " dégâts et applique #b",
+      " de #yVulnerabilité au début de votre tour."
+    ]
+  },
+  "Slimebound:SlowingSlime": {
+    "NAME": "Slime temporel",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " dégâts et applique #b",
+      " de #yFaiblesse au début de votre tour."
+    ]
+  },
+  "Slimebound:ProtectorSlime": {
+    "NAME": "Slime hérissé",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " dégâts au début de votre tour et vous confère #b",
+      " #yd'Épines temporaires."
+    ]
+  },
+  "Slimebound:DrawingSlime": {
+    "NAME": "Slime antique",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " dégâts au début de votre tour rt vous fait piocher #b",
+      " carte(s)."
+    ]
+  },
+  "Slimebound:DarklingSlime": {
+    "NAME": "Slime ténébreux",
+    "DESCRIPTION": [
+      "Inflige #b",
+      " dégâts au début de votre tour. Quand vous Commandez, tous les Ténébreux attaquent (peu importe la position)."
+    ]
+  }
+}

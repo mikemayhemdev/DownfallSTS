@@ -1,0 +1,30 @@
+{
+  "Slimebound:SlimedPotion": {
+    "NAME": "Jarre de Slime",
+    "DESCRIPTIONS": [
+      "Appliquez #b",
+      " de #yGoop."
+    ]
+  },
+  "Slimebound:SlimyTonguePotion": {
+    "NAME": "Elixir visqueux",
+    "DESCRIPTIONS": [
+      "Lorsqu'un effet applique du #yGoop durant ce combat, appliquez-en #b",
+      " de plus."
+    ]
+  },
+  "Slimebound:SpawnSlimePotion": {
+    "NAME": "Armée dans une bouteille",
+    "DESCRIPTIONS": [
+      "Invoquez #b",
+      " Slimes aléatoires (Normaux or Spécialistes)."
+    ]
+  },
+  "Slimebound:ThreeZeroPotion": {
+    "NAME": "Thé infusé à la boue",
+    "DESCRIPTIONS": [
+      "Ajoutez #b",
+      " cartes aléatoires qui coûtent 0 dans votre main."
+    ]
+  }
+}

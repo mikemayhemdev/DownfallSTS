@@ -1,0 +1,94 @@
+{
+  "hexamod:SpiritBrand": {
+    "NAME": "Marque d'esprit",
+    "FLAVOR": "Un protecteur enchaîné.",
+    "DESCRIPTIONS": [
+      "La première fois que vous #yEnflammez un Feu Follet chaque tour, gagnez #b4 #yd'Armure."
+    ]
+  },
+  "hexamod:TheBrokenSeal": {
+    "NAME": "Le Sceau Brisé",
+    "FLAVOR": "Un pouvoir illimité, sans limite, inextinguible.",
+    "DESCRIPTIONS": [
+      "Lorsque vous le récupérez, augmentez vos PV Max de #b10, puis soignez-vous entièrement. Commencez chaque combat avec #b2 de #yForce, #b2 de #yDextérité, et #b2 #yhexamod:d'Intensité. Vous ne pouvez pas obtenir #pLe #pSceau #pBrisé à nouveau."
+    ]
+  },
+  "hexamod:UnbrokenSoul": {
+    "NAME": "Marque d'éther",
+    "FLAVOR": "Voyons voir si je peux faire... mieux.",
+    "DESCRIPTIONS": [
+      "Remplace ",
+      ".[] NL La première fois que vous #yEnflammez un Feu Follet chaque tour, gagnez [E] ."
+    ]
+  },
+  "hexamod:IceCube": {
+    "NAME": " Charme de glace de Xanatos",
+    "FLAVOR": "Je me sens... frigorifié.",
+    "DESCRIPTIONS": [
+      "Gagnez [E] au début de votre tour. La #yhexamod:Brûlure prend #b4 tours à s'activer."
+    ]
+  },
+  "hexamod:SoulConsumer": {
+    "NAME": "Pierre thermale",
+    "FLAVOR": "Un feu animerait cette chose!",
+    "DESCRIPTIONS": [
+      "Si la #yhexamod:Brûlure s'active, soignez-vous de #b4 PV à la fin du combat."
+    ]
+  },
+  "hexamod:RecyclingMachine": {
+    "NAME": "Recycleur",
+    "FLAVOR": "Un jour, cet appareil sera recyclée à son tour.",
+    "DESCRIPTIONS": [
+      "La première qu'une carte #yÉthérée qui ne soit si Statut ni Malédiction #ys'Épuise chaque combat, ajoutez une copie de celle-ci dans votre main qui coûte 0 jusqu'à ce qu'elle soit jouée."
+    ]
+  },
+  "hexamod:MatchstickCase": {
+    "NAME": "Alumette sournoise en teck",
+    "FLAVOR": "S'allume sur n'importe quelle surface!",
+    "DESCRIPTIONS": [
+      "Au début de chaque combat, #yhexamod:Enflammez le Feu Follet actuel et #yhexamod:Avancez."
+    ]
+  },
+  "hexamod:InflammatoryLetter": {
+    "NAME": "Jar of TOBSCo",
+    "FLAVOR": "A little extra heat makes everything better.",
+    "DESCRIPTIONS": [
+      "Start each combat with #b1 #yhexamod:Intensity."
+    ]
+  },
+  "hexamod:SoulOfChaos": {
+    "NAME": "Âme chaotique",
+    "FLAVOR": "Le chaos, rendu manifeste.",
+    "DESCRIPTIONS": [
+      "Le deuxième Feu Follet Ardent devient un Feu Follet Chaotique. NL Le Feu Follet Chaotique s'active lorsque vous terminez votre tour sur celui-ci. NL #yInflammation: Jouez la carte du haut de votre pioche."
+    ]
+  },
+  "hexamod:JarOfFuel": {
+    "NAME": "Bouclier d'Olexa",
+    "FLAVOR": "Protection sur demande.",
+    "DESCRIPTIONS": [
+      "Échangez les positions du Feu Follet Renforceur et du premier Feu Follet Ardent."
+    ]
+  },
+  "hexamod:BolsterEngine": {
+    "NAME": "Baguette des feux renforcés",
+    "FLAVOR": "Boucliers de feu! Le feu se renforce.",
+    "DESCRIPTIONS": [
+      "La première fois que vous jouez un #yPouvoir chaque combat, gagnez #b6 #yd'Armure et #b1 de #yForce."
+    ]
+  },
+  "hexamod:CandleOfCauterizing": {
+    "NAME": "Bougie rouge",
+    "FLAVOR": "Le feu, ça BRÛLE...",
+    "DESCRIPTIONS": [
+      "Lorsqu'une #yAttaque inflige des dégâts non-bloqués, appliquez #b2 de #yhexamod:Brûlure."
+    ]
+  },
+  "hexamod:Sixitude": {
+    "NAME": "Étoile à six pointe",
+    "FLAVOR": "Feu, feu, feu, feu, feu, FEU!",
+    "DESCRIPTIONS": [
+      "Lorsque vous jouez #b6 cartes, infligez #b6 dégâts à un ennemi aléatoire."
+    ]
+  }
+}

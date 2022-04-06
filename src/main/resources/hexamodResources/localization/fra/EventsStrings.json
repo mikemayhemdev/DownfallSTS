@@ -1,0 +1,89 @@
+{
+  "hexamod:WanderingSpecter": {
+    "NAME": "Spectre errant",
+    "DESCRIPTIONS": [
+      "Cette zone de la Tour semble être un #pcimetière. Vous continuez prudemment quand une mystérieuse et vague ~apparition~ vous arrête. Elle tend les deux mains, proposant apparemment une sorte de #rmarché. NL NL Vous pouvez voir que l'apparition tient une sorte de précieuse #bRelique dans chaque paume, mais vous ne parvenez pas à savoir de quoi il s'agit - mais il est certain qu'un #rprix élevé est demandé en échange..",
+      "Vous remerciez le spectre pour ce marché. Le #bfantôme vous jette un dernier regard pénible avant de poursuivre sa ~marche~ ~interminable.~  Vous poursuivez également votre chemin. ",
+      "Alors que vous prenez la boîte blanche irisée, elle se @brise@ dans votre main !  Alors que vous récupérez les âmes qu'elle a brisées, un #ptesson #pnoir émerge et ~se~ ~loge~ dans votre corps.",
+      "Vous prenez l'étrange boîte #ydorée, et ressentez une #pnoirceur vous traverser en l'ouvrant. A l'intérieur, vous trouvez une arme utile!",
+      "Vous prenez la boîte pulsante, @BATTANT@ régulièrement, et vous la sentez @COULER@ dans votre bras. Une #pnausée répugnante vous envahit, mais vous vous sentez plus fort malgré tout...",
+      "Dès que vous saisissez l'artefact de la silhouette, les #pténèbres enveloppent la salle. Le spectre vous parle une fois de plus, ses mots apparaissent dans votre tête sans même que vous ne les entendiez. NL NL #p'Un #pchoix #pjudicieux. #pQue #pdites-vous #pd'un #pautre #pmarché, #pmon #pami #p? #pPrenez-en #pautant #pque #pvous #pvoulez...",
+      "Vous savez que les offres de cette #papparition ont un prix trop élevé. Vous devez y faire face, et quel heureux hasard ! Près du mur! Une #bBougie #bBleue! NL NL Vous arrachez la bougie du mur, #rvous #rbrûlant un peu, et la lancez vers le spectre, qui se dissipe dans une #bteinte #bsinistre. NL NL Il ne proposera plus d'offres à présent.",
+      "Vous savez que les offres de cette #papparition ont un prix trop élevé. Vous devez y faire face, et quel heureux hasard! Vous avez amené une #bBougie #bBleue! NL NL Vous jetez la bougie vers le spectre, qui se dissipe dans une #blueur #bsinistre. Il ne proposera plus d'offres à présent."
+    ],
+    "OPTIONS": [
+      "[Boîte de gauche] #gObtenez #gune #gPoupée #gDau-vou #gou #gune #gAmulette #gde #gpierre #gnoire. #rMaudit #rDeux #rfois #r- #rHantise.",
+      "[Marchander pour plus]",
+      "[Boîte de droite] #gObtenez #gune #gClé #gMaudite #gou #gune #gCloche #gd'appel. #rElle #rest #rUltra #rMaudite.",
+      "[Chasser] #gObtenez #gune #gBougie #gBleue. #rPerdez #r5 #rPV.",
+      "[Chasser] Quittez.",
+      "[Échange pour du Pouvoir] #gGagnez une #gcarte #galéatoire #yRare. #rDevenez #rMaudit #r- #rAléatoire.",
+      "[Échange pour de la Vie] #gGain #g5 #gPV #gMax. #rDevenez #rMaudit #r- #rAléatoire.",
+      "[Échange pour des Âmes] #gGagnez #g100 #gÂmes. #rDevenez #rMaudit #r- #rAléatoire.",
+      "[Verrouillé] Échange terminé.",
+      "[Quitter]"
+    ]
+  },
+  "hexamod:SealChamber": {
+    "NAME": "Chambre de Sceaux",
+    "DESCRIPTIONS": [
+      "Une structure menaçante se tient devant vous. La plupart des gens n'oseraient jamais s'en approcher, mais vous connaissez son utilisation et savez qu'elle peut être d'une grande utilité. NL Vous entrez dans la chambre, et vous vous préparez à faire un #rsacrifice...",
+      "En payant avec une partie de votre âme, vous obtenez le sceau - une étape de plus sur la voie de votre pouvoir ultime.",
+      "Après avoir pesé vos options, vous décidez de ne pas faire de sacrifice dans la Chambre des Sceaux.  Vous aurez besoin de tout ce que vous avez pour achever votre voyage.",
+      "Ces Sceaux s'avéreront très utiles dans les batailles à venir.."
+    ],
+    "OPTIONS": [
+      "[Offrir] #rPerdez ",
+      " PV. #gGagnez #gle #gPremier #gSceau.",
+      " #yÂmes. #gGagnez #gle #gDeuxième #gSceau.",
+      ". #gGagnez #gle #gTroisième #gSceau.",
+      ". #gGagnez #gle #gQuatrième #gSceau.",
+      "[Verrouillé] Requiert plus d'Or.",
+      "[Verrouillé] Requiert une carte Commune.",
+      "[Verrouillé] Requiert une Potion.",
+      "[Quitter]",
+      "[Verrouillé] Offrande faite."
+    ]
+  },
+  "hexamod:HexaFalling": {
+    "NAME": "HexaFalling",
+    "DESCRIPTIONS": [
+      "Vous, qui n'êtes pas lié par les faibles lois de la gravité, flottez au-dessus de la fosse sans danger.",
+      "TODO..."
+    ],
+    "OPTIONS": [
+      "[Flotter] #rNe #rperdez #rrien...",
+      "[Quitter]"
+    ]
+  },
+  "hexamod:CouncilOfGhosts": {
+    "NAME": "Conseil de fantômes",
+    "DESCRIPTIONS": [
+      "Alors que vous continuez votre descente, une #p~épaisse~ #p~fumée~ #p~noire~ commence à émaner du sol et des murs autour de vous, se regroupant en trois formes masquées qui commencent à parler. NL NL ~\"Celui-ci~ ~est~ #r~condamné...\"~ NL \"Nous comprenons votre détresse, être #pmaudit... Voudriez-vous apprendre nos #y~secrets?\"~ ",
+      "#y\"Excellent!\" NL Alors que le fantôme parle, vous remarquez que la grande bouche s'ouvre de plus en plus. Une #p~épaisse~ #p~fumée~ #p~noire~ jaillit et enveloppe la pièce. Vous ne pouvez ni voir ni respirer...",
+      "Toujours enveloppé de #p~fumée~ #p~noire~, votre corps dépérit, mais votre #pesprit #pbrûle #pplus #pfort que jamais. Vous comprenez comment le corporel et l'incorporel sont liés, d'une manière que vous n'auriez jamais cru possible.",
+      "Dans l'obscurité, vous pouvez voir avec des yeux non voilés. Les esprits vous ont montré comment maîtriser votre forme, comment faire la transition entre ce monde et l'autre avec facilité.",
+      "\"Bonne chance, être #pmaudit...\" NL ~\"Nous~ ~resterons~ ~ici~ ~et~ ~aider~ ~les~ ~autres...\"~ NL #r@\"HA@ #r@HA@ #r@HA@ #r@HAHAHA!\"@ NL NL Vous ne savez pas vraiment pourquoi le dernier a ri alors que le Conseil s'est éteint, mais vous êtes reconnaissant d'avoir acquis leurs connaissances.",
+      "\"Quelle déception...\" NL ~\"Tu~ ~n'échapperas~ ~jamais~ ~cet~ ~endroit...\"~ NL #r@\"HA@ #r@HA@ #r@HA@ #r@HAHAHA!\"@ NL NL Les formes s'estompent, laissant seulement ce rire troublant résonner dans vos oreilles.
+      ],
+    "OPTIONS": [
+      "[Accepter] #rPerdez #r",
+      " #rPV #rMax. Débloquez les options Étudier et Apprendre.",
+      "[Étudier] #rPerdez #rtoutes #rvos #rFrappes. #gGagnez #g3 #gJustice #gdu #gConseil.",
+      "[Apprendre] #rPerdez #rtoutes #rvos #rDéfenses. #gGagnez #g3 #gApparition.",
+      "[Terminé]",
+      "[Quitter]",
+      "[Verrouillé] Vous ne pouvez pas encore quitter."
+    ]
+  },
+  "hexamod:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "L'esprit est l'épée - et l'expérience, la pierre à aiguiser."
+    ],
+    "OPTIONS": [
+      "[Nostalgie] #gAjoutez #gEthérée à toutes les #gFrappes et les #gDéfenses.",
+      "[Verrouillé] Requiert une Frappe ou une Défense."
+    ]
+  }
+}

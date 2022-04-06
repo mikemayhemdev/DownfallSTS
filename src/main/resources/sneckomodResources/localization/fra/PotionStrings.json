@@ -1,0 +1,32 @@
+{
+  "sneckomod:DiceRollPotion": {
+    "NAME": "Potion potentiellement puissante",
+    "DESCRIPTIONS": [
+      "Infligez #b",
+      "-",
+      " dégâts."
+    ]
+  },
+  "sneckomod:CheatPotion": {
+    "NAME": "Chance liquide",
+    "DESCRIPTIONS": [
+      "Ce tour, les cartes qui choisissent un nombre aléatoire pour leurs effets choisissent le nombre maximum possible.",
+      "Pour #b",
+      " tours, les cartes qui choisissent un nombre aléatoire pour leurs effets choisissent le nombre maximum possible."
+    ]
+  },
+  "sneckomod:MuddlingPotion": {
+    "NAME": "Boisson énergisante dopée",
+    "DESCRIPTIONS": [
+      "#yConfondez les #b",
+      " cartes qui coûtent le plus dans votre main. Les cartes #yConfondues de cette façon ne peuvent coûter 3."
+    ]
+  },
+  "sneckomod:OffclassReductionPotion": {
+    "NAME": "Breuvage exotique",
+    "DESCRIPTIONS": [
+      "Réduisez le coût des cartes #yHors-classe dans votre main de #b",
+      "."
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "downfall:WorldOfGoo": {
+    "NAME": "World of Goo",
+    "DESCRIPTION": "Lorsque vous prenez des dégâts non bloqués, ajoutez un Englué dans votre défausse."
+  },
+  "downfall:Hexed": {
+    "NAME": "Maudit",
+    "DESCRIPTION": "Commencez avec un Ras-de-cou en velours. Quand vous piochez une carte, elle devient Ethérée."
+  },
+  "downfall:Improvised": {
+    "NAME": "Improvisé",
+    "DESCRIPTION": "Commencez avec 10 cartes Inconnues."
+  },
+  "downfall:Jewelcrafting": {
+    "NAME": "Gemmecraft",
+    "DESCRIPTION": "Commencez avec deux copies d'Exploitage de gemmes et une Pioche de chez Rhapsody."
+  },
+  "downfall:EvilRun": {
+    "NAME": "Evil Run",
+    "DESCRIPTION": "Active le contenu Evil Run."
+  },
+  "downfall:ExchangeController": {
+    "NAME": "Soyez béni",
+    "DESCRIPTION": "Commencez avec une Bénédiction de Neow."
+  },
+  "downfall:Lament": {
+    "NAME": "Soyez maudit",
+    "DESCRIPTION": "Commencez avec une Lamentation de Neow."
+  },
+  "downfall:ChampStances": {
+    "NAME": "New Challenger",
+    "DESCRIPTION": "Commencez chaque combat avec une Pose aléatoire du Champion, et obtenez une Frappe Finale. Toutes les cartes de départ gagnent Technique."
+  },
+  "downfall:Enraging": {
+    "NAME": "Dernier effort",
+    "DESCRIPTION": "Tous les ennemis gagnent de la Force et enlèvent leurs débuffs lors de leur prochain tour lorsqu'ils sont à moins de 50% de PV."
+  },
+  "downfall:Analytical": {
+    "NAME": "Analytique",
+    "DESCRIPTION": "Au début de chaque tour, ajoutez une carte aléatoire avec Encode dans votre main et donnez lui Ethérée. Les Frappes et les Défenses basiques ont Encode."
+  },
+  "downfall:StatusAbuse": {
+    "NAME": "Infligé",
+    "DESCRIPTION": "Commencez avec une Batterie de Fortune, les Rondelles de Donu, les Rondelles de Deca, un Kit Médical, et une Idole de Bronze. Toutes les autres reliques sont des Cercles."
+  },
+  "downfall:TooManyShivs": {
+    "NAME": "Trop de surins",
+    "DESCRIPTION": "Commencer le combat avec le Ras-de-cou en velours, une Essence du Néant, et 10 Surins."
+  },
+  "downfall:Wizzardry": {
+    "NAME": "Sorcelllllerie",
+    "DESCRIPTION": "Commencez avec un Chapeau de sorcier, un Bâton de sorcier, et une copie améliorée de Sorcellerie."
+  }
+}

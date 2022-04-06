@@ -1,0 +1,53 @@
+{
+  "sneckomod:D8": {
+    "NAME": "Octaèdre mystique",
+    "DESCRIPTIONS": [
+      "Approchez l'octahèdre mystique.",
+      "La relique fait boom.",
+      "Vous obtenez la relique.",
+      "Vous décidez de partir."
+    ],
+    "OPTIONS": [
+      "[Mettre en pièces] #rPerdez #r",
+      " #rPV . #gGagnez #g5 #gcartes #gInconnues",
+      "[Prendre] #gGagnez #gOctaèdre #gmystique. #rMaudit #r- #rDouleur.",
+      "[Quitter]",
+      "[Verrouillé] Requiert une carte qui choisit un nombre aléatoire."
+    ]
+  },
+  "sneckomod:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [j
+      "La créativité triomphe toujours face à la planification."
+    ],
+    "OPTIONS": [
+      "[Improvisation] #gRemplacez toutes vos #gFrappes et vos #gDéfenses avec des cartes #gInconnues aléatoires.",
+      "[Verrouillé] Requiert une Frappe ou une Défense."
+    ]
+  },
+  "sneckomod:Serpent": {
+    "NAME": "Le Ssssserpent",
+    "DESCRIPTIONS": [
+      "Vous pénétrez dans une salle et remarquez un grand trou dans le sol. Tandis que vous approchez du trou, une énorme créature serpentine qui ne vous ressemble pas en émerge. NL NL ~\"Ho~ ~hooo!~ ~Bonjour~ ~ami~ ~serpent!~ Laissez-moi vous poser une question... Vous entendez le serpent émettre des mots, mais vous êtes complètement perplexe et vous ne comprenez rien.. NL NL \"N'êtes-vous pas d'accord?\"",
+      "~\"Excellent!\"~ NL NL Vous n'avez toujours aucune idée de la question, mais il semble que vous avez refait le jour du Serpent.. NL La créature vous offre une babiole pour vous aider dans votre quête, puis se glisse à nouveau dans le trou..",
+      "Le serpent vous regarde d'un air extrêmement déçu, mais finit par sourire et vous souhaite un bon voyage."
+    ],
+    "OPTIONS": [
+      "[D'accord] #gGagnez #gune #gRelique #galéatoire. #rSoyez #rMaudit #r- #rPerplexité.",
+      "[Pas d'accord]",
+      "[Quitter]"
+    ]
+  },
+  "sneckomod:SuspiciousHouse": {
+    "NAME": "Maison suspecte",
+    "DESCRIPTIONS": [
+      "En traversant la ville, vos oreilles sont percées par un cri strident et inhumain provenant d'une maison voisine. Lorsque vous vous approchez de la source de ce cri, vous trouvez un habitant de la ville qui essaie de faire taire une petite créature serpentine, piégée dans une cage.. NL NL ~\"HÉ!~ Qu'est-ce que vous faites chez moi?! @SORTEZ@ @D'ICI!\"@ NL NL La créature en cage est effrayée et se réfugie dans un coin de sa cage. Elle n'est clairement pas heureuse ici..",
+      "\"Vous le voulez? @Parfait!@ Il n'en vaut pas le trouble.\" NL NL Avec un ~soupir~ de frustration, le ravisseur déverrouille la cage et y met la main. Avec une rapidité surprenante, le serpent mord son doigt avec toute la force que sa petite mâchoire peut rassembler. NL NL D'une intervention rapide, vous frappez l'homme, l'assommant avant qu'il ne puisse riposter contre la créature. Celle-ci rampe joyeusement jusqu'à votre main lorsque vous la lui tendez, et vous continuez tous les deux à traverser la Tour. Vous l'appelez... #y'Clémentine'.",
+      "Le serpent vous regarde d'un air extrêmement déçu, alors que vous quittez la maison."
+    ],
+    "OPTIONS": [
+      "[Secourir] #gGagnez #gJeune #gGeckobra. #rSoyez #rMaudit #r- #rPerplexité.",
+      "[Quitter]"
+    ]
+  }
+}

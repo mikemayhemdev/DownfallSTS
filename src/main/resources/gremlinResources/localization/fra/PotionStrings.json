@@ -1,0 +1,29 @@
+{
+  "gremlin:GremlinPotion": {
+    "NAME": "Eau de Diablo",
+    "DESCRIPTIONS": [
+      "Utilisez les Talents des #b5 Diablotins #b",
+      " fois."
+    ]
+  },
+  "gremlin:NecromancyPotion": {
+    "NAME": "Diablotin dans une boîte",
+    "DESCRIPTIONS": [
+      "Ressucitez un Diablotin aléatoire à #b",
+      "% de vos PV Max."
+    ]
+  },
+  "gremlin:SwapPotion": {
+    "NAME": "Leurre embouteillé",
+    "DESCRIPTIONS": [
+      "#ySwap to a random Gremlin."
+    ]
+  },
+  "gremlin:WizPotion": {
+    "NAME": "Potion magique",
+    "DESCRIPTIONS": [
+      "Gagnez #b",
+      " de #yVigueur."
+    ]
+  }
+}

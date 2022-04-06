@@ -1,0 +1,123 @@
+{
+  "sneckomod:SneckoSoul": {
+    "NAME": "Âme de Geckobra",
+    "FLAVOR": "0...3...2...2...1",
+    "DESCRIPTIONS": [
+      "La première fois que vous jouez une carte #ysneckomod:Hors-classe chaque combat, gagnez [E] et piochez une carte."
+    ]
+  },
+  "sneckomod:SuperSneckoSoul": {
+    "NAME": "Super âme de Geckobra",
+    "FLAVOR": "3120231321230320",
+    "DESCRIPTIONS": [
+      "Remplace ",
+      ".[] NL La première fois que vous jouez une carte #ysneckomod:Hors-classe chaque tour, gagnez [E]."
+    ]
+  },
+  "sneckomod:CleanMud": {
+    "NAME": "Flûte de charmeur de serpent",
+    "FLAVOR": "Sssssss...",
+    "DESCRIPTIONS": [
+      "Les cartes #ysneckomod:Confondues ne peuvent pas coûter #b3."
+    ]
+  },
+  "sneckomod:ConfusingCodex": {
+    "NAME": "Anneau du geko",
+    "FLAVOR": "Indéchiffrable, illisible, à rendre pour jeudi.",
+    "DESCRIPTIONS": [
+      "Au début du combat, appliquez #b0-2 de #yFaiblesse et de #yVulnérabilité à TOUS les ennemis."
+    ]
+  },
+  "sneckomod:CrystallizedMud": {
+    "NAME": "Pendentif envoûtant",
+    "FLAVOR": "D'une saleté éblouissante.",
+    "DESCRIPTIONS": [
+      "Gagnez [E] au début de votre tour. Les cartes #ysneckomod:Confondues ne peuvent pas coûter #b0."
+    ]
+  },
+  "sneckomod:LoadedDie": {
+    "NAME": "Dé pipé",
+    "FLAVOR": "Garantit d'arnaquer les plus naïfs.",
+    "DESCRIPTIONS": [
+      "Les cartes qui choisissent des nombres aléatoires ont au minimum +1."
+    ]
+  },
+  "sneckomod:RareBoosterPack": {
+    "NAME": "Boîte de booster rare",
+    "FLAVOR": "Excellent état.",
+    "DESCRIPTIONS": [
+      "Lorsque vous la récupérez, obtenez une carte #yInconnue #yRare de chaque type."
+    ]
+  },
+  "sneckomod:SleevedAce": {
+    "NAME": "Atout dans la manche",
+    "FLAVOR": "Nous sommes tous des as.",
+    "DESCRIPTIONS": [
+      "Au début du combat, ajoutez #yTricherie dans votre main avec #yRetenue."
+    ]
+  },
+  "sneckomod:UnknownEgg": {
+    "NAME": "Œuf inconnu",
+    "FLAVOR": "Que fera-t-il éclore? Payez 1000€ pour le voir.",
+    "DESCRIPTIONS": [
+      "#yIdentifier devient une action gratuite. NL Les cartes #yInconnues dans les récompenses sont #yAméliorées."
+    ]
+  },
+  "sneckomod:SuperSneckoEye": {
+    "NAME": "Super œil de Geckobra",
+    "FLAVOR": "0121012",
+    "DESCRIPTIONS": [
+      "Remplace œil de Geckobra. Au début de votre tour, piochez #b2 cartes supplémentaires. Commencez chaque combat avec #yConfusion. La première fois que vous piochez une carte qui coûte #b3 chaque combat, réduisez son coût à #b0."
+    ]
+  },
+  "sneckomod:SneckoTalon": {
+    "NAME": "Idole de Rétromission",
+    "FLAVOR": "On l'appelle Idole de Rétro pour faire plus court.",
+    "DESCRIPTIONS": [
+      "Au début de votre tour, réduisez le coût de votre carte la plus chère de #b1 pour ce tour uniquement."
+    ]
+  },
+  "sneckomod:BlankCard": {
+    "NAME": "Carte vierge",
+    "FLAVOR": "Mimique n'importe quelle carte.",
+    "DESCRIPTIONS": [
+      "Au début de chaque combat, jouez une copie d'une carte aléatoire de votre deck."
+    ]
+  },
+  "sneckomod:D8": {
+    "NAME": "Octaèdre mystique",
+    "FLAVOR": "Il semble pencher d'un côté.",
+    "DESCRIPTIONS": [
+      "Lorsque vous le récupérez, choisissez une carte qui choisit un nombre aléatoire pour ses effets. Désormais, cette carte choisit toujours le nombre maximum possible.",
+      "Choisissez une carte pour ",
+      "Lorsque ",
+      " est jouée, elle choisit toujour le nombre maximum possible pour ses effets."
+    ]
+  },
+  "sneckomod:BabySnecko": {
+    "NAME": "Jeune Geckobra",
+    "FLAVOR": "Incroyablement adorable.",
+    "DESCRIPTIONS": [
+      "Infligez #b5 dégâts à un ennemi aléatoire au début de votre tour."
+    ]
+  },
+  "sneckomod:SneckoCommon": {
+    "NAME": "Sceau d'approbation",
+    "FLAVOR": "Je suis le Soldat de Fer et ceci est ma Relique favorite de la Tour.  -Brochure de publicité pour le Marchand",
+    "DESCRIPTIONS": [
+      "Lorsque vous le récupérez, choisissez #b1 parmi #b3 Personnages pour des cartes #yInconnues. Toutes les cartes Inconnues dans les récompenses futures seront de ce personnage.",
+      "Toutes les cartes Inconnues dans les récompenses futures seront des cartes du/de ",
+      " ."
+    ]
+  },
+  "sneckomod:SneckoBoss": {
+    "NAME": "Fer à cheval chanceux",
+    "FLAVOR": ""Moi je fabrique ma chance" - Vieux monsieur.",
+    "DESCRIPTIONS": [
+      "Lorsque vous le récupérez, choisissez #b1 carte Inconnue de Personnage parmi #b3 #yUnknown. Ajoutez #b5 copies de celle-ci dans votre deck. Tous les combats donnent une carte récompense supplémentaire de ce personnage.",
+      "Lorsque vous le récupérez, obtenez #b5 cartes #yInconnues du/de ",
+      " . Tous les combats donnent une carte récompense supplémentaire du/de combats ",
+      " ."
+    ]
+  }
+}

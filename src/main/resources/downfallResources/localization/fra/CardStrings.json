@@ -1,0 +1,30 @@
+{
+  "downfall:SummonMushrooms": {
+    "NAME": "Fungus Among Us",
+    "DESCRIPTION": "Tuez tous les Champignons. Soignez vous autant de leurs PV restants. NL Invoquez deux Champignons."
+  },
+  "downfall:Aged": {
+    "NAME": "Vieillesse",
+    "DESCRIPTION": "Injouable. Éthérée. NL À la fin de votre tour, ajoutez un Néant sur le haut de votre pioche."
+  },
+  "downfall:Bewildered": {
+    "NAME": "Perplexité",
+    "DESCRIPTION": "Quand vous jouez une autre carte que celle ci, sneckomod:Confondez votre main, puis défaussez ceci. NL Épuisement."
+  },
+  "downfall:Icky": {
+    "NAME": "Dégoût",
+    "DESCRIPTION": "Ajouté un Englué dans votre main. NL Épuisement."
+  },
+  "downfall:Haunted": {
+    "NAME": "Hantise",
+    "DESCRIPTION": "Éthérée. Injouable. NL Quand cette carte est piochée, ajoutez Ethérée à toutes les cartes de votre main."
+  },
+  "downfall:Malfunctioning": {
+    "NAME": "Vicié",
+    "DESCRIPTION": "Éthérée. NL A la fin de votre tour, transformez toutes les cartes de votre main en carte Statut aléatoires. NL Éxhaust."
+  },
+  "downfall:Scatterbrained": {
+    "NAME": "Écervellé",
+    "DESCRIPTION": "Injouable. NL Quand cette carte est piochée, si c'est votre tour, remplissez votre main avec des gremlin:Échos de cette carte."
+  }
+}

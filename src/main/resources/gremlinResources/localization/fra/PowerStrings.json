@@ -1,0 +1,200 @@
+{
+  "Gremlin:Agony": {
+    "NAME": "Douleur agonisante",
+    "DESCRIPTIONS": [
+      "Les #yAttaques infligent #b",
+      "% de dégâts en moins pour #b",
+      " tour.",
+      " tours."
+    ]
+  },
+  "Gremlin:Bang": {
+    "NAME": "Bang",
+    "DESCRIPTIONS": [
+      "La prochaine attaque que vous jouez consume toutes les piles de #yMagie eyt inflige #b", " dégâts supplémentaires."
+    ]
+  },
+  "Gremlin:Bashed": {
+    "NAME": "Écrasé",
+    "DESCRIPTIONS": [
+      "Lorsque vous gagnez de #yl'Armure ce tour, perd #b", " PV."
+    ]
+  },
+  "Gremlin:BubbleBarrier": {
+    "NAME": "Barrière de bulles",
+    "DESCRIPTIONS": [
+      "Lorsque vous jouez une carte ce tour, gagnez #b", " #yd'Armure."
+    ]
+  },
+  "Gremlin:CongaLine": {
+    "NAME": "Ligne de Conga",
+    "DESCRIPTIONS": [
+      "Au début de votre tour, gagnez ",
+      "et #yPermutez au prochain Diablotin."
+    ]
+  },
+  "Gremlin:Crippled": {
+    "NAME": "Paralysé",
+    "DESCRIPTIONS": [
+      "La #yFaiblesse ne se perd plus. À la fin du tour, cet ennemi perd des PV équivalents à sa #bFaiblesse."
+    ]
+  },
+  "Gremlin:Encore": {
+    "NAME": "Encore",
+    "DESCRIPTIONS": [
+      "Lorsque vous consumez de la #yMagie, infligez #b", " dégâts à TOUS les ennemis."
+    ]
+  },
+  "Gremlin:Enthusiasm": {
+    "NAME": "Enthousiasme",
+    "DESCRIPTIONS": [
+      "Lorsque vous #yPermutez, piochez #b",
+      " carte.",
+      " cartes."
+    ]
+  },
+  "Gremlin:FatGremlin": {
+    "NAME": "Gros Diablotin",
+    "DESCRIPTIONS": [
+      "Lorsque vous jouez une attaque, appliquez #b",
+      " de #yFaiblesse à toutes les cibles."
+    ]
+  },
+  "Gremlin:Flex": {
+    "NAME": "Perte de Force",
+    "DESCRIPTIONS": [
+      "À  la fin de ce tour, perdez #b",
+      " de #yForce."
+    ]
+  },
+  "Gremlin:Furious": {
+    "NAME": "Furieux",
+    "DESCRIPTIONS": [
+      "Lorsque vous auriez dû gagnez de #yl'Armure ce tour, à la place infligez autant de dégâts à TOUS les ennemis."
+    ]
+  },
+  "Gremlin:GremlinNob": {
+    "NAME": "Diablotin Nob",
+    "DESCRIPTIONS": [
+      "Au début de chaque tour, ajoutez #b3 cartes de Diablotin Nob dans votre main. Vous ne pouvez plus #yPermuter désormais. Lorsque vous perdez tous vos #yPV #yTemporaires, empêchez les dégâts suivants et renvoyez-les."
+    ]
+  },
+  "Gremlin:GremlinWizard": {
+    "NAME": "Diablotin sorcier",
+    "DESCRIPTIONS": [
+      "Lorsque vous jouez une Compétence, gagnez #b",
+      " de #yMagie."
+    ]
+  },
+  "Gremlin:Heckle": {
+    "NAME": "Chahut",
+    "DESCRIPTIONS": [
+      "Lorsque vous appliquez un débuff à un ennemi, gagnez #b",
+      " #yPV #yTemporaires."
+    ]
+  },
+  "Gremlin:InfiniteBlocks": {
+    "NAME": "Armure infinie",
+    "DESCRIPTIONS": [
+      "Au début de votre tour, ajoutez #b",
+      " #yProtection dans votre main.",
+      " #yProtections dans votre main."
+    ]
+  },
+  "Gremlin:MadGremlin": {
+    "NAME": "Diablotin Fou",
+    "DESCRIPTIONS": [
+      "Gagnez #b",
+      " de #yForce #yTemporaire lorsque vous êtes attaqué."
+    ]
+  },
+  "Gremlin:MakeshiftArmor": {
+    "NAME": "Armure de fortune",
+    "DESCRIPTIONS": [
+      "Jouez #b",
+      " attaque de plus pour #b",
+      " attaques de plus pour gagner #b",
+      " #yArtéfact."
+    ]
+  },
+  "Gremlin:MakingMagic": {
+    "NAME": "Faire de la magie",
+    "DESCRIPTIONS": [
+      "Au début de votre prochain tour, ajoutez #b",
+      " copie de #yBang dans votre main.",
+      " copies de #yBang dans votre main."
+    ]
+  },
+  "Gremlin:MakingMoreMagic": {
+    "NAME": "Faire de la Magie+",
+    "DESCRIPTIONS": [
+      "Au début de votre prochain tour, ajoutez #b",
+      " copie #yAméliorée de #yBang dans votre main.",
+      " copies #yAméliorées de #yBang dans votre main."
+    ]
+  },
+  "Gremlin:Polish": {
+    "NAME": "Polissage",
+    "DESCRIPTIONS": [
+      "Les Protections donnent #b",
+      " #yd'Armure supplémentaire."
+    ]
+  },
+  "Gremlin:Scatter": {
+    "NAME": "Dispersion",
+    "DESCRIPTIONS": [
+      "La ou les #b",
+      " prochaine fois que vous auriez dû perdre des PV, #yPermutez vers un Diablotin aléatoire à la place.",
+      " prochaines fois que vous auriez dû perdre des PV, #yPermutez vers un Diablotin aléatoire à la place."
+    ]
+  },
+  "Gremlin:ShadowShiv": {
+    "NAME": "Surin obscur",
+    "DESCRIPTIONS": [
+      "Lorsque vous jouez une Attaque qui ne s'Épuise pas, ajoutez #b",
+      " #ySurin dans votre main.",
+      " #ySurins dans votre main."
+    ]
+  },
+  "Gremlin:ShieldGremlin": {
+    "NAME": "Diablotin à Bouclier",
+    "DESCRIPTIONS": [
+      "Lorsque vous jouez une Compétence, gagnez #b",
+      " #yd'Armure."
+    ]
+  },
+  "Gremlin:SneakyGremlin": {
+    "NAME": "Diablotin Sournois",
+    "DESCRIPTIONS": [
+      "Lorsque vous jouez une Attaque, infligez #b",
+      " dégâts à un ennemi aléatoire."
+    ]
+  },
+  "Gremlin:TargetWeakness": {
+    "NAME": "Cibler les plaies",
+    "DESCRIPTIONS": [
+      "Infligez #b",
+      " dégâts supplémentaires aux ennemis #yAffaiblis."
+    ]
+  },
+  "Gremlin:Unforgiving": {
+    "NAME": "Impitoyable",
+    "DESCRIPTIONS": [
+      "Vous ne pouvez pas perdre de Force."
+    ]
+  },
+  "Gremlin:Wiz": {
+    "NAME": "Magie",
+    "DESCRIPTIONS": [
+      "En train de charger. NL Besoin de #b", " pile de plus.", " piles de plus.",
+      "Ready to fire."
+    ]
+  },
+  "Gremlin:Wizardry": {
+    "NAME": "Sorcellerie",
+    "DESCRIPTIONS": [
+      "Au début de votre tour, gagnez #b",
+      " de #yMagie."
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "Gremlin:FatGremlin": {
+    "NAME": "Gros diablotin",
+    "DESCRIPTION": [
+      "Lorsque vous jouez une Attaque, appliquez #b",
+      " de #yFaiblesse toutes les cibles."
+    ]
+  },
+
+  "Gremlin:GremlinWizard": {
+    "NAME": "Diablotin sorcier",
+    "DESCRIPTION": [
+      "Lorsque vous jouez une Compétence, gagnez #b",
+      " de #yMagie."
+    ]
+  },
+
+  "Gremlin:MadGremlin": {
+    "NAME": "Diablotin fou",
+    "DESCRIPTION": [
+      "Gagnez #b",
+      " de #yForce #yTemporaire quand vous êtes attaqué."
+    ]
+  },
+
+  "Gremlin:ShieldGremlin": {
+    "NAME": "Diablotin à bouclier",
+    "DESCRIPTION": [
+      "Lorsque vous jouez une Compétence, gagnez #b",
+      " #yd'Armure."
+    ]
+  },
+
+  "Gremlin:SneakyGremlin": {
+    "NAME": "Diablotin sournois",
+    "DESCRIPTION": [
+      "Lorsque vous jouez une Attaque, infligez #b",
+      " dégâts à un ennemi aléatoire."
+    ]
+  }
+}

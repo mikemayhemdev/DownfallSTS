@@ -1,0 +1,143 @@
+{
+  "Gremlin:ImpeccablePecs": {
+    "NAME": "Pectos impeccables",
+    "FLAVOR": "Glorieux.",
+    "DESCRIPTIONS": [
+      "Lorsque vous gagnez de la #yForce, gagnez un nombre égal de PV Temporaires."
+    ]
+  },
+  "Gremlin:FragmentationGrenade": {
+    "NAME": "Grenade à fragmentation",
+    "FLAVOR": "Personne n'ose demander d'où le Diablotin a trouvé ceci.",
+    "DESCRIPTIONS": [
+      "Les dégâts infligés à des ennemis aléatoires est augmenté de #b", "."
+    ]
+  },
+  "Gremlin:GremlinBomb": {
+    "NAME": "Bombe diabolique",
+    "FLAVOR": "Les Diablotins ont un don étrange pour trouver des choses dangereuses. Parfois, ils survivent même à leur pillage.",
+    "DESCRIPTIONS": [
+      "Lorsqu'un Diablotin meurt, infligez #b", " dégâts à TOUS les ennemis."
+    ]
+  },
+  "Gremlin:GremlinGravestone": {
+    "NAME": "Pierre tombale de Diablotin",
+    "FLAVOR": "Où vont les diablotins lorsqu'ils meurent ? Pas assez loin, bon sang.",
+    "DESCRIPTIONS": [
+      "Les Diablotins morts peuvent être ressucités dans les Sites de Repos en tant qu'Action Gratuite."
+    ]
+  },
+  "Gremlin:GremlinKnob": {
+    "NAME": "Bâton de chef",
+    "FLAVOR": "Entre les meutes de diablotins, celui ayant la meilleure corne maintient un contrôle total sur la troupe, jusqu'à ce qu'un autre parvienne à la voler.",
+    "DESCRIPTIONS": [
+      "Au début de chaque combat, gagnez [E] , piochez #b1 carte, et #yPermutez au prochain Diablotin."
+    ]
+  },
+  "Gremlin:GremlinKnobUpgrade": {
+    "NAME": "Couronne de chef",
+    "FLAVOR": "Plus le symbole du pouvoir est précieux, plus il est susceptible d'être volé.",
+    "DESCRIPTIONS": [
+      "Remplace ",
+      ". NL La première fois que vous mélangez votre pioche chaque tour, gagnez [E] , piochez #b1 carte, et #yPermutez au prochain Diablotin."
+    ]
+  },
+  "Gremlin:GremlinMask": {
+    "NAME": "Masque de Diablotin",
+    "FLAVOR": "Un signe de statut au sein de la bande des Diablotins.",
+    "DESCRIPTIONS": [
+      "Commencez chaque combat avec #b1 de #yForce #ytemporaire."
+    ]
+  },
+  "Gremlin:LeaderVoucher": {
+    "NAME": "Coupon de chef Diablotin",
+    "FLAVOR": "Dette : 1 Diablotin",
+    "DESCRIPTIONS": [
+      "Gagnez [E] au début de votre tour. NL Lorsque vous le récupérez, #rperdez #rdéfinitivement #run #rDiablotin.",
+      " NL #r( #Gros #rDiablotin #r)",
+      " NL #r( #rDiablotin #rSorcier #r)",
+      " NL #r( #rDiablotin #rFou #r)",
+      " NL #r( #rDiablotin #rà #rBouclier #r)",
+      " NL #r( #rDiablotin #rSournois #r)"
+    ]
+  },
+  "Gremlin:MagicalMallet": {
+    "NAME": "Maillet magique",
+    "FLAVOR": "Écrase le petit doigt deux fois plus fort.",
+    "DESCRIPTIONS": [
+      "Lorsque vous appliquez de la #yFaiblesse, gagnez #b1 de #yMagie, au maximum de #b3 fois par tour."
+    ]
+  },
+  "Gremlin:PricklyShields": {
+    "NAME": "Bouclier d'épines",
+    "FLAVOR": "Les diablotins utilisent n'importe quoi pourvu que ça peut servir d'arme ou d'armure. Certains objets servent aux deux.",
+    "DESCRIPTIONS": [
+      "Lorsque vous appliquez de #yl'Armure, infligez #b", " dégâts à un ennemi aléatoire."
+    ]
+  },
+  "Gremlin:ShortStature": {
+    "NAME": "Petite stature",
+    "FLAVOR": "Il est facile de s'en tirer avec des méfaits si vous êtes littéralement sous leur nez.",
+    "DESCRIPTIONS": [
+      "La première fois qu'un Diablotin serait mort chaque combat, soignez-le de #b75% de ses PV Max à la place.",
+      "Déjà utilisé ce combat."
+    ]
+  },
+  "Gremlin:StolenMerchandise": {
+    "NAME": "Marchandise volée",
+    "FLAVOR": "\"Saleté de voleurs, ces diablotins!\".",
+    "DESCRIPTIONS": [
+      "Lorsque vous #yPermutez, ajoutez un #yÉcho d'une carte Incolore aléatoire dans votre main. NL Au début du combat, le Marchand gagne #b",
+      " de Force.",
+      "Bande de bons à rien de voleurs!",
+      "Espèce de lâche, misérable vermine!",
+      "Vous êtes vraiment avides et cupides!"
+    ]
+  },
+  "Gremlin:SupplyScroll": {
+    "NAME": "Parchemin d'équipement",
+    "FLAVOR": "Un inventaire surprenamment détaillé des différents équipements de la bande.",
+    "DESCRIPTIONS": [
+      "Au début du 3ème tour, ajoutez un assortiment aléatoire de 4 #ySurins et #yProtections dans votre main."
+    ]
+  },
+  "Gremlin:TagTeamwork": {
+    "NAME": "Travail d'équipe",
+    "FLAVOR": "Le travail d'équipe fait marcher le rêve.",
+    "DESCRIPTIONS": [
+      "Lorsque vous piochez #yTandem, piochez une autre carte. NL Lorsque vous récupérez cette relique, ajoutez deux copies de #yTandem dans votre deck."
+    ]
+  },
+  "Gremlin:WizardHat": {
+    "NAME": "Chapeau de sorcier",
+    "FLAVOR": "La robe qui l'accompagnait a été volée depuis.",
+    "DESCRIPTIONS": [
+      "Lorsque vous consumez de la #yMagie, retirez un débuff aléatoire."
+    ]
+  },
+  "Gremlin:WizardStaff": {
+    "NAME": "Bâton de sorcier",
+    "FLAVOR": "La fierté et la joie de chaque Diablotin Sorcier, ce bâton est une cible fréquente de vol par les bandes rivales.",
+    "DESCRIPTIONS": [
+      "La Magie inflige #b7 dégâts supplémentaires."
+    ]
+  },
+  "Gremlin:WoundPoker": {
+    "NAME": "Tisonnier blessant",
+    "FLAVOR": "Est-ce que ça fait mal si je fais ça?.",
+    "DESCRIPTIONS": [
+      "À la fin de votre tour, infliigez #b", " dégâts à chaque ennemi #yAffaibli."
+    ]
+  },
+  "Gremlin:PatchFixes": {
+    "NAME": "",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "Lorsque vous la récupérez, augmentez les PV Max de tous vos Diablotins de #b",
+      "Lorsque vous ajoutez des cartes dans votre deck, vous pouvez à la place augmenter les PV Max de tous vos Diablotins de #b1.",
+      " #yOr. NL Augmentez les PV Max de tous vos Diablotins de #b",
+      "À la fin de chaque 5ème combat, augmentez les PV Max de tous vos Diablotins de #b1.",
+      "+1 PV Max"
+    ]
+  } 
+}

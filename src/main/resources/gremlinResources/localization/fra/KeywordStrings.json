@@ -1,0 +1,80 @@
+[
+  {
+    "NAMES": [
+      "agonie"
+    ],
+    "PROPER_NAME": "Agonie",
+    "DESCRIPTION": "Les créatures en #yAgonie infligent #b80% de dégâts en moins avec leurs Attaques."
+  },
+  {
+    "NAMES": [
+      "paralysie"
+      "paralysez"
+    ],
+    "PROPER_NAME": "Paralysie",
+    "DESCRIPTION": "Les ennemis #yParalysés ne peuvent plus perdre de #yFaiblesse désormais. À la fin de leur tour, ils perdent des PV d'une quantité égale de leur #yFaiblesse."
+  },
+  {
+    "NAMES": [
+      "Écho"
+    ],
+    "PROPER_NAME": "Écho",
+    "DESCRIPTION": "Un écho est une copie d'une carte avec Éthérée et Épuisement."
+  },
+  {
+    "NAMES": [
+      "Échos"
+    ],
+    "PROPER_NAME": "Échos",
+    "DESCRIPTION": "Des échos sont des copies d'une carte avec Éthérée et Épuisement."
+  },
+  {
+    "NAMES": [
+      "Gros Diablotin", "Gros_Diablotin"
+    ],
+    "PROPER_NAME": "Gros diablotin",
+    "DESCRIPTION": "Lorsque vous jouez une Attaque, appliquez #b1 de #yFaiblesse toutes les cibles."
+  },
+  {
+    "NAMES": [
+      "Diablotin Sorcier", "Diablotin_Sorcier"
+    ],
+    "PROPER_NAME": "Diablotin sorcier",
+    "DESCRIPTION": "Lorsque vous jouez une Compétence, gagnez #b1 de #yMagie."
+  },
+  {
+    "NAMES": [
+      "Diablotin Fou", "Diablotin_Fou"
+    ],
+    "PROPER_NAME": "Diablotin fou",
+    "DESCRIPTION": "Gagnez #b2 de #yForce #yTemporaire quand vous êtes attaqué."
+  },
+  {
+    "NAMES": [
+      "Diablotin à Bouclier", "Diablotin_à_Bouclier"
+    ],
+    "PROPER_NAME": "Diablotin à bouclier",
+    "DESCRIPTION": "Lorsque vous jouez une Compétence, gagnez #b2 #yd'Armure."
+  },
+  {
+    "NAMES": [
+      "Diablotin Sournois", "Diablotin_Sournois"
+    ],
+    "PROPER_NAME": "Diablotin sournois",
+    "DESCRIPTION": "Lorsque vous jouez une attaque, Infligez #b3 dégâts à un ennemi aléatoire."
+  },
+  {
+    "NAMES": [
+      "permutez"
+    ],
+    "PROPER_NAME": "Permutation",
+    "DESCRIPTION": "Changez de place avec un autre personnage. Ne fait rien si il n'y a pas de cible valide."
+  },
+  {
+    "NAMES": [
+      "magie"
+    ],
+    "PROPER_NAME": "Magie",
+    "DESCRIPTION": "Lorsque vous avez au moins 3 piles de Magie, les attaques vont consumer toutes les piles pour infliger 10 dégâts supplémentaires."
+  }
+]

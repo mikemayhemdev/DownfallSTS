@@ -1,0 +1,57 @@
+[
+  {
+    "PROPER_NAME": "Dans le mille",
+    "NAMES": [
+      "Dans Le Mille",
+      "Dans_Le_Mille",
+      "Dans_Le_Mille",
+      "danslemille"
+    ],
+    "DESCRIPTION": "Les cartes Dans Le Mille ont un effet bonus lorsque qu'elles sont au milieu de votre main."
+  },
+  {
+    "PROPER_NAME": "Concentration",
+    "NAMES": [
+      "Concentrez-vous",
+      "concentrez-vous",
+      "concentré",
+      "Concentré"
+    ],
+    "DESCRIPTION": "La prochaine carte #yDans #yle #yMille jouée lorsque vous êtes #yConcentré déclenche son effet quelle que soit la position. S'estompe à la fin du tour."
+  },
+  {
+    "ID": "bruise",
+    "PROPER_NAME": "Meurtri",
+    "NAMES": [
+      "meurtri",
+      "meurtris"
+    ],
+  "DESCRIPTION": "Les cibles meurtries prennent plus de dégâts des attaques. Chaque coup, le taux de Meurtri est réduit de #b1. S'estompe à la fin du tour."
+},
+  {
+    "ID": "rugged",
+    "PROPER_NAME": "Robustesse",
+    "NAMES": [
+      "robustesse"
+    ],
+  "DESCRIPTION": "Réduit les dégâts de la prochaine attaque ennemie à #b3."
+},
+  {
+    "PROPER_NAME": "Prime",
+    "NAMES": [
+      "Prime"
+    ],
+  "DESCRIPTION": "Ennemi normal: #b15 d'Or.       Ennemi d'Élite : #b35 d'Or.              Boss: #b75 d'Or."
+},
+  {
+    "PROPER_NAME": "Étourdissement",
+    "NAMES": [
+      "étourdissez",
+      "Étourdissez",
+      "étourdis",
+      "Étourdis"
+    ],
+    "DESCRIPTION": "Les ennemis étourdis passent leur tour."
+  }
+
+]
