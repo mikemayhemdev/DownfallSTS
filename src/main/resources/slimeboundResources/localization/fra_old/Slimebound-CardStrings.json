@@ -63,8 +63,8 @@
   },
   "Slimebound:SamplingLick": {
     "NAME": "Léchouille baveuse",
-    "DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed. NL Gagnez !B! d'armure. NL Epuisement.",
-    "UPGRADE_DESCRIPTION": "Appiquez !SlimeboundSlimed! Slimed NL Gagnez !B! d'armure. NL Piochez une carte. NL Epuisement."
+    "DESCRIPTION": "Appliquez !slime! Slimed. NL Gagnez !B! d'armure. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Appiquez !slime! Slimed NL Gagnez !B! d'armure. NL Piochez une carte. NL Epuisement."
   },
   "Slimebound:DuplicateSlimes": {
     "NAME": "Duplication",
@@ -210,23 +210,23 @@
   },
   "Slimebound:Lick": {
     "NAME": "Léchouille",
-    "DESCRIPTION": "Appliquez !SlimeboundSlimePoison! Faiblesse et !SlimeboundSlimed! Slimed. NL Epuisement.",
-    "UPGRADE_DESCRIPTION": "Appliquez !SlimeboundSlimePoison! Faiblesse et !SlimeboundSlimed! Slimed. NL Piochez une carte. NL Epuisement."
+    "DESCRIPTION": "Appliquez !SlimeboundSlimePoison! Faiblesse et !slime! Slimed. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Appliquez !SlimeboundSlimePoison! Faiblesse et !slime! Slimed. NL Piochez une carte. NL Epuisement."
   },
   "Slimebound:HauntingLick": {
     "NAME": "Léchouille hantée",
-    "DESCRIPTION": "Appliquez 1 Vulnérabilité et !SlimeboundSlimed! Slimed. NL Epuisement.",
-    "UPGRADE_DESCRIPTION": "Appliquez 1 Vulnérabilité and !SlimeboundSlimed! Slimed. NL Piochez une carte. NL Epuisement."
+    "DESCRIPTION": "Appliquez 1 Vulnérabilité et !slime! Slimed. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Appliquez 1 Vulnérabilité and !slime! Slimed. NL Piochez une carte. NL Epuisement."
   },
   "Slimebound:PoisonLick": {
     "NAME": "Léchouille empoisonnée",
-    "DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed et !SlimeboundSlimePoison! Poison. NL Epuisement.",
-    "UPGRADE_DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed et !SlimeboundSlimePoison! Poison. NL Piochez une carte. NL Epuisement."
+    "DESCRIPTION": "Appliquez !slime! Slimed et !SlimeboundSlimePoison! Poison. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Appliquez !slime! Slimed et !SlimeboundSlimePoison! Poison. NL Piochez une carte. NL Epuisement."
   },
   "Slimebound:MegaLick": {
     "NAME": "Mega-Léchouille",
-    "DESCRIPTION": "Appliquez !SlimeboundSlimePoison! Faiblesse et !SlimeboundSlimed! Slimed à tous les ennemis. NL Epuisement.",
-    "UPGRADE_DESCRIPTION": "Appliquez !SlimeboundSlimePoison! Faiblesse et !SlimeboundSlimed! Slimed to ALL enemies. NL Piochez une carte. NL Epuisez."
+    "DESCRIPTION": "Appliquez !SlimeboundSlimePoison! Faiblesse et !slime! Slimed à tous les ennemis. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Appliquez !SlimeboundSlimePoison! Faiblesse et !slime! Slimed to ALL enemies. NL Piochez une carte. NL Epuisez."
   },
   "Slimebound:FocusedLick": {
     "NAME": "PréciseLéchouille",
@@ -235,8 +235,8 @@
   },
   "Slimebound:RejuvenatingLick": {
     "NAME": "LéchouilleRajeunissante",
-    "DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed. NL Soignez !M! PV. NL Epuisement.",
-    "UPGRADE_DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed. NL Soignez !M! HP. NL Piochez une carte. NL Epuisement."
+    "DESCRIPTION": "Appliquez !slime! Slimed. NL Soignez !M! PV. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Appliquez !slime! Slimed. NL Soignez !M! HP. NL Piochez une carte. NL Epuisement."
   },
   "Slimebound:Gluttony": {
     "NAME": "Gourmandise",
@@ -330,7 +330,7 @@
   },
   "Slimebound:LivingWall": {
     "NAME": "Mur Vivant",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Appliquez !SlimeboundSlimed! Slimed aux ennemis qui attaquent ce tour."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Appliquez !slime! Slimed aux ennemis qui attaquent ce tour."
   },
   "Slimebound:Slimepotheosis": {
     "NAME": "SlimeApothéose",
@@ -348,7 +348,7 @@
   },
   "Slimebound:CorrosiveSpit": {
     "NAME": "Crachat corrosif",
-    "DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed."
+    "DESCRIPTION": "Appliquez !slime! Slimed."
   },
   "Slimebound:Chomp": {
     "NAME": "Mâcher",
@@ -356,7 +356,7 @@
   },
   "Slimebound:DouseInSlime": {
     "NAME": "Vendre Le Slime",
-    "DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed. NL Slimed ne se divisera pas ce tour."
+    "DESCRIPTION": "Appliquez !slime! Slimed. NL Slimed ne se divisera pas ce tour."
   },
   "Slimebound:FlameTackle": {
     "NAME": "Tacle enflammé",
@@ -372,12 +372,12 @@
   },
   "Slimebound:RainOfGoop": {
     "NAME": "Pluie de dents",
-    "DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed à un ennemi aléatoire !M! fois.",
-    "UPGRADE_DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed à un ennemi aléatoire !M! fois."
+    "DESCRIPTION": "Appliquez !slime! Slimed à un ennemi aléatoire !M! fois.",
+    "UPGRADE_DESCRIPTION": "Appliquez !slime! Slimed à un ennemi aléatoire !M! fois."
   },
   "Slimebound:GoopSpray": {
     "NAME": "Gazeuse à Slimed",
-    "DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed et !M! Poison à tous les ennemis. NL Epuisement."
+    "DESCRIPTION": "Appliquez !slime! Slimed et !M! Poison à tous les ennemis. NL Epuisement."
   },
   "Slimebound:MassFeed": {
     "NAME": "Engloutir",
@@ -385,7 +385,7 @@
   },
   "Slimebound:StrayGoop": {
     "NAME": "Bave partagée",
-    "DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed à un ennemi aléatoire à chaque fois que vous perdez des PV dans VOTRE tour."
+    "DESCRIPTION": "Appliquez !slime! Slimed à un ennemi aléatoire à chaque fois que vous perdez des PV dans VOTRE tour."
   },
   "Slimebound:ViciousTackle": {
     "NAME": "Tacle Vicieux",

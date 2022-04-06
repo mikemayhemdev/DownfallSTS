@@ -64,7 +64,7 @@
   },
   "sneckomod:MixItUp": {
     "NAME": "섞어섞어!",
-    "DESCRIPTION": "피해를 !D! 만큼 !M! 줍니다. NL 보유한 포션을 *변화시킵니다. NL 소멸."
+    "DESCRIPTION": "보유한 포션을 *변화시킵니다. NL 피해를 !D! 만큼 !M! 줍니다. NL 소멸."
   },
   "sneckomod:MorePower": {
     "NAME": "더 많은 힘!",

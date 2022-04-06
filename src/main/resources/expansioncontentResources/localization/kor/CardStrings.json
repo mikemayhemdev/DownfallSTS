@@ -46,7 +46,8 @@
   },
   "expansioncontent:ShapePower": {
     "NAME": "모양기의 축복",
-    "DESCRIPTION": "선택 - 힘을 !M! 얻습니다 또는 *판금 *갑옷을 !B! 얻습니다.",
+    "DESCRIPTION": "선택 - 힘을 !M! 얻습니다 또는 *판금 *갑옷을 5 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선택 - 힘을 !M! 얻습니다 또는 *판금 *갑옷을 8 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       "도누의 폭발",
       "힘을 !M! 얻습니다.",

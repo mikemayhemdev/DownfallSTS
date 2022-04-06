@@ -30,7 +30,7 @@ public class FalseCounter extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         blck();
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p,3), 3));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p,2), 2));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedDurationPower(this.magicNumber), this.magicNumber));
 
         finisher();

@@ -46,7 +46,8 @@
   },
   "expansioncontent:ShapePower": {
     "NAME": "先古塑形",
-    "DESCRIPTION": "选择-获得 !M! 点 力量 或 !B! 层 *多层护甲 。",
+    "DESCRIPTION": "选择-获得 !M! 点 力量 或 5 层 *多层护甲 。",
+    "UPGRADE_DESCRIPTION": "选择-获得 !M! 点 力量 或 8 层 *多层护甲 。",
     "EXTENDED_DESCRIPTION": [
       "甜圈之力",
       "获得 !M! 点 力量 。",

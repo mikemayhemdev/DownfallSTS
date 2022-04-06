@@ -24,8 +24,8 @@
   },
   "Slimebound:SamplingLick": {
     "NAME": "サンプリングリック",
-    "DESCRIPTION": "粘液 !SlimeboundSlimed! を与える。 NL !B! ブロック を得る。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "粘液 !SlimeboundSlimed! を与える。 NL !B! ブロック を得る。 NL カードを1枚引く。 NL 廃棄 。"
+    "DESCRIPTION": "粘液 !slime! を与える。 NL !B! ブロック を得る。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": "粘液 !slime! を与える。 NL !B! ブロック を得る。 NL カードを1枚引く。 NL 廃棄 。"
   },
   "Slimebound:DuplicateSlimes": {
     "NAME": "スライム複製",
@@ -90,7 +90,7 @@
   },
   "Slimebound:SelfFormingGoo": {
     "NAME": "自己形成グー",
-    "DESCRIPTION": "HPを失うと、次のターン開始時に 粘液 !SlimeboundSlimed! をランダムな敵に与え、2 ブロック を得る。"
+    "DESCRIPTION": "HPを失うと、次のターン開始時に 粘液 !slime! をランダムな敵に与え、2 ブロック を得る。"
   },
   "Slimebound:SlimeSpikes": {
     "NAME": "スライムスパイク",
@@ -166,23 +166,23 @@
   },
   "Slimebound:Lick": {
     "NAME": "リック",
-    "DESCRIPTION": "脱力 !M! と 粘液 !SlimeboundSlimed! を与える。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "脱力 !M! と 粘液 !SlimeboundSlimed! を与える。 NL カードを1枚引く。 NL 廃棄 。"
+    "DESCRIPTION": "脱力 !M! と 粘液 !slime! を与える。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": "脱力 !M! と 粘液 !slime! を与える。 NL カードを1枚引く。 NL 廃棄 。"
   },
   "Slimebound:HauntingLick": {
     "NAME": "ホーンティング リック",
-    "DESCRIPTION": "弱体 !M! と 粘液 !SlimeboundSlimed! を与える。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "弱体 !M! と 粘液 !SlimeboundSlimed! を与える。 NL カードを1枚引く。 NL 廃棄 。"
+    "DESCRIPTION": "弱体 !M! と 粘液 !slime! を与える。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": "弱体 !M! と 粘液 !slime! を与える。 NL カードを1枚引く。 NL 廃棄 。"
   },
   "Slimebound:PoisonLick": {
     "NAME": "ポイズンリック",
-    "DESCRIPTION": "粘液 !SlimeboundSlimed! と 毒 !SlimeboundSlimePoison! 与える。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "粘液 !SlimeboundSlimed! と 毒 !SlimeboundSlimePoison! 与える。 NL カードを1枚引く。 NL 廃棄 。"
+    "DESCRIPTION": "粘液 !slime! と 毒 !SlimeboundSlimePoison! 与える。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": "粘液 !slime! と 毒 !SlimeboundSlimePoison! 与える。 NL カードを1枚引く。 NL 廃棄 。"
   },
   "Slimebound:MegaLick": {
     "NAME": "メガリック",
-    "DESCRIPTION": "敵全体に、 脱力 !M! と 粘液 !SlimeboundSlimed! を与える。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "敵全体に、 脱力 !M! と 粘液 !SlimeboundSlimed! を与える。 NL カードを1枚引く。 NL 廃棄 。"
+    "DESCRIPTION": "敵全体に、 脱力 !M! と 粘液 !slime! を与える。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": "敵全体に、 脱力 !M! と 粘液 !slime! を与える。 NL カードを1枚引く。 NL 廃棄 。"
   },
   "Slimebound:FocusedLick": {
     "NAME": "フォーカスリック",
@@ -191,8 +191,8 @@
   },
   "Slimebound:RejuvenatingLick": {
     "NAME": "リジュブネイトリック",
-    "DESCRIPTION": "粘液 !SlimeboundSlimed! を与える。 NL HPを !M! 回復する。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "粘液 !SlimeboundSlimed! を与える。 NL HPを !M! 回復する。 NL カードを1枚引く。 NL 廃棄 。"
+    "DESCRIPTION": "粘液 !slime! を与える。 NL HPを !M! 回復する。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": "粘液 !slime! を与える。 NL HPを !M! 回復する。 NL カードを1枚引く。 NL 廃棄 。"
   },
   "Slimebound:Gluttony": {
     "NAME": "大食い",
@@ -282,7 +282,7 @@
   },
   "Slimebound:LivingWall": {
     "NAME": "生ける壁",
-    "DESCRIPTION": "!B! ブロック を得る。 NL このターン攻撃してきた敵に 粘液 !SlimeboundSlimed! を与える。"
+    "DESCRIPTION": "!B! ブロック を得る。 NL このターン攻撃してきた敵に 粘液 !slime! を与える。"
   },
   "Slimebound:Slimepotheosis": {
     "NAME": "スライム神格化",
@@ -304,7 +304,7 @@
   },
   "Slimebound:CorrosiveSpit": {
     "NAME": "腐食性の唾",
-    "DESCRIPTION": "粘液 !SlimeboundSlimed! を与える。"
+    "DESCRIPTION": "粘液 !slime! を与える。"
   },
   "Slimebound:Chomp": {
     "NAME": "むしゃむしゃ",
@@ -312,7 +312,7 @@
   },
   "Slimebound:DouseInSlime": {
     "NAME": "スライムまみれ",
-    "DESCRIPTION": "粘液 !SlimeboundSlimed! を与える。 NL 次のターンこの敵に対してアタックが使われたとき、 粘液 の効果は 粘液 を消費しない。"
+    "DESCRIPTION": "粘液 !slime! を与える。 NL 次のターンこの敵に対してアタックが使われたとき、 粘液 の効果は 粘液 を消費しない。"
   },
   "Slimebound:FlameTackle": {
     "NAME": "フレイムタックル",
@@ -328,12 +328,12 @@
   },
   "Slimebound:RainOfGoop": {
     "NAME": "グープの雨",
-    "DESCRIPTION": "粘液 !SlimeboundSlimed! をランダムな敵に !M! 回与える。",
-    "UPGRADE_DESCRIPTION": "粘液 !SlimeboundSlimed! をランダムな敵に !M! 回与える。"
+    "DESCRIPTION": "粘液 !slime! をランダムな敵に !M! 回与える。",
+    "UPGRADE_DESCRIPTION": "粘液 !slime! をランダムな敵に !M! 回与える。"
   },
   "Slimebound:GoopSpray": {
     "NAME": "グープスプレー",
-    "DESCRIPTION": "敵全体に、 粘液 !SlimeboundSlimed! と 毒 !M! を与える。"
+    "DESCRIPTION": "敵全体に、 粘液 !slime! と 毒 !M! を与える。"
   },
   "Slimebound:MassFeed": {
     "NAME": "マスフィード",

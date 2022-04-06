@@ -7,7 +7,7 @@ import slimebound.cards.AbstractSlimeboundCard;
 public class SlimedVariable extends DynamicVariable {
     @Override
     public String key() {
-        return "SlimeboundSlimed";
+        return "slime";
     }
 
     @Override

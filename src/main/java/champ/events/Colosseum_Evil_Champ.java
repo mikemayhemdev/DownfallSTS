@@ -3,6 +3,7 @@ package champ.events;
 
 import champ.relics.BlackKnightsHelmet;
 import charbosses.bosses.Defect.CharBossDefect;
+import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
@@ -91,6 +92,11 @@ public class Colosseum_Evil_Champ extends AbstractImageEvent {
                             case "downfall:Watcher":
                                 AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossWatcher.ID);
                                 AbstractDungeon.lastCombatMetricKey = "downfall:CharBossWatcher";
+//                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()});
+                                break;
+                            case "downfall:Hermit":
+                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossHermit.ID);
+                                AbstractDungeon.lastCombatMetricKey = "downfall:CharBossHermit";
 //                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()});
                                 break;
                             default:

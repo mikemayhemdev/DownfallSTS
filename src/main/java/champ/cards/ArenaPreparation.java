@@ -29,6 +29,7 @@ public class ArenaPreparation extends AbstractChampCard {
         //techique();
         for (int i = 0; i < magicNumber; i++) {
             AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.SKILL);
+            while (c instanceof ArenaPreparation) c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.SKILL);
             c.isSeen = true;
             UnlockTracker.markCardAsSeen(c.cardID);
             if (!c.selfRetain) {
