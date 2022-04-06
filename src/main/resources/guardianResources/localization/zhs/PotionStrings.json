@@ -3,21 +3,21 @@
     "NAME": "质朴药水",
     "DESCRIPTIONS": [
       " #y加速 所有凝滞中的牌 #b",
-      "次。"
+      " 次。"
     ]
   },
     "Guardian:DefensiveModePotion": {
     "NAME": "抛光油",
     "DESCRIPTIONS": [
-      "在 #b",
-      " 回合内处于 #yguardianmod:防御模式 。",
-      " 回合内处于 #yguardianmod:防御模式 。"
+      "进入 #y防御模式 #b",
+      " 回合。",
+      " 回合。"
     ]
   },
   "Guardian:BlockOnCardUsePotion": {
     "NAME": "盔甲涂料",
     "DESCRIPTIONS": [
-      "本回合每当你打出一张牌时，获得 #b",
+      "本回合每当你打出一张牌，获得 #b",
       " 点 #y格挡 。"
     ]
   },
@@ -25,8 +25,8 @@
     "NAME": "量子万灵药",
     "DESCRIPTIONS": [
       "获得 #y凝滞栏位 直到你有 #b",
-      " 个， NL ",
-      " 次，从 #b3 张牌中选择 #b1 张牌 #y凝滞 。"
+      " 个。 NL 重复 #b",
+      " 次：从 #b3 张牌中选择 #b1 张牌 #y凝滞 。"
     ]
   }
 

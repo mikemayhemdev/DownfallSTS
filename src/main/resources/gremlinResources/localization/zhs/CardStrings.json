@@ -89,7 +89,7 @@
   },
   "Gremlin:EdibleArmor": {
     "NAME": "食用护甲",
-    "DESCRIPTION": "将你的 格挡 转换为等量 #y临时生命 。"
+    "DESCRIPTION": "将你的 格挡 转换为等量 临时生命 。"
   },
   "Gremlin:Encore": {
     "NAME": "鼓舞",
@@ -191,8 +191,8 @@
   },
   "Gremlin:GremlinToss": {
     "NAME": "地精投掷",
-    "DESCRIPTION": "造成你当前 格挡 值加上 临时生命 值的伤害。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 点 临时生命 。 NL 造成你当前 格挡 值加上 临时生命 值的伤害。",
+    "DESCRIPTION": "造成你当前 格挡 值加上 临时生命 值点伤害。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 临时生命 。 NL 造成你当前 格挡 值加上 临时生命 值点伤害。",
     "EXTENDED_DESCRIPTION": [
       " NL （造成 !D! 点伤害。)"
     ]
@@ -220,7 +220,7 @@
   },
   "Gremlin:Jeer": {
     "NAME": "嘲讽",
-    "DESCRIPTION": "造成 !D! 点伤害。 若敌人有负面效果，获得 !M! 点临时生命 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 若敌人有负面效果，获得 !M! 点 临时生命 。"
   },
   "Gremlin:Kablamo": {
     "NAME": "强无敌！",

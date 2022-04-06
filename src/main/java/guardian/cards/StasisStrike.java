@@ -44,9 +44,9 @@ public class StasisStrike extends AbstractGuardianCard {
 
     @Override
     public void whenReturnedFromStasis() {
-        upgradeDamage(magicNumber);
-        freeToPlayOnce = false;
-        cost = costForTurn = 1;
+        //upgradeDamage(magicNumber);
+        //freeToPlayOnce = false;
+        //cost = costForTurn = 1;
     }
 
     public StasisStrike() {

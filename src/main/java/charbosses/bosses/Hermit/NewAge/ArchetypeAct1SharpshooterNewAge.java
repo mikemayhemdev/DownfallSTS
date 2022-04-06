@@ -23,8 +23,8 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
 
         maxHPModifier += 95;
         actNum = 1;
-        bossMechanicName = HermitConcentrationPower.NAME;
-        bossMechanicDesc = HermitConcentrationPower.DESC[0];
+        bossMechanicName = HermitConcentrateAdder.NAME;
+        bossMechanicDesc = HermitConcentrateAdder.DESC[0];
     }
 
     @Override

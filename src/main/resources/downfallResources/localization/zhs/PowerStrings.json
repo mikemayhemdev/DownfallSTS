@@ -284,9 +284,9 @@
     ]
   },
   "downfall:HermitConcentrateAdder": {
-    "NAME": "抗争",
+    "NAME": "致命专注",
     "DESCRIPTIONS": [
-      " #y亡命之徒 正在 #y专注 ，使得他的卡牌获得 #y精准 效果。 NL 对其造成 #b10 点未被 #y格挡 的伤害能破除他的 #y专注 状态。"
+      " #y亡命之徒 每回合都进入 #y专注 状态，使其 #y精准 牌触发额外效果。 NL 对其造成 #b10 点伤害能打破其 #y专注 一回合。"
     ]
   },
   "downfall:HermitConcentrationPower": {
