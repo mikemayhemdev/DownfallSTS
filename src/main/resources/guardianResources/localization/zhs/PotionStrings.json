@@ -9,9 +9,9 @@
     "Guardian:DefensiveModePotion": {
     "NAME": "抛光油",
     "DESCRIPTIONS": [
-      "在 #b",
-      " 回合内处于 #yguardianmod:防御模式 。",
-      " 回合内处于 #yguardianmod:防御模式 。"
+      "进入 #y防御模式 #b",
+      " 回合。",
+      " 回合。"
     ]
   },
   "Guardian:BlockOnCardUsePotion": {
