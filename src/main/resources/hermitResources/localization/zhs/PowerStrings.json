@@ -45,7 +45,7 @@
 },
 "hermit:Rugged": {
         "NAME": "坚固",
-        "DESCRIPTIONS": ["下 #b", " 次受到未被 #y格挡 的伤害时，将伤害降至 #y1 。", " 一次受到未被 #y格挡 的伤害时，将伤害降至 #y1 。"]
+        "DESCRIPTIONS": ["下 #b", " 次受到未被 #y格挡 的伤害时，将伤害降至 #y3 。", " 一次受到未被 #y格挡 的伤害时，将伤害降至 #y3 。"]
 },
 "hermit:EternalPower": {
         "NAME": "永恒形态",
