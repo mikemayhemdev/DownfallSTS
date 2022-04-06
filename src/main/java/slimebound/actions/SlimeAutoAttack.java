@@ -19,8 +19,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.orbs.BronzeSlime;
+import slimebound.orbs.ShieldSlime;
 import slimebound.orbs.SpawnedSlime;
 import guardian.powers.LoseThornsPower;
+import slimebound.powers.PotencyPower;
 import slimebound.powers.SlimedPower;
 import slimebound.vfx.SearEffect;
 import slimebound.vfx.SlimeIntentEffect;
@@ -30,13 +32,9 @@ import theHexaghost.powers.BurnPower;
 public class SlimeAutoAttack extends AbstractGameAction {
 
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-    private static final float DURATION = 0.01F;
-    private static final float POST_ATTACK_WAIT_DUR = 0.2F;
     private AbstractCreature owner;
     private int damage;
     private int debuffamount;
-    private int block;
-    private AbstractPower p;
     private AttackEffect AE;
     private SpawnedSlime slime;
     private boolean beamVFX;
@@ -61,7 +59,6 @@ public class SlimeAutoAttack extends AbstractGameAction {
         this.AE = AE;
         this.damage = damage;
         this.slime = slime;
-        this.block = block;
         this.beamVFX = beamVFX;
         this.CultistBuff = CultistBuff;
         this.appliesPoison = appliesPoison;
@@ -83,7 +80,6 @@ public class SlimeAutoAttack extends AbstractGameAction {
         this.AE = AE;
         this.damage = damage;
         this.slime = slime;
-        this.block = block;
         this.beamVFX = beamVFX;
         this.CultistBuff = CultistBuff;
         this.appliesPoison = appliesPoison;
@@ -105,7 +101,6 @@ public class SlimeAutoAttack extends AbstractGameAction {
         this.AE = AE;
         this.damage = damage;
         this.slime = slime;
-        this.block = block;
         this.beamVFX = beamVFX;
         this.CultistBuff = CultistBuff;
         this.appliesPoison = appliesPoison;
@@ -128,7 +123,6 @@ public class SlimeAutoAttack extends AbstractGameAction {
         this.AE = AE;
         this.damage = damage;
         this.slime = slime;
-        this.block = block;
         this.beamVFX = beamVFX;
         this.CultistBuff = CultistBuff;
         this.appliesPoison = appliesPoison;
@@ -175,8 +169,8 @@ public class SlimeAutoAttack extends AbstractGameAction {
 
             }
 
-            if (this.block > 0)
-                AbstractDungeon.actionManager.addToTop(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
+            if (slime instanceof ShieldSlime)
+                AbstractDungeon.actionManager.addToTop(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.debuffamount));
 
             if (this.hitsAll) {
                 AbstractDungeon.actionManager.addToTop(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(this.damage, true, true), DamageInfo.DamageType.THORNS, AttackEffect.POISON));
