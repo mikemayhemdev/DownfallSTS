@@ -167,7 +167,7 @@
   },
   "bronze:WildBeam": {
     "NAME": "Cleanse",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust a random Status card in your hand.",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a random Status card in your draw pile.",
     "EXTENDED_DESCRIPTION": [
       "wild",
       "Beam"

@@ -19,8 +19,8 @@
   },
   "Slimebound:SamplingLick": {
     "NAME": "맛보며 핥기",
-    "DESCRIPTION": "slimeboundmod:점액을 !SlimeboundSlimed! 부여합니다. NL 방어도를 !B! 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:점액을 !SlimeboundSlimed! 부여합니다. NL 방어도를 !B! 얻습니다. NL 카드를 1장 뽑습니다. NL 소멸."
+    "DESCRIPTION": "slimeboundmod:점액을 !slime! 부여합니다. NL 방어도를 !B! 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:점액을 !slime! 부여합니다. NL 방어도를 !B! 얻습니다. NL 카드를 1장 뽑습니다. NL 소멸."
   },
   "Slimebound:Replication": {
     "NAME": "자기복제",
@@ -143,23 +143,23 @@
   },
   "Slimebound:Lick": {
     "NAME": "핥기",
-    "DESCRIPTION": "slimeboundmod:점액을 !SlimeboundSlimed! 부여합니다. NL 소멸 - slimeboundmod:매장.",
-    "UPGRADE_DESCRIPTION": "약화를 !M! 부여하고 slimeboundmod:점액을 !SlimeboundSlimed! 부여합니다. NL 카드를 1장 뽑습니다. NL 소멸 - slimeboundmod:매장."
+    "DESCRIPTION": "slimeboundmod:점액을 !slime! 부여합니다. NL 소멸 - slimeboundmod:매장.",
+    "UPGRADE_DESCRIPTION": "약화를 !M! 부여하고 slimeboundmod:점액을 !slime! 부여합니다. NL 카드를 1장 뽑습니다. NL 소멸 - slimeboundmod:매장."
   },
   "Slimebound:HauntingLick": {
     "NAME": "홀리는 핥기",
-    "DESCRIPTION": "취약을 !M! 부여하고 slimeboundmod:점액을 !SlimeboundSlimed! 부여합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "취약을 !M! 부여하고 slimeboundmod:점액을 !SlimeboundSlimed! 부여합니다. NL 카드를 1장 뽑습니다. NL 소멸."
+    "DESCRIPTION": "취약을 !M! 부여하고 slimeboundmod:점액을 !slime! 부여합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "취약을 !M! 부여하고 slimeboundmod:점액을 !slime! 부여합니다. NL 카드를 1장 뽑습니다. NL 소멸."
   },
   "Slimebound:MegaLick": {
     "NAME": "마구 핥기",
-    "DESCRIPTION": "적 전체에게 약화를 !M! 부여하고 slimeboundmod:점액을 !SlimeboundSlimed! 부여합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "적 전체에게 약화를 !M! 부여하고 slimeboundmod:점액을 !SlimeboundSlimed! 부여합니다. NL 카드를 1장 뽑습니다. NL 소멸."
+    "DESCRIPTION": "적 전체에게 약화를 !M! 부여하고 slimeboundmod:점액을 !slime! 부여합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "적 전체에게 약화를 !M! 부여하고 slimeboundmod:점액을 !slime! 부여합니다. NL 카드를 1장 뽑습니다. NL 소멸."
   },
   "Slimebound:RejuvenatingLick": {
     "NAME": "두 번 핥기",
-    "DESCRIPTION": "slimeboundmod:점액을 !SlimeboundSlimed! 만큼 2번 부여합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:점액을 !SlimeboundSlimed! 만큼 2번 부여합니다. NL 카드를 1장 뽑습니다. NL 소멸."
+    "DESCRIPTION": "slimeboundmod:점액을 !slime! 만큼 2번 부여합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:점액을 !slime! 만큼 2번 부여합니다. NL 카드를 1장 뽑습니다. NL 소멸."
   },
   "Slimebound:Gluttony": {
     "NAME": "폭식",
@@ -216,7 +216,7 @@
   },
   "Slimebound:LivingWall": {
     "NAME": "살아있는 벽",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 공격을 받을 때마다 공격한 대상에게 slimeboundmod:점액을 !SlimeboundSlimed! 부여합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 공격을 받을 때마다 공격한 대상에게 slimeboundmod:점액을 !slime! 부여합니다."
   },
   "Slimebound:ComboTackle": {
     "NAME": "허를 찌르는 태클",
@@ -233,7 +233,7 @@
   },
   "Slimebound:CorrosiveSpit": {
     "NAME": "부식성 침",
-    "DESCRIPTION": "slimeboundmod:점액을 !SlimeboundSlimed! 부여합니다."
+    "DESCRIPTION": "slimeboundmod:점액을 !slime! 부여합니다."
   },
   "Slimebound:Chomp": {
     "NAME": "우걱우걱",
@@ -242,7 +242,7 @@
   },
   "Slimebound:DouseInSlime": {
     "NAME": "점액 적시기",
-    "DESCRIPTION": "slimeboundmod:점액을 !SlimeboundSlimed! 부여합니다. NL 이 효과로 점액이 부여된 적은 다음번 공격 시 slimeboundmod:점액을 소모하지 않습니다."
+    "DESCRIPTION": "slimeboundmod:점액을 !slime! 부여합니다. NL 이 효과로 점액이 부여된 적은 다음번 공격 시 slimeboundmod:점액을 소모하지 않습니다."
   },
   "Slimebound:FlameTackle": {
     "NAME": "불꽃 태클",
@@ -250,12 +250,12 @@
   },
   "Slimebound:RainOfGoop": {
     "NAME": "끈적이 비",
-    "DESCRIPTION": "무작위 적들에게 slimeboundmod:점액을 !SlimeboundSlimed! 만큼 !M! 번 부여합니다.",
-    "UPGRADE_DESCRIPTION": "무작위 적들에게 slimeboundmod:점액을 !SlimeboundSlimed! 만큼 !M! 번 부여합니다."
+    "DESCRIPTION": "무작위 적들에게 slimeboundmod:점액을 !slime! 만큼 !M! 번 부여합니다.",
+    "UPGRADE_DESCRIPTION": "무작위 적들에게 slimeboundmod:점액을 !slime! 만큼 !M! 번 부여합니다."
   },
   "Slimebound:GoopSpray": {
     "NAME": "끈적이 스프레이",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 적 전체에게 slimeboundmod:점액을 !SlimeboundSlimed! 부여하고 약화를 !M! 부여합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 적 전체에게 slimeboundmod:점액을 !slime! 부여하고 약화를 !M! 부여합니다."
   },
   "Slimebound:MassFeed": {
     "NAME": "대량 섭취",

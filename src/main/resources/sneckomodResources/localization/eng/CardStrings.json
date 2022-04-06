@@ -72,7 +72,7 @@
   },
   "sneckomod:MixItUp": {
     "NAME": "Mix It Up!",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL *Transform your Potions. NL Exhaust."
+    "DESCRIPTION": "*Transform your Potions. NL Deal !D! damage !M! times. NL Exhaust."
   },
   "sneckomod:MorePower": {
     "NAME": "More Power!",

@@ -35,9 +35,9 @@ public class ShapePower extends AbstractExpansionCard implements OctopusCard {
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
         cardList.add(new OctoChoiceCard("expansioncontent:PolyBeam", EXTENDED_DESCRIPTION[0], "expansioncontentResources/images/cards/PolyBeam.png", EXTENDED_DESCRIPTION[1], -1, -1, magicNumber, CardType.POWER));
         if (upgraded) {
-            cardList.add(new OctoChoiceCard("expansioncontent:DecaShield", EXTENDED_DESCRIPTION[2], "expansioncontentResources/images/cards/DecaShield.png", EXTENDED_DESCRIPTION[3], -1, -1, CardType.POWER));
+            cardList.add(new OctoChoiceCard("expansioncontent:DecaShield", EXTENDED_DESCRIPTION[2], "expansioncontentResources/images/cards/DecaShield.png", EXTENDED_DESCRIPTION[4], -1, -1, CardType.POWER));
         } else {
-            cardList.add(new OctoChoiceCard("expansioncontent:DecaShield", EXTENDED_DESCRIPTION[3], "expansioncontentResources/images/cards/DecaShield.png", EXTENDED_DESCRIPTION[2], -1, -1, CardType.POWER));
+            cardList.add(new OctoChoiceCard("expansioncontent:DecaShield", EXTENDED_DESCRIPTION[2], "expansioncontentResources/images/cards/DecaShield.png", EXTENDED_DESCRIPTION[3], -1, -1, CardType.POWER));
 
         }
 
@@ -73,8 +73,9 @@ public class ShapePower extends AbstractExpansionCard implements OctopusCard {
 
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(3);
             upgradeMagicNumber(1);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

@@ -167,7 +167,7 @@
   },
   "bronze:WildBeam": {
     "NAME": "세척",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 무작위 상태이상을 1장 소멸시킵니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 뽑을 카드 더미에서 있는 무작위 상태이상을 1장 소멸시킵니다.",
     "EXTENDED_DESCRIPTION": [
       "광역",
       "광선"
