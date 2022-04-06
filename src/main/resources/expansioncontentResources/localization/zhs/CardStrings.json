@@ -63,7 +63,7 @@
   },
   "expansioncontent:StudyTheSpire": {
     "NAME": "研究尖塔",
-    "DESCRIPTION": "接下来 !M! 回合开始时，随机获得一张 *首领 牌。 NL 其首次耗能为0",
+    "DESCRIPTION": "接下来 !M! 回合开始时，随机获得一张 *首领 牌。 NL 其首次耗能为0。",
     "UPGRADE_DESCRIPTION": "接下来 !M! 回合开始时，随机获得一张 *首领 牌+。 NL 其首次耗能为0。"
   },
   "expansioncontent:QuickStudy": {
