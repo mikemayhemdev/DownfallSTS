@@ -136,8 +136,8 @@
   },
   "champ:IronFortress": {
     "NAME": "战斗跃舞",
-    "DESCRIPTION": "进入不同 姿态 时获得其 champ:技术 奖励。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 进入不同 姿态 时获得其 champ:技术 奖励。"
+    "DESCRIPTION": "进入不同 姿态 时，获得其 champ:技术 奖励两次。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 进入不同 姿态 时，获得其 champ:技术 奖励两次。"
   },
   "champ:Lariat": {
     "NAME": "强身健体",
