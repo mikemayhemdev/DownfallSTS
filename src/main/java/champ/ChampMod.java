@@ -16,12 +16,17 @@ import champ.potions.TechPotion;
 import champ.potions.UltimateStancePotion;
 import champ.powers.CounterPower;
 import champ.powers.ResolvePower;
+import champ.stances.BerserkerStance;
+import champ.stances.DefensiveStance;
+import champ.util.OnOpenerSubscriber;
+import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import champ.relics.*;
 import champ.stances.AbstractChampStance;
 import champ.util.CardFilter;
 import champ.util.CoolVariable;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.patches.BanSharedContentPatch;
 import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Color;
@@ -478,6 +483,21 @@ public class ChampMod implements
             }
         }
         */
+
+        if (abstractCard.hasTag(ChampMod.OPENERBERSERKER)){
+            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(BerserkerStance.STANCE_ID));
+            triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
+        }
+        if (abstractCard.hasTag(ChampMod.OPENERDEFENSIVE)){
+            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveStance.STANCE_ID));
+            triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
+        }
+    }
+
+    public void triggerOpenerRelics(boolean fromNeutral) {
+        for (AbstractRelic r : AbstractDungeon.player.relics) {
+            if (r instanceof OnOpenerSubscriber) ((OnOpenerSubscriber) r).onOpener(fromNeutral);
+        }
     }
 
     @Override

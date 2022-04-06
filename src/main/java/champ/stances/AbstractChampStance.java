@@ -85,11 +85,7 @@ public abstract class AbstractChampStance extends AbstractStance {
 
     }
 
-    public void triggerOpenerRelics(boolean fromNeutral) {
-        for (AbstractRelic r : AbstractDungeon.player.relics) {
-            if (r instanceof OnOpenerSubscriber) ((OnOpenerSubscriber) r).onOpener(fromNeutral);
-        }
-    }
+
 
     public int getRemainingChargeCount(){
         int count=0;
@@ -164,14 +160,6 @@ public abstract class AbstractChampStance extends AbstractStance {
             if (spendTechniqueCharge()) {
                 technique();
             }
-        }
-        if (card.hasTag(ChampMod.OPENERBERSERKER)){
-            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(BerserkerStance.STANCE_ID));
-            triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
-        }
-        if (card.hasTag(ChampMod.OPENERDEFENSIVE)){
-            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveStance.STANCE_ID));
-            triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
         }
     }
 
