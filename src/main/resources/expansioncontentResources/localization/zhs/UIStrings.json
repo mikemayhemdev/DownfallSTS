@@ -4,7 +4,7 @@
       "我本回合已经打出了首领牌！"
     ]
   },
-  "*BossCardTagName": {
+  "BossCardTagName": {
     "TEXT": [
       "首领"
     ]

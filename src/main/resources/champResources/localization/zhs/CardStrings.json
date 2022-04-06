@@ -136,8 +136,8 @@
   },
   "champ:IronFortress": {
     "NAME": "战斗跃舞",
-    "DESCRIPTION": "进入不同 姿态 时获得其 champ:技术 奖励。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 进入不同 姿态 时获得其 champ:技术 奖励。"
+    "DESCRIPTION": "进入不同 姿态 时，获得其 champ:技术 奖励两次。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 进入不同 姿态 时，获得其 champ:技术 奖励两次。"
   },
   "champ:Lariat": {
     "NAME": "强身健体",
@@ -291,7 +291,7 @@
   },
   "champ:Improvising": {
     "NAME": "触类旁通",
-    "DESCRIPTION": "每回合首次打出 champ:连段 牌时将其返回手牌。 NL 它下次耗能为0。"
+    "DESCRIPTION": "每回合首次打出 champ:连段 牌时将其返回手牌。 NL 其下次耗能为0。"
   },
   "champ:CalledShot": {
     "NAME": "宣告",
@@ -323,8 +323,8 @@
   },
   "champ:StrikeOfGenius": {
     "NAME": "打击天才",
-    "DESCRIPTION": "回合开始时，随机获得一张 消耗 *打击 牌。 NL 它首次耗能为0。",
-    "UPGRADE_DESCRIPTION": "回合开始时，随机获得一张 消耗 *打击 牌+。 NL 它首次耗能为0。"
+    "DESCRIPTION": "回合开始时，随机获得一张 消耗 *打击 牌。 NL 其首次耗能为0。",
+    "UPGRADE_DESCRIPTION": "回合开始时，随机获得一张 消耗 *打击 牌+。 NL 其首次耗能为0。"
   },
   "champ:DefensiveStyle": {
     "NAME": "防守战法",
@@ -402,34 +402,34 @@
   "champ:Balance": {
     "NAME": "平衡",
     "DESCRIPTION": "弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用",
-    "UPGRADE_DESCRIPTION": "进入 champ:防守 或 champ:角斗 。 NL 将一张已 升级 的所选 姿态 的 champ:连段 牌加入手牌。",
+    "UPGRADE_DESCRIPTION": "进入 champ:防守 或 champ:角斗 。 NL 将一张已  的所选 姿态 的 champ:连段 牌加入手牌。",
     "EXTENDED_DESCRIPTION": [
-      " 进入 champ:防守 。 NL 将一张随机 champ:防守 牌加入手牌。",
-      " 进入 champ:角斗 。 NL 将一张随机 champ:角斗 牌加入手牌。",
-      " 进入 champ:防守 。 NL 将一张随机已 升级 的 champ:防守 牌加入手牌。",
-      " 进入 champ:角斗 。 NL 将一张随机已 升级 的 champ:角斗 牌加入手牌。"
+      " 进入 champ:防守 。 NL 将一张 champ:防守 牌加入手牌。",
+      " 进入 champ:角斗 。 NL 将一张 champ:角斗 牌加入手牌。",
+      " 进入 champ:防守 。 NL 将一张已  的 champ:防守 牌加入手牌。",
+      " 进入 champ:角斗 。 NL 将一张已  的 champ:角斗 牌加入手牌。"
     ]
   },
   "champ:Aggression": {
     "NAME": "侵略",
     "DESCRIPTION": "弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用",
-    "UPGRADE_DESCRIPTION": "进入 champ:战狂 或 champ:角斗 。 NL 将一张已 升级 的所选 姿态 的 champ:连段 牌加入手牌。",
+    "UPGRADE_DESCRIPTION": "进入 champ:战狂 或 champ:角斗 。 NL 将一张已  的所选 姿态 的 champ:连段 牌加入手牌。",
     "EXTENDED_DESCRIPTION": [
-      " 进入 champ:战狂 。 NL 将一张随机 champ:战狂 牌加入手牌。",
-      " 进入 champ:角斗 。 NL 将一张随机 champ:角斗 牌加入手牌。",
-      " 进入 champ:战狂 。 NL 将一张随机已 升级 的 champ:战狂 牌加入手牌。",
-      " 进入 champ:角斗 。 NL 将一张随机已 升级 的 champ:角斗 牌加入手牌。"
+      " 进入 champ:战狂 。 NL 将一张 champ:战狂 牌加入手牌。",
+      " 进入 champ:角斗 。 NL 将一张 champ:角斗 牌加入手牌。",
+      " 进入 champ:战狂 。 NL 将一张已  的 champ:战狂 牌加入手牌。",
+      " 进入 champ:角斗 。 NL 将一张已  的 champ:角斗 牌加入手牌。"
     ]
   },
   "champ:Control": {
     "NAME": "控制",
     "DESCRIPTION": "弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用",
-    "UPGRADE_DESCRIPTION": "进入 champ:防守 或 champ:战狂 。 NL 将一张已 升级 的所选 姿态 的 champ:连段 牌加入手牌。",
+    "UPGRADE_DESCRIPTION": "进入 champ:防守 或 champ:战狂 。 NL 将一张已  的所选 姿态 的 champ:连段 牌加入手牌。",
     "EXTENDED_DESCRIPTION": [
-      " 进入 champ:防守 。 NL 将一张随机 champ:防守 牌加入手牌。",
-      " 进入 champ:战狂 。 NL 将一张随机 champ:战狂 牌加入手牌。",
-      " 进入 champ:防守 。 NL 将一张随机已 升级 的 champ:防守 牌加入手牌。",
-      " 进入 champ:战狂 。 NL 将一张随机已 升级 的 champ:战狂 牌加入手牌。"
+      " 进入 champ:防守 。 NL 将一张 champ:防守 牌加入手牌。",
+      " 进入 champ:战狂 。 NL 将一张 champ:战狂 牌加入手牌。",
+      " 进入 champ:防守 。 NL 将一张已  的 champ:防守 牌加入手牌。",
+      " 进入 champ:战狂 。 NL 将一张已   champ:战狂 牌加入手牌。"
     ]
   },
   "champ:Headbutt": {

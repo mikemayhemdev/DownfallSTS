@@ -233,7 +233,7 @@
   },
   "sneckomod:MixItUp": {
     "NAME": "混合起来！",
-    "DESCRIPTION": "NL 变化所有药水。 NL 造成 !D! 点伤害 !M! 次。 NL 消耗 。"
+    "DESCRIPTION": "变化所有药水。 NL 造成 !D! 点伤害 !M! 次。 NL 消耗 。"
   },
   "sneckomod:MorePower": {
     "NAME": "更多力量！",

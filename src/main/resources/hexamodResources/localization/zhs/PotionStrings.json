@@ -3,13 +3,13 @@
     "NAME": "燃烧弹",
     "DESCRIPTIONS": [
       "给予 #b",
-      " 层 灼伤。"
+      " 层 #y灼魂 。"
     ]
   },
   "hexamod:DoubleChargePotion": {
     "NAME": "流动燃料",
     "DESCRIPTIONS": [
-      "强制点燃活跃的鬼火 ",
+      " #y点燃 当前鬼火 #b",
       " 次。"
     ]
   },

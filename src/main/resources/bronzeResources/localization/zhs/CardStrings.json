@@ -167,7 +167,7 @@
   },
   "bronze:WildBeam": {
     "NAME": "清理",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机 消耗抽牌堆一张 状态牌 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机 消耗 抽牌堆一张 状态牌 。",
     "EXTENDED_DESCRIPTION": [
       "狂野",
       "射线"

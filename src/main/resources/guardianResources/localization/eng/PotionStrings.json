@@ -25,8 +25,8 @@
     "NAME": "Quantum Elixir",
     "DESCRIPTIONS": [
       "Gain #yStasis slots until you have #b",
-      ". NL #b",
-      " times, choose #b1 of #b3 cards to place into #yStasis."
+      ". NL Repeat #b",
+      " times: choose #b1 of #b3 cards to place into #yStasis."
     ]
   }
 }
