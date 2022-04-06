@@ -42,7 +42,7 @@
   },
   "hexamod:CatchUp": {
     "NAME": "따라잡기",
-    "DESCRIPTION": "!M! 번 이전 유령불꽃을 hexamod:점화합니다."
+    "DESCRIPTION": "이전 유령불꽃을 !M! 번 hexamod:점화합니다."
   },
   "hexamod:TimeWarp": {
     "NAME": "시간 왜곡",
