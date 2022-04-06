@@ -29,8 +29,8 @@
   {
     "PROPER_NAME": "反击",
     "NAMES": [
-      "反击",
-      "counter"
+      "counter",
+      "反击"
     ],
     "DESCRIPTION": "下次被 #y攻击 时，失去所有 #y反击 并对攻击者造成层数点伤害。"
   },
