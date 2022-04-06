@@ -35,7 +35,7 @@
   "Guardian:Gem_Cyan": {
     "NAME": "蓝晶",
     "DESCRIPTION": " guardianmod:宝石 。 NL 获得 *水晶护卫 。",
-    "UPGRADE_DESCRIPTION": "弃用"
+    "UPGRADE_DESCRIPTION": "获得 *水晶护卫 。"
   },
   "Guardian:ChargeUp": {
     "NAME": "充能",
@@ -334,8 +334,8 @@
   },
   "Guardian:Gem_Purple": {
     "NAME": "紫晶",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 所有敌人本回合失去 2 点 力量 。",
-    "UPGRADE_DESCRIPTION": "所有敌人本回合失去 2 点 力量 。"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 本回合所有敌人失去 2 点 力量 。",
+    "UPGRADE_DESCRIPTION": "本回合所有敌人失去 2 点 力量 。"
   },
   "Guardian:Gem_Crimson": {
     "NAME": "石榴石",
@@ -349,7 +349,8 @@
   },
   "Guardian:Gem_Fragmented": {
     "NAME": "宝石碎片",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 *水晶小刀 。"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 *水晶小刀 。",
+    "UPGRADE_DESCRIPTION": "获得 *水晶小刀 。"
   },
   "Guardian:CrystalShiv": {
     "NAME": "水晶小刀",
