@@ -44,6 +44,7 @@ public class BerserkerStance extends AbstractChampStance {
                 ChampChar.characterStrings.TEXT[12] + //Gain #B
                 BerserkerStance.amount() +
                 ChampChar.characterStrings.TEXT[46] + //#y Vigor
+                ChampChar.characterStrings.TEXT[63] +
                 " NL " +
                 ChampChar.characterStrings.TEXT[62] + //"Charges Remaining:
                 getRemainingChargeCount() +
