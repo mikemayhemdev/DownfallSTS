@@ -93,8 +93,7 @@
     "NAME": "부유",
     "DESCRIPTION": "카드를 1장 뽑습니다. NL hexamod:팽창합니다.",
     "UPGRADE_DESCRIPTION": "카드를 1장 뽑습니다. NL hexamod:수축 또는 hexamod:팽창하거나 현재 상태를 유지합니다.",
-    "EXTENDED_DESCRIPTION": [
-      "hexamod:팽창.", "hexamod:수축.", "유지."]
+    "EXTENDED_DESCRIPTION": ["hexamod:팽창.", "hexamod:수축.", "유지."]
   },
   "hexamod:Floatwork": {
     "NAME": "떠돌기",
