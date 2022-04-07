@@ -126,7 +126,7 @@
   },
   "bronze:WildStrike": {
     "NAME": "狂野打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:插入 *伤口 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:插入 伤口 。"
   },
   "bronze:Overheat": {
     "NAME": "过热",
