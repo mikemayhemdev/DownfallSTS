@@ -167,7 +167,7 @@
   },
   "bronze:WildBeam": {
     "NAME": "세척",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 뽑을 카드 더미에서 있는 무작위 상태이상을 1장 소멸시킵니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 뽑을 카드 더미에서 무작위 상태이상을 1장 소멸시킵니다.",
     "EXTENDED_DESCRIPTION": [
       "광역",
       "광선"
@@ -543,8 +543,8 @@
   },
   "bronze:CleanCode": {
     "NAME": "깔끔한 코드",
-    "DESCRIPTION": "다음으로 !M! bronze:부호화하는 카드의 bronze:컴파일 *오류 효과를 제거합니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 다음으로 !M! bronze:부호화하는 카드의 bronze:컴파일 *오류 효과를 제거합니다."
+    "DESCRIPTION": "다음으로 bronze:부호화하는 카드 !M! 장의 bronze:컴파일 *오류 효과를 제거합니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 다음으로 !M! bronze:부호화하는 카드 !M! 장의 bronze:컴파일 *오류 효과를 제거합니다."
   },
   "bronze:BranchBlock": {
     "NAME": "분기: 방어도",
