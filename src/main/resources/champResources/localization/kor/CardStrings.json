@@ -226,7 +226,7 @@
   },
   "champ:MurderStrike": {
     "NAME": "죽이는 타격",
-    "DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL *스킬 *카드 *보너스를 얻을 때마다 이 카드의 피해량을 !M! 증가시킵니다."
+    "DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 이번 전투 동안 *스킬 *카드 *보너스를 얻을 때마다 이 카드의 피해량을 !M! 증가시킵니다."
   },
   "champ:HeavySlash": {
     "NAME": "숙달된 베기",

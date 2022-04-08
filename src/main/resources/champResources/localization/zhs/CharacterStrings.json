@@ -67,8 +67,8 @@
       " 层 #y反击 。",
       " #y格挡 。 不退出 #y终极姿态 。",
       "我不处于姿态中",
-      "Charges remaining: ",
-      " Can trigger up to 3 times."
+      "剩余次数: #b",
+      " 进入 #y姿态 后最多触发 #b3 次。"
     ]
   }
 }

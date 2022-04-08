@@ -40,6 +40,12 @@
       "턴 종료 시 #y소멸시킬 카드를 1장 선택합니다."
     ]
   },
+  "downfall:SpotWeakness": {
+    "NAME": "약점 분석",
+    "DESCRIPTIONS": [
+      "매 턴 이 효과가 발동하는 동안 공격 카드를 사용할 때마다 이 적은 #y힘을 #b"," 얻습니다. 현재 #y힘을 #b", " 얻습니다."
+    ]
+  },
   "downfall:PoisonResist": {
     "NAME": "중독 저항",
     "DESCRIPTIONS": [
