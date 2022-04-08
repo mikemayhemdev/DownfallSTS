@@ -24,7 +24,7 @@ import static hermit.HermitMod.makeCardPath;
 // Abstract Dynamic Card builds up on Abstract Default Card even more and makes it so that you don't need to add
 // the NAME and the DESCRIPTION into your card - it'll get it automatically. Of course, this functionality could have easily
 // Been added to the default card rather than creating a new Dynamic one, but was done so to deliberately.
-public class Malice extends AbstractHermitCard {
+public class Malice extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -70,17 +70,16 @@ public class Malice extends AbstractHermitCard {
     // /STAT DECLARATION/
 
     public Malice() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
         baseDamage = DAMAGE;
-        this.isMultiDamage = true;
         loadJokeCardImage(this, "malice.png");
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new MaliceAction(m,new DamageInfo(p, this.damage, this.damageTypeForTurn),this.multiDamage));
+        this.addToBot(new MaliceAction(m,new DamageInfo(p, this.damage, this.damageTypeForTurn), DamageInfo.createDamageMatrix(baseDamage)));
     }
 
     // Upgraded stats.
