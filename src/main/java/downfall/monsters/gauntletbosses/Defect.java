@@ -33,7 +33,9 @@ public class Defect extends GauntletBoss {
     private static final float HB_W = 225.0F;
     private static final float HB_H = 250.0F;
 
+
     int turnNum = 0;
+
     public Defect(float x, float y) {
         super(NAME, ID, 75 * 2, 0.0F, -5.0F, 240.0F, 244.0F, null, x, y);
 
@@ -69,7 +71,7 @@ public class Defect extends GauntletBoss {
                 }
                 break;
             case 2:
-                if (this.hasPower(DexterityPower.POWER_ID)){
+                if (this.hasPower(DexterityPower.POWER_ID)) {
                     dex = getPower(DexterityPower.POWER_ID).amount;
                 }
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
@@ -79,7 +81,7 @@ public class Defect extends GauntletBoss {
                 }
                 break;
             case 3:
-                if (this.hasPower(DexterityPower.POWER_ID)){
+                if (this.hasPower(DexterityPower.POWER_ID)) {
                     dex = getPower(DexterityPower.POWER_ID).amount;
                 }
                 addToBot(new GainBlockAction(this, 10 + (dex * 2)));
@@ -100,27 +102,50 @@ public class Defect extends GauntletBoss {
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
     }
 
-    protected void getMove(int num) {
-        turnNum ++;
-        if (turnNum == 5) {
-            setMove(moveName(Buffer.ID) + "+", (byte)5, Intent.BUFF);
+
+    private void bossMove() {
+
+        int rnd = AbstractDungeon.cardRandomRng.random(0, 3);
+        switch (rnd) {
+            case 0:
+                isAttacking = true;
+                setMove(moveName(Strike_Blue.ID, Strike_Blue.ID), (byte) 1, Intent.ATTACK, this.damage.get(0).base, 2, true);
+                break;
+            case 1:
+                isAttacking = true;
+                setMove(moveName(Strike_Blue.ID, Defend_Blue.ID), (byte) 2, Intent.ATTACK_DEFEND, this.damage.get(1).base);
+                break;
+            case 2:
+                isAttacking = false;
+                setMove(moveName(Defend_Blue.ID, Defend_Blue.ID), (byte) 3, Intent.DEFEND);
+                break;
+            case 3:
+                isAttacking = true;
+                setMove(moveName(CoreSurge.ID), (byte) 4, Intent.ATTACK_BUFF, this.damage.get(2).base);
+                break;
         }
-        else {
-            int rnd = AbstractDungeon.cardRandomRng.random(0, 3);
-            switch (rnd) {
-                case 0:
-                    setMove(moveName(Strike_Blue.ID, Strike_Blue.ID), (byte)1, Intent.ATTACK, this.damage.get(0).base, 2, true);
-                    break;
-                case 1:
-                    setMove(moveName(Strike_Blue.ID, Defend_Blue.ID), (byte)2, Intent.ATTACK_DEFEND, this.damage.get(1).base);
-                    break;
-                case 2:
-                    setMove(moveName(Defend_Blue.ID, Defend_Blue.ID), (byte)3, Intent.DEFEND);
-                    break;
-                case 3:
-                    setMove(moveName(CoreSurge.ID), (byte)4, Intent.ATTACK_BUFF, this.damage.get(2).base);
-                    break;
+    }
+
+    protected void getMove(int num) {
+        turnNum++;
+        if (turnNum == 5) {
+            isAttacking = false;
+            setMove(moveName(Buffer.ID) + "+", (byte) 5, Intent.BUFF);
+        } else {
+            if (isThird && turnNum > 1 && ally1 != null && ally2 != null) {
+
+                if (ally1.isAttacking && ally2.isAttacking) {
+                    setMove(moveName(Defend_Blue.ID, Defend_Blue.ID), (byte) 3, Intent.DEFEND);
+                } else {
+                    bossMove();
+                }
+            } else {
+                bossMove();
             }
+
+
         }
     }
 }
+
+

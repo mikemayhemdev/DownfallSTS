@@ -6,6 +6,7 @@ import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.blue.Defend_Blue;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
 import com.megacrit.cardcrawl.cards.red.Bash;
 import com.megacrit.cardcrawl.cards.red.Defend_Red;
@@ -35,6 +36,7 @@ public class Ironclad extends GauntletBoss {
     private static final float HB_H = 250.0F;
 
     int turnNum = 0;
+
     public Ironclad(float x, float y) {
         super(NAME, ID, 80 * 2, -4.0f, -16.0f, 220.0f, 290.0f, null, x, y);
 
@@ -68,7 +70,7 @@ public class Ironclad extends GauntletBoss {
                 }
                 break;
             case 2:
-                if (this.hasPower(DexterityPower.POWER_ID)){
+                if (this.hasPower(DexterityPower.POWER_ID)) {
                     dex = getPower(DexterityPower.POWER_ID).amount;
                 }
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
@@ -78,7 +80,7 @@ public class Ironclad extends GauntletBoss {
                 }
                 break;
             case 3:
-                if (this.hasPower(DexterityPower.POWER_ID)){
+                if (this.hasPower(DexterityPower.POWER_ID)) {
                     dex = getPower(DexterityPower.POWER_ID).amount;
                 }
                 addToBot(new GainBlockAction(this, 10 + (dex * 2)));
@@ -99,29 +101,47 @@ public class Ironclad extends GauntletBoss {
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
     }
 
-    protected void getMove(int num) {
-        turnNum ++;
-        if (turnNum == 5) {
-            setMove(moveName(DemonForm.ID), (byte)5, Intent.BUFF);
-        }
-        else {
-            int rnd = AbstractDungeon.cardRandomRng.random(0, 3);
-            switch (rnd) {
-                case 0:
-                    setMove(moveName(Strike_Red.ID, Strike_Red.ID), (byte)1, Intent.ATTACK, this.damage.get(0).base, 2, true);
-                    break;
-                case 1:
-                    setMove(moveName(Strike_Red.ID, Defend_Red.ID), (byte)2, Intent.ATTACK_DEFEND, this.damage.get(1).base);
-                    break;
-                case 2:
-                    setMove(moveName(Defend_Red.ID, Defend_Red.ID), (byte)3, Intent.DEFEND);
-                    break;
-                case 3:
-                    setMove(moveName(Bash.ID), (byte)4, Intent.ATTACK_DEBUFF, this.damage.get(2).base);
-                    break;
-            }
+    private void bossMove() {
+        int rnd = AbstractDungeon.cardRandomRng.random(0, 3);
+        switch (rnd) {
+            case 0:
+                isAttacking = true;
+                setMove(moveName(Strike_Red.ID, Strike_Red.ID), (byte) 1, Intent.ATTACK, this.damage.get(0).base, 2, true);
+                break;
+            case 1:
+                isAttacking = true;
+                setMove(moveName(Strike_Red.ID, Defend_Red.ID), (byte) 2, Intent.ATTACK_DEFEND, this.damage.get(1).base);
+                break;
+            case 2:
+                isAttacking = false;
+                setMove(moveName(Defend_Red.ID, Defend_Red.ID), (byte) 3, Intent.DEFEND);
+                break;
+            case 3:
+                isAttacking = true;
+                setMove(moveName(Bash.ID), (byte) 4, Intent.ATTACK_DEBUFF, this.damage.get(2).base);
+                break;
         }
     }
 
+    protected void getMove(int num) {
+        turnNum++;
+        if (turnNum == 5) {
+            isAttacking = false;
+            setMove(moveName(DemonForm.ID), (byte) 5, Intent.BUFF);
+        } else {
+            if (isThird && turnNum > 1 && ally1 != null && ally2 != null) {
 
+                if (ally1.isAttacking && ally2.isAttacking) {
+                    setMove(moveName(Defend_Red.ID, Defend_Red.ID), (byte) 3, Intent.DEFEND);
+                } else {
+                    bossMove();
+                }
+
+            } else {
+                bossMove();
+            }
+        }
+
+
+    }
 }

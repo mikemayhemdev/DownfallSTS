@@ -5,6 +5,7 @@ import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.blue.Defend_Blue;
 import com.megacrit.cardcrawl.cards.purple.Strike_Purple;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -63,7 +64,7 @@ public class Hermit extends GauntletBoss {
                 }
                 break;
             case 2:
-                if (this.hasPower(DexterityPower.POWER_ID)){
+                if (this.hasPower(DexterityPower.POWER_ID)) {
                     dex = getPower(DexterityPower.POWER_ID).amount;
                 }
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
@@ -73,7 +74,7 @@ public class Hermit extends GauntletBoss {
                 }
                 break;
             case 3:
-                if (this.hasPower(DexterityPower.POWER_ID)){
+                if (this.hasPower(DexterityPower.POWER_ID)) {
                     dex = getPower(DexterityPower.POWER_ID).amount;
                 }
                 addToBot(new GainBlockAction(this, 10 + (dex * 2)));
@@ -90,28 +91,51 @@ public class Hermit extends GauntletBoss {
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
     }
 
-    protected void getMove(int num) {
-        turnNum++;
-        if (turnNum == 5) {
-            setMove(moveName(Maintenance.ID), (byte) 5, Intent.BUFF);
-        } else {
-            int rnd = AbstractDungeon.cardRandomRng.random(0, 3);
-            switch (rnd) {
-                case 0:
-                    setMove(moveName(Strike_Hermit.ID, Strike_Hermit.ID), (byte) 1, Intent.ATTACK, this.damage.get(0).base, 2, true);
-                    break;
-                case 1:
-                    setMove(moveName(Strike_Hermit.ID, Defend_Hermit.ID), (byte) 2, Intent.ATTACK_DEFEND, this.damage.get(1).base);
-                    break;
-                case 2:
-                    setMove(moveName(Defend_Hermit.ID, Defend_Hermit.ID), (byte) 3, Intent.DEFEND);
-                    break;
-                case 3:
-                    setMove(moveName(Scavenge.ID), (byte) 4, Intent.BUFF);
-                    break;
-            }
+    private void bossMove() {
+        int rnd = AbstractDungeon.cardRandomRng.random(0, 3);
+        switch (rnd) {
+            case 0:
+                isAttacking = true;
+                setMove(moveName(Strike_Hermit.ID, Strike_Hermit.ID), (byte) 1, Intent.ATTACK, this.damage.get(0).base, 2, true);
+                break;
+            case 1:
+                isAttacking = true;
+                setMove(moveName(Strike_Hermit.ID, Defend_Hermit.ID), (byte) 2, Intent.ATTACK_DEFEND, this.damage.get(1).base);
+                break;
+            case 2:
+                isAttacking = false;
+                setMove(moveName(Defend_Hermit.ID, Defend_Hermit.ID), (byte) 3, Intent.DEFEND);
+                break;
+            case 3:
+                isAttacking = false;
+                setMove(moveName(Scavenge.ID), (byte) 4, Intent.BUFF);
+                break;
         }
     }
 
+    protected void getMove(int num) {
+        turnNum++;
+        if (turnNum == 5) {
+            isAttacking = false;
+            setMove(moveName(Maintenance.ID), (byte) 5, Intent.BUFF);
+        } else {
+            if (isThird && turnNum > 1 && ally1 != null && ally2 != null) {
 
+                if (ally1.isAttacking && ally2.isAttacking) {
+                    if (AbstractDungeon.cardRandomRng.randomBoolean()) {
+                        setMove(moveName(Defend_Hermit.ID, Defend_Hermit.ID), (byte) 3, Intent.DEFEND);
+                    } else {
+                        setMove(moveName(Scavenge.ID), (byte) 4, Intent.BUFF);
+                    }
+
+                } else {
+                    bossMove();
+                }
+            } else {
+                bossMove();
+            }
+        }
+
+
+    }
 }

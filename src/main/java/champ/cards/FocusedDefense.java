@@ -29,7 +29,7 @@ public class FocusedDefense extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         berserkOpen();
         blck();
-        applyToSelf(new VigorPower(p, magicNumber));
+        ChampMod.vigor(magicNumber);
     }
 
     public void upp() {

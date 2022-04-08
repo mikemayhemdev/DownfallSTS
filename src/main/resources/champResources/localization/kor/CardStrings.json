@@ -165,8 +165,8 @@
   },
   "champ:FalseCounter": {
     "NAME": "손 풀기",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에 [E] 를 얻고 카드를 3장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에 [E] [E] 를 얻고 카드를 3장 뽑습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에 [E] 를 얻고 카드를 2장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에 [E] [E] 를 얻고 카드를 2장 뽑습니다."
   },
   "champ:IronFortress": {
     "NAME": "현란한 꺾기",

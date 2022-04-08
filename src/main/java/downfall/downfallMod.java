@@ -231,7 +231,8 @@ public class downfallMod implements
             Settings.GameLanguage.ENG,
             Settings.GameLanguage.ZHS,
             // Settings.GameLanguage.JPN
-            Settings.GameLanguage.KOR
+            Settings.GameLanguage.KOR,
+            Settings.GameLanguage.FRA
     };
 
     public static String[] SupportedLanguagesStrings = {

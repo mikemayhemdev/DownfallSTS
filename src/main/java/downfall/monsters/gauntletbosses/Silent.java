@@ -8,6 +8,7 @@ import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.blue.Defend_Blue;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
 import com.megacrit.cardcrawl.cards.green.Defend_Green;
 import com.megacrit.cardcrawl.cards.green.LegSweep;
@@ -37,6 +38,7 @@ public class Silent extends GauntletBoss {
     private static final float HB_H = 250.0F;
 
     int turnNum = 0;
+
     public Silent(float x, float y) {
         super(NAME, ID, 70 * 2, -4.0f, -16.0f, 240.0f, 290.0f, null, x, y);
         this.loadAnimation("images/characters/theSilent/idle/skeleton.atlas", "images/characters/theSilent/idle/skeleton.json", 1.0f);
@@ -68,7 +70,7 @@ public class Silent extends GauntletBoss {
                 }
                 break;
             case 2:
-                if (this.hasPower(DexterityPower.POWER_ID)){
+                if (this.hasPower(DexterityPower.POWER_ID)) {
                     dex = getPower(DexterityPower.POWER_ID).amount;
                 }
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
@@ -78,7 +80,7 @@ public class Silent extends GauntletBoss {
                 }
                 break;
             case 3:
-                if (this.hasPower(DexterityPower.POWER_ID)){
+                if (this.hasPower(DexterityPower.POWER_ID)) {
                     dex = getPower(DexterityPower.POWER_ID).amount;
                 }
                 addToBot(new GainBlockAction(this, 10 + (dex * 2)));
@@ -97,32 +99,52 @@ public class Silent extends GauntletBoss {
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
     }
 
-    protected void getMove(int num) {
-        turnNum ++;
-        if (turnNum == 5) {
-            setMove(moveName(WraithForm.ID), (byte)5, Intent.BUFF);
+    private void bossMove() {
+        int rnd = AbstractDungeon.cardRandomRng.random(0, 3);
+        if (hasPower(EnemyWraithFormPower.POWER_ID)) {
+            rnd = 0;
         }
-        else {
-            int rnd = AbstractDungeon.cardRandomRng.random(0, 3);
-            if (hasPower(EnemyWraithFormPower.POWER_ID)) {
-                rnd = 0;
-            }
-            switch (rnd) {
-                case 0:
-                    setMove(moveName(Strike_Green.ID, Strike_Green.ID), (byte)1, Intent.ATTACK, this.damage.get(0).base, 2, true);
-                    break;
-                case 1:
-                    setMove(moveName(Strike_Green.ID, Defend_Green.ID), (byte)2, Intent.ATTACK_DEFEND, this.damage.get(1).base);
-                    break;
-                case 2:
-                    setMove(moveName(Defend_Green.ID, Defend_Green.ID), (byte)3, Intent.DEFEND);
-                    break;
-                case 3:
-                    setMove(moveName(LegSweep.ID), (byte)4, Intent.DEFEND_DEBUFF);
-                    break;
-            }
+        switch (rnd) {
+            case 0:
+                isAttacking = true;
+                setMove(moveName(Strike_Green.ID, Strike_Green.ID), (byte) 1, Intent.ATTACK, this.damage.get(0).base, 2, true);
+                break;
+            case 1:
+                isAttacking = true;
+                setMove(moveName(Strike_Green.ID, Defend_Green.ID), (byte) 2, Intent.ATTACK_DEFEND, this.damage.get(1).base);
+                break;
+            case 2:
+                isAttacking = false;
+                setMove(moveName(Defend_Green.ID, Defend_Green.ID), (byte) 3, Intent.DEFEND);
+                break;
+            case 3:
+                isAttacking = false;
+                setMove(moveName(LegSweep.ID), (byte) 4, Intent.DEFEND_DEBUFF);
+                break;
         }
     }
 
+    protected void getMove(int num) {
+        turnNum++;
+        if (turnNum == 5) {
+            isAttacking = false;
+            setMove(moveName(WraithForm.ID), (byte) 5, Intent.BUFF);
+        } else {
+            if (isThird && turnNum > 1 && ally1 != null && ally2 != null) {
 
+                if (ally1.isAttacking && ally2.isAttacking) {
+                    if (AbstractDungeon.cardRandomRng.randomBoolean()) {
+                        setMove(moveName(Defend_Green.ID, Defend_Green.ID), (byte) 3, Intent.DEFEND);
+                    } else {
+                        setMove(moveName(LegSweep.ID), (byte) 4, Intent.DEFEND_DEBUFF);
+                    }
+                } else {
+                    bossMove();
+                }
+            } else {
+                bossMove();
+            }
+        }
+
+    }
 }

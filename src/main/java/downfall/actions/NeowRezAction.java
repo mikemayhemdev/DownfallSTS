@@ -26,6 +26,9 @@ public class NeowRezAction extends AbstractGameAction {
     private boolean instructedMove;
     private boolean rezInit;
     private NeowBossRezEffect rezVFX;
+    public GauntletBoss ally1;
+    public GauntletBoss ally2;
+    public GauntletBoss ally3;
 
     public NeowRezAction(NeowBoss owner) {
         this.owner = owner;
@@ -72,7 +75,20 @@ public class NeowRezAction extends AbstractGameAction {
                 name = owner.bossesToRez.get(i);
                 owner.bossesRezzed.add(name);
                 AbstractMonster q = rezBoss(name, i);
-                AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
+
+                if (i==0) ally1 = ((GauntletBoss) q);
+                if (i==1) ally2 = ((GauntletBoss) q);
+                if (i==2) {
+                    ally3 = ((GauntletBoss) q);
+
+                    ally1.isThird = true;
+                    ally1.ally1 = ally2;
+                    ally1.ally2 = ally3;
+
+                }
+
+
+                    AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
                     @Override
                     public void update() {
                         isDone = true;

@@ -1,6 +1,7 @@
 package sneckomod;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.colorless.Madness;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import sneckomod.cards.unknowns.*;
@@ -114,8 +115,11 @@ public class OffclassHelper {
         } else {
             rarityPool = offclassRares;
         }
-
-        return CardLibrary.cards.get(rarityPool.get(AbstractDungeon.cardRandomRng.random(rarityPool.size() - 1))).makeCopy();
+        if (rarityPool.size() > 0) {
+            return CardLibrary.cards.get(rarityPool.get(AbstractDungeon.cardRandomRng.random(rarityPool.size() - 1))).makeCopy();
+        } else {
+            return new Madness();
+        }
     }
 
     public static ArrayList<AbstractCard> getXRandomOffclassCards(int amount) {

@@ -165,8 +165,8 @@
   },
   "champ:FalseCounter": {
     "NAME": "Rope-a-dope",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] and draw 3 cards.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] [E] and draw 3 cards."
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] and draw 2 cards.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] [E] and draw 2 cards."
   },
   "champ:IronFortress": {
     "NAME": "Technical Jig",

@@ -43,9 +43,10 @@ public class EmbersAction extends AbstractXAction {
         for (int i = 0; i < amount; i++) {
             addToTop(new ApplyPowerAction(m, p, new BurnPower(m, burn), burn));
             addToTop(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.FIRE));
-        }
-        if (weak > 0) {
-            addToTop(new ApplyPowerAction(m, p, new WeakPower(m, weak, false), weak));
+
+            if (weak > 0) {
+                addToTop(new ApplyPowerAction(m, p, new WeakPower(m, weak, false), weak));
+            }
         }
         this.isDone = true;
     }
