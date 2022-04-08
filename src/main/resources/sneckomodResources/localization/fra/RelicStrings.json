@@ -112,7 +112,7 @@
   },
   "sneckomod:SneckoBoss": {
     "NAME": "Fer à cheval chanceux",
-    "FLAVOR": ""Moi je fabrique ma chance" - Vieux monsieur.",
+    "FLAVOR": "Moi je fabrique ma chance - Vieux monsieur.",
     "DESCRIPTIONS": [
       "Lorsque vous le récupérez, choisissez #b1 carte Inconnue de Personnage parmi #b3 #yUnknown. Ajoutez #b5 copies de celle-ci dans votre deck. Tous les combats donnent une carte récompense supplémentaire de ce personnage.",
       "Lorsque vous le récupérez, obtenez #b5 cartes #yInconnues du/de ",

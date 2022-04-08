@@ -235,7 +235,7 @@
   "hermit:Ricochet": {
     "NAME": "Ricochet",
     "DESCRIPTION": "Infligez !D! dégâts. Répétez ceci sur un ennemi aléatoire pour chaque effet hermit:Dans_Le_Mille ce tour.",
-    "EXTENDED_DESCRIPTION": [" NL (Répétez ceci !M! ", "fois.)",fois.)"]
+    "EXTENDED_DESCRIPTION": [" NL (Répétez ceci !M! ", "fois.)","fois.)"]
   },
   "hermit:TrackingShot": {
     "NAME": "Tir de pistage",

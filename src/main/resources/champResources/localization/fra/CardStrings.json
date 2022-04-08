@@ -1,4 +1,4 @@
-g{
+{
   "champ:Strike": {
     "NAME": "Frappe",
     "DESCRIPTION": "Infligez !D! dégâts."
@@ -449,4 +449,4 @@ g{
     "NAME": "Coup de boule",
     "DESCRIPTION": "Infligez !D! dégâts. NL Mettez une carte de votre défausse vers le haut de la pioche."
   }
-}}
+}
