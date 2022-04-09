@@ -285,8 +285,8 @@
   },
   "Slimebound:PrepareCrush": {
     "NAME": "准备：猛击",
-    "DESCRIPTION": "下回合： NL 获得 [E] [E] [E] NL 获得 !M! 点 力量 NL 获得 *史莱姆猛击 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "下回合： NL 获得 [E] [E] [E] [E] NL 获得 !M! 点 力量 NL 获得 *史莱姆猛击+ 。 NL 消耗 。"
+    "DESCRIPTION": "下回合： NL 获得 [E] [E] [E] 。 NL 获得 !M! 点 力量 。 NL 获得 *史莱姆猛击 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "下回合： NL 获得 [E] [E] [E] [E] 。 NL 获得 !M! 点 力量 。 NL 获得 *史莱姆猛击+ 。 NL 消耗 。"
   },
   "Slimebound:SlimeCrush": {
     "NAME": "史莱姆猛击！！！",
@@ -304,22 +304,22 @@
   "Slimebound:SplitBruiser": {
     "NAME": "分裂：好斗",
     "DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:好斗史莱姆 。 NL slimeboundmod:命令 !M! 次。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:好斗史莱姆 。 NL slimeboundmod:命令 三次。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:好斗史莱姆 。 NL slimeboundmod:命令 !M! 次。 NL 消耗 。"
   },
   "Slimebound:SplitLeeching": {
     "NAME": "分裂：水蛭",
     "DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:水蛭史莱姆 。 NL slimeboundmod:命令 !M! 次。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:水蛭史莱姆 。 NL slimeboundmod:命令 三次。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:水蛭史莱姆 。 NL slimeboundmod:命令 !M! 次。 NL 消耗 。"
   },
   "Slimebound:SplitAcid": {
     "NAME": "分裂：游击",
     "DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:游击史莱姆 。 NL slimeboundmod:命令 !M! 次。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:游击史莱姆 。 NL slimeboundmod:命令 三次。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:游击史莱姆 。 NL slimeboundmod:命令 !M! 次。 NL 消耗 。"
   },
   "Slimebound:SplitMire": {
     "NAME": "分裂：污泥",
     "DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:污泥史莱姆 。 NL slimeboundmod:命令 !M! 次。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:污泥史莱姆 。 NL slimeboundmod:命令 三次。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:污泥史莱姆 。 NL slimeboundmod:命令 !M! 次。 NL 消耗 。"
   },
   "Slimebound:SplitSpecialist": {
     "NAME": "分裂：专家",
@@ -374,10 +374,10 @@
   },
   "Slimebound:SplitGreed": {
     "NAME": "贪婪复生",
-    "DESCRIPTION": " 保留 。 NL slimeboundmod:分裂 贪婪史莱姆。 NL 消耗 。"
+    "DESCRIPTION": " 保留 。 NL slimeboundmod:分裂 *贪婪史莱姆 。 NL 消耗 。"
   },
   "Slimebound:SplitScrap": {
     "NAME": "破烂复生",
-    "DESCRIPTION": " 保留 。 NL slimeboundmod:分裂 破烂史莱姆。 NL 消耗 。"
+    "DESCRIPTION": " 保留 。 NL slimeboundmod:分裂 *破烂史莱姆 。 NL 消耗 。"
   }
 }
