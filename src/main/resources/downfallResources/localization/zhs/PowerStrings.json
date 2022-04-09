@@ -180,7 +180,7 @@
   "downfall:IroncladMushroomPower": {
     "NAME": "掠食",
     "DESCRIPTIONS": [
-      " #y铁甲战士 的 #y死亡收割 不会消耗且对所有蘑菇生效。 NL 每当 #y铁甲战士 击杀一个蘑菇时，他获得 #b1 点 #y力量 并回复 #b20 点生命。"
+      " #y铁甲战士 的 #y死亡收割 不会消耗且对所有蘑菇生效。 NL 每当 #y铁甲战士 击杀一个蘑菇时，他获得 #b1 点 #y力量 。"
     ]
   },
   "downfall:NeowFeedingFrenzy": {
