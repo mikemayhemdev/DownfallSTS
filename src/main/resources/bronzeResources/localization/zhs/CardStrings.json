@@ -367,7 +367,7 @@
   },
   "bronze:Allocate": {
     "NAME": "分配",
-    "DESCRIPTION": "抽牌堆每有一张 *状态牌 ，获得 [E] 。",
+    "DESCRIPTION": "抽牌堆每有一张 状态牌 ，获得 [E] 。",
     "EXTENDED_DESCRIPTION": [
       " NL （获得 ",
       " [E] ）"
@@ -380,7 +380,7 @@
   },
   "bronze:ChildClass": {
     "NAME": "调用",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 -获得 *编码 中牌的总耗能 [E] 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 -获得 bronze:编码 中牌的总耗能 [E] 。",
     "EXTENDED_DESCRIPTION": [
       "援引",
       "能量"
@@ -589,7 +589,7 @@
   },
   "bronze:Refactor": {
     "NAME": "重构",
-    "DESCRIPTION": " 预见 !M! 。 NL 消耗 丢弃的状态牌。 NL 每 *消耗 一张获得 !B! 点 格挡 。"
+    "DESCRIPTION": " 预见 !M! 。 NL 消耗 丢弃的牌。 NL 每 消耗 一张 状态牌 获得 !B! 点 格挡 。"
   },
   "bronze:Turbo": {
     "NAME": "内核加速",
