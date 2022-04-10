@@ -17,7 +17,7 @@
     "NAME": "铜制装甲板",
     "FLAVOR": "装甲再多也不为过。",
     "DESCRIPTIONS": [
-      " #yguardianmod:提防 时，再 #yguardianmod:提防 #b1 。"
+      " #yguardianmod:提防 时额外 #y提防 #b1 。"
     ]
   },
   "Guardian:GemCopier": {
