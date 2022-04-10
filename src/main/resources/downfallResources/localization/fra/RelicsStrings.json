@@ -349,7 +349,7 @@
   },
   "downfall:TombRedMask": {
     "NAME": "Évènement: Tombe du seigneur",
-    "FLAVOR": Une tombe richement décorée peut être observée de l'autre côté d'un chemin flottant.",
+    "FLAVOR": "Une tombe richement décorée peut être observée de l'autre côté d'un chemin flottant.",
     "DESCRIPTIONS": [
       "Le Boss a obtenu le Masque Rouge."
     ]

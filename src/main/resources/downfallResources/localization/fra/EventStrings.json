@@ -30,7 +30,7 @@
     "DESCRIPTIONS": [
       "Cachée dans l'obscurité, vous remarquez une petite boutique. A l'intérieur, vous voyez une femme au teint pâle et élégamment vêtue qui gère un inventaire de potions, empilées contre un mur. Elle est suprise par votre apparence menaçante. NL \"Laisse-moi et mes marchandises tranquilles, crétin !\" crie-t-elle.",
       "Vous quittez la boutique prudemment, ne voulant pas pousser la femme à se battre.",
-      "#r@BAM@ NL Son poing ganté vous frappe le visage si fort que vous manquez d'en tomber. NL \"Sortez vite d'ici avant que je ne redécore ma boutique avec vos entrailles.\" Vous la croyez sur parole et sortez dans demander votre reste, vos entrailles toujours bien au chaud dans votre corps.
+      "#r@BAM@ NL Son poing ganté vous frappe le visage si fort que vous manquez d'en tomber. NL \"Sortez vite d'ici avant que je ne redécore ma boutique avec vos entrailles.\" Vous la croyez sur parole et sortez sans demander votre reste, vos entrailles toujours bien au chaud dans votre corps."
     ],
     "OPTIONS": [
       "[Quitter]",
@@ -304,8 +304,7 @@
     "NAME": "Conseil des Fantômes ",
     "DESCRIPTIONS": [
       "Alors que vous continuez votre descente, une #p~épaisse~ #p~fumée~ #p~noire~ commence à émaner du sol et des murs autour de vous, se regroupant en trois formes masquées qui commencent à parler. NL NL ~\"Un~ ~autre~ ~pantin~ #r~du~ #r~Cœur~ ~il~ ~me~ ~semble.\"~ NL #r@\"EN@ #r@EFFET!@ #r@IL@ #r@ENVOIE@ #r@TOUJOURS@ #r@LES@ #r@PIONS@ #r@LES@ #r@PLUS@ #r@FAIBLES!\"@ NL NL Vous remarquez un sourire surdimensionné alors que le troisième s'adresse à vous. NL \"Ignore les autres...  Voudrais-tu goûter à notre #y~pouvoir?\"~ ",
-      "\"Une @offrande!@ Que c'est ~tentant...\"~ NL NL Alors que le fantôme parle, vous remarquez que la grande bouche s'ouvre de plus en plus. À l'intérieur de votre corps, vous sentez les #b~âmes~ récupérées des morts se faire aspirer dans l'énorme mâchoire du fantôme. Cela prend toute votre force pour ne pas être aspiré par celle-ci. NL NL Alors que vos forces commençaient à s'épuiser, le vortex s'arrête, et les esprits se confondent dans la brume. NL NL Vous reprenez votre route, vous sentant légèrement #bvide.
-."
+      "\"Une @offrande!@ Que c'est ~tentant...\"~ NL NL Alors que le fantôme parle, vous remarquez que la grande bouche s'ouvre de plus en plus. À l'intérieur de votre corps, vous sentez les #b~âmes~ récupérées des morts se faire aspirer dans l'énorme mâchoire du fantôme. Cela prend toute votre force pour ne pas être aspiré par celle-ci. NL NL Alors que vos forces commençaient à s'épuiser, le vortex s'arrête, et les esprits se confondent dans la brume. NL NL Vous reprenez votre route, vous sentant légèrement #bvide."
     ],
     "OPTIONS": [
       "[Offer] #rPerdez #r",
@@ -383,7 +382,7 @@
     ]
   },
   "downfall:Beggar": {
-    "NAME": "Old Beggar",
+    "NAME": "Vieux mendiant",
     "DESCRIPTIONS": [
       "Le mendiant retire sa cape, révélant un étrange humanoïde bleu portant un heaume doré (?). NL Alors qu'il réalise ce que vous êtes, le sourire rayonnant de la créature se change rapidement en regard de pure terreur. NL ~\"M-MONSTRE!!\"~ s'écrie la personne, se retournant pour s'enfuir.",
       "Le vieux mendiant regarde tout autour, visiblement perdu. Il vous ignore au départ alors qu'il cherche la zone, puis vous regarde. NL \"Avez-vous vu un jeune homme à la peau bleue ici ? Il porte un heaume doré bizarre ? Il est généralement dans la Cité, dépensant ses dîmes pour de la norriture pour nous...\" NL Le mendiant doit parler du #bClerc, que vous avez rencontré il y a pas si longtemps.",
@@ -420,7 +419,7 @@
       "Vous prenez la dague, incertain de ce qui va se passer.. Le chef des cultistes fouille dans sa robe et vous offre une #bmixture #bleue #bet #bbouillante.",
       "Les cultistes qui entourent le chef lui fournissent des remplacements, et bientôt, avec sa propre dague et sa potion en main, il vous fait signe de le suivre dans ses actions..",
       "En imitant le rituel du chef du culte, vous débouchez la potion et en versez doucement une petite quantité sur la lame.. L'acier semble briller #b~d'une~ #b~teinte~ #b~sinistre~ dans la cathédrale. NL NL Sans un seul mot ou geste du chef cultiste, deux cultistes s'avancent - un vers vous et un vers lui.. NL NL Ce qu'ils veulent que vous fassiez est maintenant très clair.",
-      "#rVous #rplongez #rla #rdague #rdans #rle #rcœur #rdu #rcultiste! NL NL #b~\"CAW~ #b~CAAAAW~ #b~CAAAAAWWW!\"~ NL NL Le rituel est terminé, et les cultistes survivants ne pouvaient pas être plus heureux. Ils agitent leurs bâtons en signe de célébration et continuèrent à pousser des cris de joie jusqu'à ce que vous sortez de la cathédrale
+      "#rVous #rplongez #rla #rdague #rdans #rle #rcœur #rdu #rcultiste! NL NL #b~\"CAW~ #b~CAAAAW~ #b~CAAAAAWWW!\"~ NL NL Le rituel est terminé, et les cultistes survivants ne pouvaient pas être plus heureux. Ils agitent leurs bâtons en signe de célébration et vous les entendez pousser des cris de joie jusqu'à ce que vous sortez de la cathédrale."
     ],
     "OPTIONS": [
       "[Rendre la Statue] #rPerdez #rla #rStatue #railée #rbrisée. #gGagnez #gplusieures #grécompenses.",
@@ -437,12 +436,12 @@
     ]
   },
   "downfall:Colosseum": {
-    "NAME": "The Colosseum",
+    "NAME": "Le Colosseum",
     "DESCRIPTIONS": [
       "Alors que vous continuez à descendre la Tour, vous remarquez un groupe d'humanoides qui préparent une embuscade près d'un grand auditorium. Quand vous vous approchez, les Esclavagistes sont surpris, mais s'expliquent rapidement. NL NL \"Nous attendons ceux qui veulent attaquer notre Cité - ceux que vous cherchez à détruire ! Nous avons une audience qui attend une nouvelle proie. Les gens adorent un #rcombat #rà #rmort!\"",
       "Les esclavagistes ne sont pas une menace pour vous, et pourraient être utiles pour ralentir ou blesser votre proie. NL NL Cependant, ce sport de sang est peut-être un peu trop tentant pour ne pas y aller...",
       "Vous entrez dans le stadium géant pour trouver une audience remplie #bd'Esclavagistes, de #bCultistes et d'autres habitants de la Cité. NL NL ",
-      "@\"AMENEZ-MOI@ @LE@ @MEILLEUR@! " vous grondez devant le peuple, annonçant un challenge pour leurs champions. NL 2 challengers s'approchent, vous prévenant que les règles de l'arène les empêche de se retenir, malgré votre position de Seigneur de la Tour. NL NL Vous n'en attendiez pas moins.",
+      "@\"AMENEZ-MOI@ @LE@ @MEILLEUR@!\" vous grondez devant le peuple, annonçant un challenge pour leurs champions. NL 2 challengers s'approchent, vous prévenant que les règles de l'arène les empêche de se retenir, malgré votre position de Seigneur de la Tour. NL NL Vous n'en attendiez pas moins.",
       "@\"LE@ @PROCHAIN@ @EST@ @À@ @MOI!\"@ vous grondez devant le peuple, qui répond avec un applaudissement assourdissant. NL NL Il ne faut pas longtemps aux esclavagistes d'apporter leur dernière capture. Le challenger se réveille à son insu, encore ~groggy~ de l'embuscade,  mais se prépare tout de même. NL NL Cela devrait être marrant.",
       "Vous décidez que, même si cela est tentant, combattre ici ne serait qu'une distraction inutile. Vous continuez votre voyage, laissant les esclavagistes reprendre leur embuscade."
     ],

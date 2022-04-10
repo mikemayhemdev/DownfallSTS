@@ -87,7 +87,7 @@
     "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis. NL La Force affecte cette carte !M! fois. NL Passez votre prochain tour."
   },
   "Guardian:BronzeArmor": {
-    "NAME": ¨Plaque résistante",
+    "NAME": "Plaque résistante",
     "DESCRIPTION": "Réduisez chacun de vos Débuffs de !M!. NL guardianmod:Renforcez de 8. NL Épuisement.",
 	"UPGRADE_DESCRIPTION":"Réduisez chacun de vos Débuffs de !M!. NL guardianmod:Renforcez de 8."
   },
@@ -173,7 +173,7 @@
   "Guardian:PackageDefect": {
     "NAME": "Colis : Défectueux",
     "DESCRIPTION": "Ajoutez *Détournement, *Préprogramme, et *Condensateur *de *temps dans votre main. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": Ajoutez *Détournement, *Préprogramme, et *Condensateur *de *temps dans votre main et Améliorez-les. NL Épuisement."
+    "UPGRADE_DESCRIPTION": "Ajoutez *Détournement, *Préprogramme, et *Condensateur *de *temps dans votre main et Améliorez-les. NL Épuisement."
   },
   "Guardian:Planning": {
     "NAME": "Planning",
@@ -390,7 +390,7 @@
     "NAME": "Hammer Down",
     "DESCRIPTION": "Deal !D! damage. NL Double your Strength and Dexterity. NL Épuisement."
   },
-  "Guardian:OmegaCannon": 
+  "Guardian:OmegaCannon": {
     "NAME": "Omega Cannon",
     "DESCRIPTION": "Deal !D! damage. NL Costs 1 less [E] for each Strength you have."
   },

@@ -95,11 +95,11 @@
   "Slimebound:BackToBasics": {
     "NAME": "",
     "DESCRIPTIONS": [
-      "When one sheep leads the way, all the rest follow."
+      "Quand un mouton ouvre la voie, tous les autres suivent."
     ],
     "OPTIONS": [
-      "[Inspiration] #gAdd #gCommand to all #gStrikes and #gDefends.",
-      "[Locked] Requires a Strike or Defend."
+      "[Inspiration] #gAjoutez #gCommandez à toutes vos #gFrappes et #gDéfenses.",
+      "[Locked] Requiert une Frappe ou une Défense."
     ]
   }
 }

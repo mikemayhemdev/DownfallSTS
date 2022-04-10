@@ -96,8 +96,8 @@
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "Forme dupliquée",
-	"DESCRIPTION": La première carte que vous jouez chaque tour et qui cible un ennemi est jouée deux fois.",
-    "UPGRADE_DESCRIPTION": Gagnez [E] chaque tour. NL La première carte que vous jouez chaque tour et qui cible un ennemi est jouée deux fois.",
+	"DESCRIPTION": "La première carte que vous jouez chaque tour et qui cible un ennemi est jouée deux fois.",
+    "UPGRADE_DESCRIPTION": "Gagnez [E] chaque tour. NL La première carte que vous jouez chaque tour et qui cible un ennemi est jouée deux fois.",
     "EXTENDED_DESCRIPTION": [
       "Besoin... Vie..."
     ]
@@ -191,7 +191,7 @@
   "Slimebound:WasteNot": {
     "NAME": "Pas de gaspillage",
     "DESCRIPTION": "expansioncontent:Exhumez toutes les cartes *Léchouille. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Exhumez toutes les cartes *Léchouille.
+    "UPGRADE_DESCRIPTION": "expansioncontent:Exhumez toutes les cartes *Léchouille."
     "EXTENDED_DESCRIPTION": [
        "Pas... Épuisé..."
     ]
@@ -199,7 +199,7 @@
   "Slimebound:Prepare": {
     "NAME": "Préparation",
     "DESCRIPTION": "Gagnez !B! d'armure. NL Au prochain tour, gagnez [E] [E] et piochez !M! cartes. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": Au prochain tour, gagnez [E] [E] et piochez !M! cartes. NL Retenez jusqu'à !M! cartes ce tour. Épuisement."
+    "UPGRADE_DESCRIPTION": "Au prochain tour, gagnez [E] [E] et piochez !M! cartes. NL Retenez jusqu'à !M! cartes ce tour. Épuisement."
   },
   "Slimebound:Grow": {
     "NAME": "Croissance",
