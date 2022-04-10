@@ -18,7 +18,7 @@
   "Gremlin:Bashed": {
     "NAME": "重击",
     "DESCRIPTIONS": [
-      "本回合内每当你获得 #y格挡 时，其失去 #b",
+      "本回合内每当你获得 #y格挡 ，其失去 #b",
       " 点生命。"
     ]
   },
@@ -45,7 +45,7 @@
   "Gremlin:Encore": {
     "NAME": "返场",
     "DESCRIPTIONS": [
-      "每当你消耗 #y法力 时，对所有敌人造成 #b",
+      "每当你使用 #y法力 时，对所有敌人造成 #b",
       " 点伤害。"
     ]
   },
@@ -74,7 +74,7 @@
   "Gremlin:Furious": {
     "NAME": "发疯",
     "DESCRIPTIONS": [
-      "本回合每当你获得 #y格挡 ， 对所有敌人造成伤害。"
+      "本回合每当你获得 #y格挡 时， 对所有敌人造成伤害。"
     ]
   },
   "Gremlin:GremlinNob": {
