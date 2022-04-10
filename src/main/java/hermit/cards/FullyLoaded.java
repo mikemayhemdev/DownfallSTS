@@ -1,13 +1,20 @@
 package hermit.cards;
 
+import com.badlogic.gdx.Gdx;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import guardian.cards.PackageAutomaton;
+import guardian.cards.PackageDonuDeca;
 import hermit.HermitMod;
 import hermit.actions.FullyLoadedAction;
 import hermit.actions.SoundAction;
 import hermit.characters.hermit;
+
+import java.util.ArrayList;
 
 import static hermit.HermitMod.*;
 
@@ -42,13 +49,17 @@ public class FullyLoaded extends AbstractDynamicCard {
 
 
     private static final int COST = 0;
-
+    private float rotationTimer;
+    private int previewIndex;
+    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
 
     // /STAT DECLARATION/
 
     public FullyLoaded() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.exhaust=true;
+        cardsList.add(new Strike_Hermit());
+        cardsList.add(new Defend_Hermit());
         loadJokeCardImage(this, "fully_loaded.png");
     }
 
@@ -69,6 +80,28 @@ public class FullyLoaded extends AbstractDynamicCard {
             this.selfRetain = true;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
+        }
+    }
+
+    @Override
+    public void update() {
+        super.update();
+        if (hb.hovered) {
+            if (rotationTimer <= 0F) {
+                rotationTimer = 2F;
+                if (cardsList.size() == 0) {
+                    cardsToPreview = CardLibrary.cards.get("Madness");
+                } else {
+                    cardsToPreview = cardsList.get(previewIndex);
+                }
+                if (previewIndex == cardsList.size() - 1) {
+                    previewIndex = 0;
+                } else {
+                    previewIndex++;
+                }
+            } else {
+                rotationTimer -= Gdx.graphics.getDeltaTime();
+            }
         }
     }
 }
