@@ -10,7 +10,7 @@
     "NAME": "黑骑头盔",
     "FLAVOR": "只受到一点擦伤。",
     "DESCRIPTIONS": [
-      "每场战斗首次进入每种 #y姿态 时： NL #ychamp:防守 -获得 #b2 点 #y敏捷 并失去 #b1 点 #y力量 。 NL #ychamp:战狂 -获得 #b2 点 #y力量 并失去 #b1 点 #y敏捷 。"
+      "每场战斗首次进入每种 #y姿态 时： NL #ychamp:防守 -获得 #b1 点 #y敏捷 并失去 #b1 点 #y力量 。 NL #ychamp:战狂 -获得 #b2 点 #y力量 并失去 #b1 点 #y敏捷 。"
     ]
   },
   "champ:Barbells": {

@@ -408,7 +408,7 @@
   },
   "champ:UltimateStance": {
     "NAME": "Ultimate Stance",
-    "DESCRIPTION": "Requires *Defensive or *Berserker. NL Enter champ:Ultimate Stance for !M! turns. NL Exhaust.",
+    "DESCRIPTION": "During your next turn, you are in champ:Ultimate Stance. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Requires *Defensive or *Berserker. NL Enter champ:Ultimate Stance for !M! turns.",
     "EXTENDED_DESCRIPTION": [
       "I am not in a Stance."

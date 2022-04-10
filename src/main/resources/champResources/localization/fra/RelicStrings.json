@@ -31,7 +31,7 @@
     "NAME": "Couronne du victorieux",
     "FLAVOR": "Félissitations!! Vous êtes le plus grand vainqueur.",
     "DESCRIPTIONS": [
-      "Remplace la #rCouronne #rdu #rChampion. NL Commencez chaque combat en #yPose #yUltime, qui dure pendant #b2 tours."
+      "Remplace la #rCouronne #rdu #rChampion. NL Commencez chaque combat en #yPose #yUltime, qui dure pendant #b1 tour."
     ]
   },
   "champ:DefensiveTrainingManual": {

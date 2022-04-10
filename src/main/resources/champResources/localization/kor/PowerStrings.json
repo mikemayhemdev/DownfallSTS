@@ -186,6 +186,14 @@
       " 턴 남았습니다."
     ]
   },
+  "champ:UltimateFormNextTurnPower": {
+    "NAME": "Preparing Ultimate",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, enter #yUltimate #yStance.",
+      " NL It will persist for #b",
+      " turns."
+    ]
+  },
   "champ:EnGardePower": {
     "NAME": "준비!",
     "DESCRIPTIONS": [
