@@ -46,6 +46,13 @@
       "Every turn in which you play an attack card with this power active, this enemy gains #b"," #yStrength. Currently it will gain #b", " #yStrength."
     ]
   },
+  "downfall:FearNoEvil": {
+    "NAME": "Fear No Evil",
+    "DESCRIPTIONS": [
+      "If you play an attack card this turn, this enemy will change stance to #yCalm once it plays its #yFear #yNo #yEvil card.",
+      "This enemy will change stance to #yCalm once it plays its #yFear #yNo #yEvil card."
+    ]
+  },
   "downfall:PoisonResist": {
     "NAME": "Poison Resistance",
     "DESCRIPTIONS": [
@@ -76,6 +83,20 @@
       "When Watcher loses #b",
       " more HP, apply #b-4 #yStrength to her when she next enters #yDivinity or plays #yRagnarok.",
       "Watcher will lose #b4 #yStrength when she next enters #yDivinity or plays #yRagnarok."
+    ]
+  },
+  "downfall:WatcherSkillPower": {
+    "NAME": "Prey on Disharmony",
+    "DESCRIPTIONS": [
+      "Whenever you play a skill, Watcher gains #b",
+      " temporary #yStrength.",
+      "Whenever you play a skill, Watcher gains #yStrength. #yWrath increases damage given and taken by 100%."
+    ]
+  },
+  "downfall:WrathNextTurnPower": {
+    "NAME": "Wrath Next Turn",
+    "DESCRIPTIONS": [
+      "At the start of her turn, Watcher will enter #yWrath."
     ]
   },
   "downfall:NeowBlasphemersDemise": {
