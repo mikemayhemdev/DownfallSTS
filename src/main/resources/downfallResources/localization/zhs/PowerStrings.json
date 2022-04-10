@@ -180,7 +180,7 @@
   "downfall:IroncladMushroomPower": {
     "NAME": "掠食",
     "DESCRIPTIONS": [
-      " #y铁甲战士 的 #y死亡收割 不会消耗且对所有蘑菇生效。 NL 每当 #y铁甲战士 击杀一个蘑菇时，他获得 #b1 点 #y力量 并回复 #b20 点生命。"
+      " #y铁甲战士 的 #y死亡收割 不会消耗且对所有蘑菇生效。 NL 每当 #y铁甲战士 击杀一个蘑菇时，他获得 #b1 点 #y力量 。"
     ]
   },
   "downfall:NeowFeedingFrenzy": {
@@ -286,14 +286,14 @@
   "downfall:HermitConcentrateAdder": {
     "NAME": "致命专注",
     "DESCRIPTIONS": [
-      " #y亡命之徒 每回合都进入 #y专注 状态，使其 #y精准 牌触发额外效果。 NL 对其造成 #b10 点伤害能打破其 #y专注 一回合。"
+      " #y亡命之徒 每回合都进入 #y专注 状态，使其 #y精准 牌触发额外效果。 NL 使其失去 #b10 点生命能打破其 #y专注 一回合。"
     ]
   },
   "downfall:HermitConcentrationPower": {
     "NAME": "致命专注",
     "DESCRIPTIONS": [
-      " #y亡命之徒 每回合都进入 #y专注 状态，使其 #y精准 牌触发额外效果。 本回合再对它造成 #b",
-      " 点伤害来打破其 #y专注 状态。",
+      " #y亡命之徒 每回合都进入 #y专注 状态，使其 #y精准 牌触发额外效果。 本回合再使其失去 #b",
+      " 点生命来打破其 #y专注 状态。",
       " 它本回合已被扰乱，不触发 #y精准 效果。"
     ]
   },

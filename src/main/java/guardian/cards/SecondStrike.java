@@ -52,7 +52,7 @@ public class SecondStrike extends AbstractGuardianCard {
         isEthereal = true;
         exhaust = true;
         loadGemMisc();
-        tags.add(CardTags.STRIKE);
+   //     tags.add(CardTags.STRIKE);
 
 
         //this.sockets.add(GuardianMod.socketTypes.RED);

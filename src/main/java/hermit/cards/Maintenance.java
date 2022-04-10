@@ -1,8 +1,11 @@
 package hermit.cards;
 
+import com.badlogic.gdx.Gdx;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
@@ -11,6 +14,8 @@ import hermit.HermitMod;
 import hermit.actions.MaintenanceAction;
 import hermit.characters.hermit;
 import hermit.effects.HermitUpgradeShineEffect;
+
+import java.util.ArrayList;
 
 import static hermit.HermitMod.*;
 
@@ -45,6 +50,9 @@ public class Maintenance extends AbstractDynamicCard {
 
 
     private static final int COST = 2;
+    private float rotationTimer;
+    private int previewIndex;
+    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
 
 
     // /STAT DECLARATION/
@@ -52,7 +60,8 @@ public class Maintenance extends AbstractDynamicCard {
     public Maintenance() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         loadJokeCardImage(this, "maintenance.png");
-
+        cardsList.add(new Strike_Hermit());
+        cardsList.add(new Defend_Hermit());
     }
 
     // Actions the card should do.
@@ -69,6 +78,28 @@ public class Maintenance extends AbstractDynamicCard {
             upgradeName();
             upgradeBaseCost(1);
             initializeDescription();
+        }
+    }
+
+    @Override
+    public void update() {
+        super.update();
+        if (hb.hovered) {
+            if (rotationTimer <= 0F) {
+                rotationTimer = 2F;
+                if (cardsList.size() == 0) {
+                    cardsToPreview = CardLibrary.cards.get("Madness");
+                } else {
+                    cardsToPreview = cardsList.get(previewIndex);
+                }
+                if (previewIndex == cardsList.size() - 1) {
+                    previewIndex = 0;
+                } else {
+                    previewIndex++;
+                }
+            } else {
+                rotationTimer -= Gdx.graphics.getDeltaTime();
+            }
         }
     }
 }
