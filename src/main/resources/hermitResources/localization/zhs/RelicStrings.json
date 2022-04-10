@@ -10,7 +10,7 @@
     "NAME": "黑麦茎",
     "FLAVOR": "即使嚼的时间久，也依旧能保持薄荷的新鲜感。",
     "DESCRIPTIONS": [
-      " #y淤伤 层数不再被 #y攻击牌 降低。"
+      " #yhermit:淤伤 层数不再被 #y攻击牌 降低。"
     ]
   },
   "hermit:BartenderGlass": {
