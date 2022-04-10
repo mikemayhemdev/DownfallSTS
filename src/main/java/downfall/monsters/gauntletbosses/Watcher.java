@@ -132,7 +132,7 @@ public class Watcher extends GauntletBoss {
             setMove(moveName(Wish.ID) + "+", (byte) 5, Intent.BUFF);
         } else {
             if (isThird && turnNum > 1 && ally1 != null && ally2 != null) {
-                if (!ally1.isDeadOrEscaped() && !ally2.isDeadOrEscaped() && ally1.isAttacking && ally2.isAttacking) { {
+                if (!ally1.isDeadOrEscaped() && !ally2.isDeadOrEscaped() && ally1.isAttacking && ally2.isAttacking) {
                     setMove(moveName(Defend_Watcher.ID, Defend_Watcher.ID), (byte) 3, Intent.DEFEND);
                 } else {
                     bossMove();
