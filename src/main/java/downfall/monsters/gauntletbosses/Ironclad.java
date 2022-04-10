@@ -131,7 +131,7 @@ public class Ironclad extends GauntletBoss {
         } else {
             if (isThird && turnNum > 1 && ally1 != null && ally2 != null) {
 
-                if (ally1.isAttacking && ally2.isAttacking) {
+                if (!ally1.isDeadOrEscaped() && !ally2.isDeadOrEscaped() && ally1.isAttacking && ally2.isAttacking) { {
                     setMove(moveName(Defend_Red.ID, Defend_Red.ID), (byte) 3, Intent.DEFEND);
                 } else {
                     bossMove();
