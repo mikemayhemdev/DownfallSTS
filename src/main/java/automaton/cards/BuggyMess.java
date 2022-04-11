@@ -1,7 +1,9 @@
 package automaton.cards;
 
+import automaton.cards.goodstatus.Daze;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
@@ -19,7 +21,7 @@ public class BuggyMess extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        shuffleIn(SneckoMod.getRandomStatus());
+        shuffleIn(new Dazed());
         atb(new GainEnergyAction(magicNumber));
     }
 

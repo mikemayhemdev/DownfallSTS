@@ -52,6 +52,12 @@ public class CrownThrow extends AbstractChampCard {
         if (bcombo()) atb(new DrawPileToHandAction(this.magicNumber, CardType.ATTACK));
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
+
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
         upgradeMagicNumber(1);

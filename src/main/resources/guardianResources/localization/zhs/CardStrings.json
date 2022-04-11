@@ -9,18 +9,18 @@
   },
   "Guardian:Gem_Red": {
     "NAME": "红宝石",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 层 点 guardianmod:临时 力量 。",
-    "UPGRADE_DESCRIPTION": "弃用"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得2层 guardianmod:临时 力量 。",
+    "UPGRADE_DESCRIPTION": "获得2层 guardianmod:临时 力量 。"
   },
   "Guardian:Gem_Green": {
     "NAME": "翡翠",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 2 层 guardianmod:临时 敏捷 。",
-    "UPGRADE_DESCRIPTION": "弃用"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得2层 guardianmod:临时 敏捷 。",
+    "UPGRADE_DESCRIPTION": "获得2层 guardianmod:临时 敏捷 。"
   },
   "Guardian:Gem_Lightblue": {
     "NAME": "碧玺",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 4 层 guardianmod:临时 荆棘 。",
-    "UPGRADE_DESCRIPTION": "弃用"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得4层 guardianmod:临时 荆棘 。",
+    "UPGRADE_DESCRIPTION": "获得4层 guardianmod:临时 荆棘 。"
   },
   "Guardian:Gem_White": {
     "NAME": "石英",
@@ -35,7 +35,7 @@
   "Guardian:Gem_Cyan": {
     "NAME": "蓝晶",
     "DESCRIPTION": " guardianmod:宝石 。 NL 获得 *水晶护卫 。",
-    "UPGRADE_DESCRIPTION": "弃用"
+    "UPGRADE_DESCRIPTION": "获得 *水晶护卫 。"
   },
   "Guardian:ChargeUp": {
     "NAME": "充能",
@@ -66,7 +66,11 @@
   },
   "Guardian:GuardianWhirl": {
     "NAME": "守护者旋风",
-    "DESCRIPTION": "有20点 格挡 才能打出。 NL 对所有敌人造成 !D! 点伤害 !M! 次。"
+    "DESCRIPTION": "有20点 格挡 才能打出。 NL 对所有敌人造成 !D! 点伤害 !M! 次。", 
+    "EXTENDED_DESCRIPTION": 
+    [
+      "需要更多格挡。"
+    ]
   },
   "Guardian:VentSteam": {
     "NAME": "蒸汽喷射",
@@ -113,7 +117,10 @@
   },
   "Guardian:Harden": {
     "NAME": "硬化",
-    "DESCRIPTION": "有20点 格挡 才能打出。 NL guardianmod:提防 !GuardianSecondM! 。 NL 获得 !M! 层 荆棘 。"
+    "DESCRIPTION": "有20点 格挡 才能打出。 NL guardianmod:提防 !GuardianSecondM! 。 NL 获得 !M! 层 荆棘 。",
+    "EXTENDED_DESCRIPTION": [
+      "需要更多格挡。"
+    ]
   },
   "Guardian:SentryBeam": {
     "NAME": "哨卫射线",
@@ -327,8 +334,8 @@
   },
   "Guardian:Gem_Purple": {
     "NAME": "紫晶",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 所有敌人本回合失去 2 点 力量 。",
-    "UPGRADE_DESCRIPTION": "所有敌人本回合失去 2 点 力量 。"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 本回合所有敌人失去 2 点 力量 。",
+    "UPGRADE_DESCRIPTION": "本回合所有敌人失去 2 点 力量 。"
   },
   "Guardian:Gem_Crimson": {
     "NAME": "石榴石",
@@ -342,7 +349,8 @@
   },
   "Guardian:Gem_Fragmented": {
     "NAME": "宝石碎片",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 *水晶小刀 。"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 *水晶小刀 。",
+    "UPGRADE_DESCRIPTION": "获得 *水晶小刀 。"
   },
   "Guardian:CrystalShiv": {
     "NAME": "水晶小刀",

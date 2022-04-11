@@ -2,6 +2,7 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import theHexaghost.powers.BurnPower;
 
 public class BurningTouch extends AbstractHexaCard {
@@ -16,6 +17,7 @@ public class BurningTouch extends AbstractHexaCard {
     public BurningTouch() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         baseBurn = burn = MAGIC;
+        HexaMod.loadJokeCardImage(this, "BurningTouch.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

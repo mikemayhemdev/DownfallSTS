@@ -38,9 +38,9 @@ public class Vagrant_Evil extends AbstractImageEvent {
 
     public Vagrant_Evil() {
         super(NAME, DESCRIPTIONS[0], "images/events/addict.jpg");
-        takeCost = AbstractDungeon.player.getAscensionMaxHPLoss() * 2;
+        takeCost = Math.round(AbstractDungeon.player.getAscensionMaxHPLoss() * 1.5F);
         if (AbstractDungeon.ascensionLevel >= 15) {
-            takeCost *= 2;
+            takeCost *= 1.5F;
         }
         this.imageEventText.setDialogOption(OPTIONSALT[0] + takeCost + OPTIONSALT[1]);
         this.imageEventText.setDialogOption(OPTIONSALT[2], new PrideStandard());// 38
@@ -76,6 +76,7 @@ public class Vagrant_Evil extends AbstractImageEvent {
                         logMetricIgnored(ID);
                         this.imageEventText.updateDialogOption(0, OPTIONS[5]);// 75
                         this.imageEventText.clearRemainingOptions();// 76
+                        this.screenNum = 1;
                         this.openMap();// 77
                 }
             default:

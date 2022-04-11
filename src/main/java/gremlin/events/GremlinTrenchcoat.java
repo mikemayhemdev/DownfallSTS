@@ -16,16 +16,22 @@ public class GremlinTrenchcoat extends AbstractImageEvent {
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
     private int goldAmount;
+    private int goldAmount2;
+    private int goldAmount3;
     private static final String DIALOG_1;
     private GremlinTrenchcoat.CUR_SCREEN screen;
 
     public GremlinTrenchcoat() {
         super(NAME, DIALOG_1, "images/events/ballAndCup.jpg");
         this.screen = CUR_SCREEN.INTRO;
-        this.goldAmount = 30;
+        this.goldAmount = 10;
+        this.goldAmount2 = 50;
+        this.goldAmount3 = 90;
         this.noCardsInRewards = true;
         if (AbstractDungeon.ascensionLevel >= 15) {
-            this.goldAmount = 40;
+            this.goldAmount = 30;
+            this.goldAmount2 = 70;
+            this.goldAmount3 = 110;
         }
 
         if (AbstractDungeon.player.gold >= this.goldAmount) {
@@ -34,16 +40,16 @@ public class GremlinTrenchcoat extends AbstractImageEvent {
             this.imageEventText.setDialogOption(OPTIONS[6] + this.goldAmount + OPTIONS[7], true);
         }
 
-        if (AbstractDungeon.player.gold >= this.goldAmount*2) {
-            this.imageEventText.setDialogOption(OPTIONS[0] + this.goldAmount*2 + OPTIONS[1] + OPTIONS[3]);
+        if (AbstractDungeon.player.gold >= this.goldAmount2) {
+            this.imageEventText.setDialogOption(OPTIONS[0] + this.goldAmount2 + OPTIONS[1] + OPTIONS[3]);
         } else {
-            this.imageEventText.setDialogOption(OPTIONS[6] + this.goldAmount*2 + OPTIONS[7], true);
+            this.imageEventText.setDialogOption(OPTIONS[6] + this.goldAmount2 + OPTIONS[7], true);
         }
 
-        if (AbstractDungeon.player.gold >= this.goldAmount*3) {
-            this.imageEventText.setDialogOption(OPTIONS[0] + this.goldAmount*3 + OPTIONS[1] + OPTIONS[4]);
+        if (AbstractDungeon.player.gold >= this.goldAmount3) {
+            this.imageEventText.setDialogOption(OPTIONS[0] + this.goldAmount3 + OPTIONS[1] + OPTIONS[4]);
         } else {
-            this.imageEventText.setDialogOption(OPTIONS[6] + this.goldAmount*3 + OPTIONS[7], true);
+            this.imageEventText.setDialogOption(OPTIONS[6] + this.goldAmount3 + OPTIONS[7], true);
         }
 
         this.imageEventText.setDialogOption(OPTIONS[5]);
@@ -76,12 +82,12 @@ public class GremlinTrenchcoat extends AbstractImageEvent {
                         break;
                     case 1:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
-                        AbstractDungeon.player.loseGold(this.goldAmount*2);
+                        AbstractDungeon.player.loseGold(this.goldAmount2);
                         this.getColorlessCard(2);
                         break;
                     case 2:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
-                        AbstractDungeon.player.loseGold(this.goldAmount*3);
+                        AbstractDungeon.player.loseGold(this.goldAmount3);
                         this.getColorlessCard(3);
                         break;
                     case 3:

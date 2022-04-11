@@ -18,17 +18,20 @@ public class CatchUp extends AbstractHexaCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new ExtinguishAction(GhostflameHelper.getPreviousGhostFlame()));
-        atb(new ChargeAction(GhostflameHelper.getPreviousGhostFlame()));
+        for (int i = 0; i < magicNumber; i++) {
+            atb(new ExtinguishAction(GhostflameHelper.getPreviousGhostFlame()));
+            atb(new ChargeAction(GhostflameHelper.getPreviousGhostFlame()));
+        }
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+            upgradeMagicNumber(1);
         }
     }
 }

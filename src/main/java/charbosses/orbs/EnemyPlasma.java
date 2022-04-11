@@ -61,7 +61,7 @@ public class EnemyPlasma extends AbstractEnemyOrb {
     }
 
     @Override
-    public void onStartOfTurn() {
+    public void onEndOfTurn() {
         AbstractDungeon.actionManager.addToTop(new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.PLASMA), 0.1f));
         AbstractDungeon.actionManager.addToTop(new EnemyGainEnergyAction(this.passiveAmount));
     }

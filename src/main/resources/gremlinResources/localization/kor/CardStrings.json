@@ -11,14 +11,14 @@
 
   "Gremlin:Astound": {
     "NAME": "경외",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL gremlin:마법을 3 이상 보유하고 있다면 *수호를 !M! 장 얻습니다.",
-    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL gremlin:마법을 3 이상 보유하고 있다면 *수호+를 !M! 장 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL gremlin:마법을 3 이상 보유한다면 *수호를 !M! 장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL gremlin:마법을 3 이상 보유한다면 *수호+를 !M! 장 얻습니다."
   },
 
   "Gremlin:Bang": {
     "NAME": "쾅",
-    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. *마아법을 한 장 복사해 버린 카드 더미에 섞어 넣습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. *마아법+을 한 장 복사해 버린 카드 더미에 섞어 넣습니다. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. *마아법을 한 장 버린 카드 더미에 섞어 넣습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. *마아법+을 한 장 버린 카드 더미에 섞어 넣습니다. NL 소멸."
   },
 
   "Gremlin:Bellow": {
@@ -43,7 +43,7 @@
 
   "Gremlin:BurlyBlow": {
     "NAME": "굵직한 강타",
-    "DESCRIPTION": "적이 보유한 약화 하나당 피해를 !D! 줍니다. NL 약화를 보유하고 있지 않다면 피해를 !D! 만큼 줍니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. 적이 보유한 약화 하나당 피해를 !D! 줍니다."
   },
 
   "Gremlin:CatScratch": {
@@ -65,7 +65,7 @@
   "Gremlin:CounterStrike": {
     "NAME": "반사 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. 적이 공격할 의도가 있다면 *수호를 !M! 장 얻습니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 적이 공격할 의도가 있다면 강화된 *수호를 !M! 장 얻습니다."
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 적이 공격할 의도가 있다면 *수호+를 !M! 장 얻습니다."
   },
 
   "Gremlin:CowerChoice": {
@@ -77,7 +77,7 @@
   "Gremlin:CowerChoiceB": {
     "NAME": "큰절",
     "DESCRIPTION": "가장 뒤에 있는 그렘린을 영구적으로 잃습니다.",
-    "EXTENDED_DESCRIPTION": ["좋다. 남은 녀석들은 꺼져라!", "좋다! 꺼져라!"]
+    "EXTENDED_DESCRIPTION": ["좋다. NL 남은 녀석들은 꺼져라!", "좋다! 꺼져라!"]
   },
 
   "Gremlin:DaggerDance": {
@@ -97,8 +97,8 @@
 
   "Gremlin:Duplicate": {
     "NAME": "위조",
-    "DESCRIPTION": "손에 있는 공격 카드의 gremlin:메아리를 !M! 장 만듭니다. 그 카드의 비용을 1 낮춥니다. 소멸.",
-    "UPGRADE_DESCRIPTION": "손에 있는 공격 카드의 gremlin:메아리를 !M! 장 만듭니다. 그 카드의 비용을 1 낮춥니다."
+    "DESCRIPTION": "손에 있는 공격 카드의 gremlin:메아리를 !M! 장 얻습니다. 그 카드의 비용을 1 낮춥니다. 소멸.",
+    "UPGRADE_DESCRIPTION": "손에 있는 공격 카드의 gremlin:메아리를 !M! 장 얻습니다. 그 카드의 비용을 1 낮춥니다."
   },
 
   "Gremlin:EdibleArmor": {
@@ -133,8 +133,8 @@
 
   "Gremlin:SleeveOfAces": {
     "NAME": "소매 속 카드",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 보유하고 있는 gremlin:마법 하나당 단도를 1장 얻습니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 보유하고 있는 gremlin:마법 하나당 강화된 단도를 1장 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 보유한 gremlin:마법 하나당 단도를 1장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 보유한 gremlin:마법 하나당 강화된 단도를 1장 얻습니다."
   },
 
   "Gremlin:FatGremlin": {
@@ -155,7 +155,7 @@
 
   "Gremlin:FlipOut": {
     "NAME": "자제력 상실",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 이번 턴에 방어도를 얻는 대신 적 전체에게 얻은 방어도만큼 피해를 줍니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴 동안 방어도를 얻을 수 없습니다. NL 방어도를 얻을 때마다 적 전체에게 얻은 방어도만큼 피해를 줍니다."
   },
 
   "Gremlin:Flurry": {
@@ -280,7 +280,7 @@
 
   "Gremlin:Necromancy": {
     "NAME": "주술",
-    "DESCRIPTION": "gremlin:마법을 3 이상 보유하고 있을 때만 사용 가능합니다. NL 모든 gremlin:마법을 소모해서 무작위 그렘린을 체력이 !M! 인 상태로 부활시킵니다. NL 소멸.",
+    "DESCRIPTION": "gremlin:마법이 3 이상 필요합니다. NL 모든 gremlin:마법을 소모해서 무작위 그렘린을 체력이 !M! 인 상태로 부활시킵니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": ["마력이 부족해.", "아무도 죽지 않았어.", "공간이 비좁아."]
   },
 
@@ -399,7 +399,7 @@
   "Gremlin:ShankStone": {
     "NAME": "자루석",
     "DESCRIPTION": "사용불가. NL 이 카드를 뽑을 때마다 단도를 !M! 장 얻습니다.",
-    "EXTENDED_DESCRIPTION": ["이 카드는 사용할 수 없다."]
+    "EXTENDED_DESCRIPTION": ["이 카드는 사용할 수 없다구."]
   },
 
   "Gremlin:SharpenBlades": {
@@ -452,7 +452,7 @@
 
   "Gremlin:Tadah": {
     "NAME": "이제 간다!",
-    "DESCRIPTION": "무작위 스킬 카드의 gremlin:메아리를 1장 얻습니다. 그 카드의 비용을 1 낮춥니다. NL gremlin:마법사_그렘린으로 gremlin:교체합니다.",
+    "DESCRIPTION": "무작위 스킬 카드의 gremlin:메아리를 1장 얻습니다. NL gremlin:마법사_그렘린으로 gremlin:교체합니다.",
     "UPGRADE_DESCRIPTION": "무작위 강화된 스킬 카드의 gremlin:메아리를 1장 얻습니다. NL 그 카드의 비용을 1 낮춥니다. NL gremlin:마법사_그렘린으로 gremlin:교체합니다."
   },
 
@@ -464,7 +464,7 @@
 
   "Gremlin:TargetWeakness": {
     "NAME": "상처입은 대상",
-    "DESCRIPTION": "약화를 보유한 적이면 피해량을 !M! 증가시킵니다."
+    "DESCRIPTION": "공격 대상이 약화를 보유하고 있다면 피해량을 !M! 증가시킵니다."
   },
 
   "Gremlin:Tricksy": {

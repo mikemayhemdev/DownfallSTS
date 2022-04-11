@@ -14,7 +14,7 @@
   },
   "sneckomod:TailWhip": {
     "NAME": "扫尾",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! - 2  层 虚弱 。 NL 给予 !M! - 2 层 易伤 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! - 2层 虚弱 。 NL 给予 !M! - 2层 易伤 。"
   },
   "sneckomod:UnknownCommonAttack": {
     "NAME": "？？？",
@@ -60,8 +60,8 @@
   },
   "sneckomod:SnekBeam": {
     "NAME": "蛇线",
-    "DESCRIPTION": "对所有敌人造成牌组中 *未知 牌数量的伤害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成牌组中 *未知 牌数量的伤害。",
+    "DESCRIPTION": "对所有敌人造成牌组中 *未知 牌数量点伤害。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成牌组中 *未知 牌数量点伤害。",
     "EXTENDED_DESCRIPTION": [
       " NL （造成 !D! 点伤害。） NL 消耗 。",
       " NL （造成 !D! 点伤害。）"
@@ -130,16 +130,16 @@
   },
   "sneckomod:SoulExchange": {
     "NAME": "灵魂交换",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 抽1张牌并 消耗 1张牌。 NL 变化所有手牌至 消耗 牌的同角色牌。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽2张牌并 消耗 1张牌。 NL 消耗 所有手牌，随机将它们替换为同角色牌。",
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 抽1张牌并 消耗1张。 NL 变化所有手牌至 消耗 牌的同角色牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽2张牌并 消耗1张。 NL 变化所有手牌至 消耗 牌的同角色牌。",
     "EXTENDED_DESCRIPTION": [
       "来消耗以交换灵魂。"
     ]
   },
   "sneckomod:CheapStock": {
     "NAME": "廉价股票",
-    "DESCRIPTION": "回合开始时，将手牌中耗能最高的 sneckomod:异色 牌的耗能降低1点。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，将手牌中耗能最高的 sneckomod:异色 牌的耗能降低1点。"
+    "DESCRIPTION": "回合开始时，耗能最高的 sneckomod:异色 手牌耗能减1。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，耗能最高的 sneckomod:异色 手牌耗能减1。"
   },
   "sneckomod:UnlimitedRolls": {
     "NAME": "无限随机",
@@ -179,12 +179,12 @@
   },
   "sneckomod:SlitherStrike": {
     "NAME": "滑动打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 手中所有 sneckomod:异色 牌本回合内耗能减少1点。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 所有 sneckomod:异色 手牌本回合耗能减1。"
   },
   "sneckomod:PureSnecko": {
     "NAME": "易质",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 变化所有手中 sneckomod:异色 牌。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 变化所有手中 sneckomod:异色 牌。 NL 其耗能减1。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 变化所有 sneckomod:异色 手牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 变化所有 sneckomod:异色 手牌。 NL 其耗能减1。"
   },
   "sneckomod:Cheat": {
     "NAME": "作弊",
@@ -212,7 +212,7 @@
   },
   "sneckomod:DefensiveFlair": {
     "NAME": "防御才华",
-    "DESCRIPTION": "获得 !B! 点 格挡 。手牌中每有一张 sneckomod:异色 牌，获得 格挡 提高 !M! 点。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每有一张 sneckomod:异色 手牌， 格挡 增加 !M! 点。"
   },
   "sneckomod:DangerNoodle": {
     "NAME": "贪吃蛇",
@@ -224,8 +224,8 @@
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "变废为宝",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张手牌。 NL 获得与其耗能相等的 [E] 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张手牌。 NL 获得与其耗能相等的 [E] 。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张手牌。 NL 获得其耗能量 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张手牌。 NL 获得其耗能量 [E] 。"
   },
   "sneckomod:DiceBlock": {
     "NAME": "骰子格挡",
@@ -233,7 +233,7 @@
   },
   "sneckomod:MixItUp": {
     "NAME": "混合起来！",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 变化所有药水。 NL 消耗 。"
+    "DESCRIPTION": "变化所有药水。 NL 造成 !D! 点伤害 !M! 次。 NL 消耗 。"
   },
   "sneckomod:MorePower": {
     "NAME": "更多力量！",

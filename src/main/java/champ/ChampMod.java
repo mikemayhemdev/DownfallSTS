@@ -16,12 +16,17 @@ import champ.potions.TechPotion;
 import champ.potions.UltimateStancePotion;
 import champ.powers.CounterPower;
 import champ.powers.ResolvePower;
+import champ.stances.BerserkerStance;
+import champ.stances.DefensiveStance;
+import champ.util.OnOpenerSubscriber;
+import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import champ.relics.*;
 import champ.stances.AbstractChampStance;
 import champ.util.CardFilter;
 import champ.util.CoolVariable;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.patches.BanSharedContentPatch;
 import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Color;
@@ -100,6 +105,8 @@ public class ChampMod implements
     public static AbstractCard.CardTags OPENER;
     @SpireEnum
     public static AbstractCard.CardTags OPENERDEFENSIVE;
+    @SpireEnum
+    public static AbstractCard.CardTags OPENERNOTIN;
     @SpireEnum
     public static AbstractCard.CardTags OPENERBERSERKER;
     @SpireEnum
@@ -478,12 +485,50 @@ public class ChampMod implements
             }
         }
         */
+
+        if (abstractCard.hasTag(ChampMod.OPENERBERSERKER)) {
+            berserkOpen();
+        }
+        if (abstractCard.hasTag(ChampMod.OPENERDEFENSIVE)) {
+            defenseOpen();
+        }
+        if (abstractCard.hasTag(ChampMod.OPENERNOTIN)) {
+            if (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID)) {
+                berserkOpen();
+            } else if (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
+                defenseOpen();
+            } else if (AbstractDungeon.cardRandomRng.randomBoolean()) {
+                berserkOpen();
+            } else {
+                defenseOpen();
+            }
+        }
+
+    }
+
+
+    public static void berserkOpen() {
+
+        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(BerserkerStance.STANCE_ID));
+        triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
+    }
+
+    public static void defenseOpen() {
+
+        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveStance.STANCE_ID));
+        triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
+    }
+
+    public static void triggerOpenerRelics(boolean fromNeutral) {
+        for (AbstractRelic r : AbstractDungeon.player.relics) {
+            if (r instanceof OnOpenerSubscriber) ((OnOpenerSubscriber) r).onOpener(fromNeutral);
+        }
     }
 
     @Override
     public int receiveOnPlayerLoseBlock(int i) {
         if (AbstractDungeon.player.hasRelic(DeflectingBracers.ID)) {
-            int counter = Math.min(i, AbstractDungeon.player.currentBlock/2);
+            int counter = Math.min(i, AbstractDungeon.player.currentBlock / 2);
             if (counter > 0) {
                 AbstractDungeon.player.getRelic(DeflectingBracers.ID).flash();
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(counter), counter));

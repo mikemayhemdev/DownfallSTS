@@ -313,7 +313,13 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         if (cUnknown.isInnate) {
             AbstractDungeon.player.drawPile.addToTop(cUnknown);
         } else {
-            AbstractDungeon.player.drawPile.group.add(idx, cUnknown);
+            //This check should always pass, but a crash report indicates it rarely can not.
+            //So if the idx is somehow outside the array's bounds, add the card to bottom instead.
+            if (idx > -1 && idx < p.drawPile.group.size()){
+                AbstractDungeon.player.drawPile.group.add(idx, cUnknown);
+            } else {
+                AbstractDungeon.player.drawPile.addToBottom(cUnknown);
+            }
         }
     }
 

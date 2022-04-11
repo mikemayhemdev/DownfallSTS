@@ -59,8 +59,8 @@
   },
   "Slimebound:SamplingLick": {
     "NAME": "맛보며 핥기",
-    "DESCRIPTION": "점액 을 !SlimeboundSlimed! 부여합니다. NL 방어도 를  !B! 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "점액 을 !SlimeboundSlimed! 부여합니다 NL 방어도 를 !B! 얻습니다. NL 카드를 1 장 뽑습니다. NL 소멸."
+    "DESCRIPTION": "점액 을 !slime! 부여합니다. NL 방어도 를  !B! 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "점액 을 !slime! 부여합니다 NL 방어도 를 !B! 얻습니다. NL 카드를 1 장 뽑습니다. NL 소멸."
   },
   "Slimebound:DuplicateSlimes": {
     "NAME": "증식",
@@ -125,7 +125,7 @@
   },
   "Slimebound:SelfFormingGoo": {
     "NAME": "자가형성 점액",
-    "DESCRIPTION": "체력을 잃을때 마다, 무작위 적에게 점액 을 !SlimeboundSlimed! 부여하고 다음턴에 방어도 를 !M! 얻습니다."
+    "DESCRIPTION": "체력을 잃을때 마다, 무작위 적에게 점액 을 !slime! 부여하고 다음턴에 방어도 를 !M! 얻습니다."
   },
   "Slimebound:SlimeSpikes": {
     "NAME": "슬라임 가시",
@@ -206,23 +206,23 @@
   },
   "Slimebound:Lick": {
     "NAME": "핥기",
-    "DESCRIPTION": "약화를 !SlimeboundSlimePoison! 부여하고 점액 을 !SlimeboundSlimed! 부여합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "약화를 !SlimeboundSlimePoison! 부여하고 점액 을 !SlimeboundSlimed! 부여합니다. NL 카드를 1 장 뽑습니다. NL 소멸."
+    "DESCRIPTION": "약화를 !SlimeboundSlimePoison! 부여하고 점액 을 !slime! 부여합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "약화를 !SlimeboundSlimePoison! 부여하고 점액 을 !slime! 부여합니다. NL 카드를 1 장 뽑습니다. NL 소멸."
   },
   "Slimebound:HauntingLick": {
     "NAME": "홀리는 핥기",
-    "DESCRIPTION": "취약 을 1 부여하고 점액 을 !SlimeboundSlimed! 부여합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "취약 을 1 부여하고 점액 을 !SlimeboundSlimed! 부여합니다. NL 카드를 1 장 뽑습니다. NL 소멸."
+    "DESCRIPTION": "취약 을 1 부여하고 점액 을 !slime! 부여합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "취약 을 1 부여하고 점액 을 !slime! 부여합니다. NL 카드를 1 장 뽑습니다. NL 소멸."
   },
   "Slimebound:PoisonLick": {
     "NAME": "독성 핥기",
-    "DESCRIPTION": "점액 을 !SlimeboundSlimed! 부여하고 중독 을 !SlimeboundSlimePoison! 부여합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "점액 을 !SlimeboundSlimed! 부여하고 중독 을 !SlimeboundSlimePoison! 부여합니다. NL 카드를 1 장 뽑습니다. NL 소멸."
+    "DESCRIPTION": "점액 을 !slime! 부여하고 중독 을 !SlimeboundSlimePoison! 부여합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "점액 을 !slime! 부여하고 중독 을 !SlimeboundSlimePoison! 부여합니다. NL 카드를 1 장 뽑습니다. NL 소멸."
   },
   "Slimebound:MegaLick": {
     "NAME": "마구 핥기",
-    "DESCRIPTION": "모든 적에게 약화 을 !M! 부여하고 점액 을 !SlimeboundSlimed! 부여합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "모든 적에게 약화 을 !M! 부여하고 점액 을 !SlimeboundSlimed! 부여합니다. NL 카드를 1 장 뽑습니다. NL 소멸."
+    "DESCRIPTION": "모든 적에게 약화 을 !M! 부여하고 점액 을 !slime! 부여합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "모든 적에게 약화 을 !M! 부여하고 점액 을 !slime! 부여합니다. NL 카드를 1 장 뽑습니다. NL 소멸."
   },
   "Slimebound:FocusedLick": {
     "NAME": "집요한 핥기",
@@ -231,8 +231,8 @@
   },
   "Slimebound:RejuvenatingLick": {
     "NAME": "기운나는 핥기",
-    "DESCRIPTION": "점액 을 !SlimeboundSlimed! 부여합니다. NL 체력 을 !M! 회복합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "점액 을 !SlimeboundSlimed! 부여합니다. NL 체력 을 !M! 회복합니다. NL 카드를 1 장 뽑습니다. NL 소멸."
+    "DESCRIPTION": "점액 을 !slime! 부여합니다. NL 체력 을 !M! 회복합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "점액 을 !slime! 부여합니다. NL 체력 을 !M! 회복합니다. NL 카드를 1 장 뽑습니다. NL 소멸."
   },
   "Slimebound:Gluttony": {
     "NAME": "폭식",
@@ -322,7 +322,7 @@
   },
   "Slimebound:LivingWall": {
     "NAME": "살아있는 벽",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 공격을 받으면 공격자에게 !SlimeboundSlimed! 점액 을 부여 합니다."
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 공격을 받으면 공격자에게 !slime! 점액 을 부여 합니다."
   },
   "Slimebound:Slimepotheosis": {
     "NAME": "점액 변형",
@@ -344,7 +344,7 @@
   },
   "Slimebound:CorrosiveSpit": {
     "NAME": "부식성 침",
-    "DESCRIPTION": "점액 을 !SlimeboundSlimed! 부여합니다."
+    "DESCRIPTION": "점액 을 !slime! 부여합니다."
   },
   "Slimebound:Chomp": {
     "NAME": "우적우적",
@@ -352,7 +352,7 @@
   },
   "Slimebound:DouseInSlime": {
     "NAME": "점액에 처박기",
-    "DESCRIPTION": "점액 을 !SlimeboundSlimed! 부여합니다. NL 다음번에 그 적을 공격해도 점액이 소모되지 않습니다."
+    "DESCRIPTION": "점액 을 !slime! 부여합니다. NL 다음번에 그 적을 공격해도 점액이 소모되지 않습니다."
   },
   "Slimebound:FlameTackle": {
     "NAME": "화염 태클",
@@ -368,12 +368,12 @@
   },
   "Slimebound:RainOfGoop": {
     "NAME": "끈적이 비",
-    "DESCRIPTION": "무작위 적 에게 점액 !SlimeboundSlimed! 을 !M! 번 부여합니다.",
-    "UPGRADE_DESCRIPTION": "무작위 적 에게 점액 !SlimeboundSlimed! 을 !M! 번 부여합니다."
+    "DESCRIPTION": "무작위 적 에게 점액 !slime! 을 !M! 번 부여합니다.",
+    "UPGRADE_DESCRIPTION": "무작위 적 에게 점액 !slime! 을 !M! 번 부여합니다."
   },
   "Slimebound:GoopSpray": {
     "NAME": "끈적이 스프레이",
-    "DESCRIPTION": "모든 적에게 점액 을 !SlimeboundSlimed! 부여하고 중독 을 !M! 부여합니다. "
+    "DESCRIPTION": "모든 적에게 점액 을 !slime! 부여하고 중독 을 !M! 부여합니다. "
   },
   "Slimebound:MassFeed": {
     "NAME": "대량 섭취",
@@ -381,7 +381,7 @@
   },
   "Slimebound:StrayGoop": {
     "NAME": "흩어진 끈적이",
-    "DESCRIPTION": "이번턴에 체력을 잃을때 마다 무작위 적에게 !SlimeboundSlimed! 점액 을 부여합니다."
+    "DESCRIPTION": "이번턴에 체력을 잃을때 마다 무작위 적에게 !slime! 점액 을 부여합니다."
   },
   "Slimebound:ViciousTackle": {
     "NAME": "사나운 태클",

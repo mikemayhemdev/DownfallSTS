@@ -1,73 +1,83 @@
 {
   "expansioncontent:GuardianWhirl": {
     "NAME": "회오리 바람",
-    "DESCRIPTION": "expansioncontent:보스 - 수호자. NL 방어도가 10 이상 필요합니다. NL 적 전체에게 피해를 !D! 만큼 4번 줍니다. NL 소멸.",
+    "DESCRIPTION": "방어도가 10 이상 필요합니다. NL 적 전체에게 피해를 !D! 만큼 4번 줍니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
-      "방어도가 충분하지 않다."
+      "방어도가 더 필요하다."
     ]
   },
   "expansioncontent:Hexaburn": {
     "NAME": "지옥염",
-    "DESCRIPTION": "expansioncontent:보스 - 육각령. NL !M! 턴 뒤에 무작위 적들에게 피해를 !D! 만큼 6번 줍니다. NL 힘 만큼 피해량이 증가합니다."
+    "DESCRIPTION": " !M! 턴 후 무작위 적들에게 피해를 !D! 만큼 6번 줍니다. NL 힘 만큼 피해량이 증가합니다."
   },
   "expansioncontent:InvincibleStrength": {
     "NAME": "천하무적",
-    "DESCRIPTION": "expansioncontent:보스 - 타락한 심장. NL expansioncontent:천하무적을 10 얻습니다. NL expansioncontent:천하무적을 이미 보유하고 있다면 보유한 천하무적이 끝나면 바로 적용됩니다."
+    "DESCRIPTION": "expansioncontent:천하무적을 10 얻습니다. NL expansioncontent:천하무적을 이미 보유하고 있다면 보유한 천하무적이 끝나면 바로 적용됩니다."
   },
   "expansioncontent:HyperBeam": {
     "NAME": "자동 광선",
-    "DESCRIPTION": "expansioncontent:보스 - 청동 자동인형. NL 적 전체에게 피해를 !D! 줍니다. NL 다음 내 턴 시작 시 [E] 를 잃습니다. NL 소멸."
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 다음 내 턴 시작 시 [E] 를 잃습니다. NL 소멸."
   },
   "expansioncontent:LastStand": {
     "NAME": "최후의 저항",
-    "DESCRIPTION": "expansioncontent:보스 - 투사. NL 모든 해로운 효과를 제거합니다. NL 힘을 1 얻습니다. NL 체력이 절반 이하라면 힘을 2 얻습니다.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:보스 - 투사. NL 모든 해로운 효과를 제거합니다. NL 힘을 1 얻습니다. NL 체력이 절반 이하라면 체력을 !M! 회복하고 힘을 2 얻습니다."
+    "DESCRIPTION": "모든 해로운 효과를 제거합니다. NL 힘을 1 얻습니다. NL 체력이 절반 이하라면 힘을 2 얻습니다.",
+    "UPGRADE_DESCRIPTION": "모든 해로운 효과를 제거합니다. NL 힘을 1 얻습니다. NL 체력이 절반 이하라면 체력을 !M! 회복하고 힘을 2 얻습니다."
   },
   "expansioncontent:YouAreMine": {
     "NAME": "넌 나의 것이다!",
-    "DESCRIPTION": "expansioncontent:보스 - 수집가. NL 적 전체의 방어도를 제거합니다. NL 적 전체에게 약화 와 취약을 !M! 부여합니다. NL 소멸."
+    "DESCRIPTION": "적 전체의 방어도를 없앱니다. NL 적 전체에게 약화 와 취약을 !M! 부여합니다. NL 소멸."
   },
   "expansioncontent:AwakenDeath": {
     "NAME": "각성",
-    "DESCRIPTION": "expansioncontent:보스 - 깨어난 자. NL 힘을 1 얻습니다. NL 사망하는 대신 체력을 !M! 회복합니다."
+    "DESCRIPTION": "죽거나 전투 종료 시 체력을 !M! 회복하고 이 효과를 제거합니다."
   },
   "expansioncontent:Chronoboost": {
     "NAME": "시간-가속",
-    "DESCRIPTION": "expansioncontent:보스 - 시간 포식자. NL 카드를 12번 사용할 때마다 힘을 1 얻습니다.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:보스 - 시간 포식자. NL 힘을 1 얻습니다. NL 카드를 12번 사용할 때마다 힘을 1 얻습니다."
+    "DESCRIPTION": "카드를 12번 사용할 때마다 힘을 1 얻습니다.",
+    "UPGRADE_DESCRIPTION": "힘을 1 얻습니다. NL 카드를 12번 사용할 때마다 힘을 1 얻습니다."
   },
   "expansioncontent:PolyBeam": {
-    "NAME": "도누의 힘",
-    "DESCRIPTION": "expansioncontent:보스 - 도누. NL 피해를 !D! 만큼 2번 줍니다. 이 카드의 피해량이 !M! 증가합니다. NL 다음 턴에 *데카의 *보호를 얻거나 expansioncontent:발굴합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:보스 - 도누. NL 피해를 !D! 만큼 2번 줍니다. 이 카드의 피해량이 !M! 증가합니다. NL *데카의 *보호+를 얻거나 expansioncontent:발굴합니다. NL 소멸."
-     },
+    "NAME": "도누의 폭발",
+    "DESCRIPTION": "힘을 !M! 얻습니다."
+  },
   "expansioncontent:DecaShield": {
-    "NAME": "데카의 힘",
-    "DESCRIPTION": "expansioncontent:보스 - 데카. NL 방어도를 !B! 만큼 2번 얻습니다. 이 카드의 방어도가 !M! 증가합니다. NL 다음 턴에 *도누의 *힘을 expansioncontent:발굴합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:보스 - 데카. NL 방어도를 !B! 만큼 2번 얻습니다. 이 카드의 방어도가 !M! 증가합니다. NL 다음 턴에 *도누의 *힘+을 expansioncontent:발굴합니다. NL 소멸."
+    "NAME": "데카의 방패",
+    "DESCRIPTION": "*판금 *갑옷을 !M! 얻습니다."
+  },
+  "expansioncontent:ShapePower": {
+    "NAME": "모양기의 축복",
+    "DESCRIPTION": "선택 - 힘을 !M! 얻습니다 또는 *판금 *갑옷을 5 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선택 - 힘을 !M! 얻습니다 또는 *판금 *갑옷을 8 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      "도누의 힘",
+      "힘을 !M! 얻습니다.",
+      "데카의 방패",
+      "*판금 *갑옷을 5 얻습니다.",
+      "*판금 *갑옷을 8 얻습니다."
+    ]
   },
   "expansioncontent:PrepareCrush": {
     "NAME": "으깨기 준비",
-    "DESCRIPTION": "expansioncontent:보스 - 대왕 슬라임. NL 방어도를 !B! 얻습니다. NL 다음 내 턴에 [E] [E] [E] 을 얻고 *슬라임 *으깬다를 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:보스 - 대왕 슬라임. NL 방어도를 !B! 얻습니다. NL 다음 내 턴에 [E] [E] [E] 을 얻고 *슬라임 *으깬다 *+를 얻습니다. NL 소멸."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에 [E] [E] [E] 을 얻고 *슬라임 *으깬다를 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에 [E] [E] [E] 을 얻고 *슬라임 *으깬다 *+를 얻습니다. NL 소멸."
   },
   "expansioncontent:StudyTheSpire": {
     "NAME": "첨탑 학습",
-    "DESCRIPTION": "다음 !M! 턴 동안 시작할 때마다 무작위 expansioncontent:보스 카드를 1장 얻습니다. 사용하기 전까지 그 카드의 비용은 0이 됩니다.",
-    "UPGRADE_DESCRIPTION": "다음 !M! 턴 동안 시작할 때마다 무작위 강화된 expansioncontent:보스 카드를 1장 얻습니다. 사용하기 전까지 그 카드의 비용은 0이 됩니다."
+    "DESCRIPTION": "다음 !M! 턴 동안 시작할 때마다 무작위 *보스 카드를 1장 얻습니다. 사용하기 전까지 그 카드의 비용은 0이 됩니다.",
+    "UPGRADE_DESCRIPTION": "다음 !M! 턴 동안 시작할 때마다 무작위 강화된 *보스 카드를 1장 얻습니다. 사용하기 전까지 그 카드의 비용은 0이 됩니다."
   },
   "expansioncontent:QuickStudy": {
     "NAME": "빠른 학습",
-    "DESCRIPTION": "expansioncontent:보스 카드 3종류 중 1가지를 선택합니다. NL 그 카드를 얻습니다. NL 사용하기 전까지 선택한 카드의 비용은 0이 됩니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "강화된 expansioncontent:보스 카드 3종류 중 1가지를 선택합니다. NL 그 카드를 얻습니다. NL 사용하기 전까지 선택한 카드의 비용은 0이 됩니다. NL 소멸.",
+    "DESCRIPTION": "*보스 카드 3종류 중 1가지를 선택해 얻습니다. NL 사용하기 전까지 그 카드의 비용은 0이 됩니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "강화된 *보스 카드 3종류 중 1가지를 선택해 얻습니다. NL 사용하기 전까지 그 카드의 비용은 0이 됩니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
       "보스 카드를 고르십시오."
     ]
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "내면의 악",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 무작위 expansioncontent:보스 카드를 1장 얻습니다. 사용하기 전까지 그 카드의 비용은 0이 됩니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 무작위 강화된 expansioncontent:보스 카드를 1장 얻습니다. 사용하기 전까지 그 카드의 비용은 0이 됩니다. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 무작위 *보스 카드를 1장 얻습니다. 사용하기 전까지 그 카드의 비용은 0이 됩니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 무작위 강화된 *보스 카드를 1장 얻습니다. 사용하기 전까지 그 카드의 비용은 0이 됩니다. NL 소멸."
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "뭐든지 아는 해골",

@@ -55,6 +55,7 @@ public class Showdown extends AbstractDynamicCard {
     public Showdown() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        this.cardsToPreview = new Strike_Hermit();
         this.selfRetain=true;
         loadJokeCardImage(this, "showdown.png");
     }

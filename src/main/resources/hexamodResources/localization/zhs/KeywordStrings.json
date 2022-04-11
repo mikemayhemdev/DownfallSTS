@@ -38,9 +38,9 @@
   {
     "PROPER_NAME": "点燃",
     "NAMES": [
-      "点燃",
+      "ignite",
       "force-ignite",
-      "ignite"
+      "点燃"
     ],
     "DESCRIPTION": "触发鬼火上的 #y点燃 效果。"
   },

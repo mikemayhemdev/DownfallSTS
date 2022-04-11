@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.CardPoofEffect;
 
+import java.util.ArrayList;
+
 public class EnemyShowCardAndAddToHandEffect extends AbstractGameEffect {
     private static final float EFFECT_DUR = 0.8f;
     private static final float PADDING;
@@ -40,7 +42,13 @@ public class EnemyShowCardAndAddToHandEffect extends AbstractGameEffect {
             card.upgrade();
         }
         card.untip();
-        AbstractCharBoss.boss.hand.group.add(0, card);
+        ArrayList<AbstractCard> group = AbstractCharBoss.boss.hand.group;
+        if (card.name.equals("Smite")) {
+            group.add(group.size(), card);
+        }
+        else {
+            group.add(0, card);
+        }
         card.triggerWhenCopied();
         AbstractCharBoss.boss.hand.refreshHandLayout();
         AbstractCharBoss.boss.hand.applyPowers();

@@ -43,6 +43,9 @@ public class WindUp extends AbstractChampCard implements OctopusCard {
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+
+        this.tags.remove(ChampMod.OPENERBERSERKER);
+        this.tags.remove(ChampMod.OPENERDEFENSIVE);
         //if (upgraded) techique();
         atb(new OctoChoiceAction(m, this));
         postInit();
@@ -59,10 +62,10 @@ public class WindUp extends AbstractChampCard implements OctopusCard {
     public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
         switch (card.cardID) {
             case "octo:OctoBerserk":
-                berserkOpen();
+                ChampMod.berserkOpen();
                 break;
             case "octo:OctoDefense":
-                defenseOpen();
+                ChampMod.defenseOpen();
                 break;
         }
 

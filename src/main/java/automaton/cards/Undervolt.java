@@ -15,7 +15,7 @@ public class Undervolt extends AbstractBronzeCard {
 
     public Undervolt() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
         exhaust = true;
         cardsToPreview = new Burn();
     }

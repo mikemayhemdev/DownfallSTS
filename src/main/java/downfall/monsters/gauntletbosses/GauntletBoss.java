@@ -13,6 +13,11 @@ import downfall.powers.gauntletpowers.OnDeathEveryoneBuffer;
 
 public abstract class GauntletBoss extends AbstractMonster {
 
+    public boolean isAttacking;
+    public boolean isThird;
+    public GauntletBoss ally1;
+    public GauntletBoss ally2;
+
     public GauntletBoss(String name, String id, int maxHealth, float hb_x, float hb_y, float hb_w, float hb_h, String imgUrl, float offsetX, float offsetY) {
         super(name, id, maxHealth, hb_x, hb_y, hb_w, hb_h, imgUrl, offsetX, offsetY);
     }

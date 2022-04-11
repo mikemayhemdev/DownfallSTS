@@ -35,7 +35,7 @@ public class EnemyDevaFormPower extends AbstractPower {
         if (this.energyGainAmount == 1) {
             this.description = DESCRIPTIONS[0] + DESCRIPTIONS[3] + this.amount + DESCRIPTIONS[4];
         } else {
-            this.description = DESCRIPTIONS[1] + this.energyGainAmount + DESCRIPTIONS[2] + DESCRIPTIONS[3] + this.amount + DESCRIPTIONS[4];
+            this.description = DESCRIPTIONS[1] + (this.energyGainAmount - 1) + DESCRIPTIONS[2] + DESCRIPTIONS[3] + this.amount + DESCRIPTIONS[4];
         }
 
     }

@@ -167,7 +167,7 @@
   },
   "bronze:WildBeam": {
     "NAME": "Cleanse",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust a random Status card in your hand.",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a random Status card in your draw pile.",
     "EXTENDED_DESCRIPTION": [
       "wild",
       "Beam"
@@ -199,7 +199,7 @@
   },
   "bronze:Deprecate": {
     "NAME": "Deprecate",
-    "DESCRIPTION": "Apply !M! Weak to ALL enemies.",
+    "DESCRIPTION": "Apply !M! Weak.",
     "EXTENDED_DESCRIPTION": [
       "old",
       "Insult"
@@ -467,7 +467,7 @@
   },
   "bronze:Break": {
     "NAME": "Break",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile *Error - bronze:Insert !M! random Status cards.",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile *Error - bronze:Insert a *Burn, a *Wound, and a *Slimed.",
     "EXTENDED_DESCRIPTION": [
       "broken",
       "Smash"
@@ -543,7 +543,8 @@
   },
   "bronze:CleanCode": {
     "NAME": "Clean Code",
-    "DESCRIPTION": "Remove all bronze:Compile *Error effects from Encoded cards. NL Lasts for the next !M! Functions created."
+    "DESCRIPTION": "Remove the next !M! bronze:Compile *Errors you would bronze:Encode.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Remove the next !M! bronze:Compile *Errors you would bronze:Encode."
   },
   "bronze:BranchBlock": {
     "NAME": "Branch: Block",
@@ -611,7 +612,7 @@
   },
   "bronze:BuggyMess": {
     "NAME": "Buggy Mess",
-    "DESCRIPTION": "bronze:Insert random Status. NL Gain !M! [E] .",
+    "DESCRIPTION": "bronze:Insert a *Dazed. NL Gain !M! [E] .",
     "EXTENDED_DESCRIPTION": [
       "buggy",
       "Mess"

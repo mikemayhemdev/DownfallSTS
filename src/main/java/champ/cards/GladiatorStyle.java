@@ -29,7 +29,7 @@ public class GladiatorStyle extends AbstractChampCard {
         applyToSelf(new StrengthPower(p, magicNumber));
        // applyToSelf(new DexterityPower(p, 2));
         for (AbstractMonster q : monsterList()) {
-            applyToEnemy(q, new StrengthPower(q, 2));
+            applyToEnemy(q, new StrengthPower(q, 1));
             //applyToEnemy(q, new DexterityPower(q, 2));
         }
 

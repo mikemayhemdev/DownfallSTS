@@ -42,7 +42,7 @@
   },
   "hexamod:CatchUp": {
     "NAME": "及时",
-    "DESCRIPTION": "hexamod:点燃 上枚鬼火。"
+    "DESCRIPTION": "hexamod:点燃 上枚鬼火 !M! 次 。"
   },
   "hexamod:TimeWarp": {
     "NAME": "时间扭曲",
@@ -68,12 +68,12 @@
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "疾进",
-    "DESCRIPTION": " hexamod:点燃 NL 鬼火时，获得 !M! 层 guardianmod:临时 力量 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL hexamod:点燃 NL 鬼火时，获得 !M! 层 guardianmod:临时 力量 。"
+    "DESCRIPTION": " hexamod:点燃 一枚鬼火时， NL 获得 !M! 层 guardianmod:临时 力量 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL hexamod:点燃 一枚鬼火时， NL 获得 !M! 层 guardianmod:临时 力量 。"
   },
   "hexamod:GhostOfSpirePresent": {
     "NAME": "此刻",
-    "DESCRIPTION": "回合开始时获得 [E] 。 NL 回合结束时不再自动 hexamod:步进 。"
+    "DESCRIPTION": "回合开始时获得 [E] ，结束时不再自动 hexamod:步进 。"
   },
   "hexamod:HauntingEcho": {
     "NAME": "回声萦绕",
@@ -126,7 +126,7 @@
   },
   "hexamod:GhostShield": {
     "NAME": "幽灵护盾",
-    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 获得 !B! 点 格挡 。 NL 被 消耗 时，获得 !M! 层 bronze:残影 。"
+    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 获得 !B! 点 格挡 。 NL 消耗 时获得 !M! 层 bronze:残影 。"
   },
   "hexamod:Haunt": {
     "NAME": "鬼手",
@@ -144,7 +144,7 @@
   },
   "hexamod:GiftsFromTheDead": {
     "NAME": "深处之礼",
-    "DESCRIPTION": "每回合开始时， expansioncontent:取回 NL 一张 hexamod:阴世 牌。",
+    "DESCRIPTION": "回合开始时随机 expansioncontent:取回 一张 hexamod:阴世 牌。",
     "EXTENDED_DESCRIPTION": [
     "这些灵魂太强大了，无法直接召唤。"
     ]
@@ -163,17 +163,17 @@
   },
   "hexamod:UnleashSpirits": {
     "NAME": "释魂",
-    "DESCRIPTION": "随机造成 !D! 点伤害。 NL 消耗堆中每有一张 虚无 牌再造成一次。 NL 消耗 。"
+    "DESCRIPTION": "随机造成 !D! 点伤害。 NL 消耗堆每有一张 虚无 牌再造成一次。 NL 消耗 。"
   },
   "hexamod:NightmareStrike": {
     "NAME": "梦魇打击",
-    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 被 消耗 时，获得 *暗影打击 。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 被 消耗 时，获得 *暗影打击+ 。"
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗 时，获得 *暗影打击 。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗 时，获得 *暗影打击+ 。"
   },
   "hexamod:NightmareGuise": {
     "NAME": "梦魇伪装",
-    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 被 消耗 时，获得 *暗影伪装 。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 被 消耗 时，获得 *暗影伪装+ 。"
+    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 消耗 时，获得 *暗影伪装 。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 消耗 时，获得 *暗影伪装+ 。"
   },
   "hexamod:ShadowStrike": {
     "NAME": "暗影打击",
@@ -236,7 +236,7 @@
   "hexamod:TurnItUp": {
     "NAME": "高热激发",
     "DESCRIPTION": "临时获得 6 层 hexamod:热烈 。 NL 持续X+1回合。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 6 点 hexamod:热烈 。 NL 在X+1回合后失去。 NL 获得 [E] 。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "临时获得 6 层 hexamod:热烈 。 NL 持续X+1回合。 NL 获得 [E] 。 NL 消耗 。"
   },
   "hexamod:HeatMetal": {
     "NAME": "高热金属",
@@ -349,7 +349,7 @@
   },
   "hexamod:BurningQuestion": {
     "NAME": "迫在眉睫",
-    "DESCRIPTION": "虚无 。 NL 获得 !M! 点 力量。 NL 消耗 时，获得2 点 敏捷。"
+    "DESCRIPTION": "虚无 。 NL 获得 !M! 点 力量 。 NL 消耗 时获得2 点 敏捷 。"
   },
 
   "hexamod:Floatwork": {

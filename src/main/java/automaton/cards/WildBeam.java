@@ -34,9 +34,9 @@ public class WildBeam extends AbstractBronzeCard {
             public void update() {
                 isDone = true;
                 ArrayList<AbstractCard> valid = new ArrayList<>();
-                valid.addAll(AbstractDungeon.player.hand.group.stream().filter(q -> q.type == CardType.STATUS).collect(Collectors.toList()));
+                valid.addAll(AbstractDungeon.player.drawPile.group.stream().filter(q -> q.type == CardType.STATUS).collect(Collectors.toList()));
                 if (!valid.isEmpty()) {
-                    att(new ExhaustSpecificCardAction(valid.get(AbstractDungeon.cardRandomRng.random(valid.size()-1)), AbstractDungeon.player.hand));
+                    att(new ExhaustSpecificCardAction(valid.get(AbstractDungeon.cardRandomRng.random(valid.size()-1)), AbstractDungeon.player.drawPile));
                 }
             }
         });
