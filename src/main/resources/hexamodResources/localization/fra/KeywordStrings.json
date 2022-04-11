@@ -11,7 +11,7 @@
     "NAMES": [
       "avancez",
       "avancé",
-      "avancer"
+      "avancer",
       "n'avancez"
     ],
     "DESCRIPTION": "Passez au Feu Follet suivant. Passer un Feu Follet #yl'Éteint."
@@ -28,7 +28,7 @@
   {
     "PROPER_NAME": "Intensité",
     "NAMES": [
-      "intensité"
+      "intensité",
       "d'intensité"
     ],
     "DESCRIPTION": "L'Intensité augmente les dégâts, l'Armure et la Brûlure appliqués par les Feu Follets lorsqu'ils sont Enflammés ."
@@ -45,8 +45,8 @@
     "PROPER_NAME": "Extinction",
     "NAMES": [
       "éteignez",
-      "éteints"
-      "éteignez-les"
+      "éteints",
+      "éteignez-les",
       "éteignez-le"
     ],
     "DESCRIPTION": "Permet au Feu Follet d'être Enflammé à nouveau, réinitialisant ses conditions d'Inflammation."
@@ -55,8 +55,8 @@
     "PROPER_NAME": "Inflammation",
     "NAMES": [
       "enflammez",
-      "enflammé"
-      "enflammez-le"
+      "enflammé",
+      "enflammez-le",
       "enflammés"
     ],
     "DESCRIPTION": "Déclenche l'effet d'Inflammation décrit d'un Feu Follet."

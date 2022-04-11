@@ -82,7 +82,7 @@
   },
   "hermit:Roughhouse": {
     "NAME": "Chahut",
-    "DESCRIPTION": "Infligez !D! dégâts. hermit:Dans_Le_Mille\: NL Gagnez !B! d'Armure."
+    "DESCRIPTION": "Infligez !D! dégâts. hermit:Dans_Le_Mille : NL Gagnez !B! d'Armure."
   },
   "hermit:Malice": {
     "NAME": "Malice",
@@ -90,11 +90,11 @@
   },
   "hermit:Deadeye": {
     "NAME": "Fine gâchette",
-    "DESCRIPTION": "Infligez !D! dégâts. NL hermit:Dans_Le_Mille\: NL Gagnez !M! de Force."
+    "DESCRIPTION": "Infligez !D! dégâts. NL hermit:Dans_Le_Mille : NL Gagnez !M! de Force."
   },
   "hermit:GhostlyPresence": {
     "NAME": "Présence fantômatique",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL hermit:Dans_Le_Mille\: NL Appliquez !M! de Faiblesse à TOUS les ennemis."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL hermit:Dans_Le_Mille : NL Appliquez !M! de Faiblesse à TOUS les ennemis."
   },
   "hermit:Adapt": {
     "NAME": "Adaptation",
@@ -102,7 +102,7 @@
   },
   "hermit:Dive": {
     "NAME": "Plongée",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL hermit:Dans_Le_Mille\: NL Gagnez !M! *d'Armure *Plaquée."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL hermit:Dans_Le_Mille : NL Gagnez !M! *d'Armure *Plaquée."
   },
   "hermit:FlashPowder": {
     "NAME": "Poudre Flash",
