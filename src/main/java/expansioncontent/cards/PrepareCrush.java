@@ -26,7 +26,7 @@ public class PrepareCrush extends AbstractExpansionCard {
     private static final int MAGIC = 3;
 
     public PrepareCrush() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_slime.png", "expansioncontentResources/images/1024/bg_boss_slime.png");
 
         tags.add(expansionContentMod.STUDY_SLIMEBOSS);

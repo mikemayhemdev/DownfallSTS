@@ -24,8 +24,8 @@
   },
   "Slimebound:SamplingLick": {
     "NAME": "Sampling Lick",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL Gain !B! Block. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop NL Gain !B! Block. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop. NL Gain !B! Block. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !slime! slimeboundmod:Goop NL Gain !B! Block. NL Draw a card. NL Exhaust."
   },
   "Slimebound:DuplicateSlimes": {
     "NAME": "Replication",
@@ -151,23 +151,23 @@
   },
   "Slimebound:Lick": {
     "NAME": "Lick",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! slimeboundmod:Goop. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !slime! slimeboundmod:Goop. NL Draw a card. NL Exhaust."
   },
   "Slimebound:HauntingLick": {
     "NAME": "Haunting Lick",
-    "DESCRIPTION": "Apply !M! Vulnerable and !SlimeboundSlimed! slimeboundmod:Goop. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and !SlimeboundSlimed! slimeboundmod:Goop. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Vulnerable and !slime! slimeboundmod:Goop. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and !slime! slimeboundmod:Goop. NL Draw a card. NL Exhaust."
   },
   "Slimebound:MegaLick": {
     "NAME": "Mega-Lick",
-    "DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! slimeboundmod:Goop to ALL enemies. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! slimeboundmod:Goop to ALL enemies. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak and !slime! slimeboundmod:Goop to ALL enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !slime! slimeboundmod:Goop to ALL enemies. NL Draw a card. NL Exhaust."
   },
   "Slimebound:RejuvenatingLick": {
     "NAME": "Rejuvenating Lick",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL Heal !M! HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL Heal !M! HP. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop. NL Heal !M! HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !slime! slimeboundmod:Goop. NL Heal !M! HP. NL Draw a card. NL Exhaust."
   },
   "Slimebound:Gluttony": {
     "NAME": "Gluttony",
@@ -225,7 +225,7 @@
   },
   "Slimebound:LivingWall": {
     "NAME": "Living Wall",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !SlimeboundSlimed! slimeboundmod:Goop to attackers this turn."
+    "DESCRIPTION": "Gain !B! Block. NL Apply !slime! slimeboundmod:Goop to attackers this turn."
   },
   "Slimebound:Slimepotheosis": {
     "NAME": "Slimepotheosis",
@@ -247,7 +247,7 @@
   },
   "Slimebound:CorrosiveSpit": {
     "NAME": "Corrosive Spit",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop."
+    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop."
   },
   "Slimebound:Chomp": {
     "NAME": "Chomp",
@@ -256,7 +256,7 @@
   },
   "Slimebound:DouseInSlime": {
     "NAME": "Douse in Slime",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL The next Attack used on this enemy does not remove slimeboundmod:Goop."
+    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop. NL The next Attack used on this enemy does not remove slimeboundmod:Goop."
   },
   "Slimebound:FlameTackle": {
     "NAME": "Flame Tackle",
@@ -264,12 +264,12 @@
   },
   "Slimebound:RainOfGoop": {
     "NAME": "Rain of Goop",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop to a random enemy !M! times.",
-    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop to a random enemy !M! times."
+    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop to a random enemy !M! times.",
+    "UPGRADE_DESCRIPTION": "Apply !slime! slimeboundmod:Goop to a random enemy !M! times."
   },
   "Slimebound:GoopSpray": {
     "NAME": "Goop Spray",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop and !M! Vulnerable to ALL enemies."
+    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop and !M! Vulnerable to ALL enemies."
   },
   "Slimebound:MassFeed": {
     "NAME": "Mass Feed",

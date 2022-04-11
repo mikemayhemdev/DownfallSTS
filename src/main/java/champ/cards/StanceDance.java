@@ -33,6 +33,7 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+
         //if (upgraded) techique();
         atb(new OctoChoiceAction(m, this));
         postInit();
@@ -52,27 +53,28 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
                 if (upgraded || AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)|| AbstractDungeon.player.stance.ID.equals(champ.stances.UltimateStance.STANCE_ID)) {
                     ArrayList<AbstractCard> rCardList = new ArrayList<AbstractCard>();
                     for (AbstractCard t : CardLibrary.getAllCards()) {
-                        if (!UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.COMBOBERSERKER))
+                        if (!UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.COMBOBERSERKER) &&!t.hasTag(CardTags.HEALING))
                             rCardList.add(t);
                     }
                     AbstractCard r = rCardList.get(AbstractDungeon.cardRandomRng.random(rCardList.size() - 1));
                     UnlockTracker.markCardAsSeen(r.cardID);
                     makeInHand(r);
                 }
-                berserkOpen();
+                ChampMod.berserkOpen();
+
                 break;
             case "octo:OctoDefense":
                 if (upgraded || AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)) {
                     ArrayList<AbstractCard> rCardList = new ArrayList<AbstractCard>();
                     for (AbstractCard t : CardLibrary.getAllCards()) {
-                        if (!UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.COMBODEFENSIVE))
+                        if (!UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.COMBODEFENSIVE) &&!t.hasTag(CardTags.HEALING))
                             rCardList.add(t);
                     }
                     AbstractCard r = rCardList.get(AbstractDungeon.cardRandomRng.random(rCardList.size() - 1));
                     UnlockTracker.markCardAsSeen(r.cardID);
                     makeInHand(r);
                 }
-                defenseOpen();
+                ChampMod.defenseOpen();
                 break;
         }
 

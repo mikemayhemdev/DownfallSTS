@@ -20,9 +20,6 @@ public class MixItUp extends AbstractSneckoCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < this.magicNumber; i++) {
-            dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        }
         atb(new AbstractGameAction() {
             @Override
             public void update() {
@@ -35,6 +32,9 @@ public class MixItUp extends AbstractSneckoCard {
                 }
             }
         });
+        for (int i = 0; i < this.magicNumber; i++) {
+            dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        }
 
     }
 

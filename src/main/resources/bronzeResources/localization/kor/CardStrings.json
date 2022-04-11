@@ -25,7 +25,7 @@
   },
   "bronze:DonuBeam": {
     "NAME": "시제품-광선",
-    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. NL bronze:컴파일 - 힘을 !M! 얻고 민첩을 !bauto! 잃습니다.",
+    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. NL bronze:컴파일 - 힘을 !M! 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       "부드러운",
       "폭발"
@@ -83,7 +83,7 @@
   },
   "bronze:Branch": {
     "NAME": "분기",
-    "DESCRIPTION": "선택 - 피해를 !D! 줍니다 또는 방어도를 !B! 얻습니다. NL 선택하지 않은 효과를 bronze:부호화합니다. NL 소멸.",
+    "DESCRIPTION": "피해를 !D! 줍니다 또는 방어도를 !B! 얻습니다. NL 선택하지 않은 효과를 bronze:부호화합니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
       "분기: 공격",
       "피해를 !D! 줍니다.",
@@ -92,8 +92,9 @@
     ]
   },
   "bronze:DelayedSlice": {
-    "NAME": "지연된 박편",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL bronze:컴파일 - 적 전체가 체력을 !M! 잃습니다.",
+    "NAME": "산업용 기계",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 다음 턴에 카드를 !M! 장 더 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 다음 턴에 카드를 !M! 장 더 뽑습니다.",
     "EXTENDED_DESCRIPTION": [
       "지연된",
       "박편"
@@ -123,6 +124,10 @@
       "노드"
     ]
   },
+  "bronze:WildStrike": {
+    "NAME": "광역 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다. π NL *상처를 1장 bronze:투입합니다."
+  },
   "bronze:Overheat": {
     "NAME": "과열",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 다음으로 bronze:부호화하는 카드의 bronze:컴파일 *오류 효과를 제거합니다."
@@ -137,8 +142,8 @@
   },
   "bronze:RecursiveStrike": {
     "NAME": "반복 타격",
-    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. NL bronze:컴파일 - *타격 카드를 !M! 장 복사해 bronze:부호화합니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. NL bronze:컴파일 - *타격+ 카드를 !M! 장 복사해 bronze:부호화합니다.",
+    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. NL *타격 카드를 !M! 장 복사해 bronze:부호화합니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. NL *타격+ 카드를 !M! 장 복사해 bronze:부호화합니다.",
     "EXTENDED_DESCRIPTION": [
       "반복되는",
       "재발"
@@ -154,15 +159,15 @@
   },
   "bronze:OilSpill": {
     "NAME": "기름 유출",
-    "DESCRIPTION": "피해를 !D! 주고 중독을 !M! 부여합니다. NL bronze:컴파일 *오류 - *점액투성이를 bronze:투입합니다.",
+    "DESCRIPTION": "피해를 !D! 주고 중독을 !M! 부여합니다. NL bronze:컴파일 *오류 - *점액투성이를 1장 bronze:투입합니다.",
     "EXTENDED_DESCRIPTION": [
       "기름진",
       "유출"
     ]
   },
   "bronze:WildBeam": {
-    "NAME": "광역 광선",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL bronze:컴파일 *오류 - *부상을 bronze:투입합니다.",
+    "NAME": "세척",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 뽑을 카드 더미에서 무작위 상태이상을 1장 소멸시킵니다.",
     "EXTENDED_DESCRIPTION": [
       "광역",
       "광선"
@@ -186,7 +191,7 @@
   },
   "bronze:Shield": {
     "NAME": "끈적이 방패",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL *점액투성이를 bronze:투입합니다.",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL *점액투성이를 1장 bronze:투입합니다.",
     "EXTENDED_DESCRIPTION": [
       "끈적이",
       "방패"
@@ -194,7 +199,7 @@
   },
   "bronze:Deprecate": {
     "NAME": "비난",
-    "DESCRIPTION": "적 전체에게 약화를 !M! 부여합니다. NL bronze:컴파일 *오류 - 약화를 얻습니다.",
+    "DESCRIPTION": "약화를 !M! 부여합니다.",
     "EXTENDED_DESCRIPTION": [
       "오랜",
       "비난"
@@ -202,7 +207,7 @@
   },
   "bronze:Invalidate": {
     "NAME": "무효화",
-    "DESCRIPTION": "적 전체에게 취약을 !M! 부여합니다. NL bronze:컴파일 *오류 - 취약을 얻습니다.",
+    "DESCRIPTION": "취약을 !M! 부여합니다.",
     "EXTENDED_DESCRIPTION": [
       "무효",
       "오류"
@@ -219,8 +224,8 @@
   },
   "bronze:BitShift": {
     "NAME": "비트 이동",
-    "DESCRIPTION": "순차열에 있는 카드를 1장 선택해 가져옵니다. NL 그 카드에 보존 효과가 추가됩니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "보존. NL 순차열에 있는 카드를 1장 선택해 가져옵니다. NL 그 카드에 보존 효과가 추가됩니다. NL 소멸."
+    "DESCRIPTION": "순차열에 있는 카드를 1장 선택해 가져옵니다. 그 카드에 보존 효과가 추가됩니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "보존. NL 순차열에 있는 카드를 1장 선택해 가져옵니다. 그 카드에 보존 효과가 추가됩니다. NL 소멸."
   },
   "bronze:ByteShift": {
     "NAME": "바이트 이동",
@@ -260,7 +265,7 @@
   },
   "bronze:Flail": {
     "NAME": "동요",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 만큼 !bauto! 번 줍니다. NL bronze:컴파일 - 인공물을 !M! 얻습니다.",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 만큼 !bauto! 번 줍니다. 인공물을 !M! 얻습니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
       "휘젓는",
       "동요"
@@ -292,12 +297,12 @@
   },
   "bronze:BronzeOrb": {
     "NAME": "청동 구체",
-    "DESCRIPTION": "선천성. NL 방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 뽑을 카드 더미에 있는 무작위 부호화 카드를 1장 bronze:부호화합니다. NL 소멸."
+    "DESCRIPTION": "선천성. NL 피해를 !D! 줍니다. NL 뽑을 카드 더미에 있는 무작위 bronze:부호화 카드를 1장 bronze:부호화합니다. NL 소멸."
   },
   "bronze:Virus": {
     "NAME": "바이러스",
-    "DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 손에 있는 모든 카드를 *소형 *광선으로 변화시킵니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 손에 있는 모든 카드를 *소형 *광선+으로 변화시킵니다. NL 소멸."
+    "DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 손에 있는 모든 카드를 *소형 *광선으로 sneckomod:변화시킵니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 손에 있는 모든 카드를 *소형 *광선+으로 sneckomod:변화시킵니다."
   },
   "bronze:Backtrace": {
     "NAME": "역추적",
@@ -326,8 +331,8 @@
   },
   "bronze:ClassDefault": {
     "NAME": "기본 클래스",
-    "DESCRIPTION": "현재 처음 순차열에 있는 카드는 다음 !M! 번까지 처음 순차열이 공백이 된다면 자동으로 처음 순차열에 그 카드를 bronze:부호화합니다.",
-    "UPGRADE_DESCRIPTION": "보존. NL 현재 처음 순차열에 있는 카드는 다음 !M! 번까지 처음 순차열이 공백이 된다면 자동으로 처음 순차열에 그 카드를 bronze:부호화합니다."
+    "DESCRIPTION": "현재 처음 순차열에 있는 카드는 다음 !M! 번까지 처음 순차열이 공백이 된다면 처음 순차열에 그 카드를 bronze:부호화합니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 현재 처음 순차열에 있는 카드는 다음 !M! 번까지 처음 순차열이 공백이 된다면 처음 순차열에 그 카드를 bronze:부호화합니다."
   },
   "bronze:ItsAFeature": {
     "NAME": "특징",
@@ -353,16 +358,16 @@
   },
   "bronze:MaxOutput": {
     "NAME": "최대 출력",
-    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 내 턴 시작 시 추가로 카드를 1장 뽑고 *어지러움을 1장 bronze:투입합니다 ."
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 내 턴 시작 시 추가로 카드를 1장 뽑고 *어지러움을 1장 bronze:투입합니다."
   },
   "bronze:Mutator": {
     "NAME": "돌연변이",
-    "DESCRIPTION": "힘을 1 얻습니다. NL 손에 있는 상태이상을 이 카드로 변화시킵니다.",
-    "UPGRADE_DESCRIPTION": "보존. NL 힘을 1 얻습니다. NL 손에 있는 상태이상을 이 카드로 변화시킵니다."
+    "DESCRIPTION": "힘을 1 얻습니다. NL 손에 있는 상태이상을 이 카드로 sneckomod:변화시킵니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 힘을 1 얻습니다. NL 손에 있는 상태이상을 이 카드로 sneckomod:변화시킵니다."
   },
   "bronze:Allocate": {
     "NAME": "배정",
-    "DESCRIPTION": "뽑을 카드 더미에 있는 상태이상 카드 한 장당 [E] 를 얻습니다.",
+    "DESCRIPTION": "뽑을 카드 더미에 있는 상태이상 한 장당 [E] 를 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       " NL ( [E] 를 ",
       " 얻습니다.)"
@@ -399,7 +404,7 @@
   },
   "bronze:Safeguard": {
     "NAME": "안전보호",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL bronze:컴파일 *오류 - 손상을 !M! 얻습니다.",
+    "DESCRIPTION": "방어도를 !B! 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       "안전한",
       "수호"
@@ -407,7 +412,7 @@
   },
   "bronze:BronzeArmor": {
     "NAME": "청동 갑옷",
-    "DESCRIPTION": "인공물을 !bauto! 얻습니다. NL bronze:컴파일 *오류 - 적 전체에게 인공물을 !M! 부여합니다.",
+    "DESCRIPTION": "인공물을 !bauto! 얻습니다. NL bronze:컴파일 *오류 - 적 전체가 방어도를 !M! 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       "청동",
       "갑옷"
@@ -416,7 +421,7 @@
   "bronze:ForLoop": {
     "NAME": "For 루프",
     "DESCRIPTION": "다음으로 bronze:부호화하는 카드를 추가로 X장 bronze:부호화합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "보존. NL 다음으로 bronze:부호화하는 카드를 추가로 X장 bronze:부호화합니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "다음으로 bronze:부호화하는 카드를 추가로 X+1장 bronze:부호화합니다. NL 소멸."
   },
   "bronze:Philosophize": {
     "NAME": "철학",
@@ -428,8 +433,8 @@
   },
   "bronze:Return": {
     "NAME": "복귀",
-    "DESCRIPTION": "내 다음 X 턴 시작 시 [E] 를 얻고 카드를 추가로 1장 뽑습니다. NL [E] 를 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "내 다음 X 턴 시작 시 [E] 를 얻고 카드를 추가로 1장 뽑습니다. NL [E] 를 얻습니다."
+    "DESCRIPTION": "버린 카드 더미에서 카드를 1장 선택해 뽑을 카드 더미 맨 위에 놓습니다. NL 다음 턴에 [E] 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "버린 카드 더미에서 카드를 1장 선택해 뽑을 카드 더미 맨 위에 놓습니다. NL 다음 턴에 [E] [E] 를 얻습니다."
   },
   "bronze:ForceShield": {
     "NAME": "강제 방패",
@@ -450,15 +455,15 @@
   },
   "bronze:BurnOut": {
     "NAME": "불태우기",
-    "DESCRIPTION": "bronze:소유한 상태이상 카드 한 장당 무작위 적에게 피해를 !D! 주고 그 카드를 모두 소멸시킵니다. NL *화상을 3장 bronze:투입합니다.",
+    "DESCRIPTION": "bronze:소유한 상태이상 한 장당 무작위 적들에게 피해를 !D! 주고 그 카드를 모두 소멸시킵니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
-      " NL ",
-      " 번 피해를 줍니다.)"
+      "bronze:소유한 상태이상 한 장당 무작위 적들에게 피해를 !D! 주고 그 카드를 모두 소멸시킵니다. NL 소멸. NL (피해를 ",
+      " 번 줍니다.)"
     ]
   },
   "bronze:ShipIt": {
     "NAME": "출하",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL bronze:소유한 상태이상 카드 한 장당 이 카드의 피해량이 !M! 증가합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL bronze:소유한 상태이상 한 장당 이 카드의 피해량이 !M! 증가합니다."
   },
   "bronze:Break": {
     "NAME": "일시 정지",
@@ -483,8 +488,8 @@
   },
   "bronze:Verify": {
     "NAME": "지각력의 형상",
-    "DESCRIPTION": "휘발성. NL 매 턴 처음으로 함수 카드를 생성하거나 뽑으면 그 카드의 모든 수치를 1 증가시킵니다.",
-    "UPGRADE_DESCRIPTION": "매 턴 처음으로 함수 카드를 생성하거나 뽑으면 그 카드의 모든 수치를 1 증가시킵니다."
+    "DESCRIPTION": "휘발성. NL 함수 카드를 뽑을 때마다 그 카드의 모든 수치를 1 증가시킵니다.",
+    "UPGRADE_DESCRIPTION": "함수 카드를 뽑을 때마다 그 카드의 모든 수치를 1 증가시킵니다."
   },
   "bronze:BronzeHeatsink": {
     "NAME": "청동 방열판",
@@ -516,7 +521,7 @@
   },
   "bronze:HyperBeam": {
     "NAME": "파괴 광선",
-    "DESCRIPTION": "보존. NL 적 전체에게 피해를 !D! 줍니다. NL *공허 5장을 뽑을 카드 맨 위에 놓습니다. NL 이번 전투 동안 보존 될 때마다 이 카드의 비용이 [E] 감소합니다."
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL *공허 5장을 뽑을 카드 맨 위에 놓습니다."
   },
   "bronze:Hardcode": {
     "NAME": "하드코드",
@@ -529,7 +534,7 @@
   },
   "bronze:Assembly": {
     "NAME": "어셈블리",
-    "DESCRIPTION": "예지 !M!. NL *예지로 버린 모든 bronze:부호화 카드를 bronze:부호화합니다. NL 소멸."
+    "DESCRIPTION": "예지 !M!. NL *예지로 버린 모든 bronze:부호화 카드를 선택한 순서대로 bronze:부호화합니다. NL 소멸."
   },
   "bronze:FineTuning": {
     "NAME": "미세 조정",
@@ -538,7 +543,8 @@
   },
   "bronze:CleanCode": {
     "NAME": "깔끔한 코드",
-    "DESCRIPTION": "순차열에 있는 모든 bronze:컴파일 *오류 효과를 제거합니다. NL 다음 함수 카드를 !M! 장 생성할 때까지 지속됩니다."
+    "DESCRIPTION": "다음으로 bronze:부호화하는 카드 !M! 장의 bronze:컴파일 *오류 효과를 제거합니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 다음으로 !M! bronze:부호화하는 카드 !M! 장의 bronze:컴파일 *오류 효과를 제거합니다."
   },
   "bronze:BranchBlock": {
     "NAME": "분기: 방어도",
@@ -583,12 +589,12 @@
   },
   "bronze:TinkerersToolbox": {
     "NAME": "개발자 도구",
-    "DESCRIPTION": "보존. NL *오류 *검출, *일괄, *디컴파일, *바이트 *이동 카드 중 하나를 선택합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "보존. NL *오류 *검출, *일괄, *디컴파일, *바이트 *이동 카드 중 하나를 선택합니다."
+    "DESCRIPTION": "보존. NL *오류 *검출, *일괄, *디컴파일 또는 *바이트 *이동을 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "보존. NL *오류 *검출, *일괄, *디컴파일 또는 *바이트 *이동을 얻습니다."
   },
   "bronze:Refactor": {
     "NAME": "리팩터",
-    "DESCRIPTION": "예지 !M!. NL *예지로 버린 카드를 모두 소멸시킵니다. NL 소멸시킨 상태이상 카드 한 장당 방어도를 !B! 얻습니다."
+    "DESCRIPTION": "예지 !M!. NL *예지로 버린 카드를 모두 소멸시킵니다. NL 소멸시킨 상태이상 한 장당 방어도를 !B! 얻습니다."
   },
   "bronze:Turbo": {
     "NAME": "터보",
@@ -614,22 +620,22 @@
   },
   "bronze:FindAndReplace": {
     "NAME": "검색 & 교체",
-    "DESCRIPTION": "휘발성. NL 뽑을 또는 버린 카드 더미에서 카드를 1장 가져옵니다. NL *어지러움을 선택한 더미에 섞어 넣습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "보존. NL 뽑을 또는 버린 카드 더미에서 카드를 1장 가져옵니다. NL *어지러움을 선택한 더미에 섞어 넣습니다. NL 소멸.",
+    "DESCRIPTION": "뽑을 또는 버린 카드 더미에서 카드를 1장 가져옵니다. NL *어지러움을 선택한 더미에 섞어 넣습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "뽑을 또는 버린 카드 더미에서 카드를 1장 가져옵니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
       "선택하십시오."
     ]
   },
   "bronze:ThunderWave": {
     "NAME": "번개 파동",
-    "DESCRIPTION": "이번 전투 동안 생성된 함수 카드 한 장당 무작위 적들에게 피해를 !D! 줍니다.",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL guardianmod:버퍼를 1 얻습니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
       " NL (피해를 ",
       " 번 줍니다.)"
     ]
   },
   "bronze:AlphaBuild": {
-    "NAME": "얼리 억세스",
+    "NAME": "얼리 액세스",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 무작위 상태이상을 bronze:투입합니다. NL bronze:컴파일 - *베타 *빌드를 bronze:투입합니다.",
     "UPGRADE_DESCRIPTION": "선천성. NL \u00A0 피해를 !D! 줍니다. NL 무작위 상태이상을 bronze:투입합니다. NL bronze:컴파일 - *베타 *빌드를 bronze:투입합니다.",
     "EXTENDED_DESCRIPTION": [
@@ -647,11 +653,15 @@
   },
   "bronze:FullRelease": {
     "NAME": "정식 출시",
-    "DESCRIPTION": "bronze:컴파일 - 다음으로 병합되는 함수 카드는 매 턴 시작 시 bronze:부호화한 카드의 효과를 발동시키는 파워 카드가 됩니다.",
+    "DESCRIPTION": "bronze:컴파일 - 함수 카드가 내 턴 시작 시 bronze:부호화한 카드의 효과를 발동시키는 파워 카드가 됩니다.",
     "EXTENDED_DESCRIPTION": [
       "정식",
       "출시",
       "1.0"
     ]
+  },
+  "bronze:Undervolt": {
+    "NAME": "저전압",
+    "DESCRIPTION": "적 전체가 힘을 !M! 잃습니다. NL *화상을 2장 얻습니다. NL 소멸."
   }
 }

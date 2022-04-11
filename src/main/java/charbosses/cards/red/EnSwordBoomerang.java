@@ -26,6 +26,7 @@ public class EnSwordBoomerang extends AbstractBossCard {
         this.baseDamage = 3;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
+        this.isMultiDamage = true;
         this.tags.add(downfallMod.CHARBOSS_ATTACK);
     }
 

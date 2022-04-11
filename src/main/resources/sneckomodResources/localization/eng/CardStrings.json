@@ -1,155 +1,45 @@
 {
-  "sneckomod:Strike": {
-    "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage."
-  },
-  "sneckomod:Defend": {
-    "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block."
-  },
-  "sneckomod:SnekBite": {
-    "NAME": "Snek Bite",
-    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle the highest-cost card in your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle the !M! highest-cost cards in your hand."
-  },
-  "sneckomod:TailWhip": {
-    "NAME": "Tail Whip",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! - 2 Weak. NL Apply !M! - 2 Vulnerable."
-  },
-  "sneckomod:UnknownCommonAttack": {
-    "NAME": "???",
-    "DESCRIPTION": "*Unknown Common Attack Card."
-  },
-  "sneckomod:UnknownCommonSkill": {
-    "NAME": "???",
-    "DESCRIPTION": "*Unknown Common Skill Card."
-  },
-  "sneckomod:UnknownUncommonAttack": {
-    "NAME": "???",
-    "DESCRIPTION": "*Unknown Uncommon Attack Card."
-  },
-  "sneckomod:UnknownUncommonSkill": {
-    "NAME": "???",
-    "DESCRIPTION": "*Unknown Uncommon Skill Card."
-  },
-  "sneckomod:UnknownUncommonPower": {
-    "NAME": "???",
-    "DESCRIPTION": "*Unknown Uncommon Power Card."
-  },
-  "sneckomod:UnknownRareAttack": {
-    "NAME": "???",
-    "DESCRIPTION": "*Unknown Rare Attack Card."
-  },
-  "sneckomod:UnknownRareSkill": {
-    "NAME": "???",
-    "DESCRIPTION": "*Unknown Rare Skill Card."
-  },
-  "sneckomod:UnknownRarePower": {
-    "NAME": "???",
-    "DESCRIPTION": "*Unknown Rare Power Card."
-  },
-  "sneckomod:SoulDraw": {
-    "NAME": "Soul Draw",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Gain !M! random sneckomod:Offclass cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 - !M! cards."
-  },
-  "sneckomod:SoulRoll": {
-    "NAME": "Soul Roll",
-    "DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. NL Draw 1 card."
-  },
-  "sneckomod:SnekBeam": {
-    "NAME": "Snek Beam",
-    "DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unknown cards in your deck. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unknown cards in your deck.",
-    "EXTENDED_DESCRIPTION": [
-      " NL (Deals !D! damage.) NL Exhaust.",
-      " NL (Deals !D! damage.)"
-    ]
-  },
-  "sneckomod:UnknownStrike": {
-    "NAME": "??? Strike",
-    "DESCRIPTION": "*Unknown Strike Card."
-  },
-  "sneckomod:Nope": {
-    "NAME": "Nope",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. Gain a random card of the same class.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. Gain a random card of the same class. NL It costs 1 less.",
-    "EXTENDED_DESCRIPTION": [
-      " to Exhaust for Nope."
-    ]
-  },
-  "sneckomod:UnknownClass": {
-    "NAME": "???",
-    "DESCRIPTION": "*Unknown YouShouldNeverSeeThis-ReportToDev Card."
-  },
-  "sneckomod:UnknownInnate": {
-    "NAME": "???",
-    "DESCRIPTION": "*Unknown Innate Card."
-  },
-  "sneckomod:Unknown": {
-    "NAME": "??? Basic",
-    "DESCRIPTION": "*Unknown Basic Card."
-  },
-  "sneckomod:Unknown0Cost": {
-    "NAME": "??? 0-Cost",
-    "DESCRIPTION": "*Unknown 0 Cost Card."
-  },
-  "sneckomod:Unknown1Cost": {
-    "NAME": "??? 1-Cost",
-    "DESCRIPTION": "*Unknown 1 Cost Card."
-  },
-  "sneckomod:Unknown2Cost": {
-    "NAME": "??? 2-Cost",
-    "DESCRIPTION": "*Unknown 2 Cost Card."
-  },
-  "sneckomod:Unknown3Cost": {
-    "NAME": "??? 3-Cost",
-    "DESCRIPTION": "*Unknown 3 Cost Card."
-  },
-  "sneckomod:UnknownX": {
-    "NAME": "??? X-Cost",
-    "DESCRIPTION": "*Unknown X Cost Card."
-  },
-  "sneckomod:UnknownEthereal": {
-    "NAME": "???",
-    "DESCRIPTION": "*Unknown Ethereal Card."
-  },
-  "sneckomod:UnknownBlock": {
-    "NAME": "??? Block",
-    "DESCRIPTION": "*Unknown Block Card."
-  },
-  "sneckomod:UnknownExhaust": {
-    "NAME": "??? Exhaust",
-    "DESCRIPTION": "*Unknown Exhaust Card."
-  },
-  "sneckomod:SoulCleanse": {
-    "NAME": "Soul Cleanse",
-    "DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. Cards sneckomod:Muddled this way cannot cost 3. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. Cards sneckomod:Muddled this way cannot cost 3."
-  },
-  "sneckomod:SoulExchange": {
-    "NAME": "Soul Exchange",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card, NL Choose a card, then *Transform your hand to that card's class.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw !M! cards, NL Choose a card, then *Transform your hand to that card's class.",
-    "EXTENDED_DESCRIPTION": [
-      "to Exhaust for Soul Exchange."
-    ]
-  },
   "sneckomod:CheapStock": {
     "NAME": "Cheap Stock",
     "DESCRIPTION": "At the start of your turn, reduce the cost of the highest cost sneckomod:Offclass card in your hand by 1.",
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, reduce the cost of the highest cost sneckomod:Offclass card in your hand by 1."
   },
-  "sneckomod:UnlimitedRolls": {
-    "NAME": "Unlimited Rolls",
-    "DESCRIPTION": "At the start of your turn, add an gremlin:Echo of *Soul *Roll to your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add an gremlin:Echo of *Soul *Roll to your hand."
+  "sneckomod:Cheat": {
+    "NAME": "Pure Luck",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Gain sneckomod:Lucky until the end of turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Gain sneckomod:Lucky until the end of turn."
   },
-  "sneckomod:MasterEye": {
-    "NAME": "Master Eye",
-    "DESCRIPTION": "Become Confused. NL Draw !M! additional card each turn.",
-    "UPGRADE_DESCRIPTION": "Become Confused. NL Draw !M! additional cards each turn."
+  "sneckomod:DangerNoodle": {
+    "NAME": "Danger Noodle",
+    "DESCRIPTION": "Deal !D! damage. NL Repeat this for each sneckomod:Offclass card in your hand, then Exhaust those cards."
+  },
+  "sneckomod:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "sneckomod:DefensiveFlair": {
+    "NAME": "Defensive Flair",
+    "DESCRIPTION": "Gain !B! Block, increased by !M! for each sneckomod:Offclass card in your hand."
+  },
+  "sneckomod:DiceBlock": {
+    "NAME": "Dice Block",
+    "DESCRIPTION": "Gain !M! - !B! Block."
+  },
+  "sneckomod:DiceBoulder": {
+    "NAME": "Dice Boulder",
+    "DESCRIPTION": "Deal !M! - !D! damage. NL Can be Upgraded any number of times."
+  },
+  "sneckomod:DiceCrush": {
+    "NAME": "Dice Crush",
+    "DESCRIPTION": "Deal !M! - !D! damage."
+  },
+  "sneckomod:GlitteringGambit": {
+    "NAME": "Glittering Gambit",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Gain !M! - 30 *Gold. NL Exhaust."
+  },
+  "sneckomod:IronFang": {
+    "NAME": "Iron Fang",
+    "DESCRIPTION": "Deal !qqq! - !D! damage. NL Gain !M! - !B! Block."
   },
   "sneckomod:ImprovisedAttack": {
     "NAME": "Improvised Attack",
@@ -159,19 +49,70 @@
     "NAME": "Improvised Guard",
     "DESCRIPTION": "Gain !B! Block. NL Gain a random sneckomod:Offclass Skill and sneckomod:Muddle it."
   },
-  "sneckomod:QuickMove": {
-    "NAME": "Quick Move",
-    "DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle the highest-cost card in your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle the !M! highest-cost cards in your hand."
+  "sneckomod:Nope": {
+    "NAME": "Nope",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. Gain a random card of the same class.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. Gain a random card of the same class. NL It costs 1 less.",
+    "EXTENDED_DESCRIPTION": [
+      " to Exhaust for Nope."
+    ]
+  },
+  "sneckomod:MasterEye": {
+    "NAME": "Master Eye",
+    "DESCRIPTION": "Become Confused. NL Draw !M! additional card each turn.",
+    "UPGRADE_DESCRIPTION": "Become Confused. NL Draw !M! additional cards each turn."
+  },
+  "sneckomod:Memorize": {
+    "NAME": "Memorize",
+    "DESCRIPTION": "sneckomod:Snekproof. Fleeting. NL Choose a card in hand which started *Unidentified. sneckomod:Identify it.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. Fleeting. Retain. NL Choose a card in hand which started *Unidentified. sneckomod:Identify it.",
+    "EXTENDED_DESCRIPTION": [
+      " to Identify."
+    ]
+  },
+  "sneckomod:MixItUp": {
+    "NAME": "Mix It Up!",
+    "DESCRIPTION": "*Transform your Potions. NL Deal !D! damage !M! times. NL Exhaust."
+  },
+  "sneckomod:MorePower": {
+    "NAME": "More Power!",
+    "DESCRIPTION": "Obtain an additional Upgraded *Unidentified card reward at the end of combat."
+  },
+  "sneckomod:Mudshield": {
+    "NAME": "Mud Shield",
+    "DESCRIPTION": "Whenever you sneckomod:Muddle a card, gain !M! Block.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you sneckomod:Muddle a card, gain !M! Block."
+  },
+  "sneckomod:PureSnecko": {
+    "NAME": "Shift",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Transform all sneckomod:Offclass cards in your hand.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Transform all sneckomod:Offclass cards in your hand. NL They cost 1 less."
   },
   "sneckomod:QuickBite": {
     "NAME": "Snake Rake",
     "DESCRIPTION": "Deal !D! damage. NL Draw !M! - 2 cards. NL sneckomod:Muddle the highest-cost card in your hand."
   },
+  "sneckomod:QuickMove": {
+    "NAME": "Quick Move",
+    "DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle the highest-cost card in your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle the !M! highest-cost cards in your hand."
+  },
+  "sneckomod:RainOfDice": {
+    "NAME": "Rain of Dice",
+    "DESCRIPTION": "Deal !qqq! - !D! damage to a random enemy. NL sneckomod:Muddle this, then return this to your hand."
+  },
+  "sneckomod:Restock": {
+    "NAME": "Restock",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Discard your hand. NL Draw 5-10 cards. NL Exhaust."
+  },
   "sneckomod:Rotation": {
     "NAME": "Rotation",
     "DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards.",
     "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards plus !M!."
+  },
+  "sneckomod:SerpentIdol": {
+    "NAME": "Serpent Idol",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Choose 1 of 3 random sneckomod:Offclass cards to gain. It costs 0 this turn. NL Exhaust."
   },
   "sneckomod:SerpentMind": {
     "NAME": "Exotic Form",
@@ -181,23 +122,54 @@
     "NAME": "Slither Strike",
     "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by 1 this turn."
   },
-  "sneckomod:PureSnecko": {
-    "NAME": "Shift",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Transform all sneckomod:Offclass cards in your hand.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Transform all sneckomod:Offclass cards in your hand. NL They cost 1 less."
+  "sneckomod:SnakeSap": {
+    "NAME": "Snake Sap",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Deal !qqq! - !D! damage. NL Gain 1 - !M! [E] . NL Exhaust."
   },
-  "sneckomod:Cheat": {
-    "NAME": "Pure Luck",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Gain sneckomod:Lucky until the end of turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Gain sneckomod:Lucky until the end of turn."
+  "sneckomod:SnekBeam": {
+    "NAME": "Snek Beam",
+    "DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unidentified cards in your deck. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unidentified cards in your deck.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deals !D! damage.) NL Exhaust.",
+      " NL (Deals !D! damage.)"
+    ]
   },
-  "sneckomod:Restock": {
-    "NAME": "Restock",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Discard your hand. NL Draw 5-10 cards. NL Exhaust."
+  "sneckomod:SnekBite": {
+    "NAME": "Snek Bite",
+    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle the highest-cost card in your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle the !M! highest-cost cards in your hand."
   },
-  "sneckomod:GlitteringGambit": {
-    "NAME": "Glittering Gambit",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Gain !M! - 30 *Gold. NL Exhaust."
+  "sneckomod:SoulCleanse": {
+    "NAME": "Soul Cleanse",
+    "DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. Cards sneckomod:Muddled this way cannot cost 3. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. Cards sneckomod:Muddled this way cannot cost 3."
+  },
+  "sneckomod:SoulDraw": {
+    "NAME": "Soul Draw",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Gain !M! random sneckomod:Offclass cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 - !M! cards."
+  },
+  "sneckomod:SoulExchange": {
+    "NAME": "Soul Exchange",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card, NL Choose a card, then *Transform your hand to that card's class.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw !M! cards, NL Choose a card, then *Transform your hand to that card's class.",
+    "EXTENDED_DESCRIPTION": [
+      "to Exhaust for Soul Exchange."
+    ]
+  },
+  "sneckomod:SoulRoll": {
+    "NAME": "Soul Roll",
+    "DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. NL Draw 1 card."
+  },
+  "sneckomod:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "sneckomod:TailWhip": {
+    "NAME": "Tail Whip",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! - 2 Weak. NL Apply !M! - 2 Vulnerable."
   },
   "sneckomod:Transmogrify": {
     "NAME": "Transmogrify",
@@ -210,102 +182,126 @@
       " Relic."
     ]
   },
-  "sneckomod:DefensiveFlair": {
-    "NAME": "Defensive Flair",
-    "DESCRIPTION": "Gain !B! Block, increased by !M! for each sneckomod:Offclass card in your hand."
-  },
-  "sneckomod:DangerNoodle": {
-    "NAME": "Danger Noodle",
-    "DESCRIPTION": "Deal !D! damage. NL Repeat this for each sneckomod:Offclass card in your hand, then Exhaust those cards."
-  },
-  "sneckomod:SerpentIdol": {
-    "NAME": "Serpent Idol",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Choose 1 of 3 random sneckomod:Offclass cards to gain. It costs 0 this turn. NL Exhaust."
-  },
   "sneckomod:TrashToTreasure": {
     "NAME": "Trash to Treasure",
     "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. NL Gain [E] equal to its cost. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. NL Gain [E] equal to its cost."
   },
-  "sneckomod:DiceBlock": {
-    "NAME": "Dice Block",
-    "DESCRIPTION": "Gain !M! - !B! Block."
+  "sneckomod:UnendingSupply": {
+    "NAME": "Unending Supply",
+    "DESCRIPTION": "At the start of each turn, gain a random sneckomod:Offclass card."
   },
-  "sneckomod:MixItUp": {
-    "NAME": "Mix It Up!",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL *Transform your Potions. NL Exhaust."
+  "sneckomod:Unknown": {
+    "NAME": "??? Basic",
+    "DESCRIPTION": "*Unidentified Basic Card."
   },
-  "sneckomod:MorePower": {
-    "NAME": "More Power!",
-    "DESCRIPTION": "Obtain an additional Upgraded *Unknown card reward at the end of combat."
+  "sneckomod:Unknown0Cost": {
+    "NAME": "??? 0-Cost",
+    "DESCRIPTION": "*Unidentified 0 Cost Card."
   },
-  "sneckomod:UnknownStrength": {
-    "NAME": "??? Strength",
-    "DESCRIPTION": "*Unknown Strength Card."
+  "sneckomod:Unknown1Cost": {
+    "NAME": "??? 1-Cost",
+    "DESCRIPTION": "*Unidentified 1 Cost Card."
   },
-  "sneckomod:UnknownDraw": {
-    "NAME": "??? Draw",
-    "DESCRIPTION": "*Unknown Draw Card."
+  "sneckomod:Unknown2Cost": {
+    "NAME": "??? 2-Cost",
+    "DESCRIPTION": "*Unidentified 2 Cost Card."
   },
-  "sneckomod:UnknownDexterity": {
-    "NAME": "??? Dexterity",
-    "DESCRIPTION": "*Unknown Dexterity Card."
+  "sneckomod:Unknown3Cost": {
+    "NAME": "??? 3-Cost",
+    "DESCRIPTION": "*Unidentified 3 Cost Card."
   },
-  "sneckomod:UnknownWeak": {
-    "NAME": "??? Weak",
-    "DESCRIPTION": "*Unknown Weak Card."
+  "sneckomod:UnknownBlock": {
+    "NAME": "??? Block",
+    "DESCRIPTION": "*Unidentified Block Card."
   },
-  "sneckomod:UnknownVulnerable": {
-    "NAME": "??? Vulnerable",
-    "DESCRIPTION": "*Unknown Vulnerable Card."
+  "sneckomod:UnknownBoss": {
+    "NAME": "??? Boss",
+    "DESCRIPTION": "*Unidentified Colorless Boss card."
+  },
+  "sneckomod:UnknownClass": {
+    "NAME": "??? Class",
+    "DESCRIPTION": "*Unidentified YouShouldNeverSeeThis-ReportToDev Card."
   },
   "sneckomod:UnknownColorless": {
     "NAME": "??? Colorless",
-    "DESCRIPTION": "*Unknown Colorless Card."
+    "DESCRIPTION": "*Unidentified Colorless Card."
   },
-  "sneckomod:RainOfDice": {
-    "NAME": "Rain of Dice",
-    "DESCRIPTION": "Deal !qqq! - !D! damage to a random enemy. NL sneckomod:Muddle this, then return this to your hand."
+  "sneckomod:UnknownCommonAttack": {
+    "NAME": "??? C Attack",
+    "DESCRIPTION": "*Unidentified Common Attack Card."
   },
-  "sneckomod:DiceCrush": {
-    "NAME": "Dice Crush",
-    "DESCRIPTION": "Deal !M! - !D! damage."
+  "sneckomod:UnknownCommonSkill": {
+    "NAME": "??? C Skill",
+    "DESCRIPTION": "*Unidentified Common Skill Card."
   },
-  "sneckomod:SnakeSap": {
-    "NAME": "Snake Sap",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Deal !qqq! - !D! damage. NL Gain 1 - !M! [E] . NL Exhaust."
+  "sneckomod:UnknownDexterity": {
+    "NAME": "??? Dexterity",
+    "DESCRIPTION": "*Unidentified Dexterity Card."
   },
-  "sneckomod:DiceBoulder": {
-    "NAME": "Dice Boulder",
-    "DESCRIPTION": "Deal !M! - !D! damage. NL Can be Upgraded any number of times."
+  "sneckomod:UnknownDraw": {
+    "NAME": "??? Draw",
+    "DESCRIPTION": "*Unidentified Draw Card."
   },
-  "sneckomod:IronFang": {
-    "NAME": "Iron Fang",
-    "DESCRIPTION": "Deal !qqq! - !D! damage. NL Gain !M! - !B! Block."
+  "sneckomod:UnknownEthereal": {
+    "NAME": "??? Ethereal",
+    "DESCRIPTION": "*Unidentified Ethereal Card."
   },
-  "sneckomod:Mudshield": {
-    "NAME": "Mud Shield",
-    "DESCRIPTION": "Whenever you sneckomod:Muddle a card, gain !M! Block.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you sneckomod:Muddle a card, gain !M! Block."
+  "sneckomod:UnknownExhaust": {
+    "NAME": "??? Exhaust",
+    "DESCRIPTION": "*Unidentified Exhaust Card."
+  },
+  "sneckomod:UnknownRareAttack": {
+    "NAME": "??? R Attack",
+    "DESCRIPTION": "*Unidentified Rare Attack Card."
+  },
+  "sneckomod:UnknownRarePower": {
+    "NAME": "??? R Power",
+    "DESCRIPTION": "*Unidentified Rare Power Card."
+  },
+  "sneckomod:UnknownRareSkill": {
+    "NAME": "??? R Skill",
+    "DESCRIPTION": "*Unidentified Rare Skill Card."
+  },
+  "sneckomod:UnknownStrength": {
+    "NAME": "??? Strength",
+    "DESCRIPTION": "*Unidentified Strength Card."
+  },
+  "sneckomod:UnknownStrike": {
+    "NAME": "??? Strike",
+    "DESCRIPTION": "*Unidentified Strike Card."
+  },
+  "sneckomod:UnknownUncommonAttack": {
+    "NAME": "??? U Attack",
+    "DESCRIPTION": "*Unidentified Uncommon Attack Card."
+  },
+  "sneckomod:UnknownUncommonPower": {
+    "NAME": "??? U Power",
+    "DESCRIPTION": "*Unidentified Uncommon Power Card."
+  },
+  "sneckomod:UnknownUncommonSkill": {
+    "NAME": "??? U Skill",
+    "DESCRIPTION": "*Unidentified Uncommon Skill Card."
+  },
+  "sneckomod:UnknownVulnerable": {
+    "NAME": "??? Vulnerable",
+    "DESCRIPTION": "*Unidentified Vulnerable Card."
+  },
+  "sneckomod:UnknownWeak": {
+    "NAME": "??? Weak",
+    "DESCRIPTION": "*Unidentified Weak Card."
+  },
+  "sneckomod:UnknownX": {
+    "NAME": "??? X-Cost",
+    "DESCRIPTION": "*Unidentified X Cost Card."
+  },
+  "sneckomod:UnlimitedRolls": {
+    "NAME": "Unlimited Rolls",
+    "DESCRIPTION": "At the start of your turn, gain an gremlin:Echo of *Soul *Roll.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain an gremlin:Echo of *Soul *Roll."
   },
   "sneckomod:WideSting": {
     "NAME": "Wide Sting",
     "DESCRIPTION": "Deal !M! - !D! damage to ALL enemies. NL Upgrade all sneckomod:Offclass cards in your hand."
-  },
-  "sneckomod:UnendingSupply": {
-    "NAME": "Unending Supply",
-    "DESCRIPTION": "At the start of each turn, add a random sneckomod:Offclass card to your hand."
-  },
-  "sneckomod:Memorize": {
-    "NAME": "Memorize",
-    "DESCRIPTION": "sneckomod:Snekproof. Fleeting. NL Choose a card in hand which started *Unknown. sneckomod:Identify it.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. Fleeting. Retain. NL Choose a card in hand which started *Unknown. sneckomod:Identify it.",
-    "EXTENDED_DESCRIPTION": [
-      " to Identify."
-    ]
-  },
-  "sneckomod:UnknownBoss": {
-    "NAME": "??? Boss",
-    "DESCRIPTION": "*Unknown Colorless Boss card."
   }
 }

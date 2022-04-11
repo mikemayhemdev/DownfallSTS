@@ -31,7 +31,7 @@ public class ChampionCrownUpgraded extends CustomRelic {
     @Override
     public void atBattleStart() {
         addToBot(new ChangeStanceAction(UltimateStance.STANCE_ID));
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new UltimateFormPower(2), 2));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new UltimateFormPower(1), 1));
     }
 
     @Override

@@ -73,11 +73,14 @@ public class CrystalBeam extends AbstractGuardianCard {
                 sockets.addAll(((AbstractGuardianCard) c).sockets);
             }
         }
+        /*
         for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
             if (c instanceof AbstractGuardianCard) {
                 sockets.addAll(((AbstractGuardianCard) c).sockets);
             }
         }
+
+         */
         for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
             if (c instanceof AbstractGuardianCard) {
                 sockets.addAll(((AbstractGuardianCard) c).sockets);

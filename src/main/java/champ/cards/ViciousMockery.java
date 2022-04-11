@@ -42,8 +42,8 @@ public class ViciousMockery extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToEnemy(m, new StrengthPower(m, 1));
-        applyToSelf(new VigorPower(p, magicNumber));
 
+        ChampMod.vigor(magicNumber);
         atb(new SFXAction("VO_CHAMP_2A"));
         atb(new TalkAction(true, getTaunt(), 2.0F, 2.0F));
         /*
@@ -74,10 +74,7 @@ public class ViciousMockery extends AbstractChampCard {
         return derp.get(MathUtils.random(derp.size() - 1));
     }
 
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = ((bcombo() || dcombo())) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
-    }
+
 
 
     public void upp() {

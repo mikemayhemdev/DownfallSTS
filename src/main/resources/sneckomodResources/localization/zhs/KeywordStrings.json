@@ -24,10 +24,18 @@
     "DESCRIPTION": "异蛇牌池以外的所有可获得牌。（包括 #y诅咒 和 #y状态牌 等）"
   },
   {
-    "PROPER_NAME": "Identify",
+    "PROPER_NAME": "明晰",
     "NAMES": [
-      "identify"
+      "明晰"
     ],
     "DESCRIPTION": "Replace an Unknown card with its current random card permanently."
+  },
+  {
+    "PROPER_NAME": "幸运",
+    "NAMES": [
+      "lucky",
+      "幸运"
+    ],
+    "DESCRIPTION": "牌面效果的随机值取最大值。"
   }
 ]

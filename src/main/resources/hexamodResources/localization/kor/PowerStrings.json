@@ -10,9 +10,9 @@
   "hexamod:ApocalypticArmorPower": {
     "NAME": "최후의 심판",
     "DESCRIPTIONS": [
-      "모든 유령불꽃을 #b",
-      " 개 이상 #y점화하고 #y지옥의 유령불꽃을 #y점화한다면 턴 종료 시 추가 턴을 얻습니다.",
-      "유령불꽃을 #b"
+      "모든 유령불꽃이 #b",
+      " 개 이상 #y점화되어 있다면 턴 종료 시 추가 턴을 얻습니다.",
+      "유령불꽃이 #b"
     ]
   },
   "hexamod:ApplyBurnAtTurnStartOncePower": {
@@ -77,12 +77,8 @@
   "hexamod:FuturePower": {
     "NAME": "스피드 런",
     "DESCRIPTIONS": [
-      "다음 #b",
-      " 번까지 ",
-      " 번까지 ",
-      "유령불꽃을 #y점화할 때마다 #y팽창합니다. NL 이번 턴 동안 유령불꽃을 #b",
-      " 개 점화했습니다.",
-      " 개 점화했습니다."
+      "팽창할 때마다 힘을 #b",
+      " 얻습니다. 턴 종료 시 얻은 힘을 잃습니다."
     ]
   },
   "hexamod:FutureUpgradePower": {

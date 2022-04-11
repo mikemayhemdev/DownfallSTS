@@ -9,7 +9,7 @@
     ],
     "OPTIONS": [
       "[Shatter] #rLose #r",
-      " #r HP. #gGain #g5 #gUnknown #gCards",
+      " #r HP. #gGain #g5 #gUnidentified #gCards",
       "[Take] #gGain #gMystical #gOctahedron. #rCursed #r- #rPain.",
       "[Leave]",
       "[Locked] Requires a card that uses a randomly chosen number."
@@ -21,7 +21,7 @@
       "Creativity triumphs over planning every time."
     ],
     "OPTIONS": [
-      "[Improvisation] #gReplace all #gStrikes and #gDefends with random #gUnknown cards.",
+      "[Improvisation] #gReplace all #gStrikes and #gDefends with random #gUnidentified cards.",
       "[Locked] Requires a Strike or Defend."
     ]
   },

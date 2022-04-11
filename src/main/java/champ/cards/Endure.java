@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class Endure extends AbstractChampCard {
 
     public final static String ID = makeID("Endure");
@@ -19,6 +21,7 @@ public class Endure extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = block = MAGIC;
         postInit();
+        loadJokeCardImage(this, "Endure.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

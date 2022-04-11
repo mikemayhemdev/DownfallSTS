@@ -47,11 +47,11 @@
     ]
   },
   "sneckomod:UnknownUpgradedPostCombatPower": {
-    "NAME": "Post-Combat Upgraded Unknown",
+    "NAME": "Post-Combat Upgraded Unidentified",
     "DESCRIPTIONS": [
       "At the end of combat, obtain #b",
-      " additional #yUpgraded #yUnknown cards.",
-      " additional #yUpgraded #yUnknown card."
+      " additional #yUpgraded #yUnidentified cards.",
+      " additional #yUpgraded #yUnidentified card."
     ]
   },
   "sneckomod:UnlimitedRollsPower": {

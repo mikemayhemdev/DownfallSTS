@@ -3,28 +3,28 @@
     "NAME": "铜制齿轮",
     "FLAVOR": "在你最需要的时候保护你。",
     "DESCRIPTIONS": [
-      "每场战斗首次进入 #yguardianmod:防御模式 时，额外获得 #b10 点 #y格挡 。 NL 游戏开始时将一张普通 #yguardianmod:宝石 牌加入牌组。 "
+      "每场战斗首次进入 #yguardianmod:防御模式 时，额外获得 #b10 点 #y格挡 。 NL 游戏开始时将 #b1 张普通 #yguardianmod:宝石 牌加入牌组。 "
     ]
   },
   "Guardian:ModeShifterPlus": {
     "NAME": "守护者齿轮",
     "FLAVOR": "每3000层更换一次",
     "DESCRIPTIONS": [
-      "替换 #r铜制齿轮 。每场战斗开始时 进入 #yguardianmod:防御模式 并持续 #b3 回合。"
+      "替换 #r铜制齿轮 。 NL 每场战斗开始时，进入 #yguardianmod:防御模式 并持续 #b3 回合。"
     ]
   },
   "Guardian:DefensiveModeMoreBlock": {
     "NAME": "铜制装甲板",
     "FLAVOR": "装甲再多也不为过。",
     "DESCRIPTIONS": [
-      " #yguardianmod:提防 时，再 #yguardianmod:提防 #b1 。"
+      " #yguardianmod:提防 时额外 #y提防 #b1 。"
     ]
   },
   "Guardian:GemCopier": {
     "NAME": "宝石不倒翁",
     "FLAVOR": "只有最原始的人才会把玩。",
     "DESCRIPTIONS": [
-      "每当你打出一张 #yguardianmod:宝石 时，再打出一次。"
+      "每当你打出 #b1 张 #yguardianmod:宝石 时，再打出 #b1 次。"
     ]
   },
   "Guardian:PocketSentry": {
@@ -46,7 +46,7 @@
     "NAME": "机械宝典",
     "FLAVOR": "尖塔最早原型的设计和图表。",
     "DESCRIPTIONS": [
-      "回合结束时如果没有被 #y凝滞 的牌，从三张随机牌中选择一张牌 #yguardianmod:凝滞 。"
+      "回合结束时如果没有被 #y凝滞 的牌，从 #b3 张随机牌中选择 #b1 张牌 #yguardianmod:凝滞 。"
     ]
   },
   "Guardian:StasisSlotIncreaseRelic": {
@@ -74,7 +74,7 @@
     "NAME": "瓶装黑洞",
     "FLAVOR": "在某个地方，一些不可思议的事情等待着人们去发现。",
     "DESCRIPTIONS": [
-      "拾起时，选择一张牌。每场战斗开始时将它 #yguardianmod:凝滞 。",
+      "拾起时，选择 #b1 张牌。 NL 每场战斗开始时，将其 #yguardianmod:凝滞 。",
       "选择一张牌 ",
       "每场战斗开始时，将牌组中一张 ",
       " #y凝滞 。"
@@ -84,31 +84,31 @@
     "NAME": "量子容器",
     "FLAVOR": "你通过孵化鸡蛋而不是砸碎鸡蛋来获得鸡。",
     "DESCRIPTIONS": [
-      "拾起时，选择一张牌。每场战斗开始时将它移出牌组。第 #b4 回合开始时，将两张它的复制品加入手牌。",
+      "拾起时，选择 #b1 张牌。 NL 每场战斗开始时，将其移出牌组。第 #b4 回合开始时，将其 #b2 张复制品加入手牌。",
       "选择一张牌 ",
       "每场战斗开始时将 ",
-      " 移出牌组。 第 #b4 回合开始时，将两张它的复制品加入手牌。"
+      " 移出牌组。 第 #b4 回合开始时，将其 #b2 张复制品加入手牌。"
     ]
   },
     "Guardian:TickHelperRelic": {
     "NAME": "冷却液",
     "FLAVOR": "有公害，不要随便丢弃",
     "DESCRIPTIONS": [
-      "每场战斗开始时获得 #b2 个 #yguardianmod:凝滞 栏位。牌被 #yguardianmod:凝滞 的回合计数器增加 #b2 点。"
+      "每场战斗开始时，获得 #b2 个 #yguardianmod:凝滞 栏位。牌被 #yguardianmod:凝滞 的回合计数器增加 #b2 点。"
     ]
   },
   "Guardian:PickAxe": {
     "NAME": "星光采矿镐",
     "FLAVOR": "有那么多宝石散落在尖塔中，很难想象有这么不幸的人需要这把镐来帮助他们。",
     "DESCRIPTIONS": [
-	"你能在三个休息处各 #y挖掘 #b2 颗 #yguardianmod:宝石 一次。"
+	"你能在 #b3 个休息处各 #y挖掘 #b2 颗 #yguardianmod:宝石 #b1 次。"
     ]
   },
     "Guardian:GemstoneGun": {
     "NAME": "宝石枪",
     "FLAVOR": "砰！砰！砰！嘿，我打中了三个！",
     "DESCRIPTIONS": [
-      "拾起时，选择 #b3 张 #yguardianmod:宝石 牌。 每场战斗开始时，获得一张 #y镶嵌 有这些宝石的0耗能 保留 消耗 牌。",
+      "拾起时，选择 #b3 张 #yguardianmod:宝石 牌。 每场战斗开始时，获得 #b1 张 #y镶嵌 有这些宝石的0耗能 保留 消耗 牌。",
       "选择宝石装入宝石枪"
     ]
   },
@@ -116,7 +116,7 @@
     "NAME": "瓶装异常",
     "FLAVOR": "旋转，旋转，最后破碎。",
     "DESCRIPTIONS": [
-      "拾起时，选择一张牌。每场战斗开始时将它移出牌组。第 #b3 回合开始时，再将它加入手牌并且本场战斗耗能变为 #b0 。",
+      "拾起时，选择 #b1 张牌。 NL 每场战斗开始时，将其移出牌组。第 #b3 回合开始时，再将其加入手牌并且本场战斗耗能变为 #b0 。",
       "选择一张牌 ",
       "每场战斗开始时，将 ",
       " 移出牌组。第 #b3 回合开始时，再将它加入手牌并且本场战斗耗能变为 #b0 。"

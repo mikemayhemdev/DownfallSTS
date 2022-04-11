@@ -57,6 +57,7 @@ public class UltimateFormPower extends AbstractPower implements CloneablePowerIn
         }
     }
 
+
     @Override
     public void updateDescription() {
         if (amount == 1) {

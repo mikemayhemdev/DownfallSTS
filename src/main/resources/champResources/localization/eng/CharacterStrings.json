@@ -66,7 +66,9 @@
       " and gain #b",
       " #yCounter.",
       " #yBlock. Do not leave #yUltimate #yStance.",
-      "I am not in a Stance."
+      "I am not in a Stance.",
+      "Charges remaining: #b",
+      " Can trigger up to 3 times."
     ]
   }
 }

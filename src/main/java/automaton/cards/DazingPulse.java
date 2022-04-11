@@ -20,8 +20,8 @@ public class DazingPulse extends AbstractBronzeCard {
 
     public DazingPulse() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseBlock = 5;
-        baseDamage = 5;
+        baseBlock = 7;
+        baseDamage = 7;
         baseMagicNumber = magicNumber = 2;
         thisEncodes();
         tags.add(AutomatonMod.BAD_COMPILE);

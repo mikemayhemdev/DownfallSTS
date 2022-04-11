@@ -17,11 +17,11 @@
 },
 "hermit:TakeAimPower": {
         "NAME": "举枪瞄准",
-        "DESCRIPTIONS": ["在你的回合开始时， #y专注 。"]
+        "DESCRIPTIONS": ["你的回合开始时， #y专注 。"]
 },
 "hermit:AdaptPower": {
         "NAME": "适应",
-        "DESCRIPTIONS": ["在你的回合结束时，至多 #y消耗 两张牌。 NL 每张牌获得 #b", " 点 #y格挡 。"]
+        "DESCRIPTIONS": ["你的回合结束时，至多 #y消耗 两张牌。 NL 每张牌获得 #b", " 点 #y格挡 。"]
 },
 "hermit:Bruise": {
         "NAME": "瘀伤",
@@ -33,7 +33,7 @@
 },
 "hermit:ComboPower": {
         "NAME": "连击",
-        "DESCRIPTIONS": ["每当你触发 #y精准 效果时，将 #b", " 张随机 #y精准 牌加入手牌。", " 张随机 #y精准 牌加入手牌。"]
+        "DESCRIPTIONS": ["每当你触发 #y精准 效果时，随机将 #b", " 张 #y精准 牌加入手牌。", " 张 #y精准 牌加入手牌。"]
 },
 "hermit:BigShotPower": {
         "NAME": "冒烟枪管",
@@ -41,11 +41,11 @@
 },
 "hermit:BrawlPower": {
         "NAME": "斗殴",
-        "DESCRIPTIONS": ["在你的回合开始时，给予所有敌人 #b", " 层 #y瘀伤 。"]
+        "DESCRIPTIONS": ["你的回合开始时，给予所有敌人 #b", " 层 #y瘀伤 。"]
 },
 "hermit:Rugged": {
         "NAME": "坚固",
-        "DESCRIPTIONS": ["下 #b", " 次受到未被 #y格挡 的伤害时，将伤害降至 #y1 。", " 一次受到未被 #y格挡 的伤害时，将伤害降至 #y1 。"]
+        "DESCRIPTIONS": ["下 #b", " 次受到未被 #y格挡 的伤害时，将伤害降至 #y3 。", " 一次受到未被 #y格挡 的伤害时，将伤害降至 #y3 。"]
 },
 "hermit:EternalPower": {
         "NAME": "永恒形态",
@@ -53,7 +53,7 @@
 },
 "hermit:OverwhelmingPowerPower": {
         "NAME": "压倒性力量",
-                "DESCRIPTIONS": ["如果回合结束时你的能量为0，失去 #b"," 点生命。"]
+                "DESCRIPTIONS": ["若回合结束时你的能量为 #b0 ，失去 #b"," 点生命。"]
 },
 "hermit:Bounty": {
         "NAME": "赏金",
@@ -74,5 +74,17 @@
 "hermit:PetGhostPower": {
         "NAME": "宠物幽灵",
         "DESCRIPTIONS": ["你无法死亡。在 ", " 你的下回合结束时死亡。", " 本回合结束时死亡。"]
+},
+"hermit:SnipePower": {
+        "NAME": "狙击",
+        "DESCRIPTIONS": ["本回合下 #b", " 次 #y精准 效果触发 #b2 次。", " 次 #y精准 效果触发 #b2 次。"]
+},
+"hermit:CoalescencePower": {
+        "NAME": "愈合",
+        "DESCRIPTIONS": ["回合结束时，可 #y保留 #b", " 张牌。", " 张牌。"]
+},
+"hermit:ReprievePower": {
+        "NAME": "延缓死刑",
+        "DESCRIPTIONS": ["额外获得 #b", " 回合。", " 回合。"]
 }
 }

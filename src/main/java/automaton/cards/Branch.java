@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.actions.AddToFuncAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -29,6 +30,7 @@ public class Branch extends AbstractBronzeCard implements OctopusCard {
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
         exhaust = true;
+        AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("Branch.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

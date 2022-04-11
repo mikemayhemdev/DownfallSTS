@@ -14,7 +14,7 @@ public class FocusedBerserking extends AbstractChampCard {
     //stupid intellij stuff skill, self, common
 
     public FocusedBerserking() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
         baseMagicNumber = magicNumber = 2;
         tags.add(ChampMod.FINISHER);

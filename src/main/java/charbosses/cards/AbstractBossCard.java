@@ -5,6 +5,8 @@ import basemod.abstracts.CustomCard;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import charbosses.cards.colorless.EnHandOfGreedHermitNecro;
+import charbosses.cards.purple.EnCarveReality;
+import charbosses.cards.purple.EnSmite;
 import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.powers.cardpowers.EnemyStormPower;
 import charbosses.stances.EnDivinityStance;
@@ -311,6 +313,13 @@ public abstract class AbstractBossCard extends AbstractCard {
         if (mo != null) {
             this.damage = MathUtils.floor(calculateDamage(mo, player, this.baseDamage));
             this.intentDmg = MathUtils.floor(manualCustomDamageModifierMult * calculateDamage(mo, player, this.baseDamage + customIntentModifiedDamage() + manualCustomDamageModifier));
+            if (this instanceof EnCarveReality) {
+                if (((EnCarveReality)this).willUseSmite) {
+                    EnSmite enSmite = new EnSmite();
+                    enSmite.calculateCardDamage(this.owner);
+                    this.intentDmg += enSmite.intentDmg;
+                }
+            }
         }
         this.initializeDescription();
     }

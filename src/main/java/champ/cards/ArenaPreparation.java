@@ -22,6 +22,7 @@ public class ArenaPreparation extends AbstractChampCard {
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
         // tags.add(ChampMod.TECHNIQUE);
+        tags.add(CardTags.HEALING);
         postInit();
     }
 
@@ -31,7 +32,9 @@ public class ArenaPreparation extends AbstractChampCard {
             AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.SKILL);
             c.isSeen = true;
             UnlockTracker.markCardAsSeen(c.cardID);
-            CardModifierManager.addModifier(c, new RetainCardMod());
+            if (!c.selfRetain) {
+                CardModifierManager.addModifier(c, new RetainCardMod());
+            }
             makeInHand(c);
         }
     }

@@ -31,7 +31,7 @@
     "NAME": "Victorious Crown",
     "FLAVOR": "Conglaturation!! You are the greatest winner.",
     "DESCRIPTIONS": [
-      "Replaces #rChampion's #rCrown. NL Start each combat in #ychamp:Ultimate #yStance, which lasts for #b2 turns."
+      "Replaces #rChampion's #rCrown. NL Start each combat in #ychamp:Ultimate #yStance, which lasts for #b1 turn."
     ]
   },
   "champ:DefensiveTrainingManual": {
@@ -73,7 +73,7 @@
     "NAME": "Power Armor",
     "FLAVOR": "Bought used.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. NL Your maximum #yVigor and #ychamp:Counter is #b20."
+      "Gain [E] at the start of your turn. NL Your maximum #yVigor and #ychamp:Counter is #b10."
     ]
   },
   "champ:SignatureFinisher": {
@@ -89,7 +89,7 @@
     "NAME": "Spectre's Hand",
     "FLAVOR": "Some victories stay with you.",
     "DESCRIPTIONS": [
-      "Whenever you Enter a Stance, gain a #yStrike or #yDefend. It costs #b0 and has #yExhaust."
+      "Whenever you Enter a Stance, gain a basic #yStrike or #yDefend. It costs #b0 and has #yExhaust."
     ]
   },
   "champ:LiftRelic": {

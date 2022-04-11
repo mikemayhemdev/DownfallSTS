@@ -40,6 +40,12 @@
       "턴 종료 시 #y소멸시킬 카드를 1장 선택합니다."
     ]
   },
+  "downfall:SpotWeakness": {
+    "NAME": "약점 분석",
+    "DESCRIPTIONS": [
+      "매 턴 이 효과가 발동하는 동안 공격 카드를 사용할 때마다 이 적은 #y힘을 #b"," 얻습니다. 현재 #y힘을 #b", " 얻습니다."
+    ]
+  },
   "downfall:PoisonResist": {
     "NAME": "중독 저항",
     "DESCRIPTIONS": [
@@ -49,7 +55,7 @@
   "downfall:NeowBuff": {
     "NAME": "니오우의 힘",
     "DESCRIPTIONS": [
-      "니오우의 턴 종료 시 #y힘 을 #b2 얻습니다."
+      "니오우의 턴 종료 시 #y힘을 #b2 얻습니다."
     ]
   },
   "downfall:WatcherAngryPower": {
@@ -68,8 +74,8 @@
     "NAME": "신성 모독자의 최후",
     "DESCRIPTIONS": [
       "와쳐가 체력을 #b",
-      " 잃으면 와쳐가 #y라그나로크 를 사용하거나 #y강림한 턴에만 #y힘을 #b4 잃습니다.",
-      "와쳐가 #y라그나로크 를 사용하거나 #y강림한 턴에만 #y힘을 #b4 잃습니다."
+      " 잃으면 #y라그나로크를 사용하거나 #y강림한 턴에만 #y힘을 #b4 잃습니다.",
+      "와쳐가 #y라그나로크를 사용하거나 #y강림한 턴에만 #y힘을 #b4 잃습니다."
     ]
   },
   "downfall:NeowBlasphemersDemise": {
@@ -77,13 +83,13 @@
     "DESCRIPTIONS": [
       "니오우가 체력을 #b",
       " 잃기 전까지 이로운 효과를 얻을 때 추가로 #y힘을 #b10 증가시킵니다.",
-      "니오우가 마비되어 이로운 효과 턴에도 #y힘 을 증가시킬 수 없습니다."
+      "니오우가 마비되어 이로운 효과 턴에도 #y힘을 증가시킬 수 없습니다."
     ]
   },
   "downfall:WatcherDivinityPower": {
     "NAME": "속절없는 믿음",
     "DESCRIPTIONS": [
-      "내 카드를 1장 사용할 때마다 와쳐가 #y만트라를 #b1 얻습니다. NL 와쳐의 턴 시작 시 #y만트라를 #b5 잃습니다. NL 와쳐의 턴 종료 시 #y강림 경지에서 벗어나지 않습니다."
+      "내 카드를 1장 사용할 때마다 와쳐가 #y만트라를 #b1 얻습니다. 와쳐의 턴 시작 시 #y만트라를 #b5 잃습니다. NL 와쳐의 턴 종료 시 #y강림에서 벗어나지 않습니다."
     ]
   },
   "downfall:NeowFleetingFaith": {
@@ -211,7 +217,7 @@
   "downfall:NeowMantra": {
     "NAME": "만트라",
     "DESCRIPTIONS": [
-      "니오우의 보유한 #y만트라가 #b10 되면 #y만트라 #b10 을 #y힘 #b10 으로 변환합니다."
+      "니오우의 #y만트라가 #b10 되면 #y강림해서 니오우의 공격이 3배의 피해를 줍니다."
     ]
   },
   "downfall:NeowSeeingDoubleProduct": {
@@ -307,7 +313,7 @@
   "downfall:HermitDoomsday": {
     "NAME": "최후의 심판",
     "DESCRIPTIONS": [
-      "내 턴 시작 시 #y임박한 #y종말을 얻습니다."
+      "내 턴 시작 시 #y보존 효과가 추가된 #y임박한 #y종말을 얻습니다."
     ]
   },
   "downfall:NeowEclipse": {
@@ -338,6 +344,29 @@
       " ",
       "을 얻습니다.",
       "LOCALIZATION NOTE: Please keep the space after 'Next Turn' in the NAME field."
+    ]
+  },
+  "downfall:NeowStayAt1Hp": {
+    "NAME": "불사",
+    "DESCRIPTIONS": [
+      "니오우의 체력을 #b1 이하로 잃게 할 수 없습니다. 체력이 #b1 이하가 되면 니오우는 체력을 모두 회복하고 새로운 국면으로 접어듭니다."
+    ]
+  },
+  "downfall:NeowDivinity": {
+    "NAME": "강림",
+    "DESCRIPTIONS": [
+      "이번 턴 동안 니오우의 공격이 3배의 피해를 줍니다."
+    ]
+  },
+  "downfall:NeowSpirit": {
+    "NAME": "영웅의 혼",
+    "DESCRIPTIONS": [
+      "니오우가 이로운 효과를 사용한다면 힘을 #b6 얻고... ",
+      " NL 악마의 형상을 1 얻습니다. #r(아이언클래드)",
+      " NL 가시를 2 얻습니다. #g(사일런트)",
+      " NL 버퍼를 2 얻습니다. #b(디펙트)",
+      " NL 만트라를 5 얻습니다. #p(와쳐)",
+      " NL 무작위 저주를 2 장 뽑을 카드 더미에 섞어 넣습니다. #y(허밋)"
     ]
   }
 }

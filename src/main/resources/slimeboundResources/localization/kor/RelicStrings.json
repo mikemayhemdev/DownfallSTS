@@ -23,10 +23,10 @@
     ]
   },
   "Slimebound:PotencyRelic": {
-    "NAME": "끈적이 돌",
-    "FLAVOR": "당신의 감정에 따라 힘을 북돋아 준다고 전해집니다.",
+    "NAME": "노막의 돌",
+    "FLAVOR": "당신의 점액질 군단에게 선물하면 슬라임들이 춤추듯 움직입니다.",
     "DESCRIPTIONS": [
-      "전투 시작 시 #yslimeboundmod:진흙탕_슬라임으로 #yslimeboundmod:분열하고 #yslimeboundmod:잠재력을 #b1 얻습니다."
+      "전투 시작 시 #yslimeboundmod:진흙탕_슬라임으로 #y분열하고 #yslimeboundmod:잠재력을 #b1 얻습니다."
     ]
   },
   "Slimebound:DailySplitRelic": {

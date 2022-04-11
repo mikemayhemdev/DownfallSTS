@@ -2,27 +2,38 @@
   {
     "PROPER_NAME": "精准",
     "NAMES": [
-      "精准"
+      "精准",
+      "Dead On",
+      "Dead_On",
+      "dead_on",
+      "deadon"
     ],
     "DESCRIPTION": " #y精准 牌从手牌中央打出时触发额外效果。"
   },
   {
     "PROPER_NAME": "专注",
     "NAMES": [
-      "专注"
+      "专注",
+      "Concentrate",
+      "concentrate",
+      "concentrated",
+      "Concentrated"
     ],
     "DESCRIPTION": "下张 #y精准 牌必定触发 #y精准 效果。 NL 回合结束时失去该效果。"
   },
   {
     "PROPER_NAME": "瘀伤",
     "NAMES": [
+      "bruise",
+      "bruised",
       "瘀伤"
     ],
-    "DESCRIPTION": "受 #y瘀伤 效果影响的敌人将受到额外伤害。 NL 每次触发后失去 #b1 层。 NL 回合结束时失去该效果。"
+    "DESCRIPTION": "攻击被 #y瘀伤 的敌人时造成额外伤害，并使其失去 #b1 层 #y瘀伤 。 NL #y瘀伤 只持续 #b1 回合。"
 },
   {
     "PROPER_NAME": "坚固",
     "NAMES": [
+      "rugged",
       "坚固"
     ],
     "DESCRIPTION": "降低下次敌方攻击造成的生命损失到 #b3 点。"

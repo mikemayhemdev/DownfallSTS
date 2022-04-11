@@ -1,10 +1,14 @@
 package charbosses.cards.blue;
 
+import charbosses.actions.common.EnemyGainEnergyAction;
 import charbosses.actions.orb.EnemyAnimateOrbAction;
 import charbosses.actions.orb.EnemyEvokeOrbAction;
 import charbosses.actions.orb.EnemyEvokeWithoutRemovingOrbAction;
 import charbosses.cards.AbstractBossCard;
+import charbosses.ui.EnemyEnergyPanel;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -25,16 +29,20 @@ public class EnReinforcedBody extends AbstractBossCard {
     }
 
     public EnReinforcedBody(int inCost) {
-        super(ID, cardStrings.NAME, "blue/skill/reinforced_body", inCost, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.UNCOMMON, CardTarget.NONE, AbstractMonster.Intent.BUFF);
+        super(ID, cardStrings.NAME, "blue/skill/reinforced_body", inCost, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.UNCOMMON, CardTarget.NONE, AbstractMonster.Intent.DEFEND);
         this.baseBlock = 7;
         cost = inCost;
     }
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < cost; i++) {
+        int realCost = this.owner.energyPanel.getCurrentEnergy();
+        for (int i = 0; i < realCost; i++) {
             this.addToBot(new GainBlockAction(m, m, this.block));
         }
+        // TODO: ew
+        EnemyEnergyPanel.useEnergy(realCost - cost);
+        this.owner.hand.glowCheck();
     }
 
     public void upgrade() {

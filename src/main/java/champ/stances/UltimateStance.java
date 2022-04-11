@@ -16,6 +16,28 @@ public class UltimateStance extends AbstractChampStance {
     }
 
     @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String getDescription() {
+        return ChampChar.characterStrings.TEXT[8] + ": " +
+                ChampChar.characterStrings.TEXT[12] + //Gain #B
+                BerserkerStance.amount() +
+                ChampChar.characterStrings.TEXT[46] + //#y Vigor
+                " NL " +
+                ChampChar.characterStrings.TEXT[12] + //Gain #B
+                DefensiveStance.amount() +
+                ChampChar.characterStrings.TEXT[47] + //#y Counter
+                " NL " +
+                ChampChar.characterStrings.TEXT[62] + //"Charges Remaining:
+                getRemainingChargeCount() +
+                ChampChar.characterStrings.TEXT[55]; //"."
+    }
+
+
+    @Override
     public String getKeywordString() {
         return "champ:ultimate";
     }

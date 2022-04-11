@@ -143,6 +143,14 @@
       " 个回合。"
     ]
   },
+  "champ:UltimateFormNextTurnPower": {
+    "NAME": "Preparing Ultimate",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, enter #yUltimate #yStance.",
+      " NL It will persist for #b",
+      " turns."
+    ]
+  },
   "champ:EnGardePower": {
     "NAME": "待命",
     "DESCRIPTIONS": [

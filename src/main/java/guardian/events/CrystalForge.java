@@ -153,6 +153,9 @@ public class CrystalForge extends AbstractImageEvent {
                     case "YELLOW":
                         rewardGemCards.add(new Gem_Yellow());
                         break;
+                    case "LIGHTBLUE":
+                        rewardGemCards.add(new Gem_Lightblue());
+                        break;
                 }
             }
 

@@ -10,7 +10,7 @@
     "NAME": "幽灵地狱",
     "DESCRIPTION": "!M! 回合后，随机对敌人造成 !D! 点伤害6次。"
   },
-   "expansioncontent:InvincibleStrength": {
+  "expansioncontent:InvincibleStrength": {
     "NAME": "坚不可摧",
     "DESCRIPTION": "获得 10 层 expansioncontent:坚不可摧 。"
   },
@@ -40,18 +40,20 @@
     "NAME": "甜圈爆破",
     "DESCRIPTION": "获得 !M! 点 力量 。"
   },
-    "expansioncontent:DecaShield": {
+  "expansioncontent:DecaShield": {
     "NAME": "八体护盾",
     "DESCRIPTION": "获得 !B! 层 *多层护甲 。"
   },
   "expansioncontent:ShapePower": {
     "NAME": "先古塑形",
-    "DESCRIPTION": "选择-获得 !M! 点 力量 或 !B! 层 *多层护甲 。",
+    "DESCRIPTION": "选择-获得 !M! 点 力量 或 5 层 *多层护甲 。",
+    "UPGRADE_DESCRIPTION": "选择-获得 !M! 点 力量 或 8 层 *多层护甲 。",
     "EXTENDED_DESCRIPTION": [
       "甜圈之力",
       "获得 !M! 点 力量 。",
       "八体护盾",
-      "获得 !B! 层 *多层护甲 。"
+      "获得 5 层 *多层护甲 。",
+      "获得 8 层 *多层护甲 。"
     ]
   },
   "expansioncontent:PrepareCrush": {
@@ -61,8 +63,8 @@
   },
   "expansioncontent:StudyTheSpire": {
     "NAME": "研究尖塔",
-    "DESCRIPTION": "接下来 !M! 回合，回合开始时随机获得1张耗能为0的 *首领 牌。",
-    "UPGRADE_DESCRIPTION": "接下来 !M! 回合，回合开始时随机获得1张耗能为0的 *首领 牌+。"
+    "DESCRIPTION": "接下来 !M! 回合开始时，随机获得一张 *首领 牌。 NL 其首次耗能为0。",
+    "UPGRADE_DESCRIPTION": "接下来 !M! 回合开始时，随机获得一张 *首领 牌+。 NL 其首次耗能为0。"
   },
   "expansioncontent:QuickStudy": {
     "NAME": "快速学习",
@@ -77,7 +79,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 随机获得一张 *首领 牌。 NL 其首次耗能为0。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 随机获得一张 *首领 牌+，其首次耗能为0。 NL 消耗 。"
   },
-    "expansioncontent:KnowingSkullWish": {
+  "expansioncontent:KnowingSkullWish": {
     "NAME": "全知头骨",
     "DESCRIPTION": "虚无 。 NL 支付生命以许愿灵魂，成功或来点喝的。 NL 消耗 。"
   },

@@ -3,9 +3,9 @@
     "PROPER_NAME": "Encode",
     "NAMES": [
       "Encode",
-      "Encodé",
-      "Encodée",
-      "Encodées",
+      "Encodé"
+      "Encodée"
+      "Encodées"
       "Encodez"
     ],
     "DESCRIPTION": "Ajoutez la carte à la Séquence. NL Quand 3 cartes sont dans la Séquence, leurs effets (autre que Encode) sont fusionnés en une Fonction dont le coût est égal au coût de la carte la plus chère."

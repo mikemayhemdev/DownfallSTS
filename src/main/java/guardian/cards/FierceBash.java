@@ -30,8 +30,8 @@ public class FierceBash extends AbstractGuardianCard implements InStasisCard {
     private static final int DAMAGE = 18;
 
     //TUNING CONSTANTS
-    private static final int UPGRADE_BONUS = 10;
-    private static final int DAMAGEPERTURNINSTASIS = 3;
+    private static final int UPGRADE_BONUS = 6;
+    private static final int DAMAGEPERTURNINSTASIS = 2;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
