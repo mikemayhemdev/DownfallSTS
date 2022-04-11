@@ -23,10 +23,10 @@
     ]
   },
   "Slimebound:PotencyRelic": {
-    "NAME": "Pierre visqueuse",
-    "FLAVOR": "Il est dit qu'elle gagne en puissance en fonction de votre humeur..",
+    "NAME": "Pierre de Nomakk",
+    "FLAVOR": "Quand elle est présentée à un de vos sbires gluants, elle semble faire danser celui-ci.*.",
     "DESCRIPTIONS": [
-      "Au début de chaque combat, #yslimeboundmod:Divisez vous en #yslimeboundmod:Slime Bourbier et gagnez #b1 de #yslimeboundmod:Potentiel."
+      "Au début de chaque combat, #yDivisez vous en #yslimeboundmod:Slime Bourbier et gagnez #b1 de #yslimeboundmod:Potentiel."
     ]
   },
   "Slimebound:DailySplitRelic": {

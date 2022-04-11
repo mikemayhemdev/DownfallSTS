@@ -9,7 +9,7 @@
   {
     "PROPER_NAME": "Invincibilité",
     "NAMES": [
-      "d'invincibilité"
+      "d'invincibilité",
       "invincibilité"
     ],
     "DESCRIPTION": "Vous ne pouvez pas perdre plus d'une certaine quantité de PV pendant un tour. NL À la fin de n'importe quel tour dans lequel Invincibilité a empêché la perte de PV, retirez cet effet"
@@ -17,7 +17,7 @@
   {
     "PROPER_NAME": "Exhumation",
     "NAMES": [
-      "exhumez"
+      "exhumez",
       "exhumez-la"
     ],
     "DESCRIPTION": "Choisissez une carte Épuisée et mettez-la dans votre main."
