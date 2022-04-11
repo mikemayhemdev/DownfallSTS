@@ -2,7 +2,8 @@
   {
     "PROPER_NAME": "Actif",
     "NAMES": [
-      "actif"
+      "actif",
+      "active"
     ],
     "DESCRIPTION": "Le Feu Follet #yActif peut être Enflammé en répondant à ses exigences en matière d'Inflammation."
   },
@@ -12,7 +13,10 @@
       "avancez",
       "avancé",
       "avancer",
-      "n'avancez"
+      "n'avancez",
+      "advance",
+      "advanced",
+      "advancing"
     ],
     "DESCRIPTION": "Passez au Feu Follet suivant. Passer un Feu Follet #yl'Éteint."
   },
@@ -21,7 +25,10 @@
     "NAMES": [
       "rétractez",
       "rétracté",
-      "rétracter"
+      "rétracter",
+      "retract",
+      "retracted",
+      "retracting"
     ],
     "DESCRIPTION": "Passez au Feu Follet précédent. Passer un Feu Follet #yl'Éteint."
   },
@@ -29,7 +36,8 @@
     "PROPER_NAME": "Intensité",
     "NAMES": [
       "intensité",
-      "d'intensité"
+      "d'intensité",
+      "intensity"
     ],
     "DESCRIPTION": "L'Intensité augmente les dégâts, l'Armure et la Brûlure appliqués par les Feu Follets lorsqu'ils sont Enflammés ."
   },
@@ -37,7 +45,9 @@
     "PROPER_NAME": "Brûlure",
     "NAMES": [
       "brûlure",
-      "brûlé"
+      "brûlé",
+      "soulburn",
+      "soulburned"
     ],
     "DESCRIPTION": "Après #b3 tours, un ennemi Brûlé perd des PV, retirant l'effet Brûlure."
   },
@@ -47,7 +57,9 @@
       "éteignez",
       "éteints",
       "éteignez-les",
-      "éteignez-le"
+      "éteignez-le",
+      "extinguish",
+      "extinguished"
     ],
     "DESCRIPTION": "Permet au Feu Follet d'être Enflammé à nouveau, réinitialisant ses conditions d'Inflammation."
   },
@@ -57,42 +69,50 @@
       "enflammez",
       "enflammé",
       "enflammez-le",
-      "enflammés"
+      "enflammés",
+      "ignite",
+      "ignited",
+      "force-ignite"
     ],
     "DESCRIPTION": "Déclenche l'effet d'Inflammation décrit d'un Feu Follet."
   },
   {
     "PROPER_NAME": "Sceau",
     "NAMES": [
-      "sceau"
+      "sceau",
+      "seal"
     ],
     "DESCRIPTION": "Si les #b6 Sceaux ont été joués ce combat, obtenez #pLe #pSceau #pBrisé et retirez les Sceaux de votre deck."
   },
   {
     "PROPER_NAME": "Après-vie",
     "NAMES": [
-      "après-vie"
+      "après-vie",
+      "afterlife"
     ],
     "DESCRIPTION": "Si cette carte est Épuisée, ses effets s'activent."
   },
   {
     "PROPER_NAME": "Écraseur",
     "NAMES": [
-      "écraseur"
+      "écraseur",
+      "crushing"
     ],
     "DESCRIPTION": "#yFeu #yFollet. #yEnflammé lorsque #b2 #yCompétences sont jouées alors que celui-ci est #yActif. #yInflammation: Lorsqu'il est #yEnflammé, infligez #b4 dégâts à un ennemi aléatoire deux fois."
   },
   {
     "PROPER_NAME": "Renforceur",
     "NAMES": [
-      "renforceur"
+      "renforceur",
+      "bolstering"
     ],
     "DESCRIPTION": "#yFeu #yFollet. #yEnflammé lorsqu'un #yPouvoir est joué alors que celui-ci est #yActif. #yInflammation: Lorsqu'il est #yEnflammé, gagnez #b4 #yd'Armure et #b1 de #yForce."
   },
   {
     "PROPER_NAME": "Ardent",
     "NAMES": [
-      "ardent"
+      "ardent",
+      "searing"
     ],
     "DESCRIPTION": "#yFeu #yFollet. #yEnflammé lorsque #b2 #yAttaques sont jouées alors que celui-ci est #yActif. #yInflammation: Lorsqu'il est #yEnflammé, appliquez #b4 de #yBrûlure à un ennemi aléatoire."
   }

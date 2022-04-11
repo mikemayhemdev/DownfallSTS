@@ -1,7 +1,8 @@
 [
   {
     "NAMES": [
-      "agonie"
+      "agonie",
+      "agony"
     ],
     "PROPER_NAME": "Agonie",
     "DESCRIPTION": "Les créatures en #yAgonie infligent #b80% de dégâts en moins avec leurs Attaques."
@@ -9,14 +10,17 @@
   {
     "NAMES": [
       "paralysie",
-      "paralysez"
+      "paralysez",
+      "cripple"
     ],
     "PROPER_NAME": "Paralysie",
     "DESCRIPTION": "Les ennemis #yParalysés ne peuvent plus perdre de #yFaiblesse désormais. À la fin de leur tour, ils perdent des PV d'une quantité égale de leur #yFaiblesse."
   },
   {
     "NAMES": [
-      "Écho"
+      "Écho",
+      "echo",
+      "echoes"
     ],
     "PROPER_NAME": "Écho",
     "DESCRIPTION": "Un écho est une copie d'une carte avec Éthérée et Épuisement."
@@ -30,51 +34,66 @@
   },
   {
     "NAMES": [
-      "Gros Diablotin", "Gros_Diablotin"
+      "Gros Diablotin", "Gros_Diablotin",
+      "fat gremlin", "fat_gremlin"
     ],
     "PROPER_NAME": "Gros diablotin",
     "DESCRIPTION": "Lorsque vous jouez une Attaque, appliquez #b1 de #yFaiblesse toutes les cibles."
   },
   {
     "NAMES": [
-      "Diablotin Sorcier", "Diablotin_Sorcier"
+      "Diablotin Sorcier", "Diablotin_Sorcier",
+      "gremlin wizard", "gremlin_wizard"
     ],
     "PROPER_NAME": "Diablotin sorcier",
     "DESCRIPTION": "Lorsque vous jouez une Compétence, gagnez #b1 de #yMagie."
   },
   {
     "NAMES": [
-      "Diablotin Fou", "Diablotin_Fou"
+      "Diablotin Fou", "Diablotin_Fou",
+      "mad gremlin", "mad_gremlin"
     ],
     "PROPER_NAME": "Diablotin fou",
     "DESCRIPTION": "Gagnez #b2 de #yForce #yTemporaire quand vous êtes attaqué."
   },
   {
     "NAMES": [
-      "Diablotin à Bouclier", "Diablotin_à_Bouclier"
+      "Diablotin à Bouclier", "Diablotin_à_Bouclier",
+      "shield gremlin", "shield_gremlin"
     ],
     "PROPER_NAME": "Diablotin à bouclier",
     "DESCRIPTION": "Lorsque vous jouez une Compétence, gagnez #b2 #yd'Armure."
   },
   {
     "NAMES": [
-      "Diablotin Sournois", "Diablotin_Sournois"
+      "Diablotin Sournois", "Diablotin_Sournois",
+      "sneaky gremlin", "sneaky_gremlin"
     ],
     "PROPER_NAME": "Diablotin sournois",
     "DESCRIPTION": "Lorsque vous jouez une attaque, Infligez #b3 dégâts à un ennemi aléatoire."
   },
   {
     "NAMES": [
-      "permutez"
+      "permutez",
+      "swap"
     ],
     "PROPER_NAME": "Permutation",
     "DESCRIPTION": "Changez de place avec un autre personnage. Ne fait rien si il n'y a pas de cible valide."
   },
   {
     "NAMES": [
-      "magie"
+      "magie",
+      "wiz"
     ],
     "PROPER_NAME": "Magie",
     "DESCRIPTION": "Lorsque vous avez au moins 3 piles de Magie, les attaques vont consumer toutes les piles pour infliger 10 dégâts supplémentaires."
+  },
+  {
+    "NAMES": [
+      "volez",
+      "steal"
+    ],
+    "PROPER_NAME": "Vol",
+    "DESCRIPTION": "La cible perd une quantité spécifiée de ressources. Vous gagnez le montant qui a été perdu."
   }
 ]

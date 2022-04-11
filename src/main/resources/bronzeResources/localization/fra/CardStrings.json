@@ -25,7 +25,7 @@
   },
   "bronze:DonuBeam": {
     "NAME": "Proto-Laser",
-    "DESCRIPTION": "Infligez !D! dégâts !M! fois. NL bronze:Compilation - Gagnez !M! de force et perdez !bauto! de Dextérité.",
+    "DESCRIPTION": "Infligez !D! dégâts !M! fois. NL bronze:Compilation - Gagnez !M! de Force.",
     "EXTENDED_DESCRIPTION": [
       "smooth",
       "Blast"
@@ -67,7 +67,7 @@
   "bronze:Goto": {
     "NAME": "Goto",
     "DESCRIPTION": "Piochez !M! carte. NL bronze:Compilation - Au prochain tour, piochez !M! carte.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cartes. NL bronze:Compile - Au prochain tour, piochez !M! cartes.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cartes. NL bronze:Compilation - Au prochain tour, piochez !M! cartes.",
     "EXTENDED_DESCRIPTION": [
       "running",
       "Sprint"
@@ -75,7 +75,7 @@
   },
   "bronze:Replicate": {
     "NAME": "Réplique",
-    "DESCRIPTION": "Infligez !D! dégâts.",
+    "DESCRIPTION": "Infligez !D! dégâts. π NL Quand cette carte est bronze:Encodée, ajoutez une copie de celle-ci dans votre défausse.",
     "EXTENDED_DESCRIPTION": [
       "copying",
       "Copy"
@@ -83,7 +83,7 @@
   },
   "bronze:Branch": {
     "NAME": "Branches",
-    "DESCRIPTION": "Choisissez - Infliigez !D! dégâts ou gagnez !B! d'Armure. NL bronze:Encodez l'option non-choisie. NL Épuisement.",
+    "DESCRIPTION": "Infligez !D! dégâts ou gagnez !B! d'Armure. NL bronze:Encodez l'option non-choisie. NL Épuisement.",
     "EXTENDED_DESCRIPTION": [
       "Branch: Attack",
       "Deal !D! damage.",
@@ -92,8 +92,9 @@
     ]
   },
   "bronze:DelayedSlice": {
-    "NAME": "Tranche différée",
-    "DESCRIPTION": "Infigez !D! dégâts. NL bronze:Compilation - Tous les ennemis perdent !M! PV.",
+    "NAME": "Robo-Tranche",
+    "DESCRIPTION": "Infigez !D! dégâts. NL Au prochain tour, piochez !M! carte supplémentaire",
+    "UPGRADE_DESCRIPTION": "Infigez !D! dégâts. NL Au prochain tour, piochez !M! carte supplémentaires",
     "EXTENDED_DESCRIPTION": [
       "delayed",
       "Slice"
@@ -122,6 +123,10 @@
       "split",
       "Child"
     ]
+  },
+  "bronze:WildStrike": {
+    "NAME": "Frappe sauvage",
+    "DESCRIPTION": "Infligez !D! dégâts. π NL bronze:Insérez 1 *Blessure."
   },
   "bronze:Overheat": {
     "NAME": "Surchauffe",
@@ -161,8 +166,8 @@
     ]
   },
   "bronze:WildBeam": {
-    "NAME": "Laser furieux",
-    "DESCRIPTION": "Infligez !D! dégâts. NL bronze:Compilation *Erreur - bronze:Insérez une *Blessure.",
+    "NAME": "Purification",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Épuisez une carte Statut aléatoire de votre pioche.",
     "EXTENDED_DESCRIPTION": [
       "wild",
       "Beam"
@@ -194,7 +199,7 @@
   },
   "bronze:Deprecate": {
     "NAME": "Désapprouvement",
-    "DESCRIPTION": "Appliquez !M! de Faiblesse à TOUS les ennemis. NL bronze:Compilation *Erreur - Obtenez Faiblesse.",
+    "DESCRIPTION": "Appliquez !M! de Faiblesse.",
     "EXTENDED_DESCRIPTION": [
       "old",
       "Insult"
@@ -202,7 +207,7 @@
   },
   "bronze:Invalidate": {
     "NAME": "Invalidation",
-    "DESCRIPTION": "Appliquez !M! de Vulnerabilité à TOUS les ennemis. NL bronze:Compilation *Erreur - Obtenez Vulnerabilité.",
+    "DESCRIPTION": "Appliquez !M! de Vulnerabilité.",
     "EXTENDED_DESCRIPTION": [
       "invalid",
       "Error"
@@ -598,7 +603,7 @@
   "bronze:BugBarrage": {
     "NAME": "Barrage buggé",
     "DESCRIPTION": "Ajoutez 1 *Blessure dans votre main. NL bronze:Cyclez chaque Statut dans votre main, infligeant !D! de dégâts pour chacune.",
-    "UPGRADE_DESCRIPTION": "Ajoutez !M! *Blessure dans votre main. NL bronze:Cyclez chaque Statut dans votre main, infligeant !D! de dégâts pour chacune.",
+    "UPGRADE_DESCRIPTION": "Ajoutez !M! *Blessures dans votre main. NL bronze:Cyclez chaque Statut dans votre main, infligeant !D! de dégâts pour chacune.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " times.)"
@@ -652,5 +657,9 @@
       "full",
       "Release"
     ]
+  },
+  "bronze:Undervolt": {
+    "NAME": "Sous-volté",
+    "DESCRIPTION": "Tous les ennemis perdent !M! de Force. NL Obtenez 2 Brûlures. NL Exhaust."
   }
 }
