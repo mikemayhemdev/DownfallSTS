@@ -52,12 +52,10 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
 
 
     public static void increasePretendFocus(int amount) {
-        System.out.println("increase pretend focus " + AbstractEnemyOrb.masterPretendFocus + " by " + amount);
         AbstractEnemyOrb.masterPretendFocus += amount;
         for (AbstractOrb o : AbstractCharBoss.boss.orbs) {
             if (o instanceof AbstractEnemyOrb) {
                 ((AbstractEnemyOrb) o).pretendFocus += amount;
-                System.out.println("Increased focus of " + o + " by " + amount + " to " + ((AbstractEnemyOrb) o).pretendFocus);
                 o.applyFocus();
                 //((AbstractEnemyOrb) o).applyLockOn();
             }
