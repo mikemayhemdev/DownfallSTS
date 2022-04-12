@@ -9,8 +9,8 @@
   },
   "Gremlin:Astound": {
     "NAME": "惊愕",
-    "DESCRIPTION": "获得 !B! 格挡 。 NL 若至少有 3 点 gremlin:法力 ，获得 !M! 张 *守卫 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 格挡 。 NL 若至少有 3 点 gremlin:法力 ，获得 !M! 张 *守卫+ 。"
+    "DESCRIPTION": "获得 !B! 格挡 。 NL 若至少有 3 层 gremlin:法力 ，获得 !M! 张 *守卫 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 格挡 。 NL 若至少有 3 层 gremlin:法力 ，获得 !M! 张 *守卫+ 。"
   },
   "Gremlin:Bang": {
     "NAME": "砰",
@@ -31,7 +31,7 @@
   },
   "Gremlin:BulkUp": {
     "NAME": "巨大化",
-    "DESCRIPTION": "获得 !M! 点 临时生命 。 NL gremlin:切换 至 gremlin:胖地精 。"
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL gremlin:切换 至 gremlin:胖地精 。"
   },
   "Gremlin:BurlyBlow": {
     "NAME": "迅猛一击",
@@ -43,7 +43,7 @@
   },
   "Gremlin:Changeo": {
     "NAME": "变换!",
-    "DESCRIPTION": "获得 !B! 格挡 和 !M! 点 gremlin:法力 。"
+    "DESCRIPTION": "获得 !B! 格挡 和 !M! 层 gremlin:法力 。"
   },
   "Gremlin:CongaLine": {
     "NAME": "直线阵型",
@@ -76,7 +76,7 @@
   },
   "Gremlin:Dazzle": {
     "NAME": "耀眼",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若至少有3点 gremlin:法力 ，窃取2点 力量 。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若至少有3层 gremlin:法力 ，窃取2点 力量 。 NL 消耗 。"
   },
   "Gremlin:Defend": {
     "NAME": "防御",
@@ -93,7 +93,7 @@
   },
   "Gremlin:Encore": {
     "NAME": "鼓舞",
-    "DESCRIPTION": "获得 3 点 gremlin:法力 。 NL 使用 gremlin:法力 时，对所有敌人造成 !M! 点伤害。"
+    "DESCRIPTION": "获得 3 层 gremlin:法力 。 NL 使用 gremlin:法力 时，对所有敌人造成 !M! 点伤害。"
   },
   "Gremlin:Enthusiasm": {
     "NAME": "狂热",
@@ -113,8 +113,8 @@
   },
   "Gremlin:SleeveOfAces": {
     "NAME": "袖中王牌",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有1点 gremlin:法力 ，获得一张 *小刀 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 每有1点 gremlin:法力 ，获得一张 *小刀+ 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有1层 gremlin:法力 ，获得一张 *小刀 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 每有1层 gremlin:法力 ，获得一张 *小刀+ 。"
   },
   "Gremlin:FatGremlin": {
     "NAME": "胖地精",
@@ -122,7 +122,7 @@
   },
   "Gremlin:FeelTheAudience": {
     "NAME": "察言观色",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 每有一名敌人的意图为攻击，获得 !M! 点 gremlin:法力 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 每有一名敌人的意图为攻击，获得 !M! 层 gremlin:法力 。"
   },
   "Gremlin:FightChoice": {
     "NAME": "战斗",
@@ -138,7 +138,7 @@
   },
   "Gremlin:Flurry": {
     "NAME": "乱舞",
-    "DESCRIPTION": "本回合每打出过一张牌， 造成 !D! 点伤害。 NL 消耗 。",
+    "DESCRIPTION": "本回合每用过一张牌，造成 !D! 点伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " 张牌。)",
@@ -180,7 +180,7 @@
       "。 NL 敌人在本回合内失去 !M! 点 力量 。",
       "。 NL 获得 !B! 点 格挡 。",
       "。 NL 抽 !M! 张牌。",
-      "。 NL 获得 !M! 点 gremlin:法力 。",
+      "。 NL 获得 !M! 层 gremlin:法力 。",
       "。 NL 获得 !M! 点 力量 。"
     ]
   },
@@ -203,7 +203,7 @@
   },
   "Gremlin:Heckle": {
     "NAME": "起哄",
-    "DESCRIPTION": "给予敌人负面效果时获得 !M! 点 临时生命 。"
+    "DESCRIPTION": "给予敌人负面效果时获得 !M! 层 临时生命 。"
   },
   "Gremlin:InfiniteBlocks": {
     "NAME": "无限护甲",
@@ -220,7 +220,7 @@
   },
   "Gremlin:Jeer": {
     "NAME": "嘲讽",
-    "DESCRIPTION": "造成 !D! 点伤害。 若敌人有负面效果，获得 !M! 点 临时生命 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 若敌人有负面效果，获得 !M! 层 临时生命 。"
   },
   "Gremlin:Kablamo": {
     "NAME": "强无敌！",
@@ -236,8 +236,8 @@
   },
   "Gremlin:MakeshiftArmor": {
     "NAME": "临时装甲",
-    "DESCRIPTION": "每当你打出7张攻击牌，获得 1 层 人工制品 。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 层 人工制品 。 NL 每当你打出7张攻击牌，获得 1 层 人工制品 。"
+    "DESCRIPTION": "每打出7张攻击牌，获得 1 层 人工制品 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 人工制品 。 NL 每打出7张攻击牌，获得 1 层 人工制品 。"
   },
   "Gremlin:Mockery": {
     "NAME": "蔑视",
@@ -245,7 +245,7 @@
   },
   "Gremlin:Necromancy": {
     "NAME": "招魂",
-    "DESCRIPTION": "需要3点 gremlin:法力 。 NL 使用 gremlin:法力 ，复活随机一只地精并回复 !M! 点生命。 消耗 。",
+    "DESCRIPTION": "需要3层 gremlin:法力 。 NL 使用 gremlin:法力 ，复活随机一只地精并回复 !M! 点生命。 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "法力还不够mojo。",
       "大家都还活着。",
@@ -254,7 +254,7 @@
   },
   "Gremlin:Nob": {
     "NAME": "大块头",
-    "DESCRIPTION": "获得 !M! 点 临时生命 。 NL 临时生命 完全失去之前将由 *地精大块头 强制领队。"
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 临时生命 完全失去之前， *地精大块头 将强制领队。"
   },
   "Gremlin:NobChoice": {
     "NAME": "做选择",
@@ -288,7 +288,7 @@
   },
   "Gremlin:Polish": {
     "NAME": "磨亮",
-    "DESCRIPTION": "*小刀 和 *守卫 的数值 提高 !M! 点 。"
+    "DESCRIPTION": "*小刀 和 *守卫 的数值 增加 !M! 点 。"
   },
   "Gremlin:PourSalt": {
     "NAME": "撒盐",
@@ -296,7 +296,7 @@
   },
   "Gremlin:Presto": {
     "NAME": "法师！",
-    "DESCRIPTION": "造成 !D! 点伤害。 获得 !M! 点 gremlin:法力 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 获得 !M! 层 gremlin:法力 。"
   },
   "Gremlin:Pretaliation": {
     "NAME": "预审",
@@ -330,7 +330,7 @@
   },
   "Gremlin:Scatter": {
     "NAME": "散开！",
-    "DESCRIPTION": "下次失去生命时，免疫伤害并 gremlin:切换 至随机一只地精。 NL 消耗 。"
+    "DESCRIPTION": "下次失去生命时，免疫伤害并随机 gremlin:切换 。 NL 消耗 。"
   },
   "Gremlin:SecondVolley": {
     "NAME": "中传",
@@ -369,7 +369,7 @@
   },
   "Gremlin:ShowStopper": {
     "NAME": "炫耀",
-    "DESCRIPTION": "恰好有 7 点 gremlin:法力 才能打出。 NL 对所有敌人造成 !D! 点伤害 5 次。",
+    "DESCRIPTION": "恰好有7层 gremlin:法力 才能打出。 NL 对所有敌人造成 !D! 点伤害5次。",
     "EXTENDED_DESCRIPTION": [
       "时机未到。",
       "时机已过。"
@@ -398,7 +398,7 @@
   "Gremlin:Tadah": {
     "NAME": "嗒哒！",
     "DESCRIPTION": "随机获得一张技能牌的 gremlin:回响 。 NL gremlin:切换 至 gremlin:地精法师 。",
-    "UPGRADE_DESCRIPTION": "随机获得一张技能牌的 gremlin:回响 。 NL 其能耗减1。 NL gremlin:切换 至 gremlin:地精法师 。"
+    "UPGRADE_DESCRIPTION": "随机获得一张技能牌的 gremlin:回响 。 NL 其能耗减少1点。 NL gremlin:切换 至 gremlin:地精法师 。"
   },
   "Gremlin:TagTeam": {
     "NAME": "配合",
@@ -407,7 +407,7 @@
   },
   "Gremlin:TargetWeakness": {
     "NAME": "瞄准伤口",
-    "DESCRIPTION": "对已被 虚弱 的敌人造成 !M! 点 额外伤害 。"
+    "DESCRIPTION": "对已被 虚弱 的敌人额外造成 !M! 点伤害。"
   },
   "Gremlin:Tricksy": {
     "NAME": "狡猾",
@@ -432,13 +432,13 @@
   },
   "Gremlin:Whiz": {
     "NAME": "咏唱",
-    "DESCRIPTION": "获得 !M! 点 gremlin:法力 。 NL 下回合获得 *砰 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 点 gremlin:法力 。 NL 下回合获得 *砰+ 。 NL 消耗 。"
+    "DESCRIPTION": "获得 !M! 层 gremlin:法力 。 NL 下回合获得 *砰 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 gremlin:法力 。 NL 下回合获得 *砰+ 。 NL 消耗 。"
   },
   "Gremlin:Wizardry": {
     "NAME": "巫术",
-    "DESCRIPTION": "回合开始时，获得 !M! 点 gremlin:法力 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时，获得 !M! 点 gremlin:法力 。"
+    "DESCRIPTION": "回合开始时，获得 !M! 层 gremlin:法力 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时，获得 !M! 层 gremlin:法力 。"
   },
   "Gremlin:Placeholder": {
     "NAME": "",
