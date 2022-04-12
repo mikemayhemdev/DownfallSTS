@@ -15,6 +15,7 @@ import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
+import charbosses.cards.blue.EnThunderStrike;
 import charbosses.cards.green.EnBladeDance;
 import charbosses.cards.green.EnCloakAndDagger;
 import charbosses.cards.hermit.EnDesperado;
@@ -1517,6 +1518,13 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             AbstractDungeon.actionManager.addToTop(new EnemyChannelAction(orbToSet));
             AbstractDungeon.actionManager.addToTop(new EnemyEvokeOrbAction(1));
             AbstractDungeon.actionManager.addToTop(new EnemyAnimateOrbAction(1));
+        }
+        // Need to update Thunderstrike intent if a lightning orb is played
+        for (AbstractCard card: boss.hand.group) {
+            if (card instanceof EnThunderStrike) { // Condition maybe not needed?
+                card.applyPowers();
+                ((AbstractBossCard)card).createIntent();
+            }
         }
     }
 
