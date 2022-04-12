@@ -175,14 +175,14 @@
   },
   "bronze:Frontload": {
     "NAME": "预载",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 - *方法 获得 保留 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bronze:编译 - bronze:方法 附带 保留 。",
     "EXTENDED_DESCRIPTION": [
       "坚固",
       "防护"
     ]
   },
   "bronze:DelayedGuard": {
-    "NAME": "缓时防护",
+    "NAME": "延迟防护",
     "DESCRIPTION": "下回合获得 !B! 点 格挡 。",
     "EXTENDED_DESCRIPTION": [
       "延缓",
@@ -248,7 +248,7 @@
   },
   "bronze:Terminator": {
     "NAME": "终止符",
-    "DESCRIPTION": " bronze:编译 -若在 bronze:队列 最后， *方法 附带再打出一次。",
+    "DESCRIPTION": " bronze:编译 -若在 bronze:队列 最后， bronze:方法 附带再打出一次。",
     "EXTENDED_DESCRIPTION": [
       "哭泣",
       "终结"
@@ -273,7 +273,7 @@
   },
   "bronze:DigitalCarnage": {
     "NAME": "数码残杀",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - *方法 获得 虚无 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 - bronze:方法 附带 虚无 。",
     "EXTENDED_DESCRIPTION": [
       "数码",
       "残杀"
@@ -281,7 +281,7 @@
   },
   "bronze:NullPointer": {
     "NAME": "空指针",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL bronze:编译 *错误 - *方法 获得 不能被打出 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:方法 附带 不能被打出 。",
     "EXTENDED_DESCRIPTION": [
       "无效",
       "指针"
@@ -301,12 +301,12 @@
   },
   "bronze:Virus": {
     "NAME": "病毒",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 将手牌变为 *微 *光 *射 *线 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 将手牌变为 *微 *光 *射 *线 *+ 。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 手牌变为 *微 *光 *射 *线 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 手牌变为 *微 *光 *射 *线 *+ 。"
   },
   "bronze:Backtrace": {
     "NAME": "回溯",
-    "DESCRIPTION": " 固有 。 NL 造成 !D! 点伤害。 NL bronze:编译 - *方法 获得 消耗 。",
+    "DESCRIPTION": " 固有 。 NL 造成 !D! 点伤害。 NL bronze:编译 - bronze:方法 附带 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "暗中",
       "追溯"
@@ -319,7 +319,7 @@
   },
   "bronze:FollowUp": {
     "NAME": "数据追踪",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 若上张打出牌为 *方法 ，再打出一次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 若上张打出牌为 bronze:方法 ，再打出一次。"
   },
   "bronze:ChosenStrike": {
     "NAME": "邪教打击",
@@ -438,7 +438,7 @@
   },
   "bronze:ForceShield": {
     "NAME": "力场护盾",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本场战斗每 bronze:编译 过一张 *方法 ，耗能减少 [E] 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本场战斗每 bronze:编译 过一张 bronze:方法 ，耗能减少 [E] 。"
   },
   "bronze:Format": {
     "NAME": "格式化",
@@ -467,7 +467,7 @@
   },
   "bronze:Break": {
     "NAME": "打断",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:插入 灼伤 、 伤口 和 黏液 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:插入 *灼伤 、 *伤口 和 *黏液 。",
     "EXTENDED_DESCRIPTION": [
       "打断",
       "粉碎"
@@ -488,17 +488,17 @@
   },
   "bronze:Verify": {
     "NAME": "感知形态",
-    "DESCRIPTION": "虚无 。 NL 每回合首次抽到 *方法 时提高其数值1点。",
-    "UPGRADE_DESCRIPTION": "每回合首次抽到 *方法 时提高其数值1点。"
+    "DESCRIPTION": "虚无 。 NL 每回合首次抽到 bronze:方法 时提高其数值1点。",
+    "UPGRADE_DESCRIPTION": "每回合首次抽到 bronze:方法 时提高其数值1点。"
   },
   "bronze:BronzeHeatsink": {
     "NAME": "铜制散热器",
-    "DESCRIPTION": "打出 *方法 时，抽1张牌。",
-    "UPGRADE_DESCRIPTION": "打出 *方法 时，抽2张牌。"
+    "DESCRIPTION": "打出 bronze:方法 时，抽1张牌。",
+    "UPGRADE_DESCRIPTION": "打出 bronze:方法 时，抽2张牌。"
   },
   "bronze:HardenedForm": {
     "NAME": "圆球召唤",
-    "DESCRIPTION": " bronze:编译 或打出 *方法 时，获得 !M! 点 格挡 并随机造成 !M! 点伤害。"
+    "DESCRIPTION": " bronze:编译 或打出 bronze:方法 时，获得 !M! 点 格挡 并随机造成 !M! 点伤害。"
   },
   "bronze:LegacyCode": {
     "NAME": "历史代码",
@@ -520,7 +520,7 @@
   },
   "bronze:Hardcode": {
     "NAME": "硬编码",
-    "DESCRIPTION": "将 bronze:编译 的下张 *方法 加入牌组。 NL 从牌组中移除构成 *方法 的牌和本牌。"
+    "DESCRIPTION": "将 bronze:编译 的下张 bronze:方法 加入牌组。 NL 从牌组中移除构成 bronze:方法 的牌和本牌。"
   },
   "bronze:SpaghettiCode": {
     "NAME": "意面代码",
@@ -648,7 +648,7 @@
   },
   "bronze:FullRelease": {
     "NAME": "完全公开",
-    "DESCRIPTION": " bronze:编译 - *方法 变成一张能力，回合开始时打出。",
+    "DESCRIPTION": " bronze:编译 - bronze:方法 变成能力，回合开始时打出。",
     "EXTENDED_DESCRIPTION": [
       "完全",
       "公开",
