@@ -234,8 +234,8 @@
   },
   "bronze:Batch": {
     "NAME": "批处理",
-    "DESCRIPTION": "立即从 *队列 生成一张 *方法 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "立即从 *队列 生成一张 *方法 。"
+    "DESCRIPTION": "立即 bronze:编译 bronze:编码 中的牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "立即 bronze:编译 bronze:编码 中的牌。"
   },
   "bronze:Constructor": {
     "NAME": "起始符",
@@ -248,7 +248,7 @@
   },
   "bronze:Terminator": {
     "NAME": "终止符",
-    "DESCRIPTION": " bronze:编译 -若在 *队列 最后， *方法 获得再打出一次。",
+    "DESCRIPTION": " bronze:编译 -若在 bronze:队列 最后， *方法 附带再打出一次。",
     "EXTENDED_DESCRIPTION": [
       "哭泣",
       "终结"
@@ -331,8 +331,8 @@
   },
   "bronze:ClassDefault": {
     "NAME": "默认类",
-    "DESCRIPTION": "将 *队列 首张牌加入下 !M! 个 *队列 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 将 *队列 首张牌加入下 !M! 个 *队列 。"
+    "DESCRIPTION": "将 bronze:队列 首张牌加入下 !M! 个 *队列 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 将 bronze:队列 首张牌加入下 !M! 个 *队列 。"
   },
   "bronze:ItsAFeature": {
     "NAME": "此为特性",
