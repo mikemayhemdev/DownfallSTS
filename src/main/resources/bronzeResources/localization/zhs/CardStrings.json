@@ -117,7 +117,7 @@
     ]
   },
   "bronze:Separator": {
-    "NAME": "分离器",
+    "NAME": "分隔符",
     "DESCRIPTION": "造成 !D! 点伤害。 π NL bronze:编码 时若在中间槽位，伤害增加 !M! 点。",
     "EXTENDED_DESCRIPTION": [
       "分离",
@@ -238,7 +238,7 @@
     "UPGRADE_DESCRIPTION": "立即从 *队列 生成一张 *方法 。"
   },
   "bronze:Constructor": {
-    "NAME": "构造器",
+    "NAME": "起始符",
     "DESCRIPTION": "获得 !B! 点 格挡 。 π NL bronze:编码 时若在首个槽位，格挡 增加 !M! 点 。",
     "EXTENDED_DESCRIPTION": [
       "构造",
