@@ -467,7 +467,7 @@
   },
   "bronze:Break": {
     "NAME": "打断",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 *错误 -随机 bronze:插入 !M! 张 状态牌 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:插入 灼伤 、 伤口 和 黏液 。",
     "EXTENDED_DESCRIPTION": [
       "打断",
       "粉碎"
@@ -607,7 +607,7 @@
   },
   "bronze:BuggyMess": {
     "NAME": "多重错误",
-    "DESCRIPTION": " bronze:插入 随机 状态牌 。 NL 获得 [E] 。",
+    "DESCRIPTION": " bronze:插入 晕眩 。 NL 获得 [E] 。",
     "EXTENDED_DESCRIPTION": [
       "错误",
       "混乱"
