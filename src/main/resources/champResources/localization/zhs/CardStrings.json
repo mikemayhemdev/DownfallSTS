@@ -375,8 +375,8 @@
   },
   "champ:UltimateStance": {
     "NAME": "至高",
-    "DESCRIPTION": "处于 姿态 才能打出。 NL 进入 champ:终极 !M! 回合。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "处于 姿态 才能打出。 NL 进入 champ:终极 !M! 回合。 NL 消耗 。",
+    "DESCRIPTION": "下回合处于 champ:终极 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "下回合处于 champ:终极 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我不处于姿态。"
     ]
