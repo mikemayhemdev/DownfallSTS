@@ -147,8 +147,8 @@
   },
   "Guardian:PackageDonuDeca": {
     "NAME": "组件: 先古",
-    "DESCRIPTION": "获得 *过载 、 *先古防御 和 *先古建造 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *过载+ 、 *先古防御+ 和 *先古建造+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得 *过载 、 *先古之力 和 *先古建造 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *过载+ 、 *先古之力+ 和 *先古建造+ 各1张。 NL 消耗 。"
   },
   "Guardian:PackageSphere": {
     "NAME": "组件: 圆球",
