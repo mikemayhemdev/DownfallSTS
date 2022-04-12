@@ -32,7 +32,7 @@
       "插入",
       "insert"
     ],
-    "DESCRIPTION": "将一张牌加入抽牌堆。"
+    "DESCRIPTION": "将 #b1 张牌加入抽牌堆。"
   },
   {
     "PROPER_NAME": "循环",
@@ -40,6 +40,6 @@
       "循环",
       "cycle"
     ],
-    "DESCRIPTION": "丢弃一张牌，抽一张牌替换其原来的位置。"
+    "DESCRIPTION": "丢弃 #b1 张牌，抽 #b1 张牌替换其原来的位置。"
   }
 ]
