@@ -8,6 +8,7 @@ import charbosses.cards.blue.*;
 import charbosses.cards.colorless.EnBlind;
 import charbosses.cards.curses.EnClumsy;
 import charbosses.orbs.AbstractEnemyOrb;
+import charbosses.orbs.EnemyPlasma;
 import charbosses.powers.bossmechanicpowers.DefectCuriosityLightningPower;
 import charbosses.powers.bossmechanicpowers.DefectCuriosityPower;
 import charbosses.relics.*;
@@ -18,6 +19,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 
 import java.util.ArrayList;
+
+import static java.lang.Math.min;
 
 public class ArchetypeAct3InserterNewAge extends ArchetypeBaseDefect {
 
@@ -48,7 +51,7 @@ public class ArchetypeAct3InserterNewAge extends ArchetypeBaseDefect {
         addRelic(new CBR_IceCream());
         addRelic(new CBR_ChemicalX());
         addRelic(new CBR_Inserter());
-        ArchetypeAct3OrbsNewAge.resetPretendFocus();  // In case the player quits mid fight
+        ArchetypeAct3OrbsNewAge.resetPretendFocus();  // In case the player quits mid fight we need to reset masterFocus
     }
 
     int loops = 0;
@@ -106,8 +109,8 @@ public class ArchetypeAct3InserterNewAge extends ArchetypeBaseDefect {
                 case 4:
                     //Turn 5 12E
                     addToList(cardsList, new EnDefragment(), true);
-                    ArchetypeAct3OrbsNewAge.increasePretendFocus(true?2:1); // TODO: Data disc instead?
-                    addToList(cardsList, new EnThunderStrike(EnThunderStrike.getLightningCount()), false); // TODO: Make auto-update
+                    ArchetypeAct3OrbsNewAge.increasePretendFocus(2);
+                    addToList(cardsList, new EnThunderStrike(EnThunderStrike.getLightningCount()), false);
                     // Plasma Plasma Plasma Plasma Lightning 8E
                     addToList(cardsList, new EnReinforcedBody(this.cB.energyPanel.getCurrentEnergy() - 4), true); // TODO: Dynamic calculation
                     // Plasma Plasma Plasma Plasma Lightning 0E
@@ -131,7 +134,7 @@ public class ArchetypeAct3InserterNewAge extends ArchetypeBaseDefect {
                     // second round (turn 11): Frost Plasma Lightning Plasma Plasma Plasma Lightning 19E
                     addToList(cardsList, new EnColdSnap());
                     // first round: Plasma Plasma Plasma Plasma Lightning Frost 8E
-                    addToList(cardsList, new EnBarrage(Math.min(this.cB.maxOrbs, this.cB.filledOrbCount() + 1)), extraUpgrades);
+                    addToList(cardsList, new EnBarrage(min(this.cB.maxOrbs, this.cB.filledOrbCount() + 1)), extraUpgrades);
                     addToList(cardsList, new EnReinforcedBody(this.cB.energyPanel.getCurrentEnergy() - 2), true); // TODO: Dynamic calculation
                     // first round: Plasma Plasma Plasma Plasma Lightning Frost 0E
                     turn++;
@@ -150,9 +153,10 @@ public class ArchetypeAct3InserterNewAge extends ArchetypeBaseDefect {
                 case 3:
                     // first round: Plasma Plasma Plasma Lightning Frost Plasma Lightning 13E
                     // second round (turn 13): Plasma Lightning Plasma Plasma Plasma Lightning Frost Plasma Lightning 10E
-                    addToList(cardsList, new EnMeteorStrike(), false);
+                    int extraEnergy = 2 * (int)(cB.orbsAsEn().subList(0,min(3,cB.orbsAsEn().size())).stream().filter(o -> o instanceof EnemyPlasma).count());
+                    addToList(cardsList, new EnMeteorStrike(), false, extraEnergy);
                     // first round: Lightning Frost Plasma Lightning Plasma Plasma Plasma 14E
-                    addToList(cardsList, new EnThunderStrike(EnThunderStrike.getLightningCount()), false); // TODO: Make auto-update
+                    addToList(cardsList, new EnThunderStrike(EnThunderStrike.getLightningCount()), false);
                     addToList(cardsList, new EnBallLightning(), extraUpgrades);
                     // first round: Frost Plasma Lightning Plasma Plasma Plasma Lightning 10E
                     turn = 0;
