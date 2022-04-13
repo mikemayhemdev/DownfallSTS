@@ -3,6 +3,9 @@ package automaton.cards;
 import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.Burn;
+import com.megacrit.cardcrawl.cards.status.Slimed;
+import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -32,10 +35,10 @@ public class Break extends AbstractBronzeCard {
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
-            for (int i = 0; i < magicNumber; i++) {
-                AbstractCard q = getRandomStatus().makeStatEquivalentCopy();
-                shuffleIn(q, 1);
-            }
+
+            shuffleIn(new Burn());
+            shuffleIn(new Wound());
+            shuffleIn(new Slimed());
         }
     }
 

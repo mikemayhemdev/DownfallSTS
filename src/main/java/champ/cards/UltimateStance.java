@@ -2,6 +2,7 @@ package champ.cards;
 
 import basemod.helpers.CardModifierManager;
 import champ.ChampMod;
+import champ.powers.UltimateFormNextTurnPower;
 import champ.powers.UltimateFormPower;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
@@ -17,14 +18,14 @@ public class UltimateStance extends AbstractChampCard {
 
     // intellij stuff power, self, rare
 
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 1;
 
     public UltimateStance() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
     }
 
+    /*
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         if (AbstractDungeon.player.stance.ID.equals(champ.stances.UltimateStance.STANCE_ID) ||AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
@@ -34,14 +35,16 @@ public class UltimateStance extends AbstractChampCard {
         return false;
     }
 
+     */
+
     public void use(AbstractPlayer p, AbstractMonster m) {
        // techique();
-        triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
-        ultimateStance();
-        applyToSelf(new UltimateFormPower(magicNumber));
+     //   triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
+        //ultimateStance();
+        applyToSelf(new UltimateFormNextTurnPower(1));
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeBaseCost(0);
     }
 }

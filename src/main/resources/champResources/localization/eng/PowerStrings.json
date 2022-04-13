@@ -186,6 +186,14 @@
       " more turns."
     ]
   },
+  "champ:UltimateFormNextTurnPower": {
+    "NAME": "Preparing Ultimate",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, enter #yUltimate #yStance.",
+      " NL It will persist for #b",
+      " turns."
+    ]
+  },
   "champ:EnGardePower": {
     "NAME": "En Garde",
     "DESCRIPTIONS": [

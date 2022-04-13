@@ -31,7 +31,7 @@
     "NAME": "승리의 왕관",
     "FLAVOR": "축하합니다!! 당신은 영광스러운 승자입니다.",
     "DESCRIPTIONS": [
-      "#r챔피언 #r왕관과 교체합니다. NL #b2 턴 동안 #ychamp:궁극의 #y자세를 취한 채로 전투를 시작합니다."
+      "#r챔피언 #r왕관과 교체합니다. NL #b1 턴 동안 #ychamp:궁극의 #y자세를 취한 채로 전투를 시작합니다."
     ]
   },
   "champ:DefensiveTrainingManual": {

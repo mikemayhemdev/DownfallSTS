@@ -61,8 +61,8 @@
   },
   "Guardian:TwinSlam": {
     "NAME": "Double claque",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez *Claque *secondaire dans votre main."
-	"UPGRADE_DESCRIPTION": Infligez !D! dégâts. NL Ajoutez *Claque *secondaire+ dans votre main."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez *Claque *secondaire dans votre main.",
+	"UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez *Claque *secondaire+ dans votre main."
   },
   "Guardian:GuardianWhirl": {
     "NAME": "Tourbillon du Gardien",
@@ -112,7 +112,7 @@
   "Guardian:WalkerClaw": {
     "NAME": "Griffures profondes",
     "DESCRIPTION": "Infligez !D! dégâts !M! fois.",
-	"UPGRADE_DESCRIPTION: "Infligez !D! dégâts !M! fois."
+	"UPGRADE_DESCRIPTION": "Infligez !D! dégâts !M! fois."
   },
   "Guardian:SphericShield": {
     "NAME": "Bouclier sphérique",
@@ -239,7 +239,7 @@
   },
   "Guardian:GemFire": {
     "NAME": "Canon gemme",
-    "DESCRIPTION": "Épuisez toutes les guardianmod:Gemmes, également celles qui sont encastrées. Infligez !D! dégâts à un ennemi aléatoire pour chaque guardianmod:Gemme. NL Épuisement.",
+    "DESCRIPTION": "Épuisez toutes les guardianmod:Gemmes, également celles qui sont encastrées. Infligez !D! dégâts à un ennemi aléatoire pour chaque guardianmod:Gemme. NL Épuisement."
   },
   "Guardian:ChargeCore": {
     "NAME": "Noyau chargé",

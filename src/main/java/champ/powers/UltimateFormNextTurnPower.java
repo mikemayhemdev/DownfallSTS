@@ -5,6 +5,7 @@ import champ.ChampMod;
 import champ.stances.UltimateStance;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
@@ -16,9 +17,9 @@ import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import downfall.util.TextureLoader;
 
-public class UltimateFormPower extends AbstractPower implements CloneablePowerInterface {
+public class UltimateFormNextTurnPower extends AbstractPower implements CloneablePowerInterface {
 
-    public static final String POWER_ID = ChampMod.makeID("UltimateStancePower");
+    public static final String POWER_ID = ChampMod.makeID("UltimateFormNextTurnPower");
 
     private static final Texture tex84 = TextureLoader.getTexture(ChampMod.getModID() + "Resources/images/powers/UltimateStance84.png");
     private static final Texture tex32 = TextureLoader.getTexture(ChampMod.getModID() + "Resources/images/powers/UltimateStance32.png");
@@ -26,7 +27,7 @@ public class UltimateFormPower extends AbstractPower implements CloneablePowerIn
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public UltimateFormPower(final int amount) {
+    public UltimateFormNextTurnPower(final int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
@@ -42,35 +43,26 @@ public class UltimateFormPower extends AbstractPower implements CloneablePowerIn
     }
 
     @Override
-    public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
-        if (!(newStance instanceof UltimateStance)) {
+    public void atStartOfTurn() {
+        super.atStartOfTurn();
 
-            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(UltimateStance.STANCE_ID));
-        }
+        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(UltimateStance.STANCE_ID));
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner,owner,this));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new UltimateFormPower(amount)));
     }
-
-    public void atEndOfRound() {
-        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(owner, owner, ID, 1));
-        if (amount == 1) {
-            flash();
-            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));
-        }
-    }
-
 
     @Override
     public void updateDescription() {
         if (amount == 1) {
             description = DESCRIPTIONS[0];
-        }
-        else {
-            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
-        }
+        } else {
 
+            description = DESCRIPTIONS[0] + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+        }
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new UltimateFormPower(amount);
+        return new UltimateFormNextTurnPower(amount);
     }
 }

@@ -10,9 +10,7 @@
   },
   {
     "NAMES": [
-      "divisez",
-      "diviser"  
-      "divisant"
+      "divisez"
     ],
     "PROPER_NAME": "Division",
     "DESCRIPTION": "Faites apparaître un sbire #ySlime, qui attaque au début de chaque tour. NL NL Si vous n'avez pas d'emplacement de Slime, votre Slime le plus ancien est automatiquement #yAbsorbé pour faire de la place, vous donnant 1 de #yForce."
@@ -23,7 +21,7 @@
       "goopé"
     ],
     "PROPER_NAME": "Goop",
-    "DESCRIPTION": "La prochaine attaque inflige #b1 dégât de plus par #yGoop, retirant alors tout le #yGoop et déclenchant n'importe quel effets de #yConsumation."
+    "DESCRIPTION": "La prochaine attaque inflige #b1 dégât de plus par #yGoop, retirant alors tout le #yGoop et déclenchant n'importe quel effet de #yConsumation."
   },
   {
     "NAMES": [
@@ -35,7 +33,7 @@
   {
     "NAMES": [
       "commandez",
-      "commande"
+      "commande",
       "commandez-les"
     ],
     "PROPER_NAME": "Commande",
@@ -54,7 +52,7 @@
       "slime cogneur",
       "slime_cogneur",
       "slimes cogneurs",
-      "slime_cogneur",
+      "slime_cogneurs",
       "cogneur"
     ],
     "PROPER_NAME": "Slime cogneur",
@@ -81,7 +79,7 @@
   },
   {
     "NAMES": [
-      "slime guerriers",
+      "slime guerrier",
       "slime_guerrier",
       "slimes guerriers",
       "slimes_guerriers",
