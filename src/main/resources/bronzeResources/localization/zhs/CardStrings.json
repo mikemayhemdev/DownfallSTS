@@ -24,7 +24,7 @@
     ]
   },
   "bronze:DonuBeam": {
-    "NAME": "原型激光",
+    "NAME": "原型射线",
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL bronze:编译 -获得 !M! 点 力量 。",
     "EXTENDED_DESCRIPTION": [
       "平滑",
@@ -150,11 +150,11 @@
     ]
   },
   "bronze:DarkDash": {
-    "NAME": "暗影冲击",
+    "NAME": "暗影冲刺",
     "DESCRIPTION": "获得 !B! 点格挡。 NL 造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:插入 *虚空 。",
     "EXTENDED_DESCRIPTION": [
       "暗影",
-      "冲击"
+      "冲刺"
     ]
   },
   "bronze:OilSpill": {
@@ -542,7 +542,7 @@
     "UPGRADE_DESCRIPTION": "固有 。 NL 移除下 !M! 张 bronze:编码 牌中的 bronze:编译 *错误 。"
   },
   "bronze:BranchBlock": {
-    "NAME": "分支: 格挡",
+    "NAME": "分支： 格挡",
     "DESCRIPTION": "获得 !B! 点 格挡 。",
     "EXTENDED_DESCRIPTION": [
       "分叉",
@@ -550,7 +550,7 @@
     ]
   },
   "bronze:BranchHit": {
-    "NAME": "分支: 攻击",
+    "NAME": "分支： 攻击",
     "DESCRIPTION": "造成 !D! 点 伤害 。",
     "EXTENDED_DESCRIPTION": [
       "分叉",
@@ -558,7 +558,7 @@
     ]
   },
   "bronze:Ignite": {
-    "NAME": "引燃",
+    "NAME": "点燃",
     "DESCRIPTION": "给予 !M! 层 hexamod:灼魂 。 NL 回合结束时，受到 2 点伤害。",
     "UPGRADE_DESCRIPTION": "给予 !M! 层 hexamod:灼魂 。 NL 回合结束时，受到 4 点伤害。"
   },
