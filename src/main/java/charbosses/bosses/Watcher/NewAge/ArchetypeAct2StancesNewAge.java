@@ -59,7 +59,7 @@ public class ArchetypeAct2StancesNewAge extends ArchetypeBaseWatcher {
         if (!looped) {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnMentalFortress(), false);
+                    addToList(cardsList, new EnMentalFortress(), true);
                     addToList(cardsList, new EnTantrum(), false);
                     addToList(cardsList, new EnDoubt());
                     turn++;
