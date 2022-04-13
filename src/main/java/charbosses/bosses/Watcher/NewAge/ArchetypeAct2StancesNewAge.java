@@ -65,7 +65,7 @@ public class ArchetypeAct2StancesNewAge extends ArchetypeBaseWatcher {
                     turn++;
                     break;
                 case 1:
-                    addToList(cardsList, new EnWeave(), false);
+                    addToList(cardsList, new EnWeave(), extraUpgrades);
                     addToList(cardsList, new EnFearNoEvil(), false);
                     addToList(cardsList, new EnSimmeringFury(), false);
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(b, b, new EnemyFearNoEvilPower(b)));
