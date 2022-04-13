@@ -142,7 +142,7 @@ public class ArchetypeAct2StancesNewAge extends ArchetypeBaseWatcher {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_IncenseBurner(2));
+        addRelic(new CBR_IncenseBurner(3));
     }
 
     /*
