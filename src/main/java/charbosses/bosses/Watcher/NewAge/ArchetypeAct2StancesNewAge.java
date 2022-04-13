@@ -45,7 +45,7 @@ public class ArchetypeAct2StancesNewAge extends ArchetypeBaseWatcher {
        /////   RELICS   /////
 
         addRelic(new CBR_NeowsBlessing());
-        addRelic(new CBR_Anchor());
+        addRelic(new CBR_HornCleat());
         addRelic(new CBR_TungstenRod());
         addRelic(new CBR_BagOfMarbles());
 
