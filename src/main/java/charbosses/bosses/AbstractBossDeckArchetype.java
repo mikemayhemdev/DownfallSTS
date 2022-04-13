@@ -1,6 +1,7 @@
 package charbosses.bosses;
 
 import charbosses.BossMechanicDisplayPanel;
+import charbosses.cards.AbstractBossCard;
 import charbosses.relics.AbstractCharbossRelic;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -95,6 +96,11 @@ public abstract class AbstractBossDeckArchetype {
 
     public ArrayList<AbstractCard> getThisTurnCards() {
         return new ArrayList<>();
+    }
+
+    protected void addToList(ArrayList<AbstractCard> cardsList, AbstractBossCard card, boolean upgraded, int energyGeneratedIfPlayed) {
+        card.energyGeneratedIfPlayed = energyGeneratedIfPlayed;
+        addToList(cardsList, card, upgraded);
     }
 
     public void addToList(ArrayList<AbstractCard> c, AbstractCard q, boolean upgraded) {

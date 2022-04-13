@@ -140,11 +140,6 @@ public class ArchetypeAct2StancesNewAge extends ArchetypeBaseWatcher {
 
     }
 
-    private void addToList(ArrayList<AbstractCard> cardsList, AbstractBossCard card, boolean upgraded, int energyGeneratedIfPlayed) {
-        card.energyGeneratedIfPlayed = energyGeneratedIfPlayed;
-        addToList(cardsList, card, upgraded);
-    }
-
     @Override
     public void initializeBonusRelic() {
         addRelic(new CBR_IncenseBurner(2));

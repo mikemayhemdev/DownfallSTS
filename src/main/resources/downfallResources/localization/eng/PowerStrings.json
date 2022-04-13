@@ -90,7 +90,7 @@
     "DESCRIPTIONS": [
       "Whenever you play a skill, Watcher gains #b",
       " temporary #yStrength.",
-      "Whenever you play a skill, Watcher gains #yStrength. #yWrath increases damage given and taken by 100%."
+      "Whenever you play a skill, Watcher gains #yTemporary #yStrength. #yWrath increases damage given and taken by 100%."
     ]
   },
   "downfall:WrathNextTurnPower": {
