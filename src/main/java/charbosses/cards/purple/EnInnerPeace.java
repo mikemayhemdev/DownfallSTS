@@ -19,6 +19,8 @@ public class EnInnerPeace extends AbstractStanceChangeCard {
 
     public EnInnerPeace() {
         super(ID, cardStrings.NAME, "purple/skill/inner_peace", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.PURPLE, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
+        this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -36,7 +38,6 @@ public class EnInnerPeace extends AbstractStanceChangeCard {
             this.upgradeName();
             this.upgradeMagicNumber(1);
         }
-
     }
 
     public AbstractCard makeCopy() {

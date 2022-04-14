@@ -37,6 +37,10 @@ public class EnemyWrathNextTurnPower extends AbstractPower {
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 
+    public void updateDescription() {
+        this.description = powerStrings.DESCRIPTIONS[0];
+    }
+
     public AbstractEnemyStance getWrathStance() {
         return new EnRealWrathStance();
     }
