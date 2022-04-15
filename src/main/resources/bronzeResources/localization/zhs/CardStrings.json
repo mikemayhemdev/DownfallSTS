@@ -488,8 +488,8 @@
   },
   "bronze:Verify": {
     "NAME": "感知形态",
-    "DESCRIPTION": "虚无 。 NL 每回合首次抽到 bronze:方法 时提高其数值1点。",
-    "UPGRADE_DESCRIPTION": "每回合首次抽到 bronze:方法 时提高其数值1点。"
+    "DESCRIPTION": "虚无 。 NL 抽到 bronze:方法 时，提高其数值1点。",
+    "UPGRADE_DESCRIPTION": "抽到 bronze:方法 时，提高其数值1点。"
   },
   "bronze:BronzeHeatsink": {
     "NAME": "铜制散热器",
