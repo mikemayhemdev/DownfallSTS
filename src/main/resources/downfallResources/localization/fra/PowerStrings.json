@@ -292,7 +292,7 @@
   "downfall:HermitConcentrationPower": {
     "NAME": "Concentré",
     "DESCRIPTIONS": [
-      "Les cartes de l'Ermite ont des effets bonus #yDans #yLe #yMille pendant qu'il est concentré. Infliger #b",
+      "Les cartes de l'Ermite ont des effets bonus #yDans #yLe #yMille pendant qu'il est concentré. Infligez #b",
       " dégâts de plus pour briser sa Concentration ce tour.",
       "La Concentration de l'Ermite est brisée et ses effets #yDans #yLe #yMille ne se déclencheront pas ce tour."
     ]

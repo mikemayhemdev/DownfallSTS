@@ -209,9 +209,9 @@
     "UPGRADE_DESCRIPTION": "TOUS les ennemis perdent des PV égaux à leur hexamod:Brûlure."
   },
   "hexamod:ExtraCrispy": {
-    "NAME": "Extra Crispy",
+    "NAME": "Extra Croustillant",
     "DESCRIPTION": "Les cartes et les Feux Follets appliquent !M! hexamod:Brûlure de plus.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Cards and Ghostflames apply !M! more hexamod:Soulburn."
+    "UPGRADE_DESCRIPTION": "Inné. NL Les cartes et les Feux Follets appliquent !M! hexamod:Brûlure de plus."
   },
   "hexamod:GhostflameBarrier": {
     "NAME": "Mur de feux follets",

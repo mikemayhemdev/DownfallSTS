@@ -26,7 +26,7 @@
   },
   "downfall:Girya": {
     "DESCRIPTIONS": [
-      " NL Optant pour lever des poids plutôt que de se reposer,  le Boss a commencé avec moins de vie maximale."
+      " NL Optant pour lever des poids plutôt que de se reposer, le Boss a commencé avec moins de vie maximale."
     ]
   },
   "downfall:Matroyshka": {
@@ -61,13 +61,13 @@
   },
   "downfall:FrozenEgg": {
     "DESCRIPTIONS": [
-      "Le Boss a amélioré plusieurs pouvoirs."
+      "Le Boss a amélioré plusieurs Pouvoirs."
     ]
   },
   "downfall:Shovel": {
     "DESCRIPTIONS": [
       " NL Le Boss a acquis ",
-      " reliques supplémentaires, mais commence avec moins de vie maximale dû au fait de ne s'être pas Reposé."
+      " reliques supplémentaires, mais commence avec moins de vie maximale dû au fait de ne pas s'être Reposé."
     ]
   },
   "downfall:CBRSerpentHead": {
@@ -83,13 +83,13 @@
   },
   "downfall:DreamCatcher": {
     "DESCRIPTIONS": [
-      " NL Le Boss a gagné des cartes supplémntaires en se reposant."
+      " NL Le Boss a gagné des cartes supplémentaires en se reposant."
     ]
   },
   "downfall:PrayerWheel": {
     "DESCRIPTIONS": [
       " NL Le Boss a gagné ",
-      " cartes extra avec cette relique."
+      " cartes supplémentaires avec cette relique."
     ]
   },
   "downfall:PeacePipe": {
@@ -100,7 +100,7 @@
   },
   "downfall:RunicDome": {
     "DESCRIPTIONS": [
-      " NL Le Boss peut choisir l'ordre de ses cartes défavorablement."
+      " NL Le Boss peut choisir l'ordre de ses cartes en votre défaveur."
     ]
   },
   "downfall:CentennialPuzzle": {
@@ -133,7 +133,7 @@
   },
   "downfall:BonfireSpirits": {
     "NAME": "Évènement : Esprits du feu",
-    "FLAVOR": "Les esprits lancent des petits os et des fragments dans le feu, qui érupte brillemment chaque fois...",
+    "FLAVOR": "Les esprits lancent des petits os et des fragments dans le feu, qui éruptent brillemment chaque fois...",
     "DESCRIPTIONS": [
       "Le Boss a retiré une carte de leur deck pour gagner 10 PV Max."
     ]
@@ -377,7 +377,7 @@
   },
   "downfall:GremlinSack": {
     "NAME": "Sac de diablotin",
-    "FLAVOR": "You were no match for the Gremlin and his bodyguard.",
+    "FLAVOR": "Le Gremlin et son garde du corps n'ont pas fait le poids face à vous.",
     "DESCRIPTIONS": [
       "Lorsque vous le ramassez, ajoutez les cartes suivantes dans votre deck: NL ",
       "Lorsque vous le ramassez, ajoutez 6 cartes du jeu des Paires à votre deck.",
@@ -408,18 +408,18 @@
     "NAME": "Statue ailée brisée",
     "FLAVOR": "Un morceau brisé d'une statue autrefois magnifique.",
     "DESCRIPTIONS": [
-      "Les cultistes qui vénèrent l'Eveillé seront peut-être intéréssés par ceci...."
+      "Les cultistes qui vénèrent l'Éveillé seront peut-être intéréssés par ceci...."
     ]
   },
   "downfall:ShatteredFragment": {
     "NAME": "Fragment aiguisé",
     "FLAVOR": "Une statue brisée autrefois - aujourd'hui une arme de fortune.",
     "DESCRIPTIONS": [
-      "Au début de chaque tour, ajoutez un Surin de cristal à votre main."
+      "Au début de chaque tour, ajoutez un #ySurin #yde #ycristal à votre main."
     ]
   },
   "downfall:RedIOU": {
-    "NAME": "Contract de bandit",
+    "NAME": "Contrat de bandit",
     "FLAVOR": "Un accord du trio de Bandits - en partie contre un bibelot, mais surtout en échange de leurs vies.",
     "DESCRIPTIONS": [
       "Au début du #b3ème combat de boss, les Bandits au Masque Rouge iront vous assister.",
@@ -431,7 +431,7 @@
     ]
   },
   "downfall:RedIOUUpgrade": {
-    "NAME": "Contract de Bandit+",
+    "NAME": "Contrat de Bandit+",
     "FLAVOR": "Un accord du trio de Bandits - en partie contre un bibelot, mais surtout en échange de leurs vies.",
     "DESCRIPTIONS": [
       "Au début du #b3ème combat de boss, les Bandits au Masque Rouge iront vous assister."
@@ -500,7 +500,9 @@
       "Vraiment, vous êtes le BPP du Cœur : Boss le Plus Précieux.",
       "La corruption du Cœur ne connaît aucune limite - pas même de jolis animaux domestiques.",
       "Courrier corrompu",
-      "Le Cœur réapprovisionne les cartes, reliques, et les potions. Tous les prix sont réduits de #b20%."
+      "Le Cœur réapprovisionne les cartes, reliques, et les potions. Tous les prix sont réduits de #b20%.",
+      "Les récompenses de combat contiennent désormais des cartes Incolores et des cartes de la couleur des Héros.",
+      "Gagnez [E] au début de votre tour. Vous ne pouvez plus obtenir #yd'Âmes. Briser les clés ne coûte pas d'Âmes."
     ]
   },
   "downfall:LizardTail": {

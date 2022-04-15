@@ -3,7 +3,7 @@
     "NAME": "Couronne du champion",
     "FLAVOR": "VOUS ÊTES LE GAGNANT!",
     "DESCRIPTIONS": [
-      "Au début du combat, entrez en Pose #bDéfensive ou en Pose du #rDestructeur  #yPose, infligez #b4 dégâts à un ennemi aléatoire."
+      "Au début du combat, entrez en Pose #bDéfensive ou en Pose du #rDestructeur"
     ]
   },
   "champ:BlackKnightHelmet": {
@@ -24,14 +24,14 @@
     "NAME": "Guide du Destructeur",
     "FLAVOR": "Le texte est illisible.",
     "DESCRIPTIONS": [
-      "Au début de votre tour, gagnez #b3 de Vigeur."
+      "Au début de votre tour, gagnez #b3 de Vigueur."
     ]
   },
   "champ:ChampionCrownUpgraded": {
     "NAME": "Couronne du victorieux",
     "FLAVOR": "Félissitations!! Vous êtes le plus grand vainqueur.",
     "DESCRIPTIONS": [
-      "Remplace la #rCouronne #rdu #rChampion. NL Commencez chaque combat en #yPose #yUltime, qui dure pendant #b1 tour."
+      "Remplace la #rCouronne #rdu #rChampion. NL Commencez chaque combat en #yPose #yUltime, qui dure pendant #b2 tours."
     ]
   },
   "champ:DefensiveTrainingManual": {
@@ -45,19 +45,19 @@
     "NAME": "Bracelets déflecteurs",
     "FLAVOR": "Si vous pensiez que se protéger était bien...",
     "DESCRIPTIONS": [
-      "Au début de votre tour, gagnez du #yContre équivalent à l'Armure que vous avez perdu."
+      "Au début de votre tour, gagnez du #ychamp:Contre équivalent à l'Armure que vous avez perdu."
     ]
   },
   "champ:DuelingGlove": {
     "NAME": "Gants de duel",
-    "FLAVOR": "Comptez jusqu'à...",
+    "FLAVOR": "Comptez à partir de dix...",
     "DESCRIPTIONS": [
-      "Après avoir utilisé une attaque à cible unique, si la cible n'était pas #yVulnérable, appliquez #b1 de #yVulnérabilité."
+      "Après avoir utilisé une #yAttaque à cible unique, si la cible n'était pas #yVulnérable, appliquez #b1 de #yVulnérabilité."
     ]
   },
   "champ:FightingForDummies": {
     "NAME": "Combattre pour les Nuls",
-    "FLAVOR": "Etape 1. Battre l'ennemi",
+    "FLAVOR": "Étape 1. Battre l'ennemi",
     "DESCRIPTIONS": [
       "Si vous terminez votre tour avec aucune #yPose, gagnez 6 d'Armure."
     ]
@@ -66,14 +66,14 @@
     "NAME": "Manuel de gladiateur",
     "FLAVOR": "Essayez tout - quelque chose marchera sûrement.",
     "DESCRIPTIONS": [
-      "Lorsque vous jouez une #yTechnique, un #yCombo, un #yFinisher, et que vous entrez dans une #yPose dans le même tour, gagnez #b1 de #yForce et de #yDextérité."
+      "Lorsque vous jouez un #yCombo, un #yFinisher, et que vous entrez dans une #yPose dans le même tour, gagnez #b1 de #yForce et de #yDextérité."
     ]
   },
   "champ:PowerArmor": {
     "NAME": "Armure de Puissance",
     "FLAVOR": "Achetée d'occasion.",
     "DESCRIPTIONS": [
-      "Au début de votre tour, gagnez [E] . NL Votre #Vigueur et votre #Contre maximum est de #b30."
+      "Au début de votre tour, gagnez [E]. NL Votre #Vigueur et votre #Contre maximum est de #b30."
     ]
   },
   "champ:SignatureFinisher": {
@@ -89,7 +89,7 @@
     "NAME": "Main de spectre",
     "FLAVOR": "Certaines victoires restent avec vous.",
     "DESCRIPTIONS": [
-      "Lorsque vous adoptez une Pose, ajoutez une #yFrappe ou une #yDéfense dans votre main. Elle coûte #b0 et a #yÉpuisement."
+      "Lorsque vous Adoptez une Pose, ajoutez une #yFrappe ou une #yDéfense dans votre main. Elle coûte #b0 et a #yÉpuisement."
     ]
   },
   "champ:LiftRelic": {

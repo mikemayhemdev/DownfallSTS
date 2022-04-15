@@ -8,7 +8,7 @@
   },
   "expansioncontent:Hexaburn": {
     "NAME": "Hexabrûlure",
-    "DESCRIPTION": "Dans !M! tours, infligez !D! dégâts à un ennemi aléatoire 6 fois. NL Scales avec la Force."
+    "DESCRIPTION": "Dans !M! tours, infligez !D! dégâts à un ennemi aléatoire 6 fois. NL  S'adapte avec la Force."
   },
   "expansioncontent:InvincibleStrength": {
     "NAME": "Invincibilité",
@@ -38,17 +38,16 @@
   },
   "expansioncontent:PolyBeam": {
     "NAME": "Canon Donu",
-    "DESCRIPTION": "Infligez !D! dégâts deux fois. Augmentez les dégâts de cette de !M!. NL Au prochain tour, ajoutez un *Bouclier *Déca dans votre main, ou expansioncontent:Exhumez-la it. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts deux fois. Augmentez les dégâts de cette de !M!. NL Au prochain tour, ajoutez un *Bouclier *Déca+ dans votre main, ou expansioncontent:Exhumez-la. NL Épuisement."
+    "DESCRIPTION": "Gagnez !M! de Force."
   },
   "expansioncontent:DecaShield": {
     "NAME": "Bouclier Déca",
-    "DESCRIPTION": "Gagnez !B! d'armure deux fois. Augmentez l'Armure de cette carte de !M!. NL Au prochain tour, expansioncontent:Exhumez *Canon *Donu. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure deux fois. Augmentez l'Armure de cette carte de !M!. NL Au prochain tour, expansioncontent:Exhumez *Canon *Donu+. NL Épuisement."
+    "DESCRIPTION": "Gagnez !B! d'Armure Plaquée."
   },
   "expansioncontent:ShapePower": {
     "NAME": "Béndiction de la Forme",
-    "DESCRIPTION": "Choisissez - Gagnez !M! de Force ou !B! d'Armure Plaquée.",
+    "DESCRIPTION": "Choisissez - Gagnez !M! de Force ou 5 d'Armure Plaquée.",
+    "UPGRADE_DESCRIPTION": "Choisissez - Gagnez !M! de Force ou 8 d'Armure Plaquée.",
     "EXTENDED_DESCRIPTION": [
       "Pouvoir de Donu",
       "Gagnez !M! de Force.",

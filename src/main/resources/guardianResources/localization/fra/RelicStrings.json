@@ -3,7 +3,7 @@
     "NAME": "Engrenage de bronze",
     "FLAVOR": "De la protection lorsque vous en avez le plus besoin.",
     "DESCRIPTIONS": [
-      "La première fois que vous entrez en #yguardianmod:Mode_Défensif, gagnez #10 #bd'Armure #ysupplémentaires. NL Le Gardien commence la run avec une #yGemme commune aléatoire."
+      "La première fois que vous entrez en #yguardianmod:Mode_Défensif, gagnez #b10 #bd'Armure #ysupplémentaires. NL Le Gardien commence la run avec une #yGemme commune aléatoire."
     ]
   },
   "Guardian:ModeShifterPlus": {
@@ -53,7 +53,7 @@
     "NAME": "Tiny Police Box",
     "FLAVOR": "It's bigger on the inside...",
     "DESCRIPTIONS": [
-      "Start each combat with #b2 additional #yguardianmod:Stasis slots."
+      "Commencez chaque combat avec #b2 emplacements de #yguardianmod:Stase supplémentaires."
     ]
   },
   "Guardian:StasisSlotReductionRelic": {

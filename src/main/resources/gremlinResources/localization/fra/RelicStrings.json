@@ -3,7 +3,7 @@
     "NAME": "Pectos impeccables",
     "FLAVOR": "Glorieux.",
     "DESCRIPTIONS": [
-      "Lorsque vous gagnez de la #yForce, gagnez un nombre égal de PV Temporaires."
+      "Lorsque vous gagnez de la #yForce, gagnez un nombre équivalent de #yPV #yTemporaires. NL Commencez chaque combat avec #b1 de #yForce."
     ]
   },
   "Gremlin:FragmentationGrenade": {
@@ -15,23 +15,23 @@
   },
   "Gremlin:GremlinBomb": {
     "NAME": "Bombe diabolique",
-    "FLAVOR": "Les Diablotins ont un don étrange pour trouver des choses dangereuses. Parfois, ils survivent même à leur pillage.",
+    "FLAVOR": "Les Diablotins ont un don étrange pour trouver des objets dangereux. Parfois, ils parviennent même à survivre en les volant.",
     "DESCRIPTIONS": [
       "Lorsqu'un Diablotin meurt, infligez #b", " dégâts à TOUS les ennemis."
     ]
   },
   "Gremlin:GremlinGravestone": {
     "NAME": "Pierre tombale de Diablotin",
-    "FLAVOR": "Où vont les diablotins lorsqu'ils meurent ? Pas assez loin, bon sang.",
+    "FLAVOR": "Où vont les Diablotins lorsqu'ils meurent ? Pas assez loin, bon sang.",
     "DESCRIPTIONS": [
       "Les Diablotins morts peuvent être ressucités dans les Sites de Repos en tant qu'Action Gratuite."
     ]
   },
   "Gremlin:GremlinKnob": {
     "NAME": "Bâton de chef",
-    "FLAVOR": "Entre les meutes de diablotins, celui ayant la meilleure corne maintient un contrôle total sur la troupe, jusqu'à ce qu'un autre parvienne à la voler.",
+    "FLAVOR": "Au sein des bandes de Diablotins, celui qui possède la meilleure corne exerce un contrôle total sur la troupe, jusqu'à ce qu'un autre parvienne à la voler.",
     "DESCRIPTIONS": [
-      "Au début de chaque combat, gagnez [E] , piochez #b1 carte, et #yPermutez au prochain Diablotin."
+      "Au début de chaque combat, gagnez [E], piochez #b1 carte, et #yPermutez au prochain Diablotin."
     ]
   },
   "Gremlin:GremlinKnobUpgrade": {
@@ -39,7 +39,7 @@
     "FLAVOR": "Plus le symbole du pouvoir est précieux, plus il est susceptible d'être volé.",
     "DESCRIPTIONS": [
       "Remplace ",
-      ". NL La première fois que vous mélangez votre pioche chaque tour, gagnez [E] , piochez #b1 carte, et #yPermutez au prochain Diablotin."
+      ". NL La première fois que vous mélangez votre pioche chaque tour, gagnez [E], piochez #b1 carte, et #yPermutez au prochain Diablotin."
     ]
   },
   "Gremlin:GremlinMask": {

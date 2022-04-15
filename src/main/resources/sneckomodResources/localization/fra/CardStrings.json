@@ -231,7 +231,7 @@
   },
   "sneckomod:MixItUp": {
     "NAME": "Cocktail explosif",
-    "DESCRIPTION": "Infligez !D! !M! fois. NL *Transformez vos Potions. NL Épuisement."
+    "DESCRIPTION": "Infligez !D! dégâts !M! fois. NL *Transformez vos Potions. NL Épuisement."
   },
   "sneckomod:MorePower": {
     "NAME": "Plus de puissance!",

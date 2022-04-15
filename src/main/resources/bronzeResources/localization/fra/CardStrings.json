@@ -543,7 +543,8 @@
   },
   "bronze:CleanCode": {
     "NAME": "Code Clean",
-    "DESCRIPTION": "Retirez tous les effets des all bronze:Compilation *Erreur des cartes Encodées. NL Dure pour les !M! prochaines Fonctions créées."
+    "DESCRIPTION": "Retirez les !M! prochaines *Erreurs de bronze:Compilation que vous auriez bronze:Encodé.",
+    "UPGRADE_DESCRIPTION": "Inné. Retirez les !M! prochaines *Erreurs de bronze:Compilation que vous auriez bronze:Encodé."
   },
   "bronze:BranchBlock": {
     "NAME": "Branche: Armure",

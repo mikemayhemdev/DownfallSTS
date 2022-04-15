@@ -54,39 +54,39 @@
     ]
   },
   "downfall:HeartMerchant": {
-  "NAMES": [
-    "Proceed",
-    "~Sacrifice...~"
-  ],
-  "TEXT": [
-    "~Tu~ ~deviens...~ ~plus...~ ~fort...~",
-    "~Nous~ ~grandissons...~ ~comme~ ~tu~ ~grandis..~",
-    "~Tue...~ ~et~ ~sois~ ~récompensé...~",
-    "~Plus...~ ~d'âmes...~",
-    "~Nourris-nous......~ NL ~NOURRIS-NOUS......~",
-    "~Nourris...~ ~la~ ~corruption...~",
-    "~Les~ ~Bénédictions...~ ~se~ ~méritent...~",
-    "~Aucune...~ ~pitié...~",
-    "~Toujours...~ ~plus~  ~fort...~",
-    "~Notre~ ~pouvoir...~ ~est~ ~tien...~",
-    "~Tue-les~ ~tous...~ ~sur~ ~ton~ ~chemin...~",
-    "~Combats...~ ~tombe...~ ~et~ ~nourris...~",
-    "~Nous~ ~sommes...~ ~légion...~",
-    "~Va~ ~de~ ~l'avant...~ ~et~ ~collecte...~",
-    "~Ces~ ~âmes...~ ~délicieuses...~",
-    "~Récolte...~ ~les~ ~déchus...~"
-  ],
-  "OPTIONS": [
-    "~Neow...~ ~ne~ ~peut~ ~pas~ ~gagner...~",
-    "~Ne~ ~crains~ ~rien...~",
-    "..... NL .... NL .........",
-    "~Finis-les...~",
-    "~Bonne...~ ~chance...~",
-    "~Ne~ ~meurs~ ~pas...~",
-    "~Nous...~ ~attendrons...~",
-    "~Détruis-les...~ ~tous...~"
-  ]
-},
+    "NAMES": [
+      "Proceed",
+      "~Sacrifice...~"
+    ],
+    "TEXT": [
+      "~Tu~ ~deviens...~ ~plus...~ ~fort...~",
+      "~Nous~ ~grandissons...~ ~comme~ ~tu~ ~grandis..~",
+      "~Tue...~ ~et~ ~sois~ ~récompensé...~",
+      "~Plus...~ ~d'âmes...~",
+      "~Nourris-nous......~ NL ~NOURRIS-NOUS......~",
+      "~Nourris...~ ~la~ ~corruption...~",
+      "~Les~ ~Bénédictions...~ ~se~ ~méritent...~",
+      "~Aucune...~ ~pitié...~",
+      "~Toujours...~ ~plus~  ~fort...~",
+      "~Notre~ ~pouvoir...~ ~est~ ~tien...~",
+      "~Tue-les~ ~tous...~ ~sur~ ~ton~ ~chemin...~",
+      "~Combats...~ ~tombe...~ ~et~ ~nourris...~",
+      "~Nous~ ~sommes...~ ~légion...~",
+      "~Va~ ~de~ ~l'avant...~ ~et~ ~collecte...~",
+      "~Ces~ ~âmes...~ ~délicieuses...~",
+      "~Récolte...~ ~les~ ~déchus...~"
+    ],
+    "OPTIONS": [
+      "~Neow...~ ~ne~ ~peut~ ~pas~ ~gagner...~",
+      "~Ne~ ~crains~ ~rien...~",
+      "..... NL .... NL .........",
+      "~Finis-les...~",
+      "~Bonne...~ ~chance...~",
+      "~Ne~ ~meurs~ ~pas...~",
+      "~Nous...~ ~attendrons...~",
+      "~Détruis-les...~ ~tous...~"
+    ]
+  },
   "downfall:HeartProceed": {
     "TEXT": [
       "~Intrus...~ NL ~...dans~ ",
@@ -129,22 +129,22 @@
       "Choisissez une carte à retirer de votre deck."
     ],
     "TEXT": [
-    "~Tu~ ~deviens...~ ~plus...~ ~fort...~",
-    "~Nous~ ~grandissons...~ ~comme~ ~tu~ ~grandis..~",
-    "~Tue...~ ~et~ ~sois~ ~récompensé...~",
-    "~Plus...~ ~d'âmes...~",
-    "~Nourris-nous......~ NL ~NOURRIS-NOUS......~",
-    "~Nourris...~ ~la~ ~corruption...~",
-    "~Les~ ~Bénédictions...~ ~se~ ~méritent...~",
-    "~Aucune...~ ~pitié...~",
-    "~Toujours...~ ~plus~  ~fort...~",
-    "~Notre~ ~pouvoir...~ ~est~ ~tien...~",
-    "~Tue-les~ ~tous...~ ~sur~ ~ton~ ~chemin...~",
-    "~Combats...~ ~tombe...~ ~et~ ~nourris...~",
-    "~Nous~ ~sommes...~ ~légion...~",
-    "~Va~ ~de~ ~l'avant...~ ~et~ ~collecte...~",
-    "~Ces~ ~âmes...~ ~délicieuses...~",
-    "~Récolte...~ ~les~ ~déchus...~"
+      "~Tu~ ~deviens...~ ~plus...~ ~fort...~",
+      "~Nous~ ~grandissons...~ ~comme~ ~tu~ ~grandis..~",
+      "~Tue...~ ~et~ ~sois~ ~récompensé...~",
+      "~Plus...~ ~d'âmes...~",
+      "~Nourris-nous......~ NL ~NOURRIS-NOUS......~",
+      "~Nourris...~ ~la~ ~corruption...~",
+      "~Les~ ~Bénédictions...~ ~se~ ~méritent...~",
+      "~Aucune...~ ~pitié...~",
+      "~Toujours...~ ~plus~  ~fort...~",
+      "~Notre~ ~pouvoir...~ ~est~ ~tien...~",
+      "~Tue-les~ ~tous...~ ~sur~ ~ton~ ~chemin...~",
+      "~Combats...~ ~tombe...~ ~et~ ~nourris...~",
+      "~Nous~ ~sommes...~ ~légion...~",
+      "~Va~ ~de~ ~l'avant...~ ~et~ ~collecte...~",
+      "~Ces~ ~âmes...~ ~délicieuses...~",
+      "~Récolte...~ ~les~ ~déchus...~"
     ]
   },
   "downfall:OctoChoiceCards": {
@@ -194,7 +194,10 @@
       "Divisez vous en slimeboundmod:Slime_Cogneur.",
       "Divisez vous en slimeboundmod:Slime_Guerrier.",
       "Divisez vous en slimeboundmod:Slime_Bourbier.",
-      "Divisez vous en slimeboundmod:Slime_Sangsue."
+      "Divisez vous en slimeboundmod:Slime_Sangsue.",
+      "Perdez 3 PV. NL Obtenez 50 Âmes.",
+      "Perdez 1 PV. NL Ajoutez une carte Incolore Améliorée aléatoire dans votre main.",
+      "Perdez 2 PV. NL Obtenez une Potion aléatoire"
     ]
   },
   "downfall:lazyStorage": {

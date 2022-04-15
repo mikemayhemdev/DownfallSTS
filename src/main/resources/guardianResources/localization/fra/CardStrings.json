@@ -14,7 +14,7 @@
   },
   "Guardian:Gem_Green": {
     "NAME": "Émeraude",
-    "DESCRIPTION": "guardianmod:Gem. NL Gagnez 2 de Dextérité temporaire.",
+    "DESCRIPTION": "guardianmod:Gemme. NL Gagnez 2 de Dextérité temporaire.",
     "UPGRADE_DESCRIPTION": "Gain 2 temporary Dexterity."
   },
   "Guardian:Gem_Lightblue": {
@@ -34,7 +34,7 @@
   },
   "Guardian:Gem_Cyan": {
     "NAME": "Aquamarine",
-    "DESCRIPTION": "guardianmod:Gem. NL Ajoutez un *Cristal *de *Protection dans votre main.",
+    "DESCRIPTION": "guardianmod:Gemme. NL Ajoutez un *Cristal *de *Protection dans votre main.",
     "UPGRADE_DESCRIPTION": "Add a *Crystal *Ward to your hand."
   },
   "Guardian:ChargeUp": {
