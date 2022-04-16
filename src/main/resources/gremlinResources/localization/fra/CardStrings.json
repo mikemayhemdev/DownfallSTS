@@ -6,7 +6,7 @@
 
   "Gremlin:ArmsTheft": {
     "NAME": "Vol d'armes",
-    "DESCRIPTION": "Volez !M! de Force. NL Épuisement."
+    "DESCRIPTION": "gremlin:Volez !M! de Force. NL Épuisement."
   },
 	
   "Gremlin:Astound": {
@@ -87,7 +87,7 @@
 
   "Gremlin:Dazzle": {
     "NAME": "Aveuglement",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Si vous avez 3 de gremlin:Magie ou plus, volez 2 de Force. NL Épuisement."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Si vous avez 3 de gremlin:Magie ou plus, gremlin:volez 2 de Force. NL Épuisement."
   },
 
   "Gremlin:Defend": {
@@ -308,7 +308,7 @@
 
   "Gremlin:Pickpocket": {
     "NAME": "Pickpocket",
-    "DESCRIPTION": "Volez tout l'Artéfact de l'ennemi. NL Infligez !D! dégâts. NL Épuisement."
+    "DESCRIPTION": "gremlin:Volez tout l'Artéfact de l'ennemi. NL Infligez !D! dégâts. NL Épuisement."
   },
 
   "Gremlin:PinNeedle": {

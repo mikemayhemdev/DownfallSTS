@@ -29,7 +29,8 @@
   {
     "PROPER_NAME": "Contre",
     "NAMES": [
-      "contre"
+      "contre",
+      "counter"
     ],
     "DESCRIPTION": "La prochaine fois que vous prenez des dégâts #yd'Attaque, infligez ces dégâts en retour."
   },
@@ -37,7 +38,9 @@
     "PROPER_NAME": "Defensive",
     "NAMES": [
       "défensive",
-      "défensive."
+      "défensive.",
+      "defensive",
+      "defensive."
     ],
     "DESCRIPTION": "#yPose. NL Bonus de #yTechnique: Gagnez #b4 de #yContre. NL Bonus de #yFinisher: Gagnez #b12 #yd'Armure."
   },
@@ -45,7 +48,9 @@
     "PROPER_NAME": "Destructeur",
     "NAMES": [
       "destructeur",
-      "destructeur."
+      "destructeur.",
+      "berserker",
+      "berserker."
     ],
     "DESCRIPTION": "#yPose.  NL Bonus de #yTechnique: Gagnez #b4 de #yVigeur. NL Bonus de #yFinisher: Gagnez #b1 de #yForce."
   },
@@ -53,7 +58,9 @@
     "PROPER_NAME": "Gladiateur",
     "NAMES": [
       "gladiateur",
-      "gladiateur."
+      "gladiateur.",
+      "gladiator",
+      "gladiator."
     ],
     "DESCRIPTION": "#yPose.  NL Bonus de #yTechnique : Piochez une carte. NL Bonus de #yFinisher: Au prochain tour, piochez #b1 carte et gagnez [E] . Terminez votre tour."
   },
@@ -61,7 +68,9 @@
     "PROPER_NAME": "Pose ultime",
     "NAMES": [
       "ultime",
-      "ultime."
+      "ultime.",
+      "ultimate",
+      "ultimate."
     ],
     "DESCRIPTION": "#yPose. Compte comme les #yPoses de #rDestructeur et #bDéfensive pour tous les usages. NL Les Finishers ne font pas quitter cette Pose. NL Vous ne pouvez donc pas changer de #yPose."
   },
@@ -69,7 +78,10 @@
     "PROPER_NAME": "Fatigue",
     "NAMES": [
       "fatiguez",
-      "fatigué"
+      "fatigué",
+      "fatigue",
+      "fatigued",
+      "fatigue."
     ],
     "DESCRIPTION": "Perdez des PV. Restorez les PV #yFatigués à la fin du combat."
   }
