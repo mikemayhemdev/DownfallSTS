@@ -27,7 +27,7 @@
   },
   "Gremlin:BubbleBarrier": {
     "NAME": "气泡屏障",
-    "DESCRIPTION": "本回合每当你打出一张牌，获得 !M! 点 格挡 。"
+    "DESCRIPTION": "本回合每用一张牌，获得 !M! 点 格挡 。"
   },
   "Gremlin:BulkUp": {
     "NAME": "巨大化",
@@ -134,7 +134,7 @@
   },
   "Gremlin:FlipOut": {
     "NAME": "发疯",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每当你获得 格挡 ，变为对所有敌人造成等量伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每获得 格挡 ，变为对所有敌人造成等量伤害。"
   },
   "Gremlin:Flurry": {
     "NAME": "乱舞",
@@ -151,7 +151,7 @@
   },
   "Gremlin:Fury": {
     "NAME": "狂怒",
-    "DESCRIPTION": "每有2点 力量 ，本牌的耗能减少 [E] 。 NL 造成 !D! 点伤害三次。"
+    "DESCRIPTION": "造成 !D! 点伤害三次。 NL 每有2点 力量 ，本牌耗能减少 [E] 。"
   },
   "Gremlin:Glimmer": {
     "NAME": "闪光",
@@ -203,7 +203,7 @@
   },
   "Gremlin:Heckle": {
     "NAME": "起哄",
-    "DESCRIPTION": "给予敌人负面效果时获得 !M! 层 临时生命 。"
+    "DESCRIPTION": "给予敌人负面效果时，获得 !M! 层 临时生命 。"
   },
   "Gremlin:InfiniteBlocks": {
     "NAME": "无限护甲",
@@ -245,7 +245,7 @@
   },
   "Gremlin:Necromancy": {
     "NAME": "招魂",
-    "DESCRIPTION": "需要3层 gremlin:法力 。 NL 使用 gremlin:法力 ，复活随机一只地精并回复 !M! 点生命。 消耗 。",
+    "DESCRIPTION": "需要3层 gremlin:法力 。 NL 使用 gremlin:法力 ，随机复活一只地精至 !M! 点生命。 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "法力还不够mojo。",
       "大家都还活着。",
