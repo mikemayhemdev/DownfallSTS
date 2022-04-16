@@ -498,7 +498,7 @@
   },
   "bronze:HardenedForm": {
     "NAME": "圆球召唤",
-    "DESCRIPTION": " bronze:编译 或打出 bronze:方法 时，获得 !M! 点 格挡 并随机造成 !M! 点伤害。"
+    "DESCRIPTION": " bronze:编译 或打出 bronze:方法 时： NL 获得 !M! 点 格挡 。 NL 随机造成 !M! 点伤害。"
   },
   "bronze:LegacyCode": {
     "NAME": "历史代码",
