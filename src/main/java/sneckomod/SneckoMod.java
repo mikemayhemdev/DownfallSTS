@@ -493,7 +493,7 @@ public class SneckoMod implements
 
     @Override
     public void receiveStartGame() {
-        if (!CardCrawlGame.loadingSave) {
+        if (!CardCrawlGame.loadingSave  || (validColors.isEmpty() && !pureSneckoMode)) {
             openedStarterScreen = false;
             validColors = new ArrayList<>();
         }
