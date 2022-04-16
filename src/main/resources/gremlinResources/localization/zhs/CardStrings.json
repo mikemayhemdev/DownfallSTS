@@ -84,8 +84,8 @@
   },
   "Gremlin:Duplicate": {
     "NAME": "复制",
-    "DESCRIPTION": "获得一张攻击牌的 !M! 张 gremlin:回响 。 NL 其耗能减少1点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得一张攻击牌的 !M! 张 gremlin:回响 。 NL 其耗能减少1点。"
+    "DESCRIPTION": "获得手中一张攻击牌的 !M! 张 gremlin:回响 。 NL 其耗能减1。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得手中一张攻击牌的 !M! 张 gremlin:回响 。 NL 其耗能减1。"
   },
   "Gremlin:EdibleArmor": {
     "NAME": "食用护甲",
@@ -398,7 +398,7 @@
   "Gremlin:Tadah": {
     "NAME": "嗒哒！",
     "DESCRIPTION": "随机获得一张技能牌的 gremlin:回响 。 NL gremlin:切换 至 gremlin:地精法师 。",
-    "UPGRADE_DESCRIPTION": "随机获得一张技能牌的 gremlin:回响 。 NL 其能耗减少1点。 NL gremlin:切换 至 gremlin:地精法师 。"
+    "UPGRADE_DESCRIPTION": "随机获得一张技能牌的 gremlin:回响 。 NL 其能耗减1。 NL gremlin:切换 至 gremlin:地精法师 。"
   },
   "Gremlin:TagTeam": {
     "NAME": "配合",
