@@ -37,5 +37,12 @@
       "幸运"
     ],
     "DESCRIPTION": "牌面效果的随机值取最大值。"
+  },
+  {
+    "PROPER_NAME": "即逝",
+    "NAMES": [
+      "即逝"
+    ],
+    "DESCRIPTION": "打出后从牌组移除。"
   }
 ]
