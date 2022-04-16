@@ -235,8 +235,8 @@
   },
   "hexamod:TurnItUp": {
     "NAME": "高热激发",
-    "DESCRIPTION": "临时获得 6 层 hexamod:热烈 。 NL 持续X+1回合。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "临时获得 6 层 hexamod:热烈 。 NL 持续X+1回合。 NL 获得 [E] 。 NL 消耗 。"
+    "DESCRIPTION": "临时获得6点 hexamod:热烈 。 NL 持续X+1回合。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "临时获得6点 hexamod:热烈 。 NL 持续X+1回合。 NL 获得 [E] 。 NL 消耗 。"
   },
   "hexamod:HeatMetal": {
     "NAME": "高热金属",
