@@ -38,8 +38,8 @@
   },
   "Slimebound:Split": {
     "NAME": "Invocation",
-    "DESCRIPTION": "slimeboundmod:Divisez-vous en 2 Slimes aléatoires. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Choisissez 2 Slimes parmi 4 et slimeboundmod:divisez-vous en ceux-ci. NL Épuisement."
+    "DESCRIPTION": "slimeboundmod:Divisez vous en 2 Slimes aléatoires. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Choisissez 2 Slimes parmi 4 et slimeboundmod:Divisez vous en ceux-ci. NL Épuisement."
   },
   "Slimebound:LeadByExample": {
     "NAME": "Montrer l'exemple",
@@ -92,7 +92,7 @@
   },
   "Slimebound:Dissolve": {
     "NAME": "Dissolution",
-    "DESCRIPTION": "Piochez !M! cartes, puis Épuisez une carte dans votre main. Ajoutez un nombre de *Léchouille égal au coût de la carte Épuisée. NL Épuisement.",
+    "DESCRIPTION": "Piochez !M! cartes, puis Épuisez une carte dans votre main. Ajoutez un nombre de *Léchouille égal au coût de la carte Épuisée. NL Épuisement."
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "Forme dupliquée",
@@ -129,8 +129,8 @@
   },
   "Slimebound:Repurpose": {
     "NAME": "Conversion",
-    "DESCRIPTION": "slimeboundmod:Absorbez - Divisez-vous en un Slime aléatoire slimeboundmod:Spécialiste. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorbez - Divisez-vous en un Slime aléatoire slimeboundmod:Spécialiste. NL slimeboundmod:Commandez. NL Épuisement."
+    "DESCRIPTION": "slimeboundmod:Absorbez - Divisez vous en un Slime aléatoire slimeboundmod:Spécialiste. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorbez - Divisez vous en un Slime aléatoire slimeboundmod:Spécialiste. NL slimeboundmod:Commandez. NL Épuisement."
   },
   "Slimebound:RollThrough": {
     "NAME": "Roll Through",
@@ -138,8 +138,8 @@
   },
   "Slimebound:MassRepurpose": {
     "NAME": "Conversion de masse",
-    "DESCRIPTION": "slimeboundmod:Absorbez TOUS les Slimes. NL Divisez-vous en Slimes slimeboundmod:Spécialistes aléatoires pour chaque Slime slimeboundmod:Absorbé. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorbez TOUS les Slimes. NL Divisez-vous en Slimes slimeboundmod:Spécialistes aléatoires pour chaque Slime slimeboundmod:Absorbé, puis slimeboundmod:Commandez-les tous. NL Épuisement."
+    "DESCRIPTION": "slimeboundmod:Absorbez TOUS les Slimes. NL Divisez vous en Slimes slimeboundmod:Spécialistes aléatoires pour chaque Slime slimeboundmod:Absorbé. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorbez TOUS les Slimes. NL Divisez vous en Slimes slimeboundmod:Spécialistes aléatoires pour chaque Slime slimeboundmod:Absorbé, puis slimeboundmod:Commandez-les tous. NL Épuisement."
   },
   "Slimebound:Lick": {
     "NAME": "Léchouille",
@@ -191,7 +191,7 @@
   "Slimebound:WasteNot": {
     "NAME": "Pas de gaspillage",
     "DESCRIPTION": "expansioncontent:Exhumez toutes les cartes *Léchouille. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Exhumez toutes les cartes *Léchouille."
+    "UPGRADE_DESCRIPTION": "expansioncontent:Exhumez toutes les cartes *Léchouille.",
     "EXTENDED_DESCRIPTION": [
        "Pas... Épuisé..."
     ]
@@ -323,8 +323,8 @@
   },
   "Slimebound:SplitSpecialist": {
     "NAME": "Invocation spécialisée",
-    "DESCRIPTION": "Choisissez 1 Slime slimeboundmod:Spécialiste parmi 3 et slimeboundmod:divisez vous en celui-ci. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Choisissez 1 Slime slimeboundmod:Spécialiste parmi 3 et slimeboundmod:divisez vous en celui-ci. NL slimeboundmod:Commandez. NL Épuisement."
+    "DESCRIPTION": "Choisissez 1 Slime slimeboundmod:Spécialiste parmi 3 et slimeboundmod:Divisez vous en celui-ci. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Choisissez 1 Slime slimeboundmod:Spécialiste parmi 3 et slimeboundmod:Divisez vous en celui-ci. NL slimeboundmod:Commandez. NL Épuisement."
   },
   "Slimebound:MinionMaster": {
     "NAME": "Maître des sbires",
@@ -356,7 +356,7 @@
   "Slimebound:TagTeam": {
     "NAME": "Tandem",
     "DESCRIPTION": "Infligez !D! dégâts. NL slimeboundmod:Divisez vous en un Slime aléatoire. NL slimeboundmod:Commandez !M! fois.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL slimeboundmod:Divisez vous en Slime slimeboundmod:Spécialiste aléatoire. NL slimeboundmod:Commandez !M! fois."
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL slimeboundmod:Divisez vous en un Slime slimeboundmod:Spécialiste aléatoire. NL slimeboundmod:Commandez !M! fois."
   },
   "Slimebound:RallyTheTroops": {
     "NAME": "Rallier les troupes",

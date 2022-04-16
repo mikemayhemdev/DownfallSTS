@@ -10,7 +10,7 @@
   "champ:Taunt": {
     "NAME": "Provoc",
     "DESCRIPTION": "Appliquez !M! de Faiblesse et 1 de Vulnérabilité.",
-    "UPGRADE_DESCRIPTION": "Appliquez 1 de Faiblesse et 1 de Vulnérabilité à TOUS les ennemis.",
+    "UPGRADE_DESCRIPTION": "Appliquez 1 de Faiblesse et 1 de Vulnérabilité à TOUS les ennemis."
   },
   "champ:Execute": {
     "NAME": "Exécution",
@@ -60,7 +60,7 @@
   },
   "champ:DefensiveShout": {
     "NAME": "Cri de défense",
-    "DESCRIPTION": "Gagnez !M! de champ:Contre. NL Adoptez la pose champ:Défensive.",
+    "DESCRIPTION": "Gagnez !M! de champ:Contre. NL Adoptez la pose champ:Défensive."
   },
   "champ:ShieldSigil": {
     "NAME": "Fouet de chaînes",
@@ -99,11 +99,11 @@
   },
   "champ:BerserkersShout": {
     "NAME": "Cri du Destructeur",
-    "DESCRIPTION": "Gagnez !M! de Vigueur. NL Adoptez la Pose du champ:Destructeur.",
+    "DESCRIPTION": "Gagnez !M! de Vigueur. NL Adoptez la Pose du champ:Destructeur."
   },
   "champ:RageSigil": {
     "NAME": "Plan de bataille",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Scrutez !M! cartes.",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Scrutez !M! cartes."
   },
   "champ:GutPunch": {
     "NAME": "Coup à l'estomac",
@@ -169,7 +169,9 @@
   "champ:ShieldThrow": {
     "NAME": "Lancer de bouclier",
     "DESCRIPTION": "Infligez des dégâts égaux à votre Armure, deux fois. NL Gagnez 2 de Fragilité. Pose *Défensive champ:Combo: Ne gagnez pas de Fragilité.",
-    "EXTENDED_DESCRIPTION": "Infligez des dégâts égaux à votre Armure ( !D! ) deux fois. NL Gagnez 2 de Fragilité. Pose *Défensive champ:Combo: Perdez 2 de Fragilité."
+    "EXTENDED_DESCRIPTION": [
+      "Infligez des dégâts égaux à votre Armure ( !D! ) deux fois. NL Gagnez 2 de Fragilité. Pose *Défensive champ:Combo: Perdez 2 de Fragilité."
+      ]
   },
   "champ:FalseCounter": {
     "NAME": "Contre les cordes",
@@ -195,7 +197,7 @@
   },
   "champ:Haymaker": {
     "NAME": "Pilon",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Appliquez 2 de Vulnérabilité. NL Appliquez 2 de Faiblesse.",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Appliquez 2 de Vulnérabilité. NL Appliquez 2 de Faiblesse."
   },
   "champ:ViciousMockery": {
     "NAME": "Moquerie vicieuse",
@@ -272,7 +274,7 @@
   },
   "champ:AdrenalArmor": {
     "NAME": "Armure surrénale",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Gagnez !M! de Force Temporaire.",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Gagnez !M! de Force Temporaire."
   },
   "champ:HeartStrike": {
     "NAME": "Finish Him",
@@ -365,7 +367,7 @@
   },
   "champ:DancingMaster": {
     "NAME": "Maître de la danse",
-    "DESCRIPTION": "La prmière fois que vous utilisez un champ:Finisher chaque tour, gagnez [E] et piochez 1 carte.",
+    "DESCRIPTION": "La prmière fois que vous utilisez un champ:Finisher chaque tour, gagnez [E] et piochez 1 carte."
   },
   "champ:StrikeOfGenius": {
     "NAME": "Frappé de génie",
@@ -429,7 +431,7 @@
   },
   "champ:FancyFootwork": {
     "NAME": "Jeu de jambes élégant",
-    "DESCRIPTION": "Entrez dans une Pose dans laquelle vous n'êtes pas. NL La prochaine fois que vous utilisez un champ:Finisher ce tour, TOUS les ennemis perdent !M! PV.",
+    "DESCRIPTION": "Entrez dans une Pose dans laquelle vous n'êtes pas. NL La prochaine fois que vous utilisez un champ:Finisher ce tour, TOUS les ennemis perdent !M! PV."
   },
   "champ:TripleStrike": {
     "NAME": "Triple frappe",

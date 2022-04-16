@@ -161,7 +161,7 @@
   "sneckomod:QuickMove": {
     "NAME": "Mouvement vif",
     "DESCRIPTION": "Gagnez !B! d'Armure. NL sneckomod:Confondez la carte coûtant le plus dans votre main.",
-    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL sneckomod:Confondez les !M! cartes coûtant le plus dans votre main	."
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL sneckomod:Confondez les !M! cartes coûtant le plus dans votre main."
   },
   "sneckomod:QuickBite": {
     "NAME": "Coupe du serpent",

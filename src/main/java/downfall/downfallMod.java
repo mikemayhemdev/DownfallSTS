@@ -74,6 +74,8 @@ import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.monsters.exordium.LouseNormal;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.GoldenIdol;
 import com.megacrit.cardcrawl.relics.MedicalKit;
@@ -162,7 +164,7 @@ public class downfallMod implements
         PostDeathSubscriber {
     public static final String modID = "downfall";
 
-    public static final boolean STEAM_MODE = false;
+    public static final boolean STEAM_MODE = true;
 
     public static boolean neowtextoverride = false;
 
@@ -190,7 +192,7 @@ public class downfallMod implements
     public static boolean crossoverCharacters = true;
     public static boolean unlockEverything = false;
     public static boolean noMusic = false;
-    public static boolean normalMapLayout = true;
+    public static boolean normalMapLayout = false;
     public static boolean champDisableStanceHelper = false;
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
@@ -1297,7 +1299,11 @@ public class downfallMod implements
         BaseMod.addMonster(CharBossSilent.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()}));
         BaseMod.addMonster(CharBossDefect.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
         BaseMod.addMonster(CharBossWatcher.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
-        BaseMod.addMonster(CharBossHermit.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossHermit()}));
+        AbstractMonster tangerine = new LouseNormal(-100, 0);
+        tangerine.maxHealth += 24;
+        tangerine.currentHealth += 24;
+        tangerine.powers.add(new StrengthPower(tangerine, 2));
+        BaseMod.addMonster(CharBossHermit.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossHermit(), tangerine}));
 
         BaseMod.addMonster(NeowBoss.ID, () -> new MonsterGroup(new AbstractMonster[]{new NeowBoss()}));
         BaseMod.addMonster(NeowBossFinal.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBossFinal()}));
