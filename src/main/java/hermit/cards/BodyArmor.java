@@ -1,14 +1,17 @@
 package hermit.cards;
 
+import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.green.Survivor;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
+import hermit.actions.BodyArmorAction;
 import hermit.characters.hermit;
 
 import static hermit.HermitMod.loadJokeCardImage;
@@ -44,8 +47,8 @@ public class BodyArmor extends AbstractDynamicCard {
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
     private static final int COST = 1;
-    private static final int BLOCK = 10;
-    private static final int UPGRADE_PLUS_BLOCK = 6;
+    private static final int BLOCK = 6;
+    private static final int UPGRADE_PLUS_BLOCK = 2;
 
 
     // /STAT DECLARATION/
@@ -54,11 +57,10 @@ public class BodyArmor extends AbstractDynamicCard {
     public BodyArmor() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
-        this.exhaust=true;
-        this.cardsToPreview = new Defend_Hermit();
         loadJokeCardImage(this, "body_armor.png");
     }
 
+    /*
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -71,15 +73,20 @@ public class BodyArmor extends AbstractDynamicCard {
         }
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
     }
+    */
 
+    // Actions the card should actually unironically literally do.
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new BodyArmorAction(p,p,1,block,false));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+    }
     //Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
-            this.cardsToPreview.upgrade();
-            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }
