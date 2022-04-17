@@ -54,10 +54,11 @@
   },
   {
     "NAMES": [
+      "消散",
       "挥发"
     ],
-    "PROPER_NAME": "挥发",
-    "DESCRIPTION": "被 #y凝滞 的牌结束 #y凝滞 时， #y消耗 本牌而非返回手牌。"
+    "PROPER_NAME": "消散",
+    "DESCRIPTION": "本牌结束 #y凝滞 时，被 #y消耗 而非返回手牌。"
   },
   {
     "NAMES": [

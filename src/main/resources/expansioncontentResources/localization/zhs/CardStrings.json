@@ -1,18 +1,18 @@
 {
   "expansioncontent:GuardianWhirl": {
     "NAME": "守护者旋风",
-    "DESCRIPTION": "有10点 格挡 才能打出。 NL 对所有敌人造成 !D! 点伤害 4 次。 NL 消耗 。",
+    "DESCRIPTION": "有10点 格挡 才能打出。 NL 对所有敌人造成 !D! 点伤害四次。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我的格挡不够。"
     ]
   },
   "expansioncontent:Hexaburn": {
     "NAME": "幽灵地狱",
-    "DESCRIPTION": "!M! 回合后，随机对敌人造成 !D! 点伤害6次。"
+    "DESCRIPTION": "!M! 回合后，随机对敌人造成 !D! 点伤害六次。"
   },
   "expansioncontent:InvincibleStrength": {
     "NAME": "坚不可摧",
-    "DESCRIPTION": "获得 10 层 expansioncontent:坚不可摧 。"
+    "DESCRIPTION": "获得1层 expansioncontent:坚不可摧 。"
   },
   "expansioncontent:HyperBeam": {
     "NAME": "超能射线",
@@ -20,8 +20,8 @@
   },
   "expansioncontent:LastStand": {
     "NAME": "背水一战",
-    "DESCRIPTION": "失去所有负面效果。 NL 获得 1 点 力量 。 NL 若半血以下，获得 2 点 力量 。",
-    "UPGRADE_DESCRIPTION": "失去所有负面效果。 NL 获得 1 点 力量 。 NL 若半血以下，回复 !M! 点生命并获得 2 点 力量 。"
+    "DESCRIPTION": "失去所有负面效果。 NL 获得1点 力量 。 NL 若半血以下，获得2点 力量 。",
+    "UPGRADE_DESCRIPTION": "失去所有负面效果。 NL 获得1点 力量 。 NL 若半血以下，回复 !M! 点生命并获得2点 力量 。"
   },
   "expansioncontent:YouAreMine": {
     "NAME": "你是我的了！",
@@ -46,14 +46,14 @@
   },
   "expansioncontent:ShapePower": {
     "NAME": "先古塑形",
-    "DESCRIPTION": "选择-获得 !M! 点 力量 或 5 层 *多层护甲 。",
-    "UPGRADE_DESCRIPTION": "选择-获得 !M! 点 力量 或 8 层 *多层护甲 。",
+    "DESCRIPTION": "选择-获得 !M! 点 力量 或5层 *多层护甲 。",
+    "UPGRADE_DESCRIPTION": "选择-获得 !M! 点 力量 或8层 *多层护甲 。",
     "EXTENDED_DESCRIPTION": [
       "甜圈之力",
       "获得 !M! 点 力量 。",
       "八体护盾",
-      "获得 5 层 *多层护甲 。",
-      "获得 8 层 *多层护甲 。"
+      "获得5层 *多层护甲 。",
+      "获得8层 *多层护甲 。"
     ]
   },
   "expansioncontent:PrepareCrush": {
@@ -68,8 +68,8 @@
   },
   "expansioncontent:QuickStudy": {
     "NAME": "快速学习",
-    "DESCRIPTION": "从3张随机 *首领 牌中选择获得1张。 NL 其首次耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "从3张随机 *首领 牌+中选择获得1张。 NL 其首次耗能为0。 NL 消耗 。",
+    "DESCRIPTION": "从3张随机 *首领 牌中选择获得一张。 NL 其首次耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "从3张随机 *首领 牌+中选择获得一张。 NL 其首次耗能为0。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "选择一张首领牌。"
     ]

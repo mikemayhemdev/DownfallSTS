@@ -297,7 +297,7 @@
   },
   "bronze:BronzeOrb": {
     "NAME": "铜制圆球",
-    "DESCRIPTION": " 固有 。 NL 造成 !D! 点伤害。 NL bronze:编码 随机一张抽牌堆的 bronze:编码 牌。 NL 消耗 。"
+    "DESCRIPTION": " 固有 。 NL 造成 !D! 点伤害。 NL 随机 bronze:编码 一张抽牌堆的 bronze:编码 牌。 NL 消耗 。"
   },
   "bronze:Virus": {
     "NAME": "病毒",
@@ -358,12 +358,12 @@
   },
   "bronze:MaxOutput": {
     "NAME": "极限功率",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 每回合抽1张牌并 bronze:插入 *晕眩 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 每回合额外抽1张牌并 bronze:插入 *晕眩 。"
   },
   "bronze:Mutator": {
     "NAME": "赋值",
-    "DESCRIPTION": "获得 1 点 力量 。 NL 将手中一张 状态牌 变成本牌的复制品。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得 1 点 力量 。 NL 将手中一张 状态牌 变成本牌的复制品。"
+    "DESCRIPTION": "获得 1 点 力量 。 NL 将手中一张 状态牌 变为本牌的复制品。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得 1 点 力量 。 NL 将手中一张 状态牌 变为本牌的复制品。"
   },
   "bronze:Allocate": {
     "NAME": "分配",
@@ -498,7 +498,7 @@
   },
   "bronze:HardenedForm": {
     "NAME": "圆球召唤",
-    "DESCRIPTION": " bronze:编译 或打出 bronze:方法 时，获得 !M! 点 格挡 并随机造成 !M! 点伤害。"
+    "DESCRIPTION": " bronze:编译 或打出 bronze:方法 时： NL 获得 !M! 点 格挡 。 NL 随机造成 !M! 点伤害。"
   },
   "bronze:LegacyCode": {
     "NAME": "历史代码",
@@ -589,7 +589,7 @@
   },
   "bronze:Refactor": {
     "NAME": "重构",
-    "DESCRIPTION": " 预见 !M! 。 NL 消耗 丢弃的牌。 NL 每 消耗 一张 状态牌 获得 !B! 点 格挡 。"
+    "DESCRIPTION": " 预见 !M! 。 NL 消耗 丢弃的牌。 NL 每 消耗 一张 状态牌 ，获得 !B! 点 格挡 。"
   },
   "bronze:Turbo": {
     "NAME": "内核加速",
@@ -648,7 +648,7 @@
   },
   "bronze:FullRelease": {
     "NAME": "完全公开",
-    "DESCRIPTION": " bronze:编译 - bronze:方法 变成能力，回合开始时打出。",
+    "DESCRIPTION": " bronze:编译 - bronze:方法 变为能力，回合开始时触发效果。",
     "EXTENDED_DESCRIPTION": [
       "完全",
       "公开",

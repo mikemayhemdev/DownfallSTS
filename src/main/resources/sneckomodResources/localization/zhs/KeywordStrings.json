@@ -13,7 +13,7 @@
       "muddle",
       "muddled"
     ],
-    "DESCRIPTION": "将一张牌的耗能本回合变为 #b0 ~ #b3 。"
+    "DESCRIPTION": "将一张牌的耗能本回合变为 #b0 ~ #b3 点。"
   },
   {
     "PROPER_NAME": "异色牌",
@@ -37,5 +37,12 @@
       "幸运"
     ],
     "DESCRIPTION": "牌面效果的随机值取最大值。"
+  },
+  {
+    "PROPER_NAME": "即逝",
+    "NAMES": [
+      "即逝"
+    ],
+    "DESCRIPTION": "打出后从牌组中移除。"
   }
 ]
