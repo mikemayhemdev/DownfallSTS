@@ -157,8 +157,8 @@
   },
   "Guardian:PackageSentry": {
     "NAME": "组件: 哨卫",
-    "DESCRIPTION": "获得 *哨卫射线 和2张 *哨卫震荡 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *哨卫射线+ 和2张 *哨卫震荡+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得1张 *哨卫射线 和2张 *哨卫震荡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得1张 *哨卫射线+ 和2张 *哨卫震荡+ 。 NL 消耗 。"
   },
   "Guardian:PackageWalker": {
     "NAME": "组件: 行者",
