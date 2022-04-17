@@ -21,7 +21,7 @@
 },
 "hermit:AdaptPower": {
         "NAME": "适应",
-        "DESCRIPTIONS": ["你的回合结束时，至多 #y消耗 两张牌。 NL 每张牌获得 #b", " 点 #y格挡 。"]
+        "DESCRIPTIONS": ["你的回合结束时，可 #y消耗 一张手牌来获得 #b", " 点 #y格挡 。"]
 },
 "hermit:Bruise": {
         "NAME": "瘀伤",
