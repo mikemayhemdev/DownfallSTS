@@ -39,8 +39,7 @@
   },
   "hermit:BodyArmor": {
     "NAME": "全身护甲",
-    "DESCRIPTION":"获得 !B! 点 格挡 。 NL 将一张 *防御 加入弃牌堆。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将一张 *防御+ 加入弃牌堆。 NL 消耗 。"
+    "DESCRIPTION":"丢弃一张手牌。 NL 获得 !B! 点 格挡 。 NL 若丢弃一张 *技能牌，额外获得 !B! 点。"
   },
   "hermit:Snipe": {
     "NAME": "狙击",
@@ -49,13 +48,13 @@
   },
   "hermit:CalledShot": {
     "NAME": "空气炮",
-    "DESCRIPTION": "造成手牌数量点伤害。 NL hermit:精准 ：抽 !M! 张牌。",
+    "DESCRIPTION": "造成手牌数量点伤害。 NL hermit:精准 ：抽 !M! 张攻击牌。",
     "UPGRADE_DESCRIPTION": " NL （造成 !D! 点伤害。）",
-    "EXTENDED_DESCRIPTION": ["造成手牌数量点伤害。 NL hermit:精准 ：抽 !M! 张牌。"]
+    "EXTENDED_DESCRIPTION": ["造成手牌数量点伤害。 NL hermit:精准 ：抽 !M! 张攻击牌。"]
   },
   "hermit:Dissolve": {
     "NAME": "溶解",
-    "DESCRIPTION": "下回合获得 !B! 点 格挡 。 NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 两回合内 格挡 不会消失 。 NL 消耗 。"
   },
   "hermit:BlackWind": {
     "NAME": "黑风",
@@ -98,7 +97,7 @@
   },
   "hermit:Adapt": {
     "NAME": "适应",
-    "DESCRIPTION": "回合结束时，可 消耗 两张牌。 NL 每张提供 !M! 点 格挡 。"
+    "DESCRIPTION": "回合结束时，可 消耗 一张手牌来获得6点 格挡 。"
   },
   "hermit:Dive": {
     "NAME": "深潜",
@@ -205,7 +204,8 @@
   },
   "hermit:Maintenance": {
     "NAME": "维护",
-    "DESCRIPTION": "升级 所有 *打击 与 *防御 。 NL 它们能被本牌多次 升级 。"
+    "DESCRIPTION": " *打击 额外造成 !M! 点伤害。",
+    "UPGRADE_DESCRIPTION": " *打击 额外造成 !M! 点伤害。 NL 获得1点 敏捷 。"
   },
   "hermit:EternalForm": {
     "NAME": "永恒形态",
