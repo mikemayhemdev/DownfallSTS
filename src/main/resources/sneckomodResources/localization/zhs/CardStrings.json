@@ -89,7 +89,7 @@
   },
   "sneckomod:Unknown": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 牌。"
+    "DESCRIPTION": " *未知 基础牌。"
   },
   "sneckomod:Unknown0Cost": {
     "NAME": "？？？",
@@ -130,8 +130,8 @@
   },
   "sneckomod:SoulExchange": {
     "NAME": "灵魂交换",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 抽1张牌并 消耗 1张。 NL 变化所有手牌至 消耗 牌的同角色牌。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽2张牌并 消耗 1张。 NL 变化所有手牌至 消耗 牌的同角色牌。",
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 抽1张牌并 消耗 一张。 NL 变化所有手牌至 消耗 牌的同角色牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽2张牌并 消耗 一张。 NL 变化所有手牌至 消耗 牌的同角色牌。",
     "EXTENDED_DESCRIPTION": [
       "来消耗以交换灵魂。"
     ]
@@ -143,8 +143,8 @@
   },
   "sneckomod:UnlimitedRolls": {
     "NAME": "无限随机",
-    "DESCRIPTION": "回合开始时获得 *灵魂随机 的 gremlin:回响 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时获得 *灵魂随机 的 gremlin:回响 。"
+    "DESCRIPTION": "回合开始时获得 *灵 *魂 *随 *机 的 gremlin:回响 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时获得 *灵 *魂 *随 *机 的 gremlin:回响 。"
   },
   "sneckomod:MasterEye": {
     "NAME": "主宰之眼",
@@ -201,7 +201,7 @@
   },
   "sneckomod:Transmogrify": {
     "NAME": "惊变",
-    "DESCRIPTION": "从2件遗物中选择失去1件。 NL 获得另一件相同稀有度的遗物。 NL 消耗 。",
+    "DESCRIPTION": "从两件遗物中选择失去一件。 NL 获得另一件相同稀有度的遗物。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我没有遗物能够惊变",
       "选择失去一件遗物",
@@ -294,7 +294,7 @@
   },
   "sneckomod:UnendingSupply": {
     "NAME": "延绵不绝",
-    "DESCRIPTION": "回合开始时，随机获得 sneckomod:异色 牌。"
+    "DESCRIPTION": "回合开始时，随机获得一张 sneckomod:异色 牌。"
   },
   "sneckomod:Memorize": {
     "NAME": "熟记",
