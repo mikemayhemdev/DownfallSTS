@@ -569,18 +569,18 @@ public class SneckoMod implements
                 SneckoMod.openedStarterScreen = true;
             }
         }
-        if (SneckoMod.choosingCharacters > -1 && SneckoMod.choosingCharacters <= 3 && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && !pureSneckoMode) {
+        if (SneckoMod.choosingCharacters > -1 && SneckoMod.choosingCharacters <= 2 && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && !pureSneckoMode) {
             AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             SneckoMod.colorChoices.removeCard(c);
             SneckoMod.validColors.add(c.color);
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
-            if (SneckoMod.choosingCharacters == 3) {
-                SneckoMod.choosingCharacters = 4;
+            if (SneckoMod.choosingCharacters == 2) {
+                SneckoMod.choosingCharacters = 3;
                 CenterGridCardSelectScreen.centerGridSelect = false;
                 OffclassHelper.updateAllUnknownReplacements();
                 AbstractDungeon.commonCardPool.group.removeIf(ii -> ii instanceof UnknownClass && !SneckoMod.validColors.contains(ii.color));
                 AbstractDungeon.srcCommonCardPool.group.removeIf(ii -> ii instanceof UnknownClass && !SneckoMod.validColors.contains(ii.color));
-            } else if (SneckoMod.choosingCharacters < 3) {
+            } else if (SneckoMod.choosingCharacters < 2) {
                 SneckoMod.choosingCharacters += 1;
                 SneckoMod.dualClassChoice();
             }
