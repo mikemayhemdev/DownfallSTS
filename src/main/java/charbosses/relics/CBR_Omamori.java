@@ -18,7 +18,10 @@ public class CBR_Omamori extends AbstractCharbossRelic {
 
     public CBR_Omamori() {
         super(new Omamori());
-        this.counter = 2;
+        this.counter = 0;
+        this.usedUp();
+        this.description = getUpdatedDescription();
+        refreshDescription();
     }
 
     public void use(String cardName) {

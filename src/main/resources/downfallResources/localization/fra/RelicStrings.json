@@ -500,7 +500,9 @@
       "Vraiment, vous êtes le BPP du Cœur : Boss le Plus Précieux.",
       "La corruption du Cœur ne connaît aucune limite - pas même de jolis animaux domestiques.",
       "Courrier corrompu",
-      "Le Cœur réapprovisionne les cartes, reliques, et les potions. Tous les prix sont réduits de #b20%."
+      "Le Cœur réapprovisionne les cartes, reliques, et les potions. Tous les prix sont réduits de #b20%.",
+      "Combat reward screens now contain Colorless cards and cards from the Hero colors.",
+      "Gain [E] at the start of your turn. You can no longer gain #ySouls. Breaking Keys costs no #ySouls."
     ]
   },
   "downfall:LizardTail": {
