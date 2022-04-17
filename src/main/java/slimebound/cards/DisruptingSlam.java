@@ -46,6 +46,7 @@ public class DisruptingSlam extends AbstractSlimeboundCard {
         this.isMultiDamage = true;
         this.magicNumber = this.baseMagicNumber = 2;
 
+        SlimeboundMod.loadJokeCardImage(this, "slimeboundResources/SlimeboundImages/betacards/DisruptingSlam.png");
 
     }
 

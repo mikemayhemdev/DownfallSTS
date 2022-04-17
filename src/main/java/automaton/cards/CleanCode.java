@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.powers.CleanCodePower;
 import automaton.powers.RemoveNextErrorPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -19,6 +20,7 @@ public class CleanCode extends AbstractBronzeCard {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
       //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("CleanCode.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

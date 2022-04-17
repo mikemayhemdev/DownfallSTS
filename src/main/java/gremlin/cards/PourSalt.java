@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import gremlin.actions.PourSaltOuterAction;
 
 import static gremlin.GremlinMod.FAT_GREMLIN;
@@ -38,6 +39,7 @@ public class PourSalt extends AbstractGremlinCard {
         this.cardsToPreview = new Shiv();
         this.tags.add(FAT_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "gremlinResources/images/cards/betacards/PourSalt.png");
     }
 
     @Override

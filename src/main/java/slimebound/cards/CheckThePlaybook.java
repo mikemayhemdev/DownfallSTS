@@ -49,7 +49,7 @@ public class CheckThePlaybook extends AbstractSlimeboundCard {
 
 
         this.exhaust = true;
-
+        SlimeboundMod.loadJokeCardImage(this, "slimeboundResources/SlimeboundImages/betacards/CheckThePlaybook.png");
 
     }
 

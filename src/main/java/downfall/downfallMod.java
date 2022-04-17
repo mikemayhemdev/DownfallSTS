@@ -1299,11 +1299,7 @@ public class downfallMod implements
         BaseMod.addMonster(CharBossSilent.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()}));
         BaseMod.addMonster(CharBossDefect.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
         BaseMod.addMonster(CharBossWatcher.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
-        AbstractMonster tangerine = new LouseNormal(-100, 0);
-        tangerine.maxHealth += 24;
-        tangerine.currentHealth += 24;
-        tangerine.powers.add(new StrengthPower(tangerine, 2));
-        BaseMod.addMonster(CharBossHermit.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossHermit(), tangerine}));
+        BaseMod.addMonster(CharBossHermit.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossHermit()}));
 
         BaseMod.addMonster(NeowBoss.ID, () -> new MonsterGroup(new AbstractMonster[]{new NeowBoss()}));
         BaseMod.addMonster(NeowBossFinal.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBossFinal()}));

@@ -17,6 +17,8 @@ import guardian.patches.AbstractCardEnum;
 import guardian.powers.DontLeaveDefensiveModePower;
 import guardian.powers.EvasiveProtocolPower;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class EvasiveProtocol extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("EvasiveProtocol");
     public static final String NAME;
@@ -51,6 +53,7 @@ public class EvasiveProtocol extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("EvasiveProtocol.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

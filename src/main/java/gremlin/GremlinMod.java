@@ -1,6 +1,7 @@
 package gremlin;
 
 import basemod.BaseMod;
+import basemod.ReflectionHacks;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
@@ -9,6 +10,7 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.esotericsoftware.spine.*;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
@@ -46,6 +48,7 @@ import gremlin.powers.AbstractGremlinPower;
 import gremlin.relics.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import slimebound.cards.AbstractSlimeboundCard;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -513,5 +516,18 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
                 ((GremlinCharacter) AbstractDungeon.player).mobState.setAll(AbstractDungeon.player.currentHealth);
             }
         }
+    }
+
+    public static void loadJokeCardImage(AbstractCard card, String img) {
+        if (card instanceof AbstractGremlinCard) {
+            ((AbstractGremlinCard) card).betaArtPath = img;
+        }
+        Texture cardTexture;
+        cardTexture = hermit.util.TextureLoader.getTexture(getModID() + "Resources/cards/betacards/" + img);
+        cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+        int tw = cardTexture.getWidth();
+        int th = cardTexture.getHeight();
+        TextureAtlas.AtlasRegion cardImg = new TextureAtlas.AtlasRegion(cardTexture, 0, 0, tw, th);
+        ReflectionHacks.setPrivate(card, AbstractCard.class, "jokePortrait", cardImg);
     }
 }
