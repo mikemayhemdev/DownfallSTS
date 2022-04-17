@@ -2,6 +2,7 @@ package charbosses.relics;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
+import charbosses.powers.cardpowers.EnemyPenNibPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -37,7 +38,7 @@ public class CBR_PenNib extends AbstractCharbossRelic {
                 this.pulse = true;
                 this.owner.hand.refreshHandLayout();
                 this.addToBot(new RelicAboveCreatureAction(this.owner, this));
-                this.addToBot(new ApplyPowerAction(this.owner, this.owner, new PenNibPower(this.owner, 1), 1, true));
+                this.addToBot(new ApplyPowerAction(this.owner, this.owner, new EnemyPenNibPower(this.owner, 1), 1, true));
             }
         }
 
