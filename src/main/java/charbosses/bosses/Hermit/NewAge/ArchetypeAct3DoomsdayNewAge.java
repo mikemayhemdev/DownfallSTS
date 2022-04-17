@@ -74,7 +74,9 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
                     addToList(cardsList, new EnMasterOfStrategy());
                     addToList(cardsList, new EnLoneWolf());
                     addToList(cardsList, new EnBandage());
-                    addToList(cardsList, new EnWideOpen());
+                    AbstractCard wide = new EnWideOpen();
+                    wide.modifyCostForCombat(-99);
+                    addToList(cardsList, wide);
                     addToList(cardsList, new EnMalice());
                     turn++;
                     break;
@@ -107,7 +109,9 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
                     ((EnMalice) m).setExhaust(q);
                     addToList(cardsList, m);
                     addToList(cardsList, q);
-                    addToList(cardsList, new EnWideOpen());
+                    AbstractCard wide = new EnWideOpen();
+                    wide.modifyCostForCombat(-99);
+                    addToList(cardsList, wide);
                     turn++;
                     break;
                 case 1:
