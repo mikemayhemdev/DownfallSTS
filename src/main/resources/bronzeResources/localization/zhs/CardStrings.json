@@ -648,7 +648,7 @@
   },
   "bronze:FullRelease": {
     "NAME": "完全公开",
-    "DESCRIPTION": " bronze:编译 - bronze:方法 变成能力，回合开始时打出。",
+    "DESCRIPTION": " bronze:编译 - bronze:方法 变成能力，回合开始时触发效果。",
     "EXTENDED_DESCRIPTION": [
       "完全",
       "公开",
