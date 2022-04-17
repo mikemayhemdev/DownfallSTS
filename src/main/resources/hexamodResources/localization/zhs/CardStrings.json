@@ -194,7 +194,7 @@
   },
   "hexamod:Incineration": {
     "NAME": "焚化",
-    "DESCRIPTION": "造成 !D! 点伤害并给 NL 予 !burny! 层 hexamod:灼魂 !M! 次。"
+    "DESCRIPTION": "重复 !M! 次： NL 造成 !D! 点伤害。 NL 给予 !burny! 层 hexamod:灼魂 。"
   },
   "hexamod:Firestarter": {
     "NAME": "纵火",
