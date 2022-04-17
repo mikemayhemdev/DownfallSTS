@@ -85,7 +85,7 @@
   },
   "champ:Devastate": {
     "NAME": "坏灭",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 每打出一张 champ:终结技 耗能减少 [E] 。"
+    "DESCRIPTION": "造成 !D! 点伤害三次。 NL 每打出一张 champ:终结技 耗能减少 [E] 。"
   },
   "champ:Circumvent": {
     "NAME": "规避",
@@ -197,8 +197,8 @@
   },
   "champ:HeavySlash": {
     "NAME": "大师斩击",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 随机获得一张 技能牌,其耗能为0。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 随机获得一张 技能牌+,其耗能为0。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 随机获得1张 技能牌。 NL 其耗能为0。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 随机获得1张 技能牌+ NL 其耗能为0。"
   },
   "champ:CheapShot": {
     "NAME": "偷袭",
@@ -387,8 +387,8 @@
   },
   "champ:TripleStrike": {
     "NAME": "三重打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得2张可触发 champ:技术 的 *打击 。其耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得2张可触发 champ:技术 的 *打击 。其耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得两张可触发 champ:技术 的 *打击 。其耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得两张可触发 champ:技术 的 *打击+ 。其耗能为0。 NL 消耗 。"
   },
   "champ:WindUp": {
     "NAME": "挑衅",
