@@ -95,13 +95,13 @@
   "downfall:SilentShivTimeEaterPower": {
     "NAME": "满包小刀",
     "DESCRIPTIONS": [
-      "每回合你初次打出 #b2 耗能以上的牌时， #y静默猎手 获得两张 #y小刀 。"
+      "每回合你首次打出 #b2 耗能以上的牌时， #y静默猎手 获得两张 #y小刀 。"
       ]
   },
   "downfall:NeowBagOfKnives": {
     "NAME": "满包小刀",
     "DESCRIPTIONS": [
-      "每回合你初次打出 #b2 耗能以上的牌时， 受到 #b4 点伤害两次。"
+      "每回合你首次打出 #b2 耗能以上的牌时， 受到 #b4 点伤害两次。"
     ]
   },
   "downfall:SilentMirrorImagePower": {
