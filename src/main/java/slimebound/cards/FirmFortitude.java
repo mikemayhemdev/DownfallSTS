@@ -11,12 +11,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.FirmFortitudePower;
 import slimebound.powers.PotencyPower;
-import sneckomod.SneckoMod;
 
 
-public class FeelOurPain extends AbstractSlimeboundCard {
+public class FirmFortitude extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:FirmFortitude";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -27,8 +25,6 @@ public class FeelOurPain extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
     private static final int COST = 0;
-    private static final int BLOCK = 5;
-    private static final int UPGRADE_BONUS = 3;
     public static String UPGRADED_DESCRIPTION;
 
     static {
@@ -39,12 +35,9 @@ public class FeelOurPain extends AbstractSlimeboundCard {
         EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     }
 
-    public FeelOurPain() {
+    public FirmFortitude() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-
-    //    this.tags.add(SneckoMod.BANNEDFORSNECKO);
-        //this.exhaust = true;
         baseMagicNumber = magicNumber = 2;
 
     }
@@ -67,7 +60,7 @@ public class FeelOurPain extends AbstractSlimeboundCard {
     }
 
     public AbstractCard makeCopy() {
-        return new FeelOurPain();
+        return new FirmFortitude();
     }
 
     public void upgrade() {

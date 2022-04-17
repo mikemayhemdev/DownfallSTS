@@ -101,8 +101,7 @@ public class OffclassHelper {
     }
 
     public static AbstractCard getARandomStatus() {
-        Collections.shuffle(statuses, AbstractDungeon.cardRandomRng.random);
-        return statuses.get(0).makeCopy();
+        return statuses.get(AbstractDungeon.cardRandomRng.random(statuses.size() - 1)).makeCopy();
     }
 
     public static AbstractCard getARandomOffclass() {

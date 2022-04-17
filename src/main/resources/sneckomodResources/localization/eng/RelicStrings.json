@@ -3,7 +3,7 @@
     "NAME": "Snecko Soul",
     "FLAVOR": "0...3...2...2...1",
     "DESCRIPTIONS": [
-      "First time you play an #ysneckomod:Offclass in a combat, gain [E] and draw a card."
+      "The first time you play an #ysneckomod:Offclass card in a combat, gain [E] and draw a card."
     ]
   },
   "sneckomod:SuperSneckoSoul": {
@@ -11,7 +11,7 @@
     "FLAVOR": "3120231321230320",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] NL First time you play an #ysneckomod:Offclass in a turn, gain [E] ."
+      ".[] NL The first time you play an #ysneckomod:Offclass each turn, gain [E] ."
     ]
   },
   "sneckomod:CleanMud": {
