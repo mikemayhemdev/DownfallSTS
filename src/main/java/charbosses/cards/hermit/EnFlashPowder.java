@@ -24,7 +24,7 @@ public class EnFlashPowder extends AbstractHermitBossCard {
     public EnFlashPowder() {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/flash_powder.png", 1,
                 cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW,
-                CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
+                CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND_DEBUFF);
         baseMagicNumber = magicNumber = 1;
         baseBlock = 5;
         exhaust=true;

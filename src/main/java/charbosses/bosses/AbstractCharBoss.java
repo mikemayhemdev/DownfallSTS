@@ -28,6 +28,7 @@ import charbosses.orbs.EnemyDark;
 import charbosses.orbs.EnemyEmptyOrbSlot;
 import charbosses.relics.AbstractCharbossRelic;
 import charbosses.relics.CBR_LizardTail;
+import charbosses.relics.CBR_PenNib;
 import charbosses.relics.CBR_Shuriken;
 import charbosses.stances.AbstractEnemyStance;
 import charbosses.stances.EnNeutralStance;
@@ -446,6 +447,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             ((AbstractBossCard) c).manualCustomDamageModifierMult = 1;
         }
 
+        int foundAttacks = 0; //For pen nib
         for (int i = 0; i < hand.size(); i++) {
             AbstractBossCard c = (AbstractBossCard) hand.group.get(i);
 
@@ -540,7 +542,18 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
                 c.manualCustomDamageModifierMult *= c.damageMultIfPlayed;
 
-                //TODO - Sadistic Nature for Act 3 Silent
+                //Pen Nib
+
+                if (c.type == AbstractCard.CardType.ATTACK) {
+                    foundAttacks += 1;
+                    if (hasRelic(CBR_PenNib.ID)) {
+                        AbstractRelic r = getRelic(CBR_PenNib.ID);
+                        if (r.counter + foundAttacks == 10) {
+                            c.manualCustomDamageModifierMult = 2;
+                        }
+                    }
+                }
+
 
             }
         }
