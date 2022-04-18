@@ -73,7 +73,7 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
             mockDeck.add(new EnInjury());
         } else {
             AbstractCard flash = new EnFlashPowder();
-            wide.upgrade();
+            flash.upgrade();
             mockDeck.add(flash);
         }
         mockDeck.add(new EnItchyTriggerAct2());

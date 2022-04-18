@@ -75,7 +75,7 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
                     break;
                 case 2:
                     addToList(cardsList, new EnGhostlyPresence());
-                    addToList(cardsList, new EnDive());
+                    addToList(cardsList, new EnDive(), extraUpgrades);
                     addToList(cardsList, new EnDefendHermit());
                     turn++;
                     break;
@@ -109,7 +109,7 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
                     break;
                 case 2:
                     addToList(cardsList, new EnGhostlyPresence());
-                    addToList(cardsList, new EnDive());
+                    addToList(cardsList, new EnDive(), extraUpgrades);
                     addToList(cardsList, new EnDefendHermit());
                     turn++;
                     break;

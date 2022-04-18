@@ -64,7 +64,7 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
                     turn++;
                     break;
                 case 1:
-                    addToList(cardsList, new EnMisfire());
+                    addToList(cardsList, new EnMisfire(), extraUpgrades);
                     addToList(cardsList, new EnGlare());
                     addToList(cardsList, new EnGhostlyPresence());
                     turn++;
@@ -115,7 +115,7 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
                     turn++;
                     break;
                 case 1:
-                    addToList(cardsList, new EnMisfire());
+                    addToList(cardsList, new EnMisfire(), extraUpgrades);
                     addToList(cardsList, new EnSpite());
                     addToList(cardsList, new EnClumsy());
                     addToList(cardsList, new EnPain());
