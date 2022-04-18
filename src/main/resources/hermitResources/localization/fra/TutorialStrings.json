@@ -2,7 +2,7 @@
   "HermitMod:HermitTutorials": {
     "TEXT": [
       "L'Ermite est capable d'utiliser des cartes #yDans #yLe #yMille. NL NL Les cartes #yDans #yle #yMille déclenchent leurs effets spéciaux lorsqu'elles sont situées au milieu de votre main.",
-      "Dans les mains paies, les #ydeux cartes au milieu comptent pour l'effet, même  of the middle cards count, même si ce sont les seules cartes que vous avez en main."
+      "Dans les mains paires, les #ydeux cartes au milieu comptent pour l'effet, même si ce sont les seules cartes que vous avez en main."
     ],
     "LABEL": [
       "Suivant",
@@ -14,7 +14,7 @@
   },
   "HermitMod:GuardianTutorials": {
     "TEXT": [
-      "Le Guardien peut s'Enrouler lorsqu'il a atteint un certain taux de Renforcement.",
+      "Le Gardien peut s'Enrouler lorsqu'il a atteint un certain taux de Renforcement.",
       "Il peut également introduire des Gemmes dans certaines cartes dans le but d'augmenter leurs effets."
     ],
     "LABEL": [

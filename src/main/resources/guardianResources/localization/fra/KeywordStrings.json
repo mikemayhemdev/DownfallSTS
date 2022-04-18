@@ -28,7 +28,7 @@
       "gems"
     ],
     "PROPER_NAME": "Gemme",
-    "DESCRIPTION": "Des #yGemmes peuvent être placées dans des #ySockets dans certaines cartes dans un site de Repos. Ne peut pas être #yAméliorée."
+    "DESCRIPTION": "Des #yGemmes peuvent être placées dans des #yCavités dans certaines cartes dans un site de Repos. Ne peut pas être #yAméliorée."
   },
   {
     "PROPER_NAME": "Mode défensif",
@@ -50,8 +50,7 @@
   },
   {
     "NAMES": [
-      "Colis",
-      "Colis",
+      "colis",
       "package",
       "packages"
     ],

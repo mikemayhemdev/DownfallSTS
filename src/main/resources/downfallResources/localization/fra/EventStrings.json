@@ -28,7 +28,7 @@
   "downfall:WomanInBlue": {
     "NAME": "La femme en bleu",
     "DESCRIPTIONS": [
-      "Cachée dans l'obscurité, vous remarquez une petite boutique. A l'intérieur, vous voyez une femme au teint pâle et élégamment vêtue qui gère un inventaire de potions, empilées contre un mur. Elle est suprise par votre apparence menaçante. NL \"Laisse-moi et mes marchandises tranquilles, crétin !\" crie-t-elle.",
+      "Cachée dans l'obscurité, vous remarquez une petite boutique. À l'intérieur, vous voyez une femme au teint pâle et élégamment vêtue qui gère un inventaire de potions, empilées contre un mur. Elle est suprise par votre apparence menaçante. NL \"Laisse-moi et mes marchandises tranquilles, crétin !\" crie-t-elle.",
       "Vous quittez la boutique prudemment, ne voulant pas pousser la femme à se battre.",
       "#r@BAM@ NL Son poing ganté vous frappe le visage si fort que vous manquez d'en tomber. NL \"Sortez vite d'ici avant que je ne redécore ma boutique avec vos entrailles.\" Vous la croyez sur parole et sortez sans demander votre reste, vos entrailles toujours bien au chaud dans votre corps."
     ],
@@ -55,7 +55,7 @@
       "Vous installant près du feu, vous décidez de voir si vous allez avoir une meilleure chance que la dernière fois avec la Roue.",
       "La Roue a choisi un prix. NL NL Vous avez juste besoin de le récupérer.",
       "Succès ! Vous avez trouvé ce que vous cherchiez, et juste à temps! NL NL #r@CRACK!@ NL NL Vous avez été peut-être un peu trop fort avec ce dernier lancer... La Roue s'est cassée.",
-      "Vous décidez de retenter votre chance une prochaine fois. NL NL MPour l'instant, vous devez vous reposer et regagner vos forces.",
+      "Vous décidez de retenter votre chance une prochaine fois. NL NL Pour l'instant, vous devez vous reposer et regagner vos forces.",
       "Il se lance sur vous, mais vous êtes prêt. NL Vous l'attaquez avant qu'il ne puisse vous avoir avec son poignard. NL Vous avez empêché votre propre sort, mais malheureusement la Roue disparaît avant que vous ne puissiez la récupérer."
     ],
     "OPTIONS": [
@@ -93,7 +93,7 @@
   "downfall:Augmenter": {
     "NAME": "Dealer",
     "DESCRIPTIONS": [
-      " Un homme avec un cache-oeil et un sourire démoniaque s'approche de vous. NL \"Wouah, quel sujet terrifiant ! Vous ne vous intéressez peut-être pas à la science, mais je vous le promets- je peux vous rendre aussi puissant que n'importe quelle récolte d'âmes. Vous en aurez besoin pour affronter ces \"héros\".\" NL NL ~\"Z'en~ ~dites~  ~quoi?\"~"
+      "Un homme avec un cache-oeil et un sourire démoniaque s'approche de vous. NL \"Wouah, quel sujet terrifiant ! Vous ne vous intéressez peut-être pas à la science, mais je vous le promets- je peux vous rendre aussi puissant que n'importe quelle récolte d'âmes. Vous en aurez besoin pour affronter ces \"héros\".\" NL ~\"Z'en~ ~dites~  ~quoi?\"~"
     ],
     "OPTIONS": [
       "[Frapper] #rCombattre. #gTout #gPrendre."
@@ -123,7 +123,7 @@
     "NAME": "The Cursed Fountain",
     "DESCRIPTIONS": [
       "Vous faites face à un liquide #p~teinté~ #p~de~ #p~violet~ coulant sans fin d'une fontaine sur un mur proche. Vous reconnaissez cette fontaine, qui est mortelle pour la plupart des créatures, mais bénéfique pour ceux sujets à une malédiction.",
-      "Le #p~liquide~ de la fontaine bouillonne dans les âmes des perdus. Ce serait un gâchis de ne pas les utiliser. Vous canalisez les âmes pour les récupérer, les arrachant de la magie de la #pfontaine #pmaudite",
+      "Le #p~liquide~ de la fontaine bouillonne dans les âmes des perdus. Ce serait un gâchis de ne pas les utiliser. Vous canalisez les âmes pour les récupérer, les arrachant de la magie de la #pfontaine #pmaudite.",
       "Préssentant que le #p~liquide~ pourait être utile, vous décidez d'en récupérer un peu dans un bocal pour l'utiliser plus tard. Les créatures qui ne sont pas en harmonie avec #pl'eau #pobscure vont souffrir si elles sont recouvertes par celle-ci.",
       "Alors que vous buvez le #p~liquide,~ vous ressentez une #pemprise #psombre vous traverser l'esprit. Elle vous rafraîchit autant physiquement que spirituellement.",
       "Laissant la fontaine derrière, vous continuez votre chemin."
@@ -142,10 +142,10 @@
   "downfall:WeMeetAgain": {
     "NAME": "Nous nous rencontrons à nouveau!",
     "DESCRIPTIONS": [
-      "\"BOSS!\" Un homme gaillard échevelé vous approche joyeusement. Vous connaissez bien cette homme. NL \"C'est moi, #yRanwid! Vous ne croiriez pas ce que j'ai escorqué de ces maudits héros ! Est-ce qur vouas avez encore des ordures que je puisse leur donner?\" NL Vous appréciez son amabilité et considérez vos options. Sûrement vous qvaez quelque chose que Ranwid pourra utiliser dans son prochain \"deal\"...",
-      "\"Oh, ceci est parfait! C'est de la vraie camelote! Tiens, prenez ces élixirs que ces imbéciles m'ont donné!\" NL Ranwid fouille dans ses poches, vous donnant trois bouteilles pour vous, bien qu'il ait failli les faire tomber dans le processus.",
+      "\"BOSS!\" Un homme gaillard échevelé vous approche joyeusement. Vous connaissez bien cette homme. NL \"C'est moi, #yRanwid! Vous ne croiriez pas ce que j'ai escroqué à ces maudits héros ! Est-ce que vous avez encore des ordures que je puisse leur donner?\" Vous appréciez son amabilité et considérez vos options. Sûrement vous qvaez quelque chose que Ranwid pourra utiliser dans son prochain \"deal\"...",
+      "\"Oh, ceci est parfait! C'est de la vraie camelote! Tenez, prenez ces élixirs que ces imbéciles m'ont donné!\" NL Ranwid fouille dans ses poches, vous donnant trois bouteilles pour vous, bien qu'il ait failli les faire tomber dans le processus.",
       "\"Magnifique! Ce sera plutôt utile pour ma prochaine affaire. Oh et j'ai récolté ces corps, comme vous me l'avez demandé!\" NL Ranwid vous confie une pierre d'âme, puis s'enfuit en courant, en train de chercher quelqu'un pour vendre votre bibelot inutile.",
-      "\"Exemplaire! Avec un peu d'huile de coude, Je pourrais faire de ça quelque chose de très spécial.\" NL Ranwid part, en train d'examiner avec attention la relique, sans doute en train de réfléchir à la façon dont il va exagérer son utilité au prochain aventurier qu'il rencontrera.",
+      "\"Exemplaire! Avec un peu d'huile de coude, je pourrais faire de ça quelque chose de très spécial.\" NL Ranwid part, en train d'examiner avec attention la relique, sans doute en train de réfléchir à la façon dont il va exagérer son utilité au prochain aventurier qu'il rencontrera.",
       "\"Rien pour aujourd'hui? Ok!\" NL Il s'enfuit."
     ],
     "OPTIONS": [
@@ -164,10 +164,10 @@
     "NAME": "Designer",
     "DESCRIPTIONS": [
       "Vous découvrez un magasin #g~coloré~ avec l'enseigne \"IN-SPIRE\". Un #rPickpocket y crie depuis l'intérieur de l'échoppe, menaçant quiconque s'y trouve dedans. NL NL @\"Donne-moi@ @ton@ @argent!\"@ NL NL Le bandit ne vous remarque pas, trop concentré par sa tentative de braquage.",
-      "Cela prend peu d'efforts pour s'occuper du voleur, mais le combat vous provoque quelques blessures. Un homme avec une tenure ridicule apparaît à l'entrée de la boutique. NL \"Merci beaucoup, mon seigneur!\", dit l'homme, vous faisant entrer.",
-      "Vous ne voyez aucune raison d'être impliqué dans ça. Il y a des meurtres plus importants à faire. .",
+      "Cela prend peu d'efforts pour s'occuper du voleur, mais le combat vous provoque quelques blessures. Un homme avec une tenure ridicule apparaît à l'entrée de la boutique. NL \"Merci beaucoup, mon seigneur !\", dit l'homme, vous faisant entrer.",
+      "Vous ne voyez aucune raison d'être impliqué dans ça. Il y a des meurtres plus importants à faire.",
       "\"Oh non, vous êtes épouvantable!! Ça ne va pas, non non non. C'est quoi ce style? Vous devez être @menaçant!@ Un #rseigneur de la Tour intimidant et effrayant! Vous ~devez~ me laisser faire un relooking.\" NL NL Vous n'êtes pas sûr si vous devez faire confiance en cet homme et accepter ses services, ou si vous devriez vous sentir insulté par son dégoût de votre style.",
-      "\"Ok, à bientôt! Dites à vos #ramis de me payer une visite!\" NL NL Même si vous étiez perplexe de la technique de cette homme, vous vous sentez définitivement plus intimidant à présent.",
+      "\"Ok, à bientôt ! Dites à vos #ramis de me payer une visite !\" NL NL Même si vous étiez perplexe de la technique de cette homme, vous vous sentez définitivement plus intimidant à présent.",
       "Vous le frappez. NL \"Mon @VISAGE!!@ Maintenant je vais devoir-\" NL NL Il s'est évanoui. La prochaine fois il devrait faire attention à ce qu'il dit avant d'insulter une créature de votre rang."
     ],
     "OPTIONS": [
@@ -185,7 +185,7 @@
     "DESCRIPTIONS": [
       "Alors que vous faisiez le rituel, vous êtes pris au piège!",
       "Vous quittez sans faire de bruit.",
-      "Vous découvrez un #raventurier #ramort gisant au sol. NL Son esprit est toujours présent dans les environs. De plus, ",
+      "Vous découvrez un #raventurier #rmort gisant au sol. NL Son esprit est toujours présent dans les environs. De plus, ",
       "son armure et son et son visage semblent avoir été #r@dévorés@ #r@par@ #r@les@ #r@flammes.@ ",
       "il semble avoir été #r@entaillé@ #r@et@ #r@piétiné@ par une bête à cornes. ",
       "il semble avoir été #r@éviscéré@ #r@et@ #r@découpé@ par des griffes géantes. ",
@@ -268,13 +268,13 @@
     ]
   },
   "downfall:GoldenIdol": {
-    "NAME": "Golden Idol",
+    "NAME": "Idole dorée",
     "DESCRIPTIONS": [
       "Vous croisez un piédestal des plus anodins sur lequel trône une #yidole #ydorée #yétincelante, Elle vous semble extrêmement précieuse. NL NL Les aventuriers seront sûrement attirés par cet objet. Cela peut être rentable d'y installer un piège.",
       "Vous croisez un piédestal des plus anodins sur lequel trône une #yidole #ydorée #yétincelante, Elle vous semble extrêmement précieuse. NL NL Le corps d'un aventurier gise à côté du couloir, clairement écrasé par un objet massif. Son âme est toujours présente dans les environs.",
-      "En utilisant le poids de l'Idole comme déclencheur, vous montez un piège basique qui causera la chute d'une énorme rocher si quiconque essaire de récupérer l'artéfact #yétincelant.. NL Satisfait de votre piège, vous décidez de continuer votre périple.",
+      "En utilisant le poids de l'Idole comme déclencheur, vous montez un piège basique qui causera la chute d'une énorme rocher si quiconque essaie de récupérer l'artéfact #yétincelant... NL Satisfait de votre piège, vous décidez de continuer votre périple.",
       "Vous canalisez l'esprit de l'aventurier dans votre corps, absorbant son énergie.",
-      "Vous décidez de laisser le piédestal intact, Placer un piège est indigne de vous..",
+      "Vous décidez de laisser le piédestal intact, Placer un piège est indigne de vous...",
       "Vous décidez de laissez l'âme errer et continuez sur votre chemin."
     ],
     "OPTIONS": [
@@ -303,11 +303,11 @@
   "downfall:Ghosts": {
     "NAME": "Conseil des Fantômes ",
     "DESCRIPTIONS": [
-      "Alors que vous continuez votre descente, une #p~épaisse~ #p~fumée~ #p~noire~ commence à émaner du sol et des murs autour de vous, se regroupant en trois formes masquées qui commencent à parler. NL NL ~\"Un~ ~autre~ ~pantin~ #r~du~ #r~Cœur~ ~il~ ~me~ ~semble.\"~ NL #r@\"EN@ #r@EFFET!@ #r@IL@ #r@ENVOIE@ #r@TOUJOURS@ #r@LES@ #r@PIONS@ #r@LES@ #r@PLUS@ #r@FAIBLES!\"@ NL NL Vous remarquez un sourire surdimensionné alors que le troisième s'adresse à vous. NL \"Ignore les autres...  Voudrais-tu goûter à notre #y~pouvoir?\"~ ",
+      "Alors que vous continuez votre descente, une #p~épaisse~ #p~fumée~ #p~noire~ commence à émaner du sol et des murs autour de vous, se regroupant en trois formes masquées qui commencent à parler. NL ~\"Un~ ~autre~ ~pantin~ #r~du~ #r~Cœur~ ~il~ ~me~ ~semble.\"~ NL #r@\"EN@ #r@EFFET!@ #r@IL@ #r@ENVOIE@ #r@TOUJOURS@ #r@LES@ #r@PIONS@ #r@LES@ #r@PLUS@ #r@FAIBLES!\"@ NL Vous remarquez un sourire surdimensionné alors que le troisième s'adresse à vous. NL \"Ignore les autres...  Voudrais-tu goûter à notre #y~pouvoir?\"~ ",
       "\"Une @offrande!@ Que c'est ~tentant...\"~ NL NL Alors que le fantôme parle, vous remarquez que la grande bouche s'ouvre de plus en plus. À l'intérieur de votre corps, vous sentez les #b~âmes~ récupérées des morts se faire aspirer dans l'énorme mâchoire du fantôme. Cela prend toute votre force pour ne pas être aspiré par celle-ci. NL NL Alors que vos forces commençaient à s'épuiser, le vortex s'arrête, et les esprits se confondent dans la brume. NL NL Vous reprenez votre route, vous sentant légèrement #bvide."
     ],
     "OPTIONS": [
-      "[Offer] #rPerdez #r",
+      "[Offrir] #rPerdez #r",
       " Âmes. #gRecevez Apparition.",
       "[Verrouillé] Requiert ",
       " Âmes."
@@ -316,15 +316,15 @@
   "downfall:CursedTome": {
     "NAME": "Tome Maudit",
     "DESCRIPTIONS": [
-      "Dans un temple abandonné, vous trouvez un livre géant, ouvert, recouvert #p@d'écritures@ #p@cryptiques@. NL NL Vous n'avez pas besoin d'interpréter cette écriture élaborée, car vous savez le pouvoir qui réside dans ce livre - et le #rcoût nécessaire pour l'obtenir. .",
-      "Comprenant le coût, vous décidez de prendre le tome avec vous.Alors que vous atteignez le piédestal, le livre entre en transe et vous parle de #rmille #rvoix, s'aggripant à votre propre âme ! NL NL Avec le livre sécurisé, et votre âme encore plus corrompue qu'elle ne l'était avant, vous quittez le temple avec une sensation d'être #b~épuisé...~"
+      "Dans un temple abandonné, vous trouvez un livre géant, ouvert, recouvert #p@d'écritures@ #p@cryptiques.@ NL NL Vous n'avez pas besoin d'interpréter cette écriture élaborée, car vous savez le pouvoir qui réside dans ce livre - et le #rcoût nécessaire pour l'obtenir. .",
+      "Comprenant le coût, vous décidez de prendre le tome avec vous. Alors que vous atteignez le piédestal, le livre entre en transe et vous parle de #rmille #rvoix, s'aggripant à votre propre âme ! NL NL Avec le livre sécurisé, et votre âme encore plus corrompue qu'elle ne l'était avant, vous quittez le temple avec une sensation d'être #b~épuisé...~"
     ]
   },
   "downfall:ForgottenAltar": {
     "NAME": "Autel oublié",
     "DESCRIPTIONS": [
       "Face à la statue, vous canalisez votre énergie spirituelle. NL Alors que les #bâmes sont retirées de vous en tant qu'offrande à la déesse, les bras de la statue s'étendent et dégagent une #p~magie~ #p~noire~ apaisante. NL Tout devient sombre. NL Vous vous réveillez peu de temps après, vos plaies et vos blessures soudainement guéries.",
-      "Après avoir pris un moment à admirer le mal à l'intérieur de cette statue, vous repartez, traversant la Cité.."
+      "Après avoir pris un moment à admirer le mal à l'intérieur de cette statue, vous repartez, traversant la Cité."
     ],
     "OPTIONS": [
       "[Offrir des Âmes] #rPerdez #r",
@@ -372,11 +372,11 @@
   "downfall:Vagrant": {
     "NAME": "Vagabond implorant",
     "DESCRIPTIONS": [
-      "Vous tuez l'homme et récoltez son âme. Des ~exclamations~ viennent de la foule derrière vous. come from the crowd behind you. NL \"Il vient de tuer Burgundy!\" dit une personne, alors que plus de mendiants commme celui que vous avez rencontré commencent à s'approcher de vous. NL NL Vous vous échappez, mais pas sans quelques #rgriffures et #rmorsures qu'ils vous ont infligé.",
+      "Vous tuez l'homme et récoltez son âme. Des ~exclamations~ viennent de la foule derrière vous. NL \"Il vient de tuer Burgundy!\" dit une personne, alors que plus de mendiants commme celui que vous avez rencontré commencent à s'approcher de vous. NL NL Vous vous échappez, mais pas sans quelques #rgriffures et #rmorsures qu'ils vous ont infligé.",
       "Vous prenez la précieuse #yrelique de ses mains et repartez. NL Venant de derrière vous entendez, NL \"N'avez vous pas honte? ~N'AVEZ~ ~VOUS~ ~PAS~ ~HOOOOONTE?!\"~ NL Vous n'avez #pabsolument #ppas #pde #phonte. C'est un honneur d'être volé par un seigneur de la Tour!"
     ],
     "OPTIONS": [
-      "[Frapperj] #gGagnez #g85 #gÂmes. #rPerdez #r",
+      "[Frapper] #gGagnez #g85 #gÂmes. #rPerdez #r",
       " #rPV.",
       "[Voler] #gObtenez #gune #gRelique. #rDevenez #rMaudit #r- #rOrgueil."
     ]
@@ -403,7 +403,7 @@
     "NAME": "Le Mausolée",
     "DESCRIPTIONS": [
       "Alors que vous vous aventuriez à travers une série de tombes, vous faites face à un grand sarcophage noir avec des ~gemmes~ ~incrustées~ ~dedans~ au centre d'une pièce circulaire. NL Vous ne pouvez pas traduire les écritures sur le sarcophage, mais vous remarquez tout de même un #p~brouillard~ #p~noir~ sortant de ses côtés. NL Vous reconnaissez ce brouillard - un signe clair des #y~esprits.~",
-      "Vous absorbez le #p~brouillard~ #p~fantômatique~, récupérant les esprits. Cependant, vous #r@ressentez@ #r@un@ #r@frisson@ alors que vous quittez la pièce..."
+      "Vous absorbez le #p~brouillard~ #p~fantômatique,~ récupérant les esprits. Cependant, vous #r@ressentez@ #r@un@ #r@frisson@ alors que vous quittez la pièce..."
     ],
     "OPTIONS": [
       "[Dévorer] #gGagnez #g200 #gÂmes. #rDevenez #rMaudit #r- #rHantise."
@@ -415,8 +415,8 @@
       "Vous rencontrez une longue ligne de #b~silhouettes~ #b~encapuchonnées~ entrer dans une #pmodeste #pcathédrale. NL Au moment où vous entrez la cathédrale, les figures se tournent vers vous! NL NL Vos oreilles sont presque instantanément envahies par une cacophonie d'exclamations et de cris. Un des cultistes s'approche de vous avec une offrande.",
       "Voyant une arme dangereuse posésur un autel, vous coupez à travers la ligne de cultistes et prenez cette récompense. Mais vous êtes rapidement #rentouré par ces derniers ! NL NL #r@\"MEURTRE!!@ #r@MEURTRE@ #r@MEURTRE!!\"@ NL #b~\"CAW~ #b~CAW~ #b~CAAAAAWWW!\"~ NL NL Les cultistes dégainent rapidement leurs propres dagues, vous tranchant et tailladant la peau alors que vous les dégagez de votre chemin pour vous échapper.",
       "Acceptant l'offrande du cultiste, vous prenez l'étrange élixir de ses mains. NL NL Les cultistes @chantent@ et @hurlent@ pour vous! NL NL #b~\"CAAW~ #b~CAW~ #b~CAAAAAAWW!!\"~ NL NL Vous chantez également. Pourquoi pas? Ces cultistes sont une drôle de bande, mais ils servent bien un de vos seigneurs..",
-      "#r@\"DIEU OISEAU!!@ #r@REVENU!!\"@ NL #b~\"CAW~ #b~CAW~ #b~CAAAAAWWW!\"~ NL NL En vous frayant un chemin à travers la foule enthousiaste des cultistes, vous vous retrouvez bientôt face à face avec leur chef. Un cultiste bien habillé vous remet une #yDague #yOrnée.",
-      "Vous prenez la dague, incertain de ce qui va se passer.. Le chef des cultistes fouille dans sa robe et vous offre une #bmixture #bleue #bet #bbouillante.",
+      "#r@\"DIEU@ @OISEAU!!@ #r@REVENU!!\"@ NL #b~\"CAW~ #b~CAW~ #b~CAAAAAWWW!\"~ NL NL En vous frayant un chemin à travers la foule enthousiaste des cultistes, vous vous retrouvez bientôt face à face avec leur chef. Un cultiste bien habillé vous remet une #yDague #yOrnée.",
+      "Vous prenez la dague, incertain de ce qui va se passer.. Le chef des cultistes fouille dans sa robe et vous offre une #bmixture #bbleue #bet #bbouillante.",
       "Les cultistes qui entourent le chef lui fournissent des remplacements, et bientôt, avec sa propre dague et sa potion en main, il vous fait signe de le suivre dans ses actions..",
       "En imitant le rituel du chef du culte, vous débouchez la potion et en versez doucement une petite quantité sur la lame.. L'acier semble briller #b~d'une~ #b~teinte~ #b~sinistre~ dans la cathédrale. NL NL Sans un seul mot ou geste du chef cultiste, deux cultistes s'avancent - un vers vous et un vers lui.. NL NL Ce qu'ils veulent que vous fassiez est maintenant très clair.",
       "#rVous #rplongez #rla #rdague #rdans #rle #rcœur #rdu #rcultiste! NL NL #b~\"CAW~ #b~CAAAAW~ #b~CAAAAAWWW!\"~ NL NL Le rituel est terminé, et les cultistes survivants ne pouvaient pas être plus heureux. Ils agitent leurs bâtons en signe de célébration et vous les entendez pousser des cris de joie jusqu'à ce que vous sortez de la cathédrale."
@@ -441,7 +441,7 @@
       "Alors que vous continuez à descendre la Tour, vous remarquez un groupe d'humanoides qui préparent une embuscade près d'un grand auditorium. Quand vous vous approchez, les Esclavagistes sont surpris, mais s'expliquent rapidement. NL NL \"Nous attendons ceux qui veulent attaquer notre Cité - ceux que vous cherchez à détruire ! Nous avons une audience qui attend une nouvelle proie. Les gens adorent un #rcombat #rà #rmort!\"",
       "Les esclavagistes ne sont pas une menace pour vous, et pourraient être utiles pour ralentir ou blesser votre proie. NL NL Cependant, ce sport de sang est peut-être un peu trop tentant pour ne pas y aller...",
       "Vous entrez dans le stadium géant pour trouver une audience remplie #bd'Esclavagistes, de #bCultistes et d'autres habitants de la Cité. NL NL ",
-      "@\"AMENEZ-MOI@ @LE@ @MEILLEUR@!\" vous grondez devant le peuple, annonçant un challenge pour leurs champions. NL 2 challengers s'approchent, vous prévenant que les règles de l'arène les empêche de se retenir, malgré votre position de Seigneur de la Tour. NL NL Vous n'en attendiez pas moins.",
+      "@\"AMENEZ-MOI@ @LE@ @MEILLEUR!\"@ vous grondez devant le peuple, annonçant un challenge pour leurs champions. NL Deux challengers s'approchent, vous prévenant que les règles de l'arène les empêche de se retenir, malgré votre position de Seigneur de la Tour. NL NL Vous n'en attendiez pas moins.",
       "@\"LE@ @PROCHAIN@ @EST@ @À@ @MOI!\"@ vous grondez devant le peuple, qui répond avec un applaudissement assourdissant. NL NL Il ne faut pas longtemps aux esclavagistes d'apporter leur dernière capture. Le challenger se réveille à son insu, encore ~groggy~ de l'embuscade,  mais se prépare tout de même. NL NL Cela devrait être marrant.",
       "Vous décidez que, même si cela est tentant, combattre ici ne serait qu'une distraction inutile. Vous continuez votre voyage, laissant les esclavagistes reprendre leur embuscade."
     ],
@@ -472,9 +472,9 @@
   "downfall:MoaiHead": {
     "NAME": "Tête de Moai",
     "DESCRIPTIONS": [
-      "Vous décidez de faire un petit détour par l'un des plus grands monuments de l'Au-delà. - une énorme tête de pierre, émergeant d'un grand segment de mur. NL NL La bouche de la tête est grande ouverte et laisse apparaître de grandes dents intimidantes et tachées de sang. La surface de la statue est couverte de pictogrammes énigmatiques qui semblent représenter des personnes se jetant dans la bouche géante et s'y faisant dévorer.",
+      "Vous décidez de faire un petit détour par l'un des plus grands monuments de l'Au-Delà. - une énorme tête de pierre, émergeant d'un grand segment de mur. NL NL La bouche de la tête est grande ouverte et laisse apparaître de grandes dents intimidantes et tachées de sang. La surface de la statue est couverte de pictogrammes énigmatiques qui semblent représenter des personnes se jetant dans la bouche géante et s'y faisant dévorer.",
       "Vous montez dans la bouche de la statue, en attendant que la statue s'active, sachant que vous devez payer son prix en sang. En peu de temps, les énormes molaires s'abattent d'en haut, vous écrasant entièrement. NL @Obscurité.@ NL Quelque temps plus tard, alors que vous êtes dans le noir, vous distinguez un éclat de lumière et réalisez que les dents en pierre remontent peu à peu. NL NL Vous partez, restauré, la magie de la statue qui coule à travers vous.",
-      "Vous montez dans la bouche de la statue, et laissez couler de votre corps ine immense quantité #bd'énergie #bspirituelle. Les yeux de la statue #b~s'enflamment,~ et ses énormes molaires se referment sur vous. NL #b~La~ #b~lumière~ #b~bleue~ #b~est~ #b~partout.~ NL NL Alors que les dents se relèvent, vous vous sentez complètement revigoré, et plus puissant qu'avant.",
+      "Vous montez dans la bouche de la statue, et laissez couler de votre corps une immense quantité #bd'énergie #bspirituelle. Les yeux de la statue #b~s'enflamment,~ et ses énormes molaires se referment sur vous. NL #b~La~ #b~lumière~ #b~bleue~ #b~est~ #b~partout.~ NL NL Alors que les dents se relèvent, vous vous sentez complètement revigoré, et plus puissant qu'avant.",
       "Vous quittez les lieux en vous demandant ce qui aurait pu se passer."
     ],
     "OPTIONS": [
@@ -490,16 +490,16 @@
   "downfall:SensoryStone": {
     "NAME": "Pierre sensorielle",
     "DESCRIPTIONS": [
-      "#g~VANITÉ .~ NL NL La vie est une chose magnifique... même pour un #gslime. NL NL Vous avez toujours su que vous étiez destiné à de grandes choses. Les autres se contentent de pièces et de bouts de ficelle, mais pas vous. Vous attendez, comme un prédateur, quelque chose de spécial. Quelque chose d'unique. Quelque chose de ~fabuleux.~ NL NL Des jours... des semaines... peut-être des années sont passées... c'est dur de le dire dans la Tour. Jusqu'à ce que, enfin, vous le repériez. Vous ne serez plus compté parmi les masses! Ils peuvent avoir leurs #ypièces et leurs #ybibelots, mais vous avez quelque chose de mieux... NL NL @UN@ @PETIT@ @CHAPEAU@ @MELON!@ Fabuleux!",
-      "#y~FRAGILITÉ .~ NL NL La #rlame entre dans votre poitrine, et  your chest, et l'acclamation de la #bfoule remplit vos oreilles.... la dernière chose que vous sentirez, c'est une main frappant votre visage, et vos yeux qui se ferment. NL NL Vous vous réveillez dans une pièce inconnue, @incapable@ @de@ @bouger.@ Vous essayez de parler, mais aucun mot ne sort, et votre vision est recouverte d'un #gbrouillard #gvert . Est-ce un rêve? Est-ce la vie après la mort? Vous essayez de vous souvenir, mais vos pensées sont aussi disjointes que vos bras et vos jambes.. NL NL Vous entendez une voix dans votre tête - un seul ordre.. #g\"ÉQUILIBRE #gdoit #gêtre #gRENFORCÉ. #gGARDEZ #gl'Exordium.\"",
+      "#g~VANITÉ.~ NL NL La vie est une chose magnifique... même pour un #gslime. NL NL Vous avez toujours su que vous étiez destiné à de grandes choses. Les autres se contentent de pièces et de bouts de ficelle, mais pas vous. Vous attendez, comme un prédateur, quelque chose de spécial. Quelque chose d'unique. Quelque chose de ~fabuleux.~ NL NL Des jours... des semaines... peut-être des années sont passées... c'est dur de le dire dans la Tour. Jusqu'à ce que, enfin, vous le repériez. Vous ne serez plus compté parmi les masses! Ils peuvent avoir leurs #ypièces et leurs #ybibelots, mais vous avez quelque chose de mieux... NL NL @UN@ @PETIT@ @CHAPEAU@ @MELON!@ Fabuleux!",
+      "#y~FRAGILITÉ.~ NL NL La #rlame entre dans votre poitrine, et  your chest, et l'acclamation de la #bfoule remplit vos oreilles.... la dernière chose que vous sentirez, c'est une main frappant votre visage, et vos yeux qui se ferment. NL NL Vous vous réveillez dans une pièce inconnue, @incapable@ @de@ @bouger.@ Vous essayez de parler, mais aucun mot ne sort, et votre vision est recouverte d'un #gbrouillard #gvert . Est-ce un rêve? Est-ce la vie après la mort? Vous essayez de vous souvenir, mais vos pensées sont aussi disjointes que vos bras et vos jambes.. NL NL Vous entendez une voix dans votre tête - un seul ordre.. #g\"ÉQUILIBRE #gdoit #gêtre #gRENFORCÉ. #gGARDEZ #gl'Exordium.\"",
       "#p~DÉSESPOIR.~ NL NL #yRegarder. #ySe #ysouvenir. #yVivre. Ceci est la mission de la Gardienne. Votre mission est d'enquêter sur une Tour d'origine inconnue..  Vous entrez dans une pièce hexagonale et avant que vous ne puissiez réagir, la porte @s'effondre@ @derrière@ @vous!@ NL NL Il n'y a pas d'échappatoire. Le seul moyen de sortir est de prendre une tablette, clairement imprégnée de magie, qui repose sur un piédestal. Au moment où votre peau touche l'artéfact, votre corps ~se~ ~dissout~ ~totalement,~ et votre #pâme est attiré vers la #ppierre. NL NL Votre destin sera maintenant liée à la #ptablette pour toujours, #rmaudit à errer dans la Tour pour l'éternité.",
       "#y~DÉTACHEMENT.~ NL NL Vous étiez le premier. Vous servez le ~Créateur.~ Vous n'êtes pas né, avec fragilité et faiblesse, mais créé. Parfait. Et à votre image, vous créerez d'autres copies. Les #yautomates de l'héritage du Créateur. NL NL Chacun d'entre eux est parfait dans sa conception, tous servent un but spécifique. Tous sauf un. Celui qui est destiné à maintenir l'équilibre dans la Cité. NL NL Vous jetez #yl'automate #ydéfectueux de la plus haute fenêtre, le faisant plonger jusqu'au plus bas de la Tour, et prenez sa place en tant que protecteur de la ville. NL NL La balance doit être renforcée.",
       "#b~FIERTÉ.~ NL NL Vous vous tenez au centre d'une grande arène. Tout ce pour quoi vous avez travaillé culmine dans ce combat singulier.. Vous prenez une #bpose #bdéfensive, drainant l'endurance de votre ennemi, jusqu'à ce qu'une ouverture se présente. Avec vos dernières forces, vous #rplongez #rvotre #rlame dans le cœur de votre adversaire. Le public @applaudit@ @à@ @tout@ @rompre!@ NL NL Ne vous contentant pas de gagner, vous levez votre main ouverte et frappez votre adversaire ~au~ ~visage,~ délivrant un coup final des plus insultants. NL NL Il n'y a plus personne sur votre chemin maintenant. Vous êtes le nouveau #b@Champion!@",
       "#p~AVIDITÉ.~ NL NL Peu d'hommes peuvent résister à la #btentation #bdu #bpouvoir. Mais le pouvoir a un coût, et un grand pouvoir a un prix encore plus élevé. NL NL Vous êtes assis sur votre trône au-dessus du Colisée, regardant des hommes #rse #rbattre #rà #rmort pour votre amusement pour le titre de #bChampion. Le prix d'entrée - la #g~flamme~ #g~de~ #g~leur~ #g~âme~ #g~éternelle~ à votre service. Chaque nom est gravé dans une tablette, les liant à vous dans l'au-delà.. NL NL La foule applaudit alors qu'un combattant est terrassé par un dernier coup au visage. Vous allez dans votre chambre forte, mais quelqu'un est venu ici. Les pièges sont déclenchés, mais aucun corps n'a été trouvé... et la #p@tablette@ @a@ @disparu!@",
       "#g~DEUIL.~ NL NL Vous vous tenez, enfin, au sommet du plus haut sommet de la Tour. Vous avez passé des années à travailler sans relâche pour donner vie à cet exploit architectural colossal, un monument au Grand Maître. Chaque #gcourbe est arrondie à la perfection. Chaque #ybord méticuleusement placé. NL NL “C'est fait, mon amour.” Couvrant leur main sans vie avec la vôtre, vous allumez la machine. Un doux bourdonnement remplit la pièce, et bientôt vous sentez que votre propre... #b~essence~ est attirée par votre création - rapidement rejoint par un autre. Vous vivrez tous les deux pour l'éternité dans cet endroit, comme vous l'aviez prévu.. NL NL Avec un écho retentissant... le #pCœur ~bat~ son premier coup.",
-      "#b~RAGE.~ NL NL Vous êtes impuissant à arrêter la #ydague #yornée qui entre dans votre poitrine. Dans votre dernier moment, vous priez n'importe quelle #pdivinité qui gouverne la Tour pour vous donner la force de vivre, ~quelqu'en~ ~soit~ ~le~ ~prix.~ NL NL Votre #pcœur bat un dernier coup fort, puis se tait... pour un moment. Vos yeux brillent d'un #b@feu@ #b@bleu@ alors que vous revenez à la vie avec la force de dix hommes, brisant vos liens avec facilité et rugissant dans la foule de #brfigures #bencapuchonnées vous entourant! NL NL Alors que vous sentez que votre corps commence à se transformer en une #bforme #bmonstrueuse, les figures s'inclinent devant vous.",
+      "#b~RAGE.~ NL NL Vous êtes impuissant à arrêter la #ydague #yornée qui entre dans votre poitrine. Dans votre dernier moment, vous priez n'importe quelle #pdivinité qui gouverne la Tour pour vous donner la force de vivre, ~quelqu'en~ ~soit~ ~le~ ~prix.~ NL NL Votre #pcœur bat un dernier coup fort, puis se tait... pour un moment. Vos yeux brillent d'un #b@feu@ #b@bleu@ alors que vous revenez à la vie avec la force de dix hommes, brisant vos liens avec facilité et rugissant dans la foule de #bfigures #bencapuchonnées vous entourant! NL NL Alors que vous sentez que votre corps commence à se transformer en une #bforme #bmonstrueuse, les figures s'inclinent devant vous.",
       "#p~ARROGANCE.~ NL NL Vous détestez ce #pCœur #pdivin qui contrôle cet endroit, dictant votre destin. Il est #ytemps d'agir. NL NL L'Au-delà est la section la moins gardée de la tour, et vous pouvez vous glisser dans sa #ytrésorerie avec facilité. Il y a beaucoup d'artefacts de pouvoir ici, mais un en particulier vous parle. - une #y~montre~ #y~de~ #y~poche~  #y~étincelante.~ NL NL Avec une confiance inébranlable, vous tendez la main et arrachez la mont... @...tnom@ @al@ @zehcarra@ @te@ @niam@ @al@ @zednet@ @souv@ @,elbalnarbéni@ @ecnaifnoc@ @enu@ @cevA@ NL NL Vous détestez ce #pCœur #pdivin qui contrôle cet... endroit...?",
-      "On second thought, perhaps memories are best left in the past."
+      "En y réfléchissant, peut-être qu'il vaut mieux laisser les souvenirs dans le passé."
     ],
     "OPTIONS": [
       "[Se souvenir] #gAjoutez #g1 #gcarte #gde #gBoss #gà #gvotre #gdeck.",
@@ -538,7 +538,7 @@
   "downfall:WindingHalls": {
     "NAME": "Couloirs labyrinthiques",
     "DESCRIPTIONS": [
-      "En remontant lentement les chemins tortueux, vous vous retrouvez dans les infâmes couloirs labyrinthiques de l'Au-delà. Un être inférieur deviendrait fou à essayer de se diriger dans ces couloirs, mais pour vous, ils sont aussi familiers qu'un vieil ami. NL NL Les #p~voix~ qui vous #p~chuchotent~ à l'oreille vous facilitent la tâche alors que vous décidez quel chemin prendre."
+      "En remontant lentement les chemins tortueux, vous vous retrouvez dans les infâmes couloirs labyrinthiques de l'Au-Delà. Un être inférieur deviendrait fou à essayer de se diriger dans ces couloirs, mais pour vous, ils sont aussi familiers qu'un vieil ami. NL NL Les #p~voix~ qui vous #p~chuchotent~ à l'oreille vous facilitent la tâche alors que vous décidez quel chemin prendre."
     ],
     "OPTIONS": [
       "[Gauche] #gExplorez #gun #gEvènement.",
@@ -581,7 +581,7 @@
     "DESCRIPTIONS": [
       "@tu-thump@ ... @tu-thump@ ... @tu-thump@ ... NL Un battement de cœur réconfortant peut être ressenti dans toute la pièce... NL Est-ce la ~fin~ ? Votre objectif est-il atteint ?",
       "Vous redonnez #b",
-      " Âmes au Cœur! NL Celui-ci #b@se tortille@ de joie, battant de plus en plus.",
+      " Âmes au Cœur! NL Celui-ci #b@se@ #b@tortille@ de joie, battant de plus en plus.",
       "Malgré tous vos efforts, la porte de la chambre du Coeur reste vulnérable. Vous vous demandez, ~\"Avez-vous~ ~vraiment~ ~fait~ ~assez?\"~  NL Vous estimez que vous avez donné un total de #b",
       " Âmes au Cœur.",
       " NL Un total de #b",
@@ -592,7 +592,7 @@
       "NL Vous chargez votre noyau à so maximum...",
       "Vous vous demandez, ~\"Avez-vous~ ~vraiment~ ~fait~ ~assez?\"~",
       " NL Le cœur pulse de plus en plus fort alors que votre #p~conscience~ #p~commence~ #p~à~ #p~disparaître...~",
-      " NL Une soudaine explosion #y@d'énergie@ émane de votre corps, vous réveillant en  #b@sursaut@.",
+      " NL Une soudaine explosion #y@d'énergie@ émane de votre corps, vous réveillant en #b@sursaut@ .",
       " NL Le Cœur #gse #gretire, sentant une menace en approche ! Le combat n'est pas encore terminé...",
       "NL Vous chargez votre sceptre avec de l'énergie divine...",
       "Vous sentez #pquelque #pchose #pde #p@maléfique@ au plus profond de vous..."
@@ -607,7 +607,7 @@
   "downfall:EvilShrines": {
     "NAME": "",
     "DESCRIPTIONS": [
-      "Vous seul devriez avoir ce pouvoir.. Vous mettez en pièces l'autel. NL Un gémissement obsur vous entoure, et vous pouvez ressentir la  #p~magie~ #p~maudite~ de l'Autel s'infiltrer dans votre corps."    ],
+      "Vous seul devriez avoir ce pouvoir. Vous mettez en pièces l'autel. NL Un gémissement obscur vous entoure, et vous pouvez ressentir la  #p~magie~ #p~maudite~ de l'Autel s'infiltrer dans votre corps."    ],
     "OPTIONS": [
       "[Profaner] #gDupliquez #g2 #gcartes. #rMaudit #r- #rAléatoire.",
       "[Profaner] #gRetirez #g3 #gcartes. #rMaudit #r- #rAléatoire.",

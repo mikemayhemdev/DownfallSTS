@@ -39,8 +39,8 @@
     "TEXT": [
       " NL bronze:Compilation",
       "bronze:Compilation",
-      " NL bronze:Encode.",
-      "bronze:Encode. NL ",
+      " NL bronze:Encodez.",
+      "bronze:Encodez. NL ",
       " π NL Quand bronze:Encodée,",
       "LOCALIZATION NOTE: The text above must be equal to the start of Replicate's extra description line.",
       "ERR - NO_DUPE_FULL_RELEASES"
@@ -49,7 +49,7 @@
   "bronze:CompileDisplayPanel": {
     "TEXT": [
       "Quand Compilé:",
-      "bronze:Compile"
+      "bronze:Compilation"
     ]
   }
 }

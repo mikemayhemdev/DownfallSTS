@@ -239,7 +239,7 @@
 
   "Gremlin:IrksomeBlow": {
     "NAME": "Coup fâcheux",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Coup fâcheux est affecté par la !M! fois."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Coup fâcheux est affecté par la Force !M! fois."
   },
 
   "Gremlin:Irritability": {

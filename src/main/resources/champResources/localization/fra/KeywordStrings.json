@@ -42,7 +42,7 @@
       "defensive",
       "defensive."
     ],
-    "DESCRIPTION": "#yPose. NL Bonus de #yTechnique: Gagnez #b4 de #yContre. NL Bonus de #yFinisher: Gagnez #b12 #yd'Armure."
+    "DESCRIPTION": "#yPose. NL Bonus de #yCompétence: Gagnez #b4 de #yContre. NL Bonus de #yFinisher: Gagnez #b12 #yd'Armure."
   },
   {
     "PROPER_NAME": "Destructeur",
@@ -52,7 +52,7 @@
       "berserker",
       "berserker."
     ],
-    "DESCRIPTION": "#yPose.  NL Bonus de #yTechnique: Gagnez #b4 de #yVigeur. NL Bonus de #yFinisher: Gagnez #b1 de #yForce."
+      "DESCRIPTION": "#yPose. NL Bonus de #yCompétence: Gagnez #b2 de #yVigeur. NL Bonus de #yFinisher: Gagnez #b1 de #yForce."
   },
   {
     "PROPER_NAME": "Gladiateur",
@@ -72,7 +72,7 @@
       "ultimate",
       "ultimate."
     ],
-    "DESCRIPTION": "#yPose. Compte comme les #yPoses de #rDestructeur et #bDéfensive pour tous les usages. NL Les Finishers ne font pas quitter cette Pose. NL Vous ne pouvez donc pas changer de #yPose."
+    "DESCRIPTION": "#yPose. Compte comme les #yPoses de #rDestructeur et #bDéfensive pour tous les usages. NL Si vous quittez cette position prématurément, revenez-y immédiatement."
   },
   {
     "PROPER_NAME": "Fatigue",

@@ -50,7 +50,7 @@
   },
   "sneckomod:SoulDraw": {
     "NAME": "Tirage de l'âme",
-    "DESCRIPTION": "sneckomod:Gekoproof. NL Ajoutez !M! cartes sneckomod:Hors-classe aléatoires dans votre main. NL Épuisement",
+    "DESCRIPTION": "sneckomod:Gekoproof. NL Ajoutez !M! cartes sneckomod:Hors-Classe aléatoires dans votre main. NL Épuisement",
     "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. NL Piochez 1 - !M! cartes."
   },
   "sneckomod:SoulRoll": {
@@ -137,8 +137,8 @@
   },
   "sneckomod:CheapStock": {
     "NAME": "Stock bon marché",
-    "DESCRIPTION": "Au début de votre tour, réduisez le coût de la carte sneckomod:Hors-classe coûtant le plus de 1.",
-    "UPGRADE_DESCRIPTION": "Inné. NL Au début de votre tour, réduisez le coût de la carte sneckomod:Hors-classe coûtant le plus de 1."
+    "DESCRIPTION": "Au début de votre tour, réduisez le coût de la carte sneckomod:Hors-Classe coûtant le plus de 1.",
+    "UPGRADE_DESCRIPTION": "Inné. NL Au début de votre tour, réduisez le coût de la carte sneckomod:Hors-Classe coûtant le plus de 1."
   },
   "sneckomod:UnlimitedRolls": {
     "NAME": "Lancers illimités",
@@ -152,11 +152,11 @@
   },
   "sneckomod:ImprovisedAttack": {
     "NAME": "Attaque improvisée",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez une Attaque sneckomod:Hors-classe aléatoire dans votre main et sneckomod:Confondez cette carte."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez une Attaque sneckomod:Hors-Classe aléatoire dans votre main et sneckomod:Confondez cette carte."
   },
   "sneckomod:ImprovisedGuard": {
     "NAME": "Garde improvisée",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Ajoutez une Compétence sneckomod:Hors-classe aléatoire dans votre main et sneckomod:Confondez cette carte."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Ajoutez une Compétence sneckomod:Hors-Classe aléatoire dans votre main et sneckomod:Confondez cette carte."
   },
   "sneckomod:QuickMove": {
     "NAME": "Mouvement vif",
@@ -173,16 +173,16 @@
   },
   "sneckomod:SerpentMind": {
     "NAME": "Forme exotique",
-    "DESCRIPTION": "Lorsque vous jouez une carte sneckomod:Hors-classe, piochez 1 carte."
+    "DESCRIPTION": "Lorsque vous jouez une carte sneckomod:Hors-Classe, piochez 1 carte."
   },
   "sneckomod:SlitherStrike": {
     "NAME": "Frappe rampante",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Réduisez le coût de vos cartes sneckomod:Hors-classe de votre main de 1 pour ce tour."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Réduisez le coût de vos cartes sneckomod:Hors-Classe de votre main de 1 pour ce tour."
   },
   "sneckomod:PureSnecko": {
     "NAME": "Shift",
-    "DESCRIPTION": "sneckomod:Gekoproof. NL Épuisez toutes les cartes sneckomod:Hors-classe dans votre main, les remplaçant avec des nouvelles them with new ones.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. NL Épuisez toutes les cartes sneckomod:Hors-classe dans votre main, les remplaçant avec des nouvelles qui coûtent 1 de moins."
+    "DESCRIPTION": "sneckomod:Gekoproof. NL Épuisez toutes les cartes sneckomod:Hors-Classe dans votre main, les remplaçant avec des nouvelles them with new ones.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. NL Épuisez toutes les cartes sneckomod:Hors-Classe dans votre main, les remplaçant avec des nouvelles qui coûtent 1 de moins."
   },
   "sneckomod:Cheat": {
     "NAME": "Pure chance",
@@ -210,15 +210,15 @@
   },
   "sneckomod:DefensiveFlair": {
     "NAME": "Flair passif",
-    "DESCRIPTION": "Gagnez !B! d'Armure, augmenté de !M! pour chaque carte sneckomod:Hors-classe dans votre main."
+    "DESCRIPTION": "Gagnez !B! d'Armure, augmenté de !M! pour chaque carte sneckomod:Hors-Classe dans votre main."
   },
   "sneckomod:DangerNoodle": {
     "NAME": "Danger Noodle",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Répétez ceci pour chaque carte sneckomod:Hors-classe dans votre main, puis Épuisez ces cartes."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Répétez ceci pour chaque carte sneckomod:Hors-Classe dans votre main, puis Épuisez ces cartes."
   },
   "sneckomod:SerpentIdol": {
     "NAME": "Idole serpentine",
-    "DESCRIPTION": "sneckomod:Gekoproof. NL Choisissez 1 carte sneckomod:Hors-classe parmi 3 à ajouter dans votre main. NL Elle coûte 0 ce tour-ci. NL Épuisement."
+    "DESCRIPTION": "sneckomod:Gekoproof. NL Choisissez 1 carte sneckomod:Hors-Classe parmi 3 à ajouter dans votre main. NL Elle coûte 0 ce tour-ci. NL Épuisement."
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "Déchet en trésor",
@@ -288,11 +288,11 @@
   },
   "sneckomod:WideSting": {
     "NAME": "Piqûre profonde",
-    "DESCRIPTION": "Infligez !M! - !D! dégâts à TOUS les ennemis. NL Améliorez toutes les cartes sneckomod:Hors-classe de votre main."
+    "DESCRIPTION": "Infligez !M! - !D! dégâts à TOUS les ennemis. NL Améliorez toutes les cartes sneckomod:Hors-Classe de votre main."
   },
   "sneckomod:UnendingSupply": {
     "NAME": "Source inépuisable",
-    "DESCRIPTION": "Au début de chaque tour, ajoutez une carte sneckomod:Hors-classe aléatoire dans votre main."
+    "DESCRIPTION": "Au début de chaque tour, ajoutez une carte sneckomod:Hors-Classe aléatoire dans votre main."
   },
   "sneckomod:Memorize": {
     "NAME": "Mémorisation",

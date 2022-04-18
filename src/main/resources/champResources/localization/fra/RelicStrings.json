@@ -59,7 +59,7 @@
     "NAME": "Combattre pour les Nuls",
     "FLAVOR": "Étape 1. Battre l'ennemi",
     "DESCRIPTIONS": [
-      "Si vous terminez votre tour avec aucune #yPose, gagnez 6 d'Armure."
+      "Si vous terminez votre tour dans aucune #yPose, gagnez 6 d'Armure."
     ]
   },
   "champ:GladiatorsBookOfMartialProwess": {

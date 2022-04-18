@@ -3,7 +3,7 @@
     "NAME": "Tourbillon du gardien",
     "DESCRIPTION": "Requiert 10 d'Armure ou plus. NL Infligez !D! dégâts à TOUS les ennemis 4 fois. NL Épuisement.",
     "EXTENDED_DESCRIPTION": [
-      "I do not have enough Block."
+      "Je n'ai pas assez d'Armure."
     ]
   },
   "expansioncontent:Hexaburn": {
@@ -52,7 +52,8 @@
       "Pouvoir de Donu",
       "Gagnez !M! de Force.",
       "Bouclier de Déca",
-      "Gagnez !B! d'Armure plaquée."
+      "Gagnez 5 d'Armure Plaquée.",
+      "Gagnez 8 d'Armure Plaquée."
     ]
   },
   "expansioncontent:PrepareCrush": {

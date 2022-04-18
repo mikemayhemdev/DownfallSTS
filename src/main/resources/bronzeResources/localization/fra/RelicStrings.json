@@ -3,7 +3,7 @@
     "NAME": "Noyau de bronze",
     "FLAVOR": "Remplacez ceci tous les 50 000 ans.",
     "DESCRIPTIONS": [
-      "La première fois que vous #yCompilez une #yFonction chaque combat, gagnez [E]."
+      "La première fois que vous #yCompilez une #yFonction chaque combat, gagnez [E] ."
     ]
   },
   "bronze:ProtectiveGoggles": {
@@ -43,9 +43,9 @@
   },
   "bronze:MakeshiftBattery": {
     "NAME": "Batterie de fortune",
-    "FLAVOR": "C'est une de 8,99 volts.",
+    "FLAVOR": "C'est une 8,9 volts.",
     "DESCRIPTIONS": [
-      "Gagnez [E] et ajoutez un *Hébètement dans votre défausse au début de votre tour."
+      "Gagnez [E] et ajoutez un #yEnglué dans votre défausse au début de votre tour."
     ]
   },
   "bronze:CableSpool": {
