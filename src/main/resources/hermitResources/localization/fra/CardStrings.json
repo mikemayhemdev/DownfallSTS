@@ -39,8 +39,7 @@
   },
   "hermit:BodyArmor": {
     "NAME": "Gilet pare-balles",
-    "DESCRIPTION": "Gagnez !B! d'Armure.  NL Ajoutez une *Défense à votre défausse. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Ajoutez une *Défense+ à votre défausse. NL Épuisement."
+    "DESCRIPTION": "Défaussez une carte. NL Gagnez !B! d'Armure. NL Si c'était une Compétence, gagnez !B! d'Armure supplémentaire."
   },
   "hermit:Snipe": {
     "NAME": "Snipe",
@@ -49,13 +48,13 @@
   },
   "hermit:CalledShot": {
     "NAME": "Tir contrôlé",
-    "DESCRIPTION": "Infligez des dégâts égaux à la taille de voter main. NL hermit:Dans_Le_Mille: NL Piochez !M! carte.",
+    "DESCRIPTION": "Infligez des dégâts égaux à la taille de votre main. NL hermit:Dans_Le_Mille: NL Piochez !M! Attaque.",
     "UPGRADE_DESCRIPTION": " NL (Inflige !D! dégâts.)",
-	"EXTENDED_DESCRIPTION":["Infligez des dégâts égaux à la taille de voter main. NL hermit:Dans_Le_Mille: NL Piochez !M! cartes."]
+	"EXTENDED_DESCRIPTION":["Infligez des dégâts égaux à la taille de votre main. NL hermit:Dans_Le_Mille: NL Piochez !M! Attaques."]
   },
   "hermit:Dissolve": {
     "NAME": "Dissolution",
-    "DESCRIPTION": "Au prochain tour, gagnez !B! d'Armure. NL Épuisement."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL L'Armure ne sera pas retiré au début de vos 2 prochains tours. NL Épuisement."
   },
   "hermit:BlackWind": {
     "NAME": "Vent noir",
@@ -98,7 +97,7 @@
   },
   "hermit:Adapt": {
     "NAME": "Adaptation",
-    "DESCRIPTION": "À la fin de votre tour, vous pouvez Épuisez jusqu'à 2 cartes. NL Gagnez !M! d'Armure pour chaque."
+    "DESCRIPTION": "À la fin de votre tour, vous pouvez Épuiser une carte pour gagner 6 d'Armure."
   },
   "hermit:Dive": {
     "NAME": "Plongée",
@@ -205,7 +204,8 @@
   },
   "hermit:Maintenance": {
     "NAME": "Maintenance",
-    "DESCRIPTION": "Améliorez toutes vos *Frappes et *Défenses ce combat. NL Peut être Améliorée à l'infini."
+    "DESCRIPTION": "Vos *Frappes infligent !M! dégâts suuplémentaires.",
+    "UPGRADE_DESCRIPTION": "Vos *Frappes infligent !M! dégâts suuplémentaires. NL Gagnez 1 de Dextérité."
   },
   "hermit:EternalForm": {
     "NAME": "Forme éternelle",
@@ -292,7 +292,7 @@
   },
   "hermit:DeadOrAlive": {
     "NAME": "Dead Or Alive",
-    "DESCRIPTION": "Infligez !D! dégâts X fois. NL Si c'est Fatal, obtenez une hermit:Primejj. NL Épuisement."
+    "DESCRIPTION": "Infligez !D! dégâts X fois. NL Si c'est Fatal, obtenez une hermit:Prime. NL Épuisement."
   },
   "hermit:GoldenBullet": {
     "NAME": "Balle dorée",

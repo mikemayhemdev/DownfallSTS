@@ -15,12 +15,13 @@
       "muddle",
       "muddled"
     ],
-    "DESCRIPTION": "Confondre une carte fait varier son coût entre 0 et 3 a card changes its cost to between 0 and 3."
+    "DESCRIPTION": "Confondre une carte fait varier son coût entre 0 et 3."
   },
   {
     "PROPER_NAME": "Hors-classe",
     "NAMES": [
-      "Hors-classe",
+      "Hors-Classe",
+      "hors-classe",
       "offclass"
     ],
     "DESCRIPTION": "Une carte Hors-classe est n'importe quelle carte obtenable qui est d'une autre classe de la vôtre (ceci inclut les cartes Incolores, les Malédictions et les Statuts)."

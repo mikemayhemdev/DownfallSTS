@@ -3,7 +3,7 @@
     "NAME": "Noyau de bronze",
     "FLAVOR": "Remplacez ceci tous les 50 000 ans.",
     "DESCRIPTIONS": [
-      "La première fois que vous #yCompilez une #yFonction chaque combat, gagnez [E]."
+      "La première fois que vous #yCompilez une #yFonction chaque combat, gagnez [E] ."
     ]
   },
   "bronze:ProtectiveGoggles": {
@@ -15,9 +15,9 @@
   },
   "bronze:DecasWashers": {
     "NAME": "Rondelles de Deca",
-    "FLAVOR": "Ce n'est pas très clair sur pourquoi Deca les collecte.",
+    "FLAVOR": "Ce n'est pas très clair sur le pourquoi Deca les collecte.",
     "DESCRIPTIONS": [
-      "Au début de chaque combat, piochez #b3 cartes additionnelles et ajoutez un #yHébétement dans votre pioche."
+      "Au début de chaque combat, piochez #b3 cartes supplémentaires et ajoutez un #yHébétement dans votre pioche."
     ]
   },
   "bronze:Timepiece": {
@@ -43,9 +43,9 @@
   },
   "bronze:MakeshiftBattery": {
     "NAME": "Batterie de fortune",
-    "FLAVOR": "C'en est une de 8,99 volts.",
+    "FLAVOR": "C'est une 8,9 volts.",
     "DESCRIPTIONS": [
-      "Gagnez [E] et ajoutez une carte #yStatut aléatoire dans votre défausse au début de votre tour."
+      "Gagnez [E] et ajoutez un #yEnglué dans votre défausse au début de votre tour."
     ]
   },
   "bronze:CableSpool": {
@@ -82,7 +82,7 @@
   },
   "bronze:DonusWashers": {
     "NAME": "Rondelles de Donu",
-    "FLAVOR": "C'est plutôt clair sur pourquoi Donu les collecte.",
+    "FLAVOR": "C'est plutôt clair sur le pourquoi Donu les collecte.",
     "DESCRIPTIONS": [
       "Au début de chaque combat, gagnez [E] [E] et ajoutez #b1 #Néant dans votre pioche."
     ]

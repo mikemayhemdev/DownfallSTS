@@ -209,9 +209,9 @@
     "UPGRADE_DESCRIPTION": "TOUS les ennemis perdent des PV égaux à leur hexamod:Brûlure."
   },
   "hexamod:ExtraCrispy": {
-    "NAME": "Extra Crispy",
+    "NAME": "Extra Croustillant",
     "DESCRIPTION": "Les cartes et les Feux Follets appliquent !M! hexamod:Brûlure de plus.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Cards and Ghostflames apply !M! more hexamod:Soulburn."
+    "UPGRADE_DESCRIPTION": "Inné. NL Les cartes et les Feux Follets appliquent !M! hexamod:Brûlure de plus."
   },
   "hexamod:GhostflameBarrier": {
     "NAME": "Mur de feux follets",
@@ -269,7 +269,7 @@
   },
   "hexamod:PhantomFireball": {
     "NAME": "Boule de feu fantôme",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Si l'ennemi a de la hexamod:Brûlure, déclenchez-là."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Si l'ennemi a de la hexamod:Brûlure, déclenchez-la."
   },
   "hexamod:SpectralSpark": {
     "NAME": "Étincelle spectrale",
@@ -282,7 +282,7 @@
   },
   "hexamod:ChargedBarrage": {
     "NAME": "Barrage explosif",
-    "DESCRIPTION": "Appliquez !burny! de hexamod:Brûlure. NL Répétez ceci pour chaque Feu Follet hexamod:Enflammmé."
+    "DESCRIPTION": "Appliquez !burny! de hexamod:Brûlure. NL Répétez ceci pour chaque Feu Follet hexamod:Enflammé."
   },
   "hexamod:RadiantFlame": {
     "NAME": "Flammes radiantes",

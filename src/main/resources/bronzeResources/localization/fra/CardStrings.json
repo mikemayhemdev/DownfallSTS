@@ -261,7 +261,7 @@
   },
   "bronze:GetLatest": {
     "NAME": "Dernière version",
-    "DESCRIPTION": "Ajoutez une carte aléatoire avec bronze:Encode dans votre main. NL Elle coûte 0. NL Épuisement."
+    "DESCRIPTION": "Ajoutez une carte aléatoire avec bronze:Encodez dans votre main. NL Elle coûte 0. NL Épuisement."
   },
   "bronze:Flail": {
     "NAME": "Fléau",
@@ -297,7 +297,7 @@
   },
   "bronze:BronzeOrb": {
     "NAME": "Orbe de bronze",
-    "DESCRIPTION": "Inné. NL Infligez !D! dégâts. NL Gagnez !B! d'Armure. NL bronze:Encodez une carte aléatoire avec bronze:Encode dans votre pioche. NL Épuisement."
+    "DESCRIPTION": "Inné. NL Infligez !D! dégâts. NL bronze:Encodez une carte aléatoire avec bronze:Encodez dans votre pioche. NL Épuisement."
   },
   "bronze:Virus": {
     "NAME": "Virus",
@@ -467,7 +467,7 @@
   },
   "bronze:Break": {
     "NAME": "Fissure",
-    "DESCRIPTION": "Infligez !D! dégâts. NL bronze:Compilation *Erreur - bronze:Insérez !M! cartes Statut aléatoires.",
+    "DESCRIPTION": "Infligez !D! dégâts. NL bronze:Compilation *Erreur - bronze:Insérez une *Brûlure, une *Blessure et un *Englué.",
     "EXTENDED_DESCRIPTION": [
       "broken",
       "Smash"
@@ -484,11 +484,11 @@
   },
   "bronze:Library": {
     "NAME": "Bibliothèque",
-    "DESCRIPTION": "Au début de votre tour, ajoutez une carte aléatoire avec bronze:Encode dans votre main. NL Elle coûte 0."
+    "DESCRIPTION": "Au début de votre tour, ajoutez une carte aléatoire avec bronze:Encodez dans votre main. NL Elle coûte 0."
   },
   "bronze:Verify": {
     "NAME": "Forme sentinelle",
-    "DESCRIPTION": "Etherée. NL La première fois que vous créez ou piochez une Fonction chaque tour, augmentez tous les nombres dessus par 1.",
+    "DESCRIPTION": "Éthérée. NL La première fois que vous créez ou piochez une Fonction chaque tour, augmentez tous les nombres dessus par 1.",
     "UPGRADE_DESCRIPTION": "La première fois que vous créez ou piochez une Fonction chaque tour, augmentez tous les nombres dessus par 1."
   },
   "bronze:BronzeHeatsink": {
@@ -534,7 +534,7 @@
   },
   "bronze:Assembly": {
     "NAME": "Assemblage",
-    "DESCRIPTION": "Scrutez !M!. NL bronze:Encodez toutes les cartes avec bronze:Encode qui ont été défaussées dans l'ordre choisi. NL Exhaust."
+    "DESCRIPTION": "Scrutez !M!. NL bronze:Encodez toutes les cartes avec bronze:Encodez qui ont été défaussées dans l'ordre choisi. NL Exhaust."
   },
   "bronze:FineTuning": {
     "NAME": "Réglage Précis",
@@ -543,7 +543,8 @@
   },
   "bronze:CleanCode": {
     "NAME": "Code Clean",
-    "DESCRIPTION": "Retirez tous les effets des all bronze:Compilation *Erreur des cartes Encodées. NL Dure pour les !M! prochaines Fonctions créées."
+    "DESCRIPTION": "Retirez les !M! prochaines *Erreurs de bronze:Compilation que vous auriez bronze:Encodé.",
+    "UPGRADE_DESCRIPTION": "Inné. Retirez les !M! prochaines *Erreurs de bronze:Compilation que vous auriez bronze:Encodé."
   },
   "bronze:BranchBlock": {
     "NAME": "Branche: Armure",
@@ -568,7 +569,7 @@
   },
   "bronze:IntoTheVoid": {
     "NAME": "Dans le Néant",
-    "DESCRIPTION": "Ethérée. NL L'ennemi perd !M! de Force ce tour. NL Lorsque cette carte est piochée, perdez [E]. NL Épuisement."
+    "DESCRIPTION": "Éthérée. NL L'ennemi perd !M! de Force ce tour. NL Lorsque cette carte est piochée, perdez [E]. NL Épuisement."
   },
   "bronze:Lubricant": {
     "NAME": "Lubrifiant",
@@ -579,8 +580,8 @@
     "DESCRIPTION": "Appliquez !M! de Vulnerabilité."
   },
   "bronze:Daze": {
-    "NAME": "Etourdissement",
-    "DESCRIPTION": "Ethérée. NL Appliquez !M! de Faiblesse. NL Épuisement."
+    "NAME": "Étourdissement",
+    "DESCRIPTION": "Éthérée. NL Appliquez !M! de Faiblesse. NL Épuisement."
   },
   "bronze:UnknownStatus": {
     "NAME": "Perplexe",
@@ -611,7 +612,7 @@
   },
   "bronze:BuggyMess": {
     "NAME": "Désordre de bugs",
-    "DESCRIPTION": "bronze:Insérez un Statut aléatoire. NL Gagnez !M! [E] .",
+    "DESCRIPTION": "bronze:Insérez un *Hébètement. NL Gagnez !M! [E] .",
     "EXTENDED_DESCRIPTION": [
       "buggy",
       "Mess"

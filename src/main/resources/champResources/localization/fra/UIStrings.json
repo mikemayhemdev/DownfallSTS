@@ -6,12 +6,12 @@
   },
   "champ:SealSealReward": {
     "TEXT": [
-      "Ajoutez un Seal à votre deck"
+      "Ajoutez un Sceau à votre deck"
     ]
   },
   "champ:TechniqueMod": {
     "TEXT": [
-      "champ:Technique. NL "
+      "NL Déclenchez votre *Bonus de *Compétence."
     ]
   },
   "champ:OpenerMod": {

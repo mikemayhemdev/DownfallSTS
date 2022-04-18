@@ -42,7 +42,8 @@
     "DESCRIPTIONS": [
       "Au début de chaque combat, faites apparaître le #ySlime #yferrailleux. NL Dans les sites de Repos, vous pouvez donner une carte au Slime ferrailleux, modifiant ses dégâts: NL #b+1 dégât pour les #gNon-communes NL #b+2 dégâts pour les #yRares NL #b-1 dégât pour les Communes NL #b-2 dégâts pour les #rMalédictions",
       "Retirez une carte de votre deck et modifiez les dégâts du Slime ferrailleux.",
-      "Rien à donner au Slime ferrailleux."
+      "Rien à donner au Slime ferrailleux.",
+      "Donner au Ferrailleux"
     ]
   },
   "Slimebound:GreedOozeRelic": {
@@ -56,7 +57,7 @@
     "NAME": "Soupe de slime",
     "FLAVOR": "Elle a un goût horrible, mais elle est incroyablement saine pour le corps.",
     "DESCRIPTIONS": [
-      "Lorsque vous entrez dans un site de Repos, commencez le prochain combat avec une carte #Préparation qui coûte 0."
+      "Lorsque vous entrez dans un site de Repos, commencez le prochain combat avec une carte #yPréparation qui coûte 0."
     ]
   },
   "Slimebound:AggressiveSlimeRelic": {

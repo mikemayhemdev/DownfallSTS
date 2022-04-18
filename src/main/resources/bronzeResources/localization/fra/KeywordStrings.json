@@ -2,11 +2,11 @@
   {
     "PROPER_NAME": "Encode",
     "NAMES": [
-      "Encode",
-      "Encodé",
-      "Encodée",
-      "Encodées",
-      "Encodez",
+      "encodé",
+      "encodée",
+      "encodées",
+      "encodez",
+      "encoder",
       "encode",
       "encoded"
     ],
@@ -15,8 +15,8 @@
   {
     "PROPER_NAME": "Compilation",
     "NAMES": [
-      "Compilation",
-      "Compilé",
+      "compilation",
+      "compilé",
       "compile",
       "compiled"
     ],
@@ -25,15 +25,15 @@
   {
     "PROPER_NAME": "Flou",
     "NAMES": [
-      "Flou",
+      "flou",
       "blur"
     ],
-    "DESCRIPTION": "Ne perdez pas d'armure au début du prochain tour."
+    "DESCRIPTION": "Ne perdez pas d'Armure au début du prochain tour."
   },
   {
     "PROPER_NAME": "Insertion",
     "NAMES": [
-      "Insérez",
+      "insérez",
       "insert"
     ],
     "DESCRIPTION": "Placez et mélangez une carte dans votre pioche."
@@ -41,7 +41,7 @@
   {
     "PROPER_NAME": "Cycle",
     "NAMES": [
-      "Cyclez",
+      "cyclez",
       "cycle"
     ],
     "DESCRIPTION": "Défaussez une carte et piochez en une pour la remplacer."

@@ -84,7 +84,7 @@
   },
   "Slimebound:SlimeSpikes": {
     "NAME": "Picots gluants",
-    "DESCRIPTION": "Gagnez !B! d'Armure et !M! d'Épines temporaires."
+    "DESCRIPTION": "Gagnez !B! d'Armure et !M! d'Épines Temporaires."
   },
   "Slimebound:LeechingTouch": {
     "NAME": "Frappe vampirique",
@@ -198,7 +198,7 @@
   },
   "Slimebound:Prepare": {
     "NAME": "Préparation",
-    "DESCRIPTION": "Gagnez !B! d'armure. NL Au prochain tour, gagnez [E] [E] et piochez !M! cartes. NL Épuisement.",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Au prochain tour, gagnez [E] [E] et piochez !M! cartes. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "Au prochain tour, gagnez [E] [E] et piochez !M! cartes. NL Retenez jusqu'à !M! cartes ce tour. Épuisement."
   },
   "Slimebound:Grow": {
@@ -228,8 +228,8 @@
   },
   "Slimebound:GoopTackle": {
     "NAME": "Tacle combo",
-    "DESCRIPTION": "Infligez !D! dégâts. Prenez !SlimeboundSelfharm! dégâts. NL Ajoutez une carte slimeboundmod:Tackle aléatoire dans votre main. Elle coûte 0 ce tour-ci.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. Prenez !SlimeboundSelfharm! dégâts. NL Ajoutez une carte slimeboundmod:Tackle aléatoire Améliorée dans votre main. Elle coûte 0 ce tour-ci."
+    "DESCRIPTION": "Infligez !D! dégâts. Prenez !SlimeboundSelfharm! dégâts. NL Ajoutez une carte slimeboundmod:Tacle aléatoire dans votre main. Elle coûte 0 ce tour-ci.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. Prenez !SlimeboundSelfharm! dégâts. NL Ajoutez une carte slimeboundmod:Tacle aléatoire Améliorée dans votre main. Elle coûte 0 ce tour-ci."
   },
   "Slimebound:CorrosiveSpit": {
     "NAME": "Crachat corrosif",
@@ -281,7 +281,7 @@
   },
   "Slimebound:DisruptingSlam": {
     "NAME": "Que des desserts",
-    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis. NL expansioncontent:Exhume !M! cartes *Léchouille aléatoires."
+    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis. NL expansioncontent:Exhumez !M! cartes *Léchouille aléatoires."
   },
   "Slimebound:PrepareCrush": {
     "NAME": "Préparation : Crush",
@@ -308,7 +308,7 @@
   },
   "Slimebound:SplitLeeching": {
     "NAME": "Invocation: Sangsue",
-    "DESCRIPTION": "slimeboundmod:Divisez-vous en slimeboundmod:Leeching_Slime. NL slimeboundmod:Commandez !M! fois. NL Épuisement.",
+    "DESCRIPTION": "slimeboundmod:Divisez-vous en slimeboundmod:Slime_sangsue. NL slimeboundmod:Commandez !M! fois. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "slimeboundmod:Divisez-vous en slimeboundmod:Slime_sangsue. NL slimeboundmod:Commandez trois fois. NL Épuisement."
   },
   "Slimebound:SplitAcid": {

@@ -10,32 +10,32 @@
   "Guardian:Gem_Red": {
     "NAME": "Rubis",
     "DESCRIPTION": "guardianmod:Gemme. NL Gagnez 2 de Force temporaire.",
-    "UPGRADE_DESCRIPTION": "Gain 2 temporary Strength."
+    "UPGRADE_DESCRIPTION": "Gagnez 2 de Force Temporaire."
   },
   "Guardian:Gem_Green": {
     "NAME": "Émeraude",
-    "DESCRIPTION": "guardianmod:Gem. NL Gagnez 2 de Dextérité temporaire.",
-    "UPGRADE_DESCRIPTION": "Gain 2 temporary Dexterity."
+    "DESCRIPTION": "guardianmod:Gemme. NL Gagnez 2 de Dextérité temporaire.",
+    "UPGRADE_DESCRIPTION": "Gagnez 2 de Dextérité Temporaire."
   },
   "Guardian:Gem_Lightblue": {
     "NAME": "Tourmaline",
     "DESCRIPTION": "guardianmod:Gemme. NL Gagnez 4 d'Épines temporaires.",
-    "UPGRADE_DESCRIPTION": "Gain 4 temporary Thorns."
+    "UPGRADE_DESCRIPTION": "Gagnez 4 d'Épines Temporaires."
   },
   "Guardian:Gem_White": {
     "NAME": "Quartz",
     "DESCRIPTION": "guardianmod:Gemme. NL Piochez une carte.",
-    "UPGRADE_DESCRIPTION": "Draw a card."
+    "UPGRADE_DESCRIPTION": "Piochez une carte."
   },
   "Guardian:Gem_Orange": {
     "NAME": "Citrine",
     "DESCRIPTION": "guardianmod:Gemme. NL Gagnez [E].",
-    "UPGRADE_DESCRIPTION": "Gain [E]."
+    "UPGRADE_DESCRIPTION": "Gagnez [E]."
   },
   "Guardian:Gem_Cyan": {
     "NAME": "Aquamarine",
-    "DESCRIPTION": "guardianmod:Gem. NL Ajoutez un *Cristal *de *Protection dans votre main.",
-    "UPGRADE_DESCRIPTION": "Add a *Crystal *Ward to your hand."
+    "DESCRIPTION": "guardianmod:Gemme. NL Ajoutez un *Cristal *de *Protection dans votre main.",
+    "UPGRADE_DESCRIPTION": "Ajoutez un *Cristal *de *Protection dans votre main."
   },
   "Guardian:ChargeUp": {
     "NAME": "Recharge",
@@ -48,8 +48,8 @@
   },
   "Guardian:DecasProtection": {
     "NAME": "Pouvoir antique",
-    "DESCRIPTION": "Gagnez 4 de Force Temporaire et de Dexterité Temporaire. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Gagnez 4 de Force Temporaire et de Dexterité Temporaire. NL Réduisez chacun de vos Débuffs de 1. NL Épuisement."
+    "DESCRIPTION": "Gagnez 4 de Force Temporaire et de Dextérité Temporaire. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Gagnez 4 de Force Temporaire et de Dextérité Temporaire. NL Réduisez chacun de vos Débuffs de 1. NL Épuisement."
   },
   "Guardian:FierceBash": {
     "NAME": "Frappe féroce",
@@ -93,8 +93,8 @@
   },
   "Guardian:FloatingOrbs": {
     "NAME": "Orbes flottants",
-    "DESCRIPTION": "Au début de votre tour, ajoutez une *Claque *d'orbe dans votre main.",
-    "UPGRADE_DESCRIPTION": "Inné. NL Au début de votre tour, ajoutez une *Claque *d'orbe dans votre main."
+    "DESCRIPTION": "Au début de votre tour, ajoutez une *Claque *orbitale dans votre main.",
+    "UPGRADE_DESCRIPTION": "Inné. NL Au début de votre tour, ajoutez une *Claque *orbitale dans votre main."
   },
   "Guardian:OrbSlam": {
     "NAME": "Claque orbitale",
@@ -272,7 +272,7 @@
   },
   "Guardian:TemporalShield": {
     "NAME": "Bouclier temporel",
-    "DESCRIPTION": "Gagnez !B! d'armure. NL Piochez !M! carte si vous avez une carte en guardianmod:Stase.",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Piochez !M! carte si vous avez une carte en guardianmod:Stase.",
     "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Piochez !M! cartes si vous avez une carte en guardianmod:Stase."
   },
   "Guardian:ExploitGems": {
@@ -290,7 +290,7 @@
   },
   "Guardian:BaubleBeam": {
     "NAME": "Éclat de gemmes",
-    "DESCRIPTION": "Infligez !D! dégâts. NL NL Faites !M! fois ceci:"
+    "DESCRIPTION": "Infligez !D! dégâts. NL NL Réalisez !M! fois ceci:"
   },
   "Guardian:PrimingBeam": {
     "NAME": "Tir d'amorce",
@@ -330,27 +330,27 @@
   "Guardian:Gem_Yellow": {
     "NAME": "Ambre",
     "DESCRIPTION": "guardianmod:Gemme. NL guardianmod:Accélérez.",
-    "UPGRADE_DESCRIPTION": "guardianmod:Accelerate."
+    "UPGRADE_DESCRIPTION": "guardianmod:Accélérez."
   },
   "Guardian:Gem_Purple": {
     "NAME": "Améthyste",
     "DESCRIPTION": "guardianmod:Gemme. NL TOUS les ennemis perdent 2 de Force ce tour.",
-    "UPGRADE_DESCRIPTION": "ALL enemies lose 2 Strength this turn."
+    "UPGRADE_DESCRIPTION": "TOUS les ennemis perdent 2 de Force ce tour."
   },
   "Guardian:Gem_Crimson": {
     "NAME": "Grenat",
-    "DESCRIPTION": "guardianmod:Gemme. NL Appliquez 1 de Vulnerabilité à TOUS les ennemis.",
-    "UPGRADE_DESCRIPTION": "Apply 1 Vulnerable to ALL enemies."
+    "DESCRIPTION": "guardianmod:Gemme. NL Appliquez 1 de Vulnérabilité à TOUS les ennemis.",
+    "UPGRADE_DESCRIPTION": "Appliquez 1 de Vulnérabilité à TOUS les ennemis."
   },
   "Guardian:Gem_Blue": {
     "NAME": "Saphir",
     "DESCRIPTION": "guardianmod:Gemme. NL guardianmod:Renforcez de 3.",
-    "UPGRADE_DESCRIPTION": "guardianmod:Brace 3."
+    "UPGRADE_DESCRIPTION": "guardianmod:Renforcez de 3."
   },
   "Guardian:Gem_Fragmented": {
     "NAME": "Gemme fragmentée",
     "DESCRIPTION": "guardianmod:Gemme. NL Ajoutez un *Surin *de *cristal to your hand.",
-    "UPGRADE_DESCRIPTION": "Add a *Crystal *Shiv to your hand."
+    "UPGRADE_DESCRIPTION": "Ajoutez un *Surin *de *cristal to your hand."
   },
   "Guardian:CrystalShiv": {
     "NAME": "Surin de cristal",

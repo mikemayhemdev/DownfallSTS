@@ -40,6 +40,12 @@
       "À la fin de votre tour, choisissez une carte à Épuiser."
     ]
   },
+  "downfall:SpotWeakness": {
+    "NAME": "Spot Weakness",
+    "DESCRIPTIONS": [
+      "Chaque tour que vous jouez une Attaque avec ce pouvoir actif, cet ennemi gagne #b", " de #yForce. Actuellement, il va gagner #b", " de #yForce."
+    ]
+  },
   "downfall:PoisonResist": {
     "NAME": "Résistance au poison",
     "DESCRIPTIONS": [
@@ -55,7 +61,7 @@
   "downfall:WatcherAngryPower": {
     "NAME": "Rage débridée",
     "DESCRIPTIONS": [
-      "À la fin du tour, si la Gardienne est à 50% de ses PV ou moins, elle entre en Colère. NL La Colère de la Gardienne augmente les dégâts infligés et reçus de #b50% au lieu de #b100%." 
+      "À la fin du tour, si la Gardienne est à #b50% de ses PV ou moins, elle entre en #yColère. NL La #yColère de la Gardienne augmente les dégâts infligés et reçus de #b50% au lieu de #b100%."
     ]
   },
   "downfall:NeowUnbridledRage": {
@@ -69,7 +75,7 @@
     "DESCRIPTIONS": [
       "Quand la Gardienne perd #b",
       " PV de plus,s'applique #b-4 de #yForce quand elle entre pour la prochaine fois en #yDivinité ou joue #yRagnarok.",
-      "La Gardienne va perdre #b4 de #yForce quand elle entre pour la prochaine fois en #yDivinité ou joue #yRagnarok."
+      "La Gardienne perdra #b4 de #yForce quand elle entre pour la prochaine fois en #yDivinité ou joue #yRagnarok."
     ]
   },
   "downfall:NeowBlasphemersDemise": {
@@ -95,7 +101,7 @@
   "downfall:SilentShivTimeEaterPower": {
     "NAME": "Sac de couteaux",
     "DESCRIPTIONS": [
-      "La première fois que vous jouez une carte qui coûte #b0 chaque tour, la Silencieuse gagne un #ySurin."
+      "La première fois que vous jouez une carte qui coûte #b2 ou plus chaque tour, la Silencieuse gagne 2 #ySurins."
       ]
   },
   "downfall:NeowBagOfKnives": {
@@ -119,19 +125,19 @@
   "downfall:SilentPoisonPower": {
     "NAME": "Attention: Hautement toxique",
     "DESCRIPTIONS": [
-      "Vous avez de la #yRésistance #yau #yPoison pour combattre les effets de #yPoison de la Silencieuse."
+      "Le Poison peut être défendu et inflige des dégâts à la fin du tour. NL Recevez un #yAntidote au début de votre tour."
     ]
   },
   "downfall:NeowHighlyToxic": {
     "NAME": "Attention: Hautement toxique",
     "DESCRIPTIONS": [
-      "Neow vous applique #b10 de #yPoison par tour. Vous avez #yRésistance #yau #yPoison."
+      "Neow vous applique #b5 de #yPoison par tour. Le Poison peut être défendu et inflige des dégâts à la fin du tour. NL Mélangez 2 #yAntidotes dans votre deck au début de votre tour."
     ]
   },
   "downfall:DefectVoidPower": {
     "NAME": "Voleur d'Énergie",
     "DESCRIPTIONS": [
-      "Lorsque le Défectueux génère un Néant, celui-ci va sur le haut de votre pioche."
+      "Lorsque le Défectueux génère un #yNéant, celui-ci va sur le haut de votre pioche."
     ]
   },
   "downfall:NeowEnergyThief": {
@@ -143,7 +149,7 @@
   "downfall:DefectAncientConstructPower": {
     "NAME": "Structure Antique",
     "DESCRIPTIONS": [
-      "Commence le combat avec 2 Orbes de Bronze. NL Gagne 1 Artéfact à la fin de son tour si celui-ci n'a pas d'Artéfact."
+      "Commence le combat avec 2 #yOrbes #yde #yBronze. NL Gagne 1 #yArtéfact à la fin de son tour si celui-ci n'a pas #yd'Artéfact."
     ]
   },
   "downfall:NeowAncientConstruct": {
@@ -155,14 +161,14 @@
   "downfall:DefectCuriosity": {
     "NAME": "Cognition Impartiale",
     "DESCRIPTIONS": [
-      "Lorsque vous jouez une carte #yRare, le Défectueux gagne #b",
+      "Lorsque vous jouez une carte #yPouvoir, le Défectueux gagne #b",
       " de #yConcentration."
     ]
   },
   "downfall:NeowUnbiasedCognition": {
     "NAME": "Cognition Impartiale",
     "DESCRIPTIONS": [
-      "Neow gagne #b2 de #yForce pour chaque carte #yRare que vous jouez."
+      "Neow gagne #b2 de #yForce pour chaque carte #yPouvoir que vous jouez."
     ]
   },
   "downfall:IroncladStatusPower": {
@@ -180,7 +186,7 @@
   "downfall:IroncladMushroomPower": {
     "NAME": "Faim Frénétique",
     "DESCRIPTIONS": [
-      "La Faucheuse du Soldat de Fer ne s'Épuise pas et cible TOUS les Champignons. NL Quand le Soldat de Fer tue un Champignon, il gagne #b1 de Force."
+      "La #yFaucheuse du Soldat de Fer ne #ys'Épuise pas et cible TOUS les Champignons. NL Quand le Soldat de Fer tue un Champignon, il gagne #b1 de #yForce."
     ]
   },
   "downfall:NeowFeedingFrenzy": {
@@ -192,8 +198,8 @@
   "downfall:IroncladFortificationPower": {
     "NAME": "Bastion",
     "DESCRIPTIONS": [
-      "Le Soldat de fer commence le combat avec Fortification, qui lui octroie #b",
-      " d'Armure chaque tour. NL Quand la Fortification a été détruite, le Soldat de fer perd Barricade, mais gagne #b5 de Force par tour."
+      "Le Soldat de fer commence le combat avec une #yFortification, qui lui octroie #b",
+      " #yd'Armure chaque tour. NL Quand la #yFortification est détruite, le Soldat de Fer perd #yBarricade, mais gagne #b5 de #yForce par tour."
     ]
   },
   "downfall:NeowBastion": {
@@ -205,13 +211,13 @@
   "downfall:MerchantStrengthPower": {
     "NAME": "Voleur d'Âmes",
     "DESCRIPTIONS": [
-      "Le marchand a toujours la Force obtenue par ses vols d'Âmes durant cette run, et gagne de la Dextérité égale à sa Force."
+      "Le Marchand a toujours la #yForce obtenue par ses vols d'Âmes durant cette run, et gagne de la Dextérité égale à sa Force."
     ]
   },
   "downfall:NeowMantra": {
     "NAME": "Mantra",
     "DESCRIPTIONS": [
-      "Quand Neow a #b10 de #yMantra, elle convertit ses #b10 #yMantra en #b10 de #yForce."
+      "Quand Neow a #b10 de #yMantra, elle entre en Divinité, infligeant des dégâts triplés au tour suivant."
     ]
   },
   "downfall:NeowSeeingDoubleProduct": {
@@ -292,7 +298,7 @@
   "downfall:HermitConcentrationPower": {
     "NAME": "Concentré",
     "DESCRIPTIONS": [
-      "Les cartes de l'Ermite ont des effets bonus #yDans #yLe #yMille pendant qu'il est concentré. Infliger #b",
+      "Les cartes de l'Ermite ont des effets bonus #yDans #yLe #yMille pendant qu'il est concentré. Infligez #b",
       " dégâts de plus pour briser sa Concentration ce tour.",
       "La Concentration de l'Ermite est brisée et ses effets #yDans #yLe #yMille ne se déclencheront pas ce tour."
     ]
@@ -357,9 +363,9 @@
     "DESCRIPTIONS": [
       "Quand Neow a l'intention de se Buff, elle gagne 6 de Force et... ",
       " NL Gagne 1 Forme Démoniaque #y(Soldat de Fer)",
-      " NL Gains 2 d'Épines #y(Silencieuse)",
+      " NL Gagne 2 d'Épines #y(Silencieuse)",
       " NL Gagne 2 de Tampon #y(Défectueux)",
-      " NL Gains 5 de Mantra #y(Gardienne)",
+      " NL Gagne 5 de Mantra #y(Gardienne)",
       " NL Ajoute 2 Malédictions aléatoires dans votre pioche. #y(Ermite)"
     ]
   }
