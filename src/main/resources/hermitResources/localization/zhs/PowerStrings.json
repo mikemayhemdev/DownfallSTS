@@ -21,7 +21,9 @@
 },
 "hermit:AdaptPower": {
         "NAME": "适应",
-        "DESCRIPTIONS": ["你的回合结束时，可 #y消耗 一张手牌来获得 #b", " 点 #y格挡 。"]
+        "DESCRIPTIONS": ["At the end of your turn, you can Exhaust #b",
+                " card in your hand to gain #b6 Block per card.",
+                " cards in your hand to gain #b6 Block per card."]
 },
 "hermit:Bruise": {
         "NAME": "瘀伤",

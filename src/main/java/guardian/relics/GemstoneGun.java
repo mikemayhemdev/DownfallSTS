@@ -51,7 +51,7 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
         c.addGemToSocket((AbstractGuardianCard) CardLibrary.getCopy(myGemThree), false);
        // c.addGemToSocket((AbstractGuardianCard) CardLibrary.getCopy(myGemFour));
 
-        addToBot(new MakeTempCardInHandAction(c.makeCopy()));
+        addToBot(new MakeTempCardInHandAction(c));
 
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
     }
