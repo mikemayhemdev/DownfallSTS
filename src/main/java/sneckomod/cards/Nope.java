@@ -15,7 +15,7 @@ public class Nope extends AbstractSneckoCard {
     public Nope() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         tags.add(SneckoMod.SNEKPROOF);
-        SneckoMod.loadJokeCardImage(this, "sneckomodResources/images/betacards/Nope.png");
+        SneckoMod.loadJokeCardImage(this, "Nope.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -55,7 +55,7 @@ public class Lick extends AbstractSlimeboundCard {
         this.slimed = this.baseSlimed = 4;
         this.magicNumber = this.baseMagicNumber = 1;
         this.exhaust = true;
-        SlimeboundMod.loadJokeCardImage(this, "slimeboundResources/SlimeboundImages/betacards/lick.png");
+        SlimeboundMod.loadJokeCardImage(this, "lick.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

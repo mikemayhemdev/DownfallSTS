@@ -16,7 +16,7 @@ public class SoulCleanse extends AbstractSneckoCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         tags.add(SneckoMod.SNEKPROOF);
         exhaust = true;
-        SneckoMod.loadJokeCardImage(this, "sneckomodResources/images/betacards/SoulCleanse.png");
+        SneckoMod.loadJokeCardImage(this, "SoulCleanse.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

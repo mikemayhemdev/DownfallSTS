@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import gremlin.GremlinMod;
 
 import static gremlin.GremlinMod.MAD_GREMLIN;
 
@@ -35,6 +36,7 @@ public class ArmsTheft extends AbstractGremlinCard {
         this.exhaust = true;
         this.tags.add(MAD_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "ArmsTheft.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

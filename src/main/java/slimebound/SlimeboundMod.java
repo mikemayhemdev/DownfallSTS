@@ -233,7 +233,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
             ((AbstractSlimeboundCard) card).betaArtPath = img;
         }
         Texture cardTexture;
-        cardTexture = hermit.util.TextureLoader.getTexture(getModID() + "Resources/Slimeboundimages/betacards/" + img);
+        cardTexture = hermit.util.TextureLoader.getTexture("slimeboundResources/SlimeboundImages/betacards/" + img);
         cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         int tw = cardTexture.getWidth();
         int th = cardTexture.getHeight();

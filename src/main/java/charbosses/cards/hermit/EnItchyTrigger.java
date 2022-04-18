@@ -26,7 +26,7 @@ public class EnItchyTrigger extends AbstractHermitBossCard {
 
     public EnItchyTrigger() {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/itchy_trigger.png", 2, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
-        this.baseDamage = 12;
+        this.baseDamage = 15;
     }
 
     @Override
@@ -38,7 +38,7 @@ public class EnItchyTrigger extends AbstractHermitBossCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(4);
+            this.upgradeDamage(5);
         }
     }
 

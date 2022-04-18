@@ -21,7 +21,7 @@ public class EnDeadeye extends AbstractHermitBossCard {
 
     public EnDeadeye() {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/deadeye.png", 1, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_BUFF);
-        baseDamage = 6;
+        baseDamage = 5;
         baseMagicNumber = magicNumber = 2;
     }
 

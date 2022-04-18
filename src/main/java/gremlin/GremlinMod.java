@@ -523,7 +523,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
             ((AbstractGremlinCard) card).betaArtPath = img;
         }
         Texture cardTexture;
-        cardTexture = hermit.util.TextureLoader.getTexture(getModID() + "Resources/cards/betacards/" + img);
+        cardTexture = hermit.util.TextureLoader.getTexture("gremlinResources/images/cards/betacards/" + img);
         cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         int tw = cardTexture.getWidth();
         int th = cardTexture.getHeight();

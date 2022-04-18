@@ -39,7 +39,7 @@ public class PourSalt extends AbstractGremlinCard {
         this.cardsToPreview = new Shiv();
         this.tags.add(FAT_GREMLIN);
         setBackgrounds();
-        GremlinMod.loadJokeCardImage(this, "gremlinResources/images/cards/betacards/PourSalt.png");
+        GremlinMod.loadJokeCardImage(this, "PourSalt.png");
     }
 
     @Override

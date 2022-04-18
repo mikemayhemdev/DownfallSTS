@@ -44,7 +44,7 @@ public class SlimeCrush extends AbstractSlimeboundCard {
         this.baseDamage = 35;
         this.exhaust = true;
         this.isEthereal = true;
-        SlimeboundMod.loadJokeCardImage(this, "slimeboundResources/SlimeboundImages/betacards/SlimeCrush.png");
+        SlimeboundMod.loadJokeCardImage(this, "SlimeCrush.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
