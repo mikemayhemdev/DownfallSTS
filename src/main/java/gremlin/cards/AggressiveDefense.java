@@ -40,7 +40,7 @@ public class AggressiveDefense extends AbstractGremlinCard {
         this.magicNumber = MAGIC;
         this.tags.add(SHIELD_GREMLIN);
         setBackgrounds();
-        GremlinMod.loadJokeCardImage(this, "gremlinResources/images/cards/betacards/AggressiveDefense.png");
+        GremlinMod.loadJokeCardImage(this, "AggressiveDefense.png");
     }
 
     @Override

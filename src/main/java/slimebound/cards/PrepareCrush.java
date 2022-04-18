@@ -42,7 +42,7 @@ public class PrepareCrush extends AbstractSlimeboundCard {
         this.cardsToPreview = new SlimeCrush();
         this.magicNumber = this.baseMagicNumber = 3;
         this.slimed = this.baseSlimed = 3;
-        SlimeboundMod.loadJokeCardImage(this, "slimeboundResources/SlimeboundImages/betacards/PrepareCrush.png");
+        SlimeboundMod.loadJokeCardImage(this, "PrepareCrush.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

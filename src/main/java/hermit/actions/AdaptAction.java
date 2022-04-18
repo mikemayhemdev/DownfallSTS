@@ -33,7 +33,7 @@ public class AdaptAction extends AbstractGameAction {
         this.canPickZero = canPickZero;
         this.isRandom = isRandom;
         this.amount = amount;
-        this.block=6;
+        this.block = 6;
         this.duration = this.startDuration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.EXHAUST;
     }
@@ -75,7 +75,11 @@ public class AdaptAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == this.startDuration) {
-            if (this.p.hand.size() == 0) {
+            if (this.p.hand.size() < this.amount) {
+                this.amount = this.p.hand.size();
+            }
+
+            if (this.amount == 0) {
                 this.isDone = true;
                 return;
             }

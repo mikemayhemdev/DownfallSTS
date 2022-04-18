@@ -33,7 +33,7 @@ public class Wizardry extends AbstractGremlinCard {
         this.magicNumber = baseMagicNumber;
         this.tags.add(WIZARD_GREMLIN);
         setBackgrounds();
-        GremlinMod.loadJokeCardImage(this, "gremlinResources/images/cards/betacards/Wizardry.png");
+        GremlinMod.loadJokeCardImage(this, "Wizardry.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
