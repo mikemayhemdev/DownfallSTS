@@ -7,7 +7,7 @@
       "champ:[crown_icon]",
       "[crown_icon]"
     ],
-    "DESCRIPTION": "处于 #y姿态 时，打出 #y技能牌 就获得其 #y技术 奖励。"
+    "DESCRIPTION": "处于 #y姿态 时，打出 #y技能牌 就获得 该 #y姿态 的 #y技术 奖励。每次进入 #y姿态 后最多触发 #b3 次(牌面 #y技术 效果不受限制)。"
   },
   {
     "PROPER_NAME": "连段",

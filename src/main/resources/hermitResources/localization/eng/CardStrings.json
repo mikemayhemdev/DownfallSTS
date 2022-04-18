@@ -39,8 +39,7 @@
   },
   "hermit:BodyArmor": {
     "NAME": "Body Armor",
-    "DESCRIPTION": "Gain !B! Block.  NL Add a *Defend to your discard pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add a *Defend+ to your discard pile. NL Exhaust."
+    "DESCRIPTION": "Discard a card. NL Gain !B! Block. NL If it was a Skill, gain !B! more Block."
   },
   "hermit:Snipe": {
     "NAME": "Snipe",
@@ -49,13 +48,13 @@
   },
   "hermit:CalledShot": {
     "NAME": "Called Shot",
-    "DESCRIPTION": "Deal damage equal to your hand size. NL hermit:Dead_On: NL Draw !M! card.",
+    "DESCRIPTION": "Deal damage equal to your hand size. NL hermit:Dead_On: NL Draw !M! Attack.",
     "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)",
-    "EXTENDED_DESCRIPTION": ["Deal damage equal to your hand size. NL hermit:Dead_On: NL Draw !M! cards."]
+    "EXTENDED_DESCRIPTION": ["Deal damage equal to your hand size. NL hermit:Dead_On: NL Draw !M! Attacks."]
   },
   "hermit:Dissolve": {
     "NAME": "Dissolve",
-    "DESCRIPTION": "Next turn, gain !B! Block. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your next 2 turns. NL Exhaust."
   },
   "hermit:BlackWind": {
     "NAME": "Black Wind",
@@ -98,7 +97,7 @@
   },
   "hermit:Adapt": {
     "NAME": "Adapt",
-    "DESCRIPTION": "At the end of your turn, you can Exhaust up to 2 cards. NL Gain !M! Block for each."
+    "DESCRIPTION": "At the end of your turn, you can Exhaust a card to gain 6 Block."
   },
   "hermit:Dive": {
     "NAME": "Dive",
@@ -205,7 +204,8 @@
   },
   "hermit:Maintenance": {
     "NAME": "Maintenance",
-    "DESCRIPTION": "Upgrade all *Strikes and *Defends this combat. NL This can upgrade them any number of times."
+    "DESCRIPTION": "Your *Strikes deal !M! more damage.",
+    "UPGRADE_DESCRIPTION": "Your *Strikes deal !M! more damage. NL Gain 1 Dexterity."
   },
   "hermit:EternalForm": {
     "NAME": "Eternal Form",

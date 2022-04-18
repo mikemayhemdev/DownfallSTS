@@ -21,7 +21,9 @@
 },
 "hermit:AdaptPower": {
         "NAME": "Adapt",
-        "DESCRIPTIONS": ["At the end of your turn, Exhaust up to #b2 cards. Gain #b", " Block for each."]
+        "DESCRIPTIONS": ["At the end of your turn, you can Exhaust #b",
+                " card in your hand to gain #b6 Block per card.",
+                " cards in your hand to gain #b6 Block per card."]
 },
 "hermit:Bruise": {
         "NAME": "Bruised",

@@ -11,21 +11,21 @@
     "NAMES": [
       "坚不可摧"
     ],
-    "DESCRIPTION": "你最多失去 #b10 点生命。受到一回合的伤害后移除本效果。叠加时，额外生效一回合。"
+    "DESCRIPTION": "任意 #b1 回合内你最多失去 #b10 点生命。承伤达到上限后移除本效果。叠加时，额外生效 #b1 回合。"
   },
   {
     "PROPER_NAME": "发掘",
     "NAMES": [
       "发掘"
     ],
-    "DESCRIPTION": "将一张 #y消耗 堆的牌放入手牌。"
+    "DESCRIPTION": "将 #b1 张 #y消耗 堆的牌移回手牌。"
   },
   {
     "PROPER_NAME": "取回",
     "NAMES": [
       "取回"
     ],
-    "DESCRIPTION": "将一张 #y消耗 堆的牌放入弃牌堆。"
+    "DESCRIPTION": "将 #b1 张 #y消耗 堆的牌移入弃牌堆。"
   },
   {
     "PROPER_NAME": "镣铐",

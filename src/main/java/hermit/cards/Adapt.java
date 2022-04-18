@@ -43,7 +43,7 @@ public class Adapt extends AbstractDynamicCard {
 
     public Adapt() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 1;
         loadJokeCardImage(this, "adapt.png");
     }
 

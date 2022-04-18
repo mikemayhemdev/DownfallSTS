@@ -39,7 +39,7 @@
   },
   "Guardian:ChargeUp": {
     "NAME": "充能",
-    "DESCRIPTION": "将本牌 guardianmod:凝滞 。 NL guardianmod:滴答 -获得 !B! 点 格挡 和 !M! 点 力量 。 NL guardianmod:挥发 。"
+    "DESCRIPTION": "将本牌 guardianmod:凝滞 。 NL guardianmod:滴答 -获得 !B! 点 格挡 和 !M! 点 力量 。 NL guardianmod:消散 。"
   },
   "Guardian:DonusPower": {
     "NAME": "过载",
@@ -83,7 +83,7 @@
   },
   "Guardian:TimeBomb": {
     "NAME": "时间炸弹",
-    "DESCRIPTION": "将本牌 guardianmod:凝滞 。 NL guardianmod:凝滞 结束时，对所有敌人造成 !M! 点伤害。 NL guardianmod:挥发 。"
+    "DESCRIPTION": "将本牌 guardianmod:凝滞 。 NL guardianmod:凝滞 结束时，对所有敌人造成 !M! 点伤害。 NL guardianmod:消散 。"
   },
   "Guardian:HyperBeam_Guardian": {
     "NAME": "究极射线",
@@ -108,7 +108,7 @@
   },
   "Guardian:Orbwalk": {
     "NAME": "行者圆球",
-    "DESCRIPTION": "获得 !M! 力量 。 NL guardianmod:滴答 -获得 1 点 力量 。 NL guardianmod:挥发 。",
+    "DESCRIPTION": "获得 !M! 力量 。 NL guardianmod:滴答 -获得 1 点 力量 。 NL guardianmod:消散 。",
     "UPGRADE_DESCRIPTION": "获得 !M! 力量 。 NL guardianmod:滴答 -获得 1 点 力量 。"
   },
   "Guardian:WalkerClaw": {
@@ -147,8 +147,8 @@
   },
   "Guardian:PackageDonuDeca": {
     "NAME": "组件: 先古",
-    "DESCRIPTION": "获得 *过载 、 *先古防御 和 *先古建造 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *过载+ 、 *先古防御+ 和 *先古建造+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得 *过载 、 *先古之力 和 *先古建造 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *过载+ 、 *先古之力+ 和 *先古建造+ 各1张。 NL 消耗 。"
   },
   "Guardian:PackageSphere": {
     "NAME": "组件: 圆球",
@@ -157,8 +157,8 @@
   },
   "Guardian:PackageSentry": {
     "NAME": "组件: 哨卫",
-    "DESCRIPTION": "获得 *哨卫射线 和2张 *哨卫震荡 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *哨卫射线+ 和2张 *哨卫震荡+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得1张 *哨卫射线 和2张 *哨卫震荡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得1张 *哨卫射线+ 和2张 *哨卫震荡+ 。 NL 消耗 。"
   },
   "Guardian:PackageWalker": {
     "NAME": "组件: 行者",
@@ -244,7 +244,7 @@
   },
   "Guardian:ChargeCore": {
     "NAME": "充能核心",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将本牌 guardianmod:凝滞 。 NL guardianmod:滴答 -抽一张牌。 guardianmod:挥发 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将本牌 guardianmod:凝滞 。 NL guardianmod:滴答 -抽一张牌。 guardianmod:消散 。"
   },
   "Guardian:Reroute": {
     "NAME": "重连",
@@ -383,7 +383,7 @@
   },
   "Guardian:ShieldCharger": {
     "NAME": "护盾充能",
-    "DESCRIPTION": "将本牌 guardianmod:凝滞 。 NL guardianmod:滴答 - guardianmod:提防 !M! 并获得 !B! 点 格挡 。 NL guardianmod:挥发 。"
+    "DESCRIPTION": "将本牌 guardianmod:凝滞 。 NL guardianmod:滴答 - guardianmod:提防 !M! 并获得 !B! 点 格挡 。 NL guardianmod:消散 。"
   },
   "Guardian:StasisEngine": {
     "NAME": "凝滞引擎",

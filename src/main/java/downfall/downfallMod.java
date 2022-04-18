@@ -74,6 +74,8 @@ import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.monsters.exordium.LouseNormal;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.GoldenIdol;
 import com.megacrit.cardcrawl.relics.MedicalKit;
@@ -231,14 +233,15 @@ public class downfallMod implements
             Settings.GameLanguage.ENG,
             Settings.GameLanguage.ZHS,
             // Settings.GameLanguage.JPN
-            Settings.GameLanguage.KOR
-           // Settings.GameLanguage.FRA
+            Settings.GameLanguage.KOR,
+            Settings.GameLanguage.FRA
     };
 
     public static String[] SupportedLanguagesStrings = {
             "English",
             "Chinese (Simplified)",
-            "Korean"
+            "Korean",
+            "French"
     };
     public static ReplaceData[] wordReplacements;
     public static SpireConfig bruhData = null;

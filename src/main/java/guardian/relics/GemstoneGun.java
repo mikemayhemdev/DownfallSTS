@@ -46,9 +46,9 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
     public void atBattleStart() {
         flash();
         GemstoneGunCard c = new GemstoneGunCard();
-        c.addGemToSocket((AbstractGuardianCard) CardLibrary.getCopy(myGemOne));
-        c.addGemToSocket((AbstractGuardianCard) CardLibrary.getCopy(myGemTwo));
-        c.addGemToSocket((AbstractGuardianCard) CardLibrary.getCopy(myGemThree));
+        c.addGemToSocket((AbstractGuardianCard) CardLibrary.getCopy(myGemOne), false);
+        c.addGemToSocket((AbstractGuardianCard) CardLibrary.getCopy(myGemTwo), false);
+        c.addGemToSocket((AbstractGuardianCard) CardLibrary.getCopy(myGemThree), false);
        // c.addGemToSocket((AbstractGuardianCard) CardLibrary.getCopy(myGemFour));
 
         addToBot(new MakeTempCardInHandAction(c));
@@ -88,6 +88,7 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
         allGemCards.add("FRAGMENTED");
         allGemCards.add("PURPLE");
         allGemCards.add("SYNTHETIC");
+        allGemCards.add("LIGHTBLUE");
 
         int rando;
         String ID;
@@ -127,6 +128,9 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
                     break;
                 case "YELLOW":
                     rewardGemCards.add(new Gem_Yellow());
+                    break;
+                case "LIGHTBLUE":
+                    rewardGemCards.add(new Gem_Lightblue());
                     break;
             }
             allGemCards.remove(rando);

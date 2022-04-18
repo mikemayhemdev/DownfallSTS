@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import gremlin.powers.WizardryPower;
 
 import static gremlin.GremlinMod.WIZARD_GREMLIN;
@@ -32,6 +33,7 @@ public class Wizardry extends AbstractGremlinCard {
         this.magicNumber = baseMagicNumber;
         this.tags.add(WIZARD_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "gremlinResources/images/cards/betacards/Wizardry.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

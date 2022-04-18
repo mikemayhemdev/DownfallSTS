@@ -64,8 +64,8 @@
   },
   "sneckomod:Memorize": {
     "NAME": "Memorize",
-    "DESCRIPTION": "sneckomod:Snekproof. Fleeting. NL Choose a card in hand which started *Unidentified. sneckomod:Identify it.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. Fleeting. Retain. NL Choose a card in hand which started *Unidentified. sneckomod:Identify it.",
+    "DESCRIPTION": "sneckomod:Snekproof. Fleeting. NL Choose a card which started *Unidentified. sneckomod:Identify it.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. Fleeting. Retain. NL Choose a card which started *Unidentified. sneckomod:Identify it.",
     "EXTENDED_DESCRIPTION": [
       " to Identify."
     ]
@@ -80,13 +80,13 @@
   },
   "sneckomod:Mudshield": {
     "NAME": "Mud Shield",
-    "DESCRIPTION": "Whenever you sneckomod:Muddle a card, gain !M! Block.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you sneckomod:Muddle a card, gain !M! Block."
+    "DESCRIPTION": "Whenever you *Muddle a card, gain !M! Block.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you *Muddle a card, gain !M! Block."
   },
   "sneckomod:PureSnecko": {
     "NAME": "Shift",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Transform all sneckomod:Offclass cards in your hand.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Transform all sneckomod:Offclass cards in your hand. NL They cost 1 less."
+    "DESCRIPTION": "sneckomod:Snekproof. NL *Transform all sneckomod:Offclass cards in your hand.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL *Transform all sneckomod:Offclass cards in your hand. NL They cost 1 less."
   },
   "sneckomod:QuickBite": {
     "NAME": "Snake Rake",

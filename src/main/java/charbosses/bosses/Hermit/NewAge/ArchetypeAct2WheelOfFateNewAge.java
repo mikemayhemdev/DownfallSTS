@@ -72,7 +72,9 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         if (usedGestalt) {
             mockDeck.add(new EnInjury());
         } else {
-            mockDeck.add(new EnGestalt());
+            AbstractCard flash = new EnFlashPowder();
+            flash.upgrade();
+            mockDeck.add(flash);
         }
         mockDeck.add(new EnItchyTriggerAct2());
 
@@ -97,13 +99,10 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
     }
 
     public static void upgradeStrikeOrDefendManually(AbstractCard c) {
-        if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
+        if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {
             if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {
                 c.baseDamage += 3;
                 c.upgradedDamage = true;
-            } else if (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
-                c.baseBlock += 3;
-                c.upgradedBlock = true;
             }
             String NAME;
             if (c instanceof EnStrikeHermit || c instanceof EnFreeStrikeHermit) {

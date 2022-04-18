@@ -21,7 +21,9 @@
 },
 "hermit:AdaptPower": {
         "NAME": "Adaptation",
-        "DESCRIPTIONS": ["À la fin de votre tour, Épuisez jusqu'à #b2 cartes. Gagnez #b", " d'Armure pour chaque carte."]
+        "DESCRIPTIONS": ["At the end of your turn, you can Exhaust #b",
+                " card in your hand to gain #b6 Block per card.",
+                " cards in your hand to gain #b6 Block per card."]
 },
 "hermit:Bruise": {
         "NAME": "Meurtri",

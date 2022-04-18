@@ -2,7 +2,7 @@
   "gremlin:GremlinPotion": {
     "NAME": "地精香水",
     "DESCRIPTIONS": [
-      "使用所有 #b5 名 地精的能力 #b",
+      "触发所有 #b5 名 地精的被动效果 #b",
       " 次。"
     ]
   },

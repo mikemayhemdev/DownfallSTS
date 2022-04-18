@@ -1,21 +1,22 @@
 package hermit.cards;
 
-import com.badlogic.gdx.Gdx;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.green.Accuracy;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AccuracyPower;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.relics.StrikeDummy;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceChangeParticleGenerator;
 import hermit.HermitMod;
 import hermit.actions.MaintenanceAction;
 import hermit.characters.hermit;
 import hermit.effects.HermitUpgradeShineEffect;
-
-import java.util.ArrayList;
+import hermit.powers.MaintenanceStrikePower;
 
 import static hermit.HermitMod.*;
 
@@ -49,26 +50,25 @@ public class Maintenance extends AbstractDynamicCard {
 
 
 
-    private static final int COST = 2;
-    private float rotationTimer;
-    private int previewIndex;
-    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
+    private static final int COST = 1;
 
 
     // /STAT DECLARATION/
 
     public Maintenance() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        baseMagicNumber = magicNumber = 3;
         loadJokeCardImage(this, "maintenance.png");
-        cardsList.add(new Strike_Hermit());
-        cardsList.add(new Defend_Hermit());
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.effectsQueue.add(new HermitUpgradeShineEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY));
-        AbstractDungeon.actionManager.addToBottom(new MaintenanceAction());
+        this.addToBot(new ApplyPowerAction(p, p, new MaintenanceStrikePower(p, this.magicNumber), this.magicNumber));
+
+        if (this.upgraded)
+        this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, 1), 1));
     }
 
     //Upgraded stats.
@@ -76,30 +76,9 @@ public class Maintenance extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeMagicNumber(1);
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
-        }
-    }
-
-    @Override
-    public void update() {
-        super.update();
-        if (hb.hovered) {
-            if (rotationTimer <= 0F) {
-                rotationTimer = 2F;
-                if (cardsList.size() == 0) {
-                    cardsToPreview = CardLibrary.cards.get("Madness");
-                } else {
-                    cardsToPreview = cardsList.get(previewIndex);
-                }
-                if (previewIndex == cardsList.size() - 1) {
-                    previewIndex = 0;
-                } else {
-                    previewIndex++;
-                }
-            } else {
-                rotationTimer -= Gdx.graphics.getDeltaTime();
-            }
         }
     }
 }

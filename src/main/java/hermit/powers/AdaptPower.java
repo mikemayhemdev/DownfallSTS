@@ -44,13 +44,13 @@ public class AdaptPower extends AbstractPower implements CloneablePowerInterface
 
     public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
         this.flash();
-        this.addToBot(new AdaptAction(amount, false, true, true));
+        this.addToBot(new AdaptAction(amount, false, false, true));
     }
 
 
     @Override
     public void updateDescription() {
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+            description = (amount < 2) ?  DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] : DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
     }
 
     @Override

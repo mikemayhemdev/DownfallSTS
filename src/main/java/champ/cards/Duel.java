@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.combat.ClashEffect;
-import com.sun.org.apache.xpath.internal.objects.XBoolean;
 
 public class Duel extends AbstractChampCard {
 
