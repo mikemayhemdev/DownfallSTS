@@ -39,7 +39,7 @@
   },
   "hermit:BodyArmor": {
     "NAME": "全身护甲",
-    "DESCRIPTION":"丢弃一张手牌。 NL 获得 !B! 点 格挡 。 NL 若丢弃一张 *技能牌，额外获得 !B! 点。"
+    "DESCRIPTION":"丢弃一张手牌。 NL 获得 !B! 点 格挡 。 NL 若丢弃一张 *技能牌 ，额外获得 !B! 点。"
   },
   "hermit:Snipe": {
     "NAME": "狙击",
