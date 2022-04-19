@@ -200,7 +200,7 @@
   },
   "hermit:OverwhelmingPower": {
     "NAME": "压倒性力量",
-    "DESCRIPTION": "获得 [E] [E] [E] 。 NL 抽3张牌。 NL 回合结束时若无 [E] ，失去 !M! 点生命。"
+    "DESCRIPTION": "获得 [E] [E] [E] 。 NL 抽3张牌。 NL 回合结束时若无 [E] ， NL 失去 !M! 点生命。"
   },
   "hermit:Maintenance": {
     "NAME": "维护",
