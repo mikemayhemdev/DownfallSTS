@@ -200,7 +200,7 @@
   },
   "Guardian:Preprogram": {
     "NAME": "Preprogram",
-    "DESCRIPTION": "Look at the top !M! cards of your draw pile. You may choose one to place into guardianmod:Stasis."
+    "DESCRIPTION": "Look at the top !M! cards of your draw pile. Choose one and place it into guardianmod:Stasis."
   },
   "Guardian:GemFinder": {
     "NAME": "Gem Finder",
