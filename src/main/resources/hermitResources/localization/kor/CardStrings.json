@@ -39,8 +39,7 @@
   },
   "hermit:BodyArmor": {
     "NAME": "방탄복",
-    "DESCRIPTION": "방어도를 !B! 얻습니다.  NL 버린 카드 더미에 *수비를 섞어 넣습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 버린 카드 더미에 *수비+를 섞어 넣습니다. NL 소멸."
+    "DESCRIPTION": "카드를 1장 버립니다. NL 방어도를 !B! 얻습니다. NL 버린 카드가 스킬 카드라면 방어도를 !B! 더 얻습니다."
   },
   "hermit:Snipe": {
     "NAME": "저격",
@@ -49,13 +48,13 @@
   },
   "hermit:CalledShot": {
     "NAME": "콜드샷",
-    "DESCRIPTION": "손에 있는 카드의 수만큼 피해를 줍니다. NL hermit:정조준: NL 카드를 !M! 장 뽑습니다.",
+    "DESCRIPTION": "손에 있는 카드의 수만큼 피해를 줍니다. NL hermit:정조준: NL 공격 카드를 !M! 장 뽑습니다.",
     "UPGRADE_DESCRIPTION": " NL (피해를 !D! 줍니다.)",
-    "EXTENDED_DESCRIPTION": ["손에 있는 카드의 수만큼 피해를 줍니다. NL hermit:정조준: NL 카드를 !M! 장 뽑습니다."]
+    "EXTENDED_DESCRIPTION": ["손에 있는 카드의 수만큼 피해를 줍니다. NL hermit:정조준: NL 공격 카드를 !M! 장 뽑습니다."]
   },
   "hermit:Dissolve": {
     "NAME": "용해",
-    "DESCRIPTION": "다음 턴에 방어도를 !B! 얻습니다. NL 소멸."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 2턴간 다음 턴 시작시에도 방어도가 사라지지 않습니다. NL 소멸."
   },
   "hermit:BlackWind": {
     "NAME": "검은 바람",
@@ -98,7 +97,7 @@
   },
   "hermit:Adapt": {
     "NAME": "적응",
-    "DESCRIPTION": "내 턴 종료 시 손에 있는 카드 중 최대 2장을 선택해 소멸시킵니다. NL 그 수만큼 방어도를 !M! 얻습니다."
+    "DESCRIPTION": "내 턴 종료 시 1장까지 카드를 소멸시키고 방어도를 6 얻습니다."
   },
   "hermit:Dive": {
     "NAME": "급하강",
@@ -205,7 +204,8 @@
   },
   "hermit:Maintenance": {
     "NAME": "유지보수",
-    "DESCRIPTION": "모든 *타격과 *수비를 이번 전투 동안 강화합니다. NL 이 카드를 통해 무제한으로 강화할 수 있습니다."
+    "DESCRIPTION": "*타격의 피해량이 !M! 증가합니다.",
+    "UPGRADE_DESCRIPTION": "*타격의 피해량이 !M! 증가합니다. NL 민첩을 1 얻습니다."
   },
   "hermit:EternalForm": {
     "NAME": "영겁의 형상",
