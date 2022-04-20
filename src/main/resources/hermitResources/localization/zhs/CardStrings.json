@@ -39,7 +39,7 @@
   },
   "hermit:BodyArmor": {
     "NAME": "全身护甲",
-    "DESCRIPTION":"丢弃一张手牌。 NL 获得 !B! 点 格挡 。 NL 若丢弃一张 *技能牌，额外获得 !B! 点。"
+    "DESCRIPTION":"丢弃一张手牌。 NL 获得 !B! 点 格挡 。 NL 若丢弃一张 *技能牌 ，额外获得 !B! 点。"
   },
   "hermit:Snipe": {
     "NAME": "狙击",
@@ -200,7 +200,7 @@
   },
   "hermit:OverwhelmingPower": {
     "NAME": "压倒性力量",
-    "DESCRIPTION": "获得 [E] [E] [E] 。 NL 抽3张牌。 NL 回合结束时若无 [E] ，失去 !M! 点生命。"
+    "DESCRIPTION": "获得 [E] [E] [E] 。 NL 抽3张牌。 NL 回合结束时若无 [E] ， NL 失去 !M! 点生命。"
   },
   "hermit:Maintenance": {
     "NAME": "维护",
@@ -209,7 +209,7 @@
   },
   "hermit:EternalForm": {
     "NAME": "永恒形态",
-    "DESCRIPTION": "回合开始时不获得 [E] ，但打出的前 !M! 张牌耗能为0。"
+    "DESCRIPTION": "回合开始时不获得 [E] ，但前 !M! 张牌不耗能。"
   },
   "hermit:FullyLoaded": {
     "NAME": "整装待发",
@@ -251,7 +251,7 @@
   },
   "hermit:Reprieve": {
     "NAME": "延缓死刑",
-    "DESCRIPTION": "消耗所有 诅咒 。 NL 若至少 消耗 !M! 张， NL 额外获得一回合。",
+    "DESCRIPTION": "消耗 所有 诅咒 。 NL 若至少 消耗 !M! 张， NL 额外获得一回合。",
     "EXTENDED_DESCRIPTION": [
       "我没有诅咒牌。"
     ]

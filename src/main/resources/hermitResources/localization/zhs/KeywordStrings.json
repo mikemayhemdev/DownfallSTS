@@ -36,7 +36,7 @@
       "rugged",
       "坚固"
     ],
-    "DESCRIPTION": "降低下次敌方攻击造成的生命损失到 #b3 点。"
+    "DESCRIPTION": "降低下次敌方攻击造成的生命损失至 #b3 点。"
 },
   {
     "PROPER_NAME": "赏金",
@@ -54,6 +54,6 @@
       "stunned",
       "Stunned"
     ],
-    "DESCRIPTION": "被 #y击晕 的敌人跳过其回合。"
+    "DESCRIPTION": "被 #y击晕 的敌人跳过其回合 #b1 次。"
   } 
 ]

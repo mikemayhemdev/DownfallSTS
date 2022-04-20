@@ -37,7 +37,7 @@
   "downfall:ExhaustCardsPower": {
     "NAME": "遗忘",
     "DESCRIPTIONS": [
-      "你的回合结束时，选择一张牌消耗。"
+      "你的回合结束时，选择 #y消耗 #b1 张手牌。"
     ]
   },
   "downfall:PoisonResist": {
@@ -55,7 +55,7 @@
   "downfall:WatcherAngryPower": {
     "NAME": "无遏狂怒",
     "DESCRIPTIONS": [
-      " #y观者 的回合结束时，如果她的生命不高于 #b50% ，她将永久进入 #y暴怒 。 NL #y暴怒 造成和受到的伤害提高 #b50% 而非 #b100% 。"
+      " #y观者 的回合结束时，如果其生命不高于 #b50% ，她将永久进入 #y暴怒 。 NL #y暴怒 造成和受到的伤害增加 #b50% 而非 #b100% 。"
     ]
   },
   "downfall:NeowUnbridledRage": {
@@ -83,7 +83,7 @@
   "downfall:WatcherDivinityPower": {
     "NAME": "消逝的信仰",
     "DESCRIPTIONS": [
-      "每当你打出一张牌， #y观者 获得 #b1 层 #p真言 。 NL 每回合开始时 #y观者 失去 #b5 层 #p真言 。 NL #y观者 在她的回合结束时将不会退出 #y神格 。"
+      "每当你打出 #b1 张牌时， #y观者 获得 #b1 层 #p真言 ，你的回合开始时其失去 #b5 层 。 NL 她将不会自动退出 #y神格 。"
     ]
   },
   "downfall:NeowFleetingFaith": {
@@ -95,7 +95,7 @@
   "downfall:SilentShivTimeEaterPower": {
     "NAME": "满包小刀",
     "DESCRIPTIONS": [
-      "每回合你首次打出 #b2 耗能以上的牌时， #y静默猎手 获得两张 #y小刀 。"
+      "每回合你首次打出 #b2 耗能以上的牌时， #y静默猎手 获得 #b2 张 #y小刀 。"
       ]
   },
   "downfall:NeowBagOfKnives": {
@@ -107,7 +107,7 @@
   "downfall:SilentMirrorImagePower": {
     "NAME": "复视",
     "DESCRIPTIONS": [
-      "每回合开始时 #y静默猎手 将使用 #y残影 来隐蔽自己。攻击其中一名能暴露她 #y本体 的位置。"
+      "每回合开始时 #y静默猎手 将使用 #y残影 来隐蔽自己。攻击其中 #b1 名能暴露她 #y本体 的位置。"
     ]
   },
   "downfall:NeowSeeingDouble": {
@@ -119,7 +119,7 @@
   "downfall:SilentPoisonPower": {
     "NAME": "警告：中毒",
     "DESCRIPTIONS": [
-      " #y中毒 在你的回合结束时触发且伤害能被 #y格挡 抵消，战斗开始时获得一瓶 #y解毒剂 。"
+      " #y中毒 在你的回合结束时触发且伤害能被 #y格挡 抵消。 NL 战斗开始时获得 #b1 张 #y解毒剂 。"
     ]
   },
   "downfall:NeowHighlyToxic": {
@@ -143,7 +143,7 @@
   "downfall:DefectAncientConstructPower": {
     "NAME": "先古造物",
     "DESCRIPTIONS": [
-      "战斗开始时召唤2个 #y铜制圆球 。 NL 敌人的回合结束时如果 #y故障机器人 没有 #y人工制品 ，获得 1 层。"
+      "战斗开始时， #y故障机器人 将召唤 #b2 个 #y铜制圆球 。 NL 敌方回合结束时如果其没有 #y人工制品 ，获得 #b1 层。"
     ]
   },
   "downfall:NeowAncientConstruct": {
@@ -155,7 +155,7 @@
   "downfall:DefectCuriosity": {
     "NAME": "偏差认知",
     "DESCRIPTIONS": [
-      "每当你打出一张 #y能力牌 ， #y故障机器人 获得 #b",
+      "每当你打出 #b1 张 #y能力牌时， #y故障机器人 获得 #b",
       " 点 #y集中 。"
     ]
   },
@@ -180,7 +180,7 @@
   "downfall:IroncladMushroomPower": {
     "NAME": "掠食",
     "DESCRIPTIONS": [
-      " #y铁甲战士 的 #y死亡收割 不会消耗且对所有蘑菇生效。 NL 每当 #y铁甲战士 击杀一个蘑菇时，他获得 #b1 点 #y力量 。"
+      " #y铁甲战士 的 #y死亡收割 不会消耗且对所有蘑菇生效。 NL 每当 #y铁甲战士 击杀 #b1 个蘑菇时，他获得 #b1 点 #y力量 。"
     ]
   },
   "downfall:NeowFeedingFrenzy": {
@@ -286,7 +286,7 @@
   "downfall:HermitConcentrateAdder": {
     "NAME": "致命专注",
     "DESCRIPTIONS": [
-      " #y亡命之徒 每回合都进入 #y专注 状态，使其 #y精准 牌触发额外效果。 NL 使其失去 #b10 点生命能打破其 #y专注 一回合。"
+      " #y亡命之徒 每回合都进入 #y专注 状态，使其 #y精准 牌触发额外效果。 NL 使其失去 #b10 点生命能打破其 #y专注 #b1 回合。"
     ]
   },
   "downfall:HermitConcentrationPower": {
@@ -300,14 +300,14 @@
   "downfall:HermitWheelOfFortune": {
     "NAME": "幸运之轮",
     "DESCRIPTIONS": [
-      "每当你对 #y亡命之徒 造成一段攻击时，它丢弃最左边的牌并抽一张牌。每丢弃 #b",
+      "每当你对 #y亡命之徒 造成 #b1 段攻击时，它丢弃最左边的牌并抽 #b1 张牌。每丢弃 #b",
       " 张牌，它获得 #b1 点 力量 。"
     ]
   },
   "downfall:HermitDoomsday": {
     "NAME": "末日",
     "DESCRIPTIONS": [
-      "每回合开始时，将一张 带有 #y保留 的 #r末日将临 加入你的手牌。"
+      "每回合开始时，将 #b1 张 带有 #y保留 的 #r末日将临 加入你的手牌。"
     ]
   },
   "downfall:NextTurnPowerPower": {
