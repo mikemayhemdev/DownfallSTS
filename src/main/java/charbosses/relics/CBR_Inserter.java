@@ -25,7 +25,7 @@ public class CBR_Inserter extends AbstractCharbossRelic {
         this.counter = 0;
     }
 
-    public void atTurnStart() {
+    public void atTurnStartPostDraw() { // Nasty hack so that the player can see the empty orb when planning their turn
         if (this.counter == -1) {
             this.counter += 2;
         } else {

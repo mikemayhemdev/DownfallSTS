@@ -1,8 +1,10 @@
 package charbosses.powers.bossmechanicpowers;
 
 import charbosses.actions.orb.EnemyChannelAction;
+import charbosses.bosses.Defect.NewAge.ArchetypeAct3InserterNewAge;
 import charbosses.cards.AbstractBossCard;
 import charbosses.orbs.EnemyLightning;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
@@ -36,6 +38,13 @@ public class DefectCuriosityLightningPower extends AbstractBossMechanicPower {
         if (card.type == CardType.POWER && !(card instanceof AbstractBossCard)) {
             flash();
             addToBot(new EnemyChannelAction(new EnemyLightning()));
+            addToBot(new AbstractGameAction() { // The extra orb may have altered what cards will be played, etc
+                @Override
+                public void update() {
+                    ArchetypeAct3InserterNewAge.fixUpOrbIntents();
+                    isDone = true;
+                }
+            });
         }
     }
 }
