@@ -169,7 +169,7 @@
   },
   "champ:CrookedStrike": {
     "NAME": "扭曲打击",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 不消耗 活力 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 不移除 活力 。"
   },
   "champ:RapidStrikes": {
     "NAME": "连续打击",
