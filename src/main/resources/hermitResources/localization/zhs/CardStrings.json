@@ -140,7 +140,7 @@
   },
   "hermit:ImpendingDoom": {
     "NAME": "末日将临",
-    "DESCRIPTION": "不能被打出 。 NL hermit:精准 ： NL 回合结束时，对所有人造成 13 点伤害。"
+    "DESCRIPTION": "不能被打出 。 NL hermit:精准 ： NL 回合结束时，对所有单位造成13点伤害。"
   },
   "hermit:MementoCard": {
     "NAME": "纪念品",
