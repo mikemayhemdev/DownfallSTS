@@ -18,7 +18,7 @@
     "NAMES": [
       "exhume"
     ],
-    "DESCRIPTION": "Put a card from your exhaust pile into your hand."
+    "DESCRIPTION": "Put a card from your exhaust pile into your hand. Exhuming cards cannot cross-exhume themselves."
   },
   {
     "PROPER_NAME": "Reclaim",
