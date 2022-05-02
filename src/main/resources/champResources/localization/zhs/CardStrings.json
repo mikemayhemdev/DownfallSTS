@@ -215,7 +215,7 @@
   },
   "champ:EnragedBash": {
     "NAME": "怒斩",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL champ:战狂 champ:连段 ： NL 本牌攻击次数加1。",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL champ:战狂 champ:连段 ： NL 本场战斗次数加1。",
     "EXTENDED_DESCRIPTION": [
       "造成 !D! 点伤害 !M! 次。 NL champ:战狂 champ:连段 ：攻击次数加1。"
     ]
