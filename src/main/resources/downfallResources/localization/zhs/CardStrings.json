@@ -1,19 +1,19 @@
 {
   "downfall:SummonMushrooms": {
     "NAME": "真菌环绕",
-    "DESCRIPTION": "杀死所有蘑菇。 NL 回复他们剩余血量的生命。 NL 召唤两个蘑菇。"
+    "DESCRIPTION": "击杀所有蘑菇。 NL 回复其剩余血量点生命。 NL 召唤两个蘑菇。"
   },
   "downfall:Aged": {
     "NAME": "岁月",
-    "DESCRIPTION": "不能被打出 。 NL 虚无 。 NL 你的回合结束时，将一张 *虚空 加入你的抽牌堆顶部。"
+    "DESCRIPTION": "不能被打出 。 NL 虚无 。 NL 回合结束时，将一张 *虚空 加入抽牌堆顶部。"
   },
   "downfall:Bewildered": {
     "NAME": "困惑",
-    "DESCRIPTION": "这张牌在手牌时，当你打出其他牌， sneckomod:混淆 你的手牌并将这张牌丢弃。 NL 消耗 。"
+    "DESCRIPTION": "本牌在手时，打出其他牌后 sneckomod:混淆 所有手牌并丢弃本牌。 NL 消耗 。"
   },
   "downfall:Icky": {
     "NAME": "黏液缠身",
-    "DESCRIPTION": "将一张 *黏液 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "获得一张 *黏液 。 NL 消耗 。"
   },
   "downfall:Haunted": {
     "NAME": "闹鬼",
@@ -21,10 +21,10 @@
   },
   "downfall:Malfunctioning": {
     "NAME": "纰漏",
-    "DESCRIPTION": "虚无 。 NL 你的回合结束时，将手牌变化为随机状态牌。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 回合结束时，将其他手牌变化为随机 状态牌 。 NL 消耗 。"
   },
   "downfall:Scatterbrained": {
     "NAME": "漫不经心",
-    "DESCRIPTION": "不能被打出 。 NL 在你的回合中抽到时，将这张牌的 gremlin:回响 充满你的手牌。"
+    "DESCRIPTION": "不能被打出 。 NL 你的回合中抽到时，将本牌的 gremlin:回响 充满手牌。"
   }
 }
