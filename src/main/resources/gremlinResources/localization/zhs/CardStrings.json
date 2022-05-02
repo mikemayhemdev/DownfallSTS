@@ -35,7 +35,7 @@
   },
   "Gremlin:BurlyBlow": {
     "NAME": "迅猛一击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标每有1层 虚弱 再造成一次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标每有1层 虚弱 ，再造成一次。"
   },
   "Gremlin:CatScratch": {
     "NAME": "挠脸",
@@ -83,7 +83,7 @@
     "DESCRIPTION": "获得 !B! 格挡 。"
   },
   "Gremlin:Duplicate": {
-    "NAME": "复制",
+    "NAME": "复刻",
     "DESCRIPTION": "获得手中一张攻击牌的 !M! 张 gremlin:回响 。 NL 其耗能减1。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "获得手中一张攻击牌的 !M! 张 gremlin:回响 。 NL 其耗能减1。"
   },
@@ -254,7 +254,7 @@
   },
   "Gremlin:Nob": {
     "NAME": "大块头",
-    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 临时生命 完全失去之前， *地精大块头 将强制领队。"
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 临时生命 用完之前， *地精大块头 将强制 *领队 。"
   },
   "Gremlin:NobChoice": {
     "NAME": "做选择",
@@ -364,8 +364,8 @@
   },
   "Gremlin:ShowOfHands": {
     "NAME": "表决",
-    "DESCRIPTION": "每有一张其他手牌，获得 !M! 点格挡 。",
-    "UPGRADE_DESCRIPTION": "抽一张牌。 NL 每有一张其他手牌，获得 !M! 点格挡 。"
+    "DESCRIPTION": "每有一张其他手牌，获得 !M! 点 格挡 。",
+    "UPGRADE_DESCRIPTION": "抽一张牌。 NL 每有一张其他手牌，获得 !M! 点 格挡 。"
   },
   "Gremlin:ShowStopper": {
     "NAME": "炫耀",
