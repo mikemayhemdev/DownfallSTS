@@ -79,7 +79,7 @@
   },
   "Slimebound:OozeBath": {
     "NAME": "黏液浴",
-    "DESCRIPTION": "敌人的回合开始时给予目标 !M! 层 slimeboundmod:黏液 。 NL 消耗 。",
+    "DESCRIPTION": "敌方回合开始时，给予目标 !M! 层 slimeboundmod:黏液 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "将一名敌人的 slimeboundmod:黏液 变为三倍。 NL 消耗 。"
   },
   "Slimebound:SlimeSpikes": {
@@ -92,7 +92,7 @@
   },
   "Slimebound:Dissolve": {
     "NAME": "黏质快餐",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 消耗一张手牌。 NL 获得其耗能量 *舔舔 。 NL 消耗 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 消耗一张手牌。 NL 获得其耗能张 *舔舔 。 NL 消耗 。"
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "增殖形态",
@@ -124,8 +124,8 @@
   },
   "Slimebound:Recycling": {
     "NAME": "循环再生",
-    "DESCRIPTION": "回合开始时随机 expansioncontent:发掘 一张 slimeboundmod:舔舔 系牌。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时随机 expansioncontent:发掘 一张 slimeboundmod:舔舔 系牌。"
+    "DESCRIPTION": "回合开始时，随机 expansioncontent:发掘 一张 slimeboundmod:舔舔 系牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时，随机 expansioncontent:发掘 一张 slimeboundmod:舔舔 系牌。"
   },
   "Slimebound:Repurpose": {
     "NAME": "重新考虑",
@@ -203,7 +203,7 @@
   },
   "Slimebound:Grow": {
     "NAME": "生长",
-    "DESCRIPTION": "将1个史莱姆栏位变为 !M! 点 力量 和 !M! 点 敏捷 。"
+    "DESCRIPTION": "失去1个史莱姆栏位。 NL 获得 !M! 点 力量 。 NL 获得 !M! 点 敏捷 。"
   },
   "Slimebound:HungryTackle": {
     "NAME": "饥饿冲撞",
@@ -273,7 +273,7 @@
   },
   "Slimebound:LeechLife": {
     "NAME": "吸取生命",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:消耗黏液 -回复敌人 slimeboundmod:黏液 层数的生命。 NL （最多 !M! 点） NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:消耗黏液 -回复敌人 slimeboundmod:黏液 层数点生命。 NL （最多 !M! 点） NL 消耗 。"
   },
   "Slimebound:Equalize": {
     "NAME": "均质化",
