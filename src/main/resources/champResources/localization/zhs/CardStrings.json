@@ -67,7 +67,7 @@
     ]
   },
   "champ:BerserkersShout": {
-    "NAME": "怒吼",
+    "NAME": "战斗怒吼",
     "DESCRIPTION": "获得 !M! 层 活力 。 NL 进入 champ:战狂 。"
   },
   "champ:RageSigil": {
