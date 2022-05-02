@@ -316,8 +316,8 @@
   },
   "hexamod:FifthSeal": {
     "NAME": "第六容器",
-    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，卡牌奖励中加入一张 *容器 牌。",
-    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时，卡牌奖励中加入一张 *容器 牌。"
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，额外获得一张 *容器 牌。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时，额外获得一张 *容器 牌。"
   },
   "hexamod:SixthSeal": {
     "NAME": "第五容器",
