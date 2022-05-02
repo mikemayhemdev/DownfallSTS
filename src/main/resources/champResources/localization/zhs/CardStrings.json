@@ -85,7 +85,7 @@
   },
   "champ:Devastate": {
     "NAME": "坏灭",
-    "DESCRIPTION": "造成 !D! 点伤害三次。 NL 每打出一张 champ:终结技 耗能减少 [E] 。"
+    "DESCRIPTION": "造成 !D! 点伤害三次。 NL 每用过一张 champ:终结技 ，耗能减少 [E] 。"
   },
   "champ:Circumvent": {
     "NAME": "规避",
