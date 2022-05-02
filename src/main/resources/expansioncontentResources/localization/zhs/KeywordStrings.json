@@ -18,7 +18,7 @@
     "NAMES": [
       "发掘"
     ],
-    "DESCRIPTION": "将 #b1 张 #y消耗 堆的牌移回手牌。 #y发掘 牌无法相互 #y发掘 。"
+    "DESCRIPTION": "将 #b1 张 #y消耗 堆的牌移回手牌。 #y发掘 牌无法互相 #y发掘 。"
   },
   {
     "PROPER_NAME": "取回",
