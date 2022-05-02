@@ -270,7 +270,7 @@
   },
   "hexamod:ChargedBarrage": {
     "NAME": "蓄能焰幕",
-    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 每 hexamod:点燃 一枚鬼火， NL 再给予一次。"
+    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 每有一枚 hexamod:点燃 的鬼火，再给予一次。"
   },
   "hexamod:RadiantFlame": {
     "NAME": "火焰辐射",
