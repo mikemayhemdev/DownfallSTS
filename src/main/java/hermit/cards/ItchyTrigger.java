@@ -64,9 +64,9 @@ public class ItchyTrigger extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
-    private static final int COST = 2;
-    private static final int DAMAGE = 15;
-    private static final int UPGRADE_PLUS_DMG = 5;
+    private static final int COST = 1;
+    private static final int DAMAGE = 7;
+    private static final int UPGRADE_PLUS_DMG = 2;
 
     // Hey want a second damage/magic/block/unique number??? Great!
     // Go check out DefaultAttackWithVariable and theDefault.variable.DefaultCustomVariable
@@ -79,6 +79,7 @@ public class ItchyTrigger extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
         baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = 1;
 
         this.tags.add(AbstractHermitCard.Enums.DEADON);
         loadJokeCardImage(this, "itchy_trigger.png");
@@ -116,6 +117,7 @@ public class ItchyTrigger extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeMagicNumber(1);
             upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
         }
@@ -156,7 +158,7 @@ public class ItchyTrigger extends AbstractDynamicCard {
             }
 
             if (c != null) {
-                c.setCostForTurn(0);
+                c.setCostForTurn(Math.max(c.cost-this.magicNumber,0));
             }
 
 

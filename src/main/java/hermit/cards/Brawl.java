@@ -36,8 +36,8 @@ public class Brawl extends AbstractDynamicCard {
 
     private static final int COST = 2;
 
-    private static final int MAGIC_NUMBER = 5;
-    private static final int UP_MAGIC = 1;
+    private static final int MAGIC_NUMBER = 4;
+    private static final int UP_MAGIC = 2;
 
     // /STAT DECLARATION/
 

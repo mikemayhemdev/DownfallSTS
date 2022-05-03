@@ -3,14 +3,14 @@
     "NAME": "Old Locket",
     "FLAVOR": "There's a faded picture inside.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain a #yMemento."
+      "At the start of each combat, add a #yMemento into your hand."
     ]
   },
   "hermit:RyeStalk": {
     "NAME": "Rye Stalk",
     "FLAVOR": "Still in mint condition, despite being chewed on for so long.",
     "DESCRIPTIONS": [
-      "#yhermit:Bruise is no longer reduced on hit."
+      "At the end of your turn, ALL enemies lose HP equal to their #yhermit:Bruise."
     ]
   },
   "hermit:BartenderGlass": {

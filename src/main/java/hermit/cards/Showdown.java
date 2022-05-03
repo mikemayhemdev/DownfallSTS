@@ -46,17 +46,17 @@ public class Showdown extends AbstractDynamicCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
-    private static final int COST = 2;
-
-    private static final int DAMAGE = 9;
+    private static final int COST = 1;
+    private static final int DAMAGE = 8;
+    private static final int UPGRADE_PLUS_DMG = 5;
 
     // /STAT DECLARATION/
 
     public Showdown() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        this.cardsToPreview = new Strike_Hermit();
         this.selfRetain=true;
+        this.exhaust=true;
         loadJokeCardImage(this, "showdown.png");
     }
 
@@ -80,7 +80,7 @@ public class Showdown extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeDamage(UPGRADE_PLUS_DMG);
         }
     }
 }

@@ -55,7 +55,7 @@ public class Horror extends AbstractDynamicCard {
 
     public Horror() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber=magicNumber=4;
+        baseMagicNumber=magicNumber=3;
         defaultBaseSecondMagicNumber=defaultSecondMagicNumber=2;
         loadJokeCardImage(this, "horror.png");
     }

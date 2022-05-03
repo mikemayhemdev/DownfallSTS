@@ -51,7 +51,7 @@ public class LuckOfTheDraw extends AbstractDynamicCard {
 
     public LuckOfTheDraw() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 3;
+        magicNumber = baseMagicNumber = 2;
         loadJokeCardImage(this, "luck_of_the_draw.png");
     }
 
