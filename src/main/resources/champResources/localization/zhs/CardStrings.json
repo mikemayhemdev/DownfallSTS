@@ -253,7 +253,7 @@
     ]
   },
   "champ:RecklessLeap": {
-    "NAME": "无谋跃斩",
+    "NAME": "无谋打击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 获得2点 力量 。 NL 失去1点 敏捷 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得2点 力量 。 NL 失去1点 敏捷 。",
     "EXTENDED_DESCRIPTION": [
