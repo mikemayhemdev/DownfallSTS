@@ -2,62 +2,62 @@
   "sneckomod:CheapStockPower": {
     "NAME": "廉价股票",
     "DESCRIPTIONS": [
-      "你的回合开始时，将手中耗能最高的 #y异色 牌耗能降低 #b1 。",
-      "你的回合开始时，将手中耗能最高的 #y异色 牌耗能降低 #b1 。重复 #b",
+      "你的回合开始时，将手中耗能最高的 #y异色 牌耗能降低 #b1 点。",
+      "你的回合开始时，将手中耗能最高的 #y异色 牌耗能降低 #b1 点。重复 #b",
 	  " 次。"
     ]
   },
   "sneckomod:CheatPower": {
-    "NAME": "作弊",
+    "NAME": "幸运",
     "DESCRIPTIONS": [
-      "本回合内，卡牌上的随机数取上限值。",
-      "接下来的 #b",
-      " 个回合，卡牌上的随机数取上限值。"
+      "本回合内，卡牌上的随机数值取上限值。",
+      " #b",
+      " 回合内，卡牌上的随机数值取上限值。"
     ]
   },
   "sneckomod:MuddleDrawnCardsPower": {
     "NAME": "混淆抽牌",
     "DESCRIPTIONS": [
-      "#y混淆 你本回合抽到的下一张牌。",
-      "#y混淆 你本回合抽到的下 #b",
-      " 张牌。（还剩 ",
+      "#y混淆 本回合抽到的下一张牌。",
+      "#y混淆 本回合抽到的下 #b",
+      " 张牌。（还剩 #b",
       " 张)"
     ]
   },
   "sneckomod:MudshieldPower": {
-    "NAME": "模糊护盾",
+    "NAME": "混乱护盾",
     "DESCRIPTIONS": [
-      "每当你 #y混淆 一张牌，获得 #b",
+      "每当你 #y混淆 一张牌时，获得 #b",
       " 点 #y格挡 。"
     ]
   },
   "sneckomod:SerpentMindPower": {
     "NAME": "异色形态",
     "DESCRIPTIONS": [
-      "每当你打出一张 #y异色 牌，抽 #b",
+      "每当你打出一张 #y异色 牌时，抽 #b",
       " 张牌。",
       " 张牌。"
     ]
   },
   "sneckomod:UnendingSupplyPower": {
-    "NAME": "无限供应",
+    "NAME": "延绵不绝",
     "DESCRIPTIONS": [
-      "你的回合开始时，将 #b",
-      " 张随机 #y异色 牌加入你的手牌。"
+      "你的回合开始时，随机将 #b",
+      " 张 #y异色 牌加入你的手牌。"
     ]
   },
   "sneckomod:UnknownUpgradedPostCombatPower": {
-    "NAME": "战后升级未知",
+    "NAME": "渴望力量",
     "DESCRIPTIONS": [
-      "在战斗结束时，获得 #b",
-      " 张额外已 #y升级 的 #y未知 牌。",
-      " 张额外已 #y升级 的 #y未知 牌。"
+      "战斗结束时，额外获得 #b",
+      " 张已 #y升级 的 #y未知 牌。",
+      " 张已 #y升级 的 #y未知 牌。"
     ]
   },
   "sneckomod:UnlimitedRollsPower": {
     "NAME": "无限随机",
     "DESCRIPTIONS": [
-      "你的回合开始时，将一张带有 #y消耗 和 #y虚无 的 #y灵魂随机+  加入你的手牌。"
+      "你的回合开始时，将一张带有 #y消耗 和 #y虚无 的 #y灵魂随机 加入你的手牌。"
     ]
   },
   "sneckomod:Transmogrifying": {
