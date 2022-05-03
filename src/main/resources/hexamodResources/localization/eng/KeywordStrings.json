@@ -61,7 +61,7 @@
     "NAMES": [
       "seal"
     ],
-    "DESCRIPTION": "If all #b6 Seals have been played this combat, obtain #pThe #pBroken #pSeal and remove the Seals from your deck."
+    "DESCRIPTION": "If all #b6 Seals have been played this combat (with no redundant ones), obtain #pThe #pBroken #pSeal and remove the Seals from your deck."
   },
   {
     "PROPER_NAME": "Afterlife",

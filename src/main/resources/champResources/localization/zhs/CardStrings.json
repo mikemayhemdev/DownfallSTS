@@ -10,7 +10,7 @@
   "champ:Taunt": {
     "NAME": "激将",
     "DESCRIPTION": "给予 !M! 层 虚弱 和 易伤 。",
-    "UPGRADE_DESCRIPTION": "给予所有敌人 1 层 虚弱 和 易伤 。"
+    "UPGRADE_DESCRIPTION": "给予所有敌人 !M! 层 虚弱 和 易伤 。"
   },
   "champ:Execute": {
     "NAME": "处决",
@@ -67,7 +67,7 @@
     ]
   },
   "champ:BerserkersShout": {
-    "NAME": "怒吼",
+    "NAME": "战斗怒吼",
     "DESCRIPTION": "获得 !M! 层 活力 。 NL 进入 champ:战狂 。"
   },
   "champ:RageSigil": {
@@ -85,7 +85,7 @@
   },
   "champ:Devastate": {
     "NAME": "坏灭",
-    "DESCRIPTION": "造成 !D! 点伤害三次。 NL 每打出一张 champ:终结技 耗能减少 [E] 。"
+    "DESCRIPTION": "造成 !D! 点伤害三次。 NL 每用过一张 champ:终结技 ，耗能减少 [E] 。"
   },
   "champ:Circumvent": {
     "NAME": "规避",
@@ -168,8 +168,8 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL champ:战狂 champ:连段 ： NL 造成 !D! 点伤害。 NL champ:防守 champ:连段 ： NL 获得 !B! 点 格挡 。"
   },
   "champ:CrookedStrike": {
-    "NAME": "蛇形打击",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 不消耗 活力 。"
+    "NAME": "扭曲打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 不移除 活力 。"
   },
   "champ:RapidStrikes": {
     "NAME": "连续打击",
@@ -215,7 +215,7 @@
   },
   "champ:EnragedBash": {
     "NAME": "怒斩",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL champ:战狂 champ:连段 ： NL 攻击次数加1。",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL champ:战狂 champ:连段 ： NL 本场战斗次数加1。",
     "EXTENDED_DESCRIPTION": [
       "造成 !D! 点伤害 !M! 次。 NL champ:战狂 champ:连段 ：攻击次数加1。"
     ]
@@ -253,7 +253,7 @@
     ]
   },
   "champ:RecklessLeap": {
-    "NAME": "无谋跃斩",
+    "NAME": "无谋打击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 获得2点 力量 。 NL 失去1点 敏捷 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得2点 力量 。 NL 失去1点 敏捷 。",
     "EXTENDED_DESCRIPTION": [
@@ -262,7 +262,7 @@
   },
   "champ:IgnorePain": {
     "NAME": "无视伤痛",
-    "DESCRIPTION": "下回合开始前你的生命将不会减少。 NL 消耗 。",
+    "DESCRIPTION": "本回合不失去生命。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "保留 。 NL 下回合开始前你的生命将不会减少。 NL 消耗 。"
   },
   "champ:DeathBlow": {

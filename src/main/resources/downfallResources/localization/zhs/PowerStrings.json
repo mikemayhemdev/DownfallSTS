@@ -55,7 +55,7 @@
   "downfall:WatcherAngryPower": {
     "NAME": "无遏狂怒",
     "DESCRIPTIONS": [
-      " #y观者 的回合结束时，如果其生命不高于 #b50% ，她将永久进入 #y暴怒 。 NL #y暴怒 造成和受到的伤害增加 #b50% 而非 #b100% 。"
+      " #y观者 的回合结束时，如果其生命不高于 #b50% ，她将永久进入 #y愤怒 。 NL #y愤怒 时造成和受到的伤害增加 #b50% 而非 #b100% 。"
     ]
   },
   "downfall:NeowUnbridledRage": {
@@ -117,13 +117,13 @@
     ]
   },
   "downfall:SilentPoisonPower": {
-    "NAME": "警告：中毒",
+    "NAME": "警告：剧毒",
     "DESCRIPTIONS": [
       " #y中毒 在你的回合结束时触发且伤害能被 #y格挡 抵消。 NL 战斗开始时获得 #b1 张 #y解毒剂 。"
     ]
   },
   "downfall:NeowHighlyToxic": {
-    "NAME": "警告：中毒",
+    "NAME": "警告：剧毒",
     "DESCRIPTIONS": [
       " #y涅奥 每回合给予你 #b5 层 #y中毒 。 #y中毒 在你的回合结束时触发且伤害能被 #y格挡 抵消，战斗开始时将两张 #y解毒剂 洗入你的抽牌堆。"
     ]
