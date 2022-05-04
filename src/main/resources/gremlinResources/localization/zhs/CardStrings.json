@@ -92,7 +92,7 @@
     "DESCRIPTION": "将你的 格挡 转换为等量 临时生命 。"
   },
   "Gremlin:Encore": {
-    "NAME": "鼓舞",
+    "NAME": "喝彩",
     "DESCRIPTION": "获得 3 层 gremlin:法力 。 NL 使用 gremlin:法力 时，对所有敌人造成 !M! 点伤害。"
   },
   "Gremlin:Enthusiasm": {
