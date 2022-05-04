@@ -34,8 +34,8 @@
   },
   "hermit:HighCaliber": {
     "NAME": "High-Caliber",
-    "DESCRIPTION": "Deal !D! damage. NL Add a *Strike to your discard pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a *Strike+ to your discard pile. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Add a *Strike to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a *Strike+ to your hand. NL Exhaust."
   },
   "hermit:BodyArmor": {
     "NAME": "Body Armor",
@@ -204,8 +204,7 @@
   },
   "hermit:Maintenance": {
     "NAME": "Maintenance",
-    "DESCRIPTION": "Your *Strikes deal !M! more damage.",
-    "UPGRADE_DESCRIPTION": "Your *Strikes deal !M! more damage. NL Gain 1 Dexterity."
+    "DESCRIPTION": "Gain 2 Strength. NL Gain 2 Dexterity. NL Increase the cost of this card by 1 this combat."
   },
   "hermit:EternalForm": {
     "NAME": "Eternal Form",
@@ -272,7 +271,7 @@
   },
   "hermit:Showdown": {
     "NAME": "Showdown",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Play all *Strikes in your hand on random targets."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Play all *Strikes in your hand. NL Exhaust."
   },
   "hermit:LuckOfTheDraw": {
     "NAME": "Luck of the Draw",
@@ -304,7 +303,7 @@
   },
   "hermit:ItchyTrigger": {
     "NAME": "Itchy Trigger",
-    "DESCRIPTION": "Deal !D! damage. NL hermit:Dead_On: Reduce the cost of a random card in your hand to 0 this turn."
+    "DESCRIPTION": "Deal !D! damage. NL hermit:Dead_On: Reduce the cost of a random card in your hand by !M! this turn."
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "Eye Of The Storm",
