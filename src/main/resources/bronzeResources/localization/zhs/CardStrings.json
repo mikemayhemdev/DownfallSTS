@@ -657,6 +657,6 @@
   },
   "bronze:Undervolt": {
     "NAME": "低压",
-    "DESCRIPTION": "所有敌人失去 !M! 点 力量。 NL 获得2张 灼伤 。 NL 消耗 。"
+    "DESCRIPTION": "所有敌人失去 !M! 点 力量。 NL 获得两张 灼伤 。 NL 消耗 。"
   }
 }
