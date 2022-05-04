@@ -1,7 +1,7 @@
 {
   "Gremlin:AggressiveDefense": {
     "NAME": "侵略防御",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每当你获得 格挡 ，目标失去 !M! 点生命。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每获得 格挡 ， NL 目标失去 !M! 点生命。"
   },
   "Gremlin:ArmsTheft": {
     "NAME": "力量窃取",
@@ -134,7 +134,7 @@
   },
   "Gremlin:FlipOut": {
     "NAME": "发疯",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每获得 格挡 ，变为对所有敌人造成等量伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每获得 格挡 ， NL 变为对所有敌人造成等量伤害。"
   },
   "Gremlin:Flurry": {
     "NAME": "乱舞",
@@ -147,7 +147,7 @@
   },
   "Gremlin:FollowThrough": {
     "NAME": "坚持到底",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 点 guardianmod:临时 力量 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 层 guardianmod:临时 力量 。"
   },
   "Gremlin:Fury": {
     "NAME": "狂怒",
@@ -169,7 +169,7 @@
   },
   "Gremlin:GremlinMeal": {
     "NAME": "活动肌肉",
-    "DESCRIPTION": "获得 !M! 点 临时 力量 。"
+    "DESCRIPTION": "获得 !M! 层 guardianmod:临时 力量 。"
   },
   "Gremlin:GremlinDance": {
     "NAME": "地精之舞",
@@ -355,8 +355,8 @@
   },
   "Gremlin:SharpenBlades": {
     "NAME": "锐化刀片",
-    "DESCRIPTION": "手中 *攻击牌 本回合下次耗能变为0。",
-    "UPGRADE_DESCRIPTION": "抽一张牌。 NL 手中 *攻击牌 本回合下次耗能变为0。"
+    "DESCRIPTION": "手中 *攻击 牌本回合下次耗能变为0。",
+    "UPGRADE_DESCRIPTION": "抽一张牌。 NL 手中 *攻击 牌本回合下次耗能变为0。"
   },
   "Gremlin:ShieldGremlin": {
     "NAME": "持盾地精",
@@ -411,7 +411,7 @@
   },
   "Gremlin:Tricksy": {
     "NAME": "狡猾",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 丢弃其中非攻击牌。 NL gremlin:切换 至 gremlin:卑鄙地精 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 丢弃其中非 *攻击 牌。 NL gremlin:切换 至 gremlin:卑鄙地精 。"
   },
   "Gremlin:TwistTheKnife": {
     "NAME": "捻刀",
@@ -428,7 +428,7 @@
   },
   "Gremlin:Ward": {
     "NAME": "守卫",
-    "DESCRIPTION": "获得 !B! 格挡 。 NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 点格挡 。 NL 消耗 。"
   },
   "Gremlin:Whiz": {
     "NAME": "咏唱",
