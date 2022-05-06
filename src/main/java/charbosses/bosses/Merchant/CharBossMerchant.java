@@ -82,7 +82,7 @@ public class CharBossMerchant extends AbstractCharBoss {
 
         this.tint.color = new Color(.5F, .5F, 1F, 0F);
 
-        this.type = EnemyType.ELITE;
+        this.type = EnemyType.BOSS;
     }
 
     @Override
