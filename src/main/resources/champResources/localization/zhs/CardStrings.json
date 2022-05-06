@@ -210,8 +210,8 @@
   },
   "champ:Shatter": {
     "NAME": "粉碎",
-    "DESCRIPTION": "移除敌人的 格挡 。 NL 造成 !D! 点伤害。",
-    "UPGRADE_DESCRIPTION": "移除敌人的 格挡 与 人工制品 。 NL 造成 !D! 点伤害。"
+    "DESCRIPTION": "移除目标的 格挡 。 NL 造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "移除目标的 格挡 与 人工制品 。 NL 造成 !D! 点伤害。"
   },
   "champ:EnragedBash": {
     "NAME": "怒斩",
@@ -359,7 +359,7 @@
   },
   "champ:Parry": {
     "NAME": "招架",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。 NL 若本回合触发 champ:反击 ，获得 *弹反 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。 NL 若本回合触发 champ:反击 ， NL 获得 *弹反 。",
     "UPGRADE_DESCRIPTION": "造成 champ:反击 使用层数点伤害。 NL 消耗 。."
   },
   "champ:EnchantCrown": {
