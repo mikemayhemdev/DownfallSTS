@@ -20,7 +20,7 @@ public class EnSwiftStrike extends AbstractBossCard {
 
     public EnSwiftStrike() {
         super(ID, cardStrings.NAME, "colorless/attack/swift_strike", 0, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
-        this.baseDamage = 6;
+        this.baseDamage = 7;
         this.tags.add(CardTags.STRIKE);
     }
 
