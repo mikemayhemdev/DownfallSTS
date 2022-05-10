@@ -126,7 +126,7 @@
   },
   "bronze:WildStrike": {
     "NAME": "Wild Strike",
-    "DESCRIPTION": "Deal !D! damage. π NL bronze:Insert 1 *Wound."
+    "DESCRIPTION": "Deal !D! damage. π NL bronze:Insert a *Wound."
   },
   "bronze:Overheat": {
     "NAME": "Overheat",
@@ -159,7 +159,7 @@
   },
   "bronze:OilSpill": {
     "NAME": "Oil Spill",
-    "DESCRIPTION": "Deal !D! damage and apply !M! Poison. NL bronze:Compile *Error - bronze:Insert 1 *Slimed.",
+    "DESCRIPTION": "Deal !D! damage and apply !M! Poison. NL bronze:Compile *Error - bronze:Insert a *Slimed.",
     "EXTENDED_DESCRIPTION": [
       "oily",
       "Spill"
