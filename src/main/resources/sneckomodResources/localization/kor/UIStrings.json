@@ -9,6 +9,11 @@
       "전투 시작 시 해당 조건의 무작위 다른 직업 카드로 변합니다."
     ]
   },
+  "sneckomod:UnknownNames": {
+    "TEXT": [
+      "Unknown"
+    ]
+  },
   "sneckomod:UnknownClass": {
     "TEXT": [
       "???",
