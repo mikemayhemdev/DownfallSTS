@@ -59,7 +59,7 @@ public class HorrorPower extends AbstractPower implements CloneablePowerInterfac
         updateDescription();
     }
 
-    public void atEndOfRound() {
+    public void atStartOfTurn() {
         if (this.amount <= 0) {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         } else {

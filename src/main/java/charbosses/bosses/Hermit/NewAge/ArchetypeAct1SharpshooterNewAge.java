@@ -2,6 +2,7 @@ package charbosses.bosses.Hermit.NewAge;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
+import charbosses.cards.colorless.EnMadness;
 import charbosses.cards.curses.EnInjury;
 import charbosses.cards.hermit.*;
 import charbosses.powers.bossmechanicpowers.HermitConcentrateAdder;
@@ -80,7 +81,7 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnLoneWolf());
+                    addToList(cardsList, new EnMadness());
                     addToList(cardsList, new EnRoughhouse());
                     addToList(cardsList, new EnInjury());
                     turn++;

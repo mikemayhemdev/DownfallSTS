@@ -18,7 +18,7 @@ public class EnPurgatory extends AbstractHermitBossCard {
 
     public EnPurgatory() {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/purgatory.png", 3, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.RARE, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
-        this.baseDamage = 30;
+        this.baseDamage = 24;
         isEthereal = true;
     }
 
@@ -31,9 +31,7 @@ public class EnPurgatory extends AbstractHermitBossCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            isEthereal = false;
-            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeDamage(6);
         }
     }
 
