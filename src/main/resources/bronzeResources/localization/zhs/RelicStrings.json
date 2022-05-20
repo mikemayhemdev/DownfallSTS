@@ -3,7 +3,7 @@
     "NAME": "铜制核心",
     "FLAVOR": "每50,000年一换。",
     "DESCRIPTIONS": [
-      "每场战斗 #ybronze:编译 首张 #y方法 时，获得 [E] 。"
+      "每场战斗 #ybronze:编译 首张 #ybronze:方法 时，获得 [E] 。"
     ]
   },
   "bronze:ProtectiveGoggles": {
@@ -17,49 +17,49 @@
     "NAME": "八体垫片",
     "FLAVOR": "真不知道八体为何收藏这些。",
     "DESCRIPTIONS": [
-      "战斗开始时，抽 #b3 张牌并将一张 #y晕眩 加入抽牌堆。"
+      "每场战斗开始时，抽 #b3 张牌并将 #b1 张 #y晕眩 加入抽牌堆。"
     ]
   },
   "bronze:Timepiece": {
     "NAME": "怀表",
     "FLAVOR": "他的众多钟表收藏之一。",
     "DESCRIPTIONS": [
-      "你 #ybronze:编译 的 #y方法 获得 #y保留 。"
+      "你 #ybronze:编译 的 #ybronze:方法 附带 #y保留 。"
     ]
   },
   "bronze:Mallet": {
     "NAME": "铁锤",
     "FLAVOR": "就是这么炫! 举起我的小铁锤!",
     "DESCRIPTIONS": [
-      "战斗开始时，将两张 #y性能调整+ 加入手牌。"
+      "每场战斗开始时，将 #b2 张 #y性能调整+ 加入手牌。"
     ]
   },
   "bronze:SilverBullet": {
     "NAME": "银色子弹",
     "FLAVOR": "尖塔里的狼都绝迹了。",
     "DESCRIPTIONS": [
-      "战斗开始时， #ybronze:编码 一张 #y穿透射击 。"
+      "每场战斗开始时， #ybronze:编码 #b1 张 #y穿透射击 。"
     ]
   },
   "bronze:MakeshiftBattery": {
     "NAME": "备用电池",
     "FLAVOR": "足足有8.9伏特。",
     "DESCRIPTIONS": [
-      "你的回合开始时，获得 [E] 并将一张 #y黏液 加入弃牌堆。"
+      "你的回合开始时，获得 [E] 并将 #b1 张 #y黏液 加入弃牌堆。"
     ]
   },
   "bronze:CableSpool": {
     "NAME": "电缆线轴",
     "FLAVOR": "缠绕起来的一团……",
     "DESCRIPTIONS": [
-      "每场战斗首次打出 #ybronze:编码 牌时,它被 #y编码 两次。"
+      "每场战斗首张 #ybronze:编码 牌 #y编码 #b2 次。"
     ]
   },
   "bronze:ElectromagneticCoil": {
     "NAME": "电磁线圈",
     "FLAVOR": "效率低下但有趣的能源装置。",
     "DESCRIPTIONS": [
-      " #y方法 现在由 #b4 张牌组成。"
+      " #ybronze:方法 现在由 #b4 张牌组成。"
     ]
   },
   "bronze:PlatinumCore": {
@@ -67,14 +67,14 @@
     "FLAVOR": "更新日志: 提升用户体验。",
     "DESCRIPTIONS": [
       "替换 ",
-      "。[] NL 每场战斗 #ybronze:编译 的前 #b3 张 #y方法 首次耗能为 #b0 。"
+      "。[] NL 每场战斗 #ybronze:编译 的前 #b3 张 #ybronze:方法 首次耗能为 #b0 。"
     ]
   },
   "bronze:BottledCode": {
     "NAME": "瓶装代码",
     "FLAVOR": "实际上,这确实是我编码的。。。",
     "DESCRIPTIONS": [
-      "拾起时，选择牌组中的一张 #ybronze:编码 牌。 战斗开始时它直接进入 #ybronze:队列。",
+      "拾起时，选择牌组中的 #b1 张 #ybronze:编码 牌。 战斗开始时它直接进入 #ybronze:队列。",
       "选择一张牌 ",
       "每场战斗开始时， ",
       " 直接进入 #ybronze:队列 。"
@@ -84,21 +84,21 @@
     "NAME": "甜圈垫片",
     "FLAVOR": "这显然是甜甜圈的藏品。",
     "DESCRIPTIONS": [
-      "每场战斗开始时，获得 [E] [E] 。将 #b1 张 #y虚空 加入抽牌堆。"
+      "每场战斗开始时，获得 [E] [E] 并将 #b1 张 #y虚空 加入抽牌堆。"
     ]
   },
   "bronze:BronzeIdol": {
     "NAME": "铜制神像",
     "FLAVOR": "一种古老的，武器化的抗病毒程序 - 无人知晓其生成者和目的",
     "DESCRIPTIONS": [
-      "#y状态牌 可打出且附带正面效果。"
+      "#y状态牌 可打出且附带 #g正面效果 。"
     ]
   },
   "bronze:AnalyticalCore": {
     "NAME": "悖论制品",
     "FLAVOR": "你从未见过如此意义不明的人工制品。",
     "DESCRIPTIONS": [
-      "每回合开始时，随机将一张 #y虚无 #ybronze:编码 牌加入手牌。"
+      "每回合开始时，随机将 #b1 张 #y虚无 #ybronze:编码 牌加入手牌。"
     ]
   }
 }

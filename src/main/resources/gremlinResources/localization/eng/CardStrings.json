@@ -286,7 +286,7 @@
 
   "Gremlin:Nob": {
     "NAME": "NOB",
-    "DESCRIPTION": "Gain !M! Temporary_HP. NL Mutate into Gremlin Nob until you run out of Temporary_HP."
+    "DESCRIPTION": "Gain !M! Temporary_HP. NL Mutate into *Gremlin gremlin:Nob until you run out of Temporary_HP."
   },
 
   "Gremlin:NobChoice": {
