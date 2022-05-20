@@ -207,7 +207,7 @@
   },
   "bronze:Invalidate": {
     "NAME": "Invalidation",
-    "DESCRIPTION": "Appliquez !M! de Vulnerabilité.",
+    "DESCRIPTION": "Appliquez !M! de Vulnérabilité.",
     "EXTENDED_DESCRIPTION": [
       "invalid",
       "Error"
@@ -215,7 +215,7 @@
   },
   "bronze:Shell": {
     "NAME": "Blockchain",
-    "DESCRIPTION": "Gain !M! de bronze:Flou.",
+    "DESCRIPTION": "Gagnez !M! de bronze:Flou.",
     "UPGRADE_DESCRIPTION": "Gagnez !M! de bronze:Flou. NL bronze:Compilation - Gagnez !M! de bronze:Flou.",
     "EXTENDED_DESCRIPTION": [
       "block",
@@ -564,8 +564,8 @@
   },
   "bronze:Ignite": {
     "NAME": "Flambage",
-    "DESCRIPTION": "Apply !M! de hexamod:Brûlure. NL At the end of your turn, take 2 damage.",
-    "UPGRADE_DESCRIPTION": "Apply !M! hexamod:Brûlure. NL At the end of your turn, take 4 damage."
+    "DESCRIPTION": "Appliquez !M! de hexamod:Brûlure. NL À la fin de votre tour, prenez 2 dégâts.",
+    "UPGRADE_DESCRIPTION": "Appliquez !M! de hexamod:Brûlure. NL À la fin de votre tour, prenez 4 dégâts.."
   },
   "bronze:IntoTheVoid": {
     "NAME": "Dans le Néant",
@@ -577,7 +577,7 @@
   },
   "bronze:GrievousWound": {
     "NAME": "Blessure grave",
-    "DESCRIPTION": "Appliquez !M! de Vulnerabilité."
+    "DESCRIPTION": "Appliquez !M! de Vulnérabilité."
   },
   "bronze:Daze": {
     "NAME": "Étourdissement",
@@ -585,7 +585,7 @@
   },
   "bronze:UnknownStatus": {
     "NAME": "Perplexe",
-    "DESCRIPTION": "Infligez !B! d'Armure."
+    "DESCRIPTION": "Gagnez !B! d'Armure."
   },
   "bronze:TinkerersToolbox": {
     "NAME": "Outils de Dev",
