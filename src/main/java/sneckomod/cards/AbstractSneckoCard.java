@@ -34,6 +34,7 @@ import static sneckomod.SneckoMod.makeCardPath;
 public abstract class AbstractSneckoCard extends CustomCard {
 
     protected String[] unknownUpgrade = CardCrawlGame.languagePack.getUIString(makeID("Unknown")).TEXT;
+    protected String[] unknownNames = CardCrawlGame.languagePack.getUIString(makeID("UnknownNames")).TEXT;
 
     protected final CardStrings cardStrings;
     public String betaArtPath;
@@ -259,14 +260,16 @@ public abstract class AbstractSneckoCard extends CustomCard {
     @Override
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tips = new ArrayList<>();
-        if (this.rawDescription.contains("Unidentified")) {
-            if (SneckoMod.validColors.size() > 3) {
-                tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[5]));
-            }
-            else if (SneckoMod.validColors.isEmpty()) {
-                tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[4]));
-            } else {
-                tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[2] + unknownUpgrade[3] + getCharList()));
+        for (String name : unknownNames) {
+            if (this.rawDescription.contains(name)) {
+                if (SneckoMod.validColors.size() > 3) {
+                    tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[5]));
+                }
+                else if (SneckoMod.validColors.isEmpty()) {
+                    tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[4]));
+                } else {
+                    tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[2] + unknownUpgrade[3] + getCharList()));
+                }
             }
         }
         return tips;

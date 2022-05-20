@@ -9,6 +9,11 @@
       "战斗开始时未知牌将根据情况变化成其他角色的牌（基础打击防御除外）。"
     ]
   },
+  "sneckomod:UnknownNames": {
+    "TEXT": [
+      "未知"
+    ]
+  },
   "sneckomod:UnknownClass": {
     "TEXT": [
       "？？？",
