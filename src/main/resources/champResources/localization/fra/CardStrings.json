@@ -423,7 +423,7 @@
   },
   "champ:UltimateStance": {
     "NAME": "Pose ultime",
-    "DESCRIPTION": "Requiert la Pose *Défensive ou du *Destructeur. NL Adoptez la Pose champ:Ultime pour !M! tours NL Épuisement.",
+    "DESCRIPTION": "Jusqu'à votre prochain tour, vous êtes en Pose champ:Ultime. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "Requiert la Pose *Défensive ou du *Destructeur. NL Adoptez la Pose champ:Ultime pour !M! tours.",
     "EXTENDED_DESCRIPTION": [
       "Je ne suis pas dans une Pose."
