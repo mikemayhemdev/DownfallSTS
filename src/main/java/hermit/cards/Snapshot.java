@@ -4,12 +4,15 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.watcher.WallopAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.purple.Wallop;
 import com.megacrit.cardcrawl.cards.red.IronWave;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
+import hermit.actions.SnapshotAction;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 import hermit.powers.SnipePower;
@@ -45,8 +48,6 @@ public class Snapshot extends AbstractDynamicCard {
 
     private static final int DAMAGE = 5;
     private static final int UPGRADE_PLUS_DMG = 2;
-    private static final int BLOCK = 8;
-    private static final int UPGRADE_PLUS_BLOCK = 2;
 
     int prev_cost = COST;
 
@@ -55,7 +56,6 @@ public class Snapshot extends AbstractDynamicCard {
     public Snapshot() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        baseBlock = BLOCK;
         this.tags.add(Enums.DEADON);
         loadJokeCardImage(this, "snapshot.png");
     }
@@ -69,16 +69,15 @@ public class Snapshot extends AbstractDynamicCard {
 
             int DeadOnTimes = DeadOnAmount();
 
-            for (int a = 0; a < DeadOnTimes; a++) {
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-            }
+            this.addToBot(new SnapshotAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),DeadOnTimes));
 
             this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
         }
-
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
-                        EnumPatch.HERMIT_GUN));
+        else {
+            AbstractDungeon.actionManager.addToBottom(
+                    new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
+                            EnumPatch.HERMIT_GUN));
+        }
     }
 
     public void triggerOnGlowCheck() {
@@ -94,7 +93,6 @@ public class Snapshot extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBlock(UPGRADE_PLUS_BLOCK);
         }
     }
 }

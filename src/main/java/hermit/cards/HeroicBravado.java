@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import hermit.HermitMod;
+import hermit.actions.ReduceCostActionFixed;
 import hermit.characters.hermit;
 import hermit.powers.Rugged;
 
@@ -76,8 +77,7 @@ public class HeroicBravado extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.costForTurn -= magicNumber;
-        this.updateCost(magicNumber);
+        this.addToBot(new ReduceCostActionFixed(this.uuid, this.magicNumber));
         this.addToBot(new ApplyPowerAction(p, p, new Rugged(p, 1), 1));
 
     }

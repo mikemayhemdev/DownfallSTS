@@ -38,6 +38,7 @@ public class GambitAction extends AbstractGameAction {
                 card = (AbstractCard)var2.next();
                 if (card.type == this.typeToCheck) {
                     tmp.addToRandomSpot(card);
+                    card.setCostForTurn(Math.max(card.cost-1,0));
                 }
             }
 

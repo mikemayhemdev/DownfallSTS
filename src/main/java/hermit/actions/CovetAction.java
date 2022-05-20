@@ -7,6 +7,7 @@ package hermit.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -34,10 +35,10 @@ public class CovetAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
             if (this.p.hand.isEmpty()) {
-                this.addToBot(new DrawCardAction(this.extra_draw));
+                this.addToTop(new DrawCardAction(this.extra_draw));
                 this.isDone = true;
             } else if (this.p.hand.size() == 1) {
-                this.addToBot(new DrawCardAction(this.extra_draw));
+                this.addToTop(new DrawCardAction(this.extra_draw));
                 if (this.p.hand.getBottomCard().color == AbstractCard.CardColor.CURSE) {
                     this.p.hand.moveToExhaustPile(this.p.hand.getBottomCard());
                 } else {
@@ -53,7 +54,7 @@ public class CovetAction extends AbstractGameAction {
             if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
                 if (!AbstractDungeon.handCardSelectScreen.selectedCards.group.isEmpty()) {
 
-                    this.addToBot(new DrawCardAction(this.extra_draw));
+                    this.addToTop(new DrawCardAction(this.extra_draw));
 
                     AbstractCard c;
                     for (Iterator var1 = AbstractDungeon.handCardSelectScreen.selectedCards.group.iterator(); var1.hasNext();) {
@@ -62,6 +63,9 @@ public class CovetAction extends AbstractGameAction {
                             this.p.hand.moveToExhaustPile(c);
                         } else {
                             this.p.hand.moveToDiscardPile(c);
+
+                            c.triggerOnManualDiscard();
+                            GameActionManager.incrementDiscard(false);
                         }
                     }
                 }

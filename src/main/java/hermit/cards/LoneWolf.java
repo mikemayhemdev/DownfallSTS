@@ -51,7 +51,6 @@ public class LoneWolf extends AbstractDynamicCard {
     public LoneWolf() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         loadJokeCardImage(this, "lone_wolf.png");
-        this.exhaust = true;
     }
 
     // Actions the card should do.

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import hermit.HermitMod;
+import hermit.actions.FinalCanterAction;
 import hermit.actions.ManifestAction;
 import hermit.actions.SpiteAction;
 import hermit.characters.hermit;
@@ -56,9 +57,7 @@ public class Spite extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i=0;i<2;i++)
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
-                        AbstractGameAction.AttackEffect.FIRE));
+            this.addToBot(new FinalCanterAction(m,p,this.damage,this));
         this.addToBot(new ManifestAction(magicNumber));
     }
 

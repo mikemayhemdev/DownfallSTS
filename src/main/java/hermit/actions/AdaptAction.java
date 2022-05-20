@@ -33,7 +33,7 @@ public class AdaptAction extends AbstractGameAction {
         this.canPickZero = canPickZero;
         this.isRandom = isRandom;
         this.amount = amount;
-        this.block = 6;
+        this.block=8;
         this.duration = this.startDuration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.EXHAUST;
     }
@@ -75,11 +75,7 @@ public class AdaptAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == this.startDuration) {
-            if (this.p.hand.size() < this.amount) {
-                this.amount = this.p.hand.size();
-            }
-
-            if (this.amount == 0) {
+            if (this.p.hand.size() == 0) {
                 this.isDone = true;
                 return;
             }
@@ -95,7 +91,7 @@ public class AdaptAction extends AbstractGameAction {
 
             for(i = 0; i < this.amount; ++i) {
                 this.p.hand.moveToExhaustPile(this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng));
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+                AbstractDungeon.actionManager.addToTop(new GainBlockAction(p, p, block));
             }
 
             CardCrawlGame.dungeon.checkForPactAchievement();
@@ -107,7 +103,7 @@ public class AdaptAction extends AbstractGameAction {
             while(var4.hasNext()) {
                 AbstractCard c = (AbstractCard)var4.next();
                 this.p.hand.moveToExhaustPile(c);
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+                AbstractDungeon.actionManager.addToTop(new GainBlockAction(p, p, block));
             }
 
             CardCrawlGame.dungeon.checkForPactAchievement();
