@@ -597,16 +597,8 @@ public class downfallMod implements
 
         if (!STEAM_MODE) {
 
-            ModLabeledToggleButton contentSharingBtnCurses = new ModLabeledToggleButton(configStrings.TEXT[5],
-                    350.0f, 450.0F, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                    contentSharing_curses, settingsPanel, (label) -> {
-            }, (button) -> {
-                contentSharing_curses = button.enabled;
-                saveData();
-            });
-
             ModLabeledToggleButton contentSharingBtnRelics = new ModLabeledToggleButton(configStrings.TEXT[0],
-                    350.0f, 650.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    350, 650, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     contentSharing_relics, settingsPanel, (label) -> {
             }, (button) -> {
                 contentSharing_relics = button.enabled;
@@ -614,7 +606,7 @@ public class downfallMod implements
             });
 
             ModLabeledToggleButton contentSharingBtnEvents = new ModLabeledToggleButton(configStrings.TEXT[2],
-                    350.0f, 600.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    350, 610, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     contentSharing_events, settingsPanel, (label) -> {
             }, (button) -> {
                 contentSharing_events = button.enabled;
@@ -622,7 +614,7 @@ public class downfallMod implements
             });
 
             ModLabeledToggleButton contentSharingBtnPotions = new ModLabeledToggleButton(configStrings.TEXT[1],
-                    350.0f, 550.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    350, 570, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     contentSharing_potions, settingsPanel, (label) -> {
             }, (button) -> {
                 contentSharing_potions = button.enabled;
@@ -630,7 +622,7 @@ public class downfallMod implements
             });
 
             ModLabeledToggleButton contentSharingBtnColorless = new ModLabeledToggleButton(configStrings.TEXT[3],
-                    350.0f, 500.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    350, 530, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     contentSharing_colorlessCards, settingsPanel, (label) -> {
             }, (button) -> {
                 contentSharing_colorlessCards = button.enabled;
@@ -638,8 +630,17 @@ public class downfallMod implements
             });
 
 
+            ModLabeledToggleButton contentSharingBtnCurses = new ModLabeledToggleButton(configStrings.TEXT[5],
+                    350, 490, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    contentSharing_curses, settingsPanel, (label) -> {
+            }, (button) -> {
+                contentSharing_curses = button.enabled;
+                saveData();
+            });
+
+
             ModLabeledToggleButton normalMapBtn = new ModLabeledToggleButton(configStrings.TEXT[6],
-                    350.0f, 400, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    350, 450, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     normalMapLayout, settingsPanel, (label) -> {
             }, (button) -> {
                 normalMapLayout = button.enabled;
@@ -647,7 +648,7 @@ public class downfallMod implements
             });
 
             ModLabeledToggleButton champProConfig = new ModLabeledToggleButton(configStrings.TEXT[8],
-                    350.0f, 350, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    350, 410, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     champDisableStanceHelper, settingsPanel, (label) -> {
             }, (button) -> {
                 champDisableStanceHelper = button.enabled;
@@ -656,7 +657,7 @@ public class downfallMod implements
 
 
             ModLabeledToggleButton unlockAllBtn = new ModLabeledToggleButton(configStrings.TEXT[7],
-                    350.0f, 300, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    350, 370, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     unlockEverything, settingsPanel, (label) -> {
             }, (button) -> {
                 unlockEverything = button.enabled;
@@ -665,7 +666,7 @@ public class downfallMod implements
 
 
             ModLabeledToggleButton noMusicBtn = new ModLabeledToggleButton(configStrings.TEXT[9],
-                    350.0f, 250, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    350, 330, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     noMusic, settingsPanel, (label) -> {
             }, (button) -> {
                 noMusic = button.enabled;
@@ -673,7 +674,7 @@ public class downfallMod implements
             });
 
             ModLabeledToggleButton unlockAllSkinBtn = new ModLabeledToggleButton(configStrings.TEXT[10],
-                    350.0f, 200, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    350, 290, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     unlockAllReskin, settingsPanel, (label) -> {
             }, (button) -> {
                 unlockAllReskin = button.enabled;
@@ -694,7 +695,7 @@ public class downfallMod implements
         }
 
         ModLabeledToggleButton characterCrossoverBtn = new ModLabeledToggleButton(configStrings.TEXT[4],
-                350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                350.0f, 690.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
                 crossoverCharacters, settingsPanel, (label) -> {
         }, (button) -> {
             crossoverCharacters = button.enabled;
