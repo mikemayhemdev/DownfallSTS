@@ -48,7 +48,8 @@ public class EnGhostlyPresence extends AbstractHermitBossCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBlock(3);
+            this.upgradeBlock(1);
+            upgradeMagicNumber(1);
         }
     }
 

@@ -39,7 +39,7 @@
     "NAME": "Cachecol Vermelho",
     "FLAVOR": "É quente e felpudo.",
     "DESCRIPTIONS": [
-      "No inicio de cada combate, descarte até #b7 cartas da sua pilha de compra."
+      "Quando você aplicar um debuff em um inimigo, ganhe #b2 de #yProteção."
     ]
   },
   "hermit:DentedPlate": {
@@ -53,22 +53,50 @@
     "NAME": "Fantasma de Estimação",
     "FLAVOR": "Pobrezinho.",
     "DESCRIPTIONS": [
-      "Se você fosse morrer, ao invéz disso, sobreviva com #b1 PV. Você morre no final do seu próximo turno. você não pode morrer antes disso."
+      "A primeira vez que você fosse morrer em cada combate, ao invés disso, sobreviva com #b1 PV."
     ]
   },
   "hermit:CharredGlove": {
     "NAME": "Luva Chamuscada",
     "FLAVOR": "Partes da luva ainda brilham com brasas de outro mundo.",
     "DESCRIPTIONS": [
-      "Quando você comprar uma #yMaldição, seu próximo ataque causa #b4 a mais de dano."
+      "Quando você comprar uma #rMaldição, seu próximo ataque causa #b4 a mais de dano."
     ]
   },
   "hermit:ClaspedLocket": {
     "NAME": "Medalhão Fechado",
     "FLAVOR": "Não abrirá novamente.",
     "DESCRIPTIONS": [
-      "Substitui #yVelho Medalhão. Após pegar, adicione #b3 #yMementos em seu baralho.",
+      "Substitui #yVelho #yMedalhão. No início de cada combate, ganhe [E] para cada #rMaldição em seu baralho. Quando obtido, ganhe #b2 #rFerimentos.",
       "Nunca mais..."
+    ]
+  },
+  "hermit:StraightRazor": {
+    "NAME": "Navalha",
+    "FLAVOR": "Para se barbear...",
+    "DESCRIPTIONS": [
+      "Quando você remover uma carta de seu baralho, cure #b15 PV."
+    ]
+  },
+  "hermit:BrassTacks": {
+    "NAME": "Tachinhas de Latão",
+    "FLAVOR": "O brilho nessas tachinhas parece nunca desaparecer.",
+    "DESCRIPTIONS": [
+      "Inicie cada combate com #b2 de #yMetalizar."
+    ]
+  },
+  "hermit:BlackPowder": {
+    "NAME": "Pólvora Preta",
+    "FLAVOR": "Manuseie com cuidado.",
+    "DESCRIPTIONS": [
+      "No fim de seu turno, cause #b2 de dano a TODOS os inimigos por cada efeito #yhermit:Na_Mira ativado."
+    ]
+  },
+  "hermit:BloodyTooth": {
+    "NAME": "Dente Quebrado",
+    "FLAVOR": "Parece ser grande demais para ter vindo de uma mandíbula humana...",
+    "DESCRIPTIONS": [
+      "Inicie cada combate com #b1 de #yForça para cada encontro de Elite derrotado no mesmo ato."
     ]
   }
 }

@@ -5,9 +5,12 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.unique.EnlightenmentAction;
 import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.green.Survivor;
+import com.megacrit.cardcrawl.cards.red.InfernalBlade;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -15,7 +18,10 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import hermit.HermitMod;
 import hermit.actions.EternalAction;
+import hermit.actions.EternalFormAction;
 import hermit.util.TextureLoader;
+
+import java.util.Iterator;
 
 public class EternalPower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
@@ -36,7 +42,10 @@ public class EternalPower extends AbstractPower implements CloneablePowerInterfa
 
         this.owner = owner;
         this.total = amount;
+        this.amount = amount;
         this.source = source;
+
+        priority = 99;
 
         type = PowerType.BUFF;
         isTurnBased = false;
@@ -52,18 +61,24 @@ public class EternalPower extends AbstractPower implements CloneablePowerInterfa
     @Override
     public void atStartOfTurnPostDraw() { // At the start of your turn
         this.flash();
-        this.addToBot(new LoseEnergyAction(AbstractDungeon.player.energy.energyMaster));
+        //this.addToBot(new LoseEnergyAction(AbstractDungeon.player.energy.energyMaster));
+
+        this.addToBot(new EternalFormAction(this.amount));
         updateDescription();
     }
 
+    /*
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (amount>0) {
             this.flash();
             updateDescription();
         }
     }
+    */
 
     public void updateDescription() {
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+         /*
         this.amount=total-AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
         if (amount <= 0)
             description = DESCRIPTIONS[3];
@@ -72,12 +87,16 @@ public class EternalPower extends AbstractPower implements CloneablePowerInterfa
         } else {
             description = DESCRIPTIONS[0] + (amount) + DESCRIPTIONS[2];
         }
+        */
     }
+
+    /*
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
         this.total += stackAmount;
         this.updateDescription();
     }
+    */
 
     @Override
     public AbstractPower makeCopy() {

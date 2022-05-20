@@ -21,7 +21,7 @@
 },
 "hermit:AdaptPower": {
         "NAME": "Adapt",
-        "DESCRIPTIONS": ["At the end of your turn, #yExhaust up to #b", " card to gain #b6 Block." , " cards. Gain #b6 Block for each."]
+        "DESCRIPTIONS": ["At the start of your turn, #yExhaust up to #b", " card to gain #b6 Block." , " cards. Gain #b8 Block for each."]
 },
 "hermit:Bruise": {
         "NAME": "Bruised",
@@ -49,7 +49,7 @@
 },
 "hermit:EternalPower": {
         "NAME": "Power Eternal",
-        "DESCRIPTIONS": ["You can play #b", " more card for free this turn.", " more cards for free this turn.", "You are out of free plays."]
+        "DESCRIPTIONS": ["At the start of your turn, reduce the cost of all cards in hand by #b", "."]
 },
 "hermit:OverwhelmingPowerPower": {
         "NAME": "Overwhelming Power",
