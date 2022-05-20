@@ -50,10 +50,12 @@
       "Permet aux runs standard de rencontrer des évènements globaux de Downfall.",
       "Permet aux runs standard de rencontrer des cartes Boss de Downfall.",
       "Permet aux personnages standard de faire des runs Downfall, et aux Vilains de faire des runs standard.",
+      "Allow modded characters to play Downfall runs.",
       "Permet aux runs standard de rencontrer des cartes Malédiction de Downfall.",
       "Les runs Downfall utilisent la disposition normale de la carte  - le feu avant le boss, pas au départ.",
       "Débloque toutes les cartes verrouillées et les reliques des personnages Downfall (requiert un restart du jeu)",
       "Désactive l'aide pour les poses du Champion - pour les Champions expérimentés",
+      "Prevent Snecko from using card pools from other mods.",
       "Désactive le remplacement de la musique (requiert un restart du jeu)",
       "Débloque tous les déguisements alternatifs des personnages Downfall"
     ]
