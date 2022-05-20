@@ -69,8 +69,8 @@ public class Glare extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
             rawDescription = UPGRADE_DESCRIPTION;
+            this.selfRetain = true;
             initializeDescription();
         }
     }

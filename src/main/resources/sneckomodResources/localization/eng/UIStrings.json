@@ -9,6 +9,11 @@
       "At the start of combat, Unidentified cards transform into other random cards from other classes that satisfy certain constraints."
     ]
   },
+  "sneckomod:UnknownNames": {
+    "TEXT": [
+      "Unidentified"
+    ]
+  },
   "sneckomod:UnknownClass": {
     "TEXT": [
       "???",

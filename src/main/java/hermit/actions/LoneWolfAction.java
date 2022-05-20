@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.actions.unique.ForethoughtAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -51,9 +52,7 @@ public class LoneWolfAction extends AbstractGameAction {
                 for(int n = 0; n < i; ++n) {
                     c = p.hand.getTopCard();
                     if (c.cost > 0) {
-                        c.cost = 0;
-                        c.costForTurn = 0;
-                        c.isCostModified = true;
+                        c.freeToPlayOnce = true;
                         c.superFlash(Color.GOLD.cpy());
                     }
                 }
@@ -82,9 +81,7 @@ public class LoneWolfAction extends AbstractGameAction {
                 Iterator var4 = p.hand.group.iterator();
 
                 if (c.cost > 0) {
-                    c.cost = 0;
-                    c.costForTurn = 0;
-                    c.isCostModified = true;
+                    c.freeToPlayOnce = true;
                     c.superFlash(Color.GOLD.cpy());
                 }
 

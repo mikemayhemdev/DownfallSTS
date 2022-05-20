@@ -21,13 +21,11 @@
 },
 "hermit:AdaptPower": {
         "NAME": "适应",
-        "DESCRIPTIONS": ["At the end of your turn, you can Exhaust #b",
-                " card in your hand to gain #b6 Block per card.",
-                " cards in your hand to gain #b6 Block per card."]
+        "DESCRIPTIONS": ["你的回合结束时，可 #y消耗 #b", " 张手牌来获得 #b6 点 #y格挡 。", " 张手牌，每张提供 #b6 点 #y格挡 。"]
 },
 "hermit:Bruise": {
         "NAME": "瘀伤",
-        "DESCRIPTIONS": ["本回合内，目标额外受到 #b", " 点攻击伤害。 NL 每次攻击减少本效果 #b1 层。"]
+        "DESCRIPTIONS": ["本回合内，目标额外受到 #b", " 点攻击伤害。"]
 },
 "hermit:HorrorPower": {
         "NAME": "恐惧",
@@ -47,7 +45,7 @@
 },
 "hermit:Rugged": {
         "NAME": "坚固",
-        "DESCRIPTIONS": ["下 #b", " 次受到未被 #y格挡 的伤害时，将伤害降至 #y3 。", " 一次受到未被 #y格挡 的伤害时，将伤害降至 #y3 。"]
+        "DESCRIPTIONS": ["下 #b", " 次受到攻击伤害时，将生命损失降至 #b2 点。", " 次受到攻击伤害时，将生命损失降至 #b2 点。"]
 },
 "hermit:EternalPower": {
         "NAME": "永恒形态",
@@ -88,5 +86,9 @@
 "hermit:ReprievePower": {
         "NAME": "延缓死刑",
         "DESCRIPTIONS": ["额外获得 #b", " 回合。", " 回合。"]
+},
+"hermit:MaintenanceStrikePower": {
+        "NAME": "维护",
+        "DESCRIPTIONS": ["#y打击 额外造成 #b", " 点伤害。"]
 }
 }

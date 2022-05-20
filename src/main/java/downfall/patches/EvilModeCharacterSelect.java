@@ -29,6 +29,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import static downfall.downfallMod.crossoverCharacters;
+import static downfall.downfallMod.crossoverModCharacters;
 import static hermit.characters.hermit.Enums.HERMIT;
 
 public class EvilModeCharacterSelect {
@@ -126,7 +127,8 @@ public class EvilModeCharacterSelect {
 
             villains.addAll(Arrays.asList(villainOptions));
             villains.addAll(basegameOptions); //Will be empty if disabled
-            villains.addAll(moddedOptions);
+            if (crossoverModCharacters)
+                villains.addAll(moddedOptions);
 
             maxEvilSelectIndex = (int) Math.ceil(((float) villains.size() / 4)) - 1;
 

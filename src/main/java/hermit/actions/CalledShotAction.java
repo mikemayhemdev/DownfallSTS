@@ -60,7 +60,7 @@ public class CalledShotAction extends AbstractGameAction {
                     } else {
                         p.drawPile.group.remove(card);
                         p.drawPile.addToTop(card);
-                        this.addToBot(new DrawCardAction(1));
+                        this.addToTop(new DrawCardAction(1));
                     }
                 }
             }

@@ -46,7 +46,8 @@ public class Purgatory extends AbstractDynamicCard {
 
     private static final int COST = 3;
 
-    private static final int DAMAGE = 30;
+    private static final int DAMAGE = 24;
+    private static final int DAMAGE_UP = 6;
 
     // /STAT DECLARATION/
 
@@ -73,8 +74,7 @@ public class Purgatory extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.isEthereal = false;
-            rawDescription = UPGRADE_DESCRIPTION;
+            upgradeDamage(DAMAGE_UP);
             initializeDescription();
         }
     }

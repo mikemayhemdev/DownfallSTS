@@ -42,7 +42,8 @@ public class EternalForm extends AbstractDynamicCard {
 
     public EternalForm() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 1;
+        this.isEthereal = true;
         loadJokeCardImage(this, "eternal_form.png");
     }
 
@@ -60,7 +61,8 @@ public class EternalForm extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            rawDescription = UPGRADE_DESCRIPTION;
+            this.isEthereal = false;
             initializeDescription();
         }
     }

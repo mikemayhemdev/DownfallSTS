@@ -40,7 +40,7 @@ public class Gambit extends AbstractDynamicCard {
 
     public Gambit() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
         this.exhaust = true;
         loadJokeCardImage(this, "gambit.png");
     }

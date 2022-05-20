@@ -73,7 +73,7 @@ public class DeadOrAlive extends AbstractDynamicCard {
             p.getRelic("Chemical X").flash();
         }
         for (int i = 0; i < num; i++)
-        this.addToBot(new DeadOrAliveAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
+        this.addToBot(new DeadOrAliveAction(m,p, this));
 
         if (!this.freeToPlayOnce) {
             p.energy.use(EnergyPanel.totalCount);

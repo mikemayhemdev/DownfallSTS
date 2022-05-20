@@ -61,6 +61,7 @@ import java.util.function.Predicate;
 
 import static com.megacrit.cardcrawl.cards.AbstractCard.CardType.*;
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
+import static downfall.downfallMod.sneckoNoModCharacters;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
@@ -99,6 +100,7 @@ public class SneckoMod implements
     public static Random identifyRng;
 
     public static ArrayList<AbstractCard.CardColor> validColors = new ArrayList<>();
+    public static ArrayList<String> allowedColors = new ArrayList<>(Arrays.asList("RED", "BLUE", "GREEN", "PURPLE", "GUARDIAN", "SLIMEBOUND", "HEXA_GHOST_PURPLE", "THE_CHAMP_GRAY", "THE_BRONZE_AUTOMATON", "GREMLIN", "HERMIT_YELLOW"));
     public static ArrayList<UnknownClass> unknownClasses = new ArrayList<>();
     public static boolean pureSneckoMode = false;
 
@@ -485,7 +487,7 @@ public class SneckoMod implements
         }
         validColors.clear();
         for (AbstractCard.CardColor c : AbstractCard.CardColor.values()) {
-            if (c != AbstractCard.CardColor.CURSE && c != AbstractCard.CardColor.COLORLESS)
+            if (c != AbstractCard.CardColor.CURSE && c != AbstractCard.CardColor.COLORLESS && (!sneckoNoModCharacters || allowedColors.contains(c.name())))
                 validColors.add(c);
         }
         OffclassHelper.updateAllUnknownReplacements();
@@ -502,7 +504,7 @@ public class SneckoMod implements
     public static int choosingCharacters = -1;
 
     public static CardGroup colorChoices;
-
+    
     public static String getClassFromColor(AbstractCard.CardColor c) {
         for (AbstractPlayer p : CardCrawlGame.characterManager.getAllCharacters()) {
             if (p.getCardColor() == c) {
@@ -535,7 +537,7 @@ public class SneckoMod implements
             choosingCharacters = 0;
             colorChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for (AbstractCard.CardColor r : AbstractCard.CardColor.values()) {
-                if (r != AbstractCard.CardColor.CURSE && r != AbstractDungeon.player.getCardColor() && r != AbstractCard.CardColor.COLORLESS && r != CardColorEnumPatch.CardColorPatch.BOSS) {
+                if (r != AbstractCard.CardColor.CURSE && r != AbstractDungeon.player.getCardColor() && r != AbstractCard.CardColor.COLORLESS && r != CardColorEnumPatch.CardColorPatch.BOSS && (!sneckoNoModCharacters || allowedColors.contains(r.name()))) {
                     String s = getClassFromColor(r);
                     AbstractCard q = playerStartCardForEventFromColor(r);
                     String[] strings = CardCrawlGame.languagePack.getUIString("sneckomod:AtGameStart").TEXT;
