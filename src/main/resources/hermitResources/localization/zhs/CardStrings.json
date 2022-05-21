@@ -207,7 +207,8 @@
   },
   "hermit:EternalForm": {
     "NAME": "永恒形态",
-    "DESCRIPTION": "回合开始时不获得 [E] ，但前 !M! 张牌不耗能。"
+    "DESCRIPTION": "虚无 。 NL 回合开始时，本回合降低所有手牌的耗能1点。",
+    "UPGRADE_DESCRIPTION": "回合开始时，本回合降低所有手牌的耗能1点。"
   },
   "hermit:FullyLoaded": {
     "NAME": "整装待发",
