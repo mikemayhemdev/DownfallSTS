@@ -21,9 +21,9 @@
 },
 "hermit:AdaptPower": {
         "NAME": "Adaptation",
-        "DESCRIPTIONS": ["At the end of your turn, you can Exhaust #b",
-                " card in your hand to gain #b6 Block per card.",
-                " cards in your hand to gain #b6 Block per card."]
+        "DESCRIPTIONS": ["Au début de votre tour, vous pouvez Épuiser #b",
+                " carte dans votre main pour gagner #b8 d'Armure par carte.",
+                " cartes dans votre main pour gagner #b8 d'Armure par carte."]
 },
 "hermit:Bruise": {
         "NAME": "Meurtri",
@@ -51,7 +51,7 @@
 },
 "hermit:EternalPower": {
         "NAME": "Pouvoir éternel",
-        "DESCRIPTIONS": ["Vous pouvez jouez #b", " carte supplémentaire gratuitement ce tour.", " cartes supplémentaires gratuitement ce tour.", "Vous êtes à court de cartes gratuites."]
+        "DESCRIPTIONS": ["Au début de votre tour, réduisez le coût de toutes les cartes de votre main de #b","."]
 },
 "hermit:OverwhelmingPowerPower": {
         "NAME": "Puissance écrasante",
