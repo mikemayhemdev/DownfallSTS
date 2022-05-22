@@ -14,6 +14,7 @@ public class Premonition extends AbstractHexaCard {
     public Premonition() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.exhaust = true;
+        HexaMod.loadJokeCardImage(this, "Premonition.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

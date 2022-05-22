@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import sneckomod.SneckoMod;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class FocusedDefense extends AbstractChampCard {
 
     public final static String ID = makeID("FocusedDefense");
@@ -24,6 +26,7 @@ public class FocusedDefense extends AbstractChampCard {
         tags.add(ChampMod.OPENER);
         tags.add(ChampMod.OPENERBERSERKER);
         postInit();
+        loadJokeCardImage(this, "BobAndWeave.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

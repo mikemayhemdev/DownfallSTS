@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 
 public class Firestarter extends AbstractHexaCard {
     public final static String ID = makeID("Firestarter");
@@ -13,6 +14,7 @@ public class Firestarter extends AbstractHexaCard {
         baseDamage = 6;
         baseBurn = burn = 6;
         isMultiDamage = true;
+        HexaMod.loadJokeCardImage(this, "Firestarter.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
