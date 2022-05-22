@@ -9,11 +9,11 @@
   },
   "hermit:Snapshot": {
     "NAME": "Snapshot",
-    "DESCRIPTION": "Infligez !D! dégâts. hermit:Dans_Le_Mille: Gagnez !B! d'Armure."
+    "DESCRIPTION": "Infligez !D! dégâts. hermit:Dans_Le_Mille: Gagnez autant d'Armure que de dégâts non-bloqués."
   },
   "hermit:Desperado": {
     "NAME": "Desperado",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez !M! de Fragilité."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Doublez les dégâts de cette carte pour le combat. Elle coûte 1 [E] en plus."
   },
   "hermit:Headshot": {
     "NAME": "Headshot",
@@ -39,7 +39,7 @@
   },
   "hermit:BodyArmor": {
     "NAME": "Gilet pare-balles",
-    "DESCRIPTION": "Défaussez une carte. NL Gagnez !B! d'Armure. NL Si c'était une Compétence, gagnez !B! d'Armure supplémentaire."
+    "DESCRIPTION": "Défaussez une carte. NL Gagnez !B! d'Armure. NL Si cette carte n'était pas une Attaque, gagnez !B! d'Armure supplémentaire."
   },
   "hermit:Snipe": {
     "NAME": "Snipe",
@@ -63,8 +63,7 @@
   },
   "hermit:Purgatory": {
     "NAME": "Purgatoire",
-    "DESCRIPTION": "Éthérée. NL Infligez !D! dégâts à TOUS les ennemis.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis."
+    "DESCRIPTION": "Éthérée. NL Infligez !D! dégâts à TOUS les ennemis."
   },
   "hermit:ShadowCloak": {
     "NAME": "Cape obscure",
@@ -77,7 +76,7 @@
   },
   "hermit:Gambit": {
     "NAME": "Sacrifice",
-    "DESCRIPTION": "Mettez !M! Attaques aléatoires de votre défausse vers votre main. Épuisement."
+    "DESCRIPTION": "Mettez !M! Attaques aléatoires de votre défausse vers votre main. Elles coûtent 1 [E] de moins pour ce tour. NL Épuisement."
   },
   "hermit:Roughhouse": {
     "NAME": "Chahut",
@@ -97,7 +96,7 @@
   },
   "hermit:Adapt": {
     "NAME": "Adaptation",
-    "DESCRIPTION": "À la fin de votre tour, vous pouvez Épuiser une carte pour gagner 6 d'Armure."
+    "DESCRIPTION": "Au début de votre tour, vous pouvez Épuiser une carte pour gagner 8 d'Armure."
   },
   "hermit:Dive": {
     "NAME": "Plongée",
@@ -119,7 +118,7 @@
   "hermit:Glare": {
     "NAME": "Regard Médusant",
     "DESCRIPTION": "Appliquez !M! de Faiblesse et de Vulnérabilité.",
-    "UPGRADE_DESCRIPTION": "Appliquez !M! de Faiblesse et !hermit:SecondMagic! de Vulnérabilité."
+    "UPGRADE_DESCRIPTION": "Retenue. Appliquez !M! de Faiblesse et de Vulnérabilité."
   },
   "hermit:TakeCover": {
     "NAME": "À couvert",
@@ -204,12 +203,12 @@
   },
   "hermit:Maintenance": {
     "NAME": "Maintenance",
-    "DESCRIPTION": "Vos *Frappes infligent !M! dégâts suuplémentaires.",
-    "UPGRADE_DESCRIPTION": "Vos *Frappes infligent !M! dégâts suuplémentaires. NL Gagnez 1 de Dextérité."
-  },
+    "DESCRIPTION": "Vos *Frappes infligent !M! dégâts suuplémentaires. NL Gagnez !hermit:secondMagic! de Dextérité. NL Cette carte coûte 1 [E] de plus ce combat."
+   },
   "hermit:EternalForm": {
     "NAME": "Forme éternelle",
-    "DESCRIPTION": "Vos !M! premières cartes chaque tour coûtent 0. NL Ne gagnez pas d'[E] au début du tour."
+    "DESCRIPTION": "Éthérée. NL Au début de votre tour, réduisez le coût de toutes les cartes dans votre main de 1 pour ce tour.",
+    "UPGRADE_DESCRIPTION": "Au début de votre tour, réduisez le coût de toutes les cartes dans votre main de 1 pour ce tour."
   },
   "hermit:FullyLoaded": {
     "NAME": "Pleine charge",
@@ -243,7 +242,7 @@
   },
   "hermit:LoneWolf": {
     "NAME": "Loup solitaire",
-    "DESCRIPTION": "Choisissez une carte. NL Elle coûte 0 ce combat. NL Défaussez le reste de votre main. NL Épuisement."
+    "DESCRIPTION": "Choisissez une carte. NL Elle coûte 0 pour ce tour. NL Défaussez le reste de votre main."
   },
   "hermit:HighNoon": {
     "NAME": "Midi",
@@ -251,10 +250,7 @@
   },
   "hermit:Reprieve": {
     "NAME": "Sursis",
-    "DESCRIPTION": "Épuisez TOUTES vos *Malédictions. NL Si vous épuisez au moins 13 *Malédictions, jouez un tour supplémentaire après celui-ci.",
-    "EXTENDED_DESCRIPTION": [
-      "Je n'ai pas de Malédictions."
-    ]
+    "DESCRIPTION": "Éthérée. NL Soignez-vous de !M! PV. NL Épuisement."
   },
   "hermit:TakeAim": {
     "NAME": "Ciblage",
@@ -327,5 +323,9 @@
   "hermit:Virtue": {
     "NAME": "Vertu",
     "DESCRIPTION": "Retenue. NL Réduisez chacun de vos débuffs de !M!."
+  },
+  "hermit:BossMaintenance": {
+    "NAME": "Entretien",
+    "DESCRIPTION": "Vos *Frappes infligent !M! dégâts supplémentaires ce combat. NL Gagnez 2 de Dexterité. NL Cette carte coûte 1 [E] de plus ce combat."
   }
 }

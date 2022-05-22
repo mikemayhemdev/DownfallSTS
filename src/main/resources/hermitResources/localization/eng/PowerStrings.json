@@ -21,7 +21,7 @@
 },
 "hermit:AdaptPower": {
         "NAME": "Adapt",
-        "DESCRIPTIONS": ["At the start of your turn, #yExhaust up to #b", " card to gain #b6 Block." , " cards. Gain #b8 Block for each."]
+        "DESCRIPTIONS": ["At the start of your turn, #yExhaust up to #b", " card to gain #b8 Block." , " cards. Gain #b8 Block for each."]
 },
 "hermit:Bruise": {
         "NAME": "Bruised",

@@ -9,11 +9,11 @@
   },
   "hermit:Snapshot": {
     "NAME": "스냅샷",
-    "DESCRIPTION": "피해를 !D! 줍니다. hermit:정조준: 방어도를 !B! 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. hermit:정조준: 막히지 않은 피해와 동일한 양의 방어도를 획득합니다."
   },
   "hermit:Desperado": {
     "NAME": "무법자",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 손상을 !M! 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 전투 동안 이 카드의 피해량이 두 배로 증가합니다. 비용이 1 증가합니다."
   },
   "hermit:Headshot": {
     "NAME": "헤드샷",
@@ -39,7 +39,7 @@
   },
   "hermit:BodyArmor": {
     "NAME": "방탄복",
-    "DESCRIPTION": "카드를 1 장 버립니다. NL 방어도를 !B! 얻습니다. NL 버린 카드가 스킬 카드라면, 추가로 방어도를 !B! 얻습니다."
+    "DESCRIPTION": "카드를 1장 버립니다. NL 방어도를 !B! 얻습니다. NL 만약 공격 카드가 아니었을 경우, 방어도를 !B! 추가로 얻습니다."
   },
   "hermit:Snipe": {
     "NAME": "저격",
@@ -63,8 +63,7 @@
   },
   "hermit:Purgatory": {
     "NAME": "연옥",
-    "DESCRIPTION": "휘발성. NL 모든 적에게 피해를 !D! 줍니다.",
-    "UPGRADE_DESCRIPTION": "모든 적에게 피해를 !D! 줍니다."
+    "DESCRIPTION": "휘발성. NL 모든 적에게 피해를 !D! 줍니다."
   },
   "hermit:ShadowCloak": {
     "NAME": "그림자 망토",
@@ -77,7 +76,7 @@
   },
   "hermit:Gambit": {
     "NAME": "책략",
-    "DESCRIPTION": "버린 카드 더미에 있는 무작위 공격 카드 !M! 장을 손으로가져옵니다. 소멸."
+    "DESCRIPTION": "버린 카드 더미에서 내 손으로 무작위 공격 카드를 !M! 장 가져옵니다. 이번 턴 동안 그 카드들의 비용이 1 감소합니다. NL 소멸."
   },
   "hermit:Roughhouse": {
     "NAME": "난장판",
@@ -97,7 +96,7 @@
   },
   "hermit:Adapt": {
     "NAME": "적응",
-    "DESCRIPTION": "턴 종료 시, 카드를 소멸시켜 방어도를 6 얻을 수 있습니다."
+    "DESCRIPTION": "턴 시작 시, 카드를 소멸시키고 방어도를 6 얻을 수 있습니다."
   },
   "hermit:Dive": {
     "NAME": "급하강",
@@ -119,7 +118,7 @@
   "hermit:Glare": {
     "NAME": "응시",
     "DESCRIPTION": "약화와 취약을 !M! 부여합니다.",
-    "UPGRADE_DESCRIPTION": "약화를 !M! 부여하고 취약을 !hermit:SecondMagic! 부여합니다."
+    "UPGRADE_DESCRIPTION": "보존. NL 약화와 취약을 !M! 부여합니다."
   },
   "hermit:TakeCover": {
     "NAME": "엄폐",
@@ -204,11 +203,12 @@
   },
   "hermit:Maintenance": {
     "NAME": "유지보수",
-    "DESCRIPTION": "힘을 2 얻습니다. NL 민첩을 2 얻습니다. NL 이 카드의 비용이 이번 전투동안 1 증가합니다."
+    "DESCRIPTION": "이번 전투 동안 *타격 의 피해량이 !M! 증가합니다. NL 민첩을 !hermit:SecondMagic! 얻습니다. NL 이번 전투 동안 비용이 1 증가합니다."
   },
   "hermit:EternalForm": {
     "NAME": "영겁의 형상",
-    "DESCRIPTION": "처음으로 사용하는 카드 !M! 장의 비용이 0이 됩니다. NL 턴 시작 시 [E] 를 얻을 수 없습니다."
+    "DESCRIPTION": "휘발성. NL 내 턴 시작 시, 손에 있는 모든 카드의 비용이 이번 턴 동안 1 감소합니다.",
+    "UPGRADE_DESCRIPTION": "내 턴 시작 시, 손에 있는 모든 카드의 비용이 이번 턴 동안 1 감소합니다."
   },
   "hermit:FullyLoaded": {
     "NAME": "장전 완료",
@@ -242,7 +242,7 @@
   },
   "hermit:LoneWolf": {
     "NAME": "외톨이",
-    "DESCRIPTION": "카드를 선택합니다. NL 그 카드의 비용이 이번 전투 동안 0이 됩니다. NL 다른 카드를 모두 버립니다. NL 소멸."
+    "DESCRIPTION": "카드를 1장 선택합니다. NL 그 카드의 비용이 이번 턴 동안 0이 됩니다. NL 손에 있는 다른 카드를 모두 버립니다."
   },
   "hermit:HighNoon": {
     "NAME": "정오",
@@ -250,10 +250,7 @@
   },
   "hermit:Reprieve": {
     "NAME": "집행유예",
-    "DESCRIPTION": "모든 *저주 를 소멸시킵니다. NL *저주 를 !M! 개 이상 소멸시켰을 경우, 이후 추가로 턴을 진행합니다.",
-    "EXTENDED_DESCRIPTION": [
-      "저주가 없어."
-    ]
+    "DESCRIPTION": "휘발성. NL 체력을 !M! 회복합니다. NL 소멸."
   },
   "hermit:TakeAim": {
     "NAME": "겨냥",
@@ -326,9 +323,5 @@
   "hermit:Virtue": {
     "NAME": "선행",
     "DESCRIPTION": "보존. NL 나에게 걸린 모든 해로운 효과를 !M! 씩 낮춥니다."
-  },
-  "hermit:BossMaintenance": {
-    "NAME": "유지보수",
-    "DESCRIPTION": "힘을 2 얻습니다. NL 민첩을 2 얻습니다. NL 이 카드의 비용이 이번 전투동안 1 증가합니다."
   }
 }
