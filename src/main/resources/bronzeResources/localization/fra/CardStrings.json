@@ -93,8 +93,8 @@
   },
   "bronze:DelayedSlice": {
     "NAME": "Robo-Tranche",
-    "DESCRIPTION": "Infigez !D! dégâts. NL Au prochain tour, piochez !M! carte supplémentaire",
-    "UPGRADE_DESCRIPTION": "Infigez !D! dégâts. NL Au prochain tour, piochez !M! carte supplémentaires",
+    "DESCRIPTION": "Infigez !D! dégâts. NL Au prochain tour, piochez !M! carte supplémentaire.",
+    "UPGRADE_DESCRIPTION": "Infigez !D! dégâts. NL Au prochain tour, piochez !M! carte supplémentaires.",
     "EXTENDED_DESCRIPTION": [
       "delayed",
       "Slice"
@@ -134,7 +134,7 @@
   },
   "bronze:CutThrough": {
     "NAME": "Couper à travers",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Scrutez !M!. NL bronze:Compilation - Piochez !bauto! cartes.",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Scrutez !M!. NL bronze:Compilation - Piochez !bauto! carte.",
     "EXTENDED_DESCRIPTION": [
       "cutting",
       "Cut"
