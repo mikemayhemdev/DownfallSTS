@@ -21,7 +21,7 @@
 },
 "hermit:AdaptPower": {
         "NAME": "适应",
-        "DESCRIPTIONS": ["你的回合结束时，可 #y消耗 #b", " 张手牌来获得 #b6 点 #y格挡 。", " 张手牌，每张提供 #b6 点 #y格挡 。"]
+        "DESCRIPTIONS": ["你的回合开始时，可 #y消耗 #b", " 张手牌来获得 #b8 点 #y格挡 。", " 张手牌，每张提供 #b8 点 #y格挡 。"]
 },
 "hermit:Bruise": {
         "NAME": "瘀伤",
@@ -49,7 +49,7 @@
 },
 "hermit:EternalPower": {
         "NAME": "永恒形态",
-        "DESCRIPTIONS": ["本回合你可以 #b0 耗能再打出 #b", " 张牌。", " 张牌。", "0耗能出牌次数已用尽。"]
+        "DESCRIPTIONS": ["你的回合开始时，降低所有手牌的耗能 #b", " 点。"]
 },
 "hermit:OverwhelmingPowerPower": {
         "NAME": "压倒性力量",

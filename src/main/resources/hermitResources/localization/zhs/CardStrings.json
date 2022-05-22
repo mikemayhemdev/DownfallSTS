@@ -9,11 +9,11 @@
   },
   "hermit:Snapshot": {
     "NAME": "狙杀",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 ：获得 !B! 点 格挡 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 ：获得未被*格挡伤害点 格挡 。"
   },
   "hermit:Desperado": {
     "NAME": "法外狂徒",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 层 脆弱 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗伤害翻倍，且耗能加1。"
   },
   "hermit:Headshot": {
     "NAME": "爆头",
@@ -39,7 +39,7 @@
   },
   "hermit:BodyArmor": {
     "NAME": "全身护甲",
-    "DESCRIPTION":"丢弃一张手牌。 NL 获得 !B! 点 格挡 。 NL 若丢弃一张 *技能牌 ，额外获得 !B! 点。"
+    "DESCRIPTION":"丢弃一张手牌。 NL 获得 !B! 点 格挡 。 NL 若丢弃一张 *非攻击 牌 ，再获得 !B! 点。"
   },
   "hermit:Snipe": {
     "NAME": "狙击",
@@ -63,8 +63,7 @@
   },
   "hermit:Purgatory": {
     "NAME": "炼狱",
-    "DESCRIPTION": "虚无 。 NL 对所有敌人造成 !D! 点伤害。",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。"
+    "DESCRIPTION": "虚无 。 NL 对所有敌人造成 !D! 点伤害。"
   },
   "hermit:ShadowCloak": {
     "NAME": "暗影斗篷",
@@ -77,7 +76,7 @@
   },
   "hermit:Gambit": {
     "NAME": "开场白",
-    "DESCRIPTION": "随机将弃牌堆中 !M! 张攻击牌加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "随机将弃牌堆中 !M! 张攻击牌加入手牌。 NL 其耗能本回合减1。 NL 消耗 。"
   },
   "hermit:Roughhouse": {
     "NAME": "锁喉",
@@ -97,7 +96,7 @@
   },
   "hermit:Adapt": {
     "NAME": "适应",
-    "DESCRIPTION": "回合结束时，可 消耗 一张手牌来获得6点 格挡 。"
+    "DESCRIPTION": "回合开始时，可 消耗 一张手牌来获得8点 格挡 。"
   },
   "hermit:Dive": {
     "NAME": "深潜",
@@ -119,7 +118,7 @@
   "hermit:Glare": {
     "NAME": "凝视",
     "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 给予 !M! 层 易伤 。",
-    "UPGRADE_DESCRIPTION": "给予 !M! 层 虚弱 。 NL 给予 !hermit:SecondMagic! 层 易伤 。"
+    "UPGRADE_DESCRIPTION": "保留 。 NL 给予 !M! 层 虚弱 。 NL 给予 !M! 层 易伤 。"
   },
   "hermit:TakeCover": {
     "NAME": "快找掩护",
@@ -204,12 +203,12 @@
   },
   "hermit:Maintenance": {
     "NAME": "维护",
-    "DESCRIPTION": "获得 2 点 力量 。 NL 获得 2 点 敏捷 。 NL 本场战斗耗能增加 1 点。",
-    "UPGRADE_DESCRIPTION": " *打击 额外造成 !M! 点伤害。 NL 获得1点 敏捷 。"
+    "DESCRIPTION": "*打击 额外造成 !M! 点伤害。 NL 获得 !hermit:SecondMagic! 点 敏捷 。 NL 本场战斗耗能加1。"
   },
   "hermit:EternalForm": {
     "NAME": "永恒形态",
-    "DESCRIPTION": "回合开始时不获得 [E] ，但前 !M! 张牌不耗能。"
+    "DESCRIPTION": "虚无 。 NL 回合开始时，本回合降低所有手牌的耗能1点。",
+    "UPGRADE_DESCRIPTION": "回合开始时，本回合降低所有手牌的耗能1点。"
   },
   "hermit:FullyLoaded": {
     "NAME": "整装待发",
@@ -243,7 +242,7 @@
   },
   "hermit:LoneWolf": {
     "NAME": "孤狼",
-    "DESCRIPTION": "选择一张手牌。 NL 本场战斗其耗能为0。 NL 丢弃其他手牌。 NL 消耗 。  "
+    "DESCRIPTION": "选择一张手牌。 NL 本回合其耗能为0。 NL 丢弃其他手牌。"
   },
   "hermit:HighNoon": {
     "NAME": "午时已到",
@@ -251,10 +250,7 @@
   },
   "hermit:Reprieve": {
     "NAME": "延缓死刑",
-    "DESCRIPTION": "消耗 所有 诅咒 。 NL 若至少 消耗 !M! 张， NL 额外获得一回合。",
-    "EXTENDED_DESCRIPTION": [
-      "我没有诅咒牌。"
-    ]
+    "DESCRIPTION": "虚无 。 NL 回复 !M! 点生命。 NL 消耗 。"
   },
   "hermit:TakeAim": {
     "NAME": "举枪瞄准",
@@ -327,5 +323,9 @@
   "hermit:Virtue": {
     "NAME": "高尚",
     "DESCRIPTION": "保留 。 NL 失去所有负面效果 !M! 层。"
+  },
+  "hermit:BossMaintenance": {
+    "NAME": "维护",
+    "DESCRIPTION": "*打击 额外造成 !M! 点伤害。 NL 获得2点 敏捷 。 NL 本场战斗耗能加1。"
   }
 }
