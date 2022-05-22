@@ -154,7 +154,7 @@
   },
   "champ:EnchantShield": {
     "NAME": "Enchantement de Bouclier",
-    "DESCRIPTION": "champ:Choisissez une carde dans votre main. Augmentez son Armure de !M! pour ce combat. NL Épuisement.",
+    "DESCRIPTION": "Choisissez une carte en main. Augmentez son Armure de !M! pour ce combat. NL Épuisement.",
     "EXTENDED_DESCRIPTION": [
       "Un mauvais moment pour cette carte."
     ]
