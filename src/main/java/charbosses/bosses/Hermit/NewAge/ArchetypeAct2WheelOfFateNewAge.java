@@ -63,7 +63,7 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         mockDeck.add(strik2);
 
         mockDeck.add(new EnDefendHermit());
-        mockDeck.add(new EnHighCaliber());
+        mockDeck.add(new EnHeadshot());
         AbstractCard wide = new EnWideOpen();
         wide.upgrade();
         mockDeck.add(wide);

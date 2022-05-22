@@ -20,7 +20,8 @@ public class EnHighCaliber extends AbstractHermitBossCard {
 
     public EnHighCaliber() {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/high_caliber.png", 1, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
-        this.baseDamage = 8;
+        this.baseDamage = 12;
+        exhaust = true;
     }
 
     @Override
