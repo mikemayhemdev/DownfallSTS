@@ -69,9 +69,9 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
                     turn++;
                     break;
                 case 1:
+                    addToList(cardsList, new EnStrikeHermit());
                     addToList(cardsList, new EnItchyTrigger());
                     addToList(cardsList, new EnItchyTriggerStrikeHermit());
-                    addToList(cardsList, new EnInjury());
                     turn++;
                     break;
                 case 2:
