@@ -67,8 +67,8 @@
     "NAME": "Médaillon agrafé",
     "FLAVOR": "Il ne veut plus s'ouvrir à présent.",
     "DESCRIPTIONS": [
-      "Remplace #yVieux #yMédaillon. Au début de chaque combat, gagnez [E] pour chaque #rMalédiction dans votre deck. Lorsque vous la récupérez, obtenez #b2 #rBlessures.",
-      "Plus Jamais..."
+      "Remplace #yVieux #yMédaillon. La première fois que vous piochez une Malédiction chaque tour, #yÉpuisez-la et piochez #b2 cartes. Lorsque vous la récupérez, obtenez #b2 #rBlessures.",
+      "Plus jamais..."
     ]
   },
   "hermit:StraightRazor": {
