@@ -21,7 +21,7 @@
 },
 "hermit:AdaptPower": {
         "NAME": "적응",
-        "DESCRIPTIONS": ["턴 종료 시 최대 #b", " 장의 카드를 #y소멸시켜 방어도를 #b6 획득할 수 있습니다.", " 장의 카드를 #y소멸시킵니다. 소멸된 카드 1장당 방어도를 #b6 얻습니다."]
+        "DESCRIPTIONS": ["매 턴 시작 시, 최대 #b", " 장의 카드를 #y소멸시켜 #b6 의 방어도를 얻습니다." , " 장의 카드를 #y소멸시켜 #b6 의 방어도를 얻습니다."]
 },
 "hermit:Bruise": {
         "NAME": "타박상",
@@ -45,7 +45,7 @@
 },
 "hermit:EternalPower": {
         "NAME": "영원의 힘",
-        "DESCRIPTIONS": ["이번 턴 동안 #b", " 장의 카드를 무료로 사용할 수 있습니다.", " 장의 카드를 무료로 사용할 수 있습니다.", "더 이상 무료로 사용할 수 없습니다."]
+        "DESCRIPTIONS": ["내 턴 시작 시, 손에 있는 모든 카드의 비용을 #b", " 만큼 낮춥니다."]
 },
 "hermit:OverwhelmingPowerPower": {
         "NAME": "압도적인 힘",
