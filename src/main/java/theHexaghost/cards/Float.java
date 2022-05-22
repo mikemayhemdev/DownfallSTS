@@ -24,6 +24,7 @@ public class Float extends AbstractHexaCard implements OctopusCard {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        HexaMod.loadJokeCardImage(this, "Float.png");
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {

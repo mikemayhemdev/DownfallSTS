@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import automaton.powers.DefaultPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -19,6 +20,7 @@ public class ClassDefault extends AbstractBronzeCard {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
        // this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("ClassDefault.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

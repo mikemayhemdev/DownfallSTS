@@ -21,6 +21,7 @@ public class SpaghettiCode extends AbstractBronzeCard {
     public SpaghettiCode() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
+        AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("SpaghettiCode.png"));
     }
 
     public static AbstractCard getRandomEncodeWithCost(int cost) {

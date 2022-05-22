@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -25,6 +26,7 @@ public class Virus extends AbstractBronzeCard {
         baseDamage = DAMAGE;
         cardsToPreview = new MinorBeam();
         selfRetain = true;
+        AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("Virus.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

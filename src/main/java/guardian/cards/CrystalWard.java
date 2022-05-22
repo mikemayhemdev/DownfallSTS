@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.powers.PolishPower;
 import guardian.GuardianMod;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class CrystalWard extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("CrystalWard");
@@ -56,7 +58,7 @@ public class CrystalWard extends AbstractGuardianCard {
         updateDescription();
         loadGemMisc();
 
-
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("CrystalWard.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

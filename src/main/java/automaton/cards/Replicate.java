@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.cardmods.EncodeAndShuffleMod;
 import automaton.cardmods.EncodeMod;
 import basemod.helpers.CardModifierManager;
@@ -21,6 +22,7 @@ public class Replicate extends AbstractBronzeCard {
         super(ID, 0, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         thisEncodes();
+        AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("Replicate.png"));
     }
 
     @Override
