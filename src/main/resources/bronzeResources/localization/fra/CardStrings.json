@@ -265,7 +265,7 @@
   },
   "bronze:Flail": {
     "NAME": "Fléau",
-    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis !bauto! fois. NL bronze:Compilation - Gagnez !M! d'Artéfact.",
+    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis !bauto! fois. NL Gagnez !M! d'Artéfact. NL Épuisement.",
     "EXTENDED_DESCRIPTION": [
       "flailing",
       "Flail"
@@ -314,7 +314,7 @@
   },
   "bronze:CloningBeam": {
     "NAME": "Conflit fusionnel",
-    "DESCRIPTION": "Infligez !D! dégâts. NL La prochaine fois que vous bronze:Encodez une carte, bronze:Encodez une copie de celle-ci. NL Épuisment.",
+    "DESCRIPTION": "Infligez !D! dégâts. NL La prochaine fois que vous bronze:Encodez une carte, bronze:Encodez une copie de celle-ci. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL La prochaine fois que vous bronze:Encodez une carte, bronze:Encodez une copie de celle-ci."
   },
   "bronze:FollowUp": {

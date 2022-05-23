@@ -31,7 +31,7 @@
     "NAME": "Bâton de chef",
     "FLAVOR": "Au sein des bandes de Diablotins, celui qui possède la meilleure corne exerce un contrôle total sur la troupe, jusqu'à ce qu'un autre parvienne à la voler.",
     "DESCRIPTIONS": [
-      "Au début de chaque combat, gagnez [E], piochez #b1 carte, et #yPermutez au prochain Diablotin."
+      "Au début de chaque combat, gagnez [E] , piochez #b1 carte, et #yPermutez au prochain Diablotin."
     ]
   },
   "Gremlin:GremlinKnobUpgrade": {
@@ -39,7 +39,7 @@
     "FLAVOR": "Plus le symbole du pouvoir est précieux, plus il est susceptible d'être volé.",
     "DESCRIPTIONS": [
       "Remplace ",
-      ". NL La première fois que vous mélangez votre pioche chaque tour, gagnez [E], piochez #b1 carte, et #yPermutez au prochain Diablotin."
+      ". NL La première fois que vous mélangez votre pioche chaque tour, gagnez [E] , piochez #b1 carte, et #yPermutez au prochain Diablotin."
     ]
   },
   "Gremlin:GremlinMask": {
