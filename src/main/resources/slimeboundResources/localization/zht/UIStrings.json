@@ -1,0 +1,15 @@
+{
+  "slimeboundConfigMenuText": {
+    "TEXT": [
+      "允許其他角色遇到史萊姆相關【遺物】",
+      "允許其他角色遇到史萊姆相關【藥水】",
+      "允許其他角色遇到史萊姆相關【事件】",
+      "解鎖全部內容（不推薦）"
+    ]
+  },
+    "slimeboundmod:CommandMod": {
+    "TEXT": [
+      " NL slimeboundmod:命令 。"
+    ]
+  }
+}

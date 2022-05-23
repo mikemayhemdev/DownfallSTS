@@ -1,0 +1,11 @@
+{
+  "downfall:CursedFountainPotion": {
+    "NAME": "詛咒泉水",
+    "DESCRIPTIONS": [
+      "給予 #b",
+      " 層 虛弱， #b",
+      " 層 易傷，並減少 ",
+      " 點 力量 。"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "champ:SealCommonReward": {
+    "TEXT": [
+      "將一張普通牌加入牌組。"
+    ]
+  },
+  "champ:SealSealReward": {
+    "TEXT": [
+      "將一張容器牌加入牌組。"
+    ]
+  },
+  "champ:TechniqueMod": {
+    "TEXT": [
+      " NL champ:戰術 。"
+    ]
+  },
+  "champ:OpenerMod": {
+    "TEXT": [
+      " NL 進入 champ:戰狂 。 ",
+      " NL 進入 champ:防守 。",
+      " NL 進入 *角鬥 。"
+    ]
+  },
+  "champ:RetainCardMod": {
+    "TEXT": [
+      "保留 。 NL "
+    ]
+  },
+  "champ:EnchantUI": {
+    "TEXT": [
+      "選擇一張牌耗能變為0",
+      "選擇一張牌提高傷害",
+      "選擇一張牌提高格擋"
+    ]
+  }
+}

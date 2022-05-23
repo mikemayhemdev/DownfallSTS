@@ -1,0 +1,37 @@
+[
+  {
+    "PROPER_NAME": "首領",
+    "NAMES": [
+      "首領"
+    ],
+    "DESCRIPTION": "每回合只能打出 #b1 張 #y首領 牌。"
+  },
+  {
+    "PROPER_NAME": "堅不可摧",
+    "NAMES": [
+      "堅不可摧"
+    ],
+    "DESCRIPTION": "你最多失去堅不可摧層數的生命。受到一回合的傷害後移除堅不可摧。如果已有本效果時再獲得它，額外生效一回合。"
+  },
+  {
+    "PROPER_NAME": "發掘",
+    "NAMES": [
+      "發掘"
+    ],
+    "DESCRIPTION": "將一張 #y消耗 堆的牌放入手牌。"
+  },
+  {
+    "PROPER_NAME": "取回",
+    "NAMES": [
+      "取回"
+    ],
+    "DESCRIPTION": "將一張 #y消耗 堆的牌放入棄牌堆。"
+  },
+  {
+    "PROPER_NAME": "鐐銬",
+    "NAMES": [
+      "鐐銬"
+    ],
+    "DESCRIPTION": "帶有 #y鐐銬 的單位本回合失去 #y力量 。"
+  }
+]
