@@ -1,3 +1,4 @@
+/*
 package hermit.patches;
 
 import basemod.devcommands.power.Power;
@@ -36,3 +37,4 @@ public class FreePlayPatch {
     }
 
 }
+*/

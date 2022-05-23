@@ -108,13 +108,6 @@ public class AdaptAction extends AbstractGameAction {
 
             CardCrawlGame.dungeon.checkForPactAchievement();
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
-
-            Iterator var1 = AbstractDungeon.player.hand.group.iterator();
-
-            while(var1.hasNext()) {
-                AbstractCard c = (AbstractCard)var1.next();
-                c.triggerOnEndOfTurnForPlayingCard();
-            }
         }
 
         this.tickDuration();
