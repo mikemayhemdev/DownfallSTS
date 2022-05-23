@@ -487,7 +487,7 @@ public class SneckoMod implements
         }
         validColors.clear();
         for (AbstractCard.CardColor c : AbstractCard.CardColor.values()) {
-            if (c != AbstractCard.CardColor.CURSE && c != AbstractCard.CardColor.COLORLESS && (!sneckoNoModCharacters || allowedColors.contains(c.name())))
+            if (c != AbstractCard.CardColor.CURSE && c != AbstractCard.CardColor.COLORLESS)
                 validColors.add(c);
         }
         OffclassHelper.updateAllUnknownReplacements();
