@@ -53,7 +53,7 @@
 },
 "hermit:Bounty": {
         "NAME": "현상금",
-        "DESCRIPTIONS": ["현재 현상금: "]
+        "DESCRIPTIONS": ["현재 현상금: #b"]
 },
 "hermit:Drained": {
         "NAME": "탈진",
