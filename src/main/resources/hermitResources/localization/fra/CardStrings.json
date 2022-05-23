@@ -20,7 +20,7 @@
     "DESCRIPTION": "Infligez !D! dégâts. NL hermit:Dans_Le_Mille: Infligez le double de dégâts."
   },
   "hermit:Quickdraw": {
-    "NAME": "Quickdraw",
+    "NAME": "Dégainer",
     "DESCRIPTION": "Infligez !D! dégâts. NL Piochez !M! cartes. NL Au prochain tour, piochez 1 carte en moins."
   },
   "hermit:WideOpen": {
@@ -44,7 +44,7 @@
   "hermit:Snipe": {
     "NAME": "Snipe",
     "DESCRIPTION": "Votre prochain effet hermit:Dans_Le_Mille se déclenche deux fois.",
-    "UPGRADE_DESCRIPTION": "hermit:Concentrate. NL Your next hermit:Dans_Le_Mille effect this turn triggers twice."
+    "UPGRADE_DESCRIPTION": "hermit:Concentrez-vous. NL Votre prochain effet hermit:Dans_Le_Mille se déclenche deux fois."
   },
   "hermit:CalledShot": {
     "NAME": "Tir contrôlé",
@@ -71,8 +71,8 @@
   },
   "hermit:FatalDesire": {
     "NAME": "Désir fatal",
-    "DESCRIPTION": "Au début de votre tour, piochez 2 cartes et ajouter une *Blessure à votre main.",
-    "UPGRADE_DESCRIPTION": "Inné. NL Au début de votre tour, piochez 2 cartes et ajouter une *Blessure à votre main."
+    "DESCRIPTION": "Au début de votre tour, piochez 2 cartes et ajoutez une *Blessure à votre main.",
+    "UPGRADE_DESCRIPTION": "Inné. NL Au début de votre tour, piochez 2 cartes et ajoutez une *Blessure à votre main."
   },
   "hermit:Gambit": {
     "NAME": "Sacrifice",
@@ -203,7 +203,7 @@
   },
   "hermit:Maintenance": {
     "NAME": "Maintenance",
-    "DESCRIPTION": "Vos *Frappes infligent !M! dégâts suuplémentaires. NL Gagnez !hermit:secondMagic! de Dextérité. NL Cette carte coûte 1 [E] de plus ce combat."
+    "DESCRIPTION": "Vos *Frappes infligent !M! dégâts suuplémentaires. NL Gagnez !hermit:SecondMagic! de Dextérité. NL Cette carte coûte 1 [E] de plus ce combat."
    },
   "hermit:EternalForm": {
     "NAME": "Forme éternelle",
