@@ -142,7 +142,7 @@
       "bronze_slime"
     ],
     "PROPER_NAME": "Slime de bronze",
-    "DESCRIPTION": "Inflige #b4 dégâts et vous confère #b4 #yd'Armure chaque tour."
+    "DESCRIPTION": "Inflige #b10 dégâts à TOUS les ennemis à chaque tour, mais saute une attaque sur deux."
   },
   {
     "NAMES": [
@@ -200,13 +200,13 @@
   },
   {
     "NAMES": [
-      "slime protecteur",
-      "slime_protecteur",
+      "slime hérissé",
+      "slime_hérissé",
       "protector slime",
       "protector_slime"
     ],
     "PROPER_NAME": "Slime hérissé",
-    "DESCRIPTION": "Inflige #b2 dégâts et vous confère #b #yd'Épines #yTemporaires chaque tour."
+    "DESCRIPTION": "Inflige #b4 dégâts et vous confère #b4 #yd'Épines #yTemporaires chaque tour."
   },
   {
     "NAMES": [
