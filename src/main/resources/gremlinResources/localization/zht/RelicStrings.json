@@ -1,0 +1,147 @@
+{
+  "Gremlin:ImpeccablePecs": {
+    "NAME": "完美胸肌",
+    "FLAVOR": "完美！",
+    "DESCRIPTIONS": [
+      "每當你獲得 #y力量 時，獲得等量 #y臨時生命 。每場戰鬥開始時獲得 #b1 點 #y力量 。"
+    ]
+  },
+  "Gremlin:FragmentationGrenade": {
+    "NAME": "破片手雷",
+    "FLAVOR": "沒人敢問這玩意地精到底是從哪裡搞來的。",
+    "DESCRIPTIONS": [
+      "對隨機敵人造成的傷害提高 #b",
+      " 點。"
+    ]
+  },
+  "Gremlin:GremlinBomb": {
+    "NAME": "地精炸彈",
+    "FLAVOR": "地精有察覺危險的能力。 有時這能讓他們劫後餘生。",
+    "DESCRIPTIONS": [
+      "當地精死亡時, 對所有敵人造成 #b",
+      " 點傷害。"
+    ]
+  },
+  "Gremlin:GremlinGravestone": {
+    "NAME": "地精墓碑",
+    "FLAVOR": "地精死後去了哪裡呢？",
+    "DESCRIPTIONS": [
+      "死亡的地精能在休息處復活（自由行動）。"
+    ]
+  },
+  "Gremlin:GremlinKnob": {
+    "NAME": "首領之角",
+    "FLAVOR": "在地精小隊這種，誰有這個角，誰就是首領。直到這玩意下一次被人偷走。",
+    "DESCRIPTIONS": [
+      "每場戰鬥開始時，獲得 [E] 並抽 #b1 張牌。 #ygremlin:切換 到下一隻地精。"
+    ]
+  },
+  "Gremlin:GremlinKnobUpgrade": {
+    "NAME": "首領之冠",
+    "FLAVOR": "標誌越華麗，越容易被偷走。",
+    "DESCRIPTIONS": [
+      "替換 ",
+      " 。 NL 每回合初次洗牌時，獲得 [E] 並抽 #b1 張牌。 #ygremlin:切換 到下一隻地精。"
+    ]
+  },
+  "Gremlin:GremlinMask": {
+    "NAME": "地精面具",
+    "FLAVOR": "地精暴民地位的標誌。",
+    "DESCRIPTIONS": [
+      "每場戰鬥開始時獲得 #b1 點 #y臨時 #y力量 。"
+    ]
+  },
+  "Gremlin:LeaderVoucher": {
+    "NAME": "領頭代付",
+    "FLAVOR": "欠一隻地精",
+    "DESCRIPTIONS": [
+      "你的回合開始時獲得 [E] 。 NL 拾起時， #r永久失去一名地精 。",
+      " NL #r（胖地精）",
+      " NL #r（地精法師）",
+      " NL #r（火大地精）",
+      " NL #r（持盾地精）",
+      " NL #r（卑鄙地精）"
+    ]
+  },
+  "Gremlin:MagicalMallet": {
+    "NAME": "魔槌",
+    "FLAVOR": "手柄翻倍加固。",
+    "DESCRIPTIONS": [
+      "每當你給予 #y虛弱 時，獲得 #b1 點 #y法力 。每回合最多 #b3 次。"
+    ]
+  },
+  "Gremlin:PricklyShields": {
+    "NAME": "多刺盾牌",
+    "FLAVOR": "地精可以找到任何殘片充當武器和鎧甲。有時候兩者都可以。",
+    "DESCRIPTIONS": [
+      "每當你獲得 #y格擋 時, 對隨機敵人造成 #b",
+      " 點傷害。"
+    ]
+  },
+  "Gremlin:ShortStature": {
+    "NAME": "小個子",
+    "FLAVOR": "身材小才不容易引起注意。",
+    "DESCRIPTIONS": [
+      "每場戰鬥首次地精死亡時，免死並回復到 #b75% 最大生命。",
+      "本場戰鬥已觸發。"
+    ]
+  },
+  "Gremlin:StolenMerchandise": {
+    "NAME": "被盜商品",
+    "FLAVOR": "「詛咒你，可惡的小偷！」",
+    "DESCRIPTIONS": [
+      "當你 #ygremlin:切換 地精 時, 隨機將一張無色牌的 #ygremlin:回響 加入你的手牌。 NL 每場戰鬥開始時，商人獲得 #b",
+      " 點 #y力量 。",
+      "這好嗎？這不好，小偷們！",
+      "你們這群膽小鬼！",
+      "貪婪的小地精們！"
+    ]
+  },
+  "Gremlin:SupplyScroll": {
+    "NAME": "支援捲軸",
+    "FLAVOR": "一份十分詳盡的關於地精暴徒武器裝甲素材的物品清單。",
+    "DESCRIPTIONS": [
+      "第三回合開始時， NL 將一張 #y支援捲軸 加入手牌。"
+    ]
+  },
+  "Gremlin:TagTeamwork": {
+    "NAME": "團隊協作",
+    "FLAVOR": "團隊合作讓夢想成真。",
+    "DESCRIPTIONS": [
+      "每當你抽到 #y配合 時，再抽一張牌。 NL 拾起時，將兩張 #y配合 加入牌組。"
+    ]
+  },
+  "Gremlin:WizardHat": {
+    "NAME": "巫師帽",
+    "FLAVOR": "配套的長袍早就不知道什麼時候被偷了。",
+    "DESCRIPTIONS": [
+      "每當你消耗 #ygremlin:法力 時，隨機移除一種負面效果。"
+    ]
+  },
+  "Gremlin:WizardStaff": {
+    "NAME": "法師杖",
+    "FLAVOR": "每個地精法師的驕傲和快樂，敵方法師經常想偷走這根法杖。",
+    "DESCRIPTIONS": [
+      " #ygremlin:法力 效果額外造成 #b7 點傷害 。"
+    ]
+  },
+  "Gremlin:WoundPoker": {
+    "NAME": "燒火棍",
+    "FLAVOR": "我這樣做會疼嗎？。",
+    "DESCRIPTIONS": [
+      "每回合結束時，被 #y虛弱 的敵人受到 #b",
+      " 點傷害。"
+    ]
+  },
+  "Gremlin:PatchFixes": {
+    "NAME": "",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "拾起時，將所有地精最大生命提高 #b",
+      "每當你將一張牌加入你的牌組，可以選擇提高所有地精 #b1 點最大生命。",
+      " #y金幣 。將所有地精最大生命提高 #b",
+      "每5場戰鬥結束，所有地精獲得 #b1 點最大生命。",
+      "+1 最大生命"
+    ]
+  }
+}

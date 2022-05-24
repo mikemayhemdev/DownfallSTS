@@ -1,0 +1,85 @@
+{
+  "downfall:ChangingTotem": {
+    "MOVES": [
+      "改變凝視"
+    ],
+    "NAME": "改變頭像",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:ForgetfulTotem": {
+    "MOVES": [
+      "忘卻注視"
+    ],
+    "NAME": "忘卻頭像",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:GrowingTotem": {
+    "MOVES": [
+      "成長射線"
+    ],
+    "NAME": "成長頭像",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:FleeingMerchant": {
+    "MOVES": [
+      "靈魂竊取"
+    ],
+    "NAME": "商人",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:LooterAlt": {
+    "MOVES": [
+    ],
+    "NAME": "搶劫的",
+    "DIALOG": [
+      "~餵，~ 你根本沒有錢！",
+      "@不——！@",
+      "你今天必死，蠢貨。"
+    ]
+  },
+  "downfall:MuggerAlt": {
+    "MOVES": [
+    ],
+    "NAME": "打劫的",
+    "DIALOG": [
+      "給它點教訓。",
+      "下輩子都忘不了的教訓！"
+    ]
+  },
+  "downfall:Fortification": {
+    "MOVES": [
+    ],
+    "NAME": "要塞",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomRed": {
+    "MOVES": [
+    ],
+    "NAME": "牛肝蕈",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomPurple": {
+    "MOVES": [
+    ],
+    "NAME": "紅汁乳菇",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomWhite": {
+    "MOVES": [
+    ],
+    "NAME": "塵菌",
+    "DIALOG": [
+    ]
+  }
+}

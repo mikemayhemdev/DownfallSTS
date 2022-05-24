@@ -1,0 +1,12 @@
+{
+  "expansioncontent:CannotUseBossCardMessage": {
+    "TEXT": [
+      "我本回合已經打出了首領牌！"
+    ]
+  },
+  "expansioncontent:BossCardTagName": {
+    "TEXT": [
+      "首領"
+    ]
+  }
+}

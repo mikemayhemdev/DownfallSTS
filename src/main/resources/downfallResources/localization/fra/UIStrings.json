@@ -143,5 +143,15 @@
     "TEXT": [
       "Munitions"
     ]
+  },
+  "downfall:MainMenuAd": {
+    "TEXT": [
+      "Want More?",
+      "Many more mods, including",
+      "Downfall, are available for ",
+      "base Slay the Spire on",
+      "Steam Workshop.",
+      "Click here to learn how!"
+    ]
   }
 }

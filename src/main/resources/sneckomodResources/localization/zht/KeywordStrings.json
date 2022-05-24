@@ -1,0 +1,26 @@
+[
+  {
+    "PROPER_NAME": "蛇證",
+    "NAMES": [
+      "蛇證"
+    ],
+    "DESCRIPTION": "不受 #y混亂 和 #y混淆 影響。"
+  },
+  {
+    "PROPER_NAME": "混淆",
+    "NAMES": [
+      "混淆",
+      "muddle",
+      "muddled"
+    ],
+    "DESCRIPTION": "將一張牌的耗能本回合變為 #b0 ~ #b3 。"
+  },
+  {
+    "PROPER_NAME": "異色牌",
+    "NAMES": [
+      "異色",
+      "offclass"
+    ],
+    "DESCRIPTION": "異蛇牌池以外的所有可獲得牌。（包括 #y詛咒 和 #y狀態牌 等）"
+  }
+]
