@@ -14,7 +14,7 @@
   },
   "bronze:EncodeAndShuffleMod": {
     "TEXT": [
-      " NL bronze:編碼 。 NL 將這張牌的複製品加入你的棄牌堆"
+      " NL bronze:編碼 。 NL 將這張牌的復製品加入你的棄牌堆"
     ]
   },
   "bronze:DoublePlayModifier": {
@@ -41,7 +41,8 @@
       " bronze:編譯 ",
       " NL bronze:編碼 。",
       " bronze:編碼 。 NL ",
-      " π bronze:編碼 。 NL "
+      " π NL bronze:編碼 時",
+      "LOCALIZATION NOTE: 上方文本需和副本最後一行一致。"
     ]
   },
   "bronze:CompileDisplayPanel": {

@@ -9,11 +9,11 @@
   },
   "hermit:Snapshot": {
     "NAME": "狙杀",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 ：获得未被*格挡伤害点 格挡 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 ：获得未被 *格 *挡 伤害点 格挡 。"
   },
   "hermit:Desperado": {
     "NAME": "法外狂徒",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗伤害翻倍，且耗能加1。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗伤害翻倍， NL 且耗能加1。"
   },
   "hermit:Headshot": {
     "NAME": "爆头",
@@ -84,7 +84,7 @@
   },
   "hermit:Malice": {
     "NAME": "怨恨",
-    "DESCRIPTION": "消耗 一张手牌。 NL 造成 !D! 点伤害。 NL 若 消耗 诅咒 ，则对所有敌人造成伤害。"
+    "DESCRIPTION": "消耗 一张手牌。 NL 造成 !D! 点伤害。 NL 若 消耗 一张 诅咒 ，则对所有敌人造成伤害。"
   },
   "hermit:Deadeye": {
     "NAME": "死神之眼",
@@ -96,7 +96,7 @@
   },
   "hermit:Adapt": {
     "NAME": "适应",
-    "DESCRIPTION": "回合开始时，可 消耗 一张手牌来获得8点 格挡 。"
+    "DESCRIPTION": "回合开始时，可 消耗 1张牌来获得8点 格挡 。"
   },
   "hermit:Dive": {
     "NAME": "深潜",
@@ -108,7 +108,7 @@
   },
   "hermit:Roulette": {
     "NAME": "轮转",
-    "DESCRIPTION": "随机造成 !D! 点伤害。 NL 丢弃其他手牌并抽等量的牌。"
+    "DESCRIPTION": "随机造成 !D! 点伤害。 NL 丢弃其他手牌。 NL 抽等量的牌。"
   },
   "hermit:Midnight": {
     "NAME": "午夜时分",
@@ -167,7 +167,7 @@
   },
   "hermit:LowProfile": {
     "NAME": "低姿态",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每有一种负面效果，额外获得 !M! 点 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每有一种负面效果， NL 额外获得 !M! 点 格挡 。"
   },
   "hermit:Horror": {
     "NAME": "恐惧",
@@ -191,7 +191,7 @@
   },
   "hermit:Combo": {
     "NAME": "连击",
-    "DESCRIPTION": "触发 hermit:精准 效果时，随机获得一张 hermit:精准 牌。"
+    "DESCRIPTION": "触发 hermit:精准 效果时， NL 随机获得一张 hermit:精准 牌。"
   },
   "hermit:BigShot": {
     "NAME": "冒烟枪管",
@@ -199,7 +199,7 @@
   },
   "hermit:OverwhelmingPower": {
     "NAME": "压倒性力量",
-    "DESCRIPTION": "获得 [E] [E] [E] 。 NL 抽3张牌。 NL 回合结束时若无 [E] ， NL 失去 !M! 点生命。"
+    "DESCRIPTION": "获得 [E] [E] [E] 。 NL 抽三张牌。 NL 回合结束时若无 [E] ， NL 失去 !M! 点生命。"
   },
   "hermit:Maintenance": {
     "NAME": "维护",
@@ -207,8 +207,8 @@
   },
   "hermit:EternalForm": {
     "NAME": "永恒形态",
-    "DESCRIPTION": "虚无 。 NL 回合开始时，本回合降低所有手牌的耗能1点。",
-    "UPGRADE_DESCRIPTION": "回合开始时，本回合降低所有手牌的耗能1点。"
+    "DESCRIPTION": "虚无 。 NL 回合开始时，本回合所有手牌下次耗能减1。",
+    "UPGRADE_DESCRIPTION": "回合开始时，本回合所有手牌下次耗能减1。"
   },
   "hermit:FullyLoaded": {
     "NAME": "整装待发",
@@ -246,7 +246,7 @@
   },
   "hermit:HighNoon": {
     "NAME": "午时已到",
-    "DESCRIPTION": "打出 *打击 或 *防御 时抽一张牌。"
+    "DESCRIPTION": "打出 *打击 或 *防御 时， NL 抽一张牌。"
   },
   "hermit:Reprieve": {
     "NAME": "延缓死刑",
@@ -284,7 +284,7 @@
   },
   "hermit:DeadMansHand": {
     "NAME": "亡者之手",
-    "DESCRIPTION": "丢弃所有手牌。 NL 从抽牌堆中抽取 !M! 张稀有度最高的牌。"
+    "DESCRIPTION": "丢弃所有手牌。 NL 从 *抽牌堆 中抽取 !M! 张稀有度最高的牌。"
   },
   "hermit:DeadOrAlive": {
     "NAME": "死或生",
