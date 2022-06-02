@@ -32,5 +32,13 @@
       "选择一张牌提高伤害",
       "选择一张牌提高格挡"
     ]
+  },
+  "champ:highlightCombos": {
+    "TEXT": [
+      "champ:战狂 champ:连段 ：",
+      "[#5ebf2a]战狂 champ:连段 ：",
+      "champ:防守 champ:连段 ：",
+      "[#5ebf2a]防守 champ:连段 ："
+    ]
   }
 }

@@ -32,5 +32,13 @@
       "increase damage.",
       "increase Block."
     ]
+  },
+  "champ:highlightCombos": {
+    "TEXT": [
+      "*Berserker champ:Combo:",
+      "[#5ebf2a]Berserker champ:Combo:",
+      "*Defensive champ:Combo:",
+      "[#5ebf2a]Defensive champ:Combo:"
+    ]
   }
 }
