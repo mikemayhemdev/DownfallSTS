@@ -28,10 +28,10 @@
       " - Augmentez les dégâts de #yFrappe #yCultiste de #b",
       " de façon permanente.",
       "ERR: SEQUENCE_EMPTY",
-      " - Ajoutez une copie de #yBoucle #Infinie dans votre main avec #b",
-      " de dégâts en plus.",
-      " Muter.",
-      " Encoder.",
+      " - Ajoutez une copie de #yBoucle #yInfinie dans votre main avec #b",
+      " de dégâts supplémentaires.",
+      " à Muter.",
+      " à Encoder.",
       ""
     ]
   },
