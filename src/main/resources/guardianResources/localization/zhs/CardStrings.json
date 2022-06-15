@@ -39,7 +39,7 @@
   },
   "Guardian:ChargeUp": {
     "NAME": "充能",
-    "DESCRIPTION": "将本牌 guardianmod:凝滞 。 NL guardianmod:滴答 -获得 !B! 点 格挡 和 !M! 点 力量 。 NL guardianmod:消散 。"
+    "DESCRIPTION": "将本牌 guardianmod:凝滞 。 NL guardianmod:滴答 -获得 !B! 点 格挡 与 !M! 点 力量 。 NL guardianmod:消散 。"
   },
   "Guardian:DonusPower": {
     "NAME": "过载",
@@ -48,8 +48,8 @@
   },
   "Guardian:DecasProtection": {
     "NAME": "先古之力",
-    "DESCRIPTION": "获得 4 层 guardianmod:临时 力量 和 敏捷 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 4 层 guardianmod:临时 力量 和 敏捷 。 NL 失去所有负面效果1层。 NL 消耗 。"
+    "DESCRIPTION": "获得 4 层 guardianmod:临时 力量 与 敏捷 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 4 层 guardianmod:临时 力量 与 敏捷 。 NL 失去所有负面效果1层。 NL 消耗 。"
   },
   "Guardian:FierceBash": {
     "NAME": "猛烈痛击",
@@ -142,38 +142,38 @@
   },
   "Guardian:PackageShapes": {
     "NAME": "组件: 机械",
-    "DESCRIPTION": "获得 *时间炸弹 、 *荆棘协议 和 *反冲协议 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *时间炸弹+ 、 *荆棘协议+ 和 *反冲协议+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得 *时间炸弹 、 *荆棘协议 与 *反冲协议 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *时间炸弹+ 、 *荆棘协议+ 与 *反冲协议+ 各1张。 NL 消耗 。"
   },
   "Guardian:PackageDonuDeca": {
     "NAME": "组件: 先古",
-    "DESCRIPTION": "获得 *过载 、 *先古之力 和 *先古建造 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *过载+ 、 *先古之力+ 和 *先古建造+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得 *过载 、 *先古之力 与 *先古建造 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *过载+ 、 *先古之力+ 与 *先古建造+ 各1张。 NL 消耗 。"
   },
   "Guardian:PackageSphere": {
     "NAME": "组件: 圆球",
-    "DESCRIPTION": "获得 *球形护盾 、 *硬化 和 *浮动圆球 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *球形护盾+ 、 *硬化+ 和 *浮动圆球+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得 *球形护盾 、 *硬化 与 *浮动圆球 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *球形护盾+ 、 *硬化+ 与 *浮动圆球+ 各1张。 NL 消耗 。"
   },
   "Guardian:PackageSentry": {
     "NAME": "组件: 哨卫",
-    "DESCRIPTION": "获得1张 *哨卫射线 和2张 *哨卫震荡 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得1张 *哨卫射线+ 和2张 *哨卫震荡+ 。 NL 消耗 。"
+    "DESCRIPTION": "获得1张 *哨卫射线 与2张 *哨卫震荡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得1张 *哨卫射线+ 与2张 *哨卫震荡+ 。 NL 消耗 。"
   },
   "Guardian:PackageWalker": {
     "NAME": "组件: 行者",
-    "DESCRIPTION": "获得 *行者圆球 、 *行者爪击 和 *焚烧 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *行者圆球+ 、 *行者爪击+ 和 *焚烧+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得 *行者圆球 、 *行者爪击 与 *焚烧 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *行者圆球+ 、 *行者爪击+ 与 *焚烧+ 各1张。 NL 消耗 。"
   },
   "Guardian:PackageAutomaton": {
     "NAME": "组件: 铜制",
-    "DESCRIPTION": "获得 *究极射线 、 *铜制圆球 和 *弹性护甲 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *究极射线+ 、 *铜制圆球+ 和 *弹性护甲+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得 *究极射线 、 *铜制圆球 与 *弹性护甲 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *究极射线+ 、 *铜制圆球+ 与 *弹性护甲+ 各1张。 NL 消耗 。"
   },
   "Guardian:PackageDefect": {
     "NAME": "组件: 故障",
-    "DESCRIPTION": "获得 *重连 ， *预编程 和 *时间电容器 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *重连+ ， *预编程+ 和 *时间电容器+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得 *重连 ， *预编程 与 *时间电容器 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *重连+ ， *预编程+ 与 *时间电容器+ 各1张。 NL 消耗 。"
   },
   "Guardian:Planning": {
     "NAME": "规划",
