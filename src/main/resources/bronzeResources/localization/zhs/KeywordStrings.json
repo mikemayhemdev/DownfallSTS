@@ -17,7 +17,7 @@
       "compile",
       "compiled"
     ],
-    "DESCRIPTION": "当被 #y编码 的牌融合成 #y方法 时触发所有 #y编译 效果。 NL #y编译错误 将是一些 #r负面效果 。"
+    "DESCRIPTION": "当被 #y编码 的牌融合成 #y方法 时触发其中所有 #y编译 效果。 NL #y编译错误 将是一些 #r负面效果 。"
   },
   {
     "PROPER_NAME": "残影",
