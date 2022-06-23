@@ -225,7 +225,7 @@
   },
   "hermit:CursedWeapon": {
     "NAME": "诅咒之枪",
-    "DESCRIPTION": "失去 !M! 点生命。 NL 造成 !D! 点伤害。 NL 本牌伤害永久增加 3 点。 NL 消耗 。"
+    "DESCRIPTION": "失去 !M! 点生命。 NL 造成 !D! 点伤害。 NL 本牌伤害本局增加 3 点。 NL 消耗 。"
   },
   "hermit:Enervate": {
     "NAME": "无力化",
