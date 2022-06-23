@@ -323,7 +323,7 @@
   },
   "bronze:ChosenStrike": {
     "NAME": "邪教打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 -本局游戏本牌的伤害增加 !M! 点。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 -本局伤害加 !M! 。",
     "EXTENDED_DESCRIPTION": [
       "邪教",
       "咔咔"
