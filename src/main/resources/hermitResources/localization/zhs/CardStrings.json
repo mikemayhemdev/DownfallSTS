@@ -212,8 +212,8 @@
   },
   "hermit:FullyLoaded": {
     "NAME": "整装待发",
-    "DESCRIPTION": "抽取抽牌堆中所有 *打击 和 *防御 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 抽取抽牌堆中所有 *打击 和 *防御 。 NL 消耗 。"
+    "DESCRIPTION": "抽取抽牌堆中所有 *打击 与 *防御 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 抽取抽牌堆中所有 *打击 与 *防御 。 NL 消耗 。"
   },
   "hermit:Gestalt": {
     "NAME": "深渊注视",
