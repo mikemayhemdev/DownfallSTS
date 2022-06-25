@@ -179,7 +179,7 @@
   },
   "hermit:Cheat": {
     "NAME": "出千",
-    "DESCRIPTION": "从抽牌堆顶部 !M! 张牌中选择打出一张。 NL  hermit:精准 ：触发打出牌的 hermit:精准 效果。"
+    "DESCRIPTION": "从抽牌堆顶部 !M! 张牌中选择打出一张。 NL hermit:精准 ：触发打出牌的 hermit:精准 效果。"
   },
   "hermit:Vantage": {
     "NAME": "优势",
