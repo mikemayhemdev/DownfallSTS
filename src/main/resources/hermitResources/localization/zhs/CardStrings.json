@@ -24,7 +24,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 下回合少抽一张牌。"
   },
   "hermit:WideOpen": {
-    "NAME": "始料未及",
+    "NAME": "旷地显靶",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"
   },
   "hermit:Covet": {
