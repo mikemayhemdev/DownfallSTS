@@ -14,18 +14,12 @@ import downfall.util.TextureLoader;
 import java.util.ArrayList;
 
 public class FormatEncoded extends AbstractBronzeCard {
-
     public final static String ID = makeID("FormatEncoded");
-
-    //stupid intellij stuff attack, all, rare
-
-    private static final int DAMAGE = 4;
-    private static final int BLOCK = 4;
 
     public FormatEncoded() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
-        baseBlock = BLOCK;
+        baseBlock = 4;
+        baseDamage = 4;
         thisEncodes();
     }
 
@@ -56,7 +50,7 @@ public class FormatEncoded extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
-        upgradeBlock(2);
+        upgradeBlock(1);
+        upgradeDamage(1);
     }
 }

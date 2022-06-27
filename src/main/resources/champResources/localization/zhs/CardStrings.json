@@ -61,7 +61,7 @@
   },
   "champ:Backstep": {
     "NAME": "后撤",
-    "DESCRIPTION": "进入 champ:防守 。 NL 获得 !M! 点 格挡 。 NL 格挡 值受 活力 加成。",
+    "DESCRIPTION": "进入 champ:防守 。 NL 获得 !B! 点 格挡 。 NL 格挡 值受 活力 加成。",
     "EXTENDED_DESCRIPTION": [
       " NL (获得 !B! 点 格挡。)"
     ]

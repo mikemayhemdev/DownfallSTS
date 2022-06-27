@@ -23,7 +23,7 @@ public class ViciousMockery extends AbstractChampCard {
 
     public ViciousMockery() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 12;
+        baseMagicNumber = magicNumber = 10;
         //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
       //  tags.add(ChampMod.COMBO);
       //  tags.add(ChampMod.COMBOBERSERKER);
@@ -73,9 +73,6 @@ public class ViciousMockery extends AbstractChampCard {
         derp.add(Champ.DIALOG[3]);
         return derp.get(MathUtils.random(derp.size() - 1));
     }
-
-
-
 
     public void upp() {
         upgradeMagicNumber(4);

@@ -45,7 +45,6 @@ import static champ.ChampMod.*;
 
 
 public abstract class AbstractChampCard extends CustomCard {
-
     protected final CardStrings cardStrings;
     public String betaArtPath;
     protected final String NAME;

@@ -2,16 +2,16 @@
   "bronze:FreeFunctionsPotion": {
     "NAME": "Machine Oil",
     "DESCRIPTIONS": [
-      "Increase all numbers on cards in the #ySequence by #b",
-      "."
+      "Increase all numbers on Encoded cards by #b",
+      "except cost."
     ]
   },
   "bronze:CleanCodePotion": {
     "NAME": "Alchyrical Elixir",
     "DESCRIPTIONS": [
-      "Remove all #yCompile #yError effects from the next #yFunction you create.  Reduce its cost to #b0 until played.",
+      "Remove all #yCompile #yError effects from the next #yFunction you create, it costs #b0 until played.",
       "Remove all #yCompile #yError effects from the next #b",
-      " #yFunctions you create.  Reduce their cost to #b0 until played."
+      " #yFunctions you create, they cost #b0 until played."
     ]
   },
   "bronze:BurnAndBuffPotion": {
@@ -25,10 +25,10 @@
   "bronze:BuildAFunctionPotion": {
     "NAME": "Kio's Clever Concoction",
     "DESCRIPTIONS": [
-      "Until the #ySequence is full, choose #b1 of #b3 random cards to #yEncode.",
-      "Until the #ySequence is full, choose #b1 of #b3 random cards to #yEncode. Gain #b",
-      " copy of the created #yFunction.",
-      " copies of the created #yFunction."
+      "Choose #b1 of #b3 random cards to #yEncode, repeat until you create a #yFunction.",
+      "Choose #b1 of #b3 random cards to #yEncode, repeat until you create a #yFunction and gain #b",
+      " copy of it.",
+      " copies of it."
     ]
   }
 }

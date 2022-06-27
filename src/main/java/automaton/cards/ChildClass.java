@@ -35,8 +35,6 @@ public class ChildClass extends AbstractBronzeCard {
         }
     }
 
-    //TODO: Figure out some way to check if the card will generate energy, and only provide compile text if so.
-
     public void upp() {
         upgradeBlock(2);
     }

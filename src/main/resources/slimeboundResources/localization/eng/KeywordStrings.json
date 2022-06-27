@@ -124,13 +124,6 @@
   },
   {
     "NAMES": [
-      "morph"
-    ],
-    "PROPER_NAME": "Morph",
-    "DESCRIPTION": "Replace with a random new card of your class, regardless of type. It costs #b1 less."
-  },
-  {
-    "NAMES": [
       "slow"
     ],
     "PROPER_NAME": "Slow",

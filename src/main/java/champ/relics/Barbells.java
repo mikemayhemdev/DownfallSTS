@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
-import theHexaghost.powers.FutureUpgradePower;
 
 import java.util.ArrayList;
 
@@ -20,22 +19,19 @@ import static champ.ChampMod.makeRelicOutlinePath;
 import static champ.ChampMod.makeRelicPath;
 
 public class Barbells extends CustomRelic {
-
     public static final String ID = ChampMod.makeID("Barbells");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Barbell.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Barbell.png"));
 
-
-    private boolean used;
     public Barbells() {
         super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
     }
 
-    public void onEnterRestRoom() {
-        if (!used) {
+    @Override
+    public void onEnterRoom(AbstractRoom room) {
+        if (room instanceof RestRoom) {
             flash();
-            this.pulse = true;
-            used = true;
+
             ArrayList<AbstractCard> possibleCards = new ArrayList<>();// 38
             for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
                 if (c.canUpgrade()) {// 40
@@ -57,15 +53,7 @@ public class Barbells extends CustomRelic {
     }
 
     @Override
-    public void onEnterRoom(AbstractRoom room) {
-        if (!(room instanceof RestRoom)){
-            used = false;
-        }
-    }
-
-    @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }
-
 }

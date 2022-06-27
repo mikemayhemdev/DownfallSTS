@@ -1,23 +1,18 @@
 package downfall.cards.curses;
 
 
-import automaton.AutomatonMod;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
-import guardian.GuardianMod;
-import sneckomod.SneckoMod;
+import sneckomod.OffclassHelper;
 
 
 public class Malfunctioning extends CustomCard {
@@ -41,7 +36,6 @@ public class Malfunctioning extends CustomCard {
 
     public Malfunctioning() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, CardColor.CURSE, RARITY, TARGET);
-        this.isEthereal = true;
         this.exhaust = true;
         tags.add(downfallMod.DOWNFALL_CURSE);
 
@@ -57,10 +51,8 @@ public class Malfunctioning extends CustomCard {
         this.flash();
         this.superFlash();
         for (AbstractCard c:AbstractDungeon.player.hand.group){
-            if (c != this){
-                AbstractDungeon.actionManager.addToBottom(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand, true));
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(SneckoMod.getRandomStatus().makeStatEquivalentCopy(), 1));
-            }
+            AbstractDungeon.actionManager.addToBottom(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand, true));
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(OffclassHelper.getARandomStatus(), 1));
         }
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));

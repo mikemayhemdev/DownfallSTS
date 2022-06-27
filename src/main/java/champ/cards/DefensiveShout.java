@@ -2,23 +2,16 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.powers.CounterPower;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class DefensiveShout extends AbstractChampCard {
 
     public final static String ID = makeID("DefensiveShout");
 
-    //stupid intellij stuff skill, self, uncommon
-
-    private static final int MAGIC = 4;
-    private static final int UPG_MAGIC = 4;
-
     public DefensiveShout() {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
-        baseMagicNumber = magicNumber = MAGIC;
+        baseMagicNumber = magicNumber = 4;
         //tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERDEFENSIVE);
