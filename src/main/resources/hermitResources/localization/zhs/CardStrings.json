@@ -207,8 +207,8 @@
   },
   "hermit:EternalForm": {
     "NAME": "永恒形态",
-    "DESCRIPTION": "虚无 。 NL 回合开始时，本回合所有手牌下次耗能减1。",
-    "UPGRADE_DESCRIPTION": "回合开始时，本回合所有手牌下次耗能减1。"
+    "DESCRIPTION": "虚无 。 NL 回合开始时，本回合所有手牌首次耗能减1。",
+    "UPGRADE_DESCRIPTION": "回合开始时，本回合所有手牌首次耗能减1。"
   },
   "hermit:FullyLoaded": {
     "NAME": "整装待发",
@@ -292,7 +292,7 @@
   },
   "hermit:GoldenBullet": {
     "NAME": "黄金子弹",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 时耗能永久减 [E] 。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 时耗能本局减 [E] 。 NL 消耗 。"
   },
   "hermit:HoleUp": {
     "NAME": "'洞'起来",
