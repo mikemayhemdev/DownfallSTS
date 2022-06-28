@@ -134,8 +134,8 @@
   },
   "Guardian:CompilePackage": {
     "NAME": "完整组件",
-    "DESCRIPTION": "从3张 guardianmod:组件 牌中选择获得1张。 消耗 。",
-    "UPGRADE_DESCRIPTION": "从3张 guardianmod:组件 牌+中选择获得1张。 消耗 。",
+    "DESCRIPTION": "消耗 。 NL 从3张 guardianmod:组件 牌中选择获得1张。",
+    "UPGRADE_DESCRIPTION": "消耗 。 NL 从3张 guardianmod:组件 牌+中选择获得1张。",
     "EXTENDED_DESCRIPTION": [
       "选择一张组件。"
     ]
