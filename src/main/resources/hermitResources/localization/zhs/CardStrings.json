@@ -207,8 +207,8 @@
   },
   "hermit:EternalForm": {
     "NAME": "永恒形态",
-    "DESCRIPTION": "虚无 。 NL 回合开始时，本回合所有手牌首次耗能减1。",
-    "UPGRADE_DESCRIPTION": "回合开始时，本回合所有手牌首次耗能减1。"
+    "DESCRIPTION": "虚无 。 NL 回合开始时，本回合初始手牌首次耗能减1。",
+    "UPGRADE_DESCRIPTION": "回合开始时，本回合初始手牌首次耗能减1。"
   },
   "hermit:FullyLoaded": {
     "NAME": "整装待发",
