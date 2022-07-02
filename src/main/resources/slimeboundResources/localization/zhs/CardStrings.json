@@ -38,8 +38,8 @@
   },
   "Slimebound:Split": {
     "NAME": "分裂",
-    "DESCRIPTION": "随机 slimeboundmod:分裂 2种史莱姆。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择 slimeboundmod:分裂 2种史莱姆。 NL 消耗 。"
+    "DESCRIPTION": "随机 slimeboundmod:分裂 两种史莱姆。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择 slimeboundmod:分裂 两种史莱姆。 NL 消耗 。"
   },
   "Slimebound:LeadByExample": {
     "NAME": "身先士卒",
@@ -56,8 +56,8 @@
   },
   "Slimebound:Teamwork": {
     "NAME": "沆瀣一气",
-    "DESCRIPTION": "slimeboundmod:命令 X 次。 NL 获得 !B! 点 格挡 X 次。",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:命令 X+1 次。 NL 获得 !B! 点 格挡 X+1 次。"
+    "DESCRIPTION": "获得 !B! 点 格挡 X 次。 NL slimeboundmod:命令 X 次。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 X+1次。 NL slimeboundmod:命令 X+1次。"
   },
   "Slimebound:SlimeBarrage": {
     "NAME": "蜂拥齐上",
@@ -70,7 +70,7 @@
   },
   "Slimebound:SpikyOuterGoop": {
     "NAME": "黏液装甲",
-    "DESCRIPTION": "slimeboundmod:消耗黏液 时获得 !M! 点 格挡 。"
+    "DESCRIPTION": "slimeboundmod:消耗黏液 时， NL 获得 !M! 点 格挡 。"
   },
   "Slimebound:SelfFormingGoo": {
     "NAME": "革新",
@@ -79,12 +79,12 @@
   },
   "Slimebound:OozeBath": {
     "NAME": "黏液浴",
-    "DESCRIPTION": "敌方回合开始时，给予目标 !M! 层 slimeboundmod:黏液 。 NL 消耗 。",
+    "DESCRIPTION": "敌方回合开始时， NL 给予目标 !M! 层 slimeboundmod:黏液 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "将一名敌人的 slimeboundmod:黏液 变为三倍。 NL 消耗 。"
   },
   "Slimebound:SlimeSpikes": {
     "NAME": "黏性尖刺",
-    "DESCRIPTION": "获得 !B! 点 格挡 与 !M! 层 guardianmod:临时 荆棘 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 guardianmod:临时 荆棘 。"
   },
   "Slimebound:LeechingTouch": {
     "NAME": "吮吸打击",
@@ -120,7 +120,7 @@
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "查找策略",
-    "DESCRIPTION": "随机获得4张 slimeboundmod:冲撞 牌。 NL 其耗能减1。 NL 消耗 。"
+    "DESCRIPTION": "随机获得4张 slimeboundmod:冲撞 牌。 NL 其耗能本场战斗减1。 NL 消耗 。"
   },
   "Slimebound:Recycling": {
     "NAME": "循环再生",
@@ -134,7 +134,7 @@
   },
   "Slimebound:RollThrough": {
     "NAME": "翻滚碾压",
-    "DESCRIPTION": "对所有敌人造成 !D! 伤害。 NL 接下来 !M! 张 slimeboundmod:冲撞 牌不会对你造成伤害。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 接下来 !M! 张 slimeboundmod:冲撞 牌不会对你造成伤害。"
   },
   "Slimebound:MassRepurpose": {
     "NAME": "回炉重造",
@@ -182,7 +182,7 @@
   },
   "Slimebound:AcidTongue": {
     "NAME": "黏液蔓延",
-    "DESCRIPTION": "给予 slimeboundmod:黏液 时额外给予 !M! 层 。"
+    "DESCRIPTION": "给予 slimeboundmod:黏液 时， NL 额外给予 !M! 层 。"
   },
   "Slimebound:FirmFortitude": {
     "NAME": "清算",
@@ -228,8 +228,8 @@
   },
   "Slimebound:GoopTackle": {
     "NAME": "连续冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机获得 slimeboundmod:冲撞 牌。其耗能本回合为0。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机获得 slimeboundmod:冲撞 牌+。 NL 其耗能本回合为0。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机获得1张 slimeboundmod:冲撞 牌。 NL 其耗能本回合为0。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机获得1张 slimeboundmod:冲撞 牌+。 NL 其耗能本回合为0。"
   },
   "Slimebound:CorrosiveSpit": {
     "NAME": "腐蚀喷吐",
@@ -250,8 +250,8 @@
   },
   "Slimebound:RainOfGoop": {
     "NAME": "黏液雨",
-    "DESCRIPTION": "随机给予敌人 NL !slime! 层 slimeboundmod:黏液 !M! 次。",
-    "UPGRADE_DESCRIPTION": "随机给予敌人 NL !slime! 层 slimeboundmod:黏液 !M! 次。"
+    "DESCRIPTION": "随机给予 !slime! 层 slimeboundmod:黏液 !M! 次。",
+    "UPGRADE_DESCRIPTION": "随机给予 !slime! 层 slimeboundmod:黏液 !M! 次。"
   },
   "Slimebound:GoopSpray": {
     "NAME": "黏液喷射",
@@ -328,8 +328,8 @@
   },
   "Slimebound:MinionMaster": {
     "NAME": "从者大师",
-    "DESCRIPTION": "打出 slimeboundmod:命令 牌时再 slimeboundmod:命令 一次。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 打出 slimeboundmod:命令 牌时再 slimeboundmod:命令 一次。"
+    "DESCRIPTION": "打出 slimeboundmod:命令 牌时， NL 额外 slimeboundmod:命令 一次。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 打出 slimeboundmod:命令 牌时， NL 额外 slimeboundmod:命令 一次。"
   },
   "Slimebound:BestDefense": {
     "NAME": "鲁莽",
