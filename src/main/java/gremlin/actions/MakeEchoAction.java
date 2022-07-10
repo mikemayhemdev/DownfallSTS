@@ -12,6 +12,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
+import downfall.cardmods.EtherealMod;
+import downfall.cardmods.ExhaustMod;
+import downfall.cardmods.RetainCardMod;
 
 public class MakeEchoAction extends AbstractGameAction {
     private static final float DURATION_PER_CARD = 0.35F;
@@ -43,8 +46,11 @@ public class MakeEchoAction extends AbstractGameAction {
     private AbstractCard echoCard(){
         AbstractCard card = this.c.makeStatEquivalentCopy();
         card.name = CardCrawlGame.languagePack.getUIString("Gremlin:MakeEchoAction").TEXT[0] + card.name;
+        if (!card.exhaust) card.rawDescription = CardCrawlGame.languagePack.getUIString(ExhaustMod.ID) + card.rawDescription;
         card.exhaust = true;
+        if (!card.isEthereal) card.rawDescription = CardCrawlGame.languagePack.getUIString(EtherealMod.ID) + card.rawDescription;
         card.isEthereal = true;
+        if (card.retain) card.rawDescription = card.rawDescription.replace(CardCrawlGame.languagePack.getUIString(RetainCardMod.ID).TEXT[0], "");
         AlwaysRetainField.alwaysRetain.set(card, false);
         card.retain = false;
         if(card.cost >= 0 && this.discount>0)
