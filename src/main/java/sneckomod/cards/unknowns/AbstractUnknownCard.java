@@ -218,9 +218,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            String[] funky = rawDescription.split(unknownUpgrade[0]);
-            funky[1] = unknownUpgrade[1] + funky[1];
-            rawDescription = String.join(unknownUpgrade[0], funky);
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }
