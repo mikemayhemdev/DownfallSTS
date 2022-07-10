@@ -40,7 +40,7 @@ public abstract class AbstractSneckoCard extends CustomCard {
     public String betaArtPath;
     protected final String NAME;
     protected final String DESCRIPTION;
-    protected final String UPGRADE_DESCRIPTION;
+    protected String UPGRADE_DESCRIPTION;
     protected final String[] EXTENDED_DESCRIPTION;
     public int silly;
     public int baseSilly;
