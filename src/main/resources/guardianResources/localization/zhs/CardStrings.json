@@ -252,7 +252,7 @@
   },
   "Guardian:PiercingHide": {
   "NAME": "隐秘荆棘",
-  "DESCRIPTION": "获得 !B! 点 格挡 和 !M! 层 guardianmod:临时 荆棘 。 NL guardianmod:提防 3 。"
+  "DESCRIPTION": "获得 !B! 点 格挡 与 !M! 层 guardianmod:临时 荆棘 。 NL guardianmod:提防 3 。"
 },
   "Guardian:ShieldSpikes": {
     "NAME": "荆棘装甲",
