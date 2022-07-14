@@ -47,6 +47,13 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         cardsToPreview = CardLibrary.cards.get("Madness");
     }
 
+    public AbstractUnknownCard(final String id, final String img, final CardType type, final CardRarity rarity, boolean IsClass) {
+        super(id, img, -2, type, rarity, CardTarget.NONE, IsClass);
+        tags.add(CardTags.HEALING);
+        purgeOnUse = true;
+        cardsToPreview = CardLibrary.cards.get("Madness");
+    }
+
     public AbstractUnknownCard(final String id, final String img, final CardType type, final CardRarity rarity) {
         super(id, img, -2, type, rarity, CardTarget.NONE);
         tags.add(CardTags.HEALING);
