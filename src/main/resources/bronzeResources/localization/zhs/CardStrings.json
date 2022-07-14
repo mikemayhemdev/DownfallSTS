@@ -151,7 +151,7 @@
   },
   "bronze:DarkDash": {
     "NAME": "暗影冲刺",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:插入 *虚空 。",
+    "DESCRIPTION": "获得 !B! 点 格挡。 NL 造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:插入 *虚空 。",
     "EXTENDED_DESCRIPTION": [
       "暗影",
       "冲刺"
@@ -239,7 +239,7 @@
   },
   "bronze:Constructor": {
     "NAME": "起始符",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 π NL bronze:编码 时若在首个槽位，格挡 增加 !M! 点 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 π NL bronze:编码 时若在首个槽位， 格挡 增加 !M! 点 。",
     "EXTENDED_DESCRIPTION": [
       "构造",
       "失落",
