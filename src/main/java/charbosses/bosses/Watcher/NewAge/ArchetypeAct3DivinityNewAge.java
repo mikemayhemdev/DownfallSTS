@@ -73,8 +73,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
                     //Turn 3
                     AbstractBossCard c = new EnSignatureMove(); //Big attack
                     c.freeToPlayOnce = true;
-                    c.energyGeneratedIfPlayed = 2;
-                    addToList(cardsList, c, extraUpgrades);
+                    addToList(cardsList, c, extraUpgrades, 2);
                     addToList(cardsList, new EnConjurBlade());
                     addToList(cardsList, new EnSanctity());    //Not played
                     turn++;
