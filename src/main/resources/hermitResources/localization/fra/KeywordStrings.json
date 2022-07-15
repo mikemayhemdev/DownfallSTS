@@ -4,8 +4,12 @@
     "NAMES": [
       "Dans Le Mille",
       "Dans_Le_Mille",
-      "Dans_Le_Mille",
-      "danslemille"
+      "dans_le_mille",
+      "danslemille",
+      "Dead On",
+      "Dead_On",
+      "dead_on",
+      "deadon"
     ],
     "DESCRIPTION": "Les cartes Dans Le Mille ont un effet bonus lorsque qu'elles sont au milieu de votre main."
   },
@@ -15,7 +19,11 @@
       "Concentrez-vous",
       "concentrez-vous",
       "concentré",
-      "Concentré"
+      "Concentré",
+      "Concentrate",
+      "concentrate",
+      "concentrated",
+      "Concentrated"
     ],
     "DESCRIPTION": "La prochaine carte #yDans #yle #yMille jouée lorsque vous êtes #yConcentré déclenche son effet quelle que soit la position. S'estompe à la fin du tour."
   },
@@ -24,7 +32,9 @@
     "PROPER_NAME": "Meurtri",
     "NAMES": [
       "meurtri",
-      "meurtris"
+      "meurtris",
+      "bruise",
+      "bruised"
     ],
   "DESCRIPTION": "Les cibles meurtries prennent plus de dégâts des attaques. Chaque coup, le taux de Meurtri est réduit de #b1. S'estompe à la fin du tour."
 },
@@ -32,14 +42,16 @@
     "ID": "rugged",
     "PROPER_NAME": "Robustesse",
     "NAMES": [
-      "robustesse"
+      "robustesse",
+      "rugged"
     ],
   "DESCRIPTION": "Réduit les dégâts de la prochaine attaque ennemie à #b3."
 },
   {
     "PROPER_NAME": "Prime",
     "NAMES": [
-      "Prime"
+      "prime",
+      "bounty"
     ],
   "DESCRIPTION": "Ennemi normal: #b15 d'Or.       Ennemi d'Élite : #b35 d'Or.              Boss: #b75 d'Or."
 },
@@ -49,7 +61,11 @@
       "étourdissez",
       "Étourdissez",
       "étourdis",
-      "Étourdis"
+      "Étourdis",
+      "stun",
+      "Stun",
+      "stunned",
+      "Stunned"
     ],
     "DESCRIPTION": "Les ennemis étourdis passent leur tour."
   }

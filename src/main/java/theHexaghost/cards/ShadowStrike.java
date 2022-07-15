@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import slimebound.SlimeboundMod;
+import theHexaghost.HexaMod;
 
 public class ShadowStrike extends AbstractHexaCard {
 
@@ -22,6 +23,7 @@ public class ShadowStrike extends AbstractHexaCard {
         isEthereal = true;
         tags.add(CardTags.STRIKE);
         setParent(parent);
+        HexaMod.loadJokeCardImage(this, "ShadowStrike.png");
     }
 
     public ShadowStrike() {

@@ -36,6 +36,7 @@ public class SelfFormingGoo extends AbstractSlimeboundCard {
     public SelfFormingGoo() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         baseMagicNumber = magicNumber = 1;
+        SlimeboundMod.loadJokeCardImage(this, "SelfFormingGoo.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

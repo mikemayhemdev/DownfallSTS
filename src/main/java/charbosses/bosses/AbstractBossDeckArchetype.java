@@ -98,7 +98,7 @@ public abstract class AbstractBossDeckArchetype {
         return new ArrayList<>();
     }
 
-    protected void addToList(ArrayList<AbstractCard> cardsList, AbstractBossCard card, boolean upgraded, int energyGeneratedIfPlayed) {
+    public void addToList(ArrayList<AbstractCard> cardsList, AbstractBossCard card, boolean upgraded, int energyGeneratedIfPlayed) {
         card.energyGeneratedIfPlayed = energyGeneratedIfPlayed;
         addToList(cardsList, card, upgraded);
     }

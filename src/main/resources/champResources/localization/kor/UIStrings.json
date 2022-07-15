@@ -32,5 +32,13 @@
       "피해량이 증가합니다.",
       "방어도가 증가합니다."
     ]
+  },
+  "champ:highlightCombos": {
+    "TEXT": [
+      "*광폭화 champ:연계:",
+      "[#5ebf2a]광폭화 champ:연계:",
+      "*수비 champ:연계:",
+      "[#5ebf2a]수비 champ:연계:"
+    ]
   }
 }

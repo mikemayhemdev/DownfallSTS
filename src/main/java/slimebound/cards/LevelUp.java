@@ -40,6 +40,7 @@ public class LevelUp extends AbstractSlimeboundCard {
 
 
      //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        SlimeboundMod.loadJokeCardImage(this, "LevelUp.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -9,11 +9,11 @@
   },
   "hermit:Snapshot": {
     "NAME": "Snapshot",
-    "DESCRIPTION": "Deal !D! damage. hermit:Dead_On: Gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage. hermit:Dead_On: Gain Block equal to the unblocked damage dealt."
   },
   "hermit:Desperado": {
     "NAME": "Desperado",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Frail."
+    "DESCRIPTION": "Deal !D! damage. NL Double this card's damage this combat. It costs 1 more."
   },
   "hermit:Headshot": {
     "NAME": "Headshot",
@@ -34,13 +34,12 @@
   },
   "hermit:HighCaliber": {
     "NAME": "High-Caliber",
-    "DESCRIPTION": "Deal !D! damage. NL Add a *Strike to your discard pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a *Strike+ to your discard pile. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Add a *Strike to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a *Strike+ to your hand. NL Exhaust."
   },
   "hermit:BodyArmor": {
     "NAME": "Body Armor",
-    "DESCRIPTION": "Gain !B! Block.  NL Add a *Defend to your discard pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add a *Defend+ to your discard pile. NL Exhaust."
+    "DESCRIPTION": "Discard a card. NL Gain !B! Block. NL If it was a non-Attack, gain !B! Block again."
   },
   "hermit:Snipe": {
     "NAME": "Snipe",
@@ -49,13 +48,13 @@
   },
   "hermit:CalledShot": {
     "NAME": "Called Shot",
-    "DESCRIPTION": "Deal damage equal to your hand size. NL hermit:Dead_On: NL Draw !M! card.",
+    "DESCRIPTION": "Deal damage equal to your hand size. NL hermit:Dead_On: NL Draw !M! Attack.",
     "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)",
-    "EXTENDED_DESCRIPTION": ["Deal damage equal to your hand size. NL hermit:Dead_On: NL Draw !M! cards."]
+    "EXTENDED_DESCRIPTION": ["Deal damage equal to your hand size. NL hermit:Dead_On: NL Draw !M! Attacks."]
   },
   "hermit:Dissolve": {
     "NAME": "Dissolve",
-    "DESCRIPTION": "Next turn, gain !B! Block. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your next 2 turns. NL Exhaust."
   },
   "hermit:BlackWind": {
     "NAME": "Black Wind",
@@ -64,8 +63,7 @@
   },
   "hermit:Purgatory": {
     "NAME": "Purgatory",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies."
   },
   "hermit:ShadowCloak": {
     "NAME": "Shadow Cloak",
@@ -78,7 +76,7 @@
   },
   "hermit:Gambit": {
     "NAME": "Gambit",
-    "DESCRIPTION": "Put !M! random Attacks from your discard pile into your hand. Exhaust."
+    "DESCRIPTION": "Put !M! random Attacks from your discard pile into your hand. They cost 1 less this turn. NL Exhaust."
   },
   "hermit:Roughhouse": {
     "NAME": "Roughhouse",
@@ -98,7 +96,7 @@
   },
   "hermit:Adapt": {
     "NAME": "Adapt",
-    "DESCRIPTION": "At the end of your turn, you can Exhaust up to 2 cards. NL Gain !M! Block for each."
+    "DESCRIPTION": "At the start of your turn, you can Exhaust a card to gain 8 Block."
   },
   "hermit:Dive": {
     "NAME": "Dive",
@@ -120,7 +118,7 @@
   "hermit:Glare": {
     "NAME": "Glare",
     "DESCRIPTION": "Apply !M! Weak and Vulnerable.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !hermit:SecondMagic! Vulnerable."
+    "UPGRADE_DESCRIPTION": "Retain. NL Apply !M! Weak and Vulnerable."
   },
   "hermit:TakeCover": {
     "NAME": "Take Cover",
@@ -205,11 +203,12 @@
   },
   "hermit:Maintenance": {
     "NAME": "Maintenance",
-    "DESCRIPTION": "Upgrade all *Strikes and *Defends this combat. NL This can upgrade them any number of times."
+    "DESCRIPTION": "*Strikes deal !M! more damage this combat. NL Gain !hermit:SecondMagic! Dexterity. NL This costs 1 more this combat."
   },
   "hermit:EternalForm": {
     "NAME": "Eternal Form",
-    "DESCRIPTION": "Your first !M! cards each turn cost 0. NL Gain no [E] at start of turn."
+    "DESCRIPTION": "Ethereal. NL At the start of your turn, reduce the cost of all cards in hand by 1 this turn.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, reduce the cost of all cards in hand by 1 this turn."
   },
   "hermit:FullyLoaded": {
     "NAME": "Fully Loaded",
@@ -243,7 +242,7 @@
   },
   "hermit:LoneWolf": {
     "NAME": "Lone Wolf",
-    "DESCRIPTION": "Choose a card. NL It costs 0 this combat. NL Discard the rest of your hand. NL Exhaust."
+    "DESCRIPTION": "Choose a card. NL It costs 0 this turn. NL Discard the rest of your hand."
   },
   "hermit:HighNoon": {
     "NAME": "High Noon",
@@ -251,10 +250,7 @@
   },
   "hermit:Reprieve": {
     "NAME": "Reprieve",
-    "DESCRIPTION": "Exhaust ALL *Curses. NL If you exhaust at least !M! *Curses, take an extra turn after this one.",
-    "EXTENDED_DESCRIPTION": [
-      "There are no Curses."
-    ]
+    "DESCRIPTION": "Ethereal. NL Heal !M! HP. NL Exhaust."
   },
   "hermit:TakeAim": {
     "NAME": "Take Aim",
@@ -272,7 +268,7 @@
   },
   "hermit:Showdown": {
     "NAME": "Showdown",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Play all *Strikes in your hand on random targets."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Play all *Strikes in your hand. NL Exhaust."
   },
   "hermit:LuckOfTheDraw": {
     "NAME": "Luck of the Draw",
@@ -304,7 +300,7 @@
   },
   "hermit:ItchyTrigger": {
     "NAME": "Itchy Trigger",
-    "DESCRIPTION": "Deal !D! damage. NL hermit:Dead_On: Reduce the cost of a random card in your hand to 0 this turn."
+    "DESCRIPTION": "Deal !D! damage. NL hermit:Dead_On: Reduce the cost of a random card in your hand by !M! this turn."
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "Eye Of The Storm",
@@ -327,5 +323,9 @@
   "hermit:Virtue": {
     "NAME": "Virtue",
     "DESCRIPTION": "Retain. NL Reduce each of your debuffs by !M!."
+  },
+  "hermit:BossMaintenance": {
+    "NAME": "Maintenance",
+    "DESCRIPTION": "*Strikes deal !M! more damage this combat. NL Gain 2 Dexterity. NL This costs 1 more this combat."
   }
 }

@@ -31,6 +31,7 @@ public class EnemyFrost extends AbstractEnemyOrb {
     private float vfxIntervalMax = 0.8F;
 
     public EnemyFrost() {
+        super();
         this.ID = "Frost";
         this.name = orbString.NAME;
         this.baseEvokeAmount = 5;

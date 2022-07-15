@@ -5,12 +5,14 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.curses.Decay;
+import com.megacrit.cardcrawl.cards.green.Blur;
 import com.megacrit.cardcrawl.cards.green.DodgeAndRoll;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.BlurPower;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import hermit.HermitMod;
 import hermit.characters.hermit;
@@ -47,7 +49,7 @@ public class Dissolve extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
-    private static final int COST = 1;
+    private static final int COST = 2;
 
 
 
@@ -56,8 +58,8 @@ public class Dissolve extends AbstractDynamicCard {
 
     public Dissolve() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 1;
-        baseBlock = block = 20;
+        magicNumber = baseMagicNumber = 2;
+        baseBlock = block = 12;
         this.exhaust=true;
         //this.cardsToPreview = new Decay();
         loadJokeCardImage(this, "dissolve.png");
@@ -66,7 +68,8 @@ public class Dissolve extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.block), this.block));
+        this.addToBot(new GainBlockAction(p, p, this.block));
+        this.addToBot(new ApplyPowerAction(p, p, new BlurPower(p, baseMagicNumber), baseMagicNumber));
     }
 
     //Upgraded stats.
@@ -74,7 +77,7 @@ public class Dissolve extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(10);
+            upgradeBlock(6);
             initializeDescription();
         }
     }

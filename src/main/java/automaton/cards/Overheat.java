@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.powers.RemoveNextErrorPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -17,6 +18,7 @@ public class Overheat extends AbstractBronzeCard {
     public Overheat() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("Overheat.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

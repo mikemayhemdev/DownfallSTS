@@ -53,7 +53,7 @@ public class PistolWhip extends AbstractDynamicCard {
     public PistolWhip() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = 5;
+        baseMagicNumber = magicNumber = 3;
         loadJokeCardImage(this, "pistol_whip.png");
     }
 
@@ -74,7 +74,7 @@ public class PistolWhip extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
         }
     }
 }

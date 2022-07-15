@@ -76,12 +76,12 @@
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "The Evil Within",
-    "DESCRIPTION": "Deal !D! damage. NL Add a random *Boss card to your hand. It costs 0 until played. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a random Upgraded *Boss card to your hand. It costs 0 until played. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain a random *Boss card. It costs 0 until played. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a random Upgraded *Boss card. It costs 0 until played. NL Exhaust."
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "Knowing Skull",
-    "DESCRIPTION": "Ethereal. NL Spend HP to Wish for Souls, Success, or a Pick Me Up. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Spend HP to *Wish *for *Souls, *Success, or a *Pick *Me *Up. NL Exhaust."
   },
   "expansioncontent:Antidote": {
     "NAME": "Antidote",

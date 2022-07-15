@@ -57,7 +57,7 @@
     "NAME": "黏粥",
     "FLAVOR": "尝起来很糟，但极其健康。",
     "DESCRIPTIONS": [
-      "到达休息处后的下场战斗开始时，将一张 #y伺机待发 加入手牌，它的耗能变为 #b0 。"
+      "到达休息处后的下场战斗开始时，将一张 #y伺机待发 加入手牌，其耗能为 #b0 。"
     ]
   },
   "Slimebound:AggressiveSlimeRelic": {
@@ -93,7 +93,7 @@
     "NAME": "焦油团",
     "FLAVOR": "坏的那种史莱姆。",
     "DESCRIPTIONS": [
-      "每回合获得 [E] 。 NL 失去 #b1 个史莱姆栏位。"
+      "回合开始时获得 [E] 。 NL 失去 #b1 个史莱姆栏位。"
     ]
   },
   "Slimebound:StickyStick": {

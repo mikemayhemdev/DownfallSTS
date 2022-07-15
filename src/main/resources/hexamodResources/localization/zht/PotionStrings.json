@@ -1,0 +1,32 @@
+{
+  "hexamod:SoulburnPotion": {
+    "NAME": "燃燒彈",
+    "DESCRIPTIONS": [
+      "給予 #b",
+      " 層 灼傷。"
+    ]
+  },
+  "hexamod:DoubleChargePotion": {
+    "NAME": "流動燃料",
+    "DESCRIPTIONS": [
+      "強制點燃活躍的鬼火 ",
+      " 次。"
+    ]
+  },
+  "hexamod:EctoCoolerPotion": {
+    "NAME": "外部冷卻劑",
+    "DESCRIPTIONS": [
+      "從任意角色的 #b3 張隨機 #y虛無 牌中選擇 #b1 張加入手牌，它的耗能本回合變為 #b0 。",
+      "從任意角色的 #b3 張隨機 #y虛無 牌中選擇 #b1 張的 #b",
+	  " 份複製品加入手牌，它們的耗能本回合變為 #b0 。"
+    ]
+  },
+  "hexamod:InfernoChargePotion": {
+    "NAME": "獄焱藥水",
+    "DESCRIPTIONS": [
+      "點燃獄焱鬼火。",
+      "點燃獄焱鬼火",
+	  " 次。"
+    ]
+  }
+}

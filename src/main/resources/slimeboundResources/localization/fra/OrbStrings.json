@@ -59,7 +59,7 @@
   "Slimebound:PoisonSlime": {
     "NAME": "Slime guerrier",
     "DESCRIPTION": [
-      "Deals #b",
+      "Inflige #b",
       " dégâts à TOUS les ennemis au début de votre tour."
     ]
   },
@@ -67,7 +67,7 @@
     "NAME": "Slime bourbier",
     "DESCRIPTION": [
       "Inflige #b",
-      " dégâts and applies #b",
+      " dégâts and applique #b",
       " de #yGoop au début de votre tour."
     ]
   },
@@ -76,7 +76,7 @@
     "DESCRIPTION": [
       "Inflige #b",
       " dégâts et applique #b",
-      " de #ySoulburn au début de votre tour."
+      " de #yBrûlure au début de votre tour."
     ]
   },
   "Slimebound:ChampSlime": {

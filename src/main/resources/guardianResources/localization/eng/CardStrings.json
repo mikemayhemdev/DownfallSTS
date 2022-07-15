@@ -190,8 +190,8 @@
   },
   "Guardian:Emergency": {
     "NAME": "Emergency",
-    "DESCRIPTION": "guardianmod:Accelerate until a card in guardianmod:Stasis returns. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "guardianmod:Accelerate until a card in guardianmod:Stasis returns to your hand."
+    "DESCRIPTION": "guardianmod:Accelerate until a card in guardianmod:Stasis leaves it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "guardianmod:Accelerate until a card in guardianmod:Stasis leaves it."
   },
   "Guardian:Clone": {
     "NAME": "Clone",
@@ -200,7 +200,7 @@
   },
   "Guardian:Preprogram": {
     "NAME": "Preprogram",
-    "DESCRIPTION": "Look at the top !M! cards of your draw pile. You may choose one to place into guardianmod:Stasis."
+    "DESCRIPTION": "Look at the top !M! cards of your draw pile. Choose one and place it into guardianmod:Stasis."
   },
   "Guardian:GemFinder": {
     "NAME": "Gem Finder",

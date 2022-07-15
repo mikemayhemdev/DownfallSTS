@@ -50,10 +50,12 @@
       "Allow Standard runs to encounter global events from Downfall.",
       "Allow Standard runs to encounter Boss Cards from Downfall.",
       "Allow Standard characters to play Downfall runs, and Villains to play in Standard runs.",
+      "Allow modded characters to play Downfall runs.",
       "Allow Standard runs to encounter Downfall Curse cards.",
       "Downfall runs use traditional Map layout - fire before boss, not at start.",
       "Unlock all locked cards and relics for Downfall characters (requires game restart)",
       "Disable Champ's Stance Helper - for experienced Champions",
+      "Prevent Snecko from using card pools from other mods.",
       "Disable music overrides (requires game restart)",
       "Unlock all locked alterative skin for Downfall characters"
     ]

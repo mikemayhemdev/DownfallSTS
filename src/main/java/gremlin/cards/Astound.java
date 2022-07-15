@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import gremlin.actions.AstoundAction;
 import gremlin.powers.WizPower;
 
@@ -37,6 +38,7 @@ public class Astound extends AbstractGremlinCard {
         this.cardsToPreview = new Ward();
         this.tags.add(WIZARD_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "Astound.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -25,7 +25,7 @@
   },
   "bronze:DonuBeam": {
     "NAME": "Proto-Laser",
-    "DESCRIPTION": "Infligez !D! dégâts !M! fois. NL bronze:Compilation - Gagnez !M! de force et perdez !bauto! de Dextérité.",
+    "DESCRIPTION": "Infligez !D! dégâts !M! fois. NL bronze:Compilation - Gagnez !M! de Force.",
     "EXTENDED_DESCRIPTION": [
       "smooth",
       "Blast"
@@ -67,7 +67,7 @@
   "bronze:Goto": {
     "NAME": "Goto",
     "DESCRIPTION": "Piochez !M! carte. NL bronze:Compilation - Au prochain tour, piochez !M! carte.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cartes. NL bronze:Compile - Au prochain tour, piochez !M! cartes.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cartes. NL bronze:Compilation - Au prochain tour, piochez !M! cartes.",
     "EXTENDED_DESCRIPTION": [
       "running",
       "Sprint"
@@ -75,7 +75,7 @@
   },
   "bronze:Replicate": {
     "NAME": "Réplique",
-    "DESCRIPTION": "Infligez !D! dégâts.",
+    "DESCRIPTION": "Infligez !D! dégâts. π NL Quand cette carte est bronze:Encodée, ajoutez une copie de celle-ci dans votre défausse.",
     "EXTENDED_DESCRIPTION": [
       "copying",
       "Copy"
@@ -83,7 +83,7 @@
   },
   "bronze:Branch": {
     "NAME": "Branches",
-    "DESCRIPTION": "Choisissez - Infliigez !D! dégâts ou gagnez !B! d'Armure. NL bronze:Encodez l'option non-choisie. NL Épuisement.",
+    "DESCRIPTION": "Infligez !D! dégâts ou gagnez !B! d'Armure. NL bronze:Encodez l'option non-choisie. NL Épuisement.",
     "EXTENDED_DESCRIPTION": [
       "Branch: Attack",
       "Deal !D! damage.",
@@ -92,8 +92,9 @@
     ]
   },
   "bronze:DelayedSlice": {
-    "NAME": "Tranche différée",
-    "DESCRIPTION": "Infigez !D! dégâts. NL bronze:Compilation - Tous les ennemis perdent !M! PV.",
+    "NAME": "Robo-Tranche",
+    "DESCRIPTION": "Infigez !D! dégâts. NL Au prochain tour, piochez !M! carte supplémentaire.",
+    "UPGRADE_DESCRIPTION": "Infigez !D! dégâts. NL Au prochain tour, piochez !M! carte supplémentaires.",
     "EXTENDED_DESCRIPTION": [
       "delayed",
       "Slice"
@@ -123,13 +124,17 @@
       "Child"
     ]
   },
+  "bronze:WildStrike": {
+    "NAME": "Frappe sauvage",
+    "DESCRIPTION": "Infligez !D! dégâts. π NL bronze:Insérez 1 *Blessure."
+  },
   "bronze:Overheat": {
     "NAME": "Surchauffe",
     "DESCRIPTION": "Infligez !D! dégâts. NL Retirez la prochaine bronze:Compilation *Erreur que vous auriez bronze:Encodé."
   },
   "bronze:CutThrough": {
     "NAME": "Couper à travers",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Scrutez !M!. NL bronze:Compilation - Piochez !bauto! cartes.",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Scrutez !M!. NL bronze:Compilation - Piochez !bauto! carte.",
     "EXTENDED_DESCRIPTION": [
       "cutting",
       "Cut"
@@ -161,8 +166,8 @@
     ]
   },
   "bronze:WildBeam": {
-    "NAME": "Laser furieux",
-    "DESCRIPTION": "Infligez !D! dégâts. NL bronze:Compilation *Erreur - bronze:Insérez une *Blessure.",
+    "NAME": "Purification",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Épuisez une carte Statut aléatoire de votre pioche.",
     "EXTENDED_DESCRIPTION": [
       "wild",
       "Beam"
@@ -194,7 +199,7 @@
   },
   "bronze:Deprecate": {
     "NAME": "Désapprouvement",
-    "DESCRIPTION": "Appliquez !M! de Faiblesse à TOUS les ennemis. NL bronze:Compilation *Erreur - Obtenez Faiblesse.",
+    "DESCRIPTION": "Appliquez !M! de Faiblesse.",
     "EXTENDED_DESCRIPTION": [
       "old",
       "Insult"
@@ -202,7 +207,7 @@
   },
   "bronze:Invalidate": {
     "NAME": "Invalidation",
-    "DESCRIPTION": "Appliquez !M! de Vulnerabilité à TOUS les ennemis. NL bronze:Compilation *Erreur - Obtenez Vulnerabilité.",
+    "DESCRIPTION": "Appliquez !M! de Vulnérabilité.",
     "EXTENDED_DESCRIPTION": [
       "invalid",
       "Error"
@@ -210,7 +215,7 @@
   },
   "bronze:Shell": {
     "NAME": "Blockchain",
-    "DESCRIPTION": "Gain !M! de bronze:Flou.",
+    "DESCRIPTION": "Gagnez !M! de bronze:Flou.",
     "UPGRADE_DESCRIPTION": "Gagnez !M! de bronze:Flou. NL bronze:Compilation - Gagnez !M! de bronze:Flou.",
     "EXTENDED_DESCRIPTION": [
       "block",
@@ -256,11 +261,11 @@
   },
   "bronze:GetLatest": {
     "NAME": "Dernière version",
-    "DESCRIPTION": "Ajoutez une carte aléatoire avec bronze:Encode dans votre main. NL Elle coûte 0. NL Épuisement."
+    "DESCRIPTION": "Ajoutez une carte aléatoire avec bronze:Encodez dans votre main. NL Elle coûte 0. NL Épuisement."
   },
   "bronze:Flail": {
     "NAME": "Fléau",
-    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis !bauto! fois. NL bronze:Compilation - Gagnez !M! d'Artéfact.",
+    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis !bauto! fois. NL Gagnez !M! d'Artéfact. NL Épuisement.",
     "EXTENDED_DESCRIPTION": [
       "flailing",
       "Flail"
@@ -292,7 +297,7 @@
   },
   "bronze:BronzeOrb": {
     "NAME": "Orbe de bronze",
-    "DESCRIPTION": "Inné. NL Infligez !D! dégâts. NL Gagnez !B! d'Armure. NL bronze:Encodez une carte aléatoire avec bronze:Encode dans votre pioche. NL Épuisement."
+    "DESCRIPTION": "Inné. NL Infligez !D! dégâts. NL bronze:Encodez une carte aléatoire avec bronze:Encodez dans votre pioche. NL Épuisement."
   },
   "bronze:Virus": {
     "NAME": "Virus",
@@ -309,7 +314,7 @@
   },
   "bronze:CloningBeam": {
     "NAME": "Conflit fusionnel",
-    "DESCRIPTION": "Infligez !D! dégâts. NL La prochaine fois que vous bronze:Encodez une carte, bronze:Encodez une copie de celle-ci. NL Épuisment.",
+    "DESCRIPTION": "Infligez !D! dégâts. NL La prochaine fois que vous bronze:Encodez une carte, bronze:Encodez une copie de celle-ci. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL La prochaine fois que vous bronze:Encodez une carte, bronze:Encodez une copie de celle-ci."
   },
   "bronze:FollowUp": {
@@ -462,7 +467,7 @@
   },
   "bronze:Break": {
     "NAME": "Fissure",
-    "DESCRIPTION": "Infligez !D! dégâts. NL bronze:Compilation *Erreur - bronze:Insérez !M! cartes Statut aléatoires.",
+    "DESCRIPTION": "Infligez !D! dégâts. NL bronze:Compilation *Erreur - bronze:Insérez une *Brûlure, une *Blessure et un *Englué.",
     "EXTENDED_DESCRIPTION": [
       "broken",
       "Smash"
@@ -479,11 +484,11 @@
   },
   "bronze:Library": {
     "NAME": "Bibliothèque",
-    "DESCRIPTION": "Au début de votre tour, ajoutez une carte aléatoire avec bronze:Encode dans votre main. NL Elle coûte 0."
+    "DESCRIPTION": "Au début de votre tour, ajoutez une carte aléatoire avec bronze:Encodez dans votre main. NL Elle coûte 0."
   },
   "bronze:Verify": {
     "NAME": "Forme sentinelle",
-    "DESCRIPTION": "Etherée. NL La première fois que vous créez ou piochez une Fonction chaque tour, augmentez tous les nombres dessus par 1.",
+    "DESCRIPTION": "Éthérée. NL La première fois que vous créez ou piochez une Fonction chaque tour, augmentez tous les nombres dessus par 1.",
     "UPGRADE_DESCRIPTION": "La première fois que vous créez ou piochez une Fonction chaque tour, augmentez tous les nombres dessus par 1."
   },
   "bronze:BronzeHeatsink": {
@@ -529,7 +534,7 @@
   },
   "bronze:Assembly": {
     "NAME": "Assemblage",
-    "DESCRIPTION": "Scrutez !M!. NL bronze:Encodez toutes les cartes avec bronze:Encode qui ont été défaussées dans l'ordre choisi. NL Exhaust."
+    "DESCRIPTION": "Scrutez !M!. NL bronze:Encodez toutes les cartes avec bronze:Encodez qui ont été défaussées dans l'ordre choisi. NL Exhaust."
   },
   "bronze:FineTuning": {
     "NAME": "Réglage Précis",
@@ -538,7 +543,8 @@
   },
   "bronze:CleanCode": {
     "NAME": "Code Clean",
-    "DESCRIPTION": "Retirez tous les effets des all bronze:Compilation *Erreur des cartes Encodées. NL Dure pour les !M! prochaines Fonctions créées."
+    "DESCRIPTION": "Retirez les !M! prochaines *Erreurs de bronze:Compilation que vous auriez bronze:Encodé.",
+    "UPGRADE_DESCRIPTION": "Inné. Retirez les !M! prochaines *Erreurs de bronze:Compilation que vous auriez bronze:Encodé."
   },
   "bronze:BranchBlock": {
     "NAME": "Branche: Armure",
@@ -558,12 +564,12 @@
   },
   "bronze:Ignite": {
     "NAME": "Flambage",
-    "DESCRIPTION": "Apply !M! de hexamod:Brûlure. NL At the end of your turn, take 2 damage.",
-    "UPGRADE_DESCRIPTION": "Apply !M! hexamod:Brûlure. NL At the end of your turn, take 4 damage."
+    "DESCRIPTION": "Appliquez !M! de hexamod:Brûlure. NL À la fin de votre tour, prenez 2 dégâts.",
+    "UPGRADE_DESCRIPTION": "Appliquez !M! de hexamod:Brûlure. NL À la fin de votre tour, prenez 4 dégâts.."
   },
   "bronze:IntoTheVoid": {
     "NAME": "Dans le Néant",
-    "DESCRIPTION": "Ethérée. NL L'ennemi perd !M! de Force ce tour. NL Lorsque cette carte est piochée, perdez [E]. NL Épuisement."
+    "DESCRIPTION": "Éthérée. NL L'ennemi perd !M! de Force ce tour. NL Lorsque cette carte est piochée, perdez [E]. NL Épuisement."
   },
   "bronze:Lubricant": {
     "NAME": "Lubrifiant",
@@ -571,15 +577,15 @@
   },
   "bronze:GrievousWound": {
     "NAME": "Blessure grave",
-    "DESCRIPTION": "Appliquez !M! de Vulnerabilité."
+    "DESCRIPTION": "Appliquez !M! de Vulnérabilité."
   },
   "bronze:Daze": {
-    "NAME": "Etourdissement",
-    "DESCRIPTION": "Ethérée. NL Appliquez !M! de Faiblesse. NL Épuisement."
+    "NAME": "Étourdissement",
+    "DESCRIPTION": "Éthérée. NL Appliquez !M! de Faiblesse. NL Épuisement."
   },
   "bronze:UnknownStatus": {
     "NAME": "Perplexe",
-    "DESCRIPTION": "Infligez !B! d'Armure."
+    "DESCRIPTION": "Gagnez !B! d'Armure."
   },
   "bronze:TinkerersToolbox": {
     "NAME": "Outils de Dev",
@@ -598,7 +604,7 @@
   "bronze:BugBarrage": {
     "NAME": "Barrage buggé",
     "DESCRIPTION": "Ajoutez 1 *Blessure dans votre main. NL bronze:Cyclez chaque Statut dans votre main, infligeant !D! de dégâts pour chacune.",
-    "UPGRADE_DESCRIPTION": "Ajoutez !M! *Blessure dans votre main. NL bronze:Cyclez chaque Statut dans votre main, infligeant !D! de dégâts pour chacune.",
+    "UPGRADE_DESCRIPTION": "Ajoutez !M! *Blessures dans votre main. NL bronze:Cyclez chaque Statut dans votre main, infligeant !D! de dégâts pour chacune.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " times.)"
@@ -606,7 +612,7 @@
   },
   "bronze:BuggyMess": {
     "NAME": "Désordre de bugs",
-    "DESCRIPTION": "bronze:Insérez un Statut aléatoire. NL Gagnez !M! [E] .",
+    "DESCRIPTION": "bronze:Insérez un *Hébètement. NL Gagnez !M! [E] .",
     "EXTENDED_DESCRIPTION": [
       "buggy",
       "Mess"
@@ -652,5 +658,9 @@
       "full",
       "Release"
     ]
+  },
+  "bronze:Undervolt": {
+    "NAME": "Sous-volté",
+    "DESCRIPTION": "Tous les ennemis perdent !M! de Force. NL Obtenez 2 Brûlures. NL Exhaust."
   }
 }

@@ -45,7 +45,7 @@
     "NAME": "Makeshift Battery",
     "FLAVOR": "It's an 8.9 volt.",
     "DESCRIPTIONS": [
-      "Gain [E] and add a random #yStatus card into your discard pile at the start of your turn."
+      "Gain [E] and add a #ySlimed into your discard pile at the start of your turn."
     ]
   },
   "bronze:CableSpool": {

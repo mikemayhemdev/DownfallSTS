@@ -2,9 +2,10 @@ package hermit.cards;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.blue.Streamline;
+import com.megacrit.cardcrawl.cards.red.Rampage;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import hermit.HermitMod;
+import hermit.actions.ReduceCostActionFixed;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 
@@ -56,14 +58,14 @@ public class Desperado extends AbstractDynamicCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 14;
-    private static final int UPGRADE_PLUS_DMG = 4;
+    private static final int DAMAGE = 10;
+    private static final int UPGRADE_PLUS_DMG = 2;
 
     // Hey want a second damage/magic/block/unique number??? Great!
     // Go check out DefaultAttackWithVariable and theDefault.variable.DefaultCustomVariable
@@ -76,8 +78,7 @@ public class Desperado extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
         baseDamage = DAMAGE;
-
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
 
         loadJokeCardImage(this, "desperado.png");
     }
@@ -85,7 +86,10 @@ public class Desperado extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new FrailPower(p, magicNumber, false), magicNumber));
+        //this.addToBot(new ApplyPowerAction(p, p, new FrailPower(p, magicNumber, false), magicNumber));
+
+        this.addToBot(new ModifyDamageAction(this.uuid, this.baseDamage));
+        this.addToBot(new ReduceCostActionFixed(this.uuid, this.magicNumber));
         AbstractDungeon.actionManager.addToBottom( // The action managed queues all the actions a card should do.
 
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),

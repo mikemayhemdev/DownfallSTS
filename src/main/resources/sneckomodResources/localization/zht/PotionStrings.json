@@ -1,0 +1,32 @@
+{
+  "sneckomod:DiceRollPotion": {
+    "NAME": "可能很強藥劑",
+    "DESCRIPTIONS": [
+      "造成 #b",
+      "到",
+      " 點傷害。"
+    ]
+  },
+  "sneckomod:CheatPotion": {
+    "NAME": "流動幸運",
+    "DESCRIPTIONS": [
+      "本回合內，卡牌上的隨機數取上限值。",
+      "在 #b",
+	  "個回合內，卡牌上的隨機數取上限值。"
+    ]
+  },
+  "sneckomod:MuddlingPotion": {
+    "NAME": "尖峰蘇打",
+    "DESCRIPTIONS": [
+      " #y混淆 手牌中耗能最高的 #b",
+      " 張牌。最高不為 #b3"
+    ]
+  },
+  "sneckomod:OffclassReductionPotion": {
+    "NAME": "奇異飲料",
+    "DESCRIPTIONS": [
+      "將手牌中的異色牌的耗能降低 #b",
+      "。"
+    ]
+  }
+}

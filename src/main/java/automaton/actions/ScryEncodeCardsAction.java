@@ -1,6 +1,7 @@
 package automaton.actions;
 
 import automaton.AutomatonMod;
+import automaton.FunctionHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -58,6 +59,7 @@ public class ScryEncodeCardsAction extends AbstractGameAction {
                 for (int i = AbstractDungeon.gridSelectScreen.selectedCards.size() - 1; i >= 0; i--) {
                     AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(i);
                     if (c.hasTag(AutomatonMod.ENCODES)) {
+                        AbstractDungeon.player.drawPile.removeCard(c);
                         addToTop(new AddToFuncAction(c, AbstractDungeon.player.drawPile));
                     } else {
                         AbstractDungeon.player.drawPile.moveToDiscardPile(c);

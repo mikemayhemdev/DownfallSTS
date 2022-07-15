@@ -2,6 +2,7 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import sneckomod.powers.UnendingSupplyPower;
 
 public class UnendingSupply extends AbstractSneckoCard {
@@ -12,6 +13,7 @@ public class UnendingSupply extends AbstractSneckoCard {
 
     public UnendingSupply() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        SneckoMod.loadJokeCardImage(this, "UnendingSupply.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

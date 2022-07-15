@@ -1,0 +1,214 @@
+{
+  "Guardian:NextTurnGainStrengthPower": {
+    "NAME": "充能",
+    "DESCRIPTIONS": [
+      "在下一回合獲得 ",
+      " 點 #y力量 。"
+    ]
+  },
+  "Guardian:StunnedPower": {
+    "NAME": "眩暈",
+    "DESCRIPTIONS": [
+      "跳過你的下回合。",
+      "跳過你下 ",
+      " 個回合。"
+    ]
+  },
+  "Guardian:FloatingOrbsPower": {
+    "NAME": "浮動圓球",
+    "DESCRIPTIONS": [
+      "你的回合開始時, 添加一張 #y圓球撞擊 到你的手牌。",
+      "你的回合開始時，添加 #b",
+      " 張 #y圓球撞擊 到你的手牌。"
+    ]
+  },
+  "Guardian:OrbwalkPower": {
+    "NAME": "圓球回轉",
+    "DESCRIPTIONS": [
+      "每回合開始時獲得 ",
+      " 點力量。"
+    ]
+  },
+  "Guardian:ClonePower": {
+    "NAME": "重連",
+    "DESCRIPTIONS": [
+      "將打出的下張非消耗 #y攻擊 或 #y技能 牌 #y凝滯 。",
+      "將打出的下 ",
+      " 張非消耗 #y攻擊 或 #y技能 牌 #y凝滯 。"
+    ]
+  },
+  "Guardian:GemFinderPower": {
+    "NAME": "開採寶石",
+    "DESCRIPTIONS": [
+      "戰鬥結束後，選擇一顆普通 #y寶石 加入你的牌組。",
+      "戰鬥結束後，選擇 ",
+      " 顆普通 #y寶石 加入你的牌組。"
+    ]
+  },
+  "Guardian:FuturePlansPower": {
+    "NAME": "未來計劃",
+    "DESCRIPTIONS": [
+      "你的回合結束時，可選擇 #b",
+      " 張牌 #y凝滯 。",
+      " 張牌 #y凝滯 。"
+    ]
+  },
+  "Guardian:DefenseModePower": {
+    "NAME": "防禦模式",
+    "DESCRIPTIONS": [
+      " 防禦模式會維持 ",
+      " 個回合。 NL 期間防禦模式給予你 ",
+      " 層荊棘但降低 25% 的傷害。每打出一張牌獲得 2 點格擋。"
+    ]
+  },
+  "Guardian:ConstructModePower": {
+    "NAME": "建造模式",
+    "DESCRIPTIONS": [
+      "每回合開始時，如果你有 #y緩衝 ，獲得 #b",
+      " 點 #y力量 。"
+    ]
+  },
+  "Guardian:MultiBoostPower": {
+    "NAME": "多重促進",
+    "DESCRIPTIONS": [
+      "多次造成傷害的攻擊會造成額外進行 1 次。",
+      "多次造成傷害的攻擊會造成額外進行 ",
+      " 次。"
+    ]
+  },
+  "Guardian:TargetedPower": {
+    "NAME": "標記",
+    "DESCRIPTIONS": [
+      "每當這個敵人受傷時, 本回合獲得 ",
+      " 層臨時力量。"
+    ]
+  },
+  "Guardian:LoseThornsPower": {
+    "NAME": "蛻刺",
+    "DESCRIPTIONS": [
+      "下回合開始時失去 ",
+      " 層荊棘。"
+    ]
+  },
+  "Guardian:BeamBuffPower": {
+    "NAME": "裝填",
+    "DESCRIPTIONS": [
+      " #y射線 牌額外造成 ",
+      " 點傷害。"
+    ]
+  },
+  "Guardian:DefensiveModeBuffsPower": {
+    "NAME": "防禦模式+",
+    "DESCRIPTIONS": [
+      "在防禦模式的基礎上, 防禦模式+將獲得: NL ",
+      " 層荊棘。",
+      " 點敏捷。",
+      " 點格擋於回合結束時。",
+      "消耗在每回合抽到的第一張狀態或詛咒牌",
+      "消耗在每回合抽到的第 ",
+      " 張狀態或詛咒牌 ",
+      "當 防禦模式 結束時 ",
+      " 點 臨時 力量 。"
+    ]
+  },
+  "Guardian:AutomayhemPower": {
+    "NAME": "時間沙漏",
+    "DESCRIPTIONS": [
+      "在你的回合結束時， #y加速 。",
+      "在你的回合結束時， #y加速 #b",
+      " 次。"
+    ]
+  },
+  "Guardian:ConstructPower": {
+    "NAME": "先古建造",
+    "DESCRIPTIONS": [
+      "如果回合開始時你沒有 #y人工製品 ，獲得 #b",
+      " 層",
+      "。"
+    ]
+  },
+  "Guardian:ModeShiftPower": {
+    "NAME": "模式轉換",
+    "DESCRIPTIONS": [
+      "再失去 #b",
+      " 點生命時，進入 #y防禦模式 並獲得 #b10 點 #y格擋 。 若已處於 #y防禦模式 ，不獲得 #y格擋 但額外獲得 #b1 回合持續時間。 NL 每次進入 #y防禦模式 時，下次進入所需的生命損失增加 #b10 點。（最多 #b50 點）"
+    ]
+  },
+  "Guardian:ExhaustStatusesPower": {
+    "NAME": "反衝",
+    "DESCRIPTIONS": [
+      "消耗每回合抽到的第一張 狀態牌 或 詛咒 並抽一張牌。",
+      "消耗每回合抽到的前 #b",
+      " 張 狀態牌 或 詛咒 並抽等量的牌。"
+    ]
+  },
+  "Guardian:RevengePower": {
+    "NAME": "復仇協議",
+    "DESCRIPTIONS": [
+      "處於 #y防禦模式 時，擁有 #b",
+      " 點 #y力量 。"
+    ]
+  },
+  "Guardian:StasisEnginePower": {
+    "NAME": "凝滯引擎",
+    "DESCRIPTIONS": [
+      "每回合打出第三張0耗能牌時，獲得 #b",
+      " [E] 並抽 #b",
+      " 張牌",
+      " 張牌",
+      "。"
+    ]
+  },
+  "Guardian:EnergizedGuardianPower": {
+    "NAME": "能量提升",
+    "DESCRIPTIONS": [
+      "下回合獲得 #b",
+      " 點額外 [E] 。",
+      " 點額外 [E] 。",
+      " - 翻譯注意: - 如需區分單複數，則上面的是複數。"
+    ]
+  },
+  "Guardian:BlockOnCardUsePower": {
+    "NAME": "拋光油",
+    "DESCRIPTIONS": [
+      "本回合每當你打出一張牌，獲得 #b",
+      " 點 #y格擋 。"
+    ]
+  },
+  "Guardian:EvasiveProtocolPower": {
+    "NAME": "回避協議",
+    "DESCRIPTIONS": [
+      "處於 #y防禦模式 時，擁有 #b",
+      " 點 #y敏捷 。"
+    ]
+  },
+  "Guardian:SpikerProtocolPower": {
+    "NAME": "荊棘協議",
+    "DESCRIPTIONS": [
+      "處於 #y防禦模式 時，擁有 #b",
+      " 層 #y荊棘 。"
+    ]
+  },
+  "Guardian:ArmoredProtocolPower": {
+    "NAME": "裝甲協議",
+    "DESCRIPTIONS": [
+      "處於 #y防禦模式 時，回合結束獲得 #b",
+      " 點 #y格擋 。"
+    ]
+  },
+  "Guardian:DontLeaveDefensiveModePower": {
+    "NAME": "處於防禦模式",
+    "DESCRIPTIONS": [
+      "你將在本回合退出 #y防禦模式 。",
+      "你將在 #b",
+      " 個回合後退出 #y防禦模式 。"
+    ]
+  },
+  "Guardian:BracePerTurnPower": {
+    "NAME": "防備",
+    "DESCRIPTIONS": [
+      "你的回合開始時，提防 #b",
+      " 。"
+    ]
+  }
+}

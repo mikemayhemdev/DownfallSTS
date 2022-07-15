@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.vfx.PiercingShotEffect;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -23,6 +24,7 @@ public class WhirlingStrike extends AbstractBronzeCard {
         baseDamage = DAMAGE;
         thisEncodes();
         isMultiDamage = true;
+        AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("PiercingShot.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

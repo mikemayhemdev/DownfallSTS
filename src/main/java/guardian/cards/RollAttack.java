@@ -55,18 +55,19 @@ public class RollAttack extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-        this.isMultiDamage = true;
+        this.isMultiDamage = false;
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("RollAttack.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-            if (p.stance instanceof DefensiveMode) {
+        if (p.stance instanceof DefensiveMode) {
             //this.isMultiDamage = true;
-            AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+            AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(this.baseDamage), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+
         } else {
             //this.isMultiDamage = false;
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
             brace(8);
         }
         this.useGems(p, m);

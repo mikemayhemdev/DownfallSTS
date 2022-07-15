@@ -26,7 +26,7 @@
       "潜力"
     ],
     "PROPERNAME": "潜力",
-    "DESCRIPTION": "强化 #y分裂 的 #y史莱姆 的攻击伤害和附加效果。附加效果只有一半强化效率。"
+    "DESCRIPTION": "强化 #y分裂 的 #y史莱姆 的攻击伤害和附加效果。附加效果只有 #b50% 强化效率。"
   },
   { "NAMES": [
       "命令"
@@ -41,7 +41,7 @@
       "torchhead_slime"
     ],
     "PROPERNAME": "火炬头史莱姆",
-    "DESCRIPTION": "攻击时随机造成 #b6 点伤害。NL 你的 #y力量 提高其伤害。"
+    "DESCRIPTION": "攻击时随机造成 #b6 点伤害。 NL 你的 #y力量 提高其伤害。"
   },
   {
     "NAMES": [
@@ -115,7 +115,7 @@
       "舔"
     ],
     "PROPERNAME": "舔舔",
-    "DESCRIPTION": "一系列给予 #y黏液 的 #b0 耗能 #y消耗 牌，带有各种额外效果。"
+    "DESCRIPTION": "一系列给予 #y黏液 的 #b0 耗能 #y消 #y耗 牌，带有各种额外效果。"
   },
   {
     "NAMES": [

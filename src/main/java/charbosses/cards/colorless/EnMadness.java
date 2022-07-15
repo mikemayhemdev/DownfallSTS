@@ -21,7 +21,7 @@ public class EnMadness extends AbstractBossCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new MadnessAction());
+        //this.addToBot(new MadnessAction());
     }
 
     public void upgrade() {

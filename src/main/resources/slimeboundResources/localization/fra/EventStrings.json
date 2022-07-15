@@ -45,14 +45,14 @@
   "Slimebound:ScrapOoze": {
     "NAME": "Scrap Ooze",
     "DESCRIPTIONS": [
-      "N'importe quel slime est un allié dans votre quête.  Avec des offres de nouvelles ferrailles et de nouveaux trésors, le Slime ferrailleux se joint à votre quête.."
+      "N'importe quel slime est un allié dans votre quête.  Avec des offres de nouvelles ferrailles et de nouveaux trésors, le Slime ferrailleux se joint à votre quête."
     ],
     "OPTIONS": [
       "[Recruter] #rPerdez ",
-      ". Gagnez #gle #gSlime #gFerrailleux. #rVerrouillé si vous Cherchez à l'intérieur.",
+      ". Gagnez #gle #gSlime #gFerrailleux. #rVerrouillé si vous Tendez le bras.",
       "[Recruter] Verrouillé (Vous avez énervé le Slime ferrailleux)",
-      "[Leave]",
-      "[Recruit] Verrouillé (Requiert une Relique Commune ou peu commune)"
+      "[Quitter]",
+      "[Recruter] Verrouillé (Requiert une Relique Commune ou peu commune)"
     ]
   },
   "Slimebound:ArtOfSlimeWar": {
@@ -64,7 +64,7 @@
       "En saisissant le livre, vous avez découvert un piège de pointes sous le plancher, que vous avez échappé de justesse, mais non sans une sévère entaille.",
       "Dès que le livre quitte le piédestal, vous sentez qu'il draine votre essence vitale. Il vaut mieux que ça en vaille la peine.",
       "Vous décidez de laisser le livre là où il est et de continuer votre chemin.",
-      "Vous n'arrivez pas à comprendre comment les serviteurs du Parrain Slime sont une menace pour qui que ce soit. - il semble que la seule tactique qu'ils utilisent soit de jeter violemment leurs corps sur leurs ennemis.  Eh bien, si ça marche pour eux..."
+      "Vous n'arrivez pas à comprendre comment les serviteurs du Parrain Slime soient une menace pour qui que ce soit. - il semble que la seule tactique qu'ils utilisent soit de jeter violemment leurs corps sur leurs ennemis.  Eh bien, si ça marche pour eux..."
     ],
     "OPTIONS": [
       "[Lire] #gRetirez #gtoutes #gvos Frappes. #gRecevez #g3 Tacles #gAméliorés.",

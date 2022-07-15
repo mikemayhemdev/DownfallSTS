@@ -8,7 +8,6 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import champ.cards.AbstractChampCard;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -27,25 +26,13 @@ import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.exordium.GoopPuddle;
 import com.megacrit.cardcrawl.events.exordium.ScrapOoze;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.unlock.AbstractUnlock;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.SmokePuffEffect;
-import downfall.cards.curses.Icky;
 import downfall.downfallMod;
 import expansioncontent.relics.StudyCardRelic;
-import guardian.cards.*;
-import guardian.events.BackToBasicsGuardian;
-import guardian.patches.GuardianEnum;
-import guardian.potions.AcceleratePotion;
-import guardian.potions.BlockOnCardUsePotion;
-import guardian.potions.DefensiveModePotion;
-import guardian.potions.StasisDiscoveryPotion;
-import guardian.relics.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.actions.SlimeSpawnAction;
@@ -246,7 +233,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
             ((AbstractSlimeboundCard) card).betaArtPath = img;
         }
         Texture cardTexture;
-        cardTexture = hermit.util.TextureLoader.getTexture(getModID() + "Resources/Slimeboundimages/betacards/" + img);
+        cardTexture = hermit.util.TextureLoader.getTexture("slimeboundResources/SlimeboundImages/betacards/" + img);
         cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         int tw = cardTexture.getWidth();
         int th = cardTexture.getHeight();
@@ -333,7 +320,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
                 SplitSpecialist.ID,
                 TagTeam.ID,
-                FeelOurPain.ID,
+                FirmFortitude.ID,
 
                 HungryTackle.ID,
                 Recollect.ID,
@@ -459,7 +446,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addCard(new slimebound.cards.Tackle());
         //BaseMod.addCard(new zzzSlimepotheosis());
         BaseMod.addCard(new slimebound.cards.FinishingTackle());
-        BaseMod.addCard(new FeelOurPain());
+        BaseMod.addCard(new FirmFortitude());
         BaseMod.addCard(new Replication());
         BaseMod.addCard(new CheckThePlaybook());
         BaseMod.addCard(new Repurpose());

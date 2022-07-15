@@ -25,7 +25,7 @@ public class EnRoughhouse extends AbstractHermitBossCard {
     public EnRoughhouse() {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/roughhouse.png", 3, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.RARE, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_DEFEND);
         this.baseDamage = 24;
-        this.baseBlock = 16;
+        this.baseBlock = 20;
         modifyCostForCombat(-3);
     }
 

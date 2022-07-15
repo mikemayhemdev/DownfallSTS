@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
@@ -26,17 +27,22 @@ public class DeadOrAliveAction extends AbstractGameAction {
     private int increaseAmount;
     private DamageInfo info;
     private UUID uuid;
+    private AbstractCard c;
 
-    public DeadOrAliveAction(AbstractCreature target, DamageInfo info) {
-        this.info = info;
-        this.setValues(target, info);
+    public DeadOrAliveAction(AbstractCreature target, AbstractPlayer p, AbstractCard c) {
         this.actionType = ActionType.DAMAGE;
+        this.c = c;
+        this.target = target;
+        this.source = p;
+        this.amount = 0;
         this.duration = 0.1F;
     }
 
     public void update() {
         if (this.duration == 0.1F && this.target != null && !(this.target.isDying || this.target.currentHealth <= 0) && !this.target.halfDead) {
             AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX+MathUtils.random(-8f,8f), this.target.hb.cY+MathUtils.random(-8f,8f), AttackEffect.BLUNT_LIGHT));
+            this.c.calculateCardDamage((AbstractMonster)this.target);
+            this.info = new DamageInfo(this.source, this.c.damage, this.c.damageTypeForTurn);
             this.target.damage(this.info);
             if ((this.target.isDying || this.target.currentHealth <= 0) && !this.target.halfDead && !this.target.hasPower("Minion")) {
                 int amount = 15;

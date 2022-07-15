@@ -26,7 +26,7 @@
       "bruise",
       "bruised"
     ],
-  "DESCRIPTION": "Bruised targets take more attack damage. Each hit, Bruise is reduced by #b1. Wears off on turn end."
+  "DESCRIPTION": "Bruised targets take more attack damage. Wears off on turn end."
 },
   {
     "ID": "rugged",
@@ -34,14 +34,14 @@
     "NAMES": [
       "rugged",
     ],
-  "DESCRIPTION": "Reduces next instance of attack damage taken to #b3."
+  "DESCRIPTION": "Reduces next instance of attack damage taken to #b2."
 },
   {
     "PROPER_NAME": "Bounty",
     "NAMES": [
       "bounty"
     ],
-  "DESCRIPTION": "Normal Enemy: #b15 gold.       Elite Enemy: #b40 gold.              Boss: #b100 gold."
+  "DESCRIPTION": "Normal Enemy: #b15 gold.      Elite Enemy: #b40 gold.            Boss: #b100 gold."
 },
   {
     "PROPER_NAME": "Stun",

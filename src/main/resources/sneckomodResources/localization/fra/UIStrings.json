@@ -9,13 +9,18 @@
       "Au début du combat, les cartes Inconnues se transforment en autres cartes aléatoires d'autres classes (autre que les Frappes et Défenses basiques) et qui satisfont certaines contraintes."
     ]
   },
+  "sneckomod:UnknownNames": {
+    "TEXT": [
+      "Inconnue"
+    ]
+  },
   "sneckomod:UnknownClass": {
     "TEXT": [
       "???",
-      "*Inconnue ",
-      " Carte.",
+      "Carte ",
+      " *Inconnue.",
       "Personnage",
-      "Le ",
+      " ",
       "Vous n'auriez jamais dû voir ça. Reportez ceci à Vex"
     ]
   },

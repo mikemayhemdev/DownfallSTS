@@ -286,7 +286,7 @@
 
   "Gremlin:Nob": {
     "NAME": "NOB",
-    "DESCRIPTION": "Gain !M! Temporary_HP. NL Mutate into Gremlin Nob until you run out of Temporary_HP."
+    "DESCRIPTION": "Gain !M! Temporary_HP. NL Mutate into *Gremlin gremlin:Nob until you run out of Temporary_HP."
   },
 
   "Gremlin:NobChoice": {
@@ -320,7 +320,7 @@
   "Gremlin:Pinprick": {
     "NAME": "Pinprick",
     "DESCRIPTION": "Deal !D! damage. NL Draw a card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Whenever you draw this card, gain an gremlin:Echo of it. NL Deal !D! damage. NL Draw a card. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "When drawn, gain an gremlin:Echo of this. NL Deal !D! damage. NL Draw a card. NL Exhaust."
   },
 
   "Gremlin:Polish": {

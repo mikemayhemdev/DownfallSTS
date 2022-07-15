@@ -1,0 +1,48 @@
+[
+  {
+    "PROPER_NAME": "精准",
+    "NAMES": [
+      "精准"
+    ],
+    "DESCRIPTION": "精准牌從手牌中間打出時觸發額外效果。"
+  },
+  {
+    "PROPER_NAME": "專注",
+    "NAMES": [
+      "專注"
+    ],
+    "DESCRIPTION": "下一張 #y精准 牌必定觸發 #y精准 效果。 NL 回合結束時失去該效果。"
+  },
+  {
+    "PROPER_NAME": "瘀傷",
+    "NAMES": [
+      "瘀傷"
+    ],
+  "DESCRIPTION": "受瘀傷效果影響的敵人將受到額外傷害。 NL 每次觸發後失去 #b1 層。 NL 回合結束時失去該效果。"
+},
+  {
+    "PROPER_NAME": "堅固",
+    "NAMES": [
+      "堅固"
+    ],
+  "DESCRIPTION": "減少下次敵方攻擊造成的生命損失到 #b1 點。"
+},
+  {
+    "PROPER_NAME": "賞金",
+    "NAMES": [
+      "賞金"
+    ],
+  "DESCRIPTION": "普通怪物： #b15 金幣。 NL 精英怪物： #b35 金幣。 NL 首領怪物： #b75 金幣。"
+},
+  {
+    "PROPER_NAME": "擊暈",
+    "NAMES": [
+      "擊暈",
+      "stun",
+      "Stun",
+      "stunned",
+      "Stunned"
+    ],
+    "DESCRIPTION": "被擊暈的敵人跳過它的回合。"
+  } 
+]

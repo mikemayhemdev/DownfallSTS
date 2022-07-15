@@ -220,7 +220,7 @@ public abstract class AbstractGuardianCard extends CustomCard {
     }
 
     public static void brace(int modeShiftValue) {
-        if (!AbstractDungeon.player.hasPower(ModeShiftPower.POWER_ID)){
+        if (!AbstractDungeon.player.hasPower(ModeShiftPower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ModeShiftPower(AbstractDungeon.player, AbstractDungeon.player, 20), 20));
         }
         AbstractDungeon.actionManager.addToBottom(new BraceAction(modeShiftValue));
@@ -234,7 +234,7 @@ public abstract class AbstractGuardianCard extends CustomCard {
 
                 this.misc = 0;
                 this.misc = 10 + this.socketCount;
-                GuardianMod.logger.info("New misc gem save in progress: " + this.name + " new misc = " + this.misc);
+                //     GuardianMod.logger.info("New misc gem save in progress: " + this.name + " new misc = " + this.misc);
 
                 if (sockets.size() > 0) {
                     for (int i = 0; i < sockets.size(); i++) {
@@ -279,11 +279,11 @@ public abstract class AbstractGuardianCard extends CustomCard {
                                 break;
                         }
                         this.misc += 10 + gemindex;
-                        GuardianMod.logger.info("New misc gem save in progress: " + this.name + " new misc = " + this.misc);
+                        //       GuardianMod.logger.info("New misc gem save in progress: " + this.name + " new misc = " + this.misc);
 
                     }
                 }
-                GuardianMod.logger.info("New misc gem save final: " + this.name + " new misc = " + this.misc);
+                //    GuardianMod.logger.info("New misc gem save final: " + this.name + " new misc = " + this.misc);
 
             }
         }
@@ -292,20 +292,20 @@ public abstract class AbstractGuardianCard extends CustomCard {
     public void loadGemMisc() {
         this.sockets.clear();
         if (this.misc > 0) {
-            GuardianMod.logger.info("Attempting to load non-zero misc " + this.misc);
+            //  GuardianMod.logger.info("Attempting to load non-zero misc " + this.misc);
             if (Integer.toString(this.misc).length() % 2 == 0) {
-                GuardianMod.logger.info("New misc gem load: " + this.name + " new misc = " + this.misc);
+                // GuardianMod.logger.info("New misc gem load: " + this.name + " new misc = " + this.misc);
                 String miscString = Integer.toString(this.misc);
                 String socketCountString = miscString.substring(0, 2);
-                GuardianMod.logger.info("New misc gem load: " + this.name + " socket string = " + socketCountString + " parsed = " + Integer.parseInt(socketCountString));
+                //  GuardianMod.logger.info("New misc gem load: " + this.name + " socket string = " + socketCountString + " parsed = " + Integer.parseInt(socketCountString));
 
                 this.socketCount = Integer.parseInt(socketCountString) - 10;
-                GuardianMod.logger.info("New misc gem load: " + this.name + " new sockets = " + this.socketCount);
+                //  GuardianMod.logger.info("New misc gem load: " + this.name + " new sockets = " + this.socketCount);
 
                 //SOCKETS
                 if (miscString.length() > 2) {
                     miscString = miscString.substring(2);
-                    GuardianMod.logger.info("New misc gem load: " + this.name + " new misc = " + miscString);
+                    //     GuardianMod.logger.info("New misc gem load: " + this.name + " new misc = " + miscString);
 
                 } else {
                     this.updateDescription();
@@ -374,7 +374,11 @@ public abstract class AbstractGuardianCard extends CustomCard {
     }
 
     public void addGemToSocket(AbstractGuardianCard gem) {
-        AbstractDungeon.player.masterDeck.removeCard(gem);
+        addGemToSocket(gem, true);
+    }
+
+    public void addGemToSocket(AbstractGuardianCard gem, boolean removeFromDeck) {
+        if (removeFromDeck) AbstractDungeon.player.masterDeck.removeCard(gem);
         sockets.add(gem.thisGemsType);
         this.updateDescription();
         this.saveGemMisc();

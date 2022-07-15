@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
+import hermit.actions.CalledShotAction;
+import hermit.actions.ManifestAction;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 import hermit.powers.SnipePower;
@@ -82,7 +84,7 @@ public class CalledShot extends AbstractDynamicCard {
             int DeadOnTimes = DeadOnAmount();
 
             for (int a = 0; a < DeadOnTimes; a++) {
-                this.addToBot(new DrawCardAction(magicNumber));
+                this.addToBot(new CalledShotAction(magicNumber));
             }
 
             this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));

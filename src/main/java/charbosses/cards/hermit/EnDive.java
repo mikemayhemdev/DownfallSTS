@@ -22,7 +22,7 @@ public class EnDive extends AbstractHermitBossCard {
 
     public EnDive() {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/dive.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND_BUFF);
-        this.baseBlock = 7;
+        this.baseBlock = 8;
         baseMagicNumber = magicNumber = 1;
     }
 
@@ -46,7 +46,7 @@ public class EnDive extends AbstractHermitBossCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBlock(3);
+            this.upgradeBlock(2);
         }
     }
 

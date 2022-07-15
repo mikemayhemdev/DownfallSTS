@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 
 import static gremlin.GremlinMod.SHIELD_GREMLIN;
 
@@ -36,6 +37,7 @@ public class FairyDust extends AbstractGremlinCard {
         this.cardsToPreview = new Ward();
         this.tags.add(SHIELD_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "FairyDust.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

@@ -18,15 +18,15 @@
     "NAME": "Queue de slime",
     "FLAVOR": "Une fausse queue pour feinter les ennemis durant le combat, totalement recouverte de slime.",
     "DESCRIPTIONS": [
-      "Lorsque vous tombez à moins de #b50% de vos PV Maximum ,#yslimeboundmod:Divisez vous en #yslimeboundmod:Slime Guerrier, et la prochaine fois que vous vous prenez des dégâts, votre slime en tête est #yslimeboundmod:Absorbé à la place. (ne marche qu'une fois par combat).",
+      "Lorsque vous tombez à moins de #b50% de vos PV Maximum ,#yslimeboundmod:Divisez-vous en #yslimeboundmod:Slime Guerrier, et la prochaine fois que vous vous prenez des dégâts, votre slime en tête est #yslimeboundmod:Absorbé à la place. (ne marche qu'une fois par combat).",
       "Cette relique a été utilisée pendant ce combat. Elle redeviendra active au prochain combat."
     ]
   },
   "Slimebound:PotencyRelic": {
-    "NAME": "Pierre visqueuse",
-    "FLAVOR": "Il est dit qu'elle gagne en puissance en fonction de votre humeur..",
+    "NAME": "Pierre de Nomakk",
+    "FLAVOR": "Quand elle est présentée à un de vos sbires gluants, elle semble faire danser celui-ci.*.",
     "DESCRIPTIONS": [
-      "Au début de chaque combat, #yslimeboundmod:Divisez vous en #yslimeboundmod:Slime Bourbier et gagnez #b1 de #yslimeboundmod:Potentiel."
+      "Au début de chaque combat, #yDivisez-vous en #yslimeboundmod:Slime Bourbier et gagnez #b1 de #yslimeboundmod:Potentiel."
     ]
   },
   "Slimebound:DailySplitRelic": {
@@ -42,7 +42,8 @@
     "DESCRIPTIONS": [
       "Au début de chaque combat, faites apparaître le #ySlime #yferrailleux. NL Dans les sites de Repos, vous pouvez donner une carte au Slime ferrailleux, modifiant ses dégâts: NL #b+1 dégât pour les #gNon-communes NL #b+2 dégâts pour les #yRares NL #b-1 dégât pour les Communes NL #b-2 dégâts pour les #rMalédictions",
       "Retirez une carte de votre deck et modifiez les dégâts du Slime ferrailleux.",
-      "Rien à donner au Slime ferrailleux."
+      "Rien à donner au Slime ferrailleux.",
+      "Donner au Ferrailleux"
     ]
   },
   "Slimebound:GreedOozeRelic": {
@@ -56,14 +57,14 @@
     "NAME": "Soupe de slime",
     "FLAVOR": "Elle a un goût horrible, mais elle est incroyablement saine pour le corps.",
     "DESCRIPTIONS": [
-      "Lorsque vous entrez dans un site de Repos, commencez le prochain combat avec une carte #Préparation qui coûte 0."
+      "Lorsque vous entrez dans un site de Repos, commencez le prochain combat avec une carte #yPréparation qui coûte 0."
     ]
   },
   "Slimebound:AggressiveSlimeRelic": {
     "NAME": "Squatteur visqueux",
     "FLAVOR": "Il m'a suivi jusqu'à la maison. Je peux le garder?",
     "DESCRIPTIONS": [
-      "Au début de chaque combat, #yslimeboundmod:Divisez vous en #yslimeboundmod:Slime cogneur."
+      "Au début de chaque combat, #yslimeboundmod:Divisez-vous en #yslimeboundmod:Slime cogneur."
     ]
   },
   "Slimebound:SlimedSkullRelic": {
@@ -78,7 +79,7 @@
     "NAME": "Bannière de Jeremiah",
     "FLAVOR": "Vous et votre armée.",
     "DESCRIPTIONS": [
-      "Au début de chaque combat, #yslimeboundmod:Divisez vous en #yslimeboundmod:Slime sangsue et gagnez #b1 emplacement de Slime."
+      "Au début de chaque combat, #yslimeboundmod:Divisez-vous en #yslimeboundmod:Slime sangsue et gagnez #b1 emplacement de Slime."
     ]
   },
   "Slimebound:SelfDamagePreventRelic": {

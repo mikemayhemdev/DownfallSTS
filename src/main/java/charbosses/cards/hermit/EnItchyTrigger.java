@@ -25,8 +25,9 @@ public class EnItchyTrigger extends AbstractHermitBossCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ItchyTrigger.ID);
 
     public EnItchyTrigger() {
-        super(ID, cardStrings.NAME, "hermitResources/images/cards/itchy_trigger.png", 2, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
-        this.baseDamage = 12;
+        super(ID, cardStrings.NAME, "hermitResources/images/cards/itchy_trigger.png", 1, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
+        this.baseDamage = 7;
+        baseMagicNumber = magicNumber = 1;
     }
 
     @Override
@@ -38,7 +39,8 @@ public class EnItchyTrigger extends AbstractHermitBossCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(4);
+            upgradeMagicNumber(1);
+            this.upgradeDamage(2);
         }
     }
 

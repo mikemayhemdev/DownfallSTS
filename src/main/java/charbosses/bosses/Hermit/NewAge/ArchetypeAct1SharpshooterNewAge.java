@@ -2,16 +2,20 @@ package charbosses.bosses.Hermit.NewAge;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
+import charbosses.cards.colorless.EnMadness;
 import charbosses.cards.curses.EnInjury;
 import charbosses.cards.hermit.*;
-import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
 import charbosses.powers.bossmechanicpowers.HermitConcentrateAdder;
 import charbosses.powers.bossmechanicpowers.HermitConcentrationPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.exordium.LouseNormal;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import java.util.ArrayList;
 
@@ -32,6 +36,12 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
         super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HermitConcentrationPower(p), damageThreshold));
+
+        AbstractMonster tangerine = new LouseNormal(-400F, 0);
+        tangerine.maxHealth += 24;
+        tangerine.currentHealth += 24;
+        tangerine.powers.add(new StrengthPower(tangerine, 2));
+        AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(tangerine, true));
     }
 
 
@@ -59,19 +69,19 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
                     turn++;
                     break;
                 case 1:
+                    addToList(cardsList, new EnStrikeHermit());
                     addToList(cardsList, new EnItchyTrigger());
                     addToList(cardsList, new EnItchyTriggerStrikeHermit());
-                    addToList(cardsList, new EnInjury());
                     turn++;
                     break;
                 case 2:
                     addToList(cardsList, new EnGhostlyPresence());
-                    addToList(cardsList, new EnDive());
+                    addToList(cardsList, new EnDive(), extraUpgrades);
                     addToList(cardsList, new EnDefendHermit());
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnLoneWolf());
+                    addToList(cardsList, new EnMadness());
                     addToList(cardsList, new EnRoughhouse());
                     addToList(cardsList, new EnInjury());
                     turn++;
@@ -80,8 +90,8 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
                     addToList(cardsList, new EnDive());
                     addToList(cardsList, new EnDeadeye());
                     addToList(cardsList, new EnStrikeHermit());
-                    turn=0;
-                    looped=true;
+                    turn = 0;
+                    looped = true;
                     break;
             }
         } else {
@@ -93,14 +103,14 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
                     turn++;
                     break;
                 case 1:
+                    addToList(cardsList, new EnStrikeHermit());
                     addToList(cardsList, new EnItchyTrigger());
                     addToList(cardsList, new EnItchyTriggerStrikeHermit());
-                    addToList(cardsList, new EnInjury());
                     turn++;
                     break;
                 case 2:
                     addToList(cardsList, new EnGhostlyPresence());
-                    addToList(cardsList, new EnDive());
+                    addToList(cardsList, new EnDive(), extraUpgrades);
                     addToList(cardsList, new EnDefendHermit());
                     turn++;
                     break;
@@ -114,11 +124,10 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
                     addToList(cardsList, new EnDive());
                     if (defaultToggle) {
                         addToList(cardsList, new EnInjury());
-                    }
-                    else
+                    } else
                         addToList(cardsList, new EnDeadeye());
                     addToList(cardsList, new EnStrikeHermit());
-                    turn=0;
+                    turn = 0;
                     break;
             }
         }

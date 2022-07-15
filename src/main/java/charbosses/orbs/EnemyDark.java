@@ -35,6 +35,7 @@ public class EnemyDark extends AbstractEnemyOrb {
     private float vfxTimer;
 
     public EnemyDark() {
+        super();
         this.vfxTimer = 0.5f;
         this.ID = "Dark";
         this.img = ImageMaster.ORB_DARK;

@@ -9,7 +9,7 @@
 },
 "hermit:FatalDesirePower": {
         "NAME": "Fatal Desire",
-        "DESCRIPTIONS": ["At the start of your turn, draw #b", " cards and gain #b", " #yInjury.", " #yInjuries."]
+        "DESCRIPTIONS": ["At the start of your turn, draw #b", " cards and add #b", " #yInjury to your hand.", " #yInjuries to your hand."]
 },
 "hermit:ShadowCloakPower": {
         "NAME": "Shadow Cloak",
@@ -21,11 +21,11 @@
 },
 "hermit:AdaptPower": {
         "NAME": "Adapt",
-        "DESCRIPTIONS": ["At the end of your turn, Exhaust up to #b2 cards. Gain #b", " Block for each."]
+        "DESCRIPTIONS": ["At the start of your turn, #yExhaust up to #b", " card to gain #b8 Block." , " cards. Gain #b8 Block for each."]
 },
 "hermit:Bruise": {
         "NAME": "Bruised",
-        "DESCRIPTIONS": ["This turn, target takes #b", " more attack damage. Each hit reduces this by 1."]
+        "DESCRIPTIONS": ["This turn, target takes #b", " more attack damage."]
 },
 "hermit:HorrorPower": {
         "NAME": "Horror",
@@ -45,11 +45,11 @@
 },
 "hermit:Rugged": {
         "NAME": "Rugged",
-        "DESCRIPTIONS": ["The next", " times you would take unblocked attack damage, reduce it to #b3.", " time you would take unblocked damage, reduce it to #b3."]
+        "DESCRIPTIONS": ["The next", " times you would take unblocked attack damage, reduce it to #b2.", " time you would take unblocked damage, reduce it to #b2."]
 },
 "hermit:EternalPower": {
         "NAME": "Power Eternal",
-        "DESCRIPTIONS": ["You can play #b", " more card for free this turn.", " more cards for free this turn.", "You are out of free plays."]
+        "DESCRIPTIONS": ["At the start of your turn, reduce the cost of all cards in hand by #b", "."]
 },
 "hermit:OverwhelmingPowerPower": {
         "NAME": "Overwhelming Power",
@@ -84,7 +84,11 @@
         "DESCRIPTIONS": ["At the end of your turn, #yRetain up to #b", " Card.", " Cards."]
 },
 "hermit:ReprievePower": {
-                "NAME": "Reprieve",
-                "DESCRIPTIONS": ["Take #b", " extra turn after this one.", " extra turns after this one."]
+        "NAME": "Reprieve",
+        "DESCRIPTIONS": ["Take #b", " extra turn after this one.", " extra turns after this one."]
+},
+"hermit:MaintenanceStrikePower": {
+        "NAME": "Maintenance",
+        "DESCRIPTIONS": ["Your #yStrikes deal #b", " more damage."]
 }
 }

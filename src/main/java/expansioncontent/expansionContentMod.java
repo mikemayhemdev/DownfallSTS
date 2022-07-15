@@ -15,12 +15,14 @@ import basemod.helpers.RelicType;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.OnPowersModifiedSubscriber;
+import basemod.interfaces.PostInitializeSubscriber;
 import basemod.interfaces.PostUpdateSubscriber;
 import champ.cards.AbstractChampCard;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -35,6 +37,7 @@ import downfall.ui.campfire.WheelSpinButton;
 import downfall.util.CardIgnore;
 import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.patches.CardColorEnumPatch;
+import expansioncontent.potions.BossPotion;
 import expansioncontent.relics.StudyCardRelic;
 import expansioncontent.util.CardFilter;
 import javassist.CtClass;
@@ -54,6 +57,7 @@ public class expansionContentMod implements
         EditCardsSubscriber,
         EditRelicsSubscriber,
         OnPowersModifiedSubscriber,
+        PostInitializeSubscriber,
         //EditStringsSubscriber,
         //EditKeywordsSubscriber,
         PostUpdateSubscriber {
@@ -234,5 +238,16 @@ public class expansionContentMod implements
         AbstractDungeon.actionManager.addToBottom(q);
     }
 
+    public void addPotions() {
+        BaseMod.addPotion(BossPotion.class, Color.MAROON, Color.MAROON, new Color(0x470000ff), BossPotion.POTION_ID);
+
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(BossPotion.POTION_ID);
+        }
+    }
+
+    public void receivePostInitialize() {
+        addPotions();
+    }
 
 }

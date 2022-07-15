@@ -750,7 +750,7 @@ public static void saveData() {
 
         UnlockTracker.unlockCard(LeechingTouch.ID);
         UnlockTracker.unlockCard(DuplicatedForm.ID);
-        UnlockTracker.unlockCard(FeelOurPain.ID);
+        UnlockTracker.unlockCard(FirmFortitude.ID);
         UnlockTracker.unlockCard(Dissolve.ID);
         UnlockTracker.unlockCard(RollThrough.ID);
         UnlockTracker.unlockCard(CorrosiveSpit.ID);

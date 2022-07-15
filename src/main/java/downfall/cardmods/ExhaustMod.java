@@ -9,7 +9,7 @@ import sneckomod.SneckoMod;
 
 public class ExhaustMod extends AbstractCardModifier {
 
-    public static String ID = downfallMod.makeID("ExhaustMod");
+    public static String ID = SneckoMod.makeID("ExhaustMod");
 
 
     @Override

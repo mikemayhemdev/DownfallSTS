@@ -32,8 +32,8 @@ public class AdaptAction extends AbstractGameAction {
         this.p = AbstractDungeon.player;
         this.canPickZero = canPickZero;
         this.isRandom = isRandom;
-        this.amount = 2;
-        this.block=amount;
+        this.amount = amount;
+        this.block=8;
         this.duration = this.startDuration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.EXHAUST;
     }
@@ -81,20 +81,6 @@ public class AdaptAction extends AbstractGameAction {
             }
 
             int i;
-            if (!this.anyNumber && this.p.hand.size() <= this.amount) {
-                this.amount = this.p.hand.size();
-                numExhausted = this.amount;
-                i = this.p.hand.size();
-
-                for(int l = 0; l < i; ++l) {
-                    AbstractCard c = this.p.hand.getTopCard();
-                    this.p.hand.moveToExhaustPile(c);
-                    AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-                }
-
-                CardCrawlGame.dungeon.checkForPactAchievement();
-                return;
-            }
 
             if (!this.isRandom) {
                 numExhausted = this.amount;
@@ -105,7 +91,7 @@ public class AdaptAction extends AbstractGameAction {
 
             for(i = 0; i < this.amount; ++i) {
                 this.p.hand.moveToExhaustPile(this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng));
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+                AbstractDungeon.actionManager.addToTop(new GainBlockAction(p, p, block));
             }
 
             CardCrawlGame.dungeon.checkForPactAchievement();
@@ -117,18 +103,11 @@ public class AdaptAction extends AbstractGameAction {
             while(var4.hasNext()) {
                 AbstractCard c = (AbstractCard)var4.next();
                 this.p.hand.moveToExhaustPile(c);
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+                AbstractDungeon.actionManager.addToTop(new GainBlockAction(p, p, block));
             }
 
             CardCrawlGame.dungeon.checkForPactAchievement();
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
-
-            Iterator var1 = AbstractDungeon.player.hand.group.iterator();
-
-            while(var1.hasNext()) {
-                AbstractCard c = (AbstractCard)var1.next();
-                c.triggerOnEndOfTurnForPlayingCard();
-            }
         }
 
         this.tickDuration();

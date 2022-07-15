@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import gremlin.powers.BashedPower;
 
 import static gremlin.GremlinMod.SHIELD_GREMLIN;
@@ -39,6 +40,7 @@ public class AggressiveDefense extends AbstractGremlinCard {
         this.magicNumber = MAGIC;
         this.tags.add(SHIELD_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "AggressiveDefense.png");
     }
 
     @Override

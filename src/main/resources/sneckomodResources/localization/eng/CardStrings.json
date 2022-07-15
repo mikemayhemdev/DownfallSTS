@@ -64,8 +64,8 @@
   },
   "sneckomod:Memorize": {
     "NAME": "Memorize",
-    "DESCRIPTION": "sneckomod:Snekproof. Fleeting. NL Choose a card in hand which started *Unidentified. sneckomod:Identify it.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. Fleeting. Retain. NL Choose a card in hand which started *Unidentified. sneckomod:Identify it.",
+    "DESCRIPTION": "sneckomod:Snekproof. Fleeting. NL Choose a card which started *Unidentified. sneckomod:Identify it.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. Fleeting. Retain. NL Choose a card which started *Unidentified. sneckomod:Identify it.",
     "EXTENDED_DESCRIPTION": [
       " to Identify."
     ]
@@ -80,13 +80,13 @@
   },
   "sneckomod:Mudshield": {
     "NAME": "Mud Shield",
-    "DESCRIPTION": "Whenever you sneckomod:Muddle a card, gain !M! Block.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you sneckomod:Muddle a card, gain !M! Block."
+    "DESCRIPTION": "Whenever you *Muddle a card, gain !M! Block.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you *Muddle a card, gain !M! Block."
   },
   "sneckomod:PureSnecko": {
     "NAME": "Shift",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Transform all sneckomod:Offclass cards in your hand.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Transform all sneckomod:Offclass cards in your hand. NL They cost 1 less."
+    "DESCRIPTION": "sneckomod:Snekproof. NL *Transform all sneckomod:Offclass cards in your hand.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL *Transform all sneckomod:Offclass cards in your hand. NL They cost 1 less."
   },
   "sneckomod:QuickBite": {
     "NAME": "Snake Rake",
@@ -193,107 +193,133 @@
   },
   "sneckomod:Unknown": {
     "NAME": "??? Basic",
-    "DESCRIPTION": "*Unidentified Basic Card."
+    "DESCRIPTION": "*Unidentified Basic Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Basic Card."
   },
   "sneckomod:Unknown0Cost": {
     "NAME": "??? 0-Cost",
-    "DESCRIPTION": "*Unidentified 0 Cost Card."
+    "DESCRIPTION": "*Unidentified 0 Cost Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified 0 Cost Card."
   },
   "sneckomod:Unknown1Cost": {
     "NAME": "??? 1-Cost",
-    "DESCRIPTION": "*Unidentified 1 Cost Card."
+    "DESCRIPTION": "*Unidentified 1 Cost Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified 1 Cost Card."
   },
   "sneckomod:Unknown2Cost": {
     "NAME": "??? 2-Cost",
-    "DESCRIPTION": "*Unidentified 2 Cost Card."
+    "DESCRIPTION": "*Unidentified 2 Cost Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified 2 Cost Card."
   },
   "sneckomod:Unknown3Cost": {
     "NAME": "??? 3-Cost",
-    "DESCRIPTION": "*Unidentified 3 Cost Card."
+    "DESCRIPTION": "*Unidentified 3 Cost Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified 3 Cost Card."
   },
   "sneckomod:UnknownBlock": {
     "NAME": "??? Block",
-    "DESCRIPTION": "*Unidentified Block Card."
+    "DESCRIPTION": "*Unidentified Block Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Block Card."
   },
   "sneckomod:UnknownBoss": {
     "NAME": "??? Boss",
-    "DESCRIPTION": "*Unidentified Colorless Boss card."
+    "DESCRIPTION": "*Unidentified Colorless Boss card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Colorless Boss card."
   },
   "sneckomod:UnknownClass": {
     "NAME": "??? Class",
-    "DESCRIPTION": "*Unidentified YouShouldNeverSeeThis-ReportToDev Card."
+    "DESCRIPTION": "*Unidentified YouShouldNeverSeeThis-ReportToDev Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified YouShouldNeverSeeThis-ReportToDev Card."
   },
   "sneckomod:UnknownColorless": {
     "NAME": "??? Colorless",
-    "DESCRIPTION": "*Unidentified Colorless Card."
+    "DESCRIPTION": "*Unidentified Colorless Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Colorless Card."
   },
   "sneckomod:UnknownCommonAttack": {
     "NAME": "??? C Attack",
-    "DESCRIPTION": "*Unidentified Common Attack Card."
+    "DESCRIPTION": "*Unidentified Common Attack Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Common Attack Card."
   },
   "sneckomod:UnknownCommonSkill": {
     "NAME": "??? C Skill",
-    "DESCRIPTION": "*Unidentified Common Skill Card."
+    "DESCRIPTION": "*Unidentified Common Skill Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Common Skill Card."
   },
   "sneckomod:UnknownDexterity": {
     "NAME": "??? Dexterity",
-    "DESCRIPTION": "*Unidentified Dexterity Card."
+    "DESCRIPTION": "*Unidentified Dexterity Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Dexterity Card."
   },
   "sneckomod:UnknownDraw": {
     "NAME": "??? Draw",
-    "DESCRIPTION": "*Unidentified Draw Card."
+    "DESCRIPTION": "*Unidentified Draw Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Draw Card."
   },
   "sneckomod:UnknownEthereal": {
     "NAME": "??? Ethereal",
-    "DESCRIPTION": "*Unidentified Ethereal Card."
+    "DESCRIPTION": "*Unidentified Ethereal Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Ethereal Card."
   },
   "sneckomod:UnknownExhaust": {
     "NAME": "??? Exhaust",
-    "DESCRIPTION": "*Unidentified Exhaust Card."
+    "DESCRIPTION": "*Unidentified Exhaust Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Exhaust Card."
   },
   "sneckomod:UnknownRareAttack": {
     "NAME": "??? R Attack",
-    "DESCRIPTION": "*Unidentified Rare Attack Card."
+    "DESCRIPTION": "*Unidentified Rare Attack Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Rare Attack Card."
   },
   "sneckomod:UnknownRarePower": {
     "NAME": "??? R Power",
-    "DESCRIPTION": "*Unidentified Rare Power Card."
+    "DESCRIPTION": "*Unidentified Rare Power Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Rare Power Card."
   },
   "sneckomod:UnknownRareSkill": {
     "NAME": "??? R Skill",
-    "DESCRIPTION": "*Unidentified Rare Skill Card."
+    "DESCRIPTION": "*Unidentified Rare Skill Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Rare Skill Card."
   },
   "sneckomod:UnknownStrength": {
     "NAME": "??? Strength",
-    "DESCRIPTION": "*Unidentified Strength Card."
+    "DESCRIPTION": "*Unidentified Strength Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Strength Card."
   },
   "sneckomod:UnknownStrike": {
     "NAME": "??? Strike",
-    "DESCRIPTION": "*Unidentified Strike Card."
+    "DESCRIPTION": "*Unidentified Strike Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Strike Card."
   },
   "sneckomod:UnknownUncommonAttack": {
     "NAME": "??? U Attack",
-    "DESCRIPTION": "*Unidentified Uncommon Attack Card."
+    "DESCRIPTION": "*Unidentified Uncommon Attack Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Uncommon Attack Card."
   },
   "sneckomod:UnknownUncommonPower": {
     "NAME": "??? U Power",
-    "DESCRIPTION": "*Unidentified Uncommon Power Card."
+    "DESCRIPTION": "*Unidentified Uncommon Power Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Uncommon Power Card."
   },
   "sneckomod:UnknownUncommonSkill": {
     "NAME": "??? U Skill",
-    "DESCRIPTION": "*Unidentified Uncommon Skill Card."
+    "DESCRIPTION": "*Unidentified Uncommon Skill Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Uncommon Skill Card."
   },
   "sneckomod:UnknownVulnerable": {
     "NAME": "??? Vulnerable",
-    "DESCRIPTION": "*Unidentified Vulnerable Card."
+    "DESCRIPTION": "*Unidentified Vulnerable Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Vulnerable Card."
   },
   "sneckomod:UnknownWeak": {
     "NAME": "??? Weak",
-    "DESCRIPTION": "*Unidentified Weak Card."
+    "DESCRIPTION": "*Unidentified Weak Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified Weak Card."
   },
   "sneckomod:UnknownX": {
     "NAME": "??? X-Cost",
-    "DESCRIPTION": "*Unidentified X Cost Card."
+    "DESCRIPTION": "*Unidentified X Cost Card.",
+    "UPGRADE_DESCRIPTION": "Upgraded *Unidentified X Cost Card."
   },
   "sneckomod:UnlimitedRolls": {
     "NAME": "Unlimited Rolls",

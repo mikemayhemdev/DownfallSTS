@@ -6,12 +6,12 @@
   },
   "champ:SealSealReward": {
     "TEXT": [
-      "Ajoutez un Seal à votre deck"
+      "Ajoutez un Sceau à votre deck"
     ]
   },
   "champ:TechniqueMod": {
     "TEXT": [
-      "champ:Technique. NL "
+      "NL Déclenchez votre *Bonus de *Compétence."
     ]
   },
   "champ:OpenerMod": {
@@ -31,6 +31,14 @@
       "coûte 0.",
       "augmente les dégâts.",
       "augmente l'Armure."
+    ]
+  },
+  "champ:highlightCombos": {
+    "TEXT": [
+      "champ:Combo Pose du *Destructeur:",
+      "champ:Combo Pose du [#5ebf2a]Destructeur:",
+      "champ:Combo Pose *Défensive:",
+      "champ:Combo Pose [#5ebf2a]Défensive:"
     ]
   }
 }

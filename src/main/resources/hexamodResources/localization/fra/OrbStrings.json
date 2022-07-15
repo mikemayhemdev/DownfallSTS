@@ -47,7 +47,7 @@
 	  "Est #yEnflammé lorsque vous dépensez [E] [E] [E] pendant que vous êtes sur celui-ci.",
 	  " NL NL #yInflammation: Infligez #b",
 	  " dégâts à un ennemi aléatoire pour chaque #yFeu #yFollet #yEnflammé, puis #yÉteignez-les.",
-		" NL NL À la fin de votre tour, si ceci est #yEnflammé, #yAvancez au prochain Feu Follet."
+		" NL NL À la fin de votre tour, si ceci est #yEnflammé, #yAvancez au prochain Feu Follet.",
 		" NL NL À la fin de votre tour, si ceci est #yEnflammé, #yAvancez au prochain Feu Follet."
     ]
   }, 

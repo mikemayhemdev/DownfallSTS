@@ -12,7 +12,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.combat.ClashEffect;
-import com.sun.org.apache.xpath.internal.objects.XBoolean;
+
+import static champ.ChampMod.loadJokeCardImage;
 
 public class Duel extends AbstractChampCard {
 
@@ -33,6 +34,7 @@ public class Duel extends AbstractChampCard {
         tags.add(ChampMod.TECHNIQUE);
 
         postInit();
+        loadJokeCardImage(this, "Challenge.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,7 +1,9 @@
 package hermit.cards;
 
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.colorless.Bite;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -48,23 +50,28 @@ public class Reprieve extends AbstractDynamicCard {
 
 
 
-    private static final int COST = 1;
+    private static final int COST = 2;
 
 
     // /STAT DECLARATION/
 
     public Reprieve() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = magicNumber = 13;
+        baseMagicNumber = magicNumber = 12;
         loadJokeCardImage(this, "reprieve.png");
+        this.tags.add(CardTags.HEALING);
+        this.isEthereal = true;
+        this.exhaust=true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ReprieveAction(this.magicNumber));
+        //AbstractDungeon.actionManager.addToBottom(new ReprieveAction(this.magicNumber));
+        this.addToBot(new HealAction(p, p, this.magicNumber));
     }
 
+    /*
     public static int countCards(CardGroup varGroup) {
         int count = 0;
 
@@ -101,14 +108,14 @@ public class Reprieve extends AbstractDynamicCard {
             this.glowColor = AbstractDynamicCard.GOLD_BORDER_GLOW_COLOR.cpy();
         }
     }
+    */
 
     //Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
-            upgradeMagicNumber(-3);
+            upgradeMagicNumber(3);
             initializeDescription();
         }
     }

@@ -27,6 +27,7 @@ public class Haunt extends AbstractHexaCard {
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
+        HexaMod.loadJokeCardImage(this, "HauntedHand.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

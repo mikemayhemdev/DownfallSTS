@@ -3,7 +3,7 @@
     "NAME": "Mine de gemmes",
     "DESCRIPTIONS": [
       "Vous entrez dans un ancien puits de mine.  Dans les crevasses rocheuses, vous pouvez voir un certain nombre de pierres précieuses brillantes. Des #gémeraudes, des #rrubis, des #ytopazes, et bien d'autres.  Une meute de mineurs diablotins à proximité possède des outils d'extraction qui pourraient être utiles, mais les pierres précieuses sont si proches de la surface qu'avec un peu de détermination, vous pourriez être en mesure de les retirer à la main.",
-      "Creusant dans le mur rocheux, vous réusissez à arracher une gemme de l'endroit où elle reposait. Ça fait un peu mal, mais les joyaux en valent la peine..",
+      "Creusant dans le mur rocheux, vous réusissez à arracher une gemme de l'endroit où elle reposait. Ça fait un peu mal, mais les joyaux en valent la peine.",
       "Bien que la perspective d'un trésor soit attrayante, vous préférez gardez votre armure pour des aventures plus importantes.",
       "Ayant réussi à conquérir l'ancienne mine, vous repartez avec un sentiment de satisfaction.  Et des appendices de bronze douloureux.",
       "Vous volez la pioche du camp de Diablotins, qui semble être de mauvaise qualité. Vous pouvez l'utiliser ici pour gagner des pierres précieuses, ou le mettre de côté pour l'utiliser plus tard dans votre ascension.",
@@ -36,7 +36,7 @@
   "Guardian:AccursedBlacksmith": {
     "NAME": "",
     "DESCRIPTIONS": [
-      "Vous décidez d'utiliser la forge et... NL #y@CLANG@ #y@CLAAANG@ #y@CLANG!@ NL ...faire de la place dans votre arsenal pour de nouvelles gemmes."
+      "Vous décidez d'utiliser la forge et... NL #y@CLANG@ #y@CLAAANG@ #y@CLANG!@ NL ...de faire de la place dans votre arsenal pour de nouvelles gemmes."
     ],
     "OPTIONS": [
       "[Trafiquer] #gAjoutez #gune #gcavité #gpour #gn'importe #gquelle #gcarte #gpouvant #gavoir #gune #gcavité.",
@@ -64,8 +64,8 @@
   "Guardian:CrystalForge": {
     "NAME": "Forge sombre",
     "DESCRIPTIONS": [
-      "À travers des passages ecrets connus seulement des Androïdes de la Tour, vous entrez dans une chambre désignée pour la maintenance et les réparations des modèles d'Automate. Les outils disponibles ici vous seront certainement utiles, même s'ils n'ont pas été conçus pour les gardiens.",
-      "Utilisant l'enclume enchantée, vous détruisez une pièce d'équipement inutile, tout ça pour récupérer les pierres précieuses que vous y avez bêtement placées auparavant.",
+      "À travers des passages secrets connus seulement des Androïdes de la Tour, vous entrez dans une chambre désignée pour la maintenance et les réparations des modèles d'Automate. Les outils disponibles ici vous seront certainement utiles, même s'ils n'ont pas été conçus pour les Gardiens.",
+      "Utilisant l'enclume enchantée, vous détruisez une pièce d'équipement inutile, afin de pour récupérer les pierres précieuses que vous avez bêtement placées auparavant.",
       "Avec les pinces magiques, vous faites levier sur une cavité et retirez les gemmes à l'intérieur, faisant de la place pour de meilleurs dispositifs à installer plus tard, au prix de rendre les pierres précieuses complètement inutilisables.",
       "La capacité de la Forge à transmettre la matière est utilisée immédiatement alors que vous jetez une pièce d'équipement inutile. Quelques instants plus tard, le matériel se dissout et se compresse en une gemme magnifique.",
       "Vous vous échappez à travers le même passage par lequel vous êtes entré, laissant la Forge Sombre derrière vous. Votre voyage continue, vous dirigeant vers le haut de la Tour.",
@@ -74,7 +74,7 @@
       "Sélectionnez une carte à Transmettre.",
       "Sélectionnez une Gemme.",
       "Sélectionnez une Carte pour recevoir une Gemme.",
-      "Profitant de cette pause dans votre ascension, vous placez une pierre précieuse dans votre équipement, sentant instantanément votre puissance augmenter.."
+      "Profitant de cette pause dans votre ascension, vous placez une pierre précieuse dans votre équipement, sentant instantanément votre puissance augmenter."
     ],
     "OPTIONS": [
       "[Démonter] #rRetirez une Carte Encastrée. Gagnez ses #gGemmes.",
@@ -90,7 +90,7 @@
   "Guardian:Purifier": {
     "NAME": "",
     "DESCRIPTIONS": [
-      "D'un coup sec et écrasant, vous mettez l'autel en morceaux afin de découvrir les trésors qu'il contient. Dans les décombres, vous trouverez deux pierres précieuses immaculées et utilisables, qui attendent patiemment leur place dans votre armement.. NL NL Vous quittez les restes de l'autel et continuez votre ascension.."
+      "D'un coup sec et écrasant, vous mettez l'autel en morceaux afin de découvrir les trésors qu'il contient. Dans les décombres, vous trouverez deux pierres précieuses immaculées et utilisables, qui attendent patiemment leur place dans votre armement. NL NL Vous quittez les restes de l'autel et continuez votre ascension.."
     ],
     "OPTIONS": [
       "[Détruire] #gGagnez #g2 #gGemmes #galéatoires."

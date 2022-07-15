@@ -1,0 +1,54 @@
+{
+  "downfall:WorldOfGoo": {
+    "NAME": "黏黏世界",
+    "DESCRIPTION": "每當你受到未被阻擋的傷害，將一張粘液加入棄牌堆。"
+  },
+  "downfall:Hexed": {
+    "NAME": "六咒",
+    "DESCRIPTION": "起始獲得天鵝絨項圈。每當你抽一張牌，使其獲得虛無。"
+  },
+  "downfall:Improvised": {
+    "NAME": "即興發揮",
+    "DESCRIPTION": "將你的初始牌組替換為10張未知牌。"
+  },
+  "downfall:Jewelcrafting": {
+    "NAME": "珠寶加工",
+    "DESCRIPTION": "起始擁有兩張寶石利用與一把星光公司採礦鎬。"
+  },
+  "downfall:EvilRun": {
+    "NAME": "崩墜",
+    "DESCRIPTION": "以崩墜模式進行遊戲。"
+  },
+  "downfall:ExchangeController": {
+    "NAME": "手柄互換",
+    "DESCRIPTION": "起始獲得涅奧的祝福。"
+  },
+  "downfall:Lament": {
+    "NAME": "悲慟",
+    "DESCRIPTION": "起始獲得涅奧的悲慟。"
+  },
+  "downfall:ChampStances": {
+    "NAME": "新晉者",
+    "DESCRIPTION": "每場戰鬥開始時，進入隨機一種第一勇士姿態並獲得一張終結打擊。所有初始牌獲得戰術。"
+  },
+  "downfall:Enraging": {
+    "NAME": "最後一戰",
+    "DESCRIPTION": "所有敵人如果在回合開始時半血以下，清除所有負面效果並獲得力量。"
+  },
+    "downfall:Analytical": {
+    "NAME": "分析",
+    "DESCRIPTION": "每回合開始時，將一張帶有虛無的隨機編碼牌加入手牌。基礎打擊防禦帶有編碼。"
+  },
+  "downfall:StatusAbuse": {
+    "NAME": "強加",
+    "DESCRIPTION": "初始擁有備用電池、甜圈墊片、八體墊片、醫療箱和銅制神像。所有其他遺物將變為頭環。"
+  },
+  "downfall:TooManyShivs": {
+    "NAME": "超量小刀",
+    "DESCRIPTION": "初始擁有天鵝絨頸圈，虛無結晶和10張小刀。"
+  },
+  "downfall:Wizzardry": {
+    "NAME": "巫術",
+    "DESCRIPTION": "初始擁有巫師帽，法師杖和一張升級的巫術。"
+  }
+}

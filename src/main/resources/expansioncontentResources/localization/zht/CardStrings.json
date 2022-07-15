@@ -1,0 +1,80 @@
+{
+  "expansioncontent:GuardianWhirl": {
+    "NAME": "守護者旋風",
+    "DESCRIPTION": "expansioncontent:首領 - 守護者。 NL 格擋 不少於10點才能被打出。 NL 對所有敵人造成 !D! 點傷害 4 次。 NL 消耗 。",
+	"EXTENDED_DESCRIPTION": [
+      "我的格擋不夠。"
+    ]
+  },
+  "expansioncontent:Hexaburn": {
+    "NAME": "幽靈地獄",
+    "DESCRIPTION": "expansioncontent:首領 - 六火亡魂。 NL !M! 回合後，對隨機一名敵人造成 !D! 點傷害6次。"
+  },
+   "expansioncontent:InvincibleStrength": {
+    "NAME": "堅不可摧",
+    "DESCRIPTION": "expansioncontent:首領 - 腐化之心 。 NL 獲得 10 層 expansioncontent:堅不可摧 。"
+  },
+  "expansioncontent:HyperBeam": {
+    "NAME": "超能射線",
+    "DESCRIPTION": "expansioncontent:首領 - 機械人偶。 NL 對所有敵人造成 !D! 點傷害。 NL 下回合失去 [E] 。 NL 消耗 。"
+  },
+  "expansioncontent:LastStand": {
+    "NAME": "背水一戰",
+    "DESCRIPTION": "expansioncontent:首領 - 第一勇士。 NL 移除所有負面效果。 NL 獲得 1 點 力量 。 NL 若半血以下，獲得 2 點 力量 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:首領 - 第一勇士。 NL 移除所有負面效果。 NL 獲得 1 點 力量 。 NL 若半血以下，回復 !M! 點生命並獲得 2 點 力量 。"
+  },
+  "expansioncontent:YouAreMine": {
+    "NAME": "你是我的了！",
+    "DESCRIPTION": "expansioncontent:首領 - 收藏家。 NL 移除所有敵人的 格擋 。給予所有敵人 !M! 層 虛弱 和 易傷 。 NL 消耗 。"
+  },
+  "expansioncontent:AwakenDeath": {
+    "NAME": "覺醒",
+    "DESCRIPTION": "expansioncontent:首領 - 覺醒者。 NL 獲得 1 點 力量 。 NL 下次死亡時，免死並回復 !M! 生命。"
+  },
+  "expansioncontent:Chronoboost": {
+    "NAME": "時空加速",
+    "DESCRIPTION": "expansioncontent:首領 - 時間吞噬者。 NL 每打出12張牌獲得 1 點 力量 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:首領 - 時間吞噬者。 NL 獲得1點 力量 。 NL 每打出12張牌獲得1點力量 。"
+  },
+  "expansioncontent:PolyBeam": {
+    "NAME": "甜圈爆破",
+    "DESCRIPTION": "expansioncontent:首領 - 先古造物。 NL 造成 !D! 點傷害兩次並提高 !M! 點數值。 NL 下回合將同一張 *八體護盾 expansioncontent:發掘 或加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:首領 - 先古造物。 NL 造成 !D! 點傷害兩次並提高 !M! 點數值。 NL 下回合將同一張 *八體護盾+ expansioncontent:發掘 或加入手牌。 NL 消耗 。"
+  },
+    "expansioncontent:DecaShield": {
+    "NAME": "八體護盾",
+    "DESCRIPTION": "expansioncontent:首領 - 先古造物。 NL 獲得 !B! 點 格擋 兩次並提高 !M! 點數值。 NL 下回合 expansioncontent:發掘 同一張 *甜圈爆破 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:首領 - 先古造物。 NL 獲得 !B! 點 格擋 兩次並提高 !M! 點數值。 NL 下回合 expansioncontent:發掘 同一張 *甜圈爆破+ 。 NL 消耗 。"
+  },
+  "expansioncontent:PrepareCrush": {
+    "NAME": "準備：猛撞",
+    "DESCRIPTION": "expansioncontent:首領 - 史萊姆。 NL 獲得 !B! 點 格擋 。 NL 下回合獲得 [E] [E] [E] 並將一張 *史萊姆撞擊 加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:首領 - 史萊姆。 NL 獲得 !B! 點 格擋 。 NL 下回合獲得 [E] [E] [E] 並將一張 *史萊姆撞擊+ 加入手牌。 NL 消耗 。"
+  },
+  "expansioncontent:StudyTheSpire": {
+    "NAME": "研究尖塔",
+    "DESCRIPTION": "接下來 !M! 回合，每回合開始時獲得1張隨機 expansioncontent:首領 牌，它們下次耗能為0。",
+    "UPGRADE_DESCRIPTION": "接下來 !M! 回合，每回合開始時獲得1張已 升級 的隨機 expansioncontent:首領 牌，它們下次耗能為0。"
+  },
+  "expansioncontent:QuickStudy": {
+    "NAME": "快速學習",
+    "DESCRIPTION": "從3張隨機 expansioncontent:首領 牌中選擇1張加入手牌， NL 它下次耗能為0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "從3張已升級的隨機 expansioncontent:首領 牌中選擇1張加入手牌， NL 它下次耗能為0。 NL 消耗 。",
+	 "EXTENDED_DESCRIPTION": [
+      "選擇一張首領牌。"
+    ]
+  },
+  "expansioncontent:DashGenerateEvil": {
+    "NAME": "惡靈附身",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 獲得 !B! 點 格擋 。 NL 將隨機一張 expansioncontent:首領 牌加入手牌。 NL 它下次耗能為0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 獲得 !B! 點 格擋 。 NL 將隨機一張已 升級 的張 expansioncontent:首領 牌加入手牌，它下次耗能為0。 NL 消耗 。"
+  },
+    "expansioncontent:KnowingSkullWish": {
+    "NAME": "全知頭骨",
+    "DESCRIPTION": "虛無 。 NL 支付生命以許願靈魂，成功或來點喝的。 NL 消耗 。"
+  },
+  "expansioncontent:Antidote": {
+    "NAME": "解毒劑",
+    "DESCRIPTION": "失去所有 中毒 。"
+  }
+}
