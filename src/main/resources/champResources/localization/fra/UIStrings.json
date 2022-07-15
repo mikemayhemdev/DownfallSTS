@@ -32,5 +32,13 @@
       "augmente les dégâts.",
       "augmente l'Armure."
     ]
+  },
+  "champ:highlightCombos": {
+    "TEXT": [
+      "champ:Combo Pose du *Destructeur:",
+      "champ:Combo Pose du [#5ebf2a]Destructeur:",
+      "champ:Combo Pose *Défensive:",
+      "champ:Combo Pose [#5ebf2a]Défensive:"
+    ]
   }
 }

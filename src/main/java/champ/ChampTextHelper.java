@@ -4,6 +4,7 @@ import champ.cards.AbstractChampCard;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
 import champ.stances.UltimateStance;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static automaton.FunctionHelper.WITH_DELIMITER;
@@ -11,7 +12,7 @@ import static champ.ChampMod.FINISHER;
 import static champ.ChampMod.TECHNIQUE;
 
 public class ChampTextHelper {
-    private static String THIS_EFFECT_WILL_ACTIVATE_COLOR = "[#5ebf2a]";
+    protected static String[] ifStr = CardCrawlGame.languagePack.getUIString(AbstractChampCard.makeID("highlightCombos")).TEXT;
 
     public static void calculateTagText(AbstractChampCard c) {
         String prefixTech = "";
@@ -71,23 +72,23 @@ public class ChampTextHelper {
 
     public static void colorCombos(AbstractChampCard card, boolean resetColors) {
         if (AbstractDungeon.player != null) {
-            if (card.rawDescription.contains("*Berserker champ:Combo:")) {
+            if (card.rawDescription.contains(ifStr[0])) {
                 if (AbstractChampCard.bcombo() && !resetColors) {
-                    card.rawDescription = card.rawDescription.replace("*Berserker champ:Combo:", THIS_EFFECT_WILL_ACTIVATE_COLOR + "Berserker champ:Combo:");
+                    card.rawDescription = card.rawDescription.replace(ifStr[0], ifStr[1]);
                 }
-            } else if (card.rawDescription.contains(THIS_EFFECT_WILL_ACTIVATE_COLOR + "Berserker champ:Combo:")) {
+            } else if (card.rawDescription.contains(ifStr[1])) {
                 if (!AbstractChampCard.bcombo() || resetColors) {
-                    card.rawDescription = card.rawDescription.replace(THIS_EFFECT_WILL_ACTIVATE_COLOR + "Berserker champ:Combo:", "*Berserker champ:Combo:");
+                    card.rawDescription = card.rawDescription.replace(ifStr[1], ifStr[0]);
                 }
             }
 
-            if (card.rawDescription.contains("*Defensive champ:Combo:")) {
+            if (card.rawDescription.contains(ifStr[2])) {
                 if (AbstractChampCard.dcombo() && !resetColors) {
-                    card.rawDescription = card.rawDescription.replace("*Defensive champ:Combo:", THIS_EFFECT_WILL_ACTIVATE_COLOR + "Defensive champ:Combo:");
+                    card.rawDescription = card.rawDescription.replace(ifStr[2], ifStr[3]);
                 }
-            } else if (card.rawDescription.contains("[#5ebf2a]Defensive champ:Combo:")) {
+            } else if (card.rawDescription.contains(ifStr[3])) {
                 if (!AbstractChampCard.dcombo() || resetColors) {
-                    card.rawDescription = card.rawDescription.replace(THIS_EFFECT_WILL_ACTIVATE_COLOR + "Defensive champ:Combo:", "*Defensive champ:Combo:");
+                    card.rawDescription = card.rawDescription.replace(ifStr[3], ifStr[2]);
                 }
             }
         }
