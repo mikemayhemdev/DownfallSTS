@@ -46,7 +46,7 @@ public class MakeEchoAction extends AbstractGameAction {
     private AbstractCard echoCard(){
         AbstractCard card = this.c.makeStatEquivalentCopy();
         card.name = CardCrawlGame.languagePack.getUIString("Gremlin:MakeEchoAction").TEXT[0] + card.name;
-        if (!card.exhaust) card.rawDescription = CardCrawlGame.languagePack.getUIString(ExhaustMod.ID).TEXT[0] + card.rawDescription;
+        if (!card.exhaust) card.rawDescription = card.rawDescription + CardCrawlGame.languagePack.getUIString(ExhaustMod.ID).TEXT[0];
         card.exhaust = true;
         if (!card.isEthereal) card.rawDescription = CardCrawlGame.languagePack.getUIString(EtherealMod.ID).TEXT[0] + card.rawDescription;
         card.isEthereal = true;
