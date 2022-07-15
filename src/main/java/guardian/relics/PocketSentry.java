@@ -30,7 +30,7 @@ public class PocketSentry extends CustomRelic {
 
     public PocketSentry() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.COMMON, LandingSound.FLAT);
+                RelicTier.UNCOMMON, LandingSound.FLAT);
         this.largeImg = ImageMaster.loadImage(GuardianMod.getResourcePath(LARGE_IMG_PATH));
     }
 

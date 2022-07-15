@@ -151,7 +151,7 @@
   },
   "bronze:DarkDash": {
     "NAME": "暗影冲刺",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:插入 *虚空 。",
+    "DESCRIPTION": "获得 !B! 点 格挡。 NL 造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:插入 *虚空 。",
     "EXTENDED_DESCRIPTION": [
       "暗影",
       "冲刺"
@@ -239,7 +239,7 @@
   },
   "bronze:Constructor": {
     "NAME": "起始符",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 π NL bronze:编码 时若在首个槽位，格挡 增加 !M! 点 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 π NL bronze:编码 时若在首个槽位， 格挡 增加 !M! 点 。",
     "EXTENDED_DESCRIPTION": [
       "构造",
       "失落",
@@ -323,7 +323,7 @@
   },
   "bronze:ChosenStrike": {
     "NAME": "邪教打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 -本局游戏本牌的伤害增加 !M! 点。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 -本局伤害加 !M! 。",
     "EXTENDED_DESCRIPTION": [
       "邪教",
       "咔咔"
@@ -598,7 +598,7 @@
   },
   "bronze:BugBarrage": {
     "NAME": "错误齐射",
-    "DESCRIPTION": "获得1张 *伤口 。 NL bronze:循环 手中 状态牌 。每张造成 !D! 点伤害。",
+    "DESCRIPTION": "获得1张 *伤口 。 NL bronze:循环 手中 状态牌 。 NL 每张造成 !D! 点伤害。",
     "UPGRADE_DESCRIPTION": "获得 !M! 张 *伤口 。 NL bronze:循环 手中 状态牌 。每张造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       " NL （攻击 ",

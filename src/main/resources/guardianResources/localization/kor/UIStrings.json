@@ -16,7 +16,8 @@
       "정지장에 넣을 카드를 고르십시오.",
       "~에러:~ 구조물 모드 중 #r공격 불가.",
       "~에러:~ #r정지장 진행 중.",
-      "덱에 보석을 추가"
+      "덱에 보석을 추가",
+      " (Cards on the right will be stasised first)"
     ]
   },
   "Guardian:FindGemsOption": {

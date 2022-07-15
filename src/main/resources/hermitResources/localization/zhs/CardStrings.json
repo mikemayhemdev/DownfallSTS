@@ -24,7 +24,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 下回合少抽一张牌。"
   },
   "hermit:WideOpen": {
-    "NAME": "始料未及",
+    "NAME": "旷地显靶",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"
   },
   "hermit:Covet": {
@@ -151,7 +151,7 @@
   },
   "hermit:Grudge": {
     "NAME": "怒怨",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 每有一张 诅咒 ，额外造成 !M! 点伤害。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 手中每有一张 诅咒 ， NL 额外造成 !M! 点。"
   },
   "hermit:Spite": {
     "NAME": "苦恼",
@@ -167,7 +167,7 @@
   },
   "hermit:LowProfile": {
     "NAME": "低姿态",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每有一种负面效果， NL 额外获得 !M! 点 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每有一种负面效果， NL 额外获得 !M! 点。"
   },
   "hermit:Horror": {
     "NAME": "恐惧",
@@ -179,7 +179,7 @@
   },
   "hermit:Cheat": {
     "NAME": "出千",
-    "DESCRIPTION": "从抽牌堆顶部 !M! 张牌中选择打出一张。 NL  hermit:精准 ：触发打出牌的 hermit:精准 效果。"
+    "DESCRIPTION": "从抽牌堆顶部 !M! 张牌中选择打出一张。 NL hermit:精准 ：触发打出牌的 hermit:精准 效果。"
   },
   "hermit:Vantage": {
     "NAME": "优势",
@@ -207,13 +207,13 @@
   },
   "hermit:EternalForm": {
     "NAME": "永恒形态",
-    "DESCRIPTION": "虚无 。 NL 回合开始时，本回合所有手牌下次耗能减1。",
-    "UPGRADE_DESCRIPTION": "回合开始时，本回合所有手牌下次耗能减1。"
+    "DESCRIPTION": "虚无 。 NL 回合开始时，本回合初始手牌首次耗能减1。",
+    "UPGRADE_DESCRIPTION": "回合开始时，本回合初始手牌首次耗能减1。"
   },
   "hermit:FullyLoaded": {
     "NAME": "整装待发",
-    "DESCRIPTION": "抽取抽牌堆中所有 *打击 和 *防御 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 抽取抽牌堆中所有 *打击 和 *防御 。 NL 消耗 。"
+    "DESCRIPTION": "抽取抽牌堆中所有 *打击 与 *防御 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 抽取抽牌堆中所有 *打击 与 *防御 。 NL 消耗 。"
   },
   "hermit:Gestalt": {
     "NAME": "深渊注视",
@@ -225,7 +225,7 @@
   },
   "hermit:CursedWeapon": {
     "NAME": "诅咒之枪",
-    "DESCRIPTION": "失去 !M! 点生命。 NL 造成 !D! 点伤害。 NL 本牌伤害永久增加 3 点。 NL 消耗 。"
+    "DESCRIPTION": "失去 !M! 点生命。 NL 造成 !D! 点伤害。 NL 本牌伤害本局增加 3 点。 NL 消耗 。"
   },
   "hermit:Enervate": {
     "NAME": "无力化",
@@ -242,7 +242,7 @@
   },
   "hermit:LoneWolf": {
     "NAME": "孤狼",
-    "DESCRIPTION": "选择一张手牌。 NL 本回合其耗能为0。 NL 丢弃其他手牌。"
+    "DESCRIPTION": "选择一张手牌。 NL 本回合其下次耗能为0。 NL 丢弃其他手牌。"
   },
   "hermit:HighNoon": {
     "NAME": "午时已到",
@@ -279,7 +279,7 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合可 保留 !M! 张手牌。"
   },
   "hermit:PistolWhip": {
-    "NAME": "'枪'击",
+    "NAME": "枪'击'",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 hermit:瘀伤 。"
   },
   "hermit:DeadMansHand": {
@@ -292,7 +292,7 @@
   },
   "hermit:GoldenBullet": {
     "NAME": "黄金子弹",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 时耗能永久减 [E] 。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 时耗能本局减 [E] 。 NL 消耗 。"
   },
   "hermit:HoleUp": {
     "NAME": "'洞'起来",

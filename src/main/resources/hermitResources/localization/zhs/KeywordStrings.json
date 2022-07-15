@@ -19,7 +19,7 @@
       "concentrated",
       "Concentrated"
     ],
-    "DESCRIPTION": "下张 #y精准 牌必定触发 #y精准 效果。 NL 回合结束时失去该效果。"
+    "DESCRIPTION": "下张 #y精准 牌必定触发 #y精准 效果。 NL 回合结束时失去本效果。"
   },
   {
     "PROPER_NAME": "瘀伤",
@@ -54,6 +54,6 @@
       "stunned",
       "Stunned"
     ],
-    "DESCRIPTION": "被 #y击晕 的敌人跳过其回合 #b1 次。"
+    "DESCRIPTION": "被 #y击晕 的敌人跳过其回合 #b1 次，且延续被击晕回合的意图。"
   } 
 ]

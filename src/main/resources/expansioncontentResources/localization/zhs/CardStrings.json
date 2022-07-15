@@ -20,21 +20,21 @@
   },
   "expansioncontent:LastStand": {
     "NAME": "背水一战",
-    "DESCRIPTION": "失去所有负面效果。 NL 获得1点 力量 。 NL 若半血以下，获得2点 力量 。",
-    "UPGRADE_DESCRIPTION": "失去所有负面效果。 NL 获得1点 力量 。 NL 若半血以下，回复 !M! 点生命并获得2点 力量 。"
+    "DESCRIPTION": "失去所有负面效果。 NL 获得1点 力量 。 NL 若半血以下： NL 获得2点 力量 。",
+    "UPGRADE_DESCRIPTION": "失去所有负面效果。 NL 获得1点 力量 。 NL 若半血以下： NL 回复 !M! 点生命。 NL 获得2点 力量 。"
   },
   "expansioncontent:YouAreMine": {
     "NAME": "你是我的了！",
-    "DESCRIPTION": "移除所有敌人的 格挡 。 NL 给予所有敌人 !M! 层 虚弱 和 易伤 。 NL 消耗 。"
+    "DESCRIPTION": "移除所有敌人的 格挡 。 NL 给予所有敌人 !M! 层 虚弱 与 易伤 。 NL 消耗 。"
   },
   "expansioncontent:AwakenDeath": {
     "NAME": "觉醒",
-    "DESCRIPTION": "下次将要死亡或本场战斗结束时，回复 !M! 点生命并失去本效果。"
+    "DESCRIPTION": "下次将死或战胜时， NL 回复 !M! 点生命。"
   },
   "expansioncontent:Chronoboost": {
     "NAME": "时空加速",
-    "DESCRIPTION": "每打出12张牌获得1点 力量 。",
-    "UPGRADE_DESCRIPTION": "获得1点 力量 。 NL 每打出12张牌获得1点 力量 。"
+    "DESCRIPTION": "每打出12张牌， NL 获得1点 力量 。",
+    "UPGRADE_DESCRIPTION": "获得1点 力量 。 NL 每打出12张牌， NL 获得1点 力量 。"
   },
   "expansioncontent:PolyBeam": {
     "NAME": "甜圈爆破",
@@ -58,26 +58,26 @@
   },
   "expansioncontent:PrepareCrush": {
     "NAME": "准备：猛击",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 [E] [E] [E] 和一张 *史莱姆猛击 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 [E] [E] [E] 和一张 *史莱姆猛击+ 。 NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 [E] [E] [E] 与一张 *史莱姆猛击 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 [E] [E] [E] 与一张 *史莱姆猛击+ 。 NL 消耗 。"
   },
   "expansioncontent:StudyTheSpire": {
     "NAME": "研究尖塔",
-    "DESCRIPTION": "接下来 !M! 回合开始时，随机获得一张 *首领 牌。 NL 其首次耗能为0。",
-    "UPGRADE_DESCRIPTION": "接下来 !M! 回合开始时，随机获得一张 *首领 牌+。 NL 其首次耗能为0。"
+    "DESCRIPTION": "接下来 !M! 回合开始时， NL 随机获得1张 *首领 牌。 NL 其首次耗能为0。",
+    "UPGRADE_DESCRIPTION": "接下来 !M! 回合开始时， NL 随机获得1张 *首领 牌+。 NL 其首次耗能为0。"
   },
   "expansioncontent:QuickStudy": {
     "NAME": "快速学习",
-    "DESCRIPTION": "从3张随机 *首领 牌中选择获得一张。 NL 其首次耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "从3张随机 *首领 牌+中选择获得一张。 NL 其首次耗能为0。 NL 消耗 。",
+    "DESCRIPTION": "从三张随机 *首领 牌中选择获得一张。 NL 其首次耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "从三张随机 *首领 牌+中选择获得一张。 NL 其首次耗能为0。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "选择一张首领牌。"
     ]
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "恶灵附身",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机获得一张 *首领 牌。 NL 其首次耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 随机获得一张 *首领 牌+，其首次耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机获得1张 *首领 牌。 NL 其首次耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 随机获得1张 *首领 牌+。 NL 其首次耗能为0。 NL 消耗 。"
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "全知头骨",

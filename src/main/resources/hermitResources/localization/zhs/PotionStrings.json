@@ -1,11 +1,11 @@
 {
 "hermit:Tonic": {
         "NAME": "奎宁水",
-        "DESCRIPTIONS": ["获得 #b", " #y坚固 。"]
+        "DESCRIPTIONS": ["获得 #b", " 层 #y坚固 。"]
 },
 "hermit:BlackBile": {
         "NAME": "黑胆汁",
-        "DESCRIPTIONS": ["给予 #b", " #y瘀伤 。"]
+        "DESCRIPTIONS": ["给予 #b", " 层 #y瘀伤 。"]
 },
 "hermit:Eclipse": {
         "NAME": "蚀刻药水",

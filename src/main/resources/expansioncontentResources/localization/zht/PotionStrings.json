@@ -1,10 +1,10 @@
 {
   "expansioncontent:BossPotion": {
-    "NAME": "Boss Potion",
+    "NAME": "首領藥水",
     "DESCRIPTIONS": [
-      "Choose #b1 of #b3 random #yBoss cards to add to your hand, it costs #b0 this turn.",
-      "Choose #b1 of #b3 random #yBoss cards and add #b",
-      " copies to your hand, they cost #b0 this turn."
+      "隨機從 #b3 張 #y首領 牌中選擇 #b1 張加入手牌。其首次耗能為 #b0 。",
+      "隨機從 #b3 張 #y首領 牌中選擇 #b1 張，將其 #b",
+      " 張複製品加入手牌。其首次耗能為 #b0 。"
     ]
   }
-}
+} 
