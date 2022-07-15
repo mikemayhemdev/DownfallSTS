@@ -165,6 +165,13 @@
       " #yFocus."
     ]
   },
+  "downfall:DefectCuriosityLighning": {
+    "NAME": "Unbiased Cognition",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yPower card, Defect channels #b",
+      " #yLightning #yOrb."
+    ]
+  },
   "downfall:NeowUnbiasedCognition": {
     "NAME": "Unbiased Cognition",
     "DESCRIPTIONS": [
