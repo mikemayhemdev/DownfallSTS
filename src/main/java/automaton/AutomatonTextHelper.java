@@ -63,12 +63,12 @@ public class AutomatonTextHelper {
         else if (card.rawDescription.contains(uiStrings.TEXT[1])) {
             return ""; // It's over!! If you only have Compile effects, you're gone!!!!!
         } // IT NEVER ENDS!!!!!
-        if (card.rawDescription.contains(" π")) {
+        if (card.rawDescription.contains(" NL \u00A0 \u00A0 ")) {
             String[] splitText = x.split(String.format(WITH_DELIMITER, " NL \u00A0 \u00A0 "));
             String compileText = splitText[1] + splitText[2];
             x = x.replace(compileText, "");
-        } // This one is for cards with other text that doesn't need to be on the Function.
-        if (card.rawDescription.contains(" NL \u00A0 ")) {
+        // This one is for cards with other text that doesn't need to be on the Function.
+        } else if (card.rawDescription.contains(" NL \u00A0 ")) {
             String[] splitText = x.split(String.format(WITH_DELIMITER, " NL \u00A0 "));
             String compileText = splitText[0] + splitText[1];
             x = x.replace(compileText, "");
