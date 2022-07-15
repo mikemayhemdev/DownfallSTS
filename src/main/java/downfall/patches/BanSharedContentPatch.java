@@ -24,6 +24,7 @@ import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.cards.*;
 import expansioncontent.cards.deprecated.*;
 import expansioncontent.relics.StudyCardRelic;
+import expansioncontent.potions.BossPotion;
 import gremlin.potions.WizPotion;
 import gremlin.relics.ImpeccablePecs;
 import gremlin.relics.PricklyShields;
@@ -193,6 +194,7 @@ public class BanSharedContentPatch {
                 PotionHelper.potions.remove(CounterstrikePotion.POTION_ID);
                 PotionHelper.potions.remove(BurnAndBuffPotion.POTION_ID);
                 PotionHelper.potions.remove(WizPotion.POTION_ID);
+                PotionHelper.potions.remove(BossPotion.POTION_ID);
             }
             // Ban shared potions from other classes if you haven't played as that class before
             runLockedPotions.forEach((playerClass, potionIds) ->{
