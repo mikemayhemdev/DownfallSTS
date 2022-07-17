@@ -41,7 +41,7 @@
       "bronze:Compile",
       " NL bronze:Encode.",
       "bronze:Encode. NL ",
-      " π NL When bronze:Encoded,",
+      " NL \u00A0 \u00A0 NL When bronze:Encoded,",
       "LOCALIZATION NOTE: The text above must be equal to the start of Replicate's extra description line.",
       "ERR - NO_DUPE_FULL_RELEASES"
     ]

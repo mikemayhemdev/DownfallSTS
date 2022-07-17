@@ -1,0 +1,85 @@
+{
+  "downfall:ChangingTotem": {
+    "MOVES": [
+      "Трансформирующий взгляд"
+    ],
+    "NAME": "Голова перемен",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:ForgetfulTotem": {
+    "MOVES": [
+      "Забывчивый взгляд"
+    ],
+    "NAME": "Голова забывчивости",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:GrowingTotem": {
+    "MOVES": [
+      "Луч роста"
+    ],
+    "NAME": "Голова роста",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:FleeingMerchant": {
+    "MOVES": [
+      "Кража душ"
+    ],
+    "NAME": "Торговец",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:LooterAlt": {
+    "MOVES": [
+    ],
+    "NAME": "Мародёр",
+    "DIALOG": [
+      "~Эй,~ у тебя нет денег!",
+      "@НЕ-Е-Е-е-е-е-т!@",
+      "Сегодня ты умрешь, болван."
+    ]
+  },
+  "downfall:MuggerAlt": {
+    "MOVES": [
+    ],
+    "NAME": "Грабитель",
+    "DIALOG": [
+      "Давай-ка научим его манерам.",
+      "Преподай им урок!"
+    ]
+  },
+  "downfall:Fortification": {
+    "MOVES": [
+    ],
+    "NAME": "Укрепление",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomRed": {
+    "MOVES": [
+    ],
+    "NAME": "Белый гриб",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomPurple": {
+    "MOVES": [
+    ],
+    "NAME": "Млечник",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomWhite": {
+    "MOVES": [
+    ],
+    "NAME": "Дождевик",
+    "DIALOG": [
+    ]
+  }
+}

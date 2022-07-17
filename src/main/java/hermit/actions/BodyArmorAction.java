@@ -54,7 +54,7 @@ public class BodyArmorAction extends AbstractGameAction {
                 for(int i = 0; i < ii; ++i) {
                     c = this.p.hand.getTopCard();
                     this.p.hand.moveToDiscardPile(c);
-                    if (c.type == AbstractCard.CardType.SKILL) {
+                    if (c.type != AbstractCard.CardType.ATTACK) {
                         AbstractDungeon.actionManager.addToTop(new GainBlockAction(p, p, block));
                     }
                     if (!this.endTurn) {

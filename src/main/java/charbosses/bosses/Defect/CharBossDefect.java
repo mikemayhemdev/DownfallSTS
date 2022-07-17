@@ -60,7 +60,7 @@ public class CharBossDefect extends AbstractCharBoss {
                     archetype = new ArchetypeAct2ClawNewAge();
                     break;
                 case 3:
-                    archetype = new ArchetypeAct3InserterNewAge();
+                    archetype = new ArchetypeAct3OrbsNewAge();
                     break;
                 case 4: {
                     //SlimeboundMod.logger.info("Defect spawned at Archetype " + NeowBoss.Rezzes);
@@ -73,10 +73,10 @@ public class CharBossDefect extends AbstractCharBoss {
                             archetype = new ArchetypeAct2ClawNewAge();
                             break;
                         case 2:
-                            archetype = new ArchetypeAct3InserterNewAge();
+                            archetype = new ArchetypeAct3OrbsNewAge();
                             break;
                         default:
-                            archetype = new ArchetypeAct3InserterNewAge();
+                            archetype = new ArchetypeAct3OrbsNewAge();
                             break;
                     }
                     break;
