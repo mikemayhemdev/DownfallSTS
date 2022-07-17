@@ -16,7 +16,8 @@
       "placer en Stase.",
       "~ERREUR:~ Impossible #rd'Attaquer en Mode Construction.",
       "~ERREUR:~ #rStase en cours.",
-      "Ajoutez une Gemme à votre deck"
+      "Ajoutez une Gemme à votre deck",
+      " (Les cartes de droite seront placées en Stase en premier)"
     ]
   },
   "Guardian:FindGemsOption": {

@@ -4,6 +4,8 @@ import charbosses.actions.common.EnemyNotStanceCheckAction;
 import charbosses.actions.unique.EnemyChangeStanceAction;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
+import charbosses.stances.AbstractEnemyStance;
+import charbosses.stances.EnNeutralStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -18,7 +20,7 @@ import com.megacrit.cardcrawl.vfx.combat.EmptyStanceEffect;
 
 import java.util.ArrayList;
 
-public class EnEmptyFist extends AbstractBossCard {
+public class EnEmptyFist extends AbstractStanceChangeCard {
     public static final String ID = "downfall_Charboss:EmptyFist";
     private static final CardStrings cardStrings;
 
@@ -48,5 +50,10 @@ public class EnEmptyFist extends AbstractBossCard {
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings("EmptyFist");
+    }
+
+    @Override
+    public AbstractEnemyStance changeStanceForIntentCalc(AbstractEnemyStance previousStance) {
+        return new EnNeutralStance();
     }
 }

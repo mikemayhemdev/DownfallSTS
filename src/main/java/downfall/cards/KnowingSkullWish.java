@@ -15,8 +15,11 @@ import downfall.util.OctopusCard;
 import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
 import sneckomod.actions.ChangeGoldAction;
+import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 import java.util.ArrayList;
+
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
 
 public class KnowingSkullWish extends AbstractExpansionCard implements OctopusCard {
 
@@ -68,7 +71,11 @@ public class KnowingSkullWish extends AbstractExpansionCard implements OctopusCa
             }
             case "ks:1": {
                 atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1));
-                AbstractCard q = AbstractDungeon.returnColorlessCard();
+                ArrayList<AbstractCard> list = new ArrayList<>();
+                for (AbstractCard c : AbstractDungeon.colorlessCardPool.group) {
+                    list.add(c);
+                }
+                AbstractCard q = list.get(cardRandomRng.random(list.size() - 1));
                 if (upgraded)
                     q.upgrade();
                 atb(new MakeTempCardInHandAction(q));
