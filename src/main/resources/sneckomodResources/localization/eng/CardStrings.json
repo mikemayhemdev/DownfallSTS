@@ -59,8 +59,8 @@
   },
   "sneckomod:MasterEye": {
     "NAME": "Master Eye",
-    "DESCRIPTION": "Become Confused. NL Draw an additional card each turn.",
-    "UPGRADE_DESCRIPTION": "Innate NL Become Confused. NL Draw an additional card each turn."
+    "DESCRIPTION": "Become Confused. NL Draw !M! additional card each turn.",
+    "UPGRADE_DESCRIPTION": "Become Confused. NL Draw !M! additional cards each turn."
   },
   "sneckomod:Memorize": {
     "NAME": "Memorize",
