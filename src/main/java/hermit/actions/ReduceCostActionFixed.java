@@ -32,9 +32,11 @@ public class ReduceCostActionFixed extends AbstractGameAction {
 
             while(var1.hasNext()) {
                 AbstractCard c = (AbstractCard)var1.next();
+                c.costForTurn = c.cost;
                 c.modifyCostForCombat(amount);
             }
         } else {
+            this.card.costForTurn = this.card.cost;
             this.card.modifyCostForCombat(amount);
         }
 

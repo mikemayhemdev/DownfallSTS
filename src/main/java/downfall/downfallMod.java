@@ -237,7 +237,8 @@ public class downfallMod implements
             // Settings.GameLanguage.JPN
             Settings.GameLanguage.KOR,
             Settings.GameLanguage.FRA,
-            Settings.GameLanguage.ZHT
+            Settings.GameLanguage.ZHT,
+            Settings.GameLanguage.RUS
     };
 
     public static String[] SupportedLanguagesStrings = {
@@ -246,6 +247,7 @@ public class downfallMod implements
             "Korean",
             "French",
             "Chinese (Traditional)",
+            "Russian",
     };
     public static ReplaceData[] wordReplacements;
     public static SpireConfig bruhData = null;
