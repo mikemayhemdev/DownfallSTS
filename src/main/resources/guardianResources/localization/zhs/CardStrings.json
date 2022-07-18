@@ -211,8 +211,8 @@
   },
   "Guardian:FuturePlans": {
     "NAME": "未来计划",
-    "DESCRIPTION": "回合结束时可 guardianmod:凝滞 !M! 张手牌。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合结束时可 guardianmod:凝滞 !M! 张手牌。"
+    "DESCRIPTION": "回合结束时， NL 可 guardianmod:凝滞 !M! 张手牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合结束时， NL 可 guardianmod:凝滞 !M! 张手牌。"
   },
   "Guardian:Suspension": {
     "NAME": "挂起",
