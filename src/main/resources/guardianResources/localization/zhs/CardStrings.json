@@ -108,8 +108,8 @@
   },
   "Guardian:Orbwalk": {
     "NAME": "行者圆球",
-    "DESCRIPTION": "获得 !M! 力量 。 NL guardianmod:滴答 -获得 1 点 力量 。 NL guardianmod:消散 。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 力量 。 NL guardianmod:滴答 -获得 1 点 力量 。"
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL guardianmod:滴答 -获得 1 点 力量 。 NL guardianmod:消散 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 力量 。 NL guardianmod:滴答 -获得 1 点 力量 。"
   },
   "Guardian:WalkerClaw": {
     "NAME": "行者爪击",
