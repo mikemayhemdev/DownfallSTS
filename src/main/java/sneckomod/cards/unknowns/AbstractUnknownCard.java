@@ -225,7 +225,9 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
+            if (UPGRADE_DESCRIPTION != null) {
+                rawDescription = UPGRADE_DESCRIPTION;
+            }
             initializeDescription();
         }
     }
