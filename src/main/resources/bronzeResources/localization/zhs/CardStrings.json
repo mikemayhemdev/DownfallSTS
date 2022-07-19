@@ -1,7 +1,7 @@
 {
   "bronze:DazingPulse": {
     "NAME": "晕眩反冲",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL bronze:编译 *错误 - bronze:插入 !M! 张 *晕眩 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:插入 !M! 张 *晕眩 。",
     "EXTENDED_DESCRIPTION": [
       "晕眩",
       "脉冲"
@@ -319,7 +319,7 @@
   },
   "bronze:FollowUp": {
     "NAME": "数据追踪",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 若上张打出牌为 bronze:方法 ，再打出一次。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 若上张打出牌为 bronze:方法 ，再打出一次。"
   },
   "bronze:ChosenStrike": {
     "NAME": "邪教打击",
@@ -447,7 +447,7 @@
   },
   "bronze:FormatEncoded": {
     "NAME": "碎片",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       "简洁",
       "碎片"

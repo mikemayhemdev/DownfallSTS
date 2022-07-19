@@ -108,8 +108,8 @@
   },
   "Guardian:Orbwalk": {
     "NAME": "行者圆球",
-    "DESCRIPTION": "获得 !M! 力量 。 NL guardianmod:滴答 -获得 1 点 力量 。 NL guardianmod:消散 。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 力量 。 NL guardianmod:滴答 -获得 1 点 力量 。"
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL guardianmod:滴答 -获得 1 点 力量 。 NL guardianmod:消散 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 力量 。 NL guardianmod:滴答 -获得 1 点 力量 。"
   },
   "Guardian:WalkerClaw": {
     "NAME": "行者爪击",
@@ -211,8 +211,8 @@
   },
   "Guardian:FuturePlans": {
     "NAME": "未来计划",
-    "DESCRIPTION": "回合结束时可 guardianmod:凝滞 !M! 张手牌。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合结束时可 guardianmod:凝滞 !M! 张手牌。"
+    "DESCRIPTION": "回合结束时， NL 可 guardianmod:凝滞 !M! 张手牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合结束时， NL 可 guardianmod:凝滞 !M! 张手牌。"
   },
   "Guardian:Suspension": {
     "NAME": "挂起",
