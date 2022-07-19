@@ -193,107 +193,133 @@
   },
   "sneckomod:Unknown": {
     "NAME": "???",
-    "DESCRIPTION": "Carte *Inconnue."
+    "DESCRIPTION": "Carte *Inconnue.",
+    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée."
   },
   "sneckomod:Unknown0Cost": {
     "NAME": "???",
-    "DESCRIPTION": "Carte *Inconnue coûtant 0."
+    "DESCRIPTION": "Carte *Inconnue coûtant 0.",
+    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée coûtant 0."
   },
   "sneckomod:Unknown1Cost": {
     "NAME": "???",
-    "DESCRIPTION": "Carte *Inconnue coûtant 1."
+    "DESCRIPTION": "Carte *Inconnue coûtant 1.",
+    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée coûtant 1."
   },
   "sneckomod:Unknown2Cost": {
     "NAME": "???",
-    "DESCRIPTION": "Carte *Inconnue coûtant 2."
+    "DESCRIPTION": "Carte *Inconnue coûtant 2.",
+    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée coûtant 2."
   },
   "sneckomod:Unknown3Cost": {
     "NAME": "???",
-    "DESCRIPTION": "Carte *Inconnue coûtant 3."
+    "DESCRIPTION": "Carte *Inconnue coûtant 3.",
+    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée coûtant 3."
   },
   "sneckomod:UnknownBlock": {
     "NAME": "???",
-    "DESCRIPTION": "Carte *Inconnue d'Armure."
+    "DESCRIPTION": "Carte *Inconnue d'Armure.",
+    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée d'Armure."
   },
   "sneckomod:UnknownBoss": {
     "NAME": "???",
-    "DESCRIPTION": "Carte Boss *Inconnue."
+    "DESCRIPTION": "Carte Boss *Inconnue.",
+    "UPGRADE_DESCRIPTION": "Carte Boss *Inconnue Améliorée."
   },
   "sneckomod:UnknownClass": {
     "NAME": "???",
-    "DESCRIPTION": "*Unknown YouShouldNeverSeeThis-ReportToDev Card."
+    "DESCRIPTION": "*Unknown YouShouldNeverSeeThis-ReportToDev Card.",
+    "UPGRADE_DESCRIPTION": "*Unknown YouShouldNeverSeeThis-ReportToDev Améliorée Card."
   },
   "sneckomod:UnknownColorless": {
     "NAME": "???",
-    "DESCRIPTION": "Carte *Inconnue Incolore."
+    "DESCRIPTION": "Carte *Inconnue Incolore.",
+    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée Incolore."
   },
   "sneckomod:UnknownCommonAttack": {
     "NAME": "???",
-    "DESCRIPTION": "Carte Attaque *Inconnue Commune."
+    "DESCRIPTION": "Carte Attaque *Inconnue Commune.",
+    "UPGRADE_DESCRIPTION": "Carte Attaque *Inconnue Améliorée Commune."
   },
   "sneckomod:UnknownCommonSkill": {
     "NAME": "???",
-    "DESCRIPTION": "Carte Compétence *Inconnue Commune."
+    "DESCRIPTION": "Carte Compétence *Inconnue Commune.",
+    "UPGRADE_DESCRIPTION": "Carte Compétence *Inconnue Améliorée Commune."
   },
   "sneckomod:UnknownDexterity": {
     "NAME": "???",
-    "DESCRIPTION": "Carte *Inconnue qui donne de la Dextérité."
+    "DESCRIPTION": "Carte *Inconnue qui donne de la Dextérité.",
+    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée qui donne de la Dextérité."
   },
   "sneckomod:UnknownDraw": {
     "NAME": "???",
-    "DESCRIPTION": "Carte *Inconnue qui fait Piocher."
+    "DESCRIPTION": "Carte *Inconnue qui fait Piocher.",
+    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée qui fait Piocher."
   },
   "sneckomod:UnknownEthereal": {
     "NAME": "???",
-    "DESCRIPTION": "Carte *Inconnue Éthérée."
+    "DESCRIPTION": "Carte *Inconnue Éthérée.",
+    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée Éthérée."
   },
   "sneckomod:UnknownExhaust": {
     "NAME": "???",
-    "DESCRIPTION": "Carte *Inconnue ayant Épuisement."
+    "DESCRIPTION": "Carte *Inconnue ayant Épuisement.",
+    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée ayant Épuisement."
   },
   "sneckomod:UnknownRareAttack": {
     "NAME": "???",
-    "DESCRIPTION": "Carte Pouvoir *Inconnue Rare."
+    "DESCRIPTION": "Carte Pouvoir *Inconnue Rare.",
+    "UPGRADE_DESCRIPTION": "Carte Pouvoir *Inconnue Améliorée Rare."
   },
   "sneckomod:UnknownRarePower": {
     "NAME": "???",
-    "DESCRIPTION": "Carte Compétence *Inconnue Rare."
+    "DESCRIPTION": "Carte Compétence *Inconnue Rare.",
+    "UPGRADE_DESCRIPTION": "Carte Compétence *Inconnue Améliorée Rare."
   },
   "sneckomod:UnknownRareSkill": {
     "NAME": "???",
-    "DESCRIPTION": "*Unknown Rare Skill Card."
+    "DESCRIPTION": "*Unknown Rare Skill Card.",
+    "UPGRADE_DESCRIPTION": "*Unknown Améliorée Rare Skill Card."
   },
   "sneckomod:UnknownStrength": {
     "NAME": "???",
-    "DESCRIPTION": "Carte *Inconnue qui donne de la Force."
+    "DESCRIPTION": "Carte *Inconnue qui donne de la Force.",
+    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée qui donne de la Force."
   },
   "sneckomod:UnknownStrike": {
     "NAME": "???",
-    "DESCRIPTION": "Carte Frappe *Inconnue."
+    "DESCRIPTION": "Carte Frappe *Inconnue.",
+    "UPGRADE_DESCRIPTION": "Carte Frappe *Inconnue Améliorée."
   },
   "sneckomod:UnknownUncommonAttack": {
     "NAME": "???",
-    "DESCRIPTION": "Carte Attaque *Inconnue Peu Commune."
+    "DESCRIPTION": "Carte Attaque *Inconnue Peu Commune.",
+    "UPGRADE_DESCRIPTION": "Carte Attaque *Inconnue Améliorée Peu Commune."
   },
   "sneckomod:UnknownUncommonPower": {
     "NAME": "???",
-    "DESCRIPTION": "Carte Pouvoir *Inconnue Peu Commune."
+    "DESCRIPTION": "Carte Pouvoir *Inconnue Peu Commune.",
+    "UPGRADE_DESCRIPTION": "Carte Pouvoir *Inconnue Améliorée Peu Commune."
   },
   "sneckomod:UnknownUncommonSkill": {
     "NAME": "???",
-    "DESCRIPTION": "Carte Compétence *Inconnue Peu Commune."
+    "DESCRIPTION": "Carte Compétence *Inconnue Peu Commune.",
+    "UPGRADE_DESCRIPTION": "Carte Compétence *Inconnue Améliorée Peu Commune."
   },
   "sneckomod:UnknownVulnerable": {
     "NAME": "???",
-    "DESCRIPTION": "Carte *Inconnue qui donne de la Vulnérabilité."
+    "DESCRIPTION": "Carte *Inconnue qui donne de la Vulnérabilité.",
+    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée qui donne de la Vulnérabilité."
   },
   "sneckomod:UnknownWeak": {
     "NAME": "???",
-    "DESCRIPTION": "Carte *Inconnue qui donne de la Faiblesse."
+    "DESCRIPTION": "Carte *Inconnue qui donne de la Faiblesse.",
+    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée qui donne de la Faiblesse."
   },
   "sneckomod:UnknownX": {
     "NAME": "???",
-    "DESCRIPTION": "Carte *Inconnue coûtant X."
+    "DESCRIPTION": "Carte *Inconnue coûtant X.",
+    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée coûtant X."
   },
   "sneckomod:UnlimitedRolls": {
     "NAME": "Lancers illimités",
