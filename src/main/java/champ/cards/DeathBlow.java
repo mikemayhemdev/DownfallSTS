@@ -15,7 +15,7 @@ public class DeathBlow extends AbstractChampCard {
     public DeathBlow() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL);
         baseDamage = 15;
-        baseMagicNumber = magicNumber = 10;
+        baseMagicNumber = magicNumber = 8;
         isMultiDamage = true;
        // myHpLossCost = 10;
        // tags.add(ChampMod.FINISHER);
@@ -32,6 +32,6 @@ public class DeathBlow extends AbstractChampCard {
 
     public void upp() {
         upgradeDamage(5);
-        upgradeMagicNumber(5);
+        upgradeMagicNumber(2);
     }
 }

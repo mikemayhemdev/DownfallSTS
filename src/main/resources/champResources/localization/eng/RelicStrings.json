@@ -17,7 +17,7 @@
     "NAME": "Barbell",
     "FLAVOR": "1000 reps? Psh. I can do 1001.",
     "DESCRIPTIONS": [
-      "Whenever you enter a Rest Site, if you have at least #b10 non-Upgraded cards in your deck, #yUpgrade one at random."
+      "Whenever you enter a Rest Site, if you have at least #b10 Upgradable cards in your deck, #yUpgrade one at random."
     ]
   },
   "champ:BerserkersGuideToSlaughter": {

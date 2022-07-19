@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package slimebound.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -22,14 +17,11 @@ import java.util.List;
 
 public class PlayExhausted0CostAction extends AbstractGameAction {
 
-
     public PlayExhausted0CostAction(AbstractCreature target) {
         this.duration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.WAIT;
         this.source = AbstractDungeon.player;
         this.target = target;
-
-
     }
 
     public void update() {

@@ -3,14 +3,14 @@
     "NAME": "Bronze Core",
     "FLAVOR": "Replace once every 50,000 years.",
     "DESCRIPTIONS": [
-      "The first time you #yCompile a #yFunction each combat, gain [E] ."
+      "The first time you create a Function each combat, gain [E] ."
     ]
   },
   "bronze:ProtectiveGoggles": {
     "NAME": "Protective Goggles",
     "FLAVOR": "Look closely.",
     "DESCRIPTIONS": [
-      "If you end your turn with no cards in the #ySequence, gain #b4 #yBlock."
+      "If you end your turn with no #yEncoded cards, gain #b4 #yBlock."
     ]
   },
   "bronze:DecasWashers": {
@@ -24,7 +24,7 @@
     "NAME": "Frost Primer",
     "FLAVOR": "22 ounces of the chemical compound Ar22, shelf life: 22 years. Best stored in a mahogany fridge.",
     "DESCRIPTIONS": [
-      "All #yFunctions you #yCompile gain #yRetain."
+      "All Functions you create gain #yRetain."
     ]
   },
   "bronze:Mallet": {
@@ -38,7 +38,7 @@
     "NAME": "Silver Bullet",
     "FLAVOR": "Spirewolves are long gone.",
     "DESCRIPTIONS": [
-      "Start each combat with a #yPiercing #yShot in the #ySequence."
+      "Start each combat with an #yEncoded #yPiercing #yShot."
     ]
   },
   "bronze:MakeshiftBattery": {
@@ -52,14 +52,14 @@
     "NAME": "Cable Spool",
     "FLAVOR": "Tangled...",
     "DESCRIPTIONS": [
-      "Add a copy of the first card you play with #yEncode each combat to the #ySequence."
+      "#yEncode a copy of the first #yEncodable card you play each combat."
     ]
   },
   "bronze:ElectromagneticCoil": {
     "NAME": "Electromagnetic Coil",
     "FLAVOR": "An inefficient but entertaining power source.",
     "DESCRIPTIONS": [
-      "#yFunctions are now made up of #b4 cards."
+      "Functions are now made up of #b4 cards."
     ]
   },
   "bronze:PlatinumCore": {
@@ -67,17 +67,17 @@
     "FLAVOR": "Changelog: Improved user experience.",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] NL The first #b3 #yFunctions you create each combat cost #b0 until played."
+      ".[] NL The first #b3 Functions you create each combat cost #b0 until played."
     ]
   },
   "bronze:BottledCode": {
     "NAME": "Bottled Code",
     "FLAVOR": "Actually, I have code for that exact thing...",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a card with #yEncode. Start each combat with this card in the #ySequence.",
+      "Upon pickup, choose a card with #yEncode. Start each combat with this card #yEncoded.",
       "Choose a card for ",
-      "Start each combat with ",
-      " in the #ySequence."
+      "Start each combat with #yEncoded ",
+      "."
     ]
   },
   "bronze:DonusWashers": {
