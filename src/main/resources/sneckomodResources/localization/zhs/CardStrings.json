@@ -18,35 +18,43 @@
   },
   "sneckomod:UnknownCommonAttack": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 普通攻击牌。"
+    "DESCRIPTION": " *未知 普通攻击牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 普通攻击牌。"
   },
   "sneckomod:UnknownCommonSkill": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 普通技能牌。"
+    "DESCRIPTION": " *未知 普通技能牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 普通技能牌。"
   },
   "sneckomod:UnknownUncommonAttack": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 罕见攻击牌。"
+    "DESCRIPTION": " *未知 罕见攻击牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 罕见攻击牌。"
   },
   "sneckomod:UnknownUncommonSkill": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 罕见技能牌。"
+    "DESCRIPTION": " *未知 罕见技能牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 罕见技能牌。"
   },
   "sneckomod:UnknownUncommonPower": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 罕见能力牌。"
+    "DESCRIPTION": " *未知 罕见能力牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 罕见能力牌。"
   },
   "sneckomod:UnknownRareAttack": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 稀有攻击牌。"
+    "DESCRIPTION": " *未知 稀有攻击牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 稀有攻击牌。"
   },
   "sneckomod:UnknownRareSkill": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 稀有技能牌。"
+    "DESCRIPTION": " *未知 稀有技能牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 稀有技能牌。"
   },
   "sneckomod:UnknownRarePower": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 稀有能力牌。"
+    "DESCRIPTION": " *未知 稀有能力牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 稀有能力牌。"
   },
   "sneckomod:SoulDraw": {
     "NAME": "灵魂抽牌",
@@ -69,7 +77,8 @@
   },
   "sneckomod:UnknownStrike": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 打击牌。"
+    "DESCRIPTION": " *未知 打击牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 打击牌。"
   },
   "sneckomod:Nope": {
     "NAME": "不行",
@@ -85,43 +94,53 @@
   },
   "sneckomod:UnknownInnate": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 固有 牌。"
+    "DESCRIPTION": " *未知 固有 牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 固有 牌。"
   },
   "sneckomod:Unknown": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 基础牌。"
+    "DESCRIPTION": " *未知 基础牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 基础牌。"
   },
   "sneckomod:Unknown0Cost": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 0耗能牌。"
+    "DESCRIPTION": " *未知 0耗能牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 0耗能牌。"
   },
   "sneckomod:Unknown1Cost": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 1耗能牌。"
+    "DESCRIPTION": " *未知 1耗能牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 1耗能牌。"
   },
   "sneckomod:Unknown2Cost": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 2耗能牌。"
+    "DESCRIPTION": " *未知 2耗能牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 2耗能牌。"
   },
   "sneckomod:Unknown3Cost": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 3耗能牌。"
+    "DESCRIPTION": " *未知 3耗能牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 3耗能牌。"
   },
   "sneckomod:UnknownX": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 X耗能牌。"
+    "DESCRIPTION": " *未知 X耗能牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 X耗能牌。"
   },
   "sneckomod:UnknownEthereal": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 虚无 牌。"
+    "DESCRIPTION": " *未知 虚无 牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 虚无 牌。"
   },
   "sneckomod:UnknownBlock": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 格挡 牌。"
+    "DESCRIPTION": " *未知 格挡 牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 格挡 牌。"
   },
   "sneckomod:UnknownExhaust": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 消耗 牌。"
+    "DESCRIPTION": " *未知 消耗 牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 消耗 牌。"
   },
   "sneckomod:SoulCleanse": {
     "NAME": "灵魂净化",
@@ -131,7 +150,7 @@
   "sneckomod:SoulExchange": {
     "NAME": "灵魂交换",
     "DESCRIPTION": "sneckomod:蛇证 。 NL 抽1张牌并 消耗 一张。 NL 变化所有手牌至 消耗 牌的同角色牌。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽2张牌并 消耗 一张。 NL 变化所有手牌至 消耗 牌的同角色牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽 !M! 张牌并 消耗 一张。 NL 变化所有手牌至 消耗 牌的同角色牌。",
     "EXTENDED_DESCRIPTION": [
       "来消耗以交换灵魂。"
     ]
@@ -148,15 +167,16 @@
   },
   "sneckomod:MasterEye": {
     "NAME": "主宰之眼",
-    "DESCRIPTION": "获得 混乱 。 NL 回合开始时抽 !M! 张牌。"
+    "DESCRIPTION": "获得 混乱 。 NL 回合开始时抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "获得 混乱 。 NL 回合开始时抽 !M! 张牌。"
   },
   "sneckomod:ImprovisedAttack": {
     "NAME": "即兴攻击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机获得 sneckomod:异色 攻击牌并 sneckomod:混淆 它。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机获得一张 sneckomod:异色 攻击牌并 sneckomod:混淆 它。"
   },
   "sneckomod:ImprovisedGuard": {
     "NAME": "即兴防御",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 随机获得 sneckomod:异色 技能牌并 sneckomod:混淆 它。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 随机获得一张 sneckomod:异色 技能牌并 sneckomod:混淆 它。"
   },
   "sneckomod:QuickMove": {
     "NAME": "快速移动",
@@ -215,7 +235,7 @@
   },
   "sneckomod:DangerNoodle": {
     "NAME": "贪吃蛇",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一张 sneckomod:异色 手牌再造成一次，之后 消耗 它们。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 所有 sneckomod:异色 手牌， NL 每消耗一张再造成一次。"
   },
   "sneckomod:SerpentIdol": {
     "NAME": "蛇神像",
@@ -236,31 +256,37 @@
   },
   "sneckomod:MorePower": {
     "NAME": "更多力量！",
-    "DESCRIPTION": "战斗结束时，额外获得一张已 升级 的 *未知 卡牌奖励。"
+    "DESCRIPTION": "战斗结束时，额外获得一次已 升级的 *未知 卡牌奖励。"
   },
   "sneckomod:UnknownStrength": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 力量 牌。"
+    "DESCRIPTION": " *未知 力量 牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 力量 牌。"
   },
   "sneckomod:UnknownDraw": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 抽牌牌。"
+    "DESCRIPTION": " *未知 抽牌牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 抽牌牌。"
   },
   "sneckomod:UnknownDexterity": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 敏捷 牌。"
+    "DESCRIPTION": " *未知 敏捷 牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 敏捷 牌。"
   },
   "sneckomod:UnknownWeak": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 虚弱 牌。"
+    "DESCRIPTION": " *未知 虚弱 牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 虚弱 牌。"
   },
   "sneckomod:UnknownVulnerable": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 易伤 牌。"
+    "DESCRIPTION": " *未知 易伤 牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 易伤 牌。"
   },
   "sneckomod:UnknownColorless": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 无色牌。"
+    "DESCRIPTION": " *未知 无色牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 无色牌。"
   },
   "sneckomod:RainOfDice": {
     "NAME": "骰子雨",
@@ -284,8 +310,8 @@
   },
   "sneckomod:Mudshield": {
     "NAME": "混乱护盾",
-    "DESCRIPTION": "sneckomod:混淆 一张牌时，获得 !M! 点 格挡 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL sneckomod:混淆 一张牌时，获得 !M! 点 格挡 。"
+    "DESCRIPTION": "sneckomod:混淆 一张牌时， NL 获得 !M! 点 格挡 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL sneckomod:混淆 一张牌时， NL 获得 !M! 点 格挡 。"
   },
   "sneckomod:WideSting": {
     "NAME": "宽刺",
@@ -297,14 +323,15 @@
   },
   "sneckomod:Memorize": {
     "NAME": "熟记",
-    "DESCRIPTION": "sneckomod:蛇证 。 sneckomod:即逝 。 NL 选择一张 *未知 手牌，将其 *明晰 成目前的牌。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL sneckomod:蛇证 。 sneckomod:即逝 。 NL 选择一张 *未知 手牌，将其 *明晰 成目前的牌。",
+    "DESCRIPTION": "sneckomod:蛇证 。 sneckomod:即逝 。 NL 选择一张 *未知 手牌， NL 将其 *明晰 成目前的牌。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL sneckomod:蛇证 。 sneckomod:即逝 。 NL 选择一张 *未知 手牌， NL 将其 *明晰 成目前的牌。",
     "EXTENDED_DESCRIPTION": [
       "明晰一张牌。"
     ]
   },
   "sneckomod:UnknownBoss": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知 expansioncontent:首领 牌。"
+    "DESCRIPTION": " *未知 *首领 牌。",
+    "UPGRADE_DESCRIPTION": "已 升级 的 *未知 *首领 牌。"
   }
 }
