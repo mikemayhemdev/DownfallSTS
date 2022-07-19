@@ -75,7 +75,7 @@
   },
   "bronze:Replicate": {
     "NAME": "Réplique",
-    "DESCRIPTION": "Infligez !D! dégâts. NL \u00A0 \u00A0 NL Quand cette carte est bronze:Encodée, ajoutez une copie de celle-ci dans votre défausse.",
+    "DESCRIPTION": "Infligez !D! dégâts.\u00A0 \u00A0 Quand cette carte est bronze:Encodée, ajoutez une copie de celle-ci dans votre défausse.",
     "EXTENDED_DESCRIPTION": [
       "copying",
       "Copy"
@@ -118,7 +118,7 @@
   },
   "bronze:Separator": {
     "NAME": "Séparateur",
-    "DESCRIPTION": "Infligez !D! dégâts. NL \u00A0 \u00A0 NL Quand bronze:Encodée au milieu, augmentez ses dégâts de !M!.",
+    "DESCRIPTION": "Infligez !D! dégâts.\u00A0 \u00A0 Quand bronze:Encodée au milieu, augmentez ses dégâts de !M!.",
     "EXTENDED_DESCRIPTION": [
       "split",
       "Child"
@@ -126,7 +126,7 @@
   },
   "bronze:WildStrike": {
     "NAME": "Frappe sauvage",
-    "DESCRIPTION": "Infligez !D! dégâts. NL \u00A0 \u00A0 NL bronze:Insérez 1 *Blessure."
+    "DESCRIPTION": "Infligez !D! dégâts.\u00A0 \u00A0 bronze:Insérez 1 *Blessure."
   },
   "bronze:Overheat": {
     "NAME": "Surchauffe",
@@ -239,7 +239,7 @@
   },
   "bronze:Constructor": {
     "NAME": "Constructeur",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL \u00A0 \u00A0 NL Quand bronze:Encodée, si elle est la première carte de la Séquence, augmentez son Armure de !M!.",
+    "DESCRIPTION": "Gagnez !B! d'Armure.\u00A0 \u00A0 Quand bronze:Encodée, si elle est la première carte de la Séquence, augmentez son Armure de !M!.",
     "EXTENDED_DESCRIPTION": [
       "build",
       "Sadness",

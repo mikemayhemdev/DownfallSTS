@@ -41,7 +41,7 @@
       " bronze:编译 ",
       " NL bronze:编码 。",
       " bronze:编码 。 NL ",
-      " NL \u00A0 \u00A0 NL bronze:编码 时",
+      "\u00A0 \u00A0 bronze:编码 时",
       "LOCALIZATION NOTE: 上方文本需和副本最后一行一致。"
     ]
   },

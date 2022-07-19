@@ -75,7 +75,7 @@
   },
   "bronze:Replicate": {
     "NAME": "副本",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL \u00A0 \u00A0 NL bronze:编码 时将本牌的复制品加入弃牌堆。",
+    "DESCRIPTION": "造成 !D! 点伤害。\u00A0 \u00A0 bronze:编码 时将本牌的复制品加入弃牌堆。",
     "EXTENDED_DESCRIPTION": [
       "反复",
       "拷贝"
@@ -118,7 +118,7 @@
   },
   "bronze:Separator": {
     "NAME": "分隔符",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL \u00A0 \u00A0 NL bronze:编码 时若在中间槽位，伤害增加 !M! 点。",
+    "DESCRIPTION": "造成 !D! 点伤害。\u00A0 \u00A0 bronze:编码 时若在中间槽位，伤害增加 !M! 点。",
     "EXTENDED_DESCRIPTION": [
       "分离",
       "分割"
@@ -239,7 +239,7 @@
   },
   "bronze:Constructor": {
     "NAME": "起始符",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL \u00A0 \u00A0 NL bronze:编码 时若在首个槽位， 格挡 增加 !M! 点 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。\u00A0 \u00A0 bronze:编码 时若在首个槽位， 格挡 增加 !M! 点 。",
     "EXTENDED_DESCRIPTION": [
       "构造",
       "失落",
