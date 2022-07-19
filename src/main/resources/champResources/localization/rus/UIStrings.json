@@ -35,10 +35,10 @@
   },
   "champ:highlightCombos": {
     "TEXT": [
-      "*Berserker champ:Combo:",
-      "[#5ebf2a]Berserker champ:Combo:",
-      "*Defensive champ:Combo:",
-      "[#5ebf2a]Defensive champ:Combo:"
+      "champ:Комбо *Берсерка:",
+      "champ:Комбо [#5ebf2a]Берсерка:",
+      "champ:Комбо *Рыцаря:",
+      "champ:Комбо [#5ebf2a]Рыцаря:"
     ]
   }
 }

@@ -133,7 +133,7 @@
     ]
   },
   "hexamod:LoseEnhanceInTurnsPower": {
-    "NAME": "Heated Up",
+    "NAME": "Перегрев",
     "DESCRIPTIONS": [
       "Отнимает #b в конце вашего хода",
       "Через #b",
@@ -189,7 +189,7 @@
     ]
   },
   "hexamod:VolcanoVisagePower": {
-    "NAME": "Вулканический облик",
+    "NAME": "Вулканический лик",
     "DESCRIPTIONS": [
       "Накладывает #b",
       " #yОжога #yдуши на ВСЕХ врагов, когда вы #yЗажигаете Огонёк."

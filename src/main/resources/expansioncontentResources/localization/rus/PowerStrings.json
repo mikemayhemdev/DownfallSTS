@@ -66,15 +66,15 @@
   "expansioncontent:AddCopyPower": {
     "NAME": "Отложенная карта",
     "DESCRIPTIONS": [
-      "Добавляет ",
-      " в руку, в начале вашего след. хода."
+      "Добавляет в руку ",
+      ", в начале вашего след. хода."
     ]
   },
   "expansioncontent:AddSameInstancePower": {
     "NAME": "Отложенная карта",
     "DESCRIPTIONS": [
-      "Добавляет ",
-      " в руку, в начале вашего след. хода."
+      "Добавляет в руку ",
+      ", в начале вашего след. хода."
     ]
   },
   "expansioncontent:NextTurnExhumePower": {

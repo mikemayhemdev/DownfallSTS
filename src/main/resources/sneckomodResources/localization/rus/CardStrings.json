@@ -43,18 +43,18 @@
   },
   "sneckomod:ImprovisedAttack": {
     "NAME": "Импровизированная атака",
-    "DESCRIPTION": "Наносит !D! урона. NL Добавляет случ. sneckomod:Внеклассовую Атаку в руку и sneckomod:Спутывает её."
+    "DESCRIPTION": "Наносит !D! урона. NL Добавляет в руку случ. sneckomod:Внеклассовую Атаку и sneckomod:Спутывает её."
   },
   "sneckomod:ImprovisedGuard": {
     "NAME": "Импровизированная оборона",
-    "DESCRIPTION": "Даёт !B! Защиты. NL Добавляет случ. sneckomod:Внеклассовый Навык в руку и sneckomod:Спутывает его."
+    "DESCRIPTION": "Даёт !B! Защиты. NL Добавляет в руку случ. sneckomod:Внеклассовый Навык и sneckomod:Спутывает его."
   },
   "sneckomod:Nope": {
     "NAME": "Не-а",
-    "DESCRIPTION": "sneckomod:Анти-змекко. NL Сжигает карту и добавляет случ. карту того же класса в руку.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Анти-змекко. NL Сжигает карту и добавляет случ. карту того же класса в руку. NL Она стоит на 1 меньше.",
+    "DESCRIPTION": "sneckomod:Анти-змекко. NL Сжигает карту и добавляет в руку случ. карту того же класса.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Анти-змекко. NL Сжигает карту и добавляет в руку случ. карту того же класса. NL Она стоит на 1 меньше.",
     "EXTENDED_DESCRIPTION": [
-      ", чтобы сжечь и добавить случ. карту того же класса в руку."
+      ", чтобы сжечь и добавить в руку случ. карту того же класса."
     ]
   },
   "sneckomod:MasterEye": {
@@ -147,7 +147,7 @@
   },
   "sneckomod:SoulDraw": {
     "NAME": "Добор души",
-    "DESCRIPTION": "sneckomod:Анти-змекко. NL Добавляет !M! случ. sneckomod:Внеклассовые карты в руку. NL Сжигается.",
+    "DESCRIPTION": "sneckomod:Анти-змекко. NL Добавляет в руку !M! случ. sneckomod:Внеклассовые карты. NL Сжигается.",
     "UPGRADE_DESCRIPTION": "sneckomod:Анти-змекко. NL Вы берёте 1 - !M! карты."
   },
   "sneckomod:SoulExchange": {
@@ -189,7 +189,7 @@
   },
   "sneckomod:UnendingSupply": {
     "NAME": "Нескончаемые запасы",
-    "DESCRIPTION": "Добавляет sneckomod:Внеклассовую карту в руку, в начале каждого вашего хода."
+    "DESCRIPTION": "Добавляет в руку sneckomod:Внеклассовую карту, в начале каждого вашего хода."
   },
   "sneckomod:Unknown": {
     "NAME": "??? Начальная",
@@ -243,8 +243,8 @@
   },
   "sneckomod:UnknownCommonSkill": {
     "NAME": "??? -О- Навык",
-    "DESCRIPTION": "*Неопределённая Обычный Навык.",
-	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая Обычный Навык."
+    "DESCRIPTION": "*Неопределённый Обычный Навык.",
+	"UPGRADE_DESCRIPTION": "Улучшенный *Неопределённый Обычный Навык."
   },
   "sneckomod:UnknownDexterity": {
     "NAME": "??? Ловкость",
@@ -273,13 +273,13 @@
   },
   "sneckomod:UnknownRarePower": {
     "NAME": "??? -Р- Талант",
-    "DESCRIPTION": "*Неопределённая Редкий Талант.",
-	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая Редкий Талант."
+    "DESCRIPTION": "*Неопределённый Редкий Талант.",
+	"UPGRADE_DESCRIPTION": "Улучшенный *Неопределённый Редкий Талант."
   },
   "sneckomod:UnknownRareSkill": {
     "NAME": "??? -Р- Навык",
-    "DESCRIPTION": "*Неопределённая Редкий Навык.",
-	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая Редкий Навык."
+    "DESCRIPTION": "*Неопределённый Редкий Навык.",
+	"UPGRADE_DESCRIPTION": "Улучшенный *Неопределённый Редкий Навык."
   },
   "sneckomod:UnknownStrength": {
     "NAME": "??? Сила",
@@ -288,8 +288,8 @@
   },
   "sneckomod:UnknownStrike": {
     "NAME": "??? Удар",
-    "DESCRIPTION": "*Неопределённая удар.",
-	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая удар."
+    "DESCRIPTION": "*Неопределённый удар.",
+	"UPGRADE_DESCRIPTION": "Улучшенный *Неопределённый удар."
   },
   "sneckomod:UnknownUncommonAttack": {
     "NAME": "??? -Н- Атака",
@@ -298,13 +298,13 @@
   },
   "sneckomod:UnknownUncommonPower": {
     "NAME": "??? -Н- Талант",
-    "DESCRIPTION": "*Неопределённая Необычный Талант.",
-	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая Необычный Талант."
+    "DESCRIPTION": "*Неопределённый Необычный Талант.",
+	"UPGRADE_DESCRIPTION": "Улучшенный *Неопределённый Необычный Талант."
   },
   "sneckomod:UnknownUncommonSkill": {
     "NAME": "??? -Н- Навык",
-    "DESCRIPTION": "*Неопределённая Необычный Навык.",
-	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая Необычный Навык."
+    "DESCRIPTION": "*Неопределённый Необычный Навык.",
+	"UPGRADE_DESCRIPTION": "Улучшенный *Неопределённый Необычный Навык."
   },
   "sneckomod:UnknownVulnerable": {
     "NAME": "??? Уязвимость",
@@ -323,66 +323,11 @@
   },
   "sneckomod:UnlimitedRolls": {
     "NAME": "Бесконечные броски",
-    "DESCRIPTION": "Добавляет gremlin:Эхо *Переброса *души в руку в начале каждого вашего хода.",
-    "UPGRADE_DESCRIPTION": "Начальная. NL Добавляет gremlin:Эхо *Переброса *души в руку в начале каждого вашего хода."
+    "DESCRIPTION": "Добавляет в руку gremlin:Эхо *Переброса *души, в начале каждого вашего хода.",
+    "UPGRADE_DESCRIPTION": "Начальная. NL Добавляет в руку gremlin:Эхо *Переброса *души, в начале каждого вашего хода."
   },
   "sneckomod:WideSting": {
     "NAME": "Широкий укус",
     "DESCRIPTION": "Наносит !M! - !D! урона ВСЕМ врагам. NL Улучшает все sneckomod:Внеклассовые карты в руке."
-  },
-    "sneckomod:UnknownClassRED": {
-    "NAME": "???+",
-	"DESCRIPTION": "*Неопределённая карта из набора.",
-	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта из набора «Латоносец»."
-  },
-  "sneckomod:UnknownClassGREEN": {
-    "NAME": "???+",
-	"DESCRIPTION": "*Неопределённая карта из набора.",
-	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта персонажа «Безмолвная»."
-  },
-  "sneckomod:UnknownClassBLUE": {
-    "NAME": "???+",
-	"DESCRIPTION": "*Неопределённая карта из набора.",
-	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта персонажа «Дефект»."
-  },
-  "sneckomod:UnknownClassPURPLE": {
-    "NAME": "???+",
-	"DESCRIPTION": "*Неопределённая карта из набора.",
-	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта персонажа «Созерцающая»."
-  },
-  "sneckomod:UnknownClassSLIMEBOUND": {
-    "NAME": "???+",
-	"DESCRIPTION": "*Неопределённая карта из набора.",
-	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта персонажа «Слизнебосс»."
-  },
-  "sneckomod:UnknownClassGUARDIAN": {
-    "NAME": "???+",
-	"DESCRIPTION": "*Неопределённая карта из набора.",
-	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта персонажа «Страж»."
-  },
-  "sneckomod:UnknownClassHEXA_GHOST_PURPLE": {
-    "NAME": "???+",
-	"DESCRIPTION": "*Неопределённая карта из набора.",
-	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта персонажа «Гексадух»."
-  },
-  "sneckomod:UnknownClassTHE_CHAMP_GRAY": {
-    "NAME": "???+",
-	"DESCRIPTION": "*Неопределённая карта из набора.",
-	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта персонажа «Чемпион»."
-  },
-  "sneckomod:UnknownClassTHE_BRONZE_AUTOMATON": {
-    "NAME": "???+",
-	"DESCRIPTION": "*Неопределённая карта из набора.",
-	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта персонажа «Автоматон»."
-  },
-  "sneckomod:UnknownClassGREMLIN": {
-    "NAME": "???+",
-	"DESCRIPTION": "*Неопределённая карта из набора.",
-	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта персонажа «Гремлины»."
-  },
-  "sneckomod:UnknownClassHERMIT_YELLOW": {
-    "NAME": "???+",
-	"DESCRIPTION": "*Неопределённая карта из набора.",
-	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта персонажа «Отшельник»."
   }
 }

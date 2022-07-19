@@ -9,7 +9,7 @@
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "Книга стратегий",
-    "DESCRIPTION": "Добавляет 4 случ. slimeboundmod:Рывка в руку. Они стоят на 1 меньше в этом бою. NL Сжигается."
+    "DESCRIPTION": "Добавляет в руку 4 случ. slimeboundmod:Рывка. Они стоят на 1 меньше в этом бою. NL Сжигается."
   },
   "Slimebound:Chomp": {
     "NAME": "Грызть",
@@ -35,11 +35,11 @@
   },
   "Slimebound:DisruptingSlam": {
     "NAME": "На десерт",
-    "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам. NL expansioncontent:Воскрешает !M! случ. карты *Облизывание."
+    "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам. NL expansioncontent:Воскрешает !M! случ. slimeboundmod:Лизя."
   },
   "Slimebound:Dissolve": {
     "NAME": "Быстрый перекус",
-    "DESCRIPTION": "Вы берёте !M! карты и сжигаете карту в руке. NL Даёт N *Облизываний, где N - стоимость сожжёной карты. NL Сжигается."
+    "DESCRIPTION": "Вы берёте !M! карты и сжигаете карту в руке. NL Добавляет N карт *Лизь, где N - стоимость сожжёной карты. NL Сжигается."
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Разделяй и властвуй",
@@ -50,7 +50,7 @@
     "DESCRIPTION": "Накладывает !slime! slimeboundmod:Липкости. NL Следующая атака не отнимает slimeboundmod:Липкость у этого врага."
   },
   "Slimebound:DuplicatedForm": {
-    "NAME": "Сдвоенная форма",
+    "NAME": "Облик двойника",
     "DESCRIPTION": "Первая карта в этом ходу, направленная на врага, разыгрывается дважды.",
     "UPGRADE_DESCRIPTION": "Даёт [E] каждый ход. NL Первая карта в этом ходу, направленная на врага, разыгрывается дважды.",
     "EXTENDED_DESCRIPTION": [
@@ -84,8 +84,8 @@
   },
   "Slimebound:Gluttony": {
     "NAME": "Обжорство",
-    "DESCRIPTION": "Добавляет *Облизывание в руку при первом slimeboundmod:Пожирании за ход.",
-    "UPGRADE_DESCRIPTION": "Начальная. NL Добавляет *Облизывание в руку при первом slimeboundmod:Пожирании за ход."
+    "DESCRIPTION": "Добавляет в руку *Лизь при первом slimeboundmod:Пожирании за ход.",
+    "UPGRADE_DESCRIPTION": "Начальная. NL Добавляет в руку *Лизь при первом slimeboundmod:Пожирании за ход."
   },
   "Slimebound:GoopSpray": {
     "NAME": "Раскидать слизь",
@@ -93,8 +93,8 @@
   },
   "Slimebound:GoopTackle": {
     "NAME": "Комбо-рывок",
-    "DESCRIPTION": "slimeboundmod:Рывок. Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL Добавляет случ. slimeboundmod:Рывок в руку, он стоит 0 в этом ходу.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Рывок. Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL Добавляет случ. slimeboundmod:Рывок в руку, он стоит 0 в этом ходу."
+    "DESCRIPTION": "slimeboundmod:Рывок. Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL Добавляет в руку случ. slimeboundmod:Рывок, он стоит 0 в этом ходу.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Рывок. Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL Добавляет в руку случ. slimeboundmod:Рывок, он стоит 0 в этом ходу."
   },
   "Slimebound:Grow": {
     "NAME": "Рост",
@@ -105,19 +105,19 @@
     "DESCRIPTION": "Наносит !D! урона. NL Даёт !B! Защиты. NL При slimeboundmod:Пожирании - усиливает эффекты этой карты на !M! в этом бою."
   },
   "Slimebound:HauntingLick": {
-    "NAME": "Навязчивое облизывание",
+    "NAME": "Навязчивый лизь",
     "DESCRIPTION": "Накладывает !M! Уязвимости и !slime! slimeboundmod:Липкости. NL Сжигается.",
     "UPGRADE_DESCRIPTION": "Накладывает !M! Уязвимости и !slime! slimeboundmod:Липкости. NL Вы берёте карту. NL Сжигается."
   },
   "Slimebound:HungryTackle": {
     "NAME": "Голодный рывок",
-    "DESCRIPTION": "slimeboundmod:Рывок. Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL expansioncontent:Воскрешает случ. slimeboundmod:Облизывание.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Рывок. Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL expansioncontent:Воскрешает 2 случ. slimeboundmod:Облизывания."
+    "DESCRIPTION": "slimeboundmod:Рывок. Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL expansioncontent:Воскрешает случ. slimeboundmod:Лизь.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Рывок. Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL expansioncontent:Воскрешает 2 случ. slimeboundmod:Лизя."
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "Выглядит аппетитно",
-    "DESCRIPTION": "Наносит !D! урона. При slimeboundmod:Пожирании - добавляет *Облизывание в руку.",
-    "UPGRADE_DESCRIPTION": "Наносит !D! урона. При slimeboundmod:Пожирании - добавляет *Облизывание+ в руку."
+    "DESCRIPTION": "Наносит !D! урона. При slimeboundmod:Пожирании - добавляет в руку *Лизь.",
+    "UPGRADE_DESCRIPTION": "Наносит !D! урона. При slimeboundmod:Пожирании - добавляет в руку *Лизь+."
   },
   "Slimebound:LeadByExample": {
     "NAME": "Показать пример",
@@ -143,7 +143,7 @@
     "UPGRADE_DESCRIPTION": "Даёт !M! slimeboundmod:Могущество и 1 слот для Слизней."
   },
   "Slimebound:Lick": {
-    "NAME": "Облизывание",
+    "NAME": "Лизь",
     "DESCRIPTION": "Накладывает !slime! slimeboundmod:Липкости. NL Сжигается - slimeboundmod:Тлеет.",
     "UPGRADE_DESCRIPTION": "Накладывает !M! Слабости и !slime! slimeboundmod:Липкости. NL Вы берёте карту. NL Сжигается - slimeboundmod:Тлеет."
   },
@@ -161,7 +161,7 @@
     "UPGRADE_DESCRIPTION": "slimeboundmod:Поглощает ВСЕХ слизней и призывает случ. slimeboundmod:Специалиста за каждого из них. Также slimeboundmod:Приказывает им. NL Сжигается."
   },
   "Slimebound:MegaLick": {
-    "NAME": "Мега-облизывание",
+    "NAME": "Мега-лизь",
     "DESCRIPTION": "Накладывает !M! Слабости и !slime! slimeboundmod:Липкости на ВСЕХ врагов. NL Сжигается.",
     "UPGRADE_DESCRIPTION": "Накладывает !M! Слабости и !slime! slimeboundmod:Липкости на ВСЕХ врагов. NL Вы берёте карту. NL Сжигается."
   },
@@ -172,8 +172,8 @@
   },
   "Slimebound:Nibble": {
     "NAME": "Лизнуть",
-    "DESCRIPTION": "Наносит !D! урона. NL Добавляет *Облизывание в руку. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL Добавляет *Облизывание в руку. NL Вы берёте карту. NL Сжигается."
+    "DESCRIPTION": "Наносит !D! урона. NL Добавляет в руку *Лизь. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL Добавляет в руку *Лизь. NL Вы берёте карту. NL Сжигается."
   },
   "Slimebound:OneTwoCombo": {
     "NAME": "Комбо Раз-два",
@@ -221,19 +221,19 @@
   },
   "Slimebound:Recollect": {
     "NAME": "Пересобрать",
-    "DESCRIPTION": "Даёт !B! Защиты. NL expansioncontent:Воскрешает случ. slimeboundmod:Облизывание.",
-    "UPGRADE_DESCRIPTION": "Даёт !B! Защиты. NL expansioncontent:Воскрешает 2 случ. slimeboundmod:Облизывания.",
+    "DESCRIPTION": "Даёт !B! Защиты. NL expansioncontent:Воскрешает случ. slimeboundmod:Лизь.",
+    "UPGRADE_DESCRIPTION": "Даёт !B! Защиты. NL expansioncontent:Воскрешает 2 случ. slimeboundmod:Лизя.",
     "EXTENDED_DESCRIPTION": [
       "Не были... Сожжены..."
     ]
   },
   "Slimebound:Recycling": {
     "NAME": "Переработка",
-    "DESCRIPTION": "expansioncontent:Воскрешает случ. slimeboundmod:Облизывание в начале каждого вашего хода.",
-    "UPGRADE_DESCRIPTION": "Начальная. NL expansioncontent:Воскрешает случ. slimeboundmod:Облизывание в начале каждого вашего хода."
+    "DESCRIPTION": "expansioncontent:Воскрешает случ. slimeboundmod:Лизь в начале каждого вашего хода.",
+    "UPGRADE_DESCRIPTION": "Начальная. NL expansioncontent:Воскрешает случ. slimeboundmod:Лизь в начале каждого вашего хода."
   },
   "Slimebound:RejuvenatingLick": {
-    "NAME": "Двойное облизывание",
+    "NAME": "Двойной лизь",
     "DESCRIPTION": "Накладывает !slime! slimeboundmod:Липкости 2 раза. NL Сжигается.",
     "UPGRADE_DESCRIPTION": "Накладывает !slime! slimeboundmod:Липкости 2 раза. NL Вы берёте карту. NL Сжигается."
   },
@@ -256,13 +256,13 @@
     "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам. NL Вы не получаете урон при использования след. !M! slimeboundmod:Рывков."
   },
   "Slimebound:SamplingLick": {
-    "NAME": "Осторожное облизывание",
+    "NAME": "Осторожный лизь",
     "DESCRIPTION": "Накладывает !slime! slimeboundmod:Липкости. NL Даёт !B! Защиты. NL Сжигается.",
     "UPGRADE_DESCRIPTION": "Накладывает !slime! slimeboundmod:Липкости. NL Даёт !B! Защиты. NL Вы берёте карту. NL Сжигается."
   },
   "Slimebound:Schlurp": {
     "NAME": "Втянуть",
-    "DESCRIPTION": "Даёт !B! Защиты. NL Даёт !M! *Облизывания."
+    "DESCRIPTION": "Даёт !B! Защиты. NL Даёт !M! *Лизя."
   },
   "Slimebound:SelfFormingGoo": {
     "NAME": "Реформация",
@@ -365,7 +365,7 @@
   },
   "Slimebound:TongueLash": {
     "NAME": "Хлёст языком",
-    "DESCRIPTION": "Наносит !D! урона. Дополнительно наносит !M! урона за каждое *Сожжёное slimeboundmod:Облизывание."
+    "DESCRIPTION": "Наносит !D! урона. Дополнительно наносит !M! урона за каждый *Сожжёный slimeboundmod:Лизь."
   },
   "Slimebound:ViciousTackle": {
     "NAME": "Беспощадный рывок",
@@ -374,8 +374,8 @@
   },
   "Slimebound:WasteNot": {
     "NAME": "Ещё пригодится",
-    "DESCRIPTION": "expansioncontent:Воскрешает все slimeboundmod:Облизывания. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Воскрешает все slimeboundmod:Облизывания.",
+    "DESCRIPTION": "expansioncontent:Воскрешает все карты slimeboundmod:Лизь. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:Воскрешает все карты slimeboundmod:Лизь.",
     "EXTENDED_DESCRIPTION": [
       "Не были... Сожжены..."
     ]
