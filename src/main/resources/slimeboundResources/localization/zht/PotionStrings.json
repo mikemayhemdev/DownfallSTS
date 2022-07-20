@@ -9,22 +9,22 @@
   "Slimebound:SlimyTonguePotion": {
     "NAME": "黏液精華",
     "DESCRIPTIONS": [
-      "本場戰鬥中，每次給予黏液時，額外給予 #b",
-      " 層黏液。"
+      "本場戰鬥給予 #y黏液 時，額外給予 #b",
+      " 層。"
     ]
   },
   "Slimebound:SpawnSlimePotion": {
     "NAME": "瓶中軍團",
     "DESCRIPTIONS": [
-      "分裂 #b",
-      " 只隨機史萊姆。（包括專家）"
+      "隨機 #y分裂 #b",
+      " 只 #y史萊姆 。(包括 #y專家史萊姆 )"
     ]
   },
   "Slimebound:ThreeZeroPotion": {
     "NAME": "稠化飲料",
     "DESCRIPTIONS": [
-      "在你的手牌中加入 #b",
-      " 張隨機0費牌。"
+      "隨機將 #b",
+      " 張 #b0 耗能牌加入手牌。"
     ]
   }
 }
