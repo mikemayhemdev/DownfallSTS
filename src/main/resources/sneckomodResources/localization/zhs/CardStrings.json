@@ -148,7 +148,8 @@
   },
   "sneckomod:MasterEye": {
     "NAME": "主宰之眼",
-    "DESCRIPTION": "获得 混乱 。 NL 回合开始时抽 !M! 张牌。"
+    "DESCRIPTION": "获得 混乱 。 NL 回合开始时抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "获得 混乱 。 NL 回合开始时抽 !M! 张牌。"
   },
   "sneckomod:ImprovisedAttack": {
     "NAME": "即兴攻击",
