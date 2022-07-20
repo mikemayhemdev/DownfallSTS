@@ -10,7 +10,12 @@
   "downfall:SoulToGoldChanges": {
     "TEXT": [
       "灵魂",
-      "这是你现在拥有的灵魂。灵魂能上贡给心脏获得奖励。"
+      "这是你现在拥有的灵魂。灵魂能上贡给心脏获得奖励。",
+      "Merchant Status",
+      "HP",
+      "Dead!",
+      "Strength",
+      "Souls stolen"
     ]
   },
   "downfall:BustKeyButton": {

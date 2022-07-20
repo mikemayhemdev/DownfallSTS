@@ -22,6 +22,7 @@ import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
 import downfall.actions.ForceWaitAction;
 import downfall.actions.MerchantThrowGoldAction;
 import downfall.downfallMod;
+import downfall.patches.ui.topPanel.GoldToSoulPatches;
 import downfall.powers.SoulStealPower;
 import downfall.vfx.GainSingleSoulEffect;
 import downfall.vfx.SoulStealEffect;
@@ -68,7 +69,7 @@ public class FleeingMerchant extends AbstractMonster {
     public static final String SOULSTEALNAME = CardCrawlGame.languagePack.getMonsterStrings(ID).MOVES[0];
     public static final float DRAW_X = Settings.WIDTH * 0.5F + 34.0F * Settings.scale;
     public static final float DRAW_Y = AbstractDungeon.floorY - 109.0F * Settings.scale;
-    private static final int START_HP = 400;
+    public static final int START_HP = 400;
 
     public static int CURRENT_HP = 400;
     public static int CURRENT_STRENGTH = 0;
@@ -149,6 +150,7 @@ public class FleeingMerchant extends AbstractMonster {
     public void takeTurn() {
         if (nextMove == ESCAPE) {
             CURRENT_HP = this.currentHealth;
+            GoldToSoulPatches.UpdateMerchantTip();
             AbstractDungeon.getCurrRoom().mugged = true;
             FleeingMerchant.ESCAPED = true;
             this.addToBot(new CanLoseAction());
@@ -262,6 +264,7 @@ public class FleeingMerchant extends AbstractMonster {
         this.deathTimer += ((0.01F * increaseGold) - 1F);
         DEAD = true;
         helpDied = true;
+        GoldToSoulPatches.UpdateMerchantTip();
     }
 
     @Override

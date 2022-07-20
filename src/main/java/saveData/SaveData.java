@@ -16,6 +16,7 @@ import downfall.monsters.FleeingMerchant;
 import downfall.monsters.NeowBossFinal;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
+import downfall.patches.ui.topPanel.GoldToSoulPatches;
 import downfall.relics.BrokenWingStatue;
 import javassist.CtBehavior;
 import org.apache.logging.log4j.LogManager;
@@ -257,6 +258,7 @@ public class SaveData {
             FleeingMerchant.DEAD = merchantDead;
             System.out.println(merchantEscaped);
             FleeingMerchant.ESCAPED = merchantEscaped;
+            GoldToSoulPatches.UpdateMerchantTip();
 
 
             BrokenWingStatue.GIVEN = brokenWingGiven;
