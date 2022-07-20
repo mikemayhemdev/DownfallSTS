@@ -18,7 +18,7 @@
     "NAME": "防撞",
     "DESCRIPTIONS": [
       "你不會受到接下來 #b",
-      " 張 #y沖撞 牌的傷害。"
+      " 張 #y衝撞 牌的傷害。"
     ]
   },
   "Slimebound:SplitDailyTriggerPower": {
@@ -141,7 +141,7 @@
     "NAME": "撞傷",
     "DESCRIPTIONS": [
       "額外受到 #b",
-      " 點 #y沖撞 牌的自我傷害。"
+      " 點 #y衝撞 牌的自我傷害。"
     ]
   },
   "Slimebound:LoseThornsPower": {
@@ -259,9 +259,9 @@
     ]
   },
   "Slimebound:TackleBuffPower": {
-    "NAME": "魯莽沖撞",
+    "NAME": "魯莽衝撞",
     "DESCRIPTIONS": [
-      " #y沖撞 牌對敵人造成的傷害增加 #b",
+      " #y衝撞 牌對敵人造成的傷害增加 #b",
       " 點。"
     ]
   },
@@ -499,7 +499,7 @@
   "Slimebound:TackleSelfDamagePreventPower": {
     "NAME": "魯莽",
     "DESCRIPTIONS": [
-      "沖撞牌對自身造成的傷害提高 #b",
+      "衝撞牌對自身造成的傷害提高 #b",
       " 點。"
     ]
   },
