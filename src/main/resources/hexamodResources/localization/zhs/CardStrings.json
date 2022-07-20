@@ -82,8 +82,8 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "牺牲",
-    "DESCRIPTION": "消耗 一张手牌。 NL 若为攻击或技能牌，随机获得一张相反类型的牌。",
-    "UPGRADE_DESCRIPTION": "消耗 一张手牌。 NL 若为攻击或技能牌，随机获得一张相反类型的牌。 NL 其耗能减1。",
+    "DESCRIPTION": "消耗 一张手牌。 NL 若为 *攻击 或 *技能 牌， NL 将其变为相反类型的牌。",
+    "UPGRADE_DESCRIPTION": "消耗 一张手牌。 NL 若为 *攻击 或 *技能 牌， NL 将其变为相反类型的牌。 NL 其耗能减1。",
     "EXTENDED_DESCRIPTION": [
      "消耗作为必要的牺牲。"
     ]
