@@ -131,7 +131,7 @@
   },
   "Slimebound:LeechLife": {
     "NAME": "Жизнь пиявки",
-    "DESCRIPTION": "Наносит !D! урона. NL При slimeboundmod:Пожирании - восполняет ОЗ, равное slimeboundmod:Липкости, наложенной на врага, не более !M!. NL Сжигается."
+    "DESCRIPTION": "Эфирная. NL Наносит !D! урона. Восполняет ОЗ равное урону, нанесённому по ОЗ врага. NL Сжигается."
   },
   "Slimebound:LeechingTouch": {
     "NAME": "Энергия пиявки",
@@ -197,8 +197,8 @@
   },
   "Slimebound:PrepareCrush": {
     "NAME": "Приготовиться: Крушить",
-    "DESCRIPTION": "Даёт *СЛИЗЕНЬ: *КРУШИТЬ!!!, [E] [E] [E] и !M! Силы в след. ходу. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Даёт *СЛИЗЕНЬ: *КРУШИТЬ!!!+, [E] [E] [E] [E] и !M! Силы в след. ходу. NL Сжигается."
+    "DESCRIPTION": "Вы получите *СЛИЗЕНЬ: *КРУШИТЬ!!!, [E] [E] [E] и !M! Силы в след. ходу. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Вы получите *СЛИЗЕНЬ: *КРУШИТЬ!!!+, [E] [E] [E] [E] и !M! Силы в след. ходу. NL Сжигается."
   },
   "Slimebound:PressTheAttack": {
     "NAME": "Начать наступление",
@@ -379,5 +379,41 @@
     "EXTENDED_DESCRIPTION": [
       "Не были... Сожжены..."
     ]
+  },
+  "Slimebound:SplitGuerilla": {
+	"NAME": "",
+	"DESCRIPTION": ""
+  },
+  "Slimebound:SplitBronze": {
+	"NAME": "",
+	"DESCRIPTION": ""
+  },
+  "Slimebound:SplitGhostflame": {
+	"NAME": "",
+	"DESCRIPTION": ""
+  },
+  "Slimebound:SplitTorchhead": {
+	"NAME": "",
+	"DESCRIPTION": ""
+  },
+  "Slimebound:SplitCultist": {
+	"NAME": "",
+	"DESCRIPTION": ""
+  },
+  "Slimebound:SplitProtector": {
+	"NAME": "",
+	"DESCRIPTION": ""
+  },
+  "Slimebound:SplitInsulting": {
+	"NAME": "",
+	"DESCRIPTION": ""
+  },
+  "Slimebound:SplitAncient": {
+	"NAME": "",
+	"DESCRIPTION": ""
+  },
+  "Slimebound:SplitSlowing": {
+	"NAME": "",
+	"DESCRIPTION": ""
   }
 }
