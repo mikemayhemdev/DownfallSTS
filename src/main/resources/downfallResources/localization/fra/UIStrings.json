@@ -10,7 +10,12 @@
   "downfall:SoulToGoldChanges": {
     "TEXT": [
       "Âmes",
-      "Montre combien d'Âmes vous possédez. Les Âmes peuvent être données au Cœur pour des récompenses."
+      "Montre combien d'Âmes vous possédez. Les Âmes peuvent être données au Cœur pour des récompenses.",
+      "Merchant Status",
+      "HP",
+      "Dead!",
+      "Strength",
+      "Souls stolen"
     ]
   },
   "downfall:BustKeyButton": {
