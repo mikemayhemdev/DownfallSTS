@@ -297,7 +297,7 @@
   },
   "bronze:BronzeOrb": {
     "NAME": "铜制圆球",
-    "DESCRIPTION": " 固有 。 NL 造成 !D! 点伤害。 NL 随机 bronze:编码 一张抽牌堆的 bronze:编码 牌。 NL 消耗 。"
+    "DESCRIPTION": " 固有 。 NL 造成 !D! 点伤害。 NL 随机 bronze:编码 一张抽牌堆中的 bronze:编码 牌。 NL 消耗 。"
   },
   "bronze:Virus": {
     "NAME": "病毒",
@@ -599,7 +599,7 @@
   "bronze:BugBarrage": {
     "NAME": "错误齐射",
     "DESCRIPTION": "获得1张 *伤口 。 NL bronze:循环 手中 状态牌 。 NL 每张造成 !D! 点伤害。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 张 *伤口 。 NL bronze:循环 手中 状态牌 。每张造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 张 *伤口 。 NL bronze:循环 手中 状态牌 。 NL 每张造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       " NL （攻击 ",
       " 次）"
