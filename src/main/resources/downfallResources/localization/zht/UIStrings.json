@@ -10,7 +10,12 @@
   "downfall:SoulToGoldChanges": {
     "TEXT": [
       "靈魂",
-      "這是你現在攜帶的靈魂。靈魂能上貢給心臟獲得獎勵。"
+      "這是你現在攜帶的靈魂。靈魂能上貢給心臟獲得獎勵。",
+      "Merchant Status",
+      "HP",
+      "Dead!",
+      "Strength",
+      "Souls stolen"
     ]
   },
   "downfall:BustKeyButton": {
