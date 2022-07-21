@@ -1430,11 +1430,12 @@ public class downfallMod implements
             AbstractCharBoss.boss = null;
             resetBossList();
             FleeingMerchant.DEAD = false;
-            FleeingMerchant.CURRENT_HP = 400;
+            FleeingMerchant.CURRENT_HP = FleeingMerchant.START_HP;
             FleeingMerchant.CURRENT_STRENGTH = 0;
             FleeingMerchant.CURRENT_SOULS = 0;
             Cleric_Evil.encountered = false;
             Cleric_Evil.heDead = false;
+            GoldToSoulPatches.UpdateMerchantTip();
             AddBustKeyButtonPatches.KeyFields.bustedEmerald.set(AbstractDungeon.player, false);
             AddBustKeyButtonPatches.KeyFields.bustedRuby.set(AbstractDungeon.player, false);
             AddBustKeyButtonPatches.KeyFields.bustedSapphire.set(AbstractDungeon.player, false);
