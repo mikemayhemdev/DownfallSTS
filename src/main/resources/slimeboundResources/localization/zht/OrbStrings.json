@@ -1,0 +1,120 @@
+{
+  "Slimebound:EmptySlimeSlot": {
+    "NAME": "史萊姆欄位",
+    "DESCRIPTION": [
+      "#y分裂 的史萊姆爪牙將進入這個欄位。"
+    ]
+  },"Slimebound:BronzeSlime": {
+    "NAME": "青銅史萊姆",
+    "DESCRIPTION": [
+      "回合開始時對所有敵人造成 #b",
+      " 點傷害，但跳過它的下次攻擊。",
+      ""
+    ]
+  },
+  "Slimebound:AttackSlime": {
+    "NAME": "好鬥史萊姆",
+    "DESCRIPTION": [
+      "回合開始時造成 #b",
+      " 點傷害"
+    ]
+  },
+  "Slimebound:ScrapOozeSlime": {
+    "NAME": "破爛史萊姆",
+    "DESCRIPTION": [
+      "回合開始時造成 #b",
+      " 點傷害。 NL 被 #y融合 後可重生。"
+    ]
+  },
+  "Slimebound:GreedOozeSlime": {
+    "NAME": "貪婪史萊姆",
+    "DESCRIPTION": [
+      "回合開始時造成 #b",
+      " 點傷害。 NL 被 #y融合 後可重生。"
+    ]
+  },
+  "Slimebound:TorchHeadSlime": {
+    "NAME": "火炬頭史萊姆",
+    "DESCRIPTION": [
+      "回合開始時造成 #b",
+      " 點傷害。 #y力量 將增加其傷害。"
+    ]
+  },
+  "Slimebound:CultistSlime": {
+    "NAME": "邪教徒史萊姆",
+    "DESCRIPTION": [
+      "回合開始時造成 #b",
+      " 點傷害並提高下次造成的傷害 #b1 點。"
+    ]
+  },
+  "Slimebound:ShieldSlime": {
+    "NAME": "水蛭史萊姆",
+    "DESCRIPTION": [
+      "回合開始時造成 #b",
+      " 點傷害並給予你 #b",
+      " 點 #y格擋 。"
+    ]
+  },
+  "Slimebound:PoisonSlime": {
+    "NAME": "游擊史萊姆",
+    "DESCRIPTION": [
+      "回合開始時對所有敵人造成 #b",
+      " 點傷害 "
+    ]
+  },
+  "Slimebound:SlimingSlime": {
+    "NAME": "污泥史萊姆",
+    "DESCRIPTION": [
+      "回合開始時造成 #b",
+      " 點傷害並給予 #b",
+      " 層 #y黏液 。"
+    ]
+  },
+  "Slimebound:HexSlime": {
+    "NAME": "鬼火史萊姆",
+    "DESCRIPTION": [
+      "造成 #b",
+      " 點傷害並給予 #b",
+      " 層 #yhexamod:灼魂 。"
+    ]
+  },
+  "Slimebound:ChampSlime": {
+    "NAME": "侮辱史萊姆",
+    "DESCRIPTION": [
+      "回合開始時造成 #b",
+      " 點傷害並給予 #b",
+      " 層 #y易傷 。"
+    ]
+  },
+  "Slimebound:SlowingSlime": {
+    "NAME": "時間史萊姆",
+    "DESCRIPTION": [
+      "造成 #b",
+      " 點傷害並給予 #b",
+      " 層 #y虛弱 。"
+    ]
+  },
+  "Slimebound:ProtectorSlime": {
+    "NAME": "尖刺史萊姆",
+    "DESCRIPTION": [
+      "造成 #b",
+      " 點傷害並給予你 #b",
+      " 層 #y臨時 #y荊棘 。"
+    ]
+  },
+  "Slimebound:DrawingSlime": {
+    "NAME": "先古史萊姆",
+    "DESCRIPTION": [
+      "造成 #b",
+      " 點傷害並使你抽 #b",
+      " 張牌。"
+    ]
+  },
+  "Slimebound:DarklingSlime": {
+    "NAME": "小黑史萊姆",
+    "DESCRIPTION": [
+      "造成 #b",
+      " 點傷害。 #y命令 時，其他小黑也會攻擊。"
+    ]
+  }
+}

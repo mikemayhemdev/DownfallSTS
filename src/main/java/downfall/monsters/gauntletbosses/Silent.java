@@ -27,6 +27,7 @@ import downfall.powers.DrawReductionPowerPlus;
 import downfall.powers.gauntletpowers.MonsterVigor;
 import downfall.powers.gauntletpowers.OnDeathEveryoneBuffer;
 import downfall.powers.gauntletpowers.OnDeathEveryoneThorns;
+import com.megacrit.cardcrawl.powers.IntangiblePower;
 
 public class Silent extends GauntletBoss {
 
@@ -90,7 +91,7 @@ public class Silent extends GauntletBoss {
                 addToBot(new GainBlockAction(this, 11));
                 break;
             case 5:
-                addToBot(new ApplyPowerAction(this, this, new BossIntangiblePower(this, 2), 2));
+                addToBot(new ApplyPowerAction(this, this, new IntangiblePower(this, 2), 2));
                 addToBot(new ApplyPowerAction(this, this, new EnemyWraithFormPower(this, -1), -1));
                 break;
         }
@@ -147,4 +148,12 @@ public class Silent extends GauntletBoss {
         }
 
     }
+
+    public void damage(DamageInfo info) {
+        if (info.output > 0 && hasPower("Intangible")) {
+            info.output = 1;
+        }
+        super.damage(info);
+    }
+
 }

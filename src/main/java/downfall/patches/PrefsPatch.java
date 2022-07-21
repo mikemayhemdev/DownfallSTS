@@ -1,3 +1,4 @@
+/*
 package downfall.patches;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
@@ -18,7 +19,7 @@ public class PrefsPatch {
             depth = true;
             String result = __instance.getString("LANGUAGE", Settings.GameLanguage.ENG.name());
             depth = false;
-            if (result.equals(Settings.GameLanguage.ZHT.name()) || result.equals(Settings.GameLanguage.FRA.name())) {
+            if (result.equals(Settings.GameLanguage.ZHT.name())) {
                 return SpireReturn.Return(Settings.GameLanguage.ENG.name());
             }
         }
@@ -26,3 +27,5 @@ public class PrefsPatch {
     }
 
 }
+
+ */

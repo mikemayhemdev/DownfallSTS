@@ -240,7 +240,7 @@
   },
   "hexamod:HeatMetal": {
     "NAME": "高热金属",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 引爆后给予敌人 !M! 层 hexamod:灼魂 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 引爆后给予目标 !M! 层 hexamod:灼魂 。"
   },
   "hexamod:RainOfEmbers": {
     "NAME": "焰烬雨",
@@ -270,7 +270,7 @@
   },
   "hexamod:ChargedBarrage": {
     "NAME": "蓄能焰幕",
-    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 每 hexamod:点燃 一枚鬼火， NL 再给予一次。"
+    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 每有一枚 hexamod:点燃 的鬼火，再给予一次。"
   },
   "hexamod:RadiantFlame": {
     "NAME": "火焰辐射",
@@ -316,8 +316,8 @@
   },
   "hexamod:FifthSeal": {
     "NAME": "第六容器",
-    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，卡牌奖励中加入一张 *容器 牌。",
-    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时，卡牌奖励中加入一张 *容器 牌。"
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，额外获得一张 *容器 牌。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时，额外获得一张 *容器 牌。"
   },
   "hexamod:SixthSeal": {
     "NAME": "第五容器",

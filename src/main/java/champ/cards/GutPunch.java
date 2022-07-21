@@ -3,8 +3,6 @@ package champ.cards;
 import champ.ChampMod;
 import champ.powers.UltimateFormPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -16,7 +14,7 @@ public class GutPunch extends AbstractChampCard {
 
     public GutPunch() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 10;
+        baseDamage = 8;
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
         tags.add(ChampMod.COMBOBERSERKER);
@@ -36,7 +34,7 @@ public class GutPunch extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeDamage(5);
+        upgradeDamage(4);
     }
 
 

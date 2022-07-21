@@ -53,17 +53,17 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
 
     private void reshuffle() {
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
-        AbstractCard show = new EnShowdown();
+        AbstractCard show = new EnStrikeHermit();
         show.upgrade();
         mockDeck.add(show);
-        AbstractCard strik = new EnFreeStrikeHermit();
+        AbstractCard strik = new EnStrikeHermit();
         strik.upgrade();
         mockDeck.add(strik);
-        AbstractCard strik2 = new EnFreeStrikeHermit();
+        AbstractCard strik2 = new EnStrikeHermit();
         mockDeck.add(strik2);
 
         mockDeck.add(new EnDefendHermit());
-        mockDeck.add(new EnDesperado());
+        mockDeck.add(new EnHeadshot());
         AbstractCard wide = new EnWideOpen();
         wide.upgrade();
         mockDeck.add(wide);
@@ -76,7 +76,7 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
             flash.upgrade();
             mockDeck.add(flash);
         }
-        mockDeck.add(new EnItchyTriggerAct2());
+        mockDeck.add(new EnShortFuse());
 
         mockDeck.add(new EnHandOfGreedHermitNecro());
         AbstractCard virt = new EnVirtue();
@@ -127,11 +127,15 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
             AbstractCard target = getNextCard();
             cardsList.add(target);
         }
-        if (cardsList.stream().anyMatch(q -> q.cardID.equals(EnItchyTriggerAct2.ID))) {
-            for (AbstractCard target : cardsList) {
-                if (target instanceof EnFreeStrikeHermit) {
-                    target.setCostForTurn(0);
+        for (int i = 0; i < 3; i++) {
+            if (cardsList.get(i) instanceof EnShortFuse) {
+                int reduction = 3;
+                for (int itr2 = 0; itr2 < i; itr2++) {
+                    if (cardsList.get(i) instanceof EnStrikeHermit) {
+                        reduction -= 1;
+                    }
                 }
+                ((EnShortFuse) cardsList.get(i)).updateCostToSpecific(reduction);
             }
         }
         if (AbstractCharBoss.boss instanceof CharBossHermit) {
@@ -161,6 +165,15 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
                         ((AbstractHermitBossCard) bot).onSpecificTrigger();
                     }
                     AbstractCharBoss.boss.hand.addToTop(getNextCard());
+                    if (AbstractCharBoss.boss.hand.getTopCard() instanceof EnShortFuse) {
+                        int reduction = 3;
+                        for (int itr2 = 0; itr2 < 3; itr2++) {
+                            if (AbstractCharBoss.boss.hand.group.get(itr2) instanceof EnStrikeHermit) {
+                                reduction -= 1;
+                            }
+                        }
+                        ((EnShortFuse) AbstractCharBoss.boss.hand.getTopCard()).updateCostToSpecific(reduction);
+                    }
                     AbstractCharBoss.boss.hand.refreshHandLayout();
                     AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
                         @Override

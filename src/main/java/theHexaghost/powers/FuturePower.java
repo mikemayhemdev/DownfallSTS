@@ -54,7 +54,6 @@ public class FuturePower extends AbstractPower implements CloneablePowerInterfac
 
     @Override
     public void onAdvance() {
-
         addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount),amount));
         addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, amount),amount));
     }

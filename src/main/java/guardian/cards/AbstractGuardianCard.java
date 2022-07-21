@@ -638,16 +638,8 @@ public abstract class AbstractGuardianCard extends CustomCard {
 
     }
 
+    @Deprecated
     public float calculateBeamDamage() {
-        int bonus = 0;
-
-        if (AbstractDungeon.player != null) {
-            if (AbstractDungeon.player.hasPower(BeamBuffPower.POWER_ID)) {
-                bonus = AbstractDungeon.player.getPower(BeamBuffPower.POWER_ID).amount;
-            }
-        }
-        return bonus;
+        return 0;
     }
-
-
 }

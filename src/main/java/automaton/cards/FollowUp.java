@@ -26,8 +26,8 @@ public class FollowUp extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         blck();
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         AbstractCard q = this;
         atb(new AbstractGameAction() {
             @Override

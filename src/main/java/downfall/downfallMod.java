@@ -1,11 +1,9 @@
 package downfall;
 
 /*
-
 This package should contain all content additions strictly related to the
 Evil Mode alternate gameplay run.  This includes Bosses, Events,
 Event Override patches, and other things that only appear during Evil Runs.
-
  */
 
 import automaton.AutomatonChar;
@@ -190,10 +188,12 @@ public class downfallMod implements
     public static boolean contentSharing_colorlessCards = false;
     public static boolean contentSharing_curses = true;
     public static boolean crossoverCharacters = true;
+    public static boolean crossoverModCharacters = true;
     public static boolean unlockEverything = false;
     public static boolean noMusic = false;
     public static boolean normalMapLayout = true;
     public static boolean champDisableStanceHelper = false;
+    public static boolean sneckoNoModCharacters = false;
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
     public static final String PROP_RELIC_SHARING = "contentSharing_relics";
@@ -202,9 +202,11 @@ public class downfallMod implements
     public static final String PROP_CARD_SHARING = "contentSharing_colorlessCards";
     public static final String PROP_CURSE_SHARING = "contentSharing_curses";
     public static final String PROP_CHAR_CROSSOVER = "crossover_characters";
+    public static final String PROP_MOD_CHAR_CROSSOVER = "crossover_mod_characters";
     public static final String PROP_UNLOCK_ALL = "unlockEverything";
     public static final String PROP_NORMAL_MAP = "normalMapLayout";
     public static final String PROP_CHAMP_PRO = "champDisableStanceHelper";
+    public static final String PROP_SNECKO_MODLESS = "sneckoNoModCharacters";
     public static final String PROP_NO_MUSIC = "disableMusicOverride";
 
     public static String Act1BossFaced = "";
@@ -234,14 +236,18 @@ public class downfallMod implements
             Settings.GameLanguage.ZHS,
             // Settings.GameLanguage.JPN
             Settings.GameLanguage.KOR,
-            Settings.GameLanguage.FRA
+            Settings.GameLanguage.FRA,
+            Settings.GameLanguage.ZHT,
+            Settings.GameLanguage.RUS
     };
 
     public static String[] SupportedLanguagesStrings = {
             "English",
             "Chinese (Simplified)",
             "Korean",
-            "French"
+            "French",
+            "Chinese (Traditional)",
+            "Russian",
     };
     public static ReplaceData[] wordReplacements;
     public static SpireConfig bruhData = null;
@@ -345,10 +351,12 @@ public class downfallMod implements
             config.setBool(PROP_POTION_SHARING, contentSharing_potions);
             config.setBool(PROP_CARD_SHARING, contentSharing_colorlessCards);
             config.setBool(PROP_CHAR_CROSSOVER, crossoverCharacters);
+            config.setBool(PROP_MOD_CHAR_CROSSOVER, crossoverModCharacters);
             config.setBool(PROP_NORMAL_MAP, normalMapLayout);
 
             config.setBool(PROP_UNLOCK_ALL, unlockEverything);
             config.setBool(PROP_CHAMP_PRO, champDisableStanceHelper);
+            config.setBool(PROP_SNECKO_MODLESS, sneckoNoModCharacters);
             config.setBool(PROP_NO_MUSIC, noMusic);
             config.save();
             GoldenIdol_Evil.save();
@@ -597,16 +605,9 @@ public class downfallMod implements
 
         if (!STEAM_MODE) {
 
-            ModLabeledToggleButton contentSharingBtnCurses = new ModLabeledToggleButton(configStrings.TEXT[5],
-                    350.0f, 450.0F, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                    contentSharing_curses, settingsPanel, (label) -> {
-            }, (button) -> {
-                contentSharing_curses = button.enabled;
-                saveData();
-            });
 
             ModLabeledToggleButton contentSharingBtnRelics = new ModLabeledToggleButton(configStrings.TEXT[0],
-                    350.0f, 650.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    350.0f, 720, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     contentSharing_relics, settingsPanel, (label) -> {
             }, (button) -> {
                 contentSharing_relics = button.enabled;
@@ -614,7 +615,7 @@ public class downfallMod implements
             });
 
             ModLabeledToggleButton contentSharingBtnEvents = new ModLabeledToggleButton(configStrings.TEXT[2],
-                    350.0f, 600.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    350.0f, 680, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     contentSharing_events, settingsPanel, (label) -> {
             }, (button) -> {
                 contentSharing_events = button.enabled;
@@ -622,7 +623,7 @@ public class downfallMod implements
             });
 
             ModLabeledToggleButton contentSharingBtnPotions = new ModLabeledToggleButton(configStrings.TEXT[1],
-                    350.0f, 550.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    350.0f, 640, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     contentSharing_potions, settingsPanel, (label) -> {
             }, (button) -> {
                 contentSharing_potions = button.enabled;
@@ -630,7 +631,7 @@ public class downfallMod implements
             });
 
             ModLabeledToggleButton contentSharingBtnColorless = new ModLabeledToggleButton(configStrings.TEXT[3],
-                    350.0f, 500.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    350.0f, 600, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     contentSharing_colorlessCards, settingsPanel, (label) -> {
             }, (button) -> {
                 contentSharing_colorlessCards = button.enabled;
@@ -638,25 +639,41 @@ public class downfallMod implements
             });
 
 
-            ModLabeledToggleButton normalMapBtn = new ModLabeledToggleButton(configStrings.TEXT[6],
-                    350.0f, 400, Settings.CREAM_COLOR, FontHelper.charDescFont,
+            ModLabeledToggleButton contentSharingBtnCurses = new ModLabeledToggleButton(configStrings.TEXT[6],
+                    350.0f, 560, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    contentSharing_curses, settingsPanel, (label) -> {
+            }, (button) -> {
+                contentSharing_curses = button.enabled;
+                saveData();
+            });
+
+            ModLabeledToggleButton normalMapBtn = new ModLabeledToggleButton(configStrings.TEXT[7],
+                    350.0f, 520, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     normalMapLayout, settingsPanel, (label) -> {
             }, (button) -> {
                 normalMapLayout = button.enabled;
                 saveData();
             });
 
-            ModLabeledToggleButton champProConfig = new ModLabeledToggleButton(configStrings.TEXT[8],
-                    350.0f, 350, Settings.CREAM_COLOR, FontHelper.charDescFont,
+            ModLabeledToggleButton champProConfig = new ModLabeledToggleButton(configStrings.TEXT[9],
+                    350.0f, 480, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     champDisableStanceHelper, settingsPanel, (label) -> {
             }, (button) -> {
                 champDisableStanceHelper = button.enabled;
                 saveData();
             });
 
+            ModLabeledToggleButton sneckoNoModConfig = new ModLabeledToggleButton(configStrings.TEXT[10],
+                    350.0f, 440, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    sneckoNoModCharacters, settingsPanel, (label) -> {
+            }, (button) -> {
+                sneckoNoModCharacters = button.enabled;
+                saveData();
+            });
 
-            ModLabeledToggleButton unlockAllBtn = new ModLabeledToggleButton(configStrings.TEXT[7],
-                    350.0f, 300, Settings.CREAM_COLOR, FontHelper.charDescFont,
+
+            ModLabeledToggleButton unlockAllBtn = new ModLabeledToggleButton(configStrings.TEXT[8],
+                    350.0f, 400, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     unlockEverything, settingsPanel, (label) -> {
             }, (button) -> {
                 unlockEverything = button.enabled;
@@ -664,22 +681,32 @@ public class downfallMod implements
             });
 
 
-            ModLabeledToggleButton noMusicBtn = new ModLabeledToggleButton(configStrings.TEXT[9],
-                    350.0f, 250, Settings.CREAM_COLOR, FontHelper.charDescFont,
+            ModLabeledToggleButton noMusicBtn = new ModLabeledToggleButton(configStrings.TEXT[11],
+                    350.0f, 360, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     noMusic, settingsPanel, (label) -> {
             }, (button) -> {
                 noMusic = button.enabled;
                 saveData();
             });
 
-            ModLabeledToggleButton unlockAllSkinBtn = new ModLabeledToggleButton(configStrings.TEXT[10],
-                    350.0f, 200, Settings.CREAM_COLOR, FontHelper.charDescFont,
+            ModLabeledToggleButton unlockAllSkinBtn = new ModLabeledToggleButton(configStrings.TEXT[12],
+                    350.0f, 320, Settings.CREAM_COLOR, FontHelper.charDescFont,
                     unlockAllReskin, settingsPanel, (label) -> {
             }, (button) -> {
                 unlockAllReskin = button.enabled;
                 unlockAllReskin();
             });
 
+
+            ModLabeledToggleButton characterModCrossoverBtn = new ModLabeledToggleButton(configStrings.TEXT[5],
+                    350.0f, 760, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                    crossoverModCharacters, settingsPanel, (label) -> {
+            }, (button) -> {
+                crossoverModCharacters = button.enabled;
+                CardCrawlGame.mainMenuScreen.charSelectScreen.options.clear();
+                CardCrawlGame.mainMenuScreen.charSelectScreen.initialize();
+                saveData();
+            });
 
             settingsPanel.addUIElement(contentSharingBtnCurses);
             settingsPanel.addUIElement(contentSharingBtnEvents);
@@ -688,13 +715,15 @@ public class downfallMod implements
             settingsPanel.addUIElement(contentSharingBtnColorless);
             settingsPanel.addUIElement(normalMapBtn);
             settingsPanel.addUIElement(champProConfig);
+            settingsPanel.addUIElement(sneckoNoModConfig);
             settingsPanel.addUIElement(unlockAllBtn);
             settingsPanel.addUIElement(noMusicBtn);
             settingsPanel.addUIElement(unlockAllSkinBtn);
+            settingsPanel.addUIElement(characterModCrossoverBtn);
         }
 
         ModLabeledToggleButton characterCrossoverBtn = new ModLabeledToggleButton(configStrings.TEXT[4],
-                350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                350.0f, 800.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
                 crossoverCharacters, settingsPanel, (label) -> {
         }, (button) -> {
             crossoverCharacters = button.enabled;
@@ -702,6 +731,7 @@ public class downfallMod implements
             CardCrawlGame.mainMenuScreen.charSelectScreen.initialize();
             saveData();
         });
+
 
 
         settingsPanel.addUIElement(characterCrossoverBtn);
@@ -722,10 +752,12 @@ public class downfallMod implements
                 contentSharing_colorlessCards = config.getBool(PROP_CARD_SHARING);
                 normalMapLayout = config.getBool(PROP_NORMAL_MAP);
                 champDisableStanceHelper = config.getBool(PROP_CHAMP_PRO);
+                sneckoNoModCharacters = config.getBool(PROP_SNECKO_MODLESS);
                 unlockEverything = config.getBool(PROP_UNLOCK_ALL);
                 noMusic = config.getBool(PROP_NO_MUSIC);
             }
             crossoverCharacters = config.getBool(PROP_CHAR_CROSSOVER);
+            crossoverModCharacters = config.getBool(PROP_MOD_CHAR_CROSSOVER);
         } catch (Exception e) {
             e.printStackTrace();
             clearData();
@@ -1398,11 +1430,12 @@ public class downfallMod implements
             AbstractCharBoss.boss = null;
             resetBossList();
             FleeingMerchant.DEAD = false;
-            FleeingMerchant.CURRENT_HP = 400;
+            FleeingMerchant.CURRENT_HP = FleeingMerchant.START_HP;
             FleeingMerchant.CURRENT_STRENGTH = 0;
             FleeingMerchant.CURRENT_SOULS = 0;
             Cleric_Evil.encountered = false;
             Cleric_Evil.heDead = false;
+            GoldToSoulPatches.UpdateMerchantTip();
             AddBustKeyButtonPatches.KeyFields.bustedEmerald.set(AbstractDungeon.player, false);
             AddBustKeyButtonPatches.KeyFields.bustedRuby.set(AbstractDungeon.player, false);
             AddBustKeyButtonPatches.KeyFields.bustedSapphire.set(AbstractDungeon.player, false);

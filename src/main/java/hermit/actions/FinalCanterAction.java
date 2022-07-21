@@ -17,6 +17,14 @@ public class FinalCanterAction extends AbstractGameAction {
     private AbstractCreature m;
     private AbstractPlayer p;
     private AbstractCard c;
+    private AttackEffect eff = EnumPatch.HERMIT_GHOSTFIRE;
+
+    public FinalCanterAction(AbstractCreature m, AbstractPlayer p, int amount, AbstractCard c, AttackEffect eff) {
+        this.m = m;
+        this.p = p;
+        this.c = c;
+        this.eff = eff;
+    }
 
     public FinalCanterAction(AbstractCreature m, AbstractPlayer p, int amount, AbstractCard c) {
         this.m = m;
@@ -26,7 +34,7 @@ public class FinalCanterAction extends AbstractGameAction {
 
     public void update() {
         this.c.calculateCardDamage((AbstractMonster)this.m);
-        this.addToTop(new DamageAction(this.m, new DamageInfo(this.p, this.c.damage, DamageInfo.DamageType.NORMAL), EnumPatch.HERMIT_GHOSTFIRE));
+        this.addToTop(new DamageAction(this.m, new DamageInfo(this.p, this.c.damage, DamageInfo.DamageType.NORMAL), this.eff));
 
         this.isDone = true;
     }

@@ -76,7 +76,7 @@ public class Coalescence extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
         baseMagicNumber = magicNumber = 2;
-        baseBlock = block = 5;
+        baseBlock = block = 6;
 
         loadJokeCardImage(this, "coalescence.png");
     }

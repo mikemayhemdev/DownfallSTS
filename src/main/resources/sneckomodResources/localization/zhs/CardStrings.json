@@ -14,7 +14,7 @@
   },
   "sneckomod:TailWhip": {
     "NAME": "扫尾",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! - 2层 虚弱 。 NL 给予 !M! - 2层 易伤 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! ~ 2层 虚弱 。 NL 给予 !M! ~ 2层 易伤 。"
   },
   "sneckomod:UnknownCommonAttack": {
     "NAME": "？？？",
@@ -85,7 +85,7 @@
   },
   "sneckomod:UnknownInnate": {
     "NAME": "？？？",
-    "DESCRIPTION": " *未知  固有 牌。"
+    "DESCRIPTION": " *未知 固有 牌。"
   },
   "sneckomod:Unknown": {
     "NAME": "？？？",
@@ -166,7 +166,7 @@
   },
   "sneckomod:QuickBite": {
     "NAME": "蛇耙",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! - 2 张牌。 NL sneckomod:混淆 手中耗能最高的牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! ~ 2 张牌。 NL sneckomod:混淆 手中耗能最高的牌。"
   },
   "sneckomod:Rotation": {
     "NAME": "轮换",
@@ -193,11 +193,11 @@
   },
   "sneckomod:Restock": {
     "NAME": "补充",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 丢弃所有手牌。 NL 抽 5-10 张牌。 NL 消耗 。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 丢弃所有手牌。 NL 抽 5~10 张牌。 NL 消耗 。"
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "闪光伎俩",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 获得 !M! - 30 *金币 。 NL 消耗 。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 获得 !M! ~ 30 *金币 。 NL 消耗 。"
   },
   "sneckomod:Transmogrify": {
     "NAME": "惊变",
@@ -229,7 +229,7 @@
   },
   "sneckomod:DiceBlock": {
     "NAME": "骰子格挡",
-    "DESCRIPTION": "获得 !M! - !B! 点 格挡 。"
+    "DESCRIPTION": "获得 !M! ~ !B! 点 格挡 。"
   },
   "sneckomod:MixItUp": {
     "NAME": "混合起来！",
@@ -265,23 +265,23 @@
   },
   "sneckomod:RainOfDice": {
     "NAME": "骰子雨",
-    "DESCRIPTION": "随机造成 !qqq! - !D! 点伤害。 NL sneckomod:混淆 本牌并返回手牌。"
+    "DESCRIPTION": "随机造成 !qqq! ~ !D! 点伤害。 NL sneckomod:混淆 本牌并返回手牌。"
   },
   "sneckomod:DiceCrush": {
     "NAME": "骰子撞击",
-    "DESCRIPTION": "造成 !M! - !D! 点伤害。"
+    "DESCRIPTION": "造成 !M! ~ !D! 点伤害。"
   },
   "sneckomod:SnakeSap": {
     "NAME": "蛇液",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 造成 !qqq! - !D! 点伤害。 NL 获得 0 - !M! [E] 。 NL 消耗 。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 造成 !qqq! ~ !D! 点伤害。 NL 获得 0 ~ !M! [E] 。 NL 消耗 。"
   },
   "sneckomod:DiceBoulder": {
     "NAME": "巨型骰子",
-    "DESCRIPTION": "造成 !M! - !D! 点伤害。 NL 能被多次 升级 。"
+    "DESCRIPTION": "造成 !M! ~ !D! 点伤害。 NL 能被多次 升级 。"
   },
   "sneckomod:IronFang": {
     "NAME": "铁齿",
-    "DESCRIPTION": "造成 !qqq! - !D! 点伤害。 NL 获得 !M! - !B! 点 格挡 。"
+    "DESCRIPTION": "造成 !qqq! ~ !D! 点伤害。 NL 获得 !M! ~ !B! 点 格挡 。"
   },
   "sneckomod:Mudshield": {
     "NAME": "混乱护盾",
@@ -290,7 +290,7 @@
   },
   "sneckomod:WideSting": {
     "NAME": "宽刺",
-    "DESCRIPTION": "对所有敌人造成 !M! - !D! 点伤害。 NL 升级 手中所有 sneckomod:异色 牌。"
+    "DESCRIPTION": "对所有敌人造成 !M! ~ !D! 点伤害。 NL 升级 手中所有 sneckomod:异色 牌。"
   },
   "sneckomod:UnendingSupply": {
     "NAME": "延绵不绝",

@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import sneckomod.cards.unknowns.*;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.function.Predicate;
 
 public class OffclassHelper {

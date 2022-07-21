@@ -57,7 +57,7 @@ public class Gestalt extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
 
 
     // Hey want a second damage/magic/block/unique number??? Great!

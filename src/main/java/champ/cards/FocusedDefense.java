@@ -1,13 +1,10 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.powers.CounterPower;
-import champ.powers.FocusedDefPower;
-import champ.util.OnFinisherSubscriber;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
-import sneckomod.SneckoMod;
+
+import static champ.ChampMod.loadJokeCardImage;
 
 public class FocusedDefense extends AbstractChampCard {
 
@@ -24,16 +21,17 @@ public class FocusedDefense extends AbstractChampCard {
         tags.add(ChampMod.OPENER);
         tags.add(ChampMod.OPENERBERSERKER);
         postInit();
+        loadJokeCardImage(this, "BobAndWeave.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        berserkOpen();
         blck();
         ChampMod.vigor(magicNumber);
+        berserkOpen();
     }
 
     public void upp() {
         upgradeBlock(2);
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 }

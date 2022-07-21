@@ -9,11 +9,13 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AccuracyPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.StrikeDummy;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceChangeParticleGenerator;
 import hermit.HermitMod;
 import hermit.actions.MaintenanceAction;
+import hermit.actions.ReduceCostActionFixed;
 import hermit.characters.hermit;
 import hermit.effects.HermitUpgradeShineEffect;
 import hermit.powers.MaintenanceStrikePower;
@@ -38,7 +40,6 @@ public class Maintenance extends AbstractDynamicCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
 
     // STAT DECLARATION
@@ -58,6 +59,7 @@ public class Maintenance extends AbstractDynamicCard {
     public Maintenance() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = 3;
+        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = 1;
         loadJokeCardImage(this, "maintenance.png");
     }
 
@@ -66,9 +68,8 @@ public class Maintenance extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.effectsQueue.add(new HermitUpgradeShineEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY));
         this.addToBot(new ApplyPowerAction(p, p, new MaintenanceStrikePower(p, this.magicNumber), this.magicNumber));
-
-        if (this.upgraded)
-        this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, 1), 1));
+        this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, this.defaultBaseSecondMagicNumber), this.defaultBaseSecondMagicNumber));
+        this.addToBot(new ReduceCostActionFixed(this.uuid, 1));
     }
 
     //Upgraded stats.
@@ -76,9 +77,9 @@ public class Maintenance extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
-            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
+            upgradeDefaultSecondMagicNumber(1);
+            upgradeMagicNumber(1);
         }
     }
 }

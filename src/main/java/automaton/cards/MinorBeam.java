@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -22,6 +23,7 @@ public class MinorBeam extends AbstractBronzeCard {
         super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = DAMAGE;
         thisEncodes();
+        AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("MinorBeam.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

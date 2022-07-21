@@ -40,6 +40,7 @@ public class Gluttony extends AbstractSlimeboundCard {
         this.cardsToPreview = new Lick();
 
         //this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        SlimeboundMod.loadJokeCardImage(this, "Gluttony.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

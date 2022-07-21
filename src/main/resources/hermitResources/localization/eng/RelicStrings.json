@@ -3,14 +3,14 @@
     "NAME": "Old Locket",
     "FLAVOR": "There's a faded picture inside.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain a #yMemento."
+      "At the start of each combat, add a #yMemento into your hand."
     ]
   },
   "hermit:RyeStalk": {
     "NAME": "Rye Stalk",
     "FLAVOR": "Still in mint condition, despite being chewed on for so long.",
     "DESCRIPTIONS": [
-      "#yhermit:Bruise is no longer reduced on hit."
+      "At the end of your turn, ALL enemies lose HP equal to their #yhermit:Bruise."
     ]
   },
   "hermit:BartenderGlass": {
@@ -67,7 +67,7 @@
     "NAME": "Clasped Locket",
     "FLAVOR": "It won't open anymore.",
     "DESCRIPTIONS": [
-      "Replaces #yOld #yLocket. At the start of each combat, gain [E] for each #rCurse in your deck. Upon pickup, obtain #b2 #rInjuries.",
+      "Replaces #yOld #yLocket. First time you draw a curse each turn, #yExhaust it and draw #b2 cards. Upon pickup, obtain #b2 #rInjuries.",
       "Never again..."
     ]
   },

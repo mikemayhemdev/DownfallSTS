@@ -22,7 +22,7 @@ public class UnknownClass extends AbstractUnknownCard {
     public CardColor myColor;
 
     public UnknownClass(CardColor cardColor) {
-        super(ID + cardColor.name(), determineCardImg(cardColor), CardType.SKILL, CardRarity.COMMON);
+        super(ID + cardColor.name(), determineCardImg(cardColor), CardType.SKILL, CardRarity.COMMON, true);
         myColor = cardColor;
         name = unknownClass[0];
         originalName = unknownClass[0];
@@ -33,7 +33,7 @@ public class UnknownClass extends AbstractUnknownCard {
             rawDescription = unknownClass[1] + unknownClass[3]
                     + unknownClass[2];
         }
-
+        UPGRADE_DESCRIPTION = unknownClass[6] + rawDescription;
         initializeDescription();
     }
 

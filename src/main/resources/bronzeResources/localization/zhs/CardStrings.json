@@ -1,7 +1,7 @@
 {
   "bronze:DazingPulse": {
     "NAME": "晕眩反冲",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL bronze:编译 *错误 - bronze:插入 !M! 张 *晕眩 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:插入 !M! 张 *晕眩 。",
     "EXTENDED_DESCRIPTION": [
       "晕眩",
       "脉冲"
@@ -75,7 +75,7 @@
   },
   "bronze:Replicate": {
     "NAME": "副本",
-    "DESCRIPTION": "造成 !D! 点伤害。 π NL bronze:编码 时将本牌的复制品加入弃牌堆。",
+    "DESCRIPTION": "造成 !D! 点伤害。\u00A0 \u00A0 bronze:编码 时将本牌的复制品加入弃牌堆。",
     "EXTENDED_DESCRIPTION": [
       "反复",
       "拷贝"
@@ -118,7 +118,7 @@
   },
   "bronze:Separator": {
     "NAME": "分隔符",
-    "DESCRIPTION": "造成 !D! 点伤害。 π NL bronze:编码 时若在中间槽位，伤害增加 !M! 点。",
+    "DESCRIPTION": "造成 !D! 点伤害。\u00A0 \u00A0 bronze:编码 时若在中间槽位，伤害增加 !M! 点。",
     "EXTENDED_DESCRIPTION": [
       "分离",
       "分割"
@@ -151,7 +151,7 @@
   },
   "bronze:DarkDash": {
     "NAME": "暗影冲刺",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:插入 *虚空 。",
+    "DESCRIPTION": "获得 !B! 点 格挡。 NL 造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:插入 *虚空 。",
     "EXTENDED_DESCRIPTION": [
       "暗影",
       "冲刺"
@@ -239,7 +239,7 @@
   },
   "bronze:Constructor": {
     "NAME": "起始符",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 π NL bronze:编码 时若在首个槽位，格挡 增加 !M! 点 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。\u00A0 \u00A0 bronze:编码 时若在首个槽位， 格挡 增加 !M! 点 。",
     "EXTENDED_DESCRIPTION": [
       "构造",
       "失落",
@@ -319,11 +319,11 @@
   },
   "bronze:FollowUp": {
     "NAME": "数据追踪",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 若上张打出牌为 bronze:方法 ，再打出一次。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 若上张打出牌为 bronze:方法 ，再打出一次。"
   },
   "bronze:ChosenStrike": {
     "NAME": "邪教打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 -本局游戏本牌的伤害增加 !M! 点。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 -本局伤害加 !M! 。",
     "EXTENDED_DESCRIPTION": [
       "邪教",
       "咔咔"
@@ -336,8 +336,8 @@
   },
   "bronze:ItsAFeature": {
     "NAME": "此为特性",
-    "DESCRIPTION": "抽到 诅咒 或 状态牌 时，获得 1 点 guardianmod:临时 力量 和 敏捷 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 抽到 诅咒 或 状态牌 时，获得 1 点 guardianmod:临时 力量 和 敏捷 。"
+    "DESCRIPTION": "抽到 诅咒 或 状态牌 时，获得 1 点 guardianmod:临时 力量 与 敏捷 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 抽到 诅咒 或 状态牌 时，获得 1 点 guardianmod:临时 力量 与 敏捷 。"
   },
   "bronze:MinorBeam": {
     "NAME": "微光射线",
@@ -447,7 +447,7 @@
   },
   "bronze:FormatEncoded": {
     "NAME": "碎片",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       "简洁",
       "碎片"
@@ -467,7 +467,7 @@
   },
   "bronze:Break": {
     "NAME": "打断",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:插入 *灼伤 、 *伤口 和 *黏液 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:插入 *灼伤 、 *伤口 与 *黏液 。",
     "EXTENDED_DESCRIPTION": [
       "打断",
       "粉碎"
@@ -520,7 +520,7 @@
   },
   "bronze:Hardcode": {
     "NAME": "硬编码",
-    "DESCRIPTION": "将 bronze:编译 的下张 bronze:方法 加入牌组。 NL 从牌组中移除构成 bronze:方法 的牌和本牌。"
+    "DESCRIPTION": "将 bronze:编译 的下张 bronze:方法 加入牌组。 NL 从牌组中移除构成 bronze:方法 的牌与本牌。"
   },
   "bronze:SpaghettiCode": {
     "NAME": "意面代码",
@@ -598,7 +598,7 @@
   },
   "bronze:BugBarrage": {
     "NAME": "错误齐射",
-    "DESCRIPTION": "获得1张 *伤口 。 NL bronze:循环 手中 状态牌 。每张造成 !D! 点伤害。",
+    "DESCRIPTION": "获得1张 *伤口 。 NL bronze:循环 手中 状态牌 。 NL 每张造成 !D! 点伤害。",
     "UPGRADE_DESCRIPTION": "获得 !M! 张 *伤口 。 NL bronze:循环 手中 状态牌 。每张造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       " NL （攻击 ",
@@ -657,6 +657,6 @@
   },
   "bronze:Undervolt": {
     "NAME": "低压",
-    "DESCRIPTION": "所有敌人失去 !M! 点 力量。 NL 获得2张 灼伤 。 NL 消耗 。"
+    "DESCRIPTION": "所有敌人失去 !M! 点 力量。 NL 获得两张 灼伤 。 NL 消耗 。"
   }
 }

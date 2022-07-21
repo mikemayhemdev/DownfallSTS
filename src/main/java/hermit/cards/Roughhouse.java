@@ -64,7 +64,7 @@ public class Roughhouse extends AbstractDynamicCard {
     private static final int COST = 3;
     private static final int DAMAGE = 24;
     private static final int UPGRADE_PLUS_DMG = 6;
-    private static final int BLOCK = 16;
+    private static final int BLOCK = 20;
     private static final int UPGRADE_PLUS_BLOCK = 4;
 
 

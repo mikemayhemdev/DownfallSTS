@@ -2,6 +2,7 @@ package hermit.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
+import com.megacrit.cardcrawl.actions.common.ReduceCostForTurnAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
@@ -38,6 +39,7 @@ public class GambitAction extends AbstractGameAction {
                 card = (AbstractCard)var2.next();
                 if (card.type == this.typeToCheck) {
                     tmp.addToRandomSpot(card);
+                    this.addToTop( new ReduceCostForTurnAction(card,1));
                 }
             }
 

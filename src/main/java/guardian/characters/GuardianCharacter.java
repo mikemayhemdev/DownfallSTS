@@ -283,7 +283,6 @@ public class GuardianCharacter extends CustomPlayer {
     }
 
     public AbstractCard getStartCardForEvent() {
-        //TODO - Note card goes here
         return new TwinSlam();
     }
 

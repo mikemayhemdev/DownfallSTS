@@ -41,7 +41,7 @@ public class PlaceCardsInHandIntoStasisAction extends AbstractGameAction {
                 return;
             }
 
-            AbstractDungeon.handCardSelectScreen.open(TEXT[3], this.amount, false, true, false, false, anyNumber);
+            AbstractDungeon.handCardSelectScreen.open(TEXT[3]+TEXT[7], this.amount, false, true, false, false, anyNumber);
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.25F));
         } else {
             if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {

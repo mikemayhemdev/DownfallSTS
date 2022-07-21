@@ -34,12 +34,13 @@ import static sneckomod.SneckoMod.makeCardPath;
 public abstract class AbstractSneckoCard extends CustomCard {
 
     protected String[] unknownUpgrade = CardCrawlGame.languagePack.getUIString(makeID("Unknown")).TEXT;
+    protected String[] unknownNames = CardCrawlGame.languagePack.getUIString(makeID("UnknownNames")).TEXT;
 
     protected final CardStrings cardStrings;
     public String betaArtPath;
     protected final String NAME;
     protected final String DESCRIPTION;
-    protected final String UPGRADE_DESCRIPTION;
+    protected String UPGRADE_DESCRIPTION;
     protected final String[] EXTENDED_DESCRIPTION;
     public int silly;
     public int baseSilly;
@@ -64,6 +65,19 @@ public abstract class AbstractSneckoCard extends CustomCard {
         super(id, "ERROR", getCorrectPlaceholderImage(id),
                 cost, "ERROR", type, color, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
+        name = NAME = cardStrings.NAME;
+        originalName = NAME;
+        rawDescription = DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
+        initializeTitle();
+        initializeDescription();
+    }
+
+    public AbstractSneckoCard(final String id, final String img,  final int cost, final CardType type, final CardRarity rarity, final CardTarget target, boolean IsClass) {
+        super(id, "ERROR", getCorrectPlaceholderImage(img),
+                cost, "ERROR", type, TheSnecko.Enums.SNECKO_CYAN, rarity, target);
+        cardStrings = CardCrawlGame.languagePack.getCardStrings("sneckomod:Unknown0Cost");
         name = NAME = cardStrings.NAME;
         originalName = NAME;
         rawDescription = DESCRIPTION = cardStrings.DESCRIPTION;
@@ -259,14 +273,16 @@ public abstract class AbstractSneckoCard extends CustomCard {
     @Override
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tips = new ArrayList<>();
-        if (this.rawDescription.contains("Unidentified")) {
-            if (SneckoMod.validColors.size() > 3) {
-                tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[5]));
-            }
-            else if (SneckoMod.validColors.isEmpty()) {
-                tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[4]));
-            } else {
-                tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[2] + unknownUpgrade[3] + getCharList()));
+        for (String name : unknownNames) {
+            if (this.rawDescription.contains(name)) {
+                if (SneckoMod.validColors.size() > 3) {
+                    tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[5]));
+                }
+                else if (SneckoMod.validColors.isEmpty()) {
+                    tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[4]));
+                } else {
+                    tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[2] + unknownUpgrade[3] + getCharList()));
+                }
             }
         }
         return tips;

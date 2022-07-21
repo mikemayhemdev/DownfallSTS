@@ -1,0 +1,214 @@
+{
+  "hexamod:AgainPower": {
+    "NAME": "復燃！",
+    "DESCRIPTIONS": [
+      "本回合結束時不能 #y步進 。",
+      "接下來的 #b",
+      " 個回合結束時不能 #y步進 。"
+    ]
+  },
+  "hexamod:ApocalypticArmorPower": {
+    "NAME": "決戰末世",
+    "DESCRIPTIONS": [
+      "下一次你 #y點燃 獄焱鬼火且所有的 #b",
+      " 個鬼火已 #y點燃 ，回合結束時額外獲得一回合。",
+      "下一次你 #y點燃 獄焱鬼火且有至少 #b"
+    ]
+  },
+  "hexamod:ApplyBurnAtTurnStartOncePower": {
+    "NAME": "延時火焰",
+    "DESCRIPTIONS": [
+      "你的下一回合開始時，給予所有敵人 #b",
+      " 層 #y灼魂 。"
+    ]
+  },
+  "hexamod:BurnPerTurnPower": {
+    "NAME": "易熔金屬",
+    "DESCRIPTIONS": [
+      "下次 #y灼魂 引爆時，給予 #b",
+      " 層 #y灼魂 。"
+    ]
+  },
+  "hexamod:BurnPower": {
+    "NAME": "灼魂",
+    "DESCRIPTIONS": [
+      "在 #b",
+      " 個回合後，失去 #b",
+      " 個回合後，失去 #b",
+      " 點生命，移除本效果。"
+    ]
+  },
+  "hexamod:BurnvenomPower": {
+    "NAME": "鬼火武器",
+    "DESCRIPTIONS": [
+      "每當你造成了未被格擋的傷害，給予 #b",
+      " 層 #y灼魂 。"
+    ]
+  },
+  "hexamod:CommonPostCombatPower": {
+    "NAME": "戰後卡牌",
+    "DESCRIPTIONS": [
+      "每場戰鬥結束時，獲得 #b",
+      " 張額外的牌。",
+      " 張額外的牌。"
+    ]
+  },
+  "hexamod:CrispyPower": {
+    "NAME": "清脆",
+    "DESCRIPTIONS": [
+      "給予 #y灼魂 時層數增加 #b",
+      " 層。"
+    ]
+  },
+  "hexamod:EnhancePower": {
+    "NAME": "熱烈",
+    "DESCRIPTIONS": [
+      "提高鬼火上點燃效果提供的 #y傷害 、 #y灼魂 和 #y格擋 獲得 #b",
+      " 點。"
+    ]
+  },
+  "hexamod:EtherealRefundPower": {
+    "NAME": "虛無返還",
+    "DESCRIPTIONS": [
+      "本回合每當你打出 #y虛無 牌時，獲得 ",
+      " 。"
+    ]
+  },
+  "hexamod:FuturePower": {
+    "NAME": "疾進",
+    "DESCRIPTIONS": [
+      "每回合前 #b",
+      " 次",
+      " 次",
+      " #y點燃 鬼火時， #y步進 。 NL 本回合已 #y點燃 過 #b",
+      " 個 鬼火。",
+      " 個 鬼火。"
+    ]
+  },
+  "hexamod:FutureUpgradePower": {
+    "NAME": "戰後經驗",
+    "DESCRIPTIONS": [
+      "本場戰鬥結束時，隨機 #y升級 牌組中的 #b",
+      " 張牌。",
+      " 張牌。"
+    ]
+  },
+  "hexamod:StopFromAdvancingPower": {
+    "NAME": "此刻",
+    "DESCRIPTIONS": [
+      "你的回合結束時不會自動 #y步進 。"
+    ]
+  },
+  "hexamod:GhostFlameBarrierPower": {
+    "NAME": "鬼火屏障",
+    "DESCRIPTIONS": [
+      "每當受到攻擊時，給予攻擊者 #b",
+      " 層 #y灼魂 。"
+    ]
+  },
+  "hexamod:GiftsFromTheDeadPower": {
+    "NAME": "深處饋贈",
+    "DESCRIPTIONS": [
+      "你的回合開始時， #y取回 隨機 #b",
+      " 張 #y陰世",
+      " 牌。",
+      " 牌。"
+    ]
+  },
+  "hexamod:GiftsFromTheDeadPowerPlus": {
+    "NAME": "饋贈能量",
+    "DESCRIPTIONS": [
+      "每當一張 #y虛無 牌被 #y消耗 時，下回合獲得 ",
+      " 。"
+    ]
+  },
+  "hexamod:GoldPostCombatPower": {
+    "NAME": "戰後靈魂",
+    "DESCRIPTIONS": [
+      "本場戰鬥的 #y靈魂 獎勵提高 #b",
+      " 點。"
+    ]
+  },
+  "hexamod:HexalevelPower": {
+    "NAME": "地獄形態",
+    "DESCRIPTIONS": [
+      "你的回合開始時，獲得 #b",
+      " 點 #y熱烈 。"
+    ]
+  },
+  "hexamod:LoseEnhanceInTurnsPower": {
+    "NAME": "高熱",
+    "DESCRIPTIONS": [
+      "你的回合結束時，失去 #b",
+      "在 #b",
+      " 個回合後，失去 #b",
+      " 點 #y熱烈 。"
+    ]
+  },
+  "hexamod:ParanormalFormPower": {
+    "NAME": "鬼哭神嚎",
+    "DESCRIPTIONS": [
+      "本回合每當你打出 #y陰世 牌時，對隨機一名敵人造成 #b",
+      " 點傷害。"
+    ]
+  },
+  "hexamod:PastPower": {
+    "NAME": "魔鬼之舞",
+    "DESCRIPTIONS": [
+      "每回合你前 ",
+      " 次",
+      " 次",
+      " #y回退 時，獲得 [E] 並抽 #b1 張牌。本回合已 #y回退 #b",
+      " 次。",
+      " 次。"
+    ]
+  },
+  "hexamod:PotionPostCombatPower": {
+    "NAME": "戰後藥水",
+    "DESCRIPTIONS": [
+      "本場戰鬥結束時，額外獲得 #b",
+      " 瓶藥水。",
+      " 瓶藥水。"
+    ]
+  },
+  "hexamod:RadiantPower": {
+    "NAME": "火焰輻射",
+    "DESCRIPTIONS": [
+      " #y點燃 一個鬼火時，獲得 #b",
+      " 點 #y格擋 。"
+    ]
+  },
+  "hexamod:SealPostCombatPower": {
+    "NAME": "戰後容器",
+    "DESCRIPTIONS": [
+      "本場戰鬥結束時，額外獲得 #b",
+      " 張 #y容器 牌。",
+      " 張 #y容器 牌。"
+    ]
+  },
+  "hexamod:TimeStopPower": {
+    "NAME": "末日來臨",
+    "DESCRIPTIONS": [
+      "你的回合結束時，立刻開始額外的一回合。 NL 保留 #y格擋和 #y能量 。"
+    ]
+  },
+  "hexamod:VolcanoVisagePower": {
+    "NAME": "火山容貌",
+    "DESCRIPTIONS": [
+      " #y點燃 一個鬼火時，給予所有敵人 #b",
+      " 層 #y灼魂 。"
+    ]
+  },
+  "hexamod:LivingBombPower": {
+    "NAME": "活體炸彈",
+    "DESCRIPTIONS": [
+      "這個下次引爆灼魂時，對全體敵人生效。"
+    ]
+  },
+  "hexamod:GainEnergyAtStartOfTurnPower": {
+    "NAME": "更多能量",
+    "DESCRIPTIONS": [
+      "回合開始時，獲得 "
+    ]
+  }
+}

@@ -22,10 +22,11 @@ public class EnShowdown extends AbstractHermitBossCard {
 
     public EnShowdown() {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/showdown.png", 2, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
-        this.baseDamage = 9;
+        this.baseDamage = 8;
         //baseMagicNumber = magicNumber = 2;
       //  this.isMultiDamage = true;
         selfRetain = true;
+        exhaust = true;
     }
 
     @Override
@@ -49,7 +50,7 @@ public class EnShowdown extends AbstractHermitBossCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(1);
+            this.upgradeDamage(5);
         }
     }
 

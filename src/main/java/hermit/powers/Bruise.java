@@ -1,10 +1,15 @@
 package hermit.powers;
 
+import basemod.abstracts.cardbuilder.actionbuilder.PoisonActionBuilder;
 import basemod.interfaces.CloneablePowerInterface;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.unique.PoisonLoseHpAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.red.SwordBoomerang;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -12,8 +17,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import hermit.HermitMod;
+import hermit.patches.EnumPatch;
 import hermit.relics.RyeStalk;
 import hermit.relics.Spyglass;
 import hermit.util.TextureLoader;
@@ -22,7 +30,7 @@ import static hermit.HermitMod.makePowerPath;
 
 //Gain 1 dex for the turn for each card played.
 
-public class Bruise extends AbstractPower implements CloneablePowerInterface {
+public class Bruise extends AbstractPower implements CloneablePowerInterface, HealthBarRenderPower {
     public AbstractCreature source;
 
     public static final String POWER_ID = HermitMod.makeID("Bruise");
@@ -55,6 +63,8 @@ public class Bruise extends AbstractPower implements CloneablePowerInterface {
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
         updateDescription();
+
+        this.isTurnBased = true;
     }
 
     public float atDamageReceive(float damage, DamageInfo.DamageType type) {
@@ -67,22 +77,24 @@ public class Bruise extends AbstractPower implements CloneablePowerInterface {
 
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type == DamageInfo.DamageType.NORMAL) {
-            if (!AbstractDungeon.player.hasRelic(RyeStalk.ID))
-            {
-                this.flash();
-                this.addToTop(new ReducePowerAction(this.owner, this.owner, this.ID, 1));
-                updateDescription();
-            }
+                this.flashWithoutSound();
+                //this.addToTop(new ReducePowerAction(this.owner, this.owner, this.ID, 1));
+                //updateDescription();
         }
 
         return damageAmount;
     }
 
-    public void atEndOfTurn(boolean isPlayer) {
-        if (!this.owner.hasPower(HorrorPower.POWER_ID))
-        {
-            this.flash();
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+    public void atStartOfTurn() {
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            if (AbstractDungeon.player.hasRelic(RyeStalk.ID)) {
+                this.flashWithoutSound();
+                this.addToBot(new PoisonLoseHpAction(this.owner, this.source, this.amount, EnumPatch.HERMIT_GHOSTFIRE));
+            }
+            if (!this.owner.hasPower(HorrorPower.POWER_ID))
+            {
+                this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+            }
         }
     }
 
@@ -90,6 +102,21 @@ public class Bruise extends AbstractPower implements CloneablePowerInterface {
     @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+    }
+
+    @Override
+    public int getHealthBarAmount(){
+        if (AbstractDungeon.player.hasRelic(RyeStalk.ID)) {
+            return this.amount;
+        }
+        else
+            return 0;
+    }
+
+    @Override
+    public Color getColor()
+    {
+        return Color.CYAN;
     }
 
     @Override

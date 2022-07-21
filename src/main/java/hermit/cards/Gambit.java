@@ -32,7 +32,7 @@ public class Gambit extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
-    private static final int COST = 0;
+    private static final int COST = 1;
 
 
     // /STAT DECLARATION/
@@ -40,7 +40,7 @@ public class Gambit extends AbstractDynamicCard {
 
     public Gambit() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
         this.exhaust = true;
         loadJokeCardImage(this, "gambit.png");
     }

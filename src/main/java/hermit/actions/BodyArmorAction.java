@@ -54,8 +54,8 @@ public class BodyArmorAction extends AbstractGameAction {
                 for(int i = 0; i < ii; ++i) {
                     c = this.p.hand.getTopCard();
                     this.p.hand.moveToDiscardPile(c);
-                    if (c.type == AbstractCard.CardType.SKILL) {
-                        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+                    if (c.type != AbstractCard.CardType.ATTACK) {
+                        AbstractDungeon.actionManager.addToTop(new GainBlockAction(p, p, block));
                     }
                     if (!this.endTurn) {
                         c.triggerOnManualDiscard();
@@ -91,8 +91,8 @@ public class BodyArmorAction extends AbstractGameAction {
                 c = this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng);
                 this.p.hand.moveToDiscardPile(c);
                 c.triggerOnManualDiscard();
-                if (c.type == AbstractCard.CardType.SKILL) {
-                    AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+                if (c.type != AbstractCard.CardType.ATTACK) {
+                    AbstractDungeon.actionManager.addToTop(new GainBlockAction(p, p, block));
                 }
                 GameActionManager.incrementDiscard(this.endTurn);
             }
@@ -105,8 +105,8 @@ public class BodyArmorAction extends AbstractGameAction {
                 c = (AbstractCard)var4.next();
                 this.p.hand.moveToDiscardPile(c);
                 c.triggerOnManualDiscard();
-                if (c.type == AbstractCard.CardType.SKILL) {
-                    AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+                if (c.type != AbstractCard.CardType.ATTACK) {
+                    AbstractDungeon.actionManager.addToTop(new GainBlockAction(p, p, block));
                 }
                 GameActionManager.incrementDiscard(this.endTurn);
             }

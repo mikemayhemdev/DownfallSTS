@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,6 +14,7 @@ public class Strike extends AbstractBronzeCard {
         baseDamage = 6;
         tags.add(CardTags.STRIKE);
         tags.add(CardTags.STARTER_STRIKE);
+        AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("Strike.png"));
     }
 
     @Override

@@ -21,11 +21,11 @@
 },
 "hermit:AdaptPower": {
         "NAME": "Adaptar",
-        "DESCRIPTIONS": ["No final do seu turno, Exaura até to 2 cards. Ganhe #b", " Proteção para cada."]
+        "DESCRIPTIONS": ["No inicio do seu turno, #yExaura até #b", " carta para ganhar #b6 de Proteção." , " cartas. Ganhe #b6 de Proteção por cada."]
 },
 "hermit:Bruise": {
         "NAME": "Hematoma",
-        "DESCRIPTIONS": ["Nesse turno, alvo toma #b", " dano adicional de ataques. Cada ataque reduz isso por 1."]
+        "DESCRIPTIONS": ["Nesse turno, alvo toma #b", " dano adicional de ataques."]
 },
 "hermit:HorrorPower": {
         "NAME": "Horror",
@@ -45,11 +45,11 @@
 },
 "hermit:Rugged": {
         "NAME": "Inflexível",
-        "DESCRIPTIONS": ["As próximas", " vezes em que você tomaria dano de ataque não-bloqueado, o reduza á #b1.", " vez em que você tomaria dano de ataque não-bloqueado, o reduza á #b1."]
+        "DESCRIPTIONS": ["As próximas", " vezes em que você tomaria dano de ataque não-bloqueado, o reduza á #b2.", " vez em que você tomaria dano de ataque não-bloqueado, o reduza á #b2."]
 },
 "hermit:EternalPower": {
         "NAME": "Poder Eterno",
-        "DESCRIPTIONS": ["Você pode jogar mais #b", " carta gratuitamente este turno.", " cartas gratuitamente este turno.", " Acabaram suas jogadas gratuitas."]
+        "DESCRIPTIONS": ["No inicio do seu turno, reduza o custo de todas as cartas na sua mão por #b", "."]
 },
 "hermit:OverwhelmingPowerPower": {
         "NAME": "Poder Esmagador",
@@ -74,5 +74,21 @@
 "hermit:PetGhostPower": {
         "NAME": "Fantasma de Estimação",
         "DESCRIPTIONS": ["Você não pode morrer. Morra no fim", " do seu próximo turno.", " desse turno."]
+},
+"hermit:SnipePower": {
+        "NAME": "Tiro Franco",
+        "DESCRIPTIONS": ["O próximo efeito de #b", " #yNa #yMira neste turno ativa duas vezes.", " Efeitos de #yNa #yMira neste turno ativam duas vezes."]
+},
+"hermit:CoalescencePower": {
+        "NAME": "Coalescência",
+        "DESCRIPTIONS": ["No fim do seu turno, #yRetenha até #b", " Carta.", " Cartas."]
+},
+"hermit:ReprievePower": {
+        "NAME": "Prorrogação",
+        "DESCRIPTIONS": ["Realize #b", " turno extra após este.", " turnos extra após este."]
+},
+"hermit:MaintenanceStrikePower": {
+        "NAME": "Manutenção",
+        "DESCRIPTIONS": ["Seus #yGolpes causam #b", " mais de dano."]
 }
 }

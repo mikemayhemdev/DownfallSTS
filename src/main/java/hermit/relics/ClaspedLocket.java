@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
+import com.megacrit.cardcrawl.powers.EvolvePower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rewards.RewardItem;
@@ -41,11 +42,8 @@ public class ClaspedLocket extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("clasped_locket.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("clasped_locket.png"));
 
-    public int TURNS = 0;
-    public static int increaseGold = 75;
-
     private boolean cardsReceived = true;
-    private boolean firstTurn = false;
+    private boolean canTrigger = true;
 
     public ClaspedLocket() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.FLAT);
@@ -66,6 +64,7 @@ public class ClaspedLocket extends CustomRelic {
         this.cardsReceived = false;
     }
 
+    /*
     @Override
     public void onEquip() {
         this.counter = 0;
@@ -78,8 +77,23 @@ public class ClaspedLocket extends CustomRelic {
             }
         }
     }
+     */
 
+    public void onCardDraw(AbstractCard card) {
 
+        if (!this.canTrigger)
+                return;
+
+        if (card.type == AbstractCard.CardType.CURSE && !AbstractDungeon.player.hasPower("No Draw")) {
+            this.canTrigger = false;
+            this.flash();
+            this.addToTop(new DrawCardAction(AbstractDungeon.player, 2));
+            this.addToTop(new ExhaustSpecificCardAction(card,AbstractDungeon.player.hand));
+        }
+
+    }
+
+    /*
     public void onMasterDeckChange() {
         this.counter = 0;
         Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
@@ -91,23 +105,20 @@ public class ClaspedLocket extends CustomRelic {
             }
         }
     }
+     */
 
     public boolean canSpawn() {
         return AbstractDungeon.player.hasRelic(Memento.ID);
     }
 
+    /*
     public void atPreBattle() {
         this.firstTurn = true;
     }
+     */
 
     public void atTurnStart() {
-        if (this.firstTurn) {
-            this.flash();
-            this.addToTop(new GainEnergyAction(this.counter));
-            this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            this.firstTurn = false;
-        }
-
+        this.canTrigger = true;
     }
 
     public void update() {

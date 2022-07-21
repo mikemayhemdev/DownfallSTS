@@ -4,6 +4,7 @@ import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -64,7 +65,7 @@ public class HighCaliber extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int DAMAGE = 12;
-    private static final int UPGRADE_PLUS_DMG = 6;
+    private static final int UPGRADE_PLUS_DMG = 3;
 
 
     // Hey want a second damage/magic/block/unique number??? Great!
@@ -90,9 +91,9 @@ public class HighCaliber extends AbstractDynamicCard {
         if (this.upgraded) {
             AbstractCard s = (new Strike_Hermit()).makeCopy();
             s.upgrade();
-            this.addToTop(new MakeTempCardInDiscardAction(s, 1));
+            this.addToTop(new MakeTempCardInHandAction(s, 1));
         } else {
-            this.addToTop(new MakeTempCardInDiscardAction(new Strike_Hermit(), 1));
+            this.addToTop(new MakeTempCardInHandAction(new Strike_Hermit(), 1));
         }
 
         AbstractDungeon.actionManager.addToBottom( // The action managed queues all the actions a card should do.

@@ -1,0 +1,311 @@
+{
+  "sneckomod:Strike": {
+    "NAME": "打擊",
+    "DESCRIPTION": "造成 !D! 點傷害。"
+  },
+  "sneckomod:Defend": {
+    "NAME": "防禦",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。"
+  },
+  "sneckomod:SnekBite": {
+    "NAME": "異蛇噬咬",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL sneckomod:混淆 手中耗能最高的 !M! 張牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL sneckomod:混淆 手中耗能最高的 !M! 張牌。"
+  },
+  "sneckomod:TailWhip": {
+    "NAME": "掃尾",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 給予 !M! - 2  層 虛弱 。 NL 給予 !M! - 2 層 易傷 。"
+  },
+  "sneckomod:UnknownCommonAttack": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 普通攻擊牌。"
+  },
+  "sneckomod:UnknownCommonSkill": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 普通技能牌。"
+  },
+  "sneckomod:UnknownUncommonAttack": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 罕見攻擊牌。"
+  },
+  "sneckomod:UnknownUncommonSkill": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 罕見技能牌。"
+  },
+  "sneckomod:UnknownUncommonPower": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 罕見能力牌。"
+  },
+  "sneckomod:UnknownRareAttack": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 稀有攻擊牌。"
+  },
+  "sneckomod:UnknownRareSkill": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 稀有技能牌。"
+  },
+  "sneckomod:UnknownRarePower": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 稀有能力牌。"
+  },
+  "sneckomod:SoulDraw": {
+    "NAME": "靈魂抽牌",
+    "DESCRIPTION": "sneckomod:蛇證 。 NL 將 !M! 張隨機 sneckomod:異色 牌加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇證 。 NL 抽 1 - !M! 張牌。"
+  },
+  "sneckomod:SoulRoll": {
+    "NAME": "靈魂隨機",
+    "DESCRIPTION": "sneckomod:蛇證 。 NL sneckomod:混淆 你的手牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇證 。 NL sneckomod:混淆 你的手牌。 NL 抽1張牌。"
+  },
+  "sneckomod:SnekBeam": {
+    "NAME": "蛇線",
+    "DESCRIPTION": "對所有敵人造成牌組中 *未知 牌數量的傷害。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "對所有敵人造成牌組中 *未知 牌數量的傷害。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （造成 !D! 點傷害。） NL 消耗 。",
+      " NL （造成 !D! 點傷害。）"
+    ]
+  },
+  "sneckomod:UnknownStrike": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 打擊牌。"
+  },
+  "sneckomod:Nope": {
+    "NAME": "不行",
+    "DESCRIPTION": "sneckomod:蛇證 。 NL 消耗 一張手牌。 NL 替換為的同類型牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇證 。 NL 消耗 一張手牌。 NL 替換為耗能低1的同類型牌。",
+    "EXTENDED_DESCRIPTION": [
+      " 選擇一張牌替換。"
+    ]
+  },
+  "sneckomod:UnknownClass": {
+    "NAME": "？？？",
+    "DESCRIPTION": "未知bug-報告開發組。"
+  },
+  "sneckomod:UnknownInnate": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知  固有 牌。"
+  },
+  "sneckomod:Unknown": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 牌。"
+  },
+  "sneckomod:Unknown0Cost": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 0耗能牌。"
+  },
+  "sneckomod:Unknown1Cost": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 1耗能牌。"
+  },
+  "sneckomod:Unknown2Cost": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 2耗能牌。"
+  },
+  "sneckomod:Unknown3Cost": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 3耗能牌。"
+  },
+  "sneckomod:UnknownX": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 X耗能牌。"
+  },
+  "sneckomod:UnknownEthereal": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 虛無 牌。"
+  },
+  "sneckomod:UnknownBlock": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 格擋 牌。"
+  },
+  "sneckomod:UnknownExhaust": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 消耗 牌。"
+  },
+  "sneckomod:SoulCleanse": {
+    "NAME": "靈魂淨化",
+    "DESCRIPTION": "sneckomod:蛇證 。 NL sneckomod:混淆 你的手牌。 NL 這次 sneckomod:混淆 不會出現耗能為3的牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇證 。 NL sneckomod:混淆 你的手牌。 NL 這次 sneckomod:混淆 不會出現耗能為3的牌。"
+  },
+  "sneckomod:SoulExchange": {
+    "NAME": "靈魂交換",
+    "DESCRIPTION": "sneckomod:蛇證 。 NL 抽1張牌並 消耗 1張牌。 NL 消耗 你的手牌，將它們替換為隨機同角色牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇證 。 NL 抽2張牌並 消耗 1張牌。 NL 消耗 你的手牌，將它們替換為隨機同角色牌。",
+    "EXTENDED_DESCRIPTION": [
+      "來消耗以交換靈魂。"
+    ]
+  },
+  "sneckomod:CheapStock": {
+    "NAME": "廉價股票",
+    "DESCRIPTION": "你的回合開始時，將手牌中耗能最高的 sneckomod:異色 牌的耗能減少1。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 你的回合開始時，將手牌中耗能最高的 sneckomod:異色 牌的耗能減少1。"
+  },
+  "sneckomod:UnlimitedRolls": {
+    "NAME": "無限隨機",
+    "DESCRIPTION": "你的回合開始時，將一張有 消耗 與 虛無 的 *靈魂隨機 加入你的手牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。你的回合開始時，將一張有 消耗 與 虛無 的 *靈魂隨機 加入你的手牌。"
+  },
+  "sneckomod:MasterEye": {
+    "NAME": "主宰之眼",
+    "DESCRIPTION": "獲得 *混亂 。 NL 每回合開始時額外抽 !M! 張牌。",
+    "UPGRADE_DESCRIPTION": "獲得 *混亂 。 NL 每回合開始時額外抽 !M! 張牌。"
+  },
+  "sneckomod:ImprovisedAttack": {
+    "NAME": "即興攻擊",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 將一張隨機 sneckomod:異色 攻擊牌加入你的手牌並 sneckomod:混淆 。"
+  },
+  "sneckomod:ImprovisedGuard": {
+    "NAME": "即興防禦",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 將一張隨機 sneckomod:異色 技能牌加入你的手牌並 sneckomod:混淆 。"
+  },
+  "sneckomod:QuickMove": {
+    "NAME": "快速移動",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL sneckomod:混淆 手中耗能最高的牌。",
+    "UPGRADE_DESCRIPTION": "獲得 !B! 點 格擋 。 NL sneckomod:混淆 手中耗能最高的 !M! 張牌。"
+  },
+  "sneckomod:QuickBite": {
+    "NAME": "蛇耙",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 抽 !M! - 2 張牌。 NL sneckomod:混淆 手中耗能最高的牌。"
+  },
+  "sneckomod:Rotation": {
+    "NAME": "輪換",
+    "DESCRIPTION": "sneckomod:蛇證 。 NL 丟棄所有 sneckomod:異色 牌。 NL 抽等量張牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇證 。 NL 丟棄所有 sneckomod:異色 牌。 NL 抽等量加 !M! 張牌。"
+  },
+  "sneckomod:SerpentMind": {
+    "NAME": "異色形態",
+    "DESCRIPTION": "每當你打出 sneckomod:異色 牌，抽1張牌。"
+  },
+  "sneckomod:SlitherStrike": {
+    "NAME": "滑動打擊",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 手中的 sneckomod:異色 牌本回合內耗能減少1。"
+  },
+  "sneckomod:PureSnecko": {
+    "NAME": "易質",
+    "DESCRIPTION": "sneckomod:蛇證 。 NL 將手牌中的 sneckomod:異色 牌 消耗 並替換為新的牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇證 。 NL 將手牌中的 sneckomod:異色 牌 消耗 並替換為耗能低1點的新牌。"
+  },
+  "sneckomod:Cheat": {
+    "NAME": "作弊",
+    "DESCRIPTION": "sneckomod:蛇證 。 NL 本回合內，卡牌上的隨機數取上限值。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇證 。 NL 本回合內，卡牌上的隨機數取上限值。"
+  },
+  "sneckomod:Restock": {
+    "NAME": "補充",
+    "DESCRIPTION": "sneckomod:蛇證 。 NL 丟棄你的手牌。 NL 抽 5-10 張牌。 NL 消耗 。"
+  },
+  "sneckomod:GlitteringGambit": {
+    "NAME": "閃光伎倆",
+    "DESCRIPTION": "sneckomod:蛇證 。 NL 獲得 !M! - 30 *金幣 。 NL 消耗 。"
+  },
+  "sneckomod:Transmogrify": {
+    "NAME": "驚變",
+    "DESCRIPTION": "從2件非初始、非特殊遺物中選擇失去1件。 NL 獲得相同稀有度的另一件遺物。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "我沒有遺物能夠驚變",
+      "選擇失去一件遺物",
+      "失去 ",
+      " 並獲得另一件 ",
+      " 遺物。"
+    ]
+  },
+  "sneckomod:DefensiveFlair": {
+    "NAME": "防禦才華",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。手牌中每有一張 sneckomod:異色 牌，獲得 格擋 提高 !M! 點。"
+  },
+  "sneckomod:DangerNoodle": {
+    "NAME": "貪吃蛇",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 每有一張 sneckomod:異色 手牌再重復一次，之後消耗 它們。"
+  },
+  "sneckomod:SerpentIdol": {
+    "NAME": "蛇神像",
+    "DESCRIPTION": "sneckomod:蛇證 。 NL 從3張隨機 sneckomod:異色 牌中選擇1張加入你的手牌。 NL 這張牌在本回合耗能變為0。 NL 消耗 。"
+  },
+  "sneckomod:TrashToTreasure": {
+    "NAME": "變廢為寶",
+    "DESCRIPTION": "sneckomod:蛇證 。 NL 消耗 一張手牌。 NL 獲得與其耗能相等的 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇證 。 NL 消耗 一張手牌。 NL 獲得與其耗能相等的 [E] 。"
+  },
+  "sneckomod:DiceBlock": {
+    "NAME": "骰子格擋",
+    "DESCRIPTION": "獲得 !M! - !B! 點 格擋 。"
+  },
+  "sneckomod:MixItUp": {
+    "NAME": "混合起來！",
+    "DESCRIPTION": "造成 !D! 點傷害 !M! 次。 NL 變化你的藥水。 NL 消耗 。"
+  },
+  "sneckomod:MorePower": {
+    "NAME": "更多力量！",
+    "DESCRIPTION": "在戰鬥結束時在卡牌獎勵中加入一張已 升級 的 *未知 牌。"
+  },
+  "sneckomod:UnknownStrength": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 力量 牌。"
+  },
+  "sneckomod:UnknownDraw": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 抽牌牌。"
+  },
+  "sneckomod:UnknownDexterity": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 敏捷 牌。"
+  },
+  "sneckomod:UnknownWeak": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 虛弱 牌。"
+  },
+  "sneckomod:UnknownVulnerable": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 易傷 牌。"
+  },
+  "sneckomod:UnknownColorless": {
+    "NAME": "？？？",
+    "DESCRIPTION": " *未知 無色牌。"
+  },
+  "sneckomod:RainOfDice": {
+    "NAME": "骰子雨",
+    "DESCRIPTION": "對隨機一名敵人造成 !qqq! - !D! 點傷害。 NL sneckomod:混淆 本牌並返回手牌。"
+  },
+  "sneckomod:DiceCrush": {
+    "NAME": "骰子撞擊",
+    "DESCRIPTION": "造成 !M! - !D! 點傷害。"
+  },
+  "sneckomod:SnakeSap": {
+    "NAME": "蛇液",
+    "DESCRIPTION": "sneckomod:蛇證 。 NL 造成 !qqq! - !D! 點傷害。 NL 獲得 0 - !M! [E] 。 NL 消耗 。"
+  },
+  "sneckomod:DiceBoulder": {
+    "NAME": "巨型骰子",
+    "DESCRIPTION": "造成 !M! - !D! 點傷害。 NL 能被多次 升級 。"
+  },
+  "sneckomod:IronFang": {
+    "NAME": "鐵齒",
+    "DESCRIPTION": "造成 !qqq! - !D! 點傷害。 NL 獲得 !M! - !B! 點 格擋 。"
+  },
+  "sneckomod:Mudshield": {
+    "NAME": "泥濘護盾",
+    "DESCRIPTION": "每當你 sneckomod:混淆 一張牌時，獲得 !M! 點 格擋 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每當你 sneckomod:混淆 一張牌時，獲得 !M! 點 格擋 。"
+  },
+  "sneckomod:WideSting": {
+    "NAME": "寬刺",
+    "DESCRIPTION": "對所有敵人造成 !M! - !D! 點傷害。 NL 升級  手中的 sneckomod:異色 牌。"
+  },
+  "sneckomod:UnendingSupply": {
+    "NAME": "延綿不絕",
+    "DESCRIPTION": "每回合開始時，將隨機一張 sneckomod:異色 牌加入手牌。"
+  },
+  "sneckomod:Memorize": {
+    "NAME": "回憶",
+    "DESCRIPTION": "sneckomod:蛇證 。 即逝 。 NL 選擇手牌中一張未知牌，將它明晰成目前的牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇證 。 即逝 。 保留 。 NL 選擇手牌中一張未知牌，將它明晰成目前的牌。",
+    "EXTENDED_DESCRIPTION": [
+      "選擇一張牌進行回憶。"
+    ]
+  },
+  "sneckomod:UnknownBoss": {
+    "NAME": "???",
+    "DESCRIPTION": " *未知 expansioncontent:首領 牌。"
+  }
+}

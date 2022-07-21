@@ -45,7 +45,7 @@ public class Vantage extends AbstractDynamicCard {
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
     private static final int COST = 1;
-    private static final int BLOCK = 7;
+    private static final int BLOCK = 8;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
 

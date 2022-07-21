@@ -14,8 +14,8 @@ public class PreciseThrust extends AbstractChampCard {
 
     //stupid intellij stuff attack, self_and_enemy, uncommon
 
-    private static final int DAMAGE = 7;
-    private static final int BLOCK = 7;
+    private static final int DAMAGE = 6;
+    private static final int BLOCK = 6;
 
     public PreciseThrust() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);

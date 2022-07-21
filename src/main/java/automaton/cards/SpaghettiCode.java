@@ -21,6 +21,7 @@ public class SpaghettiCode extends AbstractBronzeCard {
     public SpaghettiCode() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
+        AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("SpaghettiCode.png"));
     }
 
     public static AbstractCard getRandomEncodeWithCost(int cost) {
@@ -39,7 +40,7 @@ public class SpaghettiCode extends AbstractBronzeCard {
     public static AbstractCard getRandomEncode() {
         ArrayList<AbstractCard> eligibleCardsList = new ArrayList<>();
         for (AbstractCard c : CardLibrary.getAllCards()) {
-            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL) {
+            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL && c.rarity != CardRarity.BASIC) {
                 eligibleCardsList.add(c.makeCopy());
             }
         }
@@ -50,7 +51,7 @@ public class SpaghettiCode extends AbstractBronzeCard {
     public static AbstractCard getRandomEncode(ArrayList<AbstractCard> exceptions) {
         ArrayList<AbstractCard> eligibleCardsList = new ArrayList<>();
         for (AbstractCard c : CardLibrary.getAllCards()) {
-            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL) {
+            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL && c.rarity != CardRarity.BASIC) {
                 eligibleCardsList.add(c.makeCopy());
             }
         }

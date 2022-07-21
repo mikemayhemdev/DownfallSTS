@@ -40,6 +40,7 @@ public class MinionMaster extends AbstractSlimeboundCard {
         this.magicNumber = this.baseMagicNumber = 1;
 
      //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        SlimeboundMod.loadJokeCardImage(this, "MinionMaster.png");
 
     }
 

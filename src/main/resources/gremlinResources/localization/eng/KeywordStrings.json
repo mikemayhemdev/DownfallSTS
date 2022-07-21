@@ -76,5 +76,12 @@
     ],
     "PROPER_NAME": "Steal",
     "DESCRIPTION": "Target loses specified amount of resource. You gain the amount that was lost."
+  },
+  {
+    "NAMES": [
+      "nob"
+    ],
+    "PROPER_NAME": "Gremlin Nob",
+    "DESCRIPTION": "At the start of your turn, add #b1 #yBellow , #ySkull #yBash and #yRush to your hand."
   }
 ]
