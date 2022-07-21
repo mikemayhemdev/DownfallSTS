@@ -58,16 +58,7 @@ public class SuperSneckoSoul extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        // Colorize the starter relic's name
-        String name = new SneckoSoul().name;
-        StringBuilder sb = new StringBuilder();
-        for (String word : name.split(" ")) {
-            sb.append("[#").append(SneckoMod.placeholderColor.toString()).append("]").append(word).append("[] ");
-        }
-        sb.setLength(sb.length() - 1);
-        sb.append("[#").append(SneckoMod.placeholderColor.toString()).append("]");
-
-        return DESCRIPTIONS[0] + sb.toString() + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0];
     }
 
 }
