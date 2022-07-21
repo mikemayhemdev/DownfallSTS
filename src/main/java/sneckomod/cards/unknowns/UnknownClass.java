@@ -1,11 +1,12 @@
-
 package sneckomod.cards.unknowns;
 
+import basemod.BaseMod;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
@@ -19,10 +20,12 @@ import static sneckomod.SneckoMod.makeCardPath;
 public class UnknownClass extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownClass");
     private static String[] unknownClass = CardCrawlGame.languagePack.getUIString(ID).TEXT;
+    private String TID; //Temporary ID
     public CardColor myColor;
 
     public UnknownClass(CardColor cardColor) {
         super(ID + cardColor.name(), determineCardImg(cardColor), CardType.SKILL, CardRarity.COMMON, true);
+        TID = ID + cardColor.name();
         myColor = cardColor;
         name = unknownClass[0];
         originalName = unknownClass[0];
@@ -34,6 +37,12 @@ public class UnknownClass extends AbstractUnknownCard {
                     + unknownClass[2];
         }
         UPGRADE_DESCRIPTION = unknownClass[6] + rawDescription;
+        if (CardCrawlGame.languagePack.getCardStrings(TID).NAME == "[MISSING_TITLE]") {
+            BaseMod.loadCustomStrings(CardStrings.class, "{\"" + TID 
+            + "\": {\"NAME\": \"" + name 
+            + "\", \"DESCRIPTION\": \"" + rawDescription 
+            + "\", \"UPGRADE_DESCRIPTION\": \"" + UPGRADE_DESCRIPTION +"\"}}");
+        }
         initializeDescription();
     }
 
