@@ -730,7 +730,7 @@ public class downfallMod implements
             settingsPanel.addUIElement(unlockAllSkinBtn);
             settingsPanel.addUIElement(characterModCrossoverBtn);
             
-            configPos = 760;
+            configPos = 750;
         }
 
         ModLabeledToggleButton characterCrossoverBtn = new ModLabeledToggleButton(configStrings.TEXT[4],
