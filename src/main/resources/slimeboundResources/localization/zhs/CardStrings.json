@@ -70,7 +70,7 @@
   },
   "Slimebound:SpikyOuterGoop": {
     "NAME": "黏液装甲",
-    "DESCRIPTION": "slimeboundmod:吞食黏液 时， NL 获得 !M! 点 格挡 。"
+    "DESCRIPTION": "slimeboundmod:消耗黏液 时， NL 获得 !M! 点 格挡 。"
   },
   "Slimebound:SelfFormingGoo": {
     "NAME": "革新",
@@ -88,7 +88,7 @@
   },
   "Slimebound:LeechingTouch": {
     "NAME": "吮吸打击",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL slimeboundmod:吞食黏液 ：获得目标 slimeboundmod:黏液 层数点 格挡 。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL slimeboundmod:消耗黏液 -获得敌人 slimeboundmod:黏液 层数点 格挡 。"
   },
   "Slimebound:Dissolve": {
     "NAME": "黏质快餐",
@@ -116,7 +116,7 @@
   },
   "Slimebound:GrowthPunch": {
     "NAME": "成长拳",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL slimeboundmod:吞食黏液 ：本牌本场战斗数值提高 !M! 点。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL slimeboundmod:消耗黏液 -本牌本场战斗数值提高 !M! 点。"
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "查找策略",
@@ -134,7 +134,7 @@
   },
   "Slimebound:RollThrough": {
     "NAME": "翻滚碾压",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 接下来 !M! 张 slimeboundmod:冲撞 牌不会使你受到伤害。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 接下来 !M! 张 slimeboundmod:冲撞 牌不会对你造成伤害。"
   },
   "Slimebound:MassRepurpose": {
     "NAME": "回炉重造",
@@ -163,13 +163,13 @@
   },
   "Slimebound:Gluttony": {
     "NAME": "暴食",
-    "DESCRIPTION": "每回合首次 slimeboundmod:吞食黏液 时获得 *舔舔 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 每回合首次 slimeboundmod:吞食黏液 时获得 *舔舔 。"
+    "DESCRIPTION": "每回合首次 slimeboundmod:消耗黏液 时获得 *舔舔 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 每回合首次 slimeboundmod:消耗黏液 时获得 *舔舔 。"
   },
   "Slimebound:PressTheAttack": {
     "NAME": "强攻",
-    "DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ： slimeboundmod:命令 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ： slimeboundmod:命令 两次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:消耗黏液 - slimeboundmod:命令 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:消耗黏液 - slimeboundmod:命令 两次。"
   },
   "Slimebound:TongueLash": {
     "NAME": "舌鞭",
@@ -177,8 +177,8 @@
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "垂涎欲滴",
-    "DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ：获得 *舔舔 。 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ：获得 *舔舔+ 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:消耗黏液 -获得 *舔舔 。 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:消耗黏液 -获得 *舔舔+ 。"
   },
   "Slimebound:AcidTongue": {
     "NAME": "黏液蔓延",
@@ -212,7 +212,7 @@
   },
   "Slimebound:FinishingTackle": {
     "NAME": "开幕冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:吞食黏液 ：给予 !M! 层 易伤 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:消耗黏液 -给予 !M! 层 易伤 。"
   },
   "Slimebound:LivingWall": {
     "NAME": "活体墙壁",
@@ -268,16 +268,16 @@
   },
   "Slimebound:LeechEnergy": {
     "NAME": "吸取能量",
-    "DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ：获得 [E] 并抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ：获得 [E] 并抽 !M! 张牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:消耗黏液 -获得 [E] 并抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:消耗黏液 -获得 [E] 并抽 !M! 张牌。"
   },
   "Slimebound:LeechLife": {
     "NAME": "吸取生命",
-    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 回复未被 格挡 伤害点生命。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:消耗黏液 -回复敌人 slimeboundmod:黏液 层数点生命。 NL （最多 !M! 点） NL 消耗 。"
   },
   "Slimebound:Equalize": {
     "NAME": "均质化",
-    "DESCRIPTION": "造成 !D! 点伤害并回复 !M! 点生命。 NL slimeboundmod:吞食黏液 ：再打出一次。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害并回复 !M! 点生命。 NL slimeboundmod:消耗黏液 -再打出一次。 NL 消耗 。"
   },
   "Slimebound:DisruptingSlam": {
     "NAME": "宴后甜点",
@@ -286,7 +286,10 @@
   "Slimebound:PrepareCrush": {
     "NAME": "准备：猛击",
     "DESCRIPTION": "下回合： NL 获得 [E] [E] [E] 。 NL 获得 !M! 点 力量 。 NL 获得 *史莱姆猛击 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "下回合： NL 获得 [E] [E] [E] [E] 。 NL 获得 !M! 点 力量 。 NL 获得 *史莱姆猛击+ 。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "下回合： NL 获得 [E] [E] [E] [E] 。 NL 获得 !M! 点 力量 。 NL 获得 *史莱姆猛击+ 。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "~Slime...~ NL #r~CRUSH!!!~"
+    ]
   },
   "Slimebound:SlimeCrush": {
     "NAME": "史莱姆猛击！！！",
