@@ -28,6 +28,7 @@ public class PrepareCrush extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
     public static String UPGRADED_DESCRIPTION;
+    public static String[] EXTENDED_DESCRIPTION;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -46,7 +47,7 @@ public class PrepareCrush extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.effectList.add(new MegaSpeechBubble(p.hb.cX, p.hb.cY, 1.0F, "~Slime...~ NL #r~CRUSH!!!~", true));
+        AbstractDungeon.effectList.add(new MegaSpeechBubble(p.hb.cX, p.hb.cY, 1.0F, EXTENDED_DESCRIPTION[0], true));
         AbstractDungeon.actionManager.addToBottom(new ShakeScreenAction(0.3F, ScreenShake.ShakeDur.MED, ScreenShake.ShakeIntensity.LOW));
 
         if (upgraded)

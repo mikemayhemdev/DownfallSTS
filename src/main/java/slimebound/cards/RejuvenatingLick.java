@@ -21,7 +21,7 @@ import slimebound.vfx.LickEffect;
 import slimebound.vfx.SlimeDripsEffect;
 
 
-public class RejuvenatingLick extends AbstractSlimeboundCard {
+public class RejuvenatingLick extends AbstractLickCard {
     public static final String ID = "Slimebound:RejuvenatingLick";
     public static final String NAME;
     public static final String DESCRIPTION;
