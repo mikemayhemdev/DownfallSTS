@@ -1,12 +1,15 @@
 package downfall.cards;
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import downfall.util.CardIgnore;
 
 public class OctoChoiceCard extends CustomCard {
@@ -39,6 +42,11 @@ public class OctoChoiceCard extends CustomCard {
     public OctoChoiceCard(String id, String name, String IMG, String description) {
         super(id, name, IMG, COST, description, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.NONE);
         this.IMG = IMG;
+        if (id != null && CardCrawlGame.languagePack.getCardStrings(id).NAME == "[MISSING_TITLE]") {
+            BaseMod.loadCustomStrings(CardStrings.class, "{\"" + id 
+            + "\": {\"NAME\": \"" + name 
+            + "\", \"DESCRIPTION\": \" " + description +"\"}}");
+        }
     }
 
     public OctoChoiceCard(String id, String name, String IMG, String description, CardColor color) {
