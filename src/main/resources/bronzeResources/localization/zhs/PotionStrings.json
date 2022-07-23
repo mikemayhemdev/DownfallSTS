@@ -19,7 +19,7 @@
     "DESCRIPTIONS": [
       "获得 #b",
       " 点 #y力量 和 #b",
-      " 点 #y敏捷 。 NL 将两张 #y灼伤+ 加入抽牌堆。"
+      " 点 #y敏捷 。 NL 将两张 #y灼伤+ 加入弃牌堆。"
     ]
   },
   "bronze:BuildAFunctionPotion": {
