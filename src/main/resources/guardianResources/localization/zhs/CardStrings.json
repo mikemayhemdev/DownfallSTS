@@ -406,7 +406,7 @@
   },
   "Guardian:SecondStrikePreviewCard": {
     "NAME": "再斩",
-    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 重复 *双斩 里的宝石效果。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 触发 *双斩 中的 *宝石 效果。 NL 消耗 。"
   },
   "Guardian:PackageConstruct": {
     "NAME": "    ！！！！！！！！！！！！   以下为疑似弃用文本，为了保险起见防止游戏崩溃，暂未删除。    ！！！！！！！！！！！！  ",
