@@ -406,7 +406,7 @@
   },
   "Guardian:SecondStrikePreviewCard": {
     "NAME": "再斬",
-    "DESCRIPTION": "虛無 。 NL 造成 !D! 點傷害。 NL 重復 *雙斬 裏的寶石效果。 NL 消耗 。"
+    "DESCRIPTION": "虛無 。 NL 造成 !D! 點傷害。 NL 觸發 *雙斬 中的 #y寶石 效果。 NL 消耗 。"
   },
   "Guardian:PackageConstruct": {
     "NAME": "    ！！！！！！！！！！！！   以下為疑似棄用文本，為了保險起見防止遊戲崩潰，暫未刪除。    ！！！！！！！！！！！！  ",
