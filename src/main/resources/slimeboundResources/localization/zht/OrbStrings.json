@@ -1,120 +1,120 @@
 {
   "Slimebound:EmptySlimeSlot": {
-    "NAME": "史莱姆栏位",
+    "NAME": "史萊姆欄位",
     "DESCRIPTION": [
-      "#y分裂 的史莱姆爪牙将进入这个栏位。"
+      "#y分裂 的史萊姆爪牙將進入這個欄位。"
     ]
   },"Slimebound:BronzeSlime": {
-    "NAME": "青铜史莱姆",
+    "NAME": "青銅史萊姆",
     "DESCRIPTION": [
-      "回合开始时对所有敌人造成 #b",
-      " 点伤害，但跳过其下次攻击。",
+      "回合開始時對所有敵人造成 #b",
+      " 點傷害，但跳過其下次攻擊。",
       ""
     ]
   },
   "Slimebound:AttackSlime": {
-    "NAME": "好斗史莱姆",
+    "NAME": "好鬥史萊姆",
     "DESCRIPTION": [
-      "回合开始时造成 #b",
-      " 点伤害"
+      "回合開始時造成 #b",
+      " 點傷害"
     ]
   },
   "Slimebound:ScrapOozeSlime": {
-    "NAME": "破烂史莱姆",
+    "NAME": "破爛史萊姆",
     "DESCRIPTION": [
-      "回合开始时造成 #b",
-      " 点伤害。 NL 被 #y融合 后可重生。"
+      "回合開始時造成 #b",
+      " 點傷害。 NL 被 #y融合 後可重生。"
     ]
   },
   "Slimebound:GreedOozeSlime": {
-    "NAME": "贪婪史莱姆",
+    "NAME": "貪婪史萊姆",
     "DESCRIPTION": [
-      "回合开始时造成 #b",
-      " 点伤害。 NL 被 #y融合 后可重生。"
+      "回合開始時造成 #b",
+      " 點傷害。 NL 被 #y融合 後可重生。"
     ]
   },
   "Slimebound:TorchHeadSlime": {
-    "NAME": "火炬头史莱姆",
+    "NAME": "火炬頭史萊姆",
     "DESCRIPTION": [
-      "回合开始时造成 #b",
-      " 点伤害。 #y力量 将增加其伤害。"
+      "回合開始時造成 #b",
+      " 點傷害。 #y力量 將增加其傷害。"
     ]
   },
   "Slimebound:CultistSlime": {
-    "NAME": "邪教徒史莱姆",
+    "NAME": "邪教徒史萊姆",
     "DESCRIPTION": [
-      "回合开始时造成 #b",
-      " 点伤害并提高下次造成的伤害 #b1 点。"
+      "回合開始時造成 #b",
+      " 點傷害並提高下次造成的傷害 #b1 點。"
     ]
   },
   "Slimebound:ShieldSlime": {
-    "NAME": "水蛭史莱姆",
+    "NAME": "水蛭史萊姆",
     "DESCRIPTION": [
-      "回合开始时造成 #b",
-      " 点伤害并给予你 #b",
-      " 点 #y格挡 。"
+      "回合開始時造成 #b",
+      " 點傷害並給予你 #b",
+      " 點 #y格擋 。"
     ]
   },
   "Slimebound:PoisonSlime": {
-    "NAME": "游击史莱姆",
+    "NAME": "遊擊史萊姆",
     "DESCRIPTION": [
-      "回合开始时对所有敌人造成 #b",
-      " 点伤害 "
+      "回合開始時對所有敵人造成 #b",
+      " 點傷害 "
     ]
   },
   "Slimebound:SlimingSlime": {
-    "NAME": "污泥史莱姆",
+    "NAME": "汙泥史萊姆",
     "DESCRIPTION": [
-      "回合开始时造成 #b",
-      " 点伤害并给予 #b",
-      " 层 #y黏液 。"
+      "回合開始時造成 #b",
+      " 點傷害並給予 #b",
+      " 層 #y黏液 。"
     ]
   },
   "Slimebound:HexSlime": {
-    "NAME": "鬼火史莱姆",
+    "NAME": "鬼火史萊姆",
     "DESCRIPTION": [
       "造成 #b",
-      " 点伤害并给予 #b",
-      " 层 #y灼魂 。"
+      " 點傷害並給予 #b",
+      " 層 #y灼魂 。"
     ]
   },
   "Slimebound:ChampSlime": {
-    "NAME": "侮辱史莱姆",
+    "NAME": "侮辱史萊姆",
     "DESCRIPTION": [
-      "回合开始时造成 #b",
-      " 点伤害并给予 #b",
-      " 层 #y易伤 。"
+      "回合開始時造成 #b",
+      " 點傷害並給予 #b",
+      " 層 #y易傷 。"
     ]
   },
   "Slimebound:SlowingSlime": {
-    "NAME": "时间史莱姆",
+    "NAME": "時間史萊姆",
     "DESCRIPTION": [
       "造成 #b",
-      " 点伤害并给予 #b",
-      " 层 #y虚弱 。"
+      " 點傷害並給予 #b",
+      " 層 #y虛弱 。"
     ]
   },
   "Slimebound:ProtectorSlime": {
-    "NAME": "尖刺史莱姆",
+    "NAME": "尖刺史萊姆",
     "DESCRIPTION": [
       "造成 #b",
-      " 点伤害并给予你 #b",
-      " 层 #y临时 #y荆棘 。"
+      " 點傷害並給予你 #b",
+      " 層 #y臨時 #y荊棘 。"
     ]
   },
   "Slimebound:DrawingSlime": {
-    "NAME": "先古史莱姆",
+    "NAME": "先古史萊姆",
     "DESCRIPTION": [
       "造成 #b",
-      " 点伤害并使你抽 #b",
-      " 张牌。"
+      " 點傷害並使你抽 #b",
+      " 張牌。"
     ]
   },
   "Slimebound:DarklingSlime": {
-    "NAME": "小黑史莱姆",
+    "NAME": "小黑史萊姆",
     "DESCRIPTION": [
       "造成 #b",
-      " 点伤害。 #y命令 时，其他小黑也会攻击。"
+      " 點傷害。 #y命令 時，其他小黑也會攻擊。"
     ]
   }
 }
