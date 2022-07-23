@@ -207,8 +207,8 @@
   },
   "hexamod:ExtraCrispy": {
     "NAME": "脆烤",
-    "DESCRIPTION": "卡牌和鬼火额外给予 !M! 层 hexamod:灼魂 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 卡牌和鬼火额外给予 !M! 层 hexamod:灼魂 。"
+    "DESCRIPTION": "卡牌与鬼火额外给予 !M! 层 hexamod:灼魂 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 卡牌与鬼火额外给予 !M! 层 hexamod:灼魂 。"
   },
   "hexamod:GhostflameBarrier": {
     "NAME": "亡魂屏障",
@@ -245,7 +245,7 @@
   "hexamod:RainOfEmbers": {
     "NAME": "焰烬雨",
     "DESCRIPTION": "造成 !D! 点伤害并给 NL 予 !burny! 层 hexamod:灼魂 X 次。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，给 NL 予 !burny! 层 hexamod:灼魂 和 1层 虚弱 X 次。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，给 NL 予 !burny! 层 hexamod:灼魂 与 1层 虚弱 X 次。"
   },
   "hexamod:VolcanoVisage": {
     "NAME": "火山面貌",
@@ -266,7 +266,7 @@
   "hexamod:GhostflameInferno": {
     "NAME": "此即地狱",
     "DESCRIPTION": "保留 。 NL hexamod:点燃 hexamod:狱焱 鬼火 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL hexamod:点燃 当前和 hexamod:狱焱 鬼火 。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "保留 。 NL hexamod:点燃 当前与 hexamod:狱焱 鬼火 。 NL 消耗 。"
   },
   "hexamod:ChargedBarrage": {
     "NAME": "蓄能焰幕",
@@ -330,7 +330,7 @@
   },
   "hexamod:CouncilsJustice": {
     "NAME": "议会裁决",
-    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 每张 消耗 的 *灵体 提高伤害 !M! 点。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每张 消耗 的 *灵体 提高伤害 !M! 点。 NL 消耗 。"
   },
   "hexamod:ForkedFlame": {
     "NAME": "歧路火焰",

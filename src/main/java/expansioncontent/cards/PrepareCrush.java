@@ -44,19 +44,14 @@ public class PrepareCrush extends AbstractExpansionCard {
 
         atb(new GainBlockAction(p, p, this.block));
         atb(new ApplyPowerAction(p, p, new EnergizedPower(p, magicNumber), magicNumber));
-        atb(new ApplyPowerAction(p, p, new NextTurnGainSlimeCrush(p, p, 1, this.upgraded), 1));
+        atb(new ApplyPowerAction(p, p, new NextTurnGainSlimeCrush(p, p, 1, false), 1));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
             upgradeBlock(UPGRADE_BLOCK);
-
-            AbstractCard q = new SlimeCrush();
-            q.upgrade();
-            cardsToPreview = q;
+            initializeDescription();
         }
     }
 

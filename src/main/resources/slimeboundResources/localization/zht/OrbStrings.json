@@ -8,7 +8,7 @@
     "NAME": "青銅史萊姆",
     "DESCRIPTION": [
       "回合開始時對所有敵人造成 #b",
-      " 點傷害，但跳過它的下次攻擊。",
+      " 點傷害，但跳過其下次攻擊。",
       ""
     ]
   },
@@ -56,14 +56,14 @@
     ]
   },
   "Slimebound:PoisonSlime": {
-    "NAME": "游擊史萊姆",
+    "NAME": "遊擊史萊姆",
     "DESCRIPTION": [
       "回合開始時對所有敵人造成 #b",
       " 點傷害 "
     ]
   },
   "Slimebound:SlimingSlime": {
-    "NAME": "污泥史萊姆",
+    "NAME": "汙泥史萊姆",
     "DESCRIPTION": [
       "回合開始時造成 #b",
       " 點傷害並給予 #b",
@@ -75,7 +75,7 @@
     "DESCRIPTION": [
       "造成 #b",
       " 點傷害並給予 #b",
-      " 層 #yhexamod:灼魂 。"
+      " 層 #y灼魂 。"
     ]
   },
   "Slimebound:ChampSlime": {
