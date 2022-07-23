@@ -38,7 +38,7 @@
     ]
   },
   "Guardian:GemFinderPower": {
-    "NAME": "開採寶石",
+    "NAME": "開采寶石",
     "DESCRIPTIONS": [
       "戰鬥結束後，選擇一顆普通 #y寶石 加入你的牌組。",
       "戰鬥結束後，選擇 ",
@@ -64,7 +64,7 @@
   "Guardian:ConstructModePower": {
     "NAME": "建造模式",
     "DESCRIPTIONS": [
-      "每回合開始時，如果你有 #y緩衝 ，獲得 #b",
+      "每回合開始時，如果你有 #y緩沖 ，獲得 #b",
       " 點 #y力量 。"
     ]
   },
@@ -135,7 +135,7 @@
     ]
   },
   "Guardian:ExhaustStatusesPower": {
-    "NAME": "反衝",
+    "NAME": "反沖",
     "DESCRIPTIONS": [
       "消耗每回合抽到的第一張 狀態牌 或 詛咒 並抽一張牌。",
       "消耗每回合抽到的前 #b",
@@ -165,7 +165,7 @@
       "下回合獲得 #b",
       " 點額外 [E] 。",
       " 點額外 [E] 。",
-      " - 翻譯注意: - 如需區分單複數，則上面的是複數。"
+      " - 翻譯註意: - 如需區分單復數，則上面的是復數。"
     ]
   },
   "Guardian:BlockOnCardUsePower": {

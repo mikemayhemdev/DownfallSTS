@@ -9,18 +9,18 @@
   },
   "Guardian:Gem_Red": {
     "NAME": "紅寶石",
-    "DESCRIPTION": " guardianmod:寶石 。 NL 獲得 2 點 guardianmod:臨時 力量 。",
-    "UPGRADE_DESCRIPTION": "獲得 2 點 guardianmod:臨時 力量 。"
+    "DESCRIPTION": " guardianmod:寶石 。 NL 獲得2層 guardianmod:臨時 力量 。",
+    "UPGRADE_DESCRIPTION": "獲得2層 guardianmod:臨時 力量 。"
   },
   "Guardian:Gem_Green": {
     "NAME": "翡翠",
-    "DESCRIPTION": " guardianmod:寶石 。 NL 獲得 2 點 guardianmod:臨時 敏捷 。",
-    "UPGRADE_DESCRIPTION": "獲得 2 點 guardianmod:臨時 敏捷 。"
+    "DESCRIPTION": " guardianmod:寶石 。 NL 獲得2層 guardianmod:臨時 敏捷 。",
+    "UPGRADE_DESCRIPTION": "獲得2層 guardianmod:臨時 敏捷 。"
   },
   "Guardian:Gem_Lightblue": {
     "NAME": "碧璽",
-    "DESCRIPTION": " guardianmod:寶石 。 NL 獲得 4 點 guardianmod:臨時 荊棘 。",
-    "UPGRADE_DESCRIPTION": "獲得 4 點 guardianmod:臨時 荊棘 。"
+    "DESCRIPTION": " guardianmod:寶石 。 NL 獲得4層 guardianmod:臨時 荊棘 。",
+    "UPGRADE_DESCRIPTION": "獲得4層 guardianmod:臨時 荊棘 。"
   },
   "Guardian:Gem_White": {
     "NAME": "石英",
@@ -34,22 +34,22 @@
   },
   "Guardian:Gem_Cyan": {
     "NAME": "藍晶",
-    "DESCRIPTION": " guardianmod:寶石 。 NL 將1張 *水晶護衛 加入手牌。",
-    "UPGRADE_DESCRIPTION": "獲得 1 張 *水晶護衛 。"
+    "DESCRIPTION": " guardianmod:寶石 。 NL 獲得 *水晶護衛 。",
+    "UPGRADE_DESCRIPTION": "獲得 *水晶護衛 。"
   },
   "Guardian:ChargeUp": {
     "NAME": "充能",
-    "DESCRIPTION": "將本牌 guardianmod:凝滯 。 NL guardianmod:滴答 -獲得 !B! 點 格擋 和 !M! 點 力量 。 NL guardianmod:揮發 。"
+    "DESCRIPTION": "將本牌 guardianmod:凝滯 。 NL guardianmod:滴答 -獲得 !B! 點 格擋 與 !M! 點 力量 。 NL guardianmod:消散 。"
   },
   "Guardian:DonusPower": {
     "NAME": "過載",
     "DESCRIPTION": "抽 !M! 張牌。 NL 下回合少抽2張牌。",
-    "UPGRADE_DESCRIPTION": "抽 !M! 張牌。 NL 下回合少抽2張牌。 NL 降低自身所有負面效果1層。"
+    "UPGRADE_DESCRIPTION": "抽 !M! 張牌。 NL 下回合少抽2張牌。 NL 失去所有負面效果1層。"
   },
   "Guardian:DecasProtection": {
     "NAME": "先古之力",
-    "DESCRIPTION": "獲得 4 點 guardianmod:臨時 力量 和 敏捷 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "獲得 4 點 guardianmod:臨時 力量 和 敏捷 。 NL 降低自身所有負面效果1層。 NL 消耗 。"
+    "DESCRIPTION": "獲得 4 層 guardianmod:臨時 力量 與 敏捷 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "獲得 4 層 guardianmod:臨時 力量 與 敏捷 。 NL 失去所有負面效果1層。 NL 消耗 。"
   },
   "Guardian:FierceBash": {
     "NAME": "猛烈痛擊",
@@ -57,16 +57,20 @@
   },
   "Guardian:PolyBeam": {
     "NAME": "激光射線",
-    "DESCRIPTION": "對隨機敵人造成 !D! 點傷害 !M! 次。"
+    "DESCRIPTION": "隨機造成 !D! 點傷害 !M! 次。"
   },
   "Guardian:TwinSlam": {
     "NAME": "雙斬",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 將 *再斬 加入手牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 將 *再斬 加入手牌。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 獲得 *再斬 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 獲得 *再斬 。"
   },
   "Guardian:GuardianWhirl": {
     "NAME": "守護者旋風",
-    "DESCRIPTION": "至少有20點 格擋 才能被打出。 NL 對所有敵人造成 !D! 點傷害 !M! 次。"
+    "DESCRIPTION": "有20點 格擋 才能打出。 NL 對所有敵人造成 !D! 點傷害 !M! 次。", 
+    "EXTENDED_DESCRIPTION": 
+    [
+      "需要更多格擋。"
+    ]
   },
   "Guardian:VentSteam": {
     "NAME": "蒸汽噴射",
@@ -79,20 +83,20 @@
   },
   "Guardian:TimeBomb": {
     "NAME": "時間炸彈",
-    "DESCRIPTION": "將本牌 guardianmod:凝滯 。 NL guardianmod:凝滯 結束時，對所有敵人造成 !M! 點傷害。 NL guardianmod:揮發 。"
+    "DESCRIPTION": "將本牌 guardianmod:凝滯 。 NL guardianmod:凝滯 結束時，對所有敵人造成 !M! 點傷害。 NL guardianmod:消散 。"
   },
   "Guardian:HyperBeam_Guardian": {
-    "NAME": "超能射線",
-    "DESCRIPTION": "對所有敵人造成 !D! 點傷害。 力量 在本牌中發揮 !M! 倍效果。 NL 跳過你的下個回合。"
+    "NAME": "究極射線",
+    "DESCRIPTION": "對所有敵人造成 !D! 點傷害。 NL 力量 在本牌中發揮 !M! 倍效果。 NL 跳過你的下回合。"
   },
   "Guardian:BronzeArmor": {
     "NAME": "彈性護甲",
-    "DESCRIPTION": "降低自身所有負面效果 !M! 層。 NL guardianmod:提防 8。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "降低自身所有負面效果 !M! 層。 NL guardianmod:提防 8。"
+    "DESCRIPTION": "失去所有負面效果 !M! 層。 NL guardianmod:提防 8。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "失去所有負面效果 !M! 層。 NL guardianmod:提防 8。"
   },
   "Guardian:FloatingOrbs": {
-    "NAME": "浮游圓球",
-    "DESCRIPTION": "回合開始時，將一張 *圓球撞擊 加入手牌。"
+    "NAME": "浮遊圓球",
+    "DESCRIPTION": "回合開始時獲得 *圓球撞擊 。"
   },
   "Guardian:OrbSlam": {
     "NAME": "圓球撞擊",
@@ -104,8 +108,8 @@
   },
   "Guardian:Orbwalk": {
     "NAME": "行者圓球",
-    "DESCRIPTION": "獲得 !M! 力量 。 NL guardianmod:滴答 -獲得 1 點 力量 。 NL guardianmod:揮發 。",
-    "UPGRADE_DESCRIPTION": "獲得 !M! 力量 。 NL guardianmod:滴答 -獲得 1 點 力量 。"
+    "DESCRIPTION": "獲得 !M! 點 力量 。 NL guardianmod:滴答 -獲得 1 點 力量 。 NL guardianmod:消散 。",
+    "UPGRADE_DESCRIPTION": "獲得 !M! 點 力量 。 NL guardianmod:滴答 -獲得 1 點 力量 。"
   },
   "Guardian:WalkerClaw": {
     "NAME": "行者爪擊",
@@ -113,7 +117,10 @@
   },
   "Guardian:Harden": {
     "NAME": "硬化",
-    "DESCRIPTION": "至少有20點 格擋 才能被打出。 NL guardianmod:提防 !GuardianSecondM! 並獲得 !M! 層 荊棘 。"
+    "DESCRIPTION": "有20點 格擋 才能打出。 NL guardianmod:提防 !GuardianSecondM! 。 NL 獲得 !M! 層 荊棘 。",
+    "EXTENDED_DESCRIPTION": [
+      "需要更多格擋。"
+    ]
   },
   "Guardian:SentryBeam": {
     "NAME": "哨衛射線",
@@ -127,46 +134,46 @@
   },
   "Guardian:CompilePackage": {
     "NAME": "完整組件",
-    "DESCRIPTION": "從3張 guardianmod:組件 牌中選擇 1 張加入手牌。 消耗 。",
-    "UPGRADE_DESCRIPTION": "從3張已 升級 的 guardianmod:組件 牌中選擇 1 張加入手牌。 消耗 。",
+    "DESCRIPTION": "消耗 。 NL 從3張 guardianmod:組件 牌中選擇獲得1張。",
+    "UPGRADE_DESCRIPTION": "消耗 。 NL 從3張 guardianmod:組件 牌+中選擇獲得1張。",
     "EXTENDED_DESCRIPTION": [
       "選擇一張組件。"
     ]
   },
   "Guardian:PackageShapes": {
     "NAME": "組件: 機械",
-    "DESCRIPTION": "將1張 *時間炸彈 、 *荊棘協議 和 *反衝協議 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "將1張 *時間炸彈+ 、 *荊棘協議+ 和 *反衝協議+ 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "獲得 *時間炸彈 、 *荊棘協議 與 *反沖協議 各1張。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "獲得 *時間炸彈+ 、 *荊棘協議+ 與 *反沖協議+ 各1張。 NL 消耗 。"
   },
   "Guardian:PackageDonuDeca": {
     "NAME": "組件: 先古",
-    "DESCRIPTION": "將1張 *過載 、 *先古防禦 和 *先古建造 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "將1張 *過載+ 、 *先古防禦+ 和 *先古建造+ 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "獲得 *過載 、 *先古之力 與 *先古建造 各1張。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "獲得 *過載+ 、 *先古之力+ 與 *先古建造+ 各1張。 NL 消耗 。"
   },
   "Guardian:PackageSphere": {
     "NAME": "組件: 圓球",
-    "DESCRIPTION": "將1張 *球形護盾 、 *硬化 和 *浮動圓球 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "將1張 *球形護盾+ 、 *硬化+ 和 *浮動圓球+ 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "獲得 *球形護盾 、 *硬化 與 *浮動圓球 各1張。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "獲得 *球形護盾+ 、 *硬化+ 與 *浮動圓球+ 各1張。 NL 消耗 。"
   },
   "Guardian:PackageSentry": {
     "NAME": "組件: 哨衛",
-    "DESCRIPTION": "將1張 *哨衛射線 和2張 *哨衛震蕩 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "將1張 *哨衛射線+ 和2張 *哨衛震蕩+ 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "獲得1張 *哨衛射線 與2張 *哨衛震蕩 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "獲得1張 *哨衛射線+ 與2張 *哨衛震蕩+ 。 NL 消耗 。"
   },
   "Guardian:PackageWalker": {
     "NAME": "組件: 行者",
-    "DESCRIPTION": "將1張 *行者圓球 、 *行者爪擊 和 *焚燒 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "將1張 *行者圓球+ 、 *行者爪擊+ 和 *焚燒+ 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "獲得 *行者圓球 、 *行者爪擊 與 *焚燒 各1張。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "獲得 *行者圓球+ 、 *行者爪擊+ 與 *焚燒+ 各1張。 NL 消耗 。"
   },
   "Guardian:PackageAutomaton": {
-    "NAME": "組件: 銅制",
-    "DESCRIPTION": "將1張 *超能射線 、 *銅制圓球 和 *彈性護甲 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "將1張 *超能射線+ 、 *銅制圓球+ 和 *彈性護甲+ 加入手牌。 NL 消耗 。"
+    "NAME": "組件: 銅製",
+    "DESCRIPTION": "獲得 *究極射線 、 *銅製圓球 與 *彈性護甲 各1張。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "獲得 *究極射線+ 、 *銅製圓球+ 與 *彈性護甲+ 各1張。 NL 消耗 。"
   },
   "Guardian:PackageDefect": {
     "NAME": "組件: 故障",
-    "DESCRIPTION": "將1張 *重連 ， *預編程 和 *時間電容器 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "將1張 *重連+ ， *預編程+ 和 *時間電容器+ 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "獲得 *重連 ， *預編程 與 *時間電容器 各1張。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "獲得 *重連+ ， *預編程+ 與 *時間電容器+ 各1張。 NL 消耗 。"
   },
   "Guardian:Planning": {
     "NAME": "規劃",
@@ -178,13 +185,13 @@
   },
   "Guardian:Emergency": {
     "NAME": "應急",
-    "DESCRIPTION": " guardianmod:加速 直到有 guardianmod:凝滯 的牌返回手牌。 NL 消耗 。",
-	"UPGRADE_DESCRIPTION": " guardianmod:加速 直到有 guardianmod:凝滯 的牌返回手牌。"
+    "DESCRIPTION": " guardianmod:加速 至有牌 guardianmod:凝滯 結束。 NL 消耗 。",
+	"UPGRADE_DESCRIPTION": " guardianmod:加速 至有牌 guardianmod:凝滯 結束。"
   },
   "Guardian:Clone": {
     "NAME": "克隆",
-    "DESCRIPTION": "guardianmod:凝滯 一張手牌的複製品。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "guardianmod:凝滯 一張手牌的複製品。 NL guardianmod:加速 。 NL 消耗 。"
+    "DESCRIPTION": "guardianmod:凝滯 一張手牌的復製品。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "guardianmod:凝滯 一張手牌的復製品。 NL guardianmod:加速 。 NL 消耗 。"
   },
   "Guardian:Preprogram": {
     "NAME": "預編程",
@@ -196,16 +203,16 @@
   },
   "Guardian:StasisField": {
     "NAME": "凝滯屏障",
-    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 將本牌 guardianmod:凝滯 。 NL guardianmod:凝滯 結束時， 格擋 增加 !M! 點且耗能變為1。"
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 將本牌 guardianmod:凝滯 。 NL guardianmod:凝滯 結束時，獲得 !B! 點 格擋 。"
   },
   "Guardian:StasisStrike": {
     "NAME": "凝滯打擊",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 將本牌 guardianmod:凝滯 。 NL guardianmod:凝滯 結束時，傷害增加 !M! 點且耗能變為1。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 獲得一個 guardianmod:凝滯 欄位。"
   },
   "Guardian:FuturePlans": {
     "NAME": "未來計劃",
-    "DESCRIPTION": "回合結束時可 guardianmod:凝滯 !M! 張手牌。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合結束時可 guardianmod:凝滯 !M! 張手牌。"
+    "DESCRIPTION": "回合結束時， NL 可 guardianmod:凝滯 !M! 張手牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合結束時， NL 可 guardianmod:凝滯 !M! 張手牌。"
   },
   "Guardian:Suspension": {
     "NAME": "掛起",
@@ -223,40 +230,40 @@
   },
   "Guardian:ConstructionForm": {
     "NAME": "建造形態",
-    "DESCRIPTION": "虛無 。 NL 獲得 !M! 層 guardianmod:緩衝 。 NL 回合開始時，若你有 guardianmod:緩衝 ，獲得1點 力量 。",
-    "UPGRADE_DESCRIPTION": "獲得 !M! 層 guardianmod:緩衝 。 NL 回合開始時，若你有 guardianmod:緩衝 ，獲得1點 力量 。"
+    "DESCRIPTION": "虛無 。 NL 獲得 !M! 層 guardianmod:緩沖 。 NL 回合開始時若有 guardianmod:緩沖 ，獲得1點 力量 。",
+    "UPGRADE_DESCRIPTION": "獲得 !M! 層 guardianmod:緩沖 。 NL 回合開始時若有 guardianmod:緩沖 ，獲得1點 力量 。"
   },
   "Guardian:RollAttack": {
     "NAME": "蜷身攻擊",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 若處於 guardianmod:防禦模式 ，變為全體攻擊。否則 guardianmod:提防 8 。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 若處於 guardianmod:防禦模式 ， NL 變為全體攻擊。 NL 否則 guardianmod:提防 8 。"
   },
   "Guardian:GemFire": {
     "NAME": "寶石加農炮",
-    "DESCRIPTION": " 消耗 有 guardianmod:寶石 的牌。 每顆 guardianmod:寶石 對隨機一名敵人造成 !D! 點傷害。 NL 消耗 。",
-	"UPGRADE_DESCRIPTION": "保留 。 NL 消耗 有 guardianmod:寶石 的牌。 每顆 guardianmod:寶石 對隨機一名敵人造成 !D! 點傷害。 NL 消耗 。"
+    "DESCRIPTION": " 消耗 所有 guardianmod:寶石 ，每顆隨機造成 !D! 點傷害。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "棄用"
   },
   "Guardian:ChargeCore": {
     "NAME": "充能核心",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 將本牌 guardianmod:凝滯 。 NL guardianmod:滴答 -抽一張牌。 guardianmod:揮發 。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 將本牌 guardianmod:凝滯 。 NL guardianmod:滴答 -抽一張牌。 guardianmod:消散 。"
   },
   "Guardian:Reroute": {
     "NAME": "重連",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL guardianmod:凝滯 你打出的下一張非 消耗 攻擊或技能牌。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL guardianmod:凝滯 打出的下一張非 消耗 攻擊或技能牌。"
   },
   "Guardian:PiercingHide": {
   "NAME": "隱秘荊棘",
-  "DESCRIPTION": "獲得 !B! 點 格擋 和 !M! 層 guardianmod:臨時 荊棘 。 NL guardianmod:提防 3 。"
+  "DESCRIPTION": "獲得 !B! 點 格擋 與 !M! 層 guardianmod:臨時 荊棘 。 NL guardianmod:提防 3 。"
 },
   "Guardian:ShieldSpikes": {
     "NAME": "荊棘裝甲",
-    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 若處於 guardianmod:防禦模式 ，獲得 !M! 點 guardianmod:臨時 荊棘 。 NL 否則 guardianmod:提防 8。"
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 若處於 guardianmod:防禦模式 ，獲得 !M! 層 guardianmod:臨時 荊棘 。 NL 否則 guardianmod:提防 8。"
   },
   "Guardian:PrismaticBeam": {
-    "NAME": "稜鏡射線",
+    "NAME": "棱鏡射線",
     "DESCRIPTION": "本牌每 guardianmod:鑲嵌 一顆 guardianmod:寶石 ，造成 !D! 點傷害。"
   },
   "Guardian:PrismaticBarrier": {
-    "NAME": "稜鏡屏障",
+    "NAME": "棱鏡屏障",
     "DESCRIPTION": "本牌每 guardianmod:鑲嵌 一顆 guardianmod:寶石 ，獲得 !B! 點 格擋 。"
   },
   "Guardian:TemporalStrike": {
@@ -275,7 +282,7 @@
   },
   "Guardian:RefractedBeam": {
     "NAME": "折射射線",
-    "DESCRIPTION": "造成 !D! 點傷害 !M! 次。 NL 本場戰鬥攻擊次數減少1次。 NL 能被多次 升級 。"
+    "DESCRIPTION": "造成 !D! 點傷害 !M! 次。 NL 能被多次 升級 。"
   },
   "Guardian:MultiBeam": {
     "NAME": "多重射線",
@@ -308,8 +315,8 @@
   },
   "Guardian:AncientConstruct": {
     "NAME": "先古建造",
-    "DESCRIPTION": "回合開始時，若你沒有 人工製品 ，獲得 !M! 層。",
-	"UPGRADE_DESCRIPTION": "獲得 1 層 人工製品 。 NL 回合開始時，若你沒有 人工製品 ，獲得 !M! 層。"
+    "DESCRIPTION": "回合開始時若無 人工製品 ，獲得 !M! 層。",
+	"UPGRADE_DESCRIPTION": "獲得1層 人工製品 。 NL 回合開始時若無 人工製品 ，獲得 !M! 層。"
   },
   "Guardian:CrystalBeam": {
     "NAME": "水晶射線",
@@ -317,8 +324,8 @@
   },
   "Guardian:Gem_Synthetic": {
     "NAME": "瑪瑙",
-    "DESCRIPTION": "guardianmod:寶石 。 NL 降低自身所有負面效果1層。",
-    "UPGRADE_DESCRIPTION": "降低自身所有負面效果1層。"
+    "DESCRIPTION": "guardianmod:寶石 。 NL 失去所有負面效果1層。",
+    "UPGRADE_DESCRIPTION": "失去所有負面效果1層。"
   },
   "Guardian:Gem_Yellow": {
     "NAME": "琥珀",
@@ -327,8 +334,8 @@
   },
   "Guardian:Gem_Purple": {
     "NAME": "紫晶",
-    "DESCRIPTION": " guardianmod:寶石 。 NL 所有敵人本回合失去 2 點 力量 。",
-    "UPGRADE_DESCRIPTION": "所有敵人本回合失去 2 點 力量 。"
+    "DESCRIPTION": " guardianmod:寶石 。 NL 本回合所有敵人失去 2 點 力量 。",
+    "UPGRADE_DESCRIPTION": "本回合所有敵人失去 2 點 力量 。"
   },
   "Guardian:Gem_Crimson": {
     "NAME": "石榴石",
@@ -342,7 +349,8 @@
   },
   "Guardian:Gem_Fragmented": {
     "NAME": "寶石碎片",
-    "DESCRIPTION": " guardianmod:寶石 。 NL 將1張 *水晶小刀 加入手牌。"
+    "DESCRIPTION": " guardianmod:寶石 。 NL 獲得 *水晶小刀 。",
+    "UPGRADE_DESCRIPTION": "獲得 *水晶小刀 。"
   },
   "Guardian:CrystalShiv": {
     "NAME": "水晶小刀",
@@ -353,13 +361,13 @@
     "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 消耗 。"
   },
   "Guardian:Repulse": {
-    "NAME": "反衝協議",
-    "DESCRIPTION": "消耗 每回合抽到的第一張 狀態牌 或 詛咒 並抽一張牌。",
-    "UPGRADE_DESCRIPTION": "消耗 每回合抽到的第一張 狀態牌 或 詛咒 並抽一張牌。"
+    "NAME": "反沖協議",
+    "DESCRIPTION": "消耗 每回合抽到的首張 狀態牌 或 詛咒 並抽一張牌。",
+    "UPGRADE_DESCRIPTION": "消耗 每回合抽到的首張 狀態牌 或 詛咒 並抽一張牌。"
   },
   "Guardian:BronzeOrb": {
     "NAME": "銅球支援",
-    "DESCRIPTION": " 固有 。 NL 隨機 guardianmod:凝滯 抽牌堆一張牌。 NL 獲得 !B! 點 格擋 。 NL 造成 !D! 點傷害。 NL 消耗 。"
+    "DESCRIPTION": " 固有 。 NL 隨機 guardianmod:凝滯 抽牌堆一張牌。 NL 造成 !D! 點傷害。 NL 消耗 。"
   },
   "Guardian:SphericShield": {
     "NAME": "球形護盾",
@@ -371,11 +379,11 @@
   },
   "Guardian:GatlingBeam": {
     "NAME": "炮塔射線",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 將本牌 guardianmod:凝滯 。 NL 本牌 guardianmod:凝滯 時持續 !M! 回合。 NL guardianmod:滴答 -對隨機敵人造成 !D! 點傷害。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 將本牌 guardianmod:凝滯 。 NL 本牌 guardianmod:凝滯 時持續 !M! 回合。 NL guardianmod:滴答 -隨機造成 !D! 點傷害。"
   },
   "Guardian:ShieldCharger": {
     "NAME": "護盾充能",
-    "DESCRIPTION": "將本牌 guardianmod:凝滯 。 NL guardianmod:滴答 - guardianmod:提防 2 。獲得 !B! 點 格擋 和 [E] 。 NL guardianmod:揮發 。"
+    "DESCRIPTION": "將本牌 guardianmod:凝滯 。 NL guardianmod:滴答 - guardianmod:提防 !M! 並獲得 !B! 點 格擋 。 NL guardianmod:消散 。"
   },
   "Guardian:StasisEngine": {
     "NAME": "凝滯引擎",
@@ -398,7 +406,7 @@
   },
   "Guardian:SecondStrikePreviewCard": {
     "NAME": "再斬",
-    "DESCRIPTION": "虛無 。 NL 造成 !D! 點傷害。 NL 複製 *雙斬 里的寶石效果。 NL 消耗 。"
+    "DESCRIPTION": "虛無 。 NL 造成 !D! 點傷害。 NL 重復 *雙斬 裏的寶石效果。 NL 消耗 。"
   },
   "Guardian:PackageConstruct": {
     "NAME": "    ！！！！！！！！！！！！   以下為疑似棄用文本，為了保險起見防止遊戲崩潰，暫未刪除。    ！！！！！！！！！！！！  ",
@@ -407,33 +415,33 @@
   },
   "Guardian:PackageMass": {
     "NAME": "組件: 團塊",
-    "DESCRIPTION": "將1張 *扭曲荊棘 ， *團狀炸彈 和 *合體撞擊 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "將1張已 升級 的 *扭曲荊棘 ， *團狀炸彈 和 *合體撞擊 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "棄用",
+    "UPGRADE_DESCRIPTION": "棄用"
   },
   "Guardian:HammerDown": {
     "NAME": "墜落重錘",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 翻倍你的 力量 和 敏捷 。 NL 消耗 。"
+    "DESCRIPTION": "棄用"
   },
   "Guardian:OmegaCannon": {
     "NAME": "終極加農炮",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 每點 力量 降低 1 點耗能。"
+    "DESCRIPTION": "棄用"
   },
   "Guardian:ModeShift": {
     "NAME": "模式切換",
-    "DESCRIPTION": "交換你的 力量 與 敏捷 。 NL 抽 1 張牌。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 交換你的 力量 與 敏捷 。 NL 抽 !M! 張牌。"
+    "DESCRIPTION": "棄用",
+    "UPGRADE_DESCRIPTION": "棄用"
   },
   "Guardian:MassOfThorns": {
     "NAME": "團狀荊棘",
-    "DESCRIPTION": "獲得 !M! 層 guardianmod:臨時 荊棘 。 NL 當你有 人工製品 時 消耗 。"
+    "DESCRIPTION": "棄用"
   },
   "Guardian:MassTimeBomb": {
     "NAME": "團狀炸彈",
-    "DESCRIPTION": "向每個空的凝滯欄位加入一張 時間炸彈 。 NL 生成大於等於 2 個時 消耗 。",
-    "UPGRADE_DESCRIPTION": "向每個空的凝滯欄位加入一張已 升級 的 時間炸彈 。 NL 生成大於等於 2 個時 消耗 。"
+    "DESCRIPTION": "棄用",
+    "UPGRADE_DESCRIPTION": "棄用"
   },
   "Guardian:MassSlam": {
     "NAME": "合體撞擊",
-    "DESCRIPTION": "造成 !D! 點傷害 !M! 次。NL 力量大於等於 3 時 消耗 。"
+    "DESCRIPTION": "棄用"
   }
 }
