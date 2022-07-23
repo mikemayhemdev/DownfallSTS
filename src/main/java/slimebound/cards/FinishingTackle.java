@@ -23,7 +23,7 @@ import slimebound.powers.TackleBuffPower;
 import slimebound.powers.TackleDebuffPower;
 
 
-public class FinishingTackle extends AbstractSlimeboundCard {
+public class FinishingTackle extends AbstractTackleCard {
     public static final String ID = "Slimebound:FinishingTackle";
     public static final String NAME;
     public static final String DESCRIPTION;

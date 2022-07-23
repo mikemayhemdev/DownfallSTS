@@ -19,7 +19,7 @@ import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.SYNTHETIC;
 
 
-public class Gem_Synthetic extends AbstractGuardianCard {
+public class Gem_Synthetic extends AbstractGemCard {
     public static final String ID = GuardianMod.makeID("Gem_Synthetic");
     public static final String NAME;
     public static final String IMG_PATH = "cards/gemBlack.png";

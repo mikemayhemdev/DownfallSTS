@@ -286,7 +286,10 @@
   "Slimebound:PrepareCrush": {
     "NAME": "准备：猛击",
     "DESCRIPTION": "下回合： NL 获得 [E] [E] [E] 。 NL 获得 !M! 点 力量 。 NL 获得 *史莱姆猛击 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "下回合： NL 获得 [E] [E] [E] [E] 。 NL 获得 !M! 点 力量 。 NL 获得 *史莱姆猛击+ 。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "下回合： NL 获得 [E] [E] [E] [E] 。 NL 获得 !M! 点 力量 。 NL 获得 *史莱姆猛击+ 。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "~Slime...~ NL #r~CRUSH!!!~" // 551 string in monsters.json
+    ]
   },
   "Slimebound:SlimeCrush": {
     "NAME": "史莱姆猛击！！！",

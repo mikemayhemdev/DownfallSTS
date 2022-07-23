@@ -286,7 +286,10 @@
   "Slimebound:PrepareCrush": {
     "NAME": "Préparation : Crush",
     "DESCRIPTION": "Au prochain tour, gagnez [E] [E] [E] et !slime! de Force, et ajoutez SLIME CRUSH dans votre main. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Au prochain tour, gagnez [E] [E] [E] [E] et !slime! de Force, et ajoutez SLIME CRUSH+ dans votre main. NL Épuisement."
+    "UPGRADE_DESCRIPTION": "Au prochain tour, gagnez [E] [E] [E] [E] et !slime! de Force, et ajoutez SLIME CRUSH+ dans votre main. NL Épuisement.",
+    "EXTENDED_DESCRIPTION": [
+      "~Slime...~ NL #r~CRUSH!!!~"
+    ]
   },
   "Slimebound:SlimeCrush": {
     "NAME": "SLIME CRUSH!!!",
