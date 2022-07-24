@@ -46,7 +46,7 @@
   },
   "hexamod:TimeWarp": {
     "NAME": "时间扭曲",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL hexamod:步进 或 hexamod:回退 时，将本牌从弃牌堆返回手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL hexamod:步进 或 hexamod:回退 时， NL 将本牌从弃牌堆返回手牌。"
   },
   "hexamod:EmpoweredFlame": {
     "NAME": "高涨",
