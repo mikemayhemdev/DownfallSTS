@@ -144,7 +144,7 @@
   },
   "hexamod:GiftsFromTheDead": {
     "NAME": "深处之礼",
-    "DESCRIPTION": "回合开始时随机 expansioncontent:取回 一张 hexamod:阴世 牌。",
+    "DESCRIPTION": "回合开始时， NL 随机 expansioncontent:取回 一张 hexamod:阴世 牌。",
     "EXTENDED_DESCRIPTION": [
     "这些灵魂太强大了，无法直接召唤。"
     ]
