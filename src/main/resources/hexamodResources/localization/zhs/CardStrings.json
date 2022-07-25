@@ -54,7 +54,7 @@
   },
   "hexamod:HexaLevel": {
     "NAME": "地狱形态",
-    "DESCRIPTION": "回合开始时获得 !M! 点 hexamod:热烈 。",
+    "DESCRIPTION": "回合开始时， NL 获得 !M! 点 hexamod:热烈 。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时获得 !M! 点 hexamod:热烈 。"
   },
   "hexamod:UnlimitedPower": {
@@ -249,7 +249,7 @@
   },
   "hexamod:VolcanoVisage": {
     "NAME": "火山面貌",
-    "DESCRIPTION": "hexamod:点燃 一枚鬼火时，给予 NL 所有敌人 !M! 层 hexamod:灼魂 。"
+    "DESCRIPTION": "hexamod:点燃 一枚鬼火时， NL 给予 NL 所有敌人 !M! 层 hexamod:灼魂 。"
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "深处之焰",
@@ -316,13 +316,13 @@
   },
   "hexamod:FifthSeal": {
     "NAME": "第六容器",
-    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，额外获得一张 *容器 牌。",
-    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时，额外获得一张 *容器 牌。"
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时， NL 额外获得一次 *容器 奖励。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时， NL 额外获得一次 *容器 奖励。"
   },
   "hexamod:SixthSeal": {
     "NAME": "第五容器",
-    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，随机 升级 牌组中一张牌。",
-    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时，随机 升级 牌组中一张牌。"
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时， NL 随机 升级 牌组中一张牌。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时， NL 随机 升级 牌组中一张牌。"
   },
   "hexamod:SoulSteal": {
     "NAME": "活体炸弹",
