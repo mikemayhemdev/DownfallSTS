@@ -249,7 +249,7 @@
   },
   "hexamod:VolcanoVisage": {
     "NAME": "火山面貌",
-    "DESCRIPTION": "hexamod:点燃 一枚鬼火时， NL 给予 NL 所有敌人 !M! 层 hexamod:灼魂 。"
+    "DESCRIPTION": "hexamod:点燃 一枚鬼火时，给予 NL 所有敌人 !M! 层 hexamod:灼魂 。"
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "深处之焰",
