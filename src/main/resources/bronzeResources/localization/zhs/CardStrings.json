@@ -313,7 +313,7 @@
     ]
   },
   "bronze:CloningBeam": {
-    "NAME": "和并冲击",
+    "NAME": "合并冲突",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 下张 bronze:编码 牌 bronze:编码 两次。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 下张 bronze:编码 牌 bronze:编码 两次。"
   },
