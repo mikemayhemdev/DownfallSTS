@@ -1,6 +1,6 @@
 {
   "bronze:Cloning": {
-    "NAME": "和并",
+    "NAME": "合并",
     "DESCRIPTIONS": [
       "下次 #y编码 时，再 #y编码 它 #b1 次。",
       "下次 #y编码 时，再 #y编码 它 #b",
