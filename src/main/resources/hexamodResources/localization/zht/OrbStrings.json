@@ -1,32 +1,69 @@
 {
-  "hexamod:SoulburnPotion": {
-    "NAME": "燃燒彈",
-    "DESCRIPTIONS": [
-      "給予 #b",
-      " 層 #y灼魂 。"
+  "hexamod:SearingGhostflame": {
+    "NAME": "灼熱鬼火",
+    "DESCRIPTION": [
+          "已 #y點燃 。 NL ",
+	  "再打出 #b" ,
+	  " 張 #y攻擊牌 將其 #y點燃 。",
+	  " 張 #y攻擊牌 將其 #y點燃 。",
+	  " 停留在其時打出 #b2 張 #y攻擊牌 將其 #y點燃 。",
+	  " NL NL #y點燃 ：給予隨機一名敵人 #b",
+	  " 層 #y灼魂 。",
+	  " NL NL 回合結束時，若已 #y點燃 ，跳至下枚 #y鬼火 。"
     ]
   },
-  "hexamod:DoubleChargePotion": {
-    "NAME": "流動燃料",
-    "DESCRIPTIONS": [
-      " #y點燃 當前鬼火 #b",
-      " 次。"
+  "hexamod:CrushingGhostflame": {
+    "NAME": "碾壓鬼火",
+    "DESCRIPTION": [
+          "已 #y點燃 。 NL ",
+	  "再打出 #b" ,
+	  " 張 #y技能牌 將其 #y點燃 。",
+	  " 張 #y技能牌 將其 #y點燃 。",
+	  " 停留在其時打出 #b2 張 #y技能牌 將其 #y點燃 。",
+	  " NL NL #y點燃 ：對隨機一名敵人造成 #b",
+	  " 點傷害兩次。",
+	  " NL NL 回合結束時，若已 #y點燃 ，跳至下枚 #y鬼火 。"
     ]
   },
-  "hexamod:EctoCoolerPotion": {
-    "NAME": "外部冷卻劑",
-    "DESCRIPTIONS": [
-      "從任意角色的 #b3 張隨機 #y虛無 牌中選擇 #b1 張加入手牌，其本回合首次耗能為 #b0 。",
-      "從任意角色的 #b3 張隨機 #y虛無 牌中選擇 #b1 張，將其 #b",
-	  " 份復製品加入手牌，其本回合首次耗能為 #b0 。"
+  "hexamod:BolsteringGhostflame": {
+    "NAME": "高熱鬼火",
+    "DESCRIPTION": [
+          "已 #y點燃 。 NL ",
+	  "打出 #b1 張 #y能力牌 將其 #y點燃 。",
+	  " 停留在其時打出 #b1 張 #y能力牌 將其 #y點燃 。",
+	  " NL NL #y點燃 ：獲得 #b",
+	  " 點 #y格擋 和 #b1 點 #y力量 。",
+	  " NL NL 回合結束時，若已 #y點燃 ，跳至下枚 #y鬼火 。"
     ]
   },
-  "hexamod:InfernoChargePotion": {
-    "NAME": "獄焱藥水",
-    "DESCRIPTIONS": [
-      " #y點燃 #y獄焱 鬼火。",
-      " #y點燃 #y獄焱 鬼火 #b",
-	  " 次。"
+    "hexamod:InfernoGhostflame": {
+    "NAME": "獄焱鬼火",
+    "DESCRIPTION": [
+          "已 #y點燃 。 NL ",
+	  "使用 [E] [E] [E] 將其 #y點燃 。",
+	  "再使用 [E] [E] 將其 #y點燃 。",
+	  "再使用 [E] 將其 #y點燃 。",
+	  "錯誤。請聯系開發者： ",
+	  " 停留在其時使用 [E] [E] [E] 將其 #y點燃 。",
+	  " NL NL #y點燃 ：每有一枚 #y點燃 的 #y鬼火 ，隨機對敵人造成 #b",
+	  " 點傷害並 #y熄滅 其他 #y鬼火 。",
+	  " NL NL 回合結束時，若已 #y點燃 ，跳至下枚 #y鬼火 。",
+	  " NL NL 回合結束時，若已 #y點燃 ，跳至下枚 #y鬼火 。"
+    ]
+  },
+    "hexamod:MayhemGhostflame": {
+    "NAME": "狂徒鬼火",
+    "DESCRIPTION": [
+          "已 #y點燃 。 NL ",
+	  "回合結束時自動 #y點燃 。",
+	  "若 #y激活 回合結束時自動 #y點燃 。",
+	  " NL NL #y點燃 ：打出抽牌堆頂部的牌。",
+	  " NL NL 回合結束時，若已 #y點燃 ，跳至下枚 #y鬼火 。"
     ]
   }
 }
+
+
+
+
+
