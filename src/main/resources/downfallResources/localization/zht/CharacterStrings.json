@@ -5,7 +5,7 @@
     ],
     "TEXT": [
       "~現在……~ NL ~服從……~ ~於我……~",
-      "~起來……~ NL ~奴僕……~",
+      "~起來……~ NL ~奴仆……~",
       "~站起來……~",
       "~屠戮~ NL ~入侵者……~",
       "~見到~ ~入侵者……~ NL ~就能獲得~ ~更多…~ ~祝福……~",
@@ -44,13 +44,13 @@
       "這名角色需要用守護者打過一局遊戲才能解鎖。",
       "這名角色需要用第三名惡棍打過一局遊戲才能解鎖。",
       "這名角色需要用六火亡魂打過一局遊戲才能解鎖。",
-	  "這名角色需要用第四名惡棍打過一局遊戲才能解鎖。",
+      "這名角色需要用第四名惡棍打過一局遊戲才能解鎖。",
       "這名角色需要用第一勇士打過一局遊戲才能解鎖。",
-	  "這名角色需要用第五名惡棍打過一局遊戲才能解鎖。",
+      "這名角色需要用第五名惡棍打過一局遊戲才能解鎖。",
       "這名角色需要用機械人偶打過一局遊戲才能解鎖。",
       "這名角色需要用第六名惡棍打過一局遊戲才能解鎖。",
       "這名角色需要用地精小隊打過一局遊戲才能解鎖。",
-      " （終局除外）"
+      " （進入第4幕無法解鎖）"
     ]
   },
   "downfall:HeartMerchant": {
@@ -113,7 +113,7 @@
   },
   "downfall:HeartMerchantScreen": {
     "NAMES": [
-      "~你好~ NL ~奴僕……~",
+      "~你好~ NL ~奴仆……~",
       "~帶來~ ~更多~ ~靈魂……~",
       "~我需要~ @更多……@",
       "~你~ NL @不值……@",
@@ -161,11 +161,11 @@
       "時間吞噬者",
       "覺醒者",
       "先古",
-      "分裂：銅制",
+      "分裂：銅製",
       "分裂：鬼火",
       "分裂：火炬頭",
       "分裂：邪教徒",
-      "分裂：保護",
+      "分裂：尖刺",
       "分裂：嘲諷",
       "分裂：先古",
       "分裂：時間"
@@ -174,26 +174,26 @@
       "失去 3 點生命。 NL 獲得 40 靈魂。",
       "失去 1 點生命。 NL 獲得一張無色牌。",
       "失去 5 點生命。 NL 獲得一瓶藥水。",
-      "獲得守護者 expansioncontent:首領 牌。",
-      "獲得六火亡魂 expansioncontent:首領 牌。",
-      "獲得史萊姆老大 expansioncontent:首領 牌。",
-      "獲得機械人偶 expansioncontent:首領 牌。",
-      "獲得第一勇士 expansioncontent:首領 牌。",
-      "獲得收藏家 expansioncontent:首領 牌。",
-      "獲得時間吞噬者 expansioncontent:首領 牌。",
-      "獲得覺醒者 expansioncontent:首領 牌。",
-      "獲得先古 expansioncontent:首領 牌。",
+      "獲得守護者 *首領 牌。",
+      "獲得六火亡魂 *首領 牌。",
+      "獲得史萊姆老大 *首領 牌。",
+      "獲得機械人偶 *首領 牌。",
+      "獲得第一勇士 *首領 牌。",
+      "獲得收藏家 *首領 牌。",
+      "獲得時間吞噬者 *首領 牌。",
+      "獲得覺醒者 *首領 牌。",
+      "獲得先古 *首領 牌。",
       "slimeboundmod:分裂 slimeboundmod:青銅史萊姆",
       "slimeboundmod:分裂 slimeboundmod:鬼火史萊姆 。",
       "slimeboundmod:分裂 slimeboundmod:火炬頭史萊姆 。",
       "slimeboundmod:分裂 slimeboundmod:邪教徒史萊姆 。",
-      "slimeboundmod:分裂 slimeboundmod:保護史萊姆 。",
+      "slimeboundmod:分裂 slimeboundmod:尖刺史萊姆 。",
       "slimeboundmod:分裂 slimeboundmod:嘲諷史萊姆 。",
       "slimeboundmod:分裂 slimeboundmod:先古史萊姆 。",
       "slimeboundmod:分裂 slimeboundmod:時間史萊姆 。",
       "slimeboundmod:分裂 slimeboundmod:好鬥史萊姆 。",
-      "slimeboundmod:分裂 slimeboundmod:游擊史萊姆 。",
-      "slimeboundmod:分裂 slimeboundmod:污泥史萊姆 。",
+      "slimeboundmod:分裂 slimeboundmod:遊擊史萊姆 。",
+      "slimeboundmod:分裂 slimeboundmod:汙泥史萊姆 。",
       "slimeboundmod:分裂 slimeboundmod:水蛭史萊姆 。",
       "失去 3 點生命。 NL 獲得 50 靈魂。",
       "失去 1 點生命。 NL 將一張隨機無色牌加入手牌。",
@@ -206,7 +206,7 @@
     ],
     "TEXT": [
       "選擇一名Boss學習。",
-      "選擇前進，回退或什麼都不做"
+      "選擇前進，回退或什麽都不做"
     ]
   },
   "downfall:CharBossMerchant": {
