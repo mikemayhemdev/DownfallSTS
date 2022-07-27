@@ -11,21 +11,21 @@
     "NAMES": [
       "堅不可摧"
     ],
-    "DESCRIPTION": "你最多失去堅不可摧層數的生命。受到一回合的傷害後移除堅不可摧。如果已有本效果時再獲得它，額外生效一回合。"
+    "DESCRIPTION": "任意 #b1 回合內你最多失去 #b10 點生命。承傷達到上限後移除本效果。疊加時，額外生效 #b1 回合。"
   },
   {
     "PROPER_NAME": "發掘",
     "NAMES": [
       "發掘"
     ],
-    "DESCRIPTION": "將一張 #y消耗 堆的牌放入手牌。"
+    "DESCRIPTION": "將 #b1 張 #y消耗 堆的牌移回手牌。"
   },
   {
     "PROPER_NAME": "取回",
     "NAMES": [
       "取回"
     ],
-    "DESCRIPTION": "將一張 #y消耗 堆的牌放入棄牌堆。"
+    "DESCRIPTION": "將 #b1 張 #y消耗 堆的牌移入棄牌堆。"
   },
   {
     "PROPER_NAME": "鐐銬",
