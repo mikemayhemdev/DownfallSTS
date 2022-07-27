@@ -29,7 +29,7 @@
     ]
   },
   "downfall:TotemInvulnerable": {
-    "NAME": "活牆壁",
+    "NAME": "活墻壁",
     "DESCRIPTIONS": [
       "只有在其他頭生命均為1時才會死亡。死亡時其他頭同時死亡。"
     ]
@@ -37,7 +37,7 @@
   "downfall:ExhaustCardsPower": {
     "NAME": "遺忘",
     "DESCRIPTIONS": [
-      "你的回合結束時，選擇一張牌消耗。"
+      "你的回合結束時，選擇 #y消耗 #b1 張手牌。"
     ]
   },
   "downfall:PoisonResist": {
@@ -55,7 +55,7 @@
   "downfall:WatcherAngryPower": {
     "NAME": "無遏狂怒",
     "DESCRIPTIONS": [
-      " #y觀者 的回合結束時，如果她的生命不高於 #b50% ，她將永久進入 #y暴怒 。 NL #y暴怒 造成和受到的傷害提高 #b50% 而非 #b100% 。"
+      " #y觀者 的回合結束時，如果其生命不高於 #b50% ，她將永久進入 #y憤怒 。 NL #y憤怒 時造成和受到的傷害增加 #b50% 而非 #b100% 。"
     ]
   },
   "downfall:NeowUnbridledRage": {
@@ -68,7 +68,7 @@
     "NAME": "瀆神者",
     "DESCRIPTIONS": [
       "當 #y觀者 再失去 #b",
-      " 生命後，下次她將要進入 #y神格 或打出 #y諸神之黃昏 後失去 #b4 點 #y力量 。",
+      " 點生命後，下次她將要進入 #y神格 或打出 #y諸神之黃昏 後失去 #b4 點 #y力量 。",
       " #y觀者 下次將要進入 #y神格 或打出 #y諸神之黃昏 後失去 #b4 點 #y力量 。"
     ]
   },
@@ -83,7 +83,7 @@
   "downfall:WatcherDivinityPower": {
     "NAME": "消逝的信仰",
     "DESCRIPTIONS": [
-      "每當你打出一張牌， #y觀者 獲得 #b1 層 #p真言 。 NL 每回合開始時 #y觀者 失去 #b5 層 #p真言 。 NL #y觀者 在她的回合結束時將不會退出 #y神格 。"
+      "每當你打出 #b1 張牌時， #y觀者 獲得 #b1 層 #p真言 ，你的回合開始時其失去 #b5 層 。 NL 她將不會自動退出 #y神格 。"
     ]
   },
   "downfall:NeowFleetingFaith": {
@@ -95,35 +95,35 @@
   "downfall:SilentShivTimeEaterPower": {
     "NAME": "滿包小刀",
     "DESCRIPTIONS": [
-      "每回合你初次打出 #b2 耗能以上的牌時， #y靜默獵手 獲得兩張 #y小刀 。"
+      "每回合你首次打出 #b2 耗能以上的牌時， #y靜默獵手 獲得 #b2 張 #y小刀 。"
       ]
   },
   "downfall:NeowBagOfKnives": {
     "NAME": "滿包小刀",
     "DESCRIPTIONS": [
-      "每回合你初次打出 #b2 耗能以上的牌時， 受到 #b4 點傷害兩次。"
+      "每回合你首次打出 #b2 耗能以上的牌時， 受到 #b4 點傷害兩次。"
     ]
   },
   "downfall:SilentMirrorImagePower": {
     "NAME": "復視",
     "DESCRIPTIONS": [
-      "每回合開始時 #y靜默獵手 將使用 #y殘影 來隱蔽自己。攻擊其中一名能暴露她 #y本體 的位置。"
+      "每回合開始時 #y靜默獵手 將使用 #y殘影 來隱蔽自己。攻擊其中 #b1 名能暴露她 #y本體 的位置。"
     ]
   },
   "downfall:NeowSeeingDouble": {
     "NAME": "復視",
     "DESCRIPTIONS": [
-      " #y涅奧 的回合開始時會使用煙幕來隱蔽它自己。你的第一張 #y攻擊牌 對它不造成傷害。"
+      "每回合你的首張 #y攻擊牌 不對 #y涅奧 造成傷害。"
     ]
   },
   "downfall:SilentPoisonPower": {
-    "NAME": "警告：中毒",
+    "NAME": "警告：劇毒",
     "DESCRIPTIONS": [
-      " #y中毒 在你的回合結束時觸發且傷害能被 #y格擋 抵消，戰鬥開始時獲得一瓶 #y解毒劑 。"
+      " #y中毒 在你的回合結束時觸發且傷害能被 #y格擋 抵消。 NL 戰鬥開始時獲得 #b1 張 #y解毒劑 。"
     ]
   },
   "downfall:NeowHighlyToxic": {
-    "NAME": "警告：中毒",
+    "NAME": "警告：劇毒",
     "DESCRIPTIONS": [
       " #y涅奧 每回合給予你 #b5 層 #y中毒 。 #y中毒 在你的回合結束時觸發且傷害能被 #y格擋 抵消，戰鬥開始時將兩張 #y解毒劑 洗入你的抽牌堆。"
     ]
@@ -143,7 +143,7 @@
   "downfall:DefectAncientConstructPower": {
     "NAME": "先古造物",
     "DESCRIPTIONS": [
-      "戰鬥開始時召喚2個 #y銅制圓球 。 NL 敵人的回合結束時如果 #y故障機器人 沒有 #y人工製品 ，獲得 1 層。"
+      "戰鬥開始時， #y故障機器人 將召喚 #b2 個 #y銅製圓球 。 NL 敵方回合結束時如果其沒有 #y人工製品 ，獲得 #b1 層。"
     ]
   },
   "downfall:NeowAncientConstruct": {
@@ -155,7 +155,7 @@
   "downfall:DefectCuriosity": {
     "NAME": "偏差認知",
     "DESCRIPTIONS": [
-      "每當你打出一張 #y能力牌 ， #y故障機器人 獲得 #b",
+      "每當你打出 #b1 張 #y能力牌時， #y故障機器人 獲得 #b",
       " 點 #y集中 。"
     ]
   },
@@ -180,7 +180,7 @@
   "downfall:IroncladMushroomPower": {
     "NAME": "掠食",
     "DESCRIPTIONS": [
-      " #y鐵甲戰士 的 #y死亡收割 不會消耗且對所有蘑菇生效。 NL 每當 #y鐵甲戰士 擊殺一個蘑菇時，他獲得 #b1 點 #y力量 並回復 #b20 點生命。"
+      " #y鐵甲戰士 的 #y死亡收割 不會消耗且對所有蘑菇生效。 NL 每當 #y鐵甲戰士 擊殺 #b1 個蘑菇時，他獲得 #b1 點 #y力量 。"
     ]
   },
   "downfall:NeowFeedingFrenzy": {
@@ -211,7 +211,7 @@
   "downfall:NeowMantra": {
     "NAME": "真言",
     "DESCRIPTIONS": [
-      "每當 #y涅奧 擁有 #b10 層 #y真言 時，將其轉換成 #b10 點 #y力量 。"
+      "每當 #y涅奧 擁有 #b10 層 #y真言 時，它進入 #p神格 。"
     ]
   },
   "downfall:CrowbotRitualPower": {
@@ -258,7 +258,7 @@
     "NAME": "奄息：局部時滯",
     "DESCRIPTIONS": [
       "該單位死亡時，所有單位獲得 #b",
-      " 層 #y緩衝 。"
+      " 層 #y緩沖 。"
     ]
   },
   "downfall:OnDeathEveryoneVigor": {
@@ -284,30 +284,30 @@
     ]
   },
   "downfall:HermitConcentrateAdder": {
-    "NAME": "抗爭",
+    "NAME": "致命專註",
     "DESCRIPTIONS": [
-      " #y亡命之徒 正在 #y專注 ，使得他的卡牌獲得 #y精准 效果。 NL 對其造成 #b10 點未被 #y格擋 的傷害能破除他的 #y專注 狀態。"
+      " #y亡命之徒 每回合都進入 #y專註 狀態，使其 #y精準 牌觸發額外效果。 NL 使其失去 #b10 點生命能打破其 #y專註 #b1 回合。"
     ]
   },
   "downfall:HermitConcentrationPower": {
-    "NAME": "致命專注",
+    "NAME": "致命專註",
     "DESCRIPTIONS": [
-      " #y亡命之徒 每回合都進入專注狀態，使它的 #y精准 牌觸發額外效果。 本回合再對其造成 #b",
-      " 點傷害來打破它的專注狀態。",
-      " 它本回合已被擾亂，不觸發 #y精准 效果。"
+      " #y亡命之徒 每回合都進入 #y專註 狀態，使其 #y精準 牌觸發額外效果。 本回合再使其失去 #b",
+      " 點生命來打破其 #y專註 狀態。",
+      " 它本回合已被擾亂，一定不觸發 #y精準 效果。"
     ]
   },
   "downfall:HermitWheelOfFortune": {
     "NAME": "幸運之輪",
     "DESCRIPTIONS": [
-      "每當你對 #y亡命之徒 造成一段攻擊時，它丟棄最左邊的牌並抽一張牌。每丟棄 #b",
+      "每當你對 #y亡命之徒 造成 #b1 段攻擊時，它丟棄最左邊的牌並抽 #b1 張牌。每丟棄 #b",
       " 張牌，它獲得 #b1 點 力量 。"
     ]
   },
   "downfall:HermitDoomsday": {
     "NAME": "末日",
     "DESCRIPTIONS": [
-      "每回合開始時，將一張 帶有 #y虛無 的 #r末日將臨 加入你的手牌。"
+      "每回合開始時，將 #b1 張 帶有 #y保留 的 #r末日將臨 加入你的手牌。"
     ]
   },
   "downfall:NextTurnPowerPower": {
@@ -338,6 +338,29 @@
     "NAME": "侵擾",
     "DESCRIPTIONS": [
       "對 #y涅奧 造成攻擊傷害後，下回合少獲得 [E] 。"
+    ]
+  },
+  "downfall:NeowStayAt1Hp": {
+    "NAME": "涅槃",
+    "DESCRIPTIONS": [
+      "你無法使 #y涅奧 降至 #b1 點生命以下。它將完全回復生命並進入下一階段。"
+    ]
+  },
+  "downfall:NeowDivinity": {
+    "NAME": "神格",
+    "DESCRIPTIONS": [
+      " #y涅奧 本回合造成 #b3 倍傷害。"
+    ]
+  },
+  "downfall:NeowSpirit": {
+    "NAME": "英雄精魂",
+    "DESCRIPTIONS": [
+      " #y涅奧 強化自身時，其獲得 #b6 點 #y力量 並：",
+      " NL 獲得 #b1 層 #y惡魔形態 。",
+      " NL 獲得 #b2 層 #y荊棘 。",
+      " NL 獲得 #b2 層 #y緩沖 。",
+      " NL 獲得 #b5 層 #y真言 。",
+      " NL 隨機將 #b2 張 #r詛咒 加入你的抽牌堆。"
     ]
   }
 }
