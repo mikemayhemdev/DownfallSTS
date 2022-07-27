@@ -11,14 +11,14 @@
       "致残"
     ],
     "PROPER_NAME": "致残",
-    "DESCRIPTION": "被 #y致残 的敌人不失去 #y虚弱 。 NL 敌方回合结束时，其失去 #y虚 #y弱 层数点生命。"
+    "DESCRIPTION": "被 #y致残 的单位 #y虚弱 层数不再减少。 NL 敌方回合结束时，其失去 #y虚 #y弱 层数点生命。"
   },
   {
     "NAMES": [
       "回响"
     ],
     "PROPER_NAME": "回响",
-    "DESCRIPTION": " #y回响 是牌的复制品，带有 #y消耗 和 #y虚无 。"
+    "DESCRIPTION": " #y回响 是牌的复制品，带有 #y消耗 与 #y虚无 。"
   },
   {
     "NAMES": [
