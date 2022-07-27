@@ -13,7 +13,7 @@
       "muddle",
       "muddled"
     ],
-    "DESCRIPTION": "將一張牌的耗能本回合變為 #b0 ~ #b3 。"
+    "DESCRIPTION": "將一張牌的耗能本回合變為 #b0 ~ #b3 點。"
   },
   {
     "PROPER_NAME": "異色牌",
@@ -22,5 +22,27 @@
       "offclass"
     ],
     "DESCRIPTION": "異蛇牌池以外的所有可獲得牌。（包括 #y詛咒 和 #y狀態牌 等）"
+  },
+  {
+    "PROPER_NAME": "明晰",
+    "NAMES": [
+      "明晰"
+    ],
+    "DESCRIPTION": "Replace an Unknown card with its current random card permanently."
+  },
+  {
+    "PROPER_NAME": "幸運",
+    "NAMES": [
+      "lucky",
+      "幸運"
+    ],
+    "DESCRIPTION": "牌面效果的隨機值取最大值。"
+  },
+  {
+    "PROPER_NAME": "即逝",
+    "NAMES": [
+      "即逝"
+    ],
+    "DESCRIPTION": "打出後從牌組中移除。"
   }
 ]
