@@ -11,62 +11,70 @@
       "致殘"
     ],
     "PROPER_NAME": "致殘",
-    "DESCRIPTION": "#y致殘 的敵人將不會失去 #y虛弱 。它們的回合結束時失去 #y虛弱 層數的生命。"
+    "DESCRIPTION": "被 #y致殘 的單位 #y虛弱 層數不再減少。 NL 敵方回合結束時，其失去 #y虛 #y弱 層數點生命。"
   },
   {
     "NAMES": [
       "回響"
     ],
     "PROPER_NAME": "回響",
-    "DESCRIPTION": " #y回響 是牌的複製品，帶有 消耗 和 虛無 。"
+    "DESCRIPTION": " #y回響 是牌的復製品，帶有 #y消耗 與 #y虛無 。"
   },
   {
     "NAMES": [
       "胖地精"
     ],
     "PROPER_NAME": "胖地精",
-    "DESCRIPTION": "每當你打出一張攻擊牌，給予目標 #b1 層 #y虛弱 。"
+    "DESCRIPTION": "每當你打出一張 #y攻擊 牌時，給予目標 #b1 層 #y虛弱 。"
   },
   {
     "NAMES": [
       "地精法師"
     ],
     "PROPER_NAME": "地精法師",
-    "DESCRIPTION": "每當你打出一張技能牌，獲得 #b1 點 #y法力 。"
+    "DESCRIPTION": "每當你打出一張 #y技能 牌時，獲得 #b1 層 #y法力 。"
   },
   {
     "NAMES": [
       "火大地精"
     ],
     "PROPER_NAME": "火大地精",
-    "DESCRIPTION": "被攻擊時獲得 #b2 點 #y臨時力量 。"
+    "DESCRIPTION": "每當你被攻擊時，獲得 #b2 層 #y臨時力量 。"
   },
   {
     "NAMES": [
       "持盾地精"
     ],
     "PROPER_NAME": "持盾地精",
-    "DESCRIPTION": "每當你打出一張技能牌，獲得 #b2 點 #y格擋 。"
+    "DESCRIPTION": "每當你打出一張 #y技能 牌時，獲得 #b2 點 #y格擋 。"
   },
   {
     "NAMES": [
       "卑鄙地精"
     ],
     "PROPER_NAME": "卑鄙地精",
-    "DESCRIPTION": "每當你打出一張攻擊牌，對隨機一名敵人造成 #b3 點傷害。"
+    "DESCRIPTION": "每當你打出一張 #y攻擊 牌時，隨機對一名敵人造成 #b3 點傷害。"
   },
   {
     "NAMES": [
-      "切換"
+      "切換",
+      "領隊"
     ],
     "PROPER_NAME": "切換",
-    "DESCRIPTION": "改變 #y領隊 的地精，地精 #y領隊 時擁有特定的的被動效果。沒有其他地精存活時切換不執行任何操作。"
+    "DESCRIPTION": "改變 #y領隊 的地精，地精 #y領隊 時擁有其特定的的被動效果。沒有其他地精存活時 #y切換 不執行任何操作。"
   },
   {
     "NAMES": [
       "法力"
     ],
     "PROPER_NAME": "法力",
-    "DESCRIPTION": "當你至少有 #b3 層 #y法力 時， 攻擊會消耗所有 #y法力 並額外造成 #b10 點傷害 。"
+    "DESCRIPTION": "當你至少有 #b3 層 #y法力 時， 攻擊會使用所有 #y法力 並額外造成 #b10 點傷害。"
+  },
+  {
+    "NAMES": [
+      "地精大塊頭"
+    ],
+    "PROPER_NAME": "地精大塊頭",
+    "DESCRIPTION": "你的回合開始時，獲得 #y怒吼 、 #y顱骨重擊 與 #y沖鋒 各 #b1 張。"
   }
 ]
