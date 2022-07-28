@@ -220,7 +220,7 @@
   },
   "hexamod:ThermalTransfer": {
     "NAME": "熱傳遞",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 若敵人有 hexamod:灼魂 ， NL 獲得 !B! 點 格擋 。"
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 若目標有 hexamod:灼魂 ， NL 獲得 !B! 點 格擋 。"
   },
   "hexamod:HeatCrush": {
     "NAME": "高熱撞擊",
