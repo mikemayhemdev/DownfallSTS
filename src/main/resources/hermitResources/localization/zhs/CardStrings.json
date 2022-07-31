@@ -151,7 +151,7 @@
   },
   "hermit:Grudge": {
     "NAME": "怒怨",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 手中每有一张 诅咒 ， NL 额外造成 !M! 点。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 每有一张 诅咒 ， NL 额外造成 !M! 点。"
   },
   "hermit:Spite": {
     "NAME": "苦恼",
