@@ -154,7 +154,7 @@
     "DESCRIPTION": "虚无 。 NL 随机获得一张 虚无 牌。 NL 其耗能本回合为0。 NL 消耗 。"
   },
   "hexamod:PhantomCloak": {
-    "NAME": "幻影披风",
+    "NAME": "幽灵披风",
     "DESCRIPTION": "虚无 。 NL 获得 !M! 点 敏捷 并失去1点 力量 。"
   },
   "hexamod:ParanormalForm": {
