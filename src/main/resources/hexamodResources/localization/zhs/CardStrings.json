@@ -190,7 +190,7 @@
   },
   "hexamod:BurningTouch": {
     "NAME": "灼烧之触",
-    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 若敌人已有 hexamod:灼魂 ， NL 再给予一次。"
+    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 若目标已有 hexamod:灼魂 ， NL 再给予一次。"
   },
   "hexamod:Incineration": {
     "NAME": "焚化",
@@ -224,7 +224,7 @@
   },
   "hexamod:HeatCrush": {
     "NAME": "高热撞击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 敌人的 hexamod:灼魂 提高本牌的伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标的 hexamod:灼魂 提高本牌的伤害。"
   },
   "hexamod:HeatShield": {
     "NAME": "高热护盾",
@@ -257,7 +257,7 @@
   },
   "hexamod:PhantomFireball": {
     "NAME": "幻影火球",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 引爆敌人的 hexamod:灼魂 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 引爆目标的 hexamod:灼魂 。"
   },
   "hexamod:SpectralSpark": {
     "NAME": "幽灵火花",
