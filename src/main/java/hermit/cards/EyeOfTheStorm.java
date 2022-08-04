@@ -45,15 +45,13 @@ public class EyeOfTheStorm extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
-    private static final int COST = 0;
+    private static final int COST = 1;
 
 
     // /STAT DECLARATION/
 
     public EyeOfTheStorm() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.tags.add(Enums.DEADON);
-        this.tags.add(CardTags.HEALING);
         this.exhaust=true;
         magicNumber=baseMagicNumber=0;
         loadJokeCardImage(this, "eye_of_the_storm.png");
@@ -62,6 +60,8 @@ public class EyeOfTheStorm extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new EyeOfTheStormAction(p,this, getLogicalCardCost(this)));
+        /*
         if (upgraded)
             this.addToBot(new DrawCardAction(1));
         if (isDeadOn()) {
@@ -70,7 +70,7 @@ public class EyeOfTheStorm extends AbstractDynamicCard {
             this.addToBot(new EyeOfTheStormAction(p,this, getLogicalCardCost(this)));
             this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
         }
-
+        */
     }
 
     public void triggerOnGlowCheck() {
@@ -92,7 +92,7 @@ public class EyeOfTheStorm extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
+            upgradeBaseCost(0);
             initializeDescription();
         }
     }

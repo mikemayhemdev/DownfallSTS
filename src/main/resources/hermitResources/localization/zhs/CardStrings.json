@@ -304,7 +304,7 @@
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "风暴之眼",
-    "DESCRIPTION": "hermit:精准 ： NL 将 [E] 回复至上限。 NL 消耗 。",
+    "DESCRIPTION": "将 [E] 回复至上限。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "抽一张牌。 NL hermit:精准 ： NL 将 [E] 回复至上限。 NL 消耗 。"
   },
   "hermit:FinalCanter": {

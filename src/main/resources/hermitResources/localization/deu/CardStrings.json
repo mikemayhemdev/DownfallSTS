@@ -306,7 +306,7 @@
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "Auge des Sturms",
-    "DESCRIPTION": "hermit:Volltreffer: NL Erhalte Energie bis zu deinen Maximum. NL Erschöpft.",
+    "DESCRIPTION": "Erhalte Energie bis zu deinen Maximum. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Ziehe eine Karte. NL hermit:Volltreffer: NL Erhalte Energie bis zu deinen Maximum. NL Erschöpft."
   },
   "hermit:FinalCanter": {

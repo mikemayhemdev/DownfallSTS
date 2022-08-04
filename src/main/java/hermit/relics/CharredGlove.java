@@ -29,8 +29,8 @@ public class CharredGlove extends CustomRelic {
     // ID, images, text.
     public static final String ID = HermitMod.makeID("CharredGlove");
 
-    public static final Texture IMG = TextureLoader.getTexture(makeRelicPath("charred_glove.png"));
-    public static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("charred_glove.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("charred_glove.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("charred_glove.png"));
 
     public CharredGlove() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.FLAT);
@@ -39,7 +39,7 @@ public class CharredGlove extends CustomRelic {
     public void onCardDraw(AbstractCard card) {
         if (card.color == AbstractCard.CardColor.CURSE) {
             this.flash();
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, 4), 4));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, 3), 3));
         }
 
     }
