@@ -94,11 +94,11 @@
   },
   "hexamod:SwordOfDarkness": {
     "NAME": "黑夜之剑",
-    "DESCRIPTION": "若当前鬼火未 hexamod:点燃 ， NL 获得 [E] 。 NL 造成 !D! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若当前鬼火未 hexamod:点燃 ， NL 获得 [E] 。"
   },
   "hexamod:ShieldOfDarkness": {
     "NAME": "黑夜之盾",
-    "DESCRIPTION": "若当前鬼火未 hexamod:点燃 ， NL 获得 [E] 。 NL 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若当前鬼火未 hexamod:点燃 ， NL 获得 [E] 。"
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "鲜焰仪式",
