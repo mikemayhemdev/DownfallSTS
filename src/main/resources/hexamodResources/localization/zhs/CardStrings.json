@@ -359,7 +359,7 @@
   },
   "hexamod:Premonition": {
     "NAME": "预兆",
-    "DESCRIPTION": "选择一张手牌打出并 消耗 它。 NL 消耗 。",
+    "DESCRIPTION": "选择一张手牌， NL 打出并 消耗 它。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "选择打出并消耗"
     ]
