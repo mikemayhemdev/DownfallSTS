@@ -282,7 +282,7 @@
     "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 [E] [E] [E] 。 NL hexamod:激活 狱焱鬼火。 NL 消耗 。"
   },
   "hexamod:Again": {
-    "NAME": "复燃",
+    "NAME": "余烬",
     "DESCRIPTION": "hexamod:点燃 当前鬼火， NL 然后 hexamod:熄灭 它。"
   },
   "hexamod:RetreatToShadows": {
