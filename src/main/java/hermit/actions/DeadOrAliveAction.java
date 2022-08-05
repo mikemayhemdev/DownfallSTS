@@ -5,8 +5,10 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.unique.GreedAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.colorless.HandOfGreed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -55,13 +57,20 @@ public class DeadOrAliveAction extends AbstractGameAction {
                         amount = 100;
                 }
 
-                AbstractDungeon.getCurrRoom().rewards.add(new BountyGold(amount));
-                this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new Bounty(AbstractDungeon.player, amount)));
+                AbstractDungeon.player.gainGold(this.amount);
+
+                for(int i = 0; i < this.amount; ++i) {
+                    AbstractDungeon.effectList.add(new GainPennyEffect(this.source, this.target.hb.cX, this.target.hb.cY, this.source.hb.cX, this.source.hb.cY, true));
+                }
+
+                //AbstractDungeon.getCurrRoom().rewards.add(new BountyGold(amount));
+                //this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new Bounty(AbstractDungeon.player, amount)));
             }
 
             if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
                 AbstractDungeon.actionManager.clearPostCombatActions();
             }
+
         }
 
         this.tickDuration();

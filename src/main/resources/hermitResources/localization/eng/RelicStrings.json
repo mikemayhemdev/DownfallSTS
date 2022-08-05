@@ -60,7 +60,7 @@
     "NAME": "Charred Glove",
     "FLAVOR": "Parts of the glove still glow with otherworldly cinders.",
     "DESCRIPTIONS": [
-      "Whenever you draw a #rCurse, your next attack deals #b4 more damage."
+      "Whenever you draw a #rCurse, your next attack deals #b3 more damage."
     ]
   },
   "hermit:ClaspedLocket": {

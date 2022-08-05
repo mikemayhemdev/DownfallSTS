@@ -131,7 +131,7 @@
   },
   "hermit:SprayPray": {
     "NAME": "마구 쏘기",
-    "DESCRIPTION": "무작위 적에게 피해를 !D! 씩 4번 줍니다. NL 뽑을 카드 더미에 *의심 을 섞어넣습니다."
+    "DESCRIPTION": "무작위 적에게 피해를 !D! 씩 3번 줍니다. NL 뽑을 카드 더미에 *의심 을 섞어넣습니다."
   },
   "hermit:Scavenge": {
     "NAME": "청소부",
@@ -304,7 +304,7 @@
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "태풍의 눈",
-    "DESCRIPTION": "hermit:정조준: NL 최대 에너지만큼 에너지를 얻습니다. NL 소멸.",
+    "DESCRIPTION": "최대 에너지만큼 에너지를 얻습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "카드를 뽑습니다. NL hermit:정조준: NL 최대 에너지만큼 에너지를 얻습니다. NL 소멸."
   },
   "hermit:FinalCanter": {

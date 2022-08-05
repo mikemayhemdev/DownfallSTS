@@ -131,7 +131,7 @@
   },
   "hermit:SprayPray": {
     "NAME": "Spray n' Pray",
-    "DESCRIPTION": "Deal !D! damage to a random enemy 4 times. NL Shuffle a *Doubt into your draw pile."
+    "DESCRIPTION": "Deal !D! damage to a random enemy 3 times. NL Shuffle a *Doubt into your draw pile."
   },
   "hermit:Scavenge": {
     "NAME": "Scavenge",
@@ -304,7 +304,7 @@
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "Eye Of The Storm",
-    "DESCRIPTION": "hermit:Dead_On: NL Gain Energy up to your maximum. NL Exhaust.",
+    "DESCRIPTION": "Gain Energy up to your maximum. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Draw a card. NL hermit:Dead_On: NL Gain Energy up to your maximum. NL Exhaust."
   },
   "hermit:FinalCanter": {

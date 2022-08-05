@@ -131,7 +131,8 @@
   },
   "hermit:SprayPray": {
     "NAME": "傾瀉火力",
-    "DESCRIPTION": "隨機造成 !D! 點傷害四次 NL 將一張 *疑慮 加入抽牌堆。"
+    "DESCRIPTION": "隨機造成 !D! 點傷害三次 NL 將一張 *疑慮 加入抽牌堆。"
+
   },
   "hermit:Scavenge": {
     "NAME": "戰利品",
@@ -304,7 +305,7 @@
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "風暴之眼",
-    "DESCRIPTION": "hermit:精準 ： NL 將 [E] 回復至上限。 NL 消耗 。",
+    "DESCRIPTION": "將 [E] 回復至上限。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "抽一張牌。 NL hermit:精準 ： NL 將 [E] 回復至上限。 NL 消耗 。"
   },
   "hermit:FinalCanter": {
