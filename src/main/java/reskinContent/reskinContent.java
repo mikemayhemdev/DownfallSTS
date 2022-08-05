@@ -76,6 +76,15 @@ public class reskinContent implements
             case ZHS:
                 language = "zhs";
                 break;
+            case ZHT:
+                language = "zht";
+                break;
+            case RUS:
+                language = "rus";
+                break;
+            case FRA:
+                language = "fra";
+                break;
 //            case ZHT:
 //                language = "zht";
 //                break;
