@@ -30,6 +30,7 @@ public class EnemyLightning extends AbstractEnemyOrb {
     private float vfxTimer = 1.0F;
 
     public EnemyLightning() {
+        super();
         this.ID = ORB_ID;
         this.img = ImageMaster.ORB_LIGHTNING;
         this.name = orbString.NAME;

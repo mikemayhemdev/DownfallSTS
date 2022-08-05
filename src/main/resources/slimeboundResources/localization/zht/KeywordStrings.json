@@ -11,7 +11,7 @@
       "分裂"
     ],
     "PROPERNAME": "分裂",
-    "DESCRIPTION": "在最前面生成每回合開始時攻擊的 #y史萊姆 爪牙。如果欄位不足，融合最後面的 #y史萊姆 再分裂並獲得 #b1 點 #y力量 。"
+    "DESCRIPTION": "在最前面生成每回合開始時攻擊的 #y史萊姆 爪牙。如果欄位不足，融合最後面的 #y史萊姆 再 #y分裂 並獲得 #b1 點 #y力量 。"
   },
   {
     "NAMES": [
@@ -26,7 +26,7 @@
       "潛力"
     ],
     "PROPERNAME": "潛力",
-    "DESCRIPTION": "強化 #y分裂 的 #y史萊姆 的攻擊傷害和附加效果。附加效果只有一半強化效率。"
+    "DESCRIPTION": "強化 #y分裂 的 #y史萊姆 的攻擊傷害和附加效果。附加效果只有 #b50% 強化效率。"
   },
   { "NAMES": [
       "命令"
@@ -41,7 +41,7 @@
       "torchhead_slime"
     ],
     "PROPERNAME": "火炬頭史萊姆",
-    "DESCRIPTION": "發動攻擊時造成 #b6 點傷害，你的 #y力量 增加其傷害。"
+    "DESCRIPTION": "攻擊時隨機造成 #b6 點傷害。 NL 你的 #y力量 提高其傷害。"
   },
   {
     "NAMES": [
@@ -53,7 +53,7 @@
       "bruiser"
     ],
     "PROPERNAME": "好鬥史萊姆",
-    "DESCRIPTION": "發動攻擊時造成 #b5 點傷害。"
+    "DESCRIPTION": "攻擊時隨機造成 #b5 點傷害。"
   },
   {
     "NAMES": [
@@ -62,7 +62,7 @@
       "cultist_slime"
     ],
     "PROPERNAME": "邪教徒史萊姆",
-    "DESCRIPTION": "發動攻擊時造成 #b6 點傷害並提升其自身傷害 #b1 點。"
+    "DESCRIPTION": "攻擊時隨機造成 #b6 點傷害並提高其傷害 #b1 點。"
   },
   {
     "NAMES": [
@@ -74,31 +74,31 @@
       "leeching"
     ],
     "PROPERNAME": "水蛭史萊姆",
-    "DESCRIPTION": "發動攻擊時造成 #b1 點傷害並給予你 #b3 點 #y格擋 。"
+    "DESCRIPTION": "攻擊時隨機造成 #b1 點傷害並給予你 #b3 點 #y格擋 。"
   },
     {
     "NAMES": [
-      "游擊史萊姆",
+      "遊擊史萊姆",
       "guerilla slime",
       "guerilla_slime",
       "guerilla slimes",
       "guerilla_slimes",
       "guerilla"
     ],
-    "PROPER_NAME": "游擊史萊姆",
-    "DESCRIPTION": "發動攻擊時對所有敵人造成 #b3 點傷害。"
+    "PROPER_NAME": "遊擊史萊姆",
+    "DESCRIPTION": "攻擊時對所有敵人造成 #b3 點傷害。"
   },
   {
     "NAMES": [
-      "污泥史萊姆",
+      "汙泥史萊姆",
       "mire slime",
       "mire_slime",
       "mire slimes",
       "mire_slimes",
       "mire"
     ],
-    "PROPERNAME": "污泥史萊姆",
-    "DESCRIPTION": "發動攻擊時造成 #b2 點傷害並給予敵人 #b2 層 #y黏液 。"
+    "PROPERNAME": "汙泥史萊姆",
+    "DESCRIPTION": "攻擊時隨機造成 #b2 點傷害並給予敵人 #b2 層 #y黏液 。"
   },
   {
     "NAMES": [
@@ -107,7 +107,7 @@
       "bronze_slime"
     ],
     "PROPERNAME": "青銅史萊姆",
-    "DESCRIPTION": "發動攻擊時對所有敵人造成 #b10 點傷害，但跳過它的下次攻擊。"
+    "DESCRIPTION": "攻擊時對所有敵人造成 #b10 點傷害，但跳過其下次攻擊。"
   },
   {
     "NAMES": [
@@ -115,7 +115,7 @@
       "舔"
     ],
     "PROPERNAME": "舔舔",
-    "DESCRIPTION": "一系列給予 #y黏液 的 #b0 耗能 #y消耗 牌，帶有各種額外效果。"
+    "DESCRIPTION": "一系列給予 #y黏液 的 #b0 耗能 #y消 #y耗 牌，帶有各種額外效果。"
   },
   {
     "NAMES": [
@@ -124,7 +124,7 @@
       "ghostflame_slime"
     ],
     "PROPERNAME": "鬼火史萊姆",
-    "DESCRIPTION": "每回合攻擊造成 #b3 點傷害並給予 #b5 層 #y灼魂 。"
+    "DESCRIPTION": "攻擊時隨機造成 #b3 點傷害並給予 #b5 層 #y灼魂 。"
   },
   {
     "NAMES": [
@@ -145,7 +145,7 @@
       "尖塔首領"
     ],
     "PROPERNAME": "尖塔首領",
-    "DESCRIPTION": "強力的0費牌，受尖塔中的首領啓發而學會的新東西。"
+    "DESCRIPTION": "強力的0費牌，受尖塔中的首領啟發而學會的新東西。"
   },
     {
     "NAMES": [
@@ -154,7 +154,7 @@
       "protector_slime"
     ],
     "PROPER_NAME": "尖刺史萊姆",
-    "DESCRIPTION": "攻擊造成 #b4 點傷害並給予你 #b4 層 #y臨時 #y荊棘 。"
+    "DESCRIPTION": "攻擊時隨機造成 #b4 點傷害並給予你 #b4 層 #y臨時 #y荊棘 。"
   },
   {
     "NAMES": [
@@ -163,7 +163,7 @@
       "insulting_slime"
     ],
     "PROPER_NAME": "嘲諷史萊姆",
-    "DESCRIPTION": "攻擊造成 #b4 點傷害並給予敵人 #b1 層 #y易傷 。"
+    "DESCRIPTION": "攻擊時隨機造成 #b4 點傷害並給予敵人 #b1 層 #y易傷 。"
   }, 
   {
     "NAMES": [
@@ -172,7 +172,7 @@
       "darkling_slime"
     ],
     "PROPER_NAME": "小黑史萊姆",
-    "DESCRIPTION": "攻擊造成 #b3 點傷害。 #y命令 時，其他 #y小黑史萊姆 也會攻擊。"
+    "DESCRIPTION": "攻擊時隨機造成 #b3 點傷害。 #y命令 時，其他 #y小黑史萊姆 也會攻擊。"
   },
   {
     "NAMES": [
@@ -181,7 +181,7 @@
       "ancient_slime"
     ],
     "PROPER_NAME": "先古史萊姆",
-    "DESCRIPTION": "攻擊造成 #b3 點傷害並使你抽 #b1 張牌。"
+    "DESCRIPTION": "攻擊時隨機造成 #b3 點傷害並使你抽 #b1 張牌。"
   },
   {
     "NAMES": [
@@ -190,13 +190,13 @@
       "time_slime"
     ],
     "PROPER_NAME": "時間史萊姆",
-    "DESCRIPTION": "攻擊造成 #b4 點傷害並給予敵人 #b1 層 #y虛弱 。"
+    "DESCRIPTION": "攻擊時隨機造成 #b4 點傷害並給予敵人 #b1 層 #y虛弱 。"
   },
     {
     "NAMES": [
-      "消耗黏液"
+      "吞食黏液"
     ],
-    "PROPER_NAME": "消耗黏液",
+    "PROPER_NAME": "吞食黏液",
     "DESCRIPTION": "當 #y攻擊 帶有 #y黏液 的敵人時可觸發的額外效果。"
   },
     {
@@ -217,9 +217,9 @@
   },
   {
     "NAMES": [
-      "重鑄 以下可能為棄用文本"
+      "重鑄 以下為棄用文本"
     ],
     "PROPERNAME": "重鑄",
-    "DESCRIPTION": "在本場戰鬥中，將卡牌替換為本職業的一張隨機卡牌，它的耗能減少 1 點。"
+    "DESCRIPTION": "在本場戰鬥中，將卡牌替換為本職業的一張隨機卡牌，其耗能減少 1 點。"
   }
 ]

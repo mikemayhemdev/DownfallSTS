@@ -20,7 +20,7 @@ import static guardian.GuardianMod.socketTypes.LIGHTBLUE;
 import static guardian.GuardianMod.socketTypes.LIGHTBLUE;
 
 
-public class Gem_Lightblue extends AbstractGuardianCard {
+public class Gem_Lightblue extends AbstractGemCard {
     public static final String ID = GuardianMod.makeID("Gem_Lightblue");
     public static final String NAME;
     public static final String IMG_PATH = "cards/gemLightblue.png";

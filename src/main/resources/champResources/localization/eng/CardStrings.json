@@ -38,17 +38,6 @@
     "NAME": "Flash Strike",
     "DESCRIPTION": "Deal !D! damage. NL *Defensive champ:Combo: Gain !M! champ:Counter and !B! Block."
   },
-  "champ:Balance": {
-    "NAME": "Balance",
-    "DESCRIPTION": "Enter champ:Defensive or champ:Gladiator. NL Gain a random champ:Combo of that Stance.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Defensive or champ:Gladiator. NL Gain a random Upgraded random champ:Combo of that Stance.",
-    "EXTENDED_DESCRIPTION": [
-      "Enter champ:Defensive. NL Add a random *Defensive champ:Combo to your hand.",
-      "Enter champ:Gladiator. NL Add a random *Gladiator champ:Combo to your hand.",
-      "Enter champ:Defensive. NL Add a random Upgraded *Defensive champ:Combo to your hand.",
-      "Enter champ:Gladiator. NL Add a random Upgraded *Gladiator champ:Combo to your hand."
-    ]
-  },
   "champ:DefensiveShout": {
     "NAME": "Defensive Shout",
     "DESCRIPTION": "Gain !M! champ:Counter. NL Enter champ:Defensive."
@@ -59,11 +48,11 @@
   },
   "champ:FocusedDefense": {
     "NAME": "Bob and Weave",
-    "DESCRIPTION": "Enter champ:Berserker. NL Gain !B! Block. NL Gain !M! Vigor."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Vigor. NL Enter champ:Berserker."
   },
   "champ:FocusedBerserking": {
     "NAME": "All Out",
-    "DESCRIPTION": "Exhaust. NL Trigger !M! times without exiting your Stance: "
+    "DESCRIPTION": "Exhaust. NL Perform !M! times without exiting your Stance: "
   },
   "champ:SetATrap": {
     "NAME": "Set A Trap",
@@ -71,21 +60,7 @@
   },
   "champ:Backstep": {
     "NAME": "Backstep",
-    "DESCRIPTION": "Enter champ:Defensive. NL Gain !M! Block, increased by *Vigor.",
-    "EXTENDED_DESCRIPTION": [
-      " NL (Gain !B! Block.)"
-    ]
-  },
-  "champ:Aggression": {
-    "NAME": "Aggression",
-    "DESCRIPTION": "Enter champ:Berserker or champ:Gladiator. NL Add a random champ:Combo card to your hand of the chosen Stance.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Berserker or champ:Gladiator. NL Add a random Upgraded champ:Combo card to your hand of the chosen Stance.",
-    "EXTENDED_DESCRIPTION": [
-      "Enter champ:Berserker. NL Add a random *Berserker champ:Combo to your hand.",
-      "Enter champ:Gladiator. NL Add a random *Gladiator champ:Combo to your hand.",
-      "Enter champ:Berserker. NL Add a random Upgraded *Berserker champ:Combo to your hand.",
-      "Enter champ:Gladiator. NL Add a random Upgraded *Gladiator champ:Combo to your hand."
-    ]
+    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block, increased by *Vigor."
   },
   "champ:BerserkersShout": {
     "NAME": "Berserker's Shout",
@@ -107,17 +82,6 @@
   "champ:Devastate": {
     "NAME": "Devastate",
     "DESCRIPTION": "Deal !D! damage !M! times. NL Costs 1 less [E] for each Finisher played this combat."
-  },
-  "champ:Control": {
-    "NAME": "Control",
-    "DESCRIPTION": "Enter champ:Defensive or champ:Berserker. NL Add a random champ:Combo card to your hand of the chosen Stance.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Defensive or champ:Berserker. NL Add a random Upgraded champ:Combo card to your hand of the chosen Stance.",
-    "EXTENDED_DESCRIPTION": [
-      "Enter champ:Defensive. NL Add a random *Defensive champ:Combo to your hand.",
-      "Enter champ:Berserker. NL Add a random *Berserker champ:Combo to your hand.",
-      "Enter champ:Defensive. NL Add a random Upgraded *Defensive champ:Combo to your hand.",
-      "Enter champ:Berserker. NL Add a random Upgraded *Berserker champ:Combo to your hand."
-    ]
   },
   "champ:Circumvent": {
     "NAME": "Circumvent",
@@ -144,7 +108,7 @@
   },
   "champ:EnchantShield": {
     "NAME": "Enchant Shield",
-    "DESCRIPTION": "Choose a card in hand. Increase its Block by !M! for this combat. NL Exhaust.",
+    "DESCRIPTION": "Choose a card. NL Increase its Block by !M! for this combat. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "A poor time for that move."
     ]
@@ -211,7 +175,7 @@
   },
   "champ:EnchantSword": {
     "NAME": "Enchant Sword",
-    "DESCRIPTION": "Choose a card in hand. Increase its damage by !M! for this combat. Exhaust.",
+    "DESCRIPTION": "Choose a card. NL Increase its damage by !M! for this combat. Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "A poor time for that move."
     ]
@@ -393,7 +357,7 @@
   },
   "champ:EnchantCrown": {
     "NAME": "Enchant Crown",
-    "DESCRIPTION": "Choose a card in hand. It costs 0 this combat. NL Exhaust.",
+    "DESCRIPTION": "Choose a card. NL It costs 0 this combat. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "A poor time for that move."
     ]

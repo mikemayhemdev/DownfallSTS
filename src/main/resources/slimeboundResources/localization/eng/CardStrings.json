@@ -131,7 +131,7 @@
   },
   "Slimebound:LeechLife": {
     "NAME": "Leech Life",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Consume - Heal HP equal to the enemy's slimeboundmod:Goop, up to !M!. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. Heal HP equal to unblocked damage. NL Exhaust."
   },
   "Slimebound:LeechingTouch": {
     "NAME": "Leeching Strike",
@@ -198,7 +198,10 @@
   "Slimebound:PrepareCrush": {
     "NAME": "Prepare: Crush",
     "DESCRIPTION": "Next turn, gain *SLIME *CRUSH, [E] [E] [E] and !M! Strength. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Next turn, gain *SLIME *CRUSH+, [E] [E] [E] [E] and !M! Strength. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Next turn, gain *SLIME *CRUSH+, [E] [E] [E] [E] and !M! Strength. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "~Slime...~ NL #r~CRUSH!!!~"
+    ]
   },
   "Slimebound:PressTheAttack": {
     "NAME": "Press the Attack",

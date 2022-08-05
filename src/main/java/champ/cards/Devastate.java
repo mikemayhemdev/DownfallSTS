@@ -15,8 +15,6 @@ public class Devastate extends AbstractChampCard {
 
         this.baseDamage = 6;
         this.magicNumber = this.baseMagicNumber = 3;
-        tags.add(ChampMod.FINISHER);
-        postInit();
     }
 
     public void triggerOnCardPlayed(AbstractCard c) {
@@ -29,7 +27,6 @@ public class Devastate extends AbstractChampCard {
         for (int i = 0; i < this.magicNumber; i++) {
             dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
         }
-        finisher();
     }
 
     public void upp() {

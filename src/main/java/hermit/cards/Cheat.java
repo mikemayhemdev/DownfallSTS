@@ -46,7 +46,7 @@ public class Cheat extends AbstractDynamicCard {
 
     public Cheat() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 4;
+        magicNumber = baseMagicNumber = 3;
         //this.cardsToPreview = new Shame();
         this.tags.add(Enums.DEADON);
         loadJokeCardImage(this, "cheat.png");

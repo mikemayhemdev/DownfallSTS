@@ -18,7 +18,7 @@ public class GetLatest extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard qCardGet = SpaghettiCode.getRandomEncode();
-        qCardGet.modifyCostForCombat(-99);
+        qCardGet.freeToPlayOnce = true;
         atb(new MakeTempCardInHandAction(qCardGet, true));
     }
 

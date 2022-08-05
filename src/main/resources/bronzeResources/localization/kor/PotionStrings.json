@@ -19,7 +19,7 @@
     "DESCRIPTIONS": [
       "#y힘을 #b",
       " 얻고 #y민첩을 #b",
-      " 얻습니다. NL #y상태이상 #y화상+을 2장 뽑을 카드 더미에 넣고 섞습니다."
+      " 얻습니다. NL Add two #yBurn+ cards into your discard pile."
     ]
   },
   "bronze:BuildAFunctionPotion": {

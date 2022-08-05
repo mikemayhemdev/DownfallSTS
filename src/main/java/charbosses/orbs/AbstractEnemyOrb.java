@@ -1,6 +1,7 @@
 package charbosses.orbs;
 
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.bosses.Defect.NewAge.ArchetypeAct3OrbsNewAge;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -28,6 +29,10 @@ public abstract class AbstractEnemyOrb extends AbstractOrb {
     public int pretendFocus = 0;
 
     public static int masterPretendFocus = 0;
+
+    public AbstractEnemyOrb() {
+        pretendFocus = masterPretendFocus;
+    }
 
     public static AbstractOrb getRandomOrb(boolean useCardRng) {
         ArrayList<AbstractOrb> orbs = new ArrayList<>();

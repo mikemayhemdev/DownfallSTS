@@ -61,7 +61,7 @@
   },
   "champ:Backstep": {
     "NAME": "后撤",
-    "DESCRIPTION": "进入 champ:防守 。 NL 获得 !M! 点 格挡 。 NL 格挡 值受 活力 加成。",
+    "DESCRIPTION": "进入 champ:防守 。 NL 获得 !B! 点 格挡 。 NL 格挡 值受 活力 加成。",
     "EXTENDED_DESCRIPTION": [
       " NL (获得 !B! 点 格挡。)"
     ]
@@ -408,28 +408,6 @@
       " 进入 champ:角斗 。 NL 将一张 champ:角斗 牌加入手牌。",
       " 进入 champ:防守 。 NL 将一张已  的 champ:防守 牌加入手牌。",
       " 进入 champ:角斗 。 NL 将一张已  的 champ:角斗 牌加入手牌。"
-    ]
-  },
-  "champ:Aggression": {
-    "NAME": "侵略",
-    "DESCRIPTION": "弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用",
-    "UPGRADE_DESCRIPTION": "进入 champ:战狂 或 champ:角斗 。 NL 将一张已  的所选 姿态 的 champ:连段 牌加入手牌。",
-    "EXTENDED_DESCRIPTION": [
-      " 进入 champ:战狂 。 NL 将一张 champ:战狂 牌加入手牌。",
-      " 进入 champ:角斗 。 NL 将一张 champ:角斗 牌加入手牌。",
-      " 进入 champ:战狂 。 NL 将一张已  的 champ:战狂 牌加入手牌。",
-      " 进入 champ:角斗 。 NL 将一张已  的 champ:角斗 牌加入手牌。"
-    ]
-  },
-  "champ:Control": {
-    "NAME": "控制",
-    "DESCRIPTION": "弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用弃用",
-    "UPGRADE_DESCRIPTION": "进入 champ:防守 或 champ:战狂 。 NL 将一张已  的所选 姿态 的 champ:连段 牌加入手牌。",
-    "EXTENDED_DESCRIPTION": [
-      " 进入 champ:防守 。 NL 将一张 champ:防守 牌加入手牌。",
-      " 进入 champ:战狂 。 NL 将一张 champ:战狂 牌加入手牌。",
-      " 进入 champ:防守 。 NL 将一张已  的 champ:防守 牌加入手牌。",
-      " 进入 champ:战狂 。 NL 将一张已   champ:战狂 牌加入手牌。"
     ]
   },
   "champ:Headbutt": {

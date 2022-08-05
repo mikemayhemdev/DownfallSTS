@@ -10,7 +10,12 @@
   "downfall:SoulToGoldChanges": {
     "TEXT": [
       "Souls",
-      "Shows how many Souls you are carrying. Souls can be given to the Heart for rewards."
+      "Shows how many Souls you are carrying. Souls can be given to the Heart for rewards.",
+      "Merchant Status",
+      "HP",
+      "Dead!",
+      "Strength",
+      "Souls stolen"
     ]
   },
   "downfall:BustKeyButton": {

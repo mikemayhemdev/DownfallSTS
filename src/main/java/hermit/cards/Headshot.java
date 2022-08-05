@@ -43,7 +43,7 @@ public class Headshot extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 7;
     private static final int UPGRADE_PLUS_DMG = 2;
 
     // /STAT DECLARATION/

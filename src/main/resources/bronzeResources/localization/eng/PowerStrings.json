@@ -2,18 +2,17 @@
   "bronze:Cloning": {
     "NAME": "Merge",
     "DESCRIPTIONS": [
-      "The next time you add a card to the Sequence, add an extra copy of it.",
-      "The next time you add a card to the Sequence, add #b",
+      "The next time you #yEncode a card, #yEncode an extra copy of it.",
+      "The next time you #yEncode a card, #yEncode #b",
       " extra copies of it."
     ]
   },
   "bronze:Default": {
     "NAME": "Class Default",
     "DESCRIPTIONS": [
-      "Add a copy of ",
-      " to the next Sequence.",
-      " to the next #b",
-      " Sequences."
+      "Next time you create a Function, #yEncode a copy of the first card in it.",
+      "Next #b",
+      " times you create a Function, #yEncode a copy of the first card in it."
     ]
   },
   "bronze:Feature": {
@@ -38,9 +37,9 @@
   "bronze:Optimize": {
     "NAME": "Optimized",
     "DESCRIPTIONS": [
-      "#yUpgrade the next card you #yEncode that can be #yUpgraded.",
+      "#yUpgrade the next #Upgradable card you #yEncode.",
       "#yUpgrade the next #b",
-      " cards you #yEncode that can be #yUpgraded."
+      " #Upgradable cards you #yEncode."
     ]
   },
   "bronze:MaxOutput": {
@@ -63,15 +62,15 @@
   "bronze:Library": {
     "NAME": "Library",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain a random card with #yEncode. It costs #b0.",
+      "At the start of your turn, gain a random card with #yEncode, it costs #b0 until played.",
       "At the start of your turn, gain #b",
-      " random cards with #yEncode. They cost #b0."
+      " random cards with #yEncode, they cost #b0 until played."
     ]
   },
   "bronze:LibraryMod": {
     "NAME": "External Library",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain a random card with #yEncode and give it Ethereal."
+      "At the start of your turn, gain a random card with #yEncode and give it #yEthereal."
     ]
   },
   "bronze:BronzeHeatsink": {
@@ -117,8 +116,8 @@
   "bronze:CleanCode": {
     "NAME": "Clean Code",
     "DESCRIPTIONS": [
-      "Remove all #yCompile Error effects from Encoded cards. Lasts for #b1 more Function.",
-      "Remove all #yCompile Error effects from Encoded cards. Lasts for #b",
+      "Remove all #yCompile #yError effects from Encoded cards. Lasts for #b1 more Function.",
+      "Remove all #yCompile #yError effects from Encoded cards. Lasts for #b",
       " Functions."
     ]
   },

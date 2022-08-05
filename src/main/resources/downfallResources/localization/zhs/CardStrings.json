@@ -21,7 +21,7 @@
   },
   "downfall:Malfunctioning": {
     "NAME": "纰漏",
-    "DESCRIPTION": "虚无 。 NL 回合结束时，将其他手牌变化为随机 状态牌 。 NL 消耗 。"
+    "DESCRIPTION": "回合结束时，将所有手牌变为随机 状态牌 。 NL 消耗 。"
   },
   "downfall:Scatterbrained": {
     "NAME": "漫不经心",

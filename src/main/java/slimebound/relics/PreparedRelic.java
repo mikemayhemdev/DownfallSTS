@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.rooms.RestRoom;
 import slimebound.actions.AddPreparedAction;
 
 public class PreparedRelic extends CustomRelic {
@@ -13,7 +15,6 @@ public class PreparedRelic extends CustomRelic {
     public static final String IMG_PATH = "relics/slimedteaSet.png";
     public static final String IMG_PATH_LARGE = "relics/slimedteaSetLarge.png";
     public static final String OUTLINE_IMG_PATH = "relics/slimedteaSetOutline.png";
-    private static final int HP_PER_CARD = 1;
     private boolean firstTurn = true;
 
     public PreparedRelic() {
@@ -44,7 +45,6 @@ public class PreparedRelic extends CustomRelic {
 
             this.firstTurn = false;
         }
-
     }
 
     public void atPreBattle() {
@@ -56,16 +56,15 @@ public class PreparedRelic extends CustomRelic {
         if (counter == -2) {
             this.pulse = true;
         }
-
     }
 
-
-    public void onEnterRestRoom() {
-        this.flash();
-        this.counter = -2;
-        this.pulse = true;
+    public void onEnterRoom(AbstractRoom room) {
+        if (room instanceof RestRoom) {
+            this.flash();
+            this.counter = -2;
+            this.pulse = true;
+        }
     }
-
 
     @Override
     public AbstractRelic makeCopy() {

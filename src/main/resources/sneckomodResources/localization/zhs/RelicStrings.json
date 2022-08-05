@@ -10,15 +10,14 @@
     "NAME": "超级蛇魂",
     "FLAVOR": "3120231321230320",
     "DESCRIPTIONS": [
-      "替换 #r",
-      " 。 NL 每回合首次打出 #y异色 牌时，获得 [E] 。"
+      "替换 [#407B93]异蛇之魂[] 。 NL 每回合首次打出 #y异色 牌时，获得 [E] 。"
     ]
   },
   "sneckomod:CleanMud": {
     "NAME": "蛇笛",
     "FLAVOR": "嘶嘶嘶嘶嘶嘶嘶……",
     "DESCRIPTIONS": [
-      "#ysneckomod:混淆 数值不为 #b3."
+      "#ysneckomod:混淆 后的耗能不为 #b3 点。"
     ]
   },
   "sneckomod:ConfusingCodex": {

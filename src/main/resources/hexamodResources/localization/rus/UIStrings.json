@@ -1,0 +1,13 @@
+{
+  "hexamod:SealCommonReward": {
+    "TEXT": [
+      "Добавьте обычную карту в колоду"
+    ]
+  },
+  "hexamod:SealSealReward": {
+    "TEXT": [
+      "Добавьте Печать в колоду",
+      "Выберите карту."
+    ]
+  }
+}

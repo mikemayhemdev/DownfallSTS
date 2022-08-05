@@ -1,0 +1,29 @@
+{
+  "gremlin:GremlinPotion": {
+    "NAME": "О-де-Грем",
+    "DESCRIPTIONS": [
+      "Активирует все #b5 способностей Гремлинов #b",
+      " раза."
+    ]
+  },
+  "gremlin:NecromancyPotion": {
+    "NAME": "Гремлин в банке",
+    "DESCRIPTIONS": [
+      "Воскрешает случ. Гремлина с #b",
+      "% от вашего Макс. ОЗ."
+    ]
+  },
+  "gremlin:SwapPotion": {
+    "NAME": "Зелье смены",
+    "DESCRIPTIONS": [
+      "Вы #yСменяетесь на случ. Гремлина."
+    ]
+  },
+  "gremlin:WizPotion": {
+    "NAME": "Зелье мощи",
+    "DESCRIPTIONS": [
+      "Даёт #b",
+      " #yБодрости."
+    ]
+  }
+}

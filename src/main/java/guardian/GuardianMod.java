@@ -209,11 +209,13 @@ public class GuardianMod implements PostDrawSubscriber,
         }
         Texture cardTexture;
         cardTexture = ImageMaster.loadImage(img);
-        cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-        int tw = cardTexture.getWidth();
-        int th = cardTexture.getHeight();
-        TextureAtlas.AtlasRegion cardImg = new TextureAtlas.AtlasRegion(cardTexture, 0, 0, tw, th);
-        ReflectionHacks.setPrivate(card, AbstractCard.class, "jokePortrait", cardImg);
+        if (cardTexture != null) {
+            cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+            int tw = cardTexture.getWidth();
+            int th = cardTexture.getHeight();
+            TextureAtlas.AtlasRegion cardImg = new TextureAtlas.AtlasRegion(cardTexture, 0, 0, tw, th);
+            ReflectionHacks.setPrivate(card, AbstractCard.class, "jokePortrait", cardImg);
+        }
     }
 
     public static final String getResourcePath(String resource) {

@@ -1,7 +1,7 @@
 {
   "bronze:DazingPulse": {
     "NAME": "晕眩反冲",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL bronze:编译 *错误 - bronze:插入 !M! 张 *晕眩 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:插入 !M! 张 *晕眩 。",
     "EXTENDED_DESCRIPTION": [
       "晕眩",
       "脉冲"
@@ -75,7 +75,7 @@
   },
   "bronze:Replicate": {
     "NAME": "副本",
-    "DESCRIPTION": "造成 !D! 点伤害。 π NL bronze:编码 时将本牌的复制品加入弃牌堆。",
+    "DESCRIPTION": "造成 !D! 点伤害。\u00A0 \u00A0 bronze:编码 时将本牌的复制品加入弃牌堆。",
     "EXTENDED_DESCRIPTION": [
       "反复",
       "拷贝"
@@ -118,7 +118,7 @@
   },
   "bronze:Separator": {
     "NAME": "分隔符",
-    "DESCRIPTION": "造成 !D! 点伤害。 π NL bronze:编码 时若在中间槽位，伤害增加 !M! 点。",
+    "DESCRIPTION": "造成 !D! 点伤害。\u00A0 \u00A0 bronze:编码 时若在中间槽位，伤害增加 !M! 点。",
     "EXTENDED_DESCRIPTION": [
       "分离",
       "分割"
@@ -151,7 +151,7 @@
   },
   "bronze:DarkDash": {
     "NAME": "暗影冲刺",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:插入 *虚空 。",
+    "DESCRIPTION": "获得 !B! 点 格挡。 NL 造成 !D! 点伤害。 NL bronze:编译 *错误 - bronze:插入 *虚空 。",
     "EXTENDED_DESCRIPTION": [
       "暗影",
       "冲刺"
@@ -239,7 +239,7 @@
   },
   "bronze:Constructor": {
     "NAME": "起始符",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 π NL bronze:编码 时若在首个槽位，格挡 增加 !M! 点 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。\u00A0 \u00A0 bronze:编码 时若在首个槽位， 格挡 增加 !M! 点 。",
     "EXTENDED_DESCRIPTION": [
       "构造",
       "失落",
@@ -297,7 +297,7 @@
   },
   "bronze:BronzeOrb": {
     "NAME": "铜制圆球",
-    "DESCRIPTION": " 固有 。 NL 造成 !D! 点伤害。 NL 随机 bronze:编码 一张抽牌堆的 bronze:编码 牌。 NL 消耗 。"
+    "DESCRIPTION": " 固有 。 NL 造成 !D! 点伤害。 NL 随机 bronze:编码 一张抽牌堆中的 bronze:编码 牌。 NL 消耗 。"
   },
   "bronze:Virus": {
     "NAME": "病毒",
@@ -319,11 +319,11 @@
   },
   "bronze:FollowUp": {
     "NAME": "数据追踪",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 若上张打出牌为 bronze:方法 ，再打出一次。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 若上张打出牌为 bronze:方法 ，再打出一次。"
   },
   "bronze:ChosenStrike": {
     "NAME": "邪教打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 -本局游戏本牌的伤害增加 !M! 点。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 -本局伤害加 !M! 。",
     "EXTENDED_DESCRIPTION": [
       "邪教",
       "咔咔"
@@ -447,7 +447,7 @@
   },
   "bronze:FormatEncoded": {
     "NAME": "碎片",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       "简洁",
       "碎片"
@@ -598,8 +598,8 @@
   },
   "bronze:BugBarrage": {
     "NAME": "错误齐射",
-    "DESCRIPTION": "获得1张 *伤口 。 NL bronze:循环 手中 状态牌 。每张造成 !D! 点伤害。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 张 *伤口 。 NL bronze:循环 手中 状态牌 。每张造成 !D! 点伤害。",
+    "DESCRIPTION": "获得1张 *伤口 。 NL bronze:循环 手中 状态牌 。 NL 每张造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 张 *伤口 。 NL bronze:循环 手中 状态牌 。 NL 每张造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       " NL （攻击 ",
       " 次）"

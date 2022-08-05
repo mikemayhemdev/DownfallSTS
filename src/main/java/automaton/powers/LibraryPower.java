@@ -21,7 +21,7 @@ public class LibraryPower extends AbstractAutomatonPower {
             flash();
             for (int i = 0; i < amount; i++) {
                 AbstractCard qCardGet = SpaghettiCode.getRandomEncode();
-                qCardGet.modifyCostForCombat(-99);
+                qCardGet.freeToPlayOnce = true;
                 addToBot(new MakeTempCardInHandAction(qCardGet, true));
             }
         }

@@ -38,15 +38,16 @@ public class LuckDrawAction extends AbstractGameAction {
             if (!p.drawPile.isEmpty()) {
                 AbstractCard c = (AbstractCard) AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - 1);
                 if (c.cost > 0)
-                    tracker += c.cost;
+                tracker += c.cost;
 
-                this.addToBot(new DrawCardAction(1));
+                this.addToTop(new LuckDrawAction(energy-tracker));
+                this.addToTop(new DrawCardAction(1));
             }
-
-            if (p.drawPile.size() <= 1)
-                this.addToBot(new EmptyDeckShuffleAction());
-
-            this.addToBot(new LuckDrawAction(energy-tracker));
+            else
+            {
+                this.addToTop(new LuckDrawAction(energy-tracker));
+                this.addToTop(new EmptyDeckShuffleAction());
+            }
 
             this.isDone = true;
             return;

@@ -499,7 +499,7 @@
   "Slimebound:TackleSelfDamagePreventPower": {
     "NAME": "鲁莽",
     "DESCRIPTIONS": [
-      "冲撞牌对自身造成的伤害提高 #b",
+      " #y冲撞 牌对自身造成的伤害提高 #b",
       " 点。"
     ]
   },

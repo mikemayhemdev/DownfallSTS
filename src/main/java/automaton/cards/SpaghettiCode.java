@@ -40,7 +40,7 @@ public class SpaghettiCode extends AbstractBronzeCard {
     public static AbstractCard getRandomEncode() {
         ArrayList<AbstractCard> eligibleCardsList = new ArrayList<>();
         for (AbstractCard c : CardLibrary.getAllCards()) {
-            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL) {
+            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL && c.rarity != CardRarity.BASIC) {
                 eligibleCardsList.add(c.makeCopy());
             }
         }
@@ -51,7 +51,7 @@ public class SpaghettiCode extends AbstractBronzeCard {
     public static AbstractCard getRandomEncode(ArrayList<AbstractCard> exceptions) {
         ArrayList<AbstractCard> eligibleCardsList = new ArrayList<>();
         for (AbstractCard c : CardLibrary.getAllCards()) {
-            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL) {
+            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL && c.rarity != CardRarity.BASIC) {
                 eligibleCardsList.add(c.makeCopy());
             }
         }

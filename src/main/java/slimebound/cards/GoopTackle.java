@@ -24,7 +24,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 
-public class GoopTackle extends AbstractSlimeboundCard {
+public class GoopTackle extends AbstractTackleCard {
     public static final String ID = "Slimebound:GoopTackle";
     public static final String NAME;
     public static final String DESCRIPTION;

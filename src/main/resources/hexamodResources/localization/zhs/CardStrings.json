@@ -82,15 +82,15 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "牺牲",
-    "DESCRIPTION": "消耗 一张手牌。 NL 若为攻击或技能牌，随机获得一张相反类型的牌。",
-    "UPGRADE_DESCRIPTION": "消耗 一张手牌。 NL 若为攻击或技能牌，随机获得一张相反类型的牌。 NL 其耗能减1。",
+    "DESCRIPTION": "消耗 一张手牌。 NL 若为 *攻击 或 *技能 牌， NL 将其变为相反类型的牌。",
+    "UPGRADE_DESCRIPTION": "消耗 一张手牌。 NL 若为 *攻击 或 *技能 牌， NL 将其变为相反类型的牌。 NL 其耗能减1。",
     "EXTENDED_DESCRIPTION": [
      "消耗作为必要的牺牲。"
     ]
   },
   "hexamod:TimeOfNeed": {
     "NAME": "久逢甘露",
-    "DESCRIPTION": "保留 。 NL 随机获得一张耗能为0的能力牌。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL 随机获得一张 *能力 牌。 NL 其耗能为0。 NL 消耗 。"
   },
   "hexamod:SwordOfDarkness": {
     "NAME": "黑夜之剑",
@@ -130,7 +130,7 @@
   },
   "hexamod:Haunt": {
     "NAME": "鬼手",
-    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 抽 !M! 张牌。 NL 手牌变为 虚无 。"
+    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 抽 !M! 张牌。 NL 将手牌附加 虚无 。"
   },
   "hexamod:RecurringNightmare": {
     "NAME": "梦魇幻象",
@@ -207,8 +207,8 @@
   },
   "hexamod:ExtraCrispy": {
     "NAME": "脆烤",
-    "DESCRIPTION": "卡牌和鬼火额外给予 !M! 层 hexamod:灼魂 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 卡牌和鬼火额外给予 !M! 层 hexamod:灼魂 。"
+    "DESCRIPTION": "卡牌与鬼火额外给予 !M! 层 hexamod:灼魂 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 卡牌与鬼火额外给予 !M! 层 hexamod:灼魂 。"
   },
   "hexamod:GhostflameBarrier": {
     "NAME": "亡魂屏障",
@@ -245,7 +245,7 @@
   "hexamod:RainOfEmbers": {
     "NAME": "焰烬雨",
     "DESCRIPTION": "造成 !D! 点伤害并给 NL 予 !burny! 层 hexamod:灼魂 X 次。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，给 NL 予 !burny! 层 hexamod:灼魂 和 1层 虚弱 X 次。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，给 NL 予 !burny! 层 hexamod:灼魂 与 1层 虚弱 X 次。"
   },
   "hexamod:VolcanoVisage": {
     "NAME": "火山面貌",
@@ -266,7 +266,7 @@
   "hexamod:GhostflameInferno": {
     "NAME": "此即地狱",
     "DESCRIPTION": "保留 。 NL hexamod:点燃 hexamod:狱焱 鬼火 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL hexamod:点燃 当前和 hexamod:狱焱 鬼火 。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "保留 。 NL hexamod:点燃 当前与 hexamod:狱焱 鬼火 。 NL 消耗 。"
   },
   "hexamod:ChargedBarrage": {
     "NAME": "蓄能焰幕",
@@ -306,8 +306,8 @@
   },
   "hexamod:ThirdSeal": {
     "NAME": "第三容器",
-    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时， NL 额外获得一张牌。",
-    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时， NL 额外获得一张牌。"
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时， NL 额外获得一次卡牌奖励。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时， NL 额外获得一次卡牌奖励。"
   },
   "hexamod:FourthSeal": {
     "NAME": "第四容器",
@@ -330,7 +330,7 @@
   },
   "hexamod:CouncilsJustice": {
     "NAME": "议会裁决",
-    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 每张 消耗 的 *灵体 提高伤害 !M! 点。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每张 消耗 的 *灵体 提高伤害 !M! 点。 NL 消耗 。"
   },
   "hexamod:ForkedFlame": {
     "NAME": "歧路火焰",

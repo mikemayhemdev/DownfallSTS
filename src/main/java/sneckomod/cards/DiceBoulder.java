@@ -14,7 +14,7 @@ public class DiceBoulder extends AbstractSneckoCard {
 
     public DiceBoulder() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 31;
+        baseDamage = 27;
         baseMagicNumber = magicNumber = 1;
         tags.add(SneckoMod.RNG);
     }
@@ -61,11 +61,11 @@ public class DiceBoulder extends AbstractSneckoCard {
     }
 
     public void upgrade() {
-        this.upgradeDamage(3 + timesUpgraded);// 49
-        upgradeMagicNumber(7 + timesUpgraded);
-        ++this.timesUpgraded;// 50
-        this.upgraded = true;// 51
-        this.name = cardStrings.NAME + "+" + this.timesUpgraded;// 52
-        this.initializeTitle();// 53
+        this.upgradeDamage(3 + timesUpgraded);
+        upgradeMagicNumber(6 + timesUpgraded);
+        ++this.timesUpgraded;
+        this.upgraded = true;
+        this.name = cardStrings.NAME + "+" + this.timesUpgraded;
+        this.initializeTitle();
     }
 }

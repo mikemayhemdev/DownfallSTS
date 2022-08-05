@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.ArrayList;
 
-public class EnMeditate extends AbstractBossCard {
+public class EnMeditate extends AbstractBossCard { // TODO: make pretty put card in hand effect
     public static final String ID = "downfall_Charboss:Meditate";
     private static final CardStrings cardStrings;
 

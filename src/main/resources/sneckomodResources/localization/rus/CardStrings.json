@@ -1,0 +1,333 @@
+{
+  "sneckomod:CheapStock": {
+    "NAME": "Дешёвые акции",
+    "DESCRIPTION": "Снижает стоимость самой дорогой sneckomod:Внеклассовой карты в руке на 1 в начале каждого вашего хода.",
+    "UPGRADE_DESCRIPTION": "Начальная. NL Снижает стоимость самой дорогой sneckomod:Внеклассовой карты в руке на 1 в начале каждого вашего хода."
+  },
+  "sneckomod:Cheat": {
+    "NAME": "Чистая удача",
+    "DESCRIPTION": "sneckomod:Анти-змекко. NL Даёт sneckomod:Везение до конца хода. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Анти-змекко. NL Даёт sneckomod:Везение до конца хода."
+  },
+  "sneckomod:DangerNoodle": {
+    "NAME": "Опасная змейка",
+    "DESCRIPTION": "Наносит !D! урона. NL Повторяет за каждую sneckomod:Внеклассовую карту в руке и Сжигает их."
+  },
+  "sneckomod:Defend": {
+    "NAME": "Оборона",
+    "DESCRIPTION": "Даёт !B! Защиты."
+  },
+  "sneckomod:DefensiveFlair": {
+    "NAME": "Защитное чутьё",
+    "DESCRIPTION": "Даёт !B! Защиты и доп. !M! Защиты за каждую sneckomod:Внеклассовую карту в руке."
+  },
+  "sneckomod:DiceBlock": {
+    "NAME": "Блок костями",
+    "DESCRIPTION": "Даёт !M! - !B! Защиты."
+  },
+  "sneckomod:DiceBoulder": {
+    "NAME": "Кость-валун",
+    "DESCRIPTION": "Наносит !M! - !D! урона. NL Может быть улучшена любое кол-во раз."
+  },
+  "sneckomod:DiceCrush": {
+    "NAME": "Раздавить костью",
+    "DESCRIPTION": "Наносит !M! - !D! урона."
+  },
+  "sneckomod:GlitteringGambit": {
+    "NAME": "Блестящий гамбит",
+    "DESCRIPTION": "sneckomod:Анти-змекко. NL Даёт !M! - 30 *золота. NL Сжигается."
+  },
+  "sneckomod:IronFang": {
+    "NAME": "Железный клык",
+    "DESCRIPTION": "Наносит !qqq! - !D! урона. NL Даёт !M! - !B! Защиты."
+  },
+  "sneckomod:ImprovisedAttack": {
+    "NAME": "Импровизированная атака",
+    "DESCRIPTION": "Наносит !D! урона. NL Добавляет в руку случ. sneckomod:Внеклассовую Атаку и sneckomod:Спутывает её."
+  },
+  "sneckomod:ImprovisedGuard": {
+    "NAME": "Импровизированная оборона",
+    "DESCRIPTION": "Даёт !B! Защиты. NL Добавляет в руку случ. sneckomod:Внеклассовый Навык и sneckomod:Спутывает его."
+  },
+  "sneckomod:Nope": {
+    "NAME": "Не-а",
+    "DESCRIPTION": "sneckomod:Анти-змекко. NL Сжигает карту и добавляет в руку случ. карту того же класса.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Анти-змекко. NL Сжигает карту и добавляет в руку случ. карту того же класса. NL Она стоит на 1 меньше.",
+    "EXTENDED_DESCRIPTION": [
+      ", чтобы сжечь и добавить в руку случ. карту того же класса."
+    ]
+  },
+  "sneckomod:MasterEye": {
+    "NAME": "Мастер-глаз",
+    "DESCRIPTION": "Даёт Замешательство. NL Вы берёте !M! доп. карту в начале каждого вашего хода.",
+    "UPGRADE_DESCRIPTION": "Даёт Замешательство. NL Вы берёте !M! доп. карты в начале каждого вашего хода."
+  },
+  "sneckomod:Memorize": {
+    "NAME": "Заучить",
+    "DESCRIPTION": "sneckomod:Анти-змекко. Мимолётная. NL Выберите *Неопределённую карту в руке, которая есть у вас в колоде, и sneckomod:Опознайте её.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Анти-змекко. Мимолётная. Оставляется. NL Выберите *Неопределённую карту в руке, которая есть у вас в колоде, и sneckomod:Опознайте её.",
+    "EXTENDED_DESCRIPTION": [
+      ", чтобы Опознать её."
+    ]
+  },
+  "sneckomod:MixItUp": {
+    "NAME": "Вперемешку!",
+    "DESCRIPTION": "*Преобразует ваши зелья. NL Наносит !D! урона !M! раза. NL Сжигается."
+  },
+  "sneckomod:MorePower": {
+    "NAME": "Больше силы!",
+    "DESCRIPTION": "Вы получите Улучшенную *Неопределённую карту в награду, в конце боя."
+  },
+  "sneckomod:Mudshield": {
+    "NAME": "Щитоспут",
+    "DESCRIPTION": "Даёт !M! Защиты, когда вы sneckomod:Спутываете карту.",
+    "UPGRADE_DESCRIPTION": "Начальная. NL Даёт !M! Защиты, когда вы sneckomod:Спутываете карту."
+  },
+  "sneckomod:PureSnecko": {
+    "NAME": "Заменить",
+    "DESCRIPTION": "sneckomod:Анти-змекко. NL Преобразует все sneckomod:Внеклассовые карты в руке.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Анти-змекко. NL Преобразует все sneckomod:Внеклассовые карты в руке. NL Они стоят на 1 меньше."
+  },
+  "sneckomod:QuickBite": {
+    "NAME": "Змеиное царапание",
+    "DESCRIPTION": "Наносит !D! урона. NL Вы берёте !M! - 2 карты. NL sneckomod:Спутывает самую дорогую карту в руке."
+  },
+  "sneckomod:QuickMove": {
+    "NAME": "Резвое движение",
+    "DESCRIPTION": "Даёт !B! Защиты. NL sneckomod:Спутывает самую дорогую карту в руке.",
+    "UPGRADE_DESCRIPTION": "Даёт !B! Защиты. NL sneckomod:Спутывает !M! самых дорогих карты в руке."
+  },
+  "sneckomod:RainOfDice": {
+    "NAME": "Дождь из костей",
+    "DESCRIPTION": "Наносит !qqq! - !D! урона случ. врагу. NL sneckomod:Спутывает себя и возвращается в руку."
+  },
+  "sneckomod:Restock": {
+    "NAME": "Пополнить",
+    "DESCRIPTION": "sneckomod:Анти-змекко. NL Вы сбрасываете все карты в руке, затем берёте 5 - 10 карт. NL Сжигается."
+  },
+  "sneckomod:Rotation": {
+    "NAME": "Вращение",
+    "DESCRIPTION": "sneckomod:Анти-змекко. NL Вы сбрасываете все sneckomod:Внеклассовые карты в руке и берёте столько же.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Анти-змекко. NL Вы сбрасываете все sneckomod:Внеклассовые карты в руке и берёте на !M! карту больше."
+  },
+  "sneckomod:SerpentIdol": {
+    "NAME": "Змеиный идол",
+    "DESCRIPTION": "sneckomod:Анти-змекко. NL Выберите 1 из 3 случ. sneckomod:Внеклассовых карт и добавьте её в руку. Она стоит 0 в этом ходу. NL Сжигается."
+  },
+  "sneckomod:SerpentMind": {
+    "NAME": "Экзотический облик",
+    "DESCRIPTION": "Вы берёте карту, когда разыгрываете sneckomod:Внеклассовую карту."
+  },
+  "sneckomod:SlitherStrike": {
+    "NAME": "Скользящий удар",
+    "DESCRIPTION": "Наносит !D! урона. NL Снижает стоимость всех sneckomod:Внеклассовых карт в руке на 1 до конца хода."
+  },
+  "sneckomod:SnakeSap": {
+    "NAME": "Змеиное иссушение",
+    "DESCRIPTION": "sneckomod:Анти-змекко. NL Наносит !qqq! - !D! урона. NL Даёт 1 - !M! [E] . NL Сжигается."
+  },
+  "sneckomod:SnekBeam": {
+    "NAME": "Змекко-луч",
+    "DESCRIPTION": "Наносит урон ВСЕМ врагам, равный кол-ву *Неопределённых карт в колоде. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Наносит урон ВСЕМ врагам, равный кол-ву *Неопределённых карт в колоде.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Наносит !D! урона.) NL Сжигается.",
+      " NL (Наносит !D! урона.)"
+    ]
+  },
+  "sneckomod:SnekBite": {
+    "NAME": "Укус змекко",
+    "DESCRIPTION": "Наносит !D! урона. NL sneckomod:Спутывает самую дорогую карту в руке.",
+    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL sneckomod:Спутывает самую дорогую карту в руке."
+  },
+  "sneckomod:SoulCleanse": {
+    "NAME": "Очищение души",
+    "DESCRIPTION": "sneckomod:Анти-змекко. NL sneckomod:Спутывает все карты в руке. Они будут стоить не больше 2. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Анти-змекко. NL sneckomod:Спутывает все карты в руке. Они будут стоить не больше 2."
+  },
+  "sneckomod:SoulDraw": {
+    "NAME": "Добор души",
+    "DESCRIPTION": "sneckomod:Анти-змекко. NL Добавляет в руку !M! случ. sneckomod:Внеклассовые карты. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Анти-змекко. NL Вы берёте 1 - !M! карты."
+  },
+  "sneckomod:SoulExchange": {
+    "NAME": "Обмен души",
+    "DESCRIPTION": "sneckomod:Анти-змекко. NL Вы берёте карту. NL Выберите карту и Преобразуйте все карты в руке, в её класс.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Анти-змекко. NL Вы берёте !M! карты. NL Выберите карту и Преобразуйте все карты в руке, в её класс.",
+    "EXTENDED_DESCRIPTION": [
+      ", чтобы сжечь для Обмена души."
+    ]
+  },
+  "sneckomod:SoulRoll": {
+    "NAME": "Переброс души",
+    "DESCRIPTION": "sneckomod:Анти-змекко. NL sneckomod:Спутывает все карты в руке.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Анти-змекко. NL sneckomod:Спутывает все карты в руке. NL Вы берёте карту."
+  },
+  "sneckomod:Strike": {
+    "NAME": "Удар",
+    "DESCRIPTION": "Наносит !D! урона."
+  },
+  "sneckomod:TailWhip": {
+    "NAME": "Хлестнуть хвостом",
+    "DESCRIPTION": "Наносит !D! урона. NL Накладывает !M! - 2 Слабости и !M! - 2 Уязвимости."
+  },
+  "sneckomod:Transmogrify": {
+    "NAME": "Превращение",
+    "DESCRIPTION": "Выберите и удалите 1 из 2 Реликвий. NL Даёт случ. Реликвию той же редкости. NL Сжигается.",
+    "EXTENDED_DESCRIPTION": [
+      "У меня нет реликвий на сссмену.",
+      "Выберите Реликвию, которую хотите удалить.",
+      "Удалите ",
+      " и получите другую реликвию ",
+      "."
+    ]
+  },
+  "sneckomod:TrashToTreasure": {
+    "NAME": "Из мусора в сокровище",
+    "DESCRIPTION": "sneckomod:Анти-змекко. NL Вы сжигаете карту. NL Даёт [E] , равную её стоимости. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Анти-змекко. NL Вы сжигаете карту. NL Даёт [E] , равную её стоимости."
+  },
+  "sneckomod:UnendingSupply": {
+    "NAME": "Нескончаемые запасы",
+    "DESCRIPTION": "Добавляет в руку sneckomod:Внеклассовую карту, в начале каждого вашего хода."
+  },
+  "sneckomod:Unknown": {
+    "NAME": "??? Начальная",
+    "DESCRIPTION": "*Неопределённая начальная карта.",
+	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая начальная карта."
+  },
+  "sneckomod:Unknown0Cost": {
+    "NAME": "??? стоимостью 0",
+    "DESCRIPTION": "*Неопределённая карта со стоимостью 0.",
+	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта со стоимостью 0."
+  },
+  "sneckomod:Unknown1Cost": {
+    "NAME": "??? стоимостью 1",
+    "DESCRIPTION": "*Неопределённая карта со стоимостью 1.",
+	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта со стоимостью 1."
+  },
+  "sneckomod:Unknown2Cost": {
+    "NAME": "??? стоимостью 2",
+    "DESCRIPTION": "*Неопределённая карта со стоимостью 2.",
+	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта со стоимостью 2."
+  },
+  "sneckomod:Unknown3Cost": {
+    "NAME": "??? стоимостью 3",
+    "DESCRIPTION": "*Неопределённая карта со стоимостью 3.",
+	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта со стоимостью 3."
+  },
+  "sneckomod:UnknownBlock": {
+    "NAME": "??? Защита",
+    "DESCRIPTION": "*Неопределённая карта Защиты.",
+	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта Защиты."
+  },
+  "sneckomod:UnknownBoss": {
+    "NAME": "??? Босса",
+    "DESCRIPTION": "*Неопределённая Бесцветная карта Босса.",
+	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта Босса."
+  },
+  "sneckomod:UnknownClass": {
+    "NAME": "??? Класса",
+    "DESCRIPTION": "*Неопределённая ВыНикогдаНеДолжныБылиЭтоУвидеть-СообщитеРазработчику карта.",
+	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая ВыНикогдаНеДолжныБылиЭтоУвидеть-СообщитеРазработчику карта."
+  },
+  "sneckomod:UnknownColorless": {
+    "NAME": "??? Бесцветная",
+    "DESCRIPTION": "*Неопределённая Бесцветная карта.",
+	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая Бесцветная карта."
+  },
+  "sneckomod:UnknownCommonAttack": {
+    "NAME": "??? -О- Атака",
+    "DESCRIPTION": "*Неопределённая Обычная Атака.",
+	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая Обычная Атака."
+  },
+  "sneckomod:UnknownCommonSkill": {
+    "NAME": "??? -О- Навык",
+    "DESCRIPTION": "*Неопределённый Обычный Навык.",
+	"UPGRADE_DESCRIPTION": "Улучшенный *Неопределённый Обычный Навык."
+  },
+  "sneckomod:UnknownDexterity": {
+    "NAME": "??? Ловкость",
+    "DESCRIPTION": "*Неопределённая карта Ловкости.",
+	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта Ловкости."
+  },
+  "sneckomod:UnknownDraw": {
+    "NAME": "??? Добор",
+    "DESCRIPTION": "*Неопределённая карта добора.",
+	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта добора."
+  },
+  "sneckomod:UnknownEthereal": {
+    "NAME": "??? Эфирная",
+    "DESCRIPTION": "*Неопределённая Эфирная карта.",
+	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая Эфирная карта."
+  },
+  "sneckomod:UnknownExhaust": {
+    "NAME": "??? Сжигается",
+    "DESCRIPTION": "*Неопределённая Сжигаемая карта.",
+	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая Сжигаемая карта."
+  },
+  "sneckomod:UnknownRareAttack": {
+    "NAME": "??? -Р- Атака",
+    "DESCRIPTION": "*Неопределённая Редкая Атака.",
+	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая Редкая Атака."
+  },
+  "sneckomod:UnknownRarePower": {
+    "NAME": "??? -Р- Талант",
+    "DESCRIPTION": "*Неопределённый Редкий Талант.",
+	"UPGRADE_DESCRIPTION": "Улучшенный *Неопределённый Редкий Талант."
+  },
+  "sneckomod:UnknownRareSkill": {
+    "NAME": "??? -Р- Навык",
+    "DESCRIPTION": "*Неопределённый Редкий Навык.",
+	"UPGRADE_DESCRIPTION": "Улучшенный *Неопределённый Редкий Навык."
+  },
+  "sneckomod:UnknownStrength": {
+    "NAME": "??? Сила",
+    "DESCRIPTION": "*Неопределённая карта Силы.",
+	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта Силы."
+  },
+  "sneckomod:UnknownStrike": {
+    "NAME": "??? Удар",
+    "DESCRIPTION": "*Неопределённый удар.",
+	"UPGRADE_DESCRIPTION": "Улучшенный *Неопределённый удар."
+  },
+  "sneckomod:UnknownUncommonAttack": {
+    "NAME": "??? -Н- Атака",
+    "DESCRIPTION": "*Неопределённая Необычная Атака.",
+	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая Необычная Атака."
+  },
+  "sneckomod:UnknownUncommonPower": {
+    "NAME": "??? -Н- Талант",
+    "DESCRIPTION": "*Неопределённый Необычный Талант.",
+	"UPGRADE_DESCRIPTION": "Улучшенный *Неопределённый Необычный Талант."
+  },
+  "sneckomod:UnknownUncommonSkill": {
+    "NAME": "??? -Н- Навык",
+    "DESCRIPTION": "*Неопределённый Необычный Навык.",
+	"UPGRADE_DESCRIPTION": "Улучшенный *Неопределённый Необычный Навык."
+  },
+  "sneckomod:UnknownVulnerable": {
+    "NAME": "??? Уязвимость",
+    "DESCRIPTION": "*Неопределённая карта Уязвимости.",
+	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта Уязвимости."
+  },
+  "sneckomod:UnknownWeak": {
+    "NAME": "??? Слабость",
+    "DESCRIPTION": "*Неопределённая карта Слабости.",
+	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта Слабости."
+  },
+  "sneckomod:UnknownX": {
+    "NAME": "??? стоимостью X",
+    "DESCRIPTION": "*Неопределённая карта со стоимостью X.",
+	"UPGRADE_DESCRIPTION": "Улучшенная *Неопределённая карта со стоимостью X."
+  },
+  "sneckomod:UnlimitedRolls": {
+    "NAME": "Бесконечные броски",
+    "DESCRIPTION": "Добавляет в руку gremlin:Эхо *Переброса *души, в начале каждого вашего хода.",
+    "UPGRADE_DESCRIPTION": "Начальная. NL Добавляет в руку gremlin:Эхо *Переброса *души, в начале каждого вашего хода."
+  },
+  "sneckomod:WideSting": {
+    "NAME": "Широкий укус",
+    "DESCRIPTION": "Наносит !M! - !D! урона ВСЕМ врагам. NL Улучшает все sneckomod:Внеклассовые карты в руке."
+  }
+}

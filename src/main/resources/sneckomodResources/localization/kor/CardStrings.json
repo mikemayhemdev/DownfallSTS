@@ -193,107 +193,133 @@
   },
   "sneckomod:Unknown": {
     "NAME": "??? 시작",
-    "DESCRIPTION": "*Unknown gremlin:시작 카드."
+    "DESCRIPTION": "*Unknown gremlin:시작 카드.",
+    "UPGRADE_DESCRIPTION": "*Unknown gremlin:시작 강화된 카드."
   },
   "sneckomod:Unknown0Cost": {
     "NAME": "??? 0 비용",
-    "DESCRIPTION": "*Unknown 0 비용 카드."
+    "DESCRIPTION": "강화된 *Unknown 0 비용 카드",
+    "UPGRADE_DESCRIPTION": "강화된 *Unknown 0 비용 카드."
   },
   "sneckomod:Unknown1Cost": {
     "NAME": "??? 1 비용",
-    "DESCRIPTION": "*Unknown 1 비용 카드."
+    "DESCRIPTION": "강화된 *Unknown 1 비용 카드",
+    "UPGRADE_DESCRIPTION": "강화된 *Unknown 1 비용 강화된 카드."
   },
   "sneckomod:Unknown2Cost": {
     "NAME": "??? 2 비용",
-    "DESCRIPTION": "*Unknown 2 비용 카드."
+    "DESCRIPTION": "강화된 *Unknown 2 비용 카드",
+    "UPGRADE_DESCRIPTION": "강화된 *Unknown 2 비용 강화된 카드."
   },
   "sneckomod:Unknown3Cost": {
     "NAME": "??? 3 비용",
-    "DESCRIPTION": "*Unknown 3 비용 카드."
+    "DESCRIPTION": "강화된 *Unknown 3 비용 카드",
+    "UPGRADE_DESCRIPTION": "강화된 *Unknown 3 비용 강화된 카드."
   },
   "sneckomod:UnknownBlock": {
     "NAME": "??? 방어도",
-    "DESCRIPTION": "*Unknown 방어도 카드."
+    "DESCRIPTION": "강화된 *Unknown 방어도 카드",
+    "UPGRADE_DESCRIPTION": "강화된 *Unknown 방어도 강화된 카드."
   },
   "sneckomod:UnknownBoss": {
     "NAME": "??? 보스",
-    "DESCRIPTION": "*Unknown 무색 보스 카드."
+    "DESCRIPTION": "강화된 *Unknown 무색 보스 카드",
+    "UPGRADE_DESCRIPTION": "강화된 *Unknown 무색 보스 강화된 카드."
   },
   "sneckomod:UnknownClass": {
     "NAME": "???",
-    "DESCRIPTION": "*Unknown 이걸절대볼수없으니이걸보면-개발자에게문의하시오 카드."
+    "DESCRIPTION": "강화된 *Unknown 이걸절대볼수없으니이걸보면-개발자에게문의하시오 카드",
+    "UPGRADE_DESCRIPTION": "강화된 *Unknown 이걸절대볼수없으니이걸보면-개발자에게문의하시오 강화된 카드."
   },
   "sneckomod:UnknownColorless": {
     "NAME": "??? 무색",
-    "DESCRIPTION": "*Unknown 무색 카드."
+    "DESCRIPTION": "강화된 *Unknown 무색 카드",
+    "UPGRADE_DESCRIPTION": "강화된 *Unknown 무색 강화된 카드."
   },
   "sneckomod:UnknownCommonAttack": {
     "NAME": "??? 일반 공격",
-    "DESCRIPTION": "*Unknown 일반 공격 카드."
+    "DESCRIPTION": "강화된 *Unknown 일반 공격 카드",
+    "UPGRADE_DESCRIPTION": "강화된 *Unknown 일반 공격 강화된 카드."
   },
   "sneckomod:UnknownCommonSkill": {
     "NAME": "??? 일반 스킬",
-    "DESCRIPTION": "*Unknown 일반 스킬 카드."
+    "DESCRIPTION": "강화된 *Unknown 일반 스킬 카드",
+    "UPGRADE_DESCRIPTION": "강화된 *Unknown 일반 스킬 강화된 카드."
   },
   "sneckomod:UnknownDexterity": {
     "NAME": "??? 민첩",
-    "DESCRIPTION": "*Unknown 민첩 카드."
+    "DESCRIPTION": "강화된 *Unknown 민첩 카드",
+    "UPGRADE_DESCRIPTION": "강화된 *Unknown 민첩 강화된 카드."
   },
   "sneckomod:UnknownDraw": {
     "NAME": "??? 뽑기",
-    "DESCRIPTION": "*Unknown 뽑기 카드."
+    "DESCRIPTION": "강화된 *Unknown 뽑기 카드",
+    "UPGRADE_DESCRIPTION": "강화된 *Unknown 뽑기 강화된 카드."
   },
   "sneckomod:UnknownEthereal": {
     "NAME": "??? 휘발성",
-    "DESCRIPTION": "*Unknown 휘발성 카드."
+    "DESCRIPTION": "*Unknown 휘발성 강화된 카드",
+    "UPGRADE_DESCRIPTION": "*Unknown 휘발성 강화된 강화된 카드."
   },
   "sneckomod:UnknownExhaust": {
     "NAME": "??? 소멸",
-    "DESCRIPTION": "*Unknown 소멸 카드."
+    "DESCRIPTION": "*Unknown 소멸 카드",
+    "UPGRADE_DESCRIPTION": "*Unknown 소멸 강화된 카드."
   },
   "sneckomod:UnknownRareAttack": {
     "NAME": "??? 희귀 공격",
-    "DESCRIPTION": "*Unknown 희귀 공격 카드."
+    "DESCRIPTION": "*Unknown 희귀 공격 카드",
+    "UPGRADE_DESCRIPTION": "*Unknown 희귀 공격 강화된 카드."
   },
   "sneckomod:UnknownRarePower": {
     "NAME": "??? 희귀 파워",
-    "DESCRIPTION": "*Unknown 희귀 파워 카드."
+    "DESCRIPTION": "*Unknown 희귀 파워 카드",
+    "UPGRADE_DESCRIPTION": "*Unknown 희귀 파워 강화된 카드."
   },
   "sneckomod:UnknownRareSkill": {
     "NAME": "??? 희귀 스킬",
-    "DESCRIPTION": "*Unknown 희귀 스킬 카드."
+    "DESCRIPTION": "*Unknown 희귀 스킬 카드",
+    "UPGRADE_DESCRIPTION": "*Unknown 희귀 스킬 강화된 카드."
   },
   "sneckomod:UnknownStrength": {
     "NAME": "??? 힘",
-    "DESCRIPTION": "*Unknown 힘 카드."
+    "DESCRIPTION": "*Unknown 힘 카드",
+    "UPGRADE_DESCRIPTION": "*Unknown 힘 강화된 카드."
   },
   "sneckomod:UnknownStrike": {
     "NAME": "??? 타격",
-    "DESCRIPTION": "*Unknown 타격 카드."
+    "DESCRIPTION": "*Unknown 타격 카드",
+    "UPGRADE_DESCRIPTION": "*Unknown 타격 강화된 카드."
   },
   "sneckomod:UnknownUncommonAttack": {
     "NAME": "??? 특별 공격",
-    "DESCRIPTION": "*Unknown 특별 공격 카드."
+    "DESCRIPTION": "*Unknown 특별 공격 카드",
+    "UPGRADE_DESCRIPTION": "*Unknown 특별 공격 강화된 카드."
   },
   "sneckomod:UnknownUncommonPower": {
     "NAME": "??? 특별 파워",
-    "DESCRIPTION": "*Unknown 특별 파워 카드."
+    "DESCRIPTION": "*Unknown 특별 파워 카드",
+    "UPGRADE_DESCRIPTION": "*Unknown 특별 파워 강화된 카드."
   },
   "sneckomod:UnknownUncommonSkill": {
     "NAME": "??? 특별 스킬",
-    "DESCRIPTION": "*Unknown 특별 스킬 카드."
+    "DESCRIPTION": "*Unknown 특별 스킬 카드",
+    "UPGRADE_DESCRIPTION": "*Unknown 특별 스킬 강화된 카드."
   },
   "sneckomod:UnknownVulnerable": {
     "NAME": "??? 취약",
-    "DESCRIPTION": "*Unknown 취약 카드."
+    "DESCRIPTION": "*Unknown 취약 카드",
+    "UPGRADE_DESCRIPTION": "*Unknown 취약 강화된 카드."
   },
   "sneckomod:UnknownWeak": {
     "NAME": "??? 약화",
-    "DESCRIPTION": "*Unknown 약화 카드."
+    "DESCRIPTION": "*Unknown 약화 카드",
+    "UPGRADE_DESCRIPTION": "*Unknown 약화 강화된 카드."
   },
   "sneckomod:UnknownX": {
     "NAME": "??? X 비용",
-    "DESCRIPTION": "*Unknown X 비용 카드."
+    "DESCRIPTION": "*Unknown X 비용 카드",
+    "UPGRADE_DESCRIPTION": "*Unknown X 비용 강화된 카드."
   },
   "sneckomod:UnlimitedRolls": {
     "NAME": "무제한 도박",

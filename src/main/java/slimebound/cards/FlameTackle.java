@@ -22,7 +22,7 @@ import slimebound.powers.TackleBuffPower;
 import slimebound.powers.TackleDebuffPower;
 
 
-public class FlameTackle extends AbstractSlimeboundCard {
+public class FlameTackle extends AbstractTackleCard {
     public static final String ID = "Slimebound:FlameTackle";
     public static final String NAME;
     public static final String DESCRIPTION;

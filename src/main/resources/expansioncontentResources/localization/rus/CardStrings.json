@@ -1,0 +1,90 @@
+{
+  "expansioncontent:GuardianWhirl": {
+    "NAME": "Вихрь Стража",
+    "DESCRIPTION": "Требует не менее 10 Защиты. NL Наносит !D! урона ВСЕМ врагам 4 раза. NL Сжигается.",
+    "EXTENDED_DESCRIPTION": [
+      "Требуется больше Защиты."
+    ]
+  },
+  "expansioncontent:Hexaburn": {
+    "NAME": "Гекс-огонь",
+    "DESCRIPTION": "Наносит !D! урона случ. врагу 6 раз через !M! хода. NL Сила влияет на эту карту."
+  },
+  "expansioncontent:InvincibleStrength": {
+    "NAME": "Непобедимость",
+    "DESCRIPTION": "Даёт 10 expansioncontent:Непобедимости. NL Если уже имеется expansioncontent:Непобедимость, эффект действует в вашем след. ходу."
+  },
+  "expansioncontent:HyperBeam": {
+    "NAME": "Автома-луч",
+    "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам. NL В начале вашего след. хода, вы получите на 1 [E] меньше. NL Сжигается."
+  },
+  "expansioncontent:LastStand": {
+    "NAME": "Последний шанс",
+    "DESCRIPTION": "Снимает все ваши отриц. эффекты. NL Даёт 1 Силы. NL Если у вас меньше 50% ОЗ, даёт 2 Силы.",
+    "UPGRADE_DESCRIPTION": "Снимает все ваши отриц. эффекты. NL Даёт 1 Силы. NL Если у вас меньше 50% ОЗ, Восполняет !M! ОЗ и даёт 2 Силы."
+  },
+  "expansioncontent:YouAreMine": {
+    "NAME": "Вы принадлежите МНЕ!",
+    "DESCRIPTION": "Накладывает !M! Слабости и Уязвимости на ВСЕХ врагов. Также отнимает их Защиту. NL Сжигается."
+  },
+  "expansioncontent:AwakenDeath": {
+    "NAME": "Пробуждение",
+    "DESCRIPTION": "Вместо того, чтобы умереть, вы Восполняете !M! ОЗ и снимаете этот эффект."
+  },
+  "expansioncontent:Chronoboost": {
+    "NAME": "Хроно-ускорение",
+    "DESCRIPTION": "Даёт 1 Силы, когда вы разыгрываете *12-ую карту.",
+    "UPGRADE_DESCRIPTION": "Даёт 1 Силы. NL Даёт 1 Силы, когда вы разыгрываете *12-ую карту."
+  },
+  "expansioncontent:PolyBeam": {
+    "NAME": "Взрыв Дону",
+    "DESCRIPTION": "Даёт !M! Силы."
+  },
+  "expansioncontent:DecaShield": {
+    "NAME": "Щит Деки",
+    "DESCRIPTION": "Даёт !B! Панциря."
+  },
+  "expansioncontent:ShapePower": {
+    "NAME": "Благословение Создателя",
+    "DESCRIPTION": "Выберите 1: Даёт !M! Силы или 5 Панциря.",
+    "UPGRADE_DESCRIPTION": "Выберите 1: Даёт !M! Силы или 8 Панциря.",
+    "EXTENDED_DESCRIPTION": [
+      "Сила Дону",
+      "Даёт !M! Силы.",
+      "Щит Деки",
+      "Даёт 5 Панциря.",
+      "Даёт 8 Панциря."
+    ]
+  },
+  "expansioncontent:PrepareCrush": {
+    "NAME": "Приготовиться: Крушить",
+    "DESCRIPTION": "Даёт !B! Защиты. NL В след. ходу, даёт [E] [E] [E] и добавляет в руку *СЛИЗЕНЬ: *КРУШИТЬ!!!. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Даёт !B! Защиты. NL В след. ходу, даёт [E] [E] [E] и добавляет в руку *СЛИЗЕНЬ: *КРУШИТЬ!!!. NL Сжигается."
+  },
+  "expansioncontent:StudyTheSpire": {
+    "NAME": "Изучение Шпиля",
+    "DESCRIPTION": "Добавляет в руку случ. карту *Босса, в начале ваших след. !M! ходов, со стоимостью 0.",
+    "UPGRADE_DESCRIPTION": "Добавляет в руку случ. Улучшенную карту *Босса, в начале ваших след. !M! ходов, со стоимостью 0."
+  },
+  "expansioncontent:QuickStudy": {
+    "NAME": "Быстрое изучение",
+    "DESCRIPTION": "Выберите и получите 1 из 3 карт *Босса в руку. NL Она стоит 0, пока не разыграна. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Выберите и получите 1 из 3 Улучшенных карт *Босса в руку. NL Она стоит 0, пока не разыграна. NL Сжигается.",
+    "EXTENDED_DESCRIPTION": [
+      "Выберите карту Босса."
+    ]
+  },
+  "expansioncontent:DashGenerateEvil": {
+    "NAME": "Зло внутри",
+    "DESCRIPTION": "Наносит !D! урона. NL Добавляет в руку случ. карту *Босса. Она стоит 0, пока не разыграна. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL Добавляет в руку случ. Улучшенную карту *Босса. Она стоит 0, пока не разыграна. NL Сжигается."
+  },
+  "expansioncontent:KnowingSkullWish": {
+    "NAME": "Всеведущий череп",
+    "DESCRIPTION": "Эфирная. NL Отнимает ОЗ, выберите 1: *Запросить *души, *Успех или *Выбери *меня. NL Сжигается."
+  },
+  "expansioncontent:Antidote": {
+    "NAME": "Антидот",
+    "DESCRIPTION": "Снимает весь Яд."
+  }
+}
