@@ -131,7 +131,7 @@
   },
   "hermit:SprayPray": {
     "NAME": "倾泻火力",
-    "DESCRIPTION": "随机造成 !D! 点伤害四次 NL 将一张 *疑虑 加入抽牌堆。"
+    "DESCRIPTION": "随机造成 !D! 点伤害三次 NL 将一张 *疑虑 加入抽牌堆。"
   },
   "hermit:Scavenge": {
     "NAME": "战利品",
