@@ -11,7 +11,7 @@
     "NAME": "決戰末世",
     "DESCRIPTIONS": [
       "下一次你 #y點燃 獄焱鬼火且所有的 #b",
-      " 個鬼火已 #y點燃 ，回合結束時額外獲得一回合。",
+      " 枚鬼火已 #y點燃 ，回合結束時額外獲得一回合。",
       "下一次你 #y點燃 獄焱鬼火且有至少 #b"
     ]
   },
@@ -77,12 +77,8 @@
   "hexamod:FuturePower": {
     "NAME": "疾進",
     "DESCRIPTIONS": [
-      "每回合前 #b",
-      " 次",
-      " 次",
-      " #y點燃 鬼火時， #y步進 。 NL 本回合已 #y點燃 過 #b",
-      " 個 鬼火。",
-      " 個 鬼火。"
+      "每當你 #y步進 時，獲得 #b",
+      " 層 #y臨時力量 。"
     ]
   },
   "hexamod:FutureUpgradePower": {
@@ -155,8 +151,8 @@
   "hexamod:PastPower": {
     "NAME": "魔鬼之舞",
     "DESCRIPTIONS": [
-      "每回合你前 ",
-      " 次",
+      "每回合你前 #b",
+      "1 次",
       " 次",
       " #y回退 時，獲得 [E] 並抽 #b1 張牌。本回合已 #y回退 #b",
       " 次。",
@@ -174,7 +170,7 @@
   "hexamod:RadiantPower": {
     "NAME": "火焰輻射",
     "DESCRIPTIONS": [
-      " #y點燃 一個鬼火時，獲得 #b",
+      " #y點燃 一枚鬼火時，獲得 #b",
       " 點 #y格擋 。"
     ]
   },
@@ -195,14 +191,14 @@
   "hexamod:VolcanoVisagePower": {
     "NAME": "火山容貌",
     "DESCRIPTIONS": [
-      " #y點燃 一個鬼火時，給予所有敵人 #b",
+      " #y點燃 一枚鬼火時，給予所有敵人 #b",
       " 層 #y灼魂 。"
     ]
   },
   "hexamod:LivingBombPower": {
     "NAME": "活體炸彈",
     "DESCRIPTIONS": [
-      "這個下次引爆灼魂時，對全體敵人生效。"
+      "該單位下次 #y灼魂 引爆時，對全體敵人生效。"
     ]
   },
   "hexamod:GainEnergyAtStartOfTurnPower": {

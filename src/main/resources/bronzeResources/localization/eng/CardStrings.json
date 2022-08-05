@@ -136,7 +136,7 @@
   },
   "bronze:Constructor": {
     "NAME": "Constructor",
-    "DESCRIPTION": "Gain !B! Block.\u00A0 \u00A0 When *Encoded as the first card, increase its Block by !M!.",
+    "DESCRIPTION": "Gain !B! Block. \u00A0 \u00A0 When *Encoded as the first card, increase its Block by !M!.",
     "EXTENDED_DESCRIPTION": [
       "build",
       "Sadness",
@@ -410,7 +410,7 @@
   },
   "bronze:Replicate": {
     "NAME": "Replicate",
-    "DESCRIPTION": "Deal !D! damage.\u00A0 \u00A0 When *Encoded, add a copy to your discard pile.",
+    "DESCRIPTION": "Deal !D! damage. \u00A0 \u00A0 When *Encoded, add a copy to your discard pile.",
     "EXTENDED_DESCRIPTION": [
       "copying",
       "Copy"
@@ -436,7 +436,7 @@
   },
   "bronze:Separator": {
     "NAME": "Separator",
-    "DESCRIPTION": "Deal !D! damage.\u00A0 \u00A0 When bronze:Encoded in the middle, increase its damage by !M!.",
+    "DESCRIPTION": "Deal !D! damage. \u00A0 \u00A0 When bronze:Encoded in the middle, increase its damage by !M!.",
     "EXTENDED_DESCRIPTION": [
       "split",
       "Child"

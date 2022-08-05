@@ -2,22 +2,22 @@
   "Gremlin:FatGremlin": {
     "NAME": "胖地精",
     "DESCRIPTION": [
-      "當你攻擊牌時， 給予目標 #b",
+      "每當你打出攻擊牌時， 給予目標 #b",
       " 層 #y虛弱 。"
     ]
   },
   "Gremlin:GremlinWizard": {
     "NAME": "地精法師",
     "DESCRIPTION": [
-      "當你打出技能牌時， 獲得 #b",
+      "每當你打出技能牌時， 獲得 #b",
       " 層 #y法力 。"
     ]
   },
   "Gremlin:MadGremlin": {
     "NAME": "火大地精",
     "DESCRIPTION": [
-      "受到攻擊時獲得 #b",
-      " 點 #y臨時力量 。"
+      "每當你受到攻擊時，獲得 #b",
+      " 層 #y臨時力量 。"
     ]
   },
   "Gremlin:ShieldGremlin": {

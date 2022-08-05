@@ -2,23 +2,23 @@
   "Gremlin:Agony": {
     "NAME": "苦痛",
     "DESCRIPTIONS": [
-      "#y攻擊 傷害降低 #b",
+      "其 #y攻擊 傷害減少 #b",
       "% 。持續 #b",
-      " 個回合。",
-      " 個回合。"
+      " 回合。",
+      " 回合。"
     ]
   },
   "Gremlin:Bang": {
     "NAME": "砰",
     "DESCRIPTIONS": [
-      "你的下次攻擊會消耗所有 #y法力 並造成 #b",
-      " 點 額外傷害 。"
+      "你的下次攻擊會使用所有 #y法力 並造成 #b",
+      " 點額外傷害。"
     ]
   },
   "Gremlin:Bashed": {
     "NAME": "重擊",
     "DESCRIPTIONS": [
-      "本回合內每當你獲得 #y格擋 時，其失去 #b",
+      "本回合每當你獲得 #y格擋 時，其失去 #b",
       " 點生命。"
     ]
   },
@@ -32,27 +32,27 @@
   "Gremlin:CongaLine": {
     "NAME": "直線陣形",
     "DESCRIPTIONS": [
-      "在你的回合開始時， 獲得 ",
-      " 並 #y切換 到下一隻 地精 。"
+      "你的回合開始時，獲得 ",
+      " 並 #y切換 至下只地精。"
     ]
   },
   "Gremlin:Crippled": {
     "NAME": "致殘",
     "DESCRIPTIONS": [
-      "#y虛弱 不會消失。它的回合結束時，失去 #y虛弱 層數的生命。"
+      "其 #y虛弱 不會消失。敵方回合結束時，其失去 #y虛弱 層數點生命。"
     ]
   },
   "Gremlin:Encore": {
-    "NAME": "返場",
+    "NAME": "喝彩",
     "DESCRIPTIONS": [
-      "每當你消耗 #y法力 時，對所有敵人造成 #b",
+      "每當你使用 #y法力 時，對所有敵人造成 #b",
       " 點傷害。"
     ]
   },
   "Gremlin:Enthusiasm": {
     "NAME": "狂熱",
     "DESCRIPTIONS": [
-      "每當你 #y切換 地精 時， 抽 #b",
+      "每當你 #y切換 時，抽 #b",
       " 張牌。",
       " 張牌。"
     ]
@@ -60,33 +60,33 @@
   "Gremlin:FatGremlin": {
     "NAME": "胖地精",
     "DESCRIPTIONS": [
-      "當你打出攻擊牌時， 給予所有目標 #b",
+      "每當你攻擊時，給予目標 #b",
       " 層 #y虛弱 。"
     ]
   },
   "Gremlin:Flex": {
     "NAME": "力量下降",
     "DESCRIPTIONS": [
-      "在回合結束時， 失去 #b",
+      "回合結束時，失去 #b",
       " 點 #y力量 。"
     ]
   },
   "Gremlin:Furious": {
     "NAME": "發瘋",
     "DESCRIPTIONS": [
-      "本回合每當你獲得 #y格擋 ， 對所有敵人造成傷害。"
+      "本回合每當你獲得 #y格擋 時， 變為對所有敵人造成等量傷害。"
     ]
   },
   "Gremlin:GremlinNob": {
     "NAME": "地精大塊頭",
     "DESCRIPTIONS": [
-      "每回合的開始時，將 #b3 張 地精大塊頭 的牌到你的手牌。你不能 #y切換 地精。當你要失去所有 #y臨時生命 時，免疫剩餘的傷害。"
+      "你的回合開始時，將 #y怒吼 、 #y顱骨重擊 與 #y沖鋒 各 #b1 張加入手牌。 #y臨時生命 耗盡之前無法 #y切換 。"
     ]
   },
   "Gremlin:GremlinWizard": {
     "NAME": "地精法師",
     "DESCRIPTIONS": [
-      "每當你打出技能牌時， 獲得 #b",
+      "每當你打出 #y技能牌 時， 獲得 #b",
       " 層 #y法力 。"
     ]
   },
@@ -94,13 +94,13 @@
     "NAME": "起哄",
     "DESCRIPTIONS": [
       "每當你給予敵人 #y負面效果 時， 獲得 #b",
-      " 點 #y臨時生命 。"
+      " 層 #y臨時生命 。"
     ]
   },
   "Gremlin:InfiniteBlocks": {
     "NAME": "無限護甲",
     "DESCRIPTIONS": [
-      "在你的回合開始時，將 #b",
+      "你的回合開始時，將 #b",
       " 張 #y守衛 加入手牌。",
       " 張 #y守衛 加入手牌。"
     ]
@@ -108,8 +108,8 @@
   "Gremlin:MadGremlin": {
     "NAME": "火大地精",
     "DESCRIPTIONS": [
-      "受到攻擊時獲得 #b",
-      " 點 #y臨時 力量 。"
+      "每當你受到攻擊時，獲得 #b",
+      " 層 #y臨時 力量 。"
     ]
   },
   "Gremlin:MakeshiftArmor": {
@@ -124,38 +124,38 @@
   "Gremlin:MakingMagic": {
     "NAME": "獲得法力",
     "DESCRIPTIONS": [
-      "在你下個回合開始時， 將 #b",
-      " 張 #y砰 的複製品加入你的手牌。",
-      " 張 #y砰 的複製品加入你的手牌。"
+      "下回合開始時， 將 #b",
+      " 張 #y砰 的加入手牌。",
+      " 張 #y砰 的加入手牌。"
     ]
   },
   "Gremlin:MakingMoreMagic": {
     "NAME": "獲得法力+",
     "DESCRIPTIONS": [
-      "在你下個回合開始時, 將 #b",
-      " 張 #y已升級 #y砰 的複製品加入你的手牌。",
-      " 張 #y已升級 #y砰 的複製品加入你的手牌。"
+      "下回合開始時, 將 #b",
+      " 張 #y砰+ 的加入手牌。",
+      " 張 #y砰+ 的加入手牌。"
     ]
   },
   "Gremlin:Polish": {
     "NAME": "磨亮",
     "DESCRIPTIONS": [
-      "守衛額外獲得 #b",
-      " #y格擋 。"
+      " #y小刀 和 #y守衛 的數值增加 #b",
+      " 點。"
     ]
   },
   "Gremlin:Scatter": {
     "NAME": "散開",
     "DESCRIPTIONS": [
       "下 #b",
-      " 次將要失去生命時，免疫傷害並 #y切換 一隻隨機地精。",
-      " 次將要失去生命時，免疫傷害並 #y切換 一隻隨機地精。"
+      " 次失去生命時，免疫傷害並隨機 #y切換 。",
+      " 次失去生命時，免疫傷害並隨機 #y切換 。"
     ]
   },
   "Gremlin:ShadowShiv": {
     "NAME": "暗影刀刃",
     "DESCRIPTIONS": [
-      "每當你打出不會 #y消耗 的攻擊牌時，將 #b",
+      "每當你打出非 #y消耗 攻擊牌時，將 #b",
       " 張 #y小刀 加入手牌。",
       " 張 #y小刀 加入手牌。"
     ]
@@ -163,22 +163,22 @@
   "Gremlin:ShieldGremlin": {
     "NAME": "持盾地精",
     "DESCRIPTIONS": [
-      "每當你打出技能牌時，獲得 #b",
-      " #y格擋 。"
+      "每當你打出 #y技能牌 時，獲得 #b",
+      " 點 #y格擋 。"
     ]
   },
   "Gremlin:SneakyGremlin": {
     "NAME": "卑鄙地精",
     "DESCRIPTIONS": [
-      "每當你打出攻擊牌時，對隨機一名敵人造成 #b",
+      "每當你打出 #y攻擊牌 時，隨機對一名敵人造成 #b",
       " 點傷害。"
     ]
   },
   "Gremlin:TargetWeakness": {
-    "NAME": "瞄准傷口",
+    "NAME": "瞄準傷口",
     "DESCRIPTIONS": [
-      "對身有 #y虛弱 的敵人造成 #b",
-      " 點額外傷害。"
+      "對被 #y虛弱 的目標額外造成 #b",
+      " 點傷害。"
     ]
   },
   "Gremlin:Unforgiving": {
@@ -191,16 +191,16 @@
     "NAME": "法力",
     "DESCRIPTIONS": [
       " 充能 。 NL 還需要 #b",
-      " 點充能。",
-      " 點充能。",
+      " 層充能。",
+      " 層充能。",
       "準備開火。"
     ]
   },
   "Gremlin:Wizardry": {
     "NAME": "巫術",
     "DESCRIPTIONS": [
-      "在你的回合開始時, 獲得 #b",
-      " 點 #y法力 。"
+      "你的回合開始時, 獲得 #b",
+      " 層 #y法力 。"
     ]
   }
 }

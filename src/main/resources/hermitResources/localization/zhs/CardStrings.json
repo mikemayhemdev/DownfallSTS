@@ -80,7 +80,7 @@
   },
   "hermit:Roughhouse": {
     "NAME": "锁喉",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 ： NL 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 ： NL 先获得 !B! 点 格挡 。"
   },
   "hermit:Malice": {
     "NAME": "怨恨",
@@ -131,7 +131,7 @@
   },
   "hermit:SprayPray": {
     "NAME": "倾泻火力",
-    "DESCRIPTION": "随机造成 !D! 点伤害四次 NL 将一张 *疑虑 加入抽牌堆。"
+    "DESCRIPTION": "随机造成 !D! 点伤害三次 NL 将一张 *疑虑 加入抽牌堆。"
   },
   "hermit:Scavenge": {
     "NAME": "战利品",
@@ -151,7 +151,7 @@
   },
   "hermit:Grudge": {
     "NAME": "怒怨",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 手中每有一张 诅咒 ， NL 额外造成 !M! 点。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 每有一张 诅咒 ， NL 额外造成 !M! 点。"
   },
   "hermit:Spite": {
     "NAME": "苦恼",
