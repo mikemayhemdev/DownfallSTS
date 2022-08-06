@@ -2,11 +2,16 @@
   "sneckomod:Unknown": {
     "TEXT": [
       "未知",
-      " 已 升級 的",
+      "已 升級 的",
 	  "戰鬥開始時未知牌將根據情況變化成其他隨機牌。",
       " NL 選擇角色：",
       "戰鬥開始時未知牌將根據情況變化成任何其他角色的牌（基礎打擊防禦除外）。",
       "戰鬥開始時未知牌將根據情況變化成其他角色的牌（基礎打擊防禦除外）。"
+    ]
+  },
+  "sneckomod:UnknownNames": {
+    "TEXT": [
+      "未知"
     ]
   },
   "sneckomod:UnknownClass": {
@@ -17,7 +22,7 @@
       "角色",
       " ",
       "你應該看不到這個的。請報告給Vex",
-      "已升級 "
+      "已 升級 的 "
     ]
   },
   "sneckomod:UpgradedUnknownReward": {
@@ -46,15 +51,10 @@
   "sneckomod:LockInBonfireOptions": {
     "TEXT": [
       "明晰",
-      "將未知牌變為特定的牌",
+      "將未知牌變為特定的牌，可選牌為上場戰鬥呈現的牌",
       "需要一張未知牌",
       "選擇一張牌加入你的牌組並移除未知",
 	  "[自由行動] 選擇一張牌加入你的牌組並移除未知"
-    ]
-  },
-  "sneckomod:UnknownNames": {
-    "TEXT": [
-      "牌"
     ]
   },
   "sneckomod:AtGameStart": {
@@ -67,4 +67,3 @@
     ]
   }
 }
-

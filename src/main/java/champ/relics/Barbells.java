@@ -43,7 +43,6 @@ public class Barbells extends CustomRelic {
                 AbstractCard card = possibleCards.get(AbstractDungeon.miscRng.random(0, possibleCards.size() - 1));// 46
                 card.upgrade();// 47
                 AbstractDungeon.player.bottledCardUpgradeCheck(card);// 48
-                card.upgrade();
                 float x = MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH;
                 float y = MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT;
                 AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy(), x, y));

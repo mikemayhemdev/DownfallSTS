@@ -3,14 +3,14 @@
     "NAME": "精神烙印",
     "FLAVOR": "對約束的一道保護。",
     "DESCRIPTIONS": [
-      "每回合初次 #y點燃 時，獲得 #b5 點 #y格擋 。"
+      "每回合首次 #y點燃 時，獲得 #b4 點 #y格擋 。"
     ]
   },
   "hexamod:TheBrokenSeal": {
     "NAME": "破損容器",
     "FLAVOR": "未阻，無限，不滅的力量。",
     "DESCRIPTIONS": [
-      "拾起時，獲得 #b10 點最大生命並回復所有生命。每場戰鬥開始時獲得 #b2 點 #y力量 、 #y敏捷 和 #yhexamod:熱烈 。不能再獲得 #y破損容器 。"
+      "拾起時，獲得 #b10 點最大生命並回復所有生命。戰鬥開始時獲得 #b2 點 #y力量 、 #y敏捷 與 #yhexamod:熱烈 。無法再獲得 #y破損容器 。"
     ]
   },
   "hexamod:UnbrokenSoul": {
@@ -18,77 +18,77 @@
     "FLAVOR": "看看我們能不能做得... 更好。",
     "DESCRIPTIONS": [
       "替換 #r",
-      ".[]  NL 每回合初次 #y點燃 時，獲得 [E] 。"
+      ".[]  NL 每回合首次 #y點燃 時，獲得 [E] 。"
     ]
   },
   "hexamod:IceCube": {
     "NAME": "幽靈雪花",
     "FLAVOR": "我感覺……好冷。",
     "DESCRIPTIONS": [
-      "每回合獲得 [E] 。 #yhexamod:灼魂 需要 #r4 回合才能生效。"
+      "回合開始時獲得 [E] 。 #yhexamod:灼魂 需要 #r4 回合才引爆。"
     ]
   },
   "hexamod:SoulConsumer": {
     "NAME": "保暖石",
     "FLAVOR": "一點火苗就能激活這東西了！",
     "DESCRIPTIONS": [
-      "如果本場戰鬥引爆過 #yhexamod:灼魂 ，戰鬥結束時回復 #b4 點生命。"
+      "若本場戰鬥引爆過 #yhexamod:灼魂 ，戰鬥勝利時回復 #b4 點生命。"
     ]
   },
   "hexamod:RecyclingMachine": {
     "NAME": "回收器",
     "FLAVOR": "總有一天它也會被回收掉。",
     "DESCRIPTIONS": [
-      "每場戰鬥第一張非 #y狀態牌 或 #y詛咒 牌 #y消耗 時，將一張下次耗能為 #b0 的複製品加入手牌。"
+      "每場戰鬥首張 #y虛無 牌消耗時，若其不為 #y詛咒 或 #y狀態牌 ，則將其 #b1 張復製品加入手牌，且本回合下次耗能為 #b0 。"
     ]
   },
   "hexamod:MatchstickCase": {
     "NAME": "火爆火柴",
-    "FLAVOR": "划在哪兒都能著！",
+    "FLAVOR": "劃在哪兒都能著！",
     "DESCRIPTIONS": [
-      "每場戰鬥開始時， #yhexamod:點燃 #yhexamod:激活 的 鬼火並 #yhexamod:步進 。"
+      "戰鬥開始時， #yhexamod:點燃 當前鬼火並 #yhexamod:步進 。"
     ]
   },
   "hexamod:InflammatoryLetter": {
     "NAME": "火種",
     "FLAVOR": "火使一切更美好。",
     "DESCRIPTIONS": [
-      "每場戰鬥開始時獲得 #b1 點 #yhexamod:熱烈 。"
+      "戰鬥開始時獲得 #b1 點 #yhexamod:熱烈 。"
     ]
   },
   "hexamod:SoulOfChaos": {
     "NAME": "混沌靈魂",
     "FLAVOR": "混亂，現出真身。",
     "DESCRIPTIONS": [
-      "第二個 #yhexamod:灼熱 #y鬼火 變為 #y狂徒鬼火。 NL 狂徒鬼火在回合結束時如果 #y激活 則自動 #y點燃 。 NL 點燃：打出抽牌堆頂部的牌。"
+      "第 #b4 枚 #y鬼火 變為 #y狂徒鬼火 。 NL 若停留在 #y狂徒鬼火 ，回合結束時其自動 #y點燃 。 NL #y點燃 ：打出抽牌堆頂部的牌。"
     ]
   },
   "hexamod:JarOfFuel": {
     "NAME": "謎之盾",
     "FLAVOR": "按需防護。",
     "DESCRIPTIONS": [
-      "將 #yhexamod:高熱 #y鬼火 與第一個 #yhexamod:灼熱 #y鬼火 交換位置。"
+      "將 #yhexamod:高熱 #y鬼火 與首枚 #yhexamod:灼熱 #y鬼火 交換位置。"
     ]
   },
   "hexamod:BolsterEngine": {
     "NAME": "高熱之杖",
     "FLAVOR": "火焰護身！火焰助力。",
     "DESCRIPTIONS": [
-      "每場戰鬥初次打出 #y能力 牌時，獲得 #b6 點 #y格擋 和 #b1 點 #y力量 。"
+      "每場戰鬥首次打出 #y能力 牌時，獲得 #b6 點 #y格擋 與 #b1 點 #y力量 。"
     ]
   },
   "hexamod:CandleOfCauterizing": {
     "NAME": "紅蠟燭",
     "FLAVOR": "烈焰炙烤...",
     "DESCRIPTIONS": [
-      "每當你造成未被格擋的 #y攻擊 傷害時，給予 #b2 層 #yhexamod:灼魂 。"
+      "每當你造成未被 #y格擋 的 #y攻擊 傷害，給予 #b2 層 #yhexamod:灼魂 。"
     ]
   },
   "hexamod:Sixitude": {
     "NAME": "六點烙印",
     "FLAVOR": "點火，點火，點火，點火，點火，點 火！",
     "DESCRIPTIONS": [
-      "每當你打出 #b6 張牌時，對隨機一名敵人造成 #b6 點傷害。"
+      "每當你打出 #b6 張牌，隨機造成 #b6 點傷害。"
     ]
   }
 }

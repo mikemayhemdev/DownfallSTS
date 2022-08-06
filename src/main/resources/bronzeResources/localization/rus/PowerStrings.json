@@ -132,7 +132,7 @@
   "bronze:FullRelease": {
     "NAME": "Релиз",
     "DESCRIPTIONS": [
-      "В начале вашего хода NL "
+      "В начале вашего хода: NL "
     ]
   },
   "bronze:RemoveNextError": {

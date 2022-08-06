@@ -29,8 +29,8 @@ public class CharredGlove extends CustomRelic {
     // ID, images, text.
     public static final String ID = HermitMod.makeID("CharredGlove");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("charred_glove.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("charred_glove.png"));
+    public static final Texture IMG = TextureLoader.getTexture(makeRelicPath("charred_glove.png"));
+    public static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("charred_glove.png"));
 
     public CharredGlove() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.FLAT);

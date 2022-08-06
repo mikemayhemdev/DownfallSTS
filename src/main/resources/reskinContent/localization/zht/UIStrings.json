@@ -29,32 +29,62 @@
   },
   "reskinContent:ReSkinGuardian": {
     "TEXT": [
-      "蹲醬"
+      "蹲醬",
+      "愚人節"
+    ],
+    "EXTRA_TEXT": [
+      "量產人形先古造物。 NL 被重編程以用於保護城市入口以外的用途",
+      "化鱗為翼， NL 天下無雙。"
     ]
   },
   "reskinContent:ReSkinSlime": {
     "TEXT": [
-      "史萊姆娘"
+      "史萊姆娘",
+      "愚人節"
+    ],
+    "EXTRA_TEXT": [
+      "與隨處可見的種類不同。 NL 吞噬了眾多物品的它將繼續它的美食之旅。",
+      "圓桶高帽， NL 簡單帥氣。"
     ]
   },
   "reskinContent:ReSkinHexaghost": {
     "TEXT": [
-      "六子"
+      "六子",
+      "愚人節"
+    ],
+    "EXTRA_TEXT": [
+      "充滿了冤魂的容器中也有不一樣的個體。 NL 具現化使得力量更為強勁？",
+      "白袍加身， NL 苦痛面具。"
     ]
   },
   "reskinContent:ReSkinSnecko": {
     "TEXT": [
-      "蛇蛇"
+      "蛇蛇",
+      "愚人節"
+    ],
+    "EXTRA_TEXT": [
+      "它迷惑性的雙眸將使人出現認知偏差。 NL 調查顯示，被困惑的生物會看見完全不同的世界。",
+      "添足不足， NL 力大無窮。"
     ]
   },
   "reskinContent:ReSkinChamp": {
     "TEXT": [
-      "妹妹勇士"
+      "妹妹勇士",
+      "愚人節"
+    ],
+    "EXTRA_TEXT": [
+      "揮舞著與身形完全不相符的巨劍看似滑稽。 NL 實際上有著旁人想象不到的巨大力量。",
+      "身如磐巖， NL 毋須甲胄。"
     ]
   },
   "reskinContent:ReSkinBronze": {
     "TEXT": [
-      "童制機械人偶"
+      "童製機械人偶",
+      "愚人節"
+    ],
+    "EXTRA_TEXT": [
+      "揮舞著與身形完全不相符的巨劍看似滑稽。 NL 實際上有著旁人想象不到的巨大力量。",
+      "相挾天子， NL 以令諸侯。"
     ]
   }
 }

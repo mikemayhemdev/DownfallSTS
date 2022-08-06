@@ -10,7 +10,7 @@
     "NAME": "破损容器",
     "FLAVOR": "未阻，无限，不灭的力量。",
     "DESCRIPTIONS": [
-      "拾起时，获得 #b10 点最大生命并回复所有生命。每场战斗开始时获得 #b2 点 #y力量 、 #y敏捷 和 #yhexamod:热烈 。不能再获得 #y破损容器 。"
+      "拾起时，获得 #b10 点最大生命并回复所有生命。战斗开始时获得 #b2 点 #y力量 、 #y敏捷 与 #yhexamod:热烈 。无法再获得 #y破损容器 。"
     ]
   },
   "hexamod:UnbrokenSoul": {
@@ -25,35 +25,35 @@
     "NAME": "幽灵雪花",
     "FLAVOR": "我感觉……好冷。",
     "DESCRIPTIONS": [
-      "每回合获得 [E] 。 #yhexamod:灼魂 需要 #r4 回合才能生效。"
+      "回合开始时获得 [E] 。 #yhexamod:灼魂 需要 #r4 回合才引爆。"
     ]
   },
   "hexamod:SoulConsumer": {
     "NAME": "保暖石",
     "FLAVOR": "一点火苗就能激活这东西了！",
     "DESCRIPTIONS": [
-      "如果本场战斗引爆过 #yhexamod:灼魂 ，战斗结束时回复 #b4 点生命。"
+      "若本场战斗引爆过 #yhexamod:灼魂 ，战斗胜利时回复 #b4 点生命。"
     ]
   },
   "hexamod:RecyclingMachine": {
     "NAME": "回收器",
     "FLAVOR": "总有一天它也会被回收掉。",
     "DESCRIPTIONS": [
-      "每场战斗首张 #y虚无 牌消耗时，若其不为 #y诅咒 或 #y状态 牌，则将其 #b1 张复制品加入手牌，且本回合下次耗能为 #b0 。"
+      "每场战斗首张 #y虚无 牌消耗时，若其不为 #y诅咒 或 #y状态牌 ，则将其 #b1 张复制品加入手牌，且本回合下次耗能为 #b0 。"
     ]
   },
   "hexamod:MatchstickCase": {
     "NAME": "火爆火柴",
     "FLAVOR": "划在哪儿都能着！",
     "DESCRIPTIONS": [
-      "每场战斗开始时， #yhexamod:点燃 当前鬼火并 #yhexamod:步进 。"
+      "战斗开始时， #yhexamod:点燃 当前鬼火并 #yhexamod:步进 。"
     ]
   },
   "hexamod:InflammatoryLetter": {
     "NAME": "火种",
     "FLAVOR": "火使一切更美好。",
     "DESCRIPTIONS": [
-      "每场战斗开始时获得 #b1 点 #yhexamod:热烈 。"
+      "战斗开始时获得 #b1 点 #yhexamod:热烈 。"
     ]
   },
   "hexamod:SoulOfChaos": {
@@ -74,21 +74,21 @@
     "NAME": "高热之杖",
     "FLAVOR": "火焰护身！火焰助力。",
     "DESCRIPTIONS": [
-      "每场战斗首次打出 #y能力 牌时，获得 #b6 点 #y格挡 和 #b1 点 #y力量 。"
+      "每场战斗首次打出 #y能力 牌时，获得 #b6 点 #y格挡 与 #b1 点 #y力量 。"
     ]
   },
   "hexamod:CandleOfCauterizing": {
     "NAME": "红蜡烛",
     "FLAVOR": "烈焰炙烤...",
     "DESCRIPTIONS": [
-      "每当你造成未被格挡的 #y攻击 伤害时，给予 #b2 层 #yhexamod:灼魂 。"
+      "每当你造成未被 #y格挡 的 #y攻击 伤害，给予 #b2 层 #yhexamod:灼魂 。"
     ]
   },
   "hexamod:Sixitude": {
     "NAME": "六点烙印",
     "FLAVOR": "点火，点火，点火，点火，点火，点 火！",
     "DESCRIPTIONS": [
-      "每当你打出 #b6 张牌时，对随机 #b1 名敌人造成 #b6 点伤害。"
+      "每当你打出 #b6 张牌，随机造成 #b6 点伤害。"
     ]
   }
 }

@@ -3,7 +3,7 @@
     "NAME": "Machine Oil",
     "DESCRIPTIONS": [
       "Increase all numbers on Encoded cards by #b",
-      "except cost."
+      " except cost."
     ]
   },
   "bronze:CleanCodePotion": {

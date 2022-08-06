@@ -35,6 +35,7 @@ public class PrepareCrush extends AbstractSlimeboundCard {
         NAME = cardStrings.NAME;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     }
 
     public PrepareCrush() {
