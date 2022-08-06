@@ -9,7 +9,7 @@
   },
   "hermit:Snapshot": {
     "NAME": "狙杀",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 ：获得未被 *格 *挡 伤害点 格挡 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 ：先获得未被 *格 *挡 伤害点 格挡 。"
   },
   "hermit:Desperado": {
     "NAME": "法外狂徒",
