@@ -228,7 +228,7 @@
   },
   "hexamod:HeatShield": {
     "NAME": "高热护盾",
-    "DESCRIPTION": "获得所有 hexamod:灼魂 层数点 格挡 并移除它们。",
+    "DESCRIPTION": "移除所有 hexamod:灼魂 。 NL 获得等量 格挡 。",
     "EXTENDED_DESCRIPTION": [
     " NL （当前： !B! 点 格挡 。）"
     ]
