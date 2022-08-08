@@ -173,7 +173,7 @@
   "hexamod:NightmareGuise": {
     "NAME": "梦魇伪装",
     "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 消耗 时获得 *暗影伪装 。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 消耗 时获得 *暗影伪装+ 。"
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 消耗 时获得 *暗影伪装 +。"
   },
   "hexamod:ShadowStrike": {
     "NAME": "暗影打击",
