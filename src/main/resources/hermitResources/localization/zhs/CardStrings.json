@@ -76,7 +76,7 @@
   },
   "hermit:Gambit": {
     "NAME": "开场白",
-    "DESCRIPTION": "随机将弃牌堆中 !M! 张攻击牌加入手牌。 NL 其耗能本回合减1。 NL 消耗 。"
+    "DESCRIPTION": "随机将弃牌堆中 !M! 张攻击牌返回手牌。 NL 本回合其下次耗能减1。 NL 消耗 。"
   },
   "hermit:Roughhouse": {
     "NAME": "锁喉",
@@ -147,7 +147,7 @@
   },
   "hermit:Shortfuse": {
     "NAME": "快速引信",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 在手牌时，每打出一张 *打击 或 *防御 ，本牌耗能本回合减少 [E] 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每打出 *打击 或 *防御 ， NL 本回合本牌耗能减1。"
   },
   "hermit:Grudge": {
     "NAME": "怒怨",
@@ -233,7 +233,7 @@
   },
   "hermit:Ricochet": {
     "NAME": "跳弹",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每触发过一次 hermit:精准 ，再随机造成 !D! 点伤害。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每有一次 hermit:精准 ， NL 再随机造成一次。",
     "EXTENDED_DESCRIPTION": [" NL （重复 !M! ", "次）","次）"]
   },
   "hermit:TrackingShot": {
@@ -292,7 +292,7 @@
   },
   "hermit:GoldenBullet": {
     "NAME": "黄金子弹",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 时耗能本局减 [E] 。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 时耗能本局减1。 NL 消耗 。"
   },
   "hermit:HoleUp": {
     "NAME": "'洞'起来",
@@ -318,7 +318,7 @@
   },
   "hermit:FromBeyond": {
     "NAME": "另一维度",
-    "DESCRIPTION": "消耗 堆中每有一张牌，随机敌人失去 !M! 点生命。"
+    "DESCRIPTION": "消耗 堆中每有一张牌， NL 随机敌人失去 !M! 点生命。"
   },
   "hermit:Virtue": {
     "NAME": "高尚",
