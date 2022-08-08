@@ -239,7 +239,7 @@
   },
   "sneckomod:SerpentIdol": {
     "NAME": "蛇神像",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 从3张随机 sneckomod:异色 牌中选择获得1张。 NL 其耗能本回合为0。 NL 消耗 。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 从3张随机 sneckomod:异色 牌中选择获得1张。 NL 本回合其耗能为0。 NL 消耗 。"
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "变废为宝",
