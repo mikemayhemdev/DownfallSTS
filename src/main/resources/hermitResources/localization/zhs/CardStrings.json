@@ -233,7 +233,7 @@
   },
   "hermit:Ricochet": {
     "NAME": "跳弹",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每有一次 hermit:精准 ， NL 再随机造成一次。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每触发过 hermit:精准 ， NL 再随机造成一次。",
     "EXTENDED_DESCRIPTION": [" NL （重复 !M! ", "次）","次）"]
   },
   "hermit:TrackingShot": {
