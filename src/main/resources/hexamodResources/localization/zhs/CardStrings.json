@@ -301,23 +301,23 @@
   },
   "hexamod:SecondSeal": {
     "NAME": "第二容器",
-    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗胜利时， NL 额外获得 !M! 金币 。",
-    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗胜利时， NL 额外获得 !M! 金币 。"
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时， NL 额外获得 !M! 金币 。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时， NL 额外获得 !M! 金币 。"
   },
   "hexamod:ThirdSeal": {
     "NAME": "第三容器",
-    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗胜利时， NL 额外获得一次卡牌奖励。",
-    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗胜利时， NL 额外获得一次卡牌奖励。"
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时， NL 额外获得一次卡牌奖励。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时， NL 额外获得一次卡牌奖励。"
   },
   "hexamod:FourthSeal": {
     "NAME": "第四容器",
-    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗胜利时， NL 额外获得一瓶药水。",
-    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗胜利时， NL 额外获得一瓶药水。"
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时， NL 额外获得一瓶药水。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时， NL 额外获得一瓶药水。"
   },
   "hexamod:FifthSeal": {
     "NAME": "第六容器",
-    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗胜利时， NL 额外获得一次 *容器 奖励。",
-    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗胜利时， NL 额外获得一次 *容器 奖励。"
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时， NL 额外获得一次 *容器 奖励。",
+    "UPGRADE_DESCRIPTION": "hexamod:容器 。 NL 战斗结束时， NL 额外获得一次 *容器 奖励。"
   },
   "hexamod:SixthSeal": {
     "NAME": "第五容器",
