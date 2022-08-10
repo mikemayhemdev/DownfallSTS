@@ -46,7 +46,7 @@
   },
   "hexamod:TimeWarp": {
     "NAME": "时间扭曲",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL hexamod:步进 或 hexamod:回退 时， NL 将本牌从弃牌堆返回手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL hexamod:步进 或 hexamod:回退 时， NL 本牌从弃牌堆返回手牌。"
   },
   "hexamod:EmpoweredFlame": {
     "NAME": "高涨",
@@ -68,8 +68,8 @@
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "疾进",
-    "DESCRIPTION": " hexamod:步进 时，获得 !M! 层 guardianmod:临时 力量 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL hexamod:步进 时，获得 !M! 层 guardianmod:临时 力量 。"
+    "DESCRIPTION": " hexamod:步进 时， NL 获得 !M! 层 guardianmod:临时 力量 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL hexamod:步进 时， NL 获得 !M! 层 guardianmod:临时 力量 。"
   },
   "hexamod:GhostOfSpirePresent": {
     "NAME": "此刻",
@@ -102,7 +102,7 @@
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "鲜焰仪式",
-    "DESCRIPTION": "hexamod:熄灭 hexamod:点燃 的鬼火。 NL 每熄灭一枚获得 [E] NL 并抽一张牌 。 NL 消耗 。"
+    "DESCRIPTION": "hexamod:熄灭 hexamod:点燃 的鬼火。 NL 每熄灭一枚， NL 获得 [E] 并抽一张牌 。 NL 消耗 。"
   },
   "hexamod:StepThrough": {
     "NAME": "逐步",
@@ -134,7 +134,7 @@
   },
   "hexamod:RecurringNightmare": {
     "NAME": "梦魇幻象",
-    "DESCRIPTION": "expansioncontent:发掘 1张 虚无 牌。 NL 消耗 。",
+    "DESCRIPTION": "expansioncontent:发掘 !M! 张 虚无 牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "expansioncontent:发掘 !M! 张 虚无 牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "发掘一张虚无牌",
@@ -151,7 +151,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "诡异探险",
-    "DESCRIPTION": "虚无 。 NL 随机获得一张 虚无 牌。 NL 其耗能本回合为0。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 随机获得一张 虚无 牌。 NL 本回合其耗能为0。 NL 消耗 。"
   },
   "hexamod:PhantomCloak": {
     "NAME": "幽灵披风",
@@ -167,13 +167,13 @@
   },
   "hexamod:NightmareStrike": {
     "NAME": "梦魇打击",
-    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗 时，获得 *暗影打击 。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗 时，获得 *暗影打击+ 。"
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗 时获得 *暗影打击 。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗 时获得 *暗影打击 +。"
   },
   "hexamod:NightmareGuise": {
     "NAME": "梦魇伪装",
-    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 消耗 时，获得 *暗影伪装 。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 消耗 时，获得 *暗影伪装+ 。"
+    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 消耗 时获得 *暗影伪装 。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 消耗 时获得 *暗影伪装 +。"
   },
   "hexamod:ShadowStrike": {
     "NAME": "暗影打击",
@@ -185,8 +185,8 @@
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "深处之力",
-    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 下回合获得 [E] 并抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 下回合获得 [E] 并抽 !M! 张牌。"
+    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 下回合， NL 获得 [E] 并抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 下回合， NL 获得 [E] 并抽 !M! 张牌。"
   },
   "hexamod:BurningTouch": {
     "NAME": "灼烧之触",
@@ -212,7 +212,7 @@
   },
   "hexamod:GhostflameBarrier": {
     "NAME": "亡魂屏障",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合被攻击时，给予攻击者 !burny! 层 hexamod:灼魂 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合被攻击时， NL 给予对方 !burny! 层 hexamod:灼魂 。"
   },
   "hexamod:Toasty": {
     "NAME": "烘焙！",
@@ -224,11 +224,11 @@
   },
   "hexamod:HeatCrush": {
     "NAME": "高热撞击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标的 hexamod:灼魂 提高本牌的伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 伤害受目标 hexamod:灼魂 加成。"
   },
   "hexamod:HeatShield": {
     "NAME": "高热护盾",
-    "DESCRIPTION": "获得所有 hexamod:灼魂 层数点 格挡 并移除它们。",
+    "DESCRIPTION": "移除所有 hexamod:灼魂 。 NL 获得等量 格挡 。",
     "EXTENDED_DESCRIPTION": [
     " NL （当前： !B! 点 格挡 。）"
     ]
@@ -244,8 +244,8 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "焰烬雨",
-    "DESCRIPTION": "造成 !D! 点伤害并给 NL 予 !burny! 层 hexamod:灼魂 X 次。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，给 NL 予 !burny! 层 hexamod:灼魂 与 1层 虚弱 X 次。"
+    "DESCRIPTION": "重复X次： NL 造成 !D! 点伤害。 NL 给予 !burny! 层 hexamod:灼魂 。",
+    "UPGRADE_DESCRIPTION": "重复X次： NL 造成 !D! 点伤害。 NL 给予 !burny! 层 hexamod:灼魂 。 NL 给予1层虚弱。"
   },
   "hexamod:VolcanoVisage": {
     "NAME": "火山面貌",
@@ -261,7 +261,7 @@
   },
   "hexamod:SpectralSpark": {
     "NAME": "幽灵火花",
-    "DESCRIPTION": "NL 若当前鬼火已 hexamod:点燃 ， hexamod:熄灭 它并获得 !M! 点 hexamod:热烈 。"
+    "DESCRIPTION": "若当前鬼火已 hexamod:点燃 ， NL hexamod:熄灭 并获得 !M! 点 hexamod:热烈 。"
   },
   "hexamod:GhostflameInferno": {
     "NAME": "此即地狱",

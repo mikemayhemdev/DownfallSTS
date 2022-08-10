@@ -322,7 +322,7 @@
   },
   "Gremlin:Rhythm": {
     "NAME": "节奏",
-    "DESCRIPTION": "gremlin:切换 至下只地精。 NL 从抽牌堆选择取出一张基础牌。 NL 其耗能本回合为0。"
+    "DESCRIPTION": "gremlin:切换 至下只地精。 NL 从抽牌堆选择取出一张基础牌。 NL 本回合其耗能为0。"
   },
   "Gremlin:Rush": {
     "NAME": "冲锋",

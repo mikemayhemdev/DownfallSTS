@@ -228,8 +228,8 @@
   },
   "Slimebound:GoopTackle": {
     "NAME": "连续冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机获得1张 slimeboundmod:冲撞 牌。 NL 其耗能本回合为0。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机获得1张 slimeboundmod:冲撞 牌+。 NL 其耗能本回合为0。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机获得1张 slimeboundmod:冲撞 牌。 NL 本回合其耗能为0。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机获得1张 slimeboundmod:冲撞 牌+。 NL 本回合其耗能为0。"
   },
   "Slimebound:CorrosiveSpit": {
     "NAME": "腐蚀喷吐",
@@ -288,7 +288,7 @@
     "DESCRIPTION": "下回合： NL 获得 [E] [E] [E] 。 NL 获得 !M! 点 力量 。 NL 获得 *史莱姆猛击 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "下回合： NL 获得 [E] [E] [E] [E] 。 NL 获得 !M! 点 力量 。 NL 获得 *史莱姆猛击+ 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "~Slime...~ NL #r~CRUSH!!!~" // 551 string in monsters.json
+      "~史莱姆...~ NL #r~猛击!!!~" // 551 string in monsters.json
     ]
   },
   "Slimebound:SlimeCrush": {

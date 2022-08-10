@@ -8,6 +8,7 @@ import charbosses.bosses.Hermit.NewAge.ArchetypeAct3DoomsdayNewAge;
 import charbosses.bosses.Watcher.NewAge.ArchetypeAct1RetainNewAge;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.powers.bossmechanicpowers.HermitConcentrationPower;
+import charbosses.ui.EnergyOrbHermit;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
@@ -15,6 +16,7 @@ import com.esotericsoftware.spine.AnimationState;
 import com.esotericsoftware.spine.Slot;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -25,6 +27,7 @@ import downfall.downfallMod;
 import hermit.characters.hermit;
 import hermit.effects.HermitEyeParticle;
 import hermit.powers.Concentration;
+
 
 import static charbosses.cards.AbstractBossCard.HAND_SCALE;
 import static charbosses.cards.AbstractBossCard.HOVER_SCALE;
@@ -41,8 +44,8 @@ public class CharBossHermit extends AbstractCharBoss {
     private float fireTimer = 0.0F;
 
     public CharBossHermit() {
-        super(NAME, ID, 72, 0.0F, -5.0F, 240.0F, 270.0F, null, 0.0f, -20.0f, PlayerClass.WATCHER);
-        this.energyOrb = new EnergyOrbPurple();
+        super(NAME, ID, 72, 0.0F, -5.0F, 240.0F, 270.0F, null, 0.0f, -20.0f, hermit.Enums.HERMIT);
+        this.energyOrb = new EnergyOrbHermit();
         this.energy = new EnemyEnergyManager(3);
         loadAnimation(
                 THE_DEFAULT_SKELETON_ATLAS,
@@ -64,7 +67,7 @@ public class CharBossHermit extends AbstractCharBoss {
     public void generateDeck() {
         AbstractBossDeckArchetype archetype;
         if (downfallMod.overrideBossDifficulty) {
-            archetype = new ArchetypeAct1RetainNewAge();
+            archetype = new ArchetypeAct1SharpshooterNewAge();
             downfallMod.overrideBossDifficulty = false;
             this.currentHealth -= 100;
         } else
