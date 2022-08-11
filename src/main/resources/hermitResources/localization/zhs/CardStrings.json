@@ -195,7 +195,7 @@
   },
   "hermit:BigShot": {
     "NAME": "冒烟枪管",
-    "DESCRIPTION": "触发 hermit:精准 后，下次攻击额外造成 !M! 点伤害。"
+    "DESCRIPTION": "触发 hermit:精准 时， NL 获得 !M! 层 活力 。"
   },
   "hermit:OverwhelmingPower": {
     "NAME": "压倒性力量",
