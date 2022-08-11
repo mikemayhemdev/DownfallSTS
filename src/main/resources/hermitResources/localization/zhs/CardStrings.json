@@ -300,7 +300,7 @@
   },
   "hermit:ItchyTrigger": {
     "NAME": "急扣扳机",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 ： NL 一张手牌本回合下次耗能减 !M! 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL hermit:精准 ： NL 随机一张手牌本回合下次耗能减 !M! 。"
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "风暴之眼",
