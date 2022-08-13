@@ -292,7 +292,7 @@
   },
   "hermit:GoldenBullet": {
     "NAME": "黄金子弹",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 时耗能本局减1。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 时本局耗能减1。 NL 消耗 。"
   },
   "hermit:HoleUp": {
     "NAME": "'洞'起来",
