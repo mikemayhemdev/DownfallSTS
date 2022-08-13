@@ -154,7 +154,7 @@
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 每有一张 诅咒 ， NL 额外造成 !M! 点。"
   },
   "hermit:Spite": {
-    "NAME": "苦恼",
+    "NAME": "恶意",
     "DESCRIPTION": "抽 !M! 张 诅咒 。 NL 造成 !D! 点伤害两次。"
   },
   "hermit:Manifest": {
