@@ -21,7 +21,7 @@
   },
   "hermit:Quickdraw": {
     "NAME": "快拔",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 下回合少抽一张牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 下1回合少抽一张牌。"
   },
   "hermit:WideOpen": {
     "NAME": "旷地显靶",
