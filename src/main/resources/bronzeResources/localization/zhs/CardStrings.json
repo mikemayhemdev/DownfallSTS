@@ -75,7 +75,7 @@
   },
   "bronze:Replicate": {
     "NAME": "副本",
-    "DESCRIPTION": "造成 !D! 点伤害。 \u202F NL bronze:编码 时将本牌的复制品加入弃牌堆。",
+    "DESCRIPTION": "造成 !D! 点伤害。 \u202F NL bronze:编码 时， NL 将本牌复制至弃牌堆。",
     "EXTENDED_DESCRIPTION": [
       "反复",
       "拷贝"
@@ -118,7 +118,7 @@
   },
   "bronze:Separator": {
     "NAME": "分隔符",
-    "DESCRIPTION": "造成 !D! 点伤害。 \u202F NL bronze:编码 时若在中间槽位，伤害增加 !M! 点。",
+    "DESCRIPTION": "造成 !D! 点伤害。 \u202F NL bronze:编码 时若非首尾槽位，伤害增加 !M! 点。",
     "EXTENDED_DESCRIPTION": [
       "分离",
       "分割"
@@ -224,8 +224,8 @@
   },
   "bronze:BitShift": {
     "NAME": "位元位移",
-    "DESCRIPTION": "选择一张 bronze:编码 中的牌返回手牌。 NL 其获得 保留 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 选择一张 bronze:编码 中的牌返回手牌。 NL 其获得 保留 。 NL 消耗 。"
+    "DESCRIPTION": "选择一张 bronze:编码 中的牌， NL 将其 保留 并返回手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 选择一张 bronze:编码 中的牌， NL 将其 保留 并返回手牌。 NL 消耗 。"
   },
   "bronze:ByteShift": {
     "NAME": "字节位移",
@@ -261,7 +261,7 @@
   },
   "bronze:GetLatest": {
     "NAME": "最新素材",
-    "DESCRIPTION": "获得一张 bronze:编码 牌。 NL 其耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "获得一张 bronze:编码 牌。 NL 其首次耗能为0。 NL 消耗 。"
   },
   "bronze:Flail": {
     "NAME": "乱斗",
@@ -349,8 +349,8 @@
   },
   "bronze:InfiniteBeams": {
     "NAME": "无尽射线",
-    "DESCRIPTION": "回合开始时获得 *微光射线 。",
-    "UPGRADE_DESCRIPTION": "回合开始时获得 *微光射线+ 。"
+    "DESCRIPTION": "回合开始时， NL 获得 *微光射线 。",
+    "UPGRADE_DESCRIPTION": "回合开始时， NL 获得 *微光射线+ 。"
   },
   "bronze:Optimize": {
     "NAME": "优化",
@@ -358,7 +358,7 @@
   },
   "bronze:MaxOutput": {
     "NAME": "极限功率",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 每回合额外抽1张牌并 bronze:插入 *晕眩 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 回合开始时，抽1张牌并 bronze:插入 *晕眩 。"
   },
   "bronze:Mutator": {
     "NAME": "赋值",
@@ -367,7 +367,7 @@
   },
   "bronze:Allocate": {
     "NAME": "分配",
-    "DESCRIPTION": "抽牌堆每有一张 状态牌 ，获得 [E] 。",
+    "DESCRIPTION": "抽牌堆每有 状态牌 ， NL 获得 [E] 。",
     "EXTENDED_DESCRIPTION": [
       " NL （获得 ",
       " [E] ）"
@@ -433,20 +433,20 @@
   },
   "bronze:Return": {
     "NAME": "返回",
-    "DESCRIPTION": "将一张弃牌堆牌放入抽牌堆顶部。 NL 下回合获得 [E] 。",
-    "UPGRADE_DESCRIPTION": "将一张弃牌堆牌放入抽牌堆顶部。 NL 下回合获得 [E] [E] 。"
+    "DESCRIPTION": "将一张弃牌堆的牌放入抽牌堆顶部。 NL 下回合获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "将一张弃牌堆的牌放入抽牌堆顶部。 NL 下回合获得 [E] [E] 。"
   },
   "bronze:ForceShield": {
     "NAME": "力场护盾",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本场战斗每 bronze:编译 过一张 bronze:方法 ，耗能减少 [E] 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每 bronze:编译 过一张 bronze:方法 ， NL 本场战斗耗能减1。"
   },
   "bronze:Format": {
     "NAME": "格式化",
-    "DESCRIPTION": " bronze:编码 X 张 *碎片 。 NL 获得 [E] 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " bronze:编码 X+1 张 *碎片 。 NL 获得 [E] 。 NL 消耗 。"
+    "DESCRIPTION": " bronze:编码 X 张 *数据碎片 。 NL 获得 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " bronze:编码 X+1 张 *数据碎片 。 NL 获得 [E] 。 NL 消耗 。"
   },
   "bronze:FormatEncoded": {
-    "NAME": "碎片",
+    "NAME": "数据碎片",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       "简洁",
@@ -455,7 +455,7 @@
   },
   "bronze:BurnOut": {
     "NAME": "燃烧殆尽",
-    "DESCRIPTION": " 消耗 所有 状态牌 ，每张随机造成 !D! 点伤害。 NL 消耗 。",
+    "DESCRIPTION": " 消耗 所有 状态牌 ， NL 每张随机造成 !D! 点伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "消耗 所有 状态牌 (",
       "张)，每张随机造成 !D! 点伤害。 NL 消耗 。"
@@ -463,7 +463,7 @@
   },
   "bronze:ShipIt": {
     "NAME": "废能转换",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一张 状态牌 伤害增加 !M! 点。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一张 状态牌 ， NL 伤害增加 !M! 点。 NL (包括 消耗 堆)"
   },
   "bronze:Break": {
     "NAME": "打断",
@@ -484,12 +484,12 @@
   },
   "bronze:Library": {
     "NAME": "数据库",
-    "DESCRIPTION": "回合开始时获得 bronze:编码 牌。 NL 其耗能为0。"
+    "DESCRIPTION": "回合开始时， NL 获得一张 bronze:编码 牌。 NL 其首次耗能为0。"
   },
   "bronze:Verify": {
     "NAME": "感知形态",
-    "DESCRIPTION": "虚无 。 NL 抽到 bronze:方法 时，提高其数值1点。",
-    "UPGRADE_DESCRIPTION": "抽到 bronze:方法 时，提高其数值1点。"
+    "DESCRIPTION": "虚无 。 NL 抽到 bronze:方法 时， NL 提高其数值1点。",
+    "UPGRADE_DESCRIPTION": "抽到 bronze:方法 时， NL 提高其数值1点。"
   },
   "bronze:BronzeHeatsink": {
     "NAME": "铜制散热器",
@@ -533,8 +533,8 @@
   },
   "bronze:FineTuning": {
     "NAME": "性能调整",
-    "DESCRIPTION": "提高 bronze:编码 中牌的数值 !M! 点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 提高 bronze:编码 中牌的数值 !M! 点。 NL 消耗 。"
+    "DESCRIPTION": "bronze:编码 中牌的数值加 !M! 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL bronze:编码 中牌的数值加 !M! 。 NL 消耗 。"
   },
   "bronze:CleanCode": {
     "NAME": "简明代码",
@@ -589,7 +589,7 @@
   },
   "bronze:Refactor": {
     "NAME": "重构",
-    "DESCRIPTION": " 预见 !M! 。 NL 消耗 丢弃的牌。 NL 每 消耗 一张 状态牌 ，获得 !B! 点 格挡 。"
+    "DESCRIPTION": " 预见 !M! 。 NL 消耗 丢弃的牌。 NL 每 消耗 一张 状态牌 ， NL 获得 !B! 点 格挡 。"
   },
   "bronze:Turbo": {
     "NAME": "内核加速",
@@ -615,8 +615,8 @@
   },
   "bronze:FindAndReplace": {
     "NAME": "查找替换",
-    "DESCRIPTION": "将一张抽或弃牌堆牌加入手牌。 NL 在其原位添加 *晕眩 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将一张抽或弃牌堆牌加入手牌。 NL 消耗 。",
+    "DESCRIPTION": "将一张抽或弃牌堆的牌加入手牌。 NL 在其原位添加 *晕眩 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "将一张抽或弃牌堆的牌加入手牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "选择一张牌加入手牌并在其原位添加晕眩"
     ]
