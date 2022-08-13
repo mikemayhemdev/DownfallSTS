@@ -155,7 +155,7 @@
   },
   "hermit:Spite": {
     "NAME": "恶意",
-    "DESCRIPTION": "抽 !M! 张 诅咒 。 NL 造成 !D! 点伤害两次。"
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 抽 !M! 张 诅咒 。"
   },
   "hermit:Manifest": {
     "NAME": "恶灵现身",
