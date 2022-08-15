@@ -30,7 +30,7 @@ public class SneckoCommon extends CustomRelic implements CustomSavable<AbstractC
 
     @Override
     public void onEquip() {
-        if (SneckoBoss.myColor != null && AbstractDungeon.player.hasRelic(SneckoCommon.ID)) { // already got Lucky Horseshoe
+        if (SneckoBoss.myColor != null && AbstractDungeon.player.hasRelic(SneckoBoss.ID)) { // already got Lucky Horseshoe
             for (AbstractCard c : CardLibrary.getAllCards()) {
                 if (c instanceof UnknownClass && SneckoBoss.myColor == ((UnknownClass) c).myColor) {
                     AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c.makeCopy(), Settings.WIDTH / 2F, Settings.HEIGHT / 2F));
