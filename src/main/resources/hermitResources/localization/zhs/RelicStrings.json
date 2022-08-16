@@ -60,7 +60,7 @@
     "NAME": "烧焦的手套",
     "FLAVOR": "手套上还残留着部分的尘世灰烬。",
     "DESCRIPTIONS": [
-      "抽到 #y诅咒 时，下次 #y攻击 额外造成 #b3 点伤害。"
+      "抽到 #y诅咒 时，获得 #b3 层 #y活力 。"
     ]
   },
   "hermit:ClaspedLocket": {
