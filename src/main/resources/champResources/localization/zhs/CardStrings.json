@@ -291,7 +291,7 @@
   },
   "champ:Improvising": {
     "NAME": "触类旁通",
-    "DESCRIPTION": "每回合首次用 champ:连段 时， NL 将其返回手牌。 NL 其下次耗能为0。"
+    "DESCRIPTION": "每回合首次 champ:连段 时， NL 将该牌返回手牌。 NL 其下次耗能为0。"
   },
   "champ:CalledShot": {
     "NAME": "宣告",
@@ -319,7 +319,7 @@
   },
   "champ:DancingMaster": {
     "NAME": "战技大师",
-    "DESCRIPTION": "每回合首次用 champ:终结技 时， NL 获得 [E] 并抽一张牌。"
+    "DESCRIPTION": "每回合首次 champ:终结技 时， NL 获得 [E] 并抽一张牌。"
   },
   "champ:StrikeOfGenius": {
     "NAME": "打击天才",
@@ -360,7 +360,7 @@
   "champ:Parry": {
     "NAME": "招架",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。 NL 若本回合触发 champ:反击 ， NL 获得 *弹反 。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 造成 champ:反击 使用层数点伤害。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 造成 champ:反击 触发时层数点伤害。 NL 消耗 。"
   },
   "champ:EnchantCrown": {
     "NAME": "附魔金冠",
