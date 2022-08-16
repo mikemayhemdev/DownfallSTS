@@ -14,8 +14,8 @@
   },
   "champ:Execute": {
     "NAME": "处决",
-    "DESCRIPTION": "造成 !D! 点伤害 !cool! 次。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 !cool! 次。"
+    "DESCRIPTION": "造成 !D! 点伤害两次。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害两次。"
   },
   "champ:StanceDance": {
     "NAME": "姿态之舞",
@@ -53,7 +53,7 @@
   },
   "champ:FocusedBerserking": {
     "NAME": "全力以赴",
-    "DESCRIPTION": "消耗 。 NL 连续触发 !M! 次且不退出 姿态 。"
+    "DESCRIPTION": "消耗 。 NL 连续触发 !M! 次， NL 且不退出 姿态 。"
   },
   "champ:SetATrap": {
     "NAME": "布置陷阱",
@@ -85,7 +85,7 @@
   },
   "champ:Devastate": {
     "NAME": "坏灭",
-    "DESCRIPTION": "造成 !D! 点伤害三次。 NL 每用过一张 champ:终结技 ， NL 耗能减少 [E] 。"
+    "DESCRIPTION": "造成 !D! 点伤害三次。 NL 每用过一张 champ:终结技 ， NL 本场战斗耗能减1。"
   },
   "champ:Circumvent": {
     "NAME": "规避",
@@ -94,7 +94,7 @@
   },
   "champ:SkillfulDodge": {
     "NAME": "精巧闪避",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。 NL champ:防守 champ:连段 ：本牌 格挡 与 champ:反击 获得增加 !cool! 点。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。 NL champ:防守 champ:连段 ： NL 本场战斗数值加 !cool! 。"
   },
   "champ:TornadoPunch": {
     "NAME": "飓风拳",
@@ -119,7 +119,7 @@
   },
   "champ:BringItOn": {
     "NAME": "后发",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 获得 !M! 层 champ:反击 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。",
     "EXTENDED_DESCRIPTION": [
       "我不处于那个姿态。"
     ]
@@ -131,13 +131,13 @@
   },
   "champ:FalseCounter": {
     "NAME": "以逸待劳",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 [E] 并抽两张牌。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 [E] [E] 并抽两张牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合， NL 获得 [E] 并抽两张牌。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合， NL 获得 [E] [E] 并抽两张牌。"
   },
   "champ:IronFortress": {
     "NAME": "战斗跃舞",
-    "DESCRIPTION": "进入不同 姿态 时，获得其 champ:技术 奖励两次。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 进入不同 姿态 时，获得其 champ:技术 奖励两次。"
+    "DESCRIPTION": "进入不同 姿态 时， NL 获得其 champ:技术 奖励两次。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 进入不同 姿态 时， NL 获得其 champ:技术 奖励两次。"
   },
   "champ:Lariat": {
     "NAME": "强身健体",
@@ -173,7 +173,7 @@
   },
   "champ:RapidStrikes": {
     "NAME": "连续打击",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 手中随机一张 *打击 牌本回合下次耗能为0。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 手中随机一张 *打击 牌本回合下次耗能变为0。"
   },
   "champ:EnchantSword": {
     "NAME": "剑拔弩张",
@@ -193,12 +193,12 @@
   },
   "champ:MurderStrike": {
     "NAME": "刽子打击",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 打出 *技能 牌时， NL 伤害增加 !M! 点。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 打出 *技能 牌时， NL 本场战斗伤害加 !M! 。"
   },
   "champ:HeavySlash": {
     "NAME": "大师斩击",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 随机获得1张 *技能 牌。 NL 其耗能为0。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 随机获得1张 *技能 牌+ NL 其耗能为0。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 随机获得 *技能 牌。 NL 其耗能为0。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 随机获得 *技能 牌+。 NL 其耗能为0。"
   },
   "champ:CheapShot": {
     "NAME": "偷袭",
@@ -291,7 +291,7 @@
   },
   "champ:Improvising": {
     "NAME": "触类旁通",
-    "DESCRIPTION": "每回合首次打出 champ:连段 牌时，将其返回手牌。 NL 其下次耗能为0。"
+    "DESCRIPTION": "每回合首次用 champ:连段 时， NL 将其返回手牌。 NL 其下次耗能为0。"
   },
   "champ:CalledShot": {
     "NAME": "宣告",
@@ -310,7 +310,7 @@
   },
   "champ:GladiatorForm": {
     "NAME": "角斗形态",
-    "DESCRIPTION": "回合开始时，上回合每使用过3层 活力 ，获得 !M! 层 。 champ:反击 亦然。"
+    "DESCRIPTION": "回合开始时，上回合每使用过3层 活力 ，获得 !M! 层。 champ:反击 亦然。"
   },
   "champ:Duel": {
     "NAME": "挑战",
@@ -319,7 +319,7 @@
   },
   "champ:DancingMaster": {
     "NAME": "战技大师",
-    "DESCRIPTION": "每回合首次打出 champ:终结技 时，获得 [E] 并抽一张牌。"
+    "DESCRIPTION": "每回合首次用 champ:终结技 时， NL 获得 [E] 并抽一张牌。"
   },
   "champ:StrikeOfGenius": {
     "NAME": "打击天才",
@@ -360,7 +360,7 @@
   "champ:Parry": {
     "NAME": "招架",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。 NL 若本回合触发 champ:反击 ， NL 获得 *弹反 。",
-    "UPGRADE_DESCRIPTION": "造成 champ:反击 使用层数点伤害。 NL 消耗 。."
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 造成 champ:反击 使用层数点伤害。 NL 消耗 。"
   },
   "champ:EnchantCrown": {
     "NAME": "附魔金冠",
@@ -387,8 +387,8 @@
   },
   "champ:TripleStrike": {
     "NAME": "三重打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得两张可触发 champ:技术 的 *打击 。其耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得两张可触发 champ:技术 的 *打击+ 。其耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得两张 champ:技术 *打击 。 NL 其耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得两张 champ:技术 *打击+ 。 NL 其耗能为0。 NL 消耗 。"
   },
   "champ:WindUp": {
     "NAME": "挑衅",
