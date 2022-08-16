@@ -310,7 +310,7 @@
   },
   "champ:GladiatorForm": {
     "NAME": "角斗形态",
-    "DESCRIPTION": "回合开始时， NL 返还上回合所耗的 !M! /3 层 活力 与 champ:反击 。"
+    "DESCRIPTION": "回合开始时， NL 返还上回合所耗的 NL !M! /3 层 活力 与 champ:反击 。"
   },
   "champ:Duel": {
     "NAME": "挑战",
