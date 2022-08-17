@@ -147,8 +147,8 @@
   },
   "Guardian:PackageDonuDeca": {
     "NAME": "组件: 先古",
-    "DESCRIPTION": "获得 *过载 、 *先古之力 与 *先古建造 各1张。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 *过载+ 、 *先古之力+ 与 *先古建造+ 各1张。 NL 消耗 。"
+    "DESCRIPTION": "获得 *过载 、 *先古之力 与 *先古造物 各1张。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *过载+ 、 *先古之力+ 与 *先古造物+ 各1张。 NL 消耗 。"
   },
   "Guardian:PackageSphere": {
     "NAME": "组件: 圆球",
@@ -229,7 +229,7 @@
     "DESCRIPTION": "获得 !M! 个 guardianmod:凝滞 栏位。"
   },
   "Guardian:ConstructionForm": {
-    "NAME": "建造形态",
+    "NAME": "造物形态",
     "DESCRIPTION": "虚无 。 NL 获得 !M! 层 guardianmod:缓冲 。 NL 回合开始时若有 guardianmod:缓冲 ，获得1点 力量 。",
     "UPGRADE_DESCRIPTION": "获得 !M! 层 guardianmod:缓冲 。 NL 回合开始时若有 guardianmod:缓冲 ，获得1点 力量 。"
   },
@@ -314,7 +314,7 @@
     "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时 guardianmod:加速 。"
   },
   "Guardian:AncientConstruct": {
-    "NAME": "先古建造",
+    "NAME": "先古造物",
     "DESCRIPTION": "回合开始时若无 人工制品 ，获得 !M! 层。",
 	"UPGRADE_DESCRIPTION": "获得1层 人工制品 。 NL 回合开始时若无 人工制品 ，获得 !M! 层。"
   },
