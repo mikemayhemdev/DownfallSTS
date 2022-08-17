@@ -39,7 +39,7 @@
   },
   "Guardian:ChargeUp": {
     "NAME": "充能",
-    "DESCRIPTION": "将本牌 guardianmod:凝滞 。 NL guardianmod:滴答 ： NL 获得 !B! 点 格挡  。 NL 获得 !M! 点 力量 。 NL guardianmod:消散 。"
+    "DESCRIPTION": "将本牌 guardianmod:凝滞 。 NL guardianmod:滴答 ： NL 获得 !B! 点 格挡 。 NL 获得 !M! 点 力量 。 NL guardianmod:消散 。"
   },
   "Guardian:DonusPower": {
     "NAME": "过载",
@@ -211,8 +211,8 @@
   },
   "Guardian:FuturePlans": {
     "NAME": "未来计划",
-    "DESCRIPTION": "回合结束时， NL 可 guardianmod:凝滞一张手牌。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合结束时， NL 可 guardianmod:凝滞一张手牌。"
+    "DESCRIPTION": "回合结束时， NL 可 guardianmod:凝滞 一张手牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合结束时， NL 可 guardianmod:凝滞 一张手牌。"
   },
   "Guardian:Suspension": {
     "NAME": "挂起",
@@ -362,7 +362,7 @@
   },
   "Guardian:Repulse": {
     "NAME": "反冲协议",
-    "DESCRIPTION": "每回合首次抽到 状态牌 或 诅咒 时， 消耗 其并抽一张牌。",
+    "DESCRIPTION": "每回合首次抽到 NL 状态牌 或 诅咒 时， 消耗 其并抽一张牌。",
     "UPGRADE_DESCRIPTION": "消耗 每回合抽到的首张 状态牌 或 诅咒 并抽一张牌。"
   },
   "Guardian:BronzeOrb": {
