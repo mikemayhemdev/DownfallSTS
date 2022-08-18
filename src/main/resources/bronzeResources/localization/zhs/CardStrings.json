@@ -130,7 +130,7 @@
   },
   "bronze:Overheat": {
     "NAME": "过热",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 移除下张 bronze:编码 牌中的 bronze:编译 *错误 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 移除下次被 bronze:编码 的 bronze:编译 *错误 。"
   },
   "bronze:CutThrough": {
     "NAME": "剪枝",
