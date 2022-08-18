@@ -118,7 +118,7 @@
   },
   "bronze:Separator": {
     "NAME": "分隔符",
-    "DESCRIPTION": "造成 !D! 点伤害。 \u202F NL bronze:编码 时若非首尾槽位，伤害增加 !M! 点。",
+    "DESCRIPTION": "造成 !D! 点伤害。 \u202F NL bronze:编码 时若在中间槽位，伤害增加 !M! 点。",
     "EXTENDED_DESCRIPTION": [
       "分离",
       "分割"
