@@ -83,7 +83,7 @@
   },
   "bronze:Branch": {
     "NAME": "分支",
-    "DESCRIPTION": "选择 ：造成 !D! 点伤害 或 获得 !B! 点 格挡 。 NL bronze:编码 另一张牌。 NL 消耗 。",
+    "DESCRIPTION": "造成 !D! 点伤害， NL 或获得 !B! 点 格挡 。 NL bronze:编码 另一选项。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "分支：攻击",
       "造成 !D! 点伤害。",
@@ -248,7 +248,7 @@
   },
   "bronze:Terminator": {
     "NAME": "终止符",
-    "DESCRIPTION": " bronze:编译 ：若在 bronze:队列 最后， bronze:方法 附带再打出一次。",
+    "DESCRIPTION": " bronze:编译 ：若在最后槽位， NL bronze:方法 附带再打出一次。",
     "EXTENDED_DESCRIPTION": [
       "哭泣",
       "终结"
@@ -336,8 +336,8 @@
   },
   "bronze:ItsAFeature": {
     "NAME": "此为特性",
-    "DESCRIPTION": "抽到 诅咒 或 状态牌 时，获得 1 点 guardianmod:临时 力量 与 敏捷 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 抽到 诅咒 或 状态牌 时，获得 1 点 guardianmod:临时 力量 与 敏捷 。"
+    "DESCRIPTION": "抽到 诅咒 或 状态牌 时： NL 获得 1 层 guardianmod:临时 力量 。 NL 获得 1 层 guardianmod:临时 敏捷 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 抽到 诅咒 或 状态牌 时： NL 获得 1 层 guardianmod:临时 力量 。 NL 获得 1 层 guardianmod:临时 敏捷 。"
   },
   "bronze:MinorBeam": {
     "NAME": "微光射线",
@@ -358,7 +358,7 @@
   },
   "bronze:MaxOutput": {
     "NAME": "极限功率",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 回合开始时，抽1张牌并 bronze:插入 *晕眩 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 回合开始时， NL 抽1张牌并 bronze:插入 *晕眩 。"
   },
   "bronze:Mutator": {
     "NAME": "赋值",
@@ -507,8 +507,8 @@
   },
   "bronze:Repulsor": {
     "NAME": "反冲器",
-    "DESCRIPTION": "消耗 每回合抽到的首张 状态牌 或 诅咒 并抽一张牌。",
-    "UPGRADE_DESCRIPTION": "消耗 每回合抽到的首张 状态牌 或 诅咒 并抽一张牌。"
+    "DESCRIPTION": "每回合首次抽到 NL 状态牌 或 诅咒 时， 消耗 其并抽一张牌。",
+    "UPGRADE_DESCRIPTION": "每回合首次抽到 NL 状态牌 或 诅咒 时， 消耗 其并抽一张牌。"
   },
   "bronze:Debug": {
     "NAME": "调试",
@@ -524,7 +524,7 @@
   },
   "bronze:SpaghettiCode": {
     "NAME": "意面代码",
-    "DESCRIPTION": "从3张随机 *编码 牌中选择1张 bronze:编码 直至 bronze:编译 。 NL 消耗 。",
+    "DESCRIPTION": "从三张随机 *编码 牌中选 NL 择一张 bronze:编码 直至 bronze:编译 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "弃用"
   },
   "bronze:Assembly": {
@@ -584,8 +584,8 @@
   },
   "bronze:TinkerersToolbox": {
     "NAME": "开发工具",
-    "DESCRIPTION": "保留 。 NL 选择获得一张 *调 *试 、 *批 *处 *理 、 *反 *编 *译 或 *字 *节 *位 *移 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 选择获得一张 *调 *试 、 *批 *处 *理 、 *反 *编 *译 或 *字 *节 *位 *移 。"
+    "DESCRIPTION": "保留 。 NL 选择获得一张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 选择获得一张牌。"
   },
   "bronze:Refactor": {
     "NAME": "重构",
