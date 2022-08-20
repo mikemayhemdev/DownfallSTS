@@ -17,7 +17,7 @@ import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.CRIMSON;
 
 
-public class Gem_Crimson extends AbstractGuardianCard {
+public class Gem_Crimson extends AbstractGemCard {
     public static final String ID = GuardianMod.makeID("Gem_Crimson");
     public static final String NAME;
     public static final String IMG_PATH = "cards/gemCrimson.png";

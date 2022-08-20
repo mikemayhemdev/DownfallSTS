@@ -131,7 +131,7 @@
   },
   "hermit:SprayPray": {
     "NAME": "Atirar e Rezar",
-    "DESCRIPTION": "Cause !D! de dano a um inimigo aleatório 4 vezes. NL Embaralhe uma *Dúvida na sua pilha de compras."
+    "DESCRIPTION": "Cause !D! de dano a um inimigo aleatório 3 vezes. NL Embaralhe uma *Dúvida na sua pilha de compras."
   },
   "hermit:Scavenge": {
     "NAME": "Limpar",
@@ -304,7 +304,7 @@
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "Olho da Tempestade",
-    "DESCRIPTION": "hermit:Na_Mira: NL Ganhe Energia até sua Energia máxima. NL Exaurir.",
+    "DESCRIPTION": "Ganhe Energia até sua Energia máxima. NL Exaurir.",
     "UPGRADE_DESCRIPTION": "Compre uma carta. NL hermit:Na_Mira: NL Ganhe Energia até sua Energia máxima. NL Exaurir."
   },
   "hermit:FinalCanter": {

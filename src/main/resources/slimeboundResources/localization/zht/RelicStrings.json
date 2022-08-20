@@ -3,7 +3,7 @@
     "NAME": "黏液之心",
     "FLAVOR": "我可真時髦。",
     "DESCRIPTIONS": [
-      " #yslimeboundmod:消耗黏液 時，回復 #b2 點生命。 NL （每場戰鬥最多 #b8 點）"
+      " #yslimeboundmod:吞食黏液 時，回復 #b2 點生命。 NL （每場戰鬥最多 #b8 點）"
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
@@ -11,14 +11,14 @@
     "FLAVOR": "黏漿中的秘密。",
     "DESCRIPTIONS": [
 	"替換 ",
-     " 。 NL #yslimeboundmod:消耗黏液 時，回復 #b3 點生命。 NL （每場戰鬥最多 #b15 點）"
+     " 。 NL #yslimeboundmod:吞食黏液 時，回復 #b3 點生命。 NL （每場戰鬥最多 #b15 點）"
     ]
   },
   "Slimebound:SlimedTailRelic": {
     "NAME": "黏質斷尾",
     "FLAVOR": "一條完全由黏液包裹的斷尾，戰鬥時可以迷惑敵人。",
     "DESCRIPTIONS": [
-      "生命值低於 #b50% 時， #yslimeboundmod:分裂 一隻 #yslimeboundmod:游擊史萊姆 。下次受到攻擊傷害時， 變為 #yslimeboundmod:吸收 。 NL（每場戰鬥只生效一次）",
+      "生命值低於 #b50% 時， #yslimeboundmod:分裂 一隻 #yslimeboundmod:遊擊史萊姆 。下次受到攻擊傷害時， 變為 #yslimeboundmod:吸收 。 NL（每場戰鬥只生效一次）",
       " NL 本場戰鬥已被使用。"
     ]
   },
@@ -26,12 +26,12 @@
     "NAME": "黏黏石",
     "FLAVOR": "據說它能根據你的情緒獲得力量",
     "DESCRIPTIONS": [
-      "戰鬥開始時， #yslimeboundmod:分裂 一隻 #yslimeboundmod:污泥史萊姆 並獲得 #b1 點 #yslimeboundmod:潛力 。"
+      "戰鬥開始時， #yslimeboundmod:分裂 一隻 #yslimeboundmod:汙泥史萊姆 並獲得 #b1 點 #yslimeboundmod:潛力 。"
     ]
   },
   "Slimebound:DailySplitRelic": {
     "NAME": "黏黏尖塔",
-    "FLAVOR": "永遠分裂！為啥這是個遺物？因為我不知道怎麼把自定義mod加到已激活mod的UI里！",
+    "FLAVOR": "永遠分裂！為啥這是個遺物？因為我不知道怎麽把自定義mod加到已激活mod的UI裏！",
     "DESCRIPTIONS": [
       "#b自定義模式 NL 所有敵人在生命值低於50%時分裂成兩個史萊姆敵人。"
     ]
@@ -48,7 +48,7 @@
   },
   "Slimebound:GreedOozeRelic": {
     "NAME": "貪婪黏液",
-    "FLAVOR": "尖塔里找到的囤金子的朋友。",
+    "FLAVOR": "尖塔裏找到的囤金子的朋友。",
     "DESCRIPTIONS": [
       "戰鬥開始時， #y分裂 一隻可重生的 #y貪婪史萊姆 。 NL 在休息處， #y貪婪史萊姆 會吞食 #b50 金幣並提高它造成的傷害 #g1 點。"
     ]
@@ -57,7 +57,7 @@
     "NAME": "黏粥",
     "FLAVOR": "嘗起來很糟，但極其健康。",
     "DESCRIPTIONS": [
-      "到達休息處後的下場戰鬥開始時，將一張 #y伺機待發 加入手牌，它的耗能變為 #b0 。"
+      "到達休息處後的下場戰鬥開始時，將一張 #y伺機待發 加入手牌，其耗能為 #b0 。"
     ]
   },
   "Slimebound:AggressiveSlimeRelic": {
@@ -69,7 +69,7 @@
   },
   "Slimebound:SlimedSkullRelic": {
     "NAME": "黏蛇頭骨",
-    "FLAVOR": "一個非常惡心的異蛇頭骨，灰塵和污垢像膠一樣粘在上面，又髒又黏。",
+    "FLAVOR": "一個非常惡心的異蛇頭骨，灰塵和汙垢像膠一樣粘在上面，又臟又黏。",
     "DESCRIPTIONS": [
       "給予 #yslimeboundmod:黏液 時，額外給予 #b",
       " 層。"

@@ -298,7 +298,7 @@
     ]
   },
   "downfall:HermitWheelOfFortune": {
-    "NAME": "幸运之轮",
+    "NAME": "幸运大转盘",
     "DESCRIPTIONS": [
       "每当你对 #y亡命之徒 造成 #b1 段攻击时，它丢弃最左边的牌并抽 #b1 张牌。每丢弃 #b",
       " 张牌，它获得 #b1 点 力量 。"

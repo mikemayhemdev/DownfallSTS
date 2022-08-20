@@ -304,7 +304,10 @@
   "Slimebound:PrepareCrush": {
     "NAME": "Prepare: Crush",
     "DESCRIPTION": "Next turn, gain [E] [E] [E] and !M! Strength, and add Slime Crush to your hand.",
-    "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E] [E] [E] and !M! Strength, and add Slime Crush to your hand."
+    "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E] [E] [E] and !M! Strength, and add Slime Crush to your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "~Slime...~ NL #r~CRUSH!!!~"
+    ]
   },
   "Slimebound:SlimeCrush": {
     "NAME": "SLIME CRUSH!!!",

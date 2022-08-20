@@ -16,7 +16,7 @@ import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.CYAN;
 
 
-public class Gem_Cyan extends AbstractGuardianCard {
+public class Gem_Cyan extends AbstractGemCard {
     public static final String ID = GuardianMod.makeID("Gem_Cyan");
     public static final String NAME;
     public static final String IMG_PATH = "cards/gemCyan.png";

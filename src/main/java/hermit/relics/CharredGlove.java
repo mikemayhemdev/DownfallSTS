@@ -39,7 +39,7 @@ public class CharredGlove extends CustomRelic {
     public void onCardDraw(AbstractCard card) {
         if (card.color == AbstractCard.CardColor.CURSE) {
             this.flash();
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, 4), 4));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, 3), 3));
         }
 
     }

@@ -20,37 +20,37 @@
   "expansioncontent:AwakenDeathPower": {
     "NAME": "未覺醒",
     "DESCRIPTIONS": [
-      "當你即將死亡時，恢復",
-      " 生命並移除此效果。"
+      "當你即將死亡時或戰鬥結束時，恢復 #b",
+      " 點生命並移除此效果。"
     ]
   },
   "expansioncontent:ChronoBoostPower": {
     "NAME": "時間加速",
     "DESCRIPTIONS": [
-      "打出",
-      " 張牌後，獲得 ",
-      " #y力量 。"
+      "每當你打出 #b",
+      " 張牌時，獲得 #b",
+      " 點 #y力量 。"
     ]
   },
   "expansioncontent:ChronoBoostPlusPower": {
     "NAME": "時間加速+",
     "DESCRIPTIONS": [
-      "打出",
-      " 張牌後，獲得 ",
-      " #y力量 。"
+      "每當你打出 #b",
+      " 張牌時，獲得 #b",
+      " 點 #y力量 。"
     ]
   },
   "expansioncontent:DeEnergizedPower": {
     "NAME": "能量降低",
     "DESCRIPTIONS": [
-      "你的下個回合開始時，失去",
+      "你的下回合開始時，失去 #b",
       " [E] 。"
     ]
   },
   "expansioncontent:PolyBeamAgainPower": {
     "NAME": "切換光束",
     "DESCRIPTIONS": [
-      "下回合開始時，打出 #y多重光束 。 ",
+      "你的下回合開始時，打出 #y多重光束 。",
       "接下來的 ",
       "回合開始時，打出 #y多重光束 。"
     ]
@@ -88,8 +88,8 @@
     "NAME": "地獄火",
     "DESCRIPTIONS": [
       "在 #b",
-      " 回合後，對隨機敵人造成 #b",
-      "本回合結束時，對隨機敵人造成 #b",
+      " 回合後，隨機對敵人造成 #b",
+      "本回合結束時，隨機對敵人造成 #b",
       " 點傷害 #b6 次。"
     ]
   },
@@ -97,10 +97,10 @@
     "NAME": "堅不可摧",
     "DESCRIPTIONS": [
       "本回合最多失去 #b",
-      " 生命。如果層數減少，回合結束時移除本效果。",
+      " 點生命。承傷達上限後，失去本效果。",
       "本回合最多失去 #b",
-      " 生命。如果層數減少，回合結束時移除本效果。還剩 #b",
-      " 次。"
+      " 點生命。承傷達上限後，失去本效果 #b1 層。還剩 #b",
+      " 層。"
     ]
   }
 }

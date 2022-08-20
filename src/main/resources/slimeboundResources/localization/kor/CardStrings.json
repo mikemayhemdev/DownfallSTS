@@ -286,7 +286,10 @@
   "Slimebound:PrepareCrush": {
     "NAME": "준비: 으깨기",
     "DESCRIPTION": "다음 턴에 [E] [E] [E] 과 힘을 !M! 얻고 *슬라임 *으깬다를 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "다음 턴에 [E] [E] [E] 과 힘을 !M! 얻고 *슬라임 *으깬다+를 얻습니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "다음 턴에 [E] [E] [E] 과 힘을 !M! 얻고 *슬라임 *으깬다+를 얻습니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": [
+      "~Slime...~ NL #r~CRUSH!!!~"
+    ]
   },
   "Slimebound:SlimeCrush": {
     "NAME": "슬라임 으깬다!!!",

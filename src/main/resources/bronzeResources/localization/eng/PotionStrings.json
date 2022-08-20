@@ -3,7 +3,7 @@
     "NAME": "Machine Oil",
     "DESCRIPTIONS": [
       "Increase all numbers on Encoded cards by #b",
-      "except cost."
+      " except cost."
     ]
   },
   "bronze:CleanCodePotion": {
@@ -19,7 +19,7 @@
     "DESCRIPTIONS": [
       "Gain #b",
       " #yStrength and #b",
-      " #yDexterity. NL Add two #yBurn+ cards to your draw pile."
+      " #yDexterity. NL Add two #yBurn+ cards into your discard pile."
     ]
   },
   "bronze:BuildAFunctionPotion": {

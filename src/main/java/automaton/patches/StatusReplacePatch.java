@@ -1,6 +1,7 @@
 package automaton.patches;
 
 import automaton.AutomatonMod;
+import automaton.cards.goodstatus.UsefulSlime;
 import automaton.relics.BronzeIdol;
 import basemod.devcommands.unlock.Unlock;
 import charbosses.cards.AbstractBossCard;
@@ -9,8 +10,10 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.relics.MedicalKit;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
@@ -31,6 +34,12 @@ public class StatusReplacePatch {
                         if (!abstractCard.hasTag(AutomatonMod.GOOD_STATUS)) {
 
                             AbstractCard newStatus = AutomatonMod.getGoodStatus(abstractCard);
+                            if(AbstractDungeon.player.hasRelic(MedicalKit.ID)&&!(newStatus instanceof UsefulSlime)){
+                                newStatus.cost=-2;
+                                newStatus.costForTurn=-2;
+                                newStatus.isCostModified=true;
+                                newStatus.isCostModifiedForTurn=true;
+                            }
                             //  //SlimeboundMod.logger.info("replacing with " + newStatus.name);
                             return SpireReturn.Return(newStatus);
                         }

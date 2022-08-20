@@ -57,7 +57,7 @@ public class Feint extends AbstractDynamicCard {
     public Feint() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = 2;
-        baseBlock = block = 4;
+        baseBlock = block = 3;
         loadJokeCardImage(this, "feint.png");
     }
 

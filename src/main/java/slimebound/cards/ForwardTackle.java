@@ -18,7 +18,7 @@ import slimebound.powers.TackleBuffPower;
 import slimebound.powers.TackleDebuffPower;
 
 
-public class ForwardTackle extends AbstractSlimeboundCard {
+public class ForwardTackle extends AbstractTackleCard {
     public static final String ID = "Slimebound:ForwardTackle";
     public static final String NAME;
     public static final String DESCRIPTION;

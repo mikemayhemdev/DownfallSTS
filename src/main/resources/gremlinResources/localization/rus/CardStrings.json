@@ -70,7 +70,7 @@
 
   "Gremlin:CowerChoice": {
     "NAME": "Съёжиться",
-    "DESCRIPTION": "Потерять всё золото.",
+    "DESCRIPTION": "Потерять все души.",
     "EXTENDED_DESCRIPTION": ["МЕЛКИЕ ГРЕМЛИНЫ НЕ ТУПЫЕ."]
   },
 
@@ -108,7 +108,7 @@
 
   "Gremlin:Encore": {
     "NAME": "На бис!",
-    "DESCRIPTION": "Даёт 3 gremlin:Чары. NL Наносит !M! урона ВСЕМ врагам, когда вы теряете gremlin:Чары."
+    "DESCRIPTION": "Даёт 3 gremlin:Чар. NL Наносит !M! урона ВСЕМ врагам, когда вы теряете gremlin:Чары."
   },
 
   "Gremlin:Enthusiasm": {
@@ -291,7 +291,7 @@
 
   "Gremlin:NobChoice": {
     "NAME": "Сделать выбор",
-    "DESCRIPTION": "Мелкие Гремлины дадут Золото?"
+    "DESCRIPTION": "Мелкие Гремлины отдадут Души?"
   },
 
   "Gremlin:PartyStick": {
@@ -469,7 +469,7 @@
 
   "Gremlin:Tricksy": {
     "NAME": "Шалости",
-    "DESCRIPTION": "{@@}Вы берёте !M! карт{!M!|&4=ы|&6=}. Сбрасывает каждую Атаку, которую вы берёте. NL gremlin:Смена на gremlin:Коварного_гремлина."
+    "DESCRIPTION": "{@@}Вы берёте !M! карт{!M!|&4=ы|&6=}. Сбрасывает все не-Атаки, которые вы берёте. NL gremlin:Смена на gremlin:Коварного_гремлина."
   },
 
   "Gremlin:TwistTheKnife": {

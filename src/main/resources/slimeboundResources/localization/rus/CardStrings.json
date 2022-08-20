@@ -18,16 +18,16 @@
   },
   "Slimebound:ComboTackle": {
     "NAME": "Стремительный рывок",
-    "DESCRIPTION": "slimeboundmod:Рывок. Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL Вы берёте !M! карты."
+    "DESCRIPTION": "Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL Вы берёте !M! карты."
   },
   "Slimebound:CorrosiveSpit": {
     "NAME": "Едкий плевок",
     "DESCRIPTION": "Накладывает !slime! slimeboundmod:Липкости."
   },
   "Slimebound:Darklings": {
-    "NAME": "Тёмное Дуо",
+    "NAME": "Тёмное дуо",
     "DESCRIPTION": "slimeboundmod:Призывает !M! slimeboundmod:Тёмных_слизня. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Тёмное Трио"
+    "UPGRADE_DESCRIPTION": "Тёмное трио"
   },
   "Slimebound:Defend_Slimebound": {
     "NAME": "Оборона",
@@ -63,7 +63,7 @@
   },
   "Slimebound:FinishingTackle": {
     "NAME": "Начальный рывок",
-    "DESCRIPTION": "slimeboundmod:Рывок. Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. при slimeboundmod:Пожирании - Накладывает !M! Уязвимости."
+    "DESCRIPTION": "Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. При slimeboundmod:Пожирании - Накладывает !M! Уязвимости."
   },
   "Slimebound:FirmFortitude": {
     "NAME": "Ликвидировать",
@@ -71,7 +71,7 @@
   },
   "Slimebound:FlameTackle": {
     "NAME": "Пламенный рывок",
-    "DESCRIPTION": "slimeboundmod:Рывок. Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL slimeboundmod:Рывки наносят на !M! урона больше в этом бою."
+    "DESCRIPTION": "Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL *Рывки наносят на !M! урона больше в этом бою."
   },
   "Slimebound:FormOfPuddle": {
     "NAME": "Форма лужицы",
@@ -79,8 +79,8 @@
   },
   "Slimebound:ForwardTackle": {
     "NAME": "Рывок вперед",
-    "DESCRIPTION": "slimeboundmod:Рывок. Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL slimeboundmod:Приказывает дважды.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Рывок. Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL slimeboundmod:Приказывает трижды."
+    "DESCRIPTION": "Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL slimeboundmod:Приказывает дважды.",
+    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL slimeboundmod:Приказывает трижды."
   },
   "Slimebound:Gluttony": {
     "NAME": "Обжорство",
@@ -93,8 +93,8 @@
   },
   "Slimebound:GoopTackle": {
     "NAME": "Комбо-рывок",
-    "DESCRIPTION": "slimeboundmod:Рывок. Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL Добавляет в руку случ. slimeboundmod:Рывок, он стоит 0 в этом ходу.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Рывок. Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL Добавляет в руку случ. slimeboundmod:Рывок, он стоит 0 в этом ходу."
+    "DESCRIPTION": "Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL Добавляет в руку случ. *Рывок, он стоит 0 в этом ходу.",
+    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL Добавляет в руку случ. *Рывок, он стоит 0 в этом ходу."
   },
   "Slimebound:Grow": {
     "NAME": "Рост",
@@ -111,8 +111,8 @@
   },
   "Slimebound:HungryTackle": {
     "NAME": "Голодный рывок",
-    "DESCRIPTION": "slimeboundmod:Рывок. Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL expansioncontent:Воскрешает случ. slimeboundmod:Лизь.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Рывок. Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL expansioncontent:Воскрешает 2 случ. slimeboundmod:Лизя."
+    "DESCRIPTION": "Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL expansioncontent:Воскрешает случ. slimeboundmod:Лизь.",
+    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL expansioncontent:Воскрешает 2 случ. slimeboundmod:Лизя."
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "Выглядит аппетитно",
@@ -131,7 +131,7 @@
   },
   "Slimebound:LeechLife": {
     "NAME": "Жизнь пиявки",
-    "DESCRIPTION": "Наносит !D! урона. NL При slimeboundmod:Пожирании - восполняет ОЗ, равное slimeboundmod:Липкости, наложенной на врага, не более !M!. NL Сжигается."
+    "DESCRIPTION": "Эфирная. NL Наносит !D! урона. Восполняет ОЗ равное урону, нанесённому по ОЗ врага. NL Сжигается."
   },
   "Slimebound:LeechingTouch": {
     "NAME": "Энергия пиявки",
@@ -171,7 +171,7 @@
     "UPGRADE_DESCRIPTION": "Начальная. NL Когда вы разыгрываете карту с slimeboundmod:Приказом, дополнительно slimeboundmod:Приказывает ещё 1 раз."
   },
   "Slimebound:Nibble": {
-    "NAME": "Лизнуть",
+    "NAME": "Лизь-нуть",
     "DESCRIPTION": "Наносит !D! урона. NL Добавляет в руку *Лизь. NL Сжигается.",
     "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL Добавляет в руку *Лизь. NL Вы берёте карту. NL Сжигается."
   },
@@ -197,8 +197,11 @@
   },
   "Slimebound:PrepareCrush": {
     "NAME": "Приготовиться: Крушить",
-    "DESCRIPTION": "Даёт *СЛИЗЕНЬ: *КРУШИТЬ!!!, [E] [E] [E] и !M! Силы в след. ходу. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Даёт *СЛИЗЕНЬ: *КРУШИТЬ!!!+, [E] [E] [E] [E] и !M! Силы в след. ходу. NL Сжигается."
+    "DESCRIPTION": "Вы получите *СЛИЗЕНЬ: *КРУШИТЬ!!!, [E] [E] [E] и !M! Силы в след. ходу. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Вы получите *СЛИЗЕНЬ: *КРУШИТЬ!!!+, [E] [E] [E] [E] и !M! Силы в след. ходу. NL Сжигается.",
+    "EXTENDED_DESCRIPTION": [
+        "~Слизь...~ NL #r~КРУШИТЬ!!!~" // P.S. 551 строчка monsters.json
+    ]
   },
   "Slimebound:PressTheAttack": {
     "NAME": "Начать наступление",
@@ -351,7 +354,7 @@
   },
   "Slimebound:Tackle": {
     "NAME": "Рывок",
-    "DESCRIPTION": "slimeboundmod:Рывок. Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона."
+    "DESCRIPTION": "Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона."
   },
   "Slimebound:TagTeam": {
     "NAME": "Командный удар",
@@ -369,8 +372,8 @@
   },
   "Slimebound:ViciousTackle": {
     "NAME": "Беспощадный рывок",
-    "DESCRIPTION": "slimeboundmod:Рывок. Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. slimeboundmod:Липкость врага влияет на эту карту 2 раза.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Рывок. Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. slimeboundmod:Липкость врага влияет на эту карту 2 раза. Также Восполняет ОЗ, равное slimeboundmod:Липкости врага."
+    "DESCRIPTION": "Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. slimeboundmod:Липкость врага влияет на эту карту 2 раза.",
+    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. slimeboundmod:Липкость врага влияет на эту карту 2 раза. Также Восполняет ОЗ, равное slimeboundmod:Липкости врага."
   },
   "Slimebound:WasteNot": {
     "NAME": "Ещё пригодится",

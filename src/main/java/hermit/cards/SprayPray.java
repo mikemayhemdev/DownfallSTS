@@ -40,7 +40,7 @@ public class SprayPray extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 3;
+    private static final int DAMAGE = 4;
     private static final int UPGRADE_PLUS_DMG = 1;
 
     // /STAT DECLARATION/
@@ -55,7 +55,7 @@ public class SprayPray extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for(int i = 0; i < 4; ++i) {
+        for(int i = 0; i < 3; ++i) {
             this.addToBot(new AttackDamageRandomEnemyAction(this, EnumPatch.HERMIT_GUN3));
         }
         this.addToBot(new MakeTempCardInDrawPileAction(this.cardsToPreview, 1, true, true));

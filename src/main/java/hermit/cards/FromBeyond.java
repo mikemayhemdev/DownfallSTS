@@ -1,6 +1,7 @@
 package hermit.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -8,6 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.actions.FastLoseHPAction;
+import hermit.actions.FromBeyondAction;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 
@@ -60,13 +62,8 @@ public class FromBeyond extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         for (int i = 0; i<p.exhaustPile.size();i++){
-            AbstractMonster target = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng);
-
-            if (target != null) {
-                this.addToBot(new FastLoseHPAction(target, p, magicNumber, EnumPatch.HERMIT_GHOSTFIRE));
-            }
+            this.addToBot(new FromBeyondAction(this, this.magicNumber));
         }
-
     }
 
     //Upgraded stats.

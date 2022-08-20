@@ -28,7 +28,7 @@ import java.util.ArrayList;
 import static com.badlogic.gdx.graphics.Color.GREEN;
 
 
-public class Nibble extends AbstractSlimeboundCard {
+public class Nibble extends AbstractLickCard {
     public static final String ID = "Slimebound:Nibble";
     public static final String NAME;
     public static final String DESCRIPTION;

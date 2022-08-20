@@ -131,7 +131,7 @@
   },
   "hermit:SprayPray": {
     "NAME": "Spray n' Pray",
-    "DESCRIPTION": "Infligez !D! dégâts à un ennemi aléatoire 4 fois. NL Ajoutez un *Doute dans votre pioche."
+    "DESCRIPTION": "Infligez !D! dégâts à un ennemi aléatoire 3 fois. NL Ajoutez un *Doute dans votre pioche."
   },
   "hermit:Scavenge": {
     "NAME": "Scavenge",
@@ -304,7 +304,7 @@
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "Oeil du cyclone",
-    "DESCRIPTION": "hermit:Dans_Le_Mille: NL Gagnez de l'Énergie jusqu'à votre maximum. NL Épuisement.",
+    "DESCRIPTION": "Gagnez de l'Énergie jusqu'à votre maximum. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "Piochez une carte. NL hermit:Dans_Le_Mille: NL Gagnez de l'Énergie jusqu'à votre maximum. NL Épuisement."
   },
   "hermit:FinalCanter": {

@@ -74,7 +74,7 @@ public class PistolWhip extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
         }
     }
 }
