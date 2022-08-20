@@ -162,8 +162,8 @@
   },
   "sneckomod:UnlimitedRolls": {
     "NAME": "无限随机",
-    "DESCRIPTION": "回合开始时获得 *灵 *魂 *随 *机 的 gremlin:回响 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时获得 *灵 *魂 *随 *机 的 gremlin:回响 。"
+    "DESCRIPTION": "回合开始时， NL 获得 *灵 *魂 *随 *机 的 gremlin:回响 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时， NL 获得 *灵 *魂 *随 *机 的 gremlin:回响 。"
   },
   "sneckomod:MasterEye": {
     "NAME": "主宰之眼",
@@ -239,7 +239,7 @@
   },
   "sneckomod:SerpentIdol": {
     "NAME": "蛇神像",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 从3张随机 sneckomod:异色 牌中选择获得1张。 NL 本回合其耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 从三张随机 sneckomod:异色 牌中选择获得一张。 NL 本回合其耗能为0。 NL 消耗 。"
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "变废为宝",
@@ -256,7 +256,7 @@
   },
   "sneckomod:MorePower": {
     "NAME": "更多力量！",
-    "DESCRIPTION": "战斗结束时，额外获得一次已 升级的 *未知 卡牌奖励。"
+    "DESCRIPTION": "战斗结束时， NL 获得 *未知 卡牌奖励+。"
   },
   "sneckomod:UnknownStrength": {
     "NAME": "？？？",
@@ -319,7 +319,7 @@
   },
   "sneckomod:UnendingSupply": {
     "NAME": "延绵不绝",
-    "DESCRIPTION": "回合开始时，随机获得一张 sneckomod:异色 牌。"
+    "DESCRIPTION": "回合开始时， NL 随机获得一张 sneckomod:异色 牌。"
   },
   "sneckomod:Memorize": {
     "NAME": "熟记",
