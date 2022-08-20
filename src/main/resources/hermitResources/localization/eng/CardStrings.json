@@ -155,7 +155,7 @@
   },
   "hermit:Spite": {
     "NAME": "Spite",
-    "DESCRIPTION": "Draw !M! *Curses. NL Deal !D! damage twice."
+    "DESCRIPTION": "Deal !D! damage twice. NL Draw !M! *Curses."
   },
   "hermit:Manifest": {
     "NAME": "Manifest",

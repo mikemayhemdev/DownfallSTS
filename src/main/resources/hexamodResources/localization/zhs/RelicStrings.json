@@ -74,7 +74,7 @@
     "NAME": "高热之杖",
     "FLAVOR": "火焰护身！火焰助力。",
     "DESCRIPTIONS": [
-      "每场战斗首次打出 #y能力 牌时，获得 #b6 点 #y格挡 与 #b1 点 #y力量 。"
+      "每场战斗首次打出 #y能力 时，获得 #b6 点 #y格挡 与 #b1 点 #y力量 。"
     ]
   },
   "hexamod:CandleOfCauterizing": {
