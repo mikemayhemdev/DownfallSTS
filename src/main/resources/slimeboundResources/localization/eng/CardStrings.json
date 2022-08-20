@@ -357,7 +357,7 @@
     "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage."
   },
   "Slimebound:TagTeam": {
-    "NAME": "Tag Team",
+    "NAME": "Glop Chop",
     "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Split into a random Slime. NL slimeboundmod:Command !M! times.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Split into a random slimeboundmod:Specialist. NL slimeboundmod:Command !M! times."
   },

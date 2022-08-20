@@ -32,7 +32,7 @@
     "ID": "rugged",
     "PROPER_NAME": "Rugged",
     "NAMES": [
-      "rugged",
+      "rugged"
     ],
   "DESCRIPTION": "Reduces next instance of attack damage taken to #b2."
 },
