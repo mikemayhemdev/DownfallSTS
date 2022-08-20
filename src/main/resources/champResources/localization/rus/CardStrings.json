@@ -60,7 +60,7 @@
   },
   "champ:Backstep": {
     "NAME": "Шаг назад",
-    "DESCRIPTION": "Перейти в стойку champ:Рыцаря. NL Даёт !M! Защиты. NL champ:Бодрость влияет на эту карту."
+    "DESCRIPTION": "Перейти в стойку champ:Рыцаря. NL Даёт !B! Защиты. NL champ:Бодрость влияет на эту карту."
   },
   "champ:BerserkersShout": {
     "NAME": "В атаку!",
