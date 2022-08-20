@@ -200,7 +200,7 @@
     "DESCRIPTION": "Вы получите *СЛИЗЕНЬ: *КРУШИТЬ!!!, [E] [E] [E] и !M! Силы в след. ходу. NL Сжигается.",
     "UPGRADE_DESCRIPTION": "Вы получите *СЛИЗЕНЬ: *КРУШИТЬ!!!+, [E] [E] [E] [E] и !M! Силы в след. ходу. NL Сжигается.",
     "EXTENDED_DESCRIPTION": [
-        "~Слизь...~ NL #r~КРУШИТЬ!!!~" // P.S. 551 строчка monsters.json
+        "~Слизь...~ NL #r~КРУШИТЬ!!!~"
     ]
   },
   "Slimebound:PressTheAttack": {
