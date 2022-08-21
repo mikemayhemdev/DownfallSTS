@@ -10,7 +10,7 @@
     "NAME": "护目镜",
     "FLAVOR": "仔细观察。",
     "DESCRIPTIONS": [
-      "回合结束时如果 #ybronze:队列 中没有牌，获得 #b4 点 #y格挡 。"
+      "回合结束时若 #ybronze:队列 为空，获得 #b4 点 #y格挡 。"
     ]
   },
   "bronze:DecasWashers": {
