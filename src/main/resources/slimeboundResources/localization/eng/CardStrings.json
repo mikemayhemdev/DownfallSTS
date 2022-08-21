@@ -274,7 +274,7 @@
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "Serve & Protect",
-    "DESCRIPTION": "Gain !B! Block and 1 bronze:Blur for each Slime. NL slimeboundmod:Absorb all Slimes. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block and 1 bronze:Faded for each Slime. NL slimeboundmod:Absorb all Slimes. NL Exhaust."
   },
   "Slimebound:SlimeBarrage": {
     "NAME": "Pile On!",

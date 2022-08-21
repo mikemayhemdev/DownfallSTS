@@ -1,3 +1,4 @@
+/*
 package automaton.cards;
 
 import automaton.AutomatonMod;
@@ -32,3 +33,5 @@ public class Deprecate extends AbstractBronzeCard {
         upgradeMagicNumber(UPG_MAGIC);
     }
 }
+
+ */

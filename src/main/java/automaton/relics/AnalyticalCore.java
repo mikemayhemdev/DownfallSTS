@@ -1,6 +1,7 @@
 package automaton.relics;
 
 import automaton.AutomatonMod;
+import automaton.cards.GetLatest;
 import automaton.cards.SpaghettiCode;
 import automaton.powers.LibraryModPower;
 import basemod.abstracts.CustomRelic;
@@ -30,7 +31,7 @@ public class AnalyticalCore extends CustomRelic {
     public void atBattleStart() {
         flash();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LibraryModPower(1), 1));
-        AbstractCard qCardGet = SpaghettiCode.getRandomEncode();
+        AbstractCard qCardGet = GetLatest.getRandomEncode();
         //qCardGet.modifyCostForCombat(-99);
         CardModifierManager.addModifier(qCardGet, new EtherealMod());
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(qCardGet, true));

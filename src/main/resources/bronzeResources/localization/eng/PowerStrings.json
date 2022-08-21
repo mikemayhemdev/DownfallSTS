@@ -1,10 +1,18 @@
 {
   "bronze:Cloning": {
-    "NAME": "Merge",
+    "NAME": "Clone",
     "DESCRIPTIONS": [
       "The next time you #yEncode a card, #yEncode an extra copy of it.",
       "The next time you #yEncode a card, #yEncode #b",
       " extra copies of it."
+    ]
+  },
+  "bronze:CloningOneTurn": {
+    "NAME": "Merge",
+    "DESCRIPTIONS": [
+      "The next time you #yEncode a card this turn, #yEncode an extra copy of it.",
+      "The next ",
+      " times you #yEncode a card this turn, #yEncode an extra of it."
     ]
   },
   "bronze:Default": {
@@ -19,19 +27,26 @@
     "NAME": "It's A Feature",
     "DESCRIPTIONS": [
       "Whenever you draw a #rCurse or #yStatus card, gain #b",
-      " temporary #yStrength and #b",
-      " temporary #yDexterity."
+      " temporary #yStrength."
     ]
   },
   "bronze:InfiniteBeams": {
-    "NAME": "Infinite Beams",
+    "NAME": "Primed",
     "DESCRIPTIONS": [
-      "At the start of your turn, Gain #b1 #yMinor #yBeam.",
-      "At the start of your turn, Gain #b1 #yMinor #yBeam+.",
+      "At the start of your turn, Gain #b1 #yStrike or #yDefend #yPrimer.",
+      "At the start of your turn, Gain #b1 #yStrike or #yDefend #yPrimer+.",
       "At the start of your turn, gain #b",
-      " #yMinor #yBeams.",
+      " #yStrike or #yDefend #yPrimers.",
       "At the start of your turn, gain #b",
-      " #yMinor #yBeam+s."
+      " #yStrike or #yDefend #yPrimers+."
+    ]
+  },
+  "bronze:CastToDouble": {
+    "NAME": "Cast to Double",
+    "DESCRIPTIONS": [
+      "Your next #yFunction is played twice this turn.",
+      "Your next ",
+      " #yFunctions are played twice this turn."
     ]
   },
   "bronze:Optimize": {

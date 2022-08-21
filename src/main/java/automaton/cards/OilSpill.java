@@ -1,6 +1,7 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
+import automaton.cards.encodedcards.EncodedDeadlyPoison;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Slimed;
@@ -14,36 +15,28 @@ public class OilSpill extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, all_enemy, common
 
-    private static final int DAMAGE = 4;
-    private static final int UPG_DAMAGE = 1;
+    private static final int DAMAGE = 7;
+    private static final int UPG_DAMAGE = 2;
 
-    private static final int MAGIC = 4;
-    private static final int UPG_MAGIC = 1;
 
     public OilSpill() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC;
-        isMultiDamage = true;
-        thisEncodes();
-        cardsToPreview = new Slimed();
-        tags.add(AutomatonMod.BAD_COMPILE);
+        cardsToPreview = new EncodedDeadlyPoison();
+
+        tags.add(AutomatonMod.ENCODES);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.POISON);
-        applyToEnemy(m, new PoisonPower(m, p, magicNumber));
+        addCardToFunction(cardsToPreview.makeStatEquivalentCopy());
     }
 
-    @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        if (forGameplay) {
-            shuffleIn(new Slimed());
-        }
-    }
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
-        upgradeMagicNumber(UPG_MAGIC);
+        cardsToPreview.upgrade();
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

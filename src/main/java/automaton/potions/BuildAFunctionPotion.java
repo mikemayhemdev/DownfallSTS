@@ -1,8 +1,10 @@
 package automaton.potions;
 
 
+import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import automaton.actions.AddToFuncAction;
+import automaton.cards.AbstractBronzeCard;
 import automaton.cards.SpaghettiCode;
 import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
@@ -10,6 +12,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
@@ -19,7 +22,6 @@ import downfall.util.SelectCardsCenteredAction;
 import java.util.ArrayList;
 
 import static automaton.cards.AbstractBronzeCard.masterUI;
-import static automaton.cards.SpaghettiCode.getRandomEncodeChoices;
 
 
 public class BuildAFunctionPotion extends CustomPotion {
@@ -36,30 +38,20 @@ public class BuildAFunctionPotion extends CustomPotion {
 
     public void initializeData() {
         this.potency = getPotency();
-        if (AbstractDungeon.player != null && potency > 1) {
-            if (potency > 2) {
-                this.description = potionStrings.DESCRIPTIONS[1] + (potency - 1) + potionStrings.DESCRIPTIONS[3];
-            } else {
-                this.description = potionStrings.DESCRIPTIONS[1] + (potency - 1) + potionStrings.DESCRIPTIONS[2];
-            }
-        } else {
-            this.description = potionStrings.DESCRIPTIONS[0];
-        }
+
+        this.description = potionStrings.DESCRIPTIONS[0] + this.potency + potionStrings.DESCRIPTIONS[1];
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
-        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("bronze:encode")), GameDictionary.keywords.get("bronze:encode")));
-    }
+     }
 
     public void use(AbstractCreature target) {
-        for (int i = 0; i < (FunctionHelper.max() - FunctionHelper.held.size()); i++) {
-            ArrayList<AbstractCard> cardsList = getRandomEncodeChoices();
-            addToBot(new SelectCardsCenteredAction(cardsList, 1, masterUI.TEXT[7], (cards) -> {
-                AbstractDungeon.actionManager.addToTop(new AddToFuncAction(cards.get(0), null));
-            }));
+        AbstractCard newCard;
+        for (int i = 0; i < potency; i++) {
+                newCard = CardLibrary.getCard(AutomatonMod.spaghettiOptions.get(AbstractDungeon.cardRandomRng.random(0, AutomatonMod.spaghettiOptions.size() - 1))).makeStatEquivalentCopy();
+                addToBot(new AddToFuncAction(newCard, null));
+
         }
-        if (potency > 1) {
-            FunctionHelper.doExtraNonSpecificCopy = potency - 1;
-        }
+
     }
 
     public CustomPotion makeCopy() {
@@ -67,6 +59,6 @@ public class BuildAFunctionPotion extends CustomPotion {
     }
 
     public int getPotency(int ascensionLevel) {
-        return 1;
+        return 3;
     }
 }

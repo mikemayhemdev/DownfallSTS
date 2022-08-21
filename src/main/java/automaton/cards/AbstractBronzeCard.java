@@ -131,6 +131,10 @@ public abstract class AbstractBronzeCard extends CustomCard {
     public void addCardToFunction(AbstractCard c) {
         addCardToFunction(c, 1);
     }
+    public void addCardToFunction(AbstractCard c, boolean upgrade) {
+        if (upgrade) c.upgrade();
+        addCardToFunction(c);
+    }
 
 
     public void addCardToFunction(AbstractCard c, int count){

@@ -1,3 +1,4 @@
+/*
 package automaton.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -50,3 +51,5 @@ public class InfiniteLoop extends AbstractBronzeCard {
         upgradeMagicNumber(2);
     }
 }
+
+ */

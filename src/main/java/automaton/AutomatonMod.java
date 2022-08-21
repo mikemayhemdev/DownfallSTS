@@ -2,6 +2,7 @@ package automaton;
 
 import automaton.cards.Separator;
 import automaton.cards.*;
+import automaton.cards.encodedcards.*;
 import automaton.cards.goodstatus.*;
 import automaton.events.*;
 import automaton.potions.BuildAFunctionPotion;
@@ -91,6 +92,8 @@ public class AutomatonMod implements
     private CustomUnlockBundle unlocks2;
     private CustomUnlockBundle unlocks3;
     private CustomUnlockBundle unlocks4;
+
+    public static ArrayList<String> spaghettiOptions = new ArrayList<>();
 
     @SpireEnum
     public static AbstractCard.CardTags ENCODES;
@@ -214,6 +217,12 @@ public class AutomatonMod implements
             BaseMod.addCard(card);
 
         }
+
+        spaghettiOptions.add(EncodedTwinStrike.ID);
+        spaghettiOptions.add(EncodedCleave.ID);
+        spaghettiOptions.add(EncodedSafety.ID);
+        spaghettiOptions.add(EncodedMiracle.ID);
+        spaghettiOptions.add(EncodedInsight.ID);
     }
 
     @Override
@@ -328,7 +337,7 @@ public class AutomatonMod implements
 
                 Refactor.ID,
                 InfiniteBeams.ID,
-                InfiniteLoop.ID,
+                CastToDouble.ID,
 
                 FullRelease.ID,
                 Library.ID,

@@ -16,13 +16,15 @@ public class Replicate extends AbstractBronzeCard {
     //stupid intellij stuff attack, enemy, basic
 
     private static final int DAMAGE = 5;
-    private static final int UPG_DAMAGE = 2;
+    private static final int UPG_DAMAGE = 1;
 
     public Replicate() {
         super(ID, 0, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("Replicate.png"));
         cardsToPreview = new Strike();
+
+        tags.add(AutomatonMod.ENCODES);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,6 +35,8 @@ public class Replicate extends AbstractBronzeCard {
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
         cardsToPreview.upgrade();
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
 
     }
 }

@@ -16,7 +16,7 @@ public class Decompile extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, uncommon
 
     public Decompile() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
     }
 
@@ -42,7 +42,7 @@ public class Decompile extends AbstractBronzeCard {
     }
 
     public void upp() {
-        selfRetain = true;
+        exhaust = false;
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

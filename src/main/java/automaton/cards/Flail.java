@@ -1,5 +1,8 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
+import automaton.cards.encodedcards.EncodedDodgeAndRoll;
+import automaton.cards.encodedcards.EncodedPanacea;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -23,21 +26,26 @@ public class Flail extends AbstractBronzeCard {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         isMultiDamage = true;
-        baseMagicNumber = magicNumber = MAGIC;
        // thisEncodes();
         baseAuto = auto = 2;
         exhaust = true;
+
+        tags.add(AutomatonMod.ENCODES);
+        cardsToPreview = new EncodedPanacea();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < auto; i++) {
             allDmg(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         }
-        applyToSelf(new ArtifactPower(p, magicNumber));
+
+        addCardToFunction(cardsToPreview.makeStatEquivalentCopy());
     }
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
-        upgradeMagicNumber(UPG_MAGIC);
+        cardsToPreview.upgrade();
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

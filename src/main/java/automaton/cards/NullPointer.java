@@ -6,6 +6,9 @@ import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.Burn;
+import com.megacrit.cardcrawl.cards.status.Slimed;
+import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -19,18 +22,16 @@ public class NullPointer extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 12;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 13;
+    private static final int UPG_DAMAGE = 5;
 
-    private static final int BLOCK = 12;
-    private static final int UPG_BLOCK = 3;
+    private static final int BLOCK = 13;
+    private static final int UPG_BLOCK = 5;
 
     public NullPointer() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
-        thisEncodes();
-        tags.add(AutomatonMod.BAD_COMPILE);
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("NullPointer.png"));
     }
 
@@ -39,18 +40,11 @@ public class NullPointer extends AbstractBronzeCard {
             atb(new VFXAction(new ViceCrushEffect(m.hb.cX, m.hb.cY), 0.5F));
         blck();
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+
+        shuffleIn(new Burn());
+        shuffleIn(new Wound());
     }
 
-    @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        CardModifierManager.addModifier(function, new UnplayableMod());
-    }
-
-    @Override
-    public void onCompileLast(AbstractCard function, boolean forGameplay) {
-        function.cost = -2;
-        function.costForTurn = -2;
-    }
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);

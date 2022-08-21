@@ -32,6 +32,7 @@ public class Branch extends AbstractBronzeCard implements OctopusCard {
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
         exhaust = true;
+        tags.add(AutomatonMod.ENCODES);
         AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("Branch.png"));
     }
 

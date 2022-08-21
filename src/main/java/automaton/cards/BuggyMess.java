@@ -1,5 +1,7 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
+import automaton.cards.encodedcards.EncodedMiracle;
 import automaton.cards.goodstatus.Daze;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -15,14 +17,17 @@ public class BuggyMess extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, uncommon
 
     public BuggyMess() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        thisEncodes();
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
+        cardsToPreview = new EncodedMiracle();
+
+        tags.add(AutomatonMod.ENCODES);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         shuffleIn(new Dazed());
         atb(new GainEnergyAction(magicNumber));
+        addCardToFunction(cardsToPreview.makeStatEquivalentCopy());
     }
 
     public void upp() {

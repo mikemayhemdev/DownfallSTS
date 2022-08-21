@@ -12,8 +12,8 @@ public class Batch extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, common
 
     public Batch() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-        exhaust = true;
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -21,13 +21,12 @@ public class Batch extends AbstractBronzeCard {
             @Override
             public void update() {
                 isDone = true;
-                FunctionHelper.output();
+                FunctionHelper.output(true, upgraded);
             }
         });
     }
 
     public void upp() {
-        selfRetain = true;
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

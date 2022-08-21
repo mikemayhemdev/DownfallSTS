@@ -1,6 +1,9 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
+import automaton.FunctionHelper;
+import automaton.cards.encodedcards.EncodedLeap;
+import automaton.cards.encodedcards.EncodedTwinStrike;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -17,26 +20,25 @@ public class Separator extends AbstractBronzeCard {
     public Separator() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = DAMAGE;
-        thisEncodes();
-        tags.add(AutomatonMod.SPECIAL_COMPILE_TEXT);
+
+        tags.add(AutomatonMod.ENCODES);
+        cardsToPreview = new EncodedTwinStrike();
     }
 
-    @Override
-    public void onInput() {
-        if (!firstCard() && !lastCard()) {
-            baseDamage += magicNumber;
-            damage += magicNumber;
-            superFlash();
-        }
-    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+        if (FunctionHelper.held.group.size() == 0){
+            addCardToFunction(cardsToPreview.makeStatEquivalentCopy());
+        } else {
+            addCardToFunction(new Strike(), upgraded);
+        }
     }
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
-        upgradeMagicNumber(UPG_DAMAGE);
+        cardsToPreview.upgrade();
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

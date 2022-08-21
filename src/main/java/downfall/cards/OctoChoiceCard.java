@@ -69,6 +69,13 @@ public class OctoChoiceCard extends CustomCard {
         card3 = prev3;
     }
 
+    public OctoChoiceCard(String id, String name, String IMG, String description, AbstractCard prev1, boolean upgraded) {
+        super(id, name, IMG, COST, description, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.NONE);
+        this.IMG = IMG;
+        cardsToPreview = prev1;
+        if (upgraded) cardsToPreview.upgrade();
+    }
+
     @Override
     public void hover() {
         if (card1 != null){

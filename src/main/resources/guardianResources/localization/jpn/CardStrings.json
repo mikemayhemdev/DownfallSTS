@@ -115,7 +115,7 @@
   },
   "Guardian:SphericShield": {
     "NAME": "Spheric Shield",
-    "DESCRIPTION": "Gain !M! Blur. NL Gain !B! Block. NL Enter guardianmod:Defensive_Mode. NL Exhaust."
+    "DESCRIPTION": "Gain !M! bronze:Faded. NL Gain !B! Block. NL Enter guardianmod:Defensive_Mode. NL Exhaust."
   },
   "Guardian:Harden": {
     "NAME": "Harden",

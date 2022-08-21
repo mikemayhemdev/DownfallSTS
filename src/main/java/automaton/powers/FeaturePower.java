@@ -24,8 +24,8 @@ public class FeaturePower extends AbstractAutomatonPower {
             flash();
             applyToSelf(new StrengthPower(owner, amount));
             applyToSelf(new LoseStrengthPower(owner, amount));
-            applyToSelf(new DexterityPower(owner, amount));
-            applyToSelf(new LoseDexterityPower(owner, amount));
+           // applyToSelf(new DexterityPower(owner, amount));
+           // applyToSelf(new LoseDexterityPower(owner, amount));
             //Imagine how much time could be saved with some kind of function that could be used to make any power temporary.
             //IE: applyTempPower(new StrengthPower(owner, amount)):
             //Function applies the power, then uses some abstract Java trickery to make another power, called Lose [powername]
@@ -41,6 +41,6 @@ public class FeaturePower extends AbstractAutomatonPower {
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 }

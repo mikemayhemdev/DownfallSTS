@@ -1,6 +1,8 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.actions.TimedVFXAction;
+import automaton.cards.encodedcards.EncodedIronWave;
 import basemod.helpers.VfxBuilder;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -18,9 +20,11 @@ public class FormatEncoded extends AbstractBronzeCard {
 
     public FormatEncoded() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseBlock = 4;
-        baseDamage = 4;
-        thisEncodes();
+        baseBlock = 5;
+        baseDamage = 5;
+        cardsToPreview = new EncodedIronWave();
+
+        tags.add(AutomatonMod.ENCODES);
     }
 
     public static Color getRandomColor() {
@@ -47,10 +51,14 @@ public class FormatEncoded extends AbstractBronzeCard {
                     .build())
             );
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        addCardToFunction(cardsToPreview.makeStatEquivalentCopy());
     }
 
     public void upp() {
-        upgradeBlock(1);
-        upgradeDamage(1);
+        upgradeBlock(2);
+        upgradeDamage(2);
+        cardsToPreview.upgrade();
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

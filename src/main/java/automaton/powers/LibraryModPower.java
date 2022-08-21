@@ -1,5 +1,6 @@
 package automaton.powers;
 
+import automaton.cards.GetLatest;
 import automaton.cards.SpaghettiCode;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -22,7 +23,7 @@ public class LibraryModPower extends AbstractAutomatonPower {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flash();
             for (int i = 0; i < amount; i++) {
-                AbstractCard qCardGet = SpaghettiCode.getRandomEncode();
+                AbstractCard qCardGet = GetLatest.getRandomEncode();
                 //qCardGet.modifyCostForCombat(-99);
                 CardModifierManager.addModifier(qCardGet, new EtherealMod());
                 addToBot(new MakeTempCardInHandAction(qCardGet, true));

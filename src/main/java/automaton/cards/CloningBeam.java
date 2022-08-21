@@ -2,6 +2,7 @@ package automaton.cards;
 
 import automaton.AutomatonMod;
 import automaton.powers.CloningPower;
+import automaton.powers.CloningPowerOneTurn;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -14,23 +15,20 @@ public class CloningBeam extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 14;
+    private static final int DAMAGE = 6;
 
     public CloningBeam() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        exhaust = true;
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("CloningBeam.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        applyToSelf(new CloningPower(1));
+        applyToSelf(new CloningPowerOneTurn(1));
     }
 
     public void upp() {
-        exhaust = false;
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeBaseCost(0);
     }
 }

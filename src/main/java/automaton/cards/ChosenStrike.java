@@ -1,11 +1,17 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
+import automaton.cards.encodedcards.EncodedIronWave;
+import automaton.cards.encodedcards.EncodedRitualDagger;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import slimebound.actions.TackleSelfDamageAction;
+import slimebound.powers.PreventTackleDamagePower;
 
 public class ChosenStrike extends AbstractBronzeCard {
 
@@ -13,52 +19,31 @@ public class ChosenStrike extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 6;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 10;
+
+    public int baseSelfDamage;
+    public int selfDamage;
 
     public ChosenStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = DAMAGE + misc;
-        baseMagicNumber = magicNumber = 1;
-        thisEncodes();
-    }
+        baseDamage = DAMAGE;
 
-    @Override
-    public void applyPowers() {
-        super.applyPowers();
-        baseDamage = DAMAGE + misc;
-        if (upgraded) baseDamage += UPG_DAMAGE;
-    }
-
-    @Override
-    public String getSpecialCompileText() {
-        return masterUI.TEXT[1] + magicNumber + masterUI.TEXT[2];
+        tags.add(AutomatonMod.ENCODES);
+        baseSelfDamage = this.selfDamage = 3;
+        cardsToPreview = new EncodedRitualDagger();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-    }
+        if (!AbstractDungeon.player.hasPower(PreventTackleDamagePower.POWER_ID))
+            AbstractDungeon.actionManager.addToBottom(new TackleSelfDamageAction(new DamageInfo(AbstractDungeon.player, selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
-    @Override
-    public void onCompilePreCardEffectEmbed(boolean forGameplay) {
-        if (forGameplay) {
-            for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-                if (c.uuid.equals(this.uuid)) {
-                    c.misc += magicNumber;
-                    c.baseDamage = DAMAGE + misc;
-                }
-            }
-
-            for (AbstractCard c : GetAllInBattleInstances.get(this.uuid)) {
-                c.misc += magicNumber;
-                c.applyPowers();
-            }
-        }
+        addCardToFunction(cardsToPreview.makeStatEquivalentCopy());
+        if (upgraded) addCardToFunction(cardsToPreview.makeStatEquivalentCopy());
     }
 
     public void upp() {
-        misc += 3;
-        upgradedDamage = true;
-        baseDamage = DAMAGE + misc;
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

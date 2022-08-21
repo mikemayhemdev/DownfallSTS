@@ -1,6 +1,7 @@
 package automaton.events;
 
 import automaton.AutomatonMod;
+import automaton.cards.GetLatest;
 import automaton.cards.SpaghettiCode;
 import automaton.relics.BottledCode;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -93,7 +94,7 @@ public class CrystalForgeAutomaton extends AbstractImageEvent {
         super.update();
         if (pickCardForTransmute && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
 
-            AbstractCard cardGained = SpaghettiCode.getRandomEncode().makeStatEquivalentCopy();
+            AbstractCard cardGained = GetLatest.getRandomEncode().makeStatEquivalentCopy();
             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(cardGained, (float) (Settings.WIDTH * .3), (float) (Settings.HEIGHT / 2)));
 
             AbstractCard cardLost = AbstractDungeon.gridSelectScreen.selectedCards.get(0);

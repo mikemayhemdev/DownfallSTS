@@ -1,6 +1,9 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
+import automaton.FunctionHelper;
+import automaton.cards.encodedcards.EncodedLeap;
+import automaton.cards.encodedcards.EncodedMiracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -16,34 +19,24 @@ public class Constructor extends AbstractBronzeCard {
     public Constructor() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = BLOCK;
-        thisEncodes();
-        tags.add(AutomatonMod.SPECIAL_COMPILE_TEXT);
-    }
+        cardsToPreview = new EncodedLeap();
 
-    @Override
-    public void onInput() {
-        if (firstCard()) {
-            this.baseBlock += magicNumber;
-            this.block += magicNumber;
-            superFlash();
-        }
-    }
-
-    @Override
-    public String getNoun() {
-        if (firstCard()) {
-            return EXTENDED_DESCRIPTION[2];
-        }
-        return super.getNoun();
+        tags.add(AutomatonMod.ENCODES);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
+        if (FunctionHelper.held.group.size() == 0){
+            addCardToFunction(cardsToPreview.makeStatEquivalentCopy());
+        } else {
+            addCardToFunction(new Defend(), upgraded);
+        }
     }
 
     public void upp() {
         upgradeBlock(UPG_BLOCK);
-        upgradeMagicNumber(UPG_BLOCK);
+        cardsToPreview.upgrade();
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

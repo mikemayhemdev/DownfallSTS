@@ -22,7 +22,7 @@ public class BugBarrage extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 9;
     private static final int UPG_DAMAGE = 2;
 
     public BugBarrage() {
@@ -47,18 +47,22 @@ public class BugBarrage extends AbstractBronzeCard {
                     if (q.type == CardType.STATUS) {
                         x++;
                         att(new DamageAction(m, makeInfo(), AttackEffect.BLUNT_LIGHT));
-                        att(new DiscardSpecificCardAction(q, p.hand));
+                       // att(new DiscardSpecificCardAction(q, p.hand));
                     }
                 dummyPlaceholderOf = x;
             }
         });
+        /*
         atb(new AbstractGameAction() {
             @Override
             public void update() {
-                isDone = true;
+
+               isDone = true;
                 addToTop(new DrawCardAction(dummyPlaceholderOf));
             }
         });
+
+         */
 
     }
 

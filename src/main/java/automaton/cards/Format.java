@@ -2,6 +2,8 @@ package automaton.cards;
 
 import automaton.actions.AddToFuncAction;
 import automaton.actions.EasyXCostAction;
+import automaton.cards.encodedcards.EncodedIronWave;
+import automaton.cards.encodedcards.EncodedPanacea;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,16 +15,16 @@ public class Format extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, all, rare
 
-    private static final int DAMAGE = 6;
+    private static final int DAMAGE = 5;
 
-    private static final int BLOCK = 6;
+    private static final int BLOCK = 5;
 
 
     public Format() {
         super(ID, -1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
-        cardsToPreview = new FormatEncoded();
+        cardsToPreview = new EncodedIronWave();
         exhaust = true;
         baseMagicNumber = magicNumber = 0;
     }
@@ -33,7 +35,7 @@ public class Format extends AbstractBronzeCard {
 
         atb(new EasyXCostAction(this, (effect, params) -> {
             for (int i = 0; i < effect + params[0]; i++) {
-                AbstractCard c = new FormatEncoded();
+                AbstractCard c = new EncodedIronWave();
                 addToTop(new AddToFuncAction(c, null));
             }
             return true;

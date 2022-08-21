@@ -25,6 +25,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.BobEffect;
+import downfall.cardmods.ExhaustMod;
 import downfall.util.TextureLoader;
 
 import java.util.HashMap;
@@ -153,12 +154,22 @@ public class FunctionHelper {
     public static AbstractCard secretStorage = null;
 
     public static AbstractCard makeFunction(boolean forGameplay) {
-        AbstractBronzeCard function = new FunctionCard();
+        return makeFunction(forGameplay, false, false);
+    }
+
+    public static AbstractCard makeFunction(boolean forGameplay, boolean noExhaust, boolean costs0) {
+        AbstractBronzeCard function;
+        if (costs0){
+            function = new FunctionCard(0);
+        } else {
+            function = new FunctionCard(1);
+        }
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof PreCardCompileEffectsPower) {
                 ((PreCardCompileEffectsPower) p).receivePreCardCompileEffects(forGameplay); // Clean Code
             }
         }
+        /*
         for (AbstractCard c : held.group) {
             if (c instanceof AbstractBronzeCard) {
                 if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
@@ -166,6 +177,8 @@ public class FunctionHelper {
                 }
             }
         }
+
+         */
         int counter = 0;
         boolean justDoNoun = false;
         boolean foundExactlyOne = false;
@@ -187,6 +200,7 @@ public class FunctionHelper {
                 }
             }
         }
+        /*
         for (AbstractCard c : held.group) {
             if (c instanceof AbstractBronzeCard) {
                 if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
@@ -218,11 +232,18 @@ public class FunctionHelper {
                 ((OnCompileRelic) r).receiveCompile(function, forGameplay); // Bronze Core, etc
             }
         }
+
+         */
+        if (noExhaust) CardModifierManager.removeModifiersById(function, ExhaustMod.ID, true);
+        if (noExhaust) CardModifierManager.removeModifiersById(function, ExhaustMod.ID, false);
+        if (noExhaust) function.exhaust = false;
         return function;
     }
 
-
     public static void output() {
+        output(false,false);
+    }
+    public static void output(boolean noExhaust, boolean costs0) {
         ForceShield.decrementShields(); // Decrease cost of Force Shields
         boolean regularOutput = true;
         for (AbstractPower p : AbstractDungeon.player.powers) {
@@ -232,17 +253,17 @@ public class FunctionHelper {
         }
         if (doExtraNonSpecificCopy > 0) {
             for (int i = 0; i < doExtraNonSpecificCopy; i++)
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true))); // Duplicate Function potion
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true, noExhaust, costs0))); // Duplicate Function potion
             doExtraNonSpecificCopy = 0;
         }
         if (regularOutput) {
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true))); // Regular output to hand, assuming no Hardcode
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true, noExhaust, costs0))); // Regular output to hand, assuming no Hardcode
         }
         AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
             @Override
             public void update() { // Clears and resets Function Helper -- this part being bound to Action Queue makes some weird stuff.
                 held.clear();
-                secretStorage = makeFunction(false);
+                secretStorage = makeFunction(false, noExhaust, costs0);
                 isDone = true;
             }
         });

@@ -1,5 +1,6 @@
 package automaton.powers;
 
+import automaton.cards.GetLatest;
 import automaton.cards.SpaghettiCode;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -20,7 +21,7 @@ public class LibraryPower extends AbstractAutomatonPower {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flash();
             for (int i = 0; i < amount; i++) {
-                AbstractCard qCardGet = SpaghettiCode.getRandomEncode();
+                AbstractCard qCardGet = GetLatest.getRandomEncode();
                 qCardGet.freeToPlayOnce = true;
                 addToBot(new MakeTempCardInHandAction(qCardGet, true));
             }

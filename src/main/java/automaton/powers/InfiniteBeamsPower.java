@@ -1,7 +1,9 @@
 package automaton.powers;
 
 import automaton.FunctionHelper;
+import automaton.cards.DefendPrimer;
 import automaton.cards.MinorBeam;
+import automaton.cards.StrikePrimer;
 import automaton.relics.OnCompileRelic;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -37,9 +39,15 @@ public class InfiniteBeamsPower extends AbstractAutomatonPower implements NonSta
     public void atStartOfTurn() {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flash();
-            AbstractCard q = new MinorBeam();
+            AbstractCard q;
+            if (AbstractDungeon.cardRandomRng.randomBoolean()) {
+                q = new StrikePrimer();
+            } else {
+                q = new DefendPrimer();
+            }
             if (upgraded) q.upgrade();
             addToBot(new MakeTempCardInHandAction(q, this.amount, false));
+
         }
     }
 

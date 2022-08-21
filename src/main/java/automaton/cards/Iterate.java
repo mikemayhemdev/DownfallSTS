@@ -10,15 +10,14 @@ public class Iterate extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, all_enemy, common
 
-    private static final int DAMAGE = 2;
-    private static final int MAGIC = 3;
+    private static final int DAMAGE = 4;
+    private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 1;
 
     public Iterate() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-        thisEncodes();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -28,6 +27,9 @@ public class Iterate extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        upgradeDamage(1);
+        cardsToPreview.upgrade();
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

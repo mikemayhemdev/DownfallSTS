@@ -1,3 +1,4 @@
+/*
 package automaton.cards;
 
 import automaton.FunctionHelper;
@@ -82,3 +83,5 @@ public class BitShift extends AbstractBronzeCard {
         initializeDescription();
     }
 }
+
+ */

@@ -25,10 +25,8 @@
   "bronze:BuildAFunctionPotion": {
     "NAME": "Kio's Clever Concoction",
     "DESCRIPTIONS": [
-      "Choose #b1 of #b3 random cards to #yEncode, repeat until you create a #yFunction.",
-      "Choose #b1 of #b3 random cards to #yEncode, repeat until you create a #yFunction and gain #b",
-      " copy of it.",
-      " copies of it."
+      "*Encode ",
+      " cards, chosen randomly between *Safety, *Twin *Strike, *Cleave, *Miracle, and *Insight."
     ]
   }
 }

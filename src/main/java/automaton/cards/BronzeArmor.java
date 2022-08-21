@@ -1,3 +1,4 @@
+/*
 package automaton.cards;
 
 import automaton.AutomatonMod;
@@ -41,3 +42,5 @@ public class BronzeArmor extends AbstractBronzeCard {
         upgradeMagicNumber(UPG_MAGIC);
     }
 }
+
+ */

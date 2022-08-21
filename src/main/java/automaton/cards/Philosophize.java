@@ -1,6 +1,8 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
+import automaton.cards.encodedcards.EncodedDeadlyPoison;
+import automaton.cards.encodedcards.EncodedInflame;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -18,25 +20,25 @@ public class Philosophize extends AbstractBronzeCard {
     public Philosophize() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        baseAuto = auto = 1;
-        thisEncodes();
-        tags.add(AutomatonMod.BAD_COMPILE);
+        exhaust = true;
+        cardsToPreview = new EncodedInflame();
+
+        tags.add(AutomatonMod.ENCODES);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new StrengthPower(p, auto));
+        for (AbstractMonster q : monsterList()) {
+            applyToEnemy(q, new StrengthPower(q, magicNumber));
+        }
+        addCardToFunction(cardsToPreview.makeStatEquivalentCopy());
+
     }
 
-    @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        if (forGameplay) {
-            for (AbstractMonster q : monsterList()) {
-                applyToEnemy(q, new StrengthPower(q, magicNumber));
-            }
-        }
-    }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        cardsToPreview.upgrade();
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

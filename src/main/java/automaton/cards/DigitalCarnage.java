@@ -1,6 +1,8 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
+import automaton.cards.encodedcards.EncodedCarnage;
+import automaton.cards.encodedcards.EncodedDodgeAndRoll;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -23,11 +25,12 @@ public class DigitalCarnage extends AbstractBronzeCard {
     private static final int UPG_DAMAGE = 5;
 
     public DigitalCarnage() {
-        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         // isEthereal = true;
         baseDamage = DAMAGE;
-        thisEncodes();
-        tags.add(AutomatonMod.BAD_COMPILE);
+        cardsToPreview = new EncodedCarnage();
+
+        tags.add(AutomatonMod.ENCODES);
         AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("DigitalCarnage.png"));
     }
 
@@ -49,22 +52,15 @@ public class DigitalCarnage extends AbstractBronzeCard {
 
 
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        addCardToFunction(cardsToPreview.makeStatEquivalentCopy());
     }
 
-    @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        CardModifierManager.addModifier(function, new EtherealMod());
-    }
 
-    /*
-    @Override
-    public void onCompileLast(AbstractCard function, boolean forGameplay) {
-        function.cost += 1;
-        function.costForTurn += 1;
-    }
-    */
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
+        cardsToPreview.upgrade();
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

@@ -17,7 +17,7 @@ public class HyperBeam extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, all_enemy, rare
 
-    private static final int DAMAGE = 25;
+    private static final int DAMAGE = 20;
     private static final int UPG_DAMAGE = 9;
 
     public HyperBeam() {
@@ -26,7 +26,7 @@ public class HyperBeam extends AbstractBronzeCard {
         isMultiDamage = true;
        // selfRetain = true;
       //  exhaust = true;
-        baseMagicNumber = magicNumber = 5;
+        baseMagicNumber = magicNumber = 2;
         cardsToPreview = new VoidCard();
     }
 

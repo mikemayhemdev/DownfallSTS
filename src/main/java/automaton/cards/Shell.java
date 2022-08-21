@@ -1,5 +1,8 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
+import automaton.cards.encodedcards.EncodedBlur;
+import automaton.cards.encodedcards.EncodedTwinStrike;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -17,23 +20,23 @@ public class Shell extends AbstractBronzeCard {
 
     public Shell() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        thisEncodes();
         baseMagicNumber = magicNumber = 1;
+        tags.add(AutomatonMod.ENCODES);
+        cardsToPreview = new EncodedBlur();
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new BlurPower(p, magicNumber));
+
+        addCardToFunction(cardsToPreview.makeStatEquivalentCopy());
     }
 
-    @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        if (forGameplay && upgraded) {
-            applyToSelf(new BlurPower(AbstractDungeon.player, magicNumber));
-        }
-    }
 
     public void upp() {
+        exhaust = false;
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
+        cardsToPreview.upgrade();
     }
 }

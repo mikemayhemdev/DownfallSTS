@@ -5,7 +5,7 @@
       "encode",
       "encoded"
     ],
-    "DESCRIPTION": "Encode a card. NL When 3 cards are Encoded, their effects (other than Encode) are merged into a Function that costs #b1."
+    "DESCRIPTION": "When 3 cards are Encoded, their effects are merged into a Function card that costs #b1 and has Exhaust."
   },
   {
     "PROPER_NAME": "Compile",
@@ -16,9 +16,9 @@
     "DESCRIPTION": "An effect that triggers when this card is merged into a Function. NL Can be a negative effect, which is referred to as an 'Error'."
   },
   {
-    "PROPER_NAME": "Blur",
+    "PROPER_NAME": "Faded",
     "NAMES": [
-      "blur"
+      "faded"
     ],
     "DESCRIPTION": "Do not lose Block at the end of the turn."
   },

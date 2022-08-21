@@ -1,5 +1,7 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
+import automaton.cards.encodedcards.EncodedCutThroughFate;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.ScryAction;
@@ -24,12 +26,14 @@ public class CutThrough extends AbstractBronzeCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         baseAuto = auto = 1;
-        thisEncodes();
+
+        tags.add(AutomatonMod.ENCODES);
+        cardsToPreview = new EncodedCutThroughFate();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
-        atb(new ScryAction(magicNumber));
+        addCardToFunction(cardsToPreview.makeStatEquivalentCopy());
     }
 
     @Override
@@ -41,6 +45,8 @@ public class CutThrough extends AbstractBronzeCard {
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
-        upgradeMagicNumber(UPG_MAGIC);
+        cardsToPreview.upgrade();
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }
