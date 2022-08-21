@@ -658,7 +658,9 @@
     "NAME": "Perplex",
     "DESCRIPTION": "Gain !B! Block."
   },
-  "bronze:Insight": {
+  "bronze:EncodedInsight": {
+    "NAME": "Insight",
+    "DESCRIPTION": "Draw !M! cards. \u202F NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "insightful",
       "Thought"

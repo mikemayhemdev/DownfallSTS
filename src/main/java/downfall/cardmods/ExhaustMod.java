@@ -11,6 +11,9 @@ public class ExhaustMod extends AbstractCardModifier {
 
     public static String ID = SneckoMod.makeID("ExhaustMod");
 
+    public ExhaustMod(){
+        priority=99;
+    }
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {

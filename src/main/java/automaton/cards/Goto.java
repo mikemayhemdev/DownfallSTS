@@ -1,7 +1,7 @@
 package automaton.cards;
 
+import automaton.cards.encodedcards.EncodedInsight;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.cards.tempCards.Insight;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -13,8 +13,8 @@ public class Goto extends AbstractBronzeCard {
 
     public Goto() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
-        cardsToPreview = new Insight();
+        baseMagicNumber = magicNumber = 2;
+        cardsToPreview = new EncodedInsight();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

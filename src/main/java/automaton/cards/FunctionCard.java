@@ -16,6 +16,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.cardmods.ExhaustMod;
+import downfall.cardmods.RetainCardMod;
 import sneckomod.SneckoMod;
 
 import java.lang.reflect.Field;
@@ -34,7 +36,7 @@ public class FunctionCard extends AbstractBronzeCard {
         this.setPortraitTextures("bronzeResources/images/512/frame_function.png", "bronzeResources/images/1024/frame_function.png");
         this.setBackgroundTexture("bronzeResources/images/512/bg_skill_function.png", "bronzeResources/images/1024/bg_skill_function.png");
         doNothingSpecificInParticular();
-        exhaust=true;
+        CardModifierManager.addModifier(this, new ExhaustMod());
     }
 
     @Override
