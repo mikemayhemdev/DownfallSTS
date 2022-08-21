@@ -3,6 +3,7 @@ package automaton.cards;
 import automaton.AutomatonChar;
 import automaton.AutomatonTextHelper;
 import automaton.FunctionHelper;
+import automaton.actions.AddToFuncAction;
 import automaton.cardmods.EncodeMod;
 import automaton.vfx.FineTuningEffect;
 import basemod.ReflectionHacks;
@@ -11,6 +12,7 @@ import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -26,6 +28,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import slimebound.SlimeboundMod;
+import sun.reflect.Reflection;
 
 import java.util.ArrayList;
 
@@ -37,8 +41,8 @@ public abstract class AbstractBronzeCard extends CustomCard {
     private static float functionPreviewCardScale = .9f;
     private static float functionPreviewCardY = Settings.HEIGHT * 0.45F;
     private static float functionPreviewCardX = Settings.WIDTH * 0.1F;
-    protected final CardStrings cardStrings;
-    protected final String NAME;
+    public CardStrings cardStrings;
+    public String NAME;
     public int auto;
     public int baseAuto;
     public boolean upgradedAuto;
@@ -79,6 +83,25 @@ public abstract class AbstractBronzeCard extends CustomCard {
         initializeDescription();
     }
 
+    //Constructor for fake encoded copies
+    public AbstractBronzeCard(final String id, final String name2, final String art, final int cost, final String description, final CardType type, final CardColor color, final CardRarity rarity, final CardTarget target) {
+        super(id, "ERROR", getCorrectPlaceholderImage(type, id),
+                cost, "ERROR", type, color, rarity, target);
+        this.textureImg = art;
+        TextureAtlas atlas = ReflectionHacks.getPrivate(this, AbstractCard.class,"cardAtlas");
+        this.portrait=atlas.findRegion(art);
+        SlimeboundMod.logger.info(id);
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
+        name = NAME = cardStrings.NAME;
+        SlimeboundMod.logger.info(name);
+        originalName = NAME;
+        rawDescription = DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
+        initializeTitle();
+        initializeDescription();
+    }
+
 
     @Override
     protected Texture getPortraitImage() {
@@ -103,6 +126,18 @@ public abstract class AbstractBronzeCard extends CustomCard {
             }
         }
         return super.getPortraitImage();
+    }
+
+    public void addCardToFunction(AbstractCard c) {
+        addCardToFunction(c, 1);
+    }
+
+
+    public void addCardToFunction(AbstractCard c, int count){
+        for (int i = 0; i < count; i++) {
+            AbstractCard c2 = c.makeStatEquivalentCopy();
+            atb(new AddToFuncAction(c2, null));
+        }
     }
 
     public static String getCorrectPlaceholderImage(CardType type, String id) {

@@ -283,8 +283,8 @@
   },
   "bronze:Goto": {
     "NAME": "Goto",
-    "DESCRIPTION": "Draw !M! card. NL bronze:Compile - Next turn, draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL bronze:Compile - Next turn, draw !M! cards.",
+    "DESCRIPTION": "Draw !M! cards. NL Encode an *Insight.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Encode an *Insight+.",
     "EXTENDED_DESCRIPTION": [
       "running",
       "Sprint"
@@ -657,5 +657,11 @@
   "bronze:UnknownStatus": {
     "NAME": "Perplex",
     "DESCRIPTION": "Gain !B! Block."
+  },
+  "Insight": {
+    "EXTENDED_DESCRIPTION": [
+      "insightful",
+      "Thought"
+    ]
   }
 }

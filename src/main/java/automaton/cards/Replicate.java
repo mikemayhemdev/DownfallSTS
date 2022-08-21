@@ -21,20 +21,18 @@ public class Replicate extends AbstractBronzeCard {
     public Replicate() {
         super(ID, 0, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        thisEncodes();
         AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("Replicate.png"));
-    }
-
-    @Override
-    public void onInput() {
-        atb(new MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1));
+        cardsToPreview = new Strike();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        addCardToFunction(cardsToPreview.makeStatEquivalentCopy());
     }
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
+        cardsToPreview.upgrade();
+
     }
 }
