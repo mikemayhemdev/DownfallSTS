@@ -45,14 +45,14 @@
     "NAME": "偏折护腕",
     "FLAVOR": "如果你觉得格挡很好的话……",
     "DESCRIPTIONS": [
-      "敌人的回合结束后，你自动失去的 #y格挡 转化为半量的 #ychamp:反击 。"
+      "敌方回合结束后，你自动失去的 #y格挡 转化为半量的 #ychamp:反击 。"
     ]
   },
   "champ:DuelingGlove": {
     "NAME": "决斗手套",
     "FLAVOR": "从十开始数……",
     "DESCRIPTIONS": [
-      "单体攻击牌造成伤害后，若敌人没有 #y易伤 ，给予 #b1 层 #y易伤 。"
+      "单体 #y攻击 牌造成伤害后，若目标无 #y易伤 ，给予 #b1 层。"
     ]
   },
   "champ:FightingForDummies": {
