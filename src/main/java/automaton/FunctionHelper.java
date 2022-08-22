@@ -224,7 +224,6 @@ public class FunctionHelper {
                 }
             }
         }
-        /*
         for (AbstractCard c : held.group) {
             if (c instanceof AbstractBronzeCard) {
                 if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
@@ -257,8 +256,6 @@ public class FunctionHelper {
                 ((OnCompileRelic) r).receiveCompile(function, forGameplay); // Bronze Core, etc
             }
         }
-
-         */
 
         if (AbstractDungeon.player.hasPower(FullReleaseNextFunctionPower.POWER_ID)) {
             if (AbstractDungeon.player.getPower(FullReleaseNextFunctionPower.POWER_ID).amount > 0) {
