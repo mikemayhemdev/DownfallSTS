@@ -281,7 +281,14 @@
     "NAME": "Invalidate",
     "DESCRIPTION": "Choose: Apply !M! Vulnerable and bronze:Encode a *Blind, or Apply !M! Weak and *Encode a *Trip.",
     "UPGRADE_DESCRIPTION": "Choose: Apply !M! Vulnerable and bronze:Encode a *Blind+, or Apply !M! Weak and *Encode a *Trip+.",
-    "EXTENDED_DESCRIPTION": ["Apply !M! Vulnerable and bronze:Encode a *Blind.","Apply !M! Weak and *Encode a *Trip.","Apply !M! Vulnerable and bronze:Encode a *Blind+.", "Apply !M! Weak and *Encode a *Trip+."]
+    "EXTENDED_DESCRIPTION":[
+      "Weak",
+      "Apply ",
+      " Weak and bronze:Encode a *Trip",
+      "Vulnerable",
+      "Apply ",
+      " Vulnerable and bronze:Encode a *Blind"
+    ]
   },
   "bronze:Iterate": {
     "NAME": "Iterate",
