@@ -3,7 +3,7 @@
     "NAME": "完美胸肌",
     "FLAVOR": "完美！",
     "DESCRIPTIONS": [
-      "每当你获得 #y力量 时，获得等量 #y临时生命 。每场战斗开始时获得 #b1 点 #y力量 。"
+      "每当你获得 #y力量 时，获得等量 #y临时生命 。战斗开始时，获得 #b1 点 #y力量 。"
     ]
   },
   "Gremlin:FragmentationGrenade": {
@@ -33,7 +33,7 @@
     "NAME": "首领之角",
     "FLAVOR": "在地精小队这种，谁有这个角，谁就是首领。直到这玩意下一次被人偷走。",
     "DESCRIPTIONS": [
-      "每场战斗开始时，获得 [E] 并抽 #b1 张牌。 NL #ygremlin:切换 至下只地精。"
+      "战斗开始时，获得 [E] 并抽 #b1 张牌。 NL #ygremlin:切换 至下只地精。"
     ]
   },
   "Gremlin:GremlinKnobUpgrade": {
@@ -48,7 +48,7 @@
     "NAME": "地精面具",
     "FLAVOR": "地精暴民地位的标志。",
     "DESCRIPTIONS": [
-      "每场战斗开始时获得 #b1 点 #y临时 #y力量 。"
+      "战斗开始时，获得 #b1 层 #y临时 #y力量 。"
     ]
   },
   "Gremlin:LeaderVoucher": {
