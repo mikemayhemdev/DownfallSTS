@@ -1,94 +1,32 @@
 package automaton.cards;
 
-import automaton.AutomatonMod;
-import automaton.cards.encodedcards.EncodedBlind;
-import automaton.cards.encodedcards.EncodedTrip;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import automaton.actions.EasyModalChoiceAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.RepairPower;
-import downfall.actions.OctoChoiceAction;
-import downfall.cards.OctoChoiceCard;
-import downfall.util.OctopusCard;
-import downfall.util.SelectCardsCenteredAction;
-import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
-public class TinkerersToolbox extends AbstractBronzeCard implements OctopusCard {
+public class TinkerersToolbox extends AbstractBronzeCard {
 
     public final static String ID = makeID("TinkerersToolbox");
 
     public TinkerersToolbox() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        exhaust = true;
-    }
-
-    public ArrayList<OctoChoiceCard> choiceList() {
-
-        ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
-        if (upgraded) {
-            cardList.add(new OctoChoiceCard("octo:TinkererDraw", this.name, AutomatonMod.makeCardPath("TinkerersToolbox.png"), this.EXTENDED_DESCRIPTION[3]));
-            cardList.add(new OctoChoiceCard("octo:TinkererE", this.name, AutomatonMod.makeCardPath("TinkerersToolbox.png"), this.EXTENDED_DESCRIPTION[5]));
-            cardList.add(new OctoChoiceCard("octo:TinkererHP", this.name, AutomatonMod.makeCardPath("TinkerersToolbox.png"), this.EXTENDED_DESCRIPTION[1]));
-        }
-        if (upgraded) {
-            cardList.add(new OctoChoiceCard("octo:TinkererDraw", this.name, AutomatonMod.makeCardPath("TinkerersToolbox.png"), this.EXTENDED_DESCRIPTION[2]));
-            cardList.add(new OctoChoiceCard("octo:TinkererE", this.name, AutomatonMod.makeCardPath("TinkerersToolbox.png"), this.EXTENDED_DESCRIPTION[4]));
-            cardList.add(new OctoChoiceCard("octo:TinkererHP", this.name, AutomatonMod.makeCardPath("TinkerersToolbox.png"), this.EXTENDED_DESCRIPTION[0]));
-        }
-        return cardList;
-    }
-
-    public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
-        switch (card.cardID) {
-            case "octo:TinkererHP": {
-                if (upgraded){
-                    applyToSelf(new RepairPower(AbstractDungeon.player, 10));
-                } else {
-                    applyToSelf(new RepairPower(AbstractDungeon.player, 8));
-                }
-
-            }
-            break;
-            case "octo:TinkererDraw": {
-                if (upgraded){
-                    atb(new DrawCardAction(4));
-                } else {
-                    atb(new DrawCardAction(3));
-                }
-            }
-            break;
-            case "octo:TinkererE": {
-                if (upgraded){
-                    atb(new GainEnergyAction(3));
-                } else {
-                    atb(new GainEnergyAction(2));
-                }
-            }
-            break;
-
-        }
-
+        exhaust = true; // Leaving it without upgrades due to iffy upgrade preview (not enough variables)
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new OctoChoiceAction(m, this));
+        ArrayList<AbstractCard> easyCardList = new ArrayList<>();
+        easyCardList.add(new EasyModalChoiceCard(makeID("DevToolsDraw"), cardStrings.EXTENDED_DESCRIPTION[0], cardStrings.EXTENDED_DESCRIPTION[1], () -> atb(new DrawCardAction(3))));
+        easyCardList.add(new EasyModalChoiceCard(makeID("DevToolsEnergy"), cardStrings.EXTENDED_DESCRIPTION[2], cardStrings.EXTENDED_DESCRIPTION[3], () -> atb(new GainEnergyAction(2))));
+        easyCardList.add(new EasyModalChoiceCard(makeID("DevToolsHeal"), cardStrings.EXTENDED_DESCRIPTION[4], cardStrings.EXTENDED_DESCRIPTION[5], () -> applyToSelf(new RepairPower(p, 10))));
+        atb(new EasyModalChoiceAction(easyCardList));
     }
 
     public void upp() {
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
-
-
-
 }

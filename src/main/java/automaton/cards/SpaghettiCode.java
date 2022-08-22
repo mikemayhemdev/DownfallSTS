@@ -80,9 +80,8 @@ public class SpaghettiCode extends AbstractBronzeCard {
  */
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard newCard;
         for (int i = 0; i < magicNumber; i++) {
-            newCard = CardLibrary.getCard(AutomatonMod.spaghettiOptions.get(AbstractDungeon.cardRandomRng.random(0, AutomatonMod.spaghettiOptions.size() - 1)));
+            AbstractCard newCard = CardLibrary.getCard(AutomatonMod.spaghettiOptions.get(AbstractDungeon.cardRandomRng.random(0, AutomatonMod.spaghettiOptions.size() - 1)));
 
             addCardToFunction(newCard);
         }
