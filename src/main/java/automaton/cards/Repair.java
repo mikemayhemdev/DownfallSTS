@@ -1,13 +1,9 @@
 package automaton.cards;
 
-import automaton.AutomatonMod;
-import automaton.actions.ExhumeFunctionAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
 
 public class Repair extends AbstractBronzeCard {
 
@@ -21,9 +17,10 @@ public class Repair extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new ExhumeFunctionAction(1));
+        atb(new SelectCardsAction(AbstractDungeon.player.exhaustPile.group, 1, EXTENDED_DESCRIPTION[0], false, c -> c instanceof FunctionCard, (cards) -> {
+            cards.forEach(c -> AbstractDungeon.player.exhaustPile.moveToHand(c));
+        }));
     }
-
 
 
     public void upp() {

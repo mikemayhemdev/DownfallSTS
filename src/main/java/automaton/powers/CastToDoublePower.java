@@ -53,7 +53,7 @@ public class CastToDoublePower extends AbstractAutomatonPower {
             AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
             --this.amount;
             if (this.amount == 0) {
-                this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "Double Tap"));
+                this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
             }
         }
 
@@ -61,7 +61,7 @@ public class CastToDoublePower extends AbstractAutomatonPower {
 
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer) {
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "Double Tap"));
+            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
         }
 
     }
