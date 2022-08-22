@@ -30,7 +30,7 @@ public class Separator extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-        if (!((AbstractDungeon.player.hasRelic(ElectromagneticCoil.ID)) && FunctionHelper.held.group.size() == 2) ||
+        if ((!(AbstractDungeon.player.hasRelic(ElectromagneticCoil.ID)) && FunctionHelper.held.group.size() == 2) ||
                 ((AbstractDungeon.player.hasRelic(ElectromagneticCoil.ID)) && FunctionHelper.held.group.size() == 3)){
             addCardToFunction(cardsToPreview.makeStatEquivalentCopy());
         } else {

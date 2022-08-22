@@ -47,6 +47,6 @@ public class EasyModalChoiceCard extends AbstractBronzeCard {
 
     @Override
     public AbstractCard makeCopy() {
-        return new EasyModalChoiceCard(passedName, passedDesc, onUseOrChosen);
+        return new EasyModalChoiceCard(cardID, passedName, passedDesc, onUseOrChosen);
     }
 }
