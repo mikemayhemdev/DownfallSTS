@@ -119,7 +119,7 @@
   },
   "bronze:CloningBeam": {
     "NAME": "Merge Conflict",
-    "DESCRIPTION": "Deal !D! damage. NL The next time you bronze:Encode a card, bronze:Encode a copy of it."
+    "DESCRIPTION": "Deal !D! damage. NL The next time you bronze:Encode a card this turn, bronze:Encode a copy of it."
   },
   "bronze:Constructor": {
     "NAME": "Constructor",
@@ -321,7 +321,7 @@
   },
   "bronze:Optimize": {
     "NAME": "Optimize",
-    "DESCRIPTION": "When you bronze:Encode a card, increase its Damage and Block values by 1."
+    "DESCRIPTION": "When you bronze:Encode a card, increase its Damage and Block values by !M!."
   },
   "bronze:Overheat": {
     "NAME": "Overheat",

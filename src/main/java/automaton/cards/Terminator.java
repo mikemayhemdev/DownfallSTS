@@ -39,7 +39,8 @@ public class Terminator extends AbstractBronzeCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (!((AbstractDungeon.player.hasRelic(ElectromagneticCoil.ID)) && FunctionHelper.held.group.size() == 2) || (AbstractDungeon.player.hasRelic(ElectromagneticCoil.ID)) && FunctionHelper.held.group.size() == 3) {
+        if (!((AbstractDungeon.player.hasRelic(ElectromagneticCoil.ID)) && FunctionHelper.held.group.size() == 2) ||
+            ((AbstractDungeon.player.hasRelic(ElectromagneticCoil.ID)) && FunctionHelper.held.group.size() == 3)){
 
             return true;
         }

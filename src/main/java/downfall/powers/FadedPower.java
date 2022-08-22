@@ -24,16 +24,16 @@ public class FadedPower extends AbstractPower {
         this.ID =  POWER_ID;
         this.owner = owner;
         this.amount = amount;
-        this.description = DESCRIPTIONS[0];
         this.loadRegion("blur");
         this.isTurnBased = true;
+        updateDescription();
     }
 
     public void updateDescription() {
         if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0];
+            this.description = powerStrings.DESCRIPTIONS[0];
         } else {
-            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+            this.description = powerStrings.DESCRIPTIONS[1] + this.amount + powerStrings.DESCRIPTIONS[2];
         }
 
     }

@@ -15,7 +15,7 @@ public class Shortcut extends AbstractBronzeCard {
     private static final int UPG_DAMAGE = 1;
 
     public Shortcut() {
-        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("Replicate.png"));
         cardsToPreview = new Defend();
