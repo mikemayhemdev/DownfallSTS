@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;
+import downfall.powers.FadedPower;
 
 public class Shell extends AbstractBronzeCard {
 
@@ -27,7 +28,7 @@ public class Shell extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new BlurPower(p, magicNumber));
+        applyToSelf(new FadedPower(p, magicNumber));
 
         addCardToFunction(cardsToPreview.makeStatEquivalentCopy());
     }

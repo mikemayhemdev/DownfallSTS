@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
+import downfall.powers.FadedPower;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 
@@ -69,7 +70,7 @@ public class Dissolve extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainBlockAction(p, p, this.block));
-        this.addToBot(new ApplyPowerAction(p, p, new BlurPower(p, baseMagicNumber), baseMagicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new FadedPower(p, baseMagicNumber), baseMagicNumber));
     }
 
     //Upgraded stats.

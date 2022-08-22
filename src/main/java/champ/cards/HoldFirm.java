@@ -5,6 +5,7 @@ import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;
+import downfall.powers.FadedPower;
 
 import static champ.ChampMod.loadJokeCardImage;
 
@@ -30,7 +31,7 @@ public class HoldFirm extends AbstractChampCard {
        // techique();
         blck();
         applyToSelf(new CounterPower(magicNumber));
-        applyToSelf(new BlurPower(p, 1));
+        applyToSelf(new FadedPower(p, 1));
     }
 
     public void upp() {

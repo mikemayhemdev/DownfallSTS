@@ -1,6 +1,7 @@
 package automaton;
 
 import automaton.cardmods.CardEffectsCardMod;
+import automaton.cardmods.FullReleaseCardMod;
 import automaton.cards.AbstractBronzeCard;
 import automaton.cards.ForceShield;
 import automaton.cards.FullRelease;
@@ -17,6 +18,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -42,6 +45,7 @@ public class FunctionHelper {
     }
 
     public static int functionsCompiledThisCombat = 0;
+    public static int functionsCompiledThisTurn = 0;
 
     public static int doExtraNonSpecificCopy = 0;
 
@@ -158,8 +162,28 @@ public class FunctionHelper {
     }
 
     public static AbstractCard makeFunction(boolean forGameplay, boolean noExhaust, boolean costs0) {
+        boolean shouldNotExhaust = noExhaust;
+        boolean funcCosts0 = costs0;
         AbstractBronzeCard function;
-        if (costs0){
+
+        if (!costs0) {
+            if (AbstractDungeon.player.hasPower(NextFunctionFreePower.POWER_ID)) {
+                if (AbstractDungeon.player.getPower(NextFunctionFreePower.POWER_ID).amount > 0) {
+
+                    funcCosts0 = true;
+                    if (forGameplay) {
+                        AbstractDungeon.player.getPower(NextFunctionFreePower.POWER_ID).amount -= 1;
+
+                        if (AbstractDungeon.player.getPower(NextFunctionFreePower.POWER_ID).amount <= 0) {
+                            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, AbstractDungeon.player.getPower(NextFunctionFreePower.POWER_ID)));
+                        }
+                    }
+                }
+
+            }
+        }
+
+        if (funcCosts0) {
             function = new FunctionCard(0);
         } else {
             function = new FunctionCard(1);
@@ -222,6 +246,7 @@ public class FunctionHelper {
                 }
             }
         }
+
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnCompilePower) {
                 ((OnCompilePower) p).receiveCompile(function, forGameplay); // Free Function Potion, Infinite Beams & Hardened Form
@@ -234,15 +259,53 @@ public class FunctionHelper {
         }
 
          */
-        if (noExhaust) CardModifierManager.removeModifiersById(function, ExhaustMod.ID, true);
-        if (noExhaust) CardModifierManager.removeModifiersById(function, ExhaustMod.ID, false);
-        if (noExhaust) function.exhaust = false;
+
+        if (AbstractDungeon.player.hasPower(FullReleaseNextFunctionPower.POWER_ID)) {
+            if (AbstractDungeon.player.getPower(FullReleaseNextFunctionPower.POWER_ID).amount > 0) {
+
+                CardModifierManager.addModifier(function, new FullReleaseCardMod());
+
+                if (forGameplay) {
+                    AbstractDungeon.player.getPower(FullReleaseNextFunctionPower.POWER_ID).amount -= 1;
+
+                    if (AbstractDungeon.player.getPower(FullReleaseNextFunctionPower.POWER_ID).amount <= 0) {
+                        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, AbstractDungeon.player.getPower(FullReleaseNextFunctionPower.POWER_ID)));
+                    }
+                }
+            }
+
+        }
+
+        if (!shouldNotExhaust) {
+            if (AbstractDungeon.player.hasPower(NextFunctionNoExhaustPower.POWER_ID)) {
+                if (AbstractDungeon.player.getPower(NextFunctionNoExhaustPower.POWER_ID).amount > 0) {
+
+                    shouldNotExhaust = true;
+
+                    if (forGameplay) {
+                        AbstractDungeon.player.getPower(NextFunctionNoExhaustPower.POWER_ID).amount -= 1;
+
+                        if (AbstractDungeon.player.getPower(NextFunctionNoExhaustPower.POWER_ID).amount <= 0) {
+                            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, AbstractDungeon.player.getPower(NextFunctionNoExhaustPower.POWER_ID)));
+                        }
+                    }
+                }
+
+            }
+        }
+
+        if (shouldNotExhaust) {
+            CardModifierManager.removeModifiersById(function, ExhaustMod.ID, true);
+            CardModifierManager.removeModifiersById(function, ExhaustMod.ID, false);
+            function.exhaust = false;
+        }
         return function;
     }
 
     public static void output() {
-        output(false,false);
+        output(false, false);
     }
+
     public static void output(boolean noExhaust, boolean costs0) {
         ForceShield.decrementShields(); // Decrease cost of Force Shields
         boolean regularOutput = true;
@@ -252,12 +315,41 @@ public class FunctionHelper {
             }
         }
         if (doExtraNonSpecificCopy > 0) {
-            for (int i = 0; i < doExtraNonSpecificCopy; i++)
+            for (int i = 0; i < doExtraNonSpecificCopy; i++) {
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true, noExhaust, costs0))); // Duplicate Function potion
+                if (AbstractDungeon.player.hasPower(NextFunctionDupedPower.POWER_ID)) {
+                    if (AbstractDungeon.player.getPower(NextFunctionDupedPower.POWER_ID).amount > 0) {
+
+                        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true, noExhaust, costs0))); // Duplicate Function potion
+
+                        AbstractDungeon.player.getPower(NextFunctionDupedPower.POWER_ID).amount -= 1;
+
+                        if (AbstractDungeon.player.getPower(NextFunctionDupedPower.POWER_ID).amount <= 0) {
+                            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, AbstractDungeon.player.getPower(NextFunctionDupedPower.POWER_ID)));
+                        }
+                    }
+
+                }
+            }
             doExtraNonSpecificCopy = 0;
         }
         if (regularOutput) {
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true, noExhaust, costs0))); // Regular output to hand, assuming no Hardcode
+
+            if (AbstractDungeon.player.hasPower(NextFunctionDupedPower.POWER_ID)) {
+                if (AbstractDungeon.player.getPower(NextFunctionDupedPower.POWER_ID).amount > 0) {
+
+                    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true, noExhaust, costs0))); // Regular output to hand, assuming no Hardcode
+
+                    AbstractDungeon.player.getPower(NextFunctionDupedPower.POWER_ID).amount -= 1;
+
+                    if (AbstractDungeon.player.getPower(NextFunctionDupedPower.POWER_ID).amount <= 0) {
+                        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, AbstractDungeon.player.getPower(NextFunctionDupedPower.POWER_ID)));
+                    }
+                }
+
+            }
+
         }
         AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
             @Override
@@ -273,6 +365,7 @@ public class FunctionHelper {
             }
         }
         functionsCompiledThisCombat++;
+        functionsCompiledThisTurn++;
     }
 
     public static void render(SpriteBatch sb) {

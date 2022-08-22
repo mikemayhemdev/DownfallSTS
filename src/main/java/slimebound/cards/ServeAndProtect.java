@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.BlurPower;
+import downfall.powers.FadedPower;
 import downfall.util.SelectCardsCenteredAction;
 import slimebound.SlimeboundMod;
 import slimebound.actions.TendrilFlailAction;
@@ -71,7 +72,7 @@ public class ServeAndProtect extends AbstractSlimeboundCard {
 
         if (slimecount > 0) {
             addToBot(new GainBlockAction(p, slimecount * block));
-            addToBot(new ApplyPowerAction(p,p,new BlurPower(p, slimecount)));
+            addToBot(new ApplyPowerAction(p,p,new FadedPower(p, slimecount)));
         }
 
         for (AbstractOrb o : p.orbs) {

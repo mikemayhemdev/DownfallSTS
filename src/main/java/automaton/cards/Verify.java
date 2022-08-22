@@ -16,16 +16,14 @@ public class Verify extends AbstractBronzeCard {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
        // this.tags.add(SneckoMod.BANNEDFORSNECKO);
         tags.add(BaseModCardTags.FORM);
-        isEthereal = true;
+        magicNumber = baseMagicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new VerifyPower(1));
+        applyToSelf(new VerifyPower(magicNumber));
     }
 
     public void upp() {
-        this.isEthereal = false;
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeMagicNumber(1);
     }
 }

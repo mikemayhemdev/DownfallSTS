@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;
+import downfall.powers.FadedPower;
 import theHexaghost.HexaMod;
 import theHexaghost.patches.ExhaustCardTickPatch;
 
@@ -34,7 +35,7 @@ public class GhostShield extends AbstractHexaCard {
     @Override
     public void afterlife() {
         use(AbstractDungeon.player, null);
-        applyToSelf(new BlurPower(AbstractDungeon.player, magicNumber));
+        applyToSelf(new FadedPower(AbstractDungeon.player, magicNumber));
     }
 /*
     public void triggerOnGlowCheck() {

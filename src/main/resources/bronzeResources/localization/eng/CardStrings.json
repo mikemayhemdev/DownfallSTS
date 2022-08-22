@@ -17,8 +17,8 @@
     ]
   },
   "bronze:Assembly": {
-    "NAME": "Assembly",
-    "DESCRIPTION": "Scry !M!. NL bronze:Encode all *Encodable cards discarded (in selected order). NL Exhaust."
+    "NAME": "Reassemble",
+    "DESCRIPTION": "Exhume !M! Function cards, chosen at random. NL Exhaust."
   },
   "bronze:Backtrace": {
     "NAME": "Backtrace",
@@ -43,11 +43,7 @@
   },
   "bronze:Boost": {
     "NAME": "Boost",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! Strength.",
-    "EXTENDED_DESCRIPTION": [
-      "boosted",
-      "Boost"
-    ]
+    "DESCRIPTION": "Deal !D! damage. NL Increase the Damage and Block values of currently Encoded cards by !M!."
   },
   "bronze:Branch": {
     "NAME": "Branch",
@@ -77,7 +73,7 @@
   },
   "bronze:BronzeOrb": {
     "NAME": "Bronze Orb",
-    "DESCRIPTION": "Innate. NL Deal !D! damage. NL bronze:Encode a random card with *Encode in your draw pile. Exhaust."
+    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Gain !B! Block. NL The next Function you create costs 0. Exhaust."
   },
   "bronze:BugBarrage": {
     "NAME": "Bug Barrage",
@@ -110,8 +106,8 @@
   },
   "bronze:ChosenStrike": {
     "NAME": "Cultist Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL bronze:Encode a *Ritual *Dagger without it's *Fatal effect.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL bronze:Encode 2 *Ritual *Daggers without their *Fatal effect."
+    "DESCRIPTION": "Deal !D! damage. NL Take 3 damage. NL bronze:Encode a *Ritual *Dagger without it's *Fatal effect.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take 3 damage. NL bronze:Encode 2 *Ritual *Daggers without their *Fatal effect."
   },
   "bronze:ClassDefault": {
     "NAME": "Class Default",
@@ -119,23 +115,16 @@
   },
   "bronze:CleanCode": {
     "NAME": "Clean Code",
-    "DESCRIPTION": "Remove the next !M! *Compile *Errors you would *Encode.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Remove the next !M! *Compile *Errors you would *Encode."
+    "DESCRIPTION": "The next !M! Functions you create do not Exhaust."
   },
   "bronze:CloningBeam": {
     "NAME": "Merge Conflict",
-    "DESCRIPTION": "Deal !D! damage. NL The next time you bronze:Encode a card, bronze:Encode a copy of it. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL The next time you bronze:Encode a card, bronze:Encode a copy of it."
+    "DESCRIPTION": "Deal !D! damage. NL The next time you bronze:Encode a card, bronze:Encode a copy of it."
   },
   "bronze:Constructor": {
     "NAME": "Constructor",
     "DESCRIPTION": "Gain !B! Block. NL bronze:Encode a *Defend. If it is the first card, replace it with *Leap.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL bronze:Encode a *Defend+. If it is the first card, replace it with *Leap+."
-  },
-  "bronze:CopyPaste": {
-    "NAME": "Copy Paste",
-    "DESCRIPTION": "This turn, your next Function is played twice.",
-    "UPGRADE_DESCRIPTION": "Retain. NL This turn, your next Function is played twice."
   },
   "bronze:CutThrough": {
     "NAME": "Cut",
@@ -165,7 +154,7 @@
   },
   "bronze:DelayedSlice": {
     "NAME": "Robo-Chop",
-    "DESCRIPTION": "Deal !D! damage. NL Next turn, draw !M! additional cards."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Next turn, draw !M! additional cards."
   },
   "bronze:Deprecate": {
     "NAME": "Deprecate",
@@ -204,7 +193,7 @@
   },
   "bronze:FollowUp": {
     "NAME": "Follow Through",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If the last played card was a Function, play this again."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If you created a Function this turn, play this again."
   },
   "bronze:ForceShield": {
     "NAME": "Force Shield",
@@ -212,8 +201,7 @@
   },
   "bronze:ForLoop": {
     "NAME": "For Loop",
-    "DESCRIPTION": "The next card you bronze:Encode causes X additional copies to also be bronze:Encoded. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "The next card you bronze:Encode causes X+1 additional copies to also be bronze:Encoded. NL Exhaust."
+    "DESCRIPTION": "The next card Function you create is created twice."
   },
   "bronze:Format": {
     "NAME": "Format",
@@ -273,12 +261,21 @@
   },
   "bronze:HyperBeam": {
     "NAME": "HYPER BEAM",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Put 5 *Void on top of your draw pile."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Put !M! *Void on top of your draw pile."
   },
   "bronze:InfiniteBeams": {
     "NAME": "Prime Header",
-    "DESCRIPTION": "At the start of each turn, gain a #yStrike or #yDefend #yPrimer, chosen randomly.",
-    "UPGRADE_DESCRIPTION": "At the start of each turn, gain a #yStrike or #yDefend #yPrimer+, chosen randomly."
+    "DESCRIPTION": "At the start of each turn, gain a *Strike or *Defend *Primer, chosen randomly.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, gain a *Strike or *Defend *Primer+, chosen randomly."
+  },
+  "bronze:InfiniteLoop": {
+    "NAME": "Infinite Loop",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Encode *Infinite *Loop.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Encode *Infinite *Loop+.",
+    "EXTENDED_DESCRIPTION": [
+      "infinite",
+      "Loop"
+    ]
   },
   "bronze:Invalidate": {
     "NAME": "Invalidate",
@@ -297,8 +294,8 @@
     "UPGRADE_DESCRIPTION": "Innate. NL Whenever you draw a Curse or Status card, gain 1 temporary Strength."
   },
   "bronze:Library": {
-    "NAME": "Library",
-    "DESCRIPTION": "At the start of your turn, gain a random card with bronze:Encode, it costs 0 until played."
+    "NAME": "Dark Library",
+    "DESCRIPTION": "bronze:Insert !M! *Voids. NL At the start of your turn, gain [E]."
   },
   "bronze:MaxOutput": {
     "NAME": "Max Output",
@@ -311,7 +308,7 @@
   },
   "bronze:NullPointer": {
     "NAME": "Null Pointer",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Compile *Error - Function is Unplayable.",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Insert a *Wound and a *Burn.",
     "EXTENDED_DESCRIPTION": [
       "null",
       "Pointer"
@@ -324,21 +321,21 @@
   },
   "bronze:Optimize": {
     "NAME": "Optimize",
-    "DESCRIPTION": "Upgrade the next !M! cards you bronze:Encode that can be upgraded."
+    "DESCRIPTION": "When you bronze:Encode a card, increase its Damage and Block values by 1."
   },
   "bronze:Overheat": {
     "NAME": "Overheat",
-    "DESCRIPTION": "Deal !D! damage. NL Remove the next *Compile *Error you would *Encode."
+    "DESCRIPTION": "Deal !D! damage. NL The next Function you create costs 0."
   },
   "bronze:Overload": {
     "NAME": "Copy Paste",
-    "DESCRIPTION": "Play a copy of each Encoded card (targets chosen randomly). NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Play a copy of each Encoded card (targets chosen randomly)."
+    "DESCRIPTION": "Play a copy of each Encoded card twice (targets chosen randomly). NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Play a copy of each Encoded card twice (targets chosen randomly)."
   },
   "bronze:Philosophize": {
     "NAME": "Philosophize",
-    "DESCRIPTION": "Gain !M! Strength. NL ALL enemies gain !M! Strength. NL bronze:Encode an Inflame. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Strength. NL ALL enemies gain !M! Strength. NL bronze:Encode an Inflame+. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Strength. NL ALL enemies gain 1 Strength. NL bronze:Encode an Inflame. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Strength. NL ALL enemies gain 1 Strength. NL bronze:Encode an Inflame+. NL Exhaust."
   },
   "bronze:RecursiveStrike": {
     "NAME": "Recursive Strike",
@@ -355,10 +352,12 @@
   },
   "bronze:Repair": {
     "NAME": "Repair",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Heal !M! HP.",
+    "DESCRIPTION": "Choose a Function card to Exhume. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a Function card to Exhume.",
     "EXTENDED_DESCRIPTION": [
-      "tinkers",
-      "Wrench"
+      "Choose a Function card to return to your hand.",
+      "Choose ",
+      " Function cards to return to your hand."
     ]
   },
   "bronze:Replicate": {
@@ -383,8 +382,8 @@
   },
   "bronze:Separator": {
     "NAME": "Separator",
-    "DESCRIPTION": "Deal !D! damage. bronze:Encode a *Strike. If it is the first card, replace it with *Twin *Strike.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. bronze:Encode a *Strike+. If it is the first card, replace it with *Twin *Strike+."
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Encode a *Strike. If it is the first card, replace it with *Twin *Strike.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Encode a *Strike+. If it is the first card, replace it with *Twin *Strike+."
   },
   "bronze:Shell": {
     "NAME": "Blockchain",
@@ -403,9 +402,14 @@
     "NAME": "Ship It",
     "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL of your Status cards."
   },
+  "bronze:Shortcut": {
+    "NAME": "Shortcut",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Encode a *Defend.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL bronze:Encode a *Defend+."
+  },
   "bronze:SpaghettiCode": {
     "NAME": "Spaghetti Code",
-    "DESCRIPTION": "bronze:Encode 3 cards, chosen randomly between *Safety, *Twin *Strike, *Cleave, *Miracle, and *Insight."
+    "DESCRIPTION": "bronze:Encode 3 cards at random: *Safety, *Twin *Strike, *Cleave, *Miracle, or *Insight."
   },
   "bronze:Strike": {
     "NAME": "Strike",
@@ -417,10 +421,15 @@
   },
   "bronze:Terminator": {
     "NAME": "Terminator",
-    "DESCRIPTION": "bronze:Compile - If this is the last card of the Function, it gains 'Play this again'.",
+    "DESCRIPTION": "bronze:Encode *Repeat. NL This can only be used if *Repeat will be the final card of a new Function. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "bronze:Encode *Repeat. NL This can only be used if *Repeat will be the final card of a new Function."
+  },
+  "bronze:TerminatorRepeatCard": {
+    "NAME": "Repeat",
+    "DESCRIPTION": "Play this twice.",
     "EXTENDED_DESCRIPTION": [
-      "sad",
-      "End"
+      "repeated",
+      "Repeat"
     ]
   },
   "bronze:ThunderWave": {
@@ -433,13 +442,21 @@
   },
   "bronze:TinkerersToolbox": {
     "NAME": "Dev Tools",
-    "DESCRIPTION": "Retain. NL Gain *Debug, *Batch, *Decompile, or *Byte *Shift. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain *Debug, *Batch, *Decompile, or *Byte *Shift."
+    "DESCRIPTION": "Choose: Draw 3 cards, gain [E] [E] , or heal 8 HP at the end of combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose: Draw 4 cards, gain [E] [E] [E] , or heal 10 HP at the end of combat. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Heal 8 HP at the end of combat.",
+      "Heal 10 HP at the end of combat.",
+      "Draw 3 cards.",
+      "Draw 4 cards.",
+      "Gain [E] [E].",
+      "Gain [E] [E] [E] ."
+    ]
   },
   "bronze:Turbo": {
     "NAME": "Turbo",
     "DESCRIPTION": "Gain [E] [E] . NL Add a *Void into your discard pile.",
-    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E]. NL Add a *Void into your discard pile."
+    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E] . NL Add a *Void into your discard pile."
   },
   "bronze:Undervolt": {
     "NAME": "Undervolt",
@@ -447,8 +464,7 @@
   },
   "bronze:Verify": {
     "NAME": "Sentient Form",
-    "DESCRIPTION": "Ethereal. NL Whenever you draw a Function, increase all numbers on it by 1 except for cost.",
-    "UPGRADE_DESCRIPTION": "Whenever you draw a Function, increase all numbers on it by 1 except for cost."
+    "DESCRIPTION": "Whenever you create a Function, increase all numbers on it by !M! except for cost."
   },
   "bronze:Virus": {
     "NAME": "Virus",
@@ -462,10 +478,11 @@
   },
   "bronze:WildBeam": {
     "NAME": "Cleanse",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust a random Status card in your draw pile.",
+    "DESCRIPTION": "Deal !D! damage. NL Fetch up to !M! Status cards from your draw pile. They gain Ethereal.",
     "EXTENDED_DESCRIPTION": [
-      "wild",
-      "Beam"
+      "Choose a Status card to add to your hand.",
+      "Choose ",
+      " Status cards to add to your hand."
     ]
   },
   "bronze:WildStrike": {
@@ -492,11 +509,6 @@
       "forked",
       "Branch"
     ]
-  },
-  "bronze:ByteShift": {
-    "NAME": "Byte Shift",
-    "DESCRIPTION": "Return all Encoded cards to your hand. NL They gain Retain. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Return all Encoded cards to your hand. NL They gain Retain. NL Exhaust."
   },
   "bronze:DazingPulse": {
     "NAME": "Dazing Pulse",
@@ -687,7 +699,7 @@
   },
   "bronze:EncodedPanacea": {
     "NAME": "Panacea",
-    "DESCRIPTION": "Gain !M! Artifact.",
+    "DESCRIPTION": "Gain !M! Artifact. \u202F NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "cleansing",
       "Medicine"
@@ -727,7 +739,7 @@
   },
   "bronze:EncodedPummel": {
     "NAME": "Pummel",
-    "DESCRIPTION": "Deal !D! damage !M! times.",
+    "DESCRIPTION": "Deal !D! damage !M! times. \u202F NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "rapid",
       "Pummel"
@@ -735,10 +747,18 @@
   },
   "bronze:EncodedRitualDagger": {
     "NAME": "Ritual Dagger",
-    "DESCRIPTION": "Deal !D! damage.",
+    "DESCRIPTION": "Deal !D! damage. \u202F NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "ritual",
       "Dagger"
+    ]
+  },
+  "bronze:EncodedTwinStrike": {
+    "NAME": "Twin Strike",
+    "DESCRIPTION": "Deal !D! damage twice.",
+    "EXTENDED_DESCRIPTION": [
+      "twin",
+      "Pincer"
     ]
   }
 }

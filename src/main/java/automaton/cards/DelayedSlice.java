@@ -17,15 +17,18 @@ public class DelayedSlice extends AbstractBronzeCard {
     public DelayedSlice() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 2;
-        baseDamage = 9;
+        baseDamage = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        if (upgraded) dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         applyToSelf(new DrawCardNextTurnPower(p, magicNumber));
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeMagicNumber(1);
     }
 }

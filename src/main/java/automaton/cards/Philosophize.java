@@ -14,7 +14,7 @@ public class Philosophize extends AbstractBronzeCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 1;
     private static final int UPG_MAGIC = -1;
 
     public Philosophize() {
@@ -27,9 +27,9 @@ public class Philosophize extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new StrengthPower(p, auto));
+        applyToSelf(new StrengthPower(p, magicNumber));
         for (AbstractMonster q : monsterList()) {
-            applyToEnemy(q, new StrengthPower(q, magicNumber));
+            applyToEnemy(q, new StrengthPower(q, 1));
         }
         addCardToFunction(cardsToPreview.makeStatEquivalentCopy());
 

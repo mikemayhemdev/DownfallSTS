@@ -1,3 +1,4 @@
+/*
 package automaton.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -37,3 +38,5 @@ public class Fortify extends AbstractBronzeCard {
         upgradeMagicNumber(1);
     }
 }
+
+ */

@@ -29,14 +29,13 @@ public class ChosenStrike extends AbstractBronzeCard {
         baseDamage = DAMAGE;
 
         tags.add(AutomatonMod.ENCODES);
-        baseSelfDamage = this.selfDamage = 3;
         cardsToPreview = new EncodedRitualDagger();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         if (!AbstractDungeon.player.hasPower(PreventTackleDamagePower.POWER_ID))
-            AbstractDungeon.actionManager.addToBottom(new TackleSelfDamageAction(new DamageInfo(AbstractDungeon.player, selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+            AbstractDungeon.actionManager.addToBottom(new TackleSelfDamageAction(new DamageInfo(AbstractDungeon.player, 3, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
         addCardToFunction(cardsToPreview.makeStatEquivalentCopy());
         if (upgraded) addCardToFunction(cardsToPreview.makeStatEquivalentCopy());

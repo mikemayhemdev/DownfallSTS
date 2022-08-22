@@ -52,9 +52,8 @@
   "bronze:Optimize": {
     "NAME": "Optimized",
     "DESCRIPTIONS": [
-      "#yUpgrade the next #Upgradable card you #yEncode.",
-      "#yUpgrade the next #b",
-      " #Upgradable cards you #yEncode."
+      "Cards you Encode have their Damage and Block values raised by ",
+      "."
     ]
   },
   "bronze:MaxOutput": {
@@ -115,8 +114,7 @@
   "bronze:Verify": {
     "NAME": "Sentient Form",
     "DESCRIPTIONS": [
-      "Whenever you draw a Function, increase all numbers on it by #b1.",
-      "Whenever you draw a Function, increase all numbers on it by #b",
+      "Whenever you create a Function, increase all numbers on it by ",
       " except for cost."
     ]
   },
@@ -156,6 +154,38 @@
       "Remove the next #yCompile #yError #yEncoded.",
       "Remove the next #b",
       " #yCompile #yErrors #yEncoded."
+    ]
+  },
+  "bronze:FullReleaseNextFunctionPower": {
+    "NAME": "Prepping for Release",
+    "DESCRIPTIONS": [
+      "The next Function you create will be turned into a Power.",
+      "The next ",
+      " Functions you create will be turned into a Power."
+    ]
+  },
+  "bronze:NextFunctionFreePower": {
+    "NAME": "Overclocked",
+    "DESCRIPTIONS": [
+      "The next Function you create will cost 0.",
+      "The next ",
+      " Functions you create will cost 0."
+    ]
+  },
+  "bronze:NextFunctionNoExhaustPower": {
+    "NAME": "Clean Code",
+    "DESCRIPTIONS": [
+      "The next Function you create will not have Exhaust.",
+      "The next ",
+      " Functions you create will not have Exhaust."
+    ]
+  },
+  "bronze:NextFunctionDupedPower": {
+    "NAME": "Looped",
+    "DESCRIPTIONS": [
+      "The next Function you create will be created twice.",
+      "The next ",
+      " Functions you create will be created twice."
     ]
   }
 }

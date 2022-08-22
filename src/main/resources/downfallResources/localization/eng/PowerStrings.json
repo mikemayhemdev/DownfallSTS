@@ -6,6 +6,14 @@
       "Ha! Fairy Potion, jerk!"
     ]
   },
+  "downfall:Faded": {
+    "NAME": "Faded",
+    "DESCRIPTIONS": [
+      "#yBlock is not removed at the start of your next turn.",
+      "#yBlock is not removed at the start of your next #b",
+      " turns."
+    ]
+  },
   "downfall:SoulSteal": {
     "NAME": "Soul Stealer",
     "DESCRIPTIONS": [

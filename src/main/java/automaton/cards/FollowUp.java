@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.FunctionHelper;
 import automaton.actions.RepeatCardAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -33,7 +34,7 @@ public class FollowUp extends AbstractBronzeCard {
             @Override
             public void update() {
                 isDone = true;
-                if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2).cardID.equals(FunctionCard.ID)) {
+                if (FunctionHelper.functionsCompiledThisTurn > 0){
                     att(new RepeatCardAction(m, q));
                 }
             }
@@ -42,7 +43,7 @@ public class FollowUp extends AbstractBronzeCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1).cardID.equals(FunctionCard.ID)) {
+        if (FunctionHelper.functionsCompiledThisTurn > 0){
             this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
         } else {
             this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();

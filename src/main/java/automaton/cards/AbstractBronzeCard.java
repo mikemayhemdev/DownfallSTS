@@ -191,16 +191,22 @@ public abstract class AbstractBronzeCard extends CustomCard {
         }
     }
 
-    public void fineTune(boolean effects) {
+    public void fineTune(boolean effects){
+        fineTune(effects, false);
+    }
+
+    public void fineTune(boolean effects, boolean onlyDamageAndBlock) {
         if (effects) AbstractDungeon.effectList.add(new FineTuningEffect(this));
         this.baseDamage += 1;
         this.damage += 1;
         this.baseBlock += 1;
         this.block += 1;
-        this.baseMagicNumber += 1;
-        this.magicNumber += 1;
-        this.baseAuto += 1;
-        this.auto += 1;
+        if (!onlyDamageAndBlock) {
+            this.baseMagicNumber += 1;
+            this.magicNumber += 1;
+            this.baseAuto += 1;
+            this.auto += 1;
+        }
         this.superFlash();
         FunctionHelper.genPreview();
     }

@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;
+import downfall.powers.FadedPower;
 
 public class EncodedBlur extends AbstractBronzeCard {
     public static final String ID = "bronze:EncodedBlur";
@@ -26,6 +27,7 @@ public class EncodedBlur extends AbstractBronzeCard {
     public EncodedBlur() {
         super("bronze:EncodedBlur", cardStrings.NAME, "green/skill/blur", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseBlock = 5;
+        baseMagicNumber = magicNumber = 1;
     }
 
     @Override
@@ -35,7 +37,7 @@ public class EncodedBlur extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainBlockAction(p, p, this.block));
-        this.addToBot(new ApplyPowerAction(p, p, new BlurPower(p, 1), 1));
+        this.addToBot(new ApplyPowerAction(p, p, new FadedPower(p, magicNumber), magicNumber));
     }
 
     public void upgrade() {

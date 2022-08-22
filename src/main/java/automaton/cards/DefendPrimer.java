@@ -14,7 +14,7 @@ public class DefendPrimer extends AbstractBronzeCard {
     private static final int UPG_DAMAGE = 2;
 
     public DefendPrimer() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("MinorBeam.png"));
         isEthereal = true;
         exhaust = true;

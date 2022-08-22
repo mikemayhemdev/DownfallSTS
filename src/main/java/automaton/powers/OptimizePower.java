@@ -1,5 +1,6 @@
 package automaton.powers;
 
+import automaton.cards.AbstractBronzeCard;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -15,12 +16,16 @@ public class OptimizePower extends AbstractAutomatonPower implements OnAddToFunc
     }
 
     @Override
+    public void updateDescription() {
+
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+
+    }
+
+    @Override
     public void receiveAddToFunc(AbstractCard addition) {
-        if (addition.canUpgrade()) {
-            addition.upgrade();
-            addition.superFlash();
-            flash();
-            addToTop(new ReducePowerAction(owner, owner, this.ID, 1));
+        for (int i = 0; i < amount; i++) {
+            ((AbstractBronzeCard)addition).fineTune(false, true);
         }
     }
 }

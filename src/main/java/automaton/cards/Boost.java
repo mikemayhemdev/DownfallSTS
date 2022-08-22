@@ -1,5 +1,7 @@
 package automaton.cards;
 
+import automaton.FunctionHelper;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -14,26 +16,29 @@ public class Boost extends AbstractBronzeCard {
 
     private static final int BLOCK = 6;
     private static final int MAGIC = 2;
+    private static final int DAMAGE = 7;
 
     public Boost() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = BLOCK;
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = MAGIC;
-        thisEncodes();
+        baseDamage = DAMAGE;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
-    }
 
-    @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        if (forGameplay) {
-            applyToSelf(new StrengthPower(AbstractDungeon.player, magicNumber));
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        for (AbstractCard q : FunctionHelper.held.group) {
+            if (q instanceof AbstractBronzeCard) {
+                for (int i = 0; i < magicNumber; i++) {
+                    ((AbstractBronzeCard) q).fineTune(true, true);
+                }
+            }
         }
     }
 
+
     public void upp() {
+        upgradeDamage(2);
         upgradeMagicNumber(1);
     }
 }

@@ -1,6 +1,7 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
+import automaton.actions.CleanseAction;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
@@ -20,15 +21,18 @@ public class WildBeam extends AbstractBronzeCard {
     //stupid intellij stuff attack, enemy, common
 
     private static final int DAMAGE = 9;
-    private static final int UPG_DAMAGE = 3;
+    private static final int UPG_DAMAGE = 2;
 
     public WildBeam() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.LIGHTNING);
+        atb(new CleanseAction(magicNumber));
+        /*  Exhaust random status in draw pile code below
         atb(new AbstractGameAction() {
             @Override
             public void update() {
@@ -40,9 +44,13 @@ public class WildBeam extends AbstractBronzeCard {
                 }
             }
         });
+
+         */
     }
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
+
+        upgradeMagicNumber(1);
     }
 }

@@ -1,3 +1,4 @@
+/*
 package automaton.cards;
 
 import automaton.AutomatonMod;
@@ -48,3 +49,5 @@ public class Virus extends AbstractBronzeCard {
         initializeDescription();
     }
 }
+
+ */

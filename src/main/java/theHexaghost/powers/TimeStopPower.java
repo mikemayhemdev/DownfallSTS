@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.BlurPower;
 import com.megacrit.cardcrawl.powers.ConservePower;
+import downfall.powers.FadedPower;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.StartNewTurnAction;
 
@@ -89,7 +90,7 @@ public class TimeStopPower extends AbstractPower {
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, ID));
             } else {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new ConservePower(owner, 1), 1));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new BlurPower(owner, 1), 1));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new FadedPower(owner, 1), 1));
                 AbstractDungeon.actionManager.addToBottom(new StartNewTurnAction());
             }
         }

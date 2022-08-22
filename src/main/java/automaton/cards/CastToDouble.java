@@ -16,7 +16,7 @@ public class CastToDouble extends AbstractBronzeCard {
 
 
     public CastToDouble() {
-        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

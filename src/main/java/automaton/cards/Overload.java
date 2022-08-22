@@ -25,6 +25,7 @@ public class Overload extends AbstractBronzeCard {
             atb(new SFXAction("ORB_LIGHTNING_EVOKE"));
             addToBot(new VFXAction(new LightningEffect(q.hb.cX, q.hb.cY)));
             addToBot(new RepeatCardAction(q));
+            addToBot(new RepeatCardAction(q));
         }
     }
 

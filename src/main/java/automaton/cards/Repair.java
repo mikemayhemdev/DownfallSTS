@@ -1,6 +1,7 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
+import automaton.actions.ExhumeFunctionAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,30 +15,20 @@ public class Repair extends AbstractBronzeCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 7;
-    private static final int UPG_MAGIC = 3;
-
     public Repair() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = MAGIC;
-        thisEncodes();
-        tags.add(CardTags.HEALING);
-       // this.tags.add(SneckoMod.BANNEDFORSNECKO);
-        baseBlock = 4;
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
+        atb(new ExhumeFunctionAction(1));
     }
 
-    @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        if (forGameplay) {
-            atb(new HealAction(AbstractDungeon.player, AbstractDungeon.player, magicNumber));
-        }
-    }
+
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        exhaust = false;
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

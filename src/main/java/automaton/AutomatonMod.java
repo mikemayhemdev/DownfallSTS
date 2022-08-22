@@ -68,7 +68,8 @@ public class AutomatonMod implements
         OnStartBattleSubscriber,
         PostBattleSubscriber,
         StartGameSubscriber,
-        PostDrawSubscriber {
+        PostDrawSubscriber,
+        OnPlayerTurnStartSubscriber {
     public static final String SHOULDER1 = "bronzeResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "bronzeResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "bronzeResources/images/char/mainChar/corpse.png";
@@ -435,5 +436,10 @@ public class AutomatonMod implements
         }
         if (ogStatus.upgraded) newStatus.upgrade();
         return newStatus;
+    }
+
+    @Override
+    public void receiveOnPlayerTurnStart() {
+        FunctionHelper.functionsCompiledThisTurn=0;
     }
 }

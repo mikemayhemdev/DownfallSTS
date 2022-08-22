@@ -1,3 +1,4 @@
+/*
 package automaton.cards;
 
 import basemod.helpers.CardModifierManager;
@@ -34,3 +35,5 @@ public class Frontload extends AbstractBronzeCard {
         upgradeBlock(UPG_BLOCK);
     }
 }
+
+ */

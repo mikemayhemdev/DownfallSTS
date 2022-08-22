@@ -8,7 +8,7 @@ import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-public class VerifyPower extends AbstractAutomatonPower {
+public class VerifyPower extends AbstractAutomatonPower implements OnCompilePower {
     public static final String NAME = "Verify";
     public static final String POWER_ID = makeID(NAME);
     public static final PowerType TYPE = PowerType.BUFF;
@@ -19,25 +19,26 @@ public class VerifyPower extends AbstractAutomatonPower {
     }
 
     @Override
-    public void onCardDraw(AbstractCard card) {
-        if (card instanceof FunctionCard) {
+    public void receiveCompile(AbstractCard function, boolean forGameplay) {
+        if (forGameplay) {
+
             for (int i = 0; i < amount; i++) {
-                AbstractDungeon.effectList.add(new FineTuningEffect(card));
-                for (AbstractCardModifier m : CardModifierManager.getModifiers(card, CardEffectsCardMod.ID)) {
+                AbstractDungeon.effectList.add(new FineTuningEffect(function));
+                for (AbstractCardModifier m : CardModifierManager.getModifiers(function, CardEffectsCardMod.ID)) {
                     if (m instanceof CardEffectsCardMod) {
+                        ((CardEffectsCardMod) m).stored().fineTune(false);
                         ((CardEffectsCardMod) m).stored().fineTune(false);
                     }
                 }
+
             }
         }
     }
 
     @Override
     public void updateDescription() {
-        if (amount == 1) {
-            description = DESCRIPTIONS[0];
-        } else
-            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
 
     }
 }

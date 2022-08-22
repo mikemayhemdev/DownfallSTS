@@ -1,8 +1,12 @@
 package automaton.cards;
 
 import automaton.AutomatonChar;
+import automaton.FunctionHelper;
 import automaton.cardmods.FullReleaseCardMod;
+import automaton.powers.FullReleaseNextFunctionPower;
+import automaton.powers.FullReleasePower;
 import basemod.helpers.CardModifierManager;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -13,23 +17,12 @@ public class FullRelease extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, rare
 
-
     public FullRelease() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        thisEncodes();
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-    }
-
-    @Override
-    public void onCompileFirst(AbstractCard function, boolean forGameplay) {
-        CardModifierManager.addModifier(function, new FullReleaseCardMod());
-    }
-
-    @Override
-    public String getBonusChar() {
-        return EXTENDED_DESCRIPTION[2];
+       applyToSelf(new FullReleaseNextFunctionPower());
     }
 
     public void upp() {

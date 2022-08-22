@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;
+import downfall.powers.FadedPower;
 
 import java.util.ArrayList;
 
@@ -33,7 +34,7 @@ public class EnBlur extends AbstractBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         atb(new GainBlockAction(m, m, block));
-        atb(new ApplyPowerAction(m, m, new BlurPower(m, 1), 1));
+        atb(new ApplyPowerAction(m, m, new FadedPower(m, 1), 1));
     }
 
     @Override

@@ -13,7 +13,7 @@ public class InfiniteBeams extends AbstractBronzeCard {
 
     public InfiniteBeams() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        cardsToPreview = new MinorBeam();
+        cardsToPreview = new StrikePrimer();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -23,8 +23,6 @@ public class InfiniteBeams extends AbstractBronzeCard {
     public void upp() {
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
-        AbstractCard q = new MinorBeam();
-        q.upgrade();
-        cardsToPreview = q;
+        cardsToPreview.upgrade();
     }
 }

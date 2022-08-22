@@ -3,6 +3,7 @@ package automaton.cards;
 import automaton.AutomatonMod;
 import automaton.actions.EasyXCostAction;
 import automaton.powers.CloningPower;
+import automaton.powers.NextFunctionDupedPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -13,7 +14,7 @@ public class ForLoop extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, uncommon
 
     public ForLoop() {
-        super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
         exhaust = true;
         baseMagicNumber = magicNumber = 0;
@@ -21,16 +22,10 @@ public class ForLoop extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new EasyXCostAction(this, (effect, params) -> {
-            if (effect + params[0] > 0)
-                applyToSelfTop(new CloningPower(effect + params[0]));
-            return true;
-        }, magicNumber));
+        applyToSelf(new NextFunctionDupedPower(1));
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeBaseCost(0);
     }
 }
