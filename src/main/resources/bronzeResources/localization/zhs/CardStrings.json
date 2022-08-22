@@ -607,7 +607,7 @@
   },
   "bronze:BuggyMess": {
     "NAME": "多重错误",
-    "DESCRIPTION": " bronze:插入 晕眩 。 NL 获得 [E] 。",
+    "DESCRIPTION": " bronze:插入 晕眩 。 NL 获得 !M! [E] 。",
     "EXTENDED_DESCRIPTION": [
       "错误",
       "混乱"
