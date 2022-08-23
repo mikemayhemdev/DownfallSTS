@@ -58,12 +58,9 @@ public class EncodedTrip extends AbstractBronzeCard {
     }
 
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.target = CardTarget.ALL_ENEMY;
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            this.initializeDescription();
-        }
+        this.target = CardTarget.ALL_ENEMY;
+        this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+        this.initializeDescription();
 
     }
 

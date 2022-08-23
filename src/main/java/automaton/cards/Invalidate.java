@@ -44,7 +44,5 @@ public class Invalidate extends AbstractBronzeCard {
 
     public void upp() {
         upgradeMagicNumber(1);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 }

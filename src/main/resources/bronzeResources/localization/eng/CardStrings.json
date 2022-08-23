@@ -663,6 +663,7 @@
   "bronze:EncodedBlind": {
     "NAME": "Blind",
     "DESCRIPTION": "Apply !M! Weak.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak to ALL enemies.",
     "EXTENDED_DESCRIPTION": [
       "blinding",
       "Blind"
@@ -671,6 +672,7 @@
   "bronze:EncodedTrip": {
     "NAME": "Trip",
     "DESCRIPTION": "Apply !M! Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable to ALL enemies.",
     "EXTENDED_DESCRIPTION": [
       "dirty",
       "Trip"
