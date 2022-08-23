@@ -21,9 +21,16 @@ public class TinkerersToolbox extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> easyCardList = new ArrayList<>();
-        easyCardList.add(new EasyModalChoiceCard(makeID("DevToolsDraw"), cardStrings.EXTENDED_DESCRIPTION[0], cardStrings.EXTENDED_DESCRIPTION[1], () -> atb(new DrawCardAction(3))));
-        easyCardList.add(new EasyModalChoiceCard(makeID("DevToolsEnergy"), cardStrings.EXTENDED_DESCRIPTION[2], cardStrings.EXTENDED_DESCRIPTION[3], () -> atb(new GainEnergyAction(2))));
-        easyCardList.add(new EasyModalChoiceCard(makeID("DevToolsHeal"), cardStrings.EXTENDED_DESCRIPTION[4], cardStrings.EXTENDED_DESCRIPTION[5], () -> applyToSelf(new RepairPower(p, 10))));
+        if (upgraded) {
+            easyCardList.add(new EasyModalChoiceCard(makeID("DevToolsDraw"), name, cardStrings.EXTENDED_DESCRIPTION[3], () -> atb(new DrawCardAction(4))));
+            easyCardList.add(new EasyModalChoiceCard(makeID("DevToolsEnergy"), name, cardStrings.EXTENDED_DESCRIPTION[5], () -> atb(new GainEnergyAction(3))));
+            easyCardList.add(new EasyModalChoiceCard(makeID("DevToolsHeal"), name, cardStrings.EXTENDED_DESCRIPTION[1], () -> applyToSelf(new RepairPower(p, 10))));
+        } else {
+            easyCardList.add(new EasyModalChoiceCard(makeID("DevToolsDraw"), name, cardStrings.EXTENDED_DESCRIPTION[2], () -> atb(new DrawCardAction(3))));
+            easyCardList.add(new EasyModalChoiceCard(makeID("DevToolsEnergy"), name, cardStrings.EXTENDED_DESCRIPTION[4], () -> atb(new GainEnergyAction(2))));
+            easyCardList.add(new EasyModalChoiceCard(makeID("DevToolsHeal"), name, cardStrings.EXTENDED_DESCRIPTION[0], () -> applyToSelf(new RepairPower(p, 8))));
+
+        }
         atb(new EasyModalChoiceAction(easyCardList));
     }
 
