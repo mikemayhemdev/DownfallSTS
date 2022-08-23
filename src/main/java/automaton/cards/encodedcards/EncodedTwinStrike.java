@@ -20,6 +20,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import downfall.util.CardIgnore;
+
+@CardIgnore
 public class EncodedTwinStrike extends AbstractBronzeCard {
     public static final String ID = "bronze:EncodedTwinStrike";
     private static final CardStrings cardStrings;

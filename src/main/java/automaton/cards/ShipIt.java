@@ -20,7 +20,7 @@ public class ShipIt extends AbstractBronzeCard {
     private static final int UPG_MAGIC = 1;
 
     public ShipIt() {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("ShipIt.png"));

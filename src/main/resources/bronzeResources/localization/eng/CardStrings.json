@@ -96,13 +96,9 @@
       "), then Exhaust them. NL Exhaust."
     ]
   },
-  "bronze:ChildClass": {
-    "NAME": "Invoke",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain [E] equal to the total cost of Encoded cards.",
-    "EXTENDED_DESCRIPTION": [
-      "invoked",
-      "Energy"
-    ]
+  "bronze:ChargeBattery": {
+    "NAME": "Charge Battery",
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E]."
   },
   "bronze:ChosenStrike": {
     "NAME": "Cultist Strike",
@@ -475,8 +471,8 @@
   },
   "bronze:Virus": {
     "NAME": "Virus",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL *Transform all cards in hand into *Minor *Beam.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL *Transform all cards in hand into *Minor *Beam+."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison. NL Exhaust up to 2 cards, then bronze:Encode a *Poison *Stab for each.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL NL Apply !M! Poison. Exhaust up to 2 cards, then bronze:Encode a *Poison *Stab+ for each."
   },
   "bronze:WhirlingStrike": {
     "NAME": "Piercing Shot",
@@ -766,6 +762,14 @@
     "EXTENDED_DESCRIPTION": [
       "twin",
       "Pincer"
+    ]
+  },
+  "bronze:EncodedPoisonStab": {
+    "NAME": "Poison Stab",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison.",
+    "EXTENDED_DESCRIPTION": [
+      "poisoned",
+      "Stab"
     ]
   }
 }

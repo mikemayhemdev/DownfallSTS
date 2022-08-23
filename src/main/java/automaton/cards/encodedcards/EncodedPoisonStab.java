@@ -6,31 +6,28 @@
 package automaton.cards.encodedcards;
 
 import automaton.cards.AbstractBronzeCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.unique.RitualDaggerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardColor;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardTarget;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
+import com.megacrit.cardcrawl.powers.PoisonPower;
 import downfall.util.CardIgnore;
 
 @CardIgnore
-public class EncodedRitualDagger extends AbstractBronzeCard {
-    public static final String ID = "bronze:EncodedRitualDagger";
+public class EncodedPoisonStab extends AbstractBronzeCard {
+    public static final String ID = "bronze:EncodedPoisonStab";
     private static final CardStrings cardStrings;
 
-    public EncodedRitualDagger() {
-        super("bronze:EncodedRitualDagger", cardStrings.NAME, "colorless/attack/ritual_dagger", 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.ENEMY);
-        this.misc = 15;
-        this.baseDamage = this.misc;
-        this.exhaust = true;
+    public EncodedPoisonStab() {
+        super("bronze:EncodedPoisonStab", cardStrings.NAME, "green/attack/poisoned_stab", 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.COMMON, CardTarget.ENEMY);
+        this.baseDamage = 6;
+        this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber;
     }
 
     @Override
@@ -39,7 +36,8 @@ public class EncodedRitualDagger extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
+        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        this.addToBot(new ApplyPowerAction(m, p, new PoisonPower(m, p, this.magicNumber), this.magicNumber));
     }
 
     public void applyPowers() {
@@ -50,17 +48,18 @@ public class EncodedRitualDagger extends AbstractBronzeCard {
 
     public void upgrade() {
         if (!this.upgraded) {
-            this.upgradeMagicNumber(2);
+            this.upgradeDamage(2);
+            this.upgradeMagicNumber(1);
             this.upgradeName();
         }
 
     }
 
     public AbstractCard makeCopy() {
-        return new EncodedRitualDagger();
+        return new EncodedPoisonStab();
     }
 
     static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings("bronze:EncodedRitualDagger");
+        cardStrings = CardCrawlGame.languagePack.getCardStrings("bronze:EncodedPoisonStab");
     }
 }

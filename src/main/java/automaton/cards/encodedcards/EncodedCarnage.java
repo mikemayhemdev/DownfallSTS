@@ -28,6 +28,9 @@ import com.megacrit.cardcrawl.vfx.combat.ViolentAttackEffect;
 import downfall.cardmods.EtherealMod;
 import downfall.cardmods.RetainCardMod;
 
+import downfall.util.CardIgnore;
+
+@CardIgnore
 public class EncodedCarnage extends AbstractBronzeCard {
     public static final String ID = "bronze:EncodedCarnage";
     private static final CardStrings cardStrings;

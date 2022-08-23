@@ -18,6 +18,9 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 
+import downfall.util.CardIgnore;
+
+@CardIgnore
 public class EncodedPanacea extends AbstractBronzeCard {
     public static final String ID = "bronze:EncodedPanacea";
     private static final CardStrings cardStrings;

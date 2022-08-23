@@ -19,6 +19,9 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 
+import downfall.util.CardIgnore;
+
+@CardIgnore
 public class EncodedDodgeAndRoll extends AbstractBronzeCard {
     public static final String ID = "bronze:EncodedDodgeandRoll";
     private static final CardStrings cardStrings;

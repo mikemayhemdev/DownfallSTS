@@ -19,6 +19,9 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 
+import downfall.util.CardIgnore;
+
+@CardIgnore
 public class EncodedDeadlyPoison extends AbstractBronzeCard {
     public static final String ID = "bronze:EncodedDeadlyPoison";
     private static final CardStrings cardStrings;

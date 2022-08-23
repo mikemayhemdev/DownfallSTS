@@ -21,6 +21,9 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.cardmods.RetainCardMod;
 
+import downfall.util.CardIgnore;
+
+@CardIgnore
 public class EncodedSafety extends AbstractBronzeCard {
     public static final String ID = "bronze:EncodedSafety";
     private static final CardStrings cardStrings;

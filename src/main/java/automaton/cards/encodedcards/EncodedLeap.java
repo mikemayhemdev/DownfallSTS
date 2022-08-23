@@ -17,6 +17,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import downfall.util.CardIgnore;
+
+@CardIgnore
 public class EncodedLeap extends AbstractBronzeCard {
     public static final String ID = "bronze:EncodedLeap";
     private static final CardStrings cardStrings;

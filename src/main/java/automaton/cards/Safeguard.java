@@ -21,7 +21,7 @@ public class Safeguard extends AbstractBronzeCard {
     private static final int UPG_MAGIC = -1;
 
     public Safeguard() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         cardsToPreview = new EncodedSafety();
 

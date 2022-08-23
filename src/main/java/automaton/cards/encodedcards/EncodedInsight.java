@@ -19,6 +19,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.LightBulbEffect;
 import downfall.cardmods.RetainCardMod;
 
+import downfall.util.CardIgnore;
+
+@CardIgnore
 public class EncodedInsight extends AbstractBronzeCard {
     public static final String ID = "bronze:EncodedInsight";
     private static final CardStrings cardStrings;

@@ -21,6 +21,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import java.util.Iterator;
 
+import downfall.util.CardIgnore;
+
+@CardIgnore
 public class EncodedBlind extends AbstractBronzeCard {
     public static final String ID = "bronze:EncodedBlind";
     private static final CardStrings cardStrings;

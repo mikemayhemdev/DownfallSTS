@@ -20,6 +20,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;
 import downfall.powers.FadedPower;
 
+import downfall.util.CardIgnore;
+
+@CardIgnore
 public class EncodedBlur extends AbstractBronzeCard {
     public static final String ID = "bronze:EncodedBlur";
     private static final CardStrings cardStrings;

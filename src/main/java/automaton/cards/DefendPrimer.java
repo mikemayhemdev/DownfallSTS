@@ -4,6 +4,9 @@ import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import downfall.util.CardIgnore;
+
+@CardIgnore
 public class DefendPrimer extends AbstractBronzeCard {
 
     public final static String ID = makeID("DefendPrimer");

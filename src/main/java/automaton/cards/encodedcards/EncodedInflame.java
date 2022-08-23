@@ -20,6 +20,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 
+import downfall.util.CardIgnore;
+
+@CardIgnore
 public class EncodedInflame extends AbstractBronzeCard {
     public static final String ID = "bronze:EncodedInflame";
     private static final CardStrings cardStrings;

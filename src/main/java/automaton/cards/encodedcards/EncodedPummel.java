@@ -20,6 +20,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import downfall.util.CardIgnore;
+
+@CardIgnore
 public class EncodedPummel extends AbstractBronzeCard {
     public static final String ID = "bronze:EncodedPummel";
     private static final CardStrings cardStrings;
@@ -48,8 +51,6 @@ public class EncodedPummel extends AbstractBronzeCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeMagicNumber(1);
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            this.initializeDescription();
         }
 
     }

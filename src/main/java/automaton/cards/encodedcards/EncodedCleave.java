@@ -21,6 +21,9 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
+import downfall.util.CardIgnore;
+
+@CardIgnore
 public class EncodedCleave extends AbstractBronzeCard {
     public static final String ID = "bronze:EncodedCleave";
     private static final CardStrings cardStrings;

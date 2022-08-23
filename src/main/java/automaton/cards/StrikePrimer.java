@@ -11,6 +11,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.vfx.SmallLaserEffectColored;
 
+import downfall.util.CardIgnore;
+
+@CardIgnore
 public class StrikePrimer extends AbstractBronzeCard {
 
     public final static String ID = makeID("StrikePrimer");

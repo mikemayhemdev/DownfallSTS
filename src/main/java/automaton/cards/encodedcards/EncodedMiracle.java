@@ -25,6 +25,9 @@ import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.MiracleEffect;
 import downfall.cardmods.RetainCardMod;
 
+import downfall.util.CardIgnore;
+
+@CardIgnore
 public class EncodedMiracle extends AbstractBronzeCard {
     public static final String ID = "bronze:EncodedMiracle";
     private static final CardStrings cardStrings;

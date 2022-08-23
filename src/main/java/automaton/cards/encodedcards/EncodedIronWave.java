@@ -23,6 +23,9 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.IronWaveEffect;
 
+import downfall.util.CardIgnore;
+
+@CardIgnore
 public class EncodedIronWave extends AbstractBronzeCard {
     public static final String ID = "bronze:EncodedIronWave";
     private static final CardStrings cardStrings;
