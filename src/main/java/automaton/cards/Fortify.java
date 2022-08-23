@@ -1,6 +1,9 @@
-/*
+
 package automaton.cards;
 
+import automaton.AutomatonMod;
+import automaton.cards.encodedcards.EncodedEntrench;
+import automaton.cards.encodedcards.EncodedIronWave;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -20,18 +23,14 @@ public class Fortify extends AbstractBronzeCard {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = 2;
-        thisEncodes();
+        cardsToPreview = new EncodedEntrench();
+        tags.add(AutomatonMod.ENCODES);
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-    }
-
-    @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        if (forGameplay) {
-            applyToSelf(new DexterityPower(AbstractDungeon.player, magicNumber));
-        }
+        applyToSelf(new DexterityPower(AbstractDungeon.player, magicNumber));
+        addCardToFunction(cardsToPreview.makeStatEquivalentCopy());
     }
 
     public void upp() {
@@ -39,4 +38,3 @@ public class Fortify extends AbstractBronzeCard {
     }
 }
 
- */

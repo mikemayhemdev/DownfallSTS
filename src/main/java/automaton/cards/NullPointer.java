@@ -22,14 +22,14 @@ public class NullPointer extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 13;
+    private static final int DAMAGE = 20;
     private static final int UPG_DAMAGE = 5;
 
-    private static final int BLOCK = 13;
+    private static final int BLOCK = 20;
     private static final int UPG_BLOCK = 5;
 
     public NullPointer() {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("NullPointer.png"));

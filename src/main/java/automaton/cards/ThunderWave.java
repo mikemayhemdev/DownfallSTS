@@ -1,3 +1,4 @@
+/*
 package automaton.cards;
 
 import automaton.FunctionHelper;
@@ -36,4 +37,6 @@ public class ThunderWave extends AbstractBronzeCard {
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
     }
+
 }
+ */

@@ -18,7 +18,7 @@
   },
   "bronze:Assembly": {
     "NAME": "Reassemble",
-    "DESCRIPTION": "Exhume !M! Function cards, chosen at random. NL Exhaust."
+    "DESCRIPTION": "expansioncontent:Exhume !M! Function cards, chosen at random. Reduce their cost to 0. NL Exhaust."
   },
   "bronze:Backtrace": {
     "NAME": "Backtrace",
@@ -175,8 +175,8 @@
   },
   "bronze:FineTuning": {
     "NAME": "Fine Tuning",
-    "DESCRIPTION": "Increase all numbers on Encoded cards by !M! except cost. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Increase all numbers on Encoded cards by !M! except cost. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Increase all numbers on Encoded cards by !M!. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Increase all numbers on Encoded cards by !M!."
   },
   "bronze:Flail": {
     "NAME": "Flail",
@@ -206,16 +206,12 @@
   },
   "bronze:FormatEncoded": {
     "NAME": "Fragment",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Encode *Iron *Wave.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Encode *Iron *Wave+."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Encode an *Iron *Wave.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Encode an *Iron *Wave+."
   },
   "bronze:Fortify": {
     "NAME": "Fortify",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Gain !M! Dexterity.",
-    "EXTENDED_DESCRIPTION": [
-      "solid",
-      "Fortress"
-    ]
+    "DESCRIPTION": "Gain !M! Dexterity. NL bronze:Encode an *Entrench. NL Exhaust."
   },
   "bronze:Frontload": {
     "NAME": "Frontload",
@@ -355,8 +351,8 @@
   },
   "bronze:Repair": {
     "NAME": "Repair",
-    "DESCRIPTION": "Choose a Function card to Exhume. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a Function card to Exhume.",
+    "DESCRIPTION": "Choose a Function card to expansioncontent:Exhume. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a Function card to expansioncontent:Exhume.",
     "EXTENDED_DESCRIPTION": [
       "Choose a Function card to return to your hand.",
       "Choose ",
@@ -414,6 +410,10 @@
     "NAME": "Spaghetti Code",
     "DESCRIPTION": "bronze:Encode 3 cards at random: *Safety, *Twin *Strike, *Cleave, *Miracle, or *Insight."
   },
+  "bronze:Storm": {
+    "NAME": "The Storm",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL If X is 3 or more, bronze:Encode an *Eye *of *the *Storm, then Exhaust."
+  },
   "bronze:Strike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage.",
@@ -424,8 +424,8 @@
   },
   "bronze:Terminator": {
     "NAME": "Terminator",
-    "DESCRIPTION": "bronze:Encode *Repeat. NL This can only be used if *Repeat will be the final card of a new Function. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "bronze:Encode *Repeat. NL This can only be used if *Repeat will be the final card of a new Function."
+    "DESCRIPTION": "bronze:Encode a *Repeat. NL This can only be used if *Repeat will be the final card of a new Function. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "bronze:Encode a *Repeat. NL This can only be used if *Repeat will be the final card of a new Function."
   },
   "bronze:TerminatorRepeatCard": {
     "NAME": "Repeat",
@@ -467,7 +467,7 @@
   },
   "bronze:Verify": {
     "NAME": "Sentient Form",
-    "DESCRIPTION": "Whenever you create a Function, increase all numbers on it by !M! except for cost."
+    "DESCRIPTION": "When you bronze:Encode a card, increase all numbers on it by !M!."
   },
   "bronze:Virus": {
     "NAME": "Virus",
@@ -770,6 +770,22 @@
     "EXTENDED_DESCRIPTION": [
       "poisoned",
       "Stab"
+    ]
+  },
+  "bronze:EncodedEntrench": {
+    "NAME": "Entrench",
+    "DESCRIPTION": "Double your Block.",
+    "EXTENDED_DESCRIPTION": [
+      "fortified",
+      "Trench"
+    ]
+  },
+  "bronze:EncodedEyeOfTheStorm": {
+    "NAME": "Eye of the Storm",
+    "DESCRIPTION": "Gain [E] up to your maximum. \u202F NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "stormy",
+      "Eye"
     ]
   }
 }

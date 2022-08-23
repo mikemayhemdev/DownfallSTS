@@ -83,6 +83,20 @@ public abstract class AbstractBronzeCard extends CustomCard {
         initializeDescription();
     }
 
+    //Constructor exclusively for encoded cards within this own mode
+    public AbstractBronzeCard(final String id, final int cost, final String art, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
+        super(id, "ERROR", art,
+                cost, "ERROR", type, color, rarity, target);
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
+        name = NAME = cardStrings.NAME;
+        originalName = NAME;
+        rawDescription = DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
+        initializeTitle();
+        initializeDescription();
+    }
+
     //Constructor for fake encoded copies
     public AbstractBronzeCard(final String id, final String name2, final String art, final int cost, final String description, final CardType type, final CardColor color, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),

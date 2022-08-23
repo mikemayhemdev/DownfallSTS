@@ -17,6 +17,7 @@ public class CastToDouble extends AbstractBronzeCard {
 
     public CastToDouble() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -24,7 +25,6 @@ public class CastToDouble extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeName();
         upgradeMagicNumber(1);
         rawDescription = cardStrings.UPGRADE_DESCRIPTION;
         initializeDescription();

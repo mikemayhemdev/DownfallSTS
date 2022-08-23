@@ -1,18 +1,15 @@
 package automaton.cards;
 
-import automaton.AutomatonMod;
-import automaton.actions.CleanseAction;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
+import basemod.helpers.CardModifierManager;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.cardmods.EtherealMod;
 
 import java.util.ArrayList;
-import java.util.stream.Collectors;
+import java.util.Comparator;
 
 public class WildBeam extends AbstractBronzeCard {
 
@@ -31,21 +28,19 @@ public class WildBeam extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.LIGHTNING);
-        atb(new CleanseAction(magicNumber));
-        /*  Exhaust random status in draw pile code below
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                ArrayList<AbstractCard> valid = new ArrayList<>();
-                valid.addAll(AbstractDungeon.player.drawPile.group.stream().filter(q -> q.type == CardType.STATUS).collect(Collectors.toList()));
-                if (!valid.isEmpty()) {
-                    att(new ExhaustSpecificCardAction(valid.get(AbstractDungeon.cardRandomRng.random(valid.size()-1)), AbstractDungeon.player.drawPile));
-                }
-            }
-        });
 
-         */
+        ArrayList<AbstractCard> cardsList = new ArrayList<>();
+        for (AbstractCard c:p.discardPile.group
+             ) {if (c.type==CardType.STATUS){
+                 cardsList.add(c);
+        }
+
+        }
+        cardsList.sort(Comparator.comparing(o -> o.name));
+        atb(new SelectCardsAction(cardsList, 1, EXTENDED_DESCRIPTION[0], (cards) -> {
+                p.drawPile.moveToHand(cards.get(0));
+                CardModifierManager.addModifier(cards.get(0), new EtherealMod());
+        }));
     }
 
     public void upp() {

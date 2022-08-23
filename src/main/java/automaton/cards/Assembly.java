@@ -20,10 +20,10 @@ public class Assembly extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, rare
 
     private static final int MAGIC = 3;
-    private static final int UPG_MAGIC = 1;
+    private static final int UPG_MAGIC = 2;
 
     public Assembly() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
         AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("Assembly.png"));
@@ -41,6 +41,7 @@ public class Assembly extends AbstractBronzeCard {
                         AbstractCard c = valid.get(AbstractDungeon.cardRandomRng.random(0,valid.size()-1));
                         p.exhaustPile.removeCard(c);
                         p.hand.addToBottom(c);
+                        c.freeToPlay();
                     }
                 }
             });
