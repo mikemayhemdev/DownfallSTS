@@ -2,6 +2,8 @@ package automaton.cards;
 
 import automaton.AutomatonMod;
 import automaton.actions.EasyModalChoiceAction;
+import automaton.cards.encodedcards.EncodedBlind;
+import automaton.cards.encodedcards.EncodedTrip;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.colorless.Blind;
 import com.megacrit.cardcrawl.cards.colorless.Trip;
@@ -27,13 +29,13 @@ public class Invalidate extends AbstractBronzeCard {
         ArrayList<AbstractCard> easyCardList = new ArrayList<>();
         easyCardList.add(new EasyModalChoiceCard(makeID("InvalidateWeak"), cardStrings.EXTENDED_DESCRIPTION[0], cardStrings.EXTENDED_DESCRIPTION[1] + magicNumber + cardStrings.EXTENDED_DESCRIPTION[2] + (upgraded ? "+" : "") + LocalizedStrings.PERIOD, () -> {
             applyToEnemy(m, new WeakPower(m, magicNumber, false));
-            AbstractCard q = new Trip();
+            AbstractCard q = new EncodedTrip();
             if (upgraded) q.upgrade();
             addCardToFunction(q);
         }));
         easyCardList.add(new EasyModalChoiceCard(makeID("InvalidateVuln"), cardStrings.EXTENDED_DESCRIPTION[3], cardStrings.EXTENDED_DESCRIPTION[4] + magicNumber + cardStrings.EXTENDED_DESCRIPTION[5] + (upgraded ? "+" : "")+ LocalizedStrings.PERIOD, () -> {
             applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
-            AbstractCard q = new Blind();
+            AbstractCard q = new EncodedBlind();
             if (upgraded) q.upgrade();
             addCardToFunction(q);
         }));
