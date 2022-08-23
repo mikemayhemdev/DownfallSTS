@@ -18,6 +18,7 @@ public class Decompile extends AbstractBronzeCard {
     public Decompile() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
+        selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -374,7 +374,7 @@
   "bronze:Safeguard": {
     "NAME": "Safeguard",
     "DESCRIPTION": "Gain !B! Block. NL bronze:Encode a *Safety.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL bronze:Encode a *Safety_."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL bronze:Encode a *Safety+."
   },
   "bronze:Separator": {
     "NAME": "Separator",
@@ -532,8 +532,8 @@
   },
   "bronze:Decompile": {
     "NAME": "Decompile",
-    "DESCRIPTION": "Exhaust all Encoded cards. Gain [E] and draw a card for each card Exhausted. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Exhaust all Encoded cards. Gain [E] and draw a card for each card Exhausted. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Exhaust all Encoded cards. Gain [E] and draw a card for each card Exhausted. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Exhaust all Encoded cards. Gain [E] and draw a card for each card Exhausted."
   },
   "bronze:DonuBeam": {
     "NAME": "Proto-Beam",
