@@ -14,7 +14,7 @@
   },
   "Slimebound:ProtectTheBoss": {
     "NAME": "保护老大",
-    "DESCRIPTION": "阻挡下次受到的攻击伤害，变为 slimeboundmod:吸收 。",
+    "DESCRIPTION": "下次受到攻击伤害时， NL 变为 slimeboundmod:吸收 。",
     "UPGRADE_DESCRIPTION": "阻挡下2次受到的来自敌人的攻击伤害，变为 slimeboundmod:吸收 。"
   },
   "Slimebound:SamplingLick": {
@@ -24,7 +24,7 @@
   },
   "Slimebound:Replication": {
     "NAME": "复制",
-    "DESCRIPTION": "选择一张手牌。 NL 抽牌堆顶部获得其复制品。 NL 消耗 。",
+    "DESCRIPTION": "选择一张手牌。 NL 将其复制至抽牌堆顶部。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "选择一张手牌。 NL 获得其复制品。 NL 消耗 。",
 	"EXTENDED_DESCRIPTION": [
       "选择一张牌复制到手牌。",
@@ -33,8 +33,8 @@
   },
   "Slimebound:Overexert": {
     "NAME": "超负荷",
-    "DESCRIPTION": "获得 4 点 slimeboundmod:潜力 。 NL !M! 回合后 slimeboundmod:吸收 所有史莱姆。",
-    "UPGRADE_DESCRIPTION": "获得 4 点 slimeboundmod:潜力 。 NL slimeboundmod:命令 两次。 NL !M! 回合后 slimeboundmod:吸收 所有史莱姆。"
+    "DESCRIPTION": "获得 4 点 slimeboundmod:潜力 。 NL !M! 回合后， NL slimeboundmod:吸收 所有史莱姆。",
+    "UPGRADE_DESCRIPTION": "获得 4 点 slimeboundmod:潜力 。 NL slimeboundmod:命令 两次。 NL !M! 回合后， NL slimeboundmod:吸收 所有史莱姆。"
   },
   "Slimebound:Split": {
     "NAME": "分裂",
@@ -66,7 +66,7 @@
   },
   "Slimebound:SlimeBrawl": {
     "NAME": "史莱姆乱战",
-    "DESCRIPTION": "每有一只史莱姆，打出抽牌堆顶部的一张牌。 NL 消耗 。"
+    "DESCRIPTION": "每有一只史莱姆， NL 打出抽牌堆顶部的牌。 NL 消耗 。"
   },
   "Slimebound:SpikyOuterGoop": {
     "NAME": "黏液装甲",
@@ -116,16 +116,16 @@
   },
   "Slimebound:GrowthPunch": {
     "NAME": "成长拳",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL slimeboundmod:吞食黏液 ：本牌本场战斗数值提高 !M! 点。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL slimeboundmod:吞食黏液 ： NL 本场战斗数值加 !M! 。"
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "查找策略",
-    "DESCRIPTION": "随机获得4张 slimeboundmod:冲撞 牌。 NL 其耗能本场战斗减1。 NL 消耗 。"
+    "DESCRIPTION": "随机获得4张 slimeboundmod:冲撞 牌。 NL 本场战斗其耗能减1。 NL 消耗 。"
   },
   "Slimebound:Recycling": {
     "NAME": "循环再生",
-    "DESCRIPTION": "回合开始时，随机 expansioncontent:发掘 一张 slimeboundmod:舔舔 系牌。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时，随机 expansioncontent:发掘 一张 slimeboundmod:舔舔 系牌。"
+    "DESCRIPTION": "回合开始时， NL 随机 expansioncontent:发掘 一张 slimeboundmod:舔舔 系牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时， NL 随机 expansioncontent:发掘 一张 slimeboundmod:舔舔 系牌。"
   },
   "Slimebound:Repurpose": {
     "NAME": "重新考虑",
@@ -138,8 +138,8 @@
   },
   "Slimebound:MassRepurpose": {
     "NAME": "回炉重造",
-    "DESCRIPTION": "slimeboundmod:吸收 所有史莱姆。 NL slimeboundmod:分裂 同等数量的 slimeboundmod:专家史莱姆 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:吸收 所有史莱姆。 NL slimeboundmod:分裂 同等数量的 slimeboundmod:专家史莱姆 并 slimeboundmod:命令 。 NL 消耗 。"
+    "DESCRIPTION": "slimeboundmod:吸收 所有史莱姆。 NL slimeboundmod:分裂 等量 slimeboundmod:专家史莱姆 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:吸收 所有史莱姆。 NL slimeboundmod:分裂 等量 slimeboundmod:专家史莱姆 。 NL slimeboundmod:命令 。 NL 消耗 。"
   },
   "Slimebound:Lick": {
     "NAME": "舔舔",
@@ -198,7 +198,7 @@
   },
   "Slimebound:Prepare": {
     "NAME": "伺机待发",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下一回合获得 [E] [E] 并抽 !M! 张牌。 NL 消耗 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合， NL 获得 [E] [E] 并抽 !M! 张牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "下一回合获得 [E] [E] 并抽 !M! 张牌。 至多 保留 !M! 张牌。 NL 消耗 。"
   },
   "Slimebound:Grow": {
@@ -212,11 +212,11 @@
   },
   "Slimebound:FinishingTackle": {
     "NAME": "开幕冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:吞食黏液 ：给予 !M! 层 易伤 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:吞食黏液 ： NL 给予 !M! 层 易伤 。"
   },
   "Slimebound:LivingWall": {
     "NAME": "活体墙壁",
-    "DESCRIPTION": "获得 !B! 格挡 。 NL 本回合被敌人攻击时给予其 !slime! 层 slimeboundmod:黏液 。"
+    "DESCRIPTION": "获得 !B! 格挡 。 NL 本回合被攻击时， NL 给予对方 !slime! 层 slimeboundmod:黏液 。"
   },
   "Slimebound:ComboTackle": {
     "NAME": "长矛冲撞",
@@ -228,8 +228,8 @@
   },
   "Slimebound:GoopTackle": {
     "NAME": "连续冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机获得1张 slimeboundmod:冲撞 牌。 NL 其耗能本回合为0。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机获得1张 slimeboundmod:冲撞 牌+。 NL 其耗能本回合为0。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机获得1张 slimeboundmod:冲撞 牌。 NL 本回合其耗能为0。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 受到 !SlimeboundSelfharm! 点伤害。 NL 随机获得1张 slimeboundmod:冲撞 牌+。 NL 本回合其耗能为0。"
   },
   "Slimebound:CorrosiveSpit": {
     "NAME": "腐蚀喷吐",
@@ -259,7 +259,7 @@
   },
   "Slimebound:MassFeed": {
     "NAME": "同质化",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 斩杀 时，获得 !M! 点最大生命。 NL 消耗 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 斩杀 时， NL 获得 !M! 点最大生命。 NL 消耗 。"
   },
   "Slimebound:ViciousTackle": {
     "NAME": "狂暴冲撞",
@@ -268,8 +268,8 @@
   },
   "Slimebound:LeechEnergy": {
     "NAME": "吸取能量",
-    "DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ：获得 [E] 并抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ：获得 [E] 并抽 !M! 张牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ： NL 获得 [E] 并抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 slimeboundmod:吞食黏液 ： NL 获得 [E] 并抽 !M! 张牌。"
   },
   "Slimebound:LeechLife": {
     "NAME": "吸取生命",
@@ -277,7 +277,7 @@
   },
   "Slimebound:Equalize": {
     "NAME": "均质化",
-    "DESCRIPTION": "造成 !D! 点伤害并回复 !M! 点生命。 NL slimeboundmod:吞食黏液 ：再打出一次。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 回复 !M! 点生命。 NL slimeboundmod:吞食黏液 ：再打出一次。 NL 消耗 。"
   },
   "Slimebound:DisruptingSlam": {
     "NAME": "宴后甜点",
@@ -288,7 +288,7 @@
     "DESCRIPTION": "下回合： NL 获得 [E] [E] [E] 。 NL 获得 !M! 点 力量 。 NL 获得 *史莱姆猛击 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "下回合： NL 获得 [E] [E] [E] [E] 。 NL 获得 !M! 点 力量 。 NL 获得 *史莱姆猛击+ 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "~Slime...~ NL #r~CRUSH!!!~" // 551 string in monsters.json
+      "~史莱姆...~ NL #r~猛击!!!~"
     ]
   },
   "Slimebound:SlimeCrush": {
@@ -336,7 +336,7 @@
   },
   "Slimebound:BestDefense": {
     "NAME": "鲁莽",
-    "DESCRIPTION": "slimeboundmod:冲撞 牌： NL 额外造成 !M! 点伤害。 NL 额外受到1点伤害。"
+    "DESCRIPTION": "slimeboundmod:冲撞 牌： NL 额外造成 !M! 点伤害。 NL 使你额外受到1点伤害。"
   },
   "Slimebound:Darklings": {
     "NAME": "黝黑二人组",
@@ -349,8 +349,8 @@
   },
   "Slimebound:OneTwoCombo": {
     "NAME": "一二连击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:分裂 时，将本牌从弃牌堆返回手牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:命令 。 NL slimeboundmod:分裂 时，将本牌从弃牌堆返回手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:分裂 时， NL 本牌从弃牌堆返回手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:命令 。 NL slimeboundmod:分裂 时， NL 本牌从弃牌堆返回手牌。"
   },
   "Slimebound:ForwardTackle": {
     "NAME": "进军冲撞",

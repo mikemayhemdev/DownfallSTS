@@ -63,7 +63,7 @@
   "hexamod:EnhancePower": {
     "NAME": "热烈",
     "DESCRIPTIONS": [
-      "提高鬼火上点燃效果提供的 #y伤害 、 #y灼魂 和 #y格挡 获得 #b",
+      "提高 #y鬼火 点燃效果提供的伤害 、 #y灼魂 与 #y格挡 #b",
       " 点。"
     ]
   },
@@ -185,7 +185,7 @@
   "hexamod:TimeStopPower": {
     "NAME": "末日来临",
     "DESCRIPTIONS": [
-      "你的回合结束时，立刻开始额外的一回合。 NL 保留 #y格挡和 #y能量 。"
+      "你的回合结束时，立刻开始额外的一回合，并保留 #y格挡 与 #y能量 。"
     ]
   },
   "hexamod:VolcanoVisagePower": {
