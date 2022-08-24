@@ -19,7 +19,7 @@
   },
   "Gremlin:Bellow": {
     "NAME": "怒吼",
-    "DESCRIPTION": " 虚无 。 NL 每有一名不攻击的敌人，获得 !M! 点 力量 。 NL 消耗 。"
+    "DESCRIPTION": " 虚无 。 NL 每有不攻击的敌人， NL 获得 !M! 点 力量 。 NL 消耗 。"
   },
   "Gremlin:BrokenShin": {
     "NAME": "破胫",
