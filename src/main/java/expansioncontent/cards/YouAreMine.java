@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
 import expansioncontent.expansionContentMod;
 
+import static expansioncontent.expansionContentMod.loadJokeCardImage;
+
 public class YouAreMine extends AbstractExpansionCard {
     public final static String ID = makeID("YouAreMine");
 
@@ -28,6 +30,7 @@ public class YouAreMine extends AbstractExpansionCard {
 
         baseMagicNumber = magicNumber = MAGIC;
         this.exhaust = true;
+        loadJokeCardImage(this, "YouAreMine.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

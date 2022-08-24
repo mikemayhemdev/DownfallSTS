@@ -15,6 +15,8 @@ import guardian.GuardianMod;
 
 import java.util.ArrayList;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class PackageShapes extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("PackageShapes");
     public static final String NAME;
@@ -66,6 +68,7 @@ public class PackageShapes extends AbstractGuardianCard {
             prev2.upgrade();
             prev3.upgrade();
         }
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("PackageShapes.png"));
     }
 
     @Override

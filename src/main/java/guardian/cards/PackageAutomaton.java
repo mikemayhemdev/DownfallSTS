@@ -14,6 +14,8 @@ import guardian.GuardianMod;
 
 import java.util.ArrayList;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class PackageAutomaton extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("PackageAutomaton");
     public static final String NAME;
@@ -66,6 +68,7 @@ public class PackageAutomaton extends AbstractGuardianCard {
             prev2.upgrade();
             prev3.upgrade();
         }
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("PackageAutomaton.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

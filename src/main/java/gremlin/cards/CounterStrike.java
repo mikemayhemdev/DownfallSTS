@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import gremlin.actions.CounterStrikeAction;
 
 import static gremlin.GremlinMod.SHIELD_GREMLIN;
@@ -41,6 +42,7 @@ public class CounterStrike extends AbstractGremlinCard {
         this.cardsToPreview = new Ward();
         this.tags.add(SHIELD_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "CounterStrike.png");
     }
 
     @Override

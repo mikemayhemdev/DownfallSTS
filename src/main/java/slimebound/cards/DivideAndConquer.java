@@ -56,6 +56,7 @@ public class DivideAndConquer extends AbstractSlimeboundCard {
         this.exhaust = true;
         this.isMultiDamage = true;
         baseDamage = 10;
+        SlimeboundMod.loadJokeCardImage(this, "DivideAndConquer.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
