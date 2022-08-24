@@ -289,7 +289,7 @@
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "Яркий ритуал",
-    "DESCRIPTION": "Вы получаете [E] и берёте карту за каждый hexamod:Зажжёный Огонёк, затем hexamod:Тушит их. NL Сжигается."
+    "DESCRIPTION": "Вы получаете [E] и берёте карту за каждый hexamod:Зажжёный Огонёк, затем hexamod:Тушите их. NL Сжигается."
   },
   "hexamod:SpectralSpark": {
     "NAME": "Призрачная искра",
