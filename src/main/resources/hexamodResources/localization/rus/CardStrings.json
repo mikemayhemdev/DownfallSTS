@@ -173,7 +173,7 @@
   "hexamod:HexaLevel": {
     "NAME": "Адский облик",
     "DESCRIPTION": "Даёт !M! hexamod:Интенсивности в начале каждого вашего хода.",
-    "UPGRADE_DESCRIPTION": "Начальная. NL Даёт !M! hexamod:Интенсивности в начале каждого вашего хода."
+    "UPGRADE_DESCRIPTION": "Даёт !M! hexamod:Интенсивности. NL Даёт !M! hexamod:Интенсивности в начале каждого вашего хода."
   },
   "hexamod:Incineration": {
     "NAME": "Испепелить",

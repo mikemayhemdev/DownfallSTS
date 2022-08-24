@@ -173,7 +173,7 @@
   "hexamod:HexaLevel": {
     "NAME": "지옥의 형상",
     "DESCRIPTION": "내 턴 시작 시 hexamod:극열을 !M! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 내 턴 시작 시 hexamod:극열을 !M! 얻습니다."
+    "UPGRADE_DESCRIPTION": "hexamod:극열을 !M! 얻습니다. NL 내 턴 시작 시 hexamod:극열을 !M! 얻습니다."
   },
   "hexamod:Incineration": {
     "NAME": "소각",
