@@ -260,8 +260,8 @@
   },
   "Slimebound:Prepare": {
     "NAME": "準備",
-    "DESCRIPTION": "!B! ブロック を得る。 NL 次のターン、 [E] [E] を得て、カードを !M! 枚引く。 NL 廃棄 。",
-    "UPGRADE_DESCRIPTION": "次のターン、 [E] [E] を得て、カードを !M! 枚引く。 NL !M! 枚までのカードを保留する。 廃棄 。"
+    "DESCRIPTION": "!B! ブロック を得る。 NL 次のターン、 [E] を得て、カードを !M! 枚引く。 NL 廃棄 。",
+    "UPGRADE_DESCRIPTION": "次のターン、 [E] を得て、カードを !M! 枚引く。 NL !M! 枚までのカードを保留する。 廃棄 。"
   },
   "Slimebound:Grow": {
     "NAME": "成長",

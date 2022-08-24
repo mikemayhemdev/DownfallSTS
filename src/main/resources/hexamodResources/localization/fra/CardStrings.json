@@ -55,7 +55,7 @@
   "hexamod:HexaLevel": {
     "NAME": "Forme infernale",
     "DESCRIPTION": "Au début de votre tour, gagnez !M! hexamod:d'Intensité.",
-    "UPGRADE_DESCRIPTION": "Inné. NL Au début de votre tour, gagnez !M! hexamod:d'Intensité."
+    "UPGRADE_DESCRIPTION": "Gagnez !M! hexamod:d'Intensité. NL Au début de votre tour, gagnez !M! hexamod:d'Intensité."
   },
   "hexamod:UnlimitedPower": {
     "NAME": "Pouvoir illimité",
