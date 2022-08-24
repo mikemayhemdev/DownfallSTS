@@ -55,7 +55,7 @@
   "hexamod:HexaLevel": {
     "NAME": "地狱形态",
     "DESCRIPTION": "回合开始时， NL 获得 !M! 点 hexamod:热烈 。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 点 hexamod:热烈 。 NL 回合开始时获得 !M! 点 hexamod:热烈 。"
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 hexamod:热烈 。 NL 回合开始时， NL 获得 !M! 点 hexamod:热烈 。"
   },
   "hexamod:UnlimitedPower": {
     "NAME": "无限潜力",
