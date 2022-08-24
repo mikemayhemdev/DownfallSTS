@@ -235,7 +235,7 @@
   },
   "sneckomod:DangerNoodle": {
     "NAME": "贪吃蛇",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 所有 sneckomod:异色 手牌， NL 每消耗一张再造成一次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 所有 sneckomod:异色 手牌， NL 每 消耗 一张再造成一次。"
   },
   "sneckomod:SerpentIdol": {
     "NAME": "蛇神像",
