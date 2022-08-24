@@ -18,6 +18,8 @@ import guardian.patches.AbstractCardEnum;
 
 import java.util.ArrayList;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class CompilePackage extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("CompilePackage");
     public static final String NAME;
@@ -63,6 +65,7 @@ public class CompilePackage extends AbstractGuardianCard {
         cardsList.add(new PackageDonuDeca());
         cardsList.add(new PackageAutomaton());
 
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("CompilePackage.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

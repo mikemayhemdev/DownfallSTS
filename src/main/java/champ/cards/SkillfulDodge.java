@@ -6,6 +6,8 @@ import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class SkillfulDodge extends AbstractChampCard {
 
     public final static String ID = makeID("SkillfulDodge");
@@ -18,6 +20,7 @@ public class SkillfulDodge extends AbstractChampCard {
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
         postInit();
+        loadJokeCardImage(this, "SkillfulDodge.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

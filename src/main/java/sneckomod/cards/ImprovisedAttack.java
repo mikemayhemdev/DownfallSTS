@@ -15,6 +15,7 @@ public class ImprovisedAttack extends AbstractSneckoCard {
     public ImprovisedAttack() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 9;
+        SneckoMod.loadJokeCardImage(this, "ImprovisedAttack.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

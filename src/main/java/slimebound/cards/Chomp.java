@@ -57,7 +57,7 @@ public class Chomp extends AbstractSlimeboundCard {
 
         this.magicNumber = this.baseMagicNumber = 3;
 
-
+        SlimeboundMod.loadJokeCardImage(this, "Chomp.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

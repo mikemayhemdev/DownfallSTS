@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import theHexaghost.powers.GhostFlameBarrierPower;
 import theHexaghost.vfx.SpookyFlameBarrier;
 
@@ -23,6 +24,7 @@ public class GhostflameBarrier extends AbstractHexaCard {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         baseBurn = burn = MAGIC;
+        HexaMod.loadJokeCardImage(this, "GhostflameBarrier.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
