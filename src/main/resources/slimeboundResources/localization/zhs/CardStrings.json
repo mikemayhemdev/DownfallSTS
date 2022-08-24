@@ -185,7 +185,7 @@
     "DESCRIPTION": "给予 slimeboundmod:黏液 时， NL 额外给予 !M! 层 。"
   },
   "Slimebound:FirmFortitude": {
-    "NAME": "清算",
+    "NAME": "软化",
     "DESCRIPTION": "力量 小于0时 不能被打出 。 NL 失去 2 点 力量 。 NL 获得 !M! 点 slimeboundmod:潜力 。"
   },
   "Slimebound:WasteNot": {
