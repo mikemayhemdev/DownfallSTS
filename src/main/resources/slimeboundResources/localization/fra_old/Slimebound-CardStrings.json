@@ -303,8 +303,8 @@
   },
   "Slimebound:Prepare": {
     "NAME": "Preparation",
-    "DESCRIPTION": "A votre prochain tour, gagnez [E] [E] et piochez !M! cartes. NL Epuisement.",
-    "UPGRADE_DESCRIPTION": "A votre prochain tour, gagnez [E] [E] et piochez !M! cards. NL Conservez !M! carte ce tour. Epuisement."
+    "DESCRIPTION": "A votre prochain tour, gagnez [E] et piochez !M! cartes. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "A votre prochain tour, gagnez [E] et piochez !M! cards. NL Conservez !M! carte ce tour. Epuisement."
   },
   "Slimebound:Grow": {
     "NAME": "Grandir",
