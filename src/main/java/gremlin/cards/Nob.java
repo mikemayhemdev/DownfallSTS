@@ -53,6 +53,9 @@ public class Nob extends AbstractGremlinCard implements SuperRare {
         cardsList.add(new Bellow());
         cardsList.add(new SkullBash());
         cardsList.add(new Rush());
+        GremlinDance nobdance=new GremlinDance();
+        nobdance.nobDanceHelper();
+        cardsList.add( nobdance );
 
         this.tags.add(BaseModCardTags.FORM);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
