@@ -61,7 +61,7 @@
   },  
   "bronze:Break": {
     "NAME": "Сломать",
-    "DESCRIPTION": "Наносит !D! урона. NL bronze:Компиляция *с bronze:Багом - bronze:Вставляет *Ожог, *Рану и *В слизи.",
+    "DESCRIPTION": "Наносит !D! урона. NL bronze:Компиляция *с bronze:Багом - bronze:Вставляет *Ожог, *Рану и *В *слизи.",
     "EXTENDED_DESCRIPTION": [
       "сломанный",
       "Разбить"
