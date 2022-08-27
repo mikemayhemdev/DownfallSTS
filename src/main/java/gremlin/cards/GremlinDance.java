@@ -241,7 +241,7 @@ public class GremlinDance extends AbstractGremlinCard {
         }
     }
 
-    public void nobDanceHelper(){
+    public void nobDanceHelper(){ //for Nob preview
         this.tags.remove(MAD_GREMLIN);
         this.tags.remove(FAT_GREMLIN);
         this.tags.remove(SHIELD_GREMLIN);
