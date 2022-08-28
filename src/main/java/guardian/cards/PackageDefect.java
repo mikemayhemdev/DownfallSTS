@@ -14,6 +14,8 @@ import guardian.GuardianMod;
 
 import java.util.ArrayList;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class PackageDefect extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("PackageDefect");
     public static final String NAME;
@@ -65,6 +67,7 @@ public class PackageDefect extends AbstractGuardianCard {
             prev2.upgrade();
             prev3.upgrade();
         }
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("PackageDefect.png"));
     }
 
     @Override

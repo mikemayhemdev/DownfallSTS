@@ -217,7 +217,7 @@
   "Guardian:FuturePlans": {
     "NAME": "Планы на будущее",
     "DESCRIPTION": "Вы можете поместить !M! карту из руки в guardianmod:Стазис в конце каждого вашего хода.",
-    "UPGRADE_DESCRIPTION": "Начальная. NL Вы можете поместить до !M! карт из руки в guardianmod:Стазис в конце каждого вашего хода."
+    "UPGRADE_DESCRIPTION": "Начальная. NL Вы можете поместить !M! карту из руки в guardianmod:Стазис в конце каждого вашего хода."
   },
   "Guardian:Suspension": {
     "NAME": "Приостановить",
@@ -295,7 +295,7 @@
   },
   "Guardian:BaubleBeam": {
     "NAME": "Сияющий взрыв",
-    "DESCRIPTION": "Наносит !D! урона. NL !M! раза выполняет:"
+    "DESCRIPTION": "Наносит !D! урона. NL Повторяет !M! раза:"
   },
   "Guardian:PrimingBeam": {
     "NAME": "Предупредительный выстрел",
@@ -372,7 +372,7 @@
   },
   "Guardian:BronzeOrb": {
     "NAME": "Сфера поддержки",
-    "DESCRIPTION": "Начальная. NL Наносит !D! урона. Помещает случ. карту из стопки добора в guardianmod:Стазис. Сжигается."
+    "DESCRIPTION": "Начальная. NL Наносит !D! урона. Помещает случ. карту из стопки добора в guardianmod:Стазис. NL Сжигается."
   },
   "Guardian:RevengeProtocol": {
     "NAME": "Протокол мести",

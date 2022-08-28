@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 import gremlin.actions.ToeStubAction;
 
 import static gremlin.GremlinMod.FAT_GREMLIN;
@@ -38,6 +39,7 @@ public class ToeStub extends AbstractGremlinCard {
         this.magicNumber = MAGIC;
         this.tags.add(FAT_GREMLIN);
         setBackgrounds();
+        GremlinMod.loadJokeCardImage(this, "ToeStub.png");
     }
 
     @Override

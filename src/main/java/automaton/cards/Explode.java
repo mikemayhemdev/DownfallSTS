@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 import theHexaghost.powers.BurnPower;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 public class Explode extends AbstractBronzeCard {
     public final static String ID = makeID("Explode");
 
@@ -22,6 +24,7 @@ public class Explode extends AbstractBronzeCard {
         baseAuto = auto = 2;
         thisEncodes();
         tags.add(AutomatonMod.BAD_COMPILE);
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Explode.png"));
     }
 
     @Override

@@ -19,6 +19,7 @@ public class Sear extends AbstractHexaCard {
         baseBurn = burn = 10;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
+        HexaMod.loadJokeCardImage(this, "Sear.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

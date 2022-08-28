@@ -147,7 +147,7 @@
     "UPGRADE_DESCRIPTION": "给予 !M! 层 虚弱 与 !slime! 层 slimeboundmod:黏液 。 NL 抽一张牌。 NL 消耗 - slimeboundmod:深埋 。"
   },
   "Slimebound:HauntingLick": {
-    "NAME": "缠绕之舔",
+    "NAME": "恶臭之舔",
     "DESCRIPTION": "给予 !M! 层 易伤 与 !slime! 层 slimeboundmod:黏液 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "给予 !M! 层 易伤 与 !slime! 层 slimeboundmod:黏液 。 NL 抽一张牌。 NL 消耗 。"
   },
@@ -185,7 +185,7 @@
     "DESCRIPTION": "给予 slimeboundmod:黏液 时， NL 额外给予 !M! 层 。"
   },
   "Slimebound:FirmFortitude": {
-    "NAME": "清算",
+    "NAME": "软化",
     "DESCRIPTION": "力量 小于0时 不能被打出 。 NL 失去 2 点 力量 。 NL 获得 !M! 点 slimeboundmod:潜力 。"
   },
   "Slimebound:WasteNot": {
@@ -198,8 +198,8 @@
   },
   "Slimebound:Prepare": {
     "NAME": "伺机待发",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合， NL 获得 [E] [E] 并抽 !M! 张牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "下一回合获得 [E] [E] 并抽 !M! 张牌。 至多 保留 !M! 张牌。 NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合， NL 获得 [E] 并抽 !M! 张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "下一回合获得 [E] 并抽 !M! 张牌。 至多 保留 !M! 张牌。 NL 消耗 。"
   },
   "Slimebound:Grow": {
     "NAME": "生长",

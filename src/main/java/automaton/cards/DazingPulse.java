@@ -15,6 +15,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.vfx.SmallLaserEffectColored;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 public class DazingPulse extends AbstractBronzeCard {
     public final static String ID = makeID("DazingPulse");
 
@@ -25,6 +27,7 @@ public class DazingPulse extends AbstractBronzeCard {
         baseMagicNumber = magicNumber = 2;
         thisEncodes();
         tags.add(AutomatonMod.BAD_COMPILE);
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("DazingPulse.png"));
     }
 
     @Override

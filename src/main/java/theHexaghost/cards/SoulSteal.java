@@ -2,6 +2,7 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import theHexaghost.powers.LivingBombPower;
 
 public class SoulSteal extends AbstractHexaCard {
@@ -15,6 +16,7 @@ public class SoulSteal extends AbstractHexaCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseBurn = burn = 4;
         //exhaust = true;
+        HexaMod.loadJokeCardImage(this, "SoulSteal.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

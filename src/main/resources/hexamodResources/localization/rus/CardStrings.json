@@ -173,7 +173,7 @@
   "hexamod:HexaLevel": {
     "NAME": "Адский облик",
     "DESCRIPTION": "Даёт !M! hexamod:Интенсивности в начале каждого вашего хода.",
-    "UPGRADE_DESCRIPTION": "Начальная. NL Даёт !M! hexamod:Интенсивности в начале каждого вашего хода."
+    "UPGRADE_DESCRIPTION": "Даёт !M! hexamod:Интенсивности. NL Даёт !M! hexamod:Интенсивности в начале каждого вашего хода."
   },
   "hexamod:Incineration": {
     "NAME": "Испепелить",
@@ -289,7 +289,7 @@
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "Яркий ритуал",
-    "DESCRIPTION": "Вы получаете [E] и берёте карту за каждый hexamod:Зажжёный Огонёк, затем hexamod:Тушит их. NL Сжигается."
+    "DESCRIPTION": "Вы получаете [E] и берёте карту за каждый hexamod:Зажжёный Огонёк, затем hexamod:Тушите их. NL Сжигается."
   },
   "hexamod:SpectralSpark": {
     "NAME": "Призрачная искра",
