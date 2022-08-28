@@ -31,7 +31,7 @@
     "NAME": "终极王冠",
     "FLAVOR": "恭喜！！你是最大的赢家。",
     "DESCRIPTIONS": [
-      "替换 #r冠军金冠 。 NL 每场战斗开始时，进入 #ychamp:终极 并持续 #b1 回合 。"
+      "替换 #r冠军金冠 。 NL 战斗开始时，进入 #ychamp:终极 并持续 #b1 回合 。"
     ]
   },
   "champ:DefensiveTrainingManual": {
@@ -45,14 +45,14 @@
     "NAME": "偏折护腕",
     "FLAVOR": "如果你觉得格挡很好的话……",
     "DESCRIPTIONS": [
-      "敌人的回合结束后，你自动失去的 #y格挡 转化为半量的 #ychamp:反击 。"
+      "敌方回合结束后，你自动失去的 #y格挡 转化为半量的 #ychamp:反击 。"
     ]
   },
   "champ:DuelingGlove": {
     "NAME": "决斗手套",
     "FLAVOR": "从十开始数……",
     "DESCRIPTIONS": [
-      "单体攻击牌造成伤害后，若敌人没有 #y易伤 ，给予 #b1 层 #y易伤 。"
+      "单体 #y攻击 牌造成伤害后，若目标无 #y易伤 ，给予 #b1 层。"
     ]
   },
   "champ:FightingForDummies": {
@@ -96,7 +96,7 @@
     "NAME": "内在力量",
     "FLAVOR": "是关于你心中那把巨大的剑。",
     "DESCRIPTIONS": [
-      "每场战斗开始时，获得 #b",
+      "战斗开始时，获得 #b",
       " 点 #y力量 。"
     ]
   },
@@ -104,7 +104,7 @@
     "NAME": "新晋者",
     "FLAVOR": "你能拿走金冠吗？",
     "DESCRIPTIONS": [
-      "每场战斗开始时，随机进入一种 #y姿态 。"
+      "战斗开始时，随机进入一种 #y姿态 。"
     ]
   }
 }

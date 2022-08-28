@@ -198,8 +198,8 @@
   },
   "Slimebound:Prepare": {
     "NAME": "준비 동작",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에 [E] [E] 를 얻고 카드를 !M! 장 뽑습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "다음 턴에 [E] [E] 를 얻고 카드를 !M! 장 뽑습니다. NL 카드를 !M! 장 보존 합니다. 소멸"
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에 [E] 를 얻고 카드를 !M! 장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "다음 턴에 [E] 를 얻고 카드를 !M! 장 뽑습니다. NL 카드를 !M! 장 보존 합니다. 소멸"
   },
   "Slimebound:Grow": {
     "NAME": "성장",

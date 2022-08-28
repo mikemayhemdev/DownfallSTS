@@ -198,8 +198,8 @@
   },
   "Slimebound:Prepare": {
     "NAME": "伺機待發",
-    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 下一回合獲得 [E] [E] 並抽 !M! 張牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "下一回合獲得 [E] [E] 並抽 !M! 張牌。 至多 保留 !M! 張牌。 NL 消耗 。"
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 下一回合獲得 [E] 並抽 !M! 張牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "下一回合獲得 [E] 並抽 !M! 張牌。 至多 保留 !M! 張牌。 NL 消耗 。"
   },
   "Slimebound:Grow": {
     "NAME": "生長",

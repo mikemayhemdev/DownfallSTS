@@ -1,11 +1,14 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class ChosenStrike extends AbstractBronzeCard {
 
@@ -21,6 +24,7 @@ public class ChosenStrike extends AbstractBronzeCard {
         baseDamage = DAMAGE + misc;
         baseMagicNumber = magicNumber = 1;
         thisEncodes();
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("ChosenStrike.png"));
     }
 
     @Override

@@ -118,7 +118,7 @@
     ]
   },
   "champ:BringItOn": {
-    "NAME": "后发",
+    "NAME": "披坚",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。",
     "EXTENDED_DESCRIPTION": [
       "我不处于那个姿态。"

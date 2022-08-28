@@ -1,11 +1,14 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ThornsPower;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class Spike extends AbstractBronzeCard {
     public final static String ID = makeID("Spike");
@@ -15,6 +18,7 @@ public class Spike extends AbstractBronzeCard {
         baseDamage = 4;
         magicNumber = baseMagicNumber = 4;
         thisEncodes();
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Spike.png"));
     }
 
     @Override
