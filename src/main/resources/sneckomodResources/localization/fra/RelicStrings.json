@@ -80,7 +80,7 @@
     "NAME": "Carte vierge",
     "FLAVOR": "Mimique n'importe quelle carte.",
     "DESCRIPTIONS": [
-      "Au début de chaque combat, jouez une copie d'une carte aléatoire de votre deck."
+      "Au début de chaque combat, ajoutez un #ygremlin:Écho d'une carte aléatoire de votre deck dans votre main. Elle coûte #b0."
     ]
   },
   "sneckomod:D8": {
