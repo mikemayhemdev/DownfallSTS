@@ -38,14 +38,14 @@
     "NAME": "银色子弹",
     "FLAVOR": "尖塔里的狼都绝迹了。",
     "DESCRIPTIONS": [
-      "战斗开始时， #ybronze:编码 #b1 张 #y穿透射击 。"
+      "战斗开始时，将 #b1 张 #y穿透射击 加入手牌。其耗能为 #b0 。"
     ]
   },
   "bronze:MakeshiftBattery": {
     "NAME": "备用电池",
     "FLAVOR": "足足有8.9伏特。",
     "DESCRIPTIONS": [
-      "你的回合开始时，获得 [E] 并将 #b1 张 #y黏液 加入弃牌堆。"
+      "回合开始时，获得 [E] 并将 #b1 张 #y黏液 加入弃牌堆。"
     ]
   },
   "bronze:CableSpool": {
