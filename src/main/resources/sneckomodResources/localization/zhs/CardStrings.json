@@ -306,7 +306,7 @@
   },
   "sneckomod:IronFang": {
     "NAME": "铁齿",
-    "DESCRIPTION": "造成 !qqq! ~ !D! 点伤害。 NL 获得 !M! ~ !B! 点 格挡 。"
+    "DESCRIPTION": "获得 !M! ~ !B! 点 格挡 。 NL 造成 !qqq! ~ !D! 点伤害。"
   },
   "sneckomod:Mudshield": {
     "NAME": "混乱护盾",
