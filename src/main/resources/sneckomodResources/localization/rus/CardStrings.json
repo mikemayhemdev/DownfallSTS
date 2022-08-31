@@ -39,7 +39,7 @@
   },
   "sneckomod:IronFang": {
     "NAME": "Железный клык",
-    "DESCRIPTION": "Наносит !qqq! - !D! урона. NL Даёт !M! - !B! Защиты."
+    "DESCRIPTION": "Даёт !M! - !B! Защиты. NL Наносит !qqq! - !D! урона."
   },
   "sneckomod:ImprovisedAttack": {
     "NAME": "Импровизированная атака",
