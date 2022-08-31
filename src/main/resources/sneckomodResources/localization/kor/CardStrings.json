@@ -39,7 +39,7 @@
   },
   "sneckomod:IronFang": {
     "NAME": "강철 송곳니",
-    "DESCRIPTION": "피해를 !qqq! - !D! 줍니다. NL 방어도를 !M! - !B! 얻습니다."
+    "DESCRIPTION": "방어도를 !M! - !B! 얻습니다. NL 피해를 !qqq! - !D! 줍니다."
   },
   "sneckomod:ImprovisedAttack": {
     "NAME": "변덕스러운 공격",
