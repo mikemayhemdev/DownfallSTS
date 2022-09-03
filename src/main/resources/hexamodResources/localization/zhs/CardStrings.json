@@ -245,7 +245,7 @@
   "hexamod:RainOfEmbers": {
     "NAME": "焰烬雨",
     "DESCRIPTION": "重复X次： NL 造成 !D! 点伤害。 NL 给予 !burny! 层 hexamod:灼魂 。",
-    "UPGRADE_DESCRIPTION": "重复X次： NL 造成 !D! 点伤害。 NL 给予 !burny! 层 hexamod:灼魂 。 NL 给予1层虚弱。"
+    "UPGRADE_DESCRIPTION": "重复X次： NL 造成 !D! 点伤害。 NL 给予 !burny! 层 hexamod:灼魂 。 NL 给予1层 虚弱 。"
   },
   "hexamod:VolcanoVisage": {
     "NAME": "火山面貌",
