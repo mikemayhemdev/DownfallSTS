@@ -9,7 +9,7 @@
   },
   "downfall:Bewildered": {
     "NAME": "困惑",
-    "DESCRIPTION": "本牌在手时，打出其他牌后 sneckomod:混淆 所有手牌并丢弃本牌。 NL 消耗 。"
+    "DESCRIPTION": "本牌在手时，打出其他牌后 sneckomod:混淆 其他手牌并丢弃本牌。 NL 消耗 。"
   },
   "downfall:Icky": {
     "NAME": "黏液缠身",
