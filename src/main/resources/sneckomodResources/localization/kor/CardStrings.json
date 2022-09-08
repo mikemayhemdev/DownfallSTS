@@ -116,7 +116,8 @@
   },
   "sneckomod:SerpentMind": {
     "NAME": "외세의 형상",
-    "DESCRIPTION": "sneckomod:다른_직업 카드를 사용할 때마다 카드를 1장 뽑습니다."
+    "DESCRIPTION": "sneckomod:스네코항체. NL sneckomod:다른_직업 카드를 사용할 때마다 카드를 1장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "sneckomod:다른_직업 카드를 사용할 때마다 카드를 1장 뽑습니다."
   },
   "sneckomod:SlitherStrike": {
     "NAME": "미끄럼 타격",
