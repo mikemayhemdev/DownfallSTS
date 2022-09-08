@@ -116,7 +116,8 @@
   },
   "sneckomod:SerpentMind": {
     "NAME": "Экзотический облик",
-    "DESCRIPTION": "Вы берёте карту, когда разыгрываете sneckomod:Внеклассовую карту."
+    "DESCRIPTION": "sneckomod:Анти-змекко. NL Вы берёте карту, когда разыгрываете sneckomod:Внеклассовую карту.",
+    "UPGRADE_DESCRIPTION": "Вы берёте карту, когда разыгрываете sneckomod:Внеклассовую карту."
   },
   "sneckomod:SlitherStrike": {
     "NAME": "Скользящий удар",
