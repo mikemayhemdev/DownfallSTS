@@ -194,7 +194,8 @@
   },
   "sneckomod:SerpentMind": {
     "NAME": "异色形态",
-    "DESCRIPTION": "打出 sneckomod:异色 牌时抽一张牌。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 打出 sneckomod:异色 牌时抽一张牌。",
+    "UPGRADE_DESCRIPTION": "打出 sneckomod:异色 牌时抽一张牌。"
   },
   "sneckomod:SlitherStrike": {
     "NAME": "滑动打击",
