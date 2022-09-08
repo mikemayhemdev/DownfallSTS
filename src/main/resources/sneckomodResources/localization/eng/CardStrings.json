@@ -116,7 +116,8 @@
   },
   "sneckomod:SerpentMind": {
     "NAME": "Exotic Form",
-    "DESCRIPTION": "Whenever you play an sneckomod:Offclass card, draw 1 card."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Whenever you play an sneckomod:Offclass card, draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Whenever you play an sneckomod:Offclass card, draw 1 card."
   },
   "sneckomod:SlitherStrike": {
     "NAME": "Slither Strike",
