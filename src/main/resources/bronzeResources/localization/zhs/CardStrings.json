@@ -559,8 +559,8 @@
   },
   "bronze:Ignite": {
     "NAME": "魂灼",
-    "DESCRIPTION": "给予 !M! 层 hexamod:灼魂 。 NL 回合结束时，受到 2 点伤害。",
-    "UPGRADE_DESCRIPTION": "给予 !M! 层 hexamod:灼魂 。 NL 回合结束时，受到 4 点伤害。"
+    "DESCRIPTION": "给予 !M! 层 hexamod:灼魂 。 NL 回合结束时， NL 受到2点伤害。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 hexamod:灼魂 。 NL 回合结束时， NL 受到4点伤害。"
   },
   "bronze:IntoTheVoid": {
     "NAME": "遁入虚空",
