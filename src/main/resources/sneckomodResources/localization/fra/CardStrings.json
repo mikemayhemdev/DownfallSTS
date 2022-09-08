@@ -116,7 +116,8 @@
   },
   "sneckomod:SerpentMind": {
     "NAME": "Forme exotique",
-    "DESCRIPTION": "Lorsque vous jouez une carte sneckomod:Hors-Classe, piochez 1 carte."
+    "DESCRIPTION": "sneckomod:Gekoproof. NL Lorsque vous jouez une carte sneckomod:Hors-Classe, piochez 1 carte.",
+    "UPGRADE_DESCRIPTION": "Lorsque vous jouez une carte sneckomod:Hors-Classe, piochez 1 carte."
   },
   "sneckomod:SlitherStrike": {
     "NAME": "Frappe rampante",
