@@ -40,6 +40,9 @@ import expansioncontent.patches.CardColorEnumPatch;
 import expansioncontent.potions.BossPotion;
 import expansioncontent.relics.StudyCardRelic;
 import expansioncontent.util.CardFilter;
+import expansioncontent.util.DownfallMagic;
+import expansioncontent.util.SecondDownfallMagic;
+import expansioncontent.util.TagMagic;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -204,6 +207,9 @@ public class expansionContentMod implements
 
     @Override
     public void receiveEditCards() {
+        BaseMod.addDynamicVariable(new DownfallMagic());
+        BaseMod.addDynamicVariable(new SecondDownfallMagic());
+        BaseMod.addDynamicVariable(new TagMagic());
         try {
             autoAddCards();
         } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {

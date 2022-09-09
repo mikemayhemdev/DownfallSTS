@@ -230,9 +230,6 @@ public class HexaMod implements
         BaseMod.addRelic(new CandleOfCauterizing(), RelicType.SHARED);
         BaseMod.addRelic(new Sixitude(), RelicType.SHARED);
         BaseMod.addRelicToCustomPool(new UnbrokenSoul(), TheHexaghost.Enums.GHOST_GREEN);
-
-//        BaseMod.addRelic(new CandleOfCauterizing(), RelicType.SHARED);
-//        BaseMod.addRelic(new Sixitude(), RelicType.SHARED);
         BaseMod.addRelic(new BolsterEngine(), RelicType.SHARED);
     }
 
