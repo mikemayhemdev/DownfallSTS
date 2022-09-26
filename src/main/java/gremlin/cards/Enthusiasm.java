@@ -26,12 +26,13 @@ public class Enthusiasm extends AbstractGremlinCard {
     public Enthusiasm()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnthusiasmPower(p, 1), 1));
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+
     }
 
     public void upgrade()
