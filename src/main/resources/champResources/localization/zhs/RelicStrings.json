@@ -3,14 +3,14 @@
     "NAME": "冠军金冠",
     "FLAVOR": "你是冠军！",
     "DESCRIPTIONS": [
-      "战斗开始时，进入随机 #y姿态 。"
+      "战斗开始时，随机进入一种 #y姿态 。"
     ]
   },
   "champ:BlackKnightHelmet": {
     "NAME": "黑骑头盔",
     "FLAVOR": "只受到一点擦伤。",
     "DESCRIPTIONS": [
-      "每场战斗首次进入每种 #y姿态 时： NL #ychamp:防守 -获得 #b2 点 #y敏捷 并失去 #b1 点 #y力量 。 NL #ychamp:战狂 -获得 #b2 点 #y力量 并失去 #b1 点 #y敏捷 。"
+      "每场战斗首次进入每种 #y姿态 时： NL #ychamp:防守 ：获得 #b2 点 #y敏捷 并失去 #b1 点 #y力量 。 NL #ychamp:战狂 ：获得 #b2 点 #y力量 并失去 #b1 点 #y敏捷 。"
     ]
   },
   "champ:Barbells": {
@@ -24,7 +24,7 @@
     "NAME": "战狂指南",
     "FLAVOR": "文字难以辨认。",
     "DESCRIPTIONS": [
-      "每回合开始时获得 #b3 点 #y活力 。"
+      "回合开始时，获得 #b3 层 #y活力 。"
     ]
   },
   "champ:ChampionCrownUpgraded": {
@@ -38,7 +38,7 @@
     "NAME": "防御训练手册",
     "FLAVOR": "专业提示：不要被打到。",
     "DESCRIPTIONS": [
-      " #ychamp:防守 的 #ychamp:终结技 奖励额外获得 #b5 点 #y格挡 。"
+      " #ychamp:防守 的 #ychamp:终结技 奖励额外提供 #b5 点 #y格挡 。"
     ]
   },
   "champ:DeflectingBracers": {
@@ -59,29 +59,29 @@
     "NAME": "格斗读本",
     "FLAVOR": "第一步，打败敌人",
     "DESCRIPTIONS": [
-      "若你回合结束时不处于 #y姿态 ，下回合多抽 #b1 张牌。"
+      "回合结束时若不处于 #y姿态 ，下回合额外抽 #b1 张牌。"
     ]
   },
   "champ:GladiatorsBookOfMartialProwess": {
     "NAME": "角斗技法",
     "FLAVOR": "凡事都要先试试 - 即使有时没能成功。",
     "DESCRIPTIONS": [
-      "每当你一回合内打出过进入 #y姿态 、 #ychamp:连段 和 #ychamp:终结技 时，获得 #b1 点 #y力量 和 #y敏捷 。"
+      "每当你一回合内打出过进入 #y姿态 、 #ychamp:连段 与 #ychamp:终结技 ，获得 #b1 点 #y力量 与 #y敏捷 。"
     ]
   },
   "champ:PowerArmor": {
     "NAME": "力量铠甲",
     "FLAVOR": "买来的。",
     "DESCRIPTIONS": [
-      "每回合开始时获得 [E] 。 NL 最大 #y活力 和 #ychamp:反击 层数为 #b10 。"
+      "回合开始时，获得 [E] 。 NL 最大 #y活力 与 #ychamp:反击 层数被限为 #b10 。"
     ]
   },
   "champ:SignatureFinisher": {
     "NAME": "终结者",
     "FLAVOR": "是时候该使出我的终结一击了。",
     "DESCRIPTIONS": [
-      "拾起时，选择 #b1 张 #ychamp:终结技 牌。其耗能变为 #b0 ，能在未处于 #y姿态 时打出且不会退出 #y姿态 。",
-      "选择一张终结技牌 ",
+      "拾起时，选择 #b1 张 #ychamp:终结技 。其耗能变为 #b0 ，能在未处于 #y姿态 时打出且不会退出 #y姿态 。",
+      "选择一张终结技 ",
       " 的耗能为 #b0 ，能在不处于姿态时打出且不会退出姿态"
     ]
   },
@@ -89,7 +89,7 @@
     "NAME": "幽灵之手",
     "FLAVOR": "有些胜利与你同在。",
     "DESCRIPTIONS": [
-      "每当你进入 #y姿态 时，将 #b1 张 #b0 耗能带 #y消耗 的打击或防御加入手牌。"
+      "进入 #y姿态 时，获得 #b1 张 #b0 耗能带 #y消耗 的打击或防御。"
     ]
   },
   "champ:LiftRelic": {

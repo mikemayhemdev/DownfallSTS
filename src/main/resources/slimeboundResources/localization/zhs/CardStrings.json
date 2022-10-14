@@ -66,7 +66,7 @@
   },
   "Slimebound:SlimeBrawl": {
     "NAME": "史莱姆乱战",
-    "DESCRIPTION": "每有一只史莱姆， NL 打出抽牌堆顶部的牌。 NL 消耗 。"
+    "DESCRIPTION": "打出抽牌堆顶部的牌。 NL 每有一只史莱姆， NL 再打出一次。 NL 消耗 。"
   },
   "Slimebound:SpikyOuterGoop": {
     "NAME": "黏液装甲",

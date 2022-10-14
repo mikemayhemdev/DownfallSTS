@@ -214,7 +214,7 @@
     "UPGRADE_DESCRIPTION": "移除目标的 格挡 与 人工制品 。 NL 造成 !D! 点伤害。"
   },
   "champ:EnragedBash": {
-    "NAME": "怒斩",
+    "NAME": "怒锤",
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL champ:战狂 champ:连段 ： NL 本场战斗次数加1。",
     "EXTENDED_DESCRIPTION": [
       "造成 !D! 点伤害 !M! 次。 NL champ:战狂 champ:连段 ：攻击次数加1。"
@@ -294,7 +294,7 @@
     "DESCRIPTION": "每回合首次 champ:连段 时， NL 将该牌返回手牌。 NL 其下次耗能为0。"
   },
   "champ:CalledShot": {
-    "NAME": "宣告",
+    "NAME": "畅饮",
     "DESCRIPTION": " champ:战狂 champ:连段 ： NL 获得 [E] [E] 并 消耗 。 NL champ:防守 champ:连段 ： NL 抽 !M! 张牌。",
     "UPGRADE_DESCRIPTION": "champ:战狂 champ:连段 ： NL 获得 [E] [E] [E] 并 消耗 。 NL champ:防守 champ:连段 ： NL 抽 !M! 张牌。",
     "EXTENDED_DESCRIPTION": [

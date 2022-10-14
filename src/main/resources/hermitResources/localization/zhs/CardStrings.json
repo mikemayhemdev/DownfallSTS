@@ -268,7 +268,7 @@
   },
   "hermit:Showdown": {
     "NAME": "决战",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 打出手中所有 *打击 。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 随机打出手中 *打击 。 NL 消耗 。"
   },
   "hermit:LuckOfTheDraw": {
     "NAME": "神抽",

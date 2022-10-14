@@ -75,7 +75,7 @@
     "NAME": "Straight Razor",
     "FLAVOR": "For a cleaner shave...",
     "DESCRIPTIONS": [
-      "Whenever you remove a card from your deck, heal #b15 HP."
+      "Whenever you remove or Transform a card from your deck, heal #b15 HP."
     ]
   },
   "hermit:BrassTacks": {

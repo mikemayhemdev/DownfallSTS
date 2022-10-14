@@ -62,7 +62,7 @@
   "Guardian:TwinSlam": {
     "NAME": "双斩",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 *再斩 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 *再斩 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 *再斩+ 。"
   },
   "Guardian:GuardianWhirl": {
     "NAME": "守护者旋风",
