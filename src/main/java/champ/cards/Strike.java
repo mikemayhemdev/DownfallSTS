@@ -4,6 +4,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class Strike extends AbstractChampCard {
 
     public final static String ID = makeID("Strike");
@@ -19,6 +21,7 @@ public class Strike extends AbstractChampCard {
         tags.add(CardTags.STRIKE);
         tags.add(CardTags.STARTER_STRIKE);
         postInit();
+        loadJokeCardImage(this, "Strike.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

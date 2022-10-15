@@ -50,6 +50,7 @@ public class GoopSpray extends AbstractSlimeboundCard {
         this.magicNumber = this.baseMagicNumber = 1;
         this.slimed = this.baseSlimed = 4;
         baseBlock = 4;
+        SlimeboundMod.loadJokeCardImage(this, "GoopSpray.png");
 
 
     }

@@ -23,6 +23,7 @@ public class UnknownVulnerable extends AbstractUnknownCard {
 
     public UnknownVulnerable() {
         super(ID, CardType.SKILL, CardRarity.UNCOMMON);
+        SneckoMod.loadJokeCardImage(this, "UnknownVulnerable.png");
     }
 
     public boolean useCheck(AbstractCard card) {
