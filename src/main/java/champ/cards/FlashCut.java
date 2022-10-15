@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class FlashCut extends AbstractChampCard {
 
     public final static String ID = makeID("FlashCut");
@@ -31,6 +33,7 @@ public class FlashCut extends AbstractChampCard {
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
         postInit();
+        loadJokeCardImage(this, "FlashCut.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
