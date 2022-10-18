@@ -128,7 +128,7 @@
     "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时， NL 随机 expansioncontent:发掘 一张 slimeboundmod:舔舔 系牌。"
   },
   "Slimebound:Repurpose": {
-    "NAME": "重新考虑",
+    "NAME": "重分裂",
     "DESCRIPTION": "slimeboundmod:吸收 后： NL slimeboundmod:分裂 slimeboundmod:专家史莱姆 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "slimeboundmod:吸收 后： NL slimeboundmod:分裂 slimeboundmod:专家史莱姆 。 NL slimeboundmod:命令 。 消耗 。"
   },
