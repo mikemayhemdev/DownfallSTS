@@ -244,7 +244,7 @@ public class CharBossSilent extends AbstractCharBoss {
                         m.powers.add(q);
                     }
                 }
-                AbstractDungeon.actionManager.addToBottom((new ApplyPowerAction(m, m, new MinionPower(m))));
+                m.powers.add(new MinionPower(m));
 
                 //m.state.setTimeScale(0F);
 
