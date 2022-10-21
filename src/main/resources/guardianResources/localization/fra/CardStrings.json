@@ -123,7 +123,10 @@
   },
   "Guardian:Harden": {
     "NAME": "Durcissement",
-    "DESCRIPTION": "Requiert 20 d'Armure ou plus. NL guardianmod:Renforcez de !GuardianSecondM! et gagnez !M! d'Épines."
+    "DESCRIPTION": "Requiert 20 d'Armure ou plus. NL guardianmod:Renforcez de !GuardianSecondM! et gagnez !M! d'Épines.",
+    "EXTENDED_DESCRIPTION": [
+        "Requiert plus d'Armure."
+    ]
   },
   "Guardian:SentryBeam": {
     "NAME": "Sentinelle laser",
