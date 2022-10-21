@@ -116,7 +116,7 @@
   },
   "Slimebound:GrowthPunch": {
     "NAME": "成长拳",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL slimeboundmod:吞食黏液 ： NL 本场战斗数值加 !M! 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL slimeboundmod:吞食黏液 ： NL 本场战斗数值加 !M! 。"
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "查找策略",
