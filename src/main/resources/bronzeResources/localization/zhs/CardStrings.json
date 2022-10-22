@@ -92,7 +92,7 @@
     ]
   },
   "bronze:DelayedSlice": {
-    "NAME": "机械臂",
+    "NAME": "机械切割",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 下回合额外抽 !M! 张牌。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 下回合额外抽 !M! 张牌。",
     "EXTENDED_DESCRIPTION": [
