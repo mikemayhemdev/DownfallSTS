@@ -111,7 +111,7 @@
     "UPGRADE_DESCRIPTION": "保留 。 NL 抽 !M! 张牌。"
   },
   "champ:EnchantShield": {
-    "NAME": "整备装甲",
+    "NAME": "附魔坚盾",
     "DESCRIPTION": "选择一张手牌。 NL 其 格挡 增加 !M! 点。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我没有能够强化的牌"
@@ -176,7 +176,7 @@
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 随机一张 *打击 手牌 NL 本回合下次耗能变为0。"
   },
   "champ:EnchantSword": {
-    "NAME": "剑拔弩张",
+    "NAME": "附魔利剑",
     "DESCRIPTION": "选择一张手牌。 NL 其伤害增加 !M! 点。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "我不必强化"
