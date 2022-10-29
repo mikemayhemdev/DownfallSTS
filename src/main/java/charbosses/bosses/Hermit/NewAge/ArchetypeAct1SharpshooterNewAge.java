@@ -59,8 +59,6 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
 
-
-        if (!looped) {
             switch (turn) {
                 case 0:
                     addToList(cardsList, new EnHeadshot());
@@ -81,7 +79,7 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnMadness());
+                    addToList(cardsList, new EnLoneWolf());
                     addToList(cardsList, new EnRoughhouse());
                     addToList(cardsList, new EnInjury());
                     turn++;
@@ -94,43 +92,7 @@ public class ArchetypeAct1SharpshooterNewAge extends ArchetypeBaseIronclad {
                     looped = true;
                     break;
             }
-        } else {
-            switch (turn) {
-                case 0:
-                    addToList(cardsList, new EnHeadshot());
-                    addToList(cardsList, new EnDefendHermit());
-                    addToList(cardsList, new EnInjury());
-                    turn++;
-                    break;
-                case 1:
-                    addToList(cardsList, new EnStrikeHermit());
-                    addToList(cardsList, new EnItchyTrigger());
-                    addToList(cardsList, new EnItchyTriggerStrikeHermit());
-                    turn++;
-                    break;
-                case 2:
-                    addToList(cardsList, new EnGhostlyPresence());
-                    addToList(cardsList, new EnDive(), extraUpgrades);
-                    addToList(cardsList, new EnDefendHermit());
-                    turn++;
-                    break;
-                case 3:
-                    addToList(cardsList, new EnInjury());
-                    addToList(cardsList, new EnRoughhouse());
-                    addToList(cardsList, new EnInjury());
-                    turn++;
-                    break;
-                case 4:
-                    addToList(cardsList, new EnDive());
-                    if (defaultToggle) {
-                        addToList(cardsList, new EnInjury());
-                    } else
-                        addToList(cardsList, new EnDeadeye());
-                    addToList(cardsList, new EnStrikeHermit());
-                    turn = 0;
-                    break;
-            }
-        }
+      
         return cardsList;
     }
 
