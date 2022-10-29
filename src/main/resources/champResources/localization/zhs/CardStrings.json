@@ -125,7 +125,7 @@
     ]
   },
   "champ:ShieldThrow": {
-    "NAME": "爆甲",
+    "NAME": "护盾猛掷",
     "DESCRIPTION": "造成你当前 格挡 值点伤害两次。 NL 获得2层 脆弱 。 NL champ:防守 champ:连段 ： NL 不获得 脆弱 。",
     "EXTENDED_DESCRIPTION": ["造成你当前 格挡 值(!D!)点伤害两次。 NL 获得2层 脆弱 。 NL champ:防守 champ:连段 ： NL 不获得 脆弱 。"]
   },
