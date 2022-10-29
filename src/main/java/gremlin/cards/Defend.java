@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 
 public class Defend extends AbstractGremlinCard {
     public static final String ID = getID("Defend");
@@ -28,6 +29,7 @@ public class Defend extends AbstractGremlinCard {
 
         this.baseBlock = BLOCK;
         tags.add(CardTags.STARTER_DEFEND);
+        GremlinMod.loadJokeCardImage(this, "Defend.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)

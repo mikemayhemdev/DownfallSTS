@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 
 public class NightmareStrike extends AbstractHexaCard {
 
@@ -17,6 +18,7 @@ public class NightmareStrike extends AbstractHexaCard {
         isEthereal = true;
         cardsToPreview = new ShadowStrike();
         tags.add(CardTags.STRIKE);
+        HexaMod.loadJokeCardImage(this, "NightmareStrike.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
