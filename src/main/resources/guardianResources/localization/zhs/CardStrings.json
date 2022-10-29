@@ -316,7 +316,7 @@
   "Guardian:AncientConstruct": {
     "NAME": "先古造物",
     "DESCRIPTION": "回合开始时若无 人工制品 ，获得 !M! 层。",
-	"UPGRADE_DESCRIPTION": "获得1层 人工制品 。 NL 回合开始时若无 人工制品 ，获得 !M! 层。"
+	"UPGRADE_DESCRIPTION": "获得2层 人工制品 。 NL 回合开始时若无 人工制品 ，获得 !M! 层。"
   },
   "Guardian:CrystalBeam": {
     "NAME": "水晶射线",
