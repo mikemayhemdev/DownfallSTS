@@ -316,7 +316,7 @@
   "Guardian:AncientConstruct": {
     "NAME": "先古建造",
     "DESCRIPTION": "回合開始時若無 人工製品 ，獲得 !M! 層。",
-	"UPGRADE_DESCRIPTION": "獲得1層 人工製品 。 NL 回合開始時若無 人工製品 ，獲得 !M! 層。"
+	"UPGRADE_DESCRIPTION": "獲得2層 人工製品 。 NL 回合開始時若無 人工製品 ，獲得 !M! 層。"
   },
   "Guardian:CrystalBeam": {
     "NAME": "水晶射線",
