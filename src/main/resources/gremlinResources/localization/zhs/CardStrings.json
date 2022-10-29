@@ -114,7 +114,7 @@
   "Gremlin:SleeveOfAces": {
     "NAME": "袖中王牌",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 每有1层 gremlin:法力 ， NL 获得一张 *小刀 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 每有1层 gremlin:法力 ，获得一张 *小刀+ 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 每有1层 gremlin:法力 ， NL 获得一张 *小刀+ 。"
   },
   "Gremlin:FatGremlin": {
     "NAME": "胖地精",
