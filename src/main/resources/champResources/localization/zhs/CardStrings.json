@@ -27,7 +27,7 @@
     ]
   },
   "champ:SwordSigil": {
-    "NAME": "剑纹",
+    "NAME": "胜利旌旗",
     "DESCRIPTION": "获得 champ:技术 奖励 !M! 次。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "获得 champ:技术 奖励 !M! 次。 NL 消耗 。"
   },
