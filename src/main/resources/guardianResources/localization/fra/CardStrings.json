@@ -322,7 +322,7 @@
   "Guardian:AncientConstruct": {
     "NAME": "Construction antique",
     "DESCRIPTION": "Au début de votre tour, si vous n'avez pas d'Artéfact, gagnez !M! Artéfact.",
-    "UPGRADE_DESCRIPTION": "Gagnez 1 Artéfact. NL Au début de votre tour, si vous n'avez pas d'Artéfact, gagnez !M! Artéfact."
+    "UPGRADE_DESCRIPTION": "Gagnez 2 Artéfact. NL Au début de votre tour, si vous n'avez pas d'Artéfact, gagnez !M! Artéfact."
   },
   "Guardian:CrystalBeam": {
     "NAME": "Rayon cristallin",
