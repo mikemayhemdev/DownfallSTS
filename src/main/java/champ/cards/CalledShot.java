@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class CalledShot extends AbstractChampCard {
 
     public final static String ID = makeID("CalledShot");
@@ -26,6 +28,7 @@ public class CalledShot extends AbstractChampCard {
         tags.add(ChampMod.COMBOBERSERKER);
         tags.add(CardTags.HEALING);
         postInit();
+        loadJokeCardImage(this, "CalledShot.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
