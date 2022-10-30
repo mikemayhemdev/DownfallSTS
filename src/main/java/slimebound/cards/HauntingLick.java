@@ -41,6 +41,7 @@ public class HauntingLick extends AbstractLickCard {
         NAME = cardStrings.NAME;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+        SlimeboundMod.loadJokeCardImage(this, "HauntingLick.png");
 
     }
 
