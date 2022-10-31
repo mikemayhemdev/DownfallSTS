@@ -321,7 +321,7 @@
   "Guardian:AncientConstruct": {
     "NAME": "고대의 구조",
     "DESCRIPTION": "내 턴 시작 시 인공물이 없다면 인공물을 !M! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "인공물을 1 얻습니다. NL 내 턴 시작 시 인공물이 없다면 인공물을 !M! 얻습니다."
+    "UPGRADE_DESCRIPTION": "인공물을 2 얻습니다. NL 내 턴 시작 시 인공물이 없다면 인공물을 !M! 얻습니다."
   },
   "Guardian:CrystalBeam": {
     "NAME": "크리스탈 광선",
