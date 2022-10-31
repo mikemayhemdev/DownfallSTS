@@ -39,6 +39,7 @@ import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
+import collector.CollectorMod;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -332,6 +333,8 @@ public class downfallMod implements
                 return "bronzeResources/" + path;
             case PACKAGE_GREMLIN:
                 return "gremlinResources/" + path;
+            case PACKAGE_COLLECTOR:
+                return "collectorResources/" + path;
             case PACKAGE_HERMIT:
                 return "hermitResources/" + path;
         }
@@ -424,6 +427,9 @@ public class downfallMod implements
 
             //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_HERMIT));
+
+            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_COLLECTOR" + stringType);
+            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_COLLECTOR));
         } else {
 
             //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
@@ -523,6 +529,7 @@ public class downfallMod implements
         loadModKeywords(ChampMod.getModID(), otherPackagePaths.PACKAGE_CHAMP);
         loadModKeywords(AutomatonMod.getModID(), otherPackagePaths.PACKAGE_AUTOMATON);
         loadModKeywords(GremlinMod.getModID(), otherPackagePaths.PACKAGE_GREMLIN);
+        loadModKeywords(CollectorMod.getModID(), otherPackagePaths.PACKAGE_COLLECTOR);
         loadModKeywords(HermitMod.getModID(), otherPackagePaths.PACKAGE_HERMIT);
         loadModKeywords(modID, otherPackagePaths.PACKAGE_DOWNFALL);
     }
@@ -1724,6 +1731,7 @@ public class downfallMod implements
         PACKAGE_AUTOMATON,
         PACKAGE_GREMLIN,
         PACKAGE_HERMIT,
+        PACKAGE_COLLECTOR,
         PACKAGE_DOWNFALL;
 
         otherPackagePaths() {

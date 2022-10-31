@@ -67,7 +67,9 @@ public class CollectorMod implements
         OnStartBattleSubscriber,
         PostBattleSubscriber,
         StartGameSubscriber,
-        PostDrawSubscriber, OnPowersModifiedSubscriber, PostEnergyRechargeSubscriber  {
+        PostDrawSubscriber,
+        OnPowersModifiedSubscriber,
+        PostEnergyRechargeSubscriber  {
     public static final String SHOULDER1 = "collectorResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "collectorResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "collectorResources/images/char/mainChar/corpse.png";

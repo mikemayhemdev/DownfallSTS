@@ -1,6 +1,6 @@
 package collector.Relics;
 
-import automaton.util.TextureLoader;
+import automaton.AutomatonMod;
 import basemod.abstracts.CustomRelic;
 import collector.CollectorChar;
 import collector.CollectorMod;
@@ -13,11 +13,12 @@ import static collector.CollectorMod.makeRelicPath;
 
 public class EmeraldTorch extends CustomRelic {
     public static final String ID = CollectorMod.makeID("EmeraldTorch");
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("EmeraldTorch.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("EmeraldTorch.png"));
+    private static final String IMG_PATH = "EmeraldTorch.png";
+    private static final String OUTLINE_IMG_PATH ="EmeraldTorch.png";
 
     public EmeraldTorch() {
-        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
+        super(ID, new Texture(CollectorMod.makeRelicPath(IMG_PATH)), new Texture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.STARTER, LandingSound.MAGICAL);
+
 
     }
     public void atBattleStart() {
