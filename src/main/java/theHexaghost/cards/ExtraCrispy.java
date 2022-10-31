@@ -2,6 +2,7 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import theHexaghost.powers.CrispyPower;
 
 public class ExtraCrispy extends AbstractHexaCard {
@@ -16,6 +17,7 @@ public class ExtraCrispy extends AbstractHexaCard {
     public ExtraCrispy() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        HexaMod.loadJokeCardImage(this, "ExtraCrispy.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

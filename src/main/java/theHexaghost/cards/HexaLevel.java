@@ -22,6 +22,7 @@ public class HexaLevel extends AbstractHexaCard {
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         tags.add(BaseModCardTags.FORM);
+        HexaMod.loadJokeCardImage(this, "HexaLevel.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

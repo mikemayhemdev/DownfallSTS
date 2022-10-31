@@ -40,6 +40,7 @@ public class SplitScrap extends AbstractSlimeboundCard {
 
         this.exhaust = true;
         this.selfRetain = true;
+        SlimeboundMod.loadJokeCardImage(this, "SplitScrap.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

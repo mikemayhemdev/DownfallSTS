@@ -15,6 +15,8 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import downfall.util.CardIgnore;
 import sneckomod.SneckoMod;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class SetATrap extends AbstractChampCard {
 
     public final static String ID = makeID("SetATrap");
@@ -34,6 +36,7 @@ public class SetATrap extends AbstractChampCard {
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
         postInit();
+        loadJokeCardImage(this, "SetATrap.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

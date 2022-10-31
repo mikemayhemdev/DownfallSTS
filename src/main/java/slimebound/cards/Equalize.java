@@ -54,6 +54,7 @@ public class Equalize extends AbstractSlimeboundCard {
         this.magicNumber = this.baseMagicNumber = 4;
         this.exhaust = true;
         tags.add(CardTags.HEALING);
+        SlimeboundMod.loadJokeCardImage(this, "Equalize.png");
 
     }
 
