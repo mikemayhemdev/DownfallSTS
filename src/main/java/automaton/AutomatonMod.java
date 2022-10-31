@@ -1,5 +1,7 @@
 package automaton;
 
+import automaton.cards.Separator;
+import automaton.cards.*;
 import automaton.cards.goodstatus.*;
 import automaton.events.*;
 import automaton.potions.BuildAFunctionPotion;
@@ -10,6 +12,7 @@ import automaton.relics.*;
 import automaton.util.AutoVar;
 import automaton.util.CardFilter;
 import basemod.BaseMod;
+import basemod.ReflectionHacks;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
@@ -18,6 +21,9 @@ import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import charbosses.BossMechanicDisplayPanel;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -30,10 +36,13 @@ import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.cardmods.EtherealMod;
 import downfall.cardmods.ExhaustMod;
+import downfall.downfallMod;
 import downfall.util.CardIgnore;
+import guardian.patches.BottledStasisPatch;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -77,7 +86,7 @@ public class AutomatonMod implements
     public static Color placeholderColor = new Color(214F / 255F, 202F / 255F, 158F / 255F, 1);
     public static Color potionLabColor = new Color(214F / 255F, 202F / 255F, 158F / 255F, 1);
     private static String modID = "bronze";
-    private CustomUnlockBundle unlocks0; // TODO: Set this up
+    private CustomUnlockBundle unlocks0;
     private CustomUnlockBundle unlocks1;
     private CustomUnlockBundle unlocks2;
     private CustomUnlockBundle unlocks3;
@@ -111,6 +120,26 @@ public class AutomatonMod implements
 
 
     }
+
+
+
+    public static String makeBetaCardPath(String resourcePath) {
+        return "bronzeResources/images/cards/joke/" + resourcePath;
+    }
+
+    public static void loadJokeCardImage(AbstractCard card, String img) {
+        if (card instanceof AbstractBronzeCard) {
+            ((AbstractBronzeCard) card).betaArtPath = img;
+        }
+        Texture cardTexture;
+        cardTexture = ImageMaster.loadImage(img);
+        cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+        int tw = cardTexture.getWidth();
+        int th = cardTexture.getHeight();
+        TextureAtlas.AtlasRegion cardImg = new TextureAtlas.AtlasRegion(cardTexture, 0, 0, tw, th);
+        ReflectionHacks.setPrivate(card, AbstractCard.class, "jokePortrait", cardImg);
+    }
+
 
     public static String makeCardPath(String resourcePath) {
         return getModID() + "Resources/images/cards/" + resourcePath;
@@ -207,7 +236,9 @@ public class AutomatonMod implements
         BaseMod.addRelic(new BronzeIdol(), RelicType.SHARED);
         BaseMod.addRelicToCustomPool(new SilverBullet(), AutomatonChar.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelicToCustomPool(new BottledCode(), AutomatonChar.Enums.BRONZE_AUTOMATON);
+        BaseMod.registerBottleRelic(BottledStasisPatch.inBottledCode, new BottledCode());
         BaseMod.addRelicToCustomPool(new Timepiece(), AutomatonChar.Enums.BRONZE_AUTOMATON);
+        BaseMod.addRelic(new AnalyticalCore(), RelicType.SHARED);
     }
 
 
@@ -220,12 +251,14 @@ public class AutomatonMod implements
             throw new RuntimeException(e);
         }
 
+        /*
         BaseMod.addCard(new Daze());
         BaseMod.addCard(new Ignite());
         BaseMod.addCard(new GrievousWound());
         BaseMod.addCard(new IntoTheVoid());
         BaseMod.addCard(new UsefulSlime());
         BaseMod.addCard(new UnknownStatus());
+        */
     }
 
     public void addPotions() {
@@ -234,12 +267,13 @@ public class AutomatonMod implements
         BaseMod.addPotion(BurnAndBuffPotion.class, Color.RED, Color.GREEN, Color.CLEAR, BurnAndBuffPotion.POTION_ID);
         BaseMod.addPotion(CleanCodePotion.class, Color.CORAL, Color.PURPLE, Color.MAROON, CleanCodePotion.POTION_ID, AutomatonChar.Enums.THE_AUTOMATON);
         BaseMod.addPotion(FreeFunctionsPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, FreeFunctionsPotion.POTION_ID, AutomatonChar.Enums.THE_AUTOMATON);
-    }
 
-    @Override
-    public void receiveSetUnlocks() {
-        //TODO: Set this up
-
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(BuildAFunctionPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(BurnAndBuffPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(CleanCodePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(FreeFunctionsPotion.POTION_ID);
+        }
     }
 
     public void receivePostInitialize() {
@@ -283,15 +317,45 @@ public class AutomatonMod implements
                 .create());
     }
 
+
+    @Override
+    public void receiveSetUnlocks() {
+
+        downfallMod.registerUnlockSuite(
+                Constructor.ID,
+                Separator.ID,
+                Terminator.ID,
+
+                Refactor.ID,
+                InfiniteBeams.ID,
+                InfiniteLoop.ID,
+
+                FullRelease.ID,
+                Library.ID,
+                TinkerersToolbox.ID,
+
+                ElectromagneticCoil.ID,
+                Timepiece.ID,
+                Mallet.ID,
+
+                BronzeIdol.ID,
+                DecasWashers.ID,
+                DonusWashers.ID,
+
+                AutomatonChar.Enums.THE_AUTOMATON
+        );
+    }
+
+
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
-        if (AbstractDungeon.player instanceof AutomatonChar)
-            FunctionHelper.init();
+        FunctionHelper.init();
     }
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         FunctionHelper.doStuff = false;
+        FunctionHelper.functionsCompiledThisCombat = 0;
         if (FunctionHelper.held != null) {
             FunctionHelper.held.clear();
         }
@@ -306,16 +370,9 @@ public class AutomatonMod implements
         EasyInfoDisplayPanel.specialDisplays.add(compileDisplayPanel);
         EasyInfoDisplayPanel.specialDisplays.add(new BossMechanicDisplayPanel());
         if (FunctionHelper.held != null) {
+            FunctionHelper.doStuff = false;
             FunctionHelper.held.clear();
             FunctionHelper.genPreview();
-        }
-        if (CardCrawlGame.loadingSave) {
-            if (AbstractDungeon.player.hasRelic(ElectromagneticCoil.ID)) {
-                FunctionHelper.max += 1;
-            }
-        }
-        else {
-            FunctionHelper.max = 3;
         }
     }
 

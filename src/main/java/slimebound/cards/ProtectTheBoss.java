@@ -43,7 +43,7 @@ public class ProtectTheBoss extends AbstractSlimeboundCard {
         this.magicNumber = this.baseMagicNumber = 1;
 
 
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+     //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
     }
 

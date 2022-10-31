@@ -2,6 +2,7 @@ package theHexaghost.cards.seals;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import theHexaghost.powers.PotionPostCombatPower;
 
 public class FourthSeal extends AbstractSealCard {
@@ -9,6 +10,7 @@ public class FourthSeal extends AbstractSealCard {
 
     public FourthSeal() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        HexaMod.loadJokeCardImage(this, "FourthSeal.png");
     }
 
     public void realUse(AbstractPlayer p, AbstractMonster m) {

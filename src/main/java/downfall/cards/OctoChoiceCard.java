@@ -1,12 +1,15 @@
 package downfall.cards;
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import downfall.util.CardIgnore;
 
 public class OctoChoiceCard extends CustomCard {
@@ -21,6 +24,14 @@ public class OctoChoiceCard extends CustomCard {
     private AbstractCard prev2;
     private AbstractCard prev3;
 
+    public OctoChoiceCard(String id, String name, String IMG, String description, int dmg, int blk, int magic, CardType type) {
+        super(id, name, IMG, COST, description, type, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.NONE);
+        this.IMG = IMG;
+        baseDamage = dmg;
+        baseBlock = blk;
+        baseMagicNumber = magicNumber = magic;
+    }
+
     public OctoChoiceCard(String id, String name, String IMG, String description, int dmg, int blk, CardType type) {
         super(id, name, IMG, COST, description, type, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.NONE);
         this.IMG = IMG;
@@ -31,7 +42,24 @@ public class OctoChoiceCard extends CustomCard {
     public OctoChoiceCard(String id, String name, String IMG, String description) {
         super(id, name, IMG, COST, description, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.NONE);
         this.IMG = IMG;
+        if (id != null && CardCrawlGame.languagePack.getCardStrings(id).NAME == "[MISSING_TITLE]") {
+            BaseMod.loadCustomStrings(CardStrings.class, "{\"" + id 
+            + "\": {\"NAME\": \"" + name 
+            + "\", \"DESCRIPTION\": \" " + description +"\"}}");
+        }
     }
+
+    public OctoChoiceCard(String id, String name, String IMG, String description, CardColor color) {
+        super(id, name, IMG, COST, description, CardType.SKILL, color, CardRarity.SPECIAL, CardTarget.NONE);
+        this.IMG = IMG;
+    }
+
+    public OctoChoiceCard(String id, String name, String IMG, String description, CardColor color, CardType type) {
+        super(id, name, IMG, COST, description, type, color, CardRarity.SPECIAL, CardTarget.NONE);
+        this.IMG = IMG;
+    }
+
+    // Future Vex will benefit greatly by making it so there's not 100,000 constructors here...
 
     public OctoChoiceCard(String id, String name, String IMG, String description, AbstractCard prev1, AbstractCard prev2, AbstractCard prev3) {
         super(id, name, IMG, COST, description, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.NONE);
@@ -70,7 +98,7 @@ public class OctoChoiceCard extends CustomCard {
 
     @Override
     public void upgrade() {
-
+        upgradeName();
     }
 
     @Override

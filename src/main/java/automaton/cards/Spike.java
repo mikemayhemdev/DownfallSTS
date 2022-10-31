@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -7,14 +8,17 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 public class Spike extends AbstractBronzeCard {
     public final static String ID = makeID("Spike");
 
     public Spike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseDamage = 3;
-        magicNumber = baseMagicNumber = 3;
+        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
+        baseDamage = 4;
+        magicNumber = baseMagicNumber = 4;
         thisEncodes();
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Spike.png"));
     }
 
     @Override
@@ -32,7 +36,7 @@ public class Spike extends AbstractBronzeCard {
 
     @Override
     public void upp() {
-        upgradeDamage(1);
-        upgradeMagicNumber(1);
+        upgradeDamage(2);
+        upgradeMagicNumber(2);
     }
 }

@@ -1,16 +1,21 @@
 package charbosses.bosses.Merchant;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.colorless.*;
 import charbosses.cards.curses.EnWrithe;
 import charbosses.cards.green.*;
 import charbosses.cards.purple.*;
 import charbosses.cards.red.EnInflame;
+import charbosses.powers.bossmechanicpowers.IroncladStatusPower;
+import charbosses.powers.bossmechanicpowers.MerchantStrengthPower;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_FaceTrader;
 import charbosses.relics.EventRelics.CBR_Falling;
 import charbosses.relics.EventRelics.CBR_Mausoleum;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import charbosses.relics.*;
 
@@ -35,16 +40,25 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
         //addRelic(new CBR_Calipers());
        // addRelic(new CBR_Girya(3));
        // addRelic(new CBR_Vajra());
-        addRelic(new CBR_SmoothStone());
+      //  addRelic(new CBR_SmoothStone());
         addRelic(new CBR_FossilizedHelix());
         //addRelic(new CBR_BagOfPreparation());
         addRelic(new CBR_ClockworkSouvenir());
         addRelic(new CBR_TungstenRod());
-      //  addRelic(new CBR_IceCream());
+        addRelic(new CBR_IceCream());
         //addRelic(new CBR_FusionHammer());
 
 
     }
+
+
+    @Override
+    public void addedPreBattle() {
+        super.addedPreBattle();
+        AbstractCreature p = AbstractCharBoss.boss;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MerchantStrengthPower(p)));
+    }
+
 
     @Override
     public ArrayList<AbstractCard> getThisTurnCards() {
@@ -54,8 +68,8 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
             switch (turn) {
                 case 0:
 
-                    addToList(cardsList, new EnPanicButton(), extraUpgrades);  //removed
-                    addToList(cardsList, new EnDramaticEntrance(), extraUpgrades);  //removed
+                    addToList(cardsList, new EnPanicButton());  //removed
+                    addToList(cardsList, new EnDramaticEntrance());  //removed
                     addToList(cardsList, new EnTheBomb(), extraUpgrades);
                     turn++;
                     break;
@@ -66,7 +80,8 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnHandOfGreed(), true);
+                    //Bomb goes Boom.
+                    addToList(cardsList, new EnPanacea(), true);  //removed
                     addToList(cardsList, new EnPanicButton(), true);  //removed
                     addToList(cardsList, new EnBlind(), true);
                     turn++;
@@ -74,7 +89,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
                 case 3:
                     addToList(cardsList, new EnTrip(), true);
                     addToList(cardsList, new EnTheBomb(), true);
-                    addToList(cardsList, new EnPanacea(), true);  //removed
+                    addToList(cardsList, new EnSwiftStrike(), true);
                     turn++;
                     break;
                 case 4:
@@ -89,6 +104,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
         } else {
             switch (turn) {
                 case 0:
+                    //Bomb goes Boom.
                     addToList(cardsList, new EnTheBomb(), true);
                     addToList(cardsList, new EnTrip(), true);
                     addToList(cardsList, new EnGoodInstincts(), true);
@@ -96,14 +112,15 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
                     break;
                 case 1:
                     addToList(cardsList, new EnHandOfGreed(), true);
-                    addToList(cardsList, new EnGoodInstincts(), true);
+                    addToList(cardsList, new EnTheBomb(), true);
                     addToList(cardsList, new EnBlind(), true);
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnTheBomb(), true);
+                    //Bomb goes Boom.
+                    addToList(cardsList, new EnGoodInstincts(), true);
                     addToList(cardsList, new EnSwiftStrike(), true);
-                    addToList(cardsList, new EnHandOfGreed(), true);
+                    addToList(cardsList, new EnSwiftStrike(), true);
                     turn = 0;
                     break;
             }

@@ -13,7 +13,7 @@ public class Flail extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, all_enemy, uncommon
 
-    private static final int DAMAGE = 6;
+    private static final int DAMAGE = 7;
     private static final int UPG_DAMAGE = 1;
 
     private static final int MAGIC = 1;
@@ -24,21 +24,16 @@ public class Flail extends AbstractBronzeCard {
         baseDamage = DAMAGE;
         isMultiDamage = true;
         baseMagicNumber = magicNumber = MAGIC;
-        thisEncodes();
+       // thisEncodes();
         baseAuto = auto = 2;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < auto; i++) {
             allDmg(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         }
-    }
-
-    @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        if (forGameplay) {
-            applyToSelf(new ArtifactPower(AbstractDungeon.player, magicNumber));
-        }
+        applyToSelf(new ArtifactPower(p, magicNumber));
     }
 
     public void upp() {

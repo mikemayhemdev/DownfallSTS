@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
 import static com.megacrit.cardcrawl.cards.red.PerfectedStrike.countCards;
 
 public class PerfectedStrike extends AbstractChampCard {
@@ -13,8 +14,8 @@ public class PerfectedStrike extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 12;
-    private static final int MAGIC = 2;
+    private static final int DAMAGE = 8;
+    private static final int MAGIC = 3;
     private static final int UPG_MAGIC = 1;
 
     public PerfectedStrike() {
@@ -22,7 +23,8 @@ public class PerfectedStrike extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(CardTags.STRIKE);
-        tags.add(ChampMod.FINISHER);
+        postInit();
+        loadJokeCardImage(this, "PerfecterStrike.png");
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
@@ -43,7 +45,6 @@ public class PerfectedStrike extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
-        finisher();
     }
 
     public void upp() {

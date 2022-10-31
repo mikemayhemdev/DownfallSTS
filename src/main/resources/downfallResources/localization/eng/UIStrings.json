@@ -10,7 +10,12 @@
   "downfall:SoulToGoldChanges": {
     "TEXT": [
       "Souls",
-      "Shows how many Souls you are carrying. Souls can be given to the Heart for rewards."
+      "Shows how many Souls you are carrying. Souls can be given to the Heart for rewards.",
+      "Merchant Status",
+      "HP",
+      "Dead!",
+      "Strength",
+      "Souls stolen"
     ]
   },
   "downfall:BustKeyButton": {
@@ -37,9 +42,10 @@
   },
   "downfall:AscensionText": {
     "TEXT": [
-      "19. Bosses have better card draw.",
-      "20. Act 3 Boss has Lizard Tail and Magic Flower.",
-      "Obtain the Ruby Key. Break it later."
+      "19. Bosses have an extra Relic.",
+      "20. Act 3 Boss has Lizard Tail which heals all HP.",
+      "Obtain the Ruby Key. Break it later.",
+      "4. Bosses have an extra card upgraded."
     ]
   },
   "downfall:ConfigMenuText": {
@@ -47,10 +53,16 @@
       "Allow Standard runs to encounter global relics from Downfall's characters.",
       "Allow Standard runs to encounter global potions from Downfall.",
       "Allow Standard runs to encounter global events from Downfall.",
-      "Allow Standard runs to encounter Colorless Boss Cards from Downfall.",
+      "Allow Standard runs to encounter Boss Cards from Downfall.",
       "Allow Standard characters to play Downfall runs, and Villains to play in Standard runs.",
+      "Allow modded characters to play Downfall runs.",
       "Allow Standard runs to encounter Downfall Curse cards.",
-      "Downfall runs use traditional Map layout - fire before boss, not at start."
+      "Downfall runs use traditional Map layout - fire before boss, not at start.",
+      "Unlock all locked cards and relics for Downfall characters (requires game restart)",
+      "Disable Champ's Stance Helper - for experienced Champions",
+      "Prevent Snecko from using card pools from other mods.",
+      "Disable music overrides (requires game restart)",
+      "Unlock all locked alternative skin for Downfall characters"
     ]
   },
   "downfall:EnergyPanelTip": {
@@ -110,7 +122,15 @@
   },
   "downfall:BossCardReward": {
     "TEXT": [
-      "Add a Boss Card to your deck"
+      "Add a Boss Card to your deck",
+      "Pick a card."
+    ]
+  },
+  "downfall:ColorfulCardReward": {
+    "TEXT": [
+      "Add a ",
+      " Card to your deck",
+      "Pick a Card."
     ]
   },
   "downfall:RunHistoryMonsterNames": {
@@ -122,6 +142,21 @@
     "TEXT": [
       "Whale Hunter",
       "Ended the cycle."
+    ]
+  },
+  "downfall:SingleCardViewPopup": {
+    "TEXT": [
+      "Ammo"
+    ]
+  },
+  "downfall:MainMenuAd": {
+    "TEXT": [
+      "Want More?",
+      "Many more mods, including",
+      "Downfall, are available for ",
+      "base Slay the Spire on",
+      "Steam Workshop.",
+      "Click here to learn how!"
     ]
   }
 }

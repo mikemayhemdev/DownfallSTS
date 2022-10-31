@@ -30,7 +30,7 @@ public class GuardianWhirl extends AbstractGuardianCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardStrings cardStrings;
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int DAMAGE = 4;
 
     //TUNING CONSTANTS
@@ -51,9 +51,10 @@ public class GuardianWhirl extends AbstractGuardianCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (p.stance instanceof DefensiveMode) {
+        if (p.currentBlock >= 20) {
             return super.canUse(p, m);
         } else {
+            this.cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
             return false;
         }
     }
@@ -66,7 +67,7 @@ public class GuardianWhirl extends AbstractGuardianCard {
 
         //this.sockets.add(GuardianMod.socketTypes.RED);
 
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+       // this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.magicNumber = this.baseMagicNumber = MULTICOUNT;
         this.isMultiDamage = true;
         this.socketCount = SOCKETS;
@@ -78,7 +79,7 @@ public class GuardianWhirl extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
 
-        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));
+        //AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));
 
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_WHIRLWIND"));
         for (int i = 0; i < this.magicNumber; i++) {

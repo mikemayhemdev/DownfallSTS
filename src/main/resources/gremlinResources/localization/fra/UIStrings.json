@@ -1,0 +1,74 @@
+{
+  "Gremlin:NobFight": {
+    "TEXT": [
+      "DIABLOTINS CHÉTIFS DONNENT ÂMES!",
+      "Toi, le Coléreux. Tu es à moi maintenant.",
+      "Toi, le Gros. Tu es à moi maintenant.",
+      "Toi, la Fille. Tu es à moi maintenant.",
+      "Toi, le Nerveux. Tu es à moi maintenant.",
+      "Toi. l'Abruti. Tu es à moi maintenant.",
+      "Toi. Tu es à moi maintenant.",
+      "Je dois choisir."
+    ]
+  },
+  "Gremlin:GremFight": {
+    "TEXT": [
+      "Écrasez leurs têtes!",
+      "Tuez-les !",
+      "Prenez leurs affaires!"
+    ]
+  },
+  "Gremlin:ResurrectOption": {
+    "TEXT": [
+      "Ressuciter",
+      "(Action gratuite) Faites revenir d'entre les morts un Diablotin au hasard.",
+      "Requiert un Diablotin d'être mort.",
+      "Le cimetière a déjà été profané.",
+      "JE RESPIRE!",
+      "JE RESPIRE, À NOUVEAU!",
+      "JE SUIS DE RETOUR POUR PLUS DE PILLAGE!"
+    ]
+  },
+  "Gremlin:RestOption": {
+    "TEXT": [
+      "Se reposer",
+      "Soignez chaque Diablotin pour 100% de vos PV Max (",
+      " PV de ",
+      "Soignez chaque Diablotin pour 30% de vos PV Max (",
+      "Si n'importe quel Diablotin est mort, un ressuscitera au hasard."
+    ]
+  },
+  "Gremlin:Swap": {
+    "TEXT": [
+      "PAS D'ÉCHANGE!",
+      "NOB MENEUR MAINTENANT!",
+      "NOB MÈNE POUR TOUJOURS!"
+    ]
+  },
+  "Gremlin:ArtMode": {
+    "TEXT": [
+      "Art Diablotin",
+      "Les diablotins sont sur les cartes. N'impacte que l'esthétique. Permet de trouver des synergies plus facilement."
+    ]
+  },
+  "Gremlin:BonusGold": {
+    "TEXT": [
+       " Or (Bonus)"
+    ]
+  },
+  "Gremlin:MakeEchoAction": {
+    "TEXT": [
+      "Écho: "
+    ]
+  },
+  "Gremlin:EventReplacementStrings": {
+    "TEXT": [
+      "#rPerdez #r",
+      " #rPV",
+      "#rTous #rles #rDiablotins #rperdent #r",
+      "#gGagnez #g",
+      " #gPV",
+      "#gTous #gles #gDiablotins #ggagnent #g"
+    ]
+  }
+}

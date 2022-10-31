@@ -3,18 +3,12 @@ package charbosses.bosses.Silent;
 import basemod.interfaces.CloneablePowerInterface;
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
-import charbosses.bosses.Ironclad.NewAge.ArchetypeAct3BlockNewAge;
-import charbosses.bosses.Silent.NewAge.ArchetypeAct1ShivsNewAge;
+import charbosses.bosses.Silent.NewAge.ArchetypeAct1PoisonNewAge;
 import charbosses.bosses.Silent.NewAge.ArchetypeAct2MirrorImageNewAge;
-import charbosses.bosses.Silent.NewAge.ArchetypeAct3PoisonNewAge;
-import charbosses.cards.anticards.Antidote;
+import charbosses.bosses.Silent.NewAge.ArchetypeAct3ShivsNewAge;
 import charbosses.core.EnemyEnergyManager;
-import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
-import charbosses.monsters.Fortification;
 import charbosses.monsters.MirrorImageSilent;
-import charbosses.powers.FakeOrRealPower;
-import charbosses.powers.general.PoisonProtectionPower;
+import charbosses.powers.bossmechanicpowers.FakeOrRealPower;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
@@ -23,26 +17,19 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireSuper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.BarricadePower;
-import com.megacrit.cardcrawl.powers.PoisonPower;
+import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbGreen;
 import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
-import guardian.powers.ConstructPower;
-import slimebound.SlimeboundMod;
-
-import java.lang.reflect.Field;
 
 public class CharBossSilent extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Silent");
@@ -77,50 +64,50 @@ public class CharBossSilent extends AbstractCharBoss {
     public void generateDeck() {
         AbstractBossDeckArchetype archetype;
         if (downfallMod.overrideBossDifficulty) {
-            archetype = new ArchetypeAct1ShivsNewAge();
+            archetype = new ArchetypeAct1PoisonNewAge();
             downfallMod.overrideBossDifficulty = false;
             this.currentHealth -= 100;
         } else
             switch (AbstractDungeon.actNum) {
                 case 1:
-                    archetype = new ArchetypeAct1ShivsNewAge();
+                    archetype = new ArchetypeAct1PoisonNewAge();
                     break;
                 case 2:
                     archetype = new ArchetypeAct2MirrorImageNewAge();
                     break;
                 case 3:
-                    archetype = new ArchetypeAct3PoisonNewAge();
+                    archetype = new ArchetypeAct3ShivsNewAge();
                     break;
                 case 4:
-                    SlimeboundMod.logger.info("Silent spawned at Archetype " + NeowBoss.Rezzes);
+                    //SlimeboundMod.logger.info("Silent spawned at Archetype " + NeowBoss.Rezzes);
                     {
                     switch (NeowBoss.Rezzes) {
-                        case 1:
-                            archetype = new ArchetypeAct1ShivsNewAge();
+                        case 0:
+                            archetype = new ArchetypeAct1PoisonNewAge();
                             break;
-                        case 2:
+                        case 1:
                             archetype = new ArchetypeAct2MirrorImageNewAge();
                             break;
-                        case 3:
-                            archetype = new ArchetypeAct3PoisonNewAge();
+                        case 2:
+                            archetype = new ArchetypeAct3ShivsNewAge();
                             break;
                         default:
-                            archetype = new ArchetypeAct3PoisonNewAge();
+                            archetype = new ArchetypeAct2MirrorImageNewAge();
                             break;
                     }
                     break;
                 }
                 default:
-                    archetype = new ArchetypeAct1ShivsNewAge();
+                    archetype = new ArchetypeAct1PoisonNewAge();
                     break;
             }
 
         archetype.initialize();
         currentHealth = maxHealth;
         chosenArchetype = archetype;
-//        if (AbstractDungeon.ascensionLevel >= 19) {
-//            archetype.initializeBonusRelic();
-//        }
+        if (AbstractDungeon.ascensionLevel >= 19) {
+            archetype.initializeBonusRelic();
+        }
     }
 
 
@@ -170,6 +157,16 @@ public class CharBossSilent extends AbstractCharBoss {
         }
     }
 
+    public void damage(DamageInfo info) {
+        if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.output - this.currentBlock > 0) {
+            AnimationState.TrackEntry e = this.state.setAnimation(0, "Hit", false);
+            this.state.addAnimation(0, "Idle", true, 0.0F);
+            e.setTimeScale(0.6F);
+        }
+
+        super.damage(info);
+    }
+
     @Override
     public void die() {
         super.die();
@@ -185,7 +182,12 @@ public class CharBossSilent extends AbstractCharBoss {
                 break;
         }
 
-        downfallMod.saveBossFight(CharBossSilent.ID);
+
+            for (AbstractMonster m:AbstractDungeon.getCurrRoom().monsters.monsters){
+                if (m instanceof MirrorImageSilent){
+                    m.isDead = true;
+                }
+            }
     }
 
     public static void swapCreature(AbstractCreature p, AbstractCreature m) {
@@ -242,6 +244,8 @@ public class CharBossSilent extends AbstractCharBoss {
                         m.powers.add(q);
                     }
                 }
+                m.powers.add(new MinionPower(m));
+
                 //m.state.setTimeScale(0F);
 
                 AbstractDungeon.getCurrRoom().monsters.addMonster(1, m);
@@ -257,18 +261,6 @@ public class CharBossSilent extends AbstractCharBoss {
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
 
-    }
-
-    @Override
-    public void usePreBattleAction() {
-        if (chosenArchetype instanceof ArchetypeAct2MirrorImageNewAge) {
-            spawnImage(false);
-        }
-        if (chosenArchetype instanceof ArchetypeAct3PoisonNewAge) {
-            AbstractCreature p = AbstractDungeon.player;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PoisonProtectionPower(p)));
-        }
-        super.usePreBattleAction();
     }
 
 }

@@ -8,18 +8,14 @@ import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
 
 public class ImprovisedAttack extends AbstractSneckoCard {
-
     public final static String ID = makeID("ImprovisedAttack");
 
-    //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
-
-    private static final int DAMAGE = 8;
-    private static final int UPG_DAMAGE = 3;
     public static AbstractCard storage;
 
     public ImprovisedAttack() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
+        baseDamage = 9;
+        SneckoMod.loadJokeCardImage(this, "ImprovisedAttack.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -38,7 +34,7 @@ public class ImprovisedAttack extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPG_DAMAGE);
+            upgradeDamage(3);
         }
     }
 }

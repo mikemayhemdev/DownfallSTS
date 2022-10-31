@@ -5,7 +5,7 @@ import charbosses.bosses.AbstractBossDeckArchetype;
 public class ArchetypeBaseMerchant extends AbstractBossDeckArchetype {
 
     public ArchetypeBaseMerchant(String id, String loggerName) {
-        super(id, "Watcher", loggerName);
+        super(id, "Merchant", loggerName);
 
     }
 
@@ -13,7 +13,11 @@ public class ArchetypeBaseMerchant extends AbstractBossDeckArchetype {
     public void initialize() {
 
     }
+    @Override
+    public void addedPreBattle() {
+        //Intentionally overwritten, Merchant initializes later due to rez anim
 
+    }
     @Override
     public void initializeBonusRelic() {
 

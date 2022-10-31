@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.colorless.Apparition;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 
 public class CouncilsJustice extends AbstractHexaCard {
 
@@ -19,10 +20,11 @@ public class CouncilsJustice extends AbstractHexaCard {
     public CouncilsJustice() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = DAMAGE;
-        baseMagicNumber = 3;
+        baseMagicNumber = magicNumber = 3;
         exhaust = true;
-        isEthereal = true;
+       // isEthereal = true;
         cardsToPreview = new Apparition();
+        HexaMod.loadJokeCardImage(this, "CouncilsJustice.png");
     }
 
     @Override

@@ -4,7 +4,6 @@ import automaton.AutomatonChar;
 import basemod.CustomCharacterSelectScreen;
 import basemod.ReflectionHacks;
 import champ.ChampChar;
-import collector.CollectorChar;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
@@ -12,6 +11,7 @@ import com.megacrit.cardcrawl.screens.charSelect.CharacterSelectScreen;
 import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.patches.ui.topPanel.GoldToSoulPatches;
+import gremlin.patches.GremlinEnum;
 import guardian.patches.GuardianEnum;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
@@ -28,9 +28,11 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-public class EvilModeCharacterSelect {
-    public static boolean villainsInNormalAndNormalInVillains = false;
+import static downfall.downfallMod.crossoverCharacters;
+import static downfall.downfallMod.crossoverModCharacters;
+import static hermit.characters.hermit.Enums.HERMIT;
 
+public class EvilModeCharacterSelect {
     public static boolean evilMode = false;
 
     private static int maxEvilSelectIndex = 0;
@@ -54,94 +56,81 @@ public class EvilModeCharacterSelect {
             ArrayList<CharacterOption> basegameOptions = new ArrayList<>(), moddedOptions = new ArrayList<>();
             CharacterOption[] villainOptions = new CharacterOption[7];
 
-            while (options.hasNext())
-            {
+            while (options.hasNext()) {
                 CharacterOption o = options.next();
 
-                switch (o.c.chosenClass)
-                {
+                switch (o.c.chosenClass) {
                     case IRONCLAD:
                     case THE_SILENT:
                     case DEFECT:
                     case WATCHER:
-                        if (villainsInNormalAndNormalInVillains)
+                        if (crossoverCharacters)
                             basegameOptions.add(o);
                         break;
                     default:
-                        boolean isVillain = true;
-                        if (o.c.chosenClass == SlimeboundEnum.SLIMEBOUND)
-                        {
-                            villainOptions[0] = o;
-                        }
-                        else if (o.c.chosenClass == GuardianEnum.GUARDIAN)
-                        {
-                            if (UnlockTracker.isCharacterLocked("Guardian")){
-                                o.locked = true;
-                                ReflectionHacks.setPrivate(o, CharacterOption.class,"buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                        if (o.c.chosenClass == HERMIT) {
+                            if (crossoverCharacters)
+                                basegameOptions.add(o);
+                            break;
+                        } else {
+                            boolean isVillain = true;
+                            if (o.c.chosenClass == SlimeboundEnum.SLIMEBOUND) {
+                                villainOptions[0] = o;
+                            } else if (o.c.chosenClass == GuardianEnum.GUARDIAN) {
+                                if (UnlockTracker.isCharacterLocked("Guardian")) {
+                                    o.locked = true;
+                                    ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                                }
+                                villainOptions[1] = o;
+                            } else if (o.c.chosenClass == TheHexaghost.Enums.THE_SPIRIT) {
+                                if (UnlockTracker.isCharacterLocked("Hexaghost")) {
+                                    o.locked = true;
+                                    ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                                }
+                                villainOptions[2] = o;
+                            } else if (o.c.chosenClass == ChampChar.Enums.THE_CHAMP) {
+                                if (UnlockTracker.isCharacterLocked("Champ")) {
+                                    o.locked = true;
+                                    ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                                }
+                                villainOptions[3] = o;
+                            } else if (o.c.chosenClass == AutomatonChar.Enums.THE_AUTOMATON) {
+                                if (UnlockTracker.isCharacterLocked("Automaton")) {
+                                    o.locked = true;
+                                    ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                                }
+                                villainOptions[4] = o;
+                            } else if (o.c.chosenClass == GremlinEnum.GREMLIN) {
+                                if (UnlockTracker.isCharacterLocked("Gremlin")) {
+                                    o.locked = true;
+                                    ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                                }
+                                villainOptions[5] = o;
+                            } else if (o.c.chosenClass == TheSnecko.Enums.THE_SNECKO) {
+                                if (UnlockTracker.isCharacterLocked("Snecko")) {
+                                    o.locked = true;
+                                    ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                                }
+                                villainOptions[6] = o;
+                            } else {
+                                isVillain = false;
+                                moddedOptions.add(o);
                             }
-                            villainOptions[1] = o;
-                        }
-                        else if (o.c.chosenClass == TheHexaghost.Enums.THE_SPIRIT)
-                        {
-                            if (UnlockTracker.isCharacterLocked("Hexaghost")){
-                                o.locked = true;
-                                ReflectionHacks.setPrivate(o, CharacterOption.class,"buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
-                            }
-                            villainOptions[2] = o;
-                        }
-                        else if (o.c.chosenClass == ChampChar.Enums.THE_CHAMP)
-                        {
-                            if (UnlockTracker.isCharacterLocked("Champ")){
-                                o.locked = true;
-                                ReflectionHacks.setPrivate(o,CharacterOption.class,"buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
-                            }
-                            villainOptions[3] = o;
-                        }
-                        else if (o.c.chosenClass == AutomatonChar.Enums.THE_AUTOMATON)
-                        {
-                            if (UnlockTracker.isCharacterLocked("Automaton")){
 
-                                o.locked = true;
-                                ReflectionHacks.setPrivate(o,CharacterOption.class,"buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
-                            }
-                            villainOptions[4] = o;
-                        }
-                        else if (o.c.chosenClass == CollectorChar.Enums.THE_COLLECTOR)
-                        {
-                            if (UnlockTracker.isCharacterLocked("Collector")){
+                            if (isVillain && !crossoverCharacters)
+                                options.remove();
 
-                                o.locked = true;
-                                ReflectionHacks.setPrivate(o,CharacterOption.class,"buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
-                            }
-                            villainOptions[5] = o;
+                            break;
                         }
-                        else if (o.c.chosenClass == TheSnecko.Enums.THE_SNECKO)
-                        {
-                            if (UnlockTracker.isCharacterLocked("Snecko")){
-                                o.locked = true;
-                                ReflectionHacks.setPrivate(o,CharacterOption.class,"buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
-                            }
-                            villainOptions[6] = o;
-                        }
-
-                        else
-                        {
-                            isVillain = false;
-                            moddedOptions.add(o);
-                        }
-
-                        if (isVillain && !villainsInNormalAndNormalInVillains)
-                            options.remove();
-
-                        break;
                 }
             }
 
             villains.addAll(Arrays.asList(villainOptions));
             villains.addAll(basegameOptions); //Will be empty if disabled
-            villains.addAll(moddedOptions);
+            if (crossoverModCharacters)
+                villains.addAll(moddedOptions);
 
-            maxEvilSelectIndex = (int)Math.ceil(((float)villains.size() / 4)) - 1;
+            maxEvilSelectIndex = (int) Math.ceil(((float) villains.size() / 4)) - 1;
 
             standard.addAll(__instance.options);
 
@@ -171,7 +160,7 @@ public class EvilModeCharacterSelect {
                 if (evilMode) {
                     GoldToSoulPatches.changeGoldToSouls(false);
                     screen.options.clear();
-                    ArrayList<CharacterOption> allOptions = (ArrayList<CharacterOption>)ReflectionHacks.getPrivate(screen, CustomCharacterSelectScreen.class, "allOptions");
+                    ArrayList<CharacterOption> allOptions = (ArrayList<CharacterOption>) ReflectionHacks.getPrivate(screen, CustomCharacterSelectScreen.class, "allOptions");
 
                     ResetOptions.saved_optionsPerIndex = (int) ReflectionHacks.getPrivate(screen, CustomCharacterSelectScreen.class, "optionsPerIndex");
                     ReflectionHacks.setPrivate(screen, CustomCharacterSelectScreen.class, "optionsPerIndex", 4);
@@ -211,7 +200,7 @@ public class EvilModeCharacterSelect {
                 if (saved_maxSelectIndex >= 0) {
                     if (__instance.charSelectScreen instanceof CustomCharacterSelectScreen) {
                         CustomCharacterSelectScreen screen = (CustomCharacterSelectScreen) __instance.charSelectScreen;
-                        ArrayList<CharacterOption> allOptions = (ArrayList<CharacterOption>)ReflectionHacks.getPrivate(screen, CustomCharacterSelectScreen.class, "allOptions");
+                        ArrayList<CharacterOption> allOptions = (ArrayList<CharacterOption>) ReflectionHacks.getPrivate(screen, CustomCharacterSelectScreen.class, "allOptions");
 
                         ReflectionHacks.setPrivate(screen, CustomCharacterSelectScreen.class, "selectIndex", 0);
                         ReflectionHacks.setPrivate(screen, CustomCharacterSelectScreen.class, "maxSelectIndex", saved_maxSelectIndex);

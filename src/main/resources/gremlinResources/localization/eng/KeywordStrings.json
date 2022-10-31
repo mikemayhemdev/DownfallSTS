@@ -1,0 +1,87 @@
+[
+  {
+    "NAMES": [
+      "agony"
+    ],
+    "PROPER_NAME": "Agony",
+    "DESCRIPTION": "Creatures in #yAgony deal #b80% less damage with Attacks."
+  },
+  {
+    "NAMES": [
+      "cripple"
+    ],
+    "PROPER_NAME": "Cripple",
+    "DESCRIPTION": "#yCrippled enemies can no longer lose #yWeak. At the end of their turn, they lose HP equal to their #yWeak."
+  },
+  {
+    "NAMES": [
+      "echo",
+      "echoes"
+    ],
+    "PROPER_NAME": "Echo",
+    "DESCRIPTION": "Echoes are copies of cards with #yEthereal and #yExhaust."
+  },
+  {
+    "NAMES": [
+      "fat gremlin", "fat_gremlin"
+    ],
+    "PROPER_NAME": "Fat Gremlin",
+    "DESCRIPTION": "After you play an attack, apply #b1 #yWeak to all targets."
+  },
+  {
+    "NAMES": [
+      "gremlin wizard", "gremlin_wizard"
+    ],
+    "PROPER_NAME": "Gremlin Wizard",
+    "DESCRIPTION": "After you play a skill, gain #b1 #yWiz."
+  },
+  {
+    "NAMES": [
+      "mad gremlin", "mad_gremlin"
+    ],
+    "PROPER_NAME": "Mad Gremlin",
+    "DESCRIPTION": "Gain #b2 #yTemporary #yStrength when attacked."
+  },
+  {
+    "NAMES": [
+      "shield gremlin", "shield_gremlin"
+    ],
+    "PROPER_NAME": "Shield Gremlin",
+    "DESCRIPTION": "After you play a skill, gain #b2 #yBlock."
+  },
+  {
+    "NAMES": [
+      "sneaky gremlin", "sneaky_gremlin"
+    ],
+    "PROPER_NAME": "Sneaky Gremlin",
+    "DESCRIPTION": "After you play an attack, deal #b3 damage to a random enemy."
+  },
+  {
+    "NAMES": [
+      "swap"
+    ],
+    "PROPER_NAME": "Swap",
+    "DESCRIPTION": "Switch places with another character. Does nothing if there is no valid target."
+  },
+  {
+    "NAMES": [
+      "wiz"
+    ],
+    "PROPER_NAME": "Wiz",
+    "DESCRIPTION": "When you have at least three stacks of Wiz, Attacks will consume all stacks to deal #b10 additional damage."
+  },
+  {
+    "NAMES": [
+      "steal"
+    ],
+    "PROPER_NAME": "Steal",
+    "DESCRIPTION": "Target loses specified amount of resource. You gain the amount that was lost."
+  },
+  {
+    "NAMES": [
+      "nob"
+    ],
+    "PROPER_NAME": "Gremlin Nob",
+    "DESCRIPTION": "At the start of your turn, add #b1 #yBellow , #ySkull #yBash and #yRush to your hand."
+  }
+]

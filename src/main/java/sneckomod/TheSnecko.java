@@ -19,12 +19,13 @@ import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import sneckomod.cards.Defend;
 import sneckomod.cards.SnekBite;
 import sneckomod.cards.Strike;
 import sneckomod.cards.TailWhip;
-import sneckomod.cards.unknowns.Unknown;
+import sneckomod.cards.unknowns.*;
 import sneckomod.relics.SneckoSoul;
 
 import java.util.ArrayList;
@@ -46,7 +47,7 @@ public class TheSnecko extends CustomPlayer {
             "sneckomodResources/images/char/orb/layer3d.png",
             "sneckomodResources/images/char/orb/layer4d.png",
             "sneckomodResources/images/char/orb/layer5d.png",};
-    private static final String ID = makeID("theSnecko");
+    public static final String ID = makeID("theSnecko");
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
@@ -55,20 +56,25 @@ public class TheSnecko extends CustomPlayer {
 
     public TheSnecko(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "sneckomodResources/images/char/orb/vfx.png", (String)null, (String)null);
+        initializeClass(null,
+                CharacterSelectScreenPatches.characters[3].skins[CharacterSelectScreenPatches.characters[3].reskinCount].SHOULDER1,
+                CharacterSelectScreenPatches.characters[3].skins[CharacterSelectScreenPatches.characters[3].reskinCount].SHOULDER2,
+                CharacterSelectScreenPatches.characters[3].skins[CharacterSelectScreenPatches.characters[3].reskinCount].CORPSE,
+                getLoadout(), 10.0F, -20.0F, 300.0F, 300.0F, new EnergyManager(3));
 
-        if (!reskinContent.sneckoReskinAnimation) {
-            initializeClass(null,
-                    SHOULDER1,
-                    SHOULDER2,
-                    CORPSE,
-                    getLoadout(), 10.0F, -20.0F, 300.0F, 300.0F, new EnergyManager(3));
-        } else {
-            initializeClass(null,
-                    "reskinContent/img/SneckoMod/shoulder2.png",
-                    "reskinContent/img/SneckoMod/shoulder.png",
-                    "reskinContent/img/SneckoMod/corpse.png",
-                    getLoadout(), 10.0F, -20.0F, 300.0F, 300.0F, new EnergyManager(3));
-        }
+//        if (CharacterSelectScreenPatches.characters[3].isOriginal()) {
+//            initializeClass(null,
+//                    SHOULDER1,
+//                    SHOULDER2,
+//                    CORPSE,
+//                    getLoadout(), 10.0F, -20.0F, 300.0F, 300.0F, new EnergyManager(3));
+//        } else {
+//            initializeClass(null,
+//                    "reskinContent/img/SneckoMod/SSSSnecko/shoulder2.png",
+//                    "reskinContent/img/SneckoMod/SSSSnecko/shoulder.png",
+//                    "reskinContent/img/SneckoMod/SSSSnecko/corpse.png",
+//                    getLoadout(), 10.0F, -20.0F, 300.0F, 300.0F, new EnergyManager(3));
+//        }
 
 
         dialogX = (drawX + 0.0F * Settings.scale);
@@ -77,11 +83,10 @@ public class TheSnecko extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if (reskinContent.sneckoReskinAnimation && reskinContent.sneckoReskinUnlock) {
-            loadAnimation("reskinContent/img/SneckoMod/animation/Snecko_waifu.atlas", "reskinContent/img/SneckoMod/animation/Snecko_waifu.json", renderscale);
-        } else {
-            loadAnimation("sneckomodResources/images/char/skeleton.atlas", "sneckomodResources/images/char/skeleton.json", renderscale);
-        }
+        this.loadAnimation(
+                CharacterSelectScreenPatches.characters[3].skins[CharacterSelectScreenPatches.characters[3].reskinCount].atlasURL,
+                CharacterSelectScreenPatches.characters[3].skins[CharacterSelectScreenPatches.characters[3].reskinCount].jsonURL,
+                CharacterSelectScreenPatches.characters[3].skins[CharacterSelectScreenPatches.characters[3].reskinCount].renderscale);
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
@@ -97,31 +102,9 @@ public class TheSnecko extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(NAMES[0], TEXT[0],
-                90, 90, 0, 99, 5, this, getStartingRelics(),
+                85, 85, 3, 99, 5, this, getStartingRelics(),
                 getStartingDeck(), false);
     }
-
-
-    @Override
-    public ArrayList<AbstractCard> getCardPool(ArrayList<AbstractCard> tmpPool) {
-        if (ModHelper.isModEnabled("Red Cards")) {
-            CardLibrary.addRedCards(tmpPool);
-        }
-        if (ModHelper.isModEnabled("Green Cards")) {
-            CardLibrary.addGreenCards(tmpPool);
-        }
-
-        if (ModHelper.isModEnabled("Blue Cards")) {
-            CardLibrary.addBlueCards(tmpPool);
-        }
-
-        if (ModHelper.isModEnabled("Purple Cards")) {
-            CardLibrary.addPurpleCards(tmpPool);
-        }
-
-        return super.getCardPool(tmpPool);
-    }
-
 
     @Override
     public ArrayList<String> getStartingDeck() {
@@ -129,6 +112,7 @@ public class TheSnecko extends CustomPlayer {
         retVal.add(Strike.ID);
         retVal.add(Strike.ID);
         retVal.add(Strike.ID);
+        retVal.add(Defend.ID);
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
@@ -159,7 +143,7 @@ public class TheSnecko extends CustomPlayer {
 
     @Override
     public int getAscensionMaxHPLoss() {
-        return 7;
+        return 8;
     }
 
     @Override
@@ -184,8 +168,7 @@ public class TheSnecko extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        ArrayList<AbstractCard> cardList = new ArrayList<>(CardLibrary.getAllCards());
-        return cardList.get(AbstractDungeon.cardRandomRng.random(cardList.size() - 1));
+        return OffclassHelper.getARandomOffclass();
     }
 
     @Override
@@ -222,6 +205,7 @@ public class TheSnecko extends CustomPlayer {
         return ImageMaster.loadImage(SneckoMod.getModID() + "Resources/images/charSelect/leaderboard.png");
     }
     */
+
 
     @Override
     public String getSpireHeartText() {

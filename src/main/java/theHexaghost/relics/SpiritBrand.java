@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theHexaghost.HexaMod;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.util.OnChargeSubscriber;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 import static theHexaghost.HexaMod.makeRelicOutlinePath;
 import static theHexaghost.HexaMod.makeRelicPath;
@@ -40,7 +40,7 @@ public class SpiritBrand extends CustomRelic implements OnChargeSubscriber {
     public void onCharge(AbstractGhostflame g) {
         if (!activated) {
             flash();
-            addToBot(new GainBlockAction(AbstractDungeon.player, 6));
+            addToBot(new GainBlockAction(AbstractDungeon.player, 4));
            // addToBot(new GainEnergyAction(1));
             activated = true;
             stopPulse();

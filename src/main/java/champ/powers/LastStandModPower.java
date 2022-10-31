@@ -20,7 +20,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.GainPowerEffect;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 import java.util.ArrayList;
 

@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.curses.Doubt;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
@@ -76,11 +77,13 @@ public class Serpent_Evil extends AbstractImageEvent {
                     this.imageEventText.loadImage(downfallMod.assetPath("images/events/liarsGame2.png"));
 
                     this.screen = CUR_SCREEN.AGREE;
+                    AbstractEvent.logMetricGainGoldAndCard(ID, "Punch", this.curse, this.goldReward);
                 } else {
                     this.imageEventText.updateBodyText(DISAGREE_DIALOG);
                     this.imageEventText.removeDialogOption(1);
                     this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                     this.screen = CUR_SCREEN.DISAGREE;
+                    AbstractEvent.logMetricIgnored(ID);
                 }
                 break;
             default:

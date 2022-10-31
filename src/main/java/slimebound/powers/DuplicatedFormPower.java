@@ -79,13 +79,6 @@ public class DuplicatedFormPower extends AbstractPower {
         SlimeboundMod.spritealtered = true;
         AbstractPlayer p = AbstractDungeon.player;
 
-        for (AbstractOrb o : AbstractDungeon.player.orbs) {
-            if (o instanceof SpawnedSlime) {
-                SpawnedSlime s = (SpawnedSlime) o;
-                s.applyFocus();
-            }
-        }
-
         AbstractDungeon.effectsQueue.add(new SmokePuffEffect(p.hb.cX, p.hb.cY));
         VFX = new DoubleSlimeParticle(AbstractDungeon.player);
         AbstractDungeon.actionManager.addToBottom(new VFXAction(VFX));

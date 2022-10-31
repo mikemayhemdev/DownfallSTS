@@ -7,6 +7,8 @@ import theHexaghost.HexaMod;
 import theHexaghost.actions.RetractAction;
 import theHexaghost.powers.PastPower;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 public class GhostOfSpirePast extends AbstractHexaCard {
 
     public final static String ID = makeID("GhostOfSpirePast");
@@ -16,10 +18,11 @@ public class GhostOfSpirePast extends AbstractHexaCard {
     private static final int MAGIC = 1;
 
     public GhostOfSpirePast() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        HexaMod.loadJokeCardImage(this, "GhostOfSpirePast.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -30,9 +33,7 @@ public class GhostOfSpirePast extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            isInnate = true;
-            initializeDescription();
+            upgradeBaseCost(1);
         }
     }
 }

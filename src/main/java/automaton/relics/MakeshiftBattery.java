@@ -1,7 +1,8 @@
 package automaton.relics;
 
 import automaton.AutomatonMod;
-import automaton.util.TextureLoader;
+import com.megacrit.cardcrawl.cards.status.Slimed;
+import downfall.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
@@ -35,7 +36,7 @@ public class MakeshiftBattery extends CustomRelic {
     @Override
     public void atTurnStartPostDraw() {
         flash();
-        addToBot(new MakeTempCardInDiscardAction(SneckoMod.getRandomStatus(), 1));
+        addToBot(new MakeTempCardInDiscardAction(new Slimed(), 1));
     }
 
     @Override

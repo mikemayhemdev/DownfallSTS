@@ -53,6 +53,11 @@ public class CrystalForge extends AbstractImageEvent {
     private boolean pickCardForTransmute = false;
     private AbstractGuardianCard cardChosen = null;
     private AbstractGuardianCard gemChosen = null;
+    private ArrayList<String> cardsRemoved = new ArrayList<>();
+    private ArrayList<String> cardsTransformed = new ArrayList<>();
+    private ArrayList<String> cardsAdded = new ArrayList<>();
+    private ArrayList<String> cardsUpgraded = new ArrayList<>();
+
 
     public CrystalForge() {
         super(NAME, INTRO, GuardianMod.getResourcePath("/events/grimForge.jpg"));
@@ -106,6 +111,7 @@ public class CrystalForge extends AbstractImageEvent {
             AbstractDungeon.effectsQueue.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy()));
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             this.pickCardForGemRemoval = false;
+            cardsUpgraded.add(c.cardID);
             updateEnhance();
         } else if (this.pickCardForSalvageGems && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
@@ -147,6 +153,9 @@ public class CrystalForge extends AbstractImageEvent {
                     case "YELLOW":
                         rewardGemCards.add(new Gem_Yellow());
                         break;
+                    case "LIGHTBLUE":
+                        rewardGemCards.add(new Gem_Lightblue());
+                        break;
                 }
             }
 
@@ -156,23 +165,28 @@ public class CrystalForge extends AbstractImageEvent {
             for (int i = 0; i < rewardGemCards.size(); i++) {
                 AbstractCard c2 = rewardGemCards.get(i);
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c2, (float) (Settings.WIDTH * (0.2 * (i + 1))), (float) (Settings.HEIGHT / 2)));
-
+                cardsAdded.add(c2.cardID);
             }
 
 
             AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, (float) (Settings.WIDTH * 0.2), (float) (Settings.HEIGHT / 2)));
             AbstractDungeon.player.masterDeck.removeCard(c);
+            cardsRemoved.add(c.cardID);
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             this.pickCardForSalvageGems = false;
             updateEnhance();
         } else if (this.pickCardForTransmute && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            ArrayList<AbstractCard> gems = GuardianMod.getRewardGemCards(false, 1);
+            AbstractCard gem = GuardianMod.getRewardGemCards(false, 1).get(0);
 
-            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(gems.get(0), (float) (Settings.WIDTH * .3), (float) (Settings.HEIGHT / 2)));
+            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(gem, (float) (Settings.WIDTH * .3), (float) (Settings.HEIGHT / 2)));
 
-            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(AbstractDungeon.gridSelectScreen.selectedCards.get(0), (float) (Settings.WIDTH * .7), (float) (Settings.HEIGHT / 2)));
-            AbstractDungeon.player.masterDeck.removeCard(AbstractDungeon.gridSelectScreen.selectedCards.get(0));
+            AbstractCard removedCard = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(removedCard, (float) (Settings.WIDTH * .7), (float) (Settings.HEIGHT / 2)));
+            AbstractDungeon.player.masterDeck.removeCard(removedCard);
+
+            cardsRemoved.add(removedCard.cardID);
+            cardsTransformed.add(gem.cardID);
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             this.pickCardForTransmute = false;
@@ -192,9 +206,13 @@ public class CrystalForge extends AbstractImageEvent {
             cardChosen.addGemToSocket(gemChosen);
             AbstractDungeon.effectList.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
             AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(cardChosen.makeStatEquivalentCopy()));
+            this.imageEventText.updateBodyText(ENHANCE);
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             GuardianMod.gridScreenForSockets = false;
+            cardsUpgraded.add(cardChosen.cardID);
+            cardsRemoved.add(gemChosen.cardID);
+
             updateEnhance();
         }
 
@@ -248,7 +266,6 @@ public class CrystalForge extends AbstractImageEvent {
                     case 3:
                         GuardianMod.gridScreenForGems = true;
                         AbstractDungeon.gridSelectScreen.open(GuardianMod.getGemCards(), 1, DESCRIPTIONS[8], false, false, true, false);
-                        this.imageEventText.updateBodyText(ENHANCE);
 
                         break;
                     case 4:
@@ -256,6 +273,8 @@ public class CrystalForge extends AbstractImageEvent {
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.updateBodyText(LEAVE);
                         this.imageEventText.setDialogOption(OPTIONS[5]);
+                        logMetric(ID, "Forged", cardsAdded, cardsRemoved, cardsTransformed, cardsUpgraded, null, null, null,
+                                0, 0, 0, 0, 0, 0);
 
                         break;
                 }

@@ -18,6 +18,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.cards.Darklings;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class DarklingsSlimebound extends AbstractEvent {
     private static final Logger logger = LogManager.getLogger(DarklingsSlimebound.class.getName());
     public static final String ID = "Slimebound:Darklings";
@@ -27,10 +30,24 @@ public class DarklingsSlimebound extends AbstractEvent {
     public static final String[] OPTIONS;
     private int screenNum = 0;
 
+    ArrayList<AbstractCard> validCards;
     public DarklingsSlimebound() {
         this.body = DESCRIPTIONS[0];// 43
+        validCards = new ArrayList<>();
+        for (AbstractCard c: AbstractDungeon.player.masterDeck.group){
+            if (c.rarity == AbstractCard.CardRarity.RARE){
+                validCards.add(c);
+            }
+        }
+
         this.roomEventText.addDialogOption(OPTIONS[1]);// 47
-        this.roomEventText.addDialogOption(OPTIONS[0], CardLibrary.getCopy(Darklings.ID));// 45
+
+        if (validCards.size() > 0){
+            this.roomEventText.addDialogOption(OPTIONS[0] + validCards.get(0).name + OPTIONS[3], CardLibrary.getCopy(Darklings.ID));// 45
+        } else {
+            this.roomEventText.addDialogOption(OPTIONS[4],true);// 45
+        }
+
         AbstractDungeon.getCurrRoom().phase = RoomPhase.EVENT;// 48
         this.hasDialog = true;// 49
         this.hasFocus = true;// 50
@@ -48,6 +65,7 @@ public class DarklingsSlimebound extends AbstractEvent {
         switch (buttonPressed) {// 62
             case 0:
                 if (this.screenNum == 0) {// 65
+                    logMetric(ID, "Fight");
                     AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("3 Darklings");// 66
                     this.roomEventText.updateBodyText(DESCRIPTIONS[1]);// 68
                     this.roomEventText.updateDialogOption(0, OPTIONS[2]);// 69
@@ -62,7 +80,16 @@ public class DarklingsSlimebound extends AbstractEvent {
                 return;// 92
             case 1:
                 AbstractCard bonus = new Darklings();// 956
-                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(bonus, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 99
+                AbstractCard cardRemoved = validCards.get(0);
+                AbstractDungeon.effectList.add(new com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect(
+                        cardRemoved, Settings.WIDTH * 0.35F, com.megacrit.cardcrawl.core.Settings.HEIGHT / 2));
+
+
+                AbstractDungeon.player.masterDeck.removeCard(cardRemoved);
+                logMetric(ID, "Recruit", Collections.singletonList(bonus.cardID), Collections.singletonList(cardRemoved.cardID), null, null,
+                        null, null, null,
+                        0, 0, 0, 0, 0, 0);
+                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(bonus, (float) Settings.WIDTH * 0.65F, (float) Settings.HEIGHT / 2.0F));// 99
                 this.roomEventText.updateBodyText(DESCRIPTIONS[2]);// 101
                 this.roomEventText.updateDialogOption(0, OPTIONS[2]);// 102
                 this.roomEventText.removeDialogOption(1);// 103

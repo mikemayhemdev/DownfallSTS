@@ -1,22 +1,54 @@
 {
   "downfall:WorldOfGoo": {
-    "NAME": "끈끈한 세계",
-    "DESCRIPTION": "막히지 않는 피해를 줄때마다, 점액투성이 상태이상을 버린 카드더미에 추가합니다."
+    "NAME": "끈적이 천지",
+    "DESCRIPTION": "막히지 않은 피해를 받을 때마다 점액투성이 상태이상을 버린 카드 더미에 넣고 섞습니다."
   },
   "downfall:Hexed": {
-    "NAME": "주문걸림",
-    "DESCRIPTION": "벨벳 초커와 함께 시작합니다. 카드를 뽑으면, 소멸합니다."
+    "NAME": "육각으로",
+    "DESCRIPTION": "벨벳 초커를 가지고 시작합니다. 뽑은 카드에 휘발성 효과가 추가됩니다."
   },
   "downfall:Improvised": {
-    "NAME": "변칙적임",
-    "DESCRIPTION": "알 수 없는 카드 10 장과 함께 시작합니다."
+    "NAME": "즉흥적",
+    "DESCRIPTION": "미확인 카드를 10장 가진 채로 시작합니다."
   },
   "downfall:Jewelcrafting": {
-    "NAME": "보석제작중",
-    "DESCRIPTION": "Start with two copies of Exploit Gem and a Pick of Rhapsody."
+    "NAME": "보석세공",
+    "DESCRIPTION": "복사한 보석 활용 2장과 광시곡의 곡괭이를 가진 채로 시작합니다."
   },
   "downfall:EvilRun": {
-    "NAME": "악의 도망",
-    "DESCRIPTION": "악의 도망 컨텐츠를 활성화합니다."
+    "NAME": "악마의 도전",
+    "DESCRIPTION": "악마의 도전 컨텐츠를 활성화합니다."
+  },
+  "downfall:ExchangeController": {
+    "NAME": "축복받은",
+    "DESCRIPTION": "니오우의 축복을 가지고 시작합니다."
+  },
+  "downfall:Lament": {
+    "NAME": "비탄",
+    "DESCRIPTION": "니오우의 비탄을 가지고 시작합니다."
+  },
+  "downfall:ChampStances": {
+    "NAME": "새로운 도전자",
+    "DESCRIPTION": "투사의 무작위 자세를 취한 채 전투를 시작합니다. 마무리 타격을 얻습니다. 모든 기본 카드에 기술 효과가 추가됩니다."
+  },
+  "downfall:Enraging": {
+    "NAME": "최후의 저항",
+    "DESCRIPTION": "적들의 체력이 50% 이하가 되면 다음 턴에 힘을 얻고 모든 해로운 효과를 제거합니다."
+  },
+  "downfall:Analytical": {
+    "NAME": "분석가",
+    "DESCRIPTION": "매 턴 시작 시 무작위 부호화 카드를 얻습니다. 그 카드에는 휘발성 효과가 추가됩니다. 시작 타격과 수비에 부호화 효과가 추가됩니다."
+  },
+  "downfall:StatusAbuse": {
+    "NAME": "고장 수리",
+    "DESCRIPTION": "임시변통 전지, 도누의 기계 부품, 데카의 기계 부품, 구급 상자, 청동 우상을 가진 채로 시작합니다. 다른 유물은 모두 관으로 교체합니다."
+  },
+  "downfall:TooManyShivs": {
+    "NAME": "너무 많은 단도",
+    "DESCRIPTION": "벨벳 초커, 공허의 본질, 단도 10장을 가진 채로 시작합니다."
+  },
+  "downfall:Wizzardry": {
+    "NAME": "마아아법",
+    "DESCRIPTION": "마법사 모자, 마법사 지팡이, 복사한 마법 기술 1장을 가진 채 시작합니다."
   }
 }

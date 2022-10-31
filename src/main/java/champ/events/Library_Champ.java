@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import downfall.downfallMod;
 import downfall.events.FaceTrader_Evil;
 
 import java.util.ArrayList;
@@ -70,7 +71,7 @@ public class Library_Champ extends AbstractImageEvent {
         super.update();
         if (this.pickCard && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             AbstractCard c = ((AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0)).makeCopy();
-            logMetricObtainCard("The Library", "Read", c);
+            logMetricObtainCard(ID, "Read", c);
             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
         }
@@ -137,7 +138,7 @@ public class Library_Champ extends AbstractImageEvent {
                     case 1:
                         this.imageEventText.updateBodyText(SLEEP_RESULT);
                         AbstractDungeon.player.heal(this.healAmt, true);
-                        logMetricHeal("The Library", "Heal", this.healAmt);
+                        logMetricHeal(ID, "Heal", this.healAmt);
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                         this.imageEventText.clearRemainingOptions();
@@ -145,6 +146,8 @@ public class Library_Champ extends AbstractImageEvent {
                     case 2:
                         AbstractRelic r = this.getRandomFace();
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, r);
+                        downfallMod.removeAnyRelicFromPools(r.relicId);
+                        logMetricObtainRelic(ID, "Seek", r);
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);

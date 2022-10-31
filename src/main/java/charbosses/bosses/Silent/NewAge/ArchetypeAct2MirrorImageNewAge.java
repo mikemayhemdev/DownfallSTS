@@ -1,6 +1,8 @@
 package charbosses.bosses.Silent.NewAge;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Silent.ArchetypeBaseSilent;
+import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnJAX;
 import charbosses.cards.colorless.EnShiv;
@@ -8,9 +10,17 @@ import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnDecay;
 import charbosses.cards.green.*;
 import charbosses.cards.purple.EnFlyingSleeves;
+import charbosses.powers.bossmechanicpowers.IroncladStatusPower;
+import charbosses.powers.bossmechanicpowers.SilentMirrorImagePower;
+import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
 import charbosses.relics.*;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.WeakPower;
 
 import java.util.ArrayList;
 
@@ -18,11 +28,20 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
 
     public ArchetypeAct2MirrorImageNewAge() {
         super("SI_MIRROR_ARCHETYPE", "Mirror");
-        bossMechanicName = bossMechanicString.DIALOG[10];
-        bossMechanicDesc = bossMechanicString.DIALOG[11];
 
-        maxHPModifier += 220;
+        maxHPModifier += 240;
         actNum = 2;
+        bossMechanicName = SilentMirrorImagePower.NAME;
+        bossMechanicDesc = SilentMirrorImagePower.DESC[0];
+    }
+
+    @Override
+    public void addedPreBattle() {
+        super.addedPreBattle();
+        CharBossSilent p = (CharBossSilent) AbstractCharBoss.boss;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SilentMirrorImagePower(p)));
+
+      //  p.spawnImage(false);
     }
 
     public void initialize() {
@@ -31,7 +50,7 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
 
         addRelic(new CBR_NeowsBlessing());
         // addRelic(new CBR_BagOfPreparation());
-        addRelic(new CBR_Ginger());
+        addRelic(new CBR_BagOfMarbles());  //Swapped in from Ginger because the mirror image can't be affected by Ginger.  Gives away the trick due to the debuff animation.
         addRelic(new CBR_Anchor());
         addRelic(new CBR_PaperKrane());
         // addRelic(new CBR_DreamCatcher());
@@ -77,7 +96,7 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
                     //Turn 4
                     addToList(cardsList, new EnFootwork()); //Removed
                     addToList(cardsList, new EnLegSweep()); //Removed
-                    addToList(cardsList, new EnRiddleWithHoles(), extraUpgrades);  //Not played here
+                    addToList(cardsList, new EnRiddleWithHoles());  //Not played here
                     turn = 0;
                     looped = true;
                     break;
@@ -88,7 +107,7 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
             switch (turn) {
                 case 0:
                     addToList(cardsList, new EnJAX(), true);
-                    addToList(cardsList, new EnDeflect());
+                    addToList(cardsList, new EnDeflect(), extraUpgrades);
                     addToList(cardsList, new EnDecay());  //Not played here
                     turn++;
                     break;
@@ -106,7 +125,7 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
                     break;
                 case 3:
                     addToList(cardsList, new EnLegSweep()); //Removed
-                    addToList(cardsList, new EnRiddleWithHoles(), extraUpgrades);  //Not played here
+                    addToList(cardsList, new EnRiddleWithHoles());  //Not played here
                     addToList(cardsList, new EnBlur());
                     turn = 0;
                     break;
@@ -118,6 +137,6 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_PenNib());
+        addRelic(new CBR_OddlySmoothStone());
     }
 }

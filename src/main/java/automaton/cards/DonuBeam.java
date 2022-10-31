@@ -20,16 +20,18 @@ public class DonuBeam extends AbstractBronzeCard {
 
     public DonuBeam() {
         super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseDamage = 8;
-        baseMagicNumber = magicNumber = 2;
+        baseDamage = 5;
+        baseMagicNumber = magicNumber = 1;
+        baseAuto = auto = 1;
         thisEncodes();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < magicNumber; i++) {
             AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY, new Color(MathUtils.random(0, 255), MathUtils.random(0, 255), MathUtils.random(0, 255), 1F)), 0.1F));
+            if (m != null)
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY, new Color(MathUtils.random(0, 255), MathUtils.random(0, 255), MathUtils.random(0, 255), 1F)), 0.1F));
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
         }
 
@@ -39,7 +41,7 @@ public class DonuBeam extends AbstractBronzeCard {
     public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
             applyToSelf(new StrengthPower(AbstractDungeon.player, magicNumber));
-            applyToSelf(new DexterityPower(AbstractDungeon.player, -1));
+          //  applyToSelf(new DexterityPower(AbstractDungeon.player, -auto));
         }
     }
 

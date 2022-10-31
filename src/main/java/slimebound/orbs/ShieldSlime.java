@@ -20,8 +20,8 @@ public class ShieldSlime
 
     public ShieldSlime() {
 
-        super(ID, new Color(0f, 1f, 1.00F, 100F), atlasString, skeletonString, false, false, 2, 0, true, new Color(0F, .4F, 1F, 1), SlimeFlareEffect.OrbFlareColor.LICKING, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDefend.png"));
-        this.debuffAmount = 2;
+        super(ID, new Color(0f, 1f, 1.00F, 100F), atlasString, skeletonString, false, false, 1, 3, true, new Color(0F, .4F, 1F, 1), SlimeFlareEffect.OrbFlareColor.LICKING, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDefend.png"));
+        this.debuffAmount = 3;
         this.extraFontColor = Color.ROYAL;
         spawnVFX();
 
@@ -29,14 +29,12 @@ public class ShieldSlime
 
 
     public void updateDescription() {
-        this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1] + (this.debuffAmount + this.debuffBonusAmount) + this.descriptions[2];
+        this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1] + (this.debuffAmount) + this.descriptions[2];
     }
 
 
     public void activateEffectUnique() {
-
-        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_LIGHT, this, false, false, false, 0, false, this.debuffAmount, false));
-
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_LIGHT, this, false, false, false, this.debuffAmount, false,0 , false));
     }
 
 

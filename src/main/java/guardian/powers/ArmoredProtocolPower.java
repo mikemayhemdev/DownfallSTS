@@ -8,9 +8,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.MetallicizePower;
+import guardian.stances.DefensiveMode;
 
 
-public class ArmoredProtocolPower extends AbstractGuardianPower implements DefensiveModeBooster {
+public class ArmoredProtocolPower extends AbstractGuardianPower {
     public static final String POWER_ID = "Guardian:ArmoredProtocolPower";
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
@@ -29,19 +30,15 @@ public class ArmoredProtocolPower extends AbstractGuardianPower implements Defen
         updateDescription();
     }
 
-    @Override
-    public void onEnter() {
-        flash();
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new MetallicizePower(AbstractDungeon.player, amount), amount));
-    }
 
-    @Override
-    public void onLeave() {
+    public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
         flash();
-        addToBot(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, MetallicizePower.POWER_ID, amount));
+        if (AbstractDungeon.player.stance instanceof DefensiveMode) {
+            addToBot(new com.megacrit.cardcrawl.actions.common.GainBlockAction(this.owner, this.owner, this.amount));
+        }
     }
 
     public void updateDescription() {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 }

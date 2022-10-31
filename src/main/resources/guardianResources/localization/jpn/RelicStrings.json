@@ -84,10 +84,10 @@
     "NAME": "Quantum Chamber",
     "FLAVOR": "You get the chicken by hatching the egg, not by smashing it.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a card. Start each combat with this card removed from your deck. At the start of your #b4th turn, return it and #b2 copies of it to your hand.",
+      "Upon pickup, choose a card. Start each combat with this card removed from your deck. At the start of your #b4th turn, return it and gain #b2 copies of it.",
       "Choose a card for ",
       "Start each combat with ",
-      " removed from your deck. At the start of your #b4th turn, return it and #b2 copies of it to your hand."
+      " removed from your deck. At the start of your #b4th turn, return it and gain #b2 copies of it."
     ]
   },
   "Guardian:TickHelperRelic": {

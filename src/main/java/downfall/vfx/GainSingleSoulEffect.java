@@ -48,7 +48,7 @@ public class GainSingleSoulEffect extends AbstractGameEffect {
         this.alpha = 0.0F;
         this.suctionTimer = 1F;
 
-        this.img = ImageMaster.loadImage(downfallMod.assetPath("images/ui/Souls.png"));
+        this.img = downfallMod.soulsImage;
 
         this.x = x - (float)this.img.getWidth() / 2.0F;
         this.y = y - (float)this.img.getHeight() / 2.0F;

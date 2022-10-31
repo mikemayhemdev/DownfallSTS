@@ -1,0 +1,10 @@
+{
+  "expansioncontent:BossPotion": {
+    "NAME": "Potion de boss",
+    "DESCRIPTIONS": [
+      "Choisissez #b1 carte parmi #b3 cartes #yBoss aléatoires à ajouter dans votre main, elle coûte #b0 ce tour.",
+      "Choisissez #b1 carte parmi #b3 cartes #yBoss aléatoires et ajoutez #b",
+      " copies dans votre main, elles coûtent #b0 ce tour."
+    ]
+  }
+}

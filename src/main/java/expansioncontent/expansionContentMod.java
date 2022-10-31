@@ -10,19 +10,34 @@ Daily/Custom Run modifiers.
  */
 
 import basemod.BaseMod;
+import basemod.ReflectionHacks;
 import basemod.helpers.RelicType;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
+import basemod.interfaces.OnPowersModifiedSubscriber;
+import basemod.interfaces.PostInitializeSubscriber;
 import basemod.interfaces.PostUpdateSubscriber;
+import champ.cards.AbstractChampCard;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.ui.campfire.WheelSpinButton;
 import downfall.util.CardIgnore;
+import expansioncontent.cards.AbstractExpansionCard;
+import expansioncontent.patches.CardColorEnumPatch;
+import expansioncontent.potions.BossPotion;
 import expansioncontent.relics.StudyCardRelic;
 import expansioncontent.util.CardFilter;
 import javassist.CtClass;
@@ -41,6 +56,8 @@ import java.util.Collection;
 public class expansionContentMod implements
         EditCardsSubscriber,
         EditRelicsSubscriber,
+        OnPowersModifiedSubscriber,
+        PostInitializeSubscriber,
         //EditStringsSubscriber,
         //EditKeywordsSubscriber,
         PostUpdateSubscriber {
@@ -68,11 +85,32 @@ public class expansionContentMod implements
     public static boolean teleportToWheelTime = false;
     private static String modID;
 
+    public static Color BOSS_CARD_COLOR = new Color(0.443F, 0.231F, 0.286F, 1);
+
     public expansionContentMod() {
         BaseMod.subscribe(this);
 
         modID = "expansioncontent";
 
+        BaseMod.addColor(CardColorEnumPatch.CardColorPatch.BOSS,
+                BOSS_CARD_COLOR, BOSS_CARD_COLOR, BOSS_CARD_COLOR, BOSS_CARD_COLOR, BOSS_CARD_COLOR, BOSS_CARD_COLOR, BOSS_CARD_COLOR,
+                "champResources/images/512/bg_attack_colorless.png", "champResources/images/512/bg_skill_colorless.png",
+                "champResources/images/512/bg_power_colorless.png", "champResources/images/512/card_champ_orb.png",
+                "champResources/images/1024/bg_attack_colorless.png", "champResources/images/1024/bg_skill_colorless.png",
+                "champResources/images/1024/bg_power_colorless.png","champResources/images/1024/card_champ_orb.png");
+    }
+
+    public static void loadJokeCardImage(AbstractCard card, String img) {
+        if (card instanceof AbstractExpansionCard) {
+            ((AbstractExpansionCard) card).betaArtPath = img;
+        }
+        Texture cardTexture;
+        cardTexture = hermit.util.TextureLoader.getTexture(getModID() + "Resources/images/betacards/" + img);
+        cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+        int tw = cardTexture.getWidth();
+        int th = cardTexture.getHeight();
+        TextureAtlas.AtlasRegion cardImg = new TextureAtlas.AtlasRegion(cardTexture, 0, 0, tw, th);
+        ReflectionHacks.setPrivate(card, AbstractCard.class, "jokePortrait", cardImg);
     }
 
     public static String makeCardPath(String resourcePath) {
@@ -182,10 +220,34 @@ public class expansionContentMod implements
     }
     */
 
+    //Got this from Jorb's Wanderer Mod, used for Hexaburn description
+    @Override
+    public void receivePowersModified() {
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT &&
+                !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            for (AbstractPower p : AbstractDungeon.player.powers) {
+                if (p instanceof OnPowersModifiedSubscriber) {
+                    ((OnPowersModifiedSubscriber) p).receivePowersModified();
+                }
+            }
+        }
+    }
+
 
     public void atb(AbstractGameAction q) {
         AbstractDungeon.actionManager.addToBottom(q);
     }
 
+    public void addPotions() {
+        BaseMod.addPotion(BossPotion.class, Color.MAROON, Color.MAROON, new Color(0x470000ff), BossPotion.POTION_ID);
+
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(BossPotion.POTION_ID);
+        }
+    }
+
+    public void receivePostInitialize() {
+        addPotions();
+    }
 
 }

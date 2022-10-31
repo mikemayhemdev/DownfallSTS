@@ -8,12 +8,13 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.BufferPower;
 import com.megacrit.cardcrawl.powers.EntanglePower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 
 public class ConstructModePower extends AbstractGuardianPower {
     public static final String POWER_ID = "Guardian:ConstructModePower";
     private static final int THORNS = 3;
-    public static PowerType POWER_TYPE = PowerType.DEBUFF;
+    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
 
     public ConstructModePower(AbstractCreature owner, int amount) {
@@ -32,29 +33,14 @@ public class ConstructModePower extends AbstractGuardianPower {
     }
 
     public void updateDescription() {
-        if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0];
-        } else {
-            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
-        }
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
     public void atStartOfTurn() {
-        if (this.amount == 1) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-
-        } else {
-            this.amount -= 1;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new EntanglePower(this.owner)));
-
+        if (AbstractDungeon.player.hasPower(BufferPower.POWER_ID)){
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, amount), amount));
         }
 
     }
 
-    @Override
-    public void onRemove() {
-        super.onRemove();
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new EntanglePower(this.owner)));
-
-    }
 }

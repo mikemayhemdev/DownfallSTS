@@ -26,6 +26,7 @@ public class EnTrip extends AbstractBossCard {
         super(ID, cardStrings.NAME, "colorless/skill/trip", 0, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.DEBUFF);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
+        artifactConsumedIfPlayed = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

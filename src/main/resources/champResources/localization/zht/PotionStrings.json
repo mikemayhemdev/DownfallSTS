@@ -1,0 +1,32 @@
+{
+  "champ:OpenerPotion": {
+    "NAME": "策略藥水",
+    "DESCRIPTIONS": [
+      "選擇一種進入 #y姿態 牌加入手牌。其耗能本回合為 #b0 。",
+      " 將 #b",
+      " 張復製品加入手牌。",
+      " 張復製品加入手牌。"
+    ]
+  },
+  "champ:TechniquePotion": {
+    "NAME": "瓶裝技術",
+    "DESCRIPTIONS": [
+      "觸發當前 #y姿態 的 #y技術 獎勵 #b",
+      " 次。"
+    ]
+  },
+  "champ:UltimateStancePotion": {
+    "NAME": "興奮劑",
+    "DESCRIPTIONS": [
+      "進入 #y終極姿態 #b",
+      " 回合。"
+    ]
+  },
+  "champ:CounterPotion": {
+    "NAME": "銳利特釀",
+    "DESCRIPTIONS": [
+      "獲得 #b",
+      " 層 #y反擊 。"
+    ]
+  }
+}

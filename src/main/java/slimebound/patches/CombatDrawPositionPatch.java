@@ -21,12 +21,12 @@ public class CombatDrawPositionPatch {
     public static class clusterCultists {
         public static void Prefix(MonsterGroup obj, AbstractMonster[] monsters) {
 
-            // SlimeboundMod.logger.info("Cultist cluster Patch hit.");
+            // //SlimeboundMod.logger.info("Cultist cluster Patch hit.");
             if (AbstractDungeon.player instanceof SlimeboundCharacter) {
-                // SlimeboundMod.logger.info("Cultist cluster Patch hit player is Slimebound.");
+                // //SlimeboundMod.logger.info("Cultist cluster Patch hit player is Slimebound.");
                 if (monsters.length == 3) {
                     if (monsters[2].id == AwakenedOne.ID && monsters[1].id == Cultist.ID && monsters[0].id == Cultist.ID) {
-                        // SlimeboundMod.logger.info("Cultist cluster Patch hit woke one found");
+                        // //SlimeboundMod.logger.info("Cultist cluster Patch hit woke one found");
 
                         //monsters[1].hb_x -= -100 * Settings.scale;
                         monsters[1].drawX -= -100 * Settings.scale;
@@ -37,7 +37,7 @@ public class CombatDrawPositionPatch {
                 }
                 if (monsters.length == 2) {
                     if (monsters[0].id == SpireShield.ID && monsters[1].id == SpireSpear.ID) {
-                        //SlimeboundMod.logger.info("Cultist cluster Patch hit Spire elites found");
+                        ////SlimeboundMod.logger.info("Cultist cluster Patch hit Spire elites found");
 
                         //monsters[1].hb_x -= -100 * Settings.scale;
                         monsters[1].drawX -= -150 * Settings.scale;

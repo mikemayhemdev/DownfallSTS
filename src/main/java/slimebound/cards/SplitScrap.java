@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.orbs.GreedOozeSlime;
+import slimebound.orbs.ScrapOozeSlime;
 import slimebound.patches.AbstractCardEnum;
 
 
@@ -39,10 +40,11 @@ public class SplitScrap extends AbstractSlimeboundCard {
 
         this.exhaust = true;
         this.selfRetain = true;
+        SlimeboundMod.loadJokeCardImage(this, "SplitScrap.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new GreedOozeSlime(), false, false));
+        AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ScrapOozeSlime(), false, false));
 
 
     }

@@ -6,6 +6,10 @@
 package downfall.events;
 
 import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.mod.widepotions.relics.WideBeastStatue;
+import com.evacipated.cardcrawl.mod.widepotions.relics.WidePotionBelt;
+import com.evacipated.cardcrawl.mod.widepotions.relics.WideToyOrnithopter;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -63,6 +67,7 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
             case INTRO:
                 switch (buttonPressed) {
                     case 0:
+                        logMetric(ID, "Punch");
                         this.screen = WomanInBlue_Evil.CurScreen.FIGHT;
                         AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(LadyInBlue.ID);
                         AbstractDungeon.getCurrRoom().rewards.clear();
@@ -72,9 +77,21 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
                         }
 
                         ArrayList<AbstractRelic> possRelics = new ArrayList<>();
-                        if (!AbstractDungeon.player.hasRelic(WhiteBeast.ID)) possRelics.add(new WhiteBeast());
-                        if (!AbstractDungeon.player.hasRelic(PotionBelt.ID)) possRelics.add(new PotionBelt());
-                        if (!AbstractDungeon.player.hasRelic(ToyOrnithopter.ID)) possRelics.add(new ToyOrnithopter());
+                        if(Loader.isModLoaded("widepotions")) {
+                            if (!AbstractDungeon.player.hasRelic(WhiteBeast.ID))
+                                possRelics.add(new WideBeastStatue());
+                            if (!AbstractDungeon.player.hasRelic(PotionBelt.ID))
+                                possRelics.add(new WidePotionBelt());
+                            if (!AbstractDungeon.player.hasRelic(ToyOrnithopter.ID))
+                                possRelics.add(new WideToyOrnithopter());
+                        } else {
+                            if (!AbstractDungeon.player.hasRelic(WhiteBeast.ID))
+                                possRelics.add(new WhiteBeast());
+                            if (!AbstractDungeon.player.hasRelic(PotionBelt.ID))
+                                possRelics.add(new PotionBelt());
+                            if (!AbstractDungeon.player.hasRelic(ToyOrnithopter.ID))
+                                possRelics.add(new ToyOrnithopter());
+                        }
 
                         if (possRelics.size() == 0) {
                             AbstractDungeon.getCurrRoom().addGoldToRewards(100);
@@ -93,6 +110,7 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
                                     break;
                             }
                             AbstractDungeon.getCurrRoom().addRelicToRewards(possRelics.get(0));
+                            downfallMod.removeAnyRelicFromPools(possRelics.get(0).relicId);
                         }
 
                         AbstractDungeon.getCurrRoom().addGoldToRewards(100);
@@ -109,10 +127,14 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                             CardCrawlGame.screenShake.shake(ShakeIntensity.MED, ShakeDur.MED, false);
                             CardCrawlGame.sound.play("BLUNT_FAST");
-                            AbstractDungeon.player.damage(new DamageInfo(null, MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.05F), DamageType.HP_LOSS));
+                            int damage = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.05F);
+                            logMetricTakeDamage(ID, "Get Punched", damage);
+                            AbstractDungeon.player.damage(new DamageInfo(null, damage, DamageType.HP_LOSS));
                         } else {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
+                            logMetricIgnored(ID);
                         }
+
                         break;
                     default:
                         this.imageEventText.clearRemainingOptions();

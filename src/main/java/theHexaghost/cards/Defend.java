@@ -2,6 +2,7 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 
 public class Defend extends AbstractHexaCard {
 
@@ -16,6 +17,7 @@ public class Defend extends AbstractHexaCard {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseBlock = BLOCK;
         tags.add(CardTags.STARTER_DEFEND);
+        HexaMod.loadJokeCardImage(this, "Defend.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

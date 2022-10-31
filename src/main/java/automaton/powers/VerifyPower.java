@@ -2,6 +2,7 @@ package automaton.powers;
 
 import automaton.cardmods.CardEffectsCardMod;
 import automaton.cards.FunctionCard;
+import automaton.vfx.FineTuningEffect;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -18,19 +19,25 @@ public class VerifyPower extends AbstractAutomatonPower {
     }
 
     @Override
-    public void onAfterCardPlayed(AbstractCard function) {
-        if (function instanceof FunctionCard) {
-            for (AbstractCardModifier m : CardModifierManager.getModifiers(function, CardEffectsCardMod.ID)) {
-                if (m instanceof CardEffectsCardMod) { // always true
-                    ((CardEffectsCardMod) m).stored().fineTune();
+    public void onCardDraw(AbstractCard card) {
+        if (card instanceof FunctionCard) {
+            for (int i = 0; i < amount; i++) {
+                AbstractDungeon.effectList.add(new FineTuningEffect(card));
+                for (AbstractCardModifier m : CardModifierManager.getModifiers(card, CardEffectsCardMod.ID)) {
+                    if (m instanceof CardEffectsCardMod) {
+                        ((CardEffectsCardMod) m).stored().fineTune(false);
+                    }
                 }
             }
-            function.superFlash();
         }
     }
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        if (amount == 1) {
+            description = DESCRIPTIONS[0];
+        } else
+            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+
     }
 }

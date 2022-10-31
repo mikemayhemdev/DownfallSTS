@@ -67,7 +67,7 @@ public class ScrapOozeSlimebound extends AbstractImageEvent {
 
 
         if (this.relicOffered != null) {
-            this.imageEventText.setDialogOption(OPTIONSALT[0] + this.relicOffered.name + OPTIONSALT[1]);
+            this.imageEventText.setDialogOption(OPTIONSALT[0] + this.relicOffered.name + OPTIONSALT[1], new ScrapOozeRelic());
         } else {
             this.imageEventText.setDialogOption(OPTIONSALT[4], true);
         }
@@ -95,7 +95,7 @@ public class ScrapOozeSlimebound extends AbstractImageEvent {
                         if (random >= 99 - this.relicObtainChance) {
                             this.imageEventText.updateBodyText(SUCCESS_MSG);
                             AbstractRelic r = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());
-                            AbstractEvent.logMetricObtainRelicAndDamage("Scrap Ooze", "Success", r, this.totalDamageDealt);
+                            AbstractEvent.logMetricObtainRelicAndDamage(ID, "Success", r, this.totalDamageDealt);
                             this.imageEventText.clearAllDialogs();
                             this.imageEventText.setDialogOption(OPTIONS[3]);
                             this.screenNum = 1;
@@ -113,13 +113,15 @@ public class ScrapOozeSlimebound extends AbstractImageEvent {
                     case 1:
                         AbstractDungeon.player.loseRelic(this.relicOffered.relicId);
                         imageEventText.updateBodyText(DESCRIPTIONSALT[0]);
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f, RelicLibrary.getRelic(ScrapOozeRelic.ID).makeCopy());
+                        AbstractRelic relic = RelicLibrary.getRelic(ScrapOozeRelic.ID).makeCopy();
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f, relic);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[3]);
                         this.screenNum = 1;
+                        logMetricRelicSwap(ID, "Recruit", relic, this.relicOffered);
                         return;
                     case 2:
-                        AbstractEvent.logMetricTakeDamage("Scrap Ooze", "Fled", this.totalDamageDealt);
+                        AbstractEvent.logMetricTakeDamage(ID, "Fled", this.totalDamageDealt);
                         this.imageEventText.updateBodyText(ESCAPE_MSG);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[3]);

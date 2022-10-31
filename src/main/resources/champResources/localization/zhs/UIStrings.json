@@ -1,24 +1,24 @@
 {
   "champ:SealCommonReward": {
     "TEXT": [
-      "Add a Common card to your deck"
+      "将一张普通牌加入牌组。"
     ]
   },
   "champ:SealSealReward": {
     "TEXT": [
-      "Add a Seal to your deck"
+      "将一张容器牌加入牌组。"
     ]
   },
   "champ:TechniqueMod": {
     "TEXT": [
-      " champ:技术 。 NL "
+      " NL 获得 champ:技术 奖励。"
     ]
   },
   "champ:OpenerMod": {
     "TEXT": [
-      " champ:狂战 champ:起手 。 NL ",
-      " champ:防守 champ:起手 。 NL ",
-      " champ:角斗 champ:起手 。 NL "
+      " NL 进入 champ:战狂 。 ",
+      " NL 进入 champ:防守 。",
+      " NL 进入 *角斗 。"
     ]
   },
   "champ:RetainCardMod": {
@@ -28,9 +28,17 @@
   },
   "champ:EnchantUI": {
     "TEXT": [
-      "Choose a card to cost 0.",
-      "Choose a card to increase damage.",
-      "Choose a card to increase Block."
+      "选择一张牌耗能变为0",
+      "选择一张牌提高伤害",
+      "选择一张牌提高格挡"
+    ]
+  },
+  "champ:highlightCombos": {
+    "TEXT": [
+      "champ:战狂 champ:连段 ：",
+      "[#5ebf2a]战狂 champ:连段 ：",
+      "champ:防守 champ:连段 ：",
+      "[#5ebf2a]防守 champ:连段 ："
     ]
   }
 }

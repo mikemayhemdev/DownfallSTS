@@ -6,6 +6,7 @@ import basemod.ReflectionHacks;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
@@ -28,11 +29,16 @@ public class FunctionCard extends AbstractBronzeCard {
     public String textPrefix = "";
 
     public FunctionCard() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ALL);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ALL);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.setPortraitTextures("bronzeResources/images/512/frame_function.png", "bronzeResources/images/1024/frame_function.png");
         this.setBackgroundTexture("bronzeResources/images/512/bg_skill_function.png", "bronzeResources/images/1024/bg_skill_function.png");
         doNothingSpecificInParticular();
+    }
+
+    @Override
+    protected Texture getPortraitImage() {
+        return null;
     }
 
     @Override
@@ -54,25 +60,30 @@ public class FunctionCard extends AbstractBronzeCard {
                 return true;
             } else if (x == 2 && q instanceof Separator && AbstractDungeon.player != null && AbstractDungeon.player.hasRelic(ElectromagneticCoil.ID)) {
                 x++;
-            }
-            else if (x == 3 && q instanceof Terminator) {
+            } else if (x == 3 && q instanceof Terminator) {
                 return true;
             }
         }
         return false; // Madness code!
     }
 
+    public boolean triplicateCheck() {
+        String cardIDBase = cards().get(0).cardID;
+        return cards().stream().allMatch(c -> c.cardID.equals(cardIDBase)) && cards().get(0).hasTriplicate();
+    }
+
     @Override
     public void doNothingSpecificInParticular() {
         if (textPrefix.equals("")) {
-            this.name = "function()"; //TODO: localize?
+            this.name = EXTENDED_DESCRIPTION[0];
         } else if (isPerfect()) {
-            this.name = "Perfection()"; //TODO: localize
+            this.name = EXTENDED_DESCRIPTION[1];
+        } else if (triplicateCheck()) {
+            this.name = cards().get(0).getTriplicate();
         } else {
-            this.name = textPrefix + "()";
+            this.name = textPrefix + EXTENDED_DESCRIPTION[2];
         }
         super.doNothingSpecificInParticular();
-
     }
 
     @SpireOverride
@@ -83,8 +94,8 @@ public class FunctionCard extends AbstractBronzeCard {
         ReflectionHacks.setPrivate(this, AbstractCard.class, "renderColor", blah);
     }
 
-    public ArrayList<AbstractCard> cards() {
-        ArrayList<AbstractCard> mCardList = new ArrayList<>();
+    public ArrayList<AbstractBronzeCard> cards() {
+        ArrayList<AbstractBronzeCard> mCardList = new ArrayList<>();
         for (AbstractCardModifier m : CardModifierManager.getModifiers(this, CardEffectsCardMod.ID)) {
             if (m instanceof CardEffectsCardMod) {
                 mCardList.add(((CardEffectsCardMod) m).stored());
@@ -108,6 +119,10 @@ public class FunctionCard extends AbstractBronzeCard {
     @Override
     public boolean canUpgrade() {
         return false;
+    }
+
+    @Override
+    public void upgrade() {
     }
 
     //Welcome to the tough part

@@ -42,31 +42,16 @@ public class TongueLash extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = 2;
+        this.baseDamage = 6;
         this.magicNumber = this.baseMagicNumber = 2;
 
 
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+       // this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public static int countCards() {
         int count = 0;
-        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
-            if (c.cardID.contains("Lick")) {
-                count++;
-            }
-        }
         for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
-            if (c.cardID.contains("Lick")) {
-                count++;
-            }
-        }
-        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
-            if (c.cardID.contains("Lick")) {
-                count++;
-            }
-        }
-        for (AbstractCard c : AbstractDungeon.player.hand.group) {
             if (c.cardID.contains("Lick")) {
                 count++;
             }
@@ -100,7 +85,7 @@ public class TongueLash extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeDamage(1);
+           // upgradeDamage(1);
             upgradeMagicNumber(1);
 
         }

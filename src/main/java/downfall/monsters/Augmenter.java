@@ -26,21 +26,10 @@ public class Augmenter extends AbstractMonster {
     boolean move2 = false;
 
     public Augmenter() {
-        super(NAME, ID, 100, HB_X, HB_Y, HB_W, HB_H, "downfallResources/images/monsters/augmenter/augmenter.png");
+        super(NAME, ID, 200, HB_X, HB_Y, HB_W, HB_H, "downfallResources/images/monsters/augmenter/augmenter.png");
         this.loadAnimation(downfallMod.assetPath("images/monsters/augmenter/augmenter.atlas"), downfallMod.assetPath("images/monsters/augmenter/augmenter.json"), 1.0F);
-        switch (AbstractDungeon.actNum) {
-            case 1:
-                setHp(140);
-                break;
-            case 2:
-                setHp(170);
-                break;
-            case 3:
-                setHp(200);
-                break;
-        }
 
-        this.damage.add(new DamageInfo(this, 10));
+        this.damage.add(new DamageInfo(this, 12));
         this.damage.add(new DamageInfo(this, 18));
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);

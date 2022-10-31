@@ -1,6 +1,6 @@
 package automaton.cards;
 
-import automaton.actions.ChosenAction;
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,20 +8,23 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 public class ChosenStrike extends AbstractBronzeCard {
 
     public final static String ID = makeID("ChosenStrike");
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 3;
 
     public ChosenStrike() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseDamage = DAMAGE + misc;
         baseMagicNumber = magicNumber = 1;
         thisEncodes();
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("ChosenStrike.png"));
     }
 
     @Override
@@ -33,7 +36,7 @@ public class ChosenStrike extends AbstractBronzeCard {
 
     @Override
     public String getSpecialCompileText() {
-        return "Increase #yChosen #yStrike's damage by #b" + magicNumber + " permanently.";  //TODO - Hardcoded string
+        return masterUI.TEXT[1] + magicNumber + masterUI.TEXT[2];
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -46,8 +49,7 @@ public class ChosenStrike extends AbstractBronzeCard {
             for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
                 if (c.uuid.equals(this.uuid)) {
                     c.misc += magicNumber;
-                    c.applyPowers();
-                    // c.baseDamage = c.misc;
+                    c.baseDamage = DAMAGE + misc;
                 }
             }
 
@@ -59,6 +61,8 @@ public class ChosenStrike extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeDamage(UPG_DAMAGE);
+        misc += 3;
+        upgradedDamage = true;
+        baseDamage = DAMAGE + misc;
     }
 }

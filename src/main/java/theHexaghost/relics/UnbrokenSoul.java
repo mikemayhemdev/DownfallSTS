@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theHexaghost.HexaMod;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.util.OnChargeSubscriber;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 import static theHexaghost.HexaMod.makeRelicOutlinePath;
 import static theHexaghost.HexaMod.makeRelicPath;
@@ -68,7 +68,7 @@ public class UnbrokenSoul extends CustomRelic implements OnChargeSubscriber {
     public void onCharge(AbstractGhostflame g) {
         if (!activated) {
             flash();
-            addToBot(new GainBlockAction(AbstractDungeon.player, 3));
+            //addToBot(new GainBlockAction(AbstractDungeon.player, 5));
             addToBot(new GainEnergyAction(1));
             activated = true;
             stopPulse();

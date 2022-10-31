@@ -1,10 +1,9 @@
 package automaton.cards;
 
-import automaton.actions.EasyXCostAction;
-import automaton.powers.ReturnPower;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.unique.DiscardPileToTopOfDeckAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.EnergizedBluePower;
 
 public class Return extends AbstractBronzeCard {
 
@@ -13,21 +12,17 @@ public class Return extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, uncommon
 
     public Return() {
-        super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        exhaust = true;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new EasyXCostAction(this, (effect, params) -> {
-            if (effect > 0)
-                applyToSelfTop(new ReturnPower(effect));
-            return true;
-        }));
-        atb(new GainEnergyAction(1));
+        atb(new DiscardPileToTopOfDeckAction(p));
+        applyToSelf(new EnergizedBluePower(p, magicNumber));
     }
 
     public void upp() {
-        exhaust = false;
+        upgradeMagicNumber(1);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

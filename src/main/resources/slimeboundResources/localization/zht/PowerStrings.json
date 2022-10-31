@@ -1,0 +1,528 @@
+{
+  "Slimebound:PotencyPower": {
+    "NAME": "潛力",
+    "DESCRIPTIONS": [
+      "你 #y分裂 的 #y史萊姆 造成的傷害增加 #b",
+      " 點，附加效果對應地被強化 #b",
+      " 。"
+    ]
+  },
+  "Slimebound:SlimedPower": {
+    "NAME": "黏液",
+    "DESCRIPTIONS": [
+      "對該敵人的下次 #y攻擊 造成額外 #b",
+      " 點傷害，並消耗所有 #y黏液 。"
+    ]
+  },
+    "Slimebound:PreventTackleDamagePower": {
+    "NAME": "防撞",
+    "DESCRIPTIONS": [
+      "你不會受到接下來 #b",
+      " 張 #y衝撞 牌的傷害。"
+    ]
+  },
+  "Slimebound:SplitDailyTriggerPower": {
+    "NAME": "史萊姆分裂",
+    "DESCRIPTIONS": [
+      "生命值低於50%時將會分裂為 #b2 只史萊姆，史萊姆具有 ",
+      " 當前的生命值。"
+    ]
+  },
+  "Slimebound:SplitDailyPower": {
+    "NAME": "要分裂啦",
+    "DESCRIPTIONS": [
+      "這個敵人本回合將要分裂。"
+    ]
+  },
+  "Slimebound:BuffAttackSlimesPower": {
+    "NAME": "升級：好鬥",
+    "DESCRIPTIONS": [
+      "好鬥史萊姆 造成的傷害增加 #b",
+      " 點。"
+    ]
+  },
+  "Slimebound:BuffPoisonSlimesPower": {
+    "NAME": "升級：酸液",
+    "DESCRIPTIONS": [
+      "酸液史萊姆 給予的 中毒 增加 ",
+      " 層。"
+    ]
+  },
+  "Slimebound:BuffSlimingSlimesPower": {
+    "NAME": "升級：汙泥",
+    "DESCRIPTIONS": [
+      "#y汙泥史萊姆 給予的 #y黏液 增加 #b",
+      " 層。"
+    ]
+  },
+  "Slimebound:BuffShieldSlimesPower": {
+    "NAME": "升級：水蛭",
+    "DESCRIPTIONS": [
+      "#y水蛭史萊姆 造成的傷害增加 #b",
+      " 點。"
+    ]
+  },
+  "Slimebound:HexSlimePerTurnPower": {
+    "NAME": "鬼火之力",
+    "DESCRIPTIONS": [
+      "下回合開始時 分裂 #y鬼火史萊姆 。",
+      "接下來的 #b",
+      " 回合，每回合開始時 分裂 #y鬼火史萊姆 。"
+    ]
+  },
+  "Slimebound:ProtectTheBoss": {
+    "NAME": "保護老大",
+    "DESCRIPTIONS": [
+      "阻擋你下次受到的攻擊傷害，變為 #y吸收 。",
+      "阻擋你下 #b",
+      " 次受到的攻擊傷害，變為 #y吸收 。"
+    ]
+  },
+  "Slimebound:SplitForLessPower": {
+    "NAME": "活性汙泥",
+    "DESCRIPTIONS": [
+      " 分裂 出需要的生命減少 ",
+      " 點。每回合將 ",
+      " 張隨機 #y分裂 牌加入你的手牌。",
+      " 張隨機 #y分裂 牌加入你的手牌。"
+    ]
+  },
+  "Slimebound:ComboAttackPower": {
+    "NAME": "身先士卒",
+    "DESCRIPTIONS": [
+      "每回合打出的首張 指向牌將 #y命令 。",
+      "每回合打出的前 #b",
+      " 張 指向牌將 #y命令 。",
+      " NL 本回合還能觸發 #b",
+      " 次。",
+      " 次。",
+      " NL 本回合不能再觸發了。"
+    ]
+  },
+  "Slimebound:RetainCardsOneTurnPower": {
+    "NAME": "伺機待發",
+    "DESCRIPTIONS": [
+      "在本回合保留",
+      " 張牌。",
+      " 張牌。"
+    ]
+  },
+  "Slimebound:EnergizedSlimeboundPower": {
+    "NAME": "能量提升",
+    "DESCRIPTIONS": [
+      "下回合獲得 #b",
+      " 點額外的 [E] 。",
+      " 點額外的 [E] 。",
+      " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
+    ]
+  },
+  "Slimebound:SelfFormingGooPower": {
+    "NAME": "革新",
+    "DESCRIPTIONS": [
+      "每當你 #y吸收 時，獲得 #b",
+      " 點 #y力量 。"
+    ]
+  },
+    "Slimebound:SelfFormingGooPowerPlus": {
+    "NAME": "革新+",
+    "DESCRIPTIONS": [
+      "每當你 #y吸收 時，獲得 #b",
+      " 點 #y敏捷 。"
+    ]
+  },
+  "Slimebound:LoseSlimesPower": {
+    "NAME": "超負荷",
+    "DESCRIPTIONS": [
+      "下回合所有 #y史萊姆 攻擊後， #y吸收 它們。",
+      " 回合後， #y吸收 所有史萊姆。"
+    ]
+  },
+  "Slimebound:TackleModifyDamagePower": {
+    "NAME": "撞傷",
+    "DESCRIPTIONS": [
+      "額外受到 #b",
+      " 點 #y衝撞 牌的自我傷害。"
+    ]
+  },
+  "Slimebound:LoseThornsPower": {
+    "NAME": "收回尖刺",
+    "DESCRIPTIONS": [
+      "下個回合開始時失去 #b",
+      " 層 #y荊棘 。"
+    ]
+  },
+  "Slimebound:SlimedThornsPower": {
+    "NAME": "活體墻壁",
+    "DESCRIPTIONS": [
+      "給予本回合攻擊你的敵人 #b",
+      " 層 #y黏液 。"
+    ]
+  },
+  "Slimebound:PreventSlimeDecayPower": {
+    "NAME": "浸入黏液",
+    "DESCRIPTIONS": [
+      "下次對該目標發動攻擊時， #y黏液 不會被移除。",
+      "下 #b",
+      " 次對該目標發動攻擊時， #y黏液 不會被移除。"
+    ]
+  },
+  "Slimebound:DuplicatedFormPower": {
+    "NAME": "增殖形態",
+    "DESCRIPTIONS": [
+      "每回合打出的首張指向牌將打出兩次。",
+      "每回合打出的前 #b",
+      " 張指向牌將打出兩次。"
+    ]
+  },
+  "Slimebound:DuplicatedFormNoHealPower": {
+    "NAME": "分裂",
+    "DESCRIPTIONS": [
+      "最大生命臨時減少了 #b",
+      " 點"
+    ]
+  },
+  "Slimebound:DuplicatedFormEnergyPower": {
+    "NAME": "增殖膨脹",
+    "DESCRIPTIONS": [
+      "每回合獲得 #b",
+      " [E] 。"
+    ]
+  },
+  "Slimebound:GluttonyPower": {
+    "NAME": "暴食",
+    "DESCRIPTIONS": [
+      "每回合首次 #y消耗黏液 時，將一張 #y舔舔 加入手牌。",
+      "每回合前 ",
+      " 次 #y消耗黏液 時，將一張 #y舔舔 加入手牌。",
+      " NL 本回合還能觸發 ",
+      " 次。",
+      " 次。",
+      " NL 本回合不再觸發。"
+    ]
+  },
+  "Slimebound:GluttonyPowerUpgraded": {
+    "NAME": "暴食+",
+    "DESCRIPTIONS": [
+      "每回合將 ",
+      " 張隨機 #y舔舔 牌加入你的手牌。",
+      " 張隨機 #y舔舔 牌加入你的手牌。"
+    ]
+  },
+  "Slimebound:PoisonThornsPower": {
+    "NAME": "酸性黏液",
+    "DESCRIPTIONS": [
+      "每當你攻擊具有 #y黏液 的目標時，給予 #b",
+      "  層 #y中毒 。"
+    ]
+  },
+  "Slimebound:SlimeRitualPower": {
+    "NAME": "儀式",
+    "DESCRIPTIONS": [
+      "回合開始時，獲得 #b",
+      " 點 #y力量 。"
+    ]
+  },
+  "Slimebound:RecyclingPower": {
+    "NAME": "回收",
+    "DESCRIPTIONS": [
+      "你的回合開始時，隨機 #y發掘 #b",
+      " 張 *舔舔 系牌。",
+      " 張 *舔舔 系牌。"
+    ]
+  },
+  "Slimebound:RecyclingPowerUpgraded": {
+    "NAME": "回收+",
+    "DESCRIPTIONS": [
+      "每當你 #y消耗 一張耗能為 #b0 的牌時，回復 #b",
+      " 點生命並抽一張牌。"
+    ]
+  },
+  "Slimebound:AcidTonguePower": {
+    "NAME": "酸性舌頭",
+    "DESCRIPTIONS": [
+      "給予 #y黏液 的同時，給予 #b",
+      " 層 #y中毒 。"
+    ]
+  },
+  "Slimebound:AcidTonguePowerUpgraded": {
+    "NAME": "黏液舌頭",
+    "DESCRIPTIONS": [
+      "給予 #y黏液 時額外給予 #b",
+      " 層。"
+    ]
+  },
+  "Slimebound:SelfDamageSlimedPower": {
+    "NAME": "黏液四濺",
+    "DESCRIPTIONS": [
+      "每當你失去生命時，給予隨機敵人 #b",
+      " 層 #y黏液 。"
+    ]
+  },
+  "Slimebound:TackleBuffPower": {
+    "NAME": "魯莽衝撞",
+    "DESCRIPTIONS": [
+      " #y衝撞 牌對敵人造成的傷害增加 #b",
+      " 點。"
+    ]
+  },
+  "Slimebound:PolyBeamAgainPower": {
+    "NAME": "切換光束",
+    "DESCRIPTIONS": [
+      "下回合開始時，打出 #y多重光束 。 ",
+      "接下來的 ",
+      "回合開始時，打出 #y多重光束 。"
+    ]
+  },
+  "Slimebound:PolyBeamAgainPowerUpgraded": {
+    "NAME": "切換光束+",
+    "DESCRIPTIONS": [
+      "下回合開始時，打出 #y多重光束+ 。 ",
+      "接下來的 ",
+      " 回合開始時，打出 #y多重光束+ 。"
+    ]
+  },
+  "Slimebound:FirmFortitudePower": {
+    "NAME": "感同身受",
+    "DESCRIPTIONS": [
+      "你的回合下一次即將失去生命時，一個隨機的敵人代你承受。",
+      "你的回合下 #b",
+      " 次即將失去生命時，一個隨機的敵人代你承受。",
+      " NL 本回合還能觸發 #b",
+      " 次。",
+      " 次。",
+      " 本回合不能再觸發了。"
+    ]
+  },
+  "Slimebound:NextTurnGainStrengthPower": {
+    "NAME": "蓄力",
+    "DESCRIPTIONS": [
+      "下回合，獲得 #b",
+      " 點 #y力量 。"
+    ]
+  },
+  "Slimebound:NextTurnGainSlimeCrush": {
+    "NAME": "準備撞擊",
+    "DESCRIPTIONS": [
+      "下回合，將一張 #y史萊姆猛擊 加入手牌。",
+      "下回合，將一張 #y史萊姆猛擊+ 加入手牌。",
+      "下回合，將 #b",
+      " 張 #y史萊姆猛擊 加入手牌。",
+      " 張 #y史萊姆猛擊+ 加入手牌。"
+    ]
+  },
+  "Slimebound:StunnedPower": {
+    "NAME": "精疲力盡",
+    "DESCRIPTIONS": [
+      "跳過你的下個回合。",
+      "跳過你接下來的 #b",
+      " 個回合。"
+    ]
+  },
+  "Slimebound:SearingPower": {
+    "NAME": "灼傷",
+    "DESCRIPTIONS": [
+      "每回合受到 ",
+      " 點傷害。"
+    ]
+  },
+  "Slimebound:NextTurnGainHyperBeam": {
+    "NAME": "準備射爆",
+    "DESCRIPTIONS": [
+      "下回合開始時，將一張 #y超能光束 加入手牌。",
+      "下回合開始時，將 #b",
+      " 張 #y超能光束 加入手牌。"
+    ]
+  },
+  "Slimebound:NextTurnGainDivider": {
+    "NAME": "準備分裂",
+    "DESCRIPTIONS": [
+      "下回合開始時，將一張 #y分裂 加入手牌。",
+      "下回合開始時，將 #b",
+      " 張 #y分裂 加入手牌。"
+    ]
+  },
+  "Slimebound:StudyAutomatonPower": {
+    "NAME": "研究機械人偶",
+    "DESCRIPTIONS": [
+      "下回合開始時獲得一張機械人偶牌。",
+      "接下來的 #b",
+      " 回合，每回合開始時獲得一張機械人偶牌。"
+    ]
+  },
+  "Slimebound:StudyAutomatonPowerUpgraded": {
+    "NAME": "研究銅製機械人偶+",
+    "DESCRIPTIONS": [
+      "下回合開始時獲得一張升級後的機械人偶牌。",
+      "接下來的 #b",
+      " 回合，每回合開始時獲得一張升級後的機械人偶牌。"
+    ]
+  },
+  "Slimebound:StudyAwakenedPower": {
+    "NAME": "研究覺醒者",
+    "DESCRIPTIONS": [
+      "下回合開始時獲得一張覺醒者牌。",
+      "接下來的 #b",
+      " 回合，每回合開始時獲得一張覺醒者牌。"
+    ]
+  },
+  "Slimebound:StudyAwakenedPowerUpgraded": {
+    "NAME": "研究覺醒者+",
+    "DESCRIPTIONS": [
+      "下回合開始時獲得一張升級後的覺醒者牌。",
+      "接下來的 #b",
+      " 回合，每回合開始時獲得一張升級後的覺醒者牌。"
+    ]
+  },
+  "Slimebound:AwakenedOnePower": {
+    "NAME": "黑暗儀式",
+    "DESCRIPTIONS": [
+      "如果這個敵人本回合沒有攻擊，你獲得 ",
+      " 點 力量 。"
+    ]
+  },
+  "Slimebound:StudyChampPower": {
+    "NAME": "研究第一勇士",
+    "DESCRIPTIONS": [
+      "下回合開始時獲得一張第一勇士牌。",
+      "接下來的 #b",
+      " 回合，每回合開始時獲得一張第一勇士牌。"
+    ]
+  },
+  "Slimebound:StudyChampPowerUpgraded": {
+    "NAME": "研究第一勇士+",
+    "DESCRIPTIONS": [
+      "下回合開始時獲得一張升級後的第一勇士牌。",
+      "接下來的 #b",
+      " 回合，每回合開始時獲得一張升級後的第一勇士牌。"
+    ]
+  },
+  "Slimebound:StudyCollectorPower": {
+    "NAME": "研究收藏家",
+    "DESCRIPTIONS": [
+      "下回合開始時獲得一張收藏家牌。",
+      "接下來的 #b",
+      " 回合，每回合開始時獲得一張收藏家牌。"
+    ]
+  },
+  "Slimebound:StudyCollectorPowerUpgraded": {
+    "NAME": "研究收藏家+",
+    "DESCRIPTIONS": [
+      "下回合開始時獲得一張升級後的收藏家牌。",
+      "接下來的 #b",
+      " 回合，每回合開始時獲得一張升級後的收藏家牌。"
+    ]
+  },
+  "Slimebound:StudyGuardianPower": {
+    "NAME": "研究守護者",
+    "DESCRIPTIONS": [
+      "下回合開始時獲得一張守護者牌。",
+      "接下來的 #b",
+      " 回合，每回合開始時獲得一張守護者牌。"
+    ]
+  },
+  "Slimebound:StudyGuardianPowerUpgraded": {
+    "NAME": "研究守護者+",
+    "DESCRIPTIONS": [
+      "下回合開始時獲得一張升級後的守護者牌。",
+      "接下來的 #b",
+      " 回合，每回合開始時獲得一張升級後的守護者牌。"
+    ]
+  },
+  "Slimebound:StudyHexaghostPower": {
+    "NAME": "研究六火亡魂",
+    "DESCRIPTIONS": [
+      "下回合開始時獲得一張六火亡魂牌。",
+      "接下來的 #b",
+      " 回合，每回合開始時獲得一張六火亡魂牌。"
+    ]
+  },
+  "Slimebound:StudyHexaghostPowerUpgraded": {
+    "NAME": "研究六火亡魂+",
+    "DESCRIPTIONS": [
+      "下回合開始時獲得一張升級後的六火亡魂牌。",
+      "接下來的 #b",
+      " 回合，每回合開始時獲得一張升級後的六火亡魂牌。"
+    ]
+  },
+  "Slimebound:StudyShapesPower": {
+    "NAME": "研究甜圈八體",
+    "DESCRIPTIONS": [
+      "下回合開始時獲得一張甜圈和八體牌。",
+      "接下來的 #b",
+      " 回合，每回合開始時獲得一張甜圈和八體牌。"
+    ]
+  },
+  "Slimebound:StudyShapesPowerUpgraded": {
+    "NAME": "研究甜圈八體+",
+    "DESCRIPTIONS": [
+      "下回合開始時獲得一張升級後的甜圈和八體牌。",
+      "接下來的 #b",
+      " 回合，每回合開始時獲得一張升級後的甜圈和八體牌。"
+    ]
+  },
+  "Slimebound:StudyTimeEaterPower": {
+    "NAME": "研究時間吞噬者",
+    "DESCRIPTIONS": [
+      "下回合開始時獲得一張時間吞噬者牌。",
+      "接下來的 #b",
+      " 回合，每回合開始時獲得一張時間吞噬者牌。"
+    ]
+  },
+  "Slimebound:StudyTimeEaterPowerUpgraded": {
+    "NAME": "研究時間吞噬者+",
+    "DESCRIPTIONS": [
+      "下回合開始時獲得一張升級後的時間吞噬者牌。",
+      "接下來的 #b",
+      " 回合，每回合開始時獲得一張升級後的時間吞噬者牌。"
+    ]
+  },
+  "Slimebound:GreedRespawnPower": {
+    "NAME": "尋回：貪婪黏液",
+    "DESCRIPTIONS": [
+      " #y貪婪史萊姆 將在回合結束時重生。"
+    ]
+  },
+  "Slimebound:ScrapRespawnPower": {
+    "NAME": "尋回：破爛黏液",
+    "DESCRIPTIONS": [
+      "#y破爛史萊姆 將在回合結束時重生。"
+    ]
+  },
+  "Slimebound:BuffSecondarySlimeEffectsPower": {
+    "NAME": "從者大師",
+    "DESCRIPTIONS": [
+      "每當你打出 #y命令 牌時，再 #y命令 #b1 次。",
+      "每當你打出 #y命令 牌時，再 #y命令 #b",
+      " 次。"
+    ]
+  },
+  "Slimebound:TackleSelfDamagePreventPower": {
+    "NAME": "魯莽",
+    "DESCRIPTIONS": [
+      " #y衝撞 牌對自身造成的傷害提高 #b",
+      " 點。"
+    ]
+  },
+  "Slimebound:GoopArmorPower": {
+    "NAME": "黏液護甲",
+    "DESCRIPTIONS": [
+      "每當你 #y消耗黏液 時，獲得 #b",
+      " 點 #y格擋 。"
+    ]
+  },
+  "Slimebound:CommandOnPlayPower": {
+    "NAME": "集結部隊",
+    "DESCRIPTIONS": [
+      "本回合接下來你打出的牌將 #y命令 。",
+      "本回合接下來你打出的 #b",
+      " 張牌將 #y命令 。"
+    ]
+  },
+  "Slimebound:GoopPerTurnPower": {
+    "NAME": "黏液浴",
+    "DESCRIPTIONS": [
+      "這名敵人的回合開始時給予其 #b",
+      " 層 #y黏液 。"
+    ]
+  }
+}

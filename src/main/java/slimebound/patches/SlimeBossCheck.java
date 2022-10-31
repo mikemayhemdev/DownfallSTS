@@ -12,7 +12,7 @@ public class SlimeBossCheck {
     public static void Prefix(SlimeBoss sb) {
 
         SlimeboundMod.foughtSlimeBoss = true;
-        //  SlimeboundMod.logger.info("Slimebound Character has fought the Slime Boss.");
+        //  //SlimeboundMod.logger.info("Slimebound Character has fought the Slime Boss.");
 
     }
 }

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.cards.curses.Doubt;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.RitualPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import downfall.downfallMod;
@@ -23,8 +24,8 @@ public class FaceTrader extends AbstractMonster {
     public static final String NAME = CardCrawlGame.languagePack.getEventString("FaceTrader").NAME;
     private static final float HB_X = 0.0F;
     private static final float HB_Y = 0.0F;
-    private static final float HB_W = 150.0F;
-    private static final float HB_H = 320.0F;
+    private static final float HB_W = 225.0F;
+    private static final float HB_H = 250.0F;
 
     int turnNum = 0;
 
@@ -32,13 +33,13 @@ public class FaceTrader extends AbstractMonster {
         super(NAME, ID, 100, HB_X, HB_Y, HB_W, HB_H, "downfallResources/images/monsters/facetrader/facetrader.png");
         switch (AbstractDungeon.actNum) {
             case 1:
-                setHp(100);
-                break;
-            case 2:
                 setHp(150);
                 break;
+            case 2:
+                setHp(200);
+                break;
             case 3:
-                setHp(175);
+                setHp(250);
                 break;
         }
 
@@ -95,22 +96,25 @@ public class FaceTrader extends AbstractMonster {
                 break;
             case 2:
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.FIRE));
-                addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new WeakPower(AbstractDungeon.player, 1, false), 1));
+                addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new WeakPower(AbstractDungeon.player, 2, false), 2));
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "AttackGremlin"));
                 break;
             case 3:
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.FIRE));
-                addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawReductionPowerPlus(AbstractDungeon.player, 1), 1));
+                addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawReductionPowerPlus(AbstractDungeon.player, 2), 2));
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "AttackNloth"));
                 break;
             case 4:
                 addToBot(new GainBlockAction(this, 10));
-                addToBot(new ApplyPowerAction(this, this, new StrengthPower(this, 3), 3));
+                addToBot(new ApplyPowerAction(this, this, new RitualPower(this, 1, false), 1));
+                if (!hasPower(RitualPower.POWER_ID)){
+                    addToBot(new ApplyPowerAction(this, this, new StrengthPower(this, 1), 1));
+                }
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "AttackCultist"));
                 break;
             case 5:
                 addToBot(new GainBlockAction(this, 10));
-                addToBot(new HealAction(this, this, 16));
+                addToBot(new HealAction(this, this, 10));
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "AttackCleric"));
                 break;
         }
@@ -119,39 +123,39 @@ public class FaceTrader extends AbstractMonster {
     }
 
     protected void getMove(int num) {
-        ArrayList<Integer> bruh = new ArrayList<Integer>();
-        bruh.add(0);
-        bruh.add(1);
-        bruh.add(2);
-        bruh.add(3);
-        bruh.add(4);
-        if (this.lastMove((byte) 1)) {
-            bruh.remove(0);
-        } else if (this.lastMove((byte) 2)) {
-            bruh.remove(1);
-        } else if (this.lastMove((byte) 3)) {
-            bruh.remove(2);
-        } else if (this.lastMove((byte) 4)) {
-            bruh.remove(3);
-        } else if (this.lastMove((byte) 5)) {
-            bruh.remove(4);
-        }
-        turnNum = bruh.get(AbstractDungeon.cardRandomRng.random(bruh.size() - 1));
+        int bruh;
         switch (turnNum) {
             case 0:
-                this.setMove((byte) 1, Intent.ATTACK_DEBUFF, this.damage.get(0).base);
+                bruh = AbstractDungeon.cardRandomRng.random(0,2);
+                turnNum = 1;
+                switch (bruh) {
+                    case 0: {
+                        this.setMove((byte) 1, Intent.ATTACK_DEBUFF, this.damage.get(0).base);
+                        break;
+                    }
+                    case 1: {
+                        this.setMove((byte) 2, Intent.ATTACK_DEBUFF, this.damage.get(1).base);
+                        break;
+                    }
+                    case 2: {
+                        this.setMove((byte) 3, Intent.ATTACK_DEBUFF, this.damage.get(1).base);
+                        break;
+                    }
+                }
                 break;
             case 1:
-                this.setMove((byte) 2, Intent.ATTACK_DEBUFF, this.damage.get(1).base);
-                break;
-            case 2:
-                this.setMove((byte) 3, Intent.ATTACK_DEBUFF, this.damage.get(1).base);
-                break;
-            case 3:
-                this.setMove((byte) 4, Intent.DEFEND_BUFF);
-                break;
-            case 4:
-                this.setMove((byte) 5, Intent.DEFEND_BUFF);
+                bruh = AbstractDungeon.cardRandomRng.random(0,1);
+                turnNum = 0;
+                switch (bruh) {
+                    case 0: {
+                        this.setMove((byte) 4, Intent.DEFEND_BUFF);
+                        break;
+                    }
+                    case 1: {
+                        this.setMove((byte) 5, Intent.DEFEND_BUFF);
+                        break;
+                    }
+                }
                 break;
         }
     }

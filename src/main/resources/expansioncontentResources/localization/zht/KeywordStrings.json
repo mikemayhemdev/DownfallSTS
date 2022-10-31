@@ -1,0 +1,37 @@
+[
+  {
+    "PROPER_NAME": "首領",
+    "NAMES": [
+      "首領"
+    ],
+    "DESCRIPTION": "每回合只能打出 #b1 張 #y首領 牌。"
+  },
+  {
+    "PROPER_NAME": "堅不可摧",
+    "NAMES": [
+      "堅不可摧"
+    ],
+    "DESCRIPTION": "任意 #b1 回合內你最多失去 #b10 點生命。承傷達到上限後移除本效果。疊加時，額外生效 #b1 回合。"
+  },
+  {
+    "PROPER_NAME": "發掘",
+    "NAMES": [
+      "發掘"
+    ],
+    "DESCRIPTION": "將 #b1 張 #y消耗 堆的牌移回手牌。"
+  },
+  {
+    "PROPER_NAME": "取回",
+    "NAMES": [
+      "取回"
+    ],
+    "DESCRIPTION": "將 #b1 張 #y消耗 堆的牌移入棄牌堆。"
+  },
+  {
+    "PROPER_NAME": "鐐銬",
+    "NAMES": [
+      "鐐銬"
+    ],
+    "DESCRIPTION": "帶有 #y鐐銬 的單位本回合失去 #y力量 。"
+  }
+]

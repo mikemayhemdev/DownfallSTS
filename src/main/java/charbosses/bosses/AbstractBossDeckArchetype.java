@@ -1,12 +1,13 @@
 package charbosses.bosses;
 
 import charbosses.BossMechanicDisplayPanel;
+import charbosses.cards.AbstractBossCard;
 import charbosses.relics.AbstractCharbossRelic;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import downfall.downfallMod;
-import downfall.monsters.NeowBoss;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -84,6 +85,10 @@ public abstract class AbstractBossDeckArchetype {
     public boolean upgradeAllAttacks = false;
     */
 
+    public void addedPreBattle() {
+        initializeBossPanel();
+    }
+
     public abstract void initializeBonusRelic();
 
     public boolean looped = false;
@@ -93,12 +98,17 @@ public abstract class AbstractBossDeckArchetype {
         return new ArrayList<>();
     }
 
+    public void addToList(ArrayList<AbstractCard> cardsList, AbstractBossCard card, boolean upgraded, int energyGeneratedIfPlayed) {
+        card.energyGeneratedIfPlayed = energyGeneratedIfPlayed;
+        addToList(cardsList, card, upgraded);
+    }
+
     public void addToList(ArrayList<AbstractCard> c, AbstractCard q, boolean upgraded) {
         if (upgraded) q.upgrade();
         c.add(q);
     }
 
-    public void initializeBossPanel(){
+    public void initializeBossPanel() {
         if (bossMechanicDesc != null) {
             BossMechanicDisplayPanel.mechanicName = bossMechanicName;
             BossMechanicDisplayPanel.mechanicDesc = bossMechanicDesc;
@@ -109,7 +119,13 @@ public abstract class AbstractBossDeckArchetype {
         addToList(c, q, false);
     }
 
+    private String ID;
+
     public AbstractBossDeckArchetype(String id, String loggerClassName, String loggerArchetypeName) {
+
+        this.ID = id;
+        if (AbstractDungeon.actNum != 4)
+            AbstractDungeon.lastCombatMetricKey = ID;
 
         /*
         this.ID = id;
@@ -344,7 +360,7 @@ public abstract class AbstractBossDeckArchetype {
         Collections.shuffle(this.curseCards);
 
         if (boss.hasRelic("Omamori")) {
-            SlimeboundMod.logger.info("detected boss has Omamori");
+            //SlimeboundMod.logger.info("detected boss has Omamori");
             CBR_Omamori oma = (CBR_Omamori) boss.getRelic("Omamori");
             if (oma.counter > 0) {
                 logger.info(loggerSource + " tried to add a " + this.curseCards.get(0).name + ", but Omamori blocked it.");
@@ -1085,4 +1101,6 @@ public abstract class AbstractBossDeckArchetype {
         }
     }
     */
+
+    public boolean defaultToggle = false;
 }

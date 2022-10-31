@@ -15,19 +15,20 @@ import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.actions.TackleSelfDamageAction;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.PreventTackleDamagePower;
 import slimebound.powers.SlimedPower;
 import slimebound.powers.TackleBuffPower;
 import slimebound.powers.TackleDebuffPower;
 
 
-public class ViciousTackle extends AbstractSlimeboundCard {
+public class ViciousTackle extends AbstractTackleCard {
     public static final String ID = "Slimebound:ViciousTackle";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static final String IMG_PATH = "cards/tendrilstrike.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     private static final CardType TYPE = CardType.ATTACK;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
@@ -50,7 +51,7 @@ public class ViciousTackle extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.TACKLE);
 
-        this.baseDamage = 15;
+        this.baseDamage = 16;
         this.baseSelfDamage = this.selfDamage = 3;
 
     }
@@ -83,6 +84,7 @@ public class ViciousTackle extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        if (!AbstractDungeon.player.hasPower(PreventTackleDamagePower.POWER_ID))
         addToBot(new TackleSelfDamageAction(new DamageInfo(p, selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
         //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
 

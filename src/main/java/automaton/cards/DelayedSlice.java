@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 
 public class DelayedSlice extends AbstractBronzeCard {
 
@@ -14,28 +15,20 @@ public class DelayedSlice extends AbstractBronzeCard {
     //stupid intellij stuff attack, all_enemy, common
 
     public DelayedSlice() {
-        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        thisEncodes();
-        baseMagicNumber = magicNumber = 10;
-        //tags.add(AutomatonMod.NO_TEXT);
-        baseDamage = 3;
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseMagicNumber = magicNumber = 1;
+        baseDamage = 9;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-    }
-
-    @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        if (forGameplay) {
-            for (AbstractMonster q : monsterList()) {
-                addToBot(new LoseHPAction(q, q, magicNumber, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-            }
-        }
+        applyToSelf(new DrawCardNextTurnPower(p, magicNumber));
     }
 
     public void upp() {
         upgradeDamage(1);
-        upgradeMagicNumber(5);
+        upgradeMagicNumber(1);
+        rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

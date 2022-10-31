@@ -1,0 +1,258 @@
+Adrenaline - Dots on the screen forming a pattern
+
+Bouncing Flask - Potion tossing
+
+Blizzard - falling objects from sky
+
+Bludgeon / Sunder - Massive vertical hit impact
+
+Carnage - A bunch of different attacks
+
+Clash / Signature Move - Crossed Swords attack effect
+
+Claw / Rip and Tear - Claw slash attack effect
+
+Expunger / Flying Sleeves - Diagonal purple attack effect
+
+Corruption - Misc evil-looking splotches around the character on cast
+
+Dagger Spray - Lines of color in a fan
+
+Dagger Throw / Flechettes - Lines of color in a straight line, slightly angled
+
+Devotion / Inner Peace - Full screen edge effect
+
+Die Die Die - lots of slashes around the entire enemy area
+
+Feed - Chomp attack effect
+
+Flame Barrier - Circle of fire around character effect
+
+Foresight - Eyeball above character
+
+Grand Finale - Falling leaves, spotlight
+
+Heavy Blade - Massive hit attack impact
+
+Hemokinesis - Red orbs from player to target
+
+Hyperbeam / Mind Blast - full screen laser
+
+Inflame (or most Strength things) - Flames on character going up effect
+
+Intimidate - Squiggles from character
+
+Iron Wave - Falling lines attack impact
+
+Offering - Blood droplets, red screen edge effect
+
+Piercing Wail / Rage - Colored outward wave
+
+Pressure Points - Thin purple line
+
+Through Violence - Series of purple horizontal angled slashes
+
+Scrape - Downward Claw scratches
+
+Searing Blow - Flame wave attack impact
+
+Sweeping Beam - Travelling laser along ground
+
+Third Eye - four-way purple effect around player
+
+Vault - Gold border glow, speed streaks of gold from right to left
+
+Wallop - Bunch of stars flying out of target
+
+Whirlwind - Speed streaks of white flying from left to right
+
+Divinity Stance entering - has some neat quick purple effects zipping into the player before going into the eyeballs
+
+Mystic
+
+Disintegrate - Simple red color of Mind Blast but it looks nice
+
+Lightning Bolt - Side-tilted lightning bolt, works well
+
+Magic Missile - travelling wavy projectiles
+
+Obscuring Mist - green flame version of Flame Barrier
+
+Snowball - Alternate color fire hit impact
+
+Champ - Execute has a unique vertical slice impact
+
+Hermit
+
+No Holds Barred - interesting pattern of slashes and punch hits
+
+Purgatory - Green, shorter full screen hexaburn effect
+
+Astrologer
+
+Black Hole - Base game effect, purple side wall crushing (where's this from).  Also a really nice looking "pull cards from anywhere for a big effect" visual.
+
+Judgement - Nice looking cyan version of Bludgeon
+
+Cataclysm - Multi-colored wave effect
+
+Bard
+
+Faerie Fire - Cascading glow particles fall from the ceiling
+
+Finger of Death - Orange wavy Hyperbeam
+
+Invisibility - Bard disappears
+
+Life Drain - Orangeish temp hp particles swirl from enemy to you
+
+Reverse Gravity - All enemies flip into the air, upside down, then fall and take impact damage
+
+Shout - Piercing Wail recolor
+
+Animator
+
+Nothing, surprisingly.
+
+The Marked
+
+Chains effect on Banish Resistance power (like Banishing Wave)
+
+Dispel Doubt - Dust on player, could be an alternate smoke bomb type effect
+
+Summon Alyssa's Blade effects - nice glow and a sprite overhead
+
+100% Spire Juice
+
+Cloud of Seagulls - nice visual of seagulls swooping in from over head.  Same movement could be attached to any sprite or effect.
+
+Senshi
+
+Burning Mandela - Nice 'make some projectiles and then launch them' effect for movement.
+
+Moon Twilight Flash - Vertical beam.  Base game idea I think, just a vertical beam.
+
+Sailor Planet Attack - Spawning and rotating of images that float around character for a bit, then attack.  Nice motion framework.
+
+Supersonic Waves - Nice fan pattern with a sound wave visual I think is unique to the mod
+
+Showman
+
+Crashing Lights - Render an image, drop it on a guy, then it falls offscreen
+
+Pocket Sand - Wave blast of sand particles, quite nice
+
+Throwing Cards - Thrown card that falls offscreen
+
+Van de Graffe's Revenge - Orbs are thrown upwards that fire lightning bolts!  Very nice effect
+
+Servant
+
+Dual Dimension - Eerie blue glow around character
+
+Blackbeard (I made both of these haha)
+
+Boost Morale - Rainbow sparklies
+
+Cannonball / etc - Fires a cannonball at the enemy, which impacts and bounces away
+
+Hierophant
+
+Fervor - Slowly building flames on character
+
+Punishment - Orange lightning
+
+Smite - GIGANTIC GODLY LASER FROM ABOVE!!!
+
+
+
+
+VFX To Do:
+
+Slime Boss
+
+Disrupting Slam - Maybe use an Iron Wave effect?
+
+Equalize - Could warrant something custom maybe.  Scales that appear overhead, then drop, then fade away?
+
+Liquidate - Use Inflame effects but going down and colored purple
+
+Nibble - should use a Bite hit, maybe smaller or faster than normal - maybe a few of them in sequence
+
+One-Two Combo - Could use a couple of the small hits from Carnage
+
+Prepare/Prepare Crush - maybe use the flash and image from the summon sword effect of Marked, image is just a big set of question marks
+
+Roll Through - maybe a custom 'spinning big slime ball rolling through the enemies' effect
+
+Rally the Troops - green colored 'shout' wave effect
+
+The Guardian
+
+Strike - maybe Strike could swap to the claw effect used in Rip and Tear?
+
+Incinerate - Flamethrower
+
+Roll Attack - far cry from realistic, but it could be funny to have Guardian actually roll if the Defensive Mode triggers
+
+Temporal cards - Bluish version of regular attack/defend animations (I have code for this already, add it later)
+
+Prismatic Barrier - recolor the block effects based on Gems in the card!? IE, Ruby Sapphire Quartz would have regular beam, red beam, blue beam, white beam
+
+Refracted Beam - Rainbow beam. Art is so good on these.
+
+Time Bomb - might be cool to have it do the Astrologer's Cataclysm wave in reverse time, then the explosion
+
+Hexaghost
+
+Seals - display the number onscreen like a stamp or something? I'm imagining an I, II, etc popping up somewhere for sure.
+
+Force-Ignite - orange/yellow sparks coming off of the Force-Ignited Ghostflame. will need some refactoring if we do this, as Force Ignite is currently not actually an action
+
+Poltergeist - some kind of ghostly projectile / helper / something, inspired by Summon Orb
+
+Charged Barrage - a barrage of fire, actually lobbed at the enemy
+
+Doomsday - when the power triggers during Ignition, light up the screen edges orange
+
+Rain of Embers - embers fall from the sky
+
+Sixth Seal - card reward has spooky particles coming off it in the rewards screen?
+
+Heat Metal - enemy bursts into green flames when the Soulburn reapplication happens
+
+Ghost Lash - send a swirling ghostly thing at an enemy? Moving like the ghosts in Haunting Echo's art
+
+Ghostflame Wall - green version of flame barrier, if I haven't already done that
+
+Incorporeal - Fade in and out of existence, temporary like Puddle Form
+
+Radiant Flame - this could be another spot for a helper-esque thing.
+
+Unleash Spirits - Same swirling ghost into the enemy effect as Ghost Lash, but for every card?
+
+Searing Wound - Some kind of pain effect
+
+Automaton
+
+Bug Barrage - launch glitches at an enemy?
+
+Cultist Strike - maybe cacaw on Compile.
+
+Break - something brutal
+
+Mutator - Steal jobby's transform vfx for this.
+
+Oil Spill - poison launch effect?
+
+Sticky Shield - green version of the regular block vfx (should have code for this)
+
+Dark Dash - some kind of dark attack.
+
+Merge Conflict - blue beam, like the art
+
+Hardcode - some kind of golden reskin or something in the Function UI while you have the power to make it clear the next Func is going to deck?
+
+Virus - same as Mutator
+
+Early Access - Red beam

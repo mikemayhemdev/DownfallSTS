@@ -1,0 +1,111 @@
+{
+  "Gremlin:CursedTome": {
+    "OPTIONS": [
+      "[Prendre] #gObtenir #gle #gLivre. #rTous #rles #rDiablotins #rperdent #r"
+    ]
+  },
+  "Gremlin:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Un esprit flexible n'est pas accablé par le doute."
+    ],
+    "OPTIONS": [
+      "[Caprice] #gRemplacez toutes les #gFrappes et les #gDéfenses par des #gSurins et des #gProtections.",
+      "[Verrouillé] Requirert une Frappe ou une Défense."
+    ]
+  },
+  "Gremlin:KnowingSkull": {
+    "OPTIONS": [
+      "[Une Information?] #gRévélez #gle #gBoss. #rTous #rles #rDiablotins #rperdent #r",
+      "[Du Succès?] #gGagnez #gune #gCarte #gIncolore. #rTous #rles #rDiablotins #rperdent #r",
+      "[Un Remontant?] #gGet #ga #gPotion. #rTous #rles #rDiablotins #rperdent #r",
+      " #gGold. #rTous #rles #rDiablotins #rperdent #r",
+      "[How do I leave?] #rTous #rles #rDiablotins #rperdent #r"
+
+    ]
+  },
+  "Gremlin:MatchingGame": {
+    "DESCRIPTIONS": [
+      "\" #bDouze cartes! Faites-les correspondre pour les garder! #bCinq essais-\" NL NL Vous l'interrompez : \" #bDix essais!\". NL NL Le Diablotin grimace. \" #bCinq essais!\" NL NL \" #bHuit.\" NL NL \" #bSix,\" crache-t-il. \"Et j'espère que vous soyez #pMaudit.\" NL NL Vous espérez qu'il soit #pMaudit.",
+      "Vous terminez le jeu du diablotin et relevez la tête. NL Il s'est enfui avant que vous ne puissiez avoir plus #y~d'objets~ #y~gratuits!~ ",
+      "Un diablotin mélange frénétiquement des cartes sur une table. Il semble offrir des #y~trucs~ #y~gratuits.~ Vous voulez des #y~trucs~ #y~gratuits.~ "
+    ]
+  },
+  "Gremlin:Nest": {
+    "OPTIONS": [
+      "[Rester en ligne] #gObtenez Dague Rituelle. #rTous #rles #rDiablotins #rperdent #r"
+    ]
+  },
+  "Gremlin:ScrapOoze": {
+    "OPTIONS": [
+      "[Tendre le bras] #rTous #rles #rDiablotins #rperdent #r",
+      "[Plus loin] #rTous #rles #rDiablotins #rperdent #r"
+    ]
+  },
+  "Gremlin:ScrapOozeReplacement": {
+    "NAME": "Scrap Ooze",
+    "DESCRIPTIONS": [
+      "En entrant dans la pièce, vous entendez un ~gargouillis~ et le @grincement@ de métaux. C'est un #ySlime #yFerrailleux! Ces drôles de petits slimes trouvent toujours des #ymerveilles. Encore mieux, ils sont trop lents et trop faibles pour vous arrêter de les prendre ! Vous savez comment contourner leurs acides puissants. Malheureusement, cela prend du temps et de la #rconcentration.",
+      "Attention, attention. Vous évitez les morceaux de ferraille et les bouts pointus. Si seulement ce n'était pas si #r@ennuyeux.@ NL Mais si vous persistez, vous savez que vous obtiendrez une #yrelique brillante...",
+      "#gSuccès! NL Après avoir fouillé dans le métal et l'acide brûlant, vous vous emparez enfin d'une #yrelique et l'arrachez. NL Vous sortez de la vase en serrant votre nouveau jouet.",
+      "C'est beaucoup trop #rennuyeux. Qu'est-ce que vous faisiez déjà ?",
+      "Vous décidez de quitter la zone. NL Le slime ne prête pas attention, satisfait de son repas."
+    ],
+    "OPTIONS": [
+      "[Tendre le bras] #r",
+      "%: #rDevenez #rMaudit #r- #rÉcervelé. #g",
+      "%: #gTrouvez #gune #gRelique.",
+      "[Quitter]",
+      "[Faire attention] #r"
+    ]
+  },
+  "Gremlin:SensoryStone": {
+    "OPTIONS": [
+      "[Se rappeler] #gAjoutez #g2 #gcartes #gIncolores #gdans #gvotre #gdeck. #rTous #rles #rDiablotins #rperdent #r",
+      "[Se rappeler] #gAjoutez #g3 #gcartes #gIncolores #gdans #gvotre #gdeck. #rTous #rles #rDiablotins #rperdent #r"
+    ]
+  },
+  "Gremlin:Trenchcoat": {
+    "NAME": "Marchand suspect",
+    "DESCRIPTIONS": [
+      "Vous rencontrez un personnage étrange qui ressemble suspicieusement à cinq diablotins dans un trench-coat. NL \"Oyez, voyageur,\" dit la voix aiguë. NL \"C'est moi, le #ysympathique #yMarchand, qui n'est certainement pas cinq diablotins dans un trench-coat. Voulez-vous acheter un de mes ~articles~ ~raffinés~ qui ne sont certainement pas volés ?\"",
+      "Vous ne pouvez pas résister à une vente, même de la part d'une personne aussi suspecte que le Marchand. NL Vous faites votre achat, mais dès la fin de celui-ci, votre vendeur décampe. NL NL Au loin, vous pouvez presque entendre un léger cri de frustration : #r\"Fichus #rDiablotins #rvoleurs!\".",
+      "Vous n'avez aucun intérêt à enrichir le méprisable Marchand. Vous garderez votre argent pour vous seul. Le Marchand s'enfuit dès qu'il est clair que vous ne participerez pas."
+    ],
+    "OPTIONS": [
+      "[Acheter] #rPerdez #r",
+      " #rd'Or",
+      ". #gObtenez #g1 #gCarte #gIncolore #galéatoire.",
+      ". #gObtenez #g2 #gCartes #gIncolores #galéatoires.",
+      ". #gObtenez #g3 #gCartes #gIncolores #galéatoires.",
+      "[Partir]",
+      "[Verrouillé] Requiert: Au moins ",
+      " d'or.",
+      "[Refuser]"
+    ]
+  },
+  "Gremlin:Vampires": {
+    "DESCRIPTIONS": [
+      "Dans une rue mal éclairée, vous rencontrez plusieurs personnages encapuchonnés en plein rituel. Lorsque vous vous approchez, ils se tournent vers vous à l'unisson. Le plus grand d'entre eux montre ses crocs et tend une longue main pâle vers vous. NL ~\"Rejoignez~ ~nous~ ~êtres~ ~cupides,~ ~et~ ~ressentez~ ~la~ ~chaleur~ ~de~ ~la~ ~Tour.\"~"
+    ]
+  },
+  "Gremlin:WheelGame": {
+    "DESCRIPTIONS": [
+      "Il saute sur vous, mais vous êtes prêts. NL Vous le tailladez avant qu'il ne puisse vous atteindre avec son surin. NL Vous profitez de votre prix, mais malheureusement, la Roue disparaît avant que vous ne puissiez la piller aussi."
+    ],
+    "OPTIONS": [
+      "[Prix!] #gFRAPPE #gPRÉVENTIVE!",
+      "[Récupérer]"
+    ]
+  },
+  "Gremlin:WingStatue": {
+    "OPTIONS": [
+      "[Prier] #gRetirez #gune #gcarte #gde #gvotre #gdeck. #rTous #rles #rDiablotins #rperdent #r"
+    ]
+  },
+  "Gremlin:WorldOfGoop": {
+    "OPTIONS": [
+      " #gd'Or. #rTous #rles #rDiablotins #rperdent #rb"
+    ]
+  }
+}

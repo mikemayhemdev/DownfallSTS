@@ -1,3 +1,4 @@
+/*
 package automaton.cards;
 
 import automaton.powers.CopyPastePower;
@@ -26,3 +27,4 @@ public class CopyPaste extends AbstractBronzeCard {
         initializeDescription();
     }
 }
+*/

@@ -19,7 +19,13 @@ public class CBR_OrnamentalFan extends AbstractCharbossRelic {
         return this.DESCRIPTIONS[0] + 4 + this.DESCRIPTIONS[1];
     }
 
-    public void atTurnStart() {
+    @Override
+    public void onPlayerEndTurn() {
+        this.counter = 0;
+    }
+
+    @Override
+    public void atBattleStart() {
         this.counter = 0;
     }
 

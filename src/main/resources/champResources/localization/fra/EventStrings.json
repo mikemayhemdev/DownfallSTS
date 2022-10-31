@@ -1,0 +1,103 @@
+{
+  "champ:ChampTalk": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "TU VEUX RÉCUPÉRER CETTE CEINTURE?",
+      "VIENS-LA CHERCHER !"
+    ],
+    "OPTIONS": [
+      ""
+    ]
+  },
+  "champ:Colosseum": {
+    "NAME": "Le Colisée",
+    "DESCRIPTIONS": [
+      "Alors que vous descendez la Tour, vous remarquez un groupe d'humanoïdes qui attendent en embuscade près d'un grand auditorium. Lorsque vous vous approchez, les Esclavagistes sont surpris, mais s'expliquent rapidement. NL NL \"CHAMPION! Vous nous gratifiez de votre présence ! Êtes-vous ici pour affronter le nouveau challenger ?\"",
+      "Un nouveau challenger? Quel plaisir! NL NL Cependant, le défi devra peut-être attendre. Le public aime toujours voir son Champion massacrer la dernière capture...",
+      "Vous entrez dans le stadium géant pour trouver une audience remplie #bd'Esclavagistes, de #bCultistes et d'autres habitants de la Cité. NL NL ",
+      "@\"QUI@ @OSE@ @ME@ @DÉFIER?!\"@ vous grondez devant le peuple, faisant signe à ce nouveau 'challenger'. NL Un chevalier s'approche, vêtu d'une armure étonnamment similaire à la vôtre, mais trempée d'encre noire. La foule applaudit plus que ne le mérite ce prétendant. NL NL Il ne peut y avoir qu'un seul Champion !",
+      "@\"LE@ @PROCHAIN@ @EST@ @À@ @MOI!\"@ vous grondez devant le peuple, qui répond avec un applaudissement assourdissant. NL NL Il ne faut pas longtemps aux esclavagistes d'apporter leur dernière capture. Le challenger se réveille à son insu, encore ~groggy~ de l'embuscade,  mais se prépare tout de même. NL NL Cela devrait être marrant.",
+      "Vous décidez que même si cela est tentant, combattre ici ne serait qu'une distraction inutile. Vous continuez votre voyage, laissant les esclavagistes reprendre leur embuscade.",
+      "Chevalier Noir"
+    ],
+    "OPTIONS": [
+      "[Défendre le titre] #rCombattre le Chevalier Noir. #gGagnez #gplusieurs #grécompenses.",
+      "[Participer] #rCombattre un Héros Captif. #gGagnez #gplusieurs #grécompenses.",
+      "[Quitter]",
+      "[FIGHT!]",
+      "[Continuer]"
+    ]
+  },
+  "champ:Library": {
+    "NAME": "La Librairie",
+    "DESCRIPTIONS": [
+      "Vous tombez sur le noyau de la connaissance dans la ville - l'ancienne Librairie. NL À l'intérieur, vous trouverez d'innombrables rangées de parchemins, de manuscrits et de livres. NL Vous pourriez en choisir un et vous installer confortablement dans un fauteuil pour passer un moment tranquille, ou utiliser ce temps pour rechercher un manuel plus spécifique aux techniques de combat.",
+      "Vous passez beaucoup de temps à chercher dans les couloirs des tomes et des guides, jusqu'à ce que vous trouviez enfin le livre que vous cherchiez. NL NL En vous installant dans le fauteuil confortable, vous prenez le temps de réviser les positions et les styles oubliés. Même un combattant parfait comme vous sait que l'esprit est tout aussi important que le corps et qu'il doit être exercé."
+    ],
+    "OPTIONS": [
+      "[Chercher] Localisez un #gLivre sur le Combat.",
+      "[Verrouillé] Déjà possédé tous les tomes de Combat."
+    ]
+  },
+  "champ:TechniqueTome": {
+    "NAME": "Tome de Techniques",
+    "DESCRIPTIONS": [
+      "Au détour d'un chemin, vous sentez une force immense et invisible guider vos pas vers une nouvelle destination. Très vite, vous voyez un piédestal avec un tome massif, enveloppé d'une mystérieuse énergie lumineuse. NL À mesure que vous vous approchez, les pages qui étaient auparavant vierges s'animent, dessinant de nouvelles gravures et de nouveaux dessins de combinaisons d'attaques, de positions martiales, de points faibles de l'ennemi - tout ce que vous pourriez avoir besoin de savoir sur le combat. NL Cela semble presque trop beau pour être vrai, mais ce cadeau, cette opportunité, cette connaissance ne doivent pas être gaspillés!",
+      "Incroyable ! Les enseignements de ce tome sont à couper le souffle. Chaque mot et chaque diagramme saute de la page à votre esprit, vous offrant de nouvelles méthodes pour massacrer vos adversaires. NL NL Malheureusement, une telle connaissance n'est jamais gratuite, et elle a un impact sur votre esprit. Mais il y a tellement plus à apprendre...",
+      "Oui. Tellement plus. Vous ne pouvez pas vous arrêter maintenant. Avec peu d'hésitation, vous vous laissez envahir par la richesse des informations que le tome a à offrir, trouvant encore plus de nouveaux avantages au combat. NL NL Le coût étant désormais bien compris, vous donnez volontairement une plus grande partie de votre énergie vitale au livre en échange de sa sagesse. Mais il y a tellement plus à apprendre...",
+      "En rassemblant toute la volonté dont vous disposez, vous résistez à l'envie de lire le tome maudit. Peut-être reviendrez-vous un jour, mais pour l'instant, vous avez du travail à faire..",
+      "Quel que soit le prix à payer, il en valait la peine pour acquérir ce précieux savoir. Il vous faut beaucoup d'efforts pour vous détacher de l'emprise du livre sur vous, mais vous y parvenez. NL NL  Les enseignements du tome étant encore frais dans votre esprit, vous partez à la recherche d'une nouvelle victime sur laquelle les tester.."
+    ],
+    "OPTIONS": [
+      "[Lire] Choisissez une Attaque à gagner le #y'#yBonus de #yCompétence'. #rPerdez #r",
+      " #rPV.",
+      "[Quitter]",
+      "[Verrouillé] Requiert une Attaque.",
+      "Choisissez une carte à gagner le Bonus de Compétence.",
+      "[Lire] Choisissez une carte à gagner le #y'#yBonus de #yCompétence'. #rDevenez #rMaudit #r- #rFierté."
+    ]
+  },
+  "champ:Gym": {
+    "NAME": "Gymnase",
+    "DESCRIPTIONS": [
+      "Le long du chemin qui descend de la Tour, vous vous trouvez au gymnase de l'Exordium, un endroit où vous vous rendez fréquemment pour rester en forme et affiner votre corps. NL NL Ce serait du gâchis de ne pas prendre un moment de repos et de passer un peu de temps ici. Pour rester au sommet, vous avez besoin de tous les avantages que vous pouvez obtenir.",
+      "Aujourd'hui, vous allez vous concentrer sur l'endurance.  En gardant votre armure complète, vous vous lancez sur la piste de sprint installée au centre du Gymnase, effectuant une série complète de plusieurs tours. NL NL Avec une poussée d'adrénaline et d'énergie, vous quittez le gymnase, prêt à affronter la menace qui pèse sur la Tour..",
+      "Aujourd'hui, vous allez vous concentrer sur le combat. Vous cherchez rapidement quelqu'un qui a l'air de pouvoir encaisser un coup, et sans vous soucier de ce qu'il avait prévu de faire, vous le traînez par l'épaule sur le ring d'entraînement. Il ne tient pas longtemps avant de céder et de mettre fin au match. NL NL Bien que ce combat n'ait pas présenté de défi, vous vous rendez compte d'une nouvelle méthode pour ouvrir un combat, qui vous sera sûrement utile pour les batailles à venir..",
+      "Aujourd'hui, vous allez vous concentrer sur le tonus musculaire et la force du haut du corps. Vous trouvez les poids et les systèmes de tension les plus lourds et les utilisez pour effectuer plusieurs cycles d'exercices de musculation. À la fin de l'entraînement, vous pouvez déjà vous sentir soulever et tirer avec un peu plus de facilité qu'au début. NL NL En quittant le gymnase, vous notez mentalement de vous concentrer sur la force du bas du corps lors de votre prochaine visite. Vous ne pouvez pas l'ignorer."
+    ],
+    "OPTIONS": [
+      "[Cardio] #gGagnez #g",
+      " #gPV #gMax.",
+      "[Combat d'entraînement] Choisissez une carte n'ayant pas Finisher pour gagner 'Adoptez la Pose (Choisie)'.",
+      "[Soulever des poids] #gGagnez #g1 #gde #gForce #gDéfinitivement.",
+      "[Quitter]",
+      "Choisissez une carte n'ayant pas Finisher pour gagner 'Adoptez la Pose Défensive'.",
+      "Choisissez une carte n'ayant pas Finisher pour gagner 'Adoptez la Pose du Gladiateur'.",
+      "Choisissez une carte n'ayant pas Finisher pour gagner 'Adoptez la Pose du Destructeur'.",
+      "[Verrouillé] Requiert une carte qui ne fait pas adopter de Pose."
+    ]
+  },
+  "champ:MinorLeagueArena": {
+    "NAME": "Arène de la ligue mineure",
+    "DESCRIPTIONS": [
+      "En traversant l'Exordium, vous vous retrouvez devant une attraction bien connue : l'ancien site des jeux brutaux qui se déroulent maintenant dans le Colisée de la ville. Cette arène plus petite et moins attrayante sert désormais de terrain d'entraînement et de scène de combat pour les challengers de moindre importance. NL Ce type de défi n'est normalement pas à votre portée, mais il peut être une distraction amusante.",
+      "Décidant que votre temps est mieux employé ailleurs, vous quittez l'arène. Vous pouvez entendre un soupir de soulagement de la part des combattants alors que vous partez - clairement, personne n'avait envie de mourir de votre main aujourd'hui."
+   ],
+    "OPTIONS": [
+      "[Combattre Centurion & Mystique] #gGagnez #gAttache #gde #gCape",
+      "[Combattre le Diablotin Nob] #gGagnez #gCeinture #gde #gChampion",
+      "[Combattre un duo d'Esclavagistes] #gGagnez #gPoignard",
+      "[Quitter]"
+    ]
+  },
+  "champ:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Compétence et assurance forment une combinaison invincible."
+    ],
+    "OPTIONS": [
+      "[Intuition] #gAjoutez #g'Déclenchez les #yBonus de #yCompétence' à toutes les #gFrappes et les #gDéfenses.",
+      "[Verrouillé] Requiert une Frappe ou une Défense."
+    ]
+  }
+}

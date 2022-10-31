@@ -5,7 +5,9 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 
+@CardIgnore
 public class SuperheatedStrike extends AbstractHexaCard {
 
     public final static String ID = makeID("SuperheatedStrike");
@@ -19,7 +21,7 @@ public class SuperheatedStrike extends AbstractHexaCard {
     private static final int UPG_MAGIC = 3;
 
     public SuperheatedStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseBurn = burn = MAGIC;
         baseMagicNumber = magicNumber = MAGIC;
@@ -33,7 +35,7 @@ public class SuperheatedStrike extends AbstractHexaCard {
     }
 
     @Override
-    public void triggerOnExhaust() {
+    public void afterlife() {
         AbstractDungeon.player.damage(new DamageInfo(null, magicNumber, DamageInfo.DamageType.THORNS));
     }
 

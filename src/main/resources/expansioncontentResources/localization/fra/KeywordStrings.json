@@ -1,0 +1,44 @@
+[
+  {
+    "PROPER_NAME": "Boss",
+    "NAMES": [
+      "boss",
+      "boss"
+    ],
+    "DESCRIPTION": "Vous ne pouvez jouer #bqu'1 carte de #yBoss pendant votre tour."
+  },
+  {
+    "PROPER_NAME": "Invincibilité",
+    "NAMES": [
+      "d'invincibilité",
+      "invincibilité",
+      "invincible"
+    ],
+    "DESCRIPTION": "Vous ne pouvez pas perdre plus d'une certaine quantité de PV pendant un tour. NL À la fin de n'importe quel tour dans lequel Invincibilité a empêché la perte de PV, retirez cet effet"
+  },
+  {
+    "PROPER_NAME": "Exhumation",
+    "NAMES": [
+      "exhumez",
+      "exhumez-la",
+      "exhume"
+    ],
+    "DESCRIPTION": "Choisissez une carte Épuisée et mettez-la dans votre main."
+  },
+  {
+    "PROPER_NAME": "Recyclage",
+    "NAMES": [
+      "recyclez",
+      "reclaim"
+    ],
+    "DESCRIPTION": "Choisissez une carte Épuisée et mettez-la dans votre défausse."
+  },
+  {
+    "PROPER_NAME": "Enchaîné",
+    "NAMES": [
+      "enchaîné",
+      "shackled"
+    ],
+    "DESCRIPTION": "Les créatures enchaînées perdent de la #yForce pour un tour."
+  }
+]

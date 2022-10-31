@@ -3,5 +3,10 @@
     "TEXT": [
       "我本回合已经打出了首领牌！"
     ]
+  },
+  "expansioncontent:BossCardTagName": {
+    "TEXT": [
+      "首领"
+    ]
   }
 }

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import slimebound.characters.SlimeboundCharacter;
 
@@ -26,7 +27,7 @@ public class TinyHatParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffe
 
     public TinyHatParticle(AbstractPlayer p) {
         this.duration = 0.05F;
-        if(!reskinContent.slimeReskinAnimation){
+        if(CharacterSelectScreenPatches.characters[1].reskinCount <= 0){
             this.img = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/relics/tinybowlerhatinverted.png");
             W = img.getWidth();
             H = img.getHeight();
@@ -34,7 +35,7 @@ public class TinyHatParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffe
             yOffset = 0;
             this.scale = .75f;
         }else {
-            this.img = ImageMaster.loadImage("reskinContent/img/Slimebound/animation/hat.png");
+            this.img = ImageMaster.loadImage("reskinContent/img/Slimebound/Slaifu/animation/hat.png");
             W = img.getWidth();
             H = img.getHeight();
             xOffset = -17;

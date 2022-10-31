@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.unique.CanLoseAction;
@@ -17,13 +18,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BarricadePower;
 import com.megacrit.cardcrawl.powers.NoBlockPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
 import downfall.actions.ForceWaitAction;
 import downfall.actions.MerchantThrowGoldAction;
 import downfall.downfallMod;
+import downfall.patches.ui.topPanel.GoldToSoulPatches;
 import downfall.powers.SoulStealPower;
-import downfall.rooms.HeartShopRoom;
 import downfall.vfx.GainSingleSoulEffect;
 import downfall.vfx.SoulStealEffect;
 
@@ -69,7 +69,7 @@ public class FleeingMerchant extends AbstractMonster {
     public static final String SOULSTEALNAME = CardCrawlGame.languagePack.getMonsterStrings(ID).MOVES[0];
     public static final float DRAW_X = Settings.WIDTH * 0.5F + 34.0F * Settings.scale;
     public static final float DRAW_Y = AbstractDungeon.floorY - 109.0F * Settings.scale;
-    private static final int START_HP = 400;
+    public static final int START_HP = 400;
 
     public static int CURRENT_HP = 400;
     public static int CURRENT_STRENGTH = 0;
@@ -92,7 +92,7 @@ public class FleeingMerchant extends AbstractMonster {
 
 
         drawX = 1260.0F * Settings.scale;
-        drawY = 370.0F * Settings.scale;
+        drawY = AbstractDungeon.floorY + 30.0F * Settings.scale;
 
         loadAnimation("images/npcs/merchant/skeleton.atlas", "images/npcs/merchant/skeleton.json", 1.0F);
         AnimationState.TrackEntry e = state.setAnimation(0, "idle", true);
@@ -109,9 +109,6 @@ public class FleeingMerchant extends AbstractMonster {
         damage.add(new DamageInfo(this, 2));
         setHp(400);
         this.currentHealth = CURRENT_HP;
-
-
-        ESCAPED = false;
     }
 
     @Override
@@ -140,13 +137,22 @@ public class FleeingMerchant extends AbstractMonster {
         if (CURRENT_SOULS > 0) {
             this.addToBot(new ApplyPowerAction(this, this, new SoulStealPower(this, CURRENT_SOULS), CURRENT_SOULS));
         }
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                ESCAPED = false;
+            }
+        });
     }
 
     @Override
     public void takeTurn() {
         if (nextMove == ESCAPE) {
             CURRENT_HP = this.currentHealth;
+            GoldToSoulPatches.UpdateMerchantTip();
             AbstractDungeon.getCurrRoom().mugged = true;
+            FleeingMerchant.ESCAPED = true;
             this.addToBot(new CanLoseAction());
             this.addToBot(new VFXAction(new SmokeBombEffect(hb.cX, hb.cY)));
             this.addToBot(new EscapeAction(this));
@@ -258,6 +264,7 @@ public class FleeingMerchant extends AbstractMonster {
         this.deathTimer += ((0.01F * increaseGold) - 1F);
         DEAD = true;
         helpDied = true;
+        GoldToSoulPatches.UpdateMerchantTip();
     }
 
     @Override

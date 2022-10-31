@@ -2,11 +2,9 @@ package champ.stances;
 
 import champ.ChampChar;
 import champ.ChampMod;
-import champ.actions.FatigueHpLossAction;
-import champ.powers.FocusedBerPower;
-import champ.powers.FocusedDefPower;
-import champ.powers.ResolvePower;
-import champ.relics.DefensiveTrainingManual;
+import champ.powers.BerserkerStylePower;
+
+import champ.powers.DoubleStyleThisTurnPower;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
@@ -17,11 +15,12 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
-import guardian.characters.GuardianCharacter;
 import guardian.vfx.DefensiveModeStanceParticleEffect;
 
 import static champ.ChampMod.fatigue;
+import static champ.ChampMod.vigor;
 
 public class BerserkerStance extends AbstractChampStance {
 
@@ -35,13 +34,37 @@ public class BerserkerStance extends AbstractChampStance {
     }// 24
 
     @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String getDescription() {
+        return ChampChar.characterStrings.TEXT[8] + ": " +
+                ChampChar.characterStrings.TEXT[12] + //Gain #B
+                BerserkerStance.amount() +
+                ChampChar.characterStrings.TEXT[46] + //#y Vigor
+                ChampChar.characterStrings.TEXT[63] +
+                " NL " +
+                ChampChar.characterStrings.TEXT[62] + //"Charges Remaining:
+                getRemainingChargeCount() +
+                ChampChar.characterStrings.TEXT[55]; //"."
+    }
+
+    @Override
     public String getKeywordString() {
         return "champ:berserker";
     }
 
     @Override
     public void updateDescription() {
-        this.description = ChampChar.characterStrings.TEXT[8] + ": " + ChampChar.characterStrings.TEXT[10] + amount() + ChampChar.characterStrings.TEXT[48] + " NL " + ChampChar.characterStrings.TEXT[9] + ": " + ChampChar.characterStrings.TEXT[11];
+        this.description = ChampChar.characterStrings.TEXT[8] + ": "   //Technique Bonus:
+                + ChampChar.characterStrings.TEXT[12] + //Gain #B
+                BerserkerStance.amount() +
+                ChampChar.characterStrings.TEXT[46] + //#y Vigor.
+                ChampChar.characterStrings.TEXT[63] +
+                " NL " + ChampChar.characterStrings.TEXT[9] + ": " + //Finisher Bonus:
+                ChampChar.characterStrings.TEXT[11];   //Gain 1 Strength.
     }
 
     @Override
@@ -51,37 +74,25 @@ public class BerserkerStance extends AbstractChampStance {
     }
 
     public static int amount() {
-        int x = 3;
-        if (AbstractDungeon.player.hasPower(FocusedBerPower.POWER_ID)) {
-            x += AbstractDungeon.player.getPower(FocusedBerPower.POWER_ID).amount;
+        int x = 2;
+        if (AbstractDungeon.player.hasPower(BerserkerStylePower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(BerserkerStylePower.POWER_ID).amount;
+        }
+        if (AbstractDungeon.player.hasPower(DoubleStyleThisTurnPower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(DoubleStyleThisTurnPower.POWER_ID).amount;
         }
         return x;
     }
 
     @Override
     public void technique() {
-        fatigue(amount());
+        vigor(amount());
     }
 
     @Override
     public void finisher() {
-        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (AbstractDungeon.player.hasPower(ResolvePower.POWER_ID)) {
-                    AbstractPower q = AbstractDungeon.player.getPower(ResolvePower.POWER_ID);
-                    if (q instanceof ResolvePower) {
-                        ((ResolvePower) q).adjustStrength = false;
-                        int x = AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount;
-                        if (x > 0) {
-                            addToTop(new HealAction(AbstractDungeon.player, AbstractDungeon.player, x));
-                            addToTop(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, AbstractDungeon.player.getPower(ResolvePower.POWER_ID)));
-                        }
-                    }
-                }
-            }
-        });
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
+
     }
 
     @Override

@@ -12,37 +12,20 @@ import com.megacrit.cardcrawl.relics.CoffeeDripper;
 import downfall.downfallMod;
 
 public class CBR_CoffeeDripper extends AbstractCharbossRelic {
-    public static final String ID = "CoffeeDripper";
+    public static final String ID = "Coffee Dripper";
 
     public CBR_CoffeeDripper() {
         super(new CoffeeDripper());
     }
 
-    @Override
     public String getUpdatedDescription() {
-        if (AbstractCharBoss.boss != null) {
-            return this.setDescription(AbstractCharBoss.boss.chosenClass);
-        }
-        return this.setDescription(null);
-    }
-
-    private String setDescription(final AbstractPlayer.PlayerClass c) {
-        return this.DESCRIPTIONS[1] + this.DESCRIPTIONS[0] + CardCrawlGame.languagePack.getRelicStrings(downfallMod.makeID(ID)).DESCRIPTIONS[0];
-    }
-
-    @Override
-    public void updateDescription(final AbstractPlayer.PlayerClass c) {
-        this.description = this.setDescription(c);
-        this.tips.clear();
-        this.tips.add(new PowerTip(this.name, this.description));
-        this.initializeTips();
+        return this.DESCRIPTIONS[1] + this.DESCRIPTIONS[0];
     }
 
     @Override
     public void onEquip() {
         final EnergyManager energy = AbstractCharBoss.boss.energy;
         ++energy.energyMaster;
-        this.owner.damage(new DamageInfo(this.owner, MathUtils.floor(this.owner.maxHealth * 0.15F), DamageInfo.DamageType.HP_LOSS));
     }
 
     @Override
@@ -50,7 +33,6 @@ public class CBR_CoffeeDripper extends AbstractCharbossRelic {
         final EnergyManager energy = AbstractCharBoss.boss.energy;
         --energy.energyMaster;
     }
-
 
     @Override
     public AbstractRelic makeCopy() {

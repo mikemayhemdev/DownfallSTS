@@ -9,10 +9,14 @@ import com.megacrit.cardcrawl.cards.colorless.HandOfGreed;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.input.InputHelper;
+import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 import com.megacrit.cardcrawl.ui.panels.TopPanel;
 import downfall.downfallMod;
+import downfall.monsters.FleeingMerchant;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.util.ReplaceData;
 import downfall.util.TextureLoader;
@@ -23,6 +27,7 @@ import javassist.expr.MethodCall;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -36,6 +41,9 @@ public class GoldToSoulPatches {
     public static Map<String, CharacterStrings[]> renameCh = new HashMap<>();
     public static Map<String, PowerStrings[]> renameP = new HashMap<>();
     public static Map<String, UIStrings[]> renameUI = new HashMap<>();
+
+    public static PowerTip SoulsTip = new PowerTip(uiStrings.TEXT[0], uiStrings.TEXT[1]);
+    public static PowerTip MerchantTip = new PowerTip(uiStrings.TEXT[2], "");
 
     //THE BELOW IS A MESS, YOU PROBABLY SHOULDN'T LOOK AT IT
     private static Texture GOLD_ICON;
@@ -275,6 +283,10 @@ public class GoldToSoulPatches {
 
     private static String filterString(String spireString) {
         String replacementString = spireString;
+        
+        //This is still getting an exception sometimes on the "replacementString = replaceAll" line so that leaves one possibility.
+       if (replacementString == null)
+           return "";
 
         for (ReplaceData data : downfallMod.wordReplacements) {
             for (String phrase : data.KEYS) {
@@ -289,6 +301,12 @@ public class GoldToSoulPatches {
         }
 
         return replacementString;
+    }
+
+    public static void UpdateMerchantTip() {
+        MerchantTip.body = uiStrings.TEXT[3] + ": " + (FleeingMerchant.DEAD ? uiStrings.TEXT[4] : FleeingMerchant.CURRENT_HP + "/" + FleeingMerchant.START_HP)
+        + " NL " + uiStrings.TEXT[5] + ": " + FleeingMerchant.CURRENT_STRENGTH
+        + " NL " + uiStrings.TEXT[6] + ": " + FleeingMerchant.CURRENT_SOULS;
     }
 
     @SpirePatch(clz = TopPanel.class, method = "renderGold")
@@ -315,6 +333,18 @@ public class GoldToSoulPatches {
         }
     }
 
+    @SpirePatch(clz = TopPanel.class, method = "updateTips")
+    public static class MerchantTipPatch {
+        public static void Prefix(TopPanel __instance) {
+            if (__instance.goldHb.hovered && EvilModeCharacterSelect.evilMode)
+                TipHelper.queuePowerTips(
+                    InputHelper.mX - (float)ReflectionHacks.getPrivateStatic(TopPanel.class, "TIP_OFF_X"),
+                    ReflectionHacks.getPrivateStatic(TopPanel.class, "TIP_Y"),
+                    new ArrayList<PowerTip>(Arrays.asList(SoulsTip, MerchantTip))
+                );
+        }
+    }
+
     @SpirePatch(clz = CardCrawlGame.class, method = "create")
     public static class PostLoadLocalizationPatch {
         @SpireInsertPatch(locator = Locator.class, localvars = {"languagePack"})
@@ -337,7 +367,7 @@ public class GoldToSoulPatches {
         }
     }
 
-    //Disabled this as it caused a crash with Unknown generation.  @TODO fix later.
+    //Disabled this as it caused a crash with Unknown generation. MAY want to look at this later.
     /*
     downfall.patches.ui.topPanel.GoldToSoulPatches$PleaseChange.patch(GoldToSoulPatches.java:345) ~[downfall.jar:?]
     at com.megacrit.cardcrawl.cards.colorless.HandOfGreed.makeCopy(HandOfGreed.java:48) ~[?:?]

@@ -4,7 +4,7 @@
     "NAMES": [
       "active"
     ],
-    "DESCRIPTION": "The #yActive Ghostflame can be Ignited by meeting its listed Ignition requirements."
+    "DESCRIPTION": "The #yActive Ghostflame can be #yIgnited by meeting its listed Ignition requirements."
   },
   {
     "PROPER_NAME": "Advance",
@@ -13,7 +13,7 @@
       "advanced",
       "advancing"
     ],
-    "DESCRIPTION": "#yActivate the next Ghostflame. If it's Ignited, #yExtinguish it."
+    "DESCRIPTION": "Move to the next Ghostflame. Moving onto a Ghostflame #yExtinguishes it."
   },
   {
     "PROPER_NAME": "Retract",
@@ -22,14 +22,14 @@
       "retracted",
       "retracting"
     ],
-    "DESCRIPTION": "#yActivate the previous Ghostflame. If it's Ignited, #yExtinguish it."
+    "DESCRIPTION": "Move to the previous Ghostflame. Moving onto a Ghostflame #yExtinguishes it."
   },
   {
     "PROPER_NAME": "Intensity",
     "NAMES": [
       "intensity"
     ],
-    "DESCRIPTION": "Intensity increases the amount of damage, Soulburn, and Block applied by Ghostflames when Ignited."
+    "DESCRIPTION": "Intensity increases the amount of damage, #ySoulburn, and #yBlock applied by Ghostflames when #yIgnited."
   },
   {
     "PROPER_NAME": "Soulburn",
@@ -45,43 +45,37 @@
       "extinguish",
       "extinguished"
     ],
-    "DESCRIPTION": "Allows Ghostflame to become Ignited again, resetting its Ignition requirements."
+    "DESCRIPTION": "Allows Ghostflame to become #yIgnited again, resetting its Ignition requirements."
   },
   {
     "PROPER_NAME": "Ignite",
     "NAMES": [
       "ignite",
-      "ignited"
-    ],
-    "DESCRIPTION": "Triggers the Ignition effect described on a Ghostflame."
-  },
-  {
-    "PROPER_NAME": "Force-Ignite",
-    "NAMES": [
+      "ignited",
       "force-ignite"
     ],
-    "DESCRIPTION": "Triggers the Ignition effect described on a Ghostflame, even if it was already Ignited."
+    "DESCRIPTION": "Triggers the Ignition effect described on a Ghostflame."
   },
   {
     "PROPER_NAME": "Seal",
     "NAMES": [
       "seal"
     ],
-    "DESCRIPTION": "Can't be upgraded. If all #b6 Seals have been played this combat, obtain #pThe #pBroken #pSeal and remove the Seals from your deck."
+    "DESCRIPTION": "If all #b6 Seals have been played this combat (with no redundant ones), obtain #pThe #pBroken #pSeal and remove the Seals from your deck."
   },
   {
     "PROPER_NAME": "Afterlife",
     "NAMES": [
       "afterlife"
     ],
-    "DESCRIPTION": "If this card is Exhausted, its effects activate."
+    "DESCRIPTION": "If this card is #yExhausted, its effects activate."
   },
   {
     "PROPER_NAME": "Crushing",
     "NAMES": [
       "crushing"
     ],
-    "DESCRIPTION": "#yGhostflame. #yIgnites when #b2 #ySkills are played while #yActive. #yIgnition: When #yIgnited, deal #b4 damage to a random enemy twice."
+    "DESCRIPTION": "#yGhostflame. #yIgnites when #b2 #ySkills are played while #yActive. #yIgnition: When #yIgnited, deal #b3 damage to a random enemy twice."
   },
   {
     "PROPER_NAME": "Bolstering",

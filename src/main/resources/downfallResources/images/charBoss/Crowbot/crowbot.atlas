@@ -1,0 +1,188 @@
+
+crowbot.png
+size: 253,253
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+crowbot_export/arm
+  rotate: true
+  xy: 81, 18
+  size: 28, 50
+  orig: 28, 51
+  offset: 0, 1
+  index: -1
+crowbot_export/bandaid
+  rotate: false
+  xy: 196, 69
+  size: 25, 26
+  orig: 25, 26
+  offset: 0, 0
+  index: -1
+crowbot_export/battery
+  rotate: true
+  xy: 0, 0
+  size: 19, 35
+  orig: 20, 35
+  offset: 0, 0
+  index: -1
+crowbot_export/batteryWire
+  rotate: false
+  xy: 211, 210
+  size: 41, 43
+  orig: 41, 43
+  offset: 0, 0
+  index: -1
+crowbot_export/bgFeathers
+  rotate: false
+  xy: 131, 194
+  size: 80, 59
+  orig: 81, 59
+  offset: 0, 0
+  index: -1
+crowbot_export/bgFinger1
+  rotate: true
+  xy: 240, 155
+  size: 20, 11
+  orig: 21, 12
+  offset: 0, 0
+  index: -1
+crowbot_export/bgFinger2
+  rotate: true
+  xy: 81, 73
+  size: 25, 16
+  orig: 25, 18
+  offset: 0, 1
+  index: -1
+crowbot_export/bgThumb
+  rotate: false
+  xy: 146, 0
+  size: 13, 14
+  orig: 13, 14
+  offset: 0, 0
+  index: -1
+crowbot_export/coat
+  rotate: false
+  xy: 0, 98
+  size: 98, 155
+  orig: 98, 155
+  offset: 0, 0
+  index: -1
+crowbot_export/eye
+  rotate: false
+  xy: 132, 0
+  size: 14, 14
+  orig: 15, 16
+  offset: 0, 1
+  index: -1
+crowbot_export/faceGear
+  rotate: false
+  xy: 218, 103
+  size: 26, 26
+  orig: 27, 27
+  offset: 1, 0
+  index: -1
+crowbot_export/fgFeathers
+  rotate: false
+  xy: 0, 38
+  size: 81, 60
+  orig: 81, 60
+  offset: 0, 0
+  index: -1
+crowbot_export/fgFinger1
+  rotate: false
+  xy: 107, 0
+  size: 25, 14
+  orig: 25, 14
+  offset: 0, 0
+  index: -1
+crowbot_export/fgFinger2
+  rotate: true
+  xy: 81, 51
+  size: 22, 12
+  orig: 22, 12
+  offset: 0, 0
+  index: -1
+crowbot_export/fgThumb
+  rotate: false
+  xy: 65, 24
+  size: 16, 14
+  orig: 16, 14
+  offset: 0, 0
+  index: -1
+crowbot_export/forearm
+  rotate: false
+  xy: 35, 0
+  size: 54, 18
+  orig: 55, 20
+  offset: 0, 1
+  index: -1
+crowbot_export/gear2Bg
+  rotate: false
+  xy: 131, 65
+  size: 65, 65
+  orig: 65, 65
+  offset: 0, 0
+  index: -1
+crowbot_export/gearShadow
+  rotate: true
+  xy: 0, 19
+  size: 19, 65
+  orig: 19, 66
+  offset: 0, 1
+  index: -1
+crowbot_export/head
+  rotate: false
+  xy: 131, 14
+  size: 64, 51
+  orig: 64, 51
+  offset: 0, 0
+  index: -1
+crowbot_export/leftLeg
+  rotate: false
+  xy: 211, 175
+  size: 40, 35
+  orig: 40, 35
+  offset: 0, 0
+  index: -1
+crowbot_export/leftThigh
+  rotate: false
+  xy: 196, 95
+  size: 22, 34
+  orig: 22, 34
+  offset: 0, 0
+  index: -1
+crowbot_export/rightFoot
+  rotate: false
+  xy: 200, 152
+  size: 40, 23
+  orig: 40, 23
+  offset: 0, 0
+  index: -1
+crowbot_export/rightThigh
+  rotate: true
+  xy: 200, 129
+  size: 23, 38
+  orig: 23, 39
+  offset: 0, 1
+  index: -1
+crowbot_export/shadow
+  rotate: true
+  xy: 98, 46
+  size: 207, 33
+  orig: 207, 33
+  offset: 0, 0
+  index: -1
+crowbot_export/shoulderGear
+  rotate: false
+  xy: 89, 0
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+crowbot_export/tail
+  rotate: false
+  xy: 131, 130
+  size: 69, 64
+  orig: 69, 64
+  offset: 0, 0
+  index: -1

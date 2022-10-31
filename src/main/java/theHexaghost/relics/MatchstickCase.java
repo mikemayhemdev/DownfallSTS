@@ -5,7 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.AdvanceAction;
 import theHexaghost.actions.ChargeCurrentFlameAction;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 import static theHexaghost.HexaMod.makeRelicOutlinePath;
 import static theHexaghost.HexaMod.makeRelicPath;

@@ -21,6 +21,6 @@ public class Analytical extends AbstractDailyMod {
 
     public Analytical() {
         super(ID, NAME, DESC, null, false);
-        this.img = ImageMaster.loadImage("downfallResources/images/dailies/enraging.png");
+        this.img = ImageMaster.loadImage("downfallResources/images/dailies/analytical.png");
     }
 }

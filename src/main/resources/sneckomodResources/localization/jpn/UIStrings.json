@@ -5,6 +5,11 @@
       " Upgraded "
     ]
   },
+  "sneckomod:UnknownNames": {
+    "TEXT": [
+      "Unknown"
+    ]
+  },
   "sneckomod:UnknownClass": {
     "TEXT": [
       "???",
@@ -12,12 +17,14 @@
       " Card.",
       "Character",
       "The ",
-      "You should never see this. Report to Vex"
+      "You should never see this. Report to Vex",
+      "アップグレード "
     ]
   },
   "sneckomod:UpgradedUnknownReward": {
     "TEXT": [
-      "Add an Unknown+ card to your deck"
+      "Add an Unknown+ card to your deck",
+      "Pick a Card."
     ]
   },
   "sneckomod:FreeRetainMod": {

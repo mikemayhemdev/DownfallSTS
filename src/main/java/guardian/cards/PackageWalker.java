@@ -2,6 +2,7 @@ package guardian.cards;
 
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,6 +15,8 @@ import guardian.GuardianMod;
 import slimebound.cards.DivideAndConquerDivide;
 
 import java.util.ArrayList;
+
+import static guardian.GuardianMod.makeBetaCardPath;
 
 public class PackageWalker extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("PackageWalker");
@@ -66,6 +69,7 @@ public class PackageWalker extends AbstractGuardianCard {
             prev2.upgrade();
             prev3.upgrade();
         }
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("PackageWalker.png"));
     }
 
     @Override
@@ -93,22 +97,21 @@ public class PackageWalker extends AbstractGuardianCard {
         tmp = new WalkerClaw();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-        tmp.modifyCostForCombat(-1);
+    //    tmp.modifyCostForCombat(-1);
 
         tmp = new Incinerate();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-        tmp.modifyCostForCombat(-1);
+     //   tmp.modifyCostForCombat(-1);
 
         tmp = new Orbwalk();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-        tmp.modifyCostForCombat(-1);
+     //   tmp.modifyCostForCombat(-1);
 
-        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect((AbstractCard) derp.get(0), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
-        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect((AbstractCard) derp.get(1), (float) Settings.WIDTH * .75F, (float) Settings.HEIGHT / 2.0F));
-        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect((AbstractCard) derp.get(2), (float) Settings.WIDTH * .25F, (float) Settings.HEIGHT / 2.0F));
-
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction((AbstractCard)derp.get(0), true));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction((AbstractCard) derp.get(1), true));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction((AbstractCard) derp.get(2), true));
     }
 
     public AbstractCard makeCopy() {
@@ -121,6 +124,12 @@ public class PackageWalker extends AbstractGuardianCard {
             this.rawDescription = UPGRADED_DESCRIPTION;
 
             this.initializeDescription();
+            if (prev1 != null)
+                prev1.upgrade();
+            if (prev2 != null)
+                prev2.upgrade();
+            if (prev3 != null)
+                prev3.upgrade();
         }
     }
 

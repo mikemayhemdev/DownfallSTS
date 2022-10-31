@@ -1,0 +1,163 @@
+{
+  "downfall:EvilMenuPanel": {
+    "TEXT": [
+      "崩墜模式",
+      "保衛腐化之心\n殺光入侵者",
+      "選擇你的惡棍",
+      "戰役"
+    ]
+  },
+  "downfall:SoulToGoldChanges": {
+    "TEXT": [
+      "靈魂",
+      "這是你現在擁有的靈魂。靈魂能上貢給心臟獲得獎勵。",
+      "商人狀態",
+      "生命值",
+      "已死亡。",
+      " #y力量 點數",
+      "被偷取的 #y靈魂 "
+    ]
+  },
+  "downfall:BustKeyButton": {
+    "TEXT": [
+      "打碎紅寶石",
+      "打碎藍寶石",
+      "打碎綠寶石",
+      "(自由行動)花費100靈魂：摧毀寶石並 ",
+      "每場戰鬥開始時獲得1點力量。",
+      "獲得10點最大生命。",
+      "每場戰鬥開始時獲得1點敏捷。",
+      "鑰匙已擊碎！",
+      "需要",
+      "靈魂。",
+      "(自由行動)摧毀寶石鑰匙來"
+    ]
+  },
+  "downfall:WheelSpinButton": {
+    "TEXT": [
+      "轉動轉盤",
+      "轉動轉盤",
+      "不能再轉了"
+    ]
+  },
+  "downfall:AscensionText": {
+    "TEXT": [
+      "19. 首領敵人額外擁有一件遺物",
+      "20. 深處Boss擁有回滿血的蜥蜴尾巴",
+      "獲得紅寶石鑰匙。稍後將其打碎",
+      "4. 首領敵人額外升級一張牌"
+    ]
+  },
+  "downfall:ConfigMenuText": {
+    "TEXT": [
+      "標準模式中可遇見崩墜模式的通用遺物。",
+      "標準模式中可遇見崩墜模式的藥水。",
+      "標準模式中可遇見崩墜模式的事件。",
+      "標準模式中可遇見崩墜模式的無色首領牌。",
+      "標準角色可進行崩墜模式，崩墜角色可進行標準模式。",
+      "其他Mod角色可進行崩墜模式。",
+      "標準模式中可遇見崩墜模式的詛咒。",
+      "崩墜模式中使用標準模式的地圖邏輯（首領戰鬥之前有休息處等）。",
+      "解鎖所有崩墜角色的卡牌與遺物（需要重啟遊戲）。",
+      "隱藏第一勇士的姿態提示 - 給第一勇士老手。",
+      "禁止異蛇使用其他Mod的角色牌池。",
+      "禁用音樂替換（需要重啟遊戲）。",
+      "解鎖所有崩墜角色的皮膚。"
+    ]
+  },
+  "downfall:EnergyPanelTip": {
+  "TEXT": [
+    "敵人當前的能量。打出卡牌需要能量。"
+  ],
+  "EXTRA_TEXT": [
+    "能量"
+  ]
+},
+  "downfall:RemoveCardReward": {
+    "TEXT": [
+      "移除牌組中的一張牌。",
+      "選擇一張牌移除"
+    ]
+  },
+  "downfall:TransformCardReward": {
+    "TEXT": [
+      "變化牌組中的一張牌。",
+      "選擇一張牌變化"
+    ]
+  },
+  "downfall:UpgradeCardReward": {
+    "TEXT": [
+      "升級牌組中的一張牌。",
+      "選擇一張牌升級"
+    ]
+  },
+  "downfall:BossRelicReward": {
+    "TEXT": [
+      "從三件Boss遺物中選擇獲得一件。",
+      "獲得一件 ",
+      "。",
+      "選擇一件遺物……大概"
+    ]
+  },
+  "downfall:EtherealMod": {
+    "TEXT": [
+      "虛無 。 NL "
+    ]
+  },
+  "downfall:JaxReward": {
+    "TEXT": [
+      "找到一些JAX！"
+    ]
+  },
+  "downfall:RareCardReward": {
+    "TEXT": [
+      "將一張稀有牌加入牌組"
+    ]
+  },
+  "downfall:OctoChoiceAction": {
+  "TEXT": [
+    "許個願",
+    "你不應該看見這個的",
+    "選擇一種史萊姆。"
+  ]
+},
+  "downfall:BossCardReward": {
+    "TEXT": [
+      "將一張首領牌加入牌組",
+      "選擇一張牌"
+    ]
+  },
+    "downfall:ColorfulCardReward": {
+    "TEXT": [
+      "將一張 ",
+      " 牌加入牌組",
+      "選擇一張牌"
+    ]
+  },
+  "downfall:RunHistoryMonsterNames": {
+    "TEXT": [
+      "活墻壁"
+    ]
+  },
+    "downfall:WhaleHunter": {
+    "TEXT": [
+      "捕鯨者",
+      "終結輪回。"
+    ]
+  },
+  "downfall:SingleCardViewPopup": {
+    "TEXT": [
+      "彈藥"
+    ]
+  },
+  "downfall:MainMenuAd": {
+    "TEXT": [
+      "想要遊玩更多？",
+      "包括崩墜在內的很多mod，",
+      "都能用來豐富原版遊戲的",
+      "體驗。你可以在Steam創意",
+      "工坊上來訂閱和下載它們。",
+      "點擊此處獲取更多相關信息。"
+    ]
+  }
+}

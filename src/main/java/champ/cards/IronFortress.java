@@ -1,6 +1,8 @@
 package champ.cards;
 
+import champ.ChampMod;
 import champ.powers.IronFortressPower;
+import champ.powers.IronFortressVigorPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -10,19 +12,21 @@ public class IronFortress extends AbstractChampCard {
 
     //stupid intellij stuff power, self, uncommon
 
-    private static final int MAGIC = 2;
-    private static final int UPG_MAGIC = 1;
-
     public IronFortress() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = MAGIC;
+
+        //tags.add(ChampMod.TECHNIQUE);
+        //techniqueLast = true;
+        //postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new IronFortressPower(magicNumber));
+        applyToSelf(new IronFortressPower(2));
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        isInnate = true;
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

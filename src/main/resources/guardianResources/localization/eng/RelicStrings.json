@@ -1,23 +1,23 @@
 {
   "Guardian:ModeShifter": {
-    "NAME": "Mode Shifter",
+    "NAME": "Bronze Gear",
     "FLAVOR": "Protection where you need it most.",
     "DESCRIPTIONS": [
-      "When you lose #b10 HP, enter #yguardianmod:Defensive_Mode and gain #b10 #yBlock, which will not be removed at the start of your next turn."
+      "The first time you enter #yguardianmod:Defensive_Mode each combat, gain an additional #b10 #yBlock. NL Guardian starts the run with a random common #yGem."
     ]
   },
   "Guardian:ModeShifterPlus": {
     "NAME": "Guardian Gear",
     "FLAVOR": "Replace every 3,000 floors.",
     "DESCRIPTIONS": [
-      "Replaces #rMode #rShifter. NL Begin each combat in #yguardianmod:Defensive_Mode, which persists for #b5 turns."
+      "Replaces #rBronze #rGear. NL Begin each combat in #yguardianmod:Defensive_Mode, which persists for #b3 turns."
     ]
   },
   "Guardian:DefensiveModeMoreBlock": {
     "NAME": "Baalor's Lordly Plate",
     "FLAVOR": "One can never have enough armor.",
     "DESCRIPTIONS": [
-      "When you use a card while in #yguardianmod:Defensive_Mode, gain #b1 more Block."
+      "Whenever you #yguardianmod:Brace, #yBrace 1 more."
     ]
   },
   "Guardian:guardianmod:GemCopier": {
@@ -43,7 +43,7 @@
     ]
   },
   "Guardian:StasisCodex": {
-    "NAME": "Construct Pilot's Codex",
+    "NAME": "Pilot's Codex",
     "FLAVOR": "Designs and diagrams of the Spire's earliest manually-driven prototypes, by Master Pilot David.",
     "DESCRIPTIONS": [
       "If you end your turn with no cards in #yguardianmod:Stasis, choose #b1 of #b3 cards to place into #yguardianmod:Stasis."
@@ -53,21 +53,21 @@
     "NAME": "Tiny Police Box",
     "FLAVOR": "It's bigger on the inside...",
     "DESCRIPTIONS": [
-      "Start each combat with #b2 additional #yguardianmod:Stasis slots."
+      "Start each combat with #b2 additional Stasis slots."
     ]
   },
   "Guardian:StasisSlotReductionRelic": {
     "NAME": "Wander Bots",
     "FLAVOR": "These drones find the most wonderful salvage, but require processing power to maintain.",
     "DESCRIPTIONS": [
-      "On pickup, lose #b2 #yguardianmod:Stasis slots. NL Gain [E] at the start of your turn."
+      "On pickup, lose #b2 Stasis slots. NL Gain [E] at the start of your turn."
     ]
   },
   "Guardian:StasisUpgradeRelic": {
     "NAME": "Cryo Chamber",
     "FLAVOR": "Things always seem better coming out than they did going in.",
     "DESCRIPTIONS": [
-      "Gain #b1 #yguardianmod:Stasis slot. When a card enters #yguardianmod:Stasis, #yUpgrade it."
+      "Gain #b1 Stasis slot. Whenever a card enters #yguardianmod:Stasis, #yUpgrade it."
     ]
   },
   "Guardian:BottledStasis": {
@@ -94,7 +94,7 @@
     "NAME": "Cooling Fluid",
     "FLAVOR": "Hazardous. Do not consume.",
     "DESCRIPTIONS": [
-      "Start each combat with #b2 additional #yguardianmod:Stasis slots. NL When a card enters #yguardianmod:Stasis, increase its turn counter by #b2."
+      "Start each combat with #b2 additional Stasis slots. NL When a card enters #yguardianmod:Stasis, increase its turn counter by #b2."
     ]
   },
   "Guardian:PickAxe": {
@@ -108,7 +108,8 @@
     "NAME": "Gemstone Gun",
     "FLAVOR": "Bang! Bang! Bang! Hey, I matched three!",
     "DESCRIPTIONS": [
-      "Upon pickup, choose #b3 #yguardianmod:Gems. At the start of each combat, gain a card with Retain, Exhaust, and has each chosen Gem socketed."
+      "Upon pickup, choose #b3 #yguardianmod:Gems. At the start of each combat, gain a card with #yRetain, #yExhaust, and each chosen #yGem socketed.",
+      "Choose a Gem to load the Gem Gun."
     ]
   },
   "Guardian:BottledAnomaly": {

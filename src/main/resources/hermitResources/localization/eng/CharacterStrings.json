@@ -1,0 +1,15 @@
+{
+  "hermit:hermit": {
+    "NAMES": [
+      "The Hermit",
+      "the Hermit"
+    ],
+    "TEXT": [
+      "A lone undead gunslinger from a far away place. NL Haunted by the inescapable specter of the past.",
+      "NL You reach for your holster...",
+      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~empty~ ~one,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~",
+      "#y~DESPAIR.~  NL NL The last adversary sinks to the ground, clutching a smoking wound. Their bodies barely have time to grow cold before you begin pilfering the remains. NL NL #bCloth. #rPlates. #yGold. NL NL Clouds churn high above, an ill omen. You have lingered too long in one place. Soon they will come for you. NL NL Again you have to flee, #rbut #rwhere?",
+      "Up Next"
+    ]
+  }
+}

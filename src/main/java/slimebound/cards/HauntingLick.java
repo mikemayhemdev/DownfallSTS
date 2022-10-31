@@ -22,13 +22,13 @@ import slimebound.vfx.SlimeDripsEffect;
 import static com.badlogic.gdx.graphics.Color.ROYAL;
 
 
-public class HauntingLick extends AbstractSlimeboundCard {
+public class HauntingLick extends AbstractLickCard {
     public static final String ID = "Slimebound:HauntingLick";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static final String IMG_PATH = "cards/hauntinglick.png";
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 0;
@@ -53,6 +53,7 @@ public class HauntingLick extends AbstractSlimeboundCard {
         this.exhaust = true;
         this.slimed = this.baseSlimed = 4;
         this.magicNumber = this.baseMagicNumber = 1;
+        SlimeboundMod.loadJokeCardImage(this, "HauntingLick.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -62,9 +63,14 @@ public class HauntingLick extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.slimed), this.slimed, true, AbstractGameAction.AttackEffect.NONE));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new LickEffect(m.hb.cX, m.hb.cY, 0.6F, new Color(ROYAL)), 0.1F));
 
-        if (upgraded) addToBot(new DrawCardAction(1));
+        if (upgraded) upgradeAction(p,m);
+
+    }
 
 
+
+    public void upgradeAction(AbstractPlayer p, AbstractMonster m){
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
     }
 
     public AbstractCard makeCopy() {

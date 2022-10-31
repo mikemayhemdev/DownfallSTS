@@ -16,7 +16,8 @@
       "place into Stasis.",
       "~ERROR:~ Cannot #rAttack in Construction Mode.",
       "~ERROR:~ #rStasis in progress.",
-      "Add a Gem to your deck"
+      "Add a Gem to your deck",
+      " (Cards on the right will be Stasised first)"
     ]
   },
   "Guardian:FindGemsOption": {
@@ -24,6 +25,11 @@
       "Mine",
       "Gain 2 random Gems.",
       "Pick broken."
+    ]
+  },
+  "Guardian:BraceMod": {
+    "TEXT": [
+      " NL guardianmod:Brace 2."
     ]
   }
 }

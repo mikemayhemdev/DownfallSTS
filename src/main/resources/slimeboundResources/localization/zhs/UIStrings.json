@@ -6,5 +6,10 @@
       "允许其他角色遇到史莱姆相关【事件】",
       "解锁全部内容（不推荐）"
     ]
+  },
+    "slimeboundmod:CommandMod": {
+    "TEXT": [
+      " NL slimeboundmod:命令 。"
+    ]
   }
 }

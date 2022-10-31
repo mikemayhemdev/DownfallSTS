@@ -2,20 +2,13 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
-import champ.actions.FatigueHpLossAction;
-import champ.cards.AbstractChampCard;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theHexaghost.HexaMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class BerserkerStylePower extends AbstractPower implements CloneablePowerInterface {
 
@@ -42,30 +35,16 @@ public class BerserkerStylePower extends AbstractPower implements CloneablePower
     }
 
     @Override
-    public void atStartOfTurn() {
-        if (AbstractChampCard.bcombo()) {
-            flash();
-            fatigue(amount);
-            addToBot(new GainEnergyAction(1));
-        }
+    public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
+        ChampMod.updateTechniquesInCombat();
     }
 
-    public int fatigue(int begone) {
-
-        int y = AbstractDungeon.player.currentHealth;
-        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                int x = Math.min(begone, AbstractDungeon.player.currentHealth - 1);
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(x), x));
-                AbstractDungeon.actionManager.addToTop(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, x));
-            }
-        });
-
-        return Math.min(begone, AbstractDungeon.player.currentHealth - 1);
+    @Override
+    public void onInitialApplication() {
+        super.onInitialApplication();
+        ChampMod.updateTechniquesInCombat();
     }
-
 
     @Override
     public void updateDescription() {

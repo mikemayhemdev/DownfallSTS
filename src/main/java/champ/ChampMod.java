@@ -1,7 +1,7 @@
 package champ;
 
 import basemod.BaseMod;
-import basemod.abstracts.CustomUnlockBundle;
+import basemod.ReflectionHacks;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
@@ -16,14 +16,23 @@ import champ.potions.TechPotion;
 import champ.potions.UltimateStancePotion;
 import champ.powers.CounterPower;
 import champ.powers.ResolvePower;
+import champ.stances.BerserkerStance;
+import champ.stances.DefensiveStance;
+import champ.util.OnOpenerSubscriber;
+import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import champ.relics.*;
 import champ.stances.AbstractChampStance;
 import champ.util.CardFilter;
 import champ.util.CoolVariable;
-import champ.util.TextureLoader;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+import downfall.patches.BanSharedContentPatch;
+import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -40,15 +49,15 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import com.megacrit.cardcrawl.unlock.AbstractUnlock;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.downfallMod;
 import downfall.util.CardIgnore;
+import guardian.cards.AbstractGuardianCard;
+import hermit.cards.AbstractHermitCard;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import sneckomod.TheSnecko;
-import sneckomod.events.BackToBasicsSnecko;
+import theHexaghost.cards.AbstractHexaCard;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -73,8 +82,7 @@ public class ChampMod implements
         OnCardUseSubscriber,
         PreMonsterTurnSubscriber,
         OnPlayerLoseBlockSubscriber,
-        PostUpdateSubscriber
-{
+        PostUpdateSubscriber {
     public static final String SHOULDER1 = "champResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "champResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "champResources/images/char/mainChar/corpse.png";
@@ -98,7 +106,7 @@ public class ChampMod implements
     @SpireEnum
     public static AbstractCard.CardTags OPENERDEFENSIVE;
     @SpireEnum
-    public static AbstractCard.CardTags OPENERGLADIATOR;
+    public static AbstractCard.CardTags OPENERNOTIN;
     @SpireEnum
     public static AbstractCard.CardTags OPENERBERSERKER;
     @SpireEnum
@@ -110,19 +118,14 @@ public class ChampMod implements
     @SpireEnum
     public static AbstractCard.CardTags COMBODEFENSIVE;
     @SpireEnum
-    public static AbstractCard.CardTags COMBOGLADIATOR;
-    @SpireEnum
     public static AbstractCard.CardTags COMBOBERSERKER;
 
     private static String modID = "champ";
     public static int finishersThisTurn = 0;
     public static int finishersThisCombat = 0;
     public static int techniquesThisTurn = 0;
-    private CustomUnlockBundle unlocks0;
-    private CustomUnlockBundle unlocks1;
-    private CustomUnlockBundle unlocks2;
-    private CustomUnlockBundle unlocks3;
-    private CustomUnlockBundle unlocks4;
+    public static boolean talked1 = false;
+    public static boolean talked2 = false;
 
     public static boolean enteredDefensiveThisTurn;
     public static boolean enteredBerserkerThisTurn;
@@ -152,6 +155,19 @@ public class ChampMod implements
                 CARD_ENERGY_L, TEXT_ENERGY);
 
 
+    }
+
+    public static void loadJokeCardImage(AbstractCard card, String img) {
+        if (card instanceof AbstractChampCard) {
+            ((AbstractChampCard) card).betaArtPath = img;
+        }
+        Texture cardTexture;
+        cardTexture = hermit.util.TextureLoader.getTexture(getModID() + "Resources/images/betacards/" + img);
+        cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+        int tw = cardTexture.getWidth();
+        int th = cardTexture.getHeight();
+        TextureAtlas.AtlasRegion cardImg = new TextureAtlas.AtlasRegion(cardTexture, 0, 0, tw, th);
+        ReflectionHacks.setPrivate(card, AbstractCard.class, "jokePortrait", cardImg);
     }
 
     public static String makeCardPath(String resourcePath) {
@@ -284,6 +300,14 @@ public class ChampMod implements
         BaseMod.addPotion(TechPotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, TechPotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
         BaseMod.addPotion(UltimateStancePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, UltimateStancePotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
 
+        BanSharedContentPatch.registerRunLockedPotion(ChampChar.Enums.THE_CHAMP, CounterstrikePotion.POTION_ID);
+
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(CounterstrikePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(OpenerPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(TechPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(UltimateStancePotion.POTION_ID);
+        }
     }
 
     @Override
@@ -300,50 +324,29 @@ public class ChampMod implements
     @Override
     public void receiveSetUnlocks() {
 
-        unlocks0 = new CustomUnlockBundle(
-                Aggression.ID, Balance.ID, Control.ID
+        downfallMod.registerUnlockSuite(
+                BerserkerStyle.ID,
+                ViciousMockery.ID,
+                DefensiveStyle.ID,
+
+                RageSigil.ID,
+                ShieldSigil.ID,
+                SwordSigil.ID,
+
+                EnchantShield.ID,
+                EnchantSword.ID,
+                EnchantCrown.ID,
+
+                SignatureFinisher.ID,
+                PowerArmor.ID,
+                SpectersHand.ID,
+
+                DuelingGlove.ID,
+                Barbells.ID,
+                DeflectingBracers.ID,
+
+                ChampChar.Enums.THE_CHAMP
         );
-        UnlockTracker.addCard(Aggression.ID);
-        UnlockTracker.addCard(Balance.ID);
-        UnlockTracker.addCard(Control.ID);
-
-        unlocks1 = new CustomUnlockBundle(
-                RageSigil.ID, ShieldSigil.ID, SwordSigil.ID
-        );
-        UnlockTracker.addCard(RageSigil.ID);
-        UnlockTracker.addCard(ShieldSigil.ID);
-        UnlockTracker.addCard(SwordSigil.ID);
-
-        unlocks2 = new CustomUnlockBundle(
-                EnchantShield.ID, EnchantSword.ID, EnchantCrown.ID
-        );
-        UnlockTracker.addCard(EnchantShield.ID);
-        UnlockTracker.addCard(EnchantSword.ID);
-        UnlockTracker.addCard(EnchantCrown.ID);
-
-        unlocks3 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                SignatureFinisher.ID, PowerArmor.ID, SpectersHand.ID
-        );
-        UnlockTracker.addRelic(SignatureFinisher.ID);
-        UnlockTracker.addRelic(PowerArmor.ID);
-        UnlockTracker.addRelic(SpectersHand.ID);
-
-        unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                DuelingGlove.ID, Barbells.ID, DeflectingBracers.ID
-        );
-        UnlockTracker.addRelic(DuelingGlove.ID);
-        UnlockTracker.addRelic(Barbells.ID);
-        UnlockTracker.addRelic(DeflectingBracers.ID);
-
-        BaseMod.addUnlockBundle(unlocks0, ChampChar.Enums.THE_CHAMP, 0);
-
-        BaseMod.addUnlockBundle(unlocks1, ChampChar.Enums.THE_CHAMP, 1);
-
-        BaseMod.addUnlockBundle(unlocks2, ChampChar.Enums.THE_CHAMP, 2);
-
-        BaseMod.addUnlockBundle(unlocks3, ChampChar.Enums.THE_CHAMP, 3);
-
-        BaseMod.addUnlockBundle(unlocks4, ChampChar.Enums.THE_CHAMP, 4);
 
     }
 
@@ -426,13 +429,14 @@ public class ChampMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(MinorLeagueArena.ID, MinorLeagueArena.class) //Event ID//
                 //Event Spawn Condition//
-
-                .playerClass(ChampChar.Enums.THE_CHAMP)
                 .dungeonID(Exordium.ID)
                 .eventType(EventUtils.EventType.NORMAL)
+                .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
+                //Prevent from appearing too early//
+                .bonusCondition(() -> (AbstractDungeon.floorNum > 6))
                 .create());
                 /*
-                .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
+
                 .dungeonID(Exordium.ID)
                 .eventType(EventUtils.EventType.NORMAL)
                 .create());
@@ -481,13 +485,54 @@ public class ChampMod implements
             }
         }
         */
+
+        if (abstractCard.hasTag(ChampMod.OPENERBERSERKER)) {
+            berserkOpen();
+        }
+        if (abstractCard.hasTag(ChampMod.OPENERDEFENSIVE)) {
+            defenseOpen();
+        }
+        if (abstractCard.hasTag(ChampMod.OPENERNOTIN)) {
+            if (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID)) {
+                berserkOpen();
+            } else if (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
+                defenseOpen();
+            } else if (AbstractDungeon.cardRandomRng.randomBoolean()) {
+                berserkOpen();
+            } else {
+                defenseOpen();
+            }
+        }
+
+    }
+
+
+    public static void berserkOpen() {
+
+        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(BerserkerStance.STANCE_ID));
+        triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
+    }
+
+    public static void defenseOpen() {
+
+        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveStance.STANCE_ID));
+        triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
+    }
+
+    public static void triggerOpenerRelics(boolean fromNeutral) {
+        for (AbstractRelic r : AbstractDungeon.player.relics) {
+            if (r instanceof OnOpenerSubscriber) ((OnOpenerSubscriber) r).onOpener(fromNeutral);
+        }
     }
 
     @Override
     public int receiveOnPlayerLoseBlock(int i) {
         if (AbstractDungeon.player.hasRelic(DeflectingBracers.ID)) {
-            AbstractDungeon.player.getRelic(DeflectingBracers.ID).flash();
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(i), i));
+            int counter = Math.min(i, AbstractDungeon.player.currentBlock / 2);
+            if (counter > 0) {
+                AbstractDungeon.player.getRelic(DeflectingBracers.ID).flash();
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(counter), counter));
+            }
         }
         return i;
     }
@@ -502,20 +547,39 @@ public class ChampMod implements
         }
     }
 
-    public static void updateTechniquesInCombat(){
-        for (AbstractCard c: AbstractDungeon.player.drawPile.group){
+
+    public static void vigor(int begone) {
+
+        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                int x = begone;
+                if (AbstractDungeon.player.hasRelic(PowerArmor.ID) && AbstractDungeon.player.hasPower(VigorPower.POWER_ID)) {
+                    if (x + AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount > PowerArmor.CAP_RESOLVE_ETC) {
+                        x = PowerArmor.CAP_RESOLVE_ETC - AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount;
+                    }
+                }
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, x), x));
+            }
+        });
+
+    }
+
+    public static void updateTechniquesInCombat() {
+        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
             if (c.hasTag(TECHNIQUE)) c.initializeDescription();
         }
-        for (AbstractCard c: AbstractDungeon.player.discardPile.group){
+        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
             if (c.hasTag(TECHNIQUE)) c.initializeDescription();
         }
-        for (AbstractCard c: AbstractDungeon.player.hand.group){
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
             if (c.hasTag(TECHNIQUE)) c.initializeDescription();
         }
-        for (AbstractCard c: AbstractDungeon.player.exhaustPile.group){
+        for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
             if (c.hasTag(TECHNIQUE)) c.initializeDescription();
         }
-        for (AbstractCard c: AbstractDungeon.player.limbo.group){
+        for (AbstractCard c : AbstractDungeon.player.limbo.group) {
             if (c.hasTag(TECHNIQUE)) c.initializeDescription();
         }
     }

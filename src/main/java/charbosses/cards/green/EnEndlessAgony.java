@@ -31,10 +31,10 @@ public class EnEndlessAgony extends AbstractBossCard {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
     }
 
-    @Override
-    public void triggerWhenDrawn() {
-        addToBot(new EnemyMakeTempCardInHandAction(this.makeStatEquivalentCopy()));
-    }
+//    @Override
+//    public void triggerWhenDrawn() {
+//        addToBot(new EnemyMakeTempCardInHandAction(this.makeStatEquivalentCopy()));
+//    }
 
     @Override
     public void upgrade() {

@@ -1,0 +1,94 @@
+{
+        "hermit:Concentration": {
+                "NAME": "Concentration",
+                "DESCRIPTIONS": ["La prochaine carte #yDans #yLe #yMille que vous jouez ce tour déclenche son effet quelle que soit sa position."]
+        },
+        "hermit:HighNoonPower": {
+                "NAME": "Midi",
+                "DESCRIPTIONS": ["Lorsque vous jouez une #yFrappe ou #Défense, piochez #b", " carte.", " cartes."]
+        },
+        "hermit:FatalDesirePower": {
+                "NAME": "Désir fatal",
+                "DESCRIPTIONS": ["Au début de votre tour, piochez #b", " cartes et ajoutez #b", " #yBlessure dans votre main.", " #yBlessures dans votre main."]
+        },
+        "hermit:ShadowCloakPower": {
+                "NAME": "Cape obscure",
+                "DESCRIPTIONS": ["Lorsque vous piochez une Malédiction, gagnez #b", " d'Armure."]
+        },
+        "hermit:TakeAimPower": {
+                "NAME": "Ciblage",
+                "DESCRIPTIONS": ["Au début de votre tour, #yConcentrez-vous."]
+        },
+        "hermit:AdaptPower": {
+                "NAME": "Adaptation",
+                "DESCRIPTIONS": ["Au début de votre tour, vous pouvez #yÉpuiser #b", " carte dans votre main pour gagner #b8 d'Armure.", " cartes dans votre main pour gagner #b8 d'Armure par carte."]
+        },
+        "hermit:Bruise": {
+                "NAME": "Meurtri",
+                "DESCRIPTIONS": ["Ce tour, la cible subit #b", " dégâts supplémentaires. Chaque coup réduit cet effet de 1."]
+        },
+        "hermit:HorrorPower": {
+                "NAME": "Horreur",
+                "DESCRIPTIONS": ["L'effet Meurtri ne s'estompe pas pendant #b", " tour.", " tours."]
+        },
+        "hermit:ComboPower": {
+                "NAME": "Combo",
+                "DESCRIPTIONS": ["Lorsque vous activez un effet #yDans #yLe #yMille, ajoutez #b", " carte aléatoire avec #yDans #yLe #yMille à votre main.", "  cartes aléatoires avec #yDans #yLe #yMille à votre main."]
+        },
+        "hermit:BigShotPower": {
+                "NAME": "Baril de fumée",
+                "DESCRIPTIONS": ["Lorsque vous activez un effet #yDans #yLe #yMille, votre prochaine attaque inflige #b", " dégâts supplémentaires."]
+        },
+        "hermit:BrawlPower": {
+                "NAME": "Pugilat",
+                "DESCRIPTIONS": ["Au début de votre tour, appliquez #b", " de Meurtri à TOUS les ennemis."]
+        },
+        "hermit:Rugged": {
+                "NAME": "Robustesse",
+                "DESCRIPTIONS": ["La/les prochaine(s)", " fois que vous prenez des dégâts non-bloqués, réduisez-les à #b1.", " fois que vous prenez des dégâts non-bloqués, réduisez-les à #b1."]
+        },
+        "hermit:EternalPower": {
+                "NAME": "Pouvoir éternel",
+                "DESCRIPTIONS": ["Au début de votre tour, réduisez le coût de toutes les cartes de votre main de #b", "."]
+        },
+        "hermit:OverwhelmingPowerPower": {
+                "NAME": "Puissance écrasante",
+                "DESCRIPTIONS": ["Perdez #b", " PV si vous finissez votre tour avec 0 d'Énergie."]
+        },
+        "hermit:Bounty": {
+                "NAME": "Prime",
+                "DESCRIPTIONS": ["Prime actuelle : #b"]
+        },
+        "hermit:Drained": {
+                "NAME": "Drainé",
+                "DESCRIPTIONS": ["Gagnez #b", " énergie de moins au prochain tour."]
+        },
+        "hermit:DeterminationPower": {
+                "NAME": "Détermination",
+                "DESCRIPTIONS": ["Lorsqu'un Débuff vous est appliqué, gagnez #b", " de #yForce."]
+        },
+        "hermit:RyeStalkPower": {
+                "NAME": "Tige de seigle",
+                "DESCRIPTIONS": ["À la fin du tour, #yRetenez n'importe quel nombre de cartes."]
+        },
+        "hermit:PetGhostPower": {
+                "NAME": "Fantôme de compagnie",
+                "DESCRIPTIONS": ["Vous ne pouvez pas mourir. Mourrez à la fin de ", " votre prochain tour.", " ce tour."]
+        },
+        "hermit:SnipePower": {
+                "NAME": "Snipe",
+                "DESCRIPTIONS": ["Le/les #b", " prochain effet #yDans #yLe #yMille ce tour est joué 2 fois.", " prochains effets #yDans #yLe #yMille ce tour sont joués 2 fois."]
+        },
+        "hermit:CoalescencePower": {
+                "NAME": "Coalescence",
+                "DESCRIPTIONS": ["À la fin de votre tour, #yRetenez jusqu'à #b", " Carte.", " Cartes."]
+        },
+        "hermit:ReprievePower": {
+                "NAME": "Sursis",
+                "DESCRIPTIONS": ["Jouez #b", " tour supplémentaire après celui-ci.",  " tours supplémentaires après celui-ci."]
+        },
+        "hermit:MaintenanceStrikePower": {
+                "NAME": "Maintenance",
+                "DESCRIPTIONS": ["Vos #yFrappes infligent #b", " dégâts supplémentaires."]
+        }
+        }

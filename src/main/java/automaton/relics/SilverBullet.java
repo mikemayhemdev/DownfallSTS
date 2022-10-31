@@ -4,11 +4,14 @@ import automaton.AutomatonMod;
 import automaton.actions.AddToFuncAction;
 import automaton.cards.Replicate;
 import automaton.cards.WhirlingStrike;
-import automaton.util.TextureLoader;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import downfall.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
+import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import gremlin.actions.MakeEchoAction;
 
 import static automaton.AutomatonMod.makeRelicOutlinePath;
 import static automaton.AutomatonMod.makeRelicPath;
@@ -21,13 +24,18 @@ public class SilverBullet extends CustomRelic {
 
     public SilverBullet() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
+        tips.add(new CardPowerTip(new WhirlingStrike()));
     }
 
     @Override
     public void atBattleStart() {
         flash();
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        addToBot(new AddToFuncAction(new WhirlingStrike(), null));
+        WhirlingStrike freebullet=new WhirlingStrike();
+        freebullet.freeToPlayOnce=true;
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(freebullet, 1));
+
+//        addToBot(new AddToFuncAction(new WhirlingStrike(), null));
     }
 
     @Override

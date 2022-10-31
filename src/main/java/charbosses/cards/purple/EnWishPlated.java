@@ -2,6 +2,7 @@ package charbosses.cards.purple;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
+import charbosses.vfx.EnemyMiracleEffect;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -32,7 +33,7 @@ public class EnWishPlated extends AbstractBossCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new VFXAction(new BorderFlashEffect(Color.CHARTREUSE, true)));
-        this.addToBot(new VFXAction(p, new MiracleEffect(Color.CHARTREUSE, Color.LIME, "BLOCK_GAIN_1"), 1.0F));
+        this.addToBot(new VFXAction(m, new EnemyMiracleEffect(Color.CHARTREUSE, Color.LIME, "BLOCK_GAIN_1"), 1.0F));
         this.addToBot(new ApplyPowerAction(m, m, new PlatedArmorPower(m, this.magicNumber), this.magicNumber));
 
     }

@@ -6,16 +6,21 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.actions.AdvanceAction;
 import theHexaghost.actions.ExtinguishAction;
+import theHexaghost.powers.ApocalypticArmorPower;
 import theHexaghost.powers.EnhancePower;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
+
+import java.util.ArrayList;
 
 import static theHexaghost.HexaMod.makeUIPath;
 
@@ -53,8 +58,9 @@ public class InfernoGhostflame extends AbstractGhostflame {
 
     @Override
     public void onCharge() {
+
         atb(new VFXAction(AbstractDungeon.player, new ScreenOnFireEffect(), 1.0F));
-        int x = damage;
+        int x = damage, amountOfIgnitedGhostflames = 0;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
@@ -62,15 +68,25 @@ public class InfernoGhostflame extends AbstractGhostflame {
             AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(j);
             if (gf.charged) {
                 atb(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-                //atb(new WaitAction(0.1F));  //Critical for keeping the UI not broken, and helps sell the anim
-                atb(new ExtinguishAction(gf));
+                atb(new WaitAction(0.1F));  //Critical for keeping the UI not broken, and helps sell the anim
+                if (gf != this) atb(new ExtinguishAction(gf));
+                amountOfIgnitedGhostflames++;
             }
         }
+        /*
         if (GhostflameHelper.activeGhostFlame == this){
             atb(new AdvanceAction(false));
         }
-        atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(1), 1));
+        */
+
+        /*
+        if (amountOfIgnitedGhostflames == 6) {
+            atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(2), 2));
+        }*/
+
     }
+
+
 
 
     @Override
@@ -172,9 +188,9 @@ public class InfernoGhostflame extends AbstractGhostflame {
         }
         int x = getEffectCount();
         s = s + DESCRIPTIONS[6] + x + DESCRIPTIONS[7];
-      //  if (GhostflameHelper.activeGhostFlame == this) {
-      //      s = s + DESCRIPTIONS[8];
-     //   }
+        if (GhostflameHelper.activeGhostFlame == this) {
+            s = s + DESCRIPTIONS[9];
+        }
         return s;
     }
 

@@ -6,22 +6,19 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 
 public class NightmareStrike extends AbstractHexaCard {
 
     public final static String ID = makeID("NightmareStrike");
 
-    //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
-
-    private static final int DAMAGE = 14;
-    private static final int UPG_DAMAGE = 4;
-
     public NightmareStrike() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 10;
         isEthereal = true;
         cardsToPreview = new ShadowStrike();
         tags.add(CardTags.STRIKE);
+        HexaMod.loadJokeCardImage(this, "NightmareStrike.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -29,9 +26,9 @@ public class NightmareStrike extends AbstractHexaCard {
     }
 
     @Override
-    public void triggerOnExhaust() {
+    public void afterlife() {
         superFlash(Color.PURPLE);
-        AbstractCard q = new ShadowStrike();
+        AbstractCard q = new ShadowStrike(this);
         if (upgraded) q.upgrade();
         atb(new MakeTempCardInHandAction(q));
     }
@@ -39,11 +36,9 @@ public class NightmareStrike extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPG_DAMAGE);
+            upgradeDamage(3);
             rawDescription = UPGRADE_DESCRIPTION;
-            AbstractCard q = new ShadowStrike();
-            q.upgrade();
-            cardsToPreview = q;
+            cardsToPreview.upgrade();
             initializeDescription();
         }
     }

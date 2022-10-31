@@ -1,3 +1,4 @@
+/*
 package automaton.cards;
 
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -13,9 +14,9 @@ public class ChildClass extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, uncommon
 
     public ChildClass() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         thisEncodes();
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+       // this.tags.add(SneckoMod.BANNEDFORSNECKO);
         baseBlock = 3;
     }
 
@@ -34,9 +35,9 @@ public class ChildClass extends AbstractBronzeCard {
         }
     }
 
-    //TODO: Figure out some way to check if the card will generate energy, and only provide compile text if so.
-
     public void upp() {
         upgradeBlock(2);
     }
 }
+
+ */

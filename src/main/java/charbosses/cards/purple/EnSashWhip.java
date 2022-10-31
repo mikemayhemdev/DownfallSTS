@@ -18,7 +18,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.ArrayList;
 
 public class EnSashWhip extends AbstractBossCard {
-    public static final String ID = "downfall_Charboss:SandsOfTime";
+    public static final String ID = "downfall_Charboss:SashWhip";
     private static final CardStrings cardStrings;
 
     public EnSashWhip() {

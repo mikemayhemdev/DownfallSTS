@@ -15,7 +15,7 @@ import guardian.GuardianMod;
 import java.util.ArrayList;
 
 public class UpgradeShrineGuardian extends AbstractImageEvent {
-    public static final String ID = "Guardian:UpgradeShrine";
+    public static final String ID = "Guardian:UpgradeShrineEvil";
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
@@ -59,7 +59,7 @@ public class UpgradeShrineGuardian extends AbstractImageEvent {
         if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             c.upgrade();
-            logMetricCardUpgrade("Upgrade Shrine", "Upgraded", c);
+            logMetricCardUpgrade(ID, "Upgraded", c);
             AbstractDungeon.player.bottledCardUpgradeCheck(c);
             AbstractDungeon.effectsQueue.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy()));
             AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
@@ -76,16 +76,15 @@ public class UpgradeShrineGuardian extends AbstractImageEvent {
                         this.screen = UpgradeShrineGuardian.CUR_SCREEN.COMPLETE;
                         this.imageEventText.updateBodyText(CardCrawlGame.languagePack.getEventString("Guardian:Purifier").DESCRIPTIONS[0]);
                         ArrayList<AbstractCard> gems = GuardianMod.getRewardGemCards(false, 2);
-                        ArrayList<AbstractCard> rewards = new ArrayList<>();
-                        int rando;
-                        for (int i = 0; i < 2; ++i) {
-                            rando = AbstractDungeon.cardRng.random(gems.size() - 1);
-                            rewards.add(gems.get(rando));
-                            gems.remove(rando);
+                        ArrayList<String> gemIDs = new ArrayList<>();
+                        for (AbstractCard gem : gems) {
+                            gemIDs.add(gem.cardID);
                         }
+                        logMetricObtainCards(ID, "Smashed", gemIDs);
 
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(rewards.get(0), (float) (Settings.WIDTH * 0.35), (float) (Settings.HEIGHT / 2)));
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(rewards.get(1), (float) (Settings.WIDTH * 0.7), (float) (Settings.HEIGHT / 2)));
+
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(gems.get(0), (float) (Settings.WIDTH * 0.35), (float) (Settings.HEIGHT / 2)));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(gems.get(1), (float) (Settings.WIDTH * 0.7), (float) (Settings.HEIGHT / 2)));
 
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
                         this.imageEventText.clearRemainingOptions();
@@ -101,7 +100,7 @@ public class UpgradeShrineGuardian extends AbstractImageEvent {
                     case 2:
                         this.screen = UpgradeShrineGuardian.CUR_SCREEN.COMPLETE;
                         AbstractDungeon.getCurrRoom().phase = RoomPhase.COMPLETE;
-                        logMetricIgnored("Upgrade Shrine");
+                        logMetricIgnored(ID);
                         this.imageEventText.updateBodyText(IGNORE);
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
                         this.imageEventText.clearRemainingOptions();

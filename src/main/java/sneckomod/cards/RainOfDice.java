@@ -1,10 +1,12 @@
 package sneckomod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
+import sneckomod.actions.MuddleAction;
 import sneckomod.actions.NoApplyRandomDamageAction;
 import sneckomod.powers.MuddleDrawnCardsPower;
 
@@ -12,19 +14,11 @@ public class RainOfDice extends AbstractSneckoCard {
 
     public final static String ID = makeID("RainOfDice");
 
-    //stupid intellij stuff ATTACK, ALL, COMMON
-
-    private static final int DAMAGE = 4;
-    private static final int UPG_DAMAGE = 1;
-
-    private static final int MAGIC = 4;
-    private static final int UPG_MAGIC = 1;
-
     public RainOfDice() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL);
-        baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC;
-        baseSilly = silly = 2;
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        baseSilly = silly = 6;
+        baseDamage = 12;
+        this.returnToHand = true;
         tags.add(SneckoMod.RNG);
     }
 
@@ -56,15 +50,15 @@ public class RainOfDice extends AbstractSneckoCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new NoApplyRandomDamageAction(AbstractDungeon.getMonsters().getRandomMonster(true), silly, damage, getRandomNum(2, magicNumber, this), AbstractGameAction.AttackEffect.BLUNT_LIGHT, this));
-        applyToSelf(new MuddleDrawnCardsPower(getRandomNum(2, magicNumber, this)));
+        atb(new NoApplyRandomDamageAction(AbstractDungeon.getMonsters().getRandomMonster(true), silly, damage, 1, AbstractGameAction.AttackEffect.BLUNT_LIGHT, this, DamageInfo.DamageType.NORMAL));
+        atb(new MuddleAction(this));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPG_DAMAGE);
-            upgradeMagicNumber(UPG_MAGIC);
+            upgradeSilly(3);
+            upgradeDamage(3);
         }
     }
 }

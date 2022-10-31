@@ -1,6 +1,7 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -12,8 +13,8 @@ public class BronzeArmor extends AbstractBronzeCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 2;
-    private static final int UPG_MAGIC = -1;
+    private static final int MAGIC = 12;
+    private static final int UPG_MAGIC = -4;
 
     public BronzeArmor() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
@@ -31,7 +32,7 @@ public class BronzeArmor extends AbstractBronzeCard {
     public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
             for (AbstractMonster q : monsterList()) {
-                applyToEnemy(q, new ArtifactPower(q, magicNumber));
+                atb(new GainBlockAction(q, magicNumber));
             }
         }
     }

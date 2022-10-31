@@ -36,10 +36,11 @@ public class LevelUp extends AbstractSlimeboundCard {
 
     public LevelUp() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 1;
 
 
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+     //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        SlimeboundMod.loadJokeCardImage(this, "LevelUp.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

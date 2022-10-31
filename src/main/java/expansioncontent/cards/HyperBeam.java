@@ -1,6 +1,7 @@
 package expansioncontent.cards;
 
 
+import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -12,6 +13,8 @@ import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 import expansioncontent.expansionContentMod;
 import expansioncontent.powers.DeEnergizedPower;
 
+import static expansioncontent.expansionContentMod.loadJokeCardImage;
+
 
 public class HyperBeam extends AbstractExpansionCard {
     public final static String ID = makeID("HyperBeam");
@@ -21,7 +24,8 @@ public class HyperBeam extends AbstractExpansionCard {
     private static final int UPGRADE_DAMAGE = 8;
 
     public HyperBeam() {
-        super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_automaton.png", "expansioncontentResources/images/1024/bg_boss_automaton.png");
 
         tags.add(expansionContentMod.STUDY_AUTOMATON);
         tags.add(expansionContentMod.STUDY);
@@ -29,6 +33,7 @@ public class HyperBeam extends AbstractExpansionCard {
         baseDamage = DAMAGE;
         this.exhaust = true;
         this.isMultiDamage = true;
+        loadJokeCardImage(this, "HyperBeam.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

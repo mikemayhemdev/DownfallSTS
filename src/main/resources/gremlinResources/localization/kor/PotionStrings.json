@@ -1,0 +1,29 @@
+{
+  "gremlin:GremlinPotion": {
+    "NAME": "그렘린 향수",
+    "DESCRIPTIONS": [
+      "모든 그렘린 #b5 마리의 능력을 #b",
+      " 번 사용합니다."
+    ]
+  },
+  "gremlin:NecromancyPotion": {
+    "NAME": "단지 속의 그렘린",
+    "DESCRIPTIONS": [
+      "무작위 그렘린을 최대 체력의 #b",
+      "% 회복한 상태로 부활시킵니다."
+    ]
+  },
+  "gremlin:SwapPotion": {
+    "NAME": "병에 담긴 사기",
+    "DESCRIPTIONS": [
+      "무작위 그렘린으로 #y교체합니다."
+    ]
+  },
+  "gremlin:WizPotion": {
+    "NAME": "마법 핏자 포션",
+    "DESCRIPTIONS": [
+      "#y활력을 #b",
+      " 얻습니다."
+    ]
+  }
+}

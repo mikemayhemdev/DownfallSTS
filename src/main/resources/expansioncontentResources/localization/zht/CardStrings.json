@@ -1,0 +1,90 @@
+{
+  "expansioncontent:GuardianWhirl": {
+    "NAME": "守護者旋風",
+    "DESCRIPTION": "有10點 格擋 才能打出。 NL 對所有敵人造成 !D! 點傷害四次。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "我的格擋不夠。"
+    ]
+  },
+  "expansioncontent:Hexaburn": {
+    "NAME": "幽靈地獄",
+    "DESCRIPTION": "!M! 回合後，隨機對敵人造成 !D! 點傷害六次。"
+  },
+  "expansioncontent:InvincibleStrength": {
+    "NAME": "堅不可摧",
+    "DESCRIPTION": "獲得1層 expansioncontent:堅不可摧 。"
+  },
+  "expansioncontent:HyperBeam": {
+    "NAME": "超能射線",
+    "DESCRIPTION": "對所有敵人造成 !D! 點傷害。 NL 下回合失去 [E] 。 NL 消耗 。"
+  },
+  "expansioncontent:LastStand": {
+    "NAME": "背水一戰",
+    "DESCRIPTION": "失去所有負面效果。 NL 獲得1點 力量 。 NL 若半血以下： NL 獲得2點 力量 。",
+    "UPGRADE_DESCRIPTION": "失去所有負面效果。 NL 獲得1點 力量 。 NL 若半血以下： NL 回復 !M! 點生命。 NL 獲得2點 力量 。"
+  },
+  "expansioncontent:YouAreMine": {
+    "NAME": "你是我的了！",
+    "DESCRIPTION": "移除所有敵人的 格擋 。 NL 給予所有敵人 !M! 層 虛弱 與 易傷 。 NL 消耗 。"
+  },
+  "expansioncontent:AwakenDeath": {
+    "NAME": "覺醒",
+    "DESCRIPTION": "下次將死或戰勝時， NL 回復 !M! 點生命。"
+  },
+  "expansioncontent:Chronoboost": {
+    "NAME": "時空加速",
+    "DESCRIPTION": "每打出12張牌， NL 獲得1點 力量 。",
+    "UPGRADE_DESCRIPTION": "獲得1點 力量 。 NL 每打出12張牌， NL 獲得1點 力量 。"
+  },
+  "expansioncontent:PolyBeam": {
+    "NAME": "甜圈爆破",
+    "DESCRIPTION": "獲得 !M! 點 力量 。"
+  },
+  "expansioncontent:DecaShield": {
+    "NAME": "八體護盾",
+    "DESCRIPTION": "獲得 !B! 層 *多層護甲 。"
+  },
+  "expansioncontent:ShapePower": {
+    "NAME": "先古塑形",
+    "DESCRIPTION": "選擇-獲得 !M! 點 力量 或5層 *多層護甲 。",
+    "UPGRADE_DESCRIPTION": "選擇-獲得 !M! 點 力量 或8層 *多層護甲 。",
+    "EXTENDED_DESCRIPTION": [
+      "甜圈之力",
+      "獲得 !M! 點 力量 。",
+      "八體護盾",
+      "獲得5層 *多層護甲 。",
+      "獲得8層 *多層護甲 。"
+    ]
+  },
+  "expansioncontent:PrepareCrush": {
+    "NAME": "準備：猛擊",
+    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 下回合獲得 [E] [E] [E] 與一張 *史萊姆猛擊 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "獲得 !B! 點 格擋 。 NL 下回合獲得 [E] [E] [E] 與一張 *史萊姆猛擊+ 。 NL 消耗 。"
+  },
+  "expansioncontent:StudyTheSpire": {
+    "NAME": "研究尖塔",
+    "DESCRIPTION": "接下來 !M! 回合開始時， NL 隨機獲得1張 *首領 牌。 NL 其首次耗能為0。",
+    "UPGRADE_DESCRIPTION": "接下來 !M! 回合開始時， NL 隨機獲得1張 *首領 牌+。 NL 其首次耗能為0。"
+  },
+  "expansioncontent:QuickStudy": {
+    "NAME": "快速學習",
+    "DESCRIPTION": "從三張隨機 *首領 牌中選擇獲得一張。 NL 其首次耗能為0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "從三張隨機 *首領 牌+中選擇獲得一張。 NL 其首次耗能為0。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "選擇一張首領牌。"
+    ]
+  },
+  "expansioncontent:DashGenerateEvil": {
+    "NAME": "惡靈附身",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 隨機獲得1張 *首領 牌。 NL 其首次耗能為0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 隨機獲得1張 *首領 牌+。 NL 其首次耗能為0。 NL 消耗 。"
+  },
+  "expansioncontent:KnowingSkullWish": {
+    "NAME": "全知頭骨",
+    "DESCRIPTION": "虛無 。 NL 支付生命以許願靈魂，成功或來點喝的。 NL 消耗 。"
+  },
+  "expansioncontent:Antidote": {
+    "NAME": "解毒劑",
+    "DESCRIPTION": "失去所有 中毒 。"
+  }
+}

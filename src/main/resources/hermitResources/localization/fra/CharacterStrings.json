@@ -1,0 +1,15 @@
+{
+  "hermit:hermit": {
+    "NAMES": [
+      "L'Ermite",
+      "l'ermite"
+    ],
+    "TEXT": [
+      "Un pistolero mort-vivant solitaire venant d'une contrée lointaine. Hanté par l'inéluctable spectre du passé.",
+      "NL Vous attrapez votre étui...",
+      "Dans une rue mal éclairée, vous rencontrez plusieurs personnages encapuchonnés en plein rituel. Lorsque vous vous approchez, ils se tournent vers vous à l'unisson. Le plus grand d'entre eux montre ses crocs et tend une longue main pâle vers vous. NL ~\"Rejoignez~ ~nous~ ~être~ ~vide,~ ~et~ ~ressentez~ ~la~ ~chaleur~ ~de~ ~la~ ~Tour.\"~",
+      "#y~DÉSESPOIR.~  NL NL Le dernier adversaire s'écroule sur le sol, serrant une blessure brûlante. Leurs corps ont à peine le temps de se refroidir que vous commencez à piller les restes. NL NL #bDu #btissu. #rDes #rassiettes. #yDe #yl'Or. NL NL Vous vous êtes attardés trop longtemps au même endroit. Ils viendront bientôt vous chercher. NL NL Une fois de plus, vous devez fuir, #rmais #roù?",
+      "À Suivre"
+    ]
+  }
+}

@@ -3,8 +3,8 @@ package champ.cards;
 import champ.ChampMod;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
-import champ.stances.GladiatorStance;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
@@ -13,77 +13,37 @@ import downfall.util.OctopusCard;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Taunt extends AbstractChampCard implements OctopusCard {
+import static champ.ChampMod.loadJokeCardImage;
+
+public class Taunt extends AbstractChampCard {
 
     public final static String ID = makeID("Taunt");
 
     //stupid intellij stuff ATTACK, ENEMY, STARTER
 
     public Taunt() {
-        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.ALL_ENEMY);
-        tags.add(ChampMod.TECHNIQUE);
-        tags.add(ChampMod.OPENER);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
+        //tags.add(ChampMod.OPENER);
         this.magicNumber = this.baseMagicNumber = 1;
+        loadJokeCardImage(this, "Taunt.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
-        for (AbstractMonster q : monsterList()) {
-            applyToEnemy(q, autoWeak(q, this.magicNumber));
-        }
-
         if (!upgraded) {
-            ArrayList<String> validStances = new ArrayList<>();
-
-            if (!(p.stance instanceof DefensiveStance)) validStances.add(DefensiveStance.STANCE_ID);
-            if (!(p.stance instanceof GladiatorStance)) validStances.add(GladiatorStance.STANCE_ID);
-            if (!(p.stance instanceof BerserkerStance)) validStances.add(BerserkerStance.STANCE_ID);
-
-            Collections.shuffle(validStances);
-
-            switch (validStances.get(0)) {
-                case DefensiveStance.STANCE_ID:
-                    defenseOpen();
-                    break;
-                case GladiatorStance.STANCE_ID:
-                    gladOpen();
-                    break;
-                case BerserkerStance.STANCE_ID:
-                    berserkOpen();
-                    break;
-            }
-        } else {
-            atb(new OctoChoiceAction(m, this));
+            applyToEnemy(m, autoWeak(m, 1));
+            applyToEnemy(m, autoVuln(m, 1));
         }
-
-    }
-
-    public ArrayList<OctoChoiceCard> choiceList() {
-        ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
-        StanceDance c = new StanceDance();
-        cardList.add(new OctoChoiceCard("octo:OctoBerserk", this.name, ChampMod.makeCardPath("OctoStanceBerserker.png"), c.EXTENDED_DESCRIPTION[0]));
-        cardList.add(new OctoChoiceCard("octo:OctoDefense", this.name, ChampMod.makeCardPath("OctoStanceDefensive.png"), c.EXTENDED_DESCRIPTION[1]));
-        cardList.add(new OctoChoiceCard("octo:OctoGladiat", this.name, ChampMod.makeCardPath("OctoStanceGladiator.png"), c.EXTENDED_DESCRIPTION[2]));
-        return cardList;
-    }
-
-    public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
-        switch (card.cardID) {
-            case "octo:OctoBerserk":
-                berserkOpen();
-                break;
-            case "octo:OctoDefense":
-                defenseOpen();
-                break;
-            case "octo:OctoGladiat":
-                gladOpen();
-                break;
+        else {
+           AbstractDungeon.getMonsters().monsters.stream().filter(m2 -> !m2.isDead && !m2.isDying).forEach(m2 -> {
+               applyToEnemy(m2, autoWeak(m2, 1));
+               applyToEnemy(m2, autoVuln(m2, 1));
+           });
         }
     }
-
 
     public void upp() {
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
+        target = CardTarget.ALL_ENEMY;
     }
 }

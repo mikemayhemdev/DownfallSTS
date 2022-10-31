@@ -34,14 +34,14 @@ public class HexSlime
 
 
     public HexSlime() {
-        super(ID, new Color(.65F, .65F, 1.0F, 100F), atlasString, skeletonString, true, false, 3, 0, false, new Color(.36F, .55F, .85F, 1), SlimeFlareEffect.OrbFlareColor.HEX, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDebuff.png"));
+        super(ID, new Color(.65F, .65F, 1.0F, 100F), atlasString, skeletonString, true, false, 3, 5, false, new Color(.36F, .55F, .85F, 1), SlimeFlareEffect.OrbFlareColor.HEX, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDebuff.png"));
         this.x = (x * Settings.scale + (5F + MathUtils.random(-10.0F, 10.0F) * Settings.scale));
         this.y = (y * Settings.scale + (-30F + MathUtils.random(-10.0F, 10.0F) * Settings.scale));
         this.color = Color.CHARTREUSE.cpy();
         this.extraFontColor = new Color(.5F, 1F, .5F, 1F);
         this.color.a = 0.0F;
         this.activated = true;
-        this.debuffAmount = 3;
+        this.debuffAmount = 5;
         spawnVFX();
 
     }
@@ -49,17 +49,12 @@ public class HexSlime
 
     public void updateDescription() {
 
-        this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1] + this.passiveAmount + this.descriptions[2];
-    }
-
-    @Override
-    public void applyFocus() {
-
+        this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1] + this.debuffAmount + this.descriptions[2];
     }
 
 
     public void activateEffectUnique() {
-        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.FIRE, this, false, false, false, 3 + this.debuffBonusAmount, false, 0, false, false, false, true, true));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.FIRE, this, false, false, false, this.debuffAmount, false, 0, false, false, false, true, true));
 
 
     }

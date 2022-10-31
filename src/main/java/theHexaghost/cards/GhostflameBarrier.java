@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import theHexaghost.powers.GhostFlameBarrierPower;
 import theHexaghost.vfx.SpookyFlameBarrier;
 
@@ -16,13 +17,14 @@ public class GhostflameBarrier extends AbstractHexaCard {
     private static final int BLOCK = 12;
     private static final int UPG_BLOCK = 4;
 
-    private static final int MAGIC = 4;
-    private static final int UPG_MAGIC = 2;
+    private static final int MAGIC = 6;
+    private static final int UPG_MAGIC = 3;
 
     public GhostflameBarrier() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = MAGIC;
+        baseBurn = burn = MAGIC;
+        HexaMod.loadJokeCardImage(this, "GhostflameBarrier.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -32,14 +34,14 @@ public class GhostflameBarrier extends AbstractHexaCard {
             this.addToBot(new VFXAction(p, new SpookyFlameBarrier(p.hb.cX, p.hb.cY), 0.5F));// 41
         }
         blck();
-        applyToSelf(new GhostFlameBarrierPower(magicNumber));
+        applyToSelf(new GhostFlameBarrierPower(burn));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPG_BLOCK);
-            upgradeMagicNumber(UPG_MAGIC);
+            upgradeBurn(UPG_MAGIC);
         }
     }
 }

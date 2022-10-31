@@ -3,8 +3,13 @@ package automaton.cards;
 import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.Burn;
+import com.megacrit.cardcrawl.cards.status.Slimed;
+import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 import static sneckomod.SneckoMod.getRandomStatus;
 
@@ -15,14 +20,15 @@ public class Break extends AbstractBronzeCard {
     //stupid intellij stuff attack, enemy, rare
 
     private static final int DAMAGE = 15;
-    private static final int UPG_DAMAGE = 3;
+    private static final int UPG_DAMAGE = 5;
 
     public Break() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 3;
         thisEncodes();
         tags.add(AutomatonMod.BAD_COMPILE);
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Break.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -32,15 +38,14 @@ public class Break extends AbstractBronzeCard {
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
-            for (int i = 0; i < magicNumber; i++) {
-                AbstractCard q = getRandomStatus().makeStatEquivalentCopy();
-                shuffleIn(q, 1);
-            }
+
+            shuffleIn(new Burn());
+            shuffleIn(new Wound());
+            shuffleIn(new Slimed());
         }
     }
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
-        upgradeMagicNumber(-1);
     }
 }

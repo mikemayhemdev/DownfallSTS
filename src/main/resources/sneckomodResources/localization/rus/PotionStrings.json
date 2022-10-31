@@ -1,0 +1,32 @@
+{
+  "sneckomod:DiceRollPotion": {
+    "NAME": "Потенциально-полезное зелье",
+    "DESCRIPTIONS": [
+      "Наносит #b",
+      " - #b",
+      " урона."
+    ]
+  },
+  "sneckomod:CheatPotion": {
+    "NAME": "Жидкая удача",
+    "DESCRIPTIONS": [
+      "Даёт #yВезение на 1 ход.",
+      "Даёт #yВезение на #b",
+      " хода."
+    ]
+  },
+  "sneckomod:MuddlingPotion": {
+    "NAME": "Шипучий энергетик",
+    "DESCRIPTIONS": [
+      "#yСпутывает #b",
+      " карты с наибольшей стоимостью в руке. Их стоимость не превысит #b2."
+    ]
+  },
+  "sneckomod:OffclassReductionPotion": {
+    "NAME": "Экзотический напиток",
+    "DESCRIPTIONS": [
+      "Снижает стоимость всех #yВнеклассовых карт в руке на #b",
+      "."
+    ]
+  }
+}

@@ -28,7 +28,7 @@
     "NAME": "Mudshield",
     "DESCRIPTIONS": [
       "Whenever you #yMuddle a card, gain #b",
-      " #yBlock next turn."
+      " #yBlock."
     ]
   },
   "sneckomod:SerpentMindPower": {
@@ -43,21 +43,21 @@
     "NAME": "Unending Supply",
     "DESCRIPTIONS": [
       "At the start of your turn, add #b",
-      "random #yOffclass cards into your hand and #yMuddle them."
+      " random #yOffclass cards into your hand."
     ]
   },
   "sneckomod:UnknownUpgradedPostCombatPower": {
-    "NAME": "Post-Combat Upgraded Unknown",
+    "NAME": "Post-Combat Upgraded Unidentified",
     "DESCRIPTIONS": [
       "At the end of combat, obtain #b",
-      " additional #yUpgraded #yUnknown cards.",
-      " additional #yUpgraded #yUnknown card."
+      " additional #yUpgraded #yUnidentified cards.",
+      " additional #yUpgraded #yUnidentified card."
     ]
   },
   "sneckomod:UnlimitedRollsPower": {
     "NAME": "Unlimited Rolls",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a #ySoul #yRoll+ into your hand with #yEthereal and #yExhaust."
+      "At the start of your turn, gain a #ySoul #yRoll+ with #yEthereal and #yExhaust."
     ]
   },
   "sneckomod:Transmogrifying": {

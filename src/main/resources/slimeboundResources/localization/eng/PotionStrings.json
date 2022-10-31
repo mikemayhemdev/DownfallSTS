@@ -9,15 +9,15 @@
   "Slimebound:SlimyTonguePotion": {
     "NAME": "Slimy Elixir",
     "DESCRIPTIONS": [
-      "Whenever an effect applies #yGoop, apply #b",
+      "Whenever an effect applies #yGoop this combat, apply #b",
       " more."
     ]
   },
   "Slimebound:SpawnSlimePotion": {
     "NAME": "Army in a Bottle",
     "DESCRIPTIONS": [
-      "Gain Slime slots until you have #b3. NL Spawn a #yLeeching, #yMire, and #yGuerilla Slime. They do not cost HP.",
-      "Gain Slime slots until you have #b6. NL Spawn #b2 #yLeeching, #b2 #yMire, and #b2 #yGuerilla Slimes. They do not cost HP."
+      "Spawn #b",
+      " random Slimes (Normal or Specialist)."
     ]
   },
   "Slimebound:ThreeZeroPotion": {

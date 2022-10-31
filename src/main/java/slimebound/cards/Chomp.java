@@ -57,7 +57,7 @@ public class Chomp extends AbstractSlimeboundCard {
 
         this.magicNumber = this.baseMagicNumber = 3;
 
-
+        SlimeboundMod.loadJokeCardImage(this, "Chomp.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -73,7 +73,7 @@ public class Chomp extends AbstractSlimeboundCard {
                 isDone = true;
                 ArrayList<AbstractCard> tackleList = new ArrayList<>();
                 for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                    if (q.hasTag(SlimeboundMod.TACKLE)) {
+                    if (q.hasTag(SlimeboundMod.TACKLE) && q.costForTurn > 0) {
                         tackleList.add(q);
                     }
                 }

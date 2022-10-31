@@ -29,7 +29,7 @@ public class SlimeSpawnAction extends AbstractGameAction {
 
     public SlimeSpawnAction(AbstractOrb newOrbType, boolean upgraded, boolean SelfDamage, int bonusUniqueFocus, int bonusSecondary) {
 
-        this(newOrbType, upgraded, SelfDamage);
+        this(newOrbType, upgraded, false);
 
         this.bonusUniqueFocus = bonusUniqueFocus;
         this.bonusSecondary = bonusSecondary;
@@ -49,7 +49,7 @@ public class SlimeSpawnAction extends AbstractGameAction {
         }
 
         this.upgraded = upgraded;
-        this.SelfDamage = SelfDamage;
+        this.SelfDamage = false;
         this.currentAmount = 4;
         if (AbstractDungeon.player.hasRelic(TarBlob.ID)) {
             currentAmount++;
@@ -60,14 +60,11 @@ public class SlimeSpawnAction extends AbstractGameAction {
 
 
     public void update() {
-        //SlimeboundMod.logger.info("Starting slime spawn action");
+        ////SlimeboundMod.logger.info("Starting slime spawn action");
 
         if (AbstractDungeon.player.maxOrbs > 0 || (AbstractDungeon.player.masterMaxOrbs == 0 && AbstractDungeon.player.maxOrbs == 0)) {
 
             int currentHealth = AbstractDungeon.player.currentHealth;
-
-            if (TempHPField.tempHp.get(AbstractDungeon.player) != null)
-                currentHealth += TempHPField.tempHp.get(AbstractDungeon.player);
 
             /*
             int maxFortitudes = 0;
@@ -80,7 +77,7 @@ public class SlimeSpawnAction extends AbstractGameAction {
             int usedFortitudes = 0;
             */
 
-
+/*
             if (SelfDamage) {
 
                 if (currentAmount >= currentHealth) {
@@ -89,19 +86,19 @@ public class SlimeSpawnAction extends AbstractGameAction {
                     return;
                 }
                 if (currentAmount > 0) {
-                    //SlimeboundMod.logger.info("Losing HP" + this.currentAmount);
+                    ////SlimeboundMod.logger.info("Losing HP" + this.currentAmount);
 
 
                     if (AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND) {
                         SlimeboundMod.disabledStrikeVFX = true;
                     }
-                    //SlimeboundMod.logger.info("No buffer, proceeding");
+                    ////SlimeboundMod.logger.info("No buffer, proceeding");
 
 
                     //AbstractDungeon.player.damageFlash = true;
                     //AbstractDungeon.player.damageFlashFrames = 4;
 
-                    //SlimeboundMod.logger.info("Reducing max HP");
+                    ////SlimeboundMod.logger.info("Reducing max HP");
                     int MaxHPActuallyLost = 4;
                     if (AbstractDungeon.player.hasRelic(TarBlob.ID)) {
                         MaxHPActuallyLost++;
@@ -117,9 +114,10 @@ public class SlimeSpawnAction extends AbstractGameAction {
                 }
 
             }
+            */
             // AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 0));
 
-            //SlimeboundMod.logger.info("Channeling slime orb");
+            ////SlimeboundMod.logger.info("Channeling slime orb");
             if (this.orbType == null) {
 
                 //OLD RANDOM, NOW UNUSED, CLEAN UP LATER
@@ -128,9 +126,6 @@ public class SlimeSpawnAction extends AbstractGameAction {
 
                 if (this.bonusUniqueFocus > 0) {
                     ((SpawnedSlime) this.orbType).applyUniqueFocus(bonusUniqueFocus);
-                }
-                if (this.bonusSecondary > 0) {
-                    ((SpawnedSlime) this.orbType).applySecondaryBonus(bonusSecondary);
                 }
 
                 AbstractDungeon.player.channelOrb(this.orbType);

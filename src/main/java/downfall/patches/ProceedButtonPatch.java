@@ -25,7 +25,7 @@ public class ProceedButtonPatch {
     public static SpireReturn Insert(ProceedButton __instance) {
         AbstractRoom r = AbstractDungeon.getCurrRoom();
         if (r instanceof HeartShopRoom) {
-            if (((HeartShopRoom) r).startedCombat && (FleeingMerchant.DEAD || FleeingMerchant.ESCAPED)) {
+            if ((((HeartShopRoom) r).startedCombat && FleeingMerchant.DEAD) || FleeingMerchant.ESCAPED) {
                 AbstractRoom tRoom = new HeartShopRoom(false);
                 tRoom.rewards.clear();
                 AbstractDungeon.combatRewardScreen.clear();

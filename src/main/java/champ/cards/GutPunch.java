@@ -1,65 +1,45 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.powers.ResolvePower;
+import champ.powers.UltimateFormPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import static champ.ChampMod.fatigue;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 
 public class GutPunch extends AbstractChampCard {
 
     public final static String ID = makeID("GutPunch");
 
-    //stupid intellij stuff attack, enemy, common
-
-    private static final int DAMAGE = 5;
-    private static final int UPG_DAMAGE = 1;
-
-    private static final int MAGIC = 5;
-    private static final int UPG_MAGIC = 5;
-
     public GutPunch() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC;
-        tags.add(ChampMod.OPENER);
-        myHpLossCost = 0;
-        tags.add(ChampMod.OPENERBERSERKER);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseDamage = 8;
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
+        tags.add(ChampMod.COMBOBERSERKER);
+        postInit();
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        berserkOpen();
+        //berserkOpen();
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-      //  fatigue(2);
-        if (dcombo()) {
-           // exhaust = true;
-            fatigue(magicNumber);
+        //  fatigue(2);
+        if (bcombo() || dcombo()) {
+            triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
+            ultimateStance();
+            applyToSelf(new UltimateFormPower(1));
         }
     }
 
     public void upp() {
-        upgradeDamage(UPG_DAMAGE);
-        upgradeMagicNumber(UPG_MAGIC);
-       // myHpLossCost++;
+        upgradeDamage(4);
     }
 
-    @Override
-    public void applyPowers() {
-        super.applyPowers();
-        if (dcombo()){
-            myHpLossCost = magicNumber;
-        } else {
-            myHpLossCost = 0;
-        }
-    }
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = dcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = dcombo() || bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 }

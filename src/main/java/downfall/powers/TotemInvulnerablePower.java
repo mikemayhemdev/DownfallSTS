@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.HealEffect;
 import downfall.downfallMod;
 import downfall.monsters.AbstractTotemMonster;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class TotemInvulnerablePower extends AbstractPower implements CloneablePowerInterface {
 

@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeAutoAttack;
@@ -28,7 +29,7 @@ public class ChampSlime
 
     public ChampSlime() {
 
-        super(ID, new Color(1.0F, 100F / 255F, 100F / 255F, 100F), atlasString, skeletonString, true, true, 4, 0, true, new Color(.45F, .58F, .58F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDebuff.png"));
+        super(ID, new Color(1.0F, 100F / 255F, 100F / 255F, 100F), atlasString, skeletonString, true, true, 4, 1, true, new Color(.45F, .58F, .58F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDebuff.png"));
         this.debuffAmount = 1;
         this.extraFontColor = new Color(204F / 255F, 98F / 255F, 114F / 255F, 1F);
         spawnVFX();
@@ -37,7 +38,7 @@ public class ChampSlime
 
     public void postSpawnEffects() {
         this.crownVFX = new CrownParticle(this);
-        if(!reskinContent.slimeReskinAnimation){
+        if(CharacterSelectScreenPatches.characters[1].isOriginal()){
         AbstractDungeon.effectList.add(this.crownVFX);
         }
     }
@@ -51,7 +52,7 @@ public class ChampSlime
     public void activateEffectUnique() {
 
 
-        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_HEAVY, this, false, false, false, 1, false, 0, false, false, true, false, false));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_HEAVY, this, false, false, false, debuffAmount, false, 0, false, false, true, false, false));
 
     }
 
@@ -62,7 +63,7 @@ public class ChampSlime
     }
 
     public void cleanUpVFX() {
-        if(!reskinContent.slimeReskinAnimation)
+        if(CharacterSelectScreenPatches.characters[1].isOriginal())
         this.crownVFX.finish();
     }
 

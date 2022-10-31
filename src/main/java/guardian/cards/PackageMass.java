@@ -2,6 +2,7 @@ package guardian.cards;
 
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -91,22 +92,21 @@ public class PackageMass extends AbstractGuardianCard {
         tmp = new MassSlam();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-        tmp.modifyCostForCombat(-1);
+     //   tmp.modifyCostForCombat(-1);
 
         tmp = new MassOfThorns();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-        tmp.modifyCostForCombat(-1);
+     //   tmp.modifyCostForCombat(-1);
 
         tmp = new MassTimeBomb();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-        tmp.modifyCostForCombat(-1);
+      //  tmp.modifyCostForCombat(-1);
 
-        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect((AbstractCard) derp.get(0), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
-        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect((AbstractCard) derp.get(1), (float) Settings.WIDTH * .75F, (float) Settings.HEIGHT / 2.0F));
-        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect((AbstractCard) derp.get(2), (float) Settings.WIDTH * .25F, (float) Settings.HEIGHT / 2.0F));
-
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction((AbstractCard)derp.get(0), true));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction((AbstractCard) derp.get(1), true));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction((AbstractCard) derp.get(2), true));
     }
 
     public AbstractCard makeCopy() {

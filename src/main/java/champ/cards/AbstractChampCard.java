@@ -4,21 +4,29 @@ import basemod.abstracts.CustomCard;
 import basemod.helpers.TooltipInfo;
 import champ.ChampChar;
 import champ.ChampMod;
+import champ.ChampTextHelper;
 import champ.powers.CalledShotPower;
-import champ.powers.ResolvePower;
+import champ.powers.DancingMasterPower;
 import champ.relics.SignatureFinisher;
-import champ.stances.*;
+import champ.stances.AbstractChampStance;
+import champ.stances.BerserkerStance;
+import champ.stances.DefensiveStance;
+import champ.stances.UltimateStance;
+import champ.util.OnFinisherSubscriber;
 import champ.util.OnOpenerSubscriber;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
-import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -26,8 +34,10 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import slimebound.SlimeboundMod;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import hermit.util.TextureLoader;
 
+import java.security.Signature;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,36 +45,20 @@ import static champ.ChampMod.*;
 
 
 public abstract class AbstractChampCard extends CustomCard {
-
     protected final CardStrings cardStrings;
+    public String betaArtPath;
     protected final String NAME;
-    protected String DESCRIPTION;
-    protected String UPGRADE_DESCRIPTION;
-    protected String[] EXTENDED_DESCRIPTION;
-
     public int cool;
     public int baseCool;
     public boolean upgradedCool;
     public boolean isCoolModified;
-
     public int myHpLossCost;
+    public String DESCRIPTION;
+    public String UPGRADE_DESCRIPTION;
+    public String[] EXTENDED_DESCRIPTION;
+    public boolean reInitDescription = true;
 
-    private boolean reInitDescription = true;
-
-
-    public void displayUpgrades() {
-        super.displayUpgrades();
-        if (upgradedCool) {
-            cool = baseCool;
-            isCoolModified = true;
-        }
-    }
-
-    void upgradeCool(int amount) {
-        baseCool += amount;
-        cool = baseCool;
-        upgradedCool = true;
-    }
+    public boolean techniqueLast = true;
 
 
     public AbstractChampCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
@@ -107,20 +101,38 @@ public abstract class AbstractChampCard extends CustomCard {
         return img;
     }
 
-    public static String makeID(String blah) {
-        return getModID() + ":" + blah;
-    }
-
-    public static boolean gcombo() {
-        return (enteredGladiatorThisTurn || AbstractDungeon.player.stance.ID.equals(GladiatorStance.STANCE_ID) || (AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)));
+    public static String makeID(String name) {
+        return getModID() + ":" + name;
     }
 
     public static boolean bcombo() {
-        return (enteredBerserkerThisTurn || AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID) || (AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)));
+        return (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID));
     }
 
     public static boolean dcombo() {
-        return (enteredDefensiveThisTurn || AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || (AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)));
+        return (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID));
+    }
+
+    public static boolean inBerserker() {
+        return AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID);
+    }
+
+    public static boolean inDefensive() {
+        return AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID);
+    }
+
+    public void displayUpgrades() {
+        super.displayUpgrades();
+        if (upgradedCool) {
+            cool = baseCool;
+            isCoolModified = true;
+        }
+    }
+
+    void upgradeCool(int amount) {
+        baseCool += amount;
+        cool = baseCool;
+        upgradedCool = true;
     }
 
     @Override
@@ -143,6 +155,7 @@ public abstract class AbstractChampCard extends CustomCard {
         }
         return tips;
     }
+
 
     @Override
     public void triggerOnGlowCheck() {
@@ -181,7 +194,7 @@ public abstract class AbstractChampCard extends CustomCard {
         atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
     }
 
-    private void makeInHand(AbstractCard c, int i) {
+    public void makeInHand(AbstractCard c, int i) {
         atb(new MakeTempCardInHandAction(c, i));
     }
 
@@ -200,7 +213,7 @@ public abstract class AbstractChampCard extends CustomCard {
     public ArrayList<AbstractMonster> monsterList() {
         ArrayList<AbstractMonster> q = new ArrayList<>();
         for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-            if (!m.isDying && !m.isDead) q.add(m);
+            if (!m.isDeadOrEscaped()) q.add(m);
         }
         return q;
     }
@@ -234,45 +247,32 @@ public abstract class AbstractChampCard extends CustomCard {
     }
 
     public void berserkOpen() {
-        berserkerStance();
-        triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
-    }
-
-    public void gladOpen() {
-        gladiatorStance();
-        triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
+      //  berserkerStance();
+       // triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
     }
 
     public void defenseOpen() {
-        defensiveStance();
-        triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
+     //   defensiveStance();
+      //  triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
     }
 
     protected void berserkerStance() {
-        SlimeboundMod.logger.info("Switching to Berserker (Abstract)");
-        if (!(AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)))
-            atb(new ChangeStanceAction(BerserkerStance.STANCE_ID));
-    }
-
-    protected void gladiatorStance() {
-        SlimeboundMod.logger.info("Switching to Gladiator (Abstract)");
-        if (!(AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)))
-            atb(new ChangeStanceAction(GladiatorStance.STANCE_ID));
+        //SlimeboundMod.logger.info("Switching to Berserker (Abstract)");
+        atb(new ChangeStanceAction(BerserkerStance.STANCE_ID));
     }
 
     protected void defensiveStance() {
-        SlimeboundMod.logger.info("Switching to Defensive (Abstract)");
-        if (!(AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)))
-            atb(new ChangeStanceAction(DefensiveStance.STANCE_ID));
+        //SlimeboundMod.logger.info("Switching to Defensive (Abstract)");
+        atb(new ChangeStanceAction(DefensiveStance.STANCE_ID));
     }
 
     protected void ultimateStance() {
-        SlimeboundMod.logger.info("Switching to THE ULTIMATE STANCE!!! (Abstract)");
+        //SlimeboundMod.logger.info("Switching to THE ULTIMATE STANCE!!! (Abstract)");
         atb(new ChangeStanceAction(UltimateStance.STANCE_ID));
     }
 
     public void exitStance() {
-        SlimeboundMod.logger.info("Switching to Neutral (Abstract)");
+        //SlimeboundMod.logger.info("Switching to Neutral (Abstract)");
         atb(new ChangeStanceAction(NeutralStance.STANCE_ID));
     }
 
@@ -281,113 +281,66 @@ public abstract class AbstractChampCard extends CustomCard {
             ((AbstractChampStance) AbstractDungeon.player.stance).techique();
     }
 
-    public void finisher() {
+    public void finisher (boolean noExit){
+
+        if (AbstractDungeon.player.hasPower(DancingMasterPower.POWER_ID)){
+            if (finishersThisTurn == 0){
+                AbstractDungeon.player.getPower(DancingMasterPower.POWER_ID).onSpecificTrigger();
+            }
+        }
 
         ChampMod.finishersThisTurn++;
         ChampMod.finishersThisCombat++; //If there is a finishers this combat problem, maybe look here
 
-        if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
+        if (!AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
             boolean leaveStance = true;
-            if (AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID) || (AbstractDungeon.player.stance instanceof UltimateStance)) {
+            if (noExit || AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)) {
                 leaveStance = false;
-
             }
-            if (leaveStance) {
-                if (AbstractDungeon.player.hasRelic(SignatureFinisher.ID)) {
-                    SignatureFinisher s = (SignatureFinisher) AbstractDungeon.player.getRelic(SignatureFinisher.ID);
-                    if (s.card.uuid == this.uuid) {
-                        leaveStance = false;
-                    }
+            if (AbstractDungeon.player.hasRelic(SignatureFinisher.ID)) {
+                SignatureFinisher s = (SignatureFinisher) AbstractDungeon.player.getRelic(SignatureFinisher.ID);
+                if (s.card.uuid == this.uuid) {
+                    leaveStance = false;
                 }
             }
             if (leaveStance) {
                 exitStance();
             }
-            boolean endTurn = true;
-            ((AbstractChampStance) AbstractDungeon.player.stance).fisher();
-            if (AbstractDungeon.player.stance instanceof UltimateStance) {
-                endTurn = false;
+            if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
+                ((AbstractChampStance) AbstractDungeon.player.stance).fisher();
             }
-            if (endTurn) {
-                if (AbstractDungeon.player.hasRelic(SignatureFinisher.ID)) {
-                    SignatureFinisher s = (SignatureFinisher) AbstractDungeon.player.getRelic(SignatureFinisher.ID);
-                    if (s.card.uuid == this.uuid) {
-                        s.flash();
-                        endTurn = false;
-                    }
+            for (AbstractPower p : AbstractDungeon.player.powers) {
+                if (p instanceof OnFinisherSubscriber) {
+                    ((OnFinisherSubscriber) p).onFinisher();
                 }
             }
-            if (endTurn) {
-                if (AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)) {
-                    AbstractDungeon.player.getPower(CalledShotPower.POWER_ID).onSpecificTrigger();
-                    endTurn = false;
-                }
-            }
-            if (endTurn) addToBot(new PressEndTurnButtonAction());
-
-
         }
+    }
+
+    public void finisher() {
+        finisher(false);
+    }
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        ChampTextHelper.colorCombos(this, false);
+    }
+
+    @Override
+    public void onMoveToDiscard() {
+        super.onMoveToDiscard();
+        ChampTextHelper.colorCombos(this, true);
+    }
+
+    public void postInit(){
+        if (baseDamage > 0) techniqueLast = true;
     }
 
     @Override
     public void initializeDescription() {
-        String prefixTech = "";
-        String prefixFin = "";
-        if (this.hasTag(TECHNIQUE)) {
-            prefixTech = ChampChar.characterStrings.TEXT[29];
-            if (AbstractDungeon.player != null) {
-                if (AbstractDungeon.player.stance instanceof DefensiveStance) {
-                    prefixTech = ChampChar.characterStrings.TEXT[31];
-                    prefixTech = prefixTech + DefensiveStance.amount();
-                    prefixTech = prefixTech + ChampChar.characterStrings.TEXT[53];
-                } else if (AbstractDungeon.player.stance instanceof GladiatorStance) {
-                    if (GladiatorStance.amount() == 1) {
-                        prefixTech = ChampChar.characterStrings.TEXT[30];
-                    } else {
-                        prefixTech = ChampChar.characterStrings.TEXT[50];
-                        prefixTech = prefixTech + GladiatorStance.amount();
-                        prefixTech = prefixTech + ChampChar.characterStrings.TEXT[51];
-                    }
-                } else if (AbstractDungeon.player.stance instanceof BerserkerStance) {
-                    prefixTech = ChampChar.characterStrings.TEXT[32];
-                    prefixTech = prefixTech + BerserkerStance.amount();
-                    prefixTech = prefixTech + ChampChar.characterStrings.TEXT[52];
-                } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
-                    prefixTech = ChampChar.characterStrings.TEXT[33];
-                }
-            }
-            if (upgraded && this.UPGRADE_DESCRIPTION != null) {
-                this.rawDescription = prefixTech + UPGRADE_DESCRIPTION;
-            } else {
-                this.rawDescription = prefixTech + DESCRIPTION;
-            }
-        }
-        if (this.
-
-                hasTag(FINISHER)) {
-            prefixFin = ChampChar.characterStrings.TEXT[34];
-            if (AbstractDungeon.player != null) {
-                if (AbstractDungeon.player.stance instanceof DefensiveStance) {
-                    prefixFin = ChampChar.characterStrings.TEXT[36];
-                } else if (AbstractDungeon.player.stance instanceof GladiatorStance) {
-                    prefixFin = ChampChar.characterStrings.TEXT[35];
-                } else if (AbstractDungeon.player.stance instanceof BerserkerStance) {
-                    prefixFin = ChampChar.characterStrings.TEXT[37];
-
-                } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
-                    prefixFin = ChampChar.characterStrings.TEXT[38];
-                }
-            }
-            if (upgraded && this.UPGRADE_DESCRIPTION != null) {
-                this.rawDescription = prefixTech + UPGRADE_DESCRIPTION + prefixFin;
-            } else {
-                this.rawDescription = prefixTech + DESCRIPTION + prefixFin;
-            }
-        }
-        super.
-
-                initializeDescription();
-
+        ChampTextHelper.calculateTagText(this);
+        super.initializeDescription();
     }
 
     @Override
@@ -398,4 +351,47 @@ public abstract class AbstractChampCard extends CustomCard {
         }
         super.update();
     }
+
+
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        boolean bottled = false;
+        if (hasTag(FINISHER)) {
+            if (p.hasRelic(SignatureFinisher.ID)){
+                if ((((SignatureFinisher)p.getRelic(SignatureFinisher.ID)).card.uuid == this.uuid)){
+                    bottled = true;
+                };
+            }
+            if (!bottled) {
+                if ((AbstractDungeon.player.stance instanceof NeutralStance)) {
+                    this.cantUseMessage = ChampChar.characterStrings.TEXT[61];
+                    return false;
+                }
+            }
+        }
+        return super.canUse(p, m);
+    }
+
+    @Override
+    protected Texture getPortraitImage() {
+        if (Settings.PLAYTESTER_ART_MODE || UnlockTracker.betaCardPref.getBoolean(this.cardID, false)) {
+            if (this.textureImg == null) {
+                return null;
+            } else {
+                if (betaArtPath != null) {
+                    int endingIndex = betaArtPath.lastIndexOf(".");
+                    String newPath = betaArtPath.substring(0, endingIndex) + "_p" + betaArtPath.substring(endingIndex);
+                    newPath = "champResources/images/betacards/" + newPath;
+                    System.out.println("Finding texture: " + newPath);
+
+                    Texture portraitTexture;
+                    portraitTexture = TextureLoader.getTexture(newPath);
+
+                    return portraitTexture;
+                }
+            }
+        }
+        return super.getPortraitImage();
+    }
+
 }

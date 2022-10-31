@@ -10,18 +10,15 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Circlet;
 import com.megacrit.cardcrawl.relics.MutagenicStrength;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
-import downfall.monsters.Augmenter;
 import downfall.util.JaxReward;
 import downfall.util.TransformCardReward;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -68,7 +65,7 @@ public class Augmenter_Evil extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         AbstractCard jax = new JAX();
-                        logMetricObtainCard("Drug Dealer", "Obtain J.A.X.", jax);
+                        logMetricObtainCard(ID, "Obtain J.A.X.", jax);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(jax, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);
@@ -91,14 +88,15 @@ public class Augmenter_Evil extends AbstractImageEvent {
                             AbstractDungeon.getCurrRoom().spawnRelicAndObtain(this.drawX, this.drawY, (AbstractRelic) r);
                         }
 
-                        logMetricObtainRelic("Drug Dealer", "Inject Mutagens", (AbstractRelic) r);
+                        logMetricObtainRelic(ID, "Inject Mutagens", (AbstractRelic) r);
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                         this.imageEventText.clearRemainingOptions();
                         break;
                     case 3:
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
+                        logMetric(ID, "Fight");
 
-                        AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:Augmenter");
+                        AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("downfall:Augmenter");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addGoldToRewards(100);
                         AbstractDungeon.getCurrRoom().addRelicToRewards(new MutagenicStrength());
@@ -148,7 +146,7 @@ public class Augmenter_Evil extends AbstractImageEvent {
                 }
 
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
-                logMetricTransformCards("Drug Dealer", "Became Test Subject", transformedCards, obtainedCards);
+                logMetricTransformCards(ID, "Became Test Subject", transformedCards, obtainedCards);
                 AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.25F;
             }
         }

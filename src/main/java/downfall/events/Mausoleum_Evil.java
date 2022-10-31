@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
-import theHexaghost.cards.Haunted;
+import downfall.cards.curses.Haunted;
 
 public class Mausoleum_Evil extends AbstractImageEvent {
     public static final String ID = "downfall:Mausoleum";
@@ -73,9 +73,12 @@ public class Mausoleum_Evil extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Haunted(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
-                        AbstractDungeon.effectList.add(new RainingGoldEffect(200));
-                        AbstractDungeon.player.gainGold(200);
+                        Haunted curse = new Haunted();
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
+                        int gold = 200;
+                        AbstractDungeon.effectList.add(new RainingGoldEffect(gold));
+                        AbstractDungeon.player.gainGold(gold);
+                        logMetricGainGoldAndCard(ID, "Feasted", curse, gold);
                         this.imageEventText.loadImage(downfallMod.assetPath("images/events/mausoleumNoSpirit.png"));
                         break;
                     case 1:
@@ -95,6 +98,11 @@ public class Mausoleum_Evil extends AbstractImageEvent {
                         CardCrawlGame.screenShake.rumble(2.0F);
                         AbstractRelic r = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), r);
+                        if(result) {
+                            logMetricObtainCardAndRelic(ID, "Opened", new Writhe(), r);
+                        } else {
+                            logMetricObtainRelic(ID, "Opened", r);
+                        }
                         break;
                     default:
                         this.imageEventText.updateBodyText(NOPE_RESULT);
@@ -105,6 +113,7 @@ public class Mausoleum_Evil extends AbstractImageEvent {
                 this.screen = CurScreen.RESULT;
                 break;
             default:
+                logMetricIgnored(ID);
                 this.openMap();
         }
 

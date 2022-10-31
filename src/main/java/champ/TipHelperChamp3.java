@@ -8,7 +8,6 @@ package champ;
 import champ.powers.CalledShotPower;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
-import champ.stances.GladiatorStance;
 import champ.stances.UltimateStance;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -97,7 +96,7 @@ public class TipHelperChamp3 {
             if (rememberedCard != null) {
                 if (rememberedCard.hasTag(ChampMod.FINISHER)) {
                     if ((AbstractDungeon.player.stance instanceof BerserkerStance ||
-                            AbstractDungeon.player.stance instanceof DefensiveStance || AbstractDungeon.player.stance instanceof GladiatorStance || AbstractDungeon.player.stance instanceof UltimateStance) &&
+                            AbstractDungeon.player.stance instanceof DefensiveStance || AbstractDungeon.player.stance instanceof UltimateStance) &&
                             !AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)
                     ) {
                         currentColor = new Color(0.5F, TipHelperChamp2.greenValue, 0.5F, 1F);
@@ -315,13 +314,13 @@ public class TipHelperChamp3 {
         SHADOW_DIST_X = 9.0F * Settings.scale;
         BOX_EDGE_H = 32.0F * Settings.scale;
         BOX_BODY_H = 64.0F * Settings.scale;
-        BOX_W = 320.0F * Settings.scale;
+        BOX_W = 240.0F * Settings.scale;
         gl = new GlyphLayout();
         TEXT_OFFSET_X = 22.0F * Settings.scale;
         HEADER_OFFSET_Y = 12.0F * Settings.scale;
         ORB_OFFSET_Y = -8.0F * Settings.scale;
         BODY_OFFSET_Y = -20.0F * Settings.scale;
-        BODY_TEXT_WIDTH = 280F * Settings.scale;
+        BODY_TEXT_WIDTH = 220F * Settings.scale;
         TIP_DESC_LINE_SPACING = 26.0F * Settings.scale;
         POWER_ICON_OFFSET_X = 40.0F * Settings.scale;
     }

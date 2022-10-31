@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class UltimateFormPower extends AbstractPower implements CloneablePowerInterface {
 
@@ -43,7 +43,10 @@ public class UltimateFormPower extends AbstractPower implements CloneablePowerIn
 
     @Override
     public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
-        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
+        if (!(newStance instanceof UltimateStance)) {
+
+            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(UltimateStance.STANCE_ID));
+        }
     }
 
     public void atEndOfRound() {
@@ -53,6 +56,7 @@ public class UltimateFormPower extends AbstractPower implements CloneablePowerIn
             AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));
         }
     }
+
 
     @Override
     public void updateDescription() {

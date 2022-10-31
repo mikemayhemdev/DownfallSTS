@@ -1,0 +1,49 @@
+[
+  {
+    "PROPER_NAME": "Volltreffer",
+    "NAMES": [
+      "Volltreffer",
+      "volltreffer"
+    ],
+    "DESCRIPTION": "Diese Karte hat ein zusätzliches Effekt in der Mitte deiner Hand."
+  },
+  {
+    "PROPER_NAME": "Konzentration",
+    "NAMES": [
+      "Konzentration",
+      "konzentration",
+      "Konzentriere",
+      "konzentriere",
+	  "Konzentriert",
+      "konzentriert"
+    ],
+    "DESCRIPTION": "Wenn konzentriert, erzielt deine nächste #yVolltreffer Karte ihren Effekt unabhängig von Position. Läuft am ende des Zuges ab."
+  },
+  {
+    "ID": "bruise",
+    "PROPER_NAME": "Prügel",
+    "NAMES": [
+      "Prügel",
+      "prügel"
+    ],
+  "DESCRIPTION": "Ziele mit Prügel nehmen mehr Angriffschaden. Mit jedem Treffer wird es um #b1 reduziert. Läuft am ende des Zuges ab."
+},
+  {
+    "ID": "rugged",
+    "PROPER_NAME": "Robust",
+    "NAMES": [
+      "Robust",
+	  "robust"
+    ],
+  "DESCRIPTION": "Reduziert den nächsten Angriffschadentreffer zu #b1."
+},
+  {
+    "PROPER_NAME": "Kopfgeld",
+    "NAMES": [
+      "Kopfgeld",
+      "kopfgeld"
+    ],
+  "DESCRIPTION": "Normaler Gegner: #b15 Gold.    Elite Gegner: #b35 Gold.             Boss: #b75 Gold."
+}
+
+]

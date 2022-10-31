@@ -9,7 +9,7 @@ public class BossMechanicDisplayPanel extends EasyInfoDisplayPanel {
 
     private static int X = 1550;
     private static int Y = 550;
-    private static int WIDTH = 275;
+    private static int WIDTH = 287;
 
     public BossMechanicDisplayPanel() {
         super(X, Y, WIDTH);

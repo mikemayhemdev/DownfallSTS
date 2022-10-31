@@ -27,7 +27,7 @@ public class RollAttack extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 2;
-    private static final int DAMAGE = 14;
+    private static final int DAMAGE = 16;
 
     //TUNING CONSTANTS
     private static final int UPGRADE_DAMAGE = 4;
@@ -55,7 +55,7 @@ public class RollAttack extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-        this.isMultiDamage = true;
+        this.isMultiDamage = false;
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("RollAttack.png"));
     }
 
@@ -63,10 +63,12 @@ public class RollAttack extends AbstractGuardianCard {
         super.use(p, m);
         if (p.stance instanceof DefensiveMode) {
             //this.isMultiDamage = true;
-            AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+            AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(this.baseDamage), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+
         } else {
             //this.isMultiDamage = false;
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+            brace(8);
         }
         this.useGems(p, m);
     }

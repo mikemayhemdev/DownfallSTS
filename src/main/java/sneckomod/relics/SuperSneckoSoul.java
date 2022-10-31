@@ -2,11 +2,15 @@ package sneckomod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class SuperSneckoSoul extends CustomRelic {
 
@@ -16,6 +20,21 @@ public class SuperSneckoSoul extends CustomRelic {
 
     public SuperSneckoSoul() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
+    }
+
+    public void atTurnStart() {
+        grayscale = false;
+    }
+
+    public void onVictory() {
+        grayscale = false;
+    }
+
+    public void onUseCard(AbstractCard c, UseCardAction action) {
+        if (!grayscale && c.color != AbstractDungeon.player.getCardColor()) {
+            addToTop(new GainEnergyAction(1));
+            grayscale = true;
+        }
     }
 
     @Override
@@ -39,26 +58,7 @@ public class SuperSneckoSoul extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        // Colorize the starter relic's name
-        String name = new SneckoSoul().name;
-        StringBuilder sb = new StringBuilder();
-        for (String word : name.split(" ")) {
-            sb.append("[#").append(SneckoMod.placeholderColor.toString()).append("]").append(word).append("[] ");
-        }
-        sb.setLength(sb.length() - 1);
-        sb.append("[#").append(SneckoMod.placeholderColor.toString()).append("]");
-
-        return DESCRIPTIONS[0] + sb.toString() + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0];
     }
 
-    @Override
-    public void onEquip() {
-        int i = 0;
-        for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
-            if (q instanceof AbstractUnknownCard) {
-                i += 2;
-            }
-        }
-        AbstractDungeon.player.increaseMaxHp(i, true);
-    }
 }

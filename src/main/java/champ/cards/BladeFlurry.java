@@ -1,12 +1,19 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.powers.DualPlaySrikePower;
+import champ.vfx.DaggerThrowAnyColorEffect;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.ThrowDaggerEffect;
+
+import static champ.ChampMod.loadJokeCardImage;
 
 public class BladeFlurry extends AbstractChampCard {
 
@@ -14,67 +21,28 @@ public class BladeFlurry extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 6;
 
     public BladeFlurry() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        // exhaust = true;
-        magicNumber = baseMagicNumber = 2;
-        //  tags.add(ChampMod.TECHNIQUE);
-        tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBOGLADIATOR);
         tags.add(CardTags.STRIKE);
+        loadJokeCardImage(this, "BladeFlurry.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //finisher();
-        // techique();
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                int x = 0;
-                for (AbstractCard q : p.hand.group) if (q.hasTag(ChampMod.TECHNIQUE)) x++;
-                if (gcombo()) {
-                    x = x + magicNumber;
-                }
-                for (int i = 0; i < x; i++) att(new DamageAction(m, makeInfo(), AttackEffect.SLASH_DIAGONAL));
 
-            }
-        });
-        //finisher();
+        atb(new VFXAction(new DaggerThrowAnyColorEffect(m.hb.cX, m.hb.cY, Color.LIGHT_GRAY, 0F, -30F), 0.0F));
+        atb(new VFXAction(new DaggerThrowAnyColorEffect(m.hb.cX, m.hb.cY, Color.LIGHT_GRAY, 0F, -30F), 0.0F));
+        atb(new VFXAction(new DaggerThrowAnyColorEffect(m.hb.cX, m.hb.cY, Color.LIGHT_GRAY, 0F, -30F), 0.1F));
+
+        atb(new DamageAction(m, makeInfo(), AbstractGameAction.AttackEffect.NONE));
+
+        applyToSelf(new DualPlaySrikePower(p,1));
     }
 
-    public void applyPowers() {
-        super.applyPowers();
-
-        if (AbstractDungeon.player != null) {
-            this.rawDescription = cardStrings.DESCRIPTION;
-            int x = 0;
-            for (AbstractCard q : AbstractDungeon.player.hand.group) if (q.hasTag(ChampMod.TECHNIQUE)) x++;
-            if (gcombo()) {
-                x += magicNumber;
-            }
-            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0] + x;
-            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[1];
-
-            this.initializeDescription();
-        }
-    }
-
-    public void onMoveToDiscard() {
-        this.rawDescription = cardStrings.DESCRIPTION;
-        this.initializeDescription();
-    }
-
-
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = gcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
-    }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeDamage(3);
     }
 }

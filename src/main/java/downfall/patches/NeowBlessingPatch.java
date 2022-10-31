@@ -1,28 +1,18 @@
 package downfall.patches;
 
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatches;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.events.exordium.Mushrooms;
-import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.PotionSlot;
 import com.megacrit.cardcrawl.screens.custom.CustomModeScreen;
-import com.megacrit.cardcrawl.shop.StorePotion;
 import com.megacrit.cardcrawl.trials.CustomTrial;
-import com.megacrit.cardcrawl.ui.buttons.ProceedButton;
 import com.megacrit.cardcrawl.ui.panels.TopPanel;
-import com.megacrit.cardcrawl.vfx.ObtainPotionEffect;
 import downfall.dailymods.ExchangeController;
 import downfall.relics.NeowBlessing;
-import javassist.CannotCompileException;
-import javassist.CtBehavior;
-import javassist.NotFoundException;
-import javassist.expr.ExprEditor;
-import javassist.expr.Instanceof;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 
@@ -61,8 +51,8 @@ public class NeowBlessingPatch {
         @SpirePrefixPatch
         public static SpireReturn<Void> Prefix(TopPanel _instance) {
             if (AbstractDungeon.player.hasRelic(NeowBlessing.ID)) {
-                for(AbstractPotion p : AbstractDungeon.player.potions){
-                    if (!(p instanceof PotionSlot)){
+                for (AbstractPotion p : AbstractDungeon.player.potions) {
+                    if (!(p instanceof PotionSlot)) {
                         AbstractDungeon.topPanel.destroyPotion(p.slot);
                     }
                 }

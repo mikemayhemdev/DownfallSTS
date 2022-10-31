@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.cardmods.ExhaustMod;
 import theHexaghost.HexaMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 import java.util.ArrayList;
 
@@ -47,8 +47,8 @@ public class StrikeOfGeniusUpgradedPower extends AbstractPower implements Clonea
         for (int i = 0; i < this.amount; ++i) {
             ArrayList<AbstractCard> qCardList = new ArrayList<>();
             for (AbstractCard r : CardLibrary.getAllCards())
-                if (!UnlockTracker.isCardLocked(r.cardID) && r.hasTag(ChampMod.OPENER)) qCardList.add(r);
-            AbstractCard l = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1));
+                if (r.color == AbstractDungeon.player.getCardColor() && !UnlockTracker.isCardLocked(r.cardID) && !r.hasTag(AbstractCard.CardTags.HEALING) && r.hasTag(AbstractCard.CardTags.STRIKE) && r.type == AbstractCard.CardType.ATTACK) qCardList.add(r);
+            AbstractCard l = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1)).makeStatEquivalentCopy();
             l.upgrade();
             if (!l.exhaust) CardModifierManager.addModifier(l, new ExhaustMod());
             l.freeToPlayOnce = true;

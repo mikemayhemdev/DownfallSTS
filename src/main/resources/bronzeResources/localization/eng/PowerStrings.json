@@ -2,18 +2,17 @@
   "bronze:Cloning": {
     "NAME": "Merge",
     "DESCRIPTIONS": [
-      "The next time you add a card to the Sequence, add an extra copy of it.",
-      "The next time you add a card to the Sequence, add #b",
+      "The next time you #yEncode a card, #yEncode an extra copy of it.",
+      "The next time you #yEncode a card, #yEncode #b",
       " extra copies of it."
     ]
   },
   "bronze:Default": {
     "NAME": "Class Default",
     "DESCRIPTIONS": [
-      "Add a copy of ",
-      " to the next Sequence.",
-      " to the next #b",
-      " Sequences."
+      "Next time you create a Function, #yEncode a copy of the first card in it.",
+      "Next #b",
+      " times you create a Function, #yEncode a copy of the first card in it."
     ]
   },
   "bronze:Feature": {
@@ -27,20 +26,20 @@
   "bronze:InfiniteBeams": {
     "NAME": "Infinite Beams",
     "DESCRIPTIONS": [
-      "At the start of your turn, add #b1 #yMinor #yBeam into your hand.",
-      "At the start of your turn, add #b1 #yMinor #yBeam+ into your hand.",
-      "At the start of your turn, add #b",
-      " #yMinor #yBeams into your hand.",
-      "At the start of your turn, add #b",
-      " #yMinor #yBeam+s into your hand."
+      "At the start of your turn, Gain #b1 #yMinor #yBeam.",
+      "At the start of your turn, Gain #b1 #yMinor #yBeam+.",
+      "At the start of your turn, gain #b",
+      " #yMinor #yBeams.",
+      "At the start of your turn, gain #b",
+      " #yMinor #yBeam+s."
     ]
   },
   "bronze:Optimize": {
     "NAME": "Optimized",
     "DESCRIPTIONS": [
-      "#yUpgrade the next card you #yEncode that can be #yUpgraded.",
+      "#yUpgrade the next #Upgradable card you #yEncode.",
       "#yUpgrade the next #b",
-      " cards you #yEncode that can be #yUpgraded."
+      " #Upgradable cards you #yEncode."
     ]
   },
   "bronze:MaxOutput": {
@@ -63,9 +62,15 @@
   "bronze:Library": {
     "NAME": "Library",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a random card with #yEncode to your hand. NL It costs #b0.",
-      "At the start of your turn, add #b",
-      " random cards with #yEncode to your hand. NL They cost #b0."
+      "At the start of your turn, gain a random card with #yEncode, it costs #b0 until played.",
+      "At the start of your turn, gain #b",
+      " random cards with #yEncode, they cost #b0 until played."
+    ]
+  },
+  "bronze:LibraryMod": {
+    "NAME": "External Library",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain a random card with #yEncode and give it #yEthereal."
     ]
   },
   "bronze:BronzeHeatsink": {
@@ -77,40 +82,42 @@
     ]
   },
   "bronze:HardenedForm": {
-    "NAME": "Hardened Form",
+    "NAME": "Summon Orb",
     "DESCRIPTIONS": [
-      "Whenever you #yCompile, gain #b",
-      " #yBlock."
+      "Whenever you create or play a Function, gain #b",
+      " #yBlock and deal #b",
+      " damage to a random enemy."
     ]
   },
   "bronze:Hardcode": {
     "NAME": "Hardcoding",
     "DESCRIPTIONS": [
-      "Next time you #yCompile a Function, it goes into your deck instead of your hand.",
+      "Next time you create a Function, it goes into your deck instead of your hand, removing all cards used.",
       "The next #b",
-      " times you #yCompile a Function, it goes into your deck instead of your hand."
+      " times you create a Function, it goes into your deck instead of your hand, removing all cards used."
     ]
   },
   "bronze:Verify": {
-    "NAME": "Verify",
+    "NAME": "Sentient Form",
     "DESCRIPTIONS": [
-      "After you play a Function, increase all numbers on it by #b",
-      "."
+      "Whenever you draw a Function, increase all numbers on it by #b1.",
+      "Whenever you draw a Function, increase all numbers on it by #b",
+      " except for cost."
     ]
   },
   "bronze:FreeFunction": {
     "NAME": "Free Function",
     "DESCRIPTIONS": [
-      "The next Function you #yCompile costs #b0.",
+      "The next Function you create costs #b0.",
       "The next #b",
-      " Functions you #yCompile cost #b0."
+      " Functions you create cost #b0."
     ]
   },
   "bronze:CleanCode": {
     "NAME": "Clean Code",
     "DESCRIPTIONS": [
-      "Remove all negative #yCompile effects from cards in the Sequence. Lasts #b1 more Function.",
-      "Remove all negative #yCompile effects from cards in the Sequence. Lasts #b",
+      "Remove all #yCompile #yError effects from Encoded cards. Lasts for #b1 more Function.",
+      "Remove all #yCompile #yError effects from Encoded cards. Lasts for #b",
       " Functions."
     ]
   },
@@ -120,6 +127,20 @@
       "Your next Function is played twice this turn.",
       "Your next #b",
       " Functions are played twice this turn."
+    ]
+  },
+  "bronze:FullRelease": {
+    "NAME": "Full Release",
+    "DESCRIPTIONS": [
+      "At the start of your turn, NL "
+    ]
+  },
+  "bronze:RemoveNextError": {
+    "NAME": "Remove Errors",
+    "DESCRIPTIONS": [
+      "Remove the next #yCompile #yError #yEncoded.",
+      "Remove the next #b",
+      " #yCompile #yErrors #yEncoded."
     ]
   }
 }

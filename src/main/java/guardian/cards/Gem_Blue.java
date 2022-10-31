@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
+import guardian.powers.ModeShiftPower;
 import guardian.stances.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
 import sneckomod.SneckoMod;
@@ -17,7 +18,7 @@ import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.BLUE;
 
 
-public class Gem_Blue extends AbstractGuardianCard {
+public class Gem_Blue extends AbstractGemCard {
     public static final String ID = GuardianMod.makeID("Gem_Blue");
     public static final String NAME;
     public static final String IMG_PATH = "cards/gemBlue.png";
@@ -55,12 +56,13 @@ public class Gem_Blue extends AbstractGuardianCard {
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveMode.STANCE_ID));
+        brace(3);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
         gemEffect(p, m);
+
     }
 
     public AbstractCard makeCopy() {

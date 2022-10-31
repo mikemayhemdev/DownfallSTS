@@ -1,34 +1,13 @@
 {
-  "expansioncontent:StudyAutomatonPower": {
-    "NAME": "学习机械人偶",
+  "expansioncontent:StudyTheSpirePower": {
+    "NAME": "学习尖塔",
     "DESCRIPTIONS": [
-      "下个回合开始时获得1张机械人偶牌。直到打出前费用为零。",
-      "接下来的 ",
-      " 回合，每回合开始时获得1张机械人偶牌。直到打出前费用为零。"
-    ]
-  },
-  "expansioncontent:StudyAutomatonPowerUpgraded": {
-    "NAME": "学习机械人偶+",
-    "DESCRIPTIONS": [
-      "下个回合开始时获得1张升级后的机械人偶牌。",
-      "接下来的 ",
-      " 回合，每回合开始时获得1张升级后的机械人偶牌。直到打出前费用为零。"
-    ]
-  },
-  "expansioncontent:StudyAwakenedPower": {
-    "NAME": "学习觉醒者",
-    "DESCRIPTIONS": [
-      "下个回合开始时获得1张觉醒者牌。直到打出前费用为零。",
-      "接下来的 ",
-      " 回合，每回合开始时获得1张觉醒者牌。直到打出前费用为零。"
-    ]
-  },
-  "expansioncontent:StudyAwakenedPowerUpgraded": {
-    "NAME": "学习觉醒者+",
-    "DESCRIPTIONS": [
-      "下个回合开始时获得1张升级后的觉醒者牌。直到打出前费用为零。",
-      "接下来的 ",
-      " 回合，每回合开始时获得1张升级后的觉醒者牌。直到打出前费用为零。"
+      "在下回合开始时将随机一张 #y首领 牌加入手牌。 NL 它直到打出前耗能为 #b0 。",
+      "接下来的 #b",
+      " 个回合开始时将随机一张 #y首领 牌加入手牌。 NL 它直到打出前耗能为 #b0 。",
+      "在下回合开始时将随机一张已 #y升级 的 #y首领 牌加入手牌。 NL 它直到打出前耗能为 #b0 。",
+      "接下来的 #b",
+      " 个回合开始时将随机一张已 #y升级 的 #y首领 牌加入手牌。 NL 它直到打出前耗能为 #b0 。"
     ]
   },
   "expansioncontent:AwakenedOnePower": {
@@ -38,152 +17,40 @@
       " 点 力量 。"
     ]
   },
-  "expansioncontent:StudyChampPower": {
-    "NAME": "学习第一勇士",
-    "DESCRIPTIONS": [
-      "下个回合开始时获得1张第一勇士牌。直到打出前费用为零。",
-      "接下来的 ",
-      " 回合，每回合开始时获得1张第一勇士牌。直到打出前费用为零。"
-    ]
-  },
-  "expansioncontent:StudyChampPowerUpgraded": {
-    "NAME": "学习第一勇士+",
-    "DESCRIPTIONS": [
-      "下个回合开始时获得1张升级后的第一勇士牌。直到打出前费用为零。",
-      "接下来的 ",
-      " 回合，每回合开始时获得1张升级后的第一勇士牌。直到打出前费用为零。"
-    ]
-  },
-  "expansioncontent:StudyCollectorPower": {
-    "NAME": "学习收藏家",
-    "DESCRIPTIONS": [
-      "下个回合开始时获得1张收藏家牌。直到打出前费用为零。",
-      "接下来的 ",
-      " 回合，每回合开始时获得1张收藏家牌。直到打出前费用为零。"
-    ]
-  },
-  "expansioncontent:StudyCollectorPowerUpgraded": {
-    "NAME": "学习收藏家+",
-    "DESCRIPTIONS": [
-      "下个回合开始时获得1张升级后的收藏家牌。直到打出前费用为零。",
-      "接下来的 ",
-      " 回合，每回合开始时获得1张升级后的收藏家牌。直到打出前费用为零。"
-    ]
-  },
-  "expansioncontent:StudyGuardianPower": {
-    "NAME": "学习守护者",
-    "DESCRIPTIONS": [
-      "下个回合开始时获得1张守护者牌。直到打出前费用为零。",
-      "接下来的 ",
-      " 回合，每回合开始时获得1张守护者牌。直到打出前费用为零。"
-    ]
-  },
-  "expansioncontent:StudyGuardianPowerUpgraded": {
-    "NAME": "学习守护者+",
-    "DESCRIPTIONS": [
-      "下个回合开始时获得1张升级后的守护者牌。直到打出前费用为零。",
-      "接下来的 ",
-      " 回合，每回合开始时获得1张升级后的守护者牌。直到打出前费用为零。"
-    ]
-  },
-  "expansioncontent:StudyHexaghostPower": {
-    "NAME": "学习六火亡魂",
-    "DESCRIPTIONS": [
-      "下个回合开始时获得1张六火亡魂牌。直到打出前费用为零。",
-      "接下来的 ",
-      " 回合，每回合开始时获得1张六火亡魂牌。直到打出前费用为零。"
-    ]
-  },
-  "expansioncontent:StudyHexaghostPowerUpgraded": {
-    "NAME": "学习六火亡魂+",
-    "DESCRIPTIONS": [
-      "下个回合开始时获得1张升级后的六火亡魂牌。直到打出前费用为零。",
-      "接下来的 ",
-      " 回合，每回合开始时获得1张升级后的六火亡魂牌。直到打出前费用为零。"
-    ]
-  },
-  "expansioncontent:StudyShapesPower": {
-    "NAME": "学习甜圈八体",
-    "DESCRIPTIONS": [
-      "下个回合开始时获得1张甜圈和八体牌。直到打出前费用为零。",
-      "接下来的 ",
-      " 回合，每回合开始时获得1张甜圈和八体牌。直到打出前费用为零。"
-    ]
-  },
-  "expansioncontent:StudyShapesPowerUpgraded": {
-    "NAME": "学习甜圈八体+",
-    "DESCRIPTIONS": [
-      "下个回合开始时获得1张升级后的甜圈和八体牌。直到打出前费用为零。",
-      "接下来的 ",
-      " 回合，每回合开始时获得1张升级后的甜圈和八体牌。直到打出前费用为零。"
-    ]
-  },
-  "expansioncontent:StudyTimeEaterPower": {
-    "NAME": "学习时间吞噬者",
-    "DESCRIPTIONS": [
-      "下个回合开始时获得1张时间吞噬者牌。直到打出前费用为零。",
-      "接下来的 ",
-      " 回合，每回合开始时获得1张时间吞噬者牌。直到打出前费用为零。"
-    ]
-  },
-  "expansioncontent:StudyTimeEaterPowerUpgraded": {
-    "NAME": "学习时间吞噬者+",
-    "DESCRIPTIONS": [
-      "下个回合开始时获得1张升级后的时间吞噬者牌。直到打出前费用为零。",
-      "接下来的 ",
-      " 回合，每回合开始时获得1张升级后的时间吞噬者牌。直到打出前费用为零。"
-    ]
-  },
-  "expansioncontent:StudySlimeBossPower": {
-    "NAME": "学习史莱姆老大",
-    "DESCRIPTIONS": [
-      "下个回合开始时获得1张史莱姆老大牌。直到打出前费用为零。",
-      "接下来的 ",
-      " 回合，每回合开始时获得1张史莱姆老大牌牌。直到打出前费用为零。"
-    ]
-  },
-  "expansioncontent:StudySlimeBossPowerUpgraded": {
-    "NAME": "学习史莱姆老大+",
-    "DESCRIPTIONS": [
-      "下个回合开始时获得1张升级后的史莱姆老大牌。直到打出前费用为零。",
-      "接下来的 ",
-      " 回合，每回合开始时获得1张升级后的史莱姆老大牌牌。直到打出前费用为零。"
-    ]
-  },
   "expansioncontent:AwakenDeathPower": {
     "NAME": "未觉醒",
     "DESCRIPTIONS": [
-      "当你即将死亡时，恢复",
-      " 生命并移除此效果。"
+      "当你即将死亡时或战斗结束时，恢复 #b",
+      " 点生命并移除此效果。"
     ]
   },
   "expansioncontent:ChronoBoostPower": {
     "NAME": "时间加速",
     "DESCRIPTIONS": [
-      "打出",
-      " 张牌后，获得 ",
-      " #y力量 。"
+      "每当你打出 #b",
+      " 张牌时，获得 #b",
+      " 点 #y力量 。"
     ]
   },
   "expansioncontent:ChronoBoostPlusPower": {
     "NAME": "时间加速+",
     "DESCRIPTIONS": [
-      "打出",
-      " 张牌后，获得 ",
-      " #y力量 。"
+      "每当你打出 #b",
+      " 张牌时，获得 #b",
+      " 点 #y力量 。"
     ]
   },
   "expansioncontent:DeEnergizedPower": {
     "NAME": "能量降低",
     "DESCRIPTIONS": [
-      "你的下个回合开始时，失去",
+      "你的下回合开始时，失去 #b",
       " [E] 。"
     ]
   },
   "expansioncontent:PolyBeamAgainPower": {
     "NAME": "切换光束",
     "DESCRIPTIONS": [
-      "下回合开始时，打出 #y多重光束 。 ",
+      "你的下回合开始时，打出 #y多重光束 。",
       "接下来的 ",
       "回合开始时，打出 #y多重光束 。"
     ]
@@ -194,6 +61,46 @@
       "下回合开始时，打出 #y多重光束+ 。 ",
       "接下来的 ",
       " 回合开始时，打出 #y多重光束+ 。"
+    ]
+  },
+    "expansioncontent:AddCopyPower": {
+    "NAME": "潜力",
+    "DESCRIPTIONS": [
+      "下回合开始时将 ",
+      " 加入你的手牌。"
+    ]
+  },
+  "expansioncontent:AddSameInstancePower": {
+    "NAME": "推迟卡牌",
+    "DESCRIPTIONS": [
+      "下一回合开始时将 ",
+      " 加入你的手牌。"
+    ]
+  },
+  "expansioncontent:NextTurnExhumePower": {
+    "NAME": "推迟发掘",
+    "DESCRIPTIONS": [
+      "下一回合开始时 #y发掘 ",
+      " 到你的手牌。"
+    ]
+  },
+  "expansioncontent:PretendHexWheelPower": {
+    "NAME": "地狱火",
+    "DESCRIPTIONS": [
+      "在 #b",
+      " 回合后，随机对敌人造成 #b",
+      "本回合结束时，随机对敌人造成 #b",
+      " 点伤害 #b6 次。"
+    ]
+  },
+  "expansioncontent:VexVinciblePower": {
+    "NAME": "坚不可摧",
+    "DESCRIPTIONS": [
+      "本回合最多失去 #b",
+      " 点生命。承伤达上限后，失去本效果。",
+      "本回合最多失去 #b",
+      " 点生命。承伤达上限后，失去本效果 #b1 层。还剩 #b",
+      " 层。"
     ]
   }
 }

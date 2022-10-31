@@ -12,8 +12,8 @@ public class Frontload extends AbstractBronzeCard {
 
     //stupid intellij stuff skill, self, common
 
-    private static final int BLOCK = 12;
-    private static final int UPG_BLOCK = 4;
+    private static final int BLOCK = 8;
+    private static final int UPG_BLOCK = 3;
 
     public Frontload() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);

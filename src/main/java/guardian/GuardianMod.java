@@ -4,6 +4,7 @@ import basemod.BaseMod;
 import basemod.ModPanel;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomUnlockBundle;
+import basemod.devcommands.ConsoleCommand;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
@@ -11,9 +12,11 @@ import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -21,6 +24,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
+import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
 import com.megacrit.cardcrawl.events.shrines.PurificationShrine;
 import com.megacrit.cardcrawl.events.shrines.Transmogrifier;
@@ -31,12 +35,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import downfall.downfallMod;
 import guardian.cards.*;
 import guardian.characters.GuardianCharacter;
+import guardian.commands.SocketGems;
 import guardian.events.StasisEgg;
 import guardian.events.*;
 import guardian.helpers.MultihitVariable;
@@ -55,6 +59,7 @@ import guardian.powers.zzz.MultiBoostPower;
 import guardian.relics.*;
 import guardian.rewards.GemReward;
 import guardian.rewards.GemRewardAllRarities;
+import guardian.stances.DefensiveMode;
 import guardian.ui.EnhanceBonfireOption;
 import guardian.vfx.SocketGemEffect;
 import org.apache.logging.log4j.LogManager;
@@ -76,7 +81,8 @@ public class GuardianMod implements PostDrawSubscriber,
         EditRelicsSubscriber,
         EditCardsSubscriber,
         PostBattleSubscriber,
-        AddAudioSubscriber
+        AddAudioSubscriber,
+        OnPlayerLoseBlockSubscriber
         //basemod.interfaces.EditKeywordsSubscriber
         //EditStringsSubscriber
 {
@@ -99,6 +105,7 @@ public class GuardianMod implements PostDrawSubscriber,
     public static ArrayList<Texture> socketTextures2 = new ArrayList<>();
     public static ArrayList<Texture> socketTextures3 = new ArrayList<>();
     public static ArrayList<Texture> socketTextures4 = new ArrayList<>();
+    public static ArrayList<Texture> gemTextures = new ArrayList<>();
     public static boolean stasisDelay = false;
     public static int stasisCount;
     public static boolean discoveryOverride = false;
@@ -202,11 +209,13 @@ public class GuardianMod implements PostDrawSubscriber,
         }
         Texture cardTexture;
         cardTexture = ImageMaster.loadImage(img);
-        cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-        int tw = cardTexture.getWidth();
-        int th = cardTexture.getHeight();
-        TextureAtlas.AtlasRegion cardImg = new TextureAtlas.AtlasRegion(cardTexture, 0, 0, tw, th);
-        ReflectionHacks.setPrivate(card, AbstractCard.class, "jokePortrait", cardImg);
+        if (cardTexture != null) {
+            cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+            int tw = cardTexture.getWidth();
+            int th = cardTexture.getHeight();
+            TextureAtlas.AtlasRegion cardImg = new TextureAtlas.AtlasRegion(cardTexture, 0, 0, tw, th);
+            ReflectionHacks.setPrivate(card, AbstractCard.class, "jokePortrait", cardImg);
+        }
     }
 
     public static final String getResourcePath(String resource) {
@@ -276,7 +285,6 @@ public class GuardianMod implements PostDrawSubscriber,
 
         return retVal;
     }
-
 
     public static CardGroup getGemCards() {
         CardGroup retVal = new CardGroup(CardGroup.CardGroupType.MASTER_DECK);
@@ -406,7 +414,8 @@ public class GuardianMod implements PostDrawSubscriber,
     }
 
     public static boolean canSpawnStasisOrb() {
-        if (AbstractDungeon.player.hasEmptyOrb() || (AbstractDungeon.player.masterMaxOrbs == 0 && AbstractDungeon.player.maxOrbs == 0)) return true;
+        if (AbstractDungeon.player.hasEmptyOrb() || (AbstractDungeon.player.masterMaxOrbs == 0 && AbstractDungeon.player.maxOrbs == 0))
+            return true;
 
         for (AbstractOrb o : AbstractDungeon.player.orbs) {
             if (!(o instanceof StasisOrb)) {
@@ -439,6 +448,15 @@ public class GuardianMod implements PostDrawSubscriber,
         }
         return false;
 
+    }
+
+    @Override
+    public int receiveOnPlayerLoseBlock(int i) {
+        if (AbstractDungeon.player.stance instanceof DefensiveMode) {
+            return 0;
+        } else {
+            return i;
+        }
     }
 
     public void receiveEditCharacters() {
@@ -522,73 +540,31 @@ public static void saveData() {
     @Override
     public void receiveSetUnlocks() {
 
+        downfallMod.registerUnlockSuite(
+                GatlingBeam.ID,
+                Orbwalk.ID,
+                FierceBash.ID,
 
-        unlocks0 = new CustomUnlockBundle(
-                GatlingBeam.ID, Orbwalk.ID, FierceBash.ID
+                ChargeUp.ID,
+                GemFire.ID,
+                GemFinder.ID,
+
+                StasisEngine.ID,
+                FuturePlans.ID,
+                CompilePackage.ID,
+
+                StasisUpgradeRelic.ID,
+                DefensiveModeMoreBlock.ID,
+                StasisCodex.ID,
+
+                GemstoneGun.ID,
+                PocketSentry.ID,
+                BottledAnomaly.ID,
+
+                GuardianEnum.GUARDIAN
         );
-        UnlockTracker.addCard(GatlingBeam.ID);
-        UnlockTracker.addCard(Orbwalk.ID);
-        UnlockTracker.addCard(FierceBash.ID);
-
-        unlocks1 = new CustomUnlockBundle(
-                Gem_Yellow.ID, GemFire.ID, GemFinder.ID
-        );
-        UnlockTracker.addCard(Gem_Yellow.ID);
-        UnlockTracker.addCard(GemFire.ID);
-        UnlockTracker.addCard(GemFinder.ID);
-
-        unlocks2 = new CustomUnlockBundle(
-                FuturePlans.ID, StasisEngine.ID, CompilePackage.ID
-        );
-        UnlockTracker.addCard(StasisEngine.ID);
-        UnlockTracker.addCard(FuturePlans.ID);
-        UnlockTracker.addCard(CompilePackage.ID);
-
-        unlocks3 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                StasisUpgradeRelic.ID, DefensiveModeMoreBlock.ID, StasisCodex.ID
-        );
-        UnlockTracker.addRelic(StasisUpgradeRelic.ID);
-        UnlockTracker.addRelic(DefensiveModeMoreBlock.ID);
-        UnlockTracker.addRelic(StasisCodex.ID);
-
-        unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                GemstoneGun.ID, PocketSentry.ID, BottledAnomaly.ID
-        );
-
-        UnlockTracker.addRelic(GemstoneGun.ID);
-        UnlockTracker.addRelic(PocketSentry.ID);
-        UnlockTracker.addRelic(BottledAnomaly.ID);
-
-        BaseMod.addUnlockBundle(unlocks0, GuardianEnum.GUARDIAN, 0);
-
-        BaseMod.addUnlockBundle(unlocks1, GuardianEnum.GUARDIAN, 1);
-
-        BaseMod.addUnlockBundle(unlocks2, GuardianEnum.GUARDIAN, 2);
-
-        BaseMod.addUnlockBundle(unlocks3, GuardianEnum.GUARDIAN, 3);
-
-        BaseMod.addUnlockBundle(unlocks4, GuardianEnum.GUARDIAN, 4);
-
     }
 
-    public void clearUnlockBundles() {
-
-        //TODO - Part of unlocks
-
-        BaseMod.removeUnlockBundle(GuardianEnum.GUARDIAN, 0);
-        BaseMod.removeUnlockBundle(GuardianEnum.GUARDIAN, 1);
-        BaseMod.removeUnlockBundle(GuardianEnum.GUARDIAN, 2);
-        BaseMod.removeUnlockBundle(GuardianEnum.GUARDIAN, 3);
-        BaseMod.removeUnlockBundle(GuardianEnum.GUARDIAN, 4);
-        receiveSetUnlocks();
-
-    }
-
-    public void printEnemies() {
-        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-            logger.info(monster.name + " HP " + monster.currentHealth);
-        }
-    }
 
     public void receiveEditRelics() {
 
@@ -618,7 +594,6 @@ public static void saveData() {
 
         BaseMod.addDynamicVariable(new MultihitVariable());
         BaseMod.addDynamicVariable(new SecondaryMagicVariable());
-
 
 
         BaseMod.addCard(new Strike_Guardian());
@@ -663,6 +638,7 @@ public static void saveData() {
         BaseMod.addCard(new Clone());
         BaseMod.addCard(new Recover());
         BaseMod.addCard(new Planning());
+        BaseMod.addCard(new BodySlam());
         BaseMod.addCard(new Emergency());
         BaseMod.addCard(new GemFinder());
         BaseMod.addCard(new FastForward());
@@ -672,7 +648,7 @@ public static void saveData() {
         BaseMod.addCard(new StasisField());
         BaseMod.addCard(new StasisStrike());
         BaseMod.addCard(new ConstructionForm());
-       // BaseMod.addCard(new WeakpointTargeting());
+        // BaseMod.addCard(new WeakpointTargeting());
         BaseMod.addCard(new GemFire());
         BaseMod.addCard(new RollAttack());
         BaseMod.addCard(new Reroute());
@@ -705,8 +681,9 @@ public static void saveData() {
         BaseMod.addCard(new ShieldCharger());
         BaseMod.addCard(new StasisEngine());
         BaseMod.addCard(new Gem_Purple());
-
-        BaseMod.addCard(new Aged());
+        
+        BaseMod.addCard(new CrystalShiv());
+        BaseMod.addCard(new CrystalWard());
 
         //CONSTRUCT cross-mod
         /*
@@ -775,7 +752,7 @@ public static void saveData() {
 
         UnlockTracker.unlockCard(LeechingTouch.ID);
         UnlockTracker.unlockCard(DuplicatedForm.ID);
-        UnlockTracker.unlockCard(FeelOurPain.ID);
+        UnlockTracker.unlockCard(FirmFortitude.ID);
         UnlockTracker.unlockCard(Dissolve.ID);
         UnlockTracker.unlockCard(RollThrough.ID);
         UnlockTracker.unlockCard(CorrosiveSpit.ID);
@@ -971,6 +948,16 @@ public static void saveData() {
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 
+
+        BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsGuardian.ID, BackToBasicsGuardian.class) //Event ID//
+                //Event Character//
+                .playerClass(GuardianEnum.GUARDIAN)
+                //Existing Event to Override//
+                .overrideEvent(BackToBasics.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
         //BaseMod.addEvent(GemMine.ID, GemMine.class, Exordium.ID);
         //BaseMod.addEvent(StasisEgg.ID, StasisEgg.class, TheBeyond.ID);
         //BaseMod.addEvent(BackToBasicsSnecko.ID, BackToBasicsSnecko.class, TheCity.ID);
@@ -983,6 +970,7 @@ public static void saveData() {
 
         initializeSocketTextures();
 
+        ConsoleCommand.addCommand("socketgems", SocketGems.class);
     }
 
     public void initializeSocketTextures() {
@@ -1039,6 +1027,19 @@ public static void saveData() {
         socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/yellowgem4.png")));
         socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/lightbluegem4.png")));
 
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/redgem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/bluegem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/greengem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/lightbluegem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/whitegem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/cyangem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/orangegem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/crimsongem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/fraggem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/blackgem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/purplegem.png")));
+        gemTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/yellowgem.png")));
+
     }
 
 
@@ -1049,6 +1050,12 @@ public static void saveData() {
         BaseMod.addPotion(DefensiveModePotion.class, Color.ROYAL, Color.TEAL, Color.BLUE, DefensiveModePotion.POTION_ID, GuardianEnum.GUARDIAN);
         BaseMod.addPotion(StasisDiscoveryPotion.class, Color.GOLDENROD, Color.GOLD, Color.YELLOW, StasisDiscoveryPotion.POTION_ID, GuardianEnum.GUARDIAN);
 
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(BlockOnCardUsePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(AcceleratePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(DefensiveModePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(StasisDiscoveryPotion.POTION_ID);
+        }
     }
 
     public boolean receivePreMonsterTurn(AbstractMonster abstractMonster) {
@@ -1071,6 +1078,7 @@ public static void saveData() {
                 ExhaustStatusesPower e = (ExhaustStatusesPower) AbstractDungeon.player.getPower(ExhaustStatusesPower.POWER_ID);
                 if (e.usedThisTurn < e.amount) {
                     AbstractDungeon.actionManager.addToBottom(new ExhaustSpecificCardAction(abstractCard, AbstractDungeon.player.hand));
+                    AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
                     e.usedThisTurn++;
                     e.flash();
                 }
@@ -1079,19 +1087,24 @@ public static void saveData() {
     }
 
     public enum socketTypes {
-        RED,
-        BLUE,
-        GREEN,
-        LIGHTBLUE,
-        WHITE,
-        CYAN,
-        ORANGE,
-        CRIMSON,
-        FRAGMENTED,
-        SYNTHETIC,
-        PURPLE,
-        YELLOW
+        RED(Color.RED),
+        BLUE(Color.BLUE),
+        GREEN(Color.GREEN),
+        LIGHTBLUE(Color.SKY),
+        WHITE(Color.WHITE),
+        CYAN(Color.CYAN),
+        ORANGE(Color.ORANGE),
+        CRIMSON(Color.RED),
+        FRAGMENTED(Color.VIOLET),
+        SYNTHETIC(Color.DARK_GRAY),
+        PURPLE(Color.PURPLE),
+        YELLOW(Color.YELLOW);
 
+        public Color color;
+
+        socketTypes(Color color) {
+            this.color = color.cpy();
+        }
     }
 
     @Override

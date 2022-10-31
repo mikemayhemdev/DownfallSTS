@@ -1,12 +1,13 @@
 package champ.cards;
 
-import champ.ChampMod;
+import champ.powers.ResolvePower;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
+
+import static champ.ChampMod.fatigue;
 
 public class EnchantSword extends AbstractChampCard {
 
@@ -17,7 +18,9 @@ public class EnchantSword extends AbstractChampCard {
     public EnchantSword() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
-        magicNumber = baseMagicNumber = 5;
+      //  myHpLossCost = 5;
+        magicNumber = baseMagicNumber = 8;
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -26,18 +29,22 @@ public class EnchantSword extends AbstractChampCard {
             cards.get(0).baseDamage += magicNumber;
 
         }));
+    //    fatigue(5);
     }
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean canUse = false;
-        for (AbstractCard c:p.hand.group){
-            if (c.baseDamage > 0){
+        for (AbstractCard c : p.hand.group) {
+            if (c.baseDamage > 0) {
                 canUse = true;
                 break;
             }
         }
-        if (!canUse) return false;
+        if (!canUse) {
+            cantUseMessage = EXTENDED_DESCRIPTION[0];
+            return false;
+        }
         return super.canUse(p, m);
     }
 

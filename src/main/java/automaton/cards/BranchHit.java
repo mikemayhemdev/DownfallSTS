@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -10,12 +11,13 @@ public class BranchHit extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, self_and_enemy, common
 
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 9;
 
     public BranchHit() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = DAMAGE;
         thisEncodes();
+        AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("BranchAttack.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -14,7 +14,7 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.TrigggerSpecificSlimeAttackAction;
 import slimebound.orbs.SpawnedSlime;
 import theHexaghost.HexaMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class CommandOnPlayPower extends AbstractPower implements CloneablePowerInterface {
 
@@ -31,6 +31,7 @@ public class CommandOnPlayPower extends AbstractPower implements CloneablePowerI
         this.type = PowerType.BUFF;
         this.isTurnBased = true;
         DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);

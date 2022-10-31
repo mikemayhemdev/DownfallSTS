@@ -2,27 +2,25 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import sneckomod.actions.NoApplyRandomDamageAction;
 
 public class DiceBoulder extends AbstractSneckoCard {
 
     public final static String ID = makeID("DiceBoulder");
 
-    //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
-
-    private static final int DAMAGE = 30;
-    private static final int MAGIC = 1;
-
     public DiceBoulder() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC;
+        baseDamage = 27;
+        baseMagicNumber = magicNumber = 1;
+        tags.add(SneckoMod.RNG);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new NoApplyRandomDamageAction(m, magicNumber, damage, 1, AbstractGameAction.AttackEffect.BLUNT_HEAVY, this));
+        atb(new NoApplyRandomDamageAction(m, magicNumber, damage, 1, AbstractGameAction.AttackEffect.BLUNT_HEAVY, this, DamageInfo.DamageType.NORMAL));
     }
 
     @Override
@@ -36,13 +34,6 @@ public class DiceBoulder extends AbstractSneckoCard {
 
         baseDamage = maxDamage;
         super.applyPowers();
-
-        // just-in-case-but-this-should-be-impossible code
-        if (magicNumber > damage)
-        {
-            magicNumber = damage;
-            isMagicNumberModified = magicNumber != baseMagicNumber;
-        }
     }
 
     @Override
@@ -57,13 +48,6 @@ public class DiceBoulder extends AbstractSneckoCard {
         // repeat so damage holds the second condition's damage
         baseDamage = maxDamage;
         super.calculateCardDamage(mo);
-
-        // just-in-case-but-this-should-be-impossible code
-        if (magicNumber > damage)
-        {
-            magicNumber = damage;
-            isMagicNumberModified = magicNumber != baseMagicNumber;
-        }
     }
 
     @Override
@@ -77,16 +61,11 @@ public class DiceBoulder extends AbstractSneckoCard {
     }
 
     public void upgrade() {
-        this.upgradeDamage(4);// 49
-        upgradeMagicNumber(8);
-        if (baseMagicNumber > baseDamage) {
-            baseMagicNumber = baseDamage;
-            magicNumber = baseMagicNumber;
-        }
-
-        ++this.timesUpgraded;// 50
-        this.upgraded = true;// 51
-        this.name = cardStrings.NAME + "+" + this.timesUpgraded;// 52
-        this.initializeTitle();// 53
+        this.upgradeDamage(3 + timesUpgraded);
+        upgradeMagicNumber(6 + timesUpgraded);
+        ++this.timesUpgraded;
+        this.upgraded = true;
+        this.name = cardStrings.NAME + "+" + this.timesUpgraded;
+        this.initializeTitle();
     }
 }

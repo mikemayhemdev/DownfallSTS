@@ -1,0 +1,102 @@
+{
+  "hermit:Momento": {
+    "NAME": "오래된 목걸이",
+    "FLAVOR": "안에는 흐릿한 사진이 있습니다.",
+    "DESCRIPTIONS": [
+      "매 전투 시작 시 손에 #y유품 을 추가합니다."
+    ]
+  },
+  "hermit:RyeStalk": {
+    "NAME": "호밀 줄기",
+    "FLAVOR": "한참동안 씹었음에도 불구하고, 아직 새것 같은 상태입니다.",
+    "DESCRIPTIONS": [
+      "내 턴 종료 시, 모든 적들은 #yhermit:타박상과 같은 양의 체력을 잃게 됩니다."
+    ]
+  },
+  "hermit:BartenderGlass": {
+    "NAME": "바텐더의 유리잔",
+    "FLAVOR": "어떤 액체든지 안에 들어가면 다른 것으로 변화합니다.",
+    "DESCRIPTIONS": [
+      "매 전투마다 포션을 사용할 경우, 무작위 포션을 얻습니다. 매 전투마다 최대 #b2 개의 포션만 사용할 수 있습니다.",
+      "이번 전투에서 더 이상 포션을 사용할 수 없습니다."
+    ]
+  },
+  "hermit:Horseshoe": {
+    "NAME": "편자",
+    "FLAVOR": "행운의 부적. 누군가는 이걸 그리워하고 있겠죠.",
+    "DESCRIPTIONS": [
+      "#y약화, #y손상, #y취약을 얻을 때마다, #b1 덜 얻습니다.."
+    ]
+  },
+  "hermit:Spyglass": {
+    "NAME": "소형 망원경",
+    "FLAVOR": "케스틴 하이핀의 유산.",
+    "DESCRIPTIONS": [
+      "턴 종료 시 #yhermit:집중 상태일 경우, 다음 턴에 [E] 를 추가로 얻습니다."
+    ]
+  },
+  "hermit:RedScarf": {
+    "NAME": "빨간 스카프",
+    "FLAVOR": "따뜻하고 푹신합니다.",
+    "DESCRIPTIONS": [
+      "적에게 해로운 효과를 부여할 때마다, 방어도를 #b2 #y얻습니다."
+    ]
+  },
+  "hermit:DentedPlate": {
+    "NAME": "찌그러진 철판",
+    "FLAVOR": "총알 몇 개는 아직도 안에 박혀있습니다.",
+    "DESCRIPTIONS": [
+      "체력이 #b50% 이하일 경우 턴이 시작할때마다 카드 1장과 에너지 #b1을 얻습니다."
+    ]
+  },
+  "hermit:PetGhost": {
+    "NAME": "꼬마 유령",
+    "FLAVOR": "불쌍하게도.",
+    "DESCRIPTIONS": [
+      "매 전투마다 처음으로 사망 시, 그 대신 #b1 의 HP로 생존합니다."
+    ]
+  },
+  "hermit:CharredGlove": {
+    "NAME": "그을은 장갑",
+    "FLAVOR": "장갑의 다른 부분은 초자연적인 빛을 띄고 있습니다.",
+    "DESCRIPTIONS": [
+      "#r저주를 뽑을 때마다, 다음 공격의 피해량이 #b3 증가합니다."
+    ]
+  },
+  "hermit:ClaspedLocket": {
+    "NAME": "굳게 닫힌 펜던트",
+    "FLAVOR": "더 이상 열 수 없습니다.",
+    "DESCRIPTIONS": [
+      "#y오래된 #y목걸이 를 대체합니다. 매 턴마다, 처음 저주를 뽑으면 #y소멸시키고 카드를 #b2 장 뽑습니다. 획득 시, #r상처 를 #b2 장 획득합니다.",
+      "두 번 다시는..."
+    ]
+  },
+  "hermit:StraightRazor": {
+    "NAME": "면도칼",
+    "FLAVOR": "더 깔끔한 면도를 위해...",
+    "DESCRIPTIONS": [
+      "덱에서 카드를 제거할 때마다, 체력을 #b15 회복합니다."
+    ]
+  },
+  "hermit:BrassTacks": {
+    "NAME": "황동 압정",
+    "FLAVOR": "이 압정들의 광채는 결코 사라지지 않을 것 같습니다.",
+    "DESCRIPTIONS": [
+      "전투 시작 시 #y금속화 를 #b2 얻습니다."
+    ]
+  },
+  "hermit:BlackPowder": {
+    "NAME": "검은 가루",
+    "FLAVOR": "조심히 다루시오.",
+    "DESCRIPTIONS": [
+      "내 턴이 끝날 때, 발동했던 #yhermit:정조준 효과마다 적 전체에게 피해를 #b2 줍니다."
+    ]
+  },
+  "hermit:BloodyTooth": {
+    "NAME": "부러진 이빨",
+    "FLAVOR": "사람 턱에서 나온 거라고 하기엔 너무 거대해 보입니다...",
+    "DESCRIPTIONS": [
+      "이번 막에서 조우하고 물리친 엘리트당, #y힘을 #b1 지닌 채로 전투를 시작합니다."
+    ]
+  }
+}

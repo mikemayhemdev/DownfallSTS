@@ -9,30 +9,20 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import sneckomod.SneckoMod;
 
 public class TechniqueMod extends AbstractCardModifier {
 
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        if (card instanceof AbstractChampCard){
-            return rawDescription;
-        }
-        else return CardCrawlGame.languagePack.getUIString(ChampMod.makeID("TechniqueMod")).TEXT[0] + rawDescription;
-    }
-
-    @Override
-    public void onInitialApplication(AbstractCard card) {
-
-        card.tags.add(ChampMod.TECHNIQUE);
+       return rawDescription + CardCrawlGame.languagePack.getUIString(ChampMod.makeID("TechniqueMod")).TEXT[0] ;
     }
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
+        super.onUse(card, target, action);
         if (AbstractDungeon.player.stance instanceof AbstractChampStance)
             ((AbstractChampStance) AbstractDungeon.player.stance).techique();
-        super.onUse(card, target, action);
     }
 
     @Override

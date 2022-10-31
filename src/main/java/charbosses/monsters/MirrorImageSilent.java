@@ -1,22 +1,16 @@
 package charbosses.monsters;
 
-import basemod.interfaces.CloneablePowerInterface;
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Silent.CharBossSilent;
-import charbosses.powers.FakeOrRealPower;
 import charbosses.vfx.QuietSpecialSmokeBombEffect;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
 import com.evacipated.cardcrawl.modthespire.lib.SpireSuper;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.downfallMod;
 
 public class MirrorImageSilent extends AbstractMonster {
@@ -87,31 +81,41 @@ public class MirrorImageSilent extends AbstractMonster {
 
     @Override
     public void renderHealth(SpriteBatch sb) {
-        if (!((CharBossSilent) AbstractCharBoss.boss).foggy) {
-            super.renderHealth(sb);
+        if (AbstractCharBoss.boss != null) {
+            if (!((CharBossSilent) AbstractCharBoss.boss).foggy) {
+                super.renderHealth(sb);
+            }
         }
     }
 
     @Override
     public void renderPowerTips(SpriteBatch sb) {
-        if (!((CharBossSilent) AbstractCharBoss.boss).foggy) {
-            super.renderPowerTips(sb);
+        if (AbstractCharBoss.boss != null) {
+            if (!((CharBossSilent) AbstractCharBoss.boss).foggy) {
+                super.renderPowerTips(sb);
+            }
         }
     }
 
     @Override
     public void renderTip(SpriteBatch sb) {
-        if (!((CharBossSilent) AbstractCharBoss.boss).foggy) {
-            super.renderTip(sb);
+        if (AbstractCharBoss.boss != null) {
+            if (!((CharBossSilent) AbstractCharBoss.boss).foggy) {
+                super.renderTip(sb);
+            }
         }
     }
 
     @SpireOverride
     protected void renderName(SpriteBatch sb) {
-        if (!((CharBossSilent) AbstractCharBoss.boss).foggy) {
-            SpireSuper.call(sb);
+        if (AbstractCharBoss.boss != null) {
+            if (!((CharBossSilent) AbstractCharBoss.boss).foggy) {
+                SpireSuper.call(sb);
+            }
         }
     }
+
+
 
     @Override
     public void takeTurn() {

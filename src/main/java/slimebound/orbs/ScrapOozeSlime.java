@@ -58,13 +58,13 @@ public class ScrapOozeSlime
     @Override
     public void triggerEvokeAnimation() {
         super.triggerEvokeAnimation();
-        SlimeboundMod.logger.info("Evoking Scrap Ooze");
+        //SlimeboundMod.logger.info("Evoking Scrap Ooze");
         this.evoked = true;
         cleanUpVFX();
     }
 
     private void cleanUpVFX() {
-        SlimeboundMod.logger.info("Cleaning up Scrap Ooze VFX");
+        //SlimeboundMod.logger.info("Cleaning up Scrap Ooze VFX");
         this.scrapVFX.finish();
         this.scrapGlowVFX.finish();
         this.evoked = true;

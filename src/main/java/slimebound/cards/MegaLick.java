@@ -22,7 +22,7 @@ import slimebound.vfx.SlimeDripsEffect;
 import static com.badlogic.gdx.graphics.Color.GREEN;
 
 
-public class MegaLick extends AbstractSlimeboundCard {
+public class MegaLick extends AbstractLickCard {
     public static final String ID = "Slimebound:MegaLick";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -76,13 +76,16 @@ public class MegaLick extends AbstractSlimeboundCard {
 
                 }
             }
-            if (upgraded)   AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
         }
-
+        if (upgraded)upgradeAction(p,m);
 
     }
 
+
+    public void upgradeAction(AbstractPlayer p, AbstractMonster m){
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+    }
     public AbstractCard makeCopy() {
 
         return new MegaLick();

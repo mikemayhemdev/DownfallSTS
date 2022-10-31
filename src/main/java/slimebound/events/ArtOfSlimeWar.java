@@ -8,7 +8,6 @@ package slimebound.events;
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,9 +19,10 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import slimebound.cards.CheckThePlaybook;
-import slimebound.cards.Icky;
+import downfall.cards.curses.Icky;
 import slimebound.cards.Tackle;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 
 public class ArtOfSlimeWar extends AbstractImageEvent {
@@ -99,7 +99,7 @@ public class ArtOfSlimeWar extends AbstractImageEvent {
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                         CardCrawlGame.screenShake.mildRumble(5.0F);
                         this.screenNum = 1;
-                        this.imageEventText.updateDialogOption(0, OPTIONS[3], CardLibrary.getCopy("Slimebound:Icky"));
+                        this.imageEventText.updateDialogOption(0, OPTIONS[3], new Icky());
                         this.imageEventText.updateDialogOption(1, OPTIONS[4] + this.damage + OPTIONS[5]);
                         this.imageEventText.removeDialogOption(2);
                         this.imageEventText.setDialogOption(OPTIONS[6] + this.maxHpLoss + OPTIONS[7]);
@@ -116,9 +116,12 @@ public class ArtOfSlimeWar extends AbstractImageEvent {
                         this.screenNum = 2;
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         this.imageEventText.clearRemainingOptions();
+                        logMetricIgnored(ID);
                         return;
                 }
             case 1:
+                ArrayList<String> cards = new ArrayList<>();
+                cards.add(CheckThePlaybook.ID);
                 switch (buttonPressed) {
                     case 0:
                         CardCrawlGame.screenShake.shake(ShakeIntensity.MED, ShakeDur.MED, false);
@@ -129,6 +132,8 @@ public class ArtOfSlimeWar extends AbstractImageEvent {
                         this.screenNum = 2;
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         this.imageEventText.clearRemainingOptions();
+                        cards.add(curse.cardID);
+                        logMetricObtainCards(ID, "Dive", cards);
                         return;
                     case 1:
                         this.imageEventText.updateBodyText(DIALOG_CHOSE_FIGHT);
@@ -138,6 +143,7 @@ public class ArtOfSlimeWar extends AbstractImageEvent {
                         this.screenNum = 2;
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         this.imageEventText.clearRemainingOptions();
+                        logMetricObtainCardAndDamage(ID, "Be Patient", new CheckThePlaybook(), damage);
                         return;
                     case 2:
                         this.imageEventText.updateBodyText(DIALOG_CHOSE_FLAT);
@@ -147,6 +153,7 @@ public class ArtOfSlimeWar extends AbstractImageEvent {
                         this.screenNum = 2;
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         this.imageEventText.clearRemainingOptions();
+                        logMetricObtainCardsLoseMapHP(ID, "Grab and Run", cards, maxHpLoss);
                         return;
                     default:
                         this.openMap();
@@ -163,6 +170,8 @@ public class ArtOfSlimeWar extends AbstractImageEvent {
 
     private void replaceAttacks() {
         Iterator i = AbstractDungeon.player.masterDeck.group.iterator();
+        ArrayList<String> cardsRemoved = new ArrayList<>();
+        ArrayList<String> cardsAdded = new ArrayList<>();
 
         while (true) {
             AbstractCard e;
@@ -171,13 +180,17 @@ public class ArtOfSlimeWar extends AbstractImageEvent {
                     for (int i2 = 0; i2 < 3; ++i2) {
                         AbstractCard c = new Tackle();
                         c.upgrade();
+                        cardsAdded.add(c.cardID);
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                     }
-
+                    logMetric(ID, "Read", cardsAdded, cardsRemoved, null, null,
+                            null, null, null,
+                            0, 0, 0, 0, 0, 0);
                     return;
                 }
 
                 e = (AbstractCard) i.next();
+                cardsRemoved.add(e.cardID);
             } while (!(e.hasTag(BaseModCardTags.BASIC_STRIKE)));
 
             i.remove();

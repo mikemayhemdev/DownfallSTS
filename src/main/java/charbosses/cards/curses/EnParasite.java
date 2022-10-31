@@ -16,7 +16,7 @@ public class EnParasite extends AbstractBossCard {
     }
 
     public EnParasite() {
-        super(ID, EnParasite.cardStrings.NAME, "curse/parasite", -2, EnParasite.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE, AbstractMonster.Intent.MAGIC);
+        super(ID, EnParasite.cardStrings.NAME, "curse/parasite", -2, EnParasite.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE, AbstractMonster.Intent.NONE);
     }
 
     @Override

@@ -2,36 +2,36 @@ package automaton;
 
 import automaton.cards.AbstractBronzeCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.UIStrings;
 
 public class CompileDisplayPanel extends EasyInfoDisplayPanel {
 
+    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("bronze:CompileDisplayPanel");
+
     public CompileDisplayPanel() {
-        super(600, 900, 200);
+        super(600, 900, 400);
     } // NOTE: X, Y, Width are all multipled by settings.scale on constructor, so use values like this.
 
     @Override
     public String getTitle() {
-        return "When Compiled:";
+        return uiStrings.TEXT[0];
     }
 
     @Override
     public String getDescription() {
-        boolean flip = false;
         StringBuilder s = new StringBuilder();
         if (FunctionHelper.held != null && FunctionHelper.doStuff)
             for (AbstractCard card : FunctionHelper.held.group) {
-                if (card.rawDescription.contains("bronze:Compile")) { //TODO: Change to tag?
-                    String x = ((AbstractBronzeCard) card).getSpecialCompileText();
-                    if (!x.equals("")) {
-                        flip = true;
-                        s.append(((AbstractBronzeCard) card).getSpecialCompileText());
-                        s.append(" NL ");
+                if (card instanceof AbstractBronzeCard)
+                    if (card.rawDescription.contains(uiStrings.TEXT[1]) && ((AbstractBronzeCard) card).doSpecialCompileStuff) {
+                        String x = ((AbstractBronzeCard) card).getSpecialCompileText();
+                        if (!x.equals("")) {
+                            s.append(((AbstractBronzeCard) card).getSpecialCompileText());
+                            s.append(" NL "); //?
+                        }
                     }
-                }
             }
-        if (!flip) {
-            return "NORENDER";
-        }
         return s.toString();
     }
 

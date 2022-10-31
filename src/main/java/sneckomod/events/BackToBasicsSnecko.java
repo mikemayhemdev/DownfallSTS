@@ -19,9 +19,11 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import sneckomod.SneckoMod;
 import sneckomod.cards.Defend;
 import sneckomod.cards.Strike;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
+import sneckomod.cards.unknowns.UnknownClass;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -108,6 +110,7 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
             AbstractDungeon.effectList.add(new PurgeCardEffect(c));
             AbstractDungeon.player.masterDeck.removeCard(c);
             AbstractDungeon.gridSelectScreen.selectedCards.remove(c);
+            logMetricCardRemoval(ID, "Elegance", c);
         }
 
     }
@@ -117,20 +120,34 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
             case INTRO:
                 if (buttonPressed == 0) {
                     ArrayList<AbstractCard> list = new ArrayList<>();
+
                     for (AbstractCard c : CardLibrary.getAllCards()) {
-                        if (c instanceof AbstractUnknownCard)
-                            list.add(c);
+                        if (c instanceof AbstractUnknownCard) {
+                            if (c instanceof UnknownClass) {
+                                UnknownClass cU = (UnknownClass) c;
+                                if (SneckoMod.validColors.contains(cU.myColor)) {
+                                    list.add(c);
+                                }
+                            } else {
+                                list.add(c);
+                            }
+                        }
                     }
+                    ArrayList<String> cardsRemoved = new ArrayList<>();
+                    ArrayList<String> cardsAdded = new ArrayList<>();
 
                     for (AbstractCard c : cardsToRemove) {
                         Collections.shuffle(list);
                         AbstractCard cU = list.get(0);
+                        cardsAdded.add(cU.cardID);
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(cU.makeStatEquivalentCopy(), (Settings.WIDTH / 2F), (float) (Settings.HEIGHT / 2)));
                     }
 
                     for (AbstractCard c : cardsToRemove) {
                         AbstractDungeon.player.masterDeck.removeCard(c);
+                        cardsRemoved.add(c.cardID);
                     }
+                    logMetricTransformCards(ID, "Improvisation", cardsAdded, cardsRemoved);
 
                     this.imageEventText.updateBodyText(DESCRIPTIONSGUARDIAN[0]);
                     this.imageEventText.updateDialogOption(0, OPTIONS[3]);
@@ -159,25 +176,15 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
     }
 
     private void upgradeStrikeAndDefends() {
-        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
-
-        while (true) {
-            AbstractCard c;
-            do {
-                if (!var1.hasNext()) {
-                    return;
-                }
-
-                c = (AbstractCard) var1.next();
-            } while (!c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) && !c.hasTag(AbstractCard.CardTags.STARTER_DEFEND));
-
-            if (c.canUpgrade()) {
+        for (AbstractCard c: AbstractDungeon.player.masterDeck.group){
+            if (c.canUpgrade() && (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) ) {
                 c.upgrade();
                 this.cardsUpgraded.add(c.cardID);
                 AbstractDungeon.player.bottledCardUpgradeCheck(c);
                 AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH, MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT));
             }
         }
+        logMetricUpgradeCards(ID, "Simplicity", cardsUpgraded);
     }
 
     private enum CUR_SCREEN {

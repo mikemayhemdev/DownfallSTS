@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theHexaghost.HexaMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 import static theHexaghost.HexaMod.makeRelicOutlinePath;
 import static theHexaghost.HexaMod.makeRelicPath;
@@ -36,7 +36,8 @@ public class RecyclingMachine extends CustomRelic {
 
     @Override
     public void onExhaust(AbstractCard card) {
-        if (card.isEthereal &&!activated) {
+        if (card.isEthereal && card.type != AbstractCard.CardType.STATUS &&
+                card.type != AbstractCard.CardType.CURSE && !activated) {
             flash();
             activated = true;
             stopPulse();

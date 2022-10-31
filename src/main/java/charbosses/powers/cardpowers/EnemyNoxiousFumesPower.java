@@ -27,7 +27,7 @@ public class EnemyNoxiousFumesPower extends AbstractPower {
     }
 
     @Override
-    public void atStartOfTurn() {
+    public void atEndOfTurn(boolean isPlayer) {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {// 27
             this.flash();// 28
             addToBot(new ApplyPowerAction(AbstractDungeon.player, owner, new EnemyPoisonPower(AbstractDungeon.player, owner, amount), amount));

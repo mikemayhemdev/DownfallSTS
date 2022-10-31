@@ -15,7 +15,10 @@ public class CharbossDoCardQueueAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        AbstractCharBoss.boss.useCard(c, AbstractCharBoss.boss, c.energyOnUse);
+        if (AbstractCharBoss.boss != null) {
+            AbstractCharBoss.boss.useCard(c, AbstractCharBoss.boss, c.energyOnUse);
+        }
+
         this.isDone = true;
     }
 

@@ -15,7 +15,11 @@
     "NAME": "Float",
     "DESCRIPTION": "Ethereal. NL Draw a card. NL hexamod:Advance.",
     "UPGRADE_DESCRIPTION": "Ethereal. NL Draw a card. NL You may choose to NL hexamod:Retract or hexamod:Advance.",
-    "EXTENDED_DESCRIPTION": ["hexamod:Advance.","hexamod:Retract.", "Do nothing."]
+    "EXTENDED_DESCRIPTION": [
+      "hexamod:Advance.",
+      "hexamod:Retract.",
+      "Do nothing."
+    ]
   },
   "hexamod:AdvancingGuard": {
     "NAME": "Advancing Guard",
@@ -27,8 +31,8 @@
   },
   "hexamod:FastForward": {
     "NAME": "Fast Forward",
-    "DESCRIPTION": "Ethereal. NL hexamod:Force-Ignite the hexamod:Active Ghostflame. NL hexamod:Advance.",
-    "UPGRADE_DESCRIPTION": "hexamod:Force-Ignite the hexamod:Active Ghostflame. NL hexamod:Advance."
+    "DESCRIPTION": "Ethereal. NL hexamod:Ignite the hexamod:Active Ghostflame. NL hexamod:Advance.",
+    "UPGRADE_DESCRIPTION": "hexamod:Ignite the hexamod:Active Ghostflame. NL hexamod:Advance."
   },
   "hexamod:Rewind": {
     "NAME": "Rewind",
@@ -37,12 +41,12 @@
   },
   "hexamod:SkipABeat": {
     "NAME": "Skip a Beat",
-    "DESCRIPTION": "hexamod:Advance. NL hexamod:Force-Ignite the next Ghostflame. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "hexamod:Advance. NL hexamod:Force-Ignite the next Ghostflame."
+    "DESCRIPTION": "hexamod:Advance. NL hexamod:Ignite the next Ghostflame. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "hexamod:Advance. NL hexamod:Ignite the next Ghostflame."
   },
   "hexamod:CatchUp": {
     "NAME": "Catch Up",
-    "DESCRIPTION": "hexamod:Force-Ignite the previous Ghostflame."
+    "DESCRIPTION": "hexamod:Ignite the previous Ghostflame."
   },
   "hexamod:TimeWarp": {
     "NAME": "Time Warp",
@@ -59,7 +63,7 @@
   },
   "hexamod:UnlimitedPower": {
     "NAME": "Unlimited Power",
-    "DESCRIPTION": "hexamod:Force-Ignite all Ghostflames in order. NL Exhaust."
+    "DESCRIPTION": "hexamod:Ignite all Ghostflames in order. NL Exhaust."
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "Devil's Dance",
@@ -78,8 +82,11 @@
   },
   "hexamod:HauntingEcho": {
     "NAME": "Haunting Echo",
-    "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is hexamod:Ignited, hexamod:Force-Ignite it.",
-    "EXTENDED_DESCRIPTION": ["Ethereal","Ethereal. NL "]
+    "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is hexamod:Ignited, hexamod:Ignite it.",
+    "EXTENDED_DESCRIPTION": [
+      "Ethereal",
+      "Ethereal. NL "
+    ]
   },
   "hexamod:CrushingStance": {
     "NAME": "Crush",
@@ -91,15 +98,15 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Worthy Sacrifice",
-    "DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand.",
-    "UPGRADE_DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand. NL It costs 1 less.",
+    "DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Gain a random card of the opposite type.",
+    "UPGRADE_DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Gain a random card of the opposite type. It costs 1 less.",
     "EXTENDED_DESCRIPTION": [
       "to Exhaust for Necessary Sacrifice."
     ]
   },
   "hexamod:TimeOfNeed": {
     "NAME": "Time of Need",
-    "DESCRIPTION": "Retain. NL Add a random Power card into your hand. NL It costs 0 until played. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain a random Power card. It costs 0 until played. NL Exhaust."
   },
   "hexamod:SwordOfDarkness": {
     "NAME": "Sword of Night",
@@ -143,14 +150,16 @@
   },
   "hexamod:Haunt": {
     "NAME": "Haunted Hand",
-    "DESCRIPTION": "Ethereal. NL Draw !M! cards. NL All cards in your hand become Ethereal. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Draw !M! cards. NL All cards in your hand become Ethereal."
   },
   "hexamod:RecurringNightmare": {
     "NAME": "Nightmare Vision",
     "DESCRIPTION": "Put an Ethereal card from your exhaust pile into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Put an Ethereal card from your exhaust pile into your hand.",
     "EXTENDED_DESCRIPTION": [
-      "Choose an Ethereal card to return to your hand."
+      "Choose an Ethereal card to return to your hand.",
+      "Choose ",
+      " Ethereal cards to return to your hand."
     ]
   },
   "hexamod:GiftsFromTheDead": {
@@ -164,7 +173,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "Eerie Expedition",
-    "DESCRIPTION": "Ethereal. NL Add a random Ethereal card into your hand. NL It costs 0 this turn. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Gain a random Ethereal card. It costs 0 this turn. NL Exhaust."
   },
   "hexamod:PhantomCloak": {
     "NAME": "Phantom Cloak",
@@ -200,7 +209,9 @@
     "NAME": "Power from Beyond",
     "DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Gain [E] and draw !M! card next turn.",
     "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Gain [E] and draw !M! cards next turn.",
-    "EXTENDED_DESCRIPTION": ["This power is too distant to directly channel."]
+    "EXTENDED_DESCRIPTION": [
+      "This power is too distant to directly channel."
+    ]
   },
   "hexamod:BurningTouch": {
     "NAME": "Burning Touch",
@@ -277,7 +288,9 @@
   "hexamod:FlamesFromBeyond": {
     "NAME": "Flames from Beyond",
     "DESCRIPTION": "Unplayable. NL Ethereal, hexamod:Afterlife. NL Apply !burny! hexamod:Soulburn to ALL enemies at the start of your next turn.",
-    "EXTENDED_DESCRIPTION": ["It's too hot to touch!"]
+    "EXTENDED_DESCRIPTION": [
+      "It's too hot to touch!"
+    ]
   },
   "hexamod:PhantomFireball": {
     "NAME": "Phantom Fireball",
@@ -316,7 +329,7 @@
   },
   "hexamod:Again": {
     "NAME": "Again!",
-    "DESCRIPTION": "hexamod:Force-Ignite the hexamod:Active Ghostflame. NL Do not hexamod:Advance at the end of this turn."
+    "DESCRIPTION": "hexamod:Ignite the hexamod:Active Ghostflame. NL Do not hexamod:Advance at the end of this turn."
   },
   "hexamod:RetreatToShadows": {
     "NAME": "Incorporeal",

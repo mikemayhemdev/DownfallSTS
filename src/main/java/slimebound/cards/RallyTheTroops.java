@@ -36,7 +36,6 @@ public class RallyTheTroops extends AbstractSlimeboundCard {
     public RallyTheTroops() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         baseDamage = 7;
-        exhaust = true;
         this.baseMagicNumber = this.magicNumber = 2;
     }
 

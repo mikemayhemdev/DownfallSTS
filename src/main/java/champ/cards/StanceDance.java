@@ -1,15 +1,24 @@
 package champ.cards;
 
 import champ.ChampMod;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import champ.stances.BerserkerStance;
+import champ.stances.DefensiveStance;
+import champ.stances.UltimateStance;
+import champ.vfx.StanceDanceEffect;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
-import theHexaghost.HexaMod;
 
 import java.util.ArrayList;
+
+import static champ.ChampMod.loadJokeCardImage;
 
 public class StanceDance extends AbstractChampCard implements OctopusCard {
 
@@ -20,37 +29,62 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
     public StanceDance() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         tags.add(ChampMod.OPENER);
+        loadJokeCardImage(this, "StanceDance.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) techique();
+
+        //if (upgraded) techique();
         atb(new OctoChoiceAction(m, this));
+        postInit();
+
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
         cardList.add(new OctoChoiceCard("octo:OctoBerserk", this.name, ChampMod.makeCardPath("OctoStanceBerserker.png"), this.EXTENDED_DESCRIPTION[0]));
         cardList.add(new OctoChoiceCard("octo:OctoDefense", this.name, ChampMod.makeCardPath("OctoStanceDefensive.png"), this.EXTENDED_DESCRIPTION[1]));
-        cardList.add(new OctoChoiceCard("octo:OctoGladiat", this.name, ChampMod.makeCardPath("OctoStanceGladiator.png"), this.EXTENDED_DESCRIPTION[2]));
         return cardList;
     }
 
     public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
         switch (card.cardID) {
             case "octo:OctoBerserk":
-                berserkOpen();
+                if (upgraded || AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)|| AbstractDungeon.player.stance.ID.equals(champ.stances.UltimateStance.STANCE_ID)) {
+                    ArrayList<AbstractCard> rCardList = new ArrayList<AbstractCard>();
+                    for (AbstractCard t : CardLibrary.getAllCards()) {
+                        if (!UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.COMBOBERSERKER) &&!t.hasTag(CardTags.HEALING))
+                            rCardList.add(t);
+                    }
+                    AbstractCard r = rCardList.get(AbstractDungeon.cardRandomRng.random(rCardList.size() - 1));
+                    UnlockTracker.markCardAsSeen(r.cardID);
+                    makeInHand(r);
+                }
+                ChampMod.berserkOpen();
+
                 break;
             case "octo:OctoDefense":
-                defenseOpen();
-                break;
-            case "octo:OctoGladiat":
-                gladOpen();
+                if (upgraded || AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)) {
+                    ArrayList<AbstractCard> rCardList = new ArrayList<AbstractCard>();
+                    for (AbstractCard t : CardLibrary.getAllCards()) {
+                        if (!UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.COMBODEFENSIVE) &&!t.hasTag(CardTags.HEALING))
+                            rCardList.add(t);
+                    }
+                    AbstractCard r = rCardList.get(AbstractDungeon.cardRandomRng.random(rCardList.size() - 1));
+                    UnlockTracker.markCardAsSeen(r.cardID);
+                    makeInHand(r);
+                }
+                ChampMod.defenseOpen();
                 break;
         }
+
+        AbstractDungeon.player.useJumpAnimation();
+        atb(new VFXAction(new StanceDanceEffect(AbstractDungeon.player, false, true, false), 0.7F));
+
     }
 
     public void upp() {
-        tags.add(ChampMod.TECHNIQUE);
+        rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }
 }

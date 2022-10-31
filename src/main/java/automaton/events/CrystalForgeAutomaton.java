@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package automaton.events;
 
 import automaton.AutomatonMod;
@@ -98,20 +93,27 @@ public class CrystalForgeAutomaton extends AbstractImageEvent {
         super.update();
         if (pickCardForTransmute && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
 
-            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(SpaghettiCode.getRandomEncode().makeStatEquivalentCopy(), (float) (Settings.WIDTH * .3), (float) (Settings.HEIGHT / 2)));
+            AbstractCard cardGained = SpaghettiCode.getRandomEncode().makeStatEquivalentCopy();
+            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(cardGained, (float) (Settings.WIDTH * .3), (float) (Settings.HEIGHT / 2)));
 
-            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(AbstractDungeon.gridSelectScreen.selectedCards.get(0), (float) (Settings.WIDTH * .7), (float) (Settings.HEIGHT / 2)));
-            AbstractDungeon.player.masterDeck.removeCard(AbstractDungeon.gridSelectScreen.selectedCards.get(0));
+            AbstractCard cardLost = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(cardLost, (float) (Settings.WIDTH * .7), (float) (Settings.HEIGHT / 2)));
+            AbstractDungeon.player.masterDeck.removeCard(cardLost);
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+            logMetricObtainCardAndLoseCard(ID, "Transmute", cardGained, cardLost);
 
         } else if (pickCardForHP && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
 
-            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(AbstractDungeon.gridSelectScreen.selectedCards.get(0), (float) (Settings.WIDTH * .7), (float) (Settings.HEIGHT / 2)));
-            AbstractDungeon.player.masterDeck.removeCard(AbstractDungeon.gridSelectScreen.selectedCards.get(0));
+            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, (float) (Settings.WIDTH * .7), (float) (Settings.HEIGHT / 2)));
+            AbstractDungeon.player.masterDeck.removeCard(c);
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
-            AbstractDungeon.player.increaseMaxHp(10, true);
+            int maxHpUp = 10;
+            AbstractDungeon.player.increaseMaxHp(maxHpUp, true);
+            logMetricCardRemovalHealMaxHPUp(ID, "Reforge", c, AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth, maxHpUp);
+
             AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
 
         }
@@ -128,11 +130,13 @@ public class CrystalForgeAutomaton extends AbstractImageEvent {
                         this.screenNum = 2;
                         //this.pickCardForSalvageGems = true;
                         this.imageEventText.updateBodyText(COMBINE);
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), new BottledCode());
+                        BottledCode relic = new BottledCode();
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), relic);
 
                         AbstractDungeon.player.decreaseMaxHealth(10);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[4]);
+                        logMetricObtainRelicAndLoseMaxHP(ID, "Craft", relic, 10);
                         break;
                     case 1:
                         this.screenNum = 2;
@@ -148,7 +152,7 @@ public class CrystalForgeAutomaton extends AbstractImageEvent {
                         this.screenNum = 2;
                         this.pickCardForTransmute = true;
                         this.imageEventText.updateBodyText(TRANSMUTE);
-                        AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, DESCRIPTIONS[5], false, true, false, false);
+                        AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, DESCRIPTIONS[5], false, false, false, false);
 
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[4]);
@@ -159,6 +163,7 @@ public class CrystalForgeAutomaton extends AbstractImageEvent {
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.updateBodyText(LEAVE);
                         this.imageEventText.setDialogOption(OPTIONS[4]);
+                        logMetricIgnored(ID);
 
                         break;
                 }

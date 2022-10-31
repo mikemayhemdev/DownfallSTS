@@ -37,13 +37,13 @@ public class LadyInBlue extends AbstractMonster {
 
         switch (AbstractDungeon.actNum) {
             case 1:
-                setHp(125);
-                break;
-            case 2:
                 setHp(150);
                 break;
+            case 2:
+                setHp(200);
+                break;
             case 3:
-                setHp(175);
+                setHp(250);
                 break;
         }
 

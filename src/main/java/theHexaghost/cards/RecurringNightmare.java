@@ -2,6 +2,8 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
+import downfall.util.CardIgnore;
 import theHexaghost.actions.RecurringNightmareAction;
 
 public class RecurringNightmare extends AbstractHexaCard {
@@ -14,7 +16,8 @@ public class RecurringNightmare extends AbstractHexaCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
         baseMagicNumber = magicNumber = 1;
-        tags.add(CardTags.HEALING);
+//         tags.add(CardTags.HEALING);
+        HexaMod.loadJokeCardImage(this, "RecurringNightmare.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

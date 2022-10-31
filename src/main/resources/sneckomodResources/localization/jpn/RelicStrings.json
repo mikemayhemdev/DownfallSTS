@@ -10,8 +10,7 @@
     "NAME": "Super Snecko Soul",
     "FLAVOR": "3120231321230320",
     "DESCRIPTIONS": [
-      "Replaces ",
-      ".[] NL Upon pickup, increase your Max HP by #b2 for each #ysneckomod:Unknown card in your deck."
+      "Replaces [#407B93]Snecko Soul[]. NL Upon pickup, increase your Max HP by #b2 for each #ysneckomod:Unknown card in your deck."
     ]
   },
   "sneckomod:CleanMud": {

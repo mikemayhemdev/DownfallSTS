@@ -19,7 +19,7 @@ public class OpenerModBerserker extends AbstractCardModifier {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return CardCrawlGame.languagePack.getUIString(ChampMod.makeID("OpenerMod")).TEXT[0] + rawDescription;
+        return rawDescription + CardCrawlGame.languagePack.getUIString(ChampMod.makeID("OpenerMod")).TEXT[0];
     }
 
     @Override
@@ -31,7 +31,7 @@ public class OpenerModBerserker extends AbstractCardModifier {
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        SlimeboundMod.logger.info("Switching to Berserker (CardMod)");
+        //SlimeboundMod.logger.info("Switching to Berserker (CardMod)");
         if (!(AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)))
             AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(BerserkerStance.STANCE_ID));
         for (AbstractRelic r : AbstractDungeon.player.relics) {

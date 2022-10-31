@@ -39,7 +39,7 @@ public class Prepare extends AbstractSlimeboundCard {
     public Prepare() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        this.baseBlock = 8;
+        this.baseBlock = 10;
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 2;
     }
@@ -48,7 +48,7 @@ public class Prepare extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedSlimeboundPower(p, p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedSlimeboundPower(p, p, 1), 1));
         // if (upgraded) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RetainCardsOneTurnPower(p,2),2));
 
     }
@@ -60,7 +60,7 @@ public class Prepare extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.upgradeBlock(3);
+            this.upgradeBlock(5);
         }
     }
 }

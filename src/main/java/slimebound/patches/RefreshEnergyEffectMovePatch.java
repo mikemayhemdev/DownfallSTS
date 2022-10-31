@@ -14,7 +14,7 @@ public class RefreshEnergyEffectMovePatch {
 
     @SpirePostfixPatch
     public static void Postfix(RefreshEnergyEffect obj) {
-        // SlimeboundMod.logger.info("Energy panel VFX move patch hit.");
+        // //SlimeboundMod.logger.info("Energy panel VFX move patch hit.");
         if (AbstractDungeon.player != null) {
 
             if (AbstractDungeon.player instanceof SlimeboundCharacter) {
@@ -22,10 +22,10 @@ public class RefreshEnergyEffectMovePatch {
                 TextureAtlas.AtlasRegion image = (TextureAtlas.AtlasRegion) ReflectionHacks.getPrivate(obj, RefreshEnergyEffect.class, "img");
                 ReflectionHacks.setPrivate(obj, RefreshEnergyEffect.class, "y", 130F * Settings.scale - (float) image.packedHeight / 2.0F);
 
-                //    SlimeboundMod.logger.info("Energy panel VFX move patch success");
+                //    //SlimeboundMod.logger.info("Energy panel VFX move patch success");
             }
         } else {
-            // SlimeboundMod.logger.info("Energy panel move VFX patch: no character");
+            // //SlimeboundMod.logger.info("Energy panel move VFX patch: no character");
         }
 
     }

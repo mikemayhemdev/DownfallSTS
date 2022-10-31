@@ -38,7 +38,7 @@ public class HealthBarRenderBackPatch {
 
             float w = (1.0F - ((__instance.maxHealth - amt) / (float) __instance.maxHealth)) * __instance.hb.width;
             x = __instance.hb.cX + __instance.hb.width / 2F - w;
-            //SlimeboundMod.logger.info("Health render: " + amt + " " + HEALTH_BAR_HEIGHT + " " + x + " " + (x + w) + " " + w);
+            ////SlimeboundMod.logger.info("Health render: " + amt + " " + HEALTH_BAR_HEIGHT + " " + x + " " + (x + w) + " " + w);
 
 
 

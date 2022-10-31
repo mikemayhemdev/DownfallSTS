@@ -16,7 +16,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
-import downfall.downfallMod;
 
 import java.util.ArrayList;
 
@@ -31,6 +30,8 @@ public class EnThunderclap extends AbstractBossCard {
     public EnThunderclap() {
         super(ID, cardStrings.NAME, "red/attack/thunder_clap", 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ALL_ENEMY, AbstractMonster.Intent.ATTACK_DEBUFF);
         this.baseDamage = 4;
+        baseMagicNumber = magicNumber = 1;
+        artifactConsumedIfPlayed = 1;
     }
 
     @Override
@@ -38,9 +39,9 @@ public class EnThunderclap extends AbstractBossCard {
         this.addToBot(new VFXAction(new LightningEffect(p.drawX, p.drawY), 0.05F));
 
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.LIGHTNING));
-        this.addToBot(new ApplyPowerAction(p, m, new VulnerablePower(p, this.magicNumber, false), this.magicNumber));
-        if (!p.hasPower(ArtifactPower.POWER_ID)){
-            if (AbstractCharBoss.boss.hasRelic(CBR_ChampionsBelt.ID)){
+        this.addToBot(new ApplyPowerAction(p, m, new VulnerablePower(p, this.magicNumber, true), this.magicNumber));
+        if (!p.hasPower(ArtifactPower.POWER_ID)) {
+            if (AbstractCharBoss.boss.hasRelic(CBR_ChampionsBelt.ID)) {
                 AbstractCharBoss.boss.getRelic(CBR_ChampionsBelt.ID).onTrigger();
             }
         }

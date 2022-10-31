@@ -4,7 +4,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import downfall.util.CardIgnore;
 
+@CardIgnore
 public class PhantomCloak extends AbstractHexaCard {
 
     public final static String ID = makeID("PhantomCloak");

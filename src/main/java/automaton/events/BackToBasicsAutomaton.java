@@ -111,6 +111,7 @@ public class BackToBasicsAutomaton extends AbstractImageEvent {
             AbstractDungeon.effectList.add(new PurgeCardEffect(c));
             AbstractDungeon.player.masterDeck.removeCard(c);
             AbstractDungeon.gridSelectScreen.selectedCards.remove(c);
+            logMetricCardRemoval(ID, "Elegance", c);
         }
 
     }
@@ -119,10 +120,12 @@ public class BackToBasicsAutomaton extends AbstractImageEvent {
         switch (this.screen) {
             case INTRO:
                 if (buttonPressed == 0) {
-
+                    ArrayList<String> cardsEncoded = new ArrayList<>();
                     for (AbstractCard c : cardsToRemove){
                         CardModifierManager.addModifier(c, new EncodeMod());
-                   }
+                        cardsEncoded.add(c.cardID);
+                    }
+                    logMetricUpgradeCards(ID, "Unification", cardsEncoded);
 
                     this.imageEventText.updateBodyText(DESCRIPTIONSGUARDIAN[0]);
                     this.imageEventText.updateDialogOption(0, OPTIONS[3]);
@@ -151,27 +154,16 @@ public class BackToBasicsAutomaton extends AbstractImageEvent {
     }
 
     private void upgradeStrikeAndDefends() {
-        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
-
-        while (true) {
-            AbstractCard c;
-            do {
-                if (!var1.hasNext()) {
-                    return;
-                }
-
-                c = (AbstractCard) var1.next();
-            } while (!(c instanceof Strike_Red) && !(c instanceof Defend_Red) && !(c instanceof Strike_Green) && !(c instanceof Defend_Green) && !(c instanceof Strike_Blue) && !(c instanceof Defend_Blue) && !(c instanceof Strike) && !(c instanceof Defend));
-
-            if (c.canUpgrade()) {
+        for (AbstractCard c: AbstractDungeon.player.masterDeck.group){
+            if (c.canUpgrade() && (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) ) {
                 c.upgrade();
                 this.cardsUpgraded.add(c.cardID);
                 AbstractDungeon.player.bottledCardUpgradeCheck(c);
                 AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH, MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT));
             }
         }
+        logMetricUpgradeCards(ID, "Simplicity", cardsUpgraded);
     }
-
     private enum CUR_SCREEN {
         INTRO,
         COMPLETE;

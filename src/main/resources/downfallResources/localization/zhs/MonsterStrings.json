@@ -42,7 +42,7 @@
     "DIALOG": [
       "~喂，~ 你根本没有钱！",
       "@不——！@",
-      "你今天必须死，蠢货。"
+      "你今天必死，蠢货。"
     ]
   },
   "downfall:MuggerAlt": {
@@ -51,7 +51,35 @@
     "NAME": "打劫的",
     "DIALOG": [
       "给它点教训。",
-      "一辈子都忘不了的教训！"
+      "下辈子都忘不了的教训！"
+    ]
+  },
+  "downfall:Fortification": {
+    "MOVES": [
+    ],
+    "NAME": "要塞",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomRed": {
+    "MOVES": [
+    ],
+    "NAME": "牛肝蕈",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomPurple": {
+    "MOVES": [
+    ],
+    "NAME": "红汁乳菇",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomWhite": {
+    "MOVES": [
+    ],
+    "NAME": "尘菌",
+    "DIALOG": [
     ]
   }
 }

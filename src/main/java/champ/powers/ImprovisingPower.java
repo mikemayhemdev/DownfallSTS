@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.patches.NoDiscardField;
 import theHexaghost.HexaMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class ImprovisingPower extends AbstractPower implements CloneablePowerInterface {
 
@@ -55,9 +55,6 @@ public class ImprovisingPower extends AbstractPower implements CloneablePowerInt
             boolean returnCard = false;
             if (card.hasTag(ChampMod.COMBO) && timesUsed < amount) {
                 if (card.hasTag(ChampMod.COMBOBERSERKER)) {
-                    returnCard = true;
-                }
-                if (card.hasTag(ChampMod.COMBOGLADIATOR)) {
                     returnCard = true;
                 }
                 if (card.hasTag(ChampMod.COMBODEFENSIVE)) {

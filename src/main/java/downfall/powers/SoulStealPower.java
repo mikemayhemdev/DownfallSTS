@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.downfallMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class SoulStealPower extends AbstractPower implements CloneablePowerInterface {
 

@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -20,7 +21,7 @@ import slimebound.vfx.LickEffect;
 import slimebound.vfx.SlimeDripsEffect;
 
 
-public class RejuvenatingLick extends AbstractSlimeboundCard {
+public class RejuvenatingLick extends AbstractLickCard {
     public static final String ID = "Slimebound:RejuvenatingLick";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -47,12 +48,12 @@ public class RejuvenatingLick extends AbstractSlimeboundCard {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.LICK);
-        tags.add(CardTags.HEALING);
+//         tags.add(CardTags.HEALING);
 
 
         this.slimed = this.baseSlimed = 4;
         this.exhaust = true;
-        this.magicNumber = this.baseMagicNumber = 2;
+        //this.magicNumber = this.baseMagicNumber = 2;
 
 
     }
@@ -76,12 +77,18 @@ public class RejuvenatingLick extends AbstractSlimeboundCard {
         */
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.slimed), this.slimed, true, AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new LickEffect(m.hb.cX, m.hb.cY, 0.6F, new Color(Color.PURPLE)), 0.4F));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.slimed), this.slimed, true, AbstractGameAction.AttackEffect.NONE));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new LickEffect(m.hb.cX, m.hb.cY, 0.6F, new Color(Color.PURPLE)), 0.1F));
 
-        AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player, AbstractDungeon.player, this.magicNumber));
 
-        if (upgraded) addToBot(new DrawCardAction(1));
+        if (upgraded)upgradeAction(p,m);
 
+    }
+
+
+    public void upgradeAction(AbstractPlayer p, AbstractMonster m){
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
     }
 
     public AbstractCard makeCopy() {

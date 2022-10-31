@@ -1,0 +1,54 @@
+{
+  "HermitMod:HermitTutorials": {
+    "TEXT": [
+      "Hermit is capable of using #yDead #yOn cards. NL NL #yDead #yOn cards trigger their special effect when positioned in the middle of your hand.",
+      "In even hands, #yboth of the middle cards count, even if these are the only cards in your hand."
+    ],
+    "LABEL": [
+      "Next",
+      "Got it",
+      "Dead On",
+      "(Page: ",
+      ")"
+    ]
+  },
+  "HermitMod:GuardianTutorials": {
+    "TEXT": [
+      "The Guardian can Curl Up after gaining a certain amount of Brace.",
+      "He can also stash Gems in cards to augment their effects."
+    ],
+    "LABEL": [
+      "Next",
+      "Got it",
+      "The Guardian",
+      "(Page: ",
+      ")"
+    ]
+  },
+  "HermitMod:HexaghostTutorials": {
+    "TEXT": [
+      "The Hexaghost channels power by Charging its Flames.",
+      "Perform a certain action while each is Active to Charge it."
+    ],
+    "LABEL": [
+      "Next",
+      "Got it",
+      "The Hexaghost",
+      "(Page: ",
+      ")"
+    ]
+  },
+  "HermitMod:CharbossTutorials": {
+    "TEXT": [
+      "The enemy Heroes have powerful abilities that may require you to alter your strategies.",
+      "Be sure to always check a hero's buffs before engaging."
+    ],
+    "LABEL": [
+      "Next",
+      "Got it",
+      "Spire Slayers",
+      "(Page: ",
+      ")"
+    ]
+  }
+}

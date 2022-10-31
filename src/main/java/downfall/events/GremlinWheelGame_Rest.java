@@ -255,7 +255,7 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        SlimeboundMod.logger.info(this.screen);
+        //SlimeboundMod.logger.info(this.screen);
 
         switch (this.screen) {
             case INTRO:
@@ -322,24 +322,24 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
         switch (this.result) {
             case 0:
                 this.hasFocus = false;
-                logMetricGainGold("Wheel of Change", "Gold", this.goldAmount);
+                logMetricGainGold(ID, "Gold", this.goldAmount);
                 break;
             case 1:
                 AbstractDungeon.getCurrRoom().rewards.clear();
                 AbstractRelic r = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());
                 AbstractDungeon.getCurrRoom().addRelicToRewards(r);
                 AbstractDungeon.combatRewardScreen.open();
-                logMetric("Wheel of Change", "Relic");
+                logMetric(ID, "Relic");
                 this.hasFocus = false;
                 break;
             case 2:
-                logMetricHeal("Wheel of Change", "Full Heal", AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth);
+                logMetricHeal(ID, "Full Heal", AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth);
                 AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
                 this.hasFocus = false;
                 break;
             case 3:
                 AbstractCard curse = new Decay();
-                logMetricObtainCard("Wheel of Change", "Cursed", curse);
+                logMetricObtainCard(ID, "Cursed", curse);
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                 this.hasFocus = false;
                 break;
@@ -356,7 +356,7 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
                 CardCrawlGame.sound.play("BLOOD_SPLAT");
                 int damageAmount = (int) ((float) AbstractDungeon.player.maxHealth * this.hpLossPercent);
                 AbstractDungeon.player.damage(new DamageInfo(null, damageAmount, DamageType.HP_LOSS));
-                logMetricTakeDamage("Wheel of Change", "Damaged", damageAmount);
+                logMetricTakeDamage(ID, "Damaged", damageAmount);
         }
 
     }
@@ -364,7 +364,7 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
     private void purgeLogic() {
         if (this.purgeResult && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-            logMetricCardRemoval("Wheel of Change", "Card Removal", c);
+            logMetricCardRemoval(ID, "Card Removal", c);
             AbstractDungeon.player.masterDeck.removeCard(c);
             AbstractDungeon.effectList.add(new PurgeCardEffect(c));
             AbstractDungeon.gridSelectScreen.selectedCards.clear();

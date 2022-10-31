@@ -1,57 +1,54 @@
 package champ.cards;
 
-import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ReduceCostForTurnAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
+
+import java.util.ArrayList;
 
 public class RapidStrikes extends AbstractChampCard {
 
     public final static String ID = makeID("RapidStrikes");
 
-    //stupid intellij stuff attack, enemy, uncommon
-
-    private static final int DAMAGE = 3;
+    private static final int DAMAGE = 4;
 
     public RapidStrikes() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
-       // tags.add(ChampMod.FINISHER);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        baseMagicNumber = magicNumber = 2;
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         //finisher();
-        int x = AbstractDungeon.cardRandomRng.random(0, 2);
-        int q = ChampMod.techniquesThisTurn + 2;
-        if (upgraded) q += 1;
-        for (int i = 0; i < q; i++) {
-            AbstractGameAction.AttackEffect r = null;
-            switch (x) {
-                case 0:
-                    r = AbstractGameAction.AttackEffect.SLASH_DIAGONAL;
-                    break;
-                case 1:
-                    r = AbstractGameAction.AttackEffect.SLASH_HORIZONTAL;
-                    break;
-                case 2:
-                    r = AbstractGameAction.AttackEffect.SLASH_VERTICAL;
-                    break;
+            dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
+
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                ArrayList<AbstractCard> strikeList = new ArrayList<>();
+                for (AbstractCard q : AbstractDungeon.player.hand.group) {
+                    if (q.hasTag(CardTags.STRIKE) && q.costForTurn > 0 && !q.freeToPlayOnce) {
+                        strikeList.add(q);
+                    }
+                }
+                if (!strikeList.isEmpty()) {
+                    addToTop(new ReduceCostForTurnAction(strikeList.get(AbstractDungeon.cardRandomRng.random(strikeList.size() - 1)), 9));
+                }
             }
-            dmg(m, r);
-        }
-       // finisher();
+        });
     }
 
     public void applyPowers() {
         super.applyPowers();
 
-        this.rawDescription = upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION;
-        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0] + String.valueOf(ChampMod.techniquesThisTurn + 2 + (upgraded ? 1 : 0));
-        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[2];
+        this.rawDescription = cardStrings.DESCRIPTION;
 
         this.initializeDescription();
     }
@@ -62,7 +59,6 @@ public class RapidStrikes extends AbstractChampCard {
     }
 
     public void upp() {
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeDamage(2);
     }
 }

@@ -1,9 +1,12 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class InfiniteLoop extends AbstractBronzeCard {
 
@@ -22,6 +25,7 @@ public class InfiniteLoop extends AbstractBronzeCard {
         this.showCard = showCard;
         //if (showCard)
         //    cardsToPreview = new InfiniteLoop(false); //I had to.
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("InfiniteLoop.png"));
     }
 
     public InfiniteLoop() {
@@ -34,7 +38,7 @@ public class InfiniteLoop extends AbstractBronzeCard {
 
     @Override
     public String getSpecialCompileText() {
-        return " - Add a copy of #yInfinite #yLoop to your hand with #b" + magicNumber + " more damage.";  //TODO - Hardcoded string!
+        return masterUI.TEXT[4] + magicNumber + masterUI.TEXT[5];
     }
 
     @Override
@@ -47,6 +51,6 @@ public class InfiniteLoop extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 }

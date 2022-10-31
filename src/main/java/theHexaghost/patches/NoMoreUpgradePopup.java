@@ -1,3 +1,4 @@
+/*
 package theHexaghost.patches;
 
 import basemod.ReflectionHacks;
@@ -20,3 +21,4 @@ public class NoMoreUpgradePopup {
         return SpireReturn.Continue();
     }
 }
+ */

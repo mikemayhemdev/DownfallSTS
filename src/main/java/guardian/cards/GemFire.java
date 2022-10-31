@@ -22,7 +22,7 @@ public class GemFire extends AbstractGuardianCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardStrings cardStrings;
-    private static final int COST = 0;
+    private static final int COST = 2;
     private static final int DAMAGE = 10;
 
     //TUNING CONSTANTS
@@ -50,7 +50,6 @@ public class GemFire extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-        this.selfRetain = true;
         //this.sockets.add(GuardianMod.socketTypes.RED);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
@@ -68,11 +67,8 @@ public class GemFire extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-          //  upgradeDamage(UPGRADE_BONUS);
-            selfRetain = true;
-          //  exhaust = false;
-            rawDescription = UPGRADED_DESCRIPTION;
-            initializeDescription();
+
+            upgradeBaseCost(1);
         }
 
 

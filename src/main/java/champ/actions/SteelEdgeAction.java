@@ -43,10 +43,6 @@ public class SteelEdgeAction extends AbstractXAction {
             for (int i = 0; i < amount; i++) {
                 addToTop(new GainBlockAction(p, boom2));
             }
-        if (AbstractChampCard.gcombo()) {
-            addToTop(new GainEnergyAction(amount));
-            addToTop(new DrawCardAction(amount));
-        }
         isDone = true;
     }
 }

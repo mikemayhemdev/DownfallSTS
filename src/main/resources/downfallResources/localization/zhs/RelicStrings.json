@@ -3,15 +3,15 @@
     "NAME": "涅奥的祝福",
     "FLAVOR": "放下你的怒火。像尖塔一样坚韧不屈。",
     "DESCRIPTIONS": [
-      "替换初始遗物。拾起时，获得 #b100 最大生命，失去所有药水栏位且无法获得。每一阶段开始时获得 #b100 点最大生命。 NL 每回合开始时少抽 #b2 张牌并失去 ",
-	  " 。"
+      "替换初始遗物。拾起时，根据你的牌组获得额外最大生命值。失去所有药水栏位，每回合开始时少抽 #b2 张牌并失去 ",
+	  " 。 NL 战斗开始时获得特殊效果。"
     ]
   },
   "downfall:NeowBlessing_Player": {
     "NAME": "涅奥的祝福",
     "FLAVOR": "放下你的怒火。像尖塔一样坚韧不屈。",
     "DESCRIPTIONS": [
-      "拾起时，获得 #b100 最大生命，失去所有药水栏位且无法获得。每一阶段开始时获得 #b100 点最大生命。 NL 每回合开始时少抽 #b1 张牌并失去 [E] 。"
+      "拾起时，根据你的牌组获得额外最大生命值。失去所有药水栏位，每回合开始时少抽 #b2 张牌并失去 [E] 。 NL 战斗开始时获得特殊效果。"
     ]
   },
   "downfall:CoffeeDripper": {
@@ -380,9 +380,13 @@
     "FLAVOR": "You were no match for the Gremlin and his bodyguard.",
     "DESCRIPTIONS": [
       "拾起时，将下列牌加入你的牌组： ",
-      "一张初始牌",
-      "， 随机普通、罕见、稀有、罕见无色和诅咒牌各一张。",
-      "， 随机普通、罕见、稀有牌各一张还有两张诅咒牌。"
+      "拾起时，将#b6张对对碰牌加入你的牌组。",
+      "#g（初始牌） ",
+      "#g（普通牌） ",
+      "#b（罕见牌） ",
+      "#y（稀有牌） ",
+      "#b（无色牌） ",
+      "#r（诅咒牌） "
     ]
   },
   "downfall:GremlinWheel": {
@@ -411,7 +415,7 @@
     "NAME": "尖锐碎片",
     "FLAVOR": "曾经破碎的雕像 - 如今打造成了武器。",
     "DESCRIPTIONS": [
-      "每回合开始时，将一张水晶小刀加入你的手牌。"
+      "回合开始时，将一张 #y水晶小刀 加入手牌。"
     ]
   },
   "downfall:RedIOU": {
@@ -437,28 +441,28 @@
     "NAME": "全知头骨",
     "FLAVOR": "放我下来！",
     "DESCRIPTIONS": [
-      "每场战斗开始时，你能许愿灵魂，成功或者来点喝的。"
+      "战斗开始时，你能许愿灵魂，成功或者来点喝的。"
     ]
   },
   "downfall:HeartBlessingRed": {
     "NAME": "红宝石心脏的祝福",
     "FLAVOR": "腐化之心很强大。它很欣慰。",
     "DESCRIPTIONS": [
-      "每场战斗开始时获得 #b1 点 #y力量 。 NL 在深处boss战时，获得一张特别的牌。（祝福不重复给牌）"
+      "战斗开始时，获得 #b1 点 #y力量 。"
     ]
   },
   "downfall:HeartBlessingBlue": {
     "NAME": "蓝宝石心脏的祝福",
     "FLAVOR": "心脏很欣慰。",
     "DESCRIPTIONS": [
-      "拾起时，将你的最大生命值提升 #b10 。 NL 在深处boss战时，获得一张特别的牌。（祝福不重复给牌）"
+      "拾起时，获得 #b10 点最大生命值。"
     ]
   },
   "downfall:HeartBlessingGreen": {
     "NAME": "绿宝石心脏的祝福",
     "FLAVOR": "心脏就是一切。",
     "DESCRIPTIONS": [
-      "每场战斗开始时获得 #b1 点 #y敏捷 。 NL 在深处boss战时，获得一张特别的牌。（祝福不重复给牌）"
+      "战斗开始时，获得 #b1 点 #y敏捷 。"
     ]
   },
   "downfall:TeleportStone": {
@@ -478,25 +482,59 @@
       "这个遗物的效果已经耗尽。"
     ]
   },
+    "downfall:Hecktoplasm": {
+    "NAME": "幽魂外质",
+    "FLAVOR": "这团黏液似乎伴随着数百个灵魂的能量脉动。难怪没人想要。",
+    "DESCRIPTIONS": [
+      "回合开始时获得 [E] 。你不再能获得 #y灵魂 ，但打碎钥匙碎片将不消耗 #y灵魂 。"
+    ]
+  },
   "downfall:replacements": {
     "NAME": "",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "在商人，Boss以及精英战斗你的回合开始时，获得 [E] 。",
+      "在商人、首领以及精英战斗中，回合开始时获得 [E] 。",
       "诅咒金币",
       "没多少活人知道这枚古钱币的真正价值...",
       "MVB卡",
       "事实上，你是尖塔的MVB: 最有价值的首领。",
       "心脏的腐化四处蔓延 - 即使珍贵的宠物也不能幸免。",
       "腐化送货员",
-      "心脏的卡牌、遗物和药水不再会卖光，并且所有商品打折 #b20% 。"
+      "心脏的卡牌、遗物与药水不再会售罄，并且所有商品打折 #b20% 。",
+      "卡牌奖励将包含无色牌以及原版四色牌。",
+      "回合开始时获得 [E] 。你不再能获得 #y灵魂 ，但打碎钥匙碎片将不消耗 #y灵魂 。"
     ]
   },
-  "downfall:Hecktoplasm": {
-    "NAME": "Hecktoplasm",
-    "FLAVOR": "This blob of slime seems to pulse with the energy of hundreds of souls. No wonder no one wanted it.",
+  "downfall:LizardTail": {
+    "NAME": "真蜥蜴尾巴",
+    "FLAVOR": "在战斗中可以用来骗过敌人的假尾巴。",
     "DESCRIPTIONS": [
-      "You can no longer gain #ySouls. Breaking Keys costs no #ySouls. Gain [E] at the start of your turn."
+      "当你要被杀死时，免死并回复到最大生命值的 #b100% （仅能起效一次）。"
+    ]
+  },
+  "downfall:TestRelic": {
+    "NAME": "VFX Tester",
+    "FLAVOR": "When it index oobs, you did it.",
+    "DESCRIPTIONS": [
+      "#pRight #pClick: Play the next card."
+    ]
+  },
+  "downfall:ExtraCursedBell": {
+    "NAME": "召唤铃铛",
+    "FLAVOR": "这个黑铁铃铛在你找到它时作响了3次，但现在它已经不再响了。",
+    "DESCRIPTIONS": [
+      "拾起时，获得 #b2 张独特的 #r诅咒 与 #b3 件 #y遗物 。",
+      "铃铛再次鸣响……",
+      "跳过奖励",
+      "关闭"
+    ]
+  },
+  "downfall:ExtraCursedKey": {
+    "NAME": "诅咒钥匙",
+    "FLAVOR": "你能感到这把钥匙上散发出邪恶的能量。力量总是需要付出代价的。",
+    "DESCRIPTIONS": [
+      "回合开始时获得 [E] 。打开非首领宝箱时，获得 #b2 张 #r诅咒 。",
+      ""
     ]
   }
 }

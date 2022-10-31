@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.Settings;
@@ -17,6 +18,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
+import gremlin.actions.PseudoDamageRandomEnemyAction;
 import guardian.GuardianMod;
 
 public class PocketSentry extends CustomRelic {
@@ -28,7 +30,7 @@ public class PocketSentry extends CustomRelic {
 
     public PocketSentry() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.COMMON, LandingSound.FLAT);
+                RelicTier.UNCOMMON, LandingSound.FLAT);
         this.largeImg = ImageMaster.loadImage(GuardianMod.getResourcePath(LARGE_IMG_PATH));
     }
 
@@ -43,25 +45,37 @@ public class PocketSentry extends CustomRelic {
         this.flash();
         if (counter == 0) {
             counter = 1;
-            AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(null,true,AbstractDungeon.relicRng);
-            if(m != null){
-                AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
-                AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(this.hb.cX - (5F * Settings.scale), this.hb.cY + (10F * Settings.scale), m.hb.cX, m.hb.cY), 0.3F));
+            AbstractRelic r = this;
+            addToBot(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(null,true,AbstractDungeon.relicRng);
+                    if(m != null){
+                        AbstractDungeon.actionManager.addToTop(new PseudoDamageRandomEnemyAction(m, new DamageInfo(AbstractDungeon.player, DAMAGE, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+                        AbstractDungeon.actionManager.addToTop(new VFXAction(new SmallLaserEffect(r.hb.cX - (5F * Settings.scale), r.hb.cY + (10F * Settings.scale), m.hb.cX, m.hb.cY), 0.3F));
+                        AbstractDungeon.actionManager.addToTop(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
+                    }
+                }
+            });
 
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(AbstractDungeon.player, DAMAGE, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
-            }
 
         } else {
             counter = 0;
-
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new ShockWaveEffect(this.hb.cX, this.hb.cY, Color.ROYAL, ShockWaveEffect.ShockWaveType.ADDITIVE), 0.1F));
-            AbstractDungeon.actionManager.addToBottom(new SFXAction("THUNDERCLAP"));
-
-            for (AbstractMonster m2 : AbstractDungeon.getMonsters().monsters) {
-                if (!m2.isDead && !m2.isDying) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m2, AbstractDungeon.player, new WeakPower(m2, 1, false), 1));
+            AbstractRelic r = this;
+            addToBot(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    for (AbstractMonster m2 : AbstractDungeon.getMonsters().monsters) {
+                        if (!m2.isDead && !m2.isDying) {
+                            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(m2, AbstractDungeon.player, new WeakPower(m2, 1, false), 1));
+                        }
+                    }
+                    AbstractDungeon.actionManager.addToTop(new SFXAction("THUNDERCLAP"));
+                    AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new ShockWaveEffect(r.hb.cX, r.hb.cY, Color.ROYAL, ShockWaveEffect.ShockWaveType.ADDITIVE), 0.1F));
                 }
-            }
+            });
         }
     }
 

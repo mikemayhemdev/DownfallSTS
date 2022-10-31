@@ -19,22 +19,22 @@ public class ProtectorSlime
 
     public ProtectorSlime() {
 
-        super(ID, new Color(1.0F, 217F / 255F, 70F / 255F, 100F), atlasString, skeletonString, true, false, 2, 0, true, new Color(.63F, .58F, .41F, 1), SlimeFlareEffect.OrbFlareColor.BRONZE, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDefend.png"));
+        super(ID, new Color(1.0F, 217F / 255F, 70F / 255F, 100F), atlasString, skeletonString, true, false, 4, 4, true, new Color(.63F, .58F, .41F, 1), SlimeFlareEffect.OrbFlareColor.BRONZE, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDefend.png"));
         this.extraFontColor = Color.ROYAL;
-        this.debuffAmount = 6;
+        this.debuffAmount = 4;
         spawnVFX();
 
     }
 
 
     public void updateDescription() {
-        this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1] + (this.debuffAmount + this.debuffBonusAmount) + this.descriptions[2];
+        this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1] + (this.debuffAmount) + this.descriptions[2];
     }
 
 
     public void activateEffectUnique() {
 
-        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.SLASH_VERTICAL, this, false, false, false, 0, false, this.debuffAmount + this.debuffBonusAmount, false));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.SLASH_VERTICAL, this, false, false, false, debuffAmount, false, 0, false, false, false, false, false, true));
 
     }
 

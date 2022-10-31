@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import downfall.downfallMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class EndOfTurnStrengthDex extends AbstractPower {
     public static final String POWER_ID = downfallMod.makeID("NeowBuff");
@@ -38,14 +38,9 @@ public class EndOfTurnStrengthDex extends AbstractPower {
         this.canGoNegative = false;
     }
 
-
-
     @Override
     public void atEndOfRound() {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new DexterityPower(owner,amount), amount));
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, this));
-
         super.atEndOfRound();
     }
 

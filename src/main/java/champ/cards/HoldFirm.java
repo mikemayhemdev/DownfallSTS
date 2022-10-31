@@ -1,11 +1,12 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.stances.DefensiveStance;
-import champ.stances.GladiatorStance;
+import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;
+
+import static champ.ChampMod.loadJokeCardImage;
 
 public class HoldFirm extends AbstractChampCard {
 
@@ -13,29 +14,27 @@ public class HoldFirm extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, rare
 
-    private static final int BLOCK = 16;
-    private static final int UPG_BLOCK = 4;
+    private static final int BLOCK = 12;
+    private static final int UPG_BLOCK = 5;
 
     public HoldFirm() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseBlock = BLOCK;
-        magicNumber = baseMagicNumber = 1;
-        tags.add(ChampMod.TECHNIQUE);
+        magicNumber = baseMagicNumber = 12;
+       // tags.add(ChampMod.TECHNIQUE);
+        postInit();
+        loadJokeCardImage(this, "HoldFirm.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
+       // techique();
         blck();
-        applyToSelf(new BlurPower(p, magicNumber));
-    }
-
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = dcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        applyToSelf(new CounterPower(magicNumber));
+        applyToSelf(new BlurPower(p, 1));
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(4);
         upgradeBlock(UPG_BLOCK);
     }
 }

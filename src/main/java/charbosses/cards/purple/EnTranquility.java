@@ -19,8 +19,8 @@ public class EnTranquility extends AbstractBossCard {
 
     public EnTranquility() {
         super(ID, cardStrings.NAME, "purple/skill/tranquility", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.PURPLE, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
-        this.baseBlock = 8;
-        this.block = this.baseBlock;
+        this.exhaust = true;
+        this.selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

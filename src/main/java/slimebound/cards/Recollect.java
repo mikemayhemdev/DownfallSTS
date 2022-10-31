@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
+import slimebound.actions.ExhumeLickAction;
 import slimebound.actions.ReturnRandom0Cost;
 import slimebound.patches.AbstractCardEnum;
 
@@ -54,7 +55,7 @@ public class Recollect extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new ReturnRandom0Cost(this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ExhumeLickAction(this.magicNumber, false));
 
 
     }

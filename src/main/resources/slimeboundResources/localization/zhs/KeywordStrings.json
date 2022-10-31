@@ -4,104 +4,127 @@
       "吸收"
     ],
     "PROPERNAME": "吸收",
-    "DESCRIPTION": "融合一只生成的史莱姆，恢复 分裂 时减少的生命上限并获得1点 #y力量 。"
+    "DESCRIPTION": "融合最前面的的 #y史莱姆 并获得 #b1 点 #y力量 。"
   },
   {
     "NAMES": [
       "分裂"
     ],
     "PROPERNAME": "分裂",
-    "DESCRIPTION": "失去 #b4 点生命，生成一只 #y史莱姆 仆从，在回合开始时发动攻击。当它存活时，你的生命上限减少 #b4 点。 NL NL 如果你没有空栏位，最早生成的史莱姆将被自动 #y吸收 以腾出空间，并给予你 1 点 #y力量 。"
+    "DESCRIPTION": "在最前面生成每回合开始时攻击的 #y史莱姆 爪牙。如果栏位不足，融合最后面的 #y史莱姆 再 #y分裂 并获得 #b1 点 #y力量 。"
   },
   {
     "NAMES": [
-      "黏液"
+      "黏液",
+      "goop"
     ],
     "PROPERNAME": "黏液",
-    "DESCRIPTION": "每层 #y黏液 为下次攻击提供 1 点额外伤害，移除所有 #y黏液 并触发 #y消耗黏液 的效果。"
+    "DESCRIPTION": "每层 #y黏液 为下次攻击提供 #b1 点额外伤害，移除所有 #y黏液 并触发 #y吞食黏液 的效果。"
   },
   {
     "NAMES": [
       "潜力"
     ],
     "PROPERNAME": "潜力",
-    "DESCRIPTION": "提升所有生成的史莱姆的攻击伤害。"
+    "DESCRIPTION": "强化 #y分裂 的 #y史莱姆 的攻击伤害与附加效果。附加效果只有 #b50% 强化效率。"
   },
   { "NAMES": [
       "命令"
     ],
     "PROPER_NAME": "命令",
-    "DESCRIPTION": "最前面的史莱姆将会攻击。"
+    "DESCRIPTION": "最前面的 #y史莱姆 将会攻击。"
   },
   {
     "NAMES": [
-      "火炬头史莱姆"
+      "火炬头史莱姆",
+      "torchhead slime",
+      "torchhead_slime"
     ],
     "PROPERNAME": "火炬头史莱姆",
-    "DESCRIPTION": "发动攻击时造成 #b6 点伤害， #y潜力 对其影响翻倍。"
+    "DESCRIPTION": "攻击时随机造成 #b6 点伤害。 NL 你的 #y力量 提高其伤害。"
   },
   {
     "NAMES": [
-      "好斗史莱姆"
+      "好斗史莱姆",
+      "bruiser slime",
+      "bruiser_slime",
+      "bruiser slimes",
+      "bruiser_slimes",
+      "bruiser"
     ],
     "PROPERNAME": "好斗史莱姆",
-    "DESCRIPTION": "发动攻击时造成 #b5 点伤害。"
+    "DESCRIPTION": "攻击时随机造成 #b5 点伤害。"
   },
   {
     "NAMES": [
-      "邪教徒史莱姆"
+      "邪教徒史莱姆",
+      "cultist slime",
+      "cultist_slime"
     ],
     "PROPERNAME": "邪教徒史莱姆",
-    "DESCRIPTION": "发动攻击时造成 #b6 点伤害，提升自身伤害 #b1 点。"
+    "DESCRIPTION": "攻击时随机造成 #b6 点伤害并提高其伤害 #b1 点。"
   },
   {
     "NAMES": [
-      "水蛭史莱姆"
+      "水蛭史莱姆",
+      "leeching slime",
+      "leeching_slime",
+      "leeching slimes",
+      "leeching_slimes",
+      "leeching"
     ],
     "PROPERNAME": "水蛭史莱姆",
-    "DESCRIPTION": "发动攻击时造成 #b2 点伤害，并给予你 #b2 点 #y格挡 。"
+    "DESCRIPTION": "攻击时随机造成 #b1 点伤害并给予你 #b3 点 #y格挡 。"
   },
     {
     "NAMES": [
-      "游击史莱姆"
+      "游击史莱姆",
+      "guerilla slime",
+      "guerilla_slime",
+      "guerilla slimes",
+      "guerilla_slimes",
+      "guerilla"
     ],
     "PROPER_NAME": "游击史莱姆",
-    "DESCRIPTION": "对所有敌人造成 #b3 点伤害。"
+    "DESCRIPTION": "攻击时对所有敌人造成 #b3 点伤害。"
   },
   {
     "NAMES": [
-      "污泥史莱姆"
+      "污泥史莱姆",
+      "mire slime",
+      "mire_slime",
+      "mire slimes",
+      "mire_slimes",
+      "mire"
     ],
     "PROPERNAME": "污泥史莱姆",
-    "DESCRIPTION": "发动攻击时造成 #b2 点伤害，并给予敌人 #b2 层 #y黏液。"
+    "DESCRIPTION": "攻击时随机造成 #b2 点伤害并给予敌人 #b2 层 #y黏液 。"
   },
   {
     "NAMES": [
-      "青铜史莱姆"
+      "青铜史莱姆",
+      "bronze slime",
+      "bronze_slime"
     ],
     "PROPERNAME": "青铜史莱姆",
-    "DESCRIPTION": "发动攻击时造成 #b4 点伤害，并给予你 #b4 点 #y格挡 。"
+    "DESCRIPTION": "攻击时对所有敌人造成 #b10 点伤害，但跳过其下次攻击。"
   },
   {
     "NAMES": [
-      "舔舐"
+      "舔舔",
+      "舔"
     ],
-    "PROPERNAME": "舔舐",
-    "DESCRIPTION": "给予 #y黏液 的0耗能牌，带有各种额外效果。"
+    "PROPERNAME": "舔舔",
+    "DESCRIPTION": "一系列给予 #y黏液 的 #b0 耗能 #y消 #y耗 牌，带有各种额外效果。"
   },
   {
     "NAMES": [
-      "鬼火史莱姆"
+      "鬼火史莱姆",
+      "ghostflame slime",
+      "ghostflame_slime"
     ],
     "PROPERNAME": "鬼火史莱姆",
-    "DESCRIPTION": "每回合攻击造成 #b3 点伤害并给予 #b3 层 #y灼伤 。"
-  },
-  {
-    "NAMES": [
-      "重铸"
-    ],
-    "PROPERNAME": "重铸",
-    "DESCRIPTION": "在本场战斗中，将卡牌替换为本职业的一张随机卡牌，它的耗能减少 1 点。"
+    "DESCRIPTION": "攻击时随机造成 #b3 点伤害并给予 #b5 层 #y灼魂 。"
   },
   {
     "NAMES": [
@@ -126,44 +149,77 @@
   },
     {
     "NAMES": [
-      "保护史莱姆"
+      "尖刺史莱姆",
+      "protector slime",
+      "protector_slime"
     ],
-    "PROPER_NAME": "保护史莱姆",
-    "DESCRIPTION": "攻击造成 #b2 点伤害并给予你 #b6 点 #y格挡 。"
+    "PROPER_NAME": "尖刺史莱姆",
+    "DESCRIPTION": "攻击时随机造成 #b4 点伤害并给予你 #b4 层 #y临时 #y荆棘 。"
   },
   {
     "NAMES": [
-      "嘲讽史莱姆"
+      "嘲讽史莱姆",
+      "insulting slime",
+      "insulting_slime"
     ],
     "PROPER_NAME": "嘲讽史莱姆",
-    "DESCRIPTION": "攻击造成 #b4 点伤害并给予 #b1 层 #y易伤 。"
+    "DESCRIPTION": "攻击时随机造成 #b4 点伤害并给予敌人 #b1 层 #y易伤 。"
   }, 
   {
     "NAMES": [
-      "小黑史莱姆"
+      "小黑史莱姆",
+      "darkling slime",
+      "darkling_slime"
     ],
     "PROPER_NAME": "小黑史莱姆",
-    "DESCRIPTION": "攻击造成 #b4 点伤害。命令时，其他小黑史莱姆也会攻击。"
+    "DESCRIPTION": "攻击时随机造成 #b3 点伤害。 #y命令 时，其他 #y小黑史莱姆 也会攻击。"
   },
   {
     "NAMES": [
-      "先古史莱姆"
+      "先古史莱姆",
+      "ancient slime",
+      "ancient_slime"
     ],
     "PROPER_NAME": "先古史莱姆",
-    "DESCRIPTION": "攻击造成 #b3 点伤害并使你抽 #b1 张牌。"
+    "DESCRIPTION": "攻击时随机造成 #b3 点伤害并使你抽 #b1 张牌。"
   },
   {
     "NAMES": [
-      "时间史莱姆"
+      "时间史莱姆",
+      "time slime",
+      "time_slime"
     ],
     "PROPER_NAME": "时间史莱姆",
-    "DESCRIPTION": "攻击造成 #b4 点伤害并给予 #b1 层 #y虚弱 。"
+    "DESCRIPTION": "攻击时随机造成 #b4 点伤害并给予敌人 #b1 层 #y虚弱 。"
   },
     {
     "NAMES": [
-      "消耗黏液"
+      "吞食黏液"
     ],
-    "PROPER_NAME": "消耗黏液",
-    "DESCRIPTION": "当 #y攻击 带有 #y黏液 的敌人时获得的额外效果。"
+    "PROPER_NAME": "吞食黏液",
+    "DESCRIPTION": "当 #y攻击 带有 #y黏液 的敌人时可触发的额外效果。"
+  },
+    {
+    "NAMES": [
+      "专家史莱姆",
+      "specialist",
+      "specialist"
+    ],
+    "PROPER_NAME": "专家史莱姆",
+    "DESCRIPTION": "比普通 #y史莱姆 更加强大的独特 #y史莱姆 。"
+  },
+  {
+    "NAMES": [
+      "深埋"
+    ],
+    "PROPER_NAME": "深埋",
+    "DESCRIPTION": "被 #y发掘 的优先级最低。"
+  },
+  {
+    "NAMES": [
+      "重铸 以下为弃用文本"
+    ],
+    "PROPERNAME": "重铸",
+    "DESCRIPTION": "在本场战斗中，将卡牌替换为本职业的一张随机卡牌，其耗能减少 1 点。"
   }
 ]

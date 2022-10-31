@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import expansioncontent.expansionContentMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 
 public class ChronoBoostPlusPower extends TwoAmountPower implements CloneablePowerInterface {
@@ -53,6 +53,7 @@ public class ChronoBoostPlusPower extends TwoAmountPower implements CloneablePow
         } else {
             this.amount2++;
         }
+        this.updateDescription();
     }
 
     @Override
@@ -62,7 +63,7 @@ public class ChronoBoostPlusPower extends TwoAmountPower implements CloneablePow
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount2 + DESCRIPTIONS[1] +amount + DESCRIPTIONS[2];
+        description = DESCRIPTIONS[0] + (9 - amount2) + DESCRIPTIONS[1] +amount + DESCRIPTIONS[2];
     }
 
 }

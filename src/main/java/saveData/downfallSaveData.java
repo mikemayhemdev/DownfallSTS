@@ -1,6 +1,6 @@
 package saveData;
 
-import com.megacrit.cardcrawl.cards.CardSave;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 
 import java.util.ArrayList;
 
@@ -14,8 +14,6 @@ public class downfallSaveData {
 
     public boolean KILLED_CLERIC = false;
     public boolean ENCOUNTERED_CLERIC = false;
-
-    public ArrayList<CardSave> SAVED_COLLECTION = new ArrayList<>();
 
     public ArrayList<String> UPCOMING_BOSSES = new ArrayList<>();
 
@@ -31,4 +29,9 @@ public class downfallSaveData {
     public String ACT_1_BOSS_SLAIN = "";
     public String ACT_2_BOSS_SLAIN = "";
     public String ACT_3_BOSS_SLAIN = "";
+
+    public ArrayList<AbstractCard.CardColor> VALID_COLORS = new ArrayList<>();
+    public boolean PURE_SNECKO_MODE;
+
+    public int IDENTIFY_RNG_COUNT;
 }

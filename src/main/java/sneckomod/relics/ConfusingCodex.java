@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import sneckomod.SneckoMod;
 import sneckomod.cards.AbstractSneckoCard;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class ConfusingCodex extends CustomRelic {
 

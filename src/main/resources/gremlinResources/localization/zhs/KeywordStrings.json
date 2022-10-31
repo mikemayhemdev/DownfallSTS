@@ -1,0 +1,80 @@
+[
+  {
+    "NAMES": [
+      "苦痛"
+    ],
+    "PROPER_NAME": "苦痛",
+    "DESCRIPTION": "处于 #y苦痛 中的单位 造成的伤害减少 #b80% 。"
+  },
+  {
+    "NAMES": [
+      "致残"
+    ],
+    "PROPER_NAME": "致残",
+    "DESCRIPTION": "被 #y致残 的单位 #y虚弱 层数不再减少。 NL 敌方回合结束时，其失去 #y虚 #y弱 层数点生命。"
+  },
+  {
+    "NAMES": [
+      "回响"
+    ],
+    "PROPER_NAME": "回响",
+    "DESCRIPTION": " #y回响 是牌的复制品，带有 #y消耗 与 #y虚无 。"
+  },
+  {
+    "NAMES": [
+      "胖地精"
+    ],
+    "PROPER_NAME": "胖地精",
+    "DESCRIPTION": "每当你打出一张 #y攻击 牌时，给予目标 #b1 层 #y虚弱 。"
+  },
+  {
+    "NAMES": [
+      "地精法师"
+    ],
+    "PROPER_NAME": "地精法师",
+    "DESCRIPTION": "每当你打出一张 #y技能 牌时，获得 #b1 层 #y法力 。"
+  },
+  {
+    "NAMES": [
+      "火大地精"
+    ],
+    "PROPER_NAME": "火大地精",
+    "DESCRIPTION": "每当你被攻击时，获得 #b2 层 #y临时力量 。"
+  },
+  {
+    "NAMES": [
+      "持盾地精"
+    ],
+    "PROPER_NAME": "持盾地精",
+    "DESCRIPTION": "每当你打出一张 #y技能 牌时，获得 #b2 点 #y格挡 。"
+  },
+  {
+    "NAMES": [
+      "卑鄙地精"
+    ],
+    "PROPER_NAME": "卑鄙地精",
+    "DESCRIPTION": "每当你打出一张 #y攻击 牌时，随机对一名敌人造成 #b3 点伤害。"
+  },
+  {
+    "NAMES": [
+      "切换",
+      "领队"
+    ],
+    "PROPER_NAME": "切换",
+    "DESCRIPTION": "改变 #y领队 的地精，地精 #y领队 时拥有其特定的的被动效果。没有其他地精存活时 #y切换 不执行任何操作。"
+  },
+  {
+    "NAMES": [
+      "法力"
+    ],
+    "PROPER_NAME": "法力",
+    "DESCRIPTION": "当你至少有 #b3 层 #y法力 时， 攻击会使用所有 #y法力 并额外造成 #b10 点伤害。"
+  },
+  {
+    "NAMES": [
+      "地精大块头"
+    ],
+    "PROPER_NAME": "地精大块头",
+    "DESCRIPTION": "你的回合开始时，获得 #y怒吼 、 #y颅骨重击 与 #y冲锋 各 #b1 张。"
+  }
+]

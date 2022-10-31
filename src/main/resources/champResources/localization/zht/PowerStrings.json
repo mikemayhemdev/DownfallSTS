@@ -1,0 +1,240 @@
+{
+  "champ:CounterPower": {
+    "NAME": "反擊",
+    "DESCRIPTIONS": [
+      "下次你被 #y攻擊 時，給予攻擊者 #b",
+      " 點傷害並移除所有 #y反擊 層數。"
+    ]
+  },
+  "champ:FocusedBerPower": {
+    "NAME": "花哨步法",
+    "DESCRIPTIONS": [
+      "本回合下張 #y終結技 使所有敵人失去 #b",
+      " 點生命。"
+    ]
+  },
+  "champ:DrawLessNextTurnPower": {
+    "NAME": "限製抽牌",
+    "DESCRIPTIONS": [
+      "下回合少抽 #b",
+      " 張牌。",
+      " 張牌。"
+    ]
+  },
+  "champ:PushThroughPower": {
+    "NAME": "無視傷痛",
+    "DESCRIPTIONS": [
+      "本回合你不會失去生命。",
+      "接下來的 #b",
+      " 回合內你不會失去生命。"
+    ]
+  },
+  "champ:ImprovisingPower": {
+    "NAME": "觸類旁通",
+    "DESCRIPTIONS": [
+      "每回合首次打出 #y連段 牌時，將其返回手牌且它下次耗能為 #b0 。還能觸發 #b",
+      " 次。",
+      "每回合前 #b",
+      " 次打出 #y連段 牌時，將其返回手牌且它下次耗能為 #b0 。還能觸發 #b"
+    ]
+  },
+  "champ:CalledShotPower": {
+    "NAME": "宣告",
+    "DESCRIPTIONS": [
+      "你打出的下一張 #y終結技 將不會退出 #y姿態 。",
+      "你打出的下 #b",
+      " 張 #y終結技 將不會退出 #y姿態 。"
+    ]
+  },
+  "champ:DancingMasterPower": {
+    "NAME": "戰技大師",
+    "DESCRIPTIONS": [
+      "每回合首次使用 #y終結技 時，獲得 #b",
+      " [E] 並抽 #b",
+      " 張牌。",
+      "",
+      "本回合已觸發。",
+      ""
+    ]
+  },
+  "champ:StrikeOfGeniusPower": {
+    "NAME": "打擊天才",
+    "DESCRIPTIONS": [
+      "你的回合開始時，隨機將 #b1 張 #y打擊牌 加入手牌。其首次耗能為 #b0 。",
+      "你的回合開始時，隨機將 #b",
+      " 張 #y打擊牌 加入手牌。其首次耗能為 #b0 。"
+    ]
+  },
+  "champ:StrikeOfGeniusUpgradedPower": {
+    "NAME": "打擊天才+",
+    "DESCRIPTIONS": [
+      "你的回合開始時，隨機將 #b1 張 #y打擊牌+ 加入手牌。其首次耗能為 #b0 。",
+      "你的回合開始時，隨機將 #b",
+      " 張 #y打擊牌+ 加入手牌。其首次耗能為 #b0 。"
+    ]
+  },
+  "champ:DefensiveStylePower": {
+    "NAME": "防守戰法",
+    "DESCRIPTIONS": [
+      "#y防守 #y技術 獎勵額外提供 #b",
+      " 層 #y反擊 。"
+    ]
+  },
+  "champ:BerserkerStylePower": {
+    "NAME": "狂暴戰法",
+    "DESCRIPTIONS": [
+      "#y戰狂 #y技術 獎勵額外提供 #b",
+      " 點 #y活力 。"
+    ]
+  },
+  "champ:FalseCounterPower": {
+    "NAME": "偽反",
+    "DESCRIPTIONS": [
+      "下次觸發 #y反擊 時，只失去一半 #y反擊 層數而非全部。",
+      "下 #b",
+      " 次觸發 #y反擊 時，只失去一半 #y反擊 層數而非全部。"
+    ]
+  },
+  "champ:EnergizedDurationPower": {
+    "NAME": "充滿熱情",
+    "DESCRIPTIONS": [
+      "獲得 #b",
+      " 點額外 [E] 。",
+      " 點額外 [E] 。",
+      " 翻譯提醒：兩行重復對應英文單雙數。"
+    ]
+  },
+  "champ:IronFortressPower": {
+    "NAME": "戰鬥躍舞",
+    "DESCRIPTIONS": [
+      "每當你進入 #y姿態 時，獲得其 #y技術 獎勵 #b",
+      " #b",
+      " 次。"
+    ]
+  },
+  "champ:IronFortressVigorPower": {
+    "NAME": "戰鬥躍舞：戰狂",
+    "DESCRIPTIONS": [
+      "每當你進入 #y姿態 時，觸發 #y戰狂 #y技術 獎勵 ",
+      " #b",
+      " 次。"
+    ]
+  },
+    "champ:GladiatorFormPower": {
+    "NAME": "角鬥形態",
+    "DESCRIPTIONS": [
+      "你的回合開始時，上回合每使用過 #b3 層 #y活力 ，獲得 #b",
+      " 層 #y活力。 #y反擊 亦然。"
+    ]
+  },
+  "champ:NoBlockNextTurnPower": {
+    "NAME": "爆甲",
+    "DESCRIPTIONS": [
+      "你下回合不能獲得格擋。",
+      "你下 #b",
+      " 個回合不能獲得格擋。"
+    ]
+  },
+  "champ:UltimateStancePower": {
+    "NAME": "終結",
+    "DESCRIPTIONS": [
+      "終極姿態將在本回合結束。",
+      "終極姿態還將持續 #b",
+      " 個回合。"
+    ]
+  },
+  "champ:UltimateFormNextTurnPower": {
+    "NAME": "登巔",
+    "DESCRIPTIONS": [
+      "下回合進入 #y終極 。",
+      " NL 其持續 #b",
+      " 回合。"
+    ]
+  },
+  "champ:EnGardePower": {
+    "NAME": "待命",
+    "DESCRIPTIONS": [
+      "本回合若你的 #y格擋 被打破，下回合獲得 #b",
+      " 點 #y格擋 。"
+    ]
+  },
+  "champ:ParryPower": {
+    "NAME": "招架",
+    "DESCRIPTIONS": [
+      "如果本回合觸發 #y反擊 ，將 #b1 張 #y彈反 加入手牌。"
+    ]
+  },
+  "champ:BoomerangPower": {
+    "NAME": "回旋",
+    "DESCRIPTIONS": [
+      "下回合開始時，將 ",
+      " 返回手牌。其下次耗能為 #b0 。"
+    ]
+  },
+  "champ:ResolvePower": {
+    "NAME": "疲勞",
+    "DESCRIPTIONS": [
+      "戰鬥結束時，回復 #y疲勞 層數的生命。"
+    ]
+  },
+  "champ:DualPlaySrikePower": {
+    "NAME": "亂舞打擊",
+    "DESCRIPTIONS": [
+      "本回合你打出的下張 #y打擊牌 將打出兩次。",
+      "本回合你打出的下 #b",
+      " 張 #y打擊牌 將打出兩次。"
+    ]
+  },
+  "champ:LastStandPower": {
+    "NAME": "背水一戰",
+    "DESCRIPTIONS": [
+      "當你低於或降至半血時，清除所有 #r負面狀態 並獲得 #b",
+      " 點 #y力量 。",
+      "~該~ ~結~ ~束~ ~了……~",
+      "@失敗？？@ NL @不可能！！@"
+    ]
+  },
+  "champ:LastStandMod": {
+    "NAME": "最後一戰",
+    "DESCRIPTIONS": [
+      "你的回合開始時，若生命低於 #b50% ，清除所有 #r負面效果 並獲得 #b",
+      " 點 #y力量 。"
+    ]
+  },
+  "champ:FocusedDefPower": {
+    "NAME": "防反家",
+    "DESCRIPTIONS": [
+      "本回合你打出下張 #y終結技 時，獲得 #b",
+      " 點 #y格擋 。"
+    ]
+  },
+  "champ:ShieldWallPower": {
+    "NAME": "盾墻",
+    "DESCRIPTIONS": [
+      "你的回合結束時，獲得 #b",
+      " 層 #y反擊 。"
+    ]
+  },
+  "champ:EntangleNextTurnPower": {
+    "NAME": "投擲劍刃",
+    "DESCRIPTIONS": [
+      "下回合你不能打出 #y攻擊牌 。",
+      "下 #b",
+      " 個回合你不能打出 #y攻擊牌 。"
+    ]
+  },
+  "champ:GladiatorStylePower": {
+    "NAME": "抹殺",
+    "DESCRIPTIONS": [
+      "如果你回合開始時不處於 #y姿態 ，獲得 #b",
+      " 點 #y臨時力量 和 #y敏捷 。"
+    ]
+  },
+  "champ:WorseRupturePower": {
+    "NAME": "無窮憤火",
+    "DESCRIPTIONS": [
+      "每當你在你的回合失去生命時，獲得 #b",
+      " 點 #y臨時力量 。"
+    ]
+  }
+}

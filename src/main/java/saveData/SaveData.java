@@ -3,18 +3,26 @@ package saveData;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.map.MapRoomNode;
+import com.megacrit.cardcrawl.random.Random;
+import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.saveAndContinue.SaveAndContinue;
 import com.megacrit.cardcrawl.saveAndContinue.SaveFile;
 import downfall.downfallMod;
 import downfall.events.Cleric_Evil;
 import downfall.monsters.FleeingMerchant;
+import downfall.monsters.NeowBossFinal;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
+import downfall.patches.ui.topPanel.GoldToSoulPatches;
 import downfall.relics.BrokenWingStatue;
 import javassist.CtBehavior;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import sneckomod.OffclassHelper;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -36,6 +44,9 @@ public class SaveData {
     public static final String ACT_1_BOSS_SLAIN = "ACT_1_BOSS_SLAIN";
     public static final String ACT_2_BOSS_SLAIN = "ACT_2_BOSS_SLAIN";
     public static final String ACT_3_BOSS_SLAIN = "ACT_3_BOSS_SLAIN";
+    public static final String VALID_COLORS = "VALID_COLORS";
+    public static final String PURE_SNECKO_MODE = "PURE_SNECKO_MODE";
+    public static final String IDENTIFY_RNG_COUNT = "IDENTIFY_RNG_COUNT";
 
     private static Logger saveLogger = LogManager.getLogger("downfallSaveData");
     //data is stored here in addition to the actual location
@@ -50,6 +61,7 @@ public class SaveData {
     private static boolean encounteredCleric;
 
     private static ArrayList<String> myVillains;
+
     private static int merchantHealth;
     private static int merchantStrength;
     private static int merchantSouls;
@@ -63,6 +75,11 @@ public class SaveData {
     private static String act2BossSlain;
     private static String act3BossSlain;
 
+    private static ArrayList<AbstractCard.CardColor> saveCacheColors;
+    private static boolean pureSneckoMode;
+
+    private static int identifyRngCount;
+
     //Save data whenever SaveFile is constructed
     @SpirePatch(
             clz = SaveFile.class,
@@ -70,6 +87,7 @@ public class SaveData {
             paramtypez = {SaveFile.SaveType.class}
     )
     public static class SaveTheSaveData {
+
         @SpirePostfixPatch
         public static void saveAllTheSaveData(SaveFile __instance, SaveFile.SaveType type) {
             evilMode = EvilModeCharacterSelect.evilMode;
@@ -77,8 +95,10 @@ public class SaveData {
             consumedRed = AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player);
             consumedGreen = AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player);
             consumedBlue = AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player);
+
             killedCleric = Cleric_Evil.heDead;
             encounteredCleric = Cleric_Evil.encountered;
+
             myVillains = downfallMod.possEncounterList;
 
             merchantHealth = FleeingMerchant.CURRENT_HP;
@@ -96,6 +116,11 @@ public class SaveData {
             System.out.println(act1BossSlain);
             System.out.println(act2BossSlain);
             System.out.println(act3BossSlain);
+
+            saveCacheColors = SneckoMod.validColors;
+            pureSneckoMode = SneckoMod.pureSneckoMode;
+
+            identifyRngCount = SneckoMod.identifyRng.counter;
 
             saveLogger.info("Saved Evil Mode: " + evilMode);
         }
@@ -128,6 +153,9 @@ public class SaveData {
             params.put(ACT_1_BOSS_SLAIN, act1BossSlain);
             params.put(ACT_2_BOSS_SLAIN, act2BossSlain);
             params.put(ACT_3_BOSS_SLAIN, act3BossSlain);
+            params.put(VALID_COLORS, saveCacheColors);
+            params.put(PURE_SNECKO_MODE, pureSneckoMode);
+            params.put(IDENTIFY_RNG_COUNT, identifyRngCount);
         }
 
         private static class Locator extends SpireInsertLocator {
@@ -177,6 +205,11 @@ public class SaveData {
                 act2BossSlain = data.ACT_2_BOSS_SLAIN;
                 act3BossSlain = data.ACT_3_BOSS_SLAIN;
 
+                saveCacheColors = data.VALID_COLORS;
+                pureSneckoMode = data.PURE_SNECKO_MODE;
+
+                identifyRngCount = data.IDENTIFY_RNG_COUNT;
+
                 saveLogger.info("Loaded downfall save data successfully.");
             } catch (Exception e) {
                 saveLogger.error("Failed to load downfall save data.");
@@ -199,6 +232,7 @@ public class SaveData {
             method = "loadSave"
     )
     public static class loadSave {
+
         @SpirePostfixPatch
         public static void loadSave(AbstractDungeon __instance, SaveFile file) {
             //Some data, after loading into this file, will need to actually be assigned here.
@@ -220,8 +254,12 @@ public class SaveData {
             FleeingMerchant.CURRENT_STRENGTH = merchantStrength;
             FleeingMerchant.CURRENT_SOULS = merchantSouls;
 
+            System.out.println(merchantDead);
             FleeingMerchant.DEAD = merchantDead;
+            System.out.println(merchantEscaped);
             FleeingMerchant.ESCAPED = merchantEscaped;
+            GoldToSoulPatches.UpdateMerchantTip();
+
 
             BrokenWingStatue.GIVEN = brokenWingGiven;
 
@@ -233,9 +271,27 @@ public class SaveData {
             downfallMod.Act2BossFaced = act2BossSlain;
             downfallMod.Act3BossFaced = act3BossSlain;
 
+            SneckoMod.validColors = saveCacheColors;
+            SneckoMod.pureSneckoMode = pureSneckoMode;
 
-                saveLogger.info("Save loaded.");
+            SneckoMod.identifyRng = new Random(file.seed, identifyRngCount);
+
+            OffclassHelper.updateAllUnknownReplacements();
+
+            saveLogger.info("Save loaded.");
             //Anything that triggers on load goes here
+
+            System.out.println(file.room_x);
+            if (file.room_x == -2) {
+                System.out.println("WE GOT ONE!");
+               loadIntoNeowDoubleInstead();
+            }
         }
+    }
+
+    public static void loadIntoNeowDoubleInstead() {
+        AbstractDungeon.bossKey = NeowBossFinal.ID;
+        MapRoomNode node = new MapRoomNode(-2, 5);
+        node.room = new MonsterRoomBoss();
     }
 }

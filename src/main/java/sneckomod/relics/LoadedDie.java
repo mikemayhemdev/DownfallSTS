@@ -3,7 +3,7 @@ package sneckomod.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import sneckomod.SneckoMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class LoadedDie extends CustomRelic {
 

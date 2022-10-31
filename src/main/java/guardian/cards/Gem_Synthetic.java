@@ -12,13 +12,14 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
+import hermit.actions.ReduceDebuffsAction;
 import sneckomod.SneckoMod;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.SYNTHETIC;
 
 
-public class Gem_Synthetic extends AbstractGuardianCard {
+public class Gem_Synthetic extends AbstractGemCard {
     public static final String ID = GuardianMod.makeID("Gem_Synthetic");
     public static final String NAME;
     public static final String IMG_PATH = "cards/gemBlack.png";
@@ -56,7 +57,7 @@ public class Gem_Synthetic extends AbstractGuardianCard {
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArtifactPower(p, 1), 1));
+        AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, 1));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

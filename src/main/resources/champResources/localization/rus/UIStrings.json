@@ -1,0 +1,44 @@
+{
+  "champ:SealCommonReward": {
+    "TEXT": [
+      "Добавьте Обычную карту в вашу колоду"
+    ]
+  },
+  "champ:SealSealReward": {
+    "TEXT": [
+      "Добавьте Печать в вашу колоду"
+    ]
+  },
+  "champ:TechniqueMod": {
+    "TEXT": [
+      " Активирует *Бонус Навыка. NL "
+    ]
+  },
+  "champ:OpenerMod": {
+    "TEXT": [
+      " NL Перейти в стойку champ:Берсерка.",
+      " NL Перейти в стойку champ:Рыцаря.",
+      "Перейти в стойку champ:Гладиатора NL "
+    ]
+  },
+  "champ:RetainCardMod": {
+    "TEXT": [
+      "Оставляется. NL "
+    ]
+  },
+  "champ:EnchantUI": {
+    "TEXT": [
+      "0 стоимость.",
+      "увеличение урона.",
+      "увеличение Защиты."
+    ]
+  },
+  "champ:highlightCombos": {
+    "TEXT": [
+      "champ:Комбо *Берсерка:",
+      "champ:Комбо [#5ebf2a]Берсерка:",
+      "champ:Комбо *Рыцаря:",
+      "champ:Комбо [#5ebf2a]Рыцаря:"
+    ]
+  }
+}

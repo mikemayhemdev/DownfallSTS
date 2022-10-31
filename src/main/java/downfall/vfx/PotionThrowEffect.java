@@ -42,7 +42,7 @@ public class PotionThrowEffect extends AbstractGameEffect {
         if (img == null) {
             img = ImageMaster.loadImage(imgSrc);
         }
-        //SlimeboundMod.logger.info("Slime normal projectile firing");
+        ////SlimeboundMod.logger.info("Slime normal projectile firing");
 
         this.sX = srcX + 40;
         this.sY = srcY - 40;

@@ -3,6 +3,7 @@ package downfall.events;
 
 import charbosses.actions.util.CharBossMonsterGroup;
 import charbosses.bosses.Defect.CharBossDefect;
+import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
@@ -56,7 +57,8 @@ public class Colosseum_Evil extends AbstractImageEvent {
                     case 0:
                         this.screen = CurScreen.FIGHT;
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2] + DESCRIPTIONS[3]);
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
+                        logMetric(ID, "Fought Nobs");
                         AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Colosseum Nobs");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.RARE);
@@ -71,9 +73,10 @@ public class Colosseum_Evil extends AbstractImageEvent {
                     case 1:
                         this.screen = CurScreen.FIGHT;
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2] + DESCRIPTIONS[4]);
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
+                        logMetric(ID, "Fought Captured Player");
                         downfallMod.overrideBossDifficulty = true;
-                        String s = downfallMod.possEncounterList.get(AbstractDungeon.cardRandomRng.random(downfallMod.possEncounterList.size()-1));
+                        String s = downfallMod.possEncounterList.remove(AbstractDungeon.cardRandomRng.random(downfallMod.possEncounterList.size()-1));
                         switch (s) {
                             case "downfall:Ironclad":
                                 AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossIronclad.ID);
@@ -95,6 +98,11 @@ public class Colosseum_Evil extends AbstractImageEvent {
                                 AbstractDungeon.lastCombatMetricKey = CharBossWatcher.ID;
 //                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()});
                                 break;
+                            case "downfall:Hermit":
+                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossHermit.ID);
+                                AbstractDungeon.lastCombatMetricKey = CharBossHermit.ID;
+//                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()});
+                                break;
                             default:
                                 AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossIronclad.ID);
                                 AbstractDungeon.lastCombatMetricKey = CharBossIronclad.ID;
@@ -114,6 +122,7 @@ public class Colosseum_Evil extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[5]);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[2]);
+                        logMetricIgnored(ID);
                         return;
                     default:
                         return;

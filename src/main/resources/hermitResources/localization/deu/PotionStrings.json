@@ -1,0 +1,14 @@
+{
+"hermit:Tonic": {
+        "NAME": "Tonikum",
+        "DESCRIPTIONS": ["Erhalte #b", " #yRobust."]
+},
+"hermit:BlackBile": {
+        "NAME": "Schwarze Galle",
+        "DESCRIPTIONS": ["Wende #b", " #yPrügel an."]
+},
+"hermit:Eclipse": {
+        "NAME": "Flüssige Leere",
+        "DESCRIPTIONS": ["Nimm #b", " #yerschöpfte Karte in deine Hand auf. Sie kostet für diesen Zug #b0."," #yerschöpfte Karten in deine Hand auf. Sie kosten für diesen Zug #b0."]
+}
+}

@@ -6,5 +6,10 @@
       "Allow other characters to encounter some Slimebound events.",
       "Unlock everything (Not recommended)"
     ]
+  },
+  "slimeboundmod:CommandMod": {
+    "TEXT": [
+      " NL slimeboundmod:Command."
+    ]
   }
 }

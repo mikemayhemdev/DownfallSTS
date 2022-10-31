@@ -3,20 +3,19 @@
     "NAME": "Snecko Soul",
     "FLAVOR": "0...3...2...2...1",
     "DESCRIPTIONS": [
-      "Whenever you add a #ysneckomod:Unknown card into your deck, increase your Max HP by #b1."
+      "The first time you play an #ysneckomod:Offclass card in a combat, gain [E] and draw a card."
     ]
   },
   "sneckomod:SuperSneckoSoul": {
     "NAME": "Super Snecko Soul",
     "FLAVOR": "3120231321230320",
     "DESCRIPTIONS": [
-      "Replaces ",
-      ".[] NL Upon pickup, increase your Max HP by #b2 for each #ysneckomod:Unknown card in your deck."
+      "Replaces [#407B93]Snecko Soul[]. NL The first time you play an #ysneckomod:Offclass each turn, gain [E] ."
     ]
   },
   "sneckomod:CleanMud": {
     "NAME": "Snake-Charmer's Flute",
-    "FLAVOR": "You're an oxy-moron!",
+    "FLAVOR": "Sssssss...",
     "DESCRIPTIONS": [
       "#ysneckomod:Muddled cards can't cost #b3."
     ]
@@ -46,28 +45,28 @@
     "NAME": "Rare Booster Box",
     "FLAVOR": "Mint condition.",
     "DESCRIPTIONS": [
-      "Upon pickup, obtain a #ysneckomod:Unknown #yRare card of each card type."
+      "Upon pickup, obtain a #yUnidentified #yRare card of each card type."
     ]
   },
   "sneckomod:SleevedAce": {
     "NAME": "Sleeved Ace",
     "FLAVOR": "We're all aces.",
     "DESCRIPTIONS": [
-      "At the start of each combat, add a #yCheat into your hand with #yRetain."
+      "At the start of each combat, gain a #yPure #yLuck with #yRetain."
     ]
   },
   "sneckomod:UnknownEgg": {
-    "NAME": "Unknown Egg",
+    "NAME": "Unidentified Egg",
     "FLAVOR": "What will hatch? Pay $1000 to see.",
     "DESCRIPTIONS": [
-      "#ysneckomod:Unknown cards in card rewards are #yUpgraded."
+      "#yIdentifying becomes a free action. NL #yUnidentified cards in card rewards are #yUpgraded."
     ]
   },
   "sneckomod:SuperSneckoEye": {
     "NAME": "Super Snecko Eye",
     "FLAVOR": "0121012",
     "DESCRIPTIONS": [
-      "Replaces Snecko Eye. At the start of your turn, draw #b2 additional cards. Start each combat #yConfused. The first time you draw a card that costs #b3 each combat, reduce its cost to #b0."
+      "Replaces #ySnecko #yEye. At the start of your turn, draw #b2 additional cards. Start each combat #yConfused. The first time you draw a card that costs #b3 each combat, reduce its cost to #b0."
     ]
   },
   "sneckomod:SneckoTalon": {
@@ -81,7 +80,7 @@
     "NAME": "Blank Card",
     "FLAVOR": "Card Mimic.",
     "DESCRIPTIONS": [
-      "At the start of each combat, play a copy of a random card from your deck."
+      "At the start of each combat, add an #ygremlin:Echo of a random card from your deck to your hand. It costs #b0 ."
     ]
   },
   "sneckomod:D8": {
@@ -98,7 +97,26 @@
     "NAME": "Young Snecko",
     "FLAVOR": "Bewilderingly adorable.",
     "DESCRIPTIONS": [
-      "Deals 5 damage to a random enemy at the start of your turn."
+      "Deals #b5 damage to a random enemy at the start of your turn."
+    ]
+  },
+  "sneckomod:SneckoCommon": {
+    "NAME": "Seal of Approval",
+    "FLAVOR": "I'm The Ironclad and this is my favorite Relic in the Spire.  -Merchant Advertising Pamphlet",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose #b1 of #b3 #yUnidentified #yCharacter cards to add to your deck. All future #yUnidentified #yCharacter cards found will be of this character.",
+      "All Unidentified Character cards found will be ",
+      " cards."
+    ]
+  },
+  "sneckomod:SneckoBoss": {
+    "NAME": "Lucky Horseshoe",
+    "FLAVOR": "Make your own luck.",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose #b1 of #b3 #yUnidentified #yCharacter cards. Add #b5 copies of it to your deck. All combats drop an additional card reward of the chosen character's cards.",
+      "Upon pickup, obtain #b5 #yUnidentified ",
+      " cards. All combats drop an additional ",
+      " card reward."
     ]
   }
 }

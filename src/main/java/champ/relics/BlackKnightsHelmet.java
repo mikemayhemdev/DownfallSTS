@@ -4,17 +4,13 @@ import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
-import champ.stances.GladiatorStance;
-import champ.util.TextureLoader;
+import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.stances.AbstractStance;
-import slimebound.SlimeboundMod;
 
 import static champ.ChampMod.makeRelicOutlinePath;
 import static champ.ChampMod.makeRelicPath;
@@ -30,13 +26,11 @@ public class BlackKnightsHelmet extends CustomRelic {
     }
 
     boolean didDef = false;
-    boolean didGlad = false;
     boolean didBers = false;
 
     @Override
     public void atBattleStart() {
         didDef = false;
-        didGlad = false;
         didBers = false;
     }
 
@@ -50,17 +44,10 @@ public class BlackKnightsHelmet extends CustomRelic {
                     didDef = true;
                 }
                 break;
-            case GladiatorStance.STANCE_ID:
-                if (!didGlad) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, 1), 1));
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
-                    didGlad = true;
-                }
-                break;
             case BerserkerStance.STANCE_ID:
                 if (!didBers) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, -1), -1));
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 2), 2));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, -1), -1));
                     didBers = true;
                 }
                 break;

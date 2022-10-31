@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.cardmods.EtherealMod;
+import sneckomod.SneckoMod;
 import sneckomod.powers.UnlimitedRollsPower;
 import downfall.cardmods.ExhaustMod;
 
@@ -21,6 +22,7 @@ public class UnlimitedRolls extends AbstractSneckoCard {
         CardModifierManager.addModifier(q, new ExhaustMod());
         q.initializeDescription();
         cardsToPreview = q;
+        SneckoMod.loadJokeCardImage(this, "UnlimitedRolls.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

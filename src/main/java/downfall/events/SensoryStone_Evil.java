@@ -66,6 +66,7 @@ public class SensoryStone_Evil extends AbstractImageEvent {
             case INTRO_2:
                 switch(buttonPressed) {
                     case 0:
+                        logMetric(ID, "Memory 1");
                         this.screen = CurScreen.ACCEPT;
                         this.choice = 1;
                         this.reward(this.choice);
@@ -73,6 +74,7 @@ public class SensoryStone_Evil extends AbstractImageEvent {
                         getMemoryText();
                         break;
                     case 1:
+                        logMetricTakeDamage(ID, "Memory 2", 5);
                         this.screen = CurScreen.ACCEPT;
                         this.choice = 2;
                         this.reward(this.choice);
@@ -81,6 +83,7 @@ public class SensoryStone_Evil extends AbstractImageEvent {
                         getMemoryText();
                         break;
                     case 2:
+                        logMetricTakeDamage(ID, "Memory 3", 10);
                         this.screen = CurScreen.ACCEPT;
                         this.choice = 3;
                         this.reward(this.choice);
@@ -101,7 +104,7 @@ public class SensoryStone_Evil extends AbstractImageEvent {
 
     public void setMemoryCard(AbstractCard c){
         this.memoryCard = c;
-       // if (memoryCard != null) SlimeboundMod.logger.info("setting memory card: " + c.name);
+       // if (memoryCard != null) //SlimeboundMod.logger.info("setting memory card: " + c.name);
     }
 
     public void getMemoryText() {
@@ -111,7 +114,7 @@ public class SensoryStone_Evil extends AbstractImageEvent {
         boolean debug = false;
         if (c != null) {
             if (!debug) {
-              //  SlimeboundMod.logger.info("searching tags for " + c.name);
+              //  //SlimeboundMod.logger.info("searching tags for " + c.name);
                 if (c.hasTag(expansionContentMod.STUDY_SLIMEBOSS)) memory = MEMORY_SLIME_TEXT;
                 else if (c.hasTag(expansionContentMod.STUDY_AUTOMATON)) memory = MEMORY_AUTOMATON_TEXT;
                 else if (c.hasTag(expansionContentMod.STUDY_AWAKENEDONE)) memory = MEMORY_ANCIENTONE_TEXT;
@@ -133,7 +136,7 @@ public class SensoryStone_Evil extends AbstractImageEvent {
             //triggers if no card is chosen
             memory = DESCRIPTIONSALT[9];
         }
-     //   SlimeboundMod.logger.info(memory);
+     //   //SlimeboundMod.logger.info(memory);
         this.imageEventText.updateBodyText(memory);
     }
 
@@ -141,7 +144,7 @@ public class SensoryStone_Evil extends AbstractImageEvent {
         AbstractDungeon.getCurrRoom().rewards.clear();
 
         for(int i = 0; i < num; ++i) {
-            AbstractDungeon.getCurrRoom().addCardReward(new BossCardReward(CardColor.COLORLESS));
+            AbstractDungeon.getCurrRoom().addCardReward(new BossCardReward());
         }
 
         AbstractDungeon.getCurrRoom().phase = RoomPhase.COMPLETE;

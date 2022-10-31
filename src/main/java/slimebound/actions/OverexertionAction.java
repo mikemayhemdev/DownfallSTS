@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
+import slimebound.cards.Lick;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +43,7 @@ public class OverexertionAction extends AbstractGameAction {
 
             if (this.p.exhaustPile.isEmpty()) {
 
-                logger.info("Exhaust is empty");
+          //      logger.info("Exhaust is empty");
                 this.isDone = true;
                 return;
 
@@ -53,15 +54,15 @@ public class OverexertionAction extends AbstractGameAction {
             CardGroup cardsToReturn = AbstractDungeon.player.exhaustPile;
             List<AbstractCard> cardsToExhaust = new ArrayList<>();
 
-            logger.info("Exhaust size:" + exhaustSize);
+           // logger.info("Exhaust size:" + exhaustSize);
 
             for (AbstractCard c : cardsToReturn.group) {
 
-                if (c.cost == 0) {
+                if (c.hasTag(SlimeboundMod.LICK)) {
 
 
-                    logger.info("Add to hand");
-                    logger.info("Add to hand");
+                 //   logger.info("Add to hand");
+                 //   logger.info("Add to hand");
                     if (p.hand.size() >= BaseMod.MAX_HAND_SIZE) {
                         this.p.discardPile.addToTop(c);
                     } else {
@@ -82,7 +83,7 @@ public class OverexertionAction extends AbstractGameAction {
             }
 
 
-            logger.info("Losing HP");
+           // logger.info("Losing HP");
             //AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, healthLoss));
 
             this.isDone = true;

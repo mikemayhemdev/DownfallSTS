@@ -5,21 +5,18 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 
 public class NightmareGuise extends AbstractHexaCard {
 
     public final static String ID = makeID("NightmareGuise");
 
-    //stupid intellij stuff SKILL, SELF, UNCOMMON
-
-    private static final int BLOCK = 12;
-    private static final int UPG_BLOCK = 4;
-
     public NightmareGuise() {
-        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = BLOCK;
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = 9;
         isEthereal = true;
         cardsToPreview = new ShadowGuise();
+        HexaMod.loadJokeCardImage(this, "NightmareGuise.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -27,9 +24,9 @@ public class NightmareGuise extends AbstractHexaCard {
     }
 
     @Override
-    public void triggerOnExhaust() {
+    public void afterlife() {
         superFlash(Color.PURPLE);
-        AbstractCard q = new ShadowGuise();
+        AbstractCard q = new ShadowGuise(this);
         if (upgraded) q.upgrade();
         atb(new MakeTempCardInHandAction(q));
     }
@@ -37,11 +34,9 @@ public class NightmareGuise extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPG_BLOCK);
+            upgradeBlock(3);
+            cardsToPreview.upgrade();
             rawDescription = UPGRADE_DESCRIPTION;
-            AbstractCard q = new ShadowGuise();
-            q.upgrade();
-            cardsToPreview = q;
             initializeDescription();
         }
     }

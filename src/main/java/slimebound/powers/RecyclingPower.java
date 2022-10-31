@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
+import slimebound.actions.ExhumeLickAction;
 import slimebound.actions.ReturnRandom0Cost;
 
 
@@ -58,7 +59,7 @@ public class RecyclingPower extends AbstractPower {
 
     public void atStartOfTurn() {
         flash();
-        AbstractDungeon.actionManager.addToBottom(new ReturnRandom0Cost(amount));
+        AbstractDungeon.actionManager.addToBottom(new ExhumeLickAction(amount, false));
     }
 
 

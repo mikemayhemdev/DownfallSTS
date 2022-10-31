@@ -1,0 +1,106 @@
+{
+  "expansioncontent:StudyTheSpirePower": {
+    "NAME": "學習尖塔",
+    "DESCRIPTIONS": [
+      "在下回合開始時將隨機一張 #y首領 牌加入手牌。 NL 它直到打出前耗能為 #b0 。",
+      "接下來的 #b",
+      " 個回合開始時將隨機一張 #y首領 牌加入手牌。 NL 它直到打出前耗能為 #b0 。",
+      "在下回合開始時將隨機一張已 #y升級 的 #y首領 牌加入手牌。 NL 它直到打出前耗能為 #b0 。",
+      "接下來的 #b",
+      " 個回合開始時將隨機一張已 #y升級 的 #y首領 牌加入手牌。 NL 它直到打出前耗能為 #b0 。"
+    ]
+  },
+  "expansioncontent:AwakenedOnePower": {
+    "NAME": "黑暗儀式",
+    "DESCRIPTIONS": [
+      "如果這個敵人本回合沒有攻擊，你獲得 ",
+      " 點 力量 。"
+    ]
+  },
+  "expansioncontent:AwakenDeathPower": {
+    "NAME": "未覺醒",
+    "DESCRIPTIONS": [
+      "當你即將死亡時或戰鬥結束時，恢復 #b",
+      " 點生命並移除此效果。"
+    ]
+  },
+  "expansioncontent:ChronoBoostPower": {
+    "NAME": "時間加速",
+    "DESCRIPTIONS": [
+      "每當你打出 #b",
+      " 張牌時，獲得 #b",
+      " 點 #y力量 。"
+    ]
+  },
+  "expansioncontent:ChronoBoostPlusPower": {
+    "NAME": "時間加速+",
+    "DESCRIPTIONS": [
+      "每當你打出 #b",
+      " 張牌時，獲得 #b",
+      " 點 #y力量 。"
+    ]
+  },
+  "expansioncontent:DeEnergizedPower": {
+    "NAME": "能量降低",
+    "DESCRIPTIONS": [
+      "你的下回合開始時，失去 #b",
+      " [E] 。"
+    ]
+  },
+  "expansioncontent:PolyBeamAgainPower": {
+    "NAME": "切換光束",
+    "DESCRIPTIONS": [
+      "你的下回合開始時，打出 #y多重光束 。",
+      "接下來的 ",
+      "回合開始時，打出 #y多重光束 。"
+    ]
+  },
+  "expansioncontent:PolyBeamAgainPowerUpgraded": {
+    "NAME": "切換光束+",
+    "DESCRIPTIONS": [
+      "下回合開始時，打出 #y多重光束+ 。 ",
+      "接下來的 ",
+      " 回合開始時，打出 #y多重光束+ 。"
+    ]
+  },
+    "expansioncontent:AddCopyPower": {
+    "NAME": "潛力",
+    "DESCRIPTIONS": [
+      "下回合開始時將 ",
+      " 加入你的手牌。"
+    ]
+  },
+  "expansioncontent:AddSameInstancePower": {
+    "NAME": "推遲卡牌",
+    "DESCRIPTIONS": [
+      "下一回合開始時將 ",
+      " 加入你的手牌。"
+    ]
+  },
+  "expansioncontent:NextTurnExhumePower": {
+    "NAME": "推遲發掘",
+    "DESCRIPTIONS": [
+      "下一回合開始時 #y發掘 ",
+      " 到你的手牌。"
+    ]
+  },
+  "expansioncontent:PretendHexWheelPower": {
+    "NAME": "地獄火",
+    "DESCRIPTIONS": [
+      "在 #b",
+      " 回合後，隨機對敵人造成 #b",
+      "本回合結束時，隨機對敵人造成 #b",
+      " 點傷害 #b6 次。"
+    ]
+  },
+  "expansioncontent:VexVinciblePower": {
+    "NAME": "堅不可摧",
+    "DESCRIPTIONS": [
+      "本回合最多失去 #b",
+      " 點生命。承傷達上限後，失去本效果。",
+      "本回合最多失去 #b",
+      " 點生命。承傷達上限後，失去本效果 #b1 層。還剩 #b",
+      " 層。"
+    ]
+  }
+}

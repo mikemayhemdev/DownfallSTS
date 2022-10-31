@@ -1,9 +1,11 @@
 package theHexaghost.cards;
 
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
+import theHexaghost.powers.EnhancePower;
 import theHexaghost.powers.HexalevelPower;
 
 public class HexaLevel extends AbstractHexaCard {
@@ -12,23 +14,26 @@ public class HexaLevel extends AbstractHexaCard {
 
     //stupid intellij stuff POWER, SELF, RARE
 
-    private static final int MAGIC = 1;
+    private static final int MAGIC = 2;
 
     public HexaLevel() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        tags.add(BaseModCardTags.FORM);
+        HexaMod.loadJokeCardImage(this, "HexaLevel.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new HexalevelPower(magicNumber));
+        if (upgraded) applyToSelf(new EnhancePower(magicNumber));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            isInnate = true;
+
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

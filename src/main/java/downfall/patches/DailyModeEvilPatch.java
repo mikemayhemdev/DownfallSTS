@@ -45,8 +45,8 @@ public class DailyModeEvilPatch {
                 char_x += center_mod_offset_x;
             }
             //Uncomment to re-randomize dailies whenever you enter the screen.
-            long todaySeed = MathUtils.random(0, TimeHelper.daySince1970());
-            ModHelper.setTodaysMods(todaySeed, __result.todaysChar.chosenClass);// 315
+           // long todaySeed = MathUtils.random(0, TimeHelper.daySince1970());
+           // ModHelper.setTodaysMods(todaySeed, __result.todaysChar.chosenClass);// 315
         }
     }
 
@@ -83,12 +83,12 @@ public class DailyModeEvilPatch {
 
                 sb.setColor(Color.WHITE);
                 if (img != null) {
-                    sb.draw(img, header_x + mode_offset_x * Settings.scale, Settings.HEIGHT / 2.0F + 160.0F * Settings.scale, 128.0F * Settings.scale, 128.0F * Settings.scale);
+                    sb.draw(img, header_x + mode_offset_x, Settings.HEIGHT / 2.0F + 160.0F * Settings.scale, 128.0F * Settings.scale, 128.0F * Settings.scale);
                 }
 
                 FontHelper.renderSmartText(sb, FontHelper.charDescFont, builder
 
-                        .toString(), char_x + mode_offset_x * Settings.scale, Settings.HEIGHT / 2.0F + 250F * Settings.scale, 9999.0F, 30.0F * Settings.scale, Settings.CREAM_COLOR);
+                        .toString(), char_x + mode_offset_x, Settings.HEIGHT / 2.0F + 250F * Settings.scale, 9999.0F, 30.0F * Settings.scale, Settings.CREAM_COLOR);
             }
         }
     }

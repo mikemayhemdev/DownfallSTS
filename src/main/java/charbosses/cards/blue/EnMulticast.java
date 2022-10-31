@@ -22,9 +22,7 @@ public class EnMulticast extends AbstractBossCard {
     }
 
     public EnMulticast() {
-        super(ID, cardStrings.NAME, "blue/skill/multicast", 2, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.RARE, CardTarget.NONE, AbstractMonster.Intent.BUFF);
-        cost = 2;
-        this.showEvokeValue = true;
+        this(2);
     }
 
     public EnMulticast(int inCost) {

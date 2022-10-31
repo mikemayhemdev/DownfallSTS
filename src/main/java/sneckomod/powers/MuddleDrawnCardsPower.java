@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class MuddleDrawnCardsPower extends TwoAmountPower implements CloneablePowerInterface {
 

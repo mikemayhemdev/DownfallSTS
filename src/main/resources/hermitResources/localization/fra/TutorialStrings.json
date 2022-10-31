@@ -1,0 +1,54 @@
+{
+  "HermitMod:HermitTutorials": {
+    "TEXT": [
+      "L'Ermite est capable d'utiliser des cartes #yDans #yLe #yMille. NL NL Les cartes #yDans #yle #yMille déclenchent leurs effets spéciaux lorsqu'elles sont situées au milieu de votre main.",
+      "Dans les mains paires, les #ydeux cartes au milieu comptent pour l'effet, même si ce sont les seules cartes que vous avez en main."
+    ],
+    "LABEL": [
+      "Suivant",
+      "Compris",
+      "Dans le Mille",
+      "(Page: ",
+      ")"
+    ]
+  },
+  "HermitMod:GuardianTutorials": {
+    "TEXT": [
+      "Le Gardien peut s'Enrouler lorsqu'il a atteint un certain taux de Renforcement.",
+      "Il peut également introduire des Gemmes dans certaines cartes dans le but d'augmenter leurs effets."
+    ],
+    "LABEL": [
+      "Suivant",
+      "Compris",
+      "Le Guardien",
+      "(Page: ",
+      ")"
+    ]
+  },
+  "HermitMod:HexaghostTutorials": {
+    "TEXT": [
+      "L'Hexaplasme canalise l'énergie en Alimentant ses Flammes.",
+      "Effectuez une certaine action pendant que chacune est Active pour la Charger."
+    ],
+    "LABEL": [
+      "Suivant",
+      "Compris",
+      "L'Hexaplasme",
+      "(Page: ",
+      ")"
+    ]
+  },
+  "HermitMod:CharbossTutorials": {
+    "TEXT": [
+      "Les Héros ennemis ont des capacités puissantes qui peuvent vous obliger à modifier vos stratégies.",
+      "Assurez-vous de toujours vérifier les buffs d'un héros avant de combattre."
+    ],
+    "LABEL": [
+      "Suivant",
+      "Compris",
+      "Les Spire Slayers",
+      "(Page: ",
+      ")"
+    ]
+  }
+}

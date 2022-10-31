@@ -36,10 +36,10 @@
     }
     
    private static void loadanimation(float timeScale){
-     Atlas = new TextureAtlas(Gdx.files.internal(reskinContent.assetPath("img/Slimebound/vfx/slimed_the_screen.atlas")));
+     Atlas = new TextureAtlas(Gdx.files.internal(reskinContent.assetPath("img/Slimebound/Slaifu/vfx/slimed_the_screen.atlas")));
      SkeletonJson json = new SkeletonJson(Atlas);
      json.setScale(Settings.scale / 1.0F);
-     Data = json.readSkeletonData(Gdx.files.internal(reskinContent.assetPath("img/Slimebound/vfx/slimed_the_screen.json")));
+     Data = json.readSkeletonData(Gdx.files.internal(reskinContent.assetPath("img/Slimebound/Slaifu/vfx/slimed_the_screen.json")));
 
 
      Skeleton = new Skeleton(Data);

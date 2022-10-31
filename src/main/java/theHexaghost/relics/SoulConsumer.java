@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.BurnPower;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 import static theHexaghost.HexaMod.makeRelicOutlinePath;
 import static theHexaghost.HexaMod.makeRelicPath;
@@ -39,7 +39,7 @@ public class SoulConsumer extends CustomRelic {
         if (this.activated) {
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));// 44
-            this.addToBot(new HealAction(AbstractDungeon.player, AbstractDungeon.player, 2));
+              AbstractDungeon.player.heal(4, true);
             this.img = TextureLoader.getTexture(makeRelicPath("SoulConsumer.png"));
             this.activated = false;
         }

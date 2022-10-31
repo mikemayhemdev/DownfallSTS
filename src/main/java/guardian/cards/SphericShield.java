@@ -24,10 +24,10 @@ public class SphericShield extends AbstractGuardianCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 3;
+    private static final int COST = 2;
 
     //TUNING CONSTANTS
-    private static final int TURNS = 2;
+    private static final int TURNS = 20;
     private static final int BLOCK = 15;
     private static final int UPGRADETURNS = 1;
     private static final int SOCKETS = 0;
@@ -58,10 +58,8 @@ public class SphericShield extends AbstractGuardianCard {
         super.use(p, m);
         AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.BorderFlashEffect(com.badlogic.gdx.graphics.Color.GOLD, true));
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BlurPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveMode.STANCE_ID));
-
+        brace(magicNumber);
     }
 
     public AbstractCard makeCopy() {
@@ -71,7 +69,8 @@ public class SphericShield extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADETURNS);
+            upgradeBlock(5);
+            upgradeMagicNumber(10);
         }
     }
 

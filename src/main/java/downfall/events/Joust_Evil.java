@@ -64,11 +64,15 @@ public class Joust_Evil extends AbstractImageEvent {
                     case 0:
                         this.joustTimer = 0.01F;// 97
                         if (AbstractDungeon.cardRandomRng.randomBoolean()) {
-                            AbstractDungeon.player.damage(new DamageInfo(null, (int) (AbstractDungeon.player.maxHealth * 0.3), DamageInfo.DamageType.HP_LOSS));
+                            int damage = (int) (AbstractDungeon.player.maxHealth * 0.3);
+                            AbstractDungeon.player.damage(new DamageInfo(null, damage, DamageInfo.DamageType.HP_LOSS));
+                            logMetricTakeDamage(ID, "Fought Strong Knight", damage);
                             imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
                         } else {
-                            AbstractDungeon.effectList.add(new RainingGoldEffect(200));
-                            AbstractDungeon.player.gainGold(200);
+                            int gold = 200;
+                            AbstractDungeon.effectList.add(new RainingGoldEffect(gold));
+                            AbstractDungeon.player.gainGold(gold);
+                            logMetricGainGold(ID, "Killed Strong Knight", gold);
                             imageEventText.updateBodyText(DESCRIPTIONSALT[2]);
                         }
                         break;
@@ -76,17 +80,22 @@ public class Joust_Evil extends AbstractImageEvent {
                         this.joustTimer = 0.01F;// 97
                         int x = AbstractDungeon.cardRandomRng.random(100);
                         if (x < 25) {
-                            AbstractDungeon.player.damage(new DamageInfo(null, (int) (AbstractDungeon.player.maxHealth * 0.15), DamageInfo.DamageType.HP_LOSS));
+                            int damage = (int) (AbstractDungeon.player.maxHealth * 0.15);
+                            AbstractDungeon.player.damage(new DamageInfo(null, damage, DamageInfo.DamageType.HP_LOSS));
+                            logMetricTakeDamage(ID, "Fought Weak Knight", damage);
                             imageEventText.updateBodyText(DESCRIPTIONSALT[3]);
                         } else {
-                            AbstractDungeon.effectList.add(new RainingGoldEffect(100));
-                            AbstractDungeon.player.gainGold(100);
+                            int gold = 100;
+                            AbstractDungeon.effectList.add(new RainingGoldEffect(gold));
+                            AbstractDungeon.player.gainGold(gold);
+                            logMetricGainGold(ID, "Killed Weak Knight", gold);
                             imageEventText.updateBodyText(DESCRIPTIONSALT[4]);
                         }
                         break;
                     default:
                         this.imageEventText.updateDialogOption(0, OPTIONS[7]);// 75
                         this.imageEventText.clearRemainingOptions();// 76
+                        logMetricIgnored(ID);
                         this.openMap();// 77
                 }
                 this.imageEventText.updateDialogOption(0, OPTIONS[7]);

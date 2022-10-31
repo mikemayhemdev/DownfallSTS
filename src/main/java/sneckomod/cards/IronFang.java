@@ -3,6 +3,7 @@ package sneckomod.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
@@ -13,22 +14,12 @@ public class IronFang extends AbstractSneckoCard {
 
     public final static String ID = makeID("IronFang");
 
-    //stupid intellij stuff ATTACK, SELF_AND_ENEMY, COMMON
-
-    private static final int DAMAGE = 7;
-    private static final int UPG_DAMAGE = 2;
-
-    private static final int BLOCK = 7;
-    private static final int UPG_BLOCK = 2;
-
-    private static final int MAGIC = 3;
-
     public IronFang() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
-        baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = MAGIC;
-        baseSilly = silly = MAGIC;
+        baseDamage = 8;
+        baseBlock = 8;
+        baseMagicNumber = magicNumber = 3;
+        baseSilly = silly = 3;
         tags.add(SneckoMod.RNG);
     }
 
@@ -71,16 +62,19 @@ public class IronFang extends AbstractSneckoCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY), 0.3F));// 117
-        atb(new NoApplyRandomDamageAction(m, silly, damage, 1, AbstractGameAction.AttackEffect.NONE, this));
         atb(new GainBlockAction(p, getRandomNum(magicNumber, block, this)));
+        atb(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY), 0.3F));// 117
+        atb(new NoApplyRandomDamageAction(m, silly, damage, 1, AbstractGameAction.AttackEffect.NONE, this, DamageInfo.DamageType.NORMAL));
+
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPG_DAMAGE);
-            upgradeBlock(UPG_BLOCK);
+            upgradeSilly(2);
+            upgradeDamage(2);
+            upgradeMagicNumber(2);
+            upgradeBlock(2);
         }
     }
 }

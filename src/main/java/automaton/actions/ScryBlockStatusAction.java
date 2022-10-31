@@ -1,6 +1,7 @@
 package automaton.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -62,6 +63,8 @@ public class ScryBlockStatusAction extends AbstractGameAction {
                     if (c.type == AbstractCard.CardType.STATUS) {
                         addToBot(new GainBlockAction(AbstractDungeon.player, blockPerCard));
                     }
+                    addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile));
+
                 }
 
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();

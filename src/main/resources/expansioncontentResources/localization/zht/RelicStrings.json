@@ -1,0 +1,9 @@
+{
+  "expansioncontent:StudyCardRelic": {
+    "NAME": "袖珍圓頂禮帽",
+    "FLAVOR": "誰掌控了這頂禮帽，誰就掌控了這座尖塔！",
+    "DESCRIPTIONS": [
+      "戰鬥開始時，將一張耗能為 #b0 的 #y研究尖塔 加入手牌。"
+    ]
+  }
+}

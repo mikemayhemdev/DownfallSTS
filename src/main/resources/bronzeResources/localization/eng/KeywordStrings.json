@@ -5,7 +5,7 @@
       "encode",
       "encoded"
     ],
-    "DESCRIPTION": "Add a card to the Sequence. NL When 3 cards are in the Sequence, their effects (other than Encode) are Compiled into a Function with cost equal to the highest cost card in the Sequence."
+    "DESCRIPTION": "Encode a card. NL When 3 cards are Encoded, their effects (other than Encode) are merged into a Function that costs #b1."
   },
   {
     "PROPER_NAME": "Compile",
@@ -13,7 +13,7 @@
       "compile",
       "compiled"
     ],
-    "DESCRIPTION": "An additional effect that triggers when this card, while in the Sequence, is combined into a Function."
+    "DESCRIPTION": "An effect that triggers when this card is merged into a Function. NL Can be a negative effect, which is referred to as an 'Error'."
   },
   {
     "PROPER_NAME": "Blur",
@@ -27,6 +27,13 @@
     "NAMES": [
       "insert"
     ],
-    "DESCRIPTION": "Add a card to your draw pile."
+    "DESCRIPTION": "Shuffle a card into your draw pile."
+  },
+  {
+    "PROPER_NAME": "Cycle",
+    "NAMES": [
+      "cycle"
+    ],
+    "DESCRIPTION": "Discard a card, drawing a new card to replace it."
   }
 ]

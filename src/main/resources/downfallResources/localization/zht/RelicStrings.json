@@ -1,0 +1,540 @@
+{
+  "downfall:NeowBlessing": {
+    "NAME": "涅奧的祝福",
+    "FLAVOR": "放下你的怒火。像尖塔一樣堅韌不屈。",
+    "DESCRIPTIONS": [
+      "替換初始遺物。拾起時，根據你的牌組獲得額外最大生命值。失去所有藥水欄位，每回合開始時少抽 #b2 張牌並失去 ",
+	  " 。 NL 戰鬥開始時獲得特殊效果。"
+    ]
+  },
+  "downfall:NeowBlessing_Player": {
+    "NAME": "涅奧的祝福",
+    "FLAVOR": "放下你的怒火。像尖塔一樣堅韌不屈。",
+    "DESCRIPTIONS": [
+      "拾起時，根據你的牌組獲得額外最大生命值。失去所有藥水欄位，每回合開始時少抽 #b2 張牌並失去 [E] 。 NL 戰鬥開始時獲得特殊效果。"
+    ]
+  },
+  "downfall:CoffeeDripper": {
+    "DESCRIPTIONS": [
+      " NL 不能夠休息，Boss的最大生命變少。"
+    ]
+  },
+  "downfall:BustedCrown": {
+    "DESCRIPTIONS": [
+      " NL 不能獲得其他牌，Boss的牌組配合比正常時少。"
+    ]
+  },
+  "downfall:Girya": {
+    "DESCRIPTIONS": [
+      " NL 篝火能夠選擇舉重，Boss的最大生命變少。"
+    ]
+  },
+  "downfall:Matroyshka": {
+    "DESCRIPTIONS": [
+      " NL Boss額外獲得了 ",
+      " 件遺物。"
+    ]
+  },
+  "downfall:Ectoplasm": {
+    "DESCRIPTIONS": [
+      " NL 不能獲得金幣，Boss的牌組比正常時少移除 ",
+      " 張牌。"
+    ]
+  },
+  "downfall:BlackStar": {
+    "DESCRIPTIONS": [
+      " NL Boss額外獲得了 ",
+      " 件遺物，但最大生命變少。"
+    ]
+  },
+  "downfall:MoltenEgg": {
+    "DESCRIPTIONS": [
+      " NL Boss從這件遺物中升級了 ",
+      " 張攻擊牌。"
+    ]
+  },
+  "downfall:ToxicEgg": {
+    "DESCRIPTIONS": [
+      " NL Boss從這件遺物中升級了 ",
+      " 張技能牌。"
+    ]
+  },
+  "downfall:FrozenEgg": {
+    "DESCRIPTIONS": [
+      "Boss有很多張已升級的能力牌。"
+    ]
+  },
+  "downfall:Shovel": {
+    "DESCRIPTIONS": [
+      " NL Boss額外獲得了 ",
+      " 件遺物，但因為缺少休息最大生命變少。"
+    ]
+  },
+  "downfall:CBRSerpentHead": {
+    "DESCRIPTIONS": [
+      " NL Boss使用這些金幣移除了2張牌。"
+    ]
+  },
+  "downfall:CursedKey": {
+    "DESCRIPTIONS": [
+      " NL Boss從這件遺物中獲得了 ",
+      " 張詛咒。"
+    ]
+  },
+  "downfall:DreamCatcher": {
+    "DESCRIPTIONS": [
+      " NL Boss休息時獲得了額外的牌。"
+    ]
+  },
+  "downfall:PrayerWheel": {
+    "DESCRIPTIONS": [
+      " NL Boss從這件遺物中額外獲得了 ",
+      " 張牌。"
+    ]
+  },
+  "downfall:PeacePipe": {
+    "DESCRIPTIONS": [
+      " NL Boss移除了 ",
+      " 張牌，但最大生命變少"
+    ]
+  },
+  "downfall:RunicDome": {
+    "DESCRIPTIONS": [
+      " NL Boss可能不根據習慣出牌。"
+    ]
+  },
+  "downfall:CentennialPuzzle": {
+    "DESCRIPTIONS": [
+      " NL 不能在boss的回合觸發。"
+    ]
+  },
+  "downfall:CBRFaceOfCleric": {
+    "DESCRIPTIONS": [
+      " 這件遺物提高了最大生命。"
+    ]
+  },
+  "downfall:Omamori": {
+    "DESCRIPTIONS": [
+      " NL 阻止boss獲得一張 "
+    ]
+  },
+  "downfall:DollysMirror": {
+    "DESCRIPTIONS": [
+      " NL 鏡子復製了 "
+    ]
+  },
+  "downfall:Vampires": {
+    "NAME": "事件: 吸血鬼",
+    "FLAVOR": "主人的血……主人的血！主 人 的 血！！",
+    "DESCRIPTIONS": [
+      "打擊被替換為噬咬。 NL 失去 ",
+      " 最大生命。"
+    ]
+  },
+  "downfall:BonfireSpirits": {
+    "NAME": "事件: 篝火精靈",
+    "FLAVOR": "精靈們將小小的骨頭和不知什麽碎片丟進火中，每一次都會爆發出炫目的火焰……",
+    "DESCRIPTIONS": [
+      "Boss從牌組中移除了一張牌並獲得了10點最大生命。"
+    ]
+  },
+  "downfall:DesignerInSpire": {
+    "NAME": "事件: 「尖端」設計師",
+    "FLAVOR": "不行不行，這怎麽能行呢。哎呀，你這算是什麽風格？令人作嘔！什麽，你還流流、流著血？哎呀好惡心啊。",
+    "DESCRIPTIONS": [
+      "移除了一張牌，升級了一張牌。"
+    ]
+  },
+  "downfall:DivineFountain": {
+    "NAME": "事件: 神聖泉水",
+    "FLAVOR": "你經過墻壁上的一處飲水池，裏面流淌著源源不斷閃著光的水。",
+    "DESCRIPTIONS": [
+      " 移除所有詛咒牌。"
+    ]
+  },
+  "downfall:Duplicator": {
+    "NAME": "事件: 復製祭壇",
+    "FLAVOR": "在你面前是一個用來崇拜某種古老存在的華麗祭壇。",
+    "DESCRIPTIONS": [
+      "Boss復製了一張強力牌。"
+    ]
+  },
+  "downfall:BigFish": {
+    "NAME": "事件: 大魚",
+    "FLAVOR": "當你走過一條長廊時，你看見空中漂浮著一根香蕉，一個甜甜圈，和一個盒子。",
+    "DESCRIPTIONS": [
+      "選擇了甜甜圈。 NL 獲得5點最大生命。",
+      "選擇了盒子。 NL 獲得了一件遺物並被 #p詛咒-悔恨 。"
+    ]
+  },
+  "downfall:LivingWall": {
+    "NAME": "事件: 活墻壁",
+    "FLAVOR": "忘記你所知道的，我就讓你走。",
+    "DESCRIPTIONS": [
+      "Boss移除了一張 ",
+      "Boss升級了一張 ",
+      "Boss將 ",
+      " 變化為 "
+    ]
+  },
+  "downfall:WheelOfChange": {
+    "NAME": "事件: 變化大轉盤",
+    "FLAVOR": "是時候轉動轉盤了！你準備好了嗎？你當然準備好了！",
+    "DESCRIPTIONS": [
+      "轉盤讓給boss一件 ",
+      "Boss回復所有生命。",
+      "轉盤讓Boss移除了一張 ",
+      " 。",
+      "轉盤讓Boss受到了傷害。"
+    ]
+  },
+  "downfall:Falling": {
+    "NAME": "事件: 墜落",
+    "FLAVOR": "在摔下的途中，你開始考慮自己有什麽選擇……",
+    "DESCRIPTIONS": [
+      "打擊被移除出牌組。"
+    ]
+  },
+  "downfall:Augmenter": {
+    "NAME": "事件: 增益研究者",
+    "FLAVOR": "嘿陌生人，想不想試試高端的科技？",
+    "DESCRIPTIONS": [
+      "Boss變化了兩張牌。",
+      "Boss獲得了 J.A.X.",
+      "Boss獲得了突變之力。"
+    ]
+  },
+  "downfall:AncientWriting": {
+    "NAME": "事件: 古老文字",
+    "FLAVOR": "突然之間，文字的意義變得清晰了……",
+    "DESCRIPTIONS": [
+      "Boss升級了所有的打擊和防禦。"
+    ]
+  },
+  "downfall:Bandits": {
+    "NAME": "事件: 蒙面強盜",
+    "FLAVOR": "熊，給我上！！",
+    "DESCRIPTIONS": [
+      "Boss戰勝了強盜，獲得了紅面具，但是戰鬥開始時失去最大生命。"
+    ]
+  },
+  "downfall:WingStatue": {
+    "NAME": "事件: 翅膀雕像",
+    "FLAVOR": "在形狀不同的巨石之間，你看見一尊做工精細的翅膀形狀的藍色雕像。",
+    "DESCRIPTIONS": [
+      " 被移除出牌組。"
+    ]
+  },
+  "downfall:Serpent": {
+    "NAME": "事件： 蛇～",
+    "FLAVOR": "最幸福的人生當然就是什麽東西都能買得起的土豪生活了！你同意嗎？",
+    "DESCRIPTIONS": [
+      "Boss因為獲得了錢而被 #p詛咒-疑慮 。 NL 這些錢被用來買遺物。"
+    ]
+  },
+  "downfall:Cleric": {
+    "NAME": "事件: 牧師",
+    "FLAVOR": " 你好啊朋友！我是牧師！你想不想試試我的服務吶？！",
+    "DESCRIPTIONS": [
+      "Boss移除了牌組中的一張牌。"
+    ]
+  },
+  "downfall:OldBeggar": {
+    "NAME": "事件: 老乞丐",
+    "FLAVOR": "施舍點錢吧，孩子？",
+    "DESCRIPTIONS": [
+      "一張牌被移除出牌組。"
+    ]
+  },
+  "downfall:Library": {
+    "NAME": "事件: 圖書館",
+    "FLAVOR": "你經過一棟被遺棄的華美建築物。",
+    "DESCRIPTIONS": [
+      "Boss獲得了一張額外的配合卡。"
+    ]
+  },
+  "downfall:Mausoleum": {
+    "NAME": "事件: 陵墓",
+    "FLAVOR": "你辨認不出石棺上的字跡，但你能註意到有黑色的霧氣從石棺的兩側滲透出來。",
+    "DESCRIPTIONS": [
+      "Boss獲得了一件額外的遺物並被 #p詛咒-苦惱 。"
+    ]
+  },
+  "downfall:Nest": {
+    "NAME": "事件: 巢穴",
+    "FLAVOR": "哢 哢 哢哢!",
+    "DESCRIPTIONS": [
+      "Boss獲得了儀式匕首。"
+    ]
+  },
+  "downfall:Colosseum": {
+    "NAME": "事件: 競技場",
+    "FLAVOR": "那麽現在，就讓我們開始戰鬥！！！！",
+    "DESCRIPTIONS": [
+      "Boss完成了競技場事件，獲得了兩件額外的遺物。"
+    ]
+  },
+  "downfall:PleadingVagrant": {
+      "NAME": "事件: 浪漢的懇求",
+    "FLAVOR": "能給我點兒什麽嗎，朋友？ 求求你了……一點 #y小錢 就好？",
+    "DESCRIPTIONS": [
+      "Boss搶劫了流浪漢，被 #p詛咒-羞恥 並 "
+    ]
+  },
+  "downfall:Mushroom": {
+    "NAME": "事件: 蘑菇",
+    "FLAVOR": "你走進一條遍地是五彩斑斕蘑菇的走廊",
+    "DESCRIPTIONS": [
+      "Boss回滿血但是被 #p詛咒-寄生",
+      "Boss獲得了奇怪蘑菇,但是戰鬥開始時失去最大生命。"
+    ]
+  },
+  "downfall:ShiningLight": {
+    "NAME": "事件: 閃耀之光",
+    "FLAVOR": "你發現在房間中央圍繞著一束很粗的光柱 。",
+    "DESCRIPTIONS": [
+      "Boss升級了 ",
+      " 和 ",
+      "，但戰鬥開始時失去了最大生命。"
+    ]
+  },
+  "downfall:ScrapOoze": {
+    "NAME": "事件: 破爛軟泥",
+    "FLAVOR": "在你面前的是一個史萊姆狀的生物，它顯然是吃了太多的破銅爛鐵，消化不良了。",
+    "DESCRIPTIONS": [
+      "Boss額外獲得了一件遺物。"
+    ]
+  },
+  "downfall:GoldenIdolEvent": {
+    "NAME": "事件: 金神像",
+    "FLAVOR": "在祭壇上方，是一尊雙手伸出的精致女性雕像。她呼喚著你，要求你獻上祭品。",
+    "DESCRIPTIONS": [
+      "Boss拿走了金神像，被 #p詛咒-受傷 並用得來的錢買了"
+    ]
+  },
+  "downfall:FaceTrader": {
+    "NAME": "事件: 換臉商",
+    "FLAVOR": "你的臉。讓我碰碰？或者，想要交易？",
+    "DESCRIPTIONS": [
+      "Boss獲得隨機一件容貌遺物。"
+    ]
+  },
+  "downfall:OminousForge": {
+    "NAME": "事件: 邪惡熔爐",
+    "FLAVOR": "鐺！鐺！鐺！",
+    "DESCRIPTIONS": [
+      "Boss獲得了彎曲鐵鉗並被 #p詛咒-疼痛 。"
+    ]
+  },
+  "downfall:Purifier": {
+    "NAME": "事件: 凈化",
+    "FLAVOR": "在你面前是一個被遺忘神靈的精致神龕。",
+    "DESCRIPTIONS": [
+      " 從牌組中移除。"
+    ]
+  },
+  "downfall:MatchAndKeep": {
+    "NAME": "事件: 對對碰",
+    "FLAVOR": "十二張牌！搭對就拿走！五次機會，沒有重來！",
+    "DESCRIPTIONS": [
+      "Boss搭對了並獲得了一張強力的牌。"
+    ]
+  },
+  "downfall:Transmogrifier": {
+    "NAME": "事件: 轉化神龕",
+    "FLAVOR": "在你面前是一個被遺忘神靈的精致神龕。",
+    "DESCRIPTIONS": [
+      "Boss將一張初始牌轉化。"
+    ]
+  },
+  "downfall:TombRedMask": {
+    "NAME": "事件: 紅面具大人之墓",
+    "FLAVOR": "在一條懸浮道路的盡頭，你可以看見一處裝飾華麗的古墓。",
+    "DESCRIPTIONS": [
+      "Boss獲得了紅面具。"
+    ]
+  },
+  "downfall:UpgradeShrine": {
+    "NAME": "事件： 升級神龕",
+    "FLAVOR": "在你面前是一個被遺忘神靈的精致神龕。",
+    "DESCRIPTIONS": [
+      "Boss在升級神龕中 #y升級 了一張牌。"
+    ]
+  },
+  "downfall:WeMeetAgain": {
+    "NAME": "事件: 我們又見面了",
+    "FLAVOR": "是我，蘭偉德啊！所以今天有什麽好東西給我嗎？和往常一樣？哎呀呀，像我這樣的人，獨自一個可實在不好混啊，對不對？",
+    "DESCRIPTIONS": [
+      "給了蘭偉德一些金幣換取了一件遺物。 "
+    ]
+  },
+  "downfall:GoldenShrine": {
+    "NAME": "事件: 金色神龕",
+    "FLAVOR": "在你面前是一座古老神靈的精巧神龕。",
+    "DESCRIPTIONS": [
+      "Boss為了獲得金錢被 #p詛咒-悔恨 。它用這些錢去買了 "
+    ]
+  },
+  "downfall:GremlinSack": {
+    "NAME": "地精戰利品",
+    "FLAVOR": "You were no match for the Gremlin and his bodyguard.",
+    "DESCRIPTIONS": [
+      "拾起時，將下列牌加入你的牌組： ",
+      "拾起時，將#b6張對對碰牌加入你的牌組。",
+      "#g（初始牌） ",
+      "#g（普通牌） ",
+      "#b（罕見牌） ",
+      "#y（稀有牌） ",
+      "#b（無色牌） ",
+      "#r（詛咒牌） "
+    ]
+  },
+  "downfall:GremlinWheel": {
+    "NAME": "變化大轉盤",
+    "FLAVOR": "「不能反悔」，他說。",
+    "DESCRIPTIONS": [
+      "在休息處，你能轉一次轉盤。獲得獎勵時將會耗盡本遺物效果。",
+      "這個遺物的效果已經耗盡。"
+    ]
+  },
+  "downfall:CloakOfManyFaces": {
+    "NAME": "眾臉大衣",
+    "FLAVOR": "這是史蒂夫、比利、伊恩、弗雷德、約翰……",
+    "DESCRIPTIONS": [
+      "拾起時，獲得邪教徒頭套、牧師的臉、恩洛斯的饑餓的臉、地精容貌、蛇的頭。"
+    ]
+  },
+  "downfall:BrokenWingStatue": {
+    "NAME": "破碎的翅膀雕像",
+    "FLAVOR": "一座曾經宏偉的雕像的殘缺部分。",
+    "DESCRIPTIONS": [
+      "崇拜覺醒者的邪教徒會對此感興趣。"
+    ]
+  },
+  "downfall:ShatteredFragment": {
+    "NAME": "尖銳碎片",
+    "FLAVOR": "曾經破碎的雕像 - 如今打造成了武器。",
+    "DESCRIPTIONS": [
+      "每回合開始時，將一張 #y水晶小刀 加入手牌。"
+    ]
+  },
+  "downfall:RedIOU": {
+    "NAME": "強盜約定",
+    "FLAVOR": "跟紅面具強盜達成的約定 - 一部分是為了換取一件小飾物，但大部分是為了活命。",
+    "DESCRIPTIONS": [
+      "#b第三場 boss戰開始時，紅面具強盜將會幫助你。",
+      "該幹活了，夥計們！",
+      "熊，拿下他！",
+      "按照約定， NL 我們的任務結束了。",
+      "大家歡迎新的 NL ~紅面具大人!~",
+      "祝你好運，老大！"
+    ]
+  },
+  "downfall:RedIOUUpgrade": {
+    "NAME": "強盜約定+",
+    "FLAVOR": "跟紅面具強盜達成的約定 - 一部分是為了換取一件小飾物，但大部分是為了活命。",
+    "DESCRIPTIONS": [
+      "#b第三場 boss戰開始時，紅面具強盜將會幫助你。"
+    ]
+  },
+  "downfall:KnowingSkull": {
+    "NAME": "全知頭骨",
+    "FLAVOR": "放我下來！",
+    "DESCRIPTIONS": [
+      "每場戰鬥開始時，你能許願靈魂，成功或者來點喝的。"
+    ]
+  },
+  "downfall:HeartBlessingRed": {
+    "NAME": "紅寶石心臟的祝福",
+    "FLAVOR": "腐化之心很強大。它很欣慰。",
+    "DESCRIPTIONS": [
+      "每場戰鬥開始時獲得 #b1 點 #y力量 。"
+    ]
+  },
+  "downfall:HeartBlessingBlue": {
+    "NAME": "藍寶石心臟的祝福",
+    "FLAVOR": "心臟很欣慰。",
+    "DESCRIPTIONS": [
+      "拾起時，獲得 #b10 點最大生命值。"
+    ]
+  },
+  "downfall:HeartBlessingGreen": {
+    "NAME": "綠寶石心臟的祝福",
+    "FLAVOR": "心臟就是一切。",
+    "DESCRIPTIONS": [
+      "每場戰鬥開始時獲得 #b1 點 #y敏捷 。"
+    ]
+  },
+  "downfall:TeleportStone": {
+    "NAME": "傳送石",
+    "FLAVOR": "出門必備。",
+    "DESCRIPTIONS": [
+      "你下一次移動的時候可以跳過任意數量的房間。",
+      "",
+      "這個遺物的效果已經耗盡。"
+    ]
+  },
+  "downfall:HeartsMalice": {
+    "NAME": "心臟的怨恨",
+    "FLAVOR": "腐化之心的惡意。",
+    "DESCRIPTIONS": [
+      "前 #b3 場戰鬥的敵人將落荒而逃。",
+      "這個遺物的效果已經耗盡。"
+    ]
+  },
+    "downfall:Hecktoplasm": {
+    "NAME": "幽魂外質",
+    "FLAVOR": "這團黏液似乎伴隨著數百個靈魂的能量脈動。難怪沒人想要。",
+    "DESCRIPTIONS": [
+      "回合開始時獲得 [E] 。你不再能獲得 #y靈魂 ，但打碎鑰匙碎片將不消耗 #y靈魂 。"
+    ]
+  },
+  "downfall:replacements": {
+    "NAME": "",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "在商人、首領以及精英戰鬥中，回合開始時獲得 [E] 。",
+      "詛咒金幣",
+      "沒多少活人知道這枚古錢幣的真正價值...",
+      "MVB卡",
+      "事實上，你是尖塔的MVB: 最有價值的首領。",
+      "心臟的腐化四處蔓延 - 即使珍貴的寵物也不能幸免。",
+      "腐化送貨員",
+      "心臟的卡牌、遺物和藥水不再會售罄，並且所有商品打折 #b20% 。",
+      "卡牌獎勵將包含無色牌以及原版四色牌。",
+      "回合開始時獲得 [E] 。你不再能獲得 #y靈魂 ，但打碎鑰匙碎片將不消耗 #y靈魂 。"
+    ]
+  },
+  "downfall:LizardTail": {
+    "NAME": "真蜥蜴尾巴",
+    "FLAVOR": "在戰鬥中可以用來騙過敵人的假尾巴。",
+    "DESCRIPTIONS": [
+      "當你要被殺死時，免死並回復到最大生命值的 #b100% （僅能起效一次）。"
+    ]
+  },
+  "downfall:TestRelic": {
+    "NAME": "VFX Tester",
+    "FLAVOR": "When it index oobs, you did it.",
+    "DESCRIPTIONS": [
+      "#pRight #pClick: Play the next card."
+    ]
+  },
+  "downfall:ExtraCursedBell": {
+    "NAME": "召喚鈴鐺",
+    "FLAVOR": "這個黑鐵鈴鐺在你找到它時作響了3次，但現在它已經不再響了。",
+    "DESCRIPTIONS": [
+      "拾起時，獲得 #b2 張獨特的 #r詛咒 和 #b3 件 #y遺物 。",
+      "鈴鐺再次鳴響……",
+      "跳過獎勵",
+      "關閉"
+    ]
+  },
+  "downfall:ExtraCursedKey": {
+    "NAME": "詛咒鑰匙",
+    "FLAVOR": "你能感到這把鑰匙上散發出邪惡的能量。力量總是需要付出代價的。",
+    "DESCRIPTIONS": [
+      "回合開始時獲得 [E] 。打開非首領寶箱時，獲得 #b2 張 #r詛咒 。",
+      ""
+    ]
+  }
+}

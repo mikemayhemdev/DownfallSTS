@@ -27,16 +27,7 @@ public class CleanCodePower extends AbstractAutomatonPower implements PreCardCom
         }
         for (AbstractCard q : FunctionHelper.held.group) {
             if (q.hasTag(AutomatonMod.BAD_COMPILE) && q instanceof AbstractBronzeCard) {
-                if (q.rawDescription.contains(" NL bronze:Compile")) {
-                    String[] splitText = q.rawDescription.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
-                    String compileText = splitText[1] + splitText[2];
-                    q.rawDescription = q.rawDescription.replaceAll(compileText, "");
-                }
-                else if (q.rawDescription.contains("bronze:Compile")) { // This specifically triggers for cards that only have Compile effects.
-                    q.rawDescription = ""; // It's over!! If you only have Compile effects, you're gone!!!!!
-                }
-                q.initializeDescription();
-                ((AbstractBronzeCard) q).doSpecialCompileStuff = false;
+                ((AbstractBronzeCard) q).turnOffCompileStuff();
             }
         }
     }

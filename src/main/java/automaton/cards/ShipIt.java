@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,6 +23,7 @@ public class ShipIt extends AbstractBronzeCard {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
+        AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("ShipIt.png"));
     }
 
     public static int countCards() {
@@ -46,6 +48,15 @@ public class ShipIt extends AbstractBronzeCard {
         }
 
         var1 = AbstractDungeon.player.discardPile.group.iterator();
+
+        while (var1.hasNext()) {
+            c = (AbstractCard) var1.next();
+            if (c.type == CardType.STATUS) {
+                ++count;
+            }
+        }
+
+        var1 = AbstractDungeon.player.exhaustPile.group.iterator();
 
         while (var1.hasNext()) {
             c = (AbstractCard) var1.next();

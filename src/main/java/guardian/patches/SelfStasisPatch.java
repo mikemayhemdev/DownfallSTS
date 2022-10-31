@@ -38,7 +38,7 @@ public class SelfStasisPatch {
         @SpirePostfixPatch
         public static void awayItGoes(UseCardAction __instance, AbstractCard card, AbstractCreature target)
         {
-            if (card.hasTag(GuardianMod.SELFSTASIS) || card.hasTag(GuardianMod.SELFSTASISONCE))
+            if (!card.purgeOnUse && (card.hasTag(GuardianMod.SELFSTASIS) || card.hasTag(GuardianMod.SELFSTASISONCE)))
             {
                 card.tags.remove(GuardianMod.SELFSTASISONCE);
 

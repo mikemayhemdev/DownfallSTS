@@ -14,6 +14,8 @@ import guardian.actions.PlaceActualCardIntoStasis;
 import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class ShieldCharger extends AbstractGuardianCard implements InStasisCard {
     public static final String ID = GuardianMod.makeID("ShieldCharger");
     public static final String NAME;
@@ -27,8 +29,8 @@ public class ShieldCharger extends AbstractGuardianCard implements InStasisCard 
     private static final int COST = 2;
 
     //TUNING CONSTANTS
-    private static final int BLOCK = 8;
-    private static final int UPGRADE_BLOCK = 3;
+    private static final int BLOCK = 10;
+    private static final int UPGRADE_BLOCK = 2;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
@@ -52,8 +54,10 @@ public class ShieldCharger extends AbstractGuardianCard implements InStasisCard 
         this.tags.add(GuardianMod.VOLATILE);
         this.tags.add(GuardianMod.SELFSTASIS);
         this.socketCount = SOCKETS;
+        this.baseMagicNumber = this.magicNumber = 4;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("ShieldCharger.png"));
 
     }
 
@@ -69,6 +73,7 @@ public class ShieldCharger extends AbstractGuardianCard implements InStasisCard 
         if (!this.upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_BLOCK);
+            upgradeMagicNumber(2);
         }
     }
 
@@ -87,7 +92,8 @@ public class ShieldCharger extends AbstractGuardianCard implements InStasisCard 
     @Override
     public void onStartOfTurn(StasisOrb orb) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
-        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+       // AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+        brace(magicNumber);
     }
 
     @Override

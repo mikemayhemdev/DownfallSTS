@@ -1,11 +1,11 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.util.OnTechniqueSubscriber;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class MurderStrike extends AbstractChampCard {
@@ -14,26 +14,28 @@ public class MurderStrike extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, rare
 
-    private static final int DAMAGE = 15;
+    private static final int DAMAGE = 8;
 
     public MurderStrike() {
-        super(ID, 8, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         selfRetain = true;
-        exhaust = true;
+      //  exhaust = true;
         tags.add(CardTags.STRIKE);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
+        postInit();
     }
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
         super.onPlayCard(c, m);
-        if (c.hasTag(ChampMod.TECHNIQUE)) {
-            if (cost > 0) {
-                updateCost(-1);
+        if (c.type == CardType.SKILL && AbstractDungeon.player.hand.group.contains(this)) {
+            {
+              //  updateCost(-1);
                 baseDamage += magicNumber;
                 applyPowers();
                 superFlash(Color.RED.cpy());
+
             }
         }
     }
@@ -43,14 +45,6 @@ public class MurderStrike extends AbstractChampCard {
     }
 
     public void upp() {
-        if (this.cost < 10) {
-            this.upgradeBaseCost(this.cost - 2);
-            if (this.cost < 0) {
-                this.cost = 0;
-            }
-        } else {
-            this.upgradeBaseCost(5);
-        }
-        this.upgradeDamage(9);
+        upgradeMagicNumber(1);
     }
 }

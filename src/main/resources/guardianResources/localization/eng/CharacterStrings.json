@@ -9,7 +9,7 @@
       "[ guardianmod:Socket ]",
       "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~ancient~ ~protector,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~",
       "Defensive Mode",
-      "You have #b3 #yThorns and gain #b2 #yBlock whenever you play a card. Exit this Stance at the start of your next turn.",
+      "You have #b3 #yThorns, gain #b10 #yBlock at the start of your turn, and your Block does not expire.",
       "~ERROR:~ #rStasis in progress."
     ],
     "KEYWORDS": [

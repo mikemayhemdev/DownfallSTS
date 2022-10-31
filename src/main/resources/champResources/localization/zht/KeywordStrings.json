@@ -1,0 +1,77 @@
+[
+  {
+    "PROPER_NAME": "技術",
+    "NAMES": [
+      "technique",
+      "技術",
+      "champ:[crown_icon]",
+      "[crown_icon]"
+    ],
+    "DESCRIPTION": "處於 #y姿態 時，打出 #y技能 牌就獲得 該 #y姿態 的 #y技術 獎勵。每次進入 #y姿態 後最多觸發 #b3 次(牌面 #y技術 效果不受限製)。"
+  },
+  {
+    "PROPER_NAME": "連段",
+    "NAMES": [
+      "連段",
+      "combo"
+    ],
+    "DESCRIPTION": "處於特定 #y姿態 才觸發效果。"
+  },
+  {
+    "PROPER_NAME": "終結技",
+    "NAMES": [
+      "終結技",
+      "[fist_icon]",
+      "champ:[fist_icon]"
+    ],
+    "DESCRIPTION": "打出 #y終結技 後，退出當前 #y姿態 並觸發其 #y終結技 效果 。"
+  },
+  {
+    "PROPER_NAME": "反擊",
+    "NAMES": [
+      "counter",
+      "反擊"
+    ],
+    "DESCRIPTION": "下次被 #y攻擊 時，失去所有 #y反擊 並對攻擊者造成層數點傷害。"
+  },
+  {
+    "PROPER_NAME": "防守",
+    "NAMES": [
+      "防守",
+      "defensive"
+    ],
+    "DESCRIPTION": "#y姿態 ： NL #y技術 -獲得 #b3 層 #y反擊 。 NL #y終結技 -獲得 #b10 點 #y格擋 。"
+  },
+  {
+    "PROPER_NAME": "戰狂",
+    "NAMES": [
+      "戰狂",
+      "berserker"
+    ],
+    "DESCRIPTION": "#y姿態 ： NL #y技術 -獲得 #b2 層 #y活力 。 NL #y終結技 -獲得 #b1 點 #y力量 。"
+  },
+  {
+    "PROPER_NAME": "角鬥",
+    "NAMES": [
+      "角鬥",
+      "gladiator"
+    ],
+    "DESCRIPTION": "棄用"
+  },
+  {
+    "PROPER_NAME": "終極",
+    "NAMES": [
+      "ultimate",
+      "終極"
+    ],
+    "DESCRIPTION": "#y姿態 。 NL 視為同時處於 #y戰狂 和 #y防守 。持續時間內打出 #y終結技 將重新進入 #y終極 。"
+  },
+  {
+    "PROPER_NAME": "疲勞",
+    "NAMES": [
+      "疲勞",
+      "fatigue"
+    ],
+    "DESCRIPTION": "失去生命。 NL 戰鬥結束時，回復因 #y疲勞 失去的生命。 NL 你不會死於 #y疲勞 。"
+  }
+]

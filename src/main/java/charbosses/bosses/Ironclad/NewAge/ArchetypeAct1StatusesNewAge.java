@@ -1,16 +1,23 @@
 package charbosses.bosses.Ironclad.NewAge;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.colorless.EnDramaticEntrance;
 import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnDoubt;
 import charbosses.cards.curses.EnIcky;
+import charbosses.cards.curses.EnMalfunctioning;
 import charbosses.cards.red.*;
 import charbosses.cards.status.EnBurn;
 import charbosses.cards.status.EnDazed;
 import charbosses.cards.status.EnWound;
+import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
+import charbosses.powers.bossmechanicpowers.DefectVoidPower;
+import charbosses.powers.bossmechanicpowers.IroncladStatusPower;
 import charbosses.relics.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
@@ -24,11 +31,18 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
 
     public ArchetypeAct1StatusesNewAge() {
         super("IC_STATUS_ARCHETYPE", "Status");
-        bossMechanicName = bossMechanicString.DIALOG[24];
-        bossMechanicDesc = bossMechanicString.DIALOG[25];
 
-        maxHPModifier += 70;
+        maxHPModifier += 80;
         actNum = 1;
+        bossMechanicName = IroncladStatusPower.NAME;
+        bossMechanicDesc = IroncladStatusPower.DESC[0];
+    }
+
+    @Override
+    public void addedPreBattle() {
+        super.addedPreBattle();
+        AbstractCreature p = AbstractCharBoss.boss;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IroncladStatusPower(p)));
     }
 
     public void initialize() {
@@ -57,13 +71,13 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
             switch (turn) {
                 case 0:
                     addToList(cardsList, new EnBash());
-                    addToList(cardsList, new EnDramaticEntrance());
+                    addToList(cardsList, new EnMalfunctioning());
                     addToList(cardsList, new EnDoubt());
                     turn++;
                     break;
                 case 1:
                     addToList(cardsList, new EnRecklessCharge());
-                    addToList(cardsList, new EnWildStrike());
+                    addToList(cardsList, new EnWildStrike(), extraUpgrades);
                     addToList(cardsList, new EnDefendRed());
                     turn++;
                     break;
@@ -75,7 +89,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnSeeingRed(), true);
+                    addToList(cardsList, new EnSeeingRed());
                     addToList(cardsList, new EnImmolate());
                     addToList(cardsList, new EnIcky());
                     turn++;
@@ -89,7 +103,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
                     break;
                 case 5:
                     addToList(cardsList, new EnThunderclap(), true);
-                    addToList(cardsList, new EnClumsy());
+                    addToList(cardsList, new EnFeelNoPain());
                     addToList(cardsList, new EnDazed());
                     turn=0;
                     looped=true;
@@ -98,21 +112,18 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
         } else {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnPowerThrough());
+                    addToList(cardsList, new EnPowerThrough(true));
                     addToList(cardsList, new EnTrueGrit(), true);
                     //IC will exhaust the Doubt the first time through the loop instead of a wound
                     //So the wound will appear the second time through the loop onward
-                    if (!secondLoop)
-                        addToList(cardsList, new EnDoubt());
-                    else
-                        addToList(cardsList, new EnWound());
+                    addToList(cardsList, new EnWound());
                     turn++;
                     theArtOfWar.beginPulse();
                     break;
                 case 1:
-                    addToList(cardsList, new EnWildStrike());
-                    addToList(cardsList, new EnImmolate());
+                    addToList(cardsList, new EnWildStrike(), extraUpgrades);
                     addToList(cardsList, new EnRecklessCharge());
+                    addToList(cardsList, new EnBash());  //unused
                     turn++;
                     break;
                 case 2:
@@ -123,7 +134,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnBash());
+                    addToList(cardsList, new EnImmolate());
                     addToList(cardsList, new EnThunderclap(), true);
                     addToList(cardsList, new EnDazed());
                     turn++;
@@ -134,7 +145,6 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
                     addToList(cardsList, new EnWound());
                     theArtOfWar.beginPulse();
                     turn=0;
-                    secondLoop = true;
                     break;
             }
         }
@@ -143,6 +153,6 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_CharonsAshes());
+        addRelic(new CBR_Orichalcum());
     }
 }

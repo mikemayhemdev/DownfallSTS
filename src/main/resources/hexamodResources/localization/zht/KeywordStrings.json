@@ -1,0 +1,104 @@
+[
+  {
+    "PROPER_NAME": "步進",
+    "NAMES": [
+      "步進"
+    ],
+    "DESCRIPTION": "跳至下枚鬼火，若已被 #y點燃 則 #y熄滅 它。"
+  },
+  {
+    "PROPER_NAME": "回退",
+    "NAMES": [
+      "回退"
+    ],
+    "DESCRIPTION": "跳至上枚鬼火，若已被 #y點燃 則 #y熄滅 它。"
+  },
+  {
+    "PROPER_NAME": "熱烈",
+    "NAMES": [
+      "熱烈"
+    ],
+    "DESCRIPTION": "提高鬼火 #y點燃 效果提供的傷害、 #y灼魂 以及 #y格擋 。"
+  },
+  {
+    "PROPER_NAME": "灼魂",
+    "NAMES": [
+      "灼魂",
+      "soulburn"
+    ],
+    "DESCRIPTION": "給予未帶有 #y灼魂 的敵人 #y灼魂 時，其 #y灼魂 累計至你的下下回合結束前。之後 #y灼魂 將引爆，使敵人失去相應層數點生命並移除所有 #y灼魂 。"
+  },
+  {
+    "PROPER_NAME": "熄滅",
+    "NAMES": [
+      "熄滅"
+    ],
+    "DESCRIPTION": "重置 #y點燃 條件，使得鬼火能被重新 #y點燃 。"
+  },
+  {
+    "PROPER_NAME": "點燃",
+    "NAMES": [
+      "ignite",
+      "force-ignite",
+      "點燃"
+    ],
+    "DESCRIPTION": "觸發鬼火上的 #y點燃 效果。"
+  },
+  {
+    "PROPER_NAME": "容器",
+    "NAMES": [
+      "容器"
+    ],
+    "DESCRIPTION": "若本場戰鬥所有的 #b6 種 #y容器 牌都被打出且無重復，獲得 #p破損容器 並將打出的 #y容器 牌移出牌組。"
+  },
+  {
+    "PROPER_NAME": "陰世",
+    "NAMES": [
+      "陰世"
+    ],
+    "DESCRIPTION": "被 #y消耗 時觸發效果。"
+  },
+  {
+    "PROPER_NAME": "碾壓",
+    "NAMES": [
+      "碾壓"
+    ],
+    "DESCRIPTION": "#y鬼火 。 NL 停留時打出 #b2 張 技能牌 #y點燃 。 NL #y點燃 ：隨機對敵人造成 #b3 點傷害兩次。"
+  },
+  {
+    "PROPER_NAME": "高熱",
+    "NAMES": [
+      "高熱"
+    ],
+    "DESCRIPTION": "#y鬼火 。 NL 停留時打出 #b1 張 能力牌 #y點燃 。 NL #y點燃 ：獲得 #b4 點 #y格擋 和 #b1 點 #y力量 。"
+  },
+  {
+    "PROPER_NAME": "灼熱",
+    "NAMES": [
+      "灼熱"
+    ],
+    "DESCRIPTION": "#y鬼火 。 NL 停留時打出 #b2 張 攻擊牌 #y點燃 。 NL #y點燃 ：隨機給予一名敵人 #b4 層 #y灼魂 。"
+  },
+  {
+    "PROPER_NAME": "獄焱",
+    "NAMES": [
+      "獄焱"
+    ],
+    "DESCRIPTION": "#y鬼火 。 NL 停留時使用 #b3 點 能量 #y點燃 。 NL #y點燃 ：每有一枚 #y點燃 的 #y鬼火 隨機對敵人造成 #b4 點傷害。"
+  },
+  {
+    "PROPER_NAME": "強製點燃        ！！！！！！！！！！！！！   以下為疑似棄用文本  ！！！！！！！！！！！！！  ",
+    "NAMES": [
+      "強製點燃"
+    ],
+    "DESCRIPTION": "觸發一枚鬼火的點燃效果，即使已經點燃。"
+  },
+  {
+    "PROPER_NAME": "激活",
+    "NAMES": [
+      "激活",
+      "active"
+    ],
+    "DESCRIPTION": "#y激活 的鬼火能在達到 #y點燃 條件時被 #y點燃 。"
+  }
+]

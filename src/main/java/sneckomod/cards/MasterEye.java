@@ -2,21 +2,19 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import com.megacrit.cardcrawl.powers.ConfusionPower;
 import com.megacrit.cardcrawl.powers.DrawPower;
 
 public class MasterEye extends AbstractSneckoCard {
-
     public final static String ID = makeID("MasterEye");
 
-    //stupid intellij stuff POWER, SELF, UNCOMMON
-
-    private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 1;
-
     public MasterEye() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = MAGIC;
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
+        SneckoMod.loadJokeCardImage(this, "MasterEye.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -27,9 +25,7 @@ public class MasterEye extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPG_MAGIC);
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBaseCost(1);
         }
     }
 }

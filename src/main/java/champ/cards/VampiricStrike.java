@@ -1,10 +1,9 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.stances.BerserkerStance;
-import champ.stances.GladiatorStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.unique.VampireDamageAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.watcher.WallopAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -14,34 +13,31 @@ public class VampiricStrike extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, rare
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 6;
 
     public VampiricStrike() {
-        super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        exhaust = true;
-        tags.add(CardTags.STRIKE);
-        tags.add(ChampMod.TECHNIQUE);
-        magicNumber = baseMagicNumber = 2;
-        tags.add(CardTags.HEALING);
+       // tags.add(ChampMod.COMBO);
+      //  tags.add(ChampMod.COMBOBERSERKER);
+      //  tags.add(ChampMod.COMBODEFENSIVE);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
 
-        atb(new VampireDamageAction(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        atb(new VampireDamageAction(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        if (magicNumber - 2 > 0) {
-            for (int i = 0; i < magicNumber - 2; i++) {
-                if (upgraded)
-                    atb(new VampireDamageAction(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-            }
-        }
-
+        atb(new WallopAction(m, makeInfo()));
     }
 
+    /*
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = (dcombo() || bcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
+     */
 
     public void upp() {
-        upgradeBaseCost(2);
+        upgradeDamage(3);
     }
 }

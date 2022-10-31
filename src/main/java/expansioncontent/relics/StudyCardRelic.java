@@ -1,6 +1,7 @@
 package expansioncontent.relics;
 
 import basemod.abstracts.CustomRelic;
+import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -11,9 +12,10 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import expansioncontent.cards.StudyTheSpire;
 import expansioncontent.expansionContentMod;
+import gremlin.cards.SupplyScrollCard;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.vfx.TinyHatParticle;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 import static expansioncontent.expansionContentMod.makeRelicOutlinePath;
 import static expansioncontent.expansionContentMod.makeRelicPath;
@@ -26,6 +28,7 @@ public class StudyCardRelic extends CustomRelic {
 
     public StudyCardRelic() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.FLAT);
+        this.tips.add(new CardPowerTip(new StudyTheSpire()));
     }
 
     @Override

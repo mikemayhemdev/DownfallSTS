@@ -2,7 +2,7 @@ package champ.relics;
 
 import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
-import champ.util.TextureLoader;
+import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -35,23 +35,19 @@ public class GladiatorsBookOfMartialProwess extends CustomRelic {
         if (c.hasTag(OPENER)) {
             hasPlayedOpener = true;
         }
-        if (c.hasTag(TECHNIQUE)) {
-            hasPlayedTechnique = true;
-        }
         if (c.hasTag(FINISHER)) {
             hasPlayedFinisher = true;
         }
         if (c.hasTag(COMBO)) {
             hasPlayedCombo = true;
         }
-        if (hasPlayedFinisher && hasPlayedCombo && hasPlayedTechnique && hasPlayedOpener) {
+        if (hasPlayedFinisher && hasPlayedCombo && hasPlayedOpener) {
 
             addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
 
             addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, 1), 1));
 
             hasPlayedOpener = false;
-            hasPlayedTechnique = false;
             hasPlayedFinisher = false;
             hasPlayedCombo = false;
         }

@@ -1,0 +1,30 @@
+{
+  "Slimebound:SlimedPotion": {
+    "NAME": "Банка со слизью",
+    "DESCRIPTIONS": [
+      "Накладывает #b",
+      " #yЛипкости."
+    ]
+  },
+  "Slimebound:SlimyTonguePotion": {
+    "NAME": "Слизне-ксир",
+    "DESCRIPTIONS": [
+      "Когда вы накладываете #yЛипкость на врага, накладывает дополнительно #b",
+      " #yЛипкости."
+    ]
+  },
+  "Slimebound:SpawnSlimePotion": {
+    "NAME": "Армия в бутылке",
+    "DESCRIPTIONS": [
+      "#yПризывает #b",
+      " случ. Слизня(-ей) (Обычных или Специалистов)."
+    ]
+  },
+  "Slimebound:ThreeZeroPotion": {
+    "NAME": "Наполненный-слизью напиток",
+    "DESCRIPTIONS": [
+      "Добавляет в руку #b",
+      " случ. карт(ы) стоимостью 0."
+    ]
+  }
+}

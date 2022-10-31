@@ -6,7 +6,7 @@ import champ.actions.OpenerReduceCostAction;
 import champ.powers.UltimateFormPower;
 import champ.stances.UltimateStance;
 import champ.util.OnOpenerSubscriber;
-import champ.util.TextureLoader;
+import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -31,7 +31,7 @@ public class ChampionCrownUpgraded extends CustomRelic {
     @Override
     public void atBattleStart() {
         addToBot(new ChangeStanceAction(UltimateStance.STANCE_ID));
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new UltimateFormPower(2), 2));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new UltimateFormPower(1), 1));
     }
 
     @Override

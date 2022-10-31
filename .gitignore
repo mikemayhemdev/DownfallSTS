@@ -7,5 +7,5 @@ pom.xml
 .classpath
 
 .project
-pom.xml.example
-*.example
+*.DS_Store*
+steamresources/*

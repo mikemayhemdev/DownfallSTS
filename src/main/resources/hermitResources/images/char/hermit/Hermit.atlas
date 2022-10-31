@@ -1,0 +1,69 @@
+
+Hermit.png
+size: 256,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shadow
+  rotate: false
+  xy: 1, 256
+  size: 196, 31
+  orig: 200, 38
+  offset: 2, 4
+  index: -1
+leg_right
+  rotate: false
+  xy: 170, 120
+  size: 32, 47
+  orig: 36, 50
+  offset: 2, 2
+  index: -1
+leg_left
+  rotate: false
+  xy: 199, 250
+  size: 30, 50
+  orig: 32, 52
+  offset: 1, 1
+  index: -1
+body
+  rotate: false
+  xy: 1, 1
+  size: 167, 188
+  orig: 167, 188
+  offset: 0, 0
+  index: -1
+hand_gun
+  rotate: false
+  xy: 171, 191
+  size: 29, 57
+  orig: 29, 57
+  offset: 0, 0
+  index: -1
+gun
+  rotate: false
+  xy: 170, 1
+  size: 69, 117
+  orig: 69, 118
+  offset: 0, 1
+  index: -1
+right_hand
+  rotate: false
+  xy: 111, 191
+  size: 58, 39
+  orig: 58, 39
+  offset: 0, 0
+  index: -1
+eye
+  rotate: false
+  xy: 111, 232
+  size: 24, 18
+  orig: 24, 18
+  offset: 0, 0
+  index: -1
+hat
+  rotate: false
+  xy: 1, 191
+  size: 108, 63
+  orig: 115, 63
+  offset: 3, 0
+  index: -1

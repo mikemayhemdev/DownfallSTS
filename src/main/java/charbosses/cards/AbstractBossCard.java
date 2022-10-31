@@ -1,13 +1,20 @@
 package charbosses.cards;
 
 import basemod.ReflectionHacks;
+import basemod.abstracts.CustomCard;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Watcher.CharBossWatcher;
-import charbosses.cards.purple.EnDevotion;
+import charbosses.cards.colorless.EnHandOfGreedHermitNecro;
+import charbosses.cards.purple.AbstractStanceChangeCard;
+import charbosses.cards.purple.EnCarveReality;
+import charbosses.cards.purple.EnSmite;
 import charbosses.orbs.AbstractEnemyOrb;
+import charbosses.powers.cardpowers.EnemyFearNoEvilPower;
 import charbosses.powers.cardpowers.EnemyStormPower;
-import charbosses.relics.AbstractCharbossRelic;
+import charbosses.powers.cardpowers.EnemyWrathNextTurnPower;
+import charbosses.stances.AbstractEnemyStance;
 import charbosses.stances.EnDivinityStance;
+import charbosses.stances.EnWrathStance;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -30,9 +37,9 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.EvolvePower;
-import com.megacrit.cardcrawl.powers.IntangiblePower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import com.megacrit.cardcrawl.vfx.DebuffParticleEffect;
@@ -40,9 +47,10 @@ import com.megacrit.cardcrawl.vfx.ShieldParticleEffect;
 import com.megacrit.cardcrawl.vfx.combat.BuffParticleEffect;
 import com.megacrit.cardcrawl.vfx.combat.StunStarEffect;
 import com.megacrit.cardcrawl.vfx.combat.UnknownParticleEffect;
-import slimebound.SlimeboundMod;
+import hermit.characters.hermit;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 
 import static charbosses.cards.blue.EnZap.getFocusAmountSafe;
@@ -64,13 +72,25 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     public boolean showIntent = false;
     public int energyGeneratedIfPlayed = 0;
+    public int strengthGeneratedIfPlayed = 0;
+    public int damageMultGeneratedIfPlayed = 1;
+    public int damageMultIfPlayed = 1;
+    public int focusGeneratedIfPlayed = 0;
+    public int vulnGeneratedIfPlayed = 0;
+    public int artifactConsumedIfPlayed = 0;
+    public boolean vulnCalculated = false;
+    public int blockGeneratedIfPlayed = 0;
+    public int clawDamageGeneratedIfPlayed = 0;
+
     public static final String[] TEXT;
 
     public int newPrio = 0;
 
     public int manualCustomDamageModifier = 0;
-    public float manualCustomDamageModifierMult = 1;
+    public float manualCustomDamageModifierMult = 1.0f;
     public boolean manualCustomVulnModifier = false;
+    public static boolean fakeStormPower = false;
+    //TODO - Does Vuln get actually calculated anywhere?  this variable does not appear to be referenced
 
 
     private static final float INTENT_HB_W = 64.0F * Settings.scale;
@@ -86,7 +106,6 @@ public abstract class AbstractBossCard extends AbstractCard {
     private Texture intentBg;
     private PowerTip intentTip = new PowerTip();
     public int intentDmg;
-    public int intentBaseDmg;
     protected int intentMultiAmt;
     private Color intentColor = Color.WHITE.cpy();
     private float intentParticleTimer;
@@ -110,6 +129,25 @@ public abstract class AbstractBossCard extends AbstractCard {
         this.owner = AbstractCharBoss.boss;
         this.limit = 99;
         this.intent = intent;
+
+    }
+
+    public AbstractBossCard(String id, String name, String img, int cost, String rawDescription, CardType type,
+                            CardColor color, CardRarity rarity, CardTarget target, AbstractMonster.Intent intent, boolean isCustomCard) {
+        super(id, name, img, cost, rawDescription, type, color, rarity, target);
+        this.owner = AbstractCharBoss.boss;
+        this.limit = 99;
+        this.intent = intent;
+
+        if (isCustomCard) {
+            if (color == hermit.Enums.COLOR_YELLOW) {
+                this.portrait = new TextureAtlas.AtlasRegion(new Texture(img), 0, 0, 250, 190);
+                this.portraitImg = new Texture(img);
+            } else {
+                this.portrait = new TextureAtlas.AtlasRegion(new Texture("downfallResources/images/cards/" + img + ".png"), 0, 0, 250, 190);
+                this.portraitImg = new Texture("downfallResources/images/cards/" + img + "_p.png");
+            }
+        }
 
     }
 
@@ -163,15 +201,15 @@ public abstract class AbstractBossCard extends AbstractCard {
         int value = 0;
         if (this.type == CardType.STATUS) {
             value += -10;
-        } else if (this.type == CardType.CURSE) {
+        } else if (this.type == CardType.CURSE && this.costForTurn < -1) {
             value += -100;
         }
 
 
-        if(this.type == CardType.ATTACK ){
-            if ( ownerBoss.currentHealth > ownerBoss.maxHealth / 2){
+        if (this.type == CardType.ATTACK) {
+            if (ownerBoss.currentHealth > ownerBoss.maxHealth / 2) {
                 value += Math.max(this.damage, 0);
-            }else {
+            } else {
                 value += Math.max(this.damage * 2.0f, 0);
             }
             if (ownerBoss instanceof CharBossWatcher && ownerBoss.stance instanceof EnDivinityStance) {
@@ -181,11 +219,11 @@ public abstract class AbstractBossCard extends AbstractCard {
 
         value += Math.max(this.block * 1.3F * blockModifier, 0);
 
-        if(this.type == CardType.POWER || this.color == CardColor.COLORLESS ){
-            if ( ownerBoss.currentHealth > ownerBoss.maxHealth / 2){
-                value *= 5 ;
-            }else {
-                value /= 2 ;
+        if (this.type == CardType.POWER || this.color == CardColor.COLORLESS) {
+            if (ownerBoss.currentHealth > ownerBoss.maxHealth / 2) {
+                value *= 5;
+            } else {
+                value /= 2;
             }
 
         }
@@ -235,7 +273,6 @@ public abstract class AbstractBossCard extends AbstractCard {
         }
         this.damage = MathUtils.floor(tmp);
 
-        multiDamageCardCalculate();
         this.initializeDescription();
         if (this.intent != null) {
             if (!this.bossDarkened) {
@@ -280,39 +317,82 @@ public abstract class AbstractBossCard extends AbstractCard {
             this.owner = (AbstractCharBoss) mo;
         }
         if (mo != null) {
-            float tmp = (float) this.baseDamage;
-            for (final AbstractRelic r : this.owner.relics) {
-                tmp = r.atDamageModify(tmp, this);
-                if (this.baseDamage != (int) tmp) {
-                    this.isDamageModified = true;
+            this.damage = MathUtils.floor(calculateDamage(mo, player, this.baseDamage));
+            this.intentDmg = MathUtils.floor(manualCustomDamageModifierMult * calculateDamage(mo, player, this.baseDamage + customIntentModifiedDamage() + manualCustomDamageModifier));
+            this.intentDmg = MathUtils.floor(manualCustomDamageModifierMult * calculateDamage(mo, player, this.baseDamage + customIntentModifiedDamage() + manualCustomDamageModifier));
+            if (this instanceof EnCarveReality) {
+                if (((EnCarveReality)this).willUseSmite) {
+                    EnSmite enSmite = new EnSmite();
+                    enSmite.calculateCardDamage(this.owner);
+                    this.intentDmg += enSmite.intentDmg;
                 }
             }
-            for (final AbstractPower p : this.owner.powers) {
-                tmp = p.atDamageGive(tmp, this.damageTypeForTurn, this);
-            }
-            tmp = this.owner.stance.atDamageGive(tmp, this.damageTypeForTurn, this);
+        }
+        this.initializeDescription();
+    }
+
+    private float calculateDamage(AbstractMonster mo, AbstractPlayer player, float tmp) {
+        for (final AbstractRelic r : this.owner.relics) {
+            tmp = r.atDamageModify(tmp, this);
             if (this.baseDamage != (int) tmp) {
                 this.isDamageModified = true;
             }
+        }
+        for (final AbstractPower p : this.owner.powers) {
+            tmp = p.atDamageGive(tmp, this.damageTypeForTurn, this);
+        }
+        AbstractEnemyStance stanceAtCardPlay = getEnemyStanceAtMomentOfCardPlay();
+        tmp = stanceAtCardPlay.atDamageGive(tmp, this.damageTypeForTurn, this);
+        if (this.baseDamage != (int) tmp) {
+            this.isDamageModified = true;
+        }
+        if (mo == this.owner) {
             for (final AbstractPower p : player.powers) {
                 tmp = p.atDamageReceive(tmp, this.damageTypeForTurn, this);
             }
             tmp = player.stance.atDamageReceive(tmp, this.damageTypeForTurn);
-            for (final AbstractPower p : this.owner.powers) {
-                tmp = p.atDamageFinalGive(tmp, this.damageTypeForTurn, this);
+        } else {
+            for (final AbstractPower p : mo.powers) {
+                tmp = p.atDamageReceive(tmp, this.damageTypeForTurn, this);
             }
+        }
+        for (final AbstractPower p : this.owner.powers) {
+            tmp = p.atDamageFinalGive(tmp, this.damageTypeForTurn, this);
+        }
+        if (mo == this.owner) {
             for (final AbstractPower p : player.powers) {
                 tmp = p.atDamageFinalReceive(tmp, this.damageTypeForTurn, this);
             }
-            if (tmp < 0.0f) {
-                tmp = 0.0f;
+        } else {
+            for (final AbstractPower p : mo.powers) {
+                tmp = p.atDamageFinalReceive(tmp, this.damageTypeForTurn, this);
             }
-            if (this.baseDamage != MathUtils.floor(tmp)) {
-                this.isDamageModified = true;
-            }
-            this.damage = MathUtils.floor(tmp);
         }
-        this.initializeDescription();
+        if (tmp < 0.0f) {
+            tmp = 0.0f;
+        }
+        if (this.baseDamage != MathUtils.floor(tmp)) {
+            this.isDamageModified = true;
+        }
+        return tmp;
+    }
+
+    private AbstractEnemyStance getEnemyStanceAtMomentOfCardPlay() {
+        AbstractEnemyStance stanceAtCardPlay = (AbstractEnemyStance) this.owner.stance;
+        for (final AbstractPower p : this.owner.powers) {
+            if (p instanceof EnemyWrathNextTurnPower) {
+                stanceAtCardPlay = ((EnemyWrathNextTurnPower)p).getWrathStance();
+            }
+        }
+        for (AbstractCard card : this.owner.hand.group) {
+            if (this == card) {
+                break;
+            }
+            if (card instanceof AbstractStanceChangeCard) {
+                stanceAtCardPlay = ((AbstractStanceChangeCard) card).changeStanceForIntentCalc(stanceAtCardPlay);
+            }
+        }
+        return stanceAtCardPlay;
     }
 
     public void triggerOnEndOfPlayerTurn() {
@@ -347,6 +427,8 @@ public abstract class AbstractBossCard extends AbstractCard {
         }
         this.cantUseMessage = AbstractCard.TEXT[11];
         return false;
+
+
     }
 
     public boolean canUse(final AbstractPlayer p, final AbstractMonster m) {
@@ -364,7 +446,7 @@ public abstract class AbstractBossCard extends AbstractCard {
                 return true;
             }
 
-            if (this.type == CardType.CURSE) return false;
+            if (this.type == CardType.CURSE && this.costForTurn < -1) return false;
             if (this.type == CardType.STATUS) return false;
 
             if ((cardPlayable(m)) && (hasEnoughEnergy())) {
@@ -415,14 +497,14 @@ public abstract class AbstractBossCard extends AbstractCard {
     public void bossDarken() {
         if (!this.bossDarkened) {
             this.bossDarkened = true;
-            SlimeboundMod.logger.info(this.name + " darkened.");
+            //SlimeboundMod.logger.info(this.name + " darkened.");
         }
     }
 
     public void bossLighten() {
         if (this.bossDarkened) {
             this.bossDarkened = false;
-            SlimeboundMod.logger.info(this.name + " lightened.");
+            //SlimeboundMod.logger.info(this.name + " lightened.");
         }
     }
 
@@ -684,33 +766,20 @@ public abstract class AbstractBossCard extends AbstractCard {
         }
     }
 
-
-    public void multiDamageCardCalculate() {
-    }
-
     public void createIntent() {
         if (this.intent == null) return;
 
-
-        if (!lockIntentValues) multiDamageCardCalculate();
         //bossLighten();
         refreshIntentHbLocation();
         if (!intentActive) this.intentParticleTimer = 0.5F;
         if (!lockIntentValues) calculateCardDamage(null);
-        if (AbstractCharBoss.boss.hasPower(IntangiblePower.POWER_ID)){
-            this.intentBaseDmg = 1;
-        }
-        else if (!lockIntentValues) this.intentBaseDmg = this.intentDmg = Math.round(((this.damage + customIntentModifiedDamage() + manualCustomDamageModifier) * manualCustomDamageModifierMult));
-
-       // SlimeboundMod.logger.info(this.name + " intent being created: damage = " + this.intentDmg);
-
-       // SlimeboundMod.logger.info(this.name + " intent being created: custom damage = " + customIntentModifiedDamage());
-       // SlimeboundMod.logger.info(this.name + " intent being created: custom manual damage = " + manualCustomDamageModifier * manualCustomDamageModifierMult);
 
         if ((!lockIntentValues) && this.damage > -1) {
-            this.calculateCardDamage(null);
             if (this.isMultiDamage) {
                 this.intentMultiAmt = this.magicNumber;
+                if (this instanceof EnHandOfGreedHermitNecro) {
+                    this.intentMultiAmt = 2;
+                }
             } else {
                 this.intentMultiAmt = -1;
             }
@@ -724,10 +793,10 @@ public abstract class AbstractBossCard extends AbstractCard {
         this.updateIntentTip();
         this.showIntent = true;
         intentActive = true;
-        //SlimeboundMod.logger.info(this.name + " intent made.");
+        ////SlimeboundMod.logger.info(this.name + " intent made.");
     }
 
-    public int customIntentModifiedDamage(){
+    public int customIntentModifiedDamage() {
         return 0;
     }
 
@@ -739,9 +808,8 @@ public abstract class AbstractBossCard extends AbstractCard {
             this.intentAlphaTarget = 0F;
             this.showIntent = false;
             this.intentParticleTimer = 0F;
-            this.intentBaseDmg = 0;
             this.tipIntent = null;
-            SlimeboundMod.logger.info(this.name + " intent destroyed.");
+            //SlimeboundMod.logger.info(this.name + " intent destroyed.");
         }
     }
 
@@ -843,8 +911,8 @@ public abstract class AbstractBossCard extends AbstractCard {
     public boolean alwaysDisplayText = false;
 
     public String overrideIntentText() {
-        if (this.type == CardType.POWER && owner.hasPower(EnemyStormPower.POWER_ID)) {
-            return "(" + ( 3 + AbstractEnemyOrb.masterPretendFocus + getFocusAmountSafe()) + ")";
+        if (this.type == CardType.POWER && (owner.hasPower(EnemyStormPower.POWER_ID) || fakeStormPower)) {
+            return "(" + (3 + AbstractEnemyOrb.masterPretendFocus + getFocusAmountSafe()) + ")";
         }
         if (this.isMultiDamage) {
             return intentDmg + "x" + intentMultiAmt;
@@ -906,6 +974,27 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     }
 
+    public void onSpecificTrigger() {
+
+    }
+
+    public static HashMap<String, Texture> imgMap = new HashMap();
+
+    public void loadCardImage(String img) {
+        Texture cardTexture;
+        if (imgMap.containsKey(img)) {
+            cardTexture = (Texture) imgMap.get(img);
+        } else {
+            cardTexture = ImageMaster.loadImage(img);
+            imgMap.put(img, cardTexture);
+        }
+
+        cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+        int tw = cardTexture.getWidth();
+        int th = cardTexture.getHeight();
+        TextureAtlas.AtlasRegion cardImg = new TextureAtlas.AtlasRegion(cardTexture, 0, 0, tw, th);
+        ReflectionHacks.setPrivateInherited(this, CustomCard.class, "portrait", cardImg);
+    }
 
     static {
         TEXT = CardCrawlGame.languagePack.getUIString("AbstractMonster").TEXT;

@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -33,7 +34,7 @@ public class EnemyEnergyPanel extends AbstractPanel {
     public static float fontScale;
     public static int totalCount;
     public static float energyVfxTimer;
-    private BitmapFont energyNumFont;
+    public BitmapFont energyNumFont;
 
     static {
         MSG = EnemyEnergyPanel.uiStrings.TEXT;
@@ -45,7 +46,7 @@ public class EnemyEnergyPanel extends AbstractPanel {
     }
 
     private Hitbox tipHitbox;
-    private Texture gainEnergyImg;
+    public Texture gainEnergyImg;
     private float energyVfxAngle;
     private float energyVfxScale;
     private Color energyVfxColor;
@@ -80,6 +81,14 @@ public class EnemyEnergyPanel extends AbstractPanel {
                 this.energyNumFont = FontHelper.energyNumFontRed;
                 break;
         }
+
+        /*
+        if (this.owner.chosenClass == ((AbstractPlayer.PlayerClass) CharBossCrowbot.Enums.Crowbot)) {
+            this.gainEnergyImg = ImageMaster.BLUE_ORB_FLASH_VFX;
+            this.energyNumFont = FontHelper.energyNumFontBlue;
+        }*/
+
+
     }
 
     public static void setEnergy(final int energy) {

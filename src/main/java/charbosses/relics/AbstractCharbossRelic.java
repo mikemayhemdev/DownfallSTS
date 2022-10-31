@@ -72,10 +72,11 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
 
     @Override
     public void render(SpriteBatch sb) {
-        super.render(sb);
-        //SlimeboundMod.logger.info("boss relic rendering hovered = " + this.hb.hovered);
+        //System.out.println("I, " + getClass().getSimpleName() +", AM RENDERING!");
+        super.renderInTopPanel(sb);
+        ////SlimeboundMod.logger.info("boss relic rendering hovered = " + this.hb.hovered);
         if (this.hb.hovered && !CardCrawlGame.relicPopup.isOpen) {
-           // SlimeboundMod.logger.info("boss relic rendering hovered");
+           // //SlimeboundMod.logger.info("boss relic rendering hovered");
             if (!this.isSeen) {
                 if ((float)InputHelper.mX < 1400.0F * Settings.scale) {
                     TipHelper.renderGenericTip((float)InputHelper.mX + 60.0F * Settings.scale, (float)InputHelper.mY - 50.0F * Settings.scale, LABEL[1], MSG[1]);
@@ -83,7 +84,7 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
                     TipHelper.renderGenericTip((float)InputHelper.mX - 350.0F * Settings.scale, (float)InputHelper.mY - 50.0F * Settings.scale, LABEL[1], MSG[1]);
                 }
 
-              //  SlimeboundMod.logger.info("boss relic rendering prereturn");
+              //  //SlimeboundMod.logger.info("boss relic rendering prereturn");
                 return;
             }
 

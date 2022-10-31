@@ -1,7 +1,7 @@
 package automaton.relics;
 
 import automaton.AutomatonMod;
-import automaton.util.TextureLoader;
+import downfall.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.CardModifierManager;
 import downfall.cardmods.RetainCardMod;
@@ -14,8 +14,8 @@ import static automaton.AutomatonMod.makeRelicPath;
 public class Timepiece extends CustomRelic implements OnCompileRelic {
 
     public static final String ID = AutomatonMod.makeID("Timepiece");
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Timepiece.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Timepiece.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("coolingFluid.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("coolingFluid.png"));
 
     public Timepiece() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);

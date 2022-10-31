@@ -8,24 +8,41 @@ import charbosses.cards.curses.EnInjury;
 import charbosses.cards.curses.EnShame;
 import charbosses.cards.red.*;
 import charbosses.cards.status.EnWound;
+import charbosses.monsters.Fortification;
+import charbosses.powers.bossmechanicpowers.IroncladFortificationPower;
+import charbosses.powers.bossmechanicpowers.IroncladMushroomPower;
 import charbosses.relics.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.red.FlameBarrier;
 import com.megacrit.cardcrawl.cards.red.Metallicize;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.BarricadePower;
 
 import java.util.ArrayList;
 
 public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
+    public static final int FORTIFICATION_AMOUNT = 10;
 
     public ArchetypeAct3BlockNewAge() {
         super("IC_BLOCK_ARCHETYPE", "Block");
-        bossMechanicName = bossMechanicString.DIALOG[12];
-        bossMechanicDesc = bossMechanicString.DIALOG[13];
 
-        maxHPModifier += 250;
+        maxHPModifier += 300;
         actNum = 3;
+        bossMechanicName = IroncladFortificationPower.NAME;
+        bossMechanicDesc = IroncladFortificationPower.DESC[0] + FORTIFICATION_AMOUNT + IroncladFortificationPower.DESC[1];
+    }
+
+    @Override
+    public void addedPreBattle() {
+        super.addedPreBattle();
+        AbstractCreature p = AbstractCharBoss.boss;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IroncladFortificationPower(p)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BarricadePower(p)));
+        AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new Fortification(), true));
+
     }
 
     public void initialize() {
@@ -64,11 +81,8 @@ public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
                     turn++;
                     break;
                 case 1:
-                    addToList(cardsList, new EnFlameBarrier());
-                    AbstractCard c = new EnBodySlam();
-                    if (AbstractCharBoss.boss.hasPower(BarricadePower.POWER_ID)) ((EnBodySlam) c).manualCustomDamageModifier += 10;
-                    ((EnBodySlam) c).manualCustomDamageModifier += 12;
-                    addToList(cardsList, c);
+                    addToList(cardsList, new EnFlameBarrier(), extraUpgrades);
+                    addToList(cardsList, new EnBodySlam());
                     addToList(cardsList, new EnClumsy());
                     turn++;
                     break;
@@ -79,10 +93,8 @@ public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnMetallicize(), extraUpgrades);
-                    c = new EnBodySlam();
-                    if (AbstractCharBoss.boss.hasPower(BarricadePower.POWER_ID)) ((EnBodySlam) c).manualCustomDamageModifier += 10;
-                    addToList(cardsList, c);
+                    addToList(cardsList, new EnMetallicize());
+                    addToList(cardsList, new EnBodySlam());
                     addToList(cardsList, new EnDecay());
                     turn++;
                     break;
@@ -94,15 +106,8 @@ public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
                     break;
                 case 5:
                     addToList(cardsList, new EnMetallicize());
-                    addToList(cardsList, new EnGhostlyArmor(), extraUpgrades);
-                    c = new EnBodySlam();
-                    if (AbstractCharBoss.boss.hasPower(BarricadePower.POWER_ID)) ((EnBodySlam) c).manualCustomDamageModifier += 10;
-                    if (extraUpgrades) {
-                        ((EnBodySlam) c).manualCustomDamageModifier += 13;
-                    } else {
-                        ((EnBodySlam) c).manualCustomDamageModifier += 10;
-                    }
-                    addToList(cardsList, c);
+                    addToList(cardsList, new EnGhostlyArmor());
+                    addToList(cardsList, new EnBodySlam());
                     turn = 0;
                     looped = true;
                     break;
@@ -112,35 +117,19 @@ public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
                 case 0:
                     addToList(cardsList, new EnPowerThrough());
                     addToList(cardsList, new EnSecondWind());
-                    AbstractCard c = new EnBodySlam();
-                    if (AbstractCharBoss.boss.hasPower(BarricadePower.POWER_ID)) ((EnBodySlam) c).manualCustomDamageModifier += 10;
-
-                    ((EnBodySlam) c).manualCustomDamageModifier += 25;
-                    addToList(cardsList, c, true);
+                    addToList(cardsList, new EnBodySlam());
                     turn++;
                     break;
                 case 1:
-                    addToList(cardsList, new EnFlameBarrier());
+                    addToList(cardsList, new EnFlameBarrier(), extraUpgrades);
                     addToList(cardsList, new EnBodySlam());
-                    c = new EnBodySlam();
-                    if (AbstractCharBoss.boss.hasPower(BarricadePower.POWER_ID)) ((EnBodySlam) c).manualCustomDamageModifier += 10;
-
-                    ((EnBodySlam) c).manualCustomDamageModifier += 12;
-                    addToList(cardsList, c);
+                    addToList(cardsList, new EnDecay());
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnGhostlyArmor(), extraUpgrades);
+                    addToList(cardsList, new EnGhostlyArmor());
                     addToList(cardsList, new EnEntrench());
-                    c = new EnBodySlam();
-                    if (AbstractCharBoss.boss.hasPower(BarricadePower.POWER_ID)) ((EnBodySlam) c).manualCustomDamageModifier += 10;
-
-                    if (extraUpgrades) {
-                        ((EnBodySlam) c).manualCustomDamageModifier += 20;
-                    } else {
-                        ((EnBodySlam) c).manualCustomDamageModifier += 26;
-                    }
-                    addToList(cardsList, c);
+                    addToList(cardsList, new EnBodySlam());
                     turn++;
                     turn = 0;
                     break;
@@ -151,6 +140,6 @@ public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_Calipers());
+        addRelic(new CBR_SelfFormingClay());
     }
 }

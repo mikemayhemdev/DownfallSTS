@@ -1,6 +1,7 @@
 package slimebound.cards;
 
 
+import champ.ChampMod;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -17,11 +18,13 @@ import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.SlimedPower;
 import slimebound.vfx.LickEffect;
 import slimebound.vfx.SlimeDripsEffect;
+import sneckomod.SneckoMod;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
 import static com.badlogic.gdx.graphics.Color.GREEN;
 
 
-public class Lick extends AbstractSlimeboundCard {
+public class Lick extends AbstractLickCard {
     public static final String ID = "Slimebound:Lick";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -48,9 +51,11 @@ public class Lick extends AbstractSlimeboundCard {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
         tags.add(SlimeboundMod.LICK);
+        tags.add(SlimeboundMod.BURIED);
         this.slimed = this.baseSlimed = 4;
         this.magicNumber = this.baseMagicNumber = 1;
         this.exhaust = true;
+        SlimeboundMod.loadJokeCardImage(this, "lick.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -62,7 +67,6 @@ public class Lick extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new LickEffect(m.hb.cX, m.hb.cY, 0.6F, new Color(GREEN)), 0.1F));
 
 
-        //if (upgraded) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
     }
 
     public AbstractCard makeCopy() {

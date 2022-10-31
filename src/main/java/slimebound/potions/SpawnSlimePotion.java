@@ -16,6 +16,8 @@ import slimebound.orbs.PoisonSlime;
 import slimebound.orbs.ShieldSlime;
 import slimebound.orbs.SlimingSlime;
 
+import java.util.Random;
+
 
 public class SpawnSlimePotion extends CustomPotion {
     public static final String POTION_ID = "Slimebound:SpawnSlimePotion";
@@ -34,32 +36,21 @@ public class SpawnSlimePotion extends CustomPotion {
 
     public void initializeData() {
         this.potency = getPotency();
-        if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic("SacredBark")) {
-            this.description = potionStrings.DESCRIPTIONS[1];
-        } else {
-            this.description = potionStrings.DESCRIPTIONS[0];
-        }
+        this.description = potionStrings.DESCRIPTIONS[0] + potency + potionStrings.DESCRIPTIONS[1];
+
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
-        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle("slimeboundmod:leeching")), BaseMod.getKeywordDescription("slimeboundmod:leeching")));
-        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle("slimeboundmod:mire")), BaseMod.getKeywordDescription("slimeboundmod:mire")));
-        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle("slimeboundmod:guerilla")), BaseMod.getKeywordDescription("slimeboundmod:guerilla")));
     }
 
     public void use(AbstractCreature target) {
 
-        if (AbstractDungeon.player.maxOrbs < this.potency * 3) {
-
-            AbstractDungeon.actionManager.addToBottom(new IncreaseMaxOrbAction((this.potency * 3) - AbstractDungeon.player.maxOrbs));
-
-        }
-
         for (int i = 0; i < this.potency; i++) {
-            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, false));
-            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, false));
-            AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new PoisonSlime(), false, false));
+            if (AbstractDungeon.cardRng.randomBoolean()) {
+                SlimeboundMod.spawnSpecialistSlime();
+            } else {
+                SlimeboundMod.spawnNormalSlime();
+            }
         }
-
     }
 
 
@@ -68,7 +59,7 @@ public class SpawnSlimePotion extends CustomPotion {
     }
 
     public int getPotency(int ascensionLevel) {
-        return 1;
+        return 3;
     }
 }
 

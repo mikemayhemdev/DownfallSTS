@@ -12,7 +12,7 @@ public class DecaBeam extends AbstractBronzeCard {
 
     public DecaBeam() {
         super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-        baseBlock = block = 16;
+        baseBlock = block = 10;
         thisEncodes();
         magicNumber = baseMagicNumber = 4;
         baseAuto = auto = 2;
@@ -28,7 +28,6 @@ public class DecaBeam extends AbstractBronzeCard {
     public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
             applyToSelf(new PlatedArmorPower(AbstractDungeon.player, magicNumber));
-            shuffleIn(new Dazed(), auto);
             shuffleIn(new Dazed(), auto);
         }
     }

@@ -24,7 +24,7 @@ public class CBR_Shuriken extends AbstractCharbossRelic {
     }
 
     @Override
-    public void atTurnStart() {
+    public void onPlayerEndTurn() {
         this.counter = 0;
     }
 

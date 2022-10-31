@@ -1,0 +1,78 @@
+{
+"hermit:Concentration": {
+        "NAME": "Konzentration",
+        "DESCRIPTIONS": ["Deine nächste #yVolltreffer Karte in diesem Zug erzielt ihren Effekt unabhängig von Position."]
+},
+"hermit:HighNoonPower": {
+        "NAME": "High Noon",
+        "DESCRIPTIONS": ["Immer wenn du ein #ySchlag oder #yVerteidigen spielst, ziehe #b", " Karte.", " Karten."]
+},
+"hermit:FatalDesirePower": {
+        "NAME": "Todestrieb",
+        "DESCRIPTIONS": ["Zu Beginn deines Zuges, ziehe #b", " Karten und nimm #b", " Verletzung auf die Hand.", " Verletzungen auf die Hand."]
+},
+"hermit:ShadowCloakPower": {
+        "NAME": "Schattenmantel",
+        "DESCRIPTIONS": ["Immer wenn du ein Fluch ziehst, erhalte #b", " Block."]
+},
+"hermit:TakeAimPower": {
+        "NAME": "Ins Visier",
+        "DESCRIPTIONS": ["#yKonzentriere dich immer zu Beginn deines Zuges."]
+},
+"hermit:AdaptPower": {
+        "NAME": "Anpassen",
+        "DESCRIPTIONS": ["Am Ende deines Zuges kannst du bis zu 2 Karten erschöpfen. Erhalte #b", " Block für jede."]
+},
+"hermit:Bruise": {
+        "NAME": "Prügel",
+        "DESCRIPTIONS": ["Für diesen Zug, nimmt #b", " mehr Angriffschaden. Wird mit jedem Treffer um 1 reduziert."]
+},
+"hermit:HorrorPower": {
+        "NAME": "Horror",
+        "DESCRIPTIONS": ["Prügel läuft für #b", " Zug nicht ab.", " Züge nicht ab."]
+},
+"hermit:ComboPower": {
+        "NAME": "Kombo",
+        "DESCRIPTIONS": ["Immer wenn du ein #yVolltreffer erzielst, nimm #b", " zufällige Karte mit #yVolltreffer auf die Hand.", "  zufällige Karten mit #yVolltreffer auf die Hand"]
+},
+"hermit:BigShotPower": {
+        "NAME": "Rauchendes Rohr",
+        "DESCRIPTIONS": ["Immer wenn du ein #yVolltreffer erzielst, fügt dein nächster Angriff #b", " mehr Schaden zu."]
+},
+"hermit:BrawlPower": {
+        "NAME": "Schlägerei",
+        "DESCRIPTIONS": ["Wende immer zu Beginn deines Zuges auf ALLE Gegner #b", " #yPrügel an."]
+},
+"hermit:Rugged": {
+        "NAME": "Robust",
+        "DESCRIPTIONS": ["Der ungeblockte Angriffschaden von ", " mehr Treffern wird zu #b1 reduziert.", " mehr Treffer wird zu #b1 reduziert."]
+},
+"hermit:EternalPower": {
+        "NAME": "Ewige Macht",
+        "DESCRIPTIONS": ["Du kannst #b", " Karte mehr in diesen Zug umsonst spielen.", " mehr Karten in diesen Zug umsonst spielen", "Du kannst keine Karten mehr in diesen Zug umsonst spielen."]
+},
+"hermit:OverwhelmingPowerPower": {
+        "NAME": "Überwältigende Macht",
+        "DESCRIPTIONS": ["Verliere #b"," TP wenn du dein Zug mit 0 Energie beendest."]
+},
+"hermit:Bounty": {
+        "NAME": "Kopfgeld",
+        "DESCRIPTIONS": ["Derzeitiges Kopfgeld: "]
+},
+"hermit:Drained": {
+        "NAME": "Ausgelaugt",
+        "DESCRIPTIONS": ["Erhalte #b", " weniger Energie im nächsten Zug."]
+},
+"hermit:DeterminationPower": {
+        "NAME": "Entschlossenheit",
+        "DESCRIPTIONS": ["Immer wenn ein Debuff auf dich angewandt ist, erhalte #b", " #yStärke."]
+},
+"hermit:RyeStalkPower": {
+        "NAME": "Rye Stalk",
+        "DESCRIPTIONS": ["Nicht benutzt, lol."]
+},
+"hermit:PetGhostPower": {
+        "NAME": "Haustiergeist",
+        "DESCRIPTIONS": ["Du kannst nicht sterben. Stirb am Ende von", " dem nächsten Zug.", " diesem Zug."]
+}
+}

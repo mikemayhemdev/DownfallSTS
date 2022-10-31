@@ -29,6 +29,7 @@ public class EnCatalyst extends AbstractBossCard {
     public EnCatalyst() {
         super(ID, EnCatalyst.cardStrings.NAME, "green/skill/catalyst", 1, EnCatalyst.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.STRONG_DEBUFF);
         exhaust = true;
+        artifactConsumedIfPlayed = 1;
     }
 
     @Override
@@ -39,7 +40,7 @@ public class EnCatalyst extends AbstractBossCard {
                 @Override
                 public void update() {
                     if (p.hasPower(EnemyPoisonPower.POWER_ID)) {
-                        this.addToTop(new ApplyPowerAction(p, m, new PoisonPower(p, m, p.getPower(EnemyPoisonPower.POWER_ID).amount), p.getPower(EnemyPoisonPower.POWER_ID).amount));
+                        this.addToTop(new ApplyPowerAction(p, m, new EnemyPoisonPower(p, m, p.getPower(EnemyPoisonPower.POWER_ID).amount), p.getPower(EnemyPoisonPower.POWER_ID).amount));
                     }
                     isDone = true;
                 }
@@ -49,7 +50,7 @@ public class EnCatalyst extends AbstractBossCard {
                 @Override
                 public void update() {
                     if (p.hasPower(EnemyPoisonPower.POWER_ID)) {
-                        this.addToTop(new ApplyPowerAction(p, m, new PoisonPower(p, m, p.getPower(EnemyPoisonPower.POWER_ID).amount * 2), p.getPower(EnemyPoisonPower.POWER_ID).amount * 2));
+                        this.addToTop(new ApplyPowerAction(p, m, new EnemyPoisonPower(p, m, p.getPower(EnemyPoisonPower.POWER_ID).amount * 2), p.getPower(EnemyPoisonPower.POWER_ID).amount * 2));
                     }
                     isDone = true;
                 }

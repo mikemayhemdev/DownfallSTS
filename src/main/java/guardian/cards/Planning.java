@@ -11,6 +11,8 @@ import guardian.GuardianMod;
 import guardian.actions.PlaceTopCardIntoStasisAction;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class Planning extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("Planning");
     public static final String NAME;
@@ -47,6 +49,7 @@ public class Planning extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Planning.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

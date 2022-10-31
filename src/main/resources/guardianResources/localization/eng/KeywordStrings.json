@@ -6,14 +6,14 @@
       "socketed"
     ],
     "PROPER_NAME": "Socket",
-    "DESCRIPTION": "Gems can be placed into this Socket at a Rest Site to combine the Gem's effect with this card's effect."
+    "DESCRIPTION": "#yGems can be placed into this Socket at a Rest Site."
   },
   {
     "NAMES": [
       "stasis"
     ],
     "PROPER_NAME": "Stasis",
-    "DESCRIPTION": "A card in #yStasis gains a turn counter equal to its cost plus #b1. NL Turn counter is reduced by #b1 at the start of your turn. NL When the counter reaches #b0, it is returned to your hand and costs #b0 until played."
+    "DESCRIPTION": "A card in Stasis stays there for amount of turns equal to its cost plus #b1. NL When exits, it is returned to your hand and costs #b0 until played."
   },
   {
     "NAMES": [
@@ -21,7 +21,7 @@
       "gems"
     ],
     "PROPER_NAME": "Gem",
-    "DESCRIPTION": "#yGems can be placed into #ySockets in cards at a Rest Site. Cannot be #yUpgraded."
+    "DESCRIPTION": "Gems can be placed into #ySockets in cards at a Rest Site. Cannot be #yUpgraded."
   },
   {
     "PROPER_NAME": "Defensive Mode",
@@ -29,14 +29,14 @@
       "defensive mode",
       "defensive_mode"
     ],
-    "DESCRIPTION": "While in #yDefensive #yMode, you have #b3 #yThorns and gain #b2 #yBlock when you play a card. Exit this #yStance at the start of your next turn."
+    "DESCRIPTION": "#yStance. NL Gain #b10 #yBlock when entering Defensive Mode. NL While in Defensive Mode, you have #b3 #yThorns, gain #b10 #yBlock at the start of your turn, and your Block does not expire."
   },
   {
     "NAMES": [
       "accelerate"
     ],
     "PROPER_NAME": "Accelerate",
-    "DESCRIPTION": "Reduce the turn counter of the right-most card in #yStasis by #b1. If the card's turn counter is now #b0, return it to your hand. It costs #b0 until played."
+    "DESCRIPTION": "Reduce the turn counter of the right-most card in #yStasis by #b1."
   },
   {
     "NAMES": [
@@ -51,13 +51,34 @@
       "volatile"
     ],
     "PROPER_NAME": "Volatile",
-    "DESCRIPTION": "When this card leaves #yStasis, #yExhaust it instead of returning it to your hand."
+    "DESCRIPTION": "When this card leaves #yStasis, it #yExhausts."
   },
   {
     "NAMES": [
       "tick"
     ],
     "PROPER_NAME": "Tick",
-    "DESCRIPTION": "This effect is triggered whenever this card's turn counter is reduced while in #yStasis."
+    "DESCRIPTION": "When this card's #yStasis turn counter is reduced..."
+  },
+  {
+    "NAMES": [
+      "buffer"
+    ],
+    "PROPER_NAME": "Buffer",
+    "DESCRIPTION": "Prevent the next time you would lose HP."
+  },
+  {
+    "NAMES": [
+      "brace"
+    ],
+    "PROPER_NAME": "Brace X",
+    "DESCRIPTION": "Reduce the HP loss required to trigger Mode Shift by X."
+  },
+  {
+    "NAMES": [
+      "downgrade"
+    ],
+    "PROPER_NAME": "Downgrade",
+    "DESCRIPTION": "Remove an upgrade from a card."
   }
 ]

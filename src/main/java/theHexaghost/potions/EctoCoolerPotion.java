@@ -17,7 +17,7 @@ public class EctoCoolerPotion extends CustomPotion {
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
     public EctoCoolerPotion() {
-        super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.CARD, PotionColor.SMOKE);
+        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.CARD, PotionColor.SMOKE);
         this.isThrown = false;
         this.targetRequired = false;
     }
@@ -25,8 +25,8 @@ public class EctoCoolerPotion extends CustomPotion {
 
     public void initializeData() {
         this.potency = getPotency();
-        if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic("SacredBark")) {
-            this.description = potionStrings.DESCRIPTIONS[1];
+        if (AbstractDungeon.player != null && potency > 1) {
+            this.description = potionStrings.DESCRIPTIONS[1] + this.potency + DESCRIPTIONS[2];
         } else {
             this.description = potionStrings.DESCRIPTIONS[0];
         }

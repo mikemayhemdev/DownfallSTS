@@ -35,7 +35,7 @@ public class PrimingBeam extends AbstractGuardianCard {
     private static final int UPGRADE_DAMAGE = 3;
     private static final int BEAMBUFF = 1;
     private static final int UPGRADE_BEAMBUFF = 1;
-    private static final int SOCKETS = 0;
+    private static final int SOCKETS = 1;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
@@ -56,7 +56,7 @@ public class PrimingBeam extends AbstractGuardianCard {
         this.baseDamage = DAMAGE;
         this.tags.add(GuardianMod.BEAM);
 
-        this.baseMagicNumber = this.magicNumber = BEAMBUFF;
+        this.baseMagicNumber = this.magicNumber = 3;
         //this.sockets.add(GuardianMod.socketTypes.RED);
         this.socketCount = SOCKETS;
         updateDescription();
@@ -69,8 +69,8 @@ public class PrimingBeam extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY, Color.WHITE), 0.3F));
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BeamBuffPower(p, p, this.magicNumber), this.magicNumber));
-
+        brace(magicNumber);
+        this.useGems(p, m);
     }
 
     @Override
@@ -91,6 +91,7 @@ public class PrimingBeam extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_DAMAGE);
+            upgradeMagicNumber(1);
             //upgradeMagicNumber(UPGRADE_BEAMBUFF);
         }
 

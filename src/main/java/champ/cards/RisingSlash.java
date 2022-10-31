@@ -14,36 +14,27 @@ public class RisingSlash extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 9;
     private static final int UPG_DAMAGE = 3;
 
     public RisingSlash() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        tags.add(ChampMod.TECHNIQUE);
         tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() > 1)
-            if (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2).hasTag(ChampMod.TECHNIQUE) && !this.purgeOnUse) {
-                AbstractCard r = this;
-                atb(new AbstractGameAction() {
-                    @Override
-                    public void update() {
-                        isDone = true;
-                        GameActionManager.queueExtraCard(r, m);
-                    }
-                });
+            if (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2).hasTag(ChampMod.FINISHER) && !this.purgeOnUse) {
+                dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
             }
     }
 
     @Override
     public void triggerOnGlowCheck() {
         if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty())
-            glowColor = (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1).hasTag(ChampMod.TECHNIQUE) && !this.purgeOnUse ? AbstractCard.GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR);
+            glowColor = (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1).hasTag(ChampMod.FINISHER) && !this.purgeOnUse ? AbstractCard.GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR);
     }
 
     public void upp() {

@@ -7,8 +7,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeSpawnAction;
-import slimebound.orbs.*;
-import slimebound.patches.AbstractCardEnum;
+import slimebound.orbs.DarklingSlime;
 
 
 public class Darklings extends AbstractSlimeboundCard {
@@ -18,7 +17,7 @@ public class Darklings extends AbstractSlimeboundCard {
     public static String IMG_PATH = "cards/darkling.png";
     public static CardStrings cardStrings;
     public static CardType TYPE = CardType.SKILL;
-    public static CardRarity RARITY = CardRarity.RARE;
+    public static CardRarity RARITY = CardRarity.SPECIAL;
     public static CardTarget TARGET = CardTarget.SELF;
     public static int COST = 1;
     public static String UPGRADED_DESCRIPTION;
@@ -32,7 +31,7 @@ public class Darklings extends AbstractSlimeboundCard {
     }
 
     public Darklings() {
-        super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+        super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
         exhaust = true;
         baseMagicNumber = magicNumber = 2;
     }
@@ -45,9 +44,9 @@ public class Darklings extends AbstractSlimeboundCard {
     }
 
 
-
     public void upgrade() {
         if (!this.upgraded) {
+            this.name = UPGRADED_DESCRIPTION;
             upgradeName();
             upgradeMagicNumber(1);
         }

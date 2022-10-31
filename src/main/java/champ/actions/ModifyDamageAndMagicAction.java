@@ -1,6 +1,5 @@
 package champ.actions;
 
-import champ.cards.AbstractChampCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
@@ -18,10 +17,10 @@ public class ModifyDamageAndMagicAction extends AbstractGameAction {
 
     public void update() {
         for (AbstractCard c : GetAllInBattleInstances.get(this.uuid)) {
-            c.baseMagicNumber += this.amount;
-            if (c instanceof AbstractChampCard) ((AbstractChampCard) c).myHpLossCost += amount;
-            c.baseDamage += this.amount;
             c.superFlash();
+            c.magicNumber += this.amount;
+            c.baseMagicNumber += this.amount;
+            c.damage += this.amount;
         }
         this.isDone = true;
     }

@@ -16,7 +16,7 @@ import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.FRAGMENTED;
 
 
-public class Gem_Fragmented extends AbstractGuardianCard {
+public class Gem_Fragmented extends AbstractGemCard {
     public static final String ID = GuardianMod.makeID("Gem_Fragmented");
     public static final String NAME;
     public static final String IMG_PATH = "cards/gemFrag.png";

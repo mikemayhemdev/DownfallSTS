@@ -48,12 +48,12 @@ public class WindingHalls_Evil extends AbstractImageEvent {
                         if (AbstractDungeon.eventList.contains(DarklingsSlimebound.ID)) {
                             AbstractDungeon.eventList.remove(DarklingsSlimebound.ID);
                             hackery = true;
-                            SlimeboundMod.logger.info("Hacked away darklings");
+                            //SlimeboundMod.logger.info("Hacked away darklings");
                         }
                         if (AbstractDungeon.eventList.contains(MysteriousSphere.ID)) {
                             AbstractDungeon.eventList.remove(MysteriousSphere.ID);
                             hackery2 = true;
-                            SlimeboundMod.logger.info("Hacked away orb walkers");
+                            //SlimeboundMod.logger.info("Hacked away orb walkers");
                         }
                         AbstractDungeon.getCurrRoom().onPlayerEntry();
                         if (hackery){

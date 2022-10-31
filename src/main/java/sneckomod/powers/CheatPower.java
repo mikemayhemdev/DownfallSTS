@@ -10,7 +10,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import sneckomod.SneckoMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
+
+import java.util.ArrayList;
 
 public class CheatPower extends AbstractPower implements CloneablePowerInterface {
 
@@ -42,7 +44,7 @@ public class CheatPower extends AbstractPower implements CloneablePowerInterface
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));// 47
         } else {
             AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, 1));// 49
-        }
+        }   
     }
 
     @Override

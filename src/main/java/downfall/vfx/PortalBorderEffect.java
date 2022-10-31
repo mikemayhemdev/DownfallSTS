@@ -54,7 +54,7 @@ public class PortalBorderEffect extends AbstractGameEffect {
         ELLIPSIS_Y = startY;
 
         this.initialAngle = angle;
-        //SlimeboundMod.logger.info("new border effect, angle: " + initialAngle + " " + orbitalInterval + " " + ORBIT_DURATION);
+        ////SlimeboundMod.logger.info("new border effect, angle: " + initialAngle + " " + orbitalInterval + " " + ORBIT_DURATION);
 
         this.renderBehind = false;
 
@@ -110,7 +110,7 @@ public class PortalBorderEffect extends AbstractGameEffect {
     }
 
     public void update() {
-        //SlimeboundMod.logger.info("pre: " + this.cX + ", " + this.cY);
+        ////SlimeboundMod.logger.info("pre: " + this.cX + ", " + this.cY);
         calculateNewPosition();
         this.vfxTimer -= Gdx.graphics.getDeltaTime();
         if (this.vfxTimer < 0.0F) {
@@ -119,7 +119,7 @@ public class PortalBorderEffect extends AbstractGameEffect {
             //AbstractDungeon.effectsQueue.add(new LightFlareParticleEffect(this.cX, this.cY, Color.PURPLE));
 //AbstractDungeon.effectsQueue.add(new FireBurstParticleEffect(this.x, this.y));
         }
-        //SlimeboundMod.logger.info("post: " + this.x + ", " + this.y);
+        ////SlimeboundMod.logger.info("post: " + this.x + ", " + this.y);
 
     }
 

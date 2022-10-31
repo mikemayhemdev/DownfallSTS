@@ -1,6 +1,7 @@
 package slimebound.characters;
 
 import com.megacrit.cardcrawl.helpers.*;
+import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
@@ -31,21 +32,16 @@ import java.util.List;
 
 
 public class SlimeboundCharacter extends CustomPlayer {
-    public static final String NAME;
-    public static final String DESCRIPTION;
+    public static final String ID = "Slimebound";
+    private static final CharacterStrings charStrings = CardCrawlGame.languagePack.getCharacterString(ID);
+    public static final String NAME = charStrings.NAMES[0];;
+    public static final String DESCRIPTION = charStrings.TEXT[0];;
     public static final String[] orbTextures = {"slimeboundResources/SlimeboundImages/char/orb/layer1.png", "slimeboundResources/SlimeboundImages/char/orb/layer2.png", "slimeboundResources/SlimeboundImages/char/orb/layer3.png", "slimeboundResources/SlimeboundImages/char/orb/layer4.png", "slimeboundResources/SlimeboundImages/char/orb/layer5.png", "slimeboundResources/SlimeboundImages/char/orb/layer6.png", "slimeboundResources/SlimeboundImages/char/orb/layer1d.png", "slimeboundResources/SlimeboundImages/char/orb/layer2d.png", "slimeboundResources/SlimeboundImages/char/orb/layer3d.png", "slimeboundResources/SlimeboundImages/char/orb/layer4d.png", "slimeboundResources/SlimeboundImages/char/orb/layer5d.png"};
-    private static final CharacterStrings charStrings;
+
     public static Color cardRenderColor = new Color(0.0F, 0.1F, 0.0F, 1.0F);
 
     private static float mainRenderYOffset = 75 * Settings.scale;
 
-
-    static {
-        charStrings = CardCrawlGame.languagePack.getCharacterString("Slimebound");
-        NAME = charStrings.NAMES[0];
-        DESCRIPTION = charStrings.TEXT[0];
-
-    }
 
     public float renderscale = 1.2F;
     public float hatX;
@@ -56,54 +52,65 @@ public class SlimeboundCharacter extends CustomPlayer {
     public float xJumpCharOffset = (float) Settings.WIDTH * 0.21F;
     public float x = (float) Settings.WIDTH * 0.1F;
     public boolean puddleForm;
-    public float[] orbPositionsX = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    public float[] orbPositionsY = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-	
-	
+
     private String atlasURL = "slimeboundResources/SlimeboundImages/char/skeleton.atlas";
     private String jsonURL = "slimeboundResources/SlimeboundImages/char/skeleton.json";
     private String jsonURLPuddle = "slimeboundResources/SlimeboundImages/char/skeletonPuddle.json";
-	
-	private String atlasURL2 = "reskinContent/img/Slimebound/animation/TheSlimeBossWaifuDownFall.atlas";
-    private String atlasURLPuddle2 = "reskinContent/img/Slimebound/animation/Slime_acid_char_puddle.atlas";
 
-    private String jsonURL2 = "reskinContent/img/Slimebound/animation/TheSlimeBossWaifuDownFall.json";
-    private String jsonURLPuddle2 = "reskinContent/img/Slimebound/animation/Slime_acid_char_puddle.json";
+    private String atlasURL2 = "reskinContent/img/Slimebound/Slaifu/animation/TheSlimeBossWaifuDownFall.atlas";
+    private String atlasURLPuddle2 = "reskinContent/img/Slimebound/Slaifu/animation/Slime_acid_char_puddle.atlas";
 
-	
-	
+    private String jsonURL2 = "reskinContent/img/Slimebound/Slaifu/animation/TheSlimeBossWaifuDownFall.json";
+    private String jsonURLPuddle2 = "reskinContent/img/Slimebound/Slaifu/animation/Slime_acid_char_puddle.json";
+
+
     private String currentJson = jsonURL;
-	
+
     private String currentAtlas2 = atlasURL2;
     private String currentJson2 = jsonURL2;
 
     public SlimeboundCharacter(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "slimeboundResources/SlimeboundImages/char/orb/vfx.png", (String)null, (String)null);
-        if(!reskinContent.slimeReskinAnimation){
-        this.initializeClass(null,
-                "slimeboundResources/SlimeboundImages/char/shoulder.png",
-                "slimeboundResources/SlimeboundImages/char/shoulderR.png",
-                "slimeboundResources/SlimeboundImages/char/corpse.png",
-                this.getLoadout(), 0.0F, 0.0F, 320.0F, 200.0F, new EnergyManager(3));
-        }else {
-        this.initializeClass((String) null,
-               "reskinContent/img/Slimebound/shoulder2.png",
-                "reskinContent/img/Slimebound/shoulder.png",
-                "reskinContent/img/Slimebound/corpse.png", this.getLoadout(),
-                0.0F, 0.0F, 300.0F, 180.0F, new EnergyManager(3));
+        super(name, setClass, orbTextures, "slimeboundResources/SlimeboundImages/char/orb/vfx.png", (String) null, (String) null);
 
+        if(CharacterSelectScreenPatches.characters[0].reskinCount == 1){
+            this.initializeClass(null,
+                    CharacterSelectScreenPatches.characters[1].skins[CharacterSelectScreenPatches.characters[1].reskinCount].SHOULDER1,
+                    CharacterSelectScreenPatches.characters[1].skins[CharacterSelectScreenPatches.characters[1].reskinCount].SHOULDER2,
+                    CharacterSelectScreenPatches.characters[1].skins[CharacterSelectScreenPatches.characters[1].reskinCount].CORPSE,
+                    this.getLoadout(), 0.0F, 0.0F, 300.0F, 180.0F, new EnergyManager(3));
+        }else {
+            this.initializeClass(null,
+                    CharacterSelectScreenPatches.characters[1].skins[CharacterSelectScreenPatches.characters[1].reskinCount].SHOULDER1,
+                    CharacterSelectScreenPatches.characters[1].skins[CharacterSelectScreenPatches.characters[1].reskinCount].SHOULDER2,
+                    CharacterSelectScreenPatches.characters[1].skins[CharacterSelectScreenPatches.characters[1].reskinCount].CORPSE,
+                    this.getLoadout(), 0.0F, 0.0F, 320.0F, 200.0F, new EnergyManager(3));
         }
+
+
+
+//        if (CharacterSelectScreenPatches.characters[1].reskinCount == 1 && CharacterSelectScreenPatches.characters[1].reskinUnlock) {
+//            this.initializeClass((String) null,
+//                    "reskinContent/img/Slimebound/Slaifu/shoulder2.png",
+//                    "reskinContent/img/Slimebound/Slaifu/shoulder.png",
+//                    "reskinContent/img/Slimebound/Slaifu/corpse.png",
+//                    this.getLoadout(),0.0F, 0.0F, 300.0F, 180.0F, new EnergyManager(3));
+//        } else {
+//            this.initializeClass(null,
+//                    "slimeboundResources/SlimeboundImages/char/shoulder.png",
+//                    "slimeboundResources/SlimeboundImages/char/shoulderR.png",
+//                    "slimeboundResources/SlimeboundImages/char/corpse.png",
+//                    this.getLoadout(), 0.0F, 0.0F, 320.0F, 200.0F, new EnergyManager(3));
+//        }
+
         this.reloadAnimation();
 
 
-        this.initializeSlotPositions();
         // this.dialogX = -200 * Settings.scale;
         //this.dialogY += -100 * Settings.scale;
-        //initializeSlotPositions();
 
     }
 
-    public void puddleForm(){
+    public void puddleForm() {
         this.currentJson = jsonURLPuddle;
 
         this.currentAtlas2 = atlasURLPuddle2;
@@ -112,7 +119,7 @@ public class SlimeboundCharacter extends CustomPlayer {
         this.puddleForm = true;
     }
 
-    public void removePuddleForm(){
+    public void removePuddleForm() {
         if (this.puddleForm) {
             this.currentJson = jsonURL;
 
@@ -161,11 +168,10 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if(reskinContent.slimeReskinAnimation && reskinContent.slimeReskinUnlock){
-            this.loadAnimation(currentAtlas2, this.currentJson2, renderscale);
-        }else {
-            this.loadAnimation(atlasURL, this.currentJson, renderscale);
-        }
+        this.loadAnimation(
+                CharacterSelectScreenPatches.characters[1].skins[CharacterSelectScreenPatches.characters[1].reskinCount].atlasURL,
+                CharacterSelectScreenPatches.characters[1].skins[CharacterSelectScreenPatches.characters[1].reskinCount].jsonURL,
+                CharacterSelectScreenPatches.characters[1].skins[CharacterSelectScreenPatches.characters[1].reskinCount].renderscale);
         TrackEntry e = this.state.setAnimation(0, "idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
         this.state.addListener(new SlimeAnimListener());
@@ -175,29 +181,8 @@ public class SlimeboundCharacter extends CustomPlayer {
     public void movePosition(float x, float y) {
         super.movePosition(x, y);
         this.drawY = this.drawY + mainRenderYOffset;
-        this.dialogY = this.drawY + 30F*Settings.scale;
+        this.dialogY = this.drawY + 30F * Settings.scale;
         this.refreshHitboxLocation();
-    }
-
-
-    @Override
-    public ArrayList<AbstractCard> getCardPool(ArrayList<AbstractCard> tmpPool) {
-        if (ModHelper.isModEnabled("Red Cards")) {
-            CardLibrary.addRedCards(tmpPool);
-        }
-        if (ModHelper.isModEnabled("Green Cards")) {
-            CardLibrary.addGreenCards(tmpPool);
-        }
-
-        if (ModHelper.isModEnabled("Blue Cards")) {
-            CardLibrary.addBlueCards(tmpPool);
-        }
-
-        if (ModHelper.isModEnabled("Purple Cards")) {
-            CardLibrary.addPurpleCards(tmpPool);
-        }
-
-        return super.getCardPool(tmpPool);
     }
 
     public ArrayList<String> getStartingDeck() {
@@ -222,31 +207,8 @@ public class SlimeboundCharacter extends CustomPlayer {
         return retVal;
     }
 
-    public void initializeSlotPositions() {
-        float xStartOffset = this.drawX + Settings.scale * -150F;
-        float yStartOffset = this.drawY + Settings.scale * -55F;
-        float ySpaceBottomAlternatingOffset = -70 * Settings.scale;
-        float ySpaceAlternatingOffset = -20 * Settings.scale;
-        float xSpaceBetweenSlots = 110 * Settings.scale;
-        float xSpaceBottomAlternatingOffset = -0.2F * Settings.scale;
-
-
-        orbPositionsX[0] = xStartOffset + (xSpaceBetweenSlots * 0);
-        orbPositionsX[1] = xStartOffset + (xSpaceBetweenSlots * 1);
-        orbPositionsX[2] = xStartOffset + (xSpaceBetweenSlots * 2);
-        orbPositionsX[3] = xStartOffset + (xSpaceBetweenSlots * 3);
-        orbPositionsX[4] = xStartOffset + (xSpaceBetweenSlots * 4);
-
-        orbPositionsY[0] = yStartOffset;
-        orbPositionsY[1] = yStartOffset + ySpaceAlternatingOffset;
-        orbPositionsY[2] = yStartOffset;
-        orbPositionsY[3] = yStartOffset + ySpaceAlternatingOffset;
-        orbPositionsY[4] = yStartOffset;
-
-    }
-
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo(NAME, DESCRIPTION, 60, 60, 3, 99, 5, this,
+        return new CharSelectInfo(NAME, DESCRIPTION,65, 65, 3, 99, 5, this,
 
                 getStartingRelics(), getStartingDeck(), false);
     }

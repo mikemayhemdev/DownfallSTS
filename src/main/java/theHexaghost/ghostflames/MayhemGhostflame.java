@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class MayhemGhostflame extends AbstractGhostflame {
     public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("mayhem.png"));

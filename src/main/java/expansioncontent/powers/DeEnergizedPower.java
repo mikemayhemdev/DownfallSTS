@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import expansioncontent.expansionContentMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class DeEnergizedPower extends AbstractPower implements CloneablePowerInterface {
     public static final String POWER_ID = expansionContentMod.makeID("DeEnergizedPower");

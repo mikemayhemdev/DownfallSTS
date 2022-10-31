@@ -4,7 +4,7 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import sneckomod.SneckoMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class CrystallizedMud extends CustomRelic {
 

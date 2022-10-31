@@ -3,6 +3,7 @@ package sneckomod.potions;
 
 import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -36,7 +37,7 @@ public class DiceRollPotion extends CustomPotion {
 
 
     public void use(AbstractCreature target) {
-        AbstractDungeon.actionManager.addToBottom(new NoApplyRandomDamageAction(target, this.potency, this.potency * 40, 1, AbstractGameAction.AttackEffect.SMASH, null));
+        AbstractDungeon.actionManager.addToBottom(new NoApplyRandomDamageAction(target, this.potency, this.potency * 40, 1, AbstractGameAction.AttackEffect.SMASH, null, DamageInfo.DamageType.THORNS));
     }
 
 

@@ -2,11 +2,7 @@
   "reskinContent:ReSkin": {
     "TEXT": [
       "Skin",
-      "Original",
-      "Guardian Chan",
-      "Slaifu",
-      "Hexago",
-      "SSSSnecko"
+      "Original"
     ]
   },
   "reskinContent:PortraitAnimation": {
@@ -23,10 +19,73 @@
   },
   "reskinContent:BetaArtUnlockEffect": {
     "TEXT": [
-      "Guardian Beta Card Art Unlocked!",
-      "Slime Boss Beta Card Art Unlocked!",
-      "Hexaghost Beta Card Art Unlocked!",
-      "Snecko Beta Card Art Unlocked!"
+      "Guardian Alternative Art Unlocked!",
+      "Slime Boss Alternative Art Unlocked!",
+      "Hexaghost Alternative Art Unlocked!",
+      "Snecko Alternative Art Unlocked!",
+      "Champ Alternative Art Unlocked!",
+      "Automaton Alternative Art Unlocked!"
+    ]
+  },
+
+  "reskinContent:ReSkinGuardian": {
+    "TEXT": [
+      "Guardian Chan",
+      "Concept Art"
+    ],
+    "EXTRA_TEXT": [
+      "A construct of the Spire, programmed to defend it. NL Able to defend itself from harm on command.",
+      "One of the Guardian's earlier drafts. NL It worked better on paper."
+    ]
+  },
+  "reskinContent:ReSkinSlime": {
+    "TEXT": [
+      "Slaifu",
+      "Slime Boss?"
+    ],
+    "EXTRA_TEXT": [
+      "This unusual slime loves to eat tasty relics. NL It serves the Heart completely by accident.",
+      "Is this... the Slime Boss? It seems awfully friendly. NL Well, its hat is surely the largest in the Spire, so it must be in charge..."
+    ]
+  },
+  "reskinContent:ReSkinHexaghost": {
+    "TEXT": [
+      "Hexago",
+      "Ghostagon"
+    ],
+    "EXTRA_TEXT": [
+      "An accursed spirit of the Spire. NL Sealed to an eternal fate as a protector.",
+      "Likes to chase yellow circles around on its days off. NL Has a crippling fear of power pellets."
+    ]
+  },
+  "reskinContent:ReSkinSnecko": {
+    "TEXT": [
+      "SSSSnecko",
+      "Sneckdor"
+    ],
+    "EXTRA_TEXT": [
+      "It uses its eyes to induce cognitive deviation, disguising its true form. NL Studies show that confused creatures see a completely different world.",
+      "Seeking greater strength, this ambitious Snecko followed in the footsteps of its hero. NL Adopting many consummate V's and a beefy arm, it calls itself \"Sneckdor\"."
+    ]
+  },
+  "reskinContent:ReSkinChamp": {
+    "TEXT": [
+      "Chan-p",
+      "Laundry Day Champ"
+    ],
+    "EXTRA_TEXT": [
+      "Her sword looks impossible for her to wield, NL but she's actually the only one strong enough to lift it.",
+      "It's laundry day."
+    ]
+  },
+  "reskinContent:ReSkinBronze": {
+    "TEXT": [
+      "Automaton",
+      "\"Automaton\""
+    ],
+    "EXTRA_TEXT": [
+      "",
+      "Yep! Tip to toe, that's the Automaton, alright! NL I've never seen anything that looks more like the Automaton!"
     ]
   }
 }

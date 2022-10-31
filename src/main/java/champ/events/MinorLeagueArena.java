@@ -47,37 +47,43 @@ public class MinorLeagueArena extends AbstractImageEvent {
             case INTRO:
                 switch (buttonPressed) {
                     case 0:
+                        logMetric(ID, "Fight");
                         this.screen = CurScreen.FIGHT;
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
                         AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Centurion and Healer");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addRelicToRewards(new CloakClasp());
                         AbstractDungeon.getCurrRoom().addGoldToRewards(100);
                         AbstractDungeon.getCurrRoom().eliteTrigger = true;
+                        AbstractDungeon.lastCombatMetricKey = "Centurion and Healer";
                         this.imageEventText.clearAllDialogs();
                         this.enterCombatFromImage();
 
                         return;
                     case 1:
+                        logMetric(ID, "Fight");
 
                         this.screen = CurScreen.FIGHT;
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
                         AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Gremlin Nob");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addRelicToRewards(new ChampionsBelt());
                         AbstractDungeon.getCurrRoom().addGoldToRewards(100);
                         AbstractDungeon.getCurrRoom().eliteTrigger = true;
+                        AbstractDungeon.lastCombatMetricKey = "Gremlin Nob";
                         this.imageEventText.clearAllDialogs();
                         this.enterCombatFromImage();
                         return;
                     case 2:
+                        logMetric(ID, "Fight");
                         this.screen = CurScreen.FIGHT;
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
                         AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Colosseum Slavers");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addRelicToRewards(new WristBlade());
                         AbstractDungeon.getCurrRoom().addGoldToRewards(100);
                         AbstractDungeon.getCurrRoom().eliteTrigger = true;
+                        AbstractDungeon.lastCombatMetricKey = "Colosseum Slavers";
                         this.imageEventText.clearAllDialogs();
                         this.enterCombatFromImage();
                         return;
@@ -86,6 +92,7 @@ public class MinorLeagueArena extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[3]);
+                        logMetricIgnored(ID);
                         return;
                     default:
                         return;

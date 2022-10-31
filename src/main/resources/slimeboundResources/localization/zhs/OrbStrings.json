@@ -1,10 +1,15 @@
 {
-  "Slimebound:BronzeSlime": {
+  "Slimebound:EmptySlimeSlot": {
+    "NAME": "史莱姆栏位",
+    "DESCRIPTION": [
+      "#y分裂 的史莱姆爪牙将进入这个栏位。"
+    ]
+  },"Slimebound:BronzeSlime": {
     "NAME": "青铜史莱姆",
     "DESCRIPTION": [
-      "回合开始时造成 #b",
-      " 伤害并给予你 #b",
-      " 点 #y格挡 。"
+      "回合开始时对所有敌人造成 #b",
+      " 点伤害，但跳过其下次攻击。",
+      ""
     ]
   },
   "Slimebound:AttackSlime": {
@@ -18,21 +23,21 @@
     "NAME": "破烂史莱姆",
     "DESCRIPTION": [
       "回合开始时造成 #b",
-      " 点伤害。 NL 被 #y吸收 后在回合结束时重生。不减少生命上限。"
+      " 点伤害。 NL 被 #y融合 后可重生。"
     ]
   },
   "Slimebound:GreedOozeSlime": {
     "NAME": "贪婪史莱姆",
     "DESCRIPTION": [
       "回合开始时造成 #b",
-      " 点伤害。 NL 被 #y吸收 后在回合结束时重生。不减少生命上限。"
+      " 点伤害。 NL 被 #y融合 后可重生。"
     ]
   },
   "Slimebound:TorchHeadSlime": {
     "NAME": "火炬头史莱姆",
     "DESCRIPTION": [
       "回合开始时造成 #b",
-      " 点伤害。 #y潜力 对其影响加倍。"
+      " 点伤害。 #y力量 将增加其伤害。"
     ]
   },
   "Slimebound:CultistSlime": {
@@ -69,11 +74,10 @@
     "NAME": "鬼火史莱姆",
     "DESCRIPTION": [
       "造成 #b",
-	  " 点伤害并给予 #b",
-	  " 层 #y灼伤 。"
+      " 点伤害并给予 #b",
+      " 层 #y灼魂 。"
     ]
   },
-
   "Slimebound:ChampSlime": {
     "NAME": "侮辱史莱姆",
     "DESCRIPTION": [
@@ -91,11 +95,11 @@
     ]
   },
   "Slimebound:ProtectorSlime": {
-    "NAME": "保护史莱姆",
+    "NAME": "尖刺史莱姆",
     "DESCRIPTION": [
       "造成 #b",
       " 点伤害并给予你 #b",
-      " 点 #y格挡 。"
+      " 层 #y临时 #y荆棘 。"
     ]
   },
   "Slimebound:DrawingSlime": {
@@ -110,13 +114,7 @@
     "NAME": "小黑史莱姆",
     "DESCRIPTION": [
       "造成 #b",
-      " 点伤害。命令时，其他小黑也会攻击。"
+      " 点伤害。 #y命令 时，其他小黑也会攻击。"
     ]
   }
 }
-
-
-
-
-
-

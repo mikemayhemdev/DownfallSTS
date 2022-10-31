@@ -11,6 +11,9 @@ import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import downfall.downfallMod;
 import downfall.potions.CursedFountainPotion;
+import gremlin.characters.GremlinCharacter;
+
+import java.util.Collections;
 
 public class CursedFountain extends AbstractImageEvent {
     public static final String ID = "downfall:CursedFountain";
@@ -74,28 +77,40 @@ public class CursedFountain extends AbstractImageEvent {
             case 0:
                 switch (buttonPressed) {
                     case 0:
+                        //bottle
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         this.imageEventText.updateDialogOption(0, OPTIONS[6], true);
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(new CursedFountainPotion()));
                         AbstractDungeon.combatRewardScreen.open();
+                        logMetric(ID, "Bottle", null, null, null, null,
+                                null, Collections.singletonList(CursedFountainPotion.POTION_ID), null,
+                                0, 0, 0, 0, 0, 0);
                         return;
                     case 1:
+                        //consume
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         this.imageEventText.updateDialogOption(1, OPTIONS[6], true);
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldAmt));
                         AbstractDungeon.player.gainGold(this.goldAmt);
+                        logMetricGainGold(ID, "Consume", goldAmt);
                         return;
                     case 2:
+                        //drink
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                         this.imageEventText.updateDialogOption(2, OPTIONS[6], true);
+                        logMetricHeal(ID, "Drink", AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth);
                         AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
+                        if (AbstractDungeon.player instanceof GremlinCharacter) {
+                            ((GremlinCharacter)AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
+                        }
                         return;
                     case 3:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[7]);
                         this.screenNum = 1;
+                        logMetricIgnored(ID);
                         return;
                 }
             default:

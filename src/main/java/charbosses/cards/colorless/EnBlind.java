@@ -23,14 +23,13 @@ public class EnBlind extends AbstractBossCard {
 
     public EnBlind() {
         super(ID, cardStrings.NAME, "colorless/skill/blind", 0, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.DEBUFF);
-        this.baseMagicNumber = 2;
-        this.magicNumber = this.baseMagicNumber;
+        this.baseMagicNumber = this.magicNumber = 2;
+
+        artifactConsumedIfPlayed = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, this.magicNumber, true), this.magicNumber));
-
-
     }
 
     public void upgrade() {

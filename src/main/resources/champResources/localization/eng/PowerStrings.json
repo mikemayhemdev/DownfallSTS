@@ -6,47 +6,25 @@
       " damage back."
     ]
   },
-  "champ:ResolvePower": {
-    "NAME": "Fatigue",
-    "DESCRIPTIONS": [
-      "You have #b1 #yStrength for every #b5 Fatigue. At the end of combat, restore your Fatigued HP."
-    ]
-  },
-  "champ:FocusedGladPower": {
-    "NAME": "Gladiator Boost!",
-    "DESCRIPTIONS": [
-      "Until you exit #yGladiator, #yTechniques draw #b",
-      " additional card.",
-      " additional cards."
-    ]
-  },
   "champ:FocusedDefPower": {
-    "NAME": "Defensive Boost!",
+    "NAME": "Focused: Defensive",
     "DESCRIPTIONS": [
-      "Until you exit #yDefensive, #yTechniques grant #b",
-      " additional #yCounter."
+      "The next time you use a #yFinisher this turn, gain #b",
+      " #yBlock."
     ]
   },
   "champ:FocusedBerPower": {
-    "NAME": "Berserker Boost!",
+    "NAME": "Fancy Footwork",
     "DESCRIPTIONS": [
-      "Until you exit #yBerserker, #yTechniques #yFatigue #b",
-      " more."
-    ]
-  },
-  "champ:EnchantedShieldPower": {
-    "NAME": "Enchanted Shield",
-    "DESCRIPTIONS": [
-      "Prevent the next time you would lose HP this turn.",
-      "Prevent the next #b",
-      " times you would lose HP this turn."
+      "The next time you use a #yFinisher this turn, ALL enemies lose #b",
+      " HP."
     ]
   },
   "champ:ShieldWallPower": {
     "NAME": "Shield Wall",
     "DESCRIPTIONS": [
       "At the end of your turn, gain #b",
-      " #yCounter for each card in hand."
+      " #yCounter."
     ]
   },
   "champ:EntangleNextTurnPower": {
@@ -58,7 +36,7 @@
     ]
   },
   "champ:DrawLessNextTurnPower": {
-    "NAME": "Crown Thrown",
+    "NAME": "Draw Reduction",
     "DESCRIPTIONS": [
       "Draw #b",
       " less card next turn.",
@@ -83,65 +61,66 @@
   "champ:ImprovisingPower": {
     "NAME": "Improvising",
     "DESCRIPTIONS": [
-      "The first time each turn you use a #yCombo, return it to your hand and it costs #b0 until played. #b",
+      "The first time each turn you play a #yCombo, return it to your hand and it costs #b0 until played. #b",
       " uses left.",
       "The first #b",
-      " times each turn you use a #yCombo, return it to your hand and it costs #b0 until played. #b"
+      " times each turn you play a #yCombo, return it to your hand and it costs #b0 until played. #b"
     ]
   },
   "champ:CalledShotPower": {
     "NAME": "Called Shot",
     "DESCRIPTIONS": [
-      "The next time you play a #yFinisher, do not leave your #yStance or end your turn.",
+      "The next time you play a #yFinisher, do not leave your #yStance.",
       "The next #b",
-      " times you play a #yFinisher, do not leave your #yStance or end your turn."
+      " times you play a #yFinisher, do not leave your #yStance."
     ]
   },
   "champ:DancingMasterPower": {
     "NAME": "Dancing Master",
     "DESCRIPTIONS": [
-      "The third time you enter a #yStance each turn, gain #b",
-      " [E] and draw #b2 cards. ",
-      " remaining.",
-      "Used this turn."
+      "The first time you use a #yFinisher each turn, gain #b",
+      " [E] and draw #b",
+      " cards. ",
+      "",
+      "Used this turn.",
+	  ""
     ]
   },
   "champ:StrikeOfGeniusPower": {
     "NAME": "Strike of Genius",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a random card that Enters a Stance to your hand. It costs #b0 until played and Exhausts.",
-      "At the start of your turn, add #b",
-      " random cards that Enter a Stance to your hand. They cost #b0 until played and Exhausts."
+      "At the start of your turn, gain a random \"Strike\". It costs #b0 until played and Exhausts.",
+      "At the start of your turn, gain #b",
+      " random \"Strike\"s. They cost #b0 until played and Exhaust."
     ]
   },
   "champ:StrikeOfGeniusUpgradedPower": {
     "NAME": "Strike of Genius+",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a random #yupgraded card that Enters a Stance to your hand. It costs #b0 until played.",
-      "At the start of your turn, add #b",
-      " random #yupgraded cards that Enter a Stance to your hand. They cost #b0 until played."
+      "At the start of your turn, gain a random #yupgraded \"Strike\". It costs #b0 until played and Exhausts.",
+      "At the start of your turn, gain #b",
+      " random #yupgraded \"Strike\"s. They cost #b0 until played and Exhaust."
     ]
   },
   "champ:DefensiveStylePower": {
     "NAME": "Defensive Style",
     "DESCRIPTIONS": [
-      "If you start your turn in #yDefensive, gain #b",
-      " #yBlock and #b",
-      " #yCounter."
+      "#yDefensive #ySkill Bonuses grant #b",
+      " additional #yCounter."
     ]
   },
   "champ:GladiatorStylePower": {
-    "NAME": "Gladiator Style",
+    "NAME": "Good Clean Fight",
     "DESCRIPTIONS": [
-      "If you start your turn in #yGladiator, gain #b",
+      "If you start your turn in no #yStance, gain #b",
       " temporary #yStrength and #yDexterity."
     ]
   },
   "champ:BerserkerStylePower": {
     "NAME": "Berserker Style",
     "DESCRIPTIONS": [
-      "If you start your turn in #yBerserker, #yFatigue #b",
-      " and gain [E] ."
+      "#yBerserker #ySkill Bonuses grant #b",
+      " more #yVigor."
     ]
   },
   "champ:FalseCounterPower": {
@@ -153,18 +132,28 @@
     ]
   },
   "champ:EnergizedDurationPower": {
-    "NAME": "Enchanted Crown",
+    "NAME": "Energized",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your next turn.",
-      "Gain [E] at the start of your next #b",
-      " turns."
+      "Gain #b",
+      " additional [E] next turn.",
+      " additional [E] next turn.",
+      " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
     ]
   },
   "champ:IronFortressPower": {
-    "NAME": "Iron Fortress",
+    "NAME": "Technical Jig",
     "DESCRIPTIONS": [
-      "Whenever you enter a Stance, gain #b",
-      " Block and #yCounter."
+      "Whenever you enter a Stance, trigger its #ySkill Bonus",
+      " #b",
+      " times."
+    ]
+  },
+  "champ:IronFortressVigorPower": {
+    "NAME": "Technical Jig: Berserker",
+    "DESCRIPTIONS": [
+      "Whenever you enter a Stance, trigger Berserker Stance's #ySkill Bonus",
+      " #b",
+      " times."
     ]
   },
   "champ:LastStandMod": {
@@ -172,6 +161,13 @@
     "DESCRIPTIONS": [
       "At the start of turn, if HP is at or below 50%, cleanse all debuffs and gain ",
       " Strength."
+    ]
+  },
+  "champ:GladiatorFormPower": {
+    "NAME": "Gladiator Form",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yVigor for every #b3 spent this turn, then do the same for #yCounter."
     ]
   },
   "champ:NoBlockNextTurnPower": {
@@ -188,6 +184,64 @@
       "Ultimate Stance will expire this turn.",
       "Ultimate Stance will last #b",
       " more turns."
+    ]
+  },
+  "champ:UltimateFormNextTurnPower": {
+    "NAME": "Preparing Ultimate",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, enter #yUltimate #yStance.",
+      " NL It will persist for #b",
+      " turns."
+    ]
+  },
+  "champ:EnGardePower": {
+    "NAME": "En Garde",
+    "DESCRIPTIONS": [
+      "If your Block is broken this turn, gain #b",
+      " Block next turn."
+    ]
+  },
+  "champ:ParryPower": {
+    "NAME": "Parrying",
+    "DESCRIPTIONS": [
+      "If your Counter is used this turn, gain Riposte."
+    ]
+  },
+  "champ:BoomerangPower": {
+    "NAME": "Boomerang",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, return ",
+      " to your hand. It costs #b0 and no longer returns."
+    ]
+  },
+  "champ:ResolvePower": {
+    "NAME": "Fatigue",
+    "DESCRIPTIONS": [
+      "At the end of combat, restore your Fatigued HP."
+    ]
+  },
+  "champ:DualPlaySrikePower": {
+    "NAME": "Flurry of Strikes",
+    "DESCRIPTIONS": [
+      "Your next #yStrike is played twice this turn.",
+      "Your next ",
+      " #yStrikes are played twice this turn."
+    ]
+  },
+  "champ:LastStandPower": {
+    "NAME": "Last Stand",
+    "DESCRIPTIONS": [
+      "Once you get below #b50% Hp, remove all debuffs and gain #b",
+      " Strength.",
+      "~You've~ ~done~ ~it~ ~now...~",
+      "@DEFEAT??@ NL @IMPOSSIBLE!!@"
+    ]
+  },
+  "champ:DoubleStyleThisTurnPower": {
+    "NAME": "Chain Lash",
+    "DESCRIPTIONS": [
+      "This turn, #ySkill Bonuses grant #b",
+      " more effect."
     ]
   }
 }

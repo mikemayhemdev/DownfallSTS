@@ -7,9 +7,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import downfall.util.TextureLoader;
 import theHexaghost.HexaMod;
 import theHexaghost.util.SealSealReward;
-import theHexaghost.util.TextureLoader;
 
 public class SealPostCombatPower extends AbstractPower implements CloneablePowerInterface, RemoveMeBabey {
 
@@ -47,7 +47,7 @@ public class SealPostCombatPower extends AbstractPower implements CloneablePower
     @Override
     public void onVictory() {
         for (int i = 0; i < amount; i++)
-            AbstractDungeon.getCurrRoom().addCardReward(new SealSealReward(AbstractDungeon.player.getCardColor()));
+            AbstractDungeon.getCurrRoom().addCardReward(new SealSealReward());
     }
 
     @Override

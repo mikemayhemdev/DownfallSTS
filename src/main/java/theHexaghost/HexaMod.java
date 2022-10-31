@@ -10,7 +10,9 @@ import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Interpolation;
+import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -18,38 +20,38 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.events.beyond.Falling;
+import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.city.Ghosts;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.BlueCandle;
-import com.megacrit.cardcrawl.relics.DarkstonePeriapt;
-import com.megacrit.cardcrawl.relics.DuVuDoll;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.scenes.TheBottomScene;
-import com.megacrit.cardcrawl.unlock.AbstractUnlock;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.scene.InteractableTorchEffect;
 import downfall.downfallMod;
+import downfall.patches.BanSharedContentPatch;
 import downfall.util.CardIgnore;
+import guardian.cards.AbstractGuardianCard;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import sneckomod.relics.UnknownEgg;
+import slimebound.cards.AbstractSlimeboundCard;
 import theHexaghost.cards.*;
-import theHexaghost.events.CouncilOfGhosts_Hexa;
-import theHexaghost.events.HexaFalling;
-import theHexaghost.events.SealChamber;
-import theHexaghost.events.WanderingSpecter;
+import theHexaghost.events.*;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.BolsteringGhostflame;
-import theHexaghost.potions.BurningPotion;
+import theHexaghost.patches.ExhaustCardTickPatch;
 import theHexaghost.potions.DoubleChargePotion;
 import theHexaghost.potions.EctoCoolerPotion;
 import theHexaghost.potions.InfernoChargePotion;
+import theHexaghost.potions.SoulburnPotion;
 import theHexaghost.relics.*;
-import theHexaghost.util.*;
+import theHexaghost.util.BurnVariable;
+import theHexaghost.util.CardFilter;
+import downfall.util.TextureLoader;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -99,7 +101,8 @@ public class HexaMod implements
     private CustomUnlockBundle unlocks3;
     private CustomUnlockBundle unlocks4;
 
-
+    @SpireEnum
+    public static AbstractCard.CardTags AFTERLIFE;
     @SpireEnum
     public static AbstractCard.CardTags GHOSTWHEELCARD;
 
@@ -115,7 +118,19 @@ public class HexaMod implements
                 CARD_ENERGY_L, TEXT_ENERGY);
 
 
+    }
 
+    public static void loadJokeCardImage(AbstractCard card, String img) {
+        if (card instanceof AbstractHexaCard) {
+            ((AbstractHexaCard) card).betaArtPath = img;
+        }
+        Texture cardTexture;
+        cardTexture = hermit.util.TextureLoader.getTexture(getModID() + "Resources/images/betacards/" + img);
+        cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+        int tw = cardTexture.getWidth();
+        int th = cardTexture.getHeight();
+        TextureAtlas.AtlasRegion cardImg = new TextureAtlas.AtlasRegion(cardTexture, 0, 0, tw, th);
+        ReflectionHacks.setPrivate(card, AbstractCard.class, "jokePortrait", cardImg);
     }
 
     public static String makeCardPath(String resourcePath) {
@@ -189,9 +204,9 @@ public class HexaMod implements
             System.out.println(classInfo.getClassName());
             AbstractCard card = (AbstractCard) Loader.getClassPool().getClassLoader().loadClass(cls.getName()).newInstance();
             BaseMod.addCard(card);
-           // if (cls.hasAnnotation(CardNoSeen.class)) {
-           //     UnlockTracker.hardUnlockOverride(card.cardID);
-           // }
+            // if (cls.hasAnnotation(CardNoSeen.class)) {
+            //     UnlockTracker.hardUnlockOverride(card.cardID);
+            // }
         }
     }
 
@@ -212,8 +227,9 @@ public class HexaMod implements
         BaseMod.addRelicToCustomPool(new SoulConsumer(), TheHexaghost.Enums.GHOST_GREEN);
         BaseMod.addRelicToCustomPool(new SoulOfChaos(), TheHexaghost.Enums.GHOST_GREEN);
         BaseMod.addRelicToCustomPool(new TheBrokenSeal(), TheHexaghost.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new CandleOfCauterizing(), TheHexaghost.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new Sixitude(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelic(new CandleOfCauterizing(), RelicType.SHARED);
+        BaseMod.addRelic(new Sixitude(), RelicType.SHARED);
+        BaseMod.addRelicToCustomPool(new UnbrokenSoul(), TheHexaghost.Enums.GHOST_GREEN);
 
 //        BaseMod.addRelic(new CandleOfCauterizing(), RelicType.SHARED);
 //        BaseMod.addRelic(new Sixitude(), RelicType.SHARED);
@@ -239,16 +255,26 @@ public class HexaMod implements
 
     public void addPotions() {
 
-        BaseMod.addPotion(EctoCoolerPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, EctoCoolerPotion.POTION_ID);
-        BaseMod.addPotion(BurningPotion.class, Color.TEAL, Color.GREEN, Color.FOREST, BurningPotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
+        BaseMod.addPotion(EctoCoolerPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, EctoCoolerPotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
+        BaseMod.addPotion(SoulburnPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, SoulburnPotion.POTION_ID);
         BaseMod.addPotion(DoubleChargePotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, DoubleChargePotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
         BaseMod.addPotion(InfernoChargePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, InfernoChargePotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
+        BanSharedContentPatch.registerRunLockedPotion(TheHexaghost.Enums.THE_SPIRIT, SoulburnPotion.POTION_ID);
 
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(EctoCoolerPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(SoulburnPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(DoubleChargePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(InfernoChargePotion.POTION_ID);
+        }
     }
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         GhostflameHelper.init();
+        ExhaustCardTickPatch.exhaustedLastTurn = false;
+        ExhaustCardTickPatch.exhaustedThisTurn = false;
+
         if (AbstractDungeon.player instanceof TheHexaghost) {
             renderFlames = true;
             if (AbstractDungeon.scene instanceof TheBottomScene) {
@@ -261,57 +287,37 @@ public class HexaMod implements
     @Override
     public void receiveSetUnlocks() {
 
-        unlocks0 = new CustomUnlockBundle(
-                GiftsFromTheDead.ID, PowerFromBeyond.ID, FlamesFromBeyond.ID
+        downfallMod.registerUnlockSuite(
+                GiftsFromTheDead.ID,
+                PowerFromBeyond.ID,
+                FlamesFromBeyond.ID,
+
+                Toasty.ID,
+                SpectralSpark.ID,
+                BurningQuestion.ID,
+
+                ApocalypticArmor.ID,
+                Premonition.ID,
+                FlameSwitch.ID,
+
+                RecyclingMachine.ID,
+                SoulOfChaos.ID,
+                JarOfFuel.ID,
+
+                BolsterEngine.ID,
+                CandleOfCauterizing.ID,
+                Sixitude.ID,
+
+                TheHexaghost.Enums.THE_SPIRIT
         );
-        UnlockTracker.addCard(GiftsFromTheDead.ID);
-        UnlockTracker.addCard(PowerFromBeyond.ID);
-        UnlockTracker.addCard(FlamesFromBeyond.ID);
-
-        unlocks1 = new CustomUnlockBundle(
-                Toasty.ID, SpectralSpark.ID, SuperheatedStrike.ID
-        );
-        UnlockTracker.addCard(Toasty.ID);
-        UnlockTracker.addCard(SpectralSpark.ID);
-        UnlockTracker.addCard(SuperheatedStrike.ID);
-
-        unlocks2 = new CustomUnlockBundle(
-                ApocalypticArmor.ID, ApocalypseNow.ID, UnlimitedPower.ID
-        );
-        UnlockTracker.addCard(ApocalypticArmor.ID);
-        UnlockTracker.addCard(ApocalypseNow.ID);
-        UnlockTracker.addCard(UnlimitedPower.ID);
-
-        unlocks3 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                RecyclingMachine.ID, SoulOfChaos.ID, JarOfFuel.ID
-        );
-        UnlockTracker.addRelic(RecyclingMachine.ID);
-        UnlockTracker.addRelic(SoulOfChaos.ID);
-        UnlockTracker.addRelic(JarOfFuel.ID);
-
-        unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                BolsterEngine.ID, CandleOfCauterizing.ID, Sixitude.ID
-        );
-        UnlockTracker.addRelic(BolsterEngine.ID);
-        UnlockTracker.addRelic(CandleOfCauterizing.ID);
-        UnlockTracker.addRelic(Sixitude.ID);
-
-        BaseMod.addUnlockBundle(unlocks0, TheHexaghost.Enums.THE_SPIRIT, 0);
-
-        BaseMod.addUnlockBundle(unlocks1, TheHexaghost.Enums.THE_SPIRIT, 1);
-
-        BaseMod.addUnlockBundle(unlocks2, TheHexaghost.Enums.THE_SPIRIT, 2);
-
-        BaseMod.addUnlockBundle(unlocks3, TheHexaghost.Enums.THE_SPIRIT, 3);
-
-        BaseMod.addUnlockBundle(unlocks4, TheHexaghost.Enums.THE_SPIRIT, 4);
-
     }
 
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         renderFlames = false;
+        ExhaustCardTickPatch.exhaustedLastTurn = false;
+        ExhaustCardTickPatch.exhaustedThisTurn = false;
     }
 
     public static void renderGhostflames(SpriteBatch sb) {
@@ -361,7 +367,7 @@ public class HexaMod implements
                     */
 
                     float flashP = (gf.flashTimer - 1F) / .5F;
-                    //SlimeboundMod.logger.info(gf.flashTimer + "," + flashP);
+                    ////SlimeboundMod.logger.info(gf.flashTimer + "," + flashP);
                     float fontScale = Settings.scale * 0.8F;
                     if (flashP > 0F) {
                         if (flashP > .5F) {
@@ -417,9 +423,10 @@ public class HexaMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(WanderingSpecter.ID, WanderingSpecter.class) //Event ID//
                 //Extra Requirement
-                .bonusCondition(HexaMod::canGetCurseRelic)
                 //Only in Evil if content sharing is disabled
+                .dungeonID(Exordium.ID)
                 .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
+                .bonusCondition(() -> (AbstractDungeon.cardRandomRng.random(0, 2) == 2))
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(SealChamber.ID, SealChamber.class) //Event ID//
@@ -444,18 +451,16 @@ public class HexaMod implements
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsHexaghost.ID, BackToBasicsHexaghost.class) //Event ID//
+                //Event Character//
+                .playerClass(TheHexaghost.Enums.THE_SPIRIT)
+                //Existing Event to Override//
+                .overrideEvent(BackToBasics.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
     }
 
-    public static boolean canGetCurseRelic() {
-        ArrayList<String> possRelicsList = new ArrayList<>();
-        possRelicsList.add(BlueCandle.ID);
-        possRelicsList.add(DarkstonePeriapt.ID);
-        possRelicsList.add(DuVuDoll.ID);
 
-        for (AbstractRelic q : AbstractDungeon.player.relics) {
-            possRelicsList.removeIf(q.relicId::equals);
-        }
-
-        return possRelicsList.isEmpty();
-    }
 }

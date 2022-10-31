@@ -22,7 +22,7 @@ import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 import theHexaghost.HexaMod;
 import theHexaghost.relics.IceCube;
 import theHexaghost.relics.SoulConsumer;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 import theHexaghost.vfx.ExplosionSmallEffectGreen;
 
 public class BurnPower extends TwoAmountPower implements CloneablePowerInterface, HealthBarRenderPower {
@@ -82,6 +82,9 @@ public class BurnPower extends TwoAmountPower implements CloneablePowerInterface
 
     public void explode(){
         this.flashWithoutSound();
+        if (AbstractDungeon.player.hasRelic(SoulConsumer.ID)){
+            AbstractDungeon.player.getRelic(SoulConsumer.ID).onTrigger();
+        }
         this.addToBot(new VFXAction(new ExplosionSmallEffectGreen(this.owner.hb.cX, this.owner.hb.cY), 0.1F));
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
 
@@ -99,9 +102,6 @@ public class BurnPower extends TwoAmountPower implements CloneablePowerInterface
         if (owner.hasPower(BurnPerTurnPower.POWER_ID)) {
             owner.getPower(BurnPerTurnPower.POWER_ID).onSpecificTrigger();
 
-        }
-        if (AbstractDungeon.player.hasRelic(SoulConsumer.ID)){
-            AbstractDungeon.player.getRelic(SoulConsumer.ID).onTrigger();
         }
 
 

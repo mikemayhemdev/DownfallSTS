@@ -1,9 +1,14 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.actions.AnimateSuplexAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static champ.ChampMod.loadJokeCardImage;
 
 public class Haymaker extends AbstractChampCard {
 
@@ -11,32 +16,31 @@ public class Haymaker extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 12;
+    private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 4;
 
     public Haymaker() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-       // tags.add(ChampMod.TECHNIQUE);
-        tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBOGLADIATOR);
+
+        tags.add(ChampMod.FINISHER);
+        postInit();
+        loadJokeCardImage(this, "Haymaker.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //if (upgraded) techique();
+        atb(new AnimateSuplexAction(m));
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        applyToEnemy(m, autoWeak(m, 2));
-        if (gcombo()) {
+        
+        //if (dcombo())
             applyToEnemy(m, autoVuln(m, 2));
-        }
+            applyToEnemy(m, autoWeak(m, 2));
+
+        finisher();
     }
 
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = gcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
-    }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(UPG_DAMAGE);
     }
 }

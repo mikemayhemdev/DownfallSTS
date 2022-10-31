@@ -1,7 +1,7 @@
 package charbosses.cards.purple;
 
+import charbosses.actions.unique.EnemyHaltAction;
 import charbosses.cards.AbstractBossCard;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -26,7 +26,19 @@ public class EnHalt extends AbstractBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new GainBlockAction(m, m, this.block));
+        applyPowers();
+        this.addToBot(new EnemyHaltAction(m, this.block, this.magicNumber));
+    }
+
+    @Override
+    public void applyPowers() {
+        this.baseBlock += 6 + this.timesUpgraded * 4;
+        this.baseMagicNumber = this.baseBlock;
+        super.applyPowers();
+        this.magicNumber = this.block;
+        this.isMagicNumberModified = this.isBlockModified;
+        this.baseBlock -= 6 + this.timesUpgraded * 4;
+        super.applyPowers();
     }
 
     @Override

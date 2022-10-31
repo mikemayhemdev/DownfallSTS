@@ -1,22 +1,22 @@
 package guardian.powers;
 
-
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.BlurPower;
 import com.megacrit.cardcrawl.powers.BufferPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import guardian.relics.ModeShifter;
 import guardian.stances.DefensiveMode;
 
 
 public class ModeShiftPower extends AbstractGuardianPower {
     public static final String POWER_ID = "Guardian:ModeShiftPower";
-    private static final int STARTINGAMOUNT = 10;
-    private static final int AMOUNTGAINPERACTIVATION = 5;
+    private static final int STARTINGAMOUNT = 20;
+    private static final int AMOUNTGAINPERACTIVATION = 10;
+    private static final int MAXAMOUNT = 50;
     private static final int BLOCKONTRIGGER = 10;
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
@@ -43,43 +43,47 @@ public class ModeShiftPower extends AbstractGuardianPower {
     }
 
     public void updateDescription() {
-        if (this.active) {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
 
-        } else {
-            this.description = DESCRIPTIONS[2];
+    }
+
+    public void onSpecificTrigger(int brace) {
+        this.amount -= brace;
+        updateDescription();
+        flash();
+        if (this.amount <= 0) {
+            int blockAmt = BLOCKONTRIGGER;
+            if (AbstractDungeon.player.hasRelic(ModeShifter.ID) && !AbstractDungeon.player.getRelic(ModeShifter.ID).grayscale) {
+                blockAmt += 10;
+                AbstractDungeon.player.getRelic(ModeShifter.ID).grayscale = true;
+            }
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, blockAmt));
+            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveMode.STANCE_ID));
+
+            int turns;
+            if (AbstractDungeon.actionManager.turnHasEnded)
+                turns = 2;
+            else
+                turns = 1;
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DontLeaveDefensiveModePower(AbstractDungeon.player, turns), turns));
+
+            this.activations++;
+            this.amount += Math.min(STARTINGAMOUNT + (AMOUNTGAINPERACTIVATION * activations), MAXAMOUNT); //Set max of 40 Brace
+            updateDescription();
+            if (this.amount <= 0){
+                onSpecificTrigger(0);
+            }
 
         }
-
     }
 
     @Override
     public int onLoseHp(int damageAmount) {
 
-        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && this.active && !AbstractDungeon.player.hasPower(ConstructModePower.POWER_ID) && !AbstractDungeon.player.hasPower(BufferPower.POWER_ID)) {
-            this.amount -= damageAmount;
-            if (this.amount <= 0) {
-                this.amount = 0;
-                this.active = false;
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, BLOCKONTRIGGER));
-
-                AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveMode.STANCE_ID));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new BlurPower(AbstractDungeon.player, 1), 1));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DontLeaveDefensiveModePower(AbstractDungeon.player, 1), 1));
-               // this.activations++;
-
-            }
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && this.active && !AbstractDungeon.player.hasPower(BufferPower.POWER_ID)) {
+            onSpecificTrigger(damageAmount);
         }
 
         return super.onLoseHp(damageAmount);
-    }
-
-    @Override
-    public void atStartOfTurn() {
-        super.atStartOfTurn();
-        if (!this.active) {
-            this.active = true;
-            this.amount = STARTINGAMOUNT + (this.activations * AMOUNTGAINPERACTIVATION);
-        }
     }
 }

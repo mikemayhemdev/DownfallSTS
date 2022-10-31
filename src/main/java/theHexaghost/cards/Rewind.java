@@ -3,10 +3,13 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.RetractAction;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class Rewind extends AbstractHexaCard {
 
@@ -18,15 +21,19 @@ public class Rewind extends AbstractHexaCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         tags.add(HexaMod.GHOSTWHEELCARD);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        HexaMod.loadJokeCardImage(this, "Rewind.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new RetractAction());
         atb(new GainEnergyAction(magicNumber));
-        if (upgraded) {
-            atb(new DrawCardAction(1));
-        }
+        if (upgraded)upgradeAction(p,m);
+
+    }
+
+
+    public void upgradeAction(AbstractPlayer p, AbstractMonster m){
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
     }
 
     public void upgrade() {

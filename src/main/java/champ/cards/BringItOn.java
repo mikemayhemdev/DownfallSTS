@@ -1,9 +1,13 @@
 package champ.cards;
 
+import champ.ChampChar;
 import champ.ChampMod;
 import champ.powers.CounterPower;
+import champ.stances.AbstractChampStance;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 
 public class BringItOn extends AbstractChampCard {
 
@@ -11,14 +15,15 @@ public class BringItOn extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, common
 
-    private static final int MAGIC = 10;
+    private static final int MAGIC = 9;
 
     public BringItOn() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        baseBlock = 10;
+        baseBlock = 9;
         //exhaust = true;
         tags.add(ChampMod.FINISHER);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -52,6 +52,7 @@ public class CursedTome_Evil extends AbstractImageEvent {
                     CardCrawlGame.sound.play("EVENT_TOME");
                     this.imageEventText.clearAllDialogs();
                     AbstractDungeon.player.damage(new DamageInfo(null, this.finalDmg, DamageType.HP_LOSS));
+                    logMetricTakeDamage(ID, "Obtained Book", finalDmg);
                     this.imageEventText.setDialogOption(OPTIONS[7]);
                     this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                     this.screen = CurScreen.END;
@@ -62,6 +63,7 @@ public class CursedTome_Evil extends AbstractImageEvent {
                     this.imageEventText.setDialogOption(OPTIONS[7]);
                     this.imageEventText.updateBodyText(CardCrawlGame.languagePack.getEventString("Cursed Tome").DESCRIPTIONS[6]);
                     this.screen = CurScreen.END;
+                    logMetricIgnored(ID);
                     return;
                 }
 

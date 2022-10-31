@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
 import expansioncontent.expansionContentMod;
 
+import static expansioncontent.expansionContentMod.loadJokeCardImage;
+
 public class YouAreMine extends AbstractExpansionCard {
     public final static String ID = makeID("YouAreMine");
 
@@ -21,12 +23,14 @@ public class YouAreMine extends AbstractExpansionCard {
 
     public YouAreMine() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_collector.png", "expansioncontentResources/images/1024/bg_boss_collector.png");
 
         tags.add(expansionContentMod.STUDY_COLLECTOR);
         tags.add(expansionContentMod.STUDY);
 
         baseMagicNumber = magicNumber = MAGIC;
         this.exhaust = true;
+        loadJokeCardImage(this, "YouAreMine.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -35,7 +39,7 @@ public class YouAreMine extends AbstractExpansionCard {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flash();
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-                if ((!monster.isDead) && (!monster.isDying)) {
+                if ((!monster.isDead) && (!monster.isDying) && !monster.halfDead) {
                     atb(new VFXAction(new CollectorCurseEffect(monster.hb.cX, monster.hb.cY), .5F));
                     atb(new RemoveAllBlockAction(monster, p));
 

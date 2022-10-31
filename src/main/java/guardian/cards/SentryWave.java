@@ -19,6 +19,8 @@ import guardian.GuardianMod;
 import guardian.actions.PlaceActualCardIntoStasis;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class SentryWave extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("SentryWave");
     public static final String NAME;
@@ -60,6 +62,7 @@ public class SentryWave extends AbstractGuardianCard {
         if (!this.noHover) this.cardsToPreview = new SentryBeam(true);
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("SentryWave.png"));
     }
 
     public SentryWave(){
@@ -71,17 +74,9 @@ public class SentryWave extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new ShockWaveEffect(p.hb.cX, p.hb.cY, Color.ROYAL, ShockWaveEffect.ShockWaveType.ADDITIVE), 0.1F));
         AbstractDungeon.actionManager.addToBottom(new SFXAction("THUNDERCLAP"));
 
-        if (upgraded) {
-            for (AbstractMonster m2 : AbstractDungeon.getMonsters().monsters) {
-                if (!m2.isDead && !m2.isDying) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m2, p, new WeakPower(m2, this.magicNumber, false), this.magicNumber));
-                }
-            }
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber));
 
-        }
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+        if (upgraded) brace(2);
 
         if (AbstractDungeon.player.hasEmptyOrb()) {
 
@@ -103,7 +98,6 @@ public class SentryWave extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             //upgradeMagicNumber(UPGRADE_DEBUFF);
-            this.target = CardTarget.ALL_ENEMY;
             this.rawDescription = UPGRADED_DESCRIPTION;
             if (!this.noHover){
                 AbstractCard q = new SentryBeam(true);

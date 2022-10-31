@@ -22,7 +22,7 @@ public class Repair extends AbstractBronzeCard {
         baseMagicNumber = magicNumber = MAGIC;
         thisEncodes();
         tags.add(CardTags.HEALING);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+       // this.tags.add(SneckoMod.BANNEDFORSNECKO);
         baseBlock = 4;
     }
 

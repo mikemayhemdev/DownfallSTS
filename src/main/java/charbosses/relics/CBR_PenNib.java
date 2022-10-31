@@ -2,6 +2,7 @@ package charbosses.relics;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
+import charbosses.powers.cardpowers.EnemyPenNibPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -14,7 +15,7 @@ import com.megacrit.cardcrawl.relics.PenNib;
 import com.megacrit.cardcrawl.relics.Shuriken;
 
 public class CBR_PenNib extends AbstractCharbossRelic {
-    public static final String ID = "PenNib";
+    public static final String ID = "Pen Nib";
 
     public CBR_PenNib() {
         super(new PenNib());
@@ -26,7 +27,7 @@ public class CBR_PenNib extends AbstractCharbossRelic {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.ATTACK) {
+        if (card.type == AbstractCard.CardType.ATTACK && card instanceof AbstractBossCard) {
             ++this.counter;
             if (this.counter == 10) {
                 this.counter = 0;
@@ -37,7 +38,7 @@ public class CBR_PenNib extends AbstractCharbossRelic {
                 this.pulse = true;
                 this.owner.hand.refreshHandLayout();
                 this.addToBot(new RelicAboveCreatureAction(this.owner, this));
-                this.addToBot(new ApplyPowerAction(this.owner, this.owner, new PenNibPower(this.owner, 1), 1, true));
+                this.addToBot(new ApplyPowerAction(this.owner, this.owner, new EnemyPenNibPower(this.owner, 1), 1, true));
             }
         }
 

@@ -2,24 +2,89 @@
   "reskinContent:ReSkin": {
     "TEXT": [
       "皮膚",
-      "原版",
+      "原版"
+    ]
+  },
+  "reskinContent:PortraitAnimation": {
+    "TEXT": [
+      "立繪類型"
+    ]
+  },
+  "reskinContent:PortraitAnimationType": {
+    "TEXT": [
+      "靜態",
+      "動態（低粒子）",
+      "動態"
+    ]
+  },
+  "reskinContent:BetaArtUnlockEffect": {
+    "TEXT": [
+      "已解鎖守護者皮膚！",
+      "已解鎖史萊姆老大皮膚！",
+      "已解鎖六火亡魂皮膚！",
+      "已解鎖異蛇皮膚！",
+      "已解鎖第一勇士皮膚！",
+      "已解鎖銅製機械人偶皮膚！"
+    ]
+  },
+  "reskinContent:ReSkinGuardian": {
+    "TEXT": [
       "蹲醬",
-      "原版",
-      " 史萊姆娘"
+      "愚人節"
+    ],
+    "EXTRA_TEXT": [
+      "量產人形先古造物。 NL 被重編程以用於保護城市入口以外的用途",
+      "化鱗為翼， NL 天下無雙。"
     ]
   },
-  "reskinContent:Name": {
+  "reskinContent:ReSkinSlime": {
     "TEXT": [
-      "守護者",
-      "黏黏史萊姆"
+      "史萊姆娘",
+      "愚人節"
+    ],
+    "EXTRA_TEXT": [
+      "與隨處可見的種類不同。 NL 吞噬了眾多物品的它將繼續它的美食之旅。",
+      "圓桶高帽， NL 簡單帥氣。"
     ]
   },
-  "reskinContent:modSettings": {
+  "reskinContent:ReSkinHexaghost": {
     "TEXT": [
-      "去除六火的面具",
-      "去除六火周圍的鬼魂",
-      "關閉動態立繪--蹲醬",
-      "禁用敵人皮膚"
+      "六子",
+      "愚人節"
+    ],
+    "EXTRA_TEXT": [
+      "充滿了冤魂的容器中也有不一樣的個體。 NL 具現化使得力量更為強勁？",
+      "白袍加身， NL 苦痛面具。"
+    ]
+  },
+  "reskinContent:ReSkinSnecko": {
+    "TEXT": [
+      "蛇蛇",
+      "愚人節"
+    ],
+    "EXTRA_TEXT": [
+      "它迷惑性的雙眸將使人出現認知偏差。 NL 調查顯示，被困惑的生物會看見完全不同的世界。",
+      "添足不足， NL 力大無窮。"
+    ]
+  },
+  "reskinContent:ReSkinChamp": {
+    "TEXT": [
+      "妹妹勇士",
+      "愚人節"
+    ],
+    "EXTRA_TEXT": [
+      "揮舞著與身形完全不相符的巨劍看似滑稽。 NL 實際上有著旁人想象不到的巨大力量。",
+      "身如磐巖， NL 毋須甲胄。"
+    ]
+  },
+  "reskinContent:ReSkinBronze": {
+    "TEXT": [
+      "童製機械人偶",
+      "愚人節"
+    ],
+    "EXTRA_TEXT": [
+      "揮舞著與身形完全不相符的巨劍看似滑稽。 NL 實際上有著旁人想象不到的巨大力量。",
+      "相挾天子， NL 以令諸侯。"
     ]
   }
 }

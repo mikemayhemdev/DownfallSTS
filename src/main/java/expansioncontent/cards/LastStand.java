@@ -25,6 +25,7 @@ public class LastStand extends AbstractExpansionCard {
 
     public LastStand() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_champ.png", "expansioncontentResources/images/1024/bg_boss_champ.png");
 
         tags.add(expansionContentMod.STUDY_CHAMP);
         tags.add(expansionContentMod.STUDY);

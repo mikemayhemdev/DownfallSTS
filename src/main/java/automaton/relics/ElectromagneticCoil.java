@@ -2,7 +2,7 @@ package automaton.relics;
 
 import automaton.AutomatonMod;
 import automaton.FunctionHelper;
-import automaton.util.TextureLoader;
+import downfall.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.Settings;
@@ -22,13 +22,11 @@ public class ElectromagneticCoil extends CustomRelic {
 
     @Override
     public void onEquip() {
-        FunctionHelper.max = 4;
         AutomatonMod.compileDisplayPanel.x += (135 * Settings.scale); //
     }
 
     @Override
     public void onUnequip() {
-        FunctionHelper.max = 3;
         AutomatonMod.compileDisplayPanel.x -= (135 * Settings.scale); //
     }
 

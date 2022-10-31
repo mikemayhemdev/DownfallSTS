@@ -4,14 +4,14 @@
     "FLAVOR": "Ease your rage. Be as tough and unyielding as the Spire itself.",
     "DESCRIPTIONS": [
       "Boss has increased max HP, no starter relic, draws #b2 less cards, and has 1 less ",
-      " ."
+      " . NL At the start of combat, Boss gains a unique Buff effect. Can't be #yStunned."
     ]
   },
   "downfall:NeowBlessing_Player": {
     "NAME": "Neow's Blessing",
     "FLAVOR": "Ease your rage. Be as tough and unyielding as the Spire itself.",
     "DESCRIPTIONS": [
-      "Upon pickup, increase your Maximum HP by #b100. NL Increase your Maximum HP by #b100 at the start of each Act. NL Lose all your Potion slots and cant obtain,draw #b1 less cards and lose [E] at the start of your turn."
+      "Upon pickup, increase your Maximum HP by #b100. NL Increase your Maximum HP by #b100 at the start of each Act. NL Lose all your Potion slots. NL Draw #b1 less card and lose [E] at the start of your turn."
     ]
   },
   "downfall:CoffeeDripper": {
@@ -377,10 +377,10 @@
   },
   "downfall:GremlinSack": {
     "NAME": "Gremlin Sack",
-    "FLAVOR": "You were no match for the Gremlin and his bodyguard.",
+    "FLAVOR": "The Gremlin and his bodyguard were no match for you.",
     "DESCRIPTIONS": [
       "Upon pickup, add the following cards to your deck: NL ",
-      "Upon pickup, add 6 cards to your deck from the Match Game.",
+      "Upon pickup, add #b6 cards to your deck from the Match Game.",
       "#g(Starter) ",
       "#g(Common) ",
       "#b(Uncommon) ",
@@ -415,7 +415,7 @@
     "NAME": "Sharpened Fragment",
     "FLAVOR": "Once a broken statue - now a makeshift weapon.",
     "DESCRIPTIONS": [
-      "At the start of each turn, add a Crystal Shiv to your hand."
+      "At the start of each turn, gain a #yCrystal #yShiv."
     ]
   },
   "downfall:RedIOU": {
@@ -441,12 +441,12 @@
     "NAME": "Knowing Skull",
     "FLAVOR": "Put me down!",
     "DESCRIPTIONS": [
-      "At the start of each combat, you may Wish for Souls, Success, or a Pick me Up."
+      "At the start of each combat, you may wish for Souls, Success, or a Pick me Up."
     ]
   },
   "downfall:HeartBlessingRed": {
     "NAME": "Ruby Heart Blessing",
-    "FLAVOR": "The heart is strong. The heart is pleased.",
+    "FLAVOR": "The heart is strong.",
     "DESCRIPTIONS": [
       "Start each combat with #b1 #yStrength."
     ]
@@ -486,7 +486,7 @@
     "NAME": "Hecktoplasm",
     "FLAVOR": "This blob of slime seems to pulse with the energy of hundreds of souls. No wonder no one wanted it.",
     "DESCRIPTIONS": [
-      "You can no longer gain #ySouls. Breaking Keys costs no #ySouls. Gain [E] at the start of your turn."
+      "Gain [E] at the start of your turn. You can no longer gain #ySouls. Breaking Keys costs no #ySouls."
     ]
   },
   "downfall:replacements": {
@@ -500,7 +500,40 @@
       "Truly, you are the Heart's MVB: Most Valuable Boss.",
       "The Heart's corruption knows no limits - not even precious pets.",
       "Corrupted Courier",
-      "The Heart restocks cards, relics, and potions. All prices are reduced by #b20%."
+      "The Heart restocks cards, relics, and potions. All prices are reduced by #b20%.",
+      "Combat reward screens now contain Colorless cards and cards from the Hero colors.",
+      "Gain [E] at the start of your turn. You can no longer gain #ySouls. Breaking Keys costs no #ySouls."
+    ]
+  },
+  "downfall:LizardTail": {
+    "NAME": "Super Lizard Tail",
+    "FLAVOR": "A fake tail to trick enemies during combat.",
+    "DESCRIPTIONS": [
+      "When you would die, heal to #b100% of your Max HP instead (works once)."
+    ]
+  },
+  "downfall:TestRelic": {
+    "NAME": "VFX Tester",
+    "FLAVOR": "When it index oobs, you did it.",
+    "DESCRIPTIONS": [
+      "#pRight #pClick: Play the next card."
+    ]
+  },
+  "downfall:ExtraCursedKey": {
+    "NAME": "Extra Cursed Key",
+    "FLAVOR": "Locked away for good reason.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. NL Whenever you open a non-Boss chest, obtain #b2 #rCurses."
+    ]
+  },
+  "downfall:ExtraCursedBell": {
+    "NAME": "Extra Cursed Bell",
+    "FLAVOR": "You think you hear it echoing, but can never confirm it.",
+    "DESCRIPTIONS": [
+      "Upon pickup, obtain #b2 of a unique #rCurse and #b3 relics.",
+      "The Bell Tolls Twice...",
+      "Skip Rewards",
+      "Close"
     ]
   }
 }

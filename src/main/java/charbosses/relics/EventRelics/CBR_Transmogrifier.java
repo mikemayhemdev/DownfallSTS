@@ -7,7 +7,7 @@ import downfall.downfallMod;
 
 
 public class CBR_Transmogrifier extends AbstractCharbossRelic {
-    public static String ID = downfallMod.makeID("Transmogrifier");
+    public static String ID = downfallMod.makeID("TransmogrifierEvil");
     private static RelicTier tier = RelicTier.SPECIAL;
     private static LandingSound sound = LandingSound.MAGICAL;
     private String removedName;

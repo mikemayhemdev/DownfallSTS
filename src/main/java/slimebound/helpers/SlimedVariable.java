@@ -7,7 +7,7 @@ import slimebound.cards.AbstractSlimeboundCard;
 public class SlimedVariable extends DynamicVariable {
     @Override
     public String key() {
-        return "SlimeboundSlimed";
+        return "slime";
     }
 
     @Override
@@ -44,7 +44,7 @@ public class SlimedVariable extends DynamicVariable {
     public boolean upgraded(AbstractCard card) {
         if (card instanceof AbstractSlimeboundCard) {
             AbstractSlimeboundCard asc = (AbstractSlimeboundCard) card;
-            return asc.isSlimedModified;
+            return asc.upgradeSlimed;
         } else {
             return false;
         }

@@ -1,0 +1,30 @@
+{
+  "Slimebound:SlimedPotion": {
+    "NAME": "罐裝黏液",
+    "DESCRIPTIONS": [
+      "給予 #b",
+      " 層 #y黏液 。"
+    ]
+  },
+  "Slimebound:SlimyTonguePotion": {
+    "NAME": "黏液精華",
+    "DESCRIPTIONS": [
+      "本場戰鬥給予 #y黏液 時，額外給予 #b",
+      " 層。"
+    ]
+  },
+  "Slimebound:SpawnSlimePotion": {
+    "NAME": "瓶中軍團",
+    "DESCRIPTIONS": [
+      "隨機 #y分裂 #b",
+      " 只 #y史萊姆 。(包括 #y專家史萊姆 )"
+    ]
+  },
+  "Slimebound:ThreeZeroPotion": {
+    "NAME": "稠化飲料",
+    "DESCRIPTIONS": [
+      "隨機將 #b",
+      " 張 #b0 耗能牌加入手牌。"
+    ]
+  }
+}

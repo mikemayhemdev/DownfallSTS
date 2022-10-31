@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeAutoAttack;
@@ -33,8 +34,8 @@ public class SlowingSlime
 
     public SlowingSlime() {
 
-        super(ID, new Color(1.0F, 100F / 255F, 100F / 255F, 100F), atlasString, skeletonString, false, true, 2, 0, true, new Color(.45F, .58F, .58F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDebuff.png"));
-        this.debuffAmount = 2;
+        super(ID, new Color(1.0F, 100F / 255F, 100F / 255F, 100F), atlasString, skeletonString, false, true, 4, 1, true, new Color(.45F, .58F, .58F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDebuff.png"));
+        this.debuffAmount = 1;
         this.extraFontColor = new Color(137F / 255F, 204F / 255F, 170F / 255F, 1F);
         spawnVFX();
 
@@ -44,7 +45,7 @@ public class SlowingSlime
         this.antennae = new AntennaeParticle(this);
         this.stopwatch = new StopwatchParticle(this);
 
-        if(!reskinContent.slimeReskinAnimation){
+        if(CharacterSelectScreenPatches.characters[1].isOriginal()){
         AbstractDungeon.effectList.add(this.antennae);
         AbstractDungeon.effectList.add(this.stopwatch);
         }
@@ -58,7 +59,7 @@ public class SlowingSlime
     public void activateEffectUnique() {
 
 
-        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_HEAVY, this, false, false, true, 1, false, 0, false, false, false, false, false));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_HEAVY, this, false, false, true, debuffAmount, false, 0, false, false, false, false, false));
 
     }
 
@@ -70,9 +71,11 @@ public class SlowingSlime
     }
 
     public void cleanUpVFX() {
-        if(!reskinContent.slimeReskinAnimation){
-        this.stopwatch.finish();
-        this.antennae.finish();
+        if(CharacterSelectScreenPatches.characters[1].isOriginal()){
+            if (this.stopwatch != null) {
+                this.stopwatch.finish();
+                this.antennae.finish();
+            }
         }
     }
 

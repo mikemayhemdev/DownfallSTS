@@ -1,0 +1,59 @@
+[
+  {
+    "PROPER_NAME": "精准",
+    "NAMES": [
+      "精准",
+      "Dead On",
+      "Dead_On",
+      "dead_on",
+      "deadon"
+    ],
+    "DESCRIPTION": " #y精准 牌从手牌中央打出时触发额外效果。"
+  },
+  {
+    "PROPER_NAME": "专注",
+    "NAMES": [
+      "专注",
+      "Concentrate",
+      "concentrate",
+      "concentrated",
+      "Concentrated"
+    ],
+    "DESCRIPTION": "下张 #y精准 牌必定触发 #y精准 效果。 NL 回合结束时失去本效果。"
+  },
+  {
+    "PROPER_NAME": "瘀伤",
+    "NAMES": [
+      "bruise",
+      "bruised",
+      "瘀伤"
+    ],
+    "DESCRIPTION": "攻击被 #y瘀伤 的敌人时造成额外伤害。 NL #y瘀伤 只持续 #b1 回合。"
+},
+  {
+    "PROPER_NAME": "坚固",
+    "NAMES": [
+      "rugged",
+      "坚固"
+    ],
+    "DESCRIPTION": "降低下次敌方攻击造成的生命损失至 #b2 点。"
+},
+  {
+    "PROPER_NAME": "赏金",
+    "NAMES": [
+      "赏金"
+    ],
+  "DESCRIPTION": "普通怪物： #b15 金币。 NL 精英怪物： #b40 金币。 NL 首领怪物： #b100 金币。"
+},
+  {
+    "PROPER_NAME": "击晕",
+    "NAMES": [
+      "击晕",
+      "stun",
+      "Stun",
+      "stunned",
+      "Stunned"
+    ],
+    "DESCRIPTION": "被 #y击晕 的敌人跳过其回合 #b1 次，且延续被击晕回合的意图。"
+  } 
+]

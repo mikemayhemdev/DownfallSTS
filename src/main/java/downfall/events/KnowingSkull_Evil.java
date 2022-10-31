@@ -45,10 +45,13 @@ public class KnowingSkull_Evil extends AbstractImageEvent {
                     case 0:
                         this.imageEventText.updateBodyText(DESC[1]);
                         AbstractDungeon.player.damage(new DamageInfo(null, takeCost, DamageInfo.DamageType.HP_LOSS));// 114
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, new KnowingSkull());
+                        KnowingSkull relic = new KnowingSkull();
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, relic);
+                        logMetricObtainRelicAndDamage(ID, "Took Skull", relic, takeCost);
                         break;
                     case 1:
                         this.imageEventText.updateBodyText(DESC[2]);
+                        logMetricIgnored(ID);
                         break;
                 }
 

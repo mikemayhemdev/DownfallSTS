@@ -11,13 +11,13 @@
   },
   "champ:TechniqueMod": {
     "TEXT": [
-      "champ:Technique. NL "
+      " NL Trigger *Stance *Skill *Bonus."
     ]
   },
   "champ:OpenerMod": {
     "TEXT": [
-      "Enter champ:Berserker NL ",
-      "Enter champ:Defensive NL ",
+      " NL Enter champ:Berserker.",
+      " NL Enter champ:Defensive.",
       "Enter champ:Gladiator NL "
     ]
   },
@@ -28,9 +28,17 @@
   },
   "champ:EnchantUI": {
     "TEXT": [
-      "Choose a card to cost 0.",
-      "Choose a card to increase damage.",
-      "Choose a card to increase Block."
+      "cost 0.",
+      "increase damage.",
+      "increase Block."
+    ]
+  },
+  "champ:highlightCombos": {
+    "TEXT": [
+      "*Berserker champ:Combo:",
+      "[#5ebf2a]Berserker champ:Combo:",
+      "*Defensive champ:Combo:",
+      "[#5ebf2a]Defensive champ:Combo:"
     ]
   }
 }

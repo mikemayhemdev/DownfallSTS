@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import expansioncontent.expansionContentMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 
 public class AwakenDeathPower extends AbstractPower implements OnPlayerDeathPower, CloneablePowerInterface {
@@ -46,13 +46,24 @@ public class AwakenDeathPower extends AbstractPower implements OnPlayerDeathPowe
 
     @Override
     public boolean onPlayerDeath(AbstractPlayer abstractPlayer, DamageInfo damageInfo) {
-        AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_AWAKENEDONE_1"));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(this.owner, new IntenseZoomEffect(this.owner.hb.cX, this.owner.hb.cY, true), 0.05F, true));
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, AwakenDeathPower.POWER_ID));
-
-        AbstractDungeon.actionManager.addToBottom(new HealAction(abstractPlayer, abstractPlayer, this.amount));
-
+        trigger(abstractPlayer);
         return false;
+    }
+
+    public void onVictory()
+         {
+          AbstractPlayer p = com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
+           if (p.currentHealth > 0) {
+                 p.heal(this.amount);
+          }
+          }
+
+    public void trigger(AbstractPlayer abstractPlayer) {
+        AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, AwakenDeathPower.POWER_ID));
+        AbstractDungeon.actionManager.addToTop(new HealAction(abstractPlayer, abstractPlayer, this.amount));
+        AbstractDungeon.actionManager.addToTop(new VFXAction(this.owner, new IntenseZoomEffect(this.owner.hb.cX, this.owner.hb.cY, true), 0.05F, true));
+        AbstractDungeon.actionManager.addToTop(new SFXAction("VO_AWAKENEDONE_1"));
+        addToBot(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(abstractPlayer, abstractPlayer, new com.megacrit.cardcrawl.powers.RepairPower(abstractPlayer, this.amount), this.amount));
     }
 
     @Override

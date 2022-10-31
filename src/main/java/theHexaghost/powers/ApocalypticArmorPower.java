@@ -1,9 +1,12 @@
 package theHexaghost.powers;
 
+import automaton.powers.InfiniteBeamsPower;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -14,9 +17,9 @@ import theHexaghost.HexaMod;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.InfernoGhostflame;
 import theHexaghost.util.OnChargeSubscriber;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
-public class ApocalypticArmorPower extends AbstractPower implements OnChargeSubscriber, NonStackablePower {
+public class ApocalypticArmorPower extends AbstractPower implements NonStackablePower {
 
     public static final String POWER_ID = HexaMod.makeID("ApocalypticArmorPower");
 
@@ -41,18 +44,11 @@ public class ApocalypticArmorPower extends AbstractPower implements OnChargeSubs
         this.updateDescription();
     }
 
+    //Triggered by Inferno Ghostflame
     @Override
-    public void onCharge(AbstractGhostflame g) {
-        if (g instanceof InfernoGhostflame) {
-            int i = 0;
-            for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
-                if (gf.charged) i++;
-            }
-            if (i >= amount) {
-                addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new TimeStopPower(AbstractDungeon.player, 1), 1));
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, this));
-            }
-        }
+    public void onSpecificTrigger() {
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new TimeStopPower(AbstractDungeon.player, 1), 1));
+        AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
     @Override

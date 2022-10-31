@@ -48,6 +48,8 @@ public class DeadGuy_Evil extends AbstractEvent {
     private int enemy;
     private DeadGuy_Evil.CUR_SCREEN screen;
     private Texture adventurerImg;
+    private int goldRewardMetric = 0;
+    private AbstractRelic relicRewardMetric = null;
 
     public DeadGuy_Evil() {
         this.x = 800.0F * Settings.scale;
@@ -139,10 +141,8 @@ public class DeadGuy_Evil extends AbstractEvent {
                 this.openMap();
                 break;
             case FAIL:
-                Iterator var2 = this.rewards.iterator();
 
-                while (var2.hasNext()) {
-                    String s = (String) var2.next();
+                for (String s : this.rewards) {
                     if (s.equals("GOLD")) {
                         AbstractDungeon.getCurrRoom().addGoldToRewards(30);
                     } else if (s.equals("RELIC")) {
@@ -153,10 +153,10 @@ public class DeadGuy_Evil extends AbstractEvent {
                 this.enterCombat();
                 AbstractDungeon.lastCombatMetricKey = this.getMonster();
                 ++this.numRewards;
-
+                logMetric(this.numRewards);
                 break;
             case ESCAPE:
-
+                logMetric(this.numRewards);
                 this.openMap();
                 break;
             default:
@@ -179,37 +179,22 @@ public class DeadGuy_Evil extends AbstractEvent {
     private void randomReward() {
         ++this.numRewards;
         this.encounterChance += 25;
-        String var1 = this.rewards.remove(0);
-        byte var2 = -1;
-        switch (var1.hashCode()) {
-            case -1447660627:
-                if (var1.equals("NOTHING")) {
-                    var2 = 1;
-                }
-                break;
-            case 2193504:
-                if (var1.equals("GOLD")) {
-                    var2 = 0;
-                }
-                break;
-            case 77859667:
-                if (var1.equals("RELIC")) {
-                    var2 = 2;
-                }
-        }
 
-        switch (var2) {
-            case 0:
+        switch (this.rewards.remove(0)) {
+            case "GOLD":
                 this.roomEventText.updateBodyText(DESCRIPTIONS[7]);
                 EffectHelper.gainGold(AbstractDungeon.player, this.x, this.y, 30);
                 AbstractDungeon.player.gainGold(30);
+                this.goldRewardMetric = 30;
+
                 break;
-            case 1:
+            case "NOTHING":
                 this.roomEventText.updateBodyText(DESCRIPTIONS[8]);
                 break;
-            case 2:
+            case "RELIC":
                 this.roomEventText.updateBodyText(DESCRIPTIONS[9]);
                 AbstractRelic r = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());
+                this.relicRewardMetric = r;
                 AbstractDungeon.getCurrRoom().spawnRelicAndObtain(this.x, this.y, r);
                 break;
             default:
@@ -217,11 +202,11 @@ public class DeadGuy_Evil extends AbstractEvent {
         }
 
         if (this.numRewards == 3) {
+            logMetric(this.numRewards);
             this.roomEventText.updateBodyText(DESCRIPTIONS[10]);
             this.roomEventText.updateDialogOption(0, OPTIONS[1]);
             this.roomEventText.removeDialogOption(1);
             this.screen = DeadGuy_Evil.CUR_SCREEN.SUCCESS;
-
         } else {
 
             this.roomEventText.updateDialogOption(0, OPTIONS[3] + this.encounterChance + OPTIONS[4]);
@@ -230,7 +215,15 @@ public class DeadGuy_Evil extends AbstractEvent {
         }
 
     }
+    public void logMetric(int numAttempts) {
+        if (this.relicRewardMetric != null) {
+            AbstractEvent.logMetricGainGoldAndRelic(ID, "Searched '" + numAttempts + "' times", this.relicRewardMetric, this.goldRewardMetric);
 
+        } else {
+
+            AbstractEvent.logMetricGainGold(ID, "Searched '" + numAttempts + "' times", this.goldRewardMetric);
+        }
+    }
     public void render(SpriteBatch sb) {
         super.render(sb);
         sb.setColor(Color.WHITE);

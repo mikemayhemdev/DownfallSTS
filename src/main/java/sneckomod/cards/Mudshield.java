@@ -12,10 +12,11 @@ public class Mudshield extends AbstractSneckoCard {
 
     public Mudshield() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new MudshieldPower(1));
+        applyToSelf(new MudshieldPower(this.magicNumber));
     }
 
     public void upgrade() {

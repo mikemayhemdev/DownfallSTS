@@ -25,7 +25,7 @@ public class TemporalShield extends AbstractGuardianCard {
     private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int BLOCK = 7;
+    private static final int BLOCK = 8;
     private static final int UPGRADE_BLOCK = 2;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
@@ -77,18 +77,12 @@ public class TemporalShield extends AbstractGuardianCard {
             upgradeName();
             upgradeBlock(UPGRADE_BLOCK);
             upgradeMagicNumber(1);
+            updateDescription();
         }
     }
 
     public void updateDescription() {
-
-        if (this.socketCount > 0) {
-            if (upgraded && UPGRADED_DESCRIPTION != null) {
-                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
-            } else {
-                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
-            }
-        }
+        this.rawDescription = upgraded ? UPGRADED_DESCRIPTION : DESCRIPTION;
         this.initializeDescription();
     }
 }

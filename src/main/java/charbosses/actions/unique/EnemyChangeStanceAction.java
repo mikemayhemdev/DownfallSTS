@@ -28,34 +28,36 @@ public class EnemyChangeStanceAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
-            if (AbstractCharBoss.boss.hasPower("CannotChangeStancePower")) {
-                this.isDone = true;
-                return;
-            }
+            if (AbstractCharBoss.boss != null) {
+                if (AbstractCharBoss.boss.hasPower("CannotChangeStancePower")) {
+                    this.isDone = true;
+                    return;
 
-            AbstractEnemyStance oldStance = (AbstractEnemyStance)AbstractCharBoss.boss.stance;
-            if (!oldStance.ID.equals(this.id)) {
-                if (this.newStance == null) {
-                    this.newStance = AbstractEnemyStance.getStanceFromName(this.id);
                 }
 
-                Iterator var2 = AbstractCharBoss.boss.powers.iterator();
+                AbstractEnemyStance oldStance = (AbstractEnemyStance) AbstractCharBoss.boss.stance;
+                if (!oldStance.ID.equals(this.id)) {
+                    if (this.newStance == null) {
+                        this.newStance = AbstractEnemyStance.getStanceFromName(this.id);
+                    }
 
-                while(var2.hasNext()) {
-                    AbstractPower p = (AbstractPower)var2.next();
-                    p.onChangeStance(oldStance, this.newStance);
-                }
+                    Iterator var2 = AbstractCharBoss.boss.powers.iterator();
 
-                var2 = AbstractCharBoss.boss.relics.iterator();
+                    while (var2.hasNext()) {
+                        AbstractPower p = (AbstractPower) var2.next();
+                        p.onChangeStance(oldStance, this.newStance);
+                    }
 
-                while(var2.hasNext()) {
-                    AbstractRelic r = (AbstractRelic)var2.next();
-                    r.onChangeStance(oldStance, this.newStance);
-                }
+                    var2 = AbstractCharBoss.boss.relics.iterator();
 
-                oldStance.onExitStance();
-                AbstractCharBoss.boss.stance = this.newStance;
-                this.newStance.onEnterStance();
+                    while (var2.hasNext()) {
+                        AbstractRelic r = (AbstractRelic) var2.next();
+                        r.onChangeStance(oldStance, this.newStance);
+                    }
+
+                    oldStance.onExitStance();
+                    AbstractCharBoss.boss.stance = this.newStance;
+                    this.newStance.onEnterStance();
 
                 /*
                 if (AbstractDungeon.actionManager.uniqueStancesThisCombat.containsKey(this.newStance.ID)) {
@@ -65,7 +67,7 @@ public class EnemyChangeStanceAction extends AbstractGameAction {
                     AbstractDungeon.actionManager.uniqueStancesThisCombat.put(this.newStance.ID, 1);
                 }*/
 
-                AbstractCharBoss.boss.switchedStance();
+                    AbstractCharBoss.boss.switchedStance();
                 /*
                 var2 = AbstractCharBoss.boss.discardPile.group.iterator();
 
@@ -75,13 +77,14 @@ public class EnemyChangeStanceAction extends AbstractGameAction {
                 }
                 */
 
-                AbstractCharBoss.boss.onStanceChange(this.id);
-            }
+                    AbstractCharBoss.boss.onStanceChange(this.id);
+                }
 
-            AbstractDungeon.onModifyPower();
-            if (Settings.FAST_MODE) {
-                this.isDone = true;
-                return;
+                AbstractDungeon.onModifyPower();
+                if (Settings.FAST_MODE) {
+                    this.isDone = true;
+                    return;
+                }
             }
         }
 

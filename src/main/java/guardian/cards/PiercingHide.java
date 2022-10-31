@@ -1,6 +1,9 @@
 package guardian.cards;
 
 
+import champ.vfx.SelfSpikesEffect;
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
@@ -28,8 +31,8 @@ public class PiercingHide extends AbstractGuardianCard {
     private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int BLOCK = 5;
-    private static final int UPGRADE_BLOCK = 3;
+    private static final int BLOCK = 7;
+    private static final int UPGRADE_BLOCK = 2;
     private static final int THORNS = 2;
     private static final int UPGRADE_THORNS = 1;
     private static final int SOCKETS = 1;
@@ -59,11 +62,11 @@ public class PiercingHide extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
 
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SelfSpikesEffect(Color.GOLDENROD, 5, true, 0.75F)));
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseThornsPower(p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveMode.STANCE_ID));
-
+        brace(3);
         super.useGems(p, m);
     }
 

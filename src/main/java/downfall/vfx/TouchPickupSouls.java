@@ -37,7 +37,7 @@ public class TouchPickupSouls extends AbstractGameEffect {
     public TouchPickupSouls() {
         this.isPickupable = false;
         this.pickedup = false;
-        this.img = ImageMaster.loadImage(downfallMod.assetPath("images/ui/Souls.png"));
+        this.img = downfallMod.soulsImage;
 
         this.y = MathUtils.random(0F, Settings.HEIGHT * -0.15F);
         this.x = MathUtils.random((float) Settings.WIDTH * 0.05F, (float) Settings.WIDTH * 0.95F) - (float) this.img.getWidth() / 2.0F;

@@ -1,5 +1,6 @@
 package charbosses.cards.blue;
 
+import charbosses.bosses.Defect.NewAge.ArchetypeAct3OrbsNewAge;
 import charbosses.cards.AbstractBossCard;
 import charbosses.powers.cardpowers.EnemyReboundPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -24,14 +25,21 @@ public class EnReprogram extends AbstractBossCard {
 
     public EnReprogram() {
         super("Reprogram", cardStrings.NAME, "blue/skill/reprogram", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.UNCOMMON, CardTarget.NONE, AbstractMonster.Intent.BUFF);
-        this.baseMagicNumber = 2;
+        this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                ArchetypeAct3OrbsNewAge.resetPretendFocus();
+                isDone = true;
+            }
+        });
         this.addToBot(new ApplyPowerAction(m, m, new FocusPower(p, -this.magicNumber), -this.magicNumber));
-        this.addToBot(new ApplyPowerAction(m, m, new StrengthPower(p, 1), 1));
-        this.addToBot(new ApplyPowerAction(m, m, new DexterityPower(p, 1), 1));
+        this.addToBot(new ApplyPowerAction(m, m, new StrengthPower(p, this.magicNumber), 1));
+        this.addToBot(new ApplyPowerAction(m, m, new DexterityPower(p, this.magicNumber), 1));
     }
 
     public AbstractCard makeCopy() {
@@ -41,7 +49,7 @@ public class EnReprogram extends AbstractBossCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(-1);
+            this.upgradeMagicNumber(1);
         }
 
     }

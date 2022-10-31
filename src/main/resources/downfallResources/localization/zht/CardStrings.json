@@ -1,0 +1,30 @@
+{
+  "downfall:SummonMushrooms": {
+    "NAME": "真菌環繞",
+    "DESCRIPTION": "擊殺所有蘑菇。 NL 回復其剩余血量點生命。 NL 召喚兩個蘑菇。"
+  },
+  "downfall:Aged": {
+    "NAME": "歲月",
+    "DESCRIPTION": "不能被打出 。 NL 虛無 。 NL 回合結束時，將一張 *虛空 加入抽牌堆頂部。"
+  },
+  "downfall:Bewildered": {
+    "NAME": "困惑",
+    "DESCRIPTION": "本牌在手時，打出其他牌後 sneckomod:混淆 所有手牌並丟棄本牌。 NL 消耗 。"
+  },
+  "downfall:Icky": {
+    "NAME": "黏液纏身",
+    "DESCRIPTION": "獲得一張 *黏液 。 NL 消耗 。"
+  },
+  "downfall:Haunted": {
+    "NAME": "鬧鬼",
+    "DESCRIPTION": "虛無 。 NL 不能被打出 。 NL 抽到時，將你已有的手牌附加 虛無 。"
+  },
+  "downfall:Malfunctioning": {
+    "NAME": "紕漏",
+    "DESCRIPTION": "回合結束時，將所有手牌變為隨機 狀態牌 。 NL 消耗 。"
+  },
+  "downfall:Scatterbrained": {
+    "NAME": "漫不經心",
+    "DESCRIPTION": "不能被打出 。 NL 你的回合中抽到時，將本牌的 gremlin:回響 充滿手牌。"
+  }
+}

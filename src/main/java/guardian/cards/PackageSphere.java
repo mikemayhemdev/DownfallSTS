@@ -2,6 +2,7 @@ package guardian.cards;
 
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,6 +14,8 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 import guardian.GuardianMod;
 
 import java.util.ArrayList;
+
+import static guardian.GuardianMod.makeBetaCardPath;
 
 public class PackageSphere extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("PackageSphere");
@@ -65,6 +68,7 @@ public class PackageSphere extends AbstractGuardianCard {
             prev2.upgrade();
             prev3.upgrade();
         }
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("PackageSpheric.png"));
     }
 
     @Override
@@ -92,22 +96,21 @@ public class PackageSphere extends AbstractGuardianCard {
         tmp = new SphericShield();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-        tmp.modifyCostForCombat(-1);
+     //   tmp.modifyCostForCombat(-1);
 
         tmp = new FloatingOrbs();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-        tmp.modifyCostForCombat(-1);
+     //   tmp.modifyCostForCombat(-1);
 
         tmp = new Harden();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-        tmp.modifyCostForCombat(-1);
+     //   tmp.modifyCostForCombat(-1);
 
-        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect((AbstractCard) derp.get(0), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
-        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect((AbstractCard) derp.get(1), (float) Settings.WIDTH * .75F, (float) Settings.HEIGHT / 2.0F));
-        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect((AbstractCard) derp.get(2), (float) Settings.WIDTH * .25F, (float) Settings.HEIGHT / 2.0F));
-
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction((AbstractCard)derp.get(0), true));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction((AbstractCard) derp.get(1), true));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction((AbstractCard) derp.get(2), true));
     }
 
     public AbstractCard makeCopy() {
@@ -120,6 +123,12 @@ public class PackageSphere extends AbstractGuardianCard {
 
             this.initializeDescription();
             upgradeName();
+            if (prev1 != null)
+                prev1.upgrade();
+            if (prev2 != null)
+                prev2.upgrade();
+            if (prev3 != null)
+                prev3.upgrade();
         }
     }
 

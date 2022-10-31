@@ -8,8 +8,13 @@ import charbosses.cards.curses.EnDecay;
 import charbosses.cards.curses.EnHaunted;
 import charbosses.cards.curses.EnInjury;
 import charbosses.cards.red.*;
+import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
+import charbosses.powers.bossmechanicpowers.DefectVoidPower;
+import charbosses.powers.bossmechanicpowers.IroncladMushroomPower;
 import charbosses.relics.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.BarricadePower;
 
@@ -19,12 +24,20 @@ public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
 
     public ArchetypeAct2MushroomsNewAge() {
         super("IC_MUSHROOM_ARCHETYPE", "Mushroom");
-        bossMechanicName = bossMechanicString.DIALOG[18];
-        bossMechanicDesc = bossMechanicString.DIALOG[19];
 
-        maxHPModifier += 200;
+        maxHPModifier += 190;
         actNum = 2;
+        bossMechanicName = IroncladMushroomPower.NAME;
+        bossMechanicDesc = IroncladMushroomPower.DESC[0];
     }
+
+    @Override
+    public void addedPreBattle() {
+        super.addedPreBattle();
+        AbstractCreature p = AbstractCharBoss.boss;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IroncladMushroomPower(p)));
+    }
+
 
     public void initialize() {
 
@@ -63,11 +76,11 @@ public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
                 case 1:
                     addToList(cardsList, new EnSummonMushrooms());
                     addToList(cardsList, new EnGhostlyArmor(), true);
-                    addToList(cardsList, new EnHemokinesis(), extraUpgrades);
+                    addToList(cardsList, new EnHemokinesis());
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnReaper(), extraUpgrades);
+                    addToList(cardsList, new EnReaper());
                     addToList(cardsList, new EnDefendRed());
                     addToList(cardsList, new EnHaunted());
                     turn++;
@@ -81,7 +94,7 @@ public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
                 case 4:
                     addToList(cardsList, new EnBloodletting());
                     addToList(cardsList, new EnHeadbutt());
-                    addToList(cardsList, new EnFlameBarrier(), true);
+                    addToList(cardsList, new EnFlameBarrier());
                     turn++;
                     break;
                 case 5:
@@ -97,7 +110,7 @@ public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
                 case 0:
                     addToList(cardsList, new EnBloodletting());
                     addToList(cardsList, new EnHeavyBlade());
-                    addToList(cardsList, new EnReaper(), extraUpgrades);
+                    addToList(cardsList, new EnReaper());
                     turn++;
                     break;
                 case 1:
@@ -114,7 +127,7 @@ public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
                     break;
                 case 3:
                     addToList(cardsList, new EnSummonMushrooms());
-                    addToList(cardsList, new EnHemokinesis(), extraUpgrades);
+                    addToList(cardsList, new EnHemokinesis());
                     addToList(cardsList, new EnHeadbutt());
                     turn=0;
                     break;

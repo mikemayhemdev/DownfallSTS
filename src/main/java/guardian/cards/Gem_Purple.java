@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import guardian.GuardianMod;
@@ -21,7 +22,7 @@ import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.PURPLE;
 
 
-public class Gem_Purple extends AbstractGuardianCard {
+public class Gem_Purple extends AbstractGemCard {
     public static final String ID = GuardianMod.makeID("Gem_Purple");
     public static final String NAME;
     public static final String IMG_PATH = "cards/gemPurple.png";
@@ -60,21 +61,17 @@ public class Gem_Purple extends AbstractGuardianCard {
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {
-        Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
-
-        AbstractMonster mo;
-        while (var3.hasNext()) {
-            mo = (AbstractMonster) var3.next();
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new StrengthPower(mo, -STRENGTHLOSS), -STRENGTHLOSS, true, AbstractGameAction.AttackEffect.NONE));
-        }
-
-        var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
-
-        while (var3.hasNext()) {
-            mo = (AbstractMonster) var3.next();
-            if (!mo.hasPower("Artifact")) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new GainStrengthPower(mo, STRENGTHLOSS), STRENGTHLOSS, true, AbstractGameAction.AttackEffect.NONE));
-            }
+        for (AbstractMonster q : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    if (!q.hasPower(ArtifactPower.POWER_ID)) {
+                        addToTop(new ApplyPowerAction(q, p, new GainStrengthPower(q, STRENGTHLOSS), STRENGTHLOSS, true));
+                    }
+                    addToTop(new ApplyPowerAction(q, p, new StrengthPower(q, -STRENGTHLOSS), -STRENGTHLOSS, true));
+                }
+            });
         }
     }
 

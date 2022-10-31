@@ -18,23 +18,30 @@ public class EnBarrage extends AbstractBossCard {
     private static final CardStrings cardStrings;
 
     public EnBarrage() {
+        this(1);
+    }
+
+    public EnBarrage(int hitCount) {
         super(ID, cardStrings.NAME, "blue/attack/barrage", 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.BLUE, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 4;
+        this.isMultiDamage = true;
+        this.magicNumber = hitCount;
+        intentMultiAmt = this.magicNumber;
     }
 
     @Override
     public void applyPowers() {
-        int x = 0;
-        for (int i = 0; i < AbstractCharBoss.boss.orbs.size(); ++i) {
-            if (!(AbstractCharBoss.boss.orbs.get(i) instanceof EnemyEmptyOrbSlot)) {
-                x++;
-            }
-        }
-        intentMultiAmt = x;
+//        int x = 0;
+//        for (int i = 0; i < AbstractCharBoss.boss.orbs.size(); ++i) {
+//            if (!(AbstractCharBoss.boss.orbs.get(i) instanceof EnemyEmptyOrbSlot)) {
+//                x++;
+//            }
+//        }
+//        intentMultiAmt = x;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new EnemyBarrageAction(p, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL)));
+        this.addToBot(new EnemyBarrageAction(p, new DamageInfo(m, this.damage, DamageInfo.DamageType.NORMAL)));
     }
 
     public void upgrade() {

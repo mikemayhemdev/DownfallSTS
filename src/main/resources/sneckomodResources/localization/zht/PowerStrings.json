@@ -1,0 +1,70 @@
+{
+  "sneckomod:CheapStockPower": {
+    "NAME": "廉價股票",
+    "DESCRIPTIONS": [
+      "你的回合開始時，將手中耗能最高的 #y異色 牌耗能降低 #b1 點。",
+      "你的回合開始時，將手中耗能最高的 #y異色 牌耗能降低 #b1 點。重復 #b",
+	  " 次。"
+    ]
+  },
+  "sneckomod:CheatPower": {
+    "NAME": "幸運",
+    "DESCRIPTIONS": [
+      "本回合內，卡牌上的隨機數值取上限值。",
+      " #b",
+      " 回合內，卡牌上的隨機數值取上限值。"
+    ]
+  },
+  "sneckomod:MuddleDrawnCardsPower": {
+    "NAME": "混淆抽牌",
+    "DESCRIPTIONS": [
+      "#y混淆 本回合抽到的下一張牌。",
+      "#y混淆 本回合抽到的下 #b",
+      " 張牌。（還剩 #b",
+      " 張)"
+    ]
+  },
+  "sneckomod:MudshieldPower": {
+    "NAME": "混亂護盾",
+    "DESCRIPTIONS": [
+      "每當你 #y混淆 一張牌時，獲得 #b",
+      " 點 #y格擋 。"
+    ]
+  },
+  "sneckomod:SerpentMindPower": {
+    "NAME": "異色形態",
+    "DESCRIPTIONS": [
+      "每當你打出一張 #y異色 牌時，抽 #b",
+      " 張牌。",
+      " 張牌。"
+    ]
+  },
+  "sneckomod:UnendingSupplyPower": {
+    "NAME": "延綿不絕",
+    "DESCRIPTIONS": [
+      "你的回合開始時，隨機將 #b",
+      " 張 #y異色 牌加入你的手牌。"
+    ]
+  },
+  "sneckomod:UnknownUpgradedPostCombatPower": {
+    "NAME": "渴望力量",
+    "DESCRIPTIONS": [
+      "戰鬥結束時，額外獲得 #b",
+      " 張已 #y升級 的 #y未知 牌。",
+      " 張已 #y升級 的 #y未知 牌。"
+    ]
+  },
+  "sneckomod:UnlimitedRollsPower": {
+    "NAME": "無限隨機",
+    "DESCRIPTIONS": [
+      "你的回合開始時，將一張帶有 #y消耗 和 #y虛無 的 #y靈魂隨機 加入你的手牌。"
+    ]
+  },
+  "sneckomod:Transmogrifying": {
+    "NAME": "驚變",
+    "DESCRIPTIONS": [
+      " 將要變為另一件",
+      " 遺物。"
+    ]
+  }
+}

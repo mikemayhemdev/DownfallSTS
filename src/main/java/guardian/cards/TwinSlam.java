@@ -3,6 +3,7 @@ package guardian.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -23,12 +24,11 @@ public class TwinSlam extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 1;
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 5;
 
     //TUNING CONSTANTS
     private static final int UPGRADE_BONUS = 2;
-    private static final int MULTICOUNT = 2;
-    private static final int SOCKETS = 2;
+    private static final int SOCKETS = 1;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
@@ -51,17 +51,24 @@ public class TwinSlam extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        cardsToPreview = new SecondStrikePreviewCard();
+        ((AbstractGuardianCard)cardsToPreview).socketCount = 0;
+        ((AbstractGuardianCard)cardsToPreview).updateDescription();
 
-
-        this.multihit = MULTICOUNT;
         //this.sockets.add(GuardianMod.socketTypes.RED);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        for (int i = 0; i < this.multihit; i++) {
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        AbstractGuardianCard q = new SecondStrike();
+        if (upgraded) q.upgrade();
+        int i = 0;
+        for (GuardianMod.socketTypes gem : sockets) {
+            q.sockets.add(gem);
+            i++;
         }
+        addToBot(new MakeTempCardInHandAction(q, true));
         super.useGems(p, m);
     }
 
@@ -73,6 +80,16 @@ public class TwinSlam extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
+            if (this.socketCount < 4) {
+                this.socketCount++;
+                this.saveGemMisc();
+            }
+            AbstractCard q = new SecondStrikePreviewCard();
+            q.upgrade();
+            cardsToPreview = q;
+
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.updateDescription();
         }
     }
 

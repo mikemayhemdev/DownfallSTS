@@ -1,30 +1,24 @@
 package charbosses.bosses.Defect;
 
-import charbosses.BossMechanicDisplayPanel;
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Defect.NewAge.ArchetypeAct1StreamlineNewAge;
+import charbosses.bosses.Defect.NewAge.ArchetypeAct1TurboNewAge;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
+import charbosses.bosses.Defect.NewAge.ArchetypeAct3InserterNewAge;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct3OrbsNewAge;
-import charbosses.cards.anticards.Debug;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
-import charbosses.powers.DefectCuriosityPower;
-import charbosses.powers.general.PoisonProtectionPower;
 import com.esotericsoftware.spine.AnimationState;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.actions.common.InstantKillAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbBlue;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
-import guardian.cards.AncientConstruct;
-import guardian.powers.ConstructPower;
-import slimebound.SlimeboundMod;
 
 public class CharBossDefect extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Defect");
@@ -54,13 +48,13 @@ public class CharBossDefect extends AbstractCharBoss {
         AbstractBossDeckArchetype archetype;
 
         if (downfallMod.overrideBossDifficulty) {
-            archetype = new ArchetypeAct1StreamlineNewAge();
+            archetype = new ArchetypeAct1TurboNewAge();
             this.currentHealth -= 100;
             downfallMod.overrideBossDifficulty = false;
         } else
             switch (AbstractDungeon.actNum) {
                 case 1:
-                    archetype = new ArchetypeAct1StreamlineNewAge();
+                    archetype = new ArchetypeAct1TurboNewAge();
                     break;
                 case 2:
                     archetype = new ArchetypeAct2ClawNewAge();
@@ -69,16 +63,16 @@ public class CharBossDefect extends AbstractCharBoss {
                     archetype = new ArchetypeAct3OrbsNewAge();
                     break;
                 case 4: {
-                    SlimeboundMod.logger.info("Defect spawned at Archetype " + NeowBoss.Rezzes);
+                    //SlimeboundMod.logger.info("Defect spawned at Archetype " + NeowBoss.Rezzes);
                     switch (NeowBoss.Rezzes) {
 
-                        case 1:
-                            archetype = new ArchetypeAct1StreamlineNewAge();
+                        case 0:
+                            archetype = new ArchetypeAct1TurboNewAge();
                             break;
-                        case 2:
+                        case 1:
                             archetype = new ArchetypeAct2ClawNewAge();
                             break;
-                        case 3:
+                        case 2:
                             archetype = new ArchetypeAct3OrbsNewAge();
                             break;
                         default:
@@ -88,35 +82,38 @@ public class CharBossDefect extends AbstractCharBoss {
                     break;
                 }
                 default:
-                    archetype = new ArchetypeAct1StreamlineNewAge();
+                    archetype = new ArchetypeAct1TurboNewAge();
                     break;
             }
 
         archetype.initialize();
         chosenArchetype = archetype;
-//        if (AbstractDungeon.ascensionLevel >= 19) {
-//            archetype.initializeBonusRelic();
-//        }
+        if (AbstractDungeon.ascensionLevel >= 19) {
+            archetype.initializeBonusRelic();
+        }
+    }
+
+    public void damage(DamageInfo info) {
+        if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.output - this.currentBlock > 0) {
+            AnimationState.TrackEntry e = this.state.setAnimation(0, "Hit", false);
+            this.state.addAnimation(0, "Idle", true, 0.0F);
+            e.setTimeScale(0.6F);
+        }
+
+        super.damage(info);
     }
 
     @Override
     public void die() {
         super.die();
-        downfallMod.saveBossFight(CharBossDefect.ID);
+
+        if (hasPower(MinionPower.POWER_ID)) {
+            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                if (m instanceof BronzeOrbWhoReallyLikesDefectForSomeReason) {
+                    AbstractDungeon.actionManager.addToBottom(new InstantKillAction(m));
+                }
+            }
+        }
     }
 
-    @Override
-    public void usePreBattleAction() {
-        super.usePreBattleAction();
-        if (chosenArchetype instanceof ArchetypeAct2ClawNewAge) {
-            AbstractCreature p = AbstractCharBoss.boss;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ConstructPower(p, p, 1), 1));
-            AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new BronzeOrbWhoReallyLikesDefectForSomeReason(-450, 250, 0), true));
-            AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new BronzeOrbWhoReallyLikesDefectForSomeReason(-600, 0, 1), true));
-        }
-        if (chosenArchetype instanceof ArchetypeAct3OrbsNewAge) {
-            AbstractCreature p = AbstractCharBoss.boss;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DefectCuriosityPower(p)));
-        }
-    }
 }

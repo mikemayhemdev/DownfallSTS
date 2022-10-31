@@ -1,66 +1,55 @@
 [
   {
-    "PROPER_NAME": "激活",
-    "NAMES": [
-      "激活"
-    ],
-    "DESCRIPTION": "#y激活 的鬼火能在达到点燃条件时被点燃。"
-  },
-  {
     "PROPER_NAME": "步进",
     "NAMES": [
       "步进"
     ],
-    "DESCRIPTION": "#y激活 下一个鬼火。如果被点燃则 #y熄灭 。"
+    "DESCRIPTION": "跳至下枚鬼火，若已被 #y点燃 则 #y熄灭 它。"
   },
   {
     "PROPER_NAME": "回退",
     "NAMES": [
       "回退"
     ],
-    "DESCRIPTION": "#y激活 上一个鬼火。如果被点燃则 #y熄灭 。"
+    "DESCRIPTION": "跳至上枚鬼火，若已被 #y点燃 则 #y熄灭 它。"
   },
   {
     "PROPER_NAME": "热烈",
     "NAMES": [
       "热烈"
     ],
-    "DESCRIPTION": "提高鬼火上点燃效果提供的伤害、灼魂和格挡效果。"
+    "DESCRIPTION": "提高鬼火 #y点燃 效果提供的伤害、 #y灼魂 以及 #y格挡 。"
   },
   {
     "PROPER_NAME": "灼魂",
     "NAMES": [
-      "灼魂"
+      "灼魂",
+      "soulburn"
     ],
-    "DESCRIPTION": "在 #b3 个回合后，被灼魂的生物失去相应数量的生命并移除灼魂效果。"
+    "DESCRIPTION": "给予未带有 #y灼魂 的敌人 #y灼魂 时，其 #y灼魂 累计至你的下下回合结束前。之后 #y灼魂 将引爆，使敌人失去相应层数点生命并移除所有 #y灼魂 。"
   },
   {
     "PROPER_NAME": "熄灭",
     "NAMES": [
       "熄灭"
     ],
-    "DESCRIPTION": "使得鬼火能被重新点燃。重置点火条件。"
+    "DESCRIPTION": "重置 #y点燃 条件，使得鬼火能被重新 #y点燃 。"
   },
   {
     "PROPER_NAME": "点燃",
     "NAMES": [
+      "ignite",
+      "force-ignite",
       "点燃"
     ],
-    "DESCRIPTION": "触发鬼火上的点燃效果。"
-  },
-  {
-    "PROPER_NAME": "强制点燃",
-    "NAMES": [
-      "强制点燃"
-    ],
-    "DESCRIPTION": "触发一个鬼火的点燃效果，即使已经点燃。"
+    "DESCRIPTION": "触发鬼火上的 #y点燃 效果。"
   },
   {
     "PROPER_NAME": "容器",
     "NAMES": [
       "容器"
     ],
-    "DESCRIPTION": "不能被升级。如果本场战斗所有的 #b6 种容器都被打出，获得 #p破损容器 并将打出的容器移出牌组。"
+    "DESCRIPTION": "若一场战斗所有的 #b6 种 #y容器 牌都被打出且无重复，获得 #p破损容器 并将打出的 #y容器 牌移出牌组。"
   },
   {
     "PROPER_NAME": "阴世",
@@ -68,5 +57,48 @@
       "阴世"
     ],
     "DESCRIPTION": "被 #y消耗 时触发效果。"
+  },
+  {
+    "PROPER_NAME": "碾压",
+    "NAMES": [
+      "碾压"
+    ],
+    "DESCRIPTION": "#y鬼火 。 NL 停留时打出 #b2 张 技能牌 #y点燃 。 NL #y点燃 ：随机对敌人造成 #b3 点伤害两次。"
+  },
+  {
+    "PROPER_NAME": "高热",
+    "NAMES": [
+      "高热"
+    ],
+    "DESCRIPTION": "#y鬼火 。 NL 停留时打出 #b1 张 能力牌 #y点燃 。 NL #y点燃 ：获得 #b4 点 #y格挡 与 #b1 点 #y力量 。"
+  },
+  {
+    "PROPER_NAME": "灼热",
+    "NAMES": [
+      "灼热"
+    ],
+    "DESCRIPTION": "#y鬼火 。 NL 停留时打出 #b2 张 攻击牌 #y点燃 。 NL #y点燃 ：随机给予一名敌人 #b4 层 #y灼魂 。"
+  },
+  {
+    "PROPER_NAME": "狱焱",
+    "NAMES": [
+      "狱焱"
+    ],
+    "DESCRIPTION": "#y鬼火 。 NL 停留时使用 #b3 点 能量 #y点燃 。 NL #y点燃 ：每有 #b1 枚 #y点燃 的 #y鬼火 ，随机对敌人造成 #b4 点伤害。之后 #y熄灭 其他 #y鬼火 。"
+  },
+  {
+    "PROPER_NAME": "强制点燃        ！！！！！！！！！！！！！   以下为疑似弃用文本  ！！！！！！！！！！！！！  ",
+    "NAMES": [
+      "强制点燃"
+    ],
+    "DESCRIPTION": "触发一枚鬼火的点燃效果，即使已经点燃。"
+  },
+  {
+    "PROPER_NAME": "激活",
+    "NAMES": [
+      "激活",
+      "active"
+    ],
+    "DESCRIPTION": "#y激活 的鬼火能在达到 #y点燃 条件时被 #y点燃 。"
   }
 ]

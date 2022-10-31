@@ -1,0 +1,59 @@
+[
+  {
+    "PROPER_NAME": "精準",
+    "NAMES": [
+      "精準",
+      "Dead On",
+      "Dead_On",
+      "dead_on",
+      "deadon"
+    ],
+    "DESCRIPTION": " #y精準 牌從手牌中央打出時觸發額外效果。"
+  },
+  {
+    "PROPER_NAME": "專註",
+    "NAMES": [
+      "專註",
+      "Concentrate",
+      "concentrate",
+      "concentrated",
+      "Concentrated"
+    ],
+    "DESCRIPTION": "下張 #y精準 牌必定觸發 #y精準 效果。 NL 回合結束時失去本效果。"
+  },
+  {
+    "PROPER_NAME": "瘀傷",
+    "NAMES": [
+      "bruise",
+      "bruised",
+      "瘀傷"
+    ],
+    "DESCRIPTION": "攻擊被 #y瘀傷 的敵人時造成額外傷害。 NL #y瘀傷 只持續 #b1 回合。"
+},
+  {
+    "PROPER_NAME": "堅固",
+    "NAMES": [
+      "rugged",
+      "堅固"
+    ],
+    "DESCRIPTION": "降低下次敵方攻擊造成的生命損失至 #b2 點。"
+},
+  {
+    "PROPER_NAME": "賞金",
+    "NAMES": [
+      "賞金"
+    ],
+  "DESCRIPTION": "普通怪物： #b15 金幣。 NL 精英怪物： #b40 金幣。 NL 首領怪物： #b100 金幣。"
+},
+  {
+    "PROPER_NAME": "擊暈",
+    "NAMES": [
+      "擊暈",
+      "stun",
+      "Stun",
+      "stunned",
+      "Stunned"
+    ],
+    "DESCRIPTION": "被 #y擊暈 的敵人跳過其回合 #b1 次，且延續被擊暈回合的意圖。"
+  } 
+]

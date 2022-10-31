@@ -1,0 +1,74 @@
+{
+  "Gremlin:NobFight": {
+    "TEXT": [
+      "PUNY GREMS GIVE SOULS!",
+      "You, Angry. You're mine now.",
+      "You, Fatty. You're mine now.",
+      "You, Girly. You're mine now.",
+      "You, Twitchy. You're mine now.",
+      "You. Dopey. You're mine now.",
+      "You. You're mine now.",
+      "I need to choose."
+    ]
+  },
+  "Gremlin:GremFight": {
+    "TEXT": [
+      "Bash their heads!",
+      "Kill them dead!",
+      "Take their stuff!"
+    ]
+  },
+  "Gremlin:ResurrectOption": {
+    "TEXT": [
+      "Resurrect",
+      "(Free Action) Summon a random Gremlin back from the dead.",
+      "Requires a Gremlin to be Dead.",
+      "The grave site has been desecrated already.",
+      "I RISE!",
+      "I RISE, AGAIN!",
+      "I'M BACK FOR MORE LOOTING!"
+    ]
+  },
+  "Gremlin:RestOption": {
+    "TEXT": [
+      "Rest",
+      "Heal every Gremlin for 100% of your Max HP (",
+      " HP from ",
+      "Heal every Gremlin for 30% of your Max HP (",
+      "If any Gremlins are dead, one will resurrect at random."
+    ]
+  },
+  "Gremlin:Swap": {
+    "TEXT": [
+      "NO SWAP!",
+      "NOB LEADER NOW!",
+      "NOB LEAD FOREVER!"
+    ]
+  },
+  "Gremlin:ArtMode": {
+    "TEXT": [
+      "Gremlin Art Mode",
+      "Gremlins invade the card frames. Only impacts aesthetics. Might make finding synergies easier."
+    ]
+  },
+  "Gremlin:BonusGold": {
+    "TEXT": [
+       " Gold (Bonus)"
+    ]
+  },
+  "Gremlin:MakeEchoAction": {
+    "TEXT": [
+      "Echo: "
+    ]
+  },
+  "Gremlin:EventReplacementStrings": {
+    "TEXT": [
+      "#rLose #r",
+      " #rHP",
+      "#rAll #rGremlins #rlose #r",
+      "#gGain #g",
+      " #gHP",
+      "#gAll #gGremlins #ggain #g"
+    ]
+  }
+}

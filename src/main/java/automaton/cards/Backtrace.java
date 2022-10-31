@@ -14,7 +14,7 @@ public class Backtrace extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 11;
+    private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 4;
 
     public Backtrace() {

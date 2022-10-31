@@ -1,0 +1,200 @@
+{
+  "Gremlin:Agony": {
+    "NAME": "고통스러운 상처",
+    "DESCRIPTIONS": [
+      "#y공격 피해량을 #b",
+      "% 감소시킵니다. #b",
+      " 턴 동안 지속됩니다.",
+      " 턴 동안 지속됩니다."
+    ]
+  },
+  "Gremlin:Bang": {
+    "NAME": "쾅",
+    "DESCRIPTIONS": [
+      "다음으로 사용하는 공격 카드에 모든 #y마법을 소모해서 피해량을 #b", " 증가시킵니다."
+    ]
+  },
+  "Gremlin:Bashed": {
+    "NAME": "강타 피해",
+    "DESCRIPTIONS": [
+      "이번 턴 동안 #y방어도를 얻을 때마다 체력을 #b", " 잃습니다."
+    ]
+  },
+  "Gremlin:BubbleBarrier": {
+    "NAME": "거품 장벽",
+    "DESCRIPTIONS": [
+      "이번 턴 동안 카드를 사용할 때마다 #y방어도를 #b", " 얻습니다."
+    ]
+  },
+  "Gremlin:CongaLine": {
+    "NAME": "콩가 자세",
+    "DESCRIPTIONS": [
+      "내 턴 시작 시 ",
+      " 를 얻고 다음 그렘린으로 #y교체합니다."
+    ]
+  },
+  "Gremlin:Crippled": {
+    "NAME": "무력화",
+    "DESCRIPTIONS": [
+      "턴 종료 시 #y약화를 잃지 않습니다. 적 턴 종료 시 #b약화만큼 체력을 잃습니다."
+    ]
+  },
+  "Gremlin:Encore": {
+    "NAME": "앙코르",
+    "DESCRIPTIONS": [
+      "#y마법을 소모할 때마다 적 전체에게 피해를 #b", " 줍니다."
+    ]
+  },
+  "Gremlin:Enthusiasm": {
+    "NAME": "열광",
+    "DESCRIPTIONS": [
+      "#y교체할 때마다 카드를 #b",
+      " 장 뽑습니다.",
+      " 장 뽑습니다."
+    ]
+  },
+  "Gremlin:FatGremlin": {
+    "NAME": "뚱뚱한 그렘린",
+    "DESCRIPTIONS": [
+      "공격 카드를 사용할 때마다 공격한 대상에게 #y약화를 #b",
+      " 부여합니다."
+    ]
+  },
+  "Gremlin:Flex": {
+    "NAME": "힘 감소",
+    "DESCRIPTIONS": [
+      "이번 턴 종료 시 #y힘을 #b",
+      " 잃습니다."
+    ]
+  },
+  "Gremlin:Furious": {
+    "NAME": "거센 분노",
+    "DESCRIPTIONS": [
+      "이번 턴에 #y방어도를 얻는 대신 적 전체에게 #y방어도만큼 피해를 줍니다."
+    ]
+  },
+  "Gremlin:GremlinNob": {
+    "NAME": "귀족 그렘린",
+    "DESCRIPTIONS": [
+      "매 턴 시작 시 귀족 그렘린의 카드를 #b3 장 얻습니다. #y교체할 수 없습니다. 모든 #y임시 #y체력을 잃는다면 #y임시 #y체력을 초과하는 피해를 막아주고 원래 그렘린으로 돌아옵니다."
+    ]
+  },
+  "Gremlin:GremlinWizard": {
+    "NAME": "마법사 그렘린",
+    "DESCRIPTIONS": [
+      "스킬 카드를 사용할 때마다 #y마법을 #b",
+      " 얻습니다."
+    ]
+  },
+  "Gremlin:Heckle": {
+    "NAME": "야유",
+    "DESCRIPTIONS": [
+      "해로운 효과를 부여할 때마다 #y임시 #y체력을 #b",
+      " 얻습니다."
+    ]
+  },
+  "Gremlin:InfiniteBlocks": {
+    "NAME": "무한의 방어",
+    "DESCRIPTIONS": [
+      "내 턴 시작 시 #y수호를 #b",
+      " 장 얻습니다.",
+      " 장 얻습니다."
+    ]
+  },
+  "Gremlin:MadGremlin": {
+    "NAME": "화난 그렘린",
+    "DESCRIPTIONS": [
+      "공격을 받을 때마다 힘을 #b",
+      " 얻습니다. 내 턴이 끝날 때 얻은 힘을 잃습니다."
+    ]
+  },
+  "Gremlin:MakeshiftArmor": {
+    "NAME": "급조 갑옷",
+    "DESCRIPTIONS": [
+      "공격 카드를 #b",
+      " 장 더 사용하면 #y인공물을 #b",
+      " 장 더 사용하면 #y인공물을 #b",
+      " 얻습니다."
+    ]
+  },
+  "Gremlin:MakingMagic": {
+    "NAME": "마법 제작",
+    "DESCRIPTIONS": [
+      "내 다음 턴 시작 시 #y쾅을 #b",
+      " 장 복사해 얻습니다.",
+      " 장 복사해 얻습니다."
+    ]
+  },
+  "Gremlin:MakingMoreMagic": {
+    "NAME": "마법 제작+",
+    "DESCRIPTIONS": [
+      "내 다음 턴 시작 시 #y쾅+을 #b",
+      " 장 복사해 얻습니다.",
+      " 장 복사해 얻습니다."
+    ]
+  },
+  "Gremlin:Polish": {
+    "NAME": "광택제",
+    "DESCRIPTIONS": [
+      "#y수호의 #y방어도를 #b",
+      " 증가시킵니다."
+    ]
+  },
+  "Gremlin:Scatter": {
+    "NAME": "튀어어",
+    "DESCRIPTIONS": [
+      "다음 #b",
+      " 번까지 체력을 잃을 때 무작위 그렘린으로 #y교체하고 체력을 잃는 것을 막아줍니다.",
+      " 번까지 체력을 잃을 때 무작위 그렘린으로 #y교체하고 체력을 잃는 것을 막아줍니다."
+    ]
+  },
+  "Gremlin:ShadowShiv": {
+    "NAME": "그림자 단도",
+    "DESCRIPTIONS": [
+      "#y소멸하지 않는 공격 카드를 사용할 때마다 #y단도를 #b",
+      " 장 얻습니다.",
+      " 장 얻습니다."
+    ]
+  },
+  "Gremlin:ShieldGremlin": {
+    "NAME": "방패 그렘린",
+    "DESCRIPTIONS": [
+      "스킬 카드를 사용할 때마다 #y방어도를 #b",
+      " 얻습니다."
+    ]
+  },
+  "Gremlin:SneakyGremlin": {
+    "NAME": "교활한 그렘린",
+    "DESCRIPTIONS": [
+      "공격 카드를 사용할 때마다 무작위 적에게 피해를 #b",
+      " 줍니다."
+    ]
+  },
+  "Gremlin:TargetWeakness": {
+    "NAME": "상처입은 대상",
+    "DESCRIPTIONS": [
+      "#y약화를 보유한 적이면 피해량을 #b",
+      " 증가시킵니다."
+    ]
+  },
+  "Gremlin:Unforgiving": {
+    "NAME": "지독함",
+    "DESCRIPTIONS": [
+      "#y힘을 잃지 않습니다."
+    ]
+  },
+  "Gremlin:Wiz": {
+    "NAME": "마법",
+    "DESCRIPTIONS": [
+      "충전 중입니다. NL #y마법이 #b", " 더 필요합니다.", " 더 필요합니다.",
+      "이제 갑니다."
+    ]
+  },
+  "Gremlin:Wizardry": {
+    "NAME": "마법 기술",
+    "DESCRIPTIONS": [
+      "내 턴 시작 시 #y마법을 #b",
+      " 얻습니다."
+    ]
+  }
+}

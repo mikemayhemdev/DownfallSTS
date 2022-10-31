@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import sneckomod.SneckoMod;
 import sneckomod.util.UpgradedUnknownReward;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class UnknownUpgradedPostCombatPower extends AbstractPower implements CloneablePowerInterface {
 
@@ -23,7 +23,7 @@ public class UnknownUpgradedPostCombatPower extends AbstractPower implements Clo
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public UnknownUpgradedPostCombatPower(final int amount) {
-        this.name = "Post-Combat Upgraded Unknown";
+        this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -47,7 +47,7 @@ public class UnknownUpgradedPostCombatPower extends AbstractPower implements Clo
     @Override
     public void onVictory() {
         for (int i = 0; i < this.amount; i++)
-            AbstractDungeon.getCurrRoom().addCardReward(new UpgradedUnknownReward(AbstractDungeon.player.getCardColor()));
+            AbstractDungeon.getCurrRoom().addCardReward(new UpgradedUnknownReward());
     }
 
     @Override

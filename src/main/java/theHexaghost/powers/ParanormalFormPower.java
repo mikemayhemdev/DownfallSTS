@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class ParanormalFormPower extends AbstractPower implements CloneablePowerInterface {
 
@@ -42,7 +42,7 @@ public class ParanormalFormPower extends AbstractPower implements CloneablePower
     @Override
     public void onAfterCardPlayed(AbstractCard card) {
         super.onAfterCardPlayed(card);
-        if (card.isEthereal) {
+        if (card.hasTag(HexaMod.AFTERLIFE)) {
             flash();
             addToBot(new DamageRandomEnemyAction(new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
         }

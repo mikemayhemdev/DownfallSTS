@@ -3,12 +3,15 @@ package sneckomod.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import sneckomod.SneckoMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class MudshieldPower extends AbstractPower implements CloneablePowerInterface {
 
@@ -33,6 +36,12 @@ public class MudshieldPower extends AbstractPower implements CloneablePowerInter
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
         this.updateDescription();
+    }
+
+    @Override
+    public void onSpecificTrigger() {
+        flash();
+        addToTop(new GainBlockAction(owner, amount, true));
     }
 
     @Override

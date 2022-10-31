@@ -2,6 +2,7 @@ package guardian.cards;
 
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -9,10 +10,11 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 import guardian.GuardianMod;
 
 import java.util.ArrayList;
+
+import static guardian.GuardianMod.makeBetaCardPath;
 
 public class PackageDefect extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("PackageDefect");
@@ -40,6 +42,7 @@ public class PackageDefect extends AbstractGuardianCard {
     public AbstractGuardianCard prev1;
     public AbstractGuardianCard prev2;
     public AbstractGuardianCard prev3;
+
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         NAME = cardStrings.NAME;
@@ -59,11 +62,12 @@ public class PackageDefect extends AbstractGuardianCard {
         prev2 = constPrev2;
         prev3 = constPrev3;
 
-        if (upgraded){
+        if (upgraded) {
             prev1.upgrade();
             prev2.upgrade();
             prev3.upgrade();
         }
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("PackageDefect.png"));
     }
 
     @Override
@@ -91,22 +95,21 @@ public class PackageDefect extends AbstractGuardianCard {
         tmp = new Reroute();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-        tmp.modifyCostForCombat(-1);
+        //  tmp.modifyCostForCombat(-1);
 
         tmp = new Preprogram();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-        tmp.modifyCostForCombat(-1);
+        // tmp.modifyCostForCombat(-1);
 
         tmp = new TimeCapacitor();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-        tmp.modifyCostForCombat(-1);
+        //  tmp.modifyCostForCombat(-1);
 
-        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect((AbstractCard) derp.get(0), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
-        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect((AbstractCard) derp.get(1), (float) Settings.WIDTH * .75F, (float) Settings.HEIGHT / 2.0F));
-        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect((AbstractCard) derp.get(2), (float) Settings.WIDTH * .25F, (float) Settings.HEIGHT / 2.0F));
-
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction((AbstractCard) derp.get(0), true));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction((AbstractCard) derp.get(1), true));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction((AbstractCard) derp.get(2), true));
     }
 
     public AbstractCard makeCopy() {
@@ -119,6 +122,12 @@ public class PackageDefect extends AbstractGuardianCard {
             this.rawDescription = UPGRADED_DESCRIPTION;
 
             this.initializeDescription();
+            if (prev1 != null)
+                prev1.upgrade();
+            if (prev2 != null)
+                prev2.upgrade();
+            if (prev3 != null)
+                prev3.upgrade();
         }
     }
 
@@ -182,7 +191,7 @@ public class PackageDefect extends AbstractGuardianCard {
             if (isLocked || (AbstractDungeon.player != null && (AbstractDungeon.player.isDraggingCard || AbstractDungeon.player.inSingleTargetMode))) {
                 return;
             }
-            if (hb.hovered){
+            if (hb.hovered) {
 
                 float drawScale = 0.5f;
                 float yPosition1 = this.current_y + this.hb.height * 1.2f;

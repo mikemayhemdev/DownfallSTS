@@ -1,15 +1,15 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.vfx.DaggerSprayAnyColorEffect;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.DaggerSprayEffect;
+
+import static champ.ChampMod.loadJokeCardImage;
 
 public class FanOfKnives extends AbstractChampCard {
 
@@ -18,45 +18,42 @@ public class FanOfKnives extends AbstractChampCard {
     //stupid intellij stuff attack, enemy, common
 
     private static final int DAMAGE = 5;
-    private static final int UPG_DAMAGE = 2;
-
-    private boolean found;
+    private static final int UPG_DAMAGE = 3;
 
     public FanOfKnives() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         isMultiDamage = true;
-        tags.add(ChampMod.OPENER);
-        this.tags.add(ChampMod.OPENERBERSERKER);
+      //  tags.add(ChampMod.OPENER);
+      //  tags.add(ChampMod.OPENERBERSERKER);
         tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBOGLADIATOR);
+        tags.add(ChampMod.COMBOBERSERKER);
+        postInit();
+        loadJokeCardImage(this, "FanOfKnives.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        berserkOpen();
-        atb(new VFXAction(new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
+        atb(new VFXAction(new DaggerSprayAnyColorEffect(AbstractDungeon.getMonsters().shouldFlipVfx(), Color.FIREBRICK), 0.0F));
         allDmg(AbstractGameAction.AttackEffect.NONE);
 
-        if (gcombo()) {
-            atb(new VFXAction(new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
+        if (bcombo()) {
+            atb(new VFXAction(new DaggerSprayAnyColorEffect(AbstractDungeon.getMonsters().shouldFlipVfx(), Color.RED), 0.0F));
             allDmg(AbstractGameAction.AttackEffect.NONE);
-            if (upgraded) {
-
-                atb(new VFXAction(new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
-                allDmg(AbstractGameAction.AttackEffect.NONE);
-            }
+//            if (upgraded) {
+//                atb(new VFXAction(new DaggerSprayAnyColorEffect(AbstractDungeon.getMonsters().shouldFlipVfx(), Color.SCARLET), 0.0F));
+//                allDmg(AbstractGameAction.AttackEffect.NONE);
+//            }
         }
 
+     //   berserkOpen();
     }
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = gcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {
-        // upgradeDamage(UPG_DAMAGE);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeDamage(UPG_DAMAGE);
     }
 }

@@ -19,7 +19,7 @@ public class CBR_Girya extends AbstractCharbossRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0] + CardCrawlGame.languagePack.getRelicStrings(downfallMod.makeID(ID)).DESCRIPTIONS[0];
+        return this.DESCRIPTIONS[0] + CardCrawlGame.languagePack.getRelicStrings(ID).DESCRIPTIONS[0];
     }
 
     @Override

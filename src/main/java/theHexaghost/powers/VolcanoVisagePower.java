@@ -4,15 +4,18 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
+import theHexaghost.ghostflames.AbstractGhostflame;
+import theHexaghost.util.OnChargeSubscriber;
 
-public class VolcanoVisagePower extends AbstractPower implements CloneablePowerInterface {
+public class VolcanoVisagePower extends AbstractPower implements CloneablePowerInterface, OnChargeSubscriber {
 
     public static final String POWER_ID = HexaMod.makeID("VolcanoVisagePower");
 
@@ -38,7 +41,8 @@ public class VolcanoVisagePower extends AbstractPower implements CloneablePowerI
     }
 
     @Override
-    public void atStartOfTurnPostDraw() {
+    public void onCharge(AbstractGhostflame gf) {
+        flash();
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
             addToBot(new ApplyPowerAction(m, owner, new BurnPower(m, amount), amount));
         }

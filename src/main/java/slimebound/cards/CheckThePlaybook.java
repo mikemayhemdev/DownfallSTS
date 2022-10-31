@@ -28,8 +28,6 @@ public class CheckThePlaybook extends AbstractSlimeboundCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 2;
-    private static final int BLOCK = 5;
-    private static final int UPGRADE_BONUS = 3;
     public static String UPGRADED_DESCRIPTION;
 
     static {
@@ -40,17 +38,12 @@ public class CheckThePlaybook extends AbstractSlimeboundCard {
         EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     }
 
-    private int numEaten = 0;
-
 
     public CheckThePlaybook() {
-
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-
         this.exhaust = true;
-
-
+        SlimeboundMod.loadJokeCardImage(this, "CheckThePlaybook.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

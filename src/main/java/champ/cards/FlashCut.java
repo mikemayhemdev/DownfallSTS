@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.loadJokeCardImage;
+
 public class FlashCut extends AbstractChampCard {
 
     public final static String ID = makeID("FlashCut");
@@ -15,10 +17,10 @@ public class FlashCut extends AbstractChampCard {
     private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 2;
 
-    private static final int BLOCK = 6;
+    private static final int BLOCK = 4;
     private static final int UPG_BLOCK = 2;
 
-    private static final int MAGIC = 6;
+    private static final int MAGIC = 4;
     private static final int UPG_MAGIC = 2;
 
     public FlashCut() {
@@ -26,18 +28,19 @@ public class FlashCut extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseBlock = block = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
-        tags.add(ChampMod.OPENER);
+      //  tags.add(ChampMod.OPENER);
         tags.add(CardTags.STRIKE);
-        this.tags.add(ChampMod.OPENERGLADIATOR);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
+        postInit();
+        loadJokeCardImage(this, "FlashCut.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gladOpen();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         if (dcombo()) applyToSelf(new CounterPower(magicNumber));
         if (dcombo()) blck();
+     //   defenseOpen();
     }
 
     @Override

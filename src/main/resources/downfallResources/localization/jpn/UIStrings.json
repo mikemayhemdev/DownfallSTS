@@ -10,7 +10,12 @@
   "downfall:SoulToGoldChanges": {
     "TEXT": [
       "Souls",
-      "Shows how many Souls you are carrying. Souls can be given to the Heart for rewards."
+      "Shows how many Souls you are carrying. Souls can be given to the Heart for rewards.",
+      "Merchant Status",
+      "HP",
+      "Dead!",
+      "Strength",
+      "Souls stolen"
     ]
   },
   "downfall:BustKeyButton": {
@@ -37,8 +42,9 @@
   "downfall:AscensionText": {
     "TEXT": [
       "19. Bosses have an extra Relic.",
-      "20. Act 3 Boss has Lizard Tail and Magic Flower.",
-      "Obtain the Ruby Key. Break it later."
+      "20. Act 3 Boss has Lizard Tail which heals all HP.",
+      "Obtain the Ruby Key. Break it later.",
+      "4. Bosses have an extra card upgraded."
     ]
   },
   "downfall:ConfigMenuText": {
@@ -46,7 +52,7 @@
       "Allow Standard runs to encounter global relics from Downfall's characters.",
       "Allow Standard runs to encounter global potions from Downfall.",
       "Allow Standard runs to encounter global events from Downfall.",
-      "Allow Standard runs to encounter Colorless Boss Cards from Downfall.",
+      "Allow Standard runs to encounter Boss Cards from Downfall.",
       "Allow Standard characters to play Downfall runs, and Villains to play in Standard runs.",
       "Allow Standard runs to encounter Downfall Curse cards.",
       "Downfall runs use traditional Map layout - fire before boss, not at start."
@@ -110,7 +116,8 @@
   },
   "downfall:BossCardReward": {
     "TEXT": [
-      "Add a Boss Card to your deck"
+      "Add a Boss Card to your deck",
+      "Pick a card."
     ]
   },
   "downfall:RunHistoryMonsterNames": {

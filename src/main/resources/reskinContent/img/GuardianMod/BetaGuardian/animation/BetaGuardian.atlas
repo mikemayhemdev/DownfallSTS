@@ -1,0 +1,20 @@
+
+BetaGuardian.png
+size: 512,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BetaGuardian/Idle
+  rotate: false
+  xy: 1, 1
+  size: 487, 579
+  orig: 487, 579
+  offset: 0, 0
+  index: -1
+BetaGuardian/Curl
+  rotate: false
+  xy: 1, 582
+  size: 350, 320
+  orig: 350, 320
+  offset: 0, 0
+  index: -1

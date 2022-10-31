@@ -11,57 +11,46 @@ import charbosses.actions.util.CharbossDoNextCardAction;
 import charbosses.actions.util.CharbossMakePlayAction;
 import charbosses.actions.util.CharbossTurnstartDrawAction;
 import charbosses.actions.util.DelayedActionAction;
-import charbosses.actions.utility.DestroyAntiCardsAction;
-import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
+import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Merchant.CharBossMerchant;
-import charbosses.bosses.Silent.NewAge.ArchetypeAct1ShivsNewAge;
-import charbosses.bosses.Watcher.NewAge.ArchetypeAct1RetainNewAge;
-import charbosses.bosses.Watcher.NewAge.ArchetypeAct2CalmNewAge;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
-import charbosses.cards.purple.EnFlyingSleeves;
-import charbosses.cards.purple.EnPerseverance;
-import charbosses.cards.purple.EnSandsOfTime;
-import charbosses.cards.purple.EnWish;
+import charbosses.cards.blue.EnThunderStrike;
+import charbosses.cards.green.EnBladeDance;
+import charbosses.cards.green.EnCloakAndDagger;
+import charbosses.cards.hermit.EnDesperado;
+import charbosses.cards.hermit.EnHoleUp;
+import charbosses.cards.hermit.EnItchyTrigger;
+import charbosses.cards.red.EnBodySlam;
+import charbosses.cards.red.EnSecondWind;
 import charbosses.core.EnemyEnergyManager;
-import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
+import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.orbs.EnemyDark;
 import charbosses.orbs.EnemyEmptyOrbSlot;
-import charbosses.powers.ShivTimeEaterPower;
-import charbosses.powers.WatcherAngryPower;
-import charbosses.powers.WatcherCripplePower;
 import charbosses.relics.AbstractCharbossRelic;
 import charbosses.relics.CBR_LizardTail;
-import charbosses.relics.CBR_MagicFlower;
+import charbosses.relics.CBR_PenNib;
+import charbosses.relics.CBR_Shuriken;
 import charbosses.stances.AbstractEnemyStance;
 import charbosses.stances.EnNeutralStance;
 import charbosses.ui.EnemyEnergyPanel;
-import collector.CollectorChar;
-import collector.TorchChar;
-import collector.patches.TorchHeadPatches.MonsterTargetPatch;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
-import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.IntangiblePower;
+import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.RunicDome;
 import com.megacrit.cardcrawl.relics.SlaversCollar;
@@ -77,20 +66,21 @@ import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
-import guardian.powers.ConstructPower;
+import hermit.cards.HoleUp;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Iterator;
+
+import static charbosses.bosses.Ironclad.NewAge.ArchetypeAct3BlockNewAge.FORTIFICATION_AMOUNT;
 
 public abstract class AbstractCharBoss extends AbstractMonster {
 
     public static AbstractCharBoss boss;
     public static boolean finishedSetup;
 
-    public AbstractPlayer prevPlayer;
     public ArrayList<AbstractCharbossRelic> relics;
     public AbstractStance stance;
     public ArrayList<AbstractOrb> orbs;
@@ -134,7 +124,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public AbstractCharBoss(String name, String id, int maxHealth, float hb_x, float hb_y, float hb_w, float hb_h, String imgUrl, float offsetX, float offsetY, PlayerClass playerClass) {
         super(name, id, maxHealth, hb_x, hb_y, hb_w, hb_h, imgUrl, offsetX, offsetY);
         AbstractCharBoss.finishedSetup = false;
-        this.drawX = (float)Settings.WIDTH * 0.75F - 150F * Settings.xScale;
+        this.drawX = (float) Settings.WIDTH * 0.75F - 150F * Settings.xScale;
         this.type = EnemyType.BOSS;
         this.chosenClass = playerClass;
         this.energyPanel = new EnemyEnergyPanel(this);
@@ -203,36 +193,40 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         */
 
 
-        if (AbstractDungeon.ascensionLevel >= 20 && CardCrawlGame.dungeon instanceof com.megacrit.cardcrawl.dungeons.TheBeyond) {
-            new CBR_LizardTail().instantObtain(this);
-            new CBR_MagicFlower().instantObtain(this);
-        }
-        if (NeowBoss.neowboss != null){
-            switch (chosenArchetype.actNum){
-                case 1:{
-                    chosenArchetype.maxHPModifier = 250;
+      //  if (AbstractDungeon.ascensionLevel >= 20 && CardCrawlGame.dungeon instanceof com.megacrit.cardcrawl.dungeons.TheBeyond) {
+       //     new CBR_LizardTail().instantObtain(this);
+            // new CBR_MagicFlower().instantObtain(this);
+      //  }
+        /*
+        if (NeowBoss.neowboss != null) {
+            switch (chosenArchetype.actNum) {
+                case 1: {
+                    chosenArchetype.maxHPModifier += 200;
                     break;
 
                 }
-                case 2:{
-                    chosenArchetype.maxHPModifier = 150;
+                case 2: {
+                    chosenArchetype.maxHPModifier += 100;
                     break;
 
                 }
-                case 3:{
-                    chosenArchetype.maxHPModifier = 0;
+                case 3: {
+                    chosenArchetype.maxHPModifier += 0;
                     break;
                 }
 
             }
         }
+        */
         maxHealth += chosenArchetype.maxHPModifier;
+        if (AbstractDungeon.ascensionLevel >= 9) {
+            maxHealth = Math.round(maxHealth * 1.2F);
+        }
         currentHealth = maxHealth;
         updateHealthBar();
     }
 
     public void usePreBattleAction() {
-        chosenArchetype.initializeBossPanel();
         this.energy.recharge();
         for (AbstractCharbossRelic r : this.relics) {
             r.atBattleStartPreDraw();
@@ -243,25 +237,15 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
 
 
-        if (NeowBoss.neowboss != null) {
-            if (NeowBoss.neowboss.minion != this) {
-                playMusic();
-            }
+        if (hasPower(MinionPower.POWER_ID)) {
+            playMusic();
         } else {
             playMusic();
         }
-        if (chosenArchetype instanceof ArchetypeAct2CalmNewAge) {
-            AbstractCreature p = AbstractCharBoss.boss;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherCripplePower(p, 100), 100));
-        }
-        if (chosenArchetype instanceof ArchetypeAct1ShivsNewAge) {
-            AbstractCreature p = AbstractCharBoss.boss;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ShivTimeEaterPower(p)));
-        }
-        if (chosenArchetype instanceof ArchetypeAct1RetainNewAge) {
-            AbstractCreature p = AbstractCharBoss.boss;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherAngryPower(p)));
-        }
+
+        chosenArchetype.addedPreBattle();
+
+        downfallMod.saveBossFight(id);
     }
 
     public void playMusic() {
@@ -288,63 +272,12 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.onSetupTurn = !this.onSetupTurn;
     }
 
-    private void debugStrings(){
-
-        SlimeboundMod.logger.info(AbstractDungeon.player);
-        SlimeboundMod.logger.info(CollectorChar.getCurrentTarget(null));
-        SlimeboundMod.logger.info(MonsterTargetPatch.redirectTarget);
-    }
-
     public void makePlay() {
         for (AbstractCard _c : this.hand.group) {
             AbstractBossCard c = (AbstractBossCard) _c;
             if (c.canUse(AbstractDungeon.player, this) && c.getPriority(this.hand.group) > -100) {
-                SlimeboundMod.logger.info("Enemy using card: " + c.name + " energy = " + EnemyEnergyPanel.totalCount);
-
-
-                /**This section is a whole bunch of somewhat ugly hackery to get Boss Cards to follow
-                 * along with the MonsterTargetPatch in order for Boss cards to properly use
-                 * Collector's Aggro System.
-                 */
-                //   SlimeboundMod.logger.info("trying to get collector target");
-             //   debugStrings();
-                AbstractCreature target = CollectorChar.getCurrentTarget(null);
-
-              //  SlimeboundMod.logger.info("got collector target");
-             //   debugStrings();
-
-                if (target instanceof AbstractMonster) {
-              //     SlimeboundMod.logger.info("Redirecttarget");
-              //      debugStrings();
-                    MonsterTargetPatch.redirectTarget = target;
-                } else if (AbstractDungeon.player instanceof CollectorChar && target instanceof TorchChar) {
-
-               //     SlimeboundMod.logger.info("2nd else");
-               //     debugStrings();
-                    if (prevPlayer != null) {
-                        System.out.println("BUG - MonsterTargetPatch!");
-                    }
-             //       SlimeboundMod.logger.info("settings vars");
-              //      debugStrings();
-                    prevPlayer = AbstractDungeon.player;
-                    AbstractDungeon.player = ((CollectorChar) AbstractDungeon.player).torch;
-                }
-               // SlimeboundMod.logger.info("using card");
-               // debugStrings();
+                //SlimeboundMod.logger.info("Enemy using card: " + c.name + " energy = " + EnemyEnergyPanel.totalCount);
                 this.useCard(c, this, EnemyEnergyPanel.totalCount);
-
-               // SlimeboundMod.logger.info("setting back");
-                //debugStrings();
-                AbstractDungeon.player = prevPlayer;
-                MonsterTargetPatch.redirectTarget = null;
-
-              //  SlimeboundMod.logger.info("done");
-              //  debugStrings();
-                if (AbstractDungeon.player == null) AbstractDungeon.player = prevPlayer;
-
-                /**End of the Collector hackery
-                 */
-
                 this.addToBot(new DelayedActionAction(new CharbossDoNextCardAction()));
                 return;
             }
@@ -401,12 +334,13 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
     }
 
+
     public void startTurn() {
-        //SlimeboundMod.logger.info("Start Turn Triggered");
+        ////SlimeboundMod.logger.info("Start Turn Triggered");
         this.cardsPlayedThisTurn = 0;
         this.attacksPlayedThisTurn = 0;
-        for (AbstractCard c:hand.group){
-            ((AbstractBossCard)c).lockIntentValues = true;
+        for (AbstractCard c : hand.group) {
+            ((AbstractBossCard) c).lockIntentValues = true;
         }
         this.applyStartOfTurnRelics();
         this.applyStartOfTurnPreDrawCards();
@@ -421,12 +355,10 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         return chosenArchetype.getThisTurnCards();
     }
 
-    class sortByNewPrio implements Comparator<AbstractBossCard>
-    {
+    class sortByNewPrio implements Comparator<AbstractBossCard> {
         // Used for sorting in ascending order of
         // roll number
-        public int compare(AbstractBossCard a, AbstractBossCard b)
-        {
+        public int compare(AbstractBossCard a, AbstractBossCard b) {
             return a.newPrio - b.newPrio;
         }
     }
@@ -447,14 +379,14 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                     }
 
                     ArrayList<AbstractBossCard> handAsBoss = new ArrayList<>();
-                    for (AbstractCard c : AbstractCharBoss.boss.hand.group){
-                        handAsBoss.add((AbstractBossCard)c);
+                    for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
+                        handAsBoss.add((AbstractBossCard) c);
                     }
 
                     Collections.sort(handAsBoss, new sortByNewPrio());
 
                     ArrayList<AbstractCard> newHand = new ArrayList<>();
-                    for (AbstractCard c : handAsBoss){
+                    for (AbstractCard c : handAsBoss) {
                         newHand.add(c);
                         c.applyPowers();
                     }
@@ -462,6 +394,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                     AbstractCharBoss.boss.hand.group = newHand;
 
                     AbstractCharBoss.boss.hand.refreshHandLayout();
+                    applyPowers();
                 }
             });
             addToBot(new WaitAction(0.2f));
@@ -482,6 +415,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                                 budget += ((AbstractBossCard) c).energyGeneratedIfPlayed;
                                 if (budget < 0) budget = 0;
                             }
+                            else if (c.costForTurn == -2 && c.type == AbstractCard.CardType.CURSE && c.color == AbstractCard.CardColor.CURSE) {
+                                ((AbstractBossCard) c).bossLighten();
+                            }
                         }
                         for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
                             AbstractBossCard cB = (AbstractBossCard) c;
@@ -497,8 +433,144 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     }
 
 
+    public void preApplyIntentCalculations() {
+        boolean hasShuriken = hasRelic(CBR_Shuriken.ID);
+        int attackCount = 0;
+        int artifactCount = 0;
+
+        if (AbstractDungeon.player.hasPower(ArtifactPower.POWER_ID)) {
+            artifactCount = AbstractDungeon.player.getPower(ArtifactPower.POWER_ID).amount;
+        }
+
+        //Reset all custom modifiers back to 0
+        for (AbstractCard c : hand.group) {
+            ((AbstractBossCard) c).manualCustomDamageModifier = 0;
+            ((AbstractBossCard) c).manualCustomDamageModifierMult = 1;
+        }
+
+        int foundAttacks = 0; //For pen nib
+        for (int i = 0; i < hand.size(); i++) {
+            AbstractBossCard c = (AbstractBossCard) hand.group.get(i);
+
+            SlimeboundMod.logger.info("intent calcs: " + c.name);
+            if (!c.lockIntentValues) {
+                SlimeboundMod.logger.info(c.name + " not locked, calculating.");
+
+                //Artifact Checks - calculates if any Artifact will be left
+                if (c.artifactConsumedIfPlayed > 0) {
+                    artifactCount -= c.artifactConsumedIfPlayed;
+                }
+
+                //Vulnerable Check - knows to check if any Artifact will be left
+                if (c.vulnGeneratedIfPlayed > 0) {
+                    if (artifactCount <= 0) {
+                        for (int j = i + 1; j < hand.size(); j++) {
+                            AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
+                            c2.manualCustomVulnModifier = true;
+                        }
+                    }
+                }
+
+                //Shuriken Checks for Act 1 Silent
+                if (hasShuriken) {
+                    SlimeboundMod.logger.info("has shuriken");
+                    AbstractBossCard c3 = (AbstractBossCard) hand.group.get(i);
+                    if (c.type == AbstractCard.CardType.ATTACK || c3 instanceof EnCloakAndDagger) {
+                        SlimeboundMod.logger.info(c.name + " is an attack.");
+                        attackCount++;
+                        if (attackCount == 3) {
+                            SlimeboundMod.logger.info(c.name + " is 3rd attack.");
+                            for (int j = i + 1; j < hand.size(); j++) {
+                                AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
+                                SlimeboundMod.logger.info(c2.name + " is gaining damage.");
+                                c2.manualCustomDamageModifier += 1;
+                            }
+                            attackCount = 0;
+                        }
+                    }
+                    if (c3 instanceof EnBladeDance) {
+                        SlimeboundMod.logger.info(c.name + " procs Shuriken.");
+                        for (int j = i + 1; j < hand.size(); j++) {
+                            AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
+                            SlimeboundMod.logger.info(c2.name + " is gaining damage.");
+                            c2.manualCustomDamageModifier += 1;
+                        }
+                    }
+                }
+
+                //Strength check for Wish in Act 2 Watcher, Act 2 Defect's Reprogram
+                if (c.strengthGeneratedIfPlayed > 0) {
+                    for (int j = i + 1; j < hand.size(); j++) {
+                        AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
+                        c2.manualCustomDamageModifier += c.strengthGeneratedIfPlayed;
+                    }
+                }
+
+                //Block checks for Act 3 Ironclad's Body Slams
+                if (c.block > 0) {
+                    //Special case for Second Wind, always exhausts 2 wounds with Feel No Pain up
+                    int tmpBlock = c.block;
+                    if(c instanceof EnSecondWind) {
+                        tmpBlock = 2 * (c.block + 3);
+                    }
+                    for (int j = i + 1; j < hand.size(); j++) {
+                        AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
+                        if (c2 instanceof EnBodySlam) {
+                            c2.manualCustomDamageModifier += tmpBlock;
+                        }
+                    }
+                }
+
+                //Minion block checks for Act 3 Ironclad's Body Slams
+                if (c instanceof EnBodySlam) {
+                    if (hasPower(BarricadePower.POWER_ID)) {
+                        c.manualCustomDamageModifier += FORTIFICATION_AMOUNT;
+                    }
+                    // and Self-Forming Clay
+                    AbstractPower p = getPower(NextTurnBlockPower.POWER_ID);
+                    if (p != null) {
+                        c.manualCustomDamageModifier += p.amount;
+                    }
+                }
+
+                //Divinity Check for Act 2 Watcher
+                if (c.damageMultGeneratedIfPlayed > 1) {
+                    for (int j = i + 1; j < hand.size(); j++) {
+                        AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
+                        c2.manualCustomDamageModifierMult = c.damageMultGeneratedIfPlayed;
+                    }
+                }
+
+                c.manualCustomDamageModifierMult *= c.damageMultIfPlayed;
+
+                //Pen Nib
+
+                if (c.type == AbstractCard.CardType.ATTACK) {
+                    foundAttacks += 1;
+                    if (hasRelic(CBR_PenNib.ID)) {
+                        AbstractRelic r = getRelic(CBR_PenNib.ID);
+                        if (r.counter + foundAttacks == 10) {
+                            c.manualCustomDamageModifierMult = 2;
+                        }
+                    }
+                }
+
+
+            }
+        }
+        for (AbstractCard c : hand.group) {
+            if (!((AbstractBossCard) c).bossDarkened) {
+                ((AbstractBossCard) c).createIntent();
+            }
+        }
+
+    }
+
     public void applyPowers() {
         super.applyPowers();
+
+        preApplyIntentCalculations();
+
         this.hand.applyPowers();
         /*
         this.drawPile.genPreview();
@@ -533,7 +605,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
         int budget = energyPanel.getCurrentEnergy();
-        //SlimeboundMod.logger.info("Hand budget being calculated for the turn." + budget);
+        ////SlimeboundMod.logger.info("Hand budget being calculated for the turn." + budget);
         for (int i = 0; i < cardsByValue.size(); i++) {
             AbstractBossCard c = cardsByValue.get(i);
             if (c.costForTurn <= budget && c.costForTurn != -2) {
@@ -566,7 +638,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
 
         budget = energyPanel.getCurrentEnergy();
-        //SlimeboundMod.logger.info("Hand budget being calculated for the turn." + budget);
+        ////SlimeboundMod.logger.info("Hand budget being calculated for the turn." + budget);
         for (int i = 0; i < sortedCards.size(); i++) {
             AbstractBossCard c = (AbstractBossCard) sortedCards.get(i);
             if (c.costForTurn <= budget && c.costForTurn != -2 && c.getPriority(this.hand.group) > -100) {
@@ -601,7 +673,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         int totalIntentDmg = -1;
         for (AbstractCard c : this.hand.group) {
             AbstractBossCard cB = (AbstractBossCard) c;
-            if (cB.intentDmg > 0 && !cB.bossDarkened) {
+            if (cB.intentDmg > 0 && (!cB.bossDarkened || AbstractDungeon.player.hasRelic(RunicDome.ID))) {
                 if (totalIntentDmg == -1) {
                     totalIntentDmg = 0;
                 }
@@ -663,21 +735,21 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             //Skip the top card.
             if (drawPile.get(0) != c) {
                 if (attack && c.hasTag(downfallMod.CHARBOSS_ATTACK)) {
-                    if (debugLog) SlimeboundMod.logger.info("Attack replacement was requested. Returning: " + c.name);
+                    //if (debugLog) //SlimeboundMod.logger.info("Attack replacement was requested. Returning: " + c.name);
                     return c;
                 }
                 if (setup && c.hasTag(downfallMod.CHARBOSS_SETUP)) {
-                    if (debugLog) SlimeboundMod.logger.info("Setup replacement was requested. Returning: " + c.name);
+                    //if (debugLog) //SlimeboundMod.logger.info("Setup replacement was requested. Returning: " + c.name);
                     return c;
                 }
                 if (!setup && !attack && !c.hasTag(downfallMod.CHARBOSS_SETUP) && !c.hasTag(downfallMod.CHARBOSS_ATTACK)) {
-                    if (debugLog)
-                        SlimeboundMod.logger.info("Either-phase replacement was requested. Returning: " + c.name);
+                    //if (debugLog)
+                    //SlimeboundMod.logger.info("Either-phase replacement was requested. Returning: " + c.name);
                     return c;
                 }
             }
         }
-        if (debugLog) SlimeboundMod.logger.info("Replacement was requested, but no card was valid. Returning null");
+        //if (debugLog) //SlimeboundMod.logger.info("Replacement was requested, but no card was valid. Returning null");
 
         return null;
     }
@@ -686,12 +758,12 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         AbstractCard replacementCard = null;
 
         if (firstPriority == secondPriority || firstPriority == thirdPriority || secondPriority == thirdPriority) {
-            SlimeboundMod.logger.info("ERROR! performCardSearch has two parameters as the same priority! These all need to be different! First priority:" + firstPriority + "Second priority: " + secondPriority + "Third priority: " + thirdPriority);
+            //SlimeboundMod.logger.info("ERROR! performCardSearch has two parameters as the same priority! These all need to be different! First priority:" + firstPriority + "Second priority: " + secondPriority + "Third priority: " + thirdPriority);
 
             return null;
         }
 
-        //SlimeboundMod.logger.info("Replacement search requested.  First priority: " + firstPriority);
+        ////SlimeboundMod.logger.info("Replacement search requested.  First priority: " + firstPriority);
 
         if (firstPriority == DrawTypes.Setup) {
             replacementCard = findReplacementCardInDraw(drawPile, false, true);
@@ -702,11 +774,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
 
         if (replacementCard != null) {
-            SlimeboundMod.logger.info("First priority search successful. Returning " + replacementCard.name);
+            //SlimeboundMod.logger.info("First priority search successful. Returning " + replacementCard.name);
             return replacementCard;
         }
 
-        SlimeboundMod.logger.info("First priority failed.  Second priority: " + secondPriority);
+        //SlimeboundMod.logger.info("First priority failed.  Second priority: " + secondPriority);
 
         if (secondPriority == DrawTypes.Setup) {
             replacementCard = findReplacementCardInDraw(drawPile, false, true);
@@ -717,11 +789,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
 
         if (replacementCard != null) {
-            SlimeboundMod.logger.info("Second priority search successful. Returning " + replacementCard.name);
+            //SlimeboundMod.logger.info("Second priority search successful. Returning " + replacementCard.name);
             return replacementCard;
         }
 
-        SlimeboundMod.logger.info("Second priority failed.  Third priority: " + thirdPriority);
+        //SlimeboundMod.logger.info("Second priority failed.  Third priority: " + thirdPriority);
 
         if (thirdPriority == DrawTypes.Setup) {
             replacementCard = findReplacementCardInDraw(drawPile, false, true);
@@ -732,11 +804,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
 
         if (replacementCard != null) {
-            SlimeboundMod.logger.info("Third priority search successful. Returning " + replacementCard.name);
+            //SlimeboundMod.logger.info("Third priority search successful. Returning " + replacementCard.name);
             return replacementCard;
         }
 
-        SlimeboundMod.logger.info("Priority search yielded no result. Returning null.");
+        //SlimeboundMod.logger.info("Priority search yielded no result. Returning null.");
         return null;
     }
 
@@ -750,78 +822,78 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
             //Force Draw is for mechanics like Headbutt, where a card should be drawn regardless of phase
             if (c.forceDraw) {
-                if (debugLog) SlimeboundMod.logger.info("Force Drawing " + c.name);
+                //if (debugLog) //SlimeboundMod.logger.info("Force Drawing " + c.name);
                 return c;
             }
 
             if (this.onSetupTurn) {
                 if (setupsDrawnForSetupPhase < 1) {
-                    if (debugLog) SlimeboundMod.logger.info("Attempting to draw a Setup card");
+                    //if (debugLog) //SlimeboundMod.logger.info("Attempting to draw a Setup card");
                     if (c.hasTag(downfallMod.CHARBOSS_SETUP)) {
-                        if (debugLog) SlimeboundMod.logger.info("Top card is good. Drawing Setup Card " + c.name);
+                        //if (debugLog) //SlimeboundMod.logger.info("Top card is good. Drawing Setup Card " + c.name);
                         setupsDrawnForSetupPhase++;
                         return c;
                     } else {
-                        if (debugLog)
-                            SlimeboundMod.logger.info("Top card is not a Setup. Finding Setup->Either->Attack replacement.");
+                        //if (debugLog)
+                        //SlimeboundMod.logger.info("Top card is not a Setup. Finding Setup->Either->Attack replacement.");
                         replacementCard = performCardSearch(drawPile, DrawTypes.Setup, DrawTypes.EitherPhase, DrawTypes.Attack);
                         if (replacementCard != null) {
-                            if (debugLog) SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
+                            //if (debugLog) //SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
                             return replacementCard;
                         } else {
-                            if (debugLog) SlimeboundMod.logger.info("Null was returned by replacement search.");
+                            //if (debugLog) //SlimeboundMod.logger.info("Null was returned by replacement search.");
                         }
                     }
                 } else {
-                    if (debugLog)
-                        SlimeboundMod.logger.info("Setup card already drawn. Finding Either->Setup->Attack replacement.");
+                    //if (debugLog)
+                    //SlimeboundMod.logger.info("Setup card already drawn. Finding Either->Setup->Attack replacement.");
                     replacementCard = performCardSearch(drawPile, DrawTypes.EitherPhase, DrawTypes.Setup, DrawTypes.Attack);
                     if (replacementCard != null) {
-                        if (debugLog) SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
+                        //if (debugLog) //SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
                         return replacementCard;
                     } else {
-                        if (debugLog) SlimeboundMod.logger.info("Null was returned by replacement search.");
+                        //if (debugLog) //SlimeboundMod.logger.info("Null was returned by replacement search.");
                     }
                 }
             }
 
             if (!this.onSetupTurn) {
                 if (attacksDrawnForAttackPhase < 1) {
-                    if (debugLog) SlimeboundMod.logger.info("Attempting to draw a Attack card");
+                    //if (debugLog) //SlimeboundMod.logger.info("Attempting to draw a Attack card");
                     if (c.hasTag(downfallMod.CHARBOSS_ATTACK)) {
-                        if (debugLog) SlimeboundMod.logger.info("Top card is good. Drawing Attack Card " + c.name);
+                        //if (debugLog) //SlimeboundMod.logger.info("Top card is good. Drawing Attack Card " + c.name);
                         attacksDrawnForAttackPhase++;
                         return c;
                     } else {
-                        if (debugLog)
-                            SlimeboundMod.logger.info("Top card is not a Attack. Finding Attack->Either->Setup replacement.");
+                        //if (debugLog)
+                        //SlimeboundMod.logger.info("Top card is not a Attack. Finding Attack->Either->Setup replacement.");
                         replacementCard = performCardSearch(drawPile, DrawTypes.Attack, DrawTypes.EitherPhase, DrawTypes.Setup);
                         if (replacementCard != null) {
-                            if (debugLog) SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
+                            //if (debugLog) //SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
                             return replacementCard;
                         } else {
-                            if (debugLog) SlimeboundMod.logger.info("Null was returned by replacement search.");
+                            //if (debugLog) //SlimeboundMod.logger.info("Null was returned by replacement search.");
                         }
                     }
                 } else {
-                    if (debugLog)
-                        SlimeboundMod.logger.info("2 Attack cards already drawn. Finding Either->Attack->Setup replacement.");
+                    //if (debugLog)
+                    //SlimeboundMod.logger.info("2 Attack cards already drawn. Finding Either->Attack->Setup replacement.");
                     replacementCard = performCardSearch(drawPile, DrawTypes.EitherPhase, DrawTypes.Attack, DrawTypes.Setup);
                     if (replacementCard != null) {
-                        if (debugLog) SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
+                        //if (debugLog) //SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
                         return replacementCard;
                     } else {
-                        if (debugLog) SlimeboundMod.logger.info("Null was returned by replacement search.");
+                        //if (debugLog) //SlimeboundMod.logger.info("Null was returned by replacement search.");
                     }
                 }
             }
 
 
-            if (debugLog)
-                SlimeboundMod.logger.info("WARNING: All draw logic has failed.  Drawing top card as a default: " + c.name);
+            //if (debugLog)
+            //SlimeboundMod.logger.info("WARNING: All draw logic has failed.  Drawing top card as a default: " + c.name);
             return c;
         } else {
-            SlimeboundMod.logger.info("Drawing the last card in the deck, no logic used: " + c.name);
+            //SlimeboundMod.logger.info("Drawing the last card in the deck, no logic used: " + c.name);
             return c;
         }
 
@@ -881,7 +953,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         if (monster == null) {
             monster = this;
         }
-
         if (c.type == AbstractCard.CardType.ATTACK) {
             this.attacksPlayedThisTurn++;
             this.useFastAttackAnimation();
@@ -956,10 +1027,10 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
         final boolean weakenedToZero = damageAmount == 0;
         damageAmount = this.decrementBlock(info, damageAmount);
-        //SlimeboundMod.logger.info(info.owner + " pre damage about to apply relics");
+        ////SlimeboundMod.logger.info(info.owner + " pre damage about to apply relics");
         if (info.owner == this) {
             for (final AbstractRelic r : this.relics) {
-                //SlimeboundMod.logger.info(r.name + " onAttackToChange firing");
+                ////SlimeboundMod.logger.info(r.name + " onAttackToChange firing");
                 damageAmount = r.onAttackToChangeDamage(info, damageAmount);
 
 
@@ -1007,7 +1078,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
         this.lastDamageTaken = Math.min(damageAmount, this.currentHealth);
         final boolean probablyInstantKill = this.currentHealth == 0;
-        if (damageAmount > 0) {
+        if (damageAmount > 0 || probablyInstantKill) {
             for (final AbstractPower p : this.powers) {
                 damageAmount = p.onLoseHp(damageAmount);
             }
@@ -1055,9 +1126,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
             if (this.currentHealth < 1) {
                 if (!this.hasRelic("Mark of the Bloom")) {
-                    if (this.hasRelic("Lizard Tail") && ((CBR_LizardTail) this.getRelic("Lizard Tail")).counter == -1) {
+                    if (this.hasRelic(CBR_LizardTail.ID) && ((CBR_LizardTail) this.getRelic(CBR_LizardTail.ID)).counter == -1) {
                         this.currentHealth = 0;
-                        this.getRelic("Lizard Tail").onTrigger();
+                        this.getRelic(CBR_LizardTail.ID).onTrigger();
                         return;
                     }
                 }
@@ -1071,6 +1142,13 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 if (this.currentBlock > 0) {
                     this.loseBlock();
                     AbstractDungeon.effectList.add(new HbBlockBrokenEffect(this.hb.cX - this.hb.width / 2.0f + AbstractMonster.BLOCK_ICON_X, this.hb.cY - this.hb.height / 2.0f + AbstractMonster.BLOCK_ICON_Y));
+                }
+
+                for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                    if ((!m.isDead) && (!m.isDying) && m.hasPower(MinionPower.POWER_ID)) {
+                        AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.utility.HideHealthBarAction(m));
+                        AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.common.SuicideAction(m));
+                    }
                 }
             }
         } else if (!probablyInstantKill) {
@@ -1093,21 +1171,18 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             useFastShakeAnimation(5.0F);
             CardCrawlGame.screenShake.rumble(4.0F);
             if (!(this instanceof CharBossMerchant)) {
-                if (NeowBoss.neowboss != null) {
-                    if (NeowBoss.neowboss.minion == null) {
-                        SlimeboundMod.logger.info("Char boss On Boss Victory now playing");
-                        onBossVictoryLogic();
+                if (hasPower(MinionPower.POWER_ID)) {
+                    if (Settings.FAST_MODE) {
+                        this.deathTimer += 0.7F;
+                    } else {
+                        ++this.deathTimer;
                     }
                 } else {
-                    SlimeboundMod.logger.info("Char boss On Boss Victory now playing");
+                    //SlimeboundMod.logger.info("Char boss On Boss Victory now playing");
                     onBossVictoryLogic();
                 }
             }
 
-        }
-
-        if (NeowBoss.neowboss != null) {
-            NeowBoss.neowboss.switchIntentToSelfRez();
         }
 
         AbstractCharBoss.boss = null;
@@ -1288,6 +1363,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (final AbstractCard c : this.hand.group) {
             if (c != null) {
                 c.atTurnStart();
+                c.triggerWhenDrawn();
             }
         }
         /*
@@ -1352,7 +1428,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void evokeOrb() {
         if (!this.orbs.isEmpty() && !(this.orbs.get(0) instanceof EnemyEmptyOrbSlot)) {
             this.orbs.get(0).onEvoke();
-            final AbstractOrb orbSlot = new EnemyEmptyOrbSlot();
+            final AbstractEnemyOrb orbSlot = new EnemyEmptyOrbSlot();
             for (int i = 1; i < this.orbs.size(); ++i) {
                 Collections.swap(this.orbs, i, i - 1);
             }
@@ -1361,6 +1437,16 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 this.orbs.get(i).setSlot(i, this.maxOrbs);
             }
         }
+    }
+
+    public ArrayList<AbstractEnemyOrb> orbsAsEn() {
+        ArrayList<AbstractEnemyOrb> orbies = new ArrayList<AbstractEnemyOrb>();
+        for (AbstractOrb o : orbs) {
+            if (o instanceof AbstractEnemyOrb) {
+                orbies.add((AbstractEnemyOrb)o);
+            }
+        }
+        return orbies;
     }
 
     public void evokeNewestOrb() {
@@ -1377,7 +1463,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
     public void removeNextOrb() {
         if (!this.orbs.isEmpty() && !(this.orbs.get(0) instanceof EnemyEmptyOrbSlot)) {
-            final AbstractOrb orbSlot = new EnemyEmptyOrbSlot(this.orbs.get(0).cX, this.orbs.get(0).cY);
+            final AbstractEnemyOrb orbSlot = new EnemyEmptyOrbSlot(this.orbs.get(0).cX, this.orbs.get(0).cY);
             for (int i = 1; i < this.orbs.size(); ++i) {
                 Collections.swap(this.orbs, i, i - 1);
             }
@@ -1419,33 +1505,38 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             AbstractDungeon.effectList.add(new ThoughtBubble(this.dialogX, this.dialogY, 3.0f, AbstractPlayer.MSG[4], true));
             return;
         }
-        if (this.maxOrbs > 0) {
-            if (this.hasRelic("Dark Core") && !(orbToSet instanceof EnemyDark)) {
-                orbToSet = new EnemyDark();
+        if (this.hasRelic("Dark Core") && !(orbToSet instanceof EnemyDark)) {
+            orbToSet = new EnemyDark();
+        }
+        int index = -1;
+        for (int i = 0; i < this.orbs.size(); ++i) {
+            if (this.orbs.get(i) instanceof EnemyEmptyOrbSlot) {
+                index = i;
+                break;
             }
-            int index = -1;
-            for (int i = 0; i < this.orbs.size(); ++i) {
-                if (this.orbs.get(i) instanceof EnemyEmptyOrbSlot) {
-                    index = i;
-                    break;
-                }
+        }
+        if (index != -1) {
+            orbToSet.cX = this.orbs.get(index).cX;
+            orbToSet.cY = this.orbs.get(index).cY;
+            this.orbs.set(index, orbToSet);
+            this.orbs.get(index).setSlot(index, this.maxOrbs);
+            orbToSet.playChannelSFX();
+            for (final AbstractPower p : this.powers) {
+                p.onChannel(orbToSet);
             }
-            if (index != -1) {
-                orbToSet.cX = this.orbs.get(index).cX;
-                orbToSet.cY = this.orbs.get(index).cY;
-                this.orbs.set(index, orbToSet);
-                this.orbs.get(index).setSlot(index, this.maxOrbs);
-                orbToSet.playChannelSFX();
-                for (final AbstractPower p : this.powers) {
-                    p.onChannel(orbToSet);
-                }
-                AbstractDungeon.actionManager.orbsChanneledThisCombat.add(orbToSet);
-                AbstractDungeon.actionManager.orbsChanneledThisTurn.add(orbToSet);
-                orbToSet.applyFocus();
-            } else {
-                AbstractDungeon.actionManager.addToTop(new EnemyChannelAction(orbToSet));
-                AbstractDungeon.actionManager.addToTop(new EnemyEvokeOrbAction(1));
-                AbstractDungeon.actionManager.addToTop(new EnemyAnimateOrbAction(1));
+            AbstractDungeon.actionManager.orbsChanneledThisCombat.add(orbToSet);
+            AbstractDungeon.actionManager.orbsChanneledThisTurn.add(orbToSet);
+            orbToSet.applyFocus();
+        } else {
+            AbstractDungeon.actionManager.addToTop(new EnemyChannelAction(orbToSet));
+            AbstractDungeon.actionManager.addToTop(new EnemyEvokeOrbAction(1));
+            AbstractDungeon.actionManager.addToTop(new EnemyAnimateOrbAction(1));
+        }
+        // Need to update Thunderstrike intent if a lightning orb is played
+        for (AbstractCard card: boss.hand.group) {
+            if (card instanceof EnThunderStrike) { // Condition maybe not needed?
+                card.applyPowers();
+                ((AbstractBossCard)card).createIntent();
             }
         }
     }

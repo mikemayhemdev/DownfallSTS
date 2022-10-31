@@ -64,7 +64,7 @@ public class SplitDailyTriggerPower extends AbstractPower {
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (damageAmount > 0) {
             AbstractMonster m = (AbstractMonster) this.owner;
-            //SlimeboundMod.logger.info(m.name + " lost HP. Current:" + m.currentHealth + ", Max: " + m.maxHealth + ", damage: " + damageAmount);
+            ////SlimeboundMod.logger.info(m.name + " lost HP. Current:" + m.currentHealth + ", Max: " + m.maxHealth + ", damage: " + damageAmount);
             if ((float) m.currentHealth - (float) damageAmount <= (float) m.maxHealth / 2) {
                 this.isActive = true;
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(m, m, ArtifactPower.POWER_ID));

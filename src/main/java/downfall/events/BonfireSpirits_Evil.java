@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.Circlet;
 import com.megacrit.cardcrawl.relics.SpiritPoop;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
+import gremlin.characters.GremlinCharacter;
 
 public class BonfireSpirits_Evil extends AbstractImageEvent {
     public static final String ID = "downfall:BonfireSpirits";
@@ -63,23 +64,23 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
             this.offeredCard = AbstractDungeon.gridSelectScreen.selectedCards.remove(0);
             switch (this.offeredCard.rarity) {
                 case CURSE:
-                    logMetricRemoveCardAndObtainRelic("Bonfire Elementals", "Offered Curse", this.offeredCard, new SpiritPoop());
+                    logMetricRemoveCardAndObtainRelic(ID, "Offered Curse", this.offeredCard, new SpiritPoop());
                     break;
                 case BASIC:
-                    logMetricCardRemoval("Bonfire Elementals", "Offered Basic", this.offeredCard);
+                    logMetricCardRemoval(ID, "Offered Basic", this.offeredCard);
                     break;
                 case COMMON:
-                    logMetricCardRemovalAndHeal("Bonfire Elementals", "Offered Common", this.offeredCard, 5);
+                    logMetricCardRemovalAndHeal(ID, "Offered Common", this.offeredCard, 5);
                 case SPECIAL:
-                    logMetricCardRemovalAndHeal("Bonfire Elementals", "Offered Special", this.offeredCard, 5);
+                    logMetricCardRemovalAndHeal(ID, "Offered Special", this.offeredCard, 5);
                     break;
                 case UNCOMMON:
                     int heal = AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth;
-                    logMetricCardRemovalAndHeal("Bonfire Elementals", "Offered Uncommon", this.offeredCard, heal);
+                    logMetricCardRemovalAndHeal(ID, "Offered Uncommon", this.offeredCard, heal);
                     break;
                 case RARE:
                     int heal2 = AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth;
-                    logMetricCardRemovalHealMaxHPUp("Bonfire Elementals", "Offered Rare", this.offeredCard, heal2, 10);
+                    logMetricCardRemovalHealMaxHPUp(ID, "Offered Rare", this.offeredCard, heal2, 10);
             }
 
             this.setReward(this.offeredCard.rarity);
@@ -102,7 +103,11 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         this.imageEventText.removeDialogOption(1);
                         if (AbstractDungeon.player.gold >= 150) {
-                            this.imageEventText.setDialogOption(OPTIONSALT[0]);
+                            if (AbstractDungeon.player instanceof GremlinCharacter) {
+                                this.imageEventText.setDialogOption(OPTIONSALT[2]);
+                            } else {
+                                this.imageEventText.setDialogOption(OPTIONSALT[0]);
+                            }
                         } else {
                             this.imageEventText.setDialogOption(OPTIONSALT[1], true);
                         }
@@ -130,6 +135,8 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
                         AbstractDungeon.player.loseGold(150);
                         AbstractDungeon.player.increaseMaxHp(10, false);
                         AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
+                        logMetric(ID, "Donate", null, null, null, null, null, null, null,
+                                0, 10, 0, 10, 0, 150);
                         this.screen = CUR_SCREEN.COMPLETE;
                         break;
                     }

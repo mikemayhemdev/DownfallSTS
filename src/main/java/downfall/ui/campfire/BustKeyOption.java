@@ -1,15 +1,13 @@
 package downfall.ui.campfire;
 
 import basemod.ReflectionHacks;
-import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.MathHelper;
-import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
-import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.relics.Ectoplasm;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.CampfireUI;
 import com.megacrit.cardcrawl.rooms.RestRoom;
@@ -19,12 +17,8 @@ import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.relics.HeartBlessingBlue;
 import downfall.relics.HeartBlessingGreen;
 import downfall.relics.HeartBlessingRed;
-import downfall.relics.Hecktoplasm;
 import downfall.util.TextureLoader;
 import downfall.vfx.campfire.BustKeyEffect;
-import guardian.ui.EnhanceBonfireOption;
-
-import java.util.ArrayList;
 
 public class BustKeyOption extends AbstractCampfireOption {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(downfallMod.makeID("BustKeyButton"));
@@ -42,7 +36,7 @@ public class BustKeyOption extends AbstractCampfireOption {
 
     public BustKeyOption(Keys key) {
         this.key = key;
-        if (AbstractDungeon.player.hasRelic(Hecktoplasm.ID)) soulToCost = 0;
+        if (AbstractDungeon.player.hasRelic(Ectoplasm.ID)) soulToCost = 0;
         if (AbstractDungeon.player.gold < soulToCost) {
             this.usable = false;
             updateImage(key);
@@ -54,7 +48,7 @@ public class BustKeyOption extends AbstractCampfireOption {
 
 
     public void updateImage(Keys key) {
-        if (AbstractDungeon.player.hasRelic(Hecktoplasm.ID)){
+        if (AbstractDungeon.player.hasRelic(Ectoplasm.ID)) {
             this.description = TEXT[10];
         } else {
             this.description = TEXT[3];

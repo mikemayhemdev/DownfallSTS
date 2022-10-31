@@ -3,6 +3,7 @@ package guardian.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -26,9 +27,9 @@ public class StasisStrike extends AbstractGuardianCard {
     private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int DAMAGE = 4;
-    private static final int UPGRADE_BONUS = 3;
-    private static final int SOCKETS = 1;
+    private static final int DAMAGE = 9;
+    private static final int UPGRADE_BONUS = 2;
+    private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
 
@@ -41,14 +42,21 @@ public class StasisStrike extends AbstractGuardianCard {
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 
+    @Override
+    public void whenReturnedFromStasis() {
+        //upgradeDamage(magicNumber);
+        //freeToPlayOnce = false;
+        //cost = costForTurn = 1;
+    }
+
     public StasisStrike() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
         this.baseDamage = DAMAGE;
         this.tags.add(AbstractCard.CardTags.STRIKE);
-
+        baseMagicNumber = magicNumber = 5;
         this.socketCount = SOCKETS;
-        this.tags.add(GuardianMod.SELFSTASIS);
+      //  this.tags.add(GuardianMod.SELFSTASIS);
         updateDescription();
         loadGemMisc();
 
@@ -58,6 +66,7 @@ public class StasisStrike extends AbstractGuardianCard {
         super.use(p, m);
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
 
+        AbstractDungeon.actionManager.addToBottom(new IncreaseMaxOrbAction(1));
         this.useGems(p, m);
     }
 
@@ -68,7 +77,8 @@ public class StasisStrike extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_BONUS);
+            upgradeDamage(4);
+          //  upgradeMagicNumber(2);
         }
     }
 

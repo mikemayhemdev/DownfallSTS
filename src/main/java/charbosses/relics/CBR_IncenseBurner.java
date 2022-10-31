@@ -12,8 +12,13 @@ import com.megacrit.cardcrawl.relics.IncenseBurner;
 public class CBR_IncenseBurner extends AbstractCharbossRelic {
     public static final String ID = "IncenseBurner";
 
-    public CBR_IncenseBurner() {
+    public CBR_IncenseBurner(int counter) {
         super(new IncenseBurner());
+        this.counter = counter;
+    }
+
+    public CBR_IncenseBurner() {
+        this(1);
     }
 
     @Override
@@ -21,10 +26,10 @@ public class CBR_IncenseBurner extends AbstractCharbossRelic {
         return this.DESCRIPTIONS[0];
     }
 
-    @Override
-    public void onEquip() {
-        this.counter = 1;
-    }
+//    @Override
+//    public void onEquip() {
+//        this.counter = 1;
+//    }
 
     @Override
     public void onEnergyRecharge() {
@@ -35,9 +40,11 @@ public class CBR_IncenseBurner extends AbstractCharbossRelic {
         }
         if (this.counter == 6) {
             this.counter = 0;
-            this.flash();
+            this.beginLongPulse();
             this.addToBot(new RelicAboveCreatureAction(AbstractCharBoss.boss, this));
             this.addToBot(new ApplyPowerAction(AbstractCharBoss.boss, null, new BossIntangiblePower(AbstractCharBoss.boss, 1), 1));
+        } else {
+            this.stopPulse();
         }
     }
 

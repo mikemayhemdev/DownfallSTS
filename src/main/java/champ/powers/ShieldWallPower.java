@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class ShieldWallPower extends AbstractPower implements CloneablePowerInterface {
 
@@ -40,7 +40,7 @@ public class ShieldWallPower extends AbstractPower implements CloneablePowerInte
     @Override
     public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
         flash();
-        this.addToTop(new ApplyPowerAction(owner, owner, new CounterPower(amount * AbstractDungeon.player.hand.size()), amount * AbstractDungeon.player.hand.size()));
+        this.addToTop(new ApplyPowerAction(owner, owner, new CounterPower(amount) , amount));
     }
 
     @Override

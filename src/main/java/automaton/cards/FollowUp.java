@@ -26,14 +26,14 @@ public class FollowUp extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         blck();
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         AbstractCard q = this;
         atb(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
-                if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() > 2 && AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2).cardID.equals(FunctionCard.ID)) {
+                if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2).cardID.equals(FunctionCard.ID)) {
                     att(new RepeatCardAction(m, q));
                 }
             }

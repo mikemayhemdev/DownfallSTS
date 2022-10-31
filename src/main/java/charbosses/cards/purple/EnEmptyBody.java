@@ -4,6 +4,8 @@ import charbosses.actions.common.EnemyNotStanceCheckAction;
 import charbosses.actions.unique.EnemyChangeStanceAction;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
+import charbosses.stances.AbstractEnemyStance;
+import charbosses.stances.EnNeutralStance;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
@@ -18,15 +20,17 @@ import com.megacrit.cardcrawl.vfx.combat.EmptyStanceEffect;
 
 import java.util.ArrayList;
 
-public class EnEmptyBody extends AbstractBossCard {
+public class EnEmptyBody extends AbstractStanceChangeCard {
     public static final String ID = "downfall_Charboss:EmptyBody";
     private static final CardStrings cardStrings;
-
     public EnEmptyBody() {
+        this(2);
+    }
+    public EnEmptyBody(int energyGeneratedIfPlayed) {
         super(ID, cardStrings.NAME, "purple/skill/empty_body", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.PURPLE, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
         this.baseBlock = 7;
         this.tags.add(CardTags.EMPTY);
-        this.energyGeneratedIfPlayed = 2;
+        this.energyGeneratedIfPlayed = energyGeneratedIfPlayed;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -60,5 +64,10 @@ public class EnEmptyBody extends AbstractBossCard {
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings("EmptyBody");
+    }
+
+    @Override
+    public AbstractEnemyStance changeStanceForIntentCalc(AbstractEnemyStance previousStance) {
+        return new EnNeutralStance();
     }
 }

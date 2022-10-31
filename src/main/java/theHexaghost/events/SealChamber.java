@@ -9,17 +9,11 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.BlueCandle;
-import com.megacrit.cardcrawl.relics.DarkstonePeriapt;
-import com.megacrit.cardcrawl.relics.DuVuDoll;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import theHexaghost.HexaMod;
-import theHexaghost.cards.Haunted;
 import theHexaghost.cards.seals.FirstSeal;
 import theHexaghost.cards.seals.FourthSeal;
 import theHexaghost.cards.seals.SecondSeal;
@@ -49,6 +43,8 @@ public class SealChamber extends AbstractImageEvent {
 
     private AbstractPotion potionOption;
     private AbstractCard cardOption;
+
+    private boolean used;
 
     public SealChamber() {
         super(NAME, DESCRIPTIONS[0], "hexamodResources/images/events/sealChamber.png");
@@ -98,50 +94,73 @@ public class SealChamber extends AbstractImageEvent {
         return (AbstractCard) list.get(0);
     }
 
+    private ArrayList<String> cardsRemoved = new ArrayList<>();
+    private ArrayList<String> cardsObtained = new ArrayList<>();
+    private int goldLost = 0;
+    private int damageTaken = 0;
+
+
     protected void buttonEffect(int buttonPressed) {
         switch (this.screen) {
             case INTRO:
-                this.imageEventText.clearAllDialogs();
                 switch (buttonPressed) {
                     case 0:
                         AbstractDungeon.player.damage(new DamageInfo((AbstractCreature) null, this.hpLoss, DamageInfo.DamageType.HP_LOSS));
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new FirstSeal(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[8]);
+                        this.imageEventText.updateDialogOption(0, OPTIONS[9], true);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
-                        this.screen = CurScreen.END;
+                        this.screen = CurScreen.INTRO;
+                        used = true;
+                        damageTaken = hpLoss;
+                        cardsObtained.add(FirstSeal.ID);
                         return;
                     case 1:
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldLoss));
                         AbstractDungeon.player.loseGold(this.goldLoss);
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new SecondSeal(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[8]);
+                        this.imageEventText.updateDialogOption(1, OPTIONS[9], true);
+
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
-                        this.screen = CurScreen.END;
+                        this.screen = CurScreen.INTRO;
+                        used = true;
+                        goldLost = goldLoss;
+                        cardsObtained.add(SecondSeal.ID);
                         return;
                     case 2:
                         AbstractDungeon.topLevelEffects.add(new com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect(this.cardOption, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
                         AbstractDungeon.player.masterDeck.removeCard(this.cardOption);
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new ThirdSeal(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[8]);
+                        this.imageEventText.updateDialogOption(2, OPTIONS[9], true);
+
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
-                        this.screen = CurScreen.END;
+                        this.screen = CurScreen.INTRO;
+                        used = true;
+                        cardsObtained.add(ThirdSeal.ID);
+                        cardsRemoved.add(this.cardOption.cardID);
                         return;
                     case 3:
                         AbstractDungeon.player.removePotion(this.potionOption);
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new FourthSeal(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[8]);
+                        this.imageEventText.updateDialogOption(3, OPTIONS[9], true);
+
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
-                        this.screen = CurScreen.END;
+                        this.screen = CurScreen.INTRO;
+                        used = true;
+                        cardsObtained.add(FourthSeal.ID);
                         return;
                     case 4:
                         this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[8]);
-                        this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         this.screen = CurScreen.END;
+                        this.imageEventText.setDialogOption(OPTIONS[8]);
+                        if (!used) {
+                            this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
+                            logMetricIgnored(ID);
+                        } else {
+                            logMetric(ID, "Entered Chamber", cardsObtained, cardsRemoved, null, null,
+                                    null, null, null,
+                                    damageTaken, 0, 0, 0, 0, goldLost);
+                            this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
+                        }
                         return;
                 }
             case END:

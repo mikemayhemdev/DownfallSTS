@@ -1,7 +1,8 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.stances.BerserkerStance;
+import champ.powers.DoubleStyleThisTurnPower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -9,43 +10,20 @@ public class ShieldSigil extends AbstractChampCard {
 
     public final static String ID = makeID("ShieldSigil");
 
-    //stupid intellij stuff skill, self, common
 
     public ShieldSigil() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        tags.add(ChampMod.TECHNIQUE);
-        //tags.add(ChampMod.OPENER);
+        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 2;
+        baseDamage = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        techique();
-//        defenseOpen();
-            for (int i = 0; i < magicNumber; i++) {
-                techique();
-            }
-
-    }
-
-    @Override
-    public void applyPowers() {
-        super.applyPowers();
-        if (bcombo()){
-            this.myHpLossCost = BerserkerStance.amount() * magicNumber;
-        } else {
-            this.myHpLossCost = 0;
-        }
-    }
-
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = dcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        applyToSelf(new DoubleStyleThisTurnPower(magicNumber));
     }
 
     public void upp() {
-       // rawDescription = UPGRADE_DESCRIPTION;
-      //  initializeDescription();
         upgradeMagicNumber(1);
+        upgradeDamage(2);
     }
 }

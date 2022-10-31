@@ -1,42 +1,39 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import static champ.ChampMod.fatigue;
+import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
+import sneckomod.SneckoMod;
 
 public class Execute extends AbstractChampCard {
 
     public final static String ID = makeID("Execute");
 
-    //stupid intellij stuff ATTACK, ENEMY, STARTER
-
-    private static final int DAMAGE = 6;
-    //private static final int UPG_DAMAGE = 2;
-    private static final int HP_LOSS = 5;
-
     public Execute() {
         super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = HP_LOSS;
+        baseDamage = 6;
         baseCool = cool = 2;
-        myHpLossCost = 5;
         tags.add(ChampMod.FINISHER);
+        tags.add(SneckoMod.BANNEDFORSNECKO);
+        postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //finisher();
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-        fatigue(magicNumber);
+        AbstractDungeon.player.useJumpAnimation();
+        atb(new VFXAction(new GoldenSlashEffect(m.hb.cX + 30.0F * Settings.scale, m.hb.cY, true), 0.1F));
+        dmg(m, AbstractGameAction.AttackEffect.NONE);
+        atb(new VFXAction(new GoldenSlashEffect(m.hb.cX - 30.0F * Settings.scale, m.hb.cY, true), 0.1F));
+        dmg(m, AbstractGameAction.AttackEffect.NONE);
         finisher();
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(3);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.EnhancePower;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class CrushingGhostflame extends AbstractGhostflame {
 
@@ -32,7 +32,7 @@ public class CrushingGhostflame extends AbstractGhostflame {
 
     public CrushingGhostflame(float x, float y) {
         super(x, y);
-        damage = 4;
+        damage = 3;
         //this.textColor = new Color(1F,.75F,.75F,1F);
         this.triggersRequired = 2;
 

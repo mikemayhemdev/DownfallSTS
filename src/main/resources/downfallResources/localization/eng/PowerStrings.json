@@ -2,21 +2,22 @@
   "downfall:FairyPotion": {
     "NAME": "Fairy Potion",
     "DESCRIPTIONS": [
-      "Heals to 30% of Max HP instead of dying, removing this effect.",
+      "Heals to #b30% of Max HP instead of dying, removing this effect.",
       "Ha! Fairy Potion, jerk!"
     ]
   },
   "downfall:SoulSteal": {
     "NAME": "Soul Stealer",
     "DESCRIPTIONS": [
-      "Has stolen ",
+      "Has stolen #b",
       " of your Souls."
     ]
   },
   "downfall:NeowInvulnerable": {
     "NAME": "God of Life",
     "DESCRIPTIONS": [
-      "Cannot be killed.  Ends your turn and retreats to recover when reduced to 0 HP."
+      "Heals #b",
+      " HP whenever you play a card."
     ]
   },
   "downfall:TransformDrawnCardsPower": {
@@ -30,64 +31,370 @@
   "downfall:TotemInvulnerable": {
     "NAME": "Living Wall",
     "DESCRIPTIONS": [
-      "Cannot die unless all other Heads are at 1 HP.  Dies if any other Head dies."
+      "Cannot die unless all other Heads are at #b1 HP. Dies if any other Head dies."
     ]
   },
   "downfall:ExhaustCardsPower": {
     "NAME": "Forgetful",
     "DESCRIPTIONS": [
-      "At the end of your turn, choose a card to Exhaust."
+      "At the end of your turn, choose a card to #yExhaust."
+    ]
+  },
+  "downfall:SpotWeakness": {
+    "NAME": "Spot Weakness",
+    "DESCRIPTIONS": [
+      "Every turn in which you play an attack card with this power active, this enemy gains #b"," #yStrength. Currently it will gain #b", " #yStrength."
+    ]
+  },
+  "downfall:FearNoEvil": {
+    "NAME": "Fear No Evil",
+    "DESCRIPTIONS": [
+      "If you play an attack card this turn, this enemy will change stance to #yCalm once it plays its #yFear #yNo #yEvil card.",
+      "This enemy will change stance to #yCalm once it plays its #yFear #yNo #yEvil card."
     ]
   },
   "downfall:PoisonResist": {
     "NAME": "Poison Resistance",
     "DESCRIPTIONS": [
-      "Poison triggers at the end of your turn. Before triggering Poison, for each [E] available, spend it to remove 10 Poison."
-    ]
-  },
-  "downfall:InverseBias": {
-    "NAME": "Recovering",
-    "DESCRIPTIONS": [
-      "Gains 2 Focus at the end of each turn."
+      "#yPoison triggers at the end of your turn. NL At the end of your turn, spend all remaining [E] to remove 10 #yPoison per [E] spent."
     ]
   },
   "downfall:NeowBuff": {
     "NAME": "Neow's Vigor",
     "DESCRIPTIONS": [
-      "Gains Strength and Dexterity at the end of the round."
+      "Gains #b2 #yStrength at the end of her turn."
+    ]
+  },
+  "downfall:WatcherAngryPower": {
+    "NAME": "Unbridled Rage",
+    "DESCRIPTIONS": [
+      "At the end of her turn, if Watcher is at or below #b50% HP, she enters #yWrath. NL Watcher's #yWrath increases damage dealt and received by #b50% instead of #b100%."
+    ]
+  },
+  "downfall:NeowUnbridledRage": {
+    "NAME": "Unbridled Rage",
+    "DESCRIPTIONS": [
+      "At the end of the round, if Neow is at or below #b50% HP, she gains #b6 #yStrength. NL Can only trigger once per combat."
     ]
   },
   "downfall:WatcherCripplePower": {
-    "NAME": "Fall from Grace",
+    "NAME": "Blasphemer's Demise",
     "DESCRIPTIONS": [
-      "Deal ",
-      " more unblocked Attack damage to apply -4 Strength to Watcher when she next enters Divinity or plays Ragnarok.",
-      "Watcher will lose 4 Strength to Watcher when she next enters Divinity or plays Ragnarok."
+      "When Watcher loses #b",
+      " more HP, apply #b-4 #yStrength to her when she next enters #yDivinity or plays #yRagnarok.",
+      "Watcher will lose #b4 #yStrength when she next enters #yDivinity or plays #yRagnarok."
     ]
   },
-  "downfall:ShivTimeEaterPower": {
-    "NAME": "Time to Die",
+  "downfall:WatcherSkillPower": {
+    "NAME": "Prey on Disharmony",
     "DESCRIPTIONS": [
-      "Whenever you play a 0-cost card, if Silent has less than 7 cards in hand, she gains a Shiv."
-      ]
+      "Whenever you play a skill, Watcher gains #b",
+      " temporary #yStrength.",
+      "Whenever you play a skill, Watcher gains #yTemporary #yStrength."
+    ]
   },
-  "downfall:WatcherAngryPower": {
-    "NAME": "Boiling Wrath",
+  "downfall:WrathNextTurnPower": {
+    "NAME": "Wrath Next Turn",
     "DESCRIPTIONS": [
-      "When Watcher is reduced to 50% HP, she enters Wrath permanently."
-      ]
+      "At the start of her turn, Watcher will enter #yWrath."
+    ]
   },
-  "downfall:DefectCuriosity": {
-    "NAME": "Neural Network",
+  "downfall:NeowBlasphemersDemise": {
+    "NAME": "Blasphemers Demise",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower card, gains #b",
-      " #yFocus."
+      "Unless Neow loses #b",
+      " more HP, the next time she uses a Buff, she will gain #b10 additional #yStrength.",
+      "Neow is crippled and will not gain additional #yStrength during her next Buff turn."
     ]
   },
   "downfall:WatcherDivinityPower": {
-    "NAME": "Faith Eater",
+    "NAME": "Fleeting Faith",
     "DESCRIPTIONS": [
-      "Whenever you play a card, gains #b1 Mantra. Loses 6 Mantra per turn. NL Watcher's Divinity Stance is permanent."
+      "Watcher gains #b1 #yMantra whenever you play a card. NL Watcher loses #b5 #yMantra at the start of her turn. NL Watcher does not exit #yDivinity at the end of her turn."
+    ]
+  },
+  "downfall:NeowFleetingFaith": {
+    "NAME": "Fleeting Faith",
+    "DESCRIPTIONS": [
+      "Whenever you play a card, Neow gains #b1 #yMantra. Neow loses #b5 #yMantra at the start of her turn."
+    ]
+  },
+  "downfall:SilentShivTimeEaterPower": {
+    "NAME": "Bag of Knives",
+    "DESCRIPTIONS": [
+      "The first time you play a card that costs #b2 or more each turn, Silent gains 2 #yShivs."
+    ]
+  },
+  "downfall:NeowBagOfKnives": {
+    "NAME": "Bag of Knives",
+    "DESCRIPTIONS": [
+      "The first time you play a card that costs #b2 or more each turn, take #b4 damage twice."
+    ]
+  },
+  "downfall:SilentMirrorImagePower": {
+    "NAME": "Seeing Double",
+    "DESCRIPTIONS": [
+      "At the start of each turn, a mirror image of Silent will hide her real location. Attacking Silent or the mirror removes it from combat for the turn."
+    ]
+  },
+  "downfall:NeowSeeingDouble": {
+    "NAME": "Seeing Double",
+    "DESCRIPTIONS": [
+      "The first #yAttack used against Neow each turn deals #b0 damage."
+    ]
+  },
+  "downfall:SilentPoisonPower": {
+    "NAME": "Warning: Highly Toxic",
+    "DESCRIPTIONS": [
+      "#yPoison is blockable and deals damage at end of turn. NL Receive an #yAntidote at the start of combat."
+    ]
+  },
+  "downfall:NeowHighlyToxic": {
+    "NAME": "Warning: Highly Toxic",
+    "DESCRIPTIONS": [
+      "Neow applies #b5 #yPoison to you per turn. Poison is blockable and deals damage at end of turn. NL Shuffle 2 #yAntidotes into your deck at the start of combat."
+    ]
+  },
+  "downfall:DefectVoidPower": {
+    "NAME": "Energy Thief",
+    "DESCRIPTIONS": [
+      "Whenever Defect generates a #yVoid, it goes to the top of your draw pile."
+    ]
+  },
+  "downfall:NeowEnergyThief": {
+    "NAME": "Energy Thief",
+    "DESCRIPTIONS": [
+      "When Neow adds #rCurses to your draw pile, she also adds 1 #yVoid card to it."
+    ]
+  },
+  "downfall:DefectAncientConstructPower": {
+    "NAME": "Ancient Construct",
+    "DESCRIPTIONS": [
+      "Begins the fight with 2 #yBronze #yOrb minions. NL Gains 1 #yArtifact at the end of its turn if it did not already have #yArtifact."
+    ]
+  },
+  "downfall:NeowAncientConstruct": {
+    "NAME": "Ancient Construct",
+    "DESCRIPTIONS": [
+      "Neow gains #b2 #yArtifact at the end of her turn if she has no #yArtifact."
+    ]
+  },
+  "downfall:DefectCuriosity": {
+    "NAME": "Unbiased Cognition",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yPower card, Defect gains #b",
+      " #yFocus."
+    ]
+  },
+  "downfall:DefectCuriosityLighning": {
+    "NAME": "Unbiased Cognition",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yPower card, Defect channels #b",
+      " #yLightning #yOrb."
+    ]
+  },
+  "downfall:NeowUnbiasedCognition": {
+    "NAME": "Unbiased Cognition",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yPower card, Neow gains #b2 #yStrength."
+    ]
+  },
+  "downfall:IroncladStatusPower": {
+    "NAME": "Synchronize",
+    "DESCRIPTIONS": [
+      "Whenever Ironclad generates a #yStatus card, a duplicate is added into your discard pile."
+    ]
+  },
+  "downfall:NeowSyncronize": {
+    "NAME": "Synchronize",
+    "DESCRIPTIONS": [
+      "Neow adds a random #yStatus card to your discard pile every turn."
+    ]
+  },
+  "downfall:IroncladMushroomPower": {
+    "NAME": "Feeding Frenzy",
+    "DESCRIPTIONS": [
+      "Ironclad's #yReaper does not #yExhaust and targets ALL Mushrooms. NL When Ironclad kills a Mushroom, he gains #b1 #yStrength."
+    ]
+  },
+  "downfall:NeowFeedingFrenzy": {
+    "NAME": "Feeding Frenzy",
+    "DESCRIPTIONS": [
+      "Neow heals HP whenever she deals any unblocked damage."
+    ]
+  },
+  "downfall:IroncladFortificationPower": {
+    "NAME": "Bastion",
+    "DESCRIPTIONS": [
+      "Ironclad begins the fight with a #yFortification, which will grant him #b",
+      " #yBlock each turn. NL When the #yFortification has been destroyed, Ironclad loses #yBarricade, but gains #b5 #yStrength at the start of each turn."
+    ]
+  },
+  "downfall:NeowBastion": {
+    "NAME": "Bastion",
+    "DESCRIPTIONS": [
+      "Neow has #yBarricade and gains #b10 #yBlock at the start of each turn."
+    ]
+  },
+  "downfall:MerchantStrengthPower": {
+    "NAME": "Soul Stealer",
+    "DESCRIPTIONS": [
+      "Merchant still has the #yStrength it earned from Soul Steal this run, and gains an equal amount of #yDexterity."
+    ]
+  },
+  "downfall:NeowMantra": {
+    "NAME": "Mantra",
+    "DESCRIPTIONS": [
+      "When Neow has #b10 #yMantra, she enters Divinity, dealing triple damage the following turn."
+    ]
+  },
+  "downfall:NeowSeeingDoubleProduct": {
+    "NAME": "???",
+    "DESCRIPTIONS": [
+      "Your next #yAttack used against Neow deals #b0 damage this turn."
+    ]
+  },
+  "downfall:CrowbotRitualPower": {
+    "NAME": "Reprogram:Ritual",
+    "DESCRIPTIONS": [
+      "When #yCrowBot is at or below #b50% HP,it lose #b3 HP and gain #b",
+      " #yStrength at the end of its turn."
+    ]
+  },
+  "downfall:DamageMultiplier": {
+    "NAME": "Damage Multiplier",
+    "DESCRIPTIONS": [
+      "#yAttacks deal #b",
+      " times damage."
+    ]
+  },
+  "downfall:CompressionMold": {
+    "NAME": "Compression Mold",
+    "DESCRIPTIONS": [
+      "#yFired Ammo is upgraded afterwards."
+    ]
+  },
+  "downfall:OnDeathEveryoneStr": {
+    "NAME": "Last Gasp: Inflame+",
+    "DESCRIPTIONS": [
+      "When this character dies, ALL characters (including you) gain #b",
+      " #yStrength."
+    ]
+  },
+  "downfall:OnDeathEveryoneThorns": {
+    "NAME": "Last Gasp: Caltrops+",
+    "DESCRIPTIONS": [
+      "When this character dies, ALL characters (including you) gain #b",
+      " #yThorns."
+    ]
+  },
+  "downfall:OnDeathEveryoneBuffer": {
+    "NAME": "Last Gasp: Buffer+",
+    "DESCRIPTIONS": [
+      "When this character dies, ALL characters (including you) gain #b",
+      " #yBuffer. (Buffer: Prevents the next time you would lose HP)"
+    ]
+  },
+  "downfall:OnDeathEveryoneVigor": {
+    "NAME": "Last Gasp: Wreath of Flame+",
+    "DESCRIPTIONS": [
+      "When this character dies, ALL characters (including you) gain #b",
+      " #yVigor. (Vigor: Increases damage of a single Attack)"
+    ]
+  },
+  "downfall:OnDeathEveryoneRuggedVuln": {
+    "NAME": "Last Gasp: Gestalt",
+    "DESCRIPTIONS": [
+      "When this character dies, ALL characters (including you) gain #b",
+      " #yRugged and #b",
+      " #yVulnerable. (Rugged: Reduces unblocked damage taken to 3) "
+    ]
+  },
+  "downfall:MonsterVigor": {
+    "NAME": "Vigor",
+    "DESCRIPTIONS": [
+      "This character's next attack deals #b",
+      " additional damage."
+    ]
+  },
+  "downfall:HermitConcentrateAdder": {
+    "NAME": "Deadly Focus",
+    "DESCRIPTIONS": [
+      "Hermit has Concentration, which adds special #yDead #yOn effects to his cards. Dealing #b10 unblocked damage to him breaks the concentration, causing his cards to lose their #yDead #yOn effects."
+    ]
+  },
+  "downfall:HermitConcentrationPower": {
+    "NAME": "Concentrated",
+    "DESCRIPTIONS": [
+      "Hermit's cards get bonus #yDead #yOn effects while he is concentrated. Deal #b",
+      " more unblocked damage to break his Concentration this turn.",
+      "Hermit's concentration is broken and #yDead #yOn effects don't trigger this turn."
+    ]
+  },
+  "downfall:HermitWheelOfFortune": {
+    "NAME": "Wheel of Fortune",
+    "DESCRIPTIONS": [
+      "Whenever you strike Hermit with an Attack, its leftmost card is discarded and it draws a card. Every #b",
+      " times this happens, Hermit gains #b1 #yStrength."
+    ]
+  },
+  "downfall:HermitDoomsday": {
+    "NAME": "Doomsday",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain an #rImpending #rDoom with #yRetain."
+    ]
+  },
+  "downfall:NeowEclipse": {
+    "NAME": "Eclipse",
+    "DESCRIPTIONS": [
+      "Neow adds an #yEthereal #yImpending #yDoom to your hand every turn."
+    ]
+  },
+  "downfall:NeowWheelOfDeath": {
+    "NAME": "Wheel Of Death",
+    "DESCRIPTIONS": [
+      "Every #b",
+      " cards you play, Neow gains #b",
+      " #yStrength."
+    ]
+  },
+  "downfall:NeowDistracting": {
+    "NAME": "Distracting",
+    "DESCRIPTIONS": [
+      "First time you deal #yAttack damage to Neow in a turn, gain #b1 less [E] next turn."
+    ]
+  },
+  "downfall:NextTurnPowerPower": {
+    "NAME": "Next Turn ",
+    "DESCRIPTIONS": [
+      "BUG! You should not see this",
+      "Next turn, gain #b",
+      " ",
+      ".",
+      "LOCALIZATION NOTE: Please keep the space after 'Next Turn' in the NAME field."
+    ]
+  },
+  "downfall:NeowStayAt1Hp": {
+    "NAME": "Unkillable",
+    "DESCRIPTIONS": [
+      "Damage cannot reduce Neow below #b1 HP. Neow will heal to full and enter a new phase instead."
+    ]
+  },
+  "downfall:NeowDivinity": {
+    "NAME": "Divinity",
+    "DESCRIPTIONS": [
+      "Neow deals triple damage this turn."
+    ]
+  },
+  "downfall:NeowSpirit": {
+    "NAME": "Hero's Spirit",
+    "DESCRIPTIONS": [
+      "When Neow uses a Buff intent, she gains #b6 #yStrength and... ",
+      " NL Gains #b1 Demon Form. #y(Ironclad)",
+      " NL Gains #b2 Thorns. #y(Silent)",
+      " NL Gains #b2 Buffer. #y(Defect)",
+      " NL Gains #b5 Mantra. #y(Watcher)",
+      " NL Adds #b2 random #rCurses to your draw pile. #y(Hermit)"
     ]
   }
 }

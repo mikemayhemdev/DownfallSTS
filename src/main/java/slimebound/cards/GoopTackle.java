@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.actions.TackleSelfDamageAction;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.PreventTackleDamagePower;
 import slimebound.powers.TackleBuffPower;
 import slimebound.powers.TackleDebuffPower;
 
@@ -23,13 +24,13 @@ import java.util.Iterator;
 import java.util.Map;
 
 
-public class GoopTackle extends AbstractSlimeboundCard {
+public class GoopTackle extends AbstractTackleCard {
     public static final String ID = "Slimebound:GoopTackle";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static final String IMG_PATH = "cards/corrosivetackle.png";
     private static final CardType TYPE = CardType.ATTACK;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 2;
@@ -49,7 +50,7 @@ public class GoopTackle extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.TACKLE);
 
 
-        this.baseDamage = 13;
+        this.baseDamage = 12;
         baseSelfDamage = this.selfDamage = 3;
 
 
@@ -59,7 +60,8 @@ public class GoopTackle extends AbstractSlimeboundCard {
 
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        addToBot(new TackleSelfDamageAction(new DamageInfo(p, selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
+        if (!AbstractDungeon.player.hasPower(PreventTackleDamagePower.POWER_ID))
+            addToBot(new TackleSelfDamageAction(new DamageInfo(p, selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
 
         ArrayList<AbstractCard> qCardList = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
@@ -95,7 +97,7 @@ public class GoopTackle extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeDamage(2);
+            upgradeDamage(3);
 
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();

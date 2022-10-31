@@ -1,11 +1,12 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theHexaghost.powers.ApplyBurnAtTurnStartOncePower;
+import theHexaghost.HexaMod;
 import theHexaghost.powers.GiftsFromTheDeadPower;
 import theHexaghost.powers.GiftsFromTheDeadPowerPlus;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class GiftsFromTheDead extends AbstractHexaCard {
 
@@ -14,36 +15,20 @@ public class GiftsFromTheDead extends AbstractHexaCard {
     //stupid intellij stuff POWER, SELF, RARE
 
     public GiftsFromTheDead() {
-        super(ID, -2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        isEthereal = true;
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.magicNumber = baseMagicNumber = 1;
+        HexaMod.loadJokeCardImage(this, "GiftsFromTheDead.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-    }
-
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        cantUseMessage = "It's too hot to touch!";  //TODO - Hardcoded string!
-        return false;
-    }
-
-    @Override
-    public void triggerOnExhaust() {
-
-        applyToSelf(new GiftsFromTheDeadPowerPlus(1));
-
-        if (!upgraded) applyToSelf(new GiftsFromTheDeadPower(1));
-
+        applyToSelf(new GiftsFromTheDeadPower(1));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
 
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBaseCost(1);
         }
     }
 }

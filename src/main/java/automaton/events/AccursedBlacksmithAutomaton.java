@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package automaton.events;
 
 import automaton.AutomatonMod;
@@ -58,7 +53,6 @@ public class AccursedBlacksmithAutomaton extends AbstractImageEvent {
 
     private int screenNum = 0;
     private boolean pickCard = false;
-    private boolean pickCardForSocket = false;
 
     private ArrayList<AbstractCard> validCards;
 
@@ -98,24 +92,42 @@ public class AccursedBlacksmithAutomaton extends AbstractImageEvent {
 
     }
 
+    public void update()
+    {
+        super.update();
+
+        if ((this.pickCard) &&
+                (!AbstractDungeon.isScreenUp) && (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty())) {
+            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            c.upgrade();
+            logMetricCardUpgrade(ID, "Forge", c);
+            AbstractDungeon.player.bottledCardUpgradeCheck(AbstractDungeon.gridSelectScreen.selectedCards.get(0));
+            AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect(c.makeStatEquivalentCopy()));
+            AbstractDungeon.topLevelEffects.add(new com.megacrit.cardcrawl.vfx.UpgradeShineEffect(Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
+            AbstractDungeon.gridSelectScreen.selectedCards.clear();
+            this.pickCard = false;
+        }
+    }
 
     protected void buttonEffect(int buttonPressed) {
         switch (this.screenNum) {
             case 0:
                 switch (buttonPressed) {
                     case 0:
-                        this.pickCardForSocket = true;
                         this.imageEventText.updateBodyText(DESCRIPTIONSAUTOMATON[0]);
                         this.screenNum = 2;
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         Collections.shuffle(validCards);
+                        ArrayList<String> upgradedCards = new ArrayList<>();
                         for (int i = 0; i < 3; i++) {
                             if (validCards.size() - 1 >= i){
+                                upgradedCards.add(validCards.get(i).cardID);
                                 validCards.get(i).upgrade();
                                 AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(validCards.get(i).makeStatEquivalentCopy(), MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH, MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT));
 
                             }
                         }
+                        logMetricUpgradeCards(ID, "Tinker", upgradedCards);
 
                         break;
                     case 1:
@@ -131,12 +143,14 @@ public class AccursedBlacksmithAutomaton extends AbstractImageEvent {
                         AbstractCard curse = new Pain();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), new WarpedTongs());
+                        logMetricObtainCardAndRelic(ID, "Rummage", curse, new WarpedTongs());
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         break;
                     case 3:
                         this.screenNum = 2;
                         this.imageEventText.updateBodyText(LEAVE_RESULT);
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
+                        logMetricIgnored(ID);
                 }
 
                 this.imageEventText.clearRemainingOptions();

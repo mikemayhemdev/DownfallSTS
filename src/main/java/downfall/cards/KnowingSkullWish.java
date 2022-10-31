@@ -10,13 +10,16 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.actions.OctoChoiceAction;
-import downfall.util.OctopusCard;
 import downfall.downfallMod;
+import downfall.util.OctopusCard;
 import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
 import sneckomod.actions.ChangeGoldAction;
+import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 import java.util.ArrayList;
+
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
 
 public class KnowingSkullWish extends AbstractExpansionCard implements OctopusCard {
 
@@ -27,7 +30,7 @@ public class KnowingSkullWish extends AbstractExpansionCard implements OctopusCa
     //stupid intellij stuff SKILL, SELF, RARE
 
     public KnowingSkullWish() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         isEthereal = true;
         exhaust = true;
     }
@@ -38,27 +41,49 @@ public class KnowingSkullWish extends AbstractExpansionCard implements OctopusCa
 
     public ArrayList<OctoChoiceCard> choiceList() {
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
-        cardList.add(new OctoChoiceCard("ks:0", NAMES[0], expansionContentMod.makeCardPath("KnowingSkullWish.png"), TEXT[0]));
-        cardList.add(new OctoChoiceCard("ks:1", NAMES[1], expansionContentMod.makeCardPath("KnowingSkullWish.png"), TEXT[1]));
-        cardList.add(new OctoChoiceCard("ks:2", NAMES[2], expansionContentMod.makeCardPath("KnowingSkullWish.png"), TEXT[2]));
+        OctoChoiceCard goldCard, colorlessCard, potionCard;
+        if (!upgraded) {
+            goldCard = new OctoChoiceCard("ks:0", NAMES[0], expansionContentMod.makeCardPath("KnowingSkullWish.png"), TEXT[0]);
+            colorlessCard = new OctoChoiceCard("ks:1", NAMES[1], expansionContentMod.makeCardPath("KnowingSkullWish.png"), TEXT[1]);
+            potionCard = new OctoChoiceCard("ks:2", NAMES[2], expansionContentMod.makeCardPath("KnowingSkullWish.png"), TEXT[2]);
+        }
+        else {
+            goldCard = new OctoChoiceCard("ks:0", NAMES[0], expansionContentMod.makeCardPath("KnowingSkullWish.png"), TEXT[24]);
+            colorlessCard = new OctoChoiceCard("ks:1", NAMES[1], expansionContentMod.makeCardPath("KnowingSkullWish.png"), TEXT[25]);
+            potionCard = new OctoChoiceCard("ks:2", NAMES[2], expansionContentMod.makeCardPath("KnowingSkullWish.png"), TEXT[26]);
+            goldCard.upgrade();
+            colorlessCard.upgrade();
+            potionCard.upgrade();
+        }
+        cardList.add(goldCard);
+        cardList.add(colorlessCard);
+        cardList.add(potionCard);
         return cardList;
     }
 
     public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
         switch (card.cardID) {
             case "ks:0": {
+                int gold = upgraded ? 50 : 40;
                 atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 3));
-                atb(new ChangeGoldAction(40));
+                atb(new ChangeGoldAction(gold));
                 break;
             }
             case "ks:1": {
                 atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1));
-                AbstractCard q = AbstractDungeon.returnColorlessCard();
+                ArrayList<AbstractCard> list = new ArrayList<>();
+                for (AbstractCard c : AbstractDungeon.colorlessCardPool.group) {
+                    list.add(c);
+                }
+                AbstractCard q = list.get(cardRandomRng.random(list.size() - 1));
+                if (upgraded)
+                    q.upgrade();
                 atb(new MakeTempCardInHandAction(q));
                 break;
             }
             case "ks:2": {
-                atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 5));
+                int damage = upgraded ? 2 : 5;
+                atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, damage));
                 atb(new ObtainPotionAction(PotionHelper.getRandomPotion()));
                 break;
             }

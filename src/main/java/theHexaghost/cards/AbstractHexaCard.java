@@ -1,21 +1,30 @@
 package theHexaghost.cards;
 
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.utility.ShowCardAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import hermit.util.TextureLoader;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
 import theHexaghost.powers.BurnPower;
 import theHexaghost.powers.CrispyPower;
+import theHexaghost.vfx.AfterlifePlayEffect;
 
 import java.util.ArrayList;
 
@@ -25,6 +34,7 @@ import static theHexaghost.HexaMod.makeCardPath;
 public abstract class AbstractHexaCard extends CustomCard {
 
     protected final CardStrings cardStrings;
+    public String betaArtPath;
     protected final String NAME;
     protected final String DESCRIPTION;
     protected final String UPGRADE_DESCRIPTION;
@@ -169,14 +179,75 @@ public abstract class AbstractHexaCard extends CustomCard {
     }
 
     protected void burnGlowCheck() {
-        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();// 39
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
 
         if (AbstractDungeon.getCurrRoom().monsters != null)
             for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                if (!m.isDeadOrEscaped() && m.hasPower(BurnPower.POWER_ID)) {// 41
-                    this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();// 42
+                if (!m.isDeadOrEscaped() && m.hasPower(BurnPower.POWER_ID)) {
+                    this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
                     break;// 43
                 }
             }
+    }
+
+    @Override
+    public void triggerOnExhaust() {
+        att(new AbstractGameAction() {
+            @Override
+            public void update() {
+                if (useAfterlifeVFX() && duration == startDuration) {
+                    atb(new VFXAction(new AfterlifePlayEffect(AbstractHexaCard.this)));
+                }
+                tickDuration();
+                if (isDone) {
+
+                    atb(new WaitAction(0.2F)); // from ShowCardAction
+
+                    applyPowers();
+                    afterlife();
+
+                    atb(new WaitAction(0.15F)); // from UseCardAction
+
+                    if (type == AbstractCard.CardType.POWER) { // special case for powers in UseCardAction
+                        if (com.megacrit.cardcrawl.core.Settings.FAST_MODE) {
+                            atb(new WaitAction(0.1F));
+                        } else {
+                            atb(new WaitAction(0.7F));
+                        }
+                    }
+                }
+            }
+        });
+
+    }
+
+    protected boolean useAfterlifeVFX() {
+        return AbstractHexaCard.this.tags.contains(HexaMod.AFTERLIFE);
+    }
+
+    public void afterlife() {
+
+    }
+
+    @Override
+    protected Texture getPortraitImage() {
+        if (Settings.PLAYTESTER_ART_MODE || UnlockTracker.betaCardPref.getBoolean(this.cardID, false)) {
+            if (this.textureImg == null) {
+                return null;
+            } else {
+                if (betaArtPath != null) {
+                    int endingIndex = betaArtPath.lastIndexOf(".");
+                    String newPath = betaArtPath.substring(0, endingIndex) + "_p" + betaArtPath.substring(endingIndex);
+                    newPath = "hexamodResources/images/betacards/" + newPath;
+                    System.out.println("Finding texture: " + newPath);
+
+                    Texture portraitTexture;
+                    portraitTexture = TextureLoader.getTexture(newPath);
+
+                    return portraitTexture;
+                }
+            }
+        }
+        return super.getPortraitImage();
     }
 }

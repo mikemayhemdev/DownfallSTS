@@ -1,12 +1,15 @@
 package automaton.cards;
 
 import automaton.AutomatonChar;
+import automaton.AutomatonTextHelper;
 import automaton.FunctionHelper;
 import automaton.cardmods.EncodeMod;
+import automaton.vfx.FineTuningEffect;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -15,20 +18,22 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import java.util.ArrayList;
 
 import static automaton.AutomatonMod.getModID;
 import static automaton.AutomatonMod.makeCardPath;
-import static automaton.FunctionHelper.WITH_DELIMITER;
 
 public abstract class AbstractBronzeCard extends CustomCard {
-
+    public String betaArtPath;
     private static float functionPreviewCardScale = .9f;
     private static float functionPreviewCardY = Settings.HEIGHT * 0.45F;
     private static float functionPreviewCardX = Settings.WIDTH * 0.1F;
@@ -45,6 +50,8 @@ public abstract class AbstractBronzeCard extends CustomCard {
     protected String UPGRADE_DESCRIPTION;
     protected String[] EXTENDED_DESCRIPTION;
     private AbstractCard functionPreviewCard;
+
+    public static final UIStrings masterUI = CardCrawlGame.languagePack.getUIString("bronze:MiscStrings");
 
     public AbstractBronzeCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),
@@ -70,6 +77,32 @@ public abstract class AbstractBronzeCard extends CustomCard {
         EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
         initializeTitle();
         initializeDescription();
+    }
+
+
+    @Override
+    protected Texture getPortraitImage() {
+        if (Settings.PLAYTESTER_ART_MODE || UnlockTracker.betaCardPref.getBoolean(this.cardID, false)) {
+            if (this.textureImg == null) {
+                return null;
+            } else {
+                if (betaArtPath != null) {
+                    int endingIndex = betaArtPath.lastIndexOf(".");
+                    String newPath = betaArtPath.substring(0, endingIndex) + "_p" + betaArtPath.substring(endingIndex);
+                    System.out.println("Finding texture: " + newPath);
+
+                    Texture portraitTexture;
+                    try {
+                        portraitTexture = ImageMaster.loadImage(newPath);
+                    } catch (Exception var5) {
+                        portraitTexture = null;
+                    }
+
+                    return portraitTexture;
+                }
+            }
+        }
+        return super.getPortraitImage();
     }
 
     public static String getCorrectPlaceholderImage(CardType type, String id) {
@@ -119,7 +152,8 @@ public abstract class AbstractBronzeCard extends CustomCard {
         }
     }
 
-    public void fineTune() {
+    public void fineTune(boolean effects) {
+        if (effects) AbstractDungeon.effectList.add(new FineTuningEffect(this));
         this.baseDamage += 1;
         this.damage += 1;
         this.baseBlock += 1;
@@ -139,6 +173,10 @@ public abstract class AbstractBronzeCard extends CustomCard {
 
     public void onCompilePreCardEffectEmbed(boolean forGameplay) {
         // Called before the effects of cards are added to the Function. Use this if a card modifies its statistics as a Compile effect. Don't put these on action queue.
+    }
+
+    public void onCompileFirst(AbstractCard function, boolean forGameplay) {
+        // Called after all CardEffectsCardMods are played, but before onCompile effects. This should not be used often.
     }
 
     public void onCompile(AbstractCard function, boolean forGameplay) {
@@ -165,10 +203,18 @@ public abstract class AbstractBronzeCard extends CustomCard {
         return String.valueOf(NAME.charAt(0));
     }
 
+    public boolean hasTriplicate() {
+        return false;
+    }
+
+    public String getTriplicate() {
+        return EXTENDED_DESCRIPTION[2];
+    }
+
     public String getSpecialCompileText() {
-        String[] splitText = this.rawDescription.split("bronze:Compile");
+        String[] splitText = this.rawDescription.split(CardCrawlGame.languagePack.getUIString("bronze:AutoTextHelper").TEXT[1]);
         String compileText = splitText[1];
-        return (compileText.replaceAll("bronze:", "#y").replaceAll("!D!", String.valueOf(this.damage)).replaceAll("!B!", String.valueOf(this.block)).replaceAll("!M!", String.valueOf(this.magicNumber)).replaceAll("!bauto!", (String.valueOf(this.auto))).replace("*", "#y"));
+        return (compileText.replaceAll(getModID() + ":", "#y").replaceAll("!D!", String.valueOf(this.damage)).replaceAll("!B!", String.valueOf(this.block)).replaceAll("!M!", String.valueOf(this.magicNumber)).replaceAll("!bauto!", (String.valueOf(this.auto))).replace("*", "#y"));
     }
 
     public abstract void upp();
@@ -266,7 +312,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
     public void hover() {
         if ((getSequencePosition() >= 0 || FunctionHelper.secretStorage == this) && !isHoveredInSequence) {
             isHoveredInSequence = true;
-            //SlimeboundMod.logger.info("hover() hit");
+            ////SlimeboundMod.logger.info("hover() hit");
             ReflectionHacks.setPrivate(this, AbstractCard.class, "hovered", true);
 
         } else {
@@ -279,7 +325,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
     public void unhover() {
         if ((getSequencePosition() >= 0 || FunctionHelper.secretStorage == this) && isHoveredInSequence) {
             isHoveredInSequence = false;
-            //SlimeboundMod.logger.info("unhover() hit");
+            ////SlimeboundMod.logger.info("unhover() hit");
             ReflectionHacks.setPrivate(this, AbstractCard.class, "hovered", false);
 
         } else {
@@ -291,22 +337,22 @@ public abstract class AbstractBronzeCard extends CustomCard {
     public void render(SpriteBatch sb) {
         super.render(sb);
 
-        // SlimeboundMod.logger.info("rendering cardTip");
+        // //SlimeboundMod.logger.info("rendering cardTip");
 
         if (isHoveredInSequence) {
-            // SlimeboundMod.logger.info("isHoveredInSequence");
+            // //SlimeboundMod.logger.info("isHoveredInSequence");
             if (isLocked || (AbstractDungeon.player != null && (AbstractDungeon.player.isDraggingCard || AbstractDungeon.player.inSingleTargetMode))) {
 
-                // SlimeboundMod.logger.info("bounced");
+                // //SlimeboundMod.logger.info("bounced");
                 return;
             }
 
 
-            // SlimeboundMod.logger.info("Is in Sequence");
+            // //SlimeboundMod.logger.info("Is in Sequence");
             if (functionPreviewCard == null) {
                 functionPreviewCard = makeStatEquivalentCopy();
             }
-            //SlimeboundMod.logger.info("rendering previewcard");
+            ////SlimeboundMod.logger.info("rendering previewcard");
             functionPreviewCard.drawScale = functionPreviewCardScale;
             functionPreviewCard.current_x = functionPreviewCardX;
             functionPreviewCard.current_y = functionPreviewCardY;
@@ -321,27 +367,27 @@ public abstract class AbstractBronzeCard extends CustomCard {
     }
 
     boolean lastCard() {
-        return position == FunctionHelper.max - 1;
+        return position == FunctionHelper.max() - 1;
     }
 
     boolean firstCard() {
         return position == 0;
     }
 
+    public void turnOffCompileStuff() {
+        this.doSpecialCompileStuff = false;
+        this.rawDescription = AutomatonTextHelper.cleanAllCompileText(this.rawDescription);
+        this.initializeDescription();
+        superFlash();
+    }
+
     @Override
     public AbstractCard makeStatEquivalentCopy() {
         AbstractCard r = super.makeStatEquivalentCopy();
-        if (!this.doSpecialCompileStuff && r instanceof AbstractBronzeCard) {
-            ((AbstractBronzeCard) r).doSpecialCompileStuff = false;
-            if (r.rawDescription.contains(" NL bronze:Compile")) {
-                String[] splitText = r.rawDescription.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
-                String compileText = splitText[1] + splitText[2];
-                r.rawDescription = r.rawDescription.replaceAll(compileText, "");
-            } //I will make this good soon
-            else if (r.rawDescription.contains("bronze:Compile")) {
-                r.rawDescription = ""; // It's over!! If you only have Compile effects, you're gone!!!!!
-            }
-            r.initializeDescription();
+        ((AbstractBronzeCard) r).baseAuto = this.baseAuto;
+        ((AbstractBronzeCard) r).auto = this.auto;
+        if (!this.doSpecialCompileStuff) {
+            ((AbstractBronzeCard) r).turnOffCompileStuff();
         }
         return r;
     }

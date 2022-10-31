@@ -1,0 +1,92 @@
+[
+  {
+    "NAMES": [
+      "鑲嵌"
+    ],
+    "PROPER_NAME": "鑲嵌",
+    "DESCRIPTION": " #y寶石 能夠被 #y鑲嵌 進有 #y孔位 的牌上，使其效果附加於牌。"
+  },
+  {
+    "NAMES": [
+      "stasis",
+      "凝滯"
+    ],
+    "PROPER_NAME": "凝滯",
+    "DESCRIPTION": "一張牌被 #y凝滯 時其獲得一個計數器。倒計點數等於其耗能加 #b1 點，每回合開始時減少 #b1 點。 NL 歸零時，將其返回手牌且下次耗能為 #b0 。"
+  },
+  {
+    "NAMES": [
+      "寶石"
+    ],
+    "PROPER_NAME": "寶石",
+    "DESCRIPTION": " #y寶石 能在 #y休息處 被 #y鑲嵌 至有 #y孔位 的牌上。不能被 #y升級 。"
+  },
+  {
+    "PROPER_NAME": "防禦模式",
+    "NAMES": [
+      "defensive mode",
+      "defensive_mode",
+      "防禦模式"
+    ],
+    "DESCRIPTION": "#y姿態 。 NL 進入 #y防禦模式 時獲得 #b10 點 #y格擋 ， #y防禦模式 持續至下回合結束時。 NL 處於 #y防禦模式 時：擁有 #b3 層 #y荊棘 。每回合開始時獲得 #b10 點 #y格擋 且在回合結束時 #y格擋 不會消失。"
+  },
+  {
+    "NAMES": [
+      "accelerate",
+      "加速"
+    ],
+    "PROPER_NAME": "加速",
+    "DESCRIPTION": "降低被 #y凝滯 牌的倒計點數 #b1 點。若歸零, 將其返回手牌且下次耗能為 #b0 。"
+  },
+  {
+    "NAMES": [
+      "組件"
+    ],
+    "PROPER_NAME": "組件",
+    "DESCRIPTION": "一系列 #b0 耗能 消耗 技能牌，可將 #b3 張同體系牌加入手牌。"
+  },
+  {
+    "NAMES": [
+      "臨時"
+    ],
+    "PROPER_NAME": "臨時",
+    "DESCRIPTION": "只持續 #b1 回合，即同時獲得等量層，回合結束時剝奪增益的 #r負面效果 。"
+  },
+  {
+    "NAMES": [
+      "消散",
+      "揮發"
+    ],
+    "PROPER_NAME": "消散",
+    "DESCRIPTION": "本牌結束 #y凝滯 時，被 #y消耗 而非返回手牌。"
+  },
+  {
+    "NAMES": [
+      "滴答"
+    ],
+    "PROPER_NAME": "滴答",
+    "DESCRIPTION": "被 #y凝滯 牌的倒計點數減少時，觸發該效果。"
+  },
+  {
+    "NAMES": [
+      "緩沖"
+    ],
+    "PROPER_NAME": "緩沖",
+    "DESCRIPTION": "阻止你下次失去生命。"
+  },
+  {
+    "NAMES": [
+      "提防"
+    ],
+    "PROPER_NAME": "提防",
+    "DESCRIPTION": "降低進入 #y防禦模式 所需生命損失，需求變為 #b0 時進入 #y防禦模式 。"
+  },
+  {
+    "NAMES": [
+      "降級",
+      "downgrade"
+    ],
+    "PROPER_NAME": "降級",
+    "DESCRIPTION": "移除一張牌的 升級 。"
+  }
+]

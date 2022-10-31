@@ -1,31 +1,32 @@
 {
   "sneckomod:DiceRollPotion": {
-    "NAME": "很可能很强合剂",
+    "NAME": "可能很强药剂",
     "DESCRIPTIONS": [
       "造成 #b",
-      "到",
+      " - #b",
       " 点伤害。"
     ]
   },
   "sneckomod:CheatPotion": {
     "NAME": "流动幸运",
     "DESCRIPTIONS": [
-      "本回合内，卡牌上的随机数取上限值。",
-      "2个回合内，卡牌上的随机数取上限值。"
+      "本回合内，获得 #y幸运 。",
+      " #b",
+      " 回合内，获得 #y幸运 。"
     ]
   },
   "sneckomod:MuddlingPotion": {
     "NAME": "尖峰苏打",
     "DESCRIPTIONS": [
-      "混淆手牌中耗能最高的 #b",
-      " 张牌。"
+      " #y混淆 手牌中耗能最高的 #b",
+      " 张牌。 #y混淆 后耗能不为 #b3 点。"
     ]
   },
   "sneckomod:OffclassReductionPotion": {
     "NAME": "奇异饮料",
     "DESCRIPTIONS": [
-      "将手牌中的异色牌的耗能降低 #b",
-      "。"
+      "将手牌中所有 #y异色 牌的耗能降低 #b",
+      " 点。"
     ]
   }
 }

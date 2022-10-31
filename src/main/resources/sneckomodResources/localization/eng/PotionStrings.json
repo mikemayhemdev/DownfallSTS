@@ -10,15 +10,16 @@
   "sneckomod:CheatPotion": {
     "NAME": "Liquid Luck",
     "DESCRIPTIONS": [
-      "This turn, cards that choose a random number for their effect choose the maximum possible number.",
-      "For 2 turns, cards that choose a random number for their effect choose the maximum possible number."
+      "Gain #yLucky for 1 turn.",
+      "Gain #yLucky for #b",
+      " turns."
     ]
   },
   "sneckomod:MuddlingPotion": {
     "NAME": "Spiked Energy Drink",
     "DESCRIPTIONS": [
       "#yMuddle the #b",
-      " highest-cost cards in your hand."
+      " highest-cost cards in your hand. Cards #yMuddled this way cannot cost 3."
     ]
   },
   "sneckomod:OffclassReductionPotion": {

@@ -3,6 +3,7 @@
     "NAME": "Potency",
     "DESCRIPTIONS": [
       "Increase the damage of your spawned Slimes by #b",
+      ". Increase secondary effects by #b",
       "."
     ]
   },
@@ -74,7 +75,7 @@
     "DESCRIPTIONS": [
       "Prevent the next time you would be damaged by an enemy attack, #yAbsorbing your leading Slime instead.",
       "Prevent the next #b",
-      " times you would damaged by an enemy attack, #yAbsorbing your leading Slime instead."
+      " times you would be damaged by an enemy attack, #yAbsorbing your leading Slime instead."
     ]
   },
   "Slimebound:SplitForLessPower": {
@@ -190,9 +191,9 @@
   "Slimebound:GluttonyPower": {
     "NAME": "Gluttony",
     "DESCRIPTIONS": [
-      "The first time you #yAttack a #yGooped enemy each turn, add a random #yLick card to your hand.",
+      "The first time you #yConsume each turn, add a random #yLick card to your hand.",
       "The first ",
-      " times you #yAttack a #yGooped enemy each turn, add a random #yLick card to your hand.",
+      " times you #yConsume each turn, add a random #yLick card to your hand.",
       " NL This effect can be triggered #b",
       " more times this turn.",
       " more time this turn.",
@@ -225,8 +226,8 @@
     "NAME": "Recycling",
     "DESCRIPTIONS": [
       "At the start of your turn, return #b",
-      " random 0-Cost card from your #yexhaust pile to your hand.",
-      " random 0-Cost cards from your #yexhaust pile to your hand."
+      " random Lick card from your #yExhaust pile to your hand.",
+      " random Lick cards from your #yExhaust pile to your hand."
     ]
   },
   "Slimebound:RecyclingPowerUpgraded": {
@@ -303,8 +304,10 @@
     "NAME": "Preparing to Crush",
     "DESCRIPTIONS": [
       "Gain a #gSLIME #gCRUSH on your next turn.",
+      "Gain a #gSLIME #gCRUSH+ on your next turn.",
       "Gain #b",
-      " copies of #gSLIME #gCRUSH on your next turn."
+      " copies of #gSLIME #gCRUSH on your next turn.",
+      " copies of #gSLIME #gCRUSH+ on your next turn."
     ]
   },
   "Slimebound:StunnedPower": {
@@ -501,7 +504,7 @@
     ]
   },
   "Slimebound:CommandOnPlayPower": {
-    "NAME": "Goop Armor",
+    "NAME": "Rallying",
     "DESCRIPTIONS": [
       "The next time you play a card this turn, #yCommand.",
       "The next ",

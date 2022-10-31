@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.HealEffect;
 import downfall.downfallMod;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class FairyPotionPower extends AbstractPower implements CloneablePowerInterface {
 

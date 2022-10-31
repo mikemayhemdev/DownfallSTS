@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import sneckomod.SneckoMod;
 import theHexaghost.GhostflameHelper;
 
@@ -14,13 +15,14 @@ public class SwordOfDarkness extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ENEMY, COMMON
 
-    private static final int DAMAGE = 11;
+    private static final int DAMAGE = 14;
     private static final int UPG_DAMAGE = 4;
 
     public SwordOfDarkness() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        HexaMod.loadJokeCardImage(this, "SwordOfDarkness.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

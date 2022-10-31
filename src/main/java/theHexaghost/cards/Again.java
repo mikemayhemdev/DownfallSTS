@@ -1,6 +1,9 @@
 package theHexaghost.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
@@ -15,7 +18,7 @@ public class Again extends AbstractHexaCard {
     //stupid intellij stuff SKILL, SELF, UNCOMMON
 
     public Again() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
@@ -24,7 +27,13 @@ public class Again extends AbstractHexaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new ExtinguishCurrentFlameAction());
         atb(new ChargeCurrentFlameAction());
-        applyToSelf(new AgainPower(1));
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                atb(new ExtinguishCurrentFlameAction());
+                isDone = true;
+            }
+        });
     }
 
     public void upgrade() {

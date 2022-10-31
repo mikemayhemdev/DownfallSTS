@@ -6,7 +6,11 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -16,9 +20,12 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
+import theHexaghost.actions.ExtinguishAction;
 import theHexaghost.actions.GreenFlameAction;
+import theHexaghost.powers.ApocalypticArmorPower;
+import theHexaghost.powers.EnhancePower;
 import theHexaghost.util.OnChargeSubscriber;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 import theHexaghost.vfx.MyOrb;
 
 import static theHexaghost.GhostflameHelper.activeGhostFlame;
@@ -67,6 +74,22 @@ public abstract class AbstractGhostflame {
 
     }
 
+    private void DoomsdayCheck(int amount) {
+        if (AbstractDungeon.player.hasPower(ApocalypticArmorPower.POWER_ID)) {
+            AbstractPower Doom = null;
+            int a = 0;
+            //Get the highest Doomsday that would trigger
+            for (AbstractPower p : AbstractDungeon.player.powers) {
+                if (p instanceof ApocalypticArmorPower) {
+                    if (p.amount <= amount && p.amount > a)
+                        Doom = p;
+                }
+            }
+            //Trigger it
+            if (Doom != null)
+                Doom.onSpecificTrigger();
+        }
+    }
     public void advanceTriggerAnim() {
         if (getActiveFlamesTriggerCount() <= 2) {
             animAlphaBySlot[getActiveFlamesTriggerCount()] = AbstractGhostflame.whiteOverlayTimer;
@@ -101,7 +124,23 @@ public abstract class AbstractGhostflame {
                 }
             }
             reset();
+            int amountOfIgnitedGhostflames = 0;
+            for (int j = GhostflameHelper.hexaGhostFlames.size() - 1; j >= 0; j--) {
+                AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(j);
+                if (gf.charged) {
+                     amountOfIgnitedGhostflames++;
+                }
+            }
+
+            DoomsdayCheck(amountOfIgnitedGhostflames);
         }
+    }
+
+    public void forceCharge(){
+        if (charged){
+            extinguish();
+        }
+        charge();
     }
 
     public abstract void onCharge();
@@ -220,7 +259,7 @@ public abstract class AbstractGhostflame {
                 sb.draw(b, x, y, 0, 0, b.getWidth(), b.getHeight(), Settings.scale, Settings.scale, 0, 0, 0, b.getWidth(), b.getHeight(), false, false);
 
                 if (animAlphaBySlot[i] > 0F) {
-                    //SlimeboundMod.logger.info("Anim alpha slot " + i + " animating: " + animAlphaBySlot[i]);
+                    ////SlimeboundMod.logger.info("Anim alpha slot " + i + " animating: " + animAlphaBySlot[i]);
                     if (animAlphaBySlot[i] < whiteOverlayTimer / 2F) {
                         float alpha = Interpolation.linear.apply(0F, .95F, animAlphaBySlot[i] / (whiteOverlayTimer / 2F));
                         sb.setColor(1F, 1F, 1F, alpha);
@@ -243,21 +282,23 @@ public abstract class AbstractGhostflame {
     }
 
     public void extinguish() {
-        graphicalRender.charged = false;
-        charged = false;
-        CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);// 297
-        CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);// 298
-        reset();
-        if (AbstractDungeon.player instanceof TheHexaghost) {
-            int x = 0;
-            for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames)
-                if (gf.charged) x++;
-            ((TheHexaghost) AbstractDungeon.player).myBody.targetRotationSpeed = 100F + (20 * x);
-        }
-        for (int i = 0; i < 3; i++) {
-            animAlphaBySlot[i] = 0F;
-            useBrightTexture[i] = false;
-            update();
+        if (charged) {
+            graphicalRender.charged = false;
+            charged = false;
+            CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);// 297
+            CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);// 298
+            reset();
+            if (AbstractDungeon.player instanceof TheHexaghost) {
+                int x = 0;
+                for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames)
+                    if (gf.charged) x++;
+                ((TheHexaghost) AbstractDungeon.player).myBody.targetRotationSpeed = 100F + (20 * x);
+            }
+            for (int i = 0; i < 3; i++) {
+                animAlphaBySlot[i] = 0F;
+                useBrightTexture[i] = false;
+                update();
+            }
         }
     }
 
@@ -281,9 +322,10 @@ public abstract class AbstractGhostflame {
 
     public void activate() {
         GhostflameHelper.activeGhostFlame = this;
+        int trigger = getActiveFlamesTriggerCount();
         for (int i = 0; i < 3; i++) {
             animAlphaBySlot[i] = 0F;
-            useBrightTexture[i] = false;
+            useBrightTexture[i] = trigger > i;
             update();
         }
     }

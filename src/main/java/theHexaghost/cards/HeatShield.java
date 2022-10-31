@@ -1,5 +1,6 @@
 package theHexaghost.cards;
 
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -13,10 +14,9 @@ public class HeatShield extends AbstractHexaCard {
     //stupid intellij stuff SKILL, SELF_AND_ENEMY, UNCOMMON
 
     public HeatShield() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 5;
-        this.magicNumber = this.baseMagicNumber = 5;
-        this.isEthereal = true;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseBlock = 0;
+        this.magicNumber = this.baseMagicNumber = 0;
     }
 
     @Override
@@ -33,39 +33,35 @@ public class HeatShield extends AbstractHexaCard {
                 super.applyPowersToBlock();
                 this.baseBlock = realBaseBlock;// 75
                 this.isBlockModified = block != baseBlock;
-                if (upgraded){
-                    this.rawDescription = UPGRADE_DESCRIPTION + EXTENDED_DESCRIPTION[0];// 73
-                } else {
-                    this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[0];// 73
-                }
+                this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[0];// 73
                 initializeDescription();
             }
         } else {
-            this.baseBlock = this.block = 5;
-            this.magicNumber = 5;
+            this.baseBlock = this.block = 0;
             this.isBlockModified = false;
         }
     }
 
     public void onMoveToDiscard() {
-        if (upgraded){
-            this.rawDescription = UPGRADE_DESCRIPTION;// 73
-        } else {
-            this.rawDescription = DESCRIPTION;// 73
-        }
+        this.rawDescription = DESCRIPTION;// 73
         this.initializeDescription();// 81
     }// 82
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
+        if (AbstractDungeon.getCurrRoom().monsters != null)
+            for (AbstractMonster m2 : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                if (!m2.isDeadOrEscaped() && m2.hasPower(BurnPower.POWER_ID)) {
+                    atb(new RemoveSpecificPowerAction(m2, m2, m2.getPower(BurnPower.POWER_ID)));
+                    break;// 43
+                }
+            }
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.isEthereal = false;
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBaseCost(0);
         }
     }
 }

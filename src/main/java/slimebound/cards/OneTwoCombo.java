@@ -46,7 +46,7 @@ public class OneTwoCombo extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        addToBot(new CommandAction());
+        if (upgraded) addToBot(new CommandAction());
 
 
         checkMinionMaster();
@@ -55,7 +55,8 @@ public class OneTwoCombo extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(2);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 }

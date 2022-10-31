@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.EntanglePower;
 import com.megacrit.cardcrawl.powers.NoBlockPower;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 public class NoBlockNextTurnPower extends AbstractPower implements CloneablePowerInterface {
 

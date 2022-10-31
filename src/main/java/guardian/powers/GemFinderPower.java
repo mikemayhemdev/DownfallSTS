@@ -41,7 +41,7 @@ public class GemFinderPower extends AbstractGuardianPower {
         }
     }
 
-    public void onTrigger() {
+    public void onVictory() {
         for (int i = 0; i < this.amount; i++) {
             AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
         }

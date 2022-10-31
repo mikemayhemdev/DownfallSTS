@@ -1,0 +1,12 @@
+{
+  "expansioncontent:CannotUseBossCardMessage": {
+    "TEXT": [
+      "Карта Босса уже была разыграна в этом ходу!"
+    ]
+  },
+  "expansioncontent:BossCardTagName": {
+    "TEXT": [
+      "Босс"
+    ]
+  }
+}

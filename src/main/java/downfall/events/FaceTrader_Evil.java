@@ -75,9 +75,9 @@ public class FaceTrader_Evil extends AbstractImageEvent {
             case MAIN:
                 switch (buttonPressed) {
                     case 0:
-
+                        logMetric(ID, "Fight");
                         this.screen = CurScreen.FIGHT;
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
                         AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:FaceTrader");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addRelicToRewards(new CloakOfManyFaces());
@@ -90,7 +90,7 @@ public class FaceTrader_Evil extends AbstractImageEvent {
                         break;
                     case 1:
                         AbstractRelic r = this.getRandomFace();
-                        logMetricObtainRelic("FaceTrader", "Trade", r);
+                        logMetricObtainRelic(ID, "Trade", r);
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, r);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                         this.imageEventText.clearAllDialogs();
@@ -142,7 +142,7 @@ public class FaceTrader_Evil extends AbstractImageEvent {
     }
 
     public void logMetric(String actionTaken) {
-        AbstractEvent.logMetric("FaceTrader", actionTaken);
+        AbstractEvent.logMetric(ID, actionTaken);
     }
 
     private enum CurScreen {

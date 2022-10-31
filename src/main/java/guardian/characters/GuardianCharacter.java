@@ -1,6 +1,12 @@
 package guardian.characters;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
+import guardian.modules.EnergyOrbGuardian;
+import guardian.powers.ModeShiftPower;
+import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
@@ -27,29 +33,29 @@ import java.util.List;
 
 
 public class GuardianCharacter extends CustomPlayer {
-    public static final String NAME;
-    public static final String DESCRIPTION;
+    public static final String ID = "Guardian";
+    public static final CharacterStrings charStrings = CardCrawlGame.languagePack.getCharacterString(ID);
+    public static final String NAME = charStrings.NAMES[0];;
+    public static final String DESCRIPTION = charStrings.TEXT[0];
+
     public static final String[] orbTextures = {
-            "guardianResources/GuardianImages/char/orb/layer1.png",
-            "guardianResources/GuardianImages/char/orb/layer2.png",
-            "guardianResources/GuardianImages/char/orb/layer3.png",
-            "guardianResources/GuardianImages/char/orb/layer4.png",
-            "guardianResources/GuardianImages/char/orb/layer5.png",
-            "guardianResources/GuardianImages/char/orb/layer6.png",
-            "guardianResources/GuardianImages/char/orb/layer1d.png",
-            "guardianResources/GuardianImages/char/orb/layer2d.png",
-            "guardianResources/GuardianImages/char/orb/layer3d.png",
-            "guardianResources/GuardianImages/char/orb/layer4d.png",
-            "guardianResources/GuardianImages/char/orb/layer5d.png"};
-    public static final CharacterStrings charStrings;
+            "guardianResources/GuardianImages/char/orb/1.png",
+            "guardianResources/GuardianImages/char/orb/2.png",
+            "guardianResources/GuardianImages/char/orb/3.png",
+            "guardianResources/GuardianImages/char/orb/4.png",
+            "guardianResources/GuardianImages/char/orb/5.png",
+            "guardianResources/GuardianImages/char/orb/6.png",
+            "guardianResources/GuardianImages/char/orb/7.png",
+            "guardianResources/GuardianImages/char/orb/1d.png",
+            "guardianResources/GuardianImages/char/orb/2d.png",
+            "guardianResources/GuardianImages/char/orb/3d.png",
+            "guardianResources/GuardianImages/char/orb/4d.png",
+            "guardianResources/GuardianImages/char/orb/5d.png",
+            "guardianResources/GuardianImages/char/orb/6d.png",};
+
+    public static float orbScaleFinal = 1.0f;
     public static Color cardRenderColor = GuardianMod.mainGuardianColor;
 
-    static {
-        charStrings = CardCrawlGame.languagePack.getCharacterString("Guardian");
-        NAME = charStrings.NAMES[0];
-        DESCRIPTION = charStrings.TEXT[0];
-
-    }
 
     public float renderscale = 2.5F;
 	public float renderscale2 = 3.0F;
@@ -58,8 +64,8 @@ public class GuardianCharacter extends CustomPlayer {
     private String jsonURL = "guardianResources/GuardianImages/char/skeleton.json";
     private String jsonURLPuddle = "guardianResources/GuardianImages/char/skeletonPuddle.json";
 
-	private String atlasURL2 = "reskinContent/img/GuardianMod/animation/Guardian.atlas";
-	private String jsonURL2 = "reskinContent/img/GuardianMod/animation/Guardian.json";
+	private String atlasURL2 = "reskinContent/img/GuardianMod/GuardianChan/animation/Guardian.atlas";
+	private String jsonURL2 = "reskinContent/img/GuardianMod/GuardianChan/animation/Guardian.json";
 
     private String currentJson = jsonURL;
 	private String currentJson2 = jsonURL2;
@@ -68,23 +74,39 @@ public class GuardianCharacter extends CustomPlayer {
     private boolean inShattered;
 
     public GuardianCharacter(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "guardianResources/GuardianImages/char/orb/vfx.png", (String)null, (String)null);
+//        super(name, setClass, orbTextures, "guardianResources/GuardianImages/char/orb/vfx.png", (String)null, (String)null);
+        super(name, setClass, new EnergyOrbGuardian(orbTextures,"guardianResources/GuardianImages/char/orb/vfx.png"), (String)null, (String)null);
 
-        if(!reskinContent.guardianReskinAnimation){
-        this.initializeClass(null,
-                "guardianResources/GuardianImages/char/shoulder.png",
-                "guardianResources/GuardianImages/char/shoulderR.png",
-                "guardianResources/GuardianImages/char/corpse.png", this.getLoadout(),
-                0.0F, -10F, 310.0F, 260.0F, new EnergyManager(3));
-        }else
-            {
-                this.initializeClass((String) null,
-                 "reskinContent/img/GuardianMod/shoulder2.png",
-                 "reskinContent/img/GuardianMod/shoulder.png",
-                 "reskinContent/img/GuardianMod/corpse.png", this.getLoadout(),
-                  0.0F, -10F, 400.0F, 350.0F, new EnergyManager(3));
 
-            }
+        if(CharacterSelectScreenPatches.characters[0].reskinCount == 1){
+            this.initializeClass(null,
+                    CharacterSelectScreenPatches.characters[0].skins[CharacterSelectScreenPatches.characters[0].reskinCount].SHOULDER1,
+                    CharacterSelectScreenPatches.characters[0].skins[CharacterSelectScreenPatches.characters[0].reskinCount].SHOULDER2,
+                    CharacterSelectScreenPatches.characters[0].skins[CharacterSelectScreenPatches.characters[0].reskinCount].CORPSE,
+                    this.getLoadout(), 0.0F, -10F, 400.0F, 350.0F, new EnergyManager(3));
+        }else {
+            this.initializeClass(null,
+                    CharacterSelectScreenPatches.characters[0].skins[CharacterSelectScreenPatches.characters[0].reskinCount].SHOULDER1,
+                    CharacterSelectScreenPatches.characters[0].skins[CharacterSelectScreenPatches.characters[0].reskinCount].SHOULDER2,
+                    CharacterSelectScreenPatches.characters[0].skins[CharacterSelectScreenPatches.characters[0].reskinCount].CORPSE,
+                    this.getLoadout(),0.0F, -10F, 310.0F, 260.0F, new EnergyManager(3));
+        }
+
+//        if(CharacterSelectScreenPatches.characters[0].isOriginal()){
+//        this.initializeClass(null,
+//                "guardianResources/GuardianImages/char/shoulder.png",
+//                "guardianResources/GuardianImages/char/shoulderR.png",
+//                "guardianResources/GuardianImages/char/corpse.png", this.getLoadout(),
+//                0.0F, -10F, 310.0F, 260.0F, new EnergyManager(3));
+//        }else
+//            {
+//                this.initializeClass((String) null,
+//                 "reskinContent/img/GuardianMod/GuardianChan/shoulder2.png",
+//                 "reskinContent/img/GuardianMod/GuardianChan/shoulder.png",
+//                 "reskinContent/img/GuardianMod/GuardianChan/corpse.png", this.getLoadout(),
+//                  0.0F, -10F, 400.0F, 350.0F, new EnergyManager(3));
+//
+//            }
 
 		this.reloadAnimation();
 
@@ -113,11 +135,10 @@ public class GuardianCharacter extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if(reskinContent.guardianReskinAnimation && reskinContent.guardianReskinUnlock){
-            this.loadAnimation(atlasURL2, this.currentJson2, renderscale2);
-        }else {
-            this.loadAnimation(atlasURL, this.currentJson, renderscale);
-        }
+        this.loadAnimation(
+                CharacterSelectScreenPatches.characters[0].skins[CharacterSelectScreenPatches.characters[0].reskinCount].atlasURL,
+                CharacterSelectScreenPatches.characters[0].skins[CharacterSelectScreenPatches.characters[0].reskinCount].jsonURL,
+                CharacterSelectScreenPatches.characters[0].skins[CharacterSelectScreenPatches.characters[0].reskinCount].renderscale);
         this.state.setAnimation(0, "idle", true);
 
 
@@ -132,9 +153,10 @@ public class GuardianCharacter extends CustomPlayer {
 */
 
     public void switchToDefensiveMode(){
+        orbScaleFinal = 0.7f;
         if (!inShattered) {
             if (!inDefensive) {
-                if(!reskinContent.guardianReskinAnimation){
+                if(CharacterSelectScreenPatches.characters[0].isOriginal()){
 
                     this.stateData.setMix("idle", "defensive", 0.2F);
                     this.state.setTimeScale(.75F);
@@ -162,10 +184,18 @@ public class GuardianCharacter extends CustomPlayer {
     }
     */
 
+    @Override
+    public void preBattlePrep() {
+        super.preBattlePrep();
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ModeShiftPower(AbstractDungeon.player, AbstractDungeon.player, 20), 20));
+
+    }
+
     public void switchToOffensiveMode() {
+        orbScaleFinal = 1.0f;
         if (!inShattered) {
             if (inDefensive) {
-                if(!reskinContent.guardianReskinAnimation){
+                if(CharacterSelectScreenPatches.characters[0].isOriginal()){
                     CardCrawlGame.sound.playA("GUARDIAN_ROLL_UP", .25F);
                     this.stateData.setMix("defensive", "idle", 0.2F);
                     this.state.setTimeScale(.75F);
@@ -205,27 +235,6 @@ public class GuardianCharacter extends CustomPlayer {
         }
     }
 
-
-    @Override
-    public ArrayList<AbstractCard> getCardPool(ArrayList<AbstractCard> tmpPool) {
-        if (ModHelper.isModEnabled("Red Cards")) {
-            CardLibrary.addRedCards(tmpPool);
-        }
-        if (ModHelper.isModEnabled("Green Cards")) {
-            CardLibrary.addGreenCards(tmpPool);
-        }
-
-        if (ModHelper.isModEnabled("Blue Cards")) {
-            CardLibrary.addBlueCards(tmpPool);
-        }
-
-        if (ModHelper.isModEnabled("Purple Cards")) {
-            CardLibrary.addPurpleCards(tmpPool);
-        }
-
-        return super.getCardPool(tmpPool);
-    }
-
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
 
@@ -253,7 +262,8 @@ public class GuardianCharacter extends CustomPlayer {
     }
 
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo(NAME, DESCRIPTION, 80, 80, 3, 99, 5, this,
+        return new CharSelectInfo(NAME,DESCRIPTION,
+                80, 80, 3, 99, 5, this,
 
                 getStartingRelics(), getStartingDeck(), false);
 
@@ -273,8 +283,7 @@ public class GuardianCharacter extends CustomPlayer {
     }
 
     public AbstractCard getStartCardForEvent() {
-        //TODO - Note card goes here
-        return new Gem_Red();
+        return new TwinSlam();
     }
 
     public Color getCardTrailColor() {

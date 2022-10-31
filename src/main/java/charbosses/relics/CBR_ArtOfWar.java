@@ -49,8 +49,6 @@ public class CBR_ArtOfWar extends AbstractCharbossRelic {
     }
 
     public void onTrigger() {
-        this.beginPulse();
-        this.pulse = true;
         if (this.gainEnergyNext && !this.firstTurn) {
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(this.owner, this));
@@ -65,9 +63,6 @@ public class CBR_ArtOfWar extends AbstractCharbossRelic {
         if (card.type == AbstractCard.CardType.ATTACK) {
             this.gainEnergyNext = false;
         }
-        this.pulse = false;
-        stopPulse();
-
     }
 
     @Override

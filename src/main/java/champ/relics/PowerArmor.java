@@ -3,7 +3,7 @@ package champ.relics;
 import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
-import champ.util.TextureLoader;
+import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -17,7 +17,7 @@ public class PowerArmor extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("PowerArmor.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("PowerArmor.png"));
 
-    public static final int CAP_RESOLVE_ETC = 30;
+    public static final int CAP_RESOLVE_ETC = 10;
 
     public PowerArmor() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
@@ -25,11 +25,9 @@ public class PowerArmor extends CustomRelic {
 
     public void onEquip() {
         ++AbstractDungeon.player.energy.energyMaster;
-        BaseMod.MAX_HAND_SIZE -= 2;
     }
 
     public void onUnequip() {
-        BaseMod.MAX_HAND_SIZE += 2;
         --AbstractDungeon.player.energy.energyMaster;
     }
 

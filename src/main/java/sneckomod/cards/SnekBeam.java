@@ -9,13 +9,15 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 
+import static com.megacrit.cardcrawl.cards.red.PerfectedStrike.countCards;
+
 public class SnekBeam extends AbstractSneckoCard {
 
     public final static String ID = makeID("SnekBeam");
 
     //stupid intellij stuff ATTACK, ALL_ENEMY, UNCOMMON
 
-    private static final int DAMAGE = -1;
+    private static final int DAMAGE = 0;
 
     public SnekBeam() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
@@ -34,31 +36,38 @@ public class SnekBeam extends AbstractSneckoCard {
         return i;
     }
 
-    public void applyPowers() {
-        this.baseDamage = countCards();
-        super.applyPowers();// 48
-        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];// 49
-        this.initializeDescription();// 50
-    }// 51
-
     public void calculateCardDamage(AbstractMonster mo) {
-        super.calculateCardDamage(mo);// 55
-        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];// 56
-        this.initializeDescription();// 57
-    }// 58
+        int realBaseDamage = this.baseDamage;
+        this.baseDamage += countCards();
+        super.calculateCardDamage(mo);
+        this.baseDamage = realBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
+        this.rawDescription = upgraded ? UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[1] :
+                UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+        this.initializeDescription();
+    }
+
+    public void applyPowers() {
+        int realBaseDamage = this.baseDamage;
+        this.baseDamage += countCards();
+        super.applyPowers();
+        this.baseDamage = realBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
+        this.rawDescription = upgraded ? UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[1] :
+                UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+        this.initializeDescription();
+    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new VFXAction(new MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal)));// 38
+        atb(new VFXAction(new MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal)));
         allDmg(AbstractGameAction.AttackEffect.FIRE);
-        this.rawDescription = cardStrings.DESCRIPTION;// 41
-        this.initializeDescription();// 42
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.exhaust = false;
-            rawDescription = UPGRADE_DESCRIPTION;
+            exhaust = false;
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

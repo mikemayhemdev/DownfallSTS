@@ -1,6 +1,8 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -12,15 +14,23 @@ public class Strike extends AbstractBronzeCard {
         baseDamage = 6;
         tags.add(CardTags.STRIKE);
         tags.add(CardTags.STARTER_STRIKE);
+        AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("Strike.png"));
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SMASH);
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
     }
 
     @Override
     public void upp() {
         upgradeDamage(3);
+    }
+
+    @Override
+    public void onCompile(AbstractCard function, boolean forGameplay) {
+        if (position == 1) {
+            function.tags.add(CardTags.STRIKE);
+        }
     }
 }

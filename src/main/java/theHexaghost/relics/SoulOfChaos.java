@@ -6,7 +6,7 @@ import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.MayhemGhostflame;
-import theHexaghost.util.TextureLoader;
+import downfall.util.TextureLoader;
 
 import static theHexaghost.HexaMod.makeRelicOutlinePath;
 import static theHexaghost.HexaMod.makeRelicPath;
@@ -24,9 +24,9 @@ public class SoulOfChaos extends CustomRelic {
     @Override
     public void atBattleStart() {
         flash();
-        AbstractGhostflame q = GhostflameHelper.hexaGhostFlames.get(2);
+        AbstractGhostflame q = GhostflameHelper.hexaGhostFlames.get(3);
         AbstractGhostflame gf = new MayhemGhostflame(q.lx, q.ly);
-        GhostflameHelper.hexaGhostFlames.set(2, gf);
+        GhostflameHelper.hexaGhostFlames.set(3, gf);
     }
 
     public String getUpdatedDescription() {

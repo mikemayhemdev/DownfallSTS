@@ -1,6 +1,7 @@
 package champ.potions;
 
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
 import champ.ChampMod;
 import champ.powers.UltimateFormPower;
@@ -11,9 +12,10 @@ import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import com.megacrit.cardcrawl.relics.SacredBark;
 
 
 public class UltimateStancePotion extends CustomPotion {
@@ -34,6 +36,7 @@ public class UltimateStancePotion extends CustomPotion {
         this.description = potionStrings.DESCRIPTIONS[0] + this.potency + potionStrings.DESCRIPTIONS[1];
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("champ:ultimate")), GameDictionary.keywords.get("champ:ultimate")));
     }
 
     public void use(AbstractCreature target) {

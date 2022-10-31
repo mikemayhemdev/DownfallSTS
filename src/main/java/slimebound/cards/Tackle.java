@@ -12,9 +12,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.actions.TackleSelfDamageAction;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.PreventTackleDamagePower;
 
 
-public class Tackle extends AbstractSlimeboundCard {
+public class Tackle extends AbstractTackleCard {
     public static final String ID = "Slimebound:Tackle";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -38,19 +39,20 @@ public class Tackle extends AbstractSlimeboundCard {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.TACKLE);
-        this.baseDamage = 11;
+        this.baseDamage = 12;
         baseSelfDamage = this.selfDamage = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        AbstractDungeon.actionManager.addToBottom(new TackleSelfDamageAction(new DamageInfo(AbstractDungeon.player, selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        if (!AbstractDungeon.player.hasPower(PreventTackleDamagePower.POWER_ID))
+            AbstractDungeon.actionManager.addToBottom(new TackleSelfDamageAction(new DamageInfo(AbstractDungeon.player, selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(3);
+            upgradeDamage(4);
         }
     }
 }

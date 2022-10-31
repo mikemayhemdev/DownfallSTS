@@ -2,13 +2,14 @@ package sneckomod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.ConfusionPower;
 import com.megacrit.cardcrawl.relics.SneckoEye;
+import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
-import theHexaghost.util.TextureLoader;
 
 public class SuperSneckoEye extends CustomRelic {
 
@@ -28,29 +29,39 @@ public class SuperSneckoEye extends CustomRelic {
     }
 
     @Override
-    public void obtain() {
+    public void instantObtain() {
+        // instantObtain() is called for chest loot and shop purchases
         if (AbstractDungeon.player.hasRelic(SneckoEye.ID)) {
             for (int i = 0; i < AbstractDungeon.player.relics.size(); ++i) {
                 if (AbstractDungeon.player.relics.get(i).relicId.equals(SneckoEye.ID)) {
+                    AbstractDungeon.player.relics.get(i).onUnequip();
                     instantObtain(AbstractDungeon.player, i, true);
                     break;
                 }
             }
         } else {
-            super.obtain();
+            super.instantObtain();
         }
     }
 
     @Override
     public void onCardDraw(AbstractCard card) {
-        if (card.cost == 3 && !activated) {
-            flash();
-            activated = true;
-            card.cost = 0;// 35
-            card.costForTurn = card.cost;// 36
-            card.isCostModified = true;// 37
-            card.freeToPlayOnce = false;// 39
-        }
+        if (!activated)
+            addToBot(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    if (card.cost == 3 && !activated) {
+                        stopPulse();
+                        flash();
+                        activated = true;
+                        card.cost = 0;// 35
+                        card.costForTurn = card.cost;// 36
+                        card.isCostModified = true;// 37
+                        card.freeToPlayOnce = false;// 39
+                    }
+                }
+            });
     }
 
     public void onEquip() {
