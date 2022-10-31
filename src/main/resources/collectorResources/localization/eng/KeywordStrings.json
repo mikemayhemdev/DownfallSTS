@@ -1,0 +1,119 @@
+[
+  {
+    "PROPER_NAME": "Affliction",
+    "NAMES": [
+      "affliction",
+      "afflictions",
+      "afflicted"
+    ],
+    "DESCRIPTION": "Creatures are Afflicted when they have 1 or more of the following effects, #yWeak, #yVulnerable, #yPoison, #yGoop, #ySoulfire, #ySuffering, #ySoul #ySnare"
+  },
+  {
+    "PROPER_NAME": "Suffering",
+    "NAMES": [
+      "Suffering",
+      "suffering"
+    ],
+    "DESCRIPTION": "When Applied, enemy loses HP equal to their current #ySuffering NL Increase this by 1 whenever another #yAffliction is applied."
+  },
+  {
+    "PROPER_NAME": "Soul Snare",
+    "NAMES": [
+      "Soul Snare",
+      "soul_snare"
+    ],
+    "DESCRIPTION": "If the target dies while #ySoul #ySnared, #yCollect them."
+  },
+  {
+    "PROPER_NAME": "Torch Head",
+    "NAMES": [
+      "Torch Head",
+      "torch_head"
+    ],
+    "DESCRIPTION": "Assists the Collector in battle by taking hits while they have #yAggro and being the source or target of different card effects. NL Cards that utilize an Ally explicitly cannot be played without one or without a living ally."
+  },
+  {
+    "PROPER_NAME": "Front",
+    "NAMES": [
+      "Front",
+      "front"
+    ],
+    "DESCRIPTION": "The Leading charater is the charater to be targeted by enemy Attacks."
+  },
+  {
+    "PROPER_NAME": "Back",
+    "NAMES": [
+      "Back",
+      "back"
+    ],
+    "DESCRIPTION": "The Back charater is the charater not being targeted by enemy Attacks currently."
+  },
+  {
+    "PROPER_NAME": "Collect",
+    "NAMES": [
+      "Collected",
+      "collected"
+    ],
+    "DESCRIPTION": "When a #yCollected Monster dies, after combat it's #yCollectible will appear in a separate card reward, no more then 3 #yCollectibles can appear."
+  },
+  {
+    "PROPER_NAME": "Aggro",
+    "NAMES": [
+      "Aggro",
+      "aggro"
+    ],
+    "DESCRIPTION": "#yAggro causes your #yTorch #yHead to be attacked instead of you so long as it's greater than 0. NL your #yTorch #yHead loses #b1 #yAggro whenever they lose HP."
+  },
+  {
+    "PROPER_NAME": "Collection",
+    "NAMES": [
+      "collect",
+      "collection"
+    ],
+    "DESCRIPTION": "#yCollectibles are placed here in combat. Contains 4 #yLucky #yWick at the start of a run."
+  },
+  {
+    "PROPER_NAME": "Collectible",
+    "NAMES": [
+      "collectible"
+    ],
+    "DESCRIPTION": "This card starts in the #yCollection in combat"
+  },
+  {
+    "PROPER_NAME": "Perpetual",
+    "NAMES": [
+      "perpetual"
+    ],
+    "DESCRIPTION": "This card shuffles into the Collect pile in when played instead of going to the Discard pile, increasing Damage and Block Gain by the shown value."
+  },
+  {
+    "PROPER_NAME": "Pyre",
+    "NAMES": [
+      "pyre"
+    ],
+    "DESCRIPTION": "You may #yexhaust a card in your hand to trigger an extra effect."
+  },
+  {
+    "NAMES": [
+      "stasis"
+    ],
+    "PROPER_NAME": "Stasis",
+    "DESCRIPTION": "A card in #yStasis gains a turn counter equal to its cost plus #b1. NL Turn counter is reduced by #b1 at the start of your turn. NL When the counter reaches #b0, it is returned to your hand and costs #b0 until played."
+  },
+  {
+    "NAMES": [
+      "goop",
+      "gooped"
+    ],
+    "PROPER_NAME": "Goop",
+    "DESCRIPTION": "The next attack deals #b1 more damage per #yGoop, removing all #yGoop and triggering any #yConsume effects."
+  },
+  {
+    "PROPER_NAME": "Boon",
+    "NAMES": [
+      "boon",
+      "boons"
+    ],
+    "DESCRIPTION": "Boons are the following effects, #yStrength, #yDexterity, #yArtifact, #yPlated #yArmor, #yVigor, #yBlock."
+  }
+]
