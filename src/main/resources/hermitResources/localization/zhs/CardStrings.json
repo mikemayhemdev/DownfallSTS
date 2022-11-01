@@ -71,8 +71,8 @@
   },
   "hermit:FatalDesire": {
     "NAME": "自弑之欲",
-    "DESCRIPTION": "回合开始时，额外抽两张牌并获得一张 *受伤 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，额外抽两张牌并获得一张 *受伤 。"
+    "DESCRIPTION": "回合开始时，抽两张牌并获得一张 *受伤 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，抽两张牌并获得一张 *受伤 。"
   },
   "hermit:Gambit": {
     "NAME": "开场白",
