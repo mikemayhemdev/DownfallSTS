@@ -67,7 +67,7 @@
   },
   "hermit:ShadowCloak": {
     "NAME": "暗影斗篷",
-    "DESCRIPTION": "抽到一张 诅咒 时， NL 获得 !M! 点 格挡 。"
+    "DESCRIPTION": "抽到或 消耗 诅咒 时， NL 获得 !M! 点 格挡 。"
   },
   "hermit:FatalDesire": {
     "NAME": "自弑之欲",
@@ -122,8 +122,8 @@
   },
   "hermit:TakeCover": {
     "NAME": "快找掩护",
-    "DESCRIPTION": "获得X张 *防御 。 NL 其耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得X张 *防御+ 。 NL 其耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "获得 *防御+X 。 NL 其耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 *防御+X 。 NL 其耗能为0。 NL 消耗 。"
   },
   "hermit:Misfire": {
     "NAME": "擦枪走火",
@@ -159,7 +159,7 @@
   },
   "hermit:Manifest": {
     "NAME": "恶灵现身",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张 诅咒 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 *腐朽 。"
   },
   "hermit:Feint": {
     "NAME": "佯攻",
@@ -191,7 +191,8 @@
   },
   "hermit:Combo": {
     "NAME": "连击",
-    "DESCRIPTION": "触发 hermit:精准 效果时， NL 随机获得一张 hermit:精准 牌。"
+    "DESCRIPTION": "每回合首次 hermit:精准 时， NL 将其返回手牌。",
+    "UPGRADE_DESCRIPTION": "每回合前 !M! 次 hermit:精准 时， NL 将其返回手牌。"
   },
   "hermit:BigShot": {
     "NAME": "冒烟枪管",
@@ -207,8 +208,8 @@
   },
   "hermit:EternalForm": {
     "NAME": "永恒形态",
-    "DESCRIPTION": "虚无 。 NL 回合开始时，本回合初始手牌首次耗能减1。",
-    "UPGRADE_DESCRIPTION": "回合开始时，本回合初始手牌首次耗能减1。"
+    "DESCRIPTION": "虚无 。 NL 回合开始时，所抽前4张可打出牌本回合首次耗能减1。",
+    "UPGRADE_DESCRIPTION": "回合开始时，所抽前4张可打出牌本回合首次耗能减1。"
   },
   "hermit:FullyLoaded": {
     "NAME": "整装待发",
