@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.GremlinMod;
 
 public class Strike extends AbstractGremlinCard {
     public static final String ID = getID("Strike");
@@ -31,6 +32,7 @@ public class Strike extends AbstractGremlinCard {
         this.baseDamage = POWER;
         tags.add(CardTags.STARTER_STRIKE);
         this.tags.add(AbstractCard.CardTags.STRIKE);
+        GremlinMod.loadJokeCardImage(this, "Strike.png");
     }
 
     @Override

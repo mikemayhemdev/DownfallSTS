@@ -240,4 +240,16 @@ public class GremlinDance extends AbstractGremlinCard {
             upgradeDamage(UPGRADE_BONUS);
         }
     }
+
+    public void nobDanceHelper(){ //for Nob preview
+        this.tags.remove(MAD_GREMLIN);
+        this.tags.remove(FAT_GREMLIN);
+        this.tags.remove(SHIELD_GREMLIN);
+        this.tags.remove(SNEAKY_GREMLIN);
+        this.tags.remove(WIZARD_GREMLIN);
+        this.tags.add(NOB_GREMLIN);
+        setBackgrounds();
+        rawDescription = strings.EXTENDED_DESCRIPTION[0]+strings.EXTENDED_DESCRIPTION[6];
+        initializeDescription();
+    }
 }

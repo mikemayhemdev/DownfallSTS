@@ -14,6 +14,8 @@ import expansioncontent.expansionContentMod;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import static expansioncontent.expansionContentMod.loadJokeCardImage;
+
 public class QuickStudy extends AbstractExpansionCard {
 
     public final static String ID = makeID("QuickStudy");
@@ -43,6 +45,7 @@ public class QuickStudy extends AbstractExpansionCard {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_skill.png", "expansioncontentResources/images/1024/bg_boss_skill.png");
         this.exhaust = true;
+        loadJokeCardImage(this, "QuickStudy.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

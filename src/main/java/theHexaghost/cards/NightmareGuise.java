@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 
 public class NightmareGuise extends AbstractHexaCard {
 
@@ -15,6 +16,7 @@ public class NightmareGuise extends AbstractHexaCard {
         baseBlock = 9;
         isEthereal = true;
         cardsToPreview = new ShadowGuise();
+        HexaMod.loadJokeCardImage(this, "NightmareGuise.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

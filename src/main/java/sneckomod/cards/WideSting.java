@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import sneckomod.actions.NoApplyRandomDamageAction;
 
 public class WideSting extends AbstractSneckoCard {
@@ -22,6 +23,7 @@ public class WideSting extends AbstractSneckoCard {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
+        SneckoMod.loadJokeCardImage(this, "WideSting.png");
     }
 
     @Override

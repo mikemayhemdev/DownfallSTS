@@ -22,7 +22,7 @@ public class EnHeadshot extends AbstractHermitBossCard {
 
     public EnHeadshot() {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/headshot.png", 1, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
-        this.baseDamage = 8;
+        this.baseDamage = 7;
     }
 
     @Override

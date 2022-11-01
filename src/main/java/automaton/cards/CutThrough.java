@@ -1,11 +1,14 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class CutThrough extends AbstractBronzeCard {
 
@@ -25,6 +28,7 @@ public class CutThrough extends AbstractBronzeCard {
         baseMagicNumber = magicNumber = MAGIC;
         baseAuto = auto = 1;
         thisEncodes();
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("CutThrough.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

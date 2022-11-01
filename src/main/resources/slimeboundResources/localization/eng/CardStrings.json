@@ -102,7 +102,7 @@
   },
   "Slimebound:GrowthPunch": {
     "NAME": "Growth Punch",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL slimeboundmod:Consume - Increase this card's effects by !M! this combat."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL slimeboundmod:Consume - Increase this card's effects by !M! this combat."
   },
   "Slimebound:HauntingLick": {
     "NAME": "Haunting Lick",
@@ -192,8 +192,8 @@
   },
   "Slimebound:Prepare": {
     "NAME": "Prepare",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] [E] and draw !M! cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E] and draw !M! cards. NL Retain up to !M! cards this turn. Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] and draw !M! cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Next turn, gain [E] and draw !M! cards. NL Retain up to !M! cards this turn. Exhaust."
   },
   "Slimebound:PrepareCrush": {
     "NAME": "Prepare: Crush",

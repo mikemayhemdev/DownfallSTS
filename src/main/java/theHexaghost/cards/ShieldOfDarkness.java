@@ -21,6 +21,7 @@ public class ShieldOfDarkness extends AbstractHexaCard {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        HexaMod.loadJokeCardImage(this, "ShieldOfDarkness.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

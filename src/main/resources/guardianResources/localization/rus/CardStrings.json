@@ -60,9 +60,9 @@
     "DESCRIPTION": "{@@}Наносит !D! урона случ. врагу !M! раз{!M!|&4=а.|&5=.}"
   },
   "Guardian:TwinSlam": {
-    "NAME": "Первый удар",
-    "DESCRIPTION": "Наносит !D! урона. NL Добавляет в руку *Второй *Удар.",
-    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL Добавляет в руку *Второй *Удар+."
+    "NAME": "Первый бросок",
+    "DESCRIPTION": "Наносит !D! урона. NL Добавляет в руку *Второй *бросок.",
+    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL Добавляет в руку *Второй *бросок+."
   },
   "Guardian:GuardianWhirl": {
     "NAME": "Вихрь",
@@ -217,7 +217,7 @@
   "Guardian:FuturePlans": {
     "NAME": "Планы на будущее",
     "DESCRIPTION": "Вы можете поместить !M! карту из руки в guardianmod:Стазис в конце каждого вашего хода.",
-    "UPGRADE_DESCRIPTION": "Начальная. NL Вы можете поместить до !M! карт из руки в guardianmod:Стазис в конце каждого вашего хода."
+    "UPGRADE_DESCRIPTION": "Начальная. NL Вы можете поместить !M! карту из руки в guardianmod:Стазис в конце каждого вашего хода."
   },
   "Guardian:Suspension": {
     "NAME": "Приостановить",
@@ -267,7 +267,7 @@
     "DESCRIPTION": "Наносит !D! урона за каждый guardianmod:Самоцвет в этой карте."
   },
   "Guardian:PrismaticBarrier": {
-    "NAME": "Призматический баррьер",
+    "NAME": "Призматический барьер",
     "DESCRIPTION": "Даёт !B! Защиты за каждый guardianmod:Самоцвет в этой карте."
   },
   "Guardian:TemporalStrike": {
@@ -287,7 +287,7 @@
   },
   "Guardian:RefractedBeam": {
     "NAME": "Преломляющий луч",
-    "DESCRIPTION": "Наносит !D! урона !M! раза. NL Может быть улучшена любое кол-во раз."
+    "DESCRIPTION": "{@@}Наносит !D! урона !M! раз{!M!|@=|&2,&3,&4=а|&12,&13,&14=}. NL Может быть улучшена любое кол-во раз."
   },
   "Guardian:MultiBeam": {
     "NAME": "Мульти-луч",
@@ -295,7 +295,7 @@
   },
   "Guardian:BaubleBeam": {
     "NAME": "Сияющий взрыв",
-    "DESCRIPTION": "Наносит !D! урона. NL !M! раза выполняет:"
+    "DESCRIPTION": "Наносит !D! урона. NL Повторяет !M! раза:"
   },
   "Guardian:PrimingBeam": {
     "NAME": "Предупредительный выстрел",
@@ -321,7 +321,7 @@
   "Guardian:AncientConstruct": {
     "NAME": "Древний конструкт",
     "DESCRIPTION": "Если у вас нет Артефакта, даёт !M! Артефакт в начале каждого вашего хода.",
-    "UPGRADE_DESCRIPTION": "Даёт 1 Артефакт. NL Если у вас нет Артефакта, даёт !M! Артефакт в начале каждого вашего хода."
+    "UPGRADE_DESCRIPTION": "Даёт 2 Артефакт. NL Если у вас нет Артефакта, даёт !M! Артефакт в начале каждого вашего хода."
   },
   "Guardian:CrystalBeam": {
     "NAME": "Кристаллический луч",
@@ -372,7 +372,7 @@
   },
   "Guardian:BronzeOrb": {
     "NAME": "Сфера поддержки",
-    "DESCRIPTION": "Начальная. NL Наносит !D! урона. Помещает случ. карту из стопки добора в guardianmod:Стазис. Сжигается."
+    "DESCRIPTION": "Начальная. NL Наносит !D! урона. Помещает случ. карту из стопки добора в guardianmod:Стазис. NL Сжигается."
   },
   "Guardian:RevengeProtocol": {
     "NAME": "Протокол мести",
@@ -438,11 +438,11 @@
     "UPGRADE_DESCRIPTION": " NL (Наносит !D! урона.)"
   },
   "Guardian:SecondStrike": {
-    "NAME": "Второй Удар",
+    "NAME": "Второй бросок",
     "DESCRIPTION": "Эфирная. NL Наносит !D! урона. NL Сжигается."
   },
   "Guardian:SecondStrikePreviewCard": {
-    "NAME": "Второй Удар",
-    "DESCRIPTION": "Эфирная. NL Наносит !D! урона. NL Копирует guardianmod:Самоцветы *Первого *удара. NL Сжигается."
+    "NAME": "Второй бросок",
+    "DESCRIPTION": "Эфирная. NL Наносит !D! урона. NL Копирует guardianmod:Самоцветы *Первого *броска. NL Сжигается."
   }
 }

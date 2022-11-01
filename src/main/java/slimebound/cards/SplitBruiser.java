@@ -41,6 +41,7 @@ public class SplitBruiser extends AbstractSlimeboundCard {
         this.baseDamage = 9;
         this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust = true;
+        SlimeboundMod.loadJokeCardImage(this, "SplitBruiser.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -29,6 +29,7 @@ public class GhostLash extends AbstractHexaCard {
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
         baseMagicNumber = magicNumber = 6;
+        HexaMod.loadJokeCardImage(this, "GhostLash.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static automaton.AutomatonMod.makeBetaCardPath;
+
 import static sneckomod.SneckoMod.getRandomStatus;
 
 public class Break extends AbstractBronzeCard {
@@ -26,6 +28,7 @@ public class Break extends AbstractBronzeCard {
         baseMagicNumber = magicNumber = 3;
         thisEncodes();
         tags.add(AutomatonMod.BAD_COMPILE);
+        AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("Break.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

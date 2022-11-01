@@ -2,11 +2,17 @@ package hermit.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
+import com.megacrit.cardcrawl.relics.AncientTeaSet;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.vfx.ObtainPotionEffect;
+import com.sun.org.apache.bcel.internal.generic.RETURN;
 import hermit.HermitMod;
+import hermit.powers.RyeStalkPower;
 import hermit.util.TextureLoader;
 
 import static hermit.HermitMod.makeRelicOutlinePath;

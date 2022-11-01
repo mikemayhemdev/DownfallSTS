@@ -92,7 +92,7 @@
     ]
   },
   "bronze:DelayedSlice": {
-    "NAME": "机械臂",
+    "NAME": "机械切割",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 下回合额外抽 !M! 张牌。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 下回合额外抽 !M! 张牌。",
     "EXTENDED_DESCRIPTION": [
@@ -306,7 +306,7 @@
   },
   "bronze:Backtrace": {
     "NAME": "回溯",
-    "DESCRIPTION": " 固有 。 NL 造成 !D! 点伤害。 NL bronze:编译 ： bronze:方法 附带 消耗 。",
+    "DESCRIPTION": " 固有 。 NL 造成 !D! 点伤害。 NL bronze:编译 *错误 ： NL bronze:方法 附带 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "暗中",
       "追溯"
@@ -538,11 +538,11 @@
   },
   "bronze:CleanCode": {
     "NAME": "简明代码",
-    "DESCRIPTION": "移除下 !M! 张 bronze:编码 牌中的 bronze:编译 *错误 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 移除下 !M! 张 bronze:编码 牌中的 bronze:编译 *错误 。"
+    "DESCRIPTION": "移除下 !M! 次被 bronze:编码 的 bronze:编译 *错误 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 移除下 !M! 次被 bronze:编码 的 bronze:编译 *错误 。"
   },
   "bronze:BranchBlock": {
-    "NAME": "分支： 格挡",
+    "NAME": "分支：防御",
     "DESCRIPTION": "获得 !B! 点 格挡 。",
     "EXTENDED_DESCRIPTION": [
       "分叉",
@@ -550,7 +550,7 @@
     ]
   },
   "bronze:BranchHit": {
-    "NAME": "分支： 攻击",
+    "NAME": "分支：攻击",
     "DESCRIPTION": "造成 !D! 点 伤害 。",
     "EXTENDED_DESCRIPTION": [
       "分叉",
@@ -558,9 +558,9 @@
     ]
   },
   "bronze:Ignite": {
-    "NAME": "点燃",
-    "DESCRIPTION": "给予 !M! 层 hexamod:灼魂 。 NL 回合结束时，受到 2 点伤害。",
-    "UPGRADE_DESCRIPTION": "给予 !M! 层 hexamod:灼魂 。 NL 回合结束时，受到 4 点伤害。"
+    "NAME": "魂灼",
+    "DESCRIPTION": "给予 !M! 层 hexamod:灼魂 。 NL 回合结束时， NL 受到2点伤害。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 hexamod:灼魂 。 NL 回合结束时， NL 受到4点伤害。"
   },
   "bronze:IntoTheVoid": {
     "NAME": "遁入虚空",
@@ -607,7 +607,7 @@
   },
   "bronze:BuggyMess": {
     "NAME": "多重错误",
-    "DESCRIPTION": " bronze:插入 晕眩 。 NL 获得 [E] 。",
+    "DESCRIPTION": " bronze:插入 晕眩 。 NL 获得 !M! [E] 。",
     "EXTENDED_DESCRIPTION": [
       "错误",
       "混乱"

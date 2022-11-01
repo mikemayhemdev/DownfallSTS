@@ -48,9 +48,9 @@
   "hexamod:CommonPostCombatPower": {
     "NAME": "战后卡牌",
     "DESCRIPTIONS": [
-      "每场战斗结束时，获得 #b",
-      " 张额外的牌。",
-      " 张额外的牌。"
+      "本场战斗结束时，额外获得 #b",
+      " 次卡牌奖励。",
+      " 次卡牌奖励。"
     ]
   },
   "hexamod:CrispyPower": {
@@ -121,8 +121,8 @@
   "hexamod:GoldPostCombatPower": {
     "NAME": "战后灵魂",
     "DESCRIPTIONS": [
-      "本场战斗的 #y灵魂 奖励提高 #b",
-      " 点。"
+      "本场战斗结束时，额外获得 #b",
+      " #y灵魂 。"
     ]
   },
   "hexamod:HexalevelPower": {
@@ -144,7 +144,7 @@
   "hexamod:ParanormalFormPower": {
     "NAME": "鬼哭神嚎",
     "DESCRIPTIONS": [
-      "本回合每当你打出 #y阴世 牌时，对随机一名敌人造成 #b",
+      "每当你打出 #y阴世 牌时，对随机一名敌人造成 #b",
       " 点伤害。"
     ]
   },
@@ -204,7 +204,7 @@
   "hexamod:GainEnergyAtStartOfTurnPower": {
     "NAME": "更多能量",
     "DESCRIPTIONS": [
-      "回合开始时，获得 "
+      "你的回合开始时，获得 "
     ]
   }
 }

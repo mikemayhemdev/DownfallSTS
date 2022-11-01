@@ -19,6 +19,7 @@ public class CatchUp extends AbstractHexaCard {
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         baseMagicNumber = magicNumber = 2;
+        HexaMod.loadJokeCardImage(this, "CatchUp.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

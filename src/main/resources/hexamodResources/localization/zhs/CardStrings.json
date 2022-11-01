@@ -55,7 +55,7 @@
   "hexamod:HexaLevel": {
     "NAME": "地狱形态",
     "DESCRIPTION": "回合开始时， NL 获得 !M! 点 hexamod:热烈 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时获得 !M! 点 hexamod:热烈 。"
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 hexamod:热烈 。 NL 回合开始时， NL 获得 !M! 点 hexamod:热烈 。"
   },
   "hexamod:UnlimitedPower": {
     "NAME": "无限潜力",
@@ -105,7 +105,7 @@
     "DESCRIPTION": "hexamod:熄灭 hexamod:点燃 的鬼火。 NL 每熄灭一枚， NL 获得 [E] 并抽一张牌 。 NL 消耗 。"
   },
   "hexamod:StepThrough": {
-    "NAME": "逐步",
+    "NAME": "焰影迷步",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一枚 hexamod:点燃 的鬼火，抽一张牌。"
   },
   "hexamod:InspiringFlames": {
@@ -245,7 +245,7 @@
   "hexamod:RainOfEmbers": {
     "NAME": "焰烬雨",
     "DESCRIPTION": "重复X次： NL 造成 !D! 点伤害。 NL 给予 !burny! 层 hexamod:灼魂 。",
-    "UPGRADE_DESCRIPTION": "重复X次： NL 造成 !D! 点伤害。 NL 给予 !burny! 层 hexamod:灼魂 。 NL 给予1层虚弱。"
+    "UPGRADE_DESCRIPTION": "重复X次： NL 造成 !D! 点伤害。 NL 给予 !burny! 层 hexamod:灼魂 。 NL 给予1层 虚弱 。"
   },
   "hexamod:VolcanoVisage": {
     "NAME": "火山面貌",

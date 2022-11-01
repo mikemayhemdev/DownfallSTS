@@ -38,7 +38,7 @@
     "NAME": "Silver Bullet",
     "FLAVOR": "Spirewolves are long gone.",
     "DESCRIPTIONS": [
-      "Start each combat with an #yEncoded #yPiercing #yShot."
+      "At the start of each combat, add a copy of #yPiercing #yShot to your hand. It costs #b0 ."
     ]
   },
   "bronze:MakeshiftBattery": {

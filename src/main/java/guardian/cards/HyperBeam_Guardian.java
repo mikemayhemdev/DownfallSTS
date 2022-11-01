@@ -18,6 +18,8 @@ import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.StunnedPower;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class HyperBeam_Guardian extends AbstractGuardianCard {
     public static final String ID = "Guardian:HyperBeam_Guardian";
@@ -60,6 +62,7 @@ public class HyperBeam_Guardian extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("HyperBeam_Guardian.png"));
 
 
     }

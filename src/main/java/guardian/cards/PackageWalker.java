@@ -16,6 +16,8 @@ import slimebound.cards.DivideAndConquerDivide;
 
 import java.util.ArrayList;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 public class PackageWalker extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("PackageWalker");
     public static final String NAME;
@@ -67,6 +69,7 @@ public class PackageWalker extends AbstractGuardianCard {
             prev2.upgrade();
             prev3.upgrade();
         }
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("PackageWalker.png"));
     }
 
     @Override

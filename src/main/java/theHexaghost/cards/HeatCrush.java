@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import theHexaghost.powers.BurnPower;
 import theHexaghost.vfx.HeatCrushEffect;
 
@@ -20,6 +21,7 @@ public class HeatCrush extends AbstractHexaCard {
     public HeatCrush() {
         super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        HexaMod.loadJokeCardImage(this, "HeatCrush.png");
     }
 
     public void calculateCardDamage(AbstractMonster mo) {

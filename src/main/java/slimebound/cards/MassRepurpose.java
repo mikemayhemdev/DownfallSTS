@@ -53,7 +53,7 @@ public class MassRepurpose extends AbstractSlimeboundCard {
 
        // this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
-        this.tags.add(CardTags.HEALING);
+//         this.tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
