@@ -6,8 +6,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.exordium.AcidSlime_S;
+import downfall.downfallMod;
 import slimebound.SlimeboundMod;
-import slimebound.characters.SlimeboundCharacter;
 
 @SpirePatch(clz = AcidSlime_S.class, method = "takeTurn")
 public class SlimeTalkAcidS {
@@ -20,7 +20,7 @@ public class SlimeTalkAcidS {
     }
 
     public static void Prefix(AcidSlime_S sb) {
-        if (AbstractDungeon.player instanceof SlimeboundCharacter && !SlimeboundMod.slimeTalkedAcidS) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND) && !SlimeboundMod.slimeTalkedAcidS) {
             AbstractDungeon.actionManager.addToBottom(new TalkAction(sb, DESCRIPTIONS[3], 1.0F, 2.0F));
             SlimeboundMod.slimeTalkedAcidS = true;
         }

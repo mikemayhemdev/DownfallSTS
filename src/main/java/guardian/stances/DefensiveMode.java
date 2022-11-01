@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
+import downfall.downfallMod;
 import guardian.GuardianMod;
 import guardian.characters.GuardianCharacter;
 import guardian.powers.DefensiveModeBooster;
@@ -38,7 +39,7 @@ public class DefensiveMode extends AbstractStance {
 
     @Override
     public void updateAnimation() {
-        if (!(AbstractDungeon.player instanceof GuardianCharacter)) {
+        if (!(AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GUARDIAN))) {
             if (!Settings.DISABLE_EFFECTS) {
 
                 this.particleTimer -= Gdx.graphics.getDeltaTime();
@@ -66,7 +67,7 @@ public class DefensiveMode extends AbstractStance {
 
         CardCrawlGame.sound.play("GUARDIAN_ROLL_UP");
 
-        if (!(AbstractDungeon.player instanceof GuardianCharacter)) {
+        if (!(AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GUARDIAN))) {
 //             CardCrawlGame.sound.play("STANCE_ENTER_CALM");
             sfxId = CardCrawlGame.sound.playAndLoop(GuardianMod.makeID("STANCE_LOOP_Defensive_Mode"));
         }
@@ -74,7 +75,7 @@ public class DefensiveMode extends AbstractStance {
         AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new IntenseZoomEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, false), 0.05F, true));
         AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.GOLDENROD, true));
 
-        if (AbstractDungeon.player instanceof GuardianCharacter) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GUARDIAN)) {
             ((GuardianCharacter) AbstractDungeon.player).switchToDefensiveMode();
         }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ThornsPower(AbstractDungeon.player, 3), 3));
@@ -90,7 +91,7 @@ public class DefensiveMode extends AbstractStance {
     public void onExitStance() {
         stopIdleSfx();
 
-        if (AbstractDungeon.player instanceof GuardianCharacter) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GUARDIAN)) {
             ((GuardianCharacter) AbstractDungeon.player).switchToOffensiveMode();
         }
         AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, ThornsPower.POWER_ID, 3));

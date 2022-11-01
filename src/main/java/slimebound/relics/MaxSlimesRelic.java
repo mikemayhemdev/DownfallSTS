@@ -5,8 +5,8 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import downfall.downfallMod;
 import slimebound.actions.SlimeSpawnAction;
-import slimebound.characters.SlimeboundCharacter;
 import slimebound.orbs.ShieldSlime;
 
 public class MaxSlimesRelic extends CustomRelic {
@@ -34,7 +34,7 @@ public class MaxSlimesRelic extends CustomRelic {
     }
 
     public boolean canSpawn() {
-        return AbstractDungeon.player instanceof SlimeboundCharacter;
+        return AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND);
     }
 
     @Override

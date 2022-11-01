@@ -11,8 +11,8 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import downfall.downfallMod;
 import slimebound.actions.SlimeSpawnAction;
-import slimebound.characters.SlimeboundCharacter;
 import slimebound.powers.SlimeSacrificePower;
 
 public class SlimedTailRelic extends CustomRelic {
@@ -91,7 +91,7 @@ public class SlimedTailRelic extends CustomRelic {
     }
 
     public boolean canSpawn() {
-        return AbstractDungeon.player instanceof SlimeboundCharacter;
+        return AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND);
     }
 
 

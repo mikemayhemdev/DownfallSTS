@@ -22,7 +22,7 @@ public class CombatDrawPositionPatch {
         public static void Prefix(MonsterGroup obj, AbstractMonster[] monsters) {
 
             // //SlimeboundMod.logger.info("Cultist cluster Patch hit.");
-            if (AbstractDungeon.player instanceof SlimeboundCharacter) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND)) {
                 // //SlimeboundMod.logger.info("Cultist cluster Patch hit player is Slimebound.");
                 if (monsters.length == 3) {
                     if (monsters[2].id == AwakenedOne.ID && monsters[1].id == Cultist.ID && monsters[0].id == Cultist.ID) {

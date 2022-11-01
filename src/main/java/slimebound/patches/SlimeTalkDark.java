@@ -6,8 +6,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.beyond.Darkling;
+import downfall.downfallMod;
 import slimebound.SlimeboundMod;
-import slimebound.characters.SlimeboundCharacter;
 
 @SpirePatch(clz = Darkling.class, method = "takeTurn")
 public class SlimeTalkDark {
@@ -20,7 +20,7 @@ public class SlimeTalkDark {
     }
 
     public static void Prefix(Darkling sb) {
-        if (AbstractDungeon.player instanceof SlimeboundCharacter && SlimeboundMod.slimeTalkedDark < 3) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND) && SlimeboundMod.slimeTalkedDark < 3) {
             String speech = "";
             switch (SlimeboundMod.slimeTalkedDark) {
                 case 0:

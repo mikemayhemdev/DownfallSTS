@@ -6,8 +6,8 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import downfall.downfallMod;
 import slimebound.actions.SlimeSpawnAction;
-import slimebound.characters.SlimeboundCharacter;
 import slimebound.powers.PotencyPower;
 
 public class PotencyRelic extends CustomRelic {
@@ -37,7 +37,7 @@ public class PotencyRelic extends CustomRelic {
     }
 
     public boolean canSpawn() {
-        return AbstractDungeon.player instanceof SlimeboundCharacter;
+        return AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND);
     }
 
 

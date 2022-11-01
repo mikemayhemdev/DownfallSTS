@@ -121,7 +121,7 @@ public class MindBloom_Evil extends AbstractImageEvent {
                                 m.powers.add(new StrengthPower(m, -3));
                                 AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
                             }
-                        } else if (AbstractDungeon.player instanceof TheSnecko) {
+                        } else if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_SNECKO)) {
 
                             AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new SneckoMirror());
                         } else if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {

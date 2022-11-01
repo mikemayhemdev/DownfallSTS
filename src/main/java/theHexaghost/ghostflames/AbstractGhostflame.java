@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import downfall.downfallMod;
 import downfall.util.TextureLoader;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
@@ -107,7 +108,7 @@ public abstract class AbstractGhostflame {
             for (AbstractRelic r : AbstractDungeon.player.relics) {
                 if (r instanceof OnChargeSubscriber) ((OnChargeSubscriber) r).onCharge(this);
             }
-            if (AbstractDungeon.player instanceof TheHexaghost) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_SPIRIT)) {
                 int x = 0;
                 for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames)
                     if (gf.charged) x++;
@@ -283,7 +284,7 @@ public abstract class AbstractGhostflame {
             CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);// 297
             CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);// 298
             reset();
-            if (AbstractDungeon.player instanceof TheHexaghost) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_SPIRIT)) {
                 int x = 0;
                 for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames)
                     if (gf.charged) x++;

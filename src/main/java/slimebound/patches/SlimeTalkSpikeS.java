@@ -6,8 +6,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.exordium.SpikeSlime_S;
+import downfall.downfallMod;
 import slimebound.SlimeboundMod;
-import slimebound.characters.SlimeboundCharacter;
 
 @SpirePatch(clz = SpikeSlime_S.class, method = "takeTurn")
 public class SlimeTalkSpikeS {
@@ -20,7 +20,7 @@ public class SlimeTalkSpikeS {
     }
 
     public static void Prefix(SpikeSlime_S sb) {
-        if (AbstractDungeon.player instanceof SlimeboundCharacter && !SlimeboundMod.slimeTalkedSpikeS) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND) && !SlimeboundMod.slimeTalkedSpikeS) {
             AbstractDungeon.actionManager.addToBottom(new TalkAction(sb, DESCRIPTIONS[10], 1.0F, 2.0F));
             SlimeboundMod.slimeTalkedSpikeS = true;
         }

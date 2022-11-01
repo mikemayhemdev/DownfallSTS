@@ -569,7 +569,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
                 //Act//
                 .dungeonIDs(TheBeyond.ID)
                 //Additional Condition//
-                .bonusCondition(() -> (AbstractDungeon.player instanceof SlimeboundCharacter))
+                .bonusCondition(() -> (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND)))
                 .create());
 
 

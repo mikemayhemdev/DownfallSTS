@@ -7,7 +7,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.RefreshEnergyEffect;
-import slimebound.characters.SlimeboundCharacter;
+import downfall.downfallMod;
 
 @SpirePatch(clz = RefreshEnergyEffect.class, method = SpirePatch.CONSTRUCTOR)
 public class RefreshEnergyEffectMovePatch {
@@ -17,7 +17,7 @@ public class RefreshEnergyEffectMovePatch {
         // //SlimeboundMod.logger.info("Energy panel VFX move patch hit.");
         if (AbstractDungeon.player != null) {
 
-            if (AbstractDungeon.player instanceof SlimeboundCharacter) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND)) {
 
                 TextureAtlas.AtlasRegion image = ReflectionHacks.getPrivate(obj, RefreshEnergyEffect.class, "img");
                 ReflectionHacks.setPrivate(obj, RefreshEnergyEffect.class, "y", 130F * Settings.scale - (float) image.packedHeight / 2.0F);

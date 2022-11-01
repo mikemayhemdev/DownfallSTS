@@ -6,7 +6,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import slimebound.characters.SlimeboundCharacter;
+import downfall.downfallMod;
 
 @SpirePatch(clz = AbstractOrb.class, method = "setSlot",
         paramtypez = {
@@ -17,7 +17,7 @@ public class OrbPositionPatch {
 
     public static SpireReturn<Void> Prefix(AbstractOrb abstractOrb_instance, int slotNum, int maxOrbs) {
 
-        if (AbstractDungeon.player instanceof SlimeboundCharacter && !(abstractOrb_instance instanceof AbstractEnemyOrb)) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND) && !(abstractOrb_instance instanceof AbstractEnemyOrb)) {
             float xStartOffset = AbstractDungeon.player.drawX + Settings.scale * -150F;
             float yStartOffset = AbstractDungeon.player.drawY + Settings.scale * -130F;
             float ySpaceAlternatingOffset = -20 * Settings.scale;

@@ -21,7 +21,7 @@ public class MakeUsefulSlimeInHandPatch {
     @SpirePostfixPatch
     public static void Postfix(MakeTempCardInHandAction obj, AbstractCard card, int amount) {
 
-        if (AbstractDungeon.player instanceof SlimeboundCharacter && card instanceof Slimed) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND) && card instanceof Slimed) {
             ReflectionHacks.setPrivate(obj, MakeTempCardInHandAction.class, "c", new UsefulSlime());
 
         }

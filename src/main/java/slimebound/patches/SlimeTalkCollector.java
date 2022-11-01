@@ -6,9 +6,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.city.TheCollector;
+import downfall.downfallMod;
 import expansioncontent.relics.StudyCardRelic;
 import slimebound.SlimeboundMod;
-import slimebound.characters.SlimeboundCharacter;
 
 @SpirePatch(clz = TheCollector.class, method = "takeTurn")
 public class SlimeTalkCollector {
@@ -21,7 +21,7 @@ public class SlimeTalkCollector {
     }
 
     public static void Prefix(TheCollector sb) {
-        if (AbstractDungeon.player instanceof SlimeboundCharacter && !SlimeboundMod.slimeTalkedCollector && AbstractDungeon.player.hasRelic(StudyCardRelic.ID)) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND) && !SlimeboundMod.slimeTalkedCollector && AbstractDungeon.player.hasRelic(StudyCardRelic.ID)) {
             AbstractDungeon.actionManager.addToBottom(new TalkAction(sb, DESCRIPTIONS[4], 1.0F, 2.0F));
             SlimeboundMod.slimeTalkedCollector = true;
         }

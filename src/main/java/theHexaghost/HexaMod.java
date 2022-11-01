@@ -272,7 +272,7 @@ public class HexaMod implements
         ExhaustCardTickPatch.exhaustedLastTurn = false;
         ExhaustCardTickPatch.exhaustedThisTurn = false;
 
-        if (AbstractDungeon.player instanceof TheHexaghost) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_SPIRIT)) {
             renderFlames = true;
             if (AbstractDungeon.scene instanceof TheBottomScene) {
                 ArrayList<InteractableTorchEffect> torches = ReflectionHacks.getPrivate(AbstractDungeon.scene, TheBottomScene.class, "torches");

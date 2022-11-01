@@ -6,8 +6,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.exordium.TheGuardian;
+import downfall.downfallMod;
 import guardian.GuardianMod;
-import guardian.characters.GuardianCharacter;
 
 @SpirePatch(clz = TheGuardian.class, method = "takeTurn")
 public class GuardianTalk {
@@ -20,7 +20,7 @@ public class GuardianTalk {
     }
 
     public static void Prefix(TheGuardian sb) {
-        if (AbstractDungeon.player instanceof GuardianCharacter && !GuardianMod.talked1) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GUARDIAN) && !GuardianMod.talked1) {
 
             AbstractDungeon.actionManager.addToBottom(new ShoutAction(sb, DESCRIPTIONS[0], 1.0F, 2.0F));
 

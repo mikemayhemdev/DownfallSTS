@@ -15,7 +15,7 @@ public class CityBGPatch {
 
     @SpirePostfixPatch
     public static void Postfix(TheCityScene TheCityScene_instance) {
-        if (AbstractDungeon.player instanceof SlimeboundCharacter) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND)) {
             TextureAtlas atlas = new TextureAtlas(Gdx.files.internal("slimeboundResources/SlimeboundImages/scenes/Cityscene.atlas"));
 
             ReflectionHacks.setPrivate(TheCityScene_instance, TheCityScene.class, "mg", atlas.findRegion("mod/mg1"));

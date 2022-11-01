@@ -15,7 +15,7 @@ public class EventOverridePatch {
 
     @SpirePostfixPatch
     public static void Postfix(TheCity dungeon_instance) {
-        if (AbstractDungeon.player instanceof GuardianCharacter) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GUARDIAN)) {
             dungeon_instance.eventList.remove(BackToBasics.ID);
         }
 

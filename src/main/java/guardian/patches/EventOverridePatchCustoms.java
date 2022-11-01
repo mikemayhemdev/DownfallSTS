@@ -12,7 +12,7 @@ public class EventOverridePatchCustoms {
 
 
     public static void Prefix(AbstractDungeon dungeon_instance) {
-        if (AbstractDungeon.player instanceof GuardianCharacter) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GUARDIAN)) {
         } else {
             dungeon_instance.eventList.remove(AccursedBlacksmithGuardian.ID);
             dungeon_instance.shrineList.remove(TransmogrifierGuardian.ID);

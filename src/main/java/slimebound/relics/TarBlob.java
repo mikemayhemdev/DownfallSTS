@@ -4,7 +4,7 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import slimebound.characters.SlimeboundCharacter;
+import downfall.downfallMod;
 
 public class TarBlob extends CustomRelic {
     public static final String ID = "Slimebound:TarBlob";
@@ -38,7 +38,7 @@ public class TarBlob extends CustomRelic {
     }
 
     public boolean canSpawn() {
-        return AbstractDungeon.player instanceof SlimeboundCharacter;
+        return AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND);
     }
 
     public AbstractRelic makeCopy() {

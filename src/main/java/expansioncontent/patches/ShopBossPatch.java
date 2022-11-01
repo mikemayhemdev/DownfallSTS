@@ -57,15 +57,15 @@ public class ShopBossPatch {
     public static boolean okayToSpawn(AbstractCard q) {
         if (q.rarity == AbstractCard.CardRarity.SPECIAL) return false;
 
-        if (AbstractDungeon.player instanceof SlimeboundCharacter) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND)) {
             if (q.cardID.equals(PrepareCrush.ID)) {
                 return false;
             }
         }
-        if (AbstractDungeon.player instanceof TheHexaghost || RandomCardWithTagAction.hexaLocked()) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_SPIRIT) || RandomCardWithTagAction.hexaLocked()) {
             if (q.cardID.equals(Hexaburn.ID)) return false;
         }
-        if (AbstractDungeon.player instanceof GuardianCharacter || RandomCardWithTagAction.guardianLocked()) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GUARDIAN) || RandomCardWithTagAction.guardianLocked()) {
             if (q.cardID.equals(GuardianWhirl.ID)) return false;
         }
         if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_CHAMP) || RandomCardWithTagAction.champLocked()) {

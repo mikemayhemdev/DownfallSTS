@@ -24,7 +24,7 @@ public class SadisticNaturePatch {
         // logger.info("Sadistic Nature Patch hit");
         if (AbstractDungeon.isPlayerInDungeon()) {
             //  logger.info("Sadistic Nature Patch player is in dungeon");
-            if ((AbstractDungeon.player instanceof SlimeboundCharacter)) {
+            if ((AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND))) {
 
                 // logger.info("Sadistic Nature reducing cost");
 

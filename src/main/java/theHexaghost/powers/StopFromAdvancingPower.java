@@ -40,7 +40,7 @@ public class StopFromAdvancingPower extends AbstractPower implements CloneablePo
     @Override
     public void update(int slot) {
         super.update(slot);
-        if (AbstractDungeon.player instanceof TheHexaghost)
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_SPIRIT))
             if (
                     (TheHexaghost.startingFlame == GhostflameHelper.activeGhostFlame &&
                             (!GhostflameHelper.activeGhostFlame.charged || AbstractDungeon.player.hasPower(AgainPower.POWER_ID)))

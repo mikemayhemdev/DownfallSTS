@@ -17,7 +17,7 @@ import expansioncontent.relics.StudyCardRelic;
 public class CityRemoveEventPatch {
 
     public static void Prefix(AbstractDungeon dungeon_instance) {
-        if (AbstractDungeon.player instanceof SlimeboundCharacter) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND)) {
             dungeon_instance.eventList.remove(GoopPuddle.ID);
         } else {
             dungeon_instance.eventList.remove(WorldOfGoopSlimebound.ID);
@@ -33,7 +33,7 @@ public class CityRemoveEventPatch {
         }
 
 
-        if (AbstractDungeon.player instanceof SlimeboundCharacter) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND)) {
             SlimeboundCharacter sc = (SlimeboundCharacter) AbstractDungeon.player;
             if (sc.foughtSlimeBoss || sc.hasRelic(StudyCardRelic.ID)) {
                 dungeon_instance.eventList.remove(Hunted.ID);
@@ -44,7 +44,7 @@ public class CityRemoveEventPatch {
 
 
         if (!SlimeboundMod.contentSharing_events) {
-            if (!(AbstractDungeon.player instanceof SlimeboundCharacter)) {
+            if (!(AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND))) {
                 dungeon_instance.eventList.remove(ArtOfSlimeWar.ID);
             }
         }

@@ -7,8 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
-import guardian.characters.GuardianCharacter;
-import slimebound.characters.SlimeboundCharacter;
+import downfall.downfallMod;
 
 @SpirePatch(clz = EmptyOrbSlot.class, method = "updateDescription")
 public class EmptyOrbSlotPatch {
@@ -20,12 +19,12 @@ public class EmptyOrbSlotPatch {
 
     public static void Postfix(EmptyOrbSlot EmptyOrbSlot_instance) {
         OrbStrings orbString;
-        if (AbstractDungeon.player instanceof SlimeboundCharacter) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND)) {
             ImageMaster.ORB_SLOT_1 = SLIME_ORB;
             orbString = slimeOrbString;
         } else {
             ImageMaster.ORB_SLOT_1 = NORMAL_ORB;
-            if (AbstractDungeon.player instanceof GuardianCharacter)
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GUARDIAN))
                 orbString = guardianOrbString;
             else
                 orbString = normalOrbString;

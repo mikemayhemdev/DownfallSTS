@@ -1108,7 +1108,7 @@ public static void saveData() {
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
-        if (AbstractDungeon.player instanceof GuardianCharacter) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GUARDIAN)) {
             if (((GuardianCharacter) AbstractDungeon.player).inDefensive) {
                 ((GuardianCharacter) AbstractDungeon.player).switchToOffensiveMode();
             }

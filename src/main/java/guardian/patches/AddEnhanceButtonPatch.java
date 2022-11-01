@@ -5,13 +5,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.CampfireUI;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
+import downfall.downfallMod;
 import guardian.GuardianMod;
-import guardian.characters.GuardianCharacter;
 import guardian.relics.PickAxe;
 import guardian.ui.EnhanceBonfireOption;
 import guardian.ui.FindGemsOption;
 import javassist.CtBehavior;
-import sneckomod.TheSnecko;
 import sneckomod.relics.UnknownEgg;
 import sneckomod.ui.LockInCampfireOption;
 
@@ -29,7 +28,7 @@ public class AddEnhanceButtonPatch {
             if (GuardianMod.getGemCards().size() == 0) {
                 active = false;
             }
-            if (AbstractDungeon.player instanceof GuardianCharacter || active) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GUARDIAN) || active) {
                 GuardianMod.socketBonfireOption = new EnhanceBonfireOption(active);
                 ___buttons.add(GuardianMod.socketBonfireOption);
             }
@@ -40,7 +39,7 @@ public class AddEnhanceButtonPatch {
             }
 
 
-            if (AbstractDungeon.player instanceof TheSnecko || AbstractDungeon.player.hasRelic(UnknownEgg.ID)) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_SNECKO) || AbstractDungeon.player.hasRelic(UnknownEgg.ID)) {
                 ___buttons.add(new LockInCampfireOption());
             }
         }

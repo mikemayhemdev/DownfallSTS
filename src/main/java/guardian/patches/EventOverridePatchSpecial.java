@@ -13,7 +13,7 @@ public class EventOverridePatchSpecial {
 
     @SpirePostfixPatch
     public static void Postfix(AbstractDungeon dungeon_instance) {
-        if (AbstractDungeon.player instanceof GuardianCharacter) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GUARDIAN)) {
 
             dungeon_instance.specialOneTimeEventList.remove(AccursedBlacksmith.ID);
 

@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import slimebound.characters.SlimeboundCharacter;
+import downfall.downfallMod;
 import slimebound.powers.AcidTonguePowerUpgraded;
 
 public class SlimedSkullRelic extends CustomRelic {
@@ -35,7 +35,7 @@ public class SlimedSkullRelic extends CustomRelic {
     }
 
     public boolean canSpawn() {
-        return AbstractDungeon.player instanceof SlimeboundCharacter;
+        return AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND);
     }
 
 

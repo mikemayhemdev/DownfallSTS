@@ -5,7 +5,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import slimebound.characters.SlimeboundCharacter;
+import downfall.downfallMod;
 
 @SpirePatch(clz = EnergyPanel.class, method = SpirePatch.CONSTRUCTOR)
 public class EnergyPanelMovePatch {
@@ -15,7 +15,7 @@ public class EnergyPanelMovePatch {
         // //SlimeboundMod.logger.info("Energy panel move patch hit.");
         if (AbstractDungeon.player != null) {
 
-            if (AbstractDungeon.player instanceof SlimeboundCharacter) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND)) {
                 obj.show_y = 130.0F * Settings.scale;
                 //    //SlimeboundMod.logger.info("Energy panel move patch success");
             }

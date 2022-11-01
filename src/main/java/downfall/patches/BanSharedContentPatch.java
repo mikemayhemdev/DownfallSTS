@@ -29,12 +29,10 @@ import guardian.potions.BlockOnCardUsePotion;
 import guardian.relics.BottledAnomaly;
 import guardian.relics.GemstoneGun;
 import guardian.relics.PocketSentry;
-import slimebound.characters.SlimeboundCharacter;
 import slimebound.potions.ThreeZeroPotion;
 import slimebound.relics.PreparedRelic;
 import slimebound.relics.StickyStick;
 import sneckomod.SneckoMod;
-import sneckomod.TheSnecko;
 import sneckomod.cards.unknowns.UnknownClass;
 import sneckomod.potions.MuddlingPotion;
 import sneckomod.relics.BlankCard;
@@ -109,15 +107,15 @@ public class BanSharedContentPatch {
                 AbstractDungeon.srcCurseCardPool.removeCard(Malfunctioning.ID);
                 AbstractDungeon.srcCurseCardPool.removeCard(Scatterbrained.ID);
             }
-            if (AbstractDungeon.player instanceof SlimeboundCharacter) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND)) {
                 AbstractDungeon.colorlessCardPool.removeCard(PrepareCrush.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(PrepareCrush.ID);
             }
-            if (AbstractDungeon.player instanceof TheHexaghost || RandomCardWithTagAction.hexaLocked()) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_SPIRIT) || RandomCardWithTagAction.hexaLocked()) {
                 AbstractDungeon.colorlessCardPool.removeCard(Hexaburn.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(Hexaburn.ID);
             }
-            if (AbstractDungeon.player instanceof GuardianCharacter || RandomCardWithTagAction.guardianLocked()) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GUARDIAN) || RandomCardWithTagAction.guardianLocked()) {
                 AbstractDungeon.colorlessCardPool.removeCard(GuardianWhirl.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(GuardianWhirl.ID);
             }
@@ -131,7 +129,7 @@ public class BanSharedContentPatch {
             }
 
 
-            if (AbstractDungeon.player instanceof TheSnecko) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_SNECKO)) {
                 if (SneckoMod.validColors != null && !SneckoMod.pureSneckoMode) {
                     AbstractDungeon.commonCardPool.group.removeIf(c -> c instanceof UnknownClass && !SneckoMod.validColors.contains(((UnknownClass) c).myColor));
                     AbstractDungeon.srcCommonCardPool.group.removeIf(c -> c instanceof UnknownClass && !SneckoMod.validColors.contains(((UnknownClass) c).myColor));
