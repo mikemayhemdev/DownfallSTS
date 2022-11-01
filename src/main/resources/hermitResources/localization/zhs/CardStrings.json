@@ -123,7 +123,7 @@
   "hermit:TakeCover": {
     "NAME": "快找掩护",
     "DESCRIPTION": "获得一张 *防御+X 。 NL 其耗能为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得一张 *防御+X 。 NL 其耗能为0。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "获得一张 *防御+X+1 。 NL 其耗能为0。 NL 消耗 。"
   },
   "hermit:Misfire": {
     "NAME": "擦枪走火",
