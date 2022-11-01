@@ -208,8 +208,8 @@
   },
   "hermit:EternalForm": {
     "NAME": "永恒形态",
-    "DESCRIPTION": "虚无 。 NL 每回合所抽前四张可打出牌该回合首次耗能减1。",
-    "UPGRADE_DESCRIPTION": "每回合所抽前四张可打出牌该回合首次耗能减1。"
+    "DESCRIPTION": "虚无 。 NL 每回合所抽前四张可打出牌首次耗能减1。",
+    "UPGRADE_DESCRIPTION": "每回合所抽前四张可打出牌首次耗能减1。"
   },
   "hermit:FullyLoaded": {
     "NAME": "整装待发",
