@@ -89,12 +89,19 @@ public class EvilModeCharacterSelect {
                                     ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
                                 }
                                 villainOptions[2] = o;
+
+
+                            // TODO - These should be fine when the enums get migrated.
                             } else if (o.c.chosenClass == ChampChar.Enums.THE_CHAMP) {
                                 if (UnlockTracker.isCharacterLocked("Champ")) {
                                     o.locked = true;
                                     ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
                                 }
                                 villainOptions[3] = o;
+
+
+
+
                             } else if (o.c.chosenClass == AutomatonChar.Enums.THE_AUTOMATON) {
                                 if (UnlockTracker.isCharacterLocked("Automaton")) {
                                     o.locked = true;

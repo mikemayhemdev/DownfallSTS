@@ -29,7 +29,6 @@ import champ.ChampChar;
 import champ.ChampMod;
 import champ.cards.ModFinisher;
 import champ.powers.LastStandModPower;
-import champ.relics.ChampStancesModRelic;
 import champ.util.TechniqueMod;
 import charbosses.actions.util.CharBossMonsterGroup;
 import charbosses.bosses.AbstractCharBoss;
@@ -526,6 +525,7 @@ public class downfallMod implements
         loadModKeywords(SneckoMod.getModID(), otherPackagePaths.PACKAGE_SNECKO);
         loadModKeywords(SlimeboundMod.getModID(), otherPackagePaths.PACKAGE_SLIME);
         loadModKeywords(GuardianMod.getModID(), otherPackagePaths.PACKAGE_GUARDIAN);
+        //TODO - Migrate ModID declarations to Downfall Package?
         loadModKeywords(ChampMod.getModID(), otherPackagePaths.PACKAGE_CHAMP);
         loadModKeywords(AutomatonMod.getModID(), otherPackagePaths.PACKAGE_AUTOMATON);
         loadModKeywords(GremlinMod.getModID(), otherPackagePaths.PACKAGE_GREMLIN);
@@ -1063,6 +1063,9 @@ public class downfallMod implements
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 
+
+        //TODO - How can we check the ChampChar here without loading the package?  ID?  Move ALL character enums into DownfallMod?
+
         BaseMod.addEvent(new AddEventParams.Builder(Colosseum_Evil.ID, Colosseum_Evil.class) //Event ID//
                 //Event Spawn Condition//
                 .spawnCondition(() -> evilMode && !(AbstractDungeon.player instanceof ChampChar))
@@ -1071,6 +1074,8 @@ public class downfallMod implements
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
+
+
 
         BaseMod.addEvent(new AddEventParams.Builder(MindBloom_Evil.ID, MindBloom_Evil.class) //Event ID//
                 //Event Spawn Condition//
@@ -1505,6 +1510,7 @@ public class downfallMod implements
                 p instanceof TheHexaghost ||
                 p instanceof GuardianCharacter ||
                 p instanceof TheSnecko ||
+                //TODO - Need to be able to check this without loading package
                 p instanceof ChampChar ||
                 p instanceof AutomatonChar ||
                 p instanceof GremlinCharacter || p instanceof hermit.characters.hermit) {
@@ -1552,12 +1558,17 @@ public class downfallMod implements
         }
 
         if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ChampStances.ID) || ModHelper.isModEnabled(ChampStances.ID)) {
-            RelicLibrary.getRelic(ChampStancesModRelic.ID).makeCopy().instantObtain();
+            RelicLibrary.getRelic("champ:ChampStancesModRelic").makeCopy().instantObtain();
 
+            //TODO - Migrate all Downfall related Card Tags into DownfallMod!
             for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+
                 if (!c.hasTag(ChampMod.TECHNIQUE))
+                    //TODO - Migrate ALL Card Modifiers into DownfallMod Package!
                     CardModifierManager.addModifier(c, new TechniqueMod());
+
             }
+
         }
 
         if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Hexed.ID)) || ModHelper.isModEnabled(Hexed.ID)) {
@@ -1759,12 +1770,16 @@ public class downfallMod implements
         playedBossCardThisTurn = false;
 
         if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ChampStances.ID)) || ModHelper.isModEnabled(ChampStances.ID)) {
+
+            //TODO - Uncomment this when Mods have been moved to Downfall package!
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new ModFinisher()));
         }
 
         if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Enraging.ID)) || ModHelper.isModEnabled(Enraging.ID)) {
-            for (AbstractMonster m : abstractRoom.monsters.monsters)
+            for (AbstractMonster m : abstractRoom.monsters.monsters) {
+                //TODO - Move powers like this one into Downfall package
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new LastStandModPower(m, AbstractDungeon.actNum * 2), AbstractDungeon.actNum * 2));
+            }
         }
 
         if (AbstractDungeon.player instanceof GuardianCharacter) {

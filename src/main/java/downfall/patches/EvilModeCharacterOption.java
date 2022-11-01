@@ -2,7 +2,6 @@ package downfall.patches;
 
 import automaton.AutomatonChar;
 import champ.ChampChar;
-import champ.ChampMod;
 import collector.CollectorChar;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
@@ -41,12 +40,15 @@ public class EvilModeCharacterOption {
                 } else {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[3] + TEXT[0]);
                 }
+                //TODO - This should be fine if we move the Enums to DownfallMod.
             } else if (__instance.c.chosenClass == ChampChar.Enums.THE_CHAMP) {
                 if (UnlockTracker.isCharacterLocked("Hexaghost")) {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[4] + TEXT[0]);
                 } else {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[5] + TEXT[0]);
                 }
+
+
             } else if (__instance.c.chosenClass == AutomatonChar.Enums.THE_AUTOMATON) {
                 if (UnlockTracker.isCharacterLocked("Champ")) {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[6] + TEXT[0]);
@@ -76,3 +78,4 @@ public class EvilModeCharacterOption {
         }
     }
 }
+
