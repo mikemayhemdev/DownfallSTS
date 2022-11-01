@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.beyond.AwakenedOne;
 import com.megacrit.cardcrawl.powers.*;
+import com.megacrit.cardcrawl.powers.watcher.WaveOfTheHandPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
@@ -53,7 +54,7 @@ public class RedScarf extends CustomRelic implements OnApplyPowerRelic {
             this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             flash();
 
-            this.addToBot(new GainBlockAction(var3, var3, 2));
+            this.addToBot(new RedScarfAction(2));
         }
 
         return true;
