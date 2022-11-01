@@ -1,7 +1,6 @@
 package automaton.relics;
 
 import automaton.AutomatonMod;
-import downfall.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;
@@ -10,6 +9,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.util.TextureLoader;
 
 import static automaton.AutomatonMod.makeRelicOutlinePath;
 import static automaton.AutomatonMod.makeRelicPath;

@@ -8,8 +8,8 @@ import downfall.downfallMod;
 
 public class CBR_ShiningLight extends AbstractCharbossRelic {
     public static String ID = downfallMod.makeID("ShiningLight");
-    private static RelicTier tier = RelicTier.SPECIAL;
-    private static LandingSound sound = LandingSound.MAGICAL;
+    private static final RelicTier tier = RelicTier.SPECIAL;
+    private static final LandingSound sound = LandingSound.MAGICAL;
     private String cardName;
     private String cardName2;
 
@@ -20,7 +20,7 @@ public class CBR_ShiningLight extends AbstractCharbossRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0] + this.cardName + this.DESCRIPTIONS[1] + this.cardName2 +  this.DESCRIPTIONS[2];
+        return this.DESCRIPTIONS[0] + this.cardName + this.DESCRIPTIONS[1] + this.cardName2 + this.DESCRIPTIONS[2];
     }
 
     @Override

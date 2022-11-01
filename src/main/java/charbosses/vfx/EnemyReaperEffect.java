@@ -8,8 +8,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 
-import java.util.Iterator;
-
 public class EnemyReaperEffect extends AbstractGameEffect {
     public EnemyReaperEffect() {
     }

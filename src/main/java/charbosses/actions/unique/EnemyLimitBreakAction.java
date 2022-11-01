@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class EnemyLimitBreakAction extends AbstractGameAction {
-    private AbstractCharBoss p;
+    private final AbstractCharBoss p;
 
     public EnemyLimitBreakAction() {
         this.actionType = ActionType.WAIT;

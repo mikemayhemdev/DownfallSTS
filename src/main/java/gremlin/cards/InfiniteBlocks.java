@@ -23,24 +23,20 @@ public class InfiniteBlocks extends AbstractGremlinCard {
 
     private static final int COST = 1;
 
-    public InfiniteBlocks()
-    {
+    public InfiniteBlocks() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.cardsToPreview = new Ward();
         this.tags.add(SHIELD_GREMLIN);
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new InfiniteBlocksPower(p, 1), 1));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             this.isInnate = true;
 

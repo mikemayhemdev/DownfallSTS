@@ -27,8 +27,7 @@ public class Pickpocket extends AbstractGremlinCard {
     private static final int POWER = 9;
     private static final int UPGRADE_BONUS = 4;
 
-    public Pickpocket()
-    {
+    public Pickpocket() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -39,15 +38,14 @@ public class Pickpocket extends AbstractGremlinCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new StealArtifactAction(m,p));
+        AbstractDungeon.actionManager.addToBottom(new StealArtifactAction(m, p));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                 this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
         }

@@ -13,11 +13,11 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 public class SpookyEmberEffect extends AbstractGameEffect {
     private float x;
     private float y;
-    private float vX;
-    private float vY;
-    private float startDur;
-    private float targetScale;
-    private AtlasRegion img;
+    private final float vX;
+    private final float vY;
+    private final float startDur;
+    private final float targetScale;
+    private final AtlasRegion img;
     private float rotateSpeed = 0.0F;
 
     public SpookyEmberEffect(float x, float y) {

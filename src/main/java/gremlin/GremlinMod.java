@@ -61,7 +61,7 @@ import static downfall.patches.EvilModeCharacterSelect.evilMode;
 public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscriber,
         EditRelicsSubscriber, EditCardsSubscriber, OnStartBattleSubscriber, PostBattleSubscriber,
         PostInitializeSubscriber, SetUnlocksSubscriber, StartGameSubscriber {
-    private static String modID = "gremlin";
+    private static final String modID = "gremlin";
 
     private static final Color GREMLIN_COLOR = CardHelper.getColor(205.0f, 92.0f, 92.0f);
     private static final String ASSETS_FOLDER = "gremlinResources/images";
@@ -126,8 +126,8 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
         new GremlinMod();
     }
 
-    private static Map<String, Skeleton> gremlinSkeletonMap = new HashMap<>();
-    private static Map<String, AnimationState> gremlinAnimationStateMap = new HashMap<>();
+    private static final Map<String, Skeleton> gremlinSkeletonMap = new HashMap<>();
+    private static final Map<String, AnimationState> gremlinAnimationStateMap = new HashMap<>();
 
     public static Skeleton getGremlinSkeleton(String assetFolder) {
         if (!gremlinSkeletonMap.containsKey(assetFolder)) {
@@ -136,7 +136,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
 
             TextureAtlas texture = new TextureAtlas(Gdx.files.internal(atlasString));
             SkeletonJson json = new SkeletonJson(texture);
-            json.setScale(Settings.scale / 1f);
+            json.setScale(Settings.scale);
             SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal(jsonString));
             gremlinSkeletonMap.put(assetFolder, new Skeleton(skeletonData));
             gremlinSkeletonMap.get(assetFolder).setColor(Color.WHITE);
@@ -333,14 +333,14 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
-        if (AbstractDungeon.player instanceof GremlinCharacter) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
             ((GremlinCharacter) (AbstractDungeon.player)).startOfBattle();
         }
     }
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
-        if (AbstractDungeon.player instanceof GremlinCharacter) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
             ((GremlinCharacter) (AbstractDungeon.player)).updateMobState();
         }
     }
@@ -509,7 +509,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
 
     @Override
     public void receiveStartGame() {
-        if (AbstractDungeon.player instanceof GremlinCharacter) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
             if (((GremlinCharacter) AbstractDungeon.player).mobState.unset) {
                 ((GremlinCharacter) AbstractDungeon.player).mobState.setAll(AbstractDungeon.player.currentHealth);
             }

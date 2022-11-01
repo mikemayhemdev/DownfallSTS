@@ -1,7 +1,6 @@
 package guardian.cards;
 
 
-import basemod.devcommands.draw.Draw;
 import champ.powers.DrawLessNextTurnPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -11,10 +10,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.powers.DrawReductionPower;
-import com.megacrit.cardcrawl.powers.LoseDexterityPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import hermit.actions.ReduceDebuffsAction;
@@ -55,7 +50,7 @@ public class DonusPower extends AbstractGuardianCard {
 
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawLessNextTurnPower(2), 2));
-        if (upgraded){
+        if (upgraded) {
             AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, 1));
         }
     }

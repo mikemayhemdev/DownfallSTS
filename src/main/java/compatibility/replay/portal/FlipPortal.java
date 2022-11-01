@@ -24,23 +24,19 @@ public class FlipPortal {
                     "roomLeft", "roomRight"
             }
     )
-    public static void flipthePORALS(MapRoomNode underRoomLeft, MapRoomNode underRoomRight, MapRoomNode roomLeft, MapRoomNode roomRight)
-    {
-        if (EvilModeCharacterSelect.evilMode)
-        {
+    public static void flipthePORALS(MapRoomNode underRoomLeft, MapRoomNode underRoomRight, MapRoomNode roomLeft, MapRoomNode roomRight) {
+        if (EvilModeCharacterSelect.evilMode) {
             //teleporter left and right each have one edge
             //underRoomLeft and underRoomRight have an edge added which points at the teleporter rooms, which needs to be flipped.
 
             MapRoomNode teleporterLeft = null, teleporterRight = null;
 
             Iterator<MapEdge> edges = underRoomLeft.getEdges().iterator();
-            while (edges.hasNext())
-            {
+            while (edges.hasNext()) {
                 MapEdge next = edges.next();
 
                 MapRoomNode nextNode = getDestination(next);
-                if (nextNode != null && nextNode.getRoom().getClass().getSimpleName().equals("TeleportRoom"))
-                {
+                if (nextNode != null && nextNode.getRoom().getClass().getSimpleName().equals("TeleportRoom")) {
                     edges.remove();
                     teleporterLeft = nextNode;
                     break;
@@ -48,13 +44,11 @@ public class FlipPortal {
             }
 
             edges = underRoomRight.getEdges().iterator();
-            while (edges.hasNext())
-            {
+            while (edges.hasNext()) {
                 MapEdge next = edges.next();
 
                 MapRoomNode nextNode = getDestination(next);
-                if (nextNode != null && nextNode.getRoom().getClass().getSimpleName().equals("TeleportRoom"))
-                {
+                if (nextNode != null && nextNode.getRoom().getClass().getSimpleName().equals("TeleportRoom")) {
                     edges.remove();
                     teleporterRight = nextNode;
                     break;
@@ -75,15 +69,12 @@ public class FlipPortal {
         }
     }
 
-    private static MapRoomNode getDestination(MapEdge edge)
-    {
+    private static MapRoomNode getDestination(MapEdge edge) {
         try {
             ArrayList<MapRoomNode> row = CardCrawlGame.dungeon.getMap().get(edge.dstY);
 
-            for (MapRoomNode n : row)
-            {
-                if (n.x == edge.dstX && n.getRoom() != null)
-                {
+            for (MapRoomNode n : row) {
+                if (n.x == edge.dstX && n.getRoom() != null) {
                     return n;
                 }
             }

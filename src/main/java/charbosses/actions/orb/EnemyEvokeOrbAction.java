@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.Settings;
 
 public class EnemyEvokeOrbAction extends AbstractGameAction {
-    private int orbCount;
+    private final int orbCount;
 
     public EnemyEvokeOrbAction(final int amount) {
         if (Settings.FAST_MODE) {

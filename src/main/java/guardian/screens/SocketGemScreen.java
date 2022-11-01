@@ -59,14 +59,14 @@ public class SocketGemScreen implements ScrollBarListener {
     private AbstractCard hoveredCard = null;
     private int numCards = 0;
     private int cardSelectAmount = 0;
-    private float scrollLowerBound;
+    private final float scrollLowerBound;
     private float scrollUpperBound;
     private boolean grabbedScreen;
     private boolean canCancel;
     private String tipMsg;
     private String lastTip;
     private int prevDeckSize;
-    private ScrollBar scrollBar;
+    private final ScrollBar scrollBar;
     private AbstractCard controllerCard;
     private float arrowScale1;
     private float arrowScale2;

@@ -22,11 +22,11 @@ public class MyBody implements Disposable {
 
     public float targetRotationSpeed = 30.0F;
     private float rotationSpeed = 1.0F;
-    private BobEffect effect = new BobEffect(0.75F);
-    private Texture plasma1;
-    private Texture plasma2;
-    private Texture plasma3;
-    private Texture shadow;
+    private final BobEffect effect = new BobEffect(0.75F);
+    private final Texture plasma1;
+    private final Texture plasma2;
+    private final Texture plasma3;
+    private final Texture shadow;
     private float plasma1Angle = 0.0F;
     private float plasma2Angle = 0.0F;
     private float plasma3Angle = 0.0F;

@@ -2,10 +2,8 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theHexaghost.actions.PremonitionAction;
-import com.megacrit.cardcrawl.powers.DexterityPower;
 import theHexaghost.HexaMod;
-import theHexaghost.actions.SacrificeAction2;
+import theHexaghost.actions.PremonitionAction;
 
 public class Premonition extends AbstractHexaCard {
 

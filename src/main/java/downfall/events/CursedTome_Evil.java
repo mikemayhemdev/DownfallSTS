@@ -27,7 +27,7 @@ public class CursedTome_Evil extends AbstractImageEvent {
         OPTIONS = CardCrawlGame.languagePack.getEventString("Cursed Tome").OPTIONS;
     }
 
-    private int finalDmg;
+    private final int finalDmg;
     private CurScreen screen;
 
     public CursedTome_Evil() {

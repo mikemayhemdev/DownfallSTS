@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class LimboToHandAction extends AbstractGameAction {
-    private AbstractCard card;
+    private final AbstractCard card;
 
     public LimboToHandAction(AbstractCard card) {
         actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;

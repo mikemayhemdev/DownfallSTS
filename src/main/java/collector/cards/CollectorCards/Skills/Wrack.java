@@ -24,18 +24,18 @@ public class Wrack extends AbstractCollectorCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractPower po : m.powers) {
-            if (po.ID.equals(CollectorMod.Afflictions.get(0))){
-                atb(new ApplyPowerAction(m,p, new WeakPower(m,po.amount,false)));
-            } else if (po.ID.equals(CollectorMod.Afflictions.get(1))){
-                atb(new ApplyPowerAction(m,p, new VulnerablePower(m,po.amount,false)));
-            } else if (po.ID.equals(CollectorMod.Afflictions.get(2))){
-                atb(new ApplyPowerAction(m,p, new PoisonPower(m,p,po.amount)));
-            } else if (po.ID.equals(CollectorMod.Afflictions.get(3))){
-                atb(new ApplyPowerAction(m,p, new SlimedPower(m,p,po.amount)));
-            } else if (po.ID.equals(CollectorMod.Afflictions.get(4))){
-                atb(new ApplyPowerAction(m,p, new BurnPower(m,po.amount)));
-            }  else if (po.ID.equals(CollectorMod.Afflictions.get(5))){
-                atb(new ApplyPowerAction(m,p, new Suffering(po.amount,m)));
+            if (po.ID.equals(CollectorMod.Afflictions.get(0))) {
+                atb(new ApplyPowerAction(m, p, new WeakPower(m, po.amount, false)));
+            } else if (po.ID.equals(CollectorMod.Afflictions.get(1))) {
+                atb(new ApplyPowerAction(m, p, new VulnerablePower(m, po.amount, false)));
+            } else if (po.ID.equals(CollectorMod.Afflictions.get(2))) {
+                atb(new ApplyPowerAction(m, p, new PoisonPower(m, p, po.amount)));
+            } else if (po.ID.equals(CollectorMod.Afflictions.get(3))) {
+                atb(new ApplyPowerAction(m, p, new SlimedPower(m, p, po.amount)));
+            } else if (po.ID.equals(CollectorMod.Afflictions.get(4))) {
+                atb(new ApplyPowerAction(m, p, new BurnPower(m, po.amount)));
+            } else if (po.ID.equals(CollectorMod.Afflictions.get(5))) {
+                atb(new ApplyPowerAction(m, p, new Suffering(po.amount, m)));
             }
         }
     }

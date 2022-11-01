@@ -2,14 +2,7 @@ package charbosses.cards.purple;
 
 import charbosses.actions.common.EnemyMakeTempCardInDrawPileAction;
 import charbosses.cards.AbstractBossCard;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
-import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.purple.Alpha;
-import com.megacrit.cardcrawl.cards.tempCards.Beta;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -42,7 +35,7 @@ public class EnAlpha extends AbstractBossCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (usedOnce){
+        if (usedOnce) {
             this.addToBot(new EnemyMakeTempCardInDrawPileAction(new EnBeta(), 1, true, true));
         } else {
             this.usedOnce = true;

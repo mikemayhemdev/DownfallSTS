@@ -41,7 +41,7 @@ public class EnGardePower extends AbstractPower implements CloneablePowerInterfa
 
     @Override
     public int onLoseBlock(DamageInfo damageInfo, int i) {
-        if (i >= owner.currentBlock){
+        if (i >= owner.currentBlock) {
             addToBot(new ApplyPowerAction(owner, owner, new NextTurnBlockPower(owner, amount), amount));
             addToBot(new RemoveSpecificPowerAction(owner, owner, this));
         }

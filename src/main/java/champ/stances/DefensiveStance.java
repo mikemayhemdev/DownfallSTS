@@ -14,12 +14,13 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
+import downfall.downfallMod;
 import guardian.vfx.DefensiveModeStanceParticleEffect;
 
 public class DefensiveStance extends AbstractChampStance {
 
     public static final String STANCE_ID = "champ:DefensiveStance";
-    private static long sfxId = -1L;
+    private static final long sfxId = -1L;
 
     public DefensiveStance() {
         this.ID = STANCE_ID;
@@ -100,7 +101,7 @@ public class DefensiveStance extends AbstractChampStance {
 
     @Override
     public void updateAnimation() {
-        if (!(AbstractDungeon.player instanceof ChampChar)) {
+        if (!(AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_CHAMP))) {
             if (!Settings.DISABLE_EFFECTS) {
 
                 this.particleTimer -= Gdx.graphics.getDeltaTime();
@@ -114,7 +115,7 @@ public class DefensiveStance extends AbstractChampStance {
             this.particleTimer2 -= Gdx.graphics.getDeltaTime();
             if (this.particleTimer2 < 0.0F) {
                 this.particleTimer2 = MathUtils.random(0.45F, 0.55F);
-                AbstractDungeon.effectsQueue.add(new StanceAuraEffect(this.STANCE_ID));
+                AbstractDungeon.effectsQueue.add(new StanceAuraEffect(STANCE_ID));
             }
         }
     }

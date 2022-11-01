@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import downfall.downfallMod;
 
 public class MonsterIntentPatch {
     public static AbstractPlayer prevPlayer = null;
@@ -23,12 +24,12 @@ public class MonsterIntentPatch {
     public static class ChangeTargetPatch {
         @SpirePrefixPatch
         public static void Prefix(AbstractMonster __instance) {
-            if (AbstractDungeon.player instanceof CollectorChar && CollectorChar.getCurrentTarget(__instance) instanceof TorchChar) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR) && CollectorChar.getCurrentTarget(__instance) instanceof TorchChar) {
                 if (prevPlayer != null) {
                     System.out.println("BUG - MonsterIntentPatch!");
                 }
                 prevPlayer = AbstractDungeon.player;
-                AbstractDungeon.player = ((CollectorChar) AbstractDungeon.player).torch;
+                AbstractDungeon.player = CollectorChar.torch;
             }
         }
 

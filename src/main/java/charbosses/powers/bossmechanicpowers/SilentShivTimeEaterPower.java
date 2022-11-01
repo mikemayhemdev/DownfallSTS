@@ -9,24 +9,12 @@ import charbosses.actions.common.EnemyMakeTempCardInHandAction;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnShiv;
-import charbosses.cards.green.EnBladeDance;
-import charbosses.cards.green.EnCloakAndDagger;
 import charbosses.cards.green.EnFinisher;
-import charbosses.powers.cardpowers.EnemyAccuracyPower;
-import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.AbstractPower.PowerType;
-import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
-import com.megacrit.cardcrawl.vfx.combat.TimeWarpTurnEndEffect;
-import java.util.Iterator;
 
 public class SilentShivTimeEaterPower extends AbstractBossMechanicPower {
     public static final String POWER_ID = "downfall:SilentShivTimeEaterPower";
@@ -52,7 +40,7 @@ public class SilentShivTimeEaterPower extends AbstractBossMechanicPower {
     //This is used instead of onAfterUseCard so that cards like Streamline, when used at 1-cost, will not trigger this effect
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!usedThisTurn){
+        if (!usedThisTurn) {
             if (!(card instanceof AbstractBossCard) && card.costForTurn >= 2 && card.cost != -1 && !card.purgeOnUse && !card.freeToPlayOnce) {
                 flashWithoutSound();
                 if (AbstractCharBoss.boss != null) {
@@ -69,7 +57,7 @@ public class SilentShivTimeEaterPower extends AbstractBossMechanicPower {
                         }
                     }
                 }
-            usedThisTurn = true;
+                usedThisTurn = true;
             }
             //updateDescription();
         }

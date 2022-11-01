@@ -38,7 +38,7 @@ public class DiscordButton {
 
                 discordButton.DRAW_Y = Settings.HEIGHT / 2 - 200f * Settings.yScale - 70.0F * Settings.scale * __instance.bg.slider;
 
-                if (discordButton.hb.clicked == true) {
+                if (discordButton.hb.clicked) {
                     openWebpage("https://discord.gg/GtDrBX2vpr");
                     discordButton.hb.clicked = false;
                 }

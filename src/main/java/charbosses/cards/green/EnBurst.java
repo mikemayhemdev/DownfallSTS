@@ -1,7 +1,6 @@
 package charbosses.cards.green;
 
 import charbosses.cards.AbstractBossCard;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;

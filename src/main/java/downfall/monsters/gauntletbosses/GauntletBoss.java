@@ -7,9 +7,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.monsters.NeowBoss;
-import downfall.powers.gauntletpowers.OnDeathEveryoneBuffer;
 
 public abstract class GauntletBoss extends AbstractMonster {
 
@@ -53,6 +51,7 @@ public abstract class GauntletBoss extends AbstractMonster {
                 for (AbstractMonster q : AbstractDungeon.getCurrRoom().monsters.monsters) {
                     if (q instanceof GauntletBoss && !q.isDying && !q.isDead) {
                         endCombat = false;
+                        break;
                     }
                 }
                 if (endCombat) {

@@ -1,9 +1,6 @@
 package guardian.cards;
 
 
-import automaton.cards.Batch;
-import automaton.cards.Debug;
-import automaton.cards.Decompile;
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -40,7 +37,7 @@ public class CompilePackage extends AbstractGuardianCard {
 
     private float rotationTimer;
     private int previewIndex;
-    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
+    private final ArrayList<AbstractCard> cardsList = new ArrayList<>();
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -84,9 +81,9 @@ public class CompilePackage extends AbstractGuardianCard {
             upgradeName();
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
-            for(AbstractCard c:cardsList){
+            for (AbstractCard c : cardsList) {
                 c.upgrade();
-            }    
+            }
         }
     }
 

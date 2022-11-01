@@ -3,13 +3,11 @@ package gremlin.relics;
 import basemod.helpers.CardPowerTip;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import gremlin.cards.SupplyScrollCard;
-import gremlin.cards.Ward;
 
 public class SupplyScroll extends AbstractGremlinRelic {
     public static final String ID = getID("SupplyScroll");

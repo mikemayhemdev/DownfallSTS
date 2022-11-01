@@ -13,13 +13,13 @@ import downfall.downfallMod;
 )
 public class AscensionTextPatch {
 
-      private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(downfallMod.makeID("AscensionText"));
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(downfallMod.makeID("AscensionText"));
 
     public static void Prefix(CharacterSelectScreen __instance, SpriteBatch sb) {
         if (EvilModeCharacterSelect.evilMode) {
-           // if (__instance.ascensionLevel == 20) {
+            // if (__instance.ascensionLevel == 20) {
             //    __instance.ascLevelInfoString = uiStrings.TEXT[1];
-             if (__instance.ascensionLevel == 19) {
+            if (__instance.ascensionLevel == 19) {
                 __instance.ascLevelInfoString = uiStrings.TEXT[0];
             } else if (__instance.ascensionLevel == 4) {
                 __instance.ascLevelInfoString = uiStrings.TEXT[3];

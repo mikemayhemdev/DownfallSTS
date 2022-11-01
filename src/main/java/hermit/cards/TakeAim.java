@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.Concentration;
-import hermit.powers.ShadowCloakPower;
 import hermit.powers.TakeAimPower;
 
 import static hermit.HermitMod.loadJokeCardImage;
@@ -39,7 +38,7 @@ public class TakeAim extends AbstractDynamicCard {
     private static final int COST = 1;
 
     private static final int MAGIC_NUMBER = 0;
-	private static final int DO_CONC_UP = 1;
+    private static final int DO_CONC_UP = 1;
 
     // /STAT DECLARATION/
 
@@ -54,19 +53,16 @@ public class TakeAim extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!AbstractDungeon.player.hasPower(TakeAimPower.POWER_ID))
-        {
+        if (!AbstractDungeon.player.hasPower(TakeAimPower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TakeAimPower(p, -1), -1));
         }
 
         if (magicNumber > 0) {
-            if (!AbstractDungeon.player.hasPower(Concentration.POWER_ID))
-            {
+            if (!AbstractDungeon.player.hasPower(Concentration.POWER_ID)) {
                 this.addToBot(new ApplyPowerAction(p, p, new Concentration(p, -1), -1));
             }
         }
     }
-
 
 
     //Upgraded stats.
@@ -74,8 +70,8 @@ public class TakeAim extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-			upgradeMagicNumber(DO_CONC_UP);
-			rawDescription = UPGRADE_DESCRIPTION;
+            upgradeMagicNumber(DO_CONC_UP);
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

@@ -1,7 +1,6 @@
 package charbosses.cards.curses;
 
 import basemod.helpers.CardModifierManager;
-import downfall.util.TextureLoader;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import com.badlogic.gdx.graphics.Color;
@@ -14,7 +13,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.cardmods.EtherealMod;
 import downfall.downfallMod;
-import theHexaghost.HexaMod;
+import downfall.util.TextureLoader;
 
 public class EnHaunted extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Haunted";

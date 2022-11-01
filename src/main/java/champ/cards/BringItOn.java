@@ -1,13 +1,9 @@
 package champ.cards;
 
-import champ.ChampChar;
 import champ.ChampMod;
 import champ.powers.CounterPower;
-import champ.stances.AbstractChampStance;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.stances.NeutralStance;
 
 public class BringItOn extends AbstractChampCard {
 

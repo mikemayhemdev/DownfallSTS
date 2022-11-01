@@ -1,6 +1,5 @@
 package downfall.util;
 
-import basemod.patches.com.megacrit.cardcrawl.saveAndContinue.SaveAndContinue.Save;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -14,7 +13,6 @@ import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.saveAndContinue.SaveAndContinue;
 import downfall.downfallMod;
 import downfall.vfx.CustomAnimatedNPC;
 import downfall.vfx.TopLevelSpeechBubble;
@@ -33,9 +31,9 @@ public class HeartMerchant implements Disposable {
     public static final float DRAW_X;
     public static final float DRAW_Y;
     public Hitbox hb;
-    private ArrayList<AbstractCard> cards1;
-    private ArrayList<AbstractCard> cards2;
-    private ArrayList<String> idleMessages;
+    private final ArrayList<AbstractCard> cards1;
+    private final ArrayList<AbstractCard> cards2;
+    private final ArrayList<String> idleMessages;
     private float speechTimer;
     private boolean saidWelcome;
     private int shopScreen;
@@ -47,36 +45,36 @@ public class HeartMerchant implements Disposable {
     }
 
     public HeartMerchant(float x, float y, int newShopScreen) {
-       // //SlimeboundMod.logger.info("New Heart Merchant made");
+        // //SlimeboundMod.logger.info("New Heart Merchant made");
         this.cards1 = new ArrayList();
         this.cards2 = new ArrayList();
         this.idleMessages = new ArrayList();
         this.speechTimer = 1.5F;
         this.saidWelcome = false;
         this.shopScreen = 1;
-        this.anim = new CustomAnimatedNPC(DRAW_X, DRAW_Y, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true,0);
+        this.anim = new CustomAnimatedNPC(DRAW_X, DRAW_Y, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true, 0);
         AbstractCard c;
-        for(c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.ATTACK, true).makeCopy(); c.color == AbstractCard.CardColor.COLORLESS; c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.ATTACK, true).makeCopy()) {
+        for (c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.ATTACK, true).makeCopy(); c.color == AbstractCard.CardColor.COLORLESS; c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.ATTACK, true).makeCopy()) {
         }
 
         this.cards1.add(c);
 
-        for(c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.ATTACK, true).makeCopy(); Objects.equals(c.cardID, ((AbstractCard)this.cards1.get(this.cards1.size() - 1)).cardID) || c.color == AbstractCard.CardColor.COLORLESS; c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.ATTACK, true).makeCopy()) {
+        for (c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.ATTACK, true).makeCopy(); Objects.equals(c.cardID, this.cards1.get(this.cards1.size() - 1).cardID) || c.color == AbstractCard.CardColor.COLORLESS; c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.ATTACK, true).makeCopy()) {
         }
 
         this.cards1.add(c);
 
-        for(c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.SKILL, true).makeCopy(); c.color == AbstractCard.CardColor.COLORLESS; c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.SKILL, true).makeCopy()) {
+        for (c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.SKILL, true).makeCopy(); c.color == AbstractCard.CardColor.COLORLESS; c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.SKILL, true).makeCopy()) {
         }
 
         this.cards1.add(c);
 
-        for(c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.SKILL, true).makeCopy(); Objects.equals(c.cardID, ((AbstractCard)this.cards1.get(this.cards1.size() - 1)).cardID) || c.color == AbstractCard.CardColor.COLORLESS; c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.SKILL, true).makeCopy()) {
+        for (c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.SKILL, true).makeCopy(); Objects.equals(c.cardID, this.cards1.get(this.cards1.size() - 1).cardID) || c.color == AbstractCard.CardColor.COLORLESS; c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.SKILL, true).makeCopy()) {
         }
 
         this.cards1.add(c);
 
-        for(c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.POWER, true).makeCopy(); c.color == AbstractCard.CardColor.COLORLESS; c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.POWER, true).makeCopy()) {
+        for (c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.POWER, true).makeCopy(); c.color == AbstractCard.CardColor.COLORLESS; c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.POWER, true).makeCopy()) {
         }
 
         this.cards1.add(c);
@@ -102,7 +100,7 @@ public class HeartMerchant implements Disposable {
         this.anim.update();
 
 
-        if (this.hb.hovered){
+        if (this.hb.hovered) {
             this.anim.changeBorderColor(Color.WHITE);
             this.anim.highlighted = true;
         } else {
@@ -120,10 +118,9 @@ public class HeartMerchant implements Disposable {
         }
 
 
-
         this.speechTimer -= Gdx.graphics.getDeltaTime();
         if (this.speechTimer < 0.0F && this.shopScreen == 1) {
-            String msg = (String)this.idleMessages.get(MathUtils.random(0, this.idleMessages.size() - 1));
+            String msg = this.idleMessages.get(MathUtils.random(0, this.idleMessages.size() - 1));
             if (!this.saidWelcome) {
                 this.saidWelcome = true;
                 this.welcomeSfx();
@@ -140,7 +137,6 @@ public class HeartMerchant implements Disposable {
 
             this.speechTimer = MathUtils.random(40.0F, 60.0F);
         }
-
 
 
     }
@@ -171,14 +167,14 @@ public class HeartMerchant implements Disposable {
     public void dispose() {
         if (this.anim != null) {
             this.anim.dispose();
-           // //SlimeboundMod.logger.info("Heart Merchant disposed.");
+            // //SlimeboundMod.logger.info("Heart Merchant disposed.");
         }
 
     }
 
-    public void spawnHitbox(){
+    public void spawnHitbox() {
         this.hb = new Hitbox(500.0F * Settings.scale, 700.0F * Settings.scale);
-        this.hb.move(DRAW_X , DRAW_Y);
+        this.hb.move(DRAW_X, DRAW_Y);
         this.anim.portalRenderActive = true;
     }
 

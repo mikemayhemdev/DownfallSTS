@@ -3,24 +3,14 @@ package charbosses.bosses.Silent.NewAge;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Silent.ArchetypeBaseSilent;
 import charbosses.bosses.Silent.CharBossSilent;
-import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnJAX;
-import charbosses.cards.colorless.EnShiv;
-import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnDecay;
 import charbosses.cards.green.*;
-import charbosses.cards.purple.EnFlyingSleeves;
-import charbosses.powers.bossmechanicpowers.IroncladStatusPower;
 import charbosses.powers.bossmechanicpowers.SilentMirrorImagePower;
-import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
 import charbosses.relics.*;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
 import java.util.ArrayList;
 
@@ -41,7 +31,7 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
         CharBossSilent p = (CharBossSilent) AbstractCharBoss.boss;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SilentMirrorImagePower(p)));
 
-      //  p.spawnImage(false);
+        //  p.spawnImage(false);
     }
 
     public void initialize() {

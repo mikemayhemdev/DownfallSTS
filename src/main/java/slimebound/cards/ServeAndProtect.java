@@ -1,28 +1,19 @@
 package slimebound.cards;
 
 
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.BlurPower;
-import downfall.util.SelectCardsCenteredAction;
 import slimebound.SlimeboundMod;
-import slimebound.actions.TendrilFlailAction;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
-
-import java.util.ArrayList;
 
 
 public class ServeAndProtect extends AbstractSlimeboundCard {
@@ -59,7 +50,6 @@ public class ServeAndProtect extends AbstractSlimeboundCard {
     }
 
 
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         int slimecount = 0;
 
@@ -71,7 +61,7 @@ public class ServeAndProtect extends AbstractSlimeboundCard {
 
         if (slimecount > 0) {
             addToBot(new GainBlockAction(p, slimecount * block));
-            addToBot(new ApplyPowerAction(p,p,new BlurPower(p, slimecount)));
+            addToBot(new ApplyPowerAction(p, p, new BlurPower(p, slimecount)));
         }
 
         for (AbstractOrb o : p.orbs) {

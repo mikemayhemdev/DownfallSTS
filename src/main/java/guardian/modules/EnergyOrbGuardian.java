@@ -5,9 +5,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import guardian.characters.GuardianCharacter;
 
@@ -39,13 +37,13 @@ public class EnergyOrbGuardian extends CustomEnergyOrb {
         }
 
         scale5 += Gdx.graphics.getDeltaTime() * 5.0f * (GuardianCharacter.orbScaleFinal - scale5);
-        if((GuardianCharacter.orbScaleFinal - scale5 < 0.0f && GuardianCharacter.orbScaleFinal - scale5 > -0.01f )
-            || (GuardianCharacter.orbScaleFinal - scale5 > 0.0f && GuardianCharacter.orbScaleFinal - scale5 < 0.01f )){
-             if(GuardianCharacter.orbScaleFinal < 1.0f){
-                 scale5 = 0.7f;
-             }else {
-                 scale5 = 1.0f;
-             }
+        if ((GuardianCharacter.orbScaleFinal - scale5 < 0.0f && GuardianCharacter.orbScaleFinal - scale5 > -0.01f)
+                || (GuardianCharacter.orbScaleFinal - scale5 > 0.0f && GuardianCharacter.orbScaleFinal - scale5 < 0.01f)) {
+            if (GuardianCharacter.orbScaleFinal < 1.0f) {
+                scale5 = 0.7f;
+            } else {
+                scale5 = 1.0f;
+            }
         }
     }
 

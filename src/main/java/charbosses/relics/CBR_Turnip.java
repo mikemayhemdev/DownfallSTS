@@ -1,7 +1,6 @@
 package charbosses.relics;
 
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.Ginger;
 import com.megacrit.cardcrawl.relics.Turnip;
 
 public class CBR_Turnip extends AbstractCharbossRelic {

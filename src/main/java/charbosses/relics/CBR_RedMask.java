@@ -3,10 +3,8 @@ package charbosses.relics;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.BagOfMarbles;
 import com.megacrit.cardcrawl.relics.RedMask;
 
 public class CBR_RedMask extends AbstractCharbossRelic {
@@ -32,5 +30,5 @@ public class CBR_RedMask extends AbstractCharbossRelic {
     public AbstractRelic makeCopy() {
         return new CBR_RedMask();
     }
-    
+
 }

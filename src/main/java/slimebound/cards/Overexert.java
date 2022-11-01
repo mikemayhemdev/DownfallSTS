@@ -16,7 +16,6 @@ import slimebound.actions.CommandAction;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.LoseSlimesPower;
 import slimebound.powers.PotencyPower;
-import sneckomod.SneckoMod;
 
 
 public class Overexert extends AbstractSlimeboundCard {

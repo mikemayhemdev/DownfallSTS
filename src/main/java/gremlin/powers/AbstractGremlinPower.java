@@ -1,20 +1,19 @@
 package gremlin.powers;
 
-import java.util.ArrayList;
-
+import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
-import basemod.ReflectionHacks;
+import java.util.ArrayList;
 
 public abstract class AbstractGremlinPower extends AbstractPower {
-    private Color renderColor = null;
+    private final Color renderColor = null;
 
-    static String getID(String ID){
-        return "Gremlin:"+ID;
+    static String getID(String ID) {
+        return "Gremlin:" + ID;
     }
 
     @Override
@@ -28,14 +27,15 @@ public abstract class AbstractGremlinPower extends AbstractPower {
         if (img != null) {
             sb.draw(img, x - 12.0f, y - 12.0f, 16.0f, 16.0f, 32.0f, 32.0f, Settings.scale, Settings.scale, 0.0f, 0, 0, 32, 32, false, false);
         } else {
-            sb.draw(region48, x - (float)region48.packedWidth / 2.0f, y - (float)region48.packedHeight / 2.0f, (float)region48.packedWidth / 2.0f, (float)region48.packedHeight / 2.0f, region48.packedWidth, region48.packedHeight, Settings.scale, Settings.scale, 0.0f);
+            sb.draw(region48, x - (float) region48.packedWidth / 2.0f, y - (float) region48.packedHeight / 2.0f, (float) region48.packedWidth / 2.0f, (float) region48.packedHeight / 2.0f, region48.packedWidth, region48.packedHeight, Settings.scale, Settings.scale, 0.0f);
         }
         @SuppressWarnings("unchecked")
-        ArrayList<AbstractGameEffect> effectList = (ArrayList<AbstractGameEffect>)ReflectionHacks.getPrivate(this, AbstractPower.class, "effect");
+        ArrayList<AbstractGameEffect> effectList = ReflectionHacks.getPrivate(this, AbstractPower.class, "effect");
         for (AbstractGameEffect e : effectList) {
             e.render(sb, x, y);
         }
     }
 
-    public void onGremlinSwap(){}
+    public void onGremlinSwap() {
+    }
 }

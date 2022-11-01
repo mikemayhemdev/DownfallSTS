@@ -1,6 +1,6 @@
 package downfall.powers.neowpowers;
 
-import charbosses.bosses.Watcher.CharBossWatcher;
+import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -8,19 +8,18 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.GainStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;import downfall.downfallMod; import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import downfall.downfallMod;
 import downfall.util.TextureLoader;
 
 public class BlasphemersDemise extends AbstractBossMechanicPower {
     public static final String POWER_ID = downfallMod.makeID("NeowBlasphemersDemise");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     private static final Texture tex84 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowWatcher284.png"));
     private static final Texture tex32 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowWatcher232.png"));
-    private boolean firstTurn;
+    private final boolean firstTurn;
 
 
     public BlasphemersDemise(final AbstractCreature owner, final int amount) {
@@ -52,7 +51,7 @@ public class BlasphemersDemise extends AbstractBossMechanicPower {
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         this.flash();
-        stackPower( damageAmount * -1);
+        stackPower(damageAmount * -1);
         this.updateDescription();
         return damageAmount;
     }

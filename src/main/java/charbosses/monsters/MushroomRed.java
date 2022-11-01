@@ -1,6 +1,5 @@
-
 package charbosses.monsters;
-import com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction;
+
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -29,16 +28,16 @@ public class MushroomRed extends AbstractMonster {
     @Override
     public void takeTurn() {
         state.setAnimation(0, "Rawr", false);
-       // state.setTimeScale(1.6F);
+        // state.setTimeScale(1.6F);
         state.addAnimation(0, "Idle", true, 0.0F);
-       // state.setTimeScale(1.0F);
+        // state.setTimeScale(1.0F);
         AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, damage.get(0)));
 
     }
 
     @Override
     protected void getMove(int i) {
-        setMove((byte)0, Intent.ATTACK, damage.get(0).base);
+        setMove((byte) 0, Intent.ATTACK, damage.get(0).base);
 
     }
 }

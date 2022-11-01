@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 
-
 public class EnemyPenNibPower extends AbstractPower {
     public static final String POWER_ID = "Pen Nib";
     private static final PowerStrings powerStrings;

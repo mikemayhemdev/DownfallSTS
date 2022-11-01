@@ -16,8 +16,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.Necronomicon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.CardGlowBorder;
 import downfall.monsters.NeowBossFinal;
@@ -27,10 +25,10 @@ import downfall.powers.neowpowers.UnbiasedCognition;
 //Implementation taken from MintySpire
 @SpirePatch(clz = AbstractCard.class, method = "renderEnergy")
 public class HighlightCards {
-    private static Texture shivTexture = new Texture(Gdx.files.internal("downfallResources/images/powers/infinite_blades_marker.png"));
-    private static TextureAtlas.AtlasRegion shivRegion = new TextureAtlas.AtlasRegion(shivTexture, 0, 0, shivTexture.getWidth(), shivTexture.getHeight());
-    private static Texture biasTexture = new Texture(Gdx.files.internal("downfallResources/images/powers/inverse_bias_marker.png"));
-    private static TextureAtlas.AtlasRegion biasRegion = new TextureAtlas.AtlasRegion(biasTexture, 0, 0, biasTexture.getWidth(), biasTexture.getHeight());
+    private static final Texture shivTexture = new Texture(Gdx.files.internal("downfallResources/images/powers/infinite_blades_marker.png"));
+    private static final TextureAtlas.AtlasRegion shivRegion = new TextureAtlas.AtlasRegion(shivTexture, 0, 0, shivTexture.getWidth(), shivTexture.getHeight());
+    private static final Texture biasTexture = new Texture(Gdx.files.internal("downfallResources/images/powers/inverse_bias_marker.png"));
+    private static final TextureAtlas.AtlasRegion biasRegion = new TextureAtlas.AtlasRegion(biasTexture, 0, 0, biasTexture.getWidth(), biasTexture.getHeight());
 
     //TODO Work out an elegant way for the glow text to be slightly larger than the original, while maintaining the same origin
     @SpirePostfixPatch
@@ -83,9 +81,7 @@ public class HighlightCards {
                 if (!NeowBossFinal.neowboss.isDeadOrEscaped()) {
                     if (NeowBossFinal.neowboss.hasPower(BagOfKnives.POWER_ID)) {
                         if (!((BagOfKnives) NeowBossFinal.neowboss.getPower(BagOfKnives.POWER_ID)).usedThisTurn) {
-                            if (!(c instanceof AbstractBossCard) && c.cost != -1 && (c.costForTurn >= 2) && !c.purgeOnUse) {
-                                return true;
-                            }
+                            return !(c instanceof AbstractBossCard) && c.cost != -1 && (c.costForTurn >= 2) && !c.purgeOnUse;
                         }
                     }
                 }
@@ -113,9 +109,7 @@ public class HighlightCards {
             if (NeowBossFinal.neowboss != null) {
                 if (!NeowBossFinal.neowboss.isDeadOrEscaped()) {
                     if (NeowBossFinal.neowboss.hasPower(UnbiasedCognition.POWER_ID)) {
-                        if (!(c instanceof AbstractBossCard) && c.type == AbstractCard.CardType.POWER) {
-                            return true;
-                        }
+                        return !(c instanceof AbstractBossCard) && c.type == AbstractCard.CardType.POWER;
                     }
                 }
             }

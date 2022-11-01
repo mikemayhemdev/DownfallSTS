@@ -17,7 +17,7 @@ public class DefectCore extends AbstractCollectibleCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new ChannelAction(new Plasma()));
-        applyToSelf(new ChaoticFlux(p,magicNumber));
+        applyToSelf(new ChaoticFlux(p, magicNumber));
     }
 
     @Override

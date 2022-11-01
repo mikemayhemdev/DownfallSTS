@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import gremlin.powers.GremlinPower;
 import gremlin.powers.SneakyGremlinPower;
 
-public class SneakyGremlin extends GremlinStandby{
+public class SneakyGremlin extends GremlinStandby {
     public static final int DAMAGE = 3;
 
     public SneakyGremlin(int hp) {

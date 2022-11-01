@@ -9,9 +9,9 @@ import downfall.patches.GoldSoundPatch;
 import downfall.vfx.ThrowGoldEffect;
 
 public class MerchantThrowGoldAction extends AbstractGameAction {
-    private int goldAmount;
+    private final int goldAmount;
     private AbstractGameEffect effect;
-    private boolean waitForEffect;
+    private final boolean waitForEffect;
 
     public MerchantThrowGoldAction(AbstractCreature target, AbstractCreature source, int goldAmount, boolean waitForEffect) {
         setValues(target, source, goldAmount);

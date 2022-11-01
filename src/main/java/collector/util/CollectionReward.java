@@ -20,8 +20,8 @@ public class CollectionReward extends RewardItem {
     public static final String ID = CollectorMod.makeID("CollectionReward");
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
 
-    private float REWARD_TEXT_X = 833.0F * Settings.scale;
-    private ArrayList<AbstractGameEffect> effects = new ArrayList<>();
+    private final float REWARD_TEXT_X = 833.0F * Settings.scale;
+    private final ArrayList<AbstractGameEffect> effects = new ArrayList<>();
     public static ArrayList<AbstractCard> collectPool = new ArrayList<>();
 
     public CollectionReward() {

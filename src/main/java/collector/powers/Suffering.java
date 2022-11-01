@@ -39,13 +39,14 @@ public class Suffering extends AbstractPower implements CloneablePowerInterface,
     public AbstractPower makeCopy() {
         return new Suffering(amount, owner);
     }
+
     @Override
     public boolean onReceivePower(AbstractPower abstractPower, AbstractCreature abstractCreature, AbstractCreature abstractCreature1) {
-        if (CollectorMod.AfflictionMatch(abstractPower.ID) && !abstractPower.ID.equals(CollectorMod.Afflictions.get(5))){
+        if (CollectorMod.AfflictionMatch(abstractPower.ID) && !abstractPower.ID.equals(CollectorMod.Afflictions.get(5))) {
             this.amount += 1;
         }
-        if (abstractPower.ID.equals(this.ID)){
-            addToBot(new LoseHPAction(owner,owner,this.amount));
+        if (abstractPower.ID.equals(this.ID)) {
+            addToBot(new LoseHPAction(owner, owner, this.amount));
         }
 
         return true;

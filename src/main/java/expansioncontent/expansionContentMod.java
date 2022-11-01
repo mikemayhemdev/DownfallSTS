@@ -12,16 +12,10 @@ Daily/Custom Run modifiers.
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
 import basemod.helpers.RelicType;
-import basemod.interfaces.EditCardsSubscriber;
-import basemod.interfaces.EditRelicsSubscriber;
-import basemod.interfaces.OnPowersModifiedSubscriber;
-import basemod.interfaces.PostInitializeSubscriber;
-import basemod.interfaces.PostUpdateSubscriber;
-import champ.cards.AbstractChampCard;
+import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -29,7 +23,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -97,7 +90,7 @@ public class expansionContentMod implements
                 "champResources/images/512/bg_attack_colorless.png", "champResources/images/512/bg_skill_colorless.png",
                 "champResources/images/512/bg_power_colorless.png", "champResources/images/512/card_champ_orb.png",
                 "champResources/images/1024/bg_attack_colorless.png", "champResources/images/1024/bg_skill_colorless.png",
-                "champResources/images/1024/bg_power_colorless.png","champResources/images/1024/card_champ_orb.png");
+                "champResources/images/1024/bg_power_colorless.png", "champResources/images/1024/card_champ_orb.png");
     }
 
     public static void loadJokeCardImage(AbstractCard card, String img) {
@@ -206,7 +199,8 @@ public class expansionContentMod implements
     public void receiveEditCards() {
         try {
             autoAddCards();
-        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
+        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException |
+                 ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }

@@ -1,19 +1,14 @@
 package charbosses.cards.purple;
 
 import charbosses.cards.AbstractBossCard;
-import charbosses.powers.cardpowers.EnemyDevotionPower;
 import charbosses.powers.cardpowers.EnemyMasterRealityPower;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.DevotionEffect;
 
 import java.util.ArrayList;
 

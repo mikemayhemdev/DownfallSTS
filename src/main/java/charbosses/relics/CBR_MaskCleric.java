@@ -20,7 +20,7 @@ public class CBR_MaskCleric extends AbstractCharbossRelic {
     }
 
     public void onEquip() {
-        int random = AbstractDungeon.cardRng.random(6,8);
+        int random = AbstractDungeon.cardRng.random(6, 8);
         this.HP = random * AbstractDungeon.actNum;
         this.owner.increaseMaxHp(this.HP, true);
 

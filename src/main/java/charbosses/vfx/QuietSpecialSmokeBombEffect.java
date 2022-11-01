@@ -13,10 +13,10 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 public class QuietSpecialSmokeBombEffect extends AbstractGameEffect {
     private float x;
     private float y;
-    private float aV;
-    private float startDur;
-    private float targetScale;
-    private AtlasRegion img;
+    private final float aV;
+    private final float startDur;
+    private final float targetScale;
+    private final AtlasRegion img;
 
     public QuietSpecialSmokeBombEffect(float x, float y) {
         this.color = new Color(0.0F, 0.0F, 0.0F, 1.0F);
@@ -32,8 +32,8 @@ public class QuietSpecialSmokeBombEffect extends AbstractGameEffect {
         this.targetScale = MathUtils.random(0.2F, 0.3F);
 
         this.startDur = this.duration;
-        this.x = x - (float)this.img.packedWidth / 2.0F;
-        this.y = y - (float)this.img.packedHeight / 2.0F;
+        this.x = x - (float) this.img.packedWidth / 2.0F;
+        this.y = y - (float) this.img.packedHeight / 2.0F;
         this.scale = 0.01F;
         this.rotation = MathUtils.random(360.0F);
         this.aV = MathUtils.random(-250.0F, 250.0F);
@@ -57,7 +57,7 @@ public class QuietSpecialSmokeBombEffect extends AbstractGameEffect {
 
     public void render(SpriteBatch sb) {
         sb.setColor(this.color);
-        sb.draw(this.img, this.x, this.y, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale, this.scale, this.rotation);
+        sb.draw(this.img, this.x, this.y, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale, this.scale, this.rotation);
     }
 
     public void dispose() {

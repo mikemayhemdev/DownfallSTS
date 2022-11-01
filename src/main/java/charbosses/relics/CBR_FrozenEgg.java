@@ -18,7 +18,7 @@ public class CBR_FrozenEgg extends AbstractCharbossRelic {
 
     @Override
     public void onTrigger() {
-        numCards ++;
+        numCards++;
         this.description = this.getUpdatedDescription();
         this.refreshDescription();
     }

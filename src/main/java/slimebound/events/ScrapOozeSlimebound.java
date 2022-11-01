@@ -1,7 +1,6 @@
 package slimebound.events;
 
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -59,11 +58,11 @@ public class ScrapOozeSlimebound extends AbstractImageEvent {
         Collections.shuffle(playerUncommonRelics);
 
 
-            if (playerCommonRelics.size() > 0) {
-                this.relicOffered = playerCommonRelics.get(0);
-            } else if (playerUncommonRelics.size() > 0) {
-                this.relicOffered = playerUncommonRelics.get(0);
-            }
+        if (playerCommonRelics.size() > 0) {
+            this.relicOffered = playerCommonRelics.get(0);
+        } else if (playerUncommonRelics.size() > 0) {
+            this.relicOffered = playerUncommonRelics.get(0);
+        }
 
 
         if (this.relicOffered != null) {
@@ -84,11 +83,11 @@ public class ScrapOozeSlimebound extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screenNum) {
+        switch (this.screenNum) {
             case 0:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
-                        AbstractDungeon.player.damage(new DamageInfo((AbstractCreature)null, this.dmg));
+                        AbstractDungeon.player.damage(new DamageInfo(null, this.dmg));
                         CardCrawlGame.sound.play("ATTACK_POISON");
                         this.totalDamageDealt += this.dmg;
                         int random = AbstractDungeon.miscRng.random(0, 99);
@@ -99,7 +98,7 @@ public class ScrapOozeSlimebound extends AbstractImageEvent {
                             this.imageEventText.clearAllDialogs();
                             this.imageEventText.setDialogOption(OPTIONS[3]);
                             this.screenNum = 1;
-                            AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F, r);
+                            AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, r);
                         } else {
                             this.imageEventText.updateBodyText(FAIL_MSG);
                             this.relicObtainChance += 10;

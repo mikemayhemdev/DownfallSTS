@@ -14,7 +14,7 @@ import downfall.downfallMod;
 )
 public class CampfireOptionTextPatch {
 
-    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(downfallMod.makeID("AscensionText"));
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(downfallMod.makeID("AscensionText"));
 
     public static void Postfix(RecallOption __instance) {
         if (EvilModeCharacterSelect.evilMode) {

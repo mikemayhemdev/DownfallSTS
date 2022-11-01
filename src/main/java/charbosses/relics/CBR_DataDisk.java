@@ -1,17 +1,14 @@
 package charbosses.relics;
 
-import charbosses.actions.orb.EnemyChannelAction;
-import charbosses.orbs.EnemyLightning;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.CrackedCore;
 import com.megacrit.cardcrawl.relics.DataDisk;
 
 public class CBR_DataDisk extends AbstractCharbossRelic {
     public static final String ID = "DataDisk";
+
     public CBR_DataDisk() {
         super(new DataDisk());
     }

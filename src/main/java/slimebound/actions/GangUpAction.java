@@ -12,17 +12,16 @@ import downfall.downfallMod;
 import slimebound.SlimeboundMod;
 import slimebound.orbs.AttackSlime;
 import slimebound.orbs.SpawnedSlime;
-import slimebound.patches.SlimeboundEnum;
 import slimebound.powers.DuplicatedFormNoHealPower;
 
 
 public class GangUpAction extends AbstractGameAction {
-    private AbstractOrb orbType;
+    private final AbstractOrb orbType;
     private boolean SelfDamage = true;
     private boolean upgraded = false;
-    private int currentAmount;
-    private int upgradedamount;
-    private int count;
+    private final int currentAmount;
+    private final int upgradedamount;
+    private final int count;
     private boolean firstcast = true;
 
 

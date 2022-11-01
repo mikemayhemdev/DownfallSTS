@@ -22,7 +22,7 @@ public class EnemyShowCardAndAddToHandEffect extends AbstractGameEffect {
         PADDING = 25.0f * Settings.scale;
     }
 
-    private AbstractCard card;
+    private final AbstractCard card;
 
     public EnemyShowCardAndAddToHandEffect(final AbstractCard card, final float offsetX, final float offsetY) {
         this.card = card;
@@ -45,8 +45,7 @@ public class EnemyShowCardAndAddToHandEffect extends AbstractGameEffect {
         ArrayList<AbstractCard> group = AbstractCharBoss.boss.hand.group;
         if (card.name.equals("Smite")) {
             group.add(group.size(), card);
-        }
-        else {
+        } else {
             group.add(0, card);
         }
         card.triggerWhenCopied();

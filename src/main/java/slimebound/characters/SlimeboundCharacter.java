@@ -1,9 +1,5 @@
 package slimebound.characters;
 
-import com.megacrit.cardcrawl.helpers.*;
-import downfall.downfallMod;
-import reskinContent.patches.CharacterSelectScreenPatches;
-import reskinContent.reskinContent;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -17,15 +13,18 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.ScreenShake;
+import com.megacrit.cardcrawl.helpers.SlimeAnimListener;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import guardian.GuardianMod;
-import slimebound.SlimeboundMod;
+import downfall.downfallMod;
+import reskinContent.patches.CharacterSelectScreenPatches;
 import slimebound.cards.*;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.patches.SlimeboundEnum;
 import slimebound.relics.AbsorbEndCombat;
 
 import java.util.ArrayList;
@@ -35,13 +34,13 @@ import java.util.List;
 public class SlimeboundCharacter extends CustomPlayer {
     public static final String ID = "Slimebound";
     private static final CharacterStrings charStrings = CardCrawlGame.languagePack.getCharacterString(ID);
-    public static final String NAME = charStrings.NAMES[0];;
-    public static final String DESCRIPTION = charStrings.TEXT[0];;
+    public static final String NAME = charStrings.NAMES[0];
+    public static final String DESCRIPTION = charStrings.TEXT[0];
     public static final String[] orbTextures = {"slimeboundResources/SlimeboundImages/char/orb/layer1.png", "slimeboundResources/SlimeboundImages/char/orb/layer2.png", "slimeboundResources/SlimeboundImages/char/orb/layer3.png", "slimeboundResources/SlimeboundImages/char/orb/layer4.png", "slimeboundResources/SlimeboundImages/char/orb/layer5.png", "slimeboundResources/SlimeboundImages/char/orb/layer6.png", "slimeboundResources/SlimeboundImages/char/orb/layer1d.png", "slimeboundResources/SlimeboundImages/char/orb/layer2d.png", "slimeboundResources/SlimeboundImages/char/orb/layer3d.png", "slimeboundResources/SlimeboundImages/char/orb/layer4d.png", "slimeboundResources/SlimeboundImages/char/orb/layer5d.png"};
 
     public static Color cardRenderColor = new Color(0.0F, 0.1F, 0.0F, 1.0F);
 
-    private static float mainRenderYOffset = 75 * Settings.scale;
+    private static final float mainRenderYOffset = 75 * Settings.scale;
 
 
     public float renderscale = 1.2F;
@@ -54,15 +53,15 @@ public class SlimeboundCharacter extends CustomPlayer {
     public float x = (float) Settings.WIDTH * 0.1F;
     public boolean puddleForm;
 
-    private String atlasURL = "slimeboundResources/SlimeboundImages/char/skeleton.atlas";
-    private String jsonURL = "slimeboundResources/SlimeboundImages/char/skeleton.json";
-    private String jsonURLPuddle = "slimeboundResources/SlimeboundImages/char/skeletonPuddle.json";
+    private final String atlasURL = "slimeboundResources/SlimeboundImages/char/skeleton.atlas";
+    private final String jsonURL = "slimeboundResources/SlimeboundImages/char/skeleton.json";
+    private final String jsonURLPuddle = "slimeboundResources/SlimeboundImages/char/skeletonPuddle.json";
 
-    private String atlasURL2 = "reskinContent/img/Slimebound/Slaifu/animation/TheSlimeBossWaifuDownFall.atlas";
-    private String atlasURLPuddle2 = "reskinContent/img/Slimebound/Slaifu/animation/Slime_acid_char_puddle.atlas";
+    private final String atlasURL2 = "reskinContent/img/Slimebound/Slaifu/animation/TheSlimeBossWaifuDownFall.atlas";
+    private final String atlasURLPuddle2 = "reskinContent/img/Slimebound/Slaifu/animation/Slime_acid_char_puddle.atlas";
 
-    private String jsonURL2 = "reskinContent/img/Slimebound/Slaifu/animation/TheSlimeBossWaifuDownFall.json";
-    private String jsonURLPuddle2 = "reskinContent/img/Slimebound/Slaifu/animation/Slime_acid_char_puddle.json";
+    private final String jsonURL2 = "reskinContent/img/Slimebound/Slaifu/animation/TheSlimeBossWaifuDownFall.json";
+    private final String jsonURLPuddle2 = "reskinContent/img/Slimebound/Slaifu/animation/Slime_acid_char_puddle.json";
 
 
     private String currentJson = jsonURL;
@@ -71,22 +70,21 @@ public class SlimeboundCharacter extends CustomPlayer {
     private String currentJson2 = jsonURL2;
 
     public SlimeboundCharacter(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "slimeboundResources/SlimeboundImages/char/orb/vfx.png", (String) null, (String) null);
+        super(name, setClass, orbTextures, "slimeboundResources/SlimeboundImages/char/orb/vfx.png", null, (String) null);
 
-        if(CharacterSelectScreenPatches.characters[0].reskinCount == 1){
+        if (CharacterSelectScreenPatches.characters[0].reskinCount == 1) {
             this.initializeClass(null,
                     CharacterSelectScreenPatches.characters[1].skins[CharacterSelectScreenPatches.characters[1].reskinCount].SHOULDER1,
                     CharacterSelectScreenPatches.characters[1].skins[CharacterSelectScreenPatches.characters[1].reskinCount].SHOULDER2,
                     CharacterSelectScreenPatches.characters[1].skins[CharacterSelectScreenPatches.characters[1].reskinCount].CORPSE,
                     this.getLoadout(), 0.0F, 0.0F, 300.0F, 180.0F, new EnergyManager(3));
-        }else {
+        } else {
             this.initializeClass(null,
                     CharacterSelectScreenPatches.characters[1].skins[CharacterSelectScreenPatches.characters[1].reskinCount].SHOULDER1,
                     CharacterSelectScreenPatches.characters[1].skins[CharacterSelectScreenPatches.characters[1].reskinCount].SHOULDER2,
                     CharacterSelectScreenPatches.characters[1].skins[CharacterSelectScreenPatches.characters[1].reskinCount].CORPSE,
                     this.getLoadout(), 0.0F, 0.0F, 320.0F, 200.0F, new EnergyManager(3));
         }
-
 
 
 //        if (CharacterSelectScreenPatches.characters[1].reskinCount == 1 && CharacterSelectScreenPatches.characters[1].reskinUnlock) {
@@ -209,7 +207,7 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo(NAME, DESCRIPTION,65, 65, 3, 99, 5, this,
+        return new CharSelectInfo(NAME, DESCRIPTION, 65, 65, 3, 99, 5, this,
 
                 getStartingRelics(), getStartingDeck(), false);
     }

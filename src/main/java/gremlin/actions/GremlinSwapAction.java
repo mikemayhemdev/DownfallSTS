@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
+import downfall.downfallMod;
 import gremlin.GremlinMod;
 import gremlin.characters.GremlinCharacter;
 import gremlin.orbs.GremlinStandby;
@@ -19,7 +20,7 @@ import java.util.Collections;
 import java.util.Random;
 
 public class GremlinSwapAction extends AbstractGameAction {
-    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("Gremlin:Swap");
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("Gremlin:Swap");
 
     private GremlinStandby gremlin;
     private boolean fromRelic = false;
@@ -39,12 +40,12 @@ public class GremlinSwapAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (!(AbstractDungeon.player instanceof GremlinCharacter)) {
+        if (!(AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN))) {
             this.isDone = true;
             return;
         }
-        if(AbstractDungeon.player.hasPower(GremlinNobPower.POWER_ID)){
-            if(!fromRelic) {
+        if (AbstractDungeon.player.hasPower(GremlinNobPower.POWER_ID)) {
+            if (!fromRelic) {
                 Random r = new Random();
                 int roll = r.nextInt(3);
                 if (roll == 0) {
@@ -61,19 +62,18 @@ public class GremlinSwapAction extends AbstractGameAction {
             return;
         }
         int position = -1;
-        if(this.gremlin == null){
-            for(int i=0;i<AbstractDungeon.player.maxOrbs;i++){
-                if(AbstractDungeon.player.orbs.get(i) instanceof GremlinStandby){
+        if (this.gremlin == null) {
+            for (int i = 0; i < AbstractDungeon.player.maxOrbs; i++) {
+                if (AbstractDungeon.player.orbs.get(i) instanceof GremlinStandby) {
                     position = i;
                     this.gremlin = (GremlinStandby) AbstractDungeon.player.orbs.get(i);
                     break;
                 }
             }
-        }
-        else{
-            for(int i=0;i<AbstractDungeon.player.maxOrbs;i++){
-                if(AbstractDungeon.player.orbs.get(i) instanceof GremlinStandby){
-                    if(((GremlinStandby) AbstractDungeon.player.orbs.get(i)).assetFolder.equals(this.gremlin.assetFolder)) {
+        } else {
+            for (int i = 0; i < AbstractDungeon.player.maxOrbs; i++) {
+                if (AbstractDungeon.player.orbs.get(i) instanceof GremlinStandby) {
+                    if (((GremlinStandby) AbstractDungeon.player.orbs.get(i)).assetFolder.equals(this.gremlin.assetFolder)) {
                         position = i;
                         this.gremlin = (GremlinStandby) AbstractDungeon.player.orbs.get(i);
                         break;
@@ -81,7 +81,7 @@ public class GremlinSwapAction extends AbstractGameAction {
                 }
             }
         }
-        if(position < 0){
+        if (position < 0) {
             this.isDone = true;
             return;
         }
@@ -103,7 +103,7 @@ public class GremlinSwapAction extends AbstractGameAction {
         AbstractDungeon.actionManager.addToTop(
                 new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, gremlin.getPower(), 1));
 
-        if(gremlinOrb.hp > 0) {
+        if (gremlinOrb.hp > 0) {
             AbstractDungeon.actionManager.addToTop(new ChannelAction(gremlinOrb));
         } else {
             GremlinMod.onGremlinDeath();

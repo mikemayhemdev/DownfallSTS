@@ -60,8 +60,8 @@ import java.util.*;
 import java.util.function.Predicate;
 
 import static com.megacrit.cardcrawl.cards.AbstractCard.CardType.*;
-import static downfall.patches.EvilModeCharacterSelect.evilMode;
 import static downfall.downfallMod.sneckoNoModCharacters;
+import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
@@ -318,7 +318,8 @@ public class SneckoMod implements
         BaseMod.addDynamicVariable(new SneckoSilly());
         try {
             autoAddCards();
-        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
+        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException |
+                 ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
         for (AbstractCard.CardColor p : AbstractCard.CardColor.values()) {
@@ -495,7 +496,7 @@ public class SneckoMod implements
 
     @Override
     public void receiveStartGame() {
-        if (!CardCrawlGame.loadingSave  || (validColors.isEmpty() && !pureSneckoMode)) {
+        if (!CardCrawlGame.loadingSave || (validColors.isEmpty() && !pureSneckoMode)) {
             openedStarterScreen = false;
             validColors = new ArrayList<>();
         }
@@ -504,7 +505,7 @@ public class SneckoMod implements
     public static int choosingCharacters = -1;
 
     public static CardGroup colorChoices;
-    
+
     public static String getClassFromColor(AbstractCard.CardColor c) {
         for (AbstractPlayer p : CardCrawlGame.characterManager.getAllCharacters()) {
             if (p.getCardColor() == c) {

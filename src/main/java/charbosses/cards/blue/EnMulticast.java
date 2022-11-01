@@ -10,12 +10,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import java.util.ArrayList;
-
 public class EnMulticast extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Multi-Cast";
     private static final CardStrings cardStrings;
-    private int cost;
+    private final int cost;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings("Multi-Cast");

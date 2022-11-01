@@ -4,7 +4,6 @@ package downfall.events;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.colorless.RitualDagger;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -28,13 +27,13 @@ public class TheNest_Evil extends AbstractImageEvent {
 
     private CUR_SCREEN screen;
 
-    private AbstractCard dagger;
+    private final AbstractCard dagger;
 
     public TheNest_Evil() {
         super(NAME, DESCRIPTIONS[0], "images/events/theNest.jpg");
         this.noCardsInRewards = true;
         AbstractDungeon.getCurrRoom().rewards.clear();
-        if (AbstractDungeon.player.hasRelic(BrokenWingStatue.ID) || BrokenWingStatue.GIVEN){
+        if (AbstractDungeon.player.hasRelic(BrokenWingStatue.ID) || BrokenWingStatue.GIVEN) {
             if ((AbstractDungeon.player.hasRelic(BrokenWingStatue.ID))) {
                 this.imageEventText.setDialogOption(OPTIONS[0]);
             } else {
@@ -52,7 +51,7 @@ public class TheNest_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screen) {
+        switch (this.screen) {
             case INTRO:
                 switch (buttonPressed) {
                     case 0:
@@ -65,11 +64,11 @@ public class TheNest_Evil extends AbstractImageEvent {
                     case 1:
                         logMetricObtainCardAndDamage(ID, "Stole from Cult", dagger, 6);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
-                        AbstractDungeon.player.damage(new DamageInfo((AbstractCreature)null, 6, DamageInfo.DamageType.HP_LOSS));
+                        AbstractDungeon.player.damage(new DamageInfo(null, 6, DamageInfo.DamageType.HP_LOSS));
 
                         CardCrawlGame.sound.play("ATTACK_DAGGER_6");
                         CardCrawlGame.sound.play("BLOOD_SPLAT");
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.dagger, (float)Settings.WIDTH * 0.3F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.dagger, (float) Settings.WIDTH * 0.3F, (float) Settings.HEIGHT / 2.0F));
                         this.screen = CUR_SCREEN.COMPLETE;
                         this.imageEventText.updateDialogOption(0, OPTIONS[5]);
                         this.imageEventText.clearRemainingOptions();
@@ -90,7 +89,7 @@ public class TheNest_Evil extends AbstractImageEvent {
                 break;
             case GIFTSTAGE1:
                 logMetricObtainCard(ID, "Performed Ritual Sacrifice", dagger);
-                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.dagger, (float)Settings.WIDTH * 0.3F, (float)Settings.HEIGHT / 2.0F));
+                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.dagger, (float) Settings.WIDTH * 0.3F, (float) Settings.HEIGHT / 2.0F));
                 this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
                 this.imageEventText.clearAllDialogs();
                 this.imageEventText.setDialogOption(OPTIONS[2]);
@@ -107,7 +106,7 @@ public class TheNest_Evil extends AbstractImageEvent {
             case GIFTSTAGE3:
                 this.dagger.upgrade();
                 AbstractDungeon.effectsQueue.add(new ShowCardBrieflyEffect(this.dagger.makeStatEquivalentCopy()));
-                AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
 
                 this.imageEventText.updateBodyText(DESCRIPTIONS[6]);
                 this.imageEventText.clearAllDialogs();

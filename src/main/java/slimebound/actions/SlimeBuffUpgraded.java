@@ -11,8 +11,8 @@ public class SlimeBuffUpgraded extends AbstractGameAction {
     private static final float DURATION = 0.01F;
     private static final float POST_ATTACK_WAIT_DUR = 0.2F;
     private AbstractCreature owner;
-    private int amount;
-    private SpawnedSlime slime;
+    private final int amount;
+    private final SpawnedSlime slime;
 
     public SlimeBuffUpgraded(Integer amount, SpawnedSlime o) {
 

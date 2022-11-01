@@ -10,31 +10,25 @@ public class getMiscPatch {
     @SpirePatch(
             clz = CardLibrary.class,
             method = "getCopy",
-            paramtypez = { String.class, int.class, int.class }
+            paramtypez = {String.class, int.class, int.class}
     )
-    public static class MiscPatch
-    {
+    public static class MiscPatch {
         @SpireInsertPatch(
                 locator = Locator.class,
-                localvars = { "retVal" }
+                localvars = {"retVal"}
         )
-        public static void LoadMisc(String key, int upgradeTime, int misc, AbstractCard retVal)
-        {
-            if (retVal.cardID.equals(GoldenBullet.ID))
-            {
-                if (misc != 0)
-                {
+        public static void LoadMisc(String key, int upgradeTime, int misc, AbstractCard retVal) {
+            if (retVal.cardID.equals(GoldenBullet.ID)) {
+                if (misc != 0) {
                     retVal.updateCost(-misc);
                     retVal.initializeDescription();
                 }
             }
         }
 
-        private static class Locator extends SpireInsertLocator
-        {
+        private static class Locator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception
-            {
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
                 Matcher finalMatcher = new Matcher.FieldAccessMatcher(AbstractCard.class, "misc");
                 return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }

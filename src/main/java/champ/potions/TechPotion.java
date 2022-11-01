@@ -4,7 +4,6 @@ package champ.potions;
 import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
 import champ.ChampMod;
-import champ.actions.DiscoverOpenerAction;
 import champ.stances.AbstractChampStance;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;

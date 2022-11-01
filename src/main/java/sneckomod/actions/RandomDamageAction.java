@@ -13,11 +13,11 @@ import sneckomod.cards.AbstractSneckoCard;
 public class RandomDamageAction extends AbstractGameAction {
 
     private static final float DURATION = 0.01F;
-    private DamageInfo info;
+    private final DamageInfo info;
     private int numTimes;
-    private int min;
-    private int max;
-    private int dmg;
+    private final int min;
+    private final int max;
+    private final int dmg;
 
     public RandomDamageAction(AbstractCreature target, int min, int max, int numTimes, AttackEffect fx) {
         if (min > max) {

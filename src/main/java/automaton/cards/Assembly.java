@@ -4,7 +4,6 @@ import automaton.AutomatonMod;
 import automaton.actions.ScryEncodeCardsAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
 
 public class Assembly extends AbstractBronzeCard {
 
@@ -19,7 +18,7 @@ public class Assembly extends AbstractBronzeCard {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
-      //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
         AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("Assembly.png"));
     }
 

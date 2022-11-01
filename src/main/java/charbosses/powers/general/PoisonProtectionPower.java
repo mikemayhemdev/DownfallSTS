@@ -2,17 +2,9 @@ package charbosses.powers.general;
 
 import basemod.ReflectionHacks;
 import basemod.interfaces.CloneablePowerInterface;
-import charbosses.bosses.AbstractCharBoss;
-import charbosses.cards.other.Antidote;
-import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,17 +12,15 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.GainPowerEffect;
 import downfall.downfallMod;
-import downfall.monsters.NeowBossFinal;
 import downfall.util.TextureLoader;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class PoisonProtectionPower extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = downfallMod.makeID("PoisonResist");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     private static final Texture tex84 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/PoisonResist84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/PoisonResist32.png"));
@@ -79,7 +69,7 @@ public class PoisonProtectionPower extends AbstractPower implements CloneablePow
         super.update(slot);
         if (firstTurn) {
             if (this.timer <= 0F) {
-                ArrayList<AbstractGameEffect> effect2 = (ArrayList<AbstractGameEffect>) ReflectionHacks.getPrivate(this, AbstractPower.class, "effect");
+                ArrayList<AbstractGameEffect> effect2 = ReflectionHacks.getPrivate(this, AbstractPower.class, "effect");
                 effect2.add(new GainPowerEffect(this));
                 this.timer = 1F;
                 if (AbstractDungeon.player != null) {

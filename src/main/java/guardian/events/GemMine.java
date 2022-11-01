@@ -8,15 +8,12 @@ package guardian.events;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import com.megacrit.cardcrawl.events.city.Colosseum;
 import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import guardian.GuardianMod;
@@ -52,10 +49,10 @@ public class GemMine extends AbstractImageEvent {
 
     private int screenNum = 0;
     private boolean tookGems = false;
-    private int damage;
+    private final int damage;
     private int damageTaken = 0;
-    private ArrayList<String> cardsAdded = new ArrayList<>();
-    private ArrayList<String> relicsAdded = new ArrayList<>();
+    private final ArrayList<String> cardsAdded = new ArrayList<>();
+    private final ArrayList<String> relicsAdded = new ArrayList<>();
 
     public GemMine() {
         super(NAME, DIALOG_START, GuardianMod.getResourcePath("/events/gemMine.jpg"));
@@ -146,7 +143,7 @@ public class GemMine extends AbstractImageEvent {
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         this.imageEventText.clearRemainingOptions();
-                        if(cardsAdded.size() > 0 || relicsAdded.size() > 0 || damageTaken > 0) {
+                        if (cardsAdded.size() > 0 || relicsAdded.size() > 0 || damageTaken > 0) {
                             logMetric(ID, "Entered Mine", cardsAdded, null, null, null, relicsAdded, null, null,
                                     damageTaken, 0, 0, 0, 0, 0);
                         } else {

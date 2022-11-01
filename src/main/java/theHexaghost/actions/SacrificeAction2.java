@@ -14,11 +14,9 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theHexaghost.cards.NecessarySacrifice;
 
-import java.util.ArrayList;
-
 public class SacrificeAction2 extends AbstractGameAction {
     public boolean costify;
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
     public static final String[] EXTENDED_DESCRIPTIONS = CardCrawlGame.languagePack.getCardStrings(NecessarySacrifice.ID).EXTENDED_DESCRIPTION;
 
     public SacrificeAction2(boolean upgrade) {

@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 public class NeowBossRezEffect extends AbstractGameEffect {
 
 
-
     public float cX;
     public float cY;
     public float angle;
@@ -26,16 +25,16 @@ public class NeowBossRezEffect extends AbstractGameEffect {
     }
 
     public void update() {
-        AbstractDungeon.effectsQueue.add(new NeowRezFlareParticleEffect(this.cX + MathUtils.random(-100F,100F), this.cY + MathUtils.random(-100F,100F), borderColor, this.angle, this));
-        AbstractDungeon.effectsQueue.add(new NeowRezFlareParticleEffect(this.cX + MathUtils.random(-100F,100F), this.cY + MathUtils.random(-100F,100F), borderColor, this.angle, this));
-        AbstractDungeon.effectsQueue.add(new NeowRezFlareParticleEffect(this.cX + MathUtils.random(-100F,100F), this.cY + MathUtils.random(-100F,100F), borderColor, this.angle, this));
+        AbstractDungeon.effectsQueue.add(new NeowRezFlareParticleEffect(this.cX + MathUtils.random(-100F, 100F), this.cY + MathUtils.random(-100F, 100F), borderColor, this.angle, this));
+        AbstractDungeon.effectsQueue.add(new NeowRezFlareParticleEffect(this.cX + MathUtils.random(-100F, 100F), this.cY + MathUtils.random(-100F, 100F), borderColor, this.angle, this));
+        AbstractDungeon.effectsQueue.add(new NeowRezFlareParticleEffect(this.cX + MathUtils.random(-100F, 100F), this.cY + MathUtils.random(-100F, 100F), borderColor, this.angle, this));
 
     }
 
     public void render(SpriteBatch sb) {
     }
 
-    public void end(){
+    public void end() {
         this.isDone = true;
     }
 

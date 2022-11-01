@@ -3,19 +3,11 @@ package hermit.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.MetallicizePower;
-import com.megacrit.cardcrawl.relics.MercuryHourglass;
-import com.megacrit.cardcrawl.relics.Shuriken;
-import com.megacrit.cardcrawl.relics.StoneCalendar;
 import hermit.HermitMod;
-import hermit.powers.Concentration;
-import hermit.powers.RyeStalkPower;
 import hermit.util.TextureLoader;
 
 import static hermit.HermitMod.makeRelicOutlinePath;
@@ -40,11 +32,11 @@ public class BlackPowder extends CustomRelic {
         this.counter = 0;
     }
 
-    public void onPlayerEndTurn(){
+    public void onPlayerEndTurn() {
         if (this.PowderCharge > 0) {
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            this.addToBot(new DamageAllEnemiesAction((AbstractCreature) null, DamageInfo.createDamageMatrix(this.PowderCharge, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
+            this.addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(this.PowderCharge, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
             this.PowderCharge = 0;
         }
     }

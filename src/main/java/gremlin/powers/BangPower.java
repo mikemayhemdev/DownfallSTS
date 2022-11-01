@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import gremlin.GremlinMod;
 import gremlin.cards.AbstractGremlinCard;
 
-public class BangPower extends AbstractGremlinPower implements ConditionalModifyBlockPower{
+public class BangPower extends AbstractGremlinPower implements ConditionalModifyBlockPower {
     public static final String POWER_ID = getID("Bang");
     private static final PowerStrings strings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final Texture IMG = new Texture(GremlinMod.getResourcePath("powers/bang.png"));
@@ -29,15 +29,14 @@ public class BangPower extends AbstractGremlinPower implements ConditionalModify
         this.updateDescription();
     }
 
-    public void updateDescription()
-    {
+    public void updateDescription() {
         this.description = (strings.DESCRIPTIONS[0] + this.amount + strings.DESCRIPTIONS[1]);
     }
 
     @Override
     public void onUseCard(final AbstractCard card, final UseCardAction action) {
-        if(card instanceof AbstractGremlinCard){
-            if(((AbstractGremlinCard) card).wizardry){
+        if (card instanceof AbstractGremlinCard) {
+            if (((AbstractGremlinCard) card).wizardry) {
                 // Does not consume stacks
                 return;
             }
@@ -58,13 +57,12 @@ public class BangPower extends AbstractGremlinPower implements ConditionalModify
 
     @Override
     public void stackPower(int stackAmount) {
-        return;
     }
 
     @Override
     public float conditionalModifyBlock(float blockAmount, AbstractCard card) {
-        if(card instanceof AbstractGremlinCard){
-            if(((AbstractGremlinCard) card).sorcery){
+        if (card instanceof AbstractGremlinCard) {
+            if (((AbstractGremlinCard) card).sorcery) {
                 return blockAmount + this.amount;
             }
         }

@@ -1,7 +1,6 @@
 package guardian.cards;
 
 
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -16,7 +15,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.vfx.CrystalRayEffect;
-import guardian.vfx.SmallLaserEffectColored;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;

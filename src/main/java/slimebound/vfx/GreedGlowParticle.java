@@ -17,16 +17,16 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import slimebound.orbs.GreedOozeSlime;
 
 public class GreedGlowParticle extends AbstractGameEffect {
-    private static float xOffset = -30F * Settings.scale;
-    private static float yOffset = -100F * Settings.scale;
-    private float effectDuration;
-    private float x;
+    private static final float xOffset = -30F * Settings.scale;
+    private static final float yOffset = -100F * Settings.scale;
+    private final float effectDuration;
+    private final float x;
     private float y;
     private float vY;
-    private float alpha;
-    private float targetScale;
-    private GreedOozeSlime o;
-    private AtlasRegion img;
+    private final float alpha;
+    private final float targetScale;
+    private final GreedOozeSlime o;
+    private final AtlasRegion img;
 
     public GreedGlowParticle(GreedOozeSlime o) {
         this.o = o;

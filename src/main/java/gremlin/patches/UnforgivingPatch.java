@@ -15,18 +15,18 @@ import gremlin.powers.UnforgivingPower;
 import java.lang.reflect.Field;
 
 @SpirePatch(
-        clz= ApplyPowerAction.class,
-        method="update"
+        clz = ApplyPowerAction.class,
+        method = "update"
 )
 public class UnforgivingPatch {
     @SpireInsertPatch(
-            rloc=35
+            rloc = 35
     )
     public static SpireReturn Insert(ApplyPowerAction __instance) {
-        AbstractPower powerToApply = (AbstractPower) ReflectionHacks.getPrivate(__instance, ApplyPowerAction.class, "powerToApply");
-        if(powerToApply.ID.equals(StrengthPower.POWER_ID) &&
+        AbstractPower powerToApply = ReflectionHacks.getPrivate(__instance, ApplyPowerAction.class, "powerToApply");
+        if (powerToApply.ID.equals(StrengthPower.POWER_ID) &&
                 __instance.amount < 0 &&
-                __instance.target.hasPower(UnforgivingPower.POWER_ID)){
+                __instance.target.hasPower(UnforgivingPower.POWER_ID)) {
             __instance.target.getPower(UnforgivingPower.POWER_ID).flash();
             AbstractDungeon.actionManager.addToTop(new TextAboveCreatureAction(__instance.target, ApplyPowerAction.TEXT[1]));
             float duration = (float) getPrivateInherited(__instance, ApplyPowerAction.class, "duration");

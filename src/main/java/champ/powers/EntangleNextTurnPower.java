@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.EntanglePower;
-import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
 
 public class EntangleNextTurnPower extends AbstractPower implements CloneablePowerInterface {

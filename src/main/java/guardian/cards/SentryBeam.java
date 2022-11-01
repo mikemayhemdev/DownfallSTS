@@ -50,7 +50,7 @@ public class SentryBeam extends AbstractGuardianCard {
 
     }
 
-    public SentryBeam(boolean noHover){
+    public SentryBeam(boolean noHover) {
 
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
@@ -65,7 +65,7 @@ public class SentryBeam extends AbstractGuardianCard {
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("SentryBeam.png"));
     }
 
-    public SentryBeam(){
+    public SentryBeam() {
         this(false);
     }
 
@@ -111,7 +111,7 @@ public class SentryBeam extends AbstractGuardianCard {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
             this.rawDescription = UPGRADED_DESCRIPTION;
-            if (!this.noHover){
+            if (!this.noHover) {
                 AbstractCard q = new SentryWave(true);
                 q.upgrade();
                 cardsToPreview = q;

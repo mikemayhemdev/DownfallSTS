@@ -18,13 +18,10 @@ import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
-import guardian.patches.BottledStasisPatch;
 import sneckomod.SneckoMod;
-import sneckomod.TheSnecko;
 import sneckomod.cards.AbstractSneckoCard;
 import sneckomod.patches.UnknownExtraUiPatch;
 
-import javax.smartcardio.Card;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.function.Predicate;
@@ -103,6 +100,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
     public static ArrayList<String> unknownXCostReplacements = new ArrayList<>();
     public static ArrayList<String> unknownDrawReplacements = new ArrayList<>();
     public static ArrayList<String> unknownBossReplacements = new ArrayList<>();
+
     // public static ArrayList<String> unknownEtherealReplacements = new ArrayList<>();
 //
     @Override
@@ -116,7 +114,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
     public static final float SCROLL_ROTATION_DELAY = 4.0f;
 
     public void updateInput(boolean isSingleView) {
-        if(this.hb.hovered || isSingleView) {
+        if (this.hb.hovered || isSingleView) {
             if (InputHelper.scrolledDown) {
                 rotationDelay = SCROLL_ROTATION_DELAY;
                 scrollImpulse -= IMPULSE_AMOUNT;
@@ -135,7 +133,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         if ((AbstractDungeon.player != null) && (AbstractDungeon.player.isDraggingCard)) {
             return;
         }
-        if(lastPreviewed != this) {
+        if (lastPreviewed != this) {
             // reset delay between scrolling and resuming auto scroll if a different card is previewed
             lastPreviewed = this;
             rotationDelay = 0.0f;
@@ -147,9 +145,10 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
     public void renderCardPreviewInSingleView(SpriteBatch sb) {
         renderCardPreviewImpl(sb, true);
     }
+
     public void renderCardPreviewImpl(SpriteBatch sb, boolean isSingleView) {
         ArrayList<String> cardList = myList();
-        if(cardList.size() == 0) {
+        if (cardList.size() == 0) {
             // render default preview card: Madness
             if (isSingleView) {
                 super.renderCardPreviewInSingleView(sb);
@@ -162,15 +161,15 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
         float interval = 1.5f;
 
-        if(rotationTimer <= 0F) {
+        if (rotationTimer <= 0F) {
             rotationTimer = interval * cardList.size();
         }
-        int cardIdx = (int)(rotationTimer / interval) % cardList.size();
+        int cardIdx = (int) (rotationTimer / interval) % cardList.size();
         AbstractCard[] cards = new AbstractCard[7];
-        for(int i = 0; i < cards.length; i++) {
+        for (int i = 0; i < cards.length; i++) {
             cards[i] = CardLibrary.cards.get(cardList.get(cardIdx)).makeCopy(); // please cache these
             UnknownExtraUiPatch.parentCard.set(cards[i], this);
-            if(upgraded) {
+            if (upgraded) {
                 cards[i].upgrade();
             }
 
@@ -182,15 +181,15 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         float tmpScale = this.drawScale * 0.8F;
 
 
-        for(int i=0; i<cards.length; i++) {
+        for (int i = 0; i < cards.length; i++) {
             AbstractCard card = cards[i];
 
-            if(isSingleView) {
+            if (isSingleView) {
                 card.drawScale = 0.8f;
                 card.current_x = (485f * Settings.scale);
-                card.current_y = (this.current_y + (IMG_HEIGHT * (1.1f * (- phase + i - 2))) * card.drawScale);
+                card.current_y = (this.current_y + (IMG_HEIGHT * (1.1f * (-phase + i - 2))) * card.drawScale);
             } else {
-                card.current_y = (this.current_y + (IMG_HEIGHT * (0.9f * (- phase + i - 2))) * this.drawScale);
+                card.current_y = (this.current_y + (IMG_HEIGHT * (0.9f * (-phase + i - 2))) * this.drawScale);
                 if (this.current_x > Settings.WIDTH * 0.75F) {
                     card.current_x = (this.current_x + (IMG_WIDTH * 0.9f + 16.0F) * this.drawScale);
                 } else {
@@ -200,17 +199,16 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
             }
 
 
-
             card.render(sb);
         }
-        if(rotationDelay > 0.0f) {
+        if (rotationDelay > 0.0f) {
             rotationDelay -= Gdx.graphics.getDeltaTime();
         } else {
             rotationTimer -= Gdx.graphics.getDeltaTime();
         }
         rotationTimer += scrollImpulse;
         scrollImpulse *= 0.85;
-        if(Math.abs(scrollImpulse) < 0.01) scrollImpulse = 0;
+        if (Math.abs(scrollImpulse) < 0.01) scrollImpulse = 0;
 
     }
 
@@ -263,7 +261,8 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
             for (int i = 0; i < funkyPredicates.size(); i++) {
                 Predicate<AbstractCard> funkyPredicate = funkyPredicates.get(i);
-                if (funkyPredicate.test(c) && (SneckoMod.pureSneckoMode || (SneckoMod.validColors.contains(c.color) || (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass != downfallMod.Enums.THE_SNECKO)) || i >= 22)) {                    if (validCard) {
+                if (funkyPredicate.test(c) && (SneckoMod.pureSneckoMode || (SneckoMod.validColors.contains(c.color) || (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass != downfallMod.Enums.THE_SNECKO)) || i >= 22)) {
+                    if (validCard) {
                         ArrayList<String> s = funkyLists.get(funkyPredicates.indexOf(funkyPredicate));
                         if (s == null) {
                             s = new ArrayList<>();
@@ -275,7 +274,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         }
 
         // Sort the card lists so the preview shows them in order
-        for (ArrayList<String> cardList: funkyLists) {
+        for (ArrayList<String> cardList : funkyLists) {
             cardList.sort((lhs, rhs) -> {
                 AbstractCard rCard = CardLibrary.getCard(lhs);
                 AbstractCard lCard = CardLibrary.getCard(rhs);
@@ -310,7 +309,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
         if (this.upgraded) cUnknown.upgrade();
         if (StSLib.getMasterDeckEquivalent(this) != null) {
-            ((AbstractUnknownCard)StSLib.getMasterDeckEquivalent(this)).lastUnknownRoll = cUnknown.makeCopy();
+            ((AbstractUnknownCard) StSLib.getMasterDeckEquivalent(this)).lastUnknownRoll = cUnknown.makeCopy();
 
         }
 
@@ -322,7 +321,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         } else {
             //This check should always pass, but a crash report indicates it rarely can not.
             //So if the idx is somehow outside the array's bounds, add the card to bottom instead.
-            if (idx > -1 && idx < p.drawPile.group.size()){
+            if (idx > -1 && idx < p.drawPile.group.size()) {
                 AbstractDungeon.player.drawPile.group.add(idx, cUnknown);
             } else {
                 AbstractDungeon.player.drawPile.addToBottom(cUnknown);
@@ -362,7 +361,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
     @Override
     public String onSave() {
-        if (lastUnknownRoll != null){
+        if (lastUnknownRoll != null) {
             return lastUnknownRoll.cardID;
         }
         return "";
@@ -371,7 +370,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
     @Override
     public void onLoad(String cardID) {
         // Not the most elegant solution but I can't make AbstractDamageModifier serializable because it isn't my code.
-        if (cardID != ""){
+        if (cardID != "") {
             if (CardLibrary.isACard(cardID)) {
                 lastUnknownRoll = CardLibrary.getCard(cardID).makeCopy();
             }

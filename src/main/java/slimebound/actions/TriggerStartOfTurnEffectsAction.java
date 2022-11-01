@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 
 public class TriggerStartOfTurnEffectsAction extends AbstractGameAction {
 
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
 
     public TriggerStartOfTurnEffectsAction(AbstractPlayer p) {
         this.p = p;

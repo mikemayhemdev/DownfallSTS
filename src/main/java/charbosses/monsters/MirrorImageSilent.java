@@ -116,7 +116,6 @@ public class MirrorImageSilent extends AbstractMonster {
     }
 
 
-
     @Override
     public void takeTurn() {
 

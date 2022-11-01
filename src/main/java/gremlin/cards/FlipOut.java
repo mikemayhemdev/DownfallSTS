@@ -3,7 +3,6 @@ package gremlin.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -29,8 +28,7 @@ public class FlipOut extends AbstractGremlinCard {
     private static final int POWER = 11;
     private static final int UPGRADE_BONUS = 4;
 
-    public FlipOut()
-    {
+    public FlipOut() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -51,8 +49,7 @@ public class FlipOut extends AbstractGremlinCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
         }

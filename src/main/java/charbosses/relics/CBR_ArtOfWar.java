@@ -1,32 +1,26 @@
 package charbosses.relics;
 
 import charbosses.actions.common.EnemyGainEnergyAction;
-import charbosses.bosses.AbstractCharBoss;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.Anchor;
 import com.megacrit.cardcrawl.relics.ArtOfWar;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 public class CBR_ArtOfWar extends AbstractCharbossRelic {
 
     public static final String ID = "Art of War";
     private boolean gainEnergyNext = false;
     private boolean firstTurn = false;
-    
+
     public CBR_ArtOfWar() {
         super(new ArtOfWar());
     }
 
     public String getUpdatedDescription() {
-        return this.owner != null ? this.setDescription(this.owner.chosenClass) : this.setDescription((AbstractPlayer.PlayerClass)null);
+        return this.owner != null ? this.setDescription(this.owner.chosenClass) : this.setDescription(null);
     }
 
     private String setDescription(AbstractPlayer.PlayerClass c) {

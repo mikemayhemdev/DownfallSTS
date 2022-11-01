@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.combat.ThrowDaggerEffect;
 
 import java.util.Iterator;
@@ -28,8 +27,8 @@ public class EnemyFletchettesAction extends AbstractGameAction {
     public void update() {
         Iterator var1 = AbstractCharBoss.boss.hand.group.iterator();
 
-        while(var1.hasNext()) {
-            AbstractCard c = (AbstractCard)var1.next();
+        while (var1.hasNext()) {
+            AbstractCard c = (AbstractCard) var1.next();
             if (c.type == AbstractCard.CardType.SKILL) {
                 this.addToTop(new DamageAction(this.target, this.info, true));
                 if (this.target != null && this.target.hb != null) {

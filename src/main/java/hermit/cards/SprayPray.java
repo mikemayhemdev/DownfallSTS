@@ -1,6 +1,5 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
@@ -12,13 +11,10 @@ import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 
-
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class SprayPray extends AbstractDynamicCard {
-
-
 
 
     // TEXT DECLARATION
@@ -55,12 +51,11 @@ public class SprayPray extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for(int i = 0; i < 3; ++i) {
+        for (int i = 0; i < 3; ++i) {
             this.addToBot(new AttackDamageRandomEnemyAction(this, EnumPatch.HERMIT_GUN3));
         }
         this.addToBot(new MakeTempCardInDrawPileAction(this.cardsToPreview, 1, true, true));
     }
-
 
 
     //Upgraded stats.

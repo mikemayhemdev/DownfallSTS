@@ -1,17 +1,13 @@
 package charbosses.cards.red;
 
 import charbosses.actions.unique.EnemyArmamentsAction;
-import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import java.util.ArrayList;
 
@@ -44,18 +40,16 @@ public class EnArmaments extends AbstractBossCard {
     }
 
     @Override
-    public int getPriority(ArrayList<AbstractCard> hand)
-    {
+    public int getPriority(ArrayList<AbstractCard> hand) {
         int unupgradedCards = 0;
-        for (AbstractCard c : hand){
-            if (!c.upgraded){
+        for (AbstractCard c : hand) {
+            if (!c.upgraded) {
                 unupgradedCards++;
             }
         }
         if (this.upgraded) {
             return (100 - unupgradedCards * 10);
-        }
-        else {
+        } else {
             return (100 - unupgradedCards * 15);
         }
     }

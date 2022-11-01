@@ -19,7 +19,7 @@ public class GluttonyPower extends TwoAmountPower {
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
     public int timesTriggeredThisTurn;
-    private AbstractCreature source;
+    private final AbstractCreature source;
 
 
     public GluttonyPower(AbstractCreature owner, AbstractCreature source, int amount) {

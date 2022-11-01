@@ -2,10 +2,8 @@ package charbosses.relics;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.Abacus;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.SpiritPoop;
 
 public class CBR_Abacus extends AbstractCharbossRelic {
     public static final String ID = "Abacus";

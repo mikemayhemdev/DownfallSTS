@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.rooms.CampfireUI;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import com.megacrit.cardcrawl.vfx.SpeechBubble;
+import downfall.downfallMod;
 import gremlin.GremlinMod;
 import gremlin.characters.GremlinCharacter;
 
@@ -24,7 +25,7 @@ public class ResurrectOption extends AbstractCampfireOption {
     private boolean hacked;
 
     public ResurrectOption() {
-        this.usable = ((GremlinCharacter)AbstractDungeon.player).canRez();
+        this.usable = ((GremlinCharacter) AbstractDungeon.player).canRez();
         updateImage();
     }
 
@@ -50,9 +51,9 @@ public class ResurrectOption extends AbstractCampfireOption {
     public void useOption() {
         CardCrawlGame.sound.play("EVENT_SPIRITS");
         int roll = MathUtils.random(2);
-        AbstractDungeon.effectList.add(new SpeechBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 2.0F, TEXT[4+roll], true));
-        if(AbstractDungeon.player instanceof GremlinCharacter){
-            ((GremlinCharacter)AbstractDungeon.player).resurrect();
+        AbstractDungeon.effectList.add(new SpeechBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 2.0F, TEXT[4 + roll], true));
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+            ((GremlinCharacter) AbstractDungeon.player).resurrect();
         }
         this.used = true;
         this.usable = false;
@@ -62,7 +63,7 @@ public class ResurrectOption extends AbstractCampfireOption {
 
     @Override
     public void update() {
-        float hackScale = (float) ReflectionHacks.getPrivate(this, AbstractCampfireOption.class, "scale");
+        float hackScale = ReflectionHacks.getPrivate(this, AbstractCampfireOption.class, "scale");
 
         if (this.hb.hovered) {
 
@@ -81,11 +82,11 @@ public class ResurrectOption extends AbstractCampfireOption {
         super.update();
 
         if (!this.used) {
-            if (!((GremlinCharacter)AbstractDungeon.player).canRez() && this.usable) {
+            if (!((GremlinCharacter) AbstractDungeon.player).canRez() && this.usable) {
                 this.usable = false;
                 updateImage();
             }
-            if (((GremlinCharacter)AbstractDungeon.player).canRez() && !this.usable) {
+            if (((GremlinCharacter) AbstractDungeon.player).canRez() && !this.usable) {
                 this.usable = true;
                 updateImage();
             }

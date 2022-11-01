@@ -13,14 +13,14 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import expansioncontent.expansionContentMod;
 import downfall.util.TextureLoader;
+import expansioncontent.expansionContentMod;
 
 
 public class ChronoBoostPower extends TwoAmountPower implements CloneablePowerInterface {
     public static final String POWER_ID = expansionContentMod.makeID("ChronoBoostPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/ChronoBoost84.png");
     private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/ChronoBoost32.png");
@@ -63,7 +63,7 @@ public class ChronoBoostPower extends TwoAmountPower implements CloneablePowerIn
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + (12 - (amount2)) + DESCRIPTIONS[1] +amount + DESCRIPTIONS[2];
+        description = DESCRIPTIONS[0] + (12 - (amount2)) + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
     }
 
 }

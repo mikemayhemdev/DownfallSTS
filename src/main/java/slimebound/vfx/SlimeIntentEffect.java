@@ -10,8 +10,8 @@ public class SlimeIntentEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEf
     private static final float DURATION = .5F;
     private static final float FLASH_INTERVAL = 0.17F;
     private float intervalTimer = 0.0F;
-    private Texture img;
-    private AbstractOrb o;
+    private final Texture img;
+    private final AbstractOrb o;
 
     public SlimeIntentEffect(Texture img, AbstractOrb o, float duration) {
         this.duration = duration;

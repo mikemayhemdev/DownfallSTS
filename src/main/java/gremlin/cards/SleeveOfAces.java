@@ -29,8 +29,7 @@ public class SleeveOfAces extends AbstractGremlinCard {
     private static final int POWER = 4;
     private static final int UPGRADE_BONUS = 1;
 
-    public SleeveOfAces()
-    {
+    public SleeveOfAces() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -42,14 +41,14 @@ public class SleeveOfAces extends AbstractGremlinCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int amount = 0;
-        if(p.hasPower(WizPower.POWER_ID)){
+        if (p.hasPower(WizPower.POWER_ID)) {
             amount = p.getPower(WizPower.POWER_ID).amount;
         }
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                 this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
-        if(amount > 0){
+        if (amount > 0) {
             AbstractCard c = new Shiv();
-            if(upgraded){
+            if (upgraded) {
                 c.upgrade();
             }
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, amount));
@@ -58,8 +57,7 @@ public class SleeveOfAces extends AbstractGremlinCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;

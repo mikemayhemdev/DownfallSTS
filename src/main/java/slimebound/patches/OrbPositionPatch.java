@@ -24,7 +24,7 @@ public class OrbPositionPatch {
             float xSpaceBetweenSlots = 110 * Settings.scale;
 
             abstractOrb_instance.tX = xStartOffset + (xSpaceBetweenSlots * slotNum);
-            abstractOrb_instance.tY = yStartOffset +  (slotNum % 2) * ySpaceAlternatingOffset;
+            abstractOrb_instance.tY = yStartOffset + (slotNum % 2) * ySpaceAlternatingOffset;
 
             abstractOrb_instance.hb.move(abstractOrb_instance.tX, abstractOrb_instance.tY);
 

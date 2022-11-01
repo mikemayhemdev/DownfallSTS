@@ -6,17 +6,17 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.FaceOfCleric;
-import gremlin.characters.GremlinCharacter;
+import downfall.downfallMod;
 
 @SpirePatch(
-        clz= FaceOfCleric.class,
-        method="getUpdatedDescription"
+        clz = FaceOfCleric.class,
+        method = "getUpdatedDescription"
 )
 public class FaceOfClericDescriptionPatch {
     private static final RelicStrings strings = CardCrawlGame.languagePack.getRelicStrings("Gremlin:PatchFixes");
 
-    public static SpireReturn<String> Prefix(FaceOfCleric __instance){
-        if(AbstractDungeon.player instanceof GremlinCharacter){
+    public static SpireReturn<String> Prefix(FaceOfCleric __instance) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
             return SpireReturn.Return(strings.DESCRIPTIONS[3]);
         }
         return SpireReturn.Continue();

@@ -35,7 +35,7 @@ public class StudyTheSpire extends AbstractExpansionCard {
 
     private float rotationTimer;
     private int previewIndex;
-    private ArrayList<AbstractCard> dupeListForPrev = new ArrayList<>();
+    private final ArrayList<AbstractCard> dupeListForPrev = new ArrayList<>();
 
     public StudyTheSpire() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);

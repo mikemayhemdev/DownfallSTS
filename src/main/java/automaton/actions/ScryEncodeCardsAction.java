@@ -1,7 +1,6 @@
 package automaton.actions;
 
 import automaton.AutomatonMod;
-import automaton.FunctionHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -15,7 +14,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 public class ScryEncodeCardsAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
-    private float startingDuration;
+    private final float startingDuration;
 
     public ScryEncodeCardsAction(int numCards) {
         this.amount = numCards;
@@ -46,7 +45,7 @@ public class ScryEncodeCardsAction extends AbstractGameAction {
                 CardGroup tmpGroup = new CardGroup(CardGroupType.UNSPECIFIED);
                 if (this.amount != -1) {
                     for (int i = 0; i < Math.min(this.amount, AbstractDungeon.player.drawPile.size()); ++i) {
-                        tmpGroup.addToTop((AbstractCard) AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1));
+                        tmpGroup.addToTop(AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1));
                     }
                 } else {
                     for (AbstractCard c : AbstractDungeon.player.drawPile.group) {

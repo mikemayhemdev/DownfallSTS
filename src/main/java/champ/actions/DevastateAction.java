@@ -1,20 +1,16 @@
 package champ.actions;
 
-import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.Hitbox;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.stances.NeutralStance;
 
 import java.util.UUID;
 
 public class DevastateAction extends com.megacrit.cardcrawl.actions.AbstractGameAction {
-    private int increaseAmount;
-    private DamageInfo info;
-    private UUID uuid;
+    private final int increaseAmount;
+    private final DamageInfo info;
+    private final UUID uuid;
 
     public DevastateAction(AbstractCreature target, DamageInfo info, int incAmount, UUID targetUUID) {
         this.info = info;
@@ -31,18 +27,18 @@ public class DevastateAction extends com.megacrit.cardcrawl.actions.AbstractGame
 
             this.target.damage(this.info);
 
-                for (AbstractCard c : AbstractDungeon.player.masterDeck.group)
-                    if (c.uuid.equals(this.uuid)) {
-                        c.misc += this.increaseAmount;
-                        c.applyPowers();
-                        c.baseDamage = c.misc;
-                        c.isDamageModified = false;
-                    }
-                for (AbstractCard c : com.megacrit.cardcrawl.helpers.GetAllInBattleInstances.get(this.uuid)) {
+            for (AbstractCard c : AbstractDungeon.player.masterDeck.group)
+                if (c.uuid.equals(this.uuid)) {
                     c.misc += this.increaseAmount;
                     c.applyPowers();
                     c.baseDamage = c.misc;
+                    c.isDamageModified = false;
                 }
+            for (AbstractCard c : com.megacrit.cardcrawl.helpers.GetAllInBattleInstances.get(this.uuid)) {
+                c.misc += this.increaseAmount;
+                c.applyPowers();
+                c.baseDamage = c.misc;
+            }
 
             if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
                 AbstractDungeon.actionManager.clearPostCombatActions();

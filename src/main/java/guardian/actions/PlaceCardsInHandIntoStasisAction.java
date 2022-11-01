@@ -11,16 +11,13 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.vfx.ThoughtBubble;
-import guardian.GuardianMod;
-import guardian.characters.GuardianCharacter;
 
 import java.util.Iterator;
 
 public class PlaceCardsInHandIntoStasisAction extends AbstractGameAction {
     public static final String[] TEXT;
 
-    private boolean anyNumber;
+    private final boolean anyNumber;
 
     static {
         TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
@@ -35,13 +32,12 @@ public class PlaceCardsInHandIntoStasisAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == 0.5F) {
-            if (AbstractDungeon.player.hand.isEmpty())
-            {
+            if (AbstractDungeon.player.hand.isEmpty()) {
                 this.isDone = true;
                 return;
             }
 
-            AbstractDungeon.handCardSelectScreen.open(TEXT[3]+TEXT[7], this.amount, false, true, false, false, anyNumber);
+            AbstractDungeon.handCardSelectScreen.open(TEXT[3] + TEXT[7], this.amount, false, true, false, false, anyNumber);
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.25F));
         } else {
             if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {

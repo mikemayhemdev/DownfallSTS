@@ -25,17 +25,17 @@ public class DoubleSlimeParticle extends com.megacrit.cardcrawl.vfx.AbstractGame
     private static int W;
     public AnimationState state;
     public AbstractPlayer p;
-    private float scale = 1.5F;
+    private final float scale = 1.5F;
     private Texture img;
-    private float x;
-    private float px;
+    private final float x;
+    private final float px;
     private AbstractCreature.CreatureAnimation animation;
     private float animationTimer;
-    private TextureAtlas atlas;
-    private Skeleton skeleton;
-    private AnimationStateData stateData;
+    private final TextureAtlas atlas;
+    private final Skeleton skeleton;
+    private final AnimationStateData stateData;
     private AbstractAnimation animationA;
-    private float y;
+    private final float y;
 
     public DoubleSlimeParticle(AbstractPlayer p) {
         if (CharacterSelectScreenPatches.characters[1].isOriginal()) {

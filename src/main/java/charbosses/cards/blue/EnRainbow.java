@@ -1,7 +1,6 @@
 package charbosses.cards.blue;
 
 import charbosses.actions.orb.EnemyChannelAction;
-import charbosses.actions.unique.EnemyDarkImpulseAction;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import charbosses.orbs.AbstractEnemyOrb;
@@ -10,17 +9,12 @@ import charbosses.orbs.EnemyFrost;
 import charbosses.orbs.EnemyLightning;
 import charbosses.vfx.EnemyRainbowCardEffect;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.Dark;
-import com.megacrit.cardcrawl.orbs.Frost;
-import com.megacrit.cardcrawl.orbs.Lightning;
 import com.megacrit.cardcrawl.powers.FocusPower;
-import com.megacrit.cardcrawl.vfx.RainbowCardEffect;
 
 import java.util.ArrayList;
 
@@ -52,7 +46,7 @@ public class EnRainbow extends AbstractBossCard {
 
     @Override
     public String overrideIntentText() {
-        return "(" + ( 3 + AbstractEnemyOrb.masterPretendFocus + getFocusAmountSafe()) + ")";
+        return "(" + (3 + AbstractEnemyOrb.masterPretendFocus + getFocusAmountSafe()) + ")";
     }
 
     public void upgrade() {

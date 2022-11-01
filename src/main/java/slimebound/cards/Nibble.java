@@ -1,31 +1,20 @@
 package slimebound.cards;
 
 
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.SlimedPower;
-import slimebound.vfx.LickEffect;
 import slimebound.vfx.SlimeDripsEffect;
-
-import java.util.ArrayList;
-
-import static com.badlogic.gdx.graphics.Color.GREEN;
 
 
 public class Nibble extends AbstractLickCard {
@@ -39,7 +28,7 @@ public class Nibble extends AbstractLickCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 0;
     public static String UPGRADED_DESCRIPTION;
-    private static int upgradedamount = 1;
+    private static final int upgradedamount = 1;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -52,7 +41,7 @@ public class Nibble extends AbstractLickCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         baseDamage = damage = 1;
         tags.add(SlimeboundMod.LICK);
-       // this.slimed = this.baseSlimed = 4;
+        // this.slimed = this.baseSlimed = 4;
         this.exhaust = true;
         this.cardsToPreview = new Lick();
     }
@@ -64,13 +53,12 @@ public class Nibble extends AbstractLickCard {
         //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Lick()));
-        if (upgraded) upgradeAction(p,m);
+        if (upgraded) upgradeAction(p, m);
 
     }
 
 
-
-    public void upgradeAction(AbstractPlayer p, AbstractMonster m){
+    public void upgradeAction(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
     }
 

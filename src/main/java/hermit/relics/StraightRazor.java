@@ -3,14 +3,10 @@ package hermit.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.relics.OnRemoveCardFromMasterDeckRelic;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.relics.MealTicket;
 import hermit.HermitMod;
-import hermit.powers.Concentration;
-import hermit.powers.RyeStalkPower;
 import hermit.util.TextureLoader;
 
 import static hermit.HermitMod.makeRelicOutlinePath;
@@ -29,7 +25,7 @@ public class StraightRazor extends CustomRelic implements OnRemoveCardFromMaster
     }
 
     @Override
-    public void onRemoveCardFromMasterDeck(AbstractCard var1){
+    public void onRemoveCardFromMasterDeck(AbstractCard var1) {
         this.flash();
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         AbstractDungeon.player.heal(15);

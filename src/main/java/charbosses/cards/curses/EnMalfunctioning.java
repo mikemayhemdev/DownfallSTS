@@ -1,24 +1,18 @@
 package charbosses.cards.curses;
 
 import charbosses.actions.util.CharbossDoCardQueueAction;
-import charbosses.bosses.AbstractCharBoss;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.SetDontTriggerAction;
-import com.megacrit.cardcrawl.cards.status.Wound;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.WeakPower;
-import downfall.util.TextureLoader;
-import charbosses.actions.common.EnemyMakeTempCardInHandAction;
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.status.EnSlimed;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.actions.common.SetDontTriggerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.status.Slimed;
+import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
+import downfall.util.TextureLoader;
 
 public class EnMalfunctioning extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Malfunctioning";
@@ -60,8 +54,6 @@ public class EnMalfunctioning extends AbstractBossCard {
     @Override
     public void upgrade() {
     }
-
-
 
 
     @Override

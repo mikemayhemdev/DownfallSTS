@@ -7,7 +7,6 @@ import charbosses.cards.AbstractBossCard;
 import charbosses.cards.blue.*;
 import charbosses.cards.colorless.EnBlind;
 import charbosses.orbs.AbstractEnemyOrb;
-import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
 import charbosses.powers.bossmechanicpowers.DefectCuriosityPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -22,7 +21,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
 
     private EnClaw c;
     private CharBossDefect cB;
-    private boolean A19 = AbstractDungeon.ascensionLevel >= 19;
+    private final boolean A19 = AbstractDungeon.ascensionLevel >= 19;
 
     public ArchetypeAct3OrbsNewAge() {
         super("DF_ARCHETYPE_ORBS", "Orbs");
@@ -74,11 +73,9 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
     }
 
 
-
-
     @Override
     public ArrayList<AbstractCard> getThisTurnCards() {
-        if (cB == null){
+        if (cB == null) {
             cB = (CharBossDefect) AbstractCharBoss.boss;
         }
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
@@ -111,8 +108,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                         addToList(cardsList, new EnMulticast(2));
                         cB.orbsAsEn().get(2).evokeOverride = true;
                         cB.orbsAsEn().get(2).evokeMult = 2;
-                    }
-                    else {
+                    } else {
                         addToList(cardsList, new EnMulticast(3));
                         cB.orbsAsEn().get(2).evokeOverride = true;
                         cB.orbsAsEn().get(2).evokeMult = 3;

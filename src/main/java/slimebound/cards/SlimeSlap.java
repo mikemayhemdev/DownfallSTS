@@ -29,7 +29,7 @@ public class SlimeSlap extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 2;
     public static String UPGRADED_DESCRIPTION;
-    private static int upgradedamount = 1;
+    private static final int upgradedamount = 1;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -46,7 +46,7 @@ public class SlimeSlap extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (m.hasPower(SlimedPower.POWER_ID)){
+        if (m.hasPower(SlimedPower.POWER_ID)) {
             addToBot(new ApplyPowerAction(m, p, new PreventSlimeDecayPower(m, p, 1), 1));
         }
         addToBot(new VFXAction(new SlimeSlapEffect(m.hb.cX, m.hb.cY), 0.2F));

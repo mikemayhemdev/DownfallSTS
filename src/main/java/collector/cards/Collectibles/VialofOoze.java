@@ -16,7 +16,7 @@ public class VialofOoze extends AbstractCollectibleCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToEnemy(m, new SlimedPower(m,p,magicNumber));
+        applyToEnemy(m, new SlimedPower(m, p, magicNumber));
         blck();
     }
 

@@ -1,12 +1,6 @@
 package charbosses.bosses.Silent;
 
 import charbosses.bosses.AbstractBossDeckArchetype;
-import charbosses.cards.green.EnDefendGreen;
-import charbosses.cards.green.EnNeutralize;
-import charbosses.cards.green.EnStrikeGreen;
-import charbosses.cards.green.EnSurvivor;
-import charbosses.cards.red.*;
-import charbosses.relics.*;
 
 public class ArchetypeBaseSilent extends AbstractBossDeckArchetype {
 
@@ -18,10 +12,12 @@ public class ArchetypeBaseSilent extends AbstractBossDeckArchetype {
     public void initialize() {
 
     }
+
     @Override
     public void addedPreBattle() {
         super.addedPreBattle();
     }
+
     @Override
     public void initializeBonusRelic() {
 

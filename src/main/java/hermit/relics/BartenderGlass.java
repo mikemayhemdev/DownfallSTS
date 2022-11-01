@@ -22,7 +22,7 @@ public class BartenderGlass extends CustomRelic {
 
     public BartenderGlass() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.SOLID);
-        counter=-1;
+        counter = -1;
     }
 
     public void obtain() {
@@ -37,15 +37,15 @@ public class BartenderGlass extends CustomRelic {
     @Override
     public void atBattleStart() {
         flash();
-        this.counter=2;
+        this.counter = 2;
         AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        this.grayscale=false;
+        this.grayscale = false;
     }
 
     @Override
     public void onVictory() {
         this.counter = -1;
-        this.grayscale=false;
+        this.grayscale = false;
     }
 
     public void onUsePotion() {
@@ -55,7 +55,7 @@ public class BartenderGlass extends CustomRelic {
             this.addToBot(new ObtainPotionAction(AbstractDungeon.returnRandomPotion(true)));
             this.counter--;
             if (counter <= 0)
-                grayscale=true;
+                grayscale = true;
         } //else {
         //    AbstractDungeon.effectsQueue.add(new ObtainPotionEffect(AbstractDungeon.returnRandomPotion()));
         //}
@@ -65,7 +65,7 @@ public class BartenderGlass extends CustomRelic {
     // Description
     @Override
     public String getUpdatedDescription() {
-            return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0];
     }
 
 }

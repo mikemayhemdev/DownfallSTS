@@ -8,7 +8,6 @@ import charbosses.cards.colorless.EnGoodInstincts;
 import charbosses.cards.curses.EnNormality;
 import charbosses.cards.curses.EnShame;
 import charbosses.cards.purple.*;
-import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
 import charbosses.powers.bossmechanicpowers.WatcherDivinityPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -20,8 +19,8 @@ import java.util.ArrayList;
 
 public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
 
-    private AbstractBossCard theVeryImportantSandsOfTime = null;
-    private AbstractBossCard theVeryImportantPerseverence = null;
+    private final AbstractBossCard theVeryImportantSandsOfTime = null;
+    private final AbstractBossCard theVeryImportantPerseverence = null;
 
     public ArchetypeAct3DivinityNewAge() {
         super("WA_ARCHETYPE_DIVINITY", "Divinity");

@@ -1,9 +1,6 @@
 package slimebound.cards;
 
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,8 +11,6 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.CommandAction;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.SlimedPower;
-import slimebound.vfx.SlimeProjectileEffect;
 
 
 public class SplitLicking extends AbstractSlimeboundCard {

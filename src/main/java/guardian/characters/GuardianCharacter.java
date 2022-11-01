@@ -1,33 +1,35 @@
 package guardian.characters;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.*;
-import downfall.downfallMod;
-import guardian.modules.EnergyOrbGuardian;
-import guardian.powers.ModeShiftPower;
-import reskinContent.patches.CharacterSelectScreenPatches;
-import reskinContent.reskinContent;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.downfallMod;
 import guardian.GuardianMod;
-import guardian.cards.*;
+import guardian.cards.CurlUp;
+import guardian.cards.Defend_Guardian;
+import guardian.cards.Strike_Guardian;
+import guardian.cards.TwinSlam;
+import guardian.modules.EnergyOrbGuardian;
 import guardian.patches.AbstractCardEnum;
-import guardian.patches.GuardianEnum;
+import guardian.powers.ModeShiftPower;
 import guardian.relics.ModeShifter;
+import reskinContent.patches.CharacterSelectScreenPatches;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +38,7 @@ import java.util.List;
 public class GuardianCharacter extends CustomPlayer {
     public static final String ID = "Guardian";
     public static final CharacterStrings charStrings = CardCrawlGame.languagePack.getCharacterString(ID);
-    public static final String NAME = charStrings.NAMES[0];;
+    public static final String NAME = charStrings.NAMES[0];
     public static final String DESCRIPTION = charStrings.TEXT[0];
 
     public static final String[] orbTextures = {
@@ -59,38 +61,38 @@ public class GuardianCharacter extends CustomPlayer {
 
 
     public float renderscale = 2.5F;
-	public float renderscale2 = 3.0F;
+    public float renderscale2 = 3.0F;
 
-    private String atlasURL = "guardianResources/GuardianImages/char/skeleton.atlas";
-    private String jsonURL = "guardianResources/GuardianImages/char/skeleton.json";
-    private String jsonURLPuddle = "guardianResources/GuardianImages/char/skeletonPuddle.json";
+    private final String atlasURL = "guardianResources/GuardianImages/char/skeleton.atlas";
+    private final String jsonURL = "guardianResources/GuardianImages/char/skeleton.json";
+    private final String jsonURLPuddle = "guardianResources/GuardianImages/char/skeletonPuddle.json";
 
-	private String atlasURL2 = "reskinContent/img/GuardianMod/GuardianChan/animation/Guardian.atlas";
-	private String jsonURL2 = "reskinContent/img/GuardianMod/GuardianChan/animation/Guardian.json";
+    private final String atlasURL2 = "reskinContent/img/GuardianMod/GuardianChan/animation/Guardian.atlas";
+    private final String jsonURL2 = "reskinContent/img/GuardianMod/GuardianChan/animation/Guardian.json";
 
-    private String currentJson = jsonURL;
-	private String currentJson2 = jsonURL2;
+    private final String currentJson = jsonURL;
+    private final String currentJson2 = jsonURL2;
 
     public boolean inDefensive;
     private boolean inShattered;
 
     public GuardianCharacter(String name, PlayerClass setClass) {
 //        super(name, setClass, orbTextures, "guardianResources/GuardianImages/char/orb/vfx.png", (String)null, (String)null);
-        super(name, setClass, new EnergyOrbGuardian(orbTextures,"guardianResources/GuardianImages/char/orb/vfx.png"), (String)null, (String)null);
+        super(name, setClass, new EnergyOrbGuardian(orbTextures, "guardianResources/GuardianImages/char/orb/vfx.png"), null, null);
 
 
-        if(CharacterSelectScreenPatches.characters[0].reskinCount == 1){
+        if (CharacterSelectScreenPatches.characters[0].reskinCount == 1) {
             this.initializeClass(null,
                     CharacterSelectScreenPatches.characters[0].skins[CharacterSelectScreenPatches.characters[0].reskinCount].SHOULDER1,
                     CharacterSelectScreenPatches.characters[0].skins[CharacterSelectScreenPatches.characters[0].reskinCount].SHOULDER2,
                     CharacterSelectScreenPatches.characters[0].skins[CharacterSelectScreenPatches.characters[0].reskinCount].CORPSE,
                     this.getLoadout(), 0.0F, -10F, 400.0F, 350.0F, new EnergyManager(3));
-        }else {
+        } else {
             this.initializeClass(null,
                     CharacterSelectScreenPatches.characters[0].skins[CharacterSelectScreenPatches.characters[0].reskinCount].SHOULDER1,
                     CharacterSelectScreenPatches.characters[0].skins[CharacterSelectScreenPatches.characters[0].reskinCount].SHOULDER2,
                     CharacterSelectScreenPatches.characters[0].skins[CharacterSelectScreenPatches.characters[0].reskinCount].CORPSE,
-                    this.getLoadout(),0.0F, -10F, 310.0F, 260.0F, new EnergyManager(3));
+                    this.getLoadout(), 0.0F, -10F, 310.0F, 260.0F, new EnergyManager(3));
         }
 
 //        if(CharacterSelectScreenPatches.characters[0].isOriginal()){
@@ -109,7 +111,7 @@ public class GuardianCharacter extends CustomPlayer {
 //
 //            }
 
-		this.reloadAnimation();
+        this.reloadAnimation();
 
 
     }
@@ -153,27 +155,28 @@ public class GuardianCharacter extends CustomPlayer {
     }
 */
 
-    public void switchToDefensiveMode(){
+    public void switchToDefensiveMode() {
         orbScaleFinal = 0.7f;
         if (!inShattered) {
             if (!inDefensive) {
-                if(CharacterSelectScreenPatches.characters[0].isOriginal()){
+                if (CharacterSelectScreenPatches.characters[0].isOriginal()) {
 
                     this.stateData.setMix("idle", "defensive", 0.2F);
                     this.state.setTimeScale(.75F);
                     this.state.setAnimation(0, "defensive", true);
 
                     inDefensive = true;
-                }else {
+                } else {
                     reloadAnimation();
                     this.state.setTimeScale(2.0F);
                     this.state.setAnimation(0, "transition", false);
-                    this.state.addAnimation(0, "defensive", true,0.0f);
+                    this.state.addAnimation(0, "defensive", true, 0.0f);
 //                    this.stateData.setMix("idle", "defensive", 0.2F);
 //                    this.state.setTimeScale(2.0F);
 //                    this.state.addAnimation(0, "defensive", true, 0.0F);
 
-                    inDefensive = true;}
+                    inDefensive = true;
+                }
             }
         }
     }
@@ -196,18 +199,19 @@ public class GuardianCharacter extends CustomPlayer {
         orbScaleFinal = 1.0f;
         if (!inShattered) {
             if (inDefensive) {
-                if(CharacterSelectScreenPatches.characters[0].isOriginal()){
+                if (CharacterSelectScreenPatches.characters[0].isOriginal()) {
                     CardCrawlGame.sound.playA("GUARDIAN_ROLL_UP", .25F);
                     this.stateData.setMix("defensive", "idle", 0.2F);
                     this.state.setTimeScale(.75F);
                     this.state.setAnimation(0, "idle", true);
 
                     inDefensive = false;
-                }else{
+                } else {
                     CardCrawlGame.sound.playA("GUARDIAN_ROLL_UP", .25F);
                     this.stateData.setMix("defensive", "offensive", 0.1F);
                     this.state.setTimeScale(.75F);
-                    this.state.setAnimation(0, "offensive", false);this.state.addAnimation(0, "idle", true, 0.0F);
+                    this.state.setAnimation(0, "offensive", false);
+                    this.state.addAnimation(0, "idle", true, 0.0F);
 
                     inDefensive = false;
                 }
@@ -220,7 +224,7 @@ public class GuardianCharacter extends CustomPlayer {
         }
     }
 
-    public void switchToShatteredMode(){
+    public void switchToShatteredMode() {
         if (!inShattered) {
             if (inDefensive) {
                 this.stateData.setMix("defensive", "transition", 0.2F);
@@ -263,7 +267,7 @@ public class GuardianCharacter extends CustomPlayer {
     }
 
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo(NAME,DESCRIPTION,
+        return new CharSelectInfo(NAME, DESCRIPTION,
                 80, 80, 3, 99, 5, this,
 
                 getStartingRelics(), getStartingDeck(), false);

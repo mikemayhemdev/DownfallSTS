@@ -18,9 +18,9 @@ public class CultistFeather extends AbstractCollectibleCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToFront(new StrengthPower(p,magicNumber));
-        if (upgraded){
-            applyToFront(new DexterityPower(p,magicNumber));
+        applyToFront(new StrengthPower(p, magicNumber));
+        if (upgraded) {
+            applyToFront(new DexterityPower(p, magicNumber));
         }
     }
 

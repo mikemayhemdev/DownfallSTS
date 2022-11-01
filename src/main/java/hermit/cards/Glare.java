@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import hermit.HermitMod;
 import hermit.characters.hermit;
-import hermit.powers.Bruise;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
@@ -52,16 +51,16 @@ public class Glare extends AbstractDynamicCard {
 
     public Glare() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber=magicNumber=1;
-        defaultBaseSecondMagicNumber=defaultSecondMagicNumber=1;
+        baseMagicNumber = magicNumber = 1;
+        defaultBaseSecondMagicNumber = defaultSecondMagicNumber = 1;
         loadJokeCardImage(this, "glare.png");
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-            this.addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
-            this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.defaultSecondMagicNumber, false), this.defaultSecondMagicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
+        this.addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
+        this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.defaultSecondMagicNumber, false), this.defaultSecondMagicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
     }
 
     //Upgraded stats.

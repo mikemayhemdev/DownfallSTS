@@ -60,12 +60,12 @@ public class SamplingLick extends AbstractLickCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new LickEffect(m.hb.cX, m.hb.cY, 0.6F, new Color(Color.GOLDENROD)), 0.1F));
 
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        if (upgraded)upgradeAction(p,m);
+        if (upgraded) upgradeAction(p, m);
 
     }
 
 
-    public void upgradeAction(AbstractPlayer p, AbstractMonster m){
+    public void upgradeAction(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
     }
 

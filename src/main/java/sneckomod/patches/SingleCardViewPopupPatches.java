@@ -1,19 +1,11 @@
 package sneckomod.patches;
 
-import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.evacipated.cardcrawl.modthespire.lib.LineFinder;
-import com.evacipated.cardcrawl.modthespire.lib.Matcher;
-import com.evacipated.cardcrawl.modthespire.lib.SpireInsertLocator;
-import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
+import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import javassist.CtBehavior;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
-import sneckomod.relics.BabySnecko;
 
 
 public class SingleCardViewPopupPatches {
@@ -42,16 +34,16 @@ public class SingleCardViewPopupPatches {
     )
     public static class RenderPatch {
         @SpireInsertPatch(
-                locator=RenderPatchLocator.class,
-                localvars={"copy"}
+                locator = RenderPatchLocator.class,
+                localvars = {"copy"}
         )
         public static void __render(SingleCardViewPopup __instance, SpriteBatch sb, AbstractCard ___card, AbstractCard copy) {
             if (copy instanceof AbstractUnknownCard && ___card instanceof AbstractUnknownCard) {
                 // Allow preview rotation to work while the 'Show Upgrade' option is checked. The option causes
                 // a copy of the card to be created and rendered each frame. So, we need to get the new state
                 // of the preview rotation from the copy and move it back to the original.
-                ((AbstractUnknownCard)copy).rotationTimer = ((AbstractUnknownCard)___card).rotationTimer;
-                ((AbstractUnknownCard)copy).scrollImpulse = ((AbstractUnknownCard)___card).scrollImpulse;
+                ((AbstractUnknownCard) copy).rotationTimer = ((AbstractUnknownCard) ___card).rotationTimer;
+                ((AbstractUnknownCard) copy).scrollImpulse = ((AbstractUnknownCard) ___card).scrollImpulse;
 
             }
         }
@@ -62,7 +54,7 @@ public class SingleCardViewPopupPatches {
         public int[] Locate(CtBehavior ctBehavior) throws Exception {
             Matcher matcher = new Matcher.FieldAccessMatcher(SingleCardViewPopup.class, "card");
             int[] lines = LineFinder.findAllInOrder(ctBehavior, matcher);
-            return new int[]{lines[lines.length-1]};  // last access moves 'copy' into 'this.card'
+            return new int[]{lines[lines.length - 1]};  // last access moves 'copy' into 'this.card'
         }
     }
 }

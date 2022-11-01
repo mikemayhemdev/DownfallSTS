@@ -3,9 +3,10 @@ package reskinContent.skinCharacter;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.downfallMod;
-import reskinContent.skinCharacter.skins.Snecko.*;
+import reskinContent.skinCharacter.skins.Snecko.BetaSnecko;
+import reskinContent.skinCharacter.skins.Snecko.SSSSnecko;
+import reskinContent.skinCharacter.skins.Snecko.SneckoOriginal;
 import reskinContent.vfx.ReskinUnlockedTextEffect;
-import sneckomod.TheSnecko;
 
 
 public class SneckoSkin extends AbstractSkinCharacter {

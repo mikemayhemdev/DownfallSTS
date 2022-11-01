@@ -40,8 +40,7 @@ public class EnShame extends AbstractBossCard {
                         this.addToTop(new TextAboveCreatureAction(m, ApplyPowerAction.TEXT[1]));
                     }
                 });
-            }
-            else {
+            } else {
                 this.addToTop(new ApplyPowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, new FrailPower(AbstractCharBoss.boss, 1, true), 1));
             }
         }

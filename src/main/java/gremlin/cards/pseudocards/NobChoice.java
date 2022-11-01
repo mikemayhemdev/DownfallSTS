@@ -27,8 +27,7 @@ public class NobChoice extends AbstractGremlinCard implements Unmovable {
 
     private static final int COST = 0;
 
-    public NobChoice()
-    {
+    public NobChoice() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.dontTriggerOnUseCard = true;
         this.purgeOnUse = true;
@@ -36,27 +35,23 @@ public class NobChoice extends AbstractGremlinCard implements Unmovable {
         this.tags.add(GOOD_STATUS);
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> options = new ArrayList<>();
-        if(AbstractDungeon.player == null || AbstractDungeon.player.gold > 0) {
+        if (AbstractDungeon.player == null || AbstractDungeon.player.gold > 0) {
             options.add(new CowerChoice());
         }
         options.add(new FightChoice());
         addToBot(new ChooseOneAction(options));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
         }
     }
 
     @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m)
-    {
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         return true;
     }
 }

@@ -1,12 +1,11 @@
 package gremlin.actions;
 
-import com.megacrit.cardcrawl.actions.*;
-import com.megacrit.cardcrawl.core.*;
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-public class BlockPerCardInHandAction extends AbstractGameAction
-{
+public class BlockPerCardInHandAction extends AbstractGameAction {
     public BlockPerCardInHandAction(int amount) {
         this.duration = Settings.ACTION_DUR_XFAST;
         this.actionType = ActionType.BLOCK;
@@ -15,7 +14,7 @@ public class BlockPerCardInHandAction extends AbstractGameAction
 
     @Override
     public void update() {
-        if(!this.isDone) {
+        if (!this.isDone) {
             this.isDone = true;
             int block = AbstractDungeon.player.hand.size() * amount;
             if (block > 0) {

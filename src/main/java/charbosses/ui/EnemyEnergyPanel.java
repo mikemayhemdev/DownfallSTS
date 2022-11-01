@@ -8,13 +8,11 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
-import com.megacrit.cardcrawl.localization.TutorialStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.panels.AbstractPanel;
@@ -45,12 +43,12 @@ public class EnemyEnergyPanel extends AbstractPanel {
         EnemyEnergyPanel.energyVfxTimer = 0.0f;
     }
 
-    private Hitbox tipHitbox;
+    private final Hitbox tipHitbox;
     public Texture gainEnergyImg;
     private float energyVfxAngle;
     private float energyVfxScale;
-    private Color energyVfxColor;
-    private AbstractCharBoss owner;
+    private final Color energyVfxColor;
+    private final AbstractCharBoss owner;
 
     public EnemyEnergyPanel(AbstractCharBoss owner) {
         super(Settings.WIDTH - 198.0f * Settings.scale, Settings.HEIGHT - 190.0f * Settings.scale, -480.0f * Settings.scale, 200.0f * Settings.scale, 12.0f * Settings.scale, -12.0f * Settings.scale, null, false);
@@ -175,11 +173,7 @@ public class EnemyEnergyPanel extends AbstractPanel {
     }
 
     private void renderOrb(final SpriteBatch sb) {
-        if (EnemyEnergyPanel.totalCount == 0) {
-            this.owner.energyOrb.renderOrb(sb, false, this.current_x, this.current_y);
-        } else {
-            this.owner.energyOrb.renderOrb(sb, true, this.current_x, this.current_y);
-        }
+        this.owner.energyOrb.renderOrb(sb, EnemyEnergyPanel.totalCount != 0, this.current_x, this.current_y);
     }
 
     private void renderVfx(final SpriteBatch sb) {

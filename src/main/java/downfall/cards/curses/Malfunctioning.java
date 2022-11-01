@@ -50,7 +50,7 @@ public class Malfunctioning extends CustomCard {
         super.triggerOnEndOfTurnForPlayingCard();
         this.flash();
         this.superFlash();
-        for (AbstractCard c:AbstractDungeon.player.hand.group){
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
             AbstractDungeon.actionManager.addToBottom(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand, true));
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(OffclassHelper.getARandomStatus(), 1));
         }

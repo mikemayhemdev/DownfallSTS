@@ -27,7 +27,7 @@ public class WheelSpinButton extends AbstractCampfireOption {
         label = TEXT[0];
 
         this.usable = bruh;
-        if (this.usable){
+        if (this.usable) {
             description = TEXT[1];
         } else {
             description = TEXT[2];
@@ -35,7 +35,7 @@ public class WheelSpinButton extends AbstractCampfireOption {
         this.img = TextureLoader.getTexture("downfallResources/images/ui/campfire/wheel.png");
 
         if (AbstractDungeon.player.hasRelic(GremlinWheel.ID)) {
-            GremlinWheel gw = (GremlinWheel)AbstractDungeon.player.getRelic(GremlinWheel.ID);
+            GremlinWheel gw = (GremlinWheel) AbstractDungeon.player.getRelic(GremlinWheel.ID);
             gw.justFailed = false;
         }
     }
@@ -78,7 +78,7 @@ public class WheelSpinButton extends AbstractCampfireOption {
 
     @Override
     public void update() {
-        float hackScale = (float) ReflectionHacks.getPrivate(this, AbstractCampfireOption.class, "scale");
+        float hackScale = ReflectionHacks.getPrivate(this, AbstractCampfireOption.class, "scale");
 
         if (this.hb.hovered) {
 

@@ -5,8 +5,8 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import downfall.downfallMod;
 import downfall.cards.KnowingSkullWish;
+import downfall.downfallMod;
 
 public class KnowingSkull extends CustomRelic {
 

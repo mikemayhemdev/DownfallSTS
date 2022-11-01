@@ -1,7 +1,6 @@
 package automaton.events;
 
 import automaton.AutomatonMod;
-import basemod.helpers.BaseModCardTags;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.curses.Pain;
@@ -12,11 +11,8 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.WarpedTongs;
-import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
-import guardian.GuardianMod;
-import guardian.cards.AbstractGuardianCard;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -54,7 +50,7 @@ public class AccursedBlacksmithAutomaton extends AbstractImageEvent {
     private int screenNum = 0;
     private boolean pickCard = false;
 
-    private ArrayList<AbstractCard> validCards;
+    private final ArrayList<AbstractCard> validCards;
 
     public AccursedBlacksmithAutomaton() {
         super(NAME, DIALOG_1, "images/events/blacksmith.jpg");
@@ -92,8 +88,7 @@ public class AccursedBlacksmithAutomaton extends AbstractImageEvent {
 
     }
 
-    public void update()
-    {
+    public void update() {
         super.update();
 
         if ((this.pickCard) &&
@@ -110,54 +105,51 @@ public class AccursedBlacksmithAutomaton extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch (this.screenNum) {
-            case 0:
-                switch (buttonPressed) {
-                    case 0:
-                        this.imageEventText.updateBodyText(DESCRIPTIONSAUTOMATON[0]);
-                        this.screenNum = 2;
-                        this.imageEventText.updateDialogOption(0, OPTIONS[2]);
-                        Collections.shuffle(validCards);
-                        ArrayList<String> upgradedCards = new ArrayList<>();
-                        for (int i = 0; i < 3; i++) {
-                            if (validCards.size() - 1 >= i){
-                                upgradedCards.add(validCards.get(i).cardID);
-                                validCards.get(i).upgrade();
-                                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(validCards.get(i).makeStatEquivalentCopy(), MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH, MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT));
+        if (this.screenNum == 0) {
+            switch (buttonPressed) {
+                case 0:
+                    this.imageEventText.updateBodyText(DESCRIPTIONSAUTOMATON[0]);
+                    this.screenNum = 2;
+                    this.imageEventText.updateDialogOption(0, OPTIONS[2]);
+                    Collections.shuffle(validCards);
+                    ArrayList<String> upgradedCards = new ArrayList<>();
+                    for (int i = 0; i < 3; i++) {
+                        if (validCards.size() - 1 >= i) {
+                            upgradedCards.add(validCards.get(i).cardID);
+                            validCards.get(i).upgrade();
+                            AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(validCards.get(i).makeStatEquivalentCopy(), MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH, MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT));
 
-                            }
                         }
-                        logMetricUpgradeCards(ID, "Tinker", upgradedCards);
+                    }
+                    logMetricUpgradeCards(ID, "Tinker", upgradedCards);
 
-                        break;
-                    case 1:
-                        this.pickCard = true;
-                        AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getUpgradableCards(), 1, OPTIONS[3], true, false, false, false);
-                        this.imageEventText.updateBodyText(FORGE_RESULT);
-                        this.screenNum = 2;
-                        this.imageEventText.updateDialogOption(0, OPTIONS[2]);
-                        break;
-                    case 2:
-                        this.screenNum = 2;
-                        this.imageEventText.updateBodyText(RUMMAGE_RESULT + CURSE_RESULT2);
-                        AbstractCard curse = new Pain();
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), new WarpedTongs());
-                        logMetricObtainCardAndRelic(ID, "Rummage", curse, new WarpedTongs());
-                        this.imageEventText.updateDialogOption(0, OPTIONS[2]);
-                        break;
-                    case 3:
-                        this.screenNum = 2;
-                        this.imageEventText.updateBodyText(LEAVE_RESULT);
-                        this.imageEventText.updateDialogOption(0, OPTIONS[2]);
-                        logMetricIgnored(ID);
-                }
+                    break;
+                case 1:
+                    this.pickCard = true;
+                    AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getUpgradableCards(), 1, OPTIONS[3], true, false, false, false);
+                    this.imageEventText.updateBodyText(FORGE_RESULT);
+                    this.screenNum = 2;
+                    this.imageEventText.updateDialogOption(0, OPTIONS[2]);
+                    break;
+                case 2:
+                    this.screenNum = 2;
+                    this.imageEventText.updateBodyText(RUMMAGE_RESULT + CURSE_RESULT2);
+                    AbstractCard curse = new Pain();
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
+                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), new WarpedTongs());
+                    logMetricObtainCardAndRelic(ID, "Rummage", curse, new WarpedTongs());
+                    this.imageEventText.updateDialogOption(0, OPTIONS[2]);
+                    break;
+                case 3:
+                    this.screenNum = 2;
+                    this.imageEventText.updateBodyText(LEAVE_RESULT);
+                    this.imageEventText.updateDialogOption(0, OPTIONS[2]);
+                    logMetricIgnored(ID);
+            }
 
-                this.imageEventText.clearRemainingOptions();
-                break;
-            default:
-
-                this.openMap();
+            this.imageEventText.clearRemainingOptions();
+        } else {
+            this.openMap();
         }
 
     }

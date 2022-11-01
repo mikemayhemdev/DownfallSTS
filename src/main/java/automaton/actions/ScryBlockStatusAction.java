@@ -15,8 +15,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 public class ScryBlockStatusAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
-    private float startingDuration;
-    private int blockPerCard;
+    private final float startingDuration;
+    private final int blockPerCard;
 
     public ScryBlockStatusAction(int numCards, int blockPer) {
         this.amount = numCards;
@@ -48,7 +48,7 @@ public class ScryBlockStatusAction extends AbstractGameAction {
                 CardGroup tmpGroup = new CardGroup(CardGroupType.UNSPECIFIED);
                 if (this.amount != -1) {
                     for (int i = 0; i < Math.min(this.amount, AbstractDungeon.player.drawPile.size()); ++i) {
-                        tmpGroup.addToTop((AbstractCard) AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1));
+                        tmpGroup.addToTop(AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1));
                     }
                 } else {
                     for (AbstractCard c : AbstractDungeon.player.drawPile.group) {

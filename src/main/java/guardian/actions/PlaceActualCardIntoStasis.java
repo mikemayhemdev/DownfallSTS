@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import guardian.GuardianMod;
-import guardian.characters.GuardianCharacter;
 import guardian.orbs.StasisOrb;
 
 
@@ -25,15 +24,14 @@ public class PlaceActualCardIntoStasis extends AbstractGameAction {
     public PlaceActualCardIntoStasis(AbstractCard card) {
         this(card, null);
     }
-  
+
     public PlaceActualCardIntoStasis(AbstractCard card, CardGroup source) {
         this.card = card;
         this.source = source;
         this.actionType = ActionType.DAMAGE;
 
         hadRetain = card.retain;
-        if (source != null && source.type == CardGroup.CardGroupType.HAND)
-        {
+        if (source != null && source.type == CardGroup.CardGroupType.HAND) {
             card.retain = true;
         }
     }

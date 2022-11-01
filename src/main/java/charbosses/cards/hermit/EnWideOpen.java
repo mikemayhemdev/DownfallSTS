@@ -1,7 +1,5 @@
 package charbosses.cards.hermit;
 
-import basemod.ModLabel;
-import basemod.ModLabeledToggleButton;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,8 +9,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import hermit.cards.HoleUp;
-import hermit.cards.Strike_Hermit;
 import hermit.cards.WideOpen;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;

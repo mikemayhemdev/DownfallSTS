@@ -1,7 +1,6 @@
 package charbosses.orbs;
 
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Defect.NewAge.ArchetypeAct3OrbsNewAge;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -122,7 +121,7 @@ public abstract class AbstractEnemyOrb extends AbstractOrb {
     protected void renderText(SpriteBatch sb) {
         if (!(this instanceof EnemyEmptyOrbSlot) && showValues) {
             if (this.showEvokeValue || evokeOverride) {
-                FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, evokeMult > 0 ? (Integer.toString(this.evokeAmount) + "x" + Integer.toString(evokeMult)) : Integer.toString(this.evokeAmount), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET, new Color(0.2F, 1.0F, 1.0F, this.c.a), this.fontScale);
+                FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, evokeMult > 0 ? (this.evokeAmount + "x" + evokeMult) : Integer.toString(this.evokeAmount), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET, new Color(0.2F, 1.0F, 1.0F, this.c.a), this.fontScale);
             } else {
                 FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.passiveAmount), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET, this.c, this.fontScale);
             }

@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
 import slimebound.actions.FormABlockadeAction;
 import slimebound.orbs.SpawnedSlime;
-import slimebound.patches.AbstractCardEnum;
 
 
 public class ServeAndProtectProtect extends AbstractSlimeboundCard {

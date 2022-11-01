@@ -12,7 +12,7 @@ public class OrbwalkPower extends AbstractGuardianPower {
     public static PowerType POWER_TYPE = PowerType.BUFF;
 
     public static String[] DESCRIPTIONS;
-    private AbstractCreature source;
+    private final AbstractCreature source;
 
 
     public OrbwalkPower(AbstractCreature owner, AbstractCreature source, int amount) {

@@ -6,14 +6,15 @@ import charbosses.cards.blue.*;
 import charbosses.cards.curses.EnAged;
 import charbosses.cards.curses.EnShame;
 import charbosses.orbs.AbstractEnemyOrb;
-import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
 import charbosses.powers.bossmechanicpowers.DefectVoidPower;
-import charbosses.relics.*;
+import charbosses.relics.CBR_ClockworkSouvenir;
+import charbosses.relics.CBR_FossilizedHelix;
+import charbosses.relics.CBR_NeowsBlessing;
+import charbosses.relics.CBR_SymbioticVirus;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import guardian.powers.ConstructPower;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
@@ -48,7 +49,7 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
         addRelic(new CBR_FossilizedHelix());
         addRelic(new CBR_ClockworkSouvenir());
         //addRelic(new CBR_LetterOpener());
-      //  addRelic(new CBR_Abacus());
+        //  addRelic(new CBR_Abacus());
         // addRelic(new CBR_Transmogrifier());  //Could be something else, no strong lean in any direction
     }
 

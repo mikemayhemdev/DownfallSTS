@@ -4,18 +4,19 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.downfallMod;
 import gremlin.characters.GremlinCharacter;
 
 @SpirePatch(
-        clz= AbstractDungeon.class,
-        method="dungeonTransitionSetup"
+        clz = AbstractDungeon.class,
+        method = "dungeonTransitionSetup"
 )
 public class GremlinPostBossHealPatch {
     @SpireInsertPatch(
-            rloc=27
+            rloc = 27
     )
     public static SpireReturn Insert() {
-        if (AbstractDungeon.player instanceof GremlinCharacter) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
             float multiplier = 1.0f;
             if (AbstractDungeon.ascensionLevel >= 5) {
                 multiplier = .75f;
@@ -27,7 +28,7 @@ public class GremlinPostBossHealPatch {
             }
 
             // Heal all
-            ((GremlinCharacter)(AbstractDungeon.player)).mobState.postBossHeal(AbstractDungeon.player.maxHealth, multiplier);
+            ((GremlinCharacter) (AbstractDungeon.player)).mobState.postBossHeal(AbstractDungeon.player.maxHealth, multiplier);
         }
         return SpireReturn.Continue();
     }

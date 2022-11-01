@@ -4,13 +4,10 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.unique.RetainCardsAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.EquilibriumPower;
-import com.megacrit.cardcrawl.relics.RunicPyramid;
 import hermit.HermitMod;
 import hermit.util.TextureLoader;
 
@@ -28,7 +25,7 @@ public class RyeStalkPower extends AbstractPower {
         name = NAME;
         ID = POWER_ID;
         this.owner = AbstractDungeon.player;
-        this.amount=-1;
+        this.amount = -1;
 
         type = PowerType.BUFF;
         isTurnBased = false;
@@ -40,7 +37,7 @@ public class RyeStalkPower extends AbstractPower {
     }
 
     public void updateDescription() {
-            this.description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0];
 
     }
 

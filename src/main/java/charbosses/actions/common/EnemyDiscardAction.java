@@ -21,8 +21,8 @@ public class EnemyDiscardAction extends AbstractGameAction {
         DURATION = Settings.ACTION_DUR_XFAST;
     }
 
-    private AbstractCharBoss p;
-    private boolean endTurn;
+    private final AbstractCharBoss p;
+    private final boolean endTurn;
 
     public EnemyDiscardAction(final AbstractCreature target, final AbstractCreature source, final int amount) {
         this(target, source, amount, false);

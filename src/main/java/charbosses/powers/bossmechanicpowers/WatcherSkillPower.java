@@ -6,7 +6,6 @@
 package charbosses.powers.bossmechanicpowers;
 
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Watcher.CharBossWatcher;
 import charbosses.cards.AbstractBossCard;
 import charbosses.stances.EnRealWrathStance;
 import charbosses.stances.EnWrathStance;
@@ -18,8 +17,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
@@ -29,7 +26,7 @@ public class WatcherSkillPower extends AbstractBossMechanicPower {
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
 
-    private boolean used = false;
+    private final boolean used = false;
 
     public WatcherSkillPower(AbstractCreature owner, int newAmount) {
         this.name = NAME;
@@ -43,6 +40,7 @@ public class WatcherSkillPower extends AbstractBossMechanicPower {
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
+
     @Override
     public void onUseCard(final AbstractCard card, final UseCardAction action) {
         if (card instanceof AbstractBossCard) {

@@ -3,7 +3,6 @@ package downfall.monsters;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -51,7 +50,6 @@ public class LadyInBlue extends AbstractMonster {
         this.damage.add(new DamageInfo(this, 10));
 
 
-
         AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
         this.stateData.setMix("Hit", "Idle", 0.2F);
@@ -63,11 +61,9 @@ public class LadyInBlue extends AbstractMonster {
 
     @Override
     public void changeState(String stateName) {
-        switch(stateName) {
-            case "ATTACK":
-                this.state.setAnimation(0, "Attack", false);
-                this.state.addAnimation(0, "Idle", true, 0.0F);
-                break;
+        if ("ATTACK".equals(stateName)) {
+            this.state.setAnimation(0, "Attack", false);
+            this.state.addAnimation(0, "Idle", true, 0.0F);
         }
 
     }

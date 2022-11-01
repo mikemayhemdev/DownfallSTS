@@ -39,9 +39,8 @@ import gremlin.actions.ThinkAction;
 import gremlin.cards.GremlinDance;
 import gremlin.cards.pseudocards.LeaderChoice;
 import gremlin.cards.pseudocards.NobChoice;
-import gremlin.orbs.*;
+import gremlin.orbs.GremlinStandby;
 import gremlin.patches.AbstractCardEnum;
-import gremlin.patches.GremlinEnum;
 import gremlin.patches.GremlinMobState;
 import gremlin.powers.GremlinPower;
 
@@ -77,12 +76,12 @@ public class GremlinCharacter extends CustomPlayer {
     };
 
     public float xStartOffset = (float) Settings.WIDTH * 0.25F;
-    private static float xSpaceBetweenSlots = 90 * Settings.scale;
-    private static float xSpaceBetweenSlotsCramp = 85 * Settings.scale;
-    private static float yStartOffset = AbstractDungeon.floorY + (30 * Settings.scale);
-    public float[] orbPositionsX = {0,0,0,0,0,0,0,0,0,0};
-    public float[] orbPositionsXCramp = {0,0,0,0,0,0,0,0,0,0};
-    public float[] orbPositionsY = {0,0,0,0,0,0,0,0,0,0};
+    private static final float xSpaceBetweenSlots = 90 * Settings.scale;
+    private static final float xSpaceBetweenSlotsCramp = 85 * Settings.scale;
+    private static final float yStartOffset = AbstractDungeon.floorY + (30 * Settings.scale);
+    public float[] orbPositionsX = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    public float[] orbPositionsXCramp = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    public float[] orbPositionsY = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
     public String currentGremlin;
     public String currentAnimation;
@@ -95,12 +94,12 @@ public class GremlinCharacter extends CustomPlayer {
     private boolean cowering = false;
     private int enemyGremTalk = 0;
 
-    private static String[] NOBUITEXT = CardCrawlGame.languagePack.getUIString("Gremlin:NobFight").TEXT;
-    private static String[] GREMUITEXT = CardCrawlGame.languagePack.getUIString("Gremlin:GremFight").TEXT;
+    private static final String[] NOBUITEXT = CardCrawlGame.languagePack.getUIString("Gremlin:NobFight").TEXT;
+    private static final String[] GREMUITEXT = CardCrawlGame.languagePack.getUIString("Gremlin:GremFight").TEXT;
 
     public GremlinCharacter(String name) {
         super(name, downfallMod.Enums.GREMLIN, orbTextures,
-                "gremlinResources/images/char/orb/vfx.png", (String)null, null);
+                "gremlinResources/images/char/orb/vfx.png", (String) null, null);
 
         this.drawX += 5.0F * Settings.scale;
         this.drawY += 7.0F * Settings.scale;
@@ -121,7 +120,7 @@ public class GremlinCharacter extends CustomPlayer {
         swapBody(mobState.getFrontGremlin(), mobState.getFrontAnimation());
     }
 
-    public String swapBody(String assetFolder, String animationName){
+    public String swapBody(String assetFolder, String animationName) {
         String s_atlas = CHAR_FOLDER + assetFolder + SKELETON_ATLAS;
         String s_json = CHAR_FOLDER + assetFolder + SKELETON_JSON;
         this.loadAnimation(GremlinMod.getResourcePath(s_atlas), GremlinMod.getResourcePath(s_json), 1.0f);
@@ -133,7 +132,7 @@ public class GremlinCharacter extends CustomPlayer {
         return oldGremlin;
     }
 
-    public void becomeNob(){
+    public void becomeNob() {
         nob = true;
         dialogX += 50;
         dialogY += 60;
@@ -144,7 +143,7 @@ public class GremlinCharacter extends CustomPlayer {
         e.setTime(e.getEndTime() * MathUtils.random());
     }
 
-    public void revertNob(){
+    public void revertNob() {
         nob = false;
         dialogX -= 50;
         dialogY -= 60;
@@ -311,19 +310,19 @@ public class GremlinCharacter extends CustomPlayer {
         GremlinPower startPower = GremlinMod.getGremlinOrb(mobState.getFrontGremlin()).getPower();
         AbstractDungeon.actionManager.addToTop(
                 new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, startPower, 1));
-        if (((AbstractDungeon.getCurrRoom() instanceof MonsterRoom)) && (lastCombatMetricKey.equals(MonsterHelper.GREMLIN_NOB_ENC))){
+        if (((AbstractDungeon.getCurrRoom() instanceof MonsterRoom)) && (lastCombatMetricKey.equals(MonsterHelper.GREMLIN_NOB_ENC))) {
             beforeNobFight();
         }
-        if (((AbstractDungeon.getCurrRoom() instanceof MonsterRoom)) && (lastCombatMetricKey.equals(MonsterHelper.GREMLIN_LEADER_ENC))){
+        if (((AbstractDungeon.getCurrRoom() instanceof MonsterRoom)) && (lastCombatMetricKey.equals(MonsterHelper.GREMLIN_LEADER_ENC))) {
             beforeLeaderFight();
         }
     }
 
     public void updateMobState() {
-        if(nob){
+        if (nob) {
             revertNob();
         }
-        if(cowering){
+        if (cowering) {
             removeCower(false);
         }
         mobState.updateMobState(this);
@@ -342,7 +341,7 @@ public class GremlinCharacter extends CustomPlayer {
     }
 
     public void resurrect(double multiplier) {
-        mobState.resurrect((int)(this.maxHealth*0.5));
+        mobState.resurrect((int) (this.maxHealth * 0.5));
     }
 
     public boolean canRez() {
@@ -366,12 +365,12 @@ public class GremlinCharacter extends CustomPlayer {
 
     @Override
     public void channelOrb(AbstractOrb orbToSet) {
-        if(orbToSet instanceof GremlinStandby){
+        if (orbToSet instanceof GremlinStandby) {
             GremlinStandby grem = (GremlinStandby) orbToSet;
-            for(int i=0;i<this.maxOrbs;i++){
-                if(this.orbs.get(i) instanceof GremlinStandby){
+            for (int i = 0; i < this.maxOrbs; i++) {
+                if (this.orbs.get(i) instanceof GremlinStandby) {
                     GremlinStandby orb = (GremlinStandby) this.orbs.get(i);
-                    if(orb.assetFolder.equals(grem.assetFolder)){
+                    if (orb.assetFolder.equals(grem.assetFolder)) {
                         return;
                     }
                 }
@@ -438,16 +437,16 @@ public class GremlinCharacter extends CustomPlayer {
         }
     }
 
-    private void beforeNobFight(){
+    private void beforeNobFight() {
         AbstractMonster nob = null;
         GremlinMod.logger.debug("HERE!");
         for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if(mo instanceof GremlinNob){
+            if (mo instanceof GremlinNob) {
                 nob = mo;
                 break;
             }
         }
-        if(nob != null){
+        if (nob != null) {
             GremlinMod.logger.debug("THERE!");
             cower();
             AbstractDungeon.actionManager.addToBottom(new TalkAction(nob, NOBUITEXT[0]));
@@ -457,18 +456,18 @@ public class GremlinCharacter extends CustomPlayer {
         }
     }
 
-    private void beforeLeaderFight(){
+    private void beforeLeaderFight() {
         AbstractMonster leader = null;
         for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if(mo instanceof GremlinLeader){
+            if (mo instanceof GremlinLeader) {
                 leader = mo;
                 break;
             }
         }
-        if(leader != null){
+        if (leader != null) {
             int textNum = -1;
             String rearGrem = mobState.getRearLivingGremlin();
-            switch (rearGrem){
+            switch (rearGrem) {
                 case "angry":
                     textNum = 1;
                     break;
@@ -485,7 +484,7 @@ public class GremlinCharacter extends CustomPlayer {
                     textNum = 5;
                     break;
             }
-            if(textNum > 0) {
+            if (textNum > 0) {
                 cower();
                 AbstractDungeon.actionManager.addToBottom(new TalkAction(leader, NOBUITEXT[textNum]));
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new LeaderChoice()));
@@ -509,10 +508,10 @@ public class GremlinCharacter extends CustomPlayer {
     }
 
     public void removeCower(boolean endTurnButton) {
-        if(cowering){
+        if (cowering) {
             cowering = false;
             gameHandSize = trueGameHandSize;
-            if(endTurnButton) {
+            if (endTurnButton) {
                 AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, AbstractDungeon.player.gameHandSize));
                 AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.EnableEndTurnButtonAction());
                 AbstractDungeon.overlayMenu.showCombatPanels();
@@ -530,48 +529,48 @@ public class GremlinCharacter extends CustomPlayer {
 
     @Override
     public void applyStartOfCombatLogic() {
-        if(!cowering) {
+        if (!cowering) {
             super.applyStartOfCombatLogic();
         }
     }
 
     @Override
     public void applyStartOfTurnRelics() {
-        if(!cowering) {
+        if (!cowering) {
             super.applyStartOfTurnRelics();
         }
     }
 
     @Override
     public void applyStartOfTurnPostDrawRelics() {
-        if(!cowering) {
+        if (!cowering) {
             super.applyStartOfTurnPostDrawRelics();
         }
     }
 
     @Override
     public void applyStartOfTurnCards() {
-        if(!cowering) {
+        if (!cowering) {
             super.applyStartOfTurnCards();
         }
     }
 
     @Override
     public void applyStartOfTurnPowers() {
-        if(!cowering) {
+        if (!cowering) {
             super.applyStartOfTurnPowers();
         }
     }
 
     @Override
     public void applyStartOfTurnOrbs() {
-        if(!cowering) {
+        if (!cowering) {
             super.applyStartOfTurnOrbs();
         }
     }
 
-    public void gremlinTalk(AbstractCreature enemyGremlin){
-        if(enemyGremTalk < GREMUITEXT.length && lastCombatMetricKey != null &&
+    public void gremlinTalk(AbstractCreature enemyGremlin) {
+        if (enemyGremTalk < GREMUITEXT.length && lastCombatMetricKey != null &&
                 !lastCombatMetricKey.equals(MonsterHelper.GREMLIN_LEADER_ENC) &&
                 !lastCombatMetricKey.equals("Gremlin Mirror") &&
                 GameActionManager.turn <= 1) {
@@ -580,7 +579,7 @@ public class GremlinCharacter extends CustomPlayer {
         }
     }
 
-    public void damageGremlins(int dmg){
+    public void damageGremlins(int dmg) {
         mobState.damageAll(dmg);
     }
 
@@ -588,38 +587,38 @@ public class GremlinCharacter extends CustomPlayer {
         int trueDmg = dmg;
         if (splitByFive) {
             // Round up
-            trueDmg = (dmg + 4)/5;
+            trueDmg = (dmg + 4) / 5;
         }
         damageGremlins(trueDmg);
-        damage(new DamageInfo((AbstractCreature) null, trueDmg, DamageInfo.DamageType.HP_LOSS));
+        damage(new DamageInfo(null, trueDmg, DamageInfo.DamageType.HP_LOSS));
     }
 
-    public void healGremlins(int hp){
+    public void healGremlins(int hp) {
         mobState.campfireHeal(hp, this.maxHealth);
     }
 
     public Map<String, Integer> getAllGremlinHPs() {
         Map<String, Integer> hpMap = new TreeMap<>();
-        if(!mobState.inCombat) {
+        if (!mobState.inCombat) {
             for (int i = 0; i < 5; i++) {
                 hpMap.put(mobState.getGremlinName(i), mobState.getGremlinHP(i));
             }
         } else {
             for (final String grem : GremlinMod.getGremlinStrings()) {
-                if(grem.equals(this.currentGremlin)) {
+                if (grem.equals(this.currentGremlin)) {
                     hpMap.put(GremlinMod.getGremlinOrb(grem).name, this.currentHealth);
                 } else {
                     boolean found = false;
                     for (AbstractOrb orb : this.orbs) {
                         if (orb instanceof GremlinStandby) {
-                            if (((GremlinStandby)orb).assetFolder.equals(grem)) {
+                            if (((GremlinStandby) orb).assetFolder.equals(grem)) {
                                 hpMap.put(orb.name, ((GremlinStandby) orb).hp);
                                 found = true;
                                 break;
                             }
                         }
                     }
-                    if(!found) {
+                    if (!found) {
                         if (!mobState.isEnslaved(grem)) {
                             hpMap.put(GremlinMod.getGremlinOrb(grem).name, 0);
                         } else {

@@ -27,14 +27,15 @@ public class FelsteelAegis extends AbstractCollectorCard {
         if (CollectorChar.getLivingTorchHead() != null) {
             atb(new AddAggroAction(magicNumber));
         }
-        atb(new SelectCardsInHandAction(magicNumber, ExhaustAction.TEXT[0],true,true, card ->true, Cards->{
-            if (Cards.size() > 0){
+        atb(new SelectCardsInHandAction(magicNumber, ExhaustAction.TEXT[0], true, true, card -> true, Cards -> {
+            if (Cards.size() > 0) {
                 atb(new ExhaustSpecificCardAction(Cards.get(0), AbstractDungeon.player.hand));
                 AbstractCard copy = this.makeStatEquivalentCopy();
-                atb(new MakeTempCardInDiscardAction(copy,1));
+                atb(new MakeTempCardInDiscardAction(copy, 1));
             }
         }));
     }
+
     @Override
     public void upp() {
         initializeDescription();

@@ -14,12 +14,12 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 public class LeerVFX extends AbstractGameEffect {
     private static AtlasRegion img;
     private final float DUR = 0.5F;
-    private float sX;
-    private float sY;
+    private final float sX;
+    private final float sY;
     private float dX;
     private float dY;
-    private float mX;
-    private float mY;
+    private final float mX;
+    private final float mY;
     private float dst;
     private boolean isFlipped = false;
 

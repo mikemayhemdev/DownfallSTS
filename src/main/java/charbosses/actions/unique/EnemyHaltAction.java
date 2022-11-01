@@ -7,8 +7,8 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class EnemyHaltAction extends AbstractGameAction {
-    private AbstractMonster m;
-    private int additionalAmt;
+    private final AbstractMonster m;
+    private final int additionalAmt;
 
     public EnemyHaltAction(AbstractMonster monster, int block, int magicNumber) {
         this.m = monster;
@@ -17,7 +17,7 @@ public class EnemyHaltAction extends AbstractGameAction {
     }
 
     public void update() {
-        if (AbstractCharBoss.boss.stance instanceof EnWrathStance){
+        if (AbstractCharBoss.boss.stance instanceof EnWrathStance) {
             this.addToTop(new GainBlockAction(m, m, this.amount + this.additionalAmt));
         } else {
             this.addToTop(new GainBlockAction(m, m, this.amount));

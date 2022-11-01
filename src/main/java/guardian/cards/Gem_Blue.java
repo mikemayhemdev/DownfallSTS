@@ -1,16 +1,12 @@
 package guardian.cards;
 
 
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
-import guardian.powers.ModeShiftPower;
-import guardian.stances.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
 import sneckomod.SneckoMod;
 

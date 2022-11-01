@@ -3,14 +3,12 @@ package charbosses.powers.cardpowers;
 import charbosses.actions.orb.EnemyChannelAction;
 import charbosses.cards.AbstractBossCard;
 import charbosses.orbs.EnemyLightning;
-import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.orbs.Lightning;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class EnemyStormPower extends AbstractPower {
@@ -32,7 +30,7 @@ public class EnemyStormPower extends AbstractPower {
         if (card.type == CardType.POWER && this.amount > 0 && card instanceof AbstractBossCard) {
             this.flash();
 
-            for(int i = 0; i < this.amount; ++i) {
+            for (int i = 0; i < this.amount; ++i) {
                 this.addToBot(new EnemyChannelAction(new EnemyLightning()));
             }
         }

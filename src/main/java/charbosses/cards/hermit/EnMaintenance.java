@@ -1,9 +1,5 @@
 package charbosses.cards.hermit;
 
-import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Hermit.CharBossHermit;
-import charbosses.bosses.Hermit.NewAge.ArchetypeAct2WheelOfFateNewAge;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -12,7 +8,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import hermit.actions.ReduceCostActionFixed;
-import hermit.cards.Maintenance;
 import hermit.characters.hermit;
 import hermit.powers.MaintenanceStrikePower;
 

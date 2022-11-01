@@ -23,8 +23,7 @@ public class ShortStature extends AbstractGremlinRelic {
     public String getUpdatedDescription() {
         if (this.counter == -1) {
             return strings.DESCRIPTIONS[0];
-        }
-        else {
+        } else {
             return strings.DESCRIPTIONS[1];
         }
     }
@@ -41,7 +40,7 @@ public class ShortStature extends AbstractGremlinRelic {
     public void onTrigger() {
         this.flash();
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        int healAmt = (AbstractDungeon.player.maxHealth * 3)/4;
+        int healAmt = (AbstractDungeon.player.maxHealth * 3) / 4;
         if (healAmt < 1) {
             healAmt = 1;
         }

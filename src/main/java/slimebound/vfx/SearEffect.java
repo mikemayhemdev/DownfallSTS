@@ -17,11 +17,11 @@ import com.megacrit.cardcrawl.vfx.combat.LightFlareParticleEffect;
     /*    */   private static final float FIREBALL_INTERVAL = 0.016F;
     /*    */   private float x;
     /*    */   private float y;
-    /*    */   private float startX;
-    /*    */   private float startY;
-    /*    */   private float targetX;
-    /*    */   private float targetY;
-    /* 16 */   private float vfxTimer = 0.0F;
+    /*    */   private final float startX;
+    /*    */   private final float startY;
+    /*    */   private final float targetX;
+    /*    */   private final float targetY;
+    /* 16 */   private final float vfxTimer = 0.0F;
 
     /*    */
     /*    */

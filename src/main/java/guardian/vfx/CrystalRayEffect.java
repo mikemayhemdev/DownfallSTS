@@ -21,13 +21,13 @@ import java.util.ArrayList;
 
 public class CrystalRayEffect extends AbstractGameEffect {
     private static final float DUR = 0.5F;
-    private AtlasRegion img;
-    private float sX;
-    private float sY;
-    private float dX;
-    private float dY;
-    private float dst;
-    private ArrayList<GuardianMod.socketTypes> gems;
+    private final AtlasRegion img;
+    private final float sX;
+    private final float sY;
+    private final float dX;
+    private final float dY;
+    private final float dst;
+    private final ArrayList<GuardianMod.socketTypes> gems;
 
     public CrystalRayEffect(float sX, float sY, float dX, float dY, ArrayList<GuardianMod.socketTypes> gems) {
         this.img = ImageMaster.vfxAtlas.findRegion("combat/laserThin");
@@ -51,7 +51,7 @@ public class CrystalRayEffect extends AbstractGameEffect {
         this.duration -= Gdx.graphics.getDeltaTime();
         int steps = 1;
 
-        if(this.gems.size() > 2) {
+        if (this.gems.size() > 2) {
             int idx = (int) ((this.duration / this.startingDuration) * (this.gems.size() - 1));
             if (idx >= this.gems.size() - 1) idx -= 1;
             if (idx < 0) idx++;

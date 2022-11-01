@@ -28,14 +28,14 @@ public class Fireball extends AbstractCollectorCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        atb(new VFXAction(new FireballEffect(p.drawX,p.drawY,m.drawX,m.drawY)));
-        atb(new DamageAction(m,new DamageInfo(p,damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
-        atb(new SelectCardsInHandAction(magicNumber, ExhaustAction.TEXT[0],true,true,card ->true, Cards->{
-            if (Cards.size() > 0){
+        atb(new VFXAction(new FireballEffect(p.drawX, p.drawY, m.drawX, m.drawY)));
+        atb(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
+        atb(new SelectCardsInHandAction(magicNumber, ExhaustAction.TEXT[0], true, true, card -> true, Cards -> {
+            if (Cards.size() > 0) {
                 atb(new ExhaustSpecificCardAction(Cards.get(0), AbstractDungeon.player.hand));
                 AbstractCard copy = this.makeStatEquivalentCopy();
                 copy.baseDamage += magicNumber;
-                atb(new MakeTempCardInDiscardAction(copy,1));
+                atb(new MakeTempCardInDiscardAction(copy, 1));
             }
         }));
 

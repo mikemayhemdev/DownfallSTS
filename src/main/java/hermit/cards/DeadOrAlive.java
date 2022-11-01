@@ -1,8 +1,5 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -11,7 +8,6 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import hermit.HermitMod;
 import hermit.actions.DeadOrAliveAction;
 import hermit.characters.hermit;
-
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
@@ -44,7 +40,6 @@ public class DeadOrAlive extends AbstractDynamicCard {
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
 
-
     private static final int COST = -1;
 
 
@@ -53,7 +48,7 @@ public class DeadOrAlive extends AbstractDynamicCard {
     public DeadOrAlive() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = 8;
-        this.exhaust=true;
+        this.exhaust = true;
         this.tags.add(CardTags.HEALING);
         loadJokeCardImage(this, "dead_or_alive.png");
 
@@ -73,7 +68,7 @@ public class DeadOrAlive extends AbstractDynamicCard {
             p.getRelic("Chemical X").flash();
         }
         for (int i = 0; i < num; i++)
-        this.addToBot(new DeadOrAliveAction(m,p, this));
+            this.addToBot(new DeadOrAliveAction(m, p, this));
 
         if (!this.freeToPlayOnce) {
             p.energy.use(EnergyPanel.totalCount);

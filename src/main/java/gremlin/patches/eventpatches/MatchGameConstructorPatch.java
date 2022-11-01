@@ -6,18 +6,17 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.shrines.GremlinMatchGame;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import gremlin.characters.GremlinCharacter;
+import downfall.downfallMod;
 
 import java.lang.reflect.Field;
 
 @SpirePatch(clz = GremlinMatchGame.class, method = SpirePatch.CONSTRUCTOR)
-public class MatchGameConstructorPatch
-{
+public class MatchGameConstructorPatch {
     private static final EventStrings strings = CardCrawlGame.languagePack.getEventString("Gremlin:MatchingGame");
     private static final String TEXT = strings.DESCRIPTIONS[2];
 
     public static void Postfix(GremlinMatchGame __instance) {
-        if (AbstractDungeon.player instanceof GremlinCharacter) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
             setPrivateSuperInherited(__instance, GremlinMatchGame.class, "body", TEXT);
             ReflectionHacks.setPrivate(__instance, GremlinMatchGame.class, "attemptCount", 6);
         }

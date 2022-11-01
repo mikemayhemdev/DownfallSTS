@@ -30,9 +30,9 @@ public class SlimeSpawnProjectileDeath extends AbstractGameEffect {
     private float dY;
     private float yOffset;
     private float bounceHeight;
-    private boolean playedSfx = false;
+    private final boolean playedSfx = false;
     private boolean skip = false;
-    private float height = 100f;
+    private final float height = 100f;
     private Color projectileColor;
     private Color projectileColorDeath;
     private AbstractOrb o;
@@ -40,7 +40,7 @@ public class SlimeSpawnProjectileDeath extends AbstractGameEffect {
     private AbstractPlayer p;
 
 
-    private ArrayList<Vector2> previousPos = new ArrayList();
+    private final ArrayList<Vector2> previousPos = new ArrayList();
 
     public SlimeSpawnProjectileDeath(float srcX, float srcY, AbstractOrb o, float scale, Color color, boolean mute) {
         this(srcX, srcY, o, null, scale, color, mute);

@@ -3,23 +3,18 @@ package charbosses.bosses.Silent.NewAge;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Silent.ArchetypeBaseSilent;
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.colorless.EnShiv;
-import charbosses.cards.curses.EnClumsy;
-import charbosses.cards.curses.EnDecay;
 import charbosses.cards.green.*;
 import charbosses.cards.other.Antidote;
-import charbosses.powers.bossmechanicpowers.IroncladFortificationPower;
 import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
-import charbosses.powers.bossmechanicpowers.SilentShivTimeEaterPower;
-import charbosses.powers.general.PoisonProtectionPower;
-import charbosses.relics.*;
+import charbosses.relics.CBR_HornCleat;
+import charbosses.relics.CBR_Lantern;
+import charbosses.relics.CBR_NeowsBlessing;
+import charbosses.relics.CBR_TwistedFunnel;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.green.DeadlyPoison;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import downfall.monsters.gauntletbosses.Silent;
 
 import java.util.ArrayList;
 
@@ -71,8 +66,7 @@ public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
                         c.modifyCostForCombat(-2);
                         addToList(cardsList, c);
                         addToList(cardsList, new EnSurvivor());
-                    }
-                    else {
+                    } else {
                         addToList(cardsList, new EnCripplingCloud()); //Removed
                         addToList(cardsList, new EnSurvivor());
                         addToList(cardsList, new EnBurst());

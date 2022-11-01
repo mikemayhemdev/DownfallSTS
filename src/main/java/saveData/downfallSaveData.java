@@ -19,7 +19,7 @@ public class downfallSaveData {
 
     public int MERCHANT_HEALTH = -1;
     public int MERCHANT_STRENGTH = -1;
-    public int MERCHANT_SOULS  = -1;
+    public int MERCHANT_SOULS = -1;
 
     public boolean MERCHANT_DEAD = false;
     public boolean MERCHANT_ESCAPED = false;

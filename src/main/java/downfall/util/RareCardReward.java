@@ -24,8 +24,8 @@ import java.util.Iterator;
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
 
 public class RareCardReward extends RewardItem {
-    private float REWARD_TEXT_X = 833.0F * Settings.scale;
-    private ArrayList<AbstractGameEffect> effects = new ArrayList<>();
+    private final float REWARD_TEXT_X = 833.0F * Settings.scale;
+    private final ArrayList<AbstractGameEffect> effects = new ArrayList<>();
     public static final String ID = downfallMod.makeID("RareCardReward");
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
 
@@ -104,11 +104,10 @@ public class RareCardReward extends RewardItem {
         }
 
         if (this.hb.hovered) {
-            switch (this.type) {
-                case POTION:
-                    if (!AbstractDungeon.topPanel.potionCombine) {
-                        TipHelper.renderGenericTip(360.0F * Settings.scale, (float) InputHelper.mY, this.potion.name, this.potion.description);
-                    }
+            if (this.type == RewardType.POTION) {
+                if (!AbstractDungeon.topPanel.potionCombine) {
+                    TipHelper.renderGenericTip(360.0F * Settings.scale, (float) InputHelper.mY, this.potion.name, this.potion.description);
+                }
             }
         }
 

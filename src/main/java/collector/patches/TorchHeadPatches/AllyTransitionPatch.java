@@ -6,13 +6,14 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.stances.NeutralStance;
+import downfall.downfallMod;
 
 public class AllyTransitionPatch {
     @SpirePatch(clz = AbstractDungeon.class, method = "resetPlayer")
     public static class RoomTransitionPatch {
         @SpirePostfixPatch
         public static void Postfix() {
-            if (AbstractDungeon.player instanceof CollectorChar) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)) {
                 TorchChar dragon = CollectorChar.getTorchHead();
                 dragon.loseBlock(true);
                 if (!dragon.stance.ID.equals(NeutralStance.STANCE_ID)) {

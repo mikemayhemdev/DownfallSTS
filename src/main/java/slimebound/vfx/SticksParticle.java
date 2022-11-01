@@ -13,11 +13,11 @@ public class SticksParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffec
     private static final float DURATION = 0.75F;
     private static final float START_SCALE = 1.2F * Settings.scale;
     private static int W;
-    private static int xOffset = 15;
-    private static int yOffset = -35;
+    private static final int xOffset = 15;
+    private static final int yOffset = -35;
     public CultistSlime p;
-    private float scale = 1F;
-    private Texture img;
+    private final float scale = 1F;
+    private final Texture img;
 
     public SticksParticle(CultistSlime p) {
         this.duration = 0.05F;

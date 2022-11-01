@@ -41,7 +41,7 @@ public class Rugged extends AbstractPower implements CloneablePowerInterface {
         type = PowerType.BUFF;
 
         if (this.amount <= 0) {
-            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.POWER_ID));
+            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
         }
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
@@ -54,7 +54,7 @@ public class Rugged extends AbstractPower implements CloneablePowerInterface {
         if (info.owner != null && info.type != DamageInfo.DamageType.HP_LOSS && info.type != DamageInfo.DamageType.THORNS && damageAmount >= 1) {
             this.flash();
             this.addToTop(new ReducePowerAction(this.owner, this.owner, this.ID, 1));
-            return Math.min(damageAmount,2);
+            return Math.min(damageAmount, 2);
         } else {
             return damageAmount;
         }

@@ -1,15 +1,14 @@
 package gremlin.actions;
 
-import com.megacrit.cardcrawl.actions.*;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.monsters.*;
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.GremlinMod;
 
-public class PretaliationAction extends AbstractGameAction
-{
-    private AbstractMonster m;
+public class PretaliationAction extends AbstractGameAction {
+    private final AbstractMonster m;
 
     public PretaliationAction(final int dmgAmount, final AbstractMonster m) {
         this.actionType = ActionType.WAIT;

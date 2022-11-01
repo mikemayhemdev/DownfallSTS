@@ -1,26 +1,20 @@
 package hermit.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.green.Accuracy;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AccuracyPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.relics.StrikeDummy;
-import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
-import com.megacrit.cardcrawl.vfx.stance.StanceChangeParticleGenerator;
 import hermit.HermitMod;
-import hermit.actions.MaintenanceAction;
 import hermit.actions.ReduceCostActionFixed;
 import hermit.characters.hermit;
 import hermit.effects.HermitUpgradeShineEffect;
 import hermit.powers.MaintenanceStrikePower;
 
-import static hermit.HermitMod.*;
+import static hermit.HermitMod.loadJokeCardImage;
+import static hermit.HermitMod.makeCardPath;
 
 public class Maintenance extends AbstractDynamicCard {
 
@@ -48,7 +42,6 @@ public class Maintenance extends AbstractDynamicCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
-
 
 
     private static final int COST = 1;

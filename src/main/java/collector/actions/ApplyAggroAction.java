@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.vfx.combat.PowerBuffEffect;
+import downfall.downfallMod;
 
 public class ApplyAggroAction extends AbstractGameAction {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(CollectorMod.makeID("Aggro"));
@@ -26,7 +27,7 @@ public class ApplyAggroAction extends AbstractGameAction {
     }
 
     public void update() {
-        if (AbstractDungeon.getMonsters().areMonstersBasicallyDead() || !(AbstractDungeon.player instanceof CollectorChar) ||
+        if (AbstractDungeon.getMonsters().areMonstersBasicallyDead() || !(AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)) ||
                 (CollectorMod.TorchAggro == 0)) {
             this.isDone = true;
             return;

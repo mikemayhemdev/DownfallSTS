@@ -18,7 +18,7 @@ public class Devastate extends AbstractChampCard {
     }
 
     public void triggerOnCardPlayed(AbstractCard c) {
-        if (c.hasTag(ChampMod.FINISHER) && c!=this) {
+        if (c.hasTag(ChampMod.FINISHER) && c != this) {
             updateCost(-1);
         }
     }

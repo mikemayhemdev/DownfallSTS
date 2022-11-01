@@ -25,8 +25,7 @@ public class Strike extends AbstractGremlinCard {
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
 
-    public Strike()
-    {
+    public Strike() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -41,15 +40,13 @@ public class Strike extends AbstractGremlinCard {
                 this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
 
-    public AbstractCard makeCopy()
-    {
+    public AbstractCard makeCopy() {
         return new Strike();
     }
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
         }

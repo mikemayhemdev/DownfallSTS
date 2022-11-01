@@ -22,9 +22,9 @@ public class MorphCardAction extends AbstractGameAction {
 
     }
 
-    private AbstractPlayer p;
-    private boolean isRandom;
-    private boolean anyNumber;
+    private final AbstractPlayer p;
+    private final boolean isRandom;
+    private final boolean anyNumber;
     private boolean canPickZero;
 
     public MorphCardAction(AbstractCreature target, AbstractCreature source, int amount, boolean isRandom) {

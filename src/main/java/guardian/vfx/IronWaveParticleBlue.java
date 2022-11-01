@@ -21,9 +21,9 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 public class IronWaveParticleBlue extends AbstractGameEffect {
     private static final float EFFECT_DUR = 0.5F;
     private static AtlasRegion img;
-    private float x;
+    private final float x;
     private float y;
-    private float targetY;
+    private final float targetY;
     private boolean impactHook = false;
 
     public IronWaveParticleBlue(float x, float y) {

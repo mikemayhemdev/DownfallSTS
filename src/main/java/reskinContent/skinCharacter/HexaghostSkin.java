@@ -7,7 +7,6 @@ import reskinContent.skinCharacter.skins.Hexaghost.BetaHexaghost;
 import reskinContent.skinCharacter.skins.Hexaghost.HexaghostOriginal;
 import reskinContent.skinCharacter.skins.Hexaghost.Hexago;
 import reskinContent.vfx.ReskinUnlockedTextEffect;
-import theHexaghost.TheHexaghost;
 
 
 public class HexaghostSkin extends AbstractSkinCharacter {

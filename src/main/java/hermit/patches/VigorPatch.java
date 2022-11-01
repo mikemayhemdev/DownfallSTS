@@ -13,23 +13,21 @@ import hermit.powers.BigShotPower;
 
 
 public class VigorPatch {
-    public static int  isActive=0;
-    public static boolean thisRun=false;
+    public static int isActive = 0;
+    public static boolean thisRun = false;
 
     @SpirePatch(clz = GameActionManager.class, method = "getNextAction")
-    public static class DisableHealing
-    {
+    public static class DisableHealing {
         @SpirePrefixPatch
-        public static void Prefix(GameActionManager m)
-        {
+        public static void Prefix(GameActionManager m) {
             if (m.actions.isEmpty() && m.preTurnActions.isEmpty() && m.cardQueue.isEmpty() && isActive > 0) {
 
                 VigorPatch.thisRun = true;
             }
         }
+
         @SpirePostfixPatch
-        public static void Postfix(GameActionManager m)
-        {
+        public static void Postfix(GameActionManager m) {
             if (thisRun) {
                 System.out.println("Is thisrun");
                 while (isActive > 0) {

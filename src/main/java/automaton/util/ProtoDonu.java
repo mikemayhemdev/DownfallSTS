@@ -16,11 +16,10 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.AbstractMonster.EnemyType;
-import com.megacrit.cardcrawl.monsters.AbstractMonster.Intent;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+
 import java.util.Iterator;
 
 public class ProtoDonu extends AbstractMonster {
@@ -37,13 +36,13 @@ public class ProtoDonu extends AbstractMonster {
     private static final int BEAM_DMG = 10;
     private static final int BEAM_AMT = 2;
     private static final int A_2_BEAM_DMG = 12;
-    private int beamDmg;
+    private final int beamDmg;
     private static final String CIRCLE_NAME;
     private static final int CIRCLE_STR_AMT = 3;
     private boolean isAttacking;
 
     public ProtoDonu() {
-        super(NAME, "Donu", 250, 0.0F, -20.0F, 390.0F, 390.0F, (String)null, 100.0F, 20.0F);
+        super(NAME, "Donu", 250, 0.0F, -20.0F, 390.0F, 390.0F, null, 100.0F, 20.0F);
         this.loadAnimation("images/monsters/theForest/donu/skeleton.atlas", "images/monsters/theForest/donu/skeleton.json", 1.0F);
         TrackEntry e = this.state.setAnimation(0, "Idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
@@ -70,18 +69,14 @@ public class ProtoDonu extends AbstractMonster {
 
     public void changeState(String stateName) {
         byte var3 = -1;
-        switch(stateName.hashCode()) {
-        case 1941037640:
+        if (stateName.hashCode() == 1941037640) {
             if (stateName.equals("ATTACK")) {
                 var3 = 0;
             }
-        default:
-            switch(var3) {
-            case 0:
-                this.state.setAnimation(0, "Attack_2", false);
-                this.state.addAnimation(0, "Idle", true, 0.0F);
-            default:
-            }
+        }
+        if (var3 == 0) {
+            this.state.setAnimation(0, "Attack_2", false);
+            this.state.addAnimation(0, "Idle", true, 0.0F);
         }
     }
 
@@ -104,27 +99,27 @@ public class ProtoDonu extends AbstractMonster {
     }
 
     public void takeTurn() {
-        switch(this.nextMove) {
-        case 0:
-            AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
-            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.5F));
+        switch (this.nextMove) {
+            case 0:
+                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
+                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.5F));
 
-            for(int i = 0; i < 2; ++i) {
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo)this.damage.get(0), AttackEffect.FIRE));
-            }
+                for (int i = 0; i < 2; ++i) {
+                    AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(0), AttackEffect.FIRE));
+                }
 
-            this.isAttacking = false;
-            break;
-        case 2:
-            Iterator var1 = AbstractDungeon.getMonsters().monsters.iterator();
+                this.isAttacking = false;
+                break;
+            case 2:
+                Iterator var1 = AbstractDungeon.getMonsters().monsters.iterator();
 
-            while(var1.hasNext()) {
-                AbstractMonster m = (AbstractMonster)var1.next();
-                AbstractDungeon.actionManager.addToBottom(new SFXAction("MONSTER_DONU_DEFENSE"));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new StrengthPower(m, 3), 3));
-            }
+                while (var1.hasNext()) {
+                    AbstractMonster m = (AbstractMonster) var1.next();
+                    AbstractDungeon.actionManager.addToBottom(new SFXAction("MONSTER_DONU_DEFENSE"));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new StrengthPower(m, 3), 3));
+                }
 
-            this.isAttacking = true;
+                this.isAttacking = true;
         }
 
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
@@ -132,9 +127,9 @@ public class ProtoDonu extends AbstractMonster {
 
     protected void getMove(int num) {
         if (this.isAttacking) {
-            this.setMove((byte)0, Intent.ATTACK, ((DamageInfo)this.damage.get(0)).base, 2, true);
+            this.setMove((byte) 0, Intent.ATTACK, this.damage.get(0).base, 2, true);
         } else {
-            this.setMove(CIRCLE_NAME, (byte)2, Intent.BUFF);
+            this.setMove(CIRCLE_NAME, (byte) 2, Intent.BUFF);
         }
 
     }

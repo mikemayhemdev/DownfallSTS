@@ -22,7 +22,7 @@ public class FullReleasePower extends AbstractAutomatonPower implements NonStack
     public static final PowerType TYPE = PowerType.BUFF;
     public static final boolean TURN_BASED = false;
 
-    private AbstractCard stored;
+    private final AbstractCard stored;
 
     public FullReleasePower(AbstractCard c) {
         super(NAME, TYPE, TURN_BASED, AbstractDungeon.player, null, -1);

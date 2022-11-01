@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import com.megacrit.cardcrawl.vfx.GhostlyFireEffect;
-import com.megacrit.cardcrawl.vfx.GhostlyWeakFireEffect;
 import com.megacrit.cardcrawl.vfx.combat.GhostIgniteEffect;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.ghostflames.AbstractGhostflame;
@@ -21,9 +20,9 @@ public class MyOrb {
     public boolean charged = false;
     public boolean hidden = false;
     public boolean playedSfx = false;
-    private BobEffect effect = new BobEffect(2.0F);
+    private final BobEffect effect = new BobEffect(2.0F);
     private float activateTimer;
-    private Color color;
+    private final Color color;
     private float x;
     private float y;
     private float particleTimer = 0.0F;
@@ -63,8 +62,8 @@ public class MyOrb {
                     }
 
                     this.color.a = MathHelper.fadeLerpSnap(this.color.a, 1.0F);// 77
-                   // this.effect.update();// 78
-                   // this.effect.update();// 79
+                    // this.effect.update();// 78
+                    // this.effect.update();// 79
                     this.particleTimer -= Gdx.graphics.getDeltaTime();// 80
                     if (this.particleTimer < 0.0F) {// 81
                         AbstractDungeon.effectList.add(new GhostlyFireEffect(this.x, this.y));// 82
@@ -79,7 +78,7 @@ public class MyOrb {
                     this.particleTimer = 0.06F;// 93
                 }
             } else {
-               // this.effect.update();// 88
+                // this.effect.update();// 88
                 this.particleTimer -= Gdx.graphics.getDeltaTime();// 89
                 if (this.particleTimer < 0.0F) {// 90
                     AbstractDungeon.effectList.add(new GhostlyWeakColorableFireEffect(this.x, this.y, myDaddy.getFlameColor()));// 91

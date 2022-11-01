@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 public class Consign extends AbstractCollectorCard {
     public final static String ID = makeID("Consign");
     public int iniHP;
+
     public Consign() {
         super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         damage = baseDamage = 16;
@@ -20,7 +21,9 @@ public class Consign extends AbstractCollectorCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new DamageCallbackAction(m,new DamageInfo(p,damage), AbstractGameAction.AttackEffect.FIRE, (i)->{atb(new ApplyPowerAction(m,p,new Suffering(i,m)));}));
+        atb(new DamageCallbackAction(m, new DamageInfo(p, damage), AbstractGameAction.AttackEffect.FIRE, (i) -> {
+            atb(new ApplyPowerAction(m, p, new Suffering(i, m)));
+        }));
     }
 
     @Override

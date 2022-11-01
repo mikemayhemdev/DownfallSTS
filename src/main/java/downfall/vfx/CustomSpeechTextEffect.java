@@ -12,10 +12,10 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.ui.SpeechWord;
 import com.megacrit.cardcrawl.ui.DialogWord.AppearEffect;
 import com.megacrit.cardcrawl.ui.DialogWord.WordColor;
 import com.megacrit.cardcrawl.ui.DialogWord.WordEffect;
+import com.megacrit.cardcrawl.ui.SpeechWord;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 import java.util.ArrayList;
@@ -24,19 +24,19 @@ import java.util.Scanner;
 
 public class CustomSpeechTextEffect extends AbstractGameEffect {
     private static GlyphLayout gl;
-    private BitmapFont font;
-    private AppearEffect a_effect;
+    private final BitmapFont font;
+    private final AppearEffect a_effect;
     private static final float DEFAULT_WIDTH;
     private static final float LINE_SPACING;
     private static final float CHAR_SPACING;
     private static final float WORD_TIME = 0.03F;
     private float wordTimer = 0.0F;
     private boolean textDone = false;
-    private float x;
-    private float y;
-    private ArrayList<SpeechWord> words = new ArrayList();
+    private final float x;
+    private final float y;
+    private final ArrayList<SpeechWord> words = new ArrayList();
     private int curLine = 0;
-    private Scanner s;
+    private final Scanner s;
     private float curLineWidth = 0.0F;
     private static final float FADE_TIME = 0.3F;
 
@@ -66,8 +66,8 @@ public class CustomSpeechTextEffect extends AbstractGameEffect {
         Iterator var1 = this.words.iterator();
 
         SpeechWord w;
-        while(var1.hasNext()) {
-            w = (SpeechWord)var1.next();
+        while (var1.hasNext()) {
+            w = (SpeechWord) var1.next();
             w.update();
         }
 
@@ -80,8 +80,8 @@ public class CustomSpeechTextEffect extends AbstractGameEffect {
         if (this.duration < 0.3F) {
             var1 = this.words.iterator();
 
-            while(var1.hasNext()) {
-                w = (SpeechWord)var1.next();
+            while (var1.hasNext()) {
+                w = (SpeechWord) var1.next();
                 w.fadeOut();
             }
         }
@@ -96,8 +96,8 @@ public class CustomSpeechTextEffect extends AbstractGameEffect {
                 ++this.curLine;
                 Iterator var7 = this.words.iterator();
 
-                while(var7.hasNext()) {
-                    SpeechWord w = (SpeechWord)var7.next();
+                while (var7.hasNext()) {
+                    SpeechWord w = (SpeechWord) var7.next();
                     w.shiftY(LINE_SPACING);
                 }
 
@@ -107,7 +107,7 @@ public class CustomSpeechTextEffect extends AbstractGameEffect {
 
             WordColor color = SpeechWord.identifyWordColor(word);
             if (color != WordColor.DEFAULT) {
-                word = word.substring(2, word.length());
+                word = word.substring(2);
             }
 
             WordEffect effect = SpeechWord.identifyWordEffect(word);
@@ -123,8 +123,8 @@ public class CustomSpeechTextEffect extends AbstractGameEffect {
                 ++this.curLine;
                 var5 = this.words.iterator();
 
-                while(var5.hasNext()) {
-                    w = (SpeechWord)var5.next();
+                while (var5.hasNext()) {
+                    w = (SpeechWord) var5.next();
                     w.shiftY(LINE_SPACING);
                 }
 
@@ -135,8 +135,8 @@ public class CustomSpeechTextEffect extends AbstractGameEffect {
                 temp = -this.curLineWidth / 2.0F;
                 var5 = this.words.iterator();
 
-                while(var5.hasNext()) {
-                    w = (SpeechWord)var5.next();
+                while (var5.hasNext()) {
+                    w = (SpeechWord) var5.next();
                     if (w.line == this.curLine) {
                         w.setX(this.x + temp);
                         gl.setText(this.font, w.word);
@@ -148,7 +148,7 @@ public class CustomSpeechTextEffect extends AbstractGameEffect {
                 gl.setText(this.font, word + " ");
             }
 
-            this.words.add(new SpeechWord(this.font, word, this.a_effect, effect, color, this.x + temp, this.y - LINE_SPACING * (float)this.curLine, this.curLine));
+            this.words.add(new SpeechWord(this.font, word, this.a_effect, effect, color, this.x + temp, this.y - LINE_SPACING * (float) this.curLine, this.curLine));
         } else {
             this.textDone = true;
             this.s.close();
@@ -164,8 +164,8 @@ public class CustomSpeechTextEffect extends AbstractGameEffect {
                 ++this.curLine;
                 Iterator var9 = this.words.iterator();
 
-                while(var9.hasNext()) {
-                    SpeechWord w = (SpeechWord)var9.next();
+                while (var9.hasNext()) {
+                    SpeechWord w = (SpeechWord) var9.next();
                     w.shiftY(LINE_SPACING);
                 }
 
@@ -175,7 +175,7 @@ public class CustomSpeechTextEffect extends AbstractGameEffect {
 
             WordColor color = SpeechWord.identifyWordColor(word);
             if (color != WordColor.DEFAULT) {
-                word = word.substring(2, word.length());
+                word = word.substring(2);
             }
 
             WordEffect effect = SpeechWord.identifyWordEffect(word);
@@ -183,7 +183,7 @@ public class CustomSpeechTextEffect extends AbstractGameEffect {
                 word = word.substring(1, word.length() - 1);
             }
 
-            for(int i = 0; i < word.length(); ++i) {
+            for (int i = 0; i < word.length(); ++i) {
                 String tmp = Character.toString(word.charAt(i));
                 gl.setText(this.font, tmp);
                 float temp = 0.0F;
@@ -193,8 +193,8 @@ public class CustomSpeechTextEffect extends AbstractGameEffect {
                     ++this.curLine;
                     var7 = this.words.iterator();
 
-                    while(var7.hasNext()) {
-                        w = (SpeechWord)var7.next();
+                    while (var7.hasNext()) {
+                        w = (SpeechWord) var7.next();
                         w.shiftY(LINE_SPACING);
                     }
 
@@ -205,8 +205,8 @@ public class CustomSpeechTextEffect extends AbstractGameEffect {
                     temp = -this.curLineWidth / 2.0F;
                     var7 = this.words.iterator();
 
-                    while(var7.hasNext()) {
-                        w = (SpeechWord)var7.next();
+                    while (var7.hasNext()) {
+                        w = (SpeechWord) var7.next();
                         if (w.line == this.curLine) {
                             w.setX(this.x + temp);
                             gl.setText(this.font, w.word);
@@ -217,7 +217,7 @@ public class CustomSpeechTextEffect extends AbstractGameEffect {
                     gl.setText(this.font, tmp + " ");
                 }
 
-                this.words.add(new SpeechWord(this.font, tmp, this.a_effect, effect, color, this.x + temp, this.y - LINE_SPACING * (float)this.curLine, this.curLine));
+                this.words.add(new SpeechWord(this.font, tmp, this.a_effect, effect, color, this.x + temp, this.y - LINE_SPACING * (float) this.curLine, this.curLine));
             }
         } else {
             this.textDone = true;

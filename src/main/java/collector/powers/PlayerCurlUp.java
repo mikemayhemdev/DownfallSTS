@@ -32,7 +32,7 @@ public class PlayerCurlUp extends AbstractPower {
             this.flash();
             this.triggered = true;
             this.addToBot(new GainBlockAction(this.owner, this.owner, this.amount));
-            this.addToBot(new ApplyPowerAction(owner,owner,new BlurPower(owner,1)));
+            this.addToBot(new ApplyPowerAction(owner, owner, new BlurPower(owner, 1)));
             this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
 

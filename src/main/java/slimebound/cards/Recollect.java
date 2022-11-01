@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.actions.ExhumeLickAction;
-import slimebound.actions.ReturnRandom0Cost;
 import slimebound.patches.AbstractCardEnum;
 
 
@@ -37,7 +36,7 @@ public class Recollect extends AbstractSlimeboundCard {
         EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     }
 
-    private int numEaten = 0;
+    private final int numEaten = 0;
 
 
     public Recollect() {

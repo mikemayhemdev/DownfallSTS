@@ -10,8 +10,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import charbosses.powers.general.EnemyPoisonPower;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 
@@ -37,7 +35,7 @@ public class EnCloakAndDagger extends AbstractBossCard {
     public int customIntentModifiedDamage() {
         int tmp = 0;
 
-        if (owner.hasPower(EnemyAccuracyPower.POWER_ID)){
+        if (owner.hasPower(EnemyAccuracyPower.POWER_ID)) {
             tmp = owner.getPower(EnemyAccuracyPower.POWER_ID).amount;
         }
         return tmp;

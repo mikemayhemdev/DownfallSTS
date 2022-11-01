@@ -15,7 +15,6 @@ import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -43,9 +42,9 @@ public class Beggar_Evil extends AbstractImageEvent {
     }
 
     private int finalDmg;
-    private int gold;
+    private final int gold;
     private CurScreen screen;
-    private int cardsToRemove;
+    private final int cardsToRemove;
 
     public Beggar_Evil() {
         super(NAME, DESCRIPTIONS[0], "images/events/beggar.jpg");
@@ -161,18 +160,15 @@ public class Beggar_Evil extends AbstractImageEvent {
                 }
                 return;
             case CLERICALIVEINTRO:
-                switch (buttonPressed) {
-                    case 0:
-
-                        this.screen = CurScreen.POSTFIGHT;
-                        MonsterGroup monsters = new MonsterGroup(new Centurion(-400F, 0F));
-                        monsters.add(new Centurion(0F, 0F));
-                        AbstractDungeon.getCurrRoom().monsters = monsters;
-                        AbstractDungeon.getCurrRoom().rewards.clear();
-                        AbstractDungeon.getCurrRoom().rewardAllowed = false;
-                        AbstractDungeon.lastCombatMetricKey = "Hired Bodyguards";
-                        this.enterCombatFromImage();
-                        break;
+                if (buttonPressed == 0) {
+                    this.screen = CurScreen.POSTFIGHT;
+                    MonsterGroup monsters = new MonsterGroup(new Centurion(-400F, 0F));
+                    monsters.add(new Centurion(0F, 0F));
+                    AbstractDungeon.getCurrRoom().monsters = monsters;
+                    AbstractDungeon.getCurrRoom().rewards.clear();
+                    AbstractDungeon.getCurrRoom().rewardAllowed = false;
+                    AbstractDungeon.lastCombatMetricKey = "Hired Bodyguards";
+                    this.enterCombatFromImage();
                 }
                 return;
             case POSTFIGHT:

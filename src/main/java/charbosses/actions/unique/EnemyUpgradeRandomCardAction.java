@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 
 public class EnemyUpgradeRandomCardAction extends AbstractGameAction {
-    private AbstractCharBoss p;
+    private final AbstractCharBoss p;
 
     public EnemyUpgradeRandomCardAction() {
         this.actionType = ActionType.CARD_MANIPULATION;

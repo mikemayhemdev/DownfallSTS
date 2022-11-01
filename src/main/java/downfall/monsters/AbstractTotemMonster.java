@@ -1,26 +1,17 @@
 package downfall.monsters;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.common.RollMoveAction;
-import com.megacrit.cardcrawl.actions.utility.TextAboveCreatureAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.powers.TotemInvulnerablePower;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Iterator;
 
 
 public class AbstractTotemMonster extends AbstractMonster {
@@ -34,8 +25,8 @@ public class AbstractTotemMonster extends AbstractMonster {
     public Intent intentType = Intent.BUFF;
     public Color totemLivingColor;
     private Method refupdateIntent;
-    private boolean wasFalling = false;
-    private boolean spawnedAfterFirst3 = false;
+    private final boolean wasFalling = false;
+    private final boolean spawnedAfterFirst3 = false;
 
 
     public AbstractTotemMonster(String name, String ID, String imgPath) {
@@ -44,9 +35,8 @@ public class AbstractTotemMonster extends AbstractMonster {
         //ReflectionHacks.setPrivate(this, AbstractCreature.class,"HB_Y_OFFSET_DIST",-200F);
 
 
-
         try {
-           refupdateIntent = AbstractMonster.class.getDeclaredMethod("updateIntent");
+            refupdateIntent = AbstractMonster.class.getDeclaredMethod("updateIntent");
 
 
         } catch (NoSuchMethodException e) {
@@ -82,19 +72,16 @@ public class AbstractTotemMonster extends AbstractMonster {
 
     @Override
     public void changeState(String stateName) {
-        switch(stateName) {
-            case "ATTACK":
-                this.state.setAnimation(0, "Attack", false);
-                this.state.addAnimation(0, "Idle", true, 0.0F);
-                break;
+        if ("ATTACK".equals(stateName)) {
+            this.state.setAnimation(0, "Attack", false);
+            this.state.addAnimation(0, "Idle", true, 0.0F);
         }
 
     }
 
     @Override
     public void healthBarUpdatedEvent() {
-        if (this.currentHealth <= 0 && this.hasPower(TotemInvulnerablePower.POWER_ID))
-        {
+        if (this.currentHealth <= 0 && this.hasPower(TotemInvulnerablePower.POWER_ID)) {
             for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 if (m != this && m.currentHealth > 1 && m instanceof AbstractTotemMonster) { //can't die yet.
                     this.currentHealth = 1;
@@ -116,7 +103,6 @@ public class AbstractTotemMonster extends AbstractMonster {
     }
 
 
-
     @Override
     public void renderHealth(SpriteBatch sb) {
         this.hb.height = this.hb.height * 1.4F;
@@ -133,7 +119,7 @@ public class AbstractTotemMonster extends AbstractMonster {
 
     public void update() {
 
-       super.update();
+        super.update();
 
         try {
             this.intentHb.move(this.hb.cX - 140F * Settings.scale, this.drawY + 170F * Settings.scale);

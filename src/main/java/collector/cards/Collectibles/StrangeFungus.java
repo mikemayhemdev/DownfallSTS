@@ -11,15 +11,15 @@ public class StrangeFungus extends AbstractCollectibleCard {
 
     public StrangeFungus() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
-        magicNumber =  baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 1;
         this.exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToEnemy(m, new VulnerablePower(m,1,false));
-        applyToSelf(new StrengthPower(m,magicNumber));
-        applyToSelf(new LoseStrengthPower(m,magicNumber));
+        applyToEnemy(m, new VulnerablePower(m, 1, false));
+        applyToSelf(new StrengthPower(m, magicNumber));
+        applyToSelf(new LoseStrengthPower(m, magicNumber));
     }
 
     @Override

@@ -25,9 +25,9 @@ public class HexSlime
     public boolean activated = false;
     public boolean hidden = false;
     public boolean playedSfx = false;
-    private BobEffect effect = new BobEffect(2.0F);
+    private final BobEffect effect = new BobEffect(2.0F);
     private float activateTimer;
-    private Color color;
+    private final Color color;
     private float x;
     private float y;
     private float particleTimer = 0.0F;

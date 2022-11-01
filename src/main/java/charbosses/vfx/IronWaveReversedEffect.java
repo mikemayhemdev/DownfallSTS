@@ -13,13 +13,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.IronWaveParticle;
 
-import java.util.Set;
-
 public class IronWaveReversedEffect extends AbstractGameEffect {
     private float waveTimer = 0.0F;
     private float x;
     private float y;
-    private float cX;
+    private final float cX;
     private static final float WAVE_INTERVAL = 0.03F;
 
     public IronWaveReversedEffect(float x, float y, float cX) {

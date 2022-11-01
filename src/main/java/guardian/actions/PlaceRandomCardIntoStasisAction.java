@@ -9,12 +9,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import guardian.GuardianMod;
-import guardian.characters.GuardianCharacter;
 import guardian.orbs.StasisOrb;
 
 
 public class PlaceRandomCardIntoStasisAction extends AbstractGameAction {
-    private int numCards;
+    private final int numCards;
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
 
     public PlaceRandomCardIntoStasisAction(int numCards) {
@@ -48,7 +47,7 @@ public class PlaceRandomCardIntoStasisAction extends AbstractGameAction {
                             }
                         }
                     }
-                    
+
                     if (this.numCards - 1 > 0)
                         AbstractDungeon.actionManager.addToTop(new PlaceRandomCardIntoStasisAction(this.numCards - 1));
 

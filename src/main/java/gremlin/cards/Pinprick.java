@@ -27,8 +27,7 @@ public class Pinprick extends AbstractGremlinCard {
     private static final int COST = 0;
     private static final int POWER = 1;
 
-    public Pinprick()
-    {
+    public Pinprick() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -46,8 +45,7 @@ public class Pinprick extends AbstractGremlinCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             initializeDescription();
@@ -56,7 +54,7 @@ public class Pinprick extends AbstractGremlinCard {
 
     @Override
     public void triggerWhenDrawn() {
-        if(upgraded){
+        if (upgraded) {
             AbstractDungeon.actionManager.addToBottom(new MakeEchoAction(this));
         }
     }

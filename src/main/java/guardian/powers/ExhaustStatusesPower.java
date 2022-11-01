@@ -11,7 +11,7 @@ public class ExhaustStatusesPower extends AbstractGuardianPower {
 
     public static String[] DESCRIPTIONS;
     public int usedThisTurn = 0;
-    private AbstractCreature source;
+    private final AbstractCreature source;
 
 
     public ExhaustStatusesPower(AbstractCreature owner, AbstractCreature source, int amount) {

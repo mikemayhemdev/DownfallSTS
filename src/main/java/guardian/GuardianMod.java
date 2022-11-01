@@ -48,7 +48,6 @@ import guardian.helpers.SecondaryMagicVariable;
 import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 import guardian.patches.BottledStasisPatch;
-import guardian.patches.GuardianEnum;
 import guardian.patches.RewardItemTypePatch;
 import guardian.potions.AcceleratePotion;
 import guardian.potions.BlockOnCardUsePotion;
@@ -681,7 +680,7 @@ public static void saveData() {
         BaseMod.addCard(new ShieldCharger());
         BaseMod.addCard(new StasisEngine());
         BaseMod.addCard(new Gem_Purple());
-        
+
         BaseMod.addCard(new CrystalShiv());
         BaseMod.addCard(new CrystalWard());
 
@@ -1062,7 +1061,7 @@ public static void saveData() {
         if (!stasisDelay) {
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
                 if (o instanceof StasisOrb) {
-                    if (((StasisOrb) o).passiveAmount == 1) {
+                    if (o.passiveAmount == 1) {
                         stasisDelay = true;
                     }
                 }

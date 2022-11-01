@@ -4,19 +4,14 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.colorless.EnSwiftStrike;
 import charbosses.cards.curses.EnClumsy;
-import charbosses.cards.curses.EnDecay;
 import charbosses.cards.curses.EnHaunted;
-import charbosses.cards.curses.EnInjury;
 import charbosses.cards.red.*;
-import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
-import charbosses.powers.bossmechanicpowers.DefectVoidPower;
 import charbosses.powers.bossmechanicpowers.IroncladMushroomPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.BarricadePower;
 
 import java.util.ArrayList;
 
@@ -46,12 +41,12 @@ public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
         addRelic(new CBR_NeowsBlessing());
 
 
-       // addRelic(new CBR_ThreadAndNeedle());
+        // addRelic(new CBR_ThreadAndNeedle());
         addRelic(new CBR_RedSkull());
         addRelic(new CBR_MagicFlower());
         addRelic(new CBR_Vajra());
-      //  addRelic(new CBR_RedMask());  // gremlin mask
-       // addRelic(new CBR_HappyFlower());  // gremlin mask
+        //  addRelic(new CBR_RedMask());  // gremlin mask
+        // addRelic(new CBR_HappyFlower());  // gremlin mask
 
         /////   CARDS   /////
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
@@ -101,8 +96,8 @@ public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
                     addToList(cardsList, new EnSummonMushrooms());
                     addToList(cardsList, new EnInflame(), extraUpgrades);
                     addToList(cardsList, new EnStrikeRed());
-                    turn=0;
-                    looped=true;
+                    turn = 0;
+                    looped = true;
                     break;
             }
         } else {
@@ -129,7 +124,7 @@ public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
                     addToList(cardsList, new EnSummonMushrooms());
                     addToList(cardsList, new EnHemokinesis());
                     addToList(cardsList, new EnHeadbutt());
-                    turn=0;
+                    turn = 0;
                     break;
             }
         }

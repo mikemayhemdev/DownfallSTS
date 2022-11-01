@@ -4,7 +4,6 @@ import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -39,7 +38,7 @@ public class QuickStudy extends AbstractExpansionCard {
 
     private float rotationTimer;
     private int previewIndex;
-    private ArrayList<AbstractCard> dupeListForPrev = new ArrayList<>();
+    private final ArrayList<AbstractCard> dupeListForPrev = new ArrayList<>();
 
     public QuickStudy() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);

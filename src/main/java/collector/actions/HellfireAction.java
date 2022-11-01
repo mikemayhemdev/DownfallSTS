@@ -15,12 +15,12 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.FlameAnimationEffect;
 
 public class HellfireAction extends AbstractGameAction {
-    private boolean freeToPlayOnce;
-    private int damage;
-    private AbstractPlayer p;
-    private DamageType damageTypeForTurn;
-    private int energyOnUse;
-    private boolean Upgraded;
+    private final boolean freeToPlayOnce;
+    private final int damage;
+    private final AbstractPlayer p;
+    private final DamageType damageTypeForTurn;
+    private final int energyOnUse;
+    private final boolean Upgraded;
 
     public HellfireAction(AbstractPlayer p, int damage, DamageType damageTypeForTurn, boolean freeToPlayOnce, int energyOnUse, boolean upgraded) {
         this.p = p;
@@ -46,10 +46,10 @@ public class HellfireAction extends AbstractGameAction {
 
         if (effect > 0) {
             addToBot(new VFXAction(new FlameAnimationEffect(p.hb)));
-            for(int i = 0; i < effect; ++i) {
+            for (int i = 0; i < effect; ++i) {
                 AbstractMonster m = AbstractDungeon.getRandomMonster();
                 this.addToBot(new DamageAction(m, new DamageInfo(this.p, this.damage, this.damageTypeForTurn), AttackEffect.FIRE));
-                this.addToBot(new ApplyPowerAction(m,p,CollectorMod.GetRandomAffliction(m,Upgraded)));
+                this.addToBot(new ApplyPowerAction(m, p, CollectorMod.GetRandomAffliction(m, Upgraded)));
             }
 
             if (!this.freeToPlayOnce) {

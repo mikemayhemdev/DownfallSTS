@@ -6,14 +6,13 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.Concentration;
 import hermit.powers.SnipePower;
 
-import static hermit.HermitMod.*;
+import static hermit.HermitMod.loadJokeCardImage;
+import static hermit.HermitMod.makeCardPath;
 
 public class Snipe extends AbstractDynamicCard {
 
@@ -37,7 +36,7 @@ public class Snipe extends AbstractDynamicCard {
 
     private static final int COST = 0;
 
-    private int SnipeAmount = 1;
+    private final int SnipeAmount = 1;
 
     // /STAT DECLARATION/
 

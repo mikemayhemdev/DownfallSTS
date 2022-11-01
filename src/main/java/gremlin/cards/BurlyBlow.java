@@ -27,8 +27,7 @@ public class BurlyBlow extends AbstractGremlinCard {
     private static final int POWER = 4;
     private static final int UPGRADE_BONUS = 1;
 
-    public BurlyBlow()
-    {
+    public BurlyBlow() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -39,10 +38,10 @@ public class BurlyBlow extends AbstractGremlinCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int count = 0;
-        if(m.hasPower(WeakPower.POWER_ID)){
+        if (m.hasPower(WeakPower.POWER_ID)) {
             count = m.getPower(WeakPower.POWER_ID).amount;
         }
-        for(int i=0; i<count-1; i++){
+        for (int i = 0; i < count - 1; i++) {
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                     this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
@@ -52,8 +51,7 @@ public class BurlyBlow extends AbstractGremlinCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
         }

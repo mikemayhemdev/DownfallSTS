@@ -1,10 +1,7 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.actions.ModifyDamageAndBlockAction;
-import champ.actions.PreciseThrustAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.watcher.WallopAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -32,7 +29,7 @@ public class PreciseThrust extends AbstractChampCard {
         if (dcombo()) {
             blck();
         }
-        if (bcombo()){
+        if (bcombo()) {
             dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         }
 

@@ -1,17 +1,10 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
-import com.megacrit.cardcrawl.actions.common.PlayTopCardAction;
-import com.megacrit.cardcrawl.actions.utility.ScryAction;
-import com.megacrit.cardcrawl.cards.curses.Shame;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.actions.CheatAction;
 import hermit.characters.hermit;
-import hermit.powers.Concentration;
-
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
@@ -60,7 +53,7 @@ public class Cheat extends AbstractDynamicCard {
             onDeadOn();
         }
 
-        this.addToBot(new CheatAction(this.magicNumber,this,isDeadOn()));
+        this.addToBot(new CheatAction(this.magicNumber, this, isDeadOn()));
         //this.addToBot(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng), false));
         //this.addToBot(new MakeTempCardInDrawPileAction(this.cardsToPreview, 1, true, true));
     }

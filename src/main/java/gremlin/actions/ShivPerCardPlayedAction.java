@@ -1,14 +1,13 @@
 package gremlin.actions;
 
-import com.megacrit.cardcrawl.actions.*;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.cards.*;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-public class ShivPerCardPlayedAction extends AbstractGameAction
-{
-    private boolean upgraded;
+public class ShivPerCardPlayedAction extends AbstractGameAction {
+    private final boolean upgraded;
 
     public ShivPerCardPlayedAction(boolean upgraded) {
         this.actionType = ActionType.CARD_MANIPULATION;
@@ -21,7 +20,7 @@ public class ShivPerCardPlayedAction extends AbstractGameAction
         int count = AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
         --count;
         AbstractCard c = new Shiv();
-        if(upgraded){
+        if (upgraded) {
             c.upgrade();
         }
         AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(c, count));

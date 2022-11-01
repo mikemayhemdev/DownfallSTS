@@ -3,7 +3,6 @@ package hermit.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -50,7 +49,7 @@ public class AdaptPower extends AbstractPower implements CloneablePowerInterface
 
     @Override
     public void updateDescription() {
-            description = (amount < 2) ?  DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] : DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
+        description = (amount < 2) ? DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] : DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
     }
 
     @Override

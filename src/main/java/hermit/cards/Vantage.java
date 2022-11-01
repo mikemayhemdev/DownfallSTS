@@ -55,7 +55,7 @@ public class Vantage extends AbstractDynamicCard {
     public Vantage() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
-        baseMagicNumber=magicNumber=2;
+        baseMagicNumber = magicNumber = 2;
         this.tags.add(Enums.DEADON);
         loadJokeCardImage(this, "vantage.png");
     }

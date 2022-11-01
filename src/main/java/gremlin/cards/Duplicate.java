@@ -23,8 +23,7 @@ public class Duplicate extends AbstractGremlinCard {
     private static final int COST = 2;
     private static final int MAGIC = 2;
 
-    public Duplicate()
-    {
+    public Duplicate() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -34,15 +33,12 @@ public class Duplicate extends AbstractGremlinCard {
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DuplicateAction(p, magicNumber));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             initializeDescription();

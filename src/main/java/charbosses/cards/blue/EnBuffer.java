@@ -1,6 +1,5 @@
 package charbosses.cards.blue;
 
-import charbosses.actions.orb.EnemyIncreaseMaxOrbAction;
 import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -20,7 +19,7 @@ public class EnBuffer extends AbstractBossCard {
         super(ID, cardStrings.NAME, "blue/power/buffer", 2, cardStrings.DESCRIPTION, CardType.POWER, CardColor.BLUE, CardRarity.RARE, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
-       // alwaysDisplayText = true;
+        // alwaysDisplayText = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

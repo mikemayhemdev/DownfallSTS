@@ -10,7 +10,6 @@ import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.EternalPower;
 
-
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
@@ -53,7 +52,6 @@ public class EternalForm extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new EternalPower(p, p, magicNumber), magicNumber));
     }
-
 
 
     //Upgraded stats.

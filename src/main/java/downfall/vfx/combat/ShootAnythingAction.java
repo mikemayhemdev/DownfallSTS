@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class ShootAnythingAction extends AbstractGameAction {
 
-    private ShootAnythingEffect effect;
+    private final ShootAnythingEffect effect;
 
     public ShootAnythingAction(AbstractCreature target, AbstractCreature source, Texture texture) {
         this(target, source, texture, 15);

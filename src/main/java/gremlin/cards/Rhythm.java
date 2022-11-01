@@ -26,17 +26,15 @@ public class Rhythm extends AbstractGremlinCard {
     private static final int COST = 1;
     private static final int UPGRADE_COST = 0;
 
-    public Rhythm()
-    {
+    public Rhythm() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GremlinSwapAction());
         Predicate<AbstractCard> predicate = card -> card.rarity == CardRarity.BASIC;
         Consumer<List<AbstractCard>> callback = cardList -> {
-            for(AbstractCard c:cardList){
+            for (AbstractCard c : cardList) {
                 c.setCostForTurn(-9);
             }
         };
@@ -44,10 +42,8 @@ public class Rhythm extends AbstractGremlinCard {
                 new FetchAction(p.drawPile, predicate, callback));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeBaseCost(UPGRADE_COST);
         }

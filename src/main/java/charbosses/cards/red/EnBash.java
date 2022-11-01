@@ -16,8 +16,6 @@ import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import downfall.downfallMod;
 
-import java.util.ArrayList;
-
 public class EnBash extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Bash";
     private static final CardStrings cardStrings;
@@ -33,7 +31,7 @@ public class EnBash extends AbstractBossCard {
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(downfallMod.CHARBOSS_SETUP);
         artifactConsumedIfPlayed = 1;
-        if (AbstractCharBoss.boss.hasRelic(CBR_ChampionsBelt.ID)){
+        if (AbstractCharBoss.boss.hasRelic(CBR_ChampionsBelt.ID)) {
             artifactConsumedIfPlayed = 2;
         }
     }
@@ -42,8 +40,8 @@ public class EnBash extends AbstractBossCard {
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         this.addToBot(new ApplyPowerAction(p, m, new VulnerablePower(p, this.magicNumber, true), this.magicNumber));
-        if (!p.hasPower(ArtifactPower.POWER_ID)){
-            if (AbstractCharBoss.boss.hasRelic(CBR_ChampionsBelt.ID)){
+        if (!p.hasPower(ArtifactPower.POWER_ID)) {
+            if (AbstractCharBoss.boss.hasRelic(CBR_ChampionsBelt.ID)) {
                 AbstractCharBoss.boss.getRelic(CBR_ChampionsBelt.ID).onTrigger();
             }
         }

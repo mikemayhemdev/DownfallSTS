@@ -1,18 +1,12 @@
 package charbosses.cards.hermit;
 
-import charbosses.cards.AbstractBossCard;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.cards.Defend_Hermit;
-import hermit.cards.Headshot;
-import hermit.cards.Strike_Hermit;
 import hermit.characters.hermit;
 
 public class EnDefendHermit extends AbstractHermitBossCard {

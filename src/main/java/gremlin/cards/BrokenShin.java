@@ -1,7 +1,6 @@
 package gremlin.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -27,8 +26,7 @@ public class BrokenShin extends AbstractGremlinCard {
     private static final int MAGIC = 4;
     private static final int UPGRADE_BONUS = -1;
 
-    public BrokenShin()
-    {
+    public BrokenShin() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -39,22 +37,19 @@ public class BrokenShin extends AbstractGremlinCard {
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
-        if(m.hasPower("Weakened")){
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        if (m.hasPower("Weakened")) {
             int amount = m.getPower("Weakened").amount / this.magicNumber;
 //            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(m, p, "Weakened"));
-            if(amount > 0){
+            if (amount > 0) {
                 AbstractDungeon.actionManager.addToBottom(
                         new ApplyPowerAction(m, p, new AgonyPower(m, amount, false), amount));
             }
         }
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_BONUS);
         }

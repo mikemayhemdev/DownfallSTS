@@ -7,8 +7,6 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-import static automaton.FunctionHelper.WITH_DELIMITER;
-
 public class CleanCodePower extends AbstractAutomatonPower implements PreCardCompileEffectsPower {
     public static final String NAME = "CleanCode";
     public static final String POWER_ID = makeID(NAME);

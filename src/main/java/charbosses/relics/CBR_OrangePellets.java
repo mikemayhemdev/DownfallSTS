@@ -4,10 +4,8 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.OrangePellets;
-import com.megacrit.cardcrawl.relics.Strawberry;
 
 public class CBR_OrangePellets extends AbstractCharbossRelic {
     public static final String ID = "OrangePellets";

@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -20,7 +19,6 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
 import hermit.util.TextureLoader;
 import sneckomod.SneckoMod;
-import sneckomod.TheSnecko;
 import sneckomod.powers.CheatPower;
 import sneckomod.relics.D8;
 import sneckomod.relics.LoadedDie;
@@ -75,7 +73,7 @@ public abstract class AbstractSneckoCard extends CustomCard {
         initializeDescription();
     }
 
-    public AbstractSneckoCard(final String id, final String img,  final int cost, final CardType type, final CardRarity rarity, final CardTarget target, boolean IsClass) {
+    public AbstractSneckoCard(final String id, final String img, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, boolean IsClass) {
         super(id, "ERROR", getCorrectPlaceholderImage(img),
                 cost, "ERROR", type, downfallMod.Enums.SNECKO_CYAN, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings("sneckomod:Unknown0Cost");
@@ -278,8 +276,7 @@ public abstract class AbstractSneckoCard extends CustomCard {
             if (this.rawDescription.contains(name)) {
                 if (SneckoMod.validColors.size() > 3) {
                     tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[5]));
-                }
-                else if (SneckoMod.validColors.isEmpty()) {
+                } else if (SneckoMod.validColors.isEmpty()) {
                     tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[4]));
                 } else {
                     tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[2] + unknownUpgrade[3] + getCharList()));

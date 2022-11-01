@@ -19,9 +19,9 @@ public class DancingLight extends AbstractCollectorCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(CollectorChar.torch,p,new AggroNegated(CollectorChar.torch,CollectorMod.TorchAggro)));
+        addToBot(new ApplyPowerAction(CollectorChar.torch, p, new AggroNegated(CollectorChar.torch, CollectorMod.TorchAggro)));
         CollectorMod.TorchAggro = 0;
-        addToBot(new DrawCardAction(p,1));
+        addToBot(new DrawCardAction(p, 1));
     }
 
     @Override

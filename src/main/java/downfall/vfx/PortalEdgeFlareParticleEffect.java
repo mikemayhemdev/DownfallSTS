@@ -12,23 +12,23 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class PortalEdgeFlareParticleEffect extends AbstractGameEffect {
-    private Vector2 pos = new Vector2();
+    private final Vector2 pos = new Vector2();
     private float speed;
-    private float speedStart;
+    private final float speedStart;
     private float speedTarget;
-    private float waveIntensity;
-    private float waveSpeed;
-    private AtlasRegion img;
-    private PortalBorderEffect owner;
-    private float baseScale;
-    private float baseRotation;
+    private final float waveIntensity;
+    private final float waveSpeed;
+    private final AtlasRegion img;
+    private final PortalBorderEffect owner;
+    private final float baseScale;
+    private final float baseRotation;
 
     public PortalEdgeFlareParticleEffect(float x, float y, Color color, float angle, PortalBorderEffect owner) {
         this.img = ImageMaster.STRIKE_BLUR;
         this.duration = MathUtils.random(0.2F, .5F);
         this.startingDuration = this.duration;
-        this.pos.x = x - (float)this.img.packedWidth / 2.0F;
-        this.pos.y = y - (float)this.img.packedHeight / 2.0F;
+        this.pos.x = x - (float) this.img.packedWidth / 2.0F;
+        this.pos.y = y - (float) this.img.packedHeight / 2.0F;
         this.speed = MathUtils.random(100.0F, 200.0F) * Settings.scale;
         this.speedStart = this.speed;
         this.speedTarget = MathUtils.random(10.0F, 20.0F) * Settings.scale;
@@ -67,9 +67,9 @@ public class PortalEdgeFlareParticleEffect extends AbstractGameEffect {
     public void render(SpriteBatch sb) {
         sb.setBlendFunction(770, 1);
         sb.setColor(new Color(this.color.r, this.color.g, this.color.b, this.color.a / 4.0F));
-        sb.draw(this.img, this.pos.x, this.pos.y, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale * 4.0F, this.scale * 4.0F, this.rotation);
+        sb.draw(this.img, this.pos.x, this.pos.y, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale * 4.0F, this.scale * 4.0F, this.rotation);
         sb.setColor(this.color);
-        sb.draw(this.img, this.pos.x, this.pos.y, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale, this.scale, this.rotation);
+        sb.draw(this.img, this.pos.x, this.pos.y, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale, this.scale, this.rotation);
         sb.setBlendFunction(770, 771);
     }
 

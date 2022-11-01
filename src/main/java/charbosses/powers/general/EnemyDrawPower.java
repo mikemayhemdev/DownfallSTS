@@ -1,6 +1,5 @@
 package charbosses.powers.general;
 
-import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;

@@ -1,15 +1,14 @@
 package hermit.rewards;
 
+import basemod.abstracts.CustomReward;
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import hermit.patches.EnumPatch;
 
 import static hermit.HermitMod.makeID;
-
-import basemod.abstracts.CustomReward;
-import com.badlogic.gdx.graphics.Texture;
-import hermit.patches.EnumPatch;
 
 public class BountyGold extends CustomReward {
     private static final Texture ICON = ImageMaster.UI_GOLD;
@@ -20,7 +19,7 @@ public class BountyGold extends CustomReward {
     public int amount;
 
     public BountyGold(int amount) {
-        super(ICON,  amount + TEXT[0], EnumPatch.HERMIT_BOUNTY);
+        super(ICON, amount + TEXT[0], EnumPatch.HERMIT_BOUNTY);
         this.goldAmt = amount;
     }
 

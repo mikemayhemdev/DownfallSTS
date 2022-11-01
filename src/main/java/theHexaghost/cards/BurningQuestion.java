@@ -1,11 +1,5 @@
 package theHexaghost.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.ModifyDamageAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
-import com.megacrit.cardcrawl.cards.red.Rampage;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -27,14 +21,14 @@ public class BurningQuestion extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new StrengthPower(p,magicNumber));
+        applyToSelf(new StrengthPower(p, magicNumber));
     }
 
     @Override
     public void afterlife() {
         flash();
-        applyToSelf(new DexterityPower(AbstractDungeon.player,2));
-          }
+        applyToSelf(new DexterityPower(AbstractDungeon.player, 2));
+    }
 
 //    @Override
 //    public void calculateCardDamage(AbstractMonster mo) {

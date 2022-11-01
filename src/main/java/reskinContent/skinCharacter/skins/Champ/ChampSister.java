@@ -1,6 +1,5 @@
 package reskinContent.skinCharacter.skins.Champ;
 
-import champ.ChampChar;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import reskinContent.reskinContent;
@@ -16,7 +15,7 @@ public class ChampSister extends AbstractSkin {
 
         this.SHOULDER1 = "reskinContent/img/ChampMod/Chan-P/shoulder2.png";
         this.SHOULDER2 = "reskinContent/img/ChampMod/Chan-P/shoulder.png";
-        this.CORPSE =  "reskinContent/img/ChampMod/Chan-P/corpse.png";
+        this.CORPSE = "reskinContent/img/ChampMod/Chan-P/corpse.png";
         this.atlasURL = "reskinContent/img/ChampMod/Chan-P/animation/TheChampPlayer.atlas";
         this.jsonURL = "reskinContent/img/ChampMod/Chan-P/animation/TheChampPlayer.json";
         this.renderscale = 2.5f;

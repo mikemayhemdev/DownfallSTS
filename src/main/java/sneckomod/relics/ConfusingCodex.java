@@ -7,9 +7,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
 import sneckomod.cards.AbstractSneckoCard;
-import downfall.util.TextureLoader;
 
 public class ConfusingCodex extends CustomRelic {
 

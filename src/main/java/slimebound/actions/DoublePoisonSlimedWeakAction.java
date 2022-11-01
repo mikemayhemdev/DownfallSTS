@@ -8,8 +8,8 @@ import slimebound.powers.SlimedPower;
 
 
 public class DoublePoisonSlimedWeakAction extends com.megacrit.cardcrawl.actions.AbstractGameAction {
-    private float startingDuration;
-    private boolean upgraded;
+    private final float startingDuration;
+    private final boolean upgraded;
 
     public DoublePoisonSlimedWeakAction(AbstractCreature target, AbstractCreature source, boolean upgraded) {
         this.target = target;

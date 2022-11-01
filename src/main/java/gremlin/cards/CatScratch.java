@@ -27,8 +27,7 @@ public class CatScratch extends AbstractGremlinCard {
     private static final int MAGIC = 3;
     private static final int UPGRADE_MAGIC = 1;
 
-    public CatScratch()
-    {
+    public CatScratch() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -42,18 +41,17 @@ public class CatScratch extends AbstractGremlinCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractGameAction.AttackEffect[] attacks = {AbstractGameAction.AttackEffect.SLASH_DIAGONAL,
                 AbstractGameAction.AttackEffect.SLASH_HORIZONTAL,
-        AbstractGameAction.AttackEffect.SLASH_HORIZONTAL};
+                AbstractGameAction.AttackEffect.SLASH_HORIZONTAL};
 
-        for(int i=0;i<this.magicNumber;i++) {
+        for (int i = 0; i < this.magicNumber; i++) {
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
-                    this.damageTypeForTurn), attacks[i%3]));
+                    this.damageTypeForTurn), attacks[i % 3]));
         }
     }
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_MAGIC);
         }

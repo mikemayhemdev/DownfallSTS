@@ -10,21 +10,19 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
+import downfall.util.TextureLoader;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.EnhancePower;
-import downfall.util.TextureLoader;
-
-import static theHexaghost.GhostflameHelper.activeGhostFlame;
 
 public class BolsteringGhostflame extends AbstractGhostflame {
     public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("bolster.png"));
     public static Texture bruhB = TextureLoader.getTexture(HexaMod.makeUIPath("bolsterBright.png"));
     public static Texture bruh2 = TextureLoader.getTexture(HexaMod.makeUIPath("block.png"));
 
-    private String ID = "hexamod:BolsteringGhostflame";
-    private String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
-    private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
+    private final String ID = "hexamod:BolsteringGhostflame";
+    private final String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
+    private final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
 
 
     public BolsteringGhostflame(float x, float y) {
@@ -62,7 +60,7 @@ public class BolsteringGhostflame extends AbstractGhostflame {
     }
 
     @Override
-    public int getActiveFlamesTriggerCount(){
+    public int getActiveFlamesTriggerCount() {
         if (charged) {
             return 1;
         } else {
@@ -72,7 +70,7 @@ public class BolsteringGhostflame extends AbstractGhostflame {
 
     @Override
     public void advanceTrigger(AbstractCard c) {
-        if (!charged && c.type == AbstractCard.CardType.POWER){
+        if (!charged && c.type == AbstractCard.CardType.POWER) {
             advanceTriggerAnim();
             charge();
         }
@@ -90,7 +88,7 @@ public class BolsteringGhostflame extends AbstractGhostflame {
         return x + "";
     }
 
-    public int getEffectCount(){
+    public int getEffectCount() {
         int x = block;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
@@ -99,7 +97,9 @@ public class BolsteringGhostflame extends AbstractGhostflame {
     }
 
     @Override
-    public String getName(){ return NAME;}
+    public String getName() {
+        return NAME;
+    }
 
     @Override
     public String getDescription() {

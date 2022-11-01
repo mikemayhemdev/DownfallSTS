@@ -13,7 +13,6 @@ import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import reskinContent.skinCharacter.AbstractSkin;
 import reskinContent.vfx.SlimedScreenEffect;
-import slimebound.characters.SlimeboundCharacter;
 
 import static com.megacrit.cardcrawl.core.AbstractCreature.sr;
 
@@ -57,7 +56,7 @@ public class Slaifu extends AbstractSkin {
         super.loadAnimation();
         sneckoAtlas = new TextureAtlas(Gdx.files.internal(reskinContent.assetPath("img/SneckoMod/SSSSnecko/animation/Snecko_portrait_effect.atlas")));
         SkeletonJson sneckoJson = new SkeletonJson(sneckoAtlas);
-        sneckoJson.setScale(Settings.scale / 1.0F);
+        sneckoJson.setScale(Settings.scale);
         sneckoData = sneckoJson.readSkeletonData(Gdx.files.internal(reskinContent.assetPath("img/SneckoMod/SSSSnecko/animation/Snecko_portrait_effect.json")));
 
 
@@ -156,7 +155,7 @@ public class Slaifu extends AbstractSkin {
     @Override
     public void dispose() {
         super.dispose();
-        if (this.sneckoAtlas != null) this.sneckoAtlas.dispose();
+        if (sneckoAtlas != null) sneckoAtlas.dispose();
     }
 }
 

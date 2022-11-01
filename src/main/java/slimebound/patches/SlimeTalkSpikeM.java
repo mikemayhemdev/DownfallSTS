@@ -20,7 +20,7 @@ public class SlimeTalkSpikeM {
     }
 
     public static void Prefix(SpikeSlime_M sb) {
-        if (AbstractDungeon.player instanceof SlimeboundCharacter && SlimeboundMod.slimeTalkedSpikeM == false) {
+        if (AbstractDungeon.player instanceof SlimeboundCharacter && !SlimeboundMod.slimeTalkedSpikeM) {
             AbstractDungeon.actionManager.addToBottom(new TalkAction(sb, DESCRIPTIONS[9], 1.0F, 2.0F));
             SlimeboundMod.slimeTalkedSpikeM = true;
         }

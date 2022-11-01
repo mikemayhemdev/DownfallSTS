@@ -19,11 +19,11 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 public class SmallLaserEffectColored extends AbstractGameEffect {
     private static final float DUR = 0.5F;
     private static AtlasRegion img;
-    private float sX;
-    private float sY;
-    private float dX;
-    private float dY;
-    private float dst;
+    private final float sX;
+    private final float sY;
+    private final float dX;
+    private final float dY;
+    private final float dst;
 
     public SmallLaserEffectColored(float sX, float sY, float dX, float dY, Color color) {
         if (img == null) {
@@ -54,7 +54,6 @@ public class SmallLaserEffectColored extends AbstractGameEffect {
         if (this.duration < 0.0F) {
             this.isDone = true;
         }
-
 
 
     }

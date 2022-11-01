@@ -1,17 +1,12 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
-import hermit.actions.FastLoseHPAction;
 import hermit.actions.FromBeyondAction;
 import hermit.characters.hermit;
-import hermit.patches.EnumPatch;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
@@ -45,7 +40,6 @@ public class FromBeyond extends AbstractDynamicCard {
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
 
-
     private static final int COST = 1;
 
 
@@ -54,14 +48,14 @@ public class FromBeyond extends AbstractDynamicCard {
     public FromBeyond() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         loadJokeCardImage(this, "from_beyond.png");
-        magicNumber= baseMagicNumber=5;
+        magicNumber = baseMagicNumber = 5;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        for (int i = 0; i<p.exhaustPile.size();i++){
+        for (int i = 0; i < p.exhaustPile.size(); i++) {
             this.addToBot(new FromBeyondAction(this, this.magicNumber));
         }
     }

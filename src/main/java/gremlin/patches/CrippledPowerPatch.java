@@ -6,12 +6,12 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import gremlin.powers.CrippledPower;
 
 @SpirePatch(
-        clz= WeakPower.class,
-        method="atEndOfRound"
+        clz = WeakPower.class,
+        method = "atEndOfRound"
 )
 public class CrippledPowerPatch {
-    public static SpireReturn Prefix(WeakPower __instance){
-        if(__instance.owner.hasPower(CrippledPower.POWER_ID)){
+    public static SpireReturn Prefix(WeakPower __instance) {
+        if (__instance.owner.hasPower(CrippledPower.POWER_ID)) {
             return SpireReturn.Return(null);
         }
         return SpireReturn.Continue();

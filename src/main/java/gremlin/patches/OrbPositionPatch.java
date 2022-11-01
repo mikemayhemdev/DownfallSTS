@@ -8,19 +8,20 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.rooms.MonsterRoom;
+import downfall.downfallMod;
 import gremlin.characters.GremlinCharacter;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.lastCombatMetricKey;
 
-@SpirePatch(clz= AbstractOrb.class,method="setSlot",
+@SpirePatch(clz = AbstractOrb.class, method = "setSlot",
         paramtypez = {
                 int.class,
                 int.class})
 public class OrbPositionPatch {
     public static SpireReturn<Void> Prefix(AbstractOrb abstractOrb_instance, int slotNum, int maxOrbs) {
 
-        if (AbstractDungeon.player instanceof GremlinCharacter) {
-            if(slotNum < 4) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+            if (slotNum < 4) {
                 if (((AbstractDungeon.getCurrRoom() instanceof MonsterRoom)) && (lastCombatMetricKey.equals(MonsterHelper.SHIELD_SPEAR_ENC))) {
                     abstractOrb_instance.tX = ((GremlinCharacter) AbstractDungeon.player).orbPositionsXCramp[slotNum] + AbstractDungeon.player.drawX;
                 } else {
@@ -29,8 +30,7 @@ public class OrbPositionPatch {
                 abstractOrb_instance.tY = ((GremlinCharacter) AbstractDungeon.player).orbPositionsY[slotNum];
 
                 abstractOrb_instance.hb.move(abstractOrb_instance.tX, abstractOrb_instance.tY);
-            }
-            else {
+            } else {
                 slotNum -= 4;
                 maxOrbs -= 4;
                 final float dist = 160.0f * Settings.scale + maxOrbs * 10.0f * Settings.scale;

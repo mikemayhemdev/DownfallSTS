@@ -15,13 +15,13 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class FakeFlashAtkImgEffect extends AbstractGameEffect {
     private static final float DURATION = 0.6F;
-    private static int blockSound = 0;
+    private static final int blockSound = 0;
     public AtlasRegion img;
     private float x;
     private float y;
-    private float sY;
-    private float tY;
-    private boolean mute;
+    private final float sY;
+    private final float tY;
+    private final boolean mute;
 
     public FakeFlashAtkImgEffect(float x, float y, Color color, float scale, boolean mute, float duration) {
         this.duration = duration;

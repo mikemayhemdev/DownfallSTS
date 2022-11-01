@@ -1,6 +1,6 @@
 package automaton;
 
-import automaton.cards.Separator;
+import automaton.cards.Terminator;
 import automaton.cards.*;
 import automaton.cards.goodstatus.*;
 import automaton.events.*;
@@ -30,7 +30,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.status.*;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheCity;
@@ -120,7 +119,6 @@ public class AutomatonMod implements
 
 
     }
-
 
 
     public static String makeBetaCardPath(String resourcePath) {
@@ -247,7 +245,8 @@ public class AutomatonMod implements
         BaseMod.addDynamicVariable(new AutoVar());
         try {
             autoAddCards();
-        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
+        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException |
+                 ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
 

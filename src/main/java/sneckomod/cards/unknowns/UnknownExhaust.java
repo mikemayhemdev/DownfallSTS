@@ -1,6 +1,5 @@
 package sneckomod.cards.unknowns;
 
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -24,7 +23,7 @@ public class UnknownExhaust extends AbstractUnknownCard {
 
         Keyword keywordString = CardCrawlGame.languagePack.getKeywordString("Game Dictionary").EXHAUST;
         for (int i = 0; i < keywordString.NAMES.length; i++) {
-            if (!bruh){
+            if (!bruh) {
                 String key = keywordString.NAMES[i];
                 key = key.toLowerCase();
                 String test = card.rawDescription.toLowerCase();

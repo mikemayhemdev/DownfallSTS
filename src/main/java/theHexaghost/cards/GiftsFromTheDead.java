@@ -4,9 +4,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.GiftsFromTheDeadPower;
-import theHexaghost.powers.GiftsFromTheDeadPowerPlus;
-
-import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class GiftsFromTheDead extends AbstractHexaCard {
 

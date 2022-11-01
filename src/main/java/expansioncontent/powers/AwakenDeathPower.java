@@ -16,14 +16,14 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
-import expansioncontent.expansionContentMod;
 import downfall.util.TextureLoader;
+import expansioncontent.expansionContentMod;
 
 
 public class AwakenDeathPower extends AbstractPower implements OnPlayerDeathPower, CloneablePowerInterface {
     public static final String POWER_ID = expansionContentMod.makeID("AwakenDeathPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/AwakenDeath84.png");
     private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/AwakenDeath32.png");
@@ -50,13 +50,12 @@ public class AwakenDeathPower extends AbstractPower implements OnPlayerDeathPowe
         return false;
     }
 
-    public void onVictory()
-         {
-          AbstractPlayer p = com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
-           if (p.currentHealth > 0) {
-                 p.heal(this.amount);
-          }
-          }
+    public void onVictory() {
+        AbstractPlayer p = com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
+        if (p.currentHealth > 0) {
+            p.heal(this.amount);
+        }
+    }
 
     public void trigger(AbstractPlayer abstractPlayer) {
         AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, AwakenDeathPower.POWER_ID));

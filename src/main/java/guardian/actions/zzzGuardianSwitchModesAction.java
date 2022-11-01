@@ -9,9 +9,9 @@ import guardian.powers.zzzGuardianModePower;
 
 
 public class zzzGuardianSwitchModesAction extends AbstractGameAction {
-    private boolean toDefensive;
-    private boolean toShattered;
-    private AbstractPlayer p;
+    private final boolean toDefensive;
+    private final boolean toShattered;
+    private final AbstractPlayer p;
 
     public zzzGuardianSwitchModesAction(AbstractPlayer p, boolean toDefensive, boolean toShattered) {
         this.toDefensive = toDefensive;

@@ -6,13 +6,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import com.megacrit.cardcrawl.events.shrines.Bonfire;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.Circlet;
 import com.megacrit.cardcrawl.relics.SpiritPoop;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
-import gremlin.characters.GremlinCharacter;
+import downfall.downfallMod;
 
 public class BonfireSpirits_Evil extends AbstractImageEvent {
     public static final String ID = "downfall:BonfireSpirits";
@@ -97,26 +96,24 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
     protected void buttonEffect(int buttonPressed) {
         switch (this.screen) {
             case INTRO:
-                switch (buttonPressed) {
-                    case 0:
-                        this.imageEventText.updateBodyText(DIALOG_2);
-                        this.imageEventText.updateDialogOption(0, OPTIONS[2]);
-                        this.imageEventText.removeDialogOption(1);
-                        if (AbstractDungeon.player.gold >= 150) {
-                            if (AbstractDungeon.player instanceof GremlinCharacter) {
-                                this.imageEventText.setDialogOption(OPTIONSALT[2]);
-                            } else {
-                                this.imageEventText.setDialogOption(OPTIONSALT[0]);
-                            }
+                if (buttonPressed == 0) {
+                    this.imageEventText.updateBodyText(DIALOG_2);
+                    this.imageEventText.updateDialogOption(0, OPTIONS[2]);
+                    this.imageEventText.removeDialogOption(1);
+                    if (AbstractDungeon.player.gold >= 150) {
+                        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+                            this.imageEventText.setDialogOption(OPTIONSALT[2]);
                         } else {
-                            this.imageEventText.setDialogOption(OPTIONSALT[1], true);
+                            this.imageEventText.setDialogOption(OPTIONSALT[0]);
                         }
-                        this.screen = CUR_SCREEN.CHOOSE;
-                        break;
+                    } else {
+                        this.imageEventText.setDialogOption(OPTIONSALT[1], true);
+                    }
+                    this.screen = CUR_SCREEN.CHOOSE;
                 }
                 break;
             case CHOOSE:
-                switch (buttonPressed){
+                switch (buttonPressed) {
                     case 0: {
                         if (CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()).size() > 0) {
                             AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, OPTIONS[3], false, false, false, true);
@@ -142,8 +139,6 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
                     }
                 }
                 break;
-
-
 
 
             case COMPLETE:

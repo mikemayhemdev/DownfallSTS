@@ -16,9 +16,9 @@ import java.util.List;
 
 public class ExhumeLickAction extends AbstractGameAction {
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-    private AbstractPlayer p;
-    private int count;
-    private boolean isupgraded;
+    private final AbstractPlayer p;
+    private final int count;
+    private final boolean isupgraded;
 
     public ExhumeLickAction(int count, boolean upgraded) {
 
@@ -31,12 +31,12 @@ public class ExhumeLickAction extends AbstractGameAction {
         this.actionType = ActionType.CARD_MANIPULATION;
 
         this.duration = Settings.ACTION_DUR_FAST;
-        isupgraded=upgraded;
+        isupgraded = upgraded;
 
     }
 
 
-    private void chooseLick(AbstractCard c){
+    private void chooseLick(AbstractCard c) {
         if (isupgraded) c.upgrade();
         if (p.hand.size() >= BaseMod.MAX_HAND_SIZE) {
             this.p.discardPile.addToTop(c);
@@ -55,7 +55,7 @@ public class ExhumeLickAction extends AbstractGameAction {
 
             if (this.p.exhaustPile.isEmpty()) {
 
-               // logger.info("Exhaust is empty");
+                // logger.info("Exhaust is empty");
                 this.isDone = true;
                 return;
 
@@ -64,12 +64,12 @@ public class ExhumeLickAction extends AbstractGameAction {
             CardGroup cardsToReturn = AbstractDungeon.player.exhaustPile;
             cardsToReturn.shuffle();
             List<AbstractCard> cardsToExhaust = new ArrayList<>();
-           // logger.info("Exhaust size:" + exhaustSize);
+            // logger.info("Exhaust size:" + exhaustSize);
 
             //Prefer nonBuried licks first
             for (AbstractCard c : cardsToReturn.group) {
                 if (c.hasTag(SlimeboundMod.LICK) && !(c.hasTag(SlimeboundMod.BURIED))) {
-                 //   logger.info("Add to hand");
+                    //   logger.info("Add to hand");
                     chooseLick(c);
                     cardsReturned++;
                     cardsToExhaust.add(c);
@@ -78,7 +78,7 @@ public class ExhumeLickAction extends AbstractGameAction {
             }
 
             //If slots are left, check the Buried licks
-            if (cardsReturned < count){
+            if (cardsReturned < count) {
                 for (AbstractCard c : cardsToReturn.group) {
                     if (c.hasTag(SlimeboundMod.LICK) && (c.hasTag(SlimeboundMod.BURIED))) {
                         //   logger.info("Add to hand");

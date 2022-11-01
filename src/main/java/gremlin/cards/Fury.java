@@ -29,8 +29,7 @@ public class Fury extends AbstractGremlinCard {
 
     private int prevDiscount = 0;
 
-    public Fury()
-    {
+    public Fury() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -90,8 +89,7 @@ public class Fury extends AbstractGremlinCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
         }

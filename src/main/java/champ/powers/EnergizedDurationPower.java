@@ -4,13 +4,11 @@ import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
 
 public class EnergizedDurationPower extends AbstractPower implements CloneablePowerInterface {
@@ -47,10 +45,10 @@ public class EnergizedDurationPower extends AbstractPower implements CloneablePo
     @Override
     public void updateDescription() {
         if (this.amount == 1) {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-    } else {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
-    }
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        } else {
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
+        }
     }
 
     @Override

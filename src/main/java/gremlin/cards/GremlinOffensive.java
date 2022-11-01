@@ -29,8 +29,7 @@ public class GremlinOffensive extends AbstractGremlinCard {
 
     private boolean real = true;
 
-    public GremlinOffensive()
-    {
+    public GremlinOffensive() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -40,8 +39,7 @@ public class GremlinOffensive extends AbstractGremlinCard {
         setBackgrounds();
     }
 
-    public GremlinOffensive(boolean real)
-    {
+    public GremlinOffensive(boolean real) {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -57,7 +55,7 @@ public class GremlinOffensive extends AbstractGremlinCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                 this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         AbstractCard g = new GremlinOffensive();
-        if(this.upgraded){
+        if (this.upgraded) {
             g.upgrade();
         }
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(g));
@@ -65,8 +63,7 @@ public class GremlinOffensive extends AbstractGremlinCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;

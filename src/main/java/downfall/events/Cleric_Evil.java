@@ -28,7 +28,7 @@ public class Cleric_Evil extends AbstractImageEvent {
     }
 
     private CurrentScreen curScreen;
-    private int gold;
+    private final int gold;
 
 
     public Cleric_Evil() {

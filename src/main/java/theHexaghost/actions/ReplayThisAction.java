@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class ReplayThisAction extends AbstractGameAction {
-    private AbstractCard funCard;
+    private final AbstractCard funCard;
 
     public ReplayThisAction(AbstractCreature target, AbstractCard card) {
         this.duration = Settings.ACTION_DUR_FAST;// 17

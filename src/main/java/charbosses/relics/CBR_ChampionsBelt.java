@@ -3,11 +3,9 @@ package charbosses.relics;
 import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.Boot;
 import com.megacrit.cardcrawl.relics.ChampionsBelt;
 
 public class CBR_ChampionsBelt extends AbstractCharbossRelic {

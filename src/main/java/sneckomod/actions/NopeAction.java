@@ -8,21 +8,17 @@ package sneckomod.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import slimebound.actions.MakeTempCardInHandActionReduceCost;
 import sneckomod.SneckoMod;
 
-import java.util.ArrayList;
-
 public class NopeAction extends AbstractGameAction {
     private static final String[] EXTENDED_DESCRIPTION = CardCrawlGame.languagePack.getCardStrings(SneckoMod.makeID("Nope")).EXTENDED_DESCRIPTION;
-    private AbstractPlayer p;
-    private boolean reduction;
+    private final AbstractPlayer p;
+    private final boolean reduction;
 
     public NopeAction(boolean reduceCost) {
         this.actionType = ActionType.CARD_MANIPULATION;// 22

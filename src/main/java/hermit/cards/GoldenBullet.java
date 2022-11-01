@@ -1,22 +1,11 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.GameActionManager;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.relics.PrismaticShard;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import hermit.HermitMod;
 import hermit.actions.GoldenBulletAction;
 import hermit.characters.hermit;
-
-
-import java.util.Iterator;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
@@ -54,8 +43,8 @@ public class GoldenBullet extends AbstractDynamicCard {
     public GoldenBullet() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        misc=0;
-        this.exhaust=true;
+        misc = 0;
+        this.exhaust = true;
         loadJokeCardImage(this, "golden_bullet.png");
     }
 

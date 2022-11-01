@@ -15,7 +15,7 @@ import slimebound.powers.SlimedPower;
 public class SlimesplosionAction extends AbstractGameAction {
     private boolean freeToPlayOnce = false;
     private int damage;
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
     private AbstractMonster m;
     private DamageType damageTypeForTurn;
     private int energyOnUse = -1;

@@ -25,8 +25,7 @@ public class ShankStone extends AbstractGremlinCard {
     private static final int MAGIC = 2;
     private static final int UPGRADE_BONUS = 1;
 
-    public ShankStone()
-    {
+    public ShankStone() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -36,11 +35,11 @@ public class ShankStone extends AbstractGremlinCard {
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {}
+    public void use(AbstractPlayer p, AbstractMonster m) {
+    }
 
     @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m)
-    {
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         this.cantUseMessage = strings.EXTENDED_DESCRIPTION[0];
         return false;
     }
@@ -50,10 +49,8 @@ public class ShankStone extends AbstractGremlinCard {
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Shiv(), magicNumber));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_BONUS);
         }

@@ -1,9 +1,7 @@
 package theHexaghost.cards;
 
-import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import expansioncontent.expansionContentMod;
 import theHexaghost.powers.ParanormalFormPower;
 
 public class ParanormalForm extends AbstractHexaCard {

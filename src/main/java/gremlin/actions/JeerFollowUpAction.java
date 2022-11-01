@@ -6,8 +6,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-public class JeerFollowUpAction extends AbstractGameAction
-{
+public class JeerFollowUpAction extends AbstractGameAction {
     public JeerFollowUpAction(final AbstractCreature target, int amount) {
         this.duration = Settings.ACTION_DUR_XFAST;
         this.actionType = ActionType.BLOCK;

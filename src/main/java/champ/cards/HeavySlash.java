@@ -1,17 +1,11 @@
 package champ.cards;
 
-import basemod.helpers.CardModifierManager;
-import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import downfall.cardmods.RetainCardMod;
-
-import java.util.ArrayList;
 
 public class HeavySlash extends AbstractChampCard {
 
@@ -27,7 +21,7 @@ public class HeavySlash extends AbstractChampCard {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-       // tags.add(ChampMod.TECHNIQUE);
+        // tags.add(ChampMod.TECHNIQUE);
         postInit();
     }
 
@@ -40,7 +34,7 @@ public class HeavySlash extends AbstractChampCard {
         c.modifyCostForCombat(-99);
         if (upgraded) c.upgrade();
         makeInHand(c);
-     //   techique();
+        //   techique();
     }
 
 

@@ -2,12 +2,9 @@ package charbosses.relics;
 
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.cards.AbstractBossCard;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.GameCursor;
 import com.megacrit.cardcrawl.core.Settings;
@@ -18,17 +15,13 @@ import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import slimebound.SlimeboundMod;
-
-import java.util.ArrayList;
 
 public abstract class AbstractCharbossRelic extends AbstractRelic {
 
-    private static float START_X;
-    private static float START_Y;
-    private static float PAD_X;
+    private static final float START_X;
+    private static final float START_Y;
+    private static final float PAD_X;
 
     static {
         START_X = 364.0f * Settings.scale;
@@ -55,6 +48,7 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
         UnlockTracker.markRelicAsSeen(this.relicId);
         refreshDescription();
     }
+
     public AbstractCharbossRelic(AbstractRelic baseRelic) {
         super(baseRelic.relicId, baseRelic.imgUrl, baseRelic.tier, LandingSound.CLINK);
         this.baseRelic = baseRelic;
@@ -62,6 +56,7 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
         UnlockTracker.markRelicAsSeen(this.relicId);
         refreshDescription();
     }
+
     public AbstractCharbossRelic(AbstractRelic baseRelic, RelicTier tier) {
         super(baseRelic.relicId, baseRelic.imgUrl, tier, LandingSound.CLINK);
         this.baseRelic = baseRelic;
@@ -76,15 +71,15 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
         super.renderInTopPanel(sb);
         ////SlimeboundMod.logger.info("boss relic rendering hovered = " + this.hb.hovered);
         if (this.hb.hovered && !CardCrawlGame.relicPopup.isOpen) {
-           // //SlimeboundMod.logger.info("boss relic rendering hovered");
+            // //SlimeboundMod.logger.info("boss relic rendering hovered");
             if (!this.isSeen) {
-                if ((float)InputHelper.mX < 1400.0F * Settings.scale) {
-                    TipHelper.renderGenericTip((float)InputHelper.mX + 60.0F * Settings.scale, (float)InputHelper.mY - 50.0F * Settings.scale, LABEL[1], MSG[1]);
+                if ((float) InputHelper.mX < 1400.0F * Settings.scale) {
+                    TipHelper.renderGenericTip((float) InputHelper.mX + 60.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale, LABEL[1], MSG[1]);
                 } else {
-                    TipHelper.renderGenericTip((float)InputHelper.mX - 350.0F * Settings.scale, (float)InputHelper.mY - 50.0F * Settings.scale, LABEL[1], MSG[1]);
+                    TipHelper.renderGenericTip((float) InputHelper.mX - 350.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale, LABEL[1], MSG[1]);
                 }
 
-              //  //SlimeboundMod.logger.info("boss relic rendering prereturn");
+                //  //SlimeboundMod.logger.info("boss relic rendering prereturn");
                 return;
             }
 
@@ -93,7 +88,7 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
     }
 
 
-    public void refreshDescription(){
+    public void refreshDescription() {
 
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
@@ -240,8 +235,7 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
             if (this.hb.hovered && AbstractDungeon.topPanel.potionUi.isHidden) {
                 this.scale = Settings.scale * 1.25f;
                 CardCrawlGame.cursor.changeType(GameCursor.CursorType.INSPECT);
-            }
-            else {
+            } else {
                 this.scale = MathHelper.scaleLerpSnap(this.scale, Settings.scale);
             }
             //this.updateRelicPopupClick();

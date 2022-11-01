@@ -19,9 +19,9 @@ public abstract class AbstractTwoAmountBossMechanicPower extends TwoAmountPower 
     @Override
     public void update(int slot) {
         super.update(slot);
-        if (firstTurn){
-            if (this.timer <= 0F){
-                ArrayList<AbstractGameEffect> effect2 = (ArrayList<AbstractGameEffect>) ReflectionHacks.getPrivate(this, AbstractPower.class, "effect");
+        if (firstTurn) {
+            if (this.timer <= 0F) {
+                ArrayList<AbstractGameEffect> effect2 = ReflectionHacks.getPrivate(this, AbstractPower.class, "effect");
                 effect2.add(new GainPowerEffect(this));
                 this.timer = 1F;
                 if (AbstractCharBoss.boss != null) {
@@ -30,7 +30,7 @@ public abstract class AbstractTwoAmountBossMechanicPower extends TwoAmountPower 
                     }
                 }
                 if (NeowBossFinal.neowboss != null) {
-                    if (NeowBossFinal.neowboss.hb.hovered){
+                    if (NeowBossFinal.neowboss.hb.hovered) {
                         firstTurn = false;
                     }
                 }
@@ -51,6 +51,7 @@ public abstract class AbstractTwoAmountBossMechanicPower extends TwoAmountPower 
         //to prevent the 'last turn' warning from pinging audio all the time
     }
 
-    public void PreRoundLoseBlock(){}
+    public void PreRoundLoseBlock() {
+    }
 
 }

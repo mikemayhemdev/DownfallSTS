@@ -19,7 +19,7 @@ public class EnemyShowCardAndAddToDiscardEffect extends AbstractGameEffect {
         PADDING = 30.0f * Settings.scale;
     }
 
-    private AbstractCard card;
+    private final AbstractCard card;
 
     public EnemyShowCardAndAddToDiscardEffect(final AbstractCard srcCard, final float x, final float y) {
         this.card = srcCard.makeStatEquivalentCopy();

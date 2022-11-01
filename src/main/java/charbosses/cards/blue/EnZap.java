@@ -40,7 +40,7 @@ public class EnZap extends AbstractBossCard {
 
     @Override
     public String overrideIntentText() {
-        return "(" + ( 3 + AbstractEnemyOrb.masterPretendFocus + getFocusAmountSafe()) + ")";
+        return "(" + (3 + AbstractEnemyOrb.masterPretendFocus + getFocusAmountSafe()) + ")";
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

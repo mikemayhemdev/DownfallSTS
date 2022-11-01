@@ -51,7 +51,7 @@ public class TheSnecko extends CustomPlayer {
     public float renderscale = 1.2F;
 
     public TheSnecko(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "sneckomodResources/images/char/orb/vfx.png", (String) null, (String) null);
+        super(name, setClass, orbTextures, "sneckomodResources/images/char/orb/vfx.png", null, (String) null);
         initializeClass(null,
                 CharacterSelectScreenPatches.characters[3].skins[CharacterSelectScreenPatches.characters[3].reskinCount].SHOULDER1,
                 CharacterSelectScreenPatches.characters[3].skins[CharacterSelectScreenPatches.characters[3].reskinCount].SHOULDER2,

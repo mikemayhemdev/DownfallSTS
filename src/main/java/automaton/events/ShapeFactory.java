@@ -5,23 +5,16 @@ import automaton.cards.DazingPulse;
 import automaton.cards.Explode;
 import automaton.cards.Spike;
 import automaton.util.DazingPulseReward;
-import automaton.util.DonuBeamReward;
 import automaton.util.ExplodeReward;
 import automaton.util.SpikeReward;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.monsters.beyond.Exploder;
 import com.megacrit.cardcrawl.monsters.beyond.Repulsor;
 import com.megacrit.cardcrawl.monsters.beyond.Spiker;
-import com.megacrit.cardcrawl.monsters.exordium.SlaverBlue;
-import com.megacrit.cardcrawl.relics.ChampionsBelt;
-import com.megacrit.cardcrawl.relics.CloakClasp;
-import com.megacrit.cardcrawl.relics.WristBlade;
-import slimebound.SlimeboundMod;
 
 public class ShapeFactory extends AbstractImageEvent {
     public static final String ID = "bronze:ShapeFactory";
@@ -103,8 +96,7 @@ public class ShapeFactory extends AbstractImageEvent {
                         this.screen = CurScreen.CHOOSETHREE;
                         if (fightSpiker) {
                             fightRepulsor = true;
-                        }
-                        else fightSpiker = true;
+                        } else fightSpiker = true;
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         this.imageEventText.clearAllDialogs();
                         if (!fightSpiker) this.imageEventText.setDialogOption(OPTIONS[5], new Spike());
@@ -117,8 +109,7 @@ public class ShapeFactory extends AbstractImageEvent {
                         this.screen = CurScreen.CHOOSETHREE;
                         if (fightExploder) {
                             fightRepulsor = true;
-                        }
-                        else fightExploder = true;
+                        } else fightExploder = true;
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         this.imageEventText.clearAllDialogs();
                         if (!fightSpiker) this.imageEventText.setDialogOption(OPTIONS[5], new Spike());
@@ -153,42 +144,40 @@ public class ShapeFactory extends AbstractImageEvent {
 
     }
 
-    private void beginFight(){
+    private void beginFight() {
         this.screen = CurScreen.FIGHT;
         //SlimeboundMod.logger.info("fight");
         float spawnX = 0F;
         AbstractDungeon.getCurrRoom().rewards.clear();
-        if (fightSpiker){
+        if (fightSpiker) {
             AbstractDungeon.getCurrRoom().rewards.add(new SpikeReward());
         }
-        if (fightRepulsor){
+        if (fightRepulsor) {
             AbstractDungeon.getCurrRoom().rewards.add(new DazingPulseReward());
         }
-        if (fightExploder){
+        if (fightExploder) {
             AbstractDungeon.getCurrRoom().rewards.add(new ExplodeReward());
         }
         int numShapes = AbstractDungeon.getCurrRoom().rewards.size();
         logMetric(ID, "Fought " + numShapes + " shapes");
 
-        if (fightSpiker){
+        if (fightSpiker) {
             AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new Spiker(spawnX, 0.0F));
             spawnX -= 225F;
-            if (fightRepulsor){
+            if (fightRepulsor) {
                 AbstractDungeon.getCurrRoom().monsters.add(new Repulsor(spawnX, 0.0F));
                 spawnX -= 225F;
             }
-            if (fightExploder){
+            if (fightExploder) {
                 AbstractDungeon.getCurrRoom().monsters.add(new Exploder(spawnX, 0.0F));
             }
-        }
-        else if (fightRepulsor){
+        } else if (fightRepulsor) {
             AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new Repulsor(spawnX, 0.0F));
             spawnX -= 225F;
-            if (fightExploder){
+            if (fightExploder) {
                 AbstractDungeon.getCurrRoom().monsters.add(new Exploder(spawnX, 0.0F));
             }
-        }
-        else if (fightExploder){
+        } else if (fightExploder) {
             AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new Exploder(spawnX, 0.0F));
         }
 

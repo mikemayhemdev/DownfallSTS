@@ -1,13 +1,13 @@
 package gremlin.actions;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.defect.ScrapeAction;
-import com.megacrit.cardcrawl.core.*;
-import com.megacrit.cardcrawl.cards.*;
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.actions.*;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-public class TricksyFollowUpAction extends AbstractGameAction
-{
+public class TricksyFollowUpAction extends AbstractGameAction {
     public TricksyFollowUpAction() {
         this.duration = Settings.ACTION_DUR_FASTER;
     }

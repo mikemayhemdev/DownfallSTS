@@ -7,11 +7,9 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.HealEffect;
 import com.megacrit.cardcrawl.vfx.combat.HealVerticalLineEffect;
 import hermit.HermitMod;
 import hermit.actions.ReduceDebuffsAction;
-import hermit.actions.ReprieveAction;
 import hermit.characters.hermit;
 
 import static hermit.HermitMod.loadJokeCardImage;
@@ -71,12 +69,12 @@ public class Virtue extends AbstractDynamicCard {
             CardCrawlGame.sound.play("HEAL_3");
         }
 
-        float    X_JITTER = 120.0F * Settings.scale;
-        float    Y_JITTER = 120.0F * Settings.scale;
-        float    OFFSET_Y = -50.0F * Settings.scale;
+        float X_JITTER = 120.0F * Settings.scale;
+        float Y_JITTER = 120.0F * Settings.scale;
+        float OFFSET_Y = -50.0F * Settings.scale;
 
-        for(int i = 0; i < 18; ++i) {
-            AbstractDungeon.effectsQueue.add(new HealVerticalLineEffect((p.hb.cX - p.animX) + MathUtils.random(-X_JITTER * 1.5F, X_JITTER * 1.5F),  p.hb.cY + OFFSET_Y + MathUtils.random(-Y_JITTER, Y_JITTER)));
+        for (int i = 0; i < 18; ++i) {
+            AbstractDungeon.effectsQueue.add(new HealVerticalLineEffect((p.hb.cX - p.animX) + MathUtils.random(-X_JITTER * 1.5F, X_JITTER * 1.5F), p.hb.cY + OFFSET_Y + MathUtils.random(-Y_JITTER, Y_JITTER)));
         }
         this.addToBot(new ReduceDebuffsAction(AbstractDungeon.player, magicNumber));
     }

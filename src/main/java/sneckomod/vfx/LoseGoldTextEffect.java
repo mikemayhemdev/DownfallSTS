@@ -27,9 +27,9 @@ public class LoseGoldTextEffect extends AbstractGameEffect {
 
     private int gold = 0;
     private boolean reachedCenter = false;
-    private float x;
+    private final float x;
     private float y;
-    private float destinationY;
+    private final float destinationY;
     private float waitTimer = 1.0F;
     private float fadeTimer = 1.0F;
 

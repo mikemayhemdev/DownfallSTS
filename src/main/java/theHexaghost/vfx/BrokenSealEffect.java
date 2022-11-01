@@ -20,15 +20,15 @@ public class BrokenSealEffect extends AbstractGameEffect {
 
     private int cardsShown = 0;
 
-    private float effectHeight = 250F;
-    private float effectWidth1 = 150F;
-    private float effectWidth2 = 350F;
+    private final float effectHeight = 250F;
+    private final float effectWidth1 = 150F;
+    private final float effectWidth2 = 350F;
 
     private NeowBossRezEffect rezVFX;
 
     private AbstractRelic sealRelic;
 
-    private ArrayList<AbstractCard> seals = new ArrayList<>();
+    private final ArrayList<AbstractCard> seals = new ArrayList<>();
 
     public BrokenSealEffect() {
         this.startingDuration = this.duration = 6F;
@@ -36,7 +36,7 @@ public class BrokenSealEffect extends AbstractGameEffect {
 
     public void update() {
         //this.duration -= Gdx.graphics.getDeltaTime();
-        if (this.duration <= 5.5F && this.cardsShown == 0){
+        if (this.duration <= 5.5F && this.cardsShown == 0) {
             AbstractCard c = new FirstSeal();
             c.target_x = Settings.WIDTH / 2F - effectWidth1 * Settings.scale;
             c.target_y = Settings.HEIGHT / 2F - effectHeight * Settings.scale + 75F * Settings.scale;
@@ -48,7 +48,7 @@ public class BrokenSealEffect extends AbstractGameEffect {
             this.seals.add(c);
             this.cardsShown++;
         }
-        if (this.duration <= 5.2F && this.cardsShown == 1){
+        if (this.duration <= 5.2F && this.cardsShown == 1) {
             AbstractCard c = new SecondSeal();
             c.target_x = Settings.WIDTH / 2F - effectWidth2 * Settings.scale;
             c.target_y = Settings.HEIGHT / 2F * Settings.scale + 75F * Settings.scale;
@@ -61,7 +61,7 @@ public class BrokenSealEffect extends AbstractGameEffect {
 
             this.cardsShown++;
         }
-        if (this.duration <= 4.9F && this.cardsShown == 2){
+        if (this.duration <= 4.9F && this.cardsShown == 2) {
             AbstractCard c = new ThirdSeal();
             c.target_x = Settings.WIDTH / 2F - effectWidth1 * Settings.scale;
             c.target_y = Settings.HEIGHT / 2F + effectHeight * Settings.scale + 75F * Settings.scale;
@@ -74,7 +74,7 @@ public class BrokenSealEffect extends AbstractGameEffect {
 
             this.cardsShown++;
         }
-        if (this.duration <= 4.6F && this.cardsShown == 3){
+        if (this.duration <= 4.6F && this.cardsShown == 3) {
             AbstractCard c = new FourthSeal();
             c.target_x = Settings.WIDTH / 2F + effectWidth1 * Settings.scale;
             c.target_y = Settings.HEIGHT / 2F + effectHeight * Settings.scale + 75F * Settings.scale;
@@ -87,7 +87,7 @@ public class BrokenSealEffect extends AbstractGameEffect {
 
             this.cardsShown++;
         }
-        if (this.duration <= 4.3F && this.cardsShown == 4){
+        if (this.duration <= 4.3F && this.cardsShown == 4) {
             AbstractCard c = new FifthSeal();
             c.target_x = Settings.WIDTH / 2F + effectWidth2 * Settings.scale;
             c.target_y = Settings.HEIGHT / 2F * Settings.scale + 75F * Settings.scale;
@@ -100,7 +100,7 @@ public class BrokenSealEffect extends AbstractGameEffect {
 
             this.cardsShown++;
         }
-        if (this.duration <= 4F && this.cardsShown == 5){
+        if (this.duration <= 4F && this.cardsShown == 5) {
             AbstractCard c = new SixthSeal();
             c.target_x = Settings.WIDTH / 2F + effectWidth1 * Settings.scale;
             c.target_y = Settings.HEIGHT / 2F - effectHeight * Settings.scale + 75F * Settings.scale;
@@ -113,14 +113,14 @@ public class BrokenSealEffect extends AbstractGameEffect {
 
             this.cardsShown++;
         }
-        if (this.duration <= 3F && this.cardsShown == 6){
-            for (AbstractCard c : this.seals){
+        if (this.duration <= 3F && this.cardsShown == 6) {
+            for (AbstractCard c : this.seals) {
                 AbstractDungeon.effectsQueue.add(new ExhaustCardEffect(c));
             }
             this.cardsShown++;
         }
 
-        if (this.duration <= 2.5F && this.cardsShown == 7){
+        if (this.duration <= 2.5F && this.cardsShown == 7) {
 
             this.rezVFX = new NeowBossRezEffect(Settings.WIDTH / 2F, Settings.HEIGHT / 2F);
             AbstractDungeon.effectsQueue.add(rezVFX);
@@ -138,10 +138,10 @@ public class BrokenSealEffect extends AbstractGameEffect {
             this.rezVFX.end();
         }
 
-        for (AbstractCard c : this.seals){
+        for (AbstractCard c : this.seals) {
             c.update();
         }
-        
+
         this.duration -= Gdx.graphics.getDeltaTime() * 1.3F;
 
         if (this.duration < 0.0F) {

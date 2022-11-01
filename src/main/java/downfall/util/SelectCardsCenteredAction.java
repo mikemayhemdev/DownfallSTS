@@ -9,17 +9,16 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class SelectCardsCenteredAction extends AbstractGameAction {
-    private Consumer<List<AbstractCard>> callback;
-    private String text;
-    private boolean anyNumber;
-    private CardGroup selectGroup;
+    private final Consumer<List<AbstractCard>> callback;
+    private final String text;
+    private final boolean anyNumber;
+    private final CardGroup selectGroup;
 
     public SelectCardsCenteredAction(ArrayList<AbstractCard> group, int amount, String textForSelect, boolean anyNumber, Predicate<AbstractCard> cardFilter, Consumer<List<AbstractCard>> callback) {
         this.amount = amount;
@@ -28,7 +27,7 @@ public class SelectCardsCenteredAction extends AbstractGameAction {
         this.anyNumber = anyNumber;
         this.callback = callback;
         this.selectGroup = new CardGroup(CardGroupType.UNSPECIFIED);
-        this.selectGroup.group.addAll((Collection)group.stream().distinct().filter(cardFilter).collect(Collectors.toList()));
+        this.selectGroup.group.addAll(group.stream().distinct().filter(cardFilter).collect(Collectors.toList()));
     }
 
     public SelectCardsCenteredAction(ArrayList<AbstractCard> group, String textForSelect, boolean anyNumber, Predicate<AbstractCard> cardFilter, Consumer<List<AbstractCard>> callback) {

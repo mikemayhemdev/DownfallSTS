@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
 public class StakingAClaim extends AbstractCollectorCard {
     public final static String ID = makeID("StakingAClaim");
     protected final CardStrings cardStrings;
+
     public StakingAClaim() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         magicNumber = baseMagicNumber = 99;
@@ -31,10 +32,10 @@ public class StakingAClaim extends AbstractCollectorCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new SFXAction("MONSTER_COLLECTOR_DEBUFF"));
-        atb(new VFXAction(new CollectorCurseEffect(m.drawX,m.drawY),2.0f));
-        applyToEnemy(m,new SoulMark(99,m));
-        applyToEnemy(m, new WeakPower(m,99,false));
-        applyToEnemy(m, new VulnerablePower(m,99,false));
+        atb(new VFXAction(new CollectorCurseEffect(m.drawX, m.drawY), 2.0f));
+        applyToEnemy(m, new SoulMark(99, m));
+        applyToEnemy(m, new WeakPower(m, 99, false));
+        applyToEnemy(m, new VulnerablePower(m, 99, false));
     }
 
     @Override

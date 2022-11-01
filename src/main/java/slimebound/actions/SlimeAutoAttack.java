@@ -13,16 +13,18 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.*;
+import com.megacrit.cardcrawl.powers.PoisonPower;
+import com.megacrit.cardcrawl.powers.ThornsPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
+import guardian.powers.LoseThornsPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.orbs.BronzeSlime;
 import slimebound.orbs.ShieldSlime;
 import slimebound.orbs.SpawnedSlime;
-import guardian.powers.LoseThornsPower;
-import slimebound.powers.PotencyPower;
 import slimebound.powers.SlimedPower;
 import slimebound.vfx.SearEffect;
 import slimebound.vfx.SlimeIntentEffect;
@@ -32,19 +34,19 @@ import theHexaghost.powers.BurnPower;
 public class SlimeAutoAttack extends AbstractGameAction {
 
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-    private AbstractCreature owner;
-    private int damage;
-    private int debuffamount;
-    private AttackEffect AE;
-    private SpawnedSlime slime;
-    private boolean beamVFX;
-    private boolean CultistBuff;
-    private boolean appliesPoison;
-    private boolean appliesSlimed;
-    private boolean appliesWeak;
-    private boolean appliesBurn;
-    private boolean appliesVulnerable;
-    private boolean hitsAll;
+    private final AbstractCreature owner;
+    private final int damage;
+    private final int debuffamount;
+    private final AttackEffect AE;
+    private final SpawnedSlime slime;
+    private final boolean beamVFX;
+    private final boolean CultistBuff;
+    private final boolean appliesPoison;
+    private final boolean appliesSlimed;
+    private final boolean appliesWeak;
+    private final boolean appliesBurn;
+    private final boolean appliesVulnerable;
+    private final boolean hitsAll;
     private boolean searVFX;
     private boolean selfThorns;
 
@@ -145,10 +147,10 @@ public class SlimeAutoAttack extends AbstractGameAction {
             return;
         }
 
-        if (slime instanceof BronzeSlime){
-            if (((BronzeSlime)slime).stunned){
+        if (slime instanceof BronzeSlime) {
+            if (((BronzeSlime) slime).stunned) {
                 this.isDone = true;
-                ((BronzeSlime)slime).unsquish();
+                ((BronzeSlime) slime).unsquish();
                 return;
             }
         }
@@ -216,8 +218,8 @@ public class SlimeAutoAttack extends AbstractGameAction {
             if (this.searVFX) {
                 AbstractDungeon.actionManager.addToTop(new VFXAction(new SearEffect(slime.cX + 3 * Settings.scale, slime.cY + 22 * Settings.scale, mo.hb.cX, mo.hb.cY), 0.3F));
             }
-            if (slime instanceof BronzeSlime){
-                ((BronzeSlime)slime).squish();
+            if (slime instanceof BronzeSlime) {
+                ((BronzeSlime) slime).squish();
             }
 
             //logger.info("Targetng " + mo.name);

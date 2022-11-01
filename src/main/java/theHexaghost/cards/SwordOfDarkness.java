@@ -5,9 +5,9 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theHexaghost.HexaMod;
 import sneckomod.SneckoMod;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.HexaMod;
 
 public class SwordOfDarkness extends AbstractHexaCard {
 

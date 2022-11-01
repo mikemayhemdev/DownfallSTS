@@ -12,8 +12,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import guardian.orbs.StasisOrb;
 
-import java.util.function.Function;
-
 
 public class ApotheosisStasisFunctionPatch {
     @SpirePatch(
@@ -23,7 +21,7 @@ public class ApotheosisStasisFunctionPatch {
     public static class TimeToLearn {
         @SpirePrefixPatch
         public static void Prefix(ApotheosisAction instance) {
-            float duration = (float) ReflectionHacks.getPrivate(instance, AbstractGameAction.class, "duration");
+            float duration = ReflectionHacks.getPrivate(instance, AbstractGameAction.class, "duration");
             if (duration == Settings.ACTION_DUR_MED) {
                 for (AbstractOrb o : AbstractDungeon.player.orbs) {
                     if (o instanceof StasisOrb) {

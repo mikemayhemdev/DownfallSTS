@@ -21,7 +21,7 @@ public class TackleModifyDamagePower extends AbstractPower {
     public static String[] DESCRIPTIONS;
     public boolean doubleUp = false;
     public boolean triggered = false;
-    private AbstractCreature source;
+    private final AbstractCreature source;
 
 
     public TackleModifyDamagePower(AbstractCreature owner, AbstractCreature source, int amount) {

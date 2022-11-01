@@ -1,10 +1,7 @@
 package downfall.patches;
 
-import automaton.AutomatonChar;
 import basemod.CustomCharacterSelectScreen;
 import basemod.ReflectionHacks;
-import champ.ChampChar;
-import collector.CollectorChar;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
@@ -13,15 +10,10 @@ import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
 import downfall.patches.ui.topPanel.GoldToSoulPatches;
-import gremlin.patches.GremlinEnum;
-import guardian.patches.GuardianEnum;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 import javassist.expr.ExprEditor;
 import javassist.expr.FieldAccess;
-import slimebound.patches.SlimeboundEnum;
-import sneckomod.TheSnecko;
-import theHexaghost.TheHexaghost;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -92,15 +84,13 @@ public class EvilModeCharacterSelect {
                                 villainOptions[2] = o;
 
 
-                            // TODO - These should be fine when the enums get migrated.
+                                // TODO - These should be fine when the enums get migrated.
                             } else if (o.c.chosenClass == downfallMod.Enums.THE_CHAMP) {
                                 if (UnlockTracker.isCharacterLocked("Champ")) {
                                     o.locked = true;
                                     ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
                                 }
                                 villainOptions[3] = o;
-
-
 
 
                             } else if (o.c.chosenClass == downfallMod.Enums.THE_AUTOMATON) {
@@ -175,13 +165,13 @@ public class EvilModeCharacterSelect {
                 if (evilMode) {
                     GoldToSoulPatches.changeGoldToSouls(false);
                     screen.options.clear();
-                    ArrayList<CharacterOption> allOptions = (ArrayList<CharacterOption>) ReflectionHacks.getPrivate(screen, CustomCharacterSelectScreen.class, "allOptions");
+                    ArrayList<CharacterOption> allOptions = ReflectionHacks.getPrivate(screen, CustomCharacterSelectScreen.class, "allOptions");
 
-                    ResetOptions.saved_optionsPerIndex = (int) ReflectionHacks.getPrivate(screen, CustomCharacterSelectScreen.class, "optionsPerIndex");
+                    ResetOptions.saved_optionsPerIndex = ReflectionHacks.getPrivate(screen, CustomCharacterSelectScreen.class, "optionsPerIndex");
                     ReflectionHacks.setPrivate(screen, CustomCharacterSelectScreen.class, "optionsPerIndex", 4);
 
                     ReflectionHacks.setPrivate(screen, CustomCharacterSelectScreen.class, "selectIndex", 0);
-                    ResetOptions.saved_maxSelectIndex = (int) ReflectionHacks.getPrivate(screen, CustomCharacterSelectScreen.class, "maxSelectIndex");
+                    ResetOptions.saved_maxSelectIndex = ReflectionHacks.getPrivate(screen, CustomCharacterSelectScreen.class, "maxSelectIndex");
                     ReflectionHacks.setPrivate(screen, CustomCharacterSelectScreen.class, "maxSelectIndex", maxEvilSelectIndex);
 
                     allOptions.clear();
@@ -215,7 +205,7 @@ public class EvilModeCharacterSelect {
                 if (saved_maxSelectIndex >= 0) {
                     if (__instance.charSelectScreen instanceof CustomCharacterSelectScreen) {
                         CustomCharacterSelectScreen screen = (CustomCharacterSelectScreen) __instance.charSelectScreen;
-                        ArrayList<CharacterOption> allOptions = (ArrayList<CharacterOption>) ReflectionHacks.getPrivate(screen, CustomCharacterSelectScreen.class, "allOptions");
+                        ArrayList<CharacterOption> allOptions = ReflectionHacks.getPrivate(screen, CustomCharacterSelectScreen.class, "allOptions");
 
                         ReflectionHacks.setPrivate(screen, CustomCharacterSelectScreen.class, "selectIndex", 0);
                         ReflectionHacks.setPrivate(screen, CustomCharacterSelectScreen.class, "maxSelectIndex", saved_maxSelectIndex);

@@ -14,8 +14,7 @@ public class WaitForEscapeAction extends AbstractGameAction {
     @Override
     public void update() {
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (m.isEscaping && !m.escaped)
-            {
+            if (m.isEscaping && !m.escaped) {
                 this.tickDuration();
                 return;
             }

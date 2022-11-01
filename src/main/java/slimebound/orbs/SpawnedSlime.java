@@ -12,7 +12,6 @@ import com.esotericsoftware.spine.*;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -24,19 +23,18 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.helpers.SlimeAnimListener;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.beyond.Darkling;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import reskinContent.patches.CharacterSelectScreenPatches;
+import reskinContent.reskinContent;
 import slimebound.SlimeboundMod;
 import slimebound.cards.SplitGreed;
 import slimebound.cards.SplitScrap;
-import slimebound.powers.*;
+import slimebound.powers.PotencyPower;
 import slimebound.vfx.*;
-import reskinContent.reskinContent;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -51,7 +49,7 @@ public abstract class SpawnedSlime
     public static String orbID = "";
     public static SkeletonMeshRenderer sr;
     private static int W;
-    public float NUM_X_OFFSET = 1.0F * Settings.scale;
+    public float NUM_X_OFFSET = Settings.scale;
     public float NUM_Y_OFFSET = -35.0F * Settings.scale;
     public AbstractCard lockedCard;
     public boolean upgraded = false;
@@ -82,28 +80,28 @@ public abstract class SpawnedSlime
     public boolean topSpawnVFX = false;
     public boolean beingAbsorbed = false;
     protected boolean showChannelValue = true;
-    private float vfxTimer = 1.0F;
-    private float vfxIntervalMin = 0.2F;
-    private float vfxIntervalMax = 0.7F;
-    private SlimeFlareEffect.OrbFlareColor OrbVFXColor;
-    private Color deathColor;
+    private final float vfxTimer = 1.0F;
+    private final float vfxIntervalMin = 0.2F;
+    private final float vfxIntervalMax = 0.7F;
+    private final SlimeFlareEffect.OrbFlareColor OrbVFXColor;
+    private final Color deathColor;
     private Color modelColor;
     private Texture img;
     private AbstractCreature.CreatureAnimation animation;
     private float animationTimer;
     private float animationTimerStart;
-    private TextureAtlas atlas;
-    private AnimationStateData stateData;
+    private final TextureAtlas atlas;
+    private final AnimationStateData stateData;
     private AbstractAnimation animationA;
-    private Color projectileColor;
+    private final Color projectileColor;
     private float delayTime;
     private boolean hasSplashed;
     private boolean deathVFXplayed;
-    private String animString = "idle";
+    private final String animString = "idle";
     private float yOffset;
 
-    private static Map<String, String> skeletonMap;
-    private static Map<String, Color> modelColorMap;
+    private static final Map<String, String> skeletonMap;
+    private static final Map<String, Color> modelColorMap;
 
 
     static {
@@ -287,7 +285,7 @@ public abstract class SpawnedSlime
 
         if (power != null) {
             this.passiveAmount = this.basePassiveAmount + power.amount + this.UniqueFocus + bonus;
-            this.debuffAmount = this.debuffBaseAmount + (power.amount / 2) ;
+            this.debuffAmount = this.debuffBaseAmount + (power.amount / 2);
 
         } else {
             this.passiveAmount = this.basePassiveAmount + this.UniqueFocus + bonus;
@@ -344,7 +342,7 @@ public abstract class SpawnedSlime
     public void activateEffect() {
 
 
-        if (SlimeboundMod.slimeDelay == true) {
+        if (SlimeboundMod.slimeDelay) {
             AbstractDungeon.actionManager.addToTop(new WaitAction(1.4F));
             SlimeboundMod.slimeDelay = false;
         }
@@ -375,10 +373,8 @@ public abstract class SpawnedSlime
     public void updateAnimation() {
 
         if (this.animationTimer != 0.0F) {
-            switch (this.animation) {
-                case ATTACK_FAST:
-                    this.updateFastAttackAnimation();
-                    break;
+            if (this.animation == AbstractCreature.CreatureAnimation.ATTACK_FAST) {
+                this.updateFastAttackAnimation();
             }
         }
 

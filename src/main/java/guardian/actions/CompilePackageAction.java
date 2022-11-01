@@ -16,7 +16,7 @@ import guardian.cards.AbstractGuardianCard;
 
 public class CompilePackageAction extends AbstractGameAction {
     private boolean retrieveCard = false;
-    private boolean upgrade;
+    private final boolean upgrade;
 
     public CompilePackageAction(boolean upgrade) {
         this.actionType = ActionType.CARD_MANIPULATION;
@@ -31,7 +31,6 @@ public class CompilePackageAction extends AbstractGameAction {
             GuardianMod.discoveryOverrideUpgrade = upgrade;
             AbstractDungeon.cardRewardScreen.discoveryOpen();
             this.tickDuration();
-            return;
         } else {
             if (!this.retrieveCard) {
                 if (AbstractDungeon.cardRewardScreen.discoveryCard != null) {

@@ -24,11 +24,11 @@ public class EnemyFrost extends AbstractEnemyOrb {
         orbString = CardCrawlGame.languagePack.getOrbString("Frost");
     }
 
-    private boolean hFlip1 = MathUtils.randomBoolean();
-    private boolean hFlip2 = MathUtils.randomBoolean();
+    private final boolean hFlip1 = MathUtils.randomBoolean();
+    private final boolean hFlip2 = MathUtils.randomBoolean();
     private float vfxTimer = 1.0F;
-    private float vfxIntervalMin = 0.15F;
-    private float vfxIntervalMax = 0.8F;
+    private final float vfxIntervalMin = 0.15F;
+    private final float vfxIntervalMax = 0.8F;
 
     public EnemyFrost() {
         super();

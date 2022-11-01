@@ -16,8 +16,6 @@ import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import sneckomod.SneckoMod;
 
-import java.util.Iterator;
-
 import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.PURPLE;
 

@@ -6,7 +6,6 @@ import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
 
 public class Terminator extends AbstractBronzeCard {
 
@@ -41,6 +40,6 @@ public class Terminator extends AbstractBronzeCard {
     }
 
     public void upp() {
-       upgradeBaseCost(0);
+        upgradeBaseCost(0);
     }
 }

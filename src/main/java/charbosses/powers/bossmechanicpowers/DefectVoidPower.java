@@ -5,16 +5,9 @@
 
 package charbosses.powers.bossmechanicpowers;
 
-import charbosses.actions.common.EnemyMakeTempCardInHandAction;
-import charbosses.bosses.AbstractCharBoss;
-import charbosses.cards.AbstractBossCard;
-import charbosses.cards.colorless.EnShiv;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class DefectVoidPower extends AbstractBossMechanicPower {
     public static final String POWER_ID = "downfall:DefectVoidPower";

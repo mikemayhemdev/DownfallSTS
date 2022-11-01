@@ -3,8 +3,8 @@ package sneckomod.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import sneckomod.SneckoMod;
 import downfall.util.TextureLoader;
+import sneckomod.SneckoMod;
 
 public class CrystallizedMud extends CustomRelic {
 

@@ -40,7 +40,7 @@ public class ModifiedSummonGremlinAction extends AbstractGameAction {
             if (firstSummon) {
                 float x;
                 float y;
-                switch(slot) {
+                switch (slot) {
                     case 0:
                         x = GremlinLeader.POSX[0];
                         y = GremlinLeader.POSY[0];
@@ -73,7 +73,7 @@ public class ModifiedSummonGremlinAction extends AbstractGameAction {
     }
 
     private int identifySlot(AbstractMonster[] gremlins) {
-        for(int i = 0; i < gremlins.length; ++i) {
+        for (int i = 0; i < gremlins.length; ++i) {
             if (gremlins[i] == null || gremlins[i].isDying) {
                 return i;
             }
@@ -94,7 +94,7 @@ public class ModifiedSummonGremlinAction extends AbstractGameAction {
         pool.add("GremlinWizard");
         float x;
         float y;
-        switch(slot) {
+        switch (slot) {
             case 0:
                 x = GremlinLeader.POSX[0];
                 y = GremlinLeader.POSY[0];
@@ -112,14 +112,14 @@ public class ModifiedSummonGremlinAction extends AbstractGameAction {
                 y = GremlinLeader.POSY[0];
         }
 
-        return MonsterHelper.getGremlin((String)pool.get(AbstractDungeon.aiRng.random(0, pool.size() - 1)), x, y);
+        return MonsterHelper.getGremlin(pool.get(AbstractDungeon.aiRng.random(0, pool.size() - 1)), x, y);
     }
 
     private int getSmartPosition() {
         int position = 0;
 
-        for(Iterator var2 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator(); var2.hasNext(); ++position) {
-            AbstractMonster mo = (AbstractMonster)var2.next();
+        for (Iterator var2 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator(); var2.hasNext(); ++position) {
+            AbstractMonster mo = (AbstractMonster) var2.next();
             if (this.m.drawX <= mo.drawX) {
                 break;
             }

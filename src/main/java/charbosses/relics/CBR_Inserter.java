@@ -1,13 +1,8 @@
 package charbosses.relics;
 
 import charbosses.actions.orb.EnemyIncreaseMaxOrbAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.HandDrill;
 import com.megacrit.cardcrawl.relics.Inserter;
 
 public class CBR_Inserter extends AbstractCharbossRelic {

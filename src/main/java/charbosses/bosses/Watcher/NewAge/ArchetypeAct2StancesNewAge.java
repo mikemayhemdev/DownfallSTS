@@ -5,13 +5,9 @@ import charbosses.bosses.Watcher.ArchetypeBaseWatcher;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnApotheosis;
 import charbosses.cards.curses.EnDoubt;
-import charbosses.cards.curses.EnInjury;
 import charbosses.cards.purple.*;
-import charbosses.cards.status.EnWound;
-import charbosses.powers.bossmechanicpowers.WatcherCripplePower;
 import charbosses.powers.bossmechanicpowers.WatcherSkillPower;
 import charbosses.powers.cardpowers.EnemyFearNoEvilPower;
-import charbosses.powers.cardpowers.EnemySpotWeaknessPower;
 import charbosses.relics.*;
 import charbosses.stances.EnCalmStance;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -42,7 +38,7 @@ public class ArchetypeAct2StancesNewAge extends ArchetypeBaseWatcher {
     }
 
     public void initialize() {
-       /////   RELICS   /////
+        /////   RELICS   /////
 
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_HornCleat());
@@ -79,7 +75,7 @@ public class ArchetypeAct2StancesNewAge extends ArchetypeBaseWatcher {
                     addToList(cardsList, new EnDefendPurple(), false); // Sometimes used
                     tranquility = new EnTranquility();
                     tranquility.newPrio = 1;
-                    addToList(cardsList,tranquility, false);  // kept for later
+                    addToList(cardsList, tranquility, false);  // kept for later
                     turn++;
                     break;
                 case 3:
@@ -102,7 +98,7 @@ public class ArchetypeAct2StancesNewAge extends ArchetypeBaseWatcher {
                     addToList(cardsList, new EnHalt(), true);
                     addToList(cardsList, new EnFearNoEvil(), true);
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(b, b, new EnemyFearNoEvilPower(b)));
-                    turn=0;
+                    turn = 0;
                     looped = true;
                     break;
             }

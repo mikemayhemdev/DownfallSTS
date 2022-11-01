@@ -10,11 +10,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import downfall.util.TextureLoader;
 import slimebound.SlimeboundMod;
 import slimebound.actions.TrigggerSpecificSlimeAttackAction;
-import slimebound.orbs.SpawnedSlime;
-import theHexaghost.HexaMod;
-import downfall.util.TextureLoader;
 
 public class CommandOnPlayPower extends AbstractPower implements CloneablePowerInterface {
 
@@ -61,7 +59,7 @@ public class CommandOnPlayPower extends AbstractPower implements CloneablePowerI
         if (amount == 1)
             this.description = DESCRIPTIONS[0];
         else
-        this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
 
     }
 

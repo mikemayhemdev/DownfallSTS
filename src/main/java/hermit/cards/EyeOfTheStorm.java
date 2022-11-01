@@ -1,21 +1,13 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import hermit.HermitMod;
 import hermit.actions.EyeOfTheStormAction;
 import hermit.characters.hermit;
-import hermit.powers.SnipePower;
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
@@ -52,15 +44,15 @@ public class EyeOfTheStorm extends AbstractDynamicCard {
 
     public EyeOfTheStorm() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.exhaust=true;
-        magicNumber=baseMagicNumber=0;
+        this.exhaust = true;
+        magicNumber = baseMagicNumber = 0;
         loadJokeCardImage(this, "eye_of_the_storm.png");
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new EyeOfTheStormAction(p,this, getLogicalCardCost(this)));
+        this.addToBot(new EyeOfTheStormAction(p, this, getLogicalCardCost(this)));
         /*
         if (upgraded)
             this.addToBot(new DrawCardAction(1));

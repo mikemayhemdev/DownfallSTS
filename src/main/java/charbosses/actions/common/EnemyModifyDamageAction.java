@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import java.util.UUID;
 
 public class EnemyModifyDamageAction extends AbstractGameAction {
-    private UUID uuid;
+    private final UUID uuid;
 
     public EnemyModifyDamageAction(final UUID targetUUID, final int amount) {
         this.setValues(this.target, this.source, amount);

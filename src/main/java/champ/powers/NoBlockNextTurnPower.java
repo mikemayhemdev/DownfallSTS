@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.EntanglePower;
 import com.megacrit.cardcrawl.powers.NoBlockPower;
 import downfall.util.TextureLoader;
 
@@ -40,7 +39,7 @@ public class NoBlockNextTurnPower extends AbstractPower implements CloneablePowe
 
     public void atStartOfTurn() {
         this.flash();
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new NoBlockPower(owner,1, false), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new NoBlockPower(owner, 1, false), 1));
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
     }
 

@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
-import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.daily.mods.Careless;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ModHelper;
@@ -43,7 +43,7 @@ public class NeowResetFightAction extends AbstractGameAction {
         AbstractDungeon.player.orbs.clear();
         AbstractDungeon.player.increaseMaxOrbSlots(AbstractDungeon.player.masterMaxOrbs, false);
         AbstractDungeon.player.isBloodied = AbstractDungeon.player.currentHealth <= AbstractDungeon.player.maxHealth / 2;
-        AbstractDungeon.player.poisonKillCount = 0;
+        AbstractPlayer.poisonKillCount = 0;
         GameActionManager.playerHpLastTurn = AbstractDungeon.player.currentHealth;
         AbstractDungeon.player.endTurnQueued = false;
         AbstractDungeon.player.gameHandSize = AbstractDungeon.player.masterHandSize;
@@ -58,7 +58,7 @@ public class NeowResetFightAction extends AbstractGameAction {
         AbstractDungeon.player.exhaustPile.clear();
 
         if (AbstractDungeon.player.hasRelic("SlaversCollar")) {
-            ((SlaversCollar)AbstractDungeon.player.getRelic("SlaversCollar")).beforeEnergyPrep();
+            ((SlaversCollar) AbstractDungeon.player.getRelic("SlaversCollar")).beforeEnergyPrep();
         }
 
         AbstractDungeon.player.energy.prep();
@@ -75,14 +75,11 @@ public class NeowResetFightAction extends AbstractGameAction {
 
         AbstractDungeon.actionManager.addToTop(new WaitAction(1.0F));
         AbstractDungeon.player.applyPreCombatLogic();
-        
-        
+
+
         ////
-        
-        
-        
-        
-        
+
+
         AbstractDungeon.player.applyStartOfCombatPreDrawLogic();
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, AbstractDungeon.player.gameHandSize));
 

@@ -23,23 +23,19 @@ public class SelfStasisPatch {
             clz = UseCardAction.class,
             method = SpirePatch.CLASS
     )
-    public static class Fields
-    {
-        public static SpireField<StasisOrb> stasis = new SpireField<>(()->null);
+    public static class Fields {
+        public static SpireField<StasisOrb> stasis = new SpireField<>(() -> null);
     }
 
     @SpirePatch(
             clz = UseCardAction.class,
             method = SpirePatch.CONSTRUCTOR,
-            paramtypez = { AbstractCard.class, AbstractCreature.class }
+            paramtypez = {AbstractCard.class, AbstractCreature.class}
     )
-    public static class PutInStasis
-    {
+    public static class PutInStasis {
         @SpirePostfixPatch
-        public static void awayItGoes(UseCardAction __instance, AbstractCard card, AbstractCreature target)
-        {
-            if (!card.purgeOnUse && (card.hasTag(GuardianMod.SELFSTASIS) || card.hasTag(GuardianMod.SELFSTASISONCE)))
-            {
+        public static void awayItGoes(UseCardAction __instance, AbstractCard card, AbstractCreature target) {
+            if (!card.purgeOnUse && (card.hasTag(GuardianMod.SELFSTASIS) || card.hasTag(GuardianMod.SELFSTASISONCE))) {
                 card.tags.remove(GuardianMod.SELFSTASISONCE);
 
                 if (GuardianMod.canSpawnStasisOrb()) {
@@ -73,16 +69,13 @@ public class SelfStasisPatch {
             clz = UseCardAction.class,
             method = "update"
     )
-    public static class DontMoveStasisedCards
-    {
+    public static class DontMoveStasisedCards {
         @SpireInsertPatch(
                 locator = Locator.class,
-                localvars = { "targetCard", "duration" }
+                localvars = {"targetCard", "duration"}
         )
-        public static SpireReturn<?> SelfStasis(UseCardAction __instance, AbstractCard targetCard, @ByRef float[] duration)
-        {
-            if (Fields.stasis.get(__instance) != null)
-            {
+        public static SpireReturn<?> SelfStasis(UseCardAction __instance, AbstractCard targetCard, @ByRef float[] duration) {
+            if (Fields.stasis.get(__instance) != null) {
                 AbstractDungeon.player.cardInUse = null;
                 targetCard.exhaustOnUseOnce = false;
                 targetCard.dontTriggerOnUseCard = false;
@@ -90,8 +83,7 @@ public class SelfStasisPatch {
 
                 //Special check: If the card has already been accelerated out of stasis again, set freeToPlayOnce back to true
                 //(it's set to false just slightly above this patch)
-                if (Fields.stasis.get(__instance).passiveAmount <= 0)
-                {
+                if (Fields.stasis.get(__instance).passiveAmount <= 0) {
                     targetCard.freeToPlayOnce = true;
                 }
 
@@ -104,11 +96,9 @@ public class SelfStasisPatch {
             return SpireReturn.Continue();
         }
 
-        private static class Locator extends SpireInsertLocator
-        {
+        private static class Locator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception
-            {
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
                 Matcher finalMatcher = new Matcher.FieldAccessMatcher(AbstractCard.class, "purgeOnUse");
                 return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }

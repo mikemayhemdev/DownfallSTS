@@ -4,7 +4,6 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Watcher.ArchetypeBaseWatcher;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.purple.*;
-import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
 import charbosses.powers.bossmechanicpowers.WatcherCripplePower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -36,16 +35,16 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
     }
 
     public void initialize() {
-       /////   RELICS   /////
+        /////   RELICS   /////
 
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_SmoothStone());
         addRelic(new CBR_TeardropLocket());
         addRelic(new CBR_IncenseBurner());
-       // addRelic(new CBR_MercuryHourglass());
-      //  addRelic(new CBR_ArtOfWar());
+        // addRelic(new CBR_MercuryHourglass());
+        //  addRelic(new CBR_ArtOfWar());
         //addRelic(new CBR_Duplicator());
-       // addRelic(new CBR_Nest());
+        // addRelic(new CBR_Nest());
         //addRelic(new CBR_PhilosopherStone());
 
     }
@@ -108,7 +107,7 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
                     addToList(cardsList, new EnEmptyBody(), false);  //not used
                     addToList(cardsList, new EnWishPlated(), false);  //removed
                     addToList(cardsList, new EnConsecrate(), true);
-                    turn=0;
+                    turn = 0;
                     looped = true;
                     AbstractCharBoss.boss.powerhouseTurn = false;
                     break;
@@ -145,7 +144,7 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
             }
         }
 
-        if (AbstractCharBoss.boss.powerhouseTurn){
+        if (AbstractCharBoss.boss.powerhouseTurn) {
             AbstractCharBoss.boss.getPower(WatcherCripplePower.POWER_ID).onSpecificTrigger();
         }
         return cardsList;

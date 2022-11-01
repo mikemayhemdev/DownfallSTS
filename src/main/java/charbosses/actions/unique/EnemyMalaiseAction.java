@@ -3,20 +3,16 @@ package charbosses.actions.unique;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.ui.EnemyEnergyPanel;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 public class EnemyMalaiseAction extends AbstractGameAction {
     private boolean freeToPlayOnce = false;
     private boolean upgraded = false;
-    private AbstractCharBoss c;
+    private final AbstractCharBoss c;
     private int energyOnUse = -1;
 
     public EnemyMalaiseAction(AbstractCharBoss t, boolean upgraded, boolean freeToPlayOnce, int energyOnUse) {

@@ -15,9 +15,9 @@ public class BandAidMerchantCrashFix {
 
         public static SpireReturn Prefix(AbstractCard __instance) {
             if (AbstractDungeon.getMonsters() == null) {
-               return SpireReturn.Return(false);
+                return SpireReturn.Return(false);
             } else {
-               return SpireReturn.Continue();
+                return SpireReturn.Continue();
             }
         }
     }

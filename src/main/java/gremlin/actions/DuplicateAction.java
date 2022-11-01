@@ -12,17 +12,15 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import java.util.ArrayList;
 
 public class DuplicateAction
-        extends AbstractGameAction
-{
+        extends AbstractGameAction {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("DualWieldAction");
     public static final String[] TEXT = uiStrings.TEXT;
     private static final float DURATION_PER_CARD = 0.25F;
-    private AbstractPlayer p;
-    private int dupeAmount;
-    private ArrayList<AbstractCard> cannotDuplicate = new ArrayList<>();
+    private final AbstractPlayer p;
+    private final int dupeAmount;
+    private final ArrayList<AbstractCard> cannotDuplicate = new ArrayList<>();
 
-    public DuplicateAction(AbstractCreature source, int amount)
-    {
+    public DuplicateAction(AbstractCreature source, int amount) {
         setValues(AbstractDungeon.player, source, amount);
         this.actionType = AbstractGameAction.ActionType.DRAW;
         this.duration = 0.25F;
@@ -30,24 +28,20 @@ public class DuplicateAction
         this.dupeAmount = amount;
     }
 
-    public void update()
-    {
-        if (this.duration == Settings.ACTION_DUR_FAST)
-        {
+    public void update() {
+        if (this.duration == Settings.ACTION_DUR_FAST) {
             for (AbstractCard c : this.p.hand.group) {
                 if (!isAttack(c)) {
                     this.cannotDuplicate.add(c);
                 }
             }
-            if (this.cannotDuplicate.size() == this.p.hand.group.size())
-            {
+            if (this.cannotDuplicate.size() == this.p.hand.group.size()) {
                 this.isDone = true;
                 return;
             }
             if (this.p.hand.group.size() - this.cannotDuplicate.size() == 1) {
                 for (AbstractCard c : this.p.hand.group) {
-                    if (isAttack(c))
-                    {
+                    if (isAttack(c)) {
                         AbstractDungeon.actionManager.addToTop(new MakeEchoAction(c, dupeAmount, 1));
                         this.isDone = true;
                         return;
@@ -55,24 +49,20 @@ public class DuplicateAction
                 }
             }
             this.p.hand.group.removeAll(this.cannotDuplicate);
-            if (this.p.hand.group.size() > 1)
-            {
+            if (this.p.hand.group.size() > 1) {
                 AbstractDungeon.handCardSelectScreen.open(TEXT[0], 1, false, false, false, false);
                 tickDuration();
                 return;
             }
-            if (this.p.hand.group.size() == 1)
-            {
+            if (this.p.hand.group.size() == 1) {
                 AbstractDungeon.actionManager.addToTop(new MakeEchoAction(this.p.hand
                         .getTopCard(), dupeAmount, 1));
                 returnCards();
                 this.isDone = true;
             }
         }
-        if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved)
-        {
-            for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group)
-            {
+        if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
+            for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
                 this.p.hand.addToTop(c);
                 AbstractDungeon.actionManager.addToTop(new MakeEchoAction(c, dupeAmount, 1));
             }
@@ -85,16 +75,14 @@ public class DuplicateAction
         tickDuration();
     }
 
-    private void returnCards()
-    {
+    private void returnCards() {
         for (AbstractCard c : this.cannotDuplicate) {
             this.p.hand.addToTop(c);
         }
         this.p.hand.refreshHandLayout();
     }
 
-    private boolean isAttack(AbstractCard card)
-    {
+    private boolean isAttack(AbstractCard card) {
         return (card.type.equals(AbstractCard.CardType.ATTACK));
     }
 }

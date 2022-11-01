@@ -1,15 +1,12 @@
 package charbosses.cards.blue;
 
-import charbosses.actions.unique.EnemyBarrageAction;
 import charbosses.cards.AbstractBossCard;
 import charbosses.orbs.EnemyFrost;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.blue.Blizzard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -17,11 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.orbs.Frost;
 import com.megacrit.cardcrawl.vfx.combat.BlizzardEffect;
-
-import java.util.ArrayList;
-import java.util.Iterator;
 
 public class EnBlizzard extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Blizzard";
@@ -44,7 +37,7 @@ public class EnBlizzard extends AbstractBossCard {
         }
 
         this.baseDamage = frostCount * this.magicNumber;
-        this.calculateCardDamage((AbstractMonster)null);
+        this.calculateCardDamage(null);
         if (Settings.FAST_MODE) {
             this.addToBot(new VFXAction(new BlizzardEffect(frostCount, true), 0.25F));
         } else {
@@ -52,7 +45,7 @@ public class EnBlizzard extends AbstractBossCard {
         }
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
-      }
+    }
 
     public void applyPowers() {
         int frostCount = 0;

@@ -40,7 +40,7 @@ public class EnBladeDance extends AbstractBossCard {
     public int customIntentModifiedDamage() {
         int tmp = 0;
 
-        if (owner.hasPower(EnemyAccuracyPower.POWER_ID)){
+        if (owner.hasPower(EnemyAccuracyPower.POWER_ID)) {
             tmp = owner.getPower(EnemyAccuracyPower.POWER_ID).amount;
         }
         return tmp;

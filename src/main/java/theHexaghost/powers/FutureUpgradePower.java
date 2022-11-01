@@ -12,8 +12,8 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
-import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
+import theHexaghost.HexaMod;
 
 import java.util.ArrayList;
 

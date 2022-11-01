@@ -1,6 +1,5 @@
 package champ.cards;
 
-import champ.ChampMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -25,6 +24,6 @@ public class SwordSigil extends AbstractChampCard {
 
     public void upp() {
         upgradeMagicNumber(2);
-       // upgradeCool(2);
+        // upgradeCool(2);
     }
 }

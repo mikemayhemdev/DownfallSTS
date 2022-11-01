@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.AutomayhemPower;
-import sneckomod.SneckoMod;
 
 public class TimeSifter extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("TimeSifter");
@@ -48,7 +47,7 @@ public class TimeSifter extends AbstractGuardianCard {
         super.use(p, m);
         AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.BorderFlashEffect(com.badlogic.gdx.graphics.Color.GOLD, true));
 
-       // this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        // this.tags.add(SneckoMod.BANNEDFORSNECKO);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new AutomayhemPower(p, p, 1), 1));
 
     }

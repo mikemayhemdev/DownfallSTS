@@ -1,23 +1,17 @@
 package charbosses.cards.blue;
 
-import charbosses.actions.unique.EnemyBarrageAction;
 import charbosses.actions.unique.EnemyThunderStrikeAction;
 import charbosses.cards.AbstractBossCard;
-import charbosses.orbs.EnemyFrost;
 import charbosses.orbs.EnemyLightning;
-import com.megacrit.cardcrawl.actions.defect.NewThunderStrikeAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.orbs.Lightning;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class EnThunderStrike extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Thunder Strike";
@@ -41,7 +35,7 @@ public class EnThunderStrike extends AbstractBossCard {
         this.baseMagicNumber = getLightningCount();
         this.magicNumber = this.baseMagicNumber;
 
-        for(int i = 0; i < this.magicNumber; ++i) {
+        for (int i = 0; i < this.magicNumber; ++i) {
             this.addToBot(new EnemyThunderStrikeAction(this, p));
         }
     }

@@ -14,7 +14,6 @@ import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import reskinContent.skinCharacter.AbstractSkin;
 import reskinContent.vfx.PortraitScreenOnFireEffect;
-import theHexaghost.TheHexaghost;
 
 import java.util.ArrayList;
 
@@ -48,7 +47,7 @@ public class Hexago extends AbstractSkin {
 
         this.portraitAtlasPath = reskinContent.assetPath("img/HexaghostMod/Hexago/animation/Hexaghost_portrait");
 
-        this.SHOULDER1 =  "reskinContent/img/HexaghostMod/Hexago/shoulder2.png";
+        this.SHOULDER1 = "reskinContent/img/HexaghostMod/Hexago/shoulder2.png";
         this.SHOULDER2 = "reskinContent/img/HexaghostMod/Hexago/shoulder.png";
         this.CORPSE = "hexamodResources/images/char/mainChar/corpse.png";
         this.atlasURL = "reskinContent/img/HexaghostMod/Hexago/animation/Hexaghost_self_downfall.atlas";
@@ -63,18 +62,18 @@ public class Hexago extends AbstractSkin {
 
     @Override
     public String getSHOULDER1() {
-        if(reskinContent.hexaghostMask){
+        if (reskinContent.hexaghostMask) {
             return "reskinContent/img/HexaghostMod/Hexago/shoulder2.png";
-        }else {
+        } else {
             return "reskinContent/img/HexaghostMod/Hexago/shoulderMask2.png";
         }
     }
 
     @Override
     public String getSHOULDER2() {
-        if(reskinContent.hexaghostMask){
+        if (reskinContent.hexaghostMask) {
             return "reskinContent/img/HexaghostMod/Hexago/shoulder.png";
-        }else {
+        } else {
             return "reskinContent/img/HexaghostMod/Hexago/shoulderMask.png";
         }
     }

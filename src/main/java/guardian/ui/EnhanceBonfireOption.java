@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.MathHelper;
-import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import guardian.GuardianMod;
@@ -70,7 +69,7 @@ public class EnhanceBonfireOption extends AbstractCampfireOption {
 
     @Override
     public void update() {
-        float hackScale = (float) ReflectionHacks.getPrivate(this, AbstractCampfireOption.class, "scale");
+        float hackScale = ReflectionHacks.getPrivate(this, AbstractCampfireOption.class, "scale");
 
         if (this.hb.hovered) {
 

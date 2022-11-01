@@ -3,17 +3,12 @@ package hermit.cards;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import hermit.HermitMod;
 import hermit.patches.EndOfTurnPatch;
 import hermit.patches.VigorPatch;
 import hermit.powers.BigShotPower;
@@ -42,7 +37,7 @@ public abstract class AbstractHermitCard extends CustomCard {
     public boolean trig_deadon = false;
 
     public static void init() {
-        doneInit=true;
+        doneInit = true;
     }
 
     public int defaultSecondMagicNumber;        // Just like magic number, or any number for that matter, we want our regular, modifiable stat
@@ -88,8 +83,7 @@ public abstract class AbstractHermitCard extends CustomCard {
     }
 
     @Override
-    public void resetAttributes()
-    {
+    public void resetAttributes() {
         super.resetAttributes();
 
         this.trig_deadon = false;
@@ -99,40 +93,36 @@ public abstract class AbstractHermitCard extends CustomCard {
     public AbstractCard makeStatEquivalentCopy() {
         AbstractCard original = super.makeStatEquivalentCopy();
 
-        ((AbstractHermitCard)original).trig_deadon = this.trig_deadon;
+        ((AbstractHermitCard) original).trig_deadon = this.trig_deadon;
 
         return original;
     }
 
-    public boolean isDeadOn()
-    {
+    public boolean isDeadOn() {
         boolean conc = AbstractDungeon.player.hasPower(Concentration.POWER_ID);
 
-        double hand_pos = (AbstractDungeon.player.hand.group.indexOf(this)+0.5);
+        double hand_pos = (AbstractDungeon.player.hand.group.indexOf(this) + 0.5);
         double hand_size = (AbstractDungeon.player.hand.size());
-        double relative = Math.abs(hand_pos-hand_size/2);
+        double relative = Math.abs(hand_pos - hand_size / 2);
 
-        if (relative<1 || conc)
-        {
+        if (relative < 1 || conc) {
             this.trig_deadon = true;
         }
 
         return (trig_deadon);
     }
 
-    public boolean isDeadOnPos()
-    {
+    public boolean isDeadOnPos() {
         boolean conc = AbstractDungeon.player.hasPower(Concentration.POWER_ID);
 
-        double hand_pos = (AbstractDungeon.player.hand.group.indexOf(this)+0.5);
+        double hand_pos = (AbstractDungeon.player.hand.group.indexOf(this) + 0.5);
         double hand_size = (AbstractDungeon.player.hand.size());
-        double relative = Math.abs(hand_pos-hand_size/2);
+        double relative = Math.abs(hand_pos - hand_size / 2);
 
-        return (relative<1 || conc);
+        return (relative < 1 || conc);
     }
 
-    protected boolean onDeadOn()
-    {
+    protected boolean onDeadOn() {
         int DeadOnTimes = DeadOnAmount();
 
         for (int a = 0; a < DeadOnTimes; a++) {
@@ -142,13 +132,12 @@ public abstract class AbstractHermitCard extends CustomCard {
 
             Iterator findPow = AbstractDungeon.player.relics.iterator();
 
-            while(findPow.hasNext()) {
-                AbstractRelic c = (AbstractRelic)findPow.next();
+            while (findPow.hasNext()) {
+                AbstractRelic c = (AbstractRelic) findPow.next();
 
-                if (c.relicId.equals(BlackPowder.ID))
-                {
-                    ((BlackPowder)c).PowderCharge += 2;
-                    ((BlackPowder)c).counter = ((BlackPowder)c).PowderCharge;
+                if (c.relicId.equals(BlackPowder.ID)) {
+                    ((BlackPowder) c).PowderCharge += 2;
+                    c.counter = ((BlackPowder) c).PowderCharge;
                 }
             }
 
@@ -166,13 +155,12 @@ public abstract class AbstractHermitCard extends CustomCard {
         }
 
         if (AbstractDungeon.player.hasPower(SnipePower.POWER_ID))
-        AbstractDungeon.player.getPower(SnipePower.POWER_ID).flash();
+            AbstractDungeon.player.getPower(SnipePower.POWER_ID).flash();
 
         return true;
     }
 
-    public int DeadOnAmount()
-    {
+    public int DeadOnAmount() {
         int do_times = 1;
 
         if (AbstractDungeon.player.hasPower(SnipePower.POWER_ID)) {
@@ -183,6 +171,7 @@ public abstract class AbstractHermitCard extends CustomCard {
     }
 
     public String betaArtPath;
+
     @Override
     protected Texture getPortraitImage() {
         if (Settings.PLAYTESTER_ART_MODE || UnlockTracker.betaCardPref.getBoolean(this.cardID, false)) {

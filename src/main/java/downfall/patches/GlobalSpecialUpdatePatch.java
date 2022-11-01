@@ -1,10 +1,8 @@
 package downfall.patches;
 
-import automaton.AutomatonChar;
 import automaton.FunctionHelper;
 import champ.StanceHelper;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;

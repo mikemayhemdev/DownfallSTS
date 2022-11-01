@@ -1,6 +1,8 @@
 package expansioncontent.patches;
 
-import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -8,13 +10,13 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import expansioncontent.powers.AwakenDeathPower;
 
 @SpirePatch(
-        clz= AbstractPlayer.class,
-        method="damage",
-        paramtypez={DamageInfo.class}
+        clz = AbstractPlayer.class,
+        method = "damage",
+        paramtypez = {DamageInfo.class}
 )
 public class AwakenBeforeOtherRevivesPatch {
     @SpireInsertPatch(
-            rloc=124
+            rloc = 124
     )
     public static SpireReturn Insert(AbstractPlayer __instance, DamageInfo info) {
         if (__instance.currentHealth < 1) {

@@ -32,9 +32,9 @@ import downfall.vfx.NeowBossRezEffect;
 
 public class CharBossMerchant extends AbstractCharBoss {
 
-    private BobEffect bob = new BobEffect();
-    private Color tempColor = new Color();
-    private Color glowColor = new Color(2F, 2F, 2F, 2F);
+    private final BobEffect bob = new BobEffect();
+    private final Color tempColor = new Color();
+    private final Color glowColor = new Color(2F, 2F, 2F, 2F);
 
     private TextureAtlas atlasGlow;
     private Skeleton skeletonGlow;
@@ -157,7 +157,7 @@ public class CharBossMerchant extends AbstractCharBoss {
         }
 
 
-        this.curveAlpha = Interpolation.pow2.apply(0.5F, 1F, this.curveDuration / 1F);
+        this.curveAlpha = Interpolation.pow2.apply(0.5F, 1F, this.curveDuration);
 
         this.skeletonGlow.setColor(new Color(this.glowColor.r * this.curveAlpha, this.glowColor.g * this.curveAlpha, this.glowColor.b * this.curveAlpha, this.glowColor.a * this.curveAlpha));
         //this.skeletonGlow.setColor(glowColor);

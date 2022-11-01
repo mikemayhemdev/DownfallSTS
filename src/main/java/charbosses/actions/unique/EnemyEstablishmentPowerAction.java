@@ -3,11 +3,11 @@ package charbosses.actions.unique;
 import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
 import java.util.Iterator;
 
 public class EnemyEstablishmentPowerAction extends AbstractGameAction {
-    private int discountAmount;
+    private final int discountAmount;
 
     public EnemyEstablishmentPowerAction(int discountAmount) {
         this.discountAmount = discountAmount;
@@ -16,7 +16,7 @@ public class EnemyEstablishmentPowerAction extends AbstractGameAction {
     public void update() {
         Iterator var1 = AbstractCharBoss.boss.hand.group.iterator();
 
-        while(true) {
+        while (true) {
             AbstractCard c;
             do {
                 if (!var1.hasNext()) {
@@ -24,8 +24,8 @@ public class EnemyEstablishmentPowerAction extends AbstractGameAction {
                     return;
                 }
 
-                c = (AbstractCard)var1.next();
-            } while(!c.selfRetain && !c.retain);
+                c = (AbstractCard) var1.next();
+            } while (!c.selfRetain && !c.retain);
 
             c.modifyCostForCombat(-this.discountAmount);
         }

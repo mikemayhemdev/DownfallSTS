@@ -13,7 +13,6 @@ import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.SnipePower;
 
-
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 

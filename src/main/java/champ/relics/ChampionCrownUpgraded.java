@@ -2,17 +2,13 @@ package champ.relics;
 
 import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
-import champ.actions.OpenerReduceCostAction;
 import champ.powers.UltimateFormPower;
 import champ.stances.UltimateStance;
-import champ.util.OnOpenerSubscriber;
-import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import slimebound.relics.AbsorbEndCombat;
+import downfall.util.TextureLoader;
 
 import static champ.ChampMod.makeRelicOutlinePath;
 import static champ.ChampMod.makeRelicPath;

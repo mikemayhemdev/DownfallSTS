@@ -5,15 +5,14 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.colorless.Apparition;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.city.Ghosts;
-import gremlin.characters.GremlinCharacter;
+import downfall.downfallMod;
 
 public class GhostsPatch {
     @SpirePatch(clz = Ghosts.class, method = SpirePatch.CONSTRUCTOR)
-    public static class GhostsConstructior
-    {
+    public static class GhostsConstructior {
         public static void Postfix(Ghosts __instance) {
-            if (AbstractDungeon.player instanceof GremlinCharacter) {
-                int dmg = (int) ReflectionHacks.getPrivate(__instance, Ghosts.class, "hpLoss");
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+                int dmg = ReflectionHacks.getPrivate(__instance, Ghosts.class, "hpLoss");
                 dmg *= 5;
                 ReflectionHacks.setPrivate(__instance, Ghosts.class, "hpLoss", dmg);
 

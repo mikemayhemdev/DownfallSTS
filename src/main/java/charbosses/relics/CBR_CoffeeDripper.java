@@ -1,15 +1,9 @@
 package charbosses.relics;
 
 import charbosses.bosses.AbstractCharBoss;
-import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
-import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.CoffeeDripper;
-import downfall.downfallMod;
 
 public class CBR_CoffeeDripper extends AbstractCharbossRelic {
     public static final String ID = "Coffee Dripper";

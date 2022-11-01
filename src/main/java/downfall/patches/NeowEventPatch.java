@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.neow.NeowRoom;
 import downfall.events.HeartEvent;
 import javassist.CtBehavior;
 import slimebound.SlimeboundMod;
-import sneckomod.SneckoMod;
 
 
 @SpirePatch(
@@ -23,14 +22,14 @@ public class NeowEventPatch {
         boolean switchToHeart = true;
         if (EvilModeCharacterSelect.evilMode) {
             SlimeboundMod.logger.info("Neow Event detected evil mode");
-            if (Loader.isModLoaded("chronoMods")){
+            if (Loader.isModLoaded("chronoMods")) {
                 SlimeboundMod.logger.info("Neow Event detected Spire With Friends");
-                if (TogetherManager.gameMode.equals(TogetherManager.mode.Coop)){
+                if (TogetherManager.gameMode.equals(TogetherManager.mode.Coop)) {
                     SlimeboundMod.logger.info("Neow Event detected Co-op Mode");
                     switchToHeart = false;
                 }
             }
-           if (switchToHeart) __instance.event = new HeartEvent(isDone);
+            if (switchToHeart) __instance.event = new HeartEvent(isDone);
         }
     }
 

@@ -2,8 +2,6 @@ package charbosses.cards.blue;
 
 import charbosses.actions.orb.EnemyChannelAction;
 import charbosses.cards.AbstractBossCard;
-import charbosses.orbs.AbstractEnemyOrb;
-import charbosses.orbs.EnemyLightning;
 import charbosses.orbs.EnemyPlasma;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;

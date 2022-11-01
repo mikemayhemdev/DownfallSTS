@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
+import theHexaghost.HexaMod;
 
 public class BurnPerTurnPower extends AbstractPower implements CloneablePowerInterface {
 

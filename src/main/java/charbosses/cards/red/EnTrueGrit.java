@@ -35,11 +35,10 @@ public class EnTrueGrit extends AbstractBossCard {
     }
 
     @Override
-    public int getPriority(ArrayList<AbstractCard> hand)
-    {
+    public int getPriority(ArrayList<AbstractCard> hand) {
         int badCards = 0;
-        for (AbstractCard c : hand){
-            if (c.type == CardType.CURSE || c.type == CardType.STATUS){
+        for (AbstractCard c : hand) {
+            if (c.type == CardType.CURSE || c.type == CardType.STATUS) {
                 badCards++;
             }
         }

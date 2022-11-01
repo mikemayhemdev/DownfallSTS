@@ -3,7 +3,6 @@ package downfall.patches;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.CharBossIronclad;
-import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
@@ -103,7 +102,7 @@ public class BossSetPatch {
                 DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/icon/watcher_wrath.png");
                 DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/outline/watcher_wrath_outline.png");
             }
-        }  else if (key.equals(CharBossHermit.ID)) {
+        } else if (key.equals(CharBossHermit.ID)) {
             if (__instance instanceof TheBeyond) {
                 DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/icon/hermit_curse.png");
                 DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/outline/hermit_curse_outline.png");

@@ -13,11 +13,11 @@ public class SticksParticleRight extends com.megacrit.cardcrawl.vfx.AbstractGame
     private static final float DURATION = 0.75F;
     private static final float START_SCALE = 1.2F * Settings.scale;
     private static int W;
-    private static int xOffset = 0;
-    private static int yOffset = -28;
+    private static final int xOffset = 0;
+    private static final int yOffset = -28;
     public CultistSlime p;
-    private float scale = 1F;
-    private Texture img;
+    private final float scale = 1F;
+    private final Texture img;
 
     public SticksParticleRight(CultistSlime p) {
         this.duration = 0.05F;

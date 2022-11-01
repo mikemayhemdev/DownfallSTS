@@ -7,7 +7,7 @@ import guardian.cards.AbstractGuardianCard;
 
 
 public class ReturnStasisCardToHandAction extends AbstractGameAction {
-    private AbstractCard card;
+    private final AbstractCard card;
 
     public ReturnStasisCardToHandAction(AbstractCard card) {
         this.card = card;

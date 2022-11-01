@@ -2,9 +2,7 @@ package reskinContent.skinCharacter.skins.Slimebound;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import reskinContent.reskinContent;
 import reskinContent.skinCharacter.AbstractSkin;
-import slimebound.characters.SlimeboundCharacter;
 
 public class BetaSlimeBoss extends AbstractSkin {
 

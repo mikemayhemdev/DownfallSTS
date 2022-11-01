@@ -12,16 +12,16 @@ import static downfall.downfallMod.contentSharing_curses;
 
 
 @SpirePatch(
-    clz=CardLibrary.class,
-    method="getCurse",
-    paramtypez={AbstractCard.class, Random.class}
+        clz = CardLibrary.class,
+        method = "getCurse",
+        paramtypez = {AbstractCard.class, Random.class}
 )
 public class RestrictCurses3 {
-    public static String vanillaCurses[] = { "Clumsy", "Decay", "Doubt", "Injury", "Normality", "Pain", "Parasite", "Regret", "Shame", "Writhe" };
-        
+    public static String[] vanillaCurses = {"Clumsy", "Decay", "Doubt", "Injury", "Normality", "Pain", "Parasite", "Regret", "Shame", "Writhe"};
+
     @SpireInsertPatch(
-        rloc=8,
-        localvars={"tmp"}
+            rloc = 8,
+            localvars = {"tmp"}
     )
     public static void Insert(ArrayList<String> tmp) {
         if (!contentSharing_curses) {
@@ -32,8 +32,10 @@ public class RestrictCurses3 {
                 boolean available = false;
 
                 for (String curse : vanillaCurses) {
-                    if (c == curse)
+                    if (c == curse) {
                         available = true;
+                        break;
+                    }
                 }
 
                 if (!available)

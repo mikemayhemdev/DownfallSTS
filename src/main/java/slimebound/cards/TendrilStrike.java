@@ -38,9 +38,9 @@ public class TendrilStrike extends AbstractSlimeboundCard {
 
     }
 
-    private boolean returnThis;
-    private int timesReturnedThisTurn = 0;
-    private int timesReturnedAllowed = 1;
+    private final boolean returnThis;
+    private final int timesReturnedThisTurn = 0;
+    private final int timesReturnedAllowed = 1;
 
 
     public TendrilStrike() {

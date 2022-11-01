@@ -11,11 +11,11 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class ActiveFireEffect extends AbstractGameEffect {
     private static final float DUR = 1.0F;
-    private AtlasRegion img = this.getImg();
+    private final AtlasRegion img = this.getImg();
     private float x;
     private float y;
-    private float vX;
-    private float vY;
+    private final float vX;
+    private final float vY;
 
     public ActiveFireEffect(float x, float y, Color color) {
         this.x = x + MathUtils.random(-2.0F, 2.0F) * Settings.scale - (float) this.img.packedWidth / 2.0F;// 19

@@ -30,8 +30,7 @@ public class ToeStub extends AbstractGremlinCard {
     private static final int MAGIC = 2;
     private static final int UPGRADE_MAGIC = 1;
 
-    public ToeStub()
-    {
+    public ToeStub() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -46,13 +45,12 @@ public class ToeStub extends AbstractGremlinCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                 this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        AbstractDungeon.actionManager.addToBottom(new ToeStubAction(m,this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ToeStubAction(m, this.magicNumber));
     }
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
             upgradeMagicNumber(UPGRADE_MAGIC);

@@ -1,26 +1,16 @@
 package guardian.cards;
 
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ThornsPower;
-import com.megacrit.cardcrawl.stances.NeutralStance;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
-import guardian.powers.DontLeaveDefensiveModePower;
-import guardian.stances.DefensiveMode;
-import guardian.vfx.IronWaveEffectBlue;
 
 
 public class Harden extends AbstractGuardianCard {
@@ -83,8 +73,8 @@ public class Harden extends AbstractGuardianCard {
     }
 
     public AbstractCard makeCopy() {
-            return new Harden();
-        }
+        return new Harden();
+    }
 
     public void upgrade() {
         if (!this.upgraded) {

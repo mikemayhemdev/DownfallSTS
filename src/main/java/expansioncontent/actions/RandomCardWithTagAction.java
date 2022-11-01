@@ -11,8 +11,6 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
 import expansioncontent.expansionContentMod;
-import guardian.patches.GuardianEnum;
-import slimebound.patches.SlimeboundEnum;
 import theHexaghost.TheHexaghost;
 
 import java.util.ArrayList;
@@ -67,7 +65,7 @@ public class RandomCardWithTagAction extends AbstractGameAction {
         ArrayList<String> tmp = new ArrayList<>();
 
         for (Map.Entry<String, AbstractCard> stringAbstractCardEntry : CardLibrary.cards.entrySet()) {
-            Map.Entry<String, AbstractCard> c = (Map.Entry) stringAbstractCardEntry;
+            Map.Entry<String, AbstractCard> c = stringAbstractCardEntry;
             if (c.getValue().rarity != AbstractCard.CardRarity.SPECIAL &&
                     !c.getValue().hasTag(AbstractCard.CardTags.HEALING) &&
                     c.getValue().hasTag(tag)

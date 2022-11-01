@@ -8,8 +8,8 @@ import downfall.downfallMod;
 
 public class CBR_Mausoleum extends AbstractCharbossRelic {
     public static String ID = downfallMod.makeID("Mausoleum");
-    private static RelicTier tier = RelicTier.SPECIAL;
-    private static LandingSound sound = LandingSound.MAGICAL;
+    private static final RelicTier tier = RelicTier.SPECIAL;
+    private static final LandingSound sound = LandingSound.MAGICAL;
     public String addedName = "";
 
     public CBR_Mausoleum() {
@@ -19,7 +19,7 @@ public class CBR_Mausoleum extends AbstractCharbossRelic {
 
     @Override
     public String getUpdatedDescription() {
-         return this.DESCRIPTIONS[0];
+        return this.DESCRIPTIONS[0];
     }
 
 

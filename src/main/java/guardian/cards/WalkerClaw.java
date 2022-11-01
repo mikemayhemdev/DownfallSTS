@@ -12,8 +12,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.vfx.combat.ClawEffect;
 import com.megacrit.cardcrawl.vfx.combat.RipAndTearEffect;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
@@ -69,7 +67,7 @@ public class WalkerClaw extends AbstractGuardianCard {
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
         }
 
-      //  this.useGems(p, m);
+        //  this.useGems(p, m);
     }
 
     public AbstractCard makeCopy() {

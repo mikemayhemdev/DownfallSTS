@@ -26,8 +26,7 @@ public class GremlinMeal extends AbstractGremlinCard {
     private static final int MAGIC = 2;
     private static final int UPGRADE_BONUS = 2;
 
-    public GremlinMeal()
-    {
+    public GremlinMeal() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -36,18 +35,15 @@ public class GremlinMeal extends AbstractGremlinCard {
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new StrengthPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new ModifiedLoseStrengthPower(p, this.magicNumber), this.magicNumber));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_BONUS);
         }

@@ -1,8 +1,6 @@
 package charbosses.actions.orb;
 
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.powers.cardpowers.EnemyMetallicizePower;
-import charbosses.powers.cardpowers.EnemyTheBombPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
@@ -31,7 +29,7 @@ public class EnemyTriggerEndOfTurnOrbActions extends AbstractGameAction {
                 p.atEndOfTurnPreEndTurnCards(false);
             }
             p.atEndOfTurn(AbstractCharBoss.boss.isPlayer);
-           // p.onEnergyRecharge();
+            // p.onEnergyRecharge();
         }
 
         this.isDone = true;

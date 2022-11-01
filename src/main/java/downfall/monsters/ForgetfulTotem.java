@@ -17,7 +17,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import downfall.downfallMod;
-import downfall.powers.DrawReductionPowerPlus;
 import downfall.powers.ExhaustEndOfTurnPower;
 import downfall.vfx.TotemBeamEffect;
 

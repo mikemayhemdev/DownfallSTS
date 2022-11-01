@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.scene.SilentVictoryStarEffect;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.BrawlPower;
@@ -55,7 +54,6 @@ public class Brawl extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new BrawlPower(p, magicNumber), magicNumber));
     }
-
 
 
     //Upgraded stats.

@@ -27,8 +27,8 @@ public class TagTeamwork extends AbstractGremlinRelic {
 
     @Override
     public void onEquip() {
-        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new TagTeam(), (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
-        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new TagTeam(), (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new TagTeam(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new TagTeam(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
     }
 
     @Override

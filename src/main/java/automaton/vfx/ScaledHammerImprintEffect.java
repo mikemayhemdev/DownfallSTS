@@ -15,18 +15,18 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class ScaledHammerImprintEffect extends AbstractGameEffect {
-    private AtlasRegion img;
+    private final AtlasRegion img;
     private static final float DUR = 0.7F;
-    private float x;
-    private float y;
+    private final float x;
+    private final float y;
     private float hammerGlowScale;
-    private Color shineColor;
+    private final Color shineColor;
 
     public ScaledHammerImprintEffect(float x, float y, float scale) {
         this.img = ImageMaster.UPGRADE_HAMMER_IMPACT;
         this.shineColor = new Color(1.0F, 1.0F, 1.0F, 0.0F);
-        this.x = x - (float)(this.img.packedWidth / 2);
-        this.y = y - (float)(this.img.packedHeight / 2);
+        this.x = x - (float) (this.img.packedWidth / 2);
+        this.y = y - (float) (this.img.packedHeight / 2);
         this.color = Color.WHITE.cpy();
         this.color.a = 0.7F;
         this.duration = 0.7F;
@@ -51,10 +51,10 @@ public class ScaledHammerImprintEffect extends AbstractGameEffect {
     public void render(SpriteBatch sb) {
         sb.setBlendFunction(770, 1);
         sb.setColor(this.color);
-        sb.draw(this.img, this.x + MathUtils.random(-2.0F, 2.0F) * Settings.scale, this.y + MathUtils.random(-2.0F, 2.0F) * Settings.scale, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale, this.scale, this.rotation);
+        sb.draw(this.img, this.x + MathUtils.random(-2.0F, 2.0F) * Settings.scale, this.y + MathUtils.random(-2.0F, 2.0F) * Settings.scale, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale, this.scale, this.rotation);
         this.shineColor.a = this.color.a / 10.0F;
         sb.setColor(this.shineColor);
-        sb.draw(this.img, this.x, this.y, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.hammerGlowScale, this.hammerGlowScale, this.rotation);
+        sb.draw(this.img, this.x, this.y, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.hammerGlowScale, this.hammerGlowScale, this.rotation);
         sb.setBlendFunction(770, 771);
     }
 

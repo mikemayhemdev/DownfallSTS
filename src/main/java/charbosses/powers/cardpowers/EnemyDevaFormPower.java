@@ -2,7 +2,6 @@ package charbosses.powers.cardpowers;
 
 
 import charbosses.actions.common.EnemyGainEnergyAction;
-import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;

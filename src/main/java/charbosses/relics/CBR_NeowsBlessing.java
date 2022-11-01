@@ -1,9 +1,7 @@
 package charbosses.relics;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.downfallMod;
@@ -11,10 +9,10 @@ import downfall.downfallMod;
 
 public class CBR_NeowsBlessing extends AbstractCharbossRelic {
     public static String ID = downfallMod.makeID("NeowBlessing");
-    private static RelicTier tier = RelicTier.SPECIAL;
-    private static LandingSound sound = LandingSound.MAGICAL;
+    private static final RelicTier tier = RelicTier.SPECIAL;
+    private static final LandingSound sound = LandingSound.MAGICAL;
     public String relicName = "";
-    private int HP = 0;
+    private final int HP = 0;
 
     public CBR_NeowsBlessing() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/blessing.png")));

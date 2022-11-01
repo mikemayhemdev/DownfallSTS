@@ -1,11 +1,8 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.red.SwordBoomerang;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -15,9 +12,6 @@ import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.patches.EndOfTurnPatch;
 import hermit.patches.EnumPatch;
-import hermit.powers.Bruise;
-
-import javax.swing.*;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
@@ -68,7 +62,7 @@ public class Ricochet extends AbstractDynamicCard {
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                         EnumPatch.HERMIT_GUN2));
 
-        for(int i = 0; i < EndOfTurnPatch.deadon_counter; i++) {
+        for (int i = 0; i < EndOfTurnPatch.deadon_counter; i++) {
             this.addToBot(new AttackDamageRandomEnemyAction(this, EnumPatch.HERMIT_GUN3));
         }
     }

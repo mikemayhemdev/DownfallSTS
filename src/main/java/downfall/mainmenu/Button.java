@@ -11,17 +11,17 @@ import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 
 public class Button {
-    private int W = 512;
+    private final int W = 512;
 
-    private int H = 256;
+    private final int H = 256;
 
-    private Color HOVER_BLEND_COLOR = new Color(1.0F, 1.0F, 1.0F, 0.4F);
+    private final Color HOVER_BLEND_COLOR = new Color(1.0F, 1.0F, 1.0F, 0.4F);
 
-    private Color TEXT_DISABLED_COLOR = new Color(0.6F, 0.6F, 0.6F, 1.0F);
+    private final Color TEXT_DISABLED_COLOR = new Color(0.6F, 0.6F, 0.6F, 1.0F);
 
     public float SHOW_X = Settings.WIDTH - 256.0F * Settings.scale, DRAW_Y = 128.0F * Settings.scale;
 
-    private float HIDE_X = SHOW_X + 400.0F * Settings.scale;
+    private final float HIDE_X = SHOW_X + 400.0F * Settings.scale;
 
     private float current_x = HIDE_X;
 
@@ -33,9 +33,9 @@ public class Button {
 
     private String buttonText = "NOT_SET";
 
-    private float TEXT_OFFSET_X = 0.0F * Settings.scale;
+    private final float TEXT_OFFSET_X = 0.0F * Settings.scale;
 
-    private float TEXT_OFFSET_Y = 0.0F * Settings.scale;
+    private final float TEXT_OFFSET_Y = 0.0F * Settings.scale;
 
     public Hitbox hb;
 

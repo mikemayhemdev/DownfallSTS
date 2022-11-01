@@ -22,10 +22,10 @@ public class ScorchingRay extends AbstractCollectorCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new VFXAction(new InversionBeamEffect(m.drawX)));
-        for (AbstractPower po : m.powers){
-            if (CollectorMod.AfflictionMatch(po.ID)){
+        for (AbstractPower po : m.powers) {
+            if (CollectorMod.AfflictionMatch(po.ID)) {
                 addToBot(new VFXAction(new InversionBeamEffect(m.drawX)));
-                atb(new DamageAction(m,new DamageInfo(p,damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
+                atb(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
             }
         }
     }

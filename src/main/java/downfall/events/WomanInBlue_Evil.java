@@ -20,7 +20,6 @@ import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake.ShakeDur;
 import com.megacrit.cardcrawl.helpers.ScreenShake.ShakeIntensity;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.PotionBelt;
 import com.megacrit.cardcrawl.relics.ToyOrnithopter;
@@ -69,7 +68,7 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
                     case 0:
                         logMetric(ID, "Punch");
                         this.screen = WomanInBlue_Evil.CurScreen.FIGHT;
-                        AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(LadyInBlue.ID);
+                        AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(LadyInBlue.ID);
                         AbstractDungeon.getCurrRoom().rewards.clear();
 
                         for (int i = 0; i < 3; i++) {
@@ -77,7 +76,7 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
                         }
 
                         ArrayList<AbstractRelic> possRelics = new ArrayList<>();
-                        if(Loader.isModLoaded("widepotions")) {
+                        if (Loader.isModLoaded("widepotions")) {
                             if (!AbstractDungeon.player.hasRelic(WhiteBeast.ID))
                                 possRelics.add(new WideBeastStatue());
                             if (!AbstractDungeon.player.hasRelic(PotionBelt.ID))

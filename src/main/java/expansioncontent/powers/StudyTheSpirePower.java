@@ -10,25 +10,25 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import downfall.util.TextureLoader;
 import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.expansionContentMod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
-import downfall.util.TextureLoader;
 
 
 public class StudyTheSpirePower extends AbstractPower implements NonStackablePower {
 
     public static final String POWER_ID = expansionContentMod.makeID("StudyTheSpirePower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyAutomaton84.png");
     private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyAutomaton32.png");
     public static PowerType POWER_TYPE = PowerType.BUFF;
 
-    private boolean upgraded;
+    private final boolean upgraded;
 
     public StudyTheSpirePower(AbstractCreature owner, int amount, boolean upgraded) {
         this.name = NAME;
@@ -57,8 +57,7 @@ public class StudyTheSpirePower extends AbstractPower implements NonStackablePow
             } else {
                 this.description = (DESCRIPTIONS[4] + this.amount + DESCRIPTIONS[2]);
             }
-        }
-        else {
+        } else {
             if (this.amount == 1) {
                 this.description = DESCRIPTIONS[0];
             } else {

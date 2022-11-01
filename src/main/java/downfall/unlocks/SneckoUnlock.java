@@ -2,7 +2,6 @@ package downfall.unlocks;
 
 import com.megacrit.cardcrawl.core.Settings;
 import downfall.downfallMod;
-import sneckomod.TheSnecko;
 
 public class SneckoUnlock extends com.megacrit.cardcrawl.unlock.AbstractUnlock {
     public static final String KEY = "Snecko";

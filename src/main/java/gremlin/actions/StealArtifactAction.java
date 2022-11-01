@@ -1,13 +1,14 @@
 package gremlin.actions;
 
-import com.megacrit.cardcrawl.actions.*;
-import com.megacrit.cardcrawl.core.*;
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 
-public class StealArtifactAction extends AbstractGameAction
-{
+public class StealArtifactAction extends AbstractGameAction {
     public StealArtifactAction(final AbstractCreature target, AbstractCreature source) {
         this.duration = Settings.ACTION_DUR_XFAST;
         this.actionType = ActionType.BLOCK;

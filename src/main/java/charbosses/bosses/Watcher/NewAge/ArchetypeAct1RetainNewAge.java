@@ -8,9 +8,11 @@ import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnParasite;
 import charbosses.cards.curses.EnRegret;
 import charbosses.cards.purple.*;
-import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
 import charbosses.powers.bossmechanicpowers.WatcherAngryPower;
-import charbosses.relics.*;
+import charbosses.relics.CBR_BagOfPreparation;
+import charbosses.relics.CBR_CloakClasp;
+import charbosses.relics.CBR_MercuryHourglass;
+import charbosses.relics.CBR_NeowsBlessing;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -21,7 +23,7 @@ import java.util.ArrayList;
 public class ArchetypeAct1RetainNewAge extends ArchetypeBaseWatcher {
 
     private AbstractBossCard theVeryImportantSandsOfTime = null;
-    private AbstractBossCard theVeryImportantPerseverence = null;
+    private final AbstractBossCard theVeryImportantPerseverence = null;
 
     public ArchetypeAct1RetainNewAge() {
         super("WA_ARCHETYPE_RETAIN", "Retain");

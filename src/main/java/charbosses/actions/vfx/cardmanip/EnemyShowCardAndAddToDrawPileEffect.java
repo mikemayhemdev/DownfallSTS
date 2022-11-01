@@ -1,6 +1,5 @@
 package charbosses.actions.vfx.cardmanip;
 
-import charbosses.bosses.AbstractCharBoss;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
@@ -19,7 +18,7 @@ public class EnemyShowCardAndAddToDrawPileEffect extends AbstractGameEffect {
         PADDING = 30.0f * Settings.scale;
     }
 
-    private AbstractCard card;
+    private final AbstractCard card;
     private boolean randomSpot;
     private boolean cardOffset;
 

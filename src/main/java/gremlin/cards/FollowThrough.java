@@ -31,8 +31,7 @@ public class FollowThrough extends AbstractGremlinCard {
     private static final int MAGIC = 1;
     private static final int UPGRADE_MAGIC = 1;
 
-    public FollowThrough()
-    {
+    public FollowThrough() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -54,8 +53,7 @@ public class FollowThrough extends AbstractGremlinCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
             upgradeMagicNumber(UPGRADE_MAGIC);

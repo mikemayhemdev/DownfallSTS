@@ -13,11 +13,11 @@ public class AntennaeParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEff
     private static final float DURATION = 0.75F;
     private static final float START_SCALE = 1.2F * Settings.scale;
     private static int W;
-    private static int xOffset = 30;
-    private static int yOffset = 0;
+    private static final int xOffset = 30;
+    private static final int yOffset = 0;
     public SlowingSlime p;
-    private float scale = 1F;
-    private Texture img;
+    private final float scale = 1F;
+    private final Texture img;
 
     public AntennaeParticle(SlowingSlime p) {
         this.duration = 0.05F;

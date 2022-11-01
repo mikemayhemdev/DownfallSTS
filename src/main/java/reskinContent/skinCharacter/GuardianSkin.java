@@ -3,8 +3,9 @@ package reskinContent.skinCharacter;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.downfallMod;
-import guardian.patches.GuardianEnum;
-import reskinContent.skinCharacter.skins.Guardian.*;
+import reskinContent.skinCharacter.skins.Guardian.BetaGuardian;
+import reskinContent.skinCharacter.skins.Guardian.GuardianChan;
+import reskinContent.skinCharacter.skins.Guardian.GuardianOriginal;
 import reskinContent.vfx.ReskinUnlockedTextEffect;
 
 

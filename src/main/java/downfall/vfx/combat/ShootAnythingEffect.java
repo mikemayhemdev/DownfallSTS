@@ -15,8 +15,8 @@ public class ShootAnythingEffect extends AbstractGameEffect {
     private static final float frictionY = 0.2F * Settings.scale;
     private static final float dispersalspeed = 4;
     public boolean finishedAction;
-    private int flightTime;
-    private CandyInfo letsago;
+    private final int flightTime;
+    private final CandyInfo letsago;
 
     public ShootAnythingEffect(AbstractCreature target, AbstractCreature source, Texture img, int flight) {
         letsago = new CandyInfo(target, source, img);
@@ -59,13 +59,13 @@ public class ShootAnythingEffect extends AbstractGameEffect {
         private float targetY;
         private float rotation;
         private float radialvelocity;
-        private float bounceplane;
+        private final float bounceplane;
         private float opacity;
         private int hit;
         private int frames;
-        private AbstractCreature ac;
-        private AbstractCreature source;
-        private Texture image;
+        private final AbstractCreature ac;
+        private final AbstractCreature source;
+        private final Texture image;
 
         CandyInfo(AbstractCreature ac, AbstractCreature source, Texture blah) {
             this.source = source;

@@ -18,8 +18,8 @@ public class SelfDamageSlimedPower extends AbstractPower {
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
-    private AbstractCreature source;
-    private boolean active = true;
+    private final AbstractCreature source;
+    private final boolean active = true;
 
 
     public SelfDamageSlimedPower(AbstractCreature owner, AbstractCreature source, int amount) {

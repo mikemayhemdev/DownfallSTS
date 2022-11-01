@@ -3,7 +3,6 @@ package champ.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
 import champ.stances.AbstractChampStance;
-import champ.stances.DefensiveStance;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.core.CardCrawlGame;

@@ -21,7 +21,7 @@ public class SoulMark extends AbstractPower implements CloneablePowerInterface {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public SoulMark(int amount,AbstractCreature owner) {
+    public SoulMark(int amount, AbstractCreature owner) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
@@ -41,16 +41,18 @@ public class SoulMark extends AbstractPower implements CloneablePowerInterface {
 
     @Override
     public AbstractPower makeCopy() {
-        return new SoulMark(amount,owner);
+        return new SoulMark(amount, owner);
     }
+
     public void atStartOfTurn() {
-        addToBot(new ReducePowerAction(owner,owner,this,1));
+        addToBot(new ReducePowerAction(owner, owner, this, 1));
     }
+
     @Override
     public void onDeath() {
-        if (!owner.hasPower(MinionPower.POWER_ID)){
+        if (!owner.hasPower(MinionPower.POWER_ID)) {
             System.out.println("Collected!");
-            addToTop(new VFXAction(new BiteEffect(owner.drawX,owner.drawY, CollectorMod.characterColor)));
+            addToTop(new VFXAction(new BiteEffect(owner.drawX, owner.drawY, CollectorMod.characterColor)));
             CollectorCollection.GetCollectible((AbstractMonster) owner);
         }
     }

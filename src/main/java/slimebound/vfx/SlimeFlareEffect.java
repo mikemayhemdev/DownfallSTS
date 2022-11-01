@@ -15,8 +15,8 @@ public class SlimeFlareEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEff
     private static TextureAtlas.AtlasRegion outer;
     private static TextureAtlas.AtlasRegion inner;
     private float scaleY;
-    private AbstractOrb orb;
-    private OrbFlareColor flareColor;
+    private final AbstractOrb orb;
+    private final OrbFlareColor flareColor;
     private Color color2;
 
     public SlimeFlareEffect(AbstractOrb orb, OrbFlareColor setColor) {

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.relics.CultistMask;
 
 public class CBR_MaskCultist extends AbstractCharbossRelic {
     public static final String ID = "CBRCultistMask";
+
     public CBR_MaskCultist() {
         super(new CultistMask());
     }

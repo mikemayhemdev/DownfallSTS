@@ -41,7 +41,7 @@ public class CouncilOfGhosts_Evil extends AbstractImageEvent {
 
     private int screenNum = 0;
     private int hpLoss = 0;
-    private int goldCost = 150;
+    private final int goldCost = 150;
 
     public CouncilOfGhosts_Evil() {
         super(NAME, DESCRIPTIONSALT[0], "images/events/ghost.jpg");
@@ -76,38 +76,36 @@ public class CouncilOfGhosts_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch (this.screenNum) {
-            case 0:
-                switch (buttonPressed) {
-                    case 0:
-                        this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Apparition(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
-                        this.screenNum = 1;
-                        AbstractDungeon.player.loseGold(goldCost);
-                        this.imageEventText.updateDialogOption(0, OPTIONS[5]);
-                        this.imageEventText.clearRemainingOptions();
-                        logMetric(ID, "Purchased Apparition", Collections.singletonList(Apparition.ID), null, null, null, null, null, null,
-                                0, 0, 0, 0, 0, goldCost);
-                        return;
-                    case 1:
-                        this.imageEventText.updateBodyText(ACCEPT_BODY);
-                        AbstractDungeon.player.decreaseMaxHealth(this.hpLoss);
-                        this.becomeGhost();
-                        this.screenNum = 1;
-                        this.imageEventText.updateDialogOption(0, OPTIONS[5]);
-                        this.imageEventText.clearRemainingOptions();
-                        return;
-                    case 2:
-                        logMetricIgnored(ID);
-                        this.imageEventText.updateBodyText(EXIT_BODY);
-                        this.screenNum = 2;
-                        this.imageEventText.updateDialogOption(0, OPTIONS[5]);
-                        this.imageEventText.clearRemainingOptions();
-                        return;
-                }
-            default:
-                this.openMap();
+        if (this.screenNum == 0) {
+            switch (buttonPressed) {
+                case 0:
+                    this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Apparition(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+                    this.screenNum = 1;
+                    AbstractDungeon.player.loseGold(goldCost);
+                    this.imageEventText.updateDialogOption(0, OPTIONS[5]);
+                    this.imageEventText.clearRemainingOptions();
+                    logMetric(ID, "Purchased Apparition", Collections.singletonList(Apparition.ID), null, null, null, null, null, null,
+                            0, 0, 0, 0, 0, goldCost);
+                    return;
+                case 1:
+                    this.imageEventText.updateBodyText(ACCEPT_BODY);
+                    AbstractDungeon.player.decreaseMaxHealth(this.hpLoss);
+                    this.becomeGhost();
+                    this.screenNum = 1;
+                    this.imageEventText.updateDialogOption(0, OPTIONS[5]);
+                    this.imageEventText.clearRemainingOptions();
+                    return;
+                case 2:
+                    logMetricIgnored(ID);
+                    this.imageEventText.updateBodyText(EXIT_BODY);
+                    this.screenNum = 2;
+                    this.imageEventText.updateDialogOption(0, OPTIONS[5]);
+                    this.imageEventText.clearRemainingOptions();
+                    return;
+            }
         }
+        this.openMap();
 
     }
 

@@ -3,7 +3,6 @@ package downfall.events;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -28,7 +27,7 @@ public class WingStatue_Evil extends AbstractImageEvent {
     }
 
     private CurScreen screen;
-    private int damage = MathUtils.ceil((float) AbstractDungeon.player.getAscensionMaxHPLoss() * 1.5F);
+    private final int damage = MathUtils.ceil((float) AbstractDungeon.player.getAscensionMaxHPLoss() * 1.5F);
 
     public WingStatue_Evil() {
         super(NAME, DESCRIPTIONS[0], "images/events/goldenWing.jpg");
@@ -40,39 +39,37 @@ public class WingStatue_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch (this.screen) {
-            case INTRO:
-                switch (buttonPressed) {
-                    case 0:
-                        this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[3]);
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new ShatteredFragment());
-                        AbstractDungeon.player.decreaseMaxHealth(this.damage);
-                        AbstractDungeon.effectList.add(new FlashAtkImgEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AttackEffect.FIRE));
-                        this.screen = CurScreen.RESULT;
-                        logMetricObtainRelicAndDamage(ID, "Destroyed Statue", new ShatteredFragment(), damage);
-                        return;
-                    case 1:
-                        this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[3]);
-                        this.screen = CurScreen.RESULT;
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new BrokenWingStatue());
-                        logMetricObtainRelic(ID, "Collected Statue", new BrokenWingStatue());
-                        return;
-                    case 2:
-                        this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[3]);
-                        this.screen = CurScreen.RESULT;
-                        logMetricIgnored(ID);
-                        return;
-                    default:
-                        return;
-                }
-            default:
-                this.openMap();
+        if (this.screen == CurScreen.INTRO) {
+            switch (buttonPressed) {
+                case 0:
+                    this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.setDialogOption(OPTIONS[3]);
+                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new ShatteredFragment());
+                    AbstractDungeon.player.decreaseMaxHealth(this.damage);
+                    AbstractDungeon.effectList.add(new FlashAtkImgEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AttackEffect.FIRE));
+                    this.screen = CurScreen.RESULT;
+                    logMetricObtainRelicAndDamage(ID, "Destroyed Statue", new ShatteredFragment(), damage);
+                    return;
+                case 1:
+                    this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.setDialogOption(OPTIONS[3]);
+                    this.screen = CurScreen.RESULT;
+                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new BrokenWingStatue());
+                    logMetricObtainRelic(ID, "Collected Statue", new BrokenWingStatue());
+                    return;
+                case 2:
+                    this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.setDialogOption(OPTIONS[3]);
+                    this.screen = CurScreen.RESULT;
+                    logMetricIgnored(ID);
+                    return;
+                default:
+            }
+        } else {
+            this.openMap();
         }
     }
 

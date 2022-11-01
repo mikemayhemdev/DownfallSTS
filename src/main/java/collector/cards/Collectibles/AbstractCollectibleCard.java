@@ -1,18 +1,12 @@
 package collector.cards.Collectibles;
 
-import automaton.FunctionHelper;
-import automaton.cardmods.EncodeMod;
-import basemod.ReflectionHacks;
-import basemod.helpers.CardModifierManager;
 import collector.cards.CollectorCards.AbstractCollectorCard;
 import collector.patches.CollectibleCardColorEnumPatch;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -27,8 +21,6 @@ import com.megacrit.cardcrawl.relics.WristBlade;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import static automaton.FunctionHelper.WITH_DELIMITER;
-
 public abstract class AbstractCollectibleCard extends AbstractCollectorCard {
 
     protected final CardStrings cardStrings;
@@ -39,6 +31,7 @@ public abstract class AbstractCollectibleCard extends AbstractCollectorCard {
     protected String DESCRIPTION;
     protected String UPGRADE_DESCRIPTION;
     protected String[] EXTENDED_DESCRIPTION;
+
     static {
         playerPowerApplyToTorch = new HashSet<>();
         playerPowerApplyToTorch.add(VigorPower.POWER_ID);
@@ -47,6 +40,7 @@ public abstract class AbstractCollectibleCard extends AbstractCollectorCard {
         relicApplyToTorch.add(WristBlade.ID);
         relicApplyToTorch.add(StrikeDummy.ID);
     }
+
     public AbstractCollectibleCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, cost, type, rarity, target, CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
@@ -59,8 +53,8 @@ public abstract class AbstractCollectibleCard extends AbstractCollectorCard {
         initializeDescription();
     }
 
-    public AbstractCollectibleCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color){
-        super(id, cost, type, rarity, target,color);
+    public AbstractCollectibleCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
+        super(id, cost, type, rarity, target, color);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
         name = NAME = cardStrings.NAME;
         originalName = NAME;
@@ -70,14 +64,16 @@ public abstract class AbstractCollectibleCard extends AbstractCollectorCard {
         initializeTitle();
         initializeDescription();
     }
+
     public AbstractCollectibleCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, CollectorCardSource DamageSource, CollectorCardSource BlockSource) {
-        this(id,cost, type, rarity, target);
+        this(id, cost, type, rarity, target);
         this.DamageSource = DamageSource;
         this.BlockSource = BlockSource;
         SetPositionalVarsFromEnum();
     }
+
     public AbstractCollectibleCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, CollectorCardSource DamageSource) {
-        this(id,cost, type, rarity, target);
+        this(id, cost, type, rarity, target);
         this.BlockSource = this.DamageSource = DamageSource;
         SetPositionalVarsFromEnum();
     }
@@ -93,6 +89,7 @@ public abstract class AbstractCollectibleCard extends AbstractCollectorCard {
             upp();
         }
     }
+
     public void doNothingSpecificInParticular() {
         initializeTitle();
     }

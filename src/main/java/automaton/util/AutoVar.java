@@ -2,7 +2,6 @@ package automaton.util;
 
 import automaton.cards.AbstractBronzeCard;
 import basemod.abstracts.DynamicVariable;
-import champ.cards.AbstractChampCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class AutoVar extends DynamicVariable {

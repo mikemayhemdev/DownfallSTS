@@ -4,13 +4,8 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.powers.general.EnemyPoisonPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.PaperCrane;
 import com.megacrit.cardcrawl.relics.TwistedFunnel;
-
-import java.util.Iterator;
 
 public class CBR_TwistedFunnel extends AbstractCharbossRelic {
     public static final String ID = "TwistedFunnel";
@@ -21,8 +16,8 @@ public class CBR_TwistedFunnel extends AbstractCharbossRelic {
 
     @Override
     public void atBattleStart() {
-            this.flash();
-            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractCharBoss.boss, new EnemyPoisonPower(AbstractDungeon.player, AbstractCharBoss.boss, 4), 4));
+        this.flash();
+        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractCharBoss.boss, new EnemyPoisonPower(AbstractDungeon.player, AbstractCharBoss.boss, 4), 4));
 
     }
 

@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import downfall.downfallMod;
 import gremlin.characters.GremlinCharacter;
 
 public class LeaderVoucher extends AbstractGremlinRelic {
@@ -22,13 +23,13 @@ public class LeaderVoucher extends AbstractGremlinRelic {
     }
 
     public void updateEnslavedTooltip() {
-        if (AbstractDungeon.player instanceof GremlinCharacter) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
             GremlinCharacter g = (GremlinCharacter) AbstractDungeon.player;
             String enslaved = g.mobState.getVoucher();
-            if(enslaved.equals("")) {
+            if (enslaved.equals("")) {
                 enslaved = g.mobState.getRearLivingGremlin();
             }
-            switch (enslaved){
+            switch (enslaved) {
                 case "angry":
                     gremIndex = 3;
                     break;
@@ -63,16 +64,16 @@ public class LeaderVoucher extends AbstractGremlinRelic {
 
     @Override
     public boolean canSpawn() {
-        if (AbstractDungeon.player instanceof GremlinCharacter) {
-            return !((GremlinCharacter)AbstractDungeon.player).mobState.getRearLivingGremlin().equals("");
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+            return !((GremlinCharacter) AbstractDungeon.player).mobState.getRearLivingGremlin().equals("");
         }
         return false;
     }
 
     public void onEquip() {
         ++AbstractDungeon.player.energy.energyMaster;
-        if (AbstractDungeon.player instanceof GremlinCharacter) {
-            GremlinCharacter g = (GremlinCharacter)AbstractDungeon.player;
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+            GremlinCharacter g = (GremlinCharacter) AbstractDungeon.player;
             String enslaved = g.mobState.getRearLivingGremlin();
             if (!enslaved.equals("")) {
                 ((GremlinCharacter) AbstractDungeon.player).gremlinDeathSFX(enslaved);

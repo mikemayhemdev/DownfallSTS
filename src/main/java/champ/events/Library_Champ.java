@@ -1,11 +1,9 @@
-
 package champ.events;
 
 import champ.relics.BerserkersGuideToSlaughter;
 import champ.relics.DefensiveTrainingManual;
 import champ.relics.FightingForDummies;
 import champ.relics.GladiatorsBookOfMartialProwess;
-import champ.stances.DefensiveStance;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -20,7 +18,6 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
-import downfall.events.FaceTrader_Evil;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -42,14 +39,14 @@ public class Library_Champ extends AbstractImageEvent {
     private boolean pickCard = false;
     private static final float HP_HEAL_PERCENT = 0.33F;
     private static final float A_2_HP_HEAL_PERCENT = 0.2F;
-    private int healAmt;
+    private final int healAmt;
 
     public Library_Champ() {
         super(NAME, DIALOG_1, "images/events/library.jpg");
         if (AbstractDungeon.ascensionLevel >= 15) {
-            this.healAmt = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.2F);
+            this.healAmt = MathUtils.round((float) AbstractDungeon.player.maxHealth * 0.2F);
         } else {
-            this.healAmt = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.33F);
+            this.healAmt = MathUtils.round((float) AbstractDungeon.player.maxHealth * 0.33F);
         }
 
         this.imageEventText.setDialogOption(OPTIONS[0]);
@@ -58,7 +55,7 @@ public class Library_Champ extends AbstractImageEvent {
         if (AbstractDungeon.player.hasRelic(DefensiveTrainingManual.ID) &&
                 AbstractDungeon.player.hasRelic(FightingForDummies.ID) &&
                 AbstractDungeon.player.hasRelic(GladiatorsBookOfMartialProwess.ID) &&
-                AbstractDungeon.player.hasRelic(BerserkersGuideToSlaughter.ID)){
+                AbstractDungeon.player.hasRelic(BerserkersGuideToSlaughter.ID)) {
 
             this.imageEventText.setDialogOption(OPTIONSALT[1], true);
         } else {
@@ -70,94 +67,92 @@ public class Library_Champ extends AbstractImageEvent {
     public void update() {
         super.update();
         if (this.pickCard && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            AbstractCard c = ((AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0)).makeCopy();
+            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0).makeCopy();
             logMetricObtainCard(ID, "Read", c);
-            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
         }
 
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screenNum) {
-            case 0:
-                switch(buttonPressed) {
-                    case 0:
-                        this.imageEventText.updateBodyText(this.getBook());
-                        this.screenNum = 1;
-                        this.imageEventText.updateDialogOption(0, OPTIONS[3]);
-                        this.imageEventText.clearRemainingOptions();
-                        this.pickCard = true;
-                        CardGroup group = new CardGroup(CardGroupType.UNSPECIFIED);
+        if (this.screenNum == 0) {
+            switch (buttonPressed) {
+                case 0:
+                    this.imageEventText.updateBodyText(this.getBook());
+                    this.screenNum = 1;
+                    this.imageEventText.updateDialogOption(0, OPTIONS[3]);
+                    this.imageEventText.clearRemainingOptions();
+                    this.pickCard = true;
+                    CardGroup group = new CardGroup(CardGroupType.UNSPECIFIED);
 
-                        for(int i = 0; i < 20; ++i) {
-                            AbstractCard card = AbstractDungeon.getCard(AbstractDungeon.rollRarity()).makeCopy();
-                            boolean containsDupe = true;
+                    for (int i = 0; i < 20; ++i) {
+                        AbstractCard card = AbstractDungeon.getCard(AbstractDungeon.rollRarity()).makeCopy();
+                        boolean containsDupe = true;
 
-                            while(true) {
-                                Iterator var6;
-                                while(containsDupe) {
-                                    containsDupe = false;
-                                    var6 = group.group.iterator();
+                        while (true) {
+                            Iterator var6;
+                            while (containsDupe) {
+                                containsDupe = false;
+                                var6 = group.group.iterator();
 
-                                    while(var6.hasNext()) {
-                                        AbstractCard c = (AbstractCard)var6.next();
-                                        if (c.cardID.equals(card.cardID)) {
-                                            containsDupe = true;
-                                            card = AbstractDungeon.getCard(AbstractDungeon.rollRarity()).makeCopy();
-                                            break;
-                                        }
+                                while (var6.hasNext()) {
+                                    AbstractCard c = (AbstractCard) var6.next();
+                                    if (c.cardID.equals(card.cardID)) {
+                                        containsDupe = true;
+                                        card = AbstractDungeon.getCard(AbstractDungeon.rollRarity()).makeCopy();
+                                        break;
                                     }
                                 }
-
-                                if (group.contains(card)) {
-                                    --i;
-                                } else {
-                                    var6 = AbstractDungeon.player.relics.iterator();
-
-                                    while(var6.hasNext()) {
-                                        AbstractRelic r = (AbstractRelic)var6.next();
-                                        r.onPreviewObtainCard(card);
-                                    }
-
-                                    group.addToBottom(card);
-                                }
-                                break;
                             }
+
+                            if (group.contains(card)) {
+                                --i;
+                            } else {
+                                var6 = AbstractDungeon.player.relics.iterator();
+
+                                while (var6.hasNext()) {
+                                    AbstractRelic r = (AbstractRelic) var6.next();
+                                    r.onPreviewObtainCard(card);
+                                }
+
+                                group.addToBottom(card);
+                            }
+                            break;
                         }
+                    }
 
-                        Iterator var8 = group.group.iterator();
+                    Iterator var8 = group.group.iterator();
 
-                        while(var8.hasNext()) {
-                            AbstractCard c = (AbstractCard)var8.next();
-                            UnlockTracker.markCardAsSeen(c.cardID);
-                        }
+                    while (var8.hasNext()) {
+                        AbstractCard c = (AbstractCard) var8.next();
+                        UnlockTracker.markCardAsSeen(c.cardID);
+                    }
 
-                        AbstractDungeon.gridSelectScreen.open(group, 1, OPTIONS[4], false);
-                        return;
-                    case 1:
-                        this.imageEventText.updateBodyText(SLEEP_RESULT);
-                        AbstractDungeon.player.heal(this.healAmt, true);
-                        logMetricHeal(ID, "Heal", this.healAmt);
-                        this.screenNum = 1;
-                        this.imageEventText.updateDialogOption(0, OPTIONS[3]);
-                        this.imageEventText.clearRemainingOptions();
-                        return;
-                    case 2:
-                        AbstractRelic r = this.getRandomFace();
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, r);
-                        downfallMod.removeAnyRelicFromPools(r.relicId);
-                        logMetricObtainRelic(ID, "Seek", r);
-                        this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
-                        this.screenNum = 1;
-                        this.imageEventText.updateDialogOption(0, OPTIONS[3]);
-                        this.imageEventText.clearRemainingOptions();
+                    AbstractDungeon.gridSelectScreen.open(group, 1, OPTIONS[4], false);
+                    return;
+                case 1:
+                    this.imageEventText.updateBodyText(SLEEP_RESULT);
+                    AbstractDungeon.player.heal(this.healAmt, true);
+                    logMetricHeal(ID, "Heal", this.healAmt);
+                    this.screenNum = 1;
+                    this.imageEventText.updateDialogOption(0, OPTIONS[3]);
+                    this.imageEventText.clearRemainingOptions();
+                    return;
+                case 2:
+                    AbstractRelic r = this.getRandomFace();
+                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, r);
+                    downfallMod.removeAnyRelicFromPools(r.relicId);
+                    logMetricObtainRelic(ID, "Seek", r);
+                    this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
+                    this.screenNum = 1;
+                    this.imageEventText.updateDialogOption(0, OPTIONS[3]);
+                    this.imageEventText.clearRemainingOptions();
 
-                        return;
-                }
-            default:
-                this.openMap();
+                    return;
+            }
         }
+        this.openMap();
     }
 
     private String getBook() {
@@ -165,7 +160,7 @@ public class Library_Champ extends AbstractImageEvent {
         list.add(DESCRIPTIONS[2]);
         list.add(DESCRIPTIONS[3]);
         list.add(DESCRIPTIONS[4]);
-        return (String)list.get(MathUtils.random(2));
+        return list.get(MathUtils.random(2));
     }
 
     private AbstractRelic getRandomFace() {

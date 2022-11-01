@@ -18,8 +18,8 @@ public class DuplicatedFormEnergyPower extends AbstractPower {
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
-    private AbstractCreature source;
-    private int cardsDoubledThisTurn = 0;
+    private final AbstractCreature source;
+    private final int cardsDoubledThisTurn = 0;
 
 
     public DuplicatedFormEnergyPower(AbstractCreature owner, AbstractCreature source, int amount) {

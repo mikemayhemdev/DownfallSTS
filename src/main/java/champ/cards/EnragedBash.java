@@ -7,8 +7,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static champ.ChampMod.fatigue;
-
 public class EnragedBash extends AbstractChampCard {
 
     public final static String ID = makeID("EnragedBash");
@@ -31,8 +29,8 @@ public class EnragedBash extends AbstractChampCard {
 
         int chosen = 0;
         for (int i = 0; i < magicNumber; i++) {
-            chosen = AbstractDungeon.cardRng.random(0,2);
-            switch(chosen) {
+            chosen = AbstractDungeon.cardRng.random(0, 2);
+            switch (chosen) {
                 case 0: {
                     dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
                     break;
@@ -47,7 +45,7 @@ public class EnragedBash extends AbstractChampCard {
                 }
             }
         }
-        if (bcombo()){
+        if (bcombo()) {
             atb(new ModifyMagicAction(this.uuid, 1));
             this.rawDescription = this.EXTENDED_DESCRIPTION[0];
             initializeDescription();

@@ -10,7 +10,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import java.util.HashMap;
 
 public class TextureLoader {
-    private static HashMap<String, Texture> textures = new HashMap<>();
+    private static final HashMap<String, Texture> textures = new HashMap<>();
 
     /**
      * @param textureString - String path to the texture you want to load relative to resources,
@@ -51,12 +51,13 @@ public class TextureLoader {
         return new TextureAtlas.AtlasRegion(texture, 0, 0, texture.getWidth(), texture.getHeight());
     }
 
-    @SpirePatch(clz = Texture.class, method="dispose")
+    @SpirePatch(clz = Texture.class, method = "dispose")
     public static class DisposeListener {
         @SpirePrefixPatch
         public static void DisposeListenerPatch(final Texture __instance) {
             textures.entrySet().removeIf(entry -> {
-                if (entry.getValue().equals(__instance)) System.out.println("TextureLoader | Removing Texture: " + entry.getKey());
+                if (entry.getValue().equals(__instance))
+                    System.out.println("TextureLoader | Removing Texture: " + entry.getKey());
                 return entry.getValue().equals(__instance);
             });
         }

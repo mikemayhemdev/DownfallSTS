@@ -1,10 +1,8 @@
 package charbosses.cards.curses;
 
-import downfall.util.TextureLoader;
 import charbosses.actions.common.EnemyMakeTempCardInHandAction;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.status.EnSlimed;
-import charbosses.cards.status.EnWound;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Slimed;
@@ -13,8 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
-import expansioncontent.expansionContentMod;
-import slimebound.SlimeboundMod;
+import downfall.util.TextureLoader;
 
 public class EnIcky extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Icky";

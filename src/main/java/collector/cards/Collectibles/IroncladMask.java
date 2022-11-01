@@ -10,14 +10,14 @@ public class IroncladMask extends AbstractCollectibleCard {
 
     public IroncladMask() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-      damage = baseDamage = 10;
+        damage = baseDamage = 10;
         this.exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (p.hasPower(StrengthPower.POWER_ID)){
-            applyToSelf(new StrengthPower(p,p.getPower(StrengthPower.POWER_ID).amount));
+        if (p.hasPower(StrengthPower.POWER_ID)) {
+            applyToSelf(new StrengthPower(p, p.getPower(StrengthPower.POWER_ID).amount));
         }
         CollectorDmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
 

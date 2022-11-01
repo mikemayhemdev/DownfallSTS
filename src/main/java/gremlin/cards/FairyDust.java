@@ -26,8 +26,7 @@ public class FairyDust extends AbstractGremlinCard {
     private static final int UPGRADED_COST = 0;
     private static final int MAGIC = 2;
 
-    public FairyDust()
-    {
+    public FairyDust() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -40,16 +39,13 @@ public class FairyDust extends AbstractGremlinCard {
         GremlinMod.loadJokeCardImage(this, "FairyDust.png");
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Ward(), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeBaseCost(UPGRADED_COST);
         }

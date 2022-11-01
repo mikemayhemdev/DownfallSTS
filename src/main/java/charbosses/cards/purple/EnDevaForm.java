@@ -4,13 +4,10 @@ import charbosses.cards.AbstractBossCard;
 import charbosses.powers.cardpowers.EnemyDevaFormPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.purple.DevaForm;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.watcher.DevaPower;
-import com.megacrit.cardcrawl.powers.watcher.OmegaPower;
 
 import java.util.ArrayList;
 

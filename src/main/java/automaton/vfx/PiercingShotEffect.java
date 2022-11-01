@@ -17,11 +17,11 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class PiercingShotEffect extends AbstractGameEffect {
-    private float sX;
-    private float sY;
-    private float dX;
-    private float dY;
-    private float dst;
+    private final float sX;
+    private final float sY;
+    private final float dX;
+    private final float dY;
+    private final float dst;
     private static final float DUR = 0.5F;
     private static AtlasRegion img;
 
@@ -60,9 +60,9 @@ public class PiercingShotEffect extends AbstractGameEffect {
     public void render(SpriteBatch sb) {
         sb.setBlendFunction(770, 1);
         sb.setColor(this.color);
-        sb.draw(img, this.sX, this.sY - (float)img.packedHeight / 2.0F + 10.0F * Settings.scale, 0.0F, (float)img.packedHeight / 2.0F, this.dst, 12.5F, this.scale + MathUtils.random(-0.01F, 0.01F), this.scale / 2F, this.rotation);
+        sb.draw(img, this.sX, this.sY - (float) img.packedHeight / 2.0F + 10.0F * Settings.scale, 0.0F, (float) img.packedHeight / 2.0F, this.dst, 12.5F, this.scale + MathUtils.random(-0.01F, 0.01F), this.scale / 2F, this.rotation);
         sb.setColor(new Color(1F, 1F, 1.0F, this.color.a));
-        sb.draw(img, this.sX, this.sY - (float)img.packedHeight / 2.0F, 0.0F, (float)img.packedHeight / 2.0F, this.dst, MathUtils.random(50.0F, 90.0F), this.scale + MathUtils.random(-0.02F, 0.02F), this.scale / 2F, this.rotation);
+        sb.draw(img, this.sX, this.sY - (float) img.packedHeight / 2.0F, 0.0F, (float) img.packedHeight / 2.0F, this.dst, MathUtils.random(50.0F, 90.0F), this.scale + MathUtils.random(-0.02F, 0.02F), this.scale / 2F, this.rotation);
         sb.setBlendFunction(770, 771);
     }
 

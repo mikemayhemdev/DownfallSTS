@@ -1,7 +1,6 @@
 package charbosses.cards.green;
 
 import charbosses.cards.AbstractBossCard;
-import charbosses.powers.general.EnemyEnergizedPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;

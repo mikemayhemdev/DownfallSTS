@@ -20,7 +20,7 @@ public class Haunt extends AbstractHexaCard {
 
     private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 1;
-    public static final String EXTENDED_DESCRIPTION[] = CardCrawlGame.languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION = CardCrawlGame.languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION;
 
     public Haunt() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);

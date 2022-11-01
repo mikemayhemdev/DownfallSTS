@@ -4,7 +4,6 @@ import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Watcher.NewAge.ArchetypeAct1RetainNewAge;
 import charbosses.bosses.Watcher.NewAge.ArchetypeAct2CalmNewAge;
-import charbosses.bosses.Watcher.NewAge.ArchetypeAct2StancesNewAge;
 import charbosses.bosses.Watcher.NewAge.ArchetypeAct3DivinityNewAge;
 import charbosses.core.EnemyEnergyManager;
 import com.badlogic.gdx.Gdx;
@@ -26,7 +25,7 @@ public class CharBossWatcher extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Watcher");
     public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Watcher").NAMES[0];
 
-    private Bone eyeBone;
+    private final Bone eyeBone;
     protected TextureAtlas eyeAtlas = null;
     protected Skeleton eyeSkeleton;
     public AnimationState eyeState;
@@ -52,7 +51,7 @@ public class CharBossWatcher extends AbstractCharBoss {
     private void loadEyeAnimation() {
         this.eyeAtlas = new TextureAtlas(Gdx.files.internal("images/characters/watcher/eye_anim/skeleton.atlas"));
         SkeletonJson json = new SkeletonJson(this.eyeAtlas);
-        json.setScale(Settings.scale / 1.0F);
+        json.setScale(Settings.scale);
         SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal("images/characters/watcher/eye_anim/skeleton.json"));
         this.eyeSkeleton = new Skeleton(skeletonData);
         this.eyeSkeleton.setColor(Color.WHITE);

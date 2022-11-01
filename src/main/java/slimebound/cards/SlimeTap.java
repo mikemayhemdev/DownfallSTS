@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
-import sneckomod.SneckoMod;
 
 
 public class SlimeTap extends AbstractSlimeboundCard {
@@ -61,6 +60,7 @@ public class SlimeTap extends AbstractSlimeboundCard {
             for (AbstractOrb o : p.orbs) {
                 if (o instanceof SpawnedSlime) {
                     canUse = true;
+                    break;
                 }
             }
             if (!canUse) this.cantUseMessage = EXTENDED_DESCRIPTION[0];
@@ -75,13 +75,12 @@ public class SlimeTap extends AbstractSlimeboundCard {
             numEaten = numEaten + 1;
             AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
             AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DrawCardAction(AbstractDungeon.player, this.magicNumber));
-            if (upgraded){
+            if (upgraded) {
                 AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(2));
             } else {
                 AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(1));
             }
 
-            return;
         }
     }
 

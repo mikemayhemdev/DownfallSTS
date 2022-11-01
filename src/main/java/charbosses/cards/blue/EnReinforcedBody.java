@@ -1,14 +1,8 @@
 package charbosses.cards.blue;
 
-import charbosses.actions.common.EnemyGainEnergyAction;
-import charbosses.actions.orb.EnemyAnimateOrbAction;
-import charbosses.actions.orb.EnemyEvokeOrbAction;
-import charbosses.actions.orb.EnemyEvokeWithoutRemovingOrbAction;
 import charbosses.cards.AbstractBossCard;
 import charbosses.ui.EnemyEnergyPanel;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;

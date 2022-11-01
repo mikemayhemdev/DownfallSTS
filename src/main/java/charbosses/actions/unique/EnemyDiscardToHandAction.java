@@ -2,14 +2,12 @@ package charbosses.actions.unique;
 
 import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class EnemyDiscardToHandAction extends AbstractGameAction {
-    private AbstractCard card;
-    private AbstractCharBoss p;
+    private final AbstractCard card;
+    private final AbstractCharBoss p;
 
     public EnemyDiscardToHandAction(AbstractCharBoss p, AbstractCard card) {
         this.p = p;

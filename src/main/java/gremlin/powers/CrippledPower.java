@@ -4,7 +4,6 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.unique.PoisonLoseHpAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -18,7 +17,7 @@ public class CrippledPower extends AbstractGremlinPower implements HealthBarRend
     private static final PowerStrings strings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final Texture IMG = new Texture(GremlinMod.getResourcePath("powers/crippled.png"));
 
-    private AbstractCreature source;
+    private final AbstractCreature source;
 
     public CrippledPower(AbstractCreature owner, AbstractCreature source) {
         this.name = strings.NAME;
@@ -32,8 +31,7 @@ public class CrippledPower extends AbstractGremlinPower implements HealthBarRend
         this.updateDescription();
     }
 
-    public void updateDescription()
-    {
+    public void updateDescription() {
         this.description = strings.DESCRIPTIONS[0];
     }
 

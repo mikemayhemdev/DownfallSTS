@@ -38,7 +38,7 @@ public class ExordiumThugsPatch {
         monsters.add(new SpikeSlime_M(x, y));
         monsters.add(new AcidSlime_M(x, y));
 
-        return (AbstractMonster) monsters.get(AbstractDungeon.miscRng.random(0, monsters.size() - 1));
+        return monsters.get(AbstractDungeon.miscRng.random(0, monsters.size() - 1));
     }
 
     private static float randomYOffset(float y) {

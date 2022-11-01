@@ -13,7 +13,7 @@ public class CardToTopOfDrawPileAction extends AbstractGameAction {
 
     private static final float DURATION = 0.01F;
     private static final float POST_ATTACK_WAIT_DUR = 0.2F;
-    private AbstractCard card;
+    private final AbstractCard card;
 
     public CardToTopOfDrawPileAction(AbstractCard card) {
         this.card = card;

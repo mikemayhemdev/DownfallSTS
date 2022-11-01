@@ -3,25 +3,15 @@ package theHexaghost.events;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.colorless.Apparition;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.potions.AbstractPotion;
-import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import theHexaghost.HexaMod;
 import theHexaghost.cards.CouncilsJustice;
-import theHexaghost.cards.seals.FirstSeal;
-import theHexaghost.cards.seals.FourthSeal;
-import theHexaghost.cards.seals.SecondSeal;
-import theHexaghost.cards.seals.ThirdSeal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,9 +35,8 @@ public class CouncilOfGhosts_Hexa extends AbstractImageEvent {
     private int hpLoss;
 
     private boolean accept = false;
-    private List<String> cardsRemoved = new ArrayList<>();
-    private List<String> cardsAdded = new ArrayList<>();
-
+    private final List<String> cardsRemoved = new ArrayList<>();
+    private final List<String> cardsAdded = new ArrayList<>();
 
 
     public CouncilOfGhosts_Hexa() {
@@ -81,7 +70,7 @@ public class CouncilOfGhosts_Hexa extends AbstractImageEvent {
         }
 
         java.util.Collections.shuffle(list, new java.util.Random(AbstractDungeon.miscRng.randomLong()));
-        return (AbstractCard) list.get(0);
+        return list.get(0);
     }
 
     protected void buttonEffect(int buttonPressed) {
@@ -93,7 +82,7 @@ public class CouncilOfGhosts_Hexa extends AbstractImageEvent {
                         this.imageEventText.updateDialogOption(0, OPTIONS[4], true);
                         this.imageEventText.updateDialogOption(1, OPTIONS[2], new CouncilsJustice());
                         this.imageEventText.updateDialogOption(2, OPTIONS[3], new Apparition());
-                        this.imageEventText.updateDialogOption(3, OPTIONS[6],true);
+                        this.imageEventText.updateDialogOption(3, OPTIONS[6], true);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         this.accept = true;
                         return;
@@ -106,7 +95,7 @@ public class CouncilOfGhosts_Hexa extends AbstractImageEvent {
                         for (int i = 0; i < 3; i++) {
                             AbstractCard n = new CouncilsJustice();
                             cardsAdded.add(n.cardID);
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(n, Settings.WIDTH * (AbstractDungeon.cardRng.random(0.25F,0.75F)), Settings.HEIGHT * (AbstractDungeon.cardRng.random(0.25F,0.75F))));
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(n, Settings.WIDTH * (AbstractDungeon.cardRng.random(0.25F, 0.75F)), Settings.HEIGHT * (AbstractDungeon.cardRng.random(0.25F, 0.75F))));
                         }
                         return;
                     case 2:
@@ -117,13 +106,13 @@ public class CouncilOfGhosts_Hexa extends AbstractImageEvent {
                         for (int i = 0; i < 3; i++) {
                             AbstractCard n = new Apparition();
                             cardsAdded.add(n.cardID);
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(n, Settings.WIDTH * (AbstractDungeon.cardRng.random(0.25F,0.75F)), Settings.HEIGHT * (AbstractDungeon.cardRng.random(0.25F,0.75F))));
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(n, Settings.WIDTH * (AbstractDungeon.cardRng.random(0.25F, 0.75F)), Settings.HEIGHT * (AbstractDungeon.cardRng.random(0.25F, 0.75F))));
                         }
                         return;
                     case 3:
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[5]);
-                        if (this.accept){
+                        if (this.accept) {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
                             logMetric(ID, "Accepted", cardsAdded, cardsRemoved, null, null,
                                     null, null, null,
@@ -149,8 +138,8 @@ public class CouncilOfGhosts_Hexa extends AbstractImageEvent {
                 strikes.add(c);
             }
         }
-        for (AbstractCard c : strikes){
-            AbstractDungeon.topLevelEffects.add(new com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect(c, com.megacrit.cardcrawl.core.Settings.WIDTH * (AbstractDungeon.cardRng.random(0.25F,0.75F)), com.megacrit.cardcrawl.core.Settings.HEIGHT * (AbstractDungeon.cardRng.random(0.25F,0.75F))));
+        for (AbstractCard c : strikes) {
+            AbstractDungeon.topLevelEffects.add(new com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect(c, com.megacrit.cardcrawl.core.Settings.WIDTH * (AbstractDungeon.cardRng.random(0.25F, 0.75F)), com.megacrit.cardcrawl.core.Settings.HEIGHT * (AbstractDungeon.cardRng.random(0.25F, 0.75F))));
             AbstractDungeon.player.masterDeck.removeCard(c);
             cardsRemoved.add(c.cardID);
         }
@@ -164,8 +153,8 @@ public class CouncilOfGhosts_Hexa extends AbstractImageEvent {
                 defends.add(c);
             }
         }
-        for (AbstractCard c : defends){
-            AbstractDungeon.topLevelEffects.add(new com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect(c, com.megacrit.cardcrawl.core.Settings.WIDTH * (AbstractDungeon.cardRng.random(0.25F,0.75F)), com.megacrit.cardcrawl.core.Settings.HEIGHT * (AbstractDungeon.cardRng.random(0.25F,0.75F))));
+        for (AbstractCard c : defends) {
+            AbstractDungeon.topLevelEffects.add(new com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect(c, com.megacrit.cardcrawl.core.Settings.WIDTH * (AbstractDungeon.cardRng.random(0.25F, 0.75F)), com.megacrit.cardcrawl.core.Settings.HEIGHT * (AbstractDungeon.cardRng.random(0.25F, 0.75F))));
             AbstractDungeon.player.masterDeck.removeCard(c);
             cardsRemoved.add(c.cardID);
 
@@ -174,10 +163,10 @@ public class CouncilOfGhosts_Hexa extends AbstractImageEvent {
 
 
     private enum CurScreen {
-            INTRO,
-            END;
+        INTRO,
+        END;
 
-            CurScreen() {
-            }
+        CurScreen() {
         }
     }
+}

@@ -25,5 +25,6 @@ public class CurledHorns extends AbstractCollectibleCard implements PerpetualCar
     }
 
     @Override
-    public void PerpetualBonus() {}
+    public void PerpetualBonus() {
+    }
 }

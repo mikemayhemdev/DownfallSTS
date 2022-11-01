@@ -19,16 +19,16 @@ public class PortalBorderEffect extends AbstractGameEffect {
     private float ELLIPSIS_WIDTH = 235F * Settings.scale;
     private float ELLIPSIS_HEIGHT = 235F * Settings.scale;
 
-    private float ELLIPSIS_BASE_WIDTH = 235F * Settings.scale;
-    private float ELLIPSIS_BASE_HEIGHT = 235F * Settings.scale;
+    private final float ELLIPSIS_BASE_WIDTH = 235F * Settings.scale;
+    private final float ELLIPSIS_BASE_HEIGHT = 235F * Settings.scale;
 
     public float ELLIPSIS_SCALE = 1F;
 
-    private float ORBIT_DURATION = DEFAULT_ORBIT_DURATION;
+    private final float ORBIT_DURATION = DEFAULT_ORBIT_DURATION;
     private float NON_ORBITAL_ADJUSTMENT_SPEED = 200.0f * Settings.scale;
     private float ELLIPSIS_X = 0.0f;
     private float ELLIPSIS_Y = 0.0f;
-    private boolean orbitClockwise = false;
+    private final boolean orbitClockwise = false;
 
     public float cX;
     public float cY;
@@ -41,7 +41,7 @@ public class PortalBorderEffect extends AbstractGameEffect {
     public Color borderColor = Color.VIOLET;
 
     public PortalBorderEffect(float startX, float startY, float angle) {
-        this(startX,startY,angle, 1F);
+        this(startX, startY, angle, 1F);
     }
 
     public PortalBorderEffect(float startX, float startY, float angle, float scale) {
@@ -63,7 +63,7 @@ public class PortalBorderEffect extends AbstractGameEffect {
         this.calculateEllipseSize();
     }
 
-    public void calculateNewPosition(){
+    public void calculateNewPosition() {
         //calculate the angle given its current orbital duration
         angle = initialAngle + 360.0f * (orbitalInterval / ORBIT_DURATION);
         if (angle > 360.0f) {
@@ -74,14 +74,14 @@ public class PortalBorderEffect extends AbstractGameEffect {
         }
 
         //based on Angle, find the target X coordinate
-        float tmp = angle * ((float)Math.PI / 180.0f);
-        tX = (ELLIPSIS_WIDTH * ELLIPSIS_HEIGHT) / (float)Math.sqrt((ELLIPSIS_HEIGHT * ELLIPSIS_HEIGHT) + ((ELLIPSIS_WIDTH * ELLIPSIS_WIDTH) * (Math.tan(tmp) * Math.tan(tmp))));
+        float tmp = angle * ((float) Math.PI / 180.0f);
+        tX = (ELLIPSIS_WIDTH * ELLIPSIS_HEIGHT) / (float) Math.sqrt((ELLIPSIS_HEIGHT * ELLIPSIS_HEIGHT) + ((ELLIPSIS_WIDTH * ELLIPSIS_WIDTH) * (Math.tan(tmp) * Math.tan(tmp))));
         if (90.0f < angle && angle < 270.0f) {
             tX *= -1;
         }
 
         //based on the target X coordinate, find the target Y coordinate
-        tY = (float)Math.sqrt(((ELLIPSIS_WIDTH * ELLIPSIS_WIDTH * ELLIPSIS_HEIGHT * ELLIPSIS_HEIGHT) - (tX * tX * ELLIPSIS_HEIGHT * ELLIPSIS_HEIGHT)) / (ELLIPSIS_WIDTH * ELLIPSIS_WIDTH));
+        tY = (float) Math.sqrt(((ELLIPSIS_WIDTH * ELLIPSIS_WIDTH * ELLIPSIS_HEIGHT * ELLIPSIS_HEIGHT) - (tX * tX * ELLIPSIS_HEIGHT * ELLIPSIS_HEIGHT)) / (ELLIPSIS_WIDTH * ELLIPSIS_WIDTH));
         if (180.0f < angle && angle < 360.0f) {
             tY *= -1;
         }
@@ -126,7 +126,7 @@ public class PortalBorderEffect extends AbstractGameEffect {
     public void render(SpriteBatch sb) {
     }
 
-    public void end(){
+    public void end() {
         this.isDone = true;
     }
 

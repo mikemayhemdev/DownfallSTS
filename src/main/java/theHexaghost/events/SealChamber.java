@@ -3,7 +3,6 @@ package theHexaghost.events;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -37,12 +36,12 @@ public class SealChamber extends AbstractImageEvent {
 
     private CurScreen screen;
 
-    private int hpLoss = FirstSeal.MAGIC;
-    private int goldLoss = SecondSeal.MAGIC;
+    private final int hpLoss = FirstSeal.MAGIC;
+    private final int goldLoss = SecondSeal.MAGIC;
 
 
-    private AbstractPotion potionOption;
-    private AbstractCard cardOption;
+    private final AbstractPotion potionOption;
+    private final AbstractCard cardOption;
 
     private boolean used;
 
@@ -91,11 +90,11 @@ public class SealChamber extends AbstractImageEvent {
         }
 
         java.util.Collections.shuffle(list, new java.util.Random(AbstractDungeon.miscRng.randomLong()));
-        return (AbstractCard) list.get(0);
+        return list.get(0);
     }
 
-    private ArrayList<String> cardsRemoved = new ArrayList<>();
-    private ArrayList<String> cardsObtained = new ArrayList<>();
+    private final ArrayList<String> cardsRemoved = new ArrayList<>();
+    private final ArrayList<String> cardsObtained = new ArrayList<>();
     private int goldLost = 0;
     private int damageTaken = 0;
 
@@ -105,7 +104,7 @@ public class SealChamber extends AbstractImageEvent {
             case INTRO:
                 switch (buttonPressed) {
                     case 0:
-                        AbstractDungeon.player.damage(new DamageInfo((AbstractCreature) null, this.hpLoss, DamageInfo.DamageType.HP_LOSS));
+                        AbstractDungeon.player.damage(new DamageInfo(null, this.hpLoss, DamageInfo.DamageType.HP_LOSS));
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new FirstSeal(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                         this.imageEventText.updateDialogOption(0, OPTIONS[9], true);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);

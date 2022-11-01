@@ -26,15 +26,11 @@ public class BetterEndingPatches {
                 ReflectionHacks.setPrivateStaticFinal(SpireHeart.class, "eventStrings", CardCrawlGame.languagePack.getEventString(SpireHeart.ID));
             }
 
-            EventStrings tmp = (EventStrings) ReflectionHacks.getPrivateStatic(SpireHeart.class, "eventStrings");
+            EventStrings tmp = ReflectionHacks.getPrivateStatic(SpireHeart.class, "eventStrings");
 
-            for (int i = 0; i < SpireHeart.DESCRIPTIONS.length; i++) {
-                SpireHeart.DESCRIPTIONS[i] = tmp.DESCRIPTIONS[i];
-            }
+            System.arraycopy(tmp.DESCRIPTIONS, 0, SpireHeart.DESCRIPTIONS, 0, SpireHeart.DESCRIPTIONS.length);
 
-            for (int i = 0; i < SpireHeart.OPTIONS.length; i++) {
-                SpireHeart.OPTIONS[i] = tmp.OPTIONS[i];
-            }
+            System.arraycopy(tmp.OPTIONS, 0, SpireHeart.OPTIONS, 0, SpireHeart.OPTIONS.length);
 
         }
     }
@@ -83,7 +79,7 @@ public class BetterEndingPatches {
             @SpireInsertPatch(locator = Locator.class)
             public static SpireReturn<Void> Insert(SpireHeart __instance, int buttonPressed) {
                 if (EvilModeCharacterSelect.evilMode) {
-                    AnimatedNpc heart = (AnimatedNpc) ReflectionHacks.getPrivate(__instance, SpireHeart.class, "npc");
+                    AnimatedNpc heart = ReflectionHacks.getPrivate(__instance, SpireHeart.class, "npc");
                     AbstractDungeon.effectsQueue.add(new SoulStealEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, heart.skeleton.getX(), heart.skeleton.getY() + 300F * Settings.scale));
 
                     return SpireReturn.Return(null);

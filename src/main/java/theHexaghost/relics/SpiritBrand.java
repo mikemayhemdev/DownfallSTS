@@ -3,12 +3,11 @@ package theHexaghost.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.util.TextureLoader;
 import theHexaghost.HexaMod;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.util.OnChargeSubscriber;
-import downfall.util.TextureLoader;
 
 import static theHexaghost.HexaMod.makeRelicOutlinePath;
 import static theHexaghost.HexaMod.makeRelicPath;
@@ -41,7 +40,7 @@ public class SpiritBrand extends CustomRelic implements OnChargeSubscriber {
         if (!activated) {
             flash();
             addToBot(new GainBlockAction(AbstractDungeon.player, 4));
-           // addToBot(new GainEnergyAction(1));
+            // addToBot(new GainEnergyAction(1));
             activated = true;
             stopPulse();
         }

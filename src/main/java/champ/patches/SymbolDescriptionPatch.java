@@ -1,7 +1,6 @@
 package champ.patches;
 
 import champ.ChampMod;
-import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
@@ -13,16 +12,12 @@ import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
-import javassist.CannotCompileException;
+import downfall.util.TextureLoader;
 import javassist.CtBehavior;
-import javassist.expr.ExprEditor;
-import javassist.expr.MethodCall;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
 
 public class SymbolDescriptionPatch {
     private static final String crown_icon_NAME = "crown_icon";
@@ -181,7 +176,7 @@ public class SymbolDescriptionPatch {
             if (word.length() > 0 && word.charAt(0) == '[') {
                 if (word.equals("[" + crown_icon_NAME + "]") ||
                         word.equals("[" + fist_icon_NAME + "]") ||
-                word.equals("[" + card_icon_NAME + "]")) {
+                        word.equals("[" + card_icon_NAME + "]")) {
                     gl[0].setText(FontHelper.cardDescFont_N, " ");
                     gl[0].width = CARD_ENERGY_IMG_WIDTH;
                 }

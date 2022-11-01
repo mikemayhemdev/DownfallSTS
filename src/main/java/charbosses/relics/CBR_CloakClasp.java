@@ -2,13 +2,8 @@ package charbosses.relics;
 
 import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.Anchor;
 import com.megacrit.cardcrawl.relics.CloakClasp;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 public class CBR_CloakClasp extends AbstractCharbossRelic {
     public static final String ID = "CloakClasp";
@@ -25,7 +20,7 @@ public class CBR_CloakClasp extends AbstractCharbossRelic {
     public void onPlayerEndTurn() {
         if (!AbstractCharBoss.boss.hand.group.isEmpty()) {
             this.flash();
-            this.addToBot(new GainBlockAction(AbstractCharBoss.boss, (AbstractCreature)null, AbstractCharBoss.boss.hand.group.size()));
+            this.addToBot(new GainBlockAction(AbstractCharBoss.boss, null, AbstractCharBoss.boss.hand.group.size()));
         }
 
     }

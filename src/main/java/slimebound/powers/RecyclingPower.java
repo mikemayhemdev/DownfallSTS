@@ -9,7 +9,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.actions.ExhumeLickAction;
-import slimebound.actions.ReturnRandom0Cost;
 
 
 public class RecyclingPower extends AbstractPower {
@@ -19,7 +18,7 @@ public class RecyclingPower extends AbstractPower {
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
-    private AbstractCreature source;
+    private final AbstractCreature source;
 
 
     public RecyclingPower(AbstractCreature owner, AbstractCreature source, int amount) {

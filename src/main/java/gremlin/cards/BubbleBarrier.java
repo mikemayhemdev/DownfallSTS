@@ -25,8 +25,7 @@ public class BubbleBarrier extends AbstractGremlinCard {
     private static final int MAGIC = 2;
     private static final int UPGRADED_COST = 0;
 
-    public BubbleBarrier()
-    {
+    public BubbleBarrier() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -35,16 +34,13 @@ public class BubbleBarrier extends AbstractGremlinCard {
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new BubbleBarrierPower(p, this.magicNumber), this.magicNumber));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeBaseCost(UPGRADED_COST);
         }

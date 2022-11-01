@@ -33,11 +33,11 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
     }
 
     private CUR_SCREEN screen;
-    private ArrayList<AbstractRelic> relicsOffered = new ArrayList<>();
+    private final ArrayList<AbstractRelic> relicsOffered = new ArrayList<>();
     private int relicOffersAvailable;
-    private int relicCOffers = 0;
-    private int relicUOffers = 0;
-    private int goldAmt;
+    private final int relicCOffers = 0;
+    private final int relicUOffers = 0;
+    private final int goldAmt;
 
     public WeMeetAgain_Evil() {
         super(NAME, DIALOG_1, "images/events/weMeetAgain.jpg");
@@ -83,8 +83,7 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
         if (this.relicOffersAvailable >= 1) {
             if (AbstractDungeon.ascensionLevel >= 15) {
                 this.imageEventText.setDialogOption(OPTIONS[0] + this.relicsOffered.get(0).name + OPTIONS[1] + OPTIONS[8]);
-            }
-            else {
+            } else {
                 this.imageEventText.setDialogOption(OPTIONS[0] + this.relicsOffered.get(0).name + OPTIONS[1] + OPTIONS[2]);
             }
         } else {

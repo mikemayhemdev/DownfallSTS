@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.relics.RegalPillow;
 import com.megacrit.cardcrawl.ui.campfire.RestOption;
-import gremlin.characters.GremlinCharacter;
+import downfall.downfallMod;
 
 @SpirePatch(clz = RestOption.class, method = SpirePatch.CONSTRUCTOR)
 public class CampfireRestDescriptionPatch {
@@ -19,21 +19,18 @@ public class CampfireRestDescriptionPatch {
     public static final String[] TEXT;
 
     @SpireInsertPatch(
-            rloc=27,
-            localvars={"healAmt"}
+            rloc = 27,
+            localvars = {"healAmt"}
     )
-    public static void Insert(RestOption __instance, boolean active, int healAmt){
-        if(AbstractDungeon.player instanceof GremlinCharacter){
+    public static void Insert(RestOption __instance, boolean active, int healAmt) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
             String desc;
-            if (ModHelper.isModEnabled(NightTerrors.ID))
-            {
+            if (ModHelper.isModEnabled(NightTerrors.ID)) {
                 desc = (TEXT[1] + healAmt + ").");
                 if (AbstractDungeon.player.hasRelic(RegalPillow.ID)) {
                     desc = (desc + "\n+15" + TEXT[2] + AbstractDungeon.player.getRelic(RegalPillow.ID).name + LocalizedStrings.PERIOD);
                 }
-            }
-            else
-            {
+            } else {
                 desc = (TEXT[3] + healAmt + ").");
                 if (AbstractDungeon.player.hasRelic(RegalPillow.ID)) {
                     desc = (desc + "\n+15" + TEXT[2] + AbstractDungeon.player.getRelic(RegalPillow.ID).name + LocalizedStrings.PERIOD);

@@ -29,8 +29,7 @@ public class Encore extends AbstractGremlinCard {
     private static final int MAGIC = 5;
     private static final int UPGRADE_BONUS = 2;
 
-    public Encore()
-    {
+    public Encore() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -39,18 +38,15 @@ public class Encore extends AbstractGremlinCard {
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new WizPower(p, WIZ), WIZ));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new EncorePower(p, magicNumber), magicNumber));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_BONUS);
         }

@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class DoubleStatsAction extends com.megacrit.cardcrawl.actions.AbstractGameAction {
-    private AbstractCreature target;
+    private final AbstractCreature target;
     private int timesToApply = 1;
 
     public DoubleStatsAction(AbstractCreature target, int times) {

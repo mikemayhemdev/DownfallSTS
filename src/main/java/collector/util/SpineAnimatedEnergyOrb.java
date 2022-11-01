@@ -12,6 +12,7 @@ public class SpineAnimatedEnergyOrb implements EnergyOrbInterface {
     public Skeleton skeleton;
     public AnimationStateData stateData;
     public TextureAtlas Atlas;
+
     public SpineAnimatedEnergyOrb(Skeleton skeletonfile, TextureAtlas atlassFile) {
         super();
         skeleton = skeletonfile;

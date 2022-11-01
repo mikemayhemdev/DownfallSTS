@@ -10,9 +10,10 @@ import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 public class ConsignAction extends AbstractGameAction {
     private int increaseAmount;
-    private DamageInfo info;;
+    private final DamageInfo info;
     public int damage;
     public int healAmount = 0;
+
     public ConsignAction(AbstractCreature target, DamageInfo info) {
         this.info = info;
         this.setValues(target, info);
@@ -28,7 +29,7 @@ public class ConsignAction extends AbstractGameAction {
                 healAmount += target.lastDamageTaken;
             }
             if (healAmount > 0) {
-                addToBot(new ApplyPowerAction(target,AbstractDungeon.player,new Suffering(healAmount,target)));
+                addToBot(new ApplyPowerAction(target, AbstractDungeon.player, new Suffering(healAmount, target)));
             }
 
             if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {

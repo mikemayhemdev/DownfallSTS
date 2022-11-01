@@ -41,7 +41,7 @@ public class EmbersAction extends AbstractXAction {
 
     public void update() {
         for (int i = 0; i < amount; i++) {
-            
+
             if (weak > 0) {
                 addToTop(new ApplyPowerAction(m, p, new WeakPower(m, weak, false), weak));
             }

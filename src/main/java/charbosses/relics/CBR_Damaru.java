@@ -4,13 +4,8 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.powers.cardpowers.EnemyMantraPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.EnergyManager;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.watcher.MantraPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Damaru;
-import com.megacrit.cardcrawl.relics.VelvetChoker;
 
 public class CBR_Damaru extends AbstractCharbossRelic {
     public static final String ID = "Damaru";

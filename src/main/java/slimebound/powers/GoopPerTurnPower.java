@@ -10,10 +10,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import slimebound.SlimeboundMod;
-import theHexaghost.HexaMod;
-import theHexaghost.powers.BurnPower;
 import downfall.util.TextureLoader;
+import slimebound.SlimeboundMod;
 
 public class GoopPerTurnPower extends AbstractPower implements CloneablePowerInterface {
 

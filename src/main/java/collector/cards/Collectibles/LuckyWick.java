@@ -12,8 +12,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 public class LuckyWick extends AbstractCollectibleCard implements PerpetualCard {
     public final static String ID = makeID("LuckyWick");
     public int perpetualbonus;
+
     public LuckyWick() {
-        super(ID, 0, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY,CollectorCardSource.FRONT);
+        super(ID, 0, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY, CollectorCardSource.FRONT);
         damage = baseDamage = 2;
         FrontBlock = FrontBaseBlock = douBlock = douBaseBlock = block = baseBlock = 2;
         magicNumber = baseMagicNumber = 1;
@@ -24,9 +25,10 @@ public class LuckyWick extends AbstractCollectibleCard implements PerpetualCard 
     public void use(AbstractPlayer p, AbstractMonster m) {
         CollectorDmg(m, AbstractGameAction.AttackEffect.FIRE);
         blck();
-        atb(new DrawCardAction(p,magicNumber));
+        atb(new DrawCardAction(p, magicNumber));
         AbstractCard card = this;
     }
+
     public void PerpetualBonus() {
         CardModifierManager.addModifier(this, new PlusDamageAndBlockCardMod(perpetualbonus));
     }

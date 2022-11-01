@@ -7,19 +7,19 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.ArtifactPower;import downfall.downfallMod; import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
+import downfall.downfallMod;
 import downfall.util.TextureLoader;
 
 public class AncientConstruct extends AbstractBossMechanicPower {
     public static final String POWER_ID = downfallMod.makeID("NeowAncientConstruct");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     private static final Texture tex84 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowDefect284.png"));
     private static final Texture tex32 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowDefect232.png"));
 
-    private boolean firstTurn;
+    private final boolean firstTurn;
 
     public AncientConstruct(final AbstractCreature owner, final int amount) {
         this.ID = POWER_ID;
@@ -37,7 +37,6 @@ public class AncientConstruct extends AbstractBossMechanicPower {
         firstTurn = true;
         this.canGoNegative = false;
     }
-
 
 
     @Override

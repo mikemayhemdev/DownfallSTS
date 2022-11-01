@@ -43,9 +43,9 @@ public class ScrapOozeGremlins extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screenNum) {
+        switch (this.screenNum) {
             case 0:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
                         CardCrawlGame.sound.play("ATTACK_POISON");
                         int random = AbstractDungeon.miscRng.random(0, 99);
@@ -63,7 +63,7 @@ public class ScrapOozeGremlins extends AbstractImageEvent {
                             this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                             this.imageEventText.removeDialogOption(1);
                             this.screenNum = 1;
-                            AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F, r);
+                            AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, r);
                             logMetricObtainRelic(ID, "Reached Inside", r);
                         } else {
                             this.imageEventText.updateBodyText(FAIL_MSG);

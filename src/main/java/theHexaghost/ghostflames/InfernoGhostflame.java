@@ -4,23 +4,17 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
-import theHexaghost.GhostflameHelper;
-import theHexaghost.actions.AdvanceAction;
-import theHexaghost.actions.ExtinguishAction;
-import theHexaghost.powers.ApocalypticArmorPower;
-import theHexaghost.powers.EnhancePower;
 import downfall.util.TextureLoader;
-
-import java.util.ArrayList;
+import theHexaghost.GhostflameHelper;
+import theHexaghost.actions.ExtinguishAction;
+import theHexaghost.powers.EnhancePower;
 
 import static theHexaghost.HexaMod.makeUIPath;
 
@@ -31,12 +25,12 @@ public class InfernoGhostflame extends AbstractGhostflame {
     public static Texture bruh2 = TextureLoader.getTexture(makeUIPath("damage.png"));
     public int energySpentThisTurn = 0;
 
-    private String ID = "hexamod:InfernoGhostflame";
-    private String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
-    private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
+    private final String ID = "hexamod:InfernoGhostflame";
+    private final String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
+    private final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
 
-    private Color flameColor = new Color(232F/255F, 164F/255F, 249F/255F, 1F);
-    private Color activeColor = new Color(232F/255F * 0.5F, 164F/255F * 0.5F, 249F/255F * 0.5F, 1F);
+    private final Color flameColor = new Color(232F / 255F, 164F / 255F, 249F / 255F, 1F);
+    private final Color activeColor = new Color(232F / 255F * 0.5F, 164F / 255F * 0.5F, 249F / 255F * 0.5F, 1F);
 
 
     public InfernoGhostflame(float x, float y) {
@@ -85,8 +79,6 @@ public class InfernoGhostflame extends AbstractGhostflame {
         }*/
 
     }
-
-
 
 
     @Override

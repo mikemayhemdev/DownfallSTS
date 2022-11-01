@@ -22,7 +22,7 @@ public class NextTurnGainSlimeCrush extends AbstractPower {
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
     public boolean upgraded;
-    private AbstractCreature source;
+    private final AbstractCreature source;
 
 
     public NextTurnGainSlimeCrush(AbstractCreature owner, AbstractCreature source, int amount, boolean upg) {
@@ -46,12 +46,11 @@ public class NextTurnGainSlimeCrush extends AbstractPower {
                 this.description = DESCRIPTIONS[0];
             else
                 this.description = DESCRIPTIONS[1];
-        }
-        else {
+        } else {
             if (!upgraded)
                 this.description = DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3];
             else
-                this.description =  DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[4];
+                this.description = DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[4];
         }
     }
 

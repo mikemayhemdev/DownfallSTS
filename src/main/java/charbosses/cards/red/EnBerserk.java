@@ -2,7 +2,6 @@ package charbosses.cards.red;
 
 import charbosses.cards.AbstractBossCard;
 import charbosses.powers.cardpowers.EnemyBerserkPower;
-import charbosses.powers.cardpowers.EnemyMetallicizePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

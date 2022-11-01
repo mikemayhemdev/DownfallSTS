@@ -27,8 +27,7 @@ public class SecondVolley extends AbstractGremlinCard {
     private static final int COST = 2;
     private static final int POWER = 6;
 
-    public SecondVolley()
-    {
+    public SecondVolley() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -42,10 +41,9 @@ public class SecondVolley extends AbstractGremlinCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                 this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         AbstractDungeon.actionManager.addToBottom(new ShivPerCardPlayedAction(upgraded));
-        if(upgraded){
+        if (upgraded) {
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
-        }
-        else {
+        } else {
             this.rawDescription = strings.DESCRIPTION;
         }
         this.initializeDescription();
@@ -55,17 +53,15 @@ public class SecondVolley extends AbstractGremlinCard {
     public void applyPowers() {
         super.applyPowers();
         int count = AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
-        if(upgraded){
+        if (upgraded) {
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
-        }
-        else {
+        } else {
             this.rawDescription = strings.DESCRIPTION;
         }
         this.rawDescription = this.rawDescription + strings.EXTENDED_DESCRIPTION[0] + count;
         if (count == 1) {
             this.rawDescription += strings.EXTENDED_DESCRIPTION[1];
-        }
-        else {
+        } else {
             this.rawDescription += strings.EXTENDED_DESCRIPTION[2];
         }
         this.initializeDescription();
@@ -73,10 +69,9 @@ public class SecondVolley extends AbstractGremlinCard {
 
     @Override
     public void onMoveToDiscard() {
-        if(upgraded){
+        if (upgraded) {
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
-        }
-        else {
+        } else {
             this.rawDescription = strings.DESCRIPTION;
         }
         this.initializeDescription();
@@ -84,8 +79,7 @@ public class SecondVolley extends AbstractGremlinCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             initializeDescription();

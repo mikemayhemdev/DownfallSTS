@@ -8,10 +8,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class SoulStealEffect extends AbstractGameEffect {
-    private float x;
-    private float y;
-    private float tX;
-    private float tY;
+    private final float x;
+    private final float y;
+    private final float tX;
+    private final float tY;
 
     public SoulStealEffect(float sX, float sY, float tX, float tY) {
         this.x = sX;

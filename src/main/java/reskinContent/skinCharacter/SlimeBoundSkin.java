@@ -7,7 +7,6 @@ import reskinContent.skinCharacter.skins.Slimebound.BetaSlimeBoss;
 import reskinContent.skinCharacter.skins.Slimebound.Slaifu;
 import reskinContent.skinCharacter.skins.Slimebound.SlimeBoundOriginal;
 import reskinContent.vfx.ReskinUnlockedTextEffect;
-import slimebound.patches.SlimeboundEnum;
 
 public class SlimeBoundSkin extends AbstractSkinCharacter {
     public static final String ID = CardCrawlGame.languagePack.getCharacterString("Slimebound").NAMES[0];

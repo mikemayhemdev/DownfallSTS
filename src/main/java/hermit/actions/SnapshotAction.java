@@ -6,8 +6,6 @@
 package hermit.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
@@ -20,8 +18,8 @@ import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import hermit.patches.EnumPatch;
 
 public class SnapshotAction extends AbstractGameAction {
-    private DamageInfo info;
-    private int DeadOnTimes;
+    private final DamageInfo info;
+    private final int DeadOnTimes;
 
     public SnapshotAction(AbstractCreature target, DamageInfo info, int DeadOnTimes) {
         this.info = info;

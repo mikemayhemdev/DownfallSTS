@@ -25,7 +25,7 @@ public class OneTwoCombo extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 0;
     public static String UPGRADED_DESCRIPTION;
-    private static int upgradedamount = 1;
+    private static final int upgradedamount = 1;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);

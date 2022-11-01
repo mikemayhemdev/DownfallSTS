@@ -33,7 +33,7 @@ public class EnClaw extends AbstractBossCard {
         this.baseDamage = 3;
     }
 
-    public EnClaw(int clawsPlayed){
+    public EnClaw(int clawsPlayed) {
         this();
         this.baseDamage += (clawsPlayed * 2);
         this.damage = this.baseDamage;

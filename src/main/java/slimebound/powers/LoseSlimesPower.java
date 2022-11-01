@@ -23,7 +23,7 @@ public class LoseSlimesPower extends AbstractPower {
     public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static String[] DESCRIPTIONS;
     private static boolean naturalclear = false;
-    private AbstractCreature source;
+    private final AbstractCreature source;
 
 
     public LoseSlimesPower(AbstractCreature owner, AbstractCreature source, int amount) {

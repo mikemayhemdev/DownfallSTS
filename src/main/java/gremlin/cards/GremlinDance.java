@@ -11,8 +11,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import downfall.downfallMod;
 import gremlin.actions.ShackleAction;
 import gremlin.characters.GremlinCharacter;
 import gremlin.powers.WizPower;
@@ -38,13 +38,12 @@ public class GremlinDance extends AbstractGremlinCard {
     private static final int MAGIC = 2;
     private static final int UPGRADE_BONUS = 3;
 
-    private String gremlin;
+    private final String gremlin;
     private float rotationTimer;
     private int previewIndex;
-    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
+    private final ArrayList<AbstractCard> cardsList = new ArrayList<>();
 
-    public GremlinDance()
-    {
+    public GremlinDance() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
@@ -79,22 +78,22 @@ public class GremlinDance extends AbstractGremlinCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         String gremlin = "";
         boolean isNob = false;
-        if(AbstractDungeon.player instanceof GremlinCharacter) {
-            if(((GremlinCharacter) AbstractDungeon.player).nob){
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+            if (((GremlinCharacter) AbstractDungeon.player).nob) {
                 isNob = true;
             } else {
                 gremlin = ((GremlinCharacter) AbstractDungeon.player).currentGremlin;
             }
         }
 
-        if(gremlin.equals("shield")){
+        if (gremlin.equals("shield")) {
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
         }
 
-        if(gremlin.equals("angry")){
+        if (gremlin.equals("angry")) {
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage,
                     this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        } else if(gremlin.equals("wizard")){
+        } else if (gremlin.equals("wizard")) {
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                     this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
         } else {
@@ -102,20 +101,20 @@ public class GremlinDance extends AbstractGremlinCard {
                     this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
 
-        if(gremlin.equals("fat")){
+        if (gremlin.equals("fat")) {
             AbstractDungeon.actionManager.addToBottom(new ShackleAction(m, magicNumber));
         }
 
-        if(gremlin.equals("sneak")){
+        if (gremlin.equals("sneak")) {
             AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
         }
 
-        if(gremlin.equals("wizard")){
+        if (gremlin.equals("wizard")) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                     new WizPower(p, this.magicNumber), this.magicNumber));
         }
 
-        if(isNob){
+        if (isNob) {
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
         }
@@ -143,8 +142,7 @@ public class GremlinDance extends AbstractGremlinCard {
         }
     }
 
-    public AbstractCard makeCopy()
-    {
+    public AbstractCard makeCopy() {
         if (this.gremlin.equals("")) {
             return new GremlinDance();
         } else {
@@ -158,7 +156,7 @@ public class GremlinDance extends AbstractGremlinCard {
         super.applyPowers();
     }
 
-    private void updateContents(){
+    private void updateContents() {
         this.tags.remove(MAD_GREMLIN);
         this.tags.remove(FAT_GREMLIN);
         this.tags.remove(SHIELD_GREMLIN);
@@ -166,8 +164,8 @@ public class GremlinDance extends AbstractGremlinCard {
         this.tags.remove(WIZARD_GREMLIN);
         this.tags.remove(NOB_GREMLIN);
         this.rawDescription = strings.EXTENDED_DESCRIPTION[0];
-        if(!this.gremlin.equals("") || AbstractDungeon.player instanceof GremlinCharacter){
-            if(this.gremlin.equals("") && ((GremlinCharacter) AbstractDungeon.player).nob){
+        if (!this.gremlin.equals("") || AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+            if (this.gremlin.equals("") && ((GremlinCharacter) AbstractDungeon.player).nob) {
                 rawDescription += strings.EXTENDED_DESCRIPTION[6];
                 this.isMultiDamage = false;
                 this.target = CardTarget.ENEMY;
@@ -234,14 +232,13 @@ public class GremlinDance extends AbstractGremlinCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
         }
     }
 
-    public void nobDanceHelper(){ //for Nob preview
+    public void nobDanceHelper() { //for Nob preview
         this.tags.remove(MAD_GREMLIN);
         this.tags.remove(FAT_GREMLIN);
         this.tags.remove(SHIELD_GREMLIN);
@@ -249,7 +246,7 @@ public class GremlinDance extends AbstractGremlinCard {
         this.tags.remove(WIZARD_GREMLIN);
         this.tags.add(NOB_GREMLIN);
         setBackgrounds();
-        rawDescription = strings.EXTENDED_DESCRIPTION[0]+strings.EXTENDED_DESCRIPTION[6];
+        rawDescription = strings.EXTENDED_DESCRIPTION[0] + strings.EXTENDED_DESCRIPTION[6];
         initializeDescription();
     }
 }

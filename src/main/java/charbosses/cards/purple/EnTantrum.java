@@ -1,12 +1,8 @@
 package charbosses.cards.purple;
 
 import charbosses.actions.unique.EnemyChangeStanceAction;
-import charbosses.bosses.Watcher.NewAge.ArchetypeAct2StancesNewAge;
-import charbosses.cards.AbstractBossCard;
-import charbosses.powers.cardpowers.EnemyMentalFortressPower;
 import charbosses.stances.AbstractEnemyStance;
 import charbosses.stances.EnRealWrathStance;
-import charbosses.stances.EnWrathStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -39,7 +35,7 @@ public class EnTantrum extends AbstractStanceChangeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for(int i = 0; i < this.magicNumber; ++i) {
+        for (int i = 0; i < this.magicNumber; ++i) {
             this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
         this.addToBot(new EnemyChangeStanceAction("Real Wrath"));

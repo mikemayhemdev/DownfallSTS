@@ -22,7 +22,7 @@ public class GremBtnPatch {
     @SpirePatch(clz = CharacterOption.class, method = "renderRelics")
     public static class RenderBtn {
         public static void Postfix(CharacterOption obj, SpriteBatch sb) {
-            if ( (obj.name.toLowerCase().contains("gremlin") || obj.name.contains("地精") || obj.name.contains("군단") || obj.name.contains("Гремлины") || obj.name.contains("Les Diablotins") ) && obj.selected) {
+            if ((obj.name.toLowerCase().contains("gremlin") || obj.name.contains("地精") || obj.name.contains("군단") || obj.name.contains("Гремлины") || obj.name.contains("Les Diablotins")) && obj.selected) {
                 challengeDownHitbox.move(190.0f * Settings.scale, Settings.HEIGHT / 2.0f - 190.0f * Settings.scale);
                 challengeDownHitbox.render(sb);
 
@@ -39,11 +39,11 @@ public class GremBtnPatch {
     @SpirePatch(clz = CharacterOption.class, method = "updateHitbox")
     public static class UpdateHitbox {
         public static void Postfix(CharacterOption obj) {
-            if ( (obj.name.toLowerCase().contains("gremlin") || obj.name.contains("地精") || obj.name.contains("군단") || obj.name.contains("Гремлины") || obj.name.contains("Les Diablotins") ) && obj.selected) {
+            if ((obj.name.toLowerCase().contains("gremlin") || obj.name.contains("地精") || obj.name.contains("군단") || obj.name.contains("Гремлины") || obj.name.contains("Les Diablotins")) && obj.selected) {
                 challengeDownHitbox.update();
                 if (challengeDownHitbox.hovered) {
                     if (challengeTips.isEmpty()) {
-                        challengeTips.add(new PowerTip( uiStrings.TEXT[0],  uiStrings.TEXT[1]));
+                        challengeTips.add(new PowerTip(uiStrings.TEXT[0], uiStrings.TEXT[1]));
                     }
                     if (InputHelper.mX < 1400.0f * Settings.scale) {
                         TipHelper.queuePowerTips(InputHelper.mX + 60.0f * Settings.scale, InputHelper.mY - 50.0f * Settings.scale, challengeTips);

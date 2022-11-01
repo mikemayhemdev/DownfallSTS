@@ -1,4 +1,3 @@
-
 package downfall.vfx;
 
 import com.badlogic.gdx.Gdx;
@@ -6,12 +5,11 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import com.megacrit.cardcrawl.vfx.TouchPickupGold;
 
 public class RainingSoulsEffect extends AbstractGameEffect {
     private int amount;
-    private int min;
-    private int max;
+    private final int min;
+    private final int max;
     private float staggerTimer;
     private boolean playerCentered;
 
@@ -45,7 +43,7 @@ public class RainingSoulsEffect extends AbstractGameEffect {
                 this.isDone = true;
             }
 
-            for(int i = 0; i < goldToSpawn; ++i) {
+            for (int i = 0; i < goldToSpawn; ++i) {
                 AbstractDungeon.effectsQueue.add(new TouchPickupSouls(this.playerCentered));
             }
 

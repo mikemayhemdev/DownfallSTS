@@ -2,9 +2,9 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
 import com.megacrit.cardcrawl.powers.ConfusionPower;
 import com.megacrit.cardcrawl.powers.DrawPower;
+import sneckomod.SneckoMod;
 
 public class MasterEye extends AbstractSneckoCard {
     public final static String ID = makeID("MasterEye");

@@ -21,17 +21,19 @@ public class FingerofDeath extends AbstractCollectorCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new DamageAction(m,new DamageInfo(p,damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SMASH));
+        atb(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SMASH));
         for (int i = 0; i < magicNumber; i++) {
-            applyToEnemy(m,new Suffering(1,m));
+            applyToEnemy(m, new Suffering(1, m));
         }
     }
+
     public void triggerOnExhaust() {
         AbstractCard copy = this.makeStatEquivalentCopy();
         copy.magicNumber += 1;
-        copy.rawDescription = ((AbstractCollectorCard)copy).EXTENDED_DESCRIPTION[0];
-        atb(new MakeTempCardInDiscardAction(copy,1));
+        copy.rawDescription = ((AbstractCollectorCard) copy).EXTENDED_DESCRIPTION[0];
+        atb(new MakeTempCardInDiscardAction(copy, 1));
     }
+
     @Override
     public void upp() {
         upgradeDamage(3);

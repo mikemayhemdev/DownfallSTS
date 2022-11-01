@@ -15,7 +15,7 @@ public class SearingPower extends AbstractGuardianPower implements HealthBarRend
     public static final String IMG = "powers/BurningS.png";
     public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static String[] DESCRIPTIONS;
-    private AbstractCreature source;
+    private final AbstractCreature source;
 
 
     public SearingPower(AbstractCreature owner, AbstractCreature source, int amount) {

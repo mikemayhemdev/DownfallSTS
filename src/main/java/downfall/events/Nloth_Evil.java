@@ -41,8 +41,8 @@ public class Nloth_Evil extends AbstractImageEvent {
     }
 
     private int screenNum = 0;
-    private AbstractRelic choice1;
-    private AbstractRelic choice2;
+    private final AbstractRelic choice1;
+    private final AbstractRelic choice2;
     private AbstractRelic gift;
 
     public Nloth_Evil() {

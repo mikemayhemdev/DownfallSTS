@@ -16,7 +16,7 @@ public class EnemyDivinityParticleEffect extends AbstractGameEffect {
     private float x;
     private float y;
     private float vY;
-    private float dur_div2;
+    private final float dur_div2;
     private AtlasRegion img;
 
     public EnemyDivinityParticleEffect() {

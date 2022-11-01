@@ -14,9 +14,9 @@ import java.util.HashMap;
 )
 public class ModHelperPatch {
     public static void Postfix() {
-        HashMap<String, AbstractDailyMod> myMapS = (HashMap) ReflectionHacks.getPrivateStatic(ModHelper.class, "starterMods");
-        HashMap<String, AbstractDailyMod> myMapG = (HashMap) ReflectionHacks.getPrivateStatic(ModHelper.class, "genericMods");
-        HashMap<String, AbstractDailyMod> myMapD = (HashMap) ReflectionHacks.getPrivateStatic(ModHelper.class, "difficultyMods");
+        HashMap<String, AbstractDailyMod> myMapS = ReflectionHacks.getPrivateStatic(ModHelper.class, "starterMods");
+        HashMap<String, AbstractDailyMod> myMapG = ReflectionHacks.getPrivateStatic(ModHelper.class, "genericMods");
+        HashMap<String, AbstractDailyMod> myMapD = ReflectionHacks.getPrivateStatic(ModHelper.class, "difficultyMods");
         myMapD.put(Hexed.ID, new Hexed());
         myMapS.put(Improvised.ID, new Improvised());
         myMapG.put(Jewelcrafting.ID, new Jewelcrafting());

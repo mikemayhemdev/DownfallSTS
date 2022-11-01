@@ -11,8 +11,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.downfallMod;
 
 public class NextTurnPowerPower extends AbstractPower {
-    private AbstractPower powerToGain;
-    private static PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(downfallMod.makeID("NextTurnPowerPower"));
+    private final AbstractPower powerToGain;
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(downfallMod.makeID("NextTurnPowerPower"));
 
     public NextTurnPowerPower(AbstractCreature owner, AbstractPower powerToGrant) {
         super();

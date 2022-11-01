@@ -1,12 +1,8 @@
 package sneckomod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
-import slimebound.SlimeboundMod;
 import sneckomod.SneckoMod;
 import sneckomod.powers.MudshieldPower;
 import sneckomod.relics.CleanMud;
@@ -16,8 +12,8 @@ import java.util.ArrayList;
 
 public class MuddleAction extends AbstractGameAction {
 
-    private AbstractCard card;
-    private boolean no3;
+    private final AbstractCard card;
+    private final boolean no3;
 
     public MuddleAction(AbstractCard bruhCard, boolean modified) {
         card = bruhCard;

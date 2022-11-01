@@ -2,7 +2,6 @@ package gremlin.cards;
 
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.Gdx;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
@@ -13,7 +12,6 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.GremlinMod;
-import gremlin.powers.PolishPower;
 
 import java.util.ArrayList;
 
@@ -33,7 +31,7 @@ public class SupplyScrollCard extends CustomCard {
 
     private float rotationTimer;
     private int previewIndex;
-    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
+    private final ArrayList<AbstractCard> cardsList = new ArrayList<>();
 
     public SupplyScrollCard() {
         super(ID, NAME, GremlinMod.getResourcePath(IMG_PATH), COST, strings.DESCRIPTION, TYPE,
@@ -48,7 +46,7 @@ public class SupplyScrollCard extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for(int i = 0; i < magicNumber; i++){
+        for (int i = 0; i < magicNumber; i++) {
             int shiv = AbstractDungeon.cardRandomRng.random(0, 1);
             if (shiv == 1)
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Shiv(), 1));

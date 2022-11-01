@@ -46,8 +46,7 @@ public class EnemyVigorPower extends AbstractPower {
             if (q.type == AbstractCard.CardType.ATTACK) {
                 if (q == card && isFirst) {
                     return true;
-                }
-                else {
+                } else {
                     isFirst = false;
                 }
             }
@@ -68,8 +67,8 @@ public class EnemyVigorPower extends AbstractPower {
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK && card instanceof AbstractBossCard) {
             this.flash();
-            AbstractCharBoss cB = (AbstractCharBoss)this.owner;
-            if (cB.hasRelic(CBR_Akabeko.ID)){
+            AbstractCharBoss cB = (AbstractCharBoss) this.owner;
+            if (cB.hasRelic(CBR_Akabeko.ID)) {
                 cB.getRelic(CBR_Akabeko.ID).flash();
                 this.addToTop(new RelicAboveCreatureAction(this.owner, cB.getRelic(CBR_Akabeko.ID)));
             }

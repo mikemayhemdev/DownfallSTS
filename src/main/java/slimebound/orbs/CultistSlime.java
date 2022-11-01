@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import reskinContent.patches.CharacterSelectScreenPatches;
-import reskinContent.reskinContent;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeAutoAttack;
 import slimebound.vfx.SlimeFlareEffect;
@@ -42,7 +41,7 @@ public class CultistSlime
         this.sticksLeftVFX = new SticksParticle(this);
         this.sticksRightVFX = new SticksParticleRight(this);
 
-        if(CharacterSelectScreenPatches.characters[1].isOriginal()){
+        if (CharacterSelectScreenPatches.characters[1].isOriginal()) {
             AbstractDungeon.effectList.add(this.sticksLeftVFX);
             AbstractDungeon.effectList.add(this.sticksRightVFX);
         }
@@ -69,13 +68,13 @@ public class CultistSlime
     }
 
     public void cleanUpVFX() {
-        if(CharacterSelectScreenPatches.characters[1].isOriginal()){
+        if (CharacterSelectScreenPatches.characters[1].isOriginal()) {
             if (sticksLeftVFX != null) {
                 this.sticksLeftVFX.finish();
             }
-        if (sticksRightVFX != null){
-            this.sticksRightVFX.finish();
-        }
+            if (sticksRightVFX != null) {
+                this.sticksRightVFX.finish();
+            }
         }
     }
 

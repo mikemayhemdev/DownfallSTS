@@ -3,7 +3,6 @@ package automaton.cards;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.powers.ExhaustStatusesPower;
-import sneckomod.SneckoMod;
 
 public class Repulsor extends AbstractBronzeCard {
 
@@ -13,7 +12,7 @@ public class Repulsor extends AbstractBronzeCard {
 
     public Repulsor() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-     //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

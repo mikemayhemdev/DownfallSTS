@@ -19,11 +19,11 @@ public class HeatCrushEffect extends AbstractGameEffect {
     private boolean impactHook = false;
     private float x;
     private float x2;
-    private float y;
-    private float startX;
-    private float startX2;
-    private float targetX;
-    private float targetX2;
+    private final float y;
+    private final float startX;
+    private final float startX2;
+    private final float targetX;
+    private final float targetX2;
 
     public HeatCrushEffect(float x, float y) {
         if (img == null) {// 24

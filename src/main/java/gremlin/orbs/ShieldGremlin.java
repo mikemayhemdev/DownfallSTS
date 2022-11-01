@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import gremlin.powers.GremlinPower;
 import gremlin.powers.ShieldGremlinPower;
 
-public class ShieldGremlin extends GremlinStandby{
+public class ShieldGremlin extends GremlinStandby {
     public static final int BLOCK = 2;
 
     public ShieldGremlin(int hp) {

@@ -13,15 +13,14 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import guardian.GuardianMod;
-import guardian.characters.GuardianCharacter;
 
 import java.util.Iterator;
 
 public class DiscardPileToStasisAction extends AbstractGameAction {
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
 
-    private AbstractPlayer p;
-    private int amount;
+    private final AbstractPlayer p;
+    private final int amount;
 
     public DiscardPileToStasisAction(int amount) {
         this.p = AbstractDungeon.player;

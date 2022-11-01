@@ -7,9 +7,7 @@ import champ.stances.UltimateStance;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-import static automaton.FunctionHelper.WITH_DELIMITER;
 import static champ.ChampMod.FINISHER;
-import static champ.ChampMod.TECHNIQUE;
 
 public class ChampTextHelper {
     protected static String[] ifStr = CardCrawlGame.languagePack.getUIString(AbstractChampCard.makeID("highlightCombos")).TEXT;

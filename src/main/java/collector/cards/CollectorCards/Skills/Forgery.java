@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 public class Forgery extends AbstractCollectorCard {
     public final static String ID = makeID("Forgery");
+
     public Forgery() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         magicNumber = baseMagicNumber = 1;
@@ -29,13 +30,13 @@ public class Forgery extends AbstractCollectorCard {
             possCardsList.addAll(CollectorCollection.combatCollection.group);
         }
         atb(new SelectCardsAction(possCardsList, magicNumber, "Choose.", (cards) -> {
-            if (upgraded && !cards.get(0).upgraded){
+            if (upgraded && !cards.get(0).upgraded) {
                 cards.get(0).upgrade();
             }
             AbstractCard c = cards.get(0).makeStatEquivalentCopy();
             c.rarity = CardRarity.RARE;
             AbstractDungeon.player.hand.addToTop(c);
-            if (upgraded){
+            if (upgraded) {
                 AbstractCard c1 = cards.get(1).makeStatEquivalentCopy();
                 c1.rarity = CardRarity.RARE;
                 AbstractDungeon.player.hand.addToTop(c1);

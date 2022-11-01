@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import downfall.downfallMod;
 import gremlin.actions.NecromancyAction;
 import gremlin.characters.GremlinCharacter;
 import gremlin.orbs.GremlinStandby;
@@ -32,8 +33,7 @@ public class Necromancy extends AbstractGremlinCard {
     private static final int UPGRADE_BONUS = 3;
     private static final int VOODOO = 3;
 
-    public Necromancy()
-    {
+    public Necromancy() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -53,38 +53,36 @@ public class Necromancy extends AbstractGremlinCard {
         AbstractDungeon.actionManager.addToBottom(new NecromancyAction(magicNumber));
     }
 
-    public boolean canUse(AbstractPlayer p, AbstractMonster m)
-    {
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean canUse = super.canUse(p, m);
         if (!canUse) {
             return false;
         }
-        if (!p.hasPower(WizPower.POWER_ID) || p.getPower(WizPower.POWER_ID).amount < VOODOO)
-        {
+        if (!p.hasPower(WizPower.POWER_ID) || p.getPower(WizPower.POWER_ID).amount < VOODOO) {
             this.cantUseMessage = strings.EXTENDED_DESCRIPTION[0];
             return false;
-        } else if(!deadGrem()){
+        } else if (!deadGrem()) {
             this.cantUseMessage = strings.EXTENDED_DESCRIPTION[1];
             return false;
-        } else if(!hasRoom()){
+        } else if (!hasRoom()) {
             this.cantUseMessage = strings.EXTENDED_DESCRIPTION[2];
             return false;
         }
         return true;
     }
 
-    private boolean deadGrem(){
+    private boolean deadGrem() {
         int count = 0;
-        for(AbstractOrb orb : AbstractDungeon.player.orbs){
-            if(orb instanceof GremlinStandby){
+        for (AbstractOrb orb : AbstractDungeon.player.orbs) {
+            if (orb instanceof GremlinStandby) {
                 count++;
             }
         }
         int total = 4;
-        if(AbstractDungeon.player instanceof GremlinCharacter){
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
             total -= ((GremlinCharacter) AbstractDungeon.player).mobState.numEnslaved();
         }
-        return (count!=total);
+        return (count != total);
     }
 
     private boolean hasRoom() {
@@ -93,8 +91,7 @@ public class Necromancy extends AbstractGremlinCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_BONUS);
         }

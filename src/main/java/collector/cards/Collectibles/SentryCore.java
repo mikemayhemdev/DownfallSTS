@@ -15,7 +15,7 @@ public class SentryCore extends AbstractCollectibleCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new PlaceCardsInHandIntoStasisAction(p,magicNumber,false));
+        atb(new PlaceCardsInHandIntoStasisAction(p, magicNumber, false));
     }
 
     @Override

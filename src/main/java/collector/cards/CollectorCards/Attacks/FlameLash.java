@@ -16,12 +16,13 @@ public class FlameLash extends AbstractCollectorCard {
     public final static String ID = makeID("FlameLash");
 
     public FlameLash() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY,CollectorCardSource.BACK);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY, CollectorCardSource.BACK);
         baseDamage = damage = 15;
         RearBaseDamage = douBaseDamage = douDamage = baseDamage;
         magicNumber = baseMagicNumber = 1;
         this.exhaust = true;
     }
+
     @Override
     public void applyPowers() {
         super.applyPowers();
@@ -33,19 +34,20 @@ public class FlameLash extends AbstractCollectorCard {
         }
         initializeDescription();
     }
+
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-           dmg(m,AbstractGameAction.AttackEffect.FIRE);
-            atb(new SelectCardsInHandAction(magicNumber, ExhaustAction.TEXT[0], true, true, card -> true, Cards -> {
-                if (Cards.size() > 0) {
-                    atb(new ExhaustSpecificCardAction(Cards.get(0), AbstractDungeon.player.hand));
-                    AbstractCard copy = this.makeStatEquivalentCopy();
-                    if (cost > 0) {
-                        copy.cost = this.cost - 1;
-                    }
-                    atb(new MakeTempCardInDiscardAction(copy, 1));
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        atb(new SelectCardsInHandAction(magicNumber, ExhaustAction.TEXT[0], true, true, card -> true, Cards -> {
+            if (Cards.size() > 0) {
+                atb(new ExhaustSpecificCardAction(Cards.get(0), AbstractDungeon.player.hand));
+                AbstractCard copy = this.makeStatEquivalentCopy();
+                if (cost > 0) {
+                    copy.cost = this.cost - 1;
                 }
-            }));
+                atb(new MakeTempCardInDiscardAction(copy, 1));
+            }
+        }));
     }
 
     @Override

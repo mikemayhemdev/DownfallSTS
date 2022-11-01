@@ -9,13 +9,11 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.Hitbox;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.ShineLinesEffect;
 import downfall.downfallMod;
@@ -23,15 +21,15 @@ import downfall.downfallMod;
 public class TouchPickupSouls extends AbstractGameEffect {
     private static final float RAW_IMG_WIDTH = 32.0F;
     private static final float IMG_WIDTH;
-    private Texture img;
+    private final Texture img;
     private boolean isPickupable;
     public boolean pickedup;
     private float x;
     private float y;
-    private float landingY;
-    private boolean flip;
+    private final float landingY;
+    private final boolean flip;
     private float vY;
-    private float vX;
+    private final float vX;
     private Hitbox hitbox;
 
     public TouchPickupSouls() {

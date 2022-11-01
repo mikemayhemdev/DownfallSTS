@@ -1,6 +1,5 @@
 package champ.cards;
 
-import champ.ChampMod;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -20,7 +19,7 @@ public class MurderStrike extends AbstractChampCard {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         selfRetain = true;
-      //  exhaust = true;
+        //  exhaust = true;
         tags.add(CardTags.STRIKE);
         baseMagicNumber = magicNumber = 2;
         postInit();
@@ -31,7 +30,7 @@ public class MurderStrike extends AbstractChampCard {
         super.onPlayCard(c, m);
         if (c.type == CardType.SKILL && AbstractDungeon.player.hand.group.contains(this)) {
             {
-              //  updateCost(-1);
+                //  updateCost(-1);
                 baseDamage += magicNumber;
                 applyPowers();
                 superFlash(Color.RED.cpy());

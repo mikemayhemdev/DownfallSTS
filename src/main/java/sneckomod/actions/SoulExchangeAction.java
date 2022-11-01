@@ -17,7 +17,7 @@ import sneckomod.SneckoMod;
 
 public class SoulExchangeAction extends AbstractGameAction {
     private static final String[] EXTENDED_DESCRIPTION = CardCrawlGame.languagePack.getCardStrings(SneckoMod.makeID("SoulExchange")).EXTENDED_DESCRIPTION;
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
 
     public SoulExchangeAction() {
         this.actionType = ActionType.CARD_MANIPULATION;// 22

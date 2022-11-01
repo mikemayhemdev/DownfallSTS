@@ -1,16 +1,10 @@
 package charbosses.relics;
 
-import charbosses.bosses.AbstractCharBoss;
-import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.ThreadAndNeedle;
-import com.megacrit.cardcrawl.relics.TinyHouse;
-
-import java.util.ArrayList;
 
 public class CBR_ThreadAndNeedle extends AbstractCharbossRelic {
     public static final String ID = "ThreadAndNeedle";

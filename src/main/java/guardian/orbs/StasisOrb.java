@@ -81,7 +81,7 @@ public class StasisOrb extends AbstractOrb {
 
         initialize(source, selfStasis);
 
-        if(stasisCard instanceof AbstractGuardianCard) {
+        if (stasisCard instanceof AbstractGuardianCard) {
             AbstractGuardianCard agc = (AbstractGuardianCard) stasisCard;
             agc.whenEnteredStasis(this);
         }

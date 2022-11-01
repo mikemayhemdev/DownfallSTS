@@ -1,12 +1,10 @@
 package champ.cards;
 
 import champ.ChampMod;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static champ.ChampMod.*;
+import static champ.ChampMod.vigor;
 
 public class BerserkersShout extends AbstractChampCard {
 
@@ -23,24 +21,23 @@ public class BerserkersShout extends AbstractChampCard {
         //tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERBERSERKER);
-       // myHpLossCost = magicNumber;
+        // myHpLossCost = magicNumber;
         postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-       // techique();
+        // techique();
         berserkOpen();
         vigor(magicNumber);
         //AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
-      //  if (upgraded) techique();
+        //  if (upgraded) techique();
     }
 
 
-
     public void upp() {
-       // tags.add(ChampMod.TECHNIQUE);
+        // tags.add(ChampMod.TECHNIQUE);
         //postInit();
-      //  initializeDescription();
+        //  initializeDescription();
         upgradeMagicNumber(3);
     }
 }

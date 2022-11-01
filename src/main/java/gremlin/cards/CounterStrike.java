@@ -29,8 +29,7 @@ public class CounterStrike extends AbstractGremlinCard {
     private static final int UPGRADE_BONUS = 2;
     private static final int MAGIC = 2;
 
-    public CounterStrike()
-    {
+    public CounterStrike() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -49,13 +48,12 @@ public class CounterStrike extends AbstractGremlinCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                 this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        AbstractDungeon.actionManager.addToBottom(new CounterStrikeAction(m,this.magicNumber, upgraded));
+        AbstractDungeon.actionManager.addToBottom(new CounterStrikeAction(m, this.magicNumber, upgraded));
     }
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;

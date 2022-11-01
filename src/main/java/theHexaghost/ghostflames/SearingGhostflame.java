@@ -10,12 +10,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
+import downfall.util.TextureLoader;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.BurnPower;
 import theHexaghost.powers.CrispyPower;
 import theHexaghost.powers.EnhancePower;
-import downfall.util.TextureLoader;
 
 public class SearingGhostflame extends AbstractGhostflame {
 
@@ -24,12 +24,12 @@ public class SearingGhostflame extends AbstractGhostflame {
     public static Texture bruh2 = TextureLoader.getTexture(HexaMod.makeUIPath("burn.png"));
     public int attacksPlayedThisTurn = 0;
 
-    private String ID = "hexamod:SearingGhostflame";
-    private String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
-    private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
+    private final String ID = "hexamod:SearingGhostflame";
+    private final String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
+    private final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
 
-    private Color flameColor = new Color(178F/255F, 249F/255F, 164F/255F, 1F);
-    private Color activeColor = new Color(178F/255F * 0.5F, 249F/255F * 0.5F, 164F/255F * 0.5F, 1F);
+    private final Color flameColor = new Color(178F / 255F, 249F / 255F, 164F / 255F, 1F);
+    private final Color activeColor = new Color(178F / 255F * 0.5F, 249F / 255F * 0.5F, 164F / 255F * 0.5F, 1F);
 
     public SearingGhostflame(float x, float y) {
         super(x, y);

@@ -14,11 +14,11 @@ import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import downfall.cards.curses.Haunted;
 import downfall.downfallMod;
 import downfall.relics.ExtraCursedBell;
 import downfall.relics.ExtraCursedKey;
 import theHexaghost.HexaMod;
-import downfall.cards.curses.Haunted;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +45,7 @@ public class WanderingSpecter extends AbstractImageEvent {
     private boolean shopForMore2;
 
 
-    private int curseCount = 2;
+    private final int curseCount = 2;
 
     public WanderingSpecter() {
         super(NAME, DESCRIPTIONS[0], "hexamodResources/images/events/specter.png");
@@ -57,8 +57,10 @@ public class WanderingSpecter extends AbstractImageEvent {
         ArrayList<String> possRelicsList2 = new ArrayList<>();
         if (!AbstractDungeon.player.hasRelic(DarkstonePeriapt.ID)) possRelicsList.add(DarkstonePeriapt.ID);
         if (!AbstractDungeon.player.hasRelic(DuVuDoll.ID)) possRelicsList.add(DuVuDoll.ID);
-        if (!AbstractDungeon.player.hasRelic(CursedKey.ID) && !AbstractDungeon.player.hasRelic(ExtraCursedKey.ID)) possRelicsList2.add(ExtraCursedKey.ID);
-        if (!AbstractDungeon.player.hasRelic(CallingBell.ID) && !AbstractDungeon.player.hasRelic(ExtraCursedBell.ID)) possRelicsList2.add(ExtraCursedBell.ID);
+        if (!AbstractDungeon.player.hasRelic(CursedKey.ID) && !AbstractDungeon.player.hasRelic(ExtraCursedKey.ID))
+            possRelicsList2.add(ExtraCursedKey.ID);
+        if (!AbstractDungeon.player.hasRelic(CallingBell.ID) && !AbstractDungeon.player.hasRelic(ExtraCursedBell.ID))
+            possRelicsList2.add(ExtraCursedBell.ID);
 
 
         if (possRelicsList.size() > 0) {
@@ -75,14 +77,15 @@ public class WanderingSpecter extends AbstractImageEvent {
             imageEventText.setDialogOption(OPTIONS[1]);
             shopForMore2 = true;
         }
-        if (!AbstractDungeon.player.hasRelic(BlueCandle.ID)){
+        if (!AbstractDungeon.player.hasRelic(BlueCandle.ID)) {
             this.imageEventText.setDialogOption(OPTIONS[3]);
         } else {
             this.imageEventText.setDialogOption(OPTIONS[4]);
         }
     }
-    private List<String> relicsAdded = new ArrayList<>();
-    private List<String> cardsAdded = new ArrayList<>();
+
+    private final List<String> relicsAdded = new ArrayList<>();
+    private final List<String> cardsAdded = new ArrayList<>();
     private int maxHpAdded = 0;
     private int goldAdded = 0;
 
@@ -93,8 +96,8 @@ public class WanderingSpecter extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         if (!shopForMore) {
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Haunted(), (float) (Settings.WIDTH * .35F), (float) (Settings.HEIGHT / 2)));
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Haunted(), (float) (Settings.WIDTH * .65F), (float) (Settings.HEIGHT / 2)));
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Haunted(), Settings.WIDTH * .35F, (float) (Settings.HEIGHT / 2)));
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Haunted(), Settings.WIDTH * .65F, (float) (Settings.HEIGHT / 2)));
 
                             AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), rtog);// 83
                             downfallMod.removeAnyRelicFromPools(rtog.relicId);
@@ -130,7 +133,7 @@ public class WanderingSpecter extends AbstractImageEvent {
                         this.screen = CurScreen.TRADE;
                         return;
                     case 2:
-                        if (AbstractDungeon.player.hasRelic(BlueCandle.ID)){
+                        if (AbstractDungeon.player.hasRelic(BlueCandle.ID)) {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[7]);
                         } else {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[6]);
@@ -154,9 +157,9 @@ public class WanderingSpecter extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         curse = CardLibrary.getCurse().makeStatEquivalentCopy();
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH * .3F), (float) (Settings.HEIGHT / 2)));// 66
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, Settings.WIDTH * .3F, (float) (Settings.HEIGHT / 2)));// 66
                         AbstractCard rareCard = AbstractDungeon.getCard(AbstractCard.CardRarity.RARE, AbstractDungeon.cardRng).makeStatEquivalentCopy();
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(rareCard, (float) (Settings.WIDTH * .7F), (float) (Settings.HEIGHT / 2)));// 66
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(rareCard, Settings.WIDTH * .7F, (float) (Settings.HEIGHT / 2)));// 66
 
                         this.imageEventText.updateDialogOption(0, OPTIONS[8], true);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
@@ -167,7 +170,7 @@ public class WanderingSpecter extends AbstractImageEvent {
                         return;
                     case 1:
                         curse = CardLibrary.getCurse().makeStatEquivalentCopy();
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT / 2)));// 66
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, Settings.WIDTH * .5F, (float) (Settings.HEIGHT / 2)));// 66
                         AbstractDungeon.player.increaseMaxHp(5, true);
                         this.imageEventText.updateDialogOption(1, OPTIONS[8], true);
 
@@ -178,7 +181,7 @@ public class WanderingSpecter extends AbstractImageEvent {
                         return;
                     case 2:
                         curse = CardLibrary.getCurse().makeStatEquivalentCopy();
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT / 2)));// 66
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, Settings.WIDTH * .5F, (float) (Settings.HEIGHT / 2)));// 66
                         AbstractDungeon.effectList.add(new RainingGoldEffect(100));
                         AbstractDungeon.player.gainGold(100);
                         this.imageEventText.updateDialogOption(2, OPTIONS[8], true);

@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import hermit.cards.ItchyTrigger;
 import hermit.cards.Spite;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;

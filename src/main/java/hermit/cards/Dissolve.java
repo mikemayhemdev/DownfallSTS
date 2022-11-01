@@ -2,18 +2,11 @@ package hermit.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.curses.Decay;
-import com.megacrit.cardcrawl.cards.green.Blur;
-import com.megacrit.cardcrawl.cards.green.DodgeAndRoll;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;
-import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 
@@ -52,7 +45,6 @@ public class Dissolve extends AbstractDynamicCard {
     private static final int COST = 2;
 
 
-
     // /STAT DECLARATION/
 
 
@@ -60,7 +52,7 @@ public class Dissolve extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = 2;
         baseBlock = block = 12;
-        this.exhaust=true;
+        this.exhaust = true;
         //this.cardsToPreview = new Decay();
         loadJokeCardImage(this, "dissolve.png");
     }

@@ -1,22 +1,14 @@
 package champ;
 
-import basemod.BaseMod;
-import champ.patches.SymbolDescriptionPatch;
-import champ.stances.AbstractChampStance;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
 import champ.stances.UltimateStance;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Vector2;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.Hitbox;
-import com.megacrit.cardcrawl.helpers.TipHelper;
-import com.megacrit.cardcrawl.helpers.input.InputHelper;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
 
 public class StanceHelper {
@@ -60,7 +52,7 @@ public class StanceHelper {
             return ChampChar.characterStrings.TEXT[25];
         } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
             return ChampChar.characterStrings.TEXT[7];
-        } else if (AbstractDungeon.player instanceof ChampChar) {
+        } else if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_CHAMP)) {
             return ChampChar.characterStrings.TEXT[6];
         }
         return null;
@@ -75,8 +67,8 @@ public class StanceHelper {
         } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
 
             return ChampChar.characterStrings.TEXT[12] + BerserkerStance.amount() + ChampChar.characterStrings.TEXT[46] + " NL " +
-             ChampChar.characterStrings.TEXT[12] + DefensiveStance.amount() + ChampChar.characterStrings.TEXT[47];
-        } else if (AbstractDungeon.player instanceof ChampChar) {
+                    ChampChar.characterStrings.TEXT[12] + DefensiveStance.amount() + ChampChar.characterStrings.TEXT[47];
+        } else if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_CHAMP)) {
             return ChampChar.characterStrings.TEXT[6];
         }
         return null;
@@ -90,7 +82,7 @@ public class StanceHelper {
         } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
             return ChampChar.characterStrings.TEXT[11] + " NL " +
                     ChampChar.characterStrings.TEXT[12] + DefensiveStance.finisherAmount() + ChampChar.characterStrings.TEXT[56];
-        } else if (AbstractDungeon.player instanceof ChampChar) {
+        } else if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_CHAMP)) {
             return ChampChar.characterStrings.TEXT[6];
         }
         return null;

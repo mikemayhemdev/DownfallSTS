@@ -13,7 +13,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
-import downfall.downfallMod;
 
 public class EnFeed extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Feed";

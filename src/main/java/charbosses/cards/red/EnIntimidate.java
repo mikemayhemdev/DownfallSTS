@@ -1,26 +1,17 @@
 package charbosses.cards.red;
 
 import charbosses.cards.AbstractBossCard;
-import charbosses.vfx.IronWaveReversedEffect;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.IntimidateEffect;
-import downfall.downfallMod;
-
-import java.util.Iterator;
 
 public class EnIntimidate extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Intimidate";
@@ -43,7 +34,7 @@ public class EnIntimidate extends AbstractBossCard {
         this.addToBot(new SFXAction("INTIMIDATE"));
         this.addToBot(new VFXAction(p, new IntimidateEffect(m.hb.cX, m.hb.cY), 1.0F));
         this.addToBot(new ApplyPowerAction(p, m, new WeakPower(p, this.magicNumber + 1, false), this.magicNumber + 1, true, AbstractGameAction.AttackEffect.NONE));
- }
+    }
 
     @Override
     public void upgrade() {

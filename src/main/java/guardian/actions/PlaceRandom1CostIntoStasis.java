@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import guardian.GuardianMod;
-import guardian.characters.GuardianCharacter;
 import guardian.orbs.StasisOrb;
 
 import java.util.ArrayList;
@@ -17,7 +16,7 @@ import java.util.Map;
 
 
 public class PlaceRandom1CostIntoStasis extends AbstractGameAction {
-    private int numCards;
+    private final int numCards;
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
 
 
@@ -34,7 +33,7 @@ public class PlaceRandom1CostIntoStasis extends AbstractGameAction {
         ArrayList<String> tmp = new ArrayList<>();
 
         for (Map.Entry<String, AbstractCard> stringAbstractCardEntry : CardLibrary.cards.entrySet()) {
-            Map.Entry<String, AbstractCard> c = (Map.Entry) stringAbstractCardEntry;
+            Map.Entry<String, AbstractCard> c = stringAbstractCardEntry;
             if (c.getValue().cost == 1 && c.getValue().color == AbstractDungeon.player.getCardColor()) {
                 tmp.add(c.getKey());
             }

@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.BuffSecondarySlimeEffectsPower;
-import sneckomod.SneckoMod;
 
 
 public class MinionMaster extends AbstractSlimeboundCard {
@@ -25,7 +24,7 @@ public class MinionMaster extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 2;
     public static String UPGRADED_DESCRIPTION;
-    private static int upgradedamount = 1;
+    private static final int upgradedamount = 1;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -39,7 +38,7 @@ public class MinionMaster extends AbstractSlimeboundCard {
 
         this.magicNumber = this.baseMagicNumber = 1;
 
-     //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //   this.tags.add(SneckoMod.BANNEDFORSNECKO);
         SlimeboundMod.loadJokeCardImage(this, "MinionMaster.png");
 
     }

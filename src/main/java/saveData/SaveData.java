@@ -48,7 +48,7 @@ public class SaveData {
     public static final String PURE_SNECKO_MODE = "PURE_SNECKO_MODE";
     public static final String IDENTIFY_RNG_COUNT = "IDENTIFY_RNG_COUNT";
 
-    private static Logger saveLogger = LogManager.getLogger("downfallSaveData");
+    private static final Logger saveLogger = LogManager.getLogger("downfallSaveData");
     //data is stored here in addition to the actual location
     //when data is "saved" it is saved here, and written to the actual save file slightly later
     private static boolean evilMode;
@@ -284,7 +284,7 @@ public class SaveData {
             System.out.println(file.room_x);
             if (file.room_x == -2) {
                 System.out.println("WE GOT ONE!");
-               loadIntoNeowDoubleInstead();
+                loadIntoNeowDoubleInstead();
             }
         }
     }

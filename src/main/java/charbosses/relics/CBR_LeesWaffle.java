@@ -1,8 +1,6 @@
 package charbosses.relics;
 
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.Strawberry;
 import com.megacrit.cardcrawl.relics.Waffle;
 
 public class CBR_LeesWaffle extends AbstractCharbossRelic {

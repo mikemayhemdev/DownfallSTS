@@ -25,8 +25,7 @@ public class BashedPower extends AbstractGremlinPower implements OnPlayerGainBlo
         this.updateDescription();
     }
 
-    public void updateDescription()
-    {
+    public void updateDescription() {
         this.description = (strings.DESCRIPTIONS[0] + this.amount + strings.DESCRIPTIONS[1]);
     }
 

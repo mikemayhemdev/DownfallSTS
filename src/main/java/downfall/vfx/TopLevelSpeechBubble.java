@@ -20,13 +20,13 @@ public class TopLevelSpeechBubble extends AbstractGameEffect {
     private static final float ADJUST_Y;
     private static final float FADE_TIME = 0.3F;
     private float shadow_offset;
-    private float x;
-    private float y;
+    private final float x;
+    private final float y;
     private float wavy_y;
     private float wavyHelper;
     private float scaleTimer;
-    private boolean facingRight;
-    private Color shadowColor;
+    private final boolean facingRight;
+    private final Color shadowColor;
 
     public TopLevelSpeechBubble(float x, float y, String msg, boolean isPlayer) {
         this(x, y, 2.0F, msg, isPlayer);

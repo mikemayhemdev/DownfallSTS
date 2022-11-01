@@ -3,10 +3,8 @@ package charbosses.cards.purple;
 import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.purple.WindmillStrike;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -46,10 +44,10 @@ public class EnWindmillStrike extends AbstractBossCard {
 
     @Override
     public int getPriority(ArrayList<AbstractCard> hand) {
-       if (this.cost > 0){
-           return 0;
-       }
-       return autoPriority() * 5;
+        if (this.cost > 0) {
+            return 0;
+        }
+        return autoPriority() * 5;
     }
 
     public AbstractCard makeCopy() {

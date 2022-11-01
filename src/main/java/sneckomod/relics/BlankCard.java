@@ -2,16 +2,13 @@ package sneckomod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import downfall.util.TextureLoader;
 import gremlin.actions.MakeEchoAction;
 import sneckomod.SneckoMod;
-import downfall.util.TextureLoader;
 
 import java.util.ArrayList;
 
@@ -44,8 +41,6 @@ public class BlankCard extends CustomRelic {
             AbstractDungeon.actionManager.addToBottom(new MakeEchoAction(card2));
 
 //            card2.purgeOnUse = true;
-
-
 
 
 //            AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {

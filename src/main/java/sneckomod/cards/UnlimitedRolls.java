@@ -5,9 +5,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.cardmods.EtherealMod;
+import downfall.cardmods.ExhaustMod;
 import sneckomod.SneckoMod;
 import sneckomod.powers.UnlimitedRollsPower;
-import downfall.cardmods.ExhaustMod;
 
 public class UnlimitedRolls extends AbstractSneckoCard {
 

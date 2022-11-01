@@ -11,12 +11,12 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 
 public class SlimeDeathParticleEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
-    private TextureAtlas.AtlasRegion img;
+    private final TextureAtlas.AtlasRegion img;
     private float x;
     private float y;
-    private float vX;
+    private final float vX;
     private float vY;
-    private float floor;
+    private final float floor;
 
     public SlimeDeathParticleEffect(float x, float y, Color deathColor) {
         this.img = ImageMaster.DECK_GLOW_1;

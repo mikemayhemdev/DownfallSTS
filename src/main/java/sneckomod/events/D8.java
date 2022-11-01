@@ -33,7 +33,7 @@ public class D8 extends AbstractImageEvent {
         OPTIONS = eventStrings.OPTIONS;
     }
 
-    private int finalDmg;
+    private final int finalDmg;
     private CurScreen screen;
 
     public D8() {

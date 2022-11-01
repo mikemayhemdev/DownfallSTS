@@ -31,10 +31,9 @@ public class GremlinArms extends AbstractGremlinCard {
 
     private float rotationTimer;
     private int previewIndex;
-    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
+    private final ArrayList<AbstractCard> cardsList = new ArrayList<>();
 
-    public GremlinArms()
-    {
+    public GremlinArms() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -47,9 +46,8 @@ public class GremlinArms extends AbstractGremlinCard {
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
-        for(int i = 0; i < magicNumber; i++){
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        for (int i = 0; i < magicNumber; i++) {
             int shiv = AbstractDungeon.cardRandomRng.random(0, 1);
             if (shiv == 1)
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Shiv(), 1));
@@ -58,10 +56,8 @@ public class GremlinArms extends AbstractGremlinCard {
         }
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_BONUS);
         }

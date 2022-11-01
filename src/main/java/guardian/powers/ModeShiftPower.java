@@ -20,8 +20,8 @@ public class ModeShiftPower extends AbstractGuardianPower {
     private static final int BLOCKONTRIGGER = 10;
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
-    private AbstractCreature source;
-    private boolean active;
+    private final AbstractCreature source;
+    private final boolean active;
     private int activations = 0;
     private int nextamount = 0;
 
@@ -70,7 +70,7 @@ public class ModeShiftPower extends AbstractGuardianPower {
             this.activations++;
             this.amount += Math.min(STARTINGAMOUNT + (AMOUNTGAINPERACTIVATION * activations), MAXAMOUNT); //Set max of 40 Brace
             updateDescription();
-            if (this.amount <= 0){
+            if (this.amount <= 0) {
                 onSpecificTrigger(0);
             }
 

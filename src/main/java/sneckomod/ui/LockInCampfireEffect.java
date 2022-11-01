@@ -13,7 +13,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.monsters.city.Snecko;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
@@ -23,7 +22,6 @@ import slimebound.SlimeboundMod;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 import sneckomod.patches.UnknownExtraUiPatch;
-import sneckomod.relics.SuperSneckoSoul;
 import sneckomod.relics.UnknownEgg;
 
 public class LockInCampfireEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
@@ -32,7 +30,7 @@ public class LockInCampfireEffect extends com.megacrit.cardcrawl.vfx.AbstractGam
 
     private static final float DUR = 1.5F;
     private boolean openedScreen = false;
-    private Color screenColor = AbstractDungeon.fadeColor.cpy();
+    private final Color screenColor = AbstractDungeon.fadeColor.cpy();
 
     public static int identifyRngCount;
 
@@ -58,7 +56,7 @@ public class LockInCampfireEffect extends com.megacrit.cardcrawl.vfx.AbstractGam
 
                     AbstractDungeon.topLevelEffects.add(new com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect(
 
-                            (AbstractCard) UnknownExtraUiPatch.parentCard.get(c), Settings.WIDTH * 0.35F, Settings.HEIGHT / 2));
+                            UnknownExtraUiPatch.parentCard.get(c), Settings.WIDTH * 0.35F, Settings.HEIGHT / 2));
 
 
                     AbstractDungeon.player.masterDeck.removeCard(UnknownExtraUiPatch.parentCard.get(c));
@@ -83,12 +81,12 @@ public class LockInCampfireEffect extends com.megacrit.cardcrawl.vfx.AbstractGam
             for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
                 c.update();
                 AbstractCard c2;
-                if (c instanceof AbstractUnknownCard){
+                if (c instanceof AbstractUnknownCard) {
                     if (((AbstractUnknownCard) c).myList().size() > 0) {
 
-                        if (((AbstractUnknownCard)c).lastUnknownRoll != null){
+                        if (((AbstractUnknownCard) c).lastUnknownRoll != null) {
                             SlimeboundMod.logger.info("Detected last unknown roll!");
-                            c2 = ((AbstractUnknownCard)c).lastUnknownRoll.makeCopy();
+                            c2 = ((AbstractUnknownCard) c).lastUnknownRoll.makeCopy();
 
                         } else {
                             c2 = CardLibrary.getCard(((AbstractUnknownCard) c).myList().get(SneckoMod.identifyRng.random(0, ((AbstractUnknownCard) c).myList().size() - 1))).makeCopy();
@@ -100,7 +98,7 @@ public class LockInCampfireEffect extends com.megacrit.cardcrawl.vfx.AbstractGam
 
                     if (c.upgraded) c2.upgrade();
                     cg.addToBottom(c2);
-                    UnknownExtraUiPatch.parentCard.set(c2, (AbstractUnknownCard)c);
+                    UnknownExtraUiPatch.parentCard.set(c2, (AbstractUnknownCard) c);
 
                 }
             }
@@ -114,7 +112,7 @@ public class LockInCampfireEffect extends com.megacrit.cardcrawl.vfx.AbstractGam
             this.isDone = true;
             if (com.megacrit.cardcrawl.rooms.CampfireUI.hidden) {
                 com.megacrit.cardcrawl.rooms.AbstractRoom.waitTimer = 0.0F;
-                if (AbstractDungeon.player.hasRelic(UnknownEgg.ID)){
+                if (AbstractDungeon.player.hasRelic(UnknownEgg.ID)) {
                     ((RestRoom) AbstractDungeon.getCurrRoom()).campfireUI.reopen();
                 } else {
                     AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;

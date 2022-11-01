@@ -10,9 +10,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.BufferPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 import downfall.downfallMod;
 import downfall.powers.EnemyDemonFormPower;
@@ -23,16 +21,16 @@ import java.util.ArrayList;
 public class TrueNeowPower extends AbstractBossMechanicPower {
     public static final String POWER_ID = downfallMod.makeID("NeowSpirit");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     private static final Texture tex84 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowIronclad384.png"));
     private static final Texture tex32 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowIronclad332.png"));
 
-    private boolean ironclad;
-    private boolean silent;
-    private boolean defect;
-    private boolean watcher;
-    private boolean hermit;
+    private final boolean ironclad;
+    private final boolean silent;
+    private final boolean defect;
+    private final boolean watcher;
+    private final boolean hermit;
 
     public TrueNeowPower(final AbstractCreature owner, boolean ic, boolean si, boolean de, boolean wa, boolean he) {
         this.ID = POWER_ID;
@@ -56,25 +54,24 @@ public class TrueNeowPower extends AbstractBossMechanicPower {
 
     @Override
     public void onSpecificTrigger() {
-        if (ironclad){
+        if (ironclad) {
             addToBot(new ApplyPowerAction(this.owner, this.owner, new EnemyDemonFormPower(owner, 1), 1));
         }
-        if (silent){
+        if (silent) {
             addToBot(new ApplyPowerAction(this.owner, this.owner, new ThornsPower(owner, 2), 2));
         }
-        if (defect){
+        if (defect) {
             addToBot(new ApplyPowerAction(this.owner, this.owner, new BufferPower(owner, 2), 2));
         }
-        if (watcher){
+        if (watcher) {
             addToBot(new ApplyPowerAction(this.owner, this.owner, new NeowMantraPower(owner, 5), 5));
         }
-        if (hermit){
+        if (hermit) {
             ArrayList<AbstractCard> ac = downfallMod.getRandomDownfallCurse(2);
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(ac.get(0).makeStatEquivalentCopy(), 1, true, false, false, (float) Settings.WIDTH * 0.35F, (float) Settings.HEIGHT / 2.0F));
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(ac.get(1).makeStatEquivalentCopy(), 1, true, false, false, (float) Settings.WIDTH * 0.65F, (float) Settings.HEIGHT / 2.0F));
         }
     }
-
 
 
     @Override

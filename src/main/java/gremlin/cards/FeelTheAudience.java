@@ -29,8 +29,7 @@ public class FeelTheAudience extends AbstractGremlinCard {
     private static final int UPGRADE_BONUS = 3;
     private static final int MAGIC = 1;
 
-    public FeelTheAudience()
-    {
+    public FeelTheAudience() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -54,7 +53,7 @@ public class FeelTheAudience extends AbstractGremlinCard {
         }
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage,
                 this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        if(amount > 0) {
+        if (amount > 0) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                     new WizPower(p, amount), amount));
         }
@@ -62,8 +61,7 @@ public class FeelTheAudience extends AbstractGremlinCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
         }

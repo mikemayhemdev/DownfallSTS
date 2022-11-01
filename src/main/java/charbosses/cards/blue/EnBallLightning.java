@@ -34,7 +34,7 @@ public class EnBallLightning extends AbstractBossCard {
 
     @Override
     public String overrideIntentText() {
-        return intentDmg + "+ ("  + ( 3 + AbstractEnemyOrb.masterPretendFocus + EnZap.getFocusAmountSafe()) + ")";
+        return intentDmg + "+ (" + (3 + AbstractEnemyOrb.masterPretendFocus + EnZap.getFocusAmountSafe()) + ")";
     }
 
     @Override

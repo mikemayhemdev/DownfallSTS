@@ -1,6 +1,5 @@
 package automaton.cards;
 
-import automaton.AutomatonChar;
 import automaton.cardmods.FullReleaseCardMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;

@@ -29,8 +29,7 @@ public class SkullBash extends AbstractGremlinCard {
     private static final int UPGRADE_BONUS = 2;
     private static final int MAGIC = 2;
 
-    public SkullBash()
-    {
+    public SkullBash() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -53,8 +52,7 @@ public class SkullBash extends AbstractGremlinCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
         }

@@ -6,10 +6,8 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import reskinContent.patches.CharacterSelectScreenPatches;
-import reskinContent.reskinContent;
 import slimebound.characters.SlimeboundCharacter;
 
 
@@ -22,19 +20,19 @@ public class TinyHatParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffe
     private static int yOffset = 85;
     public SlimeboundCharacter p;
     private float scale = .75F;
-    private Texture img;
-    private static float duplicatedScale = 1.0f;
+    private final Texture img;
+    private static final float duplicatedScale = 1.0f;
 
     public TinyHatParticle(AbstractPlayer p) {
         this.duration = 0.05F;
-        if(CharacterSelectScreenPatches.characters[1].reskinCount <= 0){
+        if (CharacterSelectScreenPatches.characters[1].reskinCount <= 0) {
             this.img = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/relics/tinybowlerhatinverted.png");
             W = img.getWidth();
             H = img.getHeight();
             xOffset = 20;
             yOffset = 0;
             this.scale = .75f;
-        }else {
+        } else {
             this.img = ImageMaster.loadImage("reskinContent/img/Slimebound/Slaifu/animation/hat.png");
             W = img.getWidth();
             H = img.getHeight();
@@ -42,7 +40,6 @@ public class TinyHatParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffe
             yOffset = -2;
             this.scale = 0.7f;
         }
-
 
 
         this.p = (SlimeboundCharacter) p;
@@ -77,7 +74,7 @@ public class TinyHatParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffe
 //            sb.draw(this.img, this.p.hatX + p.animX + this.p.drawX - W / 2.0F * Settings.scale  + ((xOffset / p.renderscale) * Settings.scale/ duplicatedScale), this.p.hatY + this.p.animY + this.p.drawY - H / 2.0F * Settings.scale + ((yOffset/p.renderscale) * Settings.scale/ duplicatedScale), W / 2.0F , H / 2.0F, W, H, Settings.scale * scale / duplicatedScale, Settings.scale * scale / duplicatedScale, this.p.animationAngle, 0, 0, W, H, false, false);
 
 
-        }
+    }
 }
 
 

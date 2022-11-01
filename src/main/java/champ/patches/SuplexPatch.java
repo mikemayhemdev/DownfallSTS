@@ -10,16 +10,14 @@ import com.megacrit.cardcrawl.core.Settings;
 import java.lang.reflect.Field;
 
 @SpirePatch(
-        clz=AbstractCreature.class,
-        method="updateAnimations"
+        clz = AbstractCreature.class,
+        method = "updateAnimations"
 )
-public class SuplexPatch
-{
+public class SuplexPatch {
     @SpireEnum
     public static AbstractCreature.CreatureAnimation REVERSE_GRAVITY;
 
-    public static void Prefix(AbstractCreature __instance)
-    {
+    public static void Prefix(AbstractCreature __instance) {
         float animationTimer = 0;
         AbstractCreature.CreatureAnimation animation = null;
 

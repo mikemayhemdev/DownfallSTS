@@ -24,7 +24,7 @@ public class EnemyExhaustNonAttacksAction extends AbstractGameAction {
         Iterator var2 = AbstractCharBoss.boss.hand.group.iterator();
 
         AbstractCard c;
-        while(var2.hasNext()) {
+        while (var2.hasNext()) {
             c = (AbstractCard) var2.next();
             if (c.type != CardType.ATTACK) {
                 this.addToTop(new ExhaustSpecificCardAction(c, AbstractCharBoss.boss.hand));

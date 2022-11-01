@@ -9,9 +9,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.vfx.combat.ImpactSparkEffect;
 import com.megacrit.cardcrawl.vfx.combat.LightFlareParticleEffect;
-import com.megacrit.cardcrawl.vfx.combat.LightRayFlyOutEffect;
 import guardian.GuardianMod;
 import guardian.orbs.StasisOrb;
 import guardian.powers.AutomayhemPower;
@@ -33,9 +31,10 @@ public class ReduceRightMostStasisAction extends AbstractGameAction {
             AbstractOrb theOrb = null;
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
                 if (o instanceof StasisOrb) {
-                    if (!this.fromAutomayhem || ((StasisOrb) o).passiveAmount > 1) {
+                    if (!this.fromAutomayhem || o.passiveAmount > 1) {
                         o.onStartOfTurn();
-                        if (this.fromAutomayhem && AbstractDungeon.player.hasPower(AutomayhemPower.POWER_ID)) AbstractDungeon.player.getPower(AutomayhemPower.POWER_ID).flash();
+                        if (this.fromAutomayhem && AbstractDungeon.player.hasPower(AutomayhemPower.POWER_ID))
+                            AbstractDungeon.player.getPower(AutomayhemPower.POWER_ID).flash();
                         theOrb = o;
                         break;
                     }

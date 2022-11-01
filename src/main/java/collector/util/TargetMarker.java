@@ -35,7 +35,7 @@ public class TargetMarker {
     private static final int FONT_BG_HEIGHT = 36;
 
     public float flashTimer;
-    private Color flashColor = new Color(1.0F, 1.0F, 1.0F, 0.0F);
+    private final Color flashColor = new Color(1.0F, 1.0F, 1.0F, 0.0F);
 
     public TargetMarker() {
         hb = new Hitbox(WIDTH * Settings.scale * 1.2f, HEIGHT * Settings.scale * 1.2f);

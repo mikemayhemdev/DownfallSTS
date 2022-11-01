@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import reskinContent.reskinContent;
 import reskinContent.skinCharacter.AbstractSkin;
-import theHexaghost.TheHexaghost;
 
 public class BetaHexaghost extends AbstractSkin {
 
@@ -13,7 +12,7 @@ public class BetaHexaghost extends AbstractSkin {
         this.DESCRIPTION = CardCrawlGame.languagePack.getUIString("reskinContent:ReSkinHexaghost").EXTRA_TEXT[1];
         this.portraitStatic_IMG = ImageMaster.loadImage(getAssetPath("portrait_beta_hexaghost.png"));
 
-        this.SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder.png";;
+        this.SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder.png";
         this.SHOULDER2 = "hexamodResources/images/char/mainChar/shoulderR.png";
         this.CORPSE = "hexamodResources/images/char/mainChar/corpse.png";
         this.atlasURL = "reskinContent/img/HexaghostMod/BetaHexaghost/animation/BetaHexaghost.atlas";

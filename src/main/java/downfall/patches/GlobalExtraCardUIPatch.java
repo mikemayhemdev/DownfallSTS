@@ -2,37 +2,29 @@ package downfall.patches;
 
 import champ.ChampMod;
 import champ.cards.AbstractChampCard;
-import champ.cards.StanceDance;
-import champ.cards.Taunt;
-import champ.cards.WindUp;
-import champ.stances.BerserkerStance;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import sneckomod.SneckoMod;
 import sneckomod.patches.UnknownExtraUiPatch;
 
 public class GlobalExtraCardUIPatch {
 
-    private static TextureAtlas.AtlasRegion healthBlob = ChampMod.UIAtlas.findRegion("heartOrb");
-    private static TextureAtlas.AtlasRegion crown = ChampMod.UIAtlas.findRegion("crown");
-    private static TextureAtlas.AtlasRegion openerall = ChampMod.UIAtlas.findRegion("openerAll");
-    private static TextureAtlas.AtlasRegion finisher = ChampMod.UIAtlas.findRegion("finisher");
-    private static TextureAtlas.AtlasRegion openerR = ChampMod.UIAtlas.findRegion("openerR");
-    private static TextureAtlas.AtlasRegion openerB = ChampMod.UIAtlas.findRegion("openerB");
-    private static TextureAtlas.AtlasRegion openerY = ChampMod.UIAtlas.findRegion("openerY");
-    private static TextureAtlas.AtlasRegion openerYR = ChampMod.UIAtlas.findRegion("openerYR");
-    private static TextureAtlas.AtlasRegion openerYB = ChampMod.UIAtlas.findRegion("openerYB");
-    private static TextureAtlas.AtlasRegion openerRB = ChampMod.UIAtlas.findRegion("openerRB");
+    private static final TextureAtlas.AtlasRegion healthBlob = ChampMod.UIAtlas.findRegion("heartOrb");
+    private static final TextureAtlas.AtlasRegion crown = ChampMod.UIAtlas.findRegion("crown");
+    private static final TextureAtlas.AtlasRegion openerall = ChampMod.UIAtlas.findRegion("openerAll");
+    private static final TextureAtlas.AtlasRegion finisher = ChampMod.UIAtlas.findRegion("finisher");
+    private static final TextureAtlas.AtlasRegion openerR = ChampMod.UIAtlas.findRegion("openerR");
+    private static final TextureAtlas.AtlasRegion openerB = ChampMod.UIAtlas.findRegion("openerB");
+    private static final TextureAtlas.AtlasRegion openerY = ChampMod.UIAtlas.findRegion("openerY");
+    private static final TextureAtlas.AtlasRegion openerYR = ChampMod.UIAtlas.findRegion("openerYR");
+    private static final TextureAtlas.AtlasRegion openerYB = ChampMod.UIAtlas.findRegion("openerYB");
+    private static final TextureAtlas.AtlasRegion openerRB = ChampMod.UIAtlas.findRegion("openerRB");
 
     @SpirePatch(clz = AbstractCard.class, method = "renderEnergy")
     public static class SecondEnergyRenderPatch {

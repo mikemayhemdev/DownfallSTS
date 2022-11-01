@@ -18,8 +18,8 @@ public class HexFlamesUnlockPatch {
             locator = Locator.class
     )
     public static void Insert(UnlockCharacterScreen __instance, SpriteBatch sb) {
-        if (__instance.unlock.player instanceof TheHexaghost){
-            TheHexaghost hex = (TheHexaghost)__instance.unlock.player;
+        if (__instance.unlock.player instanceof TheHexaghost) {
+            TheHexaghost hex = (TheHexaghost) __instance.unlock.player;
             hex.myBody.render(sb);
         }
 

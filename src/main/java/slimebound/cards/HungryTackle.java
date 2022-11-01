@@ -12,12 +12,9 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.actions.ExhumeLickAction;
-import slimebound.actions.ReturnRandom0Cost;
 import slimebound.actions.TackleSelfDamageAction;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PreventTackleDamagePower;
-import slimebound.powers.TackleBuffPower;
-import slimebound.powers.TackleDebuffPower;
 
 
 public class HungryTackle extends AbstractTackleCard {

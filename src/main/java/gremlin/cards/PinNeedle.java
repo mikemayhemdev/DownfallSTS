@@ -28,8 +28,7 @@ public class PinNeedle extends AbstractGremlinCard {
     private static final int UPGRADE_BONUS = 2;
     private static final int MAGIC = 2;
 
-    public PinNeedle()
-    {
+    public PinNeedle() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -47,7 +46,7 @@ public class PinNeedle extends AbstractGremlinCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                 this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         AbstractCard card = new Pinprick();
-        if(upgraded){
+        if (upgraded) {
             card.upgrade();
         }
         AbstractDungeon.actionManager.addToBottom(
@@ -56,8 +55,7 @@ public class PinNeedle extends AbstractGremlinCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;

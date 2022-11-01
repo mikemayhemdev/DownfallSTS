@@ -50,26 +50,27 @@ public class Omen extends TwoAmountPower implements CloneablePowerInterface {
                         AfflictionCounter++;
                     }
                 }
-                if (AfflictionCounter >= amount2){
+                if (AfflictionCounter >= amount2) {
                     addToBot(new VFXAction(new CollectorCurseEffect(action.target.drawX, action.target.drawY)));
                     addToBot(new LoseHPAction(action.target, action.target, amount));
                 }
             }
-        } else if( card.type == AbstractCard.CardType.ATTACK){
-            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters){
+        } else if (card.type == AbstractCard.CardType.ATTACK) {
+            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 int AfflictionCounter = 0;
                 for (AbstractPower po : m.powers) {
                     if (CollectorMod.AfflictionMatch(po.ID)) {
                         AfflictionCounter++;
                     }
                 }
-                if (AfflictionCounter >= amount2){
+                if (AfflictionCounter >= amount2) {
                     addToBot(new VFXAction(new CollectorCurseEffect(action.target.drawX, action.target.drawY)));
                     addToBot(new LoseHPAction(action.target, action.target, amount));
                 }
             }
         }
     }
+
     @Override
     public AbstractPower makeCopy() {
         return new Omen(amount);

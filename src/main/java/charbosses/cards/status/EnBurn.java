@@ -1,7 +1,6 @@
 package charbosses.cards.status;
 
 import charbosses.actions.util.CharbossDoCardQueueAction;
-import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;

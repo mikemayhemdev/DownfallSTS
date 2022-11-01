@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.exordium.ScrapOoze;
 import com.megacrit.cardcrawl.localization.EventStrings;
+import downfall.downfallMod;
 import gremlin.characters.GremlinCharacter;
 
 public class ScrapOozePatch {
@@ -14,27 +15,25 @@ public class ScrapOozePatch {
     private static int realDmg = 0;
 
     @SpirePatch(clz = ScrapOoze.class, method = SpirePatch.CONSTRUCTOR)
-    public static class OozeConstructior
-    {
+    public static class OozeConstructior {
         public static void Postfix(ScrapOoze __instance) {
-            if (AbstractDungeon.player instanceof GremlinCharacter) {
-                int dmg = (int) ReflectionHacks.getPrivate(__instance, ScrapOoze.class, "dmg");
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+                int dmg = ReflectionHacks.getPrivate(__instance, ScrapOoze.class, "dmg");
                 dmg = (dmg + 4) / 5; // Divided by 5 rounded up
-                int relicObtainChance = (int) ReflectionHacks.getPrivate(__instance, ScrapOoze.class, "relicObtainChance");
+                int relicObtainChance = ReflectionHacks.getPrivate(__instance, ScrapOoze.class, "relicObtainChance");
                 __instance.imageEventText.updateDialogOption(0, strings.OPTIONS[0] + dmg + ScrapOoze.OPTIONS[1] + relicObtainChance + ScrapOoze.OPTIONS[2]);
             }
         }
     }
 
     @SpirePatch(clz = ScrapOoze.class, method = "buttonEffect")
-    public static class OozePreDamage
-    {
+    public static class OozePreDamage {
         @SpireInsertPatch(
-                rloc=4
+                rloc = 4
         )
-        public static void Insert(ScrapOoze __instance, int buttonPressed){
-            if (AbstractDungeon.player instanceof GremlinCharacter) {
-                int dmg = (int) ReflectionHacks.getPrivate(__instance, ScrapOoze.class, "dmg");
+        public static void Insert(ScrapOoze __instance, int buttonPressed) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+                int dmg = ReflectionHacks.getPrivate(__instance, ScrapOoze.class, "dmg");
                 realDmg = dmg;
                 dmg = (dmg + 4) / 5; // Divided by 5 rounded up
                 ((GremlinCharacter) AbstractDungeon.player).damageGremlins(dmg);
@@ -44,29 +43,27 @@ public class ScrapOozePatch {
     }
 
     @SpirePatch(clz = ScrapOoze.class, method = "buttonEffect")
-    public static class OozePostDamage
-    {
+    public static class OozePostDamage {
         @SpireInsertPatch(
-                rloc=7
+                rloc = 7
         )
-        public static void Insert(ScrapOoze __instance, int buttonPressed){
-            if (AbstractDungeon.player instanceof GremlinCharacter) {
+        public static void Insert(ScrapOoze __instance, int buttonPressed) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
                 ReflectionHacks.setPrivate(__instance, ScrapOoze.class, "dmg", realDmg);
             }
         }
     }
 
     @SpirePatch(clz = ScrapOoze.class, method = "buttonEffect")
-    public static class OozeOption
-    {
+    public static class OozeOption {
         @SpireInsertPatch(
-                rloc=28
+                rloc = 28
         )
         public static void Insert(ScrapOoze __instance, int buttonPressed) {
-            if (AbstractDungeon.player instanceof GremlinCharacter) {
-                int dmg = (int) ReflectionHacks.getPrivate(__instance, ScrapOoze.class, "dmg");
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+                int dmg = ReflectionHacks.getPrivate(__instance, ScrapOoze.class, "dmg");
                 dmg = (dmg + 4) / 5; // Divided by 5 rounded up
-                int relicObtainChance = (int) ReflectionHacks.getPrivate(__instance, ScrapOoze.class, "relicObtainChance");
+                int relicObtainChance = ReflectionHacks.getPrivate(__instance, ScrapOoze.class, "relicObtainChance");
                 __instance.imageEventText.updateDialogOption(0, strings.OPTIONS[1] + dmg + ScrapOoze.OPTIONS[1] + relicObtainChance + ScrapOoze.OPTIONS[2]);
             }
         }

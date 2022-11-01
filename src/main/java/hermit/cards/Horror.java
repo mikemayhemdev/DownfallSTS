@@ -2,7 +2,6 @@ package hermit.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -55,8 +54,8 @@ public class Horror extends AbstractDynamicCard {
 
     public Horror() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber=magicNumber=3;
-        defaultBaseSecondMagicNumber=defaultSecondMagicNumber=2;
+        baseMagicNumber = magicNumber = 3;
+        defaultBaseSecondMagicNumber = defaultSecondMagicNumber = 2;
         loadJokeCardImage(this, "horror.png");
     }
 
@@ -68,7 +67,7 @@ public class Horror extends AbstractDynamicCard {
 
         Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
-        for(AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters){
+        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             this.addToBot(new ApplyPowerAction(mo, p, new Bruise(mo, total_bruise), total_bruise, true, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
             this.addToBot(new ApplyPowerAction(mo, p, new HorrorPower(mo, 1), 1, true));
         }

@@ -4,7 +4,6 @@ import automaton.powers.VerifyPower;
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
 
 public class Verify extends AbstractBronzeCard {
 
@@ -14,7 +13,7 @@ public class Verify extends AbstractBronzeCard {
 
     public Verify() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-       // this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        // this.tags.add(SneckoMod.BANNEDFORSNECKO);
         tags.add(BaseModCardTags.FORM);
         isEthereal = true;
     }

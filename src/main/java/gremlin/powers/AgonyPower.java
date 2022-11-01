@@ -54,7 +54,7 @@ public class AgonyPower extends AbstractGremlinPower {
 
     public float atDamageGive(float damage, DamageInfo.DamageType type) {
         if (type == DamageInfo.DamageType.NORMAL) {
-            return  damage * 0.2F;
+            return damage * 0.2F;
         } else {
             return damage;
         }

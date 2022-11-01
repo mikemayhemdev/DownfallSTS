@@ -6,17 +6,14 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class SharpenBladesAction
-        extends AbstractGameAction
-{
-    public SharpenBladesAction()
-    {
+        extends AbstractGameAction {
+    public SharpenBladesAction() {
         this.duration = Settings.ACTION_DUR_XFAST;
     }
 
-    public void update()
-    {
+    public void update() {
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if(c.type == AbstractCard.CardType.ATTACK) {
+            if (c.type == AbstractCard.CardType.ATTACK) {
                 c.setCostForTurn(-9);
             }
         }

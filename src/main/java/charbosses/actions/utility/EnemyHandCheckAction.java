@@ -4,7 +4,7 @@ import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 
 public class EnemyHandCheckAction extends AbstractGameAction {
-    private AbstractCharBoss player;
+    private final AbstractCharBoss player;
 
     public EnemyHandCheckAction() {
         this.player = AbstractCharBoss.boss;

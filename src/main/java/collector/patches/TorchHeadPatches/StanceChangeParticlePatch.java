@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.stance.StanceChangeParticleGenerator;
 import com.megacrit.cardcrawl.vfx.stance.WrathStanceChangeParticle;
+import downfall.downfallMod;
 
 public class StanceChangeParticlePatch {
     @SpirePatch(
@@ -25,7 +26,7 @@ public class StanceChangeParticlePatch {
     public static class ParticleGeneratorConstructorPatch {
         @SpirePostfixPatch
         public static void Postfix(StanceChangeParticleGenerator __instance, float x, float y, String stanceId) {
-            if (AbstractDungeon.player instanceof TorchChar) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)) {
                 DragonField.isDragon.set(__instance, true);
             }
         }
@@ -42,7 +43,7 @@ public class StanceChangeParticlePatch {
                     System.out.println("BUG - ParticleGeneratorRenderPatch!");
                 }
                 prevPlayer = AbstractDungeon.player;
-                AbstractDungeon.player = ((CollectorChar) AbstractDungeon.player).torch;
+                AbstractDungeon.player = CollectorChar.torch;
             }
         }
 
@@ -85,7 +86,7 @@ public class StanceChangeParticlePatch {
                     System.out.println("BUG - WrathStanceChangeParticle!");
                 }
                 prevPlayer = AbstractDungeon.player;
-                AbstractDungeon.player = ((CollectorChar) AbstractDungeon.player).torch;
+                AbstractDungeon.player = CollectorChar.torch;
             }
         }
 

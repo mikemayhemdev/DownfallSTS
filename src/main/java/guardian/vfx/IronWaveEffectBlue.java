@@ -17,7 +17,7 @@ public class IronWaveEffectBlue extends AbstractGameEffect {
     private float waveTimer = 0.0F;
     private float x;
     private float y;
-    private float cX;
+    private final float cX;
 
     public IronWaveEffectBlue(float x, float y, float cX) {
         this.x = x + 120.0F * Settings.scale;

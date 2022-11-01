@@ -24,9 +24,9 @@ public class Mindflare extends AbstractCollectorCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new DamageAction(m,new DamageInfo(p,damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
-        for (AbstractPower po : m.powers){
-            if (CollectorMod.AfflictionMatch(po.ID)){
+        atb(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
+        for (AbstractPower po : m.powers) {
+            if (CollectorMod.AfflictionMatch(po.ID)) {
                 addToBot(new VFXAction(new InflameEffect(p)));
                 atb(new AbstractGameAction() {
                     @Override

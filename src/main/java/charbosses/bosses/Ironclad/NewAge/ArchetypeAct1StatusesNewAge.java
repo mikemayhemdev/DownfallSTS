@@ -2,8 +2,6 @@ package charbosses.bosses.Ironclad.NewAge;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
-import charbosses.cards.colorless.EnDramaticEntrance;
-import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnDoubt;
 import charbosses.cards.curses.EnIcky;
 import charbosses.cards.curses.EnMalfunctioning;
@@ -11,15 +9,12 @@ import charbosses.cards.red.*;
 import charbosses.cards.status.EnBurn;
 import charbosses.cards.status.EnDazed;
 import charbosses.cards.status.EnWound;
-import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
-import charbosses.powers.bossmechanicpowers.DefectVoidPower;
 import charbosses.powers.bossmechanicpowers.IroncladStatusPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import java.util.ArrayList;
 
@@ -105,8 +100,8 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
                     addToList(cardsList, new EnThunderclap(), true);
                     addToList(cardsList, new EnFeelNoPain());
                     addToList(cardsList, new EnDazed());
-                    turn=0;
-                    looped=true;
+                    turn = 0;
+                    looped = true;
                     break;
             }
         } else {
@@ -144,7 +139,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
                     addToList(cardsList, new EnDefendRed());
                     addToList(cardsList, new EnWound());
                     theArtOfWar.beginPulse();
-                    turn=0;
+                    turn = 0;
                     break;
             }
         }

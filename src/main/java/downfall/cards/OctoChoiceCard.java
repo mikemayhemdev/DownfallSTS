@@ -3,14 +3,13 @@ package downfall.cards;
 import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.localization.CardStrings;
-import downfall.util.CardIgnore;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class OctoChoiceCard extends CustomCard {
     private static final int COST = -2;
@@ -43,9 +42,9 @@ public class OctoChoiceCard extends CustomCard {
         super(id, name, IMG, COST, description, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.NONE);
         this.IMG = IMG;
         if (id != null && CardCrawlGame.languagePack.getCardStrings(id).NAME == "[MISSING_TITLE]") {
-            BaseMod.loadCustomStrings(CardStrings.class, "{\"" + id 
-            + "\": {\"NAME\": \"" + name 
-            + "\", \"DESCRIPTION\": \" " + description +"\"}}");
+            BaseMod.loadCustomStrings(CardStrings.class, "{\"" + id
+                    + "\": {\"NAME\": \"" + name
+                    + "\", \"DESCRIPTION\": \" " + description + "\"}}");
         }
     }
 
@@ -71,13 +70,13 @@ public class OctoChoiceCard extends CustomCard {
 
     @Override
     public void hover() {
-        if (card1 != null){
+        if (card1 != null) {
             prev1 = card1;
         }
-        if (card2 != null){
+        if (card2 != null) {
             prev2 = card2;
         }
-        if (card3 != null){
+        if (card3 != null) {
             prev3 = card3;
         }
         super.hover();

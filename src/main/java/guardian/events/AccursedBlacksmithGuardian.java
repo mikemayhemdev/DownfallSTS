@@ -110,45 +110,42 @@ public class AccursedBlacksmithGuardian extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch (this.screenNum) {
-            case 0:
-                switch (buttonPressed) {
-                    case 0:
-                        this.pickCardForSocket = true;
-                        this.imageEventText.updateBodyText(DESCRIPTIONSGUARDIAN[0]);
-                        this.screenNum = 2;
-                        this.imageEventText.updateDialogOption(0, OPTIONS[2]);
-                        AbstractDungeon.gridSelectScreen.open(GuardianMod.getCardsWithSockets(), 1, false, OPTIONSGUARDIAN[1]);
+        if (this.screenNum == 0) {
+            switch (buttonPressed) {
+                case 0:
+                    this.pickCardForSocket = true;
+                    this.imageEventText.updateBodyText(DESCRIPTIONSGUARDIAN[0]);
+                    this.screenNum = 2;
+                    this.imageEventText.updateDialogOption(0, OPTIONS[2]);
+                    AbstractDungeon.gridSelectScreen.open(GuardianMod.getCardsWithSockets(), 1, false, OPTIONSGUARDIAN[1]);
 
-                        break;
-                    case 1:
-                        this.pickCard = true;
-                        AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getUpgradableCards(), 1, OPTIONS[3], true, false, false, false);
-                        this.imageEventText.updateBodyText(FORGE_RESULT);
-                        this.screenNum = 2;
-                        this.imageEventText.updateDialogOption(0, OPTIONS[2]);
-                        break;
-                    case 2:
-                        this.screenNum = 2;
-                        this.imageEventText.updateBodyText(RUMMAGE_RESULT + CURSE_RESULT2);
-                        AbstractCard curse = new Pain();
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), new WarpedTongs());
-                        logMetricObtainCardAndRelic(ID, "Rummage", curse, new WarpedTongs());
-                        this.imageEventText.updateDialogOption(0, OPTIONS[2]);
-                        break;
-                    case 3:
-                        this.screenNum = 2;
-                        this.imageEventText.updateBodyText(LEAVE_RESULT);
-                        this.imageEventText.updateDialogOption(0, OPTIONS[2]);
-                        logMetricIgnored(ID);
-                }
+                    break;
+                case 1:
+                    this.pickCard = true;
+                    AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getUpgradableCards(), 1, OPTIONS[3], true, false, false, false);
+                    this.imageEventText.updateBodyText(FORGE_RESULT);
+                    this.screenNum = 2;
+                    this.imageEventText.updateDialogOption(0, OPTIONS[2]);
+                    break;
+                case 2:
+                    this.screenNum = 2;
+                    this.imageEventText.updateBodyText(RUMMAGE_RESULT + CURSE_RESULT2);
+                    AbstractCard curse = new Pain();
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
+                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), new WarpedTongs());
+                    logMetricObtainCardAndRelic(ID, "Rummage", curse, new WarpedTongs());
+                    this.imageEventText.updateDialogOption(0, OPTIONS[2]);
+                    break;
+                case 3:
+                    this.screenNum = 2;
+                    this.imageEventText.updateBodyText(LEAVE_RESULT);
+                    this.imageEventText.updateDialogOption(0, OPTIONS[2]);
+                    logMetricIgnored(ID);
+            }
 
-                this.imageEventText.clearRemainingOptions();
-                break;
-            default:
-
-                this.openMap();
+            this.imageEventText.clearRemainingOptions();
+        } else {
+            this.openMap();
         }
 
     }

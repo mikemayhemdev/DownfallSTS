@@ -22,9 +22,9 @@ public class TrigggerSpecificSlimeAttackAction extends AbstractGameAction {
 
 
         o.onStartOfTurn();
-        for (AbstractOrb otherOrb : AbstractDungeon.player.orbs){
-            if (otherOrb instanceof DarklingSlime){
-                if (otherOrb != this.o){
+        for (AbstractOrb otherOrb : AbstractDungeon.player.orbs) {
+            if (otherOrb instanceof DarklingSlime) {
+                if (otherOrb != this.o) {
                     otherOrb.onStartOfTurn();
                 }
             }

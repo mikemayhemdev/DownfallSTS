@@ -16,8 +16,8 @@ public class DarkSuffusion extends AbstractCollectorCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToEnemy(m, new PoisonPower(m,p,magicNumber));
-        applyToEnemy(m, new VulnerablePower(m,1,false));
+        applyToEnemy(m, new PoisonPower(m, p, magicNumber));
+        applyToEnemy(m, new VulnerablePower(m, 1, false));
     }
 
     @Override

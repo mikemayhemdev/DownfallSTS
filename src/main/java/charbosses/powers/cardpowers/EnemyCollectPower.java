@@ -1,10 +1,6 @@
 package charbosses.powers.cardpowers;
 
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -15,7 +11,7 @@ public class EnemyCollectPower extends AbstractPower {
     private static final PowerStrings powerStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
-    private int cardsDoubledThisTurn = 1;
+    private final int cardsDoubledThisTurn = 1;
 
     public EnemyCollectPower(AbstractCreature owner, int amount) {
         this.name = NAME;

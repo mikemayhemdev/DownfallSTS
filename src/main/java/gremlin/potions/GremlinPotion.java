@@ -1,6 +1,5 @@
 package gremlin.potions;
 
-import basemod.abstracts.CustomPotion;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -30,7 +29,7 @@ public class GremlinPotion extends AbstractPotion {
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
     public GremlinPotion() {
-        super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.SPHERE, PotionEffect.RAINBOW, Color.WHITE, (Color)null, (Color)null);
+        super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.SPHERE, PotionEffect.RAINBOW, Color.WHITE, null, null);
         this.isThrown = false;
         this.targetRequired = false;
     }

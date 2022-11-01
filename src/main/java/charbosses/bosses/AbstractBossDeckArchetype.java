@@ -119,7 +119,7 @@ public abstract class AbstractBossDeckArchetype {
         addToList(c, q, false);
     }
 
-    private String ID;
+    private final String ID;
 
     public AbstractBossDeckArchetype(String id, String loggerClassName, String loggerArchetypeName) {
 

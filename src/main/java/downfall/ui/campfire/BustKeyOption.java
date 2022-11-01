@@ -24,10 +24,10 @@ public class BustKeyOption extends AbstractCampfireOption {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(downfallMod.makeID("BustKeyButton"));
     public static final String[] TEXT = uiStrings.TEXT;
     private static final int MAXHP_INC = 10;
-    private Keys key;
+    private final Keys key;
     private boolean used;
     private boolean hacked;
-    private float hackTime = 0F;
+    private final float hackTime = 0F;
     private int soulToCost = 100;
 
     public BustKeyOption() {
@@ -108,7 +108,7 @@ public class BustKeyOption extends AbstractCampfireOption {
     }
 
     public void update() {
-        float hackScale = (float) ReflectionHacks.getPrivate(this, AbstractCampfireOption.class, "scale");
+        float hackScale = ReflectionHacks.getPrivate(this, AbstractCampfireOption.class, "scale");
 
         if (this.hb.hovered) {
 

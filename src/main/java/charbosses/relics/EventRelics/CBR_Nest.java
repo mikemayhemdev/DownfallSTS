@@ -8,8 +8,8 @@ import downfall.downfallMod;
 
 public class CBR_Nest extends AbstractCharbossRelic {
     public static String ID = downfallMod.makeID("Nest");
-    private static RelicTier tier = RelicTier.SPECIAL;
-    private static LandingSound sound = LandingSound.MAGICAL;
+    private static final RelicTier tier = RelicTier.SPECIAL;
+    private static final LandingSound sound = LandingSound.MAGICAL;
 
     public CBR_Nest() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/nest.png")));
@@ -18,7 +18,7 @@ public class CBR_Nest extends AbstractCharbossRelic {
 
     @Override
     public String getUpdatedDescription() {
-         return this.DESCRIPTIONS[0];
+        return this.DESCRIPTIONS[0];
     }
 
 

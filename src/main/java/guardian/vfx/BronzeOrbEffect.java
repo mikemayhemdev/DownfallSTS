@@ -18,8 +18,8 @@ public class BronzeOrbEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffe
     private static int W;
     public AbstractPlayer p;
     public AbstractMonster m;
-    private float scale = 1F;
-    private Texture img;
+    private final float scale = 1F;
+    private final Texture img;
     private float currentX;
     private float targetX;
     private float currentY;
@@ -27,8 +27,8 @@ public class BronzeOrbEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffe
     private boolean entering;
     private boolean firing;
     private boolean exiting;
-    private float Xoffset = 80F * Settings.scale;
-    private float YOffset = 150F * Settings.scale;
+    private final float Xoffset = 80F * Settings.scale;
+    private final float YOffset = 150F * Settings.scale;
 
     public BronzeOrbEffect(AbstractPlayer p, AbstractMonster m) {
         this.duration = 0.5F;

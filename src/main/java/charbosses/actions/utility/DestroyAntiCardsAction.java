@@ -1,16 +1,14 @@
 package charbosses.actions.utility;
 
-import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class DestroyAntiCardsAction extends AbstractGameAction {
 
-    private String cardIDToKill;
+    private final String cardIDToKill;
 
     public DestroyAntiCardsAction(String ID) {
         cardIDToKill = ID;

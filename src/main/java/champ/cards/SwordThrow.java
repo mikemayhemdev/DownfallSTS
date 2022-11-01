@@ -1,9 +1,7 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.powers.EntangleNextTurnPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
@@ -22,8 +20,8 @@ public class SwordThrow extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) dmg(m, AbstractGameAction.AttackEffect.SMASH);
-        if (!bcombo()) applyToSelf(new WeakPower(p,2, false));
-       // if (bcombo()) atb(new ReducePowerAction(p,p,WeakPower.POWER_ID,2));
+        if (!bcombo()) applyToSelf(new WeakPower(p, 2, false));
+        // if (bcombo()) atb(new ReducePowerAction(p,p,WeakPower.POWER_ID,2));
     }
 
     @Override

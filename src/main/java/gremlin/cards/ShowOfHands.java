@@ -24,8 +24,7 @@ public class ShowOfHands extends AbstractGremlinCard {
     private static final int COST = 1;
     private static final int MAGIC = 2;
 
-    public ShowOfHands()
-    {
+    public ShowOfHands() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -34,18 +33,15 @@ public class ShowOfHands extends AbstractGremlinCard {
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
-        if(upgraded){
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        if (upgraded) {
             AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
         }
         AbstractDungeon.actionManager.addToBottom(new BlockPerCardInHandAction(magicNumber));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             initializeDescription();

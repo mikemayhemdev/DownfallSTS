@@ -13,11 +13,11 @@ public class StealRelicEffect extends AbstractGameEffect {
     private static final int dispersalspeed = 100;
 
     private int frames;
-    private AbstractCreature ac;
-    private AbstractRelic ar;
+    private final AbstractCreature ac;
+    private final AbstractRelic ar;
 
-    private float startX;
-    private float startY;
+    private final float startX;
+    private final float startY;
 
     private float currentX;
     private float currentY;

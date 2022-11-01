@@ -58,8 +58,8 @@ public class TorchChar extends CustomPlayer implements CustomSavable<ArrayList<I
     public Color attackIconColor = CardHelper.getColor(255, 80, 80);
 
     private float hoverTimer;
-    private Color nameColor;
-    private Color nameBgColor;
+    private final Color nameColor;
+    private final Color nameBgColor;
 
     public int tier2Perk = -1;
     public int tier3Perk = -1;
@@ -69,8 +69,8 @@ public class TorchChar extends CustomPlayer implements CustomSavable<ArrayList<I
 
     public TorchChar(String name, float hb_x, float hb_y, float hb_w, float hb_h, CollectorChar master) {
         super(name, master.chosenClass, null,
-                null, null,new SpineAnimation("collectorResources/images/char/mainChar/TorchHead/skeleton.atlas",
-                        "collectorResources/images/char/mainChar/TorchHead/skeleton.json",1));
+                null, null, new SpineAnimation("collectorResources/images/char/mainChar/TorchHead/skeleton.atlas",
+                        "collectorResources/images/char/mainChar/TorchHead/skeleton.json", 1));
         logger.info("Dragon constructor called");
 
         this.name = name;
@@ -121,6 +121,7 @@ public class TorchChar extends CustomPlayer implements CustomSavable<ArrayList<I
             maxHealth = data.get(1);
         }
     }
+
     @Override
     public void preBattlePrep() {
         powers.clear();
@@ -228,10 +229,7 @@ public class TorchChar extends CustomPlayer implements CustomSavable<ArrayList<I
     @Override
     public void damage(DamageInfo info) {
         int damageAmount = info.output;
-        boolean hadBlock = true;
-        if (currentBlock == 0) {
-            hadBlock = false;
-        }
+        boolean hadBlock = currentBlock != 0;
 
         if (damageAmount > 1 && this.hasPower("IntangiblePlayer")) {
             damageAmount = 1;
@@ -270,7 +268,7 @@ public class TorchChar extends CustomPlayer implements CustomSavable<ArrayList<I
 
         if (damageAmount > 0) {
             TorchAggro -= 1;
-            if (TorchAggro < 1){
+            if (TorchAggro < 1) {
                 master.setFront(master);
             }
             for (AbstractPower power : powers) {
@@ -342,10 +340,10 @@ public class TorchChar extends CustomPlayer implements CustomSavable<ArrayList<I
         this.healthHb.update();
         this.updateReticle();
         this.tint.update();
-        if (AbstractDungeon.getCurrRoom().phase != AbstractRoom.RoomPhase.EVENT ||!(AbstractDungeon.getCurrRoom() instanceof RestRoom)) {
+        if (AbstractDungeon.getCurrRoom().phase != AbstractRoom.RoomPhase.EVENT || !(AbstractDungeon.getCurrRoom() instanceof RestRoom)) {
             AbstractDungeon.effectList.add(new TorchHeadFireEffect(this.skeleton.getX() + this.skeleton.findBone("fireslot").getX() + 10.0F * Settings.scale, this.skeleton.getY() + this.skeleton.findBone("fireslot").getY() + 110.0F * Settings.scale));
         }
-        if (AbstractDungeon.getCurrRoom() instanceof NeowRoom){
+        if (AbstractDungeon.getCurrRoom() instanceof NeowRoom) {
             AbstractDungeon.effectList.add(new TorchHeadFireEffect(this.skeleton.getX() + this.skeleton.findBone("fireslot").getX() + 10.0F * Settings.scale, this.skeleton.getY() + this.skeleton.findBone("fireslot").getY() + 110.0F * Settings.scale));
         }
 

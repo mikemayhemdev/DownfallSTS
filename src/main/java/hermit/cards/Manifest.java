@@ -10,7 +10,6 @@ import hermit.HermitMod;
 import hermit.actions.ManifestAction;
 import hermit.characters.hermit;
 
-
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 

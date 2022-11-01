@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 public class MassFeedAction
         extends AbstractGameAction {
     public int[] damage;
-    private int increaseHpAmount;
+    private final int increaseHpAmount;
 
     public MassFeedAction(AbstractCreature source, int[] amount, DamageInfo.DamageType type,
                           AbstractGameAction.AttackEffect effect, int increaseHpAmount) {

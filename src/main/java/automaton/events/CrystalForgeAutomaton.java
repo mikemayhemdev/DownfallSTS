@@ -10,12 +10,9 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import guardian.GuardianMod;
-import guardian.cards.*;
 
 import java.util.ArrayList;
 
@@ -47,8 +44,8 @@ public class CrystalForgeAutomaton extends AbstractImageEvent {
     private boolean pickCardForHP = false;
     private boolean pickCardForTransmute = false;
 
-    private ArrayList<AbstractCard> validCards;
-    private ArrayList<AbstractCard> rareCards;
+    private final ArrayList<AbstractCard> validCards;
+    private final ArrayList<AbstractCard> rareCards;
 
     public CrystalForgeAutomaton() {
         super(NAME, INTRO, GuardianMod.getResourcePath("/events/grimForge.jpg"));
@@ -123,55 +120,51 @@ public class CrystalForgeAutomaton extends AbstractImageEvent {
 
 
     protected void buttonEffect(int buttonPressed) {
-        switch (this.screenNum) {
-            case 0:
-                switch (buttonPressed) {
-                    case 0:
-                        this.screenNum = 2;
-                        //this.pickCardForSalvageGems = true;
-                        this.imageEventText.updateBodyText(COMBINE);
-                        BottledCode relic = new BottledCode();
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), relic);
+        if (this.screenNum == 0) {
+            switch (buttonPressed) {
+                case 0:
+                    this.screenNum = 2;
+                    //this.pickCardForSalvageGems = true;
+                    this.imageEventText.updateBodyText(COMBINE);
+                    BottledCode relic = new BottledCode();
+                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), relic);
 
-                        AbstractDungeon.player.decreaseMaxHealth(10);
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[4]);
-                        logMetricObtainRelicAndLoseMaxHP(ID, "Craft", relic, 10);
-                        break;
-                    case 1:
-                        this.screenNum = 2;
-                        this.pickCardForHP = true;
-                        AbstractDungeon.gridSelectScreen.open(AutomatonMod.getRareCards(), 1, DESCRIPTIONS[5], false, false, false, false);
-                        this.imageEventText.updateBodyText(REFORGE);
+                    AbstractDungeon.player.decreaseMaxHealth(10);
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.setDialogOption(OPTIONS[4]);
+                    logMetricObtainRelicAndLoseMaxHP(ID, "Craft", relic, 10);
+                    break;
+                case 1:
+                    this.screenNum = 2;
+                    this.pickCardForHP = true;
+                    AbstractDungeon.gridSelectScreen.open(AutomatonMod.getRareCards(), 1, DESCRIPTIONS[5], false, false, false, false);
+                    this.imageEventText.updateBodyText(REFORGE);
 
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[4]);
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.setDialogOption(OPTIONS[4]);
 
-                        break;
-                    case 2:
-                        this.screenNum = 2;
-                        this.pickCardForTransmute = true;
-                        this.imageEventText.updateBodyText(TRANSMUTE);
-                        AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, DESCRIPTIONS[5], false, false, false, false);
+                    break;
+                case 2:
+                    this.screenNum = 2;
+                    this.pickCardForTransmute = true;
+                    this.imageEventText.updateBodyText(TRANSMUTE);
+                    AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, DESCRIPTIONS[5], false, false, false, false);
 
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[4]);
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.setDialogOption(OPTIONS[4]);
 
-                        break;
-                    case 3:
-                        this.screenNum = 2;
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.updateBodyText(LEAVE);
-                        this.imageEventText.setDialogOption(OPTIONS[4]);
-                        logMetricIgnored(ID);
+                    break;
+                case 3:
+                    this.screenNum = 2;
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.updateBodyText(LEAVE);
+                    this.imageEventText.setDialogOption(OPTIONS[4]);
+                    logMetricIgnored(ID);
 
-                        break;
-                }
-
-
-                break;
-            default:
-                this.openMap();
+                    break;
+            }
+        } else {
+            this.openMap();
         }
 
     }

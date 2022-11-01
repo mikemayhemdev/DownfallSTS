@@ -6,7 +6,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.cutscenes.NeowNarrationScreen;
 import downfall.downfallMod;
-import downfall.patches.EvilModeCharacterSelect;
 
 @SpirePatch(clz = NeowNarrationScreen.class, method = SpirePatch.CONSTRUCTOR)
 public class EndingChangePatches {

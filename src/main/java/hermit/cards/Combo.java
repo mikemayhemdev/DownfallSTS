@@ -53,7 +53,6 @@ public class Combo extends AbstractDynamicCard {
     }
 
 
-
     //Upgraded stats.
     @Override
     public void upgrade() {

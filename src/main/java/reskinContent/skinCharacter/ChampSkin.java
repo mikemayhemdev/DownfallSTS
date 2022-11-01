@@ -1,10 +1,11 @@
 package reskinContent.skinCharacter;
 
-import champ.ChampChar;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.downfallMod;
-import reskinContent.skinCharacter.skins.Champ.*;
+import reskinContent.skinCharacter.skins.Champ.BetaChamp;
+import reskinContent.skinCharacter.skins.Champ.ChampOriginal;
+import reskinContent.skinCharacter.skins.Champ.ChampSister;
 import reskinContent.vfx.ReskinUnlockedTextEffect;
 
 

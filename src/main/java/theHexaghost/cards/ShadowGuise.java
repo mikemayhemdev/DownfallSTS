@@ -1,13 +1,12 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theHexaghost.HexaMod;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
+import theHexaghost.HexaMod;
 
 public class ShadowGuise extends AbstractHexaCard {
 
@@ -59,7 +58,7 @@ public class ShadowGuise extends AbstractHexaCard {
     public AbstractCard makeStatEquivalentCopy() {
         ShadowGuise card = (ShadowGuise) this.makeCopy();
 
-        for(int i = 0; i < this.timesUpgraded; ++i) {
+        for (int i = 0; i < this.timesUpgraded; ++i) {
             card.upgrade();
         }
 

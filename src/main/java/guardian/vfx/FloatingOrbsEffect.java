@@ -19,8 +19,8 @@ public class FloatingOrbsEffect extends AbstractGameEffect {
     protected TextureAtlas atlas;
     protected Skeleton skeleton;
     protected AnimationStateData stateData;
-    private float x;
-    private float y;
+    private final float x;
+    private final float y;
 
     private float time;
 

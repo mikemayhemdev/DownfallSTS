@@ -23,25 +23,21 @@ public class SharpenBlades extends AbstractGremlinCard {
 
     private static final int COST = 2;
 
-    public SharpenBlades()
-    {
+    public SharpenBlades() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.tags.add(SNEAKY_GREMLIN);
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
-        if(upgraded){
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        if (upgraded) {
             AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
         }
         AbstractDungeon.actionManager.addToBottom(new SharpenBladesAction());
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             initializeDescription();

@@ -27,20 +27,17 @@ public class PolishPower extends AbstractGremlinPower {
         updateWardsInHand();
     }
 
-    public void updateDescription()
-    {
+    public void updateDescription() {
         this.description = strings.DESCRIPTIONS[0] + this.amount + strings.DESCRIPTIONS[1];
     }
 
-    public void stackPower(int stackAmount)
-    {
+    public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
         this.amount += stackAmount;
         updateWardsInHand();
     }
 
-    private void updateWardsInHand()
-    {
+    private void updateWardsInHand() {
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
             if ((c instanceof Ward)) {
                 if (!c.upgraded) {
@@ -52,8 +49,7 @@ public class PolishPower extends AbstractGremlinPower {
         }
     }
 
-    public void onDrawOrDiscard()
-    {
+    public void onDrawOrDiscard() {
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
             if ((c instanceof Ward)) {
                 if (!c.upgraded) {

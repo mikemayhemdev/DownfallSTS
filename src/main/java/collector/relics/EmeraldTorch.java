@@ -10,17 +10,18 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 public class EmeraldTorch extends CustomRelic {
     public static final String ID = CollectorMod.makeID("EmeraldTorch");
     private static final String IMG_PATH = "EmeraldTorch.png";
-    private static final String OUTLINE_IMG_PATH ="EmeraldTorch.png";
+    private static final String OUTLINE_IMG_PATH = "EmeraldTorch.png";
 
     public EmeraldTorch() {
         super(ID, new Texture(CollectorMod.makeRelicPath(IMG_PATH)), new Texture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.STARTER, LandingSound.MAGICAL);
 
 
     }
+
     public void atBattleStart() {
         this.flash();
         this.addToTop(new RelicAboveCreatureAction(CollectorChar.torch, this));
-        this.addToBot(new GainBlockAction(CollectorChar.torch,5));
+        this.addToBot(new GainBlockAction(CollectorChar.torch, 5));
     }
 }
 

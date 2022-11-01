@@ -3,12 +3,7 @@ package automaton.util;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState.TrackEntry;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ChangeStateAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
-import com.megacrit.cardcrawl.actions.common.RollMoveAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
@@ -18,11 +13,10 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.AbstractMonster.EnemyType;
-import com.megacrit.cardcrawl.monsters.AbstractMonster.Intent;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+
 import java.util.Iterator;
 
 public class ProtoDeca extends AbstractMonster {
@@ -40,13 +34,13 @@ public class ProtoDeca extends AbstractMonster {
     private static final int BEAM_DMG = 10;
     private static final int BEAM_AMT = 2;
     private static final int A_2_BEAM_DMG = 12;
-    private int beamDmg;
+    private final int beamDmg;
     private static final int BEAM_DAZE_AMT = 2;
     private static final int PROTECT_BLOCK = 16;
     private boolean isAttacking;
 
     public ProtoDeca() {
-        super(NAME, "Deca", 250, 0.0F, -26.0F, 390.0F, 390.0F, (String)null, -350.0F, 30.0F);
+        super(NAME, "Deca", 250, 0.0F, -26.0F, 390.0F, 390.0F, null, -350.0F, 30.0F);
         this.loadAnimation("images/monsters/theForest/deca/skeleton.atlas", "images/monsters/theForest/deca/skeleton.json", 1.0F);
         TrackEntry e = this.state.setAnimation(0, "Idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
@@ -73,18 +67,14 @@ public class ProtoDeca extends AbstractMonster {
 
     public void changeState(String stateName) {
         byte var3 = -1;
-        switch(stateName.hashCode()) {
-        case 1941037640:
+        if (stateName.hashCode() == 1941037640) {
             if (stateName.equals("ATTACK")) {
                 var3 = 0;
             }
-        default:
-            switch(var3) {
-            case 0:
-                this.state.setAnimation(0, "Attack_2", false);
-                this.state.addAnimation(0, "Idle", true, 0.0F);
-            default:
-            }
+        }
+        if (var3 == 0) {
+            this.state.setAnimation(0, "Attack_2", false);
+            this.state.addAnimation(0, "Idle", true, 0.0F);
         }
     }
 
@@ -111,30 +101,30 @@ public class ProtoDeca extends AbstractMonster {
     }
 
     public void takeTurn() {
-        switch(this.nextMove) {
-        case 0:
-            AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
-            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.5F));
+        switch (this.nextMove) {
+            case 0:
+                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
+                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.5F));
 
-            for(int i = 0; i < 2; ++i) {
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo)this.damage.get(0), AttackEffect.FIRE));
-            }
-
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Dazed(), 2));
-            this.isAttacking = false;
-            break;
-        case 2:
-            Iterator var1 = AbstractDungeon.getMonsters().monsters.iterator();
-
-            while(var1.hasNext()) {
-                AbstractMonster m = (AbstractMonster)var1.next();
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(m, this, 16));
-                if (AbstractDungeon.ascensionLevel >= 19) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new PlatedArmorPower(m, 3), 3));
+                for (int i = 0; i < 2; ++i) {
+                    AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(0), AttackEffect.FIRE));
                 }
-            }
 
-            this.isAttacking = true;
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Dazed(), 2));
+                this.isAttacking = false;
+                break;
+            case 2:
+                Iterator var1 = AbstractDungeon.getMonsters().monsters.iterator();
+
+                while (var1.hasNext()) {
+                    AbstractMonster m = (AbstractMonster) var1.next();
+                    AbstractDungeon.actionManager.addToBottom(new GainBlockAction(m, this, 16));
+                    if (AbstractDungeon.ascensionLevel >= 19) {
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new PlatedArmorPower(m, 3), 3));
+                    }
+                }
+
+                this.isAttacking = true;
         }
 
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
@@ -142,11 +132,11 @@ public class ProtoDeca extends AbstractMonster {
 
     protected void getMove(int num) {
         if (this.isAttacking) {
-            this.setMove((byte)0, Intent.ATTACK_DEBUFF, ((DamageInfo)this.damage.get(0)).base, 2, true);
+            this.setMove((byte) 0, Intent.ATTACK_DEBUFF, this.damage.get(0).base, 2, true);
         } else if (AbstractDungeon.ascensionLevel >= 19) {
-            this.setMove((byte)2, Intent.DEFEND_BUFF);
+            this.setMove((byte) 2, Intent.DEFEND_BUFF);
         } else {
-            this.setMove((byte)2, Intent.DEFEND);
+            this.setMove((byte) 2, Intent.DEFEND);
         }
 
     }

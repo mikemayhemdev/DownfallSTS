@@ -21,10 +21,10 @@ public class SoulRoll extends AbstractSneckoCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new MuddleHandAction());
-        if (upgraded) upgradeAction(p,m);
+        if (upgraded) upgradeAction(p, m);
     }
 
-    public void upgradeAction(AbstractPlayer p, AbstractMonster m){
+    public void upgradeAction(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
     }
 

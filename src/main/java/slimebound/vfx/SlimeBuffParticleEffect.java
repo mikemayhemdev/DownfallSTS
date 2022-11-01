@@ -10,10 +10,10 @@ import com.megacrit.cardcrawl.core.Settings;
 
 public class SlimeBuffParticleEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
     private static final float DURATION = 0.5F;
-    private TextureAtlas.AtlasRegion img;
-    private float x;
+    private final TextureAtlas.AtlasRegion img;
+    private final float x;
     private float y;
-    private float vY;
+    private final float vY;
     private float scale = 0.0F;
 
     public SlimeBuffParticleEffect(float x, float y, Color c) {

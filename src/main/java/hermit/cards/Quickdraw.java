@@ -1,26 +1,19 @@
 package hermit.cards;
 
 import basemod.ReflectionHacks;
-import basemod.interfaces.OnPlayerLoseBlockSubscriber;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.unique.DropkickAction;
-import com.megacrit.cardcrawl.cards.blue.Skim;
-import com.megacrit.cardcrawl.cards.red.Dropkick;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DrawReductionPower;
-import com.megacrit.cardcrawl.powers.WeakPower;
-import com.megacrit.cardcrawl.relics.Calipers;
 import hermit.HermitMod;
 import hermit.characters.hermit;
-
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
@@ -74,12 +67,11 @@ public class Quickdraw extends AbstractDynamicCard {
         );
         this.addToBot(new DrawCardAction(magicNumber));
 
-        DrawReductionPower pow = new DrawReductionPower(p,DRAWLESS);
-        ReflectionHacks.setPrivate(pow,DrawReductionPower.class,"justApplied",false);
+        DrawReductionPower pow = new DrawReductionPower(p, DRAWLESS);
+        ReflectionHacks.setPrivate(pow, DrawReductionPower.class, "justApplied", false);
 
         this.addToBot(new ApplyPowerAction(p, p, pow, DRAWLESS));
     }
-
 
 
     //Upgraded stats.

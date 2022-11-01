@@ -18,9 +18,9 @@ public class AddCardToStasisEffect extends AbstractGameEffect {
         PADDING = 30.0F * Settings.scale;
     }
 
-    private AbstractCard card;
-    private StasisOrb o;
-    private float glowPoint;
+    private final AbstractCard card;
+    private final StasisOrb o;
+    private final float glowPoint;
     private boolean glowStartHit;
 
     public AddCardToStasisEffect(AbstractCard srcCard, StasisOrb o, float startX, float startY, boolean instant) {

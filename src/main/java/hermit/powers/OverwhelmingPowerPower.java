@@ -3,14 +3,7 @@ package hermit.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -27,7 +20,7 @@ public class OverwhelmingPowerPower extends AbstractPower implements CloneablePo
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public int power=0;
+    public int power = 0;
 
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
     private static final Texture tex84 = TextureLoader.getTexture("hermitResources/images/powers/overwhelming_power_p.png");
@@ -78,15 +71,14 @@ public class OverwhelmingPowerPower extends AbstractPower implements CloneablePo
     }
      */
 
-    public void atEndOfTurn(boolean isPlayer)
-    {
+    public void atEndOfTurn(boolean isPlayer) {
         if (EnergyPanel.totalCount == 0) {
             this.addToBot(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, amount));
         }
     }
 
     public void updateDescription() {
-            description = DESCRIPTIONS[0] + (amount) + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + (amount) + DESCRIPTIONS[1];
     }
     /*
     public void stackPower(int stackAmount) {

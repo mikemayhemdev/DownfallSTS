@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
 import slimebound.orbs.SpawnedSlime;
-import slimebound.patches.AbstractCardEnum;
 
 
 public class DivideAndConquerConquer extends AbstractSlimeboundCard {

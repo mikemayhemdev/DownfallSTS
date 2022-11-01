@@ -26,8 +26,7 @@ public class RageBreak extends AbstractGremlinCard {
     private static final int COST = 2;
     private static final int BLOCK = 5;
 
-    public RageBreak()
-    {
+    public RageBreak() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseBlock = BLOCK;
@@ -36,8 +35,7 @@ public class RageBreak extends AbstractGremlinCard {
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new FlameAnimationEffect(p.hb)));
         if (this.upgraded) {
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
@@ -45,10 +43,8 @@ public class RageBreak extends AbstractGremlinCard {
         AbstractDungeon.actionManager.addToBottom(new LimitBreakAction());
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             initializeDescription();

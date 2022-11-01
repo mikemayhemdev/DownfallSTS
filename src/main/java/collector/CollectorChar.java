@@ -2,7 +2,6 @@ package collector;
 
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomPlayer;
-import collector.relics.EmeraldTorch;
 import collector.actions.AddAggroAction;
 import collector.actions.ApplyAggroAction;
 import collector.cards.CollectorCards.AbstractCollectorCard;
@@ -11,6 +10,7 @@ import collector.cards.CollectorCards.Attacks.SoulStitch;
 import collector.cards.CollectorCards.Attacks.Strike;
 import collector.cards.CollectorCards.Skills.Contemplate;
 import collector.cards.CollectorCards.Skills.Defend;
+import collector.relics.EmeraldTorch;
 import collector.util.FlashTargetArrowEffect;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -19,7 +19,6 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
-import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -28,7 +27,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.*;
+import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
@@ -62,8 +64,8 @@ public class CollectorChar extends CustomPlayer {
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
     public float renderscale = 1.2F;
-    private String atlasURL = "collectorResources/images/char/mainChar/skeleton.atlas";
-    private String jsonURL = "collectorResources/images/char/mainChar/skeleton.json";
+    private final String atlasURL = "collectorResources/images/char/mainChar/skeleton.atlas";
+    private final String jsonURL = "collectorResources/images/char/mainChar/skeleton.json";
     public static TorchChar torch;
     public AbstractCreature front = this;
     private float fireTimer = 0.0F;
@@ -79,8 +81,9 @@ public class CollectorChar extends CustomPlayer {
     public boolean dragonAttackAnimation;
     public boolean attackAnimation;
     private static final float ORB_IMG_SCALE = 1.15f * Settings.scale;
+
     public CollectorChar(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "collectorResources/images/char/mainChar/orb/vfx.png", (String) null, (String) null);
+        super(name, setClass, orbTextures, "collectorResources/images/char/mainChar/orb/vfx.png", null, (String) null);
         initializeClass(null,
                 SHOULDER1,
                 SHOULDER2,
@@ -444,14 +447,14 @@ public class CollectorChar extends CustomPlayer {
     }
 
     public static TorchChar getTorchHead() {
-        if (AbstractDungeon.player instanceof CollectorChar) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)) {
             return torch;
         }
         return null;
     }
 
     public static TorchChar getLivingTorchHead() {
-        if (AbstractDungeon.player instanceof CollectorChar) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)) {
             TorchChar dragon = torch;
             if (dragon.isDead) return null;
             return dragon;
@@ -460,7 +463,7 @@ public class CollectorChar extends CustomPlayer {
     }
 
     public static boolean isFrontTorchHead() {
-        if (AbstractDungeon.player instanceof CollectorChar) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)) {
             if (torch.isDead) return false;
             return ((CollectorChar) AbstractDungeon.player).front == torch;
         }
@@ -468,7 +471,7 @@ public class CollectorChar extends CustomPlayer {
     }
 
     public static boolean isRearYou() {
-        if (AbstractDungeon.player instanceof CollectorChar) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)) {
             TorchChar dragon = torch;
             if (dragon.isDead) return true;
             return ((CollectorChar) AbstractDungeon.player).front != AbstractDungeon.player;
@@ -478,7 +481,7 @@ public class CollectorChar extends CustomPlayer {
 
     public static AbstractCreature getCurrentTarget(AbstractCreature monster) {
 
-        if (AbstractDungeon.player instanceof CollectorChar && !torch.isDead) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR) && !torch.isDead) {
             return ((CollectorChar) AbstractDungeon.player).front;
         } else {
             return AbstractDungeon.player;
@@ -486,7 +489,7 @@ public class CollectorChar extends CustomPlayer {
     }
 
     public static boolean isSolo() {
-        if (AbstractDungeon.player instanceof CollectorChar) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)) {
             return torch.isDead;
         } else {
             return true;
@@ -494,7 +497,7 @@ public class CollectorChar extends CustomPlayer {
     }
 
     public static int getAggro() {
-        if (AbstractDungeon.player instanceof CollectorChar) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)) {
             return TorchAggro;
         } else {
             return 0;

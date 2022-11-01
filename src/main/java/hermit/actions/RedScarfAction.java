@@ -1,22 +1,21 @@
 package hermit.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
-import com.megacrit.cardcrawl.cards.purple.Omniscience;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+
 import java.util.Iterator;
 
 public class RedScarfAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
 
     public RedScarfAction(int amount) {
         this.p = AbstractDungeon.player;
@@ -31,8 +30,8 @@ public class RedScarfAction extends AbstractGameAction {
             CardGroup tmp = new CardGroup(CardGroupType.UNSPECIFIED);
             Iterator var5 = this.p.drawPile.group.iterator();
 
-            while(var5.hasNext()) {
-                card = (AbstractCard)var5.next();
+            while (var5.hasNext()) {
+                card = (AbstractCard) var5.next();
                 tmp.addToRandomSpot(card);
             }
 
@@ -42,10 +41,10 @@ public class RedScarfAction extends AbstractGameAction {
             if (AbstractDungeon.gridSelectScreen.selectedCards.size() != 0) {
                 Iterator var1 = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
 
-                while(var1.hasNext()) {
-                    card = (AbstractCard)var1.next();
+                while (var1.hasNext()) {
+                    card = (AbstractCard) var1.next();
                     card.unhover();
-                    card.isSelected=false;
+                    card.isSelected = false;
 
                     this.p.drawPile.moveToDiscardPile(card);
 

@@ -16,8 +16,8 @@ public class ExhumeToDrawAction extends AbstractGameAction {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("ExhumeAction");
     public static final String[] TEXT = uiStrings.TEXT;
     private final boolean upgrade;
-    private AbstractPlayer p;
-    private ArrayList<AbstractCard> exhumes = new ArrayList();
+    private final AbstractPlayer p;
+    private final ArrayList<AbstractCard> exhumes = new ArrayList();
 
     public ExhumeToDrawAction(boolean upgrade) {
         this.upgrade = upgrade;

@@ -3,12 +3,10 @@ package charbosses.cards.green;
 import charbosses.actions.unique.EnemyFletchettesAction;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -42,8 +40,8 @@ public class EnFlechettes extends AbstractBossCard {
         int count = 0;
         Iterator var2 = AbstractCharBoss.boss.hand.group.iterator();
 
-        while(var2.hasNext()) {
-            AbstractCard c = (AbstractCard)var2.next();
+        while (var2.hasNext()) {
+            AbstractCard c = (AbstractCard) var2.next();
             if (c.type == CardType.SKILL) {
                 ++count;
             }

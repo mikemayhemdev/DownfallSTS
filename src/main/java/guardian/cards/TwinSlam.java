@@ -52,8 +52,8 @@ public class TwinSlam extends AbstractGuardianCard {
         updateDescription();
         loadGemMisc();
         cardsToPreview = new SecondStrikePreviewCard();
-        ((AbstractGuardianCard)cardsToPreview).socketCount = 0;
-        ((AbstractGuardianCard)cardsToPreview).updateDescription();
+        ((AbstractGuardianCard) cardsToPreview).socketCount = 0;
+        ((AbstractGuardianCard) cardsToPreview).updateDescription();
 
         //this.sockets.add(GuardianMod.socketTypes.RED);
     }

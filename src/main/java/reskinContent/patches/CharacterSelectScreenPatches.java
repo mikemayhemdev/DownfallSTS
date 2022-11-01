@@ -1,13 +1,6 @@
 package reskinContent.patches;
 
 
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import javassist.CtBehavior;
-import reskinContent.reskinContent;
-
-
-import reskinContent.skinCharacter.*;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.*;
@@ -19,9 +12,13 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterSelectScreen;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import javassist.CtBehavior;
+import reskinContent.reskinContent;
+import reskinContent.skinCharacter.*;
 
 import java.util.ArrayList;
 
@@ -36,10 +33,10 @@ public class CharacterSelectScreenPatches {
     public static Hitbox portraitAnimationLeft;
     public static Hitbox portraitAnimationRight;
 
-    private static float reskin_Text_W = FontHelper.getSmartWidth(FontHelper.cardTitleFont, TEXT[1], 9999.0F, 0.0F);
+    private static final float reskin_Text_W = FontHelper.getSmartWidth(FontHelper.cardTitleFont, TEXT[1], 9999.0F, 0.0F);
 
-    private static float reskin_W = reskin_Text_W + 200.0f * Settings.scale;
-    private static float reskinX_center = 600.0F * Settings.scale;
+    private static final float reskin_W = reskin_Text_W + 200.0f * Settings.scale;
+    private static final float reskinX_center = 600.0F * Settings.scale;
     public static float allTextInfoX = 0.0f;
     public static float allTextInfoY = 0.0f;
 

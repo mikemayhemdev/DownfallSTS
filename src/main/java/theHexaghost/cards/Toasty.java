@@ -6,8 +6,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.BurningHitAction;
 
-import static automaton.AutomatonMod.makeBetaCardPath;
-
 public class Toasty extends AbstractHexaCard {
 
     public final static String ID = makeID("Toasty");

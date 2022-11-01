@@ -8,7 +8,6 @@ package charbosses.powers.bossmechanicpowers;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class IroncladMushroomPower extends AbstractBossMechanicPower {
     public static final String POWER_ID = "downfall:IroncladMushroomPower";

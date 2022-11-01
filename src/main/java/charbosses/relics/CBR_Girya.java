@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Girya;
-import downfall.downfallMod;
 
 public class CBR_Girya extends AbstractCharbossRelic {
     public static final String ID = "Girya";

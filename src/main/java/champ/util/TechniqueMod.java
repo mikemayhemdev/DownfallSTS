@@ -2,7 +2,6 @@ package champ.util;
 
 import basemod.abstracts.AbstractCardModifier;
 import champ.ChampMod;
-import champ.cards.AbstractChampCard;
 import champ.stances.AbstractChampStance;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -15,7 +14,7 @@ public class TechniqueMod extends AbstractCardModifier {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-       return rawDescription + CardCrawlGame.languagePack.getUIString(ChampMod.makeID("TechniqueMod")).TEXT[0] ;
+        return rawDescription + CardCrawlGame.languagePack.getUIString(ChampMod.makeID("TechniqueMod")).TEXT[0];
     }
 
     @Override

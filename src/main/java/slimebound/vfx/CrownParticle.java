@@ -13,11 +13,11 @@ public class CrownParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffect
     private static final float DURATION = 0.75F;
     private static final float START_SCALE = 1.2F * Settings.scale;
     private static int W;
-    private static int xOffset = 15;
-    private static int yOffset = -25;
+    private static final int xOffset = 15;
+    private static final int yOffset = -25;
     public ChampSlime p;
-    private float scale = 1F;
-    private Texture img;
+    private final float scale = 1F;
+    private final Texture img;
 
     public CrownParticle(ChampSlime p) {
         this.duration = 0.05F;

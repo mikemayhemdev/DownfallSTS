@@ -4,7 +4,7 @@ import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 
 public class EnemyAnimateOrbAction extends AbstractGameAction {
-    private int orbCount;
+    private final int orbCount;
 
     public EnemyAnimateOrbAction(final int amount) {
         this.orbCount = amount;

@@ -26,8 +26,7 @@ public class Kablamo extends AbstractGremlinCard {
     private static final int POWER = 13;
     private static final int UPGRADE_BONUS = 4;
 
-    public Kablamo()
-    {
+    public Kablamo() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -41,15 +40,14 @@ public class Kablamo extends AbstractGremlinCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn,
-                            AbstractGameAction.AttackEffect.FIRE));
+        AbstractDungeon.actionManager.addToBottom(
+                new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn,
+                        AbstractGameAction.AttackEffect.FIRE));
     }
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
         }

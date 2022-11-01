@@ -28,8 +28,7 @@ public class Mockery extends AbstractGremlinCard {
     private static final int MAGIC = 1;
     private static final int MAGIC_UPGRADE_BONUS = 1;
 
-    public Mockery()
-    {
+    public Mockery() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseBlock = BLOCK;
@@ -40,17 +39,14 @@ public class Mockery extends AbstractGremlinCard {
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                 new WeakPower(m, magicNumber, false), magicNumber));
         AbstractDungeon.actionManager.addToBottom(new MockeryAction(m, p, block));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_BONUS);
             upgradeMagicNumber(MAGIC_UPGRADE_BONUS);

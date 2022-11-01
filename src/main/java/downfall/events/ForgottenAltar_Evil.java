@@ -3,7 +3,6 @@ package downfall.events;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.colorless.Apparition;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
@@ -27,9 +26,9 @@ public class ForgottenAltar_Evil extends AbstractImageEvent {
         OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
     }
 
-    private int hpLoss;
-    private int goldCost = 50;
-    private CurScreen screen;
+    private final int hpLoss;
+    private final int goldCost = 50;
+    private final CurScreen screen;
 
     public ForgottenAltar_Evil() {
         super(NAME, DESCRIPTIONS[0], "images/events/forgottenAltar.jpg");
@@ -53,42 +52,40 @@ public class ForgottenAltar_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch (this.screenNum) {
-            case 0:
-                switch (buttonPressed) {
-                    case 0:
-                        this.imageEventText.clearAllDialogs();
-                        AbstractDungeon.player.loseGold(this.goldCost);
-                        AbstractDungeon.player.heal(this.hpLoss + 10, true);
-                        this.imageEventText.updateBodyText(DESCRIPTIONSALT[0]);
-                        this.imageEventText.setDialogOption(OPTIONSALT[5]);
-                        CardCrawlGame.sound.play("HEAL_1");
-                        this.screenNum = 1;
-                        logMetricHealAtCost(ID, "Offer Souls", goldCost, hpLoss + 10);
-                        return;
-                    case 1:
+        if (this.screenNum == 0) {
+            switch (buttonPressed) {
+                case 0:
+                    this.imageEventText.clearAllDialogs();
+                    AbstractDungeon.player.loseGold(this.goldCost);
+                    AbstractDungeon.player.heal(this.hpLoss + 10, true);
+                    this.imageEventText.updateBodyText(DESCRIPTIONSALT[0]);
+                    this.imageEventText.setDialogOption(OPTIONSALT[5]);
+                    CardCrawlGame.sound.play("HEAL_1");
+                    this.screenNum = 1;
+                    logMetricHealAtCost(ID, "Offer Souls", goldCost, hpLoss + 10);
+                    return;
+                case 1:
 
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
-                        this.imageEventText.setDialogOption(OPTIONSALT[5]);
-                        AbstractDungeon.player.increaseMaxHp(5, false);
-                        AbstractDungeon.player.damage(new DamageInfo(null, this.hpLoss));
-                        CardCrawlGame.sound.play("HEAL_3");
-                        this.screenNum = 1;
-                        logMetricDamageAndMaxHPGain(ID, "Shed Blood", this.hpLoss, 5);
-                        return;
-                    case 2:
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
-                        this.imageEventText.setDialogOption(OPTIONSALT[5]);
-                        this.screenNum = 1;
-                        logMetricIgnored(ID);
-                        return;
-                    default:
-                        return;
-                }
-            default:
-                this.openMap();
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
+                    this.imageEventText.setDialogOption(OPTIONSALT[5]);
+                    AbstractDungeon.player.increaseMaxHp(5, false);
+                    AbstractDungeon.player.damage(new DamageInfo(null, this.hpLoss));
+                    CardCrawlGame.sound.play("HEAL_3");
+                    this.screenNum = 1;
+                    logMetricDamageAndMaxHPGain(ID, "Shed Blood", this.hpLoss, 5);
+                    return;
+                case 2:
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
+                    this.imageEventText.setDialogOption(OPTIONSALT[5]);
+                    this.screenNum = 1;
+                    logMetricIgnored(ID);
+                    return;
+                default:
+            }
+        } else {
+            this.openMap();
         }
     }
 

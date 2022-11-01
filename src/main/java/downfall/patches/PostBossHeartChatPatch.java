@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.vfx.SpeechTextEffect;
 import downfall.downfallMod;
 import downfall.vfx.CustomAnimatedNPC;
 import downfall.vfx.TopLevelInfiniteSpeechBubble;
-import slimebound.SlimeboundMod;
 
 import java.util.Iterator;
 
@@ -126,18 +125,18 @@ public class PostBossHeartChatPatch {
                         activated = false;
                     }
 
-                    if (behindPlayerPortal != null){
+                    if (behindPlayerPortal != null) {
                         behindPlayerPortal.dispose();
                         behindPlayerPortal = null;
                     }
 
                     //SlimeboundMod.logger.info("disposing text");
                     Iterator var1 = AbstractDungeon.topLevelEffects.iterator();
-                    while(var1.hasNext()) {
-                        AbstractGameEffect e = (AbstractGameEffect)var1.next();
+                    while (var1.hasNext()) {
+                        AbstractGameEffect e = (AbstractGameEffect) var1.next();
                         if (e instanceof TopLevelInfiniteSpeechBubble) {
-                            ((TopLevelInfiniteSpeechBubble)e).dismiss();
-                            ((TopLevelInfiniteSpeechBubble)e).isDone = true;
+                            ((TopLevelInfiniteSpeechBubble) e).dismiss();
+                            e.isDone = true;
                         }
                         if (e instanceof SpeechTextEffect) {
                             e.dispose();

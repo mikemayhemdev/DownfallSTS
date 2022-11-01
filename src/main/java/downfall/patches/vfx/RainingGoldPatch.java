@@ -17,7 +17,7 @@ public class RainingGoldPatch {
 
     @SpirePrefixPatch
     public static SpireReturn<?> Prefix(RainingGoldEffect __instance, int amount) {
-        if (EvilModeCharacterSelect.evilMode){
+        if (EvilModeCharacterSelect.evilMode) {
             AbstractDungeon.effectList.add(new RainingSoulsEffect(amount));
             AbstractDungeon.effectList.remove(__instance);
             return SpireReturn.Return(null);

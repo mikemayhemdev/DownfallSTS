@@ -7,11 +7,7 @@ import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.city.Champ;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.LoseDexterityPower;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 
 import java.util.ArrayList;
 
@@ -25,9 +21,9 @@ public class ViciousMockery extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 10;
         //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
-      //  tags.add(ChampMod.COMBO);
-      //  tags.add(ChampMod.COMBOBERSERKER);
-       // tags.add(ChampMod.COMBODEFENSIVE);
+        //  tags.add(ChampMod.COMBO);
+        //  tags.add(ChampMod.COMBOBERSERKER);
+        // tags.add(ChampMod.COMBODEFENSIVE);
         postInit();
     }
 

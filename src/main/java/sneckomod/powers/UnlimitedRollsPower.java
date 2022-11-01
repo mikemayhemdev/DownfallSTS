@@ -4,7 +4,6 @@ import basemod.helpers.CardModifierManager;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,10 +11,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.cardmods.EtherealMod;
-import sneckomod.SneckoMod;
-import sneckomod.cards.SoulRoll;
 import downfall.cardmods.ExhaustMod;
 import downfall.util.TextureLoader;
+import sneckomod.SneckoMod;
+import sneckomod.cards.SoulRoll;
 
 public class UnlimitedRollsPower extends AbstractPower implements CloneablePowerInterface {
 

@@ -31,14 +31,16 @@ public class GainBlockPower extends AbstractPower implements CloneablePowerInter
 
 
     @Override
-    public void updateDescription() {}
+    public void updateDescription() {
+    }
 
     @Override
     public AbstractPower makeCopy() {
         return new GainBlockPower(amount, owner);
     }
+
     public void onInitialApplication() {
-        addToBot(new GainBlockAction(owner,amount));
-        addToBot(new RemoveSpecificPowerAction(owner,owner,this));
+        addToBot(new GainBlockAction(owner, amount));
+        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 }

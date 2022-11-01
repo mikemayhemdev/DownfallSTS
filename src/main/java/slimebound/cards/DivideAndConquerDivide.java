@@ -10,17 +10,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.LoseDexterityPower;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import slimebound.SlimeboundMod;
-import slimebound.actions.CommandAction;
-import slimebound.actions.SlimeSpawnAction;
-import slimebound.orbs.AttackSlime;
-import slimebound.orbs.PoisonSlime;
 import slimebound.orbs.SpawnedSlime;
-import slimebound.patches.AbstractCardEnum;
 
 
 public class DivideAndConquerDivide extends AbstractSlimeboundCard {

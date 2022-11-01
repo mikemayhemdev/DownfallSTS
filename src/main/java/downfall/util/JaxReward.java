@@ -1,7 +1,6 @@
 package downfall.util;
 
 import automaton.AutomatonMod;
-import automaton.cards.DazingPulse;
 import basemod.abstracts.CustomReward;
 import com.megacrit.cardcrawl.cards.colorless.JAX;
 import com.megacrit.cardcrawl.core.CardCrawlGame;

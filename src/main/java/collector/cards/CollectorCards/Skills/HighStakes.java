@@ -16,7 +16,7 @@ public class HighStakes extends AbstractCollectorCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new HighStakesAction(upgraded,this));
+        addToBot(new HighStakesAction(upgraded, this));
         AbstractDungeon.player.hand.removeCard(this);
         AbstractDungeon.player.limbo.addToTop(this);
     }

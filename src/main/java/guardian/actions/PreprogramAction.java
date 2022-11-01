@@ -13,9 +13,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import guardian.GuardianMod;
-
-import java.util.Iterator;
 
 public class PreprogramAction extends AbstractGameAction {
     public static final String[] TEXT;

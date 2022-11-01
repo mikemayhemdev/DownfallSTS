@@ -4,7 +4,6 @@ package guardian.cards;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -17,7 +16,6 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import guardian.GuardianMod;
 import guardian.actions.PlaceActualCardIntoStasis;
-import guardian.patches.AbstractCardEnum;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 
@@ -42,7 +40,6 @@ public class SentryWave extends AbstractGuardianCard {
     public static String UPGRADED_DESCRIPTION;
 
 
-
     //END TUNING CONSTANTS
 
     static {
@@ -65,7 +62,7 @@ public class SentryWave extends AbstractGuardianCard {
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("SentryWave.png"));
     }
 
-    public SentryWave(){
+    public SentryWave() {
         this(false);
     }
 
@@ -99,7 +96,7 @@ public class SentryWave extends AbstractGuardianCard {
             upgradeName();
             //upgradeMagicNumber(UPGRADE_DEBUFF);
             this.rawDescription = UPGRADED_DESCRIPTION;
-            if (!this.noHover){
+            if (!this.noHover) {
                 AbstractCard q = new SentryBeam(true);
                 q.upgrade();
                 cardsToPreview = q;

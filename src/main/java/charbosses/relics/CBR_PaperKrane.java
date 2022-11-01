@@ -2,7 +2,6 @@ package charbosses.relics;
 
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.PaperCrane;
-import com.megacrit.cardcrawl.relics.Turnip;
 
 public class CBR_PaperKrane extends AbstractCharbossRelic {
     public static final String ID = "Paper Crane";

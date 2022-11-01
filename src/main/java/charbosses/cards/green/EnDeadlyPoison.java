@@ -1,6 +1,7 @@
 package charbosses.cards.green;
 
 import charbosses.cards.AbstractBossCard;
+import charbosses.powers.general.EnemyPoisonPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.green.DeadlyPoison;
@@ -8,7 +9,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import charbosses.powers.general.EnemyPoisonPower;
 
 import java.util.ArrayList;
 

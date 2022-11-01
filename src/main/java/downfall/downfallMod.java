@@ -72,8 +72,6 @@ import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
-import com.megacrit.cardcrawl.monsters.exordium.LouseNormal;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.GoldenIdol;
 import com.megacrit.cardcrawl.relics.MedicalKit;
@@ -253,7 +251,7 @@ public class downfallMod implements
     public static SpireConfig bruhData = null;
 
 
-    private static ArrayList<AbstractCard> downfallCurses = new ArrayList<>();
+    private static final ArrayList<AbstractCard> downfallCurses = new ArrayList<>();
 
     public static CustomMod evilWithinSingleton = null;
 
@@ -736,7 +734,7 @@ public class downfallMod implements
             settingsPanel.addUIElement(noMusicBtn);
             settingsPanel.addUIElement(unlockAllSkinBtn);
             settingsPanel.addUIElement(characterModCrossoverBtn);
-            
+
             configPos = 750;
         }
 
@@ -749,7 +747,6 @@ public class downfallMod implements
             CardCrawlGame.mainMenuScreen.charSelectScreen.initialize();
             saveData();
         });
-
 
 
         settingsPanel.addUIElement(characterCrossoverBtn);
@@ -1068,13 +1065,12 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Colosseum_Evil.ID, Colosseum_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode && !(AbstractDungeon.player instanceof ChampChar))
+                .spawnCondition(() -> evilMode && !(AbstractDungeon.player.chosenClass.equals(Enums.THE_CHAMP)))
                 //Event ID to Override//
                 .overrideEvent(Colosseum.ID)
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
-
 
 
         BaseMod.addEvent(new AddEventParams.Builder(MindBloom_Evil.ID, MindBloom_Evil.class) //Event ID//
@@ -1506,17 +1502,14 @@ public class downfallMod implements
 
 
     public static boolean isDownfallCharacter(AbstractPlayer p) {
-        if (p instanceof SlimeboundCharacter ||
+        return p instanceof SlimeboundCharacter ||
                 p instanceof TheHexaghost ||
                 p instanceof GuardianCharacter ||
                 p instanceof TheSnecko ||
                 //TODO - Need to be able to check this without loading package
                 p instanceof ChampChar ||
                 p instanceof AutomatonChar ||
-                p instanceof GremlinCharacter || p instanceof hermit.characters.hermit) {
-            return true;
-        }
-        return false;
+                p instanceof GremlinCharacter || p instanceof hermit.characters.hermit;
     }
 
 
@@ -1669,7 +1662,7 @@ public class downfallMod implements
             evilMode = true;
         }
 
-        if (AbstractDungeon.player instanceof TheHexaghost) {
+        if (AbstractDungeon.player.chosenClass.equals(Enums.THE_SPIRIT)) {
             for (AbstractCard c : CardLibrary.getAllCards()) {
                 if (c.hasTag(HexaMod.GHOSTWHEELCARD) && c.hasTag(AbstractCard.CardTags.HEALING)) {
                     c.tags.remove(AbstractCard.CardTags.HEALING);
@@ -1782,13 +1775,13 @@ public class downfallMod implements
             }
         }
 
-        if (AbstractDungeon.player instanceof GuardianCharacter) {
+        if (AbstractDungeon.player.chosenClass.equals(Enums.GUARDIAN)) {
             if (downfallMod.unseenTutorials[1]) {
                 AbstractDungeon.actionManager.addToBottom(new MessageCaller(1));
             }
         }
 
-        if (AbstractDungeon.player instanceof TheHexaghost) {
+        if (AbstractDungeon.player.chosenClass.equals(Enums.THE_SPIRIT)) {
             if (downfallMod.unseenTutorials[2]) {
                 AbstractDungeon.actionManager.addToBottom(new MessageCaller(2));
             }
@@ -1903,16 +1896,11 @@ public class downfallMod implements
     }
 
     public static void removeAnyRelicFromPools(String relicID) {
-        if (AbstractDungeon.shopRelicPool.contains(relicID))
-            AbstractDungeon.shopRelicPool.remove(relicID);
-        if (AbstractDungeon.rareRelicPool.contains(relicID))
-            AbstractDungeon.rareRelicPool.remove(relicID);
-        if (AbstractDungeon.uncommonRelicPool.contains(relicID))
-            AbstractDungeon.uncommonRelicPool.remove(relicID);
-        if (AbstractDungeon.bossRelicPool.contains(relicID))
-            AbstractDungeon.bossRelicPool.remove(relicID);
-        if (AbstractDungeon.commonRelicPool.contains(relicID))
-            AbstractDungeon.commonRelicPool.remove(relicID);
+        AbstractDungeon.shopRelicPool.remove(relicID);
+        AbstractDungeon.rareRelicPool.remove(relicID);
+        AbstractDungeon.uncommonRelicPool.remove(relicID);
+        AbstractDungeon.bossRelicPool.remove(relicID);
+        AbstractDungeon.commonRelicPool.remove(relicID);
     }
 
     /*

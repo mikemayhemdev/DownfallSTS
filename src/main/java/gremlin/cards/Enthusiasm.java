@@ -23,22 +23,18 @@ public class Enthusiasm extends AbstractGremlinCard {
     private static final int COST = 2;
     private static final int UPGRADED_COST = 1;
 
-    public Enthusiasm()
-    {
+    public Enthusiasm() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnthusiasmPower(p, 1), 1));
 
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeBaseCost(UPGRADED_COST);
         }

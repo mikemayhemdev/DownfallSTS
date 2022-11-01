@@ -11,8 +11,8 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 public class SlimeWaterDropEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
     private static final int W = 64;
     private static Texture[] imgs = null;
-    private float x;
-    private float y;
+    private final float x;
+    private final float y;
     private int frame = 0;
     private float animTimer = 0.1F;
 

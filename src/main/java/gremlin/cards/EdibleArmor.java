@@ -23,22 +23,18 @@ public class EdibleArmor extends AbstractGremlinCard {
     private static final int COST = 1;
     private static final int UPGRADE_COST = 0;
 
-    public EdibleArmor()
-    {
+    public EdibleArmor() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.tags.add(SHIELD_GREMLIN);
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new EatArmorAction(p));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeBaseCost(UPGRADE_COST);
         }

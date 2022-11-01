@@ -2,7 +2,6 @@ package downfall.events;
 
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.curses.Regret;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -37,7 +36,7 @@ public class ShiningLight_Evil extends AbstractImageEvent {
         DISAGREE_DIALOG = DESCRIPTIONS[2];
     }
 
-    private int damage = 0;
+    private final int damage = 0;
     private CUR_SCREEN screen;
 
     public ShiningLight_Evil() {
@@ -61,25 +60,23 @@ public class ShiningLight_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch (this.screen) {
-            case INTRO:
-                if (buttonPressed == 0) {
-                    this.imageEventText.updateBodyText(AGREE_DIALOG);
-                    this.imageEventText.removeDialogOption(1);
-                    this.imageEventText.updateDialogOption(0, OPTIONS[1]);
-                    this.screen = CUR_SCREEN.COMPLETE;
+        if (this.screen == CUR_SCREEN.INTRO) {
+            if (buttonPressed == 0) {
+                this.imageEventText.updateBodyText(AGREE_DIALOG);
+                this.imageEventText.removeDialogOption(1);
+                this.imageEventText.updateDialogOption(0, OPTIONS[1]);
+                this.screen = CUR_SCREEN.COMPLETE;
 
-                    this.upgradeCards();
-                } else {
-                    this.imageEventText.updateBodyText(DISAGREE_DIALOG);
-                    this.imageEventText.removeDialogOption(1);
-                    this.imageEventText.updateDialogOption(0, OPTIONS[1]);
-                    this.screen = CUR_SCREEN.COMPLETE;
-                    logMetricIgnored(ID);
-                }
-                break;
-            default:
-                this.openMap();
+                this.upgradeCards();
+            } else {
+                this.imageEventText.updateBodyText(DISAGREE_DIALOG);
+                this.imageEventText.removeDialogOption(1);
+                this.imageEventText.updateDialogOption(0, OPTIONS[1]);
+                this.screen = CUR_SCREEN.COMPLETE;
+                logMetricIgnored(ID);
+            }
+        } else {
+            this.openMap();
         }
 
     }

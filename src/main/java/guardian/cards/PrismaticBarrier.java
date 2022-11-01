@@ -56,7 +56,7 @@ public class PrismaticBarrier extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-      //  AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+        //  AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         for (int i = 0; i < this.multihit; i++) {
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         }

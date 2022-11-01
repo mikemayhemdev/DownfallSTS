@@ -1,12 +1,11 @@
 package automaton.relics;
 
 import automaton.AutomatonMod;
-import downfall.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.util.TextureLoader;
 
 import static automaton.AutomatonMod.makeRelicOutlinePath;
 import static automaton.AutomatonMod.makeRelicPath;
@@ -73,7 +72,7 @@ public class PlatinumCore extends CustomRelic implements OnCompileRelic {
         sb.setLength(sb.length() - 1);
         sb.append("[#").append(AutomatonMod.placeholderColor.toString()).append("]");
 
-        return DESCRIPTIONS[0] + sb.toString() + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0] + sb + DESCRIPTIONS[1];
     }
 
 }

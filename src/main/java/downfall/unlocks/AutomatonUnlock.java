@@ -1,6 +1,5 @@
 package downfall.unlocks;
 
-import automaton.AutomatonChar;
 import com.megacrit.cardcrawl.core.Settings;
 import downfall.downfallMod;
 

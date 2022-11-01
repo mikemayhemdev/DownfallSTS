@@ -19,12 +19,12 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.BobEffect;
+import downfall.downfallMod;
 import downfall.util.TextureLoader;
 
 import java.util.HashMap;
@@ -93,7 +93,7 @@ public class FunctionHelper {
         held = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         secretStorage = makeFunction(false);
         functionsCompiledThisCombat = 0;
-        if (AbstractDungeon.player instanceof AutomatonChar) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_AUTOMATON)) {
             doStuff = true;
         }
     }
@@ -278,7 +278,7 @@ public class FunctionHelper {
         //Ugly hack to ensure bleeding through to future runs never happens
         if (!doStuff) {
             if (AbstractDungeon.player != null || held.size() > 0) {
-                if (AbstractDungeon.player instanceof AutomatonChar) {
+                if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_AUTOMATON)) {
                     doStuff = true;
                 }
             }
@@ -286,7 +286,7 @@ public class FunctionHelper {
             if (AbstractDungeon.player == null) {
                 doStuff = false;
             } else {
-                if (!(AbstractDungeon.player instanceof AutomatonChar)) {
+                if (!(AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_AUTOMATON))) {
                     if (held.size() == 0) {
                         doStuff = false;
                     }

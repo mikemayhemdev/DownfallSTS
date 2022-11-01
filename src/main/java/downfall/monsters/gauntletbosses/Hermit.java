@@ -5,8 +5,6 @@ import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.blue.Defend_Blue;
-import com.megacrit.cardcrawl.cards.purple.Strike_Purple;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.DexterityPower;
@@ -19,7 +17,6 @@ import hermit.cards.Defend_Hermit;
 import hermit.cards.Maintenance;
 import hermit.cards.Scavenge;
 import hermit.cards.Strike_Hermit;
-import hermit.powers.Bruise;
 
 public class Hermit extends GauntletBoss {
 

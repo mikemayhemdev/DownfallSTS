@@ -1,8 +1,6 @@
 package charbosses.monsters;
-import champ.powers.DrawLessNextTurnPower;
-import com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction;
+
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
@@ -28,16 +26,16 @@ public class MushroomPurple extends AbstractMonster {
     @Override
     public void takeTurn() {
         state.setAnimation(0, "Kyuuuuu", false);
-       // state.setTimeScale(1.6F);
+        // state.setTimeScale(1.6F);
         state.addAnimation(0, "Idle", true, 0.0F);
-      //  state.setTimeScale(1.0F);
+        //  state.setTimeScale(1.0F);
         addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ExhaustEndOfTurnPower(AbstractDungeon.player), 1));
 
     }
 
     @Override
     protected void getMove(int i) {
-        setMove((byte)0, Intent.DEBUFF);
+        setMove((byte) 0, Intent.DEBUFF);
 
     }
 }

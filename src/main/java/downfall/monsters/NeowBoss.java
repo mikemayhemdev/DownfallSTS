@@ -20,7 +20,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.combat.HeartMegaDebuffEffect;
 import downfall.actions.NeowRezAction;
 import downfall.downfallMod;
@@ -53,7 +52,7 @@ public class NeowBoss extends AbstractMonster {
     private static final float DRAWX_OFFSET = 100F * Settings.scale;
     private static final float DRAWY_OFFSET = 30F * Settings.scale;
 
-    private float baseDrawX;
+    private final float baseDrawX;
 
     private int turnNum = 0;
 
@@ -66,7 +65,7 @@ public class NeowBoss extends AbstractMonster {
 
     public static NeowBoss neowboss;
 
-    private boolean backInTheFight = false;
+    private final boolean backInTheFight = false;
 
     public static int Rezzes = 0;
 

@@ -1,17 +1,16 @@
 package gremlin.actions;
 
-import com.megacrit.cardcrawl.actions.*;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.monsters.*;
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.GremlinMod;
 import gremlin.cards.Ward;
 
-public class CounterStrikeAction extends AbstractGameAction
-{
-    private AbstractMonster m;
-    private boolean isUpgraded;
+public class CounterStrikeAction extends AbstractGameAction {
+    private final AbstractMonster m;
+    private final boolean isUpgraded;
 
     public CounterStrikeAction(final AbstractMonster m, final int amount, boolean isUpgraded) {
         this.actionType = ActionType.WAIT;
@@ -24,7 +23,7 @@ public class CounterStrikeAction extends AbstractGameAction
     public void update() {
         if (GremlinMod.doesEnemyIntendToAttack(this.m)) {
             AbstractCard c = new Ward();
-            if(isUpgraded){
+            if (isUpgraded) {
                 c.upgrade();
             }
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, amount));

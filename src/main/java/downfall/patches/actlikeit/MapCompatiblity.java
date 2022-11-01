@@ -14,10 +14,8 @@ import downfall.patches.EvilModeCharacterSelect;
 )
 public class MapCompatiblity {
     @SpirePrefixPatch
-    public static SpireReturn<Integer> evilMode()
-    {
-        if (EvilModeCharacterSelect.evilMode)
-        {
+    public static SpireReturn<Integer> evilMode() {
+        if (EvilModeCharacterSelect.evilMode) {
             return SpireReturn.Return(AbstractDungeon.getCurrMapNode().y == 0 ? (AbstractDungeon.id.equals(TheEnding.ID) ? 2 : 14) : 13);
 
         }
@@ -26,16 +24,14 @@ public class MapCompatiblity {
         //Due to this, an extra check is placed here.
 
         //If this is the first y check, this won't cause any problems since it would fail anyways if the act is TheEnding.
-        if (AbstractDungeon.id.equals(TheEnding.ID))
-        {
+        if (AbstractDungeon.id.equals(TheEnding.ID)) {
             return SpireReturn.Return(AbstractDungeon.getCurrMapNode().y);
 
         }
         return SpireReturn.Continue();
     }
 
-    public static int actLikeItCheck()
-    {
+    public static int actLikeItCheck() {
         return actlikeit.patches.DungeonMapPatches.atMapEnd();
     }
 }

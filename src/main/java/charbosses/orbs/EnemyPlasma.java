@@ -30,8 +30,8 @@ public class EnemyPlasma extends AbstractEnemyOrb {
     }
 
     private float vfxTimer;
-    private float vfxIntervalMin;
-    private float vfxIntervalMax;
+    private final float vfxIntervalMin;
+    private final float vfxIntervalMax;
 
     public EnemyPlasma() {
         this.vfxTimer = 1.0f;

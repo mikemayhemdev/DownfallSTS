@@ -36,8 +36,8 @@ public class WorldOfGoopSlimebound extends AbstractImageEvent {
     }
 
     private WorldOfGoopSlimebound.CurScreen screen;
-    private int damage;
-    private int gold;
+    private final int damage;
+    private final int gold;
     private int goldLoss;
 
     public WorldOfGoopSlimebound() {
@@ -50,9 +50,9 @@ public class WorldOfGoopSlimebound extends AbstractImageEvent {
         this.imageEventText.setDialogOption(OPTIONS[0]);
 
         if (this.gold <= AbstractDungeon.player.gold) {
-            this.imageEventText.setDialogOption( OPTIONS[1], new GreedOozeRelic());
+            this.imageEventText.setDialogOption(OPTIONS[1], new GreedOozeRelic());
         } else {
-            this.imageEventText.setDialogOption( OPTIONS[3], true);
+            this.imageEventText.setDialogOption(OPTIONS[3], true);
 
         }
     }
@@ -65,35 +65,33 @@ public class WorldOfGoopSlimebound extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch (this.screen) {
-            case INTRO:
-                switch (buttonPressed) {
-                    case 0:
-                        this.imageEventText.updateBodyText(GOLD_DIALOG);
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[2]);
-                        AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold));
-                        AbstractDungeon.player.gainGold(this.gold);
-                        imageEventText.updateBodyText(GOLD_DIALOG);
-                        this.screen = WorldOfGoopSlimebound.CurScreen.RESULT;
-                        logMetricGainGold(ID, "Gather Souls", gold);
-                        return;
-                    case 1:
-                        imageEventText.updateBodyText(LEAVE_DIALOG);
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[2]);
-                        AbstractRelic relic = RelicLibrary.getRelic(GreedOozeRelic.ID).makeCopy();
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f, relic);
-                        AbstractDungeon.player.loseGold(this.gold);
-                        this.screen = WorldOfGoopSlimebound.CurScreen.RESULT;
-                        logMetricObtainRelicAtCost(ID, "Recruit", relic, gold);
-                        return;
-                    default:
-                        logMetricIgnored(ID);
-                        return;
-                }
-            default:
-                this.openMap();
+        if (this.screen == CurScreen.INTRO) {
+            switch (buttonPressed) {
+                case 0:
+                    this.imageEventText.updateBodyText(GOLD_DIALOG);
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.setDialogOption(OPTIONS[2]);
+                    AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold));
+                    AbstractDungeon.player.gainGold(this.gold);
+                    imageEventText.updateBodyText(GOLD_DIALOG);
+                    this.screen = CurScreen.RESULT;
+                    logMetricGainGold(ID, "Gather Souls", gold);
+                    return;
+                case 1:
+                    imageEventText.updateBodyText(LEAVE_DIALOG);
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.setDialogOption(OPTIONS[2]);
+                    AbstractRelic relic = RelicLibrary.getRelic(GreedOozeRelic.ID).makeCopy();
+                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f, relic);
+                    AbstractDungeon.player.loseGold(this.gold);
+                    this.screen = CurScreen.RESULT;
+                    logMetricObtainRelicAtCost(ID, "Recruit", relic, gold);
+                    return;
+                default:
+                    logMetricIgnored(ID);
+            }
+        } else {
+            this.openMap();
         }
     }
 

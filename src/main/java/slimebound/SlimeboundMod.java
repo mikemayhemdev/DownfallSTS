@@ -127,7 +127,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
     public static boolean goopGlow = false;
 
-    private static ArrayList<String> specialistSlimes = new ArrayList<>();
+    private static final ArrayList<String> specialistSlimes = new ArrayList<>();
 
     static {
         hasHubris = Loader.isModLoaded("Hubris");
@@ -359,12 +359,12 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addDynamicVariable(new SelfDamageVariable());
         BaseMod.addDynamicVariable(new SlimedVariable());
 
-       // BaseMod.addCard(new DivideAndConquerDivide());
-       // BaseMod.addCard(new DivideAndConquerConquer());
+        // BaseMod.addCard(new DivideAndConquerDivide());
+        // BaseMod.addCard(new DivideAndConquerConquer());
         BaseMod.addCard(new DivideAndConquer());
 
-      //  BaseMod.addCard(new ServeAndProtectProtect());
-     //   BaseMod.addCard(new ServeAndProtectServe());
+        //  BaseMod.addCard(new ServeAndProtectProtect());
+        //   BaseMod.addCard(new ServeAndProtectServe());
         BaseMod.addCard(new ServeAndProtect());
 
         BaseMod.addCard(new slimebound.cards.Defend_Slimebound());
@@ -573,7 +573,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
                 .create());
 
 
-
         BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsSlime.ID, BackToBasicsSlime.class) //Event ID//
                 //Event Character//
                 .playerClass(downfallMod.Enums.SLIMEBOUND)
@@ -694,8 +693,8 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
     @Override
     public void receivePowersModified() {
-        for (AbstractOrb o:AbstractDungeon.player.orbs){
-            if (o instanceof SpawnedSlime){
+        for (AbstractOrb o : AbstractDungeon.player.orbs) {
+            if (o instanceof SpawnedSlime) {
                 o.applyFocus();
             }
         }

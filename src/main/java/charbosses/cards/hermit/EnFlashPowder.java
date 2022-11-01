@@ -11,11 +11,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 import hermit.cards.FlashPowder;
-import hermit.cards.Gestalt;
 import hermit.characters.hermit;
-import hermit.powers.Rugged;
 
 public class EnFlashPowder extends AbstractHermitBossCard {
     public static final String ID = "downfall_Charboss:FlashPowder";
@@ -27,7 +24,7 @@ public class EnFlashPowder extends AbstractHermitBossCard {
                 CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND_DEBUFF);
         baseMagicNumber = magicNumber = 1;
         baseBlock = 5;
-        exhaust=true;
+        exhaust = true;
     }
 
     @Override

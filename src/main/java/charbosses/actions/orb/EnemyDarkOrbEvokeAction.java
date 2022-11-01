@@ -12,8 +12,8 @@ import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 public class EnemyDarkOrbEvokeAction extends AbstractGameAction {
     private static final float DURATION = 0.1f;
     private static final float POST_ATTACK_WAIT_DUR = 0.1f;
-    private DamageInfo info;
-    private boolean muteSfx;
+    private final DamageInfo info;
+    private final boolean muteSfx;
 
     public EnemyDarkOrbEvokeAction(final DamageInfo info, final AttackEffect effect) {
         this.muteSfx = false;

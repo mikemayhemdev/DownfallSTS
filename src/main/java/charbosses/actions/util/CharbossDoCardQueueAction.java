@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class CharbossDoCardQueueAction extends AbstractGameAction {
 
-    private AbstractCard c;
+    private final AbstractCard c;
 
     public CharbossDoCardQueueAction(AbstractCard c) {
         super();

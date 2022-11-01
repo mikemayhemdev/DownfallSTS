@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import gremlin.GremlinMod;
 
-public class UnforgivingPower extends AbstractGremlinPower{
+public class UnforgivingPower extends AbstractGremlinPower {
     public static final String POWER_ID = getID("Unforgiving");
     private static final PowerStrings strings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final Texture IMG = new Texture(GremlinMod.getResourcePath("powers/unforgiving.png"));
@@ -23,8 +23,7 @@ public class UnforgivingPower extends AbstractGremlinPower{
         this.updateDescription();
     }
 
-    public void updateDescription()
-    {
+    public void updateDescription() {
         this.description = strings.DESCRIPTIONS[0];
     }
 }

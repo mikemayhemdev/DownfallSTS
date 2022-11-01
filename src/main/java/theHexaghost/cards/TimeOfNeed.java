@@ -7,8 +7,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 
-import static automaton.AutomatonMod.makeBetaCardPath;
-
 public class TimeOfNeed extends AbstractHexaCard {
 
     public final static String ID = makeID("TimeOfNeed");

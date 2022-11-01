@@ -10,9 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.characters.hermit;
-import hermit.patches.EndOfTurnPatch;
 import hermit.powers.Bruise;
-
 
 import java.util.Iterator;
 
@@ -48,7 +46,6 @@ public class Feint extends AbstractDynamicCard {
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
 
-
     private static final int COST = 0;
 
 
@@ -67,8 +64,8 @@ public class Feint extends AbstractDynamicCard {
 
         Iterator var4 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
-        while(var4.hasNext()) {
-            AbstractMonster mo = (AbstractMonster)var4.next();
+        while (var4.hasNext()) {
+            AbstractMonster mo = (AbstractMonster) var4.next();
             this.addToBot(new ApplyPowerAction(mo, p, new Bruise(mo, magicNumber), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
         }
 

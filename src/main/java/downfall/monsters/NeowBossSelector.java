@@ -1,10 +1,5 @@
 package downfall.monsters;
 
-import charbosses.bosses.Defect.CharBossDefect;
-import charbosses.bosses.Hermit.CharBossHermit;
-import charbosses.bosses.Ironclad.CharBossIronclad;
-import charbosses.bosses.Silent.CharBossSilent;
-import charbosses.bosses.Watcher.CharBossWatcher;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.downfallMod;
 import downfall.monsters.gauntletbosses.*;
@@ -29,7 +24,7 @@ public class NeowBossSelector {
                 return true;
             case "downfall:Hermit":
                 return true;
-                }
+        }
 
 
         return false;
@@ -66,11 +61,10 @@ public class NeowBossSelector {
             results.add(charbossToGauntlet(downfallMod.Act2BossFaced));
             results.add(charbossToGauntlet(downfallMod.Act3BossFaced));
 
-            if (results.get(2) == Ironclad.ID){
-                Collections.swap(results, 2,0);
-            }
-            else if (results.get(1) == Ironclad.ID){
-                Collections.swap(results, 1,0);
+            if (results.get(2) == Ironclad.ID) {
+                Collections.swap(results, 2, 0);
+            } else if (results.get(1) == Ironclad.ID) {
+                Collections.swap(results, 1, 0);
             }
 
             return results;
@@ -85,11 +79,10 @@ public class NeowBossSelector {
                 results.add(bosses.get(i));
             }
 
-            if (results.get(2) == Ironclad.ID){
-                Collections.swap(results, 2,0);
-            }
-            else if (results.get(1) == Ironclad.ID){
-                Collections.swap(results, 1,0);
+            if (results.get(2) == Ironclad.ID) {
+                Collections.swap(results, 2, 0);
+            } else if (results.get(1) == Ironclad.ID) {
+                Collections.swap(results, 1, 0);
             }
             return results;
         }

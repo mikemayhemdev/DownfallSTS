@@ -18,6 +18,7 @@ public class BronzeSlime
     public static final String skeletonString = "images/monsters/theBottom/slimeAltM/skeleton.json";
 
     public boolean stunned = false;
+
     public BronzeSlime() {
 
         super(ID, new Color(1.0F, 217F / 255F, 70F / 255F, 100F), atlasString, skeletonString, true, true, 10, 0, false, new Color(.63F, .58F, .41F, 1), SlimeFlareEffect.OrbFlareColor.BRONZE, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDefend.png"));
@@ -25,12 +26,12 @@ public class BronzeSlime
         spawnVFX();
     }
 
-    public void squish(){
+    public void squish() {
         skeleton.getRootBone().setScaleY(0.2F);
         stunned = true;
     }
 
-    public void unsquish(){
+    public void unsquish() {
         skeleton.getRootBone().setScaleY(1F);
         stunned = false;
     }

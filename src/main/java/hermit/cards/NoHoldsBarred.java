@@ -1,20 +1,15 @@
 package hermit.cards;
 
 import com.badlogic.gdx.graphics.Color;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.cards.tempCards.ThroughViolence;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
-import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import com.megacrit.cardcrawl.vfx.combat.ViolentAttackEffect;
 import hermit.HermitMod;
 import hermit.characters.hermit;
@@ -63,8 +58,8 @@ public class NoHoldsBarred extends AbstractDynamicCard {
 
     public NoHoldsBarred() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        isMultiDamage=true;
-        baseDamage=18;
+        isMultiDamage = true;
+        baseDamage = 18;
         magicNumber = baseMagicNumber = 4;
         loadJokeCardImage(this, "no_holds_barred.png");
     }
@@ -76,11 +71,10 @@ public class NoHoldsBarred extends AbstractDynamicCard {
         Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
 
-        while(var3.hasNext()) {
-            AbstractMonster mo = (AbstractMonster)var3.next();
+        while (var3.hasNext()) {
+            AbstractMonster mo = (AbstractMonster) var3.next();
 
-            if (!mo.isDead)
-            {
+            if (!mo.isDead) {
                 this.addToBot(new VFXAction(new ViolentAttackEffect(mo.hb.cX, mo.hb.cY, Color.YELLOW)));
             }
         }
@@ -89,12 +83,12 @@ public class NoHoldsBarred extends AbstractDynamicCard {
 
         Iterator var4 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
-        while(var4.hasNext()) {
-            AbstractMonster mo = (AbstractMonster)var4.next();
+        while (var4.hasNext()) {
+            AbstractMonster mo = (AbstractMonster) var4.next();
             this.addToBot(new ApplyPowerAction(mo, p, new Bruise(mo, magicNumber), magicNumber, true, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         }
 
-        this.addToBot(new ApplyPowerAction(p, p, new Drained(p,p, 1), 1));
+        this.addToBot(new ApplyPowerAction(p, p, new Drained(p, p, 1), 1));
     }
 
     //Upgraded stats.

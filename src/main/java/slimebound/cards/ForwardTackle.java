@@ -14,8 +14,6 @@ import slimebound.actions.CommandAction;
 import slimebound.actions.TackleSelfDamageAction;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PreventTackleDamagePower;
-import slimebound.powers.TackleBuffPower;
-import slimebound.powers.TackleDebuffPower;
 
 
 public class ForwardTackle extends AbstractTackleCard {

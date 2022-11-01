@@ -12,11 +12,11 @@ import slimebound.orbs.GreedOozeSlime;
 public class GoldCoinsParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
 
     private static int W;
-    private static float xOffset = 15F * Settings.scale;
-    private static float yOffset = -37F * Settings.scale;
+    private static final float xOffset = 15F * Settings.scale;
+    private static final float yOffset = -37F * Settings.scale;
     public GreedOozeSlime p;
-    private float scale = 1.2F;
-    private Texture img;
+    private final float scale = 1.2F;
+    private final Texture img;
 
     public GoldCoinsParticle(GreedOozeSlime p) {
         this.duration = 0.05F;

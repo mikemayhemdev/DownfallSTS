@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.vfx.CardTrailEffect;
 import com.megacrit.cardcrawl.vfx.ExhaustBlurEffect;
 
 public class AfterlifePlayEffect extends AbstractGameEffect {
-    private AbstractCard card;
+    private final AbstractCard card;
     private float deltaX;
 
     {
@@ -50,7 +50,7 @@ public class AfterlifePlayEffect extends AbstractGameEffect {
                     Settings.WIDTH / 2.0f,
                     Settings.WIDTH / 2.0f + deltaX,
                     t
-                    );
+            );
             this.card.current_y = this.card.target_y = Interpolation.pow2In.apply(
                     Settings.HEIGHT / 2.0F,
                     Settings.HEIGHT / 2.0F + 400 * Settings.scale,
@@ -59,7 +59,7 @@ public class AfterlifePlayEffect extends AbstractGameEffect {
         }
         this.color.g = Interpolation.smooth.apply(.3f, 1f, this.duration / this.startingDuration);
 
-        for (int i=0; i<10; i++) {
+        for (int i = 0; i < 10; i++) {
             float t = 1f - duration - 0.02f * i;
             if (t > 0.25f) {
 

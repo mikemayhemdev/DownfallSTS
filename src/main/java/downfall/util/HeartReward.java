@@ -1,34 +1,31 @@
 package downfall.util;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.helpers.SaveHelper;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.AbstractRelic.RelicTier;
-import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rewards.RewardItem.RewardType;
 import com.megacrit.cardcrawl.saveAndContinue.SaveFile.SaveType;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
-import java.util.ArrayList;
-import java.util.Iterator;
-
 import downfall.downfallMod;
 import downfall.events.HeartEvent;
 import downfall.relics.HeartsMalice;
 import gremlin.characters.GremlinCharacter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class HeartReward {
     private static final Logger logger = LogManager.getLogger(HeartReward.class.getName());
@@ -46,23 +43,23 @@ public class HeartReward {
     private static final int LARGE_GOLD_BONUS = 250;
     private HeartReward.NeowRewardDrawbackDef drawbackDef;
 
-    private String fleeText = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("Heart Event")).OPTIONS[5];
-    private String gremlinTextA = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("Heart Event")).OPTIONS[7];
-    private String gremlinTextB = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("Heart Event")).OPTIONS[8];
-    private String gremlinTextC = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("Heart Event")).OPTIONS[9];
-    private String gremlinTextD = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("Heart Event")).OPTIONS[10];
+    private final String fleeText = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("Heart Event")).OPTIONS[5];
+    private final String gremlinTextA = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("Heart Event")).OPTIONS[7];
+    private final String gremlinTextB = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("Heart Event")).OPTIONS[8];
+    private final String gremlinTextC = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("Heart Event")).OPTIONS[9];
+    private final String gremlinTextD = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("Heart Event")).OPTIONS[10];
 
     public HeartReward(boolean firstMini) {
         this.drawback = HeartReward.NeowRewardDrawback.NONE;
         this.activated = false;
         this.hp_bonus = 0;
         this.cursed = false;
-        this.hp_bonus = (int)((float)AbstractDungeon.player.maxHealth * 0.1F);
+        this.hp_bonus = (int) ((float) AbstractDungeon.player.maxHealth * 0.1F);
         HeartReward.NeowRewardDef reward;
         if (firstMini) {
             reward = new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.THREE_ENEMY_KILL, fleeText);
         } else {
-            if (AbstractDungeon.player instanceof GremlinCharacter) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
                 reward = new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.TEN_PERCENT_HP_BONUS, gremlinTextA + this.hp_bonus + " ]");
             } else {
                 reward = new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.TEN_PERCENT_HP_BONUS, TEXT[7] + this.hp_bonus + " ]");
@@ -78,9 +75,9 @@ public class HeartReward {
         this.activated = false;
         this.hp_bonus = 0;
         this.cursed = false;
-        this.hp_bonus = (int)((float)AbstractDungeon.player.maxHealth * 0.1F);
+        this.hp_bonus = (int) ((float) AbstractDungeon.player.maxHealth * 0.1F);
         ArrayList<HeartReward.NeowRewardDef> possibleRewards = this.getRewardOptions(category);
-        HeartReward.NeowRewardDef reward = (HeartReward.NeowRewardDef)possibleRewards.get(HeartEvent.rng.random(0, possibleRewards.size() - 1));
+        HeartReward.NeowRewardDef reward = possibleRewards.get(HeartEvent.rng.random(0, possibleRewards.size() - 1));
         if (this.drawback != HeartReward.NeowRewardDrawback.NONE && this.drawbackDef != null) {
             this.optionLabel = this.optionLabel + this.drawbackDef.desc;
         }
@@ -91,7 +88,7 @@ public class HeartReward {
 
     private ArrayList<HeartReward.NeowRewardDrawbackDef> getRewardDrawbackOptions() {
         ArrayList<HeartReward.NeowRewardDrawbackDef> drawbackOptions = new ArrayList();
-        if (AbstractDungeon.player instanceof GremlinCharacter) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
             drawbackOptions.add(new HeartReward.NeowRewardDrawbackDef(HeartReward.NeowRewardDrawback.TEN_PERCENT_HP_LOSS, gremlinTextC + this.hp_bonus + TEXT[18]));
             drawbackOptions.add(new HeartReward.NeowRewardDrawbackDef(HeartReward.NeowRewardDrawback.PERCENT_DAMAGE, gremlinTextD + AbstractDungeon.player.currentHealth / 10 * 3 + TEXT[29] + " "));
         } else {
@@ -105,7 +102,7 @@ public class HeartReward {
 
     private ArrayList<HeartReward.NeowRewardDef> getRewardOptions(int category) {
         ArrayList<HeartReward.NeowRewardDef> rewardOptions = new ArrayList();
-        switch(category) {
+        switch (category) {
             case 0:
                 rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.THREE_CARDS, TEXT[0]));
                 rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.ONE_RANDOM_RARE_CARD, TEXT[1]));
@@ -117,7 +114,7 @@ public class HeartReward {
             case 1:
                 rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.THREE_SMALL_POTIONS, TEXT[5]));
                 rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.RANDOM_COMMON_RELIC, TEXT[6]));
-                if (AbstractDungeon.player instanceof GremlinCharacter) {
+                if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
                     rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.TEN_PERCENT_HP_BONUS, gremlinTextA + this.hp_bonus + " ]"));
                 } else {
                     rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.TEN_PERCENT_HP_BONUS, TEXT[7] + this.hp_bonus + " ]"));
@@ -128,7 +125,7 @@ public class HeartReward {
                 break;
             case 2:
                 ArrayList<HeartReward.NeowRewardDrawbackDef> drawbackOptions = this.getRewardDrawbackOptions();
-                this.drawbackDef = (HeartReward.NeowRewardDrawbackDef)drawbackOptions.get(HeartEvent.rng.random(0, drawbackOptions.size() - 1));
+                this.drawbackDef = drawbackOptions.get(HeartEvent.rng.random(0, drawbackOptions.size() - 1));
                 this.drawback = this.drawbackDef.type;
                 rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.RANDOM_COLORLESS_2, TEXT[31]));
                 if (this.drawback != HeartReward.NeowRewardDrawback.CURSE) {
@@ -143,7 +140,7 @@ public class HeartReward {
 
                 rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.TRANSFORM_TWO_CARDS, TEXT[15]));
                 if (this.drawback != HeartReward.NeowRewardDrawback.TEN_PERCENT_HP_LOSS) {
-                    if (AbstractDungeon.player instanceof GremlinCharacter) {
+                    if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
                         rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.TWENTY_PERCENT_HP_BONUS, gremlinTextB + this.hp_bonus * 2 + " ]"));
                     } else {
                         rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.TWENTY_PERCENT_HP_BONUS, TEXT[16] + this.hp_bonus * 2 + " ]"));
@@ -160,41 +157,41 @@ public class HeartReward {
     public void update() {
         if (this.activated) {
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-                switch(this.type) {
+                switch (this.type) {
                     case UPGRADE_CARD:
-                        AbstractCard c = (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+                        AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
                         c.upgrade();
                         AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy()));
-                        AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                         break;
                     case REMOVE_CARD:
                         CardCrawlGame.sound.play("CARD_EXHAUST");
-                        AbstractDungeon.topLevelEffects.add(new PurgeCardEffect((AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0), (float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2)));
-                        AbstractDungeon.player.masterDeck.removeCard((AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0));
+                        AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(AbstractDungeon.gridSelectScreen.selectedCards.get(0), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
+                        AbstractDungeon.player.masterDeck.removeCard(AbstractDungeon.gridSelectScreen.selectedCards.get(0));
                         break;
                     case REMOVE_TWO:
                         CardCrawlGame.sound.play("CARD_EXHAUST");
-                        AbstractCard c2 = (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-                        AbstractCard c3 = (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(1);
-                        AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c2, (float)Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F - 30.0F * Settings.scale, (float)(Settings.HEIGHT / 2)));
-                        AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c3, (float)Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F + 30.0F * Settings.scale, (float)Settings.HEIGHT / 2.0F));
+                        AbstractCard c2 = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+                        AbstractCard c3 = AbstractDungeon.gridSelectScreen.selectedCards.get(1);
+                        AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c2, (float) Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F - 30.0F * Settings.scale, (float) (Settings.HEIGHT / 2)));
+                        AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c3, (float) Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F + 30.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
                         AbstractDungeon.player.masterDeck.removeCard(c2);
                         AbstractDungeon.player.masterDeck.removeCard(c3);
                         break;
                     case TRANSFORM_CARD:
-                        AbstractDungeon.transformCard((AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0), false, HeartEvent.rng);
-                        AbstractDungeon.player.masterDeck.removeCard((AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0));
-                        AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(AbstractDungeon.getTransformedCard(), (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.transformCard(AbstractDungeon.gridSelectScreen.selectedCards.get(0), false, HeartEvent.rng);
+                        AbstractDungeon.player.masterDeck.removeCard(AbstractDungeon.gridSelectScreen.selectedCards.get(0));
+                        AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(AbstractDungeon.getTransformedCard(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                         break;
                     case TRANSFORM_TWO_CARDS:
-                        AbstractCard t1 = (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-                        AbstractCard t2 = (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(1);
+                        AbstractCard t1 = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+                        AbstractCard t2 = AbstractDungeon.gridSelectScreen.selectedCards.get(1);
                         AbstractDungeon.player.masterDeck.removeCard(t1);
                         AbstractDungeon.player.masterDeck.removeCard(t2);
                         AbstractDungeon.transformCard(t1, false, HeartEvent.rng);
-                        AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(AbstractDungeon.getTransformedCard(), (float)Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F - 30.0F * Settings.scale, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(AbstractDungeon.getTransformedCard(), (float) Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F - 30.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
                         AbstractDungeon.transformCard(t2, false, HeartEvent.rng);
-                        AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(AbstractDungeon.getTransformedCard(), (float)Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F + 30.0F * Settings.scale, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(AbstractDungeon.getTransformedCard(), (float) Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F + 30.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
                         break;
                     default:
                         logger.info("[ERROR] Missing Neow Reward Type: " + this.type.name());
@@ -208,7 +205,7 @@ public class HeartReward {
 
             if (this.cursed) {
                 this.cursed = !this.cursed;
-                AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(AbstractDungeon.getCardWithoutRng(CardRarity.CURSE), (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(AbstractDungeon.getCardWithoutRng(CardRarity.CURSE), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
             }
         }
 
@@ -216,7 +213,7 @@ public class HeartReward {
 
     public void activate() {
         this.activated = true;
-        switch(this.drawback) {
+        switch (this.drawback) {
             case CURSE:
                 this.cursed = true;
                 break;
@@ -224,24 +221,24 @@ public class HeartReward {
                 AbstractDungeon.player.loseGold(AbstractDungeon.player.gold);
                 break;
             case TEN_PERCENT_HP_LOSS:
-                if(AbstractDungeon.player instanceof GremlinCharacter) {
-                    AbstractDungeon.player.decreaseMaxHealth(this.hp_bonus*5);
+                if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+                    AbstractDungeon.player.decreaseMaxHealth(this.hp_bonus * 5);
                 } else {
                     AbstractDungeon.player.decreaseMaxHealth(this.hp_bonus);
                 }
                 break;
             case PERCENT_DAMAGE:
-                if(AbstractDungeon.player instanceof GremlinCharacter) {
+                if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
                     ((GremlinCharacter) AbstractDungeon.player).damageAllGremlins(AbstractDungeon.player.currentHealth / 10 * 3, false);
                 } else {
-                    AbstractDungeon.player.damage(new DamageInfo((AbstractCreature) null, AbstractDungeon.player.currentHealth / 10 * 3, DamageType.HP_LOSS));
+                    AbstractDungeon.player.damage(new DamageInfo(null, AbstractDungeon.player.currentHealth / 10 * 3, DamageType.HP_LOSS));
                 }
                 break;
             default:
                 logger.info("[ERROR] Missing Neow Reward Drawback: " + this.drawback.name());
         }
 
-        switch(this.type) {
+        switch (this.type) {
             case UPGRADE_CARD:
                 AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getUpgradableCards(), 1, TEXT[27], true, false, false, false);
                 break;
@@ -258,49 +255,49 @@ public class HeartReward {
                 AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getPurgeableCards(), 2, TEXT[26], false, false, false, false);
                 break;
             case RANDOM_COLORLESS_2:
-                AbstractDungeon.cardRewardScreen.open(this.getColorlessRewardCards(true), (RewardItem)null, CardCrawlGame.languagePack.getUIString("CardRewardScreen").TEXT[1]);
+                AbstractDungeon.cardRewardScreen.open(this.getColorlessRewardCards(true), null, CardCrawlGame.languagePack.getUIString("CardRewardScreen").TEXT[1]);
                 break;
             case RANDOM_COLORLESS:
-                AbstractDungeon.cardRewardScreen.open(this.getColorlessRewardCards(false), (RewardItem)null, CardCrawlGame.languagePack.getUIString("CardRewardScreen").TEXT[1]);
+                AbstractDungeon.cardRewardScreen.open(this.getColorlessRewardCards(false), null, CardCrawlGame.languagePack.getUIString("CardRewardScreen").TEXT[1]);
                 break;
             case THREE_RARE_CARDS:
-                AbstractDungeon.cardRewardScreen.open(this.getRewardCards(true), (RewardItem)null, TEXT[22]);
+                AbstractDungeon.cardRewardScreen.open(this.getRewardCards(true), null, TEXT[22]);
                 break;
             case HUNDRED_GOLD:
                 CardCrawlGame.sound.play("GOLD_JINGLE");
                 AbstractDungeon.player.gainGold(100);
                 break;
             case ONE_RANDOM_RARE_CARD:
-                AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(AbstractDungeon.getCard(CardRarity.RARE, HeartEvent.rng).makeCopy(), (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(AbstractDungeon.getCard(CardRarity.RARE, HeartEvent.rng).makeCopy(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                 break;
             case RANDOM_COMMON_RELIC:
-                AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), AbstractDungeon.returnRandomRelic(RelicTier.COMMON));
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), AbstractDungeon.returnRandomRelic(RelicTier.COMMON));
                 break;
             case ONE_RARE_RELIC:
-                AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), AbstractDungeon.returnRandomRelic(RelicTier.RARE));
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), AbstractDungeon.returnRandomRelic(RelicTier.RARE));
                 break;
             case BOSS_RELIC:
-                AbstractDungeon.player.loseRelic(((AbstractRelic)AbstractDungeon.player.relics.get(0)).relicId);
-                AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), AbstractDungeon.returnRandomRelic(RelicTier.BOSS));
+                AbstractDungeon.player.loseRelic(AbstractDungeon.player.relics.get(0).relicId);
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), AbstractDungeon.returnRandomRelic(RelicTier.BOSS));
                 break;
             case THREE_ENEMY_KILL:
-                AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), new HeartsMalice());
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), new HeartsMalice());
                 break;
             case TEN_PERCENT_HP_BONUS:
-                if(AbstractDungeon.player instanceof GremlinCharacter) {
-                    AbstractDungeon.player.increaseMaxHp(this.hp_bonus*5, true);
+                if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+                    AbstractDungeon.player.increaseMaxHp(this.hp_bonus * 5, true);
                 } else {
                     AbstractDungeon.player.increaseMaxHp(this.hp_bonus, true);
                 }
                 break;
             case THREE_CARDS:
-                AbstractDungeon.cardRewardScreen.open(this.getRewardCards(false), (RewardItem)null, CardCrawlGame.languagePack.getUIString("CardRewardScreen").TEXT[1]);
+                AbstractDungeon.cardRewardScreen.open(this.getRewardCards(false), null, CardCrawlGame.languagePack.getUIString("CardRewardScreen").TEXT[1]);
                 break;
             case THREE_SMALL_POTIONS:
                 CardCrawlGame.sound.play("POTION_1");
 
                 int remove;
-                for(remove = 0; remove < 3; ++remove) {
+                for (remove = 0; remove < 3; ++remove) {
                     AbstractDungeon.getCurrRoom().addPotionToRewards(PotionHelper.getRandomPotion());
                 }
 
@@ -308,8 +305,8 @@ public class HeartReward {
                 AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.0F;
                 remove = -1;
 
-                for(int j = 0; j < AbstractDungeon.combatRewardScreen.rewards.size(); ++j) {
-                    if (((RewardItem)AbstractDungeon.combatRewardScreen.rewards.get(j)).type == RewardType.CARD) {
+                for (int j = 0; j < AbstractDungeon.combatRewardScreen.rewards.size(); ++j) {
+                    if (AbstractDungeon.combatRewardScreen.rewards.get(j).type == RewardType.CARD) {
                         remove = j;
                         break;
                     }
@@ -320,10 +317,10 @@ public class HeartReward {
                 }
                 break;
             case TWENTY_PERCENT_HP_BONUS:
-                if(AbstractDungeon.player instanceof GremlinCharacter) {
-                    AbstractDungeon.player.increaseMaxHp(this.hp_bonus*10, true);
+                if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+                    AbstractDungeon.player.increaseMaxHp(this.hp_bonus * 10, true);
                 } else {
-                    AbstractDungeon.player.increaseMaxHp(this.hp_bonus*2, true);
+                    AbstractDungeon.player.increaseMaxHp(this.hp_bonus * 2, true);
                 }
                 break;
             case TWO_FIFTY_GOLD:
@@ -338,7 +335,7 @@ public class HeartReward {
         ArrayList<AbstractCard> retVal = new ArrayList();
         int numCards = 3;
 
-        for(int i = 0; i < numCards; ++i) {
+        for (int i = 0; i < numCards; ++i) {
             CardRarity rarity = this.rollRarity();
             if (rareOnly) {
                 rarity = CardRarity.RARE;
@@ -347,7 +344,7 @@ public class HeartReward {
             }
 
             AbstractCard card;
-            for(card = AbstractDungeon.getColorlessCardFromPool(rarity); retVal.contains(card); card = AbstractDungeon.getColorlessCardFromPool(rarity)) {
+            for (card = AbstractDungeon.getColorlessCardFromPool(rarity); retVal.contains(card); card = AbstractDungeon.getColorlessCardFromPool(rarity)) {
             }
 
             retVal.add(card);
@@ -356,8 +353,8 @@ public class HeartReward {
         ArrayList<AbstractCard> retVal2 = new ArrayList();
         Iterator var8 = retVal.iterator();
 
-        while(var8.hasNext()) {
-            AbstractCard c = (AbstractCard)var8.next();
+        while (var8.hasNext()) {
+            AbstractCard c = (AbstractCard) var8.next();
             retVal2.add(c.makeCopy());
         }
 
@@ -368,14 +365,14 @@ public class HeartReward {
         ArrayList<AbstractCard> retVal = new ArrayList();
         int numCards = 3;
 
-        for(int i = 0; i < numCards; ++i) {
+        for (int i = 0; i < numCards; ++i) {
             CardRarity rarity = this.rollRarity();
             if (rareOnly) {
                 rarity = CardRarity.RARE;
             }
 
             AbstractCard card = null;
-            switch(rarity) {
+            switch (rarity) {
                 case RARE:
                     card = this.getCard(rarity);
                     break;
@@ -389,7 +386,7 @@ public class HeartReward {
                     logger.info("WTF?");
             }
 
-            while(retVal.contains(card)) {
+            while (retVal.contains(card)) {
                 card = this.getCard(rarity);
             }
 
@@ -399,8 +396,8 @@ public class HeartReward {
         ArrayList<AbstractCard> retVal2 = new ArrayList();
         Iterator var8 = retVal.iterator();
 
-        while(var8.hasNext()) {
-            AbstractCard c = (AbstractCard)var8.next();
+        while (var8.hasNext()) {
+            AbstractCard c = (AbstractCard) var8.next();
             retVal2.add(c.makeCopy());
         }
 
@@ -412,7 +409,7 @@ public class HeartReward {
     }
 
     public AbstractCard getCard(CardRarity rarity) {
-        switch(rarity) {
+        switch (rarity) {
             case RARE:
                 return AbstractDungeon.rareCardPool.getRandomCard(HeartEvent.rng);
             case UNCOMMON:
@@ -432,18 +429,18 @@ public class HeartReward {
         UNIQUE_REWARDS = characterStrings.UNIQUE_REWARDS;
     }
 
-    public static enum NeowRewardDrawback {
+    public enum NeowRewardDrawback {
         NONE,
         TEN_PERCENT_HP_LOSS,
         NO_GOLD,
         CURSE,
         PERCENT_DAMAGE;
 
-        private NeowRewardDrawback() {
+        NeowRewardDrawback() {
         }
     }
 
-    public static enum NeowRewardType {
+    public enum NeowRewardType {
         RANDOM_COLORLESS_2,
         THREE_CARDS,
         ONE_RANDOM_RARE_CARD,
@@ -464,7 +461,7 @@ public class HeartReward {
         TWENTY_PERCENT_HP_BONUS,
         BOSS_RELIC;
 
-        private NeowRewardType() {
+        NeowRewardType() {
         }
     }
 

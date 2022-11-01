@@ -4,11 +4,11 @@ import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
-import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.stances.NeutralStance;
+import downfall.util.TextureLoader;
 
 import static champ.ChampMod.makeRelicOutlinePath;
 import static champ.ChampMod.makeRelicPath;
@@ -32,11 +32,11 @@ public class ChampStancesModRelic extends CustomRelic {
             switch (x) {
                 case 0:
                     //SlimeboundMod.logger.info("Switching to Berserker (Mod Relic)");
-                        addToBot(new ChangeStanceAction(BerserkerStance.STANCE_ID));
+                    addToBot(new ChangeStanceAction(BerserkerStance.STANCE_ID));
                     break;
                 case 1:
                     //SlimeboundMod.logger.info("Switching to Defensive (Mod Relic)");
-                        addToBot(new ChangeStanceAction(DefensiveStance.STANCE_ID));
+                    addToBot(new ChangeStanceAction(DefensiveStance.STANCE_ID));
                     break;
             }
         }

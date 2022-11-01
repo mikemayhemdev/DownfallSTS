@@ -6,7 +6,6 @@
 package hermit.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,17 +14,18 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+
 import java.util.Iterator;
 
 public class AdaptAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
-    private AbstractPlayer p;
-    private boolean isRandom;
-    private boolean anyNumber;
-    private boolean canPickZero;
+    private final AbstractPlayer p;
+    private final boolean isRandom;
+    private final boolean anyNumber;
+    private final boolean canPickZero;
     public static int numExhausted;
-    int block=0;
+    int block = 0;
 
     public AdaptAction(int amount, boolean isRandom, boolean anyNumber, boolean canPickZero) {
         this.anyNumber = anyNumber;
@@ -33,7 +33,7 @@ public class AdaptAction extends AbstractGameAction {
         this.canPickZero = canPickZero;
         this.isRandom = isRandom;
         this.amount = amount;
-        this.block=8;
+        this.block = 8;
         this.duration = this.startDuration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.EXHAUST;
     }
@@ -89,7 +89,7 @@ public class AdaptAction extends AbstractGameAction {
                 return;
             }
 
-            for(i = 0; i < this.amount; ++i) {
+            for (i = 0; i < this.amount; ++i) {
                 this.p.hand.moveToExhaustPile(this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng));
                 AbstractDungeon.actionManager.addToTop(new GainBlockAction(p, p, block));
             }
@@ -100,8 +100,8 @@ public class AdaptAction extends AbstractGameAction {
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
             Iterator var4 = AbstractDungeon.handCardSelectScreen.selectedCards.group.iterator();
 
-            while(var4.hasNext()) {
-                AbstractCard c = (AbstractCard)var4.next();
+            while (var4.hasNext()) {
+                AbstractCard c = (AbstractCard) var4.next();
                 this.p.hand.moveToExhaustPile(c);
                 AbstractDungeon.actionManager.addToTop(new GainBlockAction(p, p, block));
             }

@@ -1,6 +1,5 @@
 package champ.cards;
 
-import champ.ChampMod;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -20,7 +19,7 @@ public class CheapShot extends AbstractChampCard {
     public CheapShot() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-      //  tags.add(ChampMod.FINISHER);
+        //  tags.add(ChampMod.FINISHER);
         exhaust = true;
     }
 
@@ -34,7 +33,7 @@ public class CheapShot extends AbstractChampCard {
             dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
             dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         }
-    //    finisher();
+        //    finisher();
     }
 
     public void upp() {

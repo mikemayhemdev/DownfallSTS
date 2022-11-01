@@ -5,12 +5,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.EventHelper;
 import com.megacrit.cardcrawl.map.MapRoomNode;
 import com.megacrit.cardcrawl.map.RoomTypeAssigner;
-import com.megacrit.cardcrawl.rooms.*;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.rooms.ShopRoom;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.rooms.HeartShopRoom;
-import javassist.CtBehavior;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ShopRoomReplacePatch {
 

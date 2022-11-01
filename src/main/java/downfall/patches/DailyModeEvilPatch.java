@@ -3,7 +3,6 @@ package downfall.patches;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,7 +11,6 @@ import com.megacrit.cardcrawl.daily.DailyScreen;
 import com.megacrit.cardcrawl.daily.TimeHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.integrations.DistributorFactory;
 import com.megacrit.cardcrawl.screens.mainMenu.MenuCancelButton;
 import downfall.downfallMod;
@@ -28,9 +26,9 @@ public class DailyModeEvilPatch {
     private static float header_x = 186.0F * Settings.scale;
     private static float char_x = 304.0F * Settings.scale;
 
-    private static float center_mod_offset_x = 500.0F * Settings.scale;
+    private static final float center_mod_offset_x = 500.0F * Settings.scale;
 
-    private static float mode_offset_x = 400.0F * Settings.scale;
+    private static final float mode_offset_x = 400.0F * Settings.scale;
 
     @SpirePatch(clz = DailyScreen.class, method = "determineLoadout")
     public static class Init {
@@ -45,8 +43,8 @@ public class DailyModeEvilPatch {
                 char_x += center_mod_offset_x;
             }
             //Uncomment to re-randomize dailies whenever you enter the screen.
-           // long todaySeed = MathUtils.random(0, TimeHelper.daySince1970());
-           // ModHelper.setTodaysMods(todaySeed, __result.todaysChar.chosenClass);// 315
+            // long todaySeed = MathUtils.random(0, TimeHelper.daySince1970());
+            // ModHelper.setTodaysMods(todaySeed, __result.todaysChar.chosenClass);// 315
         }
     }
 
@@ -54,7 +52,7 @@ public class DailyModeEvilPatch {
     public static class Proceed {
         @SpirePostfixPatch
         public static void Prefix(DailyScreen __result) {
-            MenuCancelButton cancelButton = (MenuCancelButton) ReflectionHacks.getPrivate(__result, DailyScreen.class, "cancelButton");
+            MenuCancelButton cancelButton = ReflectionHacks.getPrivate(__result, DailyScreen.class, "cancelButton");
             if (cancelButton.hb.clicked) {
                 EvilModeCharacterSelect.evilMode = todaysRunIsEvil;
             }

@@ -6,25 +6,23 @@
 package slimebound.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import slimebound.powers.PotencyPower;
 
 public class CoordinateAction extends AbstractGameAction {
     private boolean freeToPlayOnce = false;
     private int damage;
-    private AbstractPlayer p;
-    private AbstractMonster m;
+    private final AbstractPlayer p;
+    private final AbstractMonster m;
     private DamageType damageTypeForTurn;
     private int energyOnUse = -1;
     private int slimesToTrigger = 0;
-    private int block;
-    private boolean upgraded;
+    private final int block;
+    private final boolean upgraded;
 
     public CoordinateAction(AbstractPlayer p, AbstractMonster m, int slimesToTrigger, boolean freeToPlayOnce, int energyOnUse, int block, boolean upgraded) {
         this.p = p;

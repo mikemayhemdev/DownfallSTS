@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import guardian.GuardianMod;
 import guardian.characters.GuardianCharacter;
 import guardian.orbs.StasisOrb;
 

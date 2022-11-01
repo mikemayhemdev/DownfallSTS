@@ -3,7 +3,6 @@ package charbosses.relics;
 import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.FusionHammer;
 import com.megacrit.cardcrawl.relics.Sozu;
 
 public class CBR_Sozu extends AbstractCharbossRelic {

@@ -1,6 +1,5 @@
 package champ.cards;
 
-import champ.powers.ShieldWallPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;

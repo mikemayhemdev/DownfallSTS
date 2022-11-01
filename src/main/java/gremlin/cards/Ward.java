@@ -25,13 +25,12 @@ public class Ward extends CustomCard {
     public static final int BLOCK = 3;
     public static final int UPGRADE_BONUS = 2;
 
-    public Ward()
-    {
+    public Ward() {
         super(ID, NAME, GremlinMod.getResourcePath(IMG_PATH), COST, strings.DESCRIPTION, TYPE,
                 CardColor.COLORLESS, RARITY, TARGET);
 
         if ((AbstractDungeon.player != null) && (AbstractDungeon.player.hasPower(PolishPower.POWER_ID))) {
-            if(this.upgraded) {
+            if (this.upgraded) {
                 this.baseBlock = (BLOCK + UPGRADE_BONUS + AbstractDungeon.player.getPower(PolishPower.POWER_ID).amount);
             } else {
                 this.baseBlock = (BLOCK + AbstractDungeon.player.getPower(PolishPower.POWER_ID).amount);
@@ -46,7 +45,7 @@ public class Ward extends CustomCard {
     @Override
     public void applyPowers() {
         if ((AbstractDungeon.player != null) && (AbstractDungeon.player.hasPower(PolishPower.POWER_ID))) {
-            if(this.upgraded) {
+            if (this.upgraded) {
                 this.baseBlock = (BLOCK + UPGRADE_BONUS + AbstractDungeon.player.getPower(PolishPower.POWER_ID).amount);
             } else {
                 this.baseBlock = (BLOCK + AbstractDungeon.player.getPower(PolishPower.POWER_ID).amount);
@@ -55,15 +54,12 @@ public class Ward extends CustomCard {
         super.applyPowers();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_BONUS);
         }

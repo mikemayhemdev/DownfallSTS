@@ -1,33 +1,22 @@
 package downfall.monsters.gauntletbosses;
 
-import charbosses.bosses.AbstractCharBoss;
-import charbosses.core.EnemyEnergyManager;
-import charbosses.powers.BossIntangiblePower;
 import charbosses.powers.cardpowers.EnemyWraithFormPower;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.blue.Defend_Blue;
-import com.megacrit.cardcrawl.cards.curses.Doubt;
 import com.megacrit.cardcrawl.cards.green.Defend_Green;
 import com.megacrit.cardcrawl.cards.green.LegSweep;
 import com.megacrit.cardcrawl.cards.green.Strike_Green;
 import com.megacrit.cardcrawl.cards.green.WraithForm;
-import com.megacrit.cardcrawl.cards.red.Strike_Red;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.*;
-import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbGreen;
-import downfall.downfallMod;
-import downfall.powers.DrawReductionPowerPlus;
-import downfall.powers.gauntletpowers.MonsterVigor;
-import downfall.powers.gauntletpowers.OnDeathEveryoneBuffer;
-import downfall.powers.gauntletpowers.OnDeathEveryoneThorns;
+import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.IntangiblePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
+import downfall.downfallMod;
+import downfall.powers.gauntletpowers.MonsterVigor;
+import downfall.powers.gauntletpowers.OnDeathEveryoneThorns;
 
 public class Silent extends GauntletBoss {
 

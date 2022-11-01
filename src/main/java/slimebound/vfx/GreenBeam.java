@@ -20,8 +20,8 @@ import com.megacrit.cardcrawl.vfx.BorderLongFlashEffect;
 public class GreenBeam extends AbstractGameEffect {
     private static final float DUR = 1.0F;
     private static AtlasRegion img;
-    private float x;
-    private float y;
+    private final float x;
+    private final float y;
     private boolean playedSfx = false;
     private boolean flipHorizontal = false;
 

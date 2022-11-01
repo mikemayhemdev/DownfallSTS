@@ -1,19 +1,13 @@
 package hermit.relics;
 
 import basemod.abstracts.CustomRelic;
-import basemod.devcommands.power.Power;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.relics.OnPlayerDeathRelic;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import hermit.HermitMod;
-import hermit.cards.MementoCard;
-import hermit.powers.Concentration;
-import hermit.powers.PetGhostPower;
 import hermit.util.TextureLoader;
 
 import static hermit.HermitMod.makeRelicOutlinePath;
@@ -51,7 +45,7 @@ public class PetGhost extends CustomRelic implements OnPlayerDeathRelic {
             this.canDie = true;
             AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             flash();
-            p.heal(1,false);
+            p.heal(1, false);
             return false;
         }
         return true;

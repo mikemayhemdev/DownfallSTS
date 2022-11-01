@@ -4,7 +4,6 @@ import charbosses.actions.unique.EnemyChangeStanceAction;
 import charbosses.stances.AbstractEnemyStance;
 import charbosses.stances.EnRealWrathStance;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;

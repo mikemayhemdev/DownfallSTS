@@ -31,7 +31,7 @@ public class SlimedPower extends AbstractPower {
     public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static String[] DESCRIPTIONS;
     public boolean doubleUp = false;
-    private AbstractCreature source;
+    private final AbstractCreature source;
 
 
     public SlimedPower(AbstractCreature owner, AbstractCreature source, int amount) {

@@ -24,10 +24,10 @@ public class SpookyFlameBarrier extends AbstractGameEffect {
         Y_RADIUS = 250.0F * Settings.scale;
     }
 
-    private float x;
-    private float y;
+    private final float x;
+    private final float y;
     private boolean flashedBorder = true;
-    private Vector2 v = new Vector2(0.0F, 0.0F);
+    private final Vector2 v = new Vector2(0.0F, 0.0F);
 
     public SpookyFlameBarrier(float x, float y) {
         this.duration = 0.5F;// 25

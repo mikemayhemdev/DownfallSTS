@@ -13,21 +13,20 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
 import com.badlogic.gdx.math.Interpolation;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class EnemyMiracleEffect extends AbstractGameEffect {
-    private float x;
-    private float y;
-    private AtlasRegion img;
-    private Color altColor;
+    private final float x;
+    private final float y;
+    private final AtlasRegion img;
+    private final Color altColor;
     private String sfxUrl = "HEAL_3";
 
     public EnemyMiracleEffect(Color setColor, Color altColor, String setSfx) {
         this.img = ImageMaster.CRYSTAL_IMPACT;
-        this.x = AbstractCharBoss.boss.hb.cX - (float)this.img.packedWidth / 2.0F;
-        this.y = AbstractCharBoss.boss.hb.cY - (float)this.img.packedHeight / 2.0F;
+        this.x = AbstractCharBoss.boss.hb.cX - (float) this.img.packedWidth / 2.0F;
+        this.y = AbstractCharBoss.boss.hb.cY - (float) this.img.packedHeight / 2.0F;
         this.startingDuration = 0.7F;
         this.duration = this.startingDuration;
         this.scale = Settings.scale;
@@ -40,8 +39,8 @@ public class EnemyMiracleEffect extends AbstractGameEffect {
 
     public EnemyMiracleEffect() {
         this.img = ImageMaster.CRYSTAL_IMPACT;
-        this.x = AbstractCharBoss.boss.hb.cX - (float)this.img.packedWidth / 2.0F;
-        this.y = AbstractCharBoss.boss.hb.cY - (float)this.img.packedHeight / 2.0F;
+        this.x = AbstractCharBoss.boss.hb.cX - (float) this.img.packedWidth / 2.0F;
+        this.y = AbstractCharBoss.boss.hb.cY - (float) this.img.packedHeight / 2.0F;
         this.startingDuration = 0.7F;
         this.duration = this.startingDuration;
         this.scale = Settings.scale;
@@ -74,9 +73,9 @@ public class EnemyMiracleEffect extends AbstractGameEffect {
         sb.setBlendFunction(770, 1);
         this.altColor.a = this.color.a;
         sb.setColor(this.altColor);
-        sb.draw(this.img, this.x, this.y, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale * 1.1F, this.scale * 1.1F, 0.0F);
+        sb.draw(this.img, this.x, this.y, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale * 1.1F, this.scale * 1.1F, 0.0F);
         sb.setColor(this.color);
-        sb.draw(this.img, this.x, this.y, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale * 0.9F, this.scale * 0.9F, 0.0F);
+        sb.draw(this.img, this.x, this.y, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale * 0.9F, this.scale * 0.9F, 0.0F);
         sb.setBlendFunction(770, 771);
     }
 

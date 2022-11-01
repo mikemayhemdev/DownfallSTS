@@ -1,13 +1,14 @@
 package gremlin.actions;
 
-import com.megacrit.cardcrawl.actions.*;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
-import com.megacrit.cardcrawl.core.*;
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-public class PourSaltAction extends AbstractGameAction
-{
+public class PourSaltAction extends AbstractGameAction {
     public PourSaltAction(final AbstractCreature target, int amount) {
         this.duration = Settings.ACTION_DUR_XFAST;
         this.actionType = ActionType.BLOCK;

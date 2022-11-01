@@ -94,7 +94,7 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
         //SlimeboundMod.logger.info("Stacking Split: " + stackAmount);
-        if (stackAmount > 0){
+        if (stackAmount > 0) {
             AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, stackAmount, DamageInfo.DamageType.HP_LOSS));
         }
         updateCurrentHealth();

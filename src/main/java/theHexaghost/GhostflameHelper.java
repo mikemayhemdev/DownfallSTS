@@ -63,10 +63,12 @@ public class GhostflameHelper {
         x.activate();
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnAdvanceSubscriber) ((OnAdvanceSubscriber) p).onAdvance();
-            if (p instanceof OnAdvanceOrRetractSubscriber) ((OnAdvanceOrRetractSubscriber) p).onAdvanceOrRetract(endTurn);
+            if (p instanceof OnAdvanceOrRetractSubscriber)
+                ((OnAdvanceOrRetractSubscriber) p).onAdvanceOrRetract(endTurn);
         }
         for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
-            if (c instanceof OnAdvanceOrRetractSubscriber) ((OnAdvanceOrRetractSubscriber) c).onAdvanceOrRetract(endTurn);
+            if (c instanceof OnAdvanceOrRetractSubscriber)
+                ((OnAdvanceOrRetractSubscriber) c).onAdvanceOrRetract(endTurn);
         }
     }
 
@@ -101,7 +103,7 @@ public class GhostflameHelper {
             showAll = false;
             for (AbstractGhostflame gf : hexaGhostFlames) {
                 if (gf.hitbox.hovered || (gf.hitbox2.hovered && gf == activeGhostFlame)) {
-                   // showAll = true;
+                    // showAll = true;
                     if ((float) InputHelper.mX < 1400.0F * Settings.scale) {
                         TipHelper.renderGenericTip(
                                 (float) InputHelper.mX + 60.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,

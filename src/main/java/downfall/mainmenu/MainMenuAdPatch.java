@@ -46,24 +46,24 @@ public class MainMenuAdPatch {
     }
 
     private static class MainMenuAd {
-        private String text;
-        private String text2;
-        private String text3;
-        private String text4;
-        private String text5;
-        private String textheader;
-        private String url;
+        private final String text;
+        private final String text2;
+        private final String text3;
+        private final String text4;
+        private final String text5;
+        private final String textheader;
+        private final String url;
         private static final Texture tex = TextureLoader.getTexture("downfallResources/images/menuPanelHalfBlue.png");
 
         public final Hitbox hb;
 
-        private Color tint = new Color(1, 1, 1, 0);
-        private float xPos = Settings.WIDTH * 0.75F;
-        private float yPos = Settings.HEIGHT / 2F;
-        private float angle = 0.0f;
-        private float scale = 0.5f;
-        private float adjustedWidth = tex.getWidth() * Settings.scale * scale;
-        private float adjustedHeight = tex.getHeight() * Settings.scale * scale;
+        private final Color tint = new Color(1, 1, 1, 0);
+        private final float xPos = Settings.WIDTH * 0.75F;
+        private final float yPos = Settings.HEIGHT / 2F;
+        private final float angle = 0.0f;
+        private final float scale = 0.5f;
+        private final float adjustedWidth = tex.getWidth() * Settings.scale * scale;
+        private final float adjustedHeight = tex.getHeight() * Settings.scale * scale;
 
         public MainMenuAd(String text, String textheader, String text2, String text3, String text4, String text5, String url) {
             hb = new Hitbox(xPos, yPos, adjustedWidth, adjustedHeight);
@@ -87,7 +87,7 @@ public class MainMenuAdPatch {
             }
             FontHelper.cardTitleFont.getData().setScale(1.0f);
 
-            FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, textheader, xPos+ adjustedWidth / 2, yPos + 360F * Settings.scale);
+            FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, textheader, xPos + adjustedWidth / 2, yPos + 360F * Settings.scale);
 
             FontHelper.cardDescFont_N.getData().setScale(1.0f);
             FontHelper.renderFontCentered(sb, FontHelper.cardDescFont_N, text, xPos + adjustedWidth / 2, yPos + 290F * Settings.scale);

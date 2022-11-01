@@ -11,24 +11,25 @@ import com.megacrit.cardcrawl.powers.IntangiblePower;
 public class SilentTrophy extends AbstractCollectibleCard {
     public final static String ID = makeID("SilentTrophy");
     public static AbstractCard s;
+
     public SilentTrophy() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF, CollectorCardSource.BOTH);
         this.exhaust = true;
         s = (new Shiv()).makeCopy();
         s.upgrade();
-        if (upgraded){
+        if (upgraded) {
             cardsToPreview = s;
         } else cardsToPreview = new Shiv();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToFront(new IntangiblePower(p,1));
+        applyToFront(new IntangiblePower(p, 1));
         if (!upgraded) {
             atb(new MakeTempCardInHandAction(new Shiv(), 2));
         } else
-            atb(new MakeTempCardInHandAction( s, 2));
-            applyToSelf(new BlurPower(p,1));
+            atb(new MakeTempCardInHandAction(s, 2));
+        applyToSelf(new BlurPower(p, 1));
     }
 
     @Override

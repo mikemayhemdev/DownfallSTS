@@ -25,28 +25,24 @@ public class Revel extends AbstractGremlinCard {
     private static final int COST = 3;
     private static final int UPGRADED_COST = 2;
 
-    public Revel()
-    {
+    public Revel() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         GremlinMod.loadJokeCardImage(this, "Revel.png");
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         int amount = 1;
-        for(AbstractOrb orb : p.orbs){
-            if(orb instanceof GremlinStandby){
+        for (AbstractOrb orb : p.orbs) {
+            if (orb instanceof GremlinStandby) {
                 amount += 1;
             }
         }
         AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(amount));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeBaseCost(UPGRADED_COST);
         }

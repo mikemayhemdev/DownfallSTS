@@ -9,9 +9,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import downfall.util.TextureLoader;
 import theHexaghost.HexaMod;
 import theHexaghost.util.OnRetractSubscriber;
-import downfall.util.TextureLoader;
 
 public class PastPower extends AbstractPower implements CloneablePowerInterface, OnRetractSubscriber {
 

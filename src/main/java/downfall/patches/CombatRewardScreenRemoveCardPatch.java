@@ -1,4 +1,3 @@
-
 package downfall.patches;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;

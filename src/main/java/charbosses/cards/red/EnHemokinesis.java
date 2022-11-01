@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.HemokinesisEffect;
-import downfall.downfallMod;
 
 public class EnHemokinesis extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Hemokinesis";

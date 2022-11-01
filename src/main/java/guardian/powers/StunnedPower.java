@@ -11,8 +11,6 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
 
-import java.util.Iterator;
-
 
 public class StunnedPower extends AbstractPower {
     public static final String POWER_ID = "Guardian:StunnedPower";

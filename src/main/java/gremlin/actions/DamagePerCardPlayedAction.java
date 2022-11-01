@@ -1,14 +1,13 @@
 package gremlin.actions;
 
-import com.megacrit.cardcrawl.actions.*;
-import com.megacrit.cardcrawl.core.*;
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.cards.*;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-public class DamagePerCardPlayedAction extends AbstractGameAction
-{
-    private DamageInfo info;
+public class DamagePerCardPlayedAction extends AbstractGameAction {
+    private final DamageInfo info;
 
     public DamagePerCardPlayedAction(final AbstractCreature target, final DamageInfo info, final AttackEffect effect) {
         this.setValues(target, this.info = info);

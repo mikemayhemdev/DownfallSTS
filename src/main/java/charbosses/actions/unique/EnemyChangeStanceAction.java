@@ -4,15 +4,15 @@ package charbosses.actions.unique;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.stances.AbstractEnemyStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+
 import java.util.Iterator;
 
 public class EnemyChangeStanceAction extends AbstractGameAction {
-    private String id;
+    private final String id;
     private AbstractEnemyStance newStance;
 
     public EnemyChangeStanceAction(String stanceId) {

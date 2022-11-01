@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import gremlin.GremlinMod;
 
-public class FuriousPower extends AbstractGremlinPower implements OnGainedBlockModifierPower{
+public class FuriousPower extends AbstractGremlinPower implements OnGainedBlockModifierPower {
     static final String POWER_ID = getID("Furious");
     private static final PowerStrings strings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final Texture IMG = new Texture(GremlinMod.getResourcePath("powers/furious.png"));
@@ -29,8 +29,7 @@ public class FuriousPower extends AbstractGremlinPower implements OnGainedBlockM
         this.updateDescription();
     }
 
-    public void updateDescription()
-    {
+    public void updateDescription() {
         this.description = strings.DESCRIPTIONS[0];
     }
 
@@ -43,7 +42,7 @@ public class FuriousPower extends AbstractGremlinPower implements OnGainedBlockM
     public int onGainedBlockModifier(float blockAmount) {
         flash();
         AbstractGameAction.AttackEffect effect = AbstractGameAction.AttackEffect.BLUNT_LIGHT;
-        if(blockAmount >= 10){
+        if (blockAmount >= 10) {
             effect = AbstractGameAction.AttackEffect.BLUNT_HEAVY;
         }
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(null,

@@ -26,7 +26,7 @@ public class MadGremlinPower extends GremlinPower {
 
     @Override
     public int onAttacked(final DamageInfo info, final int damageAmount) {
-        if((AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) &&
+        if ((AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) &&
                 (info.owner != null) && (info.type != DamageInfo.DamageType.HP_LOSS) && (info.type != DamageInfo.DamageType.THORNS)) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner,
                     new StrengthPower(owner, this.pot), this.pot));

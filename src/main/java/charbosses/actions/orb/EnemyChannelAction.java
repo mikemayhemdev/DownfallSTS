@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 
 public class EnemyChannelAction extends AbstractGameAction {
-    private AbstractOrb orbType;
+    private final AbstractOrb orbType;
     private boolean autoEvoke;
 
     public EnemyChannelAction(final AbstractOrb newOrbType) {

@@ -72,7 +72,7 @@ public class Midnight extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.isEthereal=false;
+            this.isEthereal = false;
             upgradeBlock(UPGRADE_PLUS_BLOCK);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();

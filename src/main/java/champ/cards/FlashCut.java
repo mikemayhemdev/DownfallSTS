@@ -28,7 +28,7 @@ public class FlashCut extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseBlock = block = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
-      //  tags.add(ChampMod.OPENER);
+        //  tags.add(ChampMod.OPENER);
         tags.add(CardTags.STRIKE);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
@@ -40,7 +40,7 @@ public class FlashCut extends AbstractChampCard {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         if (dcombo()) applyToSelf(new CounterPower(magicNumber));
         if (dcombo()) blck();
-     //   defenseOpen();
+        //   defenseOpen();
     }
 
     @Override

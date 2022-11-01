@@ -13,7 +13,7 @@ public class SoulHarvest extends AbstractCollectorCard {
     public final static String ID = makeID("SoulHarvest");
 
     public SoulHarvest() {
-        super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ALL_ENEMY,CollectorCardSource.BACK);
+        super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ALL_ENEMY, CollectorCardSource.BACK);
         RearBaseDamage = douDamage = baseDamage = 6;
         isMultiDamage = true;
         selfRetain = true;
@@ -26,8 +26,8 @@ public class SoulHarvest extends AbstractCollectorCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new CleaveEffect()));
         allDmg(AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.FIRE);
-        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters){
-            applyToEnemy(mo, new SoulMark(magicNumber,mo));
+        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            applyToEnemy(mo, new SoulMark(magicNumber, mo));
         }
     }
 

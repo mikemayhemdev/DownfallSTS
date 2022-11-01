@@ -16,7 +16,7 @@ import static com.megacrit.cardcrawl.cards.AbstractCard.CardType.STATUS;
 
 public class DiscoverEtherealAction extends AbstractGameAction {
     private boolean retrieveCard = false;
-    private int count;
+    private final int count;
 
     public DiscoverEtherealAction(int count) {
         this.actionType = ActionType.CARD_MANIPULATION;

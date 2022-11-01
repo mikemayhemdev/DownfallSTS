@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.actions.LoneWolfAction;
-import hermit.actions.MaintenanceAction;
 import hermit.characters.hermit;
 
 import static hermit.HermitMod.loadJokeCardImage;
@@ -40,7 +39,6 @@ public class LoneWolf extends AbstractDynamicCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
-
 
 
     private static final int COST = 1;

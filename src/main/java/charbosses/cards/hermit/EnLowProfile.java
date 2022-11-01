@@ -1,7 +1,5 @@
 package charbosses.cards.hermit;
 
-import charbosses.powers.bossmechanicpowers.HermitConcentrationPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,8 +8,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.PlatedArmorPower;
-import hermit.cards.Dive;
 import hermit.cards.LowProfile;
 import hermit.characters.hermit;
 
@@ -25,10 +21,9 @@ public class EnLowProfile extends AbstractHermitBossCard {
         baseMagicNumber = magicNumber = 4;
     }
 
-    private int countDebuffs()
-    {
+    private int countDebuffs() {
         int debuffs = 0;
-        for (AbstractPower pow: this.owner.powers) {
+        for (AbstractPower pow : this.owner.powers) {
             if (pow.type == AbstractPower.PowerType.DEBUFF)
                 debuffs++;
         }

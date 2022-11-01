@@ -3,7 +3,6 @@ package automaton.potions;
 
 import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Burn;
@@ -45,7 +44,7 @@ public class BurnAndBuffPotion extends CustomPotion {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, potency), potency));
         AbstractCard c = new Burn();
         c.upgrade();
-        
+
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(c, 2));
 
     }

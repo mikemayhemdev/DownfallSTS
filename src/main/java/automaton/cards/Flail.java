@@ -1,9 +1,7 @@
 package automaton.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 
@@ -24,7 +22,7 @@ public class Flail extends AbstractBronzeCard {
         baseDamage = DAMAGE;
         isMultiDamage = true;
         baseMagicNumber = magicNumber = MAGIC;
-       // thisEncodes();
+        // thisEncodes();
         baseAuto = auto = 2;
         exhaust = true;
     }

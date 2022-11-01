@@ -4,11 +4,11 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import gremlin.powers.GremlinPower;
 import gremlin.powers.MadGremlinPower;
 
-public class MadGremlin extends GremlinStandby{
+public class MadGremlin extends GremlinStandby {
     public static final int STRENGTH = 2;
 
     public MadGremlin(int hp) {
-        super(hp,"Gremlin:MadGremlin", "angry", "idle", 25);
+        super(hp, "Gremlin:MadGremlin", "angry", "idle", 25);
     }
 
     @Override

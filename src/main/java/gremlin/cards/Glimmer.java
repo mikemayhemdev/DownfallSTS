@@ -27,8 +27,7 @@ public class Glimmer extends AbstractGremlinCard {
     private static final int POWER = 1;
     private static final int UPGRADE_BONUS = 1;
 
-    public Glimmer()
-    {
+    public Glimmer() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -42,7 +41,7 @@ public class Glimmer extends AbstractGremlinCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                 this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         AbstractCard w = new Ward();
-        if(this.upgraded){
+        if (this.upgraded) {
             w.upgrade();
         }
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(w, 2));
@@ -50,8 +49,7 @@ public class Glimmer extends AbstractGremlinCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;

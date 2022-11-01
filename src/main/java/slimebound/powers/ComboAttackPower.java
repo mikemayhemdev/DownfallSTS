@@ -5,12 +5,10 @@ import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.actions.CommandAction;
-import slimebound.actions.TrigggerSpecificSlimeAttackAction;
 
 
 public class ComboAttackPower extends TwoAmountPower {
@@ -21,7 +19,7 @@ public class ComboAttackPower extends TwoAmountPower {
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
     private int timesTriggeredThisTurn;
-    private AbstractCreature source;
+    private final AbstractCreature source;
 
 
     public ComboAttackPower(AbstractCreature owner, AbstractCreature source, int amount) {
@@ -74,8 +72,7 @@ public class ComboAttackPower extends TwoAmountPower {
         super.onAfterCardPlayed(usedCard);
         if (usedCard.target == AbstractCard.CardTarget.ENEMY || usedCard.target == AbstractCard.CardTarget.ALL_ENEMY) {
             if (this.amount2 > 0) {
-                if (SlimeboundMod.getLeadingSlime() != null)
-                {
+                if (SlimeboundMod.getLeadingSlime() != null) {
                     flash();
                     com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new CommandAction());
                     this.amount2--;

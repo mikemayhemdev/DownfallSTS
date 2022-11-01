@@ -1,20 +1,20 @@
 package hermit.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
 import com.megacrit.cardcrawl.actions.common.ReduceCostForTurnAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
 import java.util.Iterator;
 
 public class GambitAction extends AbstractGameAction {
-    private AbstractPlayer p;
-    private CardType typeToCheck;
+    private final AbstractPlayer p;
+    private final CardType typeToCheck;
 
     public GambitAction(int amount, CardType type) {
         this.p = AbstractDungeon.player;
@@ -35,11 +35,11 @@ public class GambitAction extends AbstractGameAction {
             Iterator var2 = this.p.discardPile.group.iterator();
 
             AbstractCard card;
-            while(var2.hasNext()) {
-                card = (AbstractCard)var2.next();
+            while (var2.hasNext()) {
+                card = (AbstractCard) var2.next();
                 if (card.type == this.typeToCheck) {
                     tmp.addToRandomSpot(card);
-                    this.addToTop( new ReduceCostForTurnAction(card,1));
+                    this.addToTop(new ReduceCostForTurnAction(card, 1));
                 }
             }
 
@@ -48,7 +48,7 @@ public class GambitAction extends AbstractGameAction {
                 return;
             }
 
-            for(int i = 0; i < this.amount; ++i) {
+            for (int i = 0; i < this.amount; ++i) {
                 if (!tmp.isEmpty()) {
                     tmp.shuffle();
                     card = tmp.getBottomCard();

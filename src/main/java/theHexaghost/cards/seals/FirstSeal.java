@@ -3,8 +3,8 @@ package theHexaghost.cards.seals;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theHexaghost.HexaMod;
 import com.megacrit.cardcrawl.powers.RepairPower;
+import theHexaghost.HexaMod;
 
 public class FirstSeal extends AbstractSealCard {
 

@@ -42,6 +42,7 @@ public class EnUppercut extends AbstractBossCard {
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings("Uppercut");
     }
+
     @Override
     public AbstractCard makeCopy() {
         return new EnUppercut();

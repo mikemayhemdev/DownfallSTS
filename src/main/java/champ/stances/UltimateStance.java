@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.stances.AbstractStance;
 public class UltimateStance extends AbstractChampStance {
 
     public static final String STANCE_ID = "champ:UltimateStance";
-    private static long sfxId = -1L;
+    private static final long sfxId = -1L;
 
     public UltimateStance() {
         this.ID = STANCE_ID;

@@ -36,10 +36,8 @@ import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
 import downfall.relics.GremlinWheel;
-import downfall.rooms.HeartShopRoom;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import slimebound.SlimeboundMod;
 
 import java.util.Objects;
 
@@ -83,11 +81,11 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
     private int goldAmount;
     private boolean purgeResult;
     private boolean buttonPressed;
-    private Hitbox buttonHb;
-    private Texture wheelImg;
-    private Texture arrowImg;
-    private Texture buttonImg;
-    private float imgX;
+    private final Hitbox buttonHb;
+    private final Texture wheelImg;
+    private final Texture arrowImg;
+    private final Texture buttonImg;
+    private final float imgX;
     private float imgY;
     private float wheelAngle;
     private Color color;
@@ -289,8 +287,8 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
                     this.imageEventText.setDialogOption(OPTIONS[8]);
                     this.imageEventText.updateBodyText(DESCRIPTIONS[13]);
                     this.screen = CUR_SCREEN.LEAVE;
-                    if (AbstractDungeon.player.hasRelic(GremlinWheel.ID)){
-                        GremlinWheel gw = (GremlinWheel)AbstractDungeon.player.getRelic(GremlinWheel.ID);
+                    if (AbstractDungeon.player.hasRelic(GremlinWheel.ID)) {
+                        GremlinWheel gw = (GremlinWheel) AbstractDungeon.player.getRelic(GremlinWheel.ID);
                         gw.justFailed = true;
                     }
                     break;
@@ -310,7 +308,6 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
                 CardCrawlGame.fadeIn(1.5F);
                 AbstractDungeon.rs = AbstractDungeon.RenderScene.NORMAL;
                 sRoom.onPlayerEntry();
-                return;
         }
 
     }

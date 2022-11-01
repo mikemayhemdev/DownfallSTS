@@ -15,7 +15,7 @@ import java.util.Collections;
 
 public class DiscoverBossAction extends AbstractGameAction {
     private boolean retrieveCard = false;
-    private int count;
+    private final int count;
 
     public DiscoverBossAction(int count) {
         this.actionType = ActionType.CARD_MANIPULATION;

@@ -15,12 +15,12 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class LeechEffect extends AbstractGameEffect {
     int count = 0;
-    private float sX;
-    private float sY;
-    private float tX;
-    private float tY;
+    private final float sX;
+    private final float sY;
+    private final float tX;
+    private final float tY;
     private float timer = 0.0F;
-    private Color color;
+    private final Color color;
 
     public LeechEffect(float sX, float sY, float tX, float tY, int count, Color color) {
         this.sX = sX;//* Settings.scale;

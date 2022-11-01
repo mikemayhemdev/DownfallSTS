@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 public class EnemyMakeTempCardInDiscardAction extends AbstractGameAction {
-    private AbstractCard c;
-    private int numCards;
+    private final AbstractCard c;
+    private final int numCards;
     private boolean sameUUID;
 
     public EnemyMakeTempCardInDiscardAction(final AbstractCard card, final int amount) {

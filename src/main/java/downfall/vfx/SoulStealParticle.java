@@ -8,25 +8,22 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
 import com.badlogic.gdx.math.CatmullRomSpline;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.helpers.ScreenShake.ShakeDur;
-import com.megacrit.cardcrawl.helpers.ScreenShake.ShakeIntensity;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.DamageImpactLineEffect;
 
 import java.util.ArrayList;
 
 public class SoulStealParticle extends AbstractGameEffect {
-    private AtlasRegion img;
-    private CatmullRomSpline<Vector2> crs = new CatmullRomSpline();
-    private ArrayList<Vector2> controlPoints = new ArrayList();
+    private final AtlasRegion img;
+    private final CatmullRomSpline<Vector2> crs = new CatmullRomSpline();
+    private final ArrayList<Vector2> controlPoints = new ArrayList();
     private static final int TRAIL_ACCURACY = 60;
-    private Vector2[] points = new Vector2[60];
-    private Vector2 pos;
-    private Vector2 target;
+    private final Vector2[] points = new Vector2[60];
+    private final Vector2 pos;
+    private final Vector2 target;
     private float currentSpeed = 0.0F;
     private static final float MAX_VELOCITY;
     private static final float VELOCITY_RAMP_RATE;
@@ -34,7 +31,7 @@ public class SoulStealParticle extends AbstractGameEffect {
     private float rotation;
     private boolean rotateClockwise = true;
     private boolean stopRotating = false;
-    private boolean facingLeft;
+    private final boolean facingLeft;
     private float rotationRate;
 
     public SoulStealParticle(float sX, float sY, float tX, float tY, boolean facingLeft) {
@@ -49,13 +46,13 @@ public class SoulStealParticle extends AbstractGameEffect {
         this.facingLeft = facingLeft;
         this.crs.controlPoints = new Vector2[1];
         this.rotateClockwise = MathUtils.randomBoolean();
-        this.rotation = (float)MathUtils.random(0, 359);
+        this.rotation = (float) MathUtils.random(0, 359);
         this.controlPoints.clear();
         this.rotationRate = MathUtils.random(600.0F, 650.0F) * Settings.scale;
         this.currentSpeed = 1000.0F * Settings.scale;
         this.color = new Color(.5F, 0.5F, 1F, 0.6F);
         this.duration = 0.7F;
-        this.scale = 1.0F * Settings.scale;
+        this.scale = Settings.scale;
         this.renderBehind = MathUtils.randomBoolean();
     }
 
@@ -101,7 +98,7 @@ public class SoulStealParticle extends AbstractGameEffect {
         }
 
         if (this.target.dst(this.pos) < DST_THRESHOLD) {
-            for(int i = 0; i < 5; ++i) {
+            for (int i = 0; i < 5; ++i) {
                 if (this.facingLeft) {
                     AbstractDungeon.effectsQueue.add(new DamageImpactLineEffect(this.target.x + DST_THRESHOLD, this.target.y));
                 } else {
@@ -115,7 +112,7 @@ public class SoulStealParticle extends AbstractGameEffect {
         }
 
         if (!this.controlPoints.isEmpty()) {
-            if (!((Vector2)this.controlPoints.get(0)).equals(this.pos)) {
+            if (!this.controlPoints.get(0).equals(this.pos)) {
                 this.controlPoints.add(this.pos.cpy());
             }
         } else {
@@ -124,11 +121,11 @@ public class SoulStealParticle extends AbstractGameEffect {
 
         if (this.controlPoints.size() > 3) {
             Vector2[] vec2Array = new Vector2[0];
-            this.crs.set((Vector2[])this.controlPoints.toArray(vec2Array), false);
+            this.crs.set(this.controlPoints.toArray(vec2Array), false);
 
-            for(int i = 0; i < 60; ++i) {
+            for (int i = 0; i < 60; ++i) {
                 this.points[i] = new Vector2();
-                this.crs.valueAt(this.points[i], (float)i / 59.0F);
+                this.crs.valueAt(this.points[i], (float) i / 59.0F);
             }
         }
 
@@ -149,9 +146,9 @@ public class SoulStealParticle extends AbstractGameEffect {
             float scaleCpy = this.scale;
 
             int i;
-            for(i = this.points.length - 1; i > 0; --i) {
+            for (i = this.points.length - 1; i > 0; --i) {
                 if (this.points[i] != null) {
-                    sb.draw(this.img, this.points[i].x - (float)(this.img.packedWidth / 2), this.points[i].y - (float)(this.img.packedHeight / 2), (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, scaleCpy * 1.5F, scaleCpy * 1.5F, this.rotation);
+                    sb.draw(this.img, this.points[i].x - (float) (this.img.packedWidth / 2), this.points[i].y - (float) (this.img.packedHeight / 2), (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, scaleCpy * 1.5F, scaleCpy * 1.5F, this.rotation);
                     scaleCpy *= 0.98F;
                 }
             }
@@ -160,9 +157,9 @@ public class SoulStealParticle extends AbstractGameEffect {
             sb.setColor(this.color);
             scaleCpy = this.scale;
 
-            for(i = this.points.length - 1; i > 0; --i) {
+            for (i = this.points.length - 1; i > 0; --i) {
                 if (this.points[i] != null) {
-                    sb.draw(this.img, this.points[i].x - (float)(this.img.packedWidth / 2), this.points[i].y - (float)(this.img.packedHeight / 2), (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, scaleCpy, scaleCpy, this.rotation);
+                    sb.draw(this.img, this.points[i].x - (float) (this.img.packedWidth / 2), this.points[i].y - (float) (this.img.packedHeight / 2), (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, scaleCpy, scaleCpy, this.rotation);
                     scaleCpy *= 0.98F;
                 }
             }

@@ -37,24 +37,23 @@ public class MaintenanceAction extends AbstractGameAction {
     private void upgradeAllCardsInGroup(CardGroup cardGroup) {
         Iterator var2 = cardGroup.group.iterator();
 
-        while(var2.hasNext()) {
-            AbstractCard c = (AbstractCard)var2.next();
+        while (var2.hasNext()) {
+            AbstractCard c = (AbstractCard) var2.next();
             if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
                 if (cardGroup.type == CardGroup.CardGroupType.HAND) {
                     c.superFlash();
                 }
                 if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {
-                    c.baseDamage+=3;
-                    c.upgradedDamage=true;
-                }
-                else if (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
-                    c.baseBlock+=3;
-                    c.upgradedBlock=true;
+                    c.baseDamage += 3;
+                    c.upgradedDamage = true;
+                } else if (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
+                    c.baseBlock += 3;
+                    c.upgradedBlock = true;
                 }
                 CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(c.cardID);
                 c.timesUpgraded++;
-                c.upgraded=true;
-                if (c.timesUpgraded>1)
+                c.upgraded = true;
+                if (c.timesUpgraded > 1)
                     c.name = cardStrings.NAME + "+" + c.timesUpgraded;
                 else
                     c.name = cardStrings.NAME + "+";

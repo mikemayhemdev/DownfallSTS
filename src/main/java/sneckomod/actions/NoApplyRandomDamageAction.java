@@ -7,18 +7,17 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
-import sneckomod.SneckoMod;
 import sneckomod.cards.AbstractSneckoCard;
 
 public class NoApplyRandomDamageAction extends AbstractGameAction {
 
     private static final float DURATION = 0.01F;
-    private DamageInfo info;
+    private final DamageInfo info;
     private int numTimes;
-    private int min;
-    private int max;
-    private AbstractSneckoCard source;
-    private int dmg;
+    private final int min;
+    private final int max;
+    private final AbstractSneckoCard source;
+    private final int dmg;
 
     public NoApplyRandomDamageAction(AbstractCreature target, int min, int max, int numTimes, AttackEffect fx, AbstractSneckoCard source, DamageInfo.DamageType type) {
         if (min > max) {

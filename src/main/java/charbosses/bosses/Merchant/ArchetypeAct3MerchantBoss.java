@@ -1,23 +1,13 @@
 package charbosses.bosses.Merchant;
 
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.colorless.*;
-import charbosses.cards.curses.EnWrithe;
-import charbosses.cards.green.*;
-import charbosses.cards.purple.*;
-import charbosses.cards.red.EnInflame;
-import charbosses.powers.bossmechanicpowers.IroncladStatusPower;
 import charbosses.powers.bossmechanicpowers.MerchantStrengthPower;
 import charbosses.relics.*;
-import charbosses.relics.EventRelics.CBR_FaceTrader;
-import charbosses.relics.EventRelics.CBR_Falling;
-import charbosses.relics.EventRelics.CBR_Mausoleum;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import charbosses.relics.*;
 
 import java.util.ArrayList;
 
@@ -33,14 +23,14 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
         /////   RELICS   /////
 
         addRelic(new CBR_NeowsBlessing());
-      //  addRelic(new CBR_MercuryHourglass());
-       // addRelic(new CBR_Torii());
+        //  addRelic(new CBR_MercuryHourglass());
+        // addRelic(new CBR_Torii());
         //addRelic(new CBR_SelfFormingClay());
         //addRelic(new CBR_IncenseBurner());
         //addRelic(new CBR_Calipers());
-       // addRelic(new CBR_Girya(3));
-       // addRelic(new CBR_Vajra());
-      //  addRelic(new CBR_SmoothStone());
+        // addRelic(new CBR_Girya(3));
+        // addRelic(new CBR_Vajra());
+        //  addRelic(new CBR_SmoothStone());
         addRelic(new CBR_FossilizedHelix());
         //addRelic(new CBR_BagOfPreparation());
         addRelic(new CBR_ClockworkSouvenir());
@@ -96,7 +86,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
                     addToList(cardsList, new EnGoodInstincts(), true);
                     addToList(cardsList, new EnSwiftStrike(), true);
                     addToList(cardsList, new EnHandOfGreed(), true);
-                    turn=0;
+                    turn = 0;
                     looped = true;
                     break;
             }

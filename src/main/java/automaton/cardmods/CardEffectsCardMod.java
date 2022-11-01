@@ -18,8 +18,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static automaton.FunctionHelper.WITH_DELIMITER;
-
 public class CardEffectsCardMod extends BronzeCardMod {
 
     public CardSave store;
@@ -104,6 +102,7 @@ public class CardEffectsCardMod extends BronzeCardMod {
         }
         return damage;
     }
+
     public boolean isFinalCardEffectsFunction(AbstractCard card) {
         boolean yesIAmTheFinalCardWoo = false;
         for (AbstractCardModifier c : CardModifierManager.getModifiers(card, CardEffectsCardMod.ID)) {

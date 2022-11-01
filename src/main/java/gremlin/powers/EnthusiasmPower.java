@@ -25,9 +25,8 @@ public class EnthusiasmPower extends AbstractGremlinPower {
         this.updateDescription();
     }
 
-    public void updateDescription()
-    {
-        if(this.amount == 1){
+    public void updateDescription() {
+        if (this.amount == 1) {
             this.description = strings.DESCRIPTIONS[0] + this.amount + strings.DESCRIPTIONS[1];
         } else {
             this.description = strings.DESCRIPTIONS[0] + this.amount + strings.DESCRIPTIONS[2];
@@ -35,7 +34,7 @@ public class EnthusiasmPower extends AbstractGremlinPower {
     }
 
     @Override
-    public void onGremlinSwap(){
+    public void onGremlinSwap() {
         flash();
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.owner, this.amount));
     }

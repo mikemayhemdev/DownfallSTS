@@ -79,13 +79,13 @@ public class FleeingMerchant extends AbstractMonster {
     public static boolean ESCAPED = false;
 
     // Move bytes
-    private static byte ATTACK = 0;
-    private static byte DEFEND = 1;
-    private static byte ESCAPE = 2;
-    private static byte SOULSTEAL = 3;
+    private static final byte ATTACK = 0;
+    private static final byte DEFEND = 1;
+    private static final byte ESCAPE = 2;
+    private static final byte SOULSTEAL = 3;
 
     private int turn = 0;
-    private boolean boss = false;
+    private final boolean boss = false;
 
     public FleeingMerchant() {
         super(NAME, ID, START_HP, -10.0F, -30.0F, 180.0F, 150.0F, null, 0.0F, 0.0F);
@@ -231,7 +231,7 @@ public class FleeingMerchant extends AbstractMonster {
             return;
         }
         if (turn == 1) {
-            setMove(ATTACK, Intent.ATTACK, ((DamageInfo) this.damage.get(0)).base, 5, true);
+            setMove(ATTACK, Intent.ATTACK, this.damage.get(0).base, 5, true);
             return;
         }
         if (turn == 2) {
@@ -240,7 +240,6 @@ public class FleeingMerchant extends AbstractMonster {
         }
         if (turn == 3) {
             setMove(ESCAPE, Intent.ESCAPE);
-            return;
         }
     }
 

@@ -1,13 +1,11 @@
 package charbosses.core;
 
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.relics.CBR_ArtOfWar;
 import charbosses.ui.EnemyEnergyPanel;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class EnemyEnergyManager extends EnergyManager {
 

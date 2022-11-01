@@ -45,7 +45,7 @@ public class VexVinciblePower extends TwoAmountPower {
     }
 
     @Override
-    public void atEndOfRound(){
+    public void atEndOfRound() {
         if (activated) {
             addToBot(new ReducePowerAction(owner, owner, this, 1));
         }

@@ -19,7 +19,7 @@ public class RefreshEnergyEffectMovePatch {
 
             if (AbstractDungeon.player instanceof SlimeboundCharacter) {
 
-                TextureAtlas.AtlasRegion image = (TextureAtlas.AtlasRegion) ReflectionHacks.getPrivate(obj, RefreshEnergyEffect.class, "img");
+                TextureAtlas.AtlasRegion image = ReflectionHacks.getPrivate(obj, RefreshEnergyEffect.class, "img");
                 ReflectionHacks.setPrivate(obj, RefreshEnergyEffect.class, "y", 130F * Settings.scale - (float) image.packedHeight / 2.0F);
 
                 //    //SlimeboundMod.logger.info("Energy panel VFX move patch success");

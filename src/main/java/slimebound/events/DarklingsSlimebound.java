@@ -1,7 +1,6 @@
 package slimebound.events;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.curses.Parasite;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -10,8 +9,6 @@ import com.megacrit.cardcrawl.events.RoomEventDialog;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.relics.Circlet;
-import com.megacrit.cardcrawl.relics.OddMushroom;
 import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import org.apache.logging.log4j.LogManager;
@@ -31,21 +28,22 @@ public class DarklingsSlimebound extends AbstractEvent {
     private int screenNum = 0;
 
     ArrayList<AbstractCard> validCards;
+
     public DarklingsSlimebound() {
         this.body = DESCRIPTIONS[0];// 43
         validCards = new ArrayList<>();
-        for (AbstractCard c: AbstractDungeon.player.masterDeck.group){
-            if (c.rarity == AbstractCard.CardRarity.RARE){
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if (c.rarity == AbstractCard.CardRarity.RARE) {
                 validCards.add(c);
             }
         }
 
         this.roomEventText.addDialogOption(OPTIONS[1]);// 47
 
-        if (validCards.size() > 0){
+        if (validCards.size() > 0) {
             this.roomEventText.addDialogOption(OPTIONS[0] + validCards.get(0).name + OPTIONS[3], CardLibrary.getCopy(Darklings.ID));// 45
         } else {
-            this.roomEventText.addDialogOption(OPTIONS[4],true);// 45
+            this.roomEventText.addDialogOption(OPTIONS[4], true);// 45
         }
 
         AbstractDungeon.getCurrRoom().phase = RoomPhase.EVENT;// 48

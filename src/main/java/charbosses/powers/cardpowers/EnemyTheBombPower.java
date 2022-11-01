@@ -4,9 +4,7 @@ package charbosses.powers.cardpowers;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
@@ -18,7 +16,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.GainPowerEffect;
 
-
 import java.util.ArrayList;
 
 public class EnemyTheBombPower extends AbstractPower {
@@ -26,7 +23,7 @@ public class EnemyTheBombPower extends AbstractPower {
     private static final PowerStrings powerStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
-    private int damage;
+    private final int damage;
     private static int bombIdOffset;
 
     private float timer;
@@ -53,9 +50,9 @@ public class EnemyTheBombPower extends AbstractPower {
     @Override
     public void update(int slot) {
         super.update(slot);
-        if (this.amount == 1){
-            if (this.timer <= 0F){
-                ArrayList<AbstractGameEffect> effect2 = (ArrayList<AbstractGameEffect>) ReflectionHacks.getPrivate(this, AbstractPower.class, "effect");
+        if (this.amount == 1) {
+            if (this.timer <= 0F) {
+                ArrayList<AbstractGameEffect> effect2 = ReflectionHacks.getPrivate(this, AbstractPower.class, "effect");
                 effect2.add(new GainPowerEffect(this));
                 this.timer = 1F;
             } else {

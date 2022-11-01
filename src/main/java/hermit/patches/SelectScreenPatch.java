@@ -13,8 +13,8 @@ import hermit.characters.hermit;
 import java.util.Iterator;
 
 @SpirePatch(
-        clz= HandCardSelectScreen.class,
-        method="selectHoveredCard"
+        clz = HandCardSelectScreen.class,
+        method = "selectHoveredCard"
 )
 
 public class SelectScreenPatch {
@@ -23,10 +23,8 @@ public class SelectScreenPatch {
 
 
     @SpirePostfixPatch
-    public static void SelectionPostPatch(HandCardSelectScreen reg)
-    {
-        if (AbstractDungeon.player.chosenClass == hermit.Enums.HERMIT && (InputHelper.justClickedLeft || CInputActionSet.select.isJustPressed()))
-        {
+    public static void SelectionPostPatch(HandCardSelectScreen reg) {
+        if (AbstractDungeon.player.chosenClass == hermit.Enums.HERMIT && (InputHelper.justClickedLeft || CInputActionSet.select.isJustPressed())) {
             //SelectScreenPatch.ResetHand();
         }
     }
@@ -35,14 +33,14 @@ public class SelectScreenPatch {
         Iterator var1 = handClone.group.iterator();
         handCloneb = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
-        while(var1.hasNext()) {
-            AbstractCard c = (AbstractCard)var1.next();
+        while (var1.hasNext()) {
+            AbstractCard c = (AbstractCard) var1.next();
 
             Iterator var3 = AbstractDungeon.player.hand.group.iterator();
 
-            while(var3.hasNext()) {
+            while (var3.hasNext()) {
 
-                AbstractCard d = (AbstractCard)var3.next();
+                AbstractCard d = (AbstractCard) var3.next();
                 if (c.equals(d)) {
                     handCloneb.addToBottom(c);
                     break;
@@ -54,8 +52,8 @@ public class SelectScreenPatch {
 
         Iterator var2 = handCloneb.group.iterator();
 
-        while(var2.hasNext()) {
-            AbstractCard c = (AbstractCard)var2.next();
+        while (var2.hasNext()) {
+            AbstractCard c = (AbstractCard) var2.next();
             AbstractDungeon.player.hand.addToTop(c);
         }
 

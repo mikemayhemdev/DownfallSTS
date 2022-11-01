@@ -2,12 +2,6 @@ package slimebound.cards;
 
 
 import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.actions.defect.EvokeAllOrbsAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -15,13 +9,9 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
-import slimebound.actions.CommandAction;
-import slimebound.actions.MassRepurposeAction;
 import slimebound.actions.TriggerSlimeAttacksAction;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.PotencyPower;
-import sneckomod.SneckoMod;
 
 
 public class MassRepurpose extends AbstractSlimeboundCard {
@@ -51,13 +41,13 @@ public class MassRepurpose extends AbstractSlimeboundCard {
         this.exhaust = true;
 
 
-       // this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        // this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
 //         this.tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (AbstractOrb o : p.orbs){
+        for (AbstractOrb o : p.orbs) {
             if (o instanceof SpawnedSlime) {
                 AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
                 SlimeboundMod.spawnSpecialistSlime();

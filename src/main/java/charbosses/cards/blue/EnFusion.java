@@ -1,17 +1,13 @@
 package charbosses.cards.blue;
 
 import charbosses.actions.orb.EnemyChannelAction;
-import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
-import charbosses.orbs.AbstractEnemyOrb;
-import charbosses.orbs.EnemyLightning;
 import charbosses.orbs.EnemyPlasma;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.FocusPower;
 
 import java.util.ArrayList;
 
@@ -22,6 +18,7 @@ public class EnFusion extends AbstractBossCard {
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings("Fusion");
     }
+
     public EnFusion(boolean upgraded) {
         this();
         if (upgraded)

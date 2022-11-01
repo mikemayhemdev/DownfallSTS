@@ -1,7 +1,6 @@
 package charbosses.relics;
 
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.Circlet;
 import com.megacrit.cardcrawl.relics.GoldenIdol;
 
 public class CBR_GoldenIdol extends AbstractCharbossRelic {

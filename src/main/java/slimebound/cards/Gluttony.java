@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.GluttonyPower;
-import sneckomod.SneckoMod;
 
 
 public class Gluttony extends AbstractSlimeboundCard {
@@ -25,7 +24,7 @@ public class Gluttony extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 1;
     public static String UPGRADED_DESCRIPTION;
-    private static int upgradedamount = 1;
+    private static final int upgradedamount = 1;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);

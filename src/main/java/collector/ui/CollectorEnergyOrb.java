@@ -9,24 +9,22 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.glutils.FrameBuffer;
 import com.megacrit.cardcrawl.core.Settings;
 
-public class CollectorEnergyOrb extends CustomEnergyOrb
-{
+public class CollectorEnergyOrb extends CustomEnergyOrb {
     private static final float ORB_IMG_SCALE = 1.15f * Settings.scale;
 
-    private FrameBuffer fbo;
-    private String Atlas = "collectorResources/images/char/mainChar/CollectorEnergyOrb.atlas";
-    private String JSON = "collectorResources/images/char/mainChar/CollectorEnergyOrb.json";
-    private SpineAnimation Animation = new SpineAnimation(Atlas,JSON,ORB_IMG_SCALE);
-    private TextureAtlas TextAtlas = new TextureAtlas();
-    public CollectorEnergyOrb()
-    {
+    private final FrameBuffer fbo;
+    private final String Atlas = "collectorResources/images/char/mainChar/CollectorEnergyOrb.atlas";
+    private final String JSON = "collectorResources/images/char/mainChar/CollectorEnergyOrb.json";
+    private final SpineAnimation Animation = new SpineAnimation(Atlas, JSON, ORB_IMG_SCALE);
+    private final TextureAtlas TextAtlas = new TextureAtlas();
+
+    public CollectorEnergyOrb() {
         super(null, null, null);
         fbo = new FrameBuffer(Pixmap.Format.RGBA8888, Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), false, false);
     }
 
     @Override
-    public void updateOrb(int energyCount)
-    {
+    public void updateOrb(int energyCount) {
 
     }
 

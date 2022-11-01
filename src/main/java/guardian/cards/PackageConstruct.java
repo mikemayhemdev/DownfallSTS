@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 import guardian.GuardianMod;
 
 import java.util.ArrayList;
@@ -41,6 +40,7 @@ public class PackageConstruct extends AbstractGuardianCard {
     public AbstractGuardianCard prev1;
     public AbstractGuardianCard prev2;
     public AbstractGuardianCard prev3;
+
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         NAME = cardStrings.NAME;
@@ -60,7 +60,7 @@ public class PackageConstruct extends AbstractGuardianCard {
         prev2 = constPrev2;
         prev3 = constPrev3;
 
-        if (upgraded){
+        if (upgraded) {
             prev1.upgrade();
             prev2.upgrade();
             prev3.upgrade();
@@ -92,22 +92,22 @@ public class PackageConstruct extends AbstractGuardianCard {
         tmp = new ModeShift();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-      //  tmp.modifyCostForCombat(-1);
+        //  tmp.modifyCostForCombat(-1);
 
         tmp = new OmegaCannon();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-      //  tmp.modifyCostForCombat(-1);
+        //  tmp.modifyCostForCombat(-1);
 
         tmp = new HammerDown();
         if (upgraded) tmp.upgrade();
         derp.add(tmp);
-      //  tmp.modifyCostForCombat(-1);
+        //  tmp.modifyCostForCombat(-1);
 
 
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction((AbstractCard)derp.get(0), true));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction((AbstractCard) derp.get(1), true));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction((AbstractCard) derp.get(2), true));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(derp.get(0), true));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(derp.get(1), true));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(derp.get(2), true));
     }
 
     public AbstractCard makeCopy() {
@@ -183,7 +183,7 @@ public class PackageConstruct extends AbstractGuardianCard {
             if (isLocked || (AbstractDungeon.player != null && (AbstractDungeon.player.isDraggingCard || AbstractDungeon.player.inSingleTargetMode))) {
                 return;
             }
-            if (hb.hovered){
+            if (hb.hovered) {
 
                 float drawScale = 0.5f;
                 float yPosition1 = this.current_y + this.hb.height * 1.2f;

@@ -4,7 +4,6 @@ package guardian.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -52,7 +51,7 @@ public class BronzeOrb extends AbstractGuardianCard {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
         this.baseDamage = DAMAGE;
-       // this.baseBlock = BLOCK;
+        // this.baseBlock = BLOCK;
 
         //this.sockets.add(GuardianMod.socketTypes.RED);
         this.isInnate = true;
@@ -80,7 +79,7 @@ public class BronzeOrb extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new BronzeOrbEffect(p, m), 0.5F));
 
         AbstractDungeon.actionManager.addToBottom(new PlaceRandomCardIntoStasisAction(1));
-      //  AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+        //  AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         this.useGems(p, m);
     }
@@ -93,7 +92,7 @@ public class BronzeOrb extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_DAMAGE);
-      //      upgradeBlock(UPGRADE_BLOCK);
+            //      upgradeBlock(UPGRADE_BLOCK);
         }
 
 

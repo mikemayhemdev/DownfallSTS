@@ -1,7 +1,8 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.common.DiscardAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -56,8 +57,8 @@ public class Roulette extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         int cards = p.hand.size();
-        if (AbstractDungeon.player.hand.group.indexOf(this)>=0)
-            cards-=1;
+        if (AbstractDungeon.player.hand.group.contains(this))
+            cards -= 1;
 
         this.addToBot(new AttackDamageRandomEnemyAction(this, EnumPatch.HERMIT_GUN2));
         CardCrawlGame.sound.playAV(makeID("SPIN"), 1.0f, 1.25f); // Sound Effect
@@ -65,7 +66,6 @@ public class Roulette extends AbstractDynamicCard {
         this.addToBot(new DrawCardAction(p, cards));
 
     }
-
 
 
     //Upgraded stats.

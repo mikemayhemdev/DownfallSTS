@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.ui.buttons.LargeDialogOptionButton;
 import downfall.downfallMod;
-import gremlin.patches.GremlinEnum;
 
 @SpirePatch(
         clz = AbstractImageEvent.class,
@@ -17,7 +16,7 @@ public class GremlinEventFixPatch1 {
     public static SpireField<Boolean> ranExtraCheck = new SpireField<>(() -> false);
 
     // The strings to detect that indicate this is an HP-loss event.
-    private static String[] REPLACEMENTSTRINGS = CardCrawlGame.languagePack.getUIString("Gremlin:EventReplacementStrings").TEXT;
+    private static final String[] REPLACEMENTSTRINGS = CardCrawlGame.languagePack.getUIString("Gremlin:EventReplacementStrings").TEXT;
 
     // Check if an event option involves the player losing HP via their text.
     protected static boolean needs_replacement(String msg) {
@@ -44,8 +43,7 @@ public class GremlinEventFixPatch1 {
                             } catch (NumberFormatException ignored) {
 
                             }
-                        }
-                        else if (b.msg.contains(REPLACEMENTSTRINGS[3]) && b.msg.contains(REPLACEMENTSTRINGS[4])) {
+                        } else if (b.msg.contains(REPLACEMENTSTRINGS[3]) && b.msg.contains(REPLACEMENTSTRINGS[4])) {
                             String numbertext = b.msg.split(REPLACEMENTSTRINGS[3])[1].split(REPLACEMENTSTRINGS[4])[0];
                             String actualnumber = numbertext.replaceAll("\\D+", "");
                             try {

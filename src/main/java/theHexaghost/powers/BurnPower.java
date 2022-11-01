@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -18,11 +17,10 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
+import downfall.util.TextureLoader;
 import theHexaghost.HexaMod;
 import theHexaghost.relics.IceCube;
 import theHexaghost.relics.SoulConsumer;
-import downfall.util.TextureLoader;
 import theHexaghost.vfx.ExplosionSmallEffectGreen;
 
 public class BurnPower extends TwoAmountPower implements CloneablePowerInterface, HealthBarRenderPower {
@@ -80,17 +78,17 @@ public class BurnPower extends TwoAmountPower implements CloneablePowerInterface
         }
     }// 70
 
-    public void explode(){
+    public void explode() {
         this.flashWithoutSound();
-        if (AbstractDungeon.player.hasRelic(SoulConsumer.ID)){
+        if (AbstractDungeon.player.hasRelic(SoulConsumer.ID)) {
             AbstractDungeon.player.getRelic(SoulConsumer.ID).onTrigger();
         }
         this.addToBot(new VFXAction(new ExplosionSmallEffectGreen(this.owner.hb.cX, this.owner.hb.cY), 0.1F));
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
 
-        if (owner.hasPower(LivingBombPower.POWER_ID)){
-            for (AbstractMonster m: AbstractDungeon.getCurrRoom().monsters.monsters){
-                if (!m.isDeadOrEscaped()){
+        if (owner.hasPower(LivingBombPower.POWER_ID)) {
+            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                if (!m.isDeadOrEscaped()) {
                     this.addToBot(new LoseHPAction(m, owner, amount, AbstractGameAction.AttackEffect.FIRE));
                 }
             }
@@ -105,7 +103,7 @@ public class BurnPower extends TwoAmountPower implements CloneablePowerInterface
         }
 
 
-        }
+    }
 
     @Override
     public void updateDescription() {

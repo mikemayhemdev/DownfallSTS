@@ -30,8 +30,7 @@ public class Bang extends AbstractGremlinCard {
 
     private boolean real = true;
 
-    public Bang()
-    {
+    public Bang() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -44,8 +43,7 @@ public class Bang extends AbstractGremlinCard {
         setBackgrounds();
     }
 
-    public Bang(boolean real)
-    {
+    public Bang(boolean real) {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -60,12 +58,12 @@ public class Bang extends AbstractGremlinCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for(int i=0;i<this.magicNumber;i++) {
+        for (int i = 0; i < this.magicNumber; i++) {
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                     this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
         }
         AbstractCard c = new Whiz();
-        if(upgraded){
+        if (upgraded) {
             c.upgrade();
         }
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(c, 1));
@@ -73,8 +71,7 @@ public class Bang extends AbstractGremlinCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_MAGIC);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;

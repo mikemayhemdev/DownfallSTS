@@ -12,11 +12,11 @@ public class SlimeAutoCultistBuff extends AbstractGameAction {
     private static final float DURATION = 0.01F;
     private static final float POST_ATTACK_WAIT_DUR = 0.2F;
     private AbstractCreature owner;
-    private int damage;
-    private int debuffamount;
+    private final int damage;
+    private final int debuffamount;
     private AbstractPower p;
     private AttackEffect AE;
-    private SpawnedSlime slime;
+    private final SpawnedSlime slime;
 
     public SlimeAutoCultistBuff(Integer damage, SpawnedSlime o) {
 

@@ -1,48 +1,28 @@
 package hermit.actions;
 
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
-
-import java.util.Iterator;
-import java.util.UUID;
-
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
-
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import hermit.patches.EnumPatch;
 
 import java.util.Iterator;
 
 public class MagnumAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
-    private AbstractPlayer p;
-    private AbstractCard magnumcard;
-    private boolean isRandom;
-    private boolean endTurn;
+    private final AbstractPlayer p;
+    private final AbstractCard magnumcard;
+    private final boolean isRandom;
+    private final boolean endTurn;
     public static int numDiscarded;
     private static final float DURATION;
-    private DamageInfo info;
+    private final DamageInfo info;
 
 
     public MagnumAction(AbstractCreature target, DamageInfo info, AbstractCard magnumcard) {
@@ -53,7 +33,7 @@ public class MagnumAction extends AbstractGameAction {
         this.endTurn = false;
         this.info = info;
         this.duration = DURATION;
-        isRandom=false;
+        isRandom = false;
     }
 
     public void update() {
@@ -69,11 +49,11 @@ public class MagnumAction extends AbstractGameAction {
                 this.amount = this.p.hand.size();
                 i = this.p.hand.size();
 
-                for(int n = 0; n < i; ++n) {
+                for (int n = 0; n < i; ++n) {
                     c = this.p.hand.getTopCard();
                     this.p.hand.moveToDiscardPile(c);
                     int cost = c.cost;
-                    this.addToTop(new MagnumActionDamage(this.target, this.p,magnumcard));
+                    this.addToTop(new MagnumActionDamage(this.target, this.p, magnumcard));
                     if (!this.endTurn) {
                         c.triggerOnManualDiscard();
                     }
@@ -104,11 +84,11 @@ public class MagnumAction extends AbstractGameAction {
                 return;
             }
 
-            for(i = 0; i < this.amount; ++i) {
+            for (i = 0; i < this.amount; ++i) {
                 c = this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng);
                 this.p.hand.moveToDiscardPile(c);
                 int cost = c.cost;
-                this.addToTop(new MagnumActionDamage(this.target, this.p,magnumcard));
+                this.addToTop(new MagnumActionDamage(this.target, this.p, magnumcard));
                 c.triggerOnManualDiscard();
                 GameActionManager.incrementDiscard(this.endTurn);
             }

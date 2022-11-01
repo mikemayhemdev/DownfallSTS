@@ -4,16 +4,14 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
-import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
+import theHexaghost.HexaMod;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
@@ -48,7 +46,10 @@ public class GiftsFromTheDeadPower extends AbstractPower implements CloneablePow
     public void atStartOfTurnPostDraw() {
         flash();
         addToBot(new AbstractGameAction() {
-            { startDuration = duration = 1.5f; }
+            {
+                startDuration = duration = 1.5f;
+            }
+
             @Override
             public void update() {
                 if (duration == startDuration) {

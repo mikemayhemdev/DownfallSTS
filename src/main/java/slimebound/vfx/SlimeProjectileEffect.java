@@ -22,20 +22,20 @@ import java.util.ArrayList;
 public class SlimeProjectileEffect extends AbstractGameEffect {
     private static final float DUR = 0.6F;
     private static Texture img;
-    private float sX;
-    private float sY;
+    private final float sX;
+    private final float sY;
     private float cX;
     private float cY;
-    private float dX;
-    private float dY;
+    private final float dX;
+    private final float dY;
     private float yOffset;
-    private float bounceHeight;
+    private final float bounceHeight;
     private boolean playedSfx = false;
     private boolean rain = false;
     private boolean mute = false;
     private float height = 100f;
 
-    private ArrayList<Vector2> previousPos = new ArrayList();
+    private final ArrayList<Vector2> previousPos = new ArrayList();
 
     public SlimeProjectileEffect(float srcX, float srcY, float destX, float destY, float scale, boolean rain, float duration) {
         this(srcX, srcY, destX, destY, scale, rain, duration, false, false);

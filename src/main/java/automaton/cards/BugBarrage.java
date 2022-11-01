@@ -2,7 +2,6 @@ package automaton.cards;
 
 import automaton.AutomatonMod;
 import basemod.BaseMod;
-import basemod.devcommands.draw.Draw;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;

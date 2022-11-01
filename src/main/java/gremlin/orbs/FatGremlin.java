@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import gremlin.powers.FatGremlinPower;
 import gremlin.powers.GremlinPower;
 
-public class FatGremlin extends GremlinStandby{
+public class FatGremlin extends GremlinStandby {
 
     public FatGremlin(int hp) {
         super(hp, "Gremlin:FatGremlin", "fat", "animation", 25);

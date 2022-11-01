@@ -44,9 +44,9 @@ public class BackToBasicsGremlin extends AbstractImageEvent {
     }
 
     private BackToBasicsGremlin.CUR_SCREEN screen;
-    private List<String> cardsUpgraded;
-    private ArrayList<AbstractCard> strikesToRemove;
-    private ArrayList<AbstractCard> defendsToRemove;
+    private final List<String> cardsUpgraded;
+    private final ArrayList<AbstractCard> strikesToRemove;
+    private final ArrayList<AbstractCard> defendsToRemove;
 
     public BackToBasicsGremlin() {
         super(NAME, DIALOG_1, "images/events/backToBasics.jpg");
@@ -69,7 +69,7 @@ public class BackToBasicsGremlin extends AbstractImageEvent {
             }
         }
 
-        if (strikesToRemove.size()+defendsToRemove.size() >= 1) {
+        if (strikesToRemove.size() + defendsToRemove.size() >= 1) {
             this.imageEventText.setDialogOption(OPTIONSGUARDIAN[0]);
 
         } else {
@@ -111,17 +111,17 @@ public class BackToBasicsGremlin extends AbstractImageEvent {
                     ArrayList<String> cardsRemoved = new ArrayList<>();
                     ArrayList<String> cardsAdded = new ArrayList<>();
 
-                    for (AbstractCard c : strikesToRemove){
+                    for (AbstractCard c : strikesToRemove) {
                         cardsRemoved.add(c.cardID);
                         cardsAdded.add(Shiv.ID);
                         AbstractDungeon.player.masterDeck.removeCard(c);
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Shiv(), (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Shiv(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                     }
-                    for (AbstractCard c : defendsToRemove){
+                    for (AbstractCard c : defendsToRemove) {
                         cardsRemoved.add(c.cardID);
                         cardsAdded.add(Ward.ID);
                         AbstractDungeon.player.masterDeck.removeCard(c);
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Ward(), (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Ward(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                     }
                     logMetric(ID, "Caprice", cardsAdded, cardsRemoved, null, null,
                             null, null, null,
@@ -154,8 +154,8 @@ public class BackToBasicsGremlin extends AbstractImageEvent {
     }
 
     private void upgradeStrikeAndDefends() {
-        for (AbstractCard c: AbstractDungeon.player.masterDeck.group){
-            if (c.canUpgrade() && (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) ) {
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if (c.canUpgrade() && (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.hasTag(AbstractCard.CardTags.STARTER_STRIKE))) {
                 c.upgrade();
                 this.cardsUpgraded.add(c.cardID);
                 AbstractDungeon.player.bottledCardUpgradeCheck(c);

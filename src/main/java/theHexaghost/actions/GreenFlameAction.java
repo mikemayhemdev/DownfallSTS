@@ -5,7 +5,7 @@ import theHexaghost.vfx.MyOrb;
 
 public class GreenFlameAction extends AbstractGameAction {
 
-    private MyOrb orb;
+    private final MyOrb orb;
 
     public GreenFlameAction(MyOrb orb) {
         this.orb = orb;

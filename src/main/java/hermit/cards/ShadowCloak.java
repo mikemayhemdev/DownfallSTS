@@ -57,7 +57,6 @@ public class ShadowCloak extends AbstractDynamicCard {
     }
 
 
-
     //Upgraded stats.
     @Override
     public void upgrade() {

@@ -1,11 +1,6 @@
 package charbosses.relics;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.HandDrill;
 import com.megacrit.cardcrawl.relics.OddMushroom;
 
 public class CBR_OddMushroom extends AbstractCharbossRelic {

@@ -12,7 +12,7 @@ public class Combustibles extends AbstractCollectorCard {
     public final static String ID = makeID("Combustibles");
 
     public Combustibles() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF,CollectorCardSource.FRONT);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, CollectorCardSource.FRONT);
         FrontBaseBlock = douBaseBlock = block = baseBlock = 4;
         magicNumber = baseMagicNumber = 6;
     }
@@ -21,21 +21,21 @@ public class Combustibles extends AbstractCollectorCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         atb(new SelectCardsInHandAction(magicNumber, ExhaustAction.TEXT[0], true, true, card -> true, Cards -> {
-                if (Cards.size() > 0) {
-                    CardRarity rarity = Cards.get(0).rarity;
-                    atb(new ExhaustSpecificCardAction(Cards.get(0), AbstractDungeon.player.hand));
-                    if (rarity == CardRarity.COMMON || rarity == CardRarity.BASIC || rarity == CardRarity.CURSE || rarity == CardRarity.SPECIAL) {
-                        blck();
-                    } else if (rarity == CardRarity.UNCOMMON) {
-                        block = 8;
-                        blck();
-                    } else {
-                        block = 16;
-                        blck();
-                    }
-                    block = baseBlock;
+            if (Cards.size() > 0) {
+                CardRarity rarity = Cards.get(0).rarity;
+                atb(new ExhaustSpecificCardAction(Cards.get(0), AbstractDungeon.player.hand));
+                if (rarity == CardRarity.COMMON || rarity == CardRarity.BASIC || rarity == CardRarity.CURSE || rarity == CardRarity.SPECIAL) {
+                    blck();
+                } else if (rarity == CardRarity.UNCOMMON) {
+                    block = 8;
+                    blck();
+                } else {
+                    block = 16;
+                    blck();
                 }
-            }));
+                block = baseBlock;
+            }
+        }));
     }
 
     @Override

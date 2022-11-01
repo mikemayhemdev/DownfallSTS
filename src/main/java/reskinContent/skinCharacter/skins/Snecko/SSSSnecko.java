@@ -13,7 +13,6 @@ import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import reskinContent.skinCharacter.AbstractSkin;
 import reskinContent.vfx.PortraitIntimidateEffect;
-import sneckomod.TheSnecko;
 
 import static com.megacrit.cardcrawl.core.AbstractCreature.sr;
 
@@ -31,7 +30,7 @@ public class SSSSnecko extends AbstractSkin {
     private static float sneckoTimer = 0.0f;
     private static float sneckoAfterImageTimer = 0.0f;
 
-    private static Color halfWhite = Color.WHITE.cpy();
+    private static final Color halfWhite = Color.WHITE.cpy();
     private static float sneckoWaifuX = 0.0f;
     private static float sneckoWaifuY = 0.0f;
 
@@ -58,7 +57,7 @@ public class SSSSnecko extends AbstractSkin {
         super.loadAnimation();
         sneckoAtlas = new TextureAtlas(Gdx.files.internal(reskinContent.assetPath("img/SneckoMod/SSSSnecko/animation/Snecko_portrait_effect.atlas")));
         SkeletonJson sneckoJson = new SkeletonJson(sneckoAtlas);
-        sneckoJson.setScale(Settings.scale / 1.0F);
+        sneckoJson.setScale(Settings.scale);
         sneckoData = sneckoJson.readSkeletonData(Gdx.files.internal(reskinContent.assetPath("img/SneckoMod/SSSSnecko/animation/Snecko_portrait_effect.json")));
 
 
@@ -203,7 +202,7 @@ public class SSSSnecko extends AbstractSkin {
     @Override
     public void dispose() {
         super.dispose();
-        if (this.sneckoAtlas != null) this.sneckoAtlas.dispose();
+        if (sneckoAtlas != null) sneckoAtlas.dispose();
     }
 }
 

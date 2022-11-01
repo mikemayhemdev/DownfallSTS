@@ -46,16 +46,16 @@ public class FatalDesirePower extends AbstractPower implements CloneablePowerInt
     @Override
     public void atStartOfTurn() { // At the start of your turn
         this.flash();
-        this.addToBot(new DrawCardAction(2*amount));
+        this.addToBot(new DrawCardAction(2 * amount));
         this.addToBot(new MakeTempCardInHandAction(new Injury(), amount));
     }
 
     @Override
     public void updateDescription() {
         if (amount == 1) {
-            description = DESCRIPTIONS[0] + (2*amount) + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[0] + (2 * amount) + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
         } else if (amount > 1) {
-            description = DESCRIPTIONS[0] + (2*amount) + DESCRIPTIONS[1] + amount + DESCRIPTIONS[3];
+            description = DESCRIPTIONS[0] + (2 * amount) + DESCRIPTIONS[1] + amount + DESCRIPTIONS[3];
         }
     }
 

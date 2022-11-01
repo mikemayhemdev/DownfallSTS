@@ -13,9 +13,9 @@ import java.util.ArrayList;
 import static java.lang.Math.min;
 
 public class RecurringNightmareAction extends AbstractGameAction {
-    private AbstractPlayer p;
-    private ArrayList<AbstractCard> cannotExhume = new ArrayList<>();
-    private ArrayList<AbstractCard> canExhume = new ArrayList<>();
+    private final AbstractPlayer p;
+    private final ArrayList<AbstractCard> cannotExhume = new ArrayList<>();
+    private final ArrayList<AbstractCard> canExhume = new ArrayList<>();
     public static final String[] EXTENDED_DESCRIPTIONS = CardCrawlGame.languagePack.getCardStrings(RecurringNightmare.ID).EXTENDED_DESCRIPTION;
 
     public RecurringNightmareAction(int amount) {

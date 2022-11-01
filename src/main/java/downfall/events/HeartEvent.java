@@ -51,7 +51,7 @@ public class HeartEvent extends AbstractEvent {
     private int screenNum;
     private int bossCount;
     private boolean setPhaseToEvent;
-    private ArrayList<HeartReward> rewards;
+    private final ArrayList<HeartReward> rewards;
     public static Random rng;
     private boolean pickCard;
     public static boolean waitingToSave;
@@ -232,19 +232,19 @@ public class HeartEvent extends AbstractEvent {
                 this.roomEventText.clearRemainingOptions();
                 switch (buttonPressed) {
                     case 0:
-                        ((HeartReward) this.rewards.get(0)).activate();
+                        this.rewards.get(0).activate();
                         this.talk(TEXT[8]);
                         break;
                     case 1:
-                        ((HeartReward) this.rewards.get(1)).activate();
+                        this.rewards.get(1).activate();
                         this.talk(TEXT[8]);
                         break;
                     case 2:
-                        ((HeartReward) this.rewards.get(2)).activate();
+                        this.rewards.get(2).activate();
                         this.talk(TEXT[9]);
                         break;
                     case 3:
-                        ((HeartReward) this.rewards.get(3)).activate();
+                        this.rewards.get(3).activate();
                         this.talk(TEXT[9]);
                 }
 
@@ -404,7 +404,7 @@ public class HeartEvent extends AbstractEvent {
         } else {
             this.roomEventText.addDialogOption(OPTIONS[6], true);
         }
-        this.roomEventText.addDialogOption(((HeartReward) this.rewards.get(1)).optionLabel);
+        this.roomEventText.addDialogOption(this.rewards.get(1).optionLabel);
         this.screenNum = 3;
     }
 
@@ -420,10 +420,10 @@ public class HeartEvent extends AbstractEvent {
         this.rewards.add(new HeartReward(2));
         this.rewards.add(new HeartReward(3));
         this.roomEventText.clearRemainingOptions();
-        this.roomEventText.updateDialogOption(0, ((HeartReward) this.rewards.get(0)).optionLabel);
-        this.roomEventText.addDialogOption(((HeartReward) this.rewards.get(1)).optionLabel);
-        this.roomEventText.addDialogOption(((HeartReward) this.rewards.get(2)).optionLabel);
-        this.roomEventText.addDialogOption(((HeartReward) this.rewards.get(3)).optionLabel);
+        this.roomEventText.updateDialogOption(0, this.rewards.get(0).optionLabel);
+        this.roomEventText.addDialogOption(this.rewards.get(1).optionLabel);
+        this.roomEventText.addDialogOption(this.rewards.get(2).optionLabel);
+        this.roomEventText.addDialogOption(this.rewards.get(3).optionLabel);
         this.screenNum = 3;
     }
 

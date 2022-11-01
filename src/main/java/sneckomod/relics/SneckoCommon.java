@@ -12,9 +12,9 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.UnknownClass;
-import downfall.util.TextureLoader;
 
 public class SneckoCommon extends CustomRelic implements CustomSavable<AbstractCard.CardColor> {
 
@@ -72,12 +72,13 @@ public class SneckoCommon extends CustomRelic implements CustomSavable<AbstractC
         if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && !chosenInGeneral) {
             chosenInGeneral = true;
             AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-            SneckoBoss.myColor = ((UnknownClass)c).myColor;
+            SneckoBoss.myColor = ((UnknownClass) c).myColor;
             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c.makeCopy(), Settings.WIDTH / 2F, Settings.HEIGHT / 2F));
             SneckoBoss.updateCardPools();
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
-            this.description = getUpdatedDescription(); this.tips.clear();
+            this.description = getUpdatedDescription();
+            this.tips.clear();
             this.tips.add(new PowerTip(this.name, this.description));
         }
     }

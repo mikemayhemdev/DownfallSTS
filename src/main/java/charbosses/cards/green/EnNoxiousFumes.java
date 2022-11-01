@@ -1,7 +1,6 @@
 package charbosses.cards.green;
 
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.colorless.EnShiv;
 import charbosses.powers.cardpowers.EnemyNoxiousFumesPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;

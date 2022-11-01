@@ -16,7 +16,7 @@ public class TargetedPower extends AbstractGuardianPower {
     public static PowerType POWER_TYPE = PowerType.DEBUFF;
 
     public static String[] DESCRIPTIONS;
-    private AbstractCreature source;
+    private final AbstractCreature source;
 
 
     public TargetedPower(AbstractCreature owner, AbstractCreature source, int amount) {

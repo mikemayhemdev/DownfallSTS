@@ -221,7 +221,7 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
         public static String[] DESCRIPTIONSdef;
 
         public boolean inRear = false;
-        private String IDdef = "Guardian:BronzeOrbLocationPowerBack";
+        private final String IDdef = "Guardian:BronzeOrbLocationPowerBack";
 
 
         public BronzeOrbLocationPower(AbstractCreature owner) {

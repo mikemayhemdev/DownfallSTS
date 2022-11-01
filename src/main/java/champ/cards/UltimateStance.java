@@ -1,16 +1,8 @@
 package champ.cards;
 
-import basemod.helpers.CardModifierManager;
-import champ.ChampMod;
 import champ.powers.UltimateFormNextTurnPower;
-import champ.powers.UltimateFormPower;
-import champ.stances.BerserkerStance;
-import champ.stances.DefensiveStance;
-import champ.util.TechniqueMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.stances.NeutralStance;
 
 public class UltimateStance extends AbstractChampCard {
 
@@ -38,8 +30,8 @@ public class UltimateStance extends AbstractChampCard {
      */
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-       // techique();
-     //   triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
+        // techique();
+        //   triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
         //ultimateStance();
         applyToSelf(new UltimateFormNextTurnPower(1));
     }

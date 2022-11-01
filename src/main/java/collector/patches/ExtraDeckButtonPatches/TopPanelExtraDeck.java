@@ -1,7 +1,6 @@
 package collector.patches.ExtraDeckButtonPatches;
 
 import basemod.TopPanelItem;
-import collector.CollectorChar;
 import collector.CollectorCollection;
 import collector.CollectorMod;
 import com.badlogic.gdx.graphics.Texture;

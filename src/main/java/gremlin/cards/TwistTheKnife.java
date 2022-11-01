@@ -28,8 +28,7 @@ public class TwistTheKnife extends AbstractGremlinCard {
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 1;
 
-    public TwistTheKnife()
-    {
+    public TwistTheKnife() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -43,7 +42,7 @@ public class TwistTheKnife extends AbstractGremlinCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                 this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         AbstractCard s = new Shiv();
-        if(this.upgraded){
+        if (this.upgraded) {
             s.upgrade();
         }
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(s));
@@ -51,8 +50,7 @@ public class TwistTheKnife extends AbstractGremlinCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;

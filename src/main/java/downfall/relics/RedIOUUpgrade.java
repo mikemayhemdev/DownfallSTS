@@ -10,8 +10,8 @@ import downfall.downfallMod;
 public class RedIOUUpgrade extends CustomRelic {
 
     public static String ID = downfallMod.makeID("RedIOUUpgrade");
-    private static Texture IMG = new Texture(downfallMod.assetPath("images/relics/BanditContractUpgrade.png"));
-    private static Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/Outline/BanditContractUpgrade.png"));
+    private static final Texture IMG = new Texture(downfallMod.assetPath("images/relics/BanditContractUpgrade.png"));
+    private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/Outline/BanditContractUpgrade.png"));
 
     public RedIOUUpgrade() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);

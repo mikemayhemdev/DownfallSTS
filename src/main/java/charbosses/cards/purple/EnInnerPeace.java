@@ -2,7 +2,6 @@ package charbosses.cards.purple;
 
 import charbosses.actions.unique.EnemyChangeStanceAction;
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.cards.AbstractBossCard;
 import charbosses.stances.AbstractEnemyStance;
 import charbosses.stances.EnCalmStance;
 import com.megacrit.cardcrawl.cards.AbstractCard;

@@ -83,11 +83,13 @@ public class BaubleBeam extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         for (int i = 0; i < this.damage; i++) {
             final Color gemColor = this.sockets.size() > 0
-                    ? this.sockets.get(MathUtils.random(this.sockets.size()-1)).color.cpy()
+                    ? this.sockets.get(MathUtils.random(this.sockets.size() - 1)).color.cpy()
                     .add(MathUtils.random(-.1f, .1f), MathUtils.random(-.1f, .1f), MathUtils.random(-.1f, .1f), 0f)
                     : new Color(MathUtils.random(0.8F, 1.0F), MathUtils.random(0.6F, 0.8F), MathUtils.random(0.0F, 0.6F), 0.0F);
 
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new StarBounceEffect(m.hb.cX, m.hb.cY) {{color = gemColor;}}));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new StarBounceEffect(m.hb.cX, m.hb.cY) {{
+                color = gemColor;
+            }}));
         }
 
         for (int i = 0; i < this.magicNumber; i++) {

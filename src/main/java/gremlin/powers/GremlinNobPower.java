@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import downfall.downfallMod;
 import gremlin.cards.Bellow;
 import gremlin.cards.Rush;
 import gremlin.cards.SkullBash;
@@ -32,7 +33,7 @@ public class GremlinNobPower extends GremlinPower implements OnLoseTempHpPower {
     @Override
     public void onInitialApplication() {
         super.onInitialApplication();
-        if (AbstractDungeon.player instanceof GremlinCharacter) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
             ((GremlinCharacter) (AbstractDungeon.player)).becomeNob();
         }
     }
@@ -47,8 +48,8 @@ public class GremlinNobPower extends GremlinPower implements OnLoseTempHpPower {
     @Override
     public int onLoseTempHp(DamageInfo damageInfo, int damageAmount) {
         int tempHp = TempHPField.tempHp.get(AbstractDungeon.player);
-        if(damageAmount >= tempHp){
-            if (AbstractDungeon.player instanceof GremlinCharacter) {
+        if (damageAmount >= tempHp) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
                 ((GremlinCharacter) (AbstractDungeon.player)).revertNob();
             } else {
                 AbstractDungeon.actionManager.addToTop(

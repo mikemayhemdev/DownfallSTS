@@ -14,14 +14,14 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 public class TotemBeamEffect extends AbstractGameEffect {
     private static final float DUR = 0.5F;
     private static AtlasRegion img;
-    private float sX;
-    private float sY;
-    private float sX2;
-    private float sY2;
-    private float dX;
-    private float dY;
-    private float dst;
-    private float dst2;
+    private final float sX;
+    private final float sY;
+    private final float sX2;
+    private final float sY2;
+    private final float dX;
+    private final float dY;
+    private final float dst;
+    private final float dst2;
 
     public TotemBeamEffect(float sX, float sY, float dX, float dY, Color color, float sX2, float sY2) {
         if (img == null) {

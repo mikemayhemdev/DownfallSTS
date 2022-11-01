@@ -29,8 +29,7 @@ public class Whiz extends AbstractGremlinCard {
 
     private boolean real = true;
 
-    public Whiz()
-    {
+    public Whiz() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -42,8 +41,7 @@ public class Whiz extends AbstractGremlinCard {
         setBackgrounds();
     }
 
-    public Whiz(boolean real)
-    {
+    public Whiz(boolean real) {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -55,11 +53,10 @@ public class Whiz extends AbstractGremlinCard {
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new WizPower(p, this.magicNumber), this.magicNumber));
-        if(upgraded){
+        if (upgraded) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                     new MakingMoreMagicPower(p, 1), 1));
         } else {
@@ -68,15 +65,13 @@ public class Whiz extends AbstractGremlinCard {
         }
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_BONUS);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             initializeDescription();
-            if(real) {
+            if (real) {
                 this.cardsToPreview.upgrade();
             }
         }

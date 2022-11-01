@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
 import sneckomod.actions.NoApplyRandomDamageAction;
-import sneckomod.powers.MuddleDrawnCardsPower;
 
 public class RainOfDice extends AbstractSneckoCard {
 

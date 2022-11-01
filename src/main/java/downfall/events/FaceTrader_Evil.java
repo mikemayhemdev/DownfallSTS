@@ -9,11 +9,8 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import downfall.monsters.FaceTrader;
 import downfall.relics.CloakOfManyFaces;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -61,24 +58,22 @@ public class FaceTrader_Evil extends AbstractImageEvent {
     protected void buttonEffect(int buttonPressed) {
         switch (this.screen) {
             case INTRO:
-                switch (buttonPressed) {
-                    case 0:
-                        this.imageEventText.updateBodyText(DESCRIPTIONS[1] + DESCRIPTIONSALT[0]);
-                        this.imageEventText.updateDialogOption(0, OPTIONSALT[0]);
-                        this.imageEventText.setDialogOption(OPTIONS[2]);
-                        this.imageEventText.setDialogOption(OPTIONS[3]);
-                        this.screen = CurScreen.MAIN;
-                        return;
-                    default:
-                        return;
+                if (buttonPressed == 0) {
+                    this.imageEventText.updateBodyText(DESCRIPTIONS[1] + DESCRIPTIONSALT[0]);
+                    this.imageEventText.updateDialogOption(0, OPTIONSALT[0]);
+                    this.imageEventText.setDialogOption(OPTIONS[2]);
+                    this.imageEventText.setDialogOption(OPTIONS[3]);
+                    this.screen = CurScreen.MAIN;
+                    return;
                 }
+                return;
             case MAIN:
                 switch (buttonPressed) {
                     case 0:
                         logMetric(ID, "Fight");
                         this.screen = CurScreen.FIGHT;
                         //SlimeboundMod.logger.info("fight");
-                        AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:FaceTrader");
+                        AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("downfall:FaceTrader");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addRelicToRewards(new CloakOfManyFaces());
                         AbstractDungeon.getCurrRoom().addGoldToRewards(100);

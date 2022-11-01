@@ -1,13 +1,8 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.watcher.WallopAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.purple.Wallop;
-import com.megacrit.cardcrawl.cards.red.IronWave;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -16,7 +11,6 @@ import hermit.actions.SnapshotAction;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 import hermit.powers.SnipePower;
-
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
@@ -69,11 +63,10 @@ public class Snapshot extends AbstractDynamicCard {
 
             int DeadOnTimes = DeadOnAmount();
 
-            this.addToBot(new SnapshotAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),DeadOnTimes));
+            this.addToBot(new SnapshotAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), DeadOnTimes));
 
             this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, SnipePower.POWER_ID, 1));
-        }
-        else {
+        } else {
             AbstractDungeon.actionManager.addToBottom(
                     new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                             EnumPatch.HERMIT_GUN));

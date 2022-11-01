@@ -1,4 +1,3 @@
-
 package downfall.patches;
 
 
@@ -10,7 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.map.MapRoomNode;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.ui.buttons.ProceedButton;
-import downfall.downfallMod;
 import slimebound.SlimeboundMod;
 
 @SpirePatch(

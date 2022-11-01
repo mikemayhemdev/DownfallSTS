@@ -16,8 +16,8 @@ import java.util.List;
 
 public class ReturnRandom0Cost extends AbstractGameAction {
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-    private AbstractPlayer p;
-    private int count;
+    private final AbstractPlayer p;
+    private final int count;
 
 
     public ReturnRandom0Cost(int count) {

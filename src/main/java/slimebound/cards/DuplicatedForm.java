@@ -2,30 +2,21 @@ package slimebound.cards;
 
 
 import basemod.helpers.BaseModCardTags;
-import champ.ChampMod;
-import champ.actions.FatigueHpLossAction;
-import champ.powers.ResolvePower;
 import com.badlogic.gdx.graphics.Color;
-import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPField;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.BufferPower;
-import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.DuplicatedFormEnergyPower;
-import slimebound.powers.DuplicatedFormNoHealPower;
 import slimebound.powers.DuplicatedFormPower;
-import slimebound.powers.FirmFortitudePower;
 import slimebound.vfx.SlimeDripsEffect;
 
 
@@ -41,8 +32,8 @@ public class DuplicatedForm extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 3;
     public static String UPGRADED_DESCRIPTION;
-    private static int upgradedamount = 1;
-    private static int baseHealthCost = 15;
+    private static final int upgradedamount = 1;
+    private static final int baseHealthCost = 15;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -73,9 +64,10 @@ public class DuplicatedForm extends AbstractSlimeboundCard {
 
         int stack = 1;
         //if (upgraded) stack++;
-        if (upgraded) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormEnergyPower(p, p, stack), stack));
+        if (upgraded)
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicatedFormEnergyPower(p, p, stack), stack));
 
-         }
+    }
 
     public AbstractCard makeCopy() {
         return new DuplicatedForm();

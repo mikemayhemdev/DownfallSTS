@@ -12,8 +12,8 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import downfall.downfallMod;
 import downfall.cards.curses.Haunted;
+import downfall.downfallMod;
 
 public class Mausoleum_Evil extends AbstractImageEvent {
     public static final String ID = "downfall:Mausoleum";
@@ -28,7 +28,7 @@ public class Mausoleum_Evil extends AbstractImageEvent {
     private static final String NORMAL_RESULT;
     private static final String NOPE_RESULT;
 
-    private int percent;
+    private final int percent;
 
     static {
         eventStrings = CardCrawlGame.languagePack.getEventString(TheMausoleum.ID);
@@ -43,7 +43,7 @@ public class Mausoleum_Evil extends AbstractImageEvent {
         NOPE_RESULT = DESCRIPTIONS[3];
     }
 
-    private int screenNum = 0;
+    private final int screenNum = 0;
     private CurScreen screen;
 
     public Mausoleum_Evil() {
@@ -68,53 +68,51 @@ public class Mausoleum_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch (this.screen) {
-            case INTRO:
-                switch (buttonPressed) {
-                    case 0:
-                        this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
-                        Haunted curse = new Haunted();
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
-                        int gold = 200;
-                        AbstractDungeon.effectList.add(new RainingGoldEffect(gold));
-                        AbstractDungeon.player.gainGold(gold);
-                        logMetricGainGoldAndCard(ID, "Feasted", curse, gold);
-                        this.imageEventText.loadImage(downfallMod.assetPath("images/events/mausoleumNoSpirit.png"));
-                        break;
-                    case 1:
-                        boolean result = AbstractDungeon.miscRng.randomBoolean();
-                        if (AbstractDungeon.ascensionLevel >= 15) {
-                            result = true;
-                        }
+        if (this.screen == CurScreen.INTRO) {
+            switch (buttonPressed) {
+                case 0:
+                    this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
+                    Haunted curse = new Haunted();
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
+                    int gold = 200;
+                    AbstractDungeon.effectList.add(new RainingGoldEffect(gold));
+                    AbstractDungeon.player.gainGold(gold);
+                    logMetricGainGoldAndCard(ID, "Feasted", curse, gold);
+                    this.imageEventText.loadImage(downfallMod.assetPath("images/events/mausoleumNoSpirit.png"));
+                    break;
+                case 1:
+                    boolean result = AbstractDungeon.miscRng.randomBoolean();
+                    if (AbstractDungeon.ascensionLevel >= 15) {
+                        result = true;
+                    }
 
-                        if (result) {
-                            this.imageEventText.updateBodyText(CURSED_RESULT);
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Writhe(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
-                        } else {
-                            this.imageEventText.updateBodyText(NORMAL_RESULT);
-                        }
+                    if (result) {
+                        this.imageEventText.updateBodyText(CURSED_RESULT);
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Writhe(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
+                    } else {
+                        this.imageEventText.updateBodyText(NORMAL_RESULT);
+                    }
 
-                        CardCrawlGame.sound.play("BLUNT_HEAVY");
-                        CardCrawlGame.screenShake.rumble(2.0F);
-                        AbstractRelic r = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), r);
-                        if(result) {
-                            logMetricObtainCardAndRelic(ID, "Opened", new Writhe(), r);
-                        } else {
-                            logMetricObtainRelic(ID, "Opened", r);
-                        }
-                        break;
-                    default:
-                        this.imageEventText.updateBodyText(NOPE_RESULT);
-                }
+                    CardCrawlGame.sound.play("BLUNT_HEAVY");
+                    CardCrawlGame.screenShake.rumble(2.0F);
+                    AbstractRelic r = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());
+                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), r);
+                    if (result) {
+                        logMetricObtainCardAndRelic(ID, "Opened", new Writhe(), r);
+                    } else {
+                        logMetricObtainRelic(ID, "Opened", r);
+                    }
+                    break;
+                default:
+                    this.imageEventText.updateBodyText(NOPE_RESULT);
+            }
 
-                this.imageEventText.clearAllDialogs();
-                this.imageEventText.setDialogOption(OPTIONS[2]);
-                this.screen = CurScreen.RESULT;
-                break;
-            default:
-                logMetricIgnored(ID);
-                this.openMap();
+            this.imageEventText.clearAllDialogs();
+            this.imageEventText.setDialogOption(OPTIONS[2]);
+            this.screen = CurScreen.RESULT;
+        } else {
+            logMetricIgnored(ID);
+            this.openMap();
         }
 
     }

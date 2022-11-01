@@ -8,8 +8,8 @@ import downfall.downfallMod;
 
 public class CBR_TombOfRedMask extends AbstractCharbossRelic {
     public static String ID = downfallMod.makeID("TombRedMask");
-    private static RelicTier tier = RelicTier.SPECIAL;
-    private static LandingSound sound = LandingSound.MAGICAL;
+    private static final RelicTier tier = RelicTier.SPECIAL;
+    private static final LandingSound sound = LandingSound.MAGICAL;
     private String cardName;
 
     public CBR_TombOfRedMask() {

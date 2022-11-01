@@ -39,8 +39,8 @@ public class Serpent_Evil extends AbstractImageEvent {
     }
 
     private CUR_SCREEN screen;
-    private int goldReward;
-    private AbstractCard curse;
+    private final int goldReward;
+    private final AbstractCard curse;
 
     public Serpent_Evil() {
         super(NAME, DIALOG_1, "images/events/liarsGame.jpg");
@@ -64,30 +64,28 @@ public class Serpent_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch (this.screen) {
-            case INTRO:
-                if (buttonPressed == 0) {
-                    this.imageEventText.updateBodyText(AGREE_DIALOG + GOLD_RAIN_MSG);
-                    this.imageEventText.removeDialogOption(1);
-                    this.imageEventText.updateDialogOption(0, OPTIONS[3]);
-                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
-                    AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldReward));
-                    AbstractDungeon.player.gainGold(this.goldReward);
-                    CardCrawlGame.sound.play("BLUNT_HEAVY");
-                    this.imageEventText.loadImage(downfallMod.assetPath("images/events/liarsGame2.png"));
+        if (this.screen == CUR_SCREEN.INTRO) {
+            if (buttonPressed == 0) {
+                this.imageEventText.updateBodyText(AGREE_DIALOG + GOLD_RAIN_MSG);
+                this.imageEventText.removeDialogOption(1);
+                this.imageEventText.updateDialogOption(0, OPTIONS[3]);
+                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+                AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldReward));
+                AbstractDungeon.player.gainGold(this.goldReward);
+                CardCrawlGame.sound.play("BLUNT_HEAVY");
+                this.imageEventText.loadImage(downfallMod.assetPath("images/events/liarsGame2.png"));
 
-                    this.screen = CUR_SCREEN.AGREE;
-                    AbstractEvent.logMetricGainGoldAndCard(ID, "Punch", this.curse, this.goldReward);
-                } else {
-                    this.imageEventText.updateBodyText(DISAGREE_DIALOG);
-                    this.imageEventText.removeDialogOption(1);
-                    this.imageEventText.updateDialogOption(0, OPTIONS[3]);
-                    this.screen = CUR_SCREEN.DISAGREE;
-                    AbstractEvent.logMetricIgnored(ID);
-                }
-                break;
-            default:
-                this.openMap();
+                this.screen = CUR_SCREEN.AGREE;
+                AbstractEvent.logMetricGainGoldAndCard(ID, "Punch", this.curse, this.goldReward);
+            } else {
+                this.imageEventText.updateBodyText(DISAGREE_DIALOG);
+                this.imageEventText.removeDialogOption(1);
+                this.imageEventText.updateDialogOption(0, OPTIONS[3]);
+                this.screen = CUR_SCREEN.DISAGREE;
+                AbstractEvent.logMetricIgnored(ID);
+            }
+        } else {
+            this.openMap();
         }
 
     }

@@ -52,7 +52,7 @@ public class RollThrough extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        addToBot(new ApplyPowerAction(p, p, new PreventTackleDamagePower(p, p, this.magicNumber),  this.magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new PreventTackleDamagePower(p, p, this.magicNumber), this.magicNumber));
     }
 
     public AbstractCard makeCopy() {

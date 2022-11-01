@@ -5,7 +5,10 @@ import collector.actions.AddAggroAction;
 import collector.cards.CollectorCards.AbstractCollectorCard;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -16,10 +19,11 @@ public class Bonfire extends AbstractCollectorCard {
 
     public Bonfire() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY, CollectorCardSource.TORCH_HEAD);
-        douBaseDamage =  baseDamage = damage = 4;
+        douBaseDamage = baseDamage = damage = 4;
         douBlock = douBaseBlock = 8;
         magicNumber = baseMagicNumber = 1;
     }
+
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (CollectorChar.getLivingTorchHead() != null) {

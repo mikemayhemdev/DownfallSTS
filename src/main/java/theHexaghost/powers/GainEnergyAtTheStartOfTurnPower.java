@@ -51,7 +51,7 @@ public class GainEnergyAtTheStartOfTurnPower extends AbstractPower implements Cl
         StringBuilder sb = new StringBuilder();
         sb.append(powerStrings.DESCRIPTIONS[0]);
 
-        for(int i = 0; i < this.amount; ++i) {
+        for (int i = 0; i < this.amount; ++i) {
             sb.append("[E] ");
         }
 

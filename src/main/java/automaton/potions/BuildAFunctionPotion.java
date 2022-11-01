@@ -3,7 +3,6 @@ package automaton.potions;
 
 import automaton.FunctionHelper;
 import automaton.actions.AddToFuncAction;
-import automaton.cards.SpaghettiCode;
 import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.cards.AbstractCard;

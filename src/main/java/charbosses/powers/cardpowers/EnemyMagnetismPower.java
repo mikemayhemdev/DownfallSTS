@@ -3,7 +3,6 @@ package charbosses.powers.cardpowers;
 
 import charbosses.actions.common.EnemyMakeTempCardInHandAction;
 import charbosses.cards.colorless.*;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -31,7 +30,7 @@ public class EnemyMagnetismPower extends AbstractPower {
         this.amount = cardAmount;
         this.updateDescription();
         this.loadRegion("magnet");
-        if (srcColorlessCardPool.isEmpty()){
+        if (srcColorlessCardPool.isEmpty()) {
             srcColorlessCardPool.addToTop(new EnBlind());
             srcColorlessCardPool.addToTop(new EnDramaticEntrance());
             srcColorlessCardPool.addToTop(new EnGoodInstincts());
@@ -50,7 +49,7 @@ public class EnemyMagnetismPower extends AbstractPower {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             this.flash();
 
-            for(int i = 0; i < this.amount; ++i) {
+            for (int i = 0; i < this.amount; ++i) {
                 this.addToBot(new EnemyMakeTempCardInHandAction(returnBossColorlessCard().makeCopy(), 1, false));
             }
         }
@@ -79,12 +78,12 @@ public class EnemyMagnetismPower extends AbstractPower {
         ArrayList<AbstractCard> list = new ArrayList();
         Iterator var2 = srcColorlessCardPool.group.iterator();
 
-        while(var2.hasNext()) {
-            AbstractCard c = (AbstractCard)var2.next();
+        while (var2.hasNext()) {
+            AbstractCard c = (AbstractCard) var2.next();
             list.add(c);
         }
 
-        return (AbstractCard)list.get(rng.random(list.size() - 1));
+        return list.get(rng.random(list.size() - 1));
     }
 
     static {

@@ -1,8 +1,6 @@
 package champ.cards;
 
-import champ.ChampMod;
 import champ.powers.IronFortressPower;
-import champ.powers.IronFortressVigorPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 

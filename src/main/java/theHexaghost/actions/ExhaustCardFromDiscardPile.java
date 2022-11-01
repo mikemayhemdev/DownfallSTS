@@ -16,7 +16,7 @@ public class ExhaustCardFromDiscardPile extends AbstractGameAction {
 
     public ExhaustCardFromDiscardPile(AbstractCreature source, int amount) {
         this.p = AbstractDungeon.player;
-        this.setValues((AbstractCreature)null, source, amount);
+        this.setValues(null, source, amount);
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FASTER;
     }

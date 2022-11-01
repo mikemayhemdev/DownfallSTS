@@ -1,18 +1,12 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.FrailPower;
 import hermit.HermitMod;
 import hermit.actions.MagnumAction;
-import hermit.actions.MaliceAction;
 import hermit.characters.hermit;
 
 import static hermit.HermitMod.loadJokeCardImage;
@@ -82,7 +76,7 @@ public class Magnum extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new MagnumAction(m,new DamageInfo(p, this.damage, this.damageTypeForTurn),this));
+        this.addToBot(new MagnumAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), this));
     }
 
     // Upgraded stats.

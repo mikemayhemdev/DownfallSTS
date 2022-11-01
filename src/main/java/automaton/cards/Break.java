@@ -11,8 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static automaton.AutomatonMod.makeBetaCardPath;
 
-import static sneckomod.SneckoMod.getRandomStatus;
-
 public class Break extends AbstractBronzeCard {
 
     public final static String ID = makeID("Break");

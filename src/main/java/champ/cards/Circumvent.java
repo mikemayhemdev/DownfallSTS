@@ -1,12 +1,8 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.actions.CircumventAction;
-import champ.powers.CounterPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class Circumvent extends AbstractChampCard {
@@ -38,7 +34,7 @@ public class Circumvent extends AbstractChampCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = dcombo()||bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = dcombo() || bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

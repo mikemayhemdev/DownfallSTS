@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.relics.GremlinMask;
 
 public class CBR_MaskGremlin extends AbstractCharbossRelic {
     public static final String ID = "CBRMaskOfGremlin";
+
     public CBR_MaskGremlin() {
         super(new GremlinMask());
     }

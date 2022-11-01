@@ -1,5 +1,6 @@
 package charbosses.powers.cardpowers;
 
+import charbosses.powers.general.EnemyPoisonPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -7,7 +8,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.NoxiousFumesPower;
-import charbosses.powers.general.EnemyPoisonPower;
 
 public class EnemyNoxiousFumesPower extends AbstractPower {
     public static final String POWER_ID = "downfall:Enemy Noxious Fumes";

@@ -3,10 +3,8 @@ package slimebound.cards;
 
 import basemod.BaseMod;
 import com.badlogic.gdx.Gdx;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -14,11 +12,12 @@ import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
 import slimebound.SlimeboundMod;
-import slimebound.actions.CommandAction;
 import slimebound.actions.SlimeSpawnAction;
-import slimebound.orbs.*;
+import slimebound.orbs.AttackSlime;
+import slimebound.orbs.PoisonSlime;
+import slimebound.orbs.ShieldSlime;
+import slimebound.orbs.SlimingSlime;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.potions.SpawnSlimePotion;
 
 import java.util.ArrayList;
 
@@ -39,7 +38,7 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
 
     private float rotationTimer;
     private int previewIndex;
-    private ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
+    private final ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
 
 
     static {
@@ -55,22 +54,22 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
         this.exhaust = true;
 
 
-            cardList.add(new OctoChoiceCard("Slimebound:SplotBruiser",
-                    CardCrawlGame.languagePack.getOrbString("Slimebound:AttackSlime").NAME,
-                    SlimeboundMod.getResourcePath("cards/splitBruiser.png"),
-                    TEXT[20] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:bruiser_slime").replaceAll("#b","").replaceAll("#y","")));
-            cardList.add(new OctoChoiceCard("Slimebound:SplotGuerilla",
-                    CardCrawlGame.languagePack.getOrbString("Slimebound:PoisonSlime").NAME,
-                    SlimeboundMod.getResourcePath(IMG_PATH),
-                    TEXT[21] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:guerilla_slime").replaceAll("#b","").replaceAll("#y","")));
-            cardList.add(new OctoChoiceCard("Slimebound:SplotMire",
-                    CardCrawlGame.languagePack.getOrbString("Slimebound:SlimingSlime").NAME,
-                    SlimeboundMod.getResourcePath("cards/splitMire.png"),
-                    TEXT[22] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:mire_slime").replaceAll("#b","").replaceAll("#y","slimeboundmod:")));
-            cardList.add(new OctoChoiceCard("Slimebound:SplotLeeching",
-                    CardCrawlGame.languagePack.getOrbString("Slimebound:ShieldSlime").NAME,
-                    SlimeboundMod.getResourcePath("cards/splitLeeching.png"),
-                    TEXT[23] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:leeching_slime").replaceAll("#b","").replaceAll("#y","")));
+        cardList.add(new OctoChoiceCard("Slimebound:SplotBruiser",
+                CardCrawlGame.languagePack.getOrbString("Slimebound:AttackSlime").NAME,
+                SlimeboundMod.getResourcePath("cards/splitBruiser.png"),
+                TEXT[20] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:bruiser_slime").replaceAll("#b", "").replaceAll("#y", "")));
+        cardList.add(new OctoChoiceCard("Slimebound:SplotGuerilla",
+                CardCrawlGame.languagePack.getOrbString("Slimebound:PoisonSlime").NAME,
+                SlimeboundMod.getResourcePath(IMG_PATH),
+                TEXT[21] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:guerilla_slime").replaceAll("#b", "").replaceAll("#y", "")));
+        cardList.add(new OctoChoiceCard("Slimebound:SplotMire",
+                CardCrawlGame.languagePack.getOrbString("Slimebound:SlimingSlime").NAME,
+                SlimeboundMod.getResourcePath("cards/splitMire.png"),
+                TEXT[22] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:mire_slime").replaceAll("#b", "").replaceAll("#y", "slimeboundmod:")));
+        cardList.add(new OctoChoiceCard("Slimebound:SplotLeeching",
+                CardCrawlGame.languagePack.getOrbString("Slimebound:ShieldSlime").NAME,
+                SlimeboundMod.getResourcePath("cards/splitLeeching.png"),
+                TEXT[23] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:leeching_slime").replaceAll("#b", "").replaceAll("#y", "")));
 
     }
 
@@ -109,8 +108,8 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
     }
 
     public void choice(AbstractMonster m) {
-        addToBot(new OctoChoiceAction(m,this));
-        if (upgraded) addToBot(new OctoChoiceAction(m,this));
+        addToBot(new OctoChoiceAction(m, this));
+        if (upgraded) addToBot(new OctoChoiceAction(m, this));
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {
@@ -176,7 +175,6 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
             initializeDescription();
         }
     }
-
 
 
     @Override

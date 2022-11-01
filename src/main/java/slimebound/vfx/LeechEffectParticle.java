@@ -18,13 +18,13 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 public class LeechEffectParticle extends AbstractGameEffect {
     private float sX;
     private float sY;
-    private float tX;
-    private float tY;
+    private final float tX;
+    private final float tY;
     private float x;
     private float y;
-    private float vY;
-    private float vX;
-    private AtlasRegion img;
+    private final float vY;
+    private final float vX;
+    private final AtlasRegion img;
     private boolean activated = false;
 
     public LeechEffectParticle(float sX, float sY, float tX, float tY, Color color) {

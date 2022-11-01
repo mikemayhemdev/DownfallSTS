@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.relics.NlothsMask;
 
 public class CBR_MaskNloth extends AbstractCharbossRelic {
     public static final String ID = "CBRNlothsMask";
+
     public CBR_MaskNloth() {
         super(new NlothsMask());
     }

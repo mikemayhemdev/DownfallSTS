@@ -7,8 +7,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.map.MapRoomNode;
-import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
+import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.vfx.FadeWipeParticle;
 import downfall.relics.TeleportStone;
 
@@ -41,9 +41,9 @@ public class Portal_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screen) {
+        switch (this.screen) {
             case INTRO:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
 
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
@@ -94,12 +94,12 @@ public class Portal_Evil extends AbstractImageEvent {
         DIALOG_3 = DESCRIPTIONS[2];
     }
 
-    private static enum CurScreen {
+    private enum CurScreen {
         INTRO,
         ACCEPT,
         LEAVE;
 
-        private CurScreen() {
+        CurScreen() {
         }
     }
 }

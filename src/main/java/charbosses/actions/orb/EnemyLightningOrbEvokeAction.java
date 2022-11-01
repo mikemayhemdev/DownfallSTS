@@ -13,8 +13,8 @@ import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 
 
 public class EnemyLightningOrbEvokeAction extends AbstractGameAction {
-    private DamageInfo info;
-    private boolean hitAll;
+    private final DamageInfo info;
+    private final boolean hitAll;
 
     public EnemyLightningOrbEvokeAction(DamageInfo info, boolean hitAll) {
         this.info = info;

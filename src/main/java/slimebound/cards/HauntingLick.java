@@ -63,13 +63,12 @@ public class HauntingLick extends AbstractLickCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.slimed), this.slimed, true, AbstractGameAction.AttackEffect.NONE));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new LickEffect(m.hb.cX, m.hb.cY, 0.6F, new Color(ROYAL)), 0.1F));
 
-        if (upgraded) upgradeAction(p,m);
+        if (upgraded) upgradeAction(p, m);
 
     }
 
 
-
-    public void upgradeAction(AbstractPlayer p, AbstractMonster m){
+    public void upgradeAction(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
     }
 

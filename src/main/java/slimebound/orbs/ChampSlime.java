@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import reskinContent.patches.CharacterSelectScreenPatches;
-import reskinContent.reskinContent;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeAutoAttack;
 import slimebound.vfx.CrownParticle;
@@ -38,8 +37,8 @@ public class ChampSlime
 
     public void postSpawnEffects() {
         this.crownVFX = new CrownParticle(this);
-        if(CharacterSelectScreenPatches.characters[1].isOriginal()){
-        AbstractDungeon.effectList.add(this.crownVFX);
+        if (CharacterSelectScreenPatches.characters[1].isOriginal()) {
+            AbstractDungeon.effectList.add(this.crownVFX);
         }
     }
 
@@ -63,8 +62,8 @@ public class ChampSlime
     }
 
     public void cleanUpVFX() {
-        if(CharacterSelectScreenPatches.characters[1].isOriginal())
-        this.crownVFX.finish();
+        if (CharacterSelectScreenPatches.characters[1].isOriginal())
+            this.crownVFX.finish();
     }
 
     @Override

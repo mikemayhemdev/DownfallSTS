@@ -51,8 +51,8 @@ public class FirmFortitude extends AbstractSlimeboundCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)){
-            if (AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount < 0){
+        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
+            if (AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount < 0) {
                 return false;
             }
         }

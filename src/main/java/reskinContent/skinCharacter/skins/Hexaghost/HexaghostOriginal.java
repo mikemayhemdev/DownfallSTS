@@ -12,7 +12,7 @@ public class HexaghostOriginal extends AbstractSkin {
         this.DESCRIPTION = CardCrawlGame.languagePack.getCharacterString(TheHexaghost.ID).TEXT[0];
         this.portraitStatic_IMG = ImageMaster.loadImage("hexamodResources/images/charSelect/charBG.png");
 
-        this.SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder.png";;
+        this.SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder.png";
         this.SHOULDER2 = "hexamodResources/images/char/mainChar/shoulderR.png";
         this.CORPSE = "hexamodResources/images/char/mainChar/corpse.png";
         this.atlasURL = "reskinContent/img/HexaghostMod/Hexago/animation/Hexaghost_original.atlas";

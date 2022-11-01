@@ -1,9 +1,6 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
-import automaton.cardmods.EncodeAndShuffleMod;
-import automaton.cardmods.EncodeMod;
-import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

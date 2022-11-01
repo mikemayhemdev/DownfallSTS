@@ -25,24 +25,20 @@ public class Unforgiving extends AbstractGremlinCard {
     private static final int COST = 3;
     private static final int UPGRADE_COST = 2;
 
-    public Unforgiving()
-    {
+    public Unforgiving() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.tags.add(MAD_GREMLIN);
         setBackgrounds();
         GremlinMod.loadJokeCardImage(this, "Unforgiving.png");
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new UnforgivingPower(p), 1));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeBaseCost(UPGRADE_COST);
         }

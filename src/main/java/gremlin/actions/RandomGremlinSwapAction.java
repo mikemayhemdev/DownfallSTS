@@ -9,13 +9,13 @@ import java.util.ArrayList;
 
 public class RandomGremlinSwapAction extends AbstractGameAction {
 
-    public RandomGremlinSwapAction(){
+    public RandomGremlinSwapAction() {
     }
 
 
     @Override
     public void update() {
-        if(!this.isDone) {
+        if (!this.isDone) {
             ArrayList<GremlinStandby> options = new ArrayList<>();
             for (AbstractOrb orb : AbstractDungeon.player.orbs) {
                 if (orb instanceof GremlinStandby) {

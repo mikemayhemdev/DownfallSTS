@@ -37,9 +37,9 @@ public class Designer_Evil extends AbstractImageEvent {
 
     private CurrentScreen curScreen;
     private OptionChosen option;
-    private boolean adjustmentUpgradesOne;
-    private boolean cleanUpRemovesCards;
-    private int hpLoss;
+    private final boolean adjustmentUpgradesOne;
+    private final boolean cleanUpRemovesCards;
+    private final int hpLoss;
 
 
     public Designer_Evil() {

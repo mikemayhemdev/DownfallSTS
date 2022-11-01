@@ -11,10 +11,10 @@ import downfall.downfallMod;
 
 public class CBR_BonfireSpirits extends AbstractCharbossRelic {
     public static String ID = downfallMod.makeID("BonfireSpirits");
-    private static RelicTier tier = RelicTier.SPECIAL;
-    private static LandingSound sound = LandingSound.MAGICAL;
+    private static final RelicTier tier = RelicTier.SPECIAL;
+    private static final LandingSound sound = LandingSound.MAGICAL;
     public String cardName = "";
-    private int descInt = 0;
+    private final int descInt = 0;
 
     public CBR_BonfireSpirits() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/bonfirespirits.png")));
@@ -37,7 +37,7 @@ public class CBR_BonfireSpirits extends AbstractCharbossRelic {
 
     @Override
     public String getUpdatedDescription() {
-       return this.DESCRIPTIONS[0];
+        return this.DESCRIPTIONS[0];
     }
 
     @Override

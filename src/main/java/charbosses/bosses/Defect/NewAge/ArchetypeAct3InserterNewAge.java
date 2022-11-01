@@ -5,20 +5,16 @@ import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.blue.*;
-import charbosses.cards.colorless.EnBlind;
 import charbosses.cards.curses.EnClumsy;
 import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.orbs.EnemyEmptyOrbSlot;
 import charbosses.orbs.EnemyPlasma;
 import charbosses.powers.bossmechanicpowers.DefectCuriosityLightningPower;
-import charbosses.powers.bossmechanicpowers.DefectCuriosityPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -28,7 +24,7 @@ import static java.lang.Math.min;
 public class ArchetypeAct3InserterNewAge extends ArchetypeBaseDefect {
 
     private CharBossDefect cB;
-    private boolean A19 = AbstractDungeon.ascensionLevel >= 19;
+    private final boolean A19 = AbstractDungeon.ascensionLevel >= 19;
 
     public ArchetypeAct3InserterNewAge() {
         super("DF_ARCHETYPE_ORBS", "Inserter");
@@ -61,7 +57,7 @@ public class ArchetypeAct3InserterNewAge extends ArchetypeBaseDefect {
 
     @Override
     public ArrayList<AbstractCard> getThisTurnCards() {
-        if (cB == null){
+        if (cB == null) {
             cB = (CharBossDefect) AbstractCharBoss.boss;
         }
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
@@ -174,6 +170,7 @@ public class ArchetypeAct3InserterNewAge extends ArchetypeBaseDefect {
         fixUpOrbIntents(cardsList);
         return cardsList;
     }
+
     public static void fixUpOrbIntents() {
         fixUpOrbIntents(AbstractCharBoss.boss.hand.group);
     }
@@ -182,7 +179,7 @@ public class ArchetypeAct3InserterNewAge extends ArchetypeBaseDefect {
         CharBossDefect cB = (CharBossDefect) AbstractCharBoss.boss;
         int currentE = cB.energyPanel.getCurrentEnergy();
         ArrayList<AbstractEnemyOrb> mockOrbs = new ArrayList<>();
-        for (AbstractEnemyOrb orb: cB.orbsAsEn()) {
+        for (AbstractEnemyOrb orb : cB.orbsAsEn()) {
             if (!(orb instanceof EnemyEmptyOrbSlot))
                 mockOrbs.add((AbstractEnemyOrb) orb.makeCopy());
         }
@@ -190,7 +187,7 @@ public class ArchetypeAct3InserterNewAge extends ArchetypeBaseDefect {
         System.out.println(hand);
         System.out.println(mockOrbs);
 
-        for (AbstractCard absCard: hand) {
+        for (AbstractCard absCard : hand) {
             AbstractBossCard card = (AbstractBossCard) absCard;
             if (card.cost > currentE) {
                 card.bossDarken();
@@ -203,8 +200,7 @@ public class ArchetypeAct3InserterNewAge extends ArchetypeBaseDefect {
                 card.applyPowers();
                 AbstractCharBoss.boss.hand.refreshHandLayout();
                 currentE = 0;
-            }
-            else {
+            } else {
                 currentE -= card.cost;
             }
             card.bossLighten();
@@ -215,7 +211,7 @@ public class ArchetypeAct3InserterNewAge extends ArchetypeBaseDefect {
                     currentE += 4;
                     card.energyGeneratedIfPlayed = 4;
                 }
-                orbsEvoked+=1;
+                orbsEvoked += 1;
                 mockOrbs.remove(0);
             }
             for (int i = 0; i < card.showEvokeOrbCount; i++) {
@@ -226,7 +222,7 @@ public class ArchetypeAct3InserterNewAge extends ArchetypeBaseDefect {
                     currentE += 2;
                     card.energyGeneratedIfPlayed += 2;
                 }
-                orbsEvoked+=1;
+                orbsEvoked += 1;
                 mockOrbs.remove(0);
             }
             System.out.println(mockOrbs);

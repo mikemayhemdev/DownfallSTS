@@ -1,6 +1,5 @@
 package downfall.monsters;
 
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -15,8 +14,6 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import downfall.downfallMod;
 import downfall.powers.DrawReductionPowerPlus;
-
-import java.util.ArrayList;
 
 public class FaceTrader extends AbstractMonster {
 
@@ -61,7 +58,7 @@ public class FaceTrader extends AbstractMonster {
 
     @Override
     public void changeState(String stateName) {
-        switch(stateName) {
+        switch (stateName) {
             case "AttackGremlin":
                 this.state.setAnimation(0, "AttackGremlin", false);
                 this.state.addAnimation(0, "Idle", true, 0.0F);
@@ -107,7 +104,7 @@ public class FaceTrader extends AbstractMonster {
             case 4:
                 addToBot(new GainBlockAction(this, 10));
                 addToBot(new ApplyPowerAction(this, this, new RitualPower(this, 1, false), 1));
-                if (!hasPower(RitualPower.POWER_ID)){
+                if (!hasPower(RitualPower.POWER_ID)) {
                     addToBot(new ApplyPowerAction(this, this, new StrengthPower(this, 1), 1));
                 }
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "AttackCultist"));
@@ -126,7 +123,7 @@ public class FaceTrader extends AbstractMonster {
         int bruh;
         switch (turnNum) {
             case 0:
-                bruh = AbstractDungeon.cardRandomRng.random(0,2);
+                bruh = AbstractDungeon.cardRandomRng.random(0, 2);
                 turnNum = 1;
                 switch (bruh) {
                     case 0: {
@@ -144,7 +141,7 @@ public class FaceTrader extends AbstractMonster {
                 }
                 break;
             case 1:
-                bruh = AbstractDungeon.cardRandomRng.random(0,1);
+                bruh = AbstractDungeon.cardRandomRng.random(0, 1);
                 turnNum = 0;
                 switch (bruh) {
                     case 0: {

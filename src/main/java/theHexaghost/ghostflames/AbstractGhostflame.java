@@ -6,26 +6,20 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import downfall.util.TextureLoader;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
-import theHexaghost.actions.ExtinguishAction;
 import theHexaghost.actions.GreenFlameAction;
 import theHexaghost.powers.ApocalypticArmorPower;
-import theHexaghost.powers.EnhancePower;
 import theHexaghost.util.OnChargeSubscriber;
-import downfall.util.TextureLoader;
 import theHexaghost.vfx.MyOrb;
 
 import static theHexaghost.GhostflameHelper.activeGhostFlame;
@@ -52,14 +46,14 @@ public abstract class AbstractGhostflame {
 
     public Color textColor = new Color(1F, 1F, 1F, 1F);
 
-    public float animAlphaBySlot[] = new float[3];
-    private boolean useBrightTexture[] = new boolean[3];
+    public float[] animAlphaBySlot = new float[3];
+    private final boolean[] useBrightTexture = new boolean[3];
 
     public boolean advanceOnCardUse = false;
 
     public static final float whiteOverlayTimer = .4F;
 
-    private Texture whiteOverlay = TextureLoader.getTexture(HexaMod.makeUIPath("whiteOverlay.png"));
+    private final Texture whiteOverlay = TextureLoader.getTexture(HexaMod.makeUIPath("whiteOverlay.png"));
 
 
     public AbstractGhostflame(float x, float y) {
@@ -90,6 +84,7 @@ public abstract class AbstractGhostflame {
                 Doom.onSpecificTrigger();
         }
     }
+
     public void advanceTriggerAnim() {
         if (getActiveFlamesTriggerCount() <= 2) {
             animAlphaBySlot[getActiveFlamesTriggerCount()] = AbstractGhostflame.whiteOverlayTimer;
@@ -128,7 +123,7 @@ public abstract class AbstractGhostflame {
             for (int j = GhostflameHelper.hexaGhostFlames.size() - 1; j >= 0; j--) {
                 AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(j);
                 if (gf.charged) {
-                     amountOfIgnitedGhostflames++;
+                    amountOfIgnitedGhostflames++;
                 }
             }
 
@@ -136,8 +131,8 @@ public abstract class AbstractGhostflame {
         }
     }
 
-    public void forceCharge(){
-        if (charged){
+    public void forceCharge() {
+        if (charged) {
             extinguish();
         }
         charge();

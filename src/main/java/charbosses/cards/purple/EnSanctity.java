@@ -8,8 +8,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import java.util.ArrayList;
-
 public class EnSanctity extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Sanctity";
     private static final CardStrings cardStrings;

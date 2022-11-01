@@ -1,14 +1,13 @@
 package expansioncontent.patches;
 
-import automaton.AutomatonChar;
 import basemod.ReflectionHacks;
-import champ.ChampChar;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.shop.ShopScreen;
+import downfall.downfallMod;
 import downfall.patches.EvilModeCharacterSelect;
 import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.cards.*;
@@ -25,7 +24,7 @@ import java.util.ArrayList;
 public class ShopBossPatch {
     public static void Postfix(ShopScreen __instance) {
         if (EvilModeCharacterSelect.evilMode) {
-            ArrayList<AbstractCard> colorlessCards = (ArrayList<AbstractCard>) ReflectionHacks.getPrivate(__instance, ShopScreen.class, "colorlessCards");
+            ArrayList<AbstractCard> colorlessCards = ReflectionHacks.getPrivate(__instance, ShopScreen.class, "colorlessCards");
             if (AbstractDungeon.merchantRng.randomBoolean()) {
                 int x = colorlessCards.get(0).price;
                 colorlessCards.set(0, getReplacement(colorlessCards.get(0).rarity));
@@ -64,15 +63,15 @@ public class ShopBossPatch {
             }
         }
         if (AbstractDungeon.player instanceof TheHexaghost || RandomCardWithTagAction.hexaLocked()) {
-           if (q.cardID.equals(Hexaburn.ID)) return false;
+            if (q.cardID.equals(Hexaburn.ID)) return false;
         }
         if (AbstractDungeon.player instanceof GuardianCharacter || RandomCardWithTagAction.guardianLocked()) {
             if (q.cardID.equals(GuardianWhirl.ID)) return false;
         }
-        if (AbstractDungeon.player instanceof ChampChar || RandomCardWithTagAction.champLocked()) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_CHAMP) || RandomCardWithTagAction.champLocked()) {
             if (q.cardID.equals(LastStand.ID)) return false;
         }
-        if (AbstractDungeon.player instanceof AutomatonChar || RandomCardWithTagAction.autoLocked()) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_AUTOMATON) || RandomCardWithTagAction.autoLocked()) {
             return !q.cardID.equals(HyperBeam.ID);
         }
         return true;

@@ -5,12 +5,10 @@ import champ.ChampMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
 
 public class ShieldWallPower extends AbstractPower implements CloneablePowerInterface {
@@ -40,7 +38,7 @@ public class ShieldWallPower extends AbstractPower implements CloneablePowerInte
     @Override
     public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
         flash();
-        this.addToTop(new ApplyPowerAction(owner, owner, new CounterPower(amount) , amount));
+        this.addToTop(new ApplyPowerAction(owner, owner, new CounterPower(amount), amount));
     }
 
     @Override

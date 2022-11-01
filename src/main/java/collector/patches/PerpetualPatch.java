@@ -45,7 +45,7 @@ public class PerpetualPatch {
                 card.stopGlowing();
                 card.shrink();
                 card.darken(false);
-                ((PerpetualCard)card).PerpetualBonus();
+                ((PerpetualCard) card).PerpetualBonus();
                 CollectorCollection.combatCollection.addToBottom(card);
                 __instance.isDone = true;
                 return SpireReturn.Return(null);

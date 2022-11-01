@@ -4,11 +4,6 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.curses.Injury;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -53,8 +48,7 @@ public class TakeAimPower extends AbstractPower implements CloneablePowerInterfa
     @Override
     public void atStartOfTurn() { // At the start of your turn
         this.flash();
-        if (!AbstractDungeon.player.hasPower(Concentration.POWER_ID))
-        {
+        if (!AbstractDungeon.player.hasPower(Concentration.POWER_ID)) {
             this.addToBot(new ApplyPowerAction(owner, owner, new Concentration(owner, -1), -1));
         }
     }

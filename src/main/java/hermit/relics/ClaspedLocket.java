@@ -2,33 +2,15 @@ package hermit.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.colorless.Trip;
-import com.megacrit.cardcrawl.cards.curses.CurseOfTheBell;
 import com.megacrit.cardcrawl.cards.curses.Injury;
-import com.megacrit.cardcrawl.cards.green.Tactician;
-import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.PowerTip;
-import com.megacrit.cardcrawl.helpers.input.InputHelper;
-import com.megacrit.cardcrawl.powers.EvolvePower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.relics.*;
-import com.megacrit.cardcrawl.rewards.RewardItem;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import com.megacrit.cardcrawl.vfx.GainPennyEffect;
 import hermit.HermitMod;
-import hermit.cards.MementoCard;
-import hermit.cards.Strike_Hermit;
 import hermit.util.TextureLoader;
-
-import java.util.Iterator;
 
 import static hermit.HermitMod.makeRelicOutlinePath;
 import static hermit.HermitMod.makeRelicPath;
@@ -59,7 +41,9 @@ public class ClaspedLocket extends CustomRelic {
                     break;
                 }
             }
-        } else { super.obtain(); }
+        } else {
+            super.obtain();
+        }
 
         this.cardsReceived = false;
     }
@@ -82,13 +66,13 @@ public class ClaspedLocket extends CustomRelic {
     public void onCardDraw(AbstractCard card) {
 
         if (!this.canTrigger)
-                return;
+            return;
 
         if (card.type == AbstractCard.CardType.CURSE && !AbstractDungeon.player.hasPower("No Draw")) {
             this.canTrigger = false;
             this.flash();
             this.addToTop(new DrawCardAction(AbstractDungeon.player, 2));
-            this.addToTop(new ExhaustSpecificCardAction(card,AbstractDungeon.player.hand));
+            this.addToTop(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand));
         }
 
     }

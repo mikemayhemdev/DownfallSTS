@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.FlameBarrierPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 import com.megacrit.cardcrawl.vfx.FlameAnimationEffect;
 import gremlin.actions.GremlinSwapAction;
@@ -33,8 +32,7 @@ public class Irritability extends AbstractGremlinCard {
     private static final int MAGIC = 3;
     private static final int UPGRADE_BONUS = 2;
 
-    public Irritability()
-    {
+    public Irritability() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -44,8 +42,7 @@ public class Irritability extends AbstractGremlinCard {
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new FlameAnimationEffect(p.hb)));
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, this.block));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
@@ -53,10 +50,8 @@ public class Irritability extends AbstractGremlinCard {
         AbstractDungeon.actionManager.addToBottom(new GremlinSwapAction(new MadGremlin(0)));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_BONUS);
             upgradeMagicNumber(UPGRADE_BONUS);

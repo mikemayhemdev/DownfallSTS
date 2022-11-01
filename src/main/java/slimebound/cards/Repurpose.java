@@ -2,10 +2,6 @@ package slimebound.cards;
 
 
 import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.actions.defect.EvokeOrbAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -15,10 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
 import slimebound.actions.CommandAction;
-import slimebound.orbs.*;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.PotencyPower;
-import sneckomod.SneckoMod;
 
 
 public class Repurpose extends AbstractSlimeboundCard {
@@ -47,7 +40,7 @@ public class Repurpose extends AbstractSlimeboundCard {
         this.baseMagicNumber = magicNumber = 2;
         exhaust = true;
 
-      //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
 //         this.tags.add(CardTags.HEALING);
     }
@@ -58,9 +51,8 @@ public class Repurpose extends AbstractSlimeboundCard {
             AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
             SlimeboundMod.spawnSpecialistSlime();
             if (upgraded) addToBot(new CommandAction());
-            }
         }
-
+    }
 
 
     public AbstractCard makeCopy() {

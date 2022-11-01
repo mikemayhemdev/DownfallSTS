@@ -26,14 +26,13 @@ public class TargetWeaknessPower extends AbstractGremlinPower implements DamageC
         this.updateDescription();
     }
 
-    public void updateDescription()
-    {
+    public void updateDescription() {
         this.description = (strings.DESCRIPTIONS[0] + this.amount + strings.DESCRIPTIONS[1]);
     }
 
     @Override
     public float atDamageConditionalGive(float damage, AbstractCard ca, AbstractMonster mo, DamageInfo.DamageType type) {
-        if(mo != null && mo.hasPower(WeakPower.POWER_ID)){
+        if (mo != null && mo.hasPower(WeakPower.POWER_ID)) {
             return damage + this.amount;
         }
         return damage;

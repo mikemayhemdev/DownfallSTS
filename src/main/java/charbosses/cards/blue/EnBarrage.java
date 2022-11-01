@@ -1,9 +1,7 @@
 package charbosses.cards.blue;
 
 import charbosses.actions.unique.EnemyBarrageAction;
-import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
-import charbosses.orbs.EnemyEmptyOrbSlot;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

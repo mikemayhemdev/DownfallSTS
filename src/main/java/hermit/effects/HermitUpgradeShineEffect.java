@@ -18,8 +18,8 @@ import com.megacrit.cardcrawl.vfx.UpgradeHammerImprintEffect;
 import com.megacrit.cardcrawl.vfx.UpgradeShineParticleEffect;
 
 public class HermitUpgradeShineEffect extends AbstractGameEffect {
-    private float x;
-    private float y;
+    private final float x;
+    private final float y;
     private boolean clang1 = false;
     private boolean clang2 = false;
 
@@ -55,7 +55,7 @@ public class HermitUpgradeShineEffect extends AbstractGameEffect {
     private void clank(float x, float y) {
         AbstractDungeon.topLevelEffectsQueue.add(new UpgradeHammerImprintEffect(x, y));
         if (!Settings.DISABLE_EFFECTS) {
-            for(int i = 0; i < 30; ++i) {
+            for (int i = 0; i < 30; ++i) {
                 AbstractDungeon.topLevelEffectsQueue.add(new UpgradeShineParticleEffect(x + MathUtils.random(-10.0F, 10.0F) * Settings.scale, y + MathUtils.random(-10.0F, 10.0F) * Settings.scale));
             }
 

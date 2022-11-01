@@ -1,12 +1,10 @@
 package hermit.cards;
 
-import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import hermit.HermitMod;
 import hermit.characters.hermit;
@@ -72,7 +70,7 @@ public class Gestalt extends AbstractDynamicCard {
 
         baseMagicNumber = magicNumber = 2;
 
-        this.exhaust=true;
+        this.exhaust = true;
 
         loadJokeCardImage(this, "gestalt.png");
     }

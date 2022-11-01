@@ -48,11 +48,11 @@ public class ShapePower extends AbstractExpansionCard implements OctopusCard {
         AbstractPlayer p = AbstractDungeon.player;
         switch (card.cardID) {
             case "expansioncontent:PolyBeam": {
-                   atb(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
-                 break;
+                atb(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
+                break;
             }
             case "expansioncontent:DecaShield": {
-                if (upgraded){
+                if (upgraded) {
                     atb(new ApplyPowerAction(p, p, new PlatedArmorPower(p, 8)));
                 } else {
                     atb(new ApplyPowerAction(p, p, new PlatedArmorPower(p, 5)));

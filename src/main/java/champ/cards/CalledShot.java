@@ -1,14 +1,9 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.powers.CalledShotPower;
-import champ.stances.BerserkerStance;
-import champ.stances.DefensiveStance;
-import champ.stances.UltimateStance;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 
@@ -32,7 +27,7 @@ public class CalledShot extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (bcombo()){
+        if (bcombo()) {
             this.exhaust = true;
             if (upgraded) {
                 atb(new GainEnergyAction(3));
@@ -40,7 +35,7 @@ public class CalledShot extends AbstractChampCard {
                 atb(new GainEnergyAction(2));
             }
         }
-        if (dcombo()){
+        if (dcombo()) {
             atb(new DrawCardAction(magicNumber));
         }
     }

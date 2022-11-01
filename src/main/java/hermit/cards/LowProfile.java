@@ -1,6 +1,5 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -8,7 +7,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 
@@ -78,10 +76,9 @@ public class LowProfile extends AbstractDynamicCard {
         loadJokeCardImage(this, "low_profile.png");
     }
 
-    private int countDebuffs()
-    {
+    private int countDebuffs() {
         int debuffs = 0;
-        for (AbstractPower pow: AbstractDungeon.player.powers) {
+        for (AbstractPower pow : AbstractDungeon.player.powers) {
             if (pow.type == AbstractPower.PowerType.DEBUFF)
                 debuffs++;
         }

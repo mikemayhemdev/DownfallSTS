@@ -19,12 +19,12 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 public class EnemyRainbowCardEffect extends AbstractGameEffect {
     float x;
     float y;
-    private AtlasRegion img;
+    private final AtlasRegion img;
 
     public EnemyRainbowCardEffect() {
         this.img = ImageMaster.CRYSTAL_IMPACT;
-        this.x = AbstractCharBoss.boss.hb.cX - (float)this.img.packedWidth / 2.0F;
-        this.y = AbstractCharBoss.boss.hb.cY - (float)this.img.packedHeight / 2.0F;
+        this.x = AbstractCharBoss.boss.hb.cX - (float) this.img.packedWidth / 2.0F;
+        this.y = AbstractCharBoss.boss.hb.cY - (float) this.img.packedHeight / 2.0F;
         this.startingDuration = 1.5F;
         this.duration = this.startingDuration;
         this.scale = Settings.scale;
@@ -55,13 +55,13 @@ public class EnemyRainbowCardEffect extends AbstractGameEffect {
     public void render(SpriteBatch sb) {
         sb.setColor(new Color(1.0F, 0.2F, 0.2F, this.color.a));
         sb.setBlendFunction(770, 1);
-        sb.draw(this.img, this.x, this.y, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale * 1.15F, this.scale * 1.15F, 0.0F);
+        sb.draw(this.img, this.x, this.y, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale * 1.15F, this.scale * 1.15F, 0.0F);
         sb.setColor(new Color(1.0F, 1.0F, 0.2F, this.color.a));
-        sb.draw(this.img, this.x, this.y, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale, this.scale, 0.0F);
+        sb.draw(this.img, this.x, this.y, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale, this.scale, 0.0F);
         sb.setColor(new Color(0.2F, 1.0F, 0.2F, this.color.a));
-        sb.draw(this.img, this.x, this.y, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale * 0.85F, this.scale * 0.85F, 0.0F);
+        sb.draw(this.img, this.x, this.y, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale * 0.85F, this.scale * 0.85F, 0.0F);
         sb.setColor(new Color(0.2F, 0.7F, 1.0F, this.color.a));
-        sb.draw(this.img, this.x, this.y, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale * 0.7F, this.scale * 0.7F, 0.0F);
+        sb.draw(this.img, this.x, this.y, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale * 0.7F, this.scale * 0.7F, 0.0F);
         sb.setBlendFunction(770, 771);
     }
 

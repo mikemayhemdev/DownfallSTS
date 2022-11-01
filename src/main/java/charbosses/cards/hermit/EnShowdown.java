@@ -7,14 +7,10 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
-import hermit.cards.ItchyTrigger;
 import hermit.cards.Showdown;
 import hermit.characters.hermit;
-import hermit.powers.Concentration;
 
 public class EnShowdown extends AbstractHermitBossCard {
     public static final String ID = "downfall_Charboss:Showdown";
@@ -24,7 +20,7 @@ public class EnShowdown extends AbstractHermitBossCard {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/showdown.png", 2, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 8;
         //baseMagicNumber = magicNumber = 2;
-      //  this.isMultiDamage = true;
+        //  this.isMultiDamage = true;
         selfRetain = true;
         exhaust = true;
     }
@@ -32,7 +28,7 @@ public class EnShowdown extends AbstractHermitBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-      //  this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        //  this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
     }
 
     @Override

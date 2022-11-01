@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 
 public class EnemyDamagePerAttackPlayedAction extends AbstractGameAction {
-    private DamageInfo info;
+    private final DamageInfo info;
 
     public EnemyDamagePerAttackPlayedAction(final AbstractCreature target, final DamageInfo info, final AttackEffect effect) {
         this.setValues(target, this.info = info);

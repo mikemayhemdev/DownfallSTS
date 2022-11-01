@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 import guardian.GuardianMod;
@@ -49,7 +48,7 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
         c.addGemToSocket((AbstractGuardianCard) CardLibrary.getCopy(myGemOne), false);
         c.addGemToSocket((AbstractGuardianCard) CardLibrary.getCopy(myGemTwo), false);
         c.addGemToSocket((AbstractGuardianCard) CardLibrary.getCopy(myGemThree), false);
-       // c.addGemToSocket((AbstractGuardianCard) CardLibrary.getCopy(myGemFour));
+        // c.addGemToSocket((AbstractGuardianCard) CardLibrary.getCopy(myGemFour));
 
         addToBot(new MakeTempCardInHandAction(c));
 
@@ -62,7 +61,7 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
         myList.add(myGemOne);
         myList.add(myGemTwo);
         myList.add(myGemThree);
-      //  myList.add(myGemFour);
+        //  myList.add(myGemFour);
         return myList;
     }
 
@@ -71,8 +70,8 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
         myGemOne = abstractCards.get(0);
         myGemTwo = abstractCards.get(1);
         myGemThree = abstractCards.get(2);
-       // myGemFour = abstractCards.get(3);
-       // setDescriptionAfterLoading();
+        // myGemFour = abstractCards.get(3);
+        // setDescriptionAfterLoading();
     }
 
     public static ArrayList<AbstractCard> getCharacterSafeGems(int count) {

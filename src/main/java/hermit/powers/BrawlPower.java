@@ -50,8 +50,8 @@ public class BrawlPower extends AbstractPower implements CloneablePowerInterface
         this.flash();
         Iterator var1 = AbstractDungeon.getMonsters().monsters.iterator();
 
-        while(var1.hasNext()) {
-            AbstractMonster m = (AbstractMonster)var1.next();
+        while (var1.hasNext()) {
+            AbstractMonster m = (AbstractMonster) var1.next();
             if (!m.isDead && !m.isDying) {
                 this.addToBot(new ApplyPowerAction(m, this.owner, new Bruise(m, this.amount), this.amount));
             }
@@ -60,7 +60,7 @@ public class BrawlPower extends AbstractPower implements CloneablePowerInterface
 
     @Override
     public void updateDescription() {
-            description = DESCRIPTIONS[0] + (amount) + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + (amount) + DESCRIPTIONS[1];
     }
 
     @Override

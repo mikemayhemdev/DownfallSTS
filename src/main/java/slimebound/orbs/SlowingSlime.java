@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import reskinContent.patches.CharacterSelectScreenPatches;
-import reskinContent.reskinContent;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeAutoAttack;
 import slimebound.vfx.AntennaeParticle;
@@ -45,9 +44,9 @@ public class SlowingSlime
         this.antennae = new AntennaeParticle(this);
         this.stopwatch = new StopwatchParticle(this);
 
-        if(CharacterSelectScreenPatches.characters[1].isOriginal()){
-        AbstractDungeon.effectList.add(this.antennae);
-        AbstractDungeon.effectList.add(this.stopwatch);
+        if (CharacterSelectScreenPatches.characters[1].isOriginal()) {
+            AbstractDungeon.effectList.add(this.antennae);
+            AbstractDungeon.effectList.add(this.stopwatch);
         }
     }
 
@@ -71,7 +70,7 @@ public class SlowingSlime
     }
 
     public void cleanUpVFX() {
-        if(CharacterSelectScreenPatches.characters[1].isOriginal()){
+        if (CharacterSelectScreenPatches.characters[1].isOriginal()) {
             if (this.stopwatch != null) {
                 this.stopwatch.finish();
                 this.antennae.finish();

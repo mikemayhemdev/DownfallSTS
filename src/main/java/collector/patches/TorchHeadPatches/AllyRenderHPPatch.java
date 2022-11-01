@@ -12,13 +12,14 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.ui.panels.TopPanel;
+import downfall.downfallMod;
 
 public class AllyRenderHPPatch {
     @SpirePatch(clz = TopPanel.class, method = "renderHP")
     public static class DragonStartTurn {
         @SpirePrefixPatch
         public static SpireReturn<Void> Prefix(TopPanel __instance, SpriteBatch sb, Hitbox ___hpHb, float ___hpIconX, float ___ICON_Y, float ___HP_NUM_OFFSET_X, float ___INFO_TEXT_Y) {
-            if (AbstractDungeon.player instanceof CollectorChar) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)) {
                 sb.setColor(Color.WHITE);
                 float offset = 16.0f * Settings.scale;
                 float scale = ___hpHb.hovered ? Settings.scale * 1.2F : Settings.scale;
@@ -36,7 +37,7 @@ public class AllyRenderHPPatch {
 
                 FontHelper.renderFontLeftTopAligned(
                         sb, FontHelper.topPanelInfoFont,
-                        ((CollectorChar) AbstractDungeon.player).torch.currentHealth + "/" + ((CollectorChar) AbstractDungeon.player).torch.maxHealth,
+                        CollectorChar.torch.currentHealth + "/" + CollectorChar.torch.maxHealth,
                         ___hpIconX + ___HP_NUM_OFFSET_X, ___INFO_TEXT_Y - offset, Color.CHARTREUSE);
 
                 ___hpHb.render(sb);

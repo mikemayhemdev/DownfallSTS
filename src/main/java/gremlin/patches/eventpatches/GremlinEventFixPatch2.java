@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.EventRoom;
 import downfall.downfallMod;
 import gremlin.characters.GremlinCharacter;
-import gremlin.patches.GremlinEnum;
 
 @SpirePatch(
         clz = AbstractPlayer.class,
@@ -19,12 +18,13 @@ import gremlin.patches.GremlinEnum;
 )
 public class GremlinEventFixPatch2 {
     public static boolean insideDamage = false;
+
     public static SpireReturn Prefix(AbstractPlayer __instance, DamageInfo param) {
         System.out.println("DAMAGE CHECK: " + insideDamage + " " + param.output);
         if (AbstractDungeon.getCurrRoom().phase != AbstractRoom.RoomPhase.COMBAT && !insideDamage && AbstractDungeon.player.chosenClass == downfallMod.Enums.GREMLIN && AbstractDungeon.getCurrRoom() instanceof EventRoom && WhatMod.findModID(AbstractDungeon.getCurrRoom().event.getClass()) != null) {
             insideDamage = true;
             ((GremlinCharacter) AbstractDungeon.player).damageGremlins((param.output + 4) / 5);
-            AbstractDungeon.player.currentHealth = AbstractDungeon.player.currentHealth - ((param.output + 4)/ 5);
+            AbstractDungeon.player.currentHealth = AbstractDungeon.player.currentHealth - ((param.output + 4) / 5);
             return SpireReturn.Return(null);
         }
         return SpireReturn.Continue();

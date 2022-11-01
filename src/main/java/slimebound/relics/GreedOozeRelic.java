@@ -4,14 +4,12 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.vfx.GainPennyEffect;
 import slimebound.actions.SlimeSpawnAction;
-import slimebound.characters.SlimeboundCharacter;
 import slimebound.orbs.GreedOozeSlime;
 
 public class GreedOozeRelic extends CustomRelic {
@@ -40,7 +38,7 @@ public class GreedOozeRelic extends CustomRelic {
 
     @Override
     public void onEnterRoom(AbstractRoom room) {
-        if (!(room instanceof RestRoom)){
+        if (!(room instanceof RestRoom)) {
             used = false;
         }
     }

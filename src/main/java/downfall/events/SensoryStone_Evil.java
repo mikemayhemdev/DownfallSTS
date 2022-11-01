@@ -3,15 +3,12 @@ package downfall.events;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardColor;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 import downfall.util.BossCardReward;
 import expansioncontent.expansionContentMod;
@@ -55,7 +52,7 @@ public class SensoryStone_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screen) {
+        switch (this.screen) {
             case INTRO:
                 this.imageEventText.updateBodyText(INTRO_TEXT_2);
                 this.imageEventText.updateDialogOption(0, OPTIONSALT[0]);
@@ -64,7 +61,7 @@ public class SensoryStone_Evil extends AbstractImageEvent {
                 this.screen = CurScreen.INTRO_2;
                 break;
             case INTRO_2:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
                         logMetric(ID, "Memory 1");
                         this.screen = CurScreen.ACCEPT;
@@ -78,7 +75,7 @@ public class SensoryStone_Evil extends AbstractImageEvent {
                         this.screen = CurScreen.ACCEPT;
                         this.choice = 2;
                         this.reward(this.choice);
-                        AbstractDungeon.player.damage(new DamageInfo((AbstractCreature)null, 5, DamageType.HP_LOSS));
+                        AbstractDungeon.player.damage(new DamageInfo(null, 5, DamageType.HP_LOSS));
                         this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         getMemoryText();
                         break;
@@ -87,7 +84,7 @@ public class SensoryStone_Evil extends AbstractImageEvent {
                         this.screen = CurScreen.ACCEPT;
                         this.choice = 3;
                         this.reward(this.choice);
-                        AbstractDungeon.player.damage(new DamageInfo((AbstractCreature)null, 10, DamageType.HP_LOSS));
+                        AbstractDungeon.player.damage(new DamageInfo(null, 10, DamageType.HP_LOSS));
                         this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         getMemoryText();
                 }
@@ -102,9 +99,9 @@ public class SensoryStone_Evil extends AbstractImageEvent {
 
     }
 
-    public void setMemoryCard(AbstractCard c){
+    public void setMemoryCard(AbstractCard c) {
         this.memoryCard = c;
-       // if (memoryCard != null) //SlimeboundMod.logger.info("setting memory card: " + c.name);
+        // if (memoryCard != null) //SlimeboundMod.logger.info("setting memory card: " + c.name);
     }
 
     public void getMemoryText() {
@@ -114,7 +111,7 @@ public class SensoryStone_Evil extends AbstractImageEvent {
         boolean debug = false;
         if (c != null) {
             if (!debug) {
-              //  //SlimeboundMod.logger.info("searching tags for " + c.name);
+                //  //SlimeboundMod.logger.info("searching tags for " + c.name);
                 if (c.hasTag(expansionContentMod.STUDY_SLIMEBOSS)) memory = MEMORY_SLIME_TEXT;
                 else if (c.hasTag(expansionContentMod.STUDY_AUTOMATON)) memory = MEMORY_AUTOMATON_TEXT;
                 else if (c.hasTag(expansionContentMod.STUDY_AWAKENEDONE)) memory = MEMORY_ANCIENTONE_TEXT;
@@ -136,14 +133,14 @@ public class SensoryStone_Evil extends AbstractImageEvent {
             //triggers if no card is chosen
             memory = DESCRIPTIONSALT[9];
         }
-     //   //SlimeboundMod.logger.info(memory);
+        //   //SlimeboundMod.logger.info(memory);
         this.imageEventText.updateBodyText(memory);
     }
 
     private void reward(int num) {
         AbstractDungeon.getCurrRoom().rewards.clear();
 
-        for(int i = 0; i < num; ++i) {
+        for (int i = 0; i < num; ++i) {
             AbstractDungeon.getCurrRoom().addCardReward(new BossCardReward());
         }
 
@@ -172,13 +169,13 @@ public class SensoryStone_Evil extends AbstractImageEvent {
         MEMORY_TIMEEATER_TEXT = DESCRIPTIONSALT[8];
     }
 
-    private static enum CurScreen {
+    private enum CurScreen {
         INTRO,
         INTRO_2,
         ACCEPT,
         LEAVE;
 
-        private CurScreen() {
+        CurScreen() {
         }
     }
 }

@@ -13,11 +13,11 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 public class ReasonableAmountOfSmoke extends AbstractGameEffect {
     private float x;
     private float y;
-    private float vY;
-    private float aV;
-    private float startDur;
-    private float targetScale;
-    private AtlasRegion img;
+    private final float vY;
+    private final float aV;
+    private final float startDur;
+    private final float targetScale;
+    private final AtlasRegion img;
 
     public ReasonableAmountOfSmoke(float x, float y) {
         this.color = new Color(0.0F, 0.0F, 0.0F, 1.0F);
@@ -33,12 +33,12 @@ public class ReasonableAmountOfSmoke extends AbstractGameEffect {
         this.targetScale = MathUtils.random(0.5F, 1F);
 
         this.startDur = this.duration;
-        this.x = x + MathUtils.random(-180.0F * Settings.scale, 150.0F * Settings.scale) - (float)this.img.packedWidth / 2.0F;
-        this.y = y + MathUtils.random(-240.0F * Settings.scale, 150.0F * Settings.scale) - (float)this.img.packedHeight / 2.0F;
+        this.x = x + MathUtils.random(-180.0F * Settings.scale, 150.0F * Settings.scale) - (float) this.img.packedWidth / 2.0F;
+        this.y = y + MathUtils.random(-240.0F * Settings.scale, 150.0F * Settings.scale) - (float) this.img.packedHeight / 2.0F;
         this.scale = 0.01F;
         this.rotation = MathUtils.random(360.0F);
         this.aV = MathUtils.random(-250.0F, 250.0F);
-        this.vY = MathUtils.random(1.0F * Settings.scale, 5.0F * Settings.scale);
+        this.vY = MathUtils.random(Settings.scale, 5.0F * Settings.scale);
     }
 
     public void update() {
@@ -61,7 +61,7 @@ public class ReasonableAmountOfSmoke extends AbstractGameEffect {
 
     public void render(SpriteBatch sb) {
         sb.setColor(this.color);
-        sb.draw(this.img, this.x, this.y, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale, this.scale, this.rotation);
+        sb.draw(this.img, this.x, this.y, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale, this.scale, this.rotation);
     }
 
     public void dispose() {

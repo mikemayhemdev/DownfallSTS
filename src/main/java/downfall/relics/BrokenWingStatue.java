@@ -10,11 +10,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.city.Chosen;
 import com.megacrit.cardcrawl.monsters.exordium.Cultist;
-import downfall.downfallMod;
 import downfall.actions.LoseRelicAction;
 import downfall.actions.SpeechBubbleAction;
+import downfall.downfallMod;
 import downfall.events.WingStatue_Evil;
-import slimebound.SlimeboundMod;
 
 public class BrokenWingStatue extends CustomRelic {
 

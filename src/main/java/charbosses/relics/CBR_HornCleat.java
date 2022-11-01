@@ -1,11 +1,8 @@
 package charbosses.relics;
 
-import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.CaptainsWheel;
 import com.megacrit.cardcrawl.relics.HornCleat;
 
 public class CBR_HornCleat extends AbstractCharbossRelic {

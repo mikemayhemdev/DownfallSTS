@@ -12,7 +12,7 @@ public class PerformXAction extends AbstractGameAction {
 
     protected AbstractXAction XAction = null;
 
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
 
     public PerformXAction(AbstractXAction XAction, AbstractPlayer p, int energyOnUse, boolean freeToPlayOnce) {
         this.baseValue = energyOnUse;

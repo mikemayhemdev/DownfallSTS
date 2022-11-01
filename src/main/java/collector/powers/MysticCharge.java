@@ -14,9 +14,9 @@ public class MysticCharge extends TwoAmountPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private boolean triggered = false;
+    private final boolean triggered = false;
 
-    public MysticCharge(AbstractCreature owner, int time,int power) {
+    public MysticCharge(AbstractCreature owner, int time, int power) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
@@ -28,11 +28,11 @@ public class MysticCharge extends TwoAmountPower {
     }
 
     @Override
-    public void atStartOfTurnPostDraw(){
+    public void atStartOfTurnPostDraw() {
         amount2 -= 1;
-        if (amount2 <= 0){
-            addToBot(new ApplyPowerAction(owner,owner,new VigorPower(owner,amount),amount));
-            addToBot(new RemoveSpecificPowerAction(owner,owner,this));
+        if (amount2 <= 0) {
+            addToBot(new ApplyPowerAction(owner, owner, new VigorPower(owner, amount), amount));
+            addToBot(new RemoveSpecificPowerAction(owner, owner, this));
         }
     }
 }

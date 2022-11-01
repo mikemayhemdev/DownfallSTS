@@ -12,7 +12,7 @@ import hermit.util.HermitTutorials;
 import java.io.IOException;
 
 public class MessageCaller extends AbstractGameAction {
-    private float startingDuration;
+    private final float startingDuration;
     public int code;
 
     public MessageCaller(int code) {
@@ -47,7 +47,6 @@ public class MessageCaller extends AbstractGameAction {
             try {
                 downfallMod.saveTutorialsSeen();
                 this.isDone = true;
-                ;
             } catch (IOException e) {
                 e.printStackTrace();
                 this.isDone = true;

@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.downfallMod;
-import slimebound.SlimeboundMod;
 
 public class Colosseum_Evil_Champ extends AbstractImageEvent {
     public static final String ID = "champ:Colosseum";
@@ -56,7 +55,7 @@ public class Colosseum_Evil_Champ extends AbstractImageEvent {
                         this.screen = CurScreen.FIGHT;
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2] + DESCRIPTIONS[3]);
                         //SlimeboundMod.logger.info("fight");
-                        AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("champ:BlackKnight");
+                        AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("champ:BlackKnight");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addRelicToRewards(new BlackKnightsHelmet());
                         AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.UNCOMMON);
@@ -72,35 +71,35 @@ public class Colosseum_Evil_Champ extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2] + DESCRIPTIONS[4]);
                         //SlimeboundMod.logger.info("fight");
                         downfallMod.overrideBossDifficulty = true;
-                        String s = downfallMod.possEncounterList.remove(AbstractDungeon.cardRandomRng.random(downfallMod.possEncounterList.size()-1));
+                        String s = downfallMod.possEncounterList.remove(AbstractDungeon.cardRandomRng.random(downfallMod.possEncounterList.size() - 1));
                         switch (s) {
                             case "downfall:Ironclad":
-                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossIronclad.ID);
+                                AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(CharBossIronclad.ID);
                                 AbstractDungeon.lastCombatMetricKey = "downfall:CharBossIronclad";
 //                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()});
                                 break;
                             case "downfall:Silent":
-                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossSilent.ID);
+                                AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(CharBossSilent.ID);
                                 AbstractDungeon.lastCombatMetricKey = "downfall:CharBossSilent";
 //                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()});
                                 break;
                             case "downfall:Defect":
-                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossDefect.ID);
+                                AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(CharBossDefect.ID);
                                 AbstractDungeon.lastCombatMetricKey = "downfall:CharBossDefect";
 //                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()});
                                 break;
                             case "downfall:Watcher":
-                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossWatcher.ID);
+                                AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(CharBossWatcher.ID);
                                 AbstractDungeon.lastCombatMetricKey = "downfall:CharBossWatcher";
 //                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()});
                                 break;
                             case "downfall:Hermit":
-                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossHermit.ID);
+                                AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(CharBossHermit.ID);
                                 AbstractDungeon.lastCombatMetricKey = "downfall:CharBossHermit";
 //                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()});
                                 break;
                             default:
-                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossIronclad.ID);
+                                AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(CharBossIronclad.ID);
                                 AbstractDungeon.lastCombatMetricKey = "downfall:CharBossIronclad";
 //                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()});
                                 break;
@@ -124,14 +123,12 @@ public class Colosseum_Evil_Champ extends AbstractImageEvent {
                         return;
                 }
             case FIGHT:
-                switch (buttonPressed) {
-                    case 0:
-                        if (AbstractDungeon.getCurrRoom().eliteTrigger){
-                            this.enterCombatFromImage();
-                            break;
-                        } else {
-                            this.openMap();
-                        }
+                if (buttonPressed == 0) {
+                    if (AbstractDungeon.getCurrRoom().eliteTrigger) {
+                        this.enterCombatFromImage();
+                    } else {
+                        this.openMap();
+                    }
                 }
                 break;
             default:

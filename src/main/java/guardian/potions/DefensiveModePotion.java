@@ -13,9 +13,9 @@ import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import guardian.characters.GuardianCharacter;
 import guardian.powers.DontLeaveDefensiveModePower;
 import guardian.stances.DefensiveMode;
-import guardian.characters.GuardianCharacter;
 
 public class DefensiveModePotion extends CustomPotion {
     public static final String POTION_ID = "Guardian:DefensiveModePotion";
@@ -34,7 +34,7 @@ public class DefensiveModePotion extends CustomPotion {
 
     public void initializeData() {
         this.potency = getPotency();
-        if (potency > 1){
+        if (potency > 1) {
             this.description = (DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[2]);
         } else {
             this.description = (DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1]);

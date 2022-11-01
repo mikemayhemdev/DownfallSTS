@@ -15,9 +15,9 @@ import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 
 
 public class EnemyLightningOrbPassiveAction extends AbstractGameAction {
-    private DamageInfo info;
-    private AbstractOrb orb;
-    private boolean hitAll;
+    private final DamageInfo info;
+    private final AbstractOrb orb;
+    private final boolean hitAll;
 
     public EnemyLightningOrbPassiveAction(DamageInfo info, AbstractOrb orb, boolean hitAll) {
         this.info = info;

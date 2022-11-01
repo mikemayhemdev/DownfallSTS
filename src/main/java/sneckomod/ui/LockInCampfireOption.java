@@ -20,7 +20,7 @@ public class LockInCampfireOption extends AbstractCampfireOption {
     private static final UIStrings UI_STRINGS;
     public static boolean usedIdentify = false;
 
-    private ArrayList<AbstractCard> validCards = new ArrayList<>();
+    private final ArrayList<AbstractCard> validCards = new ArrayList<>();
 
 
     static {
@@ -35,7 +35,7 @@ public class LockInCampfireOption extends AbstractCampfireOption {
         boolean active = false;
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
             c.update();
-            if (c instanceof AbstractUnknownCard){
+            if (c instanceof AbstractUnknownCard) {
                 active = true;
             }
         }
@@ -73,7 +73,7 @@ public class LockInCampfireOption extends AbstractCampfireOption {
 
     @Override
     public void update() {
-        float hackScale = (float) ReflectionHacks.getPrivate(this, AbstractCampfireOption.class, "scale");
+        float hackScale = ReflectionHacks.getPrivate(this, AbstractCampfireOption.class, "scale");
         if (usable && usedIdentify) {
             usable = false;
             updateImage(false);

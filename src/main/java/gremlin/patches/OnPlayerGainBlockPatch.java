@@ -10,20 +10,19 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import gremlin.powers.OnPlayerGainBlockPower;
 
 @SpirePatch(
-        clz= AbstractCreature.class,
-        method="addBlock"
+        clz = AbstractCreature.class,
+        method = "addBlock"
 )
 public class OnPlayerGainBlockPatch {
     @SpireInsertPatch(
-            rloc=20,
-            localvars={"tmp"}
+            rloc = 20,
+            localvars = {"tmp"}
     )
     public static void Insert(AbstractCreature __instance, int blockAmount, @ByRef float[] tmp) {
-        if(__instance.isPlayer){
+        if (__instance.isPlayer) {
             for (final AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 for (final AbstractPower p2 : m.powers) {
-                    if(p2 instanceof OnPlayerGainBlockPower)
-                    {
+                    if (p2 instanceof OnPlayerGainBlockPower) {
                         tmp[0] = ((OnPlayerGainBlockPower) p2).onPlayerGainBlock(tmp[0]);
                     }
                 }

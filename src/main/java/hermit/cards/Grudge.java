@@ -1,22 +1,16 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.SadisticPower;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
-
 
 import java.util.Iterator;
 
@@ -24,8 +18,6 @@ import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
 public class Grudge extends AbstractDynamicCard {
-
-
 
 
     // TEXT DECLARATION
@@ -57,7 +49,7 @@ public class Grudge extends AbstractDynamicCard {
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = 2;
         loadJokeCardImage(this, "grudge.png");
-        isMultiDamage=true;
+        isMultiDamage = true;
     }
 
     // Actions the card should do.
@@ -68,13 +60,13 @@ public class Grudge extends AbstractDynamicCard {
 
 
     public void applyPowers() {
-        int counter=0;
+        int counter = 0;
 
-        counter+=countCursesinGroup(AbstractDungeon.player.drawPile);
-        counter+=countCursesinGroup(AbstractDungeon.player.discardPile);
-        counter+=countCursesinGroup(AbstractDungeon.player.hand);
+        counter += countCursesinGroup(AbstractDungeon.player.drawPile);
+        counter += countCursesinGroup(AbstractDungeon.player.discardPile);
+        counter += countCursesinGroup(AbstractDungeon.player.hand);
 
-        this.baseDamage = DAMAGE+counter*magicNumber;
+        this.baseDamage = DAMAGE + counter * magicNumber;
 
         super.applyPowers();
         isDamageModified = (counter > 0);
@@ -92,11 +84,11 @@ public class Grudge extends AbstractDynamicCard {
 
     private int countCursesinGroup(CardGroup cardGroup) {
         Iterator var2 = cardGroup.group.iterator();
-        int counter=0;
+        int counter = 0;
 
-        while(var2.hasNext()) {
-            AbstractCard c = (AbstractCard)var2.next();
-            if (c.color==CardColor.CURSE) {
+        while (var2.hasNext()) {
+            AbstractCard c = (AbstractCard) var2.next();
+            if (c.color == CardColor.CURSE) {
                 counter++;
             }
         }

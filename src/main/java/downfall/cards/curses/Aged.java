@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
-import guardian.GuardianMod;
 
 
 public class Aged extends CustomCard {
@@ -54,7 +53,7 @@ public class Aged extends CustomCard {
         super.triggerOnEndOfTurnForPlayingCard();
         this.flash();
         this.superFlash();
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new VoidCard(),1, false, false, false));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new VoidCard(), 1, false, false, false));
 
     }
 

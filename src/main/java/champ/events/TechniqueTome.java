@@ -6,7 +6,6 @@
 package champ.events;
 
 import basemod.helpers.CardModifierManager;
-import champ.ChampMod;
 import champ.util.TechniqueMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -22,9 +21,7 @@ import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
-import downfall.cards.curses.Haunted;
 import downfall.cards.curses.PrideStandard;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -47,7 +44,7 @@ public class TechniqueTome extends AbstractImageEvent {
     private boolean pickCard = false;
     private int hpCost = 5;
     private int hpSpent = 0;
-    private ArrayList<String> cardsTeched = new ArrayList<>();
+    private final ArrayList<String> cardsTeched = new ArrayList<>();
     private int prideGained;
 
     public TechniqueTome() {
@@ -103,7 +100,7 @@ public class TechniqueTome extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         this.pickCard = true;
-                        if (this.hpCost > 20){
+                        if (this.hpCost > 20) {
                             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new PrideStandard(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                             prideGained++;
                         } else {

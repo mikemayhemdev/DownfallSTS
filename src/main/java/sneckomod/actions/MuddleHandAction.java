@@ -7,9 +7,9 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class MuddleHandAction extends AbstractGameAction {
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
 
-    private boolean maxRangeModifier;
+    private final boolean maxRangeModifier;
 
     public MuddleHandAction() {
         this(false);

@@ -22,12 +22,12 @@ public class GremlinKnobUpgrade extends AbstractGremlinRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return strings.DESCRIPTIONS[0] + colorifyName(new GremlinKnob().name, 'r') +strings.DESCRIPTIONS[1];
+        return strings.DESCRIPTIONS[0] + colorifyName(new GremlinKnob().name, 'r') + strings.DESCRIPTIONS[1];
     }
 
     private static String colorifyName(String s, char color) {
         StringBuilder sb = new StringBuilder();
-        for (String part:s.split(" ")) {
+        for (String part : s.split(" ")) {
             sb.append("#");
             sb.append(color);
             sb.append(part);

@@ -1,6 +1,5 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.curses.Clumsy;
@@ -12,11 +11,10 @@ import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 
-import static hermit.HermitMod.*;
+import static hermit.HermitMod.loadJokeCardImage;
+import static hermit.HermitMod.makeCardPath;
 
 public class Misfire extends AbstractDynamicCard {
-
-
 
 
     // TEXT DECLARATION
@@ -56,7 +54,6 @@ public class Misfire extends AbstractDynamicCard {
         this.addToBot(new AttackDamageRandomEnemyAction(this, EnumPatch.HERMIT_GUN2));
         this.addToBot(new MakeTempCardInDrawPileAction(this.cardsToPreview, 1, true, true));
     }
-
 
 
     //Upgraded stats.

@@ -12,10 +12,10 @@ import java.util.function.Predicate;
 public class OffclassHelper {
     //I wanted to move Unknowns pools here as well, but it is too much to do in one update.
 
-    private static ArrayList<AbstractCard> statuses = new ArrayList<>();
-    private static ArrayList<String> offclassCommons = new ArrayList<>();
-    private static ArrayList<String> offclassUncommons = new ArrayList<>();
-    private static ArrayList<String> offclassRares = new ArrayList<>();
+    private static final ArrayList<AbstractCard> statuses = new ArrayList<>();
+    private static final ArrayList<String> offclassCommons = new ArrayList<>();
+    private static final ArrayList<String> offclassUncommons = new ArrayList<>();
+    private static final ArrayList<String> offclassRares = new ArrayList<>();
 
     public static void addToLists(AbstractUnknownCard c, ArrayList<Predicate<AbstractCard>> predList, ArrayList<ArrayList<String>> listList) {
         predList.add(c.myNeeds());

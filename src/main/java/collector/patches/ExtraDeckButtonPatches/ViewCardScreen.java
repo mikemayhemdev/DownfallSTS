@@ -1,6 +1,5 @@
 package collector.patches.ExtraDeckButtonPatches;
 
-import basemod.ReflectionHacks;
 import collector.CollectorMod;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -20,7 +19,6 @@ import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.controller.CInputHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.DiscardPileViewScreen;
 import com.megacrit.cardcrawl.screens.mainMenu.ScrollBar;
 import com.megacrit.cardcrawl.ui.buttons.CancelButton;
@@ -35,16 +33,16 @@ public class ViewCardScreen extends DiscardPileViewScreen {
     private boolean grabbedScreen = false;
     private static float drawStartX, drawStartY, padX, padY;
     private static final float SCROLL_BAR_THRESHOLD = 500f * Settings.scale;
-    private float scrollLowerBound = -Settings.DEFAULT_SCROLL_LIMIT;
+    private final float scrollLowerBound = -Settings.DEFAULT_SCROLL_LIMIT;
     private float scrollUpperBound = Settings.DEFAULT_SCROLL_LIMIT;
     private float grabStartY = scrollLowerBound, currentDiffY = scrollLowerBound;
     private static final String HEADER_INFO = uiStrings.TEXT[1];
     private AbstractCard hoveredCard = null;
     private int prevDeckSize = 0;
-    private ScrollBar scrollBar;
+    private final ScrollBar scrollBar;
     private AbstractCard controllerCard = null;
 
-    private CardGroup cards;
+    private final CardGroup cards;
 
     public ViewCardScreen(ArrayList<AbstractCard> cards) {
         drawStartX = Settings.WIDTH;

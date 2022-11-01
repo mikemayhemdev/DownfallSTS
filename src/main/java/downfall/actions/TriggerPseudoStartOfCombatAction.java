@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import downfall.monsters.NeowBoss;
 
 public class TriggerPseudoStartOfCombatAction extends AbstractGameAction {
-    private AbstractCharBoss cB;
+    private final AbstractCharBoss cB;
 
     public TriggerPseudoStartOfCombatAction(AbstractCharBoss cB) {
         this.cB = cB;
@@ -16,7 +16,7 @@ public class TriggerPseudoStartOfCombatAction extends AbstractGameAction {
     public void update() {
         //Has a bunch of extra stuff in it
         //cB.usePreBattleAction();
-        if (NeowBoss.neowboss.Rezzes == 1){
+        if (NeowBoss.Rezzes == 1) {
             cB.energy.recharge();
         }
         for (AbstractCharbossRelic r : cB.relics) {

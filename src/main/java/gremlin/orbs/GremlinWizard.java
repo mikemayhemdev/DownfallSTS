@@ -4,10 +4,10 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import gremlin.powers.GremlinPower;
 import gremlin.powers.GremlinWizardPower;
 
-public class GremlinWizard extends GremlinStandby{
+public class GremlinWizard extends GremlinStandby {
 
     public GremlinWizard(int hp) {
-        super(hp,"Gremlin:GremlinWizard", "wizard", "animation", 25);
+        super(hp, "Gremlin:GremlinWizard", "wizard", "animation", 25);
     }
 
     @Override

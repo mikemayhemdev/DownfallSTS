@@ -1,15 +1,10 @@
 package automaton.powers;
 
-import automaton.FunctionHelper;
 import automaton.cards.MinorBeam;
-import automaton.relics.OnCompileRelic;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class InfiniteBeamsPower extends AbstractAutomatonPower implements NonStackablePower {
@@ -48,17 +43,14 @@ public class InfiniteBeamsPower extends AbstractAutomatonPower implements NonSta
     public void updateDescription() {
         if (upgraded) {
             if (amount > 1) {
-                description =  DESCRIPTIONS[4] + amount + DESCRIPTIONS[5];
-            }
-            else {
+                description = DESCRIPTIONS[4] + amount + DESCRIPTIONS[5];
+            } else {
                 description = DESCRIPTIONS[1];
             }
-        }
-        else {
+        } else {
             if (amount > 1) {
-                description =  DESCRIPTIONS[2] + amount + DESCRIPTIONS[3];
-            }
-            else {
+                description = DESCRIPTIONS[2] + amount + DESCRIPTIONS[3];
+            } else {
                 description = DESCRIPTIONS[0];
             }
         }

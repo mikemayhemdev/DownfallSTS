@@ -16,7 +16,7 @@ public class CullingBlow extends AbstractCollectorCard {
     public final static String ID = makeID("CullingBlow");
 
     public CullingBlow() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY,CollectorCardSource.BACK);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY, CollectorCardSource.BACK);
         RearBaseDamage = douDamage = baseDamage = 10;
         magicNumber = baseMagicNumber = 2;
         isMultiDamage = true;
@@ -28,7 +28,7 @@ public class CullingBlow extends AbstractCollectorCard {
         addToBot(new VFXAction(new WhirlwindEffect()));
         AbstractDungeon.effectsQueue.add(new RoomTintEffect(Color.BLACK.cpy(), 0.8F));
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-         if (m.hasPower(Suffering.POWER_ID)) {
+        if (m.hasPower(Suffering.POWER_ID)) {
             applyToEnemy(m, new SoulMark(magicNumber, m));
         }
     }

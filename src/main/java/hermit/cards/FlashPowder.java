@@ -56,8 +56,8 @@ public class FlashPowder extends AbstractDynamicCard {
     public FlashPowder() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
-        baseMagicNumber=magicNumber=1;
-        this.exhaust=true;
+        baseMagicNumber = magicNumber = 1;
+        this.exhaust = true;
         loadJokeCardImage(this, "flash_powder.png");
     }
 
@@ -69,8 +69,8 @@ public class FlashPowder extends AbstractDynamicCard {
 
         Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
-        while(var3.hasNext()) {
-            AbstractMonster mo = (AbstractMonster)var3.next();
+        while (var3.hasNext()) {
+            AbstractMonster mo = (AbstractMonster) var3.next();
             this.addToBot(new ApplyPowerAction(mo, p, new StrengthPower(mo, -this.magicNumber), -this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
         }
     }

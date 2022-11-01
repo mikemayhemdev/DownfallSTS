@@ -10,7 +10,7 @@ import theHexaghost.powers.LoseEnhanceInTurnsPower;
 
 public class TurnItUpAction extends AbstractXAction {
 
-    private int bonusAmt;
+    private final int bonusAmt;
 
     public TurnItUpAction(int bonusAmt) {
         this.bonusAmt = bonusAmt;

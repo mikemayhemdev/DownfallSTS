@@ -11,10 +11,8 @@ import com.megacrit.cardcrawl.map.MapRoomNode;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.relics.TeleportStone;
 
-public class TeleportStonePatch
-{
-    public static boolean isDirectlyConnectedTo(MapRoomNode start, MapRoomNode end)
-    {
+public class TeleportStonePatch {
+    public static boolean isDirectlyConnectedTo(MapRoomNode start, MapRoomNode end) {
         for (MapEdge edge : start.getEdges()) {
             if (end.x == edge.dstX && end.y == edge.dstY) {
                 return true;
@@ -23,8 +21,7 @@ public class TeleportStonePatch
         return false;
     }
 
-    public static boolean pseudoTaken(MapEdge edge)
-    {
+    public static boolean pseudoTaken(MapEdge edge) {
         if (edge.taken) {
             return true;
         }
@@ -38,8 +35,7 @@ public class TeleportStonePatch
         }
     }
 
-    private static MapRoomNode getNode(int x, int y)
-    {
+    private static MapRoomNode getNode(int x, int y) {
         try {
             return CardCrawlGame.dungeon.getMap().get(y).get(x);
         } catch (IndexOutOfBoundsException e) {
@@ -48,15 +44,13 @@ public class TeleportStonePatch
     }
 
     @SpirePatch(
-            cls="com.megacrit.cardcrawl.map.MapRoomNode",
-            method="isConnectedTo"
+            cls = "com.megacrit.cardcrawl.map.MapRoomNode",
+            method = "isConnectedTo"
     )
-    public static class IsConnectedTo
-    {
+    public static class IsConnectedTo {
         private static int depth = 0;
 
-        public static boolean Postfix(boolean __result, MapRoomNode __instance, MapRoomNode node)
-        {
+        public static boolean Postfix(boolean __result, MapRoomNode __instance, MapRoomNode node) {
             ++depth;
             AbstractRelic teleporter = AbstractDungeon.player.getRelic(TeleportStone.ID);
             if (!__result && teleporter != null && teleporter.counter > 0) {
@@ -76,13 +70,11 @@ public class TeleportStonePatch
             return __result;
         }
 
-        static int getNodeDistance(MapRoomNode start, MapRoomNode end)
-        {
+        static int getNodeDistance(MapRoomNode start, MapRoomNode end) {
             return getNodeDistance(start, end, 1);
         }
 
-        private static int getNodeDistance(MapRoomNode start, MapRoomNode end, int depth)
-        {
+        private static int getNodeDistance(MapRoomNode start, MapRoomNode end, int depth) {
             if (start == null) {
                 return -1;
             }
@@ -92,7 +84,7 @@ public class TeleportStonePatch
                 if (nextNode != null && nextNode.equals(end)) {
                     return depth;
                 }
-                int dist = getNodeDistance(nextNode, end, depth+1);
+                int dist = getNodeDistance(nextNode, end, depth + 1);
                 if (dist != -1) {
                     return dist;
                 }
@@ -102,13 +94,11 @@ public class TeleportStonePatch
     }
 
     @SpirePatch(
-            cls="com.megacrit.cardcrawl.map.MapRoomNode",
-            method="playNodeSelectedSound"
+            cls = "com.megacrit.cardcrawl.map.MapRoomNode",
+            method = "playNodeSelectedSound"
     )
-    public static class NodeSelected
-    {
-        public static void Postfix(MapRoomNode __instance)
-        {
+    public static class NodeSelected {
+        public static void Postfix(MapRoomNode __instance) {
             if (Settings.isDebug) {
                 return;
             }

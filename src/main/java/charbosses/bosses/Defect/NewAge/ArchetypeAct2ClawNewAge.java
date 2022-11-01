@@ -3,7 +3,6 @@ package charbosses.bosses.Defect.NewAge;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.bosses.Defect.CharBossDefect;
-import charbosses.cards.AbstractBossCard;
 import charbosses.cards.blue.*;
 import charbosses.cards.colorless.EnPanicButton;
 import charbosses.cards.colorless.EnSwiftStrike;
@@ -13,7 +12,6 @@ import charbosses.cards.curses.EnShame;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
 import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.powers.bossmechanicpowers.DefectAncientConstructPower;
-import charbosses.powers.bossmechanicpowers.DefectVoidPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
@@ -21,7 +19,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.NoBlockPower;
-import guardian.powers.ConstructPower;
 
 import java.util.ArrayList;
 
@@ -64,7 +61,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
 
     @Override
     public ArrayList<AbstractCard> getThisTurnCards() {
-        if (cB == null){
+        if (cB == null) {
             cB = (CharBossDefect) AbstractCharBoss.boss;
         }
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
@@ -131,7 +128,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                 case 0:
                     addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), false);
                     //Play Leap if Block can be gained, otherwise play Stirike
-                    if (AbstractCharBoss.boss.hasPower(NoBlockPower.POWER_ID)){
+                    if (AbstractCharBoss.boss.hasPower(NoBlockPower.POWER_ID)) {
                         addToList(cardsList, new EnColdSnap(), true);
                         frostOrbsChanneled += 1;
                         if (frostOrbsChanneled > 3 && AbstractCharBoss.boss.orbs.get(0) instanceof AbstractEnemyOrb) {
@@ -157,14 +154,14 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                     ArchetypeAct3OrbsNewAge.increasePretendFocus(-3);
                     addToList(cardsList, new EnChargeBattery(), false);
                     addToList(cardsList, new EnShame(), false);
-                    addToList(cardsList,  new EnRebound(), false);
+                    addToList(cardsList, new EnRebound(), false);
                     turn++;
                     break;
                 case 2:
                     addToList(cardsList, new EnReprogram(), false);
                     ArchetypeAct3OrbsNewAge.increasePretendFocus(-1);
                     addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), false);
-                    addToList(cardsList,  new EnDefendBlue(), false);
+                    addToList(cardsList, new EnDefendBlue(), false);
                     addToList(cardsList, new EnSwiftStrike(), false);
                     //Kunai Proc
                     turn = 0;

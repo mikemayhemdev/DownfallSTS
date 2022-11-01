@@ -26,8 +26,7 @@ public class Raid extends AbstractGremlinCard {
     private static final int MAGIC = 3;
     private static final int UPGRADE_BONUS = -1;
 
-    public Raid()
-    {
+    public Raid() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -35,11 +34,10 @@ public class Raid extends AbstractGremlinCard {
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         int amount = 1;
-        for(AbstractOrb orb : p.orbs){
-            if(orb instanceof GremlinStandby){
+        for (AbstractOrb orb : p.orbs) {
+            if (orb instanceof GremlinStandby) {
                 amount += 1;
             }
         }
@@ -47,10 +45,8 @@ public class Raid extends AbstractGremlinCard {
         AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, magicNumber, false));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_BONUS);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;

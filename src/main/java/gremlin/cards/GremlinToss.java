@@ -29,8 +29,7 @@ public class GremlinToss extends AbstractGremlinCard {
     private static final int MAGIC = 0;
     private static final int UPGRADE_BONUS = 3;
 
-    public GremlinToss()
-    {
+    public GremlinToss() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -42,7 +41,7 @@ public class GremlinToss extends AbstractGremlinCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if(upgraded) {
+        if (upgraded) {
             AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(p, p, magicNumber));
         }
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
@@ -51,16 +50,15 @@ public class GremlinToss extends AbstractGremlinCard {
 
     @Override
     public void applyPowers() {
-        if(upgraded){
+        if (upgraded) {
             this.baseDamage = AbstractDungeon.player.currentBlock +
                     TempHPField.tempHp.get(AbstractDungeon.player) +
                     magicNumber;
-        }else{
+        } else {
             this.baseDamage = AbstractDungeon.player.currentBlock + TempHPField.tempHp.get(AbstractDungeon.player);
         }
         super.applyPowers();
-        if(upgraded)
-        {
+        if (upgraded) {
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
         } else {
             this.rawDescription = strings.DESCRIPTION;
@@ -71,8 +69,7 @@ public class GremlinToss extends AbstractGremlinCard {
 
     @Override
     public void onMoveToDiscard() {
-        if(upgraded)
-        {
+        if (upgraded) {
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
         } else {
             this.rawDescription = strings.DESCRIPTION;
@@ -83,8 +80,7 @@ public class GremlinToss extends AbstractGremlinCard {
     @Override
     public void calculateCardDamage(final AbstractMonster mo) {
         super.calculateCardDamage(mo);
-        if(upgraded)
-        {
+        if (upgraded) {
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
         } else {
             this.rawDescription = strings.DESCRIPTION;
@@ -95,8 +91,7 @@ public class GremlinToss extends AbstractGremlinCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_BONUS);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;

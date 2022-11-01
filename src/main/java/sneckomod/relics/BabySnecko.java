@@ -6,11 +6,10 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.TextureLoader;
 import downfall.vfx.CustomAnimatedNPC;
-import slimebound.SlimeboundMod;
 import sneckomod.SneckoMod;
 import sneckomod.actions.BabySneckoAttackAction;
-import downfall.util.TextureLoader;
 
 public class BabySnecko extends CustomRelic {
 

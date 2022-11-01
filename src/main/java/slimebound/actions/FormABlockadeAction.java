@@ -14,8 +14,8 @@ import slimebound.vfx.ShieldParticleEffectInFront;
 
 public class FormABlockadeAction extends AbstractGameAction {
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-    private AbstractPlayer p;
-    private int block;
+    private final AbstractPlayer p;
+    private final int block;
 
 
     public FormABlockadeAction(int block) {

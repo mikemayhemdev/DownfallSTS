@@ -26,8 +26,7 @@ public class Heckle extends AbstractGremlinCard {
     private static final int UPGRADE_COST = 2;
     private static final int MAGIC = 2;
 
-    public Heckle()
-    {
+    public Heckle() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -37,16 +36,13 @@ public class Heckle extends AbstractGremlinCard {
         GremlinMod.loadJokeCardImage(this, "Heckle.png");
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new HecklePower(p, magicNumber), magicNumber));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeBaseCost(UPGRADE_COST);
         }

@@ -1,7 +1,6 @@
 package hermit.actions;
 
 import com.badlogic.gdx.utils.Array;
-import com.esotericsoftware.spine.Event;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
@@ -10,12 +9,11 @@ import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.vfx.RarePotionParticleEffect;
 
 import java.util.Iterator;
 
 public class DeadManAction extends AbstractGameAction {
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
     private CardType typeToCheck;
 
     public DeadManAction(int amount) {
@@ -33,15 +31,15 @@ public class DeadManAction extends AbstractGameAction {
             }
 
             Array<CardGroup> groups = new Array();
-            for (int i =0;i<7;i++)
-            groups.add(new CardGroup(CardGroupType.UNSPECIFIED));
+            for (int i = 0; i < 7; i++)
+                groups.add(new CardGroup(CardGroupType.UNSPECIFIED));
 
 
             Iterator var2 = this.p.drawPile.group.iterator();
 
             AbstractCard card;
-            while(var2.hasNext()) {
-                card = (AbstractCard)var2.next();
+            while (var2.hasNext()) {
+                card = (AbstractCard) var2.next();
                 if (card.rarity == AbstractCard.CardRarity.RARE)
                     groups.get(0).addToTop(card);
                 else if (card.rarity == AbstractCard.CardRarity.UNCOMMON)
@@ -60,10 +58,10 @@ public class DeadManAction extends AbstractGameAction {
 
             int group = 0;
 
-            for(int i = 0; i < this.amount; ++i) {
+            for (int i = 0; i < this.amount; ++i) {
                 while (group < 7 && groups.get(group).isEmpty())
                     group++;
-                if (group<7) {
+                if (group < 7) {
                     groups.get(group).shuffle();
                     card = groups.get(group).getBottomCard();
                     groups.get(group).removeCard(card);

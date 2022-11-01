@@ -13,8 +13,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import java.util.Iterator;
 
 public class FullyLoadedAction extends AbstractGameAction {
-    private AbstractPlayer p;
-    private CardType typeToCheck;
+    private final AbstractPlayer p;
+    private final CardType typeToCheck;
 
     public FullyLoadedAction() {
         this.p = AbstractDungeon.player;
@@ -35,8 +35,8 @@ public class FullyLoadedAction extends AbstractGameAction {
             Iterator var2 = this.p.drawPile.group.iterator();
 
             AbstractCard card;
-            while(var2.hasNext()) {
-                card = (AbstractCard)var2.next();
+            while (var2.hasNext()) {
+                card = (AbstractCard) var2.next();
                 if (card.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || card.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {
                     tmp.addToRandomSpot(card);
                     counter++;
@@ -48,7 +48,7 @@ public class FullyLoadedAction extends AbstractGameAction {
                 return;
             }
 
-            for(int i = 0; i < counter; ++i) {
+            for (int i = 0; i < counter; ++i) {
                 if (!tmp.isEmpty()) {
                     tmp.shuffle();
                     card = tmp.getBottomCard();

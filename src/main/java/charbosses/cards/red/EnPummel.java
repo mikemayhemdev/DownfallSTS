@@ -1,11 +1,8 @@
 package charbosses.cards.red;
 
-import charbosses.actions.common.EnemyExhaustAction;
 import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.PummelDamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -36,18 +33,16 @@ public class EnPummel extends AbstractBossCard {
         for (int i = 0; i < this.magicNumber; ++i) {
             this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         }
-    
 
 
     }
 
 
     @Override
-    public int getPriority(ArrayList<AbstractCard> hand)
-    {
+    public int getPriority(ArrayList<AbstractCard> hand) {
         int badCards = 0;
-        for (AbstractCard c : hand){
-            if (c.type == CardType.CURSE || c.type == CardType.STATUS){
+        for (AbstractCard c : hand) {
+            if (c.type == CardType.CURSE || c.type == CardType.STATUS) {
                 badCards++;
             }
         }

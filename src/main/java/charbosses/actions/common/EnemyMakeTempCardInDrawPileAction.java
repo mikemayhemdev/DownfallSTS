@@ -10,12 +10,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 public class EnemyMakeTempCardInDrawPileAction extends AbstractGameAction {
-    private AbstractCard cardToMake;
-    private boolean randomSpot;
-    private boolean autoPosition;
-    private boolean toBottom;
-    private float x;
-    private float y;
+    private final AbstractCard cardToMake;
+    private final boolean randomSpot;
+    private final boolean autoPosition;
+    private final boolean toBottom;
+    private final float x;
+    private final float y;
 
     public EnemyMakeTempCardInDrawPileAction(final AbstractCard card, final int amount, final boolean randomSpot, final boolean autoPosition, final boolean toBottom, final float cardX, final float cardY) {
         UnlockTracker.markCardAsSeen(card.cardID);

@@ -3,15 +3,12 @@ package guardian.stances;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
-
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -26,7 +23,6 @@ import guardian.GuardianMod;
 import guardian.characters.GuardianCharacter;
 import guardian.powers.DefensiveModeBooster;
 import guardian.powers.DontLeaveDefensiveModePower;
-import guardian.relics.DefensiveModeMoreBlock;
 import guardian.vfx.DefensiveModeStanceParticleEffect;
 
 public class DefensiveMode extends AbstractStance {

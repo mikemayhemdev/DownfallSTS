@@ -27,9 +27,9 @@ import java.util.ArrayList;
     /*  17 */   public static final String[] TEXT = uiStrings.TEXT;
     /*     */
     /*     */   private static final float DURATION_PER_CARD = 0.25F;
-    /*     */   private AbstractPlayer p;
+    /*     */   private final AbstractPlayer p;
     /*  21 */   private int dupeAmount = 1;
-    /*  22 */   private ArrayList<AbstractCard> cannotDuplicate = new ArrayList();
+    /*  22 */   private final ArrayList<AbstractCard> cannotDuplicate = new ArrayList();
 
     /*     */
     /*     */

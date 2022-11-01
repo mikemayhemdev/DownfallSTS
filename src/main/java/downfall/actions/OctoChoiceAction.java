@@ -14,8 +14,8 @@ import expansioncontent.patches.CenterGridCardSelectScreen;
 
 public class OctoChoiceAction extends AbstractGameAction {
     private boolean pickCard = false;
-    private CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-    private OctopusCard funCard;
+    private final CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+    private final OctopusCard funCard;
     public String[] TEXT = CardCrawlGame.languagePack.getUIString("downfall:OctoChoiceAction").TEXT;
 
     public OctoChoiceAction(AbstractMonster m, OctopusCard card) {
@@ -29,7 +29,7 @@ public class OctoChoiceAction extends AbstractGameAction {
     public void update() {
         if (funCard instanceof AbstractCard) {
             ((AbstractCard) funCard).applyPowers();
-            ((AbstractCard) funCard).calculateCardDamage((AbstractMonster)target);
+            ((AbstractCard) funCard).calculateCardDamage((AbstractMonster) target);
         }
         for (OctoChoiceCard q : funCard.choiceList()) {
             group.addToTop(q);
@@ -46,7 +46,7 @@ public class OctoChoiceAction extends AbstractGameAction {
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
                 CenterGridCardSelectScreen.centerGridSelect = false;
             }
-            funCard.doChoiceStuff((AbstractMonster)target, cardChoice);
+            funCard.doChoiceStuff((AbstractMonster) target, cardChoice);
 
             isDone = true;
         } else if (group.isEmpty()) {

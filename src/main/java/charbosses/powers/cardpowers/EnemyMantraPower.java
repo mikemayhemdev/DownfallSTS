@@ -1,15 +1,12 @@
 package charbosses.powers.cardpowers;
+
 import charbosses.actions.unique.EnemyChangeStanceAction;
 import charbosses.bosses.AbstractCharBoss;
-import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.AbstractPower.PowerType;
 
 public class EnemyMantraPower extends AbstractPower {
     public static final String POWER_ID = "Mantra";
@@ -24,8 +21,8 @@ public class EnemyMantraPower extends AbstractPower {
         this.updateDescription();
         this.loadRegion("mantra");
         this.type = PowerType.BUFF;
-        if (this.owner instanceof AbstractCharBoss){
-            AbstractCharBoss cB = (AbstractCharBoss)this.owner;
+        if (this.owner instanceof AbstractCharBoss) {
+            AbstractCharBoss cB = (AbstractCharBoss) this.owner;
             cB.mantraGained += amount;
         }
     }

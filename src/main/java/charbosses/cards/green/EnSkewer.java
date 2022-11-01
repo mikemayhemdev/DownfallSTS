@@ -1,10 +1,8 @@
 package charbosses.cards.green;
 
-import charbosses.actions.common.EnemyModifyDamageAction;
 import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.unique.SkewerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -17,7 +15,7 @@ import java.util.ArrayList;
 public class EnSkewer extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Skewer";
     private static final CardStrings cardStrings;
-    private int cost;
+    private final int cost;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings("Skewer");

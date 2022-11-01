@@ -1,22 +1,14 @@
 package charbosses.cards.green;
 
 import charbosses.actions.unique.EnemyDamagePerAttackPlayedAction;
-import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.colorless.EnShiv;
-import charbosses.powers.cardpowers.EnemyInfiniteBladesPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.unique.DamagePerAttackPlayedAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import java.util.ArrayList;
-import java.util.Iterator;
 
 public class EnFinisher extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Finisher";
@@ -65,7 +57,7 @@ public class EnFinisher extends AbstractBossCard {
         this.rawDescription = EnFinisher.cardStrings.DESCRIPTION;
         this.rawDescription = this.rawDescription + EnFinisher.cardStrings.EXTENDED_DESCRIPTION[0] + count;
 
-         if (count == 1) {
+        if (count == 1) {
             this.rawDescription += EnFinisher.cardStrings.EXTENDED_DESCRIPTION[1];
 
         } else {
@@ -82,7 +74,6 @@ public class EnFinisher extends AbstractBossCard {
         this.createIntent();
 //        this.lockIntentValues = true;
     }
-
 
 
     @Override

@@ -109,8 +109,7 @@ public class Transmogrify extends AbstractSneckoCard {
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, returnTrueRandomScreenlessRelic(q.tier));
                     }
                 });
-            }
-            else {
+            } else {
                 AbstractRelic q2 = eligibleRelicsList.get(1);
                 ArrayList<AbstractCard> cardChoices = new ArrayList<>();
                 cardChoices.add(new OctoChoiceCard(q.relicId, q.name, getCorrectPlaceholderImage(ID), EXTENDED_DESCRIPTION[2] + q.name + EXTENDED_DESCRIPTION[3] + q.tier.name().toLowerCase(Locale.ROOT) + EXTENDED_DESCRIPTION[4], CardColor.COLORLESS));

@@ -35,11 +35,11 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import downfall.downfallMod;
 import downfall.relics.GremlinWheel;
 import gremlin.characters.GremlinCharacter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import slimebound.SlimeboundMod;
 
 import java.util.Objects;
 
@@ -83,11 +83,11 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
     private int goldAmount;
     private boolean purgeResult;
     private boolean buttonPressed;
-    private Hitbox buttonHb;
-    private Texture wheelImg;
-    private Texture arrowImg;
-    private Texture buttonImg;
-    private float imgX;
+    private final Hitbox buttonHb;
+    private final Texture wheelImg;
+    private final Texture arrowImg;
+    private final Texture buttonImg;
+    private final float imgX;
     private float imgY;
     private float wheelAngle;
     private Color color;
@@ -247,7 +247,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
                 break;
             default:
                 this.imageEventText.updateBodyText(DESCRIPTIONS[6]);
-                if (AbstractDungeon.player instanceof GremlinCharacter) {
+                if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
                     this.imageEventText.setDialogOption(OPTIONS[14]);
                 } else {
                     this.imageEventText.setDialogOption(OPTIONS[6] + (int) ((float) AbstractDungeon.player.maxHealth * this.hpLossPercent) + OPTIONS[7]);
@@ -362,8 +362,8 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
             case 2:
                 logMetricHeal(ID, "Full Heal", AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth);
                 AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
-                if (AbstractDungeon.player instanceof GremlinCharacter) {
-                    ((GremlinCharacter)AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
+                if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+                    ((GremlinCharacter) AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
                 }
                 this.hasFocus = false;
                 break;
@@ -381,7 +381,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
                 }
                 break;
             default:
-                if (AbstractDungeon.player instanceof GremlinCharacter) {
+                if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
                     this.imageEventText.updateBodyText(DESCRIPTIONS[14]);
                     CardCrawlGame.sound.play("ATTACK_DAGGER_6");
                     CardCrawlGame.sound.play("BLOOD_SPLAT");

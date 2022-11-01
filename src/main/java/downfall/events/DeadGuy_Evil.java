@@ -17,7 +17,6 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.Random;
 
 public class DeadGuy_Evil extends AbstractEvent {
@@ -42,9 +41,9 @@ public class DeadGuy_Evil extends AbstractEvent {
 
     private int numRewards = 0;
     private int encounterChance = 0;
-    private ArrayList<String> rewards = new ArrayList();
-    private float x;
-    private float y;
+    private final ArrayList<String> rewards = new ArrayList();
+    private final float x;
+    private final float y;
     private int enemy;
     private DeadGuy_Evil.CUR_SCREEN screen;
     private Texture adventurerImg;
@@ -215,6 +214,7 @@ public class DeadGuy_Evil extends AbstractEvent {
         }
 
     }
+
     public void logMetric(int numAttempts) {
         if (this.relicRewardMetric != null) {
             AbstractEvent.logMetricGainGoldAndRelic(ID, "Searched '" + numAttempts + "' times", this.relicRewardMetric, this.goldRewardMetric);
@@ -224,6 +224,7 @@ public class DeadGuy_Evil extends AbstractEvent {
             AbstractEvent.logMetricGainGold(ID, "Searched '" + numAttempts + "' times", this.goldRewardMetric);
         }
     }
+
     public void render(SpriteBatch sb) {
         super.render(sb);
         sb.setColor(Color.WHITE);

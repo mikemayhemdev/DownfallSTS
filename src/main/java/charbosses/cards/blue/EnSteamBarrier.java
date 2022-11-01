@@ -4,7 +4,6 @@ import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ModifyBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.blue.Skim;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -23,7 +22,7 @@ public class EnSteamBarrier extends AbstractBossCard {
         this.baseBlock = 6;
     }
 
-    public EnSteamBarrier(int blockModifier){
+    public EnSteamBarrier(int blockModifier) {
         this();
         this.baseBlock -= blockModifier;
         this.block = this.baseBlock;

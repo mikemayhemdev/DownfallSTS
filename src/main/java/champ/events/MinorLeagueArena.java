@@ -1,19 +1,14 @@
 package champ.events;
 
 
-import champ.relics.BlackKnightsHelmet;
-import champ.relics.ChampionCrown;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.ChampionsBelt;
 import com.megacrit.cardcrawl.relics.CloakClasp;
 import com.megacrit.cardcrawl.relics.WristBlade;
-import downfall.downfallMod;
-import slimebound.SlimeboundMod;
 
 public class MinorLeagueArena extends AbstractImageEvent {
     public static final String ID = "champ:MinorLeagueArena";
@@ -43,63 +38,60 @@ public class MinorLeagueArena extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch (this.screen) {
-            case INTRO:
-                switch (buttonPressed) {
-                    case 0:
-                        logMetric(ID, "Fight");
-                        this.screen = CurScreen.FIGHT;
-                        //SlimeboundMod.logger.info("fight");
-                        AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Centurion and Healer");
-                        AbstractDungeon.getCurrRoom().rewards.clear();
-                        AbstractDungeon.getCurrRoom().addRelicToRewards(new CloakClasp());
-                        AbstractDungeon.getCurrRoom().addGoldToRewards(100);
-                        AbstractDungeon.getCurrRoom().eliteTrigger = true;
-                        AbstractDungeon.lastCombatMetricKey = "Centurion and Healer";
-                        this.imageEventText.clearAllDialogs();
-                        this.enterCombatFromImage();
+        if (this.screen == CurScreen.INTRO) {
+            switch (buttonPressed) {
+                case 0:
+                    logMetric(ID, "Fight");
+                    this.screen = CurScreen.FIGHT;
+                    //SlimeboundMod.logger.info("fight");
+                    AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Centurion and Healer");
+                    AbstractDungeon.getCurrRoom().rewards.clear();
+                    AbstractDungeon.getCurrRoom().addRelicToRewards(new CloakClasp());
+                    AbstractDungeon.getCurrRoom().addGoldToRewards(100);
+                    AbstractDungeon.getCurrRoom().eliteTrigger = true;
+                    AbstractDungeon.lastCombatMetricKey = "Centurion and Healer";
+                    this.imageEventText.clearAllDialogs();
+                    this.enterCombatFromImage();
 
-                        return;
-                    case 1:
-                        logMetric(ID, "Fight");
+                    return;
+                case 1:
+                    logMetric(ID, "Fight");
 
-                        this.screen = CurScreen.FIGHT;
-                        //SlimeboundMod.logger.info("fight");
-                        AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Gremlin Nob");
-                        AbstractDungeon.getCurrRoom().rewards.clear();
-                        AbstractDungeon.getCurrRoom().addRelicToRewards(new ChampionsBelt());
-                        AbstractDungeon.getCurrRoom().addGoldToRewards(100);
-                        AbstractDungeon.getCurrRoom().eliteTrigger = true;
-                        AbstractDungeon.lastCombatMetricKey = "Gremlin Nob";
-                        this.imageEventText.clearAllDialogs();
-                        this.enterCombatFromImage();
-                        return;
-                    case 2:
-                        logMetric(ID, "Fight");
-                        this.screen = CurScreen.FIGHT;
-                        //SlimeboundMod.logger.info("fight");
-                        AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Colosseum Slavers");
-                        AbstractDungeon.getCurrRoom().rewards.clear();
-                        AbstractDungeon.getCurrRoom().addRelicToRewards(new WristBlade());
-                        AbstractDungeon.getCurrRoom().addGoldToRewards(100);
-                        AbstractDungeon.getCurrRoom().eliteTrigger = true;
-                        AbstractDungeon.lastCombatMetricKey = "Colosseum Slavers";
-                        this.imageEventText.clearAllDialogs();
-                        this.enterCombatFromImage();
-                        return;
-                    case 3:
-                        this.screen = CurScreen.RESULT;
-                        this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[3]);
-                        logMetricIgnored(ID);
-                        return;
-                    default:
-                        return;
-                }
-
-            default:
-                this.openMap();
+                    this.screen = CurScreen.FIGHT;
+                    //SlimeboundMod.logger.info("fight");
+                    AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Gremlin Nob");
+                    AbstractDungeon.getCurrRoom().rewards.clear();
+                    AbstractDungeon.getCurrRoom().addRelicToRewards(new ChampionsBelt());
+                    AbstractDungeon.getCurrRoom().addGoldToRewards(100);
+                    AbstractDungeon.getCurrRoom().eliteTrigger = true;
+                    AbstractDungeon.lastCombatMetricKey = "Gremlin Nob";
+                    this.imageEventText.clearAllDialogs();
+                    this.enterCombatFromImage();
+                    return;
+                case 2:
+                    logMetric(ID, "Fight");
+                    this.screen = CurScreen.FIGHT;
+                    //SlimeboundMod.logger.info("fight");
+                    AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Colosseum Slavers");
+                    AbstractDungeon.getCurrRoom().rewards.clear();
+                    AbstractDungeon.getCurrRoom().addRelicToRewards(new WristBlade());
+                    AbstractDungeon.getCurrRoom().addGoldToRewards(100);
+                    AbstractDungeon.getCurrRoom().eliteTrigger = true;
+                    AbstractDungeon.lastCombatMetricKey = "Colosseum Slavers";
+                    this.imageEventText.clearAllDialogs();
+                    this.enterCombatFromImage();
+                    return;
+                case 3:
+                    this.screen = CurScreen.RESULT;
+                    this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.setDialogOption(OPTIONS[3]);
+                    logMetricIgnored(ID);
+                    return;
+                default:
+            }
+        } else {
+            this.openMap();
         }
 
     }

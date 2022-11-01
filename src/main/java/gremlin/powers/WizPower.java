@@ -27,13 +27,11 @@ public class WizPower extends AbstractGremlinPower {
         this.updateDescription();
     }
 
-    public void updateDescription()
-    {
-        if(this.amount < 3) {
-            if(this.amount == 2) {
+    public void updateDescription() {
+        if (this.amount < 3) {
+            if (this.amount == 2) {
                 this.description = (strings.DESCRIPTIONS[0] + (3 - this.amount) + strings.DESCRIPTIONS[1]);
-            }
-            else {
+            } else {
                 this.description = (strings.DESCRIPTIONS[0] + (3 - this.amount) + strings.DESCRIPTIONS[2]);
             }
         } else {
@@ -43,9 +41,8 @@ public class WizPower extends AbstractGremlinPower {
 
     @Override
     public void onInitialApplication() {
-        if(amount >= 3){
-            if(AbstractDungeon.player.hasRelic(WizardStaff.ID))
-            {
+        if (amount >= 3) {
+            if (AbstractDungeon.player.hasRelic(WizardStaff.ID)) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner,
                         new BangPower(this.owner, 10 + WizardStaff.OOMPH), 1));
             } else {
@@ -58,10 +55,9 @@ public class WizPower extends AbstractGremlinPower {
     @Override
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
-        if(amount >= 3){
-            if(!this.owner.hasPower(BangPower.POWER_ID)) {
-                if(AbstractDungeon.player.hasRelic(WizardStaff.ID))
-                {
+        if (amount >= 3) {
+            if (!this.owner.hasPower(BangPower.POWER_ID)) {
+                if (AbstractDungeon.player.hasRelic(WizardStaff.ID)) {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner,
                             new BangPower(this.owner, 10 + WizardStaff.OOMPH), 1));
                 } else {
@@ -74,10 +70,10 @@ public class WizPower extends AbstractGremlinPower {
 
     @Override
     public void onRemove() {
-        if(this.owner.hasPower(EncorePower.POWER_ID)){
+        if (this.owner.hasPower(EncorePower.POWER_ID)) {
             this.owner.getPower(EncorePower.POWER_ID).onSpecificTrigger();
         }
-        if(AbstractDungeon.player.hasRelic(WizardHat.ID)) {
+        if (AbstractDungeon.player.hasRelic(WizardHat.ID)) {
             AbstractDungeon.player.getRelic(WizardHat.ID).onTrigger();
         }
     }

@@ -2,7 +2,6 @@ package charbosses.relics;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -15,7 +14,7 @@ public class CBR_DuvuDoll extends AbstractCharbossRelic {
         super(new DuVuDoll());
     }
 
-    public CBR_DuvuDoll(int counter){
+    public CBR_DuvuDoll(int counter) {
         this();
         this.counter = counter;
     }

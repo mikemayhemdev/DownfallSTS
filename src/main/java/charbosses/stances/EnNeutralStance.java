@@ -3,7 +3,6 @@ package charbosses.stances;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.StanceStrings;
-import com.megacrit.cardcrawl.stances.AbstractStance;
 
 public class EnNeutralStance extends AbstractEnemyStance {
     public static final String STANCE_ID = "Neutral";

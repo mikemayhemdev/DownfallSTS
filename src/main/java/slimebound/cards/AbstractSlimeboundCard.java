@@ -6,13 +6,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import hermit.util.TextureLoader;
 import slimebound.SlimeboundMod;
 import slimebound.actions.CommandAction;
-import slimebound.actions.TrigggerSpecificSlimeAttackAction;
 import slimebound.powers.*;
 import slimebound.relics.SelfDamagePreventRelic;
 
@@ -106,7 +104,7 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
         isSlimedModified = (slimed != baseSlimed);
     }
 
-    public void checkMinionMaster(){
+    public void checkMinionMaster() {
         if (AbstractDungeon.player.hasPower(BuffSecondarySlimeEffectsPower.POWER_ID)) {
             for (int i = 0; i < AbstractDungeon.player.getPower(BuffSecondarySlimeEffectsPower.POWER_ID).amount; i++) {
                 addToBot(new CommandAction());

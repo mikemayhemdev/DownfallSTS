@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.actions.ExtinguishCurrentFlameAction;
-import downfall.patches.NoDiscardField;
 import theHexaghost.powers.EnhancePower;
 
 public class SpectralSpark extends AbstractHexaCard {
@@ -21,14 +20,14 @@ public class SpectralSpark extends AbstractHexaCard {
 
     public SpectralSpark() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-    //    baseBurn = burn = MAGIC;
+        //    baseBurn = burn = MAGIC;
         magicNumber = baseMagicNumber = 1;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-       // burn(m, burn);
-      //  AbstractCard c = this;
+        // burn(m, burn);
+        //  AbstractCard c = this;
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {

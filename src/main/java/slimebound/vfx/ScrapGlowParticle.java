@@ -16,15 +16,15 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import slimebound.orbs.ScrapOozeSlime;
 
 public class ScrapGlowParticle extends AbstractGameEffect {
-    private static float xOffset = -25 * Settings.scale;
-    private static float yOffset = -28 * Settings.scale;
+    private static final float xOffset = -25 * Settings.scale;
+    private static final float yOffset = -28 * Settings.scale;
     public ScrapOozeSlime p;
     private float x;
     private float y;
-    private AtlasRegion img;
+    private final AtlasRegion img;
     private boolean activated = false;
     private boolean reverse;
-    private int W;
+    private final int W;
 
     public ScrapGlowParticle(ScrapOozeSlime p, Color color) {
         this.img = ImageMaster.GLOW_SPARK_2;
@@ -61,7 +61,7 @@ public class ScrapGlowParticle extends AbstractGameEffect {
     }
 
     public void render(SpriteBatch sb) {
-        if (p == null || p.evoked){
+        if (p == null || p.evoked) {
             finish();
         } else {
             sb.setColor(Color.BLACK);
@@ -70,7 +70,7 @@ public class ScrapGlowParticle extends AbstractGameEffect {
             sb.draw(this.img, this.p.x + xOffset, this.p.y + yOffset, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale * 2.0F, this.scale * 2.0F, this.rotation);
 
         }
-         }
+    }
 
 
     public void dispose() {

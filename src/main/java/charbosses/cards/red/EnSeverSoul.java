@@ -1,6 +1,5 @@
 package charbosses.cards.red;
 
-import charbosses.actions.unique.EnemyBlockPerNonAttackAction;
 import charbosses.actions.unique.EnemyExhaustNonAttacksAction;
 import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;

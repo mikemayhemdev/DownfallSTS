@@ -21,9 +21,9 @@ public abstract class GremlinPower extends AbstractGremlinPower {
 
     @Override
     public void onInitialApplication() {
-        for(int i=0;i<owner.powers.size();i++){
+        for (int i = 0; i < owner.powers.size(); i++) {
             AbstractPower p = owner.powers.get(i);
-            if(p instanceof GremlinPower && !p.ID.equals(this.ID)){
+            if (p instanceof GremlinPower && !p.ID.equals(this.ID)) {
                 AbstractDungeon.effectList.add(new PowerExpireTextEffect(owner.hb.cX - owner.animX, owner.hb.cY + owner.hb.height / 2.0F, p.name, p.region128));
                 p.onRemove();
                 owner.powers.remove(p);

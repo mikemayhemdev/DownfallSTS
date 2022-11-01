@@ -1,8 +1,5 @@
 package champ.cards;
 
-import champ.ChampMod;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.watcher.WallopAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -18,9 +15,9 @@ public class VampiricStrike extends AbstractChampCard {
     public VampiricStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-       // tags.add(ChampMod.COMBO);
-      //  tags.add(ChampMod.COMBOBERSERKER);
-      //  tags.add(ChampMod.COMBODEFENSIVE);
+        // tags.add(ChampMod.COMBO);
+        //  tags.add(ChampMod.COMBOBERSERKER);
+        //  tags.add(ChampMod.COMBODEFENSIVE);
         postInit();
     }
 

@@ -19,9 +19,10 @@ public class CullingBlowAction extends AbstractGameAction {
     private DamageInfo info;
     public int[] damage;
     public int threshold;
+
     public CullingBlowAction(AbstractCreature target, int[] amount, int threshold) {
         this.damage = amount;
-        this.setValues(target, AbstractDungeon.player,damage[0]);
+        this.setValues(target, AbstractDungeon.player, damage[0]);
         this.actionType = ActionType.DAMAGE;
         this.threshold = threshold;
         this.duration = 0.1F;
@@ -33,13 +34,13 @@ public class CullingBlowAction extends AbstractGameAction {
             boolean playedMusic = false;
             int mo = AbstractDungeon.getCurrRoom().monsters.monsters.size();
 
-            for( i = 0; i < mo; ++i) {
-                if (!((AbstractMonster)AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).isDying && ((AbstractMonster)AbstractDungeon.getCurrRoom().monsters.monsters.get(mo-1)).currentHealth > 0 && !((AbstractMonster)AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).isEscaping) {
+            for (i = 0; i < mo; ++i) {
+                if (!AbstractDungeon.getCurrRoom().monsters.monsters.get(i).isDying && AbstractDungeon.getCurrRoom().monsters.monsters.get(mo - 1).currentHealth > 0 && !AbstractDungeon.getCurrRoom().monsters.monsters.get(i).isEscaping) {
                     if (playedMusic) {
-                        AbstractDungeon.effectList.add(new FlashAtkImgEffect(((AbstractMonster)AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).hb.cX, ((AbstractMonster)AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).hb.cY, this.attackEffect, true));
+                        AbstractDungeon.effectList.add(new FlashAtkImgEffect(AbstractDungeon.getCurrRoom().monsters.monsters.get(i).hb.cX, AbstractDungeon.getCurrRoom().monsters.monsters.get(i).hb.cY, this.attackEffect, true));
                     } else {
                         playedMusic = true;
-                        AbstractDungeon.effectList.add(new FlashAtkImgEffect(((AbstractMonster)AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).hb.cX, ((AbstractMonster)AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).hb.cY, this.attackEffect));
+                        AbstractDungeon.effectList.add(new FlashAtkImgEffect(AbstractDungeon.getCurrRoom().monsters.monsters.get(i).hb.cX, AbstractDungeon.getCurrRoom().monsters.monsters.get(i).hb.cY, this.attackEffect));
                     }
                 }
             }
@@ -53,14 +54,14 @@ public class CullingBlowAction extends AbstractGameAction {
             }
 
 
-            for(i = 0; i < AbstractDungeon.getCurrRoom().monsters.monsters.size(); ++i) {
-                AbstractMonster target = (AbstractMonster) AbstractDungeon.getCurrRoom().monsters.monsters.get(i);
+            for (i = 0; i < AbstractDungeon.getCurrRoom().monsters.monsters.size(); ++i) {
+                AbstractMonster target = AbstractDungeon.getCurrRoom().monsters.monsters.get(i);
                 if (!target.isDying && target.currentHealth > threshold && !target.isEscaping) {
                     target.damage(new DamageInfo(this.source, this.damage[i], this.damageType));
                     if ((this.target.isDying || this.target.currentHealth <= threshold) && !this.target.halfDead) {
-                        addToBot(new ApplyPowerAction(target,AbstractDungeon.player,new Suffering(1,target)));
-                        addToBot(new ApplyPowerAction(target,AbstractDungeon.player,new WeakPower(target,1,false)));
-                        addToBot(new ApplyPowerAction(target,AbstractDungeon.player,new VulnerablePower(target,1,false)));
+                        addToBot(new ApplyPowerAction(target, AbstractDungeon.player, new Suffering(1, target)));
+                        addToBot(new ApplyPowerAction(target, AbstractDungeon.player, new WeakPower(target, 1, false)));
+                        addToBot(new ApplyPowerAction(target, AbstractDungeon.player, new VulnerablePower(target, 1, false)));
                     }
                 }
             }

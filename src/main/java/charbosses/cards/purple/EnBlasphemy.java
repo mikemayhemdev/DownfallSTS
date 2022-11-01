@@ -1,15 +1,10 @@
 package charbosses.cards.purple;
 
 import charbosses.actions.unique.EnemyChangeStanceAction;
-import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import charbosses.stances.EnDivinityStance;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -30,7 +25,8 @@ public class EnBlasphemy extends AbstractBossCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         this.addToBot(new EnemyChangeStanceAction(EnDivinityStance.STANCE_ID));
-        this.addToBot(new ApplyPowerAction(m, m, new EndTurnDeathPower(m))); }
+        this.addToBot(new ApplyPowerAction(m, m, new EndTurnDeathPower(m)));
+    }
 
     public void upgrade() {
         if (!this.upgraded) {

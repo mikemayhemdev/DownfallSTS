@@ -4,27 +4,29 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
+import downfall.downfallMod;
 import gremlin.characters.GremlinCharacter;
 import gremlin.orbs.GremlinStandby;
 
 import java.util.Collections;
 
 public class LoseRearmostGremlinAction extends AbstractGameAction {
-    public LoseRearmostGremlinAction(){}
+    public LoseRearmostGremlinAction() {
+    }
 
     @Override
     public void update() {
-        if (!(AbstractDungeon.player instanceof GremlinCharacter)) {
+        if (!(AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN))) {
             this.isDone = true;
             return;
         }
         int position = -1;
-        for(int i=0;i<AbstractDungeon.player.maxOrbs;i++){
-            if(AbstractDungeon.player.orbs.get(i) instanceof GremlinStandby){
+        for (int i = 0; i < AbstractDungeon.player.maxOrbs; i++) {
+            if (AbstractDungeon.player.orbs.get(i) instanceof GremlinStandby) {
                 position = i;
             }
         }
-        if(position < 0){
+        if (position < 0) {
             this.isDone = true;
             return;
         }

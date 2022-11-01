@@ -20,11 +20,11 @@ public class SocketGems extends ConsoleCommand {
 
     private void socketGems(CardGroup group) {
         for (AbstractCard card : group.group) {
-            if(card instanceof AbstractGuardianCard) {
+            if (card instanceof AbstractGuardianCard) {
                 AbstractGuardianCard gc = (AbstractGuardianCard) card;
                 gc.sockets.clear();
-                while(gc.socketCount > gc.sockets.size()) {
-                    gc.sockets.add(GuardianMod.socketTypes.values()[MathUtils.random(GuardianMod.socketTypes.values().length-1)]);
+                while (gc.socketCount > gc.sockets.size()) {
+                    gc.sockets.add(GuardianMod.socketTypes.values()[MathUtils.random(GuardianMod.socketTypes.values().length - 1)]);
                 }
                 gc.updateDescription();
             }

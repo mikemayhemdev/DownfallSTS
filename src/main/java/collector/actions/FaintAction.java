@@ -19,7 +19,7 @@ public class FaintAction extends AbstractGameAction {
     public void update() {
         isDone = true;
 
-        TorchChar d = master.torch;
+        TorchChar d = CollectorChar.torch;
         Iterator<AbstractPower> it = d.powers.iterator();
         while (it.hasNext()) {
             AbstractPower p = it.next();

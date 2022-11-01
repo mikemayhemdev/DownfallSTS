@@ -20,10 +20,10 @@ public class EnemyExhaustAction extends AbstractGameAction {
         TEXT = EnemyExhaustAction.uiStrings.TEXT;
     }
 
-    private AbstractCharBoss p;
-    private boolean isRandom;
-    private boolean anyNumber;
-    private boolean canPickZero;
+    private final AbstractCharBoss p;
+    private final boolean isRandom;
+    private final boolean anyNumber;
+    private final boolean canPickZero;
 
     public EnemyExhaustAction(final int amount, final boolean isRandom, final boolean anyNumber, final boolean canPickZero) {
         this.anyNumber = anyNumber;

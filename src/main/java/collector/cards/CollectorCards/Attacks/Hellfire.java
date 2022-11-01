@@ -19,7 +19,7 @@ public class Hellfire extends AbstractCollectorCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new HellfireAction(CollectorChar.getLivingTorchHead(),damage, DamageInfo.DamageType.NORMAL,freeToPlayOnce, EnergyPanel.getCurrentEnergy(),upgraded));
+        atb(new HellfireAction(CollectorChar.getLivingTorchHead(), damage, DamageInfo.DamageType.NORMAL, freeToPlayOnce, EnergyPanel.getCurrentEnergy(), upgraded));
     }
 
     @Override

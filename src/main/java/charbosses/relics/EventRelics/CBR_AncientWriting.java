@@ -8,8 +8,8 @@ import downfall.downfallMod;
 
 public class CBR_AncientWriting extends AbstractCharbossRelic {
     public static String ID = downfallMod.makeID("AncientWriting");
-    private static RelicTier tier = RelicTier.SPECIAL;
-    private static LandingSound sound = LandingSound.MAGICAL;
+    private static final RelicTier tier = RelicTier.SPECIAL;
+    private static final LandingSound sound = LandingSound.MAGICAL;
     private int count;
 
     public CBR_AncientWriting() {

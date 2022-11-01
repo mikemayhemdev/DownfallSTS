@@ -5,7 +5,6 @@ import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 public abstract class AbstractDynamicCard extends AbstractHermitCard {
 
 
-
     // "How come DefaultCommonAttack extends CustomCard and not DynamicCard like all the rest?"
 
     // Well every card, at the end of the day, extends CustomCard.

@@ -36,7 +36,7 @@ public class EnShiv extends AbstractBossCard {
 
     @Override
     public int getPriority(ArrayList<AbstractCard> hand) {
-        return autoPriority() * 3 ;
+        return autoPriority() * 3;
     }
 
     @Override

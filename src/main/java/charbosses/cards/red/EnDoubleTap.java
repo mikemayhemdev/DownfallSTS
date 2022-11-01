@@ -1,17 +1,13 @@
 package charbosses.cards.red;
 
-import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.EnemyCardGroup;
 import charbosses.powers.cardpowers.EnemyDoubleTapPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import java.util.ArrayList;
 
@@ -45,10 +41,9 @@ public class EnDoubleTap extends AbstractBossCard {
     }
 
     @Override
-    public int getPriority(ArrayList<AbstractCard> hand)
-    {
-        for (AbstractCard c : hand){
-            if (c.type == CardType.ATTACK){
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        for (AbstractCard c : hand) {
+            if (c.type == CardType.ATTACK) {
                 return 20;
             }
         }

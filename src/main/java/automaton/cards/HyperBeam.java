@@ -3,7 +3,6 @@ package automaton.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
-import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -24,8 +23,8 @@ public class HyperBeam extends AbstractBronzeCard {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         isMultiDamage = true;
-       // selfRetain = true;
-      //  exhaust = true;
+        // selfRetain = true;
+        //  exhaust = true;
         baseMagicNumber = magicNumber = 5;
         cardsToPreview = new VoidCard();
     }

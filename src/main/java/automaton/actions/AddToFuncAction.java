@@ -6,8 +6,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 
 public class AddToFuncAction extends AbstractGameAction {
-    private AbstractCard myCard;
-    private CardGroup container;
+    private final AbstractCard myCard;
+    private final CardGroup container;
 
     public AddToFuncAction(AbstractCard card, CardGroup c) {
         myCard = card;

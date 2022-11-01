@@ -29,9 +29,8 @@ public class PricklyShields extends AbstractGremlinRelic {
     }
 
     @Override
-    public int onPlayerGainedBlock(float blockAmount)
-    {
-        if(blockAmount > 0){
+    public int onPlayerGainedBlock(float blockAmount) {
+        if (blockAmount > 0) {
 
             this.flash();
             AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));

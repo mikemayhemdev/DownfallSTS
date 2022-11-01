@@ -19,8 +19,8 @@ import static sneckomod.SneckoMod.makeCardPath;
 @CardIgnore
 public class UnknownClass extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownClass");
-    private static String[] unknownClass = CardCrawlGame.languagePack.getUIString(ID).TEXT;
-    private String TID; //Temporary ID
+    private static final String[] unknownClass = CardCrawlGame.languagePack.getUIString(ID).TEXT;
+    private final String TID; //Temporary ID
     public CardColor myColor;
 
     public UnknownClass(CardColor cardColor) {
@@ -38,10 +38,10 @@ public class UnknownClass extends AbstractUnknownCard {
         }
         UPGRADE_DESCRIPTION = unknownClass[6] + rawDescription;
         if (CardCrawlGame.languagePack.getCardStrings(TID).NAME == "[MISSING_TITLE]") {
-            BaseMod.loadCustomStrings(CardStrings.class, "{\"" + TID 
-            + "\": {\"NAME\": \"" + name 
-            + "\", \"DESCRIPTION\": \"" + rawDescription 
-            + "\", \"UPGRADE_DESCRIPTION\": \"" + UPGRADE_DESCRIPTION +"\"}}");
+            BaseMod.loadCustomStrings(CardStrings.class, "{\"" + TID
+                    + "\": {\"NAME\": \"" + name
+                    + "\", \"DESCRIPTION\": \"" + rawDescription
+                    + "\", \"UPGRADE_DESCRIPTION\": \"" + UPGRADE_DESCRIPTION + "\"}}");
         }
         initializeDescription();
     }

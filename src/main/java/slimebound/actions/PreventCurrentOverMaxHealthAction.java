@@ -10,7 +10,7 @@ import slimebound.SlimeboundMod;
 
 public class PreventCurrentOverMaxHealthAction extends AbstractGameAction {
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
 
 
     public PreventCurrentOverMaxHealthAction(int amount) {

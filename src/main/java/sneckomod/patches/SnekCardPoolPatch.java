@@ -15,8 +15,8 @@ import sneckomod.relics.SneckoCommon;
 public class SnekCardPoolPatch {
     @SpirePostfixPatch
     public static void Postfix(AbstractDungeon __instance) {
-        AbstractPlayer player = __instance.player;
-        if(player.hasRelic(SneckoCommon.ID) || player.hasRelic(SneckoBoss.ID)) {
+        AbstractPlayer player = AbstractDungeon.player;
+        if (player.hasRelic(SneckoCommon.ID) || player.hasRelic(SneckoBoss.ID)) {
             SneckoBoss.updateCardPools();
         }
     }

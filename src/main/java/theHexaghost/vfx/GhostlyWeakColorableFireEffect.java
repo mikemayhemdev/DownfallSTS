@@ -10,11 +10,11 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class GhostlyWeakColorableFireEffect extends AbstractGameEffect {
-    private AtlasRegion img = this.getImg();
+    private final AtlasRegion img = this.getImg();
     private float x;
     private float y;
-    private float vX;
-    private float vY;
+    private final float vX;
+    private final float vY;
     private static final float DUR = 1.0F;
 
     public GhostlyWeakColorableFireEffect(float x, float y, Color c) {

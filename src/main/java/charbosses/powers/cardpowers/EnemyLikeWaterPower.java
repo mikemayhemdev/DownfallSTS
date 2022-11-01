@@ -4,7 +4,6 @@ package charbosses.powers.cardpowers;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.stances.EnCalmStance;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -38,11 +37,11 @@ public class EnemyLikeWaterPower extends AbstractPower {
     }
 
     public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
-            AbstractCharBoss p = (AbstractCharBoss)this.owner;
-            if (p.stance instanceof EnCalmStance) {
-                this.flash();
-                this.addToBot(new GainBlockAction(this.owner, this.owner, this.amount));
-            }
+        AbstractCharBoss p = (AbstractCharBoss) this.owner;
+        if (p.stance instanceof EnCalmStance) {
+            this.flash();
+            this.addToBot(new GainBlockAction(this.owner, this.owner, this.amount));
+        }
 
     }
 

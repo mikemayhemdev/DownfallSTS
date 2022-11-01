@@ -26,8 +26,7 @@ public class ArmsTheft extends AbstractGremlinCard {
     private static final int MAGIC = 1;
     private static final int UPGRADE_BONUS = 1;
 
-    public ArmsTheft()
-    {
+    public ArmsTheft() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -39,20 +38,17 @@ public class ArmsTheft extends AbstractGremlinCard {
         GremlinMod.loadJokeCardImage(this, "ArmsTheft.png");
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(m, p, new StrengthPower(m, -this.magicNumber), -this.magicNumber));
-        if(!m.hasPower("Artifact")){
+        if (!m.hasPower("Artifact")) {
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
         }
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_BONUS);
         }

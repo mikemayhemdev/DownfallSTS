@@ -14,15 +14,15 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.ui.buttons.LargeDialogOptionButton;
 
 public class RelicPreviewButton extends LargeDialogOptionButton {
-    private static Color TEXT_ACTIVE_COLOR = Color.WHITE.cpy();
-    private static Color TEXT_INACTIVE_COLOR = new Color(0.8F, 0.8F, 0.8F, 1.0F);
-    private static Color TEXT_DISABLED_COLOR = Color.FIREBRICK.cpy();
-    private AbstractRelic r;
+    private static final Color TEXT_ACTIVE_COLOR = Color.WHITE.cpy();
+    private static final Color TEXT_INACTIVE_COLOR = new Color(0.8F, 0.8F, 0.8F, 1.0F);
+    private static final Color TEXT_DISABLED_COLOR = Color.FIREBRICK.cpy();
+    private final AbstractRelic r;
     private float x;
     private float y;
-    private boolean isDisabled;
-    private float animTimer;
-    private Color boxInactiveColor;
+    private final boolean isDisabled;
+    private final float animTimer;
+    private final Color boxInactiveColor;
     private Color textColor;
     private Color boxColor;
 

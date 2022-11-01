@@ -13,6 +13,7 @@ public class SelfDestruct extends AbstractCollectorCard {
         super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.NONE, CollectorCardSource.TORCH_HEAD);
         baseMagicNumber = 25;
     }
+
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean result = super.canUse(p, m);
@@ -21,9 +22,10 @@ public class SelfDestruct extends AbstractCollectorCard {
         }
         return result;
     }
+
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new ApplyPowerAction(CollectorChar.torch,CollectorChar.torch,new collector.powers.SelfDestruct(CollectorChar.torch)));
+        atb(new ApplyPowerAction(CollectorChar.torch, CollectorChar.torch, new collector.powers.SelfDestruct(CollectorChar.torch)));
     }
 
     @Override

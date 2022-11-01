@@ -1,16 +1,12 @@
 package automaton.cards;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.SelectCardsCenteredAction;
-import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
@@ -22,13 +18,13 @@ public class TinkerersToolbox extends AbstractBronzeCard {
 
     private float rotationTimer;
     private int previewIndex;
-    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
+    private final ArrayList<AbstractCard> cardsList = new ArrayList<>();
 
     public TinkerersToolbox() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
         selfRetain = true;
-       // this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        // this.tags.add(SneckoMod.BANNEDFORSNECKO);
         cardsList.add(new Debug());
         cardsList.add(new Batch());
         cardsList.add(new Decompile());

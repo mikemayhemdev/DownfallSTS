@@ -10,9 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
-import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleHandAction;
-import sneckomod.cards.AbstractSneckoCard;
 
 
 public class Bewildered extends CustomCard {
@@ -34,7 +32,7 @@ public class Bewildered extends CustomCard {
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 
-    private boolean activateThisTurn = false;
+    private final boolean activateThisTurn = false;
 
     public Bewildered() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, CardColor.CURSE, RARITY, TARGET);

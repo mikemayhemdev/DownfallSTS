@@ -26,8 +26,7 @@ public class Bellow extends AbstractGremlinCard {
     private static final int MAGIC = 2;
     private static final int UPGRADE_BONUS = 1;
 
-    public Bellow()
-    {
+    public Bellow() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -39,8 +38,7 @@ public class Bellow extends AbstractGremlinCard {
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         int amount = 0;
         for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (!mo.isDeadOrEscaped()) {
@@ -49,16 +47,14 @@ public class Bellow extends AbstractGremlinCard {
                 }
             }
         }
-        if(amount > 0){
+        if (amount > 0) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                     new StrengthPower(p, amount), amount));
         }
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_BONUS);
         }

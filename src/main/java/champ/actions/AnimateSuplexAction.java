@@ -5,17 +5,14 @@ import champ.patches.SuplexPatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class AnimateSuplexAction extends AbstractGameAction
-{
+public class AnimateSuplexAction extends AbstractGameAction {
     private boolean called = false;
     private boolean flipped = false;
-    private AbstractMonster mo;
+    private final AbstractMonster mo;
 
-    public AnimateSuplexAction(AbstractMonster m)
-    {
+    public AnimateSuplexAction(AbstractMonster m) {
         mo = m;
         startDuration = 1.0f;
         duration = startDuration;
@@ -23,8 +20,7 @@ public class AnimateSuplexAction extends AbstractGameAction
     }
 
     @Override
-    public void update()
-    {
+    public void update() {
         if (!called) {
             called = true;
             mo.animX = 0;
@@ -37,7 +33,7 @@ public class AnimateSuplexAction extends AbstractGameAction
             ReflectionHacks.setPrivate(mo, AbstractCreature.class, "animation", SuplexPatch.REVERSE_GRAVITY);
 
         }
-        if (!flipped && this.duration <= 0.5){
+        if (!flipped && this.duration <= 0.5) {
             mo.flipVertical = true;
             mo.animY += mo.hb.height;
             flipped = true;

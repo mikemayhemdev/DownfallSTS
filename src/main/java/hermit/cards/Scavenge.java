@@ -11,7 +11,6 @@ import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.SnipePower;
 
-
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
 
@@ -49,7 +48,7 @@ public class Scavenge extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = 4;
         defaultSecondMagicNumber = defaultBaseSecondMagicNumber = 5;
-        this.exhaust=true;
+        this.exhaust = true;
         this.tags.add(Enums.DEADON);
         this.tags.add(CardTags.HEALING);
         loadJokeCardImage(this, "scavenge.png");

@@ -24,15 +24,13 @@ public class MadGremlinCard extends AbstractGremlinCard {
 
     private static final int COST = 0;
 
-    public MadGremlinCard()
-    {
+    public MadGremlinCard() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.tags.add(MAD_GREMLIN);
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         onChoseThisOption();
     }
 
@@ -41,15 +39,12 @@ public class MadGremlinCard extends AbstractGremlinCard {
         this.dontTriggerOnUseCard = true;
     }
 
-    public AbstractCard makeCopy()
-    {
+    public AbstractCard makeCopy() {
         return new MadGremlinCard();
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
         }
     }

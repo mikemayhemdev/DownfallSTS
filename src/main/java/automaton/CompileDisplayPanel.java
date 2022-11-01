@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 
 public class CompileDisplayPanel extends EasyInfoDisplayPanel {
 
-    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("bronze:CompileDisplayPanel");
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("bronze:CompileDisplayPanel");
 
     public CompileDisplayPanel() {
         super(600, 900, 400);

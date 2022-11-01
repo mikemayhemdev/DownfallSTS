@@ -12,8 +12,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.actions.TriggerSlimeAttacksAction;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.BuffSecondarySlimeEffectsPower;
-import sneckomod.SneckoMod;
 
 
 public class SlimeBarrage extends AbstractSlimeboundCard {
@@ -77,7 +75,6 @@ public class SlimeBarrage extends AbstractSlimeboundCard {
             upgradeName();
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
-
 
 
         }

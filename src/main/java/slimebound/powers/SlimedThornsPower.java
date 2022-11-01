@@ -24,7 +24,7 @@ public class SlimedThornsPower extends AbstractPower {
     public static String[] DESCRIPTIONS;
     public boolean doubleUp = false;
     public boolean triggered = false;
-    private AbstractCreature source;
+    private final AbstractCreature source;
 
 
     public SlimedThornsPower(AbstractCreature owner, AbstractCreature source, int amount) {

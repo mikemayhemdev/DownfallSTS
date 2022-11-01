@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 public class SlimeIntentMovement extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
 
     public AbstractOrb o;
-    private float ox;
+    private final float ox;
 
 
     public SlimeIntentMovement(AbstractOrb o) {

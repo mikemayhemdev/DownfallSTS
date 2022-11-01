@@ -4,10 +4,8 @@ import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.OddlySmoothStone;
-import com.megacrit.cardcrawl.relics.Vajra;
 
 public class CBR_OddlySmoothStone extends AbstractCharbossRelic {
     public static final String ID = "OddlySmoothStone";

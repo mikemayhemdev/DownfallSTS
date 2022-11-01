@@ -29,11 +29,11 @@ public class CollectorSecondDamage extends DynamicVariable {
 
     @Override
     public int baseValue(AbstractCard card) {
-        return ((AbstractCollectorCard ) card).BaseCollectorSecondDamage;
+        return ((AbstractCollectorCard) card).BaseCollectorSecondDamage;
     }
 
     @Override
     public boolean upgraded(AbstractCard card) {
-        return ((AbstractCollectorCard ) card).upgradedCollectorSecondDamage;
+        return ((AbstractCollectorCard) card).upgradedCollectorSecondDamage;
     }
 }

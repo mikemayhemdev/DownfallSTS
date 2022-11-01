@@ -23,23 +23,19 @@ public class Patsy extends AbstractGremlinCard {
     private static final int BLOCK = 4;
     private static final int UPGRADE_BONUS = 2;
 
-    public Patsy()
-    {
+    public Patsy() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseBlock = BLOCK;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
         AbstractDungeon.actionManager.addToBottom(new GremlinSwapAction());
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_BONUS);
         }

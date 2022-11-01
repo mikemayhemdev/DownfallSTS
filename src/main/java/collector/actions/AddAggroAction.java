@@ -16,7 +16,7 @@ public class AddAggroAction extends AbstractGameAction {
 
     public void update() {
         isDone = true;
-        if (CollectorChar.getLivingTorchHead() == null){
+        if (CollectorChar.getLivingTorchHead() == null) {
             return;
         }
         if (FreezeAggroAction.frozen) {

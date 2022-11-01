@@ -25,18 +25,15 @@ public class ScatterPower extends AbstractGremlinPower {
         this.updateDescription();
     }
 
-    public void updateDescription()
-    {
-        if(this.amount == 1) {
+    public void updateDescription() {
+        if (this.amount == 1) {
             this.description = (strings.DESCRIPTIONS[0] + this.amount + strings.DESCRIPTIONS[1]);
-        }
-        else {
+        } else {
             this.description = (strings.DESCRIPTIONS[0] + this.amount + strings.DESCRIPTIONS[2]);
         }
     }
 
-    public int onLoseHp(int damageAmount)
-    {
+    public int onLoseHp(int damageAmount) {
         if (damageAmount > 0) {
             AbstractDungeon.actionManager.addToTop(new RandomGremlinSwapAction());
             AbstractDungeon.actionManager.addToTop(new ReducePowerAction(this.owner, this.owner, this.ID, 1));

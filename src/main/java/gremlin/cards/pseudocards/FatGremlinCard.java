@@ -24,16 +24,14 @@ public class FatGremlinCard extends AbstractGremlinCard {
 
     private static final int COST = 0;
 
-    public FatGremlinCard()
-    {
+    public FatGremlinCard() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.dontTriggerOnUseCard = true;
         this.tags.add(FAT_GREMLIN);
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         onChoseThisOption();
     }
 
@@ -41,15 +39,12 @@ public class FatGremlinCard extends AbstractGremlinCard {
         AbstractDungeon.actionManager.addToBottom(new GremlinSwapAction(new FatGremlin(0)));
     }
 
-    public AbstractCard makeCopy()
-    {
+    public AbstractCard makeCopy() {
         return new FatGremlinCard();
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
         }
     }

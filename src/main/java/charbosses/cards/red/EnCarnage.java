@@ -30,13 +30,13 @@ public class EnCarnage extends AbstractBossCard {
         if (Settings.FAST_MODE) {
             this.addToBot(new VFXAction(new ViolentAttackEffect(p.hb.cX, p.hb.cY, Color.RED.cpy())));
 
-            for(i = 0; i < 5; ++i) {
+            for (i = 0; i < 5; ++i) {
                 this.addToBot(new VFXAction(new StarBounceEffect(p.hb.cX, p.hb.cY)));
             }
         } else {
             this.addToBot(new VFXAction(new ViolentAttackEffect(p.hb.cX, p.hb.cY, Color.RED.cpy()), 0.4F));
 
-            for(i = 0; i < 5; ++i) {
+            for (i = 0; i < 5; ++i) {
                 this.addToBot(new VFXAction(new StarBounceEffect(p.hb.cX, m.hb.cY)));
             }
         }

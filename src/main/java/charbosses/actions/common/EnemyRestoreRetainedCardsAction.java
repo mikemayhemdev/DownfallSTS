@@ -8,8 +8,8 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import java.util.Iterator;
 
 public class EnemyRestoreRetainedCardsAction extends AbstractGameAction {
-    private CardGroup group;
-    private AbstractCharBoss boss;
+    private final CardGroup group;
+    private final AbstractCharBoss boss;
 
     public EnemyRestoreRetainedCardsAction(AbstractCharBoss boss, final CardGroup group) {
         this.setValues(boss, this.source, -1);

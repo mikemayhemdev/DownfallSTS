@@ -1,13 +1,10 @@
 package charbosses.cards.purple;
 
 import charbosses.actions.unique.EnemyChangeStanceAction;
-import charbosses.cards.AbstractBossCard;
 import charbosses.powers.cardpowers.EnemyFearNoEvilPower;
-import charbosses.powers.cardpowers.EnemySpotWeaknessPower;
 import charbosses.stances.AbstractEnemyStance;
 import charbosses.stances.EnCalmStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -16,7 +13,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import java.util.ArrayList;
 
@@ -44,7 +40,7 @@ public class EnFearNoEvil extends AbstractStanceChangeCard {
                 this.addToBot(new EnemyChangeStanceAction("Calm"));
             }
             this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, power));
-            System.out.println("Removed " +EnemyFearNoEvilPower.POWER_ID + ": " + m.hasPower(EnemyFearNoEvilPower.POWER_ID));
+            System.out.println("Removed " + EnemyFearNoEvilPower.POWER_ID + ": " + m.hasPower(EnemyFearNoEvilPower.POWER_ID));
         }
     }
 

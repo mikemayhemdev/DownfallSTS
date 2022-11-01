@@ -1,7 +1,6 @@
 package downfall.vfx;
 
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.relics.AbstractCharbossRelic;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
@@ -20,7 +19,6 @@ import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
 import downfall.actions.BanditIOUAction;
 import downfall.relics.RedIOUUpgrade;
-import slimebound.SlimeboundMod;
 
 public class BanditIOUEffect extends AbstractGameEffect {
 
@@ -33,9 +31,9 @@ public class BanditIOUEffect extends AbstractGameEffect {
     private float masterTimer = 1.1f;
     private StoryBeats currentBeat = StoryBeats.ROMEOIN;
 
-    private CustomAnimatedNPC romeo;
-    private CustomAnimatedNPC bear;
-    private CustomAnimatedNPC pointy;
+    private final CustomAnimatedNPC romeo;
+    private final CustomAnimatedNPC bear;
+    private final CustomAnimatedNPC pointy;
 
     private BanditAnimType animTypeRomeo = BanditAnimType.ENTER;
     private BanditAnimType animTypeBear = BanditAnimType.ENTER;
@@ -45,42 +43,42 @@ public class BanditIOUEffect extends AbstractGameEffect {
 
     public boolean upgraded = false;
 
-    private String IntroDialog;
-    private String OutroDialog;
-    private String BearDialog;
+    private final String IntroDialog;
+    private final String OutroDialog;
+    private final String BearDialog;
 
     public float pointyStartX;
     public float pointyStartY;
 
-    private float speechOffsetX = 50F * Settings.scale;
-    private float speechOffsetY = 180F * Settings.scale;
+    private final float speechOffsetX = 50F * Settings.scale;
+    private final float speechOffsetY = 180F * Settings.scale;
 
-    private float pointyJumpOutX = 500F * Settings.scale;
-    private float pointyJumpOutY = 200F * Settings.scale;
+    private final float pointyJumpOutX = 500F * Settings.scale;
+    private final float pointyJumpOutY = 200F * Settings.scale;
 
-    private float bearJumpOutX = 800F * Settings.scale;
-    private float bearJumpOutY = 400F * Settings.scale;
+    private final float bearJumpOutX = 800F * Settings.scale;
+    private final float bearJumpOutY = 400F * Settings.scale;
 
     public float bearStartX;
-    private float bearStartY = 1080F * Settings.scale;
+    private final float bearStartY = 1080F * Settings.scale;
 
     public float bearLandX;
     public float bearLandY;
 
     private int pointyDamage = 15;
-    private int pointyDamageUpgraded = 25;
+    private final int pointyDamageUpgraded = 25;
 
     private int bearDamage = 25;
-    private int bearDamageUpgraded = 35;
+    private final int bearDamageUpgraded = 35;
 
     private int bearDexDown = -2;
-    private int bearDexDownUpgraded = -3;
+    private final int bearDexDownUpgraded = -3;
 
     private int romeoDamage = 25;
-    private int romeoDamageUpgraded = 35;
+    private final int romeoDamageUpgraded = 35;
 
     private int romeoWeak = 2;
-    private int romeoWeakUpgraded = 3;
+    private final int romeoWeakUpgraded = 3;
 
     public BanditIOUEffect() {
         this.bear = new CustomAnimatedNPC(-300F * Settings.scale, AbstractDungeon.floorY - 60.0F * Settings.scale, "images/monsters/theCity/bear/skeleton.atlas", "images/monsters/theCity/bear/skeleton.json", "Idle", false, 0);
@@ -118,8 +116,8 @@ public class BanditIOUEffect extends AbstractGameEffect {
         this.romeo.skeleton.setY(this.pointyStartY);
 
         //SlimeboundMod.logger.info(IntroDialog);
-       // SlimeboundMod.logger.info(BearDialog);
-       // SlimeboundMod.logger.info(OutroDialog);
+        // SlimeboundMod.logger.info(BearDialog);
+        // SlimeboundMod.logger.info(OutroDialog);
     }
 
 
@@ -305,7 +303,7 @@ public class BanditIOUEffect extends AbstractGameEffect {
         if (animRomeoTimer > 0F) {
             if (this.animTypeRomeo == BanditAnimType.ENTER) {
                 float Y = Interpolation.linear.apply(pointyJumpOutY + 90F * Settings.scale, AbstractDungeon.floorY - 60.0F * Settings.scale, animRomeoTimer / .5F);
-                float X = Interpolation.linear.apply(800F * Settings.scale, -100F, animRomeoTimer / 1F);
+                float X = Interpolation.linear.apply(800F * Settings.scale, -100F, animRomeoTimer);
                 this.romeo.skeleton.setX(X);
                 this.romeo.skeleton.setY(Y);
                 animRomeoTimer -= Gdx.graphics.getDeltaTime();
@@ -321,7 +319,7 @@ public class BanditIOUEffect extends AbstractGameEffect {
                 this.romeo.skeleton.setY(Y);
                 animRomeoTimer -= Gdx.graphics.getDeltaTime();
             } else if (this.animTypeRomeo == BanditAnimType.EXIT) {
-                float X = Interpolation.linear.apply(-100F, pointyStartX, animRomeoTimer / 1F);
+                float X = Interpolation.linear.apply(-100F, pointyStartX, animRomeoTimer);
 
                 this.romeo.skeleton.setX(X);
                 animRomeoTimer -= Gdx.graphics.getDeltaTime();
@@ -335,8 +333,8 @@ public class BanditIOUEffect extends AbstractGameEffect {
         if (animPointyTimer > 0F) {
             if (this.animTypePointy == BanditAnimType.JUMPOUT) {
 
-                float X = Interpolation.linear.apply(this.pointyJumpOutX, this.pointyStartX + 50F * Settings.scale, animPointyTimer / 1F);
-                float Y = Interpolation.linear.apply(this.pointyJumpOutY, this.pointyStartY - 50F * Settings.scale, animPointyTimer / 1F);
+                float X = Interpolation.linear.apply(this.pointyJumpOutX, this.pointyStartX + 50F * Settings.scale, animPointyTimer);
+                float Y = Interpolation.linear.apply(this.pointyJumpOutY, this.pointyStartY - 50F * Settings.scale, animPointyTimer);
                 this.pointy.skeleton.setX(X);
                 this.pointy.skeleton.setY(Y);
                 this.animPointyTimer -= Gdx.graphics.getDeltaTime();
@@ -345,7 +343,7 @@ public class BanditIOUEffect extends AbstractGameEffect {
                     this.pointy.customFlipX = true;
                 }
             } else if (this.animTypePointy == BanditAnimType.EXIT) {
-                float X = Interpolation.linear.apply(-100F, this.pointyJumpOutX, animPointyTimer / 1F);
+                float X = Interpolation.linear.apply(-100F, this.pointyJumpOutX, animPointyTimer);
 
                 this.pointy.skeleton.setX(X);
                 animPointyTimer -= Gdx.graphics.getDeltaTime();
@@ -365,25 +363,23 @@ public class BanditIOUEffect extends AbstractGameEffect {
 
                 float Rot = Interpolation.linear.apply(90F, 0F, animBearTimer / .3F);
                 this.bear.customRot = Rot;
-                if (animBearTimer < 0F){
+                if (animBearTimer < 0F) {
                     this.bear.customRot = 90F;
                 }
             } else if (this.animTypeBear == BanditAnimType.JUMPIN) {
                 float Rot = Interpolation.linear.apply(0F, 90F, animBearTimer / .2F);
                 this.bear.customRot = Rot;
-                float X = Interpolation.linear.apply(this.bearLandX, bear.skeleton.getX(), animBearTimer / 1F);
-                float Y = Interpolation.linear.apply(this.bearLandY, bear.skeleton.getY(), animBearTimer / 1F);
+                float X = Interpolation.linear.apply(this.bearLandX, bear.skeleton.getX(), animBearTimer);
+                float Y = Interpolation.linear.apply(this.bearLandY, bear.skeleton.getY(), animBearTimer);
 
                 this.bear.skeleton.setX(X);
                 this.bear.skeleton.setY(Y);
 
                 animBearTimer -= Gdx.graphics.getDeltaTime();
-            }
+            } else if (this.animTypeBear == BanditAnimType.JUMPOUT) {
 
-            else if (this.animTypeBear == BanditAnimType.JUMPOUT) {
-
-                float X = Interpolation.linear.apply(this.bearJumpOutX, this.bearLandX, animBearTimer / 1F);
-                float Y = Interpolation.linear.apply(this.bearJumpOutY, this.bearLandY, animBearTimer / 1F);
+                float X = Interpolation.linear.apply(this.bearJumpOutX, this.bearLandX, animBearTimer);
+                float Y = Interpolation.linear.apply(this.bearJumpOutY, this.bearLandY, animBearTimer);
 
 
                 this.bear.skeleton.setX(X);
@@ -397,7 +393,7 @@ public class BanditIOUEffect extends AbstractGameEffect {
                     this.bear.customFlipX = true;
                 }
             } else if (this.animTypeBear == BanditAnimType.EXIT) {
-                float X = Interpolation.linear.apply(-100F, this.bearJumpOutX, animBearTimer / 1F);
+                float X = Interpolation.linear.apply(-100F, this.bearJumpOutX, animBearTimer);
 
                 this.bear.skeleton.setX(X);
                 animBearTimer -= Gdx.graphics.getDeltaTime();

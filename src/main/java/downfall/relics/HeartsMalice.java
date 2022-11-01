@@ -48,8 +48,8 @@ public class HeartsMalice extends CustomRelic {
 
             this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 
-            if(AbstractDungeon.player instanceof GremlinCharacter) {
-                ((GremlinCharacter) AbstractDungeon.player).mobState.startOfBattle((GremlinCharacter)AbstractDungeon.player);
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+                ((GremlinCharacter) AbstractDungeon.player).mobState.startOfBattle((GremlinCharacter) AbstractDungeon.player);
             }
         }
 

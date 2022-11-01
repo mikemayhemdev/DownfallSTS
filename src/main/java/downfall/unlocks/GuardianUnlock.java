@@ -2,7 +2,6 @@ package downfall.unlocks;
 
 import com.megacrit.cardcrawl.core.Settings;
 import downfall.downfallMod;
-import guardian.patches.GuardianEnum;
 
 public class GuardianUnlock extends com.megacrit.cardcrawl.unlock.AbstractUnlock {
     public static final String KEY = "Guardian";

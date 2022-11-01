@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 public class DividerAction extends AbstractGameAction {
     private static final float DURATION = 0.01F;
     private static final float POST_ATTACK_WAIT_DUR = 0.2F;
-    private DamageInfo info;
+    private final DamageInfo info;
     private int numTimes;
 
     public DividerAction(AbstractCreature target, DamageInfo info, int numTimes) {

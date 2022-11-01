@@ -22,18 +22,18 @@ import java.util.ArrayList;
 public class LickEffect extends AbstractGameEffect {
     private static final float DUR = 0.6F;
     private static Texture img;
-    private float tX;
-    private float tY;
-    private float dY;
-    private float cX;
+    private final float tX;
+    private final float tY;
+    private final float dY;
+    private final float cX;
     private float cY;
     private boolean playedSfx = false;
-    private boolean rain = false;
-    private float height = 100f;
+    private final boolean rain = false;
+    private final float height = 100f;
     private float alpha = 100f;
-    private Color tongueColor;
+    private final Color tongueColor;
 
-    private ArrayList<Vector2> previousPos = new ArrayList();
+    private final ArrayList<Vector2> previousPos = new ArrayList();
 
     public LickEffect(float tX, float tY, float duration, Color tongueColor) {
         if (img == null) {

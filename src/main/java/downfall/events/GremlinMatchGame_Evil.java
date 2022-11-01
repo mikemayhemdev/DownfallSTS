@@ -27,7 +27,6 @@ import com.megacrit.cardcrawl.monsters.exordium.GremlinNob;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.relics.GremlinSack;
-import slimebound.SlimeboundMod;
 
 import java.util.*;
 
@@ -59,11 +58,11 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
     private boolean cleanUpCalled = false;
     private boolean threatened = false;
     private int attemptCount = 5;
-    private CardGroup cards;
+    private final CardGroup cards;
     private float waitTimer;
     private int cardsMatched;
     private GremlinMatchGame_Evil.CUR_SCREEN screen;
-    private List<String> matchedCards;
+    private final List<String> matchedCards;
 
     public GremlinMatchGame_Evil() {
         super(NAME, DESCRIPTIONS[2], "images/events/matchAndKeep.jpg");
@@ -306,24 +305,20 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
     protected void buttonEffect(int buttonPressed) {
         switch (this.screen) {
             case COMPLETE:
-                switch (buttonPressed) {
-                    case 0:
-                        //SlimeboundMod.logger.info("case default opening map");
-                        logMetricObtainCards(ID, this.cardsMatched + " cards matched", this.matchedCards);
-                        this.openMap();
-                        return;
-
+                if (buttonPressed == 0) {//SlimeboundMod.logger.info("case default opening map");
+                    logMetricObtainCards(ID, this.cardsMatched + " cards matched", this.matchedCards);
+                    this.openMap();
+                    return;
                 }
             case INTRO:
-                switch (buttonPressed) {
-                    case 0:
-                        this.imageEventText.updateBodyText(MSG_2);
-                        this.imageEventText.removeDialogOption(1);
-                        this.imageEventText.updateDialogOption(0, OPTIONS[2]);
-                        this.imageEventText.setDialogOption(OPTIONS[4]);
-                        //SlimeboundMod.logger.info("case intro opening rule explanation");
-                        this.screen = GremlinMatchGame_Evil.CUR_SCREEN.RULE_EXPLANATION;
-                        return;
+                if (buttonPressed == 0) {
+                    this.imageEventText.updateBodyText(MSG_2);
+                    this.imageEventText.removeDialogOption(1);
+                    this.imageEventText.updateDialogOption(0, OPTIONS[2]);
+                    this.imageEventText.setDialogOption(OPTIONS[4]);
+                    //SlimeboundMod.logger.info("case intro opening rule explanation");
+                    this.screen = CUR_SCREEN.RULE_EXPLANATION;
+                    return;
                 }
             case RULE_EXPLANATION:
                 switch (buttonPressed) {
@@ -343,9 +338,8 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                             this.imageEventText.updateBodyText(MSG_4);
                             //SlimeboundMod.logger.info("threatened");
                             imageEventText.removeDialogOption(1);
-                            this.imageEventText.setDialogOption(OPTIONS[5],  new GremlinSack());
+                            this.imageEventText.setDialogOption(OPTIONS[5], new GremlinSack());
                             this.threatened = true;
-                            return;
                         } else {
                             this.screen = CUR_SCREEN.FIGHT;
                             //SlimeboundMod.logger.info("fight");
@@ -363,7 +357,6 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                             AbstractDungeon.lastCombatMetricKey = "Match Game Nob";
                             this.imageEventText.clearRemainingOptions();
                             this.enterCombatFromImage();
-                            return;
                         }
                 }
 

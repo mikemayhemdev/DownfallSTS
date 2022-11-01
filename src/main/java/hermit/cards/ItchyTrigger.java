@@ -1,6 +1,5 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -125,41 +124,41 @@ public class ItchyTrigger extends AbstractDynamicCard {
 
     public void itchyTrigger() {
 
-            ArrayList<AbstractCard> groupCopy = new ArrayList();
-            Iterator var4 = AbstractDungeon.player.hand.group.iterator();
+        ArrayList<AbstractCard> groupCopy = new ArrayList();
+        Iterator var4 = AbstractDungeon.player.hand.group.iterator();
 
 
-            while(var4.hasNext()) {
-                AbstractCard c = (AbstractCard)var4.next();
-                if (c.cost > 0 && c.costForTurn > 0 && !c.freeToPlayOnce) {
-                    groupCopy.add(c);
-                }
+        while (var4.hasNext()) {
+            AbstractCard c = (AbstractCard) var4.next();
+            if (c.cost > 0 && c.costForTurn > 0 && !c.freeToPlayOnce) {
+                groupCopy.add(c);
+            }
+        }
+
+        var4 = AbstractDungeon.actionManager.cardQueue.iterator();
+
+        while (var4.hasNext()) {
+            CardQueueItem i = (CardQueueItem) var4.next();
+            if (i.card != null) {
+                groupCopy.remove(i.card);
+            }
+        }
+
+        AbstractCard c = null;
+        if (!groupCopy.isEmpty()) {
+
+            Iterator var9 = groupCopy.iterator();
+
+            while (var9.hasNext()) {
+                AbstractCard cc = (AbstractCard) var9.next();
             }
 
-            var4 = AbstractDungeon.actionManager.cardQueue.iterator();
+            c = groupCopy.get(AbstractDungeon.cardRandomRng.random(0, groupCopy.size() - 1));
+        }
 
-            while(var4.hasNext()) {
-                CardQueueItem i = (CardQueueItem)var4.next();
-                if (i.card != null) {
-                    groupCopy.remove(i.card);
-                }
-            }
-
-            AbstractCard c = null;
-            if (!groupCopy.isEmpty()) {
-
-                Iterator var9 = groupCopy.iterator();
-
-                while(var9.hasNext()) {
-                    AbstractCard cc = (AbstractCard)var9.next();
-                }
-
-                c = (AbstractCard)groupCopy.get(AbstractDungeon.cardRandomRng.random(0, groupCopy.size() - 1));
-            }
-
-            if (c != null) {
-                c.setCostForTurn(Math.max(c.cost-this.magicNumber,0));
-            }
+        if (c != null) {
+            c.setCostForTurn(Math.max(c.cost - this.magicNumber, 0));
+        }
 
 
     }

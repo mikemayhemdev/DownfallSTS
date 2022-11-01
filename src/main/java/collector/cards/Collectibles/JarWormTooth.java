@@ -8,7 +8,7 @@ public class JarWormTooth extends AbstractCollectibleCard {
     public final static String ID = makeID("JarWormTooth");
 
     public JarWormTooth() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF,CollectorCardSource.FRONT);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, CollectorCardSource.FRONT);
         FrontBlock = FrontBaseBlock = douBlock = douBaseBlock = block = baseBlock = 2;
         magicNumber = baseMagicNumber = 1;
         this.exhaust = true;
@@ -16,7 +16,7 @@ public class JarWormTooth extends AbstractCollectibleCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToFront(new StrengthPower(p,magicNumber));
+        applyToFront(new StrengthPower(p, magicNumber));
         blck();
     }
 

@@ -14,6 +14,7 @@ public class CBR_CentennialPuzzle extends AbstractCharbossRelic {
     public CBR_CentennialPuzzle() {
         super(new CentennialPuzzle());
     }
+
     private static boolean usedThisCombat = false;
 
 
@@ -55,5 +56,5 @@ public class CBR_CentennialPuzzle extends AbstractCharbossRelic {
     public AbstractRelic makeCopy() {
         return new CBR_CentennialPuzzle();
     }
-    
+
 }

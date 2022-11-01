@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import gremlin.GremlinMod;
 import com.megacrit.cardcrawl.vfx.combat.DaggerSprayEffect;
+import gremlin.GremlinMod;
 
 import static gremlin.GremlinMod.MAD_GREMLIN;
 
@@ -29,8 +29,7 @@ public class DaggerDance extends AbstractGremlinCard {
     private static final int MAGIC = 2;
     private static final int UPGRADE_MAGIC = 1;
 
-    public DaggerDance()
-    {
+    public DaggerDance() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -45,7 +44,7 @@ public class DaggerDance extends AbstractGremlinCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for(int i=0;i<this.magicNumber;i++) {
+        for (int i = 0; i < this.magicNumber; i++) {
             AbstractDungeon.actionManager.addToBottom(
                     new VFXAction(new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0f));
             AbstractDungeon.actionManager.addToBottom(
@@ -56,8 +55,7 @@ public class DaggerDance extends AbstractGremlinCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_MAGIC);
         }

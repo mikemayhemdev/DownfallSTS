@@ -4,8 +4,6 @@ import automaton.util.CardFilter;
 import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.interfaces.*;
-import collector.relics.EmeraldTorch;
-import collector.vars.*;
 import collector.actions.FreezeAggroAction;
 import collector.cards.Collectibles.*;
 import collector.cards.CollectorCards.Attacks.*;
@@ -22,8 +20,10 @@ import collector.patches.TorchHeadPatches.StanceChangeParticlePatch;
 import collector.powers.GainBlockPower;
 import collector.powers.SoulMark;
 import collector.powers.Suffering;
+import collector.relics.EmeraldTorch;
 import collector.util.CollectorSecondDamage;
 import collector.util.TargetMarker;
+import collector.vars.*;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -70,7 +70,7 @@ public class CollectorMod implements
         StartGameSubscriber,
         PostDrawSubscriber,
         OnPowersModifiedSubscriber,
-        PostEnergyRechargeSubscriber  {
+        PostEnergyRechargeSubscriber {
     public static final String SHOULDER1 = "collectorResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "collectorResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "collectorResources/images/char/mainChar/corpse.png";
@@ -100,6 +100,7 @@ public class CollectorMod implements
     public static Color COLLECTIBLE_CARD_COLOR = CardHelper.getColor(13, 158, 153);
     public static int TorchAggro = 0;
     public static TargetMarker targetMarker;
+
     public CollectorMod() {
         BaseMod.subscribe(this);
 
@@ -116,8 +117,9 @@ public class CollectorMod implements
                 "collectorResources/images/512/bg_attack_colorless.png", "collectorResources/images/512/bg_skill_colorless.png",
                 "collectorResources/images/512/bg_power_colorless.png", CARD_ENERGY_S,
                 "collectorResources/images/1024/bg_attack_colorless.png", "collectorResources/images/1024/bg_skill_colorless.png",
-                "collectorResources/images/1024/bg_power_colorless.png",CARD_ENERGY_L,TEXT_ENERGY);
+                "collectorResources/images/1024/bg_power_colorless.png", CARD_ENERGY_L, TEXT_ENERGY);
     }
+
     public static String makePath(String resourcePath) {
         return modID + "Resources/" + resourcePath;
     }
@@ -204,7 +206,7 @@ public class CollectorMod implements
 
     @Override
     public void receiveEditRelics() {
-        BaseMod.addRelicToCustomPool(new EmeraldTorch(),downfallMod.Enums.COLLECTOR);
+        BaseMod.addRelicToCustomPool(new EmeraldTorch(), downfallMod.Enums.COLLECTOR);
     }
 
     public static void ApplyRandomAffliciton(AbstractCreature target, boolean upgraded) {
@@ -221,9 +223,9 @@ public class CollectorMod implements
             } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(4))) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new BurnPower(target, 8)));
             } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(5))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new Suffering(2,target)));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new Suffering(2, target)));
             } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(6))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new SoulMark(2,target)));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new SoulMark(2, target)));
             }
         } else {
             if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(0))) {
@@ -237,21 +239,17 @@ public class CollectorMod implements
             } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(4))) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new BurnPower(target, 11)));
             } else if (AfflictionftoApply.equals(CollectorMod.Afflictions.get(5))) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new Suffering(4,target)));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new Suffering(4, target)));
             }
         }
     }
 
 
-
     public static boolean AfflictionMatch(String stringtocompare) {
-        if (stringtocompare.equals(Afflictions.get(0)) || stringtocompare.equals(Afflictions.get(1)) ||
+        return stringtocompare.equals(Afflictions.get(0)) || stringtocompare.equals(Afflictions.get(1)) ||
                 stringtocompare.equals(Afflictions.get(2)) || stringtocompare.equals(Afflictions.get(3)) ||
                 stringtocompare.equals(Afflictions.get(4)) || stringtocompare.equals(Afflictions.get(5))
-                || stringtocompare.equals(Afflictions.get(6))) {
-            return true;
-        }
-        return false;
+                || stringtocompare.equals(Afflictions.get(6));
     }
 
     public void ApplyRandomBoon(AbstractCreature target, boolean upgraded) {
@@ -268,7 +266,7 @@ public class CollectorMod implements
             } else if (BoontoApply.equals(CollectorMod.Boons.get(4))) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new VigorPower(target, 6)));
             } else if (BoontoApply.equals(CollectorMod.Boons.get(5))) {
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(target,10));
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(target, 10));
             }
         } else {
             if (BoontoApply.equals(CollectorMod.Boons.get(0))) {
@@ -282,45 +280,46 @@ public class CollectorMod implements
             } else if (BoontoApply.equals(CollectorMod.Boons.get(4))) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new VigorPower(target, 9)));
             } else if (BoontoApply.equals(CollectorMod.Boons.get(5))) {
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(target,15));
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(target, 15));
             }
         }
     }
 
-    public static AbstractPower GetRandomBoon(AbstractCreature target, boolean upgraded){
-        String BoontoApply= Boons.get((AbstractDungeon.cardRandomRng.random(Boons.size() - 1)));
+    public static AbstractPower GetRandomBoon(AbstractCreature target, boolean upgraded) {
+        String BoontoApply = Boons.get((AbstractDungeon.cardRandomRng.random(Boons.size() - 1)));
         if (BoontoApply.equals(CollectorMod.Boons.get(0))) {
-            return new StrengthPower(target, upgraded? 3 : 2);
+            return new StrengthPower(target, upgraded ? 3 : 2);
         } else if (BoontoApply.equals(CollectorMod.Boons.get(1))) {
-            return new DexterityPower(target, upgraded? 2 : 1);
+            return new DexterityPower(target, upgraded ? 2 : 1);
         } else if (BoontoApply.equals(CollectorMod.Boons.get(2))) {
-            return new ArtifactPower(target, upgraded? 2 : 1);
+            return new ArtifactPower(target, upgraded ? 2 : 1);
         } else if (BoontoApply.equals(CollectorMod.Boons.get(3))) {
-            return new PlatedArmorPower(target, upgraded? 4 : 3);
+            return new PlatedArmorPower(target, upgraded ? 4 : 3);
         } else if (BoontoApply.equals(CollectorMod.Boons.get(4))) {
-            return new VigorPower(target, upgraded? 9 : 6);
+            return new VigorPower(target, upgraded ? 9 : 6);
         } else if (BoontoApply.equals(CollectorMod.Boons.get(5))) {
-            return new GainBlockPower(upgraded? 15 : 10, target);
+            return new GainBlockPower(upgraded ? 15 : 10, target);
         }
         System.out.println("Invalid Value in Boons Array, Defaulting to 10 Block. please report this to the mod developer");
         return new GainBlockPower(10, target);
     }
-    public static AbstractPower GetRandomAffliction(AbstractCreature target, boolean upgraded){
-        String AfflictiontoApply= Afflictions.get((AbstractDungeon.cardRandomRng.random(Afflictions.size() - 1)));
+
+    public static AbstractPower GetRandomAffliction(AbstractCreature target, boolean upgraded) {
+        String AfflictiontoApply = Afflictions.get((AbstractDungeon.cardRandomRng.random(Afflictions.size() - 1)));
         if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(0))) {
-            return new WeakPower(target, upgraded? 2 : 1,false);
+            return new WeakPower(target, upgraded ? 2 : 1, false);
         } else if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(1))) {
-            return new VulnerablePower(target, upgraded? 2 : 1,false);
+            return new VulnerablePower(target, upgraded ? 2 : 1, false);
         } else if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(2))) {
-            return new PoisonPower(target,AbstractDungeon.player, upgraded? 4 : 3);
+            return new PoisonPower(target, AbstractDungeon.player, upgraded ? 4 : 3);
         } else if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(3))) {
-            return new SlimedPower(target,AbstractDungeon.player, upgraded? 6 : 4);
+            return new SlimedPower(target, AbstractDungeon.player, upgraded ? 6 : 4);
         } else if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(4))) {
-            return new BurnPower(target, upgraded? 11 : 8);
+            return new BurnPower(target, upgraded ? 11 : 8);
         } else if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(5))) {
-            return new Suffering(upgraded? 4 : 2, target);
-        }else if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(6))) {
-            return new SoulMark(upgraded? 3 : 2, target);
+            return new Suffering(upgraded ? 4 : 2, target);
+        } else if (AfflictiontoApply.equals(CollectorMod.Afflictions.get(6))) {
+            return new SoulMark(upgraded ? 3 : 2, target);
         }
         System.out.println("Invalid Value in Boons Array, Defaulting to 10 Block. please report this to the mod developer");
         return new GainBlockPower(10, target);
@@ -488,14 +487,15 @@ public class CollectorMod implements
         //CollectorChar.TorchHeadHelper = new TorchHeadHelper();
         //System.out.println("Torch Friend!");
     }
+
     @Override
     public void receivePowersModified() {
         if (AbstractDungeon.currMapNode != null &&
                 AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT &&
-                AbstractDungeon.player instanceof CollectorChar
+                AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_COLLECTOR)
         ) {
             ArrayList<PowerTip> tips = new ArrayList<>();
-            TorchChar d = ((CollectorChar) AbstractDungeon.player).torch;
+            TorchChar d = CollectorChar.torch;
             if (d.isDead) {
                 tips.add(new PowerTip(TorchChar.characterStrings.NAMES[0], TorchChar.characterStrings.TEXT[0]));
             } else {
@@ -523,10 +523,12 @@ public class CollectorMod implements
 
         receivePostEnergyRecharge();
     }
+
     @Override
     public void receivePostEnergyRecharge() {
         CollectorChar.frontChangedThisTurn = false;
     }
+
     public static CardGroup getRareCards() {
         CardGroup retVal = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 

@@ -16,19 +16,13 @@ import champ.potions.TechPotion;
 import champ.potions.UltimateStancePotion;
 import champ.powers.CounterPower;
 import champ.powers.ResolvePower;
-import champ.stances.BerserkerStance;
-import champ.stances.DefensiveStance;
-import champ.util.OnOpenerSubscriber;
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import champ.relics.*;
 import champ.stances.AbstractChampStance;
+import champ.stances.BerserkerStance;
+import champ.stances.DefensiveStance;
 import champ.util.CardFilter;
 import champ.util.CoolVariable;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import downfall.patches.BanSharedContentPatch;
-import downfall.util.TextureLoader;
+import champ.util.OnOpenerSubscriber;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -38,6 +32,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -47,17 +42,18 @@ import com.megacrit.cardcrawl.events.city.Colosseum;
 import com.megacrit.cardcrawl.events.city.TheLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import downfall.downfallMod;
+import downfall.patches.BanSharedContentPatch;
 import downfall.util.CardIgnore;
-import guardian.cards.AbstractGuardianCard;
-import hermit.cards.AbstractHermitCard;
+import downfall.util.TextureLoader;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import theHexaghost.cards.AbstractHexaCard;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -282,7 +278,8 @@ public class ChampMod implements
         BaseMod.addDynamicVariable(new CoolVariable());
         try {
             autoAddCards();
-        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
+        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException |
+                 ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
@@ -353,7 +350,7 @@ public class ChampMod implements
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
-        if (AbstractDungeon.player instanceof ChampChar) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_CHAMP)) {
             if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
                 AbstractDungeon.player.stance = new NeutralStance();
                 ChampChar c = (ChampChar) AbstractDungeon.player;
@@ -398,7 +395,7 @@ public class ChampMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Colosseum_Evil_Champ.ID, Colosseum_Evil_Champ.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode && AbstractDungeon.player instanceof ChampChar)
+                .spawnCondition(() -> evilMode && AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_CHAMP))
                 //Event ID to Override//
                 .overrideEvent(Colosseum.ID)
                 //Event Type//
@@ -407,7 +404,7 @@ public class ChampMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Library_Champ.ID, Library_Champ.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> AbstractDungeon.player instanceof ChampChar)
+                .playerClass(downfallMod.Enums.THE_CHAMP)
                 //Event ID to Override//
                 .overrideEvent(TheLibrary.ID)
                 //Event Type//

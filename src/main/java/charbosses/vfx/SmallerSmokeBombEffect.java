@@ -7,8 +7,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class SmallerSmokeBombEffect extends AbstractGameEffect {
-    private float x;
-    private float y;
+    private final float x;
+    private final float y;
 
     public SmallerSmokeBombEffect(float x, float y) {
         this.x = x;
@@ -20,7 +20,7 @@ public class SmallerSmokeBombEffect extends AbstractGameEffect {
         if (this.duration == 0.2F) {
             CardCrawlGame.sound.play("ATTACK_WHIFF_2");
 
-            for(int i = 0; i < 90; ++i) {
+            for (int i = 0; i < 90; ++i) {
                 AbstractDungeon.effectsQueue.add(new ReasonableAmountOfSmoke(this.x, this.y));
             }
         }

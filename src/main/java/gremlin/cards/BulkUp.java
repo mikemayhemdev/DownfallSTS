@@ -26,8 +26,7 @@ public class BulkUp extends AbstractGremlinCard {
     private static final int MAGIC = 5;
     private static final int UPGRADE_BONUS = 2;
 
-    public BulkUp()
-    {
+    public BulkUp() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -36,16 +35,13 @@ public class BulkUp extends AbstractGremlinCard {
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(p, p, this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new GremlinSwapAction(new FatGremlin(0)));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_BONUS);
         }

@@ -1,29 +1,22 @@
 package hermit.powers;
 
-import basemod.abstracts.cardbuilder.actionbuilder.PoisonActionBuilder;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.unique.PoisonLoseHpAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.red.SwordBoomerang;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.PoisonPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import hermit.HermitMod;
 import hermit.patches.EnumPatch;
 import hermit.relics.RyeStalk;
-import hermit.relics.Spyglass;
 import hermit.util.TextureLoader;
 
 import static hermit.HermitMod.makePowerPath;
@@ -56,7 +49,7 @@ public class Bruise extends AbstractPower implements CloneablePowerInterface, He
         type = PowerType.DEBUFF;
 
         if (this.amount <= 0) {
-            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.POWER_ID));
+            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
         }
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
@@ -69,7 +62,7 @@ public class Bruise extends AbstractPower implements CloneablePowerInterface, He
 
     public float atDamageReceive(float damage, DamageInfo.DamageType type) {
         if (type == DamageInfo.DamageType.NORMAL) {
-            return damage +this.amount;
+            return damage + this.amount;
         } else {
             return damage;
         }
@@ -77,9 +70,9 @@ public class Bruise extends AbstractPower implements CloneablePowerInterface, He
 
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type == DamageInfo.DamageType.NORMAL) {
-                this.flashWithoutSound();
-                //this.addToTop(new ReducePowerAction(this.owner, this.owner, this.ID, 1));
-                //updateDescription();
+            this.flashWithoutSound();
+            //this.addToTop(new ReducePowerAction(this.owner, this.owner, this.ID, 1));
+            //updateDescription();
         }
 
         return damageAmount;
@@ -91,8 +84,7 @@ public class Bruise extends AbstractPower implements CloneablePowerInterface, He
                 this.flashWithoutSound();
                 this.addToBot(new PoisonLoseHpAction(this.owner, this.source, this.amount, EnumPatch.HERMIT_GHOSTFIRE));
             }
-            if (!this.owner.hasPower(HorrorPower.POWER_ID))
-            {
+            if (!this.owner.hasPower(HorrorPower.POWER_ID)) {
                 this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
             }
         }
@@ -105,17 +97,15 @@ public class Bruise extends AbstractPower implements CloneablePowerInterface, He
     }
 
     @Override
-    public int getHealthBarAmount(){
+    public int getHealthBarAmount() {
         if (AbstractDungeon.player.hasRelic(RyeStalk.ID)) {
             return this.amount;
-        }
-        else
+        } else
             return 0;
     }
 
     @Override
-    public Color getColor()
-    {
+    public Color getColor() {
         return Color.CYAN;
     }
 

@@ -1,9 +1,6 @@
 package hermit.potions;
 
 import basemod.ReflectionHacks;
-import com.badlogic.gdx.Gdx;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,13 +8,9 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.vfx.FlashPotionEffect;
 import hermit.HermitMod;
 import hermit.actions.EclipseAction;
-import hermit.powers.Rugged;
 import hermit.util.TextureLoader;
-
-import java.util.Iterator;
 
 public class Eclipse extends AbstractPotion {
 
@@ -40,26 +33,23 @@ public class Eclipse extends AbstractPotion {
 
         // Potency is the damage/magic number equivalent of potions.
         potency = getPotency();
-        
+
         // Initialize the Description
         description = DESCRIPTIONS[0] + potency + DESCRIPTIONS[1];
 
         labOutlineColor = HermitMod.HERMIT_YELLOW;
-        
-       // Do you throw this potion at an enemy or do you just consume it.
+
+        // Do you throw this potion at an enemy or do you just consume it.
         isThrown = false;
     }
 
     @Override
-    public void initializeData()
-    {
+    public void initializeData() {
         potency = getPotency();
 
         if (potency == 1) {
             description = DESCRIPTIONS[0] + potency + DESCRIPTIONS[1];
-        }
-        else
-        {
+        } else {
             description = DESCRIPTIONS[0] + potency + DESCRIPTIONS[2];
         }
 
@@ -87,7 +77,7 @@ public class Eclipse extends AbstractPotion {
             AbstractDungeon.actionManager.addToBottom(new EclipseAction(potency));
         }
     }
-    
+
     @Override
     public AbstractPotion makeCopy() {
         return new Eclipse();
@@ -99,10 +89,9 @@ public class Eclipse extends AbstractPotion {
         return 1;
     }
 
-    public void upgradePotion()
-    {
-      potency += 1;
-      tips.clear();
-      tips.add(new PowerTip(name, description));
+    public void upgradePotion() {
+        potency += 1;
+        tips.clear();
+        tips.add(new PowerTip(name, description));
     }
 }

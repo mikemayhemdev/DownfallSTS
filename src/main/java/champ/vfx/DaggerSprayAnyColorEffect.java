@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class DaggerSprayAnyColorEffect extends AbstractGameEffect {
-    private boolean flipX;
+    private final boolean flipX;
 
     public DaggerSprayAnyColorEffect(boolean shouldFlip, Color clr) {
         this.color = clr.cpy();
@@ -25,14 +25,14 @@ public class DaggerSprayAnyColorEffect extends AbstractGameEffect {
         int i;
         float x;
         if (this.flipX) {
-            for(i = 12; i > 0; --i) {
+            for (i = 12; i > 0; --i) {
                 x = AbstractDungeon.player.hb.cX - MathUtils.random(0.0F, 450.0F) * Settings.scale;
-                AbstractDungeon.effectsQueue.add(new FlyingDaggerAnyColorEffect(x, AbstractDungeon.player.hb.cY + 120.0F * Settings.scale + (float)i * -18.0F * Settings.scale, (float)(i * 4) - 30.0F, true, color));
+                AbstractDungeon.effectsQueue.add(new FlyingDaggerAnyColorEffect(x, AbstractDungeon.player.hb.cY + 120.0F * Settings.scale + (float) i * -18.0F * Settings.scale, (float) (i * 4) - 30.0F, true, color));
             }
         } else {
-            for(i = 0; i < 12; ++i) {
+            for (i = 0; i < 12; ++i) {
                 x = AbstractDungeon.player.hb.cX + MathUtils.random(0.0F, 450.0F) * Settings.scale;
-                AbstractDungeon.effectsQueue.add(new FlyingDaggerAnyColorEffect(x, AbstractDungeon.player.hb.cY - 100.0F * Settings.scale + (float)i * 18.0F * Settings.scale, (float)(i * 4) - 20.0F, false, color));
+                AbstractDungeon.effectsQueue.add(new FlyingDaggerAnyColorEffect(x, AbstractDungeon.player.hb.cY - 100.0F * Settings.scale + (float) i * 18.0F * Settings.scale, (float) (i * 4) - 20.0F, false, color));
             }
         }
 

@@ -8,20 +8,15 @@ package slimebound.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.colorless.Madness;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import slimebound.SlimeboundMod;
 import slimebound.cards.Lick;
 
-import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Map;
 
 public class DissolveAction extends AbstractGameAction {
     public static final String[] TEXT;
@@ -33,11 +28,11 @@ public class DissolveAction extends AbstractGameAction {
         TEXT = uiStrings.TEXT;
     }
 
-    private AbstractPlayer p;
-    private boolean isRandom;
-    private boolean anyNumber;
+    private final AbstractPlayer p;
+    private final boolean isRandom;
+    private final boolean anyNumber;
     private boolean canPickZero;
-    private int block;
+    private final int block;
     private int extraCards;
 
     public DissolveAction(AbstractCreature target, AbstractCreature source, int amount, boolean isRandom, int block, int blockUnc) {

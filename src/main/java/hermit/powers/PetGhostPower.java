@@ -1,9 +1,6 @@
 package hermit.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -12,9 +9,6 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import hermit.HermitMod;
 import hermit.relics.PetGhost;
-import hermit.util.TextureLoader;
-
-import static hermit.HermitMod.makePowerPath;
 
 //Gain 1 dex for the turn for each card played.
 
@@ -38,7 +32,7 @@ public class PetGhostPower extends AbstractPower implements CloneablePowerInterf
         this.owner = owner;
         this.amount = amount;
 
-        prepDeath=false;
+        prepDeath = false;
 
         type = PowerType.BUFF;
 
@@ -49,13 +43,13 @@ public class PetGhostPower extends AbstractPower implements CloneablePowerInterf
 
     @Override
     public void atStartOfTurn() { // At the start of your turn
-        prepDeath=true;
+        prepDeath = true;
     }
 
     public void atEndOfTurn(boolean isPlayer) {
         if (prepDeath) {
             this.flash();
-            parent.canDie=true;
+            parent.canDie = true;
             this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
             this.addToBot(new LoseHPAction(this.owner, this.owner, 99999));
         }
@@ -67,9 +61,9 @@ public class PetGhostPower extends AbstractPower implements CloneablePowerInterf
     public void updateDescription() {
 
         if (prepDeath)
-        description = DESCRIPTIONS[0] + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[0] + DESCRIPTIONS[2];
         else
-        description = DESCRIPTIONS[0] +  DESCRIPTIONS[1];
+            description = DESCRIPTIONS[0] + DESCRIPTIONS[1];
 
     }
 

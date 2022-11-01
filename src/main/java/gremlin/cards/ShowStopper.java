@@ -30,8 +30,7 @@ public class ShowStopper extends AbstractGremlinCard {
     private static final int UPGRADE_BONUS = 2;
     private static final int SHOWMANSHIP = 7;
 
-    public ShowStopper()
-    {
+    public ShowStopper() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -45,24 +44,22 @@ public class ShowStopper extends AbstractGremlinCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new GrandFinalEffect(), 1.0F));
-        for(int i=0;i<5;i++) {
+        for (int i = 0; i < 5; i++) {
             AbstractDungeon.actionManager.addToBottom(
                     new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn,
                             AbstractGameAction.AttackEffect.FIRE));
         }
     }
 
-    public boolean canUse(AbstractPlayer p, AbstractMonster m)
-    {
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean canUse = super.canUse(p, m);
         if (!canUse) {
             return false;
         }
-        if (!p.hasPower(WizPower.POWER_ID) || p.getPower(WizPower.POWER_ID).amount < SHOWMANSHIP)
-        {
+        if (!p.hasPower(WizPower.POWER_ID) || p.getPower(WizPower.POWER_ID).amount < SHOWMANSHIP) {
             this.cantUseMessage = strings.EXTENDED_DESCRIPTION[0];
             return false;
-        } else if(p.getPower(WizPower.POWER_ID).amount > SHOWMANSHIP){
+        } else if (p.getPower(WizPower.POWER_ID).amount > SHOWMANSHIP) {
             this.cantUseMessage = strings.EXTENDED_DESCRIPTION[1];
             return false;
         }
@@ -71,8 +68,7 @@ public class ShowStopper extends AbstractGremlinCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
         }

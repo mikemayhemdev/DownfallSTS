@@ -55,13 +55,12 @@ public class FatalDesire extends AbstractDynamicCard {
     }
 
 
-
     //Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            isInnate=true;
+            isInnate = true;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

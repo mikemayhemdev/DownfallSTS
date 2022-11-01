@@ -12,21 +12,21 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class GreenFireEffect extends AbstractGameEffect {
     private AtlasRegion img;
-    private float brightness;
+    private final float brightness;
     private float x;
     private float y;
-    private float vX;
-    private float vY;
-    private float startingDuration;
-    private boolean flipX = MathUtils.randomBoolean();
+    private final float vX;
+    private final float vY;
+    private final float startingDuration;
+    private final boolean flipX = MathUtils.randomBoolean();
     private float delayTimer = MathUtils.random(0.1F);
 
     public GreenFireEffect() {
         this.setImg();
         this.startingDuration = 1.5F;
         this.duration = this.startingDuration;
-        this.x = MathUtils.random(0.0F, (float)Settings.WIDTH) - (float)this.img.packedWidth / 2.0F;
-        this.y = MathUtils.random(-200.0F, -400.0F) * Settings.scale - (float)this.img.packedHeight / 2.0F;
+        this.x = MathUtils.random(0.0F, (float) Settings.WIDTH) - (float) this.img.packedWidth / 2.0F;
+        this.y = MathUtils.random(-200.0F, -400.0F) * Settings.scale - (float) this.img.packedHeight / 2.0F;
         this.vX = MathUtils.random(-70.0F, 70.0F) * Settings.scale;
         this.vY = MathUtils.random(500.0F, 1700.0F) * Settings.scale;
         this.color = new Color(1.0F, 1.0F, 1.0F, 0.0F);
@@ -52,7 +52,7 @@ public class GreenFireEffect extends AbstractGameEffect {
             } else if (this.startingDuration - this.duration < 0.75F) {
                 this.color.a = Interpolation.fade.apply(0.0F, this.brightness, (this.startingDuration - this.duration) / 0.75F);
             } else if (this.duration < 1.0F) {
-                this.color.a = Interpolation.fade.apply(0.0F, this.brightness, this.duration / 1.0F);
+                this.color.a = Interpolation.fade.apply(0.0F, this.brightness, this.duration);
             }
 
         }
@@ -79,7 +79,7 @@ public class GreenFireEffect extends AbstractGameEffect {
             this.img.flip(true, false);
         }
 
-        sb.draw(this.img, this.x, this.y, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale * Settings.scale, this.scale * Settings.scale, this.rotation);
+        sb.draw(this.img, this.x, this.y, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale * Settings.scale, this.scale * Settings.scale, this.rotation);
         sb.setBlendFunction(770, 771);
     }
 

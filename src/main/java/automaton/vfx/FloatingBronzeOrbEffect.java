@@ -6,9 +6,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -19,15 +17,15 @@ public class FloatingBronzeOrbEffect extends com.megacrit.cardcrawl.vfx.Abstract
     private static int W;
     public AbstractPlayer p;
     public AbstractMonster m;
-    private float scale = 1F;
-    private Texture img;
+    private final float scale = 1F;
+    private final Texture img;
     public float currentX;
-    private float targetX;
+    private final float targetX;
     public float currentY;
-    private float targetY;
+    private final float targetY;
     private boolean entering;
     private boolean floatinup;
-    private BobEffect bobEffect;
+    private final BobEffect bobEffect;
 
     public FloatingBronzeOrbEffect(AbstractPlayer p) {
         this.duration = 0.5F;

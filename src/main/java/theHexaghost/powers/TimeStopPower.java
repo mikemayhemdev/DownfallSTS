@@ -74,7 +74,7 @@ public class TimeStopPower extends AbstractPower {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, ID));
         } else {
             reducePower(1);
-            if (this.amount == 0){
+            if (this.amount == 0) {
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, ID));
             }
             updateDescription();

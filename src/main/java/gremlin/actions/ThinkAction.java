@@ -6,14 +6,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 
 public class ThinkAction
-        extends AbstractGameAction
-{
-    private String msg;
+        extends AbstractGameAction {
+    private final String msg;
     private boolean used = false;
-    private float bubbleDuration;
+    private final float bubbleDuration;
 
-    public ThinkAction(String text, float duration, float bubbleDuration)
-    {
+    public ThinkAction(String text, float duration, float bubbleDuration) {
         setValues(source, AbstractDungeon.player);
         if (Settings.FAST_MODE) {
             this.duration = Settings.ACTION_DUR_MED;
@@ -25,10 +23,8 @@ public class ThinkAction
         this.bubbleDuration = bubbleDuration;
     }
 
-    public void update()
-    {
-        if (!this.used)
-        {
+    public void update() {
+        if (!this.used) {
             AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, this.bubbleDuration, this.msg, this.source.isPlayer));
             this.used = true;
         }

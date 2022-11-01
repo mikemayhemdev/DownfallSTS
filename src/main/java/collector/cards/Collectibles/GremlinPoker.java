@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 public class GremlinPoker extends AbstractCollectibleCard implements PerpetualCard {
     public final static String ID = makeID("GremlinPoker");
     int perpetualbonus;
+
     public GremlinPoker() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         damage = baseDamage = 3;

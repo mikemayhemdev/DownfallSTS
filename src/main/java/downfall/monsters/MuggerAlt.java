@@ -2,38 +2,29 @@ package downfall.monsters;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
-import com.esotericsoftware.spine.AnimationState.TrackEntry;
-import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.SetMoveAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
-import com.megacrit.cardcrawl.audio.SoundMaster;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.AbstractMonster.Intent;
-import com.megacrit.cardcrawl.random.Random;
 import downfall.downfallMod;
 
-import java.util.ArrayList;
-
-public class MuggerAlt extends AbstractMonster
-{
+public class MuggerAlt extends AbstractMonster {
     public static final String ID = downfallMod.makeID("MuggerAlt");
     private static final MonsterStrings monsterStrings = CardCrawlGame.languagePack.getMonsterStrings("Looter");
     private static final MonsterStrings monsterStringsAlt = CardCrawlGame.languagePack.getMonsterStrings(downfallMod.makeID("MuggerAlt"));
     public static final String NAME = monsterStrings.NAME;
     public static final String[] MOVES = monsterStrings.MOVES;
     public static final String[] DIALOG = monsterStringsAlt.DIALOG;
-    private int swipeDmg;
-    private int bigSwipeDmg;
-    private int escapeDef = 12;
+    private final int swipeDmg;
+    private final int bigSwipeDmg;
+    private final int escapeDef = 12;
     private int speechCount = 0;
     private static final String SLASH_MSG1 = DIALOG[0];
     private static final String SMOKE_BOMB_MSG = DIALOG[1];
@@ -65,13 +56,11 @@ public class MuggerAlt extends AbstractMonster
         loadAnimation("images/monsters/theCity/looterAlt/skeleton.atlas", "images/monsters/theCity/looterAlt/skeleton.json", 1.0F);
 
 
-
         AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
     }
 
-    public void takeTurn()
-    {
+    public void takeTurn() {
         switch (this.nextMove) {
             case 1:
                 if ((this.slashCount == 0 && this.speechCount == 0)) {
@@ -82,19 +71,19 @@ public class MuggerAlt extends AbstractMonster
                 playSfx();
                 AbstractDungeon.actionManager.addToBottom(new AnimateSlowAttackAction(this));
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player,
-                        (DamageInfo)this.damage.get(0)));
+                        this.damage.get(0)));
 
                 this.slashCount += 1;
                 if (this.slashCount == 2) {
                     if (AbstractDungeon.aiRng.randomBoolean(0.5F)) {
-                        setMove((byte)2, AbstractMonster.Intent.DEFEND);
+                        setMove((byte) 2, AbstractMonster.Intent.DEFEND);
                     } else {
-                        AbstractDungeon.actionManager.addToBottom(new SetMoveAction(this, MOVES[0], (byte)4, AbstractMonster.Intent.ATTACK,
-                                ((DamageInfo)this.damage.get(1)).base));
+                        AbstractDungeon.actionManager.addToBottom(new SetMoveAction(this, MOVES[0], (byte) 4, AbstractMonster.Intent.ATTACK,
+                                this.damage.get(1).base));
                     }
                 } else {
-                    AbstractDungeon.actionManager.addToBottom(new SetMoveAction(this, MOVES[1], (byte)1, AbstractMonster.Intent.ATTACK,
-                            ((DamageInfo)this.damage.get(0)).base));
+                    AbstractDungeon.actionManager.addToBottom(new SetMoveAction(this, MOVES[1], (byte) 1, AbstractMonster.Intent.ATTACK,
+                            this.damage.get(0).base));
                 }
                 break;
             case 4:
@@ -102,8 +91,8 @@ public class MuggerAlt extends AbstractMonster
                 this.slashCount += 1;
                 AbstractDungeon.actionManager.addToBottom(new AnimateSlowAttackAction(this));
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player,
-                        (DamageInfo)this.damage.get(1)));
-                setMove((byte)2, AbstractMonster.Intent.DEFEND);
+                        this.damage.get(1)));
+                setMove((byte) 2, AbstractMonster.Intent.DEFEND);
                 break;
             case 2:
                 if (this.speechCount == 1) {
@@ -111,15 +100,14 @@ public class MuggerAlt extends AbstractMonster
                     this.speechCount = 2;
                 }
                 AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(this, this, this.escapeDef));
-                AbstractDungeon.actionManager.addToBottom(new SetMoveAction(this, (byte)1, Intent.ATTACK));
+                AbstractDungeon.actionManager.addToBottom(new SetMoveAction(this, (byte) 1, Intent.ATTACK));
                 this.slashCount = 0;
                 break;
         }
 
     }
 
-    private void playSfx()
-    {
+    private void playSfx() {
         int roll = MathUtils.random(2);
         if (roll == 0) {
             AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_MUGGER_1A"));
@@ -137,8 +125,7 @@ public class MuggerAlt extends AbstractMonster
         }
     }
 
-    public void die()
-    {
+    public void die() {
         playDeathSfx();
         this.state.setTimeScale(0.1F);
         useShakeAnimation(5.0F);
@@ -146,9 +133,8 @@ public class MuggerAlt extends AbstractMonster
         super.die();
     }
 
-    protected void getMove(int num)
-    {
-        setMove((byte)1, AbstractMonster.Intent.ATTACK, ((DamageInfo)this.damage.get(0)).base);
+    protected void getMove(int num) {
+        setMove((byte) 1, AbstractMonster.Intent.ATTACK, this.damage.get(0).base);
     }
 }
 

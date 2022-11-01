@@ -16,8 +16,8 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class GoopCardFlash extends AbstractGameEffect {
-    private AbstractCard card;
-    private Texture img;
+    private final AbstractCard card;
+    private final Texture img;
     private float yScale;
     private boolean isSuper;
     private boolean backwards;

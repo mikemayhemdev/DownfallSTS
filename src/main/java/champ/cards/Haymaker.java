@@ -4,8 +4,6 @@ import champ.ChampMod;
 import champ.actions.AnimateSuplexAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static champ.ChampMod.loadJokeCardImage;
@@ -31,10 +29,10 @@ public class Haymaker extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new AnimateSuplexAction(m));
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        
+
         //if (dcombo())
-            applyToEnemy(m, autoVuln(m, 2));
-            applyToEnemy(m, autoWeak(m, 2));
+        applyToEnemy(m, autoVuln(m, 2));
+        applyToEnemy(m, autoWeak(m, 2));
 
         finisher();
     }

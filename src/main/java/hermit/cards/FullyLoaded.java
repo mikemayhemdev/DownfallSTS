@@ -7,8 +7,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import guardian.cards.PackageAutomaton;
-import guardian.cards.PackageDonuDeca;
 import hermit.HermitMod;
 import hermit.actions.FullyLoadedAction;
 import hermit.actions.SoundAction;
@@ -47,17 +45,16 @@ public class FullyLoaded extends AbstractDynamicCard {
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
 
-
     private static final int COST = 0;
     private float rotationTimer;
     private int previewIndex;
-    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
+    private final ArrayList<AbstractCard> cardsList = new ArrayList<>();
 
     // /STAT DECLARATION/
 
     public FullyLoaded() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.exhaust=true;
+        this.exhaust = true;
         cardsList.add(new Strike_Hermit());
         cardsList.add(new Defend_Hermit());
         loadJokeCardImage(this, "fully_loaded.png");

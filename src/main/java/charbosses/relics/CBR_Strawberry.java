@@ -1,8 +1,6 @@
 package charbosses.relics;
 
-import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.Mango;
 import com.megacrit.cardcrawl.relics.Strawberry;
 
 public class CBR_Strawberry extends AbstractCharbossRelic {

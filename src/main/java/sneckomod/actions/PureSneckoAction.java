@@ -13,7 +13,7 @@ import sneckomod.SneckoMod;
 
 public class PureSneckoAction extends AbstractGameAction {
     public AbstractPlayer p;
-    private boolean up;
+    private final boolean up;
 
     public PureSneckoAction(AbstractPlayer p, boolean upgraded) {
         this.p = p;

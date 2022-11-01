@@ -8,7 +8,7 @@ import guardian.orbs.StasisOrb;
 
 
 public class StasisEvokeIfRoomInHandAction extends AbstractGameAction {
-    private StasisOrb orb;
+    private final StasisOrb orb;
 
     public StasisEvokeIfRoomInHandAction(StasisOrb orb) {
         this.duration = Settings.ACTION_DUR_FAST;

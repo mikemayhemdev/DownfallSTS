@@ -14,10 +14,10 @@ import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 public class MultiLickAction extends AbstractGameAction {
     private static final float DURATION = 0.01F;
     private static final float POST_ATTACK_WAIT_DUR = 0.2F;
-    private DamageInfo info;
+    private final DamageInfo info;
     private int numTimes;
     private int energyOnUse = -1;
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
 
 
     public MultiLickAction(AbstractPlayer player, AbstractCreature target, DamageInfo info, int energyOnuse) {

@@ -7,8 +7,8 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import downfall.downfallMod;
 import downfall.cards.curses.Icky;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
@@ -33,7 +33,7 @@ public class WorldOfGoop_Evil extends AbstractImageEvent {
     }
 
     private CurScreen screen;
-    private int gold;
+    private final int gold;
 
     public WorldOfGoop_Evil() {
         super(NAME, DIALOG_1, "images/events/goopPuddle.jpg");
@@ -62,59 +62,57 @@ public class WorldOfGoop_Evil extends AbstractImageEvent {
         for (int i = 0; i < goops; i++) {
             icks.add(Icky.ID);
         }
-        logMetric(ID, "Gooped x"+goops, icks, null, null, null,
+        logMetric(ID, "Gooped x" + goops, icks, null, null, null,
                 null, null, null,
                 0, 0, 0, 0, this.gold * goops, 0);
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch (this.screen) {
-            case INTRO:
-                switch (buttonPressed) {
-                    case 0:
-                        this.imageEventText.updateBodyText(GOLD_DIALOG);
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[6]);
-                        this.screen = CurScreen.RESULT;
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .25F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .5F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .75F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
-                        AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold * 3));
-                        AbstractDungeon.player.gainGold(this.gold * 3);
-                        logMetricGoop(3);
-                        return;
-                    case 1:
-                        this.imageEventText.updateBodyText(GOLD_DIALOG);
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[6]);
-                        this.screen = CurScreen.RESULT;
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .75F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .25F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
-                        AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold * 2));
-                        AbstractDungeon.player.gainGold(this.gold * 2);
-                        logMetricGoop(2);
-                        return;
-                    case 2:
-                        this.imageEventText.updateBodyText(GOLD_DIALOG);
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[6]);
-                        this.screen = CurScreen.RESULT;
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .5F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
-                        AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold));
-                        AbstractDungeon.player.gainGold(this.gold);
-                        logMetricGoop(1);
-                        return;
-                    case 3:
-                        this.imageEventText.updateBodyText(LEAVE_DIALOG);
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[6]);
-                        this.screen = CurScreen.RESULT;
-                        logMetricIgnored(ID);
-                    default:
-                        return;
-                }
-            default:
-                this.openMap();
+        if (this.screen == CurScreen.INTRO) {
+            switch (buttonPressed) {
+                case 0:
+                    this.imageEventText.updateBodyText(GOLD_DIALOG);
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.setDialogOption(OPTIONS[6]);
+                    this.screen = CurScreen.RESULT;
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .25F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .5F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .75F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
+                    AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold * 3));
+                    AbstractDungeon.player.gainGold(this.gold * 3);
+                    logMetricGoop(3);
+                    return;
+                case 1:
+                    this.imageEventText.updateBodyText(GOLD_DIALOG);
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.setDialogOption(OPTIONS[6]);
+                    this.screen = CurScreen.RESULT;
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .75F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .25F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
+                    AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold * 2));
+                    AbstractDungeon.player.gainGold(this.gold * 2);
+                    logMetricGoop(2);
+                    return;
+                case 2:
+                    this.imageEventText.updateBodyText(GOLD_DIALOG);
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.setDialogOption(OPTIONS[6]);
+                    this.screen = CurScreen.RESULT;
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .5F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
+                    AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold));
+                    AbstractDungeon.player.gainGold(this.gold);
+                    logMetricGoop(1);
+                    return;
+                case 3:
+                    this.imageEventText.updateBodyText(LEAVE_DIALOG);
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.setDialogOption(OPTIONS[6]);
+                    this.screen = CurScreen.RESULT;
+                    logMetricIgnored(ID);
+                default:
+            }
+        } else {
+            this.openMap();
         }
     }
 

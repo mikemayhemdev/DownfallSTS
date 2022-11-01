@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.vfx.SpeechBubble;
 
 public class SpeechBubbleAction extends AbstractGameAction {
     public String Dialog;
-    private AbstractMonster m;
-    private float duration;
+    private final AbstractMonster m;
+    private final float duration;
 
     public SpeechBubbleAction(String Dialog, AbstractMonster m, float duration) {
         this.Dialog = Dialog;

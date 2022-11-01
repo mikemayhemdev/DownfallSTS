@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import com.megacrit.cardcrawl.vfx.campfire.CampfireTokeEffect;
-import guardian.ui.EnhanceBonfireOption;
 import slimebound.SlimeboundMod;
 
 
@@ -55,7 +54,7 @@ public class ScrapBonfireOption extends AbstractCampfireOption {
 
     @Override
     public void update() {
-        float hackScale = (float) ReflectionHacks.getPrivate(this, AbstractCampfireOption.class, "scale");
+        float hackScale = ReflectionHacks.getPrivate(this, AbstractCampfireOption.class, "scale");
 
         if (this.hb.hovered) {
 

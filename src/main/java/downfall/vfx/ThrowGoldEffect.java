@@ -13,8 +13,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.ShineLinesEffect;
 
-public class ThrowGoldEffect extends AbstractGameEffect
-{
+public class ThrowGoldEffect extends AbstractGameEffect {
     private static final float GRAVITY = 0;//2000.0F * Settings.scale;
     private static final float START_VY = 800.0F * Settings.scale;
     private static final float START_VY_JITTER = 400.0F * Settings.scale;
@@ -26,19 +25,18 @@ public class ThrowGoldEffect extends AbstractGameEffect
     private float y;
     private float vX;
     private float vY;
-    private float targetX;
-    private float targetY;
+    private final float targetX;
+    private final float targetY;
     private float finalTargetX;
     private float finalTargetY;
-    private TextureAtlas.AtlasRegion img;
+    private final TextureAtlas.AtlasRegion img;
     private float alpha = 0.0F;
     private float suctionTimer = 1.4F;
     private float staggerTimer;
-    private float EPSILON = 0.0001F;
+    private final float EPSILON = 0.0001F;
     private boolean hitTarget = false;
 
-    public ThrowGoldEffect(AbstractCreature owner, float x, float y, float targetX, float targetY, float staggerTimer)
-    {
+    public ThrowGoldEffect(AbstractCreature owner, float x, float y, float targetX, float targetY, float staggerTimer) {
         if (MathUtils.randomBoolean()) {
             img = ImageMaster.COPPER_COIN_1;
         } else {
@@ -57,17 +55,15 @@ public class ThrowGoldEffect extends AbstractGameEffect
         }
         this.vY = MathUtils.random(START_VY, START_VY_JITTER);
         this.scale = Settings.scale;
-        this.color = new Color(1.0F,1.0F,1.0F,0.0F);
+        this.color = new Color(1.0F, 1.0F, 1.0F, 0.0F);
     }
 
-    public ThrowGoldEffect(AbstractCreature owner, float x, float y, float targetX, float targetY)
-    {
+    public ThrowGoldEffect(AbstractCreature owner, float x, float y, float targetX, float targetY) {
         this(owner, x, y, targetX, targetY, MathUtils.random(0.0F, 0.5F));
     }
 
     @Override
-    public void update()
-    {
+    public void update() {
         /*
         if (staggerTimer > 0.0F) {
             staggerTimer -= Gdx.graphics.getDeltaTime();
@@ -117,8 +113,7 @@ public class ThrowGoldEffect extends AbstractGameEffect
     }
 
     @Override
-    public void render(SpriteBatch sb)
-    {
+    public void render(SpriteBatch sb) {
         /*
         if (this.staggerTimer > 0.0F) {
             return;
@@ -129,8 +124,7 @@ public class ThrowGoldEffect extends AbstractGameEffect
     }
 
     @Override
-    public void dispose()
-    {
+    public void dispose() {
 
     }
 }

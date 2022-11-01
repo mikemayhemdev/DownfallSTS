@@ -1,21 +1,12 @@
 package hermit.cards;
 
 import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.colorless.Bite;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
-import hermit.actions.LoneWolfAction;
-import hermit.actions.ReprieveAction;
 import hermit.characters.hermit;
-import hermit.patches.EndOfTurnPatch;
-
-import java.util.Iterator;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
@@ -49,7 +40,6 @@ public class Reprieve extends AbstractDynamicCard {
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
 
-
     private static final int COST = 2;
 
 
@@ -61,7 +51,7 @@ public class Reprieve extends AbstractDynamicCard {
         loadJokeCardImage(this, "reprieve.png");
         this.tags.add(CardTags.HEALING);
         this.isEthereal = true;
-        this.exhaust=true;
+        this.exhaust = true;
     }
 
     // Actions the card should do.

@@ -28,8 +28,7 @@ public class FatGremlinPower extends GremlinPower {
         this.alreadyHit = new HashSet<>();
     }
 
-    public void updateDescription()
-    {
+    public void updateDescription() {
         this.description = (strings.DESCRIPTIONS[0] + this.pot + strings.DESCRIPTIONS[1]);
     }
 
@@ -39,13 +38,13 @@ public class FatGremlinPower extends GremlinPower {
 
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        if(target.equals(AbstractDungeon.player)){
+        if (target.equals(AbstractDungeon.player)) {
             return;
         }
-        if(alreadyHit.contains(target)){
+        if (alreadyHit.contains(target)) {
             return;
         }
-        if(info.type == DamageInfo.DamageType.NORMAL){
+        if (info.type == DamageInfo.DamageType.NORMAL) {
             alreadyHit.add(target);
             AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, owner,
                     new WeakPower(target, this.pot, false), this.pot));

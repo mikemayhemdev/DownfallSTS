@@ -16,7 +16,7 @@ public class EnemyDiscardAtEndOfTurnAction extends AbstractGameAction {
         DURATION = Settings.ACTION_DUR_XFAST;
     }
 
-    private AbstractCharBoss boss;
+    private final AbstractCharBoss boss;
 
     public EnemyDiscardAtEndOfTurnAction(AbstractCharBoss boss) {
         this.duration = EnemyDiscardAtEndOfTurnAction.DURATION;

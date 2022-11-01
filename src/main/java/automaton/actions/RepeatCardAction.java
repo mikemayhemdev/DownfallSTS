@@ -3,19 +3,18 @@ package automaton.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class RepeatCardAction extends AbstractGameAction {
-    private AbstractCard funCard;
+    private final AbstractCard funCard;
 
     public RepeatCardAction(AbstractMonster target, AbstractCard card) {
         this.duration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.WAIT;
         this.source = AbstractDungeon.player;
-        this.target = (AbstractCreature) target;
+        this.target = target;
         this.funCard = card;
     }
 
@@ -29,7 +28,7 @@ public class RepeatCardAction extends AbstractGameAction {
             if (target == null) {
                 target = AbstractDungeon.getRandomMonster();
             }
-            GameActionManager.queueExtraCard(funCard, (AbstractMonster)target);
+            GameActionManager.queueExtraCard(funCard, (AbstractMonster) target);
         }
 
         this.isDone = true;

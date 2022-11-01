@@ -33,7 +33,7 @@ public class Gym extends AbstractImageEvent {
     }
 
     private CurScreen screen;
-    private int maxHP = 10;
+    private final int maxHP = 10;
     private boolean pickCard = false;
     private StanceChosen stance;
 
@@ -59,7 +59,7 @@ public class Gym extends AbstractImageEvent {
         super.update();
         if (this.pickCard && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-            switch (stance){
+            switch (stance) {
                 case DEFENSIVE:
                     CardModifierManager.addModifier(c, new OpenerModDefensive());
                     break;
@@ -93,7 +93,7 @@ public class Gym extends AbstractImageEvent {
                         logMetricMaxHPGain(ID, "Cardio", maxHP);
                         return;
                     case 1:
-                       // this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
+                        // this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[5]);
                         this.imageEventText.setDialogOption(OPTIONS[7]);
@@ -144,7 +144,7 @@ public class Gym extends AbstractImageEvent {
                 retVal.group.add(c);
             }
         }
-      //  //SlimeboundMod.logger.info("Non Opener card count: " + retVal.group.size());
+        //  //SlimeboundMod.logger.info("Non Opener card count: " + retVal.group.size());
         return retVal;
     }
 
@@ -152,6 +152,7 @@ public class Gym extends AbstractImageEvent {
         INTRO,
         RESULT,
         STANCECHOICE;
+
         CurScreen() {
         }
     }
@@ -160,6 +161,7 @@ public class Gym extends AbstractImageEvent {
         GLADIATOR,
         DEFENSIVE,
         BERSERKER;
+
         StanceChosen() {
         }
     }

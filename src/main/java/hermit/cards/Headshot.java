@@ -1,9 +1,7 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,9 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
-import hermit.powers.Concentration;
 import hermit.powers.SnipePower;
-
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
@@ -78,8 +74,7 @@ public class Headshot extends AbstractDynamicCard {
     }
 
     @Override
-    public void calculateCardDamage(AbstractMonster mo)
-    {
+    public void calculateCardDamage(AbstractMonster mo) {
         super.calculateCardDamage(mo);
 
         if (isDeadOnPos() || trig_deadon) {

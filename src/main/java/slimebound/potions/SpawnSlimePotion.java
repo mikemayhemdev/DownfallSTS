@@ -1,22 +1,13 @@
 package slimebound.potions;
 
 
-import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
-import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
-import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import slimebound.SlimeboundMod;
-import slimebound.actions.SlimeSpawnAction;
-import slimebound.orbs.PoisonSlime;
-import slimebound.orbs.ShieldSlime;
-import slimebound.orbs.SlimingSlime;
-
-import java.util.Random;
 
 
 public class SpawnSlimePotion extends CustomPotion {

@@ -5,7 +5,6 @@ import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -42,7 +41,7 @@ public class DashGenerateEvil extends AbstractExpansionCard {
 
     private float rotationTimer;
     private int previewIndex;
-    private ArrayList<AbstractCard> dupeListForPrev = new ArrayList<>();
+    private final ArrayList<AbstractCard> dupeListForPrev = new ArrayList<>();
 
     public DashGenerateEvil() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
@@ -57,7 +56,7 @@ public class DashGenerateEvil extends AbstractExpansionCard {
 
         this.addToBot(new VFXAction(new HemokinesisEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
 
-      //  atb(new GainBlockAction(p, p, this.block));
+        //  atb(new GainBlockAction(p, p, this.block));
         atb(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
         atb(new RandomCardWithTagAction(upgraded, expansionContentMod.STUDY, true));

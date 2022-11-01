@@ -25,7 +25,7 @@ import java.util.ArrayList;
 public class CampfireFindGemsEffect extends AbstractGameEffect {
     private static final float DUR = 2.0F;
 
-    private Color screenColor;
+    private final Color screenColor;
 
     public CampfireFindGemsEffect() {
         this.screenColor = AbstractDungeon.fadeColor.cpy();

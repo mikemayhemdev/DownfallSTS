@@ -13,7 +13,7 @@ public class HardcodePower extends AbstractAutomatonPower implements OnOutputFun
     public static final String POWER_ID = makeID(NAME);
     public static final PowerType TYPE = PowerType.BUFF;
     public static final boolean TURN_BASED = false;
-    private AbstractCard sourceCard;
+    private final AbstractCard sourceCard;
 
     public HardcodePower(int amount, AbstractCard source) {
         super(NAME, TYPE, TURN_BASED, AbstractDungeon.player, null, amount);

@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 public class Contemplate extends AbstractCollectorCard {
     public final static String ID = makeID("Contemplate");
+
     public Contemplate() {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
     }
@@ -28,7 +29,7 @@ public class Contemplate extends AbstractCollectorCard {
             possCardsList.addAll(CollectorCollection.combatCollection.group);
         }
         atb(new SelectCardsAction(possCardsList, 1, "Choose.", (cards) -> {
-            if (upgraded && !cards.get(0).upgraded){
+            if (upgraded && !cards.get(0).upgraded) {
                 cards.get(0).upgrade();
             }
             CollectorCollection.combatCollection.removeCard(cards.get(0));

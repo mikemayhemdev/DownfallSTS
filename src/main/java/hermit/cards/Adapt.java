@@ -35,7 +35,6 @@ public class Adapt extends AbstractDynamicCard {
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
 
-
     private static final int COST = 3;
 
     // /STAT DECLARATION/
@@ -53,7 +52,6 @@ public class Adapt extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new AdaptPower(p, p, magicNumber), magicNumber));
     }
-
 
 
     //Upgraded stats.

@@ -31,10 +31,10 @@ import org.lwjgl.opengl.GL11;
 import java.util.ArrayList;
 
 public class GemFireAction extends AbstractGameAction {
-    private DamageInfo info;
-    private float startingDuration;
+    private final DamageInfo info;
+    private final float startingDuration;
     private int exhaustCount;
-    private ArrayList<GuardianMod.socketTypes> shots = new ArrayList<>();
+    private final ArrayList<GuardianMod.socketTypes> shots = new ArrayList<>();
 
     public GemFireAction(AbstractCreature target, DamageInfo info) {
         this.info = info;
@@ -47,10 +47,19 @@ public class GemFireAction extends AbstractGameAction {
 
     public class GemShootEffect extends AbstractGameEffect {
 
-        private GuardianMod.socketTypes gem;
-        private float x1, y1, x2, y2, x3, y3, sX, sY, scaleX, scaleY;
+        private final GuardianMod.socketTypes gem;
+        private final float x1;
+        private final float y1;
+        private final float x2;
+        private final float y2;
+        private final float x3;
+        private final float y3;
+        private float sX;
+        private float sY;
+        private float scaleX;
+        private final float scaleY;
         private Color glowColor;
-        
+
         public GemShootEffect(GuardianMod.socketTypes gem, int hitNo) {
             this.gem = gem;
             this.color = Color.WHITE.cpy();
@@ -63,7 +72,7 @@ public class GemFireAction extends AbstractGameAction {
             float theta = MathUtils.random(-1.0f, 1.0f);
             x2 = x1 + MathUtils.sin(theta) * 200 * Settings.xScale;
             y2 = y1 + MathUtils.cos(theta) * 200 * Settings.yScale;
-            AbstractMonster target = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng);
+            AbstractMonster target = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
             if (target == null) {
                 x3 = Settings.WIDTH * 2;
                 y3 = Settings.HEIGHT / 2f + MathUtils.random(-100f, 100f) * Settings.yScale;
@@ -75,9 +84,10 @@ public class GemFireAction extends AbstractGameAction {
             scaleX = scaleY = scale;
             //this.scale = 0.01f;
             glowColor = this.color;
-            if(this.gem != null) glowColor = this.gem.color.cpy();
+            if (this.gem != null) glowColor = this.gem.color.cpy();
 
         }
+
         @Override
         public void render(SpriteBatch sb) {
             sb.setBlendFunction(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
@@ -85,10 +95,10 @@ public class GemFireAction extends AbstractGameAction {
             TextureAtlas.AtlasRegion img = ImageMaster.GLOW_SPARK;
 
             sb.setColor(glowColor);
-            sb.draw(img, this.sX - img.packedWidth/2f + (this.duration <= 0.25f ? -20 : 0),
-                    this.sY - img.packedHeight/2f,
-                    img.packedWidth/2f,  img.packedHeight/2f,
-                    img.packedWidth,  img.packedHeight,
+            sb.draw(img, this.sX - img.packedWidth / 2f + (this.duration <= 0.25f ? -20 : 0),
+                    this.sY - img.packedHeight / 2f,
+                    img.packedWidth / 2f, img.packedHeight / 2f,
+                    img.packedWidth, img.packedHeight,
                     this.scaleX, this.scaleY, 00f);
 
             sb.setColor(this.color);
@@ -102,7 +112,7 @@ public class GemFireAction extends AbstractGameAction {
                     0, 0,
                     texture.getWidth(), texture.getHeight(),
                     false, false
-                    );
+            );
 
         }
 
@@ -122,7 +132,8 @@ public class GemFireAction extends AbstractGameAction {
                 this.sX = Interpolation.fade.apply(x2, x1, (this.duration - deployed) / 0.25f);
                 this.sY = Interpolation.fade.apply(y2, y1, (this.duration - deployed) / 0.25f);
             } else if (this.duration > 0.25f) {
-                this.sX = x2; this.sY = y2;
+                this.sX = x2;
+                this.sY = y2;
             } else {
                 this.rotation = 0f;
                 this.scaleX = 1.5f;
@@ -160,7 +171,10 @@ public class GemFireAction extends AbstractGameAction {
         if (this.duration == this.startingDuration) {
             addToTop(new GemFireDamageAction());
             addToTop(new AbstractGameAction() {
-                { duration = 0.5f; }
+                {
+                    duration = 0.5f;
+                }
+
                 @Override
                 public void update() {
                     tickDuration();
@@ -207,9 +221,9 @@ public class GemFireAction extends AbstractGameAction {
     }
 
     public class ExhaustGemAction extends AbstractGameAction {
-        private AbstractCard card;
-        private CardGroup group;
-        private int hitNo;
+        private final AbstractCard card;
+        private final CardGroup group;
+        private final int hitNo;
 
         public ExhaustGemAction(AbstractCard card, CardGroup group, int hitNo) {
             this.card = card;
@@ -222,8 +236,8 @@ public class GemFireAction extends AbstractGameAction {
         public void update() {
             if (this.duration == this.startDuration && this.group.contains(this.card) && card.hasTag(GuardianMod.GEM)) {
                 card.current_y = -200.0F * Settings.scale;
-                card.target_x = (float)Settings.WIDTH / 2.0F + 200F - 40F * hitNo * Settings.xScale;
-                card.target_y = (float)Settings.HEIGHT * .25f;
+                card.target_x = (float) Settings.WIDTH / 2.0F + 200F - 40F * hitNo * Settings.xScale;
+                card.target_y = (float) Settings.HEIGHT * .25f;
                 card.targetAngle = 0.0F;
                 card.lighten(false);
                 card.drawScale = 0.12F;
@@ -235,14 +249,14 @@ public class GemFireAction extends AbstractGameAction {
             } else {
                 if (this.duration == this.startDuration && this.group.contains(this.card)) {
                     card.current_y = -200.0F * Settings.scale;
-                    card.target_x = (float)Settings.WIDTH / 2.0F + 200F - 40F * hitNo * Settings.xScale;
-                    card.target_y = (float)Settings.HEIGHT * .25f;
+                    card.target_x = (float) Settings.WIDTH / 2.0F + 200F - 40F * hitNo * Settings.xScale;
+                    card.target_y = (float) Settings.HEIGHT * .25f;
                     card.targetAngle = 0.0F;
                     card.lighten(false);
                     card.drawScale = 0.12F;
                     card.targetDrawScale = 0.75F;
-                    ((AbstractGuardianCard)card).sockets.clear();
-                    ((AbstractGuardianCard)card).updateDescription();
+                    ((AbstractGuardianCard) card).sockets.clear();
+                    ((AbstractGuardianCard) card).updateDescription();
                     CardCrawlGame.dungeon.checkForPactAchievement();
                     this.card.exhaustOnUseOnce = false;
                     this.card.freeToPlayOnce = false;

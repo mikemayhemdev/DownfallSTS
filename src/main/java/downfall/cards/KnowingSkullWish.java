@@ -15,7 +15,6 @@ import downfall.util.OctopusCard;
 import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
 import sneckomod.actions.ChangeGoldAction;
-import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 import java.util.ArrayList;
 
@@ -46,8 +45,7 @@ public class KnowingSkullWish extends AbstractExpansionCard implements OctopusCa
             goldCard = new OctoChoiceCard("ks:0", NAMES[0], expansionContentMod.makeCardPath("KnowingSkullWish.png"), TEXT[0]);
             colorlessCard = new OctoChoiceCard("ks:1", NAMES[1], expansionContentMod.makeCardPath("KnowingSkullWish.png"), TEXT[1]);
             potionCard = new OctoChoiceCard("ks:2", NAMES[2], expansionContentMod.makeCardPath("KnowingSkullWish.png"), TEXT[2]);
-        }
-        else {
+        } else {
             goldCard = new OctoChoiceCard("ks:0", NAMES[0], expansionContentMod.makeCardPath("KnowingSkullWish.png"), TEXT[24]);
             colorlessCard = new OctoChoiceCard("ks:1", NAMES[1], expansionContentMod.makeCardPath("KnowingSkullWish.png"), TEXT[25]);
             potionCard = new OctoChoiceCard("ks:2", NAMES[2], expansionContentMod.makeCardPath("KnowingSkullWish.png"), TEXT[26]);

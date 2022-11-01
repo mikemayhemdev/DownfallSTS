@@ -14,7 +14,7 @@ public class FalteringFocus extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private boolean triggered = false;
+    private final boolean triggered = false;
 
     public FalteringFocus(AbstractCreature owner) {
         this.name = NAME;
@@ -26,8 +26,8 @@ public class FalteringFocus extends AbstractPower {
     }
 
     @Override
-    public void atStartOfTurnPostDraw(){
-            addToBot(new ChangeStanceAction(NeutralStance.STANCE_ID));
-            addToBot(new RemoveSpecificPowerAction(owner,owner,this));
+    public void atStartOfTurnPostDraw() {
+        addToBot(new ChangeStanceAction(NeutralStance.STANCE_ID));
+        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 }

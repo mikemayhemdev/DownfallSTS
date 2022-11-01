@@ -7,12 +7,9 @@ package guardian.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-
-import java.util.Iterator;
 
 public class PlaceRandomCardInHandIntoStasisAction extends AbstractGameAction {
     public static final String[] TEXT;
@@ -28,8 +25,7 @@ public class PlaceRandomCardInHandIntoStasisAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == 0.5F) {
-            if (AbstractDungeon.player.hand.isEmpty())
-            {
+            if (AbstractDungeon.player.hand.isEmpty()) {
                 this.isDone = true;
                 return;
             }

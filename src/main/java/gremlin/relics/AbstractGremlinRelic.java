@@ -1,13 +1,12 @@
 package gremlin.relics;
 
-import com.badlogic.gdx.graphics.Texture;
-
 import basemod.abstracts.CustomRelic;
+import com.badlogic.gdx.graphics.Texture;
 import gremlin.GremlinMod;
 
-public abstract class AbstractGremlinRelic extends CustomRelic{
-    static String getID(String ID){
-        return "Gremlin:"+ID;
+public abstract class AbstractGremlinRelic extends CustomRelic {
+    static String getID(String ID) {
+        return "Gremlin:" + ID;
     }
 
     AbstractGremlinRelic(String id, String img, RelicTier tier, LandingSound sfx) {
@@ -15,7 +14,9 @@ public abstract class AbstractGremlinRelic extends CustomRelic{
         outlineImg = (new Texture(GremlinMod.getOutlineResourcePath(img)));
     }
 
-    public void onGremlinSwap() {}
+    public void onGremlinSwap() {
+    }
 
-    public void onGremlinDeath() {}
+    public void onGremlinDeath() {
+    }
 }

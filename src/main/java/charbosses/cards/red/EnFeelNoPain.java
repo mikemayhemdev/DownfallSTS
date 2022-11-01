@@ -8,11 +8,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.BarricadePower;
-import com.megacrit.cardcrawl.powers.FeelNoPainPower;
-
-import java.util.ArrayList;
 
 public class EnFeelNoPain extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Feel No Pain";

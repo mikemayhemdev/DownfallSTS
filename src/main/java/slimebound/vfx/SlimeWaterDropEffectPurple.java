@@ -13,8 +13,8 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 public class SlimeWaterDropEffectPurple extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
     private static final int W = 64;
     private static Texture[] imgs = null;
-    private float x;
-    private float y;
+    private final float x;
+    private final float y;
     private int frame = 0;
     private float animTimer = 0.1F;
 
@@ -35,7 +35,7 @@ public class SlimeWaterDropEffectPurple extends com.megacrit.cardcrawl.vfx.Abstr
         this.frame = 0;
         this.scale = (MathUtils.random(2.5F, 3.0F) * Settings.scale);
         this.rotation = 0.0F;
-       // this.scale *= Settings.scale;
+        // this.scale *= Settings.scale;
         this.color = new Color(0.65F, 0.2F, 0.65F, 1F);
     }
 

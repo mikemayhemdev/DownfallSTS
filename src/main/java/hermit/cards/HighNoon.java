@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.HighNoonPower;
-import hermit.powers.ShadowCloakPower;
 
 import java.util.ArrayList;
 
@@ -47,8 +46,7 @@ public class HighNoon extends AbstractDynamicCard {
     // cards to preview
     private float rotationTimer;
     private int previewIndex;
-    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
-
+    private final ArrayList<AbstractCard> cardsList = new ArrayList<>();
 
 
     public HighNoon() {

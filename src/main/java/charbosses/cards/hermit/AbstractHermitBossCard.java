@@ -23,7 +23,7 @@ public abstract class AbstractHermitBossCard extends AbstractBossCard {
     }
 
 
-    private static AbstractRelic nCon = new Necronomicon();
+    private static final AbstractRelic nCon = new Necronomicon();
 
     @Override
     public void render(SpriteBatch sb) {

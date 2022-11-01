@@ -1,21 +1,17 @@
 package champ.vfx;
 
-import basemod.ReflectionHacks;
-import com.badlogic.gdx.Graphics;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.PetalEffect;
 
-import java.util.ArrayList;
-
 public class StanceDanceEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
     private float timer = 0.1F;
     private float timerFlip = 0F;
-    private AbstractCreature owner;
-    private boolean useJump;
-    private boolean usePetals;
-    private boolean useSpotlight;
+    private final AbstractCreature owner;
+    private final boolean useJump;
+    private final boolean usePetals;
+    private final boolean useSpotlight;
     private boolean doubleSpins;
 
     public StanceDanceEffect(AbstractCreature c, boolean jump, boolean petals, boolean spotlight, boolean doubleSpins) {
@@ -26,7 +22,7 @@ public class StanceDanceEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEf
         usePetals = petals;
     }
 
-    public StanceDanceEffect(AbstractCreature c, boolean jump, boolean petals, boolean spotlight){
+    public StanceDanceEffect(AbstractCreature c, boolean jump, boolean petals, boolean spotlight) {
         this(c, jump, petals, spotlight, false);
     }
 
@@ -48,7 +44,7 @@ public class StanceDanceEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEf
             }
         }
 
-        if (this.timerFlip < 0F){
+        if (this.timerFlip < 0F) {
             owner.flipHorizontal = !owner.flipHorizontal;
             if (doubleSpins) {
                 this.timerFlip += 0.1F;

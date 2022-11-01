@@ -22,7 +22,7 @@ public class NextTurnBlockAndGoopPower extends AbstractPower {
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
-    private AbstractCreature source;
+    private final AbstractCreature source;
 
 
     public NextTurnBlockAndGoopPower(AbstractCreature owner, AbstractCreature source, int amount) {

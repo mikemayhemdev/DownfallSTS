@@ -10,10 +10,11 @@ public class TagTeam extends AbstractCollectorCard {
     public final static String ID = makeID("TagTeam");
 
     public TagTeam() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY, CollectorCardSource.BACK,CollectorCardSource.FRONT);
+        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY, CollectorCardSource.BACK, CollectorCardSource.FRONT);
         RearBaseDamage = douBaseDamage = baseDamage = 9;
         FrontBaseBlock = douBaseBlock = baseBlock = 9;
     }
+
     @Override
     public void applyPowers() {
         super.applyPowers();
@@ -25,6 +26,7 @@ public class TagTeam extends AbstractCollectorCard {
         }
         initializeDescription();
     }
+
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SMASH, AbstractGameAction.AttackEffect.SMASH);

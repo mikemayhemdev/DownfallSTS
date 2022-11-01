@@ -19,7 +19,7 @@ public class EnemyMakeTempCardInHandAction extends AbstractGameAction {
         PADDING = 25.0f * Settings.scale;
     }
 
-    private AbstractCard c;
+    private final AbstractCard c;
     private boolean isOtherCardInCenter;
     private boolean sameUUID;
 

@@ -2,13 +2,11 @@ package charbosses.cards.purple;
 
 import charbosses.actions.common.EnemyMakeTempCardInHandAction;
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.colorless.EnShiv;
 import charbosses.powers.cardpowers.EnemyMasterRealityPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.tempCards.Smite;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -40,7 +38,7 @@ public class EnCarveReality extends AbstractBossCard {
     public int customIntentModifiedDamage() {
         int extraDamage = 0;
 
-        if (owner.hasPower(EnemyMasterRealityPower.POWER_ID)){
+        if (owner.hasPower(EnemyMasterRealityPower.POWER_ID)) {
             extraDamage = 6;
         }
         return extraDamage;

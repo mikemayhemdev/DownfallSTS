@@ -18,8 +18,8 @@ import com.megacrit.cardcrawl.helpers.ScreenShake.ShakeIntensity;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import slimebound.cards.CheckThePlaybook;
 import downfall.cards.curses.Icky;
+import slimebound.cards.CheckThePlaybook;
 import slimebound.cards.Tackle;
 
 import java.util.ArrayList;
@@ -58,9 +58,9 @@ public class ArtOfSlimeWar extends AbstractImageEvent {
     }
 
     private int screenNum = 0;
-    private int damage;
+    private final int damage;
     private int maxHpLoss;
-    private AbstractRelic relicMetric = null;
+    private final AbstractRelic relicMetric = null;
 
     public ArtOfSlimeWar() {
         super(NAME, DIALOG_START, "slimeboundResources/SlimeboundImages/events/slimeTome.jpg");

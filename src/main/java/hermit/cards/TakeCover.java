@@ -9,8 +9,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import hermit.HermitMod;
 import hermit.characters.hermit;
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
@@ -44,7 +42,6 @@ public class TakeCover extends AbstractDynamicCard {
     public static final CardColor COLOR = hermit.Enums.COLOR_YELLOW;
 
 
-
     private static final int COST = -1;
 
 
@@ -52,7 +49,7 @@ public class TakeCover extends AbstractDynamicCard {
 
     public TakeCover() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.exhaust=true;
+        this.exhaust = true;
         this.cardsToPreview = new Defend_Hermit();
         loadJokeCardImage(this, "take_cover.png");
 

@@ -1,9 +1,7 @@
 package downfall.events;
 
 
-import automaton.AutomatonChar;
 import basemod.ReflectionHacks;
-import champ.ChampChar;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -34,15 +32,10 @@ import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.relics.HeartBlessingBlue;
 import downfall.relics.HeartBlessingGreen;
 import downfall.relics.HeartBlessingRed;
-import gremlin.characters.GremlinCharacter;
-import guardian.characters.GuardianCharacter;
-import slimebound.characters.SlimeboundCharacter;
 import sneckomod.TheSnecko;
-import theHexaghost.TheHexaghost;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
@@ -73,7 +66,7 @@ public class MindBloom_Evil extends AbstractImageEvent {
         }
 
         if (AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player) && AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player) && AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player)) {
-            if (AbstractDungeon.player instanceof GremlinCharacter) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
                 this.imageEventText.setDialogOption(OPTIONSALT[5]);
             } else {
                 this.imageEventText.setDialogOption(OPTIONSALT[2]);
@@ -97,30 +90,30 @@ public class MindBloom_Evil extends AbstractImageEvent {
                     case 0:
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
                         this.screen = CurScreen.FIGHT;
-                        if (AbstractDungeon.player instanceof SlimeboundCharacter) {
+                        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND)) {
                             AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Slime Boss");
-                        } else if (AbstractDungeon.player instanceof GuardianCharacter) {
+                        } else if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GUARDIAN)) {
                             if (Loader.isModLoaded("DownfallExtension"))
-                            AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("DownfallExtension:Crowbot");
+                                AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("DownfallExtension:Crowbot");
                             else
-                            AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("The Guardian");
-                        } else if (AbstractDungeon.player instanceof TheHexaghost) {
+                                AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("The Guardian");
+                        } else if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_SPIRIT)) {
 
                             AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Hexaghost");
-                        } else if (AbstractDungeon.player instanceof ChampChar) {
+                        } else if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_CHAMP)) {
                             if (Loader.isModLoaded("DownfallExtension"))
                                 AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("DownfallExtension:Irondead");
-                            else{
+                            else {
                                 AbstractMonster m = new Champ();
                                 m.maxHealth = Math.round(m.maxHealth * .6F);
                                 m.currentHealth = m.maxHealth;
                                 m.powers.add(new StrengthPower(m, -3));
                                 AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
                             }
-                        } else if (AbstractDungeon.player instanceof AutomatonChar) {
+                        } else if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_AUTOMATON)) {
                             if (Loader.isModLoaded("DownfallExtension"))
                                 AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("DownfallExtension:Crowbot");
-                            else{
+                            else {
                                 AbstractMonster m = new BronzeAutomaton();
                                 m.maxHealth = Math.round(m.maxHealth * .6F);
                                 m.currentHealth = m.maxHealth;
@@ -131,7 +124,7 @@ public class MindBloom_Evil extends AbstractImageEvent {
                         } else if (AbstractDungeon.player instanceof TheSnecko) {
 
                             AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new SneckoMirror());
-                        } else if (AbstractDungeon.player instanceof GremlinCharacter) {
+                        } else if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
                             lastCombatMetricKey = "Gremlin Mirror";
                             AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new AbstractMonster[]{spawnGremlin(GremlinLeader.POSX[0], GremlinLeader.POSY[0]), spawnGremlin(GremlinLeader.POSX[1], GremlinLeader.POSY[1]), new GremlinMirror()});
                         } else {
@@ -141,7 +134,7 @@ public class MindBloom_Evil extends AbstractImageEvent {
                             list.add("The Guardian");
 
                             Collections.shuffle(list, new Random(AbstractDungeon.miscRng.randomLong()));
-                            AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter((String) list.get(0));
+                            AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter(list.get(0));
                         }
 
                         AbstractDungeon.getCurrRoom().rewards.clear();
@@ -235,7 +228,7 @@ public class MindBloom_Evil extends AbstractImageEvent {
         gremlinPool.add("GremlinFat");
         gremlinPool.add("GremlinTsundere");
         gremlinPool.add("GremlinWizard");
-        return getGremlin((String) gremlinPool.get(AbstractDungeon.miscRng.random(0, gremlinPool.size() - 1)), x, y);
+        return getGremlin(gremlinPool.get(AbstractDungeon.miscRng.random(0, gremlinPool.size() - 1)), x, y);
     }
 
     static {
@@ -247,12 +240,12 @@ public class MindBloom_Evil extends AbstractImageEvent {
         OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
     }
 
-    private static enum CurScreen {
+    private enum CurScreen {
         INTRO,
         FIGHT,
         LEAVE;
 
-        private CurScreen() {
+        CurScreen() {
         }
     }
 }

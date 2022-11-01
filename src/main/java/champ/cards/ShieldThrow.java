@@ -1,14 +1,11 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.powers.NoBlockNextTurnPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FrailPower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static champ.ChampMod.loadJokeCardImage;
 
@@ -39,8 +36,8 @@ public class ShieldThrow extends AbstractChampCard {
         this.rawDescription = cardStrings.DESCRIPTION;
         this.initializeDescription();
 
-        if (!dcombo()) applyToSelf(new FrailPower(p,2, false));
-       // if (bcombo()) atb(new ReducePowerAction(p,p,FrailPower.POWER_ID,2));
+        if (!dcombo()) applyToSelf(new FrailPower(p, 2, false));
+        // if (bcombo()) atb(new ReducePowerAction(p,p,FrailPower.POWER_ID,2));
         //  finisher();
     }
 

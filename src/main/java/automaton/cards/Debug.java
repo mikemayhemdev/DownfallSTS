@@ -6,8 +6,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static automaton.FunctionHelper.WITH_DELIMITER;
-
 import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class Debug extends AbstractBronzeCard {

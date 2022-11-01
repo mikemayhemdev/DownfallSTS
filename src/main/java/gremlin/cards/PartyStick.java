@@ -22,18 +22,17 @@ public class PartyStick extends AbstractGremlinCard {
     private static final int COST = -2;
     private static final int ENERGY = 1;
 
-    public PartyStick()
-    {
+    public PartyStick() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         isEthereal = true;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {}
+    public void use(AbstractPlayer p, AbstractMonster m) {
+    }
 
     @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m)
-    {
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         this.cantUseMessage = strings.EXTENDED_DESCRIPTION[0];
         return false;
     }
@@ -43,10 +42,8 @@ public class PartyStick extends AbstractGremlinCard {
         AbstractDungeon.actionManager.addToTop(new GainEnergyAction(ENERGY));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             isEthereal = false;

@@ -28,7 +28,7 @@ public class BossCardReward extends CustomReward {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         int numCards = 3;
 
-        for(AbstractRelic r : AbstractDungeon.player.relics) {
+        for (AbstractRelic r : AbstractDungeon.player.relics) {
             numCards = r.changeNumberOfCardsInReward(numCards);
         }
 

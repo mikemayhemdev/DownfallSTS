@@ -17,9 +17,9 @@ import expansioncontent.expansionContentMod;
 public class AddSameInstancePower extends AbstractPower implements NonStackablePower {
     public static final String POWER_ID = expansionContentMod.makeID("AddCopyPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    private AbstractCard held;
+    private final AbstractCard held;
 
     public AddSameInstancePower(int amount, AbstractCard held, String text84, String text32) {
         this.name = NAME;

@@ -1,12 +1,10 @@
 package downfall.patches;
 
-import automaton.AutomatonChar;
 import automaton.potions.BurnAndBuffPotion;
 import automaton.relics.BronzeIdol;
 import automaton.relics.DecasWashers;
 import automaton.relics.DonusWashers;
 import automaton.relics.MakeshiftBattery;
-import champ.ChampChar;
 import champ.potions.CounterstrikePotion;
 import champ.relics.Barbells;
 import champ.relics.DeflectingBracers;
@@ -15,16 +13,13 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
-import com.megacrit.cardcrawl.relics.Ectoplasm;
 import downfall.cards.curses.*;
 import downfall.downfallMod;
 import downfall.events.HeartEvent;
-import downfall.relics.Hecktoplasm;
 import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.cards.*;
-import expansioncontent.cards.deprecated.*;
-import expansioncontent.relics.StudyCardRelic;
 import expansioncontent.potions.BossPotion;
+import expansioncontent.relics.StudyCardRelic;
 import gremlin.potions.WizPotion;
 import gremlin.relics.ImpeccablePecs;
 import gremlin.relics.PricklyShields;
@@ -57,7 +52,7 @@ import java.util.List;
 import java.util.Map;
 
 public class BanSharedContentPatch {
-    private static Map<AbstractPlayer.PlayerClass, List<String>> runLockedPotions = new HashMap<>();
+    private static final Map<AbstractPlayer.PlayerClass, List<String>> runLockedPotions = new HashMap<>();
 
     public static void registerRunLockedPotion(AbstractPlayer.PlayerClass playerClass, String potionId) {
         runLockedPotions.computeIfAbsent(playerClass, _ignore -> new ArrayList<>()).add(potionId);
@@ -126,11 +121,11 @@ public class BanSharedContentPatch {
                 AbstractDungeon.colorlessCardPool.removeCard(GuardianWhirl.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(GuardianWhirl.ID);
             }
-            if (AbstractDungeon.player instanceof ChampChar || RandomCardWithTagAction.champLocked()) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_CHAMP) || RandomCardWithTagAction.champLocked()) {
                 AbstractDungeon.colorlessCardPool.removeCard(LastStand.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(LastStand.ID);
             }
-            if (AbstractDungeon.player instanceof AutomatonChar || RandomCardWithTagAction.autoLocked()) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_AUTOMATON) || RandomCardWithTagAction.autoLocked()) {
                 AbstractDungeon.colorlessCardPool.removeCard(HyperBeam.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(HyperBeam.ID);
             }
@@ -197,10 +192,10 @@ public class BanSharedContentPatch {
                 PotionHelper.potions.remove(BossPotion.POTION_ID);
             }
             // Ban shared potions from other classes if you haven't played as that class before
-            runLockedPotions.forEach((playerClass, potionIds) ->{
+            runLockedPotions.forEach((playerClass, potionIds) -> {
                 // Shared potions will never be banned from their base class
-                if (chosenClass!=playerClass) {
-                    if(!HeartEvent.hasPlayedRun(playerClass)) {
+                if (chosenClass != playerClass) {
+                    if (!HeartEvent.hasPlayedRun(playerClass)) {
                         PotionHelper.potions.removeAll(potionIds);
                     }
                 }

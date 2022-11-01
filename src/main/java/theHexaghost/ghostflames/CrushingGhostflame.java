@@ -11,10 +11,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
+import downfall.util.TextureLoader;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.EnhancePower;
-import downfall.util.TextureLoader;
 
 public class CrushingGhostflame extends AbstractGhostflame {
 
@@ -23,12 +23,12 @@ public class CrushingGhostflame extends AbstractGhostflame {
     public static Texture bruh2 = TextureLoader.getTexture(HexaMod.makeUIPath("damage.png"));
     public int skillsPlayedThisTurn = 0;
 
-    private String ID = "hexamod:CrushingGhostflame";
-    private String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
-    private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
+    private final String ID = "hexamod:CrushingGhostflame";
+    private final String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
+    private final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
 
-    private Color flameColor = new Color(249F/255F, 185F/255F, 164F/255F, 1F);
-    private Color activeColor = new Color(249F/255F * 0.5F, 185F/255F * 0.5F, 164F/255F * 0.5F, 1F);
+    private final Color flameColor = new Color(249F / 255F, 185F / 255F, 164F / 255F, 1F);
+    private final Color activeColor = new Color(249F / 255F * 0.5F, 185F / 255F * 0.5F, 164F / 255F * 0.5F, 1F);
 
     public CrushingGhostflame(float x, float y) {
         super(x, y);
@@ -43,11 +43,11 @@ public class CrushingGhostflame extends AbstractGhostflame {
 
     @Override
     public void advanceTrigger(AbstractCard c) {
-        if (!charged && c.type == AbstractCard.CardType.SKILL){
+        if (!charged && c.type == AbstractCard.CardType.SKILL) {
             if (skillsPlayedThisTurn < 2) {
                 advanceTriggerAnim();
                 skillsPlayedThisTurn++;
-                if (skillsPlayedThisTurn == 2){
+                if (skillsPlayedThisTurn == 2) {
                     charge();
                 }
             }
@@ -59,7 +59,7 @@ public class CrushingGhostflame extends AbstractGhostflame {
         return skillsPlayedThisTurn;
     }
 
-        @Override
+    @Override
     public void onCharge() {
         for (int i = 0; i < 2; i++) {
             atb(new AbstractGameAction() {
@@ -86,7 +86,7 @@ public class CrushingGhostflame extends AbstractGhostflame {
         return x + "x2";
     }
 
-    public int getEffectCount(){
+    public int getEffectCount() {
         int x = damage;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
@@ -115,7 +115,9 @@ public class CrushingGhostflame extends AbstractGhostflame {
     }
 
     @Override
-    public String getName(){ return NAME;}
+    public String getName() {
+        return NAME;
+    }
 
     @Override
     public String getDescription() {

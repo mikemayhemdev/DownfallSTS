@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
-import guardian.actions.PlaceActualCardIntoStasis;
 import guardian.patches.AbstractCardEnum;
 
 public class StasisStrike extends AbstractGuardianCard {
@@ -56,7 +55,7 @@ public class StasisStrike extends AbstractGuardianCard {
         this.tags.add(AbstractCard.CardTags.STRIKE);
         baseMagicNumber = magicNumber = 5;
         this.socketCount = SOCKETS;
-      //  this.tags.add(GuardianMod.SELFSTASIS);
+        //  this.tags.add(GuardianMod.SELFSTASIS);
         updateDescription();
         loadGemMisc();
 
@@ -78,7 +77,7 @@ public class StasisStrike extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeDamage(4);
-          //  upgradeMagicNumber(2);
+            //  upgradeMagicNumber(2);
         }
     }
 

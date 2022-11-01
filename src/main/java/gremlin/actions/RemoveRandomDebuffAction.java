@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class RemoveRandomDebuffAction extends AbstractGameAction {
-    private AbstractCreature c;
+    private final AbstractCreature c;
 
     public RemoveRandomDebuffAction(AbstractCreature c) {
         this.c = c;
@@ -21,8 +21,8 @@ public class RemoveRandomDebuffAction extends AbstractGameAction {
         Iterator var1 = this.c.powers.iterator();
         ArrayList<AbstractPower> debuffList = new ArrayList<>();
 
-        while(var1.hasNext()) {
-            AbstractPower p = (AbstractPower)var1.next();
+        while (var1.hasNext()) {
+            AbstractPower p = (AbstractPower) var1.next();
             if (p.type == AbstractPower.PowerType.DEBUFF) {
                 debuffList.add(p);
             }

@@ -35,7 +35,7 @@ public class SocketGemEffect extends AbstractGameEffect {
     public boolean socketSelect = false;
     public boolean confirmSelect = false;
     public AbstractGuardianCard gemChosen;
-    private Color screenColor;
+    private final Color screenColor;
 
     public SocketGemEffect() {
         this.screenColor = AbstractDungeon.fadeColor.cpy();

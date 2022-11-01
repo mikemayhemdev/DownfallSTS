@@ -2,7 +2,6 @@ package champ.util;
 
 import basemod.abstracts.AbstractCardModifier;
 import champ.ChampMod;
-import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
 import champ.stances.UltimateStance;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -13,7 +12,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import slimebound.SlimeboundMod;
 
 public class OpenerModDefensive extends AbstractCardModifier {
 
@@ -36,7 +34,8 @@ public class OpenerModDefensive extends AbstractCardModifier {
         if (!(AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)))
             AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveStance.STANCE_ID));
         for (AbstractRelic r : AbstractDungeon.player.relics) {
-            if (r instanceof OnOpenerSubscriber) ((OnOpenerSubscriber) r).onOpener(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
+            if (r instanceof OnOpenerSubscriber)
+                ((OnOpenerSubscriber) r).onOpener(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
         }
         super.onUse(card, target, action);
     }

@@ -2,27 +2,20 @@ package downfall.actions;
 
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.SlowPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.SpeechBubble;
-import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
 import downfall.monsters.gauntletbosses.*;
 import downfall.vfx.NeowBossRezEffect;
 
 public class NeowRezAction extends AbstractGameAction {
-    private NeowBoss owner;
+    private final NeowBoss owner;
     private boolean instructedMove;
     private boolean rezInit;
     private NeowBossRezEffect rezVFX;
@@ -37,7 +30,7 @@ public class NeowRezAction extends AbstractGameAction {
     }
 
     public void rezSpeech() {
-        switch (owner.Rezzes) {
+        switch (NeowBoss.Rezzes) {
             case 0: {
                 AbstractDungeon.effectList.add(new SpeechBubble(Settings.WIDTH * 0.85F, Settings.HEIGHT / 2F, 2.0F, CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowBoss")).TEXT[0], false));
                 CardCrawlGame.sound.play("VO_NEOW_2A");
@@ -76,9 +69,9 @@ public class NeowRezAction extends AbstractGameAction {
                 owner.bossesRezzed.add(name);
                 AbstractMonster q = rezBoss(name, i);
 
-                if (i==0) ally1 = ((GauntletBoss) q);
-                if (i==1) ally2 = ((GauntletBoss) q);
-                if (i==2) {
+                if (i == 0) ally1 = ((GauntletBoss) q);
+                if (i == 1) ally2 = ((GauntletBoss) q);
+                if (i == 2) {
                     ally3 = ((GauntletBoss) q);
 
                     ally1.isThird = true;
@@ -88,7 +81,7 @@ public class NeowRezAction extends AbstractGameAction {
                 }
 
 
-                    AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
+                AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
                     @Override
                     public void update() {
                         isDone = true;

@@ -9,12 +9,10 @@ import charbosses.cards.purple.AbstractStanceChangeCard;
 import charbosses.cards.purple.EnCarveReality;
 import charbosses.cards.purple.EnSmite;
 import charbosses.orbs.AbstractEnemyOrb;
-import charbosses.powers.cardpowers.EnemyFearNoEvilPower;
 import charbosses.powers.cardpowers.EnemyStormPower;
 import charbosses.powers.cardpowers.EnemyWrathNextTurnPower;
 import charbosses.stances.AbstractEnemyStance;
 import charbosses.stances.EnDivinityStance;
-import charbosses.stances.EnWrathStance;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -39,7 +37,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.EvolvePower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import com.megacrit.cardcrawl.vfx.DebuffParticleEffect;
@@ -101,18 +98,18 @@ public abstract class AbstractBossCard extends AbstractCard {
     public float intentAlphaTarget;
     public float intentOffsetX;
     public float intentOffsetY = -90F * Settings.scale;
-    private BobEffect bobEffect = new BobEffect();
+    private final BobEffect bobEffect = new BobEffect();
     private Texture intentImg;
     private Texture intentBg;
-    private PowerTip intentTip = new PowerTip();
+    private final PowerTip intentTip = new PowerTip();
     public int intentDmg;
     protected int intentMultiAmt;
-    private Color intentColor = Color.WHITE.cpy();
+    private final Color intentColor = Color.WHITE.cpy();
     private float intentParticleTimer;
     private float intentAngle;
     public boolean lockIntentValues;
     public ArrayList<AbstractGameEffect> intentFlash = new ArrayList<>();
-    private ArrayList<AbstractGameEffect> intentVfx = new ArrayList<>();
+    private final ArrayList<AbstractGameEffect> intentVfx = new ArrayList<>();
 
 
     public AbstractBossCard(String id, String name, String img, int cost, String rawDescription, CardType type,
@@ -192,7 +189,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     }
 
     public int autoPriority() {
-        AbstractCharBoss ownerBoss = (AbstractCharBoss) this.owner;
+        AbstractCharBoss ownerBoss = this.owner;
         boolean setupPhase = ownerBoss.onSetupTurn;
 
         float blockModifier = 1F;
@@ -321,7 +318,7 @@ public abstract class AbstractBossCard extends AbstractCard {
             this.intentDmg = MathUtils.floor(manualCustomDamageModifierMult * calculateDamage(mo, player, this.baseDamage + customIntentModifiedDamage() + manualCustomDamageModifier));
             this.intentDmg = MathUtils.floor(manualCustomDamageModifierMult * calculateDamage(mo, player, this.baseDamage + customIntentModifiedDamage() + manualCustomDamageModifier));
             if (this instanceof EnCarveReality) {
-                if (((EnCarveReality)this).willUseSmite) {
+                if (((EnCarveReality) this).willUseSmite) {
                     EnSmite enSmite = new EnSmite();
                     enSmite.calculateCardDamage(this.owner);
                     this.intentDmg += enSmite.intentDmg;
@@ -381,7 +378,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         AbstractEnemyStance stanceAtCardPlay = (AbstractEnemyStance) this.owner.stance;
         for (final AbstractPower p : this.owner.powers) {
             if (p instanceof EnemyWrathNextTurnPower) {
-                stanceAtCardPlay = ((EnemyWrathNextTurnPower)p).getWrathStance();
+                stanceAtCardPlay = ((EnemyWrathNextTurnPower) p).getWrathStance();
             }
         }
         for (AbstractCard card : this.owner.hand.group) {
@@ -449,11 +446,7 @@ public abstract class AbstractBossCard extends AbstractCard {
             if (this.type == CardType.CURSE && this.costForTurn < -1) return false;
             if (this.type == CardType.STATUS) return false;
 
-            if ((cardPlayable(m)) && (hasEnoughEnergy())) {
-                return true;
-            }
-
-            return false;
+            return (cardPlayable(m)) && (hasEnoughEnergy());
         }
         return false;
     }
@@ -871,12 +864,10 @@ public abstract class AbstractBossCard extends AbstractCard {
     }
 
     private Texture getIntentBg() {
-        switch (this.intent) {
-            case ATTACK_DEFEND:
-                return null;
-            default:
-                return null;
+        if (this.intent == AbstractMonster.Intent.ATTACK_DEFEND) {
+            return null;
         }
+        return null;
     }
 
     protected Texture getAttackIntent() {
@@ -983,7 +974,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     public void loadCardImage(String img) {
         Texture cardTexture;
         if (imgMap.containsKey(img)) {
-            cardTexture = (Texture) imgMap.get(img);
+            cardTexture = imgMap.get(img);
         } else {
             cardTexture = ImageMaster.loadImage(img);
             imgMap.put(img, cardTexture);

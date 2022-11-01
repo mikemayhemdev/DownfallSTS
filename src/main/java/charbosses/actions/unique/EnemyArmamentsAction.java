@@ -18,8 +18,8 @@ public class EnemyArmamentsAction extends AbstractGameAction {
         TEXT = EnemyArmamentsAction.uiStrings.TEXT;
     }
 
-    private AbstractCharBoss p;
-    private ArrayList<AbstractCard> cannotUpgrade;
+    private final AbstractCharBoss p;
+    private final ArrayList<AbstractCard> cannotUpgrade;
     private boolean upgraded;
 
     public EnemyArmamentsAction(final boolean armamentsPlus) {

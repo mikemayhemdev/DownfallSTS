@@ -1,10 +1,10 @@
 package champ.patches;
 
-import champ.ChampChar;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.city.Ghosts;
 import com.megacrit.cardcrawl.random.Random;
+import downfall.downfallMod;
 import javassist.CtBehavior;
 
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ public class ChampAfraidOfGhostsPatch {
                 localvars = {"tmp"}
         )
         public static void Insert(Random rng, ArrayList<String> tmp) {
-            if (AbstractDungeon.player instanceof ChampChar) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_CHAMP)) {
                 tmp.remove(Ghosts.ID);
             }
         }

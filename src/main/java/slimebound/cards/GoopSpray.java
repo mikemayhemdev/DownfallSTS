@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
@@ -96,7 +95,7 @@ public class GoopSpray extends AbstractSlimeboundCard {
         if (!this.upgraded) {
 
             upgradeName();
-           // upgradeBlock(1);
+            // upgradeBlock(1);
             //upgradeSlimed(1);
             upgradeMagicNumber(1);
 

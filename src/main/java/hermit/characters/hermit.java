@@ -8,14 +8,11 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
-import com.esotericsoftware.spine.Bone;
 import com.esotericsoftware.spine.Slot;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.curses.Regret;
-import com.megacrit.cardcrawl.cards.green.Terror;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
@@ -29,10 +26,10 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import com.megacrit.cardcrawl.vfx.AwakenedEyeParticle;
-import com.megacrit.cardcrawl.vfx.AwakenedWingParticle;
-import com.megacrit.cardcrawl.vfx.combat.GhostIgniteEffect;
-import com.megacrit.cardcrawl.vfx.scene.SilentVictoryStarEffect;
+import hermit.cards.Covet;
+import hermit.cards.Defend_Hermit;
+import hermit.cards.Snapshot;
+import hermit.cards.Strike_Hermit;
 import hermit.effects.HermitEyeParticle;
 import hermit.effects.HermitVictoryEmbers;
 import hermit.effects.HermitVictoryMoon;
@@ -40,9 +37,6 @@ import hermit.patches.EnumPatch;
 import hermit.powers.Concentration;
 import hermit.powers.Rugged;
 import hermit.relics.Memento;
-
-import hermit.HermitMod;
-import hermit.cards.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,7 +63,8 @@ public class hermit extends CustomPlayer {
         public static AbstractPlayer.PlayerClass HERMIT;
         @SpireEnum(name = "HERMIT_YELLOW") // These two HAVE to have the same absolutely identical name.
         public static AbstractCard.CardColor COLOR_YELLOW;
-        @SpireEnum(name = "HERMIT_YELLOW") @SuppressWarnings("unused")
+        @SpireEnum(name = "HERMIT_YELLOW")
+        @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 
@@ -135,8 +130,7 @@ public class hermit extends CustomPlayer {
                 });
 
 
-
-        // =============== TEXTURES, ENERGY, LOADOUT =================  
+        // =============== TEXTURES, ENERGY, LOADOUT =================
 
         initializeClass(null, // required call to load textures and setup energy/loadout.
                 // I left these in DefaultMod.java (Ctrl+click them to see where they are, Ctrl+hover to see what they read.)
@@ -362,7 +356,7 @@ public class hermit extends CustomPlayer {
         }
         update_timer += Gdx.graphics.getDeltaTime();
 
-        for(float i = 0; i+(1.0/120.0) <= update_timer; update_timer -= (1.0/120.0)) {
+        for (float i = 0; i + (1.0 / 120.0) <= update_timer; update_timer -= (1.0 / 120.0)) {
             effects.add(new HermitVictoryEmbers());
         }
     }

@@ -26,8 +26,7 @@ public class MakeshiftArmor extends AbstractGremlinCard {
     private static final int MAGIC = 0;
     private static final int UPGRADE_BONUS = 1;
 
-    public MakeshiftArmor()
-    {
+    public MakeshiftArmor() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -37,8 +36,7 @@ public class MakeshiftArmor extends AbstractGremlinCard {
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         if (upgraded) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                     new ArtifactPower(p, magicNumber), magicNumber));
@@ -47,10 +45,8 @@ public class MakeshiftArmor extends AbstractGremlinCard {
                 new MakeshiftArmorPower(p, 1), 1));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_BONUS);
             this.rawDescription = strings.UPGRADE_DESCRIPTION;

@@ -1,13 +1,10 @@
 package theHexaghost.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import theHexaghost.actions.EmbersAction;
 import downfall.actions.PerformXAction;
+import theHexaghost.actions.EmbersAction;
 
 public class RainOfEmbers extends AbstractHexaCard {
 
@@ -33,8 +30,8 @@ public class RainOfEmbers extends AbstractHexaCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(1);
-          //  upgradeDamage(1);
-          //  upgradeBurn(1);
+            //  upgradeDamage(1);
+            //  upgradeBurn(1);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

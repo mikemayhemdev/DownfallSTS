@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.beyond.SensoryStone;
 import com.megacrit.cardcrawl.localization.EventStrings;
+import downfall.downfallMod;
 import gremlin.characters.GremlinCharacter;
 
 public class SensoryStonePatch {
@@ -16,13 +17,12 @@ public class SensoryStonePatch {
     private static final int DMG_B = 2;
 
     @SpirePatch(clz = SensoryStone.class, method = "buttonEffect")
-    public static class SensoryStoneOptionDamage
-    {
+    public static class SensoryStoneOptionDamage {
         @SpireInsertPatch(
-                rloc=6
+                rloc = 6
         )
-        public static void Insert(SensoryStone __instance, int buttonPressed){
-            if (AbstractDungeon.player instanceof GremlinCharacter) {
+        public static void Insert(SensoryStone __instance, int buttonPressed) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
                 __instance.imageEventText.updateDialogOption(1, strings.OPTIONS[0] + DMG_A + SensoryStone.OPTIONS[3]);
                 __instance.imageEventText.updateDialogOption(2, strings.OPTIONS[1] + DMG_B + SensoryStone.OPTIONS[3]);
             }
@@ -30,13 +30,12 @@ public class SensoryStonePatch {
     }
 
     @SpirePatch(clz = SensoryStone.class, method = "buttonEffect")
-    public static class SensoryStoneDamageA
-    {
+    public static class SensoryStoneDamageA {
         @SpireInsertPatch(
-                rloc=23
+                rloc = 23
         )
-        public static SpireReturn Insert(SensoryStone __instance, int buttonPressed){
-            if (AbstractDungeon.player instanceof GremlinCharacter) {
+        public static SpireReturn Insert(SensoryStone __instance, int buttonPressed) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
                 AbstractDungeon.player.damage(new DamageInfo(null, DMG_A));
                 ((GremlinCharacter) AbstractDungeon.player).damageGremlins(DMG_A);
                 __instance.imageEventText.updateDialogOption(0, SensoryStone.OPTIONS[4]);
@@ -48,13 +47,12 @@ public class SensoryStonePatch {
     }
 
     @SpirePatch(clz = SensoryStone.class, method = "buttonEffect")
-    public static class SensoryStoneDamageB
-    {
+    public static class SensoryStoneDamageB {
         @SpireInsertPatch(
-                rloc=31
+                rloc = 31
         )
-        public static SpireReturn Insert(SensoryStone __instance, int buttonPressed){
-            if (AbstractDungeon.player instanceof GremlinCharacter) {
+        public static SpireReturn Insert(SensoryStone __instance, int buttonPressed) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
                 AbstractDungeon.player.damage(new DamageInfo(null, DMG_B));
                 ((GremlinCharacter) AbstractDungeon.player).damageGremlins(DMG_B);
                 __instance.imageEventText.updateDialogOption(0, SensoryStone.OPTIONS[4]);

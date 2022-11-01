@@ -1,10 +1,6 @@
 package hermit.cards;
 
-import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.green.Survivor;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -78,9 +74,10 @@ public class BodyArmor extends AbstractDynamicCard {
     // Actions the card should actually unironically literally do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new BodyArmorAction(p,p,1,block,false));
+        AbstractDungeon.actionManager.addToBottom(new BodyArmorAction(p, p, 1, block, false));
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
     }
+
     //Upgraded stats.
     @Override
     public void upgrade() {

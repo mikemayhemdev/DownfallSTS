@@ -11,14 +11,15 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
-import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.helpers.*;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.stances.NeutralStance;
@@ -27,7 +28,8 @@ import reskinContent.patches.CharacterSelectScreenPatches;
 
 import java.util.ArrayList;
 
-import static champ.ChampMod.*;
+import static champ.ChampMod.makeID;
+import static champ.ChampMod.placeholderColor;
 
 public class ChampChar extends CustomPlayer {
     public static final String ID = makeID("theChamp");
@@ -53,14 +55,14 @@ public class ChampChar extends CustomPlayer {
     public float renderscale2 = 2.5F;
 
     public float stanceSwitchAnimTimer = 0.0F;
-    private ArrayList<String> stanceSwitchQueue = new ArrayList<>();
+    private final ArrayList<String> stanceSwitchQueue = new ArrayList<>();
 
 
-    private String atlasURL = "champResources/images/char/mainChar/champ.atlas";
-    private String jsonURL = "champResources/images/char/mainChar/champ.json";
+    private final String atlasURL = "champResources/images/char/mainChar/champ.atlas";
+    private final String jsonURL = "champResources/images/char/mainChar/champ.json";
 
-    private String atlasURL2 = "reskinContent/img/ChampMod/Chan-P/animation/TheChampPlayer.atlas";
-    private String jsonURL2 = "reskinContent/img/ChampMod/Chan-P/animation/TheChampPlayer.json";
+    private final String atlasURL2 = "reskinContent/img/ChampMod/Chan-P/animation/TheChampPlayer.atlas";
+    private final String jsonURL2 = "reskinContent/img/ChampMod/Chan-P/animation/TheChampPlayer.json";
 
     /*
     private String atlasURL2 = "reskinContent/img/HexaghostMod/animation/Hexaghost_self_downfall.atlas";
@@ -68,7 +70,7 @@ public class ChampChar extends CustomPlayer {
     */
 
     public ChampChar(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "champResources/images/char/mainChar/orb/vfx.png", (String) null, (String) null);
+        super(name, setClass, orbTextures, "champResources/images/char/mainChar/orb/vfx.png", null, (String) null);
 
         initializeClass(null,
                 CharacterSelectScreenPatches.characters[4].skins[CharacterSelectScreenPatches.characters[4].reskinCount].SHOULDER1,

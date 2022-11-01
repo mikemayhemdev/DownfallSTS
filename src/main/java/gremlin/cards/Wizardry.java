@@ -25,8 +25,7 @@ public class Wizardry extends AbstractGremlinCard {
     private static final int COST = 1;
     private static final int MAGIC = 1;
 
-    public Wizardry()
-    {
+    public Wizardry() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -36,16 +35,13 @@ public class Wizardry extends AbstractGremlinCard {
         GremlinMod.loadJokeCardImage(this, "Wizardry.png");
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new WizardryPower(p, magicNumber), magicNumber));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             this.isInnate = true;
 

@@ -5,11 +5,11 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.UnknownRareAttack;
 import sneckomod.cards.unknowns.UnknownRarePower;
 import sneckomod.cards.unknowns.UnknownRareSkill;
-import downfall.util.TextureLoader;
 
 public class RareBoosterPack extends CustomRelic {
 

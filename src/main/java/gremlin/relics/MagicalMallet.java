@@ -27,6 +27,7 @@ public class MagicalMallet extends AbstractGremlinRelic {
     public void atTurnStart() {
         this.counter = 3;
     }
+
     public void onVictory() {
         this.counter = -1;
     }

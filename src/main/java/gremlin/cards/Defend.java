@@ -23,8 +23,7 @@ public class Defend extends AbstractGremlinCard {
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
 
-    public Defend()
-    {
+    public Defend() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseBlock = BLOCK;
@@ -32,20 +31,16 @@ public class Defend extends AbstractGremlinCard {
         GremlinMod.loadJokeCardImage(this, "Defend.png");
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
     }
 
-    public AbstractCard makeCopy()
-    {
+    public AbstractCard makeCopy() {
         return new Defend();
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_BONUS);
         }

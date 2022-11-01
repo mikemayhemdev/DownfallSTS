@@ -30,23 +30,20 @@ public class TagTeam extends AbstractGremlinCard {
 
     private boolean hasOptions = true;
 
-    public TagTeam()
-    {
+    public TagTeam() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         updateModal();
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         GremlinMod.loadJokeCardImage(this, "TagTeam.png");
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
-        if(hasOptions){
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        if (hasOptions) {
             addToBot(new ChooseOneAction(updateModal()));
         }
     }
 
-    public AbstractCard makeCopy()
-    {
+    public AbstractCard makeCopy() {
         return new TagTeam();
     }
 
@@ -56,10 +53,8 @@ public class TagTeam extends AbstractGremlinCard {
         super.applyPowers();
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             selfRetain = true;
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
@@ -67,35 +62,30 @@ public class TagTeam extends AbstractGremlinCard {
         }
     }
 
-    private ArrayList<AbstractCard> updateModal(){
-        if(AbstractDungeon.player != null){
+    private ArrayList<AbstractCard> updateModal() {
+        if (AbstractDungeon.player != null) {
             ArrayList<GremlinStandby> living = new ArrayList<>();
-            for(AbstractOrb orb : AbstractDungeon.player.orbs){
-                if(orb instanceof GremlinStandby){
+            for (AbstractOrb orb : AbstractDungeon.player.orbs) {
+                if (orb instanceof GremlinStandby) {
                     living.add((GremlinStandby) orb);
                 }
             }
-            if(living.size() == 0){
+            if (living.size() == 0) {
                 hasOptions = false;
                 return new ArrayList<>();
-            }
-            else {
+            } else {
                 hasOptions = true;
                 ArrayList<AbstractCard> options = new ArrayList<>();
-                for(AbstractOrb grem : living){
-                    if(grem instanceof MadGremlin){
+                for (AbstractOrb grem : living) {
+                    if (grem instanceof MadGremlin) {
                         options.add(new MadGremlinCard());
-                    }
-                    else if(grem instanceof FatGremlin){
+                    } else if (grem instanceof FatGremlin) {
                         options.add(new FatGremlinCard());
-                    }
-                    else if(grem instanceof ShieldGremlin){
+                    } else if (grem instanceof ShieldGremlin) {
                         options.add(new ShieldGremlinCard());
-                    }
-                    else if(grem instanceof SneakyGremlin){
+                    } else if (grem instanceof SneakyGremlin) {
                         options.add(new SneakyGremlinCard());
-                    }
-                    else if(grem instanceof GremlinWizard){
+                    } else if (grem instanceof GremlinWizard) {
                         options.add(new GremlinWizardCard());
                     }
                 }
@@ -108,7 +98,7 @@ public class TagTeam extends AbstractGremlinCard {
 
     @Override
     public void triggerWhenDrawn() {
-        if(AbstractDungeon.player.hasRelic(TagTeamwork.ID)) {
+        if (AbstractDungeon.player.hasRelic(TagTeamwork.ID)) {
             AbstractDungeon.player.getRelic(TagTeamwork.ID).onTrigger();
         }
     }

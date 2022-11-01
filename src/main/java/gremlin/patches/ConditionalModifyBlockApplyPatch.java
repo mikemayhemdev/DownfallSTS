@@ -8,16 +8,16 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import gremlin.powers.ConditionalModifyBlockPower;
 
 @SpirePatch(
-        clz= AbstractCard.class,
-        method="applyPowersToBlock"
+        clz = AbstractCard.class,
+        method = "applyPowersToBlock"
 )
 public class ConditionalModifyBlockApplyPatch {
     @SpireInsertPatch(
-            rloc=4,
-            localvars={"p", "tmp"}
+            rloc = 4,
+            localvars = {"p", "tmp"}
     )
     public static void Insert(AbstractCard __instance, AbstractPower p, @ByRef float[] tmp) {
-        if(p instanceof ConditionalModifyBlockPower){
+        if (p instanceof ConditionalModifyBlockPower) {
             tmp[0] = ((ConditionalModifyBlockPower) p).conditionalModifyBlock(tmp[0], __instance);
         }
     }

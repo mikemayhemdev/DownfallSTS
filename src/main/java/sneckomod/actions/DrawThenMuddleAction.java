@@ -8,8 +8,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class DrawThenMuddleAction extends AbstractGameAction {
-    private int bruh;
-    private AbstractPlayer p;
+    private final int bruh;
+    private final AbstractPlayer p;
 
     public DrawThenMuddleAction(int amount) {
         bruh = amount;

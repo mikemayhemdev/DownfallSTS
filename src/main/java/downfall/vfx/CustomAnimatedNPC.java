@@ -14,11 +14,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.glutils.FrameBuffer;
-import com.esotericsoftware.spine.AnimationState;
-import com.esotericsoftware.spine.AnimationStateData;
-import com.esotericsoftware.spine.Skeleton;
-import com.esotericsoftware.spine.SkeletonData;
-import com.esotericsoftware.spine.SkeletonJson;
+import com.esotericsoftware.spine.*;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -45,17 +41,17 @@ public class CustomAnimatedNPC {
 
     public static int borderEffectCount = 36;
 
-    private boolean colorSwapped = false;
-    private boolean noMesh;
+    private final boolean colorSwapped = false;
+    private final boolean noMesh;
 
-    private ArrayList<PortalBorderEffect> borderEffects = new ArrayList<>();
+    private final ArrayList<PortalBorderEffect> borderEffects = new ArrayList<>();
 
-    private float heartCenterX;
-    private float heartCenterY;
-    private float heartScale;
+    private final float heartCenterX;
+    private final float heartCenterY;
+    private final float heartScale;
     public Texture portalImage;
 
-    private HeartAnimListener animListener = new HeartAnimListener();
+    private final HeartAnimListener animListener = new HeartAnimListener();
 
     // mask variables
 
@@ -63,10 +59,10 @@ public class CustomAnimatedNPC {
     // getWidth and getHeight make the frameBuffer match the player's game camera, which makes the FrameBuffer match the screen size.
     // it is possible to use a size other than the screen, but things will become warped if you don't take additional steps
     // like initializing a new camera and setting variables to use it. I prefer this simpler method.
-    private FrameBuffer heartBuffer = new FrameBuffer(Pixmap.Format.RGBA8888, Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), false, false);
+    private final FrameBuffer heartBuffer = new FrameBuffer(Pixmap.Format.RGBA8888, Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), false, false);
     // I'm actually not sure why I end up needing multiple FrameBuffers for multiple mask operations, but it ended up
     // fixing my issues when I used multiple, so here we are.
-    private FrameBuffer maskBuffer = new FrameBuffer(Pixmap.Format.RGBA8888, Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), false, false);
+    private final FrameBuffer maskBuffer = new FrameBuffer(Pixmap.Format.RGBA8888, Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), false, false);
 
     private static final float PORTAL_GROW_TIME = 2.0f; //how long it takes the portal to grow to full size
     private float maskDuration = 0.0f;
@@ -75,7 +71,7 @@ public class CustomAnimatedNPC {
     private static final TextureRegion MASK_REGION = new TextureRegion(new Texture("downfallResources/images/vfx/HeartMask.png"), 500, 500);
 
     public CustomAnimatedNPC(float x, float y, String atlasUrl, String skeletonUrl, String trackName, boolean portalRender, int portalType) {
-        this(x,y,atlasUrl,skeletonUrl,trackName,portalRender,portalType,false, 1F);
+        this(x, y, atlasUrl, skeletonUrl, trackName, portalRender, portalType, false, 1F);
     }
 
     public CustomAnimatedNPC(float x, float y, String atlasUrl, String skeletonUrl, String trackName, boolean portalRender, int portalType, boolean noMesh, float heartScale) {
@@ -85,8 +81,8 @@ public class CustomAnimatedNPC {
         if (!this.noMesh) {
             this.loadAnimation(atlasUrl, skeletonUrl, 1.0F);
             this.skeleton.setPosition(x, y - 300F * Settings.scale * this.heartScale);
-          this.state.setAnimation(0, trackName, true); // anim
-           this.state.setTimeScale(1.0F); // anim
+            this.state.setAnimation(0, trackName, true); // anim
+            this.state.setTimeScale(1.0F); // anim
         }
 
         this.portalRender = portalRender;
@@ -94,16 +90,16 @@ public class CustomAnimatedNPC {
         this.heartCenterX = x;
         this.heartCenterY = y;
 
-        if (portalType == 0){
+        if (portalType == 0) {
             portalImage = ImageMaster.loadImage("downfallResources/images/vfx/beyondPortal.png");
         }
-        if (portalType == 1){
+        if (portalType == 1) {
             portalImage = ImageMaster.loadImage("downfallResources/images/vfx/cityPortal.png");
         }
 
         if (this.portalRender) {
             if (!this.noMesh) {
-               this.addListener(new HeartAnimListener());// anim
+                this.addListener(new HeartAnimListener());// anim
                 this.skeleton.getRootBone().setScale(0.8F * this.heartScale);// anim
             }
             for (int i = 1; i <= borderEffectCount; i++) {
@@ -128,30 +124,30 @@ public class CustomAnimatedNPC {
         this.state = new AnimationState(this.stateData);
     }
 
-    public void changeBorderColor(Color color){
+    public void changeBorderColor(Color color) {
         for (PortalBorderEffect pb : borderEffects) {
             pb.borderColor = color;
         }
     }
 
-    public void update(){
-        if (this.portalRender){
-            if (this.portalRenderActive){
-                for (PortalBorderEffect pb : borderEffects){
+    public void update() {
+        if (this.portalRender) {
+            if (this.portalRenderActive) {
+                for (PortalBorderEffect pb : borderEffects) {
                     pb.update();
                 }
                 //mask effect
                 if (this.maskDuration < PORTAL_GROW_TIME) {
                     this.maskDuration += Gdx.graphics.getDeltaTime();
 
-                    for (PortalBorderEffect pb : borderEffects){
+                    for (PortalBorderEffect pb : borderEffects) {
                         pb.ELLIPSIS_SCALE = (maskDuration / PORTAL_GROW_TIME) * this.heartScale;
                         pb.calculateEllipseSize();
                     }
 
                     if (this.maskDuration > PORTAL_GROW_TIME) {
                         this.maskDuration = PORTAL_GROW_TIME;
-                        for (PortalBorderEffect pb : borderEffects){
+                        for (PortalBorderEffect pb : borderEffects) {
                             pb.ELLIPSIS_SCALE = (maskDuration / PORTAL_GROW_TIME) * this.heartScale;
                             pb.calculateEllipseSize();
                         }
@@ -162,12 +158,12 @@ public class CustomAnimatedNPC {
 
     }
 
-    public void render(SpriteBatch sb){
+    public void render(SpriteBatch sb) {
         this.render(sb, Color.WHITE);
     }
 
     public void render(SpriteBatch sb, Color color) {
-        if (this.portalRender){
+        if (this.portalRender) {
         /*
         Masking is done by instructing the SpriteBatch, via blend function, to only keep certain pixels based upon a
         "mask" texture rendered after the thing you want masked is rendered. In a vacuum, all you have to do is set the
@@ -177,24 +173,24 @@ public class CustomAnimatedNPC {
         contents of the FrameBuffer as a texture, and then finally render that texture in the regular scene.
         */
 
-                // Since masking only works with a large enough texture and we're going to be shrinking the mask to start, we
-                // need to first assemble a mask large enough to cover the unwanted parts of the render, using an additional
-                // FrameBuffer.
+            // Since masking only works with a large enough texture and we're going to be shrinking the mask to start, we
+            // need to first assemble a mask large enough to cover the unwanted parts of the render, using an additional
+            // FrameBuffer.
 
-                // A FrameBuffer is slightly expensive, so we don't want to be initializing one every frame. It's a private variable.
-                // To properly use a frame buffer, you must start it while the sprite batch is not running, then start the sprite batch again.
+            // A FrameBuffer is slightly expensive, so we don't want to be initializing one every frame. It's a private variable.
+            // To properly use a frame buffer, you must start it while the sprite batch is not running, then start the sprite batch again.
 
-                sb.end();
-                maskBuffer.begin();
+            sb.end();
+            maskBuffer.begin();
 
-                // since the FrameBuffer is an entirely new rendering environment and we're using it between frames, some values
-                // need to be set and re-set each time
-                Gdx.gl.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
-                Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
-                Gdx.gl.glColorMask(true,true,true,true);
+            // since the FrameBuffer is an entirely new rendering environment and we're using it between frames, some values
+            // need to be set and re-set each time
+            Gdx.gl.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
+            Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
+            Gdx.gl.glColorMask(true, true, true, true);
 
-                sb.begin();
-                sb.setColor(Color.WHITE); //to be honest I don't know why we need to set the color again, but none of it works without it.
+            sb.begin();
+            sb.setColor(Color.WHITE); //to be honest I don't know why we need to set the color again, but none of it works without it.
 
         /*
          Since a texture captured by a FrameBuffer is the size of the FrameBuffer and our FrameBuffer is the size of the screen,
@@ -211,50 +207,50 @@ public class CustomAnimatedNPC {
          but we aren't using it in this case.
         */
 
-                //we'll use a simple scale variable based on the duration. At the start, it's super tiny. At the end, it should equal 1.0.
-                float scale = (maskDuration / PORTAL_GROW_TIME) * Settings.scale;
+            //we'll use a simple scale variable based on the duration. At the start, it's super tiny. At the end, it should equal 1.0.
+            float scale = (maskDuration / PORTAL_GROW_TIME) * Settings.scale;
 
 
-                float w = MASK_REGION.getRegionWidth() * this.heartScale;
-                float h = MASK_REGION.getRegionHeight() * this.heartScale;
-                sb.draw(MASK_REGION, heartCenterX - w / 2, heartCenterY - h / 2, w / 2, h / 2, w, h, scale, scale, 0.0f);
+            float w = MASK_REGION.getRegionWidth() * this.heartScale;
+            float h = MASK_REGION.getRegionHeight() * this.heartScale;
+            sb.draw(MASK_REGION, heartCenterX - w / 2, heartCenterY - h / 2, w / 2, h / 2, w, h, scale, scale, 0.0f);
 
-                // now that the mask is rendered inside the frameBuffer, we want to end the frameBuffer, and capture the texture.
-                // Before a frame buffer is ended, the sprite batch must end, or weird operations will happen with the GPU.
+            // now that the mask is rendered inside the frameBuffer, we want to end the frameBuffer, and capture the texture.
+            // Before a frame buffer is ended, the sprite batch must end, or weird operations will happen with the GPU.
 
-                sb.end();
-                maskBuffer.end();
+            sb.end();
+            maskBuffer.end();
 
-                Texture tmpTexture = maskBuffer.getColorBufferTexture(); //this captures the contents of the FrameBuffer as a texture
-                TextureRegion tmpMask = new TextureRegion(tmpTexture); //again, I prefer the options provided by TextureRegion class
+            Texture tmpTexture = maskBuffer.getColorBufferTexture(); //this captures the contents of the FrameBuffer as a texture
+            TextureRegion tmpMask = new TextureRegion(tmpTexture); //again, I prefer the options provided by TextureRegion class
 
-                // Due to a quirk in how StS runs the libGdx engine, and I don't know the details of this myself, FrameBuffers
-                // end up rendering upside-down. This fixes it.
-                tmpMask.flip(false, true);
+            // Due to a quirk in how StS runs the libGdx engine, and I don't know the details of this myself, FrameBuffers
+            // end up rendering upside-down. This fixes it.
+            tmpMask.flip(false, true);
 
-                // now we want to start the second frame buffer and render the npc inside of it, followed by the mask.
-                // again, the FrameBuffer has to be started before the SpriteBatch.
-                heartBuffer.begin();
-                Gdx.gl.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
-                Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
-                Gdx.gl.glColorMask(true,true,true,true);
-                sb.begin();
+            // now we want to start the second frame buffer and render the npc inside of it, followed by the mask.
+            // again, the FrameBuffer has to be started before the SpriteBatch.
+            heartBuffer.begin();
+            Gdx.gl.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
+            Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
+            Gdx.gl.glColorMask(true, true, true, true);
+            sb.begin();
 
-                if (this.highlighted){
-                    sb.setColor(Color.WHITE);
-                } else {
-                    sb.setColor(Color.LIGHT_GRAY);
-                }
+            if (this.highlighted) {
+                sb.setColor(Color.WHITE);
+            } else {
+                sb.setColor(Color.LIGHT_GRAY);
+            }
 
 
-                // render the npc. Since we're using a FrameBuffer that's the same size as the screen, there should be no issues
-                // using the regular render function of the npc. Note that if you want any background, you'd render it right here
-                // right before this render.
+            // render the npc. Since we're using a FrameBuffer that's the same size as the screen, there should be no issues
+            // using the regular render function of the npc. Note that if you want any background, you'd render it right here
+            // right before this render.
 
-                sb.draw(this.portalImage, this.heartCenterX - (250F * Settings.scale), this.heartCenterY - (250F * Settings.scale), 500 * Settings.scale, 500 * Settings.scale);
+            sb.draw(this.portalImage, this.heartCenterX - (250F * Settings.scale), this.heartCenterY - (250F * Settings.scale), 500 * Settings.scale, 500 * Settings.scale);
 
-                //sb.draw(this.portalImage, this.heartCenterX - (this.portalImage.getWidth() / 2F ) * Settings.scale, this.heartCenterY - (this.portalImage.getHeight() / 2F) * Settings.scale, settings);
-                this.standardRender(sb);
+            //sb.draw(this.portalImage, this.heartCenterX - (this.portalImage.getWidth() / 2F ) * Settings.scale, this.heartCenterY - (this.portalImage.getHeight() / 2F) * Settings.scale, settings);
+            this.standardRender(sb);
 
         /*
         Now we have the heart rendered inside the frame buffer, and we want to remove any unwanted pixels outside the mask.
@@ -263,33 +259,32 @@ public class CustomAnimatedNPC {
         sb.setBlendFunction(GL20.GL_ZERO, GL20.GL_ONE_MINUS_SRC_ALPHA);
         but since we're using the other kind of mask, we want it to discard pixels covered by transparency:
          */
-                sb.setBlendFunction(GL20.GL_ZERO, GL20.GL_SRC_ALPHA);
+            sb.setBlendFunction(GL20.GL_ZERO, GL20.GL_SRC_ALPHA);
 
-                // then, we render the mask.
-                // since the Framebuffer is the size of the screen, the texture is also therefore the size of the screen. That makes
-                // this mask really easy to render.
-                sb.draw(tmpMask, 0, 0);
+            // then, we render the mask.
+            // since the Framebuffer is the size of the screen, the texture is also therefore the size of the screen. That makes
+            // this mask really easy to render.
+            sb.draw(tmpMask, 0, 0);
 
-                // IMPORTANT! when you set a blend function, always remember to reset it to StS's default after you're done with it:
-                sb.setBlendFunction(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
+            // IMPORTANT! when you set a blend function, always remember to reset it to StS's default after you're done with it:
+            sb.setBlendFunction(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
 
-                // again, we end the sprite batch and the frameBuffer, capture the texture, and flip it.
-                sb.end();
-                heartBuffer.end();
-                TextureRegion maskedHeart = new TextureRegion(heartBuffer.getColorBufferTexture());
-                maskedHeart.flip(false, true);
+            // again, we end the sprite batch and the frameBuffer, capture the texture, and flip it.
+            sb.end();
+            heartBuffer.end();
+            TextureRegion maskedHeart = new TextureRegion(heartBuffer.getColorBufferTexture());
+            maskedHeart.flip(false, true);
 
-                // then, finally, we restart the SpriteBatch and render our final texture.
-                sb.begin();
-                // the letterboxing was previously applied to the graphics we rendered into the framebuffers. it will
-                // be applied a second time when we render the framebuffer texture to the screen. we can offset the
-                // texture's position to undo the letterboxing.
-                sb.draw(maskedHeart, -2*Settings.VERT_LETTERBOX_AMT, -2*Settings.HORIZ_LETTERBOX_AMT);
+            // then, finally, we restart the SpriteBatch and render our final texture.
+            sb.begin();
+            // the letterboxing was previously applied to the graphics we rendered into the framebuffers. it will
+            // be applied a second time when we render the framebuffer texture to the screen. we can offset the
+            // texture's position to undo the letterboxing.
+            sb.draw(maskedHeart, -2 * Settings.VERT_LETTERBOX_AMT, -2 * Settings.HORIZ_LETTERBOX_AMT);
 
-                // now you can render whatever you like overtop it.
-            }
-         else {
-        this.standardRender(sb);
+            // now you can render whatever you like overtop it.
+        } else {
+            this.standardRender(sb);
         }
     }
 
@@ -297,7 +292,7 @@ public class CustomAnimatedNPC {
         if (this.atlas != null) this.atlas.dispose();
     }
 
-    public void standardRender(SpriteBatch sb, Color color){
+    public void standardRender(SpriteBatch sb, Color color) {
         if (!this.noMesh) {
             this.state.update(Gdx.graphics.getDeltaTime());
             this.state.apply(this.skeleton);
@@ -322,7 +317,7 @@ public class CustomAnimatedNPC {
         }
     }
 
-    public void standardRender(SpriteBatch sb){
+    public void standardRender(SpriteBatch sb) {
         this.standardRender(sb, Color.WHITE);
     }
 

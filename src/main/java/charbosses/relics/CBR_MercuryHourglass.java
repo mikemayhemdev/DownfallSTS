@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ShaderHelper;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.MercuryHourglass;
 
@@ -29,7 +28,7 @@ public class CBR_MercuryHourglass extends AbstractCharbossRelic {
 
     @Override
     public void atTurnStart() {
-     //   this.flash();
+        //   this.flash();
         this.addToBot(new RelicAboveCreatureAction(AbstractCharBoss.boss, this));
         this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractCharBoss.boss, 3, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
     }
@@ -48,6 +47,6 @@ public class CBR_MercuryHourglass extends AbstractCharbossRelic {
         sb.draw(this.img, this.owner.hb.x - 80.0F * Settings.scale, this.owner.hb.y + 180.0F * Settings.scale, 64.0F, 64.0F, 128.0F, 128.0F, this.scale, this.scale, 0F, 0, 0, 128, 128, false, false);
         FontHelper.renderFontLeftTopAligned(sb, FontHelper.topPanelInfoFont, Integer.toString(3), this.owner.hb.x - 80.0F * Settings.scale, this.owner.hb.y + 180.0F * Settings.scale, Color.WHITE.cpy());
 
-       // this.hb.render(sb);
+        // this.hb.render(sb);
     }
 }

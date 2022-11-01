@@ -17,32 +17,32 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class DaggerThrowAnyColorEffect extends AbstractGameEffect {
-    private float x;
-    private float y;
-    private float destY;
+    private final float x;
+    private final float y;
+    private final float destY;
     private static final float DUR = 0.4F;
-    private AtlasRegion img;
+    private final AtlasRegion img;
     private boolean playedSound = false;
     private boolean forcedAngle = false;
 
     public DaggerThrowAnyColorEffect(float x, float y, Color clr) {
         this.img = ImageMaster.DAGGER_STREAK;
-        this.x = x - MathUtils.random(320.0F, 360.0F) - (float)this.img.packedWidth / 2.0F;
+        this.x = x - MathUtils.random(320.0F, 360.0F) - (float) this.img.packedWidth / 2.0F;
         this.destY = y;
-        this.y = this.destY + MathUtils.random(-25.0F, 25.0F) * Settings.scale - (float)this.img.packedHeight / 2.0F;
+        this.y = this.destY + MathUtils.random(-25.0F, 25.0F) * Settings.scale - (float) this.img.packedHeight / 2.0F;
         this.startingDuration = 0.4F;
         this.duration = 0.4F;
         this.scale = Settings.scale;
         this.rotation = MathUtils.random(-3.0F, 3.0F);
         this.color = clr.cpy();
-}
+    }
 
 
     public DaggerThrowAnyColorEffect(float x, float y, Color clr, float fAngleStart, float fAngleEnd) {
         this.img = ImageMaster.DAGGER_STREAK;
-        this.x = x - MathUtils.random(320.0F, 360.0F) - (float)this.img.packedWidth / 2.0F;
+        this.x = x - MathUtils.random(320.0F, 360.0F) - (float) this.img.packedWidth / 2.0F;
         this.destY = y;
-        this.y = this.destY + MathUtils.random(-25.0F, 25.0F) * Settings.scale - (float)this.img.packedHeight / 2.0F;
+        this.y = this.destY + MathUtils.random(-25.0F, 25.0F) * Settings.scale - (float) this.img.packedHeight / 2.0F;
         this.startingDuration = 0.4F;
         this.duration = 0.4F;
         this.scale = Settings.scale;
@@ -52,9 +52,9 @@ public class DaggerThrowAnyColorEffect extends AbstractGameEffect {
 
     public DaggerThrowAnyColorEffect(float x, float y, Color clr, float fAngle) {
         this.img = ImageMaster.DAGGER_STREAK;
-        this.x = x - MathUtils.random(320.0F, 360.0F) - (float)this.img.packedWidth / 2.0F;
+        this.x = x - MathUtils.random(320.0F, 360.0F) - (float) this.img.packedWidth / 2.0F;
         this.destY = y;
-        this.y = this.destY + MathUtils.random(-25.0F, 25.0F) * Settings.scale - (float)this.img.packedHeight / 2.0F;
+        this.y = this.destY + MathUtils.random(-25.0F, 25.0F) * Settings.scale - (float) this.img.packedHeight / 2.0F;
         this.startingDuration = 0.4F;
         this.duration = 0.4F;
         this.scale = Settings.scale;
@@ -65,9 +65,9 @@ public class DaggerThrowAnyColorEffect extends AbstractGameEffect {
 
     public DaggerThrowAnyColorEffect(float x, float y, Color clr, float fAngle, boolean flip, boolean behind, boolean mute, float size) {
         this.img = ImageMaster.DAGGER_STREAK;
-        this.x = x - MathUtils.random(320.0F, 360.0F) - (float)this.img.packedWidth / 2.0F;
+        this.x = x - MathUtils.random(320.0F, 360.0F) - (float) this.img.packedWidth / 2.0F;
         this.destY = y;
-        this.y = this.destY + MathUtils.random(-25.0F, 25.0F) * Settings.scale - (float)this.img.packedHeight / 2.0F;
+        this.y = this.destY + MathUtils.random(-25.0F, 25.0F) * Settings.scale - (float) this.img.packedHeight / 2.0F;
         this.startingDuration = 0.4F;
         this.duration = 0.4F;
         this.scale = Settings.scale;
@@ -86,7 +86,7 @@ public class DaggerThrowAnyColorEffect extends AbstractGameEffect {
 
     private void playRandomSfX() {
         int roll = MathUtils.random(5);
-        switch(roll) {
+        switch (roll) {
             case 0:
                 CardCrawlGame.sound.play("ATTACK_DAGGER_1");
                 break;
@@ -131,14 +131,14 @@ public class DaggerThrowAnyColorEffect extends AbstractGameEffect {
     public void render(SpriteBatch sb) {
         sb.setColor(this.color);
         if (!this.forcedAngle) {
-            sb.draw(this.img, this.x, this.y, (float)this.img.packedWidth * 0.85F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale, this.scale * 1.5F, this.rotation);
+            sb.draw(this.img, this.x, this.y, (float) this.img.packedWidth * 0.85F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale, this.scale * 1.5F, this.rotation);
             sb.setBlendFunction(770, 1);
-            sb.draw(this.img, this.x, this.y, (float)this.img.packedWidth * 0.85F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale * 0.75F, this.scale * 0.75F, this.rotation);
+            sb.draw(this.img, this.x, this.y, (float) this.img.packedWidth * 0.85F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale * 0.75F, this.scale * 0.75F, this.rotation);
             sb.setBlendFunction(770, 771);
         } else {
-            sb.draw(this.img, this.x, this.y, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale, this.scale * 1.5F, this.rotation);
+            sb.draw(this.img, this.x, this.y, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale, this.scale * 1.5F, this.rotation);
             sb.setBlendFunction(770, 1);
-            sb.draw(this.img, this.x, this.y, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale * 0.75F, this.scale * 0.75F, this.rotation);
+            sb.draw(this.img, this.x, this.y, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale * 0.75F, this.scale * 0.75F, this.rotation);
             sb.setBlendFunction(770, 771);
         }
 

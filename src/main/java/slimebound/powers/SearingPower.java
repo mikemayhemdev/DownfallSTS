@@ -20,7 +20,7 @@ public class SearingPower extends AbstractPower implements HealthBarRenderPower 
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static String[] DESCRIPTIONS;
-    private AbstractCreature source;
+    private final AbstractCreature source;
 
 
     public SearingPower(AbstractCreature owner, AbstractCreature source, int amount) {

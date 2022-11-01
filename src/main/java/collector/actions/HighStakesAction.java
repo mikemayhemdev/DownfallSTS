@@ -18,17 +18,18 @@ public class HighStakesAction extends AbstractGameAction {
     public boolean upgraded;
     public AbstractCard sourceCard;
     public static ArrayList<AbstractCard> CardsDrawn = new ArrayList<>();
+
     public HighStakesAction(boolean Upgraded, AbstractCard Source) {
         this.actionType = ActionType.CARD_MANIPULATION;
         upgraded = Upgraded;
         sourceCard = Source;
         this.duration = 0.1F;
-        if (!AbstractDungeon.player.limbo.contains(Source)){
+        if (!AbstractDungeon.player.limbo.contains(Source)) {
             if (AbstractDungeon.player.discardPile.contains(Source)) {
                 AbstractDungeon.player.discardPile.removeCard(Source);
-            } else if (AbstractDungeon.player.drawPile.contains(Source)){
+            } else if (AbstractDungeon.player.drawPile.contains(Source)) {
                 AbstractDungeon.player.drawPile.removeCard(Source);
-            }else if (AbstractDungeon.player.hand.contains(Source)){
+            } else if (AbstractDungeon.player.hand.contains(Source)) {
                 AbstractDungeon.player.hand.removeCard(Source);
             }
             AbstractDungeon.player.limbo.addToTop(Source);
@@ -76,7 +77,7 @@ public class HighStakesAction extends AbstractGameAction {
                 }
             } else {
                 addToBot(new EmptyDeckShuffleAction());
-                addToBot(new HighStakesAction(upgraded,sourceCard));
+                addToBot(new HighStakesAction(upgraded, sourceCard));
             }
         }
         this.tickDuration();

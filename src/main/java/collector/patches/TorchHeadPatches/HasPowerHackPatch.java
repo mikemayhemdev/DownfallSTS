@@ -61,7 +61,7 @@ public class HasPowerHackPatch {
     public static class HasPowerPatch {
         @SpirePostfixPatch
         public static boolean Postfix(boolean __result, AbstractCreature __instance, String targetID) {
-             if (shouldPatchEntangled && targetID.equals(EntanglePower.POWER_ID)) {
+            if (shouldPatchEntangled && targetID.equals(EntanglePower.POWER_ID)) {
                 TorchChar dragon = CollectorChar.getLivingTorchHead();
                 if (dragon != null && __instance != dragon && dragon.hasPower(EntanglePower.POWER_ID)) {
                     return true;
@@ -69,7 +69,7 @@ public class HasPowerHackPatch {
                     return __result;
                 }
             } else if (shouldPatchConstricted && targetID.equals(ConstrictedPower.POWER_ID)) {
-                 TorchChar dragon = CollectorChar.getLivingTorchHead();
+                TorchChar dragon = CollectorChar.getLivingTorchHead();
                 if (dragon != null && __instance != dragon && dragon.hasPower(ConstrictedPower.POWER_ID)) {
                     return true;
                 } else {

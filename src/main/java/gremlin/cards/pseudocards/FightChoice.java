@@ -2,7 +2,6 @@ package gremlin.cards.pseudocards;
 
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.city.GremlinLeader;
 import com.megacrit.cardcrawl.monsters.exordium.GremlinNob;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import downfall.downfallMod;
 import gremlin.actions.SetCardTargetCoordinatesAction;
 import gremlin.cards.AbstractGremlinCard;
 import gremlin.characters.GremlinCharacter;
@@ -32,8 +32,7 @@ public class FightChoice extends AbstractGremlinCard {
     private static final int COST = -2;
     private static final int MAGIC = 3;
 
-    public FightChoice()
-    {
+    public FightChoice() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.dontTriggerOnUseCard = true;
 
@@ -43,43 +42,39 @@ public class FightChoice extends AbstractGremlinCard {
         this.tags.add(GOOD_STATUS);
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         onChoseThisOption();
     }
 
-    public void onChoseThisOption(){
-        AbstractDungeon.actionManager.addToBottom(new SetCardTargetCoordinatesAction(this, Settings.WIDTH/2.0f - 75f, -1f));
+    public void onChoseThisOption() {
+        AbstractDungeon.actionManager.addToBottom(new SetCardTargetCoordinatesAction(this, Settings.WIDTH / 2.0f - 75f, -1f));
         for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (!mo.isDeadOrEscaped()) {
-                if(mo instanceof GremlinNob ) {
+                if (mo instanceof GremlinNob) {
                     AbstractDungeon.actionManager.addToBottom(new TalkAction(mo, strings.EXTENDED_DESCRIPTION[0]));
                     AbstractDungeon.actionManager.addToBottom(
                             new ApplyPowerAction(mo, mo, new StrengthPower(mo, magicNumber), magicNumber));
                 }
-                if(mo instanceof GremlinLeader) {
+                if (mo instanceof GremlinLeader) {
                     AbstractDungeon.actionManager.addToBottom(new TalkAction(mo, strings.EXTENDED_DESCRIPTION[1]));
                     AbstractDungeon.actionManager.addToBottom(
                             new ApplyPowerAction(mo, mo, new StrengthPower(mo, magicNumber), magicNumber));
                 }
             }
         }
-        if(AbstractDungeon.player instanceof GremlinCharacter){
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
             ((GremlinCharacter) AbstractDungeon.player).removeCower(true);
         }
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
         }
     }
 
     @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m)
-    {
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         return true;
     }
 }

@@ -7,17 +7,17 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.Pear;
-import gremlin.characters.GremlinCharacter;
+import downfall.downfallMod;
 
 @SpirePatch(
-        clz= Pear.class,
-        method="getUpdatedDescription"
+        clz = Pear.class,
+        method = "getUpdatedDescription"
 )
 public class PearDescriptionPatch {
     private static final RelicStrings strings = CardCrawlGame.languagePack.getRelicStrings("Gremlin:PatchFixes");
 
-    public static SpireReturn<String> Prefix(Pear __instance){
-        if(AbstractDungeon.player instanceof GremlinCharacter){
+    public static SpireReturn<String> Prefix(Pear __instance) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
             return SpireReturn.Return(strings.DESCRIPTIONS[0] + 2 + LocalizedStrings.PERIOD);
         }
         return SpireReturn.Continue();

@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class TimedVFXAction extends AbstractGameAction {
-    private AbstractGameEffect effect;
+    private final AbstractGameEffect effect;
     private boolean added = false;
 
     public TimedVFXAction(AbstractGameEffect effect) {

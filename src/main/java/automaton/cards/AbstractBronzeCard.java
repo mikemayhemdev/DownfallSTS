@@ -1,6 +1,5 @@
 package automaton.cards;
 
-import automaton.AutomatonChar;
 import automaton.AutomatonTextHelper;
 import automaton.FunctionHelper;
 import automaton.cardmods.EncodeMod;
@@ -35,9 +34,9 @@ import static automaton.AutomatonMod.makeCardPath;
 
 public abstract class AbstractBronzeCard extends CustomCard {
     public String betaArtPath;
-    private static float functionPreviewCardScale = .9f;
-    private static float functionPreviewCardY = Settings.HEIGHT * 0.45F;
-    private static float functionPreviewCardX = Settings.WIDTH * 0.1F;
+    private static final float functionPreviewCardScale = .9f;
+    private static final float functionPreviewCardY = Settings.HEIGHT * 0.45F;
+    private static final float functionPreviewCardX = Settings.WIDTH * 0.1F;
     protected final CardStrings cardStrings;
     protected final String NAME;
     public int auto;

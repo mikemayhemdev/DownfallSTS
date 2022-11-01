@@ -48,8 +48,7 @@ public class SpectersWail extends AbstractHexaCard {
     }
 
 
-
-        public void upgrade() {
+    public void upgrade() {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPG_DAMAGE);

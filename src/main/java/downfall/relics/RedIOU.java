@@ -4,14 +4,14 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
-import downfall.downfallMod;
 import downfall.actions.BanditIOUAction;
+import downfall.downfallMod;
 
 public class RedIOU extends CustomRelic {
 
     public static String ID = downfallMod.makeID("RedIOU");
-    private static Texture IMG = new Texture(downfallMod.assetPath("images/relics/BanditContract.png"));
-    private static Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/Outline/BanditContract.png"));
+    private static final Texture IMG = new Texture(downfallMod.assetPath("images/relics/BanditContract.png"));
+    private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/Outline/BanditContract.png"));
 
     public RedIOU() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);

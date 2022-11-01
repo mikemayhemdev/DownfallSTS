@@ -17,10 +17,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class CollectorCollection implements CustomSavable<ArrayList<AbstractCard>> {
-    public  static CardGroup collection;
-    public  static CardGroup combatCollection;
+    public static CardGroup collection;
+    public static CardGroup combatCollection;
     public static ArrayList<AbstractCard> SavedCollection = new ArrayList<>();
-    public  static HashMap<String, AbstractCard> cardsList;
+    public static HashMap<String, AbstractCard> cardsList;
+
     public static void init() {
         cardsList = new HashMap<>();
         cardsList.put(GremlinWizard.ID, new CrookedStaff());
@@ -61,12 +62,14 @@ public class CollectorCollection implements CustomSavable<ArrayList<AbstractCard
 
         CollectionReward.collectPool.clear();
     }
+
     public static void atBattleEnd() {
         combatCollection.clear();
         if (!CollectionReward.collectPool.isEmpty()) {
             AbstractDungeon.getCurrRoom().rewards.add(new CollectionReward());
         }
     }
+
     public static void GetCollectible(AbstractMonster collectedMonster) {
         if (cardsList.containsKey(collectedMonster.id)) {
             AbstractCard NewCollectible = cardsList.get(collectedMonster.id).makeStatEquivalentCopy();
@@ -81,7 +84,7 @@ public class CollectorCollection implements CustomSavable<ArrayList<AbstractCard
 
     @Override
     public void onLoad(ArrayList<AbstractCard> abstractCards) {
-        for (AbstractCard c : SavedCollection){
+        for (AbstractCard c : SavedCollection) {
             collection.addToTop(c);
         }
     }

@@ -10,9 +10,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
 import sneckomod.patches.BottledD8Patch;
-import downfall.util.TextureLoader;
 
 import java.util.function.Predicate;
 

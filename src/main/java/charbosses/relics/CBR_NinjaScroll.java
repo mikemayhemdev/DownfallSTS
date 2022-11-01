@@ -2,14 +2,8 @@ package charbosses.relics;
 
 import charbosses.actions.common.EnemyMakeTempCardInHandAction;
 import charbosses.cards.colorless.EnShiv;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.MutagenicStrength;
 import com.megacrit.cardcrawl.relics.NinjaScroll;
 
 public class CBR_NinjaScroll extends AbstractCharbossRelic {

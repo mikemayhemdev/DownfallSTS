@@ -13,9 +13,9 @@ public class TendrilFlailAction extends com.megacrit.cardcrawl.actions.AbstractG
 
     private static final float DURATION = 0.01F;
     private static final float POST_ATTACK_WAIT_DUR = 0.2F;
-    private AbstractCreature owner;
+    private final AbstractCreature owner;
     private int numTimes;
-    private int slimed;
+    private final int slimed;
 
     public TendrilFlailAction(AbstractCreature player, AbstractCreature target, int numTimes, int slimed) {
 

@@ -53,10 +53,10 @@ public class CrystalForge extends AbstractImageEvent {
     private boolean pickCardForTransmute = false;
     private AbstractGuardianCard cardChosen = null;
     private AbstractGuardianCard gemChosen = null;
-    private ArrayList<String> cardsRemoved = new ArrayList<>();
-    private ArrayList<String> cardsTransformed = new ArrayList<>();
-    private ArrayList<String> cardsAdded = new ArrayList<>();
-    private ArrayList<String> cardsUpgraded = new ArrayList<>();
+    private final ArrayList<String> cardsRemoved = new ArrayList<>();
+    private final ArrayList<String> cardsTransformed = new ArrayList<>();
+    private final ArrayList<String> cardsAdded = new ArrayList<>();
+    private final ArrayList<String> cardsUpgraded = new ArrayList<>();
 
 
     public CrystalForge() {
@@ -238,51 +238,47 @@ public class CrystalForge extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch (this.screenNum) {
-            case 0:
-                switch (buttonPressed) {
-                    case 0:
-                        this.pickCardForSalvageGems = true;
-                        this.imageEventText.updateBodyText(SALVAGE);
-                        this.imageEventText.updateDialogOption(0, OPTIONS[4], true);
-                        AbstractDungeon.gridSelectScreen.open(GuardianMod.getCardsWithFilledSockets(), 1, false, DESCRIPTIONS[5]);
+        if (this.screenNum == 0) {
+            switch (buttonPressed) {
+                case 0:
+                    this.pickCardForSalvageGems = true;
+                    this.imageEventText.updateBodyText(SALVAGE);
+                    this.imageEventText.updateDialogOption(0, OPTIONS[4], true);
+                    AbstractDungeon.gridSelectScreen.open(GuardianMod.getCardsWithFilledSockets(), 1, false, DESCRIPTIONS[5]);
 
-                        break;
-                    case 1:
-                        this.pickCardForGemRemoval = true;
-                        AbstractDungeon.gridSelectScreen.open(GuardianMod.getCardsWithFilledSockets(), 1, DESCRIPTIONS[6], false, false, false, false);
-                        this.imageEventText.updateBodyText(PRY);
-                        this.imageEventText.updateDialogOption(1, OPTIONS[4], true);
+                    break;
+                case 1:
+                    this.pickCardForGemRemoval = true;
+                    AbstractDungeon.gridSelectScreen.open(GuardianMod.getCardsWithFilledSockets(), 1, DESCRIPTIONS[6], false, false, false, false);
+                    this.imageEventText.updateBodyText(PRY);
+                    this.imageEventText.updateDialogOption(1, OPTIONS[4], true);
 
-                        break;
-                    case 2:
-                        this.pickCardForTransmute = true;
-                        this.imageEventText.updateBodyText(TRANSMUTE);
-                        AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, DESCRIPTIONS[7], false, false, false, true);
+                    break;
+                case 2:
+                    this.pickCardForTransmute = true;
+                    this.imageEventText.updateBodyText(TRANSMUTE);
+                    AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, DESCRIPTIONS[7], false, false, false, true);
 
-                        this.imageEventText.updateDialogOption(2, OPTIONS[4], true);
+                    this.imageEventText.updateDialogOption(2, OPTIONS[4], true);
 
-                        break;
-                    case 3:
-                        GuardianMod.gridScreenForGems = true;
-                        AbstractDungeon.gridSelectScreen.open(GuardianMod.getGemCards(), 1, DESCRIPTIONS[8], false, false, true, false);
+                    break;
+                case 3:
+                    GuardianMod.gridScreenForGems = true;
+                    AbstractDungeon.gridSelectScreen.open(GuardianMod.getGemCards(), 1, DESCRIPTIONS[8], false, false, true, false);
 
-                        break;
-                    case 4:
-                        this.screenNum = 2;
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.updateBodyText(LEAVE);
-                        this.imageEventText.setDialogOption(OPTIONS[5]);
-                        logMetric(ID, "Forged", cardsAdded, cardsRemoved, cardsTransformed, cardsUpgraded, null, null, null,
-                                0, 0, 0, 0, 0, 0);
+                    break;
+                case 4:
+                    this.screenNum = 2;
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.updateBodyText(LEAVE);
+                    this.imageEventText.setDialogOption(OPTIONS[5]);
+                    logMetric(ID, "Forged", cardsAdded, cardsRemoved, cardsTransformed, cardsUpgraded, null, null, null,
+                            0, 0, 0, 0, 0, 0);
 
-                        break;
-                }
-
-
-                break;
-            default:
-                this.openMap();
+                    break;
+            }
+        } else {
+            this.openMap();
         }
 
     }

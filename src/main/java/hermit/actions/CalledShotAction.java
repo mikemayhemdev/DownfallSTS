@@ -2,7 +2,6 @@ package hermit.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.unique.ArmamentsAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -14,8 +13,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import java.util.Iterator;
 
 public class CalledShotAction extends AbstractGameAction {
-    private AbstractPlayer p;
-    private CardType typeToCheck;
+    private final AbstractPlayer p;
+    private final CardType typeToCheck;
 
     public CalledShotAction(int amount) {
         this.p = AbstractDungeon.player;
@@ -36,8 +35,8 @@ public class CalledShotAction extends AbstractGameAction {
             Iterator var2 = this.p.drawPile.group.iterator();
 
             AbstractCard card;
-            while(var2.hasNext() && counter < amount) {
-                card = (AbstractCard)var2.next();
+            while (var2.hasNext() && counter < amount) {
+                card = (AbstractCard) var2.next();
                 if (card.type == this.typeToCheck) {
                     tmp.addToRandomSpot(card);
                     counter++;
@@ -50,7 +49,7 @@ public class CalledShotAction extends AbstractGameAction {
             }
 
 
-            for(int i = 0; i < counter; ++i) {
+            for (int i = 0; i < counter; ++i) {
                 if (!tmp.isEmpty()) {
                     tmp.shuffle();
                     card = tmp.getBottomCard();

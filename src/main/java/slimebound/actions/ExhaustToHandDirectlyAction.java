@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class ExhaustToHandDirectlyAction extends AbstractGameAction {
-    private AbstractCard card;
+    private final AbstractCard card;
 
     public ExhaustToHandDirectlyAction(AbstractCard card) {
         this.actionType = ActionType.CARD_MANIPULATION;// 12

@@ -16,7 +16,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.AbstractMonster.Intent;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
 
@@ -35,7 +34,7 @@ public class BronzeOrbWhoReallyLikesDefectForSomeReason extends AbstractMonster 
     private static final byte SUPPORT_BEAM = 2;
     private static final byte STASIS = 3;
     private boolean usedStasis = false;
-    private int count;
+    private final int count;
 
     public BronzeOrbWhoReallyLikesDefectForSomeReason(float x, float y, int count) {
         super(monsterStrings.NAME, "BronzeOrbWhoReallyLikesDefectForSomeReason", AbstractDungeon.monsterHpRng.random(52, 58), 0.0F, 0.0F, 160.0F, 160.0F, "images/monsters/theCity/automaton/orb.png", x, y);
@@ -50,18 +49,18 @@ public class BronzeOrbWhoReallyLikesDefectForSomeReason extends AbstractMonster 
     }
 
     public void takeTurn() {
-        switch(this.nextMove) {
-        case 1:
-            AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new BorderFlashEffect(Color.SKY)));
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this.hb.cX, this.hb.cY), 0.3F));
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo)this.damage.get(0), AttackEffect.NONE));
-            break;
-        case 2:
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.getMonsters().getMonster(CharBossDefect.ID), this, 12));
-            break;
-        case 3:
-            AbstractDungeon.actionManager.addToBottom(new ApplyStasisAction(this));
+        switch (this.nextMove) {
+            case 1:
+                AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(new BorderFlashEffect(Color.SKY)));
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this.hb.cX, this.hb.cY), 0.3F));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(0), AttackEffect.NONE));
+                break;
+            case 2:
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.getMonsters().getMonster(CharBossDefect.ID), this, 12));
+                break;
+            case 3:
+                AbstractDungeon.actionManager.addToBottom(new ApplyStasisAction(this));
         }
 
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
@@ -70,23 +69,23 @@ public class BronzeOrbWhoReallyLikesDefectForSomeReason extends AbstractMonster 
     public void update() {
         super.update();
         if (this.count % 2 == 0) {
-            this.animY = MathUtils.cosDeg((float)(System.currentTimeMillis() / 6L % 360L)) * 6.0F * Settings.scale;
+            this.animY = MathUtils.cosDeg((float) (System.currentTimeMillis() / 6L % 360L)) * 6.0F * Settings.scale;
         } else {
-            this.animY = -MathUtils.cosDeg((float)(System.currentTimeMillis() / 6L % 360L)) * 6.0F * Settings.scale;
+            this.animY = -MathUtils.cosDeg((float) (System.currentTimeMillis() / 6L % 360L)) * 6.0F * Settings.scale;
         }
 
     }
 
     protected void getMove(int num) {
         if (!this.usedStasis && num >= 25) {
-            this.setMove((byte)3, Intent.STRONG_DEBUFF);
+            this.setMove((byte) 3, Intent.STRONG_DEBUFF);
             this.usedStasis = true;
-        } else if (num >= 70 && !this.lastTwoMoves((byte)2)) {
-            this.setMove((byte)2, Intent.DEFEND);
-        } else if (!this.lastTwoMoves((byte)1)) {
-            this.setMove((byte)1, Intent.ATTACK, 8);
+        } else if (num >= 70 && !this.lastTwoMoves((byte) 2)) {
+            this.setMove((byte) 2, Intent.DEFEND);
+        } else if (!this.lastTwoMoves((byte) 1)) {
+            this.setMove((byte) 1, Intent.ATTACK, 8);
         } else {
-            this.setMove((byte)2, Intent.DEFEND);
+            this.setMove((byte) 2, Intent.DEFEND);
         }
     }
 

@@ -7,8 +7,8 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import sneckomod.SneckoMod;
 import downfall.util.TextureLoader;
+import sneckomod.SneckoMod;
 
 public class SneckoSoul extends CustomRelic {
 

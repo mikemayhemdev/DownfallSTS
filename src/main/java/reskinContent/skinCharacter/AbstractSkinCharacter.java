@@ -1,7 +1,5 @@
 package reskinContent.skinCharacter;
 
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-
 public abstract class AbstractSkinCharacter {
     public String id;
 

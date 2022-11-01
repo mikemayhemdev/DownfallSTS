@@ -15,14 +15,12 @@ import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import downfall.util.RemoveCardReward;
 import downfall.util.TransformCardReward;
 import downfall.util.UpgradeCardReward;
-import downfall.util.RemoveCardReward;
-import slimebound.SlimeboundMod;
 
 public class LivingWall_Evil extends AbstractImageEvent {
     public static final String ID = "downfall:LivingWall";
@@ -103,58 +101,54 @@ public class LivingWall_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch (this.screen) {
-            case INTRO:
-                switch (buttonPressed) {
-                    case 0:
-                        this.choice = LivingWall_Evil.Choice.FORGET;
-                        if (CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()).size() > 0) {
-                            AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, OPTIONS[3], false, false, false, true);
-                        }
-                        break;
-                    case 1:
-                        this.choice = LivingWall_Evil.Choice.CHANGE;
-                        if (CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()).size() > 0) {
-                            AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, OPTIONS[4], false, true, false, false);
-                        }
-                        break;
-                    case 2:
-                        this.choice = LivingWall_Evil.Choice.GROW;
-                        if (CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()).size() > 0) {
-                            AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getUpgradableCards(), 1, OPTIONS[5], true, false, false, false);
-                        }
-                        break;
-                    case 3:
-                        this.choice = Choice.FIGHT;
-                        //SlimeboundMod.logger.info("fight");
-//                        MonsterGroup monsters =
-                                AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("downfall:Heads");
-//                        AbstractDungeon.getCurrRoom().monsters = monsters;
-                        logMetric(ID, "Fight");
-                        AbstractDungeon.getCurrRoom().rewards.clear();
-                        AbstractDungeon.getCurrRoom().addGoldToRewards(100);
-                        AbstractDungeon.getCurrRoom().rewards.add(new RemoveCardReward());
-                        AbstractDungeon.getCurrRoom().rewards.add(new UpgradeCardReward());
-                        AbstractDungeon.getCurrRoom().rewards.add(new TransformCardReward());
-                        AbstractDungeon.getCurrRoom().eliteTrigger = true;
-                        this.imageEventText.clearRemainingOptions();
-                        this.enterCombatFromImage();
-                        AbstractDungeon.lastCombatMetricKey = "downfall:Heads";
-                        break;
-                }
-
-                if (this.choice != Choice.FIGHT) {
-                    this.pickCard = true;
-                    this.imageEventText.updateBodyText(RESULT_DIALOG);
-                    this.imageEventText.clearAllDialogs();
-                    this.imageEventText.setDialogOption(OPTIONS[6]);
-                    this.screen = LivingWall_Evil.CurScreen.RESULT;
+        if (this.screen == CurScreen.INTRO) {
+            switch (buttonPressed) {
+                case 0:
+                    this.choice = Choice.FORGET;
+                    if (CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()).size() > 0) {
+                        AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, OPTIONS[3], false, false, false, true);
+                    }
                     break;
-                }
-                break;
+                case 1:
+                    this.choice = Choice.CHANGE;
+                    if (CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()).size() > 0) {
+                        AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, OPTIONS[4], false, true, false, false);
+                    }
+                    break;
+                case 2:
+                    this.choice = Choice.GROW;
+                    if (CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()).size() > 0) {
+                        AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getUpgradableCards(), 1, OPTIONS[5], true, false, false, false);
+                    }
+                    break;
+                case 3:
+                    this.choice = Choice.FIGHT;
+                    //SlimeboundMod.logger.info("fight");
+//                        MonsterGroup monsters =
+                    AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("downfall:Heads");
+//                        AbstractDungeon.getCurrRoom().monsters = monsters;
+                    logMetric(ID, "Fight");
+                    AbstractDungeon.getCurrRoom().rewards.clear();
+                    AbstractDungeon.getCurrRoom().addGoldToRewards(100);
+                    AbstractDungeon.getCurrRoom().rewards.add(new RemoveCardReward());
+                    AbstractDungeon.getCurrRoom().rewards.add(new UpgradeCardReward());
+                    AbstractDungeon.getCurrRoom().rewards.add(new TransformCardReward());
+                    AbstractDungeon.getCurrRoom().eliteTrigger = true;
+                    this.imageEventText.clearRemainingOptions();
+                    this.enterCombatFromImage();
+                    AbstractDungeon.lastCombatMetricKey = "downfall:Heads";
+                    break;
+            }
 
-            default:
-                this.openMap();
+            if (this.choice != Choice.FIGHT) {
+                this.pickCard = true;
+                this.imageEventText.updateBodyText(RESULT_DIALOG);
+                this.imageEventText.clearAllDialogs();
+                this.imageEventText.setDialogOption(OPTIONS[6]);
+                this.screen = CurScreen.RESULT;
+            }
+        } else {
+            this.openMap();
         }
 
     }

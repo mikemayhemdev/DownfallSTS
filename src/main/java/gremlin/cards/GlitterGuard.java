@@ -25,8 +25,7 @@ public class GlitterGuard extends AbstractGremlinCard {
     private static final int COST = 1;
     private static final int MAGIC = 2;
 
-    public GlitterGuard()
-    {
+    public GlitterGuard() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -36,20 +35,17 @@ public class GlitterGuard extends AbstractGremlinCard {
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard w = new Ward();
-        if(this.upgraded){
+        if (this.upgraded) {
             w.upgrade();
         }
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(w, this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new GremlinSwapAction(new ShieldGremlin(0)));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             this.rawDescription = strings.UPGRADE_DESCRIPTION;
             initializeDescription();

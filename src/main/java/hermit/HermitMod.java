@@ -350,7 +350,7 @@ public class HermitMod implements
                     return new BountyGold(rewardSave.amount);
                 },
                 (customReward) -> { // this handles what to do when this quest type is saved.
-                    return new RewardSave(customReward.type.toString(), null, ((BountyGold) customReward).goldAmt, 0);
+                    return new RewardSave(customReward.type.toString(), null, customReward.goldAmt, 0);
                 });
 
 
@@ -469,7 +469,8 @@ public class HermitMod implements
 
         try {
             autoAddCards();
-        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
+        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException |
+                 ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
 

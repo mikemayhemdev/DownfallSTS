@@ -7,22 +7,21 @@ import com.megacrit.cardcrawl.actions.common.PlayTopCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.TextureLoader;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
-import downfall.util.TextureLoader;
 
 public class MayhemGhostflame extends AbstractGhostflame {
     public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("mayhem.png"));
     public static Texture bruhB = TextureLoader.getTexture(HexaMod.makeUIPath("mayhemBright.png"));
     public static Texture bruh2 = TextureLoader.getTexture(HexaMod.makeUIPath("card.png"));
 
-    private String ID = "hexamod:MayhemGhostflame";
-    private String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
-    private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
+    private final String ID = "hexamod:MayhemGhostflame";
+    private final String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
+    private final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
 
-    private Color flameColor = new Color(164F/255F, 210F/255F, 249F/255F, 1F);
-    private Color activeColor = new Color(164F/255F * 0.5F, 210F/255F * 0.5F, 249F/255F * 0.5F, 1F);
+    private final Color flameColor = new Color(164F / 255F, 210F / 255F, 249F / 255F, 1F);
+    private final Color activeColor = new Color(164F / 255F * 0.5F, 210F / 255F * 0.5F, 249F / 255F * 0.5F, 1F);
 
     public MayhemGhostflame(float x, float y) {
         super(x, y);
@@ -51,7 +50,7 @@ public class MayhemGhostflame extends AbstractGhostflame {
 
     @Override
     public void advanceTrigger(AbstractCard c) {
-        if (!charged){
+        if (!charged) {
             advanceTriggerAnim();
             charge();
         }
@@ -78,7 +77,9 @@ public class MayhemGhostflame extends AbstractGhostflame {
     }
 
     @Override
-    public String getName(){ return NAME;}
+    public String getName() {
+        return NAME;
+    }
 
     @Override
     public String getDescription() {

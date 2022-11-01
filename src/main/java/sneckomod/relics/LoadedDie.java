@@ -2,8 +2,8 @@ package sneckomod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import sneckomod.SneckoMod;
 import downfall.util.TextureLoader;
+import sneckomod.SneckoMod;
 
 public class LoadedDie extends CustomRelic {
 

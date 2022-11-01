@@ -1,8 +1,6 @@
 package champ.cards;
 
 import champ.powers.CounterPower;
-import champ.stances.DefensiveStance;
-import champ.stances.UltimateStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

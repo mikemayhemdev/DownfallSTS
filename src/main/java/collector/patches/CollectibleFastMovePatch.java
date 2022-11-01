@@ -13,13 +13,13 @@ import com.megacrit.cardcrawl.vfx.FastCardObtainEffect;
         clz = FastCardObtainEffect.class,
         method = "update"
 )
-public class  CollectibleFastMovePatch {
+public class CollectibleFastMovePatch {
     public static void Postfix(FastCardObtainEffect __instance) {
-        AbstractCard q = (AbstractCard) ReflectionHacks.getPrivate(__instance, FastCardObtainEffect.class, "card");
+        AbstractCard q = ReflectionHacks.getPrivate(__instance, FastCardObtainEffect.class, "card");
         if (q instanceof AbstractCollectibleCard && __instance.duration < 0.0F) {
             AbstractDungeon.player.masterDeck.removeCard(q);
             CollectorCollection.collection.addToBottom(q);
-            if (q instanceof SentryCore && AbstractDungeon.player.maxOrbs < 3){
+            if (q instanceof SentryCore && AbstractDungeon.player.maxOrbs < 3) {
                 AbstractDungeon.player.maxOrbs += 3;
             }
         }

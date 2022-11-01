@@ -1,17 +1,8 @@
 package champ.cards;
 
-import champ.ChampMod;
-import champ.stances.BerserkerStance;
-import champ.stances.DefensiveStance;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.actions.OctoChoiceAction;
-import downfall.cards.OctoChoiceCard;
-import downfall.util.OctopusCard;
-
-import java.util.ArrayList;
-import java.util.Collections;
 
 import static champ.ChampMod.loadJokeCardImage;
 
@@ -32,12 +23,11 @@ public class Taunt extends AbstractChampCard {
         if (!upgraded) {
             applyToEnemy(m, autoWeak(m, 1));
             applyToEnemy(m, autoVuln(m, 1));
-        }
-        else {
-           AbstractDungeon.getMonsters().monsters.stream().filter(m2 -> !m2.isDead && !m2.isDying).forEach(m2 -> {
-               applyToEnemy(m2, autoWeak(m2, 1));
-               applyToEnemy(m2, autoVuln(m2, 1));
-           });
+        } else {
+            AbstractDungeon.getMonsters().monsters.stream().filter(m2 -> !m2.isDead && !m2.isDying).forEach(m2 -> {
+                applyToEnemy(m2, autoWeak(m2, 1));
+                applyToEnemy(m2, autoVuln(m2, 1));
+            });
         }
     }
 

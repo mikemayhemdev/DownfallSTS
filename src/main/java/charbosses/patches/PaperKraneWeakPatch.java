@@ -6,9 +6,8 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
+import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static com.megacrit.cardcrawl.powers.WeakPower.DESCRIPTIONS;
 
@@ -23,8 +22,7 @@ public class PaperKraneWeakPatch {
             if (type == DamageInfo.DamageType.NORMAL && instance.owner.isPlayer &&
                     AbstractCharBoss.boss != null && AbstractCharBoss.boss.hasRelic("Paper Crane")) {
                 return SpireReturn.Return(damage * 0.6F);
-            }
-            else
+            } else
                 return SpireReturn.Continue();
         }
     }

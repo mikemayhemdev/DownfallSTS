@@ -37,9 +37,10 @@ public abstract class AbstractCollectorCard extends CustomCard {
     public enum CollectorCardSource {
         DEFAULT, TORCH_HEAD, BOTH, FRONT, BACK
     }
-    private static float functionPreviewCardScale = .9f;
-    private static float functionPreviewCardY = Settings.HEIGHT * 0.45F;
-    private static float functionPreviewCardX = Settings.WIDTH * 0.1F;
+
+    private static final float functionPreviewCardScale = .9f;
+    private static final float functionPreviewCardY = Settings.HEIGHT * 0.45F;
+    private static final float functionPreviewCardX = Settings.WIDTH * 0.1F;
     protected final CardStrings cardStrings;
     protected final String NAME;
     public int auto;
@@ -106,6 +107,7 @@ public abstract class AbstractCollectorCard extends CustomCard {
     public boolean isDuoMagicModified = false;
     public CollectorCardSource DamageSource;
     public CollectorCardSource BlockSource;
+
     static {
         playerPowerApplyToTorch = new HashSet<>();
         playerPowerApplyToTorch.add(VigorPower.POWER_ID);
@@ -114,6 +116,7 @@ public abstract class AbstractCollectorCard extends CustomCard {
         relicApplyToTorch.add(WristBlade.ID);
         relicApplyToTorch.add(StrikeDummy.ID);
     }
+
     public AbstractCollectorCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),
                 cost, "ERROR", type, downfallMod.Enums.COLLECTOR, rarity, target);
@@ -139,36 +142,40 @@ public abstract class AbstractCollectorCard extends CustomCard {
         initializeTitle();
         initializeDescription();
     }
+
     public AbstractCollectorCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, CollectorCardSource DamageSource, CollectorCardSource BlockSource) {
-        this(id,cost, type, rarity, target);
+        this(id, cost, type, rarity, target);
         this.DamageSource = DamageSource;
         this.BlockSource = BlockSource;
         SetPositionalVarsFromEnum();
     }
+
     public AbstractCollectorCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, CollectorCardSource DamageSource) {
-        this(id,cost, type, rarity, target);
+        this(id, cost, type, rarity, target);
         this.BlockSource = this.DamageSource = DamageSource;
         SetPositionalVarsFromEnum();
     }
-    public void SetPositionalVarsFromEnum(){
-        if (DamageSource == CollectorCardSource.FRONT){
+
+    public void SetPositionalVarsFromEnum() {
+        if (DamageSource == CollectorCardSource.FRONT) {
             frontDealsDmg = true;
         }
-        if (DamageSource == CollectorCardSource.BACK){
+        if (DamageSource == CollectorCardSource.BACK) {
             rearDealsDmg = true;
         }
-        if (BlockSource == CollectorCardSource.FRONT){
+        if (BlockSource == CollectorCardSource.FRONT) {
             frontGainsBlock = true;
         }
-        if (BlockSource == CollectorCardSource.BACK){
+        if (BlockSource == CollectorCardSource.BACK) {
             rearGainsBlock = true;
         }
     }
+
     @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m){
-        if (DamageSource == CollectorCardSource.TORCH_HEAD && CollectorChar.getLivingTorchHead() == null){
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if (DamageSource == CollectorCardSource.TORCH_HEAD && CollectorChar.getLivingTorchHead() == null) {
             return false;
-        }else return super.canUse(p,m);
+        } else return super.canUse(p, m);
     }
 
 
@@ -284,7 +291,6 @@ public abstract class AbstractCollectorCard extends CustomCard {
             }
         }
     }
-
 
 
     public int calculateCardDamageAsMonster(AbstractCreature attacker, int[] baseDamage, AbstractMonster mo, int[] enemyMultiDamage) {
@@ -415,6 +421,7 @@ public abstract class AbstractCollectorCard extends CustomCard {
         RearBlock = douBaseBlock;
         RearDamage = douBaseDamage;
     }
+
     public static String makeID(String blah) {
         return "collector:" + blah;
     }
@@ -465,13 +472,13 @@ public abstract class AbstractCollectorCard extends CustomCard {
             upp();
         }
     }
+
     @Override
-    public void applyPowers()
-    {
+    public void applyPowers() {
         TorchChar dragon = CollectorChar.getLivingTorchHead();
-        if (frontDealsDmg && FrontDamage != -1){
+        if (frontDealsDmg && FrontDamage != -1) {
             FrontDamage = FrontBaseDamage;
-            if (CollectorChar.isFrontTorchHead()){
+            if (CollectorChar.isFrontTorchHead()) {
                 if (dragon != null) {
                     isFrontDamageModified = false;
                     if (!isMultiDamage) {
@@ -493,7 +500,7 @@ public abstract class AbstractCollectorCard extends CustomCard {
                             if (playerPowerApplyToTorch.contains(p.ID)) {
                                 tmp = p.atDamageGive(tmp, damageTypeForTurn);
                                 if (FrontBaseDamage != (int) tmp) {
-                                    isFrontDamageModified= true;
+                                    isFrontDamageModified = true;
                                 }
                             }
                         }
@@ -572,16 +579,16 @@ public abstract class AbstractCollectorCard extends CustomCard {
                 }
             } else {
                 isFrontDamageModified = false;
-                    int tmp = FrontDamage;
-                    baseDamage = FrontBaseDamage;
+                int tmp = FrontDamage;
+                baseDamage = FrontBaseDamage;
 
-                    super.applyPowers();
+                super.applyPowers();
 
-                    FrontDamage = damage;
-                    baseDamage = tmp;
+                FrontDamage = damage;
+                baseDamage = tmp;
 
-                    super.applyPowers();
-                }
+                super.applyPowers();
+            }
         }
         if (rearDealsDmg && RearDamage != -1) {
             RearDamage = RearBaseDamage;
@@ -699,7 +706,7 @@ public abstract class AbstractCollectorCard extends CustomCard {
             }
         }
         if (douBaseDamage != -1) {
-            douDamage= douBaseDamage;
+            douDamage = douBaseDamage;
             if (dragon != null) {
                 isDuoDamageModified = false;
                 if (!isMultiDamage) {
@@ -807,13 +814,12 @@ public abstract class AbstractCollectorCard extends CustomCard {
     }
 
     @Override
-    public void calculateCardDamage(AbstractMonster mo)
-    {
+    public void calculateCardDamage(AbstractMonster mo) {
         super.calculateCardDamage(mo);
         TorchChar dragon = CollectorChar.getLivingTorchHead();
-        if (frontDealsDmg && FrontDamage != -1){
+        if (frontDealsDmg && FrontDamage != -1) {
             FrontDamage = FrontBaseDamage;
-            if (CollectorChar.isFrontTorchHead()){
+            if (CollectorChar.isFrontTorchHead()) {
                 if (dragon != null) {
                     isFrontDamageModified = false;
                     if (!isMultiDamage) {
@@ -835,7 +841,7 @@ public abstract class AbstractCollectorCard extends CustomCard {
                             if (playerPowerApplyToTorch.contains(p.ID)) {
                                 tmp = p.atDamageGive(tmp, damageTypeForTurn);
                                 if (FrontBaseDamage != (int) tmp) {
-                                    isFrontDamageModified= true;
+                                    isFrontDamageModified = true;
                                 }
                             }
                         }
@@ -1069,7 +1075,7 @@ public abstract class AbstractCollectorCard extends CustomCard {
                         if (playerPowerApplyToTorch.contains(p.ID)) {
                             tmp = p.atDamageGive(tmp, damageTypeForTurn);
                             if (douBaseDamage != (int) tmp) {
-                                isDuoDamageModified= true;
+                                isDuoDamageModified = true;
                             }
                         }
                     }
@@ -1169,26 +1175,31 @@ public abstract class AbstractCollectorCard extends CustomCard {
 
         isCollectorSecondDamageModified = (CollectorSecondDamage != BaseCollectorSecondDamage);
     }
+
     public void upgradeCollectorSecondDamage(int amount) {
         BaseCollectorSecondDamage += amount;
         CollectorSecondDamage = BaseCollectorSecondDamage;
         isCollectorSecondDamageModified = true;
     }
+
     public void upgradeFrontDamage(int amount) {
         FrontBaseDamage += amount;
         FrontDamage = FrontBaseDamage;
         isFrontDamageModified = true;
     }
+
     public void upgradeFrontBlock(int amount) {
         FrontBaseBlock += amount;
         FrontBlock = FrontBaseBlock;
         isFrontBlockModified = true;
     }
+
     public void upgradeRearDamage(int amount) {
         RearBaseDamage += amount;
         RearDamage = RearBaseDamage;
         isRearDamageModified = true;
     }
+
     public void upgradeRearBlock(int amount) {
         RearBaseBlock += amount;
         RearBlock = RearBaseBlock;
@@ -1240,67 +1251,76 @@ public abstract class AbstractCollectorCard extends CustomCard {
                 atb(new DamageAction(m, new DamageInfo(getTorchHead(), douDamage, DamageInfo.DamageType.NORMAL), fxTorch));
             } else atb(new DamageAction(m, makeInfo(), fx));
         }
-        if (!frontDealsDmg && !rearDealsDmg){
+        if (!frontDealsDmg && !rearDealsDmg) {
             atb(new DamageAction(m, makeInfo(), fx));
         }
     }
+
     public void TorchDmg(AbstractMonster m, AbstractGameAction.AttackEffect fx) {
         atb(new DamageAction(m, new DamageInfo(getTorchHead(), douDamage, DamageInfo.DamageType.NORMAL), fx));
     }
+
     public void CollectorDmg(AbstractMonster m, AbstractGameAction.AttackEffect fx) {
         atb(new DamageAction(m, makeInfo(), fx));
     }
+
     public void allDmg(AbstractGameAction.AttackEffect fx, AbstractGameAction.AttackEffect fxTorch) {
         if (frontDealsDmg) {
             if (CollectorChar.isFrontTorchHead()) {
                 atb(new DamageAllEnemiesAction(getTorchHead(), TorchMultiDamage, damageTypeForTurn, fxTorch));
-            } else  atb(new DamageAllEnemiesAction(AbstractDungeon.player, multiDamage, damageTypeForTurn, fx));
+            } else atb(new DamageAllEnemiesAction(AbstractDungeon.player, multiDamage, damageTypeForTurn, fx));
         }
         if (rearDealsDmg) {
             if (!CollectorChar.isFrontTorchHead()) {
                 atb(new DamageAllEnemiesAction(getTorchHead(), TorchMultiDamage, damageTypeForTurn, fx));
-            } else  atb(new DamageAllEnemiesAction(AbstractDungeon.player, multiDamage, damageTypeForTurn, fxTorch));
+            } else atb(new DamageAllEnemiesAction(AbstractDungeon.player, multiDamage, damageTypeForTurn, fxTorch));
         }
-        if (!frontDealsDmg && !rearDealsDmg){
+        if (!frontDealsDmg && !rearDealsDmg) {
             atb(new DamageAllEnemiesAction(AbstractDungeon.player, multiDamage, damageTypeForTurn, fx));
         }
     }
+
     public void TorchallDmg(AbstractGameAction.AttackEffect fx) {
         atb(new DamageAllEnemiesAction(getTorchHead(), TorchMultiDamage, damageTypeForTurn, fx));
     }
+
     public void CollectorallDmg(AbstractGameAction.AttackEffect fx) {
         atb(new DamageAllEnemiesAction(AbstractDungeon.player, multiDamage, damageTypeForTurn, fx));
     }
 
     //Easy function to just call one FX for both Collector and Torchhead
     public void dmg(AbstractMonster m, AbstractGameAction.AttackEffect fx) {
-        dmg(m,fx,fx);
+        dmg(m, fx, fx);
     }
 
     public void allDmg(AbstractGameAction.AttackEffect fx) {
         atb(new DamageAllEnemiesAction(AbstractDungeon.player, multiDamage, damageTypeForTurn, fx));
     }
+
     public void blck() {
         if (frontGainsBlock) {
             if (CollectorChar.isFrontTorchHead()) {
                 atb(new GainBlockAction(getTorchHead(), getTorchHead(), douBlock));
-            } else  atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
+            } else atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
         }
         if (rearGainsBlock) {
             if (!CollectorChar.isFrontTorchHead()) {
                 atb(new GainBlockAction(getTorchHead(), getTorchHead(), douBlock));
             } else atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
         }
-        if (!frontGainsBlock && !rearGainsBlock){
+        if (!frontGainsBlock && !rearGainsBlock) {
             atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
         }
     }
+
     public void Torchblck() {
         atb(new GainBlockAction(getTorchHead(), getTorchHead(), douBlock));
     }
+
     public void Collectorblck() {
         atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
     }
+
     private void makeInHand(AbstractCard c, int i) {
         atb(new MakeTempCardInHandAction(c, i));
     }
@@ -1336,19 +1356,22 @@ public abstract class AbstractCollectorCard extends CustomCard {
     public void applyToSelf(AbstractPower po) {
         atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, po, po.amount));
     }
+
     public void applyToFront(AbstractPower po) {
         if (CollectorChar.isFrontTorchHead()) {
             po.owner = CollectorChar.getTorchHead();
             applyToTorchHead(po);
         } else applyToSelf(po);
     }
+
     public void applyToBack(AbstractPower po) {
         if (CollectorChar.isFrontTorchHead()) {
             po.owner = CollectorChar.getTorchHead();
             applyToSelf(po);
         } else applyToTorchHead(po);
     }
-    public void applyToTorchHead(AbstractPower po){
+
+    public void applyToTorchHead(AbstractPower po) {
         atb(new ApplyPowerAction(CollectorChar.getTorchHead(), CollectorChar.getTorchHead(), po, po.amount));
     }
 

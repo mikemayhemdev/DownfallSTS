@@ -8,14 +8,13 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class BustKeyEffect extends AbstractGameEffect {
     private static final float DURATION = 2.0f;
     private boolean hasBusted;
-    private Color screenColor;
+    private final Color screenColor;
 
     public BustKeyEffect() {
         this.hasBusted = false;
@@ -35,7 +34,7 @@ public class BustKeyEffect extends AbstractGameEffect {
         }
         if (this.duration < 0.0f) {
             this.isDone = true;
-            if ( AbstractDungeon.getCurrRoom() instanceof RestRoom) {
+            if (AbstractDungeon.getCurrRoom() instanceof RestRoom) {
                 ((RestRoom) AbstractDungeon.getCurrRoom()).fadeIn();
             }
 

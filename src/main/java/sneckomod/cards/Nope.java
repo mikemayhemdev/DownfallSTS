@@ -2,7 +2,6 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.city.Snecko;
 import sneckomod.SneckoMod;
 import sneckomod.actions.NopeAction;
 

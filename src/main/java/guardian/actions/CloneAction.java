@@ -6,8 +6,6 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-import java.util.ArrayList;
-
 public class CloneAction extends com.megacrit.cardcrawl.actions.AbstractGameAction {
     private static final float DURATION_PER_CARD = 0.25F;
     public static String[] TEXT;

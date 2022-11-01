@@ -26,7 +26,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -38,7 +37,6 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
 import hermit.util.TextureLoader;
 
-import java.security.Signature;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -248,13 +246,13 @@ public abstract class AbstractChampCard extends CustomCard {
     }
 
     public void berserkOpen() {
-      //  berserkerStance();
-       // triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
+        //  berserkerStance();
+        // triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
     }
 
     public void defenseOpen() {
-     //   defensiveStance();
-      //  triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
+        //   defensiveStance();
+        //  triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
     }
 
     protected void berserkerStance() {
@@ -282,10 +280,10 @@ public abstract class AbstractChampCard extends CustomCard {
             ((AbstractChampStance) AbstractDungeon.player.stance).techique();
     }
 
-    public void finisher (boolean noExit){
+    public void finisher(boolean noExit) {
 
-        if (AbstractDungeon.player.hasPower(DancingMasterPower.POWER_ID)){
-            if (finishersThisTurn == 0){
+        if (AbstractDungeon.player.hasPower(DancingMasterPower.POWER_ID)) {
+            if (finishersThisTurn == 0) {
                 AbstractDungeon.player.getPower(DancingMasterPower.POWER_ID).onSpecificTrigger();
             }
         }
@@ -294,10 +292,7 @@ public abstract class AbstractChampCard extends CustomCard {
         ChampMod.finishersThisCombat++; //If there is a finishers this combat problem, maybe look here
 
         if (!AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
-            boolean leaveStance = true;
-            if (noExit || AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)) {
-                leaveStance = false;
-            }
+            boolean leaveStance = !noExit && !AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID);
             if (AbstractDungeon.player.hasRelic(SignatureFinisher.ID)) {
                 SignatureFinisher s = (SignatureFinisher) AbstractDungeon.player.getRelic(SignatureFinisher.ID);
                 if (s.card.uuid == this.uuid) {
@@ -334,7 +329,7 @@ public abstract class AbstractChampCard extends CustomCard {
         ChampTextHelper.colorCombos(this, true);
     }
 
-    public void postInit(){
+    public void postInit() {
         if (baseDamage > 0) techniqueLast = true;
     }
 
@@ -358,10 +353,10 @@ public abstract class AbstractChampCard extends CustomCard {
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean bottled = false;
         if (hasTag(FINISHER)) {
-            if (p.hasRelic(SignatureFinisher.ID)){
-                if ((((SignatureFinisher)p.getRelic(SignatureFinisher.ID)).card.uuid == this.uuid)){
+            if (p.hasRelic(SignatureFinisher.ID)) {
+                if ((((SignatureFinisher) p.getRelic(SignatureFinisher.ID)).card.uuid == this.uuid)) {
                     bottled = true;
-                };
+                }
             }
             if (!bottled) {
                 if ((AbstractDungeon.player.stance instanceof NeutralStance)) {

@@ -1,23 +1,20 @@
 package champ.vfx;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Graphics;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
-import com.megacrit.cardcrawl.audio.SoundMaster;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 
 public class FlyingDaggerAnyColorEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
     private float x;
     private float y;
-    private float destY;
-    private float scaleMultiplier;
+    private final float destY;
+    private final float scaleMultiplier;
     private static final float DUR = 0.5F;
-    private TextureAtlas.AtlasRegion img;
+    private final TextureAtlas.AtlasRegion img;
     private boolean playedSound = false;
 
     public FlyingDaggerAnyColorEffect(float x, float y, float fAngle, boolean shouldFlip, Color clr) {

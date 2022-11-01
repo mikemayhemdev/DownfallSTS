@@ -8,13 +8,12 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
-import java.util.ArrayList;
-
-import com.megacrit.cardcrawl.stances.*;
+import com.megacrit.cardcrawl.stances.AbstractStance;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.ArrayList;
 
 public abstract class AbstractEnemyStance extends AbstractStance {
     private static final Logger logger = LogManager.getLogger(com.megacrit.cardcrawl.stances.AbstractStance.class.getName());

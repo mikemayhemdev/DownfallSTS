@@ -10,8 +10,8 @@ import downfall.downfallMod;
 
 public class CBR_Vampires extends AbstractCharbossRelic {
     public static String ID = downfallMod.makeID("Vampires");
-    private static RelicTier tier = RelicTier.SPECIAL;
-    private static LandingSound sound = AbstractRelic.LandingSound.MAGICAL;
+    private static final RelicTier tier = RelicTier.SPECIAL;
+    private static final LandingSound sound = AbstractRelic.LandingSound.MAGICAL;
 
     public int hpLoss;
 

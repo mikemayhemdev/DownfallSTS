@@ -27,8 +27,7 @@ public class Jeer extends AbstractGremlinCard {
     private static final int MAGIC = 2;
     private static final int UPGRADE_MAGIC = 2;
 
-    public Jeer()
-    {
+    public Jeer() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -40,14 +39,13 @@ public class Jeer extends AbstractGremlinCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new JeerOuterAction(m,new DamageInfo(p, this.damage,
-                this.damageTypeForTurn),this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new JeerOuterAction(m, new DamageInfo(p, this.damage,
+                this.damageTypeForTurn), this.magicNumber));
     }
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
             upgradeMagicNumber(UPGRADE_MAGIC);

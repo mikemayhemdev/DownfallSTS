@@ -20,7 +20,7 @@ public class ShortScreenFire extends AbstractGameEffect {
 
     public void update() {
         if (this.duration == this.startingDuration) {
-            CardCrawlGame.sound.playV("GHOST_FLAMES",1.0f);
+            CardCrawlGame.sound.playV("GHOST_FLAMES", 1.0f);
             AbstractDungeon.effectsQueue.add(new BorderLongFlashEffect(Color.GREEN));
         }
 

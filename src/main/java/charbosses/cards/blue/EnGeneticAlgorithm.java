@@ -2,7 +2,6 @@ package charbosses.cards.blue;
 
 import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.defect.IncreaseMiscAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.blue.GeneticAlgorithm;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,13 +21,13 @@ public class EnGeneticAlgorithm extends AbstractBossCard {
         this.exhaust = true;
     }
 
-    public EnGeneticAlgorithm(int preBlock){
+    public EnGeneticAlgorithm(int preBlock) {
         this();
         this.baseBlock = preBlock;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-      //  this.addToBot(new IncreaseMiscBuglessAction(this.uuid, this.misc, this.magicNumber));
+        //  this.addToBot(new IncreaseMiscBuglessAction(this.uuid, this.misc, this.magicNumber));
         this.addToBot(new GainBlockAction(m, m, this.block));
     }
 

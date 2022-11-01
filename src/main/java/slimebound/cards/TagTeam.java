@@ -8,19 +8,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.actions.CommandAction;
-import slimebound.actions.SlimeSpawnAction;
-import slimebound.orbs.AttackSlime;
-import slimebound.orbs.PoisonSlime;
-import slimebound.orbs.ShieldSlime;
-import slimebound.orbs.SlimingSlime;
 import slimebound.patches.AbstractCardEnum;
-
-import java.util.ArrayList;
 
 
 public class TagTeam extends AbstractSlimeboundCard {
@@ -34,7 +26,7 @@ public class TagTeam extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 2;
     public static String UPGRADED_DESCRIPTION;
-    private static int upgradedamount = 1;
+    private static final int upgradedamount = 1;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -53,7 +45,7 @@ public class TagTeam extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
-        if (upgraded){
+        if (upgraded) {
             SlimeboundMod.spawnSpecialistSlime();
         } else {
             SlimeboundMod.spawnNormalSlime();

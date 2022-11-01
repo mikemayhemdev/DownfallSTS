@@ -1,6 +1,5 @@
 package automaton.powers;
 
-import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -9,12 +8,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import downfall.util.TextureLoader;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import static automaton.AutomatonMod.getModID;
-import static automaton.AutomatonMod.makeID;
 
 
 public abstract class AbstractAutomatonPower extends AbstractPower {

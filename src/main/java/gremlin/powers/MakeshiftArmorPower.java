@@ -2,19 +2,15 @@ package gremlin.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import gremlin.GremlinMod;
-import gremlin.cards.AbstractGremlinCard;
 
 public class MakeshiftArmorPower extends AbstractGremlinPower {
     public static final String POWER_ID = getID("MakeshiftArmor");
@@ -35,11 +31,10 @@ public class MakeshiftArmorPower extends AbstractGremlinPower {
         this.updateDescription();
     }
 
-    public void updateDescription()
-    {
-        if(this.amount == 1) {
+    public void updateDescription() {
+        if (this.amount == 1) {
             this.description = (strings.DESCRIPTIONS[0] + this.amount + strings.DESCRIPTIONS[1] + this.artifact);
-        } else{
+        } else {
             this.description = (strings.DESCRIPTIONS[0] + this.amount + strings.DESCRIPTIONS[2] + this.artifact);
         }
         this.description += strings.DESCRIPTIONS[3];

@@ -9,8 +9,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 
-import static com.megacrit.cardcrawl.cards.red.PerfectedStrike.countCards;
-
 public class SnekBeam extends AbstractSneckoCard {
 
     public final static String ID = makeID("SnekBeam");

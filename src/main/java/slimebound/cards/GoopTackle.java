@@ -16,12 +16,8 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.TackleSelfDamageAction;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PreventTackleDamagePower;
-import slimebound.powers.TackleBuffPower;
-import slimebound.powers.TackleDebuffPower;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map;
 
 
 public class GoopTackle extends AbstractTackleCard {

@@ -1,8 +1,6 @@
 package hermit.actions;
 
-import java.util.Iterator;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
@@ -11,12 +9,13 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+
 import java.util.Iterator;
 
 public class EclipseAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
 
     public EclipseAction(int amount) {
         this.p = AbstractDungeon.player;
@@ -31,8 +30,8 @@ public class EclipseAction extends AbstractGameAction {
             CardGroup tmp = new CardGroup(CardGroupType.UNSPECIFIED);
             Iterator var5 = this.p.exhaustPile.group.iterator();
 
-            while(var5.hasNext()) {
-                card = (AbstractCard)var5.next();
+            while (var5.hasNext()) {
+                card = (AbstractCard) var5.next();
                 tmp.addToRandomSpot(card);
             }
 
@@ -62,7 +61,7 @@ public class EclipseAction extends AbstractGameAction {
 
                 this.isDone = true;
             } else if (tmp.size() <= this.amount) {
-                for(int i = 0; i < tmp.size(); ++i) {
+                for (int i = 0; i < tmp.size(); ++i) {
                     card = tmp.getNCardFromTop(i);
                     if (this.p.hand.size() == 10) {
                         this.p.exhaustPile.moveToDiscardPile(card);
@@ -98,8 +97,8 @@ public class EclipseAction extends AbstractGameAction {
             if (AbstractDungeon.gridSelectScreen.selectedCards.size() != 0) {
                 Iterator var1 = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
 
-                while(var1.hasNext()) {
-                    card = (AbstractCard)var1.next();
+                while (var1.hasNext()) {
+                    card = (AbstractCard) var1.next();
                     card.unhover();
                     if (this.p.hand.size() == 10) {
                         this.p.exhaustPile.moveToDiscardPile(card);

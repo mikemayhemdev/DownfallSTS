@@ -15,8 +15,8 @@ public class TopLevelInfiniteSpeechBubble extends AbstractGameEffect {
     private static final int RAW_W = 512;
     private float shadow_offset = 0.0F;
     private static final float SHADOW_OFFSET;
-    private float x;
-    private float y;
+    private final float x;
+    private final float y;
     private float scale_x;
     private float scale_y;
     private float wavy_y;
@@ -26,7 +26,7 @@ public class TopLevelInfiniteSpeechBubble extends AbstractGameEffect {
     private float scaleTimer = 0.3F;
     private static final float ADJUST_X;
     private static final float ADJUST_Y;
-    private boolean facingRight;
+    private final boolean facingRight;
     private static final float FADE_TIME = 0.3F;
     public CustomSpeechTextEffect textEffect;
 
@@ -81,7 +81,7 @@ public class TopLevelInfiniteSpeechBubble extends AbstractGameEffect {
             sb.setColor(this.color);
             sb.draw(ImageMaster.SPEECH_BUBBLE_IMG, this.x - 256.0F, this.y - 256.0F + this.wavy_y, 256.0F, 256.0F, 512.0F, 512.0F, this.scale_x, this.scale_y, this.rotation, 0, 0, 512, 512, this.facingRight, false);
         }
-        }
+    }
 
     public void dispose() {
         this.textEffect.dispose();

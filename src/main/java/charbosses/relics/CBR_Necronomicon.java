@@ -1,10 +1,6 @@
 package charbosses.relics;
 
-import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.CallingBell;
 import com.megacrit.cardcrawl.relics.Necronomicon;
 
 public class CBR_Necronomicon extends AbstractCharbossRelic {

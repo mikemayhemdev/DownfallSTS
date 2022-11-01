@@ -10,12 +10,9 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import theHexaghost.HexaMod;
-import theHexaghost.actions.AdvanceAction;
 import downfall.util.TextureLoader;
-import theHexaghost.ghostflames.AbstractGhostflame;
+import theHexaghost.HexaMod;
 import theHexaghost.util.OnAdvanceSubscriber;
-import theHexaghost.util.OnChargeSubscriber;
 
 public class FuturePower extends AbstractPower implements CloneablePowerInterface, OnAdvanceSubscriber {
 
@@ -54,8 +51,8 @@ public class FuturePower extends AbstractPower implements CloneablePowerInterfac
 
     @Override
     public void onAdvance() {
-        addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount),amount));
-        addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, amount),amount));
+        addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
+        addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, amount), amount));
     }
 
     @Override

@@ -2,9 +2,7 @@ package champ.cards;
 
 import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -60,9 +58,9 @@ public class Duel extends AbstractChampCard {
     public void triggerOnGlowCheck() {
         boolean hasStr = false;
         if (isInCombat()) {
-            for (AbstractMonster m:monsterList()){
-                if (m.hasPower(StrengthPower.POWER_ID)){
-                    hasStr=true;
+            for (AbstractMonster m : monsterList()) {
+                if (m.hasPower(StrengthPower.POWER_ID)) {
+                    hasStr = true;
                     break;
                 }
             }

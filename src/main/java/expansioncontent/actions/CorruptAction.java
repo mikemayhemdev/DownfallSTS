@@ -10,8 +10,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import expansioncontent.expansionContentMod;
 
-import java.util.Iterator;
-
 
 public class CorruptAction extends AbstractGameAction {
     public static final String[] TEXT;
@@ -24,10 +22,10 @@ public class CorruptAction extends AbstractGameAction {
     }
 
     public boolean upgraded;
-    private AbstractPlayer p;
-    private boolean isRandom;
-    private boolean anyNumber;
-    private boolean canPickZero;
+    private final AbstractPlayer p;
+    private final boolean isRandom;
+    private final boolean anyNumber;
+    private final boolean canPickZero;
 
     public CorruptAction(int amount, boolean isRandom, boolean anyNumber, boolean canPickZero, boolean upgraded) {
         this.anyNumber = anyNumber;

@@ -5,8 +5,6 @@ import com.badlogic.gdx.graphics.Texture.TextureFilter;
 import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
 
 import java.util.HashMap;
 
@@ -17,7 +15,7 @@ import java.util.HashMap;
 
 
 public class TextureLoader {
-    private static HashMap<String, Texture> textures = new HashMap<String, Texture>();
+    private static final HashMap<String, Texture> textures = new HashMap<String, Texture>();
     //public static final Logger logger = LogManager.getLogger(TextureLoader.class.getName());
 
     /**
@@ -52,12 +50,13 @@ public class TextureLoader {
     }
 
     @SuppressWarnings("unused")
-    @SpirePatch(clz = Texture.class, method="dispose")
+    @SpirePatch(clz = Texture.class, method = "dispose")
     public static class DisposeListener {
         @SpirePrefixPatch
         public static void DisposeListenerPatch(final Texture __instance) {
             textures.entrySet().removeIf(entry -> {
-                if (entry.getValue().equals(__instance)) System.out.println("TextureLoader | Removing Texture: " + entry.getKey());
+                if (entry.getValue().equals(__instance))
+                    System.out.println("TextureLoader | Removing Texture: " + entry.getKey());
                 return entry.getValue().equals(__instance);
             });
         }

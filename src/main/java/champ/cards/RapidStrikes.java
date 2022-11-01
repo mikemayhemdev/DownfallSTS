@@ -25,7 +25,7 @@ public class RapidStrikes extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         //finisher();
-            dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
 
         addToBot(new AbstractGameAction() {

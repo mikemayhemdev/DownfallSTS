@@ -41,8 +41,8 @@ public class SneckoMirror extends AbstractMonster {
     private static final int TAIL_DAMAGE = 8;
     private static final int A_2_BITE_DAMAGE = 18;
     private static final int A_2_TAIL_DAMAGE = 10;
-    private int biteDmg;
-    private int tailDmg;
+    private final int biteDmg;
+    private final int tailDmg;
     private static final int VULNERABLE_AMT = 2;
     private static final int HP_MIN = 114;
     private static final int HP_MAX = 120;
@@ -55,7 +55,7 @@ public class SneckoMirror extends AbstractMonster {
     }
 
     public SneckoMirror(float x, float y) {
-        super(NAME, "Snecko", 120, -30.0F, -20.0F, 310.0F, 305.0F, (String) null, x, y);
+        super(NAME, "Snecko", 120, -30.0F, -20.0F, 310.0F, 305.0F, null, x, y);
         this.firstTurn = true;
         this.loadAnimation("sneckomodResources/images/char/skeleton.atlas", "sneckomodResources/images/char/skeletonM.json", 1.0F);
         TrackEntry e = this.state.setAnimation(0, "Idle", true);
@@ -95,11 +95,11 @@ public class SneckoMirror extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK_2"));
                 AbstractDungeon.actionManager.addToBottom(new WaitAction(0.3F));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(new BiteEffect(AbstractDungeon.player.hb.cX + MathUtils.random(-50.0F, 50.0F) * Settings.scale, AbstractDungeon.player.hb.cY + MathUtils.random(-50.0F, 50.0F) * Settings.scale, Color.CHARTREUSE.cpy()), 0.3F));
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo) this.damage.get(0), AttackEffect.NONE));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(0), AttackEffect.NONE));
                 break;
             case 3:
                 AbstractDungeon.actionManager.addToBottom(new AnimateFastAttackAction(this));
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo) this.damage.get(1), AttackEffect.SLASH_DIAGONAL));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(1), AttackEffect.SLASH_DIAGONAL));
                 if (AbstractDungeon.ascensionLevel >= 17) {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 2, true), 2));
                 }
@@ -150,12 +150,12 @@ public class SneckoMirror extends AbstractMonster {
             this.firstTurn = false;
             this.setMove(MOVES[0], (byte) 1, Intent.STRONG_DEBUFF);
         } else if (num < 40) {
-            this.setMove(MOVES[1], (byte) 3, Intent.ATTACK_DEBUFF, ((DamageInfo) this.damage.get(1)).base);
+            this.setMove(MOVES[1], (byte) 3, Intent.ATTACK_DEBUFF, this.damage.get(1).base);
         } else {
             if (this.lastTwoMoves((byte) 2)) {
-                this.setMove(MOVES[1], (byte) 3, Intent.ATTACK_DEBUFF, ((DamageInfo) this.damage.get(1)).base);
+                this.setMove(MOVES[1], (byte) 3, Intent.ATTACK_DEBUFF, this.damage.get(1).base);
             } else {
-                this.setMove(MOVES[2], (byte) 2, Intent.ATTACK, ((DamageInfo) this.damage.get(0)).base);
+                this.setMove(MOVES[2], (byte) 2, Intent.ATTACK, this.damage.get(0).base);
             }
 
         }

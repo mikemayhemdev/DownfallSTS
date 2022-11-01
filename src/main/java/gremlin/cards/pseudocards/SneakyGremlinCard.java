@@ -24,15 +24,13 @@ public class SneakyGremlinCard extends AbstractGremlinCard {
 
     private static final int COST = 0;
 
-    public SneakyGremlinCard()
-    {
+    public SneakyGremlinCard() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         this.tags.add(SNEAKY_GREMLIN);
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         onChoseThisOption();
     }
 
@@ -41,15 +39,12 @@ public class SneakyGremlinCard extends AbstractGremlinCard {
         this.dontTriggerOnUseCard = true;
     }
 
-    public AbstractCard makeCopy()
-    {
+    public AbstractCard makeCopy() {
         return new SneakyGremlinCard();
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
         }
     }

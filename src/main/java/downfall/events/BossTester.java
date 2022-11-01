@@ -13,8 +13,8 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.ShopRoom;
 import downfall.util.BossRelicReward;
 import downfall.util.RareCardReward;
-import downfall.util.UpgradeCardReward;
 import downfall.util.RemoveCardReward;
+import downfall.util.UpgradeCardReward;
 
 public class BossTester extends AbstractImageEvent {
     public static final String ID = "downfall:BossTester";
@@ -89,36 +89,36 @@ public class BossTester extends AbstractImageEvent {
     }
 
     private void simulateRewards(int act) {
-            AbstractDungeon.getCurrRoom().rewards.clear();
-            if (act > 1) addBossRelicReward();
-            if (act > 1) addBossCardReward();
-            addCardReward();
-            addCardReward();
-            addCardReward();
-            addPotionReward();
-            addCardUpgradeReward();
-            addStandardRelicReward();
-            addCardRemoveReward();
-            addStandardRelicReward();
-            addCardReward();
-            addCardReward();
-            addCardUpgradeReward();
-            addPotionReward();
-            addCardRemoveReward();
-            addCardReward();
-            addCardUpgradeReward();
-            addGoldReward(250);
+        AbstractDungeon.getCurrRoom().rewards.clear();
+        if (act > 1) addBossRelicReward();
+        if (act > 1) addBossCardReward();
+        addCardReward();
+        addCardReward();
+        addCardReward();
+        addPotionReward();
+        addCardUpgradeReward();
+        addStandardRelicReward();
+        addCardRemoveReward();
+        addStandardRelicReward();
+        addCardReward();
+        addCardReward();
+        addCardUpgradeReward();
+        addPotionReward();
+        addCardRemoveReward();
+        addCardReward();
+        addCardUpgradeReward();
+        addGoldReward(250);
     }
 
-    private void addCardReward(){
+    private void addCardReward() {
         AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(AbstractDungeon.player.getCardColor()));
     }
 
-    private void addBossCardReward(){
+    private void addBossCardReward() {
         AbstractDungeon.getCurrRoom().rewards.add(new RareCardReward(AbstractDungeon.player.getCardColor()));
     }
 
-    private void addStandardRelicReward(){
+    private void addStandardRelicReward() {
         int roll = AbstractDungeon.treasureRng.random(0, 99);
         AbstractRelic r;
         if (roll <= 35) {
@@ -133,23 +133,23 @@ public class BossTester extends AbstractImageEvent {
         AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(r));
     }
 
-    private void addBossRelicReward(){
+    private void addBossRelicReward() {
         AbstractDungeon.getCurrRoom().rewards.add(new BossRelicReward());
     }
 
-    private void addPotionReward(){
+    private void addPotionReward() {
         AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(PotionHelper.getRandomPotion()));
     }
 
-    private void addGoldReward(int gold){
+    private void addGoldReward(int gold) {
         AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(gold));
     }
 
-    private void addCardUpgradeReward(){
+    private void addCardUpgradeReward() {
         AbstractDungeon.getCurrRoom().rewards.add(new UpgradeCardReward());
     }
 
-    private void addCardRemoveReward(){
+    private void addCardRemoveReward() {
         AbstractDungeon.getCurrRoom().rewards.add(new RemoveCardReward());
     }
 

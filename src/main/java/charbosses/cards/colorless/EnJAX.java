@@ -48,7 +48,7 @@ public class EnJAX extends AbstractBossCard {
 
     @Override
     public int getPriority(ArrayList<AbstractCard> hand) {
-        return  Integer.MAX_VALUE;
+        return Integer.MAX_VALUE;
     }
 
     @Override

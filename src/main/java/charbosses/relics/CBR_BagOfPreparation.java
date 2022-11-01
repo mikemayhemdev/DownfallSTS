@@ -26,5 +26,5 @@ public class CBR_BagOfPreparation extends AbstractCharbossRelic {
     public AbstractRelic makeCopy() {
         return new CBR_BagOfPreparation();
     }
-    
+
 }

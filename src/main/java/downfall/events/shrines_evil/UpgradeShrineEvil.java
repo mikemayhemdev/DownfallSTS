@@ -1,17 +1,13 @@
-
 package downfall.events.shrines_evil;
 
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import com.megacrit.cardcrawl.events.GenericEventDialog;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.screens.select.GridCardSelectScreen;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
 
@@ -35,14 +31,14 @@ public class UpgradeShrineEvil extends AbstractImageEvent {
 
     private boolean bonusShrine;
     private boolean bonusShrine2;
-    private List<String> upgradedCards = new ArrayList<String>();
+    private final List<String> upgradedCards = new ArrayList<String>();
 
     private CUR_SCREEN screen = CUR_SCREEN.INTRO;
 
-    private static enum CUR_SCREEN {
+    private enum CUR_SCREEN {
         INTRO, COMPLETE;
 
-        private CUR_SCREEN() {
+        CUR_SCREEN() {
         }
     }
 
@@ -81,13 +77,13 @@ public class UpgradeShrineEvil extends AbstractImageEvent {
             AbstractDungeon.topLevelEffects.add(new com.megacrit.cardcrawl.vfx.UpgradeShineEffect(com.megacrit.cardcrawl.core.Settings.WIDTH * .25F, com.megacrit.cardcrawl.core.Settings.HEIGHT / 2.0F));
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
-            if (bonusShrine2){
+            if (bonusShrine2) {
                 AbstractCard curse = CardLibrary.getCurse().makeStatEquivalentCopy();
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (Settings.WIDTH * .5F), Settings.HEIGHT * .5F));// 66
                 logMetric(ID, "Desecrated", Collections.singletonList(curse.cardID), null,
                         null, upgradedCards, null, null, null,
                         0, 0, 0, 0, 0, 0);
-            } else if (bonusShrine){
+            } else if (bonusShrine) {
                 bonusShrine = false;
                 bonusShrine2 = true;
                 AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getUpgradableCards(),

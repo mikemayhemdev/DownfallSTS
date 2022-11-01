@@ -2,11 +2,8 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.powers.BerserkerStylePower;
-import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import static champ.ChampMod.fatigue;
 
 public class BerserkerStyle extends AbstractChampCard {
 
@@ -19,13 +16,13 @@ public class BerserkerStyle extends AbstractChampCard {
         this.tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERBERSERKER);
         baseMagicNumber = magicNumber = 1;
-       // myHpLossCost = 5;
+        // myHpLossCost = 5;
         postInit();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         berserkOpen();
-     //   fatigue(5);
+        //   fatigue(5);
         applyToSelf(new BerserkerStylePower(magicNumber));
     }
 

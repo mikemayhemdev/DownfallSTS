@@ -5,8 +5,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 
-import static automaton.AutomatonMod.makeBetaCardPath;
-
 public class Strike extends AbstractHexaCard {
 
     public final static String ID = makeID("Strike");

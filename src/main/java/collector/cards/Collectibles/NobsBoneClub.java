@@ -8,7 +8,7 @@ public class NobsBoneClub extends AbstractCollectibleCard {
     public final static String ID = makeID("NobsBoneClub");
 
     public NobsBoneClub() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY,CollectorCardSource.TORCH_HEAD);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY, CollectorCardSource.TORCH_HEAD);
         douDamage = damage = baseDamage = 13;
         this.exhaust = true;
     }

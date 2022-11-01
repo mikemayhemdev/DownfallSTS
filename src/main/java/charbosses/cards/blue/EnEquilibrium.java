@@ -1,8 +1,6 @@
 package charbosses.cards.blue;
 
-import charbosses.actions.orb.EnemyChannelAction;
 import charbosses.cards.AbstractBossCard;
-import charbosses.orbs.EnemyFrost;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

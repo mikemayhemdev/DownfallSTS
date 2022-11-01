@@ -19,7 +19,7 @@ public class DebuggingMapLoadCrashFix {
     public static SpireReturn Prefix(AbstractDungeon __instance, SaveFile save) {
         if (save.current_room.equals(MonsterRoomBoss.class.getName()) ||
                 save.current_room.equals(TreasureRoomBoss.class.getName()) ||
-                (save.room_y == 15) && (save.room_x == -1 )) {
+                (save.room_y == 15) && (save.room_x == -1)) {
             return SpireReturn.Continue();
         }
 

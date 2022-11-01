@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 
 
 public class DestroyOrbSlotForDamageAction extends AbstractGameAction {
-    private int damage;
-    private AbstractOrb o;
+    private final int damage;
+    private final AbstractOrb o;
 
     public DestroyOrbSlotForDamageAction(int damage, AbstractOrb o) {
         this.actionType = ActionType.DAMAGE;

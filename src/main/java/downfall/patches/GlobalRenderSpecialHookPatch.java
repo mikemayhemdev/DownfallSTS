@@ -1,7 +1,6 @@
 package downfall.patches;
 
 import automaton.EasyInfoDisplayPanel;
-import automaton.FunctionHelper;
 import automaton.SuperTip;
 import champ.StanceHelper;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;

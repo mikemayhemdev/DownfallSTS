@@ -13,11 +13,11 @@ public class StopwatchParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEf
     private static final float DURATION = 0.75F;
     private static final float START_SCALE = 1.2F * Settings.scale;
     private static int W;
-    private static int xOffset = -5;
-    private static int yOffset = 30;
+    private static final int xOffset = -5;
+    private static final int yOffset = 30;
     public SlowingSlime p;
-    private float scale = 1F;
-    private Texture img;
+    private final float scale = 1F;
+    private final Texture img;
 
     public StopwatchParticle(SlowingSlime p) {
         this.duration = 0.05F;

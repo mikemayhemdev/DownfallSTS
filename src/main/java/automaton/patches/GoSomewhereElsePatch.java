@@ -14,7 +14,6 @@ import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
 
 import static automaton.FunctionHelper.cardPositions;
-import static automaton.FunctionHelper.doStuff;
 
 @SpirePatch(
         clz = UseCardAction.class,

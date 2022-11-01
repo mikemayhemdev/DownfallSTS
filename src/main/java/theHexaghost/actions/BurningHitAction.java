@@ -6,13 +6,12 @@ import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import theHexaghost.powers.BurnPower;
 import theHexaghost.powers.CrispyPower;
 
 public class BurningHitAction extends AbstractGameAction {
-    private int damage;
+    private final int damage;
 
     public BurningHitAction(AbstractCreature target, AbstractCreature source, int amount, DamageInfo.DamageType type, AttackEffect effect) {
         setValues(target, source, amount);

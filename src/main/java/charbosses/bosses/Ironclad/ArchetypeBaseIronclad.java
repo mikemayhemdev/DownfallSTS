@@ -1,8 +1,6 @@
 package charbosses.bosses.Ironclad;
 
 import charbosses.bosses.AbstractBossDeckArchetype;
-import charbosses.cards.red.*;
-import charbosses.relics.*;
 
 public class ArchetypeBaseIronclad extends AbstractBossDeckArchetype {
 
@@ -15,11 +13,13 @@ public class ArchetypeBaseIronclad extends AbstractBossDeckArchetype {
     public void initialize() {
 
     }
+
     @Override
     public void addedPreBattle() {
         super.addedPreBattle();
 
     }
+
     @Override
     public void initializeBonusRelic() {
 

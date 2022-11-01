@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.BlurPower;
 import downfall.monsters.NeowBoss;
-import slimebound.SlimeboundMod;
 
 public class CharBossMonsterGroup extends MonsterGroup {
 
@@ -25,9 +24,9 @@ public class CharBossMonsterGroup extends MonsterGroup {
             if (m instanceof AbstractCharBoss) {
                 AbstractCharBoss cB = (AbstractCharBoss) m;
                 if (!m.isDying && !m.isEscaping) {
-                    for(AbstractPower p : m.powers){
-                        if(p instanceof AbstractBossMechanicPower){
-                            ((AbstractBossMechanicPower)p).PreRoundLoseBlock();
+                    for (AbstractPower p : m.powers) {
+                        if (p instanceof AbstractBossMechanicPower) {
+                            ((AbstractBossMechanicPower) p).PreRoundLoseBlock();
                         }
                     }
                     if (!m.hasPower("Barricade") && !m.hasPower(BlurPower.POWER_ID)) {

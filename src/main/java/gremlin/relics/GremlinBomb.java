@@ -28,12 +28,12 @@ public class GremlinBomb extends AbstractGremlinRelic {
     }
 
     @Override
-    public void onGremlinDeath()
-    {
+    public void onGremlinDeath() {
         this.flash();
         AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(null,
-                DamageInfo.createDamageMatrix(DMG_AMT, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));    }
+                DamageInfo.createDamageMatrix(DMG_AMT, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
+    }
 }
 

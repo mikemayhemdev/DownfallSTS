@@ -3,13 +3,9 @@ package slimebound.cards;
 
 import basemod.BaseMod;
 import com.badlogic.gdx.Gdx;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.PowerTip;
-import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.actions.OctoChoiceAction;
@@ -37,13 +33,13 @@ public class SplitSpecialist extends AbstractSlimeboundCard implements OctopusCa
     public static CardTarget TARGET = CardTarget.SELF;
     public static int COST = 1;
     public static String UPGRADED_DESCRIPTION;
-    private static int upgradedamount = 1;
+    private static final int upgradedamount = 1;
     public String[] NAMES = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").NAMES;
     public String[] TEXT = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").TEXT;
 
     private float rotationTimer;
     private int previewIndex;
-    private ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
+    private final ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -60,35 +56,35 @@ public class SplitSpecialist extends AbstractSlimeboundCard implements OctopusCa
         cardList.add(new OctoChoiceCard("Slimebound:SplotBronze",
                 NAMES[12],
                 expansionContentMod.makeCardPath("QuickAutomaton.png"),
-                TEXT[12] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:bronze_slime").replaceAll("#b","").replaceAll("#y","")));
+                TEXT[12] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:bronze_slime").replaceAll("#b", "").replaceAll("#y", "")));
         cardList.add(new OctoChoiceCard("Slimebound:SplotGhostflame",
                 NAMES[13],
                 expansionContentMod.makeCardPath("QuickHexa.png"),
-                TEXT[13] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:ghostflame_slime").replaceAll("#b","").replaceAll("#y","")));
+                TEXT[13] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:ghostflame_slime").replaceAll("#b", "").replaceAll("#y", "")));
         cardList.add(new OctoChoiceCard("Slimebound:SplotTorchhead",
                 NAMES[14],
                 expansionContentMod.makeCardPath("QuickCollector.png"),
-                TEXT[14] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:torchhead_slime").replaceAll("#b","").replaceAll("#y","")));
+                TEXT[14] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:torchhead_slime").replaceAll("#b", "").replaceAll("#y", "")));
         cardList.add(new OctoChoiceCard("Slimebound:SplotCultist",
                 NAMES[15],
                 expansionContentMod.makeCardPath("QuickAwakened.png"),
-                TEXT[15] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:cultist_slime").replaceAll("#b","").replaceAll("#y","")));
+                TEXT[15] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:cultist_slime").replaceAll("#b", "").replaceAll("#y", "")));
         cardList.add(new OctoChoiceCard("Slimebound:SplotProtector",
                 NAMES[16],
                 expansionContentMod.makeCardPath("QuickGuardian.png"),
-                TEXT[16] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:protector_slime").replaceAll("#b","").replaceAll("#y","")));
+                TEXT[16] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:protector_slime").replaceAll("#b", "").replaceAll("#y", "")));
         cardList.add(new OctoChoiceCard("Slimebound:SplotInsulting",
                 NAMES[17],
                 expansionContentMod.makeCardPath("QuickChamp.png"),
-                TEXT[17] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:insulting_slime").replaceAll("#b","").replaceAll("#y","")));
+                TEXT[17] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:insulting_slime").replaceAll("#b", "").replaceAll("#y", "")));
         cardList.add(new OctoChoiceCard("Slimebound:SplotAncient",
                 NAMES[18],
                 expansionContentMod.makeCardPath("QuickAncients.png"),
-                TEXT[18] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:ancient_slime").replaceAll("#b","").replaceAll("#y","")));
+                TEXT[18] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:ancient_slime").replaceAll("#b", "").replaceAll("#y", "")));
         cardList.add(new OctoChoiceCard("Slimebound:SplotSlowing",
                 NAMES[19],
                 expansionContentMod.makeCardPath("QuickTimeEater.png"),
-                TEXT[19] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:time_slime").replaceAll("#b","").replaceAll("#y","")));
+                TEXT[19] + " NL " + BaseMod.getKeywordDescription("slimeboundmod:time_slime").replaceAll("#b", "").replaceAll("#y", "")));
 
     }
 

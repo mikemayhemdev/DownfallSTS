@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
-import sneckomod.SneckoMod;
 
 
 public class TongueLash extends AbstractSlimeboundCard {
@@ -46,7 +45,7 @@ public class TongueLash extends AbstractSlimeboundCard {
         this.magicNumber = this.baseMagicNumber = 2;
 
 
-       // this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        // this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public static int countCards() {
@@ -85,7 +84,7 @@ public class TongueLash extends AbstractSlimeboundCard {
 
             upgradeName();
 
-           // upgradeDamage(1);
+            // upgradeDamage(1);
             upgradeMagicNumber(1);
 
         }

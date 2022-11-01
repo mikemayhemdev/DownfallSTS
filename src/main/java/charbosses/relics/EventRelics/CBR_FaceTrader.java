@@ -1,6 +1,6 @@
 package charbosses.relics.EventRelics;
 
-import charbosses.relics.*;
+import charbosses.relics.AbstractCharbossRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.downfallMod;
@@ -8,8 +8,8 @@ import downfall.downfallMod;
 
 public class CBR_FaceTrader extends AbstractCharbossRelic {
     public static String ID = downfallMod.makeID("FaceTrader");
-    private static RelicTier tier = RelicTier.SPECIAL;
-    private static LandingSound sound = LandingSound.MAGICAL;
+    private static final RelicTier tier = RelicTier.SPECIAL;
+    private static final LandingSound sound = LandingSound.MAGICAL;
 
     public String cardName = "";
 

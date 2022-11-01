@@ -4,7 +4,8 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
-import com.esotericsoftware.spine.*;
+import com.esotericsoftware.spine.AnimationState;
+import com.esotericsoftware.spine.Skeleton;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -24,15 +25,15 @@ public abstract class GremlinStandby extends AbstractOrb {
     public AnimationState state;
 
     public int hp;
-    private int yOffset;
+    private final int yOffset;
 
     public String assetFolder;
     public String animationName;
 
-    public GremlinStandby(int hp, String ID, String assetFolder, String animationName, int yOffset){
+    public GremlinStandby(int hp, String ID, String assetFolder, String animationName, int yOffset) {
         this.ID = ID;
         this.scale = 1f;
-        this.yOffset = -1*yOffset;
+        this.yOffset = -1 * yOffset;
 
         this.assetFolder = assetFolder;
         this.animationName = animationName;

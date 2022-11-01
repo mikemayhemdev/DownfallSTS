@@ -1,8 +1,8 @@
 package automaton;
 
+import automaton.cards.Defend;
 import automaton.cards.Goto;
 import automaton.cards.Replicate;
-import automaton.cards.Defend;
 import automaton.cards.Strike;
 import automaton.relics.BronzeCore;
 import basemod.abstracts.CustomPlayer;
@@ -10,13 +10,14 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
-import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
-import com.megacrit.cardcrawl.helpers.*;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import downfall.downfallMod;
@@ -24,7 +25,8 @@ import reskinContent.patches.CharacterSelectScreenPatches;
 
 import java.util.ArrayList;
 
-import static automaton.AutomatonMod.*;
+import static automaton.AutomatonMod.makeID;
+import static automaton.AutomatonMod.placeholderColor;
 
 public class AutomatonChar extends CustomPlayer {
     public static final String ID = makeID("theAutomaton");
@@ -46,11 +48,11 @@ public class AutomatonChar extends CustomPlayer {
 
     public float renderscale = 1.2F;
 
-    private String atlasURL = "bronzeResources/images/char/mainChar/bronze.atlas";
-    private String jsonURL = "bronzeResources/images/char/mainChar/bronze.json";
+    private final String atlasURL = "bronzeResources/images/char/mainChar/bronze.atlas";
+    private final String jsonURL = "bronzeResources/images/char/mainChar/bronze.json";
 
     public AutomatonChar(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "bronzeResources/images/char/mainChar/orb/vfx.png", (String) null, (String) null);
+        super(name, setClass, orbTextures, "bronzeResources/images/char/mainChar/orb/vfx.png", null, (String) null);
         initializeClass(null,
                 CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].SHOULDER1,
                 CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].SHOULDER2,

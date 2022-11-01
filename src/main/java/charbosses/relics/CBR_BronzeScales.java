@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.relics.BronzeScales;
 
 public class CBR_BronzeScales extends AbstractCharbossRelic {
     public static final String ID = "BronzeScales";
+
     public CBR_BronzeScales() {
         super(new BronzeScales());
     }

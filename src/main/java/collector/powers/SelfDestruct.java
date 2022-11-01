@@ -19,7 +19,7 @@ public class SelfDestruct extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public  SelfDestruct(AbstractCreature owner) {
+    public SelfDestruct(AbstractCreature owner) {
         this.name = NAME;
         this.name = NAME;
         this.ID = POWER_ID;
@@ -37,9 +37,9 @@ public class SelfDestruct extends AbstractPower {
     }
 
     public void atEndOfTurn(boolean isPlayer) {
-        for (AbstractMonster m: AbstractDungeon.getCurrRoom().monsters.monsters) {
-            addToBot(new DamageAction(m,new DamageInfo(owner,owner.currentHealth, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.FIRE));
+        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            addToBot(new DamageAction(m, new DamageInfo(owner, owner.currentHealth, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.FIRE));
         }
-        addToBot(new DamageAction(owner,new DamageInfo(owner,owner.currentHealth, DamageInfo.DamageType.HP_LOSS)));
+        addToBot(new DamageAction(owner, new DamageInfo(owner, owner.currentHealth, DamageInfo.DamageType.HP_LOSS)));
     }
 }

@@ -2,15 +2,12 @@ package sneckomod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
-import sneckomod.cards.unknowns.AbstractUnknownCard;
 import downfall.util.TextureLoader;
+import sneckomod.SneckoMod;
 
 public class SuperSneckoSoul extends CustomRelic {
 

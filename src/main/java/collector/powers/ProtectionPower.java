@@ -35,7 +35,7 @@ public class ProtectionPower extends AbstractPower implements CloneablePowerInte
 
     @Override
     public AbstractPower makeCopy() {
-        return new ProtectionPower(owner,amount);
+        return new ProtectionPower(owner, amount);
     }
 
 }

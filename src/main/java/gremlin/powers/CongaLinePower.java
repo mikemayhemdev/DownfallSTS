@@ -26,8 +26,7 @@ public class CongaLinePower extends AbstractGremlinPower {
         this.updateDescription();
     }
 
-    public void updateDescription()
-    {
+    public void updateDescription() {
         StringBuilder sb = new StringBuilder();
         sb.append(strings.DESCRIPTIONS[0]);
         for (int i = 0; i < this.amount; i++) {
@@ -38,8 +37,7 @@ public class CongaLinePower extends AbstractGremlinPower {
     }
 
     @Override
-    public void atStartOfTurn()
-    {
+    public void atStartOfTurn() {
         AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.amount));
         AbstractDungeon.actionManager.addToBottom(new GremlinSwapAction());
         flash();

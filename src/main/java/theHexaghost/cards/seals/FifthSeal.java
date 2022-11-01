@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
-import guardian.cards.*;
 import theHexaghost.powers.SealPostCombatPower;
 
 import java.util.ArrayList;
@@ -16,7 +15,7 @@ public class FifthSeal extends AbstractSealCard {
 
     private float rotationTimer;
     private int previewIndex;
-    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
+    private final ArrayList<AbstractCard> cardsList = new ArrayList<>();
 
     public FifthSeal() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
@@ -32,7 +31,6 @@ public class FifthSeal extends AbstractSealCard {
     public void realUse(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new SealPostCombatPower(1));
     }
-
 
 
     @Override

@@ -28,8 +28,7 @@ public class Tricksy extends AbstractGremlinCard {
     private static final int MAGIC = 4;
     private static final int UPGRADE_BONUS = 2;
 
-    public Tricksy()
-    {
+    public Tricksy() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseMagicNumber = MAGIC;
@@ -38,18 +37,15 @@ public class Tricksy extends AbstractGremlinCard {
         setBackgrounds();
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ScrapeAction(p, this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4f));
         AbstractDungeon.actionManager.addToBottom(new TricksyFollowUpAction());
         AbstractDungeon.actionManager.addToBottom(new GremlinSwapAction(new SneakyGremlin(0)));
     }
 
-    public void upgrade()
-    {
-        if (!this.upgraded)
-        {
+    public void upgrade() {
+        if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_BONUS);
         }

@@ -4,11 +4,10 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Boot;
-import slimebound.SlimeboundMod;
-import slimebound.characters.SlimeboundCharacter;
 
 public class CBR_Boot extends AbstractCharbossRelic {
     public static final String ID = "Boot";
+
     public CBR_Boot() {
         super(new Boot());
     }

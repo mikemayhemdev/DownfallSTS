@@ -1,16 +1,9 @@
 package theHexaghost.events;
 
-import automaton.cardmods.EncodeMod;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.blue.Defend_Blue;
-import com.megacrit.cardcrawl.cards.blue.Strike_Blue;
-import com.megacrit.cardcrawl.cards.green.Defend_Green;
-import com.megacrit.cardcrawl.cards.green.Strike_Green;
-import com.megacrit.cardcrawl.cards.red.Defend_Red;
-import com.megacrit.cardcrawl.cards.red.Strike_Red;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -19,12 +12,9 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import downfall.cardmods.EtherealMod;
-import sneckomod.cards.Defend;
-import sneckomod.cards.Strike;
 import theHexaghost.HexaMod;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class BackToBasicsHexaghost extends AbstractImageEvent {
@@ -54,8 +44,8 @@ public class BackToBasicsHexaghost extends AbstractImageEvent {
     }
 
     private BackToBasicsHexaghost.CUR_SCREEN screen;
-    private List<String> cardsUpgraded;
-    private ArrayList<AbstractCard> cardsToRemove;
+    private final List<String> cardsUpgraded;
+    private final ArrayList<AbstractCard> cardsToRemove;
 
     public BackToBasicsHexaghost() {
         super(NAME, DIALOG_1, "images/events/backToBasics.jpg");
@@ -117,7 +107,7 @@ public class BackToBasicsHexaghost extends AbstractImageEvent {
             case INTRO:
                 if (buttonPressed == 0) {
 
-                    for (AbstractCard c : cardsToRemove){
+                    for (AbstractCard c : cardsToRemove) {
                         CardModifierManager.addModifier(c, new EtherealMod());
                         cardsUpgraded.add(c.cardID);
                     }
@@ -150,8 +140,8 @@ public class BackToBasicsHexaghost extends AbstractImageEvent {
     }
 
     private void upgradeStrikeAndDefends() {
-        for (AbstractCard c: AbstractDungeon.player.masterDeck.group){
-            if (c.canUpgrade() && (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) ) {
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if (c.canUpgrade() && (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.hasTag(AbstractCard.CardTags.STARTER_STRIKE))) {
                 c.upgrade();
                 this.cardsUpgraded.add(c.cardID);
                 AbstractDungeon.player.bottledCardUpgradeCheck(c);

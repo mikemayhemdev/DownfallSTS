@@ -27,8 +27,7 @@ public class IrksomeBlow extends AbstractGremlinCard implements StrengthAffected
     private static final int UPGRADE_BONUS = 2;
     private static final int MAGIC = 4;
 
-    public IrksomeBlow()
-    {
+    public IrksomeBlow() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
 
         this.baseDamage = POWER;
@@ -46,8 +45,7 @@ public class IrksomeBlow extends AbstractGremlinCard implements StrengthAffected
 
     @Override
     public void upgrade() {
-        if (!this.upgraded)
-        {
+        if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_BONUS);
         }

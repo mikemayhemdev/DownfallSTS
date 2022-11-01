@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.cards.curses.Bewildered;
 
@@ -34,8 +35,8 @@ public class Serpent_Snecko extends AbstractImageEvent {
     }
 
     private CUR_SCREEN screen;
-    private int goldReward;
-    private AbstractCard curse;
+    private final int goldReward;
+    private final AbstractCard curse;
 
     public Serpent_Snecko() {
         super(NAME, DIALOG_1, "images/events/liarsGame.jpg");
@@ -59,28 +60,26 @@ public class Serpent_Snecko extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch (this.screen) {
-            case INTRO:
-                if (buttonPressed == 0) {
-                    this.imageEventText.updateBodyText(AGREE_DIALOG);
-                    this.imageEventText.removeDialogOption(1);
-                    this.imageEventText.updateDialogOption(0, OPTIONS[2]);
-                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+        if (this.screen == CUR_SCREEN.INTRO) {
+            if (buttonPressed == 0) {
+                this.imageEventText.updateBodyText(AGREE_DIALOG);
+                this.imageEventText.removeDialogOption(1);
+                this.imageEventText.updateDialogOption(0, OPTIONS[2]);
+                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
 
-                    com.megacrit.cardcrawl.relics.AbstractRelic r = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());
-                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2, Settings.HEIGHT / 2, r);
-                    logMetricObtainCardAndRelic(ID, "Agree", curse, r);
-                    this.screen = CUR_SCREEN.AGREE;
-                } else {
-                    this.imageEventText.updateBodyText(DISAGREE_DIALOG);
-                    this.imageEventText.removeDialogOption(1);
-                    this.imageEventText.updateDialogOption(0, OPTIONS[2]);
-                    this.screen = CUR_SCREEN.DISAGREE;
-                    logMetricIgnored(ID);
-                }
-                break;
-            default:
-                this.openMap();
+                AbstractRelic r = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2, Settings.HEIGHT / 2, r);
+                logMetricObtainCardAndRelic(ID, "Agree", curse, r);
+                this.screen = CUR_SCREEN.AGREE;
+            } else {
+                this.imageEventText.updateBodyText(DISAGREE_DIALOG);
+                this.imageEventText.removeDialogOption(1);
+                this.imageEventText.updateDialogOption(0, OPTIONS[2]);
+                this.screen = CUR_SCREEN.DISAGREE;
+                logMetricIgnored(ID);
+            }
+        } else {
+            this.openMap();
         }
 
     }

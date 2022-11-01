@@ -4,14 +4,12 @@ import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.*;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.colorless.HandOfGreed;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
+import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 import com.megacrit.cardcrawl.ui.panels.TopPanel;
@@ -74,7 +72,7 @@ public class GoldToSoulPatches {
 
     public static void postLoadLocalizationStrings() {
         try {
-            Map<String, CardStrings> cardStrings = (Map<String, CardStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "cards");
+            Map<String, CardStrings> cardStrings = ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "cards");
             if (cardStrings != null) {
                 CardStrings replacementString;
                 for (Map.Entry<String, CardStrings> cardString : cardStrings.entrySet()) {
@@ -108,7 +106,7 @@ public class GoldToSoulPatches {
                 System.out.println("CurDesc: " + cardStrings.get(e.getKey()).DESCRIPTION);
             }*/
 
-            Map<String, EventStrings> eventStrings = (Map<String, EventStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "events");
+            Map<String, EventStrings> eventStrings = ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "events");
             if (eventStrings != null) {
                 EventStrings replacementString;
                 for (Map.Entry<String, EventStrings> eventString : eventStrings.entrySet()) {
@@ -130,7 +128,7 @@ public class GoldToSoulPatches {
                 }
             }
 
-            Map<String, RelicStrings> relicStrings = (Map<String, RelicStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "relics");
+            Map<String, RelicStrings> relicStrings = ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "relics");
             if (relicStrings != null) {
                 RelicStrings replacementString;
                 for (Map.Entry<String, RelicStrings> relicString : relicStrings.entrySet()) {
@@ -148,7 +146,7 @@ public class GoldToSoulPatches {
                 }
             }
 
-            Map<String, CharacterStrings> characterStrings = (Map<String, CharacterStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "characters");
+            Map<String, CharacterStrings> characterStrings = ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "characters");
             if (characterStrings != null) {
                 CharacterStrings replacementString;
                 for (Map.Entry<String, CharacterStrings> characterString : characterStrings.entrySet()) {
@@ -175,7 +173,7 @@ public class GoldToSoulPatches {
                 }
             }
 
-            Map<String, PowerStrings> powerStrings = (Map<String, PowerStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "powers");
+            Map<String, PowerStrings> powerStrings = ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "powers");
             if (powerStrings != null) {
                 PowerStrings replacementString;
                 for (Map.Entry<String, PowerStrings> powerString : powerStrings.entrySet()) {
@@ -192,7 +190,7 @@ public class GoldToSoulPatches {
                 }
             }
 
-            Map<String, UIStrings> uiStrings = (Map<String, UIStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "ui");
+            Map<String, UIStrings> uiStrings = ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "ui");
             if (uiStrings != null) {
                 UIStrings replacementString;
                 for (Map.Entry<String, UIStrings> uiString : uiStrings.entrySet()) {
@@ -216,37 +214,37 @@ public class GoldToSoulPatches {
 
     private static void replaceStrings(boolean toSouls) {
         int tmp = toSouls ? 1 : 0;
-        Map<String, CardStrings> cardStrings = (Map<String, CardStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "cards");
+        Map<String, CardStrings> cardStrings = ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "cards");
         for (Map.Entry<String, CardStrings[]> val : renameC.entrySet()) {
             cardStrings.put(val.getKey(), val.getValue()[tmp]);
         }
         ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "cards", cardStrings);
 
-        Map<String, EventStrings> eventStrings = (Map<String, EventStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "events");
+        Map<String, EventStrings> eventStrings = ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "events");
         for (Map.Entry<String, EventStrings[]> val : renameE.entrySet()) {
             eventStrings.put(val.getKey(), val.getValue()[tmp]);
         }
         ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "events", eventStrings);
 
-        Map<String, RelicStrings> relicStrings = (Map<String, RelicStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "relics");
+        Map<String, RelicStrings> relicStrings = ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "relics");
         for (Map.Entry<String, RelicStrings[]> val : renameR.entrySet()) {
             relicStrings.put(val.getKey(), val.getValue()[tmp]);
         }
         ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "relics", relicStrings);
 
-        Map<String, CharacterStrings> characterStrings = (Map<String, CharacterStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "characters");
+        Map<String, CharacterStrings> characterStrings = ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "characters");
         for (Map.Entry<String, CharacterStrings[]> val : renameCh.entrySet()) {
             characterStrings.put(val.getKey(), val.getValue()[tmp]);
         }
         ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "characters", characterStrings);
 
-        Map<String, PowerStrings> powerStrings = (Map<String, PowerStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "powers");
+        Map<String, PowerStrings> powerStrings = ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "powers");
         for (Map.Entry<String, PowerStrings[]> val : renameP.entrySet()) {
             powerStrings.put(val.getKey(), val.getValue()[tmp]);
         }
         ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "powers", powerStrings);
 
-        Map<String, UIStrings> uiStrings = (Map<String, UIStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "ui");
+        Map<String, UIStrings> uiStrings = ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "ui");
         for (Map.Entry<String, UIStrings[]> val : renameUI.entrySet()) {
             uiStrings.put(val.getKey(), val.getValue()[tmp]);
         }
@@ -254,10 +252,8 @@ public class GoldToSoulPatches {
 
         //If changed once, will stop working
         String[] hack = CardCrawlGame.languagePack.getUIString("CharacterOption").TEXT;
-        for (int i = 0; i < CharacterOption.TEXT.length; i++) {
-            //System.out.println(CharacterOption.TEXT[i] + " " + hack[i]);
-            CharacterOption.TEXT[i] = hack[i];
-        }
+        //System.out.println(CharacterOption.TEXT[i] + " " + hack[i]);
+        System.arraycopy(hack, 0, CharacterOption.TEXT, 0, CharacterOption.TEXT.length);
 
 
     }
@@ -283,10 +279,10 @@ public class GoldToSoulPatches {
 
     private static String filterString(String spireString) {
         String replacementString = spireString;
-        
+
         //This is still getting an exception sometimes on the "replacementString = replaceAll" line so that leaves one possibility.
-       if (replacementString == null)
-           return "";
+        if (replacementString == null)
+            return "";
 
         for (ReplaceData data : downfallMod.wordReplacements) {
             for (String phrase : data.KEYS) {
@@ -305,8 +301,8 @@ public class GoldToSoulPatches {
 
     public static void UpdateMerchantTip() {
         MerchantTip.body = uiStrings.TEXT[3] + ": " + (FleeingMerchant.DEAD ? uiStrings.TEXT[4] : FleeingMerchant.CURRENT_HP + "/" + FleeingMerchant.START_HP)
-        + " NL " + uiStrings.TEXT[5] + ": " + FleeingMerchant.CURRENT_STRENGTH
-        + " NL " + uiStrings.TEXT[6] + ": " + FleeingMerchant.CURRENT_SOULS;
+                + " NL " + uiStrings.TEXT[5] + ": " + FleeingMerchant.CURRENT_STRENGTH
+                + " NL " + uiStrings.TEXT[6] + ": " + FleeingMerchant.CURRENT_SOULS;
     }
 
     @SpirePatch(clz = TopPanel.class, method = "renderGold")
@@ -338,9 +334,9 @@ public class GoldToSoulPatches {
         public static void Prefix(TopPanel __instance) {
             if (__instance.goldHb.hovered && EvilModeCharacterSelect.evilMode)
                 TipHelper.queuePowerTips(
-                    InputHelper.mX - (float)ReflectionHacks.getPrivateStatic(TopPanel.class, "TIP_OFF_X"),
-                    ReflectionHacks.getPrivateStatic(TopPanel.class, "TIP_Y"),
-                    new ArrayList<PowerTip>(Arrays.asList(SoulsTip, MerchantTip))
+                        InputHelper.mX - (float) ReflectionHacks.getPrivateStatic(TopPanel.class, "TIP_OFF_X"),
+                        ReflectionHacks.getPrivateStatic(TopPanel.class, "TIP_Y"),
+                        new ArrayList<PowerTip>(Arrays.asList(SoulsTip, MerchantTip))
                 );
         }
     }

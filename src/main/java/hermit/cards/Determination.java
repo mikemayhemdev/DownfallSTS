@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.powers.DeterminationPower;
-import hermit.powers.EternalPower;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;
@@ -53,13 +52,12 @@ public class Determination extends AbstractDynamicCard {
     }
 
 
-
     //Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.isInnate=true;
+            this.isInnate = true;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

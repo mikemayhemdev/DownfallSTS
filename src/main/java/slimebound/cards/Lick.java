@@ -1,7 +1,6 @@
 package slimebound.cards;
 
 
-import champ.ChampMod;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -12,15 +11,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import slimebound.SlimeboundMod;
-import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.SlimedPower;
 import slimebound.vfx.LickEffect;
 import slimebound.vfx.SlimeDripsEffect;
-import sneckomod.SneckoMod;
 
-import static automaton.AutomatonMod.makeBetaCardPath;
 import static com.badlogic.gdx.graphics.Color.GREEN;
 
 

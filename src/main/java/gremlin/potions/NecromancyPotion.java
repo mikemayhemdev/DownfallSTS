@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import downfall.downfallMod;
 import gremlin.actions.NecromancyAction;
 import gremlin.characters.GremlinCharacter;
 import gremlin.orbs.GremlinStandby;
@@ -31,8 +32,8 @@ public class NecromancyPotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
-        float percent = (float)this.potency / 100.0F;
-        int healAmt = (int)((float)AbstractDungeon.player.maxHealth * percent);
+        float percent = (float) this.potency / 100.0F;
+        int healAmt = (int) ((float) AbstractDungeon.player.maxHealth * percent);
         if (healAmt < 1) {
             healAmt = 1;
         }
@@ -42,7 +43,7 @@ public class NecromancyPotion extends CustomPotion {
 
     public boolean canUse() {
         if (super.canUse()) {
-            if (AbstractDungeon.player instanceof GremlinCharacter) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
                 return deadGrem();
             }
             return false;
@@ -59,18 +60,18 @@ public class NecromancyPotion extends CustomPotion {
         return 50;
     }
 
-    private boolean deadGrem(){
+    private boolean deadGrem() {
         int count = 0;
-        for(AbstractOrb orb : AbstractDungeon.player.orbs){
-            if(orb instanceof GremlinStandby){
+        for (AbstractOrb orb : AbstractDungeon.player.orbs) {
+            if (orb instanceof GremlinStandby) {
                 count++;
             }
         }
         int total = 4;
-        if(AbstractDungeon.player instanceof GremlinCharacter){
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
             total -= ((GremlinCharacter) AbstractDungeon.player).mobState.numEnslaved();
         }
-        return (count!=total);
+        return (count != total);
     }
 }
 

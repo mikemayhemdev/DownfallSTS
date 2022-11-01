@@ -16,7 +16,7 @@ public class StasisEnginePower extends AbstractGuardianTwoAmountPower {
 
     public static String[] DESCRIPTIONS;
 
-    private boolean usedThisTurn  = false;
+    private boolean usedThisTurn = false;
 
     public StasisEnginePower(AbstractCreature owner) {
 

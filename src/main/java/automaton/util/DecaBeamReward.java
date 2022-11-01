@@ -1,10 +1,8 @@
 package automaton.util;
 
 import automaton.AutomatonMod;
-import automaton.cards.DazingPulse;
 import automaton.cards.DecaBeam;
 import basemod.abstracts.CustomReward;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.patches.RewardItemTypeEnumPatch;

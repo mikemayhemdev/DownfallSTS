@@ -29,7 +29,7 @@ public class GoldenIdol_Evil extends AbstractImageEvent {
     }
 
     private CurScreen screen;
-    private int gold = 100;
+    private final int gold = 100;
     private AbstractCard strike = null;
 
     public GoldenIdol_Evil() {
@@ -74,47 +74,45 @@ public class GoldenIdol_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch (this.screen) {
-            case INTRO:
-                switch (buttonPressed) {
-                    case 0:
-                        if (!trapAlreadySet) {
-                            this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
-                            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(this.strike, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
-                            AbstractDungeon.player.masterDeck.removeCard(strike);
-                            logMetricCardRemoval(ID, "Set Trap", strike);
+        if (this.screen == CurScreen.INTRO) {
+            switch (buttonPressed) {
+                case 0:
+                    if (!trapAlreadySet) {
+                        this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
+                        AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(this.strike, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
+                        AbstractDungeon.player.masterDeck.removeCard(strike);
+                        logMetricCardRemoval(ID, "Set Trap", strike);
 
-                            trapAlreadySet = true;
-                        } else {
-                            this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
-                            AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold));
-                            AbstractDungeon.player.gainGold(this.gold);
-                            logMetricGainGold(ID, "Harvest", gold);
-                            trapAlreadySet = false;
-                        }
+                        trapAlreadySet = true;
+                    } else {
+                        this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
+                        AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold));
+                        AbstractDungeon.player.gainGold(this.gold);
+                        logMetricGainGold(ID, "Harvest", gold);
+                        trapAlreadySet = false;
+                    }
 
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[3]);
-                        this.screen = CurScreen.RESULT;
-                        return;
-                    case 1:
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.setDialogOption(OPTIONS[3]);
+                    this.screen = CurScreen.RESULT;
+                    return;
+                case 1:
 
-                        if (!trapAlreadySet) {
-                            this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
-                        } else {
-                            this.imageEventText.updateBodyText(DESCRIPTIONS[5]);
-                        }
+                    if (!trapAlreadySet) {
+                        this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
+                    } else {
+                        this.imageEventText.updateBodyText(DESCRIPTIONS[5]);
+                    }
 
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[3]);
-                        this.screen = CurScreen.RESULT;
-                        logMetricIgnored(ID);
-                        return;
-                    default:
-                        return;
-                }
-            default:
-                this.openMap();
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.setDialogOption(OPTIONS[3]);
+                    this.screen = CurScreen.RESULT;
+                    logMetricIgnored(ID);
+                    return;
+                default:
+            }
+        } else {
+            this.openMap();
         }
     }
 

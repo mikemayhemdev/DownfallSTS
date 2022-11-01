@@ -3,14 +3,11 @@ package charbosses.bosses.Silent.NewAge;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Silent.ArchetypeBaseSilent;
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.colorless.EnShiv;
 import charbosses.cards.green.*;
-import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
 import charbosses.powers.bossmechanicpowers.SilentShivTimeEaterPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.green.Dash;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
@@ -23,7 +20,7 @@ public class ArchetypeAct3ShivsNewAge extends ArchetypeBaseSilent {
 
         maxHPModifier += 350;
         actNum = 3;
-        bossMechanicName =SilentShivTimeEaterPower.NAME;
+        bossMechanicName = SilentShivTimeEaterPower.NAME;
         bossMechanicDesc = SilentShivTimeEaterPower.DESC[0];
     }
 

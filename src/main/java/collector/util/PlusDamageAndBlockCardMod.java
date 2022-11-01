@@ -7,20 +7,22 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class PlusDamageAndBlockCardMod extends AbstractCardModifier {
     int bonus;
+
     @Override
     public AbstractCardModifier makeCopy() {
         return new PlusDamageAndBlockCardMod(bonus);
     }
 
-    public PlusDamageAndBlockCardMod(int amount){
+    public PlusDamageAndBlockCardMod(int amount) {
         bonus = amount;
     }
 
 
     public float modifyDamage(float damage, DamageInfo.DamageType type, AbstractCard card, AbstractMonster target) {
-        return damage+bonus;
+        return damage + bonus;
     }
+
     public float modifyBlock(float block, AbstractCard card) {
-        return block+bonus;
+        return block + bonus;
     }
 }

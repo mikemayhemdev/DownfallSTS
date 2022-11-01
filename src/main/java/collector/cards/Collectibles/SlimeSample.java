@@ -11,7 +11,7 @@ public class SlimeSample extends AbstractCollectibleCard {
 
     public SlimeSample() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        magicNumber =  baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 1;
         this.exhaust = true;
         cardsToPreview = new Slimed();
     }

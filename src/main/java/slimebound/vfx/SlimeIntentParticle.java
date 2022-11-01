@@ -14,10 +14,10 @@ public class SlimeIntentParticle extends com.megacrit.cardcrawl.vfx.AbstractGame
     private static int W;
     public AbstractOrb o;
     private float scale = 0.01F;
-    private Texture img;
-    private float x;
-    private float ox;
-    private float y;
+    private final Texture img;
+    private final float x;
+    private final float ox;
+    private final float y;
 
     public SlimeIntentParticle(Texture img, AbstractOrb o) {
         this.duration = 0.25F;

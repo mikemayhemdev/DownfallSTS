@@ -55,7 +55,7 @@ public abstract class AbstractSkin {
     public void loadAnimation() {
         portraitAtlas = new TextureAtlas(Gdx.files.internal(portraitAtlasPath + ".atlas"));
         SkeletonJson json = new SkeletonJson(portraitAtlas);
-        json.setScale(Settings.scale / 1.0F);
+        json.setScale(Settings.scale);
         portraitData = json.readSkeletonData(Gdx.files.internal(portraitAtlasPath + ".json"));
 
         portraitSkeleton = new Skeleton(portraitData);

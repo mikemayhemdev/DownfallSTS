@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.city.Nest;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import downfall.downfallMod;
 import gremlin.characters.GremlinCharacter;
 
 public class NestPatch {
@@ -20,27 +21,25 @@ public class NestPatch {
     private static final int DMG = 2;
 
     @SpirePatch(clz = Nest.class, method = "buttonEffect")
-    public static class NestOptionDamage
-    {
+    public static class NestOptionDamage {
         @SpireInsertPatch(
-                rloc=6
+                rloc = 6
         )
-        public static void Insert(Nest __instance, int buttonPressed){
-            if (AbstractDungeon.player instanceof GremlinCharacter) {
-                __instance.imageEventText.updateDialogOption(1,strings.OPTIONS[0] + DMG + Nest.OPTIONS[1], new RitualDagger());
+        public static void Insert(Nest __instance, int buttonPressed) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
+                __instance.imageEventText.updateDialogOption(1, strings.OPTIONS[0] + DMG + Nest.OPTIONS[1], new RitualDagger());
             }
         }
     }
 
     @SpirePatch(clz = Nest.class, method = "buttonEffect")
-    public static class NestDamage
-    {
+    public static class NestDamage {
         @SpireInsertPatch(
-                rloc=25,
-                localvars={"c"}
+                rloc = 25,
+                localvars = {"c"}
         )
-        public static SpireReturn Insert(Nest __instance, int buttonPressed, AbstractCard c){
-            if (AbstractDungeon.player instanceof GremlinCharacter) {
+        public static SpireReturn Insert(Nest __instance, int buttonPressed, AbstractCard c) {
+            if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
                 AbstractDungeon.player.damage(new DamageInfo(null, DMG));
                 ((GremlinCharacter) AbstractDungeon.player).damageGremlins(DMG);
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, Settings.WIDTH * 0.3F, Settings.HEIGHT / 2.0F));

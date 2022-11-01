@@ -15,8 +15,8 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import guardian.GuardianMod;
 import downfall.cards.curses.Aged;
+import guardian.GuardianMod;
 import guardian.ui.RelicPreviewButton;
 
 import java.util.Collections;

@@ -24,7 +24,7 @@ public class ShieldSlam extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-            atb(new DrawCardAction(magicNumber));
+        atb(new DrawCardAction(magicNumber));
 
         finisher();
     }

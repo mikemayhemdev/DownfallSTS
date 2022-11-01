@@ -10,18 +10,10 @@ import automaton.util.ProtoDonu;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
-import com.megacrit.cardcrawl.monsters.beyond.Deca;
-import com.megacrit.cardcrawl.monsters.beyond.Donu;
-import com.megacrit.cardcrawl.monsters.beyond.Spiker;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.relics.ChampionsBelt;
-import com.megacrit.cardcrawl.relics.CloakClasp;
-import com.megacrit.cardcrawl.relics.WristBlade;
-import slimebound.SlimeboundMod;
 
 public class AncientFactory extends AbstractImageEvent {
     public static final String ID = "bronze:AncientFactory";
@@ -53,76 +45,73 @@ public class AncientFactory extends AbstractImageEvent {
     protected void buttonEffect(int buttonPressed) {
         AbstractMonster m = null;
 
-        switch (this.screen) {
-            case INTRO:
-                switch (buttonPressed) {
-                    case 0:
-                        logMetric(ID, "Fought Donu");
-                        this.screen = CurScreen.FIGHT;
-                        //SlimeboundMod.logger.info("fight");
-                        m = new ProtoDonu();
-                        m.maxHealth = m.maxHealth / 2;
-                        m.currentHealth = m.maxHealth;
-                        m.powers.add(new StrengthPower(m,-3));
-                        AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
-                        AbstractDungeon.getCurrRoom().rewards.clear();
-                        AbstractDungeon.getCurrRoom().rewards.add(new DonuBeamReward());
-                        AbstractDungeon.getCurrRoom().addGoldToRewards(100);
-                        AbstractDungeon.getCurrRoom().eliteTrigger = true;
-                        this.imageEventText.clearAllDialogs();
-                        this.enterCombatFromImage();
+        if (this.screen == CurScreen.INTRO) {
+            switch (buttonPressed) {
+                case 0:
+                    logMetric(ID, "Fought Donu");
+                    this.screen = CurScreen.FIGHT;
+                    //SlimeboundMod.logger.info("fight");
+                    m = new ProtoDonu();
+                    m.maxHealth = m.maxHealth / 2;
+                    m.currentHealth = m.maxHealth;
+                    m.powers.add(new StrengthPower(m, -3));
+                    AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
+                    AbstractDungeon.getCurrRoom().rewards.clear();
+                    AbstractDungeon.getCurrRoom().rewards.add(new DonuBeamReward());
+                    AbstractDungeon.getCurrRoom().addGoldToRewards(100);
+                    AbstractDungeon.getCurrRoom().eliteTrigger = true;
+                    this.imageEventText.clearAllDialogs();
+                    this.enterCombatFromImage();
 
-                        return;
-                    case 1:
-                        logMetric(ID, "Fought Deca");
-                        this.screen = CurScreen.FIGHT;
-                        //SlimeboundMod.logger.info("fight");
-                        m = new ProtoDeca();
-                        m.maxHealth = m.maxHealth / 2;
-                        m.currentHealth = m.maxHealth;
-                        m.powers.add(new StrengthPower(m,-3));
-                        AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
-                        AbstractDungeon.getCurrRoom().rewards.clear();
-                        AbstractDungeon.getCurrRoom().rewards.add(new DecaBeamReward());
-                        AbstractDungeon.getCurrRoom().addGoldToRewards(100);
-                        AbstractDungeon.getCurrRoom().eliteTrigger = true;
-                        this.imageEventText.clearAllDialogs();
-                        this.enterCombatFromImage();
-                        return;
-                    case 2:
-                        logMetric(ID, "Fought Donu and Deca");
-                        this.screen = CurScreen.FIGHT;
-                        //SlimeboundMod.logger.info("fight");
-                        m = new ProtoDonu();
-                        m.maxHealth = m.maxHealth / 2;
-                        m.currentHealth = m.maxHealth;
-                        m.powers.add(new StrengthPower(m,-3));
-                        AbstractMonster m2 = new ProtoDeca();
-                        m2.maxHealth = m2.maxHealth / 2;
-                        m2.currentHealth = m2.maxHealth;
-                        m2.powers.add(new StrengthPower(m2,-3));
-                        AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new AbstractMonster[] { m2, m });
-                        AbstractDungeon.getCurrRoom().rewards.clear();
-                        AbstractDungeon.getCurrRoom().rewards.add(new DonuBeamReward());
-                        AbstractDungeon.getCurrRoom().rewards.add(new DecaBeamReward());
-                        AbstractDungeon.getCurrRoom().addGoldToRewards(100);
-                        AbstractDungeon.getCurrRoom().eliteTrigger = true;
-                        this.imageEventText.clearAllDialogs();
-                        this.enterCombatFromImage();
-                        return;
-                    case 3:
-                        this.screen = CurScreen.RESULT;
-                        this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
-                        this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[3]);
-                        logMetricIgnored(ID);
-                        return;
-                    default:
-                        return;
-                }
-
-            default:
-                this.openMap();
+                    return;
+                case 1:
+                    logMetric(ID, "Fought Deca");
+                    this.screen = CurScreen.FIGHT;
+                    //SlimeboundMod.logger.info("fight");
+                    m = new ProtoDeca();
+                    m.maxHealth = m.maxHealth / 2;
+                    m.currentHealth = m.maxHealth;
+                    m.powers.add(new StrengthPower(m, -3));
+                    AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
+                    AbstractDungeon.getCurrRoom().rewards.clear();
+                    AbstractDungeon.getCurrRoom().rewards.add(new DecaBeamReward());
+                    AbstractDungeon.getCurrRoom().addGoldToRewards(100);
+                    AbstractDungeon.getCurrRoom().eliteTrigger = true;
+                    this.imageEventText.clearAllDialogs();
+                    this.enterCombatFromImage();
+                    return;
+                case 2:
+                    logMetric(ID, "Fought Donu and Deca");
+                    this.screen = CurScreen.FIGHT;
+                    //SlimeboundMod.logger.info("fight");
+                    m = new ProtoDonu();
+                    m.maxHealth = m.maxHealth / 2;
+                    m.currentHealth = m.maxHealth;
+                    m.powers.add(new StrengthPower(m, -3));
+                    AbstractMonster m2 = new ProtoDeca();
+                    m2.maxHealth = m2.maxHealth / 2;
+                    m2.currentHealth = m2.maxHealth;
+                    m2.powers.add(new StrengthPower(m2, -3));
+                    AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new AbstractMonster[]{m2, m});
+                    AbstractDungeon.getCurrRoom().rewards.clear();
+                    AbstractDungeon.getCurrRoom().rewards.add(new DonuBeamReward());
+                    AbstractDungeon.getCurrRoom().rewards.add(new DecaBeamReward());
+                    AbstractDungeon.getCurrRoom().addGoldToRewards(100);
+                    AbstractDungeon.getCurrRoom().eliteTrigger = true;
+                    this.imageEventText.clearAllDialogs();
+                    this.enterCombatFromImage();
+                    return;
+                case 3:
+                    this.screen = CurScreen.RESULT;
+                    this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.setDialogOption(OPTIONS[3]);
+                    logMetricIgnored(ID);
+                    return;
+                default:
+            }
+        } else {
+            this.openMap();
         }
 
     }

@@ -53,21 +53,21 @@ public class TheHexaghost extends CustomPlayer {
     private static float oscillatingTimer = 0.0f;
     private static float oscillatingFader = 0.0f;
     public MyBody myBody;
-    private BobEffect effect = new BobEffect(0.75F);
+    private final BobEffect effect = new BobEffect(0.75F);
 
     public float renderscale = 1.0F;
     public float renderscale2 = 1.0F;
 
     public static AbstractGhostflame startingFlame;
 
-    private String atlasURL = "reskinContent/img/HexaghostMod/Hexago/animation/Hexaghost_original.atlas";
-    private String jsonURL = "reskinContent/img/HexaghostMod/Hexago/animation/Hexaghost_original.json";
+    private final String atlasURL = "reskinContent/img/HexaghostMod/Hexago/animation/Hexaghost_original.atlas";
+    private final String jsonURL = "reskinContent/img/HexaghostMod/Hexago/animation/Hexaghost_original.json";
 
-    private String atlasURL2 = "reskinContent/img/HexaghostMod/Hexago/animation/Hexaghost_self_downfall.atlas";
-    private String jsonURL2 = "reskinContent/img/HexaghostMod/Hexago/animation/Hexaghost_self_downfall.json";
+    private final String atlasURL2 = "reskinContent/img/HexaghostMod/Hexago/animation/Hexaghost_self_downfall.atlas";
+    private final String jsonURL2 = "reskinContent/img/HexaghostMod/Hexago/animation/Hexaghost_self_downfall.json";
 
     public TheHexaghost(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "hexamodResources/images/char/mainChar/orb/vfx.png", (String) null, (String) null);
+        super(name, setClass, orbTextures, "hexamodResources/images/char/mainChar/orb/vfx.png", null, (String) null);
 
         initializeClass(null,
                 CharacterSelectScreenPatches.characters[2].skins[CharacterSelectScreenPatches.characters[2].reskinCount].getSHOULDER1(),
