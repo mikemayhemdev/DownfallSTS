@@ -26,6 +26,7 @@ public class FullyLoaded extends AbstractDynamicCard {
      */
 
 
+    
     // TEXT DECLARATION
 
     public static final String ID = HermitMod.makeID(FullyLoaded.class.getSimpleName());
