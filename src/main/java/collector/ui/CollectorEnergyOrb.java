@@ -1,4 +1,4 @@
-package collector.UI;
+package collector.ui;
 
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.animations.SpineAnimation;

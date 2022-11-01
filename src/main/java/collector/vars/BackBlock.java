@@ -1,19 +1,19 @@
-package collector.Vars;
+package collector.vars;
 
 import basemod.abstracts.DynamicVariable;
 import collector.cards.CollectorCards.AbstractCollectorCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
-public class DuoMagic extends DynamicVariable {
+public class BackBlock extends DynamicVariable {
     @Override
     public String key() {
-        return "collector:DUOM";
+        return "collector:RearBlock";
     }
 
     @Override
     public boolean isModified(AbstractCard card) {
         if (card instanceof AbstractCollectorCard) {
-            return ((AbstractCollectorCard) card).isDuoMagicModified;
+            return ((AbstractCollectorCard) card).isRearBlockModified;
         } else {
             return false;
         }
@@ -22,7 +22,7 @@ public class DuoMagic extends DynamicVariable {
     @Override
     public int value(AbstractCard card) {
         if (card instanceof AbstractCollectorCard) {
-            return ((AbstractCollectorCard) card).douMagic;
+            return ((AbstractCollectorCard) card).RearBlock;
         } else {
             return 0;
         }
@@ -31,7 +31,7 @@ public class DuoMagic extends DynamicVariable {
     @Override
     public int baseValue(AbstractCard card) {
         if (card instanceof AbstractCollectorCard) {
-            return ((AbstractCollectorCard) card).douBaseMagic;
+            return ((AbstractCollectorCard) card).RearBaseBlock;
         } else {
             return 0;
         }
@@ -40,7 +40,7 @@ public class DuoMagic extends DynamicVariable {
     @Override
     public boolean upgraded(AbstractCard card) {
         if (card instanceof AbstractCollectorCard) {
-            return ((AbstractCollectorCard) card).upgradedDuoMagic;
+            return ((AbstractCollectorCard) card).upgradedRearBlock;
         } else {
             return false;
         }

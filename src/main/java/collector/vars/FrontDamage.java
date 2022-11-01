@@ -1,19 +1,19 @@
-package collector.Vars;
+package collector.vars;
 
 import basemod.abstracts.DynamicVariable;
 import collector.cards.CollectorCards.AbstractCollectorCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
-public class BackBlock extends DynamicVariable {
+public class FrontDamage extends DynamicVariable {
     @Override
     public String key() {
-        return "collector:RearBlock";
+        return "collector:FrontDamage";
     }
 
     @Override
     public boolean isModified(AbstractCard card) {
         if (card instanceof AbstractCollectorCard) {
-            return ((AbstractCollectorCard) card).isRearBlockModified;
+            return ((AbstractCollectorCard) card).isFrontDamageModified;
         } else {
             return false;
         }
@@ -22,7 +22,7 @@ public class BackBlock extends DynamicVariable {
     @Override
     public int value(AbstractCard card) {
         if (card instanceof AbstractCollectorCard) {
-            return ((AbstractCollectorCard) card).RearBlock;
+            return ((AbstractCollectorCard) card).FrontDamage;
         } else {
             return 0;
         }
@@ -31,7 +31,7 @@ public class BackBlock extends DynamicVariable {
     @Override
     public int baseValue(AbstractCard card) {
         if (card instanceof AbstractCollectorCard) {
-            return ((AbstractCollectorCard) card).RearBaseBlock;
+            return ((AbstractCollectorCard) card).FrontBaseDamage;
         } else {
             return 0;
         }
@@ -40,7 +40,7 @@ public class BackBlock extends DynamicVariable {
     @Override
     public boolean upgraded(AbstractCard card) {
         if (card instanceof AbstractCollectorCard) {
-            return ((AbstractCollectorCard) card).upgradedRearBlock;
+            return ((AbstractCollectorCard) card).upgradedFrontDamage;
         } else {
             return false;
         }

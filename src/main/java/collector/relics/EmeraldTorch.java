@@ -1,15 +1,11 @@
-package collector.Relics;
+package collector.relics;
 
-import automaton.AutomatonMod;
 import basemod.abstracts.CustomRelic;
 import collector.CollectorChar;
 import collector.CollectorMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-
-import static collector.CollectorMod.makeRelicOutlinePath;
-import static collector.CollectorMod.makeRelicPath;
 
 public class EmeraldTorch extends CustomRelic {
     public static final String ID = CollectorMod.makeID("EmeraldTorch");

@@ -2,7 +2,7 @@ package collector;
 
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomPlayer;
-import collector.Relics.EmeraldTorch;
+import collector.relics.EmeraldTorch;
 import collector.actions.AddAggroAction;
 import collector.actions.ApplyAggroAction;
 import collector.cards.CollectorCards.AbstractCollectorCard;
