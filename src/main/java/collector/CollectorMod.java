@@ -39,6 +39,7 @@ import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.downfallMod;
 import downfall.util.CardIgnore;
 import javassist.CtClass;
 import javassist.Modifier;
@@ -104,7 +105,7 @@ public class CollectorMod implements
 
         modID = "collector";
 
-        BaseMod.addColor(CollectorChar.Enums.COLLECTOR, characterColor, characterColor, characterColor,
+        BaseMod.addColor(downfallMod.Enums.COLLECTOR, characterColor, characterColor, characterColor,
                 characterColor, characterColor, characterColor, characterColor,
                 ATTACK_S_ART, SKILL_S_ART, POWER_S_ART, CARD_ENERGY_S,
                 ATTACK_L_ART, SKILL_L_ART, POWER_L_ART,
@@ -198,12 +199,12 @@ public class CollectorMod implements
 
     @Override
     public void receiveEditCharacters() {
-        BaseMod.addCharacter(new CollectorChar("The Collector", CollectorChar.Enums.THE_COLLECTOR), CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, CollectorChar.Enums.THE_COLLECTOR);
+        BaseMod.addCharacter(new CollectorChar("The Collector", downfallMod.Enums.THE_COLLECTOR), CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, downfallMod.Enums.THE_COLLECTOR);
     }
 
     @Override
     public void receiveEditRelics() {
-        BaseMod.addRelicToCustomPool(new EmeraldTorch(),CollectorChar.Enums.COLLECTOR);
+        BaseMod.addRelicToCustomPool(new EmeraldTorch(),downfallMod.Enums.COLLECTOR);
     }
 
     public static void ApplyRandomAffliciton(AbstractCreature target, boolean upgraded) {

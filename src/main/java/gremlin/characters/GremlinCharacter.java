@@ -32,6 +32,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.rooms.MonsterRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.downfallMod;
 import gremlin.GremlinMod;
 import gremlin.actions.DisableEndTurnButtonAction;
 import gremlin.actions.ThinkAction;
@@ -98,7 +99,7 @@ public class GremlinCharacter extends CustomPlayer {
     private static String[] GREMUITEXT = CardCrawlGame.languagePack.getUIString("Gremlin:GremFight").TEXT;
 
     public GremlinCharacter(String name) {
-        super(name, GremlinEnum.GREMLIN, orbTextures,
+        super(name, downfallMod.Enums.GREMLIN, orbTextures,
                 "gremlinResources/images/char/orb/vfx.png", (String)null, null);
 
         this.drawX += 5.0F * Settings.scale;

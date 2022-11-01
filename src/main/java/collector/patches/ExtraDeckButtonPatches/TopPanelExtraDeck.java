@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.DiscardPileViewScreen;
+import downfall.downfallMod;
 
 public class TopPanelExtraDeck extends TopPanelItem {
 
@@ -33,7 +34,7 @@ public class TopPanelExtraDeck extends TopPanelItem {
 
     @Override
     public void render(SpriteBatch sb) {
-        if (AbstractDungeon.player.chosenClass == CollectorChar.Enums.THE_COLLECTOR && AbstractDungeon.floorNum > 1) {
+        if (AbstractDungeon.player.chosenClass == downfallMod.Enums.THE_COLLECTOR && AbstractDungeon.floorNum > 1) {
             super.render(sb);
             if (getHitbox().hovered) {
                 TipHelper.renderGenericTip(getHitbox().x, getHitbox().y, uiStrings.TEXT[0], uiStrings.TEXT[1]);

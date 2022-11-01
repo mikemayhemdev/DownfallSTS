@@ -5,33 +5,29 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
-import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import reskinContent.patches.CharacterSelectScreenPatches;
-import reskinContent.reskinContent;
 import sneckomod.cards.Defend;
 import sneckomod.cards.SnekBite;
 import sneckomod.cards.Strike;
 import sneckomod.cards.TailWhip;
-import sneckomod.cards.unknowns.*;
+import sneckomod.cards.unknowns.Unknown;
 import sneckomod.relics.SneckoSoul;
 
 import java.util.ArrayList;
 
-import static sneckomod.SneckoMod.*;
-import static sneckomod.TheSnecko.Enums.SNECKO_CYAN;
+import static downfall.downfallMod.Enums.SNECKO_CYAN;
+import static sneckomod.SneckoMod.makeID;
+import static sneckomod.SneckoMod.placeholderColor;
 
 
 public class TheSnecko extends CustomPlayer {
@@ -55,7 +51,7 @@ public class TheSnecko extends CustomPlayer {
     public float renderscale = 1.2F;
 
     public TheSnecko(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "sneckomodResources/images/char/orb/vfx.png", (String)null, (String)null);
+        super(name, setClass, orbTextures, "sneckomodResources/images/char/orb/vfx.png", (String) null, (String) null);
         initializeClass(null,
                 CharacterSelectScreenPatches.characters[3].skins[CharacterSelectScreenPatches.characters[3].reskinCount].SHOULDER1,
                 CharacterSelectScreenPatches.characters[3].skins[CharacterSelectScreenPatches.characters[3].reskinCount].SHOULDER2,
@@ -215,15 +211,5 @@ public class TheSnecko extends CustomPlayer {
     @Override
     public String getVampireText() {
         return TEXT[2];
-    }
-
-    public static class Enums {
-        @SpireEnum
-        public static PlayerClass THE_SNECKO;
-        @SpireEnum(name = "SNECKO_CYAN")
-        public static AbstractCard.CardColor SNECKO_CYAN;
-        @SpireEnum(name = "SNECKO_CYAN")
-        @SuppressWarnings("unused")
-        public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 }

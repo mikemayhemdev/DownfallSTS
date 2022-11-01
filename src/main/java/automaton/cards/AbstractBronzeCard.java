@@ -26,6 +26,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
@@ -55,7 +56,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
 
     public AbstractBronzeCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),
-                cost, "ERROR", type, AutomatonChar.Enums.BRONZE_AUTOMATON, rarity, target);
+                cost, "ERROR", type, downfallMod.Enums.BRONZE_AUTOMATON, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
         name = NAME = cardStrings.NAME;
         originalName = NAME;

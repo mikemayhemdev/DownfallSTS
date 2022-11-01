@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.downfallMod;
 import expansioncontent.expansionContentMod;
 import guardian.patches.GuardianEnum;
 import slimebound.patches.SlimeboundEnum;
@@ -71,15 +72,15 @@ public class RandomCardWithTagAction extends AbstractGameAction {
                     !c.getValue().hasTag(AbstractCard.CardTags.HEALING) &&
                     c.getValue().hasTag(tag)
                     && (!(c.getValue().hasTag(expansionContentMod.STUDY_SLIMEBOSS)
-                    && AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND))
+                    && AbstractDungeon.player.chosenClass == downfallMod.Enums.SLIMEBOUND))
                     && (!(c.getValue().hasTag(expansionContentMod.STUDY_GUARDIAN)
-                    && (AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN || guardianLocked())))
+                    && (AbstractDungeon.player.chosenClass == downfallMod.Enums.GUARDIAN || guardianLocked())))
                     && (!(c.getValue().hasTag(expansionContentMod.STUDY_HEXAGHOST)
-                    && (AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT || hexaLocked())))
+                    && (AbstractDungeon.player.chosenClass == downfallMod.Enums.THE_SPIRIT || hexaLocked())))
                     && (!(c.getValue().hasTag(expansionContentMod.STUDY_CHAMP)
-                    && (AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP || champLocked())))
+                    && (AbstractDungeon.player.chosenClass == downfallMod.Enums.THE_CHAMP || champLocked())))
                     && (!(c.getValue().hasTag(expansionContentMod.STUDY_AUTOMATON)
-                    && (AbstractDungeon.player.chosenClass == AutomatonChar.Enums.THE_AUTOMATON || autoLocked())))
+                    && (AbstractDungeon.player.chosenClass == downfallMod.Enums.THE_AUTOMATON || autoLocked())))
             ) {
                 tmp.add(c.getKey());
             }

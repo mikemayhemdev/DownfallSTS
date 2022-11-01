@@ -31,7 +31,6 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
 import downfall.patches.BanSharedContentPatch;
 import gremlin.cards.*;
-import gremlin.cards.SharpenBlades;
 import gremlin.characters.GremlinCharacter;
 import gremlin.events.BackToBasicsGremlin;
 import gremlin.events.GremlinTrenchcoat;
@@ -48,7 +47,6 @@ import gremlin.powers.AbstractGremlinPower;
 import gremlin.relics.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import slimebound.cards.AbstractSlimeboundCard;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -57,7 +55,6 @@ import java.util.Map;
 import static basemod.BaseMod.addRelic;
 import static basemod.BaseMod.addRelicToCustomPool;
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
-import static gremlin.patches.GremlinEnum.GREMLIN;
 
 
 @SpireInitializer
@@ -85,6 +82,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
     public static String getResourcePath(String resource) {
         return ASSETS_FOLDER + "/" + resource;
     }
+
     public static String getOutlineResourcePath(String resource) {
         return ASSETS_FOLDER + "/relics/" + resource;
     }
@@ -159,7 +157,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
         BaseMod.addCharacter(new GremlinCharacter("The Gremlins"),
                 getResourcePath(CHAR_BUTTON),
                 getResourcePath(CHAR_PORTRAIT),
-                GREMLIN);
+                downfallMod.Enums.GREMLIN);
     }
 
     @Override
@@ -307,43 +305,43 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
         logger.info("Loading GremlinMod Strings.");
         // CharacterStrings
         BaseMod.loadCustomStringsFile(CharacterStrings.class,
-                "gremlinResources/localization/" +language+"/CharacterStrings.json");
+                "gremlinResources/localization/" + language + "/CharacterStrings.json");
         // CardStrings
         BaseMod.loadCustomStringsFile(CardStrings.class,
-                "gremlinResources/localization/" +language+"/CardStrings.json");
+                "gremlinResources/localization/" + language + "/CardStrings.json");
 
         // PowerStrings
         BaseMod.loadCustomStringsFile(PowerStrings.class,
-                "gremlinResources/localization/" +language+"/PowerStrings.json");
+                "gremlinResources/localization/" + language + "/PowerStrings.json");
 
         // OrbStrings
         BaseMod.loadCustomStringsFile(OrbStrings.class,
-                "gremlinResources/localization/" +language+"/OrbStrings.json");
+                "gremlinResources/localization/" + language + "/OrbStrings.json");
 
         // RelicStrings
         BaseMod.loadCustomStringsFile(RelicStrings.class,
-                "gremlinResources/localization/" +language+"/RelicStrings.json");
+                "gremlinResources/localization/" + language + "/RelicStrings.json");
 
         // UIStrings
         BaseMod.loadCustomStringsFile(UIStrings.class,
-                "gremlinResources/localization/" +language+"/UIStrings.json");
+                "gremlinResources/localization/" + language + "/UIStrings.json");
 
         // EventStrings
         BaseMod.loadCustomStringsFile(EventStrings.class,
-                "gremlinResources/localization/" +language+"/EventStrings.json");
+                "gremlinResources/localization/" + language + "/EventStrings.json");
     }
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
-        if (AbstractDungeon.player instanceof GremlinCharacter){
-            ((GremlinCharacter)(AbstractDungeon.player)).startOfBattle();
+        if (AbstractDungeon.player instanceof GremlinCharacter) {
+            ((GremlinCharacter) (AbstractDungeon.player)).startOfBattle();
         }
     }
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
-        if (AbstractDungeon.player instanceof GremlinCharacter){
-            ((GremlinCharacter)(AbstractDungeon.player)).updateMobState();
+        if (AbstractDungeon.player instanceof GremlinCharacter) {
+            ((GremlinCharacter) (AbstractDungeon.player)).updateMobState();
         }
     }
 
@@ -352,7 +350,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
         return getGremlinOrb(gremlinName, hp);
     }
 
-    public static ArrayList<String> getGremlinStrings(){
+    public static ArrayList<String> getGremlinStrings() {
         ArrayList<String> grems = new ArrayList<>();
         grems.add("angry");
         grems.add("fat");
@@ -362,8 +360,8 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
         return grems;
     }
 
-    public static GremlinStandby getGremlinOrb(String gremlinName, int hp){
-        switch (gremlinName){
+    public static GremlinStandby getGremlinOrb(String gremlinName, int hp) {
+        switch (gremlinName) {
             case "angry":
                 return new MadGremlin(hp);
             case "fat":
@@ -378,48 +376,48 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
         return new MadGremlin(hp);
     }
 
-    public static void onSwap(){
-        for(AbstractPower p: AbstractDungeon.player.powers){
-            if(p instanceof AbstractGremlinPower){
+    public static void onSwap() {
+        for (AbstractPower p : AbstractDungeon.player.powers) {
+            if (p instanceof AbstractGremlinPower) {
                 ((AbstractGremlinPower) p).onGremlinSwap();
             }
         }
-        for(AbstractCard c: AbstractDungeon.player.hand.group){
-            if(c instanceof AbstractGremlinCard){
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
+            if (c instanceof AbstractGremlinCard) {
                 ((AbstractGremlinCard) c).onGremlinSwap();
             }
         }
-        for(AbstractCard c: AbstractDungeon.player.drawPile.group){
-            if(c instanceof AbstractGremlinCard){
-                ((AbstractGremlinCard) c).onGremlinSwapInDeck();
-            }
-        }
-        for(AbstractCard c: AbstractDungeon.player.discardPile.group) {
+        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
             if (c instanceof AbstractGremlinCard) {
                 ((AbstractGremlinCard) c).onGremlinSwapInDeck();
             }
         }
-        for(AbstractRelic relic: AbstractDungeon.player.relics){
-            if(relic instanceof AbstractGremlinRelic){
+        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
+            if (c instanceof AbstractGremlinCard) {
+                ((AbstractGremlinCard) c).onGremlinSwapInDeck();
+            }
+        }
+        for (AbstractRelic relic : AbstractDungeon.player.relics) {
+            if (relic instanceof AbstractGremlinRelic) {
                 ((AbstractGremlinRelic) relic).onGremlinSwap();
             }
         }
     }
 
-    public static void onGremlinDeath(){
-        for(AbstractRelic relic: AbstractDungeon.player.relics){
-            if(relic instanceof AbstractGremlinRelic){
+    public static void onGremlinDeath() {
+        for (AbstractRelic relic : AbstractDungeon.player.relics) {
+            if (relic instanceof AbstractGremlinRelic) {
                 ((AbstractGremlinRelic) relic).onGremlinDeath();
             }
         }
     }
 
     public static boolean doesEnemyIntendToAttack(final AbstractMonster m) {
-        if (m == null){
+        if (m == null) {
             return false;
         }
         if (m instanceof AbstractCharBoss) {
-            final AbstractCharBoss boss = (AbstractCharBoss)m;
+            final AbstractCharBoss boss = (AbstractCharBoss) m;
             for (AbstractCard card : boss.hand.group) {
                 if (card instanceof AbstractBossCard) {
                     AbstractMonster.Intent intent = ((AbstractBossCard) card).intent;
@@ -444,11 +442,11 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
 
     @Override
     public void receivePostInitialize() {
-        BaseMod.addPotion(SwapPotion.class, Color.BLACK, Color.GRAY, Color.SLATE, SwapPotion.POTION_ID, GREMLIN);
-        BaseMod.addPotion(GremlinPotion.class, Color.RED, Color.YELLOW, Color.BLUE, GremlinPotion.POTION_ID, GREMLIN);
-        BaseMod.addPotion(NecromancyPotion.class, Color.RED, Color.YELLOW, Color.BLUE, NecromancyPotion.POTION_ID, GREMLIN);
+        BaseMod.addPotion(SwapPotion.class, Color.BLACK, Color.GRAY, Color.SLATE, SwapPotion.POTION_ID, downfallMod.Enums.GREMLIN);
+        BaseMod.addPotion(GremlinPotion.class, Color.RED, Color.YELLOW, Color.BLUE, GremlinPotion.POTION_ID, downfallMod.Enums.GREMLIN);
+        BaseMod.addPotion(NecromancyPotion.class, Color.RED, Color.YELLOW, Color.BLUE, NecromancyPotion.POTION_ID, downfallMod.Enums.GREMLIN);
         BaseMod.addPotion(WizPotion.class, Color.PURPLE, Color.PINK, Color.PURPLE, WizPotion.POTION_ID);
-        BanSharedContentPatch.registerRunLockedPotion(GREMLIN, WizPotion.POTION_ID);
+        BanSharedContentPatch.registerRunLockedPotion(downfallMod.Enums.GREMLIN, WizPotion.POTION_ID);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(GremlinPotion.POTION_ID);
@@ -456,7 +454,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
 
         BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsGremlin.ID, BackToBasicsGremlin.class) //Event ID//
                 //Event Character//
-                .playerClass(GREMLIN)
+                .playerClass(downfallMod.Enums.GREMLIN)
                 //Existing Event to Override//
                 .overrideEvent(BackToBasics.ID)
                 //Event Type//
@@ -465,7 +463,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
 
         BaseMod.addEvent(new AddEventParams.Builder(ScrapOozeGremlins.ID, ScrapOozeGremlins.class) //Event ID//
                 //Event Character//
-                .playerClass(GREMLIN)
+                .playerClass(downfallMod.Enums.GREMLIN)
                 //Existing Event to Override//
                 .overrideEvent(ScrapOoze.ID)
                 //Event Type//
@@ -476,7 +474,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
                 //Event Spawn Condition//
                 .spawnCondition(() -> evilMode)
                 //Prevent from appearing too early, or when no money
-                .bonusCondition(() -> (AbstractDungeon.floorNum > 4)&&(AbstractDungeon.player.gold >= 40))
+                .bonusCondition(() -> (AbstractDungeon.floorNum > 4) && (AbstractDungeon.player.gold >= 40))
                 //Event Type//
                 .eventType(EventUtils.EventType.NORMAL)
                 .create());
@@ -505,7 +503,7 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
                 ImpeccablePecs.ID,
                 PricklyShields.ID,
 
-                GREMLIN
+                downfallMod.Enums.GREMLIN
         );
     }
 

@@ -1914,4 +1914,60 @@ public class downfallMod implements
         if (AbstractDungeon.commonRelicPool.contains(relicID))
             AbstractDungeon.commonRelicPool.remove(relicID);
     }
+
+    /*
+    ENUMS
+     */
+
+    public static class Enums {
+        @SpireEnum
+        public static AbstractPlayer.PlayerClass THE_CHAMP;
+        @SpireEnum(name = "THE_CHAMP_GRAY")
+        public static AbstractCard.CardColor CHAMP_GRAY;
+        @SpireEnum(name = "THE_CHAMP_GRAY")
+        @SuppressWarnings("unused")
+        public static CardLibrary.LibraryType LIBRARY_COLOR;
+
+        @SpireEnum
+        public static AbstractPlayer.PlayerClass THE_AUTOMATON;
+        @SpireEnum(name = "THE_BRONZE_AUTOMATON")
+        public static AbstractCard.CardColor BRONZE_AUTOMATON;
+        @SpireEnum(name = "THE_BRONZE_AUTOMATON")
+        @SuppressWarnings("unused")
+        public static CardLibrary.LibraryType LIBRARY_COLOR_2;
+
+        @SpireEnum
+        public static AbstractPlayer.PlayerClass THE_COLLECTOR;
+        @SpireEnum(name = "THE_COLLECTOR")
+        public static AbstractCard.CardColor COLLECTOR;
+        @SpireEnum(name = "THE_COLLECTOR")
+        @SuppressWarnings("unused")
+        public static CardLibrary.LibraryType LIBRARY_COLOR3;
+
+
+        @SpireEnum
+        public static AbstractPlayer.PlayerClass GREMLIN;
+
+        @SpireEnum
+        public static AbstractPlayer.PlayerClass THE_SNECKO;
+        @SpireEnum(name = "SNECKO_CYAN")
+        public static AbstractCard.CardColor SNECKO_CYAN;
+        @SpireEnum(name = "SNECKO_CYAN")
+        @SuppressWarnings("unused")
+        public static CardLibrary.LibraryType LIBRARY_COLOR4;
+
+        @SpireEnum
+        public static AbstractPlayer.PlayerClass GUARDIAN;
+
+        @SpireEnum
+        public static AbstractPlayer.PlayerClass SLIMEBOUND;
+
+        @SpireEnum
+        public static AbstractPlayer.PlayerClass THE_SPIRIT;
+        @SpireEnum(name = "HEXA_GHOST_PURPLE")
+        public static AbstractCard.CardColor GHOST_GREEN;
+        @SpireEnum(name = "HEXA_GHOST_PURPLE")
+        @SuppressWarnings("unused")
+        public static CardLibrary.LibraryType LIBRARY_COLOR5;
+    }
 }

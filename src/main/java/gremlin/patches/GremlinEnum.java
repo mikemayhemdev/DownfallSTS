@@ -5,7 +5,5 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 
 public class GremlinEnum {
 
-    @SpireEnum
-    public static AbstractPlayer.PlayerClass GREMLIN;
 
 }

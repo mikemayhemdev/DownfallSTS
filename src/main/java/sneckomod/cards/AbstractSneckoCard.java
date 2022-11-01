@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.downfallMod;
 import hermit.util.TextureLoader;
 import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
@@ -50,7 +51,7 @@ public abstract class AbstractSneckoCard extends CustomCard {
 
     public AbstractSneckoCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(id),
-                cost, "ERROR", type, TheSnecko.Enums.SNECKO_CYAN, rarity, target);
+                cost, "ERROR", type, downfallMod.Enums.SNECKO_CYAN, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
         name = NAME = cardStrings.NAME;
         originalName = NAME;
@@ -76,7 +77,7 @@ public abstract class AbstractSneckoCard extends CustomCard {
 
     public AbstractSneckoCard(final String id, final String img,  final int cost, final CardType type, final CardRarity rarity, final CardTarget target, boolean IsClass) {
         super(id, "ERROR", getCorrectPlaceholderImage(img),
-                cost, "ERROR", type, TheSnecko.Enums.SNECKO_CYAN, rarity, target);
+                cost, "ERROR", type, downfallMod.Enums.SNECKO_CYAN, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings("sneckomod:Unknown0Cost");
         name = NAME = cardStrings.NAME;
         originalName = NAME;
@@ -89,7 +90,7 @@ public abstract class AbstractSneckoCard extends CustomCard {
 
     public AbstractSneckoCard(final String id, final String img, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(img),
-                cost, "ERROR", type, TheSnecko.Enums.SNECKO_CYAN, rarity, target);
+                cost, "ERROR", type, downfallMod.Enums.SNECKO_CYAN, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
         name = NAME = cardStrings.NAME;
         originalName = NAME;

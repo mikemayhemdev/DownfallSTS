@@ -1,19 +1,11 @@
 package theHexaghost;
 
-import com.megacrit.cardcrawl.helpers.*;
-import reskinContent.patches.CharacterSelectScreenPatches;
-import reskinContent.reskinContent;
-import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
-import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
-import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -21,24 +13,25 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.BobEffect;
-import sneckomod.SneckoMod;
-import theHexaghost.cards.*;
+import reskinContent.patches.CharacterSelectScreenPatches;
+import reskinContent.reskinContent;
 import theHexaghost.cards.Float;
-import theHexaghost.ghostflames.*;
+import theHexaghost.cards.*;
+import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.relics.SpiritBrand;
-import downfall.util.TextureLoader;
 import theHexaghost.vfx.MyBody;
 
 import java.util.ArrayList;
 
-import static theHexaghost.GhostflameHelper.*;
+import static downfall.downfallMod.Enums.GHOST_GREEN;
+import static theHexaghost.GhostflameHelper.activeGhostFlame;
 import static theHexaghost.HexaMod.*;
-import static theHexaghost.TheHexaghost.Enums.GHOST_GREEN;
 
 public class TheHexaghost extends CustomPlayer {
     private static final String[] orbTextures = {
@@ -301,16 +294,6 @@ public class TheHexaghost extends CustomPlayer {
     @Override
     public String getVampireText() {
         return TEXT[2];
-    }
-
-    public static class Enums {
-        @SpireEnum
-        public static AbstractPlayer.PlayerClass THE_SPIRIT;
-        @SpireEnum(name = "HEXA_GHOST_PURPLE")
-        public static AbstractCard.CardColor GHOST_GREEN;
-        @SpireEnum(name = "HEXA_GHOST_PURPLE")
-        @SuppressWarnings("unused")
-        public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 
     @Override

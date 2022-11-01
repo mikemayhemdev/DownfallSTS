@@ -43,7 +43,6 @@ import slimebound.helpers.SelfDamageVariable;
 import slimebound.helpers.SlimedVariable;
 import slimebound.orbs.*;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.patches.SlimeboundEnum;
 import slimebound.potions.SlimedPotion;
 import slimebound.potions.SlimyTonguePotion;
 import slimebound.potions.SpawnSlimePotion;
@@ -272,8 +271,8 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
     public void receiveEditCharacters() {
 
-        slimeboundCharacter = new SlimeboundCharacter("TheSlimebound", SlimeboundEnum.SLIMEBOUND);
-        BaseMod.addCharacter(slimeboundCharacter, getResourcePath("charSelect/button.png"), getResourcePath("charSelect/portrait.png"), SlimeboundEnum.SLIMEBOUND, getResourcePath("charSelect/leaderboard.png"));
+        slimeboundCharacter = new SlimeboundCharacter("TheSlimebound", downfallMod.Enums.SLIMEBOUND);
+        BaseMod.addCharacter(slimeboundCharacter, getResourcePath("charSelect/button.png"), getResourcePath("charSelect/portrait.png"), downfallMod.Enums.SLIMEBOUND, getResourcePath("charSelect/leaderboard.png"));
 
     }
 
@@ -334,7 +333,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
                 StudyCardRelic.ID,
                 StickyStick.ID,
 
-                SlimeboundEnum.SLIMEBOUND
+                downfallMod.Enums.SLIMEBOUND
         );
 
     }
@@ -526,7 +525,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         /*
         BaseMod.addEvent(new AddEventParams.Builder(Hunted.ID, Hunted.class) //Event ID//
                 //Event Character//
-                .playerClass(SlimeboundEnum.SLIMEBOUND)
+                .playerClass(downfallMod.Enums.SLIMEBOUND)
                 //Act//
                 //Only in Evil if content sharing is disabled
                 .spawnCondition(() -> (downfallMod.contentSharing_events && downfallMod.contentSharing_colorlessCards))
@@ -546,7 +545,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
         BaseMod.addEvent(new AddEventParams.Builder(WorldOfGoopSlimebound.ID, WorldOfGoopSlimebound.class) //Event ID//
                 //Event Character//
-                .playerClass(SlimeboundEnum.SLIMEBOUND)
+                .playerClass(downfallMod.Enums.SLIMEBOUND)
                 //Existing Event to Override//
                 .overrideEvent(GoopPuddle.ID)
                 //Additional Condition//
@@ -557,7 +556,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
         BaseMod.addEvent(new AddEventParams.Builder(ScrapOozeSlimebound.ID, ScrapOozeSlimebound.class) //Event ID//
                 //Event Character//
-                .playerClass(SlimeboundEnum.SLIMEBOUND)
+                .playerClass(downfallMod.Enums.SLIMEBOUND)
                 //Existing Event to Override//
                 .overrideEvent(ScrapOoze.ID)
                 //Additional Condition//
@@ -577,7 +576,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
         BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsSlime.ID, BackToBasicsSlime.class) //Event ID//
                 //Event Character//
-                .playerClass(SlimeboundEnum.SLIMEBOUND)
+                .playerClass(downfallMod.Enums.SLIMEBOUND)
                 //Existing Event to Override//
                 .overrideEvent(BackToBasics.ID)
                 //Event Type//
@@ -601,9 +600,9 @@ public class SlimeboundMod implements OnCardUseSubscriber,
     public void addPotions() {
 
         BaseMod.addPotion(ThreeZeroPotion.class, Color.FOREST, Color.BLACK, Color.BLACK, ThreeZeroPotion.POTION_ID);
-        BaseMod.addPotion(SlimedPotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimedPotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
-        BaseMod.addPotion(SpawnSlimePotion.class, Color.GREEN, Color.FOREST, Color.BLACK, SpawnSlimePotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
-        BaseMod.addPotion(SlimyTonguePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimyTonguePotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
+        BaseMod.addPotion(SlimedPotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimedPotion.POTION_ID, downfallMod.Enums.SLIMEBOUND);
+        BaseMod.addPotion(SpawnSlimePotion.class, Color.GREEN, Color.FOREST, Color.BLACK, SpawnSlimePotion.POTION_ID, downfallMod.Enums.SLIMEBOUND);
+        BaseMod.addPotion(SlimyTonguePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimyTonguePotion.POTION_ID, downfallMod.Enums.SLIMEBOUND);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(ThreeZeroPotion.POTION_ID);

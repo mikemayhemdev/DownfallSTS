@@ -24,6 +24,7 @@ import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.StrikeDummy;
 import com.megacrit.cardcrawl.relics.WristBlade;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -115,7 +116,7 @@ public abstract class AbstractCollectorCard extends CustomCard {
     }
     public AbstractCollectorCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),
-                cost, "ERROR", type, CollectorChar.Enums.COLLECTOR, rarity, target);
+                cost, "ERROR", type, downfallMod.Enums.COLLECTOR, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
         name = NAME = cardStrings.NAME;
         originalName = NAME;

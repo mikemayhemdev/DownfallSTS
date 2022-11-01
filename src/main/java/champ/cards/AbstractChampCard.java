@@ -35,6 +35,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.downfallMod;
 import hermit.util.TextureLoader;
 
 import java.security.Signature;
@@ -63,7 +64,7 @@ public abstract class AbstractChampCard extends CustomCard {
 
     public AbstractChampCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),
-                cost, "ERROR", type, ChampChar.Enums.CHAMP_GRAY, rarity, target);
+                cost, "ERROR", type, downfallMod.Enums.CHAMP_GRAY, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
         name = NAME = cardStrings.NAME;
         originalName = NAME;

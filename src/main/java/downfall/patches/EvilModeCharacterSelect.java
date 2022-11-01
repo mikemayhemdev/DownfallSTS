@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterSelectScreen;
 import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.downfallMod;
 import downfall.patches.ui.topPanel.GoldToSoulPatches;
 import gremlin.patches.GremlinEnum;
 import guardian.patches.GuardianEnum;
@@ -75,15 +76,15 @@ public class EvilModeCharacterSelect {
                             break;
                         } else {
                             boolean isVillain = true;
-                            if (o.c.chosenClass == SlimeboundEnum.SLIMEBOUND) {
+                            if (o.c.chosenClass == downfallMod.Enums.SLIMEBOUND) {
                                 villainOptions[0] = o;
-                            } else if (o.c.chosenClass == GuardianEnum.GUARDIAN) {
+                            } else if (o.c.chosenClass == downfallMod.Enums.GUARDIAN) {
                                 if (UnlockTracker.isCharacterLocked("Guardian")) {
                                     o.locked = true;
                                     ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
                                 }
                                 villainOptions[1] = o;
-                            } else if (o.c.chosenClass == TheHexaghost.Enums.THE_SPIRIT) {
+                            } else if (o.c.chosenClass == downfallMod.Enums.THE_SPIRIT) {
                                 if (UnlockTracker.isCharacterLocked("Hexaghost")) {
                                     o.locked = true;
                                     ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
@@ -92,7 +93,7 @@ public class EvilModeCharacterSelect {
 
 
                             // TODO - These should be fine when the enums get migrated.
-                            } else if (o.c.chosenClass == ChampChar.Enums.THE_CHAMP) {
+                            } else if (o.c.chosenClass == downfallMod.Enums.THE_CHAMP) {
                                 if (UnlockTracker.isCharacterLocked("Champ")) {
                                     o.locked = true;
                                     ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
@@ -102,25 +103,25 @@ public class EvilModeCharacterSelect {
 
 
 
-                            } else if (o.c.chosenClass == AutomatonChar.Enums.THE_AUTOMATON) {
+                            } else if (o.c.chosenClass == downfallMod.Enums.THE_AUTOMATON) {
                                 if (UnlockTracker.isCharacterLocked("Automaton")) {
                                     o.locked = true;
                                     ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
                                 }
                                 villainOptions[4] = o;
-                            } else if (o.c.chosenClass == CollectorChar.Enums.THE_COLLECTOR) {
+                            } else if (o.c.chosenClass == downfallMod.Enums.THE_COLLECTOR) {
                                 if (UnlockTracker.isCharacterLocked("Collector")) {
                                     o.locked = true;
                                     ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
                                 }
                                 villainOptions[5] = o;
-                            } else if (o.c.chosenClass == GremlinEnum.GREMLIN) {
+                            } else if (o.c.chosenClass == downfallMod.Enums.GREMLIN) {
                                 if (UnlockTracker.isCharacterLocked("Gremlin")) {
                                     o.locked = true;
                                     ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
                                 }
                                 villainOptions[6] = o;
-                            } else if (o.c.chosenClass == TheSnecko.Enums.THE_SNECKO) {
+                            } else if (o.c.chosenClass == downfallMod.Enums.THE_SNECKO) {
                                 if (UnlockTracker.isCharacterLocked("Snecko")) {
                                     o.locked = true;
                                     ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);

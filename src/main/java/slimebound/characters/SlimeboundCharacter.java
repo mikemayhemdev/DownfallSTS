@@ -1,6 +1,7 @@
 package slimebound.characters;
 
 import com.megacrit.cardcrawl.helpers.*;
+import downfall.downfallMod;
 import reskinContent.patches.CharacterSelectScreenPatches;
 import reskinContent.reskinContent;
 import basemod.abstracts.CustomPlayer;
@@ -256,7 +257,7 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public AbstractPlayer newInstance() {
-        return new SlimeboundCharacter(NAME, SlimeboundEnum.SLIMEBOUND);
+        return new SlimeboundCharacter(NAME, downfallMod.Enums.SLIMEBOUND);
     }
 
     public String getSpireHeartText() {

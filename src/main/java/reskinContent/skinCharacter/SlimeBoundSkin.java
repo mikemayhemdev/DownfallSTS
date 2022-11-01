@@ -2,6 +2,7 @@ package reskinContent.skinCharacter;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.downfallMod;
 import reskinContent.skinCharacter.skins.Slimebound.BetaSlimeBoss;
 import reskinContent.skinCharacter.skins.Slimebound.Slaifu;
 import reskinContent.skinCharacter.skins.Slimebound.SlimeBoundOriginal;
@@ -23,7 +24,7 @@ public class SlimeBoundSkin extends AbstractSkinCharacter {
     @Override
     public void checkUnlock() {
         System.out.println("================您跑了吗3");
-        if (AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND && !this.reskinUnlock) {
+        if (AbstractDungeon.player.chosenClass == downfallMod.Enums.SLIMEBOUND && !this.reskinUnlock) {
             AbstractDungeon.topLevelEffects.add(new ReskinUnlockedTextEffect(1));
             this.reskinUnlock = true;
         }

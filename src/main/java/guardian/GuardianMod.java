@@ -461,8 +461,8 @@ public class GuardianMod implements PostDrawSubscriber,
 
     public void receiveEditCharacters() {
 
-        guardianCharacter = new GuardianCharacter("TheGuardian", GuardianEnum.GUARDIAN);
-        BaseMod.addCharacter(guardianCharacter, getResourcePath("charSelect/button.png"), getResourcePath("charSelect/portrait.png"), GuardianEnum.GUARDIAN, getResourcePath("charSelect/leaderboard.png"));
+        guardianCharacter = new GuardianCharacter("TheGuardian", downfallMod.Enums.GUARDIAN);
+        BaseMod.addCharacter(guardianCharacter, getResourcePath("charSelect/button.png"), getResourcePath("charSelect/portrait.png"), downfallMod.Enums.GUARDIAN, getResourcePath("charSelect/leaderboard.png"));
 
     }
 
@@ -561,7 +561,7 @@ public static void saveData() {
                 PocketSentry.ID,
                 BottledAnomaly.ID,
 
-                GuardianEnum.GUARDIAN
+                downfallMod.Enums.GUARDIAN
         );
     }
 
@@ -810,7 +810,7 @@ public static void saveData() {
         UnlockTracker.unlockCard(DivideAndConquer.ID);
 
 
-        //UnlockTracker.addScore(GuardianEnum.SLIMEBOUND, 1000000);
+        //UnlockTracker.addScore(downfallMod.Enums.SLIMEBOUND, 1000000);
 
         clearUnlockBundles();
 
@@ -899,13 +899,13 @@ public static void saveData() {
 
         BaseMod.addEvent(new AddEventParams.Builder(GemMine.ID, GemMine.class) //Event ID//
                 //Event Character//
-                .playerClass(GuardianEnum.GUARDIAN)
+                .playerClass(downfallMod.Enums.GUARDIAN)
                 //Act
                 .dungeonID(Exordium.ID)
                 .create());
         BaseMod.addEvent(new AddEventParams.Builder(StasisEgg.ID, StasisEgg.class) //Event ID//
                 //Event Character//
-                .playerClass(GuardianEnum.GUARDIAN)
+                .playerClass(downfallMod.Enums.GUARDIAN)
                 //Act
                 .dungeonID(TheBeyond.ID)
                 //Only in Evil if content sharing is disabled
@@ -913,11 +913,11 @@ public static void saveData() {
                 .create());
         BaseMod.addEvent(new AddEventParams.Builder(CrystalForge.ID, CrystalForge.class) //Event ID//
                 //Event Character//
-                .playerClass(GuardianEnum.GUARDIAN)
+                .playerClass(downfallMod.Enums.GUARDIAN)
                 .create());
         BaseMod.addEvent(new AddEventParams.Builder(AccursedBlacksmithGuardian.ID, AccursedBlacksmithGuardian.class) //Event ID//
                 //Event Character//
-                .playerClass(GuardianEnum.GUARDIAN)
+                .playerClass(downfallMod.Enums.GUARDIAN)
                 //Existing Event to Override//
                 .overrideEvent(AccursedBlacksmith.ID)
                 //Event Type//
@@ -925,7 +925,7 @@ public static void saveData() {
                 .create());
         BaseMod.addEvent(new AddEventParams.Builder(PurificationShrineGuardian.ID, PurificationShrineGuardian.class) //Event ID//
                 //Event Character//
-                .playerClass(GuardianEnum.GUARDIAN)
+                .playerClass(downfallMod.Enums.GUARDIAN)
                 //Existing Event to Override//
                 .overrideEvent(PurificationShrine.ID)
                 //Event Type//
@@ -933,7 +933,7 @@ public static void saveData() {
                 .create());
         BaseMod.addEvent(new AddEventParams.Builder(TransmogrifierGuardian.ID, TransmogrifierGuardian.class) //Event ID//
                 //Event Character//
-                .playerClass(GuardianEnum.GUARDIAN)
+                .playerClass(downfallMod.Enums.GUARDIAN)
                 //Existing Event to Override//
                 .overrideEvent(Transmogrifier.ID)
                 //Event Type//
@@ -941,7 +941,7 @@ public static void saveData() {
                 .create());
         BaseMod.addEvent(new AddEventParams.Builder(UpgradeShrineGuardian.ID, UpgradeShrineGuardian.class) //Event ID//
                 //Event Character//
-                .playerClass(GuardianEnum.GUARDIAN)
+                .playerClass(downfallMod.Enums.GUARDIAN)
                 //Existing Event to Override//
                 .overrideEvent(UpgradeShrine.ID)
                 //Event Type//
@@ -951,7 +951,7 @@ public static void saveData() {
 
         BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsGuardian.ID, BackToBasicsGuardian.class) //Event ID//
                 //Event Character//
-                .playerClass(GuardianEnum.GUARDIAN)
+                .playerClass(downfallMod.Enums.GUARDIAN)
                 //Existing Event to Override//
                 .overrideEvent(BackToBasics.ID)
                 //Event Type//
@@ -1046,9 +1046,9 @@ public static void saveData() {
     public void addPotions() {
 
         BaseMod.addPotion(BlockOnCardUsePotion.class, Color.ROYAL, Color.TEAL, Color.BLUE, BlockOnCardUsePotion.POTION_ID);
-        BaseMod.addPotion(AcceleratePotion.class, Color.GOLDENROD, Color.GOLD, Color.YELLOW, AcceleratePotion.POTION_ID, GuardianEnum.GUARDIAN);
-        BaseMod.addPotion(DefensiveModePotion.class, Color.ROYAL, Color.TEAL, Color.BLUE, DefensiveModePotion.POTION_ID, GuardianEnum.GUARDIAN);
-        BaseMod.addPotion(StasisDiscoveryPotion.class, Color.GOLDENROD, Color.GOLD, Color.YELLOW, StasisDiscoveryPotion.POTION_ID, GuardianEnum.GUARDIAN);
+        BaseMod.addPotion(AcceleratePotion.class, Color.GOLDENROD, Color.GOLD, Color.YELLOW, AcceleratePotion.POTION_ID, downfallMod.Enums.GUARDIAN);
+        BaseMod.addPotion(DefensiveModePotion.class, Color.ROYAL, Color.TEAL, Color.BLUE, DefensiveModePotion.POTION_ID, downfallMod.Enums.GUARDIAN);
+        BaseMod.addPotion(StasisDiscoveryPotion.class, Color.GOLDENROD, Color.GOLD, Color.YELLOW, StasisDiscoveryPotion.POTION_ID, downfallMod.Enums.GUARDIAN);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(BlockOnCardUsePotion.POTION_ID);

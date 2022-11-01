@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
+import downfall.downfallMod;
 import guardian.modules.EnergyOrbGuardian;
 import guardian.powers.ModeShiftPower;
 import reskinContent.patches.CharacterSelectScreenPatches;
@@ -312,7 +313,7 @@ public class GuardianCharacter extends CustomPlayer {
     }
 
     public AbstractPlayer newInstance() {
-        return new GuardianCharacter(NAME, GuardianEnum.GUARDIAN);
+        return new GuardianCharacter(NAME, downfallMod.Enums.GUARDIAN);
     }
 
     public String getSpireHeartText() {

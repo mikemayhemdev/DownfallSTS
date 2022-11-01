@@ -111,7 +111,7 @@ public class HexaMod implements
 
         modID = "hexamod";
 
-        BaseMod.addColor(TheHexaghost.Enums.GHOST_GREEN, placeholderColor, placeholderColor, placeholderColor,
+        BaseMod.addColor(downfallMod.Enums.GHOST_GREEN, placeholderColor, placeholderColor, placeholderColor,
                 placeholderColor, placeholderColor, placeholderColor, placeholderColor,
                 ATTACK_S_ART, SKILL_S_ART, POWER_S_ART, CARD_ENERGY_S,
                 ATTACK_L_ART, SKILL_L_ART, POWER_L_ART,
@@ -212,24 +212,24 @@ public class HexaMod implements
 
     @Override
     public void receiveEditCharacters() {
-        BaseMod.addCharacter(new TheHexaghost("the Hexaghost", TheHexaghost.Enums.THE_SPIRIT),
-                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TheHexaghost.Enums.THE_SPIRIT, HexaMod.getModID() + "Resources/images/charSelect/leaderboard.png");
+        BaseMod.addCharacter(new TheHexaghost("the Hexaghost", downfallMod.Enums.THE_SPIRIT),
+                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, downfallMod.Enums.THE_SPIRIT, HexaMod.getModID() + "Resources/images/charSelect/leaderboard.png");
     }
 
     @Override
     public void receiveEditRelics() {
-        BaseMod.addRelicToCustomPool(new SpiritBrand(), TheHexaghost.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new InflammatoryLetter(), TheHexaghost.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new IceCube(), TheHexaghost.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new JarOfFuel(), TheHexaghost.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new MatchstickCase(), TheHexaghost.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new RecyclingMachine(), TheHexaghost.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new SoulConsumer(), TheHexaghost.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new SoulOfChaos(), TheHexaghost.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new TheBrokenSeal(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new SpiritBrand(), downfallMod.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new InflammatoryLetter(), downfallMod.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new IceCube(), downfallMod.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new JarOfFuel(), downfallMod.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new MatchstickCase(), downfallMod.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new RecyclingMachine(), downfallMod.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new SoulConsumer(), downfallMod.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new SoulOfChaos(), downfallMod.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new TheBrokenSeal(), downfallMod.Enums.GHOST_GREEN);
         BaseMod.addRelic(new CandleOfCauterizing(), RelicType.SHARED);
         BaseMod.addRelic(new Sixitude(), RelicType.SHARED);
-        BaseMod.addRelicToCustomPool(new UnbrokenSoul(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new UnbrokenSoul(), downfallMod.Enums.GHOST_GREEN);
 
 //        BaseMod.addRelic(new CandleOfCauterizing(), RelicType.SHARED);
 //        BaseMod.addRelic(new Sixitude(), RelicType.SHARED);
@@ -255,11 +255,11 @@ public class HexaMod implements
 
     public void addPotions() {
 
-        BaseMod.addPotion(EctoCoolerPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, EctoCoolerPotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
+        BaseMod.addPotion(EctoCoolerPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, EctoCoolerPotion.POTION_ID, downfallMod.Enums.THE_SPIRIT);
         BaseMod.addPotion(SoulburnPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, SoulburnPotion.POTION_ID);
-        BaseMod.addPotion(DoubleChargePotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, DoubleChargePotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
-        BaseMod.addPotion(InfernoChargePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, InfernoChargePotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
-        BanSharedContentPatch.registerRunLockedPotion(TheHexaghost.Enums.THE_SPIRIT, SoulburnPotion.POTION_ID);
+        BaseMod.addPotion(DoubleChargePotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, DoubleChargePotion.POTION_ID, downfallMod.Enums.THE_SPIRIT);
+        BaseMod.addPotion(InfernoChargePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, InfernoChargePotion.POTION_ID, downfallMod.Enums.THE_SPIRIT);
+        BanSharedContentPatch.registerRunLockedPotion(downfallMod.Enums.THE_SPIRIT, SoulburnPotion.POTION_ID);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(EctoCoolerPotion.POTION_ID);
@@ -308,7 +308,7 @@ public class HexaMod implements
                 CandleOfCauterizing.ID,
                 Sixitude.ID,
 
-                TheHexaghost.Enums.THE_SPIRIT
+                downfallMod.Enums.THE_SPIRIT
         );
     }
 
@@ -431,12 +431,12 @@ public class HexaMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(SealChamber.ID, SealChamber.class) //Event ID//
                 //Event Character//
-                .playerClass(TheHexaghost.Enums.THE_SPIRIT)
+                .playerClass(downfallMod.Enums.THE_SPIRIT)
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(HexaFalling.ID, HexaFalling.class) //Event ID//
                 //Event Character//
-                .playerClass(TheHexaghost.Enums.THE_SPIRIT)
+                .playerClass(downfallMod.Enums.THE_SPIRIT)
                 //Existing Event to Override//
                 .overrideEvent(Falling.ID)
                 //Event Type//
@@ -445,7 +445,7 @@ public class HexaMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(CouncilOfGhosts_Hexa.ID, CouncilOfGhosts_Hexa.class) //Event ID//
                 //Event Character//
-                .playerClass(TheHexaghost.Enums.THE_SPIRIT)
+                .playerClass(downfallMod.Enums.THE_SPIRIT)
                 //Existing Event to Override//
                 .overrideEvent(Ghosts.ID)
                 //Event Type//
@@ -454,7 +454,7 @@ public class HexaMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsHexaghost.ID, BackToBasicsHexaghost.class) //Event ID//
                 //Event Character//
-                .playerClass(TheHexaghost.Enums.THE_SPIRIT)
+                .playerClass(downfallMod.Enums.THE_SPIRIT)
                 //Existing Event to Override//
                 .overrideEvent(BackToBasics.ID)
                 //Event Type//

@@ -112,7 +112,7 @@ public class AutomatonMod implements
 
         modID = "bronze";
 
-        BaseMod.addColor(AutomatonChar.Enums.BRONZE_AUTOMATON, placeholderColor, placeholderColor, placeholderColor,
+        BaseMod.addColor(downfallMod.Enums.BRONZE_AUTOMATON, placeholderColor, placeholderColor, placeholderColor,
                 placeholderColor, placeholderColor, placeholderColor, placeholderColor,
                 ATTACK_S_ART, SKILL_S_ART, POWER_S_ART, CARD_ENERGY_S,
                 ATTACK_L_ART, SKILL_L_ART, POWER_L_ART,
@@ -218,26 +218,26 @@ public class AutomatonMod implements
 
     @Override
     public void receiveEditCharacters() {
-        BaseMod.addCharacter(new AutomatonChar("The Automaton", AutomatonChar.Enums.THE_AUTOMATON), CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, AutomatonChar.Enums.THE_AUTOMATON);
+        BaseMod.addCharacter(new AutomatonChar("The Automaton", downfallMod.Enums.THE_AUTOMATON), CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, downfallMod.Enums.THE_AUTOMATON);
     }
 
     @Override
     public void receiveEditRelics() {
 
-        BaseMod.addRelicToCustomPool(new BronzeCore(), AutomatonChar.Enums.BRONZE_AUTOMATON);
-        BaseMod.addRelicToCustomPool(new CableSpool(), AutomatonChar.Enums.BRONZE_AUTOMATON);
+        BaseMod.addRelicToCustomPool(new BronzeCore(), downfallMod.Enums.BRONZE_AUTOMATON);
+        BaseMod.addRelicToCustomPool(new CableSpool(), downfallMod.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelic(new DecasWashers(), RelicType.SHARED);
         BaseMod.addRelic(new DonusWashers(), RelicType.SHARED);
-        BaseMod.addRelicToCustomPool(new ElectromagneticCoil(), AutomatonChar.Enums.BRONZE_AUTOMATON);
-        BaseMod.addRelicToCustomPool(new ProtectiveGoggles(), AutomatonChar.Enums.BRONZE_AUTOMATON);
-        BaseMod.addRelicToCustomPool(new Mallet(), AutomatonChar.Enums.BRONZE_AUTOMATON);
-        BaseMod.addRelicToCustomPool(new PlatinumCore(), AutomatonChar.Enums.BRONZE_AUTOMATON);
+        BaseMod.addRelicToCustomPool(new ElectromagneticCoil(), downfallMod.Enums.BRONZE_AUTOMATON);
+        BaseMod.addRelicToCustomPool(new ProtectiveGoggles(), downfallMod.Enums.BRONZE_AUTOMATON);
+        BaseMod.addRelicToCustomPool(new Mallet(), downfallMod.Enums.BRONZE_AUTOMATON);
+        BaseMod.addRelicToCustomPool(new PlatinumCore(), downfallMod.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelic(new MakeshiftBattery(), RelicType.SHARED);
         BaseMod.addRelic(new BronzeIdol(), RelicType.SHARED);
-        BaseMod.addRelicToCustomPool(new SilverBullet(), AutomatonChar.Enums.BRONZE_AUTOMATON);
-        BaseMod.addRelicToCustomPool(new BottledCode(), AutomatonChar.Enums.BRONZE_AUTOMATON);
+        BaseMod.addRelicToCustomPool(new SilverBullet(), downfallMod.Enums.BRONZE_AUTOMATON);
+        BaseMod.addRelicToCustomPool(new BottledCode(), downfallMod.Enums.BRONZE_AUTOMATON);
         BaseMod.registerBottleRelic(BottledStasisPatch.inBottledCode, new BottledCode());
-        BaseMod.addRelicToCustomPool(new Timepiece(), AutomatonChar.Enums.BRONZE_AUTOMATON);
+        BaseMod.addRelicToCustomPool(new Timepiece(), downfallMod.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelic(new AnalyticalCore(), RelicType.SHARED);
     }
 
@@ -263,10 +263,10 @@ public class AutomatonMod implements
 
     public void addPotions() {
 
-        BaseMod.addPotion(BuildAFunctionPotion.class, Color.FIREBRICK, Color.GRAY, Color.TAN, BuildAFunctionPotion.POTION_ID, AutomatonChar.Enums.THE_AUTOMATON);
+        BaseMod.addPotion(BuildAFunctionPotion.class, Color.FIREBRICK, Color.GRAY, Color.TAN, BuildAFunctionPotion.POTION_ID, downfallMod.Enums.THE_AUTOMATON);
         BaseMod.addPotion(BurnAndBuffPotion.class, Color.RED, Color.GREEN, Color.CLEAR, BurnAndBuffPotion.POTION_ID);
-        BaseMod.addPotion(CleanCodePotion.class, Color.CORAL, Color.PURPLE, Color.MAROON, CleanCodePotion.POTION_ID, AutomatonChar.Enums.THE_AUTOMATON);
-        BaseMod.addPotion(FreeFunctionsPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, FreeFunctionsPotion.POTION_ID, AutomatonChar.Enums.THE_AUTOMATON);
+        BaseMod.addPotion(CleanCodePotion.class, Color.CORAL, Color.PURPLE, Color.MAROON, CleanCodePotion.POTION_ID, downfallMod.Enums.THE_AUTOMATON);
+        BaseMod.addPotion(FreeFunctionsPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, FreeFunctionsPotion.POTION_ID, downfallMod.Enums.THE_AUTOMATON);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(BuildAFunctionPotion.POTION_ID);
@@ -281,21 +281,21 @@ public class AutomatonMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(ShapeFactory.ID, ShapeFactory.class) //Event ID//
                 //Event Character//
-                .playerClass(AutomatonChar.Enums.THE_AUTOMATON)
+                .playerClass(downfallMod.Enums.THE_AUTOMATON)
                 .dungeonID(Exordium.ID)
                 .eventType(EventUtils.EventType.NORMAL)
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(AncientFactory.ID, AncientFactory.class) //Event ID//
                 //Event Character//
-                .playerClass(AutomatonChar.Enums.THE_AUTOMATON)
+                .playerClass(downfallMod.Enums.THE_AUTOMATON)
                 .dungeonID(TheCity.ID)
                 .eventType(EventUtils.EventType.NORMAL)
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsAutomaton.ID, BackToBasicsAutomaton.class) //Event ID//
                 //Event Character//
-                .playerClass(AutomatonChar.Enums.THE_AUTOMATON)
+                .playerClass(downfallMod.Enums.THE_AUTOMATON)
                 //Existing Event to Override//
                 .overrideEvent(BackToBasics.ID)
                 //Event Type//
@@ -304,12 +304,12 @@ public class AutomatonMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(CrystalForgeAutomaton.ID, CrystalForgeAutomaton.class) //Event ID//
                 //Event Character//
-                .playerClass(AutomatonChar.Enums.THE_AUTOMATON)
+                .playerClass(downfallMod.Enums.THE_AUTOMATON)
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(AccursedBlacksmithAutomaton.ID, AccursedBlacksmithAutomaton.class) //Event ID//
                 //Event Character//
-                .playerClass(AutomatonChar.Enums.THE_AUTOMATON)
+                .playerClass(downfallMod.Enums.THE_AUTOMATON)
                 //Existing Event to Override//
                 .overrideEvent(AccursedBlacksmith.ID)
                 //Event Type//
@@ -342,7 +342,7 @@ public class AutomatonMod implements
                 DecasWashers.ID,
                 DonusWashers.ID,
 
-                AutomatonChar.Enums.THE_AUTOMATON
+                downfallMod.Enums.THE_AUTOMATON
         );
     }
 

@@ -22,6 +22,7 @@ import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.stances.NeutralStance;
+import downfall.downfallMod;
 import reskinContent.patches.CharacterSelectScreenPatches;
 
 import java.util.ArrayList;
@@ -250,7 +251,7 @@ public class ChampChar extends CustomPlayer {
 
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return Enums.CHAMP_GRAY;
+        return downfallMod.Enums.CHAMP_GRAY;
     }
 
     @Override
@@ -309,15 +310,5 @@ public class ChampChar extends CustomPlayer {
     @Override
     public String getVampireText() {
         return TEXT[2];
-    }
-
-    public static class Enums {
-        @SpireEnum
-        public static PlayerClass THE_CHAMP;
-        @SpireEnum(name = "THE_CHAMP_GRAY")
-        public static AbstractCard.CardColor CHAMP_GRAY;
-        @SpireEnum(name = "THE_CHAMP_GRAY")
-        @SuppressWarnings("unused")
-        public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 }

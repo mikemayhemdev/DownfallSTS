@@ -148,7 +148,7 @@ public class ChampMod implements
 
         modID = "champ";
 
-        BaseMod.addColor(ChampChar.Enums.CHAMP_GRAY, placeholderColor, placeholderColor, placeholderColor,
+        BaseMod.addColor(downfallMod.Enums.CHAMP_GRAY, placeholderColor, placeholderColor, placeholderColor,
                 placeholderColor, placeholderColor, placeholderColor, placeholderColor,
                 ATTACK_S_ART, SKILL_S_ART, POWER_S_ART, CARD_ENERGY_S,
                 ATTACK_L_ART, SKILL_L_ART, POWER_L_ART,
@@ -251,23 +251,23 @@ public class ChampMod implements
 
     @Override
     public void receiveEditCharacters() {
-        BaseMod.addCharacter(new ChampChar("The Champ", ChampChar.Enums.THE_CHAMP),
-                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, ChampChar.Enums.THE_CHAMP);
+        BaseMod.addCharacter(new ChampChar("The Champ", downfallMod.Enums.THE_CHAMP),
+                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, downfallMod.Enums.THE_CHAMP);
     }
 
     @Override
     public void receiveEditRelics() {
-        BaseMod.addRelicToCustomPool(new BerserkersGuideToSlaughter(), ChampChar.Enums.CHAMP_GRAY);
-        BaseMod.addRelicToCustomPool(new BlackKnightsHelmet(), ChampChar.Enums.CHAMP_GRAY);
-        BaseMod.addRelicToCustomPool(new ChampionCrown(), ChampChar.Enums.CHAMP_GRAY);
-        BaseMod.addRelicToCustomPool(new ChampionCrownUpgraded(), ChampChar.Enums.CHAMP_GRAY);
-        BaseMod.addRelicToCustomPool(new DefensiveTrainingManual(), ChampChar.Enums.CHAMP_GRAY);
-        BaseMod.addRelicToCustomPool(new FightingForDummies(), ChampChar.Enums.CHAMP_GRAY);
-        BaseMod.addRelicToCustomPool(new GladiatorsBookOfMartialProwess(), ChampChar.Enums.CHAMP_GRAY);
-        BaseMod.addRelicToCustomPool(new SignatureFinisher(), ChampChar.Enums.CHAMP_GRAY);
-        BaseMod.addRelicToCustomPool(new PowerArmor(), ChampChar.Enums.CHAMP_GRAY);
-        BaseMod.addRelicToCustomPool(new SpectersHand(), ChampChar.Enums.CHAMP_GRAY);
-        BaseMod.addRelicToCustomPool(new LiftRelic(), ChampChar.Enums.CHAMP_GRAY);
+        BaseMod.addRelicToCustomPool(new BerserkersGuideToSlaughter(), downfallMod.Enums.CHAMP_GRAY);
+        BaseMod.addRelicToCustomPool(new BlackKnightsHelmet(), downfallMod.Enums.CHAMP_GRAY);
+        BaseMod.addRelicToCustomPool(new ChampionCrown(), downfallMod.Enums.CHAMP_GRAY);
+        BaseMod.addRelicToCustomPool(new ChampionCrownUpgraded(), downfallMod.Enums.CHAMP_GRAY);
+        BaseMod.addRelicToCustomPool(new DefensiveTrainingManual(), downfallMod.Enums.CHAMP_GRAY);
+        BaseMod.addRelicToCustomPool(new FightingForDummies(), downfallMod.Enums.CHAMP_GRAY);
+        BaseMod.addRelicToCustomPool(new GladiatorsBookOfMartialProwess(), downfallMod.Enums.CHAMP_GRAY);
+        BaseMod.addRelicToCustomPool(new SignatureFinisher(), downfallMod.Enums.CHAMP_GRAY);
+        BaseMod.addRelicToCustomPool(new PowerArmor(), downfallMod.Enums.CHAMP_GRAY);
+        BaseMod.addRelicToCustomPool(new SpectersHand(), downfallMod.Enums.CHAMP_GRAY);
+        BaseMod.addRelicToCustomPool(new LiftRelic(), downfallMod.Enums.CHAMP_GRAY);
 
         BaseMod.addRelic(new Barbells(), RelicType.SHARED);
         BaseMod.addRelic(new DeflectingBracers(), RelicType.SHARED);
@@ -296,11 +296,11 @@ public class ChampMod implements
     public void addPotions() {
 
         BaseMod.addPotion(CounterstrikePotion.class, Color.GRAY, Color.GRAY, Color.BLACK, CounterstrikePotion.POTION_ID);
-        BaseMod.addPotion(OpenerPotion.class, Color.TEAL, Color.GREEN, Color.FOREST, OpenerPotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
-        BaseMod.addPotion(TechPotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, TechPotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
-        BaseMod.addPotion(UltimateStancePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, UltimateStancePotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
+        BaseMod.addPotion(OpenerPotion.class, Color.TEAL, Color.GREEN, Color.FOREST, OpenerPotion.POTION_ID, downfallMod.Enums.THE_CHAMP);
+        BaseMod.addPotion(TechPotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, TechPotion.POTION_ID, downfallMod.Enums.THE_CHAMP);
+        BaseMod.addPotion(UltimateStancePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, UltimateStancePotion.POTION_ID, downfallMod.Enums.THE_CHAMP);
 
-        BanSharedContentPatch.registerRunLockedPotion(ChampChar.Enums.THE_CHAMP, CounterstrikePotion.POTION_ID);
+        BanSharedContentPatch.registerRunLockedPotion(downfallMod.Enums.THE_CHAMP, CounterstrikePotion.POTION_ID);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(CounterstrikePotion.POTION_ID);
@@ -345,7 +345,7 @@ public class ChampMod implements
                 Barbells.ID,
                 DeflectingBracers.ID,
 
-                ChampChar.Enums.THE_CHAMP
+                downfallMod.Enums.THE_CHAMP
         );
 
     }
@@ -416,13 +416,13 @@ public class ChampMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(TechniqueTome.ID, TechniqueTome.class) //Event ID//
                 //Event Character//
-                .playerClass(ChampChar.Enums.THE_CHAMP)
+                .playerClass(downfallMod.Enums.THE_CHAMP)
                 .eventType(EventUtils.EventType.SHRINE)
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(Gym.ID, Gym.class) //Event ID//
                 //Event Character//
-                .playerClass(ChampChar.Enums.THE_CHAMP)
+                .playerClass(downfallMod.Enums.THE_CHAMP)
                 .dungeonID(Exordium.ID)
                 .eventType(EventUtils.EventType.NORMAL)
                 .create());
@@ -445,7 +445,7 @@ public class ChampMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsChamp.ID, BackToBasicsChamp.class) //Event ID//
                 //Event Character//
-                .playerClass(ChampChar.Enums.THE_CHAMP)
+                .playerClass(downfallMod.Enums.THE_CHAMP)
                 //Existing Event to Override//
                 .overrideEvent(BackToBasics.ID)
                 //Event Type//

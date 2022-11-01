@@ -2,6 +2,7 @@ package reskinContent.skinCharacter;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.downfallMod;
 import reskinContent.skinCharacter.skins.Hexaghost.BetaHexaghost;
 import reskinContent.skinCharacter.skins.Hexaghost.HexaghostOriginal;
 import reskinContent.skinCharacter.skins.Hexaghost.Hexago;
@@ -23,7 +24,7 @@ public class HexaghostSkin extends AbstractSkinCharacter {
 
     @Override
     public void checkUnlock() {
-        if (AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT && !this.reskinUnlock) {
+        if (AbstractDungeon.player.chosenClass == downfallMod.Enums.THE_SPIRIT && !this.reskinUnlock) {
             AbstractDungeon.topLevelEffects.add(new ReskinUnlockedTextEffect(2));
             this.reskinUnlock = true;
         }

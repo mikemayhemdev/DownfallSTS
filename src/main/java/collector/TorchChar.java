@@ -35,6 +35,7 @@ import com.megacrit.cardcrawl.vfx.TorchHeadFireEffect;
 import com.megacrit.cardcrawl.vfx.combat.BlockedWordEffect;
 import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
+import downfall.downfallMod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -196,7 +197,7 @@ public class TorchChar extends CustomPlayer implements CustomSavable<ArrayList<I
 
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return CollectorChar.Enums.COLLECTOR;
+        return downfallMod.Enums.COLLECTOR;
     }
 
     @Override

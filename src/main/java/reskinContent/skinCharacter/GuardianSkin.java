@@ -2,6 +2,7 @@ package reskinContent.skinCharacter;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.downfallMod;
 import guardian.patches.GuardianEnum;
 import reskinContent.skinCharacter.skins.Guardian.*;
 import reskinContent.vfx.ReskinUnlockedTextEffect;
@@ -21,7 +22,7 @@ public class GuardianSkin extends AbstractSkinCharacter {
 
     @Override
     public void checkUnlock() {
-        if (AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN && !this.reskinUnlock) {
+        if (AbstractDungeon.player.chosenClass == downfallMod.Enums.GUARDIAN && !this.reskinUnlock) {
             AbstractDungeon.topLevelEffects.add(new ReskinUnlockedTextEffect(0));
             this.reskinUnlock = true;
         }

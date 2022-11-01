@@ -37,6 +37,7 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.GlowyFireEyesEffect;
 import com.megacrit.cardcrawl.vfx.StaffFireEffect;
 import com.megacrit.cardcrawl.vfx.combat.PowerBuffEffect;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
@@ -163,7 +164,7 @@ public class CollectorChar extends CustomPlayer {
 
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return Enums.COLLECTOR;
+        return downfallMod.Enums.COLLECTOR;
     }
 
     @Override
@@ -224,15 +225,6 @@ public class CollectorChar extends CustomPlayer {
         return TEXT[2];
     }
 
-    public static class Enums {
-        @SpireEnum
-        public static PlayerClass THE_COLLECTOR;
-        @SpireEnum(name = "THE_COLLECTOR")
-        public static AbstractCard.CardColor COLLECTOR;
-        @SpireEnum(name = "THE_COLLECTOR")
-        @SuppressWarnings("unused")
-        public static CardLibrary.LibraryType LIBRARY_COLOR;
-    }
     @Override
     public void movePosition(float x, float y) {
         super.movePosition(x, y);

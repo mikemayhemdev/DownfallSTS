@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import downfall.downfallMod;
 import reskinContent.patches.CharacterSelectScreenPatches;
 
 import java.util.ArrayList;
@@ -131,7 +132,7 @@ public class AutomatonChar extends CustomPlayer {
 
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return Enums.BRONZE_AUTOMATON;
+        return downfallMod.Enums.BRONZE_AUTOMATON;
     }
 
     @Override
@@ -190,15 +191,5 @@ public class AutomatonChar extends CustomPlayer {
     @Override
     public String getVampireText() {
         return TEXT[2];
-    }
-
-    public static class Enums {
-        @SpireEnum
-        public static PlayerClass THE_AUTOMATON;
-        @SpireEnum(name = "THE_BRONZE_AUTOMATON")
-        public static AbstractCard.CardColor BRONZE_AUTOMATON;
-        @SpireEnum(name = "THE_BRONZE_AUTOMATON")
-        @SuppressWarnings("unused")
-        public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 }

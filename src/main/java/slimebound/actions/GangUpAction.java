@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.SpeechBubble;
+import downfall.downfallMod;
 import slimebound.SlimeboundMod;
 import slimebound.orbs.AttackSlime;
 import slimebound.orbs.SpawnedSlime;
@@ -65,7 +66,7 @@ public class GangUpAction extends AbstractGameAction {
                 ////SlimeboundMod.logger.info("Losing HP" + this.currentAmount);
 
 
-                if (AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND) {
+                if (AbstractDungeon.player.chosenClass == downfallMod.Enums.SLIMEBOUND) {
                     SlimeboundMod.disabledStrikeVFX = true;
                 }
                 ////SlimeboundMod.logger.info("No buffer, proceeding");

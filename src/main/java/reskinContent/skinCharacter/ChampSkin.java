@@ -3,6 +3,7 @@ package reskinContent.skinCharacter;
 import champ.ChampChar;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.downfallMod;
 import reskinContent.skinCharacter.skins.Champ.*;
 import reskinContent.vfx.ReskinUnlockedTextEffect;
 
@@ -21,7 +22,7 @@ public class ChampSkin extends AbstractSkinCharacter {
 
     @Override
     public void checkUnlock() {
-        if (AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP && !this.reskinUnlock) {
+        if (AbstractDungeon.player.chosenClass == downfallMod.Enums.THE_CHAMP && !this.reskinUnlock) {
             AbstractDungeon.topLevelEffects.add(new ReskinUnlockedTextEffect(4));
             this.reskinUnlock = true;
         }

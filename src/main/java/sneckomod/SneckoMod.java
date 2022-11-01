@@ -164,7 +164,7 @@ public class SneckoMod implements
 
         modID = "sneckomod";
 
-        BaseMod.addColor(TheSnecko.Enums.SNECKO_CYAN, placeholderColor, placeholderColor, placeholderColor,
+        BaseMod.addColor(downfallMod.Enums.SNECKO_CYAN, placeholderColor, placeholderColor, placeholderColor,
                 placeholderColor, placeholderColor, placeholderColor, placeholderColor,
                 ATTACK_S_ART, SKILL_S_ART, POWER_S_ART, CARD_ENERGY_S,
                 ATTACK_L_ART, SKILL_L_ART, POWER_L_ART,
@@ -289,28 +289,28 @@ public class SneckoMod implements
 
     @Override
     public void receiveEditCharacters() {
-        BaseMod.addCharacter(new TheSnecko("the Snecko", TheSnecko.Enums.THE_SNECKO),
-                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TheSnecko.Enums.THE_SNECKO, getModID() + "Resources/images/charSelect/leaderboard.png");
+        BaseMod.addCharacter(new TheSnecko("the Snecko", downfallMod.Enums.THE_SNECKO),
+                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, downfallMod.Enums.THE_SNECKO, getModID() + "Resources/images/charSelect/leaderboard.png");
     }
 
     @Override
     public void receiveEditRelics() {
-        BaseMod.addRelicToCustomPool(new SneckoSoul(), TheSnecko.Enums.SNECKO_CYAN);
-        BaseMod.addRelicToCustomPool(new CleanMud(), TheSnecko.Enums.SNECKO_CYAN);
-        BaseMod.addRelicToCustomPool(new ConfusingCodex(), TheSnecko.Enums.SNECKO_CYAN);
-        BaseMod.addRelicToCustomPool(new LoadedDie(), TheSnecko.Enums.SNECKO_CYAN);
-        BaseMod.addRelicToCustomPool(new RareBoosterPack(), TheSnecko.Enums.SNECKO_CYAN);
-        BaseMod.addRelicToCustomPool(new SleevedAce(), TheSnecko.Enums.SNECKO_CYAN);
-        BaseMod.addRelicToCustomPool(new SuperSneckoSoul(), TheSnecko.Enums.SNECKO_CYAN);
-        BaseMod.addRelicToCustomPool(new UnknownEgg(), TheSnecko.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new SneckoSoul(), downfallMod.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new CleanMud(), downfallMod.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new ConfusingCodex(), downfallMod.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new LoadedDie(), downfallMod.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new RareBoosterPack(), downfallMod.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new SleevedAce(), downfallMod.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new SuperSneckoSoul(), downfallMod.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new UnknownEgg(), downfallMod.Enums.SNECKO_CYAN);
         BaseMod.addRelic(new SuperSneckoEye(), RelicType.SHARED);
         BaseMod.addRelic(new SneckoTalon(), RelicType.SHARED);
         BaseMod.addRelic(new BlankCard(), RelicType.SHARED);
-        BaseMod.addRelicToCustomPool(new sneckomod.relics.D8(), TheSnecko.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new sneckomod.relics.D8(), downfallMod.Enums.SNECKO_CYAN);
         BaseMod.registerBottleRelic(BottledD8Patch.inD8, new sneckomod.relics.D8());
         BaseMod.addRelic(new BabySnecko(), RelicType.SHARED);
-        BaseMod.addRelicToCustomPool(new SneckoCommon(), TheSnecko.Enums.SNECKO_CYAN);
-        BaseMod.addRelicToCustomPool(new SneckoBoss(), TheSnecko.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new SneckoCommon(), downfallMod.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new SneckoBoss(), downfallMod.Enums.SNECKO_CYAN);
     }
 
     @Override
@@ -322,7 +322,7 @@ public class SneckoMod implements
             throw new RuntimeException(e);
         }
         for (AbstractCard.CardColor p : AbstractCard.CardColor.values()) {
-            if (p != AbstractCard.CardColor.COLORLESS && p != AbstractCard.CardColor.CURSE && p != TheSnecko.Enums.SNECKO_CYAN && p != CardColorEnumPatch.CardColorPatch.BOSS) {
+            if (p != AbstractCard.CardColor.COLORLESS && p != AbstractCard.CardColor.CURSE && p != downfallMod.Enums.SNECKO_CYAN && p != CardColorEnumPatch.CardColorPatch.BOSS) {
                 UnknownClass q = new UnknownClass(p);
                 unknownClasses.add(q);
                 AbstractUnknownCard.unknownClassReplacements.add(new ArrayList<>());
@@ -355,7 +355,7 @@ public class SneckoMod implements
                 UnknownEgg.ID,
                 BlankCard.ID,
 
-                TheSnecko.Enums.THE_SNECKO
+                downfallMod.Enums.THE_SNECKO
         );
 
     }
@@ -363,10 +363,10 @@ public class SneckoMod implements
     public void addPotions() {
 
         BaseMod.addPotion(MuddlingPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, MuddlingPotion.POTION_ID);
-        BaseMod.addPotion(CheatPotion.class, Color.GRAY, Color.WHITE, Color.BLACK, CheatPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
-        BaseMod.addPotion(DiceRollPotion.class, Color.CYAN, Color.WHITE, Color.BLACK, DiceRollPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
-        BaseMod.addPotion(OffclassReductionPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, OffclassReductionPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
-        BanSharedContentPatch.registerRunLockedPotion(TheSnecko.Enums.THE_SNECKO, MuddlingPotion.POTION_ID);
+        BaseMod.addPotion(CheatPotion.class, Color.GRAY, Color.WHITE, Color.BLACK, CheatPotion.POTION_ID, downfallMod.Enums.THE_SNECKO);
+        BaseMod.addPotion(DiceRollPotion.class, Color.CYAN, Color.WHITE, Color.BLACK, DiceRollPotion.POTION_ID, downfallMod.Enums.THE_SNECKO);
+        BaseMod.addPotion(OffclassReductionPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, OffclassReductionPotion.POTION_ID, downfallMod.Enums.THE_SNECKO);
+        BanSharedContentPatch.registerRunLockedPotion(downfallMod.Enums.THE_SNECKO, MuddlingPotion.POTION_ID);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(MuddlingPotion.POTION_ID);
@@ -424,13 +424,13 @@ public class SneckoMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(D8.ID, sneckomod.events.D8.class) //Event ID//
                 //Event Character//
-                .playerClass(TheSnecko.Enums.THE_SNECKO)
+                .playerClass(downfallMod.Enums.THE_SNECKO)
                 .eventType(EventUtils.EventType.ONE_TIME)
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsSnecko.ID, BackToBasicsSnecko.class) //Event ID//
                 //Event Character//
-                .playerClass(TheSnecko.Enums.THE_SNECKO)
+                .playerClass(downfallMod.Enums.THE_SNECKO)
                 //Existing Event to Override//
                 .overrideEvent(BackToBasics.ID)
                 //Event Type//
@@ -439,7 +439,7 @@ public class SneckoMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Serpent_Snecko.ID, Serpent_Snecko.class) //Event ID//
                 //Event Character//
-                .playerClass(TheSnecko.Enums.THE_SNECKO)
+                .playerClass(downfallMod.Enums.THE_SNECKO)
                 //Event Spawn Condition//
                 .spawnCondition(() -> !evilMode)
                 //Event ID to Override//
@@ -450,7 +450,7 @@ public class SneckoMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Serpent_Snecko.ID, Serpent_Snecko.class) //Event ID//
                 //Event Character//
-                .playerClass(TheSnecko.Enums.THE_SNECKO)
+                .playerClass(downfallMod.Enums.THE_SNECKO)
                 //Event Spawn Condition//
                 .spawnCondition(() -> evilMode)
                 //Event ID to Override//
@@ -532,7 +532,7 @@ public class SneckoMod implements
     }
 
     public static void findAWayToTriggerThisAtGameStart() {
-        if (AbstractDungeon.player instanceof TheSnecko && !pureSneckoMode) {
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_SNECKO) && !pureSneckoMode) {
             validColors.clear();
             choosingCharacters = 0;
             colorChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.screens.VictoryScreen;
 import com.megacrit.cardcrawl.ui.buttons.ReturnToMenuButton;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.downfallMod;
 import downfall.unlocks.*;
 import guardian.patches.GuardianEnum;
 import javassist.CtBehavior;
@@ -31,27 +32,27 @@ public class VictoryScreenUnlockPatch {
         if ((AbstractDungeon.unlocks.isEmpty()) || (Settings.isDemo)) {
             if ((Settings.isDemo) || (Settings.isDailyRun)) {
                 CardCrawlGame.startOver();
-            } else if (UnlockTracker.isCharacterLocked("Guardian") && (AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND)) {
+            } else if (UnlockTracker.isCharacterLocked("Guardian") && (AbstractDungeon.player.chosenClass == downfallMod.Enums.SLIMEBOUND)) {
                 AbstractDungeon.unlocks.add(new GuardianUnlock());
                 AbstractDungeon.unlockScreen.open((AbstractUnlock) AbstractDungeon.unlocks.remove(0));
                 ////SlimeboundMod.logger.info("Triggered Guardian Unlock screen!");
                 return SpireReturn.Return(null);
-            } else if ((UnlockTracker.isCharacterLocked("Hexaghost")) && (AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN)) {
+            } else if ((UnlockTracker.isCharacterLocked("Hexaghost")) && (AbstractDungeon.player.chosenClass == downfallMod.Enums.GUARDIAN)) {
                 AbstractDungeon.unlocks.add(new HexaghostUnlock());
                 AbstractDungeon.unlockScreen.open((AbstractUnlock) AbstractDungeon.unlocks.remove(0));
                 // //SlimeboundMod.logger.info("Triggered Hexaghost Unlock screen!");
                 return SpireReturn.Return(null);
-            } else if ((UnlockTracker.isCharacterLocked("Champ")) && (AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT)) {
+            } else if ((UnlockTracker.isCharacterLocked("Champ")) && (AbstractDungeon.player.chosenClass == downfallMod.Enums.THE_SPIRIT)) {
                 AbstractDungeon.unlocks.add(new ChampUnlock());
                 AbstractDungeon.unlockScreen.open((AbstractUnlock) AbstractDungeon.unlocks.remove(0));
                 ////SlimeboundMod.logger.info("Triggered Champ Unlock screen!");
                 return SpireReturn.Return(null);
-            } else if ((UnlockTracker.isCharacterLocked("Automaton")) && (AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP)) {
+            } else if ((UnlockTracker.isCharacterLocked("Automaton")) && (AbstractDungeon.player.chosenClass == downfallMod.Enums.THE_CHAMP)) {
                 AbstractDungeon.unlocks.add(new AutomatonUnlock());
                 AbstractDungeon.unlockScreen.open((AbstractUnlock) AbstractDungeon.unlocks.remove(0));
                 ////SlimeboundMod.logger.info("Triggered Automaton Unlock screen!");
                 return SpireReturn.Return(null);
-            } else if ((UnlockTracker.isCharacterLocked("Snecko")) && (AbstractDungeon.player.chosenClass == AutomatonChar.Enums.THE_AUTOMATON)) {
+            } else if ((UnlockTracker.isCharacterLocked("Snecko")) && (AbstractDungeon.player.chosenClass == downfallMod.Enums.THE_AUTOMATON)) {
                 AbstractDungeon.unlocks.add(new SneckoUnlock());
                 AbstractDungeon.unlockScreen.open((AbstractUnlock) AbstractDungeon.unlocks.remove(0));
                 ////SlimeboundMod.logger.info("Triggered Snecko Unlock screen!");

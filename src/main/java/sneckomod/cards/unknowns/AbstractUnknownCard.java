@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.downfallMod;
 import guardian.patches.BottledStasisPatch;
 import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
@@ -257,12 +258,12 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
             if (AbstractDungeon.player != null && validCard) {
                 validCard = c.color != AbstractDungeon.player.getCardColor();
             } else if (AbstractDungeon.player == null && validCard) {
-                validCard = c.color != TheSnecko.Enums.SNECKO_CYAN;
+                validCard = c.color != downfallMod.Enums.SNECKO_CYAN;
             }
 
             for (int i = 0; i < funkyPredicates.size(); i++) {
                 Predicate<AbstractCard> funkyPredicate = funkyPredicates.get(i);
-                if (funkyPredicate.test(c) && (SneckoMod.pureSneckoMode || (SneckoMod.validColors.contains(c.color) || (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass != TheSnecko.Enums.THE_SNECKO)) || i >= 22)) {                    if (validCard) {
+                if (funkyPredicate.test(c) && (SneckoMod.pureSneckoMode || (SneckoMod.validColors.contains(c.color) || (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass != downfallMod.Enums.THE_SNECKO)) || i >= 22)) {                    if (validCard) {
                         ArrayList<String> s = funkyLists.get(funkyPredicates.indexOf(funkyPredicate));
                         if (s == null) {
                             s = new ArrayList<>();

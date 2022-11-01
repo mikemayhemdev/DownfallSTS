@@ -30,10 +30,10 @@ public class EvilModeCharacterOption {
         __instance.hb.update();
 
         if ((__instance.hb.hovered) && (__instance.locked)) {
-            if (__instance.c.chosenClass == GuardianEnum.GUARDIAN) {
+            if (__instance.c.chosenClass == downfallMod.Enums.GUARDIAN) {
                 TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[1] + TEXT[0]);
 
-            } else if (__instance.c.chosenClass == TheHexaghost.Enums.THE_SPIRIT) {
+            } else if (__instance.c.chosenClass == downfallMod.Enums.THE_SPIRIT) {
 
                 if (UnlockTracker.isCharacterLocked("Guardian")) {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[2] + TEXT[0]);
@@ -41,7 +41,7 @@ public class EvilModeCharacterOption {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[3] + TEXT[0]);
                 }
                 //TODO - This should be fine if we move the Enums to DownfallMod.
-            } else if (__instance.c.chosenClass == ChampChar.Enums.THE_CHAMP) {
+            } else if (__instance.c.chosenClass == downfallMod.Enums.THE_CHAMP) {
                 if (UnlockTracker.isCharacterLocked("Hexaghost")) {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[4] + TEXT[0]);
                 } else {
@@ -49,25 +49,25 @@ public class EvilModeCharacterOption {
                 }
 
 
-            } else if (__instance.c.chosenClass == AutomatonChar.Enums.THE_AUTOMATON) {
+            } else if (__instance.c.chosenClass == downfallMod.Enums.THE_AUTOMATON) {
                 if (UnlockTracker.isCharacterLocked("Champ")) {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[6] + TEXT[0]);
                 } else {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[7] + TEXT[0]);
                 }
-            } else if (__instance.c.chosenClass == CollectorChar.Enums.THE_COLLECTOR) {
+            } else if (__instance.c.chosenClass == downfallMod.Enums.THE_COLLECTOR) {
                 if (UnlockTracker.isCharacterLocked("Automaton")) {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[8] + TEXT[0]);
                 } else {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[9] + TEXT[0]);
                 }
-            } else if (__instance.c.chosenClass == GremlinEnum.GREMLIN) {
+            } else if (__instance.c.chosenClass == downfallMod.Enums.GREMLIN) {
                 if (UnlockTracker.isCharacterLocked("Collector")) {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[10] + TEXT[0]);
                 } else {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[11] + TEXT[0]);
                 }
-            } else if (__instance.c.chosenClass == TheSnecko.Enums.THE_SNECKO) {
+            } else if (__instance.c.chosenClass == downfallMod.Enums.THE_SNECKO) {
                 if (UnlockTracker.isCharacterLocked("Gremlin")) {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[12] + TEXT[0]);
                 } else {

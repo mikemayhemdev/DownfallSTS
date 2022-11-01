@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.combat.DamageNumberEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
+import downfall.downfallMod;
 import slimebound.SlimeboundMod;
 
 
@@ -19,7 +20,7 @@ public class StrikeEffectPatch {
     public static class removeStrikeVFX {
         public static SpireReturn<Void> Prefix(StrikeEffect obj, AbstractCreature target, float x, float y, int number) {
             ////SlimeboundMod.logger.info("Patch hit.");
-            if (AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND && SlimeboundMod.disabledStrikeVFX && AbstractDungeon.player == target) {
+            if (AbstractDungeon.player.chosenClass == downfallMod.Enums.SLIMEBOUND && SlimeboundMod.disabledStrikeVFX && AbstractDungeon.player == target) {
 
                 ////SlimeboundMod.logger.info("Patch hit player is Slimebound.");
                 AbstractDungeon.effectsQueue.add(new DamageNumberEffect(target, x, y, number));
