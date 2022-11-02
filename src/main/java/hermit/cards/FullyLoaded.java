@@ -7,10 +7,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import hermit.HermitMod;
 import hermit.actions.FullyLoadedAction;
 import hermit.actions.SoundAction;
-import hermit.characters.hermit;
 
 import java.util.ArrayList;
 

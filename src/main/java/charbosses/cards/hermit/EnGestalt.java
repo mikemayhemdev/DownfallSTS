@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import downfall.downfallMod;
 import hermit.cards.Gestalt;
-import hermit.characters.hermit;
 import hermit.powers.Rugged;
 
 public class EnGestalt extends AbstractHermitBossCard {

@@ -7,9 +7,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
+import downfall.downfallMod;
 import hermit.HermitMod;
 import hermit.actions.ReduceCostActionFixed;
-import hermit.characters.hermit;
 import hermit.effects.HermitUpgradeShineEffect;
 import hermit.powers.MaintenanceStrikePower;
 

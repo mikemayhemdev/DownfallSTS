@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
+import downfall.downfallMod;
 import hermit.cards.Dive;
-import hermit.characters.hermit;
 
 public class EnDive extends AbstractHermitBossCard {
     public static final String ID = "downfall_Charboss:Dive";

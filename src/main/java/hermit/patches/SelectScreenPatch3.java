@@ -4,7 +4,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.screens.select.HandCardSelectScreen;
-import hermit.characters.hermit;
+import downfall.downfallMod;
 
 @SpirePatch(
         clz = HandCardSelectScreen.class,

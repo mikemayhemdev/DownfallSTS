@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import hermit.HermitMod;
-import hermit.characters.hermit;
 import hermit.vfx.ShortScreenFire;
 
 import static hermit.HermitMod.loadJokeCardImage;

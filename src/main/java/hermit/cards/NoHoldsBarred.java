@@ -11,8 +11,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ViolentAttackEffect;
+import downfall.downfallMod;
 import hermit.HermitMod;
-import hermit.characters.hermit;
 import hermit.powers.Bruise;
 import hermit.powers.Drained;
 

@@ -3,9 +3,9 @@ package hermit.cards;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import hermit.HermitMod;
 import hermit.actions.GoldenBulletAction;
-import hermit.characters.hermit;
 
 import static hermit.HermitMod.loadJokeCardImage;
 import static hermit.HermitMod.makeCardPath;

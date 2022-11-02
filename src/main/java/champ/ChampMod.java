@@ -69,6 +69,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import static downfall.downfallMod.TECHNIQUE;
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
@@ -376,7 +377,7 @@ PostDungeonInitializeSubscriber{
 
             for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
 
-                if (!c.hasTag(ChampMod.TECHNIQUE))
+                if (!c.hasTag(TECHNIQUE))
                     CardModifierManager.addModifier(c, new TechniqueMod());
 
             }

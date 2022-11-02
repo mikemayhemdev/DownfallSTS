@@ -2,7 +2,6 @@ package champ.events;
 
 import basemod.helpers.BaseModCardTags;
 import basemod.helpers.CardModifierManager;
-import champ.ChampMod;
 import champ.util.TechniqueMod;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,6 +13,7 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -140,7 +140,7 @@ public class BackToBasicsChamp extends AbstractImageEvent {
 
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
             if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
-                if (!c.hasTag(ChampMod.TECHNIQUE)) {
+                if (!c.hasTag(downfallMod.TECHNIQUE)) {
                     CardModifierManager.addModifier(c, new TechniqueMod());
                     c.initializeDescription();
                     cardsTeched.add(c.cardID);

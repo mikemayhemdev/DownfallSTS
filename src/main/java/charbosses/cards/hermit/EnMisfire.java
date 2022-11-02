@@ -7,8 +7,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import hermit.cards.Misfire;
-import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 
 public class EnMisfire extends AbstractHermitBossCard {

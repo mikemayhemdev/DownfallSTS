@@ -44,7 +44,7 @@ import com.megacrit.cardcrawl.vfx.ShieldParticleEffect;
 import com.megacrit.cardcrawl.vfx.combat.BuffParticleEffect;
 import com.megacrit.cardcrawl.vfx.combat.StunStarEffect;
 import com.megacrit.cardcrawl.vfx.combat.UnknownParticleEffect;
-import hermit.characters.hermit;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 import java.util.HashMap;

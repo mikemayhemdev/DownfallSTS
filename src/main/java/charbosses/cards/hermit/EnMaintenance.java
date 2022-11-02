@@ -7,8 +7,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
+import downfall.downfallMod;
 import hermit.actions.ReduceCostActionFixed;
-import hermit.characters.hermit;
 import hermit.powers.MaintenanceStrikePower;
 
 public class EnMaintenance extends AbstractHermitBossCard {

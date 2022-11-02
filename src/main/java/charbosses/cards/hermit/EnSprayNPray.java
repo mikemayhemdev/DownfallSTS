@@ -8,8 +8,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import hermit.cards.SprayPray;
-import hermit.characters.hermit;
 
 public class EnSprayNPray extends AbstractHermitBossCard {
     public static final String ID = "downfall_Charboss:SprayNPray";

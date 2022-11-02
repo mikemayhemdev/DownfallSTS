@@ -5,7 +5,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.DamageHeartEffect;
-import hermit.characters.hermit;
+import downfall.downfallMod;
 
 import static hermit.HermitMod.makeID;
 

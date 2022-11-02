@@ -8,8 +8,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import downfall.downfallMod;
 import hermit.cards.LowProfile;
-import hermit.characters.hermit;
 
 public class EnLowProfile extends AbstractHermitBossCard {
     public static final String ID = "downfall_Charboss:LowProfile";

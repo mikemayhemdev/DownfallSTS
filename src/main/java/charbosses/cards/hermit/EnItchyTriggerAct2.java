@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import downfall.downfallMod;
 import hermit.cards.ItchyTrigger;
-import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 
 public class EnItchyTriggerAct2 extends AbstractHermitBossCard {

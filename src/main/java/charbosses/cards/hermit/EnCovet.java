@@ -5,8 +5,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import hermit.cards.Covet;
-import hermit.characters.hermit;
 
 public class EnCovet extends AbstractHermitBossCard {
     public static final String ID = "downfall_Charboss:Covet";

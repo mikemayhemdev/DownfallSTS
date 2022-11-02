@@ -5,8 +5,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import hermit.cards.LoneWolf;
-import hermit.characters.hermit;
 
 public class EnLoneWolf extends AbstractHermitBossCard {
     public static final String ID = "downfall_Charboss:LoneWolf";

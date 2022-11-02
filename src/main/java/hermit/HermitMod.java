@@ -18,9 +18,9 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.actions.MessageCaller;
 import downfall.downfallMod;
 import downfall.util.CardIgnore;
-import downfall.actions.MessageCaller;
 import hermit.cards.*;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
@@ -305,7 +305,7 @@ public class HermitMod implements
     public void receiveEditCharacters() {
         System.out.println("Beginning to edit characters. " + "Add " + downfallMod.Enums.HERMIT.toString());
 
-        BaseMod.addCharacter(new hermit("the Hermit",downfallMod.Enums.HERMIT),
+        BaseMod.addCharacter(new hermit("the Hermit", downfallMod.Enums.HERMIT),
                 THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, downfallMod.Enums.HERMIT);
 
         receiveEditPotions();

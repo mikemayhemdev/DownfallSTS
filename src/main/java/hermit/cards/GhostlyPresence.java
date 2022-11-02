@@ -8,8 +8,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import downfall.downfallMod;
 import hermit.HermitMod;
-import hermit.characters.hermit;
 import hermit.powers.SnipePower;
 
 import java.util.Iterator;

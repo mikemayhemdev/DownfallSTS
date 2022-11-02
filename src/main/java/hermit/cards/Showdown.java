@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import downfall.downfallMod;
 import hermit.HermitMod;
-import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
 
 import static hermit.HermitMod.loadJokeCardImage;

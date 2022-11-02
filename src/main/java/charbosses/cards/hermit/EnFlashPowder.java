@@ -11,8 +11,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import downfall.downfallMod;
 import hermit.cards.FlashPowder;
-import hermit.characters.hermit;
 
 public class EnFlashPowder extends AbstractHermitBossCard {
     public static final String ID = "downfall_Charboss:FlashPowder";
