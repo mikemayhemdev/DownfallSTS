@@ -60,7 +60,7 @@
   "Gremlin:FatGremlin": {
     "NAME": "胖地精",
     "DESCRIPTIONS": [
-      "每当你攻击时，给予目标 #b",
+      "每当你攻击时，先给予目标 #b",
       " 层 #y虚弱 。"
     ]
   },
