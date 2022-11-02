@@ -24,6 +24,7 @@ public class ModHelperPatch {
         myMapD.put(ExchangeController.ID, new ExchangeController());
         myMapS.put(ChampStances.ID, new ChampStances());
         myMapD.put(Enraging.ID, new Enraging());
+        myMapS.put(TransformRewards.ID, new TransformRewards());
         ReflectionHacks.setPrivateStatic(ModHelper.class, "starterMods", myMapS);
         ReflectionHacks.setPrivateStatic(ModHelper.class, "genericMods", myMapG);
         ReflectionHacks.setPrivateStatic(ModHelper.class, "difficultyMods", myMapD);
