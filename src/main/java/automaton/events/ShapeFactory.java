@@ -15,8 +15,9 @@ import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.monsters.beyond.Exploder;
 import com.megacrit.cardcrawl.monsters.beyond.Repulsor;
 import com.megacrit.cardcrawl.monsters.beyond.Spiker;
+import downfall.events.CombatEvent;
 
-public class ShapeFactory extends AbstractImageEvent {
+public class ShapeFactory extends AbstractImageEvent implements CombatEvent {
     public static final String ID = "bronze:ShapeFactory";
     public static final String NAME;
     public static final String[] DESCRIPTIONS;

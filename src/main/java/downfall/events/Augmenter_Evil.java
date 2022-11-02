@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Augmenter_Evil extends AbstractImageEvent {
+public class Augmenter_Evil extends AbstractImageEvent implements CombatEvent {
     public static final String ID = downfallMod.makeID("Augmenter");
     public static final String NAME;
     public static final String[] DESCRIPTIONS;

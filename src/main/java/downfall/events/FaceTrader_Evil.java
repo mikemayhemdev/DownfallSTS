@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-public class FaceTrader_Evil extends AbstractImageEvent {
+public class FaceTrader_Evil extends AbstractImageEvent implements CombatEvent {
     public static final String ID = "downfall:FaceTrader";
     public static final String NAME;
     public static final String[] DESCRIPTIONS;

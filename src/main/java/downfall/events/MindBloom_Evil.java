@@ -41,7 +41,7 @@ import java.util.Random;
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.lastCombatMetricKey;
 import static com.megacrit.cardcrawl.helpers.MonsterHelper.getGremlin;
 
-public class MindBloom_Evil extends AbstractImageEvent {
+public class MindBloom_Evil extends AbstractImageEvent implements CombatEvent {
     public static final String ID = "downfall:MindBloom";
     private static final EventStrings eventStrings;
     public static final String NAME;

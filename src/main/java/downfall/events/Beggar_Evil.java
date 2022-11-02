@@ -19,7 +19,7 @@ import downfall.downfallMod;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Beggar_Evil extends AbstractImageEvent {
+public class Beggar_Evil extends AbstractImageEvent implements CombatEvent {
     public static final String ID = downfallMod.makeID("Beggar");
     public static final String NAME;
     public static final String[] DESCRIPTIONS;

@@ -31,7 +31,7 @@ import downfall.monsters.LadyInBlue;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class WomanInBlue_Evil extends AbstractImageEvent {
+public class WomanInBlue_Evil extends AbstractImageEvent implements CombatEvent {
     public static final String ID = downfallMod.makeID("WomanInBlue");
     public static final String NAME;
     public static final String[] DESCRIPTIONS;

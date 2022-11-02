@@ -22,7 +22,7 @@ import downfall.util.RemoveCardReward;
 import downfall.util.TransformCardReward;
 import downfall.util.UpgradeCardReward;
 
-public class LivingWall_Evil extends AbstractImageEvent {
+public class LivingWall_Evil extends AbstractImageEvent implements CombatEvent {
     public static final String ID = "downfall:LivingWall";
     public static final String NAME;
     public static final String[] DESCRIPTIONS;

@@ -30,7 +30,7 @@ import downfall.relics.GremlinSack;
 
 import java.util.*;
 
-public class GremlinMatchGame_Evil extends AbstractImageEvent {
+public class GremlinMatchGame_Evil extends AbstractImageEvent implements CombatEvent {
     public static final String ID = "downfall:GremlinMatchGame";
     public static final String NAME;
     public static final String[] DESCRIPTIONS;

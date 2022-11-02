@@ -42,7 +42,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.Objects;
 
-public class GremlinWheelGame_Evil extends AbstractImageEvent {
+public class GremlinWheelGame_Evil extends AbstractImageEvent implements CombatEvent {
     public static final String ID = "downfall:GremlinWheelGame";
     public static final String NAME;
     public static final String[] DESCRIPTIONS;

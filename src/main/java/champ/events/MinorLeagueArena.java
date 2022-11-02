@@ -9,8 +9,9 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.ChampionsBelt;
 import com.megacrit.cardcrawl.relics.CloakClasp;
 import com.megacrit.cardcrawl.relics.WristBlade;
+import downfall.events.CombatEvent;
 
-public class MinorLeagueArena extends AbstractImageEvent {
+public class MinorLeagueArena extends AbstractImageEvent implements CombatEvent {
     public static final String ID = "champ:MinorLeagueArena";
     public static final String NAME;
     public static final String[] DESCRIPTIONS;

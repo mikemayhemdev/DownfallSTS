@@ -14,7 +14,6 @@ import expansioncontent.cards.GuardianWhirl;
 import expansioncontent.cards.Hexaburn;
 import expansioncontent.cards.HyperBeam;
 import expansioncontent.cards.LastStand;
-import slimebound.cards.PrepareCrushBossCard;
 
 import java.util.ArrayList;
 
@@ -59,7 +58,7 @@ public class ShopBossPatch {
         if (q.rarity == AbstractCard.CardRarity.SPECIAL) return false;
 
         if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND)) {
-            if (q.cardID.equals(PrepareCrushBossCard.ID)) {
+            if (q.cardID.equals(downfallMod.expansioncontentModID + ":PrepareCrush")) {
                 return false;
             }
         }

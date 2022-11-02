@@ -14,8 +14,9 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import downfall.events.CombatEvent;
 
-public class AncientFactory extends AbstractImageEvent {
+public class AncientFactory extends AbstractImageEvent implements CombatEvent {
     public static final String ID = "bronze:AncientFactory";
     public static final String NAME;
     public static final String[] DESCRIPTIONS;

@@ -14,8 +14,9 @@ import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.downfallMod;
+import downfall.events.CombatEvent;
 
-public class Colosseum_Evil_Champ extends AbstractImageEvent {
+public class Colosseum_Evil_Champ extends AbstractImageEvent implements CombatEvent {
     public static final String ID = "champ:Colosseum";
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
