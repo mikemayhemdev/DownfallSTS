@@ -32,7 +32,6 @@ import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.relics.HeartBlessingBlue;
 import downfall.relics.HeartBlessingGreen;
 import downfall.relics.HeartBlessingRed;
-import sneckomod.TheSnecko;
 
 import java.util.ArrayList;
 import java.util.Collections;

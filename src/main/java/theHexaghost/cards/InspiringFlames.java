@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.UpgradeRandomCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.ghostflames.AbstractGhostflame;
 

@@ -17,7 +17,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
-import sneckomod.SneckoMod;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

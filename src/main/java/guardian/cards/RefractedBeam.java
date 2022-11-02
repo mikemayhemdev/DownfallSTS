@@ -15,9 +15,9 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.vfx.SmallLaserEffectColored;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
-import downfall.vfx.SmallLaserEffectColored;
 
 
 public class RefractedBeam extends AbstractGuardianCard {

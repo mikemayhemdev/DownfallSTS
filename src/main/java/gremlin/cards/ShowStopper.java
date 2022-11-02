@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.GrandFinalEffect;
 import downfall.downfallMod;
 import gremlin.powers.WizPower;
-import sneckomod.SneckoMod;
 
 import static gremlin.GremlinMod.WIZARD_GREMLIN;
 

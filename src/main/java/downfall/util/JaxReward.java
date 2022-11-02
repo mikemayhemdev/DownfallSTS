@@ -1,6 +1,5 @@
 package downfall.util;
 
-import automaton.AutomatonMod;
 import basemod.abstracts.CustomReward;
 import com.megacrit.cardcrawl.cards.colorless.JAX;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -8,7 +7,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.downfallMod;
 import downfall.patches.RewardItemTypeEnumPatch;
-import downfall.util.TextureLoader;
 
 public class JaxReward extends CustomReward {
     public static final String ID = downfallMod.makeID("JaxReward");

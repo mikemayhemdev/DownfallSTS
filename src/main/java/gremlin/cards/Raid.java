@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import downfall.downfallMod;
 import gremlin.orbs.GremlinStandby;
-import sneckomod.SneckoMod;
 
 public class Raid extends AbstractGremlinCard {
     public static final String ID = getID("Raid");

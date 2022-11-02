@@ -3,7 +3,7 @@ package automaton.cards;
 import automaton.powers.OptimizePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 
 public class Optimize extends AbstractBronzeCard {
 

@@ -53,15 +53,16 @@ import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import downfall.dailymods.*;
+import downfall.dailymods.ChampStances;
+import downfall.dailymods.Enraging;
 import downfall.downfallMod;
-import slimebound.patches.BanSharedContentPatch;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import slimebound.patches.BanSharedContentPatch;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -88,7 +89,7 @@ public class ChampMod implements
         PreMonsterTurnSubscriber,
         OnPlayerLoseBlockSubscriber,
         PostUpdateSubscriber,
-PostDungeonInitializeSubscriber{
+        PostDungeonInitializeSubscriber {
     public static final String SHOULDER1 = "champResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "champResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "champResources/images/char/mainChar/corpse.png";
@@ -160,7 +161,6 @@ PostDungeonInitializeSubscriber{
 
 
     }
-
 
 
     public static void loadJokeCardImage(AbstractCard card, String img) {

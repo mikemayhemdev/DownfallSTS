@@ -13,7 +13,6 @@ import downfall.downfallMod;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.LoseThornsPower;
-import sneckomod.SneckoMod;
 
 import static guardian.GuardianMod.socketTypes.LIGHTBLUE;
 

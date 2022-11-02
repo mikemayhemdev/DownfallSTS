@@ -7,7 +7,6 @@ import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
 import downfall.downfallMod;
 import downfall.util.OctopusCard;
-import sneckomod.SneckoMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.ghostflames.AbstractGhostflame;

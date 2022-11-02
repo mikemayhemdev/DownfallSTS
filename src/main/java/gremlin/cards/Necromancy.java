@@ -14,7 +14,6 @@ import gremlin.characters.GremlinCharacter;
 import gremlin.orbs.GremlinStandby;
 import gremlin.powers.BangPower;
 import gremlin.powers.WizPower;
-import sneckomod.SneckoMod;
 
 import static gremlin.GremlinMod.WIZARD_GREMLIN;
 

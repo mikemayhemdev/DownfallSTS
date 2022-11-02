@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 

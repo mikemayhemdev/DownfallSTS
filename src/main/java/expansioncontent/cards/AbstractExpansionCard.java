@@ -17,13 +17,12 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
+import downfall.util.TextureLoader;
 import expansioncontent.patches.CardColorEnumPatch;
 
 import java.util.ArrayList;
 
 import static expansioncontent.expansionContentMod.*;
-
-import downfall.util.TextureLoader;
 
 public abstract class AbstractExpansionCard extends CustomCard {
 

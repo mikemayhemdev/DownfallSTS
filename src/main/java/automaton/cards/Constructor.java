@@ -1,6 +1,5 @@
 package automaton.cards;
 
-import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;

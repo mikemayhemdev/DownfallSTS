@@ -1,6 +1,5 @@
 package automaton.cardmods;
 
-import automaton.AutomatonMod;
 import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;

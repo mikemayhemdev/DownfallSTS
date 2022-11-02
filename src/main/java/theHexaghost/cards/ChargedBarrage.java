@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.TorchHeadFireEffect;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.powers.BurnPower;

@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import gremlin.relics.FragmentationGrenade;
 
+import static gremlin.relics.WoundPoker.OOMPH;
+
 @SpirePatch(
         clz = DamageRandomEnemyAction.class,
         method = SpirePatch.CONSTRUCTOR
@@ -17,7 +19,7 @@ public class RandomDamagePatch {
             AbstractDungeon.player.getRelic(FragmentationGrenade.ID).flash();
             DamageInfo old = ReflectionHacks.getPrivate(__instance, DamageRandomEnemyAction.class, "info");
             ReflectionHacks.setPrivate(__instance, DamageRandomEnemyAction.class, "info",
-                    new DamageInfo(old.owner, old.base + FragmentationGrenade.OOMPH, old.type));
+                    new DamageInfo(old.owner, old.base + OOMPH, old.type));
         }
     }
 }

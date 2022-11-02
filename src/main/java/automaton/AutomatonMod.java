@@ -1,5 +1,6 @@
 package automaton;
 
+import automaton.cardmods.EncodeMod;
 import automaton.cards.Terminator;
 import automaton.cards.*;
 import automaton.cards.goodstatus.*;
@@ -41,7 +42,6 @@ import com.megacrit.cardcrawl.relics.MedicalKit;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.EasyInfoDisplayPanel;
-import automaton.cardmods.EncodeMod;
 import downfall.cardmods.EtherealMod;
 import downfall.cardmods.ExhaustMod;
 import downfall.dailymods.Analytical;
@@ -75,7 +75,7 @@ public class AutomatonMod implements
         PostBattleSubscriber,
         StartGameSubscriber,
         PostDrawSubscriber,
-PostDungeonInitializeSubscriber{
+        PostDungeonInitializeSubscriber {
     public static final String SHOULDER1 = "bronzeResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "bronzeResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "bronzeResources/images/char/mainChar/corpse.png";
@@ -449,7 +449,6 @@ PostDungeonInitializeSubscriber{
 
         return retVal;
     }
-
 
 
     @Override

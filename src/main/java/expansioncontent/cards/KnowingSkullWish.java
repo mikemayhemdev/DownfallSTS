@@ -14,7 +14,6 @@ import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
 import downfall.downfallMod;
 import downfall.util.OctopusCard;
-import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
 
 import java.util.ArrayList;

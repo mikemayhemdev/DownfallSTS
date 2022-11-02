@@ -229,7 +229,7 @@ public class HeartReward {
             case PERCENT_DAMAGE:
                 if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
                     //TODO - Another tricky one to try to move.
-                  //  ((GremlinCharacter) AbstractDungeon.player).damageAllGremlins(AbstractDungeon.player.currentHealth / 10 * 3, false);
+                    //  ((GremlinCharacter) AbstractDungeon.player).damageAllGremlins(AbstractDungeon.player.currentHealth / 10 * 3, false);
                 } else {
                     AbstractDungeon.player.damage(new DamageInfo(null, AbstractDungeon.player.currentHealth / 10 * 3, DamageType.HP_LOSS));
                 }

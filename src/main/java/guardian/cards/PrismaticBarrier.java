@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
-import sneckomod.SneckoMod;
 
 public class PrismaticBarrier extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("PrismaticBarrier");

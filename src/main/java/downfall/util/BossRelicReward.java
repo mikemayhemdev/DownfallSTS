@@ -1,5 +1,6 @@
 package downfall.util;
 
+import com.evacipated.cardcrawl.mod.stslib.patches.CenterGridCardSelectScreen;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,7 +12,6 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.cards.OctoChoiceCard;
 import downfall.downfallMod;
 import expansioncontent.expansionContentMod;
-import com.evacipated.cardcrawl.mod.stslib.patches.CenterGridCardSelectScreen;
 
 import java.util.ArrayList;
 

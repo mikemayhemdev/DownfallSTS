@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import downfall.downfallMod;
 import gremlin.GremlinMod;
 import gremlin.orbs.GremlinStandby;
-import sneckomod.SneckoMod;
 
 public class Revel extends AbstractGremlinCard {
     public static final String ID = getID("Revel");

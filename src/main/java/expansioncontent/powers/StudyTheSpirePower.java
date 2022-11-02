@@ -14,8 +14,6 @@ import downfall.downfallMod;
 import downfall.util.TextureLoader;
 import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.expansionContentMod;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 
 public class StudyTheSpirePower extends AbstractPower implements NonStackablePower {

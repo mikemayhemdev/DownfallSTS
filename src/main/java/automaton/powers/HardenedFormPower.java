@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import gremlin.actions.PseudoDamageRandomEnemyAction;
+import downfall.actions.PseudoDamageRandomEnemyAction;
 
 public class HardenedFormPower extends AbstractAutomatonPower implements OnCompilePower {
     public static final String NAME = "HardenedForm";

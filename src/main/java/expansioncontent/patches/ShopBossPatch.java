@@ -10,7 +10,10 @@ import com.megacrit.cardcrawl.shop.ShopScreen;
 import downfall.downfallMod;
 import downfall.patches.EvilModeCharacterSelect;
 import expansioncontent.actions.RandomCardWithTagAction;
-import expansioncontent.cards.*;
+import expansioncontent.cards.GuardianWhirl;
+import expansioncontent.cards.Hexaburn;
+import expansioncontent.cards.HyperBeam;
+import expansioncontent.cards.LastStand;
 import slimebound.cards.PrepareCrushBossCard;
 
 import java.util.ArrayList;
