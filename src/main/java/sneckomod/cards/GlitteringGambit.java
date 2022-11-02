@@ -2,8 +2,9 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.actions.ChangeGoldAction;
+import downfall.downfallMod;
 import sneckomod.SneckoMod;
-import sneckomod.actions.ChangeGoldAction;
 
 public class GlitteringGambit extends AbstractSneckoCard {
 
@@ -17,10 +18,10 @@ public class GlitteringGambit extends AbstractSneckoCard {
     public GlitteringGambit() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        tags.add(SneckoMod.SNEKPROOF);
+        tags.add(downfallMod.SNEKPROOF);
         exhaust = true;
         tags.add(CardTags.HEALING);
-        tags.add(SneckoMod.RNG);
+        tags.add(downfallMod.RNG);
         SneckoMod.loadJokeCardImage(this, "GlitteringGambit.png");
     }
 

@@ -28,7 +28,7 @@ public class ChargedBarrage extends AbstractHexaCard {
     public ChargedBarrage() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseBurn = burn = MAGIC;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
     }
 
     private AbstractGameEffect getVFXForThrow(AbstractPlayer p, AbstractMonster m) {

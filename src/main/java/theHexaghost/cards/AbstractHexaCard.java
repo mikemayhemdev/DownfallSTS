@@ -18,7 +18,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
-import hermit.util.TextureLoader;
+import downfall.util.TextureLoader;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.BurnPower;
 import theHexaghost.powers.CrispyPower;

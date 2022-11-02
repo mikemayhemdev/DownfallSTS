@@ -1,7 +1,6 @@
 package automaton.cards.goodstatus;
 
 
-import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -14,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
+import downfall.downfallMod;
 import downfall.util.CardIgnore;
 import theHexaghost.powers.BurnPower;
 
@@ -44,7 +44,7 @@ public class Ignite extends AbstractCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = 10;
 
-        tags.add(AutomatonMod.GOOD_STATUS);
+        tags.add(downfallMod.GOOD_STATUS);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

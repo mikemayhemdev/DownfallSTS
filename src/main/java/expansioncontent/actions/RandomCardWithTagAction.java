@@ -1,8 +1,6 @@
 package expansioncontent.actions;
 
 
-import automaton.AutomatonChar;
-import champ.ChampChar;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,8 +9,6 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
 import expansioncontent.expansionContentMod;
-import theHexaghost.TheHexaghost;
-
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -49,15 +45,15 @@ public class RandomCardWithTagAction extends AbstractGameAction {
     }
 
     public static boolean hexaLocked() {
-        return UnlockTracker.isCharacterLocked(TheHexaghost.ID);
+        return UnlockTracker.isCharacterLocked("hexamod:theHexaghost");
     }
 
     public static boolean champLocked() {
-        return UnlockTracker.isCharacterLocked(ChampChar.ID);
+        return UnlockTracker.isCharacterLocked("champ:theChamp");
     }
 
     public static boolean autoLocked() {
-        return UnlockTracker.isCharacterLocked(AutomatonChar.ID);
+        return UnlockTracker.isCharacterLocked("bronze:theAutomaton");
     }
 
     public void update() {

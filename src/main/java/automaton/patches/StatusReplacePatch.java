@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.MedicalKit;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import downfall.downfallMod;
 
 @SpirePatch(
         clz = AbstractCard.class,
@@ -27,7 +28,7 @@ public class StatusReplacePatch {
                 if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
                     ////SlimeboundMod.logger.info("IS STATUS!");
                     if (AbstractDungeon.player.hasRelic(BronzeIdol.ID)) {
-                        if (!abstractCard.hasTag(AutomatonMod.GOOD_STATUS)) {
+                        if (!abstractCard.hasTag(downfallMod.GOOD_STATUS)) {
 
                             AbstractCard newStatus = AutomatonMod.getGoodStatus(abstractCard);
                             if (AbstractDungeon.player.hasRelic(MedicalKit.ID) && !(newStatus instanceof UsefulSlime)) {

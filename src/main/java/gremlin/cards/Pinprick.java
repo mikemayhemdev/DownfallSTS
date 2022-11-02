@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import gremlin.actions.MakeEchoAction;
+import downfall.actions.MakeEchoAction;
 
 import static gremlin.GremlinMod.SNEAKY_GREMLIN;
 

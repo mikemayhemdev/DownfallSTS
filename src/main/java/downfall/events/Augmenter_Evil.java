@@ -1,5 +1,6 @@
 package downfall.events;
 
+import downfall.util.JaxReward;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.colorless.JAX;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -15,7 +16,6 @@ import com.megacrit.cardcrawl.relics.Circlet;
 import com.megacrit.cardcrawl.relics.MutagenicStrength;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
-import downfall.util.JaxReward;
 import downfall.util.TransformCardReward;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -93,7 +93,7 @@ public class Augmenter_Evil extends AbstractImageEvent {
                         this.imageEventText.clearRemainingOptions();
                         break;
                     case 3:
-                        //SlimeboundMod.logger.info("fight");
+                        //downfallMod.logger.info("fight");
                         logMetric(ID, "Fight");
 
                         AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("downfall:Augmenter");

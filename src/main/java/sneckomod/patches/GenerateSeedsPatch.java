@@ -5,7 +5,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.random.Random;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 
 @SpirePatch(
         clz = AbstractDungeon.class,
@@ -14,6 +14,6 @@ import sneckomod.SneckoMod;
 public class GenerateSeedsPatch {
     @SpirePostfixPatch
     public static void Postfix() {
-        SneckoMod.identifyRng = new Random(Settings.seed);
+        downfallMod.identifyRng = new Random(Settings.seed);
     }
 }

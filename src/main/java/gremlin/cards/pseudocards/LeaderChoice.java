@@ -7,12 +7,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import gremlin.cards.AbstractGremlinCard;
 import gremlin.patches.Unmovable;
 
 import java.util.ArrayList;
-
-import static automaton.AutomatonMod.GOOD_STATUS;
 
 
 public class LeaderChoice extends AbstractGremlinCard implements Unmovable {
@@ -32,7 +31,7 @@ public class LeaderChoice extends AbstractGremlinCard implements Unmovable {
         this.dontTriggerOnUseCard = true;
         this.purgeOnUse = true;
         // To not break with Bronze Idol
-        this.tags.add(GOOD_STATUS);
+        this.tags.add(downfallMod.GOOD_STATUS);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

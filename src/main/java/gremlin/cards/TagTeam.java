@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import downfall.downfallMod;
 import gremlin.GremlinMod;
 import gremlin.cards.pseudocards.*;
 import gremlin.orbs.*;
@@ -33,7 +34,7 @@ public class TagTeam extends AbstractGremlinCard {
     public TagTeam() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
         updateModal();
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
         GremlinMod.loadJokeCardImage(this, "TagTeam.png");
     }
 

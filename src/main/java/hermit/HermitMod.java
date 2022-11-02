@@ -20,7 +20,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
 import downfall.util.CardIgnore;
-import hermit.actions.MessageCaller;
+import downfall.actions.MessageCaller;
 import hermit.cards.*;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
@@ -261,7 +261,7 @@ public class HermitMod implements
 
 
     public static String getModID() { // NO
-        return modID; // DOUBLE NO
+        return downfallMod.hermitModID; // DOUBLE NO
     } // NU-UH
 
     /*

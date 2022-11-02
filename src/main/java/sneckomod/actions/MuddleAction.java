@@ -3,7 +3,7 @@ package sneckomod.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 import sneckomod.powers.MudshieldPower;
 import sneckomod.relics.CleanMud;
 import sneckomod.relics.CrystallizedMud;
@@ -26,7 +26,7 @@ public class MuddleAction extends AbstractGameAction {
 
     public void update() {
         isDone = true;
-        if (card.cost >= 0 && !card.hasTag(SneckoMod.SNEKPROOF)) {// 32
+        if (card.cost >= 0 && !card.hasTag(downfallMod.SNEKPROOF)) {// 32
             if (AbstractDungeon.player.hasPower(MudshieldPower.POWER_ID)) {
                 AbstractDungeon.player.getPower(MudshieldPower.POWER_ID).onSpecificTrigger();
             }

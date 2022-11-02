@@ -29,7 +29,7 @@ import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
 import com.megacrit.cardcrawl.events.shrines.PurificationShrine;
 import com.megacrit.cardcrawl.events.shrines.Transmogrifier;
 import com.megacrit.cardcrawl.events.shrines.UpgradeShrine;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
@@ -37,6 +37,7 @@ import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
+import downfall.dailymods.*;
 import downfall.downfallMod;
 import guardian.cards.*;
 import guardian.characters.GuardianCharacter;
@@ -47,7 +48,7 @@ import guardian.helpers.MultihitVariable;
 import guardian.helpers.SecondaryMagicVariable;
 import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
-import guardian.patches.BottledStasisPatch;
+import downfall.patches.BottledStasisPatch;
 import guardian.patches.RewardItemTypePatch;
 import guardian.potions.AcceleratePotion;
 import guardian.potions.BlockOnCardUsePotion;
@@ -322,7 +323,7 @@ public class GuardianMod implements PostDrawSubscriber,
     }
 
     public static String getModID() {
-        return modID;
+        return downfallMod.guardianModID;
     }
 
 
@@ -531,8 +532,14 @@ public static void saveData() {
     }
  */
 
-    public void receivePostDungeonInitialize() {
 
+    @Override
+    public void receivePostDungeonInitialize() {
+        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Jewelcrafting.ID) || ModHelper.isModEnabled(Jewelcrafting.ID)) {
+            RelicLibrary.getRelic(PickAxe.ID).makeCopy().instantObtain();
+            AbstractDungeon.player.masterDeck.addToTop(new ExploitGems());
+            AbstractDungeon.player.masterDeck.addToTop(new ExploitGems());
+        }
 
     }
 

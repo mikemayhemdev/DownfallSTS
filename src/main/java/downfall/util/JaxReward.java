@@ -6,11 +6,13 @@ import com.megacrit.cardcrawl.cards.colorless.JAX;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import downfall.downfallMod;
 import downfall.patches.RewardItemTypeEnumPatch;
+import downfall.util.TextureLoader;
 
 public class JaxReward extends CustomReward {
-    public static final String ID = AutomatonMod.makeID("JaxReward");
-    public static final String[] TEXT = CardCrawlGame.languagePack.getUIString("bronze:SpecificCardReward").TEXT;
+    public static final String ID = downfallMod.makeID("JaxReward");
+    public static final String[] TEXT = CardCrawlGame.languagePack.getUIString("downfall:SpecificCardReward").TEXT;
 
     public JaxReward() {
         super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), "ERROR", RewardItemTypeEnumPatch.JAXCARD);

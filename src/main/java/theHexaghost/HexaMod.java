@@ -24,12 +24,15 @@ import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.events.beyond.Falling;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.city.Ghosts;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.scenes.TheBottomScene;
 import com.megacrit.cardcrawl.vfx.scene.InteractableTorchEffect;
 import downfall.downfallMod;
-import downfall.patches.BanSharedContentPatch;
+import slimebound.patches.BanSharedContentPatch;
+import downfall.patches.RewardItemTypeEnumPatch;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
 import javassist.CtClass;
@@ -48,6 +51,7 @@ import theHexaghost.potions.SoulburnPotion;
 import theHexaghost.relics.*;
 import theHexaghost.util.BurnVariable;
 import theHexaghost.util.CardFilter;
+import theHexaghost.util.SealSealReward;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -71,7 +75,8 @@ public class HexaMod implements
         OnStartBattleSubscriber,
         PostBattleSubscriber,
         SetUnlocksSubscriber,
-        PostDeathSubscriber {
+        PostDeathSubscriber,
+PostDungeonInitializeSubscriber{
     public static final String SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "hexamodResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "hexamodResources/images/char/mainChar/corpse.png";
@@ -116,12 +121,30 @@ public class HexaMod implements
 
     }
 
+    @Override
+    public void receivePostDungeonInitialize() {
+
+        if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_SPIRIT)) {
+            for (AbstractCard c : CardLibrary.getAllCards()) {
+                if (c.hasTag(HexaMod.GHOSTWHEELCARD) && c.hasTag(AbstractCard.CardTags.HEALING)) {
+                    c.tags.remove(AbstractCard.CardTags.HEALING);
+                }
+            }
+        } else {
+            for (AbstractCard c : CardLibrary.getAllCards()) {
+                if (c.hasTag(HexaMod.GHOSTWHEELCARD)) {
+                    c.tags.add(AbstractCard.CardTags.HEALING);
+                }
+            }
+        }
+    }
+
     public static void loadJokeCardImage(AbstractCard card, String img) {
         if (card instanceof AbstractHexaCard) {
             ((AbstractHexaCard) card).betaArtPath = img;
         }
         Texture cardTexture;
-        cardTexture = hermit.util.TextureLoader.getTexture(getModID() + "Resources/images/betacards/" + img);
+        cardTexture = TextureLoader.getTexture(getModID() + "Resources/images/betacards/" + img);
         cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         int tw = cardTexture.getWidth();
         int th = cardTexture.getHeight();
@@ -150,7 +173,7 @@ public class HexaMod implements
     }
 
     public static String getModID() {
-        return modID;
+        return downfallMod.hexaghostModID;
     }
 
     public static void initialize() {
@@ -457,7 +480,13 @@ public class HexaMod implements
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
+
+        //Hexaghost
+        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.SEALCARD, (rewardSave) -> new SealSealReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
+
     }
+
+
 
 
 }

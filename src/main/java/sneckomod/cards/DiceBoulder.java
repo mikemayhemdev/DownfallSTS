@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 import sneckomod.actions.NoApplyRandomDamageAction;
 
 public class DiceBoulder extends AbstractSneckoCard {
@@ -16,7 +16,7 @@ public class DiceBoulder extends AbstractSneckoCard {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 27;
         baseMagicNumber = magicNumber = 1;
-        tags.add(SneckoMod.RNG);
+        tags.add(downfallMod.RNG);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

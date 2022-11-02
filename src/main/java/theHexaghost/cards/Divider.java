@@ -15,7 +15,7 @@ public class Divider extends AbstractHexaCard {
     public Divider() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 3;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "Divider.png");
     }
 

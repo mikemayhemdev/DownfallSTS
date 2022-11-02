@@ -4,7 +4,6 @@ import collector.cards.CollectorCards.AbstractCollectorCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import theHexaghost.powers.BurnPower;
 
 public class Fever extends AbstractCollectorCard {
     public final static String ID = makeID("Fever");
@@ -16,7 +15,7 @@ public class Fever extends AbstractCollectorCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToEnemy(m, new BurnPower(m, magicNumber));
+  //      applyToEnemy(m, new BurnPower(m, magicNumber));
         applyToEnemy(m, new WeakPower(m, 1, false));
     }
 

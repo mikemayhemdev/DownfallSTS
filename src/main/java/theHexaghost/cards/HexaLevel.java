@@ -20,7 +20,7 @@ public class HexaLevel extends AbstractHexaCard {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(HexaMod.GHOSTWHEELCARD);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
         tags.add(BaseModCardTags.FORM);
         HexaMod.loadJokeCardImage(this, "HexaLevel.png");
     }

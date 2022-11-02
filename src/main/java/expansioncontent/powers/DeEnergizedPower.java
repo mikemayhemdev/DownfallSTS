@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import downfall.downfallMod;
 import downfall.util.TextureLoader;
 import expansioncontent.expansionContentMod;
 
@@ -20,8 +21,8 @@ public class DeEnergizedPower extends AbstractPower implements CloneablePowerInt
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/DeEnergized84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/DeEnergized32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(downfallMod.expansioncontentModID + "Resources/images/powers/DeEnergized84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(downfallMod.expansioncontentModID + "Resources/images/powers/DeEnergized32.png");
 
     public DeEnergizedPower(final int amount) {
         this.name = NAME;

@@ -3,7 +3,7 @@ package sneckomod.cards;
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 import sneckomod.powers.SerpentMindPower;
 
 public class SerpentMind extends AbstractSneckoCard {
@@ -19,7 +19,7 @@ public class SerpentMind extends AbstractSneckoCard {
         baseMagicNumber = magicNumber = MAGIC;
 
         tags.add(BaseModCardTags.FORM);
-        tags.add(SneckoMod.SNEKPROOF);
+        tags.add(downfallMod.SNEKPROOF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -28,7 +28,7 @@ public class SerpentMind extends AbstractSneckoCard {
 
     public void upgrade() {
         if (!upgraded) {
-            tags.remove(SneckoMod.SNEKPROOF);
+            tags.remove(downfallMod.SNEKPROOF);
             upgradeName();
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();

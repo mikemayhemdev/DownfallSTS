@@ -23,25 +23,25 @@ public class DeathScreenCharUnlockPatch {
         String[] TEXT = CardCrawlGame.languagePack.getUIString("DeathScreen").TEXT;
 
         if (label == TEXT[37]) {
-            //////SlimeboundMod.logger.info("text patch fired");
+            //////downfallMod.logger.info("text patch fired");
             if (UnlockTracker.isCharacterLocked("Guardian")) {
-                //   //SlimeboundMod.logger.info("first if");
+                //   //downfallMod.logger.info("first if");
                 __instance.appear(Settings.WIDTH / 2.0F, Settings.HEIGHT * 0.15F, TEXT[40]);
                 __instance.label = TEXT[40];
             } else if (UnlockTracker.isCharacterLocked("Hexaghost") && EvilModeCharacterSelect.evilMode && AbstractDungeon.player.chosenClass == downfallMod.Enums.GUARDIAN) {
-                //  //SlimeboundMod.logger.info("second if");
+                //  //downfallMod.logger.info("second if");
                 __instance.appear(Settings.WIDTH / 2.0F, Settings.HEIGHT * 0.15F, TEXT[40]);
                 __instance.label = TEXT[40];
             } else if (UnlockTracker.isCharacterLocked("Champ") && EvilModeCharacterSelect.evilMode && AbstractDungeon.player.chosenClass == downfallMod.Enums.THE_SPIRIT) {
-                //  //SlimeboundMod.logger.info("second if");
+                //  //downfallMod.logger.info("second if");
                 __instance.appear(Settings.WIDTH / 2.0F, Settings.HEIGHT * 0.15F, TEXT[40]);
                 __instance.label = TEXT[40];
             } else if (UnlockTracker.isCharacterLocked("Automaton") && EvilModeCharacterSelect.evilMode && AbstractDungeon.player.chosenClass == downfallMod.Enums.THE_CHAMP) {
-                //  //SlimeboundMod.logger.info("second if");
+                //  //downfallMod.logger.info("second if");
                 __instance.appear(Settings.WIDTH / 2.0F, Settings.HEIGHT * 0.15F, TEXT[40]);
                 __instance.label = TEXT[40];
             } else if (UnlockTracker.isCharacterLocked("Gremlin") && EvilModeCharacterSelect.evilMode && AbstractDungeon.player.chosenClass == downfallMod.Enums.THE_AUTOMATON) {
-                //  //SlimeboundMod.logger.info("second if");
+                //  //downfallMod.logger.info("second if");
                 __instance.appear(Settings.WIDTH / 2.0F, Settings.HEIGHT * 0.15F, TEXT[40]);
                 __instance.label = TEXT[40];
             } else if ((UnlockTracker.isCharacterLocked("Snecko")) &&
@@ -52,7 +52,7 @@ public class DeathScreenCharUnlockPatch {
                     !(UnlockTracker.isCharacterLocked("Automaton")) &&
                     !(UnlockTracker.isCharacterLocked("Gremlin")) &&
                     EvilModeCharacterSelect.evilMode && AbstractDungeon.player.chosenClass == downfallMod.Enums.GREMLIN) {
-                //   //SlimeboundMod.logger.info("third if");
+                //   //downfallMod.logger.info("third if");
                 __instance.appear(Settings.WIDTH / 2.0F, Settings.HEIGHT * 0.15F, TEXT[40]);
                 __instance.label = TEXT[40];
             }

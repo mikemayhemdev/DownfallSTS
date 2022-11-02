@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import guardian.vfx.SmallLaserEffectColored;
+import downfall.vfx.SmallLaserEffectColored;
 
 public class MinorBeam extends AbstractBronzeCard {
 

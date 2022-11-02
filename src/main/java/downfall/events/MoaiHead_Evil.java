@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.helpers.ScreenShake.ShakeDur;
 import com.megacrit.cardcrawl.helpers.ScreenShake.ShakeIntensity;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import downfall.downfallMod;
-import gremlin.characters.GremlinCharacter;
 
 public class MoaiHead_Evil extends AbstractImageEvent {
     public static final String ID = "downfall:MoaiHead";
@@ -66,8 +65,9 @@ public class MoaiHead_Evil extends AbstractImageEvent {
                     }
                     logMetricHealAndLoseMaxHP(ID, "Heal", AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth, hpAmt);
                     AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
+                    //TODO - Gremlin Damage
                     if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
-                        ((GremlinCharacter) AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
+                    //    ((GremlinCharacter) AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
                     }
                     this.screenNum = 1;
                     this.imageEventText.updateDialogOption(0, OPTIONS[4]);
@@ -81,8 +81,9 @@ public class MoaiHead_Evil extends AbstractImageEvent {
                     logMetric(ID, "Gave Souls", null, null, null, null, null, null, null,
                             0, AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth, 0, hpAmt, goldAmount, 0);
                     AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
+                    //TODO - Gremlin Damage
                     if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
-                        ((GremlinCharacter) AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
+                    //    ((GremlinCharacter) AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
                     }
                     this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                     this.imageEventText.clearRemainingOptions();

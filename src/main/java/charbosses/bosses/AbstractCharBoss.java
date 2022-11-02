@@ -61,7 +61,6 @@ import com.megacrit.cardcrawl.vfx.combat.DeckPoofEffect;
 import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
 import downfall.downfallMod;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -269,7 +268,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (AbstractCard _c : this.hand.group) {
             AbstractBossCard c = (AbstractBossCard) _c;
             if (c.canUse(AbstractDungeon.player, this) && c.getPriority(this.hand.group) > -100) {
-                //SlimeboundMod.logger.info("Enemy using card: " + c.name + " energy = " + EnemyEnergyPanel.totalCount);
+                //downfallMod.logger.info("Enemy using card: " + c.name + " energy = " + EnemyEnergyPanel.totalCount);
                 this.useCard(c, this, EnemyEnergyPanel.totalCount);
                 this.addToBot(new DelayedActionAction(new CharbossDoNextCardAction()));
                 return;
@@ -329,7 +328,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
 
     public void startTurn() {
-        ////SlimeboundMod.logger.info("Start Turn Triggered");
+        ////downfallMod.logger.info("Start Turn Triggered");
         this.cardsPlayedThisTurn = 0;
         this.attacksPlayedThisTurn = 0;
         for (AbstractCard c : hand.group) {
@@ -444,9 +443,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (int i = 0; i < hand.size(); i++) {
             AbstractBossCard c = (AbstractBossCard) hand.group.get(i);
 
-            SlimeboundMod.logger.info("intent calcs: " + c.name);
+            downfallMod.logger.info("intent calcs: " + c.name);
             if (!c.lockIntentValues) {
-                SlimeboundMod.logger.info(c.name + " not locked, calculating.");
+                downfallMod.logger.info(c.name + " not locked, calculating.");
 
                 //Artifact Checks - calculates if any Artifact will be left
                 if (c.artifactConsumedIfPlayed > 0) {
@@ -465,26 +464,26 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
                 //Shuriken Checks for Act 1 Silent
                 if (hasShuriken) {
-                    SlimeboundMod.logger.info("has shuriken");
+                    downfallMod.logger.info("has shuriken");
                     AbstractBossCard c3 = (AbstractBossCard) hand.group.get(i);
                     if (c.type == AbstractCard.CardType.ATTACK || c3 instanceof EnCloakAndDagger) {
-                        SlimeboundMod.logger.info(c.name + " is an attack.");
+                        downfallMod.logger.info(c.name + " is an attack.");
                         attackCount++;
                         if (attackCount == 3) {
-                            SlimeboundMod.logger.info(c.name + " is 3rd attack.");
+                            downfallMod.logger.info(c.name + " is 3rd attack.");
                             for (int j = i + 1; j < hand.size(); j++) {
                                 AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
-                                SlimeboundMod.logger.info(c2.name + " is gaining damage.");
+                                downfallMod.logger.info(c2.name + " is gaining damage.");
                                 c2.manualCustomDamageModifier += 1;
                             }
                             attackCount = 0;
                         }
                     }
                     if (c3 instanceof EnBladeDance) {
-                        SlimeboundMod.logger.info(c.name + " procs Shuriken.");
+                        downfallMod.logger.info(c.name + " procs Shuriken.");
                         for (int j = i + 1; j < hand.size(); j++) {
                             AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
-                            SlimeboundMod.logger.info(c2.name + " is gaining damage.");
+                            downfallMod.logger.info(c2.name + " is gaining damage.");
                             c2.manualCustomDamageModifier += 1;
                         }
                     }
@@ -597,7 +596,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
         int budget = energyPanel.getCurrentEnergy();
-        ////SlimeboundMod.logger.info("Hand budget being calculated for the turn." + budget);
+        ////downfallMod.logger.info("Hand budget being calculated for the turn." + budget);
         for (int i = 0; i < cardsByValue.size(); i++) {
             AbstractBossCard c = cardsByValue.get(i);
             if (c.costForTurn <= budget && c.costForTurn != -2) {
@@ -630,7 +629,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
 
         budget = energyPanel.getCurrentEnergy();
-        ////SlimeboundMod.logger.info("Hand budget being calculated for the turn." + budget);
+        ////downfallMod.logger.info("Hand budget being calculated for the turn." + budget);
         for (int i = 0; i < sortedCards.size(); i++) {
             AbstractBossCard c = (AbstractBossCard) sortedCards.get(i);
             if (c.costForTurn <= budget && c.costForTurn != -2 && c.getPriority(this.hand.group) > -100) {
@@ -727,21 +726,21 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             //Skip the top card.
             if (drawPile.get(0) != c) {
                 if (attack && c.hasTag(downfallMod.CHARBOSS_ATTACK)) {
-                    //if (debugLog) //SlimeboundMod.logger.info("Attack replacement was requested. Returning: " + c.name);
+                    //if (debugLog) //downfallMod.logger.info("Attack replacement was requested. Returning: " + c.name);
                     return c;
                 }
                 if (setup && c.hasTag(downfallMod.CHARBOSS_SETUP)) {
-                    //if (debugLog) //SlimeboundMod.logger.info("Setup replacement was requested. Returning: " + c.name);
+                    //if (debugLog) //downfallMod.logger.info("Setup replacement was requested. Returning: " + c.name);
                     return c;
                 }
                 if (!setup && !attack && !c.hasTag(downfallMod.CHARBOSS_SETUP) && !c.hasTag(downfallMod.CHARBOSS_ATTACK)) {
                     //if (debugLog)
-                    //SlimeboundMod.logger.info("Either-phase replacement was requested. Returning: " + c.name);
+                    //downfallMod.logger.info("Either-phase replacement was requested. Returning: " + c.name);
                     return c;
                 }
             }
         }
-        //if (debugLog) //SlimeboundMod.logger.info("Replacement was requested, but no card was valid. Returning null");
+        //if (debugLog) //downfallMod.logger.info("Replacement was requested, but no card was valid. Returning null");
 
         return null;
     }
@@ -750,12 +749,12 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         AbstractCard replacementCard = null;
 
         if (firstPriority == secondPriority || firstPriority == thirdPriority || secondPriority == thirdPriority) {
-            //SlimeboundMod.logger.info("ERROR! performCardSearch has two parameters as the same priority! These all need to be different! First priority:" + firstPriority + "Second priority: " + secondPriority + "Third priority: " + thirdPriority);
+            //downfallMod.logger.info("ERROR! performCardSearch has two parameters as the same priority! These all need to be different! First priority:" + firstPriority + "Second priority: " + secondPriority + "Third priority: " + thirdPriority);
 
             return null;
         }
 
-        ////SlimeboundMod.logger.info("Replacement search requested.  First priority: " + firstPriority);
+        ////downfallMod.logger.info("Replacement search requested.  First priority: " + firstPriority);
 
         if (firstPriority == DrawTypes.Setup) {
             replacementCard = findReplacementCardInDraw(drawPile, false, true);
@@ -766,11 +765,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
 
         if (replacementCard != null) {
-            //SlimeboundMod.logger.info("First priority search successful. Returning " + replacementCard.name);
+            //downfallMod.logger.info("First priority search successful. Returning " + replacementCard.name);
             return replacementCard;
         }
 
-        //SlimeboundMod.logger.info("First priority failed.  Second priority: " + secondPriority);
+        //downfallMod.logger.info("First priority failed.  Second priority: " + secondPriority);
 
         if (secondPriority == DrawTypes.Setup) {
             replacementCard = findReplacementCardInDraw(drawPile, false, true);
@@ -781,11 +780,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
 
         if (replacementCard != null) {
-            //SlimeboundMod.logger.info("Second priority search successful. Returning " + replacementCard.name);
+            //downfallMod.logger.info("Second priority search successful. Returning " + replacementCard.name);
             return replacementCard;
         }
 
-        //SlimeboundMod.logger.info("Second priority failed.  Third priority: " + thirdPriority);
+        //downfallMod.logger.info("Second priority failed.  Third priority: " + thirdPriority);
 
         if (thirdPriority == DrawTypes.Setup) {
             replacementCard = findReplacementCardInDraw(drawPile, false, true);
@@ -795,10 +794,10 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             replacementCard = findReplacementCardInDraw(drawPile, false, false);
         }
 
-        //SlimeboundMod.logger.info("Third priority search successful. Returning " + replacementCard.name);
+        //downfallMod.logger.info("Third priority search successful. Returning " + replacementCard.name);
         return replacementCard;
 
-        //SlimeboundMod.logger.info("Priority search yielded no result. Returning null.");
+        //downfallMod.logger.info("Priority search yielded no result. Returning null.");
     }
 
 
@@ -811,78 +810,78 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
             //Force Draw is for mechanics like Headbutt, where a card should be drawn regardless of phase
             if (c.forceDraw) {
-                //if (debugLog) //SlimeboundMod.logger.info("Force Drawing " + c.name);
+                //if (debugLog) //downfallMod.logger.info("Force Drawing " + c.name);
                 return c;
             }
 
             if (this.onSetupTurn) {
                 if (setupsDrawnForSetupPhase < 1) {
-                    //if (debugLog) //SlimeboundMod.logger.info("Attempting to draw a Setup card");
+                    //if (debugLog) //downfallMod.logger.info("Attempting to draw a Setup card");
                     if (c.hasTag(downfallMod.CHARBOSS_SETUP)) {
-                        //if (debugLog) //SlimeboundMod.logger.info("Top card is good. Drawing Setup Card " + c.name);
+                        //if (debugLog) //downfallMod.logger.info("Top card is good. Drawing Setup Card " + c.name);
                         setupsDrawnForSetupPhase++;
                         return c;
                     } else {
                         //if (debugLog)
-                        //SlimeboundMod.logger.info("Top card is not a Setup. Finding Setup->Either->Attack replacement.");
+                        //downfallMod.logger.info("Top card is not a Setup. Finding Setup->Either->Attack replacement.");
                         replacementCard = performCardSearch(drawPile, DrawTypes.Setup, DrawTypes.EitherPhase, DrawTypes.Attack);
                         if (replacementCard != null) {
-                            //if (debugLog) //SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
+                            //if (debugLog) //downfallMod.logger.info("Drawing replacement: " + replacementCard.name);
                             return replacementCard;
                         } else {
-                            //if (debugLog) //SlimeboundMod.logger.info("Null was returned by replacement search.");
+                            //if (debugLog) //downfallMod.logger.info("Null was returned by replacement search.");
                         }
                     }
                 } else {
                     //if (debugLog)
-                    //SlimeboundMod.logger.info("Setup card already drawn. Finding Either->Setup->Attack replacement.");
+                    //downfallMod.logger.info("Setup card already drawn. Finding Either->Setup->Attack replacement.");
                     replacementCard = performCardSearch(drawPile, DrawTypes.EitherPhase, DrawTypes.Setup, DrawTypes.Attack);
                     if (replacementCard != null) {
-                        //if (debugLog) //SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
+                        //if (debugLog) //downfallMod.logger.info("Drawing replacement: " + replacementCard.name);
                         return replacementCard;
                     } else {
-                        //if (debugLog) //SlimeboundMod.logger.info("Null was returned by replacement search.");
+                        //if (debugLog) //downfallMod.logger.info("Null was returned by replacement search.");
                     }
                 }
             }
 
             if (!this.onSetupTurn) {
                 if (attacksDrawnForAttackPhase < 1) {
-                    //if (debugLog) //SlimeboundMod.logger.info("Attempting to draw a Attack card");
+                    //if (debugLog) //downfallMod.logger.info("Attempting to draw a Attack card");
                     if (c.hasTag(downfallMod.CHARBOSS_ATTACK)) {
-                        //if (debugLog) //SlimeboundMod.logger.info("Top card is good. Drawing Attack Card " + c.name);
+                        //if (debugLog) //downfallMod.logger.info("Top card is good. Drawing Attack Card " + c.name);
                         attacksDrawnForAttackPhase++;
                         return c;
                     } else {
                         //if (debugLog)
-                        //SlimeboundMod.logger.info("Top card is not a Attack. Finding Attack->Either->Setup replacement.");
+                        //downfallMod.logger.info("Top card is not a Attack. Finding Attack->Either->Setup replacement.");
                         replacementCard = performCardSearch(drawPile, DrawTypes.Attack, DrawTypes.EitherPhase, DrawTypes.Setup);
                         if (replacementCard != null) {
-                            //if (debugLog) //SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
+                            //if (debugLog) //downfallMod.logger.info("Drawing replacement: " + replacementCard.name);
                             return replacementCard;
                         } else {
-                            //if (debugLog) //SlimeboundMod.logger.info("Null was returned by replacement search.");
+                            //if (debugLog) //downfallMod.logger.info("Null was returned by replacement search.");
                         }
                     }
                 } else {
                     //if (debugLog)
-                    //SlimeboundMod.logger.info("2 Attack cards already drawn. Finding Either->Attack->Setup replacement.");
+                    //downfallMod.logger.info("2 Attack cards already drawn. Finding Either->Attack->Setup replacement.");
                     replacementCard = performCardSearch(drawPile, DrawTypes.EitherPhase, DrawTypes.Attack, DrawTypes.Setup);
                     if (replacementCard != null) {
-                        //if (debugLog) //SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
+                        //if (debugLog) //downfallMod.logger.info("Drawing replacement: " + replacementCard.name);
                         return replacementCard;
                     } else {
-                        //if (debugLog) //SlimeboundMod.logger.info("Null was returned by replacement search.");
+                        //if (debugLog) //downfallMod.logger.info("Null was returned by replacement search.");
                     }
                 }
             }
 
 
             //if (debugLog)
-            //SlimeboundMod.logger.info("WARNING: All draw logic has failed.  Drawing top card as a default: " + c.name);
+            //downfallMod.logger.info("WARNING: All draw logic has failed.  Drawing top card as a default: " + c.name);
             return c;
         } else {
-            //SlimeboundMod.logger.info("Drawing the last card in the deck, no logic used: " + c.name);
+            //downfallMod.logger.info("Drawing the last card in the deck, no logic used: " + c.name);
             return c;
         }
 
@@ -1013,10 +1012,10 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
         final boolean weakenedToZero = damageAmount == 0;
         damageAmount = this.decrementBlock(info, damageAmount);
-        ////SlimeboundMod.logger.info(info.owner + " pre damage about to apply relics");
+        ////downfallMod.logger.info(info.owner + " pre damage about to apply relics");
         if (info.owner == this) {
             for (final AbstractRelic r : this.relics) {
-                ////SlimeboundMod.logger.info(r.name + " onAttackToChange firing");
+                ////downfallMod.logger.info(r.name + " onAttackToChange firing");
                 damageAmount = r.onAttackToChangeDamage(info, damageAmount);
 
 
@@ -1164,7 +1163,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                         ++this.deathTimer;
                     }
                 } else {
-                    //SlimeboundMod.logger.info("Char boss On Boss Victory now playing");
+                    //downfallMod.logger.info("Char boss On Boss Victory now playing");
                     onBossVictoryLogic();
                 }
             }

@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 
 public class Restock extends AbstractSneckoCard {
 
@@ -14,8 +14,8 @@ public class Restock extends AbstractSneckoCard {
 
     public Restock() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        tags.add(SneckoMod.SNEKPROOF);
-        tags.add(SneckoMod.RNG);
+        tags.add(downfallMod.SNEKPROOF);
+        tags.add(downfallMod.RNG);
         this.exhaust = true;
     }
 

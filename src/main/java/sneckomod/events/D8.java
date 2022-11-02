@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 import java.util.ArrayList;
@@ -48,7 +48,7 @@ public class D8 extends AbstractImageEvent {
 
         CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).group) {
-            if (c.hasTag(SneckoMod.RNG)) {
+            if (c.hasTag(downfallMod.RNG)) {
                 tmp.addToTop(c);
             }
         }

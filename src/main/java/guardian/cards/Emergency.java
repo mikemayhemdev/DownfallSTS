@@ -44,7 +44,7 @@ public class Emergency extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-        // this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        // this.tags.add(downfallMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

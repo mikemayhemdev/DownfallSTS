@@ -2,7 +2,7 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 import sneckomod.actions.SerpentIdolAction;
 
 public class SerpentIdol extends AbstractSneckoCard {
@@ -14,7 +14,7 @@ public class SerpentIdol extends AbstractSneckoCard {
     public SerpentIdol() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
-        tags.add(SneckoMod.SNEKPROOF);
+        tags.add(downfallMod.SNEKPROOF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

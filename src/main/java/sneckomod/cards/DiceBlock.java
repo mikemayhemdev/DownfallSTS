@@ -3,7 +3,7 @@ package sneckomod.cards;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 
 public class DiceBlock extends AbstractSneckoCard {
 
@@ -13,7 +13,7 @@ public class DiceBlock extends AbstractSneckoCard {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 12;
         baseMagicNumber = magicNumber = 8;
-        tags.add(SneckoMod.RNG);
+        tags.add(downfallMod.RNG);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

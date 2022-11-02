@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.actions.GremlinSwapAction;
-import gremlin.actions.MakeEchoAction;
+import downfall.actions.MakeEchoAction;
 import gremlin.orbs.GremlinWizard;
 
 import static gremlin.GremlinMod.WIZARD_GREMLIN;

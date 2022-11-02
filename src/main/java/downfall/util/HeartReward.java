@@ -20,7 +20,6 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import downfall.downfallMod;
 import downfall.events.HeartEvent;
 import downfall.relics.HeartsMalice;
-import gremlin.characters.GremlinCharacter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -229,7 +228,8 @@ public class HeartReward {
                 break;
             case PERCENT_DAMAGE:
                 if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
-                    ((GremlinCharacter) AbstractDungeon.player).damageAllGremlins(AbstractDungeon.player.currentHealth / 10 * 3, false);
+                    //TODO - Another tricky one to try to move.
+                  //  ((GremlinCharacter) AbstractDungeon.player).damageAllGremlins(AbstractDungeon.player.currentHealth / 10 * 3, false);
                 } else {
                     AbstractDungeon.player.damage(new DamageInfo(null, AbstractDungeon.player.currentHealth / 10 * 3, DamageType.HP_LOSS));
                 }

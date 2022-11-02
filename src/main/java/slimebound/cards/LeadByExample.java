@@ -38,7 +38,7 @@ public class LeadByExample extends AbstractSlimeboundCard {
         this.magicNumber = this.baseMagicNumber = 1;
 
 
-        //  this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //  this.tags.add(downfallMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -17,7 +17,6 @@ import gremlin.actions.SetCardTargetCoordinatesAction;
 import gremlin.cards.AbstractGremlinCard;
 import gremlin.characters.GremlinCharacter;
 
-import static automaton.AutomatonMod.GOOD_STATUS;
 
 public class FightChoice extends AbstractGremlinCard {
     public static final String ID = getID("FightChoice");
@@ -39,7 +38,7 @@ public class FightChoice extends AbstractGremlinCard {
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
         // To not break with Bronze Idol
-        this.tags.add(GOOD_STATUS);
+        this.tags.add(downfallMod.GOOD_STATUS);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

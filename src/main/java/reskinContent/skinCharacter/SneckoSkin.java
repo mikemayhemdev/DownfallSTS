@@ -9,7 +9,8 @@ import reskinContent.skinCharacter.skins.Snecko.SneckoOriginal;
 import reskinContent.vfx.ReskinUnlockedTextEffect;
 
 
-public class SneckoSkin extends AbstractSkinCharacter {
+public class
+SneckoSkin extends AbstractSkinCharacter {
     public static final String ID = CardCrawlGame.languagePack.getCharacterString("sneckomod:theSnecko").NAMES[0];
     public static final AbstractSkin[] SKINS = new AbstractSkin[]{
             new SneckoOriginal(),

@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 import sneckomod.actions.NoApplyRandomDamageAction;
 
 public class SnakeSap extends AbstractSneckoCard {
@@ -24,8 +24,8 @@ public class SnakeSap extends AbstractSneckoCard {
         baseMagicNumber = magicNumber = MAGIC;
         baseSilly = silly = 1;
         exhaust = true;
-        tags.add(SneckoMod.SNEKPROOF);
-        tags.add(SneckoMod.RNG);
+        tags.add(downfallMod.SNEKPROOF);
+        tags.add(downfallMod.RNG);
     }
 
     @Override

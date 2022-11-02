@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import downfall.cardmods.BronzeCardMod;
+import downfall.downfallMod;
 
 public class EncodeAndShuffleMod extends BronzeCardMod {
 
@@ -32,7 +34,7 @@ public class EncodeAndShuffleMod extends BronzeCardMod {
 
     @Override
     public void onInitialApplication(AbstractCard card) {
-        card.tags.add(AutomatonMod.ENCODES);
+        card.tags.add(downfallMod.ENCODES);
     }
 
     @Override

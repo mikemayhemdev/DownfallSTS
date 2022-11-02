@@ -1,15 +1,9 @@
 {
-  "bronze:SpecificCardReward": {
+  "downfall:SpecificCardReward": {
     "TEXT": [
       "Ajoutez ",
       " à votre deck",
       "Prenez une carte."
-    ]
-  },
-  "bronze:UnplayableMod": {
-    "TEXT": [
-      "Injouable. NL ",
-      "ERR_NULL_PTR"
     ]
   },
   "bronze:EncodeAndShuffleMod": {

@@ -44,7 +44,7 @@ public class EnemyReboundPower extends AbstractPower {
         } else {
             if (card.type != CardType.POWER) {
                 this.flash();
-                //SlimeboundMod.logger.info("marking rebound card in EUCA");
+                //downfallMod.logger.info("marking rebound card in EUCA");
                 action.reboundCard = true;
             }
 

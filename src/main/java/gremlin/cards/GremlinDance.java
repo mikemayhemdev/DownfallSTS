@@ -45,7 +45,7 @@ public class GremlinDance extends AbstractGremlinCard {
 
     public GremlinDance() {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
 
         this.baseDamage = POWER;
         this.baseBlock = BLOCK;
@@ -58,12 +58,12 @@ public class GremlinDance extends AbstractGremlinCard {
         cardsList.add(new GremlinDance("shield"));
         cardsList.add(new GremlinDance("sneak"));
         cardsList.add(new GremlinDance("wizard"));
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
     }
 
     public GremlinDance(String gremlin) {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
 
         this.baseDamage = POWER;
         this.baseBlock = BLOCK;
@@ -71,7 +71,7 @@ public class GremlinDance extends AbstractGremlinCard {
         this.magicNumber = this.baseMagicNumber;
         this.gremlin = gremlin;
         updateContents();
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
     }
 
     @Override

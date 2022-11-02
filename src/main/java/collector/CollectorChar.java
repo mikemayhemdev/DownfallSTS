@@ -106,7 +106,7 @@ public class CollectorChar extends CustomPlayer {
 
     @Override
     public Texture getCustomModeCharacterButtonImage() {
-        return ImageMaster.loadImage(CollectorMod.getModID() + "Resources/images/charSelect/leaderboard.png");
+        return ImageMaster.loadImage(downfallMod.collectorModID + "Resources/images/charSelect/leaderboard.png");
     }
 
 

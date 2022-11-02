@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.TreasureRoom;
 import downfall.rooms.HeartShopRoom;
-import slimebound.events.DarklingsSlimebound;
+
 
 public class WindingHalls_Evil extends AbstractImageEvent {
     public static final String ID = "downfall:WindingHalls";
@@ -42,19 +42,19 @@ public class WindingHalls_Evil extends AbstractImageEvent {
                     this.imageEventText.clearAllDialogs();
                     boolean hackery = false;
                     boolean hackery2 = false;
-                    if (AbstractDungeon.eventList.contains(DarklingsSlimebound.ID)) {
-                        AbstractDungeon.eventList.remove(DarklingsSlimebound.ID);
+                    if (AbstractDungeon.eventList.contains("Slimebound:Darklings")) {
+                        AbstractDungeon.eventList.remove("Slimebound:Darklings");
                         hackery = true;
-                        //SlimeboundMod.logger.info("Hacked away darklings");
+                        //downfallMod.logger.info("Hacked away darklings");
                     }
                     if (AbstractDungeon.eventList.contains(MysteriousSphere.ID)) {
                         AbstractDungeon.eventList.remove(MysteriousSphere.ID);
                         hackery2 = true;
-                        //SlimeboundMod.logger.info("Hacked away orb walkers");
+                        //downfallMod.logger.info("Hacked away orb walkers");
                     }
                     AbstractDungeon.getCurrRoom().onPlayerEntry();
                     if (hackery) {
-                        AbstractDungeon.eventList.add(DarklingsSlimebound.ID);
+                        AbstractDungeon.eventList.add("Slimebound:Darklings");
                     }
                     if (hackery2) {
                         AbstractDungeon.eventList.add(MysteriousSphere.ID);

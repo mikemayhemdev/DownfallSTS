@@ -10,7 +10,7 @@ import downfall.util.TextureLoader;
 
 public class DazingPulseReward extends CustomReward {
     public static final String ID = AutomatonMod.makeID("DazingPulseReward");
-    public static final String[] TEXT = CardCrawlGame.languagePack.getUIString("bronze:SpecificCardReward").TEXT;
+    public static final String[] TEXT = CardCrawlGame.languagePack.getUIString("downfall:SpecificCardReward").TEXT;
 
     public DazingPulseReward() {
         super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), "ERROR", RewardItemTypeEnumPatch.DAZINGPULSE);

@@ -13,7 +13,8 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import guardian.patches.BottledStasisPatch;
+import downfall.downfallMod;
+import downfall.patches.BottledStasisPatch;
 
 import java.util.function.Predicate;
 
@@ -74,7 +75,7 @@ public class BottledCode extends CustomRelic implements CustomBottleRelic, Custo
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
         CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).group) {
-            if (c.hasTag(AutomatonMod.ENCODES)) tmp.addToTop(c);
+            if (c.hasTag(downfallMod.ENCODES)) tmp.addToTop(c);
         }
         AbstractDungeon.gridSelectScreen.open(tmp,
                 1, DESCRIPTIONS[1] + name + ".",

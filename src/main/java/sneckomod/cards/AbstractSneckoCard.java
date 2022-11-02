@@ -263,7 +263,7 @@ public abstract class AbstractSneckoCard extends CustomCard {
 
     public static String getCharList() {
         StringBuilder s = new StringBuilder();
-        for (CardColor c : SneckoMod.validColors) {
+        for (CardColor c : downfallMod.validColors) {
             s.append(" NL ").append(SneckoMod.getClassFromColor(c));
         }
         return s.toString();
@@ -274,9 +274,9 @@ public abstract class AbstractSneckoCard extends CustomCard {
         List<TooltipInfo> tips = new ArrayList<>();
         for (String name : unknownNames) {
             if (this.rawDescription.contains(name)) {
-                if (SneckoMod.validColors.size() > 3) {
+                if (downfallMod.validColors.size() > 3) {
                     tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[5]));
-                } else if (SneckoMod.validColors.isEmpty()) {
+                } else if (downfallMod.validColors.isEmpty()) {
                     tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[4]));
                 } else {
                     tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[2] + unknownUpgrade[3] + getCharList()));

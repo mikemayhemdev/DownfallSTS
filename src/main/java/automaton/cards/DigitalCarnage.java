@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.StarBounceEffect;
 import com.megacrit.cardcrawl.vfx.combat.ViolentAttackEffect;
 import downfall.cardmods.EtherealMod;
+import downfall.downfallMod;
 
 public class DigitalCarnage extends AbstractBronzeCard {
 
@@ -27,7 +28,7 @@ public class DigitalCarnage extends AbstractBronzeCard {
         // isEthereal = true;
         baseDamage = DAMAGE;
         thisEncodes();
-        tags.add(AutomatonMod.BAD_COMPILE);
+        tags.add(downfallMod.BAD_COMPILE);
         AutomatonMod.loadJokeCardImage(this, AutomatonMod.makeBetaCardPath("DigitalCarnage.png"));
     }
 

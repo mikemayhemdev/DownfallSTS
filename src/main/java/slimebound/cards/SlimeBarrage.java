@@ -47,7 +47,7 @@ public class SlimeBarrage extends AbstractSlimeboundCard {
 
         //this.exhaust = true;
 
-        //this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        //this.tags.add(downfallMod.BANNEDFORSNECKO);
 
     }
 

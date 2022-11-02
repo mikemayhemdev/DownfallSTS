@@ -1,15 +1,9 @@
 {
-  "bronze:SpecificCardReward": {
+  "downfall:SpecificCardReward": {
     "TEXT": [
       "덱에 ",
       " 카드를 추가",
       "카드를 선택하십시오"
-    ]
-  },
-  "bronze:UnplayableMod": {
-    "TEXT": [
-      "사용불가. NL ",
-      "오류_주소_공백"
     ]
   },
   "bronze:EncodeAndShuffleMod": {

@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import downfall.util.TextureLoader;
-import gremlin.actions.MakeEchoAction;
+import downfall.actions.MakeEchoAction;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;

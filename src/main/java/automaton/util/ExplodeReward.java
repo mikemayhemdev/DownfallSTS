@@ -10,7 +10,7 @@ import downfall.util.TextureLoader;
 
 public class ExplodeReward extends CustomReward {
     public static final String ID = AutomatonMod.makeID("ExplodeReward");
-    public static final String[] TEXT = CardCrawlGame.languagePack.getUIString("bronze:SpecificCardReward").TEXT;
+    public static final String[] TEXT = CardCrawlGame.languagePack.getUIString("downfall:SpecificCardReward").TEXT;
 
     public ExplodeReward() {
         super(TextureLoader.getTexture("downfallResources/images/rewards/placeholder.png"), "ERROR", RewardItemTypeEnumPatch.EXPLODE);

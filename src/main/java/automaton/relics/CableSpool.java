@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.downfallMod;
 import downfall.util.TextureLoader;
 
 import static automaton.AutomatonMod.*;
@@ -34,7 +35,7 @@ public class CableSpool extends CustomRelic {
 
 
     public void onUseCard(AbstractCard c, UseCardAction action) {
-        if (!grayscale && c.hasTag(ENCODES)) {
+        if (!grayscale && c.hasTag(downfallMod.ENCODES)) {
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             AbstractCard c2 = c.makeCopy();

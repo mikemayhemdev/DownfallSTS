@@ -159,5 +159,11 @@
       "工坊上來訂閱和下載它們。",
       "點擊此處獲取更多相關信息。"
     ]
+  },
+  "downfall:UnplayableMod": {
+    "TEXT": [
+      " 不能被打出 。 NL ",
+      " ERR_NULL_PTR "
+    ]
   }
 }

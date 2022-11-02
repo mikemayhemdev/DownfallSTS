@@ -17,7 +17,7 @@ public class CatchUp extends AbstractHexaCard {
     public CatchUp() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         tags.add(HexaMod.GHOSTWHEELCARD);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
         baseMagicNumber = magicNumber = 2;
         HexaMod.loadJokeCardImage(this, "CatchUp.png");
     }

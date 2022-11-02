@@ -17,7 +17,7 @@ public class FightOn extends AbstractChampCard {
     public FightOn() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         FleetingField.fleeting.set(this, true);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
         this.tags.add(CardTags.HEALING);
         baseMagicNumber = magicNumber = 30;
     }

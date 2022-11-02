@@ -2,7 +2,7 @@ package collector.cards.Collectibles;
 
 import basemod.helpers.CardModifierManager;
 import collector.Interfaces.PerpetualCard;
-import collector.util.PlusDamageAndBlockCardMod;
+import downfall.cardmods.PlusDamageAndBlockCardMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;

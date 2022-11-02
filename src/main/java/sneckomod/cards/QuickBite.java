@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 import sneckomod.actions.MuddleRandomCardAction;
 
 public class QuickBite extends AbstractSneckoCard {
@@ -25,7 +25,7 @@ public class QuickBite extends AbstractSneckoCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-        tags.add(SneckoMod.RNG);
+        tags.add(downfallMod.RNG);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

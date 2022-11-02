@@ -6,13 +6,6 @@ Evil Mode alternate gameplay run.  This includes Bosses, Events,
 Event Override patches, and other things that only appear during Evil Runs.
  */
 
-import automaton.EasyInfoDisplayPanel;
-import automaton.SuperTip;
-import automaton.cardmods.EncodeMod;
-import automaton.cards.Defend;
-import automaton.cards.Strike;
-import automaton.relics.*;
-import automaton.util.*;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
@@ -23,10 +16,6 @@ import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import champ.ChampMod;
-import champ.cards.ModFinisher;
-import champ.powers.LastStandModPower;
-import champ.util.TechniqueMod;
 import charbosses.actions.util.CharBossMonsterGroup;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.CharBossDefect;
@@ -40,15 +29,14 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.mod.stslib.patches.CenterGridCardSelectScreen;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.blights.VoidEssence;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -68,9 +56,9 @@ import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.GoldenIdol;
-import com.megacrit.cardcrawl.relics.MedicalKit;
 import com.megacrit.cardcrawl.relics.VelvetChoker;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -81,8 +69,8 @@ import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import downfall.actions.MessageCaller;
 import downfall.cardmods.EtherealMod;
-import downfall.cards.KnowingSkullWish;
 import downfall.cards.curses.*;
 import downfall.dailymods.*;
 import downfall.events.*;
@@ -100,25 +88,18 @@ import downfall.potions.CursedFountainPotion;
 import downfall.relics.KnowingSkull;
 import downfall.relics.*;
 import downfall.util.*;
-import expansioncontent.patches.CenterGridCardSelectScreen;
-import gremlin.cards.Wizardry;
-import gremlin.relics.WizardHat;
-import gremlin.relics.WizardStaff;
-import guardian.cards.ExploitGems;
-import guardian.relics.PickAxe;
-import hermit.actions.MessageCaller;
-import slimebound.SlimeboundMod;
-import sneckomod.cards.unknowns.*;
-import sneckomod.util.ColorfulCardReward;
-import sneckomod.util.UpgradedUnknownReward;
-import theHexaghost.HexaMod;
-import theHexaghost.util.SealSealReward;
+import guardian.relics.ShatteredFragment;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Properties;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 import static reskinContent.reskinContent.unlockAllReskin;
@@ -159,6 +140,19 @@ public class downfallMod implements
     public static boolean replaceMenuColor = true;
     public static boolean tempAscensionHack = false;
     public static int tempAscensionOriginalValue = 0;
+    @SpireEnum
+    public static AbstractCard.CardTags SNEKPROOF;
+    @SpireEnum
+    public static AbstractCard.CardTags RNG;
+    @SpireEnum
+    public static AbstractCard.CardTags BANNEDFORSNECKO;
+    @SpireEnum
+    public static AbstractCard.CardTags UNKNOWN;
+    public static boolean pureSneckoMode = false;
+    public static Random identifyRng;
+    public static ArrayList<AbstractCard.CardColor> validColors = new ArrayList<>();
+    @SpireEnum
+    public static AbstractCard.CardTags SEAL;
 
     //Config Menu Stuff
     private ModPanel settingsPanel;
@@ -175,6 +169,8 @@ public class downfallMod implements
     public static boolean normalMapLayout = true;
     public static boolean champDisableStanceHelper = false;
     public static boolean sneckoNoModCharacters = false;
+
+    public static final Logger logger = LogManager.getLogger(downfallMod.class.getName());
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
     public static final String PROP_RELIC_SHARING = "contentSharing_relics";
@@ -194,6 +190,18 @@ public class downfallMod implements
     public static String Act2BossFaced = "";
     public static String Act3BossFaced = "";
 
+
+    public static String automatonModID = "bronze";
+    public static String champModID = "champ";
+    public static String collectorModID = "collector";
+    public static String gremlinModID = "gremlin";
+    public static String guardianModID = "guardianmod";
+    public static String hermitModID = "hermit";
+    public static String slimeboundModID = "slimeboundmod";
+    public static String sneckoModID = "sneckomod";
+    public static String hexaghostModID = "hexamod";
+    public static String expansioncontentModID = "expansioncontent";
+
     public static boolean[] unseenTutorials = new boolean[]{
             true, // Hermit
             true, // Guardian
@@ -209,6 +217,19 @@ public class downfallMod implements
     public static AbstractCard.CardTags CHARBOSS_SETUP;
     @SpireEnum
     public static AbstractCard.CardTags DOWNFALL_CURSE;
+    @SpireEnum
+    public static AbstractCard.CardTags NO_TEXT;
+
+    @SpireEnum
+    public static AbstractCard.CardTags ADDS_NO_CARDTEXT;
+    @SpireEnum
+    public static AbstractCard.CardTags SPECIAL_COMPILE_TEXT;
+    @SpireEnum
+    public static AbstractCard.CardTags GOOD_STATUS;
+    @SpireEnum
+    public static AbstractCard.CardTags ENCODES;
+    @SpireEnum
+    public static AbstractCard.CardTags BAD_COMPILE;
 
     public static final boolean EXPERIMENTAL_FLIP = false;
     public static Settings.GameLanguage[] SupportedLanguages = {
@@ -378,42 +399,46 @@ public class downfallMod implements
 
     private void loadLocalization(Settings.GameLanguage language, Class<?> stringType) {
         if (stringType != TutorialStrings.class) {
-            //SlimeboundMod.logger.info("loading loc:" + language + "downfall" + stringType);
+            //downfallMod.logger.info("loading loc:" + language + "downfall" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName()));
 
-            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_EXPANSION" + stringType);
+            //downfallMod.logger.info("loading loc:" + language + " PACKAGE_EXPANSION" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_EXPANSION));
 
-            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_GUARDIAN" + stringType);
+            //downfallMod.logger.info("loading loc:" + language + " PACKAGE_COLLECTOR" + stringType);
+            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_COLLECTOR));
+
+            /*
+
+            //downfallMod.logger.info("loading loc:" + language + " PACKAGE_GUARDIAN" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_GUARDIAN));
 
-            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_HEXAGHOST" + stringType);
+            //downfallMod.logger.info("loading loc:" + language + " PACKAGE_HEXAGHOST" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_HEXAGHOST));
 
-            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_SLIME" + stringType);
+            //downfallMod.logger.info("loading loc:" + language + " PACKAGE_SLIME" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_SLIME));
 
-            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_SNECKO" + stringType);
+            //downfallMod.logger.info("loading loc:" + language + " PACKAGE_SNECKO" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_SNECKO));
 
-            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_CHAMP" + stringType);
+            //downfallMod.logger.info("loading loc:" + language + " PACKAGE_CHAMP" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_CHAMP));
 
-            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_AUTOMATON" + stringType);
+            //downfallMod.logger.info("loading loc:" + language + " PACKAGE_AUTOMATON" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_AUTOMATON));
 
-            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_GREMLIN" + stringType);
+            //downfallMod.logger.info("loading loc:" + language + " PACKAGE_GREMLIN" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_GREMLIN));
 
-            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
+            //downfallMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_HERMIT));
 
-            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_COLLECTOR" + stringType);
-            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_COLLECTOR));
+             */
         } else {
 
-            //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
-            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_HERMIT));
+            //downfallMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
+            //BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_HERMIT));
         }
     }
 
@@ -436,7 +461,7 @@ public class downfallMod implements
 
     @Override
     public void receiveEditCards() {
-        BaseMod.addCard(new KnowingSkullWish());
+        //BaseMod.addCard(new KnowingSkullWish());
         // BaseMod.addCard(new Antidote());
         // BaseMod.addCard(new ShieldSmash());
         // BaseMod.addCard(new Debug());
@@ -485,7 +510,7 @@ public class downfallMod implements
     private void loadModKeywords(String modID, otherPackagePaths otherPath) {
 
         String lang = getLangString();
-        //SlimeboundMod.logger.info("loading loc:" + lang + " " + otherPath + " keywords");
+        //downfallMod.logger.info("loading loc:" + lang + " " + otherPath + " keywords");
 
         Gson gson = new Gson();
         String json = Gdx.files.internal(assetPath("localization/" + lang + "/KeywordStrings.json", otherPath)).readString(String.valueOf(StandardCharsets.UTF_8));
@@ -501,31 +526,22 @@ public class downfallMod implements
 
     @Override
     public void receiveEditKeywords() {
-        loadModKeywords(hexaModID, otherPackagePaths.PACKAGE_HEXAGHOST);
-        loadModKeywords(expansionContentModID, otherPackagePaths.PACKAGE_EXPANSION);
-        loadModKeywords(sneckoModID, otherPackagePaths.PACKAGE_SNECKO);
-        loadModKeywords(slimeboundModID, otherPackagePaths.PACKAGE_SLIME);
-        loadModKeywords(guardianModID, otherPackagePaths.PACKAGE_GUARDIAN);
-        // These dupes of the mod IDs can be used anywhere we currently import. They're hardcoded since we'll never change them.
-        loadModKeywords(champModID, otherPackagePaths.PACKAGE_CHAMP);
-        loadModKeywords(automatonModID, otherPackagePaths.PACKAGE_AUTOMATON);
-        loadModKeywords(gremlinsModID, otherPackagePaths.PACKAGE_GREMLIN);
-        loadModKeywords(collectorModID, otherPackagePaths.PACKAGE_COLLECTOR);
-        loadModKeywords(hermitModID, otherPackagePaths.PACKAGE_HERMIT);
+        loadModKeywords(downfallMod.expansioncontentModID, otherPackagePaths.PACKAGE_EXPANSION);
+        loadModKeywords(downfallMod.collectorModID, otherPackagePaths.PACKAGE_COLLECTOR);
         loadModKeywords(modID, otherPackagePaths.PACKAGE_DOWNFALL);
+        /*
+        loadModKeywords(downfallMod.hexaghostModID, otherPackagePaths.PACKAGE_HEXAGHOST);
+        loadModKeywords(downfallMod.sneckoModID, otherPackagePaths.PACKAGE_SNECKO);
+        loadModKeywords(downfallMod.slimeboundModID, otherPackagePaths.PACKAGE_SLIME);
+        loadModKeywords(downfallMod.guardianModID, otherPackagePaths.PACKAGE_GUARDIAN);
+        loadModKeywords(downfallMod.champModID, otherPackagePaths.PACKAGE_CHAMP);
+        loadModKeywords(downfallMod.automatonModID, otherPackagePaths.PACKAGE_AUTOMATON);
+        loadModKeywords(downfallMod.gremlinModID, otherPackagePaths.PACKAGE_GREMLIN);
+        loadModKeywords(downfallMod.hermitModID, otherPackagePaths.PACKAGE_HERMIT);
+
+         */
+
     }
-
-    public static String hexaModID = "hexamod";
-    public static String expansionContentModID = "expansioncontent";
-    public static String sneckoModID = "sneckomod";
-    public static String slimeboundModID = "slimeboundmod";
-    public static String guardianModID = "guardianmod";
-    public static String champModID = "champ";
-    public static String automatonModID = "bronze";
-    public static String gremlinsModID = "gremlin";
-    public static String collectorModID = "collector";
-    public static String hermitModID = "hermit";
-
 
     public static AbstractCard getRandomDownfallCurse() {
         Collections.shuffle(downfallCurses, AbstractDungeon.cardRandomRng.random);
@@ -561,18 +577,6 @@ public class downfallMod implements
         }
 
 
-        //Init save stuff for custom rewards.
-        //Automaton
-        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.DAZINGPULSE, (rewardSave) -> new DazingPulseReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
-
-        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.DECABEAM, (rewardSave) -> new DecaBeamReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
-
-        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.DONUBEAM, (rewardSave) -> new DonuBeamReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
-
-        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.EXPLODE, (rewardSave) -> new ExplodeReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
-
-        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.SPIKE, (rewardSave) -> new SpikeReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
-
         //Downfall
         BaseMod.registerCustomReward(RewardItemTypeEnumPatch.BOSSCARD, (rewardSave) -> new BossCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
@@ -584,13 +588,6 @@ public class downfallMod implements
 
         BaseMod.registerCustomReward(RewardItemTypeEnumPatch.UPGRADECARD, (rewardSave) -> new UpgradeCardReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
-        //Snecko
-        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.COLORFULCARD, (rewardSave) -> new ColorfulCardReward(AbstractCard.CardColor.valueOf(rewardSave.id)), (customReward) -> new RewardSave(customReward.type.toString(), customReward instanceof ColorfulCardReward ? ((ColorfulCardReward) customReward).myColor.toString() : "COLORLESS"));
-
-        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.UPGRADEDUNKNOWNCARD, (rewardSave) -> new UpgradedUnknownReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
-
-        //Hexaghost
-        BaseMod.registerCustomReward(RewardItemTypeEnumPatch.SEALCARD, (rewardSave) -> new SealSealReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
     }
 
     private void initializeConfig() {
@@ -1466,7 +1463,7 @@ public class downfallMod implements
         if (evilMode || (evilWithinSingleton != null && evilWithinSingleton.selected) || (CardCrawlGame.trial == null && DailyModeEvilPatch.todaysRunIsEvil)) {
             if (possEncounterList.size() == 0) {
                 resetBossList();
-                //SlimeboundMod.logger.info("ERROR! Had to reset the bosses mid-run!");
+                //downfallMod.logger.info("ERROR! Had to reset the bosses mid-run!");
             }
             if (AbstractDungeon.actNum <= 3) {
                 Method setBoss = null;
@@ -1492,20 +1489,15 @@ public class downfallMod implements
 
     }
 
-    private static AbstractPlayer.PlayerClass downfallClasses[] = {
-            Enums.SLIMEBOUND,
-            Enums.GUARDIAN,
-            Enums.THE_SPIRIT,
-            Enums.THE_CHAMP,
-            Enums.THE_AUTOMATON,
-            Enums.THE_COLLECTOR,
-            Enums.THE_SNECKO,
-            Enums.GREMLIN,
-            Enums.HERMIT
-    };
-
     public static boolean isDownfallCharacter(AbstractPlayer p) {
-        return Arrays.stream(downfallClasses).anyMatch(q -> q.equals(p.chosenClass));
+        return p.chosenClass == Enums.SLIMEBOUND ||
+                p.chosenClass == Enums.THE_SPIRIT ||
+                p.chosenClass == Enums.GUARDIAN ||
+                p.chosenClass == Enums.THE_SNECKO ||
+                p.chosenClass == Enums.THE_CHAMP ||
+                p.chosenClass == Enums.THE_AUTOMATON ||
+                p.chosenClass == Enums.GREMLIN ||
+                p.chosenClass == Enums.THE_COLLECTOR;
     }
 
 
@@ -1528,10 +1520,10 @@ public class downfallMod implements
     @Override
     public int receiveOnPlayerDamaged(int i, DamageInfo damageInfo) {
         if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(WorldOfGoo.ID)) || ModHelper.isModEnabled(WorldOfGoo.ID)) {
-            //SlimeboundMod.logger.info("World of goo triggered");
+            //downfallMod.logger.info("World of goo triggered");
             if (damageInfo.output > AbstractDungeon.player.currentBlock) {
 
-                //SlimeboundMod.logger.info("World of goo succeeded");
+                //downfallMod.logger.info("World of goo succeeded");
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Slimed(), 1));
             }
         }
@@ -1540,26 +1532,6 @@ public class downfallMod implements
 
     @Override
     public void receivePostDungeonInitialize() {
-        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Jewelcrafting.ID) || ModHelper.isModEnabled(Jewelcrafting.ID)) {
-            RelicLibrary.getRelic(PickAxe.ID).makeCopy().instantObtain();
-            AbstractDungeon.player.masterDeck.addToTop(new ExploitGems());
-            AbstractDungeon.player.masterDeck.addToTop(new ExploitGems());
-        }
-
-        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ChampStances.ID) || ModHelper.isModEnabled(ChampStances.ID)) {
-            RelicLibrary.getRelic("champ:ChampStancesModRelic").makeCopy().instantObtain();
-
-            //TODO - Migrate all Downfall related Card Tags into DownfallMod!
-            for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-
-                if (!c.hasTag(ChampMod.TECHNIQUE))
-                    //TODO - Migrate ALL Card Modifiers into DownfallMod Package!
-                    CardModifierManager.addModifier(c, new TechniqueMod());
-
-            }
-
-        }
-
         if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Hexed.ID)) || ModHelper.isModEnabled(Hexed.ID)) {
             RelicLibrary.getRelic(VelvetChoker.ID).makeCopy().instantObtain();
             AbstractDungeon.bossRelicPool.remove(VelvetChoker.ID);
@@ -1570,68 +1542,6 @@ public class downfallMod implements
 
         }
 
-        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(StatusAbuse.ID)) || ModHelper.isModEnabled(StatusAbuse.ID)) {
-            RelicLibrary.getRelic(MakeshiftBattery.ID).makeCopy().instantObtain();
-            RelicLibrary.getRelic(MedicalKit.ID).makeCopy().instantObtain();
-            RelicLibrary.getRelic(DonusWashers.ID).makeCopy().instantObtain();
-            RelicLibrary.getRelic(DecasWashers.ID).makeCopy().instantObtain();
-            RelicLibrary.getRelic(BronzeIdol.ID).makeCopy().instantObtain();
-
-            AbstractDungeon.commonRelicPool.clear();
-            AbstractDungeon.bossRelicPool.clear();
-            AbstractDungeon.uncommonRelicPool.clear();
-            AbstractDungeon.rareRelicPool.clear();
-            AbstractDungeon.shopRelicPool.clear();
-
-        }
-
-        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Analytical.ID)) || ModHelper.isModEnabled(Analytical.ID)) {
-            RelicLibrary.getRelic(AnalyticalCore.ID).makeCopy().instantObtain();
-
-            ArrayList<AbstractCard> cardsToRemove = new ArrayList<>();
-            ArrayList<AbstractCard> strikes = new ArrayList<>();
-            ArrayList<AbstractCard> defends = new ArrayList<>();
-            for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-                if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {
-                    AbstractCard c2 = new Strike();
-                    if (c.upgraded) c2.upgrade();
-                    CardModifierManager.addModifier(c2, new EncodeMod());
-                    cardsToRemove.add(c);
-                    strikes.add(c2);
-                }
-                if (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
-                    AbstractCard c2 = new Defend();
-                    if (c.upgraded) c2.upgrade();
-                    CardModifierManager.addModifier(c2, new EncodeMod());
-                    cardsToRemove.add(c);
-                    defends.add(c2);
-                }
-            }
-            for (AbstractCard c : cardsToRemove) {
-                AbstractDungeon.player.masterDeck.removeCard(c);
-            }
-
-            for (AbstractCard c : defends) {
-                AbstractDungeon.player.masterDeck.addToBottom(c);
-            }
-            for (AbstractCard c : strikes) {
-                AbstractDungeon.player.masterDeck.addToBottom(c);
-            }
-        }
-
-        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Improvised.ID) || ModHelper.isModEnabled(Improvised.ID)) {
-
-            AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonAttack());
-            AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonAttack());
-            AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonAttack());
-            AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonSkill());
-            AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonSkill());
-            AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonSkill());
-            AbstractDungeon.player.masterDeck.addToTop(new UnknownUncommonAttack());
-            AbstractDungeon.player.masterDeck.addToTop(new UnknownUncommonSkill());
-            AbstractDungeon.player.masterDeck.addToTop(new UnknownUncommonPower());
-            AbstractDungeon.player.masterDeck.addToTop(new Unknown());
-        }
 
         if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(TooManyShivs.ID) || ModHelper.isModEnabled(TooManyShivs.ID)) {
             RelicLibrary.getRelic(VelvetChoker.ID).makeCopy().instantObtain();
@@ -1641,14 +1551,6 @@ public class downfallMod implements
             }
         }
 
-        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Wizzardry.ID) || ModHelper.isModEnabled(Wizzardry.ID)) {
-            RelicLibrary.getRelic(WizardHat.ID).makeCopy().instantObtain();
-            RelicLibrary.getRelic(WizardStaff.ID).makeCopy().instantObtain();
-            AbstractCard c = new Wizardry();
-            c.upgrade();
-            AbstractDungeon.player.masterDeck.addToBottom(c);
-
-        }
 
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group)
             UnlockTracker.markCardAsSeen(c.cardID);
@@ -1658,19 +1560,6 @@ public class downfallMod implements
             evilMode = true;
         }
 
-        if (AbstractDungeon.player.chosenClass.equals(Enums.THE_SPIRIT)) {
-            for (AbstractCard c : CardLibrary.getAllCards()) {
-                if (c.hasTag(HexaMod.GHOSTWHEELCARD) && c.hasTag(AbstractCard.CardTags.HEALING)) {
-                    c.tags.remove(AbstractCard.CardTags.HEALING);
-                }
-            }
-        } else {
-            for (AbstractCard c : CardLibrary.getAllCards()) {
-                if (c.hasTag(HexaMod.GHOSTWHEELCARD)) {
-                    c.tags.add(AbstractCard.CardTags.HEALING);
-                }
-            }
-        }
 
         Act1BossFaced = "";
         Act2BossFaced = "";
@@ -1758,19 +1647,6 @@ public class downfallMod implements
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         playedBossCardThisTurn = false;
 
-        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ChampStances.ID)) || ModHelper.isModEnabled(ChampStances.ID)) {
-
-            //TODO - Uncomment this when Mods have been moved to Downfall package!
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new ModFinisher()));
-        }
-
-        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Enraging.ID)) || ModHelper.isModEnabled(Enraging.ID)) {
-            for (AbstractMonster m : abstractRoom.monsters.monsters) {
-                //TODO - Move powers like this one into Downfall package
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new LastStandModPower(m, AbstractDungeon.actNum * 2), AbstractDungeon.actNum * 2));
-            }
-        }
-
         if (AbstractDungeon.player.chosenClass.equals(Enums.GUARDIAN)) {
             if (downfallMod.unseenTutorials[1]) {
                 AbstractDungeon.actionManager.addToBottom(new MessageCaller(1));
@@ -1834,9 +1710,9 @@ public class downfallMod implements
 
         if (downfallMod.unlockEverything || UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index) {
 
-            SlimeboundMod.logger.info("Relic trigger: " + relic1 + " " + UnlockTracker.lockedRelics.contains(relic1) + " " + UnlockTracker.isRelicLocked(relic1) + " " + UnlockTracker.isRelicSeen(relic1));
-            SlimeboundMod.logger.info("Relic trigger: " + relic2 + " " + UnlockTracker.lockedRelics.contains(relic2) + " " + UnlockTracker.isRelicLocked(relic2) + " " + UnlockTracker.isRelicSeen(relic3));
-            SlimeboundMod.logger.info("Relic trigger: " + relic3 + " " + UnlockTracker.lockedRelics.contains(relic3) + " " + UnlockTracker.isRelicLocked(relic3) + " " + UnlockTracker.isRelicSeen(relic3));
+            downfallMod.logger.info("Relic trigger: " + relic1 + " " + UnlockTracker.lockedRelics.contains(relic1) + " " + UnlockTracker.isRelicLocked(relic1) + " " + UnlockTracker.isRelicSeen(relic1));
+            downfallMod.logger.info("Relic trigger: " + relic2 + " " + UnlockTracker.lockedRelics.contains(relic2) + " " + UnlockTracker.isRelicLocked(relic2) + " " + UnlockTracker.isRelicSeen(relic3));
+            downfallMod.logger.info("Relic trigger: " + relic3 + " " + UnlockTracker.lockedRelics.contains(relic3) + " " + UnlockTracker.isRelicLocked(relic3) + " " + UnlockTracker.isRelicSeen(relic3));
             while (UnlockTracker.lockedRelics.contains(relic1)) {
                 UnlockTracker.lockedRelics.remove(relic1);
             }
@@ -1849,9 +1725,9 @@ public class downfallMod implements
             UnlockTracker.markRelicAsSeen(relic1);
             UnlockTracker.markRelicAsSeen(relic2);
             UnlockTracker.markRelicAsSeen(relic3);
-            SlimeboundMod.logger.info("Relic trigger: " + relic1 + " " + UnlockTracker.lockedRelics.contains(relic1) + " " + UnlockTracker.isRelicLocked(relic1) + " " + UnlockTracker.isRelicSeen(relic1));
-            SlimeboundMod.logger.info("Relic trigger: " + relic2 + " " + UnlockTracker.lockedRelics.contains(relic2) + " " + UnlockTracker.isRelicLocked(relic2) + " " + UnlockTracker.isRelicSeen(relic3));
-            SlimeboundMod.logger.info("Relic trigger: " + relic3 + " " + UnlockTracker.lockedRelics.contains(relic3) + " " + UnlockTracker.isRelicLocked(relic3) + " " + UnlockTracker.isRelicSeen(relic3));
+            downfallMod.logger.info("Relic trigger: " + relic1 + " " + UnlockTracker.lockedRelics.contains(relic1) + " " + UnlockTracker.isRelicLocked(relic1) + " " + UnlockTracker.isRelicSeen(relic1));
+            downfallMod.logger.info("Relic trigger: " + relic2 + " " + UnlockTracker.lockedRelics.contains(relic2) + " " + UnlockTracker.isRelicLocked(relic2) + " " + UnlockTracker.isRelicSeen(relic3));
+            downfallMod.logger.info("Relic trigger: " + relic3 + " " + UnlockTracker.lockedRelics.contains(relic3) + " " + UnlockTracker.isRelicLocked(relic3) + " " + UnlockTracker.isRelicSeen(relic3));
         }
     }
 

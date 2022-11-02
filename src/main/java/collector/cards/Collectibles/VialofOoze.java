@@ -2,7 +2,6 @@ package collector.cards.Collectibles;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import slimebound.powers.SlimedPower;
 
 public class VialofOoze extends AbstractCollectibleCard {
     public final static String ID = makeID("VialofOoze");
@@ -16,7 +15,7 @@ public class VialofOoze extends AbstractCollectibleCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToEnemy(m, new SlimedPower(m, p, magicNumber));
+     //   applyToEnemy(m, new SlimedPower(m, p, magicNumber));
         blck();
     }
 

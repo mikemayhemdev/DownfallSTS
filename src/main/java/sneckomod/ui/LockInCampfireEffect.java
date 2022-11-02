@@ -18,8 +18,8 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.screens.select.GridCardSelectScreen;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import downfall.downfallMod;
 import slimebound.SlimeboundMod;
-import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 import sneckomod.patches.UnknownExtraUiPatch;
 import sneckomod.relics.UnknownEgg;
@@ -39,7 +39,7 @@ public class LockInCampfireEffect extends com.megacrit.cardcrawl.vfx.AbstractGam
         this.screenColor.a = 0.0F;
         AbstractDungeon.overlayMenu.proceedButton.hide();
 
-        identifyRngCount = SneckoMod.identifyRng.counter;
+        identifyRngCount = downfallMod.identifyRng.counter;
     }
 
     public void update() {
@@ -69,7 +69,7 @@ public class LockInCampfireEffect extends com.megacrit.cardcrawl.vfx.AbstractGam
                 // Cancelled
                 isDone = true;
                 ((RestRoom) AbstractDungeon.getCurrRoom()).campfireUI.reopen();
-                SneckoMod.identifyRng = new Random(Settings.seed, identifyRngCount);
+                downfallMod.identifyRng = new Random(Settings.seed, identifyRngCount);
             }
         }
 
@@ -89,7 +89,7 @@ public class LockInCampfireEffect extends com.megacrit.cardcrawl.vfx.AbstractGam
                             c2 = ((AbstractUnknownCard) c).lastUnknownRoll.makeCopy();
 
                         } else {
-                            c2 = CardLibrary.getCard(((AbstractUnknownCard) c).myList().get(SneckoMod.identifyRng.random(0, ((AbstractUnknownCard) c).myList().size() - 1))).makeCopy();
+                            c2 = CardLibrary.getCard(((AbstractUnknownCard) c).myList().get(downfallMod.identifyRng.random(0, ((AbstractUnknownCard) c).myList().size() - 1))).makeCopy();
                         }
 
                     } else {

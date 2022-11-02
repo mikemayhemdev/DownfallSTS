@@ -16,7 +16,6 @@ import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.RewardGlowEffect;
 import downfall.downfallMod;
-import theHexaghost.cards.seals.AbstractSealCard;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -65,7 +64,7 @@ public class RareCardReward extends RewardItem {
     public static AbstractCard getRandomSeal() {
         ArrayList<AbstractCard> list = new ArrayList<>();// 1201
         for (AbstractCard c : CardLibrary.getAllCards()) {
-            if (c instanceof AbstractSealCard)
+            if (c.hasTag(downfallMod.SEAL))
                 list.add(c);
         }
         return list.get(cardRandomRng.random(list.size() - 1));// 1217

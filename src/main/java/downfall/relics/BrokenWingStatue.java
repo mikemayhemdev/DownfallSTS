@@ -42,7 +42,7 @@ public class BrokenWingStatue extends CustomRelic {
         for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
             if (m instanceof Cultist || m instanceof Chosen) {
                 this.receiver = m;
-                //SlimeboundMod.logger.info("found valid target");
+                //downfallMod.logger.info("found valid target");
                 break;
             }
         }
@@ -51,10 +51,10 @@ public class BrokenWingStatue extends CustomRelic {
             int DialogIndex;
             if (this.receiver instanceof Cultist) {
                 DialogIndex = 4;
-                //SlimeboundMod.logger.info("assigned dialog index 4");
+                //downfallMod.logger.info("assigned dialog index 4");
             } else {
                 DialogIndex = 6;
-                //SlimeboundMod.logger.info("assigned dialog index 6");
+                //downfallMod.logger.info("assigned dialog index 6");
             }
             this.flash();
             forceWait(5);

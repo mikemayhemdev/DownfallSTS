@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.EnergizedSlimeboundPower;
-import slimebound.powers.NextTurnGainSlimeCrush;
+import downfall.powers.NextTurnGainSlimeCrush;
 import slimebound.powers.NextTurnGainStrengthPower;
 
 

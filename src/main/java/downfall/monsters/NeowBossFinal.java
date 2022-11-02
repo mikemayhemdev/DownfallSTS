@@ -27,8 +27,8 @@ import downfall.downfallMod;
 import downfall.powers.NeowInvulnerablePower;
 import downfall.powers.neowpowers.SeeingDoubleProduct;
 import downfall.powers.neowpowers.TrueNeowPower;
+import downfall.vfx.SmallLaserEffectColored;
 import downfall.vfx.combat.FakeDeathScene;
-import guardian.vfx.SmallLaserEffectColored;
 
 import java.util.ArrayList;
 

@@ -4,6 +4,7 @@ import automaton.cards.AbstractBronzeCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import downfall.EasyInfoDisplayPanel;
 
 public class CompileDisplayPanel extends EasyInfoDisplayPanel {
 

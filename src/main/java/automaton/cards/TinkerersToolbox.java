@@ -24,7 +24,7 @@ public class TinkerersToolbox extends AbstractBronzeCard {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
         selfRetain = true;
-        // this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        // this.tags.add(downfallMod.BANNEDFORSNECKO);
         cardsList.add(new Debug());
         cardsList.add(new Batch());
         cardsList.add(new Decompile());

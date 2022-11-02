@@ -13,7 +13,8 @@ import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import guardian.vfx.SmallLaserEffectColored;
+import downfall.downfallMod;
+import downfall.vfx.SmallLaserEffectColored;
 
 import static automaton.AutomatonMod.makeBetaCardPath;
 
@@ -26,7 +27,7 @@ public class DazingPulse extends AbstractBronzeCard {
         baseDamage = 7;
         baseMagicNumber = magicNumber = 2;
         thisEncodes();
-        tags.add(AutomatonMod.BAD_COMPILE);
+        tags.add(downfallMod.BAD_COMPILE);
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("DazingPulse.png"));
     }
 

@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ViceCrushEffect;
+import downfall.downfallMod;
 
 import static automaton.AutomatonMod.makeBetaCardPath;
 
@@ -29,7 +30,7 @@ public class NullPointer extends AbstractBronzeCard {
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
         thisEncodes();
-        tags.add(AutomatonMod.BAD_COMPILE);
+        tags.add(downfallMod.BAD_COMPILE);
         AutomatonMod.loadJokeCardImage(this, makeBetaCardPath("NullPointer.png"));
     }
 

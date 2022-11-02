@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 import sneckomod.actions.MuddleAction;
 import sneckomod.actions.NoApplyRandomDamageAction;
 
@@ -18,7 +18,7 @@ public class RainOfDice extends AbstractSneckoCard {
         baseSilly = silly = 6;
         baseDamage = 12;
         this.returnToHand = true;
-        tags.add(SneckoMod.RNG);
+        tags.add(downfallMod.RNG);
     }
 
     @Override

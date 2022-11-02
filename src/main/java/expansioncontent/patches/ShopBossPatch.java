@@ -11,9 +11,7 @@ import downfall.downfallMod;
 import downfall.patches.EvilModeCharacterSelect;
 import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.cards.*;
-import guardian.characters.GuardianCharacter;
-import slimebound.characters.SlimeboundCharacter;
-import theHexaghost.TheHexaghost;
+import slimebound.cards.PrepareCrushBossCard;
 
 import java.util.ArrayList;
 
@@ -58,7 +56,7 @@ public class ShopBossPatch {
         if (q.rarity == AbstractCard.CardRarity.SPECIAL) return false;
 
         if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.SLIMEBOUND)) {
-            if (q.cardID.equals(PrepareCrush.ID)) {
+            if (q.cardID.equals(PrepareCrushBossCard.ID)) {
                 return false;
             }
         }

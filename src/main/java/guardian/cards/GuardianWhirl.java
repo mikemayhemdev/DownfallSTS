@@ -62,7 +62,7 @@ public class GuardianWhirl extends AbstractGuardianCard {
 
         //this.sockets.add(GuardianMod.socketTypes.RED);
 
-        // this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        // this.tags.add(downfallMod.BANNEDFORSNECKO);
         this.magicNumber = this.baseMagicNumber = MULTICOUNT;
         this.isMultiDamage = true;
         this.socketCount = SOCKETS;

@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import guardian.vfx.SmallLaserEffectColored;
+import downfall.vfx.SmallLaserEffectColored;
 
 public class DonuBeam extends AbstractBronzeCard {
     public final static String ID = makeID("DonuBeam");

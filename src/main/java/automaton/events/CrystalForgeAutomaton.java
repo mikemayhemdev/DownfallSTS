@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import downfall.downfallMod;
 import guardian.GuardianMod;
 
 import java.util.ArrayList;
@@ -54,7 +55,7 @@ public class CrystalForgeAutomaton extends AbstractImageEvent {
         rareCards = new ArrayList<>();
 
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            if (c.hasTag(AutomatonMod.ENCODES)) {
+            if (c.hasTag(downfallMod.ENCODES)) {
                 validCards.add(c);
             }
             if (c.rarity == AbstractCard.CardRarity.RARE) rareCards.add(c);

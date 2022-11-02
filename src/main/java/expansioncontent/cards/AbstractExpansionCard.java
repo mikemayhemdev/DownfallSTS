@@ -17,13 +17,13 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
-import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CardColorEnumPatch;
-import hermit.util.TextureLoader;
 
 import java.util.ArrayList;
 
 import static expansioncontent.expansionContentMod.*;
+
+import downfall.util.TextureLoader;
 
 public abstract class AbstractExpansionCard extends CustomCard {
 
@@ -88,7 +88,7 @@ public abstract class AbstractExpansionCard extends CustomCard {
     }
 
     private static String getCorrectPlaceholderImage(String id) {
-        return makeCardPath(id.replaceAll((expansionContentMod.getModID() + ":"), "")) + ".png";
+        return makeCardPath(id.replaceAll((downfallMod.expansioncontentModID + ":"), "")) + ".png";
     }
 
     public static String makeID(String name) {

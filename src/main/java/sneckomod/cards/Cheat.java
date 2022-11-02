@@ -2,6 +2,7 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import sneckomod.SneckoMod;
 import sneckomod.powers.CheatPower;
 
@@ -13,7 +14,7 @@ public class Cheat extends AbstractSneckoCard {
 
     public Cheat() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        tags.add(SneckoMod.SNEKPROOF);
+        tags.add(downfallMod.SNEKPROOF);
         exhaust = true;
         SneckoMod.loadJokeCardImage(this, "Cheat.png");
     }

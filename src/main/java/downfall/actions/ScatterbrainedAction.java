@@ -4,7 +4,6 @@ import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.cards.curses.Scatterbrained;
-import gremlin.actions.MakeEchoAction;
 
 public class ScatterbrainedAction extends AbstractGameAction {
     public ScatterbrainedAction() {

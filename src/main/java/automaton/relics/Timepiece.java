@@ -2,10 +2,10 @@ package automaton.relics;
 
 import automaton.AutomatonMod;
 import basemod.abstracts.CustomRelic;
+import basemod.cardmods.RetainMod;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import downfall.cardmods.RetainCardMod;
 import downfall.util.TextureLoader;
 
 import static automaton.AutomatonMod.makeRelicOutlinePath;
@@ -23,7 +23,7 @@ public class Timepiece extends CustomRelic implements OnCompileRelic {
 
     @Override
     public void receiveCompile(AbstractCard function, boolean forGameplay) {
-        CardModifierManager.addModifier(function, new RetainCardMod());
+        CardModifierManager.addModifier(function, new RetainMod());
     }
 
     @Override

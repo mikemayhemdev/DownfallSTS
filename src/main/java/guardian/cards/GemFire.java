@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import guardian.GuardianMod;
 import guardian.actions.GemFireAction;
 import guardian.patches.AbstractCardEnum;
@@ -51,7 +52,7 @@ public class GemFire extends AbstractGuardianCard {
         updateDescription();
         loadGemMisc();
         //this.sockets.add(GuardianMod.socketTypes.RED);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

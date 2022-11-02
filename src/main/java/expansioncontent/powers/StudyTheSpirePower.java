@@ -10,12 +10,12 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import downfall.downfallMod;
 import downfall.util.TextureLoader;
 import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.expansionContentMod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import slimebound.SlimeboundMod;
 
 
 public class StudyTheSpirePower extends AbstractPower implements NonStackablePower {
@@ -23,9 +23,10 @@ public class StudyTheSpirePower extends AbstractPower implements NonStackablePow
     public static final String POWER_ID = expansionContentMod.makeID("StudyTheSpirePower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
-    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-    private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyAutomaton84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyAutomaton32.png");
+
+
+    private static final Texture tex84 = TextureLoader.getTexture(downfallMod.expansioncontentModID + "Resources/images/powers/StudyAutomaton84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(downfallMod.expansioncontentModID + "Resources/images/powers/StudyAutomaton32.png");
     public static PowerType POWER_TYPE = PowerType.BUFF;
 
     private final boolean upgraded;

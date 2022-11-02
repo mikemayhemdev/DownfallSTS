@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.actions.ForceWaitAction;
+import downfall.downfallMod;
 import guardian.GuardianMod;
 import guardian.actions.ReduceRightMostStasisAction;
 import guardian.patches.AbstractCardEnum;
@@ -50,7 +51,7 @@ public class Gem_Yellow extends AbstractGemCard {
 
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = YELLOW;
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
         this.tags.add(CardTags.HEALING);
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Amber.png"));
     }

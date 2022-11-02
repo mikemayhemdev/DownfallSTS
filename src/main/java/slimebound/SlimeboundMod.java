@@ -32,6 +32,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.SmokePuffEffect;
 import downfall.downfallMod;
+import downfall.util.TextureLoader;
 import expansioncontent.relics.StudyCardRelic;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -232,7 +233,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
             ((AbstractSlimeboundCard) card).betaArtPath = img;
         }
         Texture cardTexture;
-        cardTexture = hermit.util.TextureLoader.getTexture("slimeboundResources/SlimeboundImages/betacards/" + img);
+        cardTexture = TextureLoader.getTexture("slimeboundResources/SlimeboundImages/betacards/" + img);
         cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         int tw = cardTexture.getWidth();
         int th = cardTexture.getHeight();
@@ -245,7 +246,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
     }
 
     public static String getModID() {
-        return modID;
+        return downfallMod.slimeboundModID;
     }
 
     public static String makeID(String id) {

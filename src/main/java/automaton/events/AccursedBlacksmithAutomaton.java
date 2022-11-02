@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.WarpedTongs;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -57,7 +58,7 @@ public class AccursedBlacksmithAutomaton extends AbstractImageEvent {
 
         validCards = new ArrayList<>();
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            if (c.hasTag(AutomatonMod.ENCODES) && !c.upgraded) {
+            if (c.hasTag(downfallMod.ENCODES) && !c.upgraded) {
                 validCards.add(c);
             }
         }

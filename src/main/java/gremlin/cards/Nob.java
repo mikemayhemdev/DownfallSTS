@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import gremlin.GremlinMod;
 import gremlin.patches.SuperRare;
 import gremlin.powers.GremlinNobPower;
@@ -55,7 +56,7 @@ public class Nob extends AbstractGremlinCard implements SuperRare {
         cardsList.add(nobdance);
 
         this.tags.add(BaseModCardTags.FORM);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(downfallMod.BANNEDFORSNECKO);
         this.tags.add(NOB_GREMLIN);
         setBackgrounds();
         GremlinMod.loadJokeCardImage(this, "Nob.png");

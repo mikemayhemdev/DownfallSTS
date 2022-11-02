@@ -1,6 +1,5 @@
 package charbosses.bosses.Ironclad;
 
-import champ.ChampMod;
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.NewAge.ArchetypeAct1StatusesNewAge;
@@ -73,7 +72,7 @@ public class CharBossIronclad extends AbstractCharBoss {
                     break;
                 case 4: {
 
-                    //SlimeboundMod.logger.info("Ironclad spawned at Archetype " + NeowBoss.Rezzes);
+                    //downfallMod.logger.info("Ironclad spawned at Archetype " + NeowBoss.Rezzes);
                     switch (NeowBoss.Rezzes) {
                         case 0:
                             archetype = new ArchetypeAct1StatusesNewAge();
@@ -124,6 +123,8 @@ public class CharBossIronclad extends AbstractCharBoss {
     @Override
     public void takeTurn() {
         super.takeTurn();
+        /*
+        //TODO - Too much Champ hooks here!
         String[] DESCRIPTIONS = CardCrawlGame.languagePack.getEventString("champ:ChampTalk").DESCRIPTIONS;
         if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.THE_CHAMP) && AbstractDungeon.actNum == 1) {
             if (!ChampMod.talked1 && !ChampMod.talked2) {
@@ -134,6 +135,9 @@ public class CharBossIronclad extends AbstractCharBoss {
                 ChampMod.talked2 = true;
             }
         }
+
+         */
+
     }
 
     @Override

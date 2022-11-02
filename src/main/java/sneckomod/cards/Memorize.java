@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 import sneckomod.actions.MemorizeAction;
 import sneckomod.patches.UnknownExtraUiPatch;
 
@@ -17,7 +17,7 @@ public class Memorize extends AbstractSneckoCard {
 
     public Memorize() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        tags.add(SneckoMod.SNEKPROOF);
+        tags.add(downfallMod.SNEKPROOF);
         tags.add(CardTags.HEALING);
         FleetingField.fleeting.set(this, true);
     }

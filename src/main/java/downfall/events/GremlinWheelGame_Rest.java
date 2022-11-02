@@ -253,7 +253,7 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        //SlimeboundMod.logger.info(this.screen);
+        //downfallMod.logger.info(this.screen);
 
         switch (this.screen) {
             case INTRO:

@@ -1,7 +1,6 @@
 package automaton.cards.goodstatus;
 
 
-import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -12,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import downfall.downfallMod;
 import downfall.util.CardIgnore;
 
 @CardIgnore
@@ -45,7 +45,7 @@ public class IntoTheVoid extends AbstractCard {
         this.magicNumber = this.baseMagicNumber = 5;
 
 
-        tags.add(AutomatonMod.GOOD_STATUS);
+        tags.add(downfallMod.GOOD_STATUS);
     }
 
     public void triggerWhenDrawn() {

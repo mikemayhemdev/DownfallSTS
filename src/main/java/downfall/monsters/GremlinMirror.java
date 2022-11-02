@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import downfall.actions.ModifiedSummonGremlinAction;
-import gremlin.GremlinMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -97,7 +97,7 @@ public class GremlinMirror extends AbstractMonster {
 
     public void takeTurn() {
         turn += 1;
-        GremlinMod.logger.info("The turn is: " + turn);
+        downfallMod.logger.info("The turn is: " + turn);
         label23:
         switch (this.nextMove) {
             case 2:
