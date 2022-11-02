@@ -15,10 +15,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
+import downfall.actions.PseudoDamageRandomEnemyAction;
 import downfall.downfallMod;
 import downfall.util.TextureLoader;
 import expansioncontent.expansionContentMod;
-import downfall.actions.PseudoDamageRandomEnemyAction;
 
 
 public class PretendHexWheelPower extends TwoAmountPower implements NonStackablePower, OnPowersModifiedSubscriber {

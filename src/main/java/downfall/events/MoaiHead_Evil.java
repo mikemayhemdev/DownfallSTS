@@ -67,7 +67,7 @@ public class MoaiHead_Evil extends AbstractImageEvent {
                     AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
                     //TODO - Gremlin Damage
                     if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
-                    //    ((GremlinCharacter) AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
+                        //    ((GremlinCharacter) AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
                     }
                     this.screenNum = 1;
                     this.imageEventText.updateDialogOption(0, OPTIONS[4]);
@@ -83,7 +83,7 @@ public class MoaiHead_Evil extends AbstractImageEvent {
                     AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
                     //TODO - Gremlin Damage
                     if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
-                    //    ((GremlinCharacter) AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
+                        //    ((GremlinCharacter) AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
                     }
                     this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                     this.imageEventText.clearRemainingOptions();

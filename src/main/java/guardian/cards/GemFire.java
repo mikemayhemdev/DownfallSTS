@@ -12,7 +12,6 @@ import downfall.downfallMod;
 import guardian.GuardianMod;
 import guardian.actions.GemFireAction;
 import guardian.patches.AbstractCardEnum;
-import sneckomod.SneckoMod;
 
 
 public class GemFire extends AbstractGuardianCard {

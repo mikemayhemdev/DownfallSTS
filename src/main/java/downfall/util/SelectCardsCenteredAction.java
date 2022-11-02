@@ -1,12 +1,12 @@
 package downfall.util;
 
+import com.evacipated.cardcrawl.mod.stslib.patches.CenterGridCardSelectScreen;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.evacipated.cardcrawl.mod.stslib.patches.CenterGridCardSelectScreen;
 
 import java.util.ArrayList;
 import java.util.List;

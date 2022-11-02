@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
-import sneckomod.SneckoMod;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.BLUE;

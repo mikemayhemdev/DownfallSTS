@@ -1,11 +1,11 @@
 package automaton.patches;
 
 import automaton.FunctionHelper;
-import downfall.EasyInfoDisplayPanel;
-import downfall.SuperTip;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import downfall.EasyInfoDisplayPanel;
+import downfall.SuperTip;
 
 @SpirePatch(
         clz = EnergyPanel.class,

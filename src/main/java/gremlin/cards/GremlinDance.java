@@ -16,7 +16,6 @@ import downfall.downfallMod;
 import gremlin.actions.ShackleAction;
 import gremlin.characters.GremlinCharacter;
 import gremlin.powers.WizPower;
-import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 

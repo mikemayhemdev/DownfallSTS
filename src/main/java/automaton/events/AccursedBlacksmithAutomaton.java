@@ -1,6 +1,5 @@
 package automaton.events;
 
-import automaton.AutomatonMod;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.curses.Pain;

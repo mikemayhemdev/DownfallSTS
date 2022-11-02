@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
 import gremlin.powers.AgonyPower;
-import sneckomod.SneckoMod;
 
 import static gremlin.GremlinMod.FAT_GREMLIN;
 

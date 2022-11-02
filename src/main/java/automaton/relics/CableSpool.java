@@ -11,7 +11,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.downfallMod;
 import downfall.util.TextureLoader;
 
-import static automaton.AutomatonMod.*;
+import static automaton.AutomatonMod.makeRelicOutlinePath;
+import static automaton.AutomatonMod.makeRelicPath;
 
 public class CableSpool extends CustomRelic {
 

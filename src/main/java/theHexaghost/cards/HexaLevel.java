@@ -3,7 +3,7 @@ package theHexaghost.cards;
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.EnhancePower;
 import theHexaghost.powers.HexalevelPower;

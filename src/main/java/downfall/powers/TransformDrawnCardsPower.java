@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.downfallMod;
 import downfall.util.TextureLoader;
-import sneckomod.SneckoMod;
 
 public class TransformDrawnCardsPower extends TwoAmountPower implements CloneablePowerInterface {
 

@@ -3,7 +3,6 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
-import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.ApocalypticArmorPower;
 

@@ -363,7 +363,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
                 AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
                 //TODO - Gremlin Damage
                 if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
-                  //  ((GremlinCharacter) AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
+                    //  ((GremlinCharacter) AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
                 }
                 this.hasFocus = false;
                 break;

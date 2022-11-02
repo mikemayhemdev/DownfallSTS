@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import downfall.downfallMod;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
-import sneckomod.SneckoMod;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.CRIMSON;

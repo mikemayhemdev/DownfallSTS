@@ -11,9 +11,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.exordium.SlimeBoss;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
 import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
+import downfall.powers.NextTurnGainSlimeCrush;
 import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
-import downfall.powers.NextTurnGainSlimeCrush;
 
 public class PrepareCrushBossCard extends AbstractExpansionCard {
     public final static String ID = makeID("PrepareCrush");

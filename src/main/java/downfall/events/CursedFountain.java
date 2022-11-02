@@ -102,7 +102,7 @@ public class CursedFountain extends AbstractImageEvent {
 
                     //TODO - Gremlin Damage
                     if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
-                       // ((GremlinCharacter) AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
+                        // ((GremlinCharacter) AbstractDungeon.player).healGremlins(AbstractDungeon.player.maxHealth);
                     }
                     return;
                 case 3:

@@ -30,7 +30,6 @@ import downfall.cards.OctoChoiceCard;
 import downfall.dailymods.Improvised;
 import downfall.downfallMod;
 import downfall.events.Serpent_Evil;
-import slimebound.patches.BanSharedContentPatch;
 import downfall.patches.RewardItemTypeEnumPatch;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
@@ -40,6 +39,7 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import slimebound.patches.BanSharedContentPatch;
 import sneckomod.cards.*;
 import sneckomod.cards.unknowns.*;
 import sneckomod.events.BackToBasicsSnecko;
@@ -76,7 +76,7 @@ public class SneckoMod implements
         PostInitializeSubscriber,
         StartGameSubscriber,
         PostUpdateSubscriber,
-PostDungeonInitializeSubscriber{
+        PostDungeonInitializeSubscriber {
     public static final String SHOULDER1 = "sneckomodResources/images/char/shoulder.png";
     public static final String SHOULDER2 = "sneckomodResources/images/char/shoulderR.png";
     public static final String CORPSE = "sneckomodResources/images/char/corpse.png";

@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
 import gremlin.powers.ScatterPower;
-import sneckomod.SneckoMod;
 
 public class Scatter extends AbstractGremlinCard {
     public static final String ID = getID("Scatter");

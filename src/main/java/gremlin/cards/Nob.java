@@ -17,7 +17,6 @@ import downfall.downfallMod;
 import gremlin.GremlinMod;
 import gremlin.patches.SuperRare;
 import gremlin.powers.GremlinNobPower;
-import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 

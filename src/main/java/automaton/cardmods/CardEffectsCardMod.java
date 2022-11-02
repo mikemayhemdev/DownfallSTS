@@ -1,6 +1,5 @@
 package automaton.cardmods;
 
-import automaton.AutomatonMod;
 import automaton.AutomatonTextHelper;
 import automaton.FunctionHelper;
 import automaton.cards.AbstractBronzeCard;

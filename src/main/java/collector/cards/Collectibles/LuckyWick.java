@@ -2,12 +2,12 @@ package collector.cards.Collectibles;
 
 import basemod.helpers.CardModifierManager;
 import collector.Interfaces.PerpetualCard;
-import downfall.cardmods.PlusDamageAndBlockCardMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.cardmods.PlusDamageAndBlockCardMod;
 
 public class LuckyWick extends AbstractCollectibleCard implements PerpetualCard {
     public final static String ID = makeID("LuckyWick");

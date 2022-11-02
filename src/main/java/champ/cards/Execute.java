@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
 import downfall.downfallMod;
-import sneckomod.SneckoMod;
 
 public class Execute extends AbstractChampCard {
 

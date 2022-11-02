@@ -18,7 +18,6 @@ import com.megacrit.cardcrawl.vfx.StarBounceEffect;
 import downfall.downfallMod;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
-import sneckomod.SneckoMod;
 
 
 public class BaubleBeam extends AbstractGuardianCard {

@@ -1,6 +1,5 @@
 package automaton.actions;
 
-import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;

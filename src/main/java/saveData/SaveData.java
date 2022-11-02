@@ -15,7 +15,6 @@ import downfall.events.Cleric_Evil;
 import downfall.monsters.FleeingMerchant;
 import downfall.monsters.NeowBossFinal;
 import downfall.patches.EvilModeCharacterSelect;
-import downfall.patches.ModHelperPatch;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.patches.ui.topPanel.GoldToSoulPatches;
 import downfall.relics.BrokenWingStatue;

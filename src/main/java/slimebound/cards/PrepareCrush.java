@@ -11,10 +11,10 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
+import downfall.powers.NextTurnGainSlimeCrush;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.EnergizedSlimeboundPower;
-import downfall.powers.NextTurnGainSlimeCrush;
 import slimebound.powers.NextTurnGainStrengthPower;
 
 

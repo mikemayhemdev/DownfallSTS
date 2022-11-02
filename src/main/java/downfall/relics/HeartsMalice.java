@@ -49,7 +49,7 @@ public class HeartsMalice extends CustomRelic {
 
             //TODO - Gremlin Damage
             if (AbstractDungeon.player.chosenClass.equals(downfallMod.Enums.GREMLIN)) {
-             //   ((GremlinCharacter) AbstractDungeon.player).mobState.startOfBattle((GremlinCharacter) AbstractDungeon.player);
+                //   ((GremlinCharacter) AbstractDungeon.player).mobState.startOfBattle((GremlinCharacter) AbstractDungeon.player);
             }
         }
 

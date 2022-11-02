@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import downfall.EasyInfoDisplayPanel;
 
 import static com.megacrit.cardcrawl.core.Settings.TOP_PANEL_SHADOW_COLOR;
 

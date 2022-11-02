@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import downfall.actions.PerformXAction;
-import sneckomod.SneckoMod;
+import downfall.downfallMod;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.TurnItUpAction;
 

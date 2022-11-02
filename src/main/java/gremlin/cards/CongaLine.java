@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
 import gremlin.powers.CongaLinePower;
-import sneckomod.SneckoMod;
 
 public class CongaLine extends AbstractGremlinCard {
     public static final String ID = getID("CongaLine");

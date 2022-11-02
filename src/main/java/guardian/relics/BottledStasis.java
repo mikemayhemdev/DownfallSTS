@@ -13,9 +13,9 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import downfall.patches.BottledStasisPatch;
 import guardian.GuardianMod;
 import guardian.orbs.StasisOrb;
-import downfall.patches.BottledStasisPatch;
 
 import java.util.function.Predicate;
 

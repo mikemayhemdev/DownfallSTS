@@ -1,15 +1,8 @@
 package collector.cards.CollectorCards.Skills;
 
-import collector.CollectorMod;
 import collector.cards.CollectorCards.AbstractCollectorCard;
-import collector.powers.Suffering;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.PoisonPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
 public class Wrack extends AbstractCollectorCard {
     public final static String ID = makeID("Wrack");

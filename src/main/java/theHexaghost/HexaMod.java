@@ -31,7 +31,6 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.scenes.TheBottomScene;
 import com.megacrit.cardcrawl.vfx.scene.InteractableTorchEffect;
 import downfall.downfallMod;
-import slimebound.patches.BanSharedContentPatch;
 import downfall.patches.RewardItemTypeEnumPatch;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
@@ -39,6 +38,7 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import slimebound.patches.BanSharedContentPatch;
 import theHexaghost.cards.*;
 import theHexaghost.events.*;
 import theHexaghost.ghostflames.AbstractGhostflame;
@@ -76,7 +76,7 @@ public class HexaMod implements
         PostBattleSubscriber,
         SetUnlocksSubscriber,
         PostDeathSubscriber,
-PostDungeonInitializeSubscriber{
+        PostDungeonInitializeSubscriber {
     public static final String SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "hexamodResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "hexamodResources/images/char/mainChar/corpse.png";
@@ -485,8 +485,6 @@ PostDungeonInitializeSubscriber{
         BaseMod.registerCustomReward(RewardItemTypeEnumPatch.SEALCARD, (rewardSave) -> new SealSealReward(), (customReward) -> new RewardSave(customReward.type.toString(), null));
 
     }
-
-
 
 
 }

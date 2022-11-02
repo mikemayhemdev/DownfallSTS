@@ -16,7 +16,6 @@ import downfall.downfallMod;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.vfx.CrystalRayEffect;
-import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 

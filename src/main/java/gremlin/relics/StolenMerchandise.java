@@ -12,8 +12,8 @@ import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import downfall.monsters.FleeingMerchant;
 import downfall.actions.MakeEchoAction;
+import downfall.monsters.FleeingMerchant;
 
 public class StolenMerchandise extends AbstractGremlinRelic {
     private static final String ID = getID("StolenMerchandise");

@@ -11,7 +11,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
-import guardian.stances.DefensiveMode;
 
 import java.lang.reflect.Field;
 

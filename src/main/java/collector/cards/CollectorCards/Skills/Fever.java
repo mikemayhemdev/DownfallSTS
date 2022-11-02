@@ -15,7 +15,7 @@ public class Fever extends AbstractCollectorCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-  //      applyToEnemy(m, new BurnPower(m, magicNumber));
+        //      applyToEnemy(m, new BurnPower(m, magicNumber));
         applyToEnemy(m, new WeakPower(m, 1, false));
     }
 

@@ -13,7 +13,6 @@ import gremlin.GremlinMod;
 import gremlin.cards.pseudocards.*;
 import gremlin.orbs.*;
 import gremlin.relics.TagTeamwork;
-import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
